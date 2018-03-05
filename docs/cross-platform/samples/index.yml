@@ -1,0 +1,69 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Ejemplos multiplataforma
+metadata:
+  description: "Aplicaciones de ejemplo de Xamarin multiplataforma para desarrolladores de dispositivos móviles."
+  author: conceptdev
+  ms.author: crdun
+  ms.date: 02/17/2018
+  ms.topic: article
+  ms.openlocfilehash: c5e8c04dcc5a9bf18af0dd9ce2dcd85b6b760836
+  ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 02/27/2018
+abstract:
+  description: "Aplicaciones de ejemplo multiplataforma de Xamarin y demostraciones de código que le ayudarán a empezar a crear aplicaciones móviles con C# y Xamarin."
+  menu:
+    items:
+    - href: https://developer.xamarin.com/samples/
+      text: Todos los ejemplos de Xamarin
+sections:
+- title: 
+  items:
+  - type: list
+    style: cards
+    className: cardsW
+    items:
+    - href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
+      html: "En este ejemplo se muestra una aplicación de la lista de tareas pendientes donde los datos se almacenan y se accede a ellos en una base de datos local de SQLite."
+      image:
+        src: images/todo.png
+        href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
+      title: Todo
+    - href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
+      html: "Se trata de un juego familiar con un nuevo toque. Diez errores están ocultos en una cuadrícula de 9 x 9 iconos. Para ganar, debe buscar y marcar los diez errores."
+      image:
+        src: images/bugsweeper.png
+        href: https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/
+      title: BugSweeper
+    - href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
+      html: "Una calculadora RPN (notación polaca inversa) permite que se introduzcan operaciones y números sin paréntesis o una clave igual."
+      image:
+        src: images/rpncalc.png
+        href: https://developer.xamarin.com/samples/xamarin-forms/RpnCalculator/
+      title: Calculadora RPN
+    - href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
+      html: "El programa simula un disco giratorio que se puede pintar al tocar y mover los dedos. SpinPaint responde al tacto cuando se pinta una línea con dedo, pero también duplica esa línea en tres imágenes espejo en los otros tres cuadrantes del disco."
+      image:
+        src: images/spinpaint.png
+        href: https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SpinPaint/
+      title: SpinPaint
+    - href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
+      html: "XAML (lenguaje de marcado de aplicaciones extensible) permite a los desarrolladores definir interfaces de usuario en Xamarin.Forms utilizando el marcado en lugar de código."
+      image:
+        src: images/xaml.png
+        href: https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/
+      title: Ejemplos de XAML
+    - href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
+      html: "XAML (lenguaje de marcado de aplicaciones extensible) permite a los desarrolladores definir interfaces de usuario en Xamarin.Forms utilizando el marcado en lugar de código."
+      image:
+        src: images/xuzzle.png
+        href: https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/
+      title: Xuzzle
+    - href: https://developer.xamarin.com/samples/
+      html: "Acceda al conjunto completo de aplicaciones de ejemplo multiplataforma de Xamarin y a demostraciones de código."
+      image:
+        src: ~/media/shared/sample-download.svg
+        href: https://developer.xamarin.com/samples/
+      title: Todos los ejemplos de Xamarin

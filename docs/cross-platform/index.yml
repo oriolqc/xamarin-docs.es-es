@@ -1,0 +1,120 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: "Guía multiplataforma"
+metadata:
+  description: "Guía multiplataforma para desarrolladores de dispositivos móviles."
+  author: conceptdev
+  ms.author: crdun
+  ms.date: 02/17/2018
+  ms.topic: landing-page
+  ms.openlocfilehash: 996cad48446c618fa12b268a76045a10b8e3628d
+  ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 02/27/2018
+abstract:
+  description: "Xamarin ofrece una plataforma para el desarrollo multiplataforma de aplicaciones para dispositivos móviles, tabletas y escritorio."
+  menu:
+    items:
+    - href: ~/cross-platform/samples/
+      text: Ejemplos de Xamarin
+    - href: /visualstudio/
+      text: Programa para la mejora
+    - href: /visualstudio/mac/
+      text: Visual Studio para Mac
+sections:
+- title: Primeros pasos
+  items:
+  - type: paragraph
+    text: "Aprenda cómo crear sus primeras aplicaciones con Xamarin y C# para Android, iOS, Mac OS, UWP y mucho más."
+  - type: list
+    style: icon48
+    items:
+    - image:
+        src: https://docs.microsoft.com/media/common/i_setup.svg
+      text: Requisitos
+      href: ~/cross-platform/get-started/index.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: "Introducción"
+      href: ~/cross-platform/get-started/index.md
+    - image:
+        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
+      text: Aplicaciones de varias pantallas
+      href: ~/cross-platform/index.md
+- title: "Guías"
+  items:
+  - type: grid
+    style: columns
+    className: column50
+    items:
+    - type: list
+      style: cards
+      className: cardsB
+      items:
+      - href: ~/cross-platform/get-started/index.md
+        html: "Tutoriales para ayudarle a ponerse manos a la obra con Xamarin. Asegúrese de que todo se ha instalado correctamente y cree sus primeras aplicaciones."
+        image:
+          src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+          href: ~/cross-platform/get-started/index.md
+        title: "Introducción"
+      - href: ~/cross-platform/user-interface
+        html: "Obtenga información sobre los distintos kits de herramientas de la interfaz de usuario en cada plataforma."
+        image:
+          src: ~/media/icons/i_user-interface.svg
+          href: ~/cross-platform/user-interface/
+        title: Interfaz de usuario
+      - href: ~/cross-platform/data-cloud/
+        html: "Almacenamiento de datos locales y remotos, recuperación y otros servicios basados en la nube."
+        image:
+          src: ~/media/icons/i_data-cloud.svg
+          href: ~/cross-platform/data-cloud/
+        title: Datos y servicios en la nube
+      - href: ~/cross-platform/macios/
+        html: "Características comunes de los SDK de iOS, watchOS, tvOS y macOS."
+        image:
+          src: https://docs.microsoft.com/media/logos/logo_xcode.svg
+          href: ~/cross-platform/macios/
+        title: Plataforma de Apple (Mac e iOS)
+    - type: list
+      style: cards
+      className: cardsB
+      items:
+      - href: ~/cross-platform/app-fundamentals/
+        html: Todo lo que necesita saber para crear aplicaciones.
+        image:
+          src: ~/media/icons/i_app-build.svg
+          href: ~/cross-platform/app-fundamentals/
+        title: "Principios de la aplicación"
+      - href: ~/
+        html: "Trabajo con características de la plataforma."
+        image:
+          src: ~/media/icons/i_platform.svg
+          href: ~/
+        title: "Características de la plataforma"
+      - href: ~/cross-platform/deploy-test/
+        html: "Instrucciones para crear e implementar aplicaciones, así como sugerencias para probarlas por adelantado."
+        image:
+          src: ~/media/icons/i_deploy-test.svg
+          href: ~/cross-platform/deploy-test/
+        title: "Implementación y prueba"
+      - href: ~/cross-platform/internals/
+        html: "Información adicional sobre el desarrollo para dispositivos móviles, tabletas y escritorio multiplataforma."
+        image:
+          src: https://docs.microsoft.com/en-us/media/common/i_advanced.svg
+          href: ~/cross-platform/internals/
+        title: Conceptos avanzados y funcionamiento interno
+- title: Plataformas
+  items:
+  - type: list
+    style: cards
+    className: cardsD
+    items:
+    - title: Xamarin.Forms
+      html: <p><a href="~/xamarin-forms/">Primeros pasos</a></p>
+    - title: Android
+      html: <p><a href="~/android/">Primeros pasos</a></p>
+    - title: iOS
+      html: <p><a href="~/ios/">Primeros pasos</a></p>
+    - title: Mac
+      html: <p><a href="~/mac/">Primeros pasos</a></p>
