@@ -10,7 +10,7 @@ ms.author: dabritch
 ms.date: 01/12/2016
 ms.openlocfilehash: ecea0f55360fcde7a50c52bb33c45a2c5fff5eeb
 ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2018
 ---
@@ -22,7 +22,7 @@ _Diseños de Xamarin.Forms se utilizan para crear controles de interfaz de usuar
 
 ## <a name="layouts"></a>Diseños de
 
-El [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout) clase de Xamarin.Forms es un subtipo de vista, que actúa como contenedor para otros diseños o vistas especializado. Normalmente contiene la lógica para establecer la posición y el tamaño de los elementos secundarios en las aplicaciones de Xamarin.Forms.
+El [`Layout`](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout) clase de Xamarin.Forms es un subtipo de vista, que actúa como contenedor para otros diseños o vistas especializado. Normalmente contiene la lógica para establecer la posición y el tamaño de los elementos secundarios en las aplicaciones de Xamarin.Forms.
 
  [ ![](layouts-images/layouts-sml.png "Tipos de diseño de Xamarin.Forms")](layouts-images/layouts.png "tipos de diseño de Xamarin.Forms")
 
