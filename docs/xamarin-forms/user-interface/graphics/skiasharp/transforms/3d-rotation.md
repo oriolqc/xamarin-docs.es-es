@@ -9,7 +9,7 @@ ms.author: chape
 ms.date: 04/14/2017
 ms.openlocfilehash: 1341cde32778358fbeb7b65045616d5d81623d37
 ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/27/2018
 ---
@@ -27,7 +27,7 @@ Resulta difícil desarrollar `SKMatrix` transformación funciona únicamente den
 
 Un sistema de coordenadas tridimensional agrega un tercer eje Z. conceptualmente llamado, el eje Z es perpendicular a la pantalla. Puntos de coordenadas en un espacio 3D se indican con tres números: (x, y, z). En la opción 3D son sistema de coordenadas que se usan en este artículo, aumentar los valores de X a la derecha y valores crecientes de Y dejan de funcionar, al igual que en dos dimensiones. Los valores de Z positivos crecientes derivados de la pantalla. El origen es la esquina superior izquierda, al igual que en los gráficos 2D. La pantalla se puede considerar como un plano XY con el eje Z perpendicular a este plano.
 
-Esto se denomina un sistema de coordenadas izquierdo. Si eliges coordina el índice de la mano izquierda en la dirección de X positivo (a la derecha) y coordina el dedo intermedio en la dirección de Y creciente (abajo), a continuación, los puntos de control en la dirección de aumentar las coordenadas Z & #x 2014; extender fuera de la pantalla.
+Esto se denomina un sistema de coordenadas izquierdo. Si eliges coordina el índice de la mano izquierda en la dirección de X positivo (a la derecha) y coordina el dedo intermedio en la dirección de Y creciente (abajo), a continuación, los puntos de control en la dirección de aumentar las coordenadas Z &#x2014; extender fuera de la pantalla.
 
 En los gráficos 3D, las transformaciones se basan en una matriz de 4 x 4. Aquí es la matriz de identidad de 4 por 4:
 
@@ -109,7 +109,7 @@ Rotación alrededor del eje Z es el mismo que en los gráficos 2D:
 |    0       0     0  1  |
 </pre>
 
-La dirección de la rotación está implícito en la situación del sistema de coordenadas. Se trata de un sistema zurdo, por lo que si el punto de control de la mano izquierda hacia aumentar los valores para un eje determinado & #x 2014; a la derecha de rotación alrededor del eje X, el detalle de rotación alrededor del eje Y y hacia TI de rotación alrededor del eje Z & #x 2014; a continuación, la curva de los otros dedos indica la dirección de rotación de los ángulos positivos.
+La dirección de la rotación está implícito en la situación del sistema de coordenadas. Se trata de un sistema zurdo, por lo que si el punto de control de la mano izquierda hacia aumentar los valores para un eje determinado &#x2014; a la derecha de rotación alrededor del eje X, el detalle de rotación alrededor del eje Y y hacia TI de rotación alrededor del eje Z &#x2014; a continuación, la curva de los otros dedos indica la dirección de rotación de los ángulos positivos.
 
 `SKMatrix44` se generalizado estático [ `CreateRotation` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/) y [ `CreateRotationDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) métodos que le permiten especificar el eje alrededor de la que se produce la rotación:
 
@@ -442,7 +442,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-El `OnAppearing` invalidación define tres Xamarin.Forms `Animation` objetos que se va a animar el `xRotationDegrees`, `yRotationDegrees`, y `zRotationDegrees` campos a distintas tasas. Tenga en cuenta que los períodos de estas animaciones se establecen en números primos & #x 2014; 5 segundos, 7 segundos y 11 segundos & #x 2014; por lo que la combinación general solo repite cada 385 segundos o más de 10 minutos:
+El `OnAppearing` invalidación define tres Xamarin.Forms `Animation` objetos que se va a animar el `xRotationDegrees`, `yRotationDegrees`, y `zRotationDegrees` campos a distintas tasas. Tenga en cuenta que los períodos de estas animaciones se establecen en números primos &#x2014; 5 segundos, 7 segundos y 11 segundos &#x2014; por lo que la combinación general solo repite cada 385 segundos o más de 10 minutos:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
