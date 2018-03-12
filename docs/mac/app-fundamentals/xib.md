@@ -10,7 +10,7 @@ ms.author: brumbaug
 ms.date: 03/14/2017
 ms.openlocfilehash: 8ca187b86126c9a0f2d9931f63d75e99ac4d2b23
 ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 02/28/2018
 ---
@@ -36,7 +36,7 @@ Puede echar un vistazo a la [clases de C# exponer / métodos para Objective-C](~
 
 ## <a name="introduction-to-xcode-and-interface-builder"></a>Introducción a Xcode y a Interface Builder
 
-Como parte de Xcode, Apple ha creado una herramienta denominada Generador de interfaz, que le permite crear visualmente la interfaz de usuario en un diseñador. Xamarin.Mac se integra con fluidez con el generador de interfaz, lo que le permite crear la interfaz de usuario con las mismas herramientas que lo hacen los usuarios de C de objetivo.
+Como parte de Xcode, Apple ha creado una herramienta denominada Generador de interfaz, que le permite crear visualmente la interfaz de usuario en un diseñador. Xamarin.Mac se integra con fluidez con el generador de interfaz, lo que le permite crear la interfaz de usuario con las mismas herramientas que lo hacen los usuarios de Objective-C de objetivo.
 
 
 ### <a name="components-of-xcode"></a>Componentes de Xcode
