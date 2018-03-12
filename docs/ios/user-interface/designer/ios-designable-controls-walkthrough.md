@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e78b76a531e9f8ea88adca46fc59b2063fce14cc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e12e33b254e58759043ed838d5c34dd7bd024fd
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="walkthrough---using-custom-controls-with-the-xamarin-designer-for-ios"></a>Tutorial: usar controles personalizados con el Diseñador de Xamarin para iOS
 
@@ -33,13 +33,13 @@ Esta guía se da por supuesto una familiaridad con el contenido que se tratan en
 1. Cree una nueva solución de la **iOS > aplicaciones > única aplicación de vista > C#** plantilla, asígnele el nombre `ScratchTicket`y continúe con el Asistente para nuevo proyecto:
 
 
-    [![](ios-designable-controls-walkthrough-images/01new.png "Cree una nueva solución")](ios-designable-controls-walkthrough-images/01new.png)
+    [![](ios-designable-controls-walkthrough-images/01new.png "Cree una nueva solución")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
 
 
 1. Crear un nuevo archivo de clase vacía denominado `ScratchTicketView`:
 
 
-    [![](ios-designable-controls-walkthrough-images/02new.png "Cree una nueva clase de ScratchTicketView")](ios-designable-controls-walkthrough-images/02new.png)
+    [![](ios-designable-controls-walkthrough-images/02new.png "Cree una nueva clase de ScratchTicketView")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
 
 
 1. Agregue el código siguiente para `ScratchTicketView` clase:
@@ -168,63 +168,50 @@ Esta guía se da por supuesto una familiaridad con el contenido que se tratan en
     
 1. Haga doble clic en el `Main.storyboard` archivo para abrirlo en el diseñador:
 
-    
-    [![](ios-designable-controls-walkthrough-images/03new.png "El Diseñador de iOS")](ios-designable-controls-walkthrough-images/03new.png)
-
+    [![](ios-designable-controls-walkthrough-images/03new.png "El Diseñador de iOS")](ios-designable-controls-walkthrough-images/03new.png#lightbox)
 
 
 1. Arrastrar y colocar un **imagen vista** desde el **cuadro de herramientas** en la vista en el guión gráfico.
 
-    
-    [![](ios-designable-controls-walkthrough-images/04new.png "Vista de la imagen se agregan al diseño del")](ios-designable-controls-walkthrough-images/04new.png)
+    [![](ios-designable-controls-walkthrough-images/04new.png "Vista de la imagen se agregan al diseño del")](ios-designable-controls-walkthrough-images/04new.png#lightbox)
 
 
 1. Seleccione el **imagen vista** y cambiar su **imagen** propiedad `Monkey.png`.
 
-    
-    [![](ios-designable-controls-walkthrough-images/05new.png "Establecer la propiedad de imagen de la vista de imagen a Monkey.png")](ios-designable-controls-walkthrough-images/05new.png)
+    [! [] (ios-pueden diseñar-controles-walkthrough-imágenes/05new.png "propiedad de imagen de vista de imagen de configuración para Monkey.png)](ios-designable-controls-walkthrough-images/05new.png#lightbox)
 
     
 1. Como estamos usando las clases de tamaño necesitamos restringir esta vista de la imagen. Haga clic en la imagen dos veces para ponerla en modo de restricción. Vamos a restringir al centro, haga clic en el identificador del Anclando center le ayude y alinéelo tanto vertical como horizontalmente:
-    
-    
-    [![](ios-designable-controls-walkthrough-images/06new.png "Centrar la imagen")](ios-designable-controls-walkthrough-images/06new.png)
 
-    
+    [![](ios-designable-controls-walkthrough-images/06new.png "Centrar la imagen")](ios-designable-controls-walkthrough-images/06new.png#lightbox)
+
 1. Para restringir el alto y ancho, haga clic en los identificadores de anclaje de tamaño (los identificadores 'hueso' en forma de) y seleccione el ancho y alto respectivamente:
 
-    
-    [![](ios-designable-controls-walkthrough-images/07new.png "Agregar restricciones")](ios-designable-controls-walkthrough-images/07new.png)
+    [![](ios-designable-controls-walkthrough-images/07new.png "Agregar restricciones")](ios-designable-controls-walkthrough-images/07new.png#lightbox)
 
 
 1. Actualice el marco basado en las restricciones, haga clic en el botón de actualización en la barra de herramientas:
 
-
-    [![](ios-designable-controls-walkthrough-images/08new.png "La barra de herramientas de restricciones")](ios-designable-controls-walkthrough-images/08new.png)
+    [![](ios-designable-controls-walkthrough-images/08new.png "La barra de herramientas de restricciones")](ios-designable-controls-walkthrough-images/08new.png#lightbox)
 
 
 1. A continuación, compile el proyecto para que la **Scratch vale vista** aparecerá en **componentes personalizados** en el cuadro de herramientas:
 
-    
-    [![](ios-designable-controls-walkthrough-images/09new.png "El cuadro de herramientas de componentes personalizados")](ios-designable-controls-walkthrough-images/09new.png)
+    [![](ios-designable-controls-walkthrough-images/09new.png "El cuadro de herramientas de componentes personalizados")](ios-designable-controls-walkthrough-images/09new.png#lightbox)
 
 
 1. Arrastre y coloque una **Scratch vale vista** para que aparezca en la imagen de mono. Ajustar los manipuladores de arrastre para que la vista de vale Scratch cubre el mono completamente, tal y como se muestra a continuación:
 
-    
-    [![](ios-designable-controls-walkthrough-images/10new.png "Una vista de vale de desecho en la vista de imagen")](ios-designable-controls-walkthrough-images/10new.png)
-
+    [![](ios-designable-controls-walkthrough-images/10new.png "Una vista de vale de desecho en la vista de imagen")](ios-designable-controls-walkthrough-images/10new.png#lightbox)
 
 1. Restringir la vista de vale Scratch a la vista de la imagen dibujando un rectángulo delimitador para seleccionar ambas vistas. Seleccione las opciones para restringir a los marcos de ancho, alto, centrar e intermedio y actualización en función de las restricciones, como se muestra a continuación:
- 
-    
-    [![](ios-designable-controls-walkthrough-images/11new.png "Centrar y agregar restricciones")](ios-designable-controls-walkthrough-images/11new.png)
+
+    [![](ios-designable-controls-walkthrough-images/11new.png "Centrar y agregar restricciones")](ios-designable-controls-walkthrough-images/11new.png#lightbox)
 
 
 1. Ejecute la aplicación y "scratch desactivar" la imagen para que muestre el mono.
 
-
- [ ![](ios-designable-controls-walkthrough-images/10-app.png "Ejecutar una aplicación de ejemplo")](ios-designable-controls-walkthrough-images/10-app.png)
+    [![](ios-designable-controls-walkthrough-images/10-app.png "Ejecutar una aplicación de ejemplo")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## <a name="adding-design-time-properties"></a>Agregar propiedades en tiempo de diseño
 
@@ -286,7 +273,7 @@ public override void Draw(CGRect rect)
 
 Incluido un `ExportAttribute` y un `BrowsableAttribute` con el argumento establecido en `true` da como resultado la propiedad que se va a mostrar en el diseñador **propiedad** panel. Cambiar la propiedad en otra imagen incluida con el proyecto, como `FillTexture2.png`, da como resultado la actualización de control en tiempo de diseño, tal y como se muestra a continuación:
 
- [ ![](ios-designable-controls-walkthrough-images/11-customproperty.png "Editar propiedades de tiempo de diseño")](ios-designable-controls-walkthrough-images/10-app.png)
+ [![](ios-designable-controls-walkthrough-images/11-customproperty.png "Editar propiedades de tiempo de diseño")](ios-designable-controls-walkthrough-images/10-app.png#lightbox)
 
 ## <a name="summary"></a>Resumen
 
