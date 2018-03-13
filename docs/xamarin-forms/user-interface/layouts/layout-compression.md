@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: 15f198465c544989b347fe534978956741478ed2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e03acbbac737bffd21ee3b592ab017d227f822ad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layout-compression"></a>Compresión de diseño
 
@@ -60,7 +60,7 @@ Se puede examinar la jerarquía resultante de la vista anidada con [Xamarin Insp
 Compresión de diseño, que está disponible para aplicaciones de Xamarin.Forms en las plataformas iOS y Android, pretende simplificar la vista anidar quitando diseños especificados desde el árbol visual, lo que puede mejorar el rendimiento de la presentación de página. La ventaja de rendimiento que se entrega varía según la complejidad de una página, la versión del sistema operativo que se va a usar y el dispositivo en el que se ejecuta la aplicación. Sin embargo, las mejoras de rendimiento más importantes se apreciarán en los dispositivos más antiguos.
 
 > [!NOTE]
-> **Tenga en cuenta**: mientras que en este artículo se centra en los resultados de aplicar la compresión de diseño en Android, es igualmente aplicable a iOS.
+> Aunque en este artículo se centra en los resultados de aplicar la compresión de diseño en Android, es igualmente aplicable a iOS.
 
 ## <a name="layout-compression"></a>Compresión de diseño
 
@@ -119,6 +119,6 @@ Compresión de diseño quita diseños especificados del árbol visual en un inte
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Crear un diseño personalizado](~/xamarin-forms/user-interface/layouts/custom.md)
+- [Creación de un diseño personalizado](~/xamarin-forms/user-interface/layouts/custom.md)
 - [Representadores rápidos](~/xamarin-forms/internals/fast-renderers.md)
 - [LayoutCompression (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutcompression/)

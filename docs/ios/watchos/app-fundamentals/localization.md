@@ -7,11 +7,11 @@ ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 4dde338a7c289f228f877fa4d968d156a941ba16
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9ad3499a232e5f2b2ef362f772ed0197e71e6bee
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-localization"></a>Trabajar con la localización
 
@@ -67,7 +67,7 @@ El proyecto de aplicación de inspección aspecto una vez realizados estos cambi
 
 Cuando se edita el guión gráfico, seleccione cada elemento y observe el **identificador de localización** que aparece en el **propiedades** panel:
 
-  [ ![](localization-images/storyboard-sml.png "El identificador de localización que aparece en el panel de propiedades")](localization-images/storyboard.png)
+  [![](localization-images/storyboard-sml.png "El identificador de localización que aparece en el panel de propiedades")](localization-images/storyboard.png#lightbox)
 
 En el **Base.lproj** carpeta, cree pares de clave y valor tal y como se muestra a continuación, donde la clave está formada por el **identificador de localización** y un nombre de propiedad en el control, se unen mediante un punto (`.`).
 

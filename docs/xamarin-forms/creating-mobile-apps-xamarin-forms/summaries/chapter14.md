@@ -3,14 +3,15 @@ title: "Resumen de capítulo 14. Diseño absoluto"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: ac4c41ebd70b58e95a3fa4fa7a391a473361b1db
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 394e1722c79bac5f034e9ad88eb1fed7e5090f8c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Resumen de capítulo 14. Diseño absoluto
 
@@ -91,7 +92,7 @@ El [ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 El [ **DotMatrixClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/DotMatrixClock) ejemplo muestra la hora actual con una pantalla simulados matricial de 5 x 7. Cada punto es una `BoxView` (no hay 228 de ellos) tamaño y se colocan en la `AbsoluteLayout`.
 
-[![Captura de pantalla triple de reloj de la matriz de puntos](images/ch14fg08-small.png "matricial reloj")](images/ch14fg08-large.png "reloj matricial")
+[![Captura de pantalla triple de reloj de la matriz de puntos](images/ch14fg08-small.png "matricial reloj")](images/ch14fg08-large.png#lightbox "reloj matricial")
 
 El [ **BouncingText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/BouncingText) programa anima dos `Label` objetos rebote horizontalmente y verticalmente en la pantalla.
 

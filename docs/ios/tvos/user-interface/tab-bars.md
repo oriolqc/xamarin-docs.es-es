@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 37c0b3f1f826893bef5c1a7ffb5d422c1c8c5c78
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fc9765b3f6a77f47fdce32dbc3805dd7bd70a08a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-tab-bar-controller"></a>Funcionan con el controlador de la barra de pestañas
 
@@ -20,7 +20,7 @@ _Este artículo tratan diseñar y trabajar con el controlador de la barra de fic
 
 Para muchos tipos de aplicaciones de tvOS, navegación principal se presenta como una barra de pestañas dispuestos a lo largo de la parte superior de la pantalla. El usuario lectores de crédito izquierdo y derecho a través de la lista de categorías posibles y el área de contenido por debajo de los cambios para reflejar la selección del usuario.
 
-[ ![](tab-bars-images/tab01.png "Barra de pestañas de ejemplo")](tab-bars-images/tab01.png)
+[![](tab-bars-images/tab01.png "Barra de pestañas de ejemplo")](tab-bars-images/tab01.png#lightbox)
 
 La barra de pestañas es translúcida de forma predeterminada y siempre aparece en la parte superior de la pantalla. En el foco, una barra de pestañas cubrirá el 140 píxeles superiores de la pantalla pero rápidamente deslice inmediatamente cuando el foco se desplaza hasta el área de contenido siguiente.
 
@@ -64,22 +64,22 @@ Es la manera más fácil trabajar con barras de ficha en una aplicación Xamarin
     
 1. Inicie una nueva aplicación de Xamarin.tvOS y seleccione **tvOS** > **aplicación** > **por pestañas aplicación**: 
 
-    [ ![](tab-bars-images/tab02.png "Seleccione la aplicación con pestañas")](tab-bars-images/tab02.png)
+    [![](tab-bars-images/tab02.png "Seleccione la aplicación con pestañas")](tab-bars-images/tab02.png#lightbox)
 1. Siga todas las instrucciones para crear una nueva solución de Xamarin.tvOS.
 1. En el **solución Pad**, haga doble clic en el `Main.storyboard` de archivo y abrirlo y editarlo.
 1. Para cambiar la **icono** o **título** para una categoría determinada, seleccione la **elemento de la barra de ficha** para el **View Controller** en el  **Esquema de documento**:
 
-    [ ![](tab-bars-images/tab03a.png "Elemento de la barra de pestañas para el controlador de vista en el esquema del documento")](tab-bars-images/tab03a.png)
+    [![](tab-bars-images/tab03a.png "Elemento de la barra de pestañas para el controlador de vista en el esquema del documento")](tab-bars-images/tab03a.png#lightbox)
 1. A continuación, establezca las propiedades necesarias el **ficha Widget** de la **el Explorador de propiedades**: 
 
-    [ ![](tab-bars-images/tab03.png "La pestaña de Widget")](tab-bars-images/tab03.png)
+    [![](tab-bars-images/tab03.png "La pestaña de Widget")](tab-bars-images/tab03.png#lightbox)
 1. Para agregar una nueva categoría (ficha), coloque un **View Controller** a la superficie de diseño: 
 
-    [ ![](tab-bars-images/tab04.png "Un controlador de vista")](tab-bars-images/tab04.png)
+    [![](tab-bars-images/tab04.png "Un controlador de vista")](tab-bars-images/tab04.png#lightbox)
 1. Control y haga clic y arrastre desde el **ficha View Controller** al nuevo **View Controller**.
 1. En la ventana emergente, seleccione **ver controladores** para agregar la nueva vista como una pestaña (categoría): 
 
-    [ ![](tab-bars-images/tab05.png "Seleccione la pestaña")](tab-bars-images/tab05.png)
+    [![](tab-bars-images/tab05.png "Seleccione la pestaña")](tab-bars-images/tab05.png#lightbox)
 1. Cree el diseño de la interfaz de usuario para cada área de contenido de Caterogies como es habitual, mediante la adición de elementos de interfaz de usuario en el Diseñador de iOS.
 1. Exponer los eventos necesarios para trabajar con los controles de interfaz de usuario en código C#.
 1. Nombre de los controles de interfaz de usuario que desea exponer en código C#.
@@ -89,22 +89,22 @@ Es la manera más fácil trabajar con barras de ficha en una aplicación Xamarin
     
 1. Inicie una nueva aplicación de Xamarin.tvOS y seleccione **tvOS** > **aplicación** > **por pestañas aplicación**: 
 
-    [ ![](tab-bars-images/tab02vs.png "Seleccione la aplicación con pestañas")](tab-bars-images/tab02vs.png)
+    [![](tab-bars-images/tab02vs.png "Seleccione la aplicación con pestañas")](tab-bars-images/tab02vs.png#lightbox)
 1. Siga todas las instrucciones para crear una nueva solución de Xamarin.tvOS.
 1. En el **el Explorador de soluciones**, haga doble clic en el `Main.storyboard` de archivo y abrirlo y editarlo.
 1. Para cambiar la **icono** o **título** para una categoría determinada, seleccione la **elemento de la barra de ficha** para el **View Controller** en el  **Esquema de documento**:
 
-    [ ![](tab-bars-images/tab03avs.png "El controlador de vista en el esquema del documento")](tab-bars-images/tab03avs.png)
+    [![](tab-bars-images/tab03avs.png "El controlador de vista en el esquema del documento")](tab-bars-images/tab03avs.png#lightbox)
 1. A continuación, establezca las propiedades necesarias el **ficha Widget** de la **el Explorador de propiedades**: 
 
-    [ ![](tab-bars-images/tab03vs.png "La pestaña de Widget")](tab-bars-images/tab03vs.png)
+    [![](tab-bars-images/tab03vs.png "La pestaña de Widget")](tab-bars-images/tab03vs.png#lightbox)
 1. Para agregar una nueva categoría (ficha), arrastre un **View Controller** desde el **cuadro de herramientas** y se coloca en la superficie de diseño: 
 
-    [ ![](tab-bars-images/tab04vs.png "Un controlador de vista")](tab-bars-images/tab04vs.png)
+    [![](tab-bars-images/tab04vs.png "Un controlador de vista")](tab-bars-images/tab04vs.png#lightbox)
 1. Control y haga clic y arrastre desde el **ficha View Controller** al nuevo **View Controller**.
 1. En la ventana emergente, seleccione **ver controladores** para agregar la nueva vista como una pestaña (categoría): 
 
-    [ ![](tab-bars-images/tab05vs.png "Seleccione la pestaña")](tab-bars-images/tab05vs.png)
+    [![](tab-bars-images/tab05vs.png "Seleccione la pestaña")](tab-bars-images/tab05vs.png#lightbox)
 1. Cree el diseño de la interfaz de usuario para cada área de contenido de Caterogies como es habitual, mediante la adición de elementos de interfaz de usuario en el Diseñador de iOS.
 1. Exponer los eventos necesarios para trabajar con los controles de interfaz de usuario en código C#.
 1. Nombre de los controles de interfaz de usuario que desea exponer en código C#.
@@ -137,7 +137,7 @@ TabBar.Items [2].BadgeValue = "10";
 
 Que generan los siguientes resultados cuando se ejecuta:
 
-[ ![](tab-bars-images/tab06.png "Un elemento de barra de ficha con el distintivo")](tab-bars-images/tab06.png)
+[![](tab-bars-images/tab06.png "Un elemento de barra de ficha con el distintivo")](tab-bars-images/tab06.png#lightbox)
 
 Use la `Title` propiedad de la `UITabBarItem` para cambiar el título y el `Image` propiedad para cambiar el icono.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2017
-ms.openlocfilehash: e9d3e2eecd4c03e7b3046e1ad86dd8a0d70a7f73
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 23a8fcd0633757bfffdb1761c3fc811268341b96
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-row-actions"></a>Trabajar con acciones de fila
 
@@ -177,7 +177,7 @@ table.Delegate = tableDelegate;
 
 Cuando se ejecuta el código anterior y los lectores de crédito del usuario que queda en una fila de la tabla, el **Hi** botón se mostrarán en lugar de la **eliminar** botón que se muestra de forma predeterminada:
 
-[ ![](row-action-images/action01.png "El botón de alta que se muestra en lugar del botón Eliminar.")](row-action-images/action01.png)
+[![](row-action-images/action01.png "El botón de alta que se muestra en lugar del botón Eliminar.")](row-action-images/action01.png#lightbox)
 
 Si el usuario puntea el **Hi** botón, `Hello World!` se escribirá en la consola en Visual Studio para Mac o en Visual Studio cuando la aplicación se ejecuta en el modo de depuración.
 

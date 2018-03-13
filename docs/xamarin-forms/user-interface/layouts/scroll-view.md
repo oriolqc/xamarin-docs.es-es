@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: c305075d37a25bfe828f16d4e69955437a591f9a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 648125ca8bd2c7c8a015b4c29195dc75c0bbf0a0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="scrollview"></a>ScrollView
 
 [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) contiene diseños y les permite desplazamiento fuera de la pantalla. `ScrollView` También se utiliza para permitir que las vistas se mueva automáticamente a la parte visible de la pantalla cuando se muestra el teclado.
 
-[ ![](scroll-view-images/layouts-sml.png "Diseños de Xamarin.Forms")](scroll-view-images/layouts.png "diseños de Xamarin.Forms")
+[![](scroll-view-images/layouts-sml.png "Diseños de Xamarin.Forms")](scroll-view-images/layouts.png#lightbox "diseños de Xamarin.Forms")
 
 Este artículo se tratan:
 
@@ -35,7 +35,7 @@ Este artículo se tratan:
 ## <a name="usage"></a>Uso
 
 > [!NOTE]
-> **Tenga en cuenta**: `ScrollView`no debería estar anidado s. Además, `ScrollView`s no debería estar anidado con otros controles que proporcionan el desplazamiento, como `ListView` y `WebView`.
+> `ScrollView`s no debería estar anidado. Además, `ScrollView`s no debería estar anidado con otros controles que proporcionan el desplazamiento, como `ListView` y `WebView`.
 
 `ScrollView` expone un `Content` propiedad que puede establecerse una sola vista ni el diseño. Considere este ejemplo de un diseño con un gran boxView, seguido por un `Entry`:
 

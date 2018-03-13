@@ -3,16 +3,16 @@ title: "Cuadros de diálogo"
 description: "Este artículo explica cómo trabajar con cuadros de diálogo y ventanas modales en una aplicación Xamarin.Mac. Describe cómo crear ventanas modales en Xcode y la interfaz de generador, trabajar con cuadros de diálogo estándar e interactuar con estos controles en código C#."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
+ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9b65e870fae0074726d0bdd46d9eecbe99240e98
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 661874ae8599fed35ce10213fece383eb81de94d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="dialogs"></a>Cuadros de diálogo
 
@@ -22,7 +22,7 @@ Un cuadro de diálogo aparece en respuesta a una acción del usuario y normalmen
 
 Windows puede ser usado en un estado no modal (por ejemplo, un editor de texto que puede tener varios documentos abiertos a la vez) o Modal (por ejemplo, un cuadro de diálogo de exportación que se debe descartar para que pueda continuar la aplicación).
 
-[ ![](dialog-images/dialog03.png "Un cuadro de diálogo Abrir")](dialog-images/dialog03.png)
+[![](dialog-images/dialog03.png "Un cuadro de diálogo Abrir")](dialog-images/dialog03.png#lightbox)
 
 En este artículo, se tratarán los conceptos básicos sobre cómo trabajar con cuadros de diálogo y ventanas modales en una aplicación Xamarin.Mac. Se recomienda trabajar a través de la [Hola, Mac](~/mac/get-started/hello-mac.md) artículo en primer lugar, específicamente el [Introducción a Xcode y el generador de interfaz](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) y [distribuidores y acciones](~/mac/get-started/hello-mac.md#Outlets_and_Actions) secciones, tal como se explica conceptos clave y técnicas que usaremos en este artículo.
 
@@ -44,25 +44,25 @@ Función de Apple, hay tres formas de presentar un cuadro de diálogo:
 
 Norma `NSWindow` puede usarse como un cuadro de diálogo personalizado al mostrar de forma modal:
 
-[ ![](dialog-images/modal01.png "Una ventana modal de ejemplo")](dialog-images/modal01.png)
+[![](dialog-images/modal01.png "Una ventana modal de ejemplo")](dialog-images/modal01.png#lightbox)
 
 ### <a name="document-modal-dialog-sheets"></a>Hojas de cuadro de diálogo Modal de documento
 
 A _hoja_ es un cuadro de diálogo modal que se adjunta a una ventana de documento determinado, impide que los usuarios interactuar con la ventana hasta que descarte el cuadro de diálogo. Una hoja se adjunta a la ventana desde la que se desprende y solo una hoja puede estar abierta para una ventana en cualquier momento.
 
-[ ![](dialog-images/sheet08.png "Un ejemplo de hoja de modal")](dialog-images/sheet08.png)
+[![](dialog-images/sheet08.png "Un ejemplo de hoja de modal")](dialog-images/sheet08.png#lightbox)
 
 ### <a name="preferences-windows"></a>Ventanas Preferencias
 
 Una ventana de preferencias es un cuadro de diálogo no modal que contiene la configuración de la aplicación que el usuario cambia con poca frecuencia. A menudo, las preferencias de Windows incluyen una barra de herramientas que permite al usuario cambiar entre distintos grupos de configuración:
 
-[ ![](dialog-images/dialog02.png "Una ventana de preferencias de ejemplo")](dialog-images/dialog02.png)
+[![](dialog-images/dialog02.png "Una ventana de preferencias de ejemplo")](dialog-images/dialog02.png#lightbox)
 
 ### <a name="open-dialog"></a>Cuadro de diálogo Abrir
 
 El cuadro de diálogo Abrir proporciona a los usuarios una manera coherente para buscar y abrir un elemento en una aplicación:
 
-[ ![](dialog-images/dialog03.png "Un cuadro de diálogo Abrir")](dialog-images/dialog03.png)
+[![](dialog-images/dialog03.png "Un cuadro de diálogo Abrir")](dialog-images/dialog03.png#lightbox)
 
 
 ### <a name="print-and-page-setup-dialogs"></a>Impresión y los cuadros de diálogo Configurar página
@@ -71,37 +71,37 @@ macOS proporciona estándar de impresión y página Configuración de cuadros de
 
 El cuadro de diálogo de impresión se pueden mostrar como ambos un cuadro de diálogo flotante gratuita:
 
-[ ![](dialog-images/print01.png "Un cuadro de diálogo de impresión")](dialog-images/print01.png)
+[![](dialog-images/print01.png "Un cuadro de diálogo de impresión")](dialog-images/print01.png#lightbox)
 
 O bien, puede mostrarse como una hoja:
 
-[ ![](dialog-images/print02.png "Una hoja de impresión")](dialog-images/print02.png)
+[![](dialog-images/print02.png "Una hoja de impresión")](dialog-images/print02.png#lightbox)
 
 El cuadro de diálogo de configuración de página se pueden mostrar como ambos un cuadro de diálogo flotante gratuita:
 
-[ ![](dialog-images/print03.png "Un cuadro de diálogo de configuración de página")](dialog-images/print03.png)
+[![](dialog-images/print03.png "Un cuadro de diálogo de configuración de página")](dialog-images/print03.png#lightbox)
 
 O bien, puede mostrarse como una hoja:
 
-[ ![](dialog-images/print04.png "Una hoja de configuración de página")](dialog-images/print04.png)
+[![](dialog-images/print04.png "Una hoja de configuración de página")](dialog-images/print04.png#lightbox)
 
 ### <a name="save-dialogs"></a>Guardar los cuadros de diálogo
 
 El cuadro de diálogo Guardar ofrece a los usuarios una manera coherente para guardar un elemento en una aplicación. El cuadro de diálogo Guardar tiene dos estados: **mínimo** (también conocido como contraído):
 
-[ ![](dialog-images/save01.png "Un diálogo Guardar")](dialog-images/save01.png)
+[![](dialog-images/save01.png "Un diálogo Guardar")](dialog-images/save01.png#lightbox)
 
 Y el **expandida** estado:
 
-[ ![](dialog-images/save02.png "Cuadro de diálogo Guardar expandido")](dialog-images/save02.png)
+[![](dialog-images/save02.png "Cuadro de diálogo Guardar expandido")](dialog-images/save02.png#lightbox)
 
 El **mínimo** también se pueden mostrar el cuadro de diálogo Guardar como una hoja:
 
-[ ![](dialog-images/save03.png "Un número mínimo de guardado hoja")](dialog-images/save03.png)
+[![](dialog-images/save03.png "Un número mínimo de guardado hoja")](dialog-images/save03.png#lightbox)
 
 Igual que el **expandida** cuadro de diálogo Guardar:
 
-[ ![](dialog-images/save04.png "Guarde la hoja expandido")](dialog-images/save04.png)
+[![](dialog-images/save04.png "Guarde la hoja expandido")](dialog-images/save04.png#lightbox)
 
 Para obtener más información, consulte el [cuadros de diálogo](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowDialogs.html#//apple_ref/doc/uid/20000957-CH43-SW1) sección de Apple [directrices de interfaz humana de OS X](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 
@@ -116,20 +116,20 @@ Para agregar una nueva ventana, haga lo siguiente:
 1. En el **el Explorador de soluciones**, abra el `Main.storyboard` archivo para su edición en el generador de interfaz de Xcode.
 2. Arrastre una nueva **View Controller** en la superficie de diseño:
 
-    [ ![](dialog-images/new01.png "Seleccionar un controlador de vista de la biblioteca")](dialog-images/new01.png)
+    [![](dialog-images/new01.png "Seleccionar un controlador de vista de la biblioteca")](dialog-images/new01.png#lightbox)
 3. En el **identidad Inspector**, escriba `CustomDialogController` para el **nombre de la clase**: 
 
-    [ ![](dialog-images/new02.png "Establecer el nombre de clase")](dialog-images/new02.png)
+    [![](dialog-images/new02.png "Establecer el nombre de clase")](dialog-images/new02.png#lightbox)
 4. Cambie a Visual Studio para Mac, permitir que se sincronice con Xcode y crear el `CustomDialogController.h` archivo.
 5. Volver a Xcode y diseñar la interfaz: 
 
-    [ ![](dialog-images/new03.png "Diseñar la interfaz de usuario en Xcode.")](dialog-images/new03.png)
+    [![](dialog-images/new03.png "Diseñar la interfaz de usuario en Xcode.")](dialog-images/new03.png#lightbox)
 6. Crear un **desplazará tranquilamente Modal** desde la ventana principal de la aplicación en el nuevo controlador de vista, arrastre control desde el elemento de interfaz de usuario que se abrirá el cuadro de diálogo para la ventana del cuadro de diálogo. Asigne el **identificador** `ModalSegue`: 
 
-    [ ![](dialog-images/new06.png "Un segue modal")](dialog-images/new06.png)
+    [![](dialog-images/new06.png "Un segue modal")](dialog-images/new06.png#lightbox)
 6. El cable telefónico cualquiera **acciones** y **tomas**: 
 
-    [ ![](dialog-images/new04.png "Configurar una acción")](dialog-images/new04.png)
+    [![](dialog-images/new04.png "Configurar una acción")](dialog-images/new04.png#lightbox)
 6. Guarde los cambios y vuelva a Visual Studio para Mac para la sincronización con Xcode.
 
 Realizar el `CustomDialogController.cs` archivo aspecto similar al siguiente:
@@ -249,7 +249,7 @@ Este código inicializa el segue que hemos definido en el generador de interfaz 
 
 Podemos ejecutar la aplicación y mostrar el cuadro de diálogo personalizado:
 
-[ ![](dialog-images/new05.png "Un cuadro de diálogo de ejemplo")](dialog-images/new05.png)
+[![](dialog-images/new05.png "Un cuadro de diálogo de ejemplo")](dialog-images/new05.png#lightbox)
 
 Para obtener más información acerca del uso de windows en una aplicación Xamarin.Mac, visite nuestro [trabajar con ventanas](~/mac/user-interface/window.md) documentación.
 
@@ -264,19 +264,19 @@ Para crear una hoja de personalizado en Xamarin.Mac, vamos a hacer lo siguiente:
 1. En el **el Explorador de soluciones**, abra el `Main.storyboard` archivo para su edición en el generador de interfaz de Xcode.
 2. Arrastre una nueva **View Controller** en la superficie de diseño:
 
-    [ ![](dialog-images/new01.png "Seleccionar un controlador de vista de la biblioteca")](dialog-images/new01.png)
+    [![](dialog-images/new01.png "Seleccionar un controlador de vista de la biblioteca")](dialog-images/new01.png#lightbox)
 2. Diseñar la interfaz de usuario:
 
-    [ ![](dialog-images/sheet01.png "El diseño de interfaz de usuario")](dialog-images/sheet01.png)
+    [![](dialog-images/sheet01.png "El diseño de interfaz de usuario")](dialog-images/sheet01.png#lightbox)
 3. Crear un **hoja desplazará tranquilamente** desde la ventana principal en el nuevo controlador de vista: 
 
-    [ ![](dialog-images/sheet02.png "Seleccionar el tipo de segue hoja")](dialog-images/sheet02.png)
+    [![](dialog-images/sheet02.png "Seleccionar el tipo de segue hoja")](dialog-images/sheet02.png#lightbox)
 4. En el **identidad Inspector**, el nombre del controlador de vista **clase** `SheetViewController`: 
 
-    [ ![](dialog-images/sheet03.png "Establecer el nombre de clase")](dialog-images/sheet03.png)
+    [![](dialog-images/sheet03.png "Establecer el nombre de clase")](dialog-images/sheet03.png#lightbox)
 5. Cualquiera sea necesario definir **tomas** y **acciones**: 
 
-    [ ![](dialog-images/sheet04.png "Definir las salidas y las acciones necesarias")](dialog-images/sheet04.png)
+    [![](dialog-images/sheet04.png "Definir las salidas y las acciones necesarias")](dialog-images/sheet04.png#lightbox)
 6. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar.
 
 A continuación, edite la `SheetViewController.cs` de archivos y darle un aspecto similar al siguiente:
@@ -407,7 +407,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 
 Si se ejecuta la aplicación y abra la hoja, se adjuntará a la ventana:
 
-[ ![](dialog-images/sheet08.png "Una hoja de ejemplo")](dialog-images/sheet08.png)
+[![](dialog-images/sheet08.png "Una hoja de ejemplo")](dialog-images/sheet08.png#lightbox)
 
 <a name="Creating_a_Preferences_Dialog" />
 
@@ -481,36 +481,36 @@ Para agregar una nueva ventana, haga lo siguiente:
 1. En el **el Explorador de soluciones**, abra el `Main.storyboard` archivo para su edición en el generador de interfaz de Xcode.
 2. Arrastre una nueva **ventana controlador** en la superficie de diseño:
 
-    [ ![](dialog-images/pref01.png "Seleccione un controlador de la ventana de la biblioteca")](dialog-images/pref01.png)
+    [![](dialog-images/pref01.png "Seleccione un controlador de la ventana de la biblioteca")](dialog-images/pref01.png#lightbox)
 3. Organizar la ventana cerca de la **barra de menús** diseñador:
 
-    [ ![](dialog-images/pref02.png "Agregar la nueva ventana")](dialog-images/pref02.png)
+    [![](dialog-images/pref02.png "Agregar la nueva ventana")](dialog-images/pref02.png#lightbox)
 4. Crear copias del controlador de vista adjunto como habrá pestañas en la vista de preferencia:
 
-    [ ![](dialog-images/pref03.png "Agregar los controladores necesarios de vista")](dialog-images/pref03.png)
+    [![](dialog-images/pref03.png "Agregar los controladores necesarios de vista")](dialog-images/pref03.png#lightbox)
 5. Arrastre una nueva **controlador de la barra de herramientas** desde el **biblioteca**:
 
-    [ ![](dialog-images/pref04.png "Seleccione un controlador de la barra de herramientas de la biblioteca")](dialog-images/pref04.png)
+    [![](dialog-images/pref04.png "Seleccione un controlador de la barra de herramientas de la biblioteca")](dialog-images/pref04.png#lightbox)
 6. Y colóquela en la ventana en la superficie de diseño:
 
-    [ ![](dialog-images/pref05.png "Agregar un nuevo controlador de la barra de herramientas")](dialog-images/pref05.png)
+    [![](dialog-images/pref05.png "Agregar un nuevo controlador de la barra de herramientas")](dialog-images/pref05.png#lightbox)
 7. El diseño de la barra de herramientas de diseño:
 
-    [ ![](dialog-images/pref06.png "Diseño de la barra de herramientas")](dialog-images/pref06.png)
+    [![](dialog-images/pref06.png "Diseño de la barra de herramientas")](dialog-images/pref06.png#lightbox)
 8. Control y haga clic y arrastre desde cada uno de ellos **botón de barra de herramientas** a las vistas que creó anteriormente. Seleccione un **personalizado** desplazará tranquilamente tipo:
 
-    [ ![](dialog-images/pref07.png "Establecer el tipo de segue")](dialog-images/pref07.png)
+    [![](dialog-images/pref07.png "Establecer el tipo de segue")](dialog-images/pref07.png#lightbox)
 9. Seleccione el nuevo Segue y establezca el **clase** a `ReplaceViewSegue`:
 
-    [ ![](dialog-images/pref08.png "Configuración de la clase segue")](dialog-images/pref08.png)
+    [![](dialog-images/pref08.png "Configuración de la clase segue")](dialog-images/pref08.png#lightbox)
 10. En el **Menubar diseñador** en la superficie de diseño, en el menú de la aplicación seleccione **preferencias...** , control y haga clic y arrastre hasta la ventana de preferencias para crear un **mostrar** desplazará tranquilamente:
 
-    [ ![](dialog-images/pref09.png "Establecer el tipo de segue")](dialog-images/pref09.png)
+    [![](dialog-images/pref09.png "Establecer el tipo de segue")](dialog-images/pref09.png#lightbox)
 11. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar.
 
 Si se ejecuta el código y seleccione el **preferencias...**  desde el **menú aplicación**, se mostrará la ventana:
 
-[ ![](dialog-images/pref10.png "Una ventana de preferencias de ejemplo")](dialog-images/pref10.png)
+[![](dialog-images/pref10.png "Una ventana de preferencias de ejemplo")](dialog-images/pref10.png#lightbox)
 
 Para obtener más información sobre cómo trabajar con ventanas y barras de herramientas, visite nuestro [Windows](~/mac/user-interface/window.md) y [las barras de herramientas](~/mac/user-interface/toolbar.md) documentación.
 
@@ -719,7 +719,7 @@ namespace SourceWriter
 
 A continuación, conectar clase preferencia a los elementos de interfaz de usuario en la ventana de preferencias y crear vistas anteriormente. En el generador de interfaz, seleccione un controlador de vista de preferencia y cambie a la **identidad Inspector**, cree una clase personalizada para el controlador: 
 
-[ ![](dialog-images/prefs12.png "El Inspector de identidad")](dialog-images/prefs12.png)
+[![](dialog-images/prefs12.png "El Inspector de identidad")](dialog-images/prefs12.png#lightbox)
 
 Cambie a Visual Studio para Mac sincronizar los cambios y abrir la clase recién creada para su edición. Haga que la clase de aspecto similar al siguiente:
 
@@ -758,7 +758,7 @@ Tenga en cuenta que esta clase ha realizado estas dos cosas: en primer lugar, ha
 
 A continuación, haga doble clic en el archivo del guión gráfico para abrirla de nuevo en el generador de interfaz (y ver los cambios realizados anteriormente). Arrastre los controles de interfaz de usuario necesarios para generar la interfaz de preferencias en la vista. Para cada control, cambie a la **enlace Inspector** y enlazar a las propiedades individuales de la **AppPreference** clase:
 
-[ ![](dialog-images/prefs13.png "El Inspector de enlace")](dialog-images/prefs13.png)
+[![](dialog-images/prefs13.png "El Inspector de enlace")](dialog-images/prefs13.png#lightbox)
 
 Repita los pasos anteriores para todos los paneles (controladores de la vista) y preferencias propiedades necesarias.
 
@@ -903,7 +903,7 @@ namespace SourceWriter
 
 Con todos estos cambios en su lugar, si el usuario edita las preferencias de la aplicación y cierra la ventana de preferencias, los cambios se aplicarán a todas las ventanas abiertas:
 
-[ ![](dialog-images/prefs14.png "Una ventana de preferencias de ejemplo")](dialog-images/prefs14.png)
+[![](dialog-images/prefs14.png "Una ventana de preferencias de ejemplo")](dialog-images/prefs14.png#lightbox)
 
 <a name="The_Open_Dialog" />
 
@@ -954,7 +954,7 @@ El cuadro de diálogo Abrir devuelve el usuario archivos o directorios seleccion
 
 Si se ejecuta el programa y seleccione el **abrir...**  de elemento de la **archivo** se muestra el menú, lo siguiente: 
 
-[ ![](dialog-images/dialog03.png "Un cuadro de diálogo Abrir")](dialog-images/dialog03.png)
+[![](dialog-images/dialog03.png "Un cuadro de diálogo Abrir")](dialog-images/dialog03.png#lightbox)
 
 <a name="The_Print_and_Page_Setup_Dialogs" />
 
@@ -991,11 +991,11 @@ void ShowDocument (NSObject sender) {
 
 Si se establece la `ShowPrintAsSheet` propiedad `false`, ejecute la aplicación y mostrar el cuadro de diálogo de impresión, se mostrará lo siguiente:
 
-[ ![](dialog-images/print01.png "Un cuadro de diálogo de impresión")](dialog-images/print01.png)
+[![](dialog-images/print01.png "Un cuadro de diálogo de impresión")](dialog-images/print01.png#lightbox)
 
 Si establece la `ShowPrintAsSheet` propiedad `true`, ejecute la aplicación y mostrar el cuadro de diálogo de impresión, se mostrará lo siguiente:
 
-[ ![](dialog-images/print02.png "Una hoja de impresión")](dialog-images/print02.png)
+[![](dialog-images/print02.png "Una hoja de impresión")](dialog-images/print02.png#lightbox)
 
 El código siguiente muestra el cuadro de diálogo de diseño de página:
 
@@ -1022,11 +1022,11 @@ void ShowLayout (NSObject sender) {
 
 Si se establece la `ShowPrintAsSheet` propiedad `false`, ejecute la aplicación y mostrar el cuadro de diálogo Diseño de impresión, se mostrará lo siguiente:
 
-[ ![](dialog-images/print03.png "Un cuadro de diálogo de configuración de página")](dialog-images/print03.png)
+[![](dialog-images/print03.png "Un cuadro de diálogo de configuración de página")](dialog-images/print03.png#lightbox)
 
 Si establece la `ShowPrintAsSheet` propiedad `true`, ejecute la aplicación y mostrar el cuadro de diálogo Diseño de impresión, se mostrará lo siguiente:
 
-[ ![](dialog-images/print04.png "Una hoja de configuración de página")](dialog-images/print04.png)
+[![](dialog-images/print04.png "Una hoja de configuración de página")](dialog-images/print04.png#lightbox)
 
 Para obtener más información sobre cómo trabajar con la impresión y cuadros de diálogo de configuración de página, vea de Apple [NSPrintPanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPrintPanel_Class/index.html#//apple_ref/doc/uid/TP40004092), [NSPageLayout](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPageLayout_Class/index.html#//apple_ref/doc/uid/TP40004080) y [Introducción a la impresión](http://sdg.mesonet.org/people/brad/XCode3/Documentation/DocSets/com.apple.adc.documentation.AppleSnowLeopard.CoreReference.docset/Contents/Resources/Documents/#documentation/Cocoa/Conceptual/Printing/Printing.html#//apple_ref/doc/uid/10000083-SW1) documentación.
 
@@ -1076,19 +1076,19 @@ El `AllowedFileTypes` propiedad es una matriz de tipos de archivo que el usuario
 
 Si se establece la `ShowSaveAsSheet` propiedad `false`, ejecute la aplicación y seleccione **Guardar como...**  desde el **archivo** menú, se mostrará lo siguiente:
 
-[ ![](dialog-images/save01.png "Un cuadro de diálogo Guardar")](dialog-images/save01.png)
+[![](dialog-images/save01.png "Un cuadro de diálogo Guardar")](dialog-images/save01.png#lightbox)
 
 El usuario puede expandir el cuadro de diálogo:
 
-[ ![](dialog-images/save02.png "Cuadro de diálogo Guardar expandido")](dialog-images/save02.png)
+[![](dialog-images/save02.png "Cuadro de diálogo Guardar expandido")](dialog-images/save02.png#lightbox)
 
 Si se establece la `ShowSaveAsSheet` propiedad `true`, ejecute la aplicación y seleccione **Guardar como...**  desde el **archivo** menú, se mostrará lo siguiente:
 
-[ ![](dialog-images/save03.png "Guarda la hoja")](dialog-images/save03.png)
+[![](dialog-images/save03.png "Guarda la hoja")](dialog-images/save03.png#lightbox)
 
 El usuario puede expandir el cuadro de diálogo:
 
-[ ![](dialog-images/save04.png "Guarde la hoja expandido")](dialog-images/save04.png)
+[![](dialog-images/save04.png "Guarde la hoja expandido")](dialog-images/save04.png#lightbox)
 
 Para obtener más información sobre cómo trabajar con el cuadro de diálogo Guardar, vea de Apple [NSSavePanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSSavePanel_Class/index.html#//apple_ref/doc/uid/TP40004098) documentación.
 
@@ -1105,7 +1105,7 @@ En este artículo ha tomado una visión detallada de trabajar con ventanas modal
 - [Menús](~/mac/user-interface/menu.md)
 - [Windows](~/mac/user-interface/window.md)
 - [Barras de herramientas](~/mac/user-interface/toolbar.md)
-- [Directrices de interfaz de sistema operativo X humanos](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Directrices de interfaz humana de OS X)
 - [Introducción a Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)
 - [Introducción a las hojas](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Sheets/Sheets.html#//apple_ref/doc/uid/10000002i)
 - [Introducción a la impresión](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/Printing/osxp_aboutprinting/osxp_aboutprt.html)

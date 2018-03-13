@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 9a3090873569db2466db9ab25cc105ea59401df3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: abcda680f6cfbde802f7b666cf2aade2c6e11093
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="lines-and-stroke-caps"></a>Líneas y extremos de trazo
 
@@ -92,7 +92,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Para cada miembro de la `SKStrokeCap` enumeración, el controlador dibuja dos líneas, uno con un grosor del trazo de 50 píxeles y otra línea situado en la parte superior con un grosor del trazo de 2 píxeles. Esta segunda línea se pretende ilustrar geométrica inicial y final de la línea independiente del grosor de la línea y un extremo del trazo:
 
-[![](lines-images/strokecaps-small.png "Captura de pantalla triple de la página extremos de trazos")](lines-images/strokecaps-large.png "Triple captura de pantalla de la página extremos de trazo")
+[![](lines-images/strokecaps-small.png "Captura de pantalla triple de la página extremos de trazos")](lines-images/strokecaps-large.png#lightbox "Triple captura de pantalla de la página extremos de trazo")
 
 Como puede ver, el `Square` y `Round` extremos de trazos amplían la longitud de la línea de forma eficaz por la mitad del ancho del trazo en el principio de la línea y de nuevo al final. Esta extensión se vuelve importante cuando es necesario determinar las dimensiones de un objeto graphics representado.
 
@@ -230,7 +230,7 @@ T GetPickerItem<T>(Picker picker)
 
 La captura de pantalla muestra una variedad de `Picker` selecciones en las tres plataformas:
 
-[![](lines-images/multiplelines-small.png "Captura de pantalla triple de la página de varias líneas")](lines-images/multiplelines-large.png "Triple captura de pantalla de la página de varias líneas")
+[![](lines-images/multiplelines-small.png "Captura de pantalla triple de la página de varias líneas")](lines-images/multiplelines-large.png#lightbox "Triple captura de pantalla de la página de varias líneas")
 
 El iPhone a la izquierda se muestra cómo el `SKPointMode.Points` hace que el miembro de enumeración `DrawPoints` para representar cada uno de los puntos en el `SKPoint` matriz como un cuadrado si el extremo de línea es `Butt` o `Square`. Se representan círculos si el extremo de línea es `Round`.
 

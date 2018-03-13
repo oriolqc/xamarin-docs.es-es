@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: bac9402df544a57cceb98e816e268eb2dcb99c72
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8eed2d6b825a6e6dd7e956bf901246b9a630081a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-wear"></a>Hola, desgaste
 
@@ -30,11 +30,11 @@ Crear un nuevo **aplicación Android desgaste**:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Crear una nueva aplicación Android desgaste en el cuadro de diálogo nuevo proyecto](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png)
+[![Crear una nueva aplicación Android desgaste en el cuadro de diálogo nuevo proyecto](hello-wear-images/vs/new-solution-sml.png)](hello-wear-images/vs/new-solution.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Crear una nueva aplicación Android desgaste en el cuadro de diálogo nueva solución](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png)
+[![Crear una nueva aplicación Android desgaste en el cuadro de diálogo nueva solución](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
@@ -47,13 +47,13 @@ Esta plantilla se incluye automáticamente el **Xamarin Android Wearable bibliot
 
 Asegúrese de que **mínimo Android al destino** está establecido en **Android 5.0 (círculo)** o una versión posterior: 
 
-[![Establecer la plataforma de destino para Android 5.0 en Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png)
+[![Establecer la plataforma de destino para Android 5.0 en Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Asegúrese de que la plataforma de destino se establece en **Android 5.0 (círculo)** o una versión posterior:
 
-[ ![Establecer la plataforma de destino para Android 5.0 en Visual Studio para Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png)
+[![Establecer la plataforma de destino para Android 5.0 en Visual Studio para Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
@@ -144,11 +144,11 @@ El dispositivo Android desgaste debe aparecer en el menú desplegable de disposi
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Elegir un AVD desgaste en el menú del dispositivo de Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png)
+[![Elegir un AVD desgaste en el menú del dispositivo de Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Elegir un AVD desgaste en Visual Studio para el menú del dispositivo de Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png)
+[![Elegir un AVD desgaste en Visual Studio para el menú del dispositivo de Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
@@ -160,11 +160,11 @@ Si está utilizando un emulador de inspección, puede tardar varios minutos en i
 
 Después de que la aplicación se implementa correctamente, la pantalla del dispositivo desgaste debe mostrar una pantalla similar al siguiente:
 
-[![Pantalla inicial de la aplicación de uso](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png)
+[![Pantalla inicial de la aplicación de uso](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
 Pulse la **¡CLICK ME!** botón en el dispositivo de desgaste y vea el incremento del recuento con cada derivación:
 
-[![Captura de pantalla de desgaste aplicación después de 3 clics](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png)
+[![Captura de pantalla de desgaste aplicación después de 3 clics](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 
 ## <a name="next-steps"></a>Pasos siguientes

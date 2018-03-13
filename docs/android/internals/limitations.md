@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 11a7c9dcbe9481209d2eb90ff9d981f7437a1c99
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1b970432d7cd5b6a84b8af72ab616493f3cd36a7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="limitations"></a>Limitaciones
 
@@ -19,13 +19,11 @@ Puesto que las aplicaciones en Android requieren generar tipos de proxy de Java 
 
 Éstas son las limitaciones de Xamarin.Android en comparación con el escritorio Mono:
 
-<a name="Limited_Dynamic_Language_Support" />
 
 ## <a name="limited-dynamic-language-support"></a>Compatibilidad de idioma dinámico limitado
 
  [Contenedores CCW Android](~/android/platform/java-integration/android-callable-wrappers.md) son necesarias siempre que el tiempo de ejecución Android es necesario para llamar a código administrado. Contenedores CCW Android se generan en tiempo de compilación, en función de análisis estático de IL. El resultado neto de este: se *no* usar lenguajes dinámicos (IronPython, IronRuby, etc.) en cualquier escenario donde subclases de tipos de Java se requiere (incluidas las subclases indirecta), porque no hay ninguna manera de extraer estos tipos dinámicos en tiempo de compilación para generar los contenedores CCW Android necesarios.
 
-<a name="Limited_Java_Generation_Support" />
 
 ## <a name="limited-java-generation-support"></a>Compatibilidad con la generación de Java limitado
 
@@ -88,7 +86,6 @@ class MyIntentService : IntentService {
 }
 ```
 
-<a name="Generic_Csharp_classes" />
 
 ### <a name="generic-c-classes"></a>Clases genéricas de C#
 
@@ -150,7 +147,6 @@ Clases genéricas de C# se admiten parcialmente. Existen las siguientes limitaci
     }
     ```
 
-<a name="Partial_Java_Generics_Support" />
 
 ## <a name="partial-java-generics-support"></a>La compatibilidad con genéricos de Java parcial
 
@@ -160,7 +156,7 @@ Tenemos algunas clases que no son aplicables a esta limitación, pero se ajustar
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Android contenedores CCW](~/android/platform/java-integration/android-callable-wrappers.md)
+- [Contenedores que se pueden llamar de Android](~/android/platform/java-integration/android-callable-wrappers.md)
 - [Trabajar con JNI](~/android/platform/java-integration/working-with-jni.md)
 - [ExportAttribute](https://developer.xamarin.com/api/type/Java.Interop.ExportAttribute/)
 - [SuperString](https://developer.xamarin.com/api/property/Java.Interop.ExportAttribute.SuperArgumentsString/)

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: e599c56f732f918d2a9c82255bc01182651d506c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 74b22f31fabf70885eca732ef021232124df71bb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-dependencyservice"></a>Introducción a DependencyService
 
@@ -129,13 +129,13 @@ DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 
 El [UsingDependencyService solución de ejemplo](https://developer.xamarin.com/samples/UsingDependencyService/) es se muestra a continuación para iOS y Android, con los cambios de código descritos anteriormente resaltado.
 
- [ ![iOS y Android solución](introduction-images/solution-sml.png "DependencyService estructura de la solución de ejemplo")](introduction-images/solution.png "DependencyService estructura de la solución de ejemplo")
+ [![iOS y Android solución](introduction-images/solution-sml.png "DependencyService estructura de la solución de ejemplo")](introduction-images/solution.png#lightbox "DependencyService estructura de la solución de ejemplo")
 
 > [!NOTE]
-> **Nota:** , **debe** proporcionar una implementación en cada proyecto de la plataforma. Si se registró ninguna implementación de interfaz, la `DependencyService` podrá resolver el `Get<T>()` método en tiempo de ejecución.
+> Se **debe** proporcionar una implementación en cada proyecto de la plataforma. Si se registró ninguna implementación de interfaz, la `DependencyService` podrá resolver el `Get<T>()` método en tiempo de ejecución.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [DependencyServiceSample](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
-- [Ejemplos de Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/) (Ejemplos de Xamarin.Forms)

@@ -3,16 +3,16 @@ title: "Parte 1. Introducción a XAML"
 description: "En una aplicación de Xamarin.Forms, XAML se usa principalmente para definir el contenido visual de una página. Un archivo XAML siempre está asociado a un archivo de código C# que proporciona compatibilidad de código para el marcado. Juntos, estos dos archivos contribuyen a una nueva definición de clase que incluye vistas secundarias y la inicialización de la propiedad. En el archivo XAML, se hace referencia a las clases y propiedades con atributos y elementos XML y se establecen los vínculos entre el código y marcado."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
+ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 8e02dbd8687fc10582874710db7ca6848f546751
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55c4fa73044b1c37e879ed7731161269bdbf8ba8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introducción a XAML
 
@@ -195,7 +195,7 @@ Aunque normalmente no es necesario dedicar mucho tiempo con archivos de código 
 
 Cuando se compila y ejecuta este programa, el `Label` elemento aparece en el centro de la página como sugiere el XAML. Las tres plataformas de izquierda a derecha son iOS, Android y Windows 10 Mobile:
 
-[![](get-started-with-xaml-images/xamlsamples.png "Predeterminados de presentación de Xamarin.Forms")](get-started-with-xaml-images/xamlsamples-large.png "mostrar Xamarin.Forms predeterminado")
+[![](get-started-with-xaml-images/xamlsamples.png "Predeterminados de presentación de Xamarin.Forms")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "mostrar Xamarin.Forms predeterminado")
 
 Con efectos visuales más interesantes, todo lo que necesita es más interesante XAML.
 
@@ -354,7 +354,7 @@ public MainPage()
 
 Establecer el `Content` propiedad de la página reemplaza la configuración de la `Content` propiedad en el archivo XAML. Al compilar e implementar la nueva versión de este programa, aparece un botón en la pantalla. Presionarlo navega a `HelloXamlPage`. Ésta es la página resultante en el iPhone, Android y Windows 10 Mobile dispositivos:
 
-[ ![](get-started-with-xaml-images/helloxaml1.png "Girar el texto de la etiqueta")](get-started-with-xaml-images/helloxaml1-large.png "girar el texto de etiqueta")
+[![](get-started-with-xaml-images/helloxaml1.png "Girar el texto de la etiqueta")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "girar el texto de etiqueta")
 
 Puede navegar hacia `MainPage` mediante la **< Atrás** botón en iOS, utilizando la flecha izquierda en la parte superior de la página o en la parte inferior del teléfono en Android, o mediante la flecha izquierda en la parte inferior de la página en Windows 10 Mobile.
 
@@ -364,7 +364,7 @@ Puede experimentar con el código XAML para las distintas formas representar la 
 
 Este es su aspecto:
 
-[ ![](get-started-with-xaml-images/helloxaml2.png "Girar el texto de la etiqueta con caracteres Unicode")](get-started-with-xaml-images/helloxaml2-large.png "girar el texto de la etiqueta con caracteres Unicode")
+[![](get-started-with-xaml-images/helloxaml2.png "Girar el texto de la etiqueta con caracteres Unicode")](get-started-with-xaml-images/helloxaml2-large.png#lightbox "girar el texto de la etiqueta con caracteres Unicode")
 
 ## <a name="xaml-and-code-interactions"></a>XAML y las interacciones del código
 
@@ -392,7 +392,7 @@ El **HelloXamlPage** ejemplo contiene sólo un único `Label` en la página, per
 
 Este archivo XAML está completa sintácticamente, y este es su aspecto:
 
-[ ![](get-started-with-xaml-images/xamlpluscode1.png "Varios controles en una página")](get-started-with-xaml-images/xamlpluscode1-large.png "varios controles en una página")
+[![](get-started-with-xaml-images/xamlpluscode1.png "Varios controles en una página")](get-started-with-xaml-images/xamlpluscode1-large.png#lightbox "varios controles en una página")
 
 Sin embargo, es probable que observe este programa sea funcionalmente deficientes. Quizás el `Slider` debe para provocar la `Label` para mostrar el valor actual y el `Button` probablemente está diseñado para hacer algo dentro del programa.
 
@@ -483,7 +483,7 @@ void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
 
 Cuando ejecuta el programa por primera vez el `Label` no se muestra la `Slider` valor porque el `ValueChanged` aún no se desencadena el evento. Pero cualquier manipulación de los `Slider` hace que el valor que se mostrará:
 
-[ ![](get-started-with-xaml-images/xamlpluscode2.png "Valor del control deslizante muestra")](get-started-with-xaml-images/xamlpluscode2-large.png "valor del control deslizante muestra")
+[![](get-started-with-xaml-images/xamlpluscode2.png "Valor del control deslizante muestra")](get-started-with-xaml-images/xamlpluscode2-large.png#lightbox "valor del control deslizante muestra")
 
 Ahora para el `Button`. Vamos a simular una respuesta a una `Clicked` eventos mediante una alerta con la `Text` del botón. El controlador de eventos puede difundir con seguridad el `sender` argumento pasado a un `Button` y, a continuación, obtener acceso a sus propiedades:
 
@@ -530,7 +530,7 @@ Con esta introducción, ha visto cómo un archivo XAML y el archivo de código i
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
-- [Parte 2. Sintaxis XAML esenciales](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
+- [Parte 2. Sintaxis XAML esencial](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Parte 3. Extensiones de marcado XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Parte 4. Conceptos básicos del enlace de datos](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)
 - [Parte 5. Desde el enlace de datos a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md)

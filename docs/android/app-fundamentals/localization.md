@@ -7,12 +7,12 @@ ms.assetid: D1277939-A1E8-468E-B136-820D816AF853
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: adfc0da404c6b9df79c3b2be51f8cafa302a6bc3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: c4800c1fe844a03c20b28079640a5ddab8046b1f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-localization"></a>Localización de Android
 
@@ -81,7 +81,7 @@ Ya está familiarizada con el uso de la mayoría de los desarrolladores **PPP** 
 ![Captura de pantalla de carpetas/pueden dibujar los recursos y de recursos o los valores para varios identificadores de referencia culturales](localization-images/resources.png)
 
 > [!NOTE]
-> **Nota:** cuando se especifica un lenguaje de nivel superior como `es` solo dos caracteres son necesarios; sin embargo, al especificar una configuración regional completa, el formato de nombre de directorio requiere un guión y minúscula **r** para separar los dos elementos, por ejemplo **pt rBR** o **zh-rCN**. Compare esto con el valor devuelto en el código, que tiene un carácter de subrayado (p. ej. `pt_BR`). Ambos son diferentes en el valor .NET `CultureInfo` clase utiliza, que tiene un guión solo (p. ej. `pt-BR`). Tenga en cuenta estas diferencias cuando se trabaja en las distintas plataformas de Xamarin.
+> Al especificar un lenguaje de nivel superior como `es` solo dos caracteres son necesarios; sin embargo, al especificar una configuración regional completa, el formato de nombre de directorio requiere un guión y minúscula **r** para separar las dos partes, por ejemplo **pt rBR** o **zh-rCN**. Compare esto con el valor devuelto en el código, que tiene un carácter de subrayado (p. ej. `pt_BR`). Ambos son diferentes en el valor .NET `CultureInfo` clase utiliza, que tiene un guión solo (p. ej. `pt-BR`). Tenga en cuenta estas diferencias cuando se trabaja en las distintas plataformas de Xamarin.
 
 #### <a name="stringsxml-file-format"></a>Formato de archivo Strings.Xml
 
@@ -164,13 +164,13 @@ En el **Strings.xml**
 
 ```xml
 <plurals name="numberOfTasks">
-         <!--
-                    As a developer, you should always supply "one" and "other"
-                    strings. Your translators will know which strings are actually
-                    needed for their language.
-             -->
-         <item quantity="one">There is %d task left.</item>
-         <item quantity="other">There are %d tasks still to do.</item>
+   <!--
+      As a developer, you should always supply "one" and "other"
+      strings. Your translators will know which strings are actually
+      needed for their language.
+    -->
+   <item quantity="one">There is %d task left.</item>
+   <item quantity="other">There are %d tasks still to do.</item>
  </plurals>
 ```
 
@@ -229,15 +229,13 @@ Cuando se usa Android 4.2 (API nivel 17) y alineación versiones más reciente, 
 
 La siguiente captura de pantalla muestra la [localizado **Tasky** ejemplo](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) en árabe:
 
-[![Captura de pantalla de aplicación Tasky en árabe](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png) 
+[![Captura de pantalla de aplicación Tasky en árabe](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
 
 La siguiente captura de pantalla muestra la [localizado **Tasky** ejemplo](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) en hebreo:
 
-[![Captura de pantalla de aplicación Tasky en hebreo](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png)
+[![Captura de pantalla de aplicación Tasky en hebreo](localization-images/rtl-he-sml.png)](localization-images/rtl-he.png#lightbox)
 
 Texto de derecha a izquierda se localiza mediante **Strings.xml** archivos de la misma manera que el texto de izquierda a derecha.
-
-<a name="testing" />
 
 ## <a name="testing"></a>Pruebas
 

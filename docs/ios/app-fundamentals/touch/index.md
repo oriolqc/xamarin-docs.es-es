@@ -3,16 +3,16 @@ title: "Entrada táctil"
 description: "Pantallas táctiles en muchos de los dispositivos actuales permiten a los usuarios interactuar rápida y eficaz con dispositivos de forma natural e intuitiva. Esta interacción no se limita solo a la detección simple toque: es posible usar los movimientos así. Por ejemplo, el movimiento de gesto de acercamiento es un ejemplo muy común de esto: empujando una parte de la pantalla con dos dedos que el usuario puede acercar o alejar. Esta guía examina táctiles y los gestos de iOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4A17FD28-313F-4AAC-B82B-3847B4D64A88
+ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/23/2017
-ms.openlocfilehash: 8f6c26048bc0ece0d64acf069151ff1d67403ccc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b0e1cf8b1cb18982fe319fef7c524aeb70be4a9b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="touch"></a>Entrada táctil
 
@@ -31,14 +31,14 @@ Sin embargo, hay ocasiones cuando necesite utilizar el procesamiento de bajo niv
 
 ## <a name="sections"></a>Secciones
 
--  [Entrada táctil de iOS](touch-in-ios.md)
+-  [Entrada táctil en iOS](touch-in-ios.md)
 -  [Tutorial: Usar táctil en iOS](ios-touch-walkthrough.md)
--  [Seguimiento de multitoque](touch-tracking.md)
+-  [Seguimiento multitáctil](touch-tracking.md)
 
 Esta guía le servirá como introducción a la entrada táctil en iOS. Para obtener más información sobre el uso de 3D táctiles y comentarios hápticos en iOS, que se introdujeron en iOS 9 y 10 respectivamente, consulte las guías específicas siguientes:
 
-* [Táctil 3D](~/ios/platform/3d-touch.md)
-* [Proporcionar comentarios hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
+* [Entrada táctil 3D](~/ios/platform/3d-touch.md)
+* [Provisión de comentarios hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
 
 

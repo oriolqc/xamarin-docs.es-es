@@ -3,16 +3,16 @@ title: "Introducción a tvOS 9"
 description: "Este artículo detallan todas las características disponibles en tvOS 9 y las API nuevas y modificadas para desarrolladores de Xamarin.tvOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
+ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c1fafe85fb7f5c30dca0dff6fe3dff5172e0b9aa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55e83658e09bc7e5c12bb3ef3f508497651ec46c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-tvos-9"></a>Introducción a tvOS 9
 
@@ -91,7 +91,7 @@ La instancia remota de Siri está disponible actualmente en los países siguient
 
 Todos los otros países recibirán Apple TV remoto que reemplaza al botón Siri con un botón de búsqueda, se abrirá la pantalla de búsqueda predeterminada con la entrada de texto para buscar:
 
-[ ![](tvos9-images/remote02.png "Siri remoto")](tvos9-images/remote02.png)
+[![](tvos9-images/remote02.png "Siri remoto")](tvos9-images/remote02.png#lightbox)
 
 Para obtener más información, vea nuestra [Siri remoto y controladores de Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) documentación.
 
@@ -155,7 +155,7 @@ Para obtener más información, vea nuestra [trabajar con navegación y foco](~/
 
 En la pantalla Inicio TV de Apple muestra todas las aplicaciones que están instaladas y proporciona una manera de tener acceso a las preferencias del usuario:
 
-[ ![](tvos9-images/home01.png "La pantalla principal")](tvos9-images/home01.png)
+[![](tvos9-images/home01.png "La pantalla principal")](tvos9-images/home01.png#lightbox)
 
 El usuario navega a una cuadrícula de los iconos de aplicación con gestos táctiles en el mando a distancia Siri con el foco para seleccionar una aplicación y ejecutarlo. El icono de aplicación es el su primer la oportunidad de realizar una impresión excelente en sus usuarios potenciales y debe comunicar el propósito de la aplicación de un vistazo.
 
@@ -169,7 +169,7 @@ Para obtener más información, vea nuestra [trabajar con imágenes de iconos y]
 
 Si el usuario ha colocado la aplicación Xamarin.tvOS en la fila de la parte superior de la pantalla Inicio TV de Apple, se mostrará una imagen de estante superior grande cuando se selecciona la aplicación por el usuario. Esta imagen debe resaltar las características de la aplicación o proporcionar vínculos directos a su contenido.
 
-[ ![](tvos9-images/topshelf01.png "Estante superior")](tvos9-images/topshelf01.png)
+[![](tvos9-images/topshelf01.png "Estante superior")](tvos9-images/topshelf01.png#lightbox)
 
 La imagen de estante superior pueden ser proporcionada como una sola static `.png` o `.lsr` o bien, se pueden crearse dinámicamente en tiempo de ejecución como una sola fila de elementos puede recibir el foco.
 

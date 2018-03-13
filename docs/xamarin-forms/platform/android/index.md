@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/13/2016
-ms.openlocfilehash: d68d84671028ded14b4b885f2c134656fc639f9e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b5e9a4c449bc99bd88fc415f5ebb969d2c2a08a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-platform-features"></a>Características de la plataforma Android
 
@@ -28,14 +28,14 @@ Para agregar temas de diseño de Material para el proyecto de Xamarin.Forms Andr
 
 Este es el **tareas** ejemplo con el valor predeterminado `FormsApplicationActivity`:
 
-[ ![](images/before-appcompat-sml.png "Aplicación de ejemplo de lista de tareas sin AppCompat")](images/before-appcompat.png "aplicación de ejemplo de lista de tareas sin AppCompat")
+[![](images/before-appcompat-sml.png "Aplicación de ejemplo de lista de tareas sin AppCompat")](images/before-appcompat.png#lightbox "aplicación de ejemplo de lista de tareas sin AppCompat")
 
 Y este es el mismo código después de actualizar el proyecto para usar `FormsAppCompatActivity` (y agregar la información del tema adicionales):
 
-[ ![](images/post-appcompat-sml.png "Aplicación de ejemplo de lista de tareas con AppCompat y temas")](images/post-appcompat.png "aplicación de ejemplo de lista de tareas con AppCompat y temas")
+[![](images/post-appcompat-sml.png "Aplicación de ejemplo de lista de tareas con AppCompat y temas")](images/post-appcompat.png#lightbox "aplicación de ejemplo de lista de tareas con AppCompat y temas")
 
 > [!NOTE]
-> **Tenga en cuenta**: al usar `FormsAppCompatActivity`, el [clases base para algunos representadores personalizados Android](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) será diferente.
+> Cuando se usa `FormsAppCompatActivity`, [clases base para algunos representadores personalizados Android](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) será diferente.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

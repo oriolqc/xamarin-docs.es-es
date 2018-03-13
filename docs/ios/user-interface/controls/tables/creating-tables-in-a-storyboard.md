@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c59ddde44b0e47122865c55a7964707f106d2691
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e46038b21327fe8847d2c04ee1ba16960f6a059b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Trabajar con tablas en el Diseñador de iOS
 
@@ -40,7 +40,7 @@ Un `UITableView` con prototipo contenido normalmente sirve para mostrar una list
 
 El ejemplo StoryboardTable contiene una aplicación principal-detalle sencilla que utiliza dos tipos de UITableView de un guión gráfico. El resto de esta sección describe cómo compilar un ejemplo de lista de tareas pequeño que tendrá un aspecto similar al siguiente cuando haya terminado:
 
- [ ![Pantallas de ejemplo](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png)
+ [![Pantallas de ejemplo](creating-tables-in-a-storyboard-images/image13a.png)](creating-tables-in-a-storyboard-images/image13a.png#lightbox)
 
 La interfaz de usuario se generarán con un guión gráfico, y ambas pantallas usará un UITableView. La pantalla principal utiliza *contenido prototipo* diseño de la fila y el detalle usa pantalla *contenido estático* para crear un formulario de entrada de datos mediante los diseños de celda personalizado.
 
@@ -48,7 +48,7 @@ La interfaz de usuario se generarán con un guión gráfico, y ambas pantallas u
 
 Cree una nueva solución en Visual Studio mediante **(crear) un proyecto nuevo... > único App(C#) vista**y llámelo _StoryboardTables_.
 
- [ ![Crear un cuadro de diálogo nuevo proyecto](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png)
+ [![Crear un cuadro de diálogo nuevo proyecto](creating-tables-in-a-storyboard-images/npd.png)](creating-tables-in-a-storyboard-images/npd.png#lightbox)
 
 Se abrirá la solución con algunos archivos de C# y un `Main.storyboard` archivo ya se ha creado. Haga doble clic en el `Main.storyboard` archivo para abrirlo en el Diseñador de iOS.
 
@@ -75,24 +75,24 @@ El primer cambio en el guión gráfico es eliminar la vista de detalle existente
 2.  Arrastre un **controlador navegación** y un **controlador de vista de tabla** en el guión gráfico en el cuadro de herramientas. 
 3.  Crear un segue desde el controlador de vista de raíz para el segundo controlador de vista de tabla que se acaba de agregar. Para crear el segue, Control + arrastrar *de la celda de detalle* a la UITableViewController recién agregado. Elija la opción **mostrar*** en **desplazará tranquilamente selección**. 
 4.  Seleccione el nuevo desplazará tranquilamente que ha creado y asígnele un identificador de referencia se desplazará tranquilamente en código. Haga clic en el segue y escriba `TaskSegue` para el **identificador** en el **panel de propiedades**, similar a la siguiente:    
-  [ ![Nomenclatura desplazará tranquilamente en el panel de propiedades](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png) 
+  [![Nomenclatura desplazará tranquilamente en el panel de propiedades](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
 5. A continuación, configure las dos vistas de tabla seleccionándolos y usando el panel de propiedades. Asegúrese de seleccionar la vista y el controlador de vista no: se puede usar el esquema del documento para ayudar con la selección.
 
 6.  Cambiar el controlador de vista de raíz para que sea **contenido: prototipos dinámica** (la vista en la superficie de diseño se etiquetarse **prototipo contenido** ):
 
-    [ ![Si se establece la propiedad de contenido en prototipos dinámicos](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png)
+    [![Si se establece la propiedad de contenido en prototipos dinámicos](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
 7.  Cambiar la nueva **UITableViewController** como **contenido: estático celdas**. 
 
 
 8. El nuevo UITableViewController debe tener su nombre de clase y el identificador de conjunto. Seleccione el controlador de vista y el tipo _TaskDetailViewController_ para el **clase** en el **panel de propiedades** : Esto creará un nuevo `TaskDetailViewController.cs` archivo de la solución Panel. Escriba el **StoryboardID** como _detalle_, como se muestra en el ejemplo siguiente. Se usará más adelante para cargar esta vista en código C#:  
 
-    [ ![Establecer el identificador de guión gráfico](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png)
+    [![Establecer el identificador de guión gráfico](creating-tables-in-a-storyboard-images/image18a.png)](creating-tables-in-a-storyboard-images/image18a.png#lightbox)
 
 9. La superficie de diseño de guión gráfico debe tener el siguiente aspecto (título del elemento de navegación del controlador de vista raíz ha cambiado a "Panel de tarea ardua"):
 
-    [ ![Superficie de diseño](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png)  
+    [![Superficie de diseño](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
 
 
 
@@ -106,11 +106,11 @@ Ahora que las vistas y segues están configurados, los elementos de la interfaz 
 
 En primer lugar, seleccione la celda de prototipo en el controlador de vista maestra y establezca el **identificador** como _taskcell_, como se muestra a continuación. Esto se utilizará más adelante en el código para recuperar una instancia de este UITableViewCell:
 
- [ ![establecer el identificador de celda](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png)
+ [![establecer el identificador de celda](creating-tables-in-a-storyboard-images/image22a-sml.png)](creating-tables-in-a-storyboard-images/image22a.png#lightbox)
 
 A continuación, deberá crear un botón que agregará nuevas tareas, como se muestra a continuación:
 
-[ ![elemento de botón en la barra de navegación de barra](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png)
+[![elemento de botón en la barra de navegación de barra](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png#lightbox)
 
 Haga lo siguiente: 
 
@@ -123,7 +123,7 @@ Haga lo siguiente:
 
 La vista de detalles requiere mucho más trabajo. Las celdas de la vista de tabla deben arrastrar hasta la vista y, a continuación, se rellena con las etiquetas, vistas de texto y botones. La captura de pantalla siguiente muestra la interfaz de usuario terminado con dos secciones. Una sección tiene tres celdas, tres etiquetas, cambiar uno y dos campos de texto, mientras que la segunda sección muestra una celda con dos botones:
 
- [ ![diseño de la vista de detalle](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png)
+ [![diseño de la vista de detalle](creating-tables-in-a-storyboard-images/image24a-sml.png)](creating-tables-in-a-storyboard-images/image24a.png#lightbox)
 
 Los pasos para crear el diseño completando son:
 
@@ -137,7 +137,7 @@ Seleccione la vista de tabla y abra el **controlador de propiedad**. Actualice l
 Seleccione la sección superior y en **Propiedades > sección de vista de tabla** cambiar **filas** a _3_, como se muestra a continuación:
 
 
- [ ![configuración de la sección superior a tres filas](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png)
+ [![configuración de la sección superior a tres filas](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png#lightbox)
 
 Para cada celda abierta la **panel de propiedades** y establezca:
 
@@ -152,7 +152,7 @@ En la segunda sección, establezca **filas** a _1_ y agarre el controlador de ca
 -  **Establecer el fondo**: _borrar el Color_ .
 -  Arrastre dos botones a la celda y establezca sus títulos correctamente (es decir, _guardar_ y _eliminar_), como se muestra a continuación:
 
-   [ ![dos botones de opción en la sección inferior](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png)
+   [![dos botones de opción en la sección inferior](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
 
 En este momento también puede establecer restricciones en las celdas y los controles para asegurar un diseño adaptable.
 
@@ -342,7 +342,7 @@ AddButton.Clicked += (sender, e) => CreateTask ();
 
 Esto completa el ejemplo de guión gráfico: la aplicación finalizada se ve así:
 
-[ ![Aplicación finalizada](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png)
+[![Aplicación finalizada](creating-tables-in-a-storyboard-images/image28a.png)](creating-tables-in-a-storyboard-images/image28a.png#lightbox)
 
 El ejemplo muestra:
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 21d5478c7e8317510a6f46b72a261582c9432301
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9918c7e54f443477006ad40931c24d814f7171ea
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="light-theme"></a>Tema claro
 
@@ -50,7 +50,7 @@ Siga este [solución de problemas de paso](~/xamarin-forms/user-interface/themes
 
 Este es un ejemplo de botones y etiquetas en el tema claro, junto con el marcado que se genera.
 
-[ ![](light-images/light-theme-sml.png "Botones y etiquetas en el tema claro")](light-images/light-theme.png "botones y etiquetas en el tema claro")
+[![](light-images/light-theme-sml.png "Botones y etiquetas en el tema claro")](light-images/light-theme.png#lightbox "botones y etiquetas en el tema claro")
 
 ```xaml
 <StackLayout Padding="20">

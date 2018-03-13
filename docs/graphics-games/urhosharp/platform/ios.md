@@ -1,17 +1,17 @@
 ---
 title: IOS UrhoSharp y compatibilidad con tvOS
-description: "iOS y tvOS el programa de instalación específicas y características"
+description: "iOS y tvOS el programa de instalación específicas y características para UrhoSharp."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7B06567E-E789-4EA1-A2A9-F3B2212EDD23
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 9cf779b23ed830c07af0100152a44d6c3c4e317b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 465fed25f360f29ad0b63146add8de939fa8924e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="urhosharp-ios-and-tvos-support"></a>IOS UrhoSharp y compatibilidad con tvOS
 
@@ -21,17 +21,17 @@ Mientras se Urho es una biblioteca de clases portables y permite a las mismas AP
 
 En las páginas siguientes, se asume que `MyGame` es un sublcass de la `Application` clase.
 
-# <a name="ios-and-tvos"></a>iOS y tvOS
+## <a name="ios-and-tvos"></a>iOS y tvOS
 
 **Admite arquitecturas:** armv7, arm64, i386
 
-# <a name="creating-a-project"></a>Crear un proyecto
+## <a name="creating-a-project"></a>Crear un proyecto
 
 Crear un proyecto de iOS y, a continuación, agregar datos en el directorio de recursos y asegúrese de que todos los archivos tienen **BundleResource** como el **acción de compilación**.
 
 ![Configuración del proyecto](ios-images/image-4.png "agregar datos en el directorio de recursos")
 
-# <a name="configuring-and-launching-urho"></a>Configurar e iniciar Urho
+## <a name="configuring-and-launching-urho"></a>Configurar e iniciar Urho
 
 Agregar mediante sentencias para la `Urho` y `Urho.iOS` espacios de nombres y, a continuación, agregue este código para inicializar Urho, así como para iniciar la aplicación:
 
@@ -57,7 +57,7 @@ async void LaunchGame()
 
 Es importante deshabilitar optimizaciones PNG porque el optimizador PNG predeterminado iOS generará las imágenes que Urho no puede consumir actualmente correctamente
 
-# <a name="custom-embedding-of-urho"></a>Incrustar personalizado de Urho
+## <a name="custom-embedding-of-urho"></a>Incrustar personalizado de Urho
 
 Se puede también a tener Urho ocupe la pantalla de toda la aplicación, y para usarlo como un componente de la aplicación, puede crear un `UrhoSurface` que es un `UIView` que se puede incrustar en la aplicación existente.
 

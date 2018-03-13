@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7366a4ce5cbb6a3026a7445a03f03b45d89d9210
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3e5875249d7a84412b1c30580c3a8038cb53892f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="purchasing-consumable-products"></a>Compra de productos consumibles
 
@@ -21,7 +21,7 @@ Productos consumibles son las más fáciles de implementar, porque no hay ningú
 
 El código de ejemplo que acompañan a este documento muestra productos integrados: los identificadores de producto están codificados en la aplicación porque están estrechamente relacionadas con el código que desbloquea la característica tras el pago. El proceso de compra se puede visualizar similar al siguiente:   
    
-[ ![La visualización de proceso de compra](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png)     
+[![La visualización de proceso de compra](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
    
  El flujo de trabajo básico es:   
    
@@ -49,7 +49,7 @@ El [InAppPurchaseSample código](https://developer.xamarin.com/samples/monotouch
    
    
    
- [ ![Cada compra agrega más créditos de mono para el equilibrio de los usuarios](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png)   
+ [![Cada compra agrega más créditos de mono para el equilibrio de los usuarios](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
    
    
    
@@ -57,7 +57,7 @@ El [InAppPurchaseSample código](https://developer.xamarin.com/samples/monotouch
    
    
    
- [ ![Las interacciones entre las clases personalizadas, StoreKit y la tienda de aplicaciones](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png)
+ [![Las interacciones entre las clases personalizadas, StoreKit y la tienda de aplicaciones](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
 &nbsp;
 
@@ -214,7 +214,7 @@ public void CompleteTransaction (SKPaymentTransaction transaction)
 
 Cuando un usuario adquiere varias cantidades, la alerta de confirmación StoreKit reflejará la cantidad, el precio por unidad y el precio total que le cobrarán, tal y como se muestra en la captura de pantalla siguiente:
 
-[ ![Confirmar una compra](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png)
+[![Confirmar una compra](purchasing-consumable-products-images/image30.png)](purchasing-consumable-products-images/image30.png#lightbox)
 
 ## <a name="handling-network-outages"></a>Control de interrupciones de red
 
@@ -328,7 +328,7 @@ Para probar este método, use la **restricciones** característica de iOS para d
    
    
    
- [ ![Use la característica de restricciones de iOS para deshabilitar las compras de la aplicación](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png)   
+ [![Use la característica de restricciones de iOS para deshabilitar las compras de la aplicación](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
    
    
    
@@ -352,7 +352,7 @@ La aplicación es similar a cuando el **compras dentro de la aplicación** carac
    
    
    
- [ ![La aplicación sería si las compras en la aplicación característica está restringida por la compra botones están deshabilitados](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png)   
+ [![La aplicación sería si las compras en la aplicación característica está restringida por la compra botones están deshabilitados](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
    
    
    
@@ -361,7 +361,7 @@ Información del producto puede ser solicitada cuando `CanMakePayments` es false
    
    
    
- [ ![No se permiten las compras de la aplicación](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png)   
+ [![No se permiten las compras de la aplicación](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
    
    
    

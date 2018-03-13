@@ -7,18 +7,17 @@ ms.assetid: CEE90F8A-164B-4155-813A-7537A665A7E7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/14/2017
-ms.openlocfilehash: 2048056415e0969e13e305b1dbba8bdb7ffabd30
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 7b1314c12bf97a2fa21911c747e3066858116a5f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="binding-an-eclipse-library-project"></a>Enlace de un proyecto de biblioteca de Eclipse
 
 _En este tutorial se explica cómo utilizar plantillas de proyecto Xamarin.Android para enlazar un proyecto de biblioteca de Eclipse Android._
 
-<a name=overview />
 
 ## <a name="overview"></a>Información general
 
@@ -28,36 +27,34 @@ Este tutorial proporciona ejemplos de cómo crear un proyecto de biblioteca de A
 Proyectos de biblioteca de Android son diferentes de proyectos Android normales en que no se compilan en un APK y no lo están, por sí mismos, puede implementar en un dispositivo. En su lugar, un proyecto de biblioteca de Android está pensado para hacer referencia a un proyecto de aplicación de Android. Cuando se compila un proyecto de aplicación de Android, en primer lugar se compila el proyecto de biblioteca de Android. El proyecto de aplicación de Android, a continuación, se se absorba en el proyecto de biblioteca de Android compilado e incluya el código y los recursos en el APK para la distribución. Debido a esta diferencia, crear un enlace para un proyecto de biblioteca de Android es ligeramente diferente de la creación de un enlace para un Java. JAR o. Archivos AAR.
 
 
-<a name="Walkthrough" />
 
 ## <a name="walkthrough"></a>Tutorial
 
 Para utilizar un proyecto de biblioteca de Android en un proyecto de enlace de Java de Xamarin.Android es necesario para compilar el proyecto de biblioteca de Android en Eclipse. Captura de pantalla siguiente muestra un ejemplo de un proyecto de biblioteca de Android después de la compilación: 
 
-[ ![Proyecto de biblioteca de ejemplo en Eclipse](binding-a-library-project-images/build-lib-in-eclipse.png)](binding-a-library-project-images/build-lib-in-eclipse.png)
+[![Proyecto de biblioteca de ejemplo en Eclipse](binding-a-library-project-images/build-lib-in-eclipse.png)](binding-a-library-project-images/build-lib-in-eclipse.png#lightbox)
 
 Tenga en cuenta que se ha compilado el código fuente desde el proyecto de biblioteca de Android en un archivo temporal. Archivo JAR denominado **android mapviewballoons.jar**, y que los recursos se han copiado en el **res/bin/delicadas** carpeta. 
 
 Una vez que se ha compilado el proyecto de biblioteca de Android en Eclipse, a continuación, se puede enlazar mediante un proyecto de enlace de Java de Xamarin.Android. Primer una. Se debe crear el archivo ZIP que contiene el **bin** y **res** carpetas del proyecto de biblioteca de Android. Es importante que quite el intermedias **delicadas** subdirectorio para que residen los recursos en **bin/res**. Captura de pantalla siguiente muestra el contenido de un este tipo. Archivo ZIP: 
 
-[ ![Contenido de .zip del proyecto de biblioteca de Android](binding-a-library-project-images/contents-of-zip-file.png)](binding-a-library-project-images/contents-of-zip-file.png)
+[![Contenido de .zip del proyecto de biblioteca de Android](binding-a-library-project-images/contents-of-zip-file.png)](binding-a-library-project-images/contents-of-zip-file.png#lightbox)
 
 Esto. Archivo ZIP, a continuación, se agrega al proyecto de enlace de Java de Xamarin.Android, como se muestra en la captura de pantalla siguiente:
 
-[ ![Código postal agregado al proyecto de enlace de Java](binding-a-library-project-images/zip-in-binding-project.png)](binding-a-library-project-images/zip-in-binding-project.png)
+[![Código postal agregado al proyecto de enlace de Java](binding-a-library-project-images/zip-in-binding-project.png)](binding-a-library-project-images/zip-in-binding-project.png#lightbox)
 
 Tenga en cuenta que la acción de compilación de la. Archivo ZIP se ha establecido de forma automática en **LibraryProjectZip**.
 
 Si hay alguno. Archivos JAR que son necesarios para el proyecto de biblioteca de Android, se debe agregar a la **archivos JAR** carpeta del proyecto de biblioteca de enlace de Java y la **acción de compilación** establecido en **ReferenceJar**. Un ejemplo de esto se puede ver en la captura de pantalla siguiente: 
 
-[ ![Acción que se establece en ReferenceJar de compilación](binding-a-library-project-images/set-to-referencejar.png)](binding-a-library-project-images/set-to-referencejar.png)
+[![Acción que se establece en ReferenceJar de compilación](binding-a-library-project-images/set-to-referencejar.png)](binding-a-library-project-images/set-to-referencejar.png#lightbox)
 
 Una vez completados estos pasos, el proyecto de enlace de Java de Xamarin.Android puede utilizarse tal y como se describe anteriormente en este documento.
 
 > [!NOTE]
-> **Tenga en cuenta**: compilar los proyectos de biblioteca de Android en otros IDE. no se admite en este momento. No puede crear otros IDE la misma estructura de directorios o archivos de la **bin** carpeta como Eclipse. 
+> Compilar los proyectos de biblioteca de Android en otros IDE. no se admite en este momento. No puede crear otros IDE la misma estructura de directorios o archivos de la **bin** carpeta como Eclipse. 
 
-<a name="Summary" /> 
 
 ## <a name="summary"></a>Resumen
 

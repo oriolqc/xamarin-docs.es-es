@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 63bc1f0ed13fe65b36e95978da9ccc2ea8d4481c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8812c6a234e05e4d651effbeb83a7bcad38dc683
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-web-markup"></a>Búsqueda con marcado Web
 
@@ -20,12 +20,12 @@ Para las aplicaciones que proporcionan acceso a su contenido a través de un sit
 
 Si su aplicación iOS ya es compatible con la vinculación profunda móvil y su sitio Web presenta vínculos profundos a contenido dentro de su aplicación, Apple _Applebot_ rastreador web volverá indizar este contenido y lo agrega automáticamente a su índice en la nube:
 
-[ ![](web-markup-images/webmarkup01.png "Información general del índice en la nube")](web-markup-images/webmarkup01.png)
+[![](web-markup-images/webmarkup01.png "Información general del índice en la nube")](web-markup-images/webmarkup01.png#lightbox)
 
 Apple detectarán estos resultados en los resultados de búsqueda de Spotlight y Safari.
 Si el usuario puntea en uno de estos resultados (y que tienen instalada la aplicación), a continuación, se tomará el contenido de la aplicación:
 
-[ ![](web-markup-images/webmarkup02.png "Profundidad de vinculación de un sitio Web en los resultados de búsqueda")](web-markup-images/webmarkup02.png)
+[![](web-markup-images/webmarkup02.png "Profundidad de vinculación de un sitio Web en los resultados de búsqueda")](web-markup-images/webmarkup02.png#lightbox)
 
 ## <a name="enabling-web-content-indexing"></a>Habilitar la indización de contenido Web
 
@@ -154,7 +154,7 @@ La misma información se puede representar en formato de JSON-LD del schema.org:
 
 A continuación muestra un ejemplo de metadatos desde el sitio Web que proporciona los resultados de búsqueda para el usuario final:
 
-[ ![](web-markup-images/deeplink01.png "Opciones avanzadas de búsqueda resultados a través de marcado de datos estructurados")](web-markup-images/deeplink01.png)
+[![](web-markup-images/deeplink01.png "Opciones avanzadas de búsqueda resultados a través de marcado de datos estructurados")](web-markup-images/deeplink01.png#lightbox)
 
 Apple admite actualmente los siguientes tipos de esquema de schema.org:
 

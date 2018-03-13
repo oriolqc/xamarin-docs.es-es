@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: bea8480c66a2ecf499375636c98511ca55ce7693
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e9936bb523db8ba8777df94a03bf12f9fa718fca
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-beam"></a>Haz Android
 
 Haz Android es una nueva tecnología de cerca de comunicación de campo (NFC) en Android 4 que permite a las aplicaciones compartir información a través de NFC en cerca.
 
-[![Diagrama que ilustra dos dispositivos cerca del uso compartido de información](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png)
+[![Diagrama que ilustra dos dispositivos cerca del uso compartido de información](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 
 Haz Android funciona mediante la inserción de mensajes a través de NFC cuando los dos dispositivos están en el intervalo. Dispositivos unos 4cm entre sí pueden compartir datos con Android carretera. Crea un mensaje de una actividad en un dispositivo y especifica una actividad (o actividades) que puede controlarlo inserta. Cuando la actividad especificada está en primer plano y los dispositivos están en el intervalo, haz Android envía el mensaje en el segundo dispositivo. En el dispositivo receptor, se invoca un intento que contiene los datos del mensaje.
 
@@ -30,7 +30,6 @@ Android admite dos formas de configurar mensajes con haz Android:
 
 En cualquier caso, para enviar datos con haz Android, una aplicación envía una `NdefMessage`, empaquetar los datos en varios `NdefRecords`. ¡Eche un vistazo a los puntos clave que deben solucionarse antes de que se puede desencadenar carretera Android. En primer lugar, se trabajará con el estilo de devolución de llamada de creación de un `NdefMessage`.
 
-<a name="Creating_a_Message" />
 
 ## <a name="creating-a-message"></a>Creación de un mensaje
 
@@ -66,7 +65,6 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 }
 ```
 
-<a name="Receiving_a_Message" />
 
 ## <a name="receiving-a-message"></a>Recibir un mensaje
 
@@ -79,7 +77,7 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 
 Para obtener un ejemplo de código completo que usa un haz Android, se muestra la ejecución en la captura de pantalla siguiente, consulte la [demostración carretera Android](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/) en la Galería de ejemplos.
 
-[![Capturas de pantalla de ejemplo de la demostración de carretera Android](android-beam-images/24.png)](android-beam-images/24.png)
+[![Capturas de pantalla de ejemplo de la demostración de carretera Android](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
 
 

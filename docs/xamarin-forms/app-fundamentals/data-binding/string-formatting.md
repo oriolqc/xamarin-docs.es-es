@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 3b54ed876857f0cd04d7a304ff05b9710fbd9e04
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6735e9c03bee981f048231b53539c3b239f64484
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="string-formatting"></a>Formato de cadena
 
@@ -121,7 +121,7 @@ Los últimos conjuntos de sección la `BindingContext` en el valor de `Math.PI` 
 
 Este es el programa que se ejecuta en las tres plataformas:
 
-[![Formato de cadena](string-formatting-images/stringformatting-small.png "formato de cadena")](string-formatting-images/stringformatting-large.png "formato de cadena")
+[![Formato de cadena](string-formatting-images/stringformatting-small.png "formato de cadena")](string-formatting-images/stringformatting-large.png#lightbox "formato de cadena")
 
 ## <a name="viewmodels-and-string-formatting"></a>Cadena de formato y ViewModels
 
@@ -174,7 +174,7 @@ Este enfoque se muestra en el **mejor Selector de colores** ejemplo, que usa el 
 
 Ahora hay tres pares de `Slider` y `Label` elementos que están enlazados al mismo origen de propiedad en el `HslColorViewModel` objeto. La única diferencia es que `Label` tiene un `StringFormat` propiedad para mostrar cada uno de ellos `Slider` valor.
 
-[![Selector de Color mejor](string-formatting-images/bettercolorselector-small.png "mejor el Selector de Color")](string-formatting-images/bettercolorselector-large.png "mejor el Selector de Color")
+[![Selector de Color mejor](string-formatting-images/bettercolorselector-small.png "mejor el Selector de Color")](string-formatting-images/bettercolorselector-large.png#lightbox "mejor el Selector de Color")
 
 Tal vez se pregunte cómo puede mostrar los valores RGB (rojos, verdes, azul) en formato hexadecimal de dos dígitos tradicionales. Los valores enteros no están directamente disponibles desde el `Color` estructura. Una solución sería calcular valores enteros de los componentes de color en el modelo de vista y exponerlos como propiedades. A continuación, podría formatearlos mediante el `X2` especificación de formato.
 

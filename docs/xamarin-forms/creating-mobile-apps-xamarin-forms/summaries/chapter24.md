@@ -3,14 +3,15 @@ title: "Resumen de capítulo 24. Navegación de páginas"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b8eac45c52093dea23c08a19d219fa0bbd8d55ab
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3390a298cd8d9967f0aea2bd9fb5a90830714ba5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Resumen de capítulo 24. Navegación de páginas
 
@@ -99,7 +100,7 @@ Si una determinada página modal se puede navegar a varias veces, debe conservar
 
 El [ **ViewGalleryType** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryType) ejemplo muestra cómo utilizar un `TableView` para enumerar los elementos de menú. Cada elemento está asociado con un `Type` objeto para una página determinada. Cuando se selecciona ese elemento, el programa crea una instancia de la página y navega a ella.
 
-[![Captura de pantalla triple de tipo de vista de galería](images/ch24fg21-small.png "elementos de menú de listado de TableView")](images/ch24fg21-large.png "TableView enumerar elementos de menú")
+[![Captura de pantalla triple de tipo de vista de galería](images/ch24fg21-small.png "elementos de menú de listado de TableView")](images/ch24fg21-large.png#lightbox "TableView enumerar elementos de menú")
 
 El [ **ViewGalleryInst** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/ViewGalleryInst) ejemplo es un poco distinto que el menú contiene instancias de cada página en lugar de tipos. Esto ayuda a conservar la información de cada página, pero deben crear instancias de todas las páginas al inicio del programa.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 332ce13b08f3d021553be5747b21b05d62aba6ea
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 21f8c6738c00d5738c02962ee95b415e3855d740
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="transactions-and-verification"></a>Las transacciones y comprobación
 
@@ -148,7 +148,7 @@ Dado que los productos de forma remota se envía, también es posible agregar m�
    
    
    
- [ ![](transactions-and-verification-images/image38.png "Obtener los precios de productos de servidor distribuida")](transactions-and-verification-images/image38.png)   
+ [![](transactions-and-verification-images/image38.png "Obtener los precios de productos de servidor distribuida")](transactions-and-verification-images/image38.png#lightbox)   
    
    
    
@@ -170,7 +170,7 @@ Dado que los productos de forma remota se envía, también es posible agregar m�
 
 Dado que el servidor remoto requiere alguna forma de validar que una solicitud de contenido es válida (es decir. se ha pagado a), se pasa la información de recepción para la autenticación. El servidor remoto reenvía esos datos a iTunes para la comprobación y, si se realiza correctamente, incluye el contenido del producto en la respuesta a la aplicación.   
    
- [ ![](transactions-and-verification-images/image39.png "Compra de productos de servidor distribuida")](transactions-and-verification-images/image39.png)   
+ [![](transactions-and-verification-images/image39.png "Compra de productos de servidor distribuida")](transactions-and-verification-images/image39.png#lightbox)   
    
  1. La aplicación agrega un `SKPayment` a la cola. Si es necesario el usuario se le pedirá su Id. de Apple y se le pedirá que confirme el pago.   
    

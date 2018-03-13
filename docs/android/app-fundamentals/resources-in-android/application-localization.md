@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/30/2017
-ms.openlocfilehash: 9c65672ef2c3f968e76c6180da07f5daf9f5b68a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a8d25d8780a62e54780d7aa03d81f89fa0f668a4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-localization-and-string-resources"></a>Localización de aplicaciones y recursos de cadena
 
@@ -19,7 +19,7 @@ Localización de la aplicación es el acto de proporcionar recursos alternativos
 
 Por ejemplo, la imagen siguiente muestra la misma aplicación en ejecución en tres configuraciones regionales de otro dispositivo, pero el texto mostrado en cada botón es específico de la configuración regional que cada dispositivo se establece en:
 
-[![Ejemplos de las tres distintas configuraciones regionales](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png)
+[![Ejemplos de las tres distintas configuraciones regionales](application-localization-images/01-click-me-sml.png)](application-localization-images/01-click-me.png#lightbox)
 
 En este ejemplo, el contenido de un archivo de diseño, **Main.axml** es algo parecido a esto:
 

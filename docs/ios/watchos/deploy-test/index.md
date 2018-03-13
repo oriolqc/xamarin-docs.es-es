@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fdd4311072efd5571724fbe00d12a96921054fa2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4c5b9fcbfaabbfc78da1064396dc3fec2d3fde8d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="deployment-and-testing"></a>Implementación y prueba
 
@@ -23,7 +23,7 @@ Si va a implementar en una prueba de inspección, o cargar en el almacén de apl
 - En el **iOS centro de desarrollo de**:
   - [Id. de aplicaciones](#App_IDs) se han creado.
   - [Grupos de aplicaciones](#App_Groups) configurado (si es necesario).
-  - [*Distribución* perfiles de aprovisionamiento](#Provisioning_Profiles) creado.
+  - Perfil de aprovisionamiento de distribución creó
 
 - En la solución:
 
@@ -36,6 +36,7 @@ Si va a implementar en una prueba de inspección, o cargar en el almacén de apl
   - [Implementar en un Apple Watch para realizar pruebas](~/ios/watchos/deploy-test/device.md), o
   - [Cargar en la tienda de aplicaciones](~/ios/watchos/deploy-test/appstore.md).
 
+<a name="App_IDs"/>
 
 ## <a name="app-ids"></a>Id. de aplicaciones
 
@@ -65,7 +66,7 @@ Tenga en cuenta que algunas características no se puede usar con un identificad
 
 Para la distribución, solo debe crear un perfil de aprovisionamiento de distribución para el carácter comodín de identificador de aplicación.
 
-<a name="app-groups" />
+<a name="App_Groups" />
 
 ## <a name="app-groups"></a>Grupos de aplicaciones
 
@@ -102,8 +103,6 @@ Haga doble clic para editar la **Entitlements.plist** archivo en estos proyectos
 .![El editor de Entitlements.plist](images/entitlements-plist-sml.png)
 
 Hacer **no** habilite los derechos en el proyecto de aplicación de inspección. No es necesario que esté habilitado en el reloj propiamente dicho.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

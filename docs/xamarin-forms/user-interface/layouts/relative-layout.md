@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: ad621fa093379d5ad2dd81c81ce42dcaaa9bd923
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3d915191e24b5238d5165237f6ede74635b31e08
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="relativelayout"></a>RelativeLayout
 
 `RelativeLayout` se usa para la posición y las vistas de tamaño en relación con propiedades de las vistas de diseño o del mismo nivel. A diferencia de `AbsoluteLayout`, `RelativeLayout` no tiene el concepto del delimitador de móvil y no tiene medios para colocar elementos en relación con la parte inferior o el borde derecho del diseño. `RelativeLayout` es compatible con elementos de posición fuera de sus propios límites.
 
-[ ![](relative-layout-images/layouts-sml.png "Diseños de Xamarin.Forms")](relative-layout-images/layouts.png "diseños de Xamarin.Forms")
+[![](relative-layout-images/layouts-sml.png "Diseños de Xamarin.Forms")](relative-layout-images/layouts.png#lightbox "diseños de Xamarin.Forms")
 
 ## <a name="purpose"></a>Propósito
 
@@ -76,7 +76,7 @@ Tenga en cuenta los siguientes aspectos del diseño anterior:
 - El cuadro `y` coordenadas se define como la mitad del alto del elemento primario, -100.
 
 > [!NOTE]
-> **Tenga en cuenta**: debido al modo en que se definen las restricciones, es posible crear diseños más complejos en C# que se puede especificar con XAML.
+> Debido al modo en que se definen las restricciones, es posible crear diseños más complejos en C# que se puede especificar con XAML.
 
 Los dos ejemplos anteriores definen restricciones como `RelativeToParent` &ndash; es decir, sus valores son relativas al elemento primario. También es posible definir restricciones en relación con otra vista. Esto permite diseños más intuitivos (para el desarrollador) y puede aclarar la intención del código diseño más evidente.
 

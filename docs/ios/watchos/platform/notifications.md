@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 0f1d968dcee0cb9b6cd0cee8fa60be4f4dbb2833
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 600d651eae1f470f17511afaf9bc86c80ffc1a75
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="notifications"></a>Notificaciones
 
@@ -99,17 +99,17 @@ Se *debe* proporcionar una carga JSON de prueba al modo de notificación de prue
 Visual Studio para Mac mostrará opciones adicionales cuando una extensión de inspección se establece como el **proyecto de inicio**.
 Haga doble clic en el proyecto de extensión de inspección y elija **ejecutar con > parámetros personalizados...** :
     
-[![](notifications-images/runwith-customparams-sml.png "Ejecución con propiedades personalizadas")](notifications-images/runwith-customparams.png)
+[![](notifications-images/runwith-customparams-sml.png "Ejecución con propiedades personalizadas")](notifications-images/runwith-customparams.png#lightbox)
     
 Se abrirá la **ejecución argumentos** ventana que contiene un **WatchKit** ficha. Seleccione **notificación** y proporcionar una carga JSON, a continuación, presione **Execute** para iniciar la aplicación de inspección en el simulador:
     
-[![](notifications-images/runwith-execargs-sml.png "Seleccione predeterminado de la carga de notificación")](notifications-images/runwith-execargs.png)
+[![](notifications-images/runwith-execargs-sml.png "Seleccione predeterminado de la carga de notificación")](notifications-images/runwith-execargs.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Para establecer la carga de notificación de prueba en el menú contextual de Visual Studio en la extensión de inspección para editar el **propiedades del proyecto**. Vaya a la **depurar** sección y seleccione un archivo JSON de notificaciones en la lista (mostrará automáticamente todos los archivos JSON incluidos en el proyecto).
     
-[![](notifications-images/runwith-execargs-sml-vs.png "Seleccione un archivo JSON de notificaciones")](notifications-images/runwith-execargs-vs.png)
+[![](notifications-images/runwith-execargs-sml-vs.png "Seleccione un archivo JSON de notificaciones")](notifications-images/runwith-execargs-vs.png#lightbox)
 
 Cuando la extensión de inspección es la **proyecto de inicio**, Visual Studio mostrará opciones adicionales, tal y como se muestra a continuación. Elija uno de los **notificación** opciones para iniciar la aplicación de inspección **notificación** modo (mediante el archivo JSON seleccionado en la ventana Propiedades):
     

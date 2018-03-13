@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: d5f9f86447886e2cea46a6317d05506cdbed90bb
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 30ee40272b5f7a6f5863dccf4dcae7431f6f536f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-a-view"></a>Implementar una vista
 
@@ -115,7 +115,7 @@ El proceso de creación de la clase de representador personalizado es como sigue
 1. Agregar un `ExportRenderer` atributo a la clase de representador personalizado para especificar que se utilizará para representar el control personalizado de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
-> **Tenga en cuenta**: para la mayoría de los elementos de Xamarin.Forms, es opcional proporcionar un representador personalizado en cada proyecto de la plataforma. Si no se ha registrado un representador personalizado, se usará el representador predeterminado para la clase base del control. Sin embargo, los representadores personalizados necesarios en cada proyecto de la plataforma al representar un [vista](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) elemento.
+> Para la mayoría de los elementos de Xamarin.Forms, es opcional proporcionar a un representador personalizado en cada proyecto de la plataforma. Si no se ha registrado un representador personalizado, se usará el representador predeterminado para la clase base del control. Sin embargo, los representadores personalizados necesarios en cada proyecto de la plataforma al representar un [vista](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) elemento.
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
@@ -318,7 +318,7 @@ namespace CustomRenderer.WinPhone81
 Siempre que el `Control` propiedad es `null`, un nuevo `CaptureElement` se crea una instancia y el `InitializeAsync` llama el método, que usa el `MediaCapture` API para proporcionar el flujo de vista previa de la cámara. El `SetNativeControl` , a continuación, se llama el método para asignar una referencia a la `CaptureElement` de instancia para el `Control` propiedad. El `CaptureElement` control expone un `Tapped` eventos que controlan el `OnCameraPreviewTapped` método para detener e iniciar la vista previa de vídeo al que se derivan. El `Tapped` evento se ha suscrito al representador personalizado se adjunta a un nuevo elemento de Xamarin.Forms y cancelado la suscripción a solo cuando el elemento el representador se adjunta a los cambios.
 
 > [!NOTE]
-> **Tenga en cuenta**: es importante detener y eliminar los objetos que proporcionan acceso a la cámara en una aplicación de Windows Phone o UWP. Si no lo hace puede interferir con otras aplicaciones que intentan tener acceso a la cámara del dispositivo. Para obtener más información, vea y [inicio rápido: captura de vídeo mediante la API de MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) para las aplicaciones de Windows en tiempo de ejecución, y [mostrar la vista previa de la cámara](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) para aplicaciones UWP.
+> Es importante detener y eliminar los objetos que proporcionan acceso a la cámara en una aplicación de UWP o Windows Phone. Si no lo hace puede interferir con otras aplicaciones que intentan tener acceso a la cámara del dispositivo. Para obtener más información, vea y [inicio rápido: captura de vídeo mediante la API de MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) para las aplicaciones de Windows en tiempo de ejecución, y [mostrar la vista previa de la cámara](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) para aplicaciones UWP.
 
 ## <a name="summary"></a>Resumen
 

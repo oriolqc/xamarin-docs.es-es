@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d878f922b74ea3e95fd0e1ebce9e7445063a2946
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4a18bf8f35d1a6c615c819ea90433d1eb123422
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="updating-an-application-in-the-background"></a>Actualizar una aplicación en segundo plano
 
@@ -44,7 +44,7 @@ En iOS 6, una aplicación escribe el primer plano necesita tiempo para cargar co
 
 Para implementar la captura de fondo, editar *Info.plist* y comprobar la **habilitar modos en segundo plano** y **captura de fondo** casillas de verificación:
 
- [ ![](updating-an-application-in-the-background-images/fetch.png "Editar el Info.plist y Active las casillas de verificación Habilitar modos en segundo plano y fondo capturar")](updating-an-application-in-the-background-images/fetch.png)
+ [![](updating-an-application-in-the-background-images/fetch.png "Editar el Info.plist y Active las casillas de verificación Habilitar modos en segundo plano y fondo capturar")](updating-an-application-in-the-background-images/fetch.png#lightbox)
 
 Después, en la `AppDelegate`, invalidar la `FinishedLaunching` método para establecer el intervalo de captura mínimo. En este ejemplo, se permite el sistema operativo decidir con qué frecuencia se recuperar contenido nuevo:
 
@@ -106,7 +106,7 @@ En iOS 6, las notificaciones de inserción entrante indica al sistema para alert
 
 Para implementar notificaciones remotas, editar *Info.plist* y comprobar la **habilitar modos en segundo plano** y **notificaciones remotas** casillas de verificación:
 
- [ ![](updating-an-application-in-the-background-images/remote.png "Modo de fondo establecido en Habilitar modos en segundo plano y notificaciones remotas")](updating-an-application-in-the-background-images/remote.png)
+ [![](updating-an-application-in-the-background-images/remote.png "Modo de fondo establecido en Habilitar modos en segundo plano y notificaciones remotas")](updating-an-application-in-the-background-images/remote.png#lightbox)
 
 A continuación, establezca el `content-available` marca en la notificación de inserción en 1. Esto permite que la aplicación saber para capturar el contenido nuevo antes de mostrar la alerta:
 
@@ -153,7 +153,7 @@ La principal diferencia entre las notificaciones normales y silenciosas desde la
 
 Sin embargo, APN permitirá silenciosas notificaciones "superponer" junto con una notificación remoto normal o una respuesta persistente. Debido a notificaciones periódicas no están limitado de velocidad, puede utilizar para insertar almacenadas seguridad notificaciones silenciosas de APNs en el dispositivo, como se muestra en el diagrama siguiente:
 
- [ ![](updating-an-application-in-the-background-images/silent.png "Notificaciones periódicas pueden utilizarse para insertar almacenadas notificaciones silenciosas de APNs en el dispositivo, tal y como se muestra en este diagrama")](updating-an-application-in-the-background-images/silent.png)
+ [![](updating-an-application-in-the-background-images/silent.png "Notificaciones periódicas pueden utilizarse para insertar almacenadas notificaciones silenciosas de APNs en el dispositivo, tal y como se muestra en este diagrama")](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
 > **Tenga en cuenta**: Apple anima a los desarrolladores para enviar notificaciones de inserción silenciosa siempre que la aplicación requiere, y permiten el APN programar su entrega.

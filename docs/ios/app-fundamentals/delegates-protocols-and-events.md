@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5df7c2bbc7be1089795c94b6f639bd4556b49366
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 69296992c503d536a4160f172022c7ce5578812f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="events-protocols-and-delegates"></a>Eventos, protocolos y delegados
 
@@ -32,7 +32,7 @@ En este artículo obtendrá información sobre todos estos temas, lo que le prop
 
 Para ilustrar los protocolos y los delegados, vamos a crear una aplicación de mapa sencilla que agrega una anotación a un mapa, como se muestra aquí:
 
- [ ![](delegates-protocols-and-events-images/01-map.png "Un ejemplo de una aplicación de mapa sencilla que agrega una anotación a un mapa") ](delegates-protocols-and-events-images/01-map.png) [ ![ ] (delegates-protocols-and-events-images/04-annotation-with-callout.png "una anotación en el ejemplo se agregan a un mapa")](delegates-protocols-and-events-images/04-annotation-with-callout.png)
+ [![](delegates-protocols-and-events-images/01-map.png "Un ejemplo de una aplicación de mapa sencilla que agrega una anotación a un mapa") ](delegates-protocols-and-events-images/01-map.png#lightbox) [ ![ ] (delegates-protocols-and-events-images/04-annotation-with-callout.png "una anotación en el ejemplo se agregan a un mapa")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 Antes de abordar esta aplicación, comencemos examinando los eventos de .NET en el UIKit.
 
@@ -59,15 +59,15 @@ aButton.TouchUpInside += delegate {
 
 El código anterior está dispuesto en el método ViewDidLoad de la UIViewContoller. La variable aButton hace referencia a un botón, que puede agregar en el Diseñador de iOS o con código. En la siguiente ilustración se muestra este botón a medida que se agregan en iOS diseñador, tomadas del ejemplo que se incluye en este artículo:
 
- [ ![](delegates-protocols-and-events-images/02-interface-builder-outlet.png "Un botón que agregó en el Diseñador de iOS")](delegates-protocols-and-events-images/02-interface-builder-outlet.png)
+ [![](delegates-protocols-and-events-images/02-interface-builder-outlet.png "Un botón que agregó en el Diseñador de iOS")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
 
 Xamarin.iOS también admite el estilo de acción de destino de la conexión de su código a una interacción que tiene lugar con un control. Para crear una acción de destino para el botón de Hello, haga doble clic en él en el Diseñador de iOS. Se mostrará el archivo de código subyacente del UIViewController y el programador se le pide que seleccione una ubicación para insertar el método de conexión:
 
- [ ![](delegates-protocols-and-events-images/03-interface-builder-action.png "El archivo de código subyacente de UIViewControllers")](delegates-protocols-and-events-images/03-interface-builder-action.png)
+ [![](delegates-protocols-and-events-images/03-interface-builder-action.png "El archivo de código subyacente de UIViewControllers")](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
 
 Después de selecciona una ubicación, un nuevo método se crea y por cable telefónico al control. En el ejemplo siguiente, se escribirá un mensaje en la consola cuando se hace clic en el botón:
 
- [ ![](delegates-protocols-and-events-images/05-interface-builder-action.png "Un mensaje se escribirá en la consola cuando se hace clic en el botón")](delegates-protocols-and-events-images/05-interface-builder-action.png)
+ [![](delegates-protocols-and-events-images/05-interface-builder-action.png "Un mensaje se escribirá en la consola cuando se hace clic en el botón")](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
 
 Para obtener más información sobre el patrón de acción de destino de iOS, vea la sección de acción de destino de " [las competencias de aplicación para iOS](http://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)" en la biblioteca para desarrolladores de iOS de Apple.
 
@@ -170,7 +170,7 @@ Apple usa protocolos a lo largo de iOS para definir los contratos para que las c
 
 De esta manera, el `MKAnnotation` protocolo se utiliza para proporcionar datos pertinentes que acompaña a una anotación. La vista para la anotación propio real se crea a partir de los datos en el objeto que adopta el `MKAnnotation` protocolo. Por ejemplo, el texto de la llamada que aparece cuando el usuario puntea en la anotación (tal y como se muestra en la siguiente captura de pantalla) proviene el `Title` propiedad de la clase que implementa el protocolo:
 
- [ ![](delegates-protocols-and-events-images/04-annotation-with-callout.png "Texto de ejemplo para la llamada cuando el usuario puntea en la anotación")](delegates-protocols-and-events-images/04-annotation-with-callout.png)
+ [![](delegates-protocols-and-events-images/04-annotation-with-callout.png "Texto de ejemplo para la llamada cuando el usuario puntea en la anotación")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 Como se describe en la siguiente sección, profundización en protocolos, Xamarin.iOS enlaza protocolos a clases abstractas. Para el `MKAnnotation` protocolo, la clase de C# enlazada se denomina `MKAnnotation` imitar el nombre del protocolo y es una subclase de `NSObject`, la clase base raíz para CocoaTouch. El protocolo requiere un captador y establecedor para que se implementen para la coordenada; Sin embargo, un título y el subtítulo son opcionales. Por lo tanto, en la `MKAnnotation` (clase), el `Coordinate` propiedad es *abstracta*, que se le solicite para que se implementen y `Title` y `Subtitle` propiedades están marcadas *virtual* , haciéndolos opcionales, tal y como se muestra a continuación:
 

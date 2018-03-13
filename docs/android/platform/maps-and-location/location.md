@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: beb690fe495d142bb4b0424ad752101fc46da590
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 28cfb4cda27446b914c23a2ce4e8e9f845876107
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="location-services"></a>Servicios de ubicación
 
@@ -54,7 +54,7 @@ Para las aplicaciones que tienen como destino la API versión 21 (Android 5.0 c�
 
 Para establecer los permisos, expanda la **propiedades** carpeta en el **solución Pad** y haga doble clic en **AndroidManifest.xml**. Los permisos se enumerará en **permisos necesarios**:
 
-[![Captura de pantalla de la configuración de Android manifiesto permisos necesarios](location-images/location-01-xs.png)](location-images/location-01-xs.png)
+[![Captura de pantalla de la configuración de Android manifiesto permisos necesarios](location-images/location-01-xs.png)](location-images/location-01-xs.png#lightbox)
 
 Al establecer alguno de estos permisos, se indica a Android que la aplicación necesita permiso para tener acceso a los proveedores de ubicación del usuario. Dispositivos que ejecutar API nivel 22 (Android 5.1) o inferior, pide al usuario se conceden estos permisos cada vez que se instala la aplicación. En dispositivos que ejecutan API nivel 23 (Android 6.0) o versiones posteriores, la aplicación debe realizar una comprobación de permiso de tiempo de ejecución antes de realizar una solicitud del proveedor de ubicación. 
 
@@ -334,11 +334,11 @@ else
 > [!NOTE]
 >  Si el usuario ha deshabilitado todos los proveedores de ubicación, `GetBestProvider` devolverá `null`. Para ver cómo funciona este código en un dispositivo real, no olvide habilitar GPS, Wi-Fi y redes de telefonía móviles en **configuración de Google > ubicación > modo** tal y como se muestra en esta captura de pantalla:
 
-[![Pantalla de configuración de modo de ubicación en un teléfono Android](location-images/location-02.png)](location-images/location-02.png)
+[![Pantalla de configuración de modo de ubicación en un teléfono Android](location-images/location-02.png)](location-images/location-02.png#lightbox)
 
 La captura de pantalla siguiente muestra la aplicación ubicación en ejecución mediante `GetBestProvider`:
 
-[![Aplicación de GetBestProvider mostrar latitud, longitud y proveedor](location-images/location-03.png)](location-images/location-03.png)
+[![Aplicación de GetBestProvider mostrar latitud, longitud y proveedor](location-images/location-03.png)](location-images/location-03.png#lightbox)
 
 Tenga en cuenta que `GetBestProvider` no cambia el proveedor de forma dinámica. En su lugar, determina el mejor proveedor disponible una vez durante el ciclo de vida de actividad. Si el estado de proveedor cambia después de que se ha establecido, la aplicación requerirá código adicional en el `ILocationListener` métodos &ndash; `OnProviderEnabled`, `OnProviderDisabled`, y `OnStatusChanged` &ndash; para controlar todas las posibilidades relacionadas con la conmutador de proveedor.
 

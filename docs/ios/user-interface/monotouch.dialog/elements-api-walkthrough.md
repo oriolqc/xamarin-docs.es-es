@@ -7,11 +7,11 @@ ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 19e20015d1872cbaea21dd8b8e5431981e463c33
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 19e1ab4000e473aa773bf75015ff520a1f9a96d8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---creating-an-application-using-the-elements-api"></a>Tutorial: crear una aplicación mediante la API de elementos
 
@@ -19,7 +19,7 @@ _En este artículo se basa en la información presentada en la introducción de 
 
 En este tutorial, usaremos el Monte D elementos API para crear un estilo de principal-detalle de aplicación que se muestra una lista de tareas. Cuando el usuario selecciona el <span class="ui"> + </span> botón en la barra de navegación, se agregará una nueva fila a la tabla para la tarea. Selección de la fila se le remitirá a la pantalla de detalles que nos permite actualizar la descripción de la tarea y la fecha de vencimiento, como se muestra a continuación:
 
- [ ![](elements-api-walkthrough-images/01-task-list-app.png "Selección de la fila se le remitirá a la pantalla de detalles que nos permite actualizar la descripción de la tarea y la fecha de vencimiento")](elements-api-walkthrough-images/01-task-list-app.png)
+ [![](elements-api-walkthrough-images/01-task-list-app.png "Selección de la fila se le remitirá a la pantalla de detalles que nos permite actualizar la descripción de la tarea y la fecha de vencimiento")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
  <a name="Elements_API_Walkthrough" />
 
@@ -72,7 +72,7 @@ public override bool FinishedLaunching (UIApplication app,
 
 El código anterior crea una instancia de un `RootElement` y lo pasa en el `DialogViewController`. El `DialogViewController` siempre tiene un `RootElement` en la parte superior de su jerarquía. En este ejemplo, el `RootElement` se crea con la cadena "Lista de tareas pendientes," que actúa como el título en la barra de navegación del controlador de navegación. En este momento, ejecutar la aplicación podría presentar la pantalla que se muestra a continuación:
 
- [ ![](elements-api-walkthrough-images/02-to-do-list-screen-.png "Ejecutar la aplicación presentará la pantalla que se muestra aquí")](elements-api-walkthrough-images/02-to-do-list-screen-.png)
+ [![](elements-api-walkthrough-images/02-to-do-list-screen-.png "Ejecutar la aplicación presentará la pantalla que se muestra aquí")](elements-api-walkthrough-images/02-to-do-list-screen-.png#lightbox)
 
 Vamos a ver cómo se utiliza la estructura jerárquica del MonoTouch.Dialog de `Sections` y `Elements` para agregar más pantallas.
 
@@ -148,11 +148,11 @@ Se usa un `RootElement` para que MonoTouch.Dialog crearía automáticamente una 
 
 La propia pantalla de detalles de tarea se compone de dos secciones; cada una de estas secciones contiene un único elemento. El primer elemento se crea desde una `EntryElement` para proporcionar una fila editable de la tarea `Description` propiedad. Cuando se selecciona el elemento, se presenta un teclado para editar texto tal y como se muestra a continuación:
 
- [ ![](elements-api-walkthrough-images/03-create-task.png "Cuando el elemento está seleccionado, se presenta un teclado para editar texto tal como se muestra")](elements-api-walkthrough-images/03-create-task.png)
+ [![](elements-api-walkthrough-images/03-create-task.png "Cuando el elemento está seleccionado, se presenta un teclado para editar texto tal como se muestra")](elements-api-walkthrough-images/03-create-task.png#lightbox)
 
 La segunda sección contiene un `DateElement` que nos permite administrar la tarea `DueDate` propiedad. Selección de la fecha de carga automáticamente un selector de fecha como se muestra:
 
- [ ![](elements-api-walkthrough-images/04-date-picker.png "Selección de la fecha de carga automáticamente como un selector de fecha")](elements-api-walkthrough-images/04-date-picker.png)
+ [![](elements-api-walkthrough-images/04-date-picker.png "Selección de la fecha de carga automáticamente como un selector de fecha")](elements-api-walkthrough-images/04-date-picker.png#lightbox)
 
 Tanto en el `EntryElement` y `DateElement` casos (o de cualquier elemento de entrada de datos en MonoTouch.Dialog), los cambios realizados en los valores se conservan automáticamente. Podemos mostrar esto modificando la fecha y, a continuación, navegar y hacia atrás entre la pantalla de raíz y varios detalles de la tarea, donde se conservan los valores en las pantallas de detalles.
 

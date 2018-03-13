@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: fb0e4341d8d8ad0719f35c691add9bad1d3f85a8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fe62b917946dda4cf669f5b15c91a5e3b596a0fc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="populating-a-table-with-data"></a>Rellenar una tabla con datos
 
@@ -88,7 +88,7 @@ public override void ViewDidLoad ()
 
 La tabla resultante tiene el siguiente aspecto:
 
- [ ![](populating-a-table-with-data-images/image3.png "Tabla de ejemplo que se ejecuta")](populating-a-table-with-data-images/image3.png)
+ [![](populating-a-table-with-data-images/image3.png "Tabla de ejemplo que se ejecuta")](populating-a-table-with-data-images/image3.png#lightbox)
 
 Mayoría de las tablas permite al usuario tener acceso a una fila para seleccionarlo y realizar alguna otra acción (como reproducir una canción, o llamar a un contacto o mostrar otra pantalla). Para lograr esto, hay algunas cosas que debemos hacer. En primer lugar, vamos a crear un AlertController para mostrar un mensaje cuando el usuario haga clic en una fila mediante la adición de las siguientes acciones para el `RowSelected` método:
 
@@ -140,7 +140,7 @@ Ahora el usuario puede tocar una fila y se mostrará una alerta:
 
 
 
- [ ![](populating-a-table-with-data-images/image4.png "La alerta seleccionada de la fila")](populating-a-table-with-data-images/image4.png)
+ [![](populating-a-table-with-data-images/image4.png "La alerta seleccionada de la fila")](populating-a-table-with-data-images/image4.png#lightbox)
 
 
 ## <a name="cell-reuse"></a>Reutilización de celda
@@ -220,7 +220,7 @@ Puede ver ejemplos de los temas que se ha explicado anteriormente en el **BasicT
 
 Un índice ayuda al usuario a desplazarse a través de listas largas, normalmente ordenadas alfabéticamente aunque se puede indizar por cualquier criterio desea. El **BasicTableIndex** ejemplo carga una lista mucho más completa de elementos de un archivo para mostrar el índice. Cada elemento en el índice corresponde a una 'sección' de la tabla.
 
- [ ![](populating-a-table-with-data-images/image5.png "La presentación de índice")](populating-a-table-with-data-images/image5.png)
+ [![](populating-a-table-with-data-images/image5.png "La presentación de índice")](populating-a-table-with-data-images/image5.png#lightbox)
 
 Para admitir 'sections' necesita los datos detrás de la tabla que se desea agrupar, por lo que el ejemplo BasicTableIndex se crea un `Dictionary<>` de la matriz de cadenas con la primera letra de cada elemento como la clave de diccionario:
 
@@ -270,7 +270,7 @@ public override string[] SectionIndexTitles (UITableView tableView)
 Encabezados y pies de página pueden utilizarse para agrupar visualmente filas de una tabla. La estructura de datos necesaria es muy similar a la adición de un índice: `Dictionary<>` funciona muy bien. En lugar de usar el alfabeto para agrupar las celdas, en este ejemplo se agrupan las verduras por tipo botánico.
 La salida es similar a la siguiente:
 
- [ ![](populating-a-table-with-data-images/image6.png "Muestra los encabezados y pies de página")](populating-a-table-with-data-images/image6.png)
+ [![](populating-a-table-with-data-images/image6.png "Muestra los encabezados y pies de página")](populating-a-table-with-data-images/image6.png#lightbox)
 
 Para mostrar encabezados y pies de página el `UITableViewSource` subclase requiere estos métodos adicionales:
 

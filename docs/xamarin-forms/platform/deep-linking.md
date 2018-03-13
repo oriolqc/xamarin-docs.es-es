@@ -5,20 +5,24 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2016
-ms.openlocfilehash: b2decf1331764ed6b1696126d8b23318e329e0c7
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 38d3b6da0dd33e038f2d50209280f2983faf6013
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indización de la aplicación y vinculación en profundidad
 
 _Indización de aplicación permite a las aplicaciones que de lo contrario serían olvidadas después de que algunos se usa para seguir siendo relevante que aparecen en los resultados de la búsqueda. Vinculación en profundidad permite a las aplicaciones responder a un resultado de búsqueda que contiene datos de aplicación, por lo general, vaya a una página que se hace referencia desde un vínculo profundo. En este artículo se muestra cómo utilizar la indización de la aplicación y vinculación en profundidad para que se pueda buscar en dispositivos iOS y Android contenido de la aplicación de Xamarin.Forms._
 
-## <a name="overview"></a>Información general
+> [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
+
+**Profundidad de vinculación con Xamarin.Forms y Azure, por [Universidad de Xamarin](https://university.xamarin.com/)**
+
 
 Indización de aplicación de Xamarin.Forms y vinculación profunda proporcionan una API para la publicación de metadatos para la indización de aplicación como a los usuarios navegan por las aplicaciones. A continuación, se puede buscar contenido indizado para en la búsqueda de Spotlight, en la búsqueda de Google o en una búsqueda en la web. Puntee en un resultado de búsqueda que contiene un vínculo profundo desencadenará un evento que pueda ser controlado por una aplicación y se utiliza normalmente para navegar a la página de referencia desde el vínculo profundo.
 
@@ -31,7 +35,7 @@ Cada `TodoItem` se indiza a la instancia creada por el usuario. Búsqueda espec�
 Para obtener más información sobre el uso de una base de datos de SQLite, consulte [trabajar con una base de datos Local](~/xamarin-forms/app-fundamentals/databases.md).
 
 > [!NOTE]
-> **Tenga en cuenta**: Xamarin.Forms aplicación indización y vincular profundas funcionalidad solo está disponible en las plataformas iOS y Android y requiere iOS 9 y API 23 respectivamente.
+> Indización de aplicación de Xamarin.Forms y profunda vinculación funcionalidad solo está disponibles en las plataformas iOS y Android y requiere iOS 9 y API 23 respectivamente.
 
 ## <a name="setup"></a>Programa de instalación
 
@@ -106,7 +110,7 @@ Application.Current.AppLinks.RegisterLink (appLink);
 Esto agrega el [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instancia a la aplicación [ `AppLinks` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) colección.
 
 > [!NOTE]
-> **Tenga en cuenta**: el `RegisterLink` método también se puede utilizar para actualizar el contenido que se ha indexado para una página.
+> El `RegisterLink` método también se puede utilizar para actualizar el contenido que se ha indexado para una página.
 
 Una vez un [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instancia se ha registrado para la indización, pueden aparecer en los resultados de búsqueda. Captura de pantalla siguiente muestra el contenido indizado que aparecen en los resultados de búsqueda en la plataforma iOS:
 
@@ -123,7 +127,7 @@ Application.Current.AppLinks.DeregisterLink (appLink);
 Esto quita la [ `AppLinkEntry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AppLinkEntry/) instancia a partir de la aplicación [ `AppLinks` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.AppLinks/) colección.
 
 > [!NOTE]
-> **Tenga en cuenta**: en Android no es posible quitar contenido indizado en resultados de búsqueda.
+> En Android no es posible quitar contenido indizado de los resultados de búsqueda.
 
 <a name="responding" />
 
@@ -211,7 +215,7 @@ Además, pueden especificarse valores para las claves siguientes:
 - `shouldAddToPublicIndex` : un `string` del `true` o `false` que controla si se va a agregar el contenido indizado al índice de nube pública de Apple, que, a continuación, se puede presentar a los usuarios que no ha instalado la aplicación en su dispositivo iOS o no. Sin embargo, solo porque se ha establecido el contenido para la indización de público, no significa que, se agregará automáticamente al índice de nube pública de Apple. Para obtener más información, consulte [público indización de búsqueda](~/ios/platform/search/nsuseractivity.md). Tenga en cuenta que esta clave debe establecerse en `false` al agregar datos personales a la [ `KeyValues` ](https://developer.xamarin.com/api/property/Xamarin.Forms.IAppLinkEntry.KeyValues/) colección.
 
 > [!NOTE]
-> **Tenga en cuenta**: el `KeyValues` colección no se usa en la plataforma Android.
+> El `KeyValues` colección no se usa en la plataforma Android.
 
 Para obtener más información acerca de la entrega, vea [Introducción a la entrega](~/ios/platform/handoff.md).
 

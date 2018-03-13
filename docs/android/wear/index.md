@@ -1,5 +1,5 @@
 ---
-title: Uso de Android
+title: Android Wear
 description: Crear aplicaciones para dispositivos wearable Android.
 ms.topic: article
 ms.prod: xamarin
@@ -8,15 +8,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1dad5e859efdf69e7003b45724f718b16faffd62
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ac83b74f39497333de7aa80079784adf61bf2e65
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
-# <a name="android-wear"></a>Uso de Android
-
-## <a name="android-wear"></a>Uso de Android
+# <a name="android-wear"></a>Android Wear
 
 Desgaste Android es una versión de Android que está diseñada para dispositivos wearable como inspecciones inteligentes. En esta sección se incluye instrucciones sobre cómo instalar y configurar las herramientas necesarias para el desarrollo de desgaste, un tutorial paso a paso para crear el primer dispositivo de desgaste y una lista de ejemplos que le pueden resultar de para crear su propio usan aplicaciones.
 
@@ -41,7 +39,6 @@ Obtener una vista previa y optimizar su interfaz de usuario para los tamaños de
 Explica cómo implementar la aplicación Android desgaste en un dispositivo Android desgaste o al emulador Android configurado para el uso. También incluye sugerencias y obtener información acerca de cómo configurar una conexión de Bluetooth entre el equipo de desarrollo y un dispositivo Android de depuración.
 
 
-<a name="Samples" />
 
 ## <a name="samples"></a>Muestras
 
@@ -137,21 +134,21 @@ Consulte estos vídeo vínculos que tratan Xamarin.Android con desgaste son comp
 <table align="center" border="0" cellpadding="1" cellspacing="1">
     <tr>
         <td>
-        <a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0"/ /></td>
+        <a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/"><img src="Images/video-android-l.png" border="0" /></td>
         <td><a href="http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/">L Android y mucho más</a>
         <br />
 La vista previa para desarrolladores de Android L introdujo una gran cantidad de nuevas API para que los desarrolladores aprovechar las ventajas de, como Material de diseño, las notificaciones y las animaciones nuevas, para nombrar algunos.</td>
     </tr>
     <tr>
         <td>
-        <a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" / /></td>
+        <a href="https://www.youtube.com/watch?v=80H8tXByZQc"><img src="Images/video-eyes-ears.png" border="0" /></td>
         <td><a href="https://www.youtube.com/watch?v=80H8tXByZQc">C# está en mi oídos y en los ojos: Google Glass y se ocupa de Android</a>
         <br />
 Informática wearable podría parecer algo desde el futuro (o un episodio de Inspector Gadget), pero muchas personas ya están adoptando el futuro hoy mismo! Los desarrolladores de C# lo saben y ya tienen las herramientas y los conocimientos para aprovechar la eficacia de los dispositivos wearable (de evolucionar 2014).</td>
     </tr>
     <tr>
         <td>
-        <a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" / /></td>
+        <a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU"><img src="Images/video-whats-new.png" border="0" /></td>
         <td><a href="https://www.youtube.com/watch?v=Gpqc2XZIQfU">Novedades de Xamarin.Android</a>
         <br />
         <i>L Android, desgaste Android, TV Android, Auto Android, diseño Material y carátulas; ¿Qué significa esto para usted como desarrollador de Xamarin? </i> de evolucionar 2014.</td>

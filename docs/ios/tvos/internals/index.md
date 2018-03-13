@@ -3,16 +3,16 @@ title: tvOS elementos internos
 description: "Xamarin.tvOS comparte el mismo ADN como nuestro producto Xamarin.iOS, de modo que los documentos avanzados que hemos creado para nuestro producto iOS son casi idénticos a nuestro producto tvOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: B245062F-1DD9-4BE5-8E11-728BA3C8AD4C
+ms.assetid: 8C076FED-9C03-44DE-9723-0E20272DD16B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 6adba454ac153186c05715f4baa3261212e7b18b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fee2843840f7f6dac461cd4e3426fb8b296b30bf
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tvos-internals"></a>tvOS elementos internos
 
@@ -31,11 +31,11 @@ Este artículo tratan los tipos de .NET Framework de destino (bibliotecas de cla
 
 Los artículos siguientes son específicos de iOS pero relevante para tvOS (ya que tvOS 9 es un subconjunto de iOS 9).
 
-###  <a name="unified-apicross-platformmaciosunifiedindexmd"></a>[API unificada](~/cross-platform/macios/unified/index.md)
+###  <a name="unified-apicross-platformmaciosunifiedindexmd"></a>[Unified API](~/cross-platform/macios/unified/index.md)
 
 Presenta las nuevas API unificada que permite compartir entre iOS y Apple TV un código más simple de códigos base, así como la introducción de la compatibilidad con las API de 64 bits y compilación de 64 bits.  
 
-###  <a name="api-designiosinternalsapi-designindexmd"></a>[Diseño de la API](~/ios/internals/api-design/index.md)
+###  <a name="api-designiosinternalsapi-designindexmd"></a>[Diseño de API](~/ios/internals/api-design/index.md)
 
 Explica los principios de diseño detrás de la API de enlace.
 
@@ -43,7 +43,7 @@ Explica los principios de diseño detrás de la API de enlace.
 
 Esta sección muestra los riesgos y limitaciones que deben tenerse en cuenta con lo que respecta Xamarin.iOS, muchos de los cuales son aplicables a Xamarin.tvOS.
 
-###  <a name="linkeriosdeploy-testlinkermd"></a>[Linker](~/ios/deploy-test/linker.md)
+###  <a name="linkeriosdeploy-testlinkermd"></a>[Enlazador](~/ios/deploy-test/linker.md)
 
 Explica cómo funciona el vinculador para garantizar el paquete más pequeño de posibles de la aplicación, y cómo modificar su configuración y el uso.
 

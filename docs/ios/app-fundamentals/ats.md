@@ -3,16 +3,16 @@ title: "Seguridad de transporte de la aplicación"
 description: "Seguridad de transporte de la aplicación (ATS) exige conexiones seguras entre los recursos de internet (por ejemplo, el servidor de back-end de la aplicación) y la aplicación."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
+ms.assetid: F8C5E444-2D05-4D9B-A2EF-EB052CD6F007
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/13/2017
-ms.openlocfilehash: 60858e05e222725f05eb67bd7aaa4e56d2ff3880
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a4491f550369bbb8515635ecbb7c1c2b74de48cf
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="app-transport-security"></a>Seguridad de transporte de la aplicación
 
@@ -69,7 +69,7 @@ Para obtener más información sobre cómo trabajar con clases de comunicación 
 
 Como ATS está habilitado de forma predeterminada en iOS 9 y OS X El capitán, si la aplicación de Xamarin.iOS o cualquier biblioteca o el servicio que está usando realiza la conexión a internet, deberá realizar alguna acción o las conexiones se producirán una excepción.
 
-Para una aplicación existente, Apple sugiere que admite la `HTTPS` protocolo tan pronto como sea posible. Si bien no es posible porque está conectando un 3rd party servicio web que no es compatible con `HTTPS` o si se admite `HTTPS` no sería práctico, puede optar por no ATS. Consulte la [Opting horizontal de ATS](#Opting-Out-of-ATS) sección para obtener más detalles.
+Para una aplicación existente, Apple sugiere que admite la `HTTPS` protocolo tan pronto como sea posible. Si bien no es posible porque está conectando un 3rd party servicio web que no es compatible con `HTTPS` o si se admite `HTTPS` no sería práctico, puede optar por no ATS. Consulte la [Opting horizontal de ATS](#optout) sección para obtener más detalles.
 
 Para una nueva aplicación de Xamarin.iOS, debe usar `HTTPS` exclusivamente al comunicarse con recursos de internet. Una vez más, puede haber situaciones (como el uso de un servicio web de entidad 3rd) donde esto no es posible y deberá desactivación de ATS.
 
@@ -144,7 +144,7 @@ En iOS9, seguridad de transporte de aplicación (ATS) exige conexiones seguras e
 
 Puesto que ATS está habilitada de forma predeterminada en las aplicaciones compiladas para iOS 9 y OS X 10.11 (El capitán), todas las conexiones con `NSURLConnection`, `CFURL` o `NSURLSession` estará sujeto a requisitos de seguridad ATS. Si las conexiones no cumplen estos requisitos, se producirá un error con una excepción.
 
-Apple también proporciona la [aplicación de ejemplo de TLSTool](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) que se pueden compilar (u opcionalmente transcodifica Xamarin y C#) y usar para diagnosticar problemas ATS/TLS. Vea la [Opting horizontal de ATS](#Opting-Out_of_ATS) sección para obtener información sobre cómo resolver este problema.
+Apple también proporciona la [aplicación de ejemplo de TLSTool](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) que se pueden compilar (u opcionalmente transcodifica Xamarin y C#) y usar para diagnosticar problemas ATS/TLS. Vea la [Opting horizontal de ATS](#optout) sección para obtener información sobre cómo resolver este problema.
 
 
 <a name="config" />
@@ -215,7 +215,7 @@ Si la aplicación de Xamarin.iOS debe realizar una solicitud a un dominio no seg
 
 Dentro de Visual Studio para Mac, haga doble clic en el `Info.plist` un archivo en el **el Explorador de soluciones**, cambie a la **origen** ver y agregar las claves anteriores:
 
-[ ![](ats-images/ats01.png "La vista del origen del archivo Info.plist")](ats-images/ats01.png)
+[![](ats-images/ats01.png "La vista del origen del archivo Info.plist")](ats-images/ats01.png#lightbox)
 
 
 Si la aplicación debe cargar y mostrar el contenido de web de sitios no seguras, agregue lo siguiente a la aplicación **Info.plist** archivo para permitir que las páginas web cargar correctamente durante la protección de seguridad de transporte de Apple (ATS) todavía está habilitada para el resto de la aplicación:
@@ -240,7 +240,7 @@ Si lo desea, puede realizar los siguientes cambios a la aplicación **Info.plist
 
 Dentro de Visual Studio para Mac, haga doble clic en el `Info.plist` un archivo en el **el Explorador de soluciones**, cambie a la **origen** ver y agregar las claves anteriores:
 
-[ ![](ats-images/ats02.png "La vista del origen del archivo Info.plist")](ats-images/ats02.png)
+[![](ats-images/ats02.png "La vista del origen del archivo Info.plist")](ats-images/ats02.png#lightbox)
 
 > [!IMPORTANT]
 > **Nota:** si la aplicación requiere una conexión a un sitio Web inseguro, debería **siempre** escriba el dominio como una excepción mediante `NSExceptionDomains` en lugar de desactivar que ATS totalmente mediante `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` sólo debe utilizarse en situaciones de emergencias extremas.

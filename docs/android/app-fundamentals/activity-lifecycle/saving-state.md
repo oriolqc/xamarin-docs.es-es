@@ -7,12 +7,12 @@ ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 36cabddc2439d64ad2d1135bbd0d453a7f411750
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: d8b44fb7f0e60db407271fd84899489bf8e65694
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>Tutorial: guardar el estado de actividad
 
@@ -22,7 +22,7 @@ _Hemos tratado la teoría de guardar el estado en la Guía del ciclo de vida de 
 
 Abramos la **ActivityLifecycle_Start** proyecto (en el [ActivityLifecycle](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle) ejemplo), compilarlo y ejecutarlo. Se trata de un proyecto muy simple que tiene dos actividades para mostrar el ciclo de vida de actividad y cómo se denominan los diversos métodos del ciclo de vida. Al iniciar la aplicación, la pantalla de `MainActivity` se muestra: 
 
-[ ![Pantalla de actividad A](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png)
+[![Pantalla de actividad A](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
 
 ### <a name="viewing-state-transitions"></a>Transiciones de estado de visualización
 
@@ -48,7 +48,7 @@ Cuando hacemos clic en el **Iniciar actividad B** button, vemos *actividad A* pa
 
 Como resultado, *actividad B* se inicia y se muestra en lugar de *actividad A*: 
 
-[ ![Pantalla de la actividad B](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png)
+[![Pantalla de la actividad B](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png#lightbox)
 
 Cuando hacemos clic en el **Atrás** botón, *actividad B* se destruye y *actividad A* se reanuda: 
 
@@ -62,7 +62,7 @@ Cuando hacemos clic en el **Atrás** botón, *actividad B* se destruye y *activi
 ```
 ### <a name="adding-a-click-counter"></a>Agregar un contador haga clic en
 
-A continuación, vamos a cambiar la aplicación para que se tenga un botón que cuenta y muestra el número de veces que se hace clic en. En primer lugar, vamos a agregar un `_counter` variable de instancia a `MainActivity`: 
+A continuación, vamos a cambiar la aplicación para que se tenga un botón que cuenta y muestra el número de veces que se hace clic en. En primer lugar, vamos a agregar un `_counter` variable de instancia a `MainActivity`:
 
 ```csharp
 int _counter = 0;
@@ -105,11 +105,11 @@ clickbutton.Click += (object sender, System.EventArgs e) =>
 
 Cuando creamos y vuelva a ejecutar la aplicación, un nuevo botón aparece que incrementa y muestra el valor de `_counter` en cada clic:
 
-[![Agrega el número de entrada táctil](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png)
+[![Agrega el número de entrada táctil](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png#lightbox)
 
 Pero cuando se gira el dispositivo en modo horizontal, este número se pierde:
 
-[ ![Rotación horizontal establece el recuento a cero](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png)
+[![Rotación horizontal establece el recuento a cero](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png#lightbox)
 
 Al examinar la salida de la aplicación, vemos que *actividad A* se en pausa, detenido, destruye, volver a crear, reiniciar y luego reanuda durante la rotación de vertical a horizontal: 
 
@@ -152,7 +152,7 @@ if (bundle != null)
 
 Compilar y vuelva a ejecutar la aplicación, a continuación, haga clic en el segundo botón varias veces. Cuando se gira el dispositivo en modo horizontal, se mantiene el recuento.
 
-[ ![Rotación de la pantalla muestra el número de cuatro conservan](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png)
+[![Rotación de la pantalla muestra el número de cuatro conservan](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png#lightbox)
 
 
 ¡Eche un vistazo a la ventana de salida para ver qué sucedió:
@@ -181,5 +181,5 @@ En este tutorial, hemos utilizado los conocimientos sobre el ciclo de vida de ac
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [ActivityLifecycle (ejemplo)](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle)
-- [Ciclo de vida de actividad](~/android/app-fundamentals/activity-lifecycle/index.md)
+- [Ciclo de vida de la actividad](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Activity de Android](https://developer.xamarin.com/api/type/Android.App.Activity/)

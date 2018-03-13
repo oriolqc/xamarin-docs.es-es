@@ -3,16 +3,16 @@ title: "Hello, Android: análisis detallado"
 description: "Esta guía en dos partes le ayudará a compilar su primera aplicación de Xamarin.Android y a comprender los aspectos básicos del desarrollo de aplicaciones de Android con Xamarin. A lo largo del proceso, le presentaremos las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.Android."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: AD3BAE9A-963C-4CF7-9733-111033034289
+ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: de6037b9cfeb66ee1c26c12c2e81913a4a2f1e79
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e9e554da80218d2e89ff79c6e89886d707b1ed95
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="hello-android-deep-dive"></a>Hello, Android: análisis detallado
 
@@ -83,13 +83,13 @@ Visual Studio para Mac sigue la práctica de Visual Studio consistente en organi
 
 En la captura de pantalla siguiente se muestra el contenido de la solución. Este es el Explorador de soluciones, que contiene la estructura de directorios y todos los archivos asociados a la solución:
 
-[![Explorador de soluciones](hello-android-deepdive-images/vs/02-solution-structure-sml.png )](hello-android-deepdive-images/vs/02-solution-structure.png)
+[![Explorador de soluciones](hello-android-deepdive-images/vs/02-solution-structure-sml.png)](hello-android-deepdive-images/vs/02-solution-structure.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 En la captura de pantalla siguiente se muestra el contenido de la solución. Este es el Panel de solución, que contiene la estructura de directorios y todos los archivos asociados a la solución:
 
-[![Panel de solución](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png)
+[![Panel de solución](hello-android-deepdive-images/xs/02-solution-structure-sml.png)](hello-android-deepdive-images/xs/02-solution-structure.png#lightbox)
 
 -----
 
@@ -135,11 +135,11 @@ Esta función exclusiva de Android puede ser muy útil al diseñar aplicaciones 
 
 Cuando se abre la aplicación **Phoneword** por primera vez en un emulador o un dispositivo, el sistema operativo crea la primera *actividad*. Una actividad es una clase especial de Android que se corresponde con una sola pantalla de la aplicación y es responsable de dibujar y activar la interfaz de usuario. Cuando Android crea la primera actividad de la aplicación, carga toda la aplicación:
 
-[![Carga de actividad](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png)
+[![Carga de actividad](hello-android-deepdive-images/01-activity-load-sml.png)](hello-android-deepdive-images/01-activity-load.png#lightbox)
 
 Dado que no existe una progresión lineal en una aplicación de Android (puede iniciar la aplicación desde varios puntos), Android tiene una sola manera de realizar un seguimiento de las clases y los archivos que componen una aplicación. En el ejemplo de **Phoneword**, todas las partes que componen la aplicación se registran con un archivo XML especial denominado **manifiesto de Android**. La función del **manifiesto de Android** consiste en realizar un seguimiento del contenido, las propiedades y los permisos de una aplicación y comunicárselos al sistema operativo Android. La aplicación **Phoneword** puede considerarse como una sola actividad (pantalla) y una colección de archivos auxiliares y de recursos unidos mediante el archivo de manifiesto de Android, como se muestra en el diagrama siguiente:
 
-[![Aplicaciones auxiliares de recursos](hello-android-deepdive-images/02-resources-helpers-sml.png)](hello-android-deepdive-images/02-resources-helpers.png)
+[![Aplicaciones auxiliares de recursos](hello-android-deepdive-images/02-resources-helpers-sml.png)](hello-android-deepdive-images/02-resources-helpers.png#lightbox)
 
 En las secciones siguientes se exploran las relaciones entre las distintas partes de la aplicación **Phoneword**, para que entienda mejor el diagrama anterior. Esta exploración comienza con la interfaz de usuario y analiza cuestiones como los archivos de diseño y Android Designer.
 
@@ -150,11 +150,11 @@ En las secciones siguientes se exploran las relaciones entre las distintas parte
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png)
+[![Android Designer](hello-android-deepdive-images/vs/03-android-designer-sml.png "Android Designer")](hello-android-deepdive-images/vs/03-android-designer.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Android Designer](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png)
+[![Android Designer](hello-android-deepdive-images/xs/03-android-designer-sml.png)](hello-android-deepdive-images/xs/03-android-designer.png#lightbox)
 
 -----
 
@@ -162,11 +162,11 @@ En la aplicación **Phoneword**, el identificador de **TranslateButton** está e
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Configuración del identificador de TranslateButton](hello-android-deepdive-images/vs/04-translatebutton-sml.png "Configuración del identificador de TranslateButton")](hello-android-deepdive-images/vs/04-translatebutton.png)
+[![Configuración del identificador de TranslateButton](hello-android-deepdive-images/vs/04-translatebutton-sml.png "Configuración del identificador de TranslateButton")](hello-android-deepdive-images/vs/04-translatebutton.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Configuración del identificador de TranslateButton](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png)
+[![Configuración del identificador de TranslateButton](hello-android-deepdive-images/xs/04-translatebutton-sml.png)](hello-android-deepdive-images/xs/04-translatebutton.png#lightbox)
 
 -----
 
@@ -179,11 +179,11 @@ Todos los elementos definidos en la superficie de diseño se traducen a XML para
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Vista Código fuente de Designer](hello-android-deepdive-images/vs/05-source-view-sml.png "Vista Código fuente de Designer")](hello-android-deepdive-images/vs/05-source-view.png)
+[![Vista Código fuente de Designer](hello-android-deepdive-images/vs/05-source-view-sml.png "Vista Código fuente de Designer")](hello-android-deepdive-images/vs/05-source-view.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Vista Código fuente de Designer](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png)
+[![Vista Código fuente de Designer](hello-android-deepdive-images/xs/05-source-view-sml.png)](hello-android-deepdive-images/xs/05-source-view.png#lightbox)
 
 -----
 
@@ -223,7 +223,7 @@ Ahora que ya hemos visto los aspectos básicos de `MainActivity`, vamos a profun
 
 En Android, las actividades pasan por distintas fases de un ciclo de vida en función de sus interacciones con el usuario. Las actividades se pueden crear, iniciar, pausar, reanudar, destruir, etc. La clase `Activity` contiene métodos que el sistema llama en determinados momentos del ciclo de vida de la pantalla. En el diagrama siguiente se ilustra la vida típica de una actividad, así como algunos de los métodos correspondientes del ciclo de vida:
 
-[![Ciclo de vida de la actividad](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png)
+[![Ciclo de vida de la actividad](hello-android-deepdive-images/04-lifecycle-sml.png)](hello-android-deepdive-images/04-lifecycle.png#lightbox)
 
 Si invalida los métodos `Activity` del ciclo de vida, puede controlar cómo se carga la actividad, cómo reacciona al usuario e incluso qué sucede después de que desaparezca de la pantalla del dispositivo. Por ejemplo, puede invalidar los métodos del ciclo de vida del diagrama anterior para realizar algunas tareas importantes:
 
@@ -320,21 +320,20 @@ Una vez que haya configurado el dispositivo, puede implementar en él. Para ello
 
 Una vez que haya configurado el dispositivo, puede implementar en él. Para ello, conéctelo, pulse **Inicio (Reproducir)**, selecciónelo en el cuadro de diálogo **Seleccionar dispositivo** y pulse **Aceptar**:
 
-[![Seleccionar dispositivo de depuración](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png)
+[![Seleccionar dispositivo de depuración](hello-android-deepdive-images/xs/06-select-device-sml.png)](hello-android-deepdive-images/xs/06-select-device.png#lightbox)
 
 -----
 
 De este modo se inicia la aplicación en el dispositivo:
 
-[![Escribir Phoneword](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png)
+[![Escribir Phoneword](hello-android-deepdive-images/05-enter-phoneword-sml.png)](hello-android-deepdive-images/05-enter-phoneword.png#lightbox)
 
-<a name="densities" />
 
 ### <a name="set-icons-for-different-screen-densities"></a>Establecer iconos para densidades de pantalla diferentes
 
 Los dispositivos Android tienen tamaños de pantalla y resoluciones diferentes, y no todas las imágenes se muestran correctamente en todas las pantallas. Por ejemplo, a continuación se muestra una captura de pantalla de un icono de baja densidad en un Nexus 5 de alta densidad. Observe lo borroso que se ve en comparación con los iconos que lo rodean:
 
-[![Icono borroso](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png)
+[![Icono borroso](hello-android-deepdive-images/06-blurry-icon-sml.png)](hello-android-deepdive-images/06-blurry-icon.png#lightbox)
 
 Para resolverlo, se recomienda agregar iconos de distintas resoluciones en la carpeta **Recursos**. Android proporciona versiones diferentes de la carpeta **mipmap** para gestionar los iconos de los iniciadores de densidades diferentes: *mdpi* para pantallas de densidad media, *hdpi* para pantallas de alta densidad y *xhdpi*, *xxhdpi* y *xxxhdpi* para pantallas de muy alta densidad. Los iconos de tamaños diferentes se almacenan en las carpetas **mipmap-** correspondientes:
 
@@ -344,13 +343,13 @@ Para resolverlo, se recomienda agregar iconos de distintas resoluciones en la ca
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Carpetas mipmap](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png)
+[![Carpetas mipmap](hello-android-deepdive-images/xs/07-mipmap-folders-sml.png)](hello-android-deepdive-images/xs/07-mipmap-folders.png#lightbox)
 
 -----
 
 Android seleccionará el icono de la densidad adecuada:
 
-[![Iconos con la densidad adecuada](hello-android-deepdive-images/07-appropriate-density-sml.png)](hello-android-deepdive-images/07-appropriate-density.png)
+[![Iconos con la densidad adecuada](hello-android-deepdive-images/07-appropriate-density-sml.png)](hello-android-deepdive-images/07-appropriate-density.png#lightbox)
 
 ### <a name="generate-custom-icons"></a>Generar iconos personalizados
 
@@ -393,15 +392,15 @@ Antes, Xamarin proporcionaba enlaces a todas las bibliotecas de Google Play Serv
 
 Para agregar una o más bibliotecas de Google Play Services, haga clic con el botón derecho en el nodo **Paquetes** del árbol del proyecto y haga clic en **Add Google Play Services…** (Agregar Google Play Services…):
 
-[![Agregar Google Play Services](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png)
+[![Agregar Google Play Services](hello-android-deepdive-images/xs/08-add-google-play-services-sml.png)](hello-android-deepdive-images/xs/08-add-google-play-services.png#lightbox)
 
 Cuando aparezca el cuadro de diálogo **Add Google Play Services…** (Agregar Google Play Services…), seleccione los paquetes (NuGet) que quiere agregar al proyecto:
 
-[![Seleccionar paquetes](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png)
+[![Seleccionar paquetes](hello-android-deepdive-images/xs/09-add-dialog-sml.png)](hello-android-deepdive-images/xs/09-add-dialog.png#lightbox)
 
 Al seleccionar un servicio y hacer clic en **Agregar paquete**, Visual Studio para Mac descarga e instala el paquete que seleccione, así como los paquetes dependientes de Google Play Services que requiere. En algunos casos, podría ver un cuadro de diálogo de **Aceptación de la licencia** que le solicita que haga clic en **Aceptar** para que se instalen los paquetes:
 
-[![Aceptación de licencia](hello-android-deepdive-images/xs/10-license-acceptance-sml.png)](hello-android-deepdive-images/xs/10-license-acceptance.png)
+[![Aceptación de licencia](hello-android-deepdive-images/xs/10-license-acceptance-sml.png)](hello-android-deepdive-images/xs/10-license-acceptance.png#lightbox)
 
 -----
 

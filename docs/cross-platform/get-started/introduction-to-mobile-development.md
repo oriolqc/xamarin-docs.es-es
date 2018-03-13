@@ -7,28 +7,19 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: 2f29851f9de410183c6f35d19486e7da8017566a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d3a39070e17729e99614e26e0a8892c6314512af
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-mobile-development"></a>Introducción al desarrollo móvil
 
-
 La creación de aplicaciones móviles puede ser tan fácil como abrir el IDE, juntar algunos elementos, realizar unas pruebas rápidas y enviar el resultado al App Store, todo ello en una misma tarde. O puede ser un proceso muy complicado que conlleva el diseño riguroso por adelantado, pruebas de facilidad de uso, pruebas de control de calidad en miles de dispositivos, un ciclo de vida completo de versión beta y la implementación de varias maneras diferentes.
-
-Esta guía contiene una introducción exhaustiva a la compilación de aplicaciones móviles de Xamarin, que incluye lo siguiente:
-
-1.   [ **Introducción a Xamarin**](#Introduction_to_Xamarin): lista de las características de la plataforma Xamarin.
-1.   [ **¿Cómo funciona Xamarin?**](#How_Does_Xamarin_Work): breve descripción de cómo funciona Xamarin para usar C# en iOS y Android.
-1.   [ **Primeros pasos**](#Sample_App): conozca los detalles y compile una aplicación de Xamarin para iOS, Android o todas las plataformas que usan Xamarin.Forms.
-
 
 El objetivo de este documento es presentar la plataforma Xamarin. Para obtener más información sobre el *proceso* de compilación de aplicaciones móviles desde el diseño hasta la realización de pruebas, consulte el documento [Introduction to the Mobile Software Development Lifecycle](~/cross-platform/get-started/introduction-to-mobile-sdlc.md) (Introducción al ciclo de vida del desarrollo de software móvil).
 
 Consulte nuestros [requisitos del sistema](~/cross-platform/get-started/requirements.md#mac) para confirmar que puede instalar Xamarin.
-
 
 ## <a name="introduction-to-xamarin"></a>Introducción a Xamarin
 

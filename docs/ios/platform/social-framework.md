@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: da096c8575896bc9f522a92b3fb94b81f9e772df
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9892577d7e0ed3d3f622f881cc51db09eb44a8fd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="social-framework"></a>Framework sociales
 
@@ -30,7 +30,7 @@ Mediante el marco sociales permite a las aplicaciones interactuar con las redes 
 
 Para conectarse a Twitter mediante el marco de trabajo sociales, una cuenta debe configurarse en la configuración del dispositivo tal y como se muestra a continuación:
 
- [ ![](social-framework-images/twitter01.png "Configuración de la cuenta de Twitter")](social-framework-images/twitter01.png)
+ [![](social-framework-images/twitter01.png "Configuración de la cuenta de Twitter")](social-framework-images/twitter01.png#lightbox)
 
 Una vez que una cuenta se ha indicado y verificado con Twitter, cualquier aplicación en el dispositivo que utiliza las clases de Framework sociales para acceder a Twitter usará esta cuenta.
 
@@ -38,7 +38,7 @@ Una vez que una cuenta se ha indicado y verificado con Twitter, cualquier aplica
 
 El marco de trabajo sociales incluye un controlador denominado `SLComposeViewController` que presenta una vista proporcionado por el sistema para la edición y enviar un tweet. Captura de pantalla siguiente muestra un ejemplo de esta vista:
 
- [ ![](social-framework-images/twitter02.png "Esta captura de pantalla muestra un ejemplo de la SLComposeViewController")](social-framework-images/twitter02.png)
+ [![](social-framework-images/twitter02.png "Esta captura de pantalla muestra un ejemplo de la SLComposeViewController")](social-framework-images/twitter02.png#lightbox)
 
 Para usar un `SLComposeViewController` con Twitter, debe crearse una instancia del controlador mediante una llamada a la `FromService` método con `SLServiceType.Twitter` tal y como se muestra a continuación:
 
@@ -284,7 +284,7 @@ request.PerformRequest ((data, response, error) => {
 
 Si los datos se cargaron correctamente, se mostrará los datos JSON sin formato (como en la salida de ejemplo siguiente):
 
-[ ![](social-framework-images/twitter03.png "Un ejemplo de la presentación de datos sin formato de JSON")](social-framework-images/twitter03.png)
+[![](social-framework-images/twitter03.png "Un ejemplo de la presentación de datos sin formato de JSON")](social-framework-images/twitter03.png#lightbox)
 
 En una aplicación real, los resultados JSON, a continuación, se puede analizar como normal y los resultados que se presentan al usuario. Vea [servicios Web de introducción](~/cross-platform/data-cloud/web-services/index.md) para obtener información acerca de cómo analizar JSON.
 
@@ -294,7 +294,7 @@ En una aplicación real, los resultados JSON, a continuación, se puede analizar
 
 Conectarse a Facebook con el marco de trabajo Social es casi idéntico al proceso usado para Twitter mostrado anteriormente. Debe configurarse una cuenta de usuario de Facebook en la configuración del dispositivo tal y como se muestra a continuación:
 
-[ ![](social-framework-images/facebook01.png "Configuración de la cuenta de Facebook")](social-framework-images/facebook01.png)
+[![](social-framework-images/facebook01.png "Configuración de la cuenta de Facebook")](social-framework-images/facebook01.png#lightbox)
 
 Una vez configurado, cualquier aplicación en el dispositivo que utiliza el marco de trabajo sociales usará esta cuenta para conectar con Facebook.
 
@@ -368,7 +368,7 @@ namespace SocialFrameworkDemo
 
 Cuando se usa con Facebook, el `SLComposeViewController` muestra una vista que es casi idéntica al ejemplo de Twitter, que muestra **Facebook** como el título en este caso:
 
-[ ![](social-framework-images/facebook02.png "La presentación de SLComposeViewController")](social-framework-images/facebook02.png)
+[![](social-framework-images/facebook02.png "La presentación de SLComposeViewController")](social-framework-images/facebook02.png#lightbox)
 
 ### <a name="calling-facebook-graph-api"></a>Llamada a API Graph de Facebook
 
@@ -478,4 +478,4 @@ En este artículo se ha explicado cómo usar el marco de trabajo sociales para i
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [SocialFrameworkDemo (ejemplo)](https://developer.xamarin.com/samples/SocialFrameworkDemo/)
-- [Introducción a servicios Web](~/cross-platform/data-cloud/web-services/index.md)
+- [Introducción a los servicios web](~/cross-platform/data-cloud/web-services/index.md)

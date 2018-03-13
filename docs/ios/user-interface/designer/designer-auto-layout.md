@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 040a5979339ed12f212f932f3b7e51cf48a9d382
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d9e38f055414ff0eca70df4a4e38aa959b7d7237
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Diseño automático con el Diseñador de Xamarin para iOS
 
@@ -54,7 +54,7 @@ De forma predeterminada, no hay ninguna restricción es creado o visible en la s
 
 ## <a name="constraints-toolbar"></a>Barra de herramientas de restricciones
 
- [ ![](designer-auto-layout-images/toolbarnew.png "Los comandos del menú contextual")](designer-auto-layout-images/toolbarnew.png)
+ [![](designer-auto-layout-images/toolbarnew.png "Los comandos del menú contextual")](designer-auto-layout-images/toolbarnew.png#lightbox)
 
 La barra de herramientas de restricciones se ha actualizado y ahora está formada por dos partes principales:
 
@@ -83,7 +83,7 @@ Definen los identificadores en forma de T 4 en cada lado del elemento la *arriba
 
 Para crear una restricción, seleccione un identificador y arrástrelo en alguna parte en la superficie de diseño. Cuando se inicia la operación de arrastre, aparecerá una serie de líneas y cuadros verdes en la superficie que le indica lo que se puede restringir. Por ejemplo, en la siguiente captura de pantalla, estamos restringiendo el lado superior del botón central:
 
- [ ![](designer-auto-layout-images/image07.png "Restringir el lado superior del botón central")](designer-auto-layout-images/image07.png)
+ [![](designer-auto-layout-images/image07.png "Restringir el lado superior del botón central")](designer-auto-layout-images/image07.png#lightbox)
 
 Tenga en cuenta las tres líneas discontinuas de verde a través de los otros dos botones. Las líneas verdes indican *áreas de colocación*, o los atributos de otros elementos a la que se puede restringir. En la captura de pantalla anterior, los otros dos botones ofrecen 3 áreas de colocación vertical ( *inferior*, *centerY*, *arriba*) para restringir el botón. La línea discontinua verde en la parte superior de la vista significa que el controlador de vista ofrece una restricción en la parte superior de la vista y el cuadro verde sólido significa que el controlador de vista ofrece una restricción por debajo de la Guía de diseño superior.
 
@@ -98,13 +98,13 @@ Las tres secciones siguientes presentan trabajar con diferentes tipos de restric
 
 Con las restricciones de tamaño - *alto* y *ancho* -tiene dos opciones. La primera opción es arrastrar el identificador para limitar a un tamaño de elemento de vecino, como se muestra en el ejemplo anterior. La otra opción es hacer doble clic en el identificador para crear una restricción de autoservicio. Esto nos permite especificar un valor de tamaño constante, como se muestra en la captura de pantalla siguiente:
 
- [ ![](designer-auto-layout-images/sizec.png "Arrastre el controlador para limitar a un tamaño de elemento de vecino, tal y como se ilustra a continuación")](designer-auto-layout-images/sizec.png)
+ [![](designer-auto-layout-images/sizec.png "Arrastre el controlador para limitar a un tamaño de elemento de vecino, tal y como se ilustra a continuación")](designer-auto-layout-images/sizec.png#lightbox)
 
 ### <a name="center-constraints"></a>Restricciones de Center
 
 El asa cuadrada, se creará un *centerX* o *centerY* restricción, dependiendo del contexto. El manipulador de cuadrado se ilumina los otros elementos para ofrecer ambas áreas de colocación horizontal y vertical, como se muestra en la captura de pantalla siguiente:
 
- [ ![](designer-auto-layout-images/centerc.png "Restricciones de Center")](designer-auto-layout-images/centerc.png)
+ [![](designer-auto-layout-images/centerc.png "Restricciones de Center")](designer-auto-layout-images/centerc.png#lightbox)
 
 Si elige un área de colocación vertical, un *centerY* se creará la restricción. Si elige un área de colocación horizontal, la restricción se basará en *centerX*.
 
@@ -112,17 +112,17 @@ Si elige un área de colocación vertical, un *centerY* se creará la restricci�
 
 Para crear la alineación y restricciones de tamaño de igualdad entre dos elementos, puede seleccionar elementos de una barra de herramientas superior para especificar - en orden: alineación horizontal, la alineación vertical e igualdades de tamaño, como se muestra en la captura de pantalla siguiente:
 
- [ ![](designer-auto-layout-images/image06.png "Restricciones de combinación")](designer-auto-layout-images/image06.png)
+ [![](designer-auto-layout-images/image06.png "Restricciones de combinación")](designer-auto-layout-images/image06.png#lightbox)
 
 ### <a name="visualizing-and-editing-constraints"></a>Visualizar y editar las restricciones
 
 Cuando se agrega una restricción, se mostrará en la superficie de diseño como una línea azul cuando se selecciona un elemento:
 
- [ ![](designer-auto-layout-images/image09.png "La visualización de restricciones")](designer-auto-layout-images/image09.png)
+ [![](designer-auto-layout-images/image09.png "La visualización de restricciones")](designer-auto-layout-images/image09.png#lightbox)
 
 Puede seleccionar una restricción haciendo clic en una línea azul y editar los valores de restricción directamente en el panel de propiedades. Como alternativa, haga doble clic en una línea azul se abrirá una popover que le permite modificar los valores directamente en la superficie de diseño:
 
- [ ![](designer-auto-layout-images/image08.png "Modificar restricciones")](designer-auto-layout-images/image08.png)
+ [![](designer-auto-layout-images/image08.png "Modificar restricciones")](designer-auto-layout-images/image08.png#lightbox)
 
 ## <a name="constraint-issues"></a>Problemas de restricción
 
@@ -139,27 +139,27 @@ En esta sección se elaboran los tres problemas mencionados anteriormente y prop
 
 Las restricciones conflictivas se marcan en rojo y tienen un símbolo de advertencia. Mantiene el mouse sobre los símbolos de advertencia aparecerá una popover con información sobre el conflicto:
 
- [ ![](designer-auto-layout-images/image11.png "Las restricciones conflictivas advertencia")](designer-auto-layout-images/image11.png)
+ [![](designer-auto-layout-images/image11.png "Las restricciones conflictivas advertencia")](designer-auto-layout-images/image11.png#lightbox)
 
 ### <a name="underconstrained-items"></a>Elementos underconstrained
 
 Underconstrained elementos aparecen en color naranja y desencadenan la apariencia de un icono de marcador naranja en la barra de objeto de controlador de vista:
 
- [ ![](designer-auto-layout-images/image02.png "Underconstrained elementos aparecen en color naranja")](designer-auto-layout-images/image02.png)
+ [![](designer-auto-layout-images/image02.png "Underconstrained elementos aparecen en color naranja")](designer-auto-layout-images/image02.png#lightbox)
 
 Si hace clic en ese icono de marcador, puede obtener información acerca de los elementos underconstrained de la escena y resolver los problemas por cualquier totalmente restringirlos o mediante la eliminación de sus restricciones, como se muestra en la captura de pantalla siguiente:
 
- [ ![](designer-auto-layout-images/image10.png "Corrección de elementos Underconstrained")](designer-auto-layout-images/image10.png)
+ [![](designer-auto-layout-images/image10.png "Corrección de elementos Underconstrained")](designer-auto-layout-images/image10.png#lightbox)
 
 ### <a name="frame-misplacement"></a>Ubicación incorrecta de marco
 
 Ubicación incorrecta de marco, usa el mismo código de color como elementos underconstrained. El elemento siempre se representará en la superficie utilizando su marco nativo, pero en el caso de una ubicación incorrecta de marco un rectángulo rojo marcará donde el elemento terminará cuando se ejecuta la aplicación, como se muestra en la captura de pantalla siguiente:
 
- [ ![](designer-auto-layout-images/image05.png "Vista de la ubicación incorrecta del marco de ejemplo")](designer-auto-layout-images/image05.png)
+ [![](designer-auto-layout-images/image05.png "Vista de la ubicación incorrecta del marco de ejemplo")](designer-auto-layout-images/image05.png#lightbox)
 
 Para resolver errores de trama ubicación incorrecta, seleccione la **actualización fotogramas basadas en las restricciones** botón desde la barra de herramientas de restricciones (botón más a la derecha):
 
- [ ![](designer-auto-layout-images/image03.png "Actualizar los fotogramas en función de botón de barra de herramientas de restricciones")](designer-auto-layout-images/image03.png)
+ [![](designer-auto-layout-images/image03.png "Actualizar los fotogramas en función de botón de barra de herramientas de restricciones")](designer-auto-layout-images/image03.png#lightbox)
 
 Esto ajustará automáticamente el marco de elemento para que coincida con las posiciones definidas por los controles.
 
@@ -174,10 +174,10 @@ Para obtener acceso a una restricción en el código, primero tiene que exponer 
 1. Crear la restricción como normal (con cualquiera de los métodos mencionados anteriormente).
 2. En el **Document Explorer de esquema**, busque la restricción que desea y selecciónela:
 
-    [ ![](designer-auto-layout-images/modify01.png "El Explorador de esquema de documento")](designer-auto-layout-images/modify01.png)
+    [![](designer-auto-layout-images/modify01.png "El Explorador de esquema de documento")](designer-auto-layout-images/modify01.png#lightbox)
 3. A continuación, asignar un **nombre** a la restricción en la **Widget** pestaña de la **el Explorador de propiedades**:
 
-    [ ![](designer-auto-layout-images/modify02.png "La pestaña de Widget")](designer-auto-layout-images/modify02.png)
+    [![](designer-auto-layout-images/modify02.png "La pestaña de Widget")](designer-auto-layout-images/modify02.png#lightbox)
 4. Guarde los cambios.
 
 Con los cambios mencionados en su lugar, puede tener acceso a ella en el código y modificar sus propiedades. Por ejemplo, puede utilizar lo siguiente para establecer el alto de la vista adjunta en cero:
@@ -188,7 +188,7 @@ ViewInfoHeight.Constant = 0;
 
 Dada la siguiente configuración para la restricción en el Diseñador de iOS:
 
-[ ![](designer-auto-layout-images/modify03.png "Edición de una restricción en el Explorador de propiedades")](designer-auto-layout-images/modify03.png)
+[![](designer-auto-layout-images/modify03.png "Edición de una restricción en el Explorador de propiedades")](designer-auto-layout-images/modify03.png#lightbox)
 
 ### <a name="the-deferred-layout-pass"></a>La fase de diseño diferida
 

@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: topgenorth
+ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: a5309b46b67a79225611aafb546b35e73d891b38
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3c06fca9c6d8c3cd91889007bd1879149771622b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="service-notifications"></a>Notificaciones del servicio
 
@@ -48,7 +48,7 @@ public class MyService: Service
 
 Esta captura de pantalla es un ejemplo de la notificación de que se muestra:
 
-[![Icono de notificación que se muestra en la barra de estado](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png)
+[![Icono de notificación que se muestra en la barra de estado](service-notifications-images/01-notification-sml.png)](service-notifications-images/01-notification.png#lightbox)
 
 Cuando las diapositivas de usuario hacia abajo de la pantalla de notificación desde la parte superior, se muestra la notificación completa:
 

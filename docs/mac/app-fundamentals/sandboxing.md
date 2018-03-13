@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9e64f1962e35372a6058f4b515efa5a61c1c9e45
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9cf9cb2e4773b90ecdd9321c6627003be3fa1b8b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Espacio aislado de una aplicación Xamarin.Mac
 
@@ -22,7 +22,7 @@ _Este artículo trata el espacio aislado de una aplicación Xamarin.Mac para lan
 
 Cuando se trabaja con C# y .NET en una aplicación Xamarin.Mac, tiene la misma capacidad para el espacio aislado de una aplicación como lo hace cuando se trabaja con Objective-C o Swift.
 
-[![Un ejemplo de la aplicación en ejecución](sandboxing-images/intro01.png "muestra un ejemplo de la aplicación en ejecución")](sandboxing-images/intro01-large.png)
+[![Un ejemplo de la aplicación en ejecución](sandboxing-images/intro01.png "muestra un ejemplo de la aplicación en ejecución")](sandboxing-images/intro01-large.png#lightbox)
 
 En este artículo, hablaremos sobre los conceptos básicos sobre cómo trabajar con espacio aislado en una aplicación Xamarin.Mac y todos los elementos que van en espacio aislado: directorios de contenedor, derechos, permisos de usuario determinado, separación de privilegios y cumplimiento de kernel. Se recomienda trabajar a través de la [Hola, Mac](~/mac/get-started/hello-mac.md) artículo en primer lugar, específicamente el [Introducción a Xcode y el generador de interfaz](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) y [distribuidores y acciones](~/mac/get-started/hello-mac.md#Outlets_and_Actions) secciones, tal como se explica conceptos clave y técnicas que usaremos en este artículo.
 
@@ -70,19 +70,19 @@ Vamos a hacer lo siguiente para crear el proyecto de ejemplo:
 1. Inicie Visual Studio para Mac y haga clic en el **nueva solución...** .
 2. Desde el **nuevo proyecto** cuadro de diálogo, seleccione **Mac** > **aplicación** > **cacao aplicación**: 
 
-    [![Crear una nueva aplicación de cacao](sandboxing-images/sample01.png "crear una nueva aplicación de cacao")](sandboxing-images/sample01-large.png)
+    [![Crear una nueva aplicación de cacao](sandboxing-images/sample01.png "crear una nueva aplicación de cacao")](sandboxing-images/sample01-large.png#lightbox)
 3. Haga clic en el **siguiente** botón, escriba `MacSandbox` para el nombre del proyecto y haga clic en el **crear** botón: 
 
-    [![Escriba el nombre de la aplicación](sandboxing-images/sample02.png "escribir el nombre de la aplicación")](sandboxing-images/sample02-large.png)
+    [![Escriba el nombre de la aplicación](sandboxing-images/sample02.png "escribir el nombre de la aplicación")](sandboxing-images/sample02-large.png#lightbox)
 4. En el **solución Pad**, haga doble clic en el **Main.storyboard** archivo para abrirlo y editarlo en Xcode: 
 
-    [![Editar el guión gráfico principal](sandboxing-images/sample03.png "el guión gráfico principal de edición")](sandboxing-images/sample03-large.png)
+    [![Editar el guión gráfico principal](sandboxing-images/sample03.png "el guión gráfico principal de edición")](sandboxing-images/sample03-large.png#lightbox)
 5. Arrastre un **vista Web** en la ventana, cambiar su tamaño para rellenar el área de contenido y configurarlo para aumentar o reducir con la ventana: 
 
-    [![Agregar una vista web](sandboxing-images/sample04.png "agregar una vista web")](sandboxing-images/sample04-large.png)
+    [![Agregar una vista web](sandboxing-images/sample04.png "agregar una vista web")](sandboxing-images/sample04-large.png#lightbox)
 6. Crear una salida para la vista web denominada `webView`: 
 
-    [![Crear una nueva toma](sandboxing-images/sample05.png "crear una nueva salida")](sandboxing-images/sample05-large.png)
+    [![Crear una nueva toma](sandboxing-images/sample05.png "crear una nueva salida")](sandboxing-images/sample05-large.png#lightbox)
 7. Vuelva a Visual Studio para Mac y haga doble clic en el **ViewController.cs** un archivo en el **solución Pad** para abrirlo y editarlo.
 8. Agregue la siguiente instrucción using: `using WebKit;`
 9. Realizar el `ViewDidLoad` método aspecto similar al siguiente: 
@@ -99,7 +99,7 @@ public override void AwakeFromNib ()
 
 Ejecutar la aplicación y asegúrese de que el sitio Web de Apple se muestra en la ventana como se indica a continuación:
 
-[![Muestra una aplicación de ejemplo ejecución](sandboxing-images/sample06.png "que muestra una aplicación de ejemplo ejecución")](sandboxing-images/sample06-large.png)
+[![Muestra una aplicación de ejemplo ejecución](sandboxing-images/sample06.png "que muestra una aplicación de ejemplo ejecución")](sandboxing-images/sample06-large.png#lightbox)
 
 <a name="Signing_and_Provisioning_the_App" />
 
@@ -111,34 +111,34 @@ Le permiten hacer lo siguiente:
 
 1. Inicie sesión en el Portal para desarrolladores de Apple: 
 
-    [![Iniciar sesión en el Portal para desarrolladores de Apple](sandboxing-images/sign01.png "iniciar sesión en el Portal para desarrolladores de Apple")](sandboxing-images/sign01-large.png)
+    [![Iniciar sesión en el Portal para desarrolladores de Apple](sandboxing-images/sign01.png "iniciar sesión en el Portal para desarrolladores de Apple")](sandboxing-images/sign01-large.png#lightbox)
 2. Seleccione **certificados, identificadores & perfiles**: 
 
-    [![Selección de certificados, identificadores & perfiles](sandboxing-images/sign02.png "selección de certificados, identificadores y perfiles")](sandboxing-images/sign02-large.png)
+    [![Seleccionar certificados, identificadores y perfiles](sandboxing-images/sign02.png "Seleccionar certificados, identificadores y perfiles")](sandboxing-images/sign02-large.png#lightbox)
 3. En **aplicaciones de Mac**, seleccione **identificadores**: 
 
-    [![Al seleccionar identificadores](sandboxing-images/sign03.png "al seleccionar identificadores")](sandboxing-images/sign03-large.png)
+    [![Al seleccionar identificadores](sandboxing-images/sign03.png "al seleccionar identificadores")](sandboxing-images/sign03-large.png#lightbox)
 4. Crear un nuevo identificador para la aplicación: 
 
-    [![Crear un nuevo identificador de aplicación](sandboxing-images/sign04.png "crear un nuevo ID de aplicación.")](sandboxing-images/sign04-large.png)
+    [![Crear un nuevo identificador de aplicación](sandboxing-images/sign04.png "crear un nuevo ID de aplicación.")](sandboxing-images/sign04-large.png#lightbox)
 5. En **perfiles de aprovisionamiento**, seleccione **desarrollo**: 
 
-    [![Selección de desarrollo](sandboxing-images/sign05.png "selección de desarrollo")](sandboxing-images/sign05-large.png)
+    [![Selección de desarrollo](sandboxing-images/sign05.png "selección de desarrollo")](sandboxing-images/sign05-large.png#lightbox)
 6. Crear un nuevo perfil y seleccione **desarrollo de aplicaciones de Mac**: 
 
-    [![Crear un nuevo perfil](sandboxing-images/sign06.png "crear un nuevo perfil")](sandboxing-images/sign06-large.png)
+    [![Crear un nuevo perfil](sandboxing-images/sign06.png "crear un nuevo perfil")](sandboxing-images/sign06-large.png#lightbox)
 7. Seleccione el identificador de aplicación que hemos creado anteriormente: 
 
-    [![Seleccionar el identificador de la aplicación](sandboxing-images/sign07.png "al seleccionar el identificador de la aplicación")](sandboxing-images/sign07-large.png)
+    [![Seleccionar el identificador de la aplicación](sandboxing-images/sign07.png "al seleccionar el identificador de la aplicación")](sandboxing-images/sign07-large.png#lightbox)
 8. Seleccione los desarrolladores para este perfil: 
 
-    [![Agregar a los desarrolladores](sandboxing-images/sign08.png "agregar a los desarrolladores")](sandboxing-images/sign08-large.png)
+    [![Agregar a los desarrolladores](sandboxing-images/sign08.png "agregar a los desarrolladores")](sandboxing-images/sign08-large.png#lightbox)
 9. Seleccione los equipos para este perfil: 
 
-    [![Selección de los equipos permitidos](sandboxing-images/sign09.png "selección de los equipos permitidos")](sandboxing-images/sign09-large.png)
+    [![Selección de los equipos permitidos](sandboxing-images/sign09.png "selección de los equipos permitidos")](sandboxing-images/sign09-large.png#lightbox)
 10. Asigne un nombre de perfil: 
 
-    [![Dar un nombre al perfil](sandboxing-images/sign10.png "dando un nombre al perfil")](sandboxing-images/sign10-large.png)
+    [![Dar un nombre al perfil](sandboxing-images/sign10.png "dando un nombre al perfil")](sandboxing-images/sign10-large.png#lightbox)
 11. Haga clic en el **realiza** botón.
 
 > [!IMPORTANT]
@@ -160,10 +160,10 @@ A continuación, es necesario seleccionar el nuevo identificador de la aplicaci�
 1. En el **solución Pad**, haga doble clic en el **Info.plist** archivo para abrirlo y editarlo.
 2. Asegúrese de que el **identificador de paquete** coincide con el identificador de la aplicación hemos creado anteriormente (ejemplo: `com.appracatappra.MacSandbox`): 
 
-    [![Editar el identificador de paquete](sandboxing-images/sign13.png "editar el identificador de paquete")](sandboxing-images/sign13-large.png)
+    [![Editar el identificador de paquete](sandboxing-images/sign13.png "editar el identificador de paquete")](sandboxing-images/sign13-large.png#lightbox)
 3. A continuación, haga doble clic en el **Entitlements.plist** de archivos y asegúrese de nuestro **iCloud almacén de clave y valor** y **iCloud contenedores** todos coinciden con el identificador de la aplicación hemos creado anteriormente (ejemplo: `com.appracatappra.MacSandbox`): 
 
-    [![Editar el archivo Entitlements.plist](sandboxing-images/sign17.png "editando el archivo Entitlements.plist")](sandboxing-images/sign17-large.png)
+    [![Editar el archivo Entitlements.plist](sandboxing-images/sign17.png "editando el archivo Entitlements.plist")](sandboxing-images/sign17-large.png#lightbox)
 3. Guarde los cambios.
 4. En el **solución Pad**, haga doble clic en para abrir sus opciones para modificar el archivo de proyecto:  
 
@@ -180,7 +180,7 @@ A continuación, es necesario seleccionar el nuevo identificador de la aplicaci�
 
 En este momento debe intentar ejecutar la aplicación y asegúrese de que todo el contenido y se haya creado correctamente. Si la aplicación sigue ejecutándose como antes, todo lo que es bueno. Si se produce un error, podría aparecer un cuadro de diálogo similar al siguiente:
 
-[![Un ejemplo de cuadro de diálogo de problema aprovisionamiento](sandboxing-images/sign16.png "muestra un ejemplo de cuadro de diálogo de problema aprovisionamiento")](sandboxing-images/sign16-large.png)
+[![Un ejemplo de cuadro de diálogo de problema aprovisionamiento](sandboxing-images/sign16.png "muestra un ejemplo de cuadro de diálogo de problema aprovisionamiento")](sandboxing-images/sign16-large.png#lightbox)
 
 Estas son las causas más comunes de aprovisionamiento y la firma de problemas:
 
@@ -197,12 +197,12 @@ Habilitar el espacio aislado de la aplicación seleccionando una casilla en las 
 1. En el **solución Pad**, haga doble clic en el **Entitlements.plist** archivo para abrirlo y editarlo.
 2. Comprobar ambos **habilitar derechos** y **habilitar el espacio aislado de la aplicación**: 
 
-    [![Derechos de edición y habilitar el espacio aislado](sandboxing-images/sign17.png "derechos de edición y habilitar el espacio aislado")](sandboxing-images/sign17-large.png)
+    [![Derechos de edición y habilitar el espacio aislado](sandboxing-images/sign17.png "derechos de edición y habilitar el espacio aislado")](sandboxing-images/sign17-large.png#lightbox)
 3. Guarde los cambios.
 
 En este momento, ha habilitado el espacio aislado de la aplicación pero no ha proporcionado el acceso de red requeridos para la vista Web. Si se ejecuta la aplicación ahora, debería obtener una ventana en blanco:
 
-[![Mostrar la está bloqueando el acceso web](sandboxing-images/sample08.png "que muestra la está bloqueando el acceso web")](sandboxing-images/sample08-large.png)
+[![Mostrar la está bloqueando el acceso web](sandboxing-images/sample08.png "que muestra la está bloqueando el acceso web")](sandboxing-images/sample08-large.png#lightbox)
 
 ### <a name="verifying-that-the-app-is-sandboxed"></a>Comprobar que la aplicación se encuentra en un espacio aislado
 
@@ -210,25 +210,25 @@ Además el comportamiento de bloqueo de recurso, hay tres maneras principales pa
 
 1. En Finder, compruebe el contenido de la `~/Library/Containers/` carpeta - si la aplicación está en un espacio aislado, habrá una carpeta denominada como identificador de paquete de la aplicación (ejemplo: `com.appracatappra.MacSandbox`): 
 
-    [![Abrir el paquete de la aplicación](sandboxing-images/sample09.png "abrir el paquete de la aplicación")](sandboxing-images/sample09-large.png)
+    [![Abrir el paquete de la aplicación](sandboxing-images/sample09.png "abrir el paquete de la aplicación")](sandboxing-images/sample09-large.png#lightbox)
 2. El sistema considera la aplicación en espacio aislado en el Monitor de actividad:
     - Iniciar el Monitor de actividad (en `/Applications/Utilities`). 
     - Elija **vista** > **columnas** y asegúrese de que el **espacio aislado** elemento de menú está activado.
     - Asegúrese de que la columna de espacio aislado se denomine `Yes` para la aplicación: 
 
-    [![Comprobación de la aplicación en el Monitor de actividad](sandboxing-images/sample10.png "comprobación de la aplicación en el Monitor de actividad")](sandboxing-images/sample10-large.png)
+    [![Comprobación de la aplicación en el Monitor de actividad](sandboxing-images/sample10.png "comprobación de la aplicación en el Monitor de actividad")](sandboxing-images/sample10-large.png#lightbox)
 3. Compruebe que la aplicación binaria se encuentra en un espacio aislado:
     - Inicie la aplicación Terminal.
     - Vaya a las aplicaciones `bin` directory.
     - Emitir este comando: `codesign -dvvv --entitlements :- executable_path` (donde `executable_path` es la ruta de acceso a la aplicación): 
 
-    [![Comprobación de la aplicación en la línea de comandos](sandboxing-images/sample11.png "comprobación de la aplicación en la línea de comandos")](sandboxing-images/sample11-large.png)
+    [![Comprobación de la aplicación en la línea de comandos](sandboxing-images/sample11.png "comprobación de la aplicación en la línea de comandos")](sandboxing-images/sample11-large.png#lightbox)
 
 ### <a name="debugging-a-sandboxed-app"></a>Para depurar una aplicación en espacio aislado
 
 El depurador se conecta a aplicaciones de Xamarin.Mac a través de TCP, lo que significa que de forma predeterminada cuando se habilita el espacio aislado, no se puede conectar a la aplicación, por lo que si se intenta ejecutar la aplicación sin los permisos adecuados habilitados, obtendrá un error *"no se puede conectar a el depurador"*. 
 
-[![Establecer las opciones necesarias](sandboxing-images/debug01.png "establecer las opciones necesarias")](sandboxing-images/debug01-large.png)
+[![Establecer las opciones necesarias](sandboxing-images/debug01.png "establecer las opciones necesarias")](sandboxing-images/debug01-large.png#lightbox)
 
 El **permitir conexiones de red salientes (cliente)** permiso es necesario para que el depurador, éste se habilita, normalmente la depuración. Puesto que no se pueden depurar sin él, hemos actualizado el `CompileEntitlements` de destino para `msbuild` para agregar automáticamente ese permiso a los derechos para cualquier aplicación que se encuentre en un espacio aislado para depuración solo compila. Versiones de lanzamiento deben usar los derechos especificados en el archivo de derechos, sin modificar.
 
@@ -248,7 +248,7 @@ Haga lo siguiente:
 2. Abra la **consola** aplicación (de `/Applications/Utilties/`).
 3. Seleccione **todos los mensajes** en la barra lateral y escriba `sandbox` en la búsqueda: 
 
-    [![Un ejemplo de un problema de espacio aislado en la consola de](sandboxing-images/resolve01.png "muestra un ejemplo de un problema de espacio aislado en la consola de")](sandboxing-images/resolve01-large.png)
+    [![Un ejemplo de un problema de espacio aislado en la consola de](sandboxing-images/resolve01.png "muestra un ejemplo de un problema de espacio aislado en la consola de")](sandboxing-images/resolve01-large.png#lightbox)
 
 En nuestra aplicación de ejemplo anterior, puede ver que está bloqueando la Kernal la `network-outbound` tráfico gracias al espacio aislado de aplicación, ya que no hemos solicitado ese derecho.
 
@@ -261,7 +261,7 @@ Haga lo siguiente:
 1. En el **solución Pad**, haga doble clic en el **Entitlements.plist** archivo para abrirlo y editarlo.
 2. En el **derechos** sección, compruebe el **permitir conexiones de red salientes (cliente)** casilla de verificación: 
 
-    [![Editar los derechos](sandboxing-images/sign17.png "los derechos de edición")](sandboxing-images/sign17-large.png)
+    [![Editar los derechos](sandboxing-images/sign17.png "los derechos de edición")](sandboxing-images/sign17-large.png#lightbox)
 3. Guarde los cambios en la aplicación.
 
 Si todo lo anterior para nuestra aplicación de ejemplo, a continuación, compilar y ejecutarlo, ahora se mostrará el contenido web según lo previsto.
@@ -284,7 +284,7 @@ Al habilitar el espacio aislado de la aplicación, quite todo excepto un conjunt
 
 Modificar recursos de espacio aislado de aplicación de la aplicación mediante la edición de su **Entitlements.plist** archivo y comprobando o seleccionar los derechos necesarios en los cuadros de lista desplegable de editores:
 
-[![Editar los derechos](sandboxing-images/sign17.png "los derechos de edición")](sandboxing-images/sign17-large.png)
+[![Editar los derechos](sandboxing-images/sign17.png "los derechos de edición")](sandboxing-images/sign17-large.png#lightbox)
 
 ### <a name="container-directories-and-file-system-access"></a>Acceso al sistema de archivos y directorios de contenedor
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e138fc1176c646a2e4e9caf94462028dd7c68e9f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 77365d5ed62b2ef2e81407ab1fa5aef55c592d0b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="bundle-for-mac-app-store"></a>Empaquetar para Mac App Store
 
@@ -25,11 +25,11 @@ En esta sección se describen los aspectos básicos de la compilación de una ap
 
 Cambie la **Configuración** a **Lanzamiento** antes de actualizar la firma de código y las opciones de empaquetado. El programador debe asegurarse de que se usen la **identidad** de la empresa y el perfil de aprovisionamiento que se crearon anteriormente al firmar la aplicación para el lanzamiento en App Store.
 
- [![Modificar las opciones de firma de código](bundling-images/config02.png "Modificar las opciones de firma de código")](bundling-images/config02-large.png)
+ [![Modificar las opciones de firma de código](bundling-images/config02.png "Modificar las opciones de firma de código")](bundling-images/config02-large.png#lightbox)
 
 Asegúrese de que esté activada la opción para crear un paquete de instalador en la configuración de **Mac Build** (Compilación de Mac):
 
-[![Modificar las opciones de compilación](bundling-images/config03.png "Modificar las opciones de compilación")](bundling-images/config03-large.png)
+[![Modificar las opciones de compilación](bundling-images/config03.png "Modificar las opciones de compilación")](bundling-images/config03-large.png#lightbox)
 
 ## <a name="build"></a>Compilar
 

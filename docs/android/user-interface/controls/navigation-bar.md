@@ -7,18 +7,18 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: 396ed31cba336976342a8dfb26f31eeda20cf494
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fe76c93afc149553e44b5e8fa29a21767becf5c5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="navigation-bar"></a>Barra de navegación
 
 Android 4 introdujo una nueva característica de interfaz de usuario de sistema denominada una *barra de navegación*, lo que proporciona controles de navegación en los dispositivos que no incluyen botones de hardware para **inicio**, **atrás** , y **menú**.
 Captura de pantalla siguiente muestra la barra de navegación de un dispositivo de Nexus primos:
 
- [ ![Ejemplo de una barra de navegación de Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png)
+ [![Ejemplo de una barra de navegación de Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
 
 Existen varios nuevos indicadores que controlan la visibilidad de la barra de navegación y sus controles, así como la visibilidad de la barra de sistema que se introdujo en Android 3. Las marcas se definen en la `Android.View.View` clase y se enumeran a continuación:
 
@@ -31,7 +31,7 @@ Estas marcas se pueden aplicar a cualquier vista de la jerarquía de vista estab
 
 En el ejemplo siguiente se muestra una aplicación sencilla que haga clic en cualquiera de los botones de cambiar el `SystemUiVisibility`:
 
- [ ![Capturas de pantalla que muestra Visible, el perfil de baja y SystemUiVisibility ocultos](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png)
+ [![Capturas de pantalla que muestra Visible, el perfil de baja y SystemUiVisibility ocultos](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
 
 El código para cambiar la `SystemUiVisibility` establece la propiedad en un `TextView` de cada botón, haga clic en controlador de eventos tal y como se muestra a continuación:
 

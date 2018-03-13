@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: d37c2c9dbb12668680b5813e9e083d2ebb184c66
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
-ms.translationtype: HT
+ms.openlocfilehash: b0d871068f42a03b2aba3c1482a9236b19fe0db9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-video-transport-controls"></a>Controles de transporte personalizado de vídeo
 
@@ -646,11 +646,11 @@ namespace VideoPlayerDemos
 
 Dado que `AutoPlay` está establecido en `false` en el **CustomTransport.xaml** archivo, deberá presionar el **reproducir** botón cuando se habilita para iniciar el vídeo. Los botones se definen para que los caracteres Unicode mencionados están acompañados por sus equivalentes de texto. Los botones tienen una apariencia coherente en cada plataforma cuando se está reproduciendo el vídeo:
 
-[![Reproducción de transporte personalizado](custom-transport-images/customtransportplaying-small.png "reproducción de transporte personalizado")](custom-transport-images/customtransportplaying-large.png "reproducción de transporte personalizado")
+[![Reproducción de transporte personalizado](custom-transport-images/customtransportplaying-small.png "reproducción de transporte personalizado")](custom-transport-images/customtransportplaying-large.png#lightbox "reproducción de transporte personalizado")
 
 Pero en Android y UWP, el **reproducir** botón tiene un aspecto muy diferente cuando se pausa el vídeo:
 
-[![Transporte personalizado en pausa](custom-transport-images/customtransportpaused-small.png "transporte personalizado en pausa")](custom-transport-images/customtransportpaused-large.png "transporte personalizado en pausa")
+[![Transporte personalizado en pausa](custom-transport-images/customtransportpaused-small.png "transporte personalizado en pausa")](custom-transport-images/customtransportpaused-large.png#lightbox "transporte personalizado en pausa")
 
 En una aplicación de producción, probablemente deseará usar sus propias imágenes de mapa de bits de los botones para lograr uniformidad visual.
 

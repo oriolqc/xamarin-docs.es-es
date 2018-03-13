@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 4e640979305a568649c59f6c75033296153b99de
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 838a11f078d735759eda1d45a082ccbad51e2779
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="touch-in-ios"></a>Entrada táctil de iOS
 
@@ -23,7 +23,7 @@ Controles de `UIKit` son: las subclases de control: por lo que depende de intera
 
 Sin embargo, muchas de las vistas en `UIKit` no tiene pantalla táctil de forma predeterminada. Hay dos maneras de habilitar la interacción táctil de un control. La primera manera consiste en comprobar la casilla habilitado de interacción de usuario en el panel de propiedades del diseñador, iOS como se muestra en la siguiente captura de pantalla:
 
- [ ![](touch-in-ios-images/image1.png "Active la casilla habilitado de interacción de usuario en el panel de propiedades del Diseñador de iOS")](touch-in-ios-images/image1.png)
+ [![](touch-in-ios-images/image1.png "Active la casilla habilitado de interacción de usuario en el panel de propiedades del Diseñador de iOS")](touch-in-ios-images/image1.png#lightbox)
 
 También se puede usar un controlador para establecer el `UserInteractionEnabled` propiedad en true en un `UIView` clase. Esto es necesario si la interfaz de usuario se crea en el código.
 
@@ -81,7 +81,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 
 Multitoque no está habilitado de forma predeterminada en los controles. Multitoque puede habilitarse en el diseñador, iOS como se muestra en la captura de pantalla siguiente:
 
- [ ![](touch-in-ios-images/image2.png "Multitoque habilitado en el Diseñador de iOS")](touch-in-ios-images/image2.png)
+ [![](touch-in-ios-images/image2.png "Multitoque habilitado en el Diseñador de iOS")](touch-in-ios-images/image2.png#lightbox)
 
 También es posible establecer multitoque mediante programación estableciendo la `MultipleTouchEnabled` propiedad tal y como se muestra en la siguiente línea de código:
 

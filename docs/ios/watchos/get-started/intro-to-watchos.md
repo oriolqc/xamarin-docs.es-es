@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 55d692fa92dd08dd9c0887ed10013589afc98ec6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2276b67fc29f2752e4b178168a12e6e980b788d0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-watchos"></a>Introducción a watchOS
 
@@ -29,11 +29,11 @@ Una solución de aplicación watchOS tiene 3 proyectos:
 
 En las aplicaciones watchOS 1, se ejecuta el código de la extensión en el iPhone: el Apple Watch es efectivamente una pantalla externa. aplicaciones de watchOS 2 y 3 se ejecutan por completo en el de Apple Watch. En el diagrama siguiente se muestra esta diferencia:
 
-[ ![](intro-to-watchos-images/arch-sml.png "En este diagrama se muestra la diferencia entre watchOS 1 y watchOS 2 (y versiones posteriores)")](intro-to-watchos-images/arch.png)
+[ ![](intro-to-watchos-images/arch-sml.png "En este diagrama se muestra la diferencia entre watchOS 1 y watchOS 2 (y versiones posteriores)")](intro-to-watchos-images/arch.png#lightbox)
 
 Independientemente de qué versión de watchOS se destina, en Visual Studio para panel del Mac de solución de una solución completa tendrá un aspecto similar al siguiente:
 
-[ ![](intro-to-watchos-images/projectstructure-sml.png "El panel de la solución")](intro-to-watchos-images/projectstructure.png)
+[![](intro-to-watchos-images/projectstructure-sml.png "El panel de la solución")](intro-to-watchos-images/projectstructure.png#lightbox)
 
 El *aplicación primaria* en un watchOS solución es una aplicación de iOS regular. Este es el proyecto en la solución que sea visible solo **en el teléfono**. Casos de uso de esta aplicación incluye tutoriales, pantallas administrativas y filtrado, cacheing, etcetera de nivel intermedio. Sin embargo, es posible que el usuario instalar y ejecutar la aplicación o extensión de inspección sin **alguna vez** tener abierta la aplicación primaria, por lo que si necesita la aplicación principal pueden ejecutarse durante la inicialización única o administración, debe programar el reloj / extensión de la aplicación para indicar al usuario que.
 

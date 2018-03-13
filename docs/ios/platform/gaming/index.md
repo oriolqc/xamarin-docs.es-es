@@ -3,16 +3,16 @@ title: Juegos de API de iOS
 description: "Este artículo tratan las nuevas mejoras de juegos proporcionadas por iOS 9 que puede usarse para mejorar su juego Xamarin.iOS gráficos y funciones de audio."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 0E2217F1-FC96-4D0A-ABAB-D40AD8F96502
+ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 6c735c68ee61032d8dfe3a74e6858bc058c6fa47
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d0a66d4cfdb3050c7ad791d24e24d6917a031ee1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="ios-gaming-apis"></a>Juegos de API de iOS
 
@@ -21,7 +21,7 @@ _Este artículo tratan las nuevas mejoras de juegos proporcionadas por iOS 9 que
 Apple ha realizado varias mejoras tecnológicas a la API de juegos en iOS 9 que resulten más fácil implementar gráficos de juegos y audio en una aplicación de Xamarin.iOS.
 Esto incluye la facilidad de desarrollo a través de los marcos de trabajo de alto nivel y el aprovechamiento de la potencia de GPU del dispositivo iOS para mejorar la velocidad y la capacidad de gráficos.
 
-[ ![](images/flocking01.png "Un ejemplo de una aplicación que se ejecuta flocado")](images/flocking01.png)
+[![](images/flocking01.png "Un ejemplo de una aplicación que se ejecuta flocado")](images/flocking01.png#lightbox)
 
 Esto incluye GameplayKit, ReplayKit, E/S de modelo, MetalKit y los sombreadores de rendimiento de sistema operativo junto con características nuevas y mejoradas del sistema operativo, SceneKit y SpriteKit.
 
@@ -56,7 +56,7 @@ Por ejemplo, un enemigo 2D buscar camino a través de un laberinto o un carácte
 
 Tenga en cuenta la asignación siguiente:
 
-[ ![](images/gkpathfindpath.png "Un ejemplo de asignación de pathfinding")](images/gkpathfindpath.png)
+[![](images/gkpathfindpath.png "Un ejemplo de asignación de pathfinding")](images/gkpathfindpath.png#lightbox)
 
 Usar pathfinding este código de C# puede encontrar una manera a través del mapa:
 
@@ -367,7 +367,7 @@ public override void ViewWillLayoutSubviews ()
 
 Cuando se ejecuta, de forma poco animado _"Boids"_ se ésta alrededor de nuestro derivaciones dedo:
 
-[ ![](images/flocking01.png "El poco animado Boids se ésta alrededor de las derivaciones dedo")](images/flocking01.png)
+[![](images/flocking01.png "El poco animado Boids se ésta alrededor de las derivaciones dedo")](images/flocking01.png#lightbox)
 
 ### <a name="other-apple-examples"></a>Otros ejemplos de Apple
 

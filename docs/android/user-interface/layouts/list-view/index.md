@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 70a7abb186c102fb803c0ab6fa38c7b2d8222292
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2d5a83b9f6278406e9b643277357df253f5fd524
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="listview"></a>ListView
 
 _ListView es un componente importante de la interfaz de usuario de las aplicaciones Android. se utiliza en cualquier lugar de listas cortas de opciones de menú para listas largas de contactos o Favoritos de internet. Proporciona una manera sencilla para presentar una lista desplazable de filas que puede estar en formato con un estilo integrado o personalizar ampliamente._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -30,10 +29,9 @@ En primer lugar, presenta un breve tutorial el `ListView` con un ejemplo de cód
 
 
 > [!NOTE]
-> **Tenga en cuenta**: el `RecyclerView` widget es una versión más avanzada y flexible de `ListView`. Dado que `RecyclerView` está diseñado para ser el sucesor `ListView` (y `GridView`), le recomendamos que use `RecyclerView` en lugar de `ListView` para el desarrollo de aplicación nuevo. Para obtener más información, consulte [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md).
+> El `RecyclerView` widget es una versión más avanzada y flexible de `ListView`. Dado que `RecyclerView` está diseñado para ser el sucesor `ListView` (y `GridView`), le recomendamos que use `RecyclerView` en lugar de `ListView` para el desarrollo de aplicación nuevo. Para obtener más información, consulte [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md).
 
 
-<a name="tutorial" />
 
 ## <a name="listview-tutorial"></a>Tutorial de ListView
 
@@ -147,7 +145,7 @@ Se trata de la matriz de cadenas que se colocarán en el [ `ListView` ](https://
 
 Ejecute la aplicación. Puede desplazarse por la lista o escriba para filtrarlos y luego haga clic en un elemento para ver un mensaje. Verá algo parecido a esto:
 
-[ ![Captura de pantalla de ejemplo de ListView con nombres de país](images/helloviews6.png)](images/helloviews6.png)
+[![Captura de pantalla de ejemplo de ListView con nombres de país](images/helloviews6.png)](images/helloviews6.png#lightbox)
 
 Tenga en cuenta que el uso de una matriz de cadenas codificadas de forma rígida no es la mejor práctica de diseño. Uno se utiliza en este tutorial para simplificar, para mostrar el [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/) widget. Lo más recomendable es hacer referencia a una matriz de cadenas que se define un recurso externo, por ejemplo, como con un `string-array` recursos en el proyecto **Resources/Values/Strings.xml** archivo. Por ejemplo:
 
@@ -173,7 +171,6 @@ string[] countries = Resources.GetStringArray (Resource.Array.countries_array);
 ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countries);
 ```
 
-<a name="going_further" />
 
 ## <a name="going-further-with-listview"></a>Si continúa con el control ListView
 
@@ -193,14 +190,13 @@ Los temas restantes (vinculados a continuación) echar un vistazo completa de tr
 
 La discusión (ha dividido en seis partes) comienza con una visión general de la `ListView` propia clase antes de introducir progresivamente más complejos ejemplos de cómo se usa.
 
--   [Funcionalidad y los elementos de ListView](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
+-   [Elementos y funcionalidad de ListView](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
 -   [Rellenar un control ListView con datos](~/android/user-interface/layouts/list-view/populating.md)
--   [Personalizar la apariencia de un control ListView](~/android/user-interface/layouts/list-view/customizing-appearance.md)
--   [Usar CursorAdapters](~/android/user-interface/layouts/list-view/cursor-adapters.md)
--   [Uso de un ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
--   [ListView y el ciclo de vida de actividad](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
+-   [Personalización de la apariencia de ListView](~/android/user-interface/layouts/list-view/customizing-appearance.md)
+-   [Uso de CursorAdapters](~/android/user-interface/layouts/list-view/cursor-adapters.md)
+-   [Uso de ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
+-   [ListView y ciclo de vida de actividad](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
-<a name="summary" />
 
 ## <a name="summary"></a>Resumen
 

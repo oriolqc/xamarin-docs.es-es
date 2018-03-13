@@ -5,18 +5,25 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 1fe290983bf7b130dee6f1a1878a32dce3efc4c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0ede9bbb47f398a82d6eae5d827122f469ad6ea4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layouts"></a>Diseños de
 
-Xamarin.Forms tiene varios diseños y características para organizar el contenido en pantalla. A continuación, se describe cada control de diseño, así como información detallada sobre cómo controlar los cambios de orientación de pantalla:
+Xamarin.Forms tiene varios diseños y características para organizar el contenido en pantalla. 
+
+> [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
+
+**Diseños de Xamarin.Forms, por [Universidad de Xamarin](https://university.xamarin.com/)**
+
+A continuación, se describe cada control de diseño, así como información detallada sobre cómo controlar los cambios de orientación de pantalla:
 
 * **[StackLayout](stack-layout.md)**  &ndash; usada para organizar vistas linealmente, horizontal o verticalmente. Vistas en un StackLayout pueden ser alineadas en el centro, izquierdo o derecho del diseño.
 * **[AbsoluteLayout](absolute-layout.md)**  &ndash; permiten organizar vistas mediante el establecimiento de coordenadas y cambio de tamaño en cuanto a los valores absolutos o proporciones. AbsoluteLayout puede utilizarse para vistas de las capas, así como fijarlos a la izquierda, derecha o centrado.
@@ -35,7 +42,7 @@ Controles de plataforma también pueden usarse directamente en los diseños de X
 
 El gráfico siguiente muestra los controles de diseño:
 
-[ ![](images/layouts-sml.png "Diseños de Xamarin.Forms")](images/layouts.png "diseños de Xamarin.Forms")
+[![](images/layouts-sml.png "Diseños de Xamarin.Forms")](images/layouts.png#lightbox "diseños de Xamarin.Forms")
 
 ## <a name="choosing-the-right-layout"></a>Elegir el diseño de la derecha
 
@@ -156,7 +163,7 @@ Tenga en cuenta los siguientes aspectos del código anterior:
 
 El [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) estructura puede utilizarse para definir la alineación y expansión de una vista, en relación con su elemento primario.
 
-### <a name="margin-and-paddingmargin-and-paddingmd"></a>[Márgenes y relleno](margin-and-padding.md)
+### <a name="margin-and-paddingmargin-and-paddingmd"></a>[Margen y relleno](margin-and-padding.md)
 
 El [ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) y [ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) propiedades controlan el comportamiento de diseño cuando se representa un elemento en la interfaz de usuario.
 
@@ -176,7 +183,7 @@ Xamarin.Forms y sus diseños integrados son capaces de administrar los cambios e
 
 iOS, Android y Windows todos admiten tamaños de pantalla más grandes en las plataformas de dispositivos de tableta (así como equipos portátiles y de escritorio de Windows). Xamarin.Forms le permite optimizar la aplicación para pantallas más grandes para detectar el tipo de dispositivo y ajusta el diseño de página o usar una página totalmente diferente por completo para pantallas más grandes.
 
-### <a name="creating-a-custom-layoutcustommd"></a>[Crear un diseño personalizado](custom.md)
+### <a name="creating-a-custom-layoutcustommd"></a>[Creación de un diseño personalizado](custom.md)
 
 Xamarin.Forms define cuatro clases de diseño - [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), [ `AbsoluteLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/), [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/), y [ `Grid` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), y cada uno de ellos organiza sus elementos secundarios de forma diferente. Sin embargo, a veces su sea necesario para organizar el contenido de la página con un diseño no proporcionada por Xamarin.Forms. En este artículo se explica cómo escribir una clase de diseño personalizado y se muestra un dependientes de la orientación `WrapLayout` clase que sus elementos secundarios se organiza horizontalmente en la página y, a continuación, se ajusta la presentación de los elementos secundarios subsiguientes a filas adicionales.
 

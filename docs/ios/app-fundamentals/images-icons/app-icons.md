@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: 6de57e9523ff336c2e06e39903280db9c9ab95fa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: df9059b0e64b4a05b554f25b5f9d7f6031406633
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-icons"></a>Iconos de aplicación
 
@@ -32,13 +32,13 @@ De la misma manera que una aplicación de Xamarin.iOS puede utilizar los activos
 
 - **Icono de la aplicación** -todas las aplicaciones de iOS deben definir un icono de la aplicación. Éste es el icono que se van a puntear el usuario desde la pantalla principal de iOS para iniciar la aplicación. Además, se usa este icono por centro de juegos, si procede. Ejemplo: 
 
-    [ ![](app-icons-images/000.png "Icono de la aplicación")](app-icons-images/000-full.png)
+    [![](app-icons-images/000.png "Icono de la aplicación")](app-icons-images/000-full.png#lightbox)
 - **Noticias destacadas icono** : cada vez que el usuario escribe el nombre de una aplicación en una búsqueda de Spotlight, se muestra este icono. Ejemplo: 
 
-    [ ![](app-icons-images/000a.png "Icono de noticias destacadas")](app-icons-images/000a-full.png)
+    [![](app-icons-images/000a.png "Icono de noticias destacadas")](app-icons-images/000a-full.png#lightbox)
 - **Icono de configuración** : si el usuario escribe la **configuración** aplicación en su dispositivo iOS, este icono se mostrará al final de la **configuración** lista para la aplicación. Ejemplo: 
 
-    [ ![](app-icons-images/000b.png "Icono de configuración")](app-icons-images/000b-full.png)
+    [![](app-icons-images/000b.png "Icono de configuración")](app-icons-images/000b-full.png#lightbox)
 
 Se necesitarán los siguientes tamaños de activos de imagen y las soluciones para admitir todos los tipos de icono requiere una aplicación de Xamarin.iOS destinatarios iOS 5 a través de iOS 9 (o posterior):
 
@@ -251,5 +251,5 @@ Para especificar las ilustraciones de iTunes, haga lo siguiente:
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Trabajar con imágenes (ejemplo)](https://developer.xamarin.com/samples/WorkingWithImages/)
-- [Hola, iPhone](~/ios/get-started/hello-ios/index.md)
+- [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
 - [Icono personalizado y directrices para la creación de imagen](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))

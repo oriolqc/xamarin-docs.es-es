@@ -7,21 +7,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 013db64add615e94ef3494f14bc82fc17ec2dca1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a8a9735845139da700959caf3639defa6594f307
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="gridlayout"></a>GridLayout
 
 El `GridLayout` es una nueva `ViewGroup` subclase que admite diseñar vistas en una cuadrícula 2D, similar a una tabla HTML, tal y como se muestra a continuación:
 
- [ ![Recorta GridLayout mostrar cuatro celdas](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png)
+ [![Recorta GridLayout mostrar cuatro celdas](grid-layout-images/21-gridlayoutcropped.png)](grid-layout-images/21-gridlayoutcropped.png#lightbox)
 
  `GridLayout` funciona con una jerarquía de la vista sin formato, con vistas secundarias establecido sus ubicaciones en la cuadrícula especificando las filas y columnas deben ser en. De esta manera, el *GridLayout* puede colocar vistas en la cuadrícula sin necesidad de que todas las vistas intermedias proporcionan una estructura de tabla, tal como se muestra en las filas de tabla utilizadas en el TableLayout. Al mantener una jerarquía plana, *GridLayout* es capaz de diseño más rápidamente sus vistas secundarias. ¡Eche un vistazo a un ejemplo para ilustrar este concepto realmente significado en el código.
 
-<a name="Creating_a_Grid_Layout" />
 
 ## <a name="creating-a-grid-layout"></a>Crear un diseño de cuadrícula
 
@@ -51,13 +50,12 @@ El siguiente código XML agrega varias `TextView` controles a un *GridLayout*.
 
 El diseño ajustará los tamaños de fila y columna, para que las celdas pueden ajustar su contenido, como se muestra en el diagrama siguiente:
 
- [ ![Diagrama de diseño que muestra dos celdas de la izquierda inferior de la derecha](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png)
+ [![Diagrama de diseño que muestra dos celdas de la izquierda inferior de la derecha](grid-layout-images/gridlayout-cells.png)](grid-layout-images/gridlayout-cells.png#lightbox)
 
 El resultado es la interfaz de usuario siguientes cuando se ejecuta en una aplicación:
 
- [ ![Aplicación de captura de pantalla de GridLayoutDemo mostrar cuatro celdas](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png)
+ [![Aplicación de captura de pantalla de GridLayoutDemo mostrar cuatro celdas](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
- <a name="Specifying_Orientation" />
 
 
 ## <a name="specifying-orientation"></a>Especifica la orientación
@@ -76,13 +74,12 @@ Tenga en cuenta en el XML anterior, cada uno de ellos `TextView` no especifica u
 
 Ahora, la `GridLayout` colocará las celdas de arriba a abajo, en cada columna, en lugar de izquierda a derecha, tal y como se muestra a continuación:
 
- [ ![Diagrama que ilustra cómo se colocan las celdas en orientación vertical](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png)
+ [![Diagrama que ilustra cómo se colocan las celdas en orientación vertical](grid-layout-images/gridlayoutorientation.png)](grid-layout-images/gridlayoutorientation.png#lightbox)
 
 El resultado es la siguiente interfaz de usuario en tiempo de ejecución:
 
- [ ![Captura de pantalla de GridLayoutDemo con celdas que se coloca en orientación vertical](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png)
+ [![Captura de pantalla de GridLayoutDemo con celdas que se coloca en orientación vertical](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
 
- <a name="Specifying_Explicit_Position" />
 
 
 ### <a name="specifying-explicit-position"></a>Especifica la posición explícitos
@@ -119,7 +116,6 @@ Si desea controlar de manera explícita las posiciones de las vistas secundarias
 </GridLayout>
 ```
 
- <a name="Specifying_spacing" />
 
 
 ### <a name="specifying-spacing"></a>Especifica el espaciado
@@ -176,11 +172,10 @@ Por ejemplo, el código XML siguiente agrega una fila adicional a la `GridLayout
 
 Este código XML crea un espaciado en el `GridLayout` tal y como se muestra a continuación:
 
- [ ![Captura de pantalla de GridLayoutDemo que ilustra las celdas más grandes con espaciado](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png)
+ [![Captura de pantalla de GridLayoutDemo que ilustra las celdas más grandes con espaciado](grid-layout-images/03-gridlayout.png)](grid-layout-images/03-gridlayout.png#lightbox)
 
 La ventaja de utilizar el nuevo `Space` vista es que permite para el espaciado y no requiere que nos establecer atributos en cada vista secundaria.
 
- <a name="Spanning_Columns_and_Rows" />
 
 
 ### <a name="spanning-columns-and-rows"></a>Expansión de columnas y filas
@@ -230,7 +225,7 @@ El `GridLayout` también es compatible con las celdas que abarcan varias columna
 
 Esto dará como resultado de la primera columna de la `GridLayout` se cambian de tamaño para adaptarse al tamaño del botón, tal y como se ve aquí:
 
-[ ![Captura de pantalla de GridLayoutDemo con botón de expansión sólo la primera columna](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png)
+[![Captura de pantalla de GridLayoutDemo con botón de expansión sólo la primera columna](grid-layout-images/04-gridlayout.png)](grid-layout-images/04-gridlayout.png#lightbox)
 
 Para impedir que se ajuste de la primera columna, podemos establecer el botón que abarque dos columnas estableciendo su columnspan similar al siguiente:
 
@@ -245,7 +240,7 @@ Para impedir que se ajuste de la primera columna, podemos establecer el botón q
 
 Esto da como resultado un diseño para la `TextViews` que es similar al diseño tuvimos anteriormente, con el botón que agregó a la parte inferior de la `GridLayout` tal y como se muestra a continuación:
 
- [ ![Captura de pantalla de GridLayoutDemo con botón de expansión de ambas columnas](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png)
+ [![Captura de pantalla de GridLayoutDemo con botón de expansión de ambas columnas](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
 
 
 ## <a name="related-links"></a>Vínculos relacionados

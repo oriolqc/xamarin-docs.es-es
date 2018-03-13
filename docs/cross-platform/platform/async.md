@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 3de0e09b15b704db5e67fbbee6ba9bac86f58557
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4762612075a866581339b198552b8e26c9a1f6fa
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="async-support-overview"></a>Información general sobre la compatibilidad con Async
 
@@ -28,7 +28,7 @@ Para obtener una explicación más completa de las nuevas características asinc
 
 La aplicación de ejemplo realiza una solicitud web asincrónica simple (sin bloquear el subproceso principal), a continuación, actualiza la interfaz de usuario con el html descargado y el número de caracteres.
 
- [ ![](async-images/AsyncAwait_427x368.png "La aplicación de ejemplo realiza una solicitud web asincrónica simple sin bloquear el subproceso principal, a continuación, actualiza la interfaz de usuario con el html descargado y el número de caracteres")](async-images/AsyncAwait.png)
+ [![](async-images/AsyncAwait_427x368.png "La aplicación de ejemplo realiza una solicitud web asincrónica simple sin bloquear el subproceso principal, a continuación, actualiza la interfaz de usuario con el html descargado y el número de caracteres")](async-images/AsyncAwait.png#lightbox)
 
 Acepta el funcionamiento asincrónico de Xamarin se basa en la base de Mono 3.0 y actualiza el perfil de API desde el que se va a una versión preparadas para dispositivos móviles de Silverlight para ser una versión preparadas para dispositivos móviles de .NET 4.5.
 

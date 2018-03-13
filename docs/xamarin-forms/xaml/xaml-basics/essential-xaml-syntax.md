@@ -3,16 +3,16 @@ title: Parte 2. Sintaxis XAML esenciales
 description: "XAML está diseñado principalmente para crear instancias e inicializar objetos. Pero a menudo, se deben establecer propiedades en objetos más complejos que no se puede representar fácilmente como cadenas XML y a veces se deben establecer propiedades definidas por una clase en una clase secundaria. Estas dos necesidades necesitan las características de sintaxis XAML esenciales de elementos de propiedad y propiedades adjuntas."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
+ms.assetid: 4022F1DC-3802-4635-A553-688ABD3F0D5A
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: f99d4b177f5957b2e5f8c22171fe92799af8505a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 77ed7c49a901a877d822c2274263bcb8dbe19ac6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxis XAML esenciales
 
@@ -253,7 +253,7 @@ El `Grid.Row` y `Grid.Column` configuración de 0 no son necesarias pero están 
 
 Este es su aspecto en las tres plataformas:
 
-[ ![](essential-xaml-syntax-images/griddemo.png "Diseño de cuadrícula")](essential-xaml-syntax-images/griddemo-large.png "diseño de cuadrícula")
+[![](essential-xaml-syntax-images/griddemo.png "Diseño de cuadrícula")](essential-xaml-syntax-images/griddemo-large.png#lightbox "diseño de cuadrícula")
 
 Juzgar únicamente a partir de la sintaxis, estos `Grid.Row`, `Grid.Column`, `Grid.RowSpan`, y `Grid.ColumnSpan` atributos aparecen como campos estáticos ni propiedades de `Grid`, pero Curiosamente, `Grid` no definir cualquier elemento con nombre `Row`, `Column`, `RowSpan`, o `ColumnSpan`.
 
@@ -310,7 +310,7 @@ El `AbsoluteLayout` clase define dos propiedades asociadas con el nombre `Layout
 
 Y aquí es:
 
-[ ![](essential-xaml-syntax-images/absolutedemo-large.png "Diseño absoluto")](essential-xaml-syntax-images/absolutedemo-large.png "diseño absoluto")
+[![](essential-xaml-syntax-images/absolutedemo-large.png "Diseño absoluto")](essential-xaml-syntax-images/absolutedemo-large.png#lightbox "diseño absoluto")
 
 Algo parecido a esto, podría preguntarse los conocimientos del uso de XAML. De hecho, la repetición y la regularidad de la `LayoutBounds` rectángulo sugiere que se podría generarse mejor en código.
 

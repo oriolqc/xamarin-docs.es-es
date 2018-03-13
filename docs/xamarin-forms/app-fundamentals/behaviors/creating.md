@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: c70e4c9ec49b48c3bf6ecc6a4944d992f8ae930a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 160dd4b2326529abbb456e77391f0f73ee374f50
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-behaviors"></a>Comportamientos de Xamarin.Forms
 
@@ -85,7 +85,7 @@ public class NumericValidationBehavior : Behavior<Entry>
 El `NumericValidationBehavior` se deriva de la [ `Behavior<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/) (clase), donde `T` es un [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/). El [ `OnAttachedTo` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Behavior%3CT%3E.OnAttachedTo/p/Xamarin.Forms.BindableObject/) método registra un controlador de eventos para el [ `TextChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Entry.TextChanged/) evento, con el [ `OnDetachingFrom` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Behavior%3CT%3E.OnDetachingFrom/p/Xamarin.Forms.BindableObject/) método Anular registro el `TextChanged`pérdidas de evento con el fin de evitar que la memoria. Proporciona la funcionalidad básica del comportamiento del `OnEntryTextChanged` método, que analiza el valor especificado por el usuario en el `Entry`y establece la [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.TextColor/) propiedad a color rojo si el valor no es un `double`.
 
 > [!NOTE]
-> **Tenga en cuenta**: Xamarin.Forms no establece la `BindingContext` de un comportamiento, porque pueden compartirse y aplicar a diversos controles mediante los estilos de comportamientos.
+> Xamarin.Forms no establece la `BindingContext` de un comportamiento, porque pueden compartirse y aplicar a diversos controles mediante los estilos de comportamientos.
 
 ## <a name="consuming-a-xamarinforms-behavior"></a>Consumir un comportamiento de Xamarin.Forms
 
@@ -108,10 +108,10 @@ entry.Behaviors.Add (new NumericValidationBehavior ());
 
 En tiempo de ejecución el comportamiento responderá a la interacción con el control, según la implementación de comportamiento. Las capturas de pantalla siguientes muestran el comportamiento que responde a las entradas no válidas:
 
-[ ![](creating-images/screenshots-sml.png "Ejemplo de aplicación con el comportamiento de Xamarin.Forms")](creating-images/screenshots.png "aplicación con el comportamiento de Xamarin.Forms de ejemplo")
+[![](creating-images/screenshots-sml.png "Ejemplo de aplicación con el comportamiento de Xamarin.Forms")](creating-images/screenshots.png#lightbox "aplicación con el comportamiento de Xamarin.Forms de ejemplo")
 
 > [!NOTE]
-> **Tenga en cuenta**: comportamientos están escritos para un tipo de control (o una superclase que puede aplicar a muchos controles), y solo se debe agregar a un control compatible. Si intenta adjuntar un comportamiento a un control incompatible producirá una excepción.
+> Comportamientos están escritos para un tipo de control (o una superclase que puede aplicar a muchos controles), y solo se debe agregar a un control compatible. Si intenta adjuntar un comportamiento a un control incompatible producirá una excepción.
 
 ### <a name="consuming-a-xamarinforms-behavior-with-a-style"></a>Consumir un comportamiento de Xamarin.Forms con un estilo
 
@@ -181,7 +181,7 @@ El [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) pued
 Para obtener más información sobre los estilos, consulte [estilos](~/xamarin-forms/user-interface/styles/index.md).
 
 > [!NOTE]
-> **Tenga en cuenta**: aunque puede agregar propiedades enlazables a un comportamiento que se establece o se consultan en XAML, si creas comportamientos que tienen el estado no se comparten entre los controles en un `Style` en un `ResourceDictionary`.
+> Si bien puede agregar propiedades enlazables a un comportamiento que se establece o se consultan en XAML, si creas comportamientos que tienen el estado no se comparten entre los controles en un `Style` en un `ResourceDictionary`.
 
 ### <a name="removing-a-behavior-from-a-control"></a>Quitar un comportamiento de un Control
 

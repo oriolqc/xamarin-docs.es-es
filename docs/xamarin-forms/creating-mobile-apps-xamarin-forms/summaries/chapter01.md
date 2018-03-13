@@ -3,14 +3,15 @@ title: "Resumen del capítulo 1. ¿Cómo encaja Xamarin.Forms?"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c0f3313fa3c4d1075be7deeb871e303006c533e8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b60a45cc998743d34d5cadb7750f35e7b965579
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Resumen del capítulo 1. ¿Cómo encaja Xamarin.Forms?
 
@@ -44,7 +45,7 @@ Las plantillas de solución de Xamarin.Forms actuales no incluyen plantillas de 
 
 La mayor parte de un programa de Xamarin.Forms existe en una PCL o SAP. Cada una de las plataformas consta de un código auxiliar de pequeña aplicación que llama en la PCL. Las APIs Xamarin.Forms se asignan a los controles nativos en cada plataforma, para que cada plataforma mantiene su apariencia y funcionamiento característico:
 
-[![Captura de pantalla triple de objetos visuales de la plataforma de uso compartido](images/ch01fg03-small.png "Xamarin.Forms controles en cada plataforma")](images/ch01fg03-large.png "Xamarin.Forms controles en cada plataforma")
+[![Captura de pantalla triple de objetos visuales de la plataforma de uso compartido](images/ch01fg03-small.png "Xamarin.Forms controles en cada plataforma")](images/ch01fg03-large.png#lightbox "Xamarin.Forms controles en cada plataforma")
 
 Las capturas de pantalla de izquierda a derecha muestran un iPhone, un teléfono Android y un teléfono de Windows 10 Mobile. En cada pantalla, la página contiene un Xamarin.Forms [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) para mostrar texto, un [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) para iniciar acciones, un [ `Switch` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) para Si se elige un valor activado/desactivado y un [ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) para especificar un valor dentro de un intervalo continuo. Los cuatro de esas vistas son elementos secundarios de un [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) en un [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/).
 

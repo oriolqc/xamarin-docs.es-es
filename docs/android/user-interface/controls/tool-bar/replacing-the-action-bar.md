@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 91d5612991c2297418cf7003c499c1a1bbfc7558
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e71c6ea816b8b732d21148db32fd9395732dd4c0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="replacing-the-action-bar"></a>Reemplazar la barra de acciones
 
-<a name="overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -36,16 +35,14 @@ Para reemplazar la barra de acción predeterminada de una aplicación con un `To
 Las siguientes secciones explican con detalle este proceso. Se crea una aplicación sencilla y se reemplaza la barra de acción con un personalizada `Toolbar`. 
 
 
-<a name="start_project" />
 
 ## <a name="start-an-app-project"></a>Iniciar un proyecto de aplicación
 
 Crear un nuevo proyecto Android denominado **ToolbarFun** (consulte [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md) para obtener más información acerca de cómo crear un nuevo proyecto de Android). Después de crea este proyecto, establecer los niveles de API de Android de destino y los valores mínimo **Android 5.0 (API nivel 21 - círculo)**. Para obtener más información acerca de los niveles de versión de Android de configuración, consulte [niveles de API de Android descripción](~/android/app-fundamentals/android-api-levels.md). Cuando se compila y se ejecute la aplicación, tal como se muestra en esta captura de pantalla muestra la barra de acción predeterminada: 
 
-[![Captura de pantalla de la barra de acción predeterminada](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png)
+[![Captura de pantalla de la barra de acción predeterminada](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
 
 
-<a name="custom_theme" />
 
 ## <a name="create-a-custom-theme"></a>Crea un tema personalizado
 
@@ -89,7 +86,6 @@ Editar **Properties/AndroidManifest.xml** y agregue el siguiente `android:theme`
 Para obtener más información sobre cómo aplicar un tema personalizado a una aplicación, consulte [temas personalizados utilizando](~/android/user-interface/material-theme.md#customtheme). 
 
 
-<a name="toolbar_layout" />
 
 ## <a name="define-a-toolbar-layout"></a>Definir un diseño de la barra de herramientas
 
@@ -127,7 +123,6 @@ android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
 Esta configuración se utiliza para que los elementos de menú contrastar con el color de fondo más oscuro.
 
 
-<a name="include_layout" />
 
 ## <a name="include-the-toolbar-layout"></a>Incluye el diseño de la barra de herramientas
 
@@ -153,7 +148,6 @@ Editar el archivo de diseño **Resources/layout/Main.axml** y reemplazar su cont
 Este diseño incluye la `Toolbar` definido en **toolbar.xml** y utiliza un `RelativeLayout` para especificar que el `Toolbar` debe ponerse en la parte superior de la interfaz de usuario (encima del botón). 
 
 
-<a name="activate_toolbar" />
 
 ## <a name="find-and-activate-the-toolbar"></a>Buscar y activar la barra de herramientas
 
@@ -173,12 +167,11 @@ ActionBar.Title = "My Toolbar";
 
 Este código encuentra la `Toolbar` y llamadas `SetActionBar` para que la `Toolbar` vaya a realizar en las características predeterminadas de la barra de acción. El título de la barra de herramientas se cambia a **mi barra de herramientas**. Tal como se muestra en este ejemplo de código, el `ToolBar` puede hacer referencia directamente como una barra de acción. Compilar y ejecutar esta aplicación &ndash; personalizada `Toolbar` se muestra en lugar de la barra de acción predeterminada: 
 
-[![Captura de pantalla de la barra de herramientas personalizada con el esquema de color verde](replacing-the-action-bar-images/02-after-sml.png)](replacing-the-action-bar-images/02-after.png)
+[![Captura de pantalla de la barra de herramientas personalizada con el esquema de color verde](replacing-the-action-bar-images/02-after-sml.png)](replacing-the-action-bar-images/02-after.png#lightbox)
 
 Tenga en cuenta que la `Toolbar` estilo independientemente de la `Theme.Material.Light.DarkActionBar` tema que se aplica al resto de la aplicación. 
 
 
-<a name="main_menus" />
  
 ## <a name="add-menu-items"></a>Agregar elementos de menú 
 
@@ -197,13 +190,11 @@ Para agregar los menús de la `Toolbar`:
 Las secciones siguientes muestran el proceso detalladamente agregando **editar** y **guardar** elementos de menú a la personalizada `Toolbar`. 
 
 
-<a name="menu_icons" />
 
 ### <a name="install-menu-icons"></a>Instalar iconos de menú
 
 Continuar con la `ToolbarFun` aplicación de ejemplo, agregar iconos de menú para el proyecto de aplicación. Descargar [icons.zip de la barra de herramientas](https://github.com/xamarin/monodroid-samples/blob/master/Supportv7/AppCompat/Toolbar/Resources/toolbar-icons.zip?raw=true) y descomprímalo. Copie el contenido de la *asignación MIP -* carpetas al proyecto *asignación MIP -* carpetas bajo **ToolbarFun/recursos** e incluya cada archivo de icono agregada en el proyecto.
 
-<a name="menu_resource" />
 
 ### <a name="define-a-menu-resource"></a>Definir un recurso de menú
 
@@ -239,7 +230,6 @@ Este código XML crea tres elementos de menú:
 
 El `showAsAction` atributos de la **editar** y **guardar** elementos de menú se establecen en `ifRoom` &ndash; esta configuración hace que estos elementos de menú que aparecen en la `Toolbar` si no existe espacio suficiente para que se muestren. El **preferencias** conjuntos de elementos de menú `showAsAction` a `never` &ndash; Esto hace que la **preferencias** menú aparezca en el *desbordamiento* menú (tres puntos verticales). 
 
-<a name="on_create_options_menu" />
 
 ### <a name="implement-oncreateoptionsmenu"></a>Implementar OnCreateOptionsMenu
 
@@ -256,7 +246,6 @@ public override bool OnCreateOptionsMenu(IMenu menu)
 Llamadas Android el `OnCreateOptionsMenu` método para que la aplicación puede especificar el recurso de menú para una actividad. En este método, el **top_menus.xml** recursos se aumenten en el pasado `menu`. Este código hace que el nuevo **editar**, **guardar**, y **preferencias** elementos de menú que aparecen en la `Toolbar`. 
 
 
-<a name="on_options_item_selected" />
 
 ### <a name="implement-onoptionsitemselected"></a>Implementar OnOptionsItemSelected
 
@@ -275,15 +264,15 @@ Cuando un usuario puntee en un elemento de menú, Android llama el `OnOptionsIte
 
 Compile y ejecute `ToolbarFun` para ver los nuevos elementos de menú en la barra de herramientas. La `Toolbar` muestra ahora tres iconos de menú tal como se muestra en esta captura de pantalla: 
 
-[![Diagrama que muestra ubicaciones de editar, guardar y elementos de menú de desbordamiento](replacing-the-action-bar-images/04-menu-items-sml.png)](replacing-the-action-bar-images/04-menu-items.png)
+[![Diagrama que muestra ubicaciones de editar, guardar y elementos de menú de desbordamiento](replacing-the-action-bar-images/04-menu-items-sml.png)](replacing-the-action-bar-images/04-menu-items.png#lightbox)
 
 Cuando un usuario derivaciones el **editar** elemento de menú, una notificación del sistema se muestra para indicar que el `OnOptionsItemSelected` se llamó el método: 
 
-[![Captura de pantalla de notificaciones del sistema muestra al que se derivan editar elementos](replacing-the-action-bar-images/05-toast-displayed-sml.png)](replacing-the-action-bar-images/05-toast-displayed.png)
+[![Captura de pantalla de notificaciones del sistema muestra al que se derivan editar elementos](replacing-the-action-bar-images/05-toast-displayed-sml.png)](replacing-the-action-bar-images/05-toast-displayed.png#lightbox)
 
 Cuando un usuario puntee en el menú de desbordamiento, el **preferencias** se muestra el elemento de menú. Normalmente, las acciones de menos común deben colocarse en el menú de desbordamiento &ndash; este ejemplo utiliza el menú de desbordamiento de **preferencias** porque no se utiliza con tanta frecuencia como **editar** y  **Guardar**: 
 
-[![Elemento de menú de captura de pantalla de preferencias que aparece en el menú de desbordamiento](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png)
+[![Elemento de menú de captura de pantalla de preferencias que aparece en el menú de desbordamiento](replacing-the-action-bar-images/06-preferences-sml.png)](replacing-the-action-bar-images/06-preferences.png#lightbox)
 
 Para obtener más información acerca de los menús de Android, consulte el desarrollador Android [menús](https://developer.android.com/guide/topics/ui/menus.html) tema. 
  

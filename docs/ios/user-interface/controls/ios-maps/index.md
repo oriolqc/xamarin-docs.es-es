@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1665168344a1e1da4f5b07909a8119d77ef2583a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 540a459be24296c8446c2136773ddde59f9d4dd7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="maps"></a>Asignaciones
 
@@ -234,6 +234,8 @@ Para llevar a cabo una búsqueda local, una aplicación debe seguir estos pasos:
 
 
 La propia API de búsqueda local proporciona ninguna interfaz de usuario. Incluso que no requiere una asignación que se usará. Sin embargo, para hacer un uso práctico de búsqueda local, una aplicación debe proporcionar una manera de especificar una consulta de búsqueda y mostrar los resultados. Además, puesto que los resultados contendrá los datos de ubicación, hará que a menudo sentido para mostrarlos en un mapa.
+
+<a name="Adding_a_Local_Search_UI"/>
 
 ### <a name="adding-a-local-search-ui"></a>Agregar una interfaz de usuario de búsqueda Local
 

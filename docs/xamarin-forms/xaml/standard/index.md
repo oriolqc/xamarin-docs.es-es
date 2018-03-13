@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: 3214a76ee3f976f5dd2afb28edde07100db5a7a1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e53df69fdfd5b5c1fc98b667d4b75d06c16c35dc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xaml-standard-preview"></a>Estándar XAML (versión preliminar)
 
@@ -71,10 +71,10 @@ El XAML siguiente muestra algunos controles estándar de XAML que se va a usar e
 ```
 
 > [!NOTE]
-> **Nota:** que requieren el xmlns `a:` prefijo en los controles estándar de XAML es una limitación de la vista previa actual.
+> Requerir la xmlns `a:` prefijo en los controles estándar de XAML es una limitación de la vista previa actual.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [NuGet de vista previa](https://aka.ms/xf-xamlstandard-nuget)
-- [Referencia de controles](controls.md)
+- [Controls Reference](controls.md) (Referencia de controles)

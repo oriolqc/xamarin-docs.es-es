@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 004f7c815a1629310ba4c0f4c6f4219581a12366
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb3a2a9e60bda2a99a719bf75d23c29d42a94bdb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-a-watch-face"></a>Creación de una cara de inspección
 
@@ -22,11 +22,11 @@ _Esta guía explica cómo implementar un servicio de cara de inspección persona
 
 En este tutorial, se crea un servicio de cara de inspección básica para ilustrar las operaciones básicas de creación de una imagen personalizada de Android desgaste inspección. El servicio de cara de inspección inicial muestra una simple inspección digital que muestra la hora actual en horas y minutos: 
 
-[![Pantalla digital watch](creating-a-watchface-images/01-initial-face.png "captura de pantalla de ejemplo de la pantalla inicial watch digital")](creating-a-watchface-images/01-initial-face.png)
+[![Pantalla digital watch](creating-a-watchface-images/01-initial-face.png "captura de pantalla de ejemplo de la pantalla inicial watch digital")](creating-a-watchface-images/01-initial-face.png#lightbox)
 
 Después de esta pantalla del reloj digital ha sido desarrollado y probado, se agregará más código actualizar a una más sofisticado pantalla del reloj analógico con tres manos: 
 
-[ ![Pantalla del reloj analógico](creating-a-watchface-images/02-example-watchface.png "captura de pantalla de ejemplo de la pantalla del reloj analógico final")](creating-a-watchface-images/02-example-watchface.png)
+[![Pantalla del reloj analógico](creating-a-watchface-images/02-example-watchface.png "captura de pantalla de ejemplo de la pantalla del reloj analógico final")](creating-a-watchface-images/02-example-watchface.png#lightbox)
 
 Ver los servicios de cara son agrupados y se instala como parte de una aplicación de uso. En los ejemplos siguientes, `MainActivity` contiene nada más que el código de la plantilla de aplicación de uso para que el servicio de cara de inspección puede empaquetar e implementar a la observación inteligente como parte de la aplicación. De hecho, esta aplicación servirá únicamente como vehículo para obtener el servicio de cara de inspección cargado en el dispositivo de uso (o el emulador) para depurar y probar. 
 
@@ -47,11 +47,11 @@ Crear un nuevo proyecto de Android desgaste denominado **WatchFace** (para obten
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Cuadro de diálogo nuevo proyecto](creating-a-watchface-images/03-wear-project-vs-sml.png "Seleccionar aplicación usan en el cuadro de diálogo nuevo proyecto")](creating-a-watchface-images/03-wear-project-vs.png)
+[![Cuadro de diálogo nuevo proyecto](creating-a-watchface-images/03-wear-project-vs-sml.png "Seleccionar aplicación usan en el cuadro de diálogo nuevo proyecto")](creating-a-watchface-images/03-wear-project-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Cuadro de diálogo nuevo proyecto](creating-a-watchface-images/03-wear-project-xs-sml.png "Seleccionar aplicación usan en el cuadro de diálogo nuevo proyecto")](creating-a-watchface-images/03-wear-project-xs.png)
+[![Cuadro de diálogo nuevo proyecto](creating-a-watchface-images/03-wear-project-xs-sml.png "Seleccionar aplicación usan en el cuadro de diálogo nuevo proyecto")](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
 
 -----
 
@@ -60,11 +60,11 @@ Establece el nombre del paquete en `com.xamarin.watchface`:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Valor del nombre del paquete](creating-a-watchface-images/04-package-name-vs.png "establece el nombre del paquete en com.xamarin.watchface")](creating-a-watchface-images/04-package-name-vs.png)
+[![Valor del nombre del paquete](creating-a-watchface-images/04-package-name-vs.png "establece el nombre del paquete en com.xamarin.watchface")](creating-a-watchface-images/04-package-name-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Valor del nombre del paquete](creating-a-watchface-images/04-package-name-xs.png "establece el nombre del paquete en com.xamarin.watchface")](creating-a-watchface-images/04-package-name-xs.png)
+[![Valor del nombre del paquete](creating-a-watchface-images/04-package-name-xs.png "establece el nombre del paquete en com.xamarin.watchface")](creating-a-watchface-images/04-package-name-xs.png#lightbox)
 
 -----
 
@@ -72,13 +72,13 @@ Establece el nombre del paquete en `com.xamarin.watchface`:
 
 Además, desplácese hacia abajo y habilite la **INTERNET** y **WAKE_LOCK** permisos: 
 
-[ ![Los permisos necesarios](creating-a-watchface-images/05-required-permissions-vs.png "permisos de INTERNET habilitar y WAKE_LOCK")](creating-a-watchface-images/05-required-permissions-vs.png)
+[![Los permisos necesarios](creating-a-watchface-images/05-required-permissions-vs.png "permisos de INTERNET habilitar y WAKE_LOCK")](creating-a-watchface-images/05-required-permissions-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Establezca la versión mínima Android en **Android 5.1 (API nivel 22)**. Además, habilite la **Internet** y **WakeLock** permisos:
 
-[ ![Los permisos necesarios](creating-a-watchface-images/05-required-permissions-xs.png "permisos de Internet habilitar y WakeLock")](creating-a-watchface-images/05-required-permissions-xs.png)
+[![Los permisos necesarios](creating-a-watchface-images/05-required-permissions-xs.png "permisos de Internet habilitar y WakeLock")](creating-a-watchface-images/05-required-permissions-xs.png#lightbox)
 
 -----
 
@@ -91,24 +91,24 @@ A continuación, descargar [preview.png](creating-a-watchface-images/preview.png
 
 Iniciar el Administrador de paquetes de NuGet (en Visual Studio, haga clic en **referencias** en el **el Explorador de soluciones** y seleccione **administrar paquetes de NuGet...** ). Actualice el proyecto a la versión estable más reciente de **Xamarin.Android.Wear**: 
 
-[ ![Agregar administrador de paquetes de NuGet](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "agregar el paquete Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-vs.png)
+[![Agregar administrador de paquetes de NuGet](creating-a-watchface-images/06-add-wear-pkg-vs-sml.png "agregar el paquete Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-vs.png#lightbox)
 
 A continuación, si **Xamarin.Android.Support.v13** está instalado, desinstálelo:
 
-[ ![Quitar Administrador de paquetes de NuGet](creating-a-watchface-images/07-uninstall-v13-sml.png "Xamarin.Support.v13 quitar")](creating-a-watchface-images/07-uninstall-v13.png)
+[![Quitar Administrador de paquetes de NuGet](creating-a-watchface-images/07-uninstall-v13-sml.png "Xamarin.Support.v13 quitar")](creating-a-watchface-images/07-uninstall-v13.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Iniciar el Administrador de paquetes de NuGet (en Visual Studio para Mac, haga clic en **paquetes** en el **panel de soluciones** y seleccione **agregar paquetes** ). Actualice el proyecto a la versión estable más reciente de **Xamarin.Android.Wear**: 
 
-[ ![Agregar administrador de paquetes de NuGet](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "agregar el paquete Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-xs.png)
+[![Agregar administrador de paquetes de NuGet](creating-a-watchface-images/06-add-wear-pkg-xs-sml.png "agregar el paquete Xamarin.Android.Wear")](creating-a-watchface-images/06-add-wear-pkg-xs.png#lightbox)
 
 -----
 
 
 Compilar y ejecutar la aplicación en un emulador o dispositivo de desgaste (para obtener más información acerca de cómo hacerlo, consulte la [Introducción](~/android/wear/get-started/index.md) guía). Debería ver la siguiente pantalla de aplicación en el dispositivo de uso:
 
-[ ![Captura de pantalla de aplicación](creating-a-watchface-images/08-app-screen.png "pantalla de la aplicación en el dispositivo de uso")](creating-a-watchface-images/08-app-screen.png)
+[![Captura de pantalla de aplicación](creating-a-watchface-images/08-app-screen.png "pantalla de la aplicación en el dispositivo de uso")](creating-a-watchface-images/08-app-screen.png#lightbox)
 
 En este punto, la aplicación de uso básica no tiene la funcionalidad de cara de inspección porque todavía no proporciona una implementación del servicio de cara de inspección. Este servicio se agregará a continuación. 
 
@@ -117,7 +117,7 @@ En este punto, la aplicación de uso básica no tiene la funcionalidad de cara d
 
 Android implementa desgaste ver caras a través de la `CanvasWatchFaceService` clase. `CanvasWatchFaceService` se deriva de `WatchFaceService`, que a su vez se deriva de `WallpaperService` tal como se muestra en el diagrama siguiente: 
 
-[ ![Diagrama de herencia](creating-a-watchface-images/09-inheritance-diagram-sml.png "CanvasWatchFaceService diagrama de herencia")](creating-a-watchface-images/09-inheritance-diagram.png)
+[![Diagrama de herencia](creating-a-watchface-images/09-inheritance-diagram-sml.png "CanvasWatchFaceService diagrama de herencia")](creating-a-watchface-images/09-inheritance-diagram.png#lightbox)
 
 `CanvasWatchFaceService` incluye un anidada `CanvasWatchFaceService.Engine`; crea una instancia de un `CanvasWatchFaceService.Engine` objeto que realiza el trabajo real de la pantalla del reloj de dibujo. `CanvasWatchFaceService.Engine` se deriva de `WallpaperService.Engine` tal y como se muestra en el diagrama anterior. 
 
@@ -317,11 +317,11 @@ Establece la acción de compilación de este archivo en **AndroidResource**:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Acción de compilación](creating-a-watchface-images/10-android-resource-vs.png "conjunto acción a AndroidResource de compilación")](creating-a-watchface-images/10-android-resource-vs.png)
+[![Acción de compilación](creating-a-watchface-images/10-android-resource-vs.png "conjunto acción a AndroidResource de compilación")](creating-a-watchface-images/10-android-resource-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Acción de compilación](creating-a-watchface-images/10-android-resource-xs.png "conjunto acción a AndroidResource de compilación")](creating-a-watchface-images/10-android-resource-xs.png)
+[![Acción de compilación](creating-a-watchface-images/10-android-resource-xs.png "conjunto acción a AndroidResource de compilación")](creating-a-watchface-images/10-android-resource-xs.png#lightbox)
 
 -----
 
@@ -342,13 +342,13 @@ Compilar e implementar la aplicación en el dispositivo de uso. Debe aparecer la
 
 4.  Seleccione el **Xamarin ejemplo** ver cara (se muestra a la derecha): 
 
-    [ ![Selector de Watchface](creating-a-watchface-images/11-watchface-picker.png "deslice el dedo para localizar la pantalla del reloj de ejemplo de Xamarin")](creating-a-watchface-images/11-watchface-picker.png)
+    [![Selector de Watchface](creating-a-watchface-images/11-watchface-picker.png "deslice el dedo para localizar la pantalla del reloj de ejemplo de Xamarin")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
 
 5.  Pulse la **Xamarin ejemplo** ver cara para seleccionarlo. 
 
 Esto cambia la pantalla del reloj del dispositivo desgaste para usar el servicio de cara de inspección personalizado implementado hasta el momento: 
 
-[ ![Pantalla digital watch](creating-a-watchface-images/12-digital-watchface.png "inspección digital personalizado con el dispositivo de uso")](creating-a-watchface-images/12-digital-watchface.png)
+[![Pantalla digital watch](creating-a-watchface-images/12-digital-watchface.png "inspección digital personalizado con el dispositivo de uso")](creating-a-watchface-images/12-digital-watchface.png#lightbox)
 
 Esto es una cara de inspección relativamente tosco porque la implementación de aplicación es lo mínima (por ejemplo, no incluye un fondo de cara de inspección y no llama a `Paint` métodos de suavizado para mejorar el aspecto). Sin embargo, para implementar la funcionalidad básica que se requiere para crear una pantalla de watch personalizado. 
 
@@ -476,7 +476,7 @@ Application.Context.UnregisterReceiver (timeZoneReceiver);
 
 Compilar e implementar la aplicación en el dispositivo de desgaste nuevo. Seleccione la pantalla del reloj en el selector de cara de inspección como antes. Se muestra la vista previa en el selector de inspección de la izquierda, y se muestra la pantalla del reloj nuevo a la derecha:
 
-[ ![Pantalla del reloj analógico](creating-a-watchface-images/13-analog-watchface.png "mejorado cara analógico en el selector y en el dispositivo")](creating-a-watchface-images/13-analog-watchface.png)
+[![Pantalla del reloj analógico](creating-a-watchface-images/13-analog-watchface.png "mejorado cara analógico en el selector y en el dispositivo")](creating-a-watchface-images/13-analog-watchface.png#lightbox)
 
 En esta captura de pantalla, se refiere a la manecilla de los segundos una vez por segundo. Cuando se ejecuta este código en un dispositivo de uso, la manecilla de los segundos desaparece cuando el reloj entra en modo de ambiente.
 

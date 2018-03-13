@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: a5711b5ac8332ac518ba5b639f05de557229af6e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1491e6ec36a9ced9460e083769b2148386d1d518
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-and-mac"></a>iOS y Mac
 
@@ -24,7 +24,7 @@ Para los elementos del código que no tienen ningún elemento de interfaz de usu
 
 Para el código que tiene que realizar algún trabajo de la interfaz de usuario y, en el que desea compartir, debe usar [proyectos compartidos](~/cross-platform/app-fundamentals/shared-projects.md) que le permiten colocar código para compartir en un solo proyecto y hacer que se compila con Mac y iOS cuando se hace referencia.
 
-##  <a name="unified-apiunifiedindexmd"></a>[API unificada](unified/index.md)
+##  <a name="unified-apiunifiedindexmd"></a>[Unified API](unified/index.md)
 
 La API unificada para iOS y proyectos de Mac utiliza los mismos espacios de nombres para marcos de trabajo para que puede utilizarse el mismo archivo de código en ambas plataformas para sin problemas para compartir el código. También permite compilaciones de bits de 32 y 64. La API unificada ha sido el valor predeterminado de la plantilla desde 2015 temprano y se recomienda para todos los proyectos nuevos - *sólo* proyectos API unificada pueden enviarse a la tienda de aplicaciones.
 
@@ -40,7 +40,7 @@ La Xamarin.iOS original (no unificado) y Xamarin.Mac APIs realizada para compart
 
 Se ofrecen instrucciones detalladas para actualizar cualquier aplicación desde la clásica a la API unificada.
 
-## <a name="binding-objective-c-librariesbindingindexmd"></a>[Bibliotecas de enlace Objective-c.](binding/index.md)
+## <a name="binding-objective-c-librariesbindingindexmd"></a>[Enlace de bibliotecas de Objective-C](binding/index.md)
 
 Xamarin le permite poner de bibliotecas nativas en sus aplicaciones con enlaces. Esta sección se explica:
 
@@ -56,17 +56,17 @@ Xamarin le permite poner de bibliotecas nativas en sus aplicaciones con enlaces.
 
 Para admitir 32 y 64 bits código transparente de C# y F #, estamos incorporando a nuevos tipos de datos.   Obtenga información acerca de ellos aquí.
 
-##  <a name="building-32-and-64-bit-apps32-and-64md"></a>[Creación de las aplicaciones de 32 y 64 bits](32-and-64.md)
+##  <a name="building-32-and-64-bit-apps32-and-64indexmd"></a>[Creación de las aplicaciones de 32 y 64 bits](32-and-64/index.md)
 
 Lo que necesita saber para admitir las aplicaciones de 32 y 64 bits.
 
-## <a name="working-with-native-types-in-cross-platform-appsnative-types-cross-platformmd"></a>[Trabajar con tipos nativos en aplicaciones multiplataforma](native-types-cross-platform.md)
+## <a name="working-with-native-types-in-cross-platform-appsnative-types-cross-platformmd"></a>[Trabajo con tipos nativos en aplicaciones multiplataforma](native-types-cross-platform.md)
 
 Este artículo incluye el uso de la nueva iOS tipos nativos de API unificada (`nint`, `nuint`, `nfloat`) en una aplicación multiplataforma donde el código se comparte con dispositivos de iOS no, como Android o sistemas operativos de Windows Phone.
 Proporciona una visión general de cuándo se deben utilizar los tipos nativos y proporciona varias soluciones posibles a los casos donde se debe utilizar el nuevo tipo con código multiplataforma.
 
 
-## <a name="httpclient-stack-and-ssltls-implementation-selectorhttp-stackmd"></a>[Pila HttpClient y Selector de implementación de SSL/TLS](http-stack.md)
+## <a name="httpclient-stack-and-ssltls-implementation-selectorhttp-stackmd"></a>[Selector de pila HttpClient e implementación de SSL/TLS](http-stack.md)
 
 El nuevo Selector de pila HttpClient controla qué implementación HttpClient va a utilizar en la aplicación Xamarin.iOS, Xamarin.tvOS y Xamarin.Mac. Ahora puede volver a una implementación que usa de iOS, de tvOS o transportes nativo de OS x (`NSUrlSession` o `CFNetwork` según el sistema operativo).
 

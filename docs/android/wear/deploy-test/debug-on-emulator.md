@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1ad3c193261bf22b7ee344aa1ccabb226533b907
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dc6146670c4b5f7d29491335b4719e032487dcce
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Depurar Android desgaste en un emulador
 
@@ -28,14 +28,14 @@ Para ejecutar la aplicación de uso en un emulador, debe instalar el emulador de
 
 Cuando se crea un dispositivo virtual desgaste, seleccione un perfil de dispositivo Android desgaste (como **Android desgaste cuadrado**). Para mejorar el rendimiento, utilice el desgaste **x86** CPU/ABI tal como se muestra en este ejemplo:
 
-[![Ejemplo de configuración del dispositivo virtual desgaste](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png)
+[![Ejemplo de configuración del dispositivo virtual desgaste](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png#lightbox)
 
 
 ## <a name="launch-the-wear-virtual-device"></a>Inicie el dispositivo Virtual desgaste 
 
 Después de haber creado un dispositivo virtual desgaste Android, puede elegir en el menú desplegable de dispositivo en el IDE antes de iniciar la depuración. Si el dispositivo virtual no está disponible en el menú desplegable de dispositivo, compruebe que el proyecto es un Android *desgaste* nivel de proyecto de aplicación (no en un proyecto de aplicación de Android) y que su objetivo de nivel de API se establece en la misma API como el dispositivo virtual. Por ejemplo:
 
-[ ![Elegir un AVD desgaste en el menú del dispositivo de Visual Studio](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png)
+[![Elegir un AVD desgaste en el menú del dispositivo de Visual Studio](debug-on-emulator-images/vs/choose-wear-sim.png)](debug-on-emulator-images/vs/choose-wear-sim.png#lightbox)
 
 Cuando se inicie el emulador de Android, Xamarin.Android se implementará la aplicación de uso en el emulador. El emulador ejecuta la aplicación con la imagen de dispositivo virtual configurada.
 

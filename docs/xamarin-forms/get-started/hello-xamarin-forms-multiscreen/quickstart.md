@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 6a24ff05ae2a2c2368650c368cc408f0219ce21e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5457cb3a80208311bac66a0232afd9cb4dc02c87
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Guía de inicio rápido sobre Multiscreen de Xamarin.Forms
 
 Este tutorial muestra cómo ampliar la aplicación Phoneword agregando una segunda pantalla para realizar un seguimiento del historial de llamadas para la aplicación. A continuación se muestra la aplicación final:
 
-[![](quickstart-images/intro-app-examples-sml.png "Aplicación Phoneword")](quickstart-images/intro-app-examples.png "Aplicación Phoneword")
+[![](quickstart-images/intro-app-examples-sml.png "Aplicación Phoneword")](quickstart-images/intro-app-examples.png#lightbox "Aplicación Phoneword")
 
 Amplíe la aplicación Phoneword de la siguiente forma:
 
@@ -307,4 +307,4 @@ Enhorabuena, ha completado una aplicación de pantalla dividida de Xamarin.Forms
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Phoneword (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Phoneword/)
-- [PhonewordMultiscreen (sample)](https://developer.xamarin.com/samples/xamarin-forms/PhonewordMultiscreen/)
+- [PhonewordMultiscreen (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/PhonewordMultiscreen/)

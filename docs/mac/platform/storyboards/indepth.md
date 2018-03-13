@@ -8,21 +8,21 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: effa527b330fb6ca75800392e557289a326f17aa
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 388744d48799e84587a4f554a4eb67cd677d8c9a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="storyboards"></a>Guiones gráficos
 
 Un guión gráfico define todos de la interfaz de usuario para una aplicación determinada que se divide en una introducción a las funciones de sus controladores de la vista. En el generador de interfaz de Xcode, cada uno de estos controladores reside en su propio escena.
 
-[ ![](indepth-images/intro01.png "Un guión gráfico en el generador de interfaz de Xcode")](indepth-images/intro01.png)
+[![](indepth-images/intro01.png "Un guión gráfico en el generador de interfaz de Xcode")](indepth-images/intro01.png#lightbox)
 
 El guión gráfico es un archivo de recursos (con las extensiones de `.storyboard`) que obtiene incluido en el paquete de la aplicación Xamarin.Mac cuando se compila y se envía. Para definir el guión gráfico inicial para la aplicación, editarlo del `Info.plist` de archivo y seleccione la **interfaz principal** en el cuadro de lista desplegable: 
 
-[ ![](indepth-images/sb01.png "El editor de Info.plist")](indepth-images/sb01.png)
+[![](indepth-images/sb01.png "El editor de Info.plist")](indepth-images/sb01.png#lightbox)
 
 <a name="Loading-from-Code" />
 
@@ -41,11 +41,11 @@ controller.ShowWindow(this);
 
 El `FromName` carga el archivo del guión gráfico con el nombre especificado que se ha incluido en el paquete de la aplicación. El `InstantiateControllerWithIdentifier` crea una instancia del controlador de vista con la identidad especificada. Establecer la identidad en el generador de interfaz de Xcode al diseñar la interfaz de usuario:
 
-[ ![](indepth-images/sb02.png "Establecer el identificador de guión gráfico")](indepth-images/sb02.png)
+[![](indepth-images/sb02.png "Establecer el identificador de guión gráfico")](indepth-images/sb02.png#lightbox)
 
 Si lo desea, puede usar el `InstantiateInitialController` método para cargar el controlador de vista que se ha asignado el controlador inicial en el generador de interfaz:
 
-[ ![](indepth-images/sb03.png "Establecimiento del controlador inicial")](indepth-images/sb03.png)
+[![](indepth-images/sb03.png "Establecimiento del controlador inicial")](indepth-images/sb03.png#lightbox)
 
 Está marcado por el **punto de entrada de guión gráfico** y la flecha de abiertas anterior.
 
@@ -76,7 +76,7 @@ Varios métodos nuevos se agregaron a la `NSViewController` clase para admitir l
 
 Además, `NSViewControllers` ahora forman parte de la ventana _Respondedor cadena_:
 
-[ ![](indepth-images/vc01.png "La cadena de respuesta")](indepth-images/vc01.png)
+[![](indepth-images/vc01.png "La cadena de respuesta")](indepth-images/vc01.png#lightbox)
 
 Y por lo tanto son por cable telefónico para recibir y responder a eventos, como cortar, copiar y pegar las selecciones de elementos de menú. Este automática View Controller cable telefónico sólo se produce en aplicaciones que se ejecutan en Mac OS Sierra (10.12) y versiones posteriores.
 
@@ -86,13 +86,13 @@ Y por lo tanto son por cable telefónico para recibir y responder a eventos, com
 
 En los guiones gráficos, ahora puede implementar controladores de la vista (por ejemplo, el controlador de vista de división y el controlador de vista de la ficha) _contención_, por ejemplo, que puede "contienen" otro controladores de la vista de sub:
 
-[ ![](indepth-images/vc02.png "Un ejemplo de contención de controlador de vista")](indepth-images/vc02.png)
+[![](indepth-images/vc02.png "Un ejemplo de contención de controlador de vista")](indepth-images/vc02.png#lightbox)
 
 Ver controladores de secundarios contienen métodos y propiedades que vincularlas nuevo a su controlador de vista de elemento primario y para trabajar con mostrar y quitar las vistas de la pantalla.
 
 Todos los controladores de vista de contenedor integran macOS tienen un diseño concreto que Apple recomienda que siga si crear sus propios controladores personalizados de la vista de contenedor:
 
-[ ![](indepth-images/vc03.png "El diseño del controlador de vista")](indepth-images/vc03.png)
+[![](indepth-images/vc03.png "El diseño del controlador de vista")](indepth-images/vc03.png#lightbox)
 
 El controlador de vista de colección contiene una matriz de elementos de vista de colección, cada uno de los cuales contiene uno o más controladores de vista que contienen sus propias vistas.
 
@@ -131,7 +131,7 @@ PerformSegue("MyNamedSegue", this);
 
 El identificador desplazará tranquilamente se define dentro interfaz generador del Xcode cuando se diseña la interfaz de usuario de la aplicación:
 
-[ ![](indepth-images/sg02.png "Escribir un desplazará tranquilamente nombre")](indepth-images/sg02.png)
+[![](indepth-images/sg02.png "Escribir un desplazará tranquilamente nombre")](indepth-images/sg02.png#lightbox)
 
 En el controlador de vista que actúa como el origen de la Segue, se debe reemplazar el `PrepareForSegue` se muestra el método y realice cualquier inicialización necesaria antes de que se ejecute el Segue y el controlador de vista especificado:
 
@@ -215,7 +215,7 @@ Un par de cosas que destacar aquí:
 
 Para usar este nuevo tipo de Segue en el generador de interfaz de Xcode, es necesario compilar la aplicación en primer lugar, a continuación, cambie a Xcode y agregue un nuevo Segue entre dos escenas. Establecer el **estilo** a **personalizado** y **desplazará tranquilamente clase** a `ReplaceViewSegue` (el nombre de la clase personalizada de Segue):
 
-[ ![](indepth-images/sg01.png "Configuración de la clase Segue")](indepth-images/sg01.png)
+[![](indepth-images/sg01.png "Configuración de la clase Segue")](indepth-images/sg01.png#lightbox)
 
 <a name="Triggered-Segues" />
 
@@ -271,21 +271,21 @@ Para agregar una referencia a un guión gráfico externo, haga lo siguiente:
 
 1. En el **el Explorador de soluciones**, haga doble clic en el nombre del proyecto y seleccione **agregar** > **nuevo archivo...**   >  **Mac** > **guión gráfico**. Escriba un **nombre** para el nuevo guión gráfico y haga clic en el **New** botón: 
 
-    [ ![](indepth-images/ref01.png "Agregar un nuevo guión gráfico")](indepth-images/ref01.png)
+    [![](indepth-images/ref01.png "Agregar un nuevo guión gráfico")](indepth-images/ref01.png#lightbox)
 2. En el **el Explorador de soluciones**, haga doble clic en el nuevo nombre de guión gráfico para abrirlo y editarlo en el generador de interfaz de Xcode.
 2. Definir el diseño de escenas del guión gráfico nuevo como se haría normalmente y guardar los cambios: 
 
-    [ ![](indepth-images/ref02.png "Diseñar la interfaz")](indepth-images/ref02.png)
+    [![](indepth-images/ref02.png "Diseñar la interfaz")](indepth-images/ref02.png#lightbox)
 3. Cambie al guión gráfico que se va a agregar la referencia en el generador de interfaz.
 4. Arrastre un **referencia de guión gráfico** desde el **objeto biblioteca** a la superficie de diseño: 
 
-    [ ![](indepth-images/ref03.png "Al seleccionar una referencia de guión gráfico en la biblioteca")](indepth-images/ref03.png)
+    [![](indepth-images/ref03.png "Al seleccionar una referencia de guión gráfico en la biblioteca")](indepth-images/ref03.png#lightbox)
 5. En el **atributo Inspector**, seleccione el nombre de la **guión gráfico** que haya creado anteriormente: 
 
-    [ ![](indepth-images/ref04.png "Configuración de la referencia")](indepth-images/ref04.png)
+    [![](indepth-images/ref04.png "Configuración de la referencia")](indepth-images/ref04.png#lightbox)
 6. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un nuevo Segue a la **referencia de guión gráfico** que acaba de crear.  En el menú emergente seleccione **mostrar** para completar la Segue: 
 
-    [ ![](indepth-images/ref06.png "Establecer el tipo de Segue")](indepth-images/ref06.png) 
+    [![](indepth-images/ref06.png "Establecer el tipo de Segue")](indepth-images/ref06.png#lightbox) 
 8. Guarde los cambios en el guión gráfico.
 9. Vuelva a Visual Studio para Mac sincronizar los cambios.
 
@@ -300,20 +300,20 @@ Para agregar una referencia a una escena específica un guión gráfico externo 
 1. En el **el Explorador de soluciones**, haga doble clic en el guión gráfico externo para abrirlo y editarlo en el generador de interfaz de Xcode.
 2. Agregar una nueva escena y se diseñan como lo haría normalmente: 
 
-    [ ![](indepth-images/ref07.png "Definir el diseño en Xcode.")](indepth-images/ref07.png)
+    [![](indepth-images/ref07.png "Definir el diseño en Xcode.")](indepth-images/ref07.png#lightbox)
 3. En el **identidad Inspector**, escriba un **Id. de guión gráfico** para controlador de ventana de la escena nueva: 
 
-    [ ![](indepth-images/ref08.png "Establecer el identificador de guión gráfico")](indepth-images/ref08.png)
+    [![](indepth-images/ref08.png "Establecer el identificador de guión gráfico")](indepth-images/ref08.png#lightbox)
 3. Abra el guión gráfico que se va a agregar la referencia en el generador de interfaz.
 4. Arrastre un **referencia de guión gráfico** desde el **objeto biblioteca** a la superficie de diseño: 
 
-    [ ![](indepth-images/ref03.png "Seleccionar una referencia de guión gráfico de la biblioteca")](indepth-images/ref03.png)
+    [![](indepth-images/ref03.png "Seleccionar una referencia de guión gráfico de la biblioteca")](indepth-images/ref03.png#lightbox)
 5. En el **identidad Inspector**, seleccione el nombre de la **guión gráfico** y **identificador de referencia** (Id. de guión gráfico) de la escena que haya creado anteriormente: 
 
-    [ ![](indepth-images/ref09.png "Establecer el identificador de referencia")](indepth-images/ref09.png)
+    [![](indepth-images/ref09.png "Establecer el identificador de referencia")](indepth-images/ref09.png#lightbox)
 6. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un nuevo Segue a la **referencia de guión gráfico** que acaba de crear. En el menú emergente seleccione **mostrar** para completar la Segue: 
 
-    [ ![](indepth-images/ref06.png "Establecer el tipo de Segue")](indepth-images/ref06.png) 
+    [![](indepth-images/ref06.png "Establecer el tipo de Segue")](indepth-images/ref06.png#lightbox) 
 8. Guarde los cambios en el guión gráfico.
 9. Vuelva a Visual Studio para Mac sincronizar los cambios.
 
@@ -328,19 +328,19 @@ Para agregar una referencia a una escena específica el mismo guión gráfico, h
 1. En el **el Explorador de soluciones**, haga doble clic en el guión gráfico para abrirlo y editarlo.
 2. Agregar una nueva escena y se diseñan como lo haría normalmente: 
 
-    [ ![](indepth-images/ref11.png "Editar el guión gráfico en Xcode.")](indepth-images/ref11.png)
+    [![](indepth-images/ref11.png "Editar el guión gráfico en Xcode.")](indepth-images/ref11.png#lightbox)
 3. En el **identidad Inspector**, escriba un **Id. de guión gráfico** para controlador de ventana de la escena nueva: 
 
-    [ ![](indepth-images/ref12.png "Establecer el identificador de guión gráfico")](indepth-images/ref12.png)
+    [![](indepth-images/ref12.png "Establecer el identificador de guión gráfico")](indepth-images/ref12.png#lightbox)
 3. Arrastre un **referencia de guión gráfico** desde el **cuadro de herramientas** a la superficie de diseño: 
 
-    [ ![](indepth-images/ref03.png "Seleccionar una referencia de guión gráfico de la biblioteca")](indepth-images/ref03.png)
+    [![](indepth-images/ref03.png "Seleccionar una referencia de guión gráfico de la biblioteca")](indepth-images/ref03.png#lightbox)
 5. En **atributo Inspector**, seleccione **identificador de referencia** (Id. de guión gráfico) de la escena que haya creado anteriormente: 
 
-    [ ![](indepth-images/ref13.png "Establecer el identificador de referencia")](indepth-images/ref13.png)
+    [![](indepth-images/ref13.png "Establecer el identificador de referencia")](indepth-images/ref13.png#lightbox)
 6. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un nuevo Segue a la **referencia de guión gráfico** que acaba de crear. En el menú emergente seleccione **mostrar** para completar la Segue: 
 
-    [ ![](indepth-images/ref06.png "Seleccionar el tipo de Segue")](indepth-images/ref06.png) 
+    [![](indepth-images/ref06.png "Seleccionar el tipo de Segue")](indepth-images/ref06.png#lightbox) 
 8. Guarde los cambios en el guión gráfico.
 9. Vuelva a Visual Studio para Mac sincronizar los cambios.
 
@@ -359,5 +359,5 @@ El código de SourceWriter se ha comentado completamente y, si están disponible
 - [MacStoryboard (ejemplo)](https://developer.xamarin.com/samples/mac/MacStoryboard/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabajar con ventanas](~/mac/user-interface/window.md)
-- [Directrices de interfaz de sistema operativo X humanos](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Directrices de interfaz humana de OS X)
 - [Introducción a Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

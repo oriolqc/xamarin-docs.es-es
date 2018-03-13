@@ -7,11 +7,11 @@ ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 2d802a96fcc8dad1d610b99a1cddffdc4398da38
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6ec8cb9b6fdb391afcb8f9baaa641da5aec38f6d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="new-search-apis"></a>Nuevas API de búsqueda
 
@@ -21,7 +21,7 @@ Se ha expandido la búsqueda en iOS 9 para proporcionar acceso a información y 
 
 Además, las nuevas API de búsqueda facilitan la integración de búsqueda en la aplicación sin experiencia en la implementación anterior de búsqueda. Por este motivo, Apple notificaciones que suele tardar unas horas para que el contenido de una aplicación iOS 9 universalmente permite realizar búsquedas mediante la búsqueda de la aplicación.
 
-[ ![](images/intro01.png "Un ejemplo de contenido de la aplicación de iOS 9 universalmente permite realizar búsqueda mediante la búsqueda de la aplicación")](images/intro01.png)
+[![](images/intro01.png "Un ejemplo de contenido de la aplicación de iOS 9 universalmente permite realizar búsqueda mediante la búsqueda de la aplicación")](images/intro01.png#lightbox)
 
 Búsqueda de la aplicación se compone de tres API independientes:
 

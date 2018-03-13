@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 7566ebac0f487ef321c512c988c79f34e50777ac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f13515326bd75f2b2c15e2b6059e6f829814ea5c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="local-notifications"></a>Notificaciones locales
 
@@ -28,7 +28,7 @@ Android proporciona dos áreas controlados por el sistema para mostrar iconos de
 
 Para obtener detalles acerca de la notificación, el usuario puede abrir el cajón de notificaciones (que se expande cada icono de notificación para mostrar el contenido de la notificación) y realizar las acciones asociadas a las notificaciones. La siguiente captura de pantalla muestra una *cajón de notificaciones* que corresponde al área de notificación muestra sobre:
 
-[![Cajón de notificaciones de ejemplo muestra tres notificaciones](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png)
+[![Cajón de notificaciones de ejemplo muestra tres notificaciones](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
 
 Notificaciones Android usan dos tipos de diseños:
 
@@ -38,7 +38,6 @@ Notificaciones Android usan dos tipos de diseños:
 
 En las secciones siguientes se explican cada uno de estos tipos de diseño (y cómo crearlos).
 
-<a name="base-layout" />
 
 ### <a name="base-layout"></a>Diseño de base
 
@@ -54,7 +53,7 @@ Todas las notificaciones Android están integradas en el formato de diseño de b
 
 Estos elementos se muestran como se muestra en el diagrama siguiente:
 
-[![Ubicación de los elementos de notificación](local-notifications-images/03-notification-callouts-sml.png)](local-notifications-images/03-notification-callouts.png)
+[![Ubicación de los elementos de notificación](local-notifications-images/03-notification-callouts-sml.png)](local-notifications-images/03-notification-callouts.png#lightbox)
 
 Diseños de base se limita a 64 independiente de la densidad de píxeles (dp) de alto. Android crea este estilo de notificaciones básico de forma predeterminada.
 
@@ -64,13 +63,13 @@ Si lo desea, las notificaciones pueden mostrar un icono grande que representa la
 
 A partir de Android 5.0, las notificaciones también pueden aparecer en la pantalla de bloqueo:
 
-[![Notificación de pantalla de bloqueo de ejemplo](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png)
+[![Notificación de pantalla de bloqueo de ejemplo](local-notifications-images/05-lockscreen-notification-sml.png)](local-notifications-images/05-lockscreen-notification.png#lightbox)
 
 El usuario hacer doble punteo en la notificación de pantalla de bloqueo para desbloquear el dispositivo y saltar a la aplicación que se originó dicha notificación, o pase a descartar la notificación. Las aplicaciones pueden establecer el nivel de visibilidad de una notificación para controlar lo que se muestra en la pantalla de bloqueo y los usuarios pueden elegir si desea permitir contenido confidencial que se mostrará en las notificaciones de la pantalla de bloqueo.
 
 Android 5.0 introdujo un formato de presentación de notificación de alta prioridad denominado *aviso*. Las notificaciones de aviso deslice hacia abajo desde la parte superior de la pantalla durante unos segundos y, a continuación, retreat copia de seguridad en el área de notificación:
 
-[![Notificación de pantalla de datos de ejemplo](local-notifications-images/06-heads-up-notification-sml.png)](local-notifications-images/06-heads-up-notification.png)
+[![Notificación de pantalla de datos de ejemplo](local-notifications-images/06-heads-up-notification-sml.png)](local-notifications-images/06-heads-up-notification.png#lightbox)
 
 Las notificaciones de aviso hacen posible para el sistema de la interfaz de usuario para colocar información importante delante del usuario sin interrumpir el estado de la actividad que se está ejecutando.
 
@@ -84,7 +83,6 @@ Android incluye compatibilidad con metadatos de la notificación para que las no
 
 **Nota:** **visibilidad** y **categoría** se presentaron en Android 5.0 y no están disponibles en versiones anteriores de Android. A partir de Android 8.0, [canales de notificación](#notif-chan) se utilizan para controlar cómo se presentan las notificaciones al usuario.
 
-<a name="expanded-layouts" />
 
 ### <a name="expanded-layouts"></a>Diseños expandidos
 
@@ -106,7 +104,6 @@ Android admite tres estilos de diseño ampliadas para las notificaciones de even
 
 [Más allá de la notificación básica](#beyond-the-basic-notification) (más adelante en este artículo), explica cómo crear *texto grande*, *Bandeja de entrada*, y *imagen* las notificaciones.
 
-<a name="notification-creation" />
 
 ## <a name="notification-creation"></a>Creación de notificación
 
@@ -127,7 +124,6 @@ Para crear una notificación en Android, use la [Notification.Builder](https://d
 
 Después de establecer estas opciones en el generador, generar un objeto de notificación que contiene la configuración. Para publicar la notificación, se pasa este objeto de notificación para el *Notification Manager*. Android proporciona el [NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/) (clase), que es responsable de la publicación de las notificaciones y mostrarlos al usuario. Una referencia a esta clase puede obtenerse de cualquier contexto, por ejemplo, una actividad o un servicio.
 
-<a name="how-to-generate" />
 
 ### <a name="how-to-generate-a-notification"></a>Cómo generar una notificación
 
@@ -185,7 +181,6 @@ La marca de tiempo se establece automáticamente, pero puede invalidar esta conf
 ```csharp
 builder.SetWhen (Java.Lang.JavaSystem.CurrentTimeMillis());
 ```
-<a name="sound-and-vibr" />
 
 ### <a name="enabling-sound-and-vibration"></a>Habilitar sonidos y vibración
 
@@ -265,7 +260,6 @@ Una notificación permanece visible hasta que se produce una de estas tres cosas
 
 Para obtener más información acerca de cómo actualizar notificaciones Android, consulte [modificar una notificación](http://developer.android.com/training/notify-user/managing.html#Updating).
 
-<a name="starting-an-activity" />
 
 ### <a name="starting-an-activity-from-a-notification"></a>A partir de una actividad desde una notificación
 
@@ -380,11 +374,11 @@ A partir de Android 8.0 (Oreos), puede usar el *canales de notificación* caract
 
 El **YouTube** aplicación que se instala con Android Oreos muestra dos categorías de notificación: **descargar notificaciones** y **notificaciones General**:
 
-[![Pantallas de notificación de YouTube en Oreos Android](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png)
+[![Pantallas de notificación de YouTube en Oreos Android](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
 Cada una de estas categorías corresponde a un canal de notificación. Implementa la aplicación de YouTube un **descargar notificaciones** canal y un **General notificaciones** canal. El usuario puede pulsar **descargar notificaciones**, que muestra la pantalla de configuración para la aplicación de la descarga del canal de notificaciones:
 
-[![Descargar la pantalla de notificaciones para la aplicación de YouTube](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png)
+[![Descargar la pantalla de notificaciones para la aplicación de YouTube](local-notifications-images/28-yt-download-sml.png)](local-notifications-images/28-yt-download.png#lightbox)
 
 En esta pantalla, el usuario puede modificar el comportamiento de la **descargar** notificaciones del canal mediante las acciones siguientes:
 
@@ -400,14 +394,13 @@ En esta pantalla, el usuario puede modificar el comportamiento de la **descargar
 
 El **General notificaciones** canal tiene una configuración similar:
 
-[![Pantalla de notificaciones general para la aplicación de YouTube](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png)
+[![Pantalla de notificaciones general para la aplicación de YouTube](local-notifications-images/29-yt-general-sml.png)](local-notifications-images/29-yt-general.png#lightbox)
 
 Observe que no tiene un control absoluto sobre cómo interactúan los canales de notificación con el usuario &ndash; el usuario puede modificar la configuración de cualquier canal de notificación en el dispositivo, tal como se muestra en las capturas de pantalla anterior. Sin embargo, puede configurar valores predeterminados (tal y como se describe a continuación). Como se muestran en estos ejemplos, la nueva característica de canal de notificación permite para que pueda proporcionar a los usuarios control más preciso sobre los diferentes tipos de notificaciones.
 
 ¿Debe agregar compatibilidad para los canales de notificación a la aplicación? Si va a usar Android 8.0, la aplicación *debe* implementar canales de notificación.
 Se producirá un error en una aplicación de destino para Oreos que intenta enviar una notificación local al usuario sin usar un canal de notificación mostrar la notificación en los dispositivos Oreos. Si no destino Android 8.0, la aplicación se ejecutará en 8.0 Android, pero con el mismo comportamiento de notificación tal y como mostraría una cuando se ejecuta en Android 7.1 o versiones anteriores.
 
-<a name="notif-chan-create" />
 
 ### <a name="creating-a-notification-channel"></a>Crear un canal de notificación
 
@@ -448,7 +441,6 @@ Para crear un canal de notificación, haga lo siguiente:
     notificationManager.CreateNotificationChannel (chan);
     ```
 
-<a name="notif-chan-post" />
 
 ### <a name="posting-to-a-notifications-channel"></a>Exponer un elemento en un canal de notificaciones
 
@@ -507,7 +499,6 @@ builder.SetLargeIcon (BitmapFactory.DecodeResource (Resources, Resource.Drawable
 Este código de ejemplo abre el archivo de imagen **Resources/drawable/monkey_icon.png**, lo convierte en un mapa de bits y pasa el mapa de bits resultante `Notification.Builder`. Normalmente, la resolución de imagen de origen es mayor que el icono pequeño &ndash; pero no mucho más grande. Una imagen que es demasiado grande puede dar lugar a operaciones de cambio de tamaño innecesarias que podrían retrasar el envío de la notificación.
 Para obtener más información acerca de los tamaños de icono de notificación en Android, consulte [iconos de notificación](http://developer.android.com/design/style/iconography.html#notification).
 
-<a name="big-text-style" />
 
 ### <a name="big-text-style"></a>Estilo de texto grande
 
@@ -544,7 +535,6 @@ builder.SetStyle (textStyle);
 
 En este ejemplo, el texto del mensaje y el texto de resumen se almacenan en la `BigTextStyle` objeto (`textStyle`) antes de pasarlo a `Notification.Builder.`
 
-<a name="image-style" />
 
 ### <a name="image-style"></a>Estilo de imagen
 
@@ -609,7 +599,6 @@ Si no conoce de antemano el tamaño del archivo de imagen, es una buena idea que
 
 Para obtener más información sobre cómo cargar y descodificar imágenes de mapa de bits grande, consulte [carga eficazmente los mapas de bits grandes](https://developer.xamarin.com/recipes/android/resources/general/load_large_bitmaps_efficiently).
 
-<a name="inbox-style" />
 
 ### <a name="inbox-style"></a>Estilo de bandeja de entrada
 
@@ -645,13 +634,11 @@ Para agregar nuevas líneas de texto al cuerpo de la notificación, llame a la [
 
 También puede usar el *Bandeja de entrada* estilo para las notificaciones que necesita para mostrar las líneas individuales de texto en un formato expandido. Por ejemplo, el *Bandeja de entrada* estilo de notificación se puede usar para combinar varias notificaciones pendientes en una notificación de resumen &ndash; puede actualizar un único *Bandeja de entrada* estilo notificación con new líneas de contenido de la notificación (consulte [actualizar una notificación](#updating-a-notification) anteriormente), en lugar de generar un flujo continuo de nuevo, de forma similares en su mayor parte de las notificaciones. Para obtener más información acerca de este enfoque, consulte [resumir las notificaciones](http://developer.android.com/design/patterns/notifications.html#summarize_your_notifications).
 
-<a name="configuring-metadata" />
 
 ## <a name="configuring-metadata"></a>Configuración de metadatos
 
 `Notification.Builder` incluye métodos que se pueden llamar para establecer los metadatos acerca de la notificación, por ejemplo, prioridad, la visibilidad y la categoría. Android usa esta información &mdash; junto con la configuración de preferencias de usuario &mdash; para determinar cómo y cuándo quiere mostrar las notificaciones.
 
-<a name="priority-settings" />
 
 ### <a name="priority-settings"></a>Configuración de prioridad
 
@@ -694,7 +681,6 @@ En el ejemplo siguiente, se muestra la notificación de "Considerar del día" de
 
 Dado que la notificación "Pensamiento del día" es una notificación de prioridad baja, Android no mostrará, en formato de pantalla de datos.
 
-<a name="visibility-settings" />
 
 ### <a name="visibility-settings"></a>Configuración de visibilidad
 
@@ -719,7 +705,6 @@ Cuando un `Private` notificación se ha registrado, solo el nombre y el icono de
 
 En este ejemplo, **NotificationsLab** es el nombre de la aplicación de origen. Esta versión de la notificación redactada aparece sólo si la pantalla de bloqueo es segura (es decir, se protegen mediante PIN, el patrón o contraseña) &ndash; si la pantalla de bloqueo no es segura, todo el contenido de la notificación está disponible en la pantalla de bloqueo.
 
-<a name="category-settings" />
 
 ### <a name="category-settings"></a>Configuración de las categorías
 
@@ -791,7 +776,6 @@ Como se muestra en este ejemplo, llamadas a métodos de opciones de notificació
 
 El [LocalNotifications](https://developer.xamarin.com/samples/monodroid/LocalNotifications) ejemplo muestra cómo utilizar `NotificationCompat.Builder` para iniciar una segunda actividad desde una notificación. Este código de ejemplo se explica en la [Using Local Notifications en Xamarin.Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md) tutorial.
 
-<a name="notification-styles" />
 
 ### <a name="notification-styles"></a>Estilos de notificación
 
@@ -806,7 +790,6 @@ builder.SetStyle (textStyle);
 
 De forma similar, puede usar su aplicación `NotificationCompat.InboxStyle` y `NotificationCompat.BigPictureStyle` para *Bandeja de entrada* y *imagen* estilos, respectivamente.
 
-<a name="priority-and-category" />
 
 ### <a name="notification-priority-and-category"></a>Categoría y la prioridad de notificación
 
@@ -823,7 +806,6 @@ if ((int) Android.OS.Build.Version.SdkInt >= 21) {
 En del este ejemplo, la aplicación **.NET Framework de destino** está establecido en Android 5.0 y **mínimo Android versión** está establecido en **Android 4.1 (API nivel 16)**. Dado que `SetCategory` está disponible en el nivel de API 21 y versiones posterior, llamará a este código de ejemplo `SetCategory` sólo cuando está disponible &ndash; no llamará a `SetCategory` cuando el nivel de API es menor que
 21.
 
-<a name="lockscreen-visibility" />
 
 ### <a name="lockscreen-visibility"></a>Visibilidad de la pantalla de bloqueo
 
@@ -835,7 +817,6 @@ if ((int) Android.OS.Build.Version.SdkInt >= 21) {
 }
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>Resumen
 

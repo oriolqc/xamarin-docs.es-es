@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 5ce20322b576b12ff9dfe56ef0bc9d2e1ca27792
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 530e53230e9f0dea165b083fa6795558025a293f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinmac-extension-support"></a>Compatibilidad con las extensiones de Xamarin.Mac
 
@@ -42,7 +42,7 @@ Las siguientes sugerencias pueden resultar útiles al trabajar con las extension
 - Cualquier excepción no detectada bloqueará el proceso de extensión, proporcionar sólo una pequeña cantidad de información útil en el **registro del sistema**. Ajuste código problemático en un `try/catch` (excepción) bloquear que `NSLog`del antes de volver a iniciar puede resultar útil.
 - El **registro del sistema** puede tener acceso desde el **consola** aplicación en **aplicaciones** > **utilidades**:
 
-    [ ![](extensions-images/extension02.png "El registro del sistema")](extensions-images/extension02.png)
+    [![](extensions-images/extension02.png "El registro del sistema")](extensions-images/extension02.png#lightbox)
 - Tal y como se mencionó anteriormente, ejecutar la aplicación de host de extensión se registrarlo con el sistema. Eliminación de la agrupación de aplicaciones con anular el registro. 
 - Si se ha registrado "aisladas" versiones de extensiones de una aplicación, utilice el siguiente comando para localizarlos con (de manera que se puede eliminar): `plugin kit -mv`
 
@@ -65,4 +65,4 @@ En este artículo ha tomado un vistazo rápido a trabajar con las extensiones en
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
-- [Directrices de interfaz de sistema operativo X humanos](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Directrices de interfaz humana de OS X)

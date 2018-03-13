@@ -7,18 +7,17 @@ ms.assetid: A417DEE9-7B7B-4E35-A79C-284739E3838E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: d1c441de089a84c93c251588115abecb19816868
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: e9a6f44637b77bf53c3cab00ac5051e6a2f27386
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="working-with-jni"></a>Trabajar con JNI
 
 _Xamarin.Android permite escribir aplicaciones Android en C# en lugar de Java. Varios ensamblados se proporcionan con Xamarin.Android que proporcionan enlaces para las bibliotecas de Java, incluidos Mono.Android.dll y Mono.Android.GoogleMaps.dll. Sin embargo, no se proporcionan enlaces para cada biblioteca de Java posibles y no pueden enlazar los enlaces que se proporcionan todos los tipos de Java y miembro. Para usar sin enlazar tipos de Java y los miembros, se puede usar la interfaz nativa de Java (JNI). Este artículo explica cómo usar JNI para interactuar con los miembros de Xamarin.Android aplicaciones y tipos de Java._
 
-<a name="_Overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -37,14 +36,12 @@ Este documento se explica:
 -  Cómo exponer interfaces.
 
 
-<a name="_Requirements" />
 
 ## <a name="requirements"></a>Requisitos
 
 JNI, tal como se expone a través de la [espacio de nombres de Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/), está disponible en todas las versiones de Xamarin.Android.
 Para enlazar las interfaces y tipos de Java, debe utilizar Xamarin.Android 4.0 o posterior.
 
-<a name="_Managed_Callable_Wrappers" />
 
 ## <a name="managed-callable-wrappers"></a>Administrar contenedores CCW
 
@@ -58,7 +55,6 @@ Contenedores invocables administrados tienen dos finalidades:
 El primer propósito es puramente por comodidad y encapsulación de complejidad para que los consumidores tengan un conjunto de clases que se utilizan simple y administrado. Requiere el uso de los diversos [JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/) miembros tal como se describe más adelante en este artículo. Tenga en cuenta que administrar contenedores CCW no son estrictamente necesarias &ndash; "alineado" usar JNI es absolutamente aceptable y es útil para su uso único de miembros de Java sin enlazar. Subclasificando e implementación de interfaces requiere el uso de contenedores RCW administrados.
 
 
-<a name="_Android_Callable_Wrappers" />
 
 ## <a name="android-callable-wrappers"></a>Android contenedores CCW
 
@@ -70,7 +66,6 @@ Cada vez que el código Android debe ejecutar una máquina o método que se reem
 Contenedores CCW Android generados por el **monodroid.exe** programa durante la [proceso de compilación](~/android/deploy-test/building-apps/build-process.md)y se generan para todos los tipos que heredan (directa o indirectamente) [ Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/).
 
 
-<a name="_Implementing_Interfaces" />
 
 ### <a name="implementing-interfaces"></a>Implementar interfaces
 
@@ -90,7 +85,6 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 }
 ```
 
-<a name="_Implementation_Details" />
 
 ### <a name="implementation-details"></a>Detalles de implementación
 
@@ -155,7 +149,6 @@ public class HelloAndroid extends android.app.Activity {
 Tenga en cuenta que la clase base se conserva, y las declaraciones de método nativo se proporcionan para cada método que se haya reemplazado dentro de código administrado.
 
 
-<a name="_ExportAttribute_and_ExportFieldAttribute" />
 
 ### <a name="exportattribute-and-exportfieldattribute"></a>ExportAttribute y ExportFieldAttribute
 
@@ -176,7 +169,6 @@ Dado que la generación de código no proporciona una solución para generar mé
 
 El [ExportAttribute](https://developer.xamarin.com/samples/monodroid/ExportAttribute/) proyecto de ejemplo muestra cómo utilizar estos atributos.
 
-<a name="_Troubleshooting_ExportAttribute_and_ExportFieldAttribute" />
 
 #### <a name="troubleshooting-exportattribute-and-exportfieldattribute"></a>Solución de problemas ExportAttribute y ExportFieldAttribute
 
@@ -185,7 +177,6 @@ El [ExportAttribute](https://developer.xamarin.com/samples/monodroid/ExportAttri
 -   En la versión de lanzamiento, `MissingMethodException` se produce para los métodos de exportación &ndash; en la versión de lanzamiento, `MissingMethodException` se produce para los métodos de exportación. (Este problema se corrigió en la versión más reciente de Xamarin.Android).
 
 
-<a name="_ExportParameterAttribute" />
 
 ### <a name="exportparameterattribute"></a>ExportParameterAttribute
 
@@ -200,7 +191,6 @@ Sin embargo, en este caso no es totalmente determinante. En concreto, esto es ci
 
 Cuando se necesiten tipos como los siguientes métodos exportado, el `ExportParameterAttribute` se debe usar para dar el parámetro correspondiente de forma explícita o un tipo de valor devuelto.
 
- <a name="_Annotation_Attribute" />
 
 
 ### <a name="annotation-attribute"></a>Atributo de anotación
@@ -226,7 +216,6 @@ Además se aplican las siguientes limitaciones:
 -   Atributos en una propiedad no funciona. Usar atributos para captador o establecedor en su lugar.
 
 
-<a name="_Class_Binding" />
 
 ## <a name="class-binding"></a>Enlace de clase
 
@@ -245,7 +234,6 @@ Normalmente, un enlace contiene los siguientes elementos:
 -  Si es necesario subclasificando, el tipo debe tener un [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/) atributo personalizado en la declaración de tipos con [RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/) establecido en `true`.
 
 
-<a name="_Declaring_Type_Handle" />
 
 ### <a name="declaring-type-handle"></a>Identificador del tipo declarativo
 
@@ -257,7 +245,6 @@ static IntPtr class_ref = JNIEnv.FindClass(CLASS);
 
 Consulte la [las referencias de tipos de JNI](#_JNI_Type_References) sección para obtener más información acerca de la `CLASS` símbolo (token).
 
-<a name="_Binding_Fields" />
 
 ### <a name="binding-fields"></a>Enlazar campos
 
@@ -297,7 +284,6 @@ Nota: Estamos usando [InputStreamInvoker.FromJniHandle](https://developer.xamari
 
 Muchos de los [Android.Runtime](https://developer.xamarin.com/api/namespace/Android.Runtime/) tipos tienen `FromJniHandle` hacen referencia a los métodos que se convertirán un JNI en el tipo deseado.
 
- <a name="_Method_Binding" />
 
 
 ### <a name="method-binding"></a>Enlace (método)
@@ -318,8 +304,7 @@ Al igual que con campos, los métodos se utiliza para obtener el identificador d
 
 Enlace de método es potencialmente algo más que la invocación del método. Enlace de método también incluye lo que un método para que se invalide (para los métodos abstractos y no final) o implementa (para métodos de interfaz). El [compatibilidad con herencia, Interfaces](#_Supporting_Inheritance,_Interfaces_1) sección tratan las complejidades de admitir métodos virtuales y los métodos de interfaz.
 
- <a name="_Static_Methods" />
-
+<a name="_Static_Methods_1" />
 
 #### <a name="static-methods"></a>Métodos estáticos
 
@@ -344,7 +329,6 @@ public static Java.Lang.Runtime GetRuntime ()
 Tenga en cuenta que se almacena el identificador de método en un campo estático, `id_getRuntime`. Se trata de una optimización del rendimiento, por lo que no necesita el identificador de método va a buscar en cada invocación. No es necesario para almacenar en caché el identificador de método de esta manera. Una vez que se obtiene el identificador de método, [JNIEnv.CallStaticObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticObjectMethod/) se utiliza para invocar el método. `JNIEnv.CallStaticObjectMethod` Devuelve un `IntPtr` que contiene el identificador de la instancia devuelta de Java.
 [Java.Lang.Object.GetObject&lt;T&gt;(IntPtr, JniHandleOwnership)](https://developer.xamarin.com/api/member/Java.Lang.Object.GetObject%7BT%7D/p/System.IntPtr/Android.Runtime.JniHandleOwnership/) se utiliza para convertir el identificador de Java en una instancia de objeto fuertemente tipado.
 
- <a name="_Non-virtual_Instance_Method_Binding" />
 
 
 #### <a name="non-virtual-instance-method-binding"></a>Enlace de método de instancia no virtuales
@@ -368,7 +352,6 @@ Tenga en cuenta que se almacena el identificador de método en un campo estátic
 Se trata de una optimización del rendimiento, por lo que no necesita el identificador de método va a buscar en cada invocación. No es necesario para almacenar en caché el identificador de método de esta manera. Una vez que se obtiene el identificador de método, [JNIEnv.CallStaticObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticObjectMethod/) se utiliza para invocar el método. `JNIEnv.CallStaticObjectMethod` Devuelve un `IntPtr` que contiene el identificador de la instancia devuelta de Java.
 [Java.Lang.Object.GetObject&lt;T&gt;(IntPtr, JniHandleOwnership)](https://developer.xamarin.com/api/member/Java.Lang.Object.GetObject%7BT%7D/p/System.IntPtr/Android.Runtime.JniHandleOwnership/) se utiliza para convertir el identificador de Java en una instancia de objeto fuertemente tipado.
 
-<a name="_Binding_Constructors" />
 
 ### <a name="binding-constructors"></a>Constructores de enlace
 
@@ -444,8 +427,7 @@ public Integer (int value)
 
 El [JNIEnv.CreateInstance](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CreateInstance/) métodos son aplicaciones auxiliares para realizar un `JNIEnv.FindClass`, `JNIEnv.GetMethodID`, `JNIEnv.NewObject`, y `JNIEnv.DeleteGlobalReference` en el valor devuelto de `JNIEnv.FindClass`. Para obtener más información, vea la siguiente sección.
 
- <a name="_Supporting_Inheritance,_Interfaces" />
-
+<a name="_Supporting_Inheritance,_Interfaces_1" />
 
 ### <a name="supporting-inheritance-interfaces"></a>Compatibilidad con herencia, Interfaces
 
@@ -488,7 +470,6 @@ partial class ManagedAdder : Adder {
 
 En este caso, el `Adder` tipo de C# *alias* el `Adder` tipo de Java. El `[Register]` atributo se utiliza para especificar el nombre JNI de la `mono.android.test.Adder` tipo de Java y el `DoNotGenerateAcw` propiedad se utiliza para desactivar la generación de ACW. Esto dará como resultado la generación de un ACW para la `ManagedAdder` escribe, lo que correctamente las subclases el `mono.android.test.Adder` tipo. Si el `RegisterAttribute.DoNotGenerateAcw` propiedad no había sido utiliza, a continuación, el proceso de compilación Xamarin.Android habría generado un nuevo `mono.android.test.Adder` tipo de Java. Eso resultaría en errores de compilación, como la `mono.android.test.Adder` tipo estará presente dos veces, en dos archivos independientes.
 
- <a name="_Binding_Virtual_Methods" />
 
 
 ### <a name="binding-virtual-methods"></a>Enlazar métodos virtuales
@@ -501,7 +482,6 @@ Enlace `virtual` métodos para permitir el reemplazo por las subclases requiere 
 
 1.  **Registro (método)**
 
-<a name="_Method_Binding" />
 
 #### <a name="method-binding"></a>Enlace (método)
 
@@ -562,7 +542,6 @@ Una vez que se obtiene el identificador de método, `GetType` se compara con `Th
 
 Cuando `GetType` no coincide con `ThresholdType`, `Adder` derivado (por ejemplo, por `ManagedAdder`) y el `Adder.Add` implementación solo se invocará si invoca la subclase `base.Add`. Este es el caso de envío no virtual, que es donde `ThresholdClass` entra en juego. `ThresholdClass` Especifica qué clase de Java proporcionará la implementación del método que se va a invocar.
 
- <a name="_Method_Registration" />
 
 
 #### <a name="method-registration"></a>Registro (método)
@@ -657,7 +636,6 @@ Por último, el `n_Add` método es responsable de serializar los parámetros JNI
 
 Nota: Use siempre `JniHandleOwnership.DoNotTransfer` al obtener una MCW a través de una instancia de Java. Tratándolos como una referencia local (y, por tanto, al llamar a `JNIEnv.DeleteLocalRef`) se interrumpirá administrados -&gt; Java -&gt; pila transiciones administradas.
 
- <a name="_Complete_Adder_Binding" />
 
 
 ### <a name="complete-adder-binding"></a>Completar agregador enlace
@@ -719,7 +697,6 @@ public class Adder : Java.Lang.Object {
 }
 ```
 
- <a name="_Restrictions" />
 
 
 ### <a name="restrictions"></a>Restricciones
@@ -738,7 +715,6 @@ A continuación, para la interacción de GC del tipo *no debe* tienen todos los 
 Si el tipo debe contener un campo de instancia que se puede hacer referencia a un `Java.Lang.Object` de instancias, el tipo de campo debe ser `System.WeakReference` o `GCHandle`.
 
 
- <a name="_Binding_Abstract_Methods" />
 
 ## <a name="binding-abstract-methods"></a>Enlazar métodos abstractos
 
@@ -778,7 +754,6 @@ partial class AdderInvoker : Adder {
 
 El `Invoker` tipo solo es necesaria cuando se obtienen las referencias JNI a instancias creadas para Java.
 
- <a name="_Binding_Interfaces" />
 
 ## <a name="binding-interfaces"></a>Interfaces de enlace
 
@@ -793,7 +768,6 @@ public interface Progress {
 Enlaces de interfaz tienen dos partes: la definición de interfaz de C# y una definición de invocador para la interfaz.
 
 
-<a name="_Interface_Definition" />
 
 ### <a name="interface-definition"></a>Definición de la interfaz
 
@@ -828,7 +802,6 @@ public interface IAdderProgress : IJavaObject {
 Observe que en los pasos anteriores se asigna el Java `int[]` parámetro a un [JavaArray&lt;int&gt;](https://developer.xamarin.com/api/type/Android.Runtime.JavaArray%601/).
 Esto no es necesario: se puede enlazarlo con C# `int[]`, o un `IList<int>`, u otra cosa por completo. Cualquier tipo que se selecciona, el `Invoker` debe ser capaz de traducir en un Java `int[]` tipo de llamada.
 
-<a name="_Invoker_Definition" />
 
 ### <a name="invoker-definition"></a>Definición del invocador
 
@@ -857,7 +830,6 @@ Hay dos posibles soluciones a este: realizar un seguimiento de la interfaz que p
 
 La definición de invocador tiene seis secciones: el constructor, el `Dispose` método, el `ThresholdType` y `ThresholdClass` miembros, la `GetObject` método, implementación de método de interfaz y la implementación del método de conector.
 
- <a name="_Constructor" />
 
 
 #### <a name="constructor"></a>Constructor
@@ -879,7 +851,6 @@ partial class IAdderProgressInvoker {
 
 Nota: La `Handle` propiedad debe utilizarse dentro del cuerpo del constructor y no el `handle` parámetro, como sucede en v4.0 Android el `handle` parámetro puede ser válido después de que el constructor base termina de ejecutarse.
 
-<a name="_Dispose_Method" />
 
 #### <a name="dispose-method"></a>Dispose (Método)
 
@@ -897,7 +868,6 @@ partial class IAdderProgressInvoker {
 }
 ```
 
-<a name="_ThresholdType_and_ThresholdClass" />
 
 #### <a name="thresholdtype-and-thresholdclass"></a>ThresholdType y ThresholdClass
 
@@ -918,7 +888,6 @@ partial class IAdderProgressInvoker {
 }
 ```
 
-<a name="_GetObject_Method" />
 
 #### <a name="getobject-method"></a>GetObject (Método)
 
@@ -933,7 +902,6 @@ partial class IAdderProgressInvoker {
 }
 ```
 
-<a name="_Interface_Methods" />
 
 #### <a name="interface-methods"></a>Métodos de interfaz
 
@@ -951,7 +919,6 @@ partial class IAdderProgressInvoker {
 }
 ```
 
- <a name="_Connector_Methods" />
 
 
 #### <a name="connector-methods"></a>Métodos de conector
@@ -986,7 +953,6 @@ int[] _values = (int[]) JNIEnv.GetArray(values, JniHandleOwnership.DoNotTransfer
 
 Sin embargo, tenga en cuenta que `JNIEnv.GetArray` copia toda la matriz entre las máquinas virtuales, por lo que para matrices de gran tamaño Esto podría resultar en una gran cantidad de presión de GC agregada.
 
-<a name="_Complete_Invoker_Definition" />
 
 ### <a name="complete-invoker-definition"></a>Completar la definición del invocador
 
@@ -1060,7 +1026,6 @@ new JValue (currentSum));
 }
 ```
 
- <a name="_JNI_Object_References" />
 
 
 ## <a name="jni-object-references"></a>Referencias a objetos JNI
@@ -1077,13 +1042,11 @@ Emuladores tienen un límite de 2.000 referencias globales pendientes, mientras 
 
 Referencias parciales de globales solo están disponibles en Android v2.2 (Froyo) y versiones posteriores. Se pueden eliminar las referencias débiles globales con [JNIEnv.DeleteWeakGlobalRef](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.DeleteWeakGlobalRef/(System.IntPtr)).
 
-<a name="_Dealing_With_JNI_Local_References" />
 
 ### <a name="dealing-with-jni-local-references"></a>Tratamiento de las referencias JNI Local
 
 El [JNIEnv.GetObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetObjectField/), [JNIEnv.GetStaticObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticObjectField/), [JNIEnv.CallObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallObjectMethod/), [JNIEnv.CallNonvirtualObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualObjectMethod/)y [JNIEnv.CallStaticObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticObjectMethod/) métodos devuelven un `IntPtr` que contiene una referencia local JNI a un objeto de Java, o `IntPtr.Zero` si Java devuelve `null`. Debido al número limitado de referencias locales que pueden estar pendientes en una vez (512 entradas) es deseable para asegurarse de que las referencias se eliminan de manera oportuna. Hay tres maneras de referencias locales puedan abordarse: eliminar de forma explícita, crear un `Java.Lang.Object` instancia para contener usarlas y que estás usando `Java.Lang.Object.GetObject<T>()` para crear un contenedor administrado que se puede llamar a su alrededor.
 
- <a name="_Explicitly_Deleting_Local_References" />
 
 
 ### <a name="explicitly-deleting-local-references"></a>Eliminar explícitamente referencias locales
@@ -1100,7 +1063,6 @@ finally {
 }
 ```
 
- <a name="_Wrapping_with_Java.Lang.Object" />
 
 
 ### <a name="wrapping-with-javalangobject"></a>Ajuste con Java.Lang.Object
@@ -1131,7 +1093,6 @@ using (var value = new Java.Lang.Object (lref, JniHandleOwnership.TransferLocalR
 }
 ```
 
- <a name="_Using_Java.Lang.Object.GetObject&lt;T&gt;()" />
 
 
 ### <a name="using-javalangobjectgetobjectlttgt"></a>Usar Java.Lang.Object.GetObject&lt;T&gt;)
@@ -1170,13 +1131,12 @@ Nota: a diferencia de los demás `JNIEnv` método que devuelve instancias de obj
 
 ## <a name="instance-fields"></a>Campos de instancia
 
-Campos se manipulan mediante *campo identificadores*. Id. de campo se obtienen a través de [JNIEnv.GetFieldID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetFieldID/), lo que requiere la clase que el campo está definido en el nombre del campo y el [JNI tipo firma](#_JNI_Type_Signatures) del campo.
+Campos se manipulan mediante *campo identificadores*. Id. de campo se obtienen a través de [JNIEnv.GetFieldID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetFieldID/), lo que requiere la clase que el campo está definido en el nombre del campo y el [JNI tipo firma](#JNI_Type_Signatures) del campo.
 
 Id. de campo no es necesario que se libere y son válidos, siempre y cuando se carga el tipo de Java correspondiente. (Android no admite actualmente la descarga de clase.)
 
 Hay dos conjuntos de métodos para manipular los campos de instancia: uno para leer campos de instancia y otro para la escritura de campos de instancia. Todos los conjuntos de métodos requieren un identificador de campo leer o escribir el valor del campo.
 
-<a name="_Reading_Instance_Field_Values" />
 
 ### <a name="reading-instance-field-values"></a>Leer valores de campo de instancia
 
@@ -1207,7 +1167,6 @@ donde `*` es el tipo del campo:
 
 
 
- <a name="_Writing_Instance_Field_Values" />
 
 
 ### <a name="writing-instance-field-values"></a>Escribiendo valores de campo de instancia
@@ -1243,13 +1202,12 @@ donde *tipo* es el tipo del campo:
 
 ## <a name="static-fields"></a>Campos estáticos
 
-Los campos estáticos se manipulan mediante *campo identificadores*. Id. de campo se obtienen a través de [JNIEnv.GetStaticFieldID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticFieldID/), lo que requiere la clase que el campo está definido en el nombre del campo y el [JNI tipo firma](#JNI%20Type%20Signatures) del campo.
+Los campos estáticos se manipulan mediante *campo identificadores*. Id. de campo se obtienen a través de [JNIEnv.GetStaticFieldID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticFieldID/), lo que requiere la clase que el campo está definido en el nombre del campo y el [JNI tipo firma](#JNI_Type_Signatures) del campo.
 
 Id. de campo no es necesario que se libere y son válidos, siempre y cuando se carga el tipo de Java correspondiente. (Android no admite actualmente la descarga de clase.)
 
 Hay dos conjuntos de métodos para manipular los campos estáticos: uno para leer campos de instancia y otro para la escritura de campos de instancia. Todos los conjuntos de métodos requieren un identificador de campo leer o escribir el valor del campo.
 
-<a name="_Reading_Static_Field_Values" />
 
 ### <a name="reading-static-field-values"></a>Lectura de los valores de campo estático
 
@@ -1278,7 +1236,6 @@ donde `*` es el tipo del campo:
 -   [JNIEnv.GetStaticDoubleField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticDoubleField/) &ndash; leer el valor de `double` campos estáticos.
 
 
-<a name="_Writing_Static_Field_Values" />
 
 ### <a name="writing-static-field-values"></a>Escribiendo valores de campo estático
 
@@ -1313,7 +1270,7 @@ donde *tipo* es el tipo del campo:
 
 ## <a name="instance-methods"></a>Métodos de instancia
 
-Métodos de instancia se invocan mediante *método identificadores*. Método identificadores se obtienen a través de [JNIEnv.GetMethodID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetMethodID/), que requiere que el tipo que está definido el método en el nombre del método y el [JNI tipo firma](#_JNI_Type_Signatures) del método.
+Métodos de instancia se invocan mediante *método identificadores*. Método identificadores se obtienen a través de [JNIEnv.GetMethodID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetMethodID/), que requiere que el tipo que está definido el método en el nombre del método y el [JNI tipo firma](#JNI_Type_Signatures) del método.
 
 Id. de método no es necesario que se libere y son válidos, siempre y cuando se carga el tipo de Java correspondiente. (Android no admite actualmente la descarga de clase.)
 
@@ -1323,7 +1280,6 @@ Métodos de interfaz sólo se pueden buscar dentro del tipo declarativo; no se p
 
 Cualquier método declarado en la clase o cualquier clase base o interfaz implementada se puede buscar.
 
-<a name="_Virtual_Method_Invocation" />
 
 ### <a name="virtual-method-invocation"></a>Invocación del método virtual
 
@@ -1352,7 +1308,6 @@ donde `*` es el tipo de valor devuelto del método.
 -   [JNIEnv.CallDoubleMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallDoubleMethod/) &ndash; invocar un método que devuelve un `double` valor.
 
 
-<a name="_Non-virtual_Method_Invocation" />
 
 ### <a name="non-virtual-method-invocation"></a>Invocación del método no virtual
 
@@ -1381,15 +1336,14 @@ donde `*` es el tipo de valor devuelto del método. La invocación del método v
 -   [JNIEnv.CallNonvirtualDoubleMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualDoubleMethod/) &ndash; no prácticamente invocar un método que devuelve un `double` valor.
 
 
- <a name="_Static_Methods" />
+<a name="_Static_Methods" />
 
 ## <a name="static-methods"></a>Métodos estáticos
 
-Métodos estáticos se invocan a través de *método identificadores*. Método identificadores se obtienen a través de [JNIEnv.GetStaticMethodID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticMethodID/), que requiere que el tipo que está definido el método en el nombre del método y el [JNI tipo firma](#JNI%20Type%20Signatures) del método.
+Métodos estáticos se invocan a través de *método identificadores*. Método identificadores se obtienen a través de [JNIEnv.GetStaticMethodID](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticMethodID/), que requiere que el tipo que está definido el método en el nombre del método y el [JNI tipo firma](#JNI_Type_Signatures) del método.
 
 Id. de método no es necesario que se libere y son válidos, siempre y cuando se carga el tipo de Java correspondiente. (Android no admite actualmente la descarga de clase.)
 
- <a name="_Static_Method_Invocation" />
 
 
 ### <a name="static-method-invocation"></a>Invocación de métodos estáticos
@@ -1419,8 +1373,7 @@ donde `*` es el tipo de valor devuelto del método.
 -   [JNIEnv.CallStaticDoubleMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticDoubleMethod/) &ndash; invocar un método estático que devuelve un `double` valor.
 
 
- <a name="_JNI_Type_Signatures" />
-
+<a name="JNI_Type_Signatures" />
 
 ## <a name="jni-type-signatures"></a>Signaturas de tipo JNI
 
@@ -1453,9 +1406,6 @@ Hay cuatro tipos de referencias de tipo JNI:
 -  **array**
 
 
- <a name="_Built-in_Type_References" />
-
-
 ### <a name="built-in-type-references"></a>Referencias de tipos integrados
 
 Las referencias de tipos integrados son un carácter único, que se usa para hacer referencia a tipos de valor integrados. La asignación es como sigue:
@@ -1471,8 +1421,7 @@ Las referencias de tipos integrados son un carácter único, que se usa para hac
 -  `"V"` para `void` tipos de valor devuelto de método.
 
 
- <a name="_Simplified_Type_References" />
-
+<a name="_Simplified_Type_References_1" />
 
 ### <a name="simplified-type-references"></a>Referencias de tipos simplificada
 
@@ -1486,7 +1435,6 @@ Hay dos maneras para obtener una referencia de tipo simplificada:
 
 Cualquiera de los dos se producirá en el tipo de Java [java.lang.Thread.State](http://developer.android.com/reference/java/lang/Thread.State.html) que se asigna a la referencia de tipo simplificado `java/lang/Thread$State`.
 
-<a name="_Type_References" />
 
 ### <a name="type-references"></a>Referencias de tipos
 
@@ -1528,7 +1476,6 @@ static {};
 `Thread.State` es un tipo de enumeración de Java, por lo que podemos usar la firma de la `valueOf` método para determinar que la referencia de tipo es Ljava/lang/Thread$ estado;.
 
 
-<a name="_Array_Type_References" />
 
 ### <a name="array-type-references"></a>Referencias de tipos de matriz
 
@@ -1537,7 +1484,6 @@ No se pueden usar referencias de tipo simplificado al especificar matrices.
 
 Por ejemplo, `int[]` es `"[I"`, `int[][]` es `"[[I"`, y `java.lang.Object[]` es `"[Ljava/lang/Object;"`.
 
-<a name="_Java_Generics_and_Type_Erasure" />
 
 
 ## <a name="java-generics-and-type-erasure"></a>Genéricos de Java y borrado de tipos
@@ -1547,7 +1493,6 @@ Hay algunos "arrugas", pero esas arrugas están en cómo Java interactúa con lo
 
 No hay ninguna diferencia entre un tipo genérico o miembro y un tipo no genérico o un miembro al interactuar a través de JNI. Por ejemplo, el tipo genérico [java.lang.Class&lt;T&gt; ](http://developer.android.com/reference/java/lang/Class.html) también es el tipo genérico "sin formato" `java.lang.Class`, ambos de los cuales tienen la misma referencia de tipo simplificado, `"java/lang/Class"`.
 
-<a name="Java_Native_Interface_Support" />
 
 ## <a name="java-native-interface-support"></a>Compatibilidad con la interfaz nativa de Java
 
@@ -1610,7 +1555,6 @@ Activity mapActivity = Java.Lang.Object.GetObject<Activity>(lrefActivity, JniHan
 
 Además, todas las funciones JNI se han modificado mediante la eliminación de la `JNIEnv*` parámetro está presente en cada función JNI.
 
-<a name="_Summary" />
 
 ## <a name="summary"></a>Resumen
 

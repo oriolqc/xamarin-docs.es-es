@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 56d868f64de009d01930ec34ee2cb436276006ef
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 287f564ba74050aa8a06e5a582ae8db6657e440e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
@@ -20,23 +20,6 @@ _Existen muchas técnicas para aumentar el rendimiento de las aplicaciones compi
 
 El mal rendimiento de una aplicación se manifiesta de muchas formas. Puede hacer que parezca que una aplicación deja de responder, puede ocasionar un desplazamiento lento y puede reducir la duración de la batería. La optimización del rendimiento conlleva mucho más que la mera implementación de código eficaz. También debe tenerse en cuenta la experiencia de rendimiento de la aplicación del usuario. Por ejemplo, asegurarse de que las operaciones se ejecuten sin evitar que el usuario realice otras actividades puede ayudar a mejorar su experiencia.
 
-Existen varias técnicas para aumentar el rendimiento, y la percepción de rendimiento, de las aplicaciones compiladas con la plataforma Xamarin. Son los siguientes:
-
-- [Usar el generador de perfiles](#profiler)
-- [Liberar los recursos de IDisposable](#idisposable)
-- [Cancelar la suscripción a eventos](#events)
-- [Usar referencias débiles para evitar objetos inmortales](#weakreferences)
-- [Retrasar el consumo de recursos de la creación de objetos](#lazy)
-- [Implementar operaciones asincrónicas](#async)
-- [Usar el recolector de elementos no utilizados SGen](#sgen)
-- [Reducir el tamaño de la aplicación](#linker)
-- [Optimizar los recursos de imagen](#optimizeimages)
-- [Reducir el período de activación de la aplicación](#activationperiod)
-- [Reducir la comunicación con servicios web](#webservicecommunication)
-
-Este [vídeo de Xamarin University](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps) gratuito además incluye sugerencias útiles para diseñar aplicaciones de Xamarin.
-
-[ ![](memory-perf-best-practices-images/clancey-sml.png "Vídeo gratuito de Xamarin University sobre cómo evitar riesgos comunes")](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)
 
 <a name="profiler" />
 

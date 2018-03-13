@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: ba460bee067162f8e42f84f230f93cb1cf98ba98
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b10894d6b18d78d682825000726c5ef2cbe5ba6b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="walkthrough---using-background-location"></a>Tutorial: con la ubicación de fondo
 
@@ -31,55 +31,55 @@ En este tutorial se explica algunos clave backgrounding conceptos, como registra
 
     En Visual Studio para Mac, tendrá una apariencia similar algo parecido a esto:
 
-    [![](location-walkthrough-images/image7.png "Colocar una marca de verificación Habilitar modos en segundo plano y las casillas de verificación de las actualizaciones de ubicación")](location-walkthrough-images/image7.png)
+    [![](location-walkthrough-images/image7.png "Colocar una marca de verificación Habilitar modos en segundo plano y las casillas de verificación de las actualizaciones de ubicación")](location-walkthrough-images/image7.png#lightbox)
 
     En Visual Studio, **Info.plist** debe actualizarse manualmente mediante la adición de los siguientes pares de clave/valor:
 
-        ```csharp
-        <key>UIBackgroundModes</key>
-        <array>
-            <string>location</string>
-        </array>
-        ```
+    ```xml
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>location</string>
+    </array>
+    ```
 
 1. Ahora que la aplicación está registrada, pueden obtener datos de ubicación del dispositivo. En iOS, el `CLLocationManager` clase se utiliza para tener acceso a información de ubicación y puede generar los eventos que proporcionan actualizaciones de ubicación.
 
 1. En el código, cree una nueva clase denominada `LocationManager` que proporciona un único lugar para varias pantallas y código para suscribirse a las actualizaciones de ubicación. En el `LocationManager` clase, asegúrese de una instancia de la `CLLocationManager` denominado `LocMgr`:
 
-```csharp
-        public class LocationManager
-        {
-          protected CLLocationManager locMgr;
+    ```csharp
+    public class LocationManager
+    {
+        protected CLLocationManager locMgr;
 
-          public LocationManager (){
+        public LocationManager () {
             this.locMgr = new CLLocationManager();
             this.locMgr.PausesLocationUpdatesAutomatically = false;
 
             // iOS 8 has additional permissions requirements
             if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
-              locMgr.RequestAlwaysAuthorization (); // works in background
-              //locMgr.RequestWhenInUseAuthorization (); // only in foreground
+                locMgr.RequestAlwaysAuthorization (); // works in background
+                //locMgr.RequestWhenInUseAuthorization (); // only in foreground
             }
 
             if (UIDevice.CurrentDevice.CheckSystemVersion (9, 0)) {
-               locMgr.AllowsBackgroundLocationUpdates = true;
+                locMgr.AllowsBackgroundLocationUpdates = true;
             }
-          }
-
-          public CLLocationManager LocMgr{
-            get { return this.locMgr; }
-          }
         }
-```
 
-    The code above sets a number of properties and permissions on the [CLLocationManager](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/) class:
+        public CLLocationManager LocMgr {
+            get { return this.locMgr; }
+        }
+    }
+    ```
+
+    El código anterior establece un número de propiedades y los permisos en el [CLLocationManager](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/) clase:
 
     - `PausesLocationUpdatesAutomatically` : Es un valor booleano que se pueden establecer dependiendo de si el sistema se puede pausar las actualizaciones de ubicación. En algunos dispositivos el valor predeterminado es `true`, que puede hacer que el dispositivo seguir recibiendo actualizaciones de ubicación después de unos 15 minutos de fondo.
     - `RequestAlwaysAuthorization` -No debe pasar a este método para asignar al usuario de aplicación de la opción para permitir que la ubicación que se tenga acceso en segundo plano. `RequestWhenInUseAuthorization` También puede pasarse si desea volver a asignar al usuario la opción para permitir la ubicación tener acceso a solo cuando la aplicación está en primer plano.
     - `AllowsBackgroundLocationUpdates` : Es una propiedad booleana, introducida en iOS 9 que se pueden establecer para permitir que una aplicación recibir actualizaciones de ubicación cuando suspende.
 
     > [!IMPORTANT]
-> **ADVERTENCIA**: iOS 8 (y versiones posteriores) también requiere una entrada en el **Info.plist** archivo para mostrar al usuario como parte de la solicitud de autorización.
+    > **ADVERTENCIA**: iOS 8 (y versiones posteriores) también requiere una entrada en el **Info.plist** archivo para mostrar al usuario como parte de la solicitud de autorización.
 
 1. Agregar una clave `NSLocationAlwaysUsageDescription` o `NSLocationWhenInUseUsageDescription` con una cadena que se mostrará al usuario en la alerta que solicita acceso a datos de ubicación.
 
@@ -89,25 +89,25 @@ En este tutorial se explica algunos clave backgrounding conceptos, como registra
 1. Dentro de la `LocationManager` de clases, cree un método llamado `StartLocationUpdates` con el código siguiente. Este código muestra cómo para empezar a recibir actualizaciones de la ubicación desde la `CLLocationManager`:
 
     ```csharp
-        if (CLLocationManager.LocationServicesEnabled) {
-          //set the desired accuracy, in meters
-          LocMgr.DesiredAccuracy = 1;
-          LocMgr.LocationsUpdated += (object sender, CLLocationsUpdatedEventArgs e) =>
-          {
-              // fire our custom Location Updated event
-              LocationUpdated (this, new LocationUpdatedEventArgs (e.Locations [e.Locations.Length - 1]));
-          };
-          LocMgr.StartUpdatingLocation();
-        }
-        ```
+    if (CLLocationManager.LocationServicesEnabled) {
+        //set the desired accuracy, in meters
+        LocMgr.DesiredAccuracy = 1;
+        LocMgr.LocationsUpdated += (object sender, CLLocationsUpdatedEventArgs e) =>
+        {
+            // fire our custom Location Updated event
+            LocationUpdated (this, new LocationUpdatedEventArgs (e.Locations [e.Locations.Length - 1]));
+        };
+        LocMgr.StartUpdatingLocation();
+    }
+    ```
 
-    There are several important things happening in this method. First, we perform a check to see if the application has access to location data on the device. We verify this by calling `LocationServicesEnabled` on the `CLLocationManager`. This method will return **false** if the user has denied the application access to location information.
+    Hay varias cosas importantes que ocurre en este método. En primer lugar, se realiza una comprobación para ver si la aplicación tiene acceso a los datos de ubicación en el dispositivo. Comprobarlo mediante una llamada a `LocationServicesEnabled` en el `CLLocationManager`. Este método devolverá **false** si el usuario ha denegado el acceso a la aplicación a la información de ubicación.
 
-1. Next, tell the location manager how often to update. `CLLocationManager` provides many options for filtering and configuring location data, including the frequency of updates. In this example, set the `DesiredAccuracy` to update whenever the location changes by a meter. For more information on configuring location update frequency and other preferences, refer to the [CLLocationManager Class Reference](http://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) in the Apple documentation.
+1. A continuación, indicar al administrador de ubicación con qué frecuencia actualizar. `CLLocationManager` proporciona muchas opciones para el filtrado y cómo configurar datos de ubicación, incluida la frecuencia de las actualizaciones. En este ejemplo, establezca el `DesiredAccuracy` para actualizar cada vez que cambia la ubicación de un medidor. Para obtener más información acerca de cómo configurar la frecuencia de actualización de la ubicación y otras preferencias, consulte el [CLLocationManager Class Reference](http://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) en la documentación de Apple.
 
-1. Finally, call `StartUpdatingLocation` on the `CLLocationManager` instance. This tells the location manager to get an initial fix on the current location, and to start sending updates
+1. Por último, llame a `StartUpdatingLocation` en el `CLLocationManager` instancia. Esto indica al administrador de ubicación para obtener una corrección inicial en la ubicación actual y comenzar a enviar las actualizaciones
 
-So far, the location manager has been created, configured with the kinds of data we want to receive, and has determined the initial location. Now the code needs to render the location data to the user interface. We can do this with a custom event that takes a `CLLocation` as an argument:
+Hasta ahora, el Administrador de ubicación se ha creado, configurado con los tipos de datos que desea recibir, y determinó la ubicación inicial. Ahora el código necesario representar los datos de ubicación para la interfaz de usuario. Podemos hacer esto con un evento personalizado que toma un `CLLocation` como argumento:
 
 ```csharp
 // event for the location changing
@@ -146,45 +146,47 @@ public class LocationUpdatedEventArgs : EventArgs
 1. En el panel de soluciones, haga doble clic en el `ViewController.cs` archivo y modificarlo para crear una nueva instancia de la LocationManager y llamar a `StartLocationUpdates`en él.
   Cambie el código por el siguiente aspecto:
 
-        #region Computed Properties
-        public static bool UserInterfaceIdiomIsPhone {
-                    get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
-                }
+    ```csharp
+    #region Computed Properties
+    public static bool UserInterfaceIdiomIsPhone {
+                get { return UIDevice.CurrentDevice.UserInterfaceIdiom == UIUserInterfaceIdiom.Phone; }
+            }
 
-        public static LocationManager Manager { get; set;}
-        #endregion
+    public static LocationManager Manager { get; set;}
+    #endregion
 
-        #region Constructors
-        public ViewController (IntPtr handle) : base (handle)
-        {
-        // As soon as the app is done launching, begin generating location updates in the location manager
-            Manager = new LocationManager();
-            Manager.StartLocationUpdates();
-        }
+    #region Constructors
+    public ViewController (IntPtr handle) : base (handle)
+    {
+    // As soon as the app is done launching, begin generating location updates in the location manager
+        Manager = new LocationManager();
+        Manager.StartLocationUpdates();
+    }
 
-        #endregion
+    #endregion
+    ```
 
     Esto iniciará las actualizaciones de la ubicación en el inicio de la aplicación, aunque no se mostrará ningún dato.
 
 1. Ahora que se reciben las actualizaciones de ubicación, actualizar la pantalla con la información de ubicación. El siguiente método obtiene la ubicación de nuestros `LocationUpdated` eventos y lo muestra en la interfaz de usuario:
 
-        #region Public Methods
-        public void HandleLocationChanged (object sender, LocationUpdatedEventArgs e)
-        {
-            // Handle foreground updates
-            CLLocation location = e.Location;
+    ```csharp
+    #region Public Methods
+    public void HandleLocationChanged (object sender, LocationUpdatedEventArgs e)
+    {
+        // Handle foreground updates
+        CLLocation location = e.Location;
 
-            LblAltitude.Text = location.Altitude + " meters";
-            LblLongitude.Text = location.Coordinate.Longitude.ToString ();
-            LblLatitude.Text = location.Coordinate.Latitude.ToString ();
-            LblCourse.Text = location.Course.ToString ();
-            LblSpeed.Text = location.Speed.ToString ();
+        LblAltitude.Text = location.Altitude + " meters";
+        LblLongitude.Text = location.Coordinate.Longitude.ToString ();
+        LblLatitude.Text = location.Coordinate.Latitude.ToString ();
+        LblCourse.Text = location.Course.ToString ();
+        LblSpeed.Text = location.Speed.ToString ();
 
-            Console.WriteLine ("foreground updated");
-        }
-
-        #endregion
-
+        Console.WriteLine ("foreground updated");
+    }
+    #endregion
+    ```
 
 Necesitamos suscribirse a la `LocationUpdated` evento en nuestros AppDelegate y llame al método nuevo para actualizar la interfaz de usuario. Agregue el código siguiente en `ViewDidLoad,` justo después de la `StartLocationUpdates` llamar:
 
@@ -203,43 +205,47 @@ public override void ViewDidLoad ()
 
 Ahora, cuando se ejecuta la aplicación, debería ser similar al siguiente:
 
-[![](location-walkthrough-images/image5.png "Ejecutar una aplicación de ejemplo")](location-walkthrough-images/image5.png)
+[![](location-walkthrough-images/image5.png "Ejecutar una aplicación de ejemplo")](location-walkthrough-images/image5.png#lightbox)
 
 ## <a name="handling-active-and-background-states"></a>Control de los estados activo y en segundo plano
 
 1. La aplicación salida de actualizaciones de ubicación mientras está en primer plano y activa. Para mostrar lo que sucede cuando la aplicación entra en el fondo, reemplace el `AppDelegate` cambios de estado de los métodos que realizan el seguimiento de aplicación para que la aplicación escribe en la consola cuando realiza una transición entre el primer plano y segundo plano:
 
-        public override void DidEnterBackground (UIApplication application)
-        {
-          Console.WriteLine ("App entering background state.");
-        }
+    ```csharp
+    public override void DidEnterBackground (UIApplication application)
+    {
+        Console.WriteLine ("App entering background state.");
+    }
 
-        public override void WillEnterForeground (UIApplication application)
-        {
-          Console.WriteLine ("App will enter foreground");
-        }
+    public override void WillEnterForeground (UIApplication application)
+    {
+        Console.WriteLine ("App will enter foreground");
+    }
+    ```
 
     Agregue el código siguiente en el `LocationManager` para imprimir continuamente la ubicación actualizada son estando disponibles en segundo plano los datos a la salida de la aplicación, para comprobar la información de ubicación:
 
-        public class LocationManager
+    ```csharp
+    public class LocationManager
+    {
+        public LocationManager ()
         {
-          public LocationManager ()
-          {
-            ...
-            LocationUpdated += PrintLocation;
-          }
-          ...
-
-          //This will keep going in the background and the foreground
-          public void PrintLocation (object sender, LocationUpdatedEventArgs e) {
-            CLLocation location = e.Location;
-            Console.WriteLine ("Altitude: " + location.Altitude + " meters");
-            Console.WriteLine ("Longitude: " + location.Coordinate.Longitude);
-            Console.WriteLine ("Latitude: " + location.Coordinate.Latitude);
-            Console.WriteLine ("Course: " + location.Course);
-            Console.WriteLine ("Speed: " + location.Speed);
-          }
+        ...
+        LocationUpdated += PrintLocation;
         }
+        ...
+
+        //This will keep going in the background and the foreground
+        public void PrintLocation (object sender, LocationUpdatedEventArgs e) {
+        CLLocation location = e.Location;
+        Console.WriteLine ("Altitude: " + location.Altitude + " meters");
+        Console.WriteLine ("Longitude: " + location.Coordinate.Longitude);
+        Console.WriteLine ("Latitude: " + location.Coordinate.Latitude);
+        Console.WriteLine ("Course: " + location.Course);
+        Console.WriteLine ("Speed: " + location.Speed);
+        }
+    }
+    ```
 
 1. Hay un problema restante con el código: intentar actualizar la interfaz de usuario cuando la aplicación se backgrounded causa iOS se finalizará lo. Cuando la aplicación entra en segundo plano, el código debe cancelar la suscripción a las actualizaciones de la ubicación y detener la actualización de la interfaz de usuario.
 
@@ -247,9 +253,11 @@ Ahora, cuando se ejecuta la aplicación, debería ser similar al siguiente:
 
     El fragmento de código siguiente muestra cómo utilizar una notificación para informar a la vista cuando se detenga las actualizaciones de la interfaz de usuario. Esto se ubicarán en `ViewDidLoad`:
 
-        UIApplication.Notifications.ObserveDidEnterBackground ((sender, args) => {
-          Manager.LocationUpdated -= HandleLocationChanged;
-        });
+    ```csharp
+    UIApplication.Notifications.ObserveDidEnterBackground ((sender, args) => {
+        Manager.LocationUpdated -= HandleLocationChanged;
+    });
+    ```
 
     Cuando se ejecuta la aplicación, la salida tendrá un aspecto similar al siguiente:
 

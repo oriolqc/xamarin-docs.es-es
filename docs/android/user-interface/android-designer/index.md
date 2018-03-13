@@ -7,17 +7,17 @@ ms.assetid: E38C9AD9-56AA-B983-8B21-E1F466C4DB36
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.openlocfilehash: c06dab9bf280a2543585d36147c7c3311f6445ad
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 90dc37612f36eb914c3aaa140200762945ac4516
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-designer"></a>Android Designer
 
 _Este artículo tratan las características del diseñador Xamarin.Android. Abarca conceptos básicos del diseñadores, que muestra cómo utilizar el diseñador para diseñar visualmente widgets y cómo editar las propiedades. También muestra cómo utilizar el diseñador para trabajar con interfaces de usuario y recursos en varias configuraciones, como temas, idiomas y configuraciones del dispositivo, así como cómo diseñar vistas alternativas como horizontal y vertical._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -37,22 +37,20 @@ Este artículo analiza las numerosas características del diseñador Xamarin.And
 9.  Cómo usar las herramientas de diseño de Material para generar aplicaciones compatibles con Material diseño.
 
 
-<a name="Sections" />
 
 ## <a name="sections"></a>Secciones
 
- [Mediante el Diseñador de Android](~/android/user-interface/android-designer/designer-walkthrough.md)
+ [Uso de Android Designer](~/android/user-interface/android-designer/designer-walkthrough.md)
 
- [Conceptos básicos de diseñadores](~/android/user-interface/android-designer/designer-basics.md)
+ [Conceptos básicos de Designer](~/android/user-interface/android-designer/designer-basics.md)
 
- [Los calificadores de recursos y opciones de visualización](~/android/user-interface/android-designer/resource-qualifiers.md)
+ [Calificadores de recursos y opciones de visualización](~/android/user-interface/android-designer/resource-qualifiers.md)
 
- [Vistas de diseño alternativo](~/android/user-interface/android-designer/alternative-layout-views.md)
+ [Vistas de diseños alternativos](~/android/user-interface/android-designer/alternative-layout-views.md)
 
- [Características de diseño de materiales](~/android/user-interface/android-designer/material-design-features.md)
+ [Características de Material Design](~/android/user-interface/android-designer/material-design-features.md)
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 

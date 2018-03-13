@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: beff54d2b2bb72b2adf1e77819c56004b92e13f7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 279b5bc1188c973fddc033f9b592e9acec703a59
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="passkit"></a>PassKit
 
@@ -22,7 +22,7 @@ Cartera es una aplicación para iPhone y iPod toca con iOS 6. Almacena y muestra
 
 Este documento presenta la cartera, mediante la API de Kit pasar con Xamarin.iOS y describe cómo implementar pasadas en el servidor.
 
- [ ![](passkit-images/image1.png "La cartera almacena y organiza todas las pasadas en un teléfono")](passkit-images/image1.png)
+ [![](passkit-images/image1.png "La cartera almacena y organiza todas las pasadas en un teléfono")](passkit-images/image1.png#lightbox)
 
 
 ## <a name="requirements"></a>Requisitos
@@ -55,7 +55,7 @@ En esencia, pasar Kit proporciona una manera sencilla y cómoda para almacenar y
 
 Kit de paso no es simplemente una API en CocoaTouch, en su lugar es parte de un mayor ecosistema de aplicaciones, datos y servicios que facilitan el uso compartido seguro y administración de códigos de barras y otros datos. Este diagrama de alto nivel muestra las distintas entidades que pueden estar implicadas en la creación y uso de pasos:
 
- [ ![](passkit-images/image2.png "Este diagrama de alto nivel muestra las entidades implicadas en la creación y uso de pasadas")](passkit-images/image2.png)
+ [![](passkit-images/image2.png "Este diagrama de alto nivel muestra las entidades implicadas en la creación y uso de pasadas")](passkit-images/image2.png#lightbox)
 
 Cada parte del ecosistema tiene un rol claramente definido:
 
@@ -86,7 +86,7 @@ Actualmente cinco tipos compatibles, que se pueden distinguir en la aplicación 
 
 Se muestran los tipos de fase de cinco en esta captura de pantalla (en orden: cupón, genérico, almacenar tarjeta, fase de embarque y vales de evento):
 
- [ ![](passkit-images/image3.png "Se muestran los tipos de fase de cinco en esta captura de pantalla")](passkit-images/image3.png)
+ [![](passkit-images/image3.png "Se muestran los tipos de fase de cinco en esta captura de pantalla")](passkit-images/image3.png#lightbox)
 
 ### <a name="file-structure"></a>Estructura de archivos
 
@@ -103,7 +103,7 @@ Un archivo de fase es realmente un archivo ZIP con un **.pkpass** , que contiene
 
 A continuación se muestra la estructura de directorios de un archivo de paso (este es el contenido del archivo ZIP):
 
- [ ![](passkit-images/image4.png "Estructura de directorios de un archivo de paso se muestra aquí")](passkit-images/image4.png)
+ [![](passkit-images/image4.png "Estructura de directorios de un archivo de paso se muestra aquí")](passkit-images/image4.png#lightbox)
 
 ### <a name="passjson"></a>pass.json
 
@@ -238,9 +238,9 @@ Para crear el siguiente no pasar el identificador de tipo.
 
 El primer paso es configurar un identificador de tipo pasar para diferentes _tipo_ de pase a ser compatibles. El Id. de pasar (o identificador de tipo pasar) crea un identificador único para el paso. Se usará este identificador para vincular el paso con la cuenta de desarrollador con un certificado.
 
-1. En el [sección certificados, identificadores y los perfiles del Portal de aprovisionamiento de iOS](https://developer.apple.com/account/overview.action), vaya a **identificadores** y seleccione **pasar identificadores de tipo** . A continuación, seleccione la  **+**  botón para crear un nuevo tipo de paso: [ ![ ] (passkit-images/passid.png "crear un nuevo tipo de paso")](passkit-images/passid.png)
+1. En el [sección certificados, identificadores y los perfiles del Portal de aprovisionamiento de iOS](https://developer.apple.com/account/overview.action), vaya a **identificadores** y seleccione **pasar identificadores de tipo** . A continuación, seleccione la  **+**  botón para crear un nuevo tipo de paso: [ ![ ] (passkit-images/passid.png "crear un nuevo tipo de paso")](passkit-images/passid.png#lightbox)
 
-2.   Proporcionar un **descripción** (nombre) y **identificador** (cadena única) para la fase. Tenga en cuenta que todos los identificadores de tipo pasar debe comenzar con la cadena `pass.` en este ejemplo se utiliza `pass.com.xamarin.coupon.banana` : [ ![ ] (passkit-images/register.png "proporcionar una descripción y un identificador")](passkit-images/register.png)
+2.   Proporcionar un **descripción** (nombre) y **identificador** (cadena única) para la fase. Tenga en cuenta que todos los identificadores de tipo pasar debe comenzar con la cadena `pass.` en este ejemplo se utiliza `pass.com.xamarin.coupon.banana` : [ ![ ] (passkit-images/register.png "proporcionar una descripción y un identificador")](passkit-images/register.png#lightbox)
 
 
 3.   Confirmar el Id. de pasar presionando el **registrar** botón.
@@ -252,11 +252,11 @@ El primer paso es configurar un identificador de tipo pasar para diferentes _tip
 
 Para crear un nuevo certificado para este identificador de tipo pasar, haga lo siguiente:
 
-1.  Seleccione el identificador de pasar recién creado en la lista y haga clic en **editar** : [ ![ ] (passkit-images/pass-done.png "seleccione el nuevo identificador de pasar de la lista")](passkit-images/pass-done.png)
+1.  Seleccione el identificador de pasar recién creado en la lista y haga clic en **editar** : [ ![ ] (passkit-images/pass-done.png "seleccione el nuevo identificador de pasar de la lista")](passkit-images/pass-done.png#lightbox)
 
     A continuación, seleccione **Create Certificate...** :
 
-    [ ![](passkit-images/cert-dist.png "Seleccione Crear certificado")](passkit-images/cert-dist.png)
+    [![](passkit-images/cert-dist.png "Seleccione Crear certificado")](passkit-images/cert-dist.png#lightbox)
 
 
 2.  Siga los pasos para crear una firma de solicitud certificado (CSR).
@@ -286,7 +286,7 @@ Ahora que hemos creado el tipo pasar manualmente se pueden crear un paso de prue
 
 Hay algunos archivos de origen en el código de ejemplo de este artículo que puede usarse para generar un paso. Usar los archivos en el `CouponBanana.raw` directorio del directorio CreateAPassManually. Los archivos siguientes están presentes:
 
- [ ![](passkit-images/image18.png "Estos archivos están presentes")](passkit-images/image18.png)
+ [![](passkit-images/image18.png "Estos archivos están presentes")](passkit-images/image18.png#lightbox)
 
 Abra pass.json y edite el JSON. Al menos debe actualizar el `passTypeIdentifier` y `teamIdentifer` para que coincida con la cuenta de desarrollador de Apple.
 
@@ -330,11 +330,11 @@ En el ejemplo de código para este artículo no existe, es un proyecto denominad
 
 Si tuviera que examinar los resultados de estas herramientas (establecer el nombre de archivo a .zip y, a continuación, ábralo), verá los archivos siguientes (tenga en cuenta la adición de la `manifest.json` y `signature` archivos):
 
- [ ![](passkit-images/image19.png "Examinar los resultados de estas herramientas")](passkit-images/image19.png)
+ [![](passkit-images/image19.png "Examinar los resultados de estas herramientas")](passkit-images/image19.png#lightbox)
 
 Una vez iniciado, ZIP y cambiar el nombre del archivo (p. ej. para `BananaCoupon.pkpass`) puede arrastrar en el simulador para probar o enviar por correo electrónico a sí mismo para recuperar en un dispositivo real. Debería ver una pantalla a **agregar** el paso, similar al siguiente:
 
- [ ![](passkit-images/image20.png "Agregar la pantalla de paso")](passkit-images/image20.png)
+ [![](passkit-images/image20.png "Agregar la pantalla de paso")](passkit-images/image20.png#lightbox)
 
 Normalmente se debería automatizar ese proceso en un servidor, sin embargo manual creación paso podría ser una opción para pequeñas empresas que sólo va a crear cupones que no requieren la compatibilidad de un servidor back-end.
 
@@ -344,7 +344,7 @@ Normalmente se debería automatizar ese proceso en un servidor, sin embargo manu
 
 Cartera es la parte central del ecosistema pasar Kit. Esta captura de pantalla muestra la cartera vacía y el aspecto de la lista de paso y pasa individual:
 
- [ ![](passkit-images/image21.png "Esta captura de pantalla muestra la cartera vacía y el aspecto de la lista de paso y pasa individual")](passkit-images/image21.png)
+ [![](passkit-images/image21.png "Esta captura de pantalla muestra la cartera vacía y el aspecto de la lista de paso y pasa individual")](passkit-images/image21.png#lightbox)
 
 Características de cartera incluyen:
 
@@ -377,9 +377,9 @@ Aplicaciones de conducto son aplicaciones intermedias que es posible que reciba 
 
 Esta captura de pantalla muestra cómo **correo** en iOS 6 reconoce un archivo adjunto de paso y (cuando tocadas) ofrece la posibilidad de **agregar** a cartera.
 
- [ ![](passkit-images/image22.png "Esta captura de pantalla muestra la forma en que el correo electrónico de iOS 6 reconoce un archivo adjunto de paso")](passkit-images/image22.png)
+ [![](passkit-images/image22.png "Esta captura de pantalla muestra la forma en que el correo electrónico de iOS 6 reconoce un archivo adjunto de paso")](passkit-images/image22.png#lightbox)
 
- [ ![](passkit-images/image23.png "Esta captura de pantalla muestra cómo ofrece el correo electrónico para agregar un anexo pase a cartera")](passkit-images/image23.png)
+ [![](passkit-images/image23.png "Esta captura de pantalla muestra cómo ofrece el correo electrónico para agregar un anexo pase a cartera")](passkit-images/image23.png#lightbox)
 
 Si está compilando una aplicación que podría ser un conducto para pasadas, pueden ser reconocidos por:
 
@@ -498,7 +498,7 @@ var passes = library.GetPasses ();  // returns PKPass[]
 
 Tenga en cuenta que el simulador no filtra la lista de los pasos que se devuelve, de por lo que este método siempre debe probarse en dispositivos reales. Esta lista se puede mostrar en un UITableView, la apariencia de la aplicación de ejemplo similar al siguiente después de que se han agregado dos cupones:
 
- [ ![](passkit-images/image29.png "La apariencia de la aplicación de ejemplo similar a éste después de que se han agregado dos cupones")](passkit-images/image29.png)
+ [![](passkit-images/image29.png "La apariencia de la aplicación de ejemplo similar a éste después de que se han agregado dos cupones")](passkit-images/image29.png#lightbox)
 
 
 ### <a name="displaying-passes"></a>Mostrar pasadas
@@ -520,7 +520,7 @@ string passInfo =
 
 Esta cadena se muestra como una alerta en el ejemplo:
 
- [ ![](passkit-images/image30.png "La alerta seleccionada del cupón en el ejemplo")](passkit-images/image30.png)
+ [![](passkit-images/image30.png "La alerta seleccionada del cupón en el ejemplo")](passkit-images/image30.png#lightbox)
 
 También puede usar el `LocalizedValueForFieldKey()` método para recuperar datos de campos en las fases que se han diseñado (puesto que sepa qué campos deben estar presente). El código de ejemplo no muestra esto.
 
@@ -541,7 +541,7 @@ NavigationController.PresentModalViewController (pkapvc, true);
 
 Se presentará la fase de **agregar** y **cancelar** opciones:
 
- [ ![](passkit-images/image20.png "El paso que se presentan las opciones de agregar y cancelar")](passkit-images/image20.png)
+ [![](passkit-images/image20.png "El paso que se presentan las opciones de agregar y cancelar")](passkit-images/image20.png#lightbox)
 
 ### <a name="replace-an-existing-pass"></a>Reemplazar una fase existente
 

@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: topgenorth
+ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: a299969e6251bcea59ea2ec52db90d59cf0461ad
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 04307eab1bc8dc28fa69315809e254c920fb6d56
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Enlaza los servicios en Xamarin.Android
 
@@ -36,7 +36,7 @@ Este diagrama muestra cómo la actividad, conexión de servicio, enlazador y ser
 
 Esta guía describe cómo extender el `Service` clase para implementar un servicio dependiente. También se tratará implementar `IServiceConnection` y ampliar `Binder` para permitir que un cliente para comunicarse con el servicio. Una aplicación de ejemplo incluye en esta guía, que contiene una solución con un solo proyecto Xamarin.Android llama  **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)**  . Se trata de una aplicación muy básica que muestra cómo implementar un servicio y cómo enlazar una actividad a él. El servicio dependiente tiene una API muy sencilla con un solo método, `GetFormattedTimestamp`, que devuelve una cadena que indica al usuario cuando se ha iniciado el servicio y cuánto tiempo lleva ejecutándose. La aplicación también permite al usuario a Desenlazar manualmente y enlazar con el servicio.
 
-[![Captura de pantalla de la aplicación se ejecuta en un teléfono Android](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png)
+[![Captura de pantalla de la aplicación se ejecuta en un teléfono Android](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
 
 ## <a name="implementing-and-consuming-a-bound-service"></a>Implementar y consumir un servicio dependiente
 

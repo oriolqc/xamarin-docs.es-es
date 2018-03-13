@@ -4,14 +4,15 @@ description: "Vea cómo la transformación sesga puede crear objetos gráficos s
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: b8bb4db49d3800d694724d6be8fe949b55060c21
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a18b60d486a911e4a76298fd20a70f16ac392881
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-skew-transform"></a>La transformación sesga
 
@@ -69,7 +70,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Valores de la `xSkew` argumento desplazar la parte inferior del texto adecuado para los valores positivos o a la izquierda para los valores negativos. Valores de `ySkew` desplazar a la derecha del texto hacia abajo para los valores positivos o hacia arriba para los valores negativos:
 
-[![](skew-images/skewexperiment-small.png "Captura de pantalla triple de la página de experimento sesgar")](skew-images/skewexperiment-large.png "Triple captura de pantalla de la página de experimento sesgar")
+[![](skew-images/skewexperiment-small.png "Captura de pantalla triple de la página de experimento sesgar")](skew-images/skewexperiment-large.png#lightbox "Triple captura de pantalla de la página de experimento sesgar")
 
 Si `xSkew` es el negativo de `ySkew`, el resultado es la rotación, pero también escalar un poco como las ventanas de esta pantalla se indica.
 
@@ -152,7 +153,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 Tal y como acerca a un ángulo positivos o negativos de 90 grados, acerca de la tangente infinito, pero ángulos hasta aproximadamente 80 grados o lo están para su uso:
 
-[![](skew-images/skewangleexperiment-small.png "Captura de pantalla triple de la página de experimento de ángulo de sesgo")](skew-images/skewangleexperiment-large.png "Triple captura de pantalla de la página de sesgo experimento de ángulo")
+[![](skew-images/skewangleexperiment-small.png "Captura de pantalla triple de la página de experimento de ángulo de sesgo")](skew-images/skewangleexperiment-large.png#lightbox "Triple captura de pantalla de la página de sesgo experimento de ángulo")
 
 Un sesgo horizontal negativo pequeño puede imitar oblicuo o cursiva el texto, como el **texto oblicua** muestra la página. El [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) clase muestra cómo hacerlo:
 
@@ -188,7 +189,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 El `TextAlign` propiedad de `SKPaint` está establecido en `Center`. Sin las transformaciones, la `DrawText` llamar a coordenadas de (0, 0) colocaría el texto con el centro horizontal de la línea base en la esquina superior izquierda. El `SkewDegrees` sesga el texto horizontalmente 20 grados con respecto a la línea de base. El `Translate` llamada mueve el centro horizontal de la línea de base del texto en el centro del lienzo:
 
-[![](skew-images/obliquetext-small.png "Captura de pantalla de la página de texto oblicua triple")](skew-images/obliquetext-large.png "Triple captura de pantalla de la página de texto oblicua")
+[![](skew-images/obliquetext-small.png "Captura de pantalla de la página de texto oblicua triple")](skew-images/obliquetext-large.png#lightbox "Triple captura de pantalla de la página de texto oblicua")
 
 El **sesgar sombra texto** página muestra cómo utilizar una combinación de una escala sesga y vertical de 45 grados para realizar una sombra de texto que se inclina fuera el texto. Aquí es la parte pertinente de la `PaintSurface` controlador:
 
@@ -221,11 +222,11 @@ using (SKPaint textPaint = new SKPaint())
 
 La sombra está mostrado primero y, a continuación, el texto:
 
-[![](skew-images/skewshadowtext1-small.png "Captura de pantalla triple de la página sesgar sombra texto")](skew-images/skewshadowtext1-large.png "Triple captura de pantalla de la página sesgar texto de instantáneas")
+[![](skew-images/skewshadowtext1-small.png "Captura de pantalla triple de la página sesgar sombra texto")](skew-images/skewshadowtext1-large.png#lightbox "Triple captura de pantalla de la página sesgar texto de instantáneas")
 
 Coordenada vertical se pasa a la `DrawText` método indica la posición del texto con respecto a la línea de base. Que es la misma coordenada vertical utilizada para el centro de sesgado. Esta técnica no funcionará si la cadena de texto contiene caracteres descendentes. Por ejemplo, sustituya la palabra "extraña" para "Sombra" y aquí de resultado:
 
-[![](skew-images/skewshadowtext2-small.png "Captura de pantalla triple de la página sesgar sombra texto con una palabra alternativa con trazos descendentes")](skew-images/skewshadowtext2-large.png "Triple captura de pantalla de la página sesgar sombra texto con una palabra alternativa con trazos descendentes")
+[![](skew-images/skewshadowtext2-small.png "Captura de pantalla triple de la página sesgar sombra texto con una palabra alternativa con trazos descendentes")](skew-images/skewshadowtext2-large.png#lightbox "Triple captura de pantalla de la página sesgar sombra texto con una palabra alternativa con trazos descendentes")
 
 Todavía se alinean las instantáneas y el texto en la línea de base, pero el efecto solo no es correcto. Para corregir esto necesita obtener los límites de texto:
 
@@ -245,7 +246,7 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 
 Ahora la sombra se extiende desde la parte inferior de los trazos descendentes:
 
-[![](skew-images/skewshadowtext3-small.png "Captura de pantalla triple de la página de texto de sombra sesgar con ajustes para los trazos descendentes")](skew-images/skewshadowtext3-large.png "Triple captura de pantalla de la página de texto de sombra sesgar con ajustes para los trazos descendentes")
+[![](skew-images/skewshadowtext3-small.png "Captura de pantalla triple de la página de texto de sombra sesgar con ajustes para los trazos descendentes")](skew-images/skewshadowtext3-large.png#lightbox "Triple captura de pantalla de la página de texto de sombra sesgar con ajustes para los trazos descendentes")
 
 
 ## <a name="related-links"></a>Vínculos relacionados

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 009e8fa78e0e9405cf264054ad79dcdf91e6d7c5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b8ee113a321dbc84cf12a7ef4bb5084c5307115b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="listview-and-the-activity-lifecycle"></a>ListView y el ciclo de vida de actividad
 
@@ -24,7 +24,6 @@ Sin embargo, si los datos se cambian con frecuencia o usa una gran cantidad de m
 
 Si el adaptador utiliza los recursos como memoria o un cursor administrado, no olvide liberen estos recursos en el método complementario para que se iniciaron (p. ej. objetos creados en `OnStart` puede eliminarse en `OnStop`).
 
-<a name="Configuration_Changes" />
 
 ## <a name="configuration-changes"></a>Cambios de configuración
 

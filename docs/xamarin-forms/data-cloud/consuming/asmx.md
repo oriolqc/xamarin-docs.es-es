@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 3362744d0d201ef82c846c80b0e1a87426953c85
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 3ddf481a2356d49f11b96f5a8a6b7f7a492fefc9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>Consumir un servicio Web ASP.NET (ASMX)
 
@@ -74,7 +74,7 @@ El servicio ASMX proporciona las siguientes operaciones:
 Para obtener más información acerca del modelo de datos usado en la aplicación, consulte [modelar los datos](~/xamarin-forms/data-cloud/walkthrough.md).
 
 > [!NOTE]
-> **Tenga en cuenta**: la aplicación de ejemplo consume el servicio hospedado en Xamarin ASMX que proporciona acceso de solo lectura para el servicio web. Por lo tanto, las operaciones que crean, actualización y eliminan datos no modificará los datos que se consume en la aplicación. Sin embargo, está disponible en una versión del servicio ASMX hospedable el **TodoASMXService** carpeta en la aplicación de ejemplo que lo acompaña. Esta versión de los completa que permite el servicio ASMX hospedable crear, actualizar, leer y eliminar el acceso a los datos.
+> La aplicación de ejemplo consume el servicio hospedado en Xamarin ASMX que proporciona acceso de solo lectura para el servicio web. Por lo tanto, las operaciones que crean, actualización y eliminan datos no modificará los datos que se consume en la aplicación. Sin embargo, está disponible en una versión del servicio ASMX hospedable el **TodoASMXService** carpeta en la aplicación de ejemplo que lo acompaña. Esta versión de los completa que permite el servicio ASMX hospedable crear, actualizar, leer y eliminar el acceso a los datos.
 
 A *proxy* debe generarse para consumir el servicio ASMX, que permite que la aplicación para conectarse al servicio. El proxy se construye por consumo metadatos de servicio que definen los métodos y la configuración del servicio asociado. Estos metadatos se muestran en forma de un documento de lenguaje de descripción de servicios Web (WSDL) que se genera mediante el servicio web. El proxy se genera al agregar una referencia web para el servicio web a los proyectos específicos de la plataforma.
 

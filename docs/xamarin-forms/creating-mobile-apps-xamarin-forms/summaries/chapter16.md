@@ -3,14 +3,15 @@ title: "Resumen del capítulo 16. Enlace de datos"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: ED997DB0-C229-4868-A5FB-928703B377D6
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 954d5d9e270db156f5ef2577706c667e05ab544c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cf08874f66c9ab21cd0ede642c8c94821b6c5a2a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-16-data-binding"></a>Resumen del capítulo 16. Enlace de datos
 
@@ -95,7 +96,7 @@ El [ **BindingModes** ](https://github.com/xamarin/xamarin-forms-book-samples/tr
 
 El [ **ReverseBinding** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/ReverseBinding) ejemplo establece los enlaces en el `Value` propiedad de la `Slider` que hacen referencia a la `FontSize` propiedad de cada `Label`. Esto parece ser con versiones anteriores, pero funciona mejor en inicializar el `Slider` elementos porque el `Value` propiedad de la `Slider` tiene un `DefaultBindingMode` de `TwoWay`.
 
-[![Captura de pantalla triple de invertir enlace](images/ch16fg06-small.png "invertir enlace")](images/ch16fg06-large.png "invertir enlace")
+[![Captura de pantalla triple de invertir enlace](images/ch16fg06-small.png "invertir enlace")](images/ch16fg06-large.png#lightbox "invertir enlace")
 
 Esto es análogo a cómo se definen los enlaces en MVVM y usará este tipo de enlace con frecuencia.
 

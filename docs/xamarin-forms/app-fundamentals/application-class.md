@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: d7965c5d4d65dd6bf7aa4128f467acd3e2d39e60
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c383808d443685c1561113e418aed62467f1d5bd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-class"></a>Clase de aplicación
 
@@ -98,7 +98,7 @@ if (Application.Current.Properties.ContainsKey("id"))
 Compruebe siempre la presencia de la clave antes de acceder a bloquearla para evitar errores inesperados.
 
 > [!NOTE]
-> **Nota:** el `Properties` diccionario solo puede serializar los tipos primitivos de almacenamiento. Intentar almacenar otros tipos (como `List<string>`) puede producir un error en modo silencioso.
+> El `Properties` diccionario solo puede serializar los tipos primitivos de almacenamiento. Intentar almacenar otros tipos (como `List<string>`) puede producir un error en modo silencioso.
 
 <!-- bugzilla 28657 -->
 
@@ -196,7 +196,7 @@ public class MainActivity :
 ```
 
 > [!NOTE]
-> **Nota:** hay una versión [ `FormsAppCompatActivity` ](~/xamarin-forms/platform/android/appcompat.md) clase base que puede utilizarse para admitir mejor Android de Material de diseño.
+> Hay una versión [ `FormsAppCompatActivity` ](~/xamarin-forms/platform/android/appcompat.md) clase base que puede utilizarse para admitir mejor Android de Material de diseño.
 > Esto se convertirá en la plantilla predeterminada de Android en el futuro, pero puede seguir [estas instrucciones](~/xamarin-forms/platform/android/appcompat.md) para actualizar las aplicaciones existentes de Android.
 
 

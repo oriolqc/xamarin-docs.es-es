@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: a3c9c76ce173606d206166b2bcfb9760eb5634ac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: abb8ee30828e5d9856b9fd72cca8adb669959818
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Publicación en la tienda de aplicaciones de TV de Apple
 
@@ -154,14 +154,14 @@ Con la aplicación Xamarin.tvOS configurada correctamente, ya está listo para r
     ![](app-store-publishing-images/buildxs01new.png "Seleccione la configuración de lanzamiento")
 2. En el menú **Compilación**, seleccione **Archivo para publicar**:
 
-    [ ![](app-store-publishing-images/buildxs02new.png "Seleccione Archivo para publicar")](app-store-publishing-images/buildxs02new.png)
+    [![](app-store-publishing-images/buildxs02new.png "Seleccione el archivo para su publicación")](app-store-publishing-images/buildxs02new.png#lightbox)
 3. Una vez creado el archivo, se mostrará la vista **Archives (Archivos)**:
 
-    [ ![](app-store-publishing-images/buildxs03new.png "La vista de archivos")](app-store-publishing-images/buildxs03new.png)
+    [![](app-store-publishing-images/buildxs03new.png "La vista de archivos")](app-store-publishing-images/buildxs03new.png#lightbox)
 
-#<a name="3-sign-and-distribute-your-app"></a>## 3 firmar y distribuir la aplicación
+### <a name="sign-and-distribute-your-app"></a>Firmar y distribuir la aplicación
 
-Cada vez que se compila la aplicación para el archivo, se abre automáticamente la *Archives View (Vista de archivos)*, que muestra todos los proyectos archivados, agrupados por solución. De manera predeterminada, esta vista solo muestra la solución abierta actual. Para ver todas las soluciones que tienen archivos, haga clic en la opción **Show all archives (Mostrar todos los archivos)**.
+Cada vez que compile la aplicación para el archivo, se abrirá automáticamente la *Archives View (Vista de archivos)*, que muestra todos los proyectos archivados; agrupados por solución. De manera predeterminada, esta vista solo muestra la solución abierta actual. Para ver todas las soluciones que tienen archivos, haga clic en la opción **Show all archives (Mostrar todos los archivos)**.
 
 Se recomienda que se mantengan los archivos que se implementan en los clientes (implementaciones App Store o Enterprise), por lo que cualquier información de depuración generada puede considerarse con una fecha posterior.
 
@@ -169,19 +169,19 @@ Para firmar la aplicación y prepararla para la distribución:
 
 1. Seleccione el **firmar y distribuir...** , se muestra a continuación:
 
-    [ ![](app-store-publishing-images/buildxs04new.png ", Seleccione theSign y distribuir...")](app-store-publishing-images/buildxs04new.png)
+    [![](app-store-publishing-images/buildxs04new.png ", Seleccione theSign y distribuir...")](app-store-publishing-images/buildxs04new.png#lightbox)
 2. De este modo, se abrirá el asistente para publicación. Seleccione el canal de distribución **App Store** para crear un paquete y abra Application Loader:
 
-    [ ![](app-store-publishing-images/distribute01.png "Seleccione el canal de distribución de la tienda de aplicaciones")](app-store-publishing-images/distribute01.png)
+    [![](app-store-publishing-images/distribute01.png "Seleccione el canal de distribución de la tienda de aplicaciones")](app-store-publishing-images/distribute01.png#lightbox)
 3. En la pantalla de perfil de aprovisionamiento, seleccione su identidad de firma y el correspondiente perfil de aprovisionamiento o volver a iniciar sesión con otra identidad:
 
-    [ ![](app-store-publishing-images/distribute02.png "Seleccione la identidad de firma y el correspondiente perfil de aprovisionamiento")](app-store-publishing-images/distribute02.png)
+    [![](app-store-publishing-images/distribute02.png "Seleccione la identidad de firma y el correspondiente perfil de aprovisionamiento")](app-store-publishing-images/distribute02.png#lightbox)
 4. Compruebe los detalles del paquete y haga clic en **Publicar** para guardar el paquete de `.ipa`:
 
-    [ ![](app-store-publishing-images/distribute03.png "Compruebe los detalles del paquete")](app-store-publishing-images/distribute03.png)
+    [![](app-store-publishing-images/distribute03.png "Compruebe los detalles del paquete")](app-store-publishing-images/distribute03.png#lightbox)
 5. Una vez que `.ipa` se haya guardado, la aplicación está lista para cargarse en iTunes Connect mediante Application Loader:
 
-    [ ![](app-store-publishing-images/distribute04.png "Cargar a iTunes conectarse mediante el cargador de aplicación")](app-store-publishing-images/distribute04.png)
+    [![](app-store-publishing-images/distribute04.png "Cargar a iTunes conectarse mediante el cargador de aplicación")](app-store-publishing-images/distribute04.png#lightbox)
 
 Una vez que se ha creado y archivado su compilación de distribución, ahora está listo para enviar su aplicación a iTunes Connect.
 
@@ -196,15 +196,15 @@ El flujo de trabajo de archivo en Visual Studio para Mac abrirá automáticament
 
 2. Seleccione *Deliver Your App* (Entregar la aplicación) y haga clic en el botón *Elegir*:
 
-    [ ![](app-store-publishing-images/publishvs01.png "Selección de Deliver Your App (Entregar la aplicación)")](app-store-publishing-images/publishvs01.png)
+    [![](app-store-publishing-images/publishvs01.png "Seleccione entrega la aplicación")](app-store-publishing-images/publishvs01.png#lightbox)
 
 3. Seleccione el archivo IPA o ZIP que ha creado anteriormente y haga clic en el botón **Aceptar**.
 4. Application Loader validará el archivo:
 
-    [ ![](app-store-publishing-images/publishvs02.png "La pantalla de validación de cargador de la aplicación")](app-store-publishing-images/publishvs02.png)
+    [![](app-store-publishing-images/publishvs02.png "La pantalla de validación de cargador de la aplicación")](app-store-publishing-images/publishvs02.png#lightbox)
 5. Haga clic en el botón *Siguiente* y la aplicación se validará en el App Store:
 
-    [ ![](app-store-publishing-images/publishvs03.png "La aplicación que se está validando frente a la tienda de aplicaciones")](app-store-publishing-images/publishvs03.png)
+    [![](app-store-publishing-images/publishvs03.png "La aplicación que se está validando frente a la tienda de aplicaciones")](app-store-publishing-images/publishvs03.png#lightbox)
 6. Haga clic en el botón **Enviar** para enviar la aplicación a Apple para su revisión.
 7. Application Loader le informará cuando el archivo se haya cargado correctamente.
 
@@ -214,7 +214,7 @@ El flujo de trabajo de archivo en Visual Studio para Mac abrirá automáticament
 
 Si vuelve a registrarse en iTunes Connect y seleccione la aplicación de la lista de aplicaciones disponibles, ahora debe mostrar el estado en iTunes Connect, que es **espera para su revisión** (puede leer temporalmente **cargar recibido** mientras se procesa):
 
-[ ![](app-store-publishing-images/image21.png "El estado en iTunes conectarse mostrando espera para su revisión")](app-store-publishing-images/image21.png)
+[![](app-store-publishing-images/image21.png "El estado en iTunes conectarse mostrando espera para su revisión")](app-store-publishing-images/image21.png#lightbox)
 
 <a name="Troubleshooting" />
 
@@ -231,8 +231,8 @@ En este artículo se presenta a una guía paso a paso para configurar, compilar 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Trabajar con iconos e imágenes](~/ios/tvos/app-fundamentals/icons-images.md)
+- [Trabajo con iconos e imágenes](~/ios/tvos/app-fundamentals/icons-images.md)
 - [Preparar el envío de la aplicación para el nuevo Televisor de Apple](https://developer.apple.com/tvos/submit/)
-- [Sugerencias sobre cómo presentar tienda de aplicaciones](https://developer.apple.com/appstore/resources/submission/tips.html)
-- [Comunes de rechazo](https://developer.apple.com/app-store/review/rejections/)
-- [Directrices de revisión de la tienda de aplicaciones](https://developer.apple.com/appstore/resources/approval/guidelines.html)
+- [Sugerencias de envío al App Store](https://developer.apple.com/appstore/resources/submission/tips.html)
+- [Rechazos de aplicaciones comunes](https://developer.apple.com/app-store/review/rejections/)
+- [Directrices de revisión del App Store](https://developer.apple.com/appstore/resources/approval/guidelines.html)

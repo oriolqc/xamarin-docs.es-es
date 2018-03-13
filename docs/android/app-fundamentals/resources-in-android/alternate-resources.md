@@ -6,12 +6,12 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: e421a52b1ae97b0beef59352a756401ed661051e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 7ebbf2a9215c8472ae2f286728cb2f819e8331cb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="alternate-resources"></a>Recursos alternativos
 
@@ -142,7 +142,7 @@ Android determina los recursos base iterando por la siguiente prueba de reglas:
 
 Estas reglas también se muestran en el siguiente diagrama de flujo:
 
-[![Diagrama de flujo de recursos](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png)
+[![Diagrama de flujo de recursos](alternate-resources-images/flowchart-sml.png)](alternate-resources-images/flowchart.png#lightbox)
 
 Cuando el sistema busca recursos específicos de la densidad y no encuentra, intentará buscar otros recursos específicos de densidad y escalarlos. Android no puede usar los recursos predeterminados necesariamente.
 Por ejemplo, cuando busca un recurso de baja densidad y no está disponible, Android puede seleccionar alta densidad y versión del recurso sobre los recursos predeterminados o medio de densidad. Esto consigue porque el recurso de alta densidad y se puede escalar hacia abajo en un factor de 0,5, lo que dará como resultado en menos problemas de visibilidad que la reducción de un recurso de densidad media que requieran un factor de 0,75.
@@ -196,4 +196,4 @@ A continuación figura el calificador de densidad de la pantalla, `ldpi`, que da
 Como resultado de este proceso, Android usará los recursos pueden dibujar en el directorio de recursos `drawable-en-port-ldpi` para el dispositivo.
 
 > [!NOTE]
-> **Nota:** los calificadores de tamaño de pantalla proporcionan una excepción a este proceso de selección. Es posible para Android seleccionar los recursos que están diseñados para una pantalla más pequeña que proporciona el dispositivo actual. Por ejemplo, un dispositivo de pantalla de gran tamaño puede utilizar los recursos que proporcione para una pantalla de tamaño normal. Sin embargo el inverso de esto no es cierto: el mismo dispositivo de pantalla de gran tamaño no usará los recursos proporcionados para una pantalla extra grande. Si Android no puede encontrar un conjunto de recursos que coincide con un tamaño de pantalla especificado, la aplicación se bloqueará.
+> Los calificadores de tamaño de pantalla proporcionan una excepción a este proceso de selección. Es posible para Android seleccionar los recursos que están diseñados para una pantalla más pequeña que proporciona el dispositivo actual. Por ejemplo, un dispositivo de pantalla de gran tamaño puede utilizar los recursos que proporcione para una pantalla de tamaño normal. Sin embargo el inverso de esto no es cierto: el mismo dispositivo de pantalla de gran tamaño no usará los recursos proporcionados para una pantalla extra grande. Si Android no puede encontrar un conjunto de recursos que coincide con un tamaño de pantalla especificado, la aplicación se bloqueará.

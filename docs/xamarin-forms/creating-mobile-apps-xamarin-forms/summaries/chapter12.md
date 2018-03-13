@@ -3,14 +3,15 @@ title: "Resumen de capítulo 12. Estilos"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 168ad0bc2f59f0afd5b457dba38ae39cfa148c89
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9563bc811250038e8932067280a8e5292a379077
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-12-styles"></a>Resumen de capítulo 12. Estilos
 
@@ -30,7 +31,7 @@ Puede especificar el `Value` configuración utilizando el elemento de propiedad 
 
 El [ **BasicStyle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyle) programa muestra la sintaxis básica y cómo hacer referencia a la `Style` con un `StaticResource` extensión de marcado:
 
-[![Captura de pantalla triple de estilo básico](images/ch12fg01-small.png "estilos básicos")](images/ch12fg01-large.png "estilos básicos")
+[![Captura de pantalla triple de estilo básico](images/ch12fg01-small.png "estilos básicos")](images/ch12fg01-large.png#lightbox "estilos básicos")
 
 El `Style` objeto y cualquier objeto creado en el `Style` objeto como un `Value` configuración se comparten entre todas las vistas que hacen referencia a que `Style`. El `Style` no puede contener cualquier elemento que no se pueden compartir como una `View` derivado.
 

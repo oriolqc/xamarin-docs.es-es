@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 2088ae055fb18b3b00712f063d2178f759021088
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9710e322460058902d89ec1a57c374b93beb82fb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="dynamic-styles"></a>Estilos dinámicos
 
@@ -81,8 +81,8 @@ public partial class DynamicStylesPage : ContentPage
 
 Cuando el `OnButtonClicked` se ejecuta el controlador de eventos, `searchBarStyle` cambiará entre `blueSearchBarStyle` y `greenSearchBarStyle`. El resultado es el aspecto que se muestra en las capturas de pantalla siguiente:
 
-[![](dynamic-images/dynamic-style-blue.png "Ejemplo de estilo dinámico de azul")](dynamic-images/dynamic-style-blue-large.png "azul, ejemplo de estilo dinámico")
-[![](dynamic-images/dynamic-style-green.png "verdes ejemplo de estilo dinámico") ] (dynamic-images/dynamic-style-green-large.png "Verdes ejemplo de estilo dinámico")
+[![](dynamic-images/dynamic-style-blue.png "Ejemplo de estilo dinámico de azul")](dynamic-images/dynamic-style-blue-large.png#lightbox "azul, ejemplo de estilo dinámico")
+[![](dynamic-images/dynamic-style-green.png "verdes ejemplo de estilo dinámico") ] (dynamic-images/dynamic-style-green-large.png#lightbox "Verdes ejemplo de estilo dinámico")
 
 En el ejemplo de código siguiente se muestra la página equivalente en C#:
 
@@ -162,8 +162,8 @@ El [ `SearchBar` ](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBa
 
 En el archivo de código subyacente, el constructor crea un [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/) entrada con la clave `searchBarStyle`, como por el ejemplo anterior que muestran estilos dinámicos. Cuando el `OnButtonClicked` se ejecuta el controlador de eventos, `searchBarStyle` cambiará entre `blueSearchBarStyle` y `greenSearchBarStyle`. El resultado es el aspecto que se muestra en las capturas de pantalla siguiente:
 
-[![](dynamic-images/dynamic-style-inheritance-blue.png "Ejemplo de la herencia de estilo dinámico de azul")](dynamic-images/dynamic-style-inheritance-blue-large.png "azul, ejemplo de la herencia de estilo dinámico")
-[![](dynamic-images/dynamic-style-inheritance-green.png "verdes estilo dinámico Ejemplo de la herencia")](dynamic-images/dynamic-style-inheritance-green-large.png "verdes de ejemplo de la herencia de estilo dinámico")
+[![](dynamic-images/dynamic-style-inheritance-blue.png "Ejemplo de la herencia de estilo dinámico de azul")](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox "azul, ejemplo de la herencia de estilo dinámico")
+[![](dynamic-images/dynamic-style-inheritance-green.png "verdes estilo dinámico Ejemplo de la herencia")](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox "verdes de ejemplo de la herencia de estilo dinámico")
 
 En el ejemplo de código siguiente se muestra la página equivalente en C#:
 

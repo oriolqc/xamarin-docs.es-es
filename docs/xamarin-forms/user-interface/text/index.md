@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: c276352bc0ef1478c5145089277183b774bd9bff
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 55d13589e4241e9f4e29aea9a55346a8f514f208
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="text"></a>Texto
 
@@ -26,6 +26,8 @@ Xamarin.Forms tiene tres vistas principales para trabajar con texto:
 
 Se puede cambiar el aspecto del texto mediante integradas o personalizadas [estilos](#Styles) y algunos controles admiten personalizado [fuentes](#Fonts).
 
+<a name="Label" />
+
 ## <a name="labellabelmd"></a>[Label](label.md)
 
 El `Label` vista se utiliza para mostrar texto. Puede mostrar varias líneas de texto o una sola línea de texto. `Label` puede presentar el texto con varias opciones de formato utilizadas en línea. La vista de la etiqueta puede incluir o truncar texto cuando no caben en una sola línea.
@@ -35,6 +37,8 @@ El `Label` vista se utiliza para mostrar texto. Puede mostrar varias líneas de 
 Consulte la [etiqueta](label.md) artículo para obtener más información.
 
 Para obtener información acerca de cómo personalizar la fuente utilizada en una etiqueta, vea [fuentes](fonts.md).
+
+<a name="Entry" />
 
 ## <a name="entryentrymd"></a>[Entrada](entry.md)
 
@@ -46,6 +50,8 @@ Consulte la [entrada](entry.md) artículo para obtener más información.
 
 Tenga en cuenta que, a diferencia de `Label`, `Entry` no pueden tener valores de fuente personalizado.
 
+<a name="Editor" />
+
 ## <a name="editoreditormd"></a>[Editor](editor.md)
 
 `Editor` se usa para aceptar la entrada de texto de varias líneas. `Editor` puede tener un color de fondo personalizado, pero el color del texto y no se puede modificar la fuente.
@@ -54,9 +60,13 @@ Tenga en cuenta que, a diferencia de `Label`, `Entry` no pueden tener valores de
 
 Consulte la [Editor](editor.md) artículo para obtener más información.
 
+<a name="Fonts" />
+
 ## <a name="fontsfontsmd"></a>[Fuentes](fonts.md)
 
 El `Label` control admite valores de fuente diferente utilizando las fuentes integradas en cada plataforma o las fuentes personalizadas que se incluye con la aplicación. Consulte la [fuentes](fonts.md) artículo para obtener más información.
+
+<a name="Styles" />
 
 ## <a name="stylesstylesmd"></a>[Estilos](styles.md)
 

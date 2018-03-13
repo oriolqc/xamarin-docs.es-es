@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 372ea9a20e9f67c41c74fb01afb8110ee741a709
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5cf194dce9bf4d0af23ba663ab00cf94a8a1766c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Consumir un servicio Web de Windows Communication Foundation (WCF)
 
@@ -76,7 +76,7 @@ El servicio WCF proporciona las siguientes operaciones:
 Para obtener más información acerca del modelo de datos usado en la aplicación, consulte [modelar los datos](~/xamarin-forms/data-cloud/walkthrough.md).
 
 > [!NOTE]
-> **Tenga en cuenta**: la aplicación de ejemplo utiliza el servicio WCF hospedado en Xamarin que proporciona acceso de solo lectura para el servicio web. Por lo tanto, las operaciones que crean, actualización y eliminan datos no modificará los datos que se consume en la aplicación. Sin embargo, está disponible en una versión del servicio ASMX hospedable el **TodoWCFService** carpeta en la aplicación de ejemplo que lo acompaña. Esta versión de los permisos de servicio WCF completas hospedable crear, actualizar, leer y eliminar el acceso a los datos.
+> La aplicación de ejemplo utiliza el servicio WCF hospedado en Xamarin que proporciona acceso de solo lectura para el servicio web. Por lo tanto, las operaciones que crean, actualización y eliminan datos no modificará los datos que se consume en la aplicación. Sin embargo, está disponible en una versión del servicio ASMX hospedable el **TodoWCFService** carpeta en la aplicación de ejemplo que lo acompaña. Esta versión de los permisos de servicio WCF completas hospedable crear, actualizar, leer y eliminar el acceso a los datos.
 
 A *proxy* debe generarse para consumir un servicio WCF, que permite que la aplicación para conectarse al servicio. El proxy se construye por consumo metadatos del servicio que definen los métodos y la configuración del servicio asociado. Estos metadatos se muestran en forma de un documento de lenguaje de descripción de servicios Web (WSDL) que se genera mediante el servicio web. Mediante el proveedor de referencia de servicio de Web de Microsoft WCF en Visual Studio de 2017 para agregar una referencia de servicio para el servicio web en una biblioteca estándar de .NET se puede generar el proxy. Una alternativa para crear al proxy con el proveedor de referencia de servicio de Web de Microsoft WCF en Visual Studio de 2017 es usar la herramienta de utilidad de metadatos de ServiceModel (svcutil.exe). Para obtener más información, consulte [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/).
 

@@ -7,12 +7,12 @@ ms.assetid: 05B34788-F2D2-4347-B66B-40AFD7B1D167
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: ccd55d4d7f1aea55110e109bed1fbd4ebc90b93f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 02/28/2018
+ms.openlocfilehash: 335e63ce5a36cbd0172744a35c82920853b82e5c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="activity-lifecycle"></a>Ciclo de vida de la actividad
 
@@ -44,7 +44,7 @@ El ciclo de vida de actividad Android consta de una colección de métodos expue
 
 El sistema operativo Android arbitra las actividades según su estado. Esto ayuda a Android a identificar las actividades que ya no están en uso, lo que permite el sistema operativo reclamar memoria y recursos. El siguiente diagrama muestra los Estados de que una actividad puede atravesar durante su duración:
 
-[ ![Diagrama de Estados de actividades](images/image1-sml.png)](images/image1.png)
+[![Diagrama de Estados de actividades](images/image1-sml.png)](images/image1.png#lightbox)
 
 Estos estados se pueden dividir en 4 grupos principales como sigue:
 
@@ -69,7 +69,7 @@ Hablaremos sobre esto más adelante en el [administrar estado a lo largo del cic
 
 El SDK de Android y, por extensión, el marco de trabajo de Xamarin.Android proporcionan un modelo eficaz para administrar el estado de las actividades dentro de una aplicación. Cuando cambia el estado de una actividad, se notifica la actividad por el sistema operativo, que llama a métodos específicos de esa actividad. El diagrama siguiente muestra estos métodos en relación con el ciclo de vida de actividad:
 
-[ ![Diagrama de flujo de actividad del ciclo de vida](images/image2-sml.png)](images/image2.png)
+[![Diagrama de flujo de actividad del ciclo de vida](images/image2-sml.png)](images/image2.png#lightbox)
 
 Como desarrollador, puede controlar los cambios de estado mediante invalidar estos métodos dentro de una actividad. Es importante tener en cuenta, sin embargo, que todos los métodos del ciclo de vida se llaman en el subproceso de interfaz de usuario y bloquearán el sistema operativo realice el siguiente elemento de trabajo de la interfaz de usuario, como ocultar la actividad actual, mostrar una nueva actividad, etcetera. Por lo tanto, el código de estos métodos debe ser tan breve como sea posible para hacer que una aplicación se sienta buen rendimiento. Las tareas de larga duración se deberían ejecutar en un subproceso en segundo plano.
 
@@ -205,7 +205,7 @@ El siguiente método de ciclo de vida que se llama después de `OnRestart` será
 
 Muchos dispositivos Android tienen dos botones distintos: un botón "Atrás" y un botón "Inicio". Un ejemplo de esto puede verse en la siguiente captura de pantalla de Android 4.0.3:
 
-[ ![Botones Atrás y principal](images/image4-sml.png)](images/image4.png)
+[![Botones Atrás y principal](images/image4-sml.png)](images/image4.png#lightbox)
 
 Hay una ligera diferencia entre los dos botones, aunque parece que tienen el mismo efecto de colocar una aplicación en segundo plano. Cuando un usuario hace clic en el botón Atrás, está indicando Android que han terminado con la actividad. Android destruirá la actividad. En cambio, cuando el usuario hace clic en el botón Inicio la actividad simplemente se coloca en segundo plano &ndash; Android no elimina la actividad.
 
@@ -225,7 +225,6 @@ Este estado guardado se conoce como estado de la instancia. Android proporciona 
 
 Esta guía incluye las dos primeras opciones.
 
- <a name="Bundle_State" />
 
 
 ### <a name="bundle-state"></a>Estado de agrupación
@@ -241,7 +240,7 @@ Una actividad proporciona métodos para ayudar a guardar y recuperar el estado d
 
 El siguiente diagrama muestra cómo se utilizan estos métodos:
 
-[ ![Diagrama de flujo de Estados de agrupación](images/image3-sml.png)](images/image3.png)
+[![Diagrama de flujo de Estados de agrupación](images/image3-sml.png)](images/image3.png#lightbox)
 
 #### <a name="onsaveinstancestate"></a>OnSaveInstanceState
 
@@ -276,7 +275,7 @@ protected override void OnCreate (Bundle bundle)
 
 El código anterior incrementa un número entero denominado `c` cuando un botón denominado `incrementCounter` se hace clic, mostrar el resultado en un `TextView` denominado `output`. Cuando se produce un cambio de configuración: por ejemplo, cuando se gira el dispositivo: si el código anterior pierde el valor de `c` porque el `bundle` sería `null`, tal y como se muestra en la ilustración siguiente:
 
-[ ![Pantalla no indica el valor anterior](images/07-sml.png)](images/07.png)
+[![Pantalla no indica el valor anterior](images/07-sml.png)](images/07.png#lightbox)
 
 Para conservar el valor de `c` en este ejemplo, puede reemplazar la actividad `OnSaveInstanceState`, guardar el valor en el paquete tal y como se muestra a continuación:
 
@@ -295,10 +294,9 @@ c = bundle.GetInt ("counter", -1);
 ```
 
 > [!NOTE]
-> **Nota:** es llamada importante siempre la implementación base de `OnSaveInstanceState` para que también se puede guardar el estado de la jerarquía de vista.
+> Es importante siempre llamada a la implementación base de `OnSaveInstanceState` para que también se puede guardar el estado de la jerarquía de vista.
 
 
-<a name="View_State" />
 
 ##### <a name="view-state"></a>Estado de vista
 
@@ -312,7 +310,7 @@ Reemplazar `OnSaveInstanceState` es un mecanismo adecuado para guardar datos tra
 
 Puesto que la `EditText` control tiene un `id` asignados, cuando el usuario escribe algunos datos y gira el dispositivo, los datos se siguen mostrando, tal y como se muestra a continuación:
 
-[ ![Se conservan los datos en modo horizontal](images/08-sml.png)](images/08.png)
+[![Se conservan los datos en modo horizontal](images/08-sml.png)](images/08.png#lightbox)
 
 #### <a name="onrestoreinstancestate"></a>OnRestoreInstanceState
 
@@ -334,8 +332,6 @@ Este método no existe para proporcionar cierta flexibilidad alrededor cuando se
 Para obtener un ejemplo del proceso de guardar el estado utilizando un `Bundle`, consulte el [tutorial - estado de guardar la actividad](saving-state.md).
 
 
-<a name="Bundle_Limitations" />
-
 #### <a name="bundle-limitations"></a>Limitaciones de agrupación
 
 Aunque `OnSaveInstanceState` resulta fácil de guardar datos transitorios, tiene algunas limitaciones:
@@ -348,7 +344,6 @@ Aunque `OnSaveInstanceState` resulta fácil de guardar datos transitorios, tiene
 
 Estado de agrupación es útil para los datos simples que no utilizan la cantidad de memoria, mientras que *datos de la instancia de configuración no* es útil para los datos más complejas o datos que son costosas de recuperar, por ejemplo, una llamada de servicio web o un complicados consulta de base de datos. Datos de la instancia de configuración no se guardan en un objeto según sea necesario. La siguiente sección presenta `OnRetainNonConfigurationInstance` como una manera de mantener los tipos de datos más complejos a través de los cambios de configuración.
 
-<a name="Persisting_Complex_Data" />
 
 ### <a name="persisting-complex-data"></a>Conservar datos complejos
 
@@ -407,7 +402,7 @@ public class NonConfigInstanceActivity : ListActivity
 
 Este código recupera los resultados de la web con formato JSON, analiza y, a continuación, muestra los resultados en una lista, como se muestra en la captura de pantalla siguiente:
 
-[ ![Resultados que se muestran en pantalla](images/06-sml.png)](images/06.png)
+[![Resultados que se muestran en pantalla](images/06-sml.png)](images/06.png#lightbox)
 
 Cuando ocurre un cambio de configuración: por ejemplo, cuando un dispositivo se gira - el código repite el proceso. Para volver a usar los resultados recuperados originalmente y no hacer llamadas de red innecesaria y redundante, podemos usar `OnRetainNonconfigurationInstance` para guardar los resultados, tal y como se muestra a continuación:
 

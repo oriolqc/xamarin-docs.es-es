@@ -3,16 +3,16 @@ title: "Hello, Android Multiscreen: análisis detallado"
 description: "En esta guía de dos partes, ampliaremos la aplicación Phoneword básica creada en la guía Hello, Android a fin de controlar una segunda pantalla. Durante el proceso, presentaremos los bloques de creación de aplicaciones de Android básicos. Se incluye un análisis más profundo de la arquitectura de Android como ayuda para entender mejor la funcionalidad y la estructura de las aplicaciones de Android."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: AD3BAE9A-963C-4CF7-9733-111033034289
+ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: a47dea43b1fb1e84a0cd3dffc07b483497edbe09
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: acced081daa9416c5c8dcf90f769aaacd584ec9a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Hello, Android Multiscreen: análisis detallado
 
@@ -30,7 +30,6 @@ En esta guía se exploran conceptos de arquitectura de Android más avanzados, y
 
 En [Análisis detallado de Hello, Android](~/android/get-started/hello-android/hello-android-deepdive.md), aprendió que las aplicaciones de Android son programas únicos porque no tienen un único punto de entrada. En su lugar, el sistema operativo (u otra aplicación) inicia cualquiera de las actividades registradas de la aplicación que, a su vez, inicia el proceso de la aplicación. Este análisis detallado de la arquitectura de Android amplía sus conocimientos sobre cómo se construyen las aplicaciones de Android. Para ello, presenta los bloques de creación de aplicaciones de Android y sus funciones.
 
-<a name="AndroidApplicationBlocks" />
 
 ### <a name="android-application-blocks"></a>Bloques de aplicación de Android
 
@@ -52,7 +51,6 @@ El diseño de Android se basa en el *principio de privilegios mínimos*, es deci
 
 Para comunicarse, los bloques de aplicación envían mensajes asincrónicos denominados *intenciones* de un lado a otro. Las intenciones contienen información sobre el bloque de recepción y, en ocasiones, algunos datos. Una intención que se envía desde un componente de una aplicación desencadena un evento que se produce en otro componente de la aplicación, lo que vincula a ambos componentes y les permite comunicarse. Mediante el envío de intenciones de un lado a otro, puede conseguir que los bloques coordinen acciones complejas, como iniciar la aplicación de cámara para que saque una fotografía y la guarde, recopilar información de ubicación o desplazarse de una pantalla a la siguiente.
 
-<a name="AndroidManifestXML" />
 
 ### <a name="androidmanifestxml"></a>AndroidManifest.XML
 

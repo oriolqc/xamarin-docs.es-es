@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: eec352264d918730e68a925f2a1e3796d9125c88
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4be12c5530f59dc027672d8db72b966711a531d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="app-distribution-overview"></a>Introducción a la distribución de aplicaciones
 
@@ -21,7 +21,7 @@ _Este documento contiene información general sobre las técnicas de distribuci�
 Una vez que se ha desarrollado una aplicación de Xamarin.iOS, el siguiente paso del ciclo de vida de desarrollo de software es distribuirla a los usuarios, como se muestra en la sección destacada del siguiente diagrama:
 
 
-[![](images/publishingdiagram.png "Una vez que se ha desarrollado la aplicación iOS, el siguiente paso consiste en distribuirla a los usuarios, tal y como se muestra en la sección resaltada de este diagrama.")](images/publishingdiagram.png)
+[![](images/publishingdiagram.png "Una vez que se ha desarrollado la aplicación iOS, el siguiente paso consiste en distribuirla a los usuarios, tal y como se muestra en la sección resaltada de este diagrama.")](images/publishingdiagram.png#lightbox)
 
 
 Apple proporciona los siguientes métodos para distribuir una aplicación de iOS, que son compatibles con Xamarin.iOS:
@@ -31,6 +31,8 @@ Apple proporciona los siguientes métodos para distribuir una aplicación de iOS
 2. [**Ad Hoc**](#Ad_Hoc_Distribution)
 
 Todos estos escenarios requieren que las aplicaciones se aprovisionen mediante el correspondiente *perfil de aprovisionamiento*. Los perfiles de aprovisionamiento son archivos que contienen información de firma de código, así como la identidad de la aplicación y el mecanismo de distribución previsto. También contienen información sobre en qué dispositivos se puede implementar la aplicación para la distribución que no se realice a través del App Store.
+
+<a name="App_Store_Distribution"/>
 
 ## <a name="app-store-distribution"></a>Distribución a través del App Store
 
@@ -42,12 +44,15 @@ Es importante tener en cuenta que solo los desarrolladores que pertenecen al **P
 
 Para obtener más información, visite la guía [Distribución a través del App Store](~/ios/deploy-test/app-distribution/app-store-distribution/index.md).
 
+<a name="In-House_Distribution"/>
+
 ## <a name="in-house-distribution"></a>Distribución interna
 
 A veces denominada *Distribución empresarial*, la distribución interna permite a los miembros del **Programa para desarrolladores empresariales de Apple** distribuir aplicaciones internamente a otros miembros de la misma organización. La distribución interna tiene las ventajas de no requerir una revisión de la App Store y no tener ningún límite en el número de dispositivos en los que se puede instalar una aplicación. Sin embargo, es importante tener en cuenta que los miembros del **Programa para desarrolladores empresariales de Apple** **no** tienen acceso a iTunes Connect y, por lo tanto, el licenciatario es responsable de distribuir la aplicación.
 
 Para obtener más información sobre cómo configurar y cómo distribuir una aplicación de forma interna, consulte la [Guía de distribución interna](~/ios/deploy-test/app-distribution/in-house-distribution.md).
 
+<a name="Ad_Hoc_Distribution"/>
 
 ## <a name="ad-hoc-distribution"></a>Distribución ad hoc
 

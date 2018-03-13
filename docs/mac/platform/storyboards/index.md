@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 21e35b056293e422b577b0ee8b51e8c43dbbf07d
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ccee60b5d953987e858ef592d005cec9803b8b96
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-storyboards"></a>Introducción a guiones gráficos
 
@@ -20,7 +20,7 @@ _Este artículo proporciona una introducción a trabajar con guiones gráficos e
 
 Guiones gráficos le permiten desarrollar una interfaz de usuario para la aplicación de Xamarin.Mac que no solo incluye las definiciones de ventanas y controles, pero también contiene los vínculos entre varias ventanas (a través de segues) y los Estados de vista.
 
-[ ![](images/intro01.png "Un ejemplo de interfaz de usuario en Xcode.")](images/intro01.png)
+[![](images/intro01.png "Un ejemplo de interfaz de usuario en Xcode.")](images/intro01.png#lightbox)
 
 Este artículo proporciona una introducción al uso de guiones gráficos para definir la interfaz de usuario de la aplicación de Xamarin.Mac.
 
@@ -36,11 +36,11 @@ Mediante el uso de guiones gráficos, todos de interfaz de usuario de la aplicac
 
 Como se mencionó anteriormente, un guión gráfico define todos los de la interfaz de usuario para una aplicación determinada que se divide en una introducción a las funciones de su _ver controladores de_. En el generador de interfaz de Xcode, cada uno de estos controladores vive en su propio _escena_.
 
-[ ![](images/intro02.png "Un controlador de vista de ejemplo")](images/intro02.png)
+[![](images/intro02.png "Un controlador de vista de ejemplo")](images/intro02.png#lightbox)
 
 Cada escena representa una vista determinada y un par de controladores de vista con un conjunto de líneas (denominado Segues) que se conectan cada escena en la interfaz de usuario, lo que permite mostrar las relaciones entre ellas. Algunos Segues definir cómo un controlador de vista contiene una o varias vistas secundarias o controladores de la vista. Otros Segues, definen las transiciones entre View Controller (por ejemplo, para mostrar un cuadro de diálogo o popover). 
 
-[ ![](images/intro03.png "Un segue de ejemplo")](images/intro03.png)
+[![](images/intro03.png "Un segue de ejemplo")](images/intro03.png#lightbox)
 
 Lo más importante a tener en cuenta es que cada Segue representa el flujo de algún tipo de datos entre el elemento especificado de la interfaz de usuario de la aplicación.
 
@@ -50,7 +50,7 @@ Lo más importante a tener en cuenta es que cada Segue representa el flujo de al
 
 Ver controladores definen las relaciones entre una vista determinada de información dentro de una aplicación de Mac y el modelo de datos que proporciona dicha información. Cada escena de nivel superior en el guión gráfico representa un controlador de vista en el código de la aplicación Xamarin.Mac.
 
-[ ![](images/intro04.png "Un ejemplo pospone view-controller")](images/intro04.png)
+[![](images/intro04.png "Un ejemplo pospone view-controller")](images/intro04.png#lightbox)
 
 De este modo, cada controlador de vista es un emparejamiento independiente y reutilizables de la representación visual de la información (vista) y la lógica para presentar y controlar esa información.
 
@@ -115,8 +115,8 @@ En este artículo ha tomado un vistazo al trabajar con guiones gráficos en una 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Hola, Mac (ejemplo)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
+- [Ejemplo de Hello, Mac (ejemplo)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabajar con ventanas](~/mac/user-interface/window.md)
-- [Directrices de interfaz de sistema operativo X humanos](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Directrices de interfaz humana de OS X)
 - [Introducción a Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

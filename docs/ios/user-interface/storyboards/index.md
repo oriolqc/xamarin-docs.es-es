@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 8bc262ff739cc65da80d887a6dea11ecc708e866
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 342e8189d9dec6eaa60a999d56a7891da845d247
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-storyboards"></a>Introducción a guiones gráficos
 
@@ -33,7 +33,7 @@ Guiones gráficos se pueden utilizar con el Diseñador de Visual Studio para Mac
 
 Un guión gráfico es la representación visual de todas las pantallas en una aplicación. Contiene una secuencia de plano, con cada escena que representa un *View Controller* y su *vistas*. Estas vistas pueden contener objetos y [controles](~/ios/user-interface/controls/index.md) que permitirá que el usuario interactuar con la aplicación. Esta colección de controles y vistas (o *subvistas*) se conoce como un *jerarquía de vista de contenido*. Plano está conectado por desplazará tranquilamente objetos que representan una transición entre los controladores de la vista. Normalmente, esto se logra mediante la creación de un segue entre un objeto en la vista inicial y la vista de la conexión. En la imagen siguiente se muestran las relaciones en la superficie de diseño:
 
- [ ![](images/storyboardsview.png "Se ilustran las relaciones en la superficie de diseño en esta imagen")](images/storyboardsview.png)
+ [![](images/storyboardsview.png "Se ilustran las relaciones en la superficie de diseño en esta imagen")](images/storyboardsview.png#lightbox)
 
 Como se muestra, el guión gráfico disposición de cada una de la escena con contenido que ya se hayan procesado y muestra las conexiones entre ellos.  Cabe mencionar en este punto, que cuando hablemos sobre plano en un iPhone, resulta seguro presuponer que uno *escena* en el guión gráfico es igual a uno *pantalla* de contenido en el dispositivo. Sin embargo, con un iPad que es posible tener varias escenas aparecen a la vez: por ejemplo, mediante un controlador de vista Popover.
 
@@ -47,22 +47,22 @@ El contenido de un guión gráfico se almacena como un archivo XML. Hora, la com
 
 A *Segue*, o *objeto desplazará tranquilamente*, se utiliza en el desarrollo de iOS para representar una transición entre bastidores. Para crear un segue, mantenga presionada la **Ctrl** clave y haga clic y arrastre de una escena a otra. Tal y como se arrastra el mouse, aparece un conector azul, que indica donde llevará el segue como se muestra en la imagen siguiente:
 
- [ ![](images/createsegue.png "Aparece un conector azul, que indica donde llevará el segue como se muestra en esta imagen")](images/createsegue.png)
+ [![](images/createsegue.png "Aparece un conector azul, que indica donde llevará el segue como se muestra en esta imagen")](images/createsegue.png#lightbox)
 
 En el mouse (ratón), aparecerá un menú que nos permite elegir la acción para nuestro segue. Puede ser similar a las siguientes imágenes: 
 
 **Clases de 8 y el tamaño de iOS anterior**:
 
-[ ![](images/segue1.png "La lista desplegable acción desplazará tranquilamente sin clases de tamaño")](images/segue1.png)
+[![](images/segue1.png "La lista desplegable acción desplazará tranquilamente sin clases de tamaño")](images/segue1.png#lightbox)
 
 **Cuando se utilizan las clases de tamaño y adaptable Segues**:
 
-[ ![](images/16new.png "La lista desplegable acción desplazará tranquilamente con clases de tamaño")](images/16new.png)
+[![](images/16new.png "La lista desplegable acción desplazará tranquilamente con clases de tamaño")](images/16new.png#lightbox)
 
 > [!IMPORTANT]
 > **Nota:** si usas VMWare para la máquina Virtual de Windows, pulse la tecla Ctrl se asigna como el _haga_ botón del mouse (ratón) de forma predeterminada. Para crear un Segue, editar sus preferencias de teclado a través de **preferencias** > **teclado y mouse (ratón)** > **métodos abreviados de Mouse** y reasignar el **Botón secundario** tal como se muestra a continuación:
 > 
-> [ ![](images/image22.png "Configuración de preferencias de teclado y mouse (ratón)")](images/image22.png)
+> [![](images/image22.png "Configuración de preferencias de teclado y mouse (ratón)")](images/image22.png#lightbox)
 > 
 > Ahora podrá agregar un segue entre los controladores de vista de forma habitual.
 
@@ -74,7 +74,7 @@ Hay diferentes tipos de transiciones, cada control sobre cómo se presenta un nu
 -  **Desenredado** : desenredado desplazará tranquilamente puede utilizarse para navegar hacia atrás por una inserción o modal desplazará tranquilamente: por ejemplo, descartando el controlador de vista presenta de forma modal. Además, puede desenredar a través de no solo uno, pero una serie de inserción y modal segues y volver atrás varios pasos en la jerarquía de navegación con una sola acción de desenredado. Para aprender a usar un desenredado desplazará tranquilamente en iOS, lea la [crear desenredo Segues](https://developer.xamarin.com/recipes/ios/general/storyboard/unwind_segue/) receta.
 -  **Sourceless** : un segue sourceless indica la escena que contiene el controlador de vista inicial y, por tanto, la vista donde el usuario verá en primer lugar. Se representa mediante el segue que se muestra a continuación:  
 
-    [ ![](images/sourcelesssegue.png "Un segue sourceless")](images/sourcelesssegue.png)
+    [![](images/sourcelesssegue.png "Un segue sourceless")](images/sourcelesssegue.png#lightbox)
 
 ### <a name="adaptive-segue-types"></a>Adaptable desplazará tranquilamente tipos
 
@@ -82,7 +82,7 @@ Hay diferentes tipos de transiciones, cada control sobre cómo se presenta un nu
  
 Las aplicaciones que utilizan las clases de tamaño también usarán el nuevo [ *Segues adaptable*](~/ios/user-interface/storyboards/unified-storyboards.md). Cuando use las clases de tamaño, recuerde que no estamos especificar directamente si se va a estamos usando un iPhone o iPad. En otras palabras, vamos a crear una interfaz de usuario que siempre será el mismo, independientemente de cuánto espacio real tiene que trabajar con. Trabajo Segues Adaptive juzgar el entorno y determinar cuál es la mejor presentar el contenido. A continuación se muestra el Segues adaptable: 
 
-[ ![](images/adaptivesegue.png "La lista desplegable Segues adaptable")](images/adaptivesegue.png)
+[![](images/adaptivesegue.png "La lista desplegable Segues adaptable")](images/adaptivesegue.png#lightbox)
 
 <table>
     <thead>
@@ -155,11 +155,11 @@ En ocasiones necesitará agregar un guion gráfico a un archivo previamente sin 
 
 1. Crear un nuevo archivo de guión gráfico examinando **archivo > nuevo archivo > iOS > guión gráfico**, como se muestra a continuación: 
     
-    [ ![](images/new-storyboard-xs.png "El cuadro de diálogo de archivo nuevo")](images/new-storyboard-xs.png)
+    [![](images/new-storyboard-xs.png "El cuadro de diálogo de archivo nuevo")](images/new-storyboard-xs.png#lightbox)
 
 2. Agregar el nombre del guión gráfico a la **interfaz principal** sección de la **Info.plist**, tal y como se muestra a continuación:
     
-    [ ![](images/infoplist.png "El editor de Info.plist")](images/infoplist.png)
+    [![](images/infoplist.png "El editor de Info.plist")](images/infoplist.png#lightbox)
     
     Esto realiza el equivalente de una instancia el controlador de vista inicial en el `FinishedLaunching` método dentro del delegado de la aplicación. Con esta opción activada, la aplicación crea una instancia de una ventana (ver abajo), carga el guión gráfico principal y asigna una instancia de controlador de vista inicial del guión gráfico (el uno al lado de la Segue sourceless) como el `RootViewController` propiedad de la ventana y, a continuación, hace la ventana visible en la pantalla.
 
@@ -174,11 +174,11 @@ En ocasiones necesitará agregar un guion gráfico a un archivo previamente sin 
 
 1. Crear un nuevo archivo de guión gráfico con el botón secundario en el proyecto para **Agregar > nuevo archivo > iOS > guión gráfico vacío**, como se muestra a continuación: 
     
-    [ ![](images/new-storyboard-vs.png "El cuadro de diálogo nuevo elemento")](images/new-storyboard-vs.png)
+    [![](images/new-storyboard-vs.png "El cuadro de diálogo nuevo elemento")](images/new-storyboard-vs.png#lightbox)
 
 2. Agregar el nombre del guión gráfico a la **interfaz principal** sección de la aplicación, tal y como se muestra a continuación de iOS:
     
-    [ ![](images/ios-app.png "El editor de Info.plist")](images/ios-app.png)
+    [![](images/ios-app.png "El editor de Info.plist")](images/ios-app.png#lightbox)
     
     Esto realiza el equivalente de una instancia el controlador de vista inicial en el `FinishedLaunching` método dentro del delegado de la aplicación. Con esta opción activada, la aplicación crea una instancia de una ventana (ver abajo), carga el guión gráfico principal y asigna una instancia de controlador de vista inicial del guión gráfico (el uno al lado de la Segue sourceless) como el `RootViewController` propiedad de la ventana y, a continuación, hace la ventana visible en la pantalla.
 
@@ -205,37 +205,37 @@ A veces, las aplicaciones tienen requisitos especiales que no se pueden administ
 
 La captura de pantalla siguiente muestra dos controladores de la vista en la superficie de diseño con n desplazará tranquilamente entre ellos. La siguiente sección le guiará a través de cómo configurar esa transición en el código.
 
- [ ![](images/viewcontrollerspink.png "Esta captura de pantalla muestra dos controladores de la vista en la superficie de diseño con n desplazará tranquilamente entre ellos")](images/viewcontrollerspink.png)
+ [![](images/viewcontrollerspink.png "Esta captura de pantalla muestra dos controladores de la vista en la superficie de diseño con n desplazará tranquilamente entre ellos")](images/viewcontrollerspink.png#lightbox)
 
 1. Agregar un _vacía iPhone guión gráfico_ a un proyecto existente de proyecto:
     
-    [ ![](images/add-storyboard1.png "Agregar a guión gráfico")](images/add-storyboard1.png)
+    [![](images/add-storyboard1.png "Agregar a guión gráfico")](images/add-storyboard1.png#lightbox)
 
 2. Haga doble clic en el guión gráfico recién creado para abrirlo y agregue un nuevo **controlador navegación** a la superficie de diseño. Como el controlador de navegación es menor de interfaz de usuario, de forma predeterminada, vienen con un controlador de vista raíz, como se muestra a continuación:
 
-    [ ![](images/uinavigationcontroller.png "Ver controladores con Segues")](images/uinavigationcontroller.png)
+    [![](images/uinavigationcontroller.png "Ver controladores con Segues")](images/uinavigationcontroller.png#lightbox)
 
 3. Seleccione el _View Controller_ haciendo clic en la barra de color negra en la parte inferior. En el diseñador **propiedad panel**, en **identidad** se puede especificar una clase personalizada, así como un identificador único para el controlador de vista. Establecer el **nombre de la clase** y **Id. de guión gráfico** a `MainViewController`.
 
-    [ ![](images/identitypanelnew.png "Especifique la clase personalizada")](images/identitypanelnew.png)
+    [![](images/identitypanelnew.png "Especifique la clase personalizada")](images/identitypanelnew.png#lightbox)
 
 4. Más adelante, tendrá que crear una instancia de nuestro controladores de la vista de guión gráfico y usará el identificador de guión gráfico para hacer referencia a ellos en el código. Establecer el identificador de restauración para que coincida con el identificador de guión gráfico, se garantiza que obtiene a volver a crear correctamente el controlador de vista si el estado debe restaurarse.
 
 5. Actualmente solo tenemos un controlador de vista. Arrastre otro controlador de vista en la superficie de diseño. En el **propiedad panel**, bajo la identidad, establezca la clase y el Id. de guión gráfico para `PinkViewController`, como se muestra a continuación:
 
-    [ ![](images/pinkvcnew.png "El panel de propiedades")](images/pinkvcnew.png)
+    [![](images/pinkvcnew.png "El panel de propiedades")](images/pinkvcnew.png#lightbox)
     
     El IDE creará estas clases personalizadas para los controladores de vista. Estos se pueden ver en la **solución Pad**, tal y como se muestra en la captura de pantalla siguiente:
     
-    [ ![](images/solution-pad.png "Panel de soluciones")](images/solution-pad.png)
+    [![](images/solution-pad.png "Panel de soluciones")](images/solution-pad.png#lightbox)
 
 6. En el `PinkViewController`, seleccione la vista haciendo clic en hacia el centro del marco del controlador. En el panel Propiedades, en la vista cambie la **fondo** fucsia:
     
-    [ ![](images/pinkcontroller.png "Establecer el color de fondo")](images/pinkcontroller.png)
+    [![](images/pinkcontroller.png "Establecer el color de fondo")](images/pinkcontroller.png#lightbox)
 
 7. Por último, arrastre un botón de la **cuadro de herramientas** en el `MainViewController`. En el panel Propiedades, asígnele el nombre `PinkButton` y GoToPink de título, como se muestra a continuación:
 
-    [ ![](images/pinkbutton.png "Nombre del conjunto de botón")](images/pinkbutton.png)
+    [![](images/pinkbutton.png "Nombre del conjunto de botón")](images/pinkbutton.png#lightbox)
 
 El guión gráfico es completando, pero si se implementa el proyecto ahora, obtenemos una pantalla en blanco. Eso es porque necesitamos indicarle al IDE que se va a utilizar el guión gráfico como configurar un controlador de vista de raíz para que actúe como la primera vista. Normalmente esto puede hacerse a través de nuestras opciones de proyecto, como se indicó anteriormente. Sin embargo en este ejemplo se conseguirá el mismo resultado en el código, debe agregar lo siguiente a la **AppDelegate**:
 
@@ -351,13 +351,13 @@ Antes de comenzar, siga realizando los pasos del 1 al 8 anterior. En estos pasos
         - Líneas: 2
         - Casilla de verificación 'Hidden' activada 
         
-    [ ![](images/passwordvc.png "Líneas de referencia")](images/passwordvc.png)
+    [![](images/passwordvc.png "Líneas de referencia")](images/passwordvc.png#lightbox)
     
 2. Crear un Segue entre el botón Ir a rosa y el controlador de vista arrastrando Ctrl-desde el *PinkButton* a la *PinkViewController*y seleccionando **Push** en mouse hacia arriba . 
 
 3. Haga clic en el Segue y asígnele el *identificador* `SegueToPink`:
 
-    [ ![](images/namesegue.png "Haga clic en el Segue y asígnele el identificador SegueToPink")](images/namesegue.png)  
+    [![](images/namesegue.png "Haga clic en el Segue y asígnele el identificador SegueToPink")](images/namesegue.png#lightbox)  
     
 
 4. Por último, agregue el siguiente método de ShouldPerformSegue a la `MainViewController` clase:
@@ -402,29 +402,29 @@ Para agregar una referencia a un guión gráfico externo, haga lo siguiente:
 
 1. En el **el Explorador de soluciones**, haga doble clic en el nombre del proyecto y seleccione **agregar** > **nuevo archivo...**   >  **iOS** > **guión gráfico**. Escriba un **nombre** para el nuevo guión gráfico y haga clic en el **New** botón:
     
-    [ ![](images/ref01.png "El cuadro de diálogo de archivo nuevo")](images/ref01.png)
+    [![](images/ref01.png "El cuadro de diálogo de archivo nuevo")](images/ref01.png#lightbox)
     
 2. Definir el diseño de escenas del guión gráfico nuevo como se haría normalmente y guardar los cambios: 
     
-    [ ![](images/ref02.png "El diseño de la escena nueva")](images/ref02.png)
+    [![](images/ref02.png "El diseño de la escena nueva")](images/ref02.png#lightbox)
     
 3. Abra el guión gráfico que se va a agregar la referencia en el Diseñador de iOS.
 
 4. Arrastre un **referencia de guión gráfico** desde el **cuadro de herramientas** a la superficie de diseño: 
     
-    [ ![](images/ref03.png "Una referencia de guión gráfico")](images/ref03.png)
+    [![](images/ref03.png "Una referencia de guión gráfico")](images/ref03.png#lightbox)
     
 5. En el **Widget** pestaña de la **el Explorador de propiedades**, seleccione el nombre de la **guión gráfico** que haya creado anteriormente: 
 
-    [ ![](images/ref04.png "La pestaña de Widget")](images/ref04.png)
+    [![](images/ref04.png "La pestaña de Widget")](images/ref04.png#lightbox)
     
 6. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un nuevo Segue a la **referencia de guión gráfico** que acaba de crear: 
 
-    [ ![](images/ref05.png "Crear un segue")](images/ref05.png) 
+    [![](images/ref05.png "Crear un segue")](images/ref05.png#lightbox) 
     
 7. En el menú emergente seleccione **mostrar** para completar la Segue: 
 
-    [ ![](images/ref06.png "Seleccione Mostrar para completar la Segue")](images/ref06.png) 
+    [![](images/ref06.png "Seleccione Mostrar para completar la Segue")](images/ref06.png#lightbox) 
     
 8. Guarde los cambios en el guión gráfico.
 
@@ -440,29 +440,29 @@ Para agregar una referencia a una escena específica un guión gráfico externo 
 
 2. Agregar una nueva escena y se diseñan como lo haría normalmente: 
 
-    [ ![](images/ref07.png "El nuevo diseño de escena")](images/ref07.png)
+    [![](images/ref07.png "El nuevo diseño de escena")](images/ref07.png#lightbox)
     
 3. En el **Widget** pestaña de la **el Explorador de propiedades**, escriba un **Id. de guión gráfico** para controlador de vista de la escena nueva: 
 
-    [ ![](images/ref08.png "Escriba un identificador de guión gráfico para el nuevo controlador de vista de plano")](images/ref08.png)
+    [![](images/ref08.png "Escriba un identificador de guión gráfico para el nuevo controlador de vista de plano")](images/ref08.png#lightbox)
     
 3. Abra el guión gráfico que se va a agregar la referencia en el Diseñador de iOS.
 
 4. Arrastre un **referencia de guión gráfico** desde el **cuadro de herramientas** a la superficie de diseño: 
 
-    [ ![](images/ref03.png "Una referencia de guión gráfico")](images/ref03.png)
+    [![](images/ref03.png "Una referencia de guión gráfico")](images/ref03.png#lightbox)
     
 5. En el **Widget** pestaña de la **el Explorador de propiedades**, seleccione el nombre de la **guión gráfico** y la **Id. de referencia** (Id. de guión gráfico) de la Escena que haya creado anteriormente: 
 
-    [ ![](images/ref09.png "La pestaña de Widget ")](images/ref09.png)
+    [![](images/ref09.png "La pestaña de Widget ")](images/ref09.png#lightbox)
     
 6. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un nuevo Segue a la **referencia de guión gráfico** que acaba de crear: 
 
-    [ ![](images/ref10.png "Crear un segue")](images/ref10.png) 
+    [![](images/ref10.png "Crear un segue")](images/ref10.png#lightbox) 
     
 7. En el menú emergente seleccione **mostrar** para completar la Segue: 
 
-    [ ![](images/ref06.png "Seleccione Mostrar para completar la Segue")](images/ref06.png) 
+    [![](images/ref06.png "Seleccione Mostrar para completar la Segue")](images/ref06.png#lightbox) 
     
 8. Guarde los cambios en el guión gráfico.
 
@@ -478,27 +478,27 @@ Para agregar una referencia a una escena específica el mismo guión gráfico, h
 
 2. Agregar una nueva escena y se diseñan como lo haría normalmente: 
 
-    [ ![](images/ref11.png "El nuevo diseño de escena")](images/ref11.png)
+    [![](images/ref11.png "El nuevo diseño de escena")](images/ref11.png#lightbox)
 
 3. En el **Widget** pestaña de la **el Explorador de propiedades**, escriba un **Id. de guión gráfico** para controlador de vista de la escena nueva: 
 
-    [ ![](images/ref12.png "La pestaña de Widget")](images/ref12.png)
+    [![](images/ref12.png "La pestaña de Widget")](images/ref12.png#lightbox)
     
 3. Arrastre un **referencia de guión gráfico** desde el **cuadro de herramientas** a la superficie de diseño: 
 
-    [ ![](images/ref03.png "Una referencia de guión gráfico")](images/ref03.png)
+    [![](images/ref03.png "Una referencia de guión gráfico")](images/ref03.png#lightbox)
     
 5. En el **Widget** pestaña de la **el Explorador de propiedades**, seleccione **identificador de referencia** (Id. de guión gráfico) de la escena que haya creado anteriormente: 
 
-    [ ![](images/ref13.png "La pestaña de Widget")](images/ref13.png)
+    [![](images/ref13.png "La pestaña de Widget")](images/ref13.png#lightbox)
     
 6. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un nuevo Segue a la **referencia de guión gráfico** que acaba de crear: 
 
-    [ ![](images/ref14.png "Crear un segue")](images/ref14.png) 
+    [![](images/ref14.png "Crear un segue")](images/ref14.png#lightbox) 
     
 7. En el menú emergente seleccione **mostrar** para completar la Segue: 
 
-    [ ![](images/ref06.png "Seleccione Mostrar para completar la Segue")](images/ref06.png) 
+    [![](images/ref06.png "Seleccione Mostrar para completar la Segue")](images/ref06.png#lightbox) 
     
 8. Guarde los cambios en el guión gráfico.
 

@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/18/2017
-ms.openlocfilehash: 88e8c66d36956649f0a996046f038d89a7267cf5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 213702d289adefe966f07c3ad0174156cbc69ee1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="java-integration-overview"></a>Descripción de la integración de Java
 
 _El ecosistema de Java incluye una colección de diferentes y gran de componentes. Muchos de estos componentes pueden utilizarse para reducir el tiempo necesario para desarrollar una aplicación Android. Este documento se presentan y proporcionar una descripción general de algunas de las formas en que los desarrolladores pueden usar estos componentes existentes de Java para mejorar su experiencia de desarrollo de aplicaciones de Xamarin.Android._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -41,7 +40,6 @@ La segunda técnica mediante JNI, funciona en un nivel inferior mucho, pero pued
 La tercera técnica es totalmente diferente de los dos anteriores: trasladar el código de Java a C#. Trasladar código de un idioma a otro puede ser un proceso muy laborioso, pero es posible reducir que esfuerzo con la Ayuda de una herramienta denominada *enfocar*. Enfocar es una herramienta de código abierto que es un Java-a-C# convertidor. 
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 
@@ -51,7 +49,7 @@ Este documento proporciona una descripción general de algunas de las distintas 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Arquitectura](~/android/internals/architecture.md)
-- [Enlace de una biblioteca de Java](~/android/platform/binding-java-library/index.md)
+- [Enlace de una biblioteca Java](~/android/platform/binding-java-library/index.md)
 - [Trabajar con JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Dar nitidez](https://github.com/slluis/sharpen)
 - [Interfaz Java Native Interface](http://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)

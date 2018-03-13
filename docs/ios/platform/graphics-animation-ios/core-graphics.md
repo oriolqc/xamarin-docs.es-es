@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: fe1796839524a271760a9beb82895fd6e93c7ad0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d53494e61d702b83a28534c644f33fb5327b5958
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="core-graphics"></a>Gráficos de núcleo
 
@@ -40,6 +40,7 @@ Hay algunas ventajas de este enfoque:
 -  Lo que reduce la necesidad de imágenes estáticas en el paquete de aplicación puede reducir el tamaño de la aplicación.
 -  Gráficos se convierten en más resistentes a los cambios en la resolución en todos los dispositivos.
 
+<a name="Drawing_in_a_UIView_Subclass"/>
 
 ## <a name="drawing-in-a-uiview-subclass"></a>Dibujar en una subclase de UIView
 
@@ -182,6 +183,8 @@ Agregar este código antes de los resultados de las operaciones de dibujo en uni
  ![](core-graphics-images/02-dashed-stroke.png "Agregar este código antes de los resultados de las operaciones de dibujo en trazos discontinuos")
  
 Tenga en cuenta que al utilizar la API unificada en Xamarin.iOS, el tipo de matriz debe ser un `nfloat`y también debe convertirse explícitamente a Math.PI.
+
+<a name="Drawing_Images_and_Text"/>
 
 ## <a name="drawing-images-and-text"></a>Texto e imágenes de dibujo
 
@@ -428,5 +431,5 @@ En este artículo analizamos las capacidades de gráficos que se proporcionan a 
 
 - [Ejemplo de gráficos básica](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/)
 - [Gráficos y animación tutorial](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
-- [Animación de núcleo](~/ios/platform/graphics-animation-ios/core-animation.md)
+- [Animación básica](~/ios/platform/graphics-animation-ios/core-animation.md)
 - [Recetas de animación de núcleo](https://developer.xamarin.com/recipes/ios/animation/coreanimation)

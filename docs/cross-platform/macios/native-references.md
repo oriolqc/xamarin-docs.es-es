@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 29b405c61b745c26c74318243f75e5809ecfdd7d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a33993bdef16191b66127dcc68c57661636c0f8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="native-references"></a>Referencias nativas
 
@@ -78,13 +78,13 @@ El paso de seguimiento son necesarios para incrustar un marco de trabajo en un p
 1. Crear un nuevo o abra un proyecto existente de Xamarin.iOS, Xamarin.Mac o enlace.
 2. En el **el Explorador de soluciones**, haga doble clic en el nombre del proyecto y seleccione **agregar** > **Agregar referencia nativa**: 
 
-    [ ![](native-references-images/ref01.png "En el Explorador de soluciones, haga doble clic en el nombre del proyecto y seleccione Agregar referencia nativa")](native-references-images/ref01.png)
+    [![](native-references-images/ref01.png "En el Explorador de soluciones, haga doble clic en el nombre del proyecto y seleccione Agregar referencia nativa")](native-references-images/ref01.png#lightbox)
 3. Desde el **abiertos** cuadro de diálogo, seleccione el nombre del marco nativo que desea insertar y haga clic en el **abiertos** botón: 
 
-    [ ![](native-references-images/ref02.png "Seleccione el nombre del marco nativo para incrustar y haga clic en el botón Abrir")](native-references-images/ref02.png)
+    [![](native-references-images/ref02.png "Seleccione el nombre del marco nativo para incrustar y haga clic en el botón Abrir")](native-references-images/ref02.png#lightbox)
 4. El marco de trabajo se agregará al árbol del proyecto: 
 
-    [ ![](native-references-images/ref03.png "El marco de trabajo se agregará al árbol de proyectos")](native-references-images/ref03.png)
+    [![](native-references-images/ref03.png "El marco de trabajo se agregará al árbol de proyectos")](native-references-images/ref03.png#lightbox)
 
 Cuando se compila el proyecto, el marco nativo se incrustará en el paquete de la aplicación.
 

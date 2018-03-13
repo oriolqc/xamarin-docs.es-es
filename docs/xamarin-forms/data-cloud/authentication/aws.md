@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 85413cf223e794ad2fda093601f9221d0261af39
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ac4c788b4bd48991d7628d892ad1ece3d2451228
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="authenticating-users-with-an-amazon-simpledb-service"></a>Autenticar a los usuarios con un servicio de SimpleDB de Amazon
 
@@ -61,7 +61,7 @@ public async Task<List<TodoItem>> RefreshDataAsync ()
 El `SelectAsync` método devuelve una respuesta que contiene una colección de elementos y atributos asociados que coinciden con la expresión de consulta. La expresión de consulta se asegura de que se recuperarán sólo los elementos que coinciden con la dirección de correo electrónico del usuario. Para obtener más información acerca de las expresiones de consulta, vea [utilizando Seleccione esta opción para crear consultas de Amazon SimpleDB](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/UsingSelect.html) en el sitio Web de Amazon.
 
 > [!NOTE]
-> **Tenga en cuenta**: asegúrese de seguir las reglas de entrecomillado al construir la expresión de consulta. Para obtener más información, consulte [seleccionar reglas de entrecomillar](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) en el sitio Web de Amazon.
+> Asegúrese de seguir las reglas de entrecomillado al construir la expresión de consulta. Para obtener más información, consulte [seleccionar reglas de entrecomillar](http://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/QuotingRulesSelect.html) en el sitio Web de Amazon.
 
 ## <a name="summary"></a>Resumen
 

@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/20/2017
-ms.openlocfilehash: 84dfe88e912241eb0024143bca568ae75e5bfa28
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d83135aa9c101e06a680b458cce8c12dcdddd947
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="naming-parameters-with-javadoc"></a>Nombres de parámetros con Javadoc
 
 _Este artículo explica cómo recuperar los nombres de parámetro en un proyecto de enlace de Java mediante el uso de Javadoc generado a partir del proyecto de Java._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -38,9 +37,8 @@ Una vez hecho esto, los nombres de parámetro de Java originales deben estar pre
 
 
 > [!NOTE]
-> **Nota:** hay una gran variedad de en la salida de JavaDoc. El archivo. Cadena de herramientas JAR enlace no admite cada permutación posibles único y, por consiguiente, algún parámetro puede no ser correctamente con el nombre.
+> Hay una gran variedad de en la salida de JavaDoc. El archivo. Cadena de herramientas JAR enlace no admite cada permutación posibles único y, por consiguiente, algún parámetro puede no ser correctamente con el nombre.
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 

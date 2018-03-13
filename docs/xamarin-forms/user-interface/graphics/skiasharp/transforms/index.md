@@ -4,14 +4,15 @@ description: "Obtenga información acerca de las transformaciones para mostrar g
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 06db59f5585671342ef7dbaa2d2cf14ec6830c41
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 756261db8f82198e6c5a4330a663bbd9965e57f7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="skiasharp-transforms"></a>SkiaSharp transformaciones
 
@@ -50,19 +51,19 @@ La realidad gran diferencia es que son transformaciones SKiaSharp *métodos* mie
 
 Todos los programas de ejemplo en esta sección aparecen bajo el encabezado **transforma** en la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programa y en el [ **Transforma** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms) carpeta de la solución.
 
-## <a name="the-translate-transformtranslatemd"></a>[La transformación de traducción](translate.md)
+## <a name="the-translate-transformtranslatemd"></a>[Transformación de traslación](translate.md)
 
 Obtenga información acerca de cómo usar la transformación de traslación de desplazamiento SkiaSharp gráficos.
 
-## <a name="the-scale-transformscalemd"></a>[La transformación de escala](scale.md)
+## <a name="the-scale-transformscalemd"></a>[Transformación de escala](scale.md)
 
 Detectar la transformación de escala SkiaSharp para ajustar la escala para diversos tamaños de los objetos.
 
-## <a name="the-rotate-transformrotatemd"></a>[La transformación de giro](rotate.md)
+## <a name="the-rotate-transformrotatemd"></a>[Transformación de rotación](rotate.md)
 
 Explorar los efectos y animaciones posibles con la transformación de giro SkiaSharp.
 
-## <a name="the-skew-transformskewmd"></a>[La transformación sesga](skew.md)
+## <a name="the-skew-transformskewmd"></a>[Transformación de sesgo](skew.md)
 
 Vea cómo la transformación sesga puede crear objetos gráficos superpuestos en SkiaSharp.
 
@@ -70,7 +71,7 @@ Vea cómo la transformación sesga puede crear objetos gráficos superpuestos en
 
 Profundizar más en SkiaSharp transformaciones con la matriz de transformación versátil.
 
-## <a name="touch-manipulationstouchmd"></a>[Manipulaciones táctil](touch.md)
+## <a name="touch-manipulationstouchmd"></a>[Manipulaciones táctiles](touch.md)
 
 Matriz de uso se transforma para implementar las manipulaciones táctil para arrastrar, ajuste de escala y giro.
 

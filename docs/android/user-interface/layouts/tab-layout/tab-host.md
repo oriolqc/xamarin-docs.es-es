@@ -3,27 +3,26 @@ title: "Pestaña diseño con TabHost"
 description: "En este artículo le proporcionará una introducción de alto nivel de la la TabHost, una API más antiguos que se utilizan para crear los diseños con pestañas en una aplicación Xamarin.Android."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 1CFF590A-AC86-C3B3-36CA-A70248BC7F97
+ms.assetid: 77B890A4-27A6-41DF-81BA-22C6116A8FB2
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 10/25/2017
-ms.openlocfilehash: ff61ca0a2bca466da3e33c93a17944915328b70c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e27557c65d2b3049457640a3492d090c5fa26a43
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tab-layout-with-tabhost"></a>Pestaña diseño con TabHost
 
 _En este artículo le proporcionará una introducción de alto nivel de la la TabHost, una API más antiguos que se utilizan para crear los diseños con pestañas en una aplicación Xamarin.Android._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Información general
 
 > [!NOTE]
-> **Nota:** `TabHost` API antiguo que está en desuso por Google. Los desarrolladores pueden crear aplicaciones con pestañas con el [ActionBar](~/android/user-interface/controls/action-bar.md). La `ActionBar` está disponible en todas las versiones de Android. Que se introdujo en Android 3.0 (API nivel 11) y volver procede para Android 2.2 (API nivel 8) y Android 2.3 (API nivel 10) en el [V7 AppCompat biblioteca](http://developer.android.com/tools/support-library/features.html#v7-appcompat), que está disponible para Xamarin.Android a través de la [Xamarin Biblioteca de compatibilidad de Android - V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) paquete.
+> `TabHost` es una API antigua que ha quedado en desuso por Google. Los desarrolladores pueden crear aplicaciones con pestañas con el [ActionBar](~/android/user-interface/controls/action-bar.md). La `ActionBar` está disponible en todas las versiones de Android. Que se introdujo en Android 3.0 (API nivel 11) y volver procede para Android 2.2 (API nivel 8) y Android 2.3 (API nivel 10) en el [V7 AppCompat biblioteca](http://developer.android.com/tools/support-library/features.html#v7-appcompat), que está disponible para Xamarin.Android a través de la [Xamarin Biblioteca de compatibilidad de Android - V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) paquete.
 
 El `TabHost` es la API anterior, original para crear un usuario con pestañas interfacesIt es ideal para las aplicaciones de Xamarin.Android que debe ser compatible con Android 2.2 y 2.3 Android y no se puede usar **ActionBarSherlock**.
 Los siguientes cinco componentes se tienen en cuenta con la `TabHost` API:
@@ -44,7 +43,6 @@ El diagrama siguiente muestra cómo todos estos componentes se relacionan entre 
 
 El contenido de las pestañas puede ser actividades o vistas. Vistas son relativamente ligeras y simples, pero pueden dar lugar a una gran cantidad de código relacionados con co-habitating en la actividad. El resultado será una separación deficiente de los aspectos y una clase inflan que es difícil de mantener. En cambio, actividades requieren recursos del sistema, pero permitir que un enfoque más modular con la lógica de cada pestaña encapsulada en su propia clase distintos.
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 

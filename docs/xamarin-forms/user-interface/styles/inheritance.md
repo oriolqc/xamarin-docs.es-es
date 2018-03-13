@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 482358b0ccbedf926cd9182065a1eb8f4c12683c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e57f19d1eb66e22badb418d4584f5654904c7ade
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="style-inheritance"></a>Herencia de estilos
 
@@ -62,10 +62,10 @@ El código siguiente muestra *explícita* herencia de estilos en una página XAM
 
 El `baseStyle` destinos [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) instancias y establece la [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) y [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propiedades. El `baseStyle` no se establece directamente en todos los controles. En su lugar, `labelStyle` y `buttonStyle` heredan de él, establecer valores de propiedad enlazable adicionales. El `labelStyle` y `buttonStyle` , a continuación, se aplican a la [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) instancias y [ `Button` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) instancia estableciendo sus [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) propiedades. El resultado es el aspecto que se muestra en las capturas de pantalla siguiente:
 
-[![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png)
+[![](inheritance-images/style-inheritance.png)](inheritance-images/style-inheritance-large.png#lightbox)
 
 > [!NOTE]
-> **Tenga en cuenta**: un estilo implícito se puede derivar de un estilo explícito, pero no puede derivar un estilo explícito de un estilo implícito.
+> Un estilo implícito se puede derivar de un estilo explícito, pero no puede derivar un estilo explícito de un estilo implícito.
 
 ### <a name="respecting-the-inheritance-chain"></a>Respeta la cadena de herencia
 
@@ -106,7 +106,7 @@ Esta cadena de herencia se muestra en el ejemplo de código siguiente:
 
 En este ejemplo, `labelStyle` y `buttonStyle` es recursos de nivel de control mientras `baseStyle` es un recurso de nivel de página. Sin embargo, mientras `labelStyle` y `buttonStyle` heredarlo `baseStyle`, no es posible `baseStyle` heredar de `labelStyle` o `buttonStyle`, debido a sus respectivas ubicaciones en la jerarquía de vista.
 
-## <a name="style-inheritance-in-c35"></a>Herencia de estilo de C &#35;
+## <a name="style-inheritance-in-c35"></a>Herencia de estilo de C&#35;
 
 La página C# equivalente, donde [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) instancias se asignan directamente a la [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) propiedades de los controles necesarios, se muestra en el ejemplo de código siguiente:
 

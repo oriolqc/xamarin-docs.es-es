@@ -4,14 +4,15 @@ description: "Crear efectos inclinación y perspectiva con la tercera columna de
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 3fda8524b824042aa4aba07853da2801baf47027
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2e2e83404bc93bd07885008b868c51eba2ff7140
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="non-affine-transforms"></a>Transformaciones no afines
 
@@ -226,7 +227,7 @@ public partial class TestPerspectivePage : ContentPage
 
 Estas son algunas imágenes de ejemplo:
 
-[![](non-affine-images/testperspective-small.png "Captura de pantalla triple de la página de la perspectiva de pruebas")](non-affine-images/testperspective-large.png "Triple captura de pantalla de la página de la perspectiva de pruebas")
+[![](non-affine-images/testperspective-small.png "Captura de pantalla triple de la página de la perspectiva de pruebas")](non-affine-images/testperspective-large.png#lightbox "Triple captura de pantalla de la página de la perspectiva de pruebas")
 
 Mientras experimenta con los controles deslizantes, encontrará que los valores más allá de 0.0066 o por debajo de –0.0066 hacen que la imagen esté repentinamente fracturado e incoherentes. El mapa de bits que se va a transformar es 300 píxeles cuadrados. Se transforma en relación con su centro, por lo que las coordenadas del mapa de bits comprendido entre –150 y 150. Recuerde que el valor de z' es:
 
@@ -390,13 +391,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 A continuación se muestran algunos ejemplos:
 
-[![](non-affine-images/tapertransform-small.png "Captura de pantalla triple de la página Transformar inclinación")](non-affine-images/tapertransform-large.png "Triple captura de pantalla de la página Transformar inclinación")
+[![](non-affine-images/tapertransform-small.png "Captura de pantalla triple de la página Transformar inclinación")](non-affine-images/tapertransform-large.png#lightbox "Triple captura de pantalla de la página Transformar inclinación")
 
 Otro tipo de transformaciones no afines generalizadas es giro 3D, que se muestra en el siguiente artículo, [rotaciones 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md).
 
 La transformación no afines puede transformar un rectángulo en cualquier cuadrilátero convexa. Esto se demuestra la **Mostrar matriz no afín** página. Es muy similar a la **Mostrar matriz afín** página desde la [transforma la matriz](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md) artículo excepto que tiene una cuarta `TouchPoint` objeto para manipular la cuarta esquina del mapa de bits:
 
-[![](non-affine-images/shownonaffinematrix-small.png "Captura de pantalla triple de la página de la matriz no afín mostrar")](non-affine-images/shownonaffinematrix-large.png "Triple captura de pantalla de la página de la matriz no afín mostrar")
+[![](non-affine-images/shownonaffinematrix-small.png "Captura de pantalla triple de la página de la matriz no afín mostrar")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple captura de pantalla de la página de la matriz no afín mostrar")
 
 No intente realizar un ángulo interior de uno de los vértices del mapa de bits mayor de 180 grados o dos lados cruzarse entre sí, siempre que el sistema calcula correctamente la transformación usando este método desde el [ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) clase:
 

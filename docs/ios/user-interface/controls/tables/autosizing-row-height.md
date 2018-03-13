@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c5deb294aac679d60535f3f3bd6c9745e8bff358
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c8d66ff8199d451ce7469fa893b7673589c9e320
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="auto-sizing-row-height"></a>Alto de fila de tamaño automático
 
@@ -23,25 +23,25 @@ iOS 11 agregó la capacidad de filas que se expanden automáticamente. Encabezad
 
 Abra el guión gráfico de la vista de tabla que desea tener auto-resize la fila para en el diseñador, iOS seleccione la celda *prototipo* y definir el diseño de la celda. Por ejemplo:
 
-[ ![](autosizing-row-height-images/table01.png "Diseño de prototipo de la celda")](autosizing-row-height-images/table01.png)
+[![](autosizing-row-height-images/table01.png "Diseño de prototipo de la celda")](autosizing-row-height-images/table01.png#lightbox)
 
 Para cada elemento en el prototipo, agregar restricciones para mantener los elementos en la posición correcta cuando se cambia el tamaño de la vista de tabla para rotación o iOS diferentes tamaños de pantalla del dispositivo. Por ejemplo, fijar el `Title` a la parte superior, izquierda y derecha de la celda *vista de contenido*:
 
-[ ![](autosizing-row-height-images/table02.png "Anclar el título a la parte superior, izquierda y derecha de la vista de contenido de las celdas")](autosizing-row-height-images/table02.png)
+[![](autosizing-row-height-images/table02.png "Anclar el título a la parte superior, izquierda y derecha de la vista de contenido de las celdas")](autosizing-row-height-images/table02.png#lightbox)
 
 En el caso de la tabla de ejemplo, la pequeña `Label` (bajo la `Title`) es el campo que se puede reducir y crecer para aumentar o disminuir el alto de fila. Para lograr este efecto, agregue las siguientes restricciones para anclar izquierda, derecha, superior e inferior de la etiqueta:
 
-[ ![](autosizing-row-height-images/table03.png "Estas restricciones para anclar izquierda, derecha, superior e inferior de la etiqueta")](autosizing-row-height-images/table03.png)
+[![](autosizing-row-height-images/table03.png "Estas restricciones para anclar izquierda, derecha, superior e inferior de la etiqueta")](autosizing-row-height-images/table03.png#lightbox)
 
 Ahora que nos hemos totalmente restringido los elementos de la celda, es necesario aclarar qué elemento debe ajustarse. Para ello, establezca la **prioridad de una disposición a nivel de contenido** y **prioridad de resistencia de compresión de contenido** según sea necesario en el **diseño** sección del panel de propiedades:
 
-[ ![](autosizing-row-height-images/table03a.png "La sección de diseño del panel de propiedades")](autosizing-row-height-images/table03a.png)
+[![](autosizing-row-height-images/table03a.png "La sección de diseño del panel de propiedades")](autosizing-row-height-images/table03a.png#lightbox)
 
 Establezca el elemento que desea expandir para que tenga un **inferior** valor de prioridad de una disposición a nivel y un **inferior** valor de prioridad de resistencia de compresión.
 
 A continuación, necesitamos seleccionar el prototipo de la celda y asígnele un nombre único **identificador**:
 
-[ ![](autosizing-row-height-images/table04.png "Lo que proporciona el prototipo de la celda de un identificador único")](autosizing-row-height-images/table04.png)
+[![](autosizing-row-height-images/table04.png "Lo que proporciona el prototipo de la celda de un identificador único")](autosizing-row-height-images/table04.png#lightbox)
 
 En el caso de nuestro ejemplo, `GrowCell`. Vamos a usar este valor más adelante cuando se rellene la tabla.
 
@@ -50,19 +50,19 @@ En el caso de nuestro ejemplo, `GrowCell`. Vamos a usar este valor más adelante
 
 Para cada elemento de nuestro prototipo de celda, asignar un **nombre** para exponerlo a código de C#. Por ejemplo:
 
-[ ![](autosizing-row-height-images/table05.png "Asigne un nombre para exponerlo a código de C#")](autosizing-row-height-images/table05.png)
+[![](autosizing-row-height-images/table05.png "Asigne un nombre para exponerlo a código de C#")](autosizing-row-height-images/table05.png#lightbox)
 
 A continuación, agregue una clase personalizada para la `UITableViewController`, `UITableView` y `UITableCell` (Prototype). Por ejemplo: 
 
-[ ![](autosizing-row-height-images/table06.png "Agregar una clase personalizada para el UITableViewController, la UITableView y la UITableCell")](autosizing-row-height-images/table06.png)
+[![](autosizing-row-height-images/table06.png "Agregar una clase personalizada para el UITableViewController, la UITableView y la UITableCell")](autosizing-row-height-images/table06.png#lightbox)
 
 Por último, para asegurarse de que todos los esperados contenido se muestra en la etiqueta, establezca el **líneas** propiedad `0`:
 
-[ ![](autosizing-row-height-images/table06.png "La propiedad de líneas que se establece en 0")](autosizing-row-height-images/table06a.png)
+[![](autosizing-row-height-images/table06.png "La propiedad de líneas que se establece en 0")](autosizing-row-height-images/table06a.png#lightbox)
 
 Con la interfaz de usuario definida, vamos a agregar el código para permitir el cambio de tamaño de alto de fila automáticamente.
 
-##<a name="enabling-auto-resizing-height"></a>Habilitar el cambio de tamaño automático alto
+## <a name="enabling-auto-resizing-height"></a>Habilitar el cambio de tamaño automático alto
 
 En la vista origen de datos de la vista de la tabla (`UITableViewDatasource`) o un origen (`UITableViewSource`), cuando se quitan de la cola una celda que debemos usar el `Identifier` que hemos definido en el diseñador. Por ejemplo:
 
@@ -106,7 +106,7 @@ Esta estimación no tiene que ser exactos, simplemente una estimación aproximad
 
 Con este código en su lugar, cuando se ejecuta la aplicación, cada fila se reducir y crecer en función del alto de la última etiqueta en el prototipo de la celda. Por ejemplo:
 
-[ ![](autosizing-row-height-images/table07.png "Una tabla de ejemplo que se ejecute")](autosizing-row-height-images/table07.png)
+[![](autosizing-row-height-images/table07.png "Una tabla de ejemplo que se ejecute")](autosizing-row-height-images/table07.png#lightbox)
 
 
 ## <a name="related-links"></a>Vínculos relacionados

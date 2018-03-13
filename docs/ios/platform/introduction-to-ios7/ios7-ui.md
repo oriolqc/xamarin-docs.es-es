@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 6df47bd54611feedd0d355a976a055d62f37afeb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1ad37cb4a794ac47e0e2f184a730949f14e85572
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 introducción de la interfaz de usuario
 
@@ -146,7 +146,7 @@ Cuando prepare la aplicación para iOS 7, puede volver a alinear subvistas visua
 
  `TopLayoutGuide` y `BottomLayoutGuide` actuar como referencia para donde deben comenzar o finalizar, vistas para que el contenido no se solapa con una translúcido `UIKit` barra, como en el ejemplo siguiente:
 
- [ ![](ios7-ui-images/clipped.png "Contenido de ejemplo no se solapa con una barra de UIKit translúcida")](ios7-ui-images/clipped.png)
+ [![](ios7-ui-images/clipped.png "Contenido de ejemplo no se solapa con una barra de UIKit translúcida")](ios7-ui-images/clipped.png#lightbox)
 
 Estas API pueden usarse para calcular el desplazamiento de una vista de la parte superior o inferior de la pantalla y ajustan la selección de ubicación de contenido según corresponda:
 
@@ -166,7 +166,7 @@ public override void ViewDidLayoutSubviews ()
 
 Podemos usar el valor calculado anteriormente para establecer nuestro `ImageView`del desplazamiento de la parte superior de la pantalla, por lo que está visible la imagen completa:
 
- [ ![](ios7-ui-images/good2.png "Desplazamiento de ImageViews de ejemplo desde la parte superior de la pantalla")](ios7-ui-images/good2.png)
+ [![](ios7-ui-images/good2.png "Desplazamiento de ImageViews de ejemplo desde la parte superior de la pantalla")](ios7-ui-images/good2.png#lightbox)
 
 Hacer referencia a la [ImageViewer](https://developer.xamarin.com/samples/mobile/iOS7-ui-updates) para obtener un ejemplo funcional.
 
@@ -179,15 +179,15 @@ El valor de desplazamiento se genera dinámicamente después de la vista se ha a
 
 Esta API especifica qué bordes de una vista deben ampliarse a pantalla completa, con independencia de transparencia de la barra. En iOS 7, barras de navegación y barras de herramientas aparecen nivel por encima de la vista del controlador: a diferencia de en iOS anteriores versiones, en el que no ocupan el mismo espacio. El valor predeterminado muestra la aplicación de fotos de iOS 7 `UIViewController.EdgesForExtendedLayout` valor, `UIRectEdge.All`. Este valor rellena los cuatro bordes en la vista de contenido, crear el efecto que se superponen y pantalla completa:
 
- [ ![](ios7-ui-images/photos.png "Ejemplo EdgesForExtendedLayout")](ios7-ui-images/photos.png)
+ [![](ios7-ui-images/photos.png "Ejemplo EdgesForExtendedLayout")](ios7-ui-images/photos.png#lightbox)
 
 Puntee en la imagen quita las barras y muestra la pantalla completa de imagen:
 
- [ ![](ios7-ui-images/photos2.png "EdgesForExtendedLayout con las barras quitado")](ios7-ui-images/photos2.png)
+ [![](ios7-ui-images/photos2.png "EdgesForExtendedLayout con las barras quitado")](ios7-ui-images/photos2.png#lightbox)
 
 Dado que el contenido de pantalla completa es el valor predeterminado, las aplicaciones configuradas para iOS 6 tendrá parte de la vista que se recorta, como se muestra en la captura de pantalla siguiente:
 
- [ ![](ios7-ui-images/clipped.png "Aplicaciones configuradas para iOS 6 tendrá parte de la vista que se recorta, como se muestra en esta captura de pantalla")](ios7-ui-images/clipped.png)
+ [![](ios7-ui-images/clipped.png "Aplicaciones configuradas para iOS 6 tendrá parte de la vista que se recorta, como se muestra en esta captura de pantalla")](ios7-ui-images/clipped.png#lightbox)
 
 Modificar el `UIViewController.EdgesForExtendedLayout` propiedad se ajusta a este comportamiento. Se puede especificar que la vista no se llene los bordes, por lo que nuestro punto de vista, evitará mostrar el contenido en el espacio ocupado por navegación o barras de herramientas (en cada orientación):
 
@@ -199,7 +199,7 @@ if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
 
 En nuestra aplicación, veremos nuevo se vuelve a colocar la vista, por lo que está visible la imagen completa:
 
- [ ![](ios7-ui-images/good.png "Ejemplo con toda la imagen visible")](ios7-ui-images/good.png)
+ [![](ios7-ui-images/good.png "Ejemplo con toda la imagen visible")](ios7-ui-images/good.png#lightbox)
 
 Tenga en cuenta que mientras los efectos de la `TopLayoutGuide/BottomLayoutGuide` y `EdgesForExtendedLayout` API son similares, que están concebidos para rellenar distintos objetivos. Cambiar el `EdgesForExtendedLayout` configuración del valor predeterminado puede corregir las vistas recortadas en aplicaciones diseñadas para iOS 6, pero un diseño de buena iOS 7 debe respetar el estéticos de pantalla completa y proporcionar una experiencia de visualización, confiando en completo pantalla `TopLayoutGuide` y `BottomLayoutGuide`para colocar correctamente el contenido que está pensada para su manipulación en un lugar cómodo para el usuario.
 

@@ -8,17 +8,17 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 4af76a37e5fd42ff1d6344f60642425c73e9d733
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f5383465f7bc5c4529eebefca02718c83a653e9f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-opentk"></a>Introducción a OpenTK
 
 OpenTK (el Kit de herramientas abierta) es una avanzada, bajo nivel C# biblioteca que facilita el trabajo con OpenGL, OpenCL y OpenAL. OpenTK puede utilizarse para juegos, aplicaciones científicas u otros proyectos que requieren gráficos 3D, la funcionalidad de audio o de cálculo. Este artículo proporciona una breve introducción al uso de OpenTK en una aplicación Xamarin.Mac.
 
-[ ![](opentk-images/intro01.png "Ejecutar una aplicación de ejemplo")](opentk-images/intro01.png)
+[![](opentk-images/intro01.png "Ejecutar una aplicación de ejemplo")](opentk-images/intro01.png#lightbox)
 
 En este artículo, trataremos los aspectos básicos de OpenTK en una aplicación Xamarin.Mac. Se recomienda trabajar a través de la [Hola, Mac](~/mac/get-started/hello-mac.md) artículo en primer lugar, específicamente el [Introducción a Xcode y el generador de interfaz](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) y [distribuidores y acciones](~/mac/get-started/hello-mac.md#Outlets_and_Actions) secciones, tal como se explica conceptos clave y técnicas que usaremos en este artículo.
 
@@ -54,11 +54,11 @@ Como una introducción rápida al uso de OpenTK en una aplicación Xamarin.Mac, 
 
 Inicie Visual Studio para Mac y crear una nueva solución de Xamarin.Mac. Seleccione **Mac** > **aplicación** > **General** > **cacao aplicación**:
 
-[ ![](opentk-images/sample01.png "Agregar una nueva aplicación de cacao")](opentk-images/sample01.png)
+[![](opentk-images/sample01.png "Agregar una nueva aplicación de cacao")](opentk-images/sample01.png#lightbox)
 
 Escriba `MacOpenTK` para el **nombre de proyecto**:
 
-[ ![](opentk-images/sample02.png "Establecer el nombre del proyecto")](opentk-images/sample02.png)
+[![](opentk-images/sample02.png "Establecer el nombre del proyecto")](opentk-images/sample02.png#lightbox)
 
 Haga clic en el **crear** para crear el nuevo proyecto.
 
@@ -70,7 +70,7 @@ Antes de poder usar TK abierto en una aplicación Xamarin.Mac, deberá incluir u
 
 Colocar una marca de verificación por `OpenTK` y haga clic en el **Aceptar** botón:
 
-[ ![](opentk-images/sample03.png "Editar las referencias del proyecto")](opentk-images/sample03.png)
+[![](opentk-images/sample03.png "Editar las referencias del proyecto")](opentk-images/sample03.png#lightbox)
 
 <a name="Using_OpenTK" />
 
@@ -296,7 +296,7 @@ Se pasa en la velocidad de fotogramas deseado que queremos que la vista de juego
 
 Vamos a ejecutar la aplicación y ver el resultado:
 
-[ ![](opentk-images/intro01.png "Un ejemplo de la salida de aplicaciones")](opentk-images/intro01.png)
+[![](opentk-images/intro01.png "Un ejemplo de la salida de aplicaciones")](opentk-images/intro01.png#lightbox)
 
 Si se cambia el tamaño de la ventana, la vista de juego también será residen y el triángulo que se cambia el tamaño y también actualiza en tiempo real.
 
@@ -329,5 +329,5 @@ En este artículo ha tomado un vistazo al trabajar con OpenTK en una aplicación
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabajar con ventanas](~/mac/user-interface/window.md)
 - [El Kit de herramientas abierta](http://www.opentk.com)
-- [Directrices de interfaz de sistema operativo X humanos](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Directrices de interfaz humana de OS X)
 - [Introducción a Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

@@ -6,15 +6,23 @@ ms.assetid: C29B69F5-08E4-4DCC-831E-7FD692AB0886
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 06/26/2017
-ms.openlocfilehash: 7cf627f369b666bb54d0f512dc1361d2a685a057
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/06/2018
+ms.openlocfilehash: c7dc63cbed0dbdc13dfd2d32a0859c0fe7a29196
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinios-analysis-rules"></a>Reglas de análisis de Xamarin.iOS
 
+Análisis de Xamarin.iOS es un conjunto de reglas que comprueban la configuración del proyecto para ayudarle a determinar si la configuración optimizada mejor y más está disponible.
+
+Ejecutar las reglas de análisis con tanta frecuencia como sea posible para encontrar posibles mejoras desde el principio y ahorra tiempo de desarrollo.
+
+Para ejecutar las reglas, en Visual Studio para el menú de Mac, seleccione **proyecto > Ejecutar análisis de código**.
+
+> [!NOTE]
+> Xamarin.iOS sólo se ejecuta el análisis de la configuración seleccionada actualmente. Recomendamos encarecidamente ejecutar la herramienta de depuración **y** configuración de lanzamiento.
 
 ## <a name="a-namexia0001xia0001-disabledlinkerrule"></a><a name="XIA0001"/>XIA0001: DisabledLinkerRule
 
@@ -41,3 +49,8 @@ Para configurarla, vaya al proyecto > iOS compilación > comportamiento del vinc
 
 - **Problema:** no usa la opción float32 (--aot-options O = = float32) conduce a rendimiento elevado de costo, especialmente en dispositivos móviles, donde es más lento mejorará en gran medida matemática de precisión doble. Tenga en cuenta que .NET utiliza de doble precisión internamente, incluso para float, por lo que si se habilita esta opción afecta a la precisión y, posiblemente, compatibilidad.
 - **Corrección:** Double, haga clic en el proyecto de iOS, vaya a la compilación > iOS compilar y desactive el "Realizar todas las operaciones de punto flotante de 32 bits como float de 64 bits".
+
+## <a name="a-namexia0006xia0006-httpclientavoidmanaged"></a><a name="XIA0006"/>XIA0006: HttpClientAvoidManaged
+
+- **Problema:** se recomienda usar el controlador HttpClient nativo en lugar del administrado para mejorar el rendimiento, menor tamaño del archivo ejecutable y para admitir fácilmente los estándares más recientes.
+- **Corrección:** Double, haga clic en el proyecto de iOS, vaya a la compilación > iOS de compilación y cambie la implementación HttpClient NSUrlSession (iOS 7 +) o CFNetwork para admitir la versión anterior a iOS 7.

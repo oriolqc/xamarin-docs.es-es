@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 9579acc6c070bf692b0db1bd444a31c9ea4aa7ca
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 47f90af1ed68e6c3aea5710b7181b4787fc0895c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="architecture"></a>Arquitectura
 
@@ -22,13 +22,12 @@ Puede utilizar el [System](http://msdn.microsoft.com/en-us/library/system.aspx),
 
 En Android, la mayoría de las funciones de sistema como Audio, gráficos, OpenGL y telefonía no está disponible directamente a las aplicaciones nativas, solo se exponen a través de la API de Java en tiempo de ejecución Android que residen en uno de los [Java](https://developer.xamarin.com/api/namespace/Java.Lang/). * espacios de nombres o la [Android](https://developer.xamarin.com/api/namespace/Android/). * espacios de nombres. La arquitectura de aproximadamente es similar al siguiente:
 
-[![Diagrama de Mono y material gráfico por encima del kernel y por debajo de .NET/Java + enlaces](architecture-images/architecture1.png)](architecture-images/architecture1.png)
+[![Diagrama de Mono y material gráfico por encima del kernel y por debajo de .NET/Java + enlaces](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
 
 Xamarin.Android a los desarrolladores tener acceso a las distintas características en el sistema operativo por llamar a las API de .NET que conocen (para acceso de bajo nivel) o usando las clases que se exponen en los espacios de nombres Android que proporciona un puente a las API de Java que se exponen por el tiempo de ejecución Android.
 
 Para obtener más información sobre cómo se comunican las clases Android con las clases de Android en tiempo de ejecución, consulte el [diseño de la API](~/android/internals/api-design.md) documento.
 
-<a name="Application_Packages" />
 
 ## <a name="application-packages"></a>Paquetes de aplicación
 
@@ -44,7 +43,6 @@ Paquetes de aplicaciones Android son contenedores ZIP con un *.apk* la extensió
 Las aplicaciones de Xamarin.Android también contienen *Android Callable Wrappers* para permitir Android llamar a código administrado.
 
 
-<a name="Android_Callable_Wrappers" />
 
 ## <a name="android-callable-wrappers"></a>Android contenedores CCW
 
@@ -67,7 +65,6 @@ Referencias globales se pueden liberar explícitamente mediante una llamada a [J
 Se deben tomar precauciones al desechar administrados Callable Wrappers si la instancia puede compartirse accidentalmente entre subprocesos, como la eliminación de la instancia afectará a las referencias de todos los demás subprocesos. Por motivos de seguridad máximo, sólo `Dispose()` de instancias que se han asignado a través de `new` *o* de métodos que se puede *saber* siempre asignar nuevas instancias e instancias no almacenadas en caché que se pueden hacer uso compartido entre los subprocesos de instancias accidental.
 
 
-<a name="Managed_Callable_Wrapper_Subclasses" />
 
 ## <a name="managed-callable-wrapper-subclasses"></a>Administra las subclases de contenedor CCW
 
@@ -76,7 +73,6 @@ Las subclases de contenedor CCW administrado son donde puede residir toda la ló
 Como administrar contenedores RCW, administra las subclases de contenedor CCW también contienen una referencia global, accesible a través de la [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) propiedad. Igual que con los contenedores CCW administrados, referencias globales se pueden liberar explícitamente mediante una llamada a [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/).
 A diferencia de los contenedores CCW administrados, *mucho cuidado* debe tener cuidado antes de la eliminación de instancias de este tipo, como *Dispose()*realizando una operación de la instancia interrumpirá la asignación entre la instancia de Java (una instancia de un Android Callable Wrapper) y la instancia administrada.
 
-<a name="Java_Activation" />
 
 ### <a name="java-activation"></a>Activación de Java
 
@@ -182,7 +178,6 @@ I/mono-stdout( 2993): [Managed: Value=]
 Solo *Dispose()* de administra las subclases de contenedor CCW cuando sepa que ya no se utilizará el objeto de Java o la subclase no contiene ningún dato de instancia y un *(IntPtr, JniHandleOwnership)* se ha proporcionado el constructor.
 
 
-<a name="Application_Startup" />
 
 ## <a name="application-startup"></a>Inicio de la aplicación
 

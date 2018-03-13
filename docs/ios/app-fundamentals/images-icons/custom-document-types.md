@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/23/2017
-ms.openlocfilehash: 582fcbacbf1959e05773babb1219817ba319a937
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e14cfb8d3c09d17bdee4b60786f434ff94ef31dc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="custom-document-icons"></a>Iconos de documento personalizadas
 
@@ -20,7 +20,7 @@ _Esta artículo cubre incluidos y administrar un recurso de imagen en una aplica
 
 Si una aplicación de Xamarin.iOS admite la carga de un tipo de documento en particular, el desarrollador puede proporcionar iconos que se va a usar el sistema cuando encuentra ese tipo de documento, como cuando un usuario mantiene presionado un dato adjunto en el *aplicación de correo electrónico* como se muestra aquí:
 
- [ ![](custom-document-types-images/17.png "Un ejemplo de iconos de tipo de documento")](custom-document-types-images/17.png)
+ [![](custom-document-types-images/17.png "Un ejemplo de iconos de tipo de documento")](custom-document-types-images/17.png#lightbox)
 
 El programador puede agregar información de tipo de documento para un formato de archivo de la aplicación es capaz de apertura mediante la inclusión de entradas del diccionario para la `CFBundleTypeName` cadena y `LSItemContentTypes` matriz en la aplicación `Info.plist`. Los iconos para el tipo de documento ir en la `CFBundleTypeIconFiles` matriz. Si no se proporcionó un icono de documento, iOS derivará uno desde el icono de la aplicación.
 Pueden proporcionar iconos para varios tamaños, optimizados para las diferentes resoluciones de dispositivo. 
@@ -29,7 +29,7 @@ Pueden proporcionar iconos para varios tamaños, optimizados para las diferentes
 
 Para asignar estos valores en Visual Studio para Mac, use la **tipos de documentos** sección en la la **avanzadas** ficha la `Info.plist` editor para agregar el tipo de documento y asignar los iconos de imagen a él. Por ejemplo, aquí tiene una captura de pantalla que muestra el registro para la compatibilidad con PDF:
 
- [ ![](custom-document-types-images/18.png "La sección tipos de documento en la ficha Opciones avanzadas en el editor 'Info.plist'")](custom-document-types-images/18.png)
+ [![](custom-document-types-images/18.png "La sección tipos de documento en la ficha Opciones avanzadas en el editor 'Info.plist'")](custom-document-types-images/18.png#lightbox)
  
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -50,5 +50,5 @@ Para obtener más información acerca de los tipos de documento, consulte de App
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Trabajar con imágenes (ejemplo)](https://developer.xamarin.com/samples/WorkingWithImages/)
-- [Hola, iPhone](~/ios/get-started/hello-ios/index.md)
+- [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
 - [Icono personalizado y directrices para la creación de imágenes](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

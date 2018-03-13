@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: dbe88f39999ee163ff2e7cdf4b9301aa0f0681bc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ad057f55ed69174bef55c0364e5e7ea30bae2789
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="device-styles"></a>Estilos de dispositivo
 
@@ -115,7 +115,7 @@ El *dispositivo* estilos respetan las preferencias de accesibilidad, por lo que 
 
 Las capturas de pantalla siguientes muestran los estilos de dispositivo en cada plataforma, con el menor tamaño de fuente accesible:
 
-[![](device-images/minimum-size.png "Estilos de dispositivo pequeño accesible en cada plataforma")](device-images/minimum-size-large.png "estilos de dispositivo pequeño accesible en cada plataforma")
+[![](device-images/minimum-size.png "Estilos de dispositivo pequeño accesible en cada plataforma")](device-images/minimum-size-large.png#lightbox "estilos de dispositivo pequeño accesible en cada plataforma")
 
 Las capturas de pantalla siguientes muestran los estilos de dispositivo en cada plataforma, con el mayor tamaño de fuente accesible:
 

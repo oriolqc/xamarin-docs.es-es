@@ -7,21 +7,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/05/2017
-ms.openlocfilehash: a6bfebb5272da3fd50f4f165fc25bb75574a0b63
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4bcbd14b88f19dc48dc9d0694fb30aed31708153
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="maps-application"></a>Aplicación de mapas
 
 La manera más sencilla de trabajar con los mapas de Xamarin.Android es aprovechar la aplicación de mapas integrados que se muestra a continuación:
 
-[![Captura de pantalla de ejemplo de aplicación de Google Maps integrada](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png)
+[![Captura de pantalla de ejemplo de aplicación de Google Maps integrada](maps-application-images/01-mapsapplication.png)](maps-application-images/01-mapsapplication.png#lightbox)
 
 Cuando se utiliza la aplicación de mapas, el mapa no formará parte de la aplicación. En su lugar, la aplicación se inicie la aplicación de mapas y cargar el mapa externamente. La siguiente sección examina cómo usar Xamarin.Android para iniciar mapas como se muestra arriba.
 
-<a name="Creating_the_Intent" />
 
 ## <a name="creating-the-intent"></a>Crear la intención
 
@@ -35,7 +34,6 @@ StartActivity (mapIntent);
 
 Este código es todo lo que necesita para iniciar la asignación que se muestra en la captura de pantalla anterior. Además de especificar la latitud y longitud, el esquema URI para mapas admite varias otras opciones.
 
-<a name="Geo_Uri_Scheme" />
 
 ## <a name="geo-uri-scheme"></a>Esquema de URI de replicación geográfica
 
@@ -52,10 +50,9 @@ El código anterior utiliza el esquema de replicación geográfica para crear un
 
 Las versiones del URI que llevar a cabo una consulta (es decir, los términos calles dirección o búsqueda) usan servicio de geocoder de Google para recuperar la ubicación que se muestra a continuación, en el mapa. Por ejemplo, el URI `geo:0,0?q=coop+Cambridge` da como resultado la asignación se muestra a continuación:
 
-[![Captura de pantalla de ejemplo muestra Google Maps con un término de búsqueda](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png)
+[![Captura de pantalla de ejemplo muestra Google Maps con un término de búsqueda](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
 
 
-<a name="Street_View" />
 
 Para obtener más información acerca de los esquemas de URI de replicación geográfica, consulte [mostrar una ubicación en un mapa](http://developer.android.com/guide/components/intents-common.html#Maps).
 
@@ -64,7 +61,7 @@ Para obtener más información acerca de los esquemas de URI de replicación geo
 
 Además de la combinación de replicación geográfica, Android también admite la carga vistas postales de un intento. A continuación se muestra un ejemplo de la aplicación de vista postal iniciada desde Xamarin.Android:
 
-[![Captura de pantalla de ejemplo de una vista postal](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png)
+[![Captura de pantalla de ejemplo de una vista postal](maps-application-images/03-streetview.png)](maps-application-images/03-streetview.png#lightbox)
 
 Para iniciar una vista calle, use simplemente el `google.streetview` esquema del URI, como se muestra en el código siguiente:
 

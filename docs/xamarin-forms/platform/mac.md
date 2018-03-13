@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: EEC549E0-F182-4F9C-B2BA-B31D19569AA5
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: bda207796d1019f8188176acce055d782cb9e32d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e8487dc06b3512a0ec0bb1b30393faeab506df60
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="mac-platform-setup"></a>Configuración de la plataforma de Mac
 
@@ -20,6 +21,10 @@ ms.lasthandoff: 02/27/2018
 
 Antes de empezar, cree (o usar una existente) proyecto Xamarin.Forms.
 Solo puede agregar aplicaciones de Mac con Visual Studio para Mac.
+
+> [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
+
+**Agregar un proyecto de macOS a Xamarin.Forms, por [Universidad de Xamarin](https://university.xamarin.com/)**
 
 ## <a name="adding-a-mac-app"></a>Agregar una aplicación de Mac
 
@@ -92,7 +97,7 @@ Siga estas instrucciones para agregar una aplicación de Mac que se ejecutará e
 
 9. Haga doble clic en **Main.storyboard** para editar en Xcode. Seleccione el **ventana** y _desactive_ el **controlador inicial es** casilla (Esto es porque el código anterior crea una ventana):
 
-  [ ![Desactive la casilla de verificación de controlador inicial está en Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png)
+  [![Desactive la casilla de verificación de controlador inicial está en Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
 
   Puede modificar el sistema de menú en el guión gráfico para quitar elementos no deseados.
 

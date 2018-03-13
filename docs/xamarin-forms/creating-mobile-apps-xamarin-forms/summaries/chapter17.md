@@ -3,14 +3,15 @@ title: "Resumen de capítulo 17. Controla la cuadrícula"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c0a184b80b57980c7ae00572517ad52a18b5755c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 09f63dd418ea1fb523c028edb02c28c22bfdccd1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Resumen de capítulo 17. Controla la cuadrícula
 
@@ -90,7 +91,7 @@ El [ **GridCellBorders** ](https://github.com/xamarin/xamarin-forms-book-samples
 
 El [ **KeypadGrid** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/KeypadGrid) ejemplo usa un `Grid` para mostrar un teclado numérico:
 
-[![Captura de pantalla triple de cuadrícula de teclado](images/ch17fg12-small.png "teclado cuadrícula")](images/ch17fg12-large.png "cuadrícula de teclado")
+[![Captura de pantalla triple de cuadrícula de teclado](images/ch17fg12-small.png "teclado cuadrícula")](images/ch17fg12-large.png#lightbox "cuadrícula de teclado")
 
 ### <a name="responding-to-orientation-changes"></a>Responder a los cambios de orientación
 

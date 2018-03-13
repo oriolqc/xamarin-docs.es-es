@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f7ded8fdc1274f7c98d8f7134f6a87c7ba767646
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b0d757c951f9244beb093a0a9b13ac1d069b507
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="reporting-bugs"></a>Informes errores
 
@@ -70,7 +70,7 @@ Las secciones siguientes tratan problemas conocidos y sus soluciones.
 
 El depurador se conecta a aplicaciones de Xamarin.Mac a través de TCP, lo que significa que de forma predeterminada cuando se habilita el espacio aislado, no se puede conectar a la aplicación, por lo que si se intenta ejecutar la aplicación sin los permisos adecuados habilitados, obtendrá un error *"no se puede conectar a el depurador"*. 
 
-[![Editar los derechos](troubleshooting-images/debug01.png "los derechos de edición")](troubleshooting-images/debug01-large.png)
+[![Editar los derechos](troubleshooting-images/debug01.png "los derechos de edición")](troubleshooting-images/debug01-large.png#lightbox)
 
 El **permitir conexiones de red salientes (cliente)** permiso es necesario para que el depurador, éste se habilita, normalmente la depuración. Puesto que no se pueden depurar sin él, hemos actualizado el `CompileEntitlements` de destino para `msbuild` para agregar automáticamente ese permiso a los derechos para cualquier aplicación que se encuentre en un espacio aislado para depuración solo compila. Versiones de lanzamiento deben usar los derechos especificados en el archivo de derechos, sin modificar.
 
@@ -80,7 +80,7 @@ Cuando se incluyen 3rd bibliotecas de entidad en la aplicación Xamarin.Mac, pod
 
 Esto se puede resolver, abra las opciones para el proyecto Xamarin.Mac, vaya a **Mac compilar** > **internacionalización** y la comprobación de la **oeste** internacionalización:
 
-[![Editar las opciones de compilación](troubleshooting-images/issue01.png "modificar las opciones de compilación")](troubleshooting-images/issue01-large.png)
+[![Modificar las opciones de compilación](troubleshooting-images/issue01.png "Modificar las opciones de compilación")](troubleshooting-images/issue01-large.png#lightbox)
 
 ### <a name="failed-to-compile-mm5103"></a>No se pudo compilar (mm5103)
 
@@ -100,7 +100,7 @@ Con el nuevo de Visual Studio para Mac instalado, cuando se crea un nuevo proyec
 
 Si hace doble clic en el **Entitlements.plist** se mostrará el archivo, el Editor de derechos:
 
-[![Editar los derechos](troubleshooting-images/entitlements02.png "los derechos de edición")](troubleshooting-images/entitlements02-large.png)
+[![Editar los derechos](troubleshooting-images/entitlements02.png "los derechos de edición")](troubleshooting-images/entitlements02-large.png#lightbox)
 
 Para los proyectos de Xamarin.Mac existentes, debe crear manualmente el **Entitlements.plist** archivo con el botón secundario en el proyecto en el **solución Pad** y seleccionando **agregar**  >  **Nuevo archivo...** . A continuación, seleccione **Xamarin.Mac** > **lista de propiedades vacía**:
 
@@ -108,7 +108,7 @@ Para los proyectos de Xamarin.Mac existentes, debe crear manualmente el **Entitl
 
 Escriba `Entitlements` para el nombre y haga clic en el **New** botón. Si anteriormente, el proyecto incluye un archivo de derechos, se le pedirá que lo agregue al proyecto en lugar de crear un nuevo archivo:
 
-[![Comprobar la sobrescritura de un archivo](troubleshooting-images/entitlements04.png "comprobar la sobrescritura de un archivo")](troubleshooting-images/entitlements04-large.png)
+[![Comprobar la sobrescritura de un archivo](troubleshooting-images/entitlements04.png "comprobar la sobrescritura de un archivo")](troubleshooting-images/entitlements04-large.png#lightbox)
 
 ## <a name="contacting-support-business-or-enterprise-licenses"></a>Ponerse en contacto con soporte técnico (licencias business o enterprise)
 
@@ -124,14 +124,14 @@ La Comunidad de desarrolladores usan productos de Xamarin es sorprendente y much
 
 Sus comentarios son importantes para nosotros. Si encuentra algún problema con Xamarin.Mac:
 
-- Buscar el [repositorio de problema](https://github.com/xamarin/xamarin-macios/issues) 
-- Antes de pasar a problemas de GitHub, se realiza un seguimiento de problemas de Xamarin en [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Por favor, busca allí para la coincidencia de problemas.
-- Si no se encuentra un problema de búsqueda de coincidencias, registre un nuevo asunto en la [repositorio de problema de GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+- Busque en el [repositorio de problemas](https://github.com/xamarin/xamarin-macios/issues). 
+- Antes de la migración a GitHub, los problemas de Xamarin se recopilaban en [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Busque allí para ver si están los mismos problemas.
+- Si no encuentra un problema, registre uno nuevo en el [repositorio de problemas de GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Problemas de GitHub son todos los públicos. No es posible ocultar comentarios o datos adjuntos. 
+Los problemas de GitHub son públicos. No es posible ocultar comentarios ni datos adjuntos. 
 
-Incluya como gran parte de las acciones siguientes como sea posible:                                                                                                                                          
+De la siguiente información, incluya toda la que pueda:                                                                                                                                          
 
-- Un ejemplo sencillo reproducir el problema. Se trata de **inestimable** siempre que sea posible. 
-- El seguimiento de pila completo del bloqueo.
-- El código C# que rodea el bloqueo. 
+- Un ejemplo sencillo que reproduzca el problema. Siempre que sea posible, esta información es **muy útil**. 
+- El seguimiento de la pila completo del bloqueo.
+- El código de C# del bloqueo. 

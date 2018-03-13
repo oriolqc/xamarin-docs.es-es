@@ -3,14 +3,15 @@ title: "Resumen del capítulo 3. Profundiza en texto"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9d283a4136a7cdfe39ea0b2da65273332fd47b00
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7dbcc093bc467e633f9333bb129adc25372832f3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumen del capítulo 3. Profundiza en texto
 
@@ -129,7 +130,7 @@ En todos los ejemplos hasta ahora, todo el texto se muestra por el `Label` se ha
 
 El [ **VariableFormattedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormText) ejemplo muestra cómo utilizar el `FormattedText` propiedad para una sola línea de texto, y [ **VariableFormattedParagraph** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormPara) muestra la técnica para un párrafo completo, como se muestra aquí:
 
-[![Captura de pantalla triple de variable con el formato párrafo](images/ch03fg06-small.png "texto de la etiqueta con el formato de Variable")](images/ch03fg06-large.png "texto de la etiqueta con el formato de Variable")
+[![Captura de pantalla triple de variable con el formato párrafo](images/ch03fg06-small.png "texto de la etiqueta con el formato de Variable")](images/ch03fg06-large.png#lightbox "texto de la etiqueta con el formato de Variable")
 
 El [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) programa utiliza una sola `Label` y un `FormattedString` objeto para mostrar todos los tamaños de fuente con nombre para cada plataforma.
 

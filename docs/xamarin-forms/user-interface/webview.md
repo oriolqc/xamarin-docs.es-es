@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 67caa11b23f5651a6b851c1e9baf16c2adca422a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7a077a3dcc47de8416abb0c51b23dc07fc1f1f12
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="webview"></a>WebView
 
@@ -38,7 +38,8 @@ WebView incluye soporte técnico para los siguientes tipos de contenido:
 - Las cadenas HTML &ndash; WebView puede mostrar las cadenas HTML de la memoria.
 - Archivos locales &ndash; WebView puede presentar cualquiera de los tipos de contenido anteriores incrustados en la aplicación.
 
-**Tenga en cuenta**: `WebView` en Windows y Windows Phone no admite Silverlight, Flash o todos los controles ActiveX, incluso si son compatibles con Internet Explorer en esa plataforma.
+> [!NOTE]
+> `WebView` en Windows y Windows Phone no admiten Silverlight, Flash o todos los controles ActiveX, incluso si son compatibles con Internet Explorer en esa plataforma.
 
 ### <a name="websites"></a>Sitios web
 
@@ -50,14 +51,15 @@ var browser = new WebView {
 };
 ```
 
-**Tenga en cuenta**: las direcciones URL se deben formar totalmente con el protocolo especificado (es decir, debe tener "http://" o "https://" antepone a él).
+> [!NOTE]
+> Las direcciones URL se deben formar totalmente con el protocolo especificado (es decir, debe tener "http://" o "https://" antepone a él).
 
 #### <a name="ios-and-ats"></a>iOS y ATS
 
 Desde la versión 9, iOS solo permitirá que la aplicación para comunicarse con servidores que implementan la seguridad de los procedimientos recomendados de forma predeterminada. Valores se deben establecer `Info.plist` para habilitar la comunicación con servidores inseguras.
 
 > [!NOTE]
-> **Nota:** si la aplicación requiere una conexión a un sitio Web inseguro, siempre debe escribir el dominio como una excepción mediante `NSExceptionDomains` en lugar de desactivar que ATS totalmente mediante `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` sólo debe utilizarse en situaciones de emergencias extremas.
+> Si la aplicación requiere una conexión a un sitio Web inseguro, siempre debe escribir el dominio como una excepción mediante `NSExceptionDomains` en lugar de desactivar que ATS totalmente mediante `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` sólo debe utilizarse en situaciones de emergencias extremas.
 
 A continuación muestra cómo habilitar un dominio específico (en este caso en xamarin.com) para omitir los requisitos de ATS:
 
@@ -221,10 +223,10 @@ namespace WorkingWithWebview.Android {
 }
 ```
 
-En Android, archivos en la **activos** carpeta también son accesibles a través de la `Forms.Context.Assets` propiedad, como se muestra en el ejemplo de código siguiente:
+En Android, archivos en la **activos** carpeta también son accesibles a través del contexto de Android actual, que se expone mediante el `MainActivity.Instance` propiedad:
 
 ```csharp
-var assetManager = Xamarin.Forms.Forms.Context.Assets;
+var assetManager = MainActivity.Instance.Assets;
 using (var streamReader = new StreamReader (assetManager.Open ("local.html"))) {
   var html = streamReader.ReadToEnd ();
 }

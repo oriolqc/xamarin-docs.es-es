@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017
-ms.openlocfilehash: bf382f380876e85db46226fb3586382f20d630f2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b22cebf8ca5804884c559da687fe90236c7af44d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="paths-and-text"></a>Las rutas de acceso y el texto
 
@@ -44,7 +44,7 @@ El `GetTextPath` método es excesiva si simplemente desea rellenar o trazar la r
 
 Una de estas tareas se recorte. El **texto de recorte** página crea un trazado de recorte en función de los contornos de caracteres de la palabra "CODE". Esta ruta de acceso se ajusta al tamaño de la página para recortar el mapa de bits que contiene una imagen de la **ajustar texto** código fuente:
 
-[![](text-paths-images/clippingtext-small.png "Captura de pantalla triple de la página de recorte de texto")](text-paths-images/clippingtext-large.png "Triple captura de pantalla de la página de texto de recorte")
+[![](text-paths-images/clippingtext-small.png "Captura de pantalla triple de la página de recorte de texto")](text-paths-images/clippingtext-large.png#lightbox "Triple captura de pantalla de la página de texto de recorte")
 
 El [ `ClippingTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) constructor de clase carga el mapa de bits que se almacena como un recurso incrustado en el **Media** carpeta de la solución:
 
@@ -125,7 +125,7 @@ Una vez que se establece la ruta de acceso de recorte, se puede mostrar el mapa 
 
 El **efecto de la ruta de acceso de texto** página convierte un carácter único "y" comercial en una ruta de acceso para crear un efecto de la ruta de acceso de 1D. Un objeto de pintura con este efecto de la ruta de acceso, a continuación, se usa para trazar el contorno de una versión más grande de ese mismo carácter:
 
-[![](text-paths-images/textpatheffect-small.png "Captura de pantalla triple de la página de efecto de la ruta de acceso de texto")](text-paths-images/textpatheffect-large.png "Triple captura de pantalla de la página de efecto de la ruta de acceso de texto")
+[![](text-paths-images/textpatheffect-small.png "Captura de pantalla triple de la página de efecto de la ruta de acceso de texto")](text-paths-images/textpatheffect-large.png#lightbox "Triple captura de pantalla de la página de efecto de la ruta de acceso de texto")
 
 Cantidad de trabajo en el [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) clase se produce en los campos y el constructor. Los dos `SKPaint` objetos definidos como campos sirven para dos propósitos diferentes: la primera (denominada `textPathPaint`) se utiliza para convertir la y comercial con un `TextSize` de 50 en una ruta de acceso para el efecto de la ruta de acceso de 1D. El segundo (`textPaint`) se usa para mostrar una versión ampliada de la "y" comercial con un efecto de esa ruta de acceso. Por esta razón, el `Style` de este segundo paint objeto se establece en `Stroke`, pero la `StrokeWidth` no se establece la propiedad porque dicha propiedad no es necesaria cuando se usa un efecto de la ruta de acceso de 1D:
 
@@ -270,7 +270,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El `PaintSurface` controlador, a continuación, crea una nueva ruta de acceso con el nombre `outlinePath`. Esto se convierte en la ruta de acceso de destino en la llamada a `GetFillPath`. El `StrokeWidth` propiedad de 25 causas `outlinePath` para describir el contorno de una ruta de acceso de 25 píxeles de ancho trazado los caracteres de texto. Esta ruta de acceso, a continuación, se muestra en rojo con un ancho de trazo de 5:
 
-[![](text-paths-images/characteroutlineoutlines-small.png "Captura de pantalla de la página de carácter esquema contornos triple")](text-paths-images/characteroutlineoutlines-large.png "Triple captura de pantalla de la página de contornos de contorno de carácter")
+[![](text-paths-images/characteroutlineoutlines-small.png "Captura de pantalla de la página de carácter esquema contornos triple")](text-paths-images/characteroutlineoutlines-large.png#lightbox "Triple captura de pantalla de la página de contornos de contorno de carácter")
 
 Examine con atención y verá que se superpone en el esquema de la ruta de acceso hace un vértice agudo. Se trata de artefactos normales de este proceso.
 
@@ -323,7 +323,7 @@ public class CircularTextPage : ContentPage
 
 El `TextSize` propiedad de `textPaint` , a continuación, se ajusta para que el ancho del texto coincida con la longitud de la circunferencia:
 
-[![](text-paths-images/circulartext-small.png "Captura de pantalla triple de la página de texto Circular")](text-paths-images/circulartext-large.png "Triple captura de pantalla de la página de texto Circular")
+[![](text-paths-images/circulartext-small.png "Captura de pantalla triple de la página de texto Circular")](text-paths-images/circulartext-large.png#lightbox "Triple captura de pantalla de la página de texto Circular")
 
 Se ha elegido el texto en Sí para ser circulares algo así: la palabra "círculo" es tanto el asunto de la oración y el objeto de una frase preposicionales. 
 

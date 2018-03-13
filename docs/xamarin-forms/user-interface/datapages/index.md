@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 10c473656947dfea8bf832ae5a5704897ef4ce63
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 60973068b56ea4160c3e5ae53d387b063c601afe
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="datapages"></a>DataPages
 
@@ -26,7 +26,7 @@ DataPages proporciona una API para rápida y fácilmente enlazar un origen de da
 
 Para ver cómo funciona la demostración de keynote evolucionar, visite la [Guía de introducción](get-started.md).
 
-[ ![](images/demo-sml.png "Aplicación de ejemplo DataPages")](images/demo.png "aplicación de ejemplo DataPages")
+[![](images/demo-sml.png "Aplicación de ejemplo DataPages")](images/demo.png#lightbox "aplicación de ejemplo DataPages")
 
 ## <a name="introduction"></a>Introducción
 

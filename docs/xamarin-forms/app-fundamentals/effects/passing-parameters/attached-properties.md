@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: df1287d2389d7645ee3f17b166af790f79aa70e1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 585d0422b4dc2b35fc8ba50ed82d2d34e53a784e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Pasar parámetros de efecto como propiedades adjuntas
 
@@ -29,7 +29,7 @@ El proceso para crear parámetros de efecto que responden a los cambios de propi
 Parámetros, a continuación, pueden pasarse al efecto mediante la adición de las propiedades asociadas y valores de propiedad para el control adecuado. Además, parámetros se pueden cambiar en tiempo de ejecución mediante la especificación de un nuevo valor de propiedad adjunta.
 
 > [!NOTE]
-> **Tenga en cuenta**: una propiedad adjunta es un tipo especial de propiedad enlazable, definido en una clase pero asociadas a otros objetos y reconocible en XAML como atributos que contienen una clase y un nombre de propiedad separados por puntos. Para obtener más información, consulte [adjunta propiedades](~/xamarin-forms/xaml/attached-properties.md).
+> Una propiedad adjunta es un tipo especial de propiedad enlazable, definido en una clase pero asociadas a otros objetos y reconocible en XAML como atributos que contienen una clase y un nombre de propiedad separados por puntos. Para obtener más información, consulte [adjunta propiedades](~/xamarin-forms/xaml/attached-properties.md).
 
 La aplicación de ejemplo muestra un `ShadowEffect` que agrega una sombra al texto que muestra un [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) control. Además, se puede cambiar el color de la sombra en tiempo de ejecución. El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 

@@ -3,14 +3,15 @@ title: "Resúmenes de capítulo para crear aplicaciones móviles con Xamarin.For
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 14A1A56C-CE91-4F86-BCF2-A4CB055A861E
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: b88d227b272c34dd1c4d22fc707edce4df6dd91f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e2cf6033958848f0c1b16e78fbc3a3d18a6b4fd
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="chapter-summaries-for-creating-mobile-apps-with-xamarinforms"></a>Resúmenes de capítulo para crear aplicaciones móviles con Xamarin.Forms
 
@@ -26,61 +27,61 @@ El **código original de libro** rama de la [ **xamarin-forms-libreta-samples** 
 
 ## <a name="contents"></a>Contenido
 
-[Capítulo 1. ¿Cómo encaja Xamarin.Forms?](chapter01.md)
+[Capítulo 1. How does Xamarin.Forms fit in?](chapter01.md)
 
-[Capítulo 2. Anatomía de una aplicación](chapter02.md)
+[Capítulo 2. Anatomy of an app](chapter02.md)
 
-[Capítulo 3. Profundiza en texto](chapter03.md)
+[Capítulo 3. Deeper into text](chapter03.md)
 
-[Capítulo 4. Desplazamiento de la pila](chapter04.md)
+[Capítulo 4. Scrolling the stack](chapter04.md)
 
-[Capítulo 5. Tratar con tamaños](chapter05.md)
+[Capítulo 5. Dealing with sizes](chapter05.md)
 
-[Capítulo 6. Clics de botón](chapter06.md)
+[Capítulo 6. Button clicks](chapter06.md)
 
-[Capítulo 7. XAML frente a código](chapter07.md)
+[Capítulo 7. XAML vs. code](chapter07.md)
 
-[Capítulo 8. Código y XAML en armonía](chapter08.md)
+[Capítulo 8. Code and XAML in harmony](chapter08.md)
 
-[Capítulo 9. Llamadas a la API específica de la plataforma](chapter09.md)
+[Capítulo 9. Platform-specific API calls](chapter09.md)
 
-[Capítulo 10. Extensiones de marcado XAML](chapter10.md)
+[Capítulo 10. XAML markup extensions](chapter10.md)
 
-[Capítulo 11. La infraestructura enlazable](chapter11.md)
+[Capítulo 11. The bindable infrastructure](chapter11.md)
 
-[Capítulo 12. Estilos](chapter12.md)
+[Capítulo 12. Styles](chapter12.md)
 
 [Capítulo 13. Bitmaps](chapter13.md)
 
-[Capítulo 14. Diseño absoluto](chapter14.md)
+[Capítulo 14. Absolute layout](chapter14.md)
 
 [Capítulo 15. La interfaz interactiva](chapter15.md)
 
-[Capítulo 16. enlace de datos](chapter16.md)
+[Capítulo 16. Data binding](chapter16.md)
 
-[Capítulo 17. Controla la cuadrícula](chapter17.md)
+[Capítulo 17. Mastering the Grid](chapter17.md)
 
 [Capítulo 18. MVVM](chapter18.md)
 
-[Capítulo 19. Vistas de colección](chapter19.md)
+[Capítulo 19. Collection views](chapter19.md)
 
-[Capítulo 20. E/S de archivo y asincrónico](chapter20.md)
+[Capítulo 20. Async and file I/O](chapter20.md)
 
-[Capítulo 21. Transformaciones](chapter21.md)
+[Capítulo 21. Transforms](chapter21.md)
 
-[Capítulo 22. Animación](chapter22.md)
+[Capítulo 22. Animation](chapter22.md)
 
-[Capítulo 23. Desencadenadores y comportamientos](chapter23.md)
+[Capítulo 23. Triggers and behaviors](chapter23.md)
 
-[Capítulo 24. Navegación de páginas](chapter24.md)
+[Capítulo 24. Page navigation](chapter24.md)
 
-[Capítulo 25. Variedades de página](chapter25.md)
+[Capítulo 25. Page varieties](chapter25.md)
 
-[Capítulo 26. Diseños personalizados](chapter26.md)
+[Capítulo 26. Custom layouts](chapter26.md)
 
-[Capítulo 27. Representadores personalizados](chapter27.md)
+[Capítulo 27. Custom renderers](chapter27.md)
 
-[Capítulo 28. Ubicación y mapas](chapter28.md)
+[Capítulo 28. Location and maps](chapter28.md)
 
 
 

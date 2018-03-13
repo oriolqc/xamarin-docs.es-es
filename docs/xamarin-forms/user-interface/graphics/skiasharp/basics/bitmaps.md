@@ -4,14 +4,15 @@ description: "Cargue los mapas de bits de varios orígenes y mostrarlos."
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: 9045fb2f54407fe8c9071efc5570296bb102f72e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: facdcb6231b77714d6f5d0c7d496db12f75b1d08
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="bitmap-basics"></a>Conceptos básicos de mapa de bits
 
@@ -204,7 +205,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El mapa de bits se ajusta a las dimensiones del rectángulo, motivo por el cual el mono se expande horizontalmente en estas capturas de pantalla:
 
-[![](bitmaps-images/basicbitmaps-small.png "Una captura de pantalla triple de la página de mapas de bits básica")](bitmaps-images/basicbitmaps-large.png "una captura de pantalla triple de la página de mapas de bits básica")
+[![](bitmaps-images/basicbitmaps-small.png "Una captura de pantalla triple de la página de mapas de bits básica")](bitmaps-images/basicbitmaps-large.png#lightbox "una captura de pantalla triple de la página de mapas de bits básica")
 
 La tercera imagen & #x 2014; que solo puede ver si ejecuta el programa y cargar una fotografía desde su propia biblioteca de imágenes & #x 2014; También se muestra dentro de un rectángulo, pero el rectángulo de la posición y el tamaño se ajustan para mantener la relación de aspecto del mapa de bits. Este cálculo es un poco más complicada porque requiere calcular un factor en función del tamaño de los mapas de bits y el rectángulo de destino de escala y centrar el rectángulo en esa área:
 

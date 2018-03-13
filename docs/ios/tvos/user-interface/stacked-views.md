@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2b16fd970e724228215fd0dd1c9022227ab84435
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c40e9291e81770435535de7b0c83d6c865cbed58
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-stacked-view"></a>Trabajar con vista apilada
 
@@ -23,7 +23,7 @@ El control de vista de pila (`UIStackView`) aprovecha la eficacia de diseño aut
 
 El diseño de todas las subvistas adjunta a una vista de pila se administran en él basándose en las propiedades de desarrollador definido como eje, distribución, alineación y el espaciado:
 
-[ ![](stacked-views-images/stacked01.png "Diagrama de diseño de la vista secundaria")](stacked-views-images/stacked01.png)
+[![](stacked-views-images/stacked01.png "Diagrama de diseño de la vista secundaria")](stacked-views-images/stacked01.png#lightbox)
 
 Cuando se usa un `UIStackView` en una aplicación Xamarin.tvOS, el desarrollador puede definir las subvistas ya sea dentro de un guión gráfico en el Diseñador de iOS o agregando y quitando subvistas en código C#.
 
@@ -103,21 +103,21 @@ Es la manera más fácil trabajar con vistas de pila en una aplicación Xamarin.
 1. En el **solución Pad**, haciendo doble clic en el `Main.storyboard` de archivo y abrirlo y editarlo.
 1. Definir el diseño de los elementos individuales que se va a agregar a la vista de pila: 
 
-    [ ![](stacked-views-images/layout01.png "Ejemplo de diseño de elemento")](stacked-views-images/layout01.png)
+    [![](stacked-views-images/layout01.png "Ejemplo de diseño de elemento")](stacked-views-images/layout01.png#lightbox)
 1. Agregar las restricciones necesarias para los elementos para asegurarse de que se adaptan correctamente. Este paso es importante cuando el elemento se agrega a la vista de pila.
 1. Realice el número necesario de copias (cuatro en este caso): 
 
-    [ ![](stacked-views-images/layout02.png "El número necesario de copias")](stacked-views-images/layout02.png)
+    [![](stacked-views-images/layout02.png "El número necesario de copias")](stacked-views-images/layout02.png#lightbox)
 1. Arrastre un **vista de pila** desde el **cuadro de herramientas** y colóquela en la vista: 
 
-    [ ![](stacked-views-images/layout03.png "Una vista de pila")](stacked-views-images/layout03.png)
+    [![](stacked-views-images/layout03.png "Una vista de pila")](stacked-views-images/layout03.png#lightbox)
 1. Seleccione la vista de pila, en la **ficha Widget** de la **panel de propiedades** seleccione **rellenar** para el **alineación**, **de relleno Igualmente** para el **distribución** y escriba `25` para el **espaciado**: 
 
-    [ ![](stacked-views-images/layout04.png "La pestaña de Widget")](stacked-views-images/layout04.png)
+    [![](stacked-views-images/layout04.png "La pestaña de Widget")](stacked-views-images/layout04.png#lightbox)
 1. Coloque la vista de pila en la pantalla donde quiera y agregar restricciones para mantener en la ubicación deseada.
 1. Seleccione los elementos individuales y arrástrelos hasta la vista de pila: 
 
-    [ ![](stacked-views-images/layout05.png "Los elementos individuales en la vista de pila")](stacked-views-images/layout05.png)
+    [![](stacked-views-images/layout05.png "Los elementos individuales en la vista de pila")](stacked-views-images/layout05.png#lightbox)
 1. Se ajustará el diseño y los elementos se organizarán en la vista de pila en función de los atributos establecidos anteriormente.
 1. Asignar **nombres** en el **ficha Widget** de la **el Explorador de propiedades** para trabajar con los controles de interfaz de usuario en código C#.
 1. Guarde los cambios.
@@ -127,21 +127,21 @@ Es la manera más fácil trabajar con vistas de pila en una aplicación Xamarin.
 1. En el **el Explorador de soluciones**, haciendo doble clic en el `Main.storyboard` de archivo y abrirlo y editarlo.
 1. Definir el diseño de los elementos individuales que se va a agregar a la vista de pila: 
 
-    [ ![](stacked-views-images/layout01.png "Ejemplo de diseño de elemento")](stacked-views-images/layout01.png)
+    [![](stacked-views-images/layout01.png "Ejemplo de diseño de elemento")](stacked-views-images/layout01.png#lightbox)
 1. Agregar las restricciones necesarias para los elementos para asegurarse de que se adaptan correctamente. Este paso es importante cuando el elemento se agrega a la vista de pila.
 1. Realice el número necesario de copias (cuatro en este caso): 
 
-    [ ![](stacked-views-images/layout02.png "El número necesario de copias")](stacked-views-images/layout02.png)
+    [![](stacked-views-images/layout02.png "El número necesario de copias")](stacked-views-images/layout02.png#lightbox)
 1. Arrastre un **vista de pila** desde el **cuadro de herramientas** y colóquela en la vista: 
 
-    [ ![](stacked-views-images/layout03-vs.png "Una vista de pila")](stacked-views-images/layout03-vs.png)
+    [![](stacked-views-images/layout03-vs.png "Una vista de pila")](stacked-views-images/layout03-vs.png#lightbox)
 1. Seleccione la vista de pila, en la **ficha Widget** de la **el Explorador de propiedades** seleccione **rellenar** para el **alineación**, **relleno Igualmente** para el **distribución** y escriba `25` para el **espaciado**: 
 
-    [ ![](stacked-views-images/layout04-vs.png "La pestaña de Widget")](stacked-views-images/layout04-vs.png)
+    [![](stacked-views-images/layout04-vs.png "La pestaña de Widget")](stacked-views-images/layout04-vs.png#lightbox)
 1. Coloque la vista de pila en la pantalla donde quiera y agregar restricciones para mantener en la ubicación deseada.
 1. Seleccione los elementos individuales y arrástrelos hasta la vista de pila: 
 
-    [ ![](stacked-views-images/layout05-vs.png "Los elementos individuales en la vista de pila")](stacked-views-images/layout05-vs.png)
+    [![](stacked-views-images/layout05-vs.png "Los elementos individuales en la vista de pila")](stacked-views-images/layout05-vs.png#lightbox)
 1. Se ajustará el diseño y los elementos se organizarán en la vista de pila en función de los atributos establecidos anteriormente.
 1. Asignar **nombres** en el **ficha Widget** de la **el Explorador de propiedades** para trabajar con los controles de interfaz de usuario en código C#.
 1. Guarde los cambios.
@@ -190,11 +190,11 @@ partial void PlayerCountChanged (Foundation.NSObject sender) {
 
 Cuando se ejecuta la aplicación, los cuatro elementos se distribuya equitativamente en la vista de pila:
 
-[ ![](stacked-views-images/layout06.png "Cuando se ejecuta la aplicación, los cuatro elementos se distribuirán por igual en la vista de pila")](stacked-views-images/layout06.png)
+[![](stacked-views-images/layout06.png "Cuando se ejecuta la aplicación, los cuatro elementos se distribuirán por igual en la vista de pila")](stacked-views-images/layout06.png#lightbox)
 
 Si se reduce el número de jugadores, se ocultan las vistas no utilizadas y la vista de pila de ajustar el diseño para que se ajusten:
 
-[ ![](stacked-views-images/layout07.png "Si se reduce el número de jugadores, se ocultan las vistas no utilizadas y la vista de pila de ajustar el diseño para que se ajusten")](stacked-views-images/layout07.png)
+[![](stacked-views-images/layout07.png "Si se reduce el número de jugadores, se ocultan las vistas no utilizadas y la vista de pila de ajustar el diseño para que se ajusten")](stacked-views-images/layout07.png#lightbox)
 
 <a name="Populate-a-Stack-View-from-Code" />
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 9751b39987819428f93e09d4bfb6bee261604bb5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 84e60e8ce698e3d87db3e1bdc61613325ad831c8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="attached-behaviors"></a>Otros comportamientos adjuntados
 
@@ -101,10 +101,10 @@ NumericValidationBehavior.SetAttachBehavior (entry, true);
 
 En tiempo de ejecución, el comportamiento responderá a la interacción con el control, según la implementación de comportamiento. Las capturas de pantalla siguientes muestran el comportamiento adjunto responde a las entradas no válidas:
 
-[ ![](attached-images/screenshots-sml.png "Ejemplo de aplicación con un comportamiento adjunto")](attached-images/screenshots.png "aplicación con un comportamiento adjunto de ejemplo")
+[![](attached-images/screenshots-sml.png "Ejemplo de aplicación con un comportamiento adjunto")](attached-images/screenshots.png#lightbox "aplicación con un comportamiento adjunto de ejemplo")
 
 > [!NOTE]
-> **Tenga en cuenta**: comportamientos adjuntos están escritos para un tipo de control (o una superclase que puede aplicar a muchos controles), y solo se debe agregar a un control compatible. Si intenta adjuntar un comportamiento a un control incompatible dará como resultado un comportamiento desconocido y depende de la implementación de comportamiento.
+> Otros comportamientos adjuntados están escritos para un tipo de control (o una superclase que puede aplicar a muchos controles), y solo se debe agregar a un control compatible. Si intenta adjuntar un comportamiento a un control incompatible dará como resultado un comportamiento desconocido y depende de la implementación de comportamiento.
 
 ### <a name="removing-an-attached-behavior-from-a-control"></a>Quitar un comportamiento adjunto de un Control
 

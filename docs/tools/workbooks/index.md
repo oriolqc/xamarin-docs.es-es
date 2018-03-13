@@ -3,16 +3,16 @@ title: Xamarin Workbooks
 description: "Los libros de Xamarin proporcionan una combinación de documentación y código que es perfecto para la experimentación, aprendizaje y crear a guías y material pedagógico."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
+ms.assetid: 04275482-0488-4F1C-8808-D03A8E21BE62
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: 3d01d157fde1e69c7180c07adfd52e259cdddf14
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 04d6110ea9d0f2c10cf0c3d17182cd06b88e7708
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarin-workbooks"></a>Xamarin Workbooks
 
@@ -26,9 +26,9 @@ Los libros de Xamarin es un software de código abierto. Desarrollo se realiza e
 
 Pruébelo y háganos saber lo que piensa, o si se [experimenta errores](~/tools/workbooks/install.md#reporting-bugs). Tenemos un [foro](https://forums.xamarin.com/categories/inspector) demasiado!
 
-[ ![](images/interactive-1.0.0-urho-planet-earth-small.png "Un libro de UrhoSharp en función de ejemplo")](images/interactive-1.0.0-urho-planet-earth.png)
+[![](images/interactive-1.0.0-urho-planet-earth-small.png "Un libro de UrhoSharp en función de ejemplo")](images/interactive-1.0.0-urho-planet-earth.png#lightbox)
 
-## <a name="installation-and-requirementsinstallmd"></a>[Instalación y los requisitos](install.md)
+## <a name="installation-and-requirementsinstallmd"></a>[Instalación y requisitos](install.md)
 
 Obtener información sobre cómo obtener los libros instalados en su equipo Mac o Windows.
 
@@ -40,7 +40,7 @@ Introducción a cómo utilizar los libros de Xamarin.
 
 Hay una amplia variedad de [libros de ejemplo](https://developer.xamarin.com/workbooks/) disponibles, las resaltado incluidas [aquí](samples/index.md).
 
-## <a name="integration-sdksdkindexmd"></a>[Integración de SDK](sdk/index.md)
+## <a name="integration-sdksdkindexmd"></a>[SDK de integración](sdk/index.md)
 
 Es posible extender libros de Xamarin con representadores y representaciones de datos personalizados. Integraciones se escriben con C# y JavaScript o TypeScript.
 

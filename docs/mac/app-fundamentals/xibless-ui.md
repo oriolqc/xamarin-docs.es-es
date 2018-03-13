@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 544aad278b9bc66120e188eec54fa68be71dc625
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 52d300ac583ec2313d3169c7b2adb73c15ebe4fb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="storyboardxib-less-user-interface-design"></a>.Storyboard/.xib-less diseño de la interfaz de usuario
 
@@ -25,7 +25,7 @@ Cuando se trabaja con C# y .NET en una aplicación Xamarin.Mac, tener acceso a l
 
 También tiene la opción de creación de algunos o todos de interfaz de usuario de la aplicación Xamarin.Mac directamente en código C#. En este artículo, se tratarán los fundamentos de la creación de interfaces de usuario y los elementos de interfaz de usuario en código C#.
 
-[![Visual Studio para el editor de código Mac](xibless-ui-images/intro01.png "Visual Studio para el editor de código de Mac")](xibless-ui-images/intro01-large.png)
+[![Visual Studio para el editor de código Mac](xibless-ui-images/intro01.png "Visual Studio para el editor de código de Mac")](xibless-ui-images/intro01-large.png#lightbox)
 
 <a name="Switching_a_Window_to_use_Code" />
 

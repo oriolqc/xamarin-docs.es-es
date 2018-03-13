@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 011b6d184e55c9054a845d4922687b4565221859
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bbbf3fb09edb802f1315977fb14ecfe154b2572f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-a-jar"></a>Enlazar un. JAR
 
@@ -75,7 +75,6 @@ Picasso.With (this)
 
 ```
 
-<a name="creating" />
 
 ### <a name="creating-the-bindings-library"></a>Creación de la biblioteca de enlaces
 
@@ -83,19 +82,19 @@ Antes de empezar con los pasos siguientes, descargue [2.x.x.jar picasso](http://
 
 En primer lugar, cree un nuevo proyecto de biblioteca de enlaces. En Visual Studio para Mac o en Visual Studio, cree una nueva solución y seleccione la *biblioteca enlaces Android* plantilla. (Las capturas de pantalla en este tutorial utilizan Visual Studio, pero Visual Studio para Mac es muy similar). Llame a la solución **JarBinding**: 
 
-[ ![Crear proyecto de biblioteca de JarBinding](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png)
+[![Crear proyecto de biblioteca de JarBinding](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png#lightbox)
 
 La plantilla incluye una **archivos JAR** carpeta donde se agrega la. JAR(s) al proyecto de biblioteca de enlaces. Haga clic en el **archivos JAR** carpeta y seleccione **Agregar > elemento existente**: 
 
-[ ![Agregar elemento existente](binding-a-jar-images/02-add-existing-item-sml.png)](binding-a-jar-images/02-add-existing-item.png)
+[![Agregar elemento existente](binding-a-jar-images/02-add-existing-item-sml.png)](binding-a-jar-images/02-add-existing-item.png#lightbox)
 
 Navegue hasta la **picasso 2.x.x.jar** archivo descargado anteriormente, selecciónelo y haga clic en **agregar**: 
 
-[ ![Seleccione el archivo jar y haga clic en Agregar](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png)
+[![Seleccione el archivo jar y haga clic en Agregar](binding-a-jar-images/03-select-jar-file-sml.png)](binding-a-jar-images/03-select-jar-file.png#lightbox)
 
 Compruebe que la **2.x.x.jar picasso** archivo se ha agregado correctamente al proyecto: 
 
-[ ![JAR agregado al proyecto](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png)
+[![JAR agregado al proyecto](binding-a-jar-images/04-jar-added-sml.png)](binding-a-jar-images/04-jar-added.png#lightbox)
 
 Cuando se crea un proyecto de biblioteca de enlaces de Java, debe especificar si el. JAR es pueden incrustar en la biblioteca de enlaces o empaqueta por separado. Para ello, especifique uno de los siguientes *acciones de compilación*: 
 
@@ -107,19 +106,18 @@ Normalmente, se utiliza el **EmbeddedJar** acción de compilación para que el. 
 
 Establece la acción de compilación en **EmbeddedJar**: 
 
-[ ![Seleccione la acción de compilación EmbeddedJar](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png)
+[![Seleccione la acción de compilación EmbeddedJar](binding-a-jar-images/05-embeddedjar-sml.png)](binding-a-jar-images/05-embeddedjar.png#lightbox)
 
 A continuación, abra el proyecto de propiedades para configurar el *.NET Framework de destino*. Si el. JAR usa las API de Android, establezca la plataforma de destino en el nivel de API que el. Se espera el JAR. Normalmente, el desarrollador de la. Archivo JAR indicará qué nivel de API (o niveles) que el. JAR es compatible con. (Para obtener más información sobre la configuración de .NET Framework de destino y niveles de API de Android en general, vea [niveles de API de Android descripción](~/android/app-fundamentals/android-api-levels.md).)
 
 Establecer nivel de la API de destino de la biblioteca de enlaces (en este ejemplo, estamos utilizando el nivel de API 19): 
 
-[ ![Nivel de API de destino establecido en API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png)
+[![Nivel de API de destino establecido en API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
 
 Por último, compile la biblioteca de enlaces. Aunque pueden aparecer algunos mensajes de advertencia, el proyecto de biblioteca de enlaces debe compilarse correctamente y generar un resultado. DLL en la siguiente ubicación: **JarBinding/bin/Debug/JarBinding.dll**
     
 
-<a name="using" />
 
 ### <a name="using-the-bindings-library"></a>Uso de la biblioteca de enlaces
 
@@ -133,19 +131,19 @@ En los pasos siguientes, crearemos una aplicación mínima que utiliza la biblio
 
 En primer lugar, cree una nueva aplicación de Xamarin.Android que utiliza la biblioteca de enlaces. Haga clic en la solución y seleccione **Agregar nuevo proyecto**; asigne al nuevo proyecto **BindingTest**. Estamos creando esta aplicación en la misma solución que la biblioteca de enlaces para simplificar este tutorial; Sin embargo, la aplicación que utiliza la biblioteca de enlaces en su lugar, puede residir en una solución distinta: 
 
-[ ![Agregar nuevo proyecto BindingTest](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png)
+[![Agregar nuevo proyecto BindingTest](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png#lightbox)
 
 Haga clic en el **referencias** nodo de la **BindingTest** de proyecto y seleccione **Agregar referencia...** :
 
-[ ![Derecho Agregar referencia](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png)
+[![Derecho Agregar referencia](binding-a-jar-images/08-add-reference.png)](binding-a-jar-images/08-add-reference.png#lightbox)
 
 Compruebe el **JarBinding** proyecto creado anteriormente y haga clic en **Aceptar**:
 
-[ ![Seleccione proyecto JarBinding](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png)
+[![Seleccione proyecto JarBinding](binding-a-jar-images/09-choose-jar-binding-sml.png)](binding-a-jar-images/09-choose-jar-binding.png#lightbox)
 
 Abra la **referencias** nodo de la **BindingTest** proyecto y compruebe que la **JarBinding** referencia está presente: 
 
-[ ![JarBinding aparece en las referencias](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png)
+[![JarBinding aparece en las referencias](binding-a-jar-images/10-references-shows-jarbinding-sml.png)](binding-a-jar-images/10-references-shows-jarbinding.png#lightbox)
 
 Modificar el **BindingTest** diseño (**Main.axml**) para que tenga un único `ImageView`:
 
@@ -191,11 +189,10 @@ public class MainActivity : Activity
 
 Compilar y ejecutar el **BindingTest** proyecto. La aplicación se va a iniciar, y tras un breve retraso (en función de las condiciones de red), debe descargar y mostrar una imagen similar a la captura de pantalla siguiente:
 
-[ ![Ejecución de captura de pantalla de BindingTest](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png)
+[![Ejecución de captura de pantalla de BindingTest](binding-a-jar-images/11-result-sml.png)](binding-a-jar-images/11-result.png#lightbox)
 
 ¡Enhorabuena! Se ha enlazado correctamente una biblioteca de Java. JAR y usar en la aplicación Xamarin.Android.
  
-<a name="summary" />
  
 ## <a name="summary"></a>Resumen
 
@@ -206,4 +203,4 @@ En este tutorial, creamos una biblioteca de enlaces de un tercero. JAR de archiv
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Generar una biblioteca de enlaces de Java (vídeo)](https://university.xamarin.com/classes#10090)
-- [Enlace de una biblioteca de Java](~/android/platform/binding-java-library/index.md)
+- [Enlace de una biblioteca Java](~/android/platform/binding-java-library/index.md)

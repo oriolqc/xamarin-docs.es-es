@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 4555906512ecc36e3387f1b2483753e7f50a51ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 82bcd29a201be01bc8123e313e5a76b82668cb85
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="stack-view"></a>Vista de pila
 
@@ -25,11 +26,15 @@ El control de vista de pila (`UIStackView`) aprovecha la eficacia de diseño aut
 
 El diseño de todas las subvistas adjunta a una vista de pila se administran en él basándose en las propiedades de desarrollador definido como eje, distribución, alineación y el espaciado:
 
-[ ![](uistackview-images/stacked01.png "Diagrama de diseño de la vista de pila")](uistackview-images/stacked01.png)
+[![](uistackview-images/stacked01.png "Diagrama de diseño de la vista de pila")](uistackview-images/stacked01.png#lightbox)
 
 Cuando se usa un `UIStackView` en una aplicación Xamarin.iOS, el desarrollador puede definir las subvistas ya sea dentro de un guión gráfico en el Diseñador de iOS o agregando y quitando subvistas en código C#.
 
 Este documento consta de dos partes: un inicio rápido para ayudarle a implementar el primer bloque ver y, a continuación, algunos detalles más técnicos acerca de cómo funciona.
+
+> [!VIDEO https://youtube.com/embed/p3po6507Ip8]
+
+**UIStackView, por [Universidad de Xamarin](https://university.xamarin.com/)**
 
 ## <a name="uistackview-quickstart"></a>Inicio rápido de UIStackView
 
@@ -39,11 +44,11 @@ Como una introducción rápida a la `UIStackView` (control), vamos a crear una i
 
 Iniciar un nuevo proyecto de Xamarin.iOS y editar la **Main.storyboard** archivo en el generador de interfaz de Xcode. En primer lugar, arrastre un único **vista de pila Vertical** en el **View Controller**:
 
-[ ![](uistackview-images/quick01.png "Arrastre una sola vista de pila Vertical en el controlador de vista")](uistackview-images/quick01.png)
+[![](uistackview-images/quick01.png "Arrastre una sola vista de pila Vertical en el controlador de vista")](uistackview-images/quick01.png#lightbox)
 
 En el **atributo Inspector**, establezca las siguientes opciones:
 
-[ ![](uistackview-images/quick02.png "Establecer las opciones de vista de pila")](uistackview-images/quick02.png)
+[![](uistackview-images/quick02.png "Establecer las opciones de vista de pila")](uistackview-images/quick02.png#lightbox)
 
 Dónde:
 
@@ -61,17 +66,17 @@ Cuando se trabaja con una vista de pila, se puede considerar el **alineación** 
 
 Continuar al diseño de interfaz de la aplicación mediante la adición de una etiqueta, ImageView, dos botones y una vista de pila Horizontal para que se parezca a lo siguiente:
 
-[ ![](uistackview-images/quick03.png "Diseñar la interfaz de usuario de la vista de pila")](uistackview-images/quick03.png)
+[![](uistackview-images/quick03.png "Diseñar la interfaz de usuario de la vista de pila")](uistackview-images/quick03.png#lightbox)
 
 Configurar la vista de pila Horizontal con las siguientes opciones:
 
-[ ![](uistackview-images/quick04.png "Configurar las opciones de vista de pila Horizontal")](uistackview-images/quick04.png)
+[![](uistackview-images/quick04.png "Configurar las opciones de vista de pila Horizontal")](uistackview-images/quick04.png#lightbox)
 
 Porque no queremos que el icono que representa cada punto de"" de la clasificación para ajustarse al agregarlo a la vista de pila Horizontal, hemos configurado la **alineación** a **Center** y  **Distribución** a **rellenar igualmente**.
 
 Por último, conecte el siguiente **tomas** y **acciones**:
 
-[ ![](uistackview-images/quick05.png "Las salidas de la vista de pila y las acciones")](uistackview-images/quick05.png)
+[![](uistackview-images/quick05.png "Las salidas de la vista de pila y las acciones")](uistackview-images/quick05.png#lightbox)
 
 ### <a name="populate-a-uistackview-from-code"></a>Rellenar un UIStackView desde el código
 
@@ -168,7 +173,7 @@ Todas las necesarias elementos de interfaz de usuario y código en su lugar, aho
 
 Cuando el usuario puntea el **aumentar clasificación** botón, otro "estrella" se agrega a la pantalla (hasta un máximo de 5):
 
-[ ![](uistackview-images/intro01.png "Ejecutar la aplicación de ejemplo")](uistackview-images/intro01.png)
+[![](uistackview-images/intro01.png "Ejecutar la aplicación de ejemplo")](uistackview-images/intro01.png#lightbox)
 
 "Estrellas" se centra automáticamente y se distribuya equitativamente en la vista de pila Horizontal. Cuando el usuario puntea el **Disminuir clasificación** botón, una "estrella" se quitará (hasta que se dejan ninguno).
 

@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: a963922dfdc07164b7c20f84be4f0b87440bff13
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4a7947c40d80c0ff8cb35dab54a11907280335d9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="listview-parts-and-functionality"></a>Funcionalidad y los elementos de ListView
 
-<a name="overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -31,41 +30,36 @@ Un `ListView` consta de las siguientes partes:
 
 Estas capturas de pantalla usan básico `ListView` control para mostrar cómo se representan desplazamiento rápido y el índice de sección:
 
-[![Capturas de pantalla de aplicaciones que usan las filas antiguas sencillo, rápido desplazamiento y el índice de sección](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png)
+[![Capturas de pantalla de aplicaciones que usan las filas antiguas sencillo, rápido desplazamiento y el índice de sección](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png#lightbox)
 
 Los elementos que componen un `ListView` se describen con más detalle a continuación:
 
-<a name="Rows" />
 
 ## <a name="rows"></a>Filas
 
 Cada fila tiene su propio `View`. La vista puede ser cualquiera de las vistas integradas definidas en `Android.Resources`, o una vista personalizada. Cada fila puede usar el mismo diseño de vista o todos ellos pueden tener diferentes. Hay ejemplos de este documento del uso de diseños integrados y otros que explica cómo definir diseños personalizados.
 
-<a name="Adapter" />
 
 ## <a name="adapter"></a>Adaptador
 
 El `ListView` control requiere una `Adapter` para proporcionar el formato `View` para cada fila. Android tiene integrada adaptadores y vistas que se pueden usar, o se pueden crear clases personalizadas.
 
-<a name="Fast_Scrolling" />
 
 ## <a name="fast-scrolling"></a>Desplazamiento rápido
 
 Cuando un `ListView` contiene muchas filas de datos fast desplazamiento puede habilitarse para ayudar al usuario a desplazarse a cualquier parte de la lista. El rápido desplazamiento 'barra de desplazamiento' puede ser opcionalmente habilitado (y personalizados en el nivel de API 11 y versiones posteriores).
 
-<a name="Section_Index" />
 
 ## <a name="section-index"></a>Índice de sección
 
 Mientras se desplaza a través de listas largas, el índice de sección opcional proporciona al usuario con comentarios en qué parte de la lista que se está viendo actualmente. Solo es adecuado en listas largas, por lo general en junto con un desplazamiento rápido.
 
-<a name="Classes_Overview" />
 
 ## <a name="classes-overview"></a>Información general de clases
 
 Las clases principales utilizadas para mostrar `ListViews` se muestran a continuación:
 
-[![Diagrama UML que ilustra las relaciones entre las clases asociadas y de ListView](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png)
+[![Diagrama UML que ilustra las relaciones entre las clases asociadas y de ListView](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png#lightbox)
 
 El propósito de cada clase se describe a continuación:
 

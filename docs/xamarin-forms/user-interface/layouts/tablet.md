@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: 053696ebf37e73e3b121e2aa52b80b7ea1b8ed64
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f870cda73625197fb15bf19be1cdabbd675124d6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Diseño de aplicaciones de escritorio y de Tablet PC
 
@@ -41,7 +41,7 @@ Para proporcionar una experiencia de inicio agradable y asegúrese de que la res
 Antes de iOS 9 tardaron todas las aplicaciones de la pantalla completa en el dispositivo, pero ahora puede realizar algunas iPad [dividir pantalla multitarea](~/ios/platform/multitasking.md).
 Esto significa que la aplicación podría tardar hasta simplemente una columna delgada en el lateral de la pantalla, 50% del ancho de la pantalla, o toda la pantalla.
 
-[ ![](tablet-images/ipad-sml.png "iPad ejemplo de pantalla de división")](tablet-images/ipad.png "iPad ejemplo de pantalla de división")
+[![](tablet-images/ipad-sml.png "iPad ejemplo de pantalla de división")](tablet-images/ipad.png#lightbox "iPad ejemplo de pantalla de división")
 
 Funcionalidad de pantalla dividida significa que debe diseñar la aplicación para funcionar correctamente con tan solo 320 píxeles de ancho o tanto como 1366 píxeles de ancho.
 
@@ -63,7 +63,7 @@ Para admitir las tabletas y equipos de escritorio con Windows, debe usar uno de 
 
 Aplicaciones que se ejecutan en equipos de escritorio y las tabletas de Windows al que pueden ajustarse a las dimensiones arbitrarios además funcionamiento de pantalla completa.
 
-[ ![](tablet-images/splitscreen-sml.png "Windows dividir pantalla ejemplo")](tablet-images/splitscreen.png "Windows dividir ejemplo de pantalla")
+[![](tablet-images/splitscreen-sml.png "Windows dividir pantalla ejemplo")](tablet-images/splitscreen.png#lightbox "Windows dividir ejemplo de pantalla")
 
 
 <a name="optimize" />

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: 992e6583d64f078c0cd693765a1512c3e41a620a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c7edf0c8e563dad25693d184d3a44a3e66466126
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="path-information-and-enumeration"></a>Enumeración e información de ruta de acceso
 
@@ -110,7 +110,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El `Length` propiedad creado recientemente `SKPathMeasure` objeto obtiene la longitud de la ruta de acceso. Esto se divide por el `baseTextWidth` valor (que es el ancho del texto en función de un tamaño de texto de 10) y, a continuación, se multiplica por el tamaño del texto base de 10. El resultado es un nuevo tamaño del texto para mostrar el texto a lo largo de esa ruta de acceso:
 
-[![](information-images/pathlength-small.png "Captura de pantalla triple de la página de longitud de ruta de acceso")](information-images/pathlength-large.png "Triple captura de pantalla de la página de longitud de ruta de acceso")
+[![](information-images/pathlength-small.png "Captura de pantalla triple de la página de longitud de ruta de acceso")](information-images/pathlength-large.png#lightbox "Triple captura de pantalla de la página de longitud de ruta de acceso")
 
 Cuando la curva de Bézier obtiene mayor o menor, puede ver que el tamaño del texto cambia.
 
@@ -136,7 +136,7 @@ El [ `SKPathMeasureMatrixFlags` ](https://developer.xamarin.com/api/type/SkiaSha
 
 El **monociclo mitad canalización** página anima un dibujo en un monociclo que parezca invalidar y hacia atrás a lo largo de una curva Bézier cúbica:
 
-[![](information-images/unicyclehalfpipe-small.png "Captura de pantalla triple de la página de canalización mitad monociclo")](information-images/unicyclehalfpipe-large.png "Triple captura de pantalla de la página de canalización monociclo mitad")
+[![](information-images/unicyclehalfpipe-small.png "Captura de pantalla triple de la página de canalización mitad monociclo")](information-images/unicyclehalfpipe-large.png#lightbox "Triple captura de pantalla de la página de canalización monociclo mitad")
 
 El `SKPaint` objeto usado para trazado la canalización de medio y el monociclo se define como un campo en el [ `UnicycleHalfPipePage` ]() clase. También define es el `SKPath` objeto para el monociclo:
 
@@ -425,7 +425,7 @@ Observe que el método conserva el primer punto de cada contorno en la variable 
 
 El **GlobularText** ejemplo usa este método de extensión para ajustar el texto alrededor de un hemisferio aparentemente un efecto 3D:
 
-[![](information-images/globulartext-small.png "Captura de pantalla triple de la página de texto Globular")](information-images/globulartext-large.png "Triple captura de pantalla de la página de texto Globular")
+[![](information-images/globulartext-small.png "Captura de pantalla triple de la página de texto Globular")](information-images/globulartext-large.png#lightbox "Triple captura de pantalla de la página de texto Globular")
 
 El [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) constructor de clase realiza esta transformación. Crea un `SKPaint` objeto para el texto y, a continuación, obtiene un `SKPath` objeto desde el `GetTextPath` método. Se trata de la ruta de acceso que se pasan a la `CloneWithTransform` método de extensión junto con una función de transformación: 
 

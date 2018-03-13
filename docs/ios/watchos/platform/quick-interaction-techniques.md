@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 75a8e807a68a3fccfa76fc7ba1f260818b25174d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bf93744914a0caf4f6599fc333ae200468d66e48
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quick-interaction-techniques-for-watchos-3"></a>Técnicas de interacción rápida para watchOS 3
 
@@ -77,7 +77,7 @@ En el código, responder a la acción del reconocedor podrá controlar el movimi
 
 Para los gestos discretos, la acción se llama cuando se reconoce el movimiento y un estado (`WKGestureRecognizerState`) se asigna como:
 
-[ ![](quick-interaction-techniques-images/quick01.png "Estados de gestos discretos")](quick-interaction-techniques-images/quick01.png)
+[![](quick-interaction-techniques-images/quick01.png "Estados de gestos discretos")](quick-interaction-techniques-images/quick01.png#lightbox)
 
 Todos los movimientos discretos comienzan el `Possible` estado y transiciones a cualquiera la `Failed` o `Recognized` estado. Al usar gestos discretos, el desarrollador generalmente no tratar directamente con el estado. En su lugar, se basan en la acción que se llama cuando el movimiento se reconoce solo.
 
@@ -85,7 +85,7 @@ Todos los movimientos discretos comienzan el `Possible` estado y transiciones a 
 
 Movimientos continuadas son ligeramente diferentes de movimientos discretos, donde la acción se llama varias veces, tal y como se reconoce el movimiento:
 
-[ ![](quick-interaction-techniques-images/quick02.png "Estados de movimiento continuo")](quick-interaction-techniques-images/quick02.png)
+[![](quick-interaction-techniques-images/quick02.png "Estados de movimiento continuo")](quick-interaction-techniques-images/quick02.png#lightbox)
 
 Una vez más, movimientos continua empieza en el `Possible` estado, pero a través de varias actualizaciones de progreso. Aquí el programador deberá tener en cuenta el estado del reconocedor y actualizar la interfaz de usuario de la aplicación durante la `Changed` fase hasta que el movimiento se finalmente `Recognized` o `Canceled`.
 
@@ -168,7 +168,7 @@ Apple ha dejado depende del desarrollador para determinar cómo se corresponden 
 
 El inicio de sesión (`+/-`) de las diferencias rotatorio indica la dirección que el usuario está girando la copa Digital:
 
-[ ![](quick-interaction-techniques-images/quick03.png "El inicio de sesión de las diferencias rotatorio indica la dirección que el usuario está girando la copa Digital")](quick-interaction-techniques-images/quick03.png)
+[![](quick-interaction-techniques-images/quick03.png "El inicio de sesión de las diferencias rotatorio indica la dirección que el usuario está girando la copa Digital")](quick-interaction-techniques-images/quick03.png#lightbox)
 
 
 Si el usuario se desplaza hacia arriba, WatchKit devolverá deltas positivos y si se desplace hacia abajo, deltas negativo se devolverán, con independencia de qué orientación al usuario es llevar la inspección en.
@@ -189,15 +189,15 @@ Es depende del desarrollador determinar el momento de su elemento de interfaz pe
 
 La manera estándar que un usuario desplaza una vista de tabla en una aplicación de watchOS es desplácese hasta el elemento deseado de datos, pulse en una fila específica para mostrar la vista detallada, pulse el botón Atrás cuando termine de ver los detalles y repita el proceso para cualquier otra información que el y está interesado en desde dentro de la tabla:
 
-[ ![](quick-interaction-techniques-images/quick04.png "Mover entre una tabla y la vista de detalle")](quick-interaction-techniques-images/quick04.png)
+[![](quick-interaction-techniques-images/quick04.png "Mover entre una tabla y la vista de detalle")](quick-interaction-techniques-images/quick04.png#lightbox)
 
 Nuevo para watchOS 3, el desarrollador puede habilitar paginación Vertical en sus controles de vista de tabla. Esta característica está habilitada, el usuario puede desplazarse para encontrar una fila de la vista de tabla y puntee en la fila para ver sus detalles como antes. Sin embargo, puede ahora deslícese hacia arriba para seleccionar la fila siguiente de la tabla o hacia abajo para seleccionar la fila anterior (o usar la copa Digital), sin tener que volver a la vista de tabla en primer lugar:
 
-[ ![](quick-interaction-techniques-images/quick05.png "Mover entre una tabla y la vista de detalle y Deslizar rápidamente hacia arriba y abajo para desplazarse entre las demás filas")](quick-interaction-techniques-images/quick05.png)
+[![](quick-interaction-techniques-images/quick05.png "Mover entre una tabla y la vista de detalle y Deslizar rápidamente hacia arriba y abajo para desplazarse entre las demás filas")](quick-interaction-techniques-images/quick05.png#lightbox)
 
 Para habilitar este modo, abra el guión gráfico de la aplicación watchOS de Xcode para su edición, seleccione la vista de tabla y compruebe la **paginación de detalle Vertical** casilla de verificación:
 
-[ ![](quick-interaction-techniques-images/quick06.png "Active la casilla de paginación de detalle Vertical")](quick-interaction-techniques-images/quick06.png)
+[![](quick-interaction-techniques-images/quick06.png "Active la casilla de paginación de detalle Vertical")](quick-interaction-techniques-images/quick06.png#lightbox)
 
 Asegúrese de que la tabla utilice Segues para mostrar la vista detallada y guarde los cambios en el guión gráfico y vuelva a Visual Studio para Mac sincronizar.
 
@@ -313,7 +313,7 @@ Una experiencia de interacción rápida bien diseñada le dará al usuario la co
 
 Donde esto específicamente se convierte en un problema es cuando la aplicación de inspección está realizando cualquier tipo de conexión de red o compartir información con su aplicación de iPhone complementario. A menudo, esto puede conducir a un indicador de espera mientras la transacción lleva a cabo, lo que no es deseable durante una interacción rápida. Considere el ejemplo siguiente:
 
-[ ![](quick-interaction-techniques-images/quick07.png "Diagrama de la aplicación de inspección realizar una conexión de red y compartir información con su aplicación de iPhone complementarias")](quick-interaction-techniques-images/quick07.png)
+[![](quick-interaction-techniques-images/quick07.png "Diagrama de la aplicación de inspección realizar una conexión de red y compartir información con su aplicación de iPhone complementarias")](quick-interaction-techniques-images/quick07.png#lightbox)
 
 1. El usuario elige un elemento de compra en el reloj.
 2. Pulse el botón comprar.
@@ -325,7 +325,7 @@ Desde el momento en que el usuario puntee en el botón de compra hasta que se co
 
 Usar modelo sugerido de Apple, eche un vistazo al volver a la misma interacción rápida:
 
-[ ![](quick-interaction-techniques-images/quick08.png "Diagrama del modelo sugerido de manzanas")](quick-interaction-techniques-images/quick08.png)
+[![](quick-interaction-techniques-images/quick08.png "Diagrama del modelo sugerido de manzanas")](quick-interaction-techniques-images/quick08.png#lightbox)
 
 1. El usuario elige un elemento de compra en el reloj.
 2. Pulse el botón comprar.

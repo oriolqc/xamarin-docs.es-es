@@ -3,16 +3,16 @@ title: "Solución de problemas"
 description: "Este artículo proporciona varias sugerencias de solución de problemas para trabajar con iOS 9 en aplicaciones de Xamarin.iOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
+ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 6ea274ca198a4ca76a87198b02b6229e0e1c88b2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ca3697b355a45e06f941a6dfd610cd19f922ca75
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="troubleshooting"></a>Solución de problemas
 
@@ -32,7 +32,7 @@ Si ha instalado Xcode 7 (o posterior) reemplazará automáticamente todos los si
 
 En Xcode, seleccione la **Xcode** , a continuación, menú **preferencias...**   >  **Descarga**:
 
-[ ![](troubleshooting-images/ios8.png "Descarga de simuladores de iOS 8")](troubleshooting-images/ios8.png)
+[![](troubleshooting-images/ios8.png "Descarga de simuladores de iOS 8")](troubleshooting-images/ios8.png#lightbox)
 
 Haga clic en el **comprobación e instalar ahora** botón para volver a instalar los simuladores de iOS 8.
 
@@ -139,26 +139,26 @@ Dyld Message: no cach image with name (/System/Library/PrivateFrameworks/JavaScr
 
 Al intentar ejecutar la versión de iOS 9 de la aplicación Xamarin.iOS en hardware real iOS, podría obtener un mensaje que indica que no se ha confiado en la cuenta de desarrollador en el dispositivo. Por ejemplo:
 
-[ ![](troubleshooting-images/untrusted01.png "Alerta de desarrollador de la empresa no es de confianza")](troubleshooting-images/untrusted01.png)
+[![](troubleshooting-images/untrusted01.png "Alerta de desarrollador de la empresa no es de confianza")](troubleshooting-images/untrusted01.png#lightbox)
 
 Para solucionar este problema, realice lo siguiente:
 
 1. Iniciar Xcode (la versión beta más reciente) en el desarrollo de Mac.
 2. Seleccione **dispositivos** desde el **ventana** menú para abrir la ventana de dispositivos: 
 
-    [ ![](troubleshooting-images/untrusted02.png "La ventana de dispositivos")](troubleshooting-images/untrusted02.png)
+    [![](troubleshooting-images/untrusted02.png "La ventana de dispositivos")](troubleshooting-images/untrusted02.png#lightbox)
 3. En el **dispositivos** del lado del panel, seleccione el dispositivo, el menú contextual y seleccione **Mostrar perfiles de aprovisionamiento...** : 
 
-    [ ![](troubleshooting-images/untrusted03.png "Perfiles de aprovisionamiento de SShow")](troubleshooting-images/untrusted03.png)
+    [![](troubleshooting-images/untrusted03.png "Perfiles de aprovisionamiento de SShow")](troubleshooting-images/untrusted03.png#lightbox)
 4. Seleccione cada perfil de aprovisionamiento actualmente en el dispositivo y haga clic en el  **-**  botón para eliminarlo: 
 
-    [ ![](troubleshooting-images/untrusted04.png "Eliminar un perfil de aprovisionamiento")](troubleshooting-images/untrusted04.png)
+    [![](troubleshooting-images/untrusted04.png "Eliminar un perfil de aprovisionamiento")](troubleshooting-images/untrusted04.png#lightbox)
 5. Desde el **Xcode** menú, seleccione **preferencias...**  y **cuentas**: 
 
-    [ ![](troubleshooting-images/untrusted05.png "Preferencias de la cuenta de Xcode")](troubleshooting-images/untrusted05.png)
+    [![](troubleshooting-images/untrusted05.png "Preferencias de la cuenta de Xcode")](troubleshooting-images/untrusted05.png#lightbox)
 6. Haga clic en el **ver detalles...**  , a continuación, haga clic en el **todos los descargar** botón: 
 
-    [ ![](troubleshooting-images/untrusted06.png "Descargar todos los perfiles")](troubleshooting-images/untrusted06.png)
+    [![](troubleshooting-images/untrusted06.png "Descargar todos los perfiles")](troubleshooting-images/untrusted06.png#lightbox)
 7. Cuando ha terminado de actualizar la lista, haga clic en el **realiza** botón y cerrar la ventana de preferencias.
 8. Quitar la versión existente de la aplicación Xamarin.iOS que estaba intentando probar desde el dispositivo iOS.
 9. Vuelva a Visual Studio para Mac, realice una compilación limpia e intente volver a ejecutar la aplicación en el dispositivo.

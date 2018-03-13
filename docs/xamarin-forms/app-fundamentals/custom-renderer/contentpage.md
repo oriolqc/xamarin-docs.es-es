@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: f1f420641691e700894687fef8ea3bd44fd60ff2
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d7f7e031d91cd1505ee255bbf0d25198bd9ae82a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-contentpage"></a>Personalizar un contenidoPage
 
@@ -99,7 +99,7 @@ El proceso de creación de la clase de representador personalizado es como sigue
 1. Agregar un `ExportRenderer` atributo a la clase de representador de página para especificar que se utilizará para representar la página de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
-> **Tenga en cuenta**: es opcional proporcionar un representador en página en cada proyecto de la plataforma. Si no se ha registrado un representador en página, se usará el representador predeterminado de la página.
+> Es opcional proporcionar a un representador en página en cada proyecto de la plataforma. Si no se ha registrado un representador en página, se usará el representador predeterminado de la página.
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con la relación entre ellos:
 
@@ -248,7 +248,7 @@ En la plataforma Windows Phone, una referencia con tipo a la página nativo que 
 Al implementar un representador personalizado que deriva de `PageRenderer` en el tiempo de ejecución de Windows, la `ArrangeOverride` método también debe implementarse para organizar los controles de la página, porque el representador de base no sabe qué hacer con ellos. En caso contrario, da como resultado una página en blanco. Por lo tanto, en este ejemplo el `ArrangeOverride` llamadas al método el `Arrange` método en el `Page` instancia.
 
 > [!NOTE]
-> **Tenga en cuenta**: es importante detener y eliminar los objetos que proporcionan acceso a la cámara en una aplicación de Windows Phone 8.1 WinRT. Si no lo hace puede interferir con otras aplicaciones que intentan tener acceso a la cámara del dispositivo. Para obtener más información, consulte el `CleanUpCaptureResourcesAsync` método en el proyecto de Windows Phone en la solución de ejemplo y [inicio rápido: capturar vídeo mediante la API de MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx).
+> Es importante detener y eliminar los objetos que proporcionan acceso a la cámara en una aplicación de Windows Phone 8.1 WinRT. Si no lo hace puede interferir con otras aplicaciones que intentan tener acceso a la cámara del dispositivo. Para obtener más información, consulte el `CleanUpCaptureResourcesAsync` método en el proyecto de Windows Phone en la solución de ejemplo y [inicio rápido: capturar vídeo mediante la API de MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx).
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>Crear al representador de página en UWP
 
@@ -297,7 +297,7 @@ La llamada a la clase base `OnElementChanged` crea una instancia de método un `
 Al implementar un representador personalizado que deriva de `PageRenderer` en UWP, la `ArrangeOverride` método también debe implementarse para organizar los controles de la página, porque el representador de base no sabe qué hacer con ellos. En caso contrario, da como resultado una página en blanco. Por lo tanto, en este ejemplo el `ArrangeOverride` llamadas al método el `Arrange` método en el `Page` instancia.
 
 > [!NOTE]
-> **Tenga en cuenta**: es importante detener y eliminar los objetos que proporcionan acceso a la cámara en una aplicación de UWP. Si no lo hace puede interferir con otras aplicaciones que intentan tener acceso a la cámara del dispositivo. Para obtener más información, consulte [mostrar la vista previa de la cámara](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access).
+> Es importante detener y eliminar los objetos que proporcionan acceso a la cámara en una aplicación de UWP. Si no lo hace puede interferir con otras aplicaciones que intentan tener acceso a la cámara del dispositivo. Para obtener más información, consulte [mostrar la vista previa de la cámara](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access).
 
 ## <a name="summary"></a>Resumen
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: aaa4c93eda9edb0eb5d568b3470c02352bdb7467
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: df6a0afe18b6929f8e03ce4d9bf35198034508bf
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-value-converters"></a>Convertidores de valores de enlace
 
@@ -95,7 +95,7 @@ Si se utiliza un convertidor de valores en varias páginas de la aplicación, pu
 
 El **habilitar botones** página muestra una común cuando necesita un `Button` realiza una operación basada en texto que el usuario escribe en un `Entry` vista. Si no se ha escrito en el `Entry`, el `Button` debe deshabilitarse. Cada `Button` contiene un enlace de datos en su `IsEnabled` propiedad. El origen de enlace de datos es el `Length` propiedad de la `Text` propiedad de los correspondientes `Entry`. Si ese `Length` propiedad no es 0, devuelve el convertidor de valores `true` y `Button` está habilitada:
 
-[![Habilitar los botones](converters-images/enablebuttons-small.png "habilitar botones")](converters-images/enablebuttons-large.png "habilitar botones")
+[![Habilitar los botones](converters-images/enablebuttons-small.png "habilitar botones")](converters-images/enablebuttons-large.png#lightbox "habilitar botones")
 
 Tenga en cuenta que la `Text` propiedad en cada `Entry` se inicializa en una cadena vacía. El `Text` propiedad es `null` forma predeterminada y los datos de enlace no funcionará en ese caso.
 
@@ -236,7 +236,7 @@ El **conmutador indicadores** página muestra cómo se puede utilizar para mostr
 
 En la última de las tres `Switch` y `Label` pares, el argumento genérico se establece en `Style`y todo `Style` objetos se proporcionan para que los valores de `TrueObject` y `FalseObject`. Estos invalidación el estilo implícita para `Label` se establece en el diccionario de recursos, por lo que las propiedades de ese estilo están asignadas explícitamente a la `Label`. Activa o desactiva el `Switch` hace correspondiente `Label` para reflejar el cambio:
 
-[![Cambiar indicadores](converters-images/switchindicators-small.png "cambiar indicadores")](converters-images/switchindicators-large.png "cambiar indicadores")
+[![Cambiar indicadores](converters-images/switchindicators-small.png "cambiar indicadores")](converters-images/switchindicators-large.png#lightbox "cambiar indicadores")
 
 También es posible utilizar [ `Triggers` ](~/xamarin-forms/app-fundamentals/triggers.md) implementar modificaciones similares en la interfaz de usuario en función de otras vistas.
 
@@ -460,7 +460,7 @@ Los valores de la `Red` y `Green` propiedades se muestran con un `Binding` exten
 
 Este es el resultado:
 
-[![Selector de colores RGB](converters-images/rgbcolorselector-small.png "Selector de colores RGB")](converters-images/rgbcolorselector-large.png "Selector de colores RGB")
+[![Selector de colores RGB](converters-images/rgbcolorselector-small.png "Selector de colores RGB")](converters-images/rgbcolorselector-large.png#lightbox "Selector de colores RGB")
 
 
 ## <a name="related-links"></a>Vínculos relacionados

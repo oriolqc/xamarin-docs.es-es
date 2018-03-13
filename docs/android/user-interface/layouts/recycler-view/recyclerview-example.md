@@ -7,22 +7,21 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: a8de515563d9b9e38f049fd92c94b95e75239eb2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 44ebc8098250da26762538cddf5a89ffac709d8e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="a-basic-recyclerview-example"></a>Un ejemplo de RecyclerView básico
 
 
 Para entender cómo `RecyclerView` funciona en una aplicación típica, este tema se exploran el [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/) aplicación de ejemplo, un ejemplo de código sencillo que utiliza `RecyclerView` para mostrar una extensa colección de fotos: 
 
-[ ![Dos capturas de pantalla de una aplicación de RecyclerView que usa CardViews para mostrar fotografías](recyclerview-example-images/01-recyclerviewer-sml.png)](recyclerview-example-images/01-recyclerviewer.png)
+[![Dos capturas de pantalla de una aplicación de RecyclerView que usa CardViews para mostrar fotografías](recyclerview-example-images/01-recyclerviewer-sml.png)](recyclerview-example-images/01-recyclerviewer.png#lightbox)
 
 **RecyclerViewer** utiliza [CardView](~/android/user-interface/controls/card-view.md) para implementar cada elemento de la fotografía en la `RecyclerView` diseño. Debido `RecyclerView`de ventajas de rendimiento, esta aplicación de ejemplo es capaz de desplazarse rápidamente a través de una colección de fotografías grande de forma sencilla y sin retrasos evidentes.
 
-<a name="datasource" />
 
 ### <a name="an-example-data-source"></a>Un origen de datos de ejemplo
 
@@ -48,7 +47,6 @@ mPhotoAlbum.RandomSwap ();
 
 Dado que los detalles de implementación `PhotoAlbum` no son relevantes para familiarizarse con `RecyclerView`, el `PhotoAlbum` es que el código fuente no se mencionan aquí. El código fuente `PhotoAlbum` está disponible en [PhotoAlbum.cs](https://github.com/xamarin/monodroid-samples/blob/master/android5.0/RecyclerViewer/RecyclerViewer/PhotoAlbum.cs) en el [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/) aplicación de ejemplo.
 
-<a name="preliminaries" />
 
 ### <a name="layout-and-initialization"></a>Diseño e inicialización
 
@@ -128,7 +126,7 @@ En lugar de usar la la predefind `LinearLayoutManager`, puede conectar un admini
 
 La clase de titular de la vista se denomina `PhotoViewHolder`. Cada `PhotoViewHolder` instancia contiene referencias a la `ImageView` y `TextView` de un elemento de la fila asociada, que se encuentra en un `CardView` como diagrama aquí:
 
-[ ![Diagrama de CardView que contiene un ImageView y TextView](recyclerview-example-images/02-cardview-layout-sml.png)](recyclerview-example-images/02-cardview-layout.png)
+[![Diagrama de CardView que contiene un ImageView y TextView](recyclerview-example-images/02-cardview-layout-sml.png)](recyclerview-example-images/02-cardview-layout.png#lightbox)
 
 `PhotoViewHolder` se deriva de `RecyclerView.ViewHolder` y contiene propiedades para almacenar referencias a la `ImageView` y `TextView` se muestra en el diseño anterior.
 `PhotoViewHolder` consta de dos propiedades y un constructor:
@@ -181,7 +179,6 @@ El `mPhotoAlbum` miembro contiene el origen de datos (el álbum de fotos) que se
 
 El Administrador de diseño llama a estos métodos mientras es colocar elementos dentro de la `RecyclerView`. En las secciones siguientes, se examina la implementación de estos métodos.
 
-<a name="oncreateviewholder" />
 
 #### <a name="oncreateviewholder"></a>OnCreateViewHolder
 
@@ -245,7 +242,6 @@ public override RecyclerView.ViewHolder
 
 La instancia del titular de la vista resultante, `vh`, se devuelve al llamador (el Administrador de diseño).
 
-<a name="onbindviewholder" />
 
 #### <a name="onbindviewholder"></a>OnBindViewHolder
 
@@ -270,7 +266,6 @@ El adaptador carga el recurso de imagen en la vista al que hace referencia el ti
 
 Tenga en cuenta que `OnBindViewHolder` es el código que se ocupa directamente de la estructura de los datos. En este caso, `OnBindViewHolder` entiende cómo asignar el `RecyclerView` posición a su elemento de datos asociados en el origen de datos de elemento. La asignación es sencilla en este caso porque la posición se puede usar como un índice de matriz en el álbum de fotos; Sin embargo, los orígenes de datos más complejos pueden requerir código adicional para establecer este tipo de asignación.
 
-<a name="itemcount" />
 
 #### <a name="itemcount"></a>ItemCount
 
@@ -285,7 +280,6 @@ public override int ItemCount
 
 Para obtener más información acerca de `RecyclerView.Adapter`, consulte el [referencia de clase RecyclerView.Adapter](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.Adapter.html).
 
-<a name="together" />
 
 ### <a name="putting-it-all-together"></a>Colocarlo todos juntos
 
@@ -372,11 +366,10 @@ public class PhotoAlbumAdapter : RecyclerView.Adapter
 
 Cuando se compila y ejecuta este código, se crea la foto básica ver aplicación tal como se muestra en las capturas de pantalla siguiente:
 
-[ ![Dos capturas de pantalla de aplicación tarjetas de fotos de desplazamiento vertical de la visualización de fotografías](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png)
+[![Dos capturas de pantalla de aplicación tarjetas de fotos de desplazamiento vertical de la visualización de fotografías](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png#lightbox)
 
 Esta aplicación básica solo admite la exploración del álbum de fotografías. No ha respondido para eventos de elemento táctil, ni controlar los cambios en los datos subyacentes. Esta funcionalidad se agrega en [extiende el ejemplo RecyclerView](~/android/user-interface/layouts/recycler-view/extending-the-example.md).
 
-<a name="layoutmanagerchange" />
 
 ### <a name="changing-the-layoutmanager"></a>Cambiar el LayoutManager
 
@@ -388,7 +381,7 @@ mLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.Horizontal, fa
 
 Este cambio de código reemplaza vertical `LinearLayoutManager` con un `GridLayoutManager` que presenta una cuadrícula formada por dos filas Desplácese en dirección horizontal. Cuando se compila y se vuelva a ejecutar la aplicación, verá que las fotografías se muestran en una cuadrícula y que el desplazamiento es horizontal en lugar de vertical:
 
-[ ![Captura de pantalla de ejemplo de aplicación con las fotografías de desplazamiento horizontal en una cuadrícula](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png)
+[![Captura de pantalla de ejemplo de aplicación con las fotografías de desplazamiento horizontal en una cuadrícula](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png#lightbox)
 
 Al cambiar una única línea de código, tiene es posible modificar la aplicación de visualización de fotografías para que use un diseño diferente con un comportamiento diferente.
 Tenga en cuenta que el código del adaptador ni el diseño XML tenía que modificar para cambiar el estilo de diseño. 

@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 53e972211ce506b6bf32ee4785c853982528d92e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e90f49ba9aa217659e20d4bef1fc826fe085fa7f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="multi-touch-finger-tracking"></a>Seguimiento de multitoque dedo
 
@@ -192,7 +192,7 @@ public override bool OnTouchEvent(MotionEvent args)
 
 Este tipo de procesamiento permite la [pintura con los dedos](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint) programa para realizar un seguimiento de los dedos individuales y dibujar los resultados en la pantalla:
 
-[![Captura de pantalla de ejemplo del ejemplo de pintura con los dedos](touch-tracking-images/image01.png)](touch-tracking-images/image01.png)
+[![Captura de pantalla de ejemplo del ejemplo de pintura con los dedos](touch-tracking-images/image01.png)](touch-tracking-images/image01.png#lightbox)
 
 Ahora ha visto cómo puede realizar un seguimiento de los dedos individuales en la pantalla y distinguir entre ellos.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 4887b9a42c5a855353b5a4e422559aafcdc68173
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0b8d8d08db15959a47093f255a891605a089ea00
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="table-control"></a>Control de tabla
 
@@ -24,7 +24,7 @@ El watchOS `WKInterfaceTable` control es mucho más fácil que su equivalente de
 
 Arrastre el **tabla** control en una escena. De forma predeterminada será similar a este (que se muestran un diseño de fila no especificado):
 
-[ ![](table-images/add-table-sml.png "Agregar una tabla")](table-images/add-table.png)
+[![](table-images/add-table-sml.png "Agregar una tabla")](table-images/add-table.png#lightbox)
 
 Asigne un nombre de la tabla en la **propiedades** del panel de **nombre** cuadro, por lo que se puede hacer referencia en el código.
 
@@ -34,7 +34,7 @@ La tabla incluye automáticamente una fila única, representada por un controlad
 
 Para establecer el **clase** para el controlador de fila, seleccione la fila en la **esquema del documento** y escriba un nombre de clase en el **propiedades** panel:
 
-[ ![](table-images/add-row-controller-sml.png "Escriba un nombre de clase en el panel de propiedades")](table-images/add-row-controller.png)
+[![](table-images/add-row-controller-sml.png "Escriba un nombre de clase en el panel de propiedades")](table-images/add-row-controller.png#lightbox)
 
 Una vez que se establece la clase de controlador de la fila, el IDE creará un archivo de C# correspondiente en el proyecto. Arrastrar controles (como etiquetas) a la fila y asígneles nombres, por lo que pueden hacer referencia en el código.
 

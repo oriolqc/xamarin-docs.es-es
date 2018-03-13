@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 82151599b92094b816f4763c533ed7746db37920
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 489f3bd43ff4515000127ac29de197435493d5a9
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-navigation-and-focus"></a>Trabajar con la navegación y el foco
 
@@ -21,7 +21,7 @@ _Este artículo explica el concepto de foco y cómo se utiliza para presentar y 
 
 Este artículo explica el concepto de [foco](#Focus-and-Selection) y cómo se utiliza para controlar [navegación](#Navigation) en la interfaz de usuario de la aplicación de Xamarin.tvOS. Examinaremos cómo usar los controles de navegación de tvOS integrados foco, resaltado y la selección para proporcionar navegación de interfaz de usuario de la aplicación Xamarin.tvOS.
 
-[ ![](navigation-focus-images/intro01.png "aplicaciones de tvOS desplazamiento de la interfaz de usuario")](navigation-focus-images/intro01.png)
+[![](navigation-focus-images/intro01.png "aplicaciones de tvOS desplazamiento de la interfaz de usuario")](navigation-focus-images/intro01.png#lightbox)
 
 A continuación, se echaremos un vistazo a cómo se puede utilizar el foco con [Parallax](#Focus-and-Parallax) y *superpuesto imágenes* para proporcionar sugerencias visuales para el estado actual de navegación para el usuario final.
 
@@ -35,7 +35,7 @@ Los usuarios de la aplicación Xamarin.tvOS no será su interacción con su inte
 
 Una aplicación tvOS correcta implementa la navegación de una manera que sin problemas es compatible con el propósito de la aplicación y la estructura de los datos que y se muestra sin centra la atención en el panel de navegación propio. Diseñar la navegación por lo que parece natural y familiar sin que dominan la interfaz de usuario o foco el contenido y la experiencia del usuario de las aplicaciones de dibujo.
 
-[ ![](navigation-focus-images/nav01.png "La aplicación de configuración de tvOS")](navigation-focus-images/nav01.png)
+[![](navigation-focus-images/nav01.png "La aplicación de configuración de tvOS")](navigation-focus-images/nav01.png#lightbox)
 
 Mientras usan generalmente un Televisor de Apple, el usuario navega a través de un conjunto apilado de las pantallas, cada uno de ellos presenta un conjunto determinado de contenido. A su vez, cada nueva pantalla puede dar lugar a uno o más pantallas secundarias de contenido mediante controles de interfaz de usuario estándar como [botones](~/ios/tvos/user-interface/buttons.md), [ficha barras](~/ios/tvos/user-interface/tab-bars.md), tablas, [vistas de colección](~/ios/tvos/user-interface/collection-views.md) o [ Dividir vistas](~/ios/tvos/user-interface/split-views.md).
 
@@ -58,7 +58,7 @@ Apple sugiere teniendo presente lo siguiente al diseñar el panel de navegación
 
 En Apple TV, una imagen, botón u otro elemento de interfaz de usuario se considera _foco_ cuando es el destino de la navegación actual.
 
-[ ![](navigation-focus-images/focus01.png "Ejemplo de foco y la selección")](navigation-focus-images/focus01.png)
+[![](navigation-focus-images/focus01.png "Ejemplo de foco y la selección")](navigation-focus-images/focus01.png#lightbox)
 
 A diferencia de, los dispositivos de iOS donde el usuario interactúa directamente con elementos en pantalla táctil del dispositivo, los usuarios interactúan con tvOS elementos en la habitación mediante el mando a distancia Siri. Para presentar y controlar esta interacción del usuario, se usa Apple TV un _foco_ según el modelo.
 
@@ -138,7 +138,7 @@ Sin embargo, puede haber ocasiones, debido a las necesidades para el diseño de 
 
 Realice el siguiente diseño de interfaz de usuario para obtener un ejemplo:
 
- [ ![](navigation-focus-images/guide01.png "Trabajar con el ejemplo de guías de foco")](navigation-focus-images/guide01.png)
+ [![](navigation-focus-images/guide01.png "Trabajar con el ejemplo de guías de foco")](navigation-focus-images/guide01.png#lightbox)
  
 Dado que la **más información** botón no se encuentra en una cuadrícula horizontal y vertical con el **comprar** botón sea accesible para el usuario. Sin embargo, esto puede corregir con facilidad utilizando un _foco guía_ para proporcionar sugerencias de movimiento al motor de foco. 
 
@@ -170,7 +170,7 @@ Primero, un nuevo `UIFocusGuide` se crea y se agrega a la colección de las guí
 
 A continuación, la Guía de foco arriba, izquierda, ancho y alto delimitadores se ajustan relativo a la **More Info** y **comprar** botones para colocarlo entre ellos. Vea:
 
-[ ![](navigation-focus-images/guide02.png "Guía de foco de ejemplo")](navigation-focus-images/guide02.png)
+[![](navigation-focus-images/guide02.png "Guía de foco de ejemplo")](navigation-focus-images/guide02.png#lightbox)
 
 También es importante tener en cuenta que se está activando las nuevas restricciones que se crean mediante el establecimiento sus `Active` propiedad `true`:
 

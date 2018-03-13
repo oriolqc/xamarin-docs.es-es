@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 20b18cd79eeaabab8019c367e241a4975dc37b0e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b7db9082f05ea4db41ddb84d34be2ec9113f2ad5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="search-with-core-spotlight"></a>Búsqueda de Spotlight Core
 
@@ -46,7 +46,7 @@ CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, 
 
 Esta información será similar al siguiente en un resultado de búsqueda siguiente:
 
-[ ![](corespotlight-images/corespotlight01.png "Información general sobre el resultado de búsqueda de Spotlight de principales")](corespotlight-images/corespotlight01.png)
+[![](corespotlight-images/corespotlight01.png "Información general sobre el resultado de búsqueda de Spotlight de principales")](corespotlight-images/corespotlight01.png#lightbox)
 
 ## <a name="restoring-an-item"></a>Si restaura un elemento
 
@@ -80,7 +80,7 @@ Tenga en cuenta que esta vez se busca la actividad que tenga un `ActivityType` d
 Puede haber ocasiones en un elemento de índice se crea con los servicios principales deba modificarse, como se requiere un cambio en el título o la imagen en miniatura. Para realizar este cambio, usamos el mismo método que se utilizó para crear inicialmente el índice.
 Creamos un nuevo `CSSearchableItem` con el mismo identificador que se utilizó para crear el elemento y adjuntar un nuevo `CSSearchableItemAttributeSet` que contiene los atributos modificados:
 
-[ ![](corespotlight-images/corespotlight02.png "Un elemento de información general sobre la actualización")](corespotlight-images/corespotlight02.png)
+[![](corespotlight-images/corespotlight02.png "Un elemento de información general sobre la actualización")](corespotlight-images/corespotlight02.png#lightbox)
 
 Cuando este elemento se escribe en el índice de búsqueda, el elemento de trabajo se actualiza con la nueva información.
 

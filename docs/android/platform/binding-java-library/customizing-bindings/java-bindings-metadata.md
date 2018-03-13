@@ -7,18 +7,17 @@ ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 91e27fcaef0ef1b262eceecd4d3c71bac34e328d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: edf25ebd089994c01b2fa45e77b35fad9a51e350
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="java-bindings-metadata"></a>Java Bindings Metadata
 
 _Código de C# en Xamarin.Android llama a bibliotecas de Java a través de enlaces, que son un mecanismo que resume los detalles de bajo nivel que se especifican en Java JNI (interfaz nativa). Xamarin.Android proporciona una herramienta que genera estos enlaces. Este conjunto de herramientas permite el control del desarrollador cómo se crea un enlace con los metadatos, que permite que los procedimientos, como modificar los espacios de nombres y cambiar el nombre de los miembros. Este documento se describe el funcionamiento de metadatos, se resumen los atributos que los metadatos es compatible con y se explica cómo resolver problemas de enlace mediante la modificación de estos metadatos._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -74,7 +73,6 @@ El **MetaData.xml** archivo es más importante de estos archivos ya que permite 
 
 Permite mover explicar **Metadata.xml** con más detalle.
 
-<a name="Metadata.xml_Transform_File" />
 
 ## <a name="metadataxml-transform-file"></a>Archivo de transformación de Metadata.Xml
 
@@ -114,7 +112,6 @@ A continuación enumeran algunos de los elementos de XPath más comúnmente usad
 -   `parameter` &ndash; Identificar un parámetro para un método. P. ej. `/parameter[@name='p0']`
 
 
-<a name="ADDING_TYPES" />
 
 ### <a name="adding-types"></a>Adición de tipos
 
@@ -129,7 +126,6 @@ El `add-node` elemento indicará el proyecto de enlace de Xamarin.Android para a
 </add-node>
 ```
 
-<a name="REMOVING_TYPES" />
 
 ### <a name="removing-types"></a>Eliminación de tipos
 
@@ -138,8 +134,6 @@ Es posible indicar el generador de enlaces Xamarin.Android para omitir un tipo d
 ```xml
 <remove-node path="/api/package[@name='{package_name}']/class[@name='{name}']" />
 ```
-
-<a name="Renaming_Members" />
 
 ### <a name="renaming-members"></a>Cambiar el nombre de los miembros
 
@@ -169,6 +163,8 @@ Para cambiar correctamente el nombre administrado de un tipo (o un método) ajus
     name="managedName">NewName</attr>
 ```
 
+<a name="Renaming_EventArg_Wrapper_Classes" />
+
 #### <a name="renaming-eventarg-wrapper-classes"></a>Cambiar el nombre de `EventArg` clases contenedoras
 
 Cuando el generador de enlace de Xamarin.Android identifica un `onXXX` método establecedor para una _tipo de agente de escucha_, un evento de C# y `EventArgs` subclase se generarán admitir .NET sabor API para el agente de escucha basados en Java patrón. Por ejemplo, considere la siguiente clase de Java y el método:
@@ -193,7 +189,6 @@ No es un nombre de clase de C# válido. Para corregir este problema, el autor de
 ```
 
  
-<a name="Supported_Attributes" />
 
 ## <a name="supported-attributes"></a>Atributos admitidos
 
@@ -343,7 +338,6 @@ Con todos estos cambios en su lugar, puede utilizar el código de seguimiento en
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 
@@ -354,5 +348,5 @@ En este artículo se describe cómo Xamarin.Android usa metadatos para transform
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Trabajar con JNI](~/android/platform/java-integration/working-with-jni.md)
-- [Enlace de una biblioteca de Java](~/android/platform/binding-java-library/index.md)
+- [Enlace de una biblioteca Java](~/android/platform/binding-java-library/index.md)
 - [GAPI Metadata](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)

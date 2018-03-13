@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 500ad02d79cea79f59b1aca91b0312c9a9d6bac3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b82c0471985306962133c3bf7b084b49d5588bb6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="basic-bindings"></a>Enlaces básicos
 
@@ -94,7 +94,7 @@ Sin embargo, incluido el nombre de clase es un buena recordatorio del objeto de 
 
 Mientras se manipulan los `Slider`, el `Label` gira en consecuencia:
 
-[![Código de Basice enlace](basic-bindings-images/basiccodebinding-small.png "enlace código básico")](basic-bindings-images/basiccodebinding-large.png "enlace código básico")
+[![Código de Basice enlace](basic-bindings-images/basiccodebinding-small.png "enlace código básico")](basic-bindings-images/basiccodebinding-large.png#lightbox "enlace código básico")
 
 El **enlace Xaml básico** es idéntica a la página **enlace código básico** salvo que define el enlace de datos completo en XAML:
 
@@ -190,7 +190,7 @@ El `Binding` constructor tiene 6 parámetros, por lo que el `source` parámetro 
 
 Ejecutar este programa puede resultar un poco sorprendente:
 
-[![Código alternativo enlace](basic-bindings-images/alternativecodebinding-small.png "enlace código alternativo")](basic-bindings-images/alternativecodebinding-large.png "enlace código alternativo")
+[![Código alternativo enlace](basic-bindings-images/alternativecodebinding-small.png "enlace código alternativo")](basic-bindings-images/alternativecodebinding-large.png#lightbox "enlace código alternativo")
 
 La pantalla de iOS de la izquierda muestra el aspecto de la pantalla cuando la página aparece por primera vez. ¿Donde es el `Label`? 
 
@@ -319,7 +319,7 @@ El **herencia de contexto de enlace** ejemplo es una simple demostración de la 
 
 El `BindingContext` propiedad de la `StackLayout` está establecido en el `slider` objeto. Este contexto de enlace es heredada por ambos el `Label` y `BoxView`, ambos de que tienen sus `Rotation` propiedades establecidas en el `Value` propiedad de la `Slider`: 
 
-[![Herencia de contexto de enlace](basic-bindings-images/bindingcontextinheritance-small.png "herencia de contexto de enlace")](basic-bindings-images/bindingcontextinheritance-large.png "herencia de contexto de enlace")
+[![Herencia de contexto de enlace](basic-bindings-images/bindingcontextinheritance-small.png "herencia de contexto de enlace")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "herencia de contexto de enlace")
 
 En el [artículo siguiente](binding-mode.md), verá cómo la *modo de enlace* puede cambiar el flujo de datos entre los objetos de origen y de destino.
 

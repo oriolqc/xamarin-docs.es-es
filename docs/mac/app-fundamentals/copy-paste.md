@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 115f3340c5678c0ead06cf773e193fbdc4ba3d07
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ba937a6eae7f0f74bcf044f1248d49a421e82de5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="copy-and-paste"></a>Copiando y pegando
 
@@ -27,7 +27,7 @@ En este artículo se va a tratar las dos formas principales para utilizar la mes
 1. **Tipos de datos estándar** -puesto que normalmente se llevan a cabo las operaciones de la mesa de trabajo entre las dos aplicaciones no relacionadas, ninguna aplicación conoce los tipos de datos que la otra admite. Para maximizar la posibilidad de uso compartido, la mesa de trabajo puede contener varias representaciones de un elemento determinado (con un conjunto estándar de tipos de datos comunes), esto permite que la aplicación consume la elección de la versión que se adapta mejor a sus necesidades.
 2. **Datos personalizados** - para admitir la copia y pegado de datos complejos dentro de su Xamarin.Mac puede definir un tipo de datos personalizado que será procesado por la mesa de trabajo. Por ejemplo, una aplicación de dibujo vectorial que permite al usuario copiar y pegar formas complejas que se componen de varios tipos de datos y puntos.
 
-[![Ejemplo de la aplicación en ejecución](copy-paste-images/intro01.png "ejemplo de la aplicación en ejecución")](copy-paste-images/intro01-large.png)
+[![Ejemplo de la aplicación en ejecución](copy-paste-images/intro01.png "ejemplo de la aplicación en ejecución")](copy-paste-images/intro01-large.png#lightbox)
 
 En este artículo, se tratarán los conceptos básicos sobre cómo trabajar con la mesa de trabajo en una aplicación Xamarin.Mac admite copiar y pegar las operaciones. Se recomienda trabajar a través de la [Hola, Mac](~/mac/get-started/hello-mac.md) artículo en primer lugar, específicamente el [Introducción a Xcode y el generador de interfaz](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) y [distribuidores y acciones](~/mac/get-started/hello-mac.md#Outlets_and_Actions) secciones, tal como se explica conceptos clave y técnicas que usaremos en este artículo.
 
@@ -50,14 +50,14 @@ Haga lo siguiente:
 1. Inicie Visual Studio para Mac y haga clic en el **nuevo proyecto...**  vínculo.
 2. Seleccione **Mac** > **aplicación** > **aplicación cacao**, a continuación, haga clic en el **siguiente** botón: 
 
-    [![Crear un nuevo proyecto de aplicación de cacao](copy-paste-images/sample01.png "crear un nuevo proyecto de aplicación de cacao")](copy-paste-images/sample01-large.png)
+    [![Crear un nuevo proyecto de aplicación de cacao](copy-paste-images/sample01.png "crear un nuevo proyecto de aplicación de cacao")](copy-paste-images/sample01-large.png#lightbox)
 3. Escriba `MacCopyPaste` para el **nombre de proyecto** y todo lo demás como valor predeterminado mantener. Haga clic en siguiente: 
 
-    [![Establecer el nombre del proyecto](copy-paste-images/sample01a.png "establecer el nombre del proyecto")](copy-paste-images/sample01a-large.png)
+    [![Establecer el nombre del proyecto](copy-paste-images/sample01a.png "establecer el nombre del proyecto")](copy-paste-images/sample01a-large.png#lightbox)
 
 4. Haga clic en el **crear** botón: 
 
-    [![Confirmar la nueva configuración de proyecto](copy-paste-images/sample02.png "confirmar la nueva configuración de proyecto")](copy-paste-images/sample02-large.png)
+    [![Confirmar la nueva configuración de proyecto](copy-paste-images/sample02.png "confirmar la nueva configuración de proyecto")](copy-paste-images/sample02-large.png#lightbox)
 
 ### <a name="add-an-nsdocument"></a>Agregar un NSDocument
 
@@ -265,7 +265,7 @@ Con este documento en su lugar, vamos a crear la interfaz de usuario de la aplic
 
 Haga doble clic en el **Main.storyboard** archivo para abrirlo en Xcode. A continuación, agregar una barra de herramientas y una imagen bien y configurarlos como sigue:
 
-[![La barra de herramientas de edición](copy-paste-images/sample04.png "la barra de herramientas de edición")](copy-paste-images/sample04-large.png)
+[![La barra de herramientas de edición](copy-paste-images/sample04.png "la barra de herramientas de edición")](copy-paste-images/sample04-large.png#lightbox)
 
 Agregue una copia y pega **elemento de la barra de herramientas de imagen** a la izquierda de la barra de herramientas. Usaremos estos archivos como accesos directos para copiar y pegar en el menú Edición. A continuación, agregue cuatro **elementos de la barra de herramientas de imagen** a la derecha de la barra de herramientas. Vamos a usar estos para rellenar la imagen también con algunas imágenes de forma predeterminada.
 
@@ -273,7 +273,7 @@ Para obtener más información sobre cómo trabajar con las barras de herramient
 
 A continuación, vamos a exponer las siguientes salidas y las acciones de los elementos de la barra de herramientas y la imagen también:
 
-[![Crear acciones y las salidas](copy-paste-images/sample05.png "crear acciones y las salidas")](copy-paste-images/sample05-large.png)
+[![Crear acciones y las salidas](copy-paste-images/sample05.png "crear acciones y las salidas")](copy-paste-images/sample05-large.png#lightbox)
 
 Para obtener más información sobre cómo trabajar con las salidas y las acciones, consulte la [distribuidores y acciones](~/mac/get-started/hello-mac.md#Outlets_and_Actions) sección de nuestro [Hola, Mac](~/mac/get-started/hello-mac.md) documentación.
 

@@ -4,14 +4,15 @@ description: Utilizar las transformaciones no afines para girar objetos 2D en un
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 1341cde32778358fbeb7b65045616d5d81623d37
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
-ms.translationtype: HT
+ms.openlocfilehash: a959278b5de72792b23e46372b1333362bed91c8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="3d-rotations"></a>Rotaciones de 3D
 
@@ -27,7 +28,7 @@ Resulta difícil desarrollar `SKMatrix` transformación funciona únicamente den
 
 Un sistema de coordenadas tridimensional agrega un tercer eje Z. conceptualmente llamado, el eje Z es perpendicular a la pantalla. Puntos de coordenadas en un espacio 3D se indican con tres números: (x, y, z). En la opción 3D son sistema de coordenadas que se usan en este artículo, aumentar los valores de X a la derecha y valores crecientes de Y dejan de funcionar, al igual que en dos dimensiones. Los valores de Z positivos crecientes derivados de la pantalla. El origen es la esquina superior izquierda, al igual que en los gráficos 2D. La pantalla se puede considerar como un plano XY con el eje Z perpendicular a este plano.
 
-Esto se denomina un sistema de coordenadas izquierdo. Si eliges coordina el índice de la mano izquierda en la dirección de X positivo (a la derecha) y coordina el dedo intermedio en la dirección de Y creciente (abajo), a continuación, los puntos de control en la dirección de aumentar las coordenadas Z &#x2014; extender fuera de la pantalla.
+Esto se denomina un sistema de coordenadas izquierdo. Si eliges el índice de la mano izquierda en la dirección de positivo X coordenadas (a la derecha) y coordina el dedo intermedio en la dirección de aumento Y (hacia abajo), el pulgar apunta, a continuación, en la dirección de aumentar las coordenadas Z: Extender a partir de la pantalla.
 
 En los gráficos 3D, las transformaciones se basan en una matriz de 4 x 4. Aquí es la matriz de identidad de 4 por 4:
 
@@ -109,7 +110,7 @@ Rotación alrededor del eje Z es el mismo que en los gráficos 2D:
 |    0       0     0  1  |
 </pre>
 
-La dirección de la rotación está implícito en la situación del sistema de coordenadas. Se trata de un sistema zurdo, por lo que si el punto de control de la mano izquierda hacia aumentar los valores para un eje determinado &#x2014; a la derecha de rotación alrededor del eje X, el detalle de rotación alrededor del eje Y y hacia TI de rotación alrededor del eje Z &#x2014; a continuación, la curva de los otros dedos indica la dirección de rotación de los ángulos positivos.
+La dirección de la rotación está implícito en la situación del sistema de coordenadas. Se trata de un sistema zurdo, por lo que si el punto de control de la mano izquierda hacia aumentar los valores de un eje determinado, a la derecha de rotación alrededor del eje X, el detalle de rotación alrededor del eje Y y hacia TI de rotación alrededor del eje Z de:, a continuación, la curva de yo los otros dedos indica la dirección de rotación de los ángulos positivos.
 
 `SKMatrix44` se generalizado estático [ `CreateRotation` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/) y [ `CreateRotationDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) métodos que le permiten especificar el eje alrededor de la que se produce la rotación:
 
@@ -408,7 +409,7 @@ public partial class Rotation3DPage : ContentPage
 
 Cuando se experimenta con el control deslizante cuarto, observará que la configuración de profundidad diferentes no mover el objeto aún más lejos el Visor, pero en su lugar, modifica la extensión del efecto de perspectiva:
 
-[![](3d-rotation-images/rotation3d-small.png "Captura de pantalla triple de la página de giro 3D")](3d-rotation-images/rotation3d-large.png "Triple captura de pantalla de la página de giro 3D")
+[![](3d-rotation-images/rotation3d-small.png "Captura de pantalla triple de la página de giro 3D")](3d-rotation-images/rotation3d-large.png#lightbox "Triple captura de pantalla de la página de giro 3D")
 
 El **animando giro 3D** también utiliza `SKMatrix44` para animar una cadena de texto en un espacio 3D. La `textPaint` objeto establecido como un campo se usa en el constructor para determinar los límites del texto:
 
@@ -442,7 +443,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-El `OnAppearing` invalidación define tres Xamarin.Forms `Animation` objetos que se va a animar el `xRotationDegrees`, `yRotationDegrees`, y `zRotationDegrees` campos a distintas tasas. Tenga en cuenta que los períodos de estas animaciones se establecen en números primos &#x2014; 5 segundos, 7 segundos y 11 segundos &#x2014; por lo que la combinación general solo repite cada 385 segundos o más de 10 minutos:
+El `OnAppearing` invalidación define tres Xamarin.Forms `Animation` objetos que se va a animar el `xRotationDegrees`, `yRotationDegrees`, y `zRotationDegrees` campos a distintas tasas. Observe que se establecen los períodos de estas animaciones preparar números: 5 segundos, 7 segundos y 11 segundos, por lo que la combinación general solo repite cada 385 segundos o más de 10 minutos:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -532,7 +533,7 @@ public class AnimatedRotation3DPage : ContentPage
 
 Este giro 3D está acotado por varias transformaciones 2D para mover el centro de rotación en el centro de la pantalla y escalar el tamaño de la cadena de texto para que sea el mismo ancho que la pantalla:
 
-[![](3d-rotation-images/animatedrotation3d-small.png "Triple captura de pantalla de la página 3D de rotación animada")](3d-rotation-images/animatedrotation3d-large.png "Triple captura de pantalla de la página 3D de giro animado")
+[![](3d-rotation-images/animatedrotation3d-small.png "Triple captura de pantalla de la página 3D de rotación animada")](3d-rotation-images/animatedrotation3d-large.png#lightbox "Triple captura de pantalla de la página 3D de giro animado")
 
 
 ## <a name="related-links"></a>Vínculos relacionados

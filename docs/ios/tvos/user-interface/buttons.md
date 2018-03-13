@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: 05a162dab3b427ec345f22818b6c6d9df82c498b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4b2a470d7fe2a1f9d4b8df40836c934547adf614
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-buttons"></a>Trabajar con botones
 
@@ -21,7 +21,7 @@ _Este artículo tratan diseñar y trabajar con botones dentro de una aplicación
 
 Usar una instancia de la `UIButton` clase para crear un botón seleccionable, puede recibir el foco en una ventana de tvOS. Cuando el usuario selecciona un botón, envía un mensaje de acción para el objeto de destino permitir su responden de aplicación Xamarin.tvOS al usuario de la entrada.
 
-[ ![](buttons-images/buttons01.png "Botones de ejemplo")](buttons-images/buttons01.png)
+[![](buttons-images/buttons01.png "Botones de ejemplo")](buttons-images/buttons01.png#lightbox)
 
 Para obtener más información sobre trabajar con el foco y navegar con el mando a distancia Siri, visite nuestro [trabajar con navegación y foco](~/ios/tvos/app-fundamentals/navigation-focus.md) y [Siri remoto y controladores de Bluetooth](~/ios/tvos/platform/remote-bluetooth.md) documentación.
 
@@ -31,7 +31,7 @@ Para obtener más información sobre trabajar con el foco y navegar con el mando
 
 En tvOS, botones se utilizan para acciones específicas de la aplicación y pueden contener un título, un icono o ambos. Cuando el usuario explora la interfaz de usuario de la aplicación mediante el [Siri remoto](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote), foco del botón especificado, lo que cambiar los colores de fondo y de texto. También se aplica una sombra para el botón Agregar un efecto 3D que se parezca a subir por encima del resto de la interfaz de usuario.
 
-[ ![](buttons-images/buttons01.png "Botones de ejemplo")](buttons-images/buttons01.png)
+[![](buttons-images/buttons01.png "Botones de ejemplo")](buttons-images/buttons01.png#lightbox)
 
 Apple tiene las siguientes sugerencias para trabajar con botones:
 
@@ -70,19 +70,19 @@ Es la manera más fácil trabajar con botones en una aplicación Xamarin.tvOS ag
 1. En el **el Explorador de soluciones**, haga doble clic en el `Main.storyboard` de archivo y abrirlo y editarlo.
 1. Arrastre un **botón** desde el **biblioteca** y colóquela en la vista: 
 
-    [ ![](buttons-images/storyboard01.png "Un botón")](buttons-images/storyboard01.png)
+    [![](buttons-images/storyboard01.png "Un botón")](buttons-images/storyboard01.png#lightbox)
 1. En el **el Explorador de propiedades**, puede ajustar varias propiedades del botón como su **título** y **Color del texto**: 
 
-    [ ![](buttons-images/storyboard02.png "Propiedades de botón")](buttons-images/storyboard02.png)
+    [![](buttons-images/storyboard02.png "Propiedades de botón")](buttons-images/storyboard02.png#lightbox)
 1. A continuación, cambie a la **ficha eventos** y cable telefónico un **eventos** desde el **botón** y llámelo `ButtonPressed`: 
 
-    [ ![](buttons-images/storyboard03.png "La ficha de eventos")](buttons-images/storyboard03.png)
+    [![](buttons-images/storyboard03.png "La ficha de eventos")](buttons-images/storyboard03.png#lightbox)
 1. Pasará automáticamente a la `ViewController.cs` vista donde puede colocar la nueva acción en el código utilizando la **una** y **hacia abajo** teclas de dirección: 
 
-    [ ![](buttons-images/storyboard04.png "Colocar una nueva acción en el código")](buttons-images/storyboard04.png)
+    [![](buttons-images/storyboard04.png "Colocar una nueva acción en el código")](buttons-images/storyboard04.png#lightbox)
 1. Presione el **ENTRAR** para seleccionar la ubicación: 
 
-    [ ![](buttons-images/storyboard05.png "El editor de código")](buttons-images/storyboard05.png)
+    [![](buttons-images/storyboard05.png "El editor de código")](buttons-images/storyboard05.png#lightbox)
 1. Guarde los cambios a todos los archivos.
 
 
@@ -91,13 +91,13 @@ Es la manera más fácil trabajar con botones en una aplicación Xamarin.tvOS ag
 1. En el **el Explorador de soluciones**, haga doble clic en el `Main.storyboard` de archivo y abrirlo y editarlo.
 1. Arrastre un **botón** desde el **biblioteca** y colóquela en la vista: 
 
-    [ ![](buttons-images/storyboard01vs.png "Un botón")](buttons-images/storyboard01vs.png)
+    [![](buttons-images/storyboard01vs.png "Un botón")](buttons-images/storyboard01vs.png#lightbox)
 1. En el **el Explorador de propiedades**, puede ajustar varias propiedades del botón como su **título** y **Color del texto**: 
 
-    [ ![](buttons-images/storyboard02vs.png "El Explorador de propiedades")](buttons-images/storyboard02vs.png)
+    [![](buttons-images/storyboard02vs.png "El Explorador de propiedades")](buttons-images/storyboard02vs.png#lightbox)
 1. A continuación, cambie a la **ficha eventos** y cable telefónico un **eventos** desde el **botón** y llámelo `ButtonPressed`: 
 
-    [ ![](buttons-images/storyboard03vs.png "La ficha de eventos")](buttons-images/storyboard03vs.png)
+    [![](buttons-images/storyboard03vs.png "La ficha de eventos")](buttons-images/storyboard03vs.png#lightbox)
 1. Guarde los cambios a todos los archivos.
 
 

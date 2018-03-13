@@ -3,16 +3,16 @@ title: "Asignación"
 description: "Xamarin.Forms utiliza la API de asignación nativo en cada plataforma."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
+ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 98e6cade952e656046c6c0981a0b73ff0894c9d6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 2f0ad800ed1ab3a336f10dd4431e234ac4ff9675
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="map"></a>Asignación
 
@@ -28,7 +28,7 @@ Una vez configurado, el `Map` funciona igual que cualquier otro elemento de Xama
 
 Se ha utilizado el control de mapa en el [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/) ejemplo, que se muestra a continuación.
 
- [ ![Se asigna en el ejemplo de MobileCRM](map-images/maps-zoom-sml.png "ejemplo de Control de mapa")](map-images/maps-zoom.png "ejemplo de Control de mapa")
+ [![Se asigna en el ejemplo de MobileCRM](map-images/maps-zoom-sml.png "ejemplo de Control de mapa")](map-images/maps-zoom.png#lightbox "ejemplo de Control de mapa")
 
 Se puede mejorar aún más la funcionalidad de mapas mediante la creación de un [asignar un representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
 
@@ -103,7 +103,7 @@ Después de seguir estas instrucciones, pegue la clave de API en el **Properties
 Sin una clave de API válida el control de mapas se mostrará como un cuadro gris en Android.
 
 > [!NOTE]
-> **Tenga en cuenta**: Recuerde que debe generar otra clave usando el archivo de almacén de claves que se usa para firmar la versión de lanzamiento de cualquier aplicación que se haya cargado en la tienda Google Play. La clave genera para el desarrollo y depuración no funcionará y la aplicación descargada de Google Play habrá divide la presentación del mapa. También recuerde volver a generar la clave si la aplicación **nombre del paquete** cambios.
+> Recuerde que debe generar otra clave usando el archivo de almacén de claves que se usa para firmar la versión de lanzamiento de cualquier aplicación que se haya cargado en la tienda Google Play. La clave genera para el desarrollo y depuración no funcionará y la aplicación descargada de Google Play habrá divide la presentación del mapa. También recuerde volver a generar la clave si la aplicación **nombre del paquete** cambios.
 
 También deberá habilitar los permisos adecuados, el botón secundario en el proyecto de Android y seleccione **Opciones > compilar > aplicación Android** y cuenta atrás a lo siguiente:
 
@@ -185,7 +185,7 @@ slider.ValueChanged += (sender, e) => {
 };
 ```
 
- [ ![Mapas con zoom](map-images/maps-zoom-sml.png "mapa Control Zoom")](map-images/maps-zoom.png "Zoom de Control de mapa")
+ [![Mapas con zoom](map-images/maps-zoom-sml.png "mapa Control Zoom")](map-images/maps-zoom.png#lightbox "Zoom de Control de mapa")
 
 ### <a name="map-pins"></a>Asignar PIN
 
@@ -253,4 +253,4 @@ Una vez configurada la API asigna puede usarse para representar mapas con marcad
 
 - [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/)
 - [Asignar a un representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
-- [Ejemplos de Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/) (Ejemplos de Xamarin.Forms)

@@ -8,17 +8,17 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/07/2017
-ms.openlocfilehash: 707ba5874c939fbd25f4e25a7cefd3dc5fc75131
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0ea6528ce3523ab5d829342e99ccf35ca3d69aa2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Envía de forma remota iOS Simulator (para Windows)
 
 _Probar y depurar aplicaciones de iOS completamente dentro de Visual Studio en Windows_
 
-[ ![](ios-simulator-images/hero-sml.png "Simulador de iOS con Windows")](ios-simulator-images/hero.png)
+[![](ios-simulator-images/hero-sml.png "Simulador de iOS con Windows")](ios-simulator-images/hero.png#lightbox)
 
 ## <a name="download-and-install"></a>Descargue e instale
 
@@ -36,7 +36,7 @@ Para usar el simulador de iOS remoto:
 
 Puede deshabilitar el simulador de iOS remoto de **Herramientas > Opciones > Xamarin > configuración de iOS** para ello, desactive la casilla de **simulador remoto a Windows** se muestra aquí:
 
-[ ![](ios-simulator-images/options-sml.png "casilla de verificación para usar el simulador")](ios-simulator-images/options.png)
+[![](ios-simulator-images/options-sml.png "casilla de verificación para usar el simulador")](ios-simulator-images/options.png#lightbox)
 
 El simulador de iOS, a continuación, se abrirá en el equipo Mac conectado. Seleccione esta opción para volver a activar el simulador de iOS remoto.
 
@@ -54,14 +54,14 @@ La barra de herramientas de la ventana incluye una serie de botones que deben in
 - [**Configuración de** ](#settings) : configurar la ubicación y el teclado.
  - Otros [ **opciones** ](#options) – una variedad de opciones de simulador están disponible como apretón girar, o invocar otros Estados en el simulador. Cuando se ocultan algunas opciones, puede tener acceso desde el icono de puntos suspensivos que aparece en la barra de herramientas, o con el botón secundario en la ventana.
 
-    [ ![](ios-simulator-images/maps-app-sml.png "ejemplo de mapas de simulador de iOS")](ios-simulator-images/maps-app.png)
+    [![](ios-simulator-images/maps-app-sml.png "ejemplo de mapas de simulador de iOS")](ios-simulator-images/maps-app.png#lightbox)
 
 
 ### <a name="settings"></a>Configuración
 
 El icono de "engranaje" se abre la **configuración** ventana:
 
-[ ![](ios-simulator-images/settings-sml.png "configuración de simulador de iOS")](ios-simulator-images/settings.png)
+[![](ios-simulator-images/settings-sml.png "configuración de simulador de iOS")](ios-simulator-images/settings.png#lightbox)
 
 Esto permite habilitar el teclado de hardware en el simulador y elegir qué ubicación se notifica en el dispositivo (incluidos una ubicación estática, u otras opciones de ubicación móvil).
 
@@ -71,7 +71,7 @@ Esto permite habilitar el teclado de hardware en el simulador y elegir qué ubic
 
 Haga clic en cualquier lugar en la ventana del simulador para ver todas las opciones disponibles en el simulador, como la rotación, desencadenar un gesto de apretón y reiniciando el simulador:
 
-[ ![](ios-simulator-images/more-sml.png "Opciones de configuración adicionales del simulador de iOS")](ios-simulator-images/more.png)
+[![](ios-simulator-images/more-sml.png "Opciones de configuración adicionales del simulador de iOS")](ios-simulator-images/more.png#lightbox)
 
 ### <a name="touchscreen-support"></a>Compatibilidad con pantalla táctil
 

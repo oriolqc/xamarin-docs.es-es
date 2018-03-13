@@ -6,11 +6,11 @@ ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 4a83afca753d1131e3486004443f9c4a895f6fbc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a0873c6b902e29174da5e27a09e8f580d6d69eb7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="debugging-integrations"></a>Depuración de aplicaciones integradas
 
@@ -43,11 +43,11 @@ defaults write com.xamarin.Inspector WebKitDeveloperExtras -bool true
 
 y, a continuación, reinicie los libros de Xamarin. Una vez hecho esto, debería ver **elemento inspeccionar** aparecen en el menú contextual y un nuevo **Developer** panel estará disponible en las preferencias de los libros. Esta opción le permite elegir si desea que las herramientas de desarrollo abiertas en el inicio:
 
-[![Panel para desarrolladores](debugging-images/developer-pane-small.png)](debugging-images/developer-pane.png)
+[![Panel para desarrolladores](debugging-images/developer-pane-small.png)](debugging-images/developer-pane.png#lightbox)
 
 Esta preferencia es de solo reinicio así, deberá reiniciar el cliente de los libros en orden para que surta efecto en los libros de nuevo. Activar las herramientas de desarrollo mediante el menú contextual o las preferencias de mostrará la interfaz de usuario de Safari conocidas:
 
-[![Herramientas de desarrollo de Safari](debugging-images/mac-dev-tools.png)](debugging-images/mac-dev-tools.png)
+[![Herramientas de desarrollo de Safari](debugging-images/mac-dev-tools.png)](debugging-images/mac-dev-tools.png#lightbox)
 
 Para obtener información sobre el uso de las herramientas de desarrollador de Safari, consulte el [documentación del inspector de WebKit][webkit-docs].
 
@@ -61,6 +61,6 @@ C:\Windows\System32\F12\F12Chooser.exe
 
 Selector de F12 de ejecución y se debería ver la instancia incrustada que alimenta la superficie de cliente de los libros en la lista. Elija la base de datos y la familiar F12 aparecerán las herramientas de depuración desde Internet Explorer, asociada al cliente:
 
-[![Herramientas de F12](debugging-images/windows-dev-tools.png)](debugging-images/windows-dev-tools.png)
+[![Herramientas de F12](debugging-images/windows-dev-tools.png)](debugging-images/windows-dev-tools.png#lightbox)
 
 [webkit-docs]: https://trac.webkit.org/wiki/WebInspector

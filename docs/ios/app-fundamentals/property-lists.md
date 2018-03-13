@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 0d7b4c5a539470a3544d0117251f40fd6bd37f2b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 778e70f6817b71e5910aa85425d46261dfe9c803
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-property-lists"></a>Trabajar con listas de propiedades
 
@@ -24,7 +24,7 @@ Visual Studio para Mac incorpora un editor de .plist gráfica que facilita la ed
 
 La lista de propiedades de información ( `Info.plist`) es un archivo de iOS requiere que se proporciona información acerca de la configuración de la aplicación en el sistema. Personalizada de Visual Studio para Mac del `Info.plist` características del editor tres paneles controlados por pestañas en la parte inferior izquierdas de la ventana del editor:
 
- [ ![](property-lists-images/tabs.png "Las pestañas del editor de Info.plist en la parte inferior izquierda de la ventana del editor")](property-lists-images/tabs.png)
+ [![](property-lists-images/tabs.png "Las pestañas del editor de Info.plist en la parte inferior izquierda de la ventana del editor")](property-lists-images/tabs.png#lightbox)
 
 Cada panel controles diferentes propiedades, tal como se describe a continuación:
 
@@ -57,11 +57,11 @@ Estos se describen con más detalle en las secciones siguientes.
 Esta sección contiene información importante que describe la aplicación.
 El **identificador** almacenados aquí debe coincidir con el identificador de paquete que se introduce en iTunes Connect (para aplicaciones de la tienda de aplicaciones) y también en la lista de identificadores de aplicación de Portal de aprovisionamiento de iOS y el desarrollo y la distribución de certificados.
 
- [ ![](property-lists-images/image24.png "Destino de la aplicación de iOS")](property-lists-images/image24.png)
+ [![](property-lists-images/image24.png "Destino de la aplicación de iOS")](property-lists-images/image24.png#lightbox)
 
 ### <a name="device-deployment"></a>Implementación de dispositivos
 
- [ ![](property-lists-images/deployment.png "Implementación de dispositivos")](property-lists-images/deployment.png)
+ [![](property-lists-images/deployment.png "Implementación de dispositivos")](property-lists-images/deployment.png#lightbox)
 
 El dispositivo **implementación** secciones de información se muestran de forma selectiva, dependiendo de la selección en el **dispositivos** lista desplegable en el **destino de la aplicación** sección anterior. El **interfaz principal** desplegable se establece en **MainStoryboard** en aplicaciones controladas por el guión gráfico. Si la interfaz de usuario está escrita completamente en código, a continuación, puede dejarse en blanco.
 
@@ -73,7 +73,7 @@ El dispositivo **implementación** secciones de información se muestran de form
 
 El **estilos de barra de estado** sección es una interfaz gráfica para la edición de una aplicación `UIStatusBarStyle`:
 
- [ ![](property-lists-images/status.png "Estilos de barra de estado")](property-lists-images/status.png)
+ [![](property-lists-images/status.png "Estilos de barra de estado")](property-lists-images/status.png#lightbox)
 
  <a name="Icons" />
 
@@ -89,11 +89,11 @@ Encontrará información sobre el uso de iconos, imágenes y material gráfico e
 
 El `Info.plist` contiene secciones especial para especificar asignaciones de integración y backgrounding modos. Elegir las opciones que desee para admitir agregará las propiedades necesarias para su aplicación.
 
- [ ![](property-lists-images/maps.png "Integración de mapas")](property-lists-images/maps.png)
+ [![](property-lists-images/maps.png "Integración de mapas")](property-lists-images/maps.png#lightbox)
 
 Para obtener más información sobre cómo trabajar con mapas, consulte el Xamarin [iOS mapas](~/ios/user-interface/controls/ios-maps/index.md) guía.
 
- [ ![](property-lists-images/bging.png "Modos en segundo plano")](property-lists-images/bging.png)
+ [![](property-lists-images/bging.png "Modos en segundo plano")](property-lists-images/bging.png#lightbox)
 
 Para obtener más información sobre los modos en segundo plano, consulte la Xamarin [Backgrounding en iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md) guía.
 
@@ -101,7 +101,7 @@ Para obtener más información sobre los modos en segundo plano, consulte la Xam
 
 El panel Avanzadas controla los tipos de documento y los esquemas de direcciones URL que admite la aplicación.
 
- [ ![](property-lists-images/image34.png "Panel avanzadas")](property-lists-images/image34.png)
+ [![](property-lists-images/image34.png "Panel avanzadas")](property-lists-images/image34.png#lightbox)
 
  <a name="Document_Types" />
 
@@ -116,7 +116,7 @@ Consulte la documentación en [registrar el archivo de tipos de la aplicación a
 
 En ocasiones, una aplicación debe admitir la apertura de un tipo de archivo personalizado. Por ejemplo, podemos queremos abrir archivos de imagen con una extensión personalizada *.xam*. Para especificar un tipo de archivo personalizados, vamos a crear un UTI - identificador de tipo Universal - personalizado con el `UIExportedTypeDeclarations` clave. La captura de pantalla siguiente muestra cómo crear una UTI personalizado para la extensión .xam:
 
- [ ![](property-lists-images/uti.png "Editor de UTIs")](property-lists-images/uti.png)
+ [![](property-lists-images/uti.png "Editor de UTIs")](property-lists-images/uti.png#lightbox)
 
 Tipo exportado simplemente como UTIs especificar UTIs personalizados específicos de la aplicación, el *importado tipo UTIs* ( `UIImportedTypeDeclarations` clave) especificar tipos personalizados compatibles pero no pertenece a la aplicación.
 
@@ -126,7 +126,7 @@ Para obtener más información sobre el uso de UTIs personalizados, consulte de 
 
 Un nombre de esquema de dirección URL (también denominado protocolo) es la primera parte de la dirección URL. Por ejemplo, `http://` y `https://` comunes esquemas de dirección URL. Tiene la opción de crear un esquema de dirección URL personalizado para la aplicación. Esquemas de direcciones URL personalizadas se utilizan para comunicar y enviar datos y hacia atrás con otras aplicaciones. Captura de pantalla siguiente muestra la creación de un nuevo esquema de dirección URL personalizado denominado `monkeys://`:
 
- [ ![](property-lists-images/url.png "Direcciones URL personalizadas")](property-lists-images/url.png)
+ [![](property-lists-images/url.png "Direcciones URL personalizadas")](property-lists-images/url.png#lightbox)
 
 
 
@@ -136,15 +136,15 @@ Para obtener más información sobre la implementación de esquemas de direccion
 
 El **origen** pestaña de la `Info.plist` archivo permite valores personalizados agregar o editar. Visual Studio para Mac proporciona una lista de las propiedades más comunes:
 
- [ ![](property-lists-images/image31.png "Agregar una nueva propiedad de una lista desplegable")](property-lists-images/image31.png)
+ [![](property-lists-images/image31.png "Agregar una nueva propiedad de una lista desplegable")](property-lists-images/image31.png#lightbox)
 
 Para propiedades conocidas de Visual Studio para Mac será una lista de valores válidos, tal y como se muestra en la captura de pantalla siguiente:
 
- [ ![](property-lists-images/image32.png "Seleccione un valor de una lista de valores conocidos")](property-lists-images/image32.png)
+ [![](property-lists-images/image32.png "Seleccione un valor de una lista de valores conocidos")](property-lists-images/image32.png#lightbox)
 
 Visual Studio para Mac también detecta el tipo de propiedad, como se muestra:
 
- [ ![](property-lists-images/image33.png "Los tipos de propiedades disponibles")](property-lists-images/image33.png)
+ [![](property-lists-images/image33.png "Los tipos de propiedades disponibles")](property-lists-images/image33.png#lightbox)
 
 Revise de Apple [recursos relacionados de la aplicación](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) vínculos para obtener más información sobre las propiedades opcionales.
 

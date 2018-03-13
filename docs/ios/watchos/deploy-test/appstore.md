@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: eed12c84b9952ef5c3dd27847071f05392bc16c4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dfbc976da109a3813b8d7abd85adafbc9bb94fa0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="deploying-to-the-app-store"></a>Implementación en la tienda de aplicaciones
 
@@ -62,6 +62,8 @@ Puede comprobar el perfil de aprovisionamiento en el **opciones de proyecto** se
 El **perfil de aprovisionamiento de** lista mostrará todos los perfiles coincidentes: debería ver los perfiles de coincidencias que ha creado en esta lista desplegable.
 
 ![](appstore-images/options-selectprofile-sml.png "El cuadro de diálogo de la agrupación de firma de iOS")
+
+<a name="iTunes_Connect"/>
 
 ## <a name="itunes-connect"></a>iTunes Connect
 
@@ -123,7 +125,7 @@ Xcode mostrará automáticamente los archivos creados en Visual Studio para Mac.
 
 5. Visite iTunes Connect nuevo, para ver el archivo binario cargado. Vaya a la página de configuración de la aplicación y elija **versión preliminar** en el menú superior para ver el **compilaciones** lista:
 
-  [ ![](appstore-images/itc-prerelease-sml.png "La página de configuración de aplicaciones en iTunes Connect")](appstore-images/itc-prerelease.png)
+  [![](appstore-images/itc-prerelease-sml.png "La página de configuración de aplicaciones en iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
 
 También puede enviar, a continuación, la aplicación para su aprobación en la **versiones** página. Hacer referencia a la [información general de distribución de aplicaciones de iOS](~/ios/deploy-test/app-distribution/index.md) para obtener más información.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/30/2017
-ms.openlocfilehash: bbf20155fe097f0229aa28c1f0d046cb3ef31a63
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 83e58625438a0b50d89ca8dac3e940c8742e5aec
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-android-assets"></a>Mediante activos de Android
 
@@ -20,7 +20,6 @@ _Activos_ proporcionan una manera de incluir archivos de forma arbitraria como t
 Se mostrarán activos que se agregan al proyecto como un sistema de archivos que puede leer de su aplicación mediante [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/).
 En esta demostración sencilla, vamos a agregar un recurso de archivo de texto para el proyecto, leer mediante `AssetManager`y mostrarlo en un control TextView.
 
-<a name="Add_Asset_to_Project" />
 
 ## <a name="add-asset-to-project"></a>Agregar activo al proyecto
 
@@ -36,13 +35,12 @@ Visual Studio debe tener definidas las **acción de compilación** para este arc
 
 Visual Studio para Mac debe tener definidas las **acción de compilación** para este archivo **AndroidAsset**:
 
-[![Si se establece la acción de compilación en AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png)
+[![Si se establece la acción de compilación en AndroidAsset](android-assets-images/asset-properties-xs-sml.png)](android-assets-images/asset-properties-xs.png#lightbox)
 
 -----
 
 Al seleccionar el valor correcto **BuildAction** garantiza que el archivo se empaquetarán en el APK en tiempo de compilación.
 
-<a name="Reading_Assets" />
 
 ## <a name="reading-assets"></a>Leer activos
 
@@ -71,7 +69,6 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-<a name="Running_the_Application" />
 
 ## <a name="running-the-application"></a>Ejecutar la aplicación
 

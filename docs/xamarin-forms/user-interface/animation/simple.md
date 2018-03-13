@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/27/2017
-ms.openlocfilehash: d1d91804c11d2e944bb618fadb3d659b512c5905
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb7ca216978e4c890349a44b07d5a383e9ca2384
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="simple-animations"></a>Animaciones simples
 
@@ -130,7 +130,7 @@ Las capturas de pantalla siguientes muestran la traducción en curso en cada pla
 ![](simple-images/translateto.png "Animación de traducción")
 
 > [!NOTE]
-> **Tenga en cuenta**: si el elemento se dispuestos inicialmente fuera de la pantalla y, a continuación, se traduce en la pantalla, después de la traducción el elemento de entrada del diseño queda fuera de la pantalla y el usuario no puede interactuar con él. Por lo tanto, se recomienda que una vista debe disponerse en su posición final y, a continuación, las necesarias traducciones realizadas.
+> Si el elemento se dispuestos inicialmente fuera de la pantalla y, a continuación, se traduce en la pantalla, después de la traducción de diseño de entrada del elemento permanece fuera de la pantalla y el usuario no puede interactuar con él. Por lo tanto, se recomienda que una vista debe disponerse en su posición final y, a continuación, las necesarias traducciones realizadas.
 
 ### <a name="fading"></a>Corrección selectiva
 
@@ -228,6 +228,6 @@ Este artículo se han demostrado crear y cancelar las animaciones mediante el [ 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Introducción al soporte técnico de Async](~/cross-platform/platform/async.md)
+- [Información general sobre la compatibilidad con Async](~/cross-platform/platform/async.md)
 - [Animación básica (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/animation/basic/)
 - [ViewExtensions](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/)

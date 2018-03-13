@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 14345503-1742-41F5-B2EF-EE31AB7C3516
 ms.technology: xamarin-ios
+ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: 8c40472f794be9a21045da4f4477d4104c3ddbdd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7246379fbe5918671de68cd4af10d1ce497e7c4e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-tvos"></a>Introducción a tvOS
 
@@ -23,6 +24,10 @@ Apple ha lanzado la generación 5 del hardware de Apple TV, Apple TV 4K, que se 
 La plataforma de TV de Apple está abierta a los desarrolladores, lo que les permite crear aplicaciones enriquecidas y atractiva y liberarlos a través de la tienda de aplicaciones integradas de TV de Apple.
 
 Para obtener más información sobre tvOS, consulte el [Introducción](~/ios/tvos/get-started/index.md) documento.
+
+> [!VIDEO https://youtube.com/embed/Q04oIYymfGM]
+
+**tvOS con Xamarin, por [Universidad de Xamarin](https://university.xamarin.com/)**
 
 ## <a name="documentation"></a>Documentación
 

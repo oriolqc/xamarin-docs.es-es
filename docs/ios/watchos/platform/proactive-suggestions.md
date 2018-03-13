@@ -3,16 +3,16 @@ title: "Sugerencias automático"
 description: "Este artículo muestra cómo usar las sugerencias automático en una aplicación watchOS 3 para la interacción de unidad al permitir que el sistema de forma proactiva presentar automáticamente información útil al usuario."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ca2476eef120c7d86b939934ec4b286e871d6a78
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f9711cc39662a7e77d926551a0d2b49363d8ec4d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="proactive-suggestions"></a>Sugerencias automático
 
@@ -61,7 +61,7 @@ Todas estas características tienen algo en común, todas utilizan `NSUserActivi
 
 Como se indicó anteriormente, `NSUserActivity` ayuda a que el sistema entender la información que el usuario está trabajando actualmente con pantalla. `NSUserActivity` un estado atenuado almacena en caché mecanismo para capturar la actividad del usuario mientras navegan por la aplicación. Por ejemplo, si la aplicación del restaurante:
 
-[ ![](proactive-suggestions-images/activity02.png "La aplicación del restaurante")](proactive-suggestions-images/activity02.png)
+[![](proactive-suggestions-images/activity02.png "La aplicación del restaurante")](proactive-suggestions-images/activity02.png#lightbox)
 
 Con las siguientes interacciones:
 
@@ -71,7 +71,7 @@ Con las siguientes interacciones:
 
 Eche un vistazo más de cerca en la última pantalla:
 
-[ ![](proactive-suggestions-images/activity03.png "La carga de NSUserActivity")](proactive-suggestions-images/activity03.png)
+[![](proactive-suggestions-images/activity03.png "La carga de NSUserActivity")](proactive-suggestions-images/activity03.png#lightbox)
 
 Aquí es la creación de la aplicación un `NSUserActivity` y se ha rellenado con información para volver a crear el estado más tarde. La aplicación también incluye algunos metadatos como el nombre y la dirección de la ubicación. Con esta actividad creada, la aplicación permite iOS saber que representa el estado del usuario actual.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: ac4644f65486d70fcbb7da1a03574fb238348313
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f657fc3dd87d5c39d442a863e4acc00ac320b00d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="target-framework"></a>Plataforma de destino
 
@@ -40,13 +40,13 @@ Hay tres opciones de .NET Framework de destino disponibles para Xamarin.Mac, cad
 
 Para cambiar el tipo de .NET Framework de destino para un proyecto Xamarin.Mac, realice lo siguiente:
 
-1. Abra el proyecto Xamarin.Mac en Visual Studio para Mac.
-2. En el **el Explorador de soluciones**, haga doble clic en el archivo de proyecto para abrir el **Project Options** cuadro de diálogo.
+1. Abra el proyecto de Xamarin.Mac en Visual Studio para Mac.
+2. En el **Explorador de soluciones**, haga doble clic en el archivo de proyecto para abrir el cuadro de diálogo **Opciones de proyecto**.
 3. Desde el **General** ficha, seleccione el tipo de **.NET Framework de destino** que se adapte a las necesidades de su aplicación:
 
-  [![Mediante la ventana Opciones de proyecto para elegir una plataforma de destino](target-framework-images/select-target-full.png "mediante la ventana Opciones de proyecto para elegir una plataforma de destino")](target-framework-images/select-target-full-large.png)
+  [![Mediante la ventana Opciones de proyecto para elegir una plataforma de destino](target-framework-images/select-target-full.png "mediante la ventana Opciones de proyecto para elegir una plataforma de destino")](target-framework-images/select-target-full-large.png#lightbox)
 
-4. Haga clic en el **Aceptar** botón para guardar los cambios.
+4. Haga clic en el botón **Aceptar** para guardar los cambios.
 
 Debería **limpiar** y, a continuación, **volver a generar** el proyecto Xamarin.Mac después de cambiar el tipo de .NET Framework de destino.
 
@@ -58,7 +58,7 @@ En este artículo se ha descrito brevemente los diferentes tipos de .NET Framewo
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [iOS y Mac uso compartido de código](~/cross-platform/macios/index.md)
-- [API unificada](~/cross-platform/macios/unified/index.md)
+- [Unified API](~/cross-platform/macios/unified/index.md)
 - [Bibliotecas de clases portables](~/cross-platform/app-fundamentals/pcl.md)
 - [Ensamblados](~/cross-platform/internals/available-assemblies.md)
 - [Actualizar aplicaciones existentes de Mac](~/cross-platform/macios/unified/updating-mac-apps.md)

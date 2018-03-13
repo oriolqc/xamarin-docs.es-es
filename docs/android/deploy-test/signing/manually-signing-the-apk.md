@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 1625fe15d76ffe2bd3712d9126d9bd217bf60085
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f47fded9c09849f6d5f1329a4efd652df80816d5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="manually-signing-the-apk"></a>Firma manual del APK
 
-<a name="signing_legacy" />
 
 Tras compilar la aplicación para su lanzamiento, es necesario firmar el APK antes de distribuirla. De este modo podrá ejecutarse en un dispositivo Android. Este proceso normalmente se administra con el IDE, aunque hay casos en los que es necesario firmar el APK manualmente en la línea de comandos. El proceso de firma de APK incluye los siguientes pasos:
 
@@ -29,7 +28,6 @@ Tras compilar la aplicación para su lanzamiento, es necesario firmar el APK ant
 El orden de los pasos es importante y depende de qué herramienta se utiliza para firmar el APK. Si se usa **apksigner**, en primer lugar es importante usar **zipalign** con la aplicación y, después, firmarla con **apksigner**.  En caso de que sea necesario usar **jarsigner** para firmar el APK, es importante firmar primero el APK y, después, ejecutar **zipalign**. 
 
 
-<a name="Prerequisites" />
 
 ## <a name="prerequisites"></a>Requisitos previos
 
@@ -38,7 +36,6 @@ Esta guía se centra en el uso de **apksigner** de las herramientas de compilaci
 Las aplicaciones compiladas con una versión anterior de las herramientas de compilación del SDK de Android deben usar **jarsigner**, como se describe en la sección [Firma del APK con jarsigner](#Sign_the_APK_with_jarsigner) de a continuación.
 
 
-<a name="Creating_a_Private_Keystore" />
 
 ## <a name="create-a-private-keystore"></a>Crear un almacén de claves privadas
 
@@ -53,7 +50,6 @@ Es importante proteger este almacén de claves. Si se pierde, no será posible p
 La única manera de solucionar los problemas causados por la pérdida de un almacén de claves sería crear otro almacén de claves, volver a firmar el APK con la clave nueva y, después, enviar una aplicación nueva. Después, la aplicación anterior tendría que quitarse de Google Play. Del mismo modo, si este nuevo almacén de claves corre peligro o se distribuye públicamente, es posible que se distribuyan versiones no oficiales o malintencionadas de una aplicación.
 
 
-<a name="Create_a_New_Keystore" />
 
 ### <a name="create-a-new-keystore"></a>Crear un almacén de claves nuevo
 
@@ -99,7 +95,6 @@ Para enumerar las claves que están almacenadas en un almacén de claves, use **
 $ keytool -list -keystore xample.keystore
 ```
 
-<a name="Zipalign_the_APK" />
 
 ## <a name="zipalign-the-apk"></a>Aplicar zipalign al APK
 
@@ -111,7 +106,6 @@ El siguiente comando usará el APK firmado y generará un APK firmado con zipali
 $ zipalign -f -v 4 mono.samples.helloworld-unsigned.apk helloworld.apk
 ```
 
-<a name="Manually_Signing_the_APK" />
 
 ## <a name="sign-the-apk"></a>Firmar el APK
 

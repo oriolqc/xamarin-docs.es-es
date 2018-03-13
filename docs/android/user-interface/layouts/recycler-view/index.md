@@ -3,16 +3,16 @@ title: RecyclerView
 description: "RecyclerView es un grupo de vista para mostrar colecciones; está diseñado para ser un reemplazo más flexible para los grupos de la vista anteriores como ListView, GridView.  Esta guía explica cómo usar y personalizar RecyclerView en aplicaciones de Xamarin.Android."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
+ms.assetid: 91EF0BD2-3306-47E1-9B39-627A1787762F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/03/2018
-ms.openlocfilehash: ec8b3a4655c8e8d9e492c9f7a1807dd64ecc6ae7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 028520742a84e717e28147f2fa1fafacfef34028
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="recyclerview"></a>RecyclerView
 
@@ -23,7 +23,7 @@ _RecyclerView es un grupo de vista para mostrar colecciones; está diseñado par
 Muchas aplicaciones deben mostrar recopilaciones del mismo tipo (por ejemplo, mensajes, contactos, imágenes o canciones); a menudo, esta colección es demasiado grande para caber en la pantalla, por lo que la colección se presenta en una ventana pequeña que se puede desplazar sin problemas a través de todos los elementos de la colección.
 `RecyclerView` es un widget de Android que muestra una colección de elementos de una lista o una cuadrícula, lo que permite al usuario desplazarse a través de la colección. La siguiente es una captura de pantalla de una aplicación de ejemplo que usa `RecyclerView` para mostrar el contenido de la Bandeja de entrada de correo electrónico en una lista de desplazamiento vertical:
 
-[ ![Aplicación de ejemplo mediante RecyclerView a los mensajes de la Bandeja de entrada de lista](images/01-recyclerview-example-sml.png)](images/01-recyclerview-example.png)
+[![Aplicación de ejemplo mediante RecyclerView a los mensajes de la Bandeja de entrada de lista](images/01-recyclerview-example-sml.png)](images/01-recyclerview-example.png#lightbox)
 
 `RecyclerView` ofrece dos características atractivas:
 

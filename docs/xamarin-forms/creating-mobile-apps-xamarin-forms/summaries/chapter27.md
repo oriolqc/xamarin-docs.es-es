@@ -3,14 +3,15 @@ title: "Resumen de capítulo 27. Representadores personalizados"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0c1dc9ba5cf382551a1142110c68d16421db07e4
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 6d7c2b17e9596b7d2dd26aaf77cf13f7f8086cd5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>Resumen de capítulo 27. Representadores personalizados
 
@@ -66,7 +67,7 @@ El [ `HelloViewRenderer` ](https://github.com/xamarin/xamarin-forms-book-samples
 
 Todos los la `ViewRenderer` derivados contienen un `ExportRenderer` atributo en el nivel de ensamblado que asocia el `HelloView` clase con ese `HelloViewRenderer` clase. Se trata cómo Xamarin.Forms ubica a representadores en los proyectos de plataforma individuales:
 
-[![Captura de pantalla triple de Hello vista](images/ch27fg02-small.png "representadores personalizados")](images/ch27fg02-large.png "representadores personalizados")
+[![Captura de pantalla triple de Hello vista](images/ch27fg02-small.png "representadores personalizados")](images/ch27fg02-large.png#lightbox "representadores personalizados")
 
 ## <a name="renderers-and-properties"></a>Representadores y propiedades
 
@@ -89,7 +90,7 @@ El `OnElementPropertyChanged` invalidación, por tanto, puede transferir la `Col
 
 El [ **EllipseDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/EllipseDemo) clase muestra algunos de estos `EllipseView` objetos:
 
-[![Captura de pantalla triple de demostración de elipse](images/ch27fg03-small.png "representadores personalizados de EllipseView")](images/ch27fg03-large.png "EllipseView personalizado representadores")
+[![Captura de pantalla triple de demostración de elipse](images/ch27fg03-small.png "representadores personalizados de EllipseView")](images/ch27fg03-large.png#lightbox "EllipseView personalizado representadores")
 
 El [ **BouncingBall** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/BouncingBall) devoluciones de mensajes un `EllipseView` desactivado los lados de la pantalla.
 

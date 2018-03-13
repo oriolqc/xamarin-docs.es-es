@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 84450527a1301cf95c93a5dc2796a2cf76f4ae2b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3a66ec9f935159e4854a12584a6c9f70ab805abb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-an-effect"></a>Crear un efecto
 
@@ -29,7 +29,7 @@ El proceso para crear un efecto en cada proyecto específico de la plataforma es
 El efecto, a continuación, puede utilizarse mediante una asociación para el control adecuado.
 
 > [!NOTE]
-> **Tenga en cuenta**: es opcional proporcionar un efecto en cada proyecto de la plataforma. Intenta utilizar un efecto cuando uno no está registrado, se devolverá un valor distinto de null que no hace nada.
+> Es opcional proporcionar un efecto en cada proyecto de la plataforma. Intenta utilizar un efecto cuando uno no está registrado, se devolverá un valor distinto de null que no hace nada.
 
 La aplicación de ejemplo muestra un `FocusEffect` que cambia el color de fondo de un control cuando recibe el foco. El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
@@ -195,7 +195,7 @@ El proceso para consumir un efecto de una biblioteca de clases portables (PCL) d
 1. Adjuntar el efecto en el control al agregarlo al control [ `Effects` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) colección.
 
 > [!NOTE]
-> **Tenga en cuenta**: una instancia de efecto sólo puede asociarse a un control único. Por lo tanto, se debe resolver un efecto dos veces para usarlo en dos controles.
+> Una instancia de efecto sólo puede asociarse a un control único. Por lo tanto, se debe resolver un efecto dos veces para usarlo en dos controles.
 
 ## <a name="consuming-the-effect-in-xaml"></a>Consumir el efecto en XAML
 

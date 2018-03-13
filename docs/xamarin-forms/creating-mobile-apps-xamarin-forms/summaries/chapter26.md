@@ -3,14 +3,15 @@ title: "Resumen de capítulo 26. Diseños personalizados"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: dbddaaf2f4a5ad9d7161013f2ae11466b953e20c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9447f9fb47a3de0f278a89d45d657158be9b70b9
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>Resumen de capítulo 26. Diseños personalizados
 
@@ -98,9 +99,9 @@ Ese método ahora está en desuso y se reemplaza por:
 Cada clase que deriva de `Layout` o `Layout<T>` debe invalidar `OnSizeRequest` o `OnMeasure`. Esto es que una clase de diseño determina su propio tamaño, que normalmente se basa en el tamaño de sus elementos secundarios, que obtiene mediante una llamada a `GetSizeRequest` o `Measure` en los elementos secundarios. Antes y después de llamar a `OnSizeRequest` o `OnMeasure`, `GetSizeRequest` o `Measure` realiza ajustes en función de las siguientes propiedades:
 
 - [`WidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/)de tipo `double`, afecta a la `Request` propiedad de `SizeRequest`
-- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/)de tipo `double`, afecta a la `Request` propiedad de `SizeRequest`
-- [`MinimumWidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumWidthRequest/)de tipo `double`, afecta a la `Minimum` propiedad de `SizeRequest`
-- [`MinimumHeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumHeightRequest/)de tipo `double`, afecta a la `Minimum` propiedad de `SizeRequest`
+- [`HeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) de tipo `double`, afecta a la `Request` propiedad de `SizeRequest`
+- [`MinimumWidthRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumWidthRequest/) de tipo `double`, afecta a la `Minimum` propiedad de `SizeRequest`
+- [`MinimumHeightRequest`](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.MinimumHeightRequest/) de tipo `double`, afecta a la `Minimum` propiedad de `SizeRequest`
 
 ### <a name="infinite-constraints"></a>Restricciones de infinitas
 
@@ -159,7 +160,7 @@ El [ `UniformGridLayout` ](https://github.com/xamarin/xamarin-forms-book-samples
 
 El [ **PhotoGrid** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/PhotoGrid) muestra `UniformGridLayout`:
 
-[![Captura de pantalla triple de cuadrícula de fotos](images/ch26fg08-small.png "diseño de cuadrícula uniforme")](images/ch26fg08-large.png "uniforme diseño de cuadrícula")
+[![Captura de pantalla triple de cuadrícula de fotos](images/ch26fg08-small.png "diseño de cuadrícula uniforme")](images/ch26fg08-large.png#lightbox "uniforme diseño de cuadrícula")
 
 ### <a name="overlapping-children"></a>Elementos secundarios superpuestos
 
@@ -174,7 +175,7 @@ Para los elementos secundarios superpuestos, los elementos secundarios al final 
 
 El [ `OverlapLayout` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/OverlapLayout.cs) clase en el [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) biblioteca define una propiedad adjunta para indicar el orden de procesamiento y, por tanto, permitir que uno de sus elementos secundarios que se mostrará encima de los demás. El [ **StudentCardFile** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/StudentCardFile) ejemplo se muestra cómo hacerlo:
 
-[![Triple captura de pantalla de cuadrícula de archivo de tarjeta de estudiante](images/ch26fg10-small.png "elementos secundarios del diseño que se superponen")](images/ch26fg10-large.png "elementos secundarios del diseño que se superponen")
+[![Triple captura de pantalla de cuadrícula de archivo de tarjeta de estudiante](images/ch26fg10-small.png "elementos secundarios del diseño que se superponen")](images/ch26fg10-large.png#lightbox "elementos secundarios del diseño que se superponen")
 
 ### <a name="more-attached-bindable-properties"></a>Varias propiedades enlazables de conectar
 

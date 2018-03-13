@@ -3,16 +3,16 @@ title: "Agregar una aplicación de la plataforma (UWP) universales de Windows"
 description: "Este artículo explica cómo agregar un proyecto de aplicación UWP para una solución Xamarin.Forms que creó en Visual Studio para Mac."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: ADF99B78-F1BC-48DF-9128-01B93C4411C1
+ms.assetid: 34AAA045-64B8-4FDE-BB49-3FF0B4FFA17C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/16/2016
-ms.openlocfilehash: a3746165db83b5b8adba9adb862f9ea09f7069b9
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 36865dac6bd2ad13b9d3e286ab18a035c1edb3d8
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="adding-a-universal-windows-platform-uwp-app"></a>Agregar una aplicación de la plataforma (UWP) universales de Windows
 
@@ -38,7 +38,7 @@ Siga estas instrucciones para agregar una aplicación para UWP que se ejecutará
 
  4 . Asegúrese de que el nuevo proyecto UWP se compilará el **generar > Configuration Manager** ventana (Esto probablemente no habrá realizado de forma predeterminada). Marca el **generar** y **implementar** cuadros para el proyecto Universal:
 
-  [ ![](universal-images/configuration-sml.png "Ventana del Administrador de configuración")](universal-images/configuration.png "ventana del Administrador de configuración")
+  [![](universal-images/configuration-sml.png "Ventana del Administrador de configuración")](universal-images/configuration.png#lightbox "ventana del Administrador de configuración")
 
  5 . Haga doble clic en el proyecto y seleccione **Agregar > referencia** y crear una referencia al proyecto de aplicación Xamarin.Forms (PCL, estándar de .NET o proyecto compartido).
 

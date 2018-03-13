@@ -8,25 +8,24 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 99a35705c408d16f5b4b0e71e53dd453ae377341
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2dd397e824ce7735be4421c3f258852de3f77ecb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="walkthrough---creating-a-tabbed-ui-with-tabhost"></a>Tutorial: crear una interfaz de usuario con pestañas con TabHost
 
 _En este artículo le guiará por la creación de una interfaz de usuario con pestañas en Xamarin.Android mediante la API de TabHost._
 
 > [!NOTE]
-> **Nota:** `TabHost` API antiguo que está en desuso por Google. Los desarrolladores pueden crear aplicaciones con pestañas con el [ActionBar](~/android/user-interface/controls/action-bar.md). La `ActionBar` está disponible en todas las versiones de Android. Que se introdujo en Android 3.0 (API nivel 11) y volver procede para Android 2.2 (API nivel 8) y Android 2.3 (API nivel 10) en el [V7 AppCompat biblioteca](http://developer.android.com/tools/support-library/features.html#v7-appcompat), que está disponible para Xamarin.Android a través de la [Xamarin Biblioteca de compatibilidad de Android - V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) paquete.
+> `TabHost` es una API antigua que ha quedado en desuso por Google. Los desarrolladores pueden crear aplicaciones con pestañas con el [ActionBar](~/android/user-interface/controls/action-bar.md). La `ActionBar` está disponible en todas las versiones de Android. Que se introdujo en Android 3.0 (API nivel 11) y volver procede para Android 2.2 (API nivel 8) y Android 2.3 (API nivel 10) en el [V7 AppCompat biblioteca](http://developer.android.com/tools/support-library/features.html#v7-appcompat), que está disponible para Xamarin.Android a través de la [Xamarin Biblioteca de compatibilidad de Android - V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) paquete.
 
 Este artículo le guiará por la creación de una interfaz de usuario con pestañas en Xamarin.Android utilizando el `TabHost` API. Se trata de una API más antiguos que está disponible en todas las versiones de Android. En este ejemplo creará una aplicación con tres pestañas, con la lógica de cada pestaña está encapsulado en una actividad.
 Captura de pantalla siguiente es un ejemplo de la aplicación que se va a crear:
 
 ![Captura de pantalla de ejemplo de la aplicación con varias pestañas](creating-a-tabbed-ui-images/image02.png)
 
-<a name="Creating_the_Application" />
 
 ## <a name="creating-the-application"></a>Crear la aplicación
 
@@ -61,7 +60,7 @@ Primero vamos a actualizar el archivo de diseño **Resources/Layout/Main.axml** 
 
 Captura de pantalla siguiente muestra el diseño en el Diseñador de Xamarin:
 
-[![Captura de pantalla del diseño TabHost en el Diseñador de Xamarin](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png)
+[![Captura de pantalla del diseño TabHost en el Diseñador de Xamarin](creating-a-tabbed-ui-images/image04-sml.png)](creating-a-tabbed-ui-images/image04.png#lightbox)
 
 El TabHost debe tener dos vistas secundarias dentro de él: un `TabWidget` y `FrameLayout`. A la posición del `TabWidget` y `FrameLayout` verticalmente dentro el `TabHost`, un `LinearLayout` se utiliza. El FrameLayout es dónde va el contenido de cada pestaña, que está vacío porque la `TabHost` incrustarán automáticamente cada actividad en tiempo de ejecución. Existen varias reglas que deben tenerse en cuenta cuando se trata de crear un diseño de interfaces de usuario con pestañas:
 
@@ -203,7 +202,6 @@ Ejecute la aplicación. La aplicación debe ser similar a la captura de pantalla
 Ya está. Hemos creado una aplicación con pestañas que proporciona al usuario una manera fácil de navegar a distintas partes de una aplicación.
 
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 

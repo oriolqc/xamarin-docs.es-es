@@ -4,14 +4,15 @@ description: "Crear gráficos de SkiaSharp que respondan a entrada táctil y ele
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: c4db5c77113e80e5c73b800f7214ea70c6e325a8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c938e5ef836904c42f3349c66d48a9b13cb335ca
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="integrating-with-xamarinforms"></a>Integración con Xamarin.Forms
 
@@ -234,7 +235,7 @@ En el modelo HSV, colores puros como resultado una vez la saturación y el valor
 
 Pero es la mejor manera de tener una idea de los dos modelos experimentar con ellos:
 
-[![](integration-images/colorexplore-large.png "Captura de pantalla triple de la página de Color explorar")](integration-images/colorexplore-small.png "Triple captura de pantalla de la página explorar de Color")
+[![](integration-images/colorexplore-large.png "Captura de pantalla triple de la página de Color explorar")](integration-images/colorexplore-small.png#lightbox "Triple captura de pantalla de la página explorar de Color")
 
 
 ## <a name="related-links"></a>Vínculos relacionados

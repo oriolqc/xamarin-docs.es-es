@@ -3,14 +3,15 @@ title: "Resumen de capítulo 21. Transformaciones"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 378ce3fb39cfb5c42d5ec7611415f5420146a9cc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: afb8e2fff58583dc8648c55839649c96cb68b6ba
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Resumen de capítulo 21. Transformaciones
 
@@ -49,7 +50,7 @@ El [ **TranslationDemo** ](https://github.com/xamarin/xamarin-forms-book-samples
 
 Un uso habitual de las propiedades de la traducción es ligeramente desplazado la representación de texto. Esto se muestra en el [ **TextOffsets** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/TextOffsets) ejemplo:
 
-[![Captura de pantalla triple de desplazamientos de texto](images/ch21fg03-small.png "texto desplazamientos")](images/ch21fg03-large.png "desplazamientos de texto")
+[![Captura de pantalla triple de desplazamientos de texto](images/ch21fg03-small.png "texto desplazamientos")](images/ch21fg03-large.png#lightbox "desplazamientos de texto")
 
 Otro efecto es representar varias copias de una `Label` similares a un bloque 3D, tal como se muestra en el [ **BlockText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BlockText) ejemplo.
 
@@ -101,7 +102,7 @@ El [ **MinimalBoxViewClock** ](https://github.com/xamarin/xamarin-forms-book-sam
 
 El [ **BoxViewClock** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21/BoxViewClock) utiliza `BoxView` para gráficos más amplias, incluidas graduación marca alrededor de la cara del reloj y entrega decir girar una distancia poco desde sus extremos:
 
-[![Captura de pantalla triple de reloj BoxView](images/ch21fg17-small.png "reloj analógico")](images/ch21fg17-large.png "reloj analógico")
+[![Captura de pantalla triple de reloj BoxView](images/ch21fg17-small.png "reloj analógico")](images/ch21fg17-large.png#lightbox "reloj analógico")
 
 Además un [ `SecondBackEaseConverter` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/SecondBackEaseConverter.cs) clase **Xamarin.FormsBook.Toolkit** hace que la manecilla de los segundos en aparecer extraer un poco antes de Saltar adelante y, a continuación, vuelva a mover a su posición correcta.
 

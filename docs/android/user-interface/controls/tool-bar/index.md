@@ -7,19 +7,17 @@ ms.assetid: 22EE5FBD-3240-4308-AF76-EF45D72936DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/22/2018
-ms.openlocfilehash: cf2211a572d45b7c29018d00f36cb8408484483f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 30b1cb280c2817f55d73e10ff8b4d7942011bf2c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="toolbar"></a>Barra de herramientas
 
 _La barra de herramientas es un componente de la barra de acción que proporciona más flexibilidad que la barra de acción predeterminada: puede colocarse en cualquier lugar en la aplicación, se puede cambiar su tamaño y puede usar una combinación de colores que es diferente del tema de la aplicación. Además, cada pantalla de la aplicación puede tener varias barras de herramientas._
 
-
-<a name="overview" />
  
 ## <a name="overview"></a>Información general
 
@@ -27,7 +25,7 @@ Un elemento clave del diseño de cualquier actividad Android es un *barra de acc
 
 El `Toolbar` widget (introducido en el círculo 5.0 Android) puede considerarse como una generalización de la interfaz de la barra de acción &ndash; está diseñado para reemplazar la barra de acciones. La `Toolbar` puede usarse en cualquier lugar en un diseño de la aplicación y es mucho más personalizable que una barra de acción. Captura de pantalla siguiente muestra la personalizada `Toolbar` en el ejemplo se crean en esta guía: 
 
-[![Captura de pantalla de ejemplo de una barra de herramientas con Editar, guardar y elementos de menú de desbordamiento](images/01-toolbar-sml.png)](images/01-toolbar.png)
+[![Captura de pantalla de ejemplo de una barra de herramientas con Editar, guardar y elementos de menú de desbordamiento](images/01-toolbar-sml.png)](images/01-toolbar.png#lightbox)
 
 Hay algunas diferencias importantes entre el `Toolbar` y la barra de acciones: 
 
@@ -72,7 +70,6 @@ Esta guía describe la más usada `Toolbar` escenarios:
 -   Mediante el **biblioteca de compatibilidad de Android v7 AppCompat** biblioteca (denominados *AppCompat* en el resto de esta guía) para implementar `Toolbar` en versiones anteriores de Android. 
 
  
-<a name="requirements" />
  
 ## <a name="requirements"></a>Requisitos
 

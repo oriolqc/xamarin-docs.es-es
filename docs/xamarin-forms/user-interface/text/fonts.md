@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 22a0b0f5df5a44f2409a59b26eb841b97c920d8b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 771e1607bc4e6be8f0991e159b5d34f6d4ea9c02
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="fonts"></a>Fuentes
 
@@ -181,7 +181,7 @@ Al especificar un nombre de fuente personalizados, siempre es una buena idea usa
 
 El uso de una fuente que no sea de los tipos de letra integradas requiere algún código específico de la plataforma. Esta captura de pantalla muestra la fuente personalizada **bogavante** de [fuentes de código abierto de Google](https://www.google.com/fonts) representadas en iOS, Android y Windows Phone usando Xamarin.Forms.
 
- [ ![Fuente personalizada de iOS y Android](fonts-images/custom-sml.png "Custom fuentes Example")](fonts-images/custom.png "Custom fuentes Example")
+ [![Fuente personalizada de iOS y Android](fonts-images/custom-sml.png "Custom fuentes Example")](fonts-images/custom.png#lightbox "Custom fuentes Example")
 
 A continuación, se describen los pasos necesarios para cada plataforma. Cuando se incluyen archivos de fuente personalizada con una aplicación, asegúrese de comprobar que permite la licencia de la fuente de distribución.
 
@@ -229,7 +229,7 @@ new Label
 > [!NOTE]
 > Tenga en cuenta que el nombre de archivo de fuente y el nombre de la fuente pueden ser diferentes. Para conocer el nombre de fuente en Windows, haga clic en el archivo .ttf y seleccione **vista previa**. A continuación, se puede determinar el nombre de la fuente de la ventana de vista previa.
 
-El código común de la aplicación está ahora completo. El código del marcador de teléfono específico de la plataforma se implementará como [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
+El código común de la aplicación ya está completo. El código del marcador de teléfono específico de la plataforma se implementará como [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
 ### <a name="xaml"></a>XAML
 

@@ -7,17 +7,17 @@ ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.openlocfilehash: fb74e0efd62c6347534e6f301953325bd4d378d2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: 240fc917a154085a459c6612f68c8b71e3ef01bb
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para desarrolladores de Java
 
 _Si es usted es desarrollador de Java, ya tiene la posibilidad de empezar a aprovechar sus habilidades y el código existente de Xamarin en la plataforma Xamarin, al tiempo que disfruta de los beneficios de reutilizar código de C#. Observará que la sintaxis de C# es muy similar a la sintaxis de Java y que ambos lenguajes ofrecen características muy similares. Además, encontrará características exclusivas de C# que facilitarán el trabajo a los desarrolladores._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -91,17 +91,15 @@ Además, Xamarin le permite [aprovechar los recursos de Java existentes](#intero
 En las secciones siguientes se describen las diferencias básicas de "introducción" entre C# y Java; en una sección posterior se describen las diferencias orientadas a objetos entre estos lenguajes.
 
 
-<a name="assemblies" />
 
-### <a name="libraries-vs-assemblies"></a>Diferencia entre bibliotecas y ensamblados
+### <a name="libraries-vs-assemblies"></a>Diferencia entre bibliotecas y Ensamblados
 
 Java suele empaquetar clases relacionadas en archivos **.jar**. Sin embargo, en C# and .NET, los bits reutilizables de código precompilado se empaquetan en *ensamblados*, que suelen empaquetarse como archivos *.dll*. Un ensamblado es una unidad de implementación de código de C#/.NET, y cada ensamblado suele asociarse con un proyecto de C#. Los ensamblados contienen código intermedio que se compilan Just-In-Time en tiempo de ejecución.
 
 Para más información sobre los ensamblados, vea el tema [Ensamblados y caché global de ensamblados](https://msdn.microsoft.com/en-us/library/ms173099.aspx) de MSDN.
 
-<a name="namespaces" />
 
-### <a name="packages-vs-namespaces"></a>Diferencias entre paquetes y espacios de nombres
+### <a name="packages-vs-namespaces"></a>Diferencias entre paquetes y Espacios de nombres
 
 C# usa la palabra clave `namespace` para agrupar tipos relacionados; es similar a la palabra clave `package` de Java. Normalmente, una aplicación de Xamarin.Android residirá en un espacio de nombres creado para esa aplicación. Por ejemplo, el siguiente código de C# declara el contenedor del espacio de nombres `WeatherApp` para un aplicación de información meteorológica:
 
@@ -111,7 +109,6 @@ namespace WeatherApp
     ...
 ```
 
-<a name="imports" />
 
 ### <a name="importing-types"></a>Importación de tipos
 
@@ -146,7 +143,6 @@ using System.Threading.Tasks;
 Estas instrucciones importan la funcionalidad desde los espacios de nombres `System`, `Android.App`, `Android.Content`, etc.
 
 
-<a name="generics" />
 
 ### <a name="generics"></a>Genéricos
 
@@ -197,7 +193,6 @@ Sin embargo, también hay algunas diferencias importantes:
 -   C# utiliza la sintaxis de destructores de estilo de C++ para expresar los finalizadores. La sintaxis es diferente del método `finalize` de Java, pero la semántica es prácticamente la misma. (Tenga en cuenta que, en C#, los destructores llaman automáticamente al destructor de clase base &ndash;, a diferencia de Java, donde se usa una llamada explícita a `super.finalize`).
 
 
-<a name="inheritance" />
 
 ### <a name="class-inheritance"></a>Herencia de clases
 
@@ -251,7 +246,6 @@ El acceso a las propiedades puede ser de lectura/escritura, solo lectura o solo 
 Para más información sobre las propiedades de C#, vea el tema [Propiedades](https://msdn.microsoft.com/en-us/library/x9fsa0sw.aspx) de MSDN.
 
 
-<a name="basemethods" />
 
 ### <a name="calling-base-class-methods"></a>Llamar a métodos de clase base
 
@@ -287,7 +281,6 @@ public class MainActivity : Activity
 En este caso, el método `OnCreate` definido por la clase derivada (`MainActivity`) llama al método `OnCreate` de la clase base (`Activity`).
 
 
-<a name="accessmodifiers" />
 
 ### <a name="access-modifiers"></a>Modificadores de acceso
 
@@ -300,7 +293,6 @@ Java y C# admiten los modificadores de acceso `public`, `private` y `protected`.
 Para más información sobre los modificadores de acceso de C#, vea el tema [Modificadores de acceso](https://msdn.microsoft.com/en-us/library/ms173121.aspx) de MSDN.
 
 
-<a name="virtualoverride" />
 
 ### <a name="virtual-and-override-methods"></a>Métodos virtuales y de invalidación
 
@@ -792,7 +784,6 @@ Si dispone de una funcionalidad de Java existente que no desea convertir a C#, p
 Para obtener más información sobre estas técnicas, vea [Java Integration Overview](~/android/platform/java-integration/index.md) (Información general sobre la integración de Java).
 
 
-<a name="further" />
 
 ## <a name="for-further-reading"></a>Más información
 
@@ -803,7 +794,6 @@ De la misma forma que el conocimiento de Java tiene al menos tanto que ver con l
 Cuando esté listo para abordar el primer proyecto de Xamarin.Android en C#, nuestra serie [Hello, Android](~/android/get-started/hello-android/index.md) puede facilitar la compilación de la primera aplicación de Xamarin.Android y ayudar a profundizar los conocimientos de los aspectos fundamentales del desarrollo de aplicaciones de Android con Xamarin.
 
 
-<a name="summary" />
 
 ## <a name="summary"></a>Resumen
 

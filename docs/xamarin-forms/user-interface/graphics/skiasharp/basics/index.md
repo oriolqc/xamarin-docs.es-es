@@ -4,14 +4,15 @@ description: "Obtenga información acerca de los conceptos básicos de los conce
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 1220da91cd3d8cd6a448a8845c897013419867e7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fb12924ff181439de601ecc07e1c7f3fe63a6616
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="skiasharp-drawing-basics"></a>Conceptos básicos de dibujo SkiaSharp
 
@@ -21,7 +22,7 @@ Después de haber agregado el paquete SkiaSharp NuGet a la aplicación de Xamari
 
 Todos los programas de ejemplo en esta sección aparecen bajo el encabezado **conceptos básicos de SkiaSharp** en la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programa y en el [ **Fundamentos** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics) carpeta de la solución.
 
-## <a name="drawing-a-simple-circlecirclemd"></a>[Dibujar un círculo Simple](circle.md)
+## <a name="drawing-a-simple-circlecirclemd"></a>[Dibujo de un círculo simple](circle.md)
 
 Obtenga información acerca de los conceptos básicos de dibujo SkiaSharp, incluidos lienzos y paint.
 

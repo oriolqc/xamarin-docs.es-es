@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/24/2017
-ms.openlocfilehash: d8fa54f23dfea063fa25f6e26e2df2c2ed82101e
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9aa66a531b723f176b940ba35ee4e86eae711f7d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="collection-views"></a>Vistas de colección
 
@@ -22,7 +22,7 @@ Al trabajar con C# y .NET en una aplicación Xamarin.Mac, el programador tiene a
 
 A `NSCollectionView` muestra una cuadrícula de subvistas organizada mediante un `NSCollectionViewLayout`. Cada vista secundaria en la cuadrícula se representa mediante un `NSCollectionViewItem` que administra la carga de contenido de la vista de un `.xib` archivo.
 
-[ ![Ejecutar una aplicación de ejemplo](collection-view-images/intro01.png)](collection-view-images/intro01.png)
+[![Ejecutar una aplicación de ejemplo](collection-view-images/intro01.png)](collection-view-images/intro01.png#lightbox)
 
 Este artículo tratan los conceptos básicos sobre cómo trabajar con vistas de colección en una aplicación Xamarin.Mac. Se recomienda trabajar a través de la [Hola, Mac](~/mac/get-started/hello-mac.md) artículo en primer lugar, específicamente el [Introducción a Xcode y el generador de interfaz](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) y [distribuidores y acciones](~/mac/get-started/hello-mac.md#Outlets_and_Actions) secciones, tal y como se tratan conceptos clave y las técnicas que se utilizan a lo largo de este artículo.
 
@@ -819,6 +819,6 @@ En este artículo ha tomado una visión detallada de trabajar con vistas de cole
 
 - [MacCollectionNew (ejemplo)](https://developer.xamarin.com/samples/mac/MacCollectionNew/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [Enlace de datos y el valor de clave de codificación](~/mac/app-fundamentals/databinding.md)
+- [Enlace de datos y codificación de clave-valor](~/mac/app-fundamentals/databinding.md)
 - [NSCollectionView](https://developer.apple.com/reference/appkit/nscollectionview)
-- [Directrices de interfaz de sistema operativo X humanos](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Directrices de interfaz humana de OS X)

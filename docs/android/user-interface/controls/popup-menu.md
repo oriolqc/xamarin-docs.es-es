@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/18/2017
-ms.openlocfilehash: 54b6809b7e27dc87be6d510e4a4b6071e4ae22e7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f976d798ae1b1279fc8f82d3cf1d738bb2c93911
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="popup-menu"></a>Menú emergente
 
 La `PopupMenu` clase agrega compatibilidad para mostrar los menús emergentes que están conectados a una vista determinada. La ilustración siguiente muestra un menú emergente que se presentan en un botón, el resaltado solo cuando se selecciona el segundo elemento:
 
- [ ![Ejemplo de un PopopMenu con tres tres elementos](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png)
+ [![Ejemplo de un PopopMenu con tres tres elementos](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png#lightbox)
 
 Android 4 agrega un par de características nuevas para `PopupMenu` que facilitan un poco más fácil trabajar con, a saber:
 
@@ -26,9 +26,8 @@ Android 4 agrega un par de características nuevas para `PopupMenu` que facilita
 
 ¡Eche un vistazo a estas mejoras. En este ejemplo, tenemos una sola actividad que contiene un botón. Cuando el usuario hace clic en el botón, se muestra un menú emergente tal y como se muestra a continuación:
 
- [ ![Ejemplo de aplicación que se ejecuta en un emulador con los botones y menús emergentes 3-item](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png)
+ [![Ejemplo de aplicación que se ejecuta en un emulador con los botones y menús emergentes 3-item](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png#lightbox)
 
-<a name="Creating_a_Popup_Menu" />
 
 ## <a name="creating-a-popup-menu"></a>Crear un menú emergente
 
@@ -62,7 +61,6 @@ showPopupMenu.Click += (s, arg) => {
 
 En el código anterior, después de que infla el menú simplemente llamamos `menu.Show` para mostrarla en la pantalla.
 
-<a name="Handling_Menu_Events" />
 
 ## <a name="handling-menu-events"></a>Control de eventos de menú
 

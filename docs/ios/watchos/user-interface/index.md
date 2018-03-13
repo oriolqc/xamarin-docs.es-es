@@ -7,17 +7,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/19/2016
-ms.openlocfilehash: 34063be728f8a13bbe5d68440d9aceba417c5627
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0717b8484c6094bb1d9589c44df37745d9e21900
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="watchos-user-interface"></a>Interfaz de usuario de watchOS
 
 El [ **WatchKitCatalog** ](https://github.com/xamarin/monotouch-samples/tree/master/watchOS/WatchKitCatalog) ejemplo muestra varios controles watchOS. Guión gráfico de la aplicación se muestra aquí (haga clic para acercar o alejar):
 
-[ ![](images/storyboard-sml.png "Diseño de watchOS de ejemplo")](images/storyboard.png)
+[![](images/storyboard-sml.png "Diseño de watchOS de ejemplo")](images/storyboard.png#lightbox)
 
 Los nombres de todos los controles mediante programación tiene como prefijo `WKInterface` (p. ej. `WKInterfaceLabel`, `WKInterfaceButton`).
 

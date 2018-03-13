@@ -7,32 +7,31 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/12/2017
-ms.openlocfilehash: f1567815ec342a958b48ec4801e2918f2981de3d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 670ec465843bbe819b41a53fff71b01ab78b0059
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Con las versiones anteriores proporciona compatibilidad con el paquete de compatibilidad con Android
 
 La utilidad de los fragmentos sería limitada sin compatibilidad con dispositivos de (API nivel 11) 3.0 previamente Android con las versiones anteriores. Para proporcionar esta capacidad, Google introdujo el [biblioteca de compatibilidad de](http://developer.android.com/sdk/compatibility-library.html) (llamado originalmente el *biblioteca de compatibilidad de Android* cuando se publicó) que backports algunas de las API de versiones más recientes de Android a versiones anteriores de Android. Es el paquete de soporte técnico de Android que permite a dispositivos que ejecutan Android 1.6 (API nivel 4) para Android 2.3.3. (API nivel 10).
 
 > [!NOTE]
-> **Tenga en cuenta**: solo el `ListFragment` y `DialogFragment` están disponibles mediante el paquete de compatibilidad con Android. Ninguno de los demás fragmentar subclases, como el `PreferenceFragment,` se admiten en el paquete de compatibilidad con Android. No funcionará en aplicaciones de 3.0 previamente Android. 
+> Solo el `ListFragment` y `DialogFragment` están disponibles mediante el paquete de compatibilidad con Android. Ninguno de los demás fragmentar subclases, como el `PreferenceFragment,` se admiten en el paquete de compatibilidad con Android. No funcionará en aplicaciones de 3.0 previamente Android. 
 
-<a name="Adding_the_Support_Package" /> 
 
 ## <a name="adding-the-support-package"></a>Agregar el paquete de soporte técnico
 
 El paquete de compatibilidad con Android no se agrega automáticamente a una aplicación Xamarin.Android. Xamarin ofrece la [paquete NuGet de biblioteca de compatibilidad de Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) para simplificar la adición de las bibliotecas de soporte técnico a una aplicación Xamarin.Android. Para incluir los paquetes de soporte técnico en su Xamarin.Android aplicación incluyen el [biblioteca admite Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) componente en el proyecto Xamarin.Android, como se muestra en la captura de pantalla siguiente: 
 
-[![Paquete de captura de pantalla de la biblioteca de compatibilidad con Android v4 que se agrega al proyecto](providing-backwards-compatibility-images/02.png)](providing-backwards-compatibility-images/02.png)
+[![Paquete de captura de pantalla de la biblioteca de compatibilidad con Android v4 que se agrega al proyecto](providing-backwards-compatibility-images/02.png)](providing-backwards-compatibility-images/02.png#lightbox)
 
 Después de han realizado estos pasos, es posible utilizar fragmentos en versiones anteriores de Android. Las API de fragmento funcionará ahora mismo en estas versiones anteriores, con las siguientes excepciones: 
 
 -   **Cambiar la versión mínima de Android** &ndash; la aplicación ya no necesita tener como destino Android 3.0 o superior, tal y como se muestra a continuación: 
 
-    [![Captura de pantalla de mínimo Android destino que se va a establecer en Propiedades de la aplicación](providing-backwards-compatibility-images/03.png)](providing-backwards-compatibility-images/03.png)
+    [![Captura de pantalla de mínimo Android destino que se va a establecer en Propiedades de la aplicación](providing-backwards-compatibility-images/03.png)](providing-backwards-compatibility-images/03.png#lightbox)
 
 -   **Extender FragmentActivity** &ndash; las actividades que hospedan fragmentos ahora debe heredar de `Android.Support.V4.App.FragmentActivity` y no desde `Android.App.Activity` . 
 

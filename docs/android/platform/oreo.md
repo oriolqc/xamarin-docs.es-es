@@ -5,14 +5,15 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android
+ms.custom: video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 478a285dc326b62bf2fc186599bfb7515988f9ee
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 03be7b624ffa9dd8774f291b96be27499cccab2b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="oreo-features"></a>Características de Oreos
 
@@ -20,12 +21,10 @@ _Cómo empezar a usar Xamarin.Android para desarrollar aplicaciones para la vers
 
 [Android Oreos 8.0](https://developer.android.com/index.html) es la versión más reciente de Android disponible en Google. Android Oreos ofrece muchas características nuevas de interés para los desarrolladores de Xamarin.Android. Estas características incluyen canales de notificación, distintivos de notificación, las fuentes personalizadas en XML, las fuentes descargables, autorrelleno e imagen en imagen (PIP). Android Oreos incluyen nuevas API para estas nuevas capacidades, y estas API están disponibles para las aplicaciones Xamarin.Android cuando usas Xamarin.Android 8.0 y versiones posteriores.
 
-[![Imagen de héroe Oreos Android](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png)
+[![Imagen de héroe Oreos Android](oreo-images/01-android-o-logo-sml.png)](oreo-images/01-android-o-logo.png#lightbox)
 
 Este artículo está estructurado para ayudarle a empezar a trabajar en el desarrollo de aplicaciones de Xamarin.Android para Android Oreos 8.0. Se explica cómo instalar las actualizaciones necesarias, configure el SDK y crear un emulador (o dispositivo) para las pruebas. También proporciona un resumen de las nuevas características de Android Oreos 8.0, con vínculos a aplicaciones de ejemplo que muestran cómo usar las características de Android Oreos en aplicaciones de Xamarin.Android.
 
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>Requisitos
 
@@ -38,7 +37,6 @@ El siguiente es necesaria para usar características Oreos Android en aplicacion
 -   **SDK de Android** &ndash; (26 de API) de Android SDK 8.0 o posterior debe estar instalado mediante el Administrador de SDK de Android.
 
 
-<a name="gettingstarted" />
 
 ## <a name="getting-started"></a>Introducción
 
@@ -55,7 +53,6 @@ Para empezar a trabajar con Android Oreos Xamarin.Android, debe descargar e inst
 Cada uno de estos pasos se explica en las secciones siguientes:
 
 
-<a name="updates" />
 
 ### <a name="update-visual-studio-and-xamarinandroid"></a>Actualizar Xamarin.Android y Visual Studio
 
@@ -81,7 +78,6 @@ Para agregar compatibilidad de Android Oreos a Visual Studio, haga lo siguiente:
 Para obtener más información sobre la compatibilidad con Xamarin Oreos Android, consulte el [notas de la versión 8.0 de Xamarin.Android](https://developer.xamarin.com/releases/android/xamarin.android_8/xamarin.android_8.0/).
 
 
-<a name="sdk" />
 
 ### <a name="install-the-android-sdk"></a>Instalar el SDK de Android
 
@@ -93,11 +89,11 @@ Para crear un proyecto con Xamarin.Android 8.0, primero debe usar el Administrad
 
 2. Instalar el **8.0 Android - Oreos** paquetes. Si está utilizando el emulador de Android SDK, no olvide incluir el **x86** imágenes del sistema que necesita:
 
-    [![Seleccionar paquetes 8.0 Android en el Administrador de SDK de Android](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png)
+    [![Seleccionar paquetes 8.0 Android en el Administrador de SDK de Android](oreo-images/win/01-android-o-packages.png)](oreo-images/win/01-android-o-packages.png#lightbox)
 
 3. Instalar **herramientas de Android SDK 26.0.2** o una versión posterior, **herramientas de Platform SDK de Android 26.0.0** o una versión posterior, y **Android SDK y herramientas de compilación 26.0.0** (o posterior):
 
-    [![Seleccionar herramientas SDK de Android 26 en el Administrador de SDK de Android](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png)
+    [![Seleccionar herramientas SDK de Android 26 en el Administrador de SDK de Android](oreo-images/win/02-sdk-tools.png)](oreo-images/win/02-sdk-tools.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -105,16 +101,15 @@ Para crear un proyecto con Xamarin.Android 8.0, primero debe usar el Administrad
 
 2. Instalar el **8.0 Android - Oreos** paquetes de SDK. Si está utilizando el emulador de Android SDK, no olvide incluir el **x86** imágenes del sistema que necesita:
 
-    [![Seleccionar paquetes 8.0 Android en el Administrador de SDK](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png)
+    [![Seleccionar paquetes 8.0 Android en el Administrador de SDK](oreo-images/mac/01-android-o-packages.png)](oreo-images/mac/01-android-o-packages.png#lightbox)
 
 3. Instalar **herramientas de Android SDK 26.0.2** o una versión posterior, **herramientas de Platform SDK de Android 26.0.0** o una versión posterior, y **Android SDK y herramientas de compilación 26.0.0** (o posterior):
 
-    [![Seleccionar herramientas SDK de Android 26 en el Administrador de SDK](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png)
+    [![Seleccionar herramientas SDK de Android 26 en el Administrador de SDK](oreo-images/mac/02-sdk-tools.png)](oreo-images/mac/02-sdk-tools.png#lightbox)
 
 -----
 
 
-<a name="xaproject" />
 
 ### <a name="start-a-xamarinandroid-project"></a>Iniciar un proyecto Xamarin.Android
 
@@ -122,7 +117,6 @@ Cree un nuevo proyecto de Xamarin.Android. Si está familiarizado con el desarro
 
 Cuando cree un proyecto Android, debe configurar los valores de versión al destino Android 8.0 o posterior. Por ejemplo, para el destino del proyecto para Android 8.0, debe configurar el nivel de API de Android de destino del proyecto a **Android 8.0 (API de 26)**. Se recomienda establecer el nivel de marco de destino y 26 de API o posterior. Para obtener más información acerca de cómo configurar los niveles de nivel de API de Android, consulte [niveles de API de Android descripción](~/android/app-fundamentals/android-api-levels.md).
 
-<a name="emudev" />
 
 ### <a name="configure-an-emulator-or-device"></a>Configurar un dispositivo o emulador
 
@@ -173,7 +167,7 @@ Usar **avdmanager** para crear un nuevo dispositivo virtual, siga estos pasos:
 
 Después de **avdmanager** para crear el dispositivo virtual, se incluirá en el menú desplegable de dispositivo:
 
-[![AVD nueva se agrega al menú desplegable de dispositivo](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png)
+[![AVD nueva se agrega al menú desplegable de dispositivo](oreo-images/win/04-android-o-avd-sml.png)](oreo-images/win/04-android-o-avd.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -193,7 +187,7 @@ Después de **avdmanager** para crear el dispositivo virtual, se incluirá en el
 
 Después de usar **avdmanager** para crear el dispositivo virtual, se incluirá en el menú desplegable de dispositivo:
 
-[![AVD nueva se agrega al menú desplegable de dispositivo](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png)
+[![AVD nueva se agrega al menú desplegable de dispositivo](oreo-images/mac/04-android-o-avd-sml.png)](oreo-images/mac/04-android-o-avd.png#lightbox)
 
 -----
 
@@ -202,14 +196,12 @@ Para obtener más información acerca de cómo configurar un emulador de Android
 Si está utilizando un dispositivo físico como un Nexus o un píxel, puede actualizar el dispositivo a través de automático a través de las actualizaciones de remotamente o descargar una imagen de sistema y flash directamente el dispositivo. Para obtener más información acerca de cómo actualizar manualmente el dispositivo para Oreos Android, consulte [generador de imágenes para dispositivos de píxel y Nexus](https://developers.google.com/android/images).
 
 
-<a name="newfeatures" />
 
 ## <a name="new-features"></a>Características nuevas
 
 Android Oreos presentan una variedad de nuevas características y funcionalidades, como canales de notificación, distintivos de notificación, las fuentes personalizadas en XML, las fuentes descargables, autorrelleno e imagen en imagen. Las siguientes secciones resaltan estas características y se proporcionan vínculos para ayudarle a empezar a trabajar con ellos en la aplicación.
 
 
-<a name="notifchan" />
 
 ### <a name="notification-channels"></a>Canales de notificación
 
@@ -219,20 +211,18 @@ Puede crear un canal de notificación para cada tipo de notificación que necesi
 [Canales de notificación](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan) explica cómo crear un canal de notificación y usarlo para el registro de notificaciones locales. Para obtener un ejemplo de código reales, consulte el [NotificationChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels) ejemplo; esta aplicación de ejemplo administra dos canales y establece las opciones de notificación adicionales.
 
 
-<a name="notifbadge" />
 
 ### <a name="notification-badges"></a>Distintivos de notificación
 
 Distintivos de notificación son pequeños puntos que aparecen sobre los iconos de aplicación, tal y como se muestra en esta captura de pantalla:
 
-[![Distintivos de notificación de ejemplo en los iconos de aplicación](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png)
+[![Distintivos de notificación de ejemplo en los iconos de aplicación](oreo-images/02-badges-sml.png)](oreo-images/02-badges.png#lightbox)
 
 Estos puntos indican que hay nuevas notificaciones para uno o varios canales de notificación en la aplicación asociada a ese icono de la aplicación &ndash; estas son las notificaciones que el usuario aún no se descarta o ha actuado en consecuencia. Los usuarios pueden long-presionar en un icono para Eche un vistazo a las notificaciones asociadas con un distintivo de notificación, descartando o actúa en notificaciones en el menú presionándolos una larga que appeaars.
 
 Para obtener más información sobre identificadores de notificación, vea el desarrollador Android [notificación distintivos](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#Badges) tema.
 
 
-<a name="customfonts" />
 
 ### <a name="custom-fonts-in-xml"></a>Fuentes personalizadas en XML
 
@@ -256,7 +246,6 @@ Presentan Android Oreos *fuentes en XML*, lo que hace posible para incorporar la
 
 También puede crear un archivo XML familia de fuentes que se describe varias fuentes, así como detalles de estilo y el peso. Para obtener más información, vea el desarrollador Android [fuentes en XML](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html) tema.
 
-<a name="dlfonts" />
 
 ### <a name="downloadable-fonts"></a>Fuentes descargables
 
@@ -281,7 +270,6 @@ El [fuentes descargables](https://developer.xamarin.com/samples/monodroid/androi
 Para obtener más información acerca de cómo descargar las fuentes, consulte el desarrollador Android [fuentes descargables](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html) tema.
 
 
-<a name="autofill" />
 
 ### <a name="autofill"></a>Autorrelleno
 
@@ -292,7 +280,6 @@ El [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o
 Para obtener más información acerca de la nueva característica de autorrelleno y cómo optimizar la aplicación para autorrelleno, vea el desarrollador Android [autorrelleno Framework](https://developer.android.com/guide/topics/text/autofill.html) tema.
 
 
-<a name="pip" />
 
 ### <a name="picture-in-picture-pip"></a>Imagen en imagen (PIP)
 
@@ -313,20 +300,17 @@ Para especificar cómo debe comportarse la actividad cuando se encuentra en modo
 El [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture) ejemplo muestra el uso básico del modo de imagen en imagen (PiP) para dispositivos de mano introducidas en Oreos. El ejemplo reproduce un vídeo que sigue sin interrupciones al hacia atrás y cambiar entre modos de presentación u otras actividades.
 
 
-<a name="other" />
 
 ### <a name="other-features"></a>Otras características
 
 Android Oreos contiene muchas otras características nuevas, como los límites de fondo Emoji compatibilidad con API de ubicación, de bibliotecas, amplia gama de colores para aplicaciones, nuevos códecs de audio, mejoras de WebView, compatibilidad de navegación de teclado mejorado y una nueva API de AAudio (audio pro) para audio de baja latencia y alto rendimiento, para obtener más información acerca de estas características, vea el desarrollador Android [API y características de Oreos Android](https://developer.android.com/about/versions/oreo/android-8.0.html) tema.
 
 
-<a name="behavior" />
 
 ## <a name="behavior-changes"></a>Cambios de comportamiento
 
 Android Oreos incluyen una serie de sistema y los cambios de comportamiento de API que pueden tener un impacto en la funcionalidad de las aplicaciones existentes. A continuación se describen estos cambios.
 
-<a name="bgsl" />
 
 ### <a name="background-execution-limits"></a>Límites de la ejecución de fondo
 
@@ -338,7 +322,6 @@ Para mejorar la experiencia del usuario, Oreos Android impone limitaciones en lo
 
 Para obtener más información acerca de los nuevos límites de la ejecución de segundo plano, consulte el desarrollador Android [límites de la ejecución de fondo](https://developer.android.com/about/versions/oreo/background.html) tema.
 
-<a name="breaking" />
 
 ### <a name="breaking-changes"></a>Cambios importantes
 
@@ -348,7 +331,6 @@ Aplicaciones de destino Oreos Android o posterior, deben modificar sus aplicacio
 
 - Para aplicaciones destinadas a Android Oreos, `PendingIntent.GetService()` no funciona debido a los nuevos límites colocados en servicios iniciados en segundo plano. Si desea usar Oreos Android, debe usar [PendingIntent.GetBroadcast](https://developer.xamarin.com/api/member/Android.App.PendingIntent.GetBroadcast/p/Android.Content.Context/System.Int32/Android.Content.Intent/Android.App.PendingIntentFlags/) en su lugar.  
 
-<a name="sample_code" />
 
 ## <a name="sample-code"></a>Código de ejemplo
 
@@ -369,8 +351,12 @@ Varios ejemplos de Xamarin.Android están disponibles para mostrarle cómo aprov
 -   [Servicio de primer plano de las actualizaciones de ubicación](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdFgService) se muestra cómo utilizar la API de ubicación para obtener actualizaciones sobre la ubicación de un dispositivo con un servicio de primer plano enlazado e iniciado.
 
 
+## <a name="video"></a>Vídeo
 
-<a name="summary" />
+> [!VIDEO https://youtube.com/embed/OuvEcaMO-Ho]
+
+**Desarrollo de Oreos 8.0 Android con C#**
+
 
 ## <a name="summary"></a>Resumen
 

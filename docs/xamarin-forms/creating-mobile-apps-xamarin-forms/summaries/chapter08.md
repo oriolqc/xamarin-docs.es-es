@@ -3,14 +3,15 @@ title: "Resumen del capítulo 8. Código y XAML en armonía"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: e95d6a20e828c92deb0e03fe1bcbcf18aac9e508
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 452a7835bcb54501edffe7a2467544c6677616ba
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-8-code-and-xaml-in-harmony"></a>Resumen del capítulo 8. Código y XAML en armonía
 
@@ -69,7 +70,7 @@ Cualquier `View` objeto puede obtener la entrada táctil y generar eventos de es
 
 El [ `TapGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/) genera [ `Tapped` ](https://developer.xamarin.com/api/event/Xamarin.Forms.TapGestureRecognizer.Tapped/) eventos. El [ **MonkeyTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/MonkeyTap) programa muestra cómo asociar `TapGestureRecognizer` objetos a cuatro `BoxView` elementos que se va a crear un juego imitación:
 
-[![Captura de pantalla de triple de derivación de mono](images/ch08fg07-small.png "imitación juego")](images/ch08fg07-large.png "imitación juego")
+[![Captura de pantalla de triple de derivación de mono](images/ch08fg07-small.png "imitación juego")](images/ch08fg07-large.png#lightbox "imitación juego")
 
 Pero la **MonkeyTap** programa necesita realmente el sonido. (Consulte [el próximo capítulo](chapter09.md).)
 

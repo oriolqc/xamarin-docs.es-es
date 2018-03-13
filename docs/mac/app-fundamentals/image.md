@@ -3,16 +3,16 @@ title: "Imágenes"
 description: "Este artículo explica cómo trabajar con imágenes e iconos en una aplicación Xamarin.Mac. Describe cómo crear y mantener las imágenes necesarias para crear el icono de la aplicación y utilizar imágenes en código de C# y el generador de interfaz de Xcode."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 675B9405-D9A7-49F0-94AD-417F10A71D11
+ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: f12b2af0c9325796db63fcd65af135f54277ece0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d8098afea87765166db8318b76adf250818a0a6f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="images"></a>Imágenes
 
@@ -34,7 +34,7 @@ Hay varias maneras de esa imagen activos se utilizan dentro de una aplicación d
 
 Además, macOS proporciona un conjunto de imágenes predefinidas que puede usarse en toda la aplicación.
 
-[![Un ejemplo de ejecución de la aplicación](image-images/intro01.png "un ejemplo de ejecución de la aplicación")](image-images/intro01-large.png)
+[![Un ejemplo de ejecución de la aplicación](image-images/intro01.png "un ejemplo de ejecución de la aplicación")](image-images/intro01-large.png#lightbox)
 
 En este artículo, se tratarán los conceptos básicos sobre cómo trabajar con imágenes e iconos en una aplicación Xamarin.Mac. Se recomienda trabajar a través de la [Hola, Mac](~/mac/get-started/hello-mac.md) artículo en primer lugar, específicamente el [Introducción a Xcode y el generador de interfaz](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) y [distribuidores y acciones](~/mac/get-started/hello-mac.md#Outlets_and_Actions) secciones, tal como se explica conceptos clave y técnicas que usaremos en este artículo.
 
@@ -59,18 +59,18 @@ Como se mencionó anteriormente, un **conjuntos de imágenes de catálogos de ac
     ![Al seleccionar la Assets.xcassets](image-images/imageset01.png "seleccionando el Assets.xcassets")
 2. Haga doble clic en el **lista de activos** y seleccione **nuevo conjunto de imagen**: 
 
-    [![Agregar un nuevo conjunto de imagen](image-images/imageset02.png "agregar un nuevo conjunto de imágenes")](image-images/imageset02-large.png)
+    [![Agregar un nuevo conjunto de imagen](image-images/imageset02.png "agregar un nuevo conjunto de imágenes")](image-images/imageset02-large.png#lightbox)
 3. Seleccione el nuevo conjunto de imagen y se mostrará el editor: 
 
-    [![Al seleccionar el nuevo conjunto de imagen](image-images/imageset03.png "seleccionando el nuevo conjunto de imagen")](image-images/imageset03-large.png)
+    [![Al seleccionar el nuevo conjunto de imagen](image-images/imageset03.png "seleccionando el nuevo conjunto de imagen")](image-images/imageset03-large.png#lightbox)
 4. Desde aquí podemos arrastrar en imágenes para cada uno de los distintos dispositivos y resoluciones necesarias. 
 5. Haga doble clic en el nuevo conjunto de imagen **nombre** en el **lista de activos** para editarlo: 
 
-    [![Nombre del conjunto de editar la imagen](image-images/imageset04.png "nombre del conjunto de editar la imagen")](image-images/imageset04-large.png)
+    [![Nombre del conjunto de editar la imagen](image-images/imageset04.png "nombre del conjunto de editar la imagen")](image-images/imageset04-large.png#lightbox)
     
 Una clase especial **Vector** tal y como se ha agregado a la clase **conjuntos de imágenes** que nos permite incluir un _PDF_ con el formato de imagen de vector en el casset en su lugar, incluidos los archivos de mapa de bits individuales en las resoluciones diferentes. Con este método, proporcionar un archivo de vector único para la  **@1x**  resolución (con formato como archivo PDF vector) y la  **@2x**  y  **@3x**  versiones del archivo se generarán en tiempo de compilación e incluidas en el paquete de la aplicación.
 
-[![Interfaz del editor de conjunto de la imagen](image-images/imageset05.png "imágenes establecer la interfaz de editor")](image-images/imageset05-large.png)
+[![Interfaz del editor de conjunto de la imagen](image-images/imageset05.png "imágenes establecer la interfaz de editor")](image-images/imageset05-large.png#lightbox)
 
 Por ejemplo, si incluye un `MonkeyIcon.pdf` archivo que el vector de un catálogo de activos con una resolución de 150 px x 150px, el mapa de bits siguiente cuando se compila, se incluiría en el paquete de aplicación final activos:
 
@@ -115,7 +115,7 @@ Para poder usar un archivo de imagen en la aplicación Xamarin.Mac (ya sea en el
     ![Agregar un archivo](image-images/add01.png "agregar un archivo")
 2. Desde el **agregar archivos** cuadro de diálogo, seleccione las imágenes de archivos para agregar al proyecto, seleccione `BundleResource` para el **acción de compilación de invalidación** y haga clic en el **abiertos** botón:
 
-    [![Seleccionar los archivos que desea agregar](image-images/add02.png "al seleccionar los archivos que desea agregar")](image-images/add02-large.png)
+    [![Seleccionar los archivos que desea agregar](image-images/add02.png "al seleccionar los archivos que desea agregar")](image-images/add02-large.png#lightbox)
 3. Si los archivos ya no están en el **recursos** carpeta, se le preguntará si desea **copia**, **mover** o **vínculo** los archivos. Elegir que cada palos sus necesidades, por lo general que serán **copia**:
 
     ![Seleccione la acción de agregar](image-images/add04.png "seleccionando la acción de agregar")
@@ -164,13 +164,13 @@ Para utilizar una imagen en el generador de interfaz, haga lo siguiente:
      ![Un recurso de imagen en el panel de la solución](image-images/ib00.png "un recurso de imagen en el panel de la solución")
 2. Haga doble clic en el **Main.storyboard** archivo para abrirlo y editarlo en el generador de interfaz: 
 
-     [![Editar el guión gráfico principal](image-images/ib01.png "el guión gráfico principal de edición")](image-images/ib01-large.png)
+     [![Editar el guión gráfico principal](image-images/ib01.png "el guión gráfico principal de edición")](image-images/ib01-large.png#lightbox)
 3. Arrastre un elemento de interfaz de usuario que tiene imágenes en la superficie de diseño (por ejemplo, un **elemento de la barra de herramientas de imagen**): 
 
      ![Editar un elemento de la barra de herramientas](image-images/ib02.png "editar un elemento de la barra de herramientas")
 4. Seleccione la imagen que ha agregado a la **recursos** carpeta en el **nombre de la imagen** lista desplegable: 
 
-     [![Al seleccionar una imagen para un elemento de barra de herramientas](image-images/ib03.png "al seleccionar una imagen para un elemento de barra de herramientas")](image-images/ib03-large.png)
+     [![Al seleccionar una imagen para un elemento de barra de herramientas](image-images/ib03.png "al seleccionar una imagen para un elemento de barra de herramientas")](image-images/ib03-large.png#lightbox)
 5. La imagen seleccionada se mostrará en la superficie de diseño: 
 
      ![La imagen que se muestra en el editor de la barra de herramientas](image-images/ib04.png "la imagen que se muestra en el editor de la barra de herramientas")
@@ -205,7 +205,7 @@ En función del diseño de la aplicación de Mac OS, puede haber ocasiones en qu
 
 Para lograr este efecto, cambie la _modo de representación de_ de su recurso de imagen a **imagen de plantilla**:
 
-[![Configuración de una imagen de plantilla](image-images/templateimage01.png "establecer una imagen de plantilla")](image-images/templateimage01-large.png)
+[![Configuración de una imagen de plantilla](image-images/templateimage01.png "establecer una imagen de plantilla")](image-images/templateimage01-large.png#lightbox)
 
 Desde el generador de interfaz de Xcode, asigne al recurso de imagen a un control de interfaz de usuario:
 
@@ -337,7 +337,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 Salida del ejemplo:
 
-[![Un ejemplo de mostrar una imagen en una aplicación](image-images/tables01.png "muestra un ejemplo de mostrar una imagen en una aplicación")](image-images/tables01-large.png)
+[![Un ejemplo de mostrar una imagen en una aplicación](image-images/tables01.png "muestra un ejemplo de mostrar una imagen en una aplicación")](image-images/tables01-large.png#lightbox)
 
 Para obtener más información sobre cómo trabajar con vistas de tabla, vea nuestra [vistas de la tabla](~/mac/user-interface/table-view.md) documentación.
 
@@ -440,7 +440,7 @@ view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
 
 Salida del ejemplo:
 
-[![Un ejemplo de una imagen que se muestra en una vista de esquema](image-images/outline01.png "muestra un ejemplo de una imagen que se muestra en una vista de esquema")](image-images/outline01-large.png)
+[![Un ejemplo de una imagen que se muestra en una vista de esquema](image-images/outline01.png "muestra un ejemplo de una imagen que se muestra en una vista de esquema")](image-images/outline01-large.png#lightbox)
 
 Para obtener más información sobre cómo trabajar con vistas de esquema, vea nuestra [vistas de esquema](~/mac/user-interface/outline-view.md) documentación.
 
@@ -458,4 +458,4 @@ En este artículo ha tomado una visión detallada de trabajar con imágenes e ic
 - [Vistas de tabla](~/mac/user-interface/table-view.md)
 - [Vistas de esquema](~/mac/user-interface/outline-view.md)
 - [macOS X directrices de interfaz humana](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
-- [Acerca de alta resolución para OS X](https://developer.apple.com/library/content/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Introduction/Introduction.html)
+- [Acerca de la alta resolución para OS X](https://developer.apple.com/library/content/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Introduction/Introduction.html)

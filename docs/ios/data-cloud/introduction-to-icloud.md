@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/09/2016
-ms.openlocfilehash: 7e02c92f9c1aafeb97da4905c17898b02362c960
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce2130985eb954abc4b4a1f4022eec97341eb902
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="icloud"></a>iCloud
 
@@ -48,7 +48,7 @@ Para configurar correctamente una aplicación para tener acceso a iCloud:
 
 -   **Crear un nuevo identificador de aplicación** - para crear un identificador de aplicación, siga los pasos descritos en la [aprovisionamiento para la sección de tecnologías de almacenamiento de la Guía de aprovisionamiento de dispositivos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)y no olvide comprobar **iCloud** como un servicio permitido:
 
- [ ![](introduction-to-icloud-images/icloud-sml.png "Comprobar iCloud como un servicio permitido")](introduction-to-icloud-images/icloud.png)
+ [![](introduction-to-icloud-images/icloud-sml.png "Comprobar iCloud como un servicio permitido")](introduction-to-icloud-images/icloud.png#lightbox)
 
 - **Crear un nuevo perfil de aprovisionamiento** - para crear un perfil de aprovisionamiento, siga los pasos descritos en la [Guía de aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md#Provisioning_Profile) .
 
@@ -83,7 +83,7 @@ Esta captura de pantalla muestra el ejemplo en uso. Cuando se reciben las notifi
 
 
 
- [ ![](introduction-to-icloud-images/icloud-kv-arrows.png "El flujo de mensajes entre los dispositivos")](introduction-to-icloud-images/icloud-kv-arrows.png)
+ [![](introduction-to-icloud-images/icloud-kv-arrows.png "El flujo de mensajes entre los dispositivos")](introduction-to-icloud-images/icloud-kv-arrows.png#lightbox)
 
 ### <a name="setting-and-retrieving-data"></a>Establecer y recuperar datos
 
@@ -151,13 +151,13 @@ Almacenamiento de documentos de iCloud está diseñado para administrar los dato
 
 Este diagrama muestra cómo encaja cada pieza. Cada dispositivo tiene datos guardados en el almacenamiento local (la UbiquityContainer) y iCloud del sistema operativo que demonio se encarga de enviar y recibir datos en la nube. Todo el acceso de archivo a la UbiquityContainer debe hacerse a través de FilePresenter/FileCoordinator para evitar el acceso simultáneo. La `UIDocument` clase implementa los automáticamente; en este ejemplo se muestra cómo usar UIDocument.
 
- [ ![](introduction-to-icloud-images/icloud-overview.png "La información general de almacenamiento de documentos")](introduction-to-icloud-images/icloud-overview.png)
+ [![](introduction-to-icloud-images/icloud-overview.png "La información general de almacenamiento de documentos")](introduction-to-icloud-images/icloud-overview.png#lightbox)
 
 El ejemplo iCloudUIDoc implementa un sencillo `UIDocument` subclase que contiene un único campo de texto. El texto se representa en un `UITextView` y ediciones se propagan por iCloud a otros dispositivos con un mensaje de notificación se muestra en rojo. El código de ejemplo no se ocupa de las características más avanzadas de iCloud como la resolución de conflictos.
 
 Esta captura de pantalla muestra la aplicación de ejemplo - después de cambiar el texto y presione **UpdateChangeCount** se sincroniza el documento a través de iCloud a otros dispositivos.
 
- [ ![](introduction-to-icloud-images/iclouduidoc.png "Esta captura de pantalla muestra la aplicación de ejemplo después de cambiar el texto y presione UpdateChangeCount")](introduction-to-icloud-images/iclouduidoc.png)
+ [![](introduction-to-icloud-images/iclouduidoc.png "Esta captura de pantalla muestra la aplicación de ejemplo después de cambiar el texto y presione UpdateChangeCount")](introduction-to-icloud-images/iclouduidoc.png#lightbox)
 
 Hay cinco partes en el ejemplo de iCloudUIDoc:
 
@@ -403,15 +403,15 @@ doc.UpdateChangeCount (UIDocumentChangeKind.Done);
 
 Los usuarios pueden administrar los documentos en iCloud el **documentos** directorio de la "contenedor" ubicuidad"fuera de la aplicación a través de la configuración; pueden ver la lista de archivos y deslice el dedo para eliminar. Código de la aplicación debe ser capaz de controlar la situación donde se eliminan documentos por el usuario. No almacene datos de aplicación interna en la **documentos** directory.
 
- [ ![](introduction-to-icloud-images/icloudstorage.png "Administrar el flujo de trabajo de iCloud documentos")](introduction-to-icloud-images/icloudstorage.png)
+ [![](introduction-to-icloud-images/icloudstorage.png "Administrar el flujo de trabajo de iCloud documentos")](introduction-to-icloud-images/icloudstorage.png#lightbox)
 
 
 
 Los usuarios también recibirá advertencias diferentes cuando intenta quitar una aplicación habilitada para iCloud desde sus dispositivos, para informarles del estado de los documentos de iCloud relacionados con esa aplicación.
 
- [ ![](introduction-to-icloud-images/icloud-delete1.png "Cuadro de diálogo de ejemplo cuando el usuario intenta quitar una aplicación habilitada para iCloud de su dispositivo")](introduction-to-icloud-images/icloud-delete1.png)
+ [![](introduction-to-icloud-images/icloud-delete1.png "Cuadro de diálogo de ejemplo cuando el usuario intenta quitar una aplicación habilitada para iCloud de su dispositivo")](introduction-to-icloud-images/icloud-delete1.png#lightbox)
 
- [ ![](introduction-to-icloud-images/icloud-delete2.png "Cuadro de diálogo de ejemplo cuando el usuario intenta quitar una aplicación habilitada para iCloud de su dispositivo")](introduction-to-icloud-images/icloud-delete2.png)
+ [![](introduction-to-icloud-images/icloud-delete2.png "Cuadro de diálogo de ejemplo cuando el usuario intenta quitar una aplicación habilitada para iCloud de su dispositivo")](introduction-to-icloud-images/icloud-delete2.png#lightbox)
 
 ## <a name="icloud-backup"></a>copia de seguridad de iCloud
 

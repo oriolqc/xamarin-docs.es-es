@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f02c5cfd75fd9d9cd97d28ca276b32808f7a45ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f1ce6b62ef13d24148048253700d7b3bff805fad
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="path-basics"></a>Conceptos básicos de la ruta de acceso
 
@@ -99,7 +99,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El primer contorno consta de una llamada a [ `MoveTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.MoveTo/p/System.Single/System.Single/) mediante las coordenadas X e Y en lugar de un `SKPoint` valor, seguido de tres llamadas a [ `LineTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.LineTo/p/System.Single/System.Single/) para dibujar los tres lados de la triángulo. El segundo perfil tiene solo dos llamadas a `LineTo` pero que termine el contorno con una llamada a [ `Close` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.Close()/), que cierra el contorno. La diferencia es importante:
 
-[![](paths-images/twotrianglecontours-small.png "Captura de pantalla triple de la página de dos perfiles de triángulo")](paths-images/twotrianglecontours-large.png "Triple captura de pantalla de la página de dos perfiles de triángulo")
+[![](paths-images/twotrianglecontours-small.png "Captura de pantalla triple de la página de dos perfiles de triángulo")](paths-images/twotrianglecontours-large.png#lightbox "Triple captura de pantalla de la página de dos perfiles de triángulo")
 
 Como puede ver, obviamente, el primer contorno es una serie de tres líneas conectadas, pero el extremo no se conecta con el principio. Las dos líneas se superponen en la parte superior. El segundo contorno obviamente se cierra y se logró con uno menos `LineTo` llama porque el `Close` método agrega automáticamente una línea final para cerrar el contorno.
 
@@ -189,7 +189,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Este es el programa que se ejecuta en las tres plataformas:
 
-[![](paths-images/strokejoins-small.png "Captura de pantalla triple de la página se une a trazo")](paths-images/strokejoins-large.png "Triple captura de pantalla de la página se une a trazo")
+[![](paths-images/strokejoins-small.png "Captura de pantalla triple de la página se une a trazo")](paths-images/strokejoins-large.png#lightbox "Triple captura de pantalla de la página se une a trazo")
 
 La combinación de ángulo consta de un vértice agudo que conectan las líneas. Cuando dos líneas se unen en un ángulo pequeño, la combinación de ángulo puede ser bastante larga. Para evitar uniones angulares excesivamente largos, la longitud de la combinación de ángulo está limitada por el valor de la [ `StrokeMiter` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeMiter/) propiedad de `SKPaint`. Una unión en ángulo que supera esta longitud se cortan se convierta en una combinación del bisel.
 

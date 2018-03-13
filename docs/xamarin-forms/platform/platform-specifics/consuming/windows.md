@@ -3,16 +3,16 @@ title: Detalles de plataforma de Windows
 description: "Obtener información específica de la plataforma le permite utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar representadores personalizados o los efectos. Este artículo demuestra cómo utilizar la plataforma-detalles de Windows que están integrados en Xamarin.Forms."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
+ms.assetid: 22B403C0-FE6D-498A-AE53-095E6C4B527C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: da9279939af8dc4033cd89769a7add60a745ac85
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 01b32d1ca5356ed69480dff0d31c210a8c460417
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="windows-platform-specifics"></a>Detalles de plataforma de Windows
 
@@ -52,7 +52,7 @@ El `Page.On<Windows>` método especifica que sólo se ejecutará este específic
 
 El resultado es que la selección de ubicación de la barra de herramientas especificada se aplica a la [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) instancia:
 
-[![](windows-images/toolbar-placement.png "Barra de herramientas de selección de ubicación plataforma específica")](windows-images/toolbar-placement-large.png "barra de herramientas de selección de ubicación plataforma específica")
+[![](windows-images/toolbar-placement.png "Barra de herramientas de selección de ubicación plataforma específica")](windows-images/toolbar-placement-large.png#lightbox "barra de herramientas de selección de ubicación plataforma específica")
 
 <a name="collapsable_navigation_bar" />
 
@@ -84,7 +84,7 @@ El `MasterDetailPage.On<Windows>` método especifica que sólo se ejecutará est
 
 El resultado es que un determinado [ `CollapseStyle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle/) se aplica a la [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/) instancia, con el ancho también se especifican:
 
-[![](windows-images/collapsed-navigation-bar.png "Contraer la barra de navegación específica de la plataforma")](windows-images/collapsed-navigation-bar-large.png "contraído barra de navegación específica de la plataforma")
+[![](windows-images/collapsed-navigation-bar.png "Contraer la barra de navegación específica de la plataforma")](windows-images/collapsed-navigation-bar-large.png#lightbox "contraído barra de navegación específica de la plataforma")
 
 ## <a name="summary"></a>Resumen
 
@@ -93,6 +93,6 @@ Este artículo muestra cómo utilizar la plataforma-detalles de Windows que est�
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Obtener información específica de la plataforma de creación](~/xamarin-forms/platform/platform-specifics/creating.md)
+- [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 - [WindowsSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.WindowsSpecific/)

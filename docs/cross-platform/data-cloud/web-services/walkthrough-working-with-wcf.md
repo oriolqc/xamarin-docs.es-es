@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: 6aee83cd07a52d667c24c3e70fced2e291ed99c8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b076c7a71d81a474ca80ac32771d5512c21c167c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>Tutorial: trabajar con WCF
 
@@ -158,7 +158,7 @@ Debe conocer la dirección IP de la estación de trabajo. Para los fines de este
 
 1. Comencemos mediante la configuración de IIS Express para que escuche las solicitudes externas. Podemos hacerlo editando el archivo de configuración de IIS Express en `[solutiondirectory]\.vs\config\applicationhost.config`, tal y como se muestra en la captura de pantalla siguiente:
 
-    [![](walkthrough-working-with-wcf-images/image05.png "Podemos hacerlo editando el archivo de configuración de IIS Express en solutiondirectory.vsconfigapplicationhost.config, como se muestra en esta captura de pantalla")](walkthrough-working-with-wcf-images/image05.png)
+    [![](walkthrough-working-with-wcf-images/image05.png "Podemos hacerlo editando el archivo de configuración de IIS Express en solutiondirectory.vsconfigapplicationhost.config, como se muestra en esta captura de pantalla")](walkthrough-working-with-wcf-images/image05.png#lightbox)
 
 
     Busque la `site` elemento con el nombre `HelloWorldWcfHost`. Debe tener un aspecto como el fragmento XML siguiente:
@@ -270,7 +270,7 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.Android
 
     Las capturas de pantalla siguiente muestran la interfaz de usuario en el diseñador:
 
-    [![](walkthrough-working-with-wcf-images/image09.png "Se trata de una captura de pantalla de aspecto de esta interfaz de usuario en el diseñador")](walkthrough-working-with-wcf-images/image09.png)
+    [![](walkthrough-working-with-wcf-images/image09.png "Se trata de una captura de pantalla de aspecto de esta interfaz de usuario en el diseñador")](walkthrough-working-with-wcf-images/image09.png#lightbox)
 
 1. En **el Explorador de soluciones**, abra `Resources/values/Strings.xml` y agregue el siguiente código XML:
 
@@ -382,7 +382,7 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.Android
 
 1. Ejecute la aplicación, asegúrese de que está ejecutando el servicio WCF y haga clic en los dos botones. La aplicación llamará a WCF de forma asincrónica, siempre que el `Endpoint` campo se ha configurado correctamente:
 
-  [![](walkthrough-working-with-wcf-images/image08.png "Dentro de 30 segundos se debe recibir una respuesta de cada método WCF y nuestra aplicación debería ser similar a esta captura de pantalla")](walkthrough-working-with-wcf-images/image08.png)
+  [![](walkthrough-working-with-wcf-images/image08.png "Dentro de 30 segundos se debe recibir una respuesta de cada método WCF y nuestra aplicación debería ser similar a esta captura de pantalla")](walkthrough-working-with-wcf-images/image08.png#lightbox)
 
 <a name="Creating_a_Xamarin_iOS_Application" />
 
@@ -428,7 +428,7 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.iOS, co
 
     Después de agregar los controles, la interfaz de usuario debe ser similar a la captura de pantalla siguiente:
 
-    [![](walkthrough-working-with-wcf-images/image12.png "Después de agregar los controles, la interfaz de usuario debe ser similar a esta captura de pantalla")](walkthrough-working-with-wcf-images/image12.png)
+    [![](walkthrough-working-with-wcf-images/image12.png "Después de agregar los controles, la interfaz de usuario debe ser similar a esta captura de pantalla")](walkthrough-working-with-wcf-images/image12.png#lightbox)
 
 1. En **el Explorador de soluciones**, abra `ViewController.cs` y agregue el código siguiente:
 
@@ -515,7 +515,7 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.iOS, co
 
 1. Ejecute la aplicación, asegúrese de que está ejecutando el servicio WCF y haga clic en los dos botones. La aplicación llamará a WCF de forma asincrónica, siempre que el `Endpoint` campo se ha configurado correctamente:
 
-    [![](walkthrough-working-with-wcf-images/image10.png "Dentro de 30 segundos se debe recibir una respuesta de cada método WCF y nuestra aplicación debería ser similar a esta captura de pantalla")](walkthrough-working-with-wcf-images/image10.png)
+    [![](walkthrough-working-with-wcf-images/image10.png "Dentro de 30 segundos se debe recibir una respuesta de cada método WCF y nuestra aplicación debería ser similar a esta captura de pantalla")](walkthrough-working-with-wcf-images/image10.png#lightbox)
 
 <a name="Summary" />
 

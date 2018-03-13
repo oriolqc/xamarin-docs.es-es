@@ -4,14 +4,15 @@ description: "Definir rutas de acceso mediante cadenas de texto en el formato de
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: feb4c5f4c7e7ad3fc5f762786001be9aa57ae718
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: cc21f789d96f9375655766916f80c6f3f524c29d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="svg-path-data"></a>Datos de ruta de acceso SVG
 
@@ -216,7 +217,7 @@ public class PathDataHelloPage : ContentPage
 
 La ruta de acceso rellena el lienzo, que es más razonable cuando se ve en modo horizontal:
 
-[![](path-data-images/pathdatahello-small.png "Captura de pantalla triple de la página de ruta de acceso datos Hello")](path-data-images/pathdatahello-large.png "Triple captura de pantalla de la página de ruta de acceso datos Hello")
+[![](path-data-images/pathdatahello-small.png "Captura de pantalla triple de la página de ruta de acceso datos Hello")](path-data-images/pathdatahello-large.png#lightbox "Triple captura de pantalla de la página de ruta de acceso datos Hello")
 
 El **Cat de datos de ruta de acceso** página es similar. Los objetos de ruta de acceso y paint se definen como campos en el [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) clase:
 
@@ -287,7 +288,7 @@ public class PathDataCatPage : ContentPage
 
 Este es el programa que se ejecuta en las tres plataformas:
 
-[![](path-data-images/pathdatacat-small.png "Captura de pantalla de la página de la ruta de acceso datos Cat triple")](path-data-images/pathdatacat-large.png "Triple captura de pantalla de la página de Cat de datos de ruta de acceso")
+[![](path-data-images/pathdatacat-small.png "Captura de pantalla de la página de la ruta de acceso datos Cat triple")](path-data-images/pathdatacat-large.png#lightbox "Triple captura de pantalla de la página de Cat de datos de ruta de acceso")
 
 Normalmente, cuando un `SKPath` objeto se define como un campo, se deben definir los contornos de la ruta de acceso en el constructor u otro método. Sin embargo, cuando se usan datos de ruta de acceso SVG, ha visto que se puede especificar la ruta de acceso completamente en la definición del campo.
 
@@ -424,7 +425,7 @@ public class PrettyAnalogClockPage : ContentPage
 
 Sin embargo algo especial se realiza con la mano de segundo. Dado que el reloj se actualiza cada 16 milisegundos, el `Millisecond` propiedad de la `DateTime` valor potencialmente puede utilizarse para animar un barrido de segundo lado en lugar de uno que se desplaza de saltos discretos de segundo al segundo. Pero este código no permite el movimiento a ser suaves. En su lugar, usa el Xamarin.Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/) y [ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/) animación funciones para otro tipo de movimiento de aceleración. La manecilla de los segundos mover en un modo & #x 2014; es hacen que estas funciones de aceleración recuperar un poco antes de que mueve, y, a continuación, ligeramente over solución su destino, un efecto que lamentablemente no se puede reproducir en estas capturas de pantalla estáticas:
 
-[![](path-data-images/prettyanalogclock-small.png "Captura de pantalla triple de la página de reloj de señales analógicas bastante")](path-data-images/prettyanalogclock-large.png "Triple captura de pantalla de la página de reloj de señales analógicas bastante")
+[![](path-data-images/prettyanalogclock-small.png "Captura de pantalla triple de la página de reloj de señales analógicas bastante")](path-data-images/prettyanalogclock-large.png#lightbox "Triple captura de pantalla de la página de reloj de señales analógicas bastante")
 
 
 ## <a name="related-links"></a>Vínculos relacionados

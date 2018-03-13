@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: a219a5ed4045bff639f29fd49ef5288139140135
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0eec51a6c95894482a57bfe3bb1f95aec2045af4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessing-remote-data"></a>Acceso a datos remotos
 
@@ -52,7 +52,7 @@ La `CatalogService` clase se utiliza para administrar el proceso de recuperació
 
 La figura 10-1 muestra la interacción de las clases que leen datos del catálogo desde la microservicio de catálogo para su visualización en el `CatalogView`.
 
-[![](accessing-remote-data-images/catalogdata.png "Recuperación de datos desde el catálogo de microservicio")](accessing-remote-data-images/catalogdata-large.png "recuperar datos desde el catálogo de microservicio")
+[![](accessing-remote-data-images/catalogdata.png "Recuperación de datos desde el catálogo de microservicio")](accessing-remote-data-images/catalogdata-large.png#lightbox "recuperar datos desde el catálogo de microservicio")
 
 **Figura 10-1**: recuperación de datos desde el catálogo de microservicio
 
@@ -157,7 +157,7 @@ La `BasketService` clase se utiliza para administrar la recuperación de datos y
 
 Figura 10-2 se muestra la interacción de las clases que enviar los datos de la cesta de compras mostrados por el `BasketView`, a la cesta de la compra microservicio.
 
-[![](accessing-remote-data-images/basketdata.png "Enviar datos a la cesta de microservicio")](accessing-remote-data-images/basketdata-large.png "enviar datos a la microservicio de la cesta de compra")
+[![](accessing-remote-data-images/basketdata.png "Enviar datos a la cesta de microservicio")](accessing-remote-data-images/basketdata-large.png#lightbox "enviar datos a la microservicio de la cesta de compra")
 
 **Figura 10-2**: enviar datos a la microservicio de la cesta de compra
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 6d2a454665691c028fe8307940a5662a98ab9c98
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f35256529d6d72a3f5e563dc88b9d5883a9724d4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="appearance-api"></a>API de apariencia
 
@@ -32,7 +32,7 @@ Hay dos maneras diferentes de aplicar una apariencia personalizada:
 
 La aplicación de ejemplo de apariencia muestra los tres métodos, como se muestra en estas capturas de pantalla:
 
- [ ![](introduction-to-the-appearance-api-images/appearance01.png "La aplicación de ejemplo de apariencia muestra los tres métodos")](introduction-to-the-appearance-api-images/appearance01.png)
+ [![](introduction-to-the-appearance-api-images/appearance01.png "La aplicación de ejemplo de apariencia muestra los tres métodos")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
 
 A partir de iOS 8, el proxy de apariencia se ha ampliado a TraitCollections.
  `AppearanceForTraitCollection` puede usarse para establecer la apariencia predeterminada en una colección de rasgo determinado. Puede leer más sobre esto en la [Introducción a guiones gráficos](~/ios/user-interface/storyboards/unified-storyboards.md) guía.
@@ -87,11 +87,11 @@ sg1.TintColor = UIColor.Magenta;
 
 Como alternativa, establezca el valor en el panel de propiedades del diseñador: 
 
-[ ![](introduction-to-the-appearance-api-images/propertiespadtint.png "Tinte de panel de propiedades")](introduction-to-the-appearance-api-images/propertiespadtint.png)
+[![](introduction-to-the-appearance-api-images/propertiespadtint.png "Tinte de panel de propiedades")](introduction-to-the-appearance-api-images/propertiespadtint.png#lightbox)
 
 La siguiente imagen ilustra que esto establece la tinta en el control con el nombre 'sg1'.
 
- [ ![](introduction-to-the-appearance-api-images/image53.png "Establecer el tono de control individual")](introduction-to-the-appearance-api-images/image53.png)
+ [![](introduction-to-the-appearance-api-images/image53.png "Establecer el tono de control individual")](introduction-to-the-appearance-api-images/image53.png#lightbox)
 
 Para establecer muchos controles de esta manera sería completamente eficaz, por lo que podemos establecer en su lugar el método estático `Appearance` propiedad en la propia clase. Esto se muestra en el código siguiente:
 
@@ -101,7 +101,7 @@ UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 
 La imagen siguiente muestra ahora ambos controles segmentados con el aspecto que se establece en fucsia:
 
- [ ![](introduction-to-the-appearance-api-images/image54.png "Establecer el tono de control apariencia")](introduction-to-the-appearance-api-images/image54.png)
+ [![](introduction-to-the-appearance-api-images/image54.png "Establecer el tono de control apariencia")](introduction-to-the-appearance-api-images/image54.png#lightbox)
 
 `Appearance` propiedades se deben establecer al principio del ciclo de vida de aplicación, como en el AppDelegate `FinishedLaunching` evento, o en un ViewController antes de que se muestran los controles afectados.
 

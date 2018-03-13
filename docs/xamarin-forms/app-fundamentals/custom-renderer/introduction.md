@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: a9908429994f4575a9e41936d500bfd8906a843b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 837d75bd4ecde92d4c375c680a5f5e7ff231f825
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>Introducción a los representadores de personalizado
 
@@ -52,7 +52,7 @@ El `MyEntry` control es un `Entry` controla dónde el `BackgroundColor` se estab
 El `local` prefijo de espacio de nombres puede ser cualquier cosa. Sin embargo, el `namespace` y `assembly` valores deben coincidir con los detalles del control personalizado. Una vez que se declara el espacio de nombres, el prefijo se utiliza para hacer referencia al control personalizado.
 
 > [!NOTE]
-> **Tenga en cuenta**: definir la `xmlns` es mucho más sencillo en PCLs que los proyectos compartidos. Una PCL se compila en un ensamblado, por lo que es fácil determinar lo que el `assembly=CustomRenderer` valor debe ser. Cuando se usa proyectos compartidos, todos los recursos compartidos (incluido el código XAML) se compilan en cada uno de los proyectos de referencia, lo que significa que si los iOS, Android y Windows Phone proyectos tienen sus propios *nombres de ensamblado* es imposible para escribir el `xmlns` declaración porque el valor debe ser diferente para cada aplicación. Controles personalizados en XAML para los proyectos compartidos requerirá cada proyecto de aplicación esté configurado con el mismo nombre de ensamblado.
+> Definir la `xmlns` es mucho más sencillo en PCLs que los proyectos compartidos. Una PCL se compila en un ensamblado, por lo que es fácil determinar lo que el `assembly=CustomRenderer` valor debe ser. Cuando se usa proyectos compartidos, todos los recursos compartidos (incluido el código XAML) se compilan en cada uno de los proyectos de referencia, lo que significa que si los iOS, Android y Windows Phone proyectos tienen sus propios *nombres de ensamblado* es imposible para escribir el `xmlns` declaración porque el valor debe ser diferente para cada aplicación. Controles personalizados en XAML para los proyectos compartidos requerirá cada proyecto de aplicación esté configurado con el mismo nombre de ensamblado.
 
 El `MyEntry` control personalizado se representa en cada plataforma, con un fondo gris, como se muestra en las capturas de pantalla siguiente:
 
@@ -69,7 +69,7 @@ El proceso para crear una clase de representador personalizado es como sigue:
 1. Agregar un `ExportRenderer` atributo a la clase de representador personalizado para especificar que se utilizará para representar el control de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
-> **Tenga en cuenta**: para la mayoría de los elementos de Xamarin.Forms, es opcional proporcionar un representador personalizado en cada proyecto de la plataforma. Si no se ha registrado un representador personalizado, se usará el representador predeterminado para la clase base del control. Sin embargo, los representadores personalizados necesarios en cada proyecto de la plataforma al representar un [vista](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) o [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) elemento.
+> Para la mayoría de los elementos de Xamarin.Forms, es opcional proporcionar a un representador personalizado en cada proyecto de la plataforma. Si no se ha registrado un representador personalizado, se usará el representador predeterminado para la clase base del control. Sin embargo, los representadores personalizados necesarios en cada proyecto de la plataforma al representar un [vista](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) o [ViewCell](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) elemento.
 
 Los temas de esta serie proporcionará demostraciones y explicaciones de este proceso para los diferentes elementos de Xamarin.Forms.
 

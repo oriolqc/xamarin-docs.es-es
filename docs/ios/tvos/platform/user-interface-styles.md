@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 55a9e56585521a0a7b89a7b881dfecd4e1c14b08
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b970ff3570079c0e9fba10718ddcd75fbe857f2c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="new-user-interface-styles"></a>Estilos de la interfaz de usuario nueva
 
@@ -29,11 +29,11 @@ Como se mencionó anteriormente, tvOS 10 ahora admite un oscuro y la interfaz de
 
 El usuario puede cambiar el tema, vaya a **configuración** > **General** > **apariencia** y cambiar entre **claro**  y **oscuro**:
 
-[ ![](user-interface-styles-images/theme01.png "La aplicación de configuración")](user-interface-styles-images/theme01.png)
+[![](user-interface-styles-images/theme01.png "La aplicación de configuración")](user-interface-styles-images/theme01.png#lightbox)
 
 Cuando el **oscuro** tema está activado, todos los elementos de interfaz de usuario se cambiarán a texto claro sobre un fondo oscuro:
 
-[ ![](user-interface-styles-images/theme02.png "El tema oscuro")](user-interface-styles-images/theme02.png)
+[![](user-interface-styles-images/theme02.png "El tema oscuro")](user-interface-styles-images/theme02.png#lightbox)
 
 El usuario tiene la opción para cambiar el tema en cualquier momento y puede realizar por lo tanto, en función de la actividad actual, donde se encuentra la TV de Apple o la hora del día.
 
@@ -51,10 +51,10 @@ Para participar en compatibilidad con el tema claro y oscuro, haga lo siguiente:
 2. Seleccione el **origen** vista (desde la parte inferior del editor).
 3. Agregue una nueva clave y llámelo `UIUserInterfaceStyle`: 
 
-    [ ![](user-interface-styles-images/theme03.png "La clave de UIUserInterfaceStyle")](user-interface-styles-images/theme03.png)
+    [![](user-interface-styles-images/theme03.png "La clave de UIUserInterfaceStyle")](user-interface-styles-images/theme03.png#lightbox)
 4. Deje el tipo establecido en `String` y escriba un valor de `Automatic`: 
 
-    [ ![](user-interface-styles-images/theme04.png "Escriba automático")](user-interface-styles-images/theme04.png)
+    [![](user-interface-styles-images/theme04.png "Escriba automático")](user-interface-styles-images/theme04.png#lightbox)
 5. Guarde los cambios en el archivo.
 
 Hay tres valores posibles para la `UIUserInterfaceStyle` clave:
@@ -173,13 +173,13 @@ Para habilitar la compatibilidad de la colección de rasgo, haga lo siguiente:
 
 1. Haga doble clic en el archivo del guión gráfico en el **el Explorador de soluciones** y seleccione **abrir con** > **Xcode interfaz generador**: 
 
-    [ ![](user-interface-styles-images/theme05.png "Abrir con el generador de interfaz de Xcode")](user-interface-styles-images/theme05.png) 
+    [![](user-interface-styles-images/theme05.png "Abrir con el generador de interfaz de Xcode")](user-interface-styles-images/theme05.png#lightbox) 
 2. Para habilitar el soporte de colección de rasgo, pase a la **Inspector de archivo** y comprobar la **variaciones de rasgo de uso** propiedad en el **interfaz generador documento** sección: 
 
-    [ ![](user-interface-styles-images/theme06.png "Habilitar la compatibilidad con la colección de rasgo")](user-interface-styles-images/theme06.png)
+    [![](user-interface-styles-images/theme06.png "Habilitar la compatibilidad con la colección de rasgo")](user-interface-styles-images/theme06.png#lightbox)
 3. Confirmar el cambio para usar el rasgo variaciones: 
 
-    [ ![](user-interface-styles-images/theme07.png "El uso de alerta de rasgo variaciones")](user-interface-styles-images/theme07.png)
+    [![](user-interface-styles-images/theme07.png "El uso de alerta de rasgo variaciones")](user-interface-styles-images/theme07.png#lightbox)
 4. Guarde los cambios en el archivo del guión gráfico.
 
 Apple ha agregado las siguientes capacidades al editar guiones gráficos de tvOS en el generador de interfaz:
@@ -188,20 +188,20 @@ Apple ha agregado las siguientes capacidades al editar guiones gráficos de tvOS
     
     * Ahora tienen varias propiedades de un  **+**  junto a ellos que se puede hacer clic para agregar una versión específica de tema de interfaz de usuario: 
 
-        [ ![](user-interface-styles-images/theme08.png "Agregar una versión específica de tema de interfaz de usuario")](user-interface-styles-images/theme08.png) 
+        [![](user-interface-styles-images/theme08.png "Agregar una versión específica de tema de interfaz de usuario")](user-interface-styles-images/theme08.png#lightbox) 
     
     * El desarrollador puede especificar una nueva propiedad o haga clic en el **x** botón para quitar el equipo: 
 
-        [ ![](user-interface-styles-images/theme09.png "Especifique una nueva propiedad o haga clic en el botón x para quitarlo")](user-interface-styles-images/theme09.png)
+        [![](user-interface-styles-images/theme09.png "Especifique una nueva propiedad o haga clic en el botón x para quitarlo")](user-interface-styles-images/theme09.png#lightbox)
 * El desarrollador puede obtener la vista previa de un diseño de interfaz de usuario en el tema de la luz u oscuro desde en el generador de interfaz:
     
     * La parte inferior de la superficie de diseño permite al desarrollador cambiar el tema actual de la interfaz de usuario: 
 
-        [ ![](user-interface-styles-images/theme10.png "La parte inferior de la superficie de diseño")](user-interface-styles-images/theme10.png)
+        [![](user-interface-styles-images/theme10.png "La parte inferior de la superficie de diseño")](user-interface-styles-images/theme10.png#lightbox)
         
     * Se mostrará el nuevo tema en el generador de interfaz y se mostrarán los ajustes específicos de rasgo colección: 
 
-        [ ![](user-interface-styles-images/theme11.png "El tema que se muestra en el generador de interfaz")](user-interface-styles-images/theme11.png)
+        [![](user-interface-styles-images/theme11.png "El tema que se muestra en el generador de interfaz")](user-interface-styles-images/theme11.png#lightbox)
 
 Además, el simulador tvOS ahora tiene un método abreviado de teclado para permitir que el programador cambiar rápidamente entre los temas claro y oscuro cuando se depura una aplicación de tvOS. Use la **comando-Mayús-D** secuencia para alternar entre claro y oscuro del teclado.
 

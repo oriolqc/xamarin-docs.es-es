@@ -7,12 +7,12 @@ ms.assetid: D4BC889D-9164-49BB-9B7B-F6C4E4E109F1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 6139b5e27e9689da6366a2107acc14a6adcfc928
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 3df6dc72eaed74ad335596d55db8b1295b16f3c2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="cpu-architectures"></a>Arquitecturas de CPU
 
@@ -32,7 +32,7 @@ Por lo general, solo seleccionar explícitamente una arquitectura (o arquitectur
 
 En Visual Studio, haga doble clic en **propiedades** en su proyecto en **el Explorador de soluciones** y seleccione la **opciones Android** página. Haga clic en el **empaquetado** ficha y compruebe que **en tiempo de ejecución compartido de uso** está deshabilitado (si desactiva esta alerta le permite seleccionar qué ABIs para admitir de manera explícita). Haga clic en el **avanzadas** ficha y, en **propiedades avanzadas**, compruebe las arquitecturas que desea admitir:
 
-[ ![Selección de armeabi y armeabi v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png)
+[![Selección de armeabi y armeabi v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -40,12 +40,12 @@ Por lo general, solo seleccionar explícitamente una arquitectura (o arquitectur
 
 En Visual Studio para Mac, localice el proyecto en el **solución** rellenar, haga clic en el icono de engranaje situada junto a su proyecto y seleccione **opciones**. En el **opciones de proyecto** cuadro de diálogo, haga clic en **compilar Android**. Haga clic en el **General** ficha y compruebe que **uso compartido en tiempo de ejecución Mono** está deshabilitado (si desactiva esta alerta le permite seleccionar qué ABIs para admitir de manera explícita). Haga clic en el **avanzadas** ficha y, en **ABIs admite**, compruebe la ABIs para las arquitecturas que desea admitir:
 
-[ ![Selección de armeabi y armeabi v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png)
+[![Selección de armeabi y armeabi v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png#lightbox)
 
 -----
 
 
-Xamarin.Android es compatible con las arquitecturas siguientes:
+Xamarin.Android admite las siguientes arquitecturas:
 
 -   **armeabi** &ndash; CPU basado en ARM que admita al menos el conjunto de instrucciones ARMv5TE. Tenga en cuenta que `armeabi` no es segura para subprocesos y no debe usarse en dispositivos con varias CPU.
 
@@ -66,7 +66,7 @@ Para varias arquitecturas de CPU de destino, puede seleccionar más de un ABI (a
 No es necesario seleccionar **arm64 v8a** o **x86_64** como destino dispositivos de 64 bits; compatibilidad con 64 bits no es necesario para ejecutar la aplicación en hardware de 64 bits. Por ejemplo, los dispositivos ARM de 64 bits (como el [9 Nexus](http://www.google.com/nexus/9/)) puede ejecutar aplicaciones configuradas para `armeabi-v7a`. La principal ventaja de habilitar la compatibilidad de 64 bits es para que sea posible para la aplicación direccionar más memoria.
 
 > [!NOTE]
-> **Nota:**: compatibilidad en tiempo de ejecución de 64 bits es actualmente una característica experimental. Recuerde que los tiempos de ejecución de 64 bits son *no* necesarios para ejecutar la aplicación en dispositivos de 64 bits. 
+> compatibilidad en tiempo de ejecución de 64 bits es actualmente una característica experimental. Recuerde que los tiempos de ejecución de 64 bits son *no* necesarios para ejecutar la aplicación en dispositivos de 64 bits. 
 
 ## <a name="additional-information"></a>Información adicional
 

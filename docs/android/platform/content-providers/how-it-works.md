@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 142ef16606bbf47de073122791fa2509ed6b6353
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7802988833563469fcc25e03ee1bda2046591681
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="how-content-providers-work"></a>Trabajo de administración de contenido de proveedores
 
@@ -23,14 +23,12 @@ Hay dos clases implicadas en un `ContentProvider` interacción:
 
 Un proveedor de contenido normalmente está respaldado por una base de datos de SQLite, pero la API significa que utilizar código no es necesario saber nada sobre el SQL subyacente. Las consultas se realizan a través de un Uri con constantes para hacer referencia a nombres de columna (para reducir las dependencias en la estructura de datos subyacente) y un `ICursor` se devuelve para que el código usado recorrer en iteración.
 
-<a name="Consuming_a_ContentProvider" />
 
 ## <a name="consuming-a-contentprovider"></a>Consumir un ContentProvider
 
 `ContentProviders` exponer su funcionalidad a través de un Uri que se ha registrado en el **AndroidManifest.xml** de la aplicación que publica los datos. Es una convención que el Uri y las columnas de datos que se exponen deben estar disponibles como constantes que resulte sencillo enlazar a los datos. Integrados del Android `ContentProviders` todo proporciona clases de comodidad con constantes que hacen referencia a la estructura de datos en el [ `Android.Providers` ](https://developer.xamarin.com/api/namespace/Android.Provider/) espacio de nombres.
 
 
-<a name="Built-In_Providers" />
 
 ### <a name="built-in-providers"></a>Proveedores integrados
 
@@ -51,13 +49,12 @@ Android le proporciona acceso a una amplia gama de sistemas y el uso de datos de
 - *Correo de voz* &ndash; historial de mensajes de correo de voz.
 
 
-<a name="Classes_Overview" />
 
 ## <a name="classes-overview"></a>Información general de clases
 
 Las clases principales que se usan al trabajar con un `ContentProvider` se muestran a continuación:
 
-[![Diagrama de clases de aplicación de proveedor de contenido y las interacciones de la aplicación de Consuming](how-it-works-images/classdiagram1.png)](how-it-works-images/classdiagram1.png)
+[![Diagrama de clases de aplicación de proveedor de contenido y las interacciones de la aplicación de Consuming](how-it-works-images/classdiagram1.png)](how-it-works-images/classdiagram1.png#lightbox)
 
 En este diagrama, el `ContentProvider` implementa las consultas y registra el URI que otras aplicaciones que se usan para buscar datos. El `ContentResolver` actúa como un 'proxy' para el `ContentProvider` (consultar, insertar, actualizar y eliminar métodos). El `SQLiteOpenHelper` contiene los datos utilizados por el `ContentProvider`, pero no se expone directamente al consumir las aplicaciones.
 El `CursorAdapter` pasa del cursor devuelto por la `ContentResolver` para mostrar en un `ListView`. El `UriMatcher` es una clase auxiliar que analiza el URI al procesar las consultas.

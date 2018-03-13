@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 83ba2df0c50d37476ae5c06b4234cdc0ad063332
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 174d1cf974c39420b932d494d5b28c62d7fd1eb1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="troubleshooting"></a>Solución de problemas
 
@@ -22,7 +22,7 @@ El aprovisionamiento y la firma de código con iOS puede resultar bastante difí
 
 * Los equipos grandes deben abstenerse de usar el botón "Solucionar problema" en Xcode, como se muestra aquí:
 
-    [![](troubleshooting-images/fixissue.png "Cuadro de diálogo Corregir problemas")](troubleshooting-images/fixissue.png)
+    [![](troubleshooting-images/fixissue.png "Cuadro de diálogo Corregir problemas")](troubleshooting-images/fixissue.png#lightbox)
 
     Esto creará certificados y perfiles de aprovisionamiento nuevos. En el mejor de los casos, esto creará un perfil de aprovisionamiento cada vez que un miembro del equipo haga clic en él, provocando una desorganización en los perfiles. En el peor caso, revocará los certificados del resto de personas de la empresa, provocando que sus aplicaciones dejen de funcionar.
 

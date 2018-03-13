@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/22/2017
-ms.openlocfilehash: 605374c0f2bfe656e564e48d14ffe18ce5b7dfe5
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c6d10025ccc038ba160fe3c09f6ce92e97d916d2
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="files"></a>Archivos
 
@@ -40,18 +40,18 @@ Para incrustar un archivo en un **PCL** ensamblado, crear o agregar un archivo y
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[ ![Configurar incrusta la acción de compilación de recurso](files-images/vs-embeddedresource-sml.png "configuración EmbeddedResource BuildAction")](files-images/vs-embeddedresource.png "configuración EmbeddedResource BuildAction")
+[![Configurar incrusta la acción de compilación de recurso](files-images/vs-embeddedresource-sml.png "configuración EmbeddedResource BuildAction")](files-images/vs-embeddedresource.png#lightbox "configuración EmbeddedResource BuildAction")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Archivo de texto incrustado en la PCL, configurar la acción de compilación de recurso incrustado](files-images/xs-embeddedresource-sml.png "configuración EmbeddedResource BuildAction")](files-images/xs-embeddedresource.png "configuración EmbeddedResource BuildAction")
+[![Archivo de texto incrustado en la PCL, configurar la acción de compilación de recurso incrustado](files-images/xs-embeddedresource-sml.png "configuración EmbeddedResource BuildAction")](files-images/xs-embeddedresource.png#lightbox "configuración EmbeddedResource BuildAction")
 
 -----
 
 `GetManifestResourceStream` se utiliza para tener acceso al archivo incrustado utilizando su **Id. de recurso**. De forma predeterminada, el identificador de recurso es el nombre de archivo como precedida del espacio de nombres predeterminado para el proyecto se incrusta en - en este caso es el ensamblado **WorkingWithFiles** y el nombre de archivo es **PCLTextResource.txt**, por lo que es el identificador de recurso `WorkingWithFiles.PCLTextResource.txt`.
 
 ```csharp
-var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
 Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLTextResource.txt");
 string text = "";
 using (var reader = new System.IO.StreamReader (stream)) {
@@ -61,12 +61,12 @@ using (var reader = new System.IO.StreamReader (stream)) {
 
 El `text` variable, a continuación, puede utilizarse para mostrar el texto o en caso contrario, se usa en el código. Esta captura de pantalla de la [aplicación de ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/) muestra el texto que se representan en un `Label` control.
 
- [ ![Archivo de texto incrustado en PCL](files-images/pcltext-sml.png "archivo de texto incrustado en PCL mostrado en aplicación")](files-images/pcltext.png "archivo de texto incrustado en PCL que se muestran en la aplicación")
+ [![Archivo de texto incrustado en PCL](files-images/pcltext-sml.png "archivo de texto incrustado en PCL mostrado en aplicación")](files-images/pcltext.png#lightbox "archivo de texto incrustado en PCL que se muestran en la aplicación")
 
 Cargar y deserializar un documento XML es igual de sencillo. El código siguiente muestra un archivo XML que se está cargado y deserializa desde un recurso y, a continuación, enlaza a un `ListView` para su presentación. El archivo XML contiene una matriz de `Monkey` objetos (la clase se define en el código de ejemplo).
 
 ```csharp
-var assembly = typeof(LoadResourceText).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
 Stream stream = assembly.GetManifestResourceStream("WorkingWithFiles.PCLXmlResource.xml");
 List<Monkey> monkeys;
 using (var reader = new System.IO.StreamReader (stream)) {
@@ -77,7 +77,7 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [ ![Archivo XML se incrusta en la PCL, que se muestran en ListView](files-images/pclxml-sml.png "archivo XML incrustado en PCL que se muestran en ListView")](files-images/pclxml.png "archivo XML incrustado en PCL muestra de ListView")
+ [![Archivo XML se incrusta en la PCL, que se muestran en ListView](files-images/pclxml-sml.png "archivo XML incrustado en PCL que se muestran en ListView")](files-images/pclxml.png#lightbox "archivo XML incrustado en PCL muestra de ListView")
 
 <a name="Embedding_in_Shared_Projects" />
 
@@ -106,7 +106,7 @@ var resourcePrefix = "WorkingWithFiles.WinPhone.";
 
 Debug.WriteLine("Using this resource prefix: " + resourcePrefix);
 // note that the prefix includes the trailing period '.' that is required
-var assembly = typeof(SharedPage).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(SharedPage)).Assembly;
 Stream stream = assembly.GetManifestResourceStream
     (resourcePrefix + "SharedTextResource.txt");
 ```
@@ -129,7 +129,7 @@ Dado que a veces es difícil de entender por qué no se puede cargar un recurso 
 using System.Reflection;
 // ...
 // use for debugging, not in released app code!
-var assembly = typeof(SharedPage).GetTypeInfo().Assembly;
+var assembly = IntrospectionExtensions.GetTypeInfo(typeof(SharedPage)).Assembly;
 foreach (var res in assembly.GetManifestResourceNames()) {
     System.Diagnostics.Debug.WriteLine("found resource: " + res);
 }
@@ -141,7 +141,7 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 
 Dado que Xamarin.Forms se ejecuta en varias plataformas, cada uno con su propio sistema de archivos, no hay ningún método único para cargar y guardar archivos creados por el usuario. Para demostrar cómo guardar y cargar archivos de texto, que la aplicación de ejemplo incluye una pantalla que guarda y carga alguna entrada del usuario: a continuación se muestra la pantalla terminada:
 
- [ ![Guardar y cargar texto](files-images/saveandload-sml.png "guardar y cargar archivos de aplicación")](files-images/saveandload.png "guardar y cargar archivos de aplicación")
+ [![Guardar y cargar texto](files-images/saveandload-sml.png "guardar y cargar archivos de aplicación")](files-images/saveandload.png#lightbox "guardar y cargar archivos de aplicación")
 
 Cada plataforma tiene una estructura de directorios ligeramente diferentes y capacidades de sistema de archivos diferentes: por ejemplo Xamarin.iOS y Xamarin.Android admiten la mayor parte `System.IO` funcionalidad pero Windows Phone solo admite `IsolatedStorage` y [ `Windows.Storage` ](http://msdn.microsoft.com/library/windowsphone/develop/jj681698(v=vs.105).aspx) API.
 
@@ -250,5 +250,5 @@ Este documento han mostrado algunas operaciones de archivo simple para cargar lo
 
 - [FilesSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
 - [Crear, escribir y leer un archivo (UWP)](/windows/uwp/files/quickstart-reading-and-writing-files/)
-- [Ejemplos de Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
+- [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples) (Ejemplos de Xamarin.Forms)
 - [Libro de archivos](https://developer.xamarin.com/workbooks/xamarin-forms/application-fundamentals/files/files.workbook)

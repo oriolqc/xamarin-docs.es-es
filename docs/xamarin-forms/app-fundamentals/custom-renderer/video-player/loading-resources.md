@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 4556c053eec4b28ea863743720fe346a57da8997
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 08d07a82651887c9d87b908acd82296a3d80e43f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="loading-application-resource-videos"></a>La carga de vídeos de recursos de aplicación
 
@@ -174,7 +174,7 @@ Si el recurso de iOS se almacena en la **recursos** carpeta, y si el recurso UWP
 
 Aquí es esa página se ejecuta en las tres plataformas:
 
-[![Reproducir vídeo recursos](loading-resources-images/playvideoresource-small.png "reproducir vídeo recursos")](loading-resources-images/playvideoresource-large.png "reproducir vídeo recursos")
+[![Reproducir vídeo recursos](loading-resources-images/playvideoresource-small.png "reproducir vídeo recursos")](loading-resources-images/playvideoresource-large.png#lightbox "reproducir vídeo recursos")
 
 Ahora que ha visto cómo [cargar vídeos desde un URI de Web](web-videos.md) y cómo se juega a los recursos incrustados. Además, puede [cargar vídeos desde la biblioteca de vídeos del dispositivo](accessing-library.md).
 

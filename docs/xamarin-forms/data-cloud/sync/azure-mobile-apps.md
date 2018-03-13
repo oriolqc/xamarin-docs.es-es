@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2017
-ms.openlocfilehash: b7756c63901d3b4fbfea70587b3fdf8e5cf9df72
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 965d4987c154acc5a2f95d4ca622266ebdc2a1c2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="synchronizing-offline-data-with-azure-mobile-apps"></a>Sincronización de datos sin conexión con aplicaciones móviles de Azure
 
@@ -133,7 +133,7 @@ El `IMobileServiceSyncTable.PushAsync` método funciona en el contexto de sincro
 Incorporación de cambios se realiza mediante el `IMobileServiceSyncTable.PullAsync` método en una sola tabla. El primer parámetro a la `PullAsync` método es un nombre de consulta que se usa solo en el dispositivo móvil. Proporciona una consulta no null los resultados de nombre en el SDK de cliente de Azure Mobile lleve a cabo una *sincronización incremental*, donde cada vez que una operación de extracción devuelve resultados, la versión más reciente `updatedAt` marca de tiempo de los resultados se almacena en el equipo local tablas del sistema. A continuación, las operaciones de extracción recuperan solo registros después de esa marca de hora. O bien, *sincronización completa* puede lograr pasando `null` como el nombre de la consulta, que da como resultado todos los registros que se va a recuperar en cada operación de extracción. Después de cualquier operación de sincronización, los datos recibidos se insertan en el almacén local.
 
 > [!NOTE]
-> **Tenga en cuenta**: si una extracción se ejecuta en una tabla que tiene pendientes las actualizaciones locales, la extracción ejecutará en primer lugar una inserción en el contexto de sincronización. Esto minimiza los conflictos entre los cambios que ya se ponen en cola y los nuevos datos de la instancia de aplicaciones móviles de Azure.
+> Si una extracción se ejecuta en una tabla que tiene pendientes las actualizaciones locales, la extracción ejecutará en primer lugar una inserción en el contexto de sincronización. Esto minimiza los conflictos entre los cambios que ya se ponen en cola y los nuevos datos de la instancia de aplicaciones móviles de Azure.
 
 El `SyncAsync` método también incluye una implementación básica para controlar los conflictos cuando se cambia el mismo registro en ambos el almacén local y en la instancia de aplicaciones móviles de Azure. Cuando el conflicto es que los datos se ha actualizado en el almacén local y en la instancia de aplicaciones móviles de Azure, el `SyncAsync` método actualiza los datos en el almacén local de los datos almacenados en la instancia de aplicaciones móviles de Azure. Cuando se produce cualquier otro tipo de conflicto, la `SyncAsync` método descarta el cambio local. Esto controla el escenario donde existe un cambio local para los datos que se han eliminado de la instancia de aplicaciones móviles de Azure.
 
@@ -150,7 +150,7 @@ await todoTable.PurgeAsync(todoTable.Where(item => item.Done));
 Una llamada a `PurgeAsync` también desencadena una operación de inserción. Por lo tanto, todos los elementos que están marcados como completados localmente se enviará a la instancia de aplicaciones móviles de Azure antes de que se ha quitado del almacén local. Sin embargo, si hay operaciones pendientes de sincronización con la instancia de aplicaciones móviles de Azure, se producirá la purga un `InvalidOperationException` a menos que la `force` parámetro está establecido en `true`. Una estrategia alternativa consiste en Examinar el `IMobileServiceSyncContext.PendingOperations` propiedad, que devuelve el número de operaciones que aún no se hayan insertado a la instancia de aplicaciones móviles de Azure y realice únicamente la purga si la propiedad es cero pendientes.
 
 > [!NOTE]
-> **Tenga en cuenta**: invocar `PurgeAsync` con el `force` parámetro establecido en `true` los cambios pendientes perderá.
+> Invocar `PurgeAsync` con el `force` parámetro establecido en `true` los cambios pendientes perderá.
 
 ## <a name="initiating-synchronization"></a>Iniciar la sincronización
 

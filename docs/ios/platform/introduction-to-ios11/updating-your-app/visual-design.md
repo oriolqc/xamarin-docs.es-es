@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 2904a7da73f5bf6e8960f65239d1f8dc52ab1aba
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d66d8cd722aa9a7b6fe27db3f6128ee24309a1de
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="visual-design-updates"></a>Actualizaciones de diseño Visual
 
@@ -51,7 +51,7 @@ iOS 11 hizo más fácil de agregar un controlador de búsqueda directamente a la
 NavigationItem.SearchController = searchController;
 ```
 
-[![Título de navegación grandes con la barra de búsqueda](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png)
+[![Título de navegación grandes con la barra de búsqueda](visual-design-images/image8-sml.png)](visual-design-images/image8-sml.png#lightbox)
 
 Dependiendo de la funcionalidad de la aplicación, puede o sin necesidad de la barra de búsqueda para ocultar cuando un usuario se desplaza a través de una lista. Se puede ajustar mediante el `HidesSearchBarWhenScrolling` propiedad.
 
@@ -75,7 +75,7 @@ iOS 7 [introdujo](~/ios/platform/introduction-to-ios7/ios7-ui.md#fullscreen) `to
 
 La zona segura es una nueva manera de pensar en el espacio de la aplicación y cómo se agregan restricciones entre una vista y una vista super visible. Por ejemplo, considere la siguiente imagen:
 
-[![Parte superior del área segura vs y Guía de diseño de la parte inferior](visual-design-images/image10-sml.png)](visual-design-images/image10.png)
+[![Parte superior del área segura vs y Guía de diseño de la parte inferior](visual-design-images/image10-sml.png)](visual-design-images/image10.png#lightbox)
 
 Anteriormente, si agrega una vista y desea que esté visible en el área de color verde anterior, se restringen a la _inferior_ de la `TopLayoutGuide` y el _arriba_ de la `BottomLayoutGuide`. En iOS 11, debería restringir en su lugar a la _arriba_ y la _inferior_ de la zona segura. A continuación se muestra un ejemplo:
 

@@ -3,16 +3,16 @@ title: "Introducción a sugerencias automático"
 description: "Este artículo muestra cómo utilizar sugerencias automático en la aplicación de Xamarin.iOS para la interacción de unidad al permitir que el sistema de forma proactiva presentar automáticamente información útil al usuario."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
+ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 2762487d25befd15d8b57a002c5da4e9dcb15bb8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 15f649440b2a855189acff33afcef5e8272a0769
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-proactive-suggestions"></a>Introducción a sugerencias automático
 
@@ -63,7 +63,7 @@ Permite que la aplicación contactos (y póngase en contacto con información re
 
 ## <a name="ride-sharing-based-suggestions"></a>Invalidar sugerencias en función de uso compartido
 
-Si una aplicación de uso compartido de transporte usa el [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API, iOS 10 presentará como una opción en el selector de la aplicación a veces cuando el usuario es probable que se desee el transporte. La aplicación también debe registrarse como una aplicación de uso compartido de conducción especificando el `MKDirectionsModeRideShare` para el [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/prerelease/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW33) clave en su `Info.plist` archivo.
+Si una aplicación de uso compartido de transporte usa el [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API, iOS 10 presentará como una opción en el selector de la aplicación a veces cuando el usuario es probable que se desee el transporte. La aplicación también debe registrarse como una aplicación de uso compartido de conducción especificando el `MKDirectionsModeRideShare` para el [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) clave en su `Info.plist` archivo.
 
 Si la aplicación solo admite el uso compartido de transporte, la sugerencia de sistema comenzaría con *"Conseguir transporte para..."*, si se admiten otros tipos de dirección de enrutamiento (por ejemplo, paseo o bicicleta), el sistema usará *"Obtener direcciones para..."*
 
@@ -95,7 +95,7 @@ Todas estas características tienen algo en común, todas utilizan `NSUserActivi
 
 Como se indicó anteriormente, `NSUserActivity` ayuda a que el sistema entender la información que el usuario está trabajando actualmente con pantalla. `NSUserActivity` un estado atenuado almacena en caché mecanismo para capturar la actividad del usuario mientras navegan por la aplicación. Por ejemplo, si en una aplicación de restaurante:
 
-[ ![](proactive-suggestions-images/activity02.png "El estado de ligera NSUserActivity mecanismo el almacenamiento en caché")](proactive-suggestions-images/activity02.png)
+[![](proactive-suggestions-images/activity02.png "El estado de ligera NSUserActivity mecanismo el almacenamiento en caché")](proactive-suggestions-images/activity02.png#lightbox)
 
 Con las siguientes interacciones:
 
@@ -105,7 +105,7 @@ Con las siguientes interacciones:
 
 Eche un vistazo más de cerca en la última pantalla:
 
-[ ![](proactive-suggestions-images/activity03.png "Los detalles de NSUserActivity")](proactive-suggestions-images/activity03.png)
+[![](proactive-suggestions-images/activity03.png "Los detalles de NSUserActivity")](proactive-suggestions-images/activity03.png#lightbox)
 
 Aquí es la creación de la aplicación un `NSUserActivity` y se ha rellenado con información para volver a crear el estado más tarde. La aplicación también incluye algunos metadatos como el nombre y la dirección de la ubicación. Con esta actividad creada, la aplicación permite iOS saber que representa el estado del usuario actual.
 
@@ -324,7 +324,7 @@ Interacciones contacto se implementan en la aplicación con `NSUserActivity` y e
 
 Eche un vistazo a cómo la aplicación puede donar interacciones:
 
-[ ![](proactive-suggestions-images/activity04.png "Información general de las interacciones de donación")](proactive-suggestions-images/activity04.png)
+[![](proactive-suggestions-images/activity04.png "Información general de las interacciones de donación")](proactive-suggestions-images/activity04.png#lightbox)
 
 La aplicación crea un `INInteraction` objeto que contiene un **intención** (`INIntent`), **participantes** y **metadatos**. El **intención** representa una acción del usuario, como realizar una llamada de vídeo o enviar un mensaje de texto. El **participantes** incluyen las personas que reciben la comunicación. El **metadatos** define información adicional, como enviar correctamente el mensaje, etcetera.
 
@@ -334,7 +334,7 @@ Una vez completa la interacción, llame a la `DonateInteraction` método para in
 
 Cuando el usuario interactúa con la aplicación de la tarjeta de contacto, obtiene incluirse la interacción con un `NSUserActivity`, que, a continuación, se usa para iniciar la aplicación:
 
-[ ![](proactive-suggestions-images/activity05.png "Obtiene incluirse la interacción con un NSUserActivity que se usa para iniciar la aplicación")](proactive-suggestions-images/activity05.png)
+[![](proactive-suggestions-images/activity05.png "Obtiene incluirse la interacción con un NSUserActivity que se usa para iniciar la aplicación")](proactive-suggestions-images/activity05.png#lightbox)
 
 Eche un vistazo en el siguiente ejemplo de un intento de mensaje de envío:
 
@@ -449,7 +449,7 @@ Algunos antecedentes Schema.org:
 - Hay más de 500 esquemas que representan los distintos conceptos disponibles.
 - Mediante la implementación, en el sitio Web, el desarrollador puede adquirir algunas de las ventajas del uso de `NSUserActivity` en una aplicación nativa.
 
-Los esquemas están organizados en un árbol como estructura, donde los tipos específicos como *restaurante*, heredar de tipos más genéricos como *empresa Local*. Para obtener más información, vea [Schema.org](#http://schema.org).
+Los esquemas están organizados en un árbol como estructura, donde los tipos específicos como *restaurante*, heredar de tipos más genéricos como *empresa Local*. Para obtener más información, vea [Schema.org](http://schema.org).
 
 Por ejemplo, si la página web incluye los siguientes datos:
 

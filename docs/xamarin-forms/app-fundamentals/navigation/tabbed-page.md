@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 97ca114f1160168c7fd9439e31dc475bc37b0467
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 2ec783b6963fc4ae14166ebf1e56bf8a802ba8b4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tabbed-page"></a>Página con pestañas
 
@@ -97,7 +97,7 @@ public class MainPageCS : TabbedPage
 El [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) se rellena con dos secundarios [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) objetos. El primer elemento secundario es un [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instancia y la segunda pestaña es un [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) que contiene un `ContentPage` instancia.
 
 > [!NOTE]
-> **Tenga en cuenta**: el [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) no es compatible con la virtualización de la interfaz de usuario. Por lo tanto, el rendimiento puede verse afectado si la `TabbedPage` contiene demasiados elementos secundarios.
+> El [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TabbedPage/) no es compatible con la virtualización de la interfaz de usuario. Por lo tanto, el rendimiento puede verse afectado si la `TabbedPage` contiene demasiados elementos secundarios.
 
 El siguientes capturas de pantalla se muestra la `TodayPage` [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instancia, que se muestra en el *hoy* ficha:
 

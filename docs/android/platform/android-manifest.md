@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 0f270111ad4e10f035a3cb695564d789f40097fd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: aa2d2ce6cabe9c394b9807ca3d6328da5b4ba311
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-the-android-manifest"></a>Trabajar con el manifiesto de Android
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -24,7 +23,6 @@ ms.lasthandoff: 02/27/2018
 **AndroidManifest.xml** se genera como parte del proceso de compilación y el XML se encuentra en **Properties/AndroidManifest.xml** se combina con XML que se genera a partir de atributos personalizados. El cuadro combinado **AndroidManifest.xml** reside en el **obj** subdirectorio; por ejemplo, se encuentra en **obj/Debug/android/AndroidManifest.xml** para las compilaciones de depuración . El proceso de combinación es trivial: usa atributos personalizados en el código para generar elementos XML, y *inserta* esos elementos en **AndroidManifest.xml**. 
 
 
-<a name="The_Basics" />
 
 ## <a name="the-basics"></a>Conceptos básicos
 
@@ -60,7 +58,6 @@ Este ejemplo produce el siguiente fragmento de xml para agregarse a **AndroidMan
 El `[Activity]` atributo no tiene ningún efecto `abstract` tipos; `abstract` se omiten los tipos.
 
 
-<a name="Activity_Name" />
 
 ### <a name="activity-name"></a>Nombre de actividad
 
@@ -83,7 +80,6 @@ Este ejemplo produce el siguiente fragmento de xml:
 
 *Tenga en cuenta*: debe usar el `Name` propiedad solo por razones de compatibilidad con versiones anteriores, como por ejemplo, cambiar el nombre puede ralentizar la búsqueda de tipos en tiempo de ejecución. Si tiene código heredado que se espera que el nombre del tipo predeterminado de la actividad se basen en el espacio de nombres minúscula y el nombre de clase, vea [Android nombres de contenedor CCW](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Android_Callable_Wrapper_Naming) para obtener sugerencias sobre el mantenimiento de compatibilidad. 
 
-<a name="Activity_Title_Bar" />
 
 ### <a name="activity-title-bar"></a>Barra de título de la actividad
 
@@ -104,7 +100,6 @@ Este ejemplo produce el siguiente fragmento de xml:
           android:name="md5a7a3c803e481ad8926683588c7e9031b.MainActivity" />
 ```
 
-<a name="Launchable_from_Application_Chooser" />
 
 ### <a name="launchable-from-application-chooser"></a>Puede iniciar desde el selector de la aplicación
 
@@ -130,7 +125,6 @@ Este ejemplo produce el siguiente fragmento de xml:
 ```
 
 
-<a name="Activity_Icon" />
 
 ### <a name="activity-icon"></a>Icono de actividad
 
@@ -155,7 +149,6 @@ Este ejemplo produce el siguiente fragmento de xml:
 </activity>
 ```
 
-<a name="Permissions" />
 
 ### <a name="permissions"></a>Permisos
 
@@ -178,11 +171,9 @@ En la versión de versión del manifiesto de compilación (en **obj/Debug/androi
 
 
 
-<a name="Advanced_Features" />
 
 ## <a name="advanced-features"></a>Características avanzadas
 
-<a name="Intent_Actions_and_Features" />
 
 ### <a name="intent-actions-and-features"></a>Funciones y acciones de intención
 
@@ -214,7 +205,6 @@ Este ejemplo produce el siguiente fragmento de xml:
 </activity>
 ```
 
-<a name="Application_Element" />
 
 ### <a name="application-element"></a>Elemento de la aplicación
 
@@ -243,7 +233,6 @@ El `Application` elemento no es la única manera de configurar `<application>` a
 Hay muchos atributos de toda la aplicación que se pueden configurar en el `<application>` elemento; para obtener más información acerca de estas opciones, consulte la [propiedades públicas](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/#Public_Properties) sección de [ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/). 
 
 
-<a name="List_of_Custom_Attributes" />
 
 ## <a name="list-of-custom-attributes"></a>Lista de atributos personalizados
 

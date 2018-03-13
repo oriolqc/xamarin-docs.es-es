@@ -7,17 +7,17 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/02/2018
-ms.openlocfilehash: c02ad78cc15f2d71f19d605f7a4d6889bbe3ca01
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ec8d000f235a8e0da5198e425f9f1e630b2c662a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough---using-touch-in-android"></a>Tutorial: usar táctil en Android
 
 Permítanos vea cómo usar los conceptos de la sección anterior en una aplicación en funcionamiento. Se creará una aplicación con cuatro actividades. La primera actividad será un menú o un panel de control que se iniciará las otras actividades para demostrar las distintas API. Captura de pantalla siguiente muestra la actividad principal:
 
-[![Captura de pantalla de ejemplo con Me toque el botón](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png)
+[![Captura de pantalla de ejemplo con Me toque el botón](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png#lightbox)
 
 La primera actividad, ejemplo Touch, mostrará cómo utilizar controladores de eventos para tocar las vistas. La actividad reconocedor de movimientos demostrará cómo subclase `Android.View.Views` y controlar los eventos, así como se muestra cómo controlar los gestos de acercar. La tercera y última actividad, **gesto personalizado**, se muestra cómo usar gestos personalizados. Para facilitar las cosas seguir y absorber, se podrá dividir este tutorial en secciones, con cada sección centrarse en una de las actividades.
 
@@ -25,7 +25,7 @@ La primera actividad, ejemplo Touch, mostrará cómo utilizar controladores de e
 
 -   Abra el proyecto **TouchWalkthrough\_iniciar**. El **MainActivity** es establecidos en vaya &ndash; depende de nosotros implementar el comportamiento de entrada táctil en la actividad. Si ejecuta la aplicación y haga clic en **ejemplo táctil**, deben iniciar las siguientes actividades:
 
-    [![Captura de pantalla de actividad con Touch comienza muestra](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+    [![Captura de pantalla de actividad con Touch comienza muestra](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 -   Ahora que hemos confirmado que inicia la actividad, abra el archivo **TouchActivity.cs** y agregue un controlador para el `Touch` eventos de la `ImageView`:
 
@@ -63,11 +63,11 @@ Observe que en el código anterior que se tratan los `Move` y `Down` acción de 
 
 Cada vez que el usuario los últimos retoques el `ImageView`, `Touch` se generará el evento y el controlador mostrará el mensaje **Touch comienza** en la pantalla, como se muestra en la captura de pantalla siguiente:
 
-[![Captura de pantalla de actividad táctil se inicie](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png)
+[![Captura de pantalla de actividad táctil se inicie](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
 Siempre y cuando el usuario toca el `ImageView`, **Touch comienza** se mostrará en el `TextView`. Cuando el usuario ya no se usa el `ImageView`, el mensaje **Touch finaliza** se mostrará en el `TextView`, tal y como se muestra en la captura de pantalla siguiente:
 
-[![Captura de pantalla de actividad con Touch finaliza](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png)
+[![Captura de pantalla de actividad con Touch finaliza](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png#lightbox)
 
 
 ## <a name="gesture-recognizer-activity"></a>Actividad de reconocedor de gestos
@@ -234,11 +234,11 @@ Ahora permite implementar la actividad reconocedor de movimientos. Esta activida
 -   Ahora ejecute la aplicación e inicie la actividad reconocedor de movimientos.
     Cuando se inicia la pantalla debe ser similar a la captura de pantalla siguiente:
 
-    [![Pantalla de inicio de reconocedor de movimiento con icono de Android](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png)
+    [![Pantalla de inicio de reconocedor de movimiento con icono de Android](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
 
 -   Ahora pulse en el icono y arrastrarla alrededor de la pantalla. Pruebe el gesto de gesto de acercamiento. En algún momento la pantalla puede ser algo parecido a la captura de pantalla siguiente:
 
-    [![Icono de mover movimientos por la pantalla](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png)
+    [![Icono de mover movimientos por la pantalla](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png#lightbox)
 
 En este punto debe disponer de un pat en la parte posterior: acaba de implementar gesto de acercamiento en una aplicación Android. Tómese un descanso rápido y permite pasar a la tercera y última actividad en este tutorial &ndash; con gestos personalizados.
 
@@ -341,17 +341,17 @@ Para los fines de este tutorial, la biblioteca de movimientos ya creada con la h
 
 -   Ejecute la aplicación e iniciar la actividad personalizada reconocedor de movimientos. Debería ser similar a la captura de pantalla siguiente:
 
-    [![Captura de pantalla con comprobar mi imagen](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png)
+    [![Captura de pantalla con comprobar mi imagen](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png#lightbox)
 
     Ahora se dibuja una marca de verificación en la pantalla y el mapa de bits que se muestra debe ser similar a la se muestra en las capturas de pantalla siguiente:
 
-    [![Dibuja la marca de verificación](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png)
-    [![reconoce marca de verificación](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png)
+    [![Dibuja la marca de verificación](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
+    [![reconoce marca de verificación](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
     Por último, puede dibujar un garabato en la pantalla. La casilla de verificación debería cambiar a la imagen original tal y como se muestra en estas capturas de pantalla:
 
-    [![Dibujar en la pantalla](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png)
-    [![se muestra la imagen Original](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png)
+    [![Dibujar en la pantalla](android-touch-walkthrough-images/image22.png)](android-touch-walkthrough-images/image22.png#lightbox)
+    [![se muestra la imagen Original](android-touch-walkthrough-images/image23.png)](android-touch-walkthrough-images/image23.png#lightbox)
 
 Ahora tiene una descripción de cómo integrar táctiles y los gestos en una aplicación Android con Xamarin.Android.
 

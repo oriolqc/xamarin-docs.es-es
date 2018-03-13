@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 9c9032b3206fa35d264bd69c94b7882e877b334f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ce850b7890265b82774534ca0daaf25bed7e0c2d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS solución de problemas
 
@@ -61,7 +61,7 @@ Esta página contiene información adicional y soluciones alternativas para cara
 - No se puede agregar dos `WKNotificationControllers` a un guión gráfico.
     Solución alternativa: La `notificationCategory` siempre se inserta el elemento en el guión gráfico XML con el mismo `id`. Para solucionar este problema, puede agregar controladores de notificación dos (o más), abra el archivo del guión gráfico en un editor de texto y, a continuación, cambie manualmente el `id` elemento para que sea único.
 
-    [ ![](troubleshooting-images/duplicate-id-sml.png "Abrir el guión gráfico en un editor de texto y cambie manualmente el elemento Id. para que sea único")](troubleshooting-images/duplicate-id.png)
+    [![](troubleshooting-images/duplicate-id-sml.png "Abrir el guión gráfico en un editor de texto y cambie manualmente el elemento Id. para que sea único")](troubleshooting-images/duplicate-id.png#lightbox)
 
 - Puede ver un error "no se ha creado la aplicación" al intentar iniciar la aplicación. Se produce tras un **limpiar** cuando el proyecto de inicio se establece en el proyecto de extensión de inspección.
     La solución consiste en seleccionar **generar > volver a generar todo** y, a continuación, vuelva a iniciar la aplicación.

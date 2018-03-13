@@ -7,21 +7,19 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 18c53ed6428eff911420c696d45b341d8e0fa5c1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1bf481e4999365f4afc52cb9dda83c6e627950e1
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-listviews-appearance"></a>Personalizar la apariencia de un control ListView
 
-<a name="overview" />
 
 ## <a name="overview"></a>Información general
 
 La apariencia de un control ListView viene determinada por el diseño de las filas que se va a mostrar. Para cambiar la apariencia de un `ListView`, usar un diseño de fila diferente.
 
-<a name="Built-in_Row_Views" />
 
 ## <a name="built-in-row-views"></a>Vistas de fila integrado
 
@@ -53,11 +51,11 @@ Hay doce vistas integradas que pueden hacer referencia mediante **Android.Resour
 
 Cada vista de fila integrado tiene un estilo integrado asociado a él. Estas capturas de pantalla muestran cómo aparece cada vista:
 
-[![Capturas de pantalla de TestListItem, SimpleSelectableListItem, SimpleListitem1 y SimpleListItem2](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png)
+[![Capturas de pantalla de TestListItem, SimpleSelectableListItem, SimpleListitem1 y SimpleListItem2](customizing-appearance-images/builtinviews.png)](customizing-appearance-images/builtinviews.png#lightbox)
 
-[![Capturas de pantalla de SimpleListItemActivated1, SimpleListItemActivated2, SimpleListItemChecked y SimpleListItemMultipleChecked](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png)
+[![Capturas de pantalla de SimpleListItemActivated1, SimpleListItemActivated2, SimpleListItemChecked y SimpleListItemMultipleChecked](customizing-appearance-images/builtinviews-2.png)](customizing-appearance-images/builtinviews-2.png#lightbox)
 
-[![Capturas de pantalla de SimpleListItemSingleChoice, TwoLineListItem, ActivityListItem y SimpleExpandableListItem](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png)
+[![Capturas de pantalla de SimpleListItemSingleChoice, TwoLineListItem, ActivityListItem y SimpleExpandableListItem](customizing-appearance-images/builtinviews-3.png)](customizing-appearance-images/builtinviews-3.png#lightbox)
 
 El **BuiltInViews/HomeScreenAdapter.cs** archivo de ejemplo (en el **BuiltInViews** solución) contiene el código para generar las pantallas de elemento de lista no se puede expandir. La vista se establece el `GetView` método similar al siguiente:
 
@@ -88,7 +86,6 @@ view = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleExpandableLi
 A continuación, se pueden establecer las propiedades de la vista de grupo y la vista secundaria haciendo referencia a la norma `Text1` y `Text2` controlar identificadores como se indicó anteriormente. La captura de pantalla de SimpleExpandableListItem (que se muestra arriba) proporciona un ejemplo de una vista de grupo de una línea (SimpleExpandableListItem1) y una vista de dos líneas secundarios (SimpleExpandableListItem2). Como alternativa, la vista de grupo se puede configurar para dos líneas (SimpleExpandableListItem2) y la vista secundaria puede configurarse para una línea (SimpleExpandableListItem1), o ambos grupo Vista y vista de elemento secundario puede tener el mismo número de líneas. 
 
 
-<a name="Accessories" />
 
 ## <a name="accessories"></a>Accesorios
 
@@ -102,7 +99,7 @@ Las filas pueden tener accesorios que se agregan a la derecha de la vista para i
 
 Los accesorios mencionados anteriormente se ilustran en las siguientes pantallas, en su orden correspondiente:
 
-[![Capturas de pantalla de SimpleListItemChecked, SimpleListItemSingleChoice y SimpleListItemMultipleChoice con accesorios](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png)
+[![Capturas de pantalla de SimpleListItemChecked, SimpleListItemSingleChoice y SimpleListItemMultipleChoice con accesorios](customizing-appearance-images/accessories.png)](customizing-appearance-images/accessories.png#lightbox)
 
 Para mostrar uno de estos accesorios pase el identificador de recurso de diseño necesarias para el adaptador, a continuación, establece manualmente el estado de selección de las filas solicitadas. Esta línea de código muestra cómo crear y asignar un `Adapter` mediante uno de estos diseños:
 
@@ -112,7 +109,6 @@ ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListI
 
 El `ListView` sí es compatible con diferentes modos de selección, sin tener en cuenta el descriptor de acceso que se va a mostrar. Para evitar confusiones, use `Single` el modo de selección con `Checked` y `SingleChoice` Accesorios y `Multiple` modo con el `MultipleChoice` estilo. El modo de selección se controla mediante la `ChoiceMode` propiedad de la `ListView`.
 
-<a name="Handling_API_Level" />
 
 ### <a name="handling-api-level"></a>Control de nivel de API
 
@@ -137,7 +133,6 @@ lv.ChoiceMode = Android.Widget.ChoiceMode.Single; // Single
 */
 ```
 
-<a name="Selecting_Items_Programmatically" />
 
 ### <a name="selecting-items-programmatically"></a>Seleccionar elementos mediante programación
 
@@ -165,7 +160,6 @@ for (var i = 0; i < sparseArray.Size(); i++ )
 Console.WriteLine();
 ```
 
-<a name="Creating_Custom_Row_Layouts" />
 
 ## <a name="creating-custom-row-layouts"></a>La creación de diseños de fila personalizado
 
@@ -188,7 +182,6 @@ En este ejemplo se diferencia de los ejemplos anteriores de varias maneras:
 
 Estos cambios se detallan a continuación, a partir de creación de vista de la actividad y la vista de fila personalizado y, a continuación, que tratan sobre las modificaciones en el adaptador y la actividad para representarlos.
 
-<a name="Adding_a_ListView_to_an_Activity_Layout" />
 
 ### <a name="adding-a-listview-to-an-activity-layout"></a>Agregar un control ListView a un diseño de actividad
 
@@ -220,7 +213,6 @@ Dado que `HomeScreen` ya no hereda de `ListActivity` no tiene una vista predeter
 
 La ventaja de utilizar un `Activity` con un diseño personalizado (en lugar de un `ListActivity`) reside en su capacidad agregar controles adicionales a la pantalla, como el encabezado `TextView` en este ejemplo.
 
-<a name="Creating_a_Custom_Row_Layout" />
 
 ### <a name="creating-a-custom-row-layout"></a>Crear un diseño de fila personalizado
 
@@ -267,7 +259,6 @@ Otro archivo de diseño AXML es necesario para contener el diseño personalizado
 
 Mientras que un diseño de fila personalizado puede contener muchos controles diferentes, desplazamiento rendimiento puede verse afectado por diseños complejos y uso de imágenes (especialmente si tienen que cargarse a través de la red). Vea el artículo de Google para obtener más información sobre solucionando problemas de rendimiento de desplazamiento.
 
-<a name="Referencing_a_Custom_Row_View" />
 
 ### <a name="referencing-a-custom-row-view"></a>Hacer referencia a una vista de fila personalizado
 
@@ -309,7 +300,6 @@ public class HomeScreenAdapter : BaseAdapter<TableItem> {
 }
 ```
 
-<a name="Referencing_the_Custom_ListView_in_the_Activity" />
 
 ### <a name="referencing-the-custom-listview-in-the-activity"></a>Hacer referencia a la vista de lista personalizado en la actividad
 
@@ -343,10 +333,9 @@ void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 
 La pantalla resultante tiene el siguiente aspecto:
 
-[![Captura de pantalla de la CustomRowView resultante](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png)
+[![Captura de pantalla de la CustomRowView resultante](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
 
 
-<a name="Customizing_the_Row_Selector_Color" />
 
 ### <a name="customizing-the-row-selector-color"></a>Personalizar el Color del Selector de fila
 
@@ -386,10 +375,9 @@ android:background="@drawable/CustomSelector"
 
 Una fila seleccionada y la correspondiente `Toast` mensaje ahora es similar al siguiente:
 
-[![Una fila seleccionada en color naranja, con el mensaje de notificación del sistema muestra el nombre de la fila seleccionada](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png)
+[![Una fila seleccionada en color naranja, con el mensaje de notificación del sistema muestra el nombre de la fila seleccionada](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
 
 
-<a name="Preventing_Flickering_on_Custom_Layouts" />
 
 ### <a name="preventing-flickering-on-custom-layouts"></a>Evitar el parpadeo en los diseños personalizados
 

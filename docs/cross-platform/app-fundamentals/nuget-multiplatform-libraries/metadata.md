@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 8afce6021c2816f354e26ccecd7d0c40ceb2a9bd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: babbe0344130dc0ce38023eabe7479d2b464276b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="editing-nuget-metadata"></a>Edición de metadatos de NuGet
 
@@ -26,7 +26,7 @@ El **metadatos** sección configura los valores utilizados en el [ **.nuspec** a
 
 El **General** pestaña contiene cuatro campos que deben especificarse para generar un paquete de NuGet:
 
-[ ![](metadata-images/metadata-general-sml.png "Ventana de metadatos necesarios del paquete de NuGet")](metadata-images/metadata-general.png)
+[![](metadata-images/metadata-general-sml.png "Ventana de metadatos necesarios del paquete de NuGet")](metadata-images/metadata-general.png#lightbox)
 
 - **Id. de** : el identificador del paquete, que debe ser único en Nuget.org (o siempre que se distribuirá el paquete). Siga este [instrucciones](https://docs.microsoft.com/en-us/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) y utilizar únicamente caracteres que son válidos en una dirección URL (sin espacios y evitar la mayoría de caracteres especiales).
 - **Versión** : elija un número de versión coherente con [reglas de control de versiones de NuGet](https://docs.microsoft.com/en-us/nuget/create-packages/dependency-versions).
@@ -45,7 +45,7 @@ Para obtener más información, consulte el [referencia de elementos necesarios]
 
 El **detalles** pestaña contiene los campos opcionales que se incluirá en el archivo de manifiesto del paquete de NuGet.
 
-[ ![](metadata-images/metadata-detail-sml.png "Ventana de metadatos opcional del paquete de NuGet")](metadata-images/metadata-detail.png)
+[![](metadata-images/metadata-detail-sml.png "Ventana de metadatos opcional del paquete de NuGet")](metadata-images/metadata-detail.png#lightbox)
 
 Hacer referencia a la [opcional de elementos de referencia](https://docs.microsoft.com/en-us/nuget/schema/nuspec#optional-metadata-elements) para obtener más información acerca de los campos obligatorios y opcionales.
 

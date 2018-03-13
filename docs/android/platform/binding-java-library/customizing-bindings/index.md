@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 09/25/2017
-ms.openlocfilehash: e71d497201cc2d8f2b3e2b8b252e5f963806a75b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 14372c3ca42d1ba4a8ade1248f3c5f3210cc7e46
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-bindings"></a>Personalizar los enlaces
 
 _Puede personalizar un enlace Xamarin.Android mediante la edición de los metadatos que controla el proceso de enlace. Estas modificaciones manuales a menudo son necesarias para resolver errores de compilación y dar forma a la API resultante para que resulte más coherente con C# / .NET. Estas guías explican la estructura de estos metadatos, cómo modificar los metadatos y cómo usar JavaDoc para recuperar los nombres de parámetros de método._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Información general
  
@@ -34,7 +33,6 @@ Xamarin.Android automatiza gran parte del proceso de enlace; Sin embargo, en alg
 
 Hacer que algunos o todos estos cambios mediante la modificación de los metadatos que controla el proceso de enlace.
 
-<a name="guides" />
 
 ## <a name="guides"></a>Guías
 

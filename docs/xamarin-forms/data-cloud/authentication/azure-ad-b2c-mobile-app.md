@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 3a7d89d9b0f383d365b18364e5d902ee0642f395
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c28ddc09b07066de67f5c974cf5c2128726c6932
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="integrating-azure-active-directory-b2c-with-azure-mobile-apps"></a>Integración de Azure Active Directory B2C con aplicaciones móviles de Azure
 
@@ -21,7 +21,7 @@ _Azure Active B2C de directorio es una solución de administración de identidad
 ![](~/media/shared/preview.png "Esta API es actualmente una versión preliminar")
 
 > [!NOTE]
-> **Tenga en cuenta**: el [biblioteca de autenticación de Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) está en vista previa, pero es adecuado para su uso en un entorno de producción. Sin embargo, se puede ser cambios importantes en la API, formato de la memoria caché interna y otros mecanismos de la biblioteca, que puede afectar a la aplicación.
+> El [biblioteca de autenticación de Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) está en vista previa, pero es adecuado para su uso en un entorno de producción. Sin embargo, se puede ser cambios importantes en la API, formato de la memoria caché interna y otros mecanismos de la biblioteca, que puede afectar a la aplicación.
 
 ## <a name="overview"></a>Información general
 
@@ -72,7 +72,7 @@ Un flujo de trabajo administrado por el cliente de autenticación, el inquilino 
 
 Captura de pantalla siguiente muestra esta configuración:
 
-[![](azure-ad-b2c-mobile-app-images/client-flow-config-sml.png "Configuración de Azure Active Directory B2C")](azure-ad-b2c-mobile-app-images/client-flow-config.png "configuración de Azure Active Directory B2C")
+[![](azure-ad-b2c-mobile-app-images/client-flow-config-sml.png "Configuración de Azure Active Directory B2C")](azure-ad-b2c-mobile-app-images/client-flow-config.png#lightbox "configuración de Azure Active Directory B2C")
 
 La directiva utilizada en el B2C de Azure Active Directory inquilino también debe configurarse para que la dirección URL de respuesta se establece en el mismo esquema de dirección URL personalizado, seguido por `://auth/`. Captura de pantalla siguiente muestra esta configuración:
 
@@ -158,7 +158,7 @@ Un flujo de trabajo de autenticación de servidor administrado, el inquilino de 
 
 Captura de pantalla siguiente muestra esta configuración:
 
-[![](azure-ad-b2c-mobile-app-images/server-flow-config-sml.png "Configuración de Azure Active Directory B2C")](azure-ad-b2c-mobile-app-images/server-flow-config.png "configuración de Azure Active Directory B2C")
+[![](azure-ad-b2c-mobile-app-images/server-flow-config-sml.png "Configuración de Azure Active Directory B2C")](azure-ad-b2c-mobile-app-images/server-flow-config.png#lightbox "configuración de Azure Active Directory B2C")
 
 La directiva utilizada en el B2C de Azure Active Directory inquilino también debe configurarse para que la dirección URL de respuesta se establece en la dirección de la aplicación móvil de Azure, seguido por `/.auth/login/aad/callback`. Captura de pantalla siguiente muestra esta configuración:
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 2d9c2b27de7addc0ed1faeed038db81e2470087f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: da9b9230a466c70cd584a00af848ffe87dacbc5b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="coreimage"></a>CoreImage
 
@@ -214,7 +214,7 @@ El [CIFilter Class Reference](https://developer.apple.com/library/prerelease/ios
 
 La salida de categorías de lista es similar al siguiente en el simulador, puede desplazarse a través de la lista para ver todos los filtros y sus parámetros.
 
- [ ![](introduction-to-coreimage-images/coreimage05.png "La salida de categorías de lista es similar al siguiente en el simulador")](introduction-to-coreimage-images/coreimage05.png)
+ [![](introduction-to-coreimage-images/coreimage05.png "La salida de categorías de lista es similar al siguiente en el simulador")](introduction-to-coreimage-images/coreimage05.png#lightbox)
 
 Cada filtro enumerado se haya expuesto como una clase en Xamarin.iOS, por lo que también puede explorar la API Xamarin.iOS.CoreImage en el Explorador de ensamblado o el uso de Autocompletar en Visual Studio para Mac o en Visual Studio. 
 

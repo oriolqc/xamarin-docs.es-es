@@ -7,11 +7,11 @@ ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0b3471f607bbde6560af597b6b901e6fbd1ec0b0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 25220f37433037b55f13c4de5a07c0c09173a269
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="handoff"></a>Handoff
 
@@ -19,7 +19,7 @@ _Este artículo cubre trabajar con entrega en una aplicación Xamarin.iOS para t
 
 Apple incorporó entrega en iOS 8 y OS X Yosemite (10.10) para proporcionar un mecanismo común para el usuario transferir actividades iniciadas en uno de sus dispositivos a otro dispositivo que ejecuta la misma aplicación u otra aplicación que admita la misma actividad.
 
-[ ![](handoff-images/handoff02.png "Un ejemplo de llevar a cabo una operación de entrega")](handoff-images/handoff02.png)
+[![](handoff-images/handoff02.png "Un ejemplo de llevar a cabo una operación de entrega")](handoff-images/handoff02.png#lightbox)
 
 En este artículo se echar un vistazo rápido a habilitar la actividad de uso compartido en una aplicación de Xamarin.iOS y cubrir el marco de trabajo de entrega en detalle:
 
@@ -45,7 +45,7 @@ Entrega pasa la configuración mínima de información para definir la actividad
 
 En el dispositivo receptor, el usuario recibirá una notificación de que hay una actividad de continuación. Si el usuario decide seguir la actividad en el nuevo dispositivo, se inicia la aplicación especificada (si no se está ejecutando) y la carga desde el `NSUserActivity` se usa para reiniciar la actividad.
 
-[ ![](handoff-images/handoffinteractions.png "Información general sobre continuar las actividades del usuario")](handoff-images/handoffinteractions.png)
+[![](handoff-images/handoffinteractions.png "Información general sobre continuar las actividades del usuario")](handoff-images/handoffinteractions.png#lightbox)
 
 Solo las aplicaciones que comparten el mismo desarrollador Id. de equipo y responderán a una determinada _tipo de actividad_ son aptas para la continuación. Una aplicación define los tipos de actividad que admite en el `NSUserActivityTypes` clave de su **Info.plist** archivo. Por tanto, un dispositivo ininterrumpido elige la aplicación para realizar la continuación basándose en el identificador de equipo, tipo de actividad y, opcionalmente, el _título de la actividad_.
 
@@ -114,21 +114,21 @@ Haga lo siguiente:
 3. Si aún no lo ha hecho, haga clic en **identificadores** y crear un identificador para la aplicación (por ejemplo, `com.company.appname`), persona editar su identificador existente.
 4. Asegúrese de que el **iCloud** se ha comprobado el servicio para el Id. especificado: 
 
-    [ ![](handoff-images/provision01.png "Habilitar el servicio de iCloud para el identificador especificado.")](handoff-images/provision01.png)
+    [![](handoff-images/provision01.png "Habilitar el servicio de iCloud para el identificador especificado.")](handoff-images/provision01.png#lightbox)
 5. Guarde los cambios.
 4. Haga clic en **perfiles de aprovisionamiento** > **desarrollo** y crear un nuevo desarrollo de perfil de aprovisionamiento para su aplicación: 
 
-    [ ![](handoff-images/provision02.png "Crear un nuevo perfil de aprovisionamiento para la aplicación de desarrollo")](handoff-images/provision02.png)
+    [![](handoff-images/provision02.png "Crear un nuevo perfil de aprovisionamiento para la aplicación de desarrollo")](handoff-images/provision02.png#lightbox)
 5. Ya sea descargar e instalar el nuevo perfil de aprovisionamiento o use Xcode para descargar e instalar el perfil.
 6. Editar las opciones de proyecto Xamarin.iOS y asegúrese de que está usando el perfil de aprovisionamiento que acaba de crear: 
 
-    [ ![](handoff-images/provision03.png "Seleccione el perfil de aprovisionamiento que acaba de crear")](handoff-images/provision03.png)
+    [![](handoff-images/provision03.png "Seleccione el perfil de aprovisionamiento que acaba de crear")](handoff-images/provision03.png#lightbox)
 7. A continuación, edite la **Info.plist** de archivos y asegúrese de que está utilizando el identificador de aplicación que se usó para crear el perfil de aprovisionamiento: 
 
-    [ ![](handoff-images/provision04.png "Establecer el Id. de aplicación")](handoff-images/provision04.png)
+    [![](handoff-images/provision04.png "Establecer el Id. de aplicación")](handoff-images/provision04.png#lightbox)
 8. Desplácese hasta la **modos en segundo plano** sección y compruebe los siguientes elementos: 
 
-    [ ![](handoff-images/provision05.png "Habilitar los modos de fondo requerido")](handoff-images/provision05.png)
+    [![](handoff-images/provision05.png "Habilitar los modos de fondo requerido")](handoff-images/provision05.png#lightbox)
 9. Guarde los cambios a todos los archivos.
 
 Con esta configuración en su lugar, la aplicación ahora está lista para tener acceso a las API de marco de trabajo de entrega. Para obtener información detallada sobre el aprovisionamiento, vea nuestra [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) y [aprovisionamiento de la aplicación](~/ios/get-started/installation/device-provisioning/index.md) guías.
@@ -155,7 +155,7 @@ Por ejemplo, vamos a crear una aplicación de ejemplo denominada **MonkeyBrowser
 
 Para crear los identificadores de tipo de actividad necesaria para admitir este comportamiento, edite el **Info.plist** archivo y cambie a la **origen** vista. Agregar un `NSUserActivityTypes` clave y crear los siguientes identificadores:
 
-[ ![](handoff-images/type01.png "La clave de NSUserActivityTypes y los identificadores necesarios en el editor de plist")](handoff-images/type01.png)
+[![](handoff-images/type01.png "La clave de NSUserActivityTypes y los identificadores necesarios en el editor de plist")](handoff-images/type01.png#lightbox)
 
 Se crean cuatro nuevos identificadores de tipo de actividad, uno para cada una de las pestañas en el ejemplo **MonkeyBrowser** aplicación. Al crear sus propias aplicaciones, reemplace el contenido de la `NSUserActivityTypes` de matriz con los identificadores de tipo de actividad específico a las actividades de la aplicación es compatible con.
 
@@ -610,15 +610,15 @@ Como ejemplo del uso de entrega en una aplicación Xamarin.iOS, hemos incluido e
 
 En cualquier ficha, cuando el usuario introduce una nueva dirección URL y derivaciones de la **vaya** botón, un nuevo `NSUserActivity` se crea para esa pestaña que contiene la dirección URL que el usuario está explorando actualmente:
 
-[ ![](handoff-images/handoff01.png "Aplicación de entrega de ejemplo")](handoff-images/handoff01.png)
+[![](handoff-images/handoff01.png "Aplicación de entrega de ejemplo")](handoff-images/handoff01.png#lightbox)
 
 Si otro de los dispositivos del usuario tiene el **MonkeyBrowser** aplicación instalada, ha iniciado sesión en iCloud con la misma cuenta de usuario, está en la misma red y cerca el dispositivo anterior, la actividad de entrega se mostrará en la página principal pantalla (en la esquina inferior izquierda):
 
-[ ![](handoff-images/handoff02.png "La actividad de entrega que se muestran en la pantalla principal en la esquina inferior izquierda")](handoff-images/handoff02.png)
+[![](handoff-images/handoff02.png "La actividad de entrega que se muestran en la pantalla principal en la esquina inferior izquierda")](handoff-images/handoff02.png#lightbox)
 
 Si el usuario arrastra hacia arriba en el icono de entrega, la aplicación se iniciará y la actividad del usuario especificado en el `NSUserActivity` continuará en el nuevo dispositivo:
 
-[ ![](handoff-images/handoff03.png "La actividad del usuario continúa en el nuevo dispositivo")](handoff-images/handoff03.png)
+[![](handoff-images/handoff03.png "La actividad del usuario continúa en el nuevo dispositivo")](handoff-images/handoff03.png#lightbox)
 
 Cuando la actividad del usuario se ha enviado correctamente a Apple de otro dispositivo, el dispositivo de envío `NSUserActivity` recibirá una llamada a la `UserActivityWasContinued` método en su `NSUserActivityDelegate` que lo sepan que la actividad del usuario se ha transferido correctamente a otro dispositivo.
 

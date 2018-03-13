@@ -3,14 +3,15 @@ title: "Resumen de capítulo 22. Animación"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0ee99881a43b625cc8a70fb59e54710705c2d07a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: df0647e869fcf37a3a1dfdeb6f3dbf1e7d07ad95
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-22-animation"></a>Resumen de capítulo 22. Animación
 
@@ -110,7 +111,7 @@ El [ **CopterAnimation** ](https://github.com/xamarin/xamarin-forms-book-samples
 
 [**RotatingSpokes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotatingSpokes) gira `BoxView` radios alrededor del centro de la pantalla y, a continuación, gira cada radio para crear patrones interesantes:
 
-[![Captura de pantalla triple de rotación de radios](images/ch22fg21-small.png "rotación radios")](images/ch22fg21-large.png "rotación radios")
+[![Captura de pantalla triple de rotación de radios](images/ch22fg21-small.png "rotación radios")](images/ch22fg21-large.png#lightbox "rotación radios")
 
 Sin embargo, se aumentar progresivamente la `Rotation` propiedad de un elemento podría no funcionar a largo plazo, como la [ **RotationBreakdown** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/RotationBreakdown) muestra.
 
@@ -124,7 +125,7 @@ El `LayoutTo` método deben limitarse a fines especiales. El [ **BouncingBox** ]
 
 El [ **XamagonXuzzle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/XamagonXuzzle) ejemplo usa `LayoutTo` mover iconos en una implementación de la clásica rompecabezas de 15-16 que muestra una imagen codificada en lugar de iconos numerados:
 
-[![Captura de pantalla triple de Xamarin Xuzzle](images/ch22fg26-small.png "Xuzzle Puzzle Game")](images/ch22fg26-large.png "Xuzzle puzzles juego")
+[![Captura de pantalla triple de Xamarin Xuzzle](images/ch22fg26-small.png "Xuzzle Puzzle Game")](images/ch22fg26-large.png#lightbox "Xuzzle puzzles juego")
 
 ### <a name="your-own-awaitable-animations"></a>Sus propias animaciones esperables
 

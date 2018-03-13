@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: f618f7257ab082a2a5b0aa587b135ad169d15133
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5b74b1486d72176207d3ccd669c85e249d0706b6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-callable-wrappers"></a>Android contenedores CCW
 
@@ -22,7 +22,6 @@ Contenedores CCW Android (ACWs) son necesarios cuando el tiempo de ejecución An
 Contenedores CCW Android generados por el **monodroid.exe** programa durante la [proceso de compilación](~/android/deploy-test/building-apps/build-process.md): se generan para todos los tipos que heredan (directa o indirectamente) [ Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/). 
 
 
-<a name="ACW_Naming" />
 
 ## <a name="android-callable-wrapper-naming"></a>Nombres de contenedor CCW Android
 
@@ -74,7 +73,6 @@ Después de agrega el valor de esta propiedad, `my.ActivityType` puede acceder p
 Denominación de ACW basada en MD5SUM se introdujo en Xamarin.Android 5.0. Para obtener más información sobre la nomenclatura de atributo, vea [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/). 
 
 
-<a name="Implementing_Interfaces" />
 
 ## <a name="implementing-interfaces"></a>Implementar interfaces
 
@@ -97,7 +95,6 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 }
 ```
 
-<a name="Implementation_Details" />
 
 ## <a name="implementation-details"></a>Detalles de implementación
 

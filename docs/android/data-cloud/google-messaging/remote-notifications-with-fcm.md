@@ -7,12 +7,12 @@ ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 4e5bf2b24845fa008c6f97a6d55e18a51bc82164
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 7e107fc9ced62027bc793c97a388344d74becd66
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notificaciones remotas con Firebase de mensajería en la nube
 
@@ -22,7 +22,7 @@ _Este tutorial proporciona una explicación paso a paso sobre cómo usar la mens
 
 En este tutorial, llama a una aplicación básica **FCMClient** se creará para ilustrar las operaciones básicas de mensajería FCM. **FCMClient** comprueba la presencia de servicios de Google Play, recibe los tokens de registro de FCM, muestra las notificaciones remotas que se envían desde la consola de Firebase y se suscribe a mensajes del tema:
 
-[![Captura de pantalla de ejemplo de aplicación](remote-notifications-with-fcm-images/00-app-example-sml.png)](remote-notifications-with-fcm-images/00-app-example.png)
+[![Captura de pantalla de ejemplo de aplicación](remote-notifications-with-fcm-images/00-app-example-sml.png)](remote-notifications-with-fcm-images/00-app-example.png#lightbox)
 
 Las siguientes áreas temáticas se explorarán:
 
@@ -56,7 +56,7 @@ En [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-clo
 
 En el ejemplo siguiente, se establece el nombre del paquete en `com.xamarin.fcmexample`: 
 
-[![Establecer el nombre del paquete](remote-notifications-with-fcm-images/01-package-name-vs-sml.png)](remote-notifications-with-fcm-images/01-package-name-vs.png)
+[![Establecer el nombre del paquete](remote-notifications-with-fcm-images/01-package-name-vs-sml.png)](remote-notifications-with-fcm-images/01-package-name-vs.png#lightbox)
 
 Mientras está actualizando el **manifiesto Android**, active también para estar seguro de que el `Internet` está habilitado el permiso. 
 
@@ -68,7 +68,7 @@ Mientras está actualizando el **manifiesto Android**, active también para esta
 
 En el ejemplo siguiente, se establece el nombre del paquete en `com.xamarin.fcmexample`: 
 
-[![Establecer el nombre del paquete](remote-notifications-with-fcm-images/01-package-name-xs-sml.png)](remote-notifications-with-fcm-images/01-package-name-xs.png)
+[![Establecer el nombre del paquete](remote-notifications-with-fcm-images/01-package-name-xs-sml.png)](remote-notifications-with-fcm-images/01-package-name-xs.png#lightbox)
 
 Mientras está actualizando el **manifiesto Android**, active también para estar seguro de que el `INTERNET` está habilitado el permiso (en **los permisos necesarios**). 
 
@@ -88,7 +88,7 @@ Dado que Firebase Cloud Messaging depende de servicios de Google Play, el [Xamar
 
 3.  Instalar este paquete en el **FCMClient** proyecto: 
 
-    [ ![Instalar la Base de servicios de Google Play](remote-notifications-with-fcm-images/02-google-play-services-vs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-vs.png)
+    [![Instalar la Base de servicios de Google Play](remote-notifications-with-fcm-images/02-google-play-services-vs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -98,7 +98,7 @@ Dado que Firebase Cloud Messaging depende de servicios de Google Play, el [Xamar
 
 3.  Instalar este paquete en el **FCMClient** proyecto: 
 
-    [ ![Instalar la Base de servicios de Google Play](remote-notifications-with-fcm-images/02-google-play-services-xs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-xs.png)
+    [![Instalar la Base de servicios de Google Play](remote-notifications-with-fcm-images/02-google-play-services-xs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-xs.png#lightbox)
 
 -----
 
@@ -125,7 +125,7 @@ Para recibir mensajes de FCM, el [Xamarin Firebase - mensajería](https://www.nu
 
 3.  Instalar este paquete en el **FCMClient** proyecto: 
 
-    [ ![Instalación de Xamarin de Firebase de mensajería](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png)
+    [![Instalación de Xamarin de Firebase de mensajería](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -135,7 +135,7 @@ Para recibir mensajes de FCM, el [Xamarin Firebase - mensajería](https://www.nu
 
 3.  Instalar este paquete en el **FCMClient** proyecto: 
 
-    [ ![Instalación de Xamarin de Firebase de mensajería](remote-notifications-with-fcm-images/03-firebase-messaging-xs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-xs.png)
+    [![Instalación de Xamarin de Firebase de mensajería](remote-notifications-with-fcm-images/03-firebase-messaging-xs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-xs.png#lightbox)
 
 -----
  
@@ -166,7 +166,7 @@ El paso siguiente consiste en agregar el **services.json google** archivo en el 
 
 4.  En el **propiedades** panel, establezca la **acción de compilación** a **GoogleServicesJson** (si la **GoogleServicesJson** no se muestra la acción de compilación, Guarde y cierre la solución, a continuación, vuelva a abrirlo):
 
-    [![Si se establece la acción de compilación en GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-vs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-vs.png)
+    [![Si se establece la acción de compilación en GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-vs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-vs.png#lightbox)
  
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -178,7 +178,7 @@ El paso siguiente consiste en agregar el **services.json google** archivo en el 
 
 4.  Establecer el **acción de compilación** a **GoogleServicesJson**: 
 
-    [![Si se establece la acción de compilación en GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-xs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-xs.png)
+    [![Si se establece la acción de compilación en GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-xs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-xs.png#lightbox)
  
 -----
  
@@ -254,7 +254,7 @@ protected override void OnCreate (Bundle bundle)
 
 `IsPlayServicesAvailable` se llama al final de `OnCreate` para que se ejecuta cada vez que la aplicación se inicia la comprobación de los servicios de Google Play. Si la aplicación tiene un `OnResume` método, debe llamar a `IsPlayServicesAvailable` de `OnResume` también. Volver a generar y ejecutar la aplicación por completo. Si todo está configurado correctamente, verá una pantalla similar a la captura de pantalla siguiente: 
 
-[![Aplicación indica que los servicios de Google Play está disponible](remote-notifications-with-fcm-images/05-gps-available-sml.png)](remote-notifications-with-fcm-images/05-gps-available.png)
+[![Aplicación indica que los servicios de Google Play está disponible](remote-notifications-with-fcm-images/05-gps-available-sml.png)](remote-notifications-with-fcm-images/05-gps-available.png#lightbox)
 
 Si no obtiene este resultado, compruebe que el APK de servicios de Google reproducir esté instalado en el dispositivo (para obtener más información, consulte [configuración de seguridad de servicios de Google Play](https://developers.google.com/android/guides/setup)). Compruebe también que ha agregado el **Xamarin.Google.Play.Services.Base** el paquete a su **FCMClient** proyecto como se explicó anteriormente.
 
@@ -365,7 +365,7 @@ Cuando se envía un token para el servidor de aplicaciones, `SendRegistrationToA
 
 Ahora que están instalados los servicios del receptor, se puede escribir código de aplicación de cliente para aprovechar las ventajas de estos servicios. En las secciones siguientes, se agrega un botón a la interfaz de usuario para iniciar el símbolo (token) de registro (también denominado el *token de Id. de instancia*), y se agregará más código al `MainActivity` para ver `Intent` información cuando se inicia la aplicación desde un notificación: 
 
-[![Botón de símbolo (token) de registro agregado a la pantalla de la aplicación](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png)
+[![Botón de símbolo (token) de registro agregado a la pantalla de la aplicación](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png#lightbox)
 
 ### <a name="log-tokens"></a>Tokens de registro
 
@@ -419,11 +419,11 @@ Selector de la aplicación `Intent` se desencadena cuando el usuario puntea el m
 
 Compile y ejecute la **FCMClient** aplicación. El **registro Token** botón se muestra:
 
-[![Se muestra el botón de símbolo (token) de registro](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png)
+[![Se muestra el botón de símbolo (token) de registro](remote-notifications-with-fcm-images/06-log-token-sml.png)](remote-notifications-with-fcm-images/06-log-token.png#lightbox)
 
 Pulse la **registro Token** botón. Debe mostrarse un mensaje similar al siguiente en la ventana de salida IDE: 
 
-[![Símbolo (token) de Id. de instancia aparece en la ventana de salida](remote-notifications-with-fcm-images/07-token-received-sml.png)](remote-notifications-with-fcm-images/07-token-received.png)
+[![Símbolo (token) de Id. de instancia aparece en la ventana de salida](remote-notifications-with-fcm-images/07-token-received-sml.png)](remote-notifications-with-fcm-images/07-token-received.png#lightbox)
 
 La cadena larga etiquetadas con **token** es el token de Id. de instancia que se pega en la consola de Firebase &ndash; seleccionar y copiar esta cadena en el Portapapeles. Si no ve un token de Id. de instancia, agregue la siguiente línea a la parte superior de la `OnCreate` método para comprobar que **services.json google** se analizó correctamente:
 
@@ -437,34 +437,34 @@ El `google_app_id` debe coincidir con el valor registrado en la ventana de salid
 
 Inicie sesión en el [Firebase consola](https://console.firebase.google.com), seleccione el proyecto, haga clic en **notificaciones**y haga clic en **enviar su primer mensaje**: 
 
-[![El primer mensaje botón Enviar](remote-notifications-with-fcm-images/08-first-notification-sml.png)](remote-notifications-with-fcm-images/08-first-notification.png)
+[![El primer mensaje botón Enviar](remote-notifications-with-fcm-images/08-first-notification-sml.png)](remote-notifications-with-fcm-images/08-first-notification.png#lightbox)
 
 En el **redactar mensajes** página, escriba el texto del mensaje y seleccione **único dispositivo**. Copie el token de Id. de instancia de la ventana de salida IDE y péguelo en el **token de registro FCM** campo de la consola de Firebase: 
 
-[![Crear cuadro de diálogo de mensaje](remote-notifications-with-fcm-images/09-compose-message-sml.png)](remote-notifications-with-fcm-images/09-compose-message.png)
+[![Crear cuadro de diálogo de mensaje](remote-notifications-with-fcm-images/09-compose-message-sml.png)](remote-notifications-with-fcm-images/09-compose-message.png#lightbox)
 
 En el dispositivo Android (o emulador), en segundo plano la aplicación punteando el Android **Introducción** botón y tocar la pantalla principal. Cuando el dispositivo esté listo, haga clic en **enviar mensaje** en la consola de Firebase: 
 
-[![Enviar mensajes (botón)](remote-notifications-with-fcm-images/10-send-message-sml.png)](remote-notifications-with-fcm-images/10-send-message.png)
+[![Enviar mensajes (botón)](remote-notifications-with-fcm-images/10-send-message-sml.png)](remote-notifications-with-fcm-images/10-send-message.png#lightbox)
 
 Cuando el **mensaje revisión** se muestra el cuadro de diálogo, haga clic en **enviar**.
 El icono de notificación debe aparecer en el área de notificación del dispositivo (o el emulador): 
 
-[![Se muestra el icono de notificación](remote-notifications-with-fcm-images/11-notification-icon-sml.png)](remote-notifications-with-fcm-images/11-notification-icon.png)
+[![Se muestra el icono de notificación](remote-notifications-with-fcm-images/11-notification-icon-sml.png)](remote-notifications-with-fcm-images/11-notification-icon.png#lightbox)
 
 Abra el icono de notificación para ver el mensaje. El mensaje de notificación debe tener exactamente lo que se escribió en el **texto del mensaje** campo de la consola de Firebase: 
 
-[![Mensaje de notificación se muestra en el dispositivo](remote-notifications-with-fcm-images/12-notification-sml.png)](remote-notifications-with-fcm-images/12-notification.png)
+[![Mensaje de notificación se muestra en el dispositivo](remote-notifications-with-fcm-images/12-notification-sml.png)](remote-notifications-with-fcm-images/12-notification.png#lightbox)
 
 Pulse el icono de notificación para volver a la **FCMClient** aplicación. El `Intent` adicionales que se envía a **FCMClient** se muestran en la ventana de salida IDE: 
 
-[![Listas adicionales de intención de clave, el Id. de mensaje y la clave de contraer](remote-notifications-with-fcm-images/13-intent-extras-sml.png)](remote-notifications-with-fcm-images/13-intent-extras.png)
+[![Listas adicionales de intención de clave, el Id. de mensaje y la clave de contraer](remote-notifications-with-fcm-images/13-intent-extras-sml.png)](remote-notifications-with-fcm-images/13-intent-extras.png#lightbox)
 
 En este ejemplo, el **de** clave se establece en el número de proyecto Firebase de la aplicación (en este ejemplo, `41590732`) y el **collapse_key** está establecido en su nombre de paquete ( **com.xamarin.fcmexample**). Si no recibe un mensaje, intente eliminar el **FCMClient** aplicación en el dispositivo (o el emulador) y repita los pasos anteriores. 
 
 
 > [!NOTE]
-> **Nota:** si se fuerza, cierre la aplicación, FCM dejará de entrega de notificaciones. Android impide que las difusiones de servicios de fondo sin darse cuenta o innecesariamente ejecuten componentes de las aplicaciones detenidas. (Para obtener más información acerca de este comportamiento, consulte [iniciar controles en aplicaciones detenidas](https://developer.android.com/about/versions/android-3.1.html#launchcontrols).) Por esta razón, es necesario que desinstale manualmente la aplicación cada vez que se ejecuta y detenerla desde una sesión de depuración &ndash; Esto obliga a FCM para generar un nuevo token de manera que se siguen recibiendo los mensajes.
+> Si se fuerza, cierre la aplicación, FCM dejará de entrega de notificaciones. Android impide que las difusiones de servicios de fondo sin darse cuenta o innecesariamente ejecuten componentes de las aplicaciones detenidas. (Para obtener más información acerca de este comportamiento, consulte [iniciar controles en aplicaciones detenidas](https://developer.android.com/about/versions/android-3.1.html#launchcontrols).) Por esta razón, es necesario que desinstale manualmente la aplicación cada vez que se ejecuta y detenerla desde una sesión de depuración &ndash; Esto obliga a FCM para generar un nuevo token de manera que se siguen recibiendo los mensajes.
 
 ### <a name="add-a-custom-default-notification-icon"></a>Agregar un icono de notificación predeterminado personalizado
 
@@ -515,11 +515,11 @@ Este código localiza el **suscribirse a notificaciones** botón en el diseño y
 
 Desinstalar la aplicación, vuelva a compilarlo y ejecutarlo de nuevo. Haga clic en el **suscribirse a notificaciones** botón:
 
-[![Suscribirse al botón de notificaciones](remote-notifications-with-fcm-images/14-subscribe-sml.png)](remote-notifications-with-fcm-images/14-subscribe.png)
+[![Suscribirse al botón de notificaciones](remote-notifications-with-fcm-images/14-subscribe-sml.png)](remote-notifications-with-fcm-images/14-subscribe.png#lightbox)
 
 Si la aplicación se ha suscrito correctamente, debería ver **sincronización de tema se ha realizado correctamente** en el IDE de la ventana de salida: 
 
-[![Ventana de salida muestra el mensaje del tema sincronización se realizó correctamente](remote-notifications-with-fcm-images/15-topic-sync-sml.png)](remote-notifications-with-fcm-images/15-topic-sync.png)
+[![Ventana de salida muestra el mensaje del tema sincronización se realizó correctamente](remote-notifications-with-fcm-images/15-topic-sync-sml.png)](remote-notifications-with-fcm-images/15-topic-sync.png#lightbox)
 
 Siga estos pasos para enviar un mensaje de tema:
 
@@ -529,7 +529,7 @@ Siga estos pasos para enviar un mensaje de tema:
 
 3.  En el **tema** menú desplegable, seleccione el tema integrado, **noticias**: 
 
-    [ ![Al seleccionar el tema de noticias](remote-notifications-with-fcm-images/16-topic-message-sml.png)](remote-notifications-with-fcm-images/16-topic-message.png)
+    [![Al seleccionar el tema de noticias](remote-notifications-with-fcm-images/16-topic-message-sml.png)](remote-notifications-with-fcm-images/16-topic-message.png#lightbox)
 
 4.  En el dispositivo Android (o emulador), en segundo plano la aplicación punteando el Android **Introducción** botón y tocar la pantalla principal. 
 
@@ -537,11 +537,11 @@ Siga estos pasos para enviar un mensaje de tema:
 
 6.  Consulte la ventana de salida IDE para ver **/temas/noticias** en los resultados del registro: 
 
-    [ ![Se muestra el mensaje de /topic/news](remote-notifications-with-fcm-images/17-message-arrived-sml.png)](remote-notifications-with-fcm-images/17-message-arrived.png)
+    [![Se muestra el mensaje de /topic/news](remote-notifications-with-fcm-images/17-message-arrived-sml.png)](remote-notifications-with-fcm-images/17-message-arrived.png#lightbox)
 
 Cuando este mensaje se ve en la ventana de salida, el icono de notificación también debe aparecer en el área de notificación en el dispositivo Android. Abra el icono de notificación para ver el mensaje del tema: 
 
-[![El mensaje del tema aparece como una notificación](remote-notifications-with-fcm-images/18-other-news-sml.png)](remote-notifications-with-fcm-images/18-other-news.png)
+[![El mensaje del tema aparece como una notificación](remote-notifications-with-fcm-images/18-other-news-sml.png)](remote-notifications-with-fcm-images/18-other-news.png#lightbox)
 
 Si no recibe un mensaje, intente eliminar el **FCMClient** aplicación en el dispositivo (o el emulador) y repita los pasos anteriores. 
 
@@ -593,7 +593,7 @@ Log.Debug(TAG, "Notification Message Body: " + message.GetNotification().Body);
 ```
 
 > [!NOTE]
-> **Nota:** si establecer puntos de interrupción `FirebaseMessagingService`, la sesión de depuración puede o no se puede establecer estos puntos de interrupción debido a cómo FCM entrega mensajes.
+> Si establece los puntos de interrupción `FirebaseMessagingService`, la sesión de depuración puede o no se puede establecer estos puntos de interrupción debido a cómo FCM entrega mensajes.
  
 
 ### <a name="send-another-message"></a>Enviar otro mensaje
@@ -608,13 +608,13 @@ Desinstalar la aplicación, vuelva a compilarlo, vuelva a ejecutarlo y siga esto
 
 4.  Asegúrese de que se ejecuta la aplicación en primer plano, a continuación, haga clic en **enviar mensaje** en la consola de Firebase: 
 
-    [ ![Enviar otro mensaje desde la consola de](remote-notifications-with-fcm-images/19-hello-again-sml.png)](remote-notifications-with-fcm-images/19-hello-again.png)
+    [![Enviar otro mensaje desde la consola de](remote-notifications-with-fcm-images/19-hello-again-sml.png)](remote-notifications-with-fcm-images/19-hello-again.png#lightbox)
 
 5.  Cuando el **mensaje revisión** se muestra el cuadro de diálogo, haga clic en **enviar**.
 
 6.  El mensaje entrante se registra en la ventana de salida IDE:
 
-    [ ![El cuerpo del mensaje se imprime en la ventana de salida](remote-notifications-with-fcm-images/20-logged-message.png)](remote-notifications-with-fcm-images/20-logged-message.png)
+    [![El cuerpo del mensaje se imprime en la ventana de salida](remote-notifications-with-fcm-images/20-logged-message.png)](remote-notifications-with-fcm-images/20-logged-message.png#lightbox)
 
 
 ### <a name="add-a-local-notifications-sender"></a>Agregar un remitente de notificaciones Local
@@ -675,15 +675,15 @@ Desinstalar la aplicación, vuelva a compilarlo, ejecútelo de nuevo y luego sig
 
 4.  Asegúrese de que se ejecuta la aplicación en primer plano, a continuación, haga clic en **enviar mensaje** en la consola de Firebase: 
 
-    [ ![Enviar el mensaje de primer plano](remote-notifications-with-fcm-images/21-console-fg-msg-sml.png)](remote-notifications-with-fcm-images/21-console-fg-msg.png)
+    [![Enviar el mensaje de primer plano](remote-notifications-with-fcm-images/21-console-fg-msg-sml.png)](remote-notifications-with-fcm-images/21-console-fg-msg.png#lightbox)
 
 En esta ocasión, el mensaje que se ha registrado en la ventana de salida también se empaqueta en una nueva notificación &ndash; el icono de notificación aparece en la Bandeja de notificación mientras se ejecuta la aplicación en primer plano: 
 
-[![Icono de notificación de mensaje de primer plano](remote-notifications-with-fcm-images/22-foreground-icon-sml.png)](remote-notifications-with-fcm-images/22-foreground-icon.png)
+[![Icono de notificación de mensaje de primer plano](remote-notifications-with-fcm-images/22-foreground-icon-sml.png)](remote-notifications-with-fcm-images/22-foreground-icon.png#lightbox)
 
 Cuando se abre la notificación, debería ver el último mensaje que se envió desde la GUI de las notificaciones de la consola de Firebase: 
 
-[![Notificación de primer plano que se muestra con el icono de primer plano](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png)
+[![Notificación de primer plano que se muestra con el icono de primer plano](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png#lightbox)
 
  
 ## <a name="troubleshooting"></a>Solución de problemas
@@ -710,4 +710,4 @@ En este tutorial se detallan los pasos para implementar Firebase Cloud Messaging
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [FCMNotifications (ejemplo)](https://developer.xamarin.com/samples/monodroid/Firebase/FCMNotifications)
-- [Firebase de mensajería en la nube](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)
+- [Mensajería en la nube de Firebase](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)

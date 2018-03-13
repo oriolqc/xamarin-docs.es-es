@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 92a11ebe983840270d3679fd11f5faa0b8222cfe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 956fa919ef9aa994fea92a9a64ca1325819f3ffc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="fast-renderers"></a>Representadores rápidos
 
@@ -40,7 +40,7 @@ Forms.SetFlags("FastRenderers_Experimental");
 ```
 
 > [!NOTE]
-> **Tenga en cuenta**: representadores rápidos solo son aplicables a la aplicación compatibilidad Android back-end, por lo que este valor se omitirá en actividades de compatibilidad de aplicación anterior.
+> Representadores rápidos sólo son aplicables a la aplicación compatibilidad Android back-end, por lo que este valor se omitirá en actividades de compatibilidad de aplicación anterior.
 
 Mejoras de rendimiento varían para cada aplicación, dependiendo de la complejidad del diseño. Por ejemplo, son posibles mejoras de rendimiento de x2 al desplazarse a través de un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) que contenga miles de filas de datos, donde se realizan las celdas de cada fila de controles que usan representadores rápidos, que da como resultado visiblemente desplazamiento más suave.
 

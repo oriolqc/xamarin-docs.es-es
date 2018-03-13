@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 4d074dce06d5737bd6589efbc559c611425e5f19
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 18df6082f634d633d3f1ca8ea1e8d3f493532f47
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="grid"></a>Cuadrícula
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) permite organizar vistas en filas y columnas. Filas y columnas se pueden establecer tamaños proporcionales o tamaños absolutos. El `Grid` diseño no deben confundirse con las tablas tradicionales y no está pensado para presentar los datos tabulares. `Grid` no tiene el concepto de formato de celda, fila o columna. A diferencia de las tablas HTML, `Grid` puramente está diseñado para disponer de contenido.
 
-[ ![](grid-images/layouts-sml.png "Diseños de Xamarin.Forms")](grid-images/layouts.png "diseños de Xamarin.Forms")
+[![](grid-images/layouts-sml.png "Diseños de Xamarin.Forms")](grid-images/layouts.png#lightbox "diseños de Xamarin.Forms")
 
 En este artículo se tratará:
 
@@ -54,7 +54,7 @@ Información de fila y columna se almacena en `Grid`del `RowDefinitions`  &  `Co
 - **Absoluta** &ndash; cambia el tamaño de columnas y filas con valores específicos de alto y ancho fijos. Especifica como un valor y `GridUnitType.Absolute` en C# y como `#` en XAML, con `#` que se va a su valor deseado.
 
 > [!NOTE]
-> **Tenga en cuenta**: los valores de ancho de las columnas se establecen como "*" de forma predeterminada en Xamarin.Forms, lo que garantiza que la columna rellenará el espacio disponible.
+> Los valores de ancho de las columnas se establecen como "*" de forma predeterminada en Xamarin.Forms, lo que garantiza que la columna rellenará el espacio disponible.
 
 Considere la posibilidad de una aplicación que necesita tres filas y dos columnas. La fila inferior debe ser exactamente 200px alto y la fila superior debe ser dos veces tan grande como la fila del medio. La columna izquierda debe ser lo suficientemente ancha para adaptarlos al contenido y la columna derecha debe rellenar el espacio restante.
 

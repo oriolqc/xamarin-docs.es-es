@@ -7,12 +7,12 @@ ms.assetid: D3FDEA1C-F076-406F-BCC3-2A55D2C6ADEE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/07/2018
-ms.openlocfilehash: ae6b89e48005ca028db5d13f1a55f237888ae08b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 8fbb3f73fdc09f953ad5f7134020c1555d000d28
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="kitkat-features"></a>Características de KitKat
 
@@ -37,7 +37,7 @@ Esta guía proporciona instrucciones para migrar una aplicación existente de Xa
 
 Para desarrollar aplicaciones de Xamarin.Android con KitKat, deberá *Xamarin.Android 4.11.0* o superior y Android 4.4 (nivel de API 19) instalado mediante el Administrador de SDK de Android, como se muestra en la captura de pantalla siguiente:
 
-[![Seleccionar Android 4.4 en el Administrador de SDK de Android](kitkat-images/api19.png)](kitkat-images/api19.png)
+[![Seleccionar Android 4.4 en el Administrador de SDK de Android](kitkat-images/api19.png)](kitkat-images/api19.png#lightbox)
 
 <a name="Migrating_Your_App_to_KitKat" />
 
@@ -84,7 +84,7 @@ Almacenamiento externo ahora se divide en dos tipos: almacenamiento único para 
 -  Si se obtiene acceso a una propiedad o llamar a un método en una ruta de acceso de archivo o directorio `Environment` , como [ `GetExternalStorageDirectory` ](https://developer.xamarin.com/api/property/Android.OS.Environment.ExternalStorageDirectory/) o [ `GetExternalStoragePublicDirectory` ](https://developer.xamarin.com/api/member/Android.OS.Environment.GetExternalStoragePublicDirectory/p/System.String/) , la aplicación necesita la `READ_EXTERNAL_STORAGE` o `WRITE_EXTERNAL_STORAGE` permiso.
 
 > [!NOTE]
-> **Nota:** `WRITE_EXTERNAL_STORAGE` implica la `READ_EXTERNAL_STORAGE` permiso, por lo que siempre tendrá que establecer un permiso.
+> `WRITE_EXTERNAL_STORAGE` implica el `READ_EXTERNAL_STORAGE` permiso, por lo que siempre tendrá que establecer un permiso.
 
 ### <a name="sms-consolidation"></a>Consolidación de SMS
 
@@ -147,11 +147,11 @@ El ejemplo anterior utiliza el marco de trabajo de transición para crear un aut
 
 La captura de pantalla siguiente muestra la aplicación antes de la animación:
 
-[![Captura de pantalla de aplicación antes de que empiece de animación](kitkat-images/trans-before.png)](kitkat-images/trans-before.png)
+[![Captura de pantalla de aplicación antes de que empiece de animación](kitkat-images/trans-before.png)](kitkat-images/trans-before.png#lightbox)
 
 La captura de pantalla siguiente muestra la aplicación después de la animación:
 
-[![Captura de pantalla de aplicación una vez completada la animación](kitkat-images/trans-after.png)](kitkat-images/trans-after.png)
+[![Captura de pantalla de aplicación una vez completada la animación](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
 
 Puede obtener más control sobre la transición con plano, que se tratan en la sección siguiente.
 
@@ -161,7 +161,7 @@ Puede obtener más control sobre la transición con plano, que se tratan en la s
 
 El elemento de interfaz de usuario estático donde se encuentran el contenido dinámico es una llamada un *contenedor* o *escena base*. El ejemplo siguiente usa el Diseñador de Android para crear un `RelativeLayout` denominado `container`:
 
-[![Uso del Diseñador de Android para crear un contenedor de RelativeLayout](kitkat-images/container.png)](kitkat-images/container.png)
+[![Uso del Diseñador de Android para crear un contenedor de RelativeLayout](kitkat-images/container.png)](kitkat-images/container.png#lightbox)
 
 El diseño de ejemplo también define un botón denominado `sceneButton` a continuación el `container`. Este botón desencadenará la transición.
 
@@ -237,22 +237,22 @@ sceneButton.Click += (o, e) => {
 
 La captura de pantalla siguiente muestra la escena antes de la animación:
 
-[![Captura de pantalla de la aplicación antes de que comience la animación](kitkat-images/trans-after.png)](kitkat-images/trans-after.png)
+[![Captura de pantalla de la aplicación antes de que comience la animación](kitkat-images/trans-after.png)](kitkat-images/trans-after.png#lightbox)
 
 La captura de pantalla siguiente muestra la escena después de la animación:
 
-[![Captura de pantalla de la aplicación una vez completada la animación](kitkat-images/scene.png)](kitkat-images/scene.png)
+[![Captura de pantalla de la aplicación una vez completada la animación](kitkat-images/scene.png)](kitkat-images/scene.png#lightbox)
 
 
 > [!NOTE]
-> **Nota:** hay un [error conocido](https://code.google.com/p/android/issues/detail?id=62450) en las transiciones Android biblioteca que hace plano siguieron `GetSceneForLayout` se interrumpa cuando un usuario navega a través de una actividad de la segunda vez. Se describe una solución de java [aquí](http://www.doubleencore.com/2013/11/new-transitions-framework/).
+> Hay un [error conocido](https://code.google.com/p/android/issues/detail?id=62450) en las transiciones Android biblioteca que hace plano siguieron `GetSceneForLayout` se interrumpa cuando un usuario navega a través de una actividad de la segunda vez. Se describe una solución de java [aquí](http://www.doubleencore.com/2013/11/new-transitions-framework/).
 
 
 ##### <a name="custom-transitions-in-scenes"></a>Transiciones personalizadas en una escena
 
 Se puede definir una transición personalizada en un archivo de recursos xml en el `transition` directorio bajo `Resources`, tal y como se muestra en la captura de pantalla siguiente:
 
-[![Ubicación del archivo de transition.xml en el directorio de recursos/transición](kitkat-images/resources.png)](kitkat-images/resources.png)
+[![Ubicación del archivo de transition.xml en el directorio de recursos/transición](kitkat-images/resources.png)](kitkat-images/resources.png#lightbox)
 
 El ejemplo de código siguiente define una transición que anima durante 5 segundos y usa el [supera interpolador](http://developer.android.com/reference/android/views/animation/OvershootInterpolator.html):
 
@@ -307,7 +307,7 @@ El código siguiente define un tema con translúcido barras de estado y la naveg
 
 La captura de pantalla siguiente muestra el tema anterior con el estado translúcido y barras de navegación:
 
-[![Captura de pantalla de ejemplo de aplicación con translúcido barras de estado y la navegación](kitkat-images/theme.png)](kitkat-images/theme.png)
+[![Captura de pantalla de ejemplo de aplicación con translúcido barras de estado y la navegación](kitkat-images/theme.png)](kitkat-images/theme.png#lightbox)
 
 <a name="user_content" />
 
@@ -338,7 +338,7 @@ StartActivityForResult (intent, save_request_code);
 
 Al llamar a `StartActivityForResult` inicia la UI SAF, que el usuario, a continuación, puede examinar para elegir una imagen:
 
-[![Captura de pantalla de ejemplo de una aplicación con el marco de trabajo de acceso de almacenamiento para ir a una imagen](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png)
+[![Captura de pantalla de ejemplo de una aplicación con el marco de trabajo de acceso de almacenamiento para ir a una imagen](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
 
 Después de que el usuario ha elegido una imagen, `OnActivityResult` devuelve el `Android.Net.Uri` del archivo elegido. El ejemplo de código siguiente muestra la selección del usuario imagen:
 
@@ -368,7 +368,7 @@ StartActivityForResult (intentCreate, write_request_code);
 
 El ejemplo de código anterior carga la UI SAF, lo que permite al usuario cambiar el nombre de archivo y seleccione un directorio para alojar el nuevo archivo:
 
-[![Captura de pantalla de usuario cambia el nombre de archivo a NewDoc en el directorio de descargas](kitkat-images/saf-save.png)](kitkat-images/saf-save.png)
+[![Captura de pantalla de usuario cambia el nombre de archivo a NewDoc en el directorio de descargas](kitkat-images/saf-save.png)](kitkat-images/saf-save.png#lightbox)
 
 Cuando el usuario presiona **guardar**, `OnActivityResult` se transfiere la `Android.Net.Uri` del archivo recién creado, que se puede acceder con `data.Data`. El uri puede usarse para transmitir datos en el nuevo archivo:
 
@@ -396,11 +396,11 @@ Para obtener más información sobre la carga, crear y editar contenido con el m
 Contenido de impresión se ha simplificado en KitKat con la introducción de la [servicios de impresión](https://developer.xamarin.com/api/namespace/Android.PrintServices/) y `PrintManager`. KitKat también es la primera versión de API para aprovechar completamente la [API del servicio de impresión en la nube de Google](https://developers.google.com/cloud-print/) mediante la [aplicación de impresión de la nube de Google](https://play.google.com/store/apps/details?id=com.google.android.apps.cloudprint).
 Mayoría de los dispositivos que se suministran con KitKat automáticamente descarga la aplicación de impresión de la nube de Google y [complemento del servicio de impresión HP](https://play.google.com/store/apps/details?id=com.hp.android.printservice)cuando primero conectarse a la red Wi-Fi. Un usuario puede comprobar la configuración de impresión de su dispositivo, vaya a **configuración > sistema > Imprimir**:
 
-[![Captura de pantalla de ejemplo de la pantalla de configuración de impresión](kitkat-images/printing.png)](kitkat-images/printing.png)
+[![Captura de pantalla de ejemplo de la pantalla de configuración de impresión](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
 
 
 > [!NOTE]
-> **Nota:** aunque las API de impresión se configuran para trabajar con la impresión de nube de Google de forma predeterminada, Android todavía permite a los programadores preparar el contenido de impresión mediante las nuevas API y enviarlo a otras aplicaciones para controlar la impresión.
+> Aunque las API de impresión se configuran para trabajar con la impresión de nube de Google de forma predeterminada, Android todavía permite a los programadores preparar el contenido de impresión mediante las nuevas API y enviarlo a otras aplicaciones para controlar la impresión.
 
 
 
@@ -410,14 +410,14 @@ KitKat crea automáticamente un [ `PrintDocumentAdapter` ](https://developer.xam
 
 Tenga en cuenta que cargar e imprimir contenido web requieren el permiso de Internet:
 
-[![Permiso de configuración de Internet en las opciones de aplicación](kitkat-images/internet.png)](kitkat-images/internet.png)
+[![Permiso de configuración de Internet en las opciones de aplicación](kitkat-images/internet.png)](kitkat-images/internet.png#lightbox)
 
 ##### <a name="print-menu-item"></a>Elemento de menú de impresión
 
 La opción de impresión normalmente aparecerán en la actividad [menú opciones](http://developer.android.com/guide/topics/ui/menus.html#options-menu).
 El menú de opciones permite a los usuarios realizar acciones en una actividad. Está en la esquina superior derecha de la pantalla y el siguiente aspecto:
 
-[![Captura de pantalla de ejemplo de muestra de elemento de menú de impresión en la esquina superior derecha de la pantalla](kitkat-images/menu.png)](kitkat-images/menu.png)
+[![Captura de pantalla de ejemplo de muestra de elemento de menú de impresión en la esquina superior derecha de la pantalla](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
 
 Elementos de menú adicionales se pueden definir en el *menú*directorio bajo *recursos*. El código siguiente define un ejemplo elemento de menú denominado [impresión](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
@@ -500,9 +500,9 @@ void PrintPage ()
 
 Al llamar a `Print` carga la interfaz de usuario de impresión, que incluye opciones para el trabajo de impresión. La interfaz de usuario proporciona a los usuarios la opción de imprimir o guardar el contenido HTML en formato PDF, como se muestra en las capturas de pantalla siguiente:
 
-[![Captura de pantalla de PrintHtmlActivity mostrar el menú Imprimir](kitkat-images/print1.png)](kitkat-images/print1.png)
+[![Captura de pantalla de PrintHtmlActivity mostrar el menú Imprimir](kitkat-images/print1.png)](kitkat-images/print1.png#lightbox)
 
-[![Captura de pantalla de PrintHtmlActivity mostrar la operación de guardar como menús PDF](kitkat-images/print2.png)](kitkat-images/print2.png)
+[![Captura de pantalla de PrintHtmlActivity mostrar la operación de guardar como menús PDF](kitkat-images/print2.png)](kitkat-images/print2.png#lightbox)
 
 <a name="hardware" />
 
@@ -524,7 +524,7 @@ HCE requiere que la característica de HCE y `Nfc` permiso registrarse con la ap
 <uses-feature android:name="android.hardware.nfc.hce" />
 ```
 
-[![Estableciendo el permiso de NFC en las opciones de aplicación](kitkat-images/nfc.png)](kitkat-images/nfc.png)
+[![Estableciendo el permiso de NFC en las opciones de aplicación](kitkat-images/nfc.png)](kitkat-images/nfc.png#lightbox)
 
 Para trabajar, HCE debe ser capaz de ejecutar en segundo plano y debe iniciar cuando el usuario realiza una transacción CNC, incluso si no se está ejecutando la aplicación con HCE. Podemos lograr esto al escribir el código HCE como un `Service`. Implementa un servicio HCE el `HostApduService` interfaz, que implementa los métodos siguientes:
 
@@ -588,7 +588,7 @@ KitKat también se distribuye con dos nuevos tipos de sensor para realizar el se
 
 La captura de pantalla siguiente muestra el contador de paso en acción:
 
-[![Captura de pantalla de la aplicación de SensorsActivity mostrar un contador de paso](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png)
+[![Captura de pantalla de la aplicación de SensorsActivity mostrar un contador de paso](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png#lightbox)
 
 Puede crear un `SensorManager` mediante una llamada a `GetSystemService(SensorService)` y convertir el resultado como un `SensorManager`. Para utilizar el contador de paso, llame a `GetDeafultSensor` en el `SensorManager`. Puede registrar el sensor y escuchar a los cambios en el recuento de pasos con la Ayuda de la [ `ISensorEventListener` ](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/) de la interfaz, como se muestra en el ejemplo de código siguiente:
 
@@ -637,11 +637,10 @@ Reiniciar el dispositivo, el recuento de pasos restablece a 0. La aplicación re
 
 
 > [!NOTE]
-> **Nota:** mientras la API para la detección de paso y el recuento se distribuye con KitKat, no todos los teléfonos equipados con el sensor. También puede comprobar si el sensor está disponible mediante la ejecución de `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`, o compruebe el valor devuelto de `GetDefaultSensor` no `null`.
+> Mientras la API para la detección de paso y el recuento se distribuye con KitKat, no todos los teléfonos equipados con el sensor. También puede comprobar si el sensor está disponible mediante la ejecución de `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`, o compruebe el valor devuelto de `GetDefaultSensor` no `null`.
 
 
- <a name="developer_tools" />
-
+<a name="developer_tools" />
 
 ## <a name="developer-tools"></a>Herramientas de desarrollo
 
@@ -664,7 +663,6 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 
 Puede encontrar el vídeo en el dispositivo, aparecerá en la Galería de una vez finalizada la grabación.
 
-<a name="other_kitkat_additions" />
 
 ## <a name="other-kitkat-additions"></a>Otras adiciones KitKat
 

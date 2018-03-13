@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 234bd79754ae7f328d3207757156089441fc588c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0d418786a7364946e4e20100157fa0907b66deeb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="web-view"></a>Vista Web
 
@@ -96,7 +96,7 @@ Esto inicializa el miembro [ `WebView` ](https://developer.xamarin.com/api/type/
 
 Compile y ejecute la aplicación. Debería ver una aplicación de Visor de página web sencilla como lo ve en la siguiente captura de pantalla:
 
-[![Ejemplo de aplicación mostrar una vista Web](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png)
+[![Ejemplo de aplicación mostrar una vista Web](web-view-images/02-simple-webview-app-sml.png)](web-view-images/02-simple-webview-app.png#lightbox)
 
 Para controlar la **volver** botón pulsación de tecla, agregue la siguiente instrucción using:
 
@@ -122,7 +122,7 @@ Esto [ `OnKeyDown(int, KeyEvent)` ](https://developer.xamarin.com/api/member/And
 
 Vuelva a ejecutar la aplicación. Ahora podrá seguir los vínculos y navegar hacia atrás en el historial de la página:
 
-[![Capturas de pantalla de ejemplo del botón Atrás en acción](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png)
+[![Capturas de pantalla de ejemplo del botón Atrás en acción](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
 
 
 *Algunas partes de esta página son las modificaciones que se basa en el trabajo creado y comparten la Android Open Source Project y usarse de acuerdo con los términos que se describe en el*

@@ -7,12 +7,12 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 6b55e525849d57f2ad9e40ea64b75cfc65ef0727
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/09/2018
+ms.openlocfilehash: fd5b2f8c758d8e1e9bb9276da96a410c61478d4a
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Distribuidor de trabajo firebase
 
@@ -138,7 +138,7 @@ El `Job.Builder` llevará a cabo algunas comprobaciones de validación básicas 
 * A `Job`del _duración_ (cuánto tiempo se programará para que se ejecute) solo es hasta que el dispositivo se reinicia &ndash; una vez que el dispositivo se reinicia el `Job` se pierde.
 * A `Job` no sea recurrente &ndash; solo se ejecutará una vez.
 * Un `Job` se programará para que se ejecute tan pronto como sea posible.
-* La estrategia de reintento de manera predeterminada para una `Job` consiste en usar un _retroceso exponencial_ (descrito en más detalle más adelante en la sección [establecer un RetryStrategy](#Setting_a_RestryStrategy))
+* La estrategia de reintento de manera predeterminada para una `Job` consiste en usar un _retroceso exponencial_ (descrito en más detalle más adelante en la sección [establecer un RetryStrategy](#Setting_a_RetryStrategy))
 
 ### <a name="scheduling-a-job"></a>Programar un `Job`
 
@@ -171,6 +171,8 @@ Es posible personalizar un trabajo. Ejemplos de cómo se puede personalizar un t
 
 Cada uno de estos temas se describen más en las secciones siguientes.
 
+<a name="Passing_Parameters_to_a_Job" />
+
 #### <a name="passing-parameters-to-a-job"></a>Pasar parámetros a un trabajo
 
 Se pasan parámetros a un trabajo mediante la creación de un `Bundle` que se pasa junto con el `Job.Builder.SetExtras` método:
@@ -197,6 +199,7 @@ public override bool OnStartJob(IJobParameters jobParameters)
 } 
 ```
 
+<a name="Setting_Constraints" />
 
 #### <a name="setting-constraints"></a>Configuración de restricciones
 
@@ -215,6 +218,8 @@ Job myJob = dispatcher.NewJobBuilder()
                       .Build();
 ```
 
+<a name="Setting_Job_Triggers" />
+
 #### <a name="setting-job-triggers"></a>Desencadenadores de trabajo de configuración
 
 El `JobTrigger` proporciona una guía para el sistema operativo sobre cuándo debe comenzar el trabajo. A `JobTrigger` tiene un _ejecutar ventana_ que define una hora programada para saber cuándo el `Job` debe ejecutarse. La ventana de ejecución tiene una _iniciar ventana_ valor y un _ventana de finalización_ valor. La ventana de inicio es el número de segundos que debe esperar el dispositivo antes de ejecutar el trabajo y el valor de la ventana de finalización es el número máximo de segundos que deben transcurrir antes de ejecutar el `Job`. 
@@ -230,6 +235,8 @@ Job myJob = dispatcher.NewJobBuilder()
 ```
 
 El valor predeterminado `JobTrigger` para un trabajo está representado por el valor `Trigger.Now`, que especifica que un trabajo se ejecute tan pronto como sea posible después de estar programado...
+
+<a name="Setting_a_RetryStrategy" />
 
 #### <a name="setting-a-retrystrategy"></a>Establecer un RetryStrategy
 

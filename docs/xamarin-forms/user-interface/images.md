@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: cddf3c58020b534abdc1541d967a9a7f5a4d891a
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 440ee997b075b5c89504dcf20171fa3c8713e1ce
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="images"></a>Imágenes
 
@@ -79,7 +79,7 @@ var image = new Image { Source = "waterfront.jpg" };
 
 Las capturas de pantalla siguientes muestran el resultado de mostrar una imagen local en cada plataforma:
 
-[ ![Elemento ImageSource local](images-images/local-sml.png "mostrar una imagen Local de aplicación de ejemplo")](images-images/local.png "mostrar una imagen Local de aplicación de ejemplo")
+[![Elemento ImageSource local](images-images/local-sml.png "mostrar una imagen Local de aplicación de ejemplo")](images-images/local.png#lightbox "mostrar una imagen Local de aplicación de ejemplo")
 
 Para obtener mayor flexibilidad del `Device.RuntimePlatform` propiedad puede utilizarse para seleccionar un archivo de imagen distinto o la ruta de acceso de algunas o todas las plataformas, como se muestra en este ejemplo de código:
 
@@ -102,7 +102,7 @@ Antes de iOS 9, versiones de retina de la imagen pudieron colocarse en el **recu
 
 Imágenes de resolución alternativo Android deben colocarse en [directorios especial denominado](http://developer.android.com/guide/practices/screens_support.html) en el proyecto Android, como se muestra en la captura de pantalla siguiente:
 
-[![Ubicación de la imagen de varias resoluciones Android](images-images/xs-highdpisolution-sml.png "ubicación de la imagen de varias resoluciones Android")](images-images/xs-highdpisolution.png "ubicación de la imagen de varias resoluciones Android")
+[![Ubicación de la imagen de varias resoluciones Android](images-images/xs-highdpisolution-sml.png "ubicación de la imagen de varias resoluciones Android")](images-images/xs-highdpisolution.png#lightbox "ubicación de la imagen de varias resoluciones Android")
 
 ### <a name="additional-controls-that-display-images"></a>Controles adicionales que mostrar imágenes
 
@@ -159,7 +159,7 @@ Actualmente no hay ninguna conversión implícita para los identificadores de re
 
 Las capturas de pantalla siguientes muestran el resultado de la presentación de una imagen incrustada en cada plataforma:
 
-[ ![ResourceImageSource](images-images/resource-sml.png "mostrar una imagen incrustada de aplicación de ejemplo")](images-images/resource.png "mostrar una imagen incrustada de aplicación de ejemplo")
+[![ResourceImageSource](images-images/resource-sml.png "mostrar una imagen incrustada de aplicación de ejemplo")](images-images/resource.png#lightbox "mostrar una imagen incrustada de aplicación de ejemplo")
 
 <a name="Embedded_Images_in_Xaml" />
 
@@ -261,7 +261,7 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 
 Las capturas de pantalla siguientes muestran el resultado de la presentación de una imagen remota en cada plataforma:
 
-[![Descargar ImageSource](images-images/download-sml.png "mostrar una imagen descargada de aplicación de ejemplo")](images-images/download.png "mostrar una imagen descargada de aplicación de ejemplo")
+[![Descargar ImageSource](images-images/download-sml.png "mostrar una imagen descargada de aplicación de ejemplo")](images-images/download.png#lightbox "mostrar una imagen descargada de aplicación de ejemplo")
 
 <a name="Image_Caching" />
 

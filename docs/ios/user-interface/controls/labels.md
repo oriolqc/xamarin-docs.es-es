@@ -7,19 +7,15 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: 695d02c5fa0477053cd95d73e1b738332d14f0f9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0fdeecc4465aa5709b452ef0b591ec4e5c262e3d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="labels"></a>Etiquetas
 
-El `UILabel` control se utiliza para mostrar único y varias líneas de texto de sólo lectura. En este artículo se tratan los siguientes temas:
-
-- [Implementación de una etiqueta](#Implementing_a_Label)
-- [Truncar y ajuste](#Truncating_and_Wrapping)
-- [Etiqueta y dar formato al texto](#Formatting_Text_and_Label)
+El `UILabel` control se utiliza para mostrar único y varias líneas de texto de sólo lectura. 
 
 ## <a name="implementing-a-label"></a>Implementación de una etiqueta
 
@@ -52,6 +48,8 @@ En el panel de propiedades, se pueden ajustar las propiedades siguientes:
 ## <a name="truncating-and-wrapping"></a>Truncar y ajuste
 
 Para obtener información sobre el uso de la línea se interrumpe en iOS, consulte el [truncar y ajustar el texto](https://developer.xamarin.com/recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text/) receta.
+
+<a name="Formatting_Text_and_Label"/>
 
 ## <a name="formatting-text-and-label"></a>Etiqueta y dar formato al texto
 

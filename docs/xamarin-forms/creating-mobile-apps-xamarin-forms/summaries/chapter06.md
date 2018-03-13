@@ -3,14 +3,15 @@ title: "Resumen del capítulo 6. Clics de botón"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 44dbb4d2cdc573e721bb772fdd05d392c90b746a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 972d0d76fd55981ebca70acce69533d98c3fc0b5
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>Resumen del capítulo 6. Clics de botón
 
@@ -52,7 +53,7 @@ Varios `Button` objetos también se pueden distinguir estableciendo la [ `StyleI
 
 El [ **SimplestKeypad** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/SimplestKeypad) ejemplo usa el mismo controlador de eventos para todas las claves de número 10 en un teclado numérico y distingue entre ellos con el `StyleId` propiedad:
 
-[![Captura de pantalla triple de teclado más sencilla](images/ch06fg04-small.png "calculadora")](images/ch06fg04-large.png "Calculadora")
+[![Captura de pantalla triple de teclado más sencilla](images/ch06fg04-small.png "calculadora")](images/ch06fg04-large.png#lightbox "Calculadora")
 
 ## <a name="saving-transient-data"></a>Guardar datos transitorios
 

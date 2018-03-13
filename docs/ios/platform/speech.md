@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 00980c0038ac3ae51d0444e6f71dde9dfef25831
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 33e27043c3738c5213b17786e5a88fb30a7fc017
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="speech-recognition"></a>Reconocimiento de voz
 
@@ -33,7 +33,7 @@ Función de Apple, la API de reconocimiento de voz tiene las siguientes caracter
 
 El reconocimiento de voz se implementa en una aplicación de iOS al adquirir el audio en vivo o grabado previamente (en cualquiera de los idiomas que admite la API) y pasarla a un reconocedor de voz que devuelve una transcripción de texto sin formato de las palabras.
 
-[ ![](speech-images/speech01.png "Cómo funciona el reconocimiento de voz")](speech-images/speech01.png)
+[![](speech-images/speech01.png "Cómo funciona el reconocimiento de voz")](speech-images/speech01.png#lightbox)
 
 ### <a name="keyboard-dictation"></a>Dictado de teclado
 
@@ -104,13 +104,13 @@ Para proporcionar los necesarios `NSSpeechRecognitionUsageDescription` clave en 
 1. Haga doble clic en el `Info.plist` archivo para abrirlo y editarlo.
 2. Cambie a la **origen** vista: 
 
-    [ ![](speech-images/speech02.png "La vista del origen")](speech-images/speech02.png)
+    [![](speech-images/speech02.png "La vista del origen")](speech-images/speech02.png#lightbox)
 3. Haga clic en **agregar nueva entrada**, escriba `NSSpeechRecognitionUsageDescription` para el **propiedad**, `String` para el **tipo** y un **descripción de uso** como el **valor**. Por ejemplo: 
 
-    [ ![](speech-images/speech03.png "Agregar NSSpeechRecognitionUsageDescription")](speech-images/speech03.png)
+    [![](speech-images/speech03.png "Agregar NSSpeechRecognitionUsageDescription")](speech-images/speech03.png#lightbox)
 4. Si la aplicación vaya a procesar la transcripción de audio en directo, también necesitará una descripción de uso de micrófono. Haga clic en **agregar nueva entrada**, escriba `NSMicrophoneUsageDescription` para el **propiedad**, `String` para el **tipo** y un **descripción de uso** como el **valor**. Por ejemplo: 
 
-    [ ![](speech-images/speech04.png "Agregar NSMicrophoneUsageDescription")](speech-images/speech04.png)
+    [![](speech-images/speech04.png "Agregar NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
 4. Guarde los cambios en el archivo.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -118,10 +118,10 @@ Para proporcionar los necesarios `NSSpeechRecognitionUsageDescription` clave en 
 1. Haga doble clic en el `Info.plist` archivo para abrirlo y editarlo.
 3. Haga clic en **agregar nueva entrada**, escriba `NSSpeechRecognitionUsageDescription` para el **propiedad**, `String` para el **tipo** y un **descripción de uso** como el **valor**. Por ejemplo: 
 
-    [ ![](speech-images/speech03w.png "Agregar NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png)
+    [![](speech-images/speech03w.png "Agregar NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
 4. Si la aplicación vaya a procesar la transcripción de audio en directo, también necesitará una descripción de uso de micrófono. Haga clic en **agregar nueva entrada**, escriba `NSMicrophoneUsageDescription` para el **propiedad**, `String` para el **tipo** y un **descripción de uso** como el **valor**. Por ejemplo: 
 
-    [ ![](speech-images/speech04w.png "Agregar NSMicrophoneUsageDescription")](speech-images/speech04w.png)
+    [![](speech-images/speech04w.png "Agregar NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
 4. Guarde los cambios en el archivo.
 
 -----

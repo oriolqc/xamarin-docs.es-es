@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: cc4407be9dee7e19dbf1f3cc03b3b88191717e6f
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 0c68d2cfd43eb535fe2e02b5662250cb6e453ddd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumir las extensiones de marcado XAML
 
@@ -137,7 +137,7 @@ El último ejemplo se muestra la `Device.RuntimePlatform` valor. El `Environment
 
 Este es el ejemplo que se ejecutan en las tres plataformas:
 
-[![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo")](consuming-images/staticdemo-large.png "x:Static Demo")
+[![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo")](consuming-images/staticdemo-large.png#lightbox "x:Static Demo")
 
 <a name="reference" />
 
@@ -181,7 +181,7 @@ El **x: Reference demostración** página muestra dos usos de `x:Reference` con 
 
 Ambos `x:Reference` expresiones utilizan la versión abreviada de la `ReferenceExtension` nombre de clase y eliminar el `Name=` forma parte de la expresión. En el primer ejemplo, el `x:Reference` extensión de marcado se incrusta en el `Binding` extensión de marcado. Tenga en cuenta que la `Source` y `StringFormat` configuración está separada por comas. Este es el programa que se ejecuta en las tres plataformas:
 
-[![Demostración de x: Reference](consuming-images/referencedemo-small.png "x: Reference demostración")](consuming-images/referencedemo-large.png "x: Reference demostración")
+[![Demostración de x: Reference](consuming-images/referencedemo-small.png "x: Reference demostración")](consuming-images/referencedemo-large.png#lightbox "x: Reference demostración")
 
 <a name="type" />
 
@@ -236,7 +236,7 @@ Se trata cómo el menú de navegación en `MainPage` en el **las extensiones de 
 
 Ésta es la página principal de apertura **las extensiones de marcado**:
 
-[![Main página](consuming-images/mainpage-small.png "Main página")](consuming-images/mainpage-large.png "Main página")
+[![Main página](consuming-images/mainpage-small.png "Main página")](consuming-images/mainpage-large.png#lightbox "Main página")
 
 Cada `CommandParameter` propiedad está establecida en un `x:Type` extensión de marcado que se hace referencia a una de las otras páginas. El `Command` propiedad se enlaza a una propiedad denominada `NavigateCommand`. Esta propiedad se define en el `MainPage` archivo de código subyacente:
 
@@ -319,7 +319,7 @@ public partial class TypeDemoPage : ContentPage
 
 El método que se ejecuta cuando un `Button` se presiona crea una nueva instancia del argumento, se establece su `VerticalOptions` propiedad y lo agrega a la `StackLayout`. Los tres `Button` elementos, a continuación, compartan la página con vistas creadas de forma dinámica:
 
-[![x: Type demostración](consuming-images/typedemo-small.png "x: Type demostración")](consuming-images/typedemo-large.png "demostración x: Type")
+[![x: Type demostración](consuming-images/typedemo-small.png "x: Type demostración")](consuming-images/typedemo-large.png#lightbox "demostración x: Type")
 
 <a name="array" />
 
@@ -376,7 +376,7 @@ El **x: Array demostración** página muestra cómo usar `x:Array` para agregar 
 
 El `ViewCell` crea un sencillo `BoxView` para cada entrada de color:
 
-[![Demostración de x: Array](consuming-images/arraydemo-small.png "x: Array demostración")](consuming-images/arraydemo-large.png "x: Array demostración")
+[![Demostración de x: Array](consuming-images/arraydemo-small.png "x: Array demostración")](consuming-images/arraydemo-large.png#lightbox "x: Array demostración")
 
 Hay varias maneras de especificar el individuo `Color` elementos de esta matriz. Puede usar un `x:Static` extensión de marcado:
 
@@ -449,7 +449,7 @@ A continuación, verá que para uno de los `Label` elementos, desea que todos lo
 
 Este es el programa que se ejecuta en las tres plataformas:
 
-[![x: Null demostración](consuming-images/nulldemo-small.png "x: Null demostración")](consuming-images/nulldemo-large.png "demostración x: Null")
+[![x: Null demostración](consuming-images/nulldemo-small.png "x: Null demostración")](consuming-images/nulldemo-large.png#lightbox "demostración x: Null")
 
 Observe que cuatro de las `Label` elementos tienen una fuente serif, pero el centro de `Label` tiene la fuente sans-serif de forma predeterminada.
 

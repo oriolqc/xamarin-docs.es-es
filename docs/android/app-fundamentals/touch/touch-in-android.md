@@ -6,12 +6,12 @@ ms.assetid: 405A1FA0-4EFA-4AEB-B672-F36307B9CF16
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 83997018f4e08567a9150bf1e21374a98c8ddb4e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 1d9cf345aa971c40f4132cc7970ed1244640da14
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="touch-in-android"></a>Entrada táctil de Android
 
@@ -33,7 +33,7 @@ La `MotionEvent` objeto se pasará a un método adecuado en una aplicación. Hay
 
 
 > [!NOTE]
-> **Nota:** no todos los dispositivos Android admiten pantallas táctiles. 
+> No todos los dispositivos Android admiten pantallas táctiles. 
 
 Al agregar la etiqueta siguiente al archivo de manifiesto, Google Play mostrar solo la aplicación en los dispositivos de pantalla táctil:
 
@@ -90,11 +90,11 @@ Movimientos son una excelente manera para que los usuarios interactúan con una 
 
 Desde Android 1.6, el SDK de Android incluye una aplicación instalada previamente en el emulador llamado el generador de gestos. Esta aplicación permite a un desarrollador crear movimientos predefinidos que se pueden incrustar en una aplicación. La captura de pantalla siguiente muestra un ejemplo del generador de gestos:
 
-[![Captura de pantalla de movimientos generador con movimientos de ejemplo](touch-in-android-images/image11.png)](touch-in-android-images/image11.png)
+[![Captura de pantalla de movimientos generador con movimientos de ejemplo](touch-in-android-images/image11.png)](touch-in-android-images/image11.png#lightbox)
 
 Se encontrará una versión mejorada de esta aplicación denominada herramienta gesto de Google Play. Herramienta de movimiento es muy similar a generador de movimientos excepto en que permite probar movimientos después de que se hayan creado. Esta captura de pantalla siguiente muestra el generador de gestos:
 
-[![Herramienta de captura de pantallas de gestos con movimientos de ejemplo](touch-in-android-images/image12.png)](touch-in-android-images/image12.png)
+[![Herramienta de captura de pantallas de gestos con movimientos de ejemplo](touch-in-android-images/image12.png)](touch-in-android-images/image12.png#lightbox)
 
 Herramienta de movimiento es un poco más útil para crear gestos personalizados, ya que permite a los movimientos se va a probar como que se están creando y está fácilmente disponible a través de Google Play.
 

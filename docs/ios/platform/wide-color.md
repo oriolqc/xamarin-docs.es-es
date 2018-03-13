@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ab6124e2b11d26d4c10330e7b824e4761ebf4603
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 95098cd5c97ccc8357531feb79e55600f53a4be5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="wide-color"></a>Color amplia
 
@@ -38,19 +38,19 @@ Los siguientes conceptos de color principal deben cubrir antes de realizar un ex
 
 Un espacio de colores es un entorno en el que se pueden representados y comparar colores. Puede ser un espacio de dimensiones de uno a cuatro definido por la intensidad de sus componentes de color. 
 
-[ ![](wide-color-images/color00.png "Un espacio de colores")](wide-color-images/color00.png)
+[![](wide-color-images/color00.png "Un espacio de colores")](wide-color-images/color00.png#lightbox)
 
 ### <a name="color-channels"></a>Canales de color
 
 También se pueden hacer referencia a los componentes de color como canales de Color. Algunas representaciones familiarizados sería el RGB espacios, espacios de color gris, CMYK, espacios o espacios independientes del dispositivo. 
 
-[ ![](wide-color-images/color02.png "Los componentes de color también se conoce como canales de Color")](wide-color-images/color02.png)
+[![](wide-color-images/color02.png "Los componentes de color también se conoce como canales de Color")](wide-color-images/color02.png#lightbox)
 
 ### <a name="color-primaries"></a>Elementos de color
 
 Los elementos de color proporcionan el sistema de coordenadas que se utiliza para comparar y colores de proceso. Colores primarios suelen pertenecen a más intensa versión del color especificado que se pueden generar en el canal de Color.
 
-[ ![](wide-color-images/color01.png "Los elementos de color proporcionan el sistema de coordenadas que se utiliza para comparar y colores de proceso")](wide-color-images/color01.png)
+[![](wide-color-images/color01.png "Los elementos de color proporcionan el sistema de coordenadas que se utiliza para comparar y colores de proceso")](wide-color-images/color01.png#lightbox)
 
 En el caso del espacio de colores RGB representado por encima, el Color de los elementos están dónde el `1.0` están delimitadas coordenadas (como `[1.0, 0.0, 0.0]` para el rojo).
 
@@ -58,7 +58,7 @@ En el caso del espacio de colores RGB representado por encima, el Color de los e
 
 Gama de colores hace referencia a todos los colores que se pueden definir como una combinación de los canales de Color individuales dentro de un espacio de colores determinada.
 
-[ ![](wide-color-images/color03.png "Ejemplo de la gama de color")](wide-color-images/color03.png)
+[![](wide-color-images/color03.png "Ejemplo de la gama de color")](wide-color-images/color03.png#lightbox)
 
 ## <a name="what-is-wide-color"></a>¿Qué es el Color amplia
 
@@ -80,7 +80,7 @@ Los usuarios que han sido capturar imágenes digitales en el formato pueden tene
 
 2015, Apple lanzado nuevos productos (iMac y iPad Pro 9.7") que proporcionan el nuevo espacio de Color de P3 de presentación para controlar los problemas creados por el espacio de Color sRGB.
 
-[ ![](wide-color-images/color04.png "El nuevo espacio de Color de pantalla P3")](wide-color-images/color04.png)
+[![](wide-color-images/color04.png "El nuevo espacio de Color de pantalla P3")](wide-color-images/color04.png#lightbox)
 
 El espacio de Color de pantalla P3 tiene las siguientes propiedades:
 
@@ -112,7 +112,7 @@ Por lo cual permite los valores menores que cero y mayor que uno, el sRGB de ran
 
 Para ver cómo funcionan los valores fuera de cero y uno en el espacio de Color sRGB de rango extendido, considere el ejemplo siguiente de la de la saturación máxima roja disponible en el espacio de Color de pantalla P3:
 
-[ ![](wide-color-images/color05.png "Cómo funcionan los valores fuera de cero y uno en el espacio de Color sRGB de rango extendido")](wide-color-images/color05.png)
+[![](wide-color-images/color05.png "Cómo funcionan los valores fuera de cero y uno en el espacio de Color sRGB de rango extendido")](wide-color-images/color05.png#lightbox)
 
 En la pantalla P3, este color se representará como `[1.0, 0.0, 0.0]` y en sRGB de rango extendido sería `[1.358, -0.074, -0.012]`. Porque están llenos sRGB valores contenidos dentro de P3 de presentación y los valores de presentación P3 sentar "fuera" de los intervalos de sRGB.
 

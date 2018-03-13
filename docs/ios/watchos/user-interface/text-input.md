@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: b606773b44d32b724fe7f4dfa2ef18fe34b85cae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 170131a2449b37acfa411eeca54f7aa921b0d9e4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-text-input"></a>Trabajar con la entrada de texto
 
@@ -62,7 +62,7 @@ Cuando se establece el modo normal, el usuario puede elegir:
 - Scribble, o
 - desde una lista predefinida que proporciona la aplicación.
 
-[ ![](text-input-images/plain-scribble-sml.png "Dictado, Scribble, o desde una lista predefinida que proporciona la aplicación")](text-input-images/plain-scribble.png)
+[![](text-input-images/plain-scribble-sml.png "Dictado, Scribble, o desde una lista predefinida que proporciona la aplicación")](text-input-images/plain-scribble.png#lightbox)
 
 El resultado siempre se devuelve como un `NSObject` que se puede convertir en un `string`.
 

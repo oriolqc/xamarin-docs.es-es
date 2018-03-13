@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/24/2017
-ms.openlocfilehash: 4798da42718658096509948bae07e5e5534d5af0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 8f4d8253d56708f77ede7b5173f3dd771e1da0ea
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Controlador de vista previa XAML para Xamarin.Forms
 
@@ -30,13 +30,13 @@ Hay más información en el [notas de la versión](https://developer.xamarin.com
 
 El **vista previa** botón se puede mostrar en el editor haciendo clic en un archivo XAML y seleccionar **abrir con > Visor XAML**. El panel de vista previa, a continuación, pueden mostrar u ocultar presionando el **vista previa** situado en la esquina superior derecha de las ventanas de documento XAML:
 
-[ ![Vista previa del control ListView en Visual Studio para Mac](xaml-previewer-images/xamlp-list-sml.png "controlador de vista previa de formularios en Visual Studio para Mac")](xaml-previewer-images/xamlp-list.png "controlador de vista previa de formularios en Visual Studio para Mac")
+[![Vista previa del control ListView en Visual Studio para Mac](xaml-previewer-images/xamlp-list-sml.png "controlador de vista previa de formularios en Visual Studio para Mac")](xaml-previewer-images/xamlp-list.png#lightbox "controlador de vista previa de formularios en Visual Studio para Mac")
 
 ### <a name="visual-studio-on-windows"></a>Visual Studio en Windows
 
 Use la **Vista > otras ventanas > controlador de vista previa de Xamarin.Forms** menú en Visual Studio para abrir la ventana de vista previa. Use la **Ventana > nuevo grupo de tabulación Vertical** menú para colocarla en paralelo.
 
-[ ![Vista previa del control ListView en Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "controlador de vista previa de formularios en Visual Studio")](xaml-previewer-images/xamlp-list-vs.png "controlador de vista previa de formularios en Visual Studio")
+[![Vista previa del control ListView en Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "controlador de vista previa de formularios en Visual Studio")](xaml-previewer-images/xamlp-list-vs.png#lightbox "controlador de vista previa de formularios en Visual Studio")
 
 ## <a name="xaml-preview-options"></a>Opciones de vista previa XAML
 

@@ -4,14 +4,15 @@ description: "Descubra cómo animar los gráficos SkiaSharp"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: c91cb064ea3973294c3a9dd8e07f3c4b0627fe34
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e18ef7c77c1d5c93d53882233c65a56e5567fcd7
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="basic-animation"></a>Animación básica
 
@@ -141,7 +142,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El método calcula un radio máximo en función del tamaño del área de presentación y un radio mínimo tomando como base el radio máximo. El `scale` se anima valor entre 0 y 1 y de vuelta a 0, por lo que el método que usa para calcular un `xRadius` y `yRadius` que oscila entre `minRadius` y `maxRadius`. Estos valores se utilizan para dibujar y rellenar una elipse:
 
-[![](animation-images/pulsatingellipse-small.png "Captura de pantalla triple de la página de elipse parpadeante")](animation-images/pulsatingellipse-large.png "Triple captura de pantalla de la página de elipse parpadeante")
+[![](animation-images/pulsatingellipse-small.png "Captura de pantalla triple de la página de elipse parpadeante")](animation-images/pulsatingellipse-large.png#lightbox "Triple captura de pantalla de la página de elipse parpadeante")
 
 Tenga en cuenta que la `SKPaint` objeto se crea en un `using` bloque. Al igual que muchas clases de SkiaSharp `SKPaint` deriva `SKObject`, que deriva de `SKNativeObject`, que implementa el [ `IDisposable` ](https://developer.xamarin.com/api/type/System.IDisposable/) interfaz. `SKPaint` invalida el `Dispose` método para liberar recursos no administrados.
 
@@ -244,7 +245,7 @@ public class ExpandingCirclesPage : ContentPage
 
 El resultado es que la imagen tiene la misma cuando `t` es igual a 0 como cuando `t` es igual a 1, y los círculos parecen que siga expandiendo indefinidamente:
 
-[![](animation-images/expandingcircles-small.png "Captura de pantalla triple de la página de expansión círculos")](animation-images/expandingcircles-large.png "Triple captura de pantalla de la página de expansión círculos")
+[![](animation-images/expandingcircles-small.png "Captura de pantalla triple de la página de expansión círculos")](animation-images/expandingcircles-large.png#lightbox "Triple captura de pantalla de la página de expansión círculos")
 
 
 ## <a name="related-links"></a>Vínculos relacionados

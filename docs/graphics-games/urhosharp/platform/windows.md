@@ -1,17 +1,17 @@
 ---
 title: "Soporte técnico de Windows UrhoSharp"
-description: "Características y el programa de instalación específico de Windows"
+description: "El programa de instalación específico de Windows y características para UrhoSharp."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A4F36014-AE4E-4F07-A1AC-F264AAA68ACF
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: ec4fec01aa27e522aeec6df09041f14b1c3db080
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0deefe0e00ec96a21317bfa2e8bf4894d5deae47
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="urhosharp-windows-support"></a>Soporte técnico de Windows UrhoSharp
 
@@ -27,11 +27,11 @@ Puede ver ejemplos completos que muestran cómo utilizar esto en nuestro [ejempl
 
 # <a name="standalone-project"></a>Proyecto independiente
 
-## <a name="creating-a-project"></a>Crear un proyecto
+### <a name="creating-a-project"></a>Crear un proyecto
 
 Crear un proyecto de consola, hacen referencia a Urho NuGet y, a continuación, asegúrese de que puede localizar los activos (es decir, los directorios que contiene el directorio de datos).
 
-## <a name="configuring-and-launching-urho"></a>Configurar e iniciar Urho
+### <a name="configuring-and-launching-urho"></a>Configurar e iniciar Urho
 
 Para iniciar la aplicación, ello:
 
@@ -39,17 +39,17 @@ Para iniciar la aplicación, ello:
 DesktopUrhoInitializer.AssetsDirectory = "../Assets";
 new MyGame().Run();
 ```
-## <a name="example"></a>Ejemplo
+### <a name="example"></a>Ejemplo
 
 [Ejemplo completo](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/Desktop)
 
-# <a name="integrated-with-wpf"></a>Integrado con WPF
+## <a name="integrated-with-wpf"></a>Integrado con WPF
 
-## <a name="creating-a-project"></a>Crear un proyecto
+### <a name="creating-a-project"></a>Crear un proyecto
 
 Crear un proyecto de WPF, hacen referencia a Urho NuGet y, a continuación, asegúrese de que puede encontrar los activos (es decir, los directorios que contiene el directorio de datos).
 
-## <a name="configuring-and-launching-urho-from-wpf"></a>Configurar e iniciar Urho de WPF
+### <a name="configuring-and-launching-urho-from-wpf"></a>Configurar e iniciar Urho de WPF
 
 Crear una subclase de `Window` y configurar sus activos similar al siguiente:
 
@@ -83,17 +83,17 @@ Crear una subclase de `Window` y configurar sus activos similar al siguiente:
     }
 ```
 
-## <a name="example"></a>Ejemplo
+### <a name="example"></a>Ejemplo
 
 [Ejemplo completo](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/WPF)
 
-# <a name="integrated-with-uwp"></a>Integrado con UWP
+## <a name="integrated-with-uwp"></a>Integrado con UWP
 
-## <a name="creating-a-project"></a>Crear un proyecto
+### <a name="creating-a-project"></a>Crear un proyecto
 
 Crear un proyecto de UWP, hacen referencia a Urho NuGet y, a continuación, asegúrese de que puede localizar los activos (es decir, los directorios que contiene el directorio de datos).
 
-## <a name="configuring-and-launching-urho-from-uwp"></a>Configurar e iniciar Urho de UWP
+### <a name="configuring-and-launching-urho-from-uwp"></a>Configurar e iniciar Urho de UWP
 
 Crear una subclase de `Window` y configurar sus activos similar al siguiente:
 
@@ -116,17 +116,17 @@ Crear una subclase de `Window` y configurar sus activos similar al siguiente:
     }
 ```
 
-## <a name="example"></a>Ejemplo
+### <a name="example"></a>Ejemplo
 
 [Ejemplo completo](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/UWP)
 
-# <a name="integrated-with-windowsforms"></a>Integrado con Windows.Forms
+## <a name="integrated-with-windowsforms"></a>Integrado con Windows.Forms
 
-## <a name="creating-a-project"></a>Crear un proyecto
+### <a name="creating-a-project"></a>Crear un proyecto
 
 Crear un proyecto de Windows.Forms, hacen referencia a Urho NuGet y, a continuación, asegúrese de que puede localizar los activos (es decir, los directorios que contiene el directorio de datos).
 
-## <a name="configuring-and-launching-urho-from-windowsforms"></a>Configurar e iniciar Urho de Windows.Forms
+### <a name="configuring-and-launching-urho-from-windowsforms"></a>Configurar e iniciar Urho de Windows.Forms
 
 Inicie Urho desde el formulario, consulte [ejemplo completo](https://github.com/xamarin/urho-samples/blob/master/FeatureSamples/WinForms/SamplesForm.cs)
 

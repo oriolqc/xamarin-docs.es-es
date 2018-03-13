@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fab2092837f9b9ca8ada53274c9644f131fb5659
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 211f8c7066e86dac3a8351b913da0185093dcb70
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="testing-on-watch-devices"></a>Pruebas en dispositivos de inspección
 
@@ -32,7 +32,7 @@ Probar aplicaciones de iOS en un iPhone real o iPad siempre ha requerido el disp
 
 Inspecciones no son diferentes: ahora debe agregar el dispositivo de Apple Watch antes de implementar aplicaciones. Buscar el reloj UDID mediante **Xcode** (**Windows > dispositivos** lista). Cuando está conectado el teléfono emparejado también se mostrará información de la inspección:
 
-[ ![](device-images/xcode-devices-sml.png "Información de inspección emparejados")](device-images/xcode-devices.png)
+[![](device-images/xcode-devices-sml.png "Información de inspección emparejados")](device-images/xcode-devices.png#lightbox)
 
 Cuando conozca el reloj UDID, agregar a la lista de dispositivos en el centro de desarrollo:
 
@@ -99,12 +99,12 @@ Esto puede ocurrir mientras se compila en modo de depuración para implementar e
 
 Para *temporalmente* solucionar este problema, deshabilite **compilaciones incrementales** en la extensión de inspección **Project Options > compilar > watchOS compilación** ventana:
 
-[ ![](device-images/disable-incremental-sml.png "La casilla de verificación compilaciones incrementales")](device-images/disable-incremental.png)
+[![](device-images/disable-incremental-sml.png "La casilla de verificación compilaciones incrementales")](device-images/disable-incremental.png#lightbox)
 
 Este problema se solucionará en una versión futura, después del cual las generaciones incrementales pueden habilitarse de nuevo para aprovechar las ventajas de los tiempos de compilación más rápidos.
 
 
-#<a name="3-watch-app-fails-to-start-while-debugging-on-device"></a>3# aplicación watch se produce un error al iniciar mientras se depura en dispositivos
+### <a name="watch-app-fails-to-start-while-debugging-on-device"></a>Ver la que aplicación no se puede iniciar durante la depuración en el dispositivo
 
 Al intentar depurar una aplicación de inspección en un dispositivo físico, sólo el icono & spinner carga aparecen (y finalmente tiempo de espera). Esto se solucionará en una futura versión; una solución alternativa es ejecutar una versión de lanzamiento (que no se le permitirá depurar).
 

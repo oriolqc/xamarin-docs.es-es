@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: 371ffae8e14a630cb548f4a9ee2bf0bd06f7284c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: acecc53e8429ac3ca963053fe7a1786937d37ae3
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="responding-to-authentication-callbacks"></a>Responde a las devoluciones de llamada de autenticación
 
@@ -27,7 +27,7 @@ Si un `CryptoObject` se usó cuando se llama a `Authenticate`, se recomienda lla
 
 
 > [!NOTE]
-> **Nota:** se recomienda mantener el peso relativamente ligera de clase de devolución de llamada y sin necesidad de lógica específica de la aplicación. Las devoluciones de llamada deben actuar como un "administrador del tráfico" entre la aplicación Android y los resultados del analizador de huellas digitales.
+> Se recomienda mantener la devolución de llamada clase relativamente ligero y sin necesidad de lógica específica de la aplicación. Las devoluciones de llamada deben actuar como un "administrador del tráfico" entre la aplicación Android y los resultados del analizador de huellas digitales.
 
 ## <a name="a-sample-authentication-callback-handler"></a>Un controlador de devolución de llamada de autenticación de ejemplo
 

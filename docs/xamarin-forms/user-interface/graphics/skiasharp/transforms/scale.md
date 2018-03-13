@@ -4,14 +4,15 @@ description: "Detectar la transformación de escala SkiaSharp para ajustar la es
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 3ea498b3672c0b9ef4efeff7ec5981dca5a36912
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: feecfc923903a20332bf3a1a188ab9d7cd2ce1c0
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="the-scale-transform"></a>La transformación de escala
 
@@ -103,7 +104,7 @@ Tal vez se pregunte: ¿cómo afecta los factores de escala el valor devuelto de 
 
 Como puede ver, todo lo que se dibuja después de la `Scale` llamar aumenta proporcionalmente:
 
-[![](scale-images/basicscale-small.png "Triple captura de pantalla de la página de escala básica")](scale-images/basicscale-large.png "Triple captura de pantalla de la página de escala básica")
+[![](scale-images/basicscale-small.png "Triple captura de pantalla de la página de escala básica")](scale-images/basicscale-large.png#lightbox "Triple captura de pantalla de la página de escala básica")
 
 El texto, el ancho de la línea discontinua, la longitud de los guiones en esa línea, el redondeo de las esquinas y el margen de 10 píxeles entre los bordes superiores e izquierdos del lienzo y el rectángulo redondeado son todos los sujetos a los mismos factores de escala.
 
@@ -165,7 +166,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Se coloca la esquina superior izquierda del rectángulo redondeado `margin` píxeles desde la izquierda del lienzo y `margin` píxeles desde la parte superior. Los últimos dos argumentos para el `Scale` método se establecen en los valores más el ancho y alto del texto, que también es el ancho y alto del rectángulo redondeado. Esto significa que los ajustes de escala es relativa al centro del rectángulo:
 
-[![](scale-images/centeredscale-small.png "Captura de pantalla triple de la página de escala centrado")](scale-images/centeredscale-large.png "Triple captura de pantalla de la página de escala centrado")
+[![](scale-images/centeredscale-small.png "Captura de pantalla triple de la página de escala centrado")](scale-images/centeredscale-large.png#lightbox "Triple captura de pantalla de la página de escala centrado")
 
 El `Slider` elementos de este programa tienen un intervalo de & #x 2013; 10 a 10. Como puede ver, los valores negativos de vertical escalado (por ejemplo, como en el Android pantalla en el centro) hará que los objetos girar alrededor del eje horizontal que pasa a través del centro de ajuste de escala. Los valores negativos de escala (como se muestra en la pantalla de Windows a la derecha) horizontal hacen objetos que se va a girar alrededor del eje vertical que pasa a través del centro de ajuste de escala.
 
@@ -246,7 +247,7 @@ using (SKPaint strokePaint = new SKPaint
 
 El `pathBounds` rectángulo es obtenido en la parte superior de este código y, a continuación, se utiliza más adelante con el ancho y alto del lienzo en el `Scale` llamar. Llamada por sí sola escalará las coordenadas de la ruta de acceso cuando se representa por la `DrawPath` la estrella pero la llamada se centrará en la esquina superior derecha del lienzo. Debe se desplace hacia abajo y a la izquierda. Este es el trabajo de la `Translate` llamar. Esas dos propiedades de `pathBounds` son aproximadamente -100, por lo que los factores de traducción son aproximadamente 100. Dado que el `Translate` llamada es después de la `Scale` llamar a, esos valores se escalan eficazmente por los factores de escala, por lo que se mueve el centro de la estrella en el centro del lienzo del:
 
-[![](scale-images/anisotropicscaling-small.png "Captura de pantalla triple de la página de ajuste de escala anisotrópico")](scale-images/anisotropicscaling-large.png "Triple captura de pantalla de la página de ajuste de escala anisotrópico")
+[![](scale-images/anisotropicscaling-small.png "Captura de pantalla triple de la página de ajuste de escala anisotrópico")](scale-images/anisotropicscaling-large.png#lightbox "Triple captura de pantalla de la página de ajuste de escala anisotrópico")
 
 Otra manera puede pensar en el `Scale` y `Translate` llamadas consiste en determinar el efecto en orden inverso: la `Translate` llamada cambia la ruta de acceso, por lo que pasa a ser totalmente visible pero orientan en la esquina superior izquierda del lienzo. El `Scale` método, a continuación, hace que ese estrella mayor con respecto a la esquina superior izquierda.
 
@@ -289,7 +290,7 @@ using (SKPaint textPaint = new SKPaint
 
 Es una lógica similar y el texto se expande hasta el tamaño de la página basándose en el rectángulo de límites de texto devuelto desde `MeasureText` (que es un poco mayor que el texto real):
 
-[![](scale-images/anisotropictext-small.png "Captura de pantalla triple de la página de prueba anisotrópico")](scale-images/anisotropictext-large.png "Triple captura de pantalla de la página de prueba anisotrópico")
+[![](scale-images/anisotropictext-small.png "Captura de pantalla triple de la página de prueba anisotrópico")](scale-images/anisotropictext-large.png#lightbox "Triple captura de pantalla de la página de prueba anisotrópico")
 
 Si tiene que conservar la relación de aspecto de los objetos gráficos, desea utilizar isótropo de ajuste de escala. El **escalado isótropo** página se muestra cómo hacerlo para la estrella que señala el 11. Conceptualmente, los pasos para mostrar un objeto gráfico en el centro de la página con la escala isótropo son:
 
@@ -338,7 +339,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El código también muestra la estrella diez veces más, separe cada vez que se reduce el ajuste de escala en 10% y progresivamente cambiando el color de rojo a azul:
 
-[![](scale-images/isotropicscaling-small.png "Captura de pantalla triple de la página de ajuste de escala isótropo")](scale-images/isotropicscaling-large.png "Triple captura de pantalla de la página de ajuste de escala isótropo")
+[![](scale-images/isotropicscaling-small.png "Captura de pantalla triple de la página de ajuste de escala isótropo")](scale-images/isotropicscaling-large.png#lightbox "Triple captura de pantalla de la página de ajuste de escala isótropo")
 
 
 ## <a name="related-links"></a>Vínculos relacionados

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 91afe9b627d9d430fba38b34f915d7e79652a2d3
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c0846e959b4a4cfec9417de59125a8665b648a76
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-map-pin"></a>Personalizar un Pin de mapa
 
@@ -137,7 +137,7 @@ El proceso de creación de la clase de representador personalizado es como sigue
 1. Agregar un `ExportRenderer` atributo a la clase de representador personalizado para especificar que se utilizará para representar el mapa personalizado de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
-> **Tenga en cuenta**: es opcional proporcionar un representador personalizado en cada proyecto de la plataforma. Si no se ha registrado un representador personalizado, se usará el representador predeterminado para la clase base del control.
+> Es opcional proporcionar a un representador personalizado en cada proyecto de la plataforma. Si no se ha registrado un representador personalizado, se usará el representador predeterminado para la clase base del control.
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
@@ -660,5 +660,5 @@ Este artículo muestra cómo crear un representador personalizado para el `Map` 
 
 - [Control de mapas](~/xamarin-forms/user-interface/map.md)
 - [Mapas de iOS](~/ios/user-interface/controls/ios-maps/index.md)
-- [API de mapas](~/android/platform/maps-and-location/maps/maps-api.md)
+- [API de Maps](~/android/platform/maps-and-location/maps/maps-api.md)
 - [Pin personalizada (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)

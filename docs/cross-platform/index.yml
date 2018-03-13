@@ -7,11 +7,11 @@ metadata:
   ms.author: crdun
   ms.date: 02/17/2018
   ms.topic: landing-page
-  ms.openlocfilehash: 996cad48446c618fa12b268a76045a10b8e3628d
-  ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+  ms.openlocfilehash: c143d0be4eb0a8afa122028018ab7c8c4e20a32a
+  ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
   ms.translationtype: HT
   ms.contentlocale: es-ES
-  ms.lasthandoff: 02/27/2018
+  ms.lasthandoff: 03/09/2018
 abstract:
   description: "Xamarin ofrece una plataforma para el desarrollo multiplataforma de aplicaciones para dispositivos móviles, tabletas y escritorio."
   menu:
@@ -58,12 +58,12 @@ sections:
           src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
           href: ~/cross-platform/get-started/index.md
         title: "Introducción"
-      - href: ~/cross-platform/user-interface
-        html: "Obtenga información sobre los distintos kits de herramientas de la interfaz de usuario en cada plataforma."
+      - href: ~/cross-platform/platform
+        html: "Trabajo con características de la plataforma."
         image:
-          src: ~/media/icons/i_user-interface.svg
-          href: ~/cross-platform/user-interface/
-        title: Interfaz de usuario
+          src: ~/media/icons/i_platform.svg
+          href: ~/
+        title: "Características de la plataforma"
       - href: ~/cross-platform/data-cloud/
         html: "Almacenamiento de datos locales y remotos, recuperación y otros servicios basados en la nube."
         image:
@@ -86,12 +86,6 @@ sections:
           src: ~/media/icons/i_app-build.svg
           href: ~/cross-platform/app-fundamentals/
         title: "Principios de la aplicación"
-      - href: ~/
-        html: "Trabajo con características de la plataforma."
-        image:
-          src: ~/media/icons/i_platform.svg
-          href: ~/
-        title: "Características de la plataforma"
       - href: ~/cross-platform/deploy-test/
         html: "Instrucciones para crear e implementar aplicaciones, así como sugerencias para probarlas por adelantado."
         image:
@@ -111,10 +105,14 @@ sections:
     className: cardsD
     items:
     - title: Xamarin.Forms
-      html: <p><a href="~/xamarin-forms/">Primeros pasos</a></p>
+      href: ~/xamarin-forms/index.md
+      html: "<p><a href=\"~/xamarin-forms/get-started/index.md\">Primeros pasos</a><br /><a href=\"~/xamarin-forms/app-fundamentals/index.md\">Principios de la aplicación</a><br /><a href=\"~/xamarin-forms/user-interface/index.md\">Interfaz de usuario</a><br /><a href=\"~/xamarin-forms/platform/index.md\">Características de la plataforma</a><br /><a href=\"~/xamarin-forms/deploy-test/index.md\">Implementación y pruebas</a><br /><a href=\"~/xamarin-forms/xaml/index.md\">XAML</a><br /><a href=\"~/xamarin-forms/data-cloud/index.md\">Datos y servicios en la nube</a><br /><a href=\"~/xamarin-forms/internals/index.md\">Conceptos avanzados y funcionamiento interno</a></p>"
     - title: Android
-      html: <p><a href="~/android/">Primeros pasos</a></p>
+      href: ~/android/index.md
+      html: "<p><a href=\"~/android/get-started/index.md\">Primeros pasos</a><br /><a href=\"~/android/app-fundamentals/index.md\">Principios de la aplicación</a><br /><a href=\"~/android/user-interface/index.md\">Interfaz de usuario</a><br /><a href=\"~/android/platform/index.md\">Características de la plataforma</a><br /><a href=\"~/android/deploy-test/index.md\">Implementación y pruebas</a><br /><a href=\"~/android/data-cloud/index.md\">Datos y servicios en la nube</a><br /><a href=\"~/android/internals/index.md\">Conceptos avanzados y funcionamiento interno</a></p>"
     - title: iOS
-      html: <p><a href="~/ios/">Primeros pasos</a></p>
+      href: ~/ios/index.md
+      html: "<p><a href=\"~/ios/get-started/index.md\">Primeros pasos</a><br /><a href=\"~/ios/app-fundamentals/index.md\">Principios de la aplicación</a><br /><a href=\"~/ios/user-interface/index.md\">Interfaz de usuario</a><br /><a href=\"~/ios/platform/index.md\">Características de la plataforma</a><br /><a href=\"~/ios/deploy-test/index.md\">Implementación y pruebas</a><br /><a href=\"~/ios/data-cloud/index.md\">Datos y servicios en la nube</a><br /><a href=\"~/ios/internals/index.md\">Conceptos avanzados y funcionamiento interno</a></p>"
     - title: Mac
-      html: <p><a href="~/mac/">Primeros pasos</a></p>
+      href: ~/mac/index.md
+      html: "<p><a href=\"~/mac/get-started/index.md\">Primeros pasos</a><br /><a href=\"~/mac/app-fundamentals/index.md\">Principios de la aplicación</a><br /><a href=\"~/mac/user-interface/index.md\">Interfaz de usuario</a><br /><a href=\"~/mac/platform/index.md\">Características de la plataforma</a><br /><a href=\"~/mac/deploy-test/index.md\">Implementación y pruebas</a><br /><a href=\"~/mac/internals/index.md\">Conceptos avanzados y funcionamiento interno</a></p>"

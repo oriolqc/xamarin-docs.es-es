@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 676bd443d2f45c6ed502c2f94feec3599b068341
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 74911f583a2e28a99ceb7c087a8542d0a8cab71d
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
-# <a name="getting-started-with-ff35"></a>Introducción a FF &#35;
+# <a name="getting-started-with-f35"></a>Introducción a F&#35;
 
 ## <a name="requirements"></a>Requisitos
 
@@ -22,30 +22,30 @@ F # se incluye de forma predeterminada en Visual Studio para Mac.
 
 En Windows, debe instalar las herramientas del compilador independiente F #, según las instrucciones en [el sitio de FSharp.org](http://fsharp.org/use/windows/).
 
-## <a name="creating-an-f35-project"></a>Crear un formato de &#35; Proyecto
+## <a name="creating-an-f35-project"></a>Crear un F&#35; proyecto
 
 Crear una nueva aplicación de F # se realiza en el mismo **nuevo proyecto** ventana utilizada para C#.
 
 En Visual Studio para Mac elija **archivo > nueva solución**. En el **nuevo proyecto** cuadro de diálogo, seleccione una plantilla de proyecto. Utilice la lista desplegable a la derecha de la plantilla que elija el idioma que desea usar:
 
- [ ![](overview-images/choosefsharp.png "Utilice la lista desplegable a la derecha de la plantilla para elegir el idioma que se va a usar")](overview-images/choosefsharp.png)
+ [![](overview-images/choosefsharp.png "Utilice la lista desplegable a la derecha de la plantilla para elegir el idioma que se va a usar")](overview-images/choosefsharp.png#lightbox)
 
 Seleccione el tipo de proyecto y haga clic en **siguiente** para nombrar y crearla.
 
 
 Ahora está preparado para empezar a crear algunas excelentes aplicaciones de F #.
 
-## <a name="learning-to-use-f35"></a>Aprender a usar F &#35;
+## <a name="learning-to-use-f35"></a>Aprender a usar F&#35;
 
 Un tutorial de F # también puede crearse desde la **nueva solución** cuadro de diálogo de Visual Studio para Mac. Vaya a **otros > .NET > Tutorial de F #**, tal como se detalla en la siguiente imagen:
 
- [ ![](overview-images/fsharptutorial.png "Navegar a otra / .NET / Tutorial de F #")](overview-images/fsharptutorial.png)
+ [![](overview-images/fsharptutorial.png "Navegar a otra / .NET / Tutorial de F #")](overview-images/fsharptutorial.png#lightbox)
 
 Se abrirá una nueva solución interactiva. Explorar esta es una excelente manera de obtener a entender los conceptos básicos del lenguaje.
 
- [ ![](overview-images/newtutorial-sml.png "Explorar esta es una excelente manera de obtener a entender los conceptos básicos del lenguaje")](overview-images/newtutorial.png)
+ [![](overview-images/newtutorial-sml.png "Explorar esta es una excelente manera de obtener a entender los conceptos básicos del lenguaje")](overview-images/newtutorial.png#lightbox)
 
-Extraer del repositorio el [lista de ejemplos](/guides/cross-platform/fsharp/samples/) ver F # en acción.
+Extraer del repositorio el [lista de ejemplos](~/cross-platform/platform/fsharp/samples.md) ver F # en acción.
 
 ## <a name="references"></a>Referencias
 

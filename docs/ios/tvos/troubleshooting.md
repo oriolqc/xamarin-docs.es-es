@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 278b9e782073a26dc04bac9418613ea4c09db445
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7b6d0901f8b01668626fc3b6a70a091e99e2287e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="troubleshooting"></a>Solución de problemas
 
@@ -46,7 +46,7 @@ Para solucionar este problema, realice lo siguiente:
 1. En Visual Studio para Mac, haga doble clic en el archivo de proyecto Xamarin.tvOS en la **el Explorador de soluciones** y seleccione **opciones**.
 2. Seleccione **tvOS compilación** y asegúrese de que se encuentra en la **versión** configuración: 
 
-    [ ![](troubleshooting-images/ts01.png "Seleccione tvOS opciones de compilación")](troubleshooting-images/ts01.png)
+    [![](troubleshooting-images/ts01.png "Seleccione tvOS opciones de compilación")](troubleshooting-images/ts01.png#lightbox)
 3. Agregar `--bitcode=asmonly` a la **argumentos adicionales mtouch** campo y haga clic en el **Aceptar** botón.
 4. Vuelva a compilar la aplicación en el **versión** configuración.
 
@@ -124,7 +124,7 @@ Vuelva a compilar la aplicación para la versión y reenvíe a iTunes Connect.
 
 Si utilizas una biblioteca de fabricante 3rd (por ejemplo, MonoGame) y la compilación de versión no se pudo largas series de mensajes de error que terminen en `Task "MTouch" execution -- FAILED`, intente agregar `-gcc_flags="-framework OpenAL"` a su **argumentos adicionales táctil**:
 
-[ ![](troubleshooting-images/mtouch01.png "MTouch ejecución de la tarea")](troubleshooting-images/mtouch01.png)
+[![](troubleshooting-images/mtouch01.png "MTouch ejecución de la tarea")](troubleshooting-images/mtouch01.png#lightbox)
 
 También debe incluir `--bitcode=asmonly` en el **argumentos adicionales táctil**, han configurado las opciones del vinculador para **vínculo todos los** y realice una compilación limpia.
 

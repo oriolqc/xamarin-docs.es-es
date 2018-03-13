@@ -4,14 +4,15 @@ description: "Profundizar más en SkiaSharp transformaciones con la matriz de tr
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 85402768990869a2121cdea5ab7d232d80d64ed2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9d5e65abe675ded48e9239f2cd10ceed4a7c3a52
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="matrix-transforms"></a>Transformaciones de matriz
 
@@ -401,7 +402,7 @@ public class PathTransformPage : ContentPage
 
 Aparece en la esquina superior izquierda del lienzo:
 
-[![](matrix-images/pathtransform-small.png "Captura de pantalla triple de la página de transformación de la ruta de acceso")](matrix-images/pathtransform-large.png "Triple captura de pantalla de la página de transformación de la ruta de acceso")
+[![](matrix-images/pathtransform-small.png "Captura de pantalla triple de la página de transformación de la ruta de acceso")](matrix-images/pathtransform-large.png#lightbox "Triple captura de pantalla de la página de transformación de la ruta de acceso")
 
 El constructor de este programa aplica a la matriz a la ruta de acceso con la siguiente llamada:
 
@@ -588,7 +589,7 @@ public partial class ShowAffineMatrixPage : ContentPage
 
 Cuando la página se carga por primera vez, mientras que las otras dos pantallas se muestran después de cierta manipulación en la pantalla de iOS siguiente muestra el mapa de bits:
 
-[![](matrix-images/showaffinematrix-small.png "Captura de pantalla triple de la página de matriz afín mostrar")](matrix-images/showaffinematrix-large.png "Triple captura de pantalla de la página de matriz afín mostrar")
+[![](matrix-images/showaffinematrix-small.png "Captura de pantalla triple de la página de matriz afín mostrar")](matrix-images/showaffinematrix-large.png#lightbox "Triple captura de pantalla de la página de matriz afín mostrar")
 
 Aunque parece como si los puntos táctiles arrastre las esquinas del mapa de bits, es solo una ilusión. La matriz que se calcula a partir de los puntos táctiles transforma el mapa de bits para que las esquinas coincidan con los puntos táctiles.
 

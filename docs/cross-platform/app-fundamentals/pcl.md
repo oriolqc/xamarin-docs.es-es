@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: e3701960f246a8f627d991edf244656b5fd8958e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e81ecd10f4dfc101cf63ba9d052d15b51a367ee5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>Introducción a las bibliotecas de clases portables
 
@@ -29,10 +29,6 @@ Existen tres maneras principales para uso compartido de código que solucionan e
 
 
 Esta página explica cómo crear un **PCL** proyecto que tenga como destino un perfil específico, que, a continuación, hacer referencia a varios proyectos para plataformas específicas.
-
-## <a name="requirements"></a>Requisitos
-
-Proyectos de biblioteca Portable se habilitan automáticamente en Visual Studio para Mac en Mac OS y están integrados en Visual Studio 2013 y versiones posteriores.
 
 
 ## <a name="what-is-a-portable-class-library"></a>¿Qué es una biblioteca de clases Portable?
@@ -132,7 +128,7 @@ Y </td>
   </tbody>
 </table>
 
-La columna Xamarin refleja el hecho de que Xamarin.iOS y Xamarin.Android es compatible con todos los perfiles que se distribuye con Visual Studio 2013 y versiones posteriores, y la disponibilidad de características en las bibliotecas que cree sólo se verá limitada por las otras plataformas que elija para soporte técnico.
+La columna Xamarin refleja el hecho de que Xamarin.iOS y Xamarin.Android es compatible con todos los perfiles incluidos con Visual Studio y la disponibilidad de características en las bibliotecas que cree sólo se verá limitada por las otras plataformas que elija para admitir.
 
 Esto incluye perfiles que son combinaciones de:
 
@@ -170,7 +166,7 @@ Este diagrama muestra la arquitectura de una aplicación multiplataforma mediant
 
 
 
-[![](pcl-images/image1.png "Este diagrama muestra la arquitectura de una aplicación multiplataforma mediante una biblioteca de clases Portable para compartir código, sino también mediante inserción de dependencias para pasar de características depende de la plataforma")](pcl-images/image1.png)
+[![](pcl-images/image1.png "Este diagrama muestra la arquitectura de una aplicación multiplataforma mediante una biblioteca de clases Portable para compartir código, sino también mediante inserción de dependencias para pasar de características depende de la plataforma")](pcl-images/image1.png#lightbox)
 
 
 
@@ -212,7 +208,7 @@ Para ver y cambiar la configuración de PCL para este proyecto, haga clic en el 
 
 
 
-[![](pcl-images/image4.png "Para ver y cambiar la configuración de PCL para este proyecto, haga clic en el proyecto y elija Opciones de compilación General para ver la pantalla que se muestra aquí")](pcl-images/image4.png)
+[![](pcl-images/image4.png "Para ver y cambiar la configuración de PCL para este proyecto, haga clic en el proyecto y elija Opciones de compilación General para ver la pantalla que se muestra aquí")](pcl-images/image4.png#lightbox)
 
 
 
@@ -224,7 +220,7 @@ Si se cambia cualquiera de los `Target Framework` opciones actualiza automática
 
 
 
-[![](pcl-images/image5.png "Cambiar cualquiera de las opciones de .NET Framework de destino automáticamente, actualiza el perfil actual de la pantalla también mostrará una advertencia si se seleccionan opciones incompatibles")](pcl-images/image5.png)
+[![](pcl-images/image5.png "Cambiar cualquiera de las opciones de .NET Framework de destino automáticamente, actualiza el perfil actual de la pantalla también mostrará una advertencia si se seleccionan opciones incompatibles")](pcl-images/image5.png#lightbox)
 
 
 
@@ -238,7 +234,7 @@ Cuando se escribe código en una biblioteca PCL, Visual Studio para el editor de
 
 
 
-[![](pcl-images/image6.png "E/S utilizando el perfil predeterminado Profile136 usa en Visual Studio para la barra de desplazamiento que indica aproximadamente la mitad de las clases disponibles aparecen en realidad solo están 14 clases disponibles de aviso de Mac")](pcl-images/image6.png)
+[![](pcl-images/image6.png "E/S utilizando el perfil predeterminado Profile136 usa en Visual Studio para la barra de desplazamiento que indica aproximadamente la mitad de las clases disponibles aparecen en realidad solo están 14 clases disponibles de aviso de Mac")](pcl-images/image6.png#lightbox)
 
 
 
@@ -246,7 +242,7 @@ Comparar que con la System.IO Autocompletar de un proyecto Xamarin.iOS o Xamarin
 
 
 
-[![](pcl-images/image7.png "40 clases incluidas disponible normalmente usan clases como archivos y directorios que no están en ningún perfil de PCL")](pcl-images/image7.png)
+[![](pcl-images/image7.png "40 clases incluidas disponible normalmente usan clases como archivos y directorios que no están en ningún perfil de PCL")](pcl-images/image7.png#lightbox)
 
 
 
@@ -261,7 +257,7 @@ Una vez que se ha creado un proyecto PCL, puede agregar una referencia a él des
 
 
 
-[![](pcl-images/image8.png "En Visual Studio para Mac, haga doble clic en el nodo referencias y elija Editar referencias, a continuación, cambie a la ficha de proyectos, como se muestra")](pcl-images/image8.png)
+[![](pcl-images/image8.png "En Visual Studio para Mac, haga doble clic en el nodo referencias y elija Editar referencias, a continuación, cambie a la ficha de proyectos, como se muestra")](pcl-images/image8.png#lightbox)
 
 
 
@@ -269,7 +265,7 @@ Captura de pantalla siguiente muestra el panel de la solución para la aplicaci�
 
 
 
-[![](pcl-images/image9.png "El panel de la solución para la aplicación de ejemplo TaskyPortable")](pcl-images/image9.png)
+[![](pcl-images/image9.png "El panel de la solución para la aplicación de ejemplo TaskyPortable")](pcl-images/image9.png#lightbox)
 
 
 
@@ -325,7 +321,7 @@ Se pueden ver y cambiar, haga doble clic en el proyecto y elija la configuració
 
 
 
-[![](pcl-images/image13.png "La configuración de PCL se pueden ver y cambiar, haga doble clic en el proyecto y elija Propiedades biblioteca, como se muestra en esta captura de pantalla")](pcl-images/image13.png)
+[![](pcl-images/image13.png "La configuración de PCL se pueden ver y cambiar, haga doble clic en el proyecto y elija Propiedades biblioteca, como se muestra en esta captura de pantalla")](pcl-images/image13.png#lightbox)
 
 
 
@@ -340,7 +336,7 @@ Cuando se escribe código en una biblioteca PCL, Visual Studio reconoce las limi
 
 
 
-[![](pcl-images/image14.png "E/S utilizando el perfil predeterminado Profile136")](pcl-images/image14.png)
+[![](pcl-images/image14.png "E/S utilizando el perfil predeterminado Profile136")](pcl-images/image14.png#lightbox)
 
 
 
@@ -348,7 +344,7 @@ Comparar que con la System.IO Autocompletar en un proyecto normal: hay 40 clases
 
 
 
-[![](pcl-images/image15.png "Autocompletar en un proyecto normal")](pcl-images/image15.png)
+[![](pcl-images/image15.png "Autocompletar en un proyecto normal")](pcl-images/image15.png#lightbox)
 
 
 
@@ -363,7 +359,7 @@ Una vez que se ha creado un proyecto PCL, puede agregar una referencia a él des
 
 
 
-[![](pcl-images/image16.png "Ficha de proyectos, como se muestra")](pcl-images/image16.png)
+[![](pcl-images/image16.png "Ficha de proyectos, como se muestra")](pcl-images/image16.png#lightbox)
 
 
 
@@ -371,7 +367,7 @@ Captura de pantalla siguiente muestra el panel de la solución para la aplicaci�
 
 
 
-[![](pcl-images/image17.png "El panel de la solución para la aplicación de ejemplo TaskyPortable")](pcl-images/image17.png)
+[![](pcl-images/image17.png "El panel de la solución para la aplicación de ejemplo TaskyPortable")](pcl-images/image17.png#lightbox)
 
 
 
@@ -393,7 +389,7 @@ Estas son algunas capturas de pantalla de las aplicaciones resultantes que se ej
 
 
 
-[![](pcl-images/image18.png "Estas son algunas capturas de pantalla de las aplicaciones resultantes que se ejecutan en iOS, Android y Windows Phone")](pcl-images/image18.png)
+[![](pcl-images/image18.png "Estas son algunas capturas de pantalla de las aplicaciones resultantes que se ejecutan en iOS, Android y Windows Phone")](pcl-images/image18.png#lightbox)
 
 
 
@@ -406,7 +402,7 @@ A continuación se muestra la estructura de la solución (en Visual Studio para 
 
 
 
-[![](pcl-images/image19.png "La estructura de la solución se muestra aquí en Visual Studio para Mac y Visual Studio respectivamente")](pcl-images/image19.png)
+[![](pcl-images/image19.png "La estructura de la solución se muestra aquí en Visual Studio para Mac y Visual Studio respectivamente")](pcl-images/image19.png#lightbox)
 
 
 
@@ -511,7 +507,7 @@ En este artículo brevemente tiene explica las ventajas e inconvenientes de bibl
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [TaskyPortable (ejemplo)](https://developer.xamarin.com/samples/mobile/TaskyPortable/)
-- [Compilar entre aplicaciones de la plataforma](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+- [Creación de aplicaciones multiplataforma](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 - [Portable Visual Basic](~/cross-platform/platform/visual-basic/index.md)
 - [Proyectos compartidos](~/cross-platform/app-fundamentals/shared-projects.md)
 - [Opciones de código compartido](~/cross-platform/app-fundamentals/code-sharing.md)

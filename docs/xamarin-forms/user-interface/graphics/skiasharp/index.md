@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/11/2017
-ms.openlocfilehash: a49c442fcce31fb6b853359ddfafc9a43d0a2114
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: eaebd8cbae996e9a5792d0a4898fafb72bdded47
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-skiasharp-in-xamarinforms"></a>Uso de SkiaSharp en Xamarin.Forms
 
@@ -22,10 +22,9 @@ SkiaSharp es un sistema de gráficos 2D para .NET y C# gracias al motor de gráf
 
 Esta guía se da por supuesto que está familiarizado con la programación de Xamarin.Forms.
 
-## <a name="webinar"></a>Seminario Web
+> [!VIDEO https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms/player]
 
-[![](images/skiasharpwebinarscreen.png "SkiaSharp en seminario Web Xamarin.Forms")](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)  
-[Ver el seminario Web "SkiaSharp para Xamarin.Forms"](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)
+**Seminario Web: SkiaSharp para Xamarin.Forms**
 
 ## <a name="skiasharp-preliminaries"></a>Pasos preliminares SkiaSharp
 
@@ -38,19 +37,19 @@ En cualquier página de C# que utiliza SkiaSharp desea incluir un `using` la dir
 > [!IMPORTANT]
 > El `SkiaSharp.Views.Forms` espacio de nombres también contiene un `SKGLView` clase que deriva de `View` pero usa OpenGL para representar los gráficos. Por motivos de simplicidad, esta guía restringe a sí mismo a `SKCanvasView`, pero con `SKGLView` en su lugar, es muy similar.
 
-## <a name="skiasharp-drawing-basicsbasicsindexmd"></a>[Conceptos básicos de dibujo SkiaSharp](basics/index.md)
+## <a name="skiasharp-drawing-basicsbasicsindexmd"></a>[Conceptos básicos de dibujo de SkiaSharp](basics/index.md)
 
 Algunas de las cifras más sencillas de gráficos que se pueden dibujar con SkiaSharp son círculos, elipses y rectángulos. Mostrar estas cifras, obtendrá información sobre coordenadas SkiaSharp, tamaños y colores.
 
-## <a name="skiasharp-lines-and-pathspathsindexmd"></a>[Las rutas de acceso y las líneas de SkiaSharp](paths/index.md)
+## <a name="skiasharp-lines-and-pathspathsindexmd"></a>[Trazados y líneas de SkiaSharp](paths/index.md)
 
 Una ruta de acceso de gráficos es una serie de líneas rectas conectadas y curvas conectadas. Las rutas de acceso pueden ser traza, rellenado, o ambos. Este tema abarca muchos aspectos del dibujo de líneas, incluidos los extremos del trazo y uniones y discontinuas y líneas de puntos, pero deja poco geometrías de la curva.
 
-## <a name="skiasharp-transformstransformsindexmd"></a>[SkiaSharp transformaciones](transforms/index.md)
+## <a name="skiasharp-transformstransformsindexmd"></a>[Transformaciones de SkiaSharp](transforms/index.md)
 
 Las transformaciones permiten que objetos de gráficos uniformemente traducir, escalar, girar, o sesgado. Este artículo también muestra cómo puede utilizar una matriz de transformación de 3 por 3 estándar para crear transformaciones no afines y aplicar transformaciones a las rutas de acceso.
 
-## <a name="skiasharp-curves-and-pathscurvesindexmd"></a>[Las rutas de acceso y curvas SkiaSharp](curves/index.md)
+## <a name="skiasharp-curves-and-pathscurvesindexmd"></a>[Trazados y curvas de SkiaSharp](curves/index.md)
 
 La exploración de las rutas de acceso continúa con la adición de curvas para los objetos de una ruta de acceso y aprovecharse de otras características eficaces de la ruta de acceso. Verá cómo se puede especificar una ruta de acceso completa en una cadena de texto concisa, cómo utilizar los efectos de la ruta de acceso y cómo profundizar en el funcionamiento interno de la ruta de acceso.
 

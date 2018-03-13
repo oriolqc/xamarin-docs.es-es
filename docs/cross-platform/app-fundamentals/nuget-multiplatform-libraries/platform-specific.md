@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 951de7c134e6882d621b015456d5d40a7cf2b8d2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6512387738217259067e7b9ae8076f73b4fbeb07
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-new-platform-specific-library-projects-for-nuget"></a>Crear nuevos proyectos de biblioteca específico de la plataforma de NuGet
 
@@ -27,11 +27,11 @@ Varios ensamblados se crean y se integra en un único paquete de NuGet. Estánda
 
 2. Elija **biblioteca multiplataforma** desde el **multiplataforma > biblioteca** sección:
 
-  [ ![](platform-specific-images/mulitplatform-library-sml.png "Configurar la biblioteca de multiplataforma para un único código base")](platform-specific-images/multiplatform-library.png)
+  [![](platform-specific-images/mulitplatform-library-sml.png "Configurar la biblioteca de multiplataforma para un único código base")](platform-specific-images/multiplatform-library.png#lightbox)
 
 3. Escriba un **nombre** y **descripción**y elija **específica de la plataforma**:
 
-  [ ![](platform-specific-images/specific-configure-sml.png "Configurar la biblioteca específica de la plataforma para iOS y Android")](platform-specific-images/specific-configure.png)
+  [![](platform-specific-images/specific-configure-sml.png "Configurar la biblioteca específica de la plataforma para iOS y Android")](platform-specific-images/specific-configure.png#lightbox)
 
 4. Complete el asistente. Los proyectos siguientes se agregan a la solución:
 
@@ -42,7 +42,7 @@ Varios ensamblados se crean y se integra en un único paquete de NuGet. Estánda
 
 5. Haga doble clic en el proyecto de NuGet y elija **opciones**, a continuación, abra el **paquete NuGet > metadatos** sección y escriba la [metadatos necesarios](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) (como así como cualquier opcional metadatos):
 
-  [ ![](platform-specific-images/specific-metadata-sml.png "Escriba los metadatos necesarios")](platform-specific-images/specific-metadata.png)
+  [![](platform-specific-images/specific-metadata-sml.png "Escriba los metadatos necesarios")](platform-specific-images/specific-metadata.png#lightbox)
 
 6. También en el **opciones de proyecto** ventana, abra el **ensamblados de referencia** sección y elija qué perfiles PCL será compatible con la biblioteca compartida a través de "gancho":
 
@@ -67,4 +67,4 @@ Esta captura de pantalla muestra el contenido de un NuGet específica de la plat
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Metadata Guide](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)
+- [Guía de metadatos](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)

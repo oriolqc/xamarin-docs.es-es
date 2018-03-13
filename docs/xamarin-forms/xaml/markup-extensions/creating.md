@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: eb7189226e4f5d7eb2b55bf61728e65db44ba57b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 737c55aea087094ceb5e6070261d0a3d724e8a01
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="creating-xaml-markup-extensions"></a>Crear extensiones de marcado XAML
 
@@ -117,7 +117,7 @@ El **HSL Color demostración** página muestra una variedad de maneras que `HslC
 
 Tenga en cuenta que, cuando `HslColorExtension` es una etiqueta XML, las cuatro propiedades se establecen como atributos, pero cuando aparece entre llaves, las cuatro propiedades están separadas por comas sin comillas. Los valores predeterminados de `H`, `S`, y `L` son 0 y el valor predeterminado de `A` es 1, por lo que dichas propiedades se pueden omitir si desea establecer valores predeterminados. El último ejemplo muestra un ejemplo donde la luminosidad es 0, lo que normalmente se produce en negro, pero el canal alfa es 0,5, por lo que es semitransparente y aparece atenuado en el fondo blanco de la página:
 
-[![Demostración de Color HSL](creating-images/hslcolordemo-small.png "HSL Color demostración")](creating-images/hslcolordemo-large.png "HSL Color demostración")
+[![Demostración de Color HSL](creating-images/hslcolordemo-small.png "HSL Color demostración")](creating-images/hslcolordemo-large.png#lightbox "HSL Color demostración")
 
 ## <a name="a-markup-extension-for-accessing-bitmaps"></a>Una extensión de marcado para tener acceso a los mapas de bits
 
@@ -180,7 +180,7 @@ Aunque `ImageResourceExtension` requiere el `Source` propiedad se establece, el 
 
 Este es el programa que se ejecuta en las tres plataformas:
 
-[![Demostración de recursos de imagen](creating-images/imageresourcedemo-small.png "demostración de recursos de imagen")](creating-images/imageresourcedemo-large.png "demostración de recursos de imagen")
+[![Demostración de recursos de imagen](creating-images/imageresourcedemo-small.png "demostración de recursos de imagen")](creating-images/imageresourcedemo-large.png#lightbox "demostración de recursos de imagen")
 
 ## <a name="service-providers"></a>Proveedores de servicios
 

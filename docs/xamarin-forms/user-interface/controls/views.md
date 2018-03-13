@@ -8,286 +8,187 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: df8c8463b2556035c5369c70cb10dbc3dc6b6743
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c5bafe12c2cf8c5f8d75757b22223c708ae248dc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-views"></a>Vistas de Xamarin.Forms
 
 _Xamarin.Forms vistas son los bloques de creación de interfaces de usuario móviles entre plataformas._
 
-<style>.tableimg {ancho máximo: ninguno! importante;}</style>
+Las vistas son objetos de interfaz de usuario, como etiquetas y botones, controles deslizantes que se conocen normalmente como *controles* o *widgets* en otros entornos de programación de gráficos. Las vistas admitidas por Xamarin.Forms todos se derivan los [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) clase. Pueden dividirse en varias categorías:
 
-## <a name="views"></a>Vistas
+## <a name="views-for-presentation"></a>Vistas de presentación
 
-Xamarin.Forms utiliza la palabra *vista* para hacer referencia a objetos visuales, como botones, etiquetas o cuadros de entrada de texto - que pueden ser más conocidos como controles de widgets.
+### <a name="label"></a>Etiqueta
 
-Estos elementos de interfaz de usuario son normalmente son subclases de [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/).
+|     |     |
+| --- | --- |
+| [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) Muestra las cadenas de texto de línea o bloques de varias líneas de texto, ya sea con formato constante o una variable. Establecer el [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.Text/) propiedad en una cadena de constante de formato, o un conjunto el [ `FormattedText` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FormattedText/) propiedad a una [ `FormattedString` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FormattedString/) objeto de variable el formato.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) / [guía](~/xamarin-forms/user-interface/text/label.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text/) | [![Etiquetar ejemplo](views-images/Label.png "etiquetar ejemplo")](views-images/Label-Large.png#lightbox "etiquetar ejemplo")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/LabelDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/LabelDemoPage.xaml) |
+|     |     |
 
-<br clear="right" />
+### <a name="image"></a>Imagen
 
-Xamarin.Forms es compatible con:
+|     |     |
+| --- | --- |
+| [`Image`](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) muestra un mapa de bits. Mapas de bits se pueden descargar a través de Internet, incrustan como recursos en el proyecto común o proyectos de plataforma o creados mediante .NET `Stream` objeto.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) / [guía](~/xamarin-forms/user-interface/images.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/) | [![Ejemplo de la imagen](views-images/Image.png "la imagen de ejemplo")](views-images/Image-Large.png#lightbox "la imagen de ejemplo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageDemoPage.xaml) |
+|     |     |
 
-<table align="center" border="1" cellpadding="1" cellspacing="1">
-<thead>
-    <th>
-      <strong>tipo de</strong>
-    </th>
-    <th>
-      <strong>Descripción</strong>
-    </th>
-    <th style="min-width:400px">
-      <strong>captura de pantalla</strong>
-    </th>
+### <a name="boxview"></a>BoxView
 
-  </thead>
-  <tbody>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ActivityIndicator/">ActivityIndicator</a>
-    </td>
-    <td valign="top">
-Un control visual que se utiliza para indicar que algo es continua. Este control proporciona una indicación visual al usuario que está ocurriendo algo, sin información sobre su progreso.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/ActivityIndicatorDemoPage.cs"><img src="views-images/ActivityIndicator.png" title="Ejemplo de ActivityIndicator" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/">BoxView</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> utilizado para dibujar un rectángulo de color sólido. BoxView es un suplente útil para las imágenes o los elementos personalizados al realizar la creación de prototipos inicial. BoxView tiene una solicitud de tamaño predeterminado de 40 x 40. Si tiene un tamaño diferente, asigne el <a href="https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/">VisualElement.WidthRequest</a> y <a href="https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/">VisualElement.HeightRequest</a>.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/BoxViewDemoPage.cs"><img src="views-images/BoxView.png" title="Ejemplo de BoxView" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Button/">Button</a>
-    </td>
-    <td align="center" valign="top">
-Un botón <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> que responde a los eventos de toque.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/ButtonDemoPage.cs"><img src="views-images/Button.png" title="Ejemplo de botón" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/">DatePicker</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> que permite la selección de fecha. Es muy similar de la representación visual de un DatePicker <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/">entrada</a>, excepto en que aparece un control especial para seleccionar una fecha en lugar de un teclado </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/DatePickerDemoPage.cs"><img src="views-images/DatePicker.png" title="Ejemplo de DatePicker" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Editor/">Editor</a>
-    </td>
-    <td valign="top">
-Un control que puede editar varias líneas de texto. Para las entradas de línea única, consulte <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/">entrada</a>.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/EditorDemoPage.cs"><img src="views-images/Editor.png" title="Ejemplo de editor" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/">Entrada</a>
-    </td>
-    <td valign="top">
-Un control que puede editar una sola línea de texto. Entrada es una entrada de texto de línea única. Mejor sirve para recopilar pequeños elementos discretos de información, como nombres de usuario y contraseñas.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/EntryDemoPage.cs"><img src="views-images/Entry.png" title="Ejemplo de entrada" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Image/">Imagen</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> que contiene una imagen.
-    <br />
-    <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Image/">Imagen de API</a>
-    <br />
-    <a href="~/xamarin-forms/user-interface/images.md">Trabajar con imágenes</a>
-    <br />
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/ImageDemoPage.cs">Origen de demostración</a>
-    </td>
-    <td>
-    <img src="views-images/Image.png" title="Ejemplo de imagen" class="tableimg">
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Label/">Etiqueta</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> que muestra texto en un formato solo lectura. Una etiqueta se utiliza para mostrar elementos de texto de línea, así como bloques de varias líneas de texto.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/LabelDemoPage.cs"><img src="views-images/Label.png" title="Ejemplo de etiqueta" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/">ListView</a>
-    </td>
-    <td valign="top">
-Un <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ItemsView%3CTVisual%3E/">artículoVer</a> que muestra una colección de datos como una lista vertical.
-    <br />
-    <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/">API de ListView</a>
-    <br />
-    <a href="~/xamarin-forms/user-interface/listview/index.md">Documentación de ListView</a>
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/ListViewDemoPage.cs"><img src="views-images/ListView.png" title="Ejemplo de ListView" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/">OpenGLView</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> que muestra el contenido de OpenGL.
-    <ul>
-      <li>Solo funciona para iOS y Android proyectos (no hay compatibilidad de Windows Phone).
-      <li>Requiere una referencia a la <b>OpenTK 1.0</b> ensamblado en iOS y Android proyectos.</li>
-      <li>Es idónea si necesita para usar en los proyectos compartidos; Si se utiliza en una PCL un DependencyService también será necesario.</li>
-    </ul>
-    </td>
-    <td>
-    <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/"><img src="views-images/OpenGL.png" title="Ejemplo de OpenGlView" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/">Selector de</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> control para seleccionar un elemento en una lista. Es similar a la representación visual de un selector de un <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/">entrada</a>, pero aparece un control de selector en lugar de un teclado.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/PickerDemoPage.cs"><img src="views-images/Picker.png" title="Ejemplo de selector" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.ProgressBar/">ProgressBar</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> control que indica un progreso.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/ProgressBarDemoPage.cs"><img src="views-images/ProgressBar.png" title="Clase de ejemplo de barra de progreso ="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/">SearchBar</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> control que proporciona un cuadro de búsqueda.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/SearchBarDemoPage.cs"><img src="views-images/SearchBar.png" title="Ejemplo de SearchBar" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/">Control deslizante</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> control que introduce un valor lineal.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/SliderDemoPage.cs"><img src="views-images/Slider.png" title="Ejemplo de control deslizante" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/">Stepper</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> control que introduce un valor discreto, restringido a un intervalo.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/StepperDemoPage.cs"><img src="views-images/Stepper.png" title="Ejemplo paso a paso desencadene" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/">Conmutador</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> control que proporciona un valor de estado de alternancia.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/SwitchDemoPage.cs"><img src="views-images/Switch.png" title="Ejemplo de conmutador" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/">TableView</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> que contiene filas de <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/">celda</a>s.
-    <br />
-    <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/">TableView API</a>
-    <br />
-    <a href="~/xamarin-forms/user-interface/tableview.md">Documentación de TableView</a>
-    <br />
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/TableViewFormDemoPage.cs">Origen de demostración</a>
-    </td>
-    <td>
-    <img src="views-images/TableViewNewest.png" title="En el ejemplo se TableView" class="tableimg">
-    </td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.TimePicker/">TimePicker</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> control que proporciona la selección de tiempo. Es muy similar de la representación visual de un TimePicker <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/">entrada</a>, excepto en que un control especial para seleccionar uno aparece en lugar de un teclado.
-    </td>
-    <td>
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/TimePickerDemoPage.cs"><img src="views-images/TimePicker.png" title="En el ejemplo se TimePicker" class="tableimg">
-    </a></td>
-  </tr>
-  <tr>
-    <td valign="top">
-      <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/">WebView</a>
-    </td>
-    <td valign="top">
-A <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.View/">vista</a> que presenta el contenido HTML.
-    <br />
-    <a href="https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/">Vista Web API</a>
-    <br />
-    <a href="~/xamarin-forms/user-interface/webview.md">Documentación de WebView</a>
-    <br />
-    <a href="https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/WebViewDemoPage.cs">Origen de demostración</a>
-    </td>
-    <td>
-    <img src="views-images/WebView.png" title="Ejemplo de vista Web" class="tableimg">
-    </td>
-  </tr>
-  </tbody>
-</table>
+|     |    |
+| --- | ---|
+| [`BoxView`](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) muestra un rectángulo relleno con color de la [ `Color` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BoxView.Color/) propiedad. `BoxView` tiene una solicitud de tamaño predeterminado de 40 x 40. Para otros tamaños, asignar la [ `WidthRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/) y [ `HeightRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) propiedades.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) / [guía](~/xamarin-forms/user-interface/boxview.md) / [ejemplo 1](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BasicBoxView), [2](https://developer.xamarin.com/samples/xamarin-forms/BoxView/TextDecoration), [3](https://developer.xamarin.com/samples/xamarin-forms/BoxView/ColorListBox), [4 ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/GameOfLife), [5](https://developer.xamarin.com/samples/xamarin-forms/BoxView/DotMatrixClock), y [6](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock) | [![Ejemplo de BoxView](views-images/BoxView.png "BoxView ejemplo")](views-images/BoxView-Large.png#lightbox "BoxView ejemplo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/BoxViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/BoxViewDemoPage.xaml) |
+|     |     |
 
+### <a name="webview"></a>WebView
 
+|     |     |
+| --- | --- |
+| [`WebView`](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) Muestra las páginas Web o contenido HTML en función de si la [ `Source` ](https://developer.xamarin.com/api/property/Xamarin.Forms.WebView.Source/) propiedad está establecida en un [ `UriWebViewSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.UrlWebViewSource/) o un [ `HtmlWebViewSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.HtmlWebViewSource/) objeto.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) / [guía](~/xamarin-forms/user-interface/webview.md) / [ejemplo 1](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/) y [2](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView) | [![Ejemplo de WebView](views-images/WebView.png "ejemplo WebView")](views-images/WebView-Large.png#lightbox "ejemplo WebView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/WebViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/WebViewDemoPage.xaml) |
+|     |     |
+
+### <a name="openglview"></a>OpenGLView
+
+|     |     |
+| --- | --- |
+| [`OpenGLView`](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/) Muestra gráficos OpenGL en iOS y Android proyectos. No hay ninguna compatibilidad para la plataforma Universal de Windows. IOS y Android proyectos requieren una referencia a la **OpenTK 1.0** ensamblado o el **OpenTK** ensamblado de la versión 1.0.0.0. `OpenGLView` es más fácil de usar en un proyecto compartido; Si se utilizan en una biblioteca PCL o .NET estándar, un servicio de dependencia también será necesario (como se muestra en el código de ejemplo).<br /><br />Se trata de la instalación de solo gráficos que está integrada en Xamarin.Forms, pero también puede representar una aplicación de Xamarin.Forms gráfico mediante [ `CocosSharp` ](~/xamarin-forms/user-interface/graphics/cocossharp.md), [ `SkiaSharp` ](~/xamarin-forms/user-interface/graphics/skiasharp/index.md), o [ `UrhoSharp` ](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.OpenGLView/)<br /><br /> | [![Ejemplo de OpenGLView](views-images/OpenGLView.png "OpenGLView ejemplo")](views-images/OpenGLView-Large.png#lightbox "OpenGLView ejemplo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
+|     |     |
+
+### <a name="map"></a>Asignación
+
+|     |     |
+| --- | --- |
+| [`Map`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) muestra una asignación. El **Xamarin.Forms.Maps** debe estar instalado el paquete de Nuget. Android y plataforma Universal de Windows requieren una clave de autorización del mapa.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) / [guía](~/xamarin-forms/user-interface/map.md) / [ejemplo](https://developer.xamarin.com/samples/WorkingWithMaps/) | [![Asignar ejemplo](views-images/Map.png "asignar ejemplo")](views-images/Map-Large.png#lightbox "asignar ejemplo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) |
+|     |     |
+
+## <a name="views-that-initiate-commands"></a>Vistas que inician comandos
+
+### <a name="button"></a>Botón
+
+|     |     |
+| --- | --- |
+| [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) es un objeto rectangular que muestra el texto, y que se activa un [ `Clicked` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Button.Clicked/) evento cuando se ha presionado.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) | [![Ejemplo de botón](views-images/Button.png "botón ejemplo")](views-images/Button-Large.png#lightbox "ejemplo de botón")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ButtonDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ButtonDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ButtonDemoPage.xaml.cs) |
+|     |     |
+
+### <a name="searchbar"></a>SearchBar
+
+|     |     |
+| --- | --- |
+| [`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) muestra un área para el usuario escriba una cadena de texto y un botón (o una tecla del teclado) que indica a la aplicación para realizar una búsqueda. El [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.Text/) propiedad proporciona acceso al texto y el [ `SearchButtonPressed` ](https://developer.xamarin.com/api/event/Xamarin.Forms.SearchBar.SearchButtonPressed/) evento indica que se ha presionado el botón.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) | [![Ejemplo de SearchBar](views-images/SearchBar.png "SearchBar ejemplo")](views-images/SearchBar-Large.png#lightbox "SearchBar ejemplo")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SearchBarDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml.cs) |
+|     |     |
+
+## <a name="views-for-setting-values"></a>Vistas para establecer valores 
+
+### <a name="slider"></a>Slider
+
+|     |     |
+| --- | --- |
+| [`Slider`](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) permite al usuario seleccionar un `double` valor de un intervalo continuo especificado con el [ `Minimum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Minimum/) y [ `Maximum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Slider.Maximum/) propiedades.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) | [![Ejemplo de control deslizante](views-images/Slider.png "ejemplo de control deslizante")](views-images/Slider-Large.png#lightbox "ejemplo de control deslizante")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SliderDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SliderDemoPage.xaml) |
+|     |     |
+
+### <a name="stepper"></a>Paso a paso desencadene
+
+|     |     |
+| --- | --- |
+| [`Stepper`](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/) permite al usuario seleccionar un `double` valor de un intervalo de valores incrementales especificados con la [ `Minimum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Minimum/), [ `Maximum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Maximum/), y [ `Increment` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Increment/) propiedades.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/) | [![Ejemplo paso a paso desencadene](views-images/Stepper.png "ejemplo paso a paso desencadene")](views-images/Stepper-Large.png#lightbox "ejemplo paso a paso desencadene")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
+|     |     |
+
+### <a name="switch"></a>Modificador 
+
+|     |     |
+| --- | --- |
+| [`Switch`](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) toma la forma de un conmutador de encendido/apagado para permitir al usuario seleccionar un valor booleano. El [ `IsToggled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Switch.IsToggled/) propiedad es el estado del conmutador y la [ `Toggled` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Switch.Toggled/) evento se desencadena cuando cambia el estado.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.Switch/) | [![Cambiar en el ejemplo se](views-images/Switch.png "cambiar ejemplo")](views-images/Stepper-Large.png#lightbox "cambiar ejemplo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwitchDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwitchDemoPage.xaml) |
+|     |     |
+
+### <a name="datepicker"></a>DatePicker
+
+|     |     |
+| --- | --- |
+| [`DatePicker`](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/) permite al usuario seleccionar una fecha con el selector de fecha de la plataforma. Establecer un intervalo de fechas permitidos con el [ `MinimumDate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MinimumDate/) y [ `MaximumDate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.MaximumDate/) propiedades. El [ `Date` ](https://developer.xamarin.com/api/property/Xamarin.Forms.DatePicker.Date/) propiedad es la fecha seleccionada y el [ `DateSelected` ](https://developer.xamarin.com/api/event/Xamarin.Forms.DatePicker.DateSelected/) evento se desencadena cuando se cambia dicha propiedad.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.DatePicker/) | [![Ejemplo de DatePicker](views-images/DatePicker.png "ejemplo DatePicker")](views-images/DatePicker-Large.png#lightbox "ejemplo DatePicker")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/DatePickerDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/DatePickerDemoPage.xaml) |
+|     |     |
+
+### <a name="timepicker"></a>TimePicker
+
+|     |     |
+| --- | --- |
+| [`TimePicker`](https://developer.xamarin.com/api/type/Xamarin.Forms.TimePicker/) permite al usuario seleccionar una hora con el selector de tiempo de la plataforma. El [ `Time` ](https://developer.xamarin.com/api/property/Xamarin.Forms.TimePicker.Time/) propiedad es el tiempo seleccionado. Una aplicación puede supervisar los cambios en el `Time` propiedad mediante la instalación de un controlador para el [ `PropertyChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.BindableObject.PropertyChanged/) eventos.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.TimePicker/) | [![En el ejemplo se TimePicker](views-images/TimePicker.png "ejemplo TimePicker")](views-images/TimePicker-Large.png#lightbox "ejemplo TimePicker")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TimePickerDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TimePickerDemoPage.xaml) |
+|     |     |
+
+## <a name="views-for-editing-text"></a>Vistas para editar texto
+
+Estas dos clases se derivan de la [ `InputView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.InputView/) (clase), que define la [ `Keyboard` ](https://developer.xamarin.com/api/property/Xamarin.Forms.InputView.Keyboard/) propiedad.
+
+<a name="entry" />
+
+### <a name="entry"></a>Entrada
+
+|     |     |
+| --- | --- |
+| [`Entry`](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) permite al usuario escribir y editar una sola línea de texto. El texto está disponible como el [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Entry.Text/) propiedad y el [ `TextChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Entry.TextChanged/) y [ `Completed` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Entry.Completed/) los eventos se activan cuando los cambios de texto o el usuario señales de finalización al pulsar la tecla ENTRAR.<br /><br />Use un [ `Editor` ](#editor) para escribir y editar varias líneas de texto.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) / [guía](~/xamarin-forms/user-interface/text/entry.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text) | [![Ejemplo de entrada de](views-images/Entry.png "ejemplo de entrada de")](views-images/Entry-Large.png#lightbox "ejemplo de entrada")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EntryDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EntryDemoPage.xaml) |
+|     |     |
+
+<a name="editor" />
+
+### <a name="editor"></a>Editor
+
+|     |     |
+| --- | --- |
+| [`Editor`](https://developer.xamarin.com/api/type/Xamarin.Forms.Editor/) permite al usuario escribir y editar varias líneas de texto. El texto está disponible como el [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Editor.Text/) propiedad y el [ `TextChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Editor.TextChanged/) y [ `Completed` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Editor.Completed/) los eventos se activan cuando los cambios de texto o el usuario envía una señal de finalización.<br /><br />Use un [ `Entry` ](#entry) vista para escribir y editar una sola línea de texto.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.Editor/) / [guía](~/xamarin-forms/user-interface/text/editor.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text) | [![Ejemplo de entrada de](views-images/Editor.png "ejemplo Editor")](views-images/Editor-Large.png#lightbox "Editor de ejemplo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EditorDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EditorDemoPage.xaml) |
+|     |     |
+
+## <a name="views-to-indicate-activity"></a>Vistas para indicar la actividad
+
+<a name="activityindicator" />
+
+### <a name="activityindicator"></a>ActivityIndicator
+
+|     |     |
+| --- | --- |
+| [`ActivityIndicator`](https://developer.xamarin.com/api/type/Xamarin.Forms.ActivityIndicator/) usa una animación para mostrar que la aplicación esté implicada en una actividad larga sin dar ninguna indicación de progreso. El [ `IsRunning` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) propiedad controla la animación.<br /><br />Si se conoce el progreso de la actividad, use un [ `ProgressBar` ](#progressbar) en su lugar.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.ActivityIndicator/) | [![Ejemplo de ActivityIndicator](views-images/ActivityIndicator.png "ActivityIndicator ejemplo")](views-images/ActivityIndicator-Large.png#lightbox "ActivityIndicator ejemplo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ActivityIndicatorDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ActivityIndicatorDemoPage.xaml) |
+|     |     |
+
+<a name="progressbar" />
+
+### <a name="progressbar"></a>ProgressBar
+
+|     |     |
+| --- | --- |
+| [`ProgressBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.ProgressBar/) usa una animación para mostrar que la aplicación está progresando a través de una actividad larga. Establecer el [ `Progress` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ProgressBar.Progress/) propiedad con valores entre 0 y 1 para indicar el progreso.<br /><br />Si se desconoce el progreso de la actividad, use un [ `ActivityIndicator` ](#activityindicator) en su lugar.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.ProgressBar/) | [![Ejemplo de barra de progreso](views-images/ProgressBar.png "ejemplo ProgressBar")](views-images/ProgressBar-Large.png#lightbox "ejemplo de barra de progreso")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ProgressBarDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ProgressBarDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ProgressBarDemoPage.xaml.cs) |
+|     |     |
+
+## <a name="views-that-display-collections"></a>Vistas que muestran colecciones
+
+### <a name="picker"></a>Selector de
+
+|     |     |
+| --- | --- |
+| [`Picker`](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) muestra un elemento seleccionado de una lista de cadenas de texto y permite al seleccionar este elemento al que se derivan la vista. Establecer el [ `Items` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Items/) propiedad a una lista de cadenas, o la [ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.ItemsSource/) propiedad a una colección de objetos. El [ `SelectedIndexChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Picker.SelectedIndexChanged/) evento se desencadena cuando se selecciona un elemento.<br /><br />La `Picker` muestra la lista de elementos solo cuando se selecciona. Use un [ `ListView` ](#listView) o [ `TableView` ](#tableView) para obtener una lista desplazable que permanece en la página.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) / [guía](~/xamarin-forms/user-interface/picker/index.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/) | [![Ejemplo de selector](views-images/Picker.png "ejemplo selector")](views-images/Picker-Large.png#lightbox "ejemplo selector")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PickerDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml.cs) |
+|     |     |
+
+<a name="listView" />
+
+### <a name="listview"></a>ListView
+
+|     |     |
+| --- | --- |
+| [`ListView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) se deriva de [ `ItemsView[Cell]` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ItemsView%3CTVisual%3E/) y muestra una lista desplazable de elementos de datos seleccionable. Establecer el [ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemsSource/) propiedad a una colección de objetos y establezca el [ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemTemplate/) propiedad a una [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) objeto que describe cómo los elementos son para tener el formato. El [ `ItemSelected` ](https://developer.xamarin.com/api/event/Xamarin.Forms.ListView.ItemSelected/) evento indica que se ha realizado una selección, que está disponible como el [ `SelectedItem` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.SelectedItem/) propiedad.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) / [guía](~/xamarin-forms/user-interface/listview/index.md) / [ejemplo](https://developer.xamarin.com/samples/WorkingWithListview) | [![Ejemplo de ListView](views-images/ListView.png "ejemplo de ListView")](views-images/ListView-Large.png#lightbox "ejemplo de ListView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
+|     |     |
+
+<a name="tableView" />
+
+### <a name="tableview"></a>TableView
+
+|     |     |
+| --- | --- |
+| [`TableView`](https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/) muestra una lista de filas de tipo [ `Cell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) con encabezados opcionales y subcabeceras. Establecer el [ `Root` ](https://developer.xamarin.com/api/property/Xamarin.Forms.TableView.Root/) propiedad a un objeto de tipo [ `TableRoot` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TableRoot/)y agregue [ `TableSection` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TableSection/) objetos a los que `TableRoot`. Cada `TableSection` es una colección de `Cell` objetos.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.TableView/) / [guía](~/xamarin-forms/user-interface/tableview.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TableView) | [![En el ejemplo se TableView](views-images/TableView.png "ejemplo TableView")](views-images/TableView-Large.png#lightbox "ejemplo TableView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TableViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TableViewDemoPage.xaml) |
+|     |     |
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Introducción a Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
-- [Galería de Xamarin.Forms (ejemplo)](https://developer.xamarin.com/samples/FormsGallery/)
-- [Ejemplos de Xamarin.Forms](https://developer.xamarin.com/samples/tag/Xamarin.Forms/)
+- [Ejemplo de Xamarin.Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
+- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/) (Ejemplos de Xamarin.Forms)
 - [Documentación de API de Xamarin.Forms](https://developer.xamarin.com/api/root/Xamarin.Forms/)

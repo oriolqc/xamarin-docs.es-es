@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 79ce4a1393b2affade3422f73e1c3d4680d199df
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 1e65207e987dbdab8bf2fe5f48f0b0a500dd27bc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="getting-started-with-datapages"></a>Introducción a DataPages
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 02/28/2018
 
 Para empezar a compilar una página de unidad de datos simple con la vista previa DataPages, siga estos pasos. Esta usa demostración un estilo codificado de forma rígida ("eventos") en la vista previa de compilaciones que solo funciona con el formato JSON específico en el código.
 
-[ ![](get-started-images/demo-sml.png "Aplicación de ejemplo DataPages")](get-started-images/demo.png "aplicación de ejemplo DataPages")
+[![](get-started-images/demo-sml.png "Aplicación de ejemplo DataPages")](get-started-images/demo.png#lightbox "aplicación de ejemplo DataPages")
 
 ## <a name="1-add-nuget-packages"></a>1. Agregar paquetes de NuGet
 
@@ -134,7 +134,7 @@ Un ejemplo de los datos JSON desde el [origen demostración](http://demo3143189.
 
 Deben dar como resultado de los pasos anteriores en una página de datos de trabajo:
 
-[ ![](get-started-images/demo-sml.png "Aplicación de ejemplo DataPages")](get-started-images/demo.png "aplicación de ejemplo DataPages")
+[![](get-started-images/demo-sml.png "Aplicación de ejemplo DataPages")](get-started-images/demo.png#lightbox "aplicación de ejemplo DataPages")
 
 Esto funciona porque el estilo pregenerado **"Eventos"** existe en el paquete Nuget de tema claro y tiene los estilos definidos que coincida con el origen de datos (p. ej. "title", "image", "presenter").
 
@@ -163,7 +163,7 @@ El estilo heredado puede reemplazarse especificando una plantilla y usar enlaces
 
 Proporcionando un `DataTemplate` este código invalida el `StyleClass` y en su lugar, usa el diseño predeterminado para un `ListItemControl`.
 
-[ ![](get-started-images/custom-sml.png "Aplicación de ejemplo DataPages")](get-started-images/custom.png "aplicación de ejemplo DataPages")
+[![](get-started-images/custom-sml.png "Aplicación de ejemplo DataPages")](get-started-images/custom.png#lightbox "aplicación de ejemplo DataPages")
 
 Los programadores que prefieren C# para XAML puede crear datos de enlaces de origen demasiado (no olvide incluir un `using Xamarin.Forms.Pages;` instrucción):
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: eddd723c07919db4749c63c5b4f1d05e9be81022
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 48e8827895001d2b1887816a9368fcc5bbc50bbf
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="maps-api"></a>API de mapas
 
@@ -25,7 +25,6 @@ La API de mapas es adecuada para los casos donde desea mantener un mayor control
 A diferencia de la v1 de API de Google Maps Android ahora desusado, API de Android de Google Maps v2 forma parte de [servicios de Google Play](http://developer.android.com/google/play-services/index.html).
 Por lo tanto, es necesario cumplir algunos requisitos previos obligatorios antes de que se puede usar la API de Android de Google Maps en una aplicación Xamarin.Android.
 
-<a name="Configuring_Maps_API_Prerequisites" />
 
 ## <a name="google-maps-api-prerequisites"></a>Requisitos previos de la API de mapas de Google
 
@@ -37,7 +36,6 @@ Varios elementos deben configurarse para poder usar la API de mapas, incluidos:
 -  Especifique los permisos necesarios
 
 
-<a name="Google_APIs_Add-On" />
 
 ### <a name="install-the-google-play-services-sdk"></a>Instalar el SDK de servicios de Google Play
 
@@ -53,9 +51,8 @@ Antes de que una aplicación de Xamarin.Android puede utilizar la API de mapas, 
 ![Servicios de Google Play aparece bajo adicionales en el Administrador de SDK de Android](maps-api-images/image01.png)
 
 > [!NOTE]
-> **Nota:** los servicios de Google Play APK es un producto con licencia que no estén presenten en todos los dispositivos. Si no está instalado, Google Maps no funcionará en el dispositivo.
+> Los servicios de Google Play APK es un producto con licencia que no puede estar presente en todos los dispositivos. Si no está instalado, Google Maps no funcionará en el dispositivo.
 
-<a name="Binding_Google_Play_Services" />
 
 #### <a name="binding-google-play-services"></a>Enlace de Google Play Services
 
@@ -68,7 +65,6 @@ Una vez que la biblioteca de cliente de servicios de Google Play está instalada
 -  **Enlazar manualmente la biblioteca de cliente de servicios de Google Play** -éste es un enfoque más complejo y es la única manera de Xamarin.Android 4.4 o Xamarin.Android 4.6 enlazar el SDK de servicios de Google Play.
    Enlazar manualmente la biblioteca de cliente de servicios de Google Play queda fuera del ámbito de este documento, pero pueden encontrar un ejemplo de cómo hacer esto en el [mapas y demostración de ubicación v3 ejemplo](https://github.com/xamarin/monodroid-samples/tree/master/MapsAndLocationDemo_v3) en Github.
 
-<a name="Adding_the_Google_Play_Services_Component" />
 
 #### <a name="adding-the-google-play-services-map-package"></a>Agregar el paquete de mapa de Google Play Services
 
@@ -78,7 +74,7 @@ Para agregar el paquete de Google Play Services Map, haga clic con el **referenc
 
 Se abrirá la **Administrador de paquetes de NuGet**. Haga clic en **examinar** y escriba **Xamarin Google Play Services Maps** en el campo de búsqueda. Seleccione **Xamarin.GooglePlayServices.Maps** y haga clic en **instalar**. (Si este paquete se hubiera instalado previamente, haga clic en **actualización**.):
 
-[![Administrador de paquetes de NuGet con paquete Xamarin.GooglePlayServices.Maps seleccionado](maps-api-images/image03-sml.png)](maps-api-images/image03.png)
+[![Administrador de paquetes de NuGet con paquete Xamarin.GooglePlayServices.Maps seleccionado](maps-api-images/image03-sml.png)](maps-api-images/image03.png#lightbox)
 
 Tenga en cuenta que también están instalados los siguientes paquetes de dependencia:
 
@@ -87,7 +83,6 @@ Tenga en cuenta que también están instalados los siguientes paquetes de depend
 -   **Xamarin.GooglePlayServices.Tasks**
 
 
-<a name="Creating_an_Emulator_with_Google_APIs" />
 
 ### <a name="create-an-emulator-with-google-apis"></a>Crear un emulador con API de Google
 
@@ -96,14 +91,12 @@ Aunque no se recomienda, es posible configurar el emulador para admitir la API d
 ![Administrador del emulador de Android con un AVD configurado para el nivel de API 19](maps-api-images/image04.png)
 
 
-<a name="apikey" />
 
 ### <a name="obtain-a-google-maps-api-key"></a>Obtener una clave de API de mapas de Google
 
 El último paso es obtener una clave de API de Google Maps (tenga en cuenta que no se puede volver a usar una clave de API de heredado v1 de Google Maps). Para obtener información acerca de cómo obtener y usar la clave de API con Xamarin.Android, consulte [obtener la clave de API de A Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
  
 
-<a name="Specify_Permissions" />
 
 ### <a name="specify-the-required-permissions"></a>Especifique los permisos necesarios
 
@@ -167,7 +160,6 @@ El fragmento de código siguiente es un ejemplo de la configuración que debe ag
 </manifest>
 ```
 
-<a name="The_GoogleMap" />
 
 ## <a name="the-googlemap-class"></a>La clase GoogleMap
 
@@ -190,13 +182,12 @@ El `GoogleMap` se agrega a una actividad en uno de dos maneras:
 
 Cada uno de estos contenedores exponen una `Map` propiedad que devuelve una instancia de `GoogleMap`. Preferencia se debe conceder a la [MapFragment](http://developer.android.com/reference/com/google/android/gms/maps/MapFragment.html) clase ya que es una API más sencilla que reduce el código reutilizable de cantidad que un desarrollador debe implementar de forma manual.
 
-<a name="Adding_GoogleMap_To_An_Activity" />
 
 ### <a name="adding-a-mapfragment-to-an-activity"></a>Agregar una MapFragment a una actividad
 
 Captura de pantalla siguiente es un ejemplo de una forma muy sencilla `MapFragment`:
 
-[![Captura de pantalla de un dispositivo que se muestra un fragmento de asignación](maps-api-images/image05-sml.png)](maps-api-images/image05.png)
+[![Captura de pantalla de un dispositivo que se muestra un fragmento de asignación](maps-api-images/image05-sml.png)](maps-api-images/image05.png#lightbox)
 
 Similar a otras clases de fragmento, hay dos maneras de agregar esta `MapFragment` a una actividad:
 
@@ -255,7 +246,6 @@ En el ejemplo de código anterior, el `OnMapReady` devolución de llamada inicia
 Como ejemplo de cómo utilizar este resultado, cuando `OnResume` es llama, puede comprobar para ver si `_map` es distinto de null. Si `_map` está establecido en un `GoogleMap` objeto, `OnResume` puede llamar a métodos en ella para agregar marcadores y mover su cámara a una longitud especificada y la latitud. Para obtener un ejemplo de código completo, vea [SimpleMapDemo](https://github.com/xamarin/monodroid-samples/tree/master/MapsAndLocationDemo_v3/SimpleMapDemo).
 
 
-<a name="Map_Types" />
 
 ### <a name="map-types"></a>Tipos de mapa
 
@@ -274,7 +264,7 @@ Hay cinco tipos diferentes de asignaciones disponibles a través de la API de Go
 
 La imagen siguiente muestra tres de los distintos tipos de mapas, de izquierda a derecha (normal, híbrido, terreno):
 
-[![Tres asignan capturas de pantalla de ejemplo: Normal, híbrida y el terreno](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png)
+[![Tres asignan capturas de pantalla de ejemplo: Normal, híbrida y el terreno](maps-api-images/map-types-sml.png)](maps-api-images/map-types.png#lightbox)
 
 El `GoogleMap.MapType` propiedad se utiliza para establecer o cambiar se muestra qué tipo de mapa. El siguiente fragmento de código muestra cómo mostrar un mapa de satélite.
 
@@ -287,7 +277,6 @@ if (_map != null) {
 }
 ```
 
-<a name="GoogleMap_Properties" />
 
 ### <a name="googlemap-properties"></a>Propiedades de GoogleMap
 
@@ -317,7 +306,6 @@ if (_map != null) {
 }
 ```
 
-<a name="Interacting_with_the_Map" />
 
 ## <a name="interacting-with-the-map"></a>Interactuar con la asignación
 
@@ -363,9 +351,8 @@ if (_map != null) {
 
 En el fragmento de código anterior, una ubicación específica de la asignación se representa mediante el un [LatLng](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/model/LatLng) clase. El nivel de zoom se establece a 18. La relación es la medida brújula las agujas del reloj desde el norte. La inclinación propiedad controla el ángulo de visión y especifica un ángulo de 25 grados respecto a la vertical. La siguiente captura de pantalla muestra la `GoogleMap` después de ejecutar el código anterior:
 
-[![Ángulo de visualización de mapa de Google de ejemplo que muestra una ubicación especificada con un superpuesto](maps-api-images/image06-sml.png)](maps-api-images/image06.png)
+[![Ángulo de visualización de mapa de Google de ejemplo que muestra una ubicación especificada con un superpuesto](maps-api-images/image06-sml.png)](maps-api-images/image06.png#lightbox)
 
-<a name="Adding_Overlays_to_a_Map" />
 
 ### <a name="drawing-on-the-map"></a>Dibujo del mapa
 
@@ -377,13 +364,11 @@ La API de mapas Android proporciona la API para dibujar los elementos siguientes
 
 -  **Círculos, líneas y polígonos** -se trata de API que permiten a las actividades agregar formas a un mapa.
 
-<a name="markers" />
 
 #### <a name="markers"></a>Markers
 
 La API de mapas proporciona un [marcador](https://developers.google.com/maps/documentation/android/reference/com/google/android/gms/maps/model/Marker) clase que encapsula todos los datos acerca de una única ubicación en un mapa. De forma predeterminada utiliza un icono estándar proporcionado por Google Maps. Es posible personalizar el aspecto de un marcador y responder a clics del usuario.
 
-<a name="AddingAMarker" />
 
 ##### <a name="adding-a-marker"></a>Agregar un marcador
 
@@ -403,9 +388,8 @@ if (_map != null) {
 
 Se mostrará el título del marcador en un *ventana información* cuando el usuario puntea en el marcador. Captura de pantalla siguiente muestra el aspecto de este marcador:
 
-[![Ejemplo de asignación de Google con un marcador y una ventana de información para Vimy Ridge](maps-api-images/image07-sml.png)](maps-api-images/image07.png)
+[![Ejemplo de asignación de Google con un marcador y una ventana de información para Vimy Ridge](maps-api-images/image07-sml.png)](maps-api-images/image07.png#lightbox)
 
-<a name="Customizing_A_Marker" />
 
 ##### <a name="customizing-a-marker"></a>Personalizar un marcador
 
@@ -437,7 +421,6 @@ if (_map != null)
 }
 ```
 
-<a name="Info_Windows" />
 
 #### <a name="info-windows"></a>Ventanas de información
 
@@ -455,13 +438,11 @@ La imagen siguiente muestra algunos ejemplos de algunas ventanas de información
 
 ![Ventanas de marcador de ejemplo para Melbourne, incluido el icono y el rellenado. La ventana derecha tiene esquinas redondeadas.](maps-api-images/marker-infowindows.png)
 
-<a name="Adding_an_overlay" />
 
 #### <a name="ground-overlays"></a>Superposiciones de terreno
 
 A diferencia de los marcadores, que identifican una ubicación específica en un mapa, una [GroundOverlay](http://developer.android.com/reference/com/google/android/gms/maps/model/GroundOverlay.html) es una imagen que se usa para identificar una colección de ubicaciones o un área del mapa.
 
-<a name="AddingAGroundOverlay" />
 
 ##### <a name="adding-a-groundoverlay"></a>Agregar un GroundOverlay
 
@@ -477,9 +458,8 @@ GroundOverlay myOverlay = _map.AddGroundOverlay(groundOverlayOptions);
 
 Captura de pantalla siguiente muestra esta superposición en un mapa:
 
-[![Ejemplo de asignación con una imagen de un bajista polar superponer](maps-api-images/image09-sml.png)](maps-api-images/image09.png)
+[![Ejemplo de asignación con una imagen de un bajista polar superponer](maps-api-images/image09-sml.png)](maps-api-images/image09.png#lightbox)
 
-<a name="Lines_Circles_and_Polygons" />
 
 #### <a name="lines-circles-and-polygons"></a>Las líneas, círculos y polígonos
 
@@ -492,7 +472,6 @@ Hay tres tipos simples de figuras geométricas que se pueden agregar a un mapa:
 -  **Círculo** -esto, dibujará un círculo en el mapa.
 
 
-<a name="Polylines" />
 
 ##### <a name="polylines"></a>Polilíneas
 
@@ -508,7 +487,6 @@ rectOptions.Add(new LatLng(37.35, -122.0)); // close the polyline - this makes a
 myMap.AddPolyline(rectOptions);
 ```
 
-<a name="Polygons" />
 
 ##### <a name="polygons"></a>Polígonos
 
@@ -527,7 +505,6 @@ rectOptions.Add(new LatLng(37.35, -122.2));
 myMap.AddPolygon(rectOptions);
 ```
 
-<a name="Circles" />
 
 ##### <a name="circles"></a>Círculos
 
@@ -541,7 +518,6 @@ circleOptions.InvokeRadius (1000);
 _map.AddCircle (CircleOptions);
 ```
 
-<a name="RespondingToClicks" />
 
 ## <a name="responding-to-events"></a>Responder a eventos
 
@@ -555,7 +531,6 @@ Hay tres tipos de interacciones que un usuario pueda tener con una asignación:
 
 Cada uno de estos eventos se tratarán con más detalle a continuación.
 
-<a name="Marker_Click_Events" />
 
 ### <a name="marker-click-events"></a>Marcador Click (eventos)
 
@@ -584,7 +559,6 @@ private void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs mark
 }
 ```
 
-<a name="Marker_Drag_Events" />
 
 ### <a name="marker-drag-events"></a>Eventos de marcador de arrastre
 
@@ -602,7 +576,6 @@ En la lista siguiente describe los diversos eventos que se generan para un marca
 
 Cada uno de los `EventArgs` contiene una propiedad única denominada `P0` que es una referencia a la `Marker` del objeto que se están arrastrando.
 
-<a name="Info_Window_Click_Events" />
 
 ### <a name="info-window-click-events"></a>Ventana información Click (eventos)
 

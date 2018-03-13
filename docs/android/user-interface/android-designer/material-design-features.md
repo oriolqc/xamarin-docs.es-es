@@ -8,17 +8,20 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: c0b5fa3e7eacb9f7fd8aa133a290d0e7654972ce
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9c1797398fba580ab7f34526b10e1da455eb2dc5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="material-design-features"></a>Características de diseño de materiales
 
 _Este tema describe las características del diseñador que facilitan a los desarrolladores crear diseños conforme a Material diseño. Esta sección presenta y explica cómo utilizar la cuadrícula de Material, la paleta de colores de Material, la escala tipográfico y el Editor de temas._
 
-<a name="overview" />
+
+> [!Video https://youtube.com/embed/E3_ZjIOzVzY]
+
+**Evolucionar 2016: Todo el mundo puede crear aplicaciones maravillosas con diseño Material**
 
 ## <a name="overview"></a>Información general
 
@@ -37,7 +40,6 @@ En esta guía, tendremos un vistazo a las siguientes características de diseña
 Comenzaremos que tenga una apariencia en cada una de estas características y se proporcionan ejemplos de cómo usarlas.
 
 
-<a name="material_grid" />
 
 ## <a name="material-design-grid"></a>Cuadrícula de diseño de materiales
 
@@ -45,11 +47,11 @@ El menú de la cuadrícula de diseño de Material está disponible en la barra d
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Cuadrícula de diseño de materiales](material-design-features-images/vs/01-material-design-grid-sml.png)](material-design-features-images/vs/01-material-design-grid.png)
+[![Cuadrícula de diseño de materiales](material-design-features-images/vs/01-material-design-grid-sml.png)](material-design-features-images/vs/01-material-design-grid.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Cuadrícula de diseño de materiales](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png)
+[![Cuadrícula de diseño de materiales](material-design-features-images/xs/01-material-design-grid-sml.png)](material-design-features-images/xs/01-material-design-grid.png#lightbox)
 
 -----
 
@@ -65,11 +67,11 @@ Estos elementos se pueden ver en la captura de pantalla siguiente:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Línea delimitadora, el espaciado y la cuadrícula](material-design-features-images/vs/02-grid-and-keylines-sml.png)](material-design-features-images/vs/02-grid-and-keylines.png)
+[![Línea delimitadora, el espaciado y la cuadrícula](material-design-features-images/vs/02-grid-and-keylines-sml.png)](material-design-features-images/vs/02-grid-and-keylines.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Línea delimitadora, el espaciado y la cuadrícula](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png)
+[![Línea delimitadora, el espaciado y la cuadrícula](material-design-features-images/xs/02-grid-and-keylines-sml.png)](material-design-features-images/xs/02-grid-and-keylines.png#lightbox)
 
 -----
 
@@ -89,7 +91,7 @@ Cuando cambie estos valores de configuración, se guardan en el archivo XML de d
 
 Cada uno de estos elementos de la superposición es configurable. Al hacer clic en el triángulo hacia abajo situada junto al menú de la cuadrícula de diseño de Material, abre un popover del cuadro de diálogo que le permite habilitar o deshabilitar la cuadrícula, configure la colocación de líneas delimitadoras y establecer los espaciados. Tenga en cuenta que todos los valores se expresan en `dp` (independiente de la densidad de píxeles):
 
-[![Cuadrícula, línea delimitadora y la configuración de espaciado](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png)
+[![Cuadrícula, línea delimitadora y la configuración de espaciado](material-design-features-images/xs/03-grid-configuration-sml.png)](material-design-features-images/xs/03-grid-configuration.png#lightbox)
 
 Para agregar una línea delimitadora nueva, escriba un nuevo valor de desplazamiento en el **desplazamiento** , seleccione una ubicación (**izquierdo**, **arriba**, **derecho**, o  **inferior**) y haga clic en el icono para agregar la nueva línea de delimitadora +.
 
@@ -102,20 +104,20 @@ Cuando cambie estos valores de configuración, se guardan en el archivo XML de d
 
 Cada elemento del panel de propiedad que acepta un color ahora tiene un icono adicional que puede usar para abrir la paleta de colores de Material de diseño, como se muestra en esta captura de pantalla:
 
-[![Icono de color](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png)
+[![Icono de color](material-design-features-images/xs/04-new-color-icon-sml.png)](material-design-features-images/xs/04-new-color-icon.png#lightbox)
 
 Al hacer clic en este icono, se abre un popover del cuadro de diálogo que permite configurar el color de esa propiedad de la paleta de colores de diseño de Material:
 
-[![Paleta de colores material de diseño](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png)
+[![Paleta de colores material de diseño](material-design-features-images/xs/05-material-palette-sml.png)](material-design-features-images/xs/05-material-palette.png#lightbox)
 
 La parte superior de la paleta de colores muestra los colores de diseño de Material principales mientras que la parte inferior de la paleta muestra un intervalo de tonos para el color principal seleccionado. Por ejemplo, cuando selecciona **Indigo**, una colección de **Indigo** matices se muestra en la parte inferior del cuadro de diálogo.
 Cuando se selecciona un matiz, se cambia el color de la propiedad para el matiz seleccionado. En el ejemplo siguiente, la `Background Tint` del botón cambia a *500 Indigo*:
 
-[![Elija Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png)
+[![Elija Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
 
 `Background Tint` se establece en el código de color de *500 Indigo* (`#ff3f51b5`), y el diseñador actualiza el color de fondo del botón para reflejar este cambio:
 
-[![Cambios de tono de fondo](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png)
+[![Cambios de tono de fondo](material-design-features-images/xs/07-background-tint-sml.png)](material-design-features-images/xs/07-background-tint.png#lightbox)
 
 Para obtener más información acerca de la paleta de colores de diseño de Material, ver el diseño de Material [Guía de la paleta de colores](http://www.google.com/design/spec/style/color.html#color-color-palette).
 
@@ -123,24 +125,23 @@ Para obtener más información acerca de la paleta de colores de diseño de Mate
 
 El **apariencia del texto** sección de la **propiedad** panel **estilo** ficha tiene un icono que le permite seleccione uno de un `TextAppearance` estilo que se ajusta al diseño de Material especificación de:
 
-[![Pestaña estilos](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png)
+[![Pestaña estilos](material-design-features-images/xs/08-typo-scale-icon-sml.png)](material-design-features-images/xs/08-typo-scale-icon.png#lightbox)
 
 Al hacer clic en este icono, se abre la **escala tipográfico** popover del cuadro de diálogo, que presenta una lista de estilos de texto configurado previamente que puede elegir entre:
 
-[![Selector de estilo de texto](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png)
+[![Selector de estilo de texto](material-design-features-images/xs/09-text-appearance-sml.png)](material-design-features-images/xs/09-text-appearance.png#lightbox)
 
 En el ejemplo siguiente, haga clic en **pantalla 1** cambia el texto del botón a la fuente más grande de **pantalla 1**:
 
-[![Estilo de presentación 1](material-design-features-images/xs/10-display-1-sml.png)](material-design-features-images/xs/10-display-1.png)
+[![Estilo de presentación 1](material-design-features-images/xs/10-display-1-sml.png)](material-design-features-images/xs/10-display-1.png#lightbox)
 
 El estilo de texto en el **escala tipográfico** diálogo sigue el **tema** configuración. Por ejemplo, si la **luz** tema se haya elegido en el diseñador, la lista de reflejos de estilos de texto disponible el **luz** tema:
 
-[![Tema claro](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png)
+[![Tema claro](material-design-features-images/xs/11-light-theme-sml.png)](material-design-features-images/xs/11-light-theme.png#lightbox)
 
 -----
 
 
-<a name="theme_editor" />
 
 ## <a name="theme-editor"></a>Editor de temas
 
@@ -152,7 +153,7 @@ El **Editor de temas** le permite personalizar la información de color de un su
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[ ![Icono de Editor de temas](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png)
+[![Icono de Editor de temas](material-design-features-images/xs/12a-theme-editor-icon-sml.png)](material-design-features-images/xs/12a-theme-editor-icon.png#lightbox)
 
 -----
 
@@ -162,11 +163,11 @@ El panel izquierdo de la **Editor de temas** muestra la lista de colores que for
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Editor de temas](material-design-features-images/vs/05-theme-editor-sml.png)](material-design-features-images/vs/05-theme-editor.png)
+[![Editor de temas](material-design-features-images/vs/05-theme-editor-sml.png)](material-design-features-images/vs/05-theme-editor.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Editor de temas](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png)
+[![Editor de temas](material-design-features-images/xs/12b-theme-editor-sml.png)](material-design-features-images/xs/12b-theme-editor.png#lightbox)
 
 -----
 
@@ -183,7 +184,6 @@ Cuando se selecciona un color de la izquierda, el panel derecho proporciona las 
 Echemos un vistazo a cada una de estas pestañas en detalle.
 
 
-<a name="theme_edit_inherit_tab" />
 
 ### <a name="inherit-tab"></a>Heredar de pestaña
 
@@ -191,11 +191,11 @@ Tal como se muestra en el ejemplo siguiente, la **heredar** pestaña muestra la 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Heredar de pestaña](material-design-features-images/vs/06-inherit-tab-sml.png)](material-design-features-images/vs/06-inherit-tab.png)
+[![Heredar de pestaña](material-design-features-images/vs/06-inherit-tab-sml.png)](material-design-features-images/vs/06-inherit-tab.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Heredar de pestaña](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png)
+[![Heredar de pestaña](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
 -----
 
@@ -203,7 +203,6 @@ En este ejemplo, el **tema predeterminado** hereda de un estilo que usa `@color/
 Para obtener más información acerca de la herencia de estilo, consulte [estilos y temas](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 
-<a name="theme_edit_color_picker" />
 
 ### <a name="color-picker"></a>Selector de colores
 
@@ -211,11 +210,11 @@ Captura de pantalla siguiente muestra la **selector de colores**:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Selector de colores](material-design-features-images/vs/07-color-picker-sml.png)](material-design-features-images/vs/07-color-picker.png)
+[![Selector de colores](material-design-features-images/vs/07-color-picker-sml.png)](material-design-features-images/vs/07-color-picker.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Selector de colores](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png)
+[![Selector de colores](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
 
 -----
 
@@ -229,7 +228,6 @@ En este ejemplo, el **fondo** color puede cambiarse a cualquier valor a través 
 
 Es el color que elija en el selector de colores *no* restringido instrucciones de diseño de Material o para el conjunto de recursos de color disponibles.
 
-<a name="theme_edit_resources" />
 
 ### <a name="resources"></a>Recursos
 
@@ -237,18 +235,17 @@ El **recursos** ficha ofrece una lista de recursos de color que ya están presen
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Recursos](material-design-features-images/vs/08-resources-sml.png)](material-design-features-images/vs/08-resources.png)
+[![Recursos](material-design-features-images/vs/08-resources-sml.png)](material-design-features-images/vs/08-resources.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Recursos](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png)
+[![Recursos](material-design-features-images/xs/15-resources-sml.png)](material-design-features-images/xs/15-resources.png#lightbox)
 
 -----
 
 Mediante el **recursos** ficha restringe las opciones para esta lista de colores. Tenga en cuenta que si elige un recurso de color que ya está asignado a otra parte del tema, dos elementos adyacentes de la interfaz de usuario pueden "ejecutar juntos" (porque tienen el mismo color) y ser difícil para el usuario distinguir.
 
 
-<a name="theme_edit_material_pallette" />
 
 ### <a name="material-palette"></a>Paleta de material
 
@@ -256,7 +253,7 @@ Mediante el **recursos** ficha restringe las opciones para esta lista de colores
 
 El **Material paleta** pestaña abre la **paleta de colores de diseño de Material**. Elegir un valor de color de esta paleta restringe la selección de color para que sea coherente con las directrices de diseño de Material.
 
-[![Paleta de material](material-design-features-images/vs/09-material-palette-sml.png)](material-design-features-images/vs/09-material-palette.png)
+[![Paleta de material](material-design-features-images/vs/09-material-palette-sml.png)](material-design-features-images/vs/09-material-palette.png#lightbox)
 
 La parte superior de la paleta de colores muestra los colores de diseño de Material principales mientras que la parte inferior de la paleta muestra un intervalo de tonos para el color principal seleccionado. Por ejemplo, cuando selecciona **Indigo**, una colección de **Indigo** matices se muestra en la parte inferior del cuadro de diálogo.
 Cuando se selecciona un matiz, se cambia el color de la propiedad para el matiz seleccionado. En el ejemplo siguiente, la `Background Tint` del botón cambia a *500 Indigo*:
@@ -265,7 +262,7 @@ Cuando se selecciona un matiz, se cambia el color de la propiedad para el matiz 
 
 `Background Tint` se establece en el código de color de *500 Indigo* (`#ff3f51b5`), y el diseñador actualiza el color de fondo para reflejar este cambio:
 
-[![Cambiar un tono de fondo](material-design-features-images/vs/11-background-tint-sml.png)](material-design-features-images/vs/11-background-tint.png)
+[![Cambiar un tono de fondo](material-design-features-images/vs/11-background-tint-sml.png)](material-design-features-images/vs/11-background-tint.png#lightbox)
 
 Para obtener más información acerca de la paleta de colores de diseño de Material, ver el diseño de Material [Guía de la paleta de colores](http://www.google.com/design/spec/style/color.html#color-color-palette).
 
@@ -273,12 +270,11 @@ Para obtener más información acerca de la paleta de colores de diseño de Mate
 
 El **Material paleta** pestaña abre el **paleta de colores de diseño de Material** descritos [anteriores](#material_palette). Elegir un valor de color de esta paleta restringe la selección de color para que sea coherente con las directrices de diseño de Material.
 
-[![Paleta de material](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png)
+[![Paleta de material](material-design-features-images/xs/16-material-palette-sml.png)](material-design-features-images/xs/16-material-palette.png#lightbox)
 
 -----
 
 
-<a name="theme_create" />
 
 ### <a name="creating-a-new-theme"></a>Crear un nuevo tema
 
@@ -290,7 +286,7 @@ En el ejemplo siguiente, vamos a usar la paleta de Material para crear un nuevo 
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Cambiar el fondo a 900 azul](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png)
+[![Cambiar el fondo a 900 azul](material-design-features-images/xs/17-change-background-to-blue-sml.png)](material-design-features-images/xs/17-change-background-to-blue.png#lightbox)
 
 -----
 
@@ -299,11 +295,11 @@ Cuando se cambia un recurso de color, un mensaje aparece con el mensaje, *del te
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Cambios no guardados de advertencia](material-design-features-images/vs/13-unsaved-changes-sml.png)](material-design-features-images/vs/13-unsaved-changes.png)
+[![Cambios no guardados de advertencia](material-design-features-images/vs/13-unsaved-changes-sml.png)](material-design-features-images/vs/13-unsaved-changes.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Cambios no guardados de advertencia](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png)
+[![Cambios no guardados de advertencia](material-design-features-images/xs/18-unsaved-changes-sml.png)](material-design-features-images/xs/18-unsaved-changes.png#lightbox)
 
 -----
 
@@ -327,18 +323,17 @@ Siguiendo con el ejemplo anterior, haga clic en **crear nuevo tema** resultados 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Tema personalizado agregado](material-design-features-images/vs/14-custom-theme-sml.png)](material-design-features-images/vs/14-custom-theme.png)
+[![Tema personalizado agregado](material-design-features-images/vs/14-custom-theme-sml.png)](material-design-features-images/vs/14-custom-theme.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Tema personalizado agregado](material-design-features-images/xs/19-custom-theme-sml.png)](material-design-features-images/xs/19-custom-theme.png)
+[![Tema personalizado agregado](material-design-features-images/xs/19-custom-theme-sml.png)](material-design-features-images/xs/19-custom-theme.png#lightbox)
 
 -----
 
 
 Dado que el tema seleccionado actualmente no es un tema de proyecto, no hay ningún cuadro de diálogo para actualizar el tema seleccionado o para especificar una nueva ubicación.
 
-<a name="summary" />
 
 ## <a name="summary"></a>Resumen
 

@@ -7,19 +7,19 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 56310bb538d9abf850c40ebfb0b0bf551fbb104c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3d68b1e38ecb5b1833b818dd2a9fb7a5c84f9206
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-lifecycle-demo"></a>Demostración de ciclo de vida de la aplicación
 
 En esta sección, vamos a examinar una aplicación que muestra los cuatro estados de aplicación y el rol de la `AppDelegate` métodos de notificación de la aplicación de cambios cuando los Estados. La aplicación imprimirá actualizaciones en la consola cuando la aplicación cambia el estado:
 
- [ ![](application-lifecycle-demo-images/image3.png "La aplicación de ejemplo")](application-lifecycle-demo-images/image3.png)
+ [![](application-lifecycle-demo-images/image3.png "La aplicación de ejemplo")](application-lifecycle-demo-images/image3.png#lightbox)
 
- [ ![](application-lifecycle-demo-images/image4.png "La aplicación imprimirá las actualizaciones en la consola cuando la aplicación cambia el estado")](application-lifecycle-demo-images/image4.png)
+ [![](application-lifecycle-demo-images/image4.png "La aplicación imprimirá las actualizaciones en la consola cuando la aplicación cambia el estado")](application-lifecycle-demo-images/image4.png#lightbox)
 
 ## <a name="walkthrough"></a>Tutorial
 

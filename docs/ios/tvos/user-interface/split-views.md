@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8787913c04b11a84828cd98960407f0cc27aa391
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 86a7690d4cf7291a4e44507a6250e3469c8f7ed2
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-split-view-controllers"></a>Trabajar con controladores de la vista de división
 
@@ -21,7 +21,7 @@ _Este artículo tratan diseñar y trabajar con controladores de la vista de divi
 
 Un controlador de vista de división presenta y administra un maestro y detalles View Controller-paralelo, en la pantalla al mismo tiempo. Se utiliza para presentar contenido persistente, puede recibir el foco en la vista maestra (sección más pequeña a la izquierda) y relacionados con controladores de la vista de división detalles en la vista de detalle (es decir, la sección mayor a la derecha).
 
-[ ![](split-views-images/intro01.png "Vista de división de ejemplo")](split-views-images/intro01.png)
+[![](split-views-images/intro01.png "Vista de división de ejemplo")](split-views-images/intro01.png#lightbox)
 
 <a name="About-Split-View-Controllers" />
 
@@ -31,7 +31,7 @@ Como se mencionó anteriormente, un controlador de vista de división administra
 
 Además, se oculta o se muestra el puede Master View Controller según sea necesario: 
 
-[ ![](split-views-images/intro02.png "El controlador de vista maestra oculto")](split-views-images/intro02.png)
+[![](split-views-images/intro02.png "El controlador de vista maestra oculto")](split-views-images/intro02.png#lightbox)
 
 Controladores de vistas de división a menudo se utilizan para presentar una lista de contenido se puede filtrar, con los resultados filtrados en la vista de detalle y de las categorías en la vista maestra. Esto normalmente se presenta como una vista de tabla de la izquierda y un [vista de colección](~/ios/tvos/user-interface/collection-views.md) a la derecha.
 
@@ -54,18 +54,18 @@ Es la manera más fácil trabajar con controladores de la vista de división en 
 1. En el **solución Pad**, haga doble clic en el `Main.storyboard` de archivo y abrirlo y editarlo.
 1. Arrastre un **controladores de la vista de división** desde el **cuadro de herramientas** y colóquela en la vista: 
 
-    [ ![](split-views-images/activity01.png "Un controlador de vista de división")](split-views-images/activity01.png)
+    [![](split-views-images/activity01.png "Un controlador de vista de división")](split-views-images/activity01.png#lightbox)
 1. De forma predeterminada, el Diseñador de iOS instalará un controlador de navegación y un controlador de vista en la vista maestra. Si esto no encaja con los requisitos de la aplicación, simplemente eliminarlas.
 1. Si quita el valor predeterminado de la vista maestra, arrastre un nuevo controlador de vista a la superficie de diseño: 
 
-    [ ![](split-views-images/activity02.png "Un controlador de vista")](split-views-images/activity02.png)
+    [![](split-views-images/activity02.png "Un controlador de vista")](split-views-images/activity02.png#lightbox)
 1. Control y haga clic y arrastre desde el controlador de vista de división en el nuevo controlador de vista maestra. 
 1. Seleccione **Master** desde el **menú emergente**: 
 
-    [ ![](split-views-images/activity03.png "Seleccione patrón en el menú emergente")](split-views-images/activity03.png)
+    [![](split-views-images/activity03.png "Seleccione patrón en el menú emergente")](split-views-images/activity03.png#lightbox)
 1. Diseñe el contenido de su maestro y vistas de detalles: 
 
-    [ ![](split-views-images/activity04.png "Ejemplo de diseño")](split-views-images/activity04.png)
+    [![](split-views-images/activity04.png "Ejemplo de diseño")](split-views-images/activity04.png#lightbox)
 1. Asignar **nombres** en el **ficha Widget** de la **panel de propiedades** para trabajar con los controles de interfaz de usuario en código C#.
 1. Guardar los cambios y volver a Visual Studio para Mac.
 
@@ -74,18 +74,18 @@ Es la manera más fácil trabajar con controladores de la vista de división en 
 1. En el **el Explorador de soluciones**, haga doble clic en el `Main.storyboard` de archivo y abrirlo y editarlo.
 1. Arrastre un **controladores de la vista de división** desde el **cuadro de herramientas** y colóquela en la vista: 
 
-    [ ![](split-views-images/activity01-vs.png "Un controlador de vista de división")](split-views-images/activity01-vs.png)
+    [![](split-views-images/activity01-vs.png "Un controlador de vista de división")](split-views-images/activity01-vs.png#lightbox)
 1. De forma predeterminada, el Diseñador de iOS se agregará un controlador de navegación y el controlador de vista en la vista maestra. Si esto no encaja con los requisitos de la aplicación, simplemente eliminarlas.
 1. Si quita el valor predeterminado de la vista maestra, arrastre un nuevo controlador de vista a la superficie de diseño: 
 
-    [ ![](split-views-images/activity02-vs.png "Un controlador de vista")](split-views-images/activity02-vs.png)
+    [![](split-views-images/activity02-vs.png "Un controlador de vista")](split-views-images/activity02-vs.png#lightbox)
 1. Control y haga clic y arrastre desde el controlador de vista de división en el nuevo controlador de vista maestra. 
 1. Seleccione **Master** desde el **menú emergente**: 
 
-    [ ![](split-views-images/activity03-vs.png "Seleccione patrón en el menú emergente")](split-views-images/activity03-vs.png)
+    [![](split-views-images/activity03-vs.png "Seleccione patrón en el menú emergente")](split-views-images/activity03-vs.png#lightbox)
 1. Diseñe el contenido de su maestro y vistas de detalles: 
 
-    [ ![](split-views-images/activity04.png "Diseño de contenido")](split-views-images/activity04.png)
+    [![](split-views-images/activity04.png "Diseño de contenido")](split-views-images/activity04.png#lightbox)
 1. Asignar **nombres** en el **ficha Widget** de la **el Explorador de propiedades** para trabajar con los controles de interfaz de usuario en código C#.
 1. Guarde los cambios.
     

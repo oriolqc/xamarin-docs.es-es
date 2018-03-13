@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/21/2017
-ms.openlocfilehash: 74d8533d0a757a307d88125701a482dfefd5eec2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 12197d238ddc6ddc2bd8f48f77aa15f5eff22a0a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="populating-a-listview-with-data"></a>Rellenar un control ListView con datos
 
-<a name="overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -23,7 +22,6 @@ Para agregar filas a una `ListView` debe agregarlo a su diseño e implementació
 
 Los adaptadores integrados toman un identificador de recurso de la vista como un parámetro que se usa para cada fila. Puede usar recursos integrados, como los de `Android.Resource.Layout` por lo que no es necesario escribir su propio.
 
-<a name="Using_ListActivity_and_ArrayAdapterString" />
 
 ## <a name="using-listactivity-and-arrayadapterltstringgt"></a>Usar ListActivity y ArrayAdapter&lt;cadena&gt;
 
@@ -43,13 +41,12 @@ public class HomeScreen : ListActivity {
 }
 ```
 
-<a name="Handling_Row_Clicks" />
 
 ### <a name="handling-row-clicks"></a>Control de la fila hace clic en
 
 Normalmente un `ListView` también permitirá al usuario tener acceso a una fila para llevar a cabo alguna acción (como reproducir una canción, o llamar a un contacto o mostrar otra pantalla). Para responder a los últimos retoques de usuario debe haber uno más método implementan en el `ListActivity` &ndash; `OnListItemClick` &ndash; similar a la siguiente:
 
-[![Captura de pantalla de un SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png)
+[![Captura de pantalla de un SimpleListItem](populating-images/simplelistitem1.png)](populating-images/simplelistitem1.png#lightbox)
 
 ```csharp
 protected override void OnListItemClick(ListView l, View v, int position, long id)
@@ -61,9 +58,8 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 
 Ahora el usuario puede tocar una fila y un `Toast` aparezca una alerta:
 
-[![Captura de pantalla de notificación que aparece cuando una fila se toca](populating-images/basictable2.png)](populating-images/basictable2.png)
+[![Captura de pantalla de notificación que aparece cuando una fila se toca](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
 
-<a name="Implementing_a_ListAdapter" />
 
 ## <a name="implementing-a-listadapter"></a>Implementar un ListAdapter
 
@@ -110,7 +106,6 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-<a name="Using_a_Custom_Adapter" />
 
 ### <a name="using-a-custom-adapter"></a>Utiliza un adaptador personalizado
 
@@ -122,7 +117,6 @@ ListAdapter = new HomeScreenAdapter(this, items);
 
 Dado que este ejemplo utiliza el mismo diseño de fila (`SimpleListItem1`) la aplicación resultante será idéntica al ejemplo anterior.
 
-<a name="Row_View_Re-Use" />
 
 ### <a name="row-view-re-use"></a>Fila vista volver a usar
 
@@ -147,13 +141,12 @@ Implementaciones del adaptador personalizado deben *siempre* volver a usar el `c
 
 Algunas implementaciones del adaptador (como el `CursorAdapter`) no tiene un `GetView` método, en su lugar requieren dos métodos diferentes `NewView` y `BindView` que aplicar la reutilización de la fila mediante la separación de las responsabilidades de `GetView` en dos métodos. Hay un `CursorAdapter` ejemplo más adelante en el documento.
 
-<a name="Enabling_Fast_Scrolling" />
 
 ## <a name="enabling-fast-scrolling"></a>Habilitar desplazamiento rápido
 
 Desplazamiento rápido ayuda al usuario a desplazarse a través de listas largas proporcionando un 'identificador' que actúa como una barra de desplazamiento para acceder directamente a una parte de la lista. Esta captura de pantalla muestra el identificador de desplazamiento rápido:
 
-[![Captura de pantalla de desplazamiento rápido con un identificador de desplazamiento](populating-images/fastscroll.png)](populating-images/fastscroll.png)
+[![Captura de pantalla de desplazamiento rápido con un identificador de desplazamiento](populating-images/fastscroll.png)](populating-images/fastscroll.png#lightbox)
 
 Haciendo que el identificador de desplazamiento rápido que aparezca es tan sencillo como configuración de la `FastScrollEnabled` propiedad `true`:
 
@@ -161,13 +154,12 @@ Haciendo que el identificador de desplazamiento rápido que aparezca es tan senc
 ListView.FastScrollEnabled = true;
 ```
 
-<a name="Adding_a_Section_Index" />
 
 ### <a name="adding-a-section-index"></a>Agregar un índice de sección
 
 Un índice de sección proporciona comentarios adicionales para los usuarios cuando están desplazamiento rápido a través de una lista larga &ndash; muestra que haya desplazado 'sección'. Para hacer que el índice de sección que aparezca la subclase de adaptador debe implementar la `ISectionIndexer` interfaz para proporcionar el texto de índice dependiendo de las filas que se muestran:
 
-[![Captura de pantalla de H aparezcan por encima de la sección que comienza con H](populating-images/sectionindex.png)](populating-images/sectionindex.png)
+[![Captura de pantalla de H aparezcan por encima de la sección que comienza con H](populating-images/sectionindex.png)](populating-images/sectionindex.png#lightbox)
 
 Para implementar `ISectionIndexer` necesita agregar tres métodos para un adaptador:
 

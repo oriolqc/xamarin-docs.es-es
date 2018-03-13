@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 80fe298f3dd24aac7f84213aee96499dd369d16d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f0cb4e00abffead854c2590bde6df45c200ff0bb
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="core-animation"></a>Animación de núcleo
 
@@ -23,12 +23,16 @@ Todas las animaciones y fluidas en iOS, como el desplazamiento de tablas y Desli
 
 Los marcos de animación de núcleo y los gráficos esenciales pueden trabajar juntos para crear atractivas, animar gráficos 2D. De hecho Core animación puede incluso transformar los gráficos 2D en un espacio 3D, crear experiencias increíbles cinematográficas. Sin embargo, para crear gráficos 3D es true, se debe usar algo como OpenGL ES, o para activar de juegos a una API como MonoGame, aunque 3D queda fuera del ámbito de este artículo.
 
+<a name="Using_Core_Animation" />
+
 ## <a name="core-animation"></a>Animación de núcleo
 
 iOS utiliza el marco de trabajo de animación de núcleo para crear efectos de animación, como la transición entre las vistas de deslizamiento de menús y desplazamiento efectos para nombrar algunos. Hay dos maneras de trabajar con animación:
 
--  [A través de UIKit](#Using_UIKit_Animation), que incluye las animaciones basadas en vistas, así como transiciones animadas entre los controladores.
--   [A través de la animación de núcleo](#Using_Core_Animation), las capas directamente, que permite un control más precisa.
+- [A través de UIKit](#Using_UIKit_Animation), que incluye las animaciones basadas en vistas, así como transiciones animadas entre los controladores.
+- [A través de la animación de núcleo](#Using_Core_Animation), las capas directamente, que permite un control más precisa.
+
+<a name="Using_UIKit_Animation" />
 
 ## <a name="using-uikit-animation"></a>Con UIKit animación
 
@@ -237,6 +241,6 @@ En este artículo analizamos las capacidades de animación proporcionadas a trav
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplo de animación de núcleo](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/)
-- [Gráficos de núcleo](~/ios/platform/graphics-animation-ios/core-graphics.md)
+- [Gráficos básicos](~/ios/platform/graphics-animation-ios/core-graphics.md)
 - [Gráficos y animación tutorial](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
-- [Animación de núcleo](https://developer.xamarin.com/recipes/ios/animation/coreanimation)
+- [Animación básica](https://developer.xamarin.com/recipes/ios/animation/coreanimation)

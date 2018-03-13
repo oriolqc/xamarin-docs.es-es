@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 0846dc8bdb3ac722838faa4173f5d30233912ecc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 86514dbd6b40e9d59ea9a598395cf6f0a3f4889a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-app-store"></a>Publicación en el App Store
 
@@ -32,7 +32,7 @@ En este documento se explica cómo utilizar Visual Studio para Mac y Xcode para 
 
 Al unirse al [Programa para desarrolladores de Mac](https://developer.apple.com/devcenter/mac/), el desarrollador tendrá la opción de hacerlo como una persona o una empresa, como se muestra en la captura de pantalla siguiente:
 
-[![Portal para desarrolladores de Apple](images/image1.png "Portal para desarrolladores de Apple")](images/image1-large.png)
+[![Portal para desarrolladores de Apple](images/image1.png "Portal para desarrolladores de Apple")](images/image1-large.png#lightbox)
 
 Elija el tipo de inscripción correcto para su situación.
 

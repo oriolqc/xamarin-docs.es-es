@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/01/2017
-ms.openlocfilehash: 01708f12340ec57bf1cb0e2bd076b680c99dff39
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f336767cb6aea8bd8c7ce44f6479850a63d473a6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="binding-a-java-library"></a>Enlace de una biblioteca de Java
 
@@ -30,7 +30,7 @@ Esta guía explica la primera opción: cómo crear un *enlaces biblioteca* que c
 
 Xamarin.Android implementa enlaces mediante *administrado Callable Wrappers* (*MCW*). MCW es un puente JNI que se utiliza cuando es necesario código administrado para llamar a código de Java. Contenedores CCW administrados también proporcionan compatibilidad para la creación de subclases de tipos de Java y para invalidar métodos virtuales en tipos de Java. Del mismo modo, cada vez que el código en tiempo de ejecución Android (prediseñadas) desea invocar código administrado, lo hace a través de otro puente JNI conocido como contenedores CCW Android (ACW). Esto [arquitectura](~/android/internals/architecture.md) se ilustra en el diagrama siguiente:
 
-[ ![Arquitectura de puente JNI Android](images/architecture.png)](images/architecture.png)
+[![Arquitectura de puente JNI Android](images/architecture.png)](images/architecture.png#lightbox)
 
 Una biblioteca de enlaces es un ensamblado que contiene los contenedores CCW administrado para los tipos de Java. Por ejemplo, este es un tipo de Java, `MyClass`, que va a incluir en una biblioteca de enlaces:
 
@@ -74,7 +74,6 @@ Al enlazar una biblioteca de Android existente, es necesario que tenga en cuenta
 
 * **¿Qué versión de JDK se utiliza para compilar la biblioteca?** &ndash; Si la biblioteca Android se compiló con una versión diferente de JDK que en uso por Xamarin.Android, pueden producirse errores de enlace. Si es posible, vuelva a compilar la biblioteca Android con la misma versión de JDK que se usa por la instalación de Xamarin.Android.
 
-<a name="BUILD_ACTIONS" />
 
 ## <a name="build-actions"></a>Acciones de compilación
 
@@ -127,7 +126,6 @@ El generador de enlace de Xamarin.Android cambiará algunas expresiones de Java 
 -   Un _clase interna_ en Java es una _clase anidada_ con un constructor de instancia en C#.
 
 
-<a name="BINDING_SCENARIOS" />
 
 ## <a name="binding-scenarios"></a>Escenarios de enlace
 

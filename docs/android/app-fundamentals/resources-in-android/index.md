@@ -8,17 +8,16 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: 2a6013d9bab26f90a6d8afa101298b494f2f90ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6546870d85f7b77e60dff0cb9e6075f982c9cb8e
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-resources"></a>Recursos de Android
 
 _Este artículo presenta el concepto de recursos Android en Xamarin.Android e indicarán cómo utilizarlas. Se describe cómo usar los recursos en la aplicación Android para admitir varios dispositivos, incluidos las densidades y diferentes tamaños de pantalla y localización de la aplicación._
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -71,7 +70,7 @@ En este artículo se echar un vistazo integral de uso de recursos y tratar los s
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Mediante activos de Android](~/android/app-fundamentals/resources-in-android/android-assets.md)
-- [Aspectos básicos de la aplicación](http://developer.android.com/guide/topics/fundamentals.html)
+- [Uso de recursos de Android](~/android/app-fundamentals/resources-in-android/android-assets.md)
+- [Principios de la aplicación](http://developer.android.com/guide/topics/fundamentals.html)
 - [Recursos de la aplicación](http://developer.android.com/guide/topics/resources/index.html)
 - [Compatibilidad con varias pantallas](http://developer.android.com/guide/practices/screens_support.html)

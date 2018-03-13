@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 0bc039385a6b2077c3b5fa5114b35b586a14a150
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b75bc7e4ccf53e82ff107c867c5ba01813960ea5
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="the-command-interface"></a>La interfaz de comandos
 
@@ -279,7 +279,7 @@ Cómo funciona: el primer usuario presiona el **New** botón. Esto permite que e
 
 La pantalla de iOS a la izquierda muestra el diseño antes de que se especifique una antigüedad válida. El UWP y Android pantallas de presentación con el **enviar** botón habilitada después de que se ha establecido una edad:
 
-[![Entrada de la persona](commanding-images/personentry-small.png "entrada persona")](commanding-images/personentry-large.png "entrada persona")
+[![Entrada de la persona](commanding-images/personentry-small.png "entrada persona")](commanding-images/personentry-large.png#lightbox "entrada persona")
 
 El programa no tiene ninguna función para editar las entradas existentes y no guarda las entradas al salir de la página.
 
@@ -531,7 +531,7 @@ Los 11 botones para los 10 dígitos y el separador decimal comparten un enlace a
 
 Aquí es el programa en acción:
 
-[![Teclado decimal](commanding-images/decimalkeyboard-small.png "teclado Decimal")](commanding-images/decimalkeyboard-large.png "teclado Decimal")
+[![Teclado decimal](commanding-images/decimalkeyboard-small.png "teclado Decimal")](commanding-images/decimalkeyboard-large.png#lightbox "teclado Decimal")
 
 Observe que el botón de punto decimal en todas las capturas de pantalla de tres está deshabilitado porque el número introducido ya contiene un separador decimal. 
 

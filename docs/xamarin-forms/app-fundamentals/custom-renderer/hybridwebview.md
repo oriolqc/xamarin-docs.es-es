@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ef016d963f710ff54fc57b5e6e57181df030c8f6
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e67646e5072f703af71fc3f0a7901fd8485f9710
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementar un HybridWebView
 
@@ -151,7 +151,7 @@ El proceso de creación de la clase de representador personalizado es como sigue
 1. Agregar un `ExportRenderer` atributo a la clase de representador personalizado para especificar que se utilizará para representar el control personalizado de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
-> **Tenga en cuenta**: para la mayoría de los elementos de Xamarin.Forms, es opcional proporcionar un representador personalizado en cada proyecto de la plataforma. Si no se ha registrado un representador personalizado, se usará el representador predeterminado para la clase base del control. Sin embargo, los representadores personalizados necesarios en cada proyecto de la plataforma al representar un [vista](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) elemento.
+> Para la mayoría de los elementos de Xamarin.Forms, es opcional proporcionar a un representador personalizado en cada proyecto de la plataforma. Si no se ha registrado un representador personalizado, se usará el representador predeterminado para la clase base del control. Sin embargo, los representadores personalizados necesarios en cada proyecto de la plataforma al representar un [vista](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) elemento.
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
@@ -316,7 +316,7 @@ Esta funcionalidad se consigue del siguiente modo:
   - Se liberan los recursos.
 
 > [!NOTE]
-> **Tenga en cuenta**: el `WKWebView` clase solo se admite en iOS 8 y versiones posteriores.
+> La `WKWebView` clase solo se admite en iOS 8 y versiones posteriores.
 
 ### <a name="creating-the-custom-renderer-on-android"></a>Crear al representador personalizado en Android
 
@@ -411,7 +411,7 @@ public class JSBridge : Java.Lang.Object
 La clase debe derivarse de `Java.Lang.Object`, y métodos que se exponen a JavaScript se deben decorar con el `[JavascriptInterface]` y `[Export]` atributos. Por lo tanto, cuando la `invokeCSharpAction` función de JavaScript se inserta en la página web y se ejecuta, llamará a la `JSBridge.InvokeAction` método debido a que se decora con el `[JavascriptInterface]` y `[Export("invokeAction")]` atributos. A su vez, el `InvokeAction` método invoca el `HybridWebView.InvokeAction` método, que puede invoca la acción registrada para mostrar la ventana emergente.
 
 > [!NOTE]
-> **Tenga en cuenta**: los proyectos que utilizan el `[Export]` atributo debe incluir una referencia a `Mono.Android.Export`, o se producirá un error del compilador.
+> Los proyectos que utilizan el `[Export]` atributo debe incluir una referencia a `Mono.Android.Export`, o se producirá un error del compilador.
 
 Tenga en cuenta que la `JSBridge` clase mantiene una `WeakReference` a la `HybridWebViewRenderer` clase. Esto sirve para evitar la creación de una referencia circular entre las dos clases. Para obtener más información, consulte [referencias débiles](https://msdn.microsoft.com/library/ms404247(v=vs.110).aspx) en MSDN.
 

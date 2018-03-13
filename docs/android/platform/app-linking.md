@@ -3,16 +3,16 @@ title: "Vincular a la aplicación en Android"
 description: "Esta guía describe cómo Android 6.0 admite la vinculación de aplicación, una técnica que permite a las aplicaciones móviles responder a las direcciones URL en los sitios Web. Veremos qué aplicación vinculación es, cómo implementar la vinculación a la aplicación en una aplicación de Android 6.0 y cómo configurar un sitio Web para conceder permisos a la aplicación móvil para un dominio."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
+ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 726890e48407dd26f52c5aeaecf4eab51dcc5182
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 78fef780728ba1c2a3b9978504058f7a386b0e7d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="app-linking-in-android"></a>Vincular a la aplicación en Android
 
@@ -84,7 +84,7 @@ Android comprobará todos los hosts que se identifican mediante los filtros de i
 Android 6.0 vinculación a la aplicación requiere que Android, compruebe la asociación entre la aplicación y el sitio Web antes de configurar la aplicación como el controlador predeterminado para el URI. Esta comprobación se producirá cuando se instala la aplicación por primera vez. El *vínculos activos digitales* archivo es un archivo JSON que está hospedado por el webdomain(s) relevante.
 
 > [!NOTE]
-> **Nota:** el `android:autoVerify` atributo debe estar configurado por el filtro intención &ndash; en caso contrario Android no llevará a cabo la comprobación.
+> El `android:autoVerify` atributo debe estar configurado por el filtro intención &ndash; en caso contrario Android no llevará a cabo la comprobación.
 
 El archivo se encuentra por el administrador del dominio en la ubicación **https://domain/.well-known/assetlinks.json**.
 

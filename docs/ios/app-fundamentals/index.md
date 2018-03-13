@@ -3,27 +3,27 @@ title: "Principios de la aplicación"
 description: Conceptos de las aplicaciones principales
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
+ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/21/2017
-ms.openlocfilehash: 9cace37a9e762a49a90963591931793d30d05453
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f6c0bb75327f0c14d314a0e7ad9d114fd17c2a57
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="application-fundamentals"></a>Principios de la aplicación
 
 Esta sección proporciona a una guía sobre algunas de las tareas de cosas o conceptos que los desarrolladores deben tener en cuenta al desarrollar aplicaciones de Xamarin.iOS (anteriormente MonoTouch) más comunes.
 
-## <a name="app-transport-securityiosapp-fundamentalsatsmd"></a>[Seguridad de transporte de la aplicación](~/ios/app-fundamentals/ats.md)
+## <a name="app-transport-securityiosapp-fundamentalsatsmd"></a>[Seguridad de transporte de aplicación](~/ios/app-fundamentals/ats.md)
 
 En este artículo se presentan los cambios de seguridad que exige la seguridad de transporte de la aplicación en una aplicación de iOS 9 y qué significa esto para los proyectos de Xamarin.iOS, tratará las opciones de configuración de ATS y explicará cómo desactivación de ATS, si es necesario. Como ATS está habilitado de forma predeterminada, las conexiones de internet no seguras generará una excepción en aplicaciones de iOS 9 (a menos que haya permitido explícitamente lo).
 
 
-## <a name="backgroundingiosapp-fundamentalsbackgroundingindexmd"></a>[Backgrounding](~/ios/app-fundamentals/backgrounding/index.md)
+## <a name="backgroundingiosapp-fundamentalsbackgroundingindexmd"></a>[Procesamiento en segundo plano](~/ios/app-fundamentals/backgrounding/index.md)
 
 Fondo de procesamiento o backgrounding es el proceso de permitir que las aplicaciones realizar tareas en segundo plano mientras se está ejecutando otra aplicación en primer plano. Esta guía sirve como una introducción al procesamiento de iOS en segundo plano.
 

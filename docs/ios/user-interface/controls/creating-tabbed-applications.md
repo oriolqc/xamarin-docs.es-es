@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 2a10c161c49e7cd0d45d29522a98c0dc78f7adb7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 702a5986c9249eec38868895f55ef6f63b534b9b
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="tab-bars-and-tab-bar-controllers"></a>Barras de pestaña y controladores de la barra de pestañas
 
@@ -42,7 +42,7 @@ Para obtener una descripción de cómo trabajar con la `UITabBarController`, pas
 
 En este tutorial vamos a crear la siguiente aplicación:
 
-[ ![](creating-tabbed-applications-images/00-app.png "Aplicación de ejemplo con pestañas")](creating-tabbed-applications-images/00-app.png)
+[![](creating-tabbed-applications-images/00-app.png "Aplicación de ejemplo con pestañas")](creating-tabbed-applications-images/00-app.png#lightbox)
 
 Aunque ya hay una plantilla de aplicación con pestañas disponibles en Visual Studio para Mac, en este ejemplo, vamos a trabajar desde un proyecto vacío para obtener una mejor comprensión de cómo está construida la aplicación.
 
@@ -55,9 +55,9 @@ Empecemos creando una nueva aplicación.
 
 Seleccione el **archivo > Nuevo > solución** elemento de menú en Visual Studio para Mac y seleccione un **iOS > aplicaciones > proyecto vacío** plantilla, asigne al proyecto el `TabbedApplication`, tal y como se muestra a continuación:
 
-[ ![](creating-tabbed-applications-images/newsolution1.png "Seleccione la plantilla proyecto vacío")](creating-tabbed-applications-images/newsolution1.png)
+[![](creating-tabbed-applications-images/newsolution1.png "Seleccione la plantilla proyecto vacío")](creating-tabbed-applications-images/newsolution1.png#lightbox)
 
-[ ![](creating-tabbed-applications-images/newsolution2.png "Denomine el proyecto TabbedApplication")](creating-tabbed-applications-images/newsolution2.png)
+[![](creating-tabbed-applications-images/newsolution2.png "Denomine el proyecto TabbedApplication")](creating-tabbed-applications-images/newsolution2.png#lightbox)
 
 
 
@@ -65,7 +65,7 @@ Seleccione el **archivo > Nuevo > solución** elemento de menú en Visual Studio
 
 A continuación, agregue una clase vacía seleccionando **archivo > nuevo archivo** y eligiendo la **General: clase vacía** plantilla. Asignar nombre al archivo `TabController` tal y como se muestra a continuación:
 
-[ ![](creating-tabbed-applications-images/02-newclass.png "Agregue la clase TabController")](creating-tabbed-applications-images/02-newclass.png)
+[![](creating-tabbed-applications-images/02-newclass.png "Agregue la clase TabController")](creating-tabbed-applications-images/02-newclass.png#lightbox)
 
 El `TabController` clase contendrá la implementación de la `UITabBarController` que va a administrar una matriz de `UIViewControllers`. Cuando el usuario selecciona una ficha, el `UITabBarController` se encargará de presentar la vista para el controlador de vista adecuado.
 
@@ -113,7 +113,7 @@ namespace TabbedApplication {
 
 Tenga en cuenta que para cada `UIViewController` instancia, establecemos la `Title` propiedad de la `UIViewController`. Cuando los controladores se agregan a la `UITabBarController`, el `UITabBarController` leerá el `Title` para cada controlador y mostrarlo en la etiqueta de ficha asociado tal y como se muestra a continuación:
 
-[ ![](creating-tabbed-applications-images/00-app.png "Ejecutar la aplicación de ejemplo")](creating-tabbed-applications-images/00-app.png)
+[![](creating-tabbed-applications-images/00-app.png "Ejecutar la aplicación de ejemplo")](creating-tabbed-applications-images/00-app.png#lightbox)
 
 #### <a name="setting-the-tabcontroller-as-the-rootviewcontroller"></a>Establecer el TabController como la RootViewController
 
@@ -144,7 +144,7 @@ Para obtener la `UITabController` para cargar como la primera pantalla, necesita
 
 Si se ejecuta la aplicación ahora, el `UITabBarController` se cargará con la primera pestaña seleccionada de forma predeterminada. Si se selecciona cualquiera de las otras pestañas ver los resultados en el controlador asociado que se presenta la `UITabBarController,` tal y como se muestra a continuación donde el usuario final ha seleccionado la segunda pestaña:
 
-[ ![](creating-tabbed-applications-images/03-secondtab.png "La segunda pestaña que se muestra")](creating-tabbed-applications-images/03-secondtab.png)
+[![](creating-tabbed-applications-images/03-secondtab.png "La segunda pestaña que se muestra")](creating-tabbed-applications-images/03-secondtab.png#lightbox)
 
  <a name="Modifying_TabBarItems" />
 
@@ -185,7 +185,7 @@ tab2.View.BackgroundColor = UIColor.Orange;
 
 El código anterior supone una imagen denominada `second.png` se ha agregado a la raíz del proyecto en Visual Studio para Mac. Hemos agregado realmente tres imágenes para el proyecto, para cubrir todas las resoluciones de dispositivo, tal y como se muestra a continuación:
 
- [ ![](creating-tabbed-applications-images/tabbedimages7new.png "Las imágenes que se agrega al proyecto")](creating-tabbed-applications-images/tabbedimages7new.png)
+ [![](creating-tabbed-applications-images/tabbedimages7new.png "Las imágenes que se agrega al proyecto")](creating-tabbed-applications-images/tabbedimages7new.png#lightbox)
 
 La imagen de la ficha debe ser un archivo png de 30 x 30 con transparencia para la resolución normal, 60 x 60 para alta resolución y 90 x 90 para iPhone 6 Plus resolución. En el código, solo es necesario cargar el archivo denominado `second.png` y iOS cargará automáticamente la alta resolución en dispositivos con una pantalla Retina display. Puede leer más sobre esto en la [trabajar con imágenes](~/ios/app-fundamentals/images-icons/index.md) guías. De forma predeterminada elementos de la barra de pestaña son grises, con un tono azul cuando se selecciona.
 
@@ -193,13 +193,13 @@ La imagen de la ficha debe ser un archivo png de 30 x 30 con transparencia para 
 
 Las imágenes anteriores también podrían agregarse a la **recursos** directorio, que es un directorio especial cuyo contenido se copiará automáticamente a la raíz de la agrupación de aplicaciones:
 
-[ ![](creating-tabbed-applications-images/tabbedapplication8.png "Las imágenes como recursos")](creating-tabbed-applications-images/tabbedapplication8.png)
+[![](creating-tabbed-applications-images/tabbedapplication8.png "Las imágenes como recursos")](creating-tabbed-applications-images/tabbedapplication8.png#lightbox)
 
 Además, cuando se establece la `Title` propiedad directamente en el `TabBarItem`, invalidaría cualquier valor establecido para `Title` en el controlador.
 
 Cuando se ejecuta la aplicación ahora, la segunda pestaña muestra el título personalizado e imagen tal y como se muestra a continuación:
 
-[ ![](creating-tabbed-applications-images/05-customtab.png "La segunda pestaña con un icono cuadrado")](creating-tabbed-applications-images/05-customtab.png)
+[![](creating-tabbed-applications-images/05-customtab.png "La segunda pestaña con un icono cuadrado")](creating-tabbed-applications-images/05-customtab.png#lightbox)
 
  <a name="Setting_the_Badge_Value" />
 
@@ -214,7 +214,7 @@ tab3.TabBarItem.BadgeValue = "Hi";
 
 Si se ejecuta resulta en una etiqueta de color rojo con la cadena "Hola" en la esquina superior izquierda de la pestaña tal y como se muestra a continuación:
 
-[ ![](creating-tabbed-applications-images/06-badge.png "La segunda pestaña con un distintivo Hi")](creating-tabbed-applications-images/06-badge.png)
+[![](creating-tabbed-applications-images/06-badge.png "La segunda pestaña con un distintivo Hi")](creating-tabbed-applications-images/06-badge.png#lightbox)
 
 El distintivo a menudo se usa para mostrar una indicación numérica no leída, nuevos elementos. Para quitar el distintivo, establezca el `BadgeValue` en null como se muestra a continuación:
 
@@ -236,7 +236,7 @@ En el ejemplo anterior, mostramos cómo trabajar con un `UITabBarController` cua
 
 En este escenario, la pantalla inicial se carga desde un controlador que no es un `UITabBarController`. Cuando el usuario interactúa con la pantalla punteando un botón, se cargará el mismo controlador de vista en un `UITabBarController`, que, a continuación, se presenta al usuario. Captura de pantalla siguiente muestra el flujo de la aplicación:
 
-[ ![](creating-tabbed-applications-images/inital-screen-application.png "Esta captura de pantalla muestra el flujo de la aplicación")](creating-tabbed-applications-images/inital-screen-application.png)
+[![](creating-tabbed-applications-images/inital-screen-application.png "Esta captura de pantalla muestra el flujo de la aplicación")](creating-tabbed-applications-images/inital-screen-application.png#lightbox)
 
 Vamos a iniciar una nueva aplicación para este ejemplo. Una vez más, vamos a usar la **iPhone > aplicaciones > proyecto vacío (C#)** plantilla, esta vez el proyecto de nomenclatura `InitialScreenDemo`.
 
@@ -249,14 +249,14 @@ En este ejemplo se necesitará un guión gráfico para mantener los controladore
 
 Vamos a llamar a este guión gráfico nuevo **MainStoryboard** , como se muestra a continuación: 
 
-[ ![](creating-tabbed-applications-images/new-file-dialog.png "Agregue un archivo MainStoryboard al proyecto")](creating-tabbed-applications-images/new-file-dialog.png)
+[![](creating-tabbed-applications-images/new-file-dialog.png "Agregue un archivo MainStoryboard al proyecto")](creating-tabbed-applications-images/new-file-dialog.png#lightbox)
 
 Hay unos pocos pasos importantes tener en cuenta al agregar un guion gráfico a un archivo previamente sin guiones gráficos, que se tratan en la [Introducción a guiones gráficos](~/ios/user-interface/storyboards/index.md) guía. Estos son:
 
  
 1. Agregar el nombre del guión gráfico a la **interfaz principal** sección de la `Info.plist`:
 
-    [![](creating-tabbed-applications-images/project-options.png "Establece la interfaz principal en MainStoryboard")](creating-tabbed-applications-images/project-options.png)
+    [![](creating-tabbed-applications-images/project-options.png "Establece la interfaz principal en MainStoryboard")](creating-tabbed-applications-images/project-options.png#lightbox)
 1. En su `App Delegate`, invalide el método de ventana, con el código siguiente:
 
     ```csharp
@@ -270,11 +270,11 @@ Vamos a necesita tres controladores de la vista para este ejemplo. Uno, denomina
 
 Abra el diseñador haciendo doble clic en el archivo MainStoryboard.storyboard y arrastre tres controladores de la vista en la superficie de diseño. Queremos que cada uno de estos controladores de la vista tiene su propia clase que corresponde al nombre anterior, por lo tanto, en **identidad > clase**, escriba su nombre, como se muestra en la captura de pantalla siguiente:
 
-[ ![](creating-tabbed-applications-images/class-name.png "Defina la clase como ViewController1")](creating-tabbed-applications-images/class-name.png)
+[![](creating-tabbed-applications-images/class-name.png "Defina la clase como ViewController1")](creating-tabbed-applications-images/class-name.png#lightbox)
 
 Visual Studio para Mac generará automáticamente las clases y los archivos de diseñador que sea necesario, esto puede verse en el panel de la solución, como se muestra a continuación:
 
-[ ![](creating-tabbed-applications-images/solution-pad2.png "Archivos generados automáticamente en el proyecto")](creating-tabbed-applications-images/solution-pad2.png)
+[![](creating-tabbed-applications-images/solution-pad2.png "Archivos generados automáticamente en el proyecto")](creating-tabbed-applications-images/solution-pad2.png#lightbox)
 
  <a name="Creating_the_UI" />
 
@@ -291,11 +291,11 @@ Desea arrastrar un `Label` y un `Button` en ViewController1 desde el **cuadro de
 
 Se puede controlar la visibilidad de nuestro botón en un `TouchUpInside` eventos y tenemos que hacer referencia a él en el código subyacente. Vamos a identificarlo con la **nombre** `aButton` en el panel de propiedades, como se describe en la siguiente captura de pantalla:
 
-[ ![](creating-tabbed-applications-images/abutton-properties.png "Establezca el nombre en aButton en el panel de propiedades")](creating-tabbed-applications-images/abutton-properties.png)
+[![](creating-tabbed-applications-images/abutton-properties.png "Establezca el nombre en aButton en el panel de propiedades")](creating-tabbed-applications-images/abutton-properties.png#lightbox)
 
 La superficie de diseño ahora debe ser similar a la captura de pantalla siguiente:
 
-[ ![](creating-tabbed-applications-images/design-surface1.png "La superficie de diseño ahora debe ser similar a esta captura de pantalla")](creating-tabbed-applications-images/design-surface1.png)
+[![](creating-tabbed-applications-images/design-surface1.png "La superficie de diseño ahora debe ser similar a esta captura de pantalla")](creating-tabbed-applications-images/design-surface1.png#lightbox)
 
 Vamos a agregar un poco más detalle a `ViewController2` y `ViewController3`, agregue una etiqueta a cada uno de ellos y cambiando el texto 'Dos' y 'Tres' respectivamente. Esto resalta al usuario que estamos examinando de pestaña o vista.
 
@@ -305,7 +305,7 @@ Vamos a cargar `ViewController1` cuando la aplicación inicia por primera vez. C
 
 Cuando el usuario suelta el `aButton`, queremos que se desencadena un evento de TouchUpInside. Vamos a seleccionar el botón y en el **ficha eventos** del panel Propiedades, declare el controlador de eventos: `InitialActionCompleted` : por lo que puede hacer referencia en el código. Esto se muestra en la captura de pantalla siguiente:
 
-[ ![](creating-tabbed-applications-images/event-handler.png "Cuando el usuario suelta el aButton, desencadenar un evento TouchUpInside")](creating-tabbed-applications-images/event-handler.png)
+[![](creating-tabbed-applications-images/event-handler.png "Cuando el usuario suelta el aButton, desencadenar un evento TouchUpInside")](creating-tabbed-applications-images/event-handler.png#lightbox)
 
 Ahora necesitamos saber el controlador de vista para ocultar el botón cuando se desencadene el evento `InitialActionCompleted`. En `ViewController1`, agregue el método parcial siguiente:
 
@@ -324,7 +324,7 @@ Ahora tenemos nuestro punto de vista inicial funciona según lo esperado. A cont
 
 En el **cuadro de herramientas**, busque la **ficha barra controlador** en controladores de & objetos y arrástrelo hasta la superficie de diseño. Como puede ver en la captura de pantalla siguiente, el controlador de la barra de ficha es menor de la interfaz de usuario y, por tanto, pone dos controladores de la vista con él de forma predeterminada:
 
-[ ![](creating-tabbed-applications-images/tabbarcontroller.png "Agregar un controlador de la barra de ficha al diseño del")](creating-tabbed-applications-images/tabbarcontroller.png)
+[![](creating-tabbed-applications-images/tabbarcontroller.png "Agregar un controlador de la barra de ficha al diseño del")](creating-tabbed-applications-images/tabbarcontroller.png#lightbox)
 
 Eliminar estos nuevos controladores de vista, seleccione la barra de color negra en la parte inferior y presionando la tecla SUPR.
 
@@ -334,15 +334,15 @@ En el guión gráfico, podemos usar Segues para controlar las transiciones entre
  
 Para configurar cada una de nuestras pestañas, **Ctrl-clic** desde el TabBarController a cada uno de nuestros controladores de la vista en el orden de uno a tres y seleccione la relación **ficha** en el menú contextual, como se muestra a continuación:
 
-[ ![](creating-tabbed-applications-images/context-menu.png "Seleccione la ficha relación")](creating-tabbed-applications-images/context-menu.png)
+[![](creating-tabbed-applications-images/context-menu.png "Seleccione la ficha relación")](creating-tabbed-applications-images/context-menu.png#lightbox)
 
 El guión gráfico debe ser similar a la captura de pantalla siguiente:
 
-[ ![](creating-tabbed-applications-images/segue-layout.png "El guión gráfico debe ser similar a esta captura de pantalla")](creating-tabbed-applications-images/segue-layout.png)
+[![](creating-tabbed-applications-images/segue-layout.png "El guión gráfico debe ser similar a esta captura de pantalla")](creating-tabbed-applications-images/segue-layout.png#lightbox)
 
 Si se hace clic en uno de los elementos de barra de la pestaña y explorar el panel de propiedades, puede ver una serie de opciones diferentes, como se muestra a continuación:
 
-[ ![](creating-tabbed-applications-images/properties-panel.png "Establecer las opciones de la pestaña en el Explorador de propiedades")](creating-tabbed-applications-images/properties-panel.png)
+[![](creating-tabbed-applications-images/properties-panel.png "Establecer las opciones de la pestaña en el Explorador de propiedades")](creating-tabbed-applications-images/properties-panel.png#lightbox)
 
 Podemos utilizar esto para editar determinados atributos, como el distintivo, el título y el archivo iOS [identificador](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/TabBarItem.html), entre otros
 
@@ -360,11 +360,11 @@ public override void ViewDidLoad ()
 
 Cuando se ejecuta la aplicación y el usuario puntee en el botón en la primera pantalla, el UITabBarController se ha cargado, con la vista de la primera pantalla que se coloca en la primera ficha, tal y como se muestra a continuación:
 
-[ ![](creating-tabbed-applications-images/first-view.png "La salida de la aplicación de ejemplo")](creating-tabbed-applications-images/first-view.png)
+[![](creating-tabbed-applications-images/first-view.png "La salida de la aplicación de ejemplo")](creating-tabbed-applications-images/first-view.png#lightbox)
 
 <!--Save the files and run the application:
 
-[ ![](creating-tabbed-applications-images/inital-screen-application.png "Save the files and run the application")](creating-tabbed-applications-images/inital-screen-application.png)-->
+[![](creating-tabbed-applications-images/inital-screen-application.png "Save the files and run the application")](creating-tabbed-applications-images/inital-screen-application.png#lightbox)-->
 
 ## <a name="summary"></a>Resumen
 

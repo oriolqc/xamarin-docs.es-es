@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: cb6917f9cd0dc22cc32a2d32c203328f1d6d963b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7d58c30e745e26d1076e75470e527cbe95e85eb6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-text-and-search-fields"></a>Trabajar con texto y campos de búsqueda
 
@@ -22,11 +22,11 @@ _Este artículo tratan diseñar y trabajar con texto y los campos de búsqueda d
 
 Cuando sea necesario, la aplicación Xamarin.tvOS puede solicitar pequeños fragmentos de texto del usuario (por ejemplo, Id. de usuario y contraseñas) con un campo de texto y el teclado en pantalla:
 
-[ ![](text-fields-and-search-images/intro01.png "Campo de búsqueda de ejemplo")](text-fields-and-search-images/intro01.png)
+[![](text-fields-and-search-images/intro01.png "Campo de búsqueda de ejemplo")](text-fields-and-search-images/intro01.png#lightbox)
 
 También puede proporcionar capacidad de búsqueda de palabra clave de contenido de la aplicación mediante un campo de búsqueda:
 
-[ ![](text-fields-and-search-images/intro02.png "Resultados de la búsqueda de ejemplo")](text-fields-and-search-images/intro02.png)
+[![](text-fields-and-search-images/intro02.png "Resultados de la búsqueda de ejemplo")](text-fields-and-search-images/intro02.png#lightbox)
 
 Este documento tratará la información detallada sobre cómo trabajar con texto y los campos de búsqueda en una aplicación Xamarin.tvOS.
 
@@ -44,7 +44,7 @@ Además, si la aplicación presenta grandes cantidades de contenido para el usua
 
 En tvOS, un campo de texto se presenta como un cuadro de entrada de alto fijo, esquina redondeado que le llevará a un teclado en pantalla cuando el usuario hace clic en él:
 
-[ ![](text-fields-and-search-images/text01.png "Texto en campos tvOS")](text-fields-and-search-images/text01.png)
+[![](text-fields-and-search-images/text01.png "Texto en campos tvOS")](text-fields-and-search-images/text01.png#lightbox)
 
 Cuando el usuario mueve [foco](~/ios/tvos/app-fundamentals/navigation-focus.md) a un campo de texto determinado, se aumenta el y mostrar una sombra profunda. Debe tener esto en cuenta al diseñar la interfaz de usuario, como campos de texto puede superponerse a otros elementos de interfaz de usuario cuando el foco.
 
@@ -61,7 +61,7 @@ Apple tiene las siguientes sugerencias para trabajar con campos de texto:
 
 Cada vez que el usuario hace clic en un campo de texto en la interfaz de usuario, un lineal en pantalla se muestra el teclado. El usuario usa la superficie tocan la [Siri remoto](~/ios/tvos/platform/remote-bluetooth.md#The-Siri-Remote) para seleccionar letras individuales desde el teclado y escriba la información solicitada:
 
-[ ![](text-fields-and-search-images/keyboard01.png "El teclado remoto Siri")](text-fields-and-search-images/keyboard01.png)
+[![](text-fields-and-search-images/keyboard01.png "El teclado remoto Siri")](text-fields-and-search-images/keyboard01.png#lightbox)
 
 Si hay más de un campo de texto en la vista actual, un **siguiente** botón se mostrará automáticamente para seguir el usuario para el siguiente campo de texto. A **realiza** botón se mostrará el último campo de texto que se finalice la entrada de texto y el usuario regresará a la pantalla anterior. 
 
@@ -80,7 +80,7 @@ Para obtener más información sobre cómo trabajar con el teclado en pantalla, 
 
 Un campo de búsqueda presentará una pantalla especializada que proporciona un campo de texto y teclado en pantalla que permite al usuario filtrar una colección de elementos que se muestran debajo del teclado:
 
-[ ![](text-fields-and-search-images/search01.png "Resultados de la búsqueda de ejemplo")](text-fields-and-search-images/search01.png)
+[![](text-fields-and-search-images/search01.png "Resultados de la búsqueda de ejemplo")](text-fields-and-search-images/search01.png#lightbox)
 
 Cuando el usuario escribe letras en el campo de búsqueda, los resultados siguientes reflejan automáticamente los resultados de la búsqueda. En cualquier momento, el usuario puede cambiar el foco a los resultados y seleccione uno de los elementos que se presentan.
 
@@ -105,16 +105,16 @@ Haga lo siguiente:
 1. En el **solución Pad**, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo.
 1. Arrastre una o más **campos de texto** int la superficie de diseño en una vista: 
 
-    [ ![](text-fields-and-search-images/text02.png "Un campo de texto")](text-fields-and-search-images/text02.png)
+    [![](text-fields-and-search-images/text02.png "Un campo de texto")](text-fields-and-search-images/text02.png#lightbox)
 1. Seleccione el **campos de texto** y asigne a cada uno un único **nombre** en el **Widget** pestaña de la **panel de propiedades**: 
 
-    [ ![](text-fields-and-search-images/text03.png "La pestaña de Widget de panel de propiedades")](text-fields-and-search-images/text03.png)
+    [![](text-fields-and-search-images/text03.png "La pestaña de Widget de panel de propiedades")](text-fields-and-search-images/text03.png#lightbox)
 1. En el **campo de texto** sección, puede definir elementos, como el **marcador de posición** sugerencia y default **valor**: 
 
-    [ ![](text-fields-and-search-images/text04.png "La sección de campos de texto")](text-fields-and-search-images/text04.png)
+    [![](text-fields-and-search-images/text04.png "La sección de campos de texto")](text-fields-and-search-images/text04.png#lightbox)
 1. Desplácese hacia abajo para definir las propiedades como **ortográfica**, **mayúsculas y minúsculas** y el valor predeterminado **teclado tipo**: 
 
-    [ ![](text-fields-and-search-images/text05.png "Corrector ortográfico, mayúsculas y minúsculas y el tipo de teclado predeterminado")](text-fields-and-search-images/text05.png) 
+    [![](text-fields-and-search-images/text05.png "Corrector ortográfico, mayúsculas y minúsculas y el tipo de teclado predeterminado")](text-fields-and-search-images/text05.png#lightbox) 
 1. Guarde los cambios en el guión gráfico.
     
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -122,16 +122,16 @@ Haga lo siguiente:
 1. Haga doble clic en el archivo `Main.storyboard` en el **Explorador de soluciones** para abrirlo para su edición.
 1. Arrastre una o más **campos de texto** int la superficie de diseño en una vista: 
 
-    [ ![](text-fields-and-search-images/text02-vs.png "Un campo de texto")](text-fields-and-search-images/text02-vs.png)
+    [![](text-fields-and-search-images/text02-vs.png "Un campo de texto")](text-fields-and-search-images/text02-vs.png#lightbox)
 1. Seleccione el **campos de texto** y asigne a cada uno un único **nombre** en el **Widget** pestaña de la **el Explorador de propiedades**: 
 
-    [ ![](text-fields-and-search-images/text03-vs.png "La pestaña de Widget")](text-fields-and-search-images/text03-vs.png)
+    [![](text-fields-and-search-images/text03-vs.png "La pestaña de Widget")](text-fields-and-search-images/text03-vs.png#lightbox)
 1. En el **campo de texto** sección, puede definir elementos, como el **marcador de posición** sugerencia y default **valor**: 
 
-    [ ![](text-fields-and-search-images/text04-vs.png "La sección de campos de texto")](text-fields-and-search-images/text04-vs.png)
+    [![](text-fields-and-search-images/text04-vs.png "La sección de campos de texto")](text-fields-and-search-images/text04-vs.png#lightbox)
 1. Desplácese hacia abajo para definir las propiedades como **ortográfica**, **mayúsculas y minúsculas** y el valor predeterminado **teclado tipo**: 
 
-    [ ![](text-fields-and-search-images/text05-vs.png "Corrector ortográfico, mayúsculas y minúsculas y el tipo de teclado predeterminado")](text-fields-and-search-images/text05-vs.png) 
+    [![](text-fields-and-search-images/text05-vs.png "Corrector ortográfico, mayúsculas y minúsculas y el tipo de teclado predeterminado")](text-fields-and-search-images/text05-vs.png#lightbox) 
 1. Guarde los cambios en el guión gráfico.
     
 -----
@@ -157,17 +157,17 @@ Haga lo siguiente:
 1. En el **solución Pad**, haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo.
 1. Arrastre un nuevo controlador de vista de colección al guión gráfico para presentar los resultados de búsqueda del usuario: 
 
-    [ ![](text-fields-and-search-images/search02.png "Un controlador de vista de colección")](text-fields-and-search-images/search02.png)
+    [![](text-fields-and-search-images/search02.png "Un controlador de vista de colección")](text-fields-and-search-images/search02.png#lightbox)
 1. En el **Widget** pestaña de la **panel de propiedades**, use `SearchResultsViewController` para el **clase** y `SearchResults` para el **Id. de guión gráfico**: 
 
-    [ ![](text-fields-and-search-images/search03.png "La pestaña de Widget")](text-fields-and-search-images/search03.png)
+    [![](text-fields-and-search-images/search03.png "La pestaña de Widget")](text-fields-and-search-images/search03.png#lightbox)
 1. Seleccione el **celda prototipo** en la superficie de diseño.
 1. En el **Widget** pestaña de la **el Explorador de propiedades**, use `SearchResultCell` para el **clase** y `ImageCell` para el **identificador**: 
 
-    [ ![](text-fields-and-search-images/search04.png "La pestaña de Widget")](text-fields-and-search-images/search04.png)
+    [![](text-fields-and-search-images/search04.png "La pestaña de Widget")](text-fields-and-search-images/search04.png#lightbox)
 1. Diseño el diseño de la **celda prototipo** y exponer cada elemento con un único **nombre** en el **Widget** pestaña de la **elExploradordepropiedades**: 
 
-    [ ![](text-fields-and-search-images/search05.png "El diseño del prototipo de celda de diseño")](text-fields-and-search-images/search05.png)
+    [![](text-fields-and-search-images/search05.png "El diseño del prototipo de celda de diseño")](text-fields-and-search-images/search05.png#lightbox)
 1. Guarde los cambios en el guión gráfico.
     
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
@@ -175,17 +175,17 @@ Haga lo siguiente:
 1. Haga doble clic en el archivo `Main.storyboard` en el **Explorador de soluciones** para abrirlo para su edición.
 1. Arrastre un nuevo controlador de vista de colección al guión gráfico para presentar los resultados de búsqueda del usuario: 
 
-    [ ![](text-fields-and-search-images/seach02-vs.png "Un controlador de vista de colección")](text-fields-and-search-images/seach02-vs.png)
+    [![](text-fields-and-search-images/seach02-vs.png "Un controlador de vista de colección")](text-fields-and-search-images/seach02-vs.png#lightbox)
 1. En el **Widget** pestaña de la **el Explorador de propiedades**, use `SearchResultsViewController` para el **clase** y `SearchResults` para el **Id. de guión gráfico**: 
 
-    [ ![](text-fields-and-search-images/search03-vs.png "La pestaña de Widget")](text-fields-and-search-images/search03-vs.png)
+    [![](text-fields-and-search-images/search03-vs.png "La pestaña de Widget")](text-fields-and-search-images/search03-vs.png#lightbox)
 1. Seleccione el **celda prototipo** en la superficie de diseño.
 1. En el **Widget** pestaña de la **el Explorador de propiedades**, use `SearchResultCell` para el **clase** y `ImageCell` para el **identificador**: 
 
-    [ ![](text-fields-and-search-images/search04-vs.png "La pestaña de Widget")](text-fields-and-search-images/search04-vs.png)
+    [![](text-fields-and-search-images/search04-vs.png "La pestaña de Widget")](text-fields-and-search-images/search04-vs.png#lightbox)
 1. Diseño el diseño de la **celda prototipo** y exponer cada elemento con un único **nombre** en el **Widget** pestaña de la **elExploradordepropiedades**: 
 
-    [ ![](text-fields-and-search-images/search05-vs.png "El diseño del prototipo de celda de diseño")](text-fields-and-search-images/search05-vs.png)
+    [![](text-fields-and-search-images/search05-vs.png "El diseño del prototipo de celda de diseño")](text-fields-and-search-images/search05-vs.png#lightbox)
 1. Guarde los cambios en el guión gráfico.
     
 -----
@@ -198,13 +198,13 @@ Haga lo siguiente:
 
 A continuación, debe proporcionar una clase para que actúe como el modelo de datos para los resultados que se buscarán el usuario. En el **el Explorador de soluciones**, haga clic en el nombre del proyecto y seleccione **agregar** > **nuevo archivo...**   >  **General** > **clase vacía** y proporcionar un **nombre**: 
 
-[ ![](text-fields-and-search-images/search06.png "Seleccione la clase vacía y proporcione un nombre")](text-fields-and-search-images/search06.png)
+[![](text-fields-and-search-images/search06.png "Seleccione la clase vacía y proporcione un nombre")](text-fields-and-search-images/search06.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 A continuación, debe proporcionar una clase para que actúe como el modelo de datos para los resultados que se buscarán el usuario. En el **el Explorador de soluciones**, haga clic en el nombre del proyecto y seleccione **agregar** > **nuevo elemento...**   >  **Apple** > **varios** > **clase** y proporcionar un **nombre**: 
 
-[ ![](text-fields-and-search-images/search06-vs.png "Seleccione la clase y proporcione un nombre")](text-fields-and-search-images/search06-vs.png)
+[![](text-fields-and-search-images/search06-vs.png "Seleccione la clase y proporcione un nombre")](text-fields-and-search-images/search06-vs.png#lightbox)
 
 -----
 
@@ -772,11 +772,11 @@ public override void ViewDidAppear (bool animated)
 
 Cuando se ejecute la aplicación y la pestaña de búsqueda seleccionada por el usuario, la lista completa sin filtrar de los elementos se presentan al usuario:
 
-[ ![](text-fields-and-search-images/intro02.png "Resultados de la búsqueda de forma predeterminada")](text-fields-and-search-images/intro02.png)
+[![](text-fields-and-search-images/intro02.png "Resultados de la búsqueda de forma predeterminada")](text-fields-and-search-images/intro02.png#lightbox)
 
 Como el usuario empieza a escribir un término de búsqueda, la lista de resultados se filtran por ese término y se actualizan automáticamente:
 
-[ ![](text-fields-and-search-images/intro03.png "Resultados de la búsqueda filtrados")](text-fields-and-search-images/intro03.png)
+[![](text-fields-and-search-images/intro03.png "Resultados de la búsqueda filtrados")](text-fields-and-search-images/intro03.png#lightbox)
 
 En cualquier momento, el usuario puede cambiar el foco a un elemento en los resultados de búsqueda y haga clic en la superficie del control remoto de Siri para seleccionarlo y táctil.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 523d79adbc5d4f88d4a2670b6422a58fb9256ab2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e40fd215d23e7da6f1356bba17fac84ce91007ae
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="polylines-and-parametric-equations"></a>Polilíneas y ecuaciones paramétricas
 
@@ -109,7 +109,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El resultado también se denomina una *espiral aritmético* porque el desplazamiento entre cada bucle es constante:
 
-[![](polylines-images/archimedeanspiral-small.png "Captura de pantalla triple de la página de espiral Archimedean")](polylines-images/archimedeanspiral-large.png "Triple captura de pantalla de la página Archimedean espiral")
+[![](polylines-images/archimedeanspiral-small.png "Captura de pantalla triple de la página de espiral Archimedean")](polylines-images/archimedeanspiral-large.png#lightbox "Triple captura de pantalla de la página Archimedean espiral")
 
 Tenga en cuenta que la `SKPath` se crea en un `using` bloque. Esto `SKPath` consume más memoria que la `SKPath` objetos en los programas anteriores, lo que sugiere que un `using` bloque es más adecuado para desechar recursos no administrados.
 

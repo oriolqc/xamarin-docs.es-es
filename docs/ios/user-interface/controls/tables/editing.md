@@ -7,30 +7,22 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 1ea4489cd6f9839d5d32c97aa7ded41e4f15538a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: eb8bae676a4b5c682cdb204c6d38ffc1112b483a
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="editing"></a>Editar
 
 Características de edición de la tabla están habilitadas al invalidar los métodos en un `UITableViewSource` subclase. El comportamiento de edición más sencillo es el gesto de deslizar rápidamente para eliminar que puedan implementarse con una invalidación del método único.
 Edición más complejas (incluidas las filas móviles) puede realizarse con la tabla en modo de edición.
 
-Esta guía examina lo siguiente:
-
-- [Deslice el dedo para eliminar](#Swipe_to_Delete)
-- [Modo de edición](#Edit_Mode)
-- [Estilo de edición de inserción de fila](#row_insertion_editing_style)
-
-<a name="Swipe_to_delete" />
-
 ## <a name="swipe-to-delete"></a>Deslice el dedo para eliminar
 
 El deslice el dedo para eliminar la función es un gesto natural en operaciones de E/s que los usuarios esperan. 
 
- [ ![](editing-images/image10.png "Ejemplo de deslice el dedo para Delete")](editing-images/image10.png)
+ [![](editing-images/image10.png "Ejemplo de deslice el dedo para Delete")](editing-images/image10.png#lightbox)
 
 Hay tres valores de reemplazo de método que afectan el gesto de deslizar rápidamente para mostrar un **eliminar** botón en una celda:
 
@@ -68,14 +60,13 @@ public override string TitleForDeleteConfirmation (UITableView tableView, NSInde
 
 En este ejemplo el `UITableViewSource` se ha actualizado para usar un `List<TableItem>` (en lugar de una matriz de cadenas) como el origen de datos ya que admite agregar y eliminar elementos de la colección.
 
-<a name="Edit_mode" />
 
 ## <a name="edit-mode"></a>Modo de edición
 
 Cuando una tabla está en modo de edición el usuario ve un widget rojo 'stop' en cada fila, lo que revela un botón Eliminar cuando tocadas. La tabla también muestra un icono de 'identificador' para indicar que la fila se puede arrastrar para cambiar el orden.
 El **TableEditMode** ejemplo implementa estas características, tal y como se muestra.
 
- [ ![](editing-images/image11.png "El ejemplo TableEditMode implementa estas características tal y como se muestra")](editing-images/image11.png)
+ [![](editing-images/image11.png "El ejemplo TableEditMode implementa estas características tal y como se muestra")](editing-images/image11.png#lightbox)
 
 Hay una serie de métodos diferentes en `UITableViewSource` que afectan al comportamiento del modo de edición de una tabla:
 
@@ -136,13 +127,12 @@ y cuando el usuario ha terminado de edición, el **realiza** botón debe desacti
 table.SetEditing (false, true);
 ```
 
-<a name="Edit_mode_–_row_insertion_editing_style" />
 
 ## <a name="row-insertion-editing-style"></a>Estilo de edición de inserción de fila
 
 Inserción de filas desde dentro de la tabla es una interfaz de usuario poco comunes: el ejemplo principal en las aplicaciones de iOS estándar es el **Edit Contact** pantalla. Esta captura de pantalla muestra el funcionamiento de la funcionalidad de inserción de fila: en edición modo hay más de fila que (al hacer clic en) inserta filas adicionales en los datos. Cuando la edición se completa, la contraseña **(agregar nuevos)** se quita la fila.
 
- [ ![](editing-images/image12.png "Cuando se completa la edición, la contraseña Agregar nueva fila se quita")](editing-images/image12.png)
+ [![](editing-images/image12.png "Cuando se completa la edición, la contraseña Agregar nueva fila se quita")](editing-images/image12.png#lightbox)
 
 Hay una serie de métodos diferentes en `UITableViewSource` que afectan al comportamiento del modo de edición de una tabla. Estos métodos se han implementado como se indica a continuación en el código de ejemplo:
 

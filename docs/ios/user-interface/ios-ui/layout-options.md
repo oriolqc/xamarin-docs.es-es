@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1e3139eb4c94264c91307f6f8a69b183f3bf7fa6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4917eafff020bb0e2d14a27d3c1a44d1d4087d7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layout-options"></a>Opciones de diseño
 
@@ -25,11 +25,11 @@ Hay dos mecanismos diferentes para controlar el diseño cuando se cambia el tama
 
 Cuando un usuario cambia el tamaño de una ventana, por ejemplo, cuando se gira el dispositivo y los cambios de orientación, el sistema cambiará automáticamente el tamaño de las vistas dentro de esa ventana según sus reglas de ajuste automático de tamaño. Estas reglas se pueden establecer en C# con el `AutoresizingMask` propiedad de la `UIView` o en la **panel de propiedades** del iOS diseñador, como se muestra a continuación:
 
- [ ![](layout-options-images/image41.png "Visual Studio para Mac Diseñador")](layout-options-images/image41.png)
+ [![](layout-options-images/image41.png "Visual Studio para Mac Diseñador")](layout-options-images/image41.png#lightbox)
 
 Cuando se selecciona un control, esto le permite especificar manualmente la ubicación y las dimensiones del control, así como elegir **cambiar automáticamente el tamaño** comportamiento. Como se muestra en la siguiente captura de pantalla, podemos utilizar la springs y struts en el control de ajuste automático de tamaño para definir la relación de la vista seleccionada a su elemento primario:
 
- [ ![](layout-options-images/image42.png "Visual Studio para Mac Diseñador")](layout-options-images/image42.png)
+ [![](layout-options-images/image42.png "Visual Studio para Mac Diseñador")](layout-options-images/image42.png#lightbox)
 
 Ajustar un *primavera* hará que la vista cambiar el tamaño en función del ancho o alto de esta vista primaria. Ajustar un *strut* hará que la vista de mantener una distancia constante entre él y su vista primaria, en ese extremo concreto.
 
@@ -43,7 +43,7 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAut
 
 Para probar la configuración de ajuste automático de tamaño, habilitar diferentes **admite orientaciones de dispositivo** en las opciones del proyecto:
 
- [ ![](layout-options-images/image43a.png "Configuración de ajuste automático de tamaño")](layout-options-images/image43a.png)
+ [![](layout-options-images/image43a.png "Configuración de ajuste automático de tamaño")](layout-options-images/image43a.png#lightbox)
 
 Podemos utilizar el código siguiente, que hace que los controles de dos texto que se va a cambiar el tamaño horizontalmente en el código subyacente:
 
@@ -56,11 +56,11 @@ imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutor
 
 También podemos ajustar los controles mediante el diseñador. Al seleccionar el struts como se muestra a continuación hará que la imagen a permanecen alineados a la derecha sin recortarla la parte inferior de la vista:
 
- [ ![](layout-options-images/autoresize.png "Rotación automática")](layout-options-images/autoresize.png)
+ [![](layout-options-images/autoresize.png "Autorotation")](layout-options-images/autoresize.png#lightbox)
 
 Estas capturas de pantalla muestran cómo cambiar el tamaño de los controles o la ubicación de por sí mismos cuando se gira la pantalla:
 
- [ ![](layout-options-images/image44a.png "Rotación automática")](layout-options-images/image44a.png)
+ [![](layout-options-images/image44a.png "Autorotation")](layout-options-images/image44a.png#lightbox)
 
 Tenga en cuenta que la vista de texto y el campo de texto tanto se estiran para mantener la misma izquierda y derecha de los márgenes, debido a la `FlexibleWidth` configuración. La imagen tiene el superior e izquierdo margen flexible, lo que significa que conserva la parte inferior y el margen derecho: mantener la imagen en la vista cuando se gira la pantalla. Diseños complejos suelen requieran una combinación de estos valores en cada control visible para mantener la coherencia de la interfaz de usuario y para impedir que los controles que se superponen cuando cambian los límites de la vista (debido a la rotación u otro evento de cambio de tamaño).
 

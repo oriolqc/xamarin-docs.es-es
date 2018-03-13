@@ -8,19 +8,19 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: b7b5093f9a564c0711ddc8a711f9b609d44e7dad
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a750167cb9e6bde3a4a9abe11c5386497f9a12ae
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-performance"></a>Rendimiento de Xamarin.Forms
 
 _Existen muchas técnicas para aumentar el rendimiento de aplicaciones de Xamarin.Forms. Colectivamente, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas._
 
-[ ![](performance-images/evolve-jason-perf-sml.png "Optimizar el rendimiento de las aplicaciones con Xamarin.Forms")](https://evolve.xamarin.com/session/56e205b0bad314273ca4d817)
+> [!VIDEO https://youtube.com/embed/RZvdql3Ev0E]
 
-[Evolve 2016: Optimizar el rendimiento de las aplicaciones con Xamarin.Forms](https://evolve.xamarin.com/session/56e205b0bad314273ca4d817)
+**Evolve 2016: Optimizar el rendimiento de las aplicaciones con Xamarin.Forms**
 
 ## <a name="overview"></a>Información general
 

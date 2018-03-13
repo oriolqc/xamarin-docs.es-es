@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 12314e6ec5951a5a094ed8b0a5536b450853c5fb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4a3f8ca8f4502b9585536815aef81f66cacd214f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="customizing-a-tables-appearance"></a>Personalizar la apariencia de una tabla
 
@@ -29,7 +29,7 @@ Existen cuatro estilos integrados:
 
 Estas capturas de pantalla muestran cómo aparece cada estilo:
 
- [ ![](customizing-table-appearance-images/image7.png "Estas capturas de pantalla muestran cómo aparece cada estilo")](customizing-table-appearance-images/image7.png)
+ [![](customizing-table-appearance-images/image7.png "Estas capturas de pantalla muestran cómo aparece cada estilo")](customizing-table-appearance-images/image7.png#lightbox)
 
 El ejemplo **CellDefaultTable** contiene el código para generar estas pantallas. El estilo de celda se establece el `UITableViewCell` constructor, similar al siguiente:
 
@@ -60,7 +60,7 @@ Las celdas pueden tener los siguientes accesorios que se agrega a la derecha de 
 
 Se trata de su apariencia:
 
- [ ![](customizing-table-appearance-images/image8.png "Accesorios de ejemplo")](customizing-table-appearance-images/image8.png)
+ [![](customizing-table-appearance-images/image8.png "Accesorios de ejemplo")](customizing-table-appearance-images/image8.png#lightbox)
 
 Para mostrar uno de estos accesorios puede establecer el `Accessory` propiedad en el `GetCell` método:
 
@@ -119,7 +119,7 @@ Para cambiar el estilo visual de una tabla que se deben proporcionar celdas pers
 
 El ejemplo CellCustomTable se implementa un `UITableViewCell` subclase que define un diseño personalizado de `UILabel`s y un `UIImage` con diferentes fuentes y colores. Las celdas resultantes tiene el siguiente aspecto:
 
- [ ![](customizing-table-appearance-images/image9.png "Diseños de celda personalizado")](customizing-table-appearance-images/image9.png)
+ [![](customizing-table-appearance-images/image9.png "Diseños de celda personalizado")](customizing-table-appearance-images/image9.png#lightbox)
 
 La clase de celda personalizada consiste en solo tres métodos:
 

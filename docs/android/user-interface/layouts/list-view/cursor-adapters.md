@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 10/25/2017
-ms.openlocfilehash: 43d1ef53933ca7867b834dbf118ec730ccbf71ac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5cadaf5f41d940a0255113178d018b59b780eabc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="using-cursoradapters"></a>Usar CursorAdapters
 
-<a name="overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -27,7 +26,6 @@ Android proporciona clases de adaptador concreto para mostrar los datos de una c
 
 Adaptadores de cursor proporcionan una manera de alto rendimiento que desplazarse a través de listas largas de datos que se almacenan en SQLite. El código usado debe definir una consulta SQL en un `Cursor` del objeto y, a continuación, se describe cómo crear y rellenar las vistas para cada fila.
 
-<a name="Creating_an_SQLite_Database" />
 
 ## <a name="creating-an-sqlite-database"></a>Crear una base de datos de SQLite
 
@@ -63,7 +61,6 @@ El `VegetableDatabase` se crearán instancias de clase en el `OnCreate` método 
 
 La consulta de cursor *debe* tiene una columna de enteros `_id` para el `CursorAdapter` para que funcione. Si la tabla subyacente no tiene una columna de enteros denominada `_id` , a continuación, utilice un alias de columna para otro entero único en el `RawQuery` que conforman el cursor. Hacer referencia a la [documentos Android](https://developer.xamarin.com/api/type/Android.Widget.CursorAdapter/) para obtener más información.
 
-<a name="Creating_the_Cursor" />
 
 ### <a name="creating-the-cursor"></a>Crear el Cursor
 
@@ -85,7 +82,6 @@ cursor.Close();
 
 Una vez que una aplicación tiene una base de datos de SQLite disponible y ha creado un objeto cursor tal como se muestra, puede utilizar en una `SimpleCursorAdapter` o una subclase de `CusorAdapter` para mostrar las filas en un `ListView`.
 
-<a name="Using_SimpleCursorAdapter" />
 
 ## <a name="using-simplecursoradapter"></a>Usar SimpleCursorAdapter
 
@@ -119,7 +115,6 @@ listView.Adapter = new SimpleCursorAdapter (this, Android.Resource.Layout.Simple
 
 `SimpleCursorAdapter` es una manera rápida y simple para mostrar los datos de SQLite en un `ListView`. La limitación principal es que solo se pueden enlazar los valores de columna para mostrar los controles, no le permiten cambiar otros aspectos del diseño de fila (por ejemplo, mostrar/ocultar controles o cambiar las propiedades).
 
-<a name="Subclassing_CursorAdapter" />
 
 ## <a name="subclassing-cursoradapter"></a>Creación de subclases CursorAdapter
 
@@ -133,7 +128,6 @@ Dado un trabajo SQLite de base de datos, solo tiene que invalidar dos métodos p
 
 Las subclases de adaptador en ejemplos anteriores tienen métodos para devolver el número de filas y recuperar el elemento actual: el `CursorAdapter` no requiere estos métodos porque esa información se puede deducir del mismo cursor. Mediante la división de la creación y el llenado de cada vista en estos dos métodos, el `CursorAdapter` exige volver a usar la vista. Esto es a diferencia de un adaptador normal donde es posible pasar por alto la `convertView` parámetro de la `BaseAdapter.GetView` método.
 
-<a name="Implementing_the_CursorAdapter" />
 
 ### <a name="implementing-the-cursoradapter"></a>Implementar el CursorAdapter
 
@@ -159,7 +153,6 @@ public class HomeScreenCursorAdapter : CursorAdapter {
 }
 ```
 
-<a name="Assigning_the_CursorAdapter" />
 
 ### <a name="assigning-the-cursoradapter"></a>Asignar el CursorAdapter
 

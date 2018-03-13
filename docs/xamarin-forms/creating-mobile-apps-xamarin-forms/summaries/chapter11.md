@@ -3,14 +3,15 @@ title: "Resumen del capítulo 11. La infraestructura enlazable"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 3e3cfb55f7b96751979d14b489e892bc07817780
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6e0f1abf04695dfb5348b631a9fbdbd2c81bc431
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Resumen del capítulo 11. La infraestructura enlazable
 
@@ -22,7 +23,7 @@ Xamarin.Forms define una definición de propiedad mejorada denominada una *propi
 
 El [ **ClassHierarchy** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter11/ClassHierarchy) ejemplo utiliza la reflexión para mostrar una jerarquía de clases de Xamarin.Forms y mostrar el papel fundamental que desempeña `BindableObject` en esta jerarquía. `BindableObject` se deriva de `Object` y es la clase primaria para [ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/) desde el que [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/) deriva. Se trata de la clase primaria de [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) y [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/), que es la clase primaria de [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/):
 
-[![Captura de pantalla triple de la jerarquía de clases de uso compartido](images/ch11fg01-small.png "compartir de la jerarquía en la clase")](images/ch11fg01-large.png "uso compartido de jerarquía de clase")
+[![Captura de pantalla triple de la jerarquía de clases de uso compartido](images/ch11fg01-small.png "compartir de la jerarquía en la clase")](images/ch11fg01-large.png#lightbox "uso compartido de jerarquía de clase")
 
 ## <a name="a-peek-into-bindableobject-and-bindableproperty"></a>Un vistazo en BindableObject y BindableProperty
 

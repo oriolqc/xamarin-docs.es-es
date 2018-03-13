@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: d18cf055bb206099eecea0d9f417af571f3819e0
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 8b266640bb0e1aa2bc584197e5fd7cbf4ab48e88
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="device-orientation"></a>Orientación del dispositivo
 
@@ -31,7 +31,7 @@ En este artículo le ayudará a crear aplicaciones que aprovechan las ventajas d
 Cuando el uso de Xamarin.Forms, es el método admitido para controlar la orientación del dispositivo que se usará la configuración para cada proyecto individual.
 
 > [!NOTE]
-> **Tenga en cuenta**: Xamarin.Forms As of 1.5.0 hay un error que impide que los intentos de basada en el representador personalizados para controlar la orientación de un error. Vea [esta discusión](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)este análisis en los foros de Xamarin para obtener más información.
+> A partir de Xamarin.Forms 1.5.0 hay un error que impide que personalizado basado en el representador intenta controlar la orientación de un error. Vea [esta discusión](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)este análisis en los foros de Xamarin para obtener más información.
 
 ### <a name="ios"></a>iOS
 
@@ -123,7 +123,7 @@ Observe que Windows Phone admite vistas horizontal en ambos (como se muestra en 
 Xamarin.Forms no ofrece los eventos nativos para notificar a la aplicación de cambios de orientación de código compartido. Sin embargo, el `SizeChanged` eventos de la `Page` se activa cuando el ancho o el alto de la `Page` cambios. Cuando el ancho de la `Page` es mayor que el alto, el dispositivo está en modo horizontal. Para obtener más información, consulte [mostrar una imagen basada en la orientación de la pantalla](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/controls/screen-orientation/).
 
 > [!NOTE]
-> **Tenga en cuenta**: hay un paquete de NuGet existente, disponible para recibir notificaciones de cambios de orientación en código compartido. Consulte la [repositorio de GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) para obtener más información.
+> Hay un paquete de NuGet existente, disponible para recibir notificaciones de cambios de orientación en código compartido. Consulte la [repositorio de GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) para obtener más información.
 
 Como alternativa, es posible reemplazar la [ `OnSizeAllocated` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Page.OnSizeAllocated(System.Double,System.Double)/) método en un `Page`, insertar cualquier diseño cambiar lógica allí. El `OnSizeAllocated` se llama al método cada vez que un `Page` se asigna un nuevo tamaño, lo que sucede siempre se gira el dispositivo. Tenga en cuenta que la implementación base de `OnSizeAllocated` realiza funciones de diseño importantes, por lo que es importante llamar a la implementación base en la invalidación:
 
@@ -176,7 +176,7 @@ Es posible a las interfaces de diseño mediante los diseños integrados para que
 Las reglas anteriores también se aplican al implementar interfaces por varios tamaños de pantalla y son generalmente considera los procedimientos recomendados. El resto de esta guía explica los ejemplos específicos de los diseños de capacidad de respuesta con cada uno de los diseños principales de Xamarin.Forms.
 
 > [!NOTE]
-> **Tenga en cuenta**: para evitar confusiones, en las secciones siguientes muestran cómo implementar diseños responde con un solo tipo de `Layout` a la vez. En la práctica, a menudo resulta más sencillo mezclar `Layout`s para lograr un diseño deseado mediante la más sencilla o más intuitiva `Layout` para cada componente.
+> Para evitar confusiones, en las secciones siguientes muestran cómo implementar diseños responde con un solo tipo de `Layout` a la vez. En la práctica, a menudo resulta más sencillo mezclar `Layout`s para lograr un diseño deseado mediante la más sencilla o más intuitiva `Layout` para cada componente.
 
 ### <a name="stacklayout"></a>StackLayout
 

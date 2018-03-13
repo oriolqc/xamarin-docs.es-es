@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 0c79e982e7f6543c6dc34885b0afcd7056989a96
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9b76376bdbcf10bf35768cfdb79b6823388e303c
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>Control de varias resoluciones en CocosSharp
 
@@ -22,33 +22,12 @@ CocosSharp proporciona métodos para estandarizar las dimensiones del objeto en 
 
 El comportamiento de resolución predeterminado de CocosSharp es para que coincida con los píxeles físicos con coordenadas del juego. En la tabla siguiente se muestra cómo varios dispositivos representaría un sprite de entorno de segundo plano con el ancho y alto de 368 x 240. La primera fila es técnicamente no un dispositivo real, pero en su lugar la representación esperada del objeto sprite, independientemente de la resolución del dispositivo:
 
-<table>
-    <thead>
-        <tr>
-            <th>Dispositivo</th>
-            <th>Resolución de pantalla</th>
-            <th>Captura de pantalla de ejemplo</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Desfase</td>
-            <td>368 x 240 (con barras de color negras de relación de aspecto)</td>
-            <td><img src="resolutions-images/image1.png" title="368 x 240 (con barras de color negras de relación de aspecto)" /></td>
-        </tr>
-        <tr>
-            <td>iPhone 4s</td>
-            <td>960x640</td>
-            <td><img src="resolutions-images/image2.png" title="iPhone 4s 960 x 640" /></td>
-        </tr>
-        <tr>
-            <td>iPhone 6 Plus</td>
-            <td>1920x1080</td>
-            <td><img src="resolutions-images/image3.png" title="iPhone 6 Plus 1920 x 1080" /></td>
-        </tr>
-    </tbody>
-</table>
 
+| **Dispositivo** | **Resolución de pantalla** | **Captura de pantalla de ejemplo** |
+|--- | --- |--- |
+|Desfase|368 x 240 (con barras de color negras de relación de aspecto)| ![368 x 240 (con barras de color negras de relación de aspecto)](resolutions-images/image1.png) |
+|iPhone 4s|960x640| ![iPhone 4s 960 x 640](resolutions-images/image2.png) |
+|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920 x 1080](resolutions-images/image3.png) |
 
 Este documento describe cómo usar CocosSharp para solucionar el problema que se muestra en la tabla anterior. Es decir, hablaremos sobre cómo hacer que cualquier dispositivo representar como se muestra en la primera fila, independientemente de la resolución de pantalla.
 

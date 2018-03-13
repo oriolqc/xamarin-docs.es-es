@@ -7,18 +7,17 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/05/2018
-ms.openlocfilehash: 9acb1ad6ab1425edb98b938e8c03edc3704f50ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 9f88899d390f7f268f1b2f435617dc952f9eb205
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="splash-screen"></a>Pantalla de presentación
 
 _Una aplicación Android tarda algún tiempo en iniciarse, especialmente cuando la aplicación se inició por primera vez en un dispositivo. Una pantalla de presentación puede mostrar Inicio progreso al usuario o para indicar la personalización de marca una copia de seguridad._
 
-<a name="overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -32,10 +31,8 @@ Esta guía describe una técnica para implementar una pantalla de presentación 
 
 3.  Agregar una nueva actividad a la aplicación que se utilizará como la pantalla de presentación definida por el tema que creó en el paso anterior.
 
-[![Pantalla de presentación de ejemplo Xamarin logotipo seguido de pantalla de la aplicación](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png)
+[![Pantalla de presentación de ejemplo Xamarin logotipo seguido de pantalla de la aplicación](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>Requisitos
 
@@ -43,7 +40,6 @@ Esta guía se asume que la aplicación está destinada a nivel de API de Android
 
 Todo el código y XML en esta guía pueden encontrarse en el [SplashScreen](https://developer.xamarin.com/samples/monodroid/SplashScreen) proyecto de ejemplo de esta guía.
 
-<a name="implement" />
 
 ## <a name="implementing-a-splash-screen"></a>Implementar una pantalla de presentación
 
@@ -51,7 +47,6 @@ La forma más rápida para procesar y mostrar la pantalla de presentación es cr
 
 La pantalla de presentación se implementa como una actividad que muestra la marca puede dibujar, realiza las inicializaciones y las tareas se inicia. Una vez se iniciar la aplicación, la actividad de la pantalla de presentación, iniciará la actividad principal y se elimina de la pila de retroceso de la aplicación.
 
-<a name="drawable" />
 
 ### <a name="creating-a-drawable-for-the-splash-screen"></a>Crear una con estas características para la pantalla de presentación
 
@@ -79,7 +74,6 @@ Colocar este archivo en el **/puede dibujar recursos** carpeta (por ejemplo, **R
 
 Una vez creada la pantalla de presentación con estas características, el siguiente paso es crear un tema de la pantalla de presentación.
 
-<a name="theme" />
 
 ### <a name="implementing-a-theme"></a>Implementación de un tema
 
@@ -103,7 +97,6 @@ Para crear un tema personalizado para la actividad de la pantalla de presentaci�
 
 **MyTheme.Splash** es muy spartan &ndash; declara el fondo de la ventana, explícitamente quita la barra de título de la ventana y declara que es la pantalla completa. Si desea crear una pantalla de presentación que emula la interfaz de usuario de la aplicación antes de que la actividad aumenta la primera distribución, puede usar `windowContentOverlay` en lugar de `windowBackground` en la definición de estilo. En este caso, también debe modificar el **splash_screen.xml** con estas características para que se muestre una emulación de la interfaz de usuario.
 
-<a name="activity" />
 
 ### <a name="create-a-splash-activity"></a>Crear una actividad de presentación
 
@@ -161,7 +154,6 @@ public class MainActivity : AppCompatActivity
 }
 ```
 
-<a name="summary" />
 
 ## <a name="summary"></a>Resumen
 

@@ -8,17 +8,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 227a636db370b2dd3d132c49ad7c39ef42c5f30c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 90f1394103b5a3996029355a8ef260817b14a697
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="absolutelayout"></a>AbsoluteLayout
 
 [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) posiciones y tamaños de los elementos secundarios proporcionales a su propio tamaño y posición o por valores absolutos. Pueden ser vistas secundarias coloca y tamaño utilizando valores proporcionales o valores estáticos y proporcional y se pueden combinar valores estáticos.
 
-[ ![](absolute-layout-images/layouts-sml.png "Diseños de Xamarin.Forms")](absolute-layout-images/layouts.png "diseños de Xamarin.Forms")
+[![](absolute-layout-images/layouts-sml.png "Diseños de Xamarin.Forms")](absolute-layout-images/layouts.png#lightbox "diseños de Xamarin.Forms")
 
 En este artículo se tratará:
 

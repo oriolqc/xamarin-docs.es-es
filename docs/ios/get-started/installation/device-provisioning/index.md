@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/15/2017
-ms.openlocfilehash: 1a5120f088fca6997eef3a1bc27126b442380cac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b54adc28e318b263052bb6073390556a198cffe7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="device-provisioning"></a>Aprovisionamiento de dispositivos
 
@@ -22,7 +22,7 @@ Al desarrollar una aplicación de Xamarin.iOS es esencial probarla mediante su i
 
 En las secciones resaltadas en la imagen siguiente se muestran los pasos necesarios para configurar el aprovisionamiento de iOS:
 
-[![](images/provisioningdiagram.png "En las secciones resaltadas de esta imagen se muestran los pasos necesarios para configurar el aprovisionamiento de iOS")](images/provisioningdiagram.png)
+[![](images/provisioningdiagram.png "En las secciones resaltadas de esta imagen se muestran los pasos necesarios para configurar el aprovisionamiento de iOS")](images/provisioningdiagram.png#lightbox)
 
 Después de hacerlo, el paso siguiente consiste en distribuir la aplicación. Para obtener más información al respecto, visite la guía [App Distribution](~/ios/deploy-test/app-distribution/index.md) (Distribución de aplicaciones).
 

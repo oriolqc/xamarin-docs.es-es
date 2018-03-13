@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/05/2017
-ms.openlocfilehash: f7e511d7f0a933ab7f29369e5e5f0aa46607c8f8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c423c9bf49c735673793f8e61134f7e705816d54
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="installation"></a>Instalación
 
@@ -55,19 +55,19 @@ No se puede crear una nueva "inspección solución" … en su lugar puede agrega
 
 1. Si no tienes un proyecto existente, elija primero **archivo > nueva solución** y crear una aplicación de iOS (por ejemplo, un **ver solo la aplicación**):
 
-    [ ![](installation-images/cycle8-2-sml.png "Seleccione Archivo > nueva solución y crear una aplicación de iOS")](installation-images/cycle8-2.png)
+    [![](installation-images/cycle8-2-sml.png "Seleccione Archivo > nueva solución y crear una aplicación de iOS")](installation-images/cycle8-2.png#lightbox)
 
 2. Una vez creada la aplicación de iOS (o tiene previsto usar la aplicación iOS existente), haga doble clic en la solución y elija **Agregar > Agregar nuevo proyecto...** . En el **nuevo proyecto** ventana Seleccione **watchOS > aplicaciones > WatchKit App**:
 
-    [ ![](installation-images/cycle8-6-sml.png "Seleccione watchOS > aplicaciones > WatchKit App")](installation-images/cycle8-6.png)
+    [![](installation-images/cycle8-6-sml.png "Seleccione watchOS > aplicaciones > WatchKit App")](installation-images/cycle8-6.png#lightbox)
 
 3. La siguiente pantalla le permite elegir qué proyecto de aplicación de iOS debe incluir la aplicación de inspección:
 
-    [ ![](installation-images/cycle8-7-sml.png "Elija el proyecto de aplicación de iOS debe incluir la aplicación de inspección")](installation-images/cycle8-7.png)
+    [![](installation-images/cycle8-7-sml.png "Elija el proyecto de aplicación de iOS debe incluir la aplicación de inspección")](installation-images/cycle8-7.png#lightbox)
 
 4. Por último, elija la ubicación para guardar el proyecto (y, opcionalmente, tiene habilitado el control de origen):
 
-    [ ![](installation-images/cycle8-8-sml.png "Elija la ubicación para guardar el proyecto")](installation-images/cycle8-8.png)
+    [![](installation-images/cycle8-8-sml.png "Elija la ubicación para guardar el proyecto")](installation-images/cycle8-8.png#lightbox)
 
 5. Visual Studio para Mac configura automáticamente [referencias del proyecto y **Info.plist** configuración](~/ios/watchos/get-started/project-references.md) para usted.
 
@@ -81,11 +81,11 @@ Haga doble clic en la aplicación de inspección **Interface.storyboard** para e
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![](installation-images/iosdesigner-sml.png "El guión gráfico en el diseñador")](installation-images/iosdesigner.png)
+[![](installation-images/iosdesigner-sml.png "El guión gráfico en el diseñador")](installation-images/iosdesigner.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![](installation-images/iosdesigner-sml-vs.png "El guión gráfico en el diseñador")](installation-images/iosdesigner-vs.png)
+[![](installation-images/iosdesigner-sml-vs.png "El guión gráfico en el diseñador")](installation-images/iosdesigner-vs.png#lightbox)
 
 -----
 
@@ -152,7 +152,7 @@ Hay dos modos para iniciar una aplicación WatchKit:
 Una vez instalado Xcode 8 (o posterior), simuladores de Apple Watch son independientes de los simuladores de iOS (a diferencia de [Xcode 6](#xcode6), donde aparecían como un *pantalla externa*).
 Al seleccionar el proyecto de aplicación de inspección y asegúrese de el proyecto de inicio, se mostrará la lista del simulador *simuladores de iOS* para elegir (tal y como se muestra a continuación).
 
-[ ![](installation-images/xs-xcode8-watchos3-sml.png "Seleccionar el tipo de simulador")](installation-images/xs-xcode8-watchos3.png)
+[![](installation-images/xs-xcode8-watchos3-sml.png "Seleccionar el tipo de simulador")](installation-images/xs-xcode8-watchos3.png#lightbox)
 
 Al iniciar la depuración, *dos* debe iniciar simuladores: el simulador de iOS *y* el simulador de Apple Watch. Usar **comando + Mayús + H** para navegar hasta la pantalla de menú y de reloj watch; y use la **Hardware** menú para establecer el **Force Touch presión**. Desplazamiento en el panel de seguimiento o el mouse para simular mediante la copa Digital.
 
@@ -195,13 +195,13 @@ Visual Studio para Mac puede iniciar la aplicación de inspección con una notif
 Haga doble clic en el proyecto de aplicación de inspección y elija **ejecutar con > configuración personalizada...** :
 
 
-[![](installation-images/runwith-customparams-sml.png "Ejecuta una configuración personalizada")](installation-images/runwith-customparams.png)
+[![](installation-images/runwith-customparams-sml.png "Ejecuta una configuración personalizada")](installation-images/runwith-customparams.png#lightbox)
 
 
 Se abrirá la **Custom Parameters** ventana donde puede seleccionar **notificación** (y proporcionar una carga JSON), a continuación, presione **ejecutar** para iniciar la aplicación de inspección en el simulador:
 
 
-[![](installation-images/runwith-execargs-sml.png "Establecer la notificación y la carga")](installation-images/runwith-execargs.png)
+[![](installation-images/runwith-execargs-sml.png "Establecer la notificación y la carga")](installation-images/runwith-execargs.png#lightbox)
 
 
 

@@ -3,16 +3,16 @@ title: Abrir pantallas
 description: "En este artículo se explica cómo crear una pantalla de inicio de la aplicación para todos los dispositivos de iOS, en cualquier resolución y la orientación, con un solo guión gráfico unificado."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
+ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/19/2018
-ms.openlocfilehash: 48dc2e7a270c4e12c4e3dc9d1e2ce14fb0d41249
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 54ec41636f491708ea72585d3889fbbca85c8eb1
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="launch-screens"></a>Abrir pantallas
 
@@ -226,7 +226,7 @@ Para usar el nuevo guión gráfico como una pantalla de inicio, haga lo siguient
 
 - [Pantallas de inicio dinámica (ejemplo)](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/)
 - [Guiones gráficos unificados](~/ios/user-interface/storyboards/unified-storyboards.md)
-- [conceptos básicos de diseñador de iOS](~/ios/user-interface/designer/index.md)
+- [Conceptos básicos de iOS Designer](~/ios/user-interface/designer/index.md)
 - [Agregar imágenes a una imagen de catálogo de Asset configuradas](~/ios/app-fundamentals/images-icons/displaying-an-image.md#asset-catalogs)
 - [Diseño automático con el Diseñador de Xamarin para iOS](~/ios/user-interface/designer/designer-auto-layout.md)
 - [Directrices de interfaz humana: Pantalla de inicio](https://developer.apple.com/ios/human-interface-guidelines/icons-and-images/launch-screen/)

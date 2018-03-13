@@ -3,14 +3,15 @@ title: "Resumen del capítulo 23. Desencadenadores y comportamientos"
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
+ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 72158cac683e46a37d2cbd537cdfd72bea78a336
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9a53cddcf216efd2bb86c838e280d599ff26c191
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Resumen del capítulo 23. Desencadenadores y comportamientos
 
@@ -99,7 +100,7 @@ El [ `DataTrigger` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTr
 
 El [ **GenderColors** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/GenderColors) ejemplo requiere la [ **SchoolOfFineArt** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/SchoolOfFineArt) biblioteca y establece los colores de los nombres de los alumnos a azul o Rosa en función de la `Sex` propiedad:
 
-[![Captura de pantalla triple de colores de género](images/ch23fg04-small.png "sexo colores")](images/ch23fg04-large.png "sexo colores")
+[![Captura de pantalla triple de colores de género](images/ch23fg04-small.png "sexo colores")](images/ch23fg04-large.png#lightbox "sexo colores")
 
 El [ **ButtonEnabler** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/ButtonEnabler) conjuntos de ejemplo la `IsEnabled` propiedad de un `Entry` a `False` si la `Length` propiedad de la `Text` propiedad de la `Entry`es igual a 0. Tenga en cuenta que la `Text` propiedad se inicializa en una cadena vacía; de forma predeterminada es `null`y el `DataTrigger` no funcionaría correctamente.
 
@@ -170,7 +171,7 @@ El [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-bo
 
 El [ **RadioLabels** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioLabels) programa utiliza cadenas de texto para el botón de radio. El [ **RadioStyle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioStyle) ejemplo usa un `Style` para la diferencia de aspecto entre botones checked y unchecked. El [ **RadioImages** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/RadioImages) ejemplo usa las imágenes de conversión boxing de sus botones de opción:
 
-[![Captura de pantalla triple de imágenes de Radio](images/ch23fg17-small.png "imágenes de botón de Radio")](images/ch23fg17-large.png "imágenes de botón de Radio")
+[![Captura de pantalla triple de imágenes de Radio](images/ch23fg17-small.png "imágenes de botón de Radio")](images/ch23fg17-large.png#lightbox "imágenes de botón de Radio")
 
 El [ **TraditionalRadios** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalRadios) ejemplo dibuja tradicional botones de radio que aparece con un punto dentro de un círculo.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 6ae0439566387e22d939ede83e6b4cb5c1a5a8fe
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6b0d62a9026c1248a66166e75ed41bb0148547a6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarin-live-player-app"></a>Aplicación de Xamarin Player en vivo
 
@@ -20,9 +20,15 @@ ms.lasthandoff: 02/27/2018
 
 ## <a name="get-the-app"></a>Obtener la aplicación
 
-Xamarin Player en vivo está disponible en el archivo iOS App Store y Google Play:
+### <a name="xamarin-live-player-for-android"></a>Xamarin Player en vivo para Android
+Xamarin Player en vivo está disponible para Android desde Google Play:
 
-[ ![Descargar desde App Store de iOS](player-images/app-store-badge.svg)](https://itunes.apple.com/us/app/xamarin-live-player/id1228841832?ls=1&mt=8) [ ![se encuentra disponible en Google Play](player-images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
+[ ![Disponible en Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
+
+Para dispositivos Android sin Google Play está disponible a través de Xamarin Player Live [HockeyApp](https://aka.ms/xlp-hockeyapp) distribución. Además, anticipo genera para Android se puede instalar directamente desde Google Play mediante la aceptación de los [programa beta abierta](https://play.google.com/apps/testing/com.xamarin.live)
+
+### <a name="xamarin-live-player-for-ios"></a>Xamarin Player Live para iOS
+Le animamos a los usuarios unir el [aplicación Xamarin Player Live _iOS Preview_ ](https://aka.ms/liveplayeralpha) para disfrutar de un acceso rápido a las mejoras más recientes a través de TestFlight.
 
 
 

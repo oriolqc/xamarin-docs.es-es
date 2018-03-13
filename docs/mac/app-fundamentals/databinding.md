@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 2c01a36eabb15fbe9b975c91328dfa7cfd651896
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: b7ffd069a8c99c2cdfd0ecb58fe7ef762e5a46f3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="data-binding-and-key-value-coding"></a>Enlace de datos y el valor de clave de codificación
 
@@ -24,7 +24,7 @@ Cuando se trabaja con C# y .NET en una aplicación Xamarin.Mac, tendrá acceso a
 
 Mediante el uso de clave y valor de codificación y técnicas de enlace de la aplicación Xamarin.Mac de datos, puede reducir considerablemente la cantidad de código que se debe escribir y mantener para rellenar y trabajar con elementos de interfaz de usuario. También tiene la ventaja de separar aún más los datos de copia de seguridad (_modelo de datos_) de la parte delantera terminar la interfaz de usuario (_Model-View-Controller_), provocando fáciles de mantener, aplicación más flexible diseño.
 
-[![Un ejemplo de la aplicación en ejecución](databinding-images/intro01.png "muestra un ejemplo de la aplicación en ejecución")](databinding-images/intro01-large.png)
+[![Un ejemplo de la aplicación en ejecución](databinding-images/intro01.png "muestra un ejemplo de la aplicación en ejecución")](databinding-images/intro01-large.png#lightbox)
 
 En este artículo, se tratarán los conceptos básicos sobre cómo trabajar con valores de clave de codificación y enlace de datos en una aplicación Xamarin.Mac. Se recomienda trabajar a través de la [Hola, Mac](~/mac/get-started/hello-mac.md) artículo en primer lugar, específicamente el [Introducción a Xcode y el generador de interfaz](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) y [distribuidores y acciones](~/mac/get-started/hello-mac.md#Outlets_and_Actions) secciones, tal como se explica conceptos clave y técnicas que usaremos en este artículo.
 
@@ -421,7 +421,7 @@ Con nuestro modelo de datos definido, echemos un vistazo a un ejemplo sencillo d
 
 En primer lugar, vamos a agregar un nuevo **View Controller** a nuestro **Main.storyboard** de archivos en el generador de interfaz y el nombre de su clase `SimpleViewController`: 
 
-[![Agregar un nuevo controlador de vista](databinding-images/simple01.png "agregando un nuevo controlador de vista")](databinding-images/simple01-large.png)
+[![Agregar un nuevo controlador de vista](databinding-images/simple01.png "agregando un nuevo controlador de vista")](databinding-images/simple01-large.png#lightbox)
 
 A continuación, vuelva a Visual Studio para Mac, edite el **SimpleViewController.cs** archivo (que se agregó automáticamente a nuestro proyecto) y exponer una instancia de la `PersonModel` que estaremos nuestro formulario de enlace de datos. Agregue el código siguiente:
 
@@ -461,27 +461,27 @@ public override void ViewDidLoad ()
 
 Ahora debemos crear nuestro formulario, haga doble clic en el **Main.storyboard** archivo para abrirlo y editarlo en el generador de interfaz. Diseño del formulario para el siguiente aspecto:
 
-[![Editar el guión gráfico en Xcode](databinding-images/simple02.png "editar el guión gráfico en Xcode.")](databinding-images/simple02-large.png)
+[![Editar el guión gráfico en Xcode](databinding-images/simple02.png "editar el guión gráfico en Xcode.")](databinding-images/simple02-large.png#lightbox)
 
 Para enlazar el formulario para el `PersonModel` que se expone a través de la `Person` clave, haga lo siguiente:
 
 1. Seleccione el **nombre de empleado** campo de texto y cambie a la **enlaces Inspector**.
 2. Compruebe el **enlazar a** cuadro y seleccione **Simple View Controller** en la lista desplegable. A continuación escriba `self.Person.Name` para el **ruta de la clave**: 
 
-    [![Escriba la ruta de acceso de clave](databinding-images/simple03.png "escribir la ruta de acceso de clave")](databinding-images/simple03-large.png)
+    [![Escriba la ruta de acceso de clave](databinding-images/simple03.png "escribir la ruta de acceso de clave")](databinding-images/simple03-large.png#lightbox)
 3. Seleccione el **ocupación** campo de texto y compruebe el **enlazar a** cuadro y seleccione **Simple View Controller** en la lista desplegable. A continuación escriba `self.Person.Occupation` para el **ruta de la clave**:  
 
-    [![Escriba la ruta de acceso de clave](databinding-images/simple04.png "escribir la ruta de acceso de clave")](databinding-images/simple04-large.png)
+    [![Escriba la ruta de acceso de clave](databinding-images/simple04.png "escribir la ruta de acceso de clave")](databinding-images/simple04-large.png#lightbox)
 4. Seleccione el **empleado es un administrador de** casilla de verificación y comprobar la **enlazar a** cuadro y seleccione **Simple View Controller** en la lista desplegable. A continuación escriba `self.Person.isManager` para el **ruta de la clave**:  
 
-    [![Escriba la ruta de acceso de clave](databinding-images/simple05.png "escribir la ruta de acceso de clave")](databinding-images/simple05-large.png)
+    [![Escriba la ruta de acceso de clave](databinding-images/simple05.png "escribir la ruta de acceso de clave")](databinding-images/simple05-large.png#lightbox)
 5. Seleccione el **número de empleados administrado** campo de texto y compruebe el **enlazar a** cuadro y seleccione **Simple View Controller** en la lista desplegable. A continuación escriba `self.Person.NumberOfEmployees` para el **ruta de la clave**:  
 
-    [![Escriba la ruta de acceso de clave](databinding-images/simple06.png "escribir la ruta de acceso de clave")](databinding-images/simple06-large.png)
+    [![Escriba la ruta de acceso de clave](databinding-images/simple06.png "escribir la ruta de acceso de clave")](databinding-images/simple06-large.png#lightbox)
 6. Si el empleado no es un administrador, desea ocultar la etiqueta de administrado número de empleados y el campo de texto.
 7. Seleccione el **número de empleados administrado** etiqueta, expanda la **Hidden** turndown y compruebe el **enlazar a** cuadro y seleccione **Simple View Controller** en la lista desplegable. A continuación escriba `self.Person.isManager` para el **ruta de la clave**:  
 
-    [![Escriba la ruta de acceso de clave](databinding-images/simple07.png "escribir la ruta de acceso de clave")](databinding-images/simple07-large.png)
+    [![Escriba la ruta de acceso de clave](databinding-images/simple07.png "escribir la ruta de acceso de clave")](databinding-images/simple07-large.png#lightbox)
 8. Seleccione `NSNegateBoolean` desde el **valor transformador** desplegable:  
 
     ![Selección de la transformación de clave de NSNegateBoolean](databinding-images/simple08.png "seleccionando la transformación de clave NSNegateBoolean")
@@ -491,11 +491,11 @@ Para enlazar el formulario para el `PersonModel` que se expone a través de la `
 
 Si se ejecuta la aplicación, los valores de la `Person` propiedad rellenará automáticamente nuestro formulario:
 
-[![Mostrar un formulario rellena automáticamente](databinding-images/simple09.png "que muestra un formulario rellena automáticamente")](databinding-images/simple09-large.png)
+[![Mostrar un formulario rellena automáticamente](databinding-images/simple09.png "que muestra un formulario rellena automáticamente")](databinding-images/simple09-large.png#lightbox)
 
 Los cambios que los usuarios se realiza en el formulario se escribirá en el `Person` propiedad en el controlador de vista. Por ejemplo, si **empleado es un administrador de** actualizaciones el `Person` instancia de nuestro `PersonModel` y **número de empleados administrado** etiqueta y un campo de texto se ocultan automáticamente (a través de enlace de datos):
 
-[![Ocultar el número de empleados para no administradores](databinding-images/simple10.png "ocultar el número de empleados para no administradores")](databinding-images/simple10-large.png)
+[![Ocultar el número de empleados para no administradores](databinding-images/simple10.png "ocultar el número de empleados para no administradores")](databinding-images/simple10-large.png#lightbox)
 
 <a name="Table_View_Data_Binding" />
 
@@ -505,7 +505,7 @@ Ahora que tenemos los conceptos básicos del enlace de datos fuera de la vista, 
 
 En primer lugar, vamos a agregar un nuevo **View Controller** a nuestro **Main.storyboard** de archivos en el generador de interfaz y el nombre de su clase `TableViewController`:
 
-[![Agregar un nuevo controlador de vista](databinding-images/table01.png "agregando un nuevo controlador de vista")](databinding-images/table01-large.png)
+[![Agregar un nuevo controlador de vista](databinding-images/table01.png "agregando un nuevo controlador de vista")](databinding-images/table01-large.png#lightbox)
 
 A continuación, editar la **TableViewController.cs** archivo (que se agregó automáticamente a nuestro proyecto) y exponer una matriz (`NSArray`) de `PersonModel` clases que estaremos nuestro formulario de enlace de datos. Agregue el código siguiente:
 
@@ -572,7 +572,7 @@ public override void AwakeFromNib ()
 
 Ahora necesitamos crear la vista de tabla, haga doble clic en el **Main.storyboard** archivo para abrirlo y editarlo en el generador de interfaz. Diseño de la tabla que se va a buscar algo parecido a lo siguiente:
 
-[![Diseñar una nueva vista de tabla](databinding-images/table02.png "diseñar una nueva vista de tabla")](databinding-images/table02-large.png)
+[![Diseñar una nueva vista de tabla](databinding-images/table02.png "diseñar una nueva vista de tabla")](databinding-images/table02-large.png#lightbox)
 
 Tenemos que agregar una **controlador de la matriz** para proporcionar datos enlazados con la tabla, haga lo siguiente:
 
@@ -581,7 +581,7 @@ Tenemos que agregar una **controlador de la matriz** para proporcionar datos enl
     ![Seleccionar un controlador de la matriz de la biblioteca](databinding-images/table03.png "seleccionar un controlador de la matriz de la biblioteca")
 2. Seleccione **controlador de la matriz** en el **jerarquía de interfaz** y cambie a la **Inspector de atributo**:  
 
-    [![Al seleccionar el Inspector de atributos](databinding-images/table04.png "seleccionando el Inspector de atributos")](databinding-images/table04-large.png)
+    [![Al seleccionar el Inspector de atributos](databinding-images/table04.png "seleccionando el Inspector de atributos")](databinding-images/table04-large.png#lightbox)
 3. Escriba `PersonModel` para el **nombre de la clase**, haga clic en el **más** botón y agregue tres claves. Denomínelos `Name`, `Occupation` y `isManager`:  
 
     ![Agregar las rutas de acceso de claves necesarios](databinding-images/table05.png "agregar las rutas de acceso de claves necesarios")
@@ -595,22 +595,22 @@ Ahora necesitamos enlazar la vista de tabla para el controlador de la matriz, ha
 
 1. Seleccione la vista de tabla y la **enlace Inspector**:  
 
-    [![Al seleccionar el Inspector de enlace](databinding-images/table07.png "seleccionando el Inspector de enlace")](databinding-images/table07-large.png)
+    [![Al seleccionar el Inspector de enlace](databinding-images/table07.png "seleccionando el Inspector de enlace")](databinding-images/table07-large.png#lightbox)
 2. En el **contenido de la tabla** turndown, seleccione **enlazar a** y **controlador de la matriz**. Escriba `arrangedObjects` para el **controlador clave** campo:  
 
     ![Definir la clave de controlador](databinding-images/table08.png "definir la clave de controlador")
 3. Seleccione el **celda de la vista de tabla** en el **empleado** columna. En el **enlaces Inspector** en el **valor** turndown, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Name` para el **ruta de la clave del modelo**:  
 
-    [![Establecer la ruta de acceso de clave de modelo](databinding-images/table09.png "establecer la ruta de acceso de clave de modelo")](databinding-images/table09-large.png)
+    [![Establecer la ruta de acceso de clave de modelo](databinding-images/table09.png "establecer la ruta de acceso de clave de modelo")](databinding-images/table09-large.png#lightbox)
 4. `objectValue` es la actual `PersonModel` en la matriz está administrada por el controlador de la matriz.
 5. Seleccione el **celda de la vista de tabla** en el **ocupación** columna. En el **enlaces Inspector** en el **valor** turndown, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Occupation` para el **ruta de la clave del modelo**:  
 
-    [![Establecer la ruta de acceso de clave de modelo](databinding-images/table10.png "establecer la ruta de acceso de clave de modelo")](databinding-images/table10-large.png)
+    [![Establecer la ruta de acceso de clave de modelo](databinding-images/table10.png "establecer la ruta de acceso de clave de modelo")](databinding-images/table10-large.png#lightbox)
 6. Guarde los cambios y vuelva a Visual Studio para Mac para la sincronización con Xcode.
 
 Si se ejecuta la aplicación, la tabla se llenará con nuestra matriz de `PersonModels`:
 
-[![Ejecutar la aplicación](databinding-images/table11.png "ejecutando la aplicación")](databinding-images/table11-large.png)
+[![Ejecutar la aplicación](databinding-images/table11.png "ejecutando la aplicación")](databinding-images/table11-large.png#lightbox)
 
 <a name="Outline_View_Data_Binding" />
 
@@ -620,7 +620,7 @@ enlace de datos en una vista de esquema es muy similar a enlazar en una vista de
 
 En primer lugar, vamos a agregar un nuevo **View Controller** a nuestro **Main.storyboard** de archivos en el generador de interfaz y el nombre de su clase `OutlineViewController`: 
 
-[![Agregar un nuevo controlador de vista](databinding-images/outline01.png "agregando un nuevo controlador de vista")](databinding-images/outline01-large.png)
+[![Agregar un nuevo controlador de vista](databinding-images/outline01.png "agregando un nuevo controlador de vista")](databinding-images/outline01-large.png#lightbox)
 
 A continuación, editar la **OutlineViewController.cs** archivo (que se agregó automáticamente a nuestro proyecto) y exponer una matriz (`NSArray`) de `PersonModel` clases que estaremos nuestro formulario de enlace de datos. Agregue el código siguiente:
 
@@ -690,7 +690,7 @@ public override void AwakeFromNib ()
 
 Ahora debemos crear la vista de esquema, haga doble clic en el **Main.storyboard** archivo para abrirlo y editarlo en el generador de interfaz. Diseño de la tabla que se va a buscar algo parecido a lo siguiente:
 
-[![Crear la vista de esquema](databinding-images/outline02.png "crear la vista de esquema")](databinding-images/outline02-large.png)
+[![Crear la vista de esquema](databinding-images/outline02.png "crear la vista de esquema")](databinding-images/outline02-large.png#lightbox)
 
 Tenemos que agregar una **controlador árbol** para proporcionar datos enlazados a nuestro esquema, haga lo siguiente:
 
@@ -699,7 +699,7 @@ Tenemos que agregar una **controlador árbol** para proporcionar datos enlazados
     ![Seleccionar un controlador de árbol de la biblioteca](databinding-images/outline03.png "seleccionar un controlador de árbol de la biblioteca")
 2. Seleccione **controlador árbol** en el **jerarquía de interfaz** y cambie a la **Inspector de atributo**:  
 
-    [![Al seleccionar el Inspector de atributo](databinding-images/outline04.png "seleccionando el Inspector de atributo")](databinding-images/outline04-large.png)
+    [![Al seleccionar el Inspector de atributo](databinding-images/outline04.png "seleccionando el Inspector de atributo")](databinding-images/outline04-large.png#lightbox)
 3. Escriba `PersonModel` para el **nombre de la clase**, haga clic en el **más** botón y agregue tres claves. Denomínelos `Name`, `Occupation` y `isManager`:  
 
     ![Agregar las rutas de acceso de claves necesarios](databinding-images/outline05.png "agregar las rutas de acceso de claves necesarios")
@@ -717,22 +717,22 @@ Ahora necesitamos enlazar la vista de esquema con el controlador de árbol, haga
 
 1. Seleccione la vista de esquema y en el **enlace Inspector** seleccione:  
 
-    [![Al seleccionar el Inspector de enlace](databinding-images/outline07.png "seleccionando el Inspector de enlace")](databinding-images/outline07-large.png)
+    [![Al seleccionar el Inspector de enlace](databinding-images/outline07.png "seleccionando el Inspector de enlace")](databinding-images/outline07-large.png#lightbox)
 2. En el **contenido de la vista de esquema** turndown, seleccione **enlazar a** y **controlador árbol**. Escriba `arrangedObjects` para el **controlador clave** campo:  
 
     ![Configuración de la clave de controlador](databinding-images/outline08.png "configuración de la clave de controlador")
 3. Seleccione el **celda de la vista de tabla** en el **empleado** columna. En el **enlaces Inspector** en el **valor** turndown, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Name` para el **ruta de la clave del modelo**:  
 
-    [![Escriba la ruta de acceso de clave de modelo](databinding-images/outline09.png "escribir la ruta de acceso de clave de modelo")](databinding-images/outline09-large.png)
+    [![Escriba la ruta de acceso de clave de modelo](databinding-images/outline09.png "escribir la ruta de acceso de clave de modelo")](databinding-images/outline09-large.png#lightbox)
 4. `objectValue` es la actual `PersonModel` en la matriz está administrada por el controlador de árbol.
 5. Seleccione el **celda de la vista de tabla** en el **ocupación** columna. En el **enlaces Inspector** en el **valor** turndown, seleccione **enlazar a** y **vista de celda de tabla**. Escriba `objectValue.Occupation` para el **ruta de la clave del modelo**:  
 
-    [![Escriba la ruta de acceso de clave de modelo](databinding-images/outline10.png "escribir la ruta de acceso de clave de modelo")](databinding-images/outline10-large.png)
+    [![Escriba la ruta de acceso de clave de modelo](databinding-images/outline10.png "escribir la ruta de acceso de clave de modelo")](databinding-images/outline10-large.png#lightbox)
 6. Guarde los cambios y vuelva a Visual Studio para Mac para la sincronización con Xcode.
 
 Si se ejecuta la aplicación, el esquema se rellenará con nuestra matriz de `PersonModels`:
 
-[![Ejecutar la aplicación](databinding-images/outline11.png "ejecutando la aplicación")](databinding-images/outline11-large.png)
+[![Ejecutar la aplicación](databinding-images/outline11.png "ejecutando la aplicación")](databinding-images/outline11-large.png#lightbox)
 
 ### <a name="collection-view-data-binding"></a>Enlace de datos de vista de colección
 
@@ -860,7 +860,7 @@ For more information on working with Collection Views, please see our [Collectio
 
 Cometer un error en los enlaces de datos puede dar lugar a un _bloquearse nativo_ en código no administrado y hacer que la aplicación Xamarin.Mac deje de funcionar por completo con un `SIGABRT` error:
 
-[![Ejemplo de un cuadro de diálogo de bloqueo nativo](databinding-images/debug01.png "ejemplo de un cuadro de diálogo de bloqueo nativo")](databinding-images/debug01-large.png)
+[![Ejemplo de un cuadro de diálogo de bloqueo nativo](databinding-images/debug01.png "ejemplo de un cuadro de diálogo de bloqueo nativo")](databinding-images/debug01-large.png#lightbox)
 
 Normalmente hay cuatro causas principales de nativo bloqueos durante el enlace de datos:
 
@@ -873,15 +873,15 @@ Normalmente hay cuatro causas principales de nativo bloqueos durante el enlace d
 
 Vamos a provoca un bloqueo nativo en el enlace de datos por lo que podemos mostramos cómo buscar y corregirlo. En el generador de interfaz, vamos a cambiar el enlace de la primera etiqueta en el ejemplo de vista de colección de `Name` a `Title`:
 
-[![Editar la clave de enlace](databinding-images/debug02.png "editar la clave de enlace")](databinding-images/debug02-large.png)
+[![Editar la clave de enlace](databinding-images/debug02.png "editar la clave de enlace")](databinding-images/debug02-large.png#lightbox)
 
 Vamos a guardar el cambio, vuelva a Visual Studio para Mac para la sincronización con Xcode y ejecutar la aplicación. Cuando se muestra la vista de colección, la aplicación se bloqueará en breve con un `SIGABRT` error (como se muestra en el **salida de la aplicación** en Visual Studio para Mac) ya que el `PersonModel` no expone una propiedad con la clave `Title`:
 
-[![Ejemplo de un error de enlace](databinding-images/debug03.png "ejemplo de un error de enlace")](databinding-images/debug03-large.png)
+[![Ejemplo de un error de enlace](databinding-images/debug03.png "ejemplo de un error de enlace")](databinding-images/debug03-large.png#lightbox)
 
 Si se desplaza a la parte superior del error en la **salida de la aplicación** podemos ver la clave para solucionar el problema:
 
-[![Buscar el problema en el registro de errores](databinding-images/debug04.png "buscar el problema en el registro de errores")](databinding-images/debug04-large.png)
+[![Buscar el problema en el registro de errores](databinding-images/debug04.png "buscar el problema en el registro de errores")](databinding-images/debug04-large.png#lightbox)
 
 Esta línea nos indica que la clave `Title` no existe en el objeto que se está enlazando a. Si se cambia el enlace hacia `Name` en el generador de interfaz, guardar, sincronización, vuelva a generar y ejecutar, la aplicación se ejecutará como se esperaba sin ningún problema.
 

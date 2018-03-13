@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/07/2018
-ms.openlocfilehash: c1dd3495b0d7f76197126094cfd10e50d0ca760d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 415c3a5e9446c5db545b62272f3b90a9ac73e401
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="creating-a-fragment"></a>Crear un fragmento
 
@@ -28,7 +28,7 @@ El código anterior aumentar la vista `Resource.Layout.Example_Fragment`y agrég
 
 
 > [!NOTE]
-> **Nota:** subclases de fragmento no deben tener un valor predeterminado público ningún constructor de argumento.
+> Las subclases de fragmento no deben tener un público predeterminado ningún constructor de argumento.
 
 ## <a name="adding-a-fragment-to-an-activity"></a>Agregar un fragmento a una actividad
 
@@ -108,7 +108,7 @@ O
 Fragmentos tienen su propio ciclo de vida que es algo independiente de, pero todavía afectados, el [ciclo de vida de la actividad de hospedaje](~/android/app-fundamentals/activity-lifecycle/index.md).
 Por ejemplo, cuando una actividad se detiene, se pausan todos sus fragmentos asociados. El siguiente diagrama muestra el ciclo de vida del fragmento.
 
-[![Diagrama de flujo que ilustra el ciclo de vida de fragmento](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png)
+[![Diagrama de flujo que ilustra el ciclo de vida de fragmento](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
 
 
 ### <a name="fragment-creation-lifecycle-methods"></a>Métodos de ciclo de vida de creación de fragmento
@@ -238,4 +238,4 @@ public override void OnCreate(Bundle savedState)
 
 La pantalla siguiente muestra el aspecto que tendría este menú:
 
-[![Captura de pantalla de ejemplo de aplicación de Mis viajes y mostrar elementos de menú](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png)
+[![Captura de pantalla de ejemplo de aplicación de Mis viajes y mostrar elementos de menú](creating-a-fragment-images/fragment-menu-example.png)](creating-a-fragment-images/fragment-menu-example.png#lightbox)

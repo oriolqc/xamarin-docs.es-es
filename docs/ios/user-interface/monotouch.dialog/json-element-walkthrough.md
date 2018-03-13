@@ -7,11 +7,11 @@ ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 63faa0c46abfb509a6834efa647f23ad0ed7f454
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 1a5e4ab73c9090cbb743dc8cb339d6f50c5ff527
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough-using-a-json-element-to-create-a-user-interface"></a>Tutorial: Usar un elemento JSON para crear una interfaz de usuario
 
@@ -22,7 +22,7 @@ MONTE D admite crear interfaces de usuario declaradas en JSON. Cuando los elemen
 
 MONTE D admite toda la gama de características que están disponibles en la API de elementos al usar JSON. Por ejemplo, la aplicación en la captura de pantalla siguiente se declara completamente mediante JSON:
 
-[ ![](json-element-walkthrough-images/01-load-from-file.png "Por ejemplo, la aplicación en esta captura de pantalla completamente se declara mediante JSON") ](json-element-walkthrough-images/01-load-from-file.png) [ ![ ] (json-element-walkthrough-images/02-load-from-file-details.png "por ejemplo, la aplicación en esta captura de pantalla se declare por completo mediante JSON")](json-element-walkthrough-images/02-load-from-file-details.png)
+[![](json-element-walkthrough-images/01-load-from-file.png "Por ejemplo, la aplicación en esta captura de pantalla completamente se declara mediante JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ] (json-element-walkthrough-images/01-load-from-file.png "por ejemplo, la aplicación en esta captura de pantalla se declare por completo mediante JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 Vamos a volver a visitar el ejemplo de la [elementos API tutorial](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) tutorial, que muestra cómo agregar una pantalla de detalles de tarea mediante JSON.
 
@@ -30,7 +30,7 @@ Vamos a volver a visitar el ejemplo de la [elementos API tutorial](~/ios/user-in
 
 El ejemplo de este tutorial permite crear tareas. Cuando una tarea está seleccionada en la primera pantalla, se presenta una pantalla de detalles, como se muestra:
 
- [ ![](json-element-walkthrough-images/03-task-list.png "Cuando una tarea está seleccionada en la primera pantalla, se presenta una pantalla de detalles como se muestra")](json-element-walkthrough-images/03-task-list.png)
+ [![](json-element-walkthrough-images/03-task-list.png "Cuando una tarea está seleccionada en la primera pantalla, se presenta una pantalla de detalles como se muestra")](json-element-walkthrough-images/03-task-list.png#lightbox)
 
 ## <a name="creating-the-json"></a>Creación de JSON
 
@@ -166,7 +166,7 @@ _rootElement = new RootElement ("Json Example"){
 
 En tiempo de ejecución, se recuperará y analizar Monte el archivo D. cuando el usuario navega a la segunda vista, tal y como se muestra en la captura de pantalla siguiente:
 
- [ ![](json-element-walkthrough-images/04-json-web-example.png "El archivo se puede recuperar y analizar por MT D. cuando el usuario navega a la segunda vista")](json-element-walkthrough-images/04-json-web-example.png)
+ [![](json-element-walkthrough-images/04-json-web-example.png "El archivo se puede recuperar y analizar por MT D. cuando el usuario navega a la segunda vista")](json-element-walkthrough-images/04-json-web-example.png#lightbox)
 
  <a name="Summary" />
 

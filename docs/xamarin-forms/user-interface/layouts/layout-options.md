@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/10/2017
-ms.openlocfilehash: 978985c4e9803fad33760e4b40ab73d57f3ec420
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a2aa143d5aeb801cd753dd99718ca9cf6dd72353
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="layoutoptions"></a>LayoutOptions
 
@@ -91,7 +91,7 @@ Content = new StackLayout
 
 El código produce el diseño que se muestra en las capturas de pantalla siguiente:
 
-[![](layout-options-images/alignment.png "Opciones de diseño de alineación")](layout-options-images/alignment-large.png "opciones de diseño de alineación")
+[![](layout-options-images/alignment.png "Opciones de diseño de alineación")](layout-options-images/alignment-large.png#lightbox "opciones de diseño de alineación")
 
 <a name="expansion" />
 
@@ -146,7 +146,7 @@ Content = new StackLayout
 
 El código produce el diseño que se muestra en las capturas de pantalla siguiente:
 
-[![](layout-options-images/expansion.png "Opciones de diseño de expansión")](layout-options-images/expansion-large.png "opciones de diseño de expansión")
+[![](layout-options-images/expansion.png "Opciones de diseño de expansión")](layout-options-images/expansion-large.png#lightbox "opciones de diseño de expansión")
 
 Cada [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) ocupe la misma cantidad de espacio en el [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/). Sin embargo, solo la última `Label`, que establece su [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propiedad [ `FillAndExpand` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/) con un tamaño diferente. Además, cada `Label` separados por una pequeña de color rojo [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/), lo que permite el espacio en el `Label` ocupa para verse fácilmente.
 

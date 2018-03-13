@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 30b7e322d618492164fac5e439c5187616d61717
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 32326eb472b1bb8b4fbaf4066edc36255f5948ca
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="dots-and-dashes"></a>Puntos y guiones
 
@@ -155,7 +155,7 @@ float[] GetPickerArray(Picker picker)
 
 En las siguientes capturas de pantalla, la pantalla de iOS en el extremo izquierdo muestra una línea de puntos:
 
-[![](dots-images/dotsanddashes-small.png "Captura de pantalla triple de la página de puntos y guiones")](dots-images/dotsanddashes-large.png "Triple captura de pantalla de la página de puntos y guiones")
+[![](dots-images/dotsanddashes-small.png "Captura de pantalla triple de la página de puntos y guiones")](dots-images/dotsanddashes-large.png#lightbox "Triple captura de pantalla de la página de puntos y guiones")
 
 Sin embargo, la pantalla Android también se supone que para mostrar una línea de puntos con la matriz {10, 10}, pero en su lugar, la línea es sólida. ¿Qué ocurre? El problema es que la pantalla Android también tiene una configuración de CAP de trazo de `Square`. Este comando extiende todos los guiones por la mitad del ancho de trazo, haciendo que los espacios que se llene.
 
@@ -213,7 +213,7 @@ protected override void OnAppearing()
 
 Por supuesto, tendrá que ejecutan realmente el programa para ver la animación:
 
-[![](dots-images/animatedspiral-small.png "Triple captura de pantalla de la página animado espiral")](dots-images/animatedspiral-large.png "Triple captura de pantalla de la página de espiral animado")
+[![](dots-images/animatedspiral-small.png "Triple captura de pantalla de la página animado espiral")](dots-images/animatedspiral-large.png#lightbox "Triple captura de pantalla de la página de espiral animado")
 
 Ahora ha visto cómo dibujar líneas y definir curvas con ecuaciones paramétricas. Una sección para publicarlos posteriormente describirá los distintos tipos de curvas que `SKPath` admite.
 

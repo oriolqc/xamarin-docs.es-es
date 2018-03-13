@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: bd53074fcde25736d37544efc719ecef1110c364
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c111d2f873270eab78eee92edc3d884d1e92fdd8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="interactive-workbooks"></a>Libros interactivos
 
@@ -30,7 +30,7 @@ Los libros se pueden guardar y abrir de nuevo más tarde dentro de la aplicació
 
 La ventana de edición de código proporciona la finalización de código, colorear la sintaxis, alineado live-diagnósticos y compatibilidad de instrucción de varias líneas.
 
-[ ![](workbook-images/inspector-0.6.0-repl-small.png "La ventana de edición de código proporciona la finalización de código, colorear la sintaxis, alineado live-diagnósticos y compatibilidad de instrucción de varias líneas")](workbook-images/inspector-0.6.0-repl.png)
+[ ![](workbook-images/inspector-0.6.0-repl-small.png "La ventana de edición de código proporciona la finalización de código, colorear la sintaxis, alineado live-diagnósticos y compatibilidad de instrucción de varias líneas")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
 Los libros de Xamarin se guardan en un `.workbook` archivo, que es un archivo CommonMark con algunos metadatos en la parte superior (vea [tipos de archivo de los libros](#Workbooks_Files_Types) para obtener más detalles sobre cómo se pueden guardar libros).
 

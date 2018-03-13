@@ -7,15 +7,14 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 857cafa475f24357b39da0640eb81c37f5a8634c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4118881272bb605607d528007064ada561cf7fc
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="auto-complete"></a>Autocompletar
 
-<a name="Overview" />
 
 ## <a name="overview"></a>Información general
 
@@ -43,7 +42,6 @@ En este tutorial, aprenderá a crear un [ `AutoCompleteTextView` ](https://devel
 
 El [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) es una etiqueta que presenta la [ `AutoCompleteTextView` ](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/) widget.
 
-<a name="tutorial" />
 
 ## <a name="tutorial"></a>Tutorial
 
@@ -156,10 +154,9 @@ Esta es la lista de sugerencias que se proporcionará en una lista desplegable c
 
 Ejecute la aplicación. A medida que escribe, debería ver algo parecido a esto:
 
-[![Pantalla de Autocompletar en el ejemplo se presenta los nombres que contienen "ca"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png)
+[![Pantalla de Autocompletar en el ejemplo se presenta los nombres que contienen "ca"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
 
-<a name="More_Information" />
 
 ## <a name="more-information"></a>Más información
 
@@ -187,7 +184,6 @@ string[] countries = Resources.GetStringArray (Resource.array.countries_array);
 var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countries);
 ```
 
-<a name="References" />
 
 ### <a name="references"></a>Referencias
 

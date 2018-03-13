@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 0117364f02302add1f8788de1a79e4c4210fd07b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 4363258a9047ee4e2de4f53595a6eedc5dfe5861
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="accessibility-on-macos"></a>Accesibilidad en macOS
 
@@ -30,7 +30,7 @@ AppKit utiliza el `NSAccessibility` protocolo que se va a exponer las API que ay
 Xamarin.Mac utiliza el generador de interfaz de Xcode para editar archivos de guión gráfico.
 Información de accesibilidad que se puede editar en el **inspector de identidad** cuando se selecciona un control en la superficie de diseño (como se muestra en la captura de pantalla siguiente):
 
-[![Adición de accesibilidad en el generador de interfaz de Xcode](accessibility-images/xcode.png "agregar accesibilidad en el generador de interfaz de Xcode")](accessibility-images/xcode-large.png)
+[![Adición de accesibilidad en el generador de interfaz de Xcode](accessibility-images/xcode.png "agregar accesibilidad en el generador de interfaz de Xcode")](accessibility-images/xcode-large.png#lightbox)
 
 ### <a name="code"></a>Código
 
@@ -80,7 +80,7 @@ Desbloquear la pantalla de configuración (si es necesario, en la parte inferior
 
 Una vez habilitada, el inspector aparece como una ventana flotante que puede desplazar por la pantalla. La captura de pantalla siguiente muestra el inspector que se ejecutan junto a una aplicación de ejemplo de Mac. Mientras el cursor se mueve a través de la ventana, el inspector muestra todas las propiedades accesibles de cada control:
 
-[![Ejemplo de la ejecución del Inspector de accesibilidad](accessibility-images/accessibility-example.png "ejecución del Inspector de ejemplo de accesibilidad")](accessibility-images/accessibility-example-large.png)
+[![Ejemplo de la ejecución del Inspector de accesibilidad](accessibility-images/accessibility-example.png "ejecución del Inspector de ejemplo de accesibilidad")](accessibility-images/accessibility-example-large.png#lightbox)
 
 Para obtener más información, lea la [probar la accesibilidad de la Guía de OS X](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html).
 

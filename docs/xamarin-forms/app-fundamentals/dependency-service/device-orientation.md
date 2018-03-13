@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: ee91f0ebdc07f03831ae95a4b8ae6f85c3eb549e
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d23f29fbfb51473ff5f89f27c0bfd621cfffbce0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="checking-device-orientation"></a>Comprobación de orientación del dispositivo
 
@@ -29,7 +29,7 @@ La aplicación que utiliza `DependencyService` tendrá la estructura siguiente:
 ![](device-orientation-images/orientation-diagram.png "Estructura de aplicación DependencyService")
 
 > [!NOTE]
-> **Nota:** es posible detectar si el dispositivo está en orientación vertical u horizontal en el código compartido, como se muestra en [dispositivo Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation) . El método descrito en este artículo usa las características nativas para obtener más información acerca de la orientación, incluso si el dispositivo está boca abajo.
+> Es posible detectar si el dispositivo está en orientación vertical u horizontal en el código compartido, como se muestra en [dispositivo Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation). El método descrito en este artículo usa las características nativas para obtener más información acerca de la orientación, incluso si el dispositivo está boca abajo.
 
 <a name="Creating_the_Interface" />
 
@@ -57,7 +57,7 @@ namespace DependencyServiceSample.Abstractions
 Codificar en esta interfaz en el código compartido le permitirá que la aplicación de Xamarin.Forms tener acceso a la orientación del dispositivo las API en cada plataforma.
 
 > [!NOTE]
-> **Tenga en cuenta**: las clases que implementan la interfaz deben tener un constructor sin parámetros para que funcione con el `DependencyService`.
+> Las clases que implementan la interfaz deben tener un constructor sin parámetros para que funcione con el `DependencyService`.
 
 <a name="iOS_Implementation" />
 
@@ -224,4 +224,4 @@ Ejecute esta aplicación en iOS, Android o las plataformas de Windows y al presi
 
 - [Uso de DependencyService (ejemplo)](https://developer.xamarin.com/samples/UsingDependencyService)
 - [DependencyService (ejemplo)](https://developer.xamarin.com/samples/DependencyService/DependencyServiceSample/)
-- [Ejemplos de Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
+- [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples) (Ejemplos de Xamarin.Forms)

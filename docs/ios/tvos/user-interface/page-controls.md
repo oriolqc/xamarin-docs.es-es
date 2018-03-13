@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d4da50dac901628b9baf10a07650d232a977a653
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f77eac8179f9e368e767bb4b586ccaa3f93e40a3
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-page-control"></a>Trabajar con el Control de página
 
@@ -20,7 +20,7 @@ _Este artículo tratan diseñar y trabajar con el Control de página dentro de u
 
 En ocasiones sea necesario mostrar una serie de páginas o imágenes en la aplicación Xamarin.tvOS. Un Control de página se diseñó para mostrar con claridad qué página de un usuario está en el número máximo de páginas. Un Control de la página muestra una serie de puntos en un oscuro, oval en forma de segundo plano. Mostrará la página actual un punto relleno, todas las demás páginas que se muestran como puntos vacíos. El control de página ajustará los puntos de mayoría externos si hay demasiadas para que quepa en su área de fondo.
 
-[ ![](page-controls-images/page01.png "Control de la página de ejemplo")](page-controls-images/page01.png)
+[![](page-controls-images/page01.png "Control de la página de ejemplo")](page-controls-images/page01.png#lightbox)
 
 Un Control de página en un elemento no interactivo diseñado para proporcionar comentarios al usuario solo. Debe agregar otros controles para cambiar el número de página actual (por ejemplo, gestos o botones).
 
@@ -41,14 +41,14 @@ Es la manera más fácil trabajar con controles de página en una aplicación Xa
 1. En el **solución Pad**, haga doble clic en el `Main.storyboard` de archivo y abrirlo y editarlo.
 1. Arrastre un **Control de la página** desde el **cuadro de herramientas** y colóquela en la vista: 
 
-    [ ![](page-controls-images/page02.png "Un Control de página")](page-controls-images/page02.png)
+    [![](page-controls-images/page02.png "Un Control de página")](page-controls-images/page02.png#lightbox)
 1. En el **ficha Widget** de la **panel de propiedades**, puede ajustar varias propiedades del Control de página como su **página actual** y **# de páginas**: 
 
-    [ ![](page-controls-images/page03.png "La pestaña de Widget")](page-controls-images/page03.png)
+    [![](page-controls-images/page03.png "La pestaña de Widget")](page-controls-images/page03.png#lightbox)
 1. A continuación, agregar controles o movimientos a la vista para avanzar y retroceder a través de la colección de páginas.
 1. Por último, asignar **nombres** a los controles de modo que pueda responder a ellos en código C#. Por ejemplo: 
 
-    [ ![](page-controls-images/page04.png "Nombre del control")](page-controls-images/page04.png)
+    [![](page-controls-images/page04.png "Nombre del control")](page-controls-images/page04.png#lightbox)
 1. Guarde los cambios.
     
 
@@ -58,14 +58,14 @@ Es la manera más fácil trabajar con controles de página en una aplicación Xa
 1. En el **el Explorador de soluciones**, haga doble clic en el `Main.storyboard` de archivo y abrirlo y editarlo.
 1. Arrastre un **Control de la página** desde el **cuadro de herramientas** y colóquela en la vista: 
 
-    [ ![](page-controls-images/page02-vs.png "Un Control de página")](page-controls-images/page02-vs.png)
+    [![](page-controls-images/page02-vs.png "Un Control de página")](page-controls-images/page02-vs.png#lightbox)
 1. En el **ficha Widget** de la **el Explorador de propiedades**, puede ajustar varias propiedades del Control de página como su **página actual** y **# de páginas**: 
 
-    [ ![](page-controls-images/page03-vs.png "La pestaña de Widget")](page-controls-images/page03-vs.png)
+    [![](page-controls-images/page03-vs.png "La pestaña de Widget")](page-controls-images/page03-vs.png#lightbox)
 1. A continuación, agregar controles o movimientos a la vista para avanzar y retroceder a través de la colección de páginas.
 1. Por último, asignar **nombres** a los controles de modo que pueda responder a ellos en código C#. Por ejemplo: 
 
-    [ ![](page-controls-images/page04-vs.png "Nombre del control")](page-controls-images/page04-vs.png)
+    [![](page-controls-images/page04-vs.png "Nombre del control")](page-controls-images/page04-vs.png#lightbox)
 1. Guarde los cambios.
     
 

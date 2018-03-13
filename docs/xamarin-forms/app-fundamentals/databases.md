@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2017
-ms.openlocfilehash: afbd2d8f25cdf51c7c7c33f72f10e3b5ce8762ef
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 29686b29a18fe409a1f778d54266cbeedea40eda
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="local-databases"></a>Bases de datos locales
 
@@ -24,7 +24,7 @@ Xamarin.Forms las aplicaciones pueden utilizar el [NuGet de PCL SQLite.NET](http
 
 El que acompaña a [aplicación de ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) es una sencilla aplicación de lista de tareas. Las capturas de pantalla siguientes muestran cómo el ejemplo se muestra en cada plataforma:
 
-[ ![Capturas de pantalla de ejemplo de base de datos de Xamarin.Forms](databases-images/todo-list-sml.png "TodoList primera Page Screenshots")](databases-images/todo-list.png "TodoList primera Page Screenshots") [ ![ Capturas de pantalla de ejemplo de base de datos de Xamarin.Forms](databases-images/todo-detail-sml.png "TodoList segundo Page Screenshots")](databases-images/todo-detail.png "TodoList segundo Page Screenshots")
+[![Capturas de pantalla de ejemplo de base de datos de Xamarin.Forms](databases-images/todo-list-sml.png "TodoList primera Page Screenshots")](databases-images/todo-list.png#lightbox "TodoList primera Page Screenshots") [ ![ Capturas de pantalla de ejemplo de base de datos de Xamarin.Forms](databases-images/todo-list-sml.png "TodoList primera Page Screenshots")](databases-images/todo-list.png#lightbox "TodoList primera Page Screenshots")
 
 <a name="Using_SQLite_with_PCL" />
 
@@ -222,5 +222,5 @@ En este artículo se centra en **acceso a** una base de datos de SQLite uso de X
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplo de lista de tareas](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
-- [Ejemplos de Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/) (Ejemplos de Xamarin.Forms)
 - [Libro de la base de datos](https://developer.xamarin.com/workbooks/xamarin-forms/application-fundamentals/database/database.workbook)

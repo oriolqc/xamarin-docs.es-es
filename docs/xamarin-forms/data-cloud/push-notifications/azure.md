@@ -5,32 +5,35 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1EF400F-73F4-43E9-A0C3-1569A0F34A3B
 ms.technology: xamarin-forms
+ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: cccbe64f69b926ced77403bcf85540ef1060dbac
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f0f767179a9280d7a6c6d7ce8125696d5e664cba
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="sending-push-notifications-from-azure-mobile-apps"></a>Enviar notificaciones de inserción desde aplicaciones móviles de Azure
 
 _Centros de notificaciones de Azure proporcionan una infraestructura escalable de inserción para enviar notificaciones de inserción móviles desde cualquier back-end para cualquier plataforma móvil, mientras se elimina la complejidad de un back-end tener para comunicarse con sistemas de notificación de plataforma diferente. En este artículo se explica cómo usar centros de notificaciones de Azure para enviar notificaciones de inserción de una instancia de aplicaciones móviles de Azure a una aplicación de Xamarin.Forms._
 
-## <a name="overview"></a>Información general
+> [!VIDEO https://youtube.com/embed/le2lDY22xwM]
+
+**Azure de inserción Xamarin.Forms y el centro de notificaciones por [Universidad de Xamarin](https://university.xamarin.com/)**
 
 Una notificación de inserción se utiliza para proporcionar información, como un mensaje desde un sistema back-end a una aplicación en un dispositivo móvil para aumentar el uso y la interacción de la aplicación. La notificación puede enviarse en cualquier momento, incluso cuando el usuario no esté usando activamente la aplicación de destino.
 
 Sistemas de back-end envían notificaciones de inserción a dispositivos móviles a través de los sistemas de notificación de plataforma (PNS), tal como se muestra en el diagrama siguiente:
 
-[![](azure-images/pns.png "Sistemas de notificación de plataforma")](azure-images/pns-large.png "sistemas de notificación de plataforma")
+[![](azure-images/pns.png "Sistemas de notificación de plataforma")](azure-images/pns-large.png#lightbox "sistemas de notificación de plataforma")
 
 Para enviar una notificación de inserción, el sistema back-end se pone en contacto con el PNS específicos de la plataforma para enviar una notificación a una instancia de la aplicación cliente. Esto aumenta significativamente la complejidad de back-end cuando son necesarias, las notificaciones de inserción de multiplataforma ya que el back-end debe utilizar cada protocolo y API de PNS de específico de la plataforma.
 
 Centros de notificaciones de Azure eliminar esta complejidad al resumiendo los detalles de los sistemas de notificación de plataforma diferente, lo que permite una notificación de multiplataforma para enviarse con una sola llamada API, como se muestra en el diagrama siguiente:
 
-[![](azure-images/notification-hub.png)](azure-images/notification-hub-large.png)
+[![](azure-images/notification-hub.png)](azure-images/notification-hub-large.png#lightbox)
 
 Para enviar una notificación de inserción, el código de los contactos solo el Azure centro de notificaciones, que a su vez se comunica con los sistemas de notificación de plataforma diferente, por lo tanto, reducir la complejidad de back-end del sistema de back-end que las notificaciones de inserción de envíos.
 
@@ -44,7 +47,7 @@ Aplicaciones móviles de Azure tienen compatibilidad integrada para las notifica
 
 La aplicación de ejemplo muestra una aplicación de lista de tareas cuyos datos se almacenan en una instancia de aplicaciones móviles de Azure. Cada vez que se agrega un nuevo elemento a la instancia de aplicaciones móviles de Azure, se envía una notificación de inserción a la aplicación de Xamarin.Forms. Las capturas de pantalla siguientes muestran cada plataforma de mostrar la notificación de inserción recibido:
 
-[![](azure-images/screenshots.png "Ejemplo de aplicación que recibe una notificación de inserción")](azure-images/screenshots-large.png "recibir una notificación de inserción de aplicación de ejemplo")
+[![](azure-images/screenshots.png "Ejemplo de aplicación que recibe una notificación de inserción")](azure-images/screenshots-large.png#lightbox "recibir una notificación de inserción de aplicación de ejemplo")
 
 Para obtener más información acerca de los centros de notificaciones de Azure, consulte [centros de notificaciones de Azure](https://azure.microsoft.com/documentation/articles/notification-hubs-push-notification-overview/) y [agregar notificaciones de inserción a la aplicación de Xamarin.Forms](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push/).
 
@@ -118,7 +121,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 Cuando una aplicación de iOS se registra con APNS debe especificar los tipos de notificaciones de inserción que le gustaría recibir. El `RegisterUserNotificationSettings` método registra los tipos de notificaciones de la aplicación puede recibir, con el `RegisterForRemoteNotifications` método registrar para recibir notificaciones de inserción de APNS.
 
 > [!NOTE]
-> **Tenga en cuenta**: llamar al método el `RegisterUserNotificationSettings` método dará lugar a notificaciones de inserción en modo silencioso recibida por la aplicación.
+> Llamar al método el `RegisterUserNotificationSettings` método dará lugar a notificaciones de inserción en modo silencioso recibida por la aplicación.
 
 <a name="ios_registration_response" />
 
@@ -146,7 +149,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
 Este método crea una plantilla de mensaje de notificación simple como JSON y registra el dispositivo para recibir notificaciones de plantilla desde el centro de notificaciones.
 
 > [!NOTE]
-> **Tenga en cuenta**: el `FailedToRegisterForRemoteNotifications` invalidación debe implementarse para controlar las situaciones como no hay ninguna conexión de red. Esto es importante porque los usuarios pueden iniciar la aplicación mientras sin conexión.
+> El `FailedToRegisterForRemoteNotifications` invalidación debe implementarse para controlar las situaciones como no hay ninguna conexión de red. Esto es importante porque los usuarios pueden iniciar la aplicación mientras sin conexión.
 
 <a name="ios_process_incoming" />
 
@@ -177,7 +180,7 @@ public override void DidReceiveRemoteNotification(
 El `userInfo` diccionario contiene el `aps` clave, cuyo valor es el `alert` diccionario con los datos restantes de la notificación. Este diccionario se recupera, con el `string` que se muestran en un cuadro de diálogo de mensaje de notificación.
 
 > [!NOTE]
-> **Tenga en cuenta**: si no se está ejecutando una aplicación cuando llega una notificación de inserción, se iniciará la aplicación, pero la `DidReceiveRemoteNotification` método no procesará la notificación. En su lugar, obtenga la carga de notificación y responder de forma adecuada de la `WillFinishLaunching` o `FinishedLaunching` invalida.
+> Si no se está ejecutando una aplicación cuando llega una notificación de inserción, se iniciará la aplicación, pero la `DidReceiveRemoteNotification` método no procesará la notificación. En su lugar, obtenga la carga de notificación y responder de forma adecuada de la `WillFinishLaunching` o `FinishedLaunching` invalida.
 
 Para obtener más información acerca de APN, consulte [notificaciones Push en iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md).
 
@@ -330,7 +333,7 @@ public class FirebaseNotificationService : FirebaseMessagingService
         intent.AddFlags(ActivityFlags.ClearTop);
         var pendingIntent = PendingIntent.GetActivity(this, 0, intent, PendingIntentFlags.OneShot);
 
-        var notificationBuilder = new Notification.Builder(this)
+        var notificationBuilder = new NotificationCompat.Builder(this)
             .SetSmallIcon(Resource.Drawable.ic_stat_ic_notification)
             .SetContentTitle("New Todo Item")
             .SetContentText(messageBody)
@@ -418,6 +421,6 @@ Este artículo muestra cómo usar centros de notificaciones de Azure para enviar
 - [Centros de notificaciones de Azure](https://azure.microsoft.com/documentation/articles/notification-hubs-push-notification-overview/)
 - [Agregar notificaciones de inserción a la aplicación de Xamarin.Forms](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started-push/)
 - [Notificaciones de inserción en iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md)
-- [Firebase de mensajería en la nube](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)
+- [Mensajería en la nube de Firebase](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)
 - [TodoAzurePush (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzurePush/)
 - [Cliente móvil Azure SDK](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

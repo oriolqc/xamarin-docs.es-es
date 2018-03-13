@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: f0201e114f55e0610aceb68f98fae60a801afc68
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f943d6b88d2fd7f38759fb32ecb612e102266657
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="working-with-collection-views"></a>Trabajar con vistas de colección
 
@@ -20,7 +20,7 @@ _Este artículo tratan diseñar y trabajar con vistas de colección dentro de un
 
 Las vistas de colección permiten para un grupo de contenido van a mostrar mediante diseños arbitrarios. Con la compatibilidad integrada, le permiten para los diseños de cuadrícula o lineal de creación fácil, que también la ejecución de los diseños personalizados.
 
-[ ![](collection-views-images/collection01.png "Vista de colección de ejemplo")](collection-views-images/collection01.png)
+[![](collection-views-images/collection01.png "Vista de colección de ejemplo")](collection-views-images/collection01.png#lightbox)
 
 La vista de colección mantiene una colección de elementos mediante un delegado y un origen de datos para proporcionar interacción con el usuario y el contenido de la colección. Puesto que la vista de colección se basa en un subsistema de diseño que es independiente de la propia vista, puede cambiar fácilmente la presentación de datos sobre la marcha de la vista de colección proporciona un diseño diferente.
 
@@ -103,36 +103,36 @@ Vamos a hacer lo siguiente:
 1. En el **el Explorador de soluciones**, haga doble clic en el `Main.storyboard` de archivo y abrirlo en el Diseñador de iOS.
 1. Agregar una vista de imagen, una etiqueta y un botón a la vista existente y configurarlos para que el siguiente aspecto: 
 
-    [ ![](collection-views-images/collection02.png "Diseño de ejemplo")](collection-views-images/collection02.png)
+    [![](collection-views-images/collection02.png "Diseño de ejemplo")](collection-views-images/collection02.png#lightbox)
 1. Asignar un **nombre** a la vista de la imagen y la etiqueta en el **ficha Widget** de la **el Explorador de propiedades**. Por ejemplo: 
 
-    [ ![](collection-views-images/collection03.png "El nombre de la configuración")](collection-views-images/collection03.png)
+    [![](collection-views-images/collection03.png "El nombre de la configuración")](collection-views-images/collection03.png#lightbox)
 1. A continuación, arrastre un controlador de vista de colección en el guión gráfico: 
 
-    [ ![](collection-views-images/collection04.png "Un controlador de vista de colección")](collection-views-images/collection04.png)
+    [![](collection-views-images/collection04.png "Un controlador de vista de colección")](collection-views-images/collection04.png#lightbox)
 1. Control y arrastre desde el botón con el controlador de vista de colección y seleccione **Push** desde la ventana emergente: 
 
-    [ ![](collection-views-images/collection05.png "Seleccione la inserción en la ventana emergente")](collection-views-images/collection05.png)
+    [![](collection-views-images/collection05.png "Seleccione la inserción en la ventana emergente")](collection-views-images/collection05.png#lightbox)
 1. Cuando se ejecuta la aplicación, esto hará que la vista de colección se va a mostrar cuando el usuario hace clic en el botón.
 1. Seleccione la vista de colección y escriba los siguientes valores en el **pestaña diseño** de la **el Explorador de propiedades**: 
 
-    [ ![](collection-views-images/collection06.png "El Explorador de propiedades")](collection-views-images/collection06.png)
+    [![](collection-views-images/collection06.png "El Explorador de propiedades")](collection-views-images/collection06.png#lightbox)
 1. Esto controla el tamaño de las celdas individuales y los bordes entre las celdas y el borde externo de la vista de colección.
 1. Seleccione el controlador de vista de colección y establece su clase en `CityCollectionViewController` en el **ficha Widget**: 
 
-    [ ![](collection-views-images/collection07.png "Defina la clase como CityCollectionViewController")](collection-views-images/collection07.png)
+    [![](collection-views-images/collection07.png "Defina la clase como CityCollectionViewController")](collection-views-images/collection07.png#lightbox)
 1. Seleccione la vista de colección y establece su clase en `CityCollectionView` en el **ficha Widget**: 
 
-    [ ![](collection-views-images/collection08.png "Defina la clase como CityCollectionView")](collection-views-images/collection08.png)
+    [![](collection-views-images/collection08.png "Defina la clase como CityCollectionView")](collection-views-images/collection08.png#lightbox)
 1. Seleccione la celda de la vista de colección y establece su clase en `CityCollectionViewCell` en el **ficha Widget**: 
 
-    [ ![](collection-views-images/collection09.png "Defina la clase como CityCollectionViewCell")](collection-views-images/collection09.png)
+    [![](collection-views-images/collection09.png "Defina la clase como CityCollectionViewCell")](collection-views-images/collection09.png#lightbox)
 1. En el **ficha Widget** Asegúrese de que el **diseño** es `Flow` y **dirección de desplazamiento** es `Vertical` para la vista de colección: 
 
-    [ ![](collection-views-images/collection10.png "La pestaña de Widget")](collection-views-images/collection10.png)
+    [![](collection-views-images/collection10.png "La pestaña de Widget")](collection-views-images/collection10.png#lightbox)
 1. Seleccione la celda de la vista de colección y establezca su **identidad** a `CityCell` en el **ficha Widget**: 
 
-    [ ![](collection-views-images/collection11.png "Establecer la identidad para CityCell")](collection-views-images/collection11.png)
+    [![](collection-views-images/collection11.png "Establecer la identidad para CityCell")](collection-views-images/collection11.png#lightbox)
 1. Guarde los cambios.
     
 
@@ -143,34 +143,34 @@ Vamos a hacer lo siguiente:
 1. En el **el Explorador de soluciones**, haga doble clic en el `Main.storyboard` de archivo y abrirlo en el Diseñador de iOS.
 1. Agregar una vista de imagen, una etiqueta y un botón a la vista existente y configurarlos para que el siguiente aspecto: 
 
-    [ ![](collection-views-images/collection02vs.png "Configurar el diseño")](collection-views-images/collection02vs.png)
+    [![](collection-views-images/collection02vs.png "Configurar el diseño")](collection-views-images/collection02vs.png#lightbox)
 1. Asignar un **nombre** a la vista de la imagen y la etiqueta en el **ficha Widget** de la **el Explorador de propiedades**. Por ejemplo: 
 
-    [ ![](collection-views-images/collection03vs.png "El Explorador de propiedades")](collection-views-images/collection03vs.png)
+    [![](collection-views-images/collection03vs.png "El Explorador de propiedades")](collection-views-images/collection03vs.png#lightbox)
 1. A continuación, arrastre un controlador de vista de colección en el guión gráfico: 
 
-    [ ![](collection-views-images/collection04vs.png "Un controlador de vista de colección")](collection-views-images/collection04vs.png)
+    [![](collection-views-images/collection04vs.png "Un controlador de vista de colección")](collection-views-images/collection04vs.png#lightbox)
 1. Control y arrastre desde el botón con el controlador de vista de colección y seleccione **Push** desde la ventana emergente: 
 
-    [ ![](collection-views-images/collection05vs.png "Seleccione la inserción en la ventana emergente")](collection-views-images/collection05vs.png)
+    [![](collection-views-images/collection05vs.png "Seleccione la inserción en la ventana emergente")](collection-views-images/collection05vs.png#lightbox)
 1. Cuando se ejecuta la aplicación, esto hará que la vista de colección se va a mostrar cuando el usuario hace clic en el botón.
 1. Seleccione la vista de colección y en el **pestaña diseño** de la **el Explorador de propiedades** escriba la **ancho** como _361_ y  **Alto** como _256_ 
 1. Esto controla el tamaño de las celdas individuales y los bordes entre las celdas y el borde externo de la vista de colección.
 1. Seleccione el controlador de vista de colección y establece su clase en `CityCollectionViewController` en el **ficha Widget**: 
 
-    [ ![](collection-views-images/collection07vs.png "Defina la clase como CityCollectionViewController")](collection-views-images/collection07vs.png)
+    [![](collection-views-images/collection07vs.png "Defina la clase como CityCollectionViewController")](collection-views-images/collection07vs.png#lightbox)
 1. Seleccione la vista de colección y establece su clase en `CityCollectionView` en el **ficha Widget**: 
 
-    [ ![](collection-views-images/collection08vs.png "Defina la clase como CityCollectionView")](collection-views-images/collection08vs.png)
+    [![](collection-views-images/collection08vs.png "Defina la clase como CityCollectionView")](collection-views-images/collection08vs.png#lightbox)
 1. Seleccione la celda de la vista de colección y establece su clase en `CityCollectionViewCell` en el **ficha Widget**: 
 
-    [ ![](collection-views-images/collection09vs.png "Defina la clase como CityCollectionViewCell")](collection-views-images/collection09vs.png)
+    [![](collection-views-images/collection09vs.png "Defina la clase como CityCollectionViewCell")](collection-views-images/collection09vs.png#lightbox)
 1. En el **ficha Widget** Asegúrese de que el **diseño** es `Flow` y **dirección de desplazamiento** es `Vertical` para la vista de colección: 
 
-    [ ![](collection-views-images/collection10vs.png "Ficha Widget de sección")](collection-views-images/collection10vs.png)
+    [![](collection-views-images/collection10vs.png "Ficha Widget de sección")](collection-views-images/collection10vs.png#lightbox)
 1. Seleccione la celda de la vista de colección y establezca su **identidad** a `CityCell` en el **ficha Widget**: 
 
-    [ ![](collection-views-images/collection11vs.png "Establecer la identidad para CityCell")](collection-views-images/collection11vs.png)
+    [![](collection-views-images/collection11vs.png "Establecer la identidad para CityCell")](collection-views-images/collection11vs.png#lightbox)
 1. Guarde los cambios.
     
 
@@ -806,17 +806,17 @@ public override void ViewWillAppear (bool animated)
 
 Con todo el contenido en su lugar, si se compile y ejecute la aplicación, se muestra la vista principal con la ciudad de forma predeterminada:
 
-[ ![](collection-views-images/run01.png "La pantalla principal")](collection-views-images/run01.png)
+[![](collection-views-images/run01.png "La pantalla principal")](collection-views-images/run01.png#lightbox)
 
 Si el usuario haga clic en el **seleccionar una vista** se mostrará el botón, la vista de colección:
 
-[ ![](collection-views-images/run02.png "La vista de colección")](collection-views-images/run02.png)
+[![](collection-views-images/run02.png "La vista de colección")](collection-views-images/run02.png#lightbox)
 
 Cualquier ciudad que tiene su `CanSelect` propiedad establecida en `false` aparecerá atenuado y el usuario no podrá establecer el foco a ella. Cuando el usuario resalta un elemento (hacerla enfocado) se muestra el título y puede utilizar el efecto Parallax inclinación detalle la imagen en 3D.
 
 Cuando el usuario hace clic en una imagen de select, la vista de colección se cierra y se vuelve a mostrar la vista principal con la nueva imagen:
 
-[ ![](collection-views-images/run03.png "Una nueva imagen en la pantalla principal")](collection-views-images/run03.png)
+[![](collection-views-images/run03.png "Una nueva imagen en la pantalla principal")](collection-views-images/run03.png#lightbox)
 
 <a name="Creating-Custom-Layout-and-Reordering-Items" />
 

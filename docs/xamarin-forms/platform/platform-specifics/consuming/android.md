@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/17/2017
-ms.openlocfilehash: e26fcb81bb99e5a49d16731777171b4efa4163c6
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 739ee4ebeb3176d23ab1eb911baaab31a26252c4
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="android-platform-specifics"></a>Detalles de plataforma Android
 
@@ -54,7 +54,7 @@ El `Application.On<Android>` método especifica que sólo se ejecutará este esp
 
 El resultado es que el teclado de pantalla área se puede establecer el modo de funcionamiento cuando un control de entrada tiene el foco de entrada:
 
-[![](android-images/pan-resize.png "Teclado programable operativo modo específico de la plataforma")](android-images/pan-resize-large.png "Soft Keyboard Operating Mode Plaform-Specific")
+[![](android-images/pan-resize.png "Teclado programable operativo modo específico de la plataforma")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
 
 <a name="fastscroll" />
 
@@ -98,7 +98,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 El resultado es ese desplazamiento rápido a través de los datos en un [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) pueden habilitarse, que cambia el tamaño de la posición de desplazamiento:
 
-[![](android-images/fastscroll.png "ListView FastScroll específico de plataforma")](android-images/fastscroll-large.png "ListView FastScroll Plaform-Specific")
+[![](android-images/fastscroll.png "ListView FastScroll específico de plataforma")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
 
 <a name="enable_swipe_paging" />
 
@@ -244,7 +244,7 @@ El `Application.Current.On<Android>` método especifica que sólo se ejecutará 
 
 El resultado es que la [ `Disappearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) y [ `Appearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) eventos de página no se desencadena en pausa de la aplicación y reanudar respectivamente y era de ese if del teclado de pantalla que se muestran cuando la aplicación estaba en pausa, también se mostrará cuando se reanude la aplicación:
 
-[![](android-images/keyboard-on-resume.png "Específico de plataforma de eventos del ciclo de vida")](android-images/keyboard-on-resume-large.png "específico de plataforma de eventos del ciclo de vida")
+[![](android-images/keyboard-on-resume.png "Específico de plataforma de eventos del ciclo de vida")](android-images/keyboard-on-resume-large.png#lightbox "específico de plataforma de eventos del ciclo de vida")
 
 ## <a name="summary"></a>Resumen
 
@@ -253,7 +253,7 @@ Este artículo muestra cómo utilizar las características de plataforma Android
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Obtener información específica de la plataforma de creación](~/xamarin-forms/platform/platform-specifics/creating.md)
+- [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/creating.md)
 - [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 - [AndroidSpecific](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific/)
 - [AndroidSpecific.AppCompat](https://developer.xamarin.com/api/namespace/Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat/)

@@ -3,24 +3,24 @@ title: Interfaz de usuario de iOS
 description: "Está dedicado a trabajar con la interfaz de usuario de iOS en una aplicación de Xamarin.iOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 2B3E45FA-C30F-D708-0E8F-3EE02BD1A867
+ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 831ddfff7e05c391472b280095564f90528369ff
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f456b54180d50cfc4b6b98ed8f3d4118c8397b37
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="user-interface-in-ios"></a>Interfaz de usuario de iOS
 
-## <a name="appearance-apiintroduction-to-the-appearance-apimd"></a>[API de apariencia](introduction-to-the-appearance-api.md)
+## <a name="appearance-apiintroduction-to-the-appearance-apimd"></a>[Appearance API](introduction-to-the-appearance-api.md)
 
 iOS permite muchos atributos visuales de los controles de interfaz de usuario mediante las APIs UIAppearance aplicarles un tema.
 
-## <a name="creating-user-interface-objectsiosuser-interfaceios-uicreating-ui-objectsmd"></a>[Crear objetos de la interfaz de usuario](~/ios/user-interface/ios-ui/creating-ui-objects.md)
+## <a name="creating-user-interface-objectsiosuser-interfaceios-uicreating-ui-objectsmd"></a>[Creación de objetos de la interfaz de usuario](~/ios/user-interface/ios-ui/creating-ui-objects.md)
 
 Grupos de Apple relacionadas con elementos de la funcionalidad en "marcos", que equivale a los espacios de nombres de Xamarin.iOS. `UIKit` es el espacio de nombres que contiene todos los controles de interfaz de usuario para iOS.
 
@@ -28,11 +28,11 @@ Grupos de Apple relacionadas con elementos de la funcionalidad en "marcos", que 
 
 Hay dos mecanismos diferentes para controlar el diseño cuando se cambia el tamaño o girar una vista: cambiar automáticamente el tamaño y diseño automático.
 
-## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[Proporcionar comentarios hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
+## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[Provisión de comentarios hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
 Este artículo explican los nuevos tipos de comentarios hápticos disponible en iOS 10 y cómo implementarlas en Xamarin.iOS.
 
-## <a name="working-with-the-ui-threadiosuser-interfaceios-uiui-threadmd"></a>[Trabajar con el subproceso de interfaz de usuario](~/ios/user-interface/ios-ui/ui-thread.md)
+## <a name="working-with-the-ui-threadiosuser-interfaceios-uiui-threadmd"></a>[Trabajo con el subproceso de la interfaz de usuario](~/ios/user-interface/ios-ui/ui-thread.md)
 
 El código debe realizar solo subproceso de cambios en los controles en la página principal de la interfaz de usuario (o interfaz de usuario). Las actualizaciones de la interfaz de usuario que se producen en un subproceso diferente (por ejemplo, un subproceso de devolución de llamada o en segundo plano) no pueden obtener representa en la pantalla, o incluso podrían provocar un bloqueo.
 

@@ -7,11 +7,11 @@ ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 44df6fce4ec6d667c096da01cfc339ec2afdb077
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ec5ca2883c6e109a67ee8a4ecb25fe938d0df4ec
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="walkthrough-creating-an-application-using-the-reflection-api"></a>Tutorial: Crear una aplicación mediante la API de reflexión
 
@@ -34,7 +34,7 @@ Utilizar la API de reflexión es tan simple como:
 
 Veamos un ejemplo para ilustrar cómo se usa la API de reflexión. En este ejemplo, vamos a crear una pantalla de entrada de datos simple, tal y como se muestra a continuación:
 
- [ ![](reflection-api-walkthrough-images/01-expense-entry.png "En este ejemplo, vamos a crear una pantalla de entrada de datos simple como se muestra aquí")](reflection-api-walkthrough-images/01-expense-entry.png)
+ [![](reflection-api-walkthrough-images/01-expense-entry.png "En este ejemplo, vamos a crear una pantalla de entrada de datos simple como se muestra aquí")](reflection-api-walkthrough-images/01-expense-entry.png#lightbox)
 
  <a name="Creating_a_Class_with_MT.D_Attributes" />
 
@@ -119,7 +119,7 @@ window.RootViewController = nav;
 
 Ahora cuando se ejecuta la aplicación, el título aparece en la `UINavigationController’s` la captura de pantalla siguiente muestra la barra de navegación:
 
- [ ![](reflection-api-walkthrough-images/02-create-task.png "Cuando se ejecuta la aplicación, el título aparece ahora en la barra de navegación de UINavigationControllers")](reflection-api-walkthrough-images/02-create-task.png)
+ [![](reflection-api-walkthrough-images/02-create-task.png "Cuando se ejecuta la aplicación, el título aparece ahora en la barra de navegación de UINavigationControllers")](reflection-api-walkthrough-images/02-create-task.png#lightbox)
 
 Mediante la inclusión de un `UINavigationController`, ahora podemos realizar ventajas de otras características de MT Para los que es necesaria navegación d. Por ejemplo, podemos agregar una enumeración a la `Expense` clase para definir la categoría de los gastos y monte D. creará una pantalla de selección automáticamente. Para mostrar, modificar el `Expense` clase para que incluya un `ExpenseCategory` campo como sigue:
 
@@ -142,11 +142,11 @@ public class Expense
 
 Ejecutar la aplicación ahora resulta en una nueva fila en la tabla de la categoría tal como se muestra:
 
- [ ![](reflection-api-walkthrough-images/03-set-details.png "Ejecutar la aplicación ahora da como resultado una nueva fila en la tabla de la categoría tal como se muestra")](reflection-api-walkthrough-images/03-set-details.png)
+ [![](reflection-api-walkthrough-images/03-set-details.png "Ejecutar la aplicación ahora da como resultado una nueva fila en la tabla de la categoría tal como se muestra")](reflection-api-walkthrough-images/03-set-details.png#lightbox)
 
 Al seleccionar la fila provoca la aplicación navegar a una nueva pantalla con filas que corresponden a la enumeración, tal y como se muestra a continuación:
 
- [ ![](reflection-api-walkthrough-images/04-set-category.png "Al seleccionar la fila provoca la aplicación que vaya a una nueva pantalla con filas que corresponden a la enumeración")](reflection-api-walkthrough-images/04-set-category.png)
+ [![](reflection-api-walkthrough-images/04-set-category.png "Al seleccionar la fila provoca la aplicación que vaya a una nueva pantalla con filas que corresponden a la enumeración")](reflection-api-walkthrough-images/04-set-category.png#lightbox)
 
  <a name="Summary" />
 
