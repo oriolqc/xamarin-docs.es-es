@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 0d08b2ff5131996984dbe41862ad1d6aac33b3d0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e1232c96f5ea978c8adc640160a1e9b7e42663d8
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="introduction-to-ios-6"></a>Introducción a iOS 6
 
 _iOS 6 incluye una serie de nuevas tecnologías para el desarrollo de aplicaciones, que Xamarin.iOS 6 ofrece a los desarrolladores de C#._
 
-[ ![](images/ios6-large.jpg "El logotipo de iOS 6")](images/ios6-large.jpg)
+[ ![](images/ios6-large.jpg "El logotipo de iOS 6")](images/ios6-large.jpg#lightbox)
 
 Con iOS 6 y 6 de Xamarin.iOS, los desarrolladores ahora tienen una gran cantidad de capacidad a su disposición para crear aplicaciones de iOS, los que incluidos esa iPhone 5 de destino.
 Este documento enumeran algunas de las más nuevas y emocionantes características que están disponibles y vínculos a artículos de cada tema. Además, afecta a un par de cambios que será importante, ya que los desarrolladores mueven los iOS 6 y la nueva resolución de iPhone 5.
@@ -92,11 +92,11 @@ En el caso de guardar el estado, las aplicaciones pueden usar en `ViewWillDisapp
 
 dispositivos iPhone 5 tienen una resolución de 640 x 1136. Aplicaciones destinados a versiones anteriores de iOS aparecerán letterboxed cuando se ejecuta en un iPhone 5, tal y como se muestra a continuación:
 
- [ ![](images/01-letterboxed.png "Aplicaciones destinados a versiones anteriores de iOS aparecerán letterboxed cuando se ejecuta en un iPhone 5")](images/01-letterboxed.png)
+ [![](images/01-letterboxed.png "Aplicaciones destinados a versiones anteriores de iOS aparecerán letterboxed cuando se ejecuta en un iPhone 5")](images/01-letterboxed.png#lightbox)
 
 Para la aplicación que aparezca la pantalla completa en iPhone 5, basta con agregar una imagen denominada `Default-568h@2x.png` con una resolución de 640 x 1136. Captura de pantalla siguiente muestra la aplicación en ejecución después de esta imagen se ha incluido:
 
- [ ![](images/02-fullscreen.png "Esta captura de pantalla muestra la aplicación en ejecución después de esta imagen se ha incluido")](images/02-fullscreen.png)
+ [![](images/02-fullscreen.png "Esta captura de pantalla muestra la aplicación en ejecución después de esta imagen se ha incluido")](images/02-fullscreen.png#lightbox)
 
 ### <a name="subclassing-uinavigationbar"></a>Creación de subclases UINavigationBar
 
@@ -130,7 +130,7 @@ navController = new UINavigationController (typeof(CustomNavBar), typeof(UIToolb
 
 Mediante este `UINavigationBar` subclase da como resultado en la vista de la imagen que se muestra como se muestra en la siguiente captura de pantalla:
 
- [ ![](images/03-navbar.png "Con este resultado de la subclase UINavigationBar en la vista de imagen que se muestra como se muestra en esta captura de pantalla")](images/03-navbar.png)
+ [![](images/03-navbar.png "Con este resultado de la subclase UINavigationBar en la vista de imagen que se muestra como se muestra en esta captura de pantalla")](images/03-navbar.png#lightbox)
 
 ### <a name="interface-orientation"></a>Orientación de la interfaz
 
