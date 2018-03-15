@@ -2,16 +2,16 @@
 title: 'fastlane para iOS: cert'
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: 900FA6FF-F3C9-4D35-993E-B0D88E6B1883
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: b98375f8a526cd08f7d11f4ea6bb3498db87009c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a37b0dc1418fd9dda5c59723a96c20855c1c3e1b
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="fastlane-for-ios--cert"></a>fastlane para iOS: cert
 
@@ -60,7 +60,7 @@ De forma predeterminada, se creará un certificado de distribución. Para crear 
 
 cert le solicitará su identificador de Apple y la contraseña, por lo que ahora escriba esto:
 
-[ ![](cert-images/fastlane-image1.png "cert le solicitará su identificador de Apple y la contraseña")](cert-images/fastlane-image1.png)
+[![](cert-images/fastlane-image1.png "Solicitud de cert para facilitar el identificador de Apple y la contraseña")](cert-images/fastlane-image1.png#lightbox)
 
 > [!IMPORTANT]
 > La primera vez que escriba la contraseña, se guardará en la cadena de claves de macOS local. Como alternativa, puede usar variables de entorno para almacenar el nombre de usuario y la contraseña, o puede usar `export fastlane_DONT_STORE_PASSWORD=1` si no quiere que sus contraseñas se almacenen en la cadena de claves. Para más información sobre cómo administrar credenciales con fastlane, consulte la [guía del administrador de credenciales](https://github.com/fastlane/fastlane/blob/master/credentials_manager/README.md) de fastlane.
@@ -71,7 +71,7 @@ El identificador de Apple también se puede pasar como un argumento mediante el 
 
 Si el identificador de Apple está conectado a varios equipos, se mostrarán aquí. Seleccione el número que se corresponda con el equipo que quiera usar:
 
-[ ![](cert-images/fastlane-image2.png "Seleccione el equipo que desea usar")](cert-images/fastlane-image2.png)
+[![](cert-images/fastlane-image2.png "Selección del equipo que se va a usar")](cert-images/fastlane-image2.png#lightbox)
 
 El identificador de equipo también se puede pasar mediante la marca siguiente:
 

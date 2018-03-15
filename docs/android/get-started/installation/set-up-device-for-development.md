@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 6327c00253036f5ede8bf1934f56e6d4bb8f0ecd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64036af82ea49ad4d758a89767ff0da02eef094f
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="set-up-device-for-development"></a>Configurar el dispositivo para el desarrollo
 
@@ -28,13 +28,11 @@ A estas alturas, probablemente ya ha ejecutado su nueva aplicación en el emulad
 
 Cada uno de estos pasos se tratará con más detalle en las secciones siguientes.
 
-<a name="EnableDebugging" />
 
 ## <a name="enable-debugging-on-the-device"></a>Habilitar la depuración en el dispositivo
 
 Puede usar cualquier dispositivo Android para probar una aplicación de Android, pero el dispositivo debe estar configurado correctamente antes de realizar la depuración. Los pasos que se deben llevar a cabo son ligeramente diferentes en función de la versión de Android que se ejecute en el dispositivo.
 
-<a name="EnableDebuggingAndroid4" />
 
 ### <a name="android-40-to-android-41"></a>De Android 4.0 a Android 4.1
 
@@ -46,23 +44,21 @@ En las versiones de Android de 4.0.x a 4.1.x, debe seguir estos pasos para habil
 
 En esta captura de pantalla se muestra la pantalla **Opciones del desarrollador** en un dispositivo que ejecuta Android 4.0.3:
 
-[![Opciones del desarrollador](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png)
+[![Opciones del desarrollador](set-up-device-for-development-images/developer-options-sml.png)](set-up-device-for-development-images/developer-options.png#lightbox)
 
-<a name="EnableDebuggingAndroid42" />
 
 ### <a name="android-42-and-higher"></a>Android 4.2 y versiones posteriores
 
 A partir de Android 4.2 y versiones posteriores, las **Opciones del desarrollador** están ocultas de forma predeterminada. Para que estén disponibles, vaya a **Ajustes > Acerca del dispositivo** y pulse el elemento **Número de compilación** siete veces para que se muestre la pestaña **Opciones de desarrollador**:
 
-[![Elemento de número de compilación](set-up-device-for-development-images/about-phone-sml.png)](set-up-device-for-development-images/about-phone.png)
+[![Elemento de número de compilación](set-up-device-for-development-images/about-phone-sml.png)](set-up-device-for-development-images/about-phone.png#lightbox)
 
 Una vez que la pestaña **Opciones del desarrollador** está disponible en **Ajustes > Sistema**, ábrala para mostrar las opciones del desarrollador:
 
-[![Pantalla de configuración del desarrollador](set-up-device-for-development-images/developer3.png)](set-up-device-for-development-images/developer3.png)
+[![Pantalla de configuración del desarrollador](set-up-device-for-development-images/developer3.png)](set-up-device-for-development-images/developer3.png#lightbox)
 
 Desde aquí puede habilitar las opciones del desarrollador, como la depuración de USB y el modo Permanecer activo.
 
-<a name="USB_Debugging" />
 
 ## <a name="install-usb-drivers"></a>Instalar controladores USB
 
@@ -71,13 +67,12 @@ Este paso no es necesario para OS X. Basta con que conecte el dispositivo al equ
 Puede que sea necesario instalar algunos controladores adicionales para que un equipo Windows reconozca un dispositivo Android conectado mediante USB.
 
 > [!NOTE]
-> **Nota:** Estos son los pasos necesarios para configurar un dispositivo Google Nexus y se proporcionan a modo de referencia. Los pasos correspondientes a su dispositivo específico pueden variar, pero seguirán un patrón similar. Si tiene problemas, busque su dispositivo en Internet.
+> Estos son los pasos necesarios para configurar un dispositivo Google Nexus y se proporcionan a modo de referencia. Los pasos correspondientes a su dispositivo específico pueden variar, pero seguirán un patrón similar. Si tiene problemas, busque su dispositivo en Internet.
 
 Ejecute la aplicación **android.bat** en el directorio **[ruta de instalación de Android SDK]\tools**. De forma predeterminada, el instalador de Xamarin.Android colocará el SDK de Android en la siguiente ubicación de un equipo de Windows:
 
     C:\Users\[username]\AppData\Local\Android\android-sdk
 
-<a name="Download_the_USB_Drivers" />
 
 ### <a name="download-the-usb-drivers"></a>Descargar los controladores USB
 
@@ -86,7 +81,7 @@ Todos los demás dispositivos Android deben usar el [controlador USB de su fabri
 
 Para instalar el paquete del **controlador USB de Google**, inicie Android SDK Manager y expanda la carpeta **Extras**, como se ve en la captura de pantalla siguiente:
 
-[![Paquete de controladores USB de Google seleccionado](set-up-device-for-development-images/usbdriverpackage.png)](set-up-device-for-development-images/usbdriverpackage.png)
+[![Paquete de controladores USB de Google seleccionado](set-up-device-for-development-images/usbdriverpackage.png)](set-up-device-for-development-images/usbdriverpackage.png#lightbox)
 
 Active el cuadro del **controlador USB de Google** y haga clic en el botón **Instalar**.
 Los archivos del controlador se descargan en la siguiente ubicación:
@@ -98,7 +93,6 @@ La ruta de acceso predeterminada para efectuar una instalación de Xamarin.Andro
     C:\Users\[username]\AppData\Local\Android\android-sdk\extras\google\usb_driver
 
 
-<a name="Installing_the_USB_Driver" />
 
 ### <a name="installing-the-usb-driver"></a>Instalar el controlador USB
 
@@ -122,7 +116,6 @@ Para instalar los controladores en Windows 7:
 
 8.  Haga clic en **Siguiente** para instalar el controlador.
 
-<a name="Windows_8" />
 
 ### <a name="installing-unverified-drivers-in-windows-8"></a>Instalar controladores no comprobados en Windows 8
 
@@ -140,7 +133,6 @@ Puede que sea necesario llevar a cabo pasos adicionales para instalar un control
 4.  **Instalar los controladores del dispositivo**: instale los controladores del dispositivo como se describió anteriormente.
 
 
-<a name="ConnectDevice" />
 
 ## <a name="connect-the-device-to-the-computer"></a>Conectar el dispositivo al equipo
 
@@ -150,7 +142,6 @@ El paso final consiste en conectar el dispositivo al equipo. Hay dos maneras de 
 
 -   **Wi-Fi**: es posible conectar un dispositivo Android a un equipo a través de Wi-Fi, sin usar un cable USB. Esta técnica requiere un mayor esfuerzo, pero puede resultar útil si no tiene un cable USB o si el dispositivo se encuentra demasiado lejos para usar un cable USB. En la sección siguiente se explica cómo realizar la conexión a través de Wi-Fi.
 
-<a name="Debug_over_WiFi" />
 
 ### <a name="connecting-over-wifi"></a>Conectar a través de Wi-Fi
 
@@ -186,7 +177,6 @@ Es posible solicitarle a ADB que enumere los dispositivos que están conectados 
 
     adb devices
 
-<a name="Summary" />
 
 ## <a name="summary"></a>Resumen
 

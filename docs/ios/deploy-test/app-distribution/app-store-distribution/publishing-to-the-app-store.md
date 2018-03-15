@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 84db17ede0019e1134b65edaca85ef2401fb3bc0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dfa3d1f89d813f2e57863e615c701cd78c655ac0
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="publishing-to-the-app-store"></a>Publicación en el App Store
 
@@ -133,7 +133,7 @@ Haga lo siguiente:
 4. La vinculación reduce el tamaño total del distribuible de la aplicación eliminando clases, propiedades y métodos sin usar, entre otros. En la mayoría de los casos, debe dejarse el valor predeterminado de **Link SDK assemblies only (Vincular solo ensamblados del SDK)**. En algunas situaciones, como cuando se usan algunas bibliotecas de terceros determinadas, puede verse forzado a establecer este valor en **No vincular** para impedir que se quiten los elementos necesarios. Para obtener más información, consulte la guía [Mecánica de la compilación iOS](~/ios/deploy-test/ios-build-mechanics.md).
 5. La casilla **Optimize PNG image files for iOS (Optimizar archivos de imagen PNG para iOS)** debe estar activada, ya que ayudará a disminuir más el tamaño del entregable de la aplicación.
 6. La depuración _no_ debe habilitarse porque hará que la compilación sea innecesariamente grande.
-8. En el caso de iOS 11, tendrá que seleccionar una de las arquitecturas de dispositivo que admite **ARM64**. Para obtener más información sobre la compilación de dispositivos iOS de 64 bits, vea la sección **Habilitar compilaciones de 64 bits de aplicaciones de Xamarin.iOS** de la documentación [32/64 bit Platform Considerations (Consideraciones de la plataforma de 32 o 64 bits)](~/cross-platform/macios/32-and-64.md).
+8. En el caso de iOS 11, tendrá que seleccionar una de las arquitecturas de dispositivo que admite **ARM64**. Para obtener más información sobre la compilación de dispositivos iOS de 64 bits, vea la sección **Habilitar compilaciones de 64 bits de aplicaciones de Xamarin.iOS** de la documentación [32/64 bit Platform Considerations (Consideraciones de la plataforma de 32 o 64 bits)](~/cross-platform/macios/32-and-64/index.md).
 9. Puede que quiera usar opcionalmente el compilador **LLVM** que crea código más rápido y más pequeño, en cambio, tarda más en compilarse.
 10. Teniendo en cuenta las necesidades de la aplicación, puede que también quiera ajustar el tipo de **Recolección de elementos no usados** que se está usando y la configuración de **Internacionalización**.
 11. Guarde los cambios en la configuración de compilación.
@@ -157,7 +157,7 @@ Haga lo siguiente:
 
     ![](publishing-to-the-app-store-images/configurevs02.png "Pestaña Opciones avanzadas")
 
-8. Si su aplicación de Xamarin.iOS tiene como destino dispositivos iOS de 64 bits e iOS 8, necesitará seleccionar una de las arquitecturas de dispositivos que admita **ARM64**. Para obtener más información sobre la compilación de dispositivos iOS de 64 bits, vea la sección **Habilitar compilaciones de 64 bits de aplicaciones de Xamarin.iOS** de la documentación [32/64 bit Platform Considerations (Consideraciones de la plataforma de 32 o 64 bits)](~/cross-platform/macios/32-and-64.md).
+8. Si su aplicación de Xamarin.iOS tiene como destino dispositivos iOS de 64 bits e iOS 8, necesitará seleccionar una de las arquitecturas de dispositivos que admita **ARM64**. Para obtener más información sobre la compilación de dispositivos iOS de 64 bits, vea la sección **Habilitar compilaciones de 64 bits de aplicaciones de Xamarin.iOS** de la documentación [32/64 bit Platform Considerations (Consideraciones de la plataforma de 32 o 64 bits)](~/cross-platform/macios/32-and-64/index.md).
 9. Puede que quiera usar opcionalmente el compilador **LLVM** que crea código más rápido y más pequeño, en cambio, tarda más en compilarse.
 10. Teniendo en cuenta las necesidades de la aplicación, puede que también quiera ajustar el tipo de **Recolección de elementos no usados** que se está usando y la configuración de **Internacionalización**.
 11. Guarde los cambios en la configuración de compilación.
@@ -351,16 +351,16 @@ El envío de su aplicación a Apple para su revisión se realiza mediante la apl
 
 1. Seleccione *Deliver Your App* (Entregar la aplicación) y haga clic en el botón *Elegir*:
 
-    [ ![](publishing-to-the-app-store-images/publishvs01.png "Selección de Deliver Your App (Entregar la aplicación)")](publishing-to-the-app-store-images/publishvs01.png)
+    [![](publishing-to-the-app-store-images/publishvs01.png "Selección de Deliver Your App (Entregar la aplicación)")](publishing-to-the-app-store-images/publishvs01.png#lightbox)
 
 2. Seleccione el archivo IPA o ZIP que ha creado anteriormente y haga clic en el botón **Aceptar**.
 
 3. Application Loader validará el archivo:
 
-    [ ![](publishing-to-the-app-store-images/publishvs02.png "Pantalla de validación")](publishing-to-the-app-store-images/publishvs02.png)
+    [![](publishing-to-the-app-store-images/publishvs02.png "Pantalla de validación")](publishing-to-the-app-store-images/publishvs02.png#lightbox)
 4. Haga clic en el botón *Siguiente* y la aplicación se validará en el App Store:
 
-    [ ![](publishing-to-the-app-store-images/publishvs03.png "Validación en App Store")](publishing-to-the-app-store-images/publishvs03.png)
+    [![](publishing-to-the-app-store-images/publishvs03.png "Validación en App Store")](publishing-to-the-app-store-images/publishvs03.png#lightbox)
 5. Haga clic en el botón **Enviar** para enviar la aplicación a Apple para su revisión.
 6. Application Loader le informará cuando el archivo se haya cargado correctamente.
 
@@ -368,7 +368,7 @@ El envío de su aplicación a Apple para su revisión se realiza mediante la apl
 
 Si vuelve a registrarse en iTunes Connect y selecciona su aplicación de la lista de aplicaciones disponibles, el estado en iTunes Connect debe mostrar ahora que es **Waiting for Review (Esperando revisión)** (puede mostrar **Upload Received (Carga recibida)** temporalmente mientras se procesa):
 
-[ ![](publishing-to-the-app-store-images/image21.png "El estado en iTunes Connect debe mostrar que está esperando revisión")](publishing-to-the-app-store-images/image21.png)
+[![](publishing-to-the-app-store-images/image21.png "El estado en iTunes Connect debe mostrar que está esperando revisión")](publishing-to-the-app-store-images/image21.png#lightbox)
 
 ## <a name="summary"></a>Resumen
 

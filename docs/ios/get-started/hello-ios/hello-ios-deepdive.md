@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: bc89450a5c9a00ab9f088ca9fff345ebbf7b6c4c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d7a458a0a0c2da1dbb40ae7222fcd35cf7172953
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello, iOS: revisión en profundidad
 
@@ -102,7 +102,7 @@ Para que una aplicación de iOS pueda cargar una interfaz de usuario, es necesar
 
 En esta sección se cubren las relaciones que se muestran en el siguiente diagrama:
 
-[ ![](hello-ios-deepdive-images/image32.png "Las relaciones Arquitectura y aspectos básicos de la aplicación se ilustran en este diagrama")](hello-ios-deepdive-images/image32.png)
+[![](hello-ios-deepdive-images/image32.png "Ilustración de las relaciones Arquitectura y aspectos básicos de la aplicación en este diagrama")](hello-ios-deepdive-images/image32.png#lightbox)
 
 Empecemos por el principio con información sobre lo que ocurre al iniciar la aplicación.
 
@@ -197,7 +197,7 @@ Para seleccionar la _vista_, haga clic en la parte blanca de la escena. La vista
 
 A la izquierda de la escena aparece una flecha gris con un icono de marca, como se muestra en la siguiente captura de pantalla:
 
- [ ![](hello-ios-deepdive-images/image37.png "Flecha gris con un icono de marca")](hello-ios-deepdive-images/image37.png)
+ [![](hello-ios-deepdive-images/image37.png "Flecha gris con un icono de marca")](hello-ios-deepdive-images/image37.png#lightbox)
 
 La flecha gris representa una transición de guión gráfico llamada *Segoe*, del inglés "seg-way". Puesto que este segoe no tiene ningún origen, se denomina *segoe sin origen*. Un segoe sin origen apunta a la primera escena, cuyas vistas se cargan en la ventana de la aplicación al iniciarse la misma. La escena y las vistas que incluye serán lo primero que verá el usuario al cargar la aplicación.
 
@@ -243,7 +243,7 @@ En la siguiente sección se desglosa la jerarquía de las vistas de contenido re
 
 Una _jerarquía de vistas de contenido_ es una pila de vistas y subvistas administrada por un único controlador de vistas, como se muestra en el diagrama siguiente:
 
- [ ![](hello-ios-deepdive-images/image41.png "Jerarquía de vistas del contenido")](hello-ios-deepdive-images/image41.png)
+ [![](hello-ios-deepdive-images/image41.png "Jerarquía de vistas del contenido")](hello-ios-deepdive-images/image41.png#lightbox)
 
 Podemos hacer que la jerarquía de vistas de contenido de `ViewController` sea más fácil de ver, para lo cual será necesario cambiar el color de fondo de la vista raíz temporalmente por el amarillo en la sección de vista del **Controlador de propiedades**, como se muestra en la siguiente captura de pantalla:
 
@@ -259,7 +259,7 @@ Podemos hacer que la jerarquía de vistas de contenido de `ViewController` sea m
 
 En el diagrama siguiente se muestran las relaciones entre la ventana, las vistas, las subvistas y el controlador de vistas que, de forma conjunta, proporcionan la interfaz de usuario a la pantalla del dispositivo:
 
- [ ![](hello-ios-deepdive-images/image43.png "Relaciones entre las ventanas, las vistas, las subvistas y el controlador de vistas")](hello-ios-deepdive-images/image43.png)
+ [![](hello-ios-deepdive-images/image43.png "Relaciones entre las ventanas, las vistas, las subvistas y el controlador de vistas")](hello-ios-deepdive-images/image43.png#lightbox)
 
 En la siguiente sección se describe cómo trabajar con vistas de código y cómo programar para la interacción del usuario con los controladores de vistas y el ciclo de vida de las vistas.
 
@@ -331,7 +331,7 @@ El rol más importante del controlador de vistas es responder a la interacción 
 Ahora que comprende mejor las vistas y los controladores de vistas, veamos cómo funcionan.
 En el proyecto `Phoneword_iOS`, se ha agregado un botón llamado `TranslateButton` a la jerarquía de vistas de contenido:
 
- [ ![](hello-ios-deepdive-images/image1.png "Se ha agregado un botón llamado TranslateButton a la jerarquía de vistas de contenido")](hello-ios-deepdive-images/image1.png)
+ [![](hello-ios-deepdive-images/image1.png "Agregado un botón llamado TranslateButton a la jerarquía de vistas de contenido")](hello-ios-deepdive-images/image1.png#lightbox)
 
 Cuando se asigna un **nombre** al control del **botón** en el **Panel de propiedades**, iOS Designer lo asigna automáticamente a un control en **ViewController.designer.cs**, de tal modo que `TranslateButton` está disponible en la clase `ViewController`. Los controles están disponibles primero en la fase `ViewDidLoad` del ciclo de vida de vistas, por lo que este método de ciclo de vida se utiliza para responder a los toques del usuario:
 
@@ -432,7 +432,7 @@ Cuando se aprovisiona el dispositivo, puede realizar implementaciones en él al 
 
 La aplicación se implementará en el dispositivo iOS:
 
-[ ![](hello-ios-deepdive-images/image1.png "La aplicación se implementará en el dispositivo iOS y se ejecutará")](hello-ios-deepdive-images/image1.png)
+[![](hello-ios-deepdive-images/image1.png "Implementación y ejecución de la aplicación en el dispositivo iOS")](hello-ios-deepdive-images/image1.png#lightbox)
 
 ### <a name="generate-custom-icons-and-launch-images"></a>Generación de iconos personalizados e imágenes de inicio
 

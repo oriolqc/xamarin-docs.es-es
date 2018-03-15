@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 6bb712da5becbe9c19dddf3deb393f0d50cd726b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4da96f3119fb46fbeb22ad3d6c68b3099f6d0698
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="in-house-distribution"></a>Distribución interna
 
@@ -56,15 +56,15 @@ Es importante tener en cuenta que no se pueden renovar los certificados expirado
 3. Haga clic en el botón **+** para crear un nuevo certificado.
 4. En el encabezado *Producción*, seleccione **In-House and Ad Hoc** (Interna y ad hoc):
 
-   [ ![](in-house-distribution-images/createcertmanually01.png "Seleccione Interna y ad hoc")](in-house-distribution-images/createcertmanually01.png)
+   [![](in-house-distribution-images/createcertmanually01.png "Selección Interna y ad hoc")](in-house-distribution-images/createcertmanually01.png#lightbox)
 
 5. Haga clic en Continuar y siga las instrucciones para crear una solicitud de firma de certificado a través del acceso a cadena de claves:
 
-   [ ![](in-house-distribution-images/createcertmanually02.png "Cree una solicitud de firma de certificado a través de Acceso a llaves")](in-house-distribution-images/createcertmanually02.png)
+   [![](in-house-distribution-images/createcertmanually02.png "Creación de una solicitud de firma de certificado a través de Acceso a llaves")](in-house-distribution-images/createcertmanually02.png#lightbox)
 
 6. Una vez que haya creado la CSR tal como se indica, haga clic en Continuar y cárguela en el Centro de usuarios registrados:
 
-   [ ![](in-house-distribution-images/createcertmanually03.png "Cargue la CSR en el Centro de usuarios registrados")](in-house-distribution-images/createcertmanually03.png)
+   [![](in-house-distribution-images/createcertmanually03.png "Carga de la CSR en el Centro de usuarios registrados")](in-house-distribution-images/createcertmanually03.png#lightbox)
 
 7. Haga clic en Generar para crear el certificado.
 8. Descargue el certificado completado y haga doble clic en el archivo para instalarlo.
@@ -74,15 +74,15 @@ Como alternativa, se puede solicitar un certificado mediante el cuadro de diálo
 
 1. Seleccione el equipo y haga clic en *Ver detalles*:
 
-    [ ![](in-house-distribution-images/selectteam.png "Seleccione el equipo")](in-house-distribution-images/selectteam.png)
+    [![](in-house-distribution-images/selectteam.png "Selección del equipo")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Luego, haga clic en el botón **Crear** situado junto a **iOS Distribution Certificate** (Certificado de distribución de iOS):
 
-   [ ![](in-house-distribution-images/selectcert.png "Cree el certificado de distribución de iOS")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "Creación del certificado de distribución de iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
 2.   Después, haga clic en el botón **más (+)** y seleccione **iOS App Store** (App Store de iOS):
 
-   [ ![](in-house-distribution-images/selectcert.png "Seleccione App Store de iOS")](in-house-distribution-images/selectcert.png)
+   [![](in-house-distribution-images/selectcert.png "Selección de App Store de iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
 <a name="profile" />
 
@@ -105,23 +105,23 @@ Una vez que tenga los componentes necesarios para crear un perfil de distribuci�
 
 1. Vuelva al portal de aprovisionamiento de Apple y seleccione **Aprovisionamiento** > **Distribución**:
 
-   [![](in-house-distribution-images/distribute01.png "Selección de Aprovisionamiento > Distribución")](in-house-distribution-images/distribute01.png)
+   [![](in-house-distribution-images/distribute01.png "Selección de Aprovisionamiento > Distribución")](in-house-distribution-images/distribute01.png#lightbox)
 
 2. Haga clic en el botón **+** y seleccione el tipo de perfil de distribución que quiere crear como **Interno**:
 
-   [![](in-house-distribution-images/distribute02.png "Cree un perfil de distribución de interna")](in-house-distribution-images/distribute02.png)
+   [![](in-house-distribution-images/distribute02.png "Cree un perfil de distribución de interna")](in-house-distribution-images/distribute02.png#lightbox)
 
 3. Haga clic en el botón **Continuar** y seleccione el identificador de la aplicación en la lista desplegable para la que quiere crear un perfil de distribución:
 
-   [![](in-house-distribution-images/distribute03.png "Selección de Id. de aplicación en la lista desplegable")](in-house-distribution-images/distribute03.png)
+   [![](in-house-distribution-images/distribute03.png "Selección de Id. de aplicación en la lista desplegable")](in-house-distribution-images/distribute03.png#lightbox)
 
 4. Haga clic en el botón **Continuar** y seleccione el certificado de distribución necesario para firmar la aplicación:
 
-   [![](in-house-distribution-images/distribute04.png "Seleccione el certificado de distribución necesario para firmar la aplicación")](in-house-distribution-images/distribute04.png)
+   [![](in-house-distribution-images/distribute04.png "Seleccione el certificado de distribución necesario para firmar la aplicación")](in-house-distribution-images/distribute04.png#lightbox)
 
 6. Haga clic en el botón **Continuar** y escriba un **Nombre** para el nuevo perfil de distribución:
 
-   [![](in-house-distribution-images/distribute06.png "Escribir un nombre para el nuevo perfil de distribución")](in-house-distribution-images/distribute06.png)
+   [![](in-house-distribution-images/distribute06.png "Escribir un nombre para el nuevo perfil de distribución")](in-house-distribution-images/distribute06.png#lightbox)
 
 7. Haga clic en el botón **Generar** para crear el nuevo perfil y finalizar el proceso.
 

@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 7ce674ea38bc847bc9064a5a61113900a45b991d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 434a12c26a5823b082751c95c2090b22c39cf081
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Inicio rápido de Xamarin.Forms
 
 En este tutorial se muestra cómo crear una aplicación que convierte un número de teléfono alfanumérico especificado por el usuario en un número de teléfono numérico y que llama a ese número. A continuación se muestra la aplicación final:
 
-[![](quickstart-images/intro-app-examples-sml.png "Aplicación Phoneword")](quickstart-images/intro-app-examples.png "Aplicación Phoneword")
+[![](quickstart-images/intro-app-examples-sml.png "Aplicación Phoneword")](quickstart-images/intro-app-examples.png#lightbox "Aplicación Phoneword")
 
 Cree la aplicación Phoneword de la siguiente forma:
 
@@ -113,7 +113,7 @@ Cree la aplicación Phoneword de la siguiente forma:
         }
 
   > [!NOTE]
-> **Nota**: Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán más adelante.
+  > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán más adelante.
 
   Guarde los cambios en **MainPage.xaml.cs** presionando **CTRL+S** y cierre el archivo.
 
@@ -565,7 +565,7 @@ Cree la aplicación Phoneword de la siguiente forma:
         }
 
   > [!NOTE]
-> **Nota**: Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán más adelante.
+  > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán más adelante.
 
   Guarde los cambios en **MainPage.xaml.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
 

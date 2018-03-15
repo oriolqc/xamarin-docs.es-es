@@ -8,17 +8,17 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 269621056f0db807d8aebc8400b20d902d710b2c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7b1d56c62fe54d5b1e196e20e1a6989b542da1be
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="helloios-quickstart"></a>Inicio rápido de Hello.iOS
 
 Esta guía describe cómo crear una aplicación que convierte un número de teléfono alfanumérico escrito por el usuario en un número de teléfono numérico y, después, llama a ese número. La aplicación final tiene este aspecto:
 
- [ ![](hello-ios-quickstart-images/image1.png "Aplicación Inicio rápido de Hello.iOS")](hello-ios-quickstart-images/image1.png)
+ [![](hello-ios-quickstart-images/image1.png "Aplicación Inicio rápido de Hello.iOS")](hello-ios-quickstart-images/image1.png#lightbox)
 
 
 <a name="Requirements" />

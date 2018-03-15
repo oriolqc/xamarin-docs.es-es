@@ -7,12 +7,12 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 01/25/2018
-ms.openlocfilehash: 20c7c5a9aaaf13cd9f4050254c7234ada78d926d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/01/2018
+ms.openlocfilehash: 447657d6f8509623272f37c48c7aecbdfd4cbaad
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Administrador de dispositivos Android de Xamarin
 
@@ -20,7 +20,6 @@ _El Administrador de dispositivos Xamarin Android, actualmente en versión preli
 
 ![Actualmente en versión preliminar](~/media/shared/preview.png)
 
-<a name="overview" />
  
 ## <a name="overview"></a>Información general
 
@@ -34,16 +33,16 @@ A partir de Android SDK Tools versión 26.0.1, Google ha quitado la compatibilid
 
 En esta guía se explica cómo instalar y usar el Administrador de dispositivos Android de Xamarin para Visual Studio en Windows (o [Mac](?tabs=vsmac)):
 
-[![Captura de pantalla del Administrador de dispositivos Android de Xamarin en la pestaña Dispositivos](xamarin-device-manager-images/win/01-devices-dialog-sml.png)](xamarin-device-manager-images/win/01-devices-dialog.png)
+[![Captura de pantalla del Administrador de dispositivos Android de Xamarin en la pestaña Dispositivos](xamarin-device-manager-images/win/01-devices-dialog-sml.png)](xamarin-device-manager-images/win/01-devices-dialog.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 En esta guía se explica cómo instalar y usar el Administrador de dispositivos Android de Xamarin para Visual Studio en Mac (o [Windows](?tabs=vswin)):
 
-[![Captura de pantalla del Administrador de dispositivos Android de Xamarin en la pestaña Dispositivos](xamarin-device-manager-images/mac/01-devices-dialog-sml.png)](xamarin-device-manager-images/mac/01-devices-dialog.png)
+[![Captura de pantalla del Administrador de dispositivos Android de Xamarin en la pestaña Dispositivos](xamarin-device-manager-images/mac/01-devices-dialog-sml.png)](xamarin-device-manager-images/mac/01-devices-dialog.png#lightbox)
 
 > [!NOTE]
-> **Nota:** Esta guía solo se aplica a Visual Studio para Mac.
+> Esta guía solo se aplica a Visual Studio para Mac.
 Xamarin Studio no es compatible con el Administrador de dispositivos Android de Xamarin.
 
 -----
@@ -52,9 +51,6 @@ El Administrador de dispositivos Android de Xamarin se usa para crear y configur
 Cada AVD es una configuración del emulador que simula un dispositivo Android físico. Esto permite ejecutar y probar la aplicación en diversas configuraciones que simulan diferentes dispositivos Android físicos. El Administrador de dispositivos Android de Xamarin reemplaza al administrador AVD independiente de Google (que está en desuso).
 
 En esta guía se describe cómo instalar e iniciar el Administrador de dispositivos Android. Obtendrá información sobre cómo crear, duplicar, personalizar e iniciar dispositivos virtuales. También se explica cómo configurar las propiedades de cada dispositivo virtual (como el nivel de API, la CPU, la memoria y la resolución), cómo habilitar o deshabilitar los sensores simulados (como el acelerómetro, el GPS, la orientación y el sensor de luz) y cómo configurar el tipo de aceleración de hardware usada por ese dispositivo virtual.
-
-
-<a name="requirements" />
 
 ## <a name="requirements"></a>Requisitos
 
@@ -99,11 +95,10 @@ Siga estos pasos para instalar el Administrador de dispositivos Android de Xamar
 
 2. Haga doble clic en **AndroidDevices.pkg** y siga las instrucciones de instalación: 
 
-    [![Asistente para la instalación del Administrador de dispositivos Android de Xamarin](xamarin-device-manager-images/mac/30-installer-sml.png)](xamarin-device-manager-images/mac/30-installer.png)
+    [![Asistente para la instalación del Administrador de dispositivos Android de Xamarin](xamarin-device-manager-images/mac/30-installer-sml.png)](xamarin-device-manager-images/mac/30-installer.png#lightbox)
 
 -----
 
-<a name="dev-manager" /> 
  
 ## <a name="launching-the-device-manager"></a>Iniciar el Administrador de dispositivos
 
@@ -111,7 +106,7 @@ Siga estos pasos para instalar el Administrador de dispositivos Android de Xamar
 
 En la versión preliminar 3 de Visual Studio 15.6 y posteriores, puede iniciar el Administrador de dispositivos Android de Xamarin desde el menú **Herramientas**. Si usa la versión preliminar 3 de Visual Studio 15.6 o posteriores, haga clic en **Herramientas > Administrador de Android Emulator** para iniciar el Administrador de dispositivos:
 
-[![Inicio desde el menú Herramientas](xamarin-device-manager-images/win/04-tools-menu-sml.png)](xamarin-device-manager-images/win/04-tools-menu.png)
+[![Inicio desde el menú Herramientas](xamarin-device-manager-images/win/04-tools-menu-sml.png)](xamarin-device-manager-images/win/04-tools-menu.png#lightbox)
 
 Si usa una versión anterior de Visual Studio, es necesario iniciar el Administrador de dispositivos Android de Xamarin desde el menú **Inicio** de Windows.
 
@@ -125,11 +120,11 @@ Haga clic con el botón derecho en **Xamarin Android Device Manager** (Administr
 
 En la versión preliminar 3 de Visual Studio para Mac 7.6, actualmente en el canal alfa, o bien versiones posteriores, puede iniciar el Administrador de dispositivos Android de Xamarin en **Herramientas > Administrador de emuladores**:
 
-[![Inicio desde el menú Herramientas](xamarin-device-manager-images/mac/16-tools-menu-sml.png)](xamarin-device-manager-images/mac/16-tools-menu.png)
+[![Inicio desde el menú Herramientas](xamarin-device-manager-images/mac/16-tools-menu-sml.png)](xamarin-device-manager-images/mac/16-tools-menu.png#lightbox)
 
 Si usa una versión anterior de Visual Studio para Mac, es necesario iniciar el Administrador de dispositivos Android de Xamarin de forma independiente. Busque **Dispositivos Android** en la carpeta **Aplicaciones** y haga doble clic en él para iniciarlo:
 
-[![Ubicación del Administrador de dispositivos Android de Xamarin en Finder](xamarin-device-manager-images/mac/31-location-in-finder-sml.png)](xamarin-device-manager-images/mac/31-location-in-finder.png)
+[![Ubicación del Administrador de dispositivos Android de Xamarin en Finder](xamarin-device-manager-images/mac/31-location-in-finder-sml.png)](xamarin-device-manager-images/mac/31-location-in-finder.png#lightbox)
 
 
 -----
@@ -151,17 +146,16 @@ Si ve este cuadro de diálogo de error, haga clic en **Aceptar** para abrir Andr
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Instalar Android SDK Tools 26.0](xamarin-device-manager-images/win/03-sdk-tools-sml.png)](xamarin-device-manager-images/win/03-sdk-tools.png)
+[![Instalar Android SDK Tools 26.0](xamarin-device-manager-images/win/03-sdk-tools-sml.png)](xamarin-device-manager-images/win/03-sdk-tools.png#lightbox)
 
 Después de instalar estos paquetes, puede cerrar SDK Manager y volver a iniciar el Administrador de dispositivos Android.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-[![Instalar Android SDK Tools 26.0](xamarin-device-manager-images/mac/03-sdk-tools-sml.png)](xamarin-device-manager-images/mac/03-sdk-tools.png)
+[![Instalar Android SDK Tools 26.0](xamarin-device-manager-images/mac/03-sdk-tools-sml.png)](xamarin-device-manager-images/mac/03-sdk-tools.png#lightbox)
 
 -----
 
-<a name="devices" />
  
 ## <a name="main-screen"></a>Pantalla principal
 
@@ -169,13 +163,13 @@ Después de instalar estos paquetes, puede cerrar SDK Manager y volver a iniciar
 
 Cuando inicie el Administrador de dispositivos Android por primera vez, aparecerá una pantalla con todos los dispositivos virtuales configurados. Para cada dispositivo, se muestran el **nombre**, el **sistema operativo** (nivel de API de Android), la **CPU**, el tamaño de **memoria** y la resolución de pantalla:
 
-[![Lista de los dispositivos instalados y sus parámetros](xamarin-device-manager-images/win/05-installed-list-sml.png)](xamarin-device-manager-images/win/05-installed-list.png)
+[![Lista de los dispositivos instalados y sus parámetros](xamarin-device-manager-images/win/05-installed-list-sml.png)](xamarin-device-manager-images/win/05-installed-list.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Cuando inicie el Administrador de dispositivos Android por primera vez, aparecerá una pantalla con todos los dispositivos virtuales configurados. Para cada dispositivo, se muestran el **nombre**, la **imagen de sistema** (nivel de API de Android), la **CPU**, el tamaño de **memoria** y la resolución de pantalla:
 
-[![Lista de los dispositivos instalados y sus parámetros](xamarin-device-manager-images/mac/05-devices-list-sml.png)](xamarin-device-manager-images/mac/05-devices-list.png)
+[![Lista de los dispositivos instalados y sus parámetros](xamarin-device-manager-images/mac/05-devices-list-sml.png)](xamarin-device-manager-images/mac/05-devices-list.png#lightbox)
 
 -----
 
@@ -183,13 +177,13 @@ Cuando inicie el Administrador de dispositivos Android por primera vez, aparecer
 
 Al hacer clic en un dispositivo de la lista, aparece el botón **Iniciar** a la derecha. Puede hacer clic en el botón **Iniciar** para iniciar el emulador con este dispositivo virtual:
 
-[![Botón Iniciar de una imagen de dispositivo](xamarin-device-manager-images/win/06-start-button-sml.png)](xamarin-device-manager-images/win/06-start-button.png)
+[![Botón Iniciar de una imagen de dispositivo](xamarin-device-manager-images/win/06-start-button-sml.png)](xamarin-device-manager-images/win/06-start-button.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Haga clic en el botón **Reproducir** para iniciar el emulador con el dispositivo virtual de su elección:
  
-[![Botón Iniciar de una imagen de dispositivo](xamarin-device-manager-images/mac/06-start-button-sml.png)](xamarin-device-manager-images/mac/06-start-button.png)
+[![Botón Iniciar de una imagen de dispositivo](xamarin-device-manager-images/mac/06-start-button-sml.png)](xamarin-device-manager-images/mac/06-start-button.png#lightbox)
  
 -----
 
@@ -197,17 +191,16 @@ Haga clic en el botón **Reproducir** para iniciar el emulador con el dispositiv
 
 Una vez que el emulador se haya iniciado con el dispositivo virtual seleccionado, el botón **Iniciar** cambiará al botón **Detener**, que puede usar para detener el emulador:
 
-[![Botón Detener del dispositivo en ejecución](xamarin-device-manager-images/win/07-stop-button-sml.png)](xamarin-device-manager-images/win/07-stop-button.png)
+[![Botón Detener del dispositivo en ejecución](xamarin-device-manager-images/win/07-stop-button-sml.png)](xamarin-device-manager-images/win/07-stop-button.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Una vez que el emulador se haya iniciado con el dispositivo virtual seleccionado, el botón **Reproducir** cambiará al botón **Detener**, que puede usar para detener el emulador:
  
-[![Botón Detener del dispositivo en ejecución](xamarin-device-manager-images/mac/07-stop-button-sml.png)](xamarin-device-manager-images/mac/07-stop-button.png)
+[![Botón Detener del dispositivo en ejecución](xamarin-device-manager-images/mac/07-stop-button-sml.png)](xamarin-device-manager-images/mac/07-stop-button.png#lightbox)
  
 -----
 
-<a name="device-new" />
  
 ### <a name="new-device"></a>Dispositivo nuevo
 
@@ -215,13 +208,13 @@ Una vez que el emulador se haya iniciado con el dispositivo virtual seleccionado
 
 Para crear un dispositivo, haga clic en el botón **Nuevo** (situado en la parte superior derecha de la pantalla):
 
-[![Botón Nuevo para crear un dispositivo](xamarin-device-manager-images/win/08-new-button-sml.png)](xamarin-device-manager-images/win/08-new-button.png)
+[![Botón Nuevo para crear un dispositivo](xamarin-device-manager-images/win/08-new-button-sml.png)](xamarin-device-manager-images/win/08-new-button.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Para crear un dispositivo, haga clic en el botón **Nuevo dispositivo** (situado en la parte superior derecha de la pantalla):
  
-[![Botón Nuevo para crear un dispositivo](xamarin-device-manager-images/mac/08-new-button-sml.png)](xamarin-device-manager-images/mac/08-new-button.png)
+[![Botón Nuevo para crear un dispositivo](xamarin-device-manager-images/mac/08-new-button-sml.png)](xamarin-device-manager-images/mac/08-new-button.png#lightbox)
  
 -----
 
@@ -229,27 +222,27 @@ Para crear un dispositivo, haga clic en el botón **Nuevo dispositivo** (situado
 
 Al hacer clic en **Nuevo**, aparece la pantalla **Nuevo dispositivo**:
 
-[![Pantalla Nuevo dispositivo del Administrador de dispositivos](xamarin-device-manager-images/win/09-new-device-editor-sml.png)](xamarin-device-manager-images/win/09-new-device-editor.png)
+[![Pantalla Nuevo dispositivo del Administrador de dispositivos](xamarin-device-manager-images/win/09-new-device-editor-sml.png)](xamarin-device-manager-images/win/09-new-device-editor.png#lightbox)
 
 Para configurar un nuevo dispositivo en la pantalla **Nuevo dispositivo**, siga estos pasos:
 
 1. Seleccione el dispositivo físico que quiera emular. Para ello, haga clic en el menú desplegable **Dispositivo**:
 
-    [![Menú desplegable Dispositivo](xamarin-device-manager-images/win/10-device-menu-sml.png)](xamarin-device-manager-images/win/10-device-menu.png)
+    [![Menú desplegable Dispositivo](xamarin-device-manager-images/win/10-device-menu-sml.png)](xamarin-device-manager-images/win/10-device-menu.png#lightbox)
 
 2. Seleccione la imagen de sistema que quiera usar con este dispositivo virtual. Para ello, haga clic en el menú desplegable **Imagen de sistema**. En este menú aparecen las imágenes de sistema instaladas en la sección **Instalado**. En la sección **Descargar** se muestran las imágenes de sistema que no están disponibles actualmente en el equipo de desarrollo, pero que se pueden instalar de forma automática:
 
-    [![Menú desplegable Imagen de sistema](xamarin-device-manager-images/win/11-system-image-menu-sml.png)](xamarin-device-manager-images/win/11-system-image-menu.png)
+    [![Menú desplegable Imagen de sistema](xamarin-device-manager-images/win/11-system-image-menu-sml.png)](xamarin-device-manager-images/win/11-system-image-menu.png#lightbox)
 
 3. Asigne un nuevo nombre al dispositivo. En el ejemplo siguiente, el nuevo dispositivo se denomina **Nexus 5 API 25**:
 
-    [![Asignar un nombre al nuevo dispositivo](xamarin-device-manager-images/win/12-device-name-sml.png)](xamarin-device-manager-images/win/12-device-name.png)
+    [![Asignar un nombre al nuevo dispositivo](xamarin-device-manager-images/win/12-device-name-sml.png)](xamarin-device-manager-images/win/12-device-name.png#lightbox)
 
 4. Edite las propiedades que necesite modificar. Para realizar cambios en las propiedades, vea [Propiedades de perfil](#properties) más adelante en esta guía.
 
 5. Agregue las propiedades adicionales que necesite establecer explícitamente. En la pantalla **Nuevo dispositivo** solo se muestran las propiedades que se modifican con más frecuencia, pero puede hacer clic en el menú desplegable **Agregar propiedad** (en la esquina inferior izquierda) para agregar propiedades adicionales. En el ejemplo siguiente, se agrega la propiedad `hw.lcd.backlight`:
 
-    [![Menú desplegable Agregar propiedad](xamarin-device-manager-images/win/13-add-property-menu-sml.png)](xamarin-device-manager-images/win/13-add-property-menu.png)
+    [![Menú desplegable Agregar propiedad](xamarin-device-manager-images/win/13-add-property-menu-sml.png)](xamarin-device-manager-images/win/13-add-property-menu.png#lightbox)
 
 6. Haga clic en el botón **Crear** (esquina inferior derecha) para crear el dispositivo:
 
@@ -261,37 +254,37 @@ Para configurar un nuevo dispositivo en la pantalla **Nuevo dispositivo**, siga 
 
 8. El Administrador de dispositivos Android agrega el nuevo dispositivo a la lista de dispositivos virtuales instalados, con el indicador de progreso **Creando** mientras crea el dispositivo:
 
-    [![Indicador de progreso de creación](xamarin-device-manager-images/win/16-creating-the-device-sml.png)](xamarin-device-manager-images/win/16-creating-the-device.png)
+    [![Indicador de progreso de creación](xamarin-device-manager-images/win/16-creating-the-device-sml.png)](xamarin-device-manager-images/win/16-creating-the-device.png#lightbox)
 
 9. Una vez finalizado el proceso de creación, el nuevo dispositivo se muestra en la lista de dispositivos virtuales instalados con el botón **Iniciar**, listo para su inicio:
 
-   [![Dispositivo recién creado listo para su inicio](xamarin-device-manager-images/win/17-created-device-sml.png)](xamarin-device-manager-images/win/17-created-device.png)
+   [![Dispositivo recién creado listo para su inicio](xamarin-device-manager-images/win/17-created-device-sml.png)](xamarin-device-manager-images/win/17-created-device.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Al hacer clic en **Nuevo dispositivo**, aparece la pantalla **Nuevo dispositivo**:
 
-[![Pantalla Nuevo dispositivo del Administrador de dispositivos](xamarin-device-manager-images/mac/09-new-device-editor-sml.png)](xamarin-device-manager-images/mac/09-new-device-editor.png)
+[![Pantalla Nuevo dispositivo del Administrador de dispositivos](xamarin-device-manager-images/mac/09-new-device-editor-sml.png)](xamarin-device-manager-images/mac/09-new-device-editor.png#lightbox)
 
 Siga estos pasos para configurar un nuevo dispositivo en la pantalla **Nuevo dispositivo**:
 
 1. Seleccione el dispositivo físico que quiera emular. Para ello, haga clic en el menú desplegable **Dispositivo**:
 
-    [![Menú desplegable Dispositivo](xamarin-device-manager-images/mac/10-device-menu-sml.png)](xamarin-device-manager-images/mac/10-device-menu.png)
+    [![Menú desplegable Dispositivo](xamarin-device-manager-images/mac/10-device-menu-sml.png)](xamarin-device-manager-images/mac/10-device-menu.png#lightbox)
 
 2. Seleccione la imagen de sistema que quiera usar con este dispositivo virtual. Para ello, haga clic en el menú desplegable **Imagen de sistema**. En este menú aparecen las imágenes de sistema instaladas en la sección **Instalado**. En la sección **Descargar** (si aparece) se muestran las imágenes de sistema que no están disponibles actualmente en el equipo de desarrollo, pero que se pueden instalar de forma automática:
 
-    [![Menú desplegable Imagen de sistema](xamarin-device-manager-images/mac/11-system-image-menu-sml.png)](xamarin-device-manager-images/mac/11-system-image-menu.png)
+    [![Menú desplegable Imagen de sistema](xamarin-device-manager-images/mac/11-system-image-menu-sml.png)](xamarin-device-manager-images/mac/11-system-image-menu.png#lightbox)
 
 3. Asigne un nuevo nombre al dispositivo. En el ejemplo siguiente, el nuevo dispositivo se denomina **Nexus 5X API 25**:
 
-    [![Asignar un nombre al nuevo dispositivo](xamarin-device-manager-images/mac/12-device-name-sml.png)](xamarin-device-manager-images/mac/12-device-name.png)
+    [![Asignar un nombre al nuevo dispositivo](xamarin-device-manager-images/mac/12-device-name-sml.png)](xamarin-device-manager-images/mac/12-device-name.png#lightbox)
 
 4. Edite las propiedades que necesite modificar. Para realizar cambios en las propiedades, vea [Propiedades de perfil](#properties) más adelante en esta guía.
 
 5. Agregue las propiedades adicionales que necesite establecer explícitamente. En la pantalla **Nuevo dispositivo** solo se muestran las propiedades que se modifican con más frecuencia, pero puede hacer clic en el menú desplegable **Agregar propiedad** (en la esquina inferior izquierda) para agregar propiedades adicionales:
 
-    [![Menú desplegable Agregar propiedad](xamarin-device-manager-images/mac/13-add-property-menu-sml.png)](xamarin-device-manager-images/mac/13-add-property-menu.png)
+    [![Menú desplegable Agregar propiedad](xamarin-device-manager-images/mac/13-add-property-menu-sml.png)](xamarin-device-manager-images/mac/13-add-property-menu.png#lightbox)
 
 6. También puede hacer clic en **Personalizar** para definir una nueva propiedad para el dispositivo:
 
@@ -305,11 +298,11 @@ Siga estos pasos para configurar un nuevo dispositivo en la pantalla **Nuevo dis
 
 9. Mientras crea el dispositivo, el Administrador de dispositivos Android agrega el nuevo dispositivo a la lista de dispositivos, con el indicador de progreso **Creando**:
 
-    [![Indicador de progreso de creación](xamarin-device-manager-images/mac/17-creating-the-device-sml.png)](xamarin-device-manager-images/mac/17-creating-the-device.png)
+    [![Indicador de progreso de creación](xamarin-device-manager-images/mac/17-creating-the-device-sml.png)](xamarin-device-manager-images/mac/17-creating-the-device.png#lightbox)
 
 10. Una vez finalizado el proceso de creación, el nuevo dispositivo se muestra en la lista de dispositivos con el botón **Reproducir**, listo para su inicio:
 
-   [![Dispositivo recién creado listo para su inicio](xamarin-device-manager-images/mac/18-created-device-sml.png)](xamarin-device-manager-images/mac/18-created-device.png)
+   [![Dispositivo recién creado listo para su inicio](xamarin-device-manager-images/mac/18-created-device-sml.png)](xamarin-device-manager-images/mac/18-created-device.png#lightbox)
 
 -----
 
@@ -322,13 +315,13 @@ Siga estos pasos para configurar un nuevo dispositivo en la pantalla **Nuevo dis
 
 Para editar un dispositivo virtual existente, selecciónelo y haga clic en el botón **Editar** (situado en la esquina superior derecha de la pantalla):
 
-[![Botón Editar para modificar un nuevo dispositivo](xamarin-device-manager-images/win/19-edit-button-sml.png)](xamarin-device-manager-images/win/19-edit-button.png)
+[![Botón Editar para modificar un nuevo dispositivo](xamarin-device-manager-images/win/19-edit-button-sml.png)](xamarin-device-manager-images/win/19-edit-button.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Para editar un dispositivo virtual existente, seleccione el menú desplegable **Opciones adicionales** (icono de engranaje) y haga clic en **Editar**:
  
-[![Selección del menú Editar para modificar un nuevo dispositivo](xamarin-device-manager-images/mac/19-edit-button-sml.png)](xamarin-device-manager-images/mac/19-edit-button.png)
+[![Selección del menú Editar para modificar un nuevo dispositivo](xamarin-device-manager-images/mac/19-edit-button-sml.png)](xamarin-device-manager-images/mac/19-edit-button.png#lightbox)
  
 -----
 
@@ -336,11 +329,11 @@ Al hacer clic en **Editar**, se inicia el editor de dispositivos para el disposi
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-[![Pantalla del editor de dispositivos](xamarin-device-manager-images/win/20-device-editor-sml.png)](xamarin-device-manager-images/win/20-device-editor.png)
+[![Pantalla del editor de dispositivos](xamarin-device-manager-images/win/20-device-editor-sml.png)](xamarin-device-manager-images/win/20-device-editor.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
  
-[![Pantalla del editor de dispositivos](xamarin-device-manager-images/mac/20-device-editor-sml.png)](xamarin-device-manager-images/mac/20-device-editor.png)
+[![Pantalla del editor de dispositivos](xamarin-device-manager-images/mac/20-device-editor-sml.png)](xamarin-device-manager-images/mac/20-device-editor.png#lightbox)
  
 -----
 
@@ -350,13 +343,13 @@ En la pantalla del **editor de dispositivos** se muestran las propiedades del di
 
 Por ejemplo, en la siguiente captura de pantalla, la propiedad `hw.lcd.density` se cambia de **420** a **240**:
 
-[![Ejemplo de edición de dispositivo](xamarin-device-manager-images/win/21-device-editing-sml.png)](xamarin-device-manager-images/win/21-device-editing.png)
+[![Ejemplo de edición de dispositivo](xamarin-device-manager-images/win/21-device-editing-sml.png)](xamarin-device-manager-images/win/21-device-editing.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Por ejemplo, en la siguiente captura de pantalla, la propiedad `hw.lcd.density` se cambia de **320** a **240** y la propiedad `hw.ramSize` se cambia a **768**:
  
-[![Ejemplo de edición de dispositivo](xamarin-device-manager-images/mac/21-device-editing-sml.png)](xamarin-device-manager-images/mac/21-device-editing.png)
+[![Ejemplo de edición de dispositivo](xamarin-device-manager-images/mac/21-device-editing-sml.png)](xamarin-device-manager-images/mac/21-device-editing.png#lightbox)
  
 -----
 
@@ -364,7 +357,6 @@ Después de realizar los cambios de configuración necesarios, haga clic en el b
 Para más información sobre cómo cambiar las propiedades del dispositivo virtual, vea [Propiedades de perfil](#properties) más adelante en esta guía.
 
 
-<a name="addopt" />
  
 ### <a name="additional-options"></a>Opciones adicionales
 
@@ -372,13 +364,13 @@ Para más información sobre cómo cambiar las propiedades del dispositivo virtu
 
 En el menú &hellip;, en la esquina superior derecha, hay opciones adicionales para trabajar con dispositivos:
 
-[![Ubicación del menú de opciones adicionales](xamarin-device-manager-images/win/22-overflow-menu-sml.png)](xamarin-device-manager-images/win/22-overflow-menu.png)
+[![Ubicación del menú de opciones adicionales](xamarin-device-manager-images/win/22-overflow-menu-sml.png)](xamarin-device-manager-images/win/22-overflow-menu.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 En el menú desplegable situado a la izquierda del botón **Reproducir** hay opciones adicionales para trabajar con dispositivos:
 
-[![Ubicación del menú de opciones adicionales](xamarin-device-manager-images/mac/22-overflow-menu-sml.png)](xamarin-device-manager-images/mac/22-overflow-menu.png)
+[![Ubicación del menú de opciones adicionales](xamarin-device-manager-images/mac/22-overflow-menu-sml.png)](xamarin-device-manager-images/mac/22-overflow-menu.png#lightbox)
 
 -----
 
@@ -388,11 +380,11 @@ El menú de opciones adicionales contiene los elementos siguientes:
 
 -   **Duplicate and Edit** (Duplicar y editar): duplica el dispositivo seleccionado actualmente y lo abre en la pantalla **Nuevo dispositivo** con otro nombre exclusivo. Por ejemplo, al seleccionar **VisualStudio_android 23_x86_phone** y hacer clic en **Duplicate and Edit** (Duplicar y editar), se anexa un contador al nombre:
 
-    [![Pantalla para duplicar y editar](xamarin-device-manager-images/win/23-dupe-and-edit-sml.png)](xamarin-device-manager-images/win/23-dupe-and-edit.png)
+    [![Pantalla para duplicar y editar](xamarin-device-manager-images/win/23-dupe-and-edit-sml.png)](xamarin-device-manager-images/win/23-dupe-and-edit.png#lightbox)
 
 -   **Mostrar en el Explorador**: se abre una ventana del Explorador de Windows en la carpeta que contiene los archivos del dispositivo virtual. Por ejemplo, al seleccionar **Nexus 5X API 25** y hacer clic en **Mostrar en el Explorador**, se abre una ventana como la siguiente:
 
-    [![Resultados de hacer clic en Mostrar en el Explorador](xamarin-device-manager-images/win/24-reveal-in-explorer-sml.png)](xamarin-device-manager-images/win/24-reveal-in-explorer.png)
+    [![Resultados de hacer clic en Mostrar en el Explorador](xamarin-device-manager-images/win/24-reveal-in-explorer-sml.png)](xamarin-device-manager-images/win/24-reveal-in-explorer.png#lightbox)
 
 -   **Restablecimiento de fábrica**: restablece el dispositivo seleccionado a sus valores predeterminados, para lo cual borra los cambios de usuario realizados en el estado interno del dispositivo mientras estaba en ejecución. Este cambio no altera las modificaciones que realice en el dispositivo virtual durante la creación y la edición. Aparecerá un cuadro de diálogo que le recordará que este restablecimiento no se puede deshacer. Haga clic en **Wipe user data** (Borrar los datos de usuario) para confirmar el restablecimiento.
 
@@ -408,11 +400,11 @@ El menú de opciones adicionales contiene los elementos siguientes:
 -   **Duplicate and Edit** (Duplicar y editar): duplica el dispositivo seleccionado actualmente y lo abre en la pantalla **Nuevo dispositivo** con otro nombre exclusivo.
     Por ejemplo, al seleccionar **Nexus 5X API 25** y hacer clic en **Duplicate and Edit** (Duplicar y editar), se anexa un contador al nombre:
 
-    [![Pantalla para duplicar y editar](xamarin-device-manager-images/mac/23-dupe-and-edit-sml.png)](xamarin-device-manager-images/mac/23-dupe-and-edit.png)
+    [![Pantalla para duplicar y editar](xamarin-device-manager-images/mac/23-dupe-and-edit-sml.png)](xamarin-device-manager-images/mac/23-dupe-and-edit.png#lightbox)
 
 -   **Mostrar en Finder**: se abre una ventana del Finder de macOS en la carpeta que contiene los archivos del dispositivo virtual. Por ejemplo, al seleccionar **Nexus 5X API 25** y hacer clic en **Mostrar en Finder**, se abre una ventana como la siguiente:
 
-    [![Resultados de hacer clic en Mostrar en el Explorador](xamarin-device-manager-images/mac/24-reveal-in-finder-sml.png)](xamarin-device-manager-images/mac/24-reveal-in-finder.png)
+    [![Resultados de hacer clic en Mostrar en el Explorador](xamarin-device-manager-images/mac/24-reveal-in-finder-sml.png)](xamarin-device-manager-images/mac/24-reveal-in-finder.png#lightbox)
 
 -   **Restablecimiento de fábrica**: restablece el dispositivo seleccionado a sus valores predeterminados, para lo cual borra los cambios de usuario realizados en el estado interno del dispositivo mientras estaba en ejecución. Este cambio no altera las modificaciones que realice en el dispositivo virtual durante la creación y la edición. Aparecerá un cuadro de diálogo que le recordará que este restablecimiento no se puede deshacer. Haga clic en **Wipe user data** (Borrar los datos de usuario) para confirmar el restablecimiento.
 
@@ -497,7 +489,7 @@ Para solucionar este problema, haga lo siguiente:
 
 2. Haga doble clic para abrir uno de los archivos de registro y busque la **ruta de acceso del archivo de configuración**. Por ejemplo:
 
-    [![Ruta de acceso del archivo de configuración en el archivo de registro](xamarin-device-manager-images/win/34-config-file-path-sml.png)](xamarin-device-manager-images/win/34-config-file-path.png)
+    [![Ruta de acceso del archivo de configuración en el archivo de registro](xamarin-device-manager-images/win/34-config-file-path-sml.png)](xamarin-device-manager-images/win/34-config-file-path.png#lightbox)
 
 3. Vaya a esta ubicación y haga doble clic en **user.config** para abrirlo. 
 
@@ -528,7 +520,6 @@ Si encuentre algún problema, informe del error haciendo clic en **Ayuda > Gener
 -----
 
  
-<a name="summary" />
  
 ## <a name="summary"></a>Resumen
 

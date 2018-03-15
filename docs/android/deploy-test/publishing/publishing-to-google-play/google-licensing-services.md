@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/20/2017
-ms.openlocfilehash: f1e7e36dfa1bfe122084f0525d83f06760ca1fe0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d4ed2df994ace7f6de5ade78577e759bb811565c
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="google-licensing-services"></a>Servicios de licencia de Google
 
@@ -26,7 +26,7 @@ Licencias de Google es seguro en que cada respuesta se firma con un par de clave
 
 Una aplicación que tiene Licencias de Google implementadas realiza una solicitud a un servicio hospedado mediante la aplicación de Google Play en el dispositivo. Después, Google Play envía esta solicitud al servidor de Licencias de Google, que responde con el estado de la licencia: 
 
-[ ![Diagrama de flujo de trabajo del servidor de licencias](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png)
+[![Diagrama de flujo de trabajo del servidor de licencias](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png#lightbox)
 
 En el diagrama anterior se muestra este flujo de trabajo: 
 
@@ -36,7 +36,6 @@ En el diagrama anterior se muestra este flujo de trabajo:
 
 El servicio de Licencias de Google también es un componente clave de los archivos de expansión APK (que se tratarán posteriormente en este documento). Los archivos de expansión APK usan los servicios de Licencias de Google para obtener las direcciones URL de los archivos de expansión que se descargarán.
 
-<a name="Requirements" />
 
 ## <a name="requirements"></a>Requisitos
 

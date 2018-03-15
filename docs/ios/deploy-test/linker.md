@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/24/2017
-ms.openlocfilehash: c4ad69890b7f50478e44d59cd37e7b6ac96a87ae
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2ee5da1b2c5d4c8fbf405c7f28ed280a3286a025
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="linking-on-ios"></a>Vinculación en iOS
 
@@ -29,7 +29,7 @@ Como el enlazador es una herramienta estática, no puede marcar los tipos de inc
 
 Se puede personalizar el proceso de vinculación mediante la lista desplegable del comportamiento del enlazador en **Opciones del proyecto**. Para acceder a este menú, haga doble clic en el proyecto de iOS y vaya a **Compilación de iOS > Opciones del enlazador**, como se ilustra a continuación:
 
-[ ![](linker-images/image1.png "Opciones del enlazador")](linker-images/image1.png)
+[![](linker-images/image1.png "Opciones del enlazador")](linker-images/image1.png#lightbox)
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 

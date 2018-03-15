@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 0fff4de7420bceda8c15ae33b03886eb6b332aeb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 430b07918b13878e3561b55ff841a64855183fa7
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="application-package-size"></a>Tamaños de paquete de aplicación
 
@@ -28,13 +28,13 @@ Xamarin.Android usa diversos mecanismos para minimizar el tamaño de paquete y m
 
 Para distribuir una aplicación totalmente contenida, el paquete debe incluir la aplicación, las bibliotecas asociadas, el contenido, el entorno de ejecución Mono y los ensamblados de biblioteca de clases base (BCL) necesarios. Por ejemplo, si tomamos la plantilla predeterminada "Hola, mundo", el contenido de una compilación de paquete completa sería similar al siguiente:
 
-[ ![Tamaño de paquete antes del enlazador](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png)
+[![Tamaño de paquete antes del enlazador](app-package-size-images/hello-world-package-size-before-linker.png)](app-package-size-images/hello-world-package-size-before-linker.png#lightbox)
 
 15,8 MB es un tamaño de descarga que nos gustaría. El problema son las bibliotecas BCL, dado que incluyen mscorlib, System y Mono.Android, que proporcionan muchos de los componentes necesarios para ejecutar la aplicación. Sin embargo, también proporcionan una funcionalidad que puede que no use en la aplicación, por lo que puede ser preferible excluir estos componentes.
 
 Cuando se compila una aplicación para su distribución, se ejecuta un proceso, conocido como vinculación, que examina la aplicación y quita cualquier código que no se use directamente. Este proceso es similar a la funcionalidad que proporciona la [recolección de elementos no utilizados](~/android/internals/garbage-collection.md) para la memoria asignada por el montón. Pero, en lugar de trabajar sobre objetos, la vinculación trabaja sobre el código. Por ejemplo, hay un espacio de nombres completo en System.dll para enviar y recibir correo electrónico, pero si la aplicación no hace uso de esta funcionalidad, lo que hace simplemente se código es desperdiciar espacio. Después de ejecutar el enlazador en la aplicación Hola, mundo, nuestro paquete se parece ahora a este:
 
-[ ![Tamaño de paquete después del enlazador](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png)
+[![Tamaño de paquete después del enlazador](app-package-size-images/hello-world-package-size-after-linker.png)](app-package-size-images/hello-world-package-size-after-linker.png#lightbox)
 
 Como se puede observar, se quita una cantidad considerable de la BCL que no se usaba. Tenga en cuenta que el tamaño final de la BCL depende de lo que la aplicación use realmente. Por ejemplo, si echamos un vistazo a una aplicación de ejemplo más significativa llamada ApiDemo, podemos ver que el componente BCL ha aumentado de tamaño porque ApiDemo usa más cantidad de la BCL que Hola, mundo:
 
@@ -51,7 +51,7 @@ Android es relativamente lento en copiar e instalar un paquete, así que queremo
 
 La primera vez que realizamos la depuración en el dispositivo, copiamos dos paquetes grandes llamados *Tiempo de ejecución compartido* y *Plataforma compartida*. El tiempo de ejecución compartido contiene el entorno de ejecución de Mono y BCL, mientras que la plataforma compartida contiene ensamblados específicos de nivel de API de Android:
 
-[ ![Tamaño de paquete de tiempo de ejecución compartido](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png)
+[![Tamaño de paquete de tiempo de ejecución compartido](app-package-size-images/shared-runtime-package-size.png)](app-package-size-images/shared-runtime-package-size.png#lightbox)
 
 La copia de estos componentes principales solo se hace una vez, ya que tarda bastante tiempo, pero permite que las sucesivas aplicaciones que se ejecutan en modo de depuración los utilicen. Por último, copiamos la aplicación real, que es pequeña y rápida:
 

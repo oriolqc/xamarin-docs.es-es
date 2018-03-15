@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: d118eb5e9f875c5480105d1596ef1318112fb53e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3431791d51858df2013634e1594ee960a10728da
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="apk-expansion-files"></a>Archivos de expansión de APK
 
@@ -33,7 +33,6 @@ Los archivos de expansión se tratan como *blobs binarios opacos (obb)* que pued
 Los archivos de expansión deben cargarse al mismo tiempo que el APK.
 Google Play no permite que se descargue un archivo de expansión en un APK existente ni para APK existentes que deban actualizarse. Si es necesario actualizar un archivo de expansión, se debe cargar un APK nuevo con `versionCode` actualizado.
 
-<a name="Expansion_File_Storage" />
 
 ## <a name="expansion-file-storage"></a>Almacenamiento de archivos de expansión
 
@@ -51,7 +50,6 @@ Si es necesario desempaquetar un archivo de expansión, se deben almacenar archi
 
 Como alternativa a la extracción de archivos desde un archivo de expansión, se pueden leer los activos o recursos directamente desde el archivo de expansión. El archivo de expansión tan solo es un archivo .zip que se puede usar con un `ContentProvider` adecuado. [Android.Play.ExpansionLibrary](https://github.com/mattleibow/Android.Play.ExpansionLibrary) contiene un ensamblado, [System.IO.Compression.Zip](https://github.com/mattleibow/Android.Play.ExpansionLibrary/tree/master/System.IO.Compression.Zip), que incluye un `ContentProvider` que permitirá a algunos archivos multimedia tener acceso directo a los archivos. Si los archivos multimedia se empaquetan en un archivo .zip, las llamadas de reproducción multimedia pueden utilizar directamente los archivos del archivo .zip sin tener que desempaquetarlo. Al agregar los archivos multimedia al .zip, estos no deben comprimirse. 
 
-<a name="FileName_Format" />
 
 ### <a name="filename-format"></a>Formato de nombre de archivo
 
@@ -68,13 +66,12 @@ Los tres componentes de este esquema son:
 
 Por ejemplo, si la versión del APK es la 21 y el nombre del paquete es `mono.samples.helloworld`, el archivo de expansión principal se llamará **main.21.mono.samples.helloworld**.
 
-<a name="Download_Process" />
 
 ## <a name="download-process"></a>Proceso de descarga
 
 Cuando se instala una aplicación desde Google Play, los archivos de expansión deben descargarse y guardarse junto con el APK. En determinadas situaciones es posible que esto no sea así o bien que se eliminen los archivos de expansión. Para resolver esta incidencia, una aplicación debe comprobar si existen los archivos de expansión y, luego, descargarlos, si es necesario. El siguiente diagrama muestra el flujo de trabajo recomendado para este proceso:
 
-[ ![Diagrama de flujo de expansión del APK](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png)
+[![Diagrama de flujo de expansión del APK](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
 
 Cuando se inicia una aplicación, debe comprobar si existen los archivos de expansión adecuados en el dispositivo actual. En caso contrario, la aplicación debe realizar una solicitud desde la [Administración de licencias de aplicaciones](http://developer.android.com/google/play/licensing/index.html) de Google Play. Esta comprobación se realiza mediante la *License Verification Library (LVL)* (Biblioteca de comprobación de licencias (BCL)) y debe efectuarse en el caso de las aplicaciones gratuitas y las que necesiten licencia. La BCL la utilizan principalmente aplicaciones de pago para aplicar restricciones de licencias. Sin embargo, Google ha ampliado la BCL de tal manera que pueda utilizarse también con las bibliotecas de expansión. Las aplicaciones gratuitas tienen que realizar la comprobación de la BCL, pero pueden ignorar las restricciones de licencias. La solicitud de la BCL se encarga de proporcionar la siguiente información sobre los archivos de expansión que necesita la aplicación: 
 
@@ -92,7 +89,6 @@ Una vez realizada la comprobación de la BCL, la aplicación debe descargar los 
 -  Los errores que se produzcan durante la descarga se procesan correctamente y esta se puede recuperar.
 
 
-<a name="Architectural_Overview" />
 
 ## <a name="architectural-overview"></a>Información general sobre la arquitectura
 

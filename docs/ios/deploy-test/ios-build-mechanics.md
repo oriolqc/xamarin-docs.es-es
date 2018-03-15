@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b752ebdd1a98d5258cc27b2221d33e07fa04aa46
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 44813ea6c1e795889444d949ca2706c0f50483c6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="ios-build-mechanics"></a>Mecanismos de compilación de iOS
 
@@ -33,7 +33,7 @@ Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio para Mac
 
 1. Haga clic en **Visual Studio para Mac > Preferencias...**
 2. En la vista de árbol de la izquierda, seleccione **Proyectos > Compilar**
-3. En el panel derecho, establezca el menú desplegable del contenido de registro en **Diagnóstico**: [ ![](ios-build-mechanics-images/image2.png "Configuración del contenido de registro")](ios-build-mechanics-images/image2.png)
+3. En el panel derecho, establezca el menú desplegable del contenido de registro en **Diagnóstico**: [![](ios-build-mechanics-images/image2.png "Configuración del contenido de registro")](ios-build-mechanics-images/image2.png#lightbox).
 4. Haga clic en **Aceptar**.
 5. Reinicie Visual Studio para Mac.
 6. Limpie y recompile el paquete.
@@ -46,7 +46,7 @@ Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio:
 
 1. Haga clic en **Herramientas > Opciones...**
 2. En la vista de árbol de la izquierda, seleccione **Proyectos y soluciones > Compilación y ejecución**.
-3. En el panel de la derecha, establezca *Detalles de la salida de la compilación del proyecto de MSBuild* en **Diagnóstico**: [ ![](ios-build-mechanics-images/image2-vs.png "Establecer los detalles de la salida de la compilación del proyecto de MSBuild")](ios-build-mechanics-images/image2-vs.png)
+3. En el panel de la derecha, establezca *Detalles de la salida de la compilación del proyecto de MSBuild* en **Diagnóstico**: [![](ios-build-mechanics-images/image2-vs.png "Establecer los detalles de la salida de la compilación del proyecto de MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox).
 4. Haga clic en **Aceptar**.
 5. Limpie y recompile el paquete.
 6. El resultado de diagnóstico se muestra en el panel de resultados.
@@ -101,7 +101,7 @@ Teniendo en cuenta la información anterior, en la lista siguiente se proporcion
 
 En la captura de pantalla siguiente se ilustra cómo establecer estas opciones para el simulador en las opciones de iOS:
 
-[ ![](ios-build-mechanics-images/image3.png "Configuración de las opciones")](ios-build-mechanics-images/image3.png)
+[![](ios-build-mechanics-images/image3.png "Configuración de las opciones")](ios-build-mechanics-images/image3.png#lightbox)
 
 ## <a name="device-tricks"></a>Trucos de dispositivos
 
@@ -155,7 +155,7 @@ Consejos adicionales
 
 En la captura de pantalla siguiente se ilustra cómo establecer estas opciones para el simulador en las opciones de iOS:
 
-[ ![](ios-build-mechanics-images/image4.png "Configuración de las opciones")](ios-build-mechanics-images/image4.png)
+[![](ios-build-mechanics-images/image4.png "Configuración de las opciones")](ios-build-mechanics-images/image4.png#lightbox)
 
 ## <a name="using-the-linker"></a>Uso del enlazador
 

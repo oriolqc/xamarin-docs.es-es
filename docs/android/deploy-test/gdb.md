@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: ee98e19ce59b8a61040941d9851b8fbf965c3b17
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55d72a49f90095a33577279d018e1696dda8fc42
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="gdb"></a>GDB
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 02/27/2018
 Xamarin.Android 4.10 introdujo la compatibilidad parcial con el uso de `gdb` gracias al destino de MSBuild `_Gdb`. 
 
 > [!NOTE]
-> **Nota: Para la compatibilidad con**  `gdb` es necesario tener instalado Android NDK.
+> Para la compatibilidad con `gdb` es necesario tener instalado Android NDK.
 
 Existen tres maneras de usar `gdb`:
 
@@ -59,7 +59,7 @@ El destino `_Gdb` creará un directorio `gdb-symbols` y copiará ahí el conteni
 
 
 > [!NOTE]
-> **Nota:** El contenido del directorio `gdb-symbols` está vinculado al destino de Android en el que realizó la implementación, y no se reemplazará automáticamente si cambia el directorio. (Puede considerarlo un error). Si cambia los dispositivos de destino de Android, deberá eliminar manualmente este directorio.
+> El contenido del directorio `gdb-symbols` está vinculado al destino de Android en el que realizó la implementación, y no se reemplazará automáticamente si cambia el directorio. (Puede considerarlo un error). Si cambia los dispositivos de destino de Android, deberá eliminar manualmente este directorio.
 
 Por último, copie el comando `gdb` generado y ejecútelo en el shell:
 

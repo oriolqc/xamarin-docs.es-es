@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: baf1ae7d4cc533af0db482e8d7c31fc3c8b4edbf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4e93696f8eef44030ffacbdbaa8ebcd860a402f6
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="free-provisioning"></a>Aprovisionamiento gratuito
 
@@ -43,29 +43,29 @@ Para usar el aprovisionamiento gratuito para implementar una aplicación en un d
 2. Abra Xcode y vaya a **Xcode > Preferences** (Xcode > Preferencias).
 3. En **Cuentas**, use el botón **+** para agregar su id. de Apple existente. Debería tener un aspecto similar al de la siguiente captura de pantalla:
 
-  [ ![](free-provisioning-images/launchapp1.png "Cuentas de preferencias de Xcode")](free-provisioning-images/launchapp1.png)
+  [![](free-provisioning-images/launchapp1.png "Cuentas de preferencias de Xcode")](free-provisioning-images/launchapp1.png#lightbox)
 
 4. Conecte el dispositivo iOS en el que quiere realizar la implementación y cree un nuevo proyecto de iOS vacío de vista única en Xcode. Establezca el menú desplegable **Team** (Equipo) en el ID de Apple que acaba de agregar. Debe tener un formato similar a `your name (Personal Team - your Apple ID)`:
 
-  [ ![](free-provisioning-images/launchapp2.png "Crear la identidad de firma")](free-provisioning-images/launchapp2.png)
+  [![](free-provisioning-images/launchapp2.png "Crear la identidad de firma")](free-provisioning-images/launchapp2.png#lightbox)
 
 5. En la sección **General > Identidad**, asegúrese de que el identificador de agrupación coincide _exactamente_ con el identificador de agrupación de su aplicación de Xamarin.iOS, y asegúrese de que el destino de la implementación coincide con el dispositivo iOS conectado, o es inferior. Este paso es extremadamente importante, ya que Xcode solo creará un perfil de aprovisionamiento con un id. de aplicación explícito:
 
-  [![](free-provisioning-images/launchapp5.png "Crear un perfil de aprovisionamiento con un identificador de aplicación explícito")](free-provisioning-images/launchapp5.png)
+  [![](free-provisioning-images/launchapp5.png "Crear un perfil de aprovisionamiento con un identificador de aplicación explícito")](free-provisioning-images/launchapp5.png#lightbox)
 
 6. En la sección de firma, seleccione **Automatically Manage Signing (Administrar firma automáticamente)** y su equipo de la lista desplegable:
 
-  [![](free-provisioning-images/launchapp6.png "Seleccionar Automatically Manage Signing (Administrar firma automáticamente) y su equipo de la lista desplegable")](free-provisioning-images/launchapp6.png)
+  [![](free-provisioning-images/launchapp6.png "Seleccionar Automatically Manage Signing (Administrar firma automáticamente) y su equipo de la lista desplegable")](free-provisioning-images/launchapp6.png#lightbox)
 
 7. En el paso anterior se generará automáticamente un perfil de aprovisionamiento y una identidad de firma. Puede verlo haciendo clic en el icono de información, situado junto al perfil de aprovisionamiento:
 
-  [![](free-provisioning-images/launchapp7.png "Ver el perfil de aprovisionamiento")](free-provisioning-images/launchapp7.png)
+  [![](free-provisioning-images/launchapp7.png "Ver el perfil de aprovisionamiento")](free-provisioning-images/launchapp7.png#lightbox)
 
 8. Para realizar pruebas en Xcode, implemente la aplicación vacía en su dispositivo haciendo clic en el botón Ejecutar.
 
 9. Vuelva a su IDE, con el mismo dispositivo conectado, y haga clic con el botón derecho en su nombre de proyecto de Xamarin.iOS para abrir el cuadro de diálogo **Opciones de proyecto**. Vaya a la sección Firma de agrupación iOS y establezca explícitamente su identidad de firma y su perfil de aprovisionamiento:
 
-  [![](free-provisioning-images/launchapp8.png "Establecer la identidad de firma y el perfil de aprovisionamiento")](free-provisioning-images/launchapp8.png)
+  [![](free-provisioning-images/launchapp8.png "Establecer la identidad de firma y el perfil de aprovisionamiento")](free-provisioning-images/launchapp8.png#lightbox)
 
 Si no puede ver su identidad de firma o el perfil de aprovisionamiento correcto en su IDE, puede que necesite reiniciarlo.
 

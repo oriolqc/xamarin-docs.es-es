@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/25/2018
-ms.openlocfilehash: 854ca06abc8be2f55f3e95a8ac3bd87c78af19cf
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 55f5cf22718713fdcf11c49e0993f47c2f5a6f1d
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="android-emulator-setup"></a>Configuración de Android Emulator
 
@@ -25,7 +25,7 @@ El emulador de Android SDK se puede ejecutar en varias configuraciones para simu
 
 
 > [!NOTE]
-> **Nota:** A partir de la versión **26.0.1** de Android SDK Tools y versiones posteriores, Google ha quitado la compatibilidad con administradores de AVD/SDK existentes en favor de las nuevas herramientas de la CLI (interfaz de la línea de comandos). Debido a este cambio de degradación, ahora se usan administradores de SDK/dispositivos de Xamarin en lugar de administradores de SDK/emuladores de Google para las Herramientas de Android 26.0.1 y versiones posteriores. (Para más información sobre SDK Manager de Xamarin, vea [Configuración de Android SDK](~/android/get-started/installation/android-sdk.md)).
+> A partir de la versión **26.0.1** de Android SDK Tools, Google ha quitado la compatibilidad con administradores de AVD/SDK existentes en favor de las nuevas herramientas de la CLI (interfaz de la línea de comandos). Debido a este cambio de degradación, ahora se usan administradores de SDK/dispositivos de Xamarin en lugar de administradores de SDK/emuladores de Google para las Herramientas de Android 26.0.1 y versiones posteriores. (Para más información sobre SDK Manager de Xamarin, vea [Configuración de Android SDK](~/android/get-started/installation/android-sdk.md)).
 
 
 ## <a name="sections"></a>Secciones

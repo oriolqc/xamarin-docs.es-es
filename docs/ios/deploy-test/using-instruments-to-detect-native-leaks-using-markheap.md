@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 9fec6fca0bf7930a59a6927557786a3ed7a412da
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9a5dc7839b1669e51e79efc0f02111eae8987b95
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Generar perfiles de aplicaciones de Xamarin.iOS con Instruments
 
@@ -38,13 +38,13 @@ Seleccione el dispositivo y ejecute la aplicación Instruments:
 
 Instruments se abrirá y mostrará el cuadro de diálogo siguiente:
 
- [ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Elección de una plantilla de generación de perfiles")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png)
+ [![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Elección de una plantilla de generación de perfiles")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
 
 Haga clic para seleccionar la plantilla **Asignaciones**. Las otras plantillas son válidas,pero en este artículo solo se trata la plantilla de perfil **Asignaciones**.
 
 Después, seleccione el dispositivo y la aplicación mediante el menú de la parte superior de la ventana:
 
-[ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Selección del dispositivo y la aplicación")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Selección del dispositivo y la aplicación")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
 
 El dispositivo iOS debe estar seleccionado en el menú situado en la parte superior de la ventana y la aplicación de la que se va a generar el perfil debe estar seleccionada junto a él (**MemoryDemo** en la captura de pantalla anterior).
 
@@ -52,13 +52,13 @@ Si el dispositivo no aparece en el menú, compruebe la **Consola** en Visual Stu
 
 Haga clic en el botón **Elegir** y debería aparecer la pantalla siguiente:
 
-[ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "La interfaz de generación de perfiles")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "Interfaz de generación de perfiles")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
 
 Haga clic en el botón Grabar (círculo rojo en la parte superior izquierda) para iniciar la generación del perfil.
 
 En la siguiente captura de pantalla se muestra un ejemplo de generación de perfil con **Instruments**:
 
-[ ![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "Un ejemplo de generación de perfiles con Instruments")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png)
+[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "Ejemplo de generación de perfiles con Instruments")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
 
 ## <a name="summary"></a>Resumen
 

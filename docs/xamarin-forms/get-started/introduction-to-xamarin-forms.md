@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 593e720e4a6125e2ef4a1c9488186cb2c04dcd66
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: be4b0c907774c33dfcd1818da167acb2dc3b04dd
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="an-introduction-to-xamarinforms"></a>Introducción a Xamarin.Forms
 
@@ -45,7 +45,7 @@ En este artículo se explican los elementos fundamentales del marco de Xamarin.F
 
 En Visual Studio para Mac y Visual Studio, la plantilla de aplicación predeterminada de Xamarin.Forms crea la solución más sencilla posible de Xamarin.Forms, que muestra texto al usuario. Si ejecuta la aplicación, debería tener un aspecto similar al que se muestra en las capturas de pantalla siguientes:
 
-[ ![](introduction-to-xamarin-forms-images/image05-sml.png "Aplicación predeterminada de Xamarin.Forms")](introduction-to-xamarin-forms-images/image05.png "Aplicación predeterminada de Xamarin.Forms")
+[![](introduction-to-xamarin-forms-images/image05-sml.png "Aplicación predeterminada de Xamarin.Forms")](introduction-to-xamarin-forms-images/image05.png#lightbox "Aplicación predeterminada de Xamarin.Forms")
 
 Cada una de las pantallas de estas capturas corresponde a un *página* de Xamarin.Forms. Un elemento [`Page`](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/) representa una *Actividad* en Android, un *Controlador de vista* en iOS o una *Página* en la Plataforma universal de Windows (UWP). En el ejemplo de las capturas de pantalla anteriores se crea una instancia de un objeto [`ContentPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) y se usa para mostrar un elemento [`Label`](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/).
 
@@ -249,7 +249,7 @@ public class StackLayoutExample : ContentPage
 
 De forma predeterminada, la clase [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) asume una orientación vertical, como se muestra en las siguientes capturas de pantalla:
 
-[ ![](introduction-to-xamarin-forms-images/image09-sml.png "StackLayout vertical")](introduction-to-xamarin-forms-images/image09.png "StackLayout vertical")
+[![](introduction-to-xamarin-forms-images/image09-sml.png "StackLayout vertical")](introduction-to-xamarin-forms-images/image09.png#lightbox "StackLayout vertical")
 
 La orientación de la clase [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) puede cambiarse a una orientación horizontal, como se muestra en el siguiente ejemplo de código XAML:
 
@@ -286,7 +286,7 @@ public class StackLayoutExample: ContentPage
 
 En las capturas de pantalla siguientes se muestra el diseño resultante:
 
-[ ![](introduction-to-xamarin-forms-images/image10-sml.png "StackLayout horizontal")](introduction-to-xamarin-forms-images/image10.png "StackLayout horizontal")
+[![](introduction-to-xamarin-forms-images/image10-sml.png "StackLayout horizontal")](introduction-to-xamarin-forms-images/image10.png#lightbox "StackLayout horizontal")
 
 Se puede establecer el tamaño de los controles mediante las propiedades `HeightRequest` y `WidthRequest`, como se muestra en el siguiente ejemplo de código XAML:
 
@@ -329,7 +329,7 @@ Content = new StackLayout
 
 En las capturas de pantalla siguientes se muestra el diseño resultante:
 
-[ ![](introduction-to-xamarin-forms-images/image11-sml.png "StackLayout horizontal con LayoutOptions")](introduction-to-xamarin-forms-images/image11.png "StackLayout horizontal con LayoutOptions")
+[![](introduction-to-xamarin-forms-images/image11-sml.png "StackLayout horizontal con LayoutOptions")](introduction-to-xamarin-forms-images/image11.png#lightbox "StackLayout horizontal con LayoutOptions")
 
 Para obtener más información sobre la clase [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), consulte [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md).
 

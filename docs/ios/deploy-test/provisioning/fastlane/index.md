@@ -3,16 +3,16 @@ title: "Introducción a fastlane para iOS"
 description: "En esta guía se presentan las diversas herramientas de Fastlane que se pueden usar para firmar el código de aplicaciones de iOS."
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
+ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 084be16b55650f607d71f6eb3baf86b6f968aa35
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 15ee039fbfa339a9246b2a4234f37caf685c80c6
+ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Introducción a fastlane para iOS
 
@@ -87,12 +87,12 @@ El contenido proporcionado se puede usar como punto de partida para la distribuc
 
 fastlane es un proyecto de código abierto muy activo que inserta a menudo versiones nuevas. Cuando haya disponible una versión nueva de fastlane, se le aconsejará lo siguiente al ejecutar un comando de fastlane:
 
-[ ![](images/fastlane-image0.png "Símbolo del sistema de actualización de Fastlane")](images/fastlane-image0.png)
+[![](images/fastlane-image0.png "Símbolo del sistema de actualización de Fastlane")](images/fastlane-image0.png#lightbox)
 
 
 Para actualizar a una versión nueva de Fastlane, descargue el paquete más reciente desde [aquí](https://download.fastlane.tools) y haga doble clic en el paquete de instalación para ejecutarlo:
 
-[ ![](images/fastlane-image0a.png "Ejecución del paquete de instalación")](images/fastlane-image0a.png)
+[![](images/fastlane-image0a.png "Ejecución del paquete de instalación")](images/fastlane-image0a.png#lightbox)
 
 
 ## <a name="contents"></a>Contenido
@@ -111,7 +111,7 @@ Cuando haya creado una identidad de firma y los archivos de aprovisionamiento co
 
 Para establecer las opciones de firma de código para una aplicación de Xamarin.iOS, haga clic con el botón derecho en el nombre del proyecto, seleccione **Opciones del proyecto > Compilar > Firma del lote de iOS** y establezca la identidad de firma y el perfil de aprovisionamiento explícitamente, como se muestra a continuación:
 
-[ ![](images/fastlane-image11.png "Establezca explícitamente la identidad de firma y el perfil de aprovisionamiento")](images/fastlane-image11.png)
+[![](images/fastlane-image11.png "Establecimiento explícito de la identidad de firma y el perfil de aprovisionamiento")](images/fastlane-image11.png#lightbox)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a113a386f1312253fda8913cea3cb608a65e1061
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f7c743bab2a6acb3dcd57ebca207957f983e0c0f
+ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="unit-testing"></a>Pruebas unitarias
 
@@ -119,15 +119,15 @@ Para ejecutar este proyecto en la solución, haga clic en él con el botón dere
 
 El ejecutor de pruebas permite ver qué pruebas se registran y seleccionar individualmente las pruebas que se pueden ejecutar.
 
-[ ![](touch.unit-images/02.png "La lista de pruebas registradas")](touch.unit-images/02.png) 
+[![](touch.unit-images/02.png "Lista de pruebas registradas")](touch.unit-images/02.png#lightbox) 
 
-[ ![](touch.unit-images/03.png "Un texto individual")](touch.unit-images/03.png) 
+[![](touch.unit-images/03.png "Texto individual")](touch.unit-images/03.png#lightbox) 
 
-[ ![](touch.unit-images/04.png "Resultados de ejecución")](touch.unit-images/04.png)
+[![](touch.unit-images/04.png "Resultados de ejecución")](touch.unit-images/04.png#lightbox)
 
 Puede ejecutar accesorios de prueba individuales si selecciona el accesorio de texto en las vistas anidadas o puede ejecutar todas las pruebas con "Run Everything (Ejecutar todo)". Si ejecuta la prueba predeterminada que se supone que incluye una prueba correcta, una incorrecta y una omitida. Este es el aspecto del informe, y puede ir directamente a las pruebas incorrectas y obtener más información sobre el error:
 
-[ ![](touch.unit-images/05.png "Un informe de ejemplo")](touch.unit-images/05.png) [ ![](touch.unit-images/06.png "Un informe de ejemplo")](touch.unit-images/06.png) [ ![](touch.unit-images/07.png "Un informe de ejemplo")](touch.unit-images/07.png)
+[![](touch.unit-images/05.png "Informe de ejemplo")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "Informe de ejemplo")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "Informe de ejemplo")](touch.unit-images/05.png#lightbox)
 
 También puede ir a la ventana Application Output (Resultado de aplicación) del IDE para ver qué pruebas se ejecutan y su estado actual.
 
