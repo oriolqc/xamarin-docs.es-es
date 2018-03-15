@@ -1,43 +1,37 @@
 ---
-title: "Instalación y los requisitos"
+title: "Requisitos y la instalación de los libros"
+description: "Cómo descargar, instalar y utilizar los libros de Xamarin."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: abc9f9402b55a11e313b9938f07f37e5329b55b6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: abd6ac7d4bce5a180db087488b32c878ed0a416b
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="installation-and-requirements"></a>Instalación y los requisitos
-
-<script> var inspectorOnLoad = función () {var primaryTextBase = "Libros de Xamarin para"; var secondaryTextBase = "o descargar para"; var inspectorDownloadUrlMac = "https://dl.xamarin.com/interactive/XamarinInteractive.pkg"; var inspectorDownloadUrlWin = " https://DL.xamarin.com/Interactive/XamarinInteractive.msi";
-
-  var aPrimary = document.getElementById("inspector-download-primary"); var aSecondary = document.getElementById("inspector-download-secondary");
-
-  var aMac = aPrimary; var aWin = aSecondary; var macTextBase = primaryTextBase; var winTextBase = secondaryTextBase;
-
-  Si (/win/i.test(navigator.platform.toLowerCase())) {aMac = aSecondary; aWin = aPrimary; macTextBase = secondaryTextBase; winTextBase = primaryTextBase;}
-
-  aMac.href = inspectorDownloadUrlMac; aMac.text = macTextBase + "Mac"; aWin.href = inspectorDownloadUrlWin; aWin.text = winTextBase + "Windows"; };
-
-document.addEventListener("DOMContentLoaded", inspectorOnLoad);
-</script>
+# <a name="workbooks-installation-and-requirements"></a>Requisitos y la instalación de los libros
 
 <a name="install" />
 
 ## <a name="download-and-install"></a>Descargue e instale
 
-<ol>
-  <li>Compruebe el <a href="#Requirements"> requisitos</a> a continuación.</li>
-  <li>Descargue e instale <a href="https://dl.xamarin.com/interactive/XamarinInteractive.pkg" id="inspector-download-primary">Xamarin libros para Mac</a> (<a href="https://dl.xamarin.com/interactive/XamarinInteractive.msi" id="inspector-download-secondary">o descarga para Windows</a>).
-  </li>
-  <li>Iniciar <a href="~/tools/workbooks/workbook.md"> jugar</a> con los libros o probar el <a href="https://developer.xamarin.com/workbooks/">ejemplos</a>.
-    </li>
-</ol>
+# <a name="windowstabvswin"></a>[Windows](#tab/vswin)
+
+1. Compruebe el [requisitos](#requirements) a continuación.
+2. Descargue e instale [libros de Xamarin para Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
+3. Iniciar [jugar](~/tools/workbooks/workbook.md) con los libros o probar el [ejemplos](https://developer.xamarin.com/workbooks)
+
+# <a name="macostabvsmac"></a>[macOS](#tab/vsmac)
+
+1. Compruebe el [requisitos](#Requirements) a continuación.
+2. Descargue e instale [Xamarin libros para Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
+3. Iniciar [jugar](~/tools/workbooks/workbook.md) con los libros o probar el [ejemplos](https://developer.xamarin.com/workbooks)
+
+-----
 
 ## <a name="requirements"></a>Requisitos
 
@@ -48,52 +42,15 @@ document.addEventListener("DOMContentLoaded", inspectorOnLoad);
 
 #### <a name="supported-app-platforms"></a>Plataformas de aplicaciones compatibles
 
-<table>
-<thead>
-  <tr>
-    <th>Plataforma de aplicaciones</th>
-    <th>Sistemas operativos admitidos</th>
-    <th>Notas</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td>Mac (unificado)</td>
-    <td>Solo se admite en Mac</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>iOS (unificado)</td>
-    <td>Compatible con Mac y Windows</td>
-    <td>
-      <ul>
-        <li>Xamarin.iOS 11.0 y Xcode 9.0 o posterior deben instalarse en el equipo Mac.</li>
-        <li>Ejecución de libros de iOS en Windows requiere un host de compilación de Mac ejecuta todo lo anterior y el <a href="~/tools/ios-simulator.md">simulador de iOS remoto</a> instalado en Windows.</li>
-      </ul>
-    </td>
-  </tr>
-  <tr>
-    <td>Android</td>
-    <td>Compatible con Mac y Windows</td>
-    <td>Debe usar el emulador de Google, Visual Studio o Xamarin para Android, con un dispositivo virtual > = 5.0</td>
-  </tr>
-  <tr>
-    <td>WPF</td>
-    <td>Solo se admite en Windows</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>Consola (.NET Framework)</td>
-    <td>Compatible con Mac y Windows</td>
-    <td/>
-  </tr>
-  <tr>
-    <td>Consola (.NET Core)</td>
-    <td>Compatible con Mac y Windows</td>
-    <td/>
-  </tr>
-</tbody>
-</table>
+|Plataforma de aplicaciones|Sistemas operativos admitidos|Notas|
+|--- |--- |--- |
+|Mac (unificado)|Solo se admite en Mac|
+|iOS (unificado)|Compatible con Mac y Windows|Xamarin.iOS 11.0 y Xcode 9.0 o posterior deben instalarse en el equipo Mac. Ejecución de libros de iOS en Windows requiere un host de compilación de Mac ejecuta todo lo anterior y el [simulador de iOS remoto](~/tools/ios-simulator.md) instalado en Windows.|
+|Android|Compatible con Mac y Windows|Debe usar el emulador de Google, Visual Studio o Xamarin para Android, con un dispositivo virtual > = 5.0|
+|WPF|Solo se admite en Windows|
+|Consola (.NET Framework)|Compatible con Mac y Windows|
+|Consola (.NET Core)|Compatible con Mac y Windows|
+
 
 ## <a name="reporting-bugs"></a>Informes errores
 
@@ -108,7 +65,7 @@ Adjunte siempre los archivos de registro de cliente de los libros:
 
 1.4. x también incluye la capacidad de seleccionar el archivo de registro en Finder (Mac OS) o en el explorador (Windows) directamente desde el menú principal:
 
-- **Archivo de registro de mostrar Ayuda →**
+- **Ayuda > revelar el archivo de registro**
 
 #### <a name="log-paths-for-workbooks-13-and-earlier"></a>Rutas de acceso de registro para los libros 1.3 y versiones anteriores:
 
@@ -121,23 +78,23 @@ Es muy útil para conocer detalles sobre el sistema operativo y Xamarin producto
 
 En el menú principal en los libros:
 
-* **Ayudar a la información de versión de copia →**
+* **Ayuda > Copiar información de versión**
 
 #### <a name="instructions-for-workbooks-13-and-earlier"></a>Instrucciones para los libros 1.3 y versiones anteriores:
 
 Visual Studio para Mac
 
-- **Visual Studio → sobre Visual Studio → mostrar detalles → copiar información**
+- **Visual Studio > sobre Visual Studio > Mostrar detalles > Copiar información**
 - Pegue en el informe de errores
 
 Programa para la mejora
 
-- **Ayudar a → sobre información de copia de Visual Studio →**
+- **Ayuda > acerca de Visual Studio > Copiar información**
 - Háganos saber la versión del sistema operativo y si se ejecuta Windows de 32 bits o 64 bits.
 
 ### <a name="samples"></a>Muestras
 
-Si solo se puede adjuntar o vincular a la `.workbooks` archivo están teniendo problemas con, que puede ayudar a resolver el error más rápidamente.
+Si solo se puede adjuntar o vincular a la **.workbooks** archivo están teniendo problemas con, que puede ayudar a resolver el error más rápidamente.
 
 ### <a name="devices"></a>Dispositivos
 
@@ -148,7 +105,7 @@ Si tiene problemas para conectarse a sus libro Android o iOS y ya ha activado [n
 - Android: Compruebe que está usando un x86 emulador
 - Android: ¿En qué plataforma emulador se está usando? ¿Emulador de Google?
   ¿Emulador de Android de Visual Studio? ¿Xamarin Android Player?
-- iOS en Windows: ¿qué versión del simulador de iOS remoto Xamarin ¿tiene instalado (consulte `Add/Remove Programs` en `Control Panel`)?
+- iOS en Windows: ¿qué versión del simulador de iOS remoto Xamarin ¿tiene instalado (consulte **agregar o quitar programas** en **el Panel de Control**)?
 - iOS en Windows: también proporcione información de versión de la plataforma para el host de compilación de Mac
 - ¿El dispositivo tiene conectividad de red (comprobar a través del explorador web)?
 
@@ -168,7 +125,7 @@ Si tiene Visual Studio de 2017, abra **instalador de Visual Studio**y busque en 
 
 Si ha instalado los libros & Inspector usted mismo con un instalador descargado, deberá desinstalar a través de la **aplicaciones y características** página de configuración del sistema en Windows 10 o a través de **agregar o quitar programas**en el Panel de Control en versiones anteriores de Windows.
 
-> **Iniciar → configuración → características y aplicaciones del sistema →**
+> **Inicio > Configuración > sistema > aplicaciones y características**
 
 ![](install-images/windows-remove.png "Los libros de Xamarin y del Inspector, como se muestra en &quot;aplicaciones &amp; características&quot;")
 
@@ -197,7 +154,7 @@ En el caso de versiones anteriores, debe quitar manualmente lo siguiente:
 
 ## <a name="downgrading"></a>Degradar
 
-Identificador de la agrupación `/Applications/Xamarin Workbooks.app` cambió de `com.xamarin.Inspector` a `com.xamarin.Workbooks` en la versión 1.4 para facilitar una división futuras de los instaladores de libros de Xamarin & Inspector.
+Identificador de la agrupación **aplicaciones/Xamarin Workbooks.app** cambió de `com.xamarin.Inspector` a `com.xamarin.Workbooks` en la versión 1.4 para facilitar una división futuras de los instaladores de libros de Xamarin & Inspector.
 
 Debido a un error en los instaladores anteriores, no es posible cambiar versiones 1.4 o posterior mediante el 1.3.2 o instaladores anteriores.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: d1c4c46b62b95d70dd2832c96ffd2686163990a5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f0e8dabc47352213d18d079ee9f8abb3e557b868
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="binding-objective-c-libraries"></a>Bibliotecas de enlace Objective-c.
 
@@ -1514,6 +1514,6 @@ A partir de Xamarin.iOS v3.2, se admite la herencia de protocolos que se han mar
 
 Históricamente, hemos necesitado copiar el protocolo en todas las implementaciones, pero en estos casos ahora podemos tenemos el `MKShape` clase hereda de la `MKOverlay` protocolo y generarán automáticamente todos los métodos necesarios.
 
-### <a name="related-links"></a>Vínculos relacionados
+## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplo de enlace](https://developer.xamarin.com/samples/BindingSample/)

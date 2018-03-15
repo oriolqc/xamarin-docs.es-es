@@ -8,11 +8,11 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: bb99984f93f494cfb5ad3d37ccb25f0b91d0b489
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e84bce5d4280ded801ed58999a2570d3c6bd327e
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="clipping-with-paths-and-regions"></a>Con las rutas de acceso y las regiones de recorte
 
@@ -267,7 +267,7 @@ Sin embargo, las sobrecargas de `ClipPath` y `ClipRect` con `SKRegionOperation` 
 
 Puede seguir usando el `SKRegionOperation` enumeración pero requiere que se defina un área de recorte en términos de un [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) objeto.
 
-Una recién creada `SKRegion` objeto describe un área vacía. Suele ser la primera llamada en el objeto [ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/) para que la región de describir un área rectangular. El parámetro `SetRect` es un un `SKRectI` valor & #x 2014; el valor de rectángulo con propiedades de entero. A continuación, puede llamar a [ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/) con un `SKPath` objeto. Esto crea una región que es el mismo que el interior de la ruta de acceso, pero se recorta para la región rectangular inicial.
+Una recién creada `SKRegion` objeto describe un área vacía. Suele ser la primera llamada en el objeto [ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/) para que la región de describir un área rectangular. El parámetro `SetRect` es un una `SKRectI` valor &mdash; el valor de rectángulo con propiedades de entero. A continuación, puede llamar a [ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/) con un `SKPath` objeto. Esto crea una región que es el mismo que el interior de la ruta de acceso, pero se recorta para la región rectangular inicial.
 
 El `SKRegionOperation` enumeración solo entra en juego cuando se llama a uno de los [ `Op` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.Op/p/SkiaSharp.SKRegion/SkiaSharp.SKRegionOperation/) sobrecargas del método, como éste:
 

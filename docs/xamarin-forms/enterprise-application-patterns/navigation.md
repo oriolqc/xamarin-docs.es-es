@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: a37773b666e015277d2fecc103066e82b6f7f108
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: ec91a7c100f294437bb1498fcd56a35f5b19c399
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="navigation"></a>Navegación
 
@@ -51,36 +51,13 @@ public interface INavigationService
 
 Esta interfaz especifica que una clase de implementación debe proporcionar los métodos siguientes:
 
-<table>
-<thead>
-<tr class="header">
-<th>Método</th>
-<th>Propósito</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>InitializeAsync</code></td>
-<td>Lleva a cabo la navegación a uno de dos páginas cuando se inicia la aplicación.</td>
-</tr>
-<tr class="even">
-<td><code>NavigateToAsync<T></code></td>
-<td>Lleva a cabo la navegación jerárquica en una página especificada.</td>
-</tr>
-<tr class="odd">
-<td><code>NavigateToAsync<T>(parameter)</code></td>
-<td>Lleva a cabo la navegación jerárquica en una página especificada, se pasa un parámetro.</td>
-</tr>
-<tr class="even">
-<td><code>RemoveLastFromBackStackAsync</code></td>
-<td>Quita la página anterior de la pila de navegación.</td>
-</tr>
-<tr class="odd">
-<td><code>RemoveBackStackAsync</code></td>
-<td>Quita todas las páginas anteriores de la pila de navegación.</td>
-</tr>
-</tbody>
-</table>
+|Método|Propósito|
+|--- |--- |
+|`InitializeAsync`|Lleva a cabo la navegación a uno de dos páginas cuando se inicia la aplicación.|
+|`NavigateToAsync`|Lleva a cabo la navegación jerárquica en una página especificada.|
+|`NavigateToAsync(parameter)`|Lleva a cabo la navegación jerárquica en una página especificada, se pasa un parámetro.|
+|`RemoveLastFromBackStackAsync`|Quita la página anterior de la pila de navegación.|
+|`RemoveBackStackAsync`|Quita todas las páginas anteriores de la pila de navegación.|
 
 Además, el `INavigationService` interfaz especifica que una clase de implementación debe proporcionar un `PreviousPageViewModel` propiedad. Esta propiedad devuelve el tipo de modelo de vista asociado a la página anterior en la pila de navegación.
 

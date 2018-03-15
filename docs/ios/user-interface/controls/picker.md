@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/02/2017
-ms.openlocfilehash: 3418d0b7946e1da68380512d64bdfc8b13d1d784
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b92bdc365cae524cee1f586b293c4638225c6178
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="picker"></a>Selector de
 
@@ -22,7 +22,7 @@ Un usuario específico caso para selectores para establecer la fecha o tiempo. P
 
 Este artículo describen implementar y utilizar el [selector](#picker) y [selector de fecha](#datepicker) controles.
 
-<a name="picker"/>
+<a name="picker" />
 
 ## <a name="picker"></a>Selector de
 
@@ -143,7 +143,7 @@ El valor devuelto indica el número de marca que tendrá el selector.
 La apariencia de la `UIPickerView` puede personalizarse mediante el uso de la `UIPickerView.UIPickerViewAppearance` de clase o reemplazar por la `UIPickerViewModel.GetView` y `UIPickerViewModel.GetRowHeight` métodos en el `UIPickerViewModel`.
 
 
-<a name="datepicker"/>
+<a name="datepicker" />
 
 ## <a name="date-picker"></a>Selector de fecha
 

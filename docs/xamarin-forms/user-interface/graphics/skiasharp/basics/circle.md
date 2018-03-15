@@ -8,11 +8,11 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 5b09621f1d3a24f8061e5cd6551dd85ce93e36e3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 10f741e853603ef22cd45004a6c726ae579f3675
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="drawing-a-simple-circle"></a>Dibujar un círculo Simple
 
@@ -146,7 +146,7 @@ Cuando se ejecuta el programa, puede activar el teléfono o el simulador lateral
 
 Un `SKPaint` objeto es algo más que una colección de propiedades de dibujo de gráficos. Estos objetos son muy ligeros. Puede volver a usar `SKPaint` objetos como no de este programa, o puede crear varios `SKPaint` objetos de diversas combinaciones de propiedades del dibujo. Puede crear e inicializar estos objetos fuera de la `PaintSurface` controlador de eventos y también puede guardarlas como campos en la clase de página.
 
-Aunque se especifica el ancho del contorno del círculo como 25 píxeles & #x 2014; o un cuarto del radio del círculo & #x 2014; parece que no más estrecho y no hay una buena razón para ello: mitad del ancho de la línea se oculta el círculo azul. Los argumentos para el `DrawCircle` método definen las coordenadas geométricas abstractas de un círculo. El interior azul tiene un tamaño para esa dimensión al píxel más cercano, pero el esquema de 25 píxeles de ancho sobrepasa el círculo geométrica & #x 2014; mitad en el interior y la otra mitad en el exterior.
+Aunque se especifica el ancho del contorno del círculo como 25 píxeles &mdash; o un cuarto del radio del círculo &mdash; parece ser más estrecho y no hay una buena razón para ello: mitad del ancho de la línea se oculta el círculo azul. Los argumentos para el `DrawCircle` método definen las coordenadas geométricas abstractas de un círculo. El interior azul tiene un tamaño para esa dimensión al píxel más cercano, pero el esquema de 25 píxeles de ancho sobrepasa el círculo geométrico &mdash; mitad en el interior y la otra mitad en el exterior.
 
 El ejemplo siguiente en el [integración con Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) artículo se muestra cómo hacerlo visualmente.
 

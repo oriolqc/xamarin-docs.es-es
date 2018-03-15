@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: f448a3ee9c018aa475775a5ac2c614f3e7ddc324
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ab22881f383e00a67fda8d3e8ffc5d9a4f7f993e
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -25,20 +25,7 @@ Es una sola biblioteca con una API uniforme para todas las plataformas. NET, inc
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-## <a name="xamarin-studio"></a>Xamarin Studio
-
-Proyectos de biblioteca estándar de .NET se pueden crear de Xamarin Studio 6.2, creando primero un proyecto de biblioteca Portable:
-
-[![](net-standard-images/xs01-sml.png "Cree un nuevo proyecto de biblioteca portable")](net-standard-images/xs01.png#lightbox)
-
-Una vez creado el proyecto, haga clic en y abra el **Project Options** ventana.
-En el **General** sección el proyecto se puede convertir en el estándar de .NET y configurado para usar una versión específica en el **plataforma** lista desplegable:
-
-[![](net-standard-images/xs02-sml.png "Convertir en .NET estándar, por lo general, opciones")](net-standard-images/xs02.png#lightbox)
-
-A continuación, puede [crear un paquete de NuGet](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/existing-library.md) para compartir la biblioteca con otros desarrolladores.
-
-## <a name="visual-studio-for-mac-walkthrough"></a>Tutorial de Visual Studio para Mac
+## <a name="visual-studio-for-mac"></a>Visual Studio para Mac
 
 Esta sección se explica cómo crear y utilizar una biblioteca estándar de .NET con Visual Studio para Mac. Consulte la sección de ejemplo de biblioteca estándar de .NET para una implementación completa.
 
@@ -68,7 +55,7 @@ En puede cambiar la versión de `netstandard` cambiando la `Target Framework` va
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-## <a name="visual-studio-windows-walkthrough"></a>Tutorial de Visual Studio (Windows)
+## <a name="visual-studio-2017-windows"></a>Visual Studio 2017 (Windows)
 
 Esta sección le guía por el proceso de crear y utilizar una biblioteca estándar de .NET con Visual Studio. Consulte la sección de ejemplo de biblioteca estándar de .NET para una implementación completa.
 
@@ -104,7 +91,3 @@ Una vez que se ha creado una biblioteca estándar. NET, puede agregar una refere
 
 -----
 
-
-## <a name="related-links"></a>Vínculos relacionados
-
-- [Notas de la versión](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#.NET_Standard_Support)

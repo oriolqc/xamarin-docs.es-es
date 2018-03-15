@@ -8,11 +8,11 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 16e9423c84e591e15a703b4d5bb204a8b642bb40
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 90be80d42c20ca7509037b5f59b34cc1bddde6de
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="touch-manipulations"></a>Manipulaciones táctil
 
@@ -193,7 +193,7 @@ public partial class TouchManipulationPage : ContentPage
 }
 ```
 
-Si el `HitTest` método `true` & #x 2014; que indica que un dedo toca la pantalla dentro del área ocupada por el mapa de bits & #x 2014; a continuación, el identificador de entrada táctil se agrega a la `TouchIds` colección. Este identificador representa la secuencia de eventos de entrada táctil para ese dedo hasta que levante el dedo desde la pantalla. Si varios dedos tocan el mapa de bits, la `touchIds` colección contiene un identificador de contacto para cada dedo.
+Si el `HitTest` método `true` &mdash; lo que significa que un dedo toca la pantalla dentro del área ocupada por el mapa de bits &mdash; , a continuación, el identificador de entrada táctil se agrega a la `TouchIds` colección. Este identificador representa la secuencia de eventos de entrada táctil para ese dedo hasta que levante el dedo desde la pantalla. Si varios dedos tocan el mapa de bits, la `touchIds` colección contiene un identificador de contacto para cada dedo.
 
 El `TouchAction` controlador también llama el `ProcessTouchEvent` clase `TouchManipulationBitmap`. Aquí es donde algunas (aunque no todos) de la entrada táctil real se produce el procesamiento.
 
@@ -404,7 +404,7 @@ class TouchManipulationManager
 
 Cada vez que se ha seleccionado la rotación, tanto los métodos de manipulación de un solo dedo y dos dedo controlen la rotación primero. Si se detecta cualquier rotación, se quita eficazmente el componente de rotación. Lo que permanece se interpreta como la panorámica y el ajuste de escala.
 
-Este es el `OneFingerManipulate` método. Si no se ha habilitado un solo dedo rotación, a continuación, la lógica es simple & #x 2014; simplemente utiliza el punto anterior y el punto nuevo para crear un vector con el nombre `delta` que corresponde exactamente a la traducción. Con un solo dedo rotación habilitada, el método utiliza ángulos desde el punto de pivote (el centro del mapa de bits) en el punto anterior y nuevo punto para construir una matriz de rotación:
+Este es el `OneFingerManipulate` método. Si no se habilitó la rotación de un solo dedo, la lógica es sencilla &mdash; simplemente utiliza el punto anterior y el punto nuevo para crear un vector con el nombre `delta` que corresponde exactamente a la traducción. Con un solo dedo rotación habilitada, el método utiliza ángulos desde el punto de pivote (el centro del mapa de bits) en el punto anterior y nuevo punto para construir una matriz de rotación:
 
 ```csharp
 class TouchManipulationManager

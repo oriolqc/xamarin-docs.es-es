@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 5334465905817336df91f5816596dc5723071811
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d5d5de21c4f397f203b4da5ea86e1f9a0e4714e9
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="introduction"></a>Introducción
 
@@ -118,48 +118,16 @@ Además, las pruebas unitarias se proporcionan para que algunas de las clases en
 
 La solución de aplicación móvil eShopOnContainers organiza el código fuente y otros recursos en proyectos. Todos los proyectos usar carpetas para organizar el código fuente y otros recursos en categorías. En la tabla siguiente se describe los proyectos que forman la aplicación móvil eShopOnContainers:
 
-<table>
-<thead>
-<tr class="header">
-<th>Proyecto</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>eShopOnContainers.Core</td>
-<td>Este proyecto es el proyecto de biblioteca (PCL) de clases portable que contiene el código compartido y la interfaz de usuario compartida.</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.Droid</td>
-<td>Este proyecto contiene código específico de Android y es el punto de entrada para la aplicación de Android.</td>
-</tr>
-<tr class="odd">
-<td>eShopOnContainers.iOS</td>
-<td>Este proyecto contiene código específico de iOS y es el punto de entrada para la aplicación de iOS.</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.UWP</td>
-<td>Este proyecto contiene código específico de plataforma Universal de Windows (UWP) y es el punto de entrada para la aplicación de Windows.</td>
-</tr>
-<tr class="odd">
-<td>eShopOnContainers.TestRunner.Droid</td>
-<td>Este proyecto es el ejecutor de pruebas de Android para el proyecto eShopOnContainers.UnitTests.</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.TestRunner.iOS</td>
-<td>Este proyecto es el ejecutor de pruebas de iOS para el proyecto eShopOnContainers.UnitTests.</td>
-</tr>
-<tr class="odd">
-<td>eShopOnContainers.TestRunner.Windows</td>
-<td>Este proyecto es el ejecutor de pruebas de la plataforma Universal de Windows para el proyecto eShopOnContainers.UnitTests.</td>
-</tr>
-<tr class="even">
-<td>eShopOnContainers.UnitTests</td>
-<td>Este proyecto contiene pruebas unitarias para el proyecto eShopOnContainers.Core.</td>
-</tr>
-</tbody>
-</table>
+|Proyecto|Descripción|
+|--- |--- |
+|eShopOnContainers.Core|Este proyecto es el proyecto de biblioteca (PCL) de clases portable que contiene el código compartido y la interfaz de usuario compartida.|
+|eShopOnContainers.Droid|Este proyecto contiene código específico de Android y es el punto de entrada para la aplicación de Android.|
+|eShopOnContainers.iOS|Este proyecto contiene código específico de iOS y es el punto de entrada para la aplicación de iOS.|
+|eShopOnContainers.UWP|Este proyecto contiene código específico de plataforma Universal de Windows (UWP) y es el punto de entrada para la aplicación de Windows.|
+|eShopOnContainers.TestRunner.Droid|Este proyecto es el ejecutor de pruebas de Android para el proyecto eShopOnContainers.UnitTests.|
+|eShopOnContainers.TestRunner.iOS|Este proyecto es el ejecutor de pruebas de iOS para el proyecto eShopOnContainers.UnitTests.|
+|eShopOnContainers.TestRunner.Windows|Este proyecto es el ejecutor de pruebas de la plataforma Universal de Windows para el proyecto eShopOnContainers.UnitTests.|
+|eShopOnContainers.UnitTests|Este proyecto contiene pruebas unitarias para el proyecto eShopOnContainers.Core.|
 
 Las clases de la aplicación móvil eShopOnContainers puede volver a usar en cualquier aplicación de Xamarin.Forms con poca o ninguna modificación.
 
@@ -167,76 +135,23 @@ Las clases de la aplicación móvil eShopOnContainers puede volver a usar en cua
 
 El proyecto PCL eShopOnContainers.Core contiene las siguientes carpetas:
 
-<table>
-<thead>
-<tr class="header">
-<th>Carpeta</th>
-<th>Descripción</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Animaciones</td>
-<td>Contiene clases que habilitan las animaciones a ser consumidos en XAML.</td>
-</tr>
-<tr class="even">
-<td>comportamientos</td>
-<td>Contiene los comportamientos que se exponen para ver las clases.</td>
-</tr>
-<tr class="odd">
-<td>Controles</td>
-<td>Contiene controles personalizados usados por la aplicación.</td>
-</tr>
-<tr class="even">
-<td>Convertidores de</td>
-<td>Contiene los convertidores de valores que aplican la lógica personalizada a un enlace.</td>
-</tr>
-<tr class="odd">
-<td>Efectos</td>
-<td>Contiene el <code>EntryLineColorEffect</code> (clase), que se utiliza para cambiar el color del borde específicas de <code>Entry</code> controles.</td>
-</tr>
-<tr class="even">
-<td>Excepciones</td>
-<td>Contiene la custom <code>ServiceAuthenticationException</code>.</td>
-</tr>
-<tr class="odd">
-<td>Extensiones</td>
-<td>Contiene métodos de extensión para la <code>VisualElement</code> y <code>IEnumerable<T> </code> clases.</td>
-</tr>
-<tr class="even">
-<td>Aplicaciones auxiliares</td>
-<td>Contiene clases de aplicación auxiliar para la aplicación.</td>
-</tr>
-<tr class="odd">
-<td>Modelos</td>
-<td>Contiene las clases del modelo de la aplicación.</td>
-</tr>
-<tr class="even">
-<td>Propiedades</td>
-<td>Contiene <code>AssemblyInfo.cs</code>, un archivo de metadatos de ensamblado. NET.</td>
-</tr>
-<tr class="odd">
-<td>Servicios</td>
-<td>Contiene interfaces y clases que implementan los servicios que se proporcionan a la aplicación.</td>
-</tr>
-<tr class="even">
-<td>Desencadenadores</td>
-<td>Contiene el <code>BeginAnimation</code> desencadenador, que se utiliza para invocar una animación en XAML.</td>
-</tr>
-<tr class="odd">
-<td>Validaciones</td>
-<td>Contiene las clases implicadas en la validación de entrada de datos.</td>
-</tr>
-<tr class="even">
-<td>ViewModels</td>
-<td>Contiene la lógica de aplicación que se expone a las páginas.</td>
-</tr>
-<tr class="odd">
-<td>Vistas</td>
-<td>Contiene las páginas de la aplicación.</td>
-</tr>
-</tbody>
-</table>
+|Carpeta|Descripción|
+|--- |--- |
+|Animaciones|Contiene clases que habilitan las animaciones a ser consumidos en XAML.|
+|comportamientos|Contiene los comportamientos que se exponen para ver las clases.|
+|Controles|Contiene controles personalizados usados por la aplicación.|
+|Convertidores de|Contiene los convertidores de valores que aplican la lógica personalizada a un enlace.|
+|Efectos|Contiene el `EntryLineColorEffect` (clase), que se utiliza para cambiar el color del borde específicas de `Entry` controles.|
+|Excepciones|Contiene la custom `ServiceAuthenticationException`.|
+|Extensiones|Contiene métodos de extensión para la `VisualElement` y `IEnumerable` clases.|
+|Aplicaciones auxiliares|Contiene clases de aplicación auxiliar para la aplicación.|
+|Modelos|Contiene las clases del modelo de la aplicación.|
+|Propiedades|Contiene `AssemblyInfo.cs`, un archivo de metadatos de ensamblado. NET.|
+|Servicios|Contiene interfaces y clases que implementan los servicios que se proporcionan a la aplicación.|
+|Desencadenadores|Contiene el `BeginAnimation` desencadenador, que se utiliza para invocar una animación en XAML.|
+|Validaciones|Contiene las clases implicadas en la validación de entrada de datos.|
+|ViewModels|Contiene la lógica de aplicación que se expone a las páginas.|
+|Vistas|Contiene las páginas de la aplicación.|
 
 ##### <a name="platform-projects"></a>Proyectos de plataforma
 

@@ -7,11 +7,11 @@ ms.assetid: 0AEC3A5C-586E-4D0F-9895-67E99A053A79
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 73b3ec3e60a8fca5c48f515eab2cbb8359618dbb
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a085eb306ad81b3c9214df269f69558bc8fbfaa7
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-19-collection-views"></a>Resumen de capítulo 19. Vistas de colección
 
@@ -31,7 +31,7 @@ El [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) es
 
 El [ **PickerDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/PickerDemo) ejemplo muestra cómo utilizar XAML para establecer el `Picker` [ `Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Title/) propiedad y agregue `string` elementos a la [ `Items` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.Items/) colección. Cuando el usuario selecciona el `Picker`, muestra los elementos en el `Items` colección de una manera depende de la plataforma.
 
-El [ `SelectedIndexChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Picker.SelectedIndexChanged/) evento indica cuándo el usuario ha seleccionado un elemento. Base cero [ `SelectedIndex` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.SelectedIndex/) propiedad indica a continuación, el elemento seleccionado. Si se selecciona ningún elemento, `SelectedIndex` es igual a &#x2013;1.
+El [ `SelectedIndexChanged` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Picker.SelectedIndexChanged/) evento indica cuándo el usuario ha seleccionado un elemento. Base cero [ `SelectedIndex` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Picker.SelectedIndex/) propiedad indica a continuación, el elemento seleccionado. Si se selecciona ningún elemento, `SelectedIndex` es igual a &ndash;1.
 
 También puede usar `SelectedIndex` inicializar el elemento seleccionado, pero se debe establecer después de la `Items` se rellena la colección. En XAML, esto significa que probablemente utilizará un elemento de propiedad para establecer `SelectedIndex`.
 
@@ -82,11 +82,11 @@ El [ **NaiveNamedColorList** ](https://github.com/xamarin/xamarin-forms-book-sam
 
 `ListView` necesita una plantilla para mostrar estos elementos. En el código, puede establecer la [ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ItemsView%3CTVisual%3E.ItemTemplate/) propiedad definida por `ItemsView<TVisual>` a una [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) objeto mediante la [ `DataTemplate` constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.DataTemplate.DataTemplate/p/System.Type/) que hace referencia a un derivado de la [ `Cell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) clase. `Cell` tiene cinco derivados:
 
-- [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) &#x2014; contiene dos `Label` vistas (en términos conceptuales)
-- [`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/) &#x2014; Agrega un `Image` ver a `TextCell`
-- [`EntryCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell/) &#x2014; contiene un `Entry` ver con un `Label`
-- [`SwitchCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell/) &#x2014; contiene un `Switch` con un `Label`
-- [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) &#x2014; puede ser cualquier `View` (probablemente con elementos secundarios)
+- [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) &mdash; contiene dos `Label` vistas (en términos conceptuales)
+- [`ImageCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/) &mdash; Agrega un `Image` ver a `TextCell`
+- [`EntryCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.EntryCell/) &mdash; contiene un `Entry` ver con un `Label`
+- [`SwitchCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.SwitchCell/) &mdash; contiene un `Switch` con un `Label`
+- [`ViewCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) &mdash; puede ser cualquier `View` (probablemente con elementos secundarios)
 
 A continuación, llamar a [ `SetValue` ](https://developer.xamarin.com/api/member/Xamarin.Forms.DataTemplate.SetValue/p/Xamarin.Forms.BindableProperty/System.Object/) y [ `SetBinding` ](https://developer.xamarin.com/api/member/Xamarin.Forms.DataTemplate.SetBinding/p/Xamarin.Forms.BindableProperty/Xamarin.Forms.BindingBase/) en el `DataTemplate` objeto para asociar valores con el `Cell` propiedades, o establecer enlaces de datos en el `Cell` propiedades que hacen referencia a propiedades de los elementos de la `ItemsSource` colección. Esto se muestra en el [ **TextCellListCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/TextCellListCode) ejemplo.
 

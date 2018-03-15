@@ -7,11 +7,11 @@ ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9a53cddcf216efd2bb86c838e280d599ff26c191
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ddb76e00cfe1c19a9d31dc3e53b80a2be0697dbc
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Resumen del capítulo 23. Desencadenadores y comportamientos
 
@@ -131,7 +131,7 @@ Todo lo que puede hacer con un desencadenador, también puede hacer con un compo
 
 El argumento es el elemento que el comportamiento asociado. Por lo general, el `OnAttachedTo` método asocia algunos controladores de eventos, y `OnDetachingFrom` desasocia ellos. Como esta clase guarda normalmente algún estado, generalmente no se puede compartir en un `Style`.
 
-[**BehaviorEntryValidation** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) ejemplo es similar al **TriggerEntryValidation** salvo que usa un comportamiento & #x 2014; la [ `NumericValidationBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) clase en el [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) biblioteca.
+[**BehaviorEntryValidation** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/BehaviorEntryValidation) ejemplo es similar al **TriggerEntryValidation** salvo que usa un comportamiento &mdash; el [ `NumericValidationBehavior` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/NumericValidationBehavior.cs) clase en el [ **Xamarin.FormsBook.Toolkit** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) biblioteca.
 
 ### <a name="behaviors-with-properties"></a>Comportamientos con propiedades
 

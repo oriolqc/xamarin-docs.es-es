@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: f8b748ad1b57218d1e8aab11bdc1037cf3cfa14c
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 98c38001ea7751c419d4be5b0f68339b06ec656f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="consuming-a-restful-web-service"></a>Consumir un servicio Web RESTful
 
@@ -49,42 +49,12 @@ Las instrucciones sobre cómo configurar el servicio REST se pueden encontrar en
 
 El servicio REST se escribe utilizando ASP.NET Core y proporciona las siguientes operaciones:
 
-<table>
-  <thead>
-    <tr>
-      <th>Operación</th>
-      <th>Método HTTP</th>
-      <th>URI relativo</th>
-      <th>Parámetros</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Obtener una lista de elementos pendientes</td>
-      <td>GET</td>
-      <td>/api/todoitems/</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Crear un nuevo elemento de tarea</td>
-      <td>EXPONER</td>
-      <td>/api/todoitems/</td>
-      <td>En formato JSON <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>Actualizar un elemento de tarea</td>
-      <td>PUT</td>
-      <td>/api/todoitems/</td>
-      <td>En formato JSON <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>Eliminar un elemento de tarea</td>
-      <td>SUPRIMIR</td>
-      <td>/api/todoitems/{id}</td>
-      <td></td>
-    </tr>
-  </tbody>
-</table>
+|Operación|Método HTTP|URI relativo|Parámetros|
+|--- |--- |--- |--- |
+|Obtener una lista de elementos pendientes|GET|/api/todoitems/|
+|Crear un nuevo elemento de tarea|EXPONER|/api/todoitems/|TodoItem en formato JSON|
+|Actualizar un elemento de tarea|PUT|/api/todoitems/|TodoItem en formato JSON|
+|Eliminar un elemento de tarea|SUPRIMIR|/api/todoitems/{id}|
 
 La mayoría de los URI incluyen el `TodoItem` ID en la ruta de acceso. Por ejemplo, para eliminar la `TodoItem` cuyo identificador es `6bb8a868-dba1-4f1a-93b7-24ebce87e243`, el cliente envía una solicitud de eliminación para `http://hostname/api/todoitems/6bb8a868-dba1-4f1a-93b7-24ebce87e243`. Para obtener más información acerca del modelo de datos usado en la aplicación de ejemplo, vea [modelar los datos](~/xamarin-forms/data-cloud/walkthrough.md).
 

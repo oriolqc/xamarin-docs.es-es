@@ -7,11 +7,11 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: afb8e2fff58583dc8648c55839649c96cb68b6ba
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: a40b4f00fd2a0dd3f61c4882a2ef25b8eb68a3a5
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Resumen de capítulo 21. Transformaciones
 
@@ -19,9 +19,9 @@ Aparece una vista de Xamarin.Forms en la pantalla en una ubicación y tamaño de
 
 Xamarin.Forms admite tres tipos básicos de transformaciones:
 
-- *Traducción* & #x 2014; un elemento de desplazamiento horizontal o verticalmente
-- *Escala* & #x 2014; cambiar el tamaño de un elemento
-- *Rotación* & #x 2014; activar un elemento alrededor de un punto o un eje
+- *Traducción* &mdash; un elemento de desplazamiento horizontal o verticalmente
+- *Escala* &mdash; cambiar el tamaño de un elemento
+- *Rotación* &mdash; activar un elemento alrededor de un punto o un eje
 
 De Xamarin.Forms, la escala es isótropo; afecta a la anchura y altura uniformemente. Se admite el giro tanto en la superficie bidimensional de la pantalla y en el espacio 3D. No hay ninguna transformación sesga (o total) y ninguna transformación de matriz generalizado.
 

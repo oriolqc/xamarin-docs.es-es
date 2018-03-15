@@ -8,11 +8,11 @@ ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 1cb6b6fcd8a9d02910842eb3eba966fce281d977
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 1d174e441cd46255d62283521e7db2802b49072f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="integrating-text-and-graphics"></a>Integración de texto y gráficos
 
@@ -61,13 +61,13 @@ El segundo [ `MeasureText` ](https://developer.xamarin.com/api/member/SkiaSharp.
 El `Left` y `Top` propiedades de la `SKRect` estructura indican las coordenadas de la esquina superior izquierda del texto representado si se muestra el texto por una `DrawText` llama con posiciones X e Y de 0. Por ejemplo, cuando se ejecuta este programa en un emulador de iPhone 7, `TextSize` se asigna el valor 90.6254 como resultado del cálculo después de la primera llamada a `MeasureText`. El `SKRect` valor obtenido de la segunda llamada a `MeasureText` tiene los siguientes valores de propiedad:
 
 - `Left` = 6
-- `Top` = &#x2013;68
+- `Top` = &ndash;68
 - `Width` = 664.8214
 - `Height` = 88;
 
-Tenga en cuenta que las coordenadas X e Y se pasa a la `DrawText` método especifica el lado izquierdo del texto en la línea de base. El `Top` valor indica que el texto extiende 68 píxeles por encima de esta línea de base y (restar TI 68 desde 88) 20 píxeles por debajo de la línea de base. El `Left` el valor 6 indica que el texto comienza 6 píxeles a la derecha del valor X en la `DrawText` llamar. Esto permite el espaciado entre caracteres normales. Si desea mostrar el texto perfectamente en la esquina superior izquierda de la pantalla, pase los negativos de estas `Left` y `Top` valores como las coordenadas X e Y de `DrawText`, en este ejemplo & #x 2013; 6 y 68.
+Tenga en cuenta que las coordenadas X e Y se pasa a la `DrawText` método especifica el lado izquierdo del texto en la línea de base. El `Top` valor indica que el texto extiende 68 píxeles por encima de esta línea de base y (restar TI 68 desde 88) 20 píxeles por debajo de la línea de base. El `Left` el valor 6 indica que el texto comienza 6 píxeles a la derecha del valor X en la `DrawText` llamar. Esto permite el espaciado entre caracteres normales. Si desea mostrar el texto perfectamente en la esquina superior izquierda de la pantalla, pase los negativos de estas `Left` y `Top` valores como las coordenadas X e Y de `DrawText`, en este ejemplo, &ndash;6 y 68.
 
-El `SKRect` estructura define varias propiedades útiles y métodos, algunos de los cuales se utilizan en el resto de la `PaintSurface` controlador. El `MidX` y `MidY` valores indican las coordenadas del centro del rectángulo. (En el ejemplo iPhone 7, dichos valores son 338.4107 y & #x 2013; 24.) El código siguiente utiliza estos valores para el cálculo más fácil de coordenadas para centrar el texto de la pantalla:
+El `SKRect` estructura define varias propiedades útiles y métodos, algunos de los cuales se utilizan en el resto de la `PaintSurface` controlador. El `MidX` y `MidY` valores indican las coordenadas del centro del rectángulo. (En el ejemplo iPhone 7, dichos valores son 338.4107 y &ndash;24.) El código siguiente utiliza estos valores para el cálculo más fácil de coordenadas para centrar el texto de la pantalla:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

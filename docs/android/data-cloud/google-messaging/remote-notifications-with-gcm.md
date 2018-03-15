@@ -7,12 +7,12 @@ ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 64961e9c45c28ede4cc84f7b978da565be4426d9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 823fad163e837adab5490446c23ab2f492679114
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notificaciones remotas con la mensajería de nube de Google
 
@@ -507,32 +507,12 @@ En el XML anterior, cambie *YOUR_PACKAGE_NAME* para el nombre del paquete para e
 
 Echemos un vistazo a lo que hace cada configuración en este código XML:
 
-<table>
-    <thead>
-        <tr>
-            <th>Parámetro</th>
-            <th>Descripción</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td><code>com.google.android.gms.gcm.GcmReceiver</code></td>
-            <td>Declara que nuestra aplicación implementa un receptor GCM que captura y procesa los mensajes entrantes de notificaciones de inserción.</td>
-        </tr>
-        <tr>
-            <td><code>com.google.android.c2dm.permission.SEND</code></td>
-            <td>Declara que sólo los servidores de GCM pueden enviar mensajes directamente a la aplicación.</td>
-        </tr>
-        <tr>
-            <td><code>com.google.android.c2dm.intent.RECEIVE</code></td> 
-            <td>Filtro intención publicidad que nuestra aplicación controla los mensajes de difusión de GCM.</td>
-        </tr>
-        <tr>
-            <td><code>com.google.android.c2dm.intent.REGISTRATION</code></td>
-            <td>Filtro intención publicidad que nuestra aplicación trata los nuevos intentos de registro (es decir, hemos implementado un servicio de escucha de Id. de instancia).</td>
-        </tr>
-    </tbody>
-</table>
+|Parámetro|Descripción|
+|---|---|
+|`com.google.android.gms.gcm.GcmReceiver`|Declara que nuestra aplicación implementa un receptor GCM que captura y procesa los mensajes entrantes de notificaciones de inserción.|
+|`com.google.android.c2dm.permission.SEND`|Declara que sólo los servidores de GCM pueden enviar mensajes directamente a la aplicación.|
+|`com.google.android.c2dm.intent.RECEIVE`|Filtro intención publicidad que nuestra aplicación controla los mensajes de difusión de GCM.|
+|`com.google.android.c2dm.intent.REGISTRATION`|Filtro intención publicidad que nuestra aplicación trata los nuevos intentos de registro (es decir, hemos implementado un servicio de escucha de Id. de instancia).|
 
 Como alternativa, puede decorar `GcmListenerService` con estos atributos en lugar de especificarlos en XML; aquí se especifican en **AndroidManifest.xml** para que los ejemplos de código son más fáciles de seguir. 
 

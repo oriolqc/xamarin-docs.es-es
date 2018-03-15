@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 5cf194dce9bf4d0af23ba663ab00cf94a8a1766c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a02627d5e5b40fe9e7b2fdbd3a6995a2d96fbf03
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Consumir un servicio Web de Windows Communication Foundation (WCF)
 
@@ -41,37 +41,12 @@ Las instrucciones sobre cómo configurar el servicio WCF se pueden encontrar en 
 
 El servicio WCF proporciona las siguientes operaciones:
 
-<table>
-  <thead>
-    <tr>
-      <th>Operación</th>
-      <th>Descripción</th>
-      <th>Parámetros</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>GetTodoItems</td>
-      <td>Obtener una lista de elementos pendientes</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>CreateTodoItem</td>
-      <td>Crear un nuevo elemento de tarea</td>
-      <td>Un documento XML serializado <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>EditTodoItem</td>
-      <td>Actualizar un elemento de tarea</td>
-      <td>Un documento XML serializado <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>DeleteTodoItem</td>
-      <td>Eliminar un elemento de tarea</td>
-      <td>Un documento XML serializado <code>TodoItem</code></td>
-    </tr>
-  </tbody>
-</table>
+|Operación|Descripción|Parámetros|
+|--- |--- |--- |
+|GetTodoItems|Obtener una lista de elementos pendientes|
+|CreateTodoItem|Crear un nuevo elemento de tarea|Un documento XML serializado TodoItem|
+|EditTodoItem|Actualizar un elemento de tarea|Un documento XML serializado TodoItem|
+|DeleteTodoItem|Eliminar un elemento de tarea|Un documento XML serializado TodoItem|
 
 Para obtener más información acerca del modelo de datos usado en la aplicación, consulte [modelar los datos](~/xamarin-forms/data-cloud/walkthrough.md).
 

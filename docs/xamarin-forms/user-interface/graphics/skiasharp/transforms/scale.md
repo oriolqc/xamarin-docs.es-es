@@ -8,11 +8,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: feecfc923903a20332bf3a1a188ab9d7cd2ce1c0
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 39e2084bf9ca888d6e39fc5f02a455d3500e568c
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="the-scale-transform"></a>La transformación de escala
 
@@ -44,7 +44,7 @@ El `SKCanvas` clase define cuatro `Scale` métodos. La primera [ `Scale` ](https
 public void Scale (Single s)
 ```
 
-Esto se conoce como *isótropo* escalado & #x 2014; ajuste de escala que es el mismo en ambas direcciones. Escalado isótropo conserva la relación de aspecto del objeto.
+Esto se conoce como *isótropo* escalado &mdash; escala que es el mismo en ambas direcciones. Escalado isótropo conserva la relación de aspecto del objeto.
 
 El segundo [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/) método le permite especificar valores diferentes para el escalado horizontal y vertical:
 
@@ -168,7 +168,7 @@ Se coloca la esquina superior izquierda del rectángulo redondeado `margin` píx
 
 [![](scale-images/centeredscale-small.png "Captura de pantalla triple de la página de escala centrado")](scale-images/centeredscale-large.png#lightbox "Triple captura de pantalla de la página de escala centrado")
 
-El `Slider` elementos de este programa tienen un intervalo de & #x 2013; 10 a 10. Como puede ver, los valores negativos de vertical escalado (por ejemplo, como en el Android pantalla en el centro) hará que los objetos girar alrededor del eje horizontal que pasa a través del centro de ajuste de escala. Los valores negativos de escala (como se muestra en la pantalla de Windows a la derecha) horizontal hacen objetos que se va a girar alrededor del eje vertical que pasa a través del centro de ajuste de escala.
+El `Slider` elementos de este programa tienen un intervalo de &ndash;10 a 10. Como puede ver, los valores negativos de vertical escalado (por ejemplo, como en el Android pantalla en el centro) hará que los objetos girar alrededor del eje horizontal que pasa a través del centro de ajuste de escala. Los valores negativos de escala (como se muestra en la pantalla de Windows a la derecha) horizontal hacen objetos que se va a girar alrededor del eje vertical que pasa a través del centro de ajuste de escala.
 
 Esta cuarta versión de la `Scale` método es realmente un acceso directo. Desea ver cómo funciona esto si se reemplaza el `Scale` método en este código con lo siguiente:
 

@@ -7,12 +7,12 @@ ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 5589d512f9a4ee9c1148810f36fee12d561f725c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/14/2018
+ms.openlocfilehash: 66555139cfaab2074e7461be737f997a9bb9c7a7
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="resolving-library-installation-errors"></a>Resolver errores de instalación de la biblioteca
 
@@ -104,7 +104,7 @@ Si ha intentado siguiendo los pasos de recuperación automática anteriores y si
 
     -   [android\_m2repository\_r16.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r16.zip) &ndash; 0595E577D19D31708195A83087881EE6
 
-    Si el **m2repository** archivo no se muestra en esta tabla, puede crear la dirección URL de descarga anteponiendo **https://dl-ssl.google.com/android/repository/** en el nombre de la **m2repository**  para descargar. Por ejemplo, utilice **https://dl-ssl.google.com/android/repository/android\_m2repository\_r10.zip** para descargar **android\_m2repository\_r10.zip** .
+    Si el **m2repository** archivo no se muestra en esta tabla, puede crear la dirección URL de descarga anteponiendo  **https://dl-ssl.google.com/android/repository/**  en el nombre de la **m2repository** para descargar. Por ejemplo, utilice  **https://dl-ssl.google.com/android/repository/android \_m2repository\_r10.zip** para descargar **android\_m2repository\_r10.zip**.
 
 2.  Cambie el nombre del archivo con el hash de MD5 correspondiente de la URL de descarga, como se muestra en la tabla anterior. Por ejemplo, si ha descargado **android\_m2repository\_r25.zip**, cambie su nombre a **0B3F1796C97C707339FB13AE8507AF50.zip**. Si el hash MD5 para la URL de descarga del archivo descargado no se muestra en la tabla, puede usar un [en línea generador MD5](http://www.webconfs.com/online-md5-generator.php) para convertir la dirección URL en una cadena de hash MD5. 
 
@@ -160,6 +160,8 @@ Siga estos pasos para descargar **m2repository** e instalar su contenido:
     [![Ejemplo de archivos copiados a la carpeta 23.1.1.0/embedded](resolving-library-installation-errors-images/09-copied-vs.png)](resolving-library-installation-errors-images/09-copied-vs.png#lightbox)
 
 8.  Compruebe que todos los archivos se copian. El **incrustado** directorio debe contener ahora archivos como **.jar**, **.AAR y**, y **.pom**.
+
+9.  Descomprima cualquiera extraído **.AAR y** archivos. En Windows, anexe un **.zip** extensión a la **.AAR y** de archivos, haga clic en él y seleccione **extraer todo...** , a continuación, quite el **.zip** extensión. En Mac OS, descomprima el **.AAR y** un archivo utilizando el **descomprima** comando en el Terminal (por ejemplo, **descomprima file.aar**).
 
 En este momento, ha instalado manualmente los componentes que faltan y el proyecto debería compilarse sin errores. Si no es así, compruebe que ha descargado el **m2repository** **.zip** archivar versión que corresponde exactamente a la versión del mensaje de error y compruebe que ha instalado su contenido en el Corrija ubicaciones tal y como se describe en los pasos anteriores. 
 

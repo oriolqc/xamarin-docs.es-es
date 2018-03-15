@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f1ce6b62ef13d24148048253700d7b3bff805fad
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6d2e600ccc85f6e72e7f913e7ffb501bf62ff69a
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="path-basics"></a>Conceptos básicos de la ruta de acceso
 
@@ -115,7 +115,7 @@ Como puede ver, obviamente, el primer contorno es una serie de tres líneas cone
 - `AddPath` Para agregar otra ruta de acceso a la ruta de acceso actual
 - [`AddPathReverse`](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddPathReverse/p/SkiaSharp.SKPath/) Para agregar otra ruta de acceso en orden inverso
 
-Tenga en cuenta que un `SKPath` objeto define solo una geometría & #x 2014; una serie de puntos y conexiones. Solo cuando un `SKPath` se combina con un `SKPaint` objeto es la ruta de acceso que se representan con un color determinado, el ancho del trazo y así sucesivamente. Además, tenga en cuenta que la `SKPaint` objeto pasa a la `DrawPath` método define las características de la ruta de acceso completa. Si desea dibujar algo que requieren varios colores, debe utilizar una ruta de acceso independiente para cada color.
+Tenga en cuenta que un `SKPath` objeto define solo un objeto geometry &mdash; una serie de puntos y conexiones. Solo cuando un `SKPath` se combina con un `SKPaint` objeto es la ruta de acceso que se representan con un color determinado, el ancho del trazo y así sucesivamente. Además, tenga en cuenta que la `SKPaint` objeto pasa a la `DrawPath` método define las características de la ruta de acceso completa. Si desea dibujar algo que requieren varios colores, debe utilizar una ruta de acceso independiente para cada color.
 
 Igual que un extremo del trazo se define la apariencia de la inicial y final de una línea, la apariencia de la conexión entre dos líneas se define mediante una *combinación trazo*. Puede especificar esto estableciendo la [ `StrokeJoin` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeJoin/) propiedad de `SKPaint` a un miembro de la [ `SKStrokeJoin` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeJoin/) enumeración:
 

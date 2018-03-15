@@ -8,11 +8,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: 2b48667d90bf994deca5c41080e002974b0ded91
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dcfcf43c89f26b4e721c9752b9cbad1f4a30cfc2
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>Tres tipos de curvas de Bézier
 
@@ -20,7 +20,7 @@ _Explorar cómo usar SkiaSharp para representar curvas de Bézier cúbicas, cuad
 
 La curva de Bézier se denomina después Pierre Bézier (1910: 1999), un ingeniero de francés de la compañía para automóviles Renault, que usa la curva para el diseño asistido por ordenador de cuerpos de automóvil.
 
-Curvas de Bézier se conocen por ser adecuadas para el diseño interactivo: se están bien comportamiento & #x 2014; en otras palabras, no hay singularities originados por la curva se convierta en infinito o difícil de manejar & #x 2014; y, por lo general son bonita. Generalmente se definen los contornos de los caracteres de las fuentes basadas en equipo con curvas de Bézier:
+Curvas de Bézier se conocen por ser adecuadas para el diseño interactivo: están bien con comportamiento &mdash; en otras palabras, no hay singularities originados por la curva se convierta en infinito o difícil de manejar &mdash; y generalmente son estética . Generalmente se definen los contornos de los caracteres de las fuentes basadas en equipo con curvas de Bézier:
 
 ![](beziers-images/beziersample.png "Una curva de Bézier de ejemplo")
 
@@ -411,7 +411,7 @@ Sin embargo, la forma de una curva Bézier cuadrática no es elíptica, motivo p
 
 ## <a name="the-conic-bzier-curve"></a>La curva de Bézier cónicos
 
-La curva de Bézier cónico & #x 2014; También se conoce como la curva de Bézier cuadrática racional & #x 2014; es una adición a la familia de curvas de Bézier relativamente reciente. Al igual que la curva de Bézier cuadrática, la curva de Bézier cuadrática racional implica un punto inicial, un punto final y un punto de control. Pero la curva de Bézier cuadrática racional también requiere un *peso* valor. Cuando se le llama una *racional* cuadrática porque las fórmulas paramétricas implican proporciones.
+La curva de Bézier cónica &mdash; también conocido como el racional curva Bézier cuadrática &mdash; es una adición a la familia de curvas de Bézier relativamente reciente. Al igual que la curva de Bézier cuadrática, la curva de Bézier cuadrática racional implica un punto inicial, un punto final y un punto de control. Pero la curva de Bézier cuadrática racional también requiere un *peso* valor. Cuando se le llama una *racional* cuadrática porque las fórmulas paramétricas implican proporciones.
 
 Las ecuaciones paramétricas para X e Y son proporciones que comparten el mismo denominador. Aquí está la ecuación para el denominador de *t* comprendido entre 0 a 1 y un valor de peso de *w*:
 
@@ -425,7 +425,7 @@ x(t) = ((1 – t) ²x₀ + 2wt (1 – t) x₁ + t²x₂)) ÷ ät
 
 y(t) = ((1 – t) ²y₀ + 2wt (1 – t) y₁ + t²y₂)) ÷ ät
 
-También se denominan racionales curvas de Bézier cuadráticas *conics* porque pueden representar exactamente los segmentos de cualquier sección cónicos & #x 2014; hipérbolas, parábolas, elipses y círculos.
+También se denominan racionales curvas de Bézier cuadráticas *conics* porque pueden representar exactamente los segmentos de cualquier sección cónicos &mdash; hipérbolas, parábolas, elipses y círculos.
 
 Para agregar una curva Bézier cuadrática racional a una ruta de acceso, use el [ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/) método o la [ `ConicTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ConicTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/) sobrecarga con independiente `x` y `y` coordenadas:
 

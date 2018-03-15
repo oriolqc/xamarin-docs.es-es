@@ -7,11 +7,11 @@ ms.assetid: F3F864FF-EE70-49D0-90D1-388889037625
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 9b60a45cc998743d34d5cadb7750f35e7b965579
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e1d246ea65e88bde07c3d527c18b7850aa09e08b
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-1-how-does-xamarinforms-fit-in"></a>Resumen del capítulo 1. ¿Cómo encaja Xamarin.Forms?
 
@@ -21,7 +21,7 @@ Uno de los trabajos más desagradables en la programación es migrar un código 
 
 Este problema es común al elegir como destino plataformas móviles. Actualmente, existen dos principales plataformas móviles, la familia de Apple de iPhone e iPad que ejecutan el sistema operativo iOS y el sistema operativo Android que se ejecuta en una variedad de teléfonos y tabletas. Otra plataforma significativo es Universal plataforma Windows (UWP de Microsoft), lo que permite un único programa como destino Windows 10 y Windows 10 Mobile.
 
-Un proveedor de software que desea que estos tres plataformas de destino debe tratar con los paradigmas de interfaz de usuario diferente, tres entornos de desarrollo diferentes, tres interfaces de programación diferentes y & #x 2014; quizás lo más cómodamente & #x 2014; tres lenguajes de programación diferentes: Objective-C para el iPhone y iPad, Java para Android y C# para Windows.
+Un proveedor de software que desea que estos tres plataformas de destino debe tratar con los paradigmas de interfaz de usuario diferente, tres entornos de desarrollo diferentes, tres interfaces de programación diferentes y&mdash;quizás más cómodamente&mdash; tres de los distintos lenguajes de programación: Objective-C para el iPhone y iPad, Java para Android y C# para Windows.
 
 ## <a name="the-c-and-net-solution"></a>La solución de C# y .NET
 

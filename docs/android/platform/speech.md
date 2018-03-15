@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 7c38ebb6b482f4097a4977accecc4a230d3f3ed3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e8e56afbdf0b68ecc49a89b08b2e67a9715f2aef
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="android-speech"></a>Voz Android
 
@@ -128,11 +128,11 @@ En gran medida, dispositivos Android vienen con el valor predeterminado instalad
 
 ### <a name="step-1---instantiating-texttospeech"></a>Paso 1: crear instancias TextToSpeech
 
-`TextToSpeech` puede tardar hasta 3 parámetros, los dos primeros son necesarios con el tercer argumento que es opcional (`AppContext`, `IOnInitListener`, `engine`). El agente de escucha se utiliza para enlazar con el servicio y la prueba de error con el motor que se va a cualquier número de motores de texto a voz Android disponibles, como mínimo, el dispositivo tendrá el motor de Google.
+`TextToSpeech` puede tardar hasta 3 parámetros, los dos primeros son necesarios con el tercer argumento que es opcional (`AppContext`, `IOnInitListener`, `engine`). El agente de escucha se utiliza para enlazar con el servicio y la prueba de error con el motor que se va a cualquier número de motores de texto a voz Android disponible. Como mínimo, el dispositivo tendrá el motor de Google.
 
 ### <a name="step-2---finding-the-languages-available"></a>Paso 2: buscar los idiomas disponibles
 
-El `Java.Util.Locale` espacio de nombres contiene un método útil denominado `GetAvailableLocales()`. A continuación, se puede probar esta lista de idiomas admitidos por el motor de voz en los idiomas instalados.
+El `Java.Util.Locale` clase contiene un método útil denominado `GetAvailableLocales()`. A continuación, se puede probar esta lista de idiomas admitidos por el motor de voz en los idiomas instalados.
 
 Es un asunto trivial para generar la lista de idiomas "entiende". Siempre habrá un idioma predeterminado (el idioma del usuario se establece al configurar primero su dispositivo el), por lo que en este ejemplo el `List<string>` tiene "Default" como el primer parámetro, el resto de la lista se rellenará según el resultado de la `textToSpeech.IsLanguageAvailable(locale)`.
 
@@ -186,7 +186,7 @@ protected override void OnActivityResult(int req, Result res, Intent data)
 
 ### <a name="step-5---the-ioninitlistener"></a>Paso 5: el IOnInitListener
 
-Para una actividad para que pueda convertir el texto a voz, el método de interfaz `OnInit` tiene que crear (este es el segundo parámetro especificado para la creación de instancias de la `TextToSpeech` clase). Esto inicializa el agente de escucha y comprueba el resultado.
+Para una actividad para que pueda convertir el texto a voz, el método de interfaz `OnInit` debe estar implementada (este es el segundo parámetro especificado para la creación de instancias de la `TextToSpeech` clase). Esto inicializa el agente de escucha y comprueba el resultado.
 
 El agente de escucha debe probar ambas `OperationResult.Success` y `OperationResult.Failure` como mínimo.
 En el ejemplo siguiente se muestra exactamente eso:

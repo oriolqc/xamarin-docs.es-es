@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 3ddf481a2356d49f11b96f5a8a6b7f7a492fefc9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a095dbbb78ad1517791356ae0b7cbeaa94d1336f
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>Consumir un servicio Web ASP.NET (ASMX)
 
@@ -39,37 +39,12 @@ Las instrucciones sobre cómo configurar el servicio ASMX se pueden encontrar en
 
 El servicio ASMX proporciona las siguientes operaciones:
 
-<table>
-  <thead>
-    <tr>
-      <th>Operación</th>
-      <th>Descripción</th>
-      <th>Parámetros</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>GetTodoItems</td>
-      <td>Obtener una lista de elementos pendientes</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>CreateTodoItem</td>
-      <td>Crear un nuevo elemento de tarea</td>
-      <td>Un documento XML serializado <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>EditTodoItem</td>
-      <td>Actualizar un elemento de tarea</td>
-      <td>Un documento XML serializado <code>TodoItem</code></td>
-    </tr>
-    <tr>
-      <td>DeleteTodoItem</td>
-      <td>Eliminar un elemento de tarea</td>
-      <td>Un documento XML serializado <code>TodoItem</code></td>
-    </tr>
-  </tbody>
-</table>
+|Operación|Descripción|Parámetros|
+|--- |--- |--- |
+|GetTodoItems|Obtener una lista de elementos pendientes|
+|CreateTodoItem|Crear un nuevo elemento de tarea|Un documento XML serializado TodoItem|
+|EditTodoItem|Actualizar un elemento de tarea|Un documento XML serializado TodoItem|
+|DeleteTodoItem|Eliminar un elemento de tarea|Un documento XML serializado TodoItem|
 
 Para obtener más información acerca del modelo de datos usado en la aplicación, consulte [modelar los datos](~/xamarin-forms/data-cloud/walkthrough.md).
 

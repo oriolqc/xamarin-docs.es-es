@@ -6,12 +6,12 @@ ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 7ebbf2a9215c8472ae2f286728cb2f819e8331cb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/13/2018
+ms.openlocfilehash: 230c26c2537987f7ca09e28e05ec96186e5f7882
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="alternate-resources"></a>Recursos alternativos
 
@@ -44,7 +44,7 @@ Al agregar calificadores a un tipo de recurso, se aplican las siguientes reglas:
 Los calificadores posibles se muestran a continuación como referencia:
 
 - **MCC y MNC** &ndash; el [código de país para teléfonos móviles](http://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) y, opcionalmente, el [código de la red móvil](http://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). La tarjeta SIM proporcionará la MCC, mientras que la red que el dispositivo está conectado a proporcionará la MNC. Aunque es posible configuraciones regionales de destino utilizando el código de país para teléfonos móviles, el enfoque recomendado es utilizar el calificador de idioma especificado más abajo. Por ejemplo, a los recursos de destino en Alemania, sería el calificador `mcc262`. Recursos de destino para T-Mobile la zona horaria del Pacífico, el calificador es `mcc310-mnc026`.
-  Encontrará una lista completa de códigos de país para teléfonos móviles y de red móvil <http://mcclist.com/>.
+  Encontrará una lista completa de códigos de país para teléfonos móviles y de red móvil <http://mcc-mnc.com/>.
 
 - **Idioma** &ndash; dos letras [el código ISO 639-1 lenguaje](http://en.wikipedia.org/wiki/ISO_639-1) y, opcionalmente, seguido de dos letras [código de región ISO 3166-alpha 2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
   Si se proporcionan ambos calificadores, se separan mediante un `-r`. Por ejemplo, para las configuraciones regionales de francés de destino, a continuación, el calificador de `fr` se utiliza. Para tener como destino las configuraciones regionales francés canadiense, la `fr-rCA` lo utiliza. Para obtener una lista completa de códigos de idioma y región, consulte [códigos para la representación de nombres de idiomas](http://www.loc.gov/standards/iso639-2/php/English_list.php) y [nombres de países y elementos de código](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm).

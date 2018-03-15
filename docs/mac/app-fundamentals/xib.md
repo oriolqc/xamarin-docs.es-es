@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9a4b8ac68da7bcb25ea55906e8fe060b7c7fdee9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 92ca65409dd82806278885bb03efd7b04ab1827d
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="xib-files"></a>archivos de .xib
 
@@ -67,7 +67,7 @@ El **Editor de la interfaz** sección proporciona la superficie en la que se gr�
 
 #### <a name="properties--utilities"></a>Propiedades y utilidades
 
-El **propiedades & utilidades** sección se devided en dos secciones principales que se va a trabajar con, **propiedades** (también denominados inspectores) y la **biblioteca**:
+El **propiedades & utilidades** sección se divide en dos secciones principales que se va a trabajar con, **propiedades** (también denominados inspectores) y la **biblioteca**:
 
 ![El Inspector de propiedad](xib-images/xcode04.png "el Inspector de propiedad")
 
@@ -375,7 +375,7 @@ partial void ClickedButton (Foundation.NSObject sender) {
 
 Este código asocia a la acción que ha creado en Xcode y el generador de interfaz y se llamará siempre que el usuario hace clic en el botón.
 
-Algunos elementos de interfaz de usuario generan automáticamente en acciones, por ejemplo, elementos de la barra de menús de forma predeterminada como la **abrir...**  elemento de menú (`openDocument:`). En el **solución Pad**, haga doble clic en el `AppDelegate.CS` archivo para abrirlo y editarlo y agregue el código siguiente el `DidFinishLaunching` método:
+Algunos elementos de interfaz de usuario generan automáticamente en acciones, por ejemplo, elementos de la barra de menús de forma predeterminada como la **abrir...**  elemento de menú (`openDocument:`). En el **solución Pad**, haga doble clic en el **AppDelegate.cs** archivo para abrirlo y editarlo y agregue el código siguiente el `DidFinishLaunching` método:
 
 ```csharp
 [Export ("openDocument:")]

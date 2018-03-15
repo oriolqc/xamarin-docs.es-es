@@ -7,11 +7,11 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 5ad53d7bc8c4ee54a47c4b327fb6f07bc1906ab9
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 5559f9e6a4baf9d3f82701b5e3f341900ba83bae
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumen del capítulo 4. Desplazamiento de la pila
 
@@ -67,9 +67,9 @@ Vertical `StackLayout`, `HorizontalOptions` configuración determina cómo un el
 
 Vertical `StackLayout`, cada miembro secundario no está restringida verticalmente y obtiene un valor vertical zona según el alto del elemento secundario, en cuyo caso el `VerticalOptions` configuración es irrelevante.
 
-Si vertical `StackLayout` es sin restricciones & #x 2014; que es si su `VerticalOptions` configuración es `Start`, `Center`, o `End`, a continuación, el alto de la `StackLayout` es el alto total de sus elementos secundarios.
+Si vertical `StackLayout` es sin restricciones&mdash;que es si su `VerticalOptions` configuración es `Start`, `Center`, o `End`, a continuación, el alto de la `StackLayout` es el alto total de sus elementos secundarios.
 
-Sin embargo, si la vertical `StackLayout` verticalmente está restringido & #x 2014; si su `VerticalOptions` configuración es `Fill`& #x 2014; a continuación, el alto de la `StackLayout` será el alto de su contenedor, que podría ser mayor que el alto total de sus elementos secundarios. Si ese es el caso, y si tiene al menos un elemento secundario un `VerticalOptions` configuración con un `Expands` marca de `true`, a continuación, el espacio adicional en el `StackLayout` se asignan de forma equitativa entre todos los elementos secundarios con un `Expands` marca de `true`. El alto total de los elementos secundarios, a continuación, significará que el alto de la `StackLayout`y el `Alignment` forma parte de la `VerticalOptions` configuración determina cómo el elemento secundario se coloca en la ranura.
+Sin embargo, si la vertical `StackLayout` verticalmente está restringido&mdash;si su `VerticalOptions` configuración es `Fill` &mdash;, a continuación, el alto de la `StackLayout` será el alto de su contenedor, que podría ser mayor que el total alto de sus elementos secundarios. Si ese es el caso, y si tiene al menos un elemento secundario un `VerticalOptions` configuración con un `Expands` marca de `true`, a continuación, el espacio adicional en el `StackLayout` se asignan de forma equitativa entre todos los elementos secundarios con un `Expands` marca de `true`. El alto total de los elementos secundarios, a continuación, significará que el alto de la `StackLayout`y el `Alignment` forma parte de la `VerticalOptions` configuración determina cómo el elemento secundario se coloca en la ranura.
 
 Esto se muestra en el [ **VerticalOptionsDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/VerticalOptionsDemo) ejemplo.
 

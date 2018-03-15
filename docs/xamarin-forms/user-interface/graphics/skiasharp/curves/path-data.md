@@ -8,11 +8,11 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: cc21f789d96f9375655766916f80c6f3f524c29d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 7d50e5a33020de822f96a8bf2f713a8c5b9d3020
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="svg-path-data"></a>Datos de ruta de acceso SVG
 
@@ -423,7 +423,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-Sin embargo algo especial se realiza con la mano de segundo. Dado que el reloj se actualiza cada 16 milisegundos, el `Millisecond` propiedad de la `DateTime` valor potencialmente puede utilizarse para animar un barrido de segundo lado en lugar de uno que se desplaza de saltos discretos de segundo al segundo. Pero este código no permite el movimiento a ser suaves. En su lugar, usa el Xamarin.Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/) y [ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/) animación funciones para otro tipo de movimiento de aceleración. La manecilla de los segundos mover en un modo & #x 2014; es hacen que estas funciones de aceleración recuperar un poco antes de que mueve, y, a continuación, ligeramente over solución su destino, un efecto que lamentablemente no se puede reproducir en estas capturas de pantalla estáticas:
+Sin embargo algo especial se realiza con la mano de segundo. Dado que el reloj se actualiza cada 16 milisegundos, el `Millisecond` propiedad de la `DateTime` valor potencialmente puede utilizarse para animar un barrido de segundo lado en lugar de uno que se desplaza de saltos discretos de segundo al segundo. Pero este código no permite el movimiento a ser suaves. En su lugar, usa el Xamarin.Forms [ `SpringIn` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringIn/) y [ `SpringOut` ](https://developer.xamarin.com/api/field/Xamarin.Forms.Easing.SpringOut/) animación funciones para otro tipo de movimiento de aceleración. Estas funciones de aceleración provocar la manecilla de los segundos mover de manera es &mdash; recuperar un poco antes de que mueve, y, a continuación, ligeramente over solución su destino, un efecto que lamentablemente no se puede reproducir en estas capturas de pantalla estáticas:
 
 [![](path-data-images/prettyanalogclock-small.png "Captura de pantalla triple de la página de reloj de señales analógicas bastante")](path-data-images/prettyanalogclock-large.png#lightbox "Triple captura de pantalla de la página de reloj de señales analógicas bastante")
 

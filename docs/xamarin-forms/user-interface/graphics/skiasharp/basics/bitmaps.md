@@ -8,17 +8,17 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: facdcb6231b77714d6f5d0c7d496db12f75b1d08
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 921697657397662e92fb72c32e6efcc31745d7f1
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="bitmap-basics"></a>Conceptos básicos de mapa de bits
 
 _Cargue los mapas de bits de varios orígenes y mostrarlos._
 
-La compatibilidad con los mapas de bits en SkiaSharp es bastante extenso. Este artículo tratan únicamente los conceptos básicos de & #x 2014; cómo cargar los mapas de bits y cómo mostrarlos:
+La compatibilidad con los mapas de bits en SkiaSharp es bastante extenso. Este artículo trata solo de los conceptos básicos &mdash; cómo cargar los mapas de bits y cómo mostrarlos:
 
 ![](bitmaps-images/bitmapssample.png "La presentación de dos mapas de bits")
 
@@ -207,7 +207,7 @@ El mapa de bits se ajusta a las dimensiones del rectángulo, motivo por el cual 
 
 [![](bitmaps-images/basicbitmaps-small.png "Una captura de pantalla triple de la página de mapas de bits básica")](bitmaps-images/basicbitmaps-large.png#lightbox "una captura de pantalla triple de la página de mapas de bits básica")
 
-La tercera imagen & #x 2014; que solo puede ver si ejecuta el programa y cargar una fotografía desde su propia biblioteca de imágenes & #x 2014; También se muestra dentro de un rectángulo, pero el rectángulo de la posición y el tamaño se ajustan para mantener la relación de aspecto del mapa de bits. Este cálculo es un poco más complicada porque requiere calcular un factor en función del tamaño de los mapas de bits y el rectángulo de destino de escala y centrar el rectángulo en esa área:
+La tercera imagen &mdash; que solo puede ver si ejecuta el programa y cargar una fotografía desde su propia biblioteca de imágenes &mdash; también se muestra dentro de un rectángulo, pero el rectángulo de la posición y el tamaño se ajustan para mantener la relación de aspecto del mapa de bits. Este cálculo es un poco más complicada porque requiere calcular un factor en función del tamaño de los mapas de bits y el rectángulo de destino de escala y centrar el rectángulo en esa área:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
