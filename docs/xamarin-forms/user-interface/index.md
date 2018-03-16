@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 8bebc24ee62d7b5a6f2b9df6e33b6f2b9dbe2431
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: c5cca8e6fceb9aef82fc6543adc6dc5e7399d839
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="user-interface"></a>Interfaz de usuario
 
@@ -26,17 +26,21 @@ Xamarin.Forms incluye su propia infraestructura de animación que es sencillo pa
 
 El `BoxView` es un simple rectángulo de color, pero se puede utilizar para los elementos decorativos, rudimentarios gráficos y para obtener la entrada táctil interactivo.
 
-## <a name="colorscolorsmd"></a>[Colors](colors.md)
+## <a name="colorscolorsmd"></a>[Colores](colors.md)
 
 Definición y uso de colores en las distintas plataformas pueden ser complicadas cuando cada plataforma tiene sus propias normas y los valores predeterminados.
 
-## <a name="controls-referencecontrolsindexmd"></a>[Referencia de controles](controls/index.md)
+## <a name="controls-referencecontrolsindexmd"></a>[Controls Reference](controls/index.md) (Referencia de controles)
 
 Este documento es una referencia rápida a las vistas de interfaz de usuario que constituyen el marco de trabajo de Xamarin.Forms, como [páginas](~/xamarin-forms/user-interface/controls/pages.md), [diseños](~/xamarin-forms/user-interface/controls/layouts.md), [vistas](~/xamarin-forms/user-interface/controls/views.md) y [celdas](~/xamarin-forms/user-interface/controls/cells.md).
 
 ## <a name="datapagesdatapagesindexmd"></a>[DataPages](datapages/index.md)
 
 DataPages proporciona una API para rápida y fácilmente enlazar un origen de datos a las vistas previamente integradas. Elementos de lista y páginas de detalles se representarán automáticamente los datos y personalizadas con temas.
+
+## <a name="datepickerdatepickermd"></a>[DatePicker](datepicker.md)
+
+El `DatePicker` permite al usuario seleccionar una fecha dentro de un intervalo especificado. Se implementa mediante el selector de fecha compatible con la plataforma en particular que se ejecuta el programa en.
 
 ## <a name="graphicsgraphicsindexmd"></a>[Gráficos](graphics/index.md)
 
@@ -58,7 +62,7 @@ Xamarin.Forms ofrece un control de vista de lista para mostrar las filas de desp
 
 Agregar mapas requiere una descarga adicional de paquetes de NuGet y alguna configuración específica de la plataforma. Mapas y marcadores de pin pueden agregarse en unas pocas líneas de código una vez que se realiza la configuración.
 
-## <a name="pickerpickerindexmd"></a>[Picker](picker/index.md)
+## <a name="pickerpickerindexmd"></a>[Selector](picker/index.md)
 
 El [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) vista es un control para seleccionar un elemento de texto de una lista de datos.
 

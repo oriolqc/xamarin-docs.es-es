@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 4f85f208c12561b6db9800d963e2d7bf32c2a4d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3e21794c9f1d8f010ec323774bc93987f4b89e1d
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -67,7 +67,7 @@ Para averiguar más sobre el aprovisionamiento de una aplicación de iOS, el [ap
 
 La creación de un explícita **Id. de aplicación** y un adecuado **perfil de aprovisionamiento de** se realiza dentro de Apple [centro de desarrollo de iOS](https://developer.apple.com/devcenter/ios/index.action). 
 
-Su actual **Id. de aplicaciones** incluidos en el [certificados, identificadores & perfiles](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) sección del centro de desarrollo de. A menudo, esta lista mostrará **identificador** valores de `*`, lo que indica que el **Id. de aplicación*- **nombre** puede utilizarse con cualquier número de sufijos. Este tipo *Wildcard App IDs* no se puede usar con el Kit de mantenimiento.
+Su actual **Id. de aplicaciones** incluidos en el [certificados, identificadores & perfiles](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) sección del centro de desarrollo de. A menudo, esta lista mostrará **identificador** valores de `*`, lo que indica que la **Id. de aplicación** - **nombre** puede utilizarse con cualquier número de sufijos. Este tipo *Wildcard App IDs* no se puede usar con el Kit de mantenimiento.
  
 Para crear un explícita **Id. de aplicación**, haga clic en el  **+**  botón de la superior derecha para ir a la **registrar el identificador de la aplicación de iOS** página:
 
@@ -87,7 +87,7 @@ Haga clic en **continuar** y de trabajo a través de las pantallas restantes, do
 
 Haga clic en **generar** y esperar a la creación de su perfil. Descargue el archivo y haga doble clic en él para instalar en Xcode. Puede confirmar su instalación en **Xcode > Preferencias > cuentas > Ver detalles...** Debería ver el perfil de aprovisionamiento recién instalado, y debe tener el icono para el Kit de mantenimiento y cualquier otro servicio especial en su **derechos** fila:
 
-[![](healthkit-images/image05.png "Ver el perfil en Xcode.")](healthkit-images/image05.png#lightbox)
+[![](healthkit-images/image05.png "Visualización del perfil en Xcode")](healthkit-images/image05.png#lightbox)
 
 <a name="associating-appid" />
 

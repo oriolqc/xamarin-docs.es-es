@@ -6,38 +6,33 @@ ms.assetid: DACD0C14-5DDF-7BDE-6844-80550D301307
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 242adc94f04b3bda40238370ca924c1807a0c787
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 109c1e0f16d3a288160b64ec6ff833e5b31c4efd
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="supporting-pre-honeycomb-android-using-support-packages"></a>Compatibilidad con Android panal previa con los paquetes de soporte técnico
 
 El *paquete de compatibilidad con Android* consta de las bibliotecas de ese puerto nuevo parte de la nueva API &ndash; como fragmentos &ndash; en versiones anteriores de Android. Por lo que al agregar el paquete de compatibilidad con Android, podemos ejecutar nuestra aplicación en dispositivos Android 2.3, como se muestra en las pantallas siguientes:
 
-![Captura de pantalla de tutorial de fragmentos](supporting-pre-honeycomb-images/00.png)
-
-![Captura de pantalla de detalles de la actividad](supporting-pre-honeycomb-images/01.png)
-
+[![Fragmentos de capturas de pantalla de tutorial y detalles de actividad](supporting-pre-honeycomb-images/01-sml.png)](supporting-pre-honeycomb-images/01.png#lightbox)
 
 ## <a name="adding-the-support-package"></a>Agregar el paquete de soporte técnico
 
 El paquete de compatibilidad con Android no se agrega automáticamente a una aplicación Xamarin.Android. Xamarin ofrece la [paquete NuGet de biblioteca de compatibilidad de Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) para simplificar la adición de las bibliotecas de soporte técnico a una aplicación Xamarin.Android.
 Para incluir los paquetes de soporte técnico en su Xamarin.Android aplicación incluyen el [biblioteca admite Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) componente en el proyecto Xamarin.Android, como se muestra en la captura de pantalla siguiente:
 
-![Agregar el paquete de biblioteca de compatibilidad de Android v4](supporting-pre-honeycomb-images/02.png)
+[![Agregar el paquete de biblioteca de compatibilidad de Android v4](supporting-pre-honeycomb-images/02-sml.png)](supporting-pre-honeycomb-images/02.png#lightbox)
 
 Una vez que se ha agregado el paquete, cambiar la plataforma de destino para Android 2.2 o superior:
 
-![Captura de pantalla de cambiar el nivel de API del marco de destino](supporting-pre-honeycomb-images/03.png)
+[![Captura de pantalla de cambiar el nivel de API del marco de destino](supporting-pre-honeycomb-images/03-sml.png)](supporting-pre-honeycomb-images/03.png#lightbox)
 
 Además, asegúrese de que la versión mínima de Android tiene como destino el mismo nivel de API:
 
-![Captura de pantalla de configuración de la versión mínima Android](supporting-pre-honeycomb-images/04.png)
-
-
+[![Captura de pantalla de configuración de la versión mínima Android](supporting-pre-honeycomb-images/04-sml.png)](supporting-pre-honeycomb-images/04.png#lightbox)
 
 ### <a name="change-mainactivity-to-derive-from-fragmentactivity"></a>Cambiar MainActivity pueden derivar FragmentActivity
 

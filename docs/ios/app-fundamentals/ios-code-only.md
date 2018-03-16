@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b50c4bbef1510b739c4f7da7d732a4f4c66f13f3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d53dea1a46c6b42f901beb217eb00b3a3fa0fd92
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>Crear Interfaces de usuario de iOS en código
 
@@ -69,7 +69,7 @@ La plantilla proyecto vacío de servidor agrega 4 archivos al proyecto:
 ## <a name="ios-templates"></a>Plantillas de iOS
 
 
-Visual Studio para Mac no proporciona una plantilla vacía. Todas las plantillas incluyen soporte de guión gráfico, que recomienda Apple como la manera principal para crear una interfaz de usuario. Sin embargo, es posible crear la interfaz de usuario en completamente en código. 
+Visual Studio para Mac no proporciona una plantilla vacía. Todas las plantillas incluyen soporte de guión gráfico, que recomienda Apple como la manera principal para crear una interfaz de usuario. Sin embargo, es posible crear la interfaz de usuario completamente en el código. 
 
 Los siguientes pasos le guiarán en el proceso de quitar el guión gráfico de una aplicación: 
 
@@ -316,7 +316,7 @@ En el ejemplo anterior, se comenzó a crear una interfaz de usuario en el códig
 
 interfaces de usuario de iOS se componen de una jerarquía de vista. Vistas adicionales, como etiquetas, botones, controles deslizantes, etc. se agregan como subvistas de algunos vista primaria.
 
-Por ejemplo, vamos a editar en el `CustomViewController` para crear una pantalla de inicio de sesión donde el usuario puede escribir un nombre de usuario y una contraseña. La pantalla constará de dos campos de texto y un botón.
+Por ejemplo, vamos a modificar el `CustomViewController` para crear una pantalla de inicio de sesión donde el usuario puede escribir un nombre de usuario y una contraseña. La pantalla constará de dos campos de texto y un botón.
 
 ### <a name="adding-the-text-fields"></a>Agregar los campos de texto
 
@@ -433,7 +433,7 @@ View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 
 ## <a name="adding-button-functionality"></a>Agregar funcionalidad de botón
 
-Cuando se hace clic en un botón, los usuarios esperan algo que se produzca si esto por una alerta, o al navegar a otra pantalla. 
+Cuando se hace clic en un botón, los usuarios esperan ocurra algo. Por ejemplo, se muestra una alerta o se realiza la navegación a otra pantalla. 
 
 Vamos a agregar código para insertar un segundo controlador de vista en la pila de navegación.
 
@@ -497,7 +497,7 @@ Además de utilizar controles que forman parte de UIKit, también se pueden util
 
 ### <a name="inheriting-from-uiview"></a>Heredar UIView
 
-Lo primero que debemos hacer es crear una clase para la vista personalizada. Esto a cabo mediante el **clase** plantilla de Visual Studio para agregar una clase vacía denominada `CircleView`. La clase base debe establecerse en `UIView`, que es de recuperación en el `UIKit` espacio de nombres. También será necesario el `System.Drawing` así el espacio de nombres. Los otros distintos `System.*` dejarán de espacios de nombres utilizados en este ejemplo, por lo que no dude en quitarlos.
+Lo primero que debemos hacer es crear una clase para la vista personalizada. Esto a cabo mediante el **clase** plantilla de Visual Studio para agregar una clase vacía denominada `CircleView`. La clase base debe establecerse en `UIView`, que se recuerde está en el `UIKit` espacio de nombres. También será necesario el `System.Drawing` así el espacio de nombres. Los otros distintos `System.*` dejarán de espacios de nombres utilizados en este ejemplo, por lo que no dude en quitarlos.
 
 La clase debe tener este aspecto:
 

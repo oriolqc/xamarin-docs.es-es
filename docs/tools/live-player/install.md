@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/22/2017
-ms.openlocfilehash: 9b801af77eceaf94b0ede98b6af51d55d6029fe6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ddc16dc1faaf623098aad5bca340c15f943223ba
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Programa de instalación de Xamarin Player en vivo
 
@@ -68,7 +68,7 @@ Xamarin Player en vivo requiere:
 
   Si no hay ningún dispositivo emparejada, aparecerá un código QR con instrucciones sobre cómo asociar un dispositivo:
 
-    ![Par de una ventana de dispositivo](install-images/manage-empty-windows.png)
+  ![Par de una ventana de dispositivo](install-images/manage-empty-windows.png)
 
   Si no se puede conectar con el dispositivo para el emparejamiento, puede aparecer un error.
 
@@ -111,11 +111,11 @@ Xamarin Player en vivo requiere:
 
   Si no hay ningún dispositivo emparejada, aparecerá un código QR con instrucciones sobre cómo asociar un dispositivo:
 
-    ![Par de una ventana de dispositivo](install-images/manage-empty.png)
+  ![Par de una ventana de dispositivo](install-images/manage-empty.png)
 
   Si no se puede conectar con el dispositivo para el emparejamiento, aparecerá un error:
 
-    ![No se puede conectar al mensaje de error de dispositivo](install-images/error-cannot-connect.png)
+  ![No se puede conectar al mensaje de error de dispositivo](install-images/error-cannot-connect.png)
 
 
 -----

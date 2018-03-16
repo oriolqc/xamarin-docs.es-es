@@ -8,20 +8,20 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: c4b2a103821bb18da4878cd37335faa899e910be
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ee79c79d7b3226f23851a3157e5a609d7cfc4cf4
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="working-with-user-defaults"></a>Trabajar con valores predeterminados del usuario
 
-_Este artículo explica cómo trabajar con NSUserDefault para guardar la configuración predeterminada en una aplicación o extensión de iOS de Xamarin._
+_Este artículo explica cómo trabajar con NSUserDefault para guardar la configuración predeterminada en una extensión o Xamarin.iOS App._
 
 
-La `NSUserDefaults` clase proporciona una manera de iOS aplicaciones y extensiones para interactuar mediante programación con el sistema predeterminado de todo el sistema. Mediante el sistema tiene como valor predeterminado, el usuario puede configurar el comportamiento de una aplicación o aplicar un estilo para satisfacer sus preferencias (en función del diseño de la aplicación). Por ejemplo, para presentar datos en vs métricas Imperial medidas o seleccionar un tema de la interfaz de usuario determinada.
+La `NSUserDefaults` clase proporciona una manera de iOS aplicaciones y extensiones para interactuar mediante programación con el sistema tiene como valor predeterminado de todo el sistema. Mediante el sistema tiene como valor predeterminado, el usuario puede configurar el comportamiento de una aplicación o aplicar un estilo para satisfacer sus preferencias (en función del diseño de la aplicación). Por ejemplo, para presentar datos en vs métricas Imperial medidas o seleccionar un tema de la interfaz de usuario determinada.
 
-Cuando se usan grupos de aplicaciones, `NSUserDefaults` también proporciona una manera para la comunicación entre aplicaciones (o extensiones) dentro de un grupo determinado.
+Cuando se usa con grupos de aplicaciones, `NSUserDefaults` también proporciona una manera para la comunicación entre aplicaciones (o extensiones) dentro de un grupo determinado.
 
 <a name="About-User-Defaults" />
 
@@ -32,7 +32,7 @@ Como se indicó anteriormente, valores predeterminados del usuario (`NSUserDefau
 Cuando la aplicación se ejecuta en primer lugar, `NSUserDefaults` lee las claves y valores de base de datos de usuario tiene como valor predeterminado a la aplicación y almacena en memoria caché en la memoria para evitar la apertura y lectura de la base de datos cada vez que se requiere un valor. 
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: Apple ya no se recomienda que el programador llame a la `Synchronize` método para sincronizar la memoria caché en memoria con la base de datos directamente. En su lugar, se le automáticamente llamará a intervalos periódicos para mantener sincronizados con la base de datos de los valores predeterminados de un usuario la memoria caché en memoria.
+> **Tenga en cuenta**: Apple ya no recomienda la llamada de desarrollador la `Synchronize` método para sincronizar la memoria caché en memoria con la base de datos directamente. En su lugar, se le automáticamente llamará a intervalos periódicos para mantener sincronizados con la base de datos de los valores predeterminados de un usuario la memoria caché en memoria.
 
 La `NSUserDefaults` clase contiene varios métodos útiles para leer y escribir valores de preferencia para los tipos de datos comunes como: cadena, integer, float, boolean y las direcciones URL. Otros tipos de datos se pueden archivar mediante `NSData`, de lectura o escritura a la base de datos de usuario tiene como valor predeterminado. Para obtener más información, vea de Apple [preferencias y Guía de programación de configuración](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i).
 
@@ -46,7 +46,7 @@ La instancia de tiene como valor predeterminado de usuario compartido proporcion
 - Dominio del identificador del paquete de la aplicación.
 - Un `NSGlobalDomain` que consta de los valores predeterminados compartidos por todas las aplicaciones.
 - Un dominio independiente para cada idioma preferido del usuario.
-- Un `NSRegistationDomain` con un conjunto de valores predeterminados temporales que se puede modificar la aplicación para asegurarse de que las búsquedas siempre son correctas.
+- Un `NSRegistrationDomain` con un conjunto de valores predeterminados temporales que se puede modificar la aplicación para asegurarse de que las búsquedas siempre son correctas.
 
 Para obtener acceso a la instancia de tiene como valor predeterminado de usuario compartido, utilice el código siguiente:
 
@@ -61,9 +61,9 @@ var plist = NSUserDefaults.StandardUserDefaults;
 
 Como se indicó anteriormente, mediante el uso de grupos de aplicaciones, `NSUserDefaults` puede utilizarse para la comunicación entre aplicaciones (o extensiones) dentro de un grupo determinado. En primer lugar, debe asegurarse de que el grupo de aplicaciones y los identificadores de aplicación necesarios están configurados correctamente en el **certificados, identificadores & perfiles** sección [iOS centro de desarrollo de](https://developer.apple.com/devcenter/ios/) y se han instalado en el entorno de desarrollo.
 
-A continuación, los proyectos de aplicación o extensión deberá ser uno de los identificadores de aplicación válido creado anteriormente, que el `Entitlements.plist` archivo tiene los grupos de aplicaciones habilitado y especificado y que obtienen del incluidos en el paquete de aplicación.
+A continuación, necesitan tener uno de los identificadores de aplicación válido creado anteriormente, los proyectos de aplicación y la extensión y el `Entitlements.plist` archivo debe incluirse en el grupo de aplicaciones con los grupos de aplicación habilitado y especificado.
 
-Con todo esto en su lugar, los valores predeterminados del usuario de grupo de aplicación compartidos pueden tener acceso utilizando el código siguiente:
+Con todo esto en su lugar, el compartido aplicación grupo valores predeterminados del usuario puede tener acceso utilizando el código siguiente:
 
 ```csharp
 // Get App Group User Defaults

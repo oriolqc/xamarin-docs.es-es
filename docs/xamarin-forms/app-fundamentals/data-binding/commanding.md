@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b75bc7e4ccf53e82ff107c867c5ba01813960ea5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0456742ca30257670375e3ae781dcdc49707e2ce
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="the-command-interface"></a>La interfaz de comandos
 
@@ -22,7 +22,7 @@ La interfaz de comandos proporciona un enfoque alternativo a la implementación 
 
 Para permitir que un enlace de datos entre un `Button` y un modelo de vista, la `Button` define dos propiedades:
 
-- [`Command`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Command/) de tipo [`ICommand`](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/)
+- [`Command`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Command/) de tipo <xref:System.Windows.Input.ICommand>
 - [`CommandParameter`](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.CommandParameter/) de tipo `Object`
 
 Para usar la interfaz de comandos, se define un enlace de datos que tenga como destino el `Command` propiedad de la `Button` donde el origen es una propiedad en el modelo de vista de tipo `ICommand`. El modelo de vista contiene código asociado a ese `ICommand` propiedad que se ejecuta cuando se hace clic en el botón. Puede establecer `CommandParameter` a datos arbitrarios para distinguir entre varios botones si todo está enlazada al mismo `ICommand` propiedad en el modelo de vista.
@@ -39,7 +39,7 @@ Todos estos comandos se pueden controlar en un modelo de vista de forma que no d
 
 ## <a name="the-icommand-interface"></a>La interfaz ICommand
 
-El [ `ICommand` ](https://developer.xamarin.com/api/type/System.Windows.Input.ICommand/) interfaz no es parte de Xamarin.Forms. Se define en su lugar en la [ `System.Windows.Input` ](https://developer.xamarin.com/api/namespace/System.Windows.Input/) espacio de nombres y consta de dos métodos y un evento:
+El <xref:System.Windows.Input.ICommand> interfaz no es parte de Xamarin.Forms. Se define en su lugar en la [System.Windows.Input](xref:System.Windows.Input) espacio de nombres y consta de dos métodos y un evento:
 
 ```csharp
 public interface ICommand

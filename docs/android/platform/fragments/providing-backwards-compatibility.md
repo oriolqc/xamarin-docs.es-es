@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/12/2017
-ms.openlocfilehash: 670ec465843bbe819b41a53fff71b01ab78b0059
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f09aae1445cfcf9f4225af3de37b65ebb5a1b6b2
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Con las versiones anteriores proporciona compatibilidad con el paquete de compatibilidad con Android
 
@@ -25,13 +25,13 @@ La utilidad de los fragmentos sería limitada sin compatibilidad con dispositivo
 
 El paquete de compatibilidad con Android no se agrega automáticamente a una aplicación Xamarin.Android. Xamarin ofrece la [paquete NuGet de biblioteca de compatibilidad de Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) para simplificar la adición de las bibliotecas de soporte técnico a una aplicación Xamarin.Android. Para incluir los paquetes de soporte técnico en su Xamarin.Android aplicación incluyen el [biblioteca admite Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) componente en el proyecto Xamarin.Android, como se muestra en la captura de pantalla siguiente: 
 
-[![Paquete de captura de pantalla de la biblioteca de compatibilidad con Android v4 que se agrega al proyecto](providing-backwards-compatibility-images/02.png)](providing-backwards-compatibility-images/02.png#lightbox)
+[![Paquete de captura de pantalla de la biblioteca de compatibilidad con Android v4 que se agrega al proyecto](providing-backwards-compatibility-images/02-sml.png)](providing-backwards-compatibility-images/02.png#lightbox)
 
 Después de han realizado estos pasos, es posible utilizar fragmentos en versiones anteriores de Android. Las API de fragmento funcionará ahora mismo en estas versiones anteriores, con las siguientes excepciones: 
 
 -   **Cambiar la versión mínima de Android** &ndash; la aplicación ya no necesita tener como destino Android 3.0 o superior, tal y como se muestra a continuación: 
 
-    [![Captura de pantalla de mínimo Android destino que se va a establecer en Propiedades de la aplicación](providing-backwards-compatibility-images/03.png)](providing-backwards-compatibility-images/03.png#lightbox)
+    [![Captura de pantalla de mínimo Android destino que se va a establecer en el manifiesto de Android](providing-backwards-compatibility-images/03-sml.png)](providing-backwards-compatibility-images/03.png#lightbox)
 
 -   **Extender FragmentActivity** &ndash; las actividades que hospedan fragmentos ahora debe heredar de `Android.Support.V4.App.FragmentActivity` y no desde `Android.App.Activity` . 
 

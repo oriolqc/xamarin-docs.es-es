@@ -6,12 +6,12 @@ ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 145c8507ca5ebea6197fa8827b93f58fbc9bb078
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 015fff63c612c3acf29681b90c1e945c5e460034
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="troubleshooting-tips"></a>Sugerencias para la solución de problemas
 
@@ -333,7 +333,7 @@ Si su aplicación requiere un rendimiento aceptable punto flotante (por ejemplo,
 Existen 2 descargas de Google Android SDK para Windows.
 Si decide que el instalador .exe, escribirá las claves del registro que indiquen Xamarin.Android donde se instaló. Si elige el archivo .zip y descomprímalo usted mismo, Xamarin.Android no sabe dónde buscar el SDK. Puede indicar Xamarin.Android donde es el SDK de Visual Studio yendo a **Herramientas > Opciones > Xamarin > configuración de Android**:
 
-[![Ubicación de SDK de Android en la configuración de Xamarin para Android](troubleshooting-images/01a.png)](troubleshooting-images/01a.png#lightbox)
+[![Ubicación de SDK de Android en la configuración de Xamarin para Android](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
 
 
 
@@ -728,7 +728,7 @@ Al usar C\# dinámicos en sus aplicaciones o la biblioteca, tiene que agregar Sy
 
     -   Tenga en cuenta que el código dinámico siempre los costos. Si necesita un código eficaz, considere la posibilidad de no usa código dinámico.
 
--   En la primera vista previa, esos ensamblados se han excluido, a menos que explícitamente se utilizan tipos de cada ensamblado por el código de aplicación. Vea lo siguiente para solucionar este problema: [http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
+-   En la primera vista previa, esos ensamblados se han excluido, a menos que explícitamente se utilizan tipos de cada ensamblado por el código de aplicación. Para solucionar este problema, consulte: [http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
 
 
 ## <a name="projects-built-with-aotllvm-crash-on-x86-devices"></a>Los proyectos compilados con bloqueo AOT + LLVM en x86 dispositivos

@@ -7,12 +7,12 @@ ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 8595ecb63e49a4768120e98f41826b74c2dd43e4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.date: 03/15/2018
+ms.openlocfilehash: 0a9a1f41810fe113ac3d88d2533411ac537840ab
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="fragments"></a>Fragmentos
 
@@ -53,9 +53,9 @@ Fragmentos de están disponibles en el SDK de Android a partir de nivel de API 1
 
 [![Seleccione el nivel de API en el Administrador de SDK de Android](images/02.png)](images/02.png#lightbox)
 
-Los fragmentos son disponible en Xamarin.Android 4.0 y versiones posteriores. Una aplicación Xamarin.Android destino debe ser al menos el nivel de API 11 (Android 3.0) o superior para poder usar los fragmentos. La plataforma de destino se puede establecer en las opciones de proyecto, tal y como se muestra a continuación:
+Los fragmentos son disponible en Xamarin.Android 4.0 y versiones posteriores. Una aplicación Xamarin.Android destino debe ser al menos el nivel de API 11 (Android 3.0) o superior para poder usar los fragmentos. Puede establecer la plataforma de destino en el proyecto de propiedades tal y como se muestra a continuación:
 
-[![Establecer el nivel de API del marco de destino en las opciones de proyecto](images/03.png)](images/03.png#lightbox)
+[![Establecer el nivel de API del marco de destino en las opciones de proyecto](images/03-sml.png)](images/03.png#lightbox)
 
 Es posible utilizar fragmentos en versiones anteriores de Android mediante el paquete de compatibilidad con Android y Xamarin.Android 4.2 o posterior. Cómo hacer esto se trata con más detalle en los documentos de esta sección.
 

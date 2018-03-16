@@ -6,21 +6,20 @@ ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 8be599f5b6541ef738ffa47a01374fd7f90044a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 693ada611dc24d3bb22de7c51efe378939a732ad
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="threading"></a>Subprocesos
 
-El tiempo de ejecución de Xamarin.iOS da acceso a los desarrolladores para .NET API de subprocesamiento, tanto explícita usan de subprocesos ( `System.Threading.Thread, System.Threading.ThreadPool`), implícitamente cuando se utiliza los patrones de delegado asincrónico o los métodos BeginXXX, así como el intervalo completo de API que admiten la tarea Biblioteca de procesamiento paralelo.
+El tiempo de ejecución de Xamarin.iOS proporciona a los desarrolladores acceso a .NET API, ambos explícitamente al utilizar subprocesos de subprocesamiento (`System.Threading.Thread, System.Threading.ThreadPool`) e implícitamente cuando se utiliza los patrones de delegado asincrónico o los métodos BeginXXX, así como el intervalo completo de API que admiten el Biblioteca TPL.
 
 
 
-Xamarin recomienda encarecidamente que utilice el [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717.aspx)
-
- (TPL) para la creación de aplicaciones por diversas razones:-el programador TPL predeterminado delegar la ejecución de la tarea para el grupo de subprocesos, que a su vez crecerá dinámicamente el número de subprocesos es necesario porque el proceso realiza, evitando un escenario donde hay demasiados subprocesos terminan seguridad compiten por el tiempo de CPU. 
+Xamarin recomienda encarecidamente que utilice la [Task Parallel Library](http://msdn.microsoft.com/en-us/library/dd460717.aspx) (TPL) para la creación de aplicaciones por diversas razones:
+-  El programador TPL predeterminado suplantará la ejecución de la tarea para el grupo de subprocesos, que a su vez crecerá dinámicamente el número de subprocesos es necesario porque el proceso realiza, evitando un escenario donde hay demasiados subprocesos terminan compiten por el tiempo de CPU. 
 -  Es más fácil pensar en las operaciones en cuanto a las tareas de TPL. Fácilmente puede manipularlos, programarlas, serializar su ejecución o iniciar muchas en paralelo con un amplio conjunto de API. 
 -  Es la base para la programación con las nuevas extensiones de lenguaje C# asincrónico. 
 
@@ -41,7 +40,6 @@ MyThreadedRoutine ()
 {  
     var result = DoComputation ();  
 
-    //
     // we want to update an object that is managed by the main
     // thread; To do so, we need to ensure that we only access
     // this from the main thread:
@@ -77,4 +75,4 @@ Nota: Desde Xamarin.iOS 5.2 no tendrá que proporcionar su propio `NSAutoRelease
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Trabajar con el subproceso de interfaz de usuario](~/ios/user-interface/ios-ui/ui-thread.md)
+- [Trabajo con el subproceso de la interfaz de usuario](~/ios/user-interface/ios-ui/ui-thread.md)
