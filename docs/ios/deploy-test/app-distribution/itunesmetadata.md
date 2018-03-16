@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 21ae62ee0d43e688e63ca8b7feb6a8aebb227cd5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3bdf00a9e50b2bf66f51c825306c2ba8e6365dd2
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="the-itunesmetadataplist-file"></a>Archivo iTunesMetadata.plist
 
@@ -239,7 +239,7 @@ Opcionalmente, se puede usar la clave `subgenres` para definir hasta dos subgén
 
 En el caso de las aplicaciones de iOS, Apple actualmente define los géneros e identificadores de género siguientes:
 
-[!include[](~/ios/includes/table-appstore.html)]
+[!include[](~/ios/includes/table-appstore.md)]
 
 Para más información, vea la documentación [Genre IDs Appendix (Apéndice de identificadores de género)](http://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) de Apple.
 
