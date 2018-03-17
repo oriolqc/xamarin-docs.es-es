@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 30a952bf0df4db34c749de3d6198877b7a9766b9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 77808ae03f5801dd3628b8966e05a574b8501f37
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="unified-storyboards"></a>Guiones gráficos unificados
 
@@ -116,63 +116,23 @@ Esta sección explica los tipos de colecciones de rasgo que experimentará el us
 
 La siguiente es una colección de rasgo típico que vea el programador en un iPhone:
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Property</td>
-    <td>Valor</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>HorizontalSizeClass</code></td>
-    <td>Compactar</td>
-</tr>
-<tr>
-    <td><code>VerticalSizeClass</code></td>
-    <td>Estándar</td>
-</tr>
-<tr>
-    <td><code>UserInterfaceIdom</code></td>
-    <td>Teléfono</td>
-</tr>
-<tr>
-    <td><code>DisplayScale</code></td>
-    <td>2.0</td>
-</tr>
-</tbody>
-</table>
+|Property|Valor|
+|--- |--- |
+|`HorizontalSizeClass`|Compactar|
+|`VerticalSizeClass`|Estándar|
+|`UserInterfaceIdom`|Teléfono|
+|`DisplayScale`|2.0|
 
 El conjunto anterior representaría una colección de rasgo totalmente cualificado, ya que tiene valores de todas sus propiedades de rasgo.
 
 También es posible tener una colección de rasgo que faltan algunos de sus valores (que Apple hace referencia a como *Unspecified*):
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Property</td>
-    <td>Valor</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td><code>HorizontalSizeClass</code></td>
-    <td>Compactar</td>
-</tr>
-<tr>
-    <td><code>VerticalSizeClass</code></td>
-    <td>{no se especifica}</td>
-</tr>
-<tr>
-    <td><code>UserInterfaceIdom</code></td>
-    <td>{no se especifica}</td>
-</tr>
-<tr>
-    <td><code>DisplayScale</code></td>
-    <td>{no se especifica}</td>
-</tr>
-</tbody>
-</table>
+|Property|Valor|
+|--- |--- |
+|`HorizontalSizeClass`|Compactar|
+|`VerticalSizeClass`|Sin especificar|
+|`UserInterfaceIdom`|Sin especificar|
+|`DisplayScale`|Sin especificar|
 
 Por lo general, sin embargo, cuando el programador solicita el entorno de rasgo de su colección de rasgo, devolverá un conjunto completo tal como se muestra en el ejemplo anterior.
 
@@ -216,7 +176,6 @@ Es otra función que un desarrollador puede realizar en las colecciones de rasgo
 
 Como se mencionó anteriormente, si cualquiera de los rasgos no está especificado en una de las colecciones de rasgo y se especifica en el otro, se establecerá el valor a la versión especificada. Sin embargo, si hay varias versiones de un determinado valor especificado, el valor de la última recopilación de rasgo será el valor que se utiliza.
 
-
 ## <a name="adaptive-view-controllers"></a>Controladores de la vista adaptable
 
 Esta sección explica los detalles de cómo la vista y ver controladores de iOS han adoptado los conceptos de rasgos y clases de tamaño automáticamente sea más adaptable en las aplicaciones del desarrollador.
@@ -259,58 +218,11 @@ En primer lugar, iOS 8 hace algún programa de instalación para prepararse para
 
 iOS 8 proporciona varias devoluciones de llamada que el programador puede utilizar para participar en el cambio de rasgo tal como se muestra en la tabla siguiente:
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Phase</td>
-    <td>Callback</td>
-    <td>Descripción</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>Programa de instalación</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        <li><code>TraitCollectionDidChange</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>Este método se llamará al principio de un cambio de rasgo antes de una colección de rasgo queda establecida en su nuevo valor.</li>
-        <li>Se llama al método cuando ha cambiado el valor de la colección de rasgo pero antes de que realiza cualquier animación.</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td>Animación</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>El Coordinador de transición que se pasa a este método tiene un <code>AnimateAlongside</code> propiedad que permite al desarrollador agregar las animaciones que se ejecutarán junto con las animaciones de forma predeterminada.</li>
-        </ul>
-    </td>
-</tr>
-<tr>
-    <td>Limpieza</td>
-    <td>
-        <ul>
-        <li><code>WillTransitionToTraitCollection</code></li>
-        </ul>
-    </td>
-    <td>
-        <ul>
-        <li>Proporciona un método para que los desarrolladores incluyen su propio código de limpieza después de que realiza la transición.</li>
-        </ul>
-    </td>
-</tr>
-</tbody>
-</table>
+|Phase|Callback|Descripción|
+|--- |--- |--- |
+|Programa de instalación|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Este método se llamará al principio de un cambio de rasgo antes de una colección de rasgo queda establecida en su nuevo valor.</li><li>Se llama al método cuando ha cambiado el valor de la colección de rasgo pero antes de que realiza cualquier animación.</li></ul>|
+|Animación|`WillTransitionToTraitCollection`|El Coordinador de transición que se pasa a este método tiene un `AnimateAlongside` propiedad que permite al desarrollador agregar las animaciones que se ejecutarán junto con las animaciones de forma predeterminada.|
+|Limpieza|`WillTransitionToTraitCollection`|Proporciona un método para que los desarrolladores incluyen su propio código de limpieza después de que realiza la transición.|
 
 El `WillTransitionToTraitCollection` método es muy útil para animar controladores de la vista junto con los cambios en la colección de rasgo. El `WillTransitionToTraitCollection` método solo está disponible en los controladores de vista ( `UIViewController`) y no en otros entornos de rasgo, como `UIViews`.
 

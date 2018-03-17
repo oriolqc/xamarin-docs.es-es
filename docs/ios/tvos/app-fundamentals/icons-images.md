@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d1052695bb7337a18d1a2f1f7015e9079f86f6f5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3e3d1663e07b16721d1aa7253e7d0150a609718e
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-icons-and-images"></a>Trabajar con iconos e imágenes
 
@@ -40,17 +40,9 @@ La imagen de inicio aparece rápidamente y le ofrece la impresión de que la apl
 
 Imágenes de inicio no tienen una oportunidad para que los anuncios o expresión artístico, solo existen para dar la impresión de que la aplicación se inicia rápidamente y está lista para usar.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Iniciar la imagen</b></td>
-</tr>
-<tr>
-    <td><b>Size</b></td>
-    <td>1920px x 1080px
-
-    Non-layered `.png` files only</td>
-</tr>
-</table>
+|Iniciar el tamaño de la imagen|Notas|
+|---|---|
+|1920x1080px|Sólo los archivos .png de capas no|
 
 Apple realiza las siguientes sugerencias para diseñar la imagen de inicio de la aplicación:
 
@@ -146,39 +138,15 @@ La aplicación Xamarin.tvOS requerirá no solo un icono de la aplicación para l
 
 Cada aplicación debe proporcionar una pequeña y una versión grande de su icono de la aplicación. Cuando se instala la aplicación, se utilizará el icono pequeño en la pantalla Inicio TV de Apple. Se usa la versión de gran tamaño mediante la tienda de aplicaciones. El icono grande de la aplicación debe imitar la apariencia y funcionamiento de la versión del icono pequeño.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Icono pequeño</b></td>
-    <td colspan="2"><b>Iconos grandes</b></td>
-</tr>
-<tr>
-    <td><b>Tamaño real</b></td>
-    <td>400px x 240px</td>
-    <td><b>Size</b></td>
-    <td>1280px x 768px</td>
-</tr>
-<tr>
-    <td><b>Tamaño de la zona de seguridad</b></td>
-    <td>370px x 222px</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td><b>Tamaño sin foco</b></td>
-    <td>300px x 180px</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td><b>Tamaño tiene el foco</b></td>
-    <td>370px x 222px</td>
-    <td></td>
-    <td></td>
-</tr>
-</table>
+|Icono pequeño||Iconos grandes||
+|---|---|---|---|
+|Tamaño real|400x240px|Tamaño|1280x768px|
+|Tamaño de la zona de seguridad|370x222px|||
+|Tamaño sin foco|300x180px|||
+|Tamaño tiene el foco|370x222px|||
 
 > [!IMPORTANT]
-> **Nota:** los iconos de la aplicación deberá indicarse como **imágenes en capas**. Vea la [en capas de imagen](#Layered-Images) sección anterior para obtener más detalles.
+> Los iconos de la aplicación deberá indicarse como **imágenes en capas**. Vea la [en capas de imagen](#Layered-Images) sección anterior para obtener más detalles.
 
 
 
@@ -227,17 +195,9 @@ Si el usuario ha colocado la aplicación Xamarin.tvOS en la fila de la parte sup
 
 La imagen de estante superior pueden ser proporcionada como una sola static `.png` o `.lsr` archivo (vea [crear imágenes en capas](#Creating-Layered-Images)) o puede crearse dinámicamente en tiempo de ejecución como una sola fila de elementos puede recibir el foco (vea [ Contenido dinámico estante superior](#Dynamic-Top-Shelf-Content) a continuación).
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Imagen de estante superior</b></td>
-</tr>
-<tr>
-    <td><b>Size</b></td>
-    <td>1920px x 720px
-
-    Static `.png` or layered `.lsr` file</td>
-</tr>
-</table>
+|Tamaño de la imagen de estante superior|Notas|
+|---|---|
+|1920x720px|.Png estático o archivo .lsr por niveles|
 
 Apple proporciona las siguientes sugerencias para crear las imágenes de estante superior:
 
@@ -279,38 +239,12 @@ Contenido se presenta como una lista de desplazamiento horizontal y única del c
 
 Los siguientes tamaños de contenido será necesarios:
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>&nbsp;</b></td>
-    <td><b>Póster (2:3)</b></td>
-    <td><b>Cuadrado (1:1)</b></td>
-    <td><b>HDTV (16:9)</b></td>
-</tr>
-<tr>
-    <td><b>Tamaño real</b></td>
-    <td>404px x 608px</td>
-    <td>608px x 608px</td>
-    <td>908px x 512px</td>
-</tr>
-<tr>
-    <td><b>Tamaño de la zona de seguridad</b></td>
-    <td>380px x 570px</td>
-    <td>570px x 570px</td>
-    <td>852px x 479px</td>
-</tr>
-<tr>
-    <td><b>Tamaño sin foco</b></td>
-    <td>333px x 500px</td>
-    <td>500px x 500px</td>
-    <td>782px x 440px</td>
-</tr>
-<tr>
-    <td><b>Tamaño tiene el foco</b></td>
-    <td>380px x 570px</td>
-    <td>570px x 570px</td>
-    <td>852px x 479px</td>
-</tr>
-</table>
+||Póster (2:3)|Cuadrado (1:1)|HDTV (16:9)|
+|---|---|---|---|
+|Tamaño real|404x608px|608x608px|908x512px|
+|Tamaño de la zona de seguridad|380x570px|570x570px|852x479px|
+|Tamaño sin foco|333x500px|500x500px|782x440px|
+|Tamaño tiene el foco|380x570px|570x570px|852x479px|
 
 Apple proporciona las siguientes sugerencias para la fila secciona contenido:
 
@@ -325,27 +259,14 @@ Opcionalmente, la aplicación Xamarin.tvOS puede presentar su contenido en el es
 
 Además de desplazamiento automático, el usuario puede tomar el control de los encabezados y desplazarse en cualquier dirección mediante el control remoto Siri. Realizar una pequeña, gestos circular en el servidor remoto de Siri cuando el encabezado tiene el foco activarán el efecto Parallax para ese encabezado.
 
-<table width="100%" border="1px">
-<tr>
-    <td colspan="2"><b>Imagen de titular (Extra grande)</b></td>
-</tr>
-<tr>
-    <td><b>Tamaño real</b></td>
-    <td>1940px x 624px</td>
-</tr>
-<tr>
-    <td><b>Tamaño de la zona de seguridad</b></td>
-    <td>1740px x 620px</td>
-</tr>
-<tr>
-    <td><b>Tamaño sin foco</b></td>
-    <td>1740px x 560px</td>
-</tr>
-<tr>
-    <td><b>Tamaño tiene el foco</b></td>
-    <td>1740px x 620px</td>
-</tr>
-</table>
+**Imagen de titular (Extra grande)**
+
+|   |   |
+|---|---|
+|Tamaño real|1940x624px|
+|Tamaño de la zona de seguridad|1740x620px|
+|Tamaño sin foco|1740x560px|
+|Tamaño tiene el foco|1740x620px|
 
 Desplazamiento bajorrelieve Banners cualquiera se puede proporcionar como una variable static `.png` o superpuesto `.lsr` archivo.
 
@@ -366,44 +287,13 @@ Si la aplicación de Xamarin.tvOS es un juego y se ha incluido soporte técnico 
 - **Ilustración de panel** -puede ser una imagen opcional proporcionado por el que se mostrará en la parte superior del panel de la aplicación de centro de juegos. Estas imágenes son no pueden recibir el foco.
 - **Ilustración de la tabla de clasificación de** -debe proporcionar entre uno (1) a tres (3) imágenes de relación de aspecto 16:9 para cada tabla de clasificación que admite la aplicación. Éstas pueden ser estáticas `.png` o superpuesto `.lsr` archivos. La ilustración de la tabla de clasificación es puede recibir el foco.
 
-<table width="100%" border="1px">
-<tr>
-    <td><b>&nbsp;</b></td>
-    <td><b>Iconos de realización</b></td>
-    <td><b>Ilustración de panel</b></td>
-    <td><b>Ilustración de la tabla de clasificación</b></td>
-</tr>
-<tr>
-    <td><b>Tamaño visible</b></td>
-    <td>200px x 200px</td>
-    <td>923px x 150px</td>
-    <td>N/D</td>
-</tr>
-<tr>
-    <td><b>Tamaño real</b></td>
-    <td>x 320px 320 píxeles</td>
-    <td>N/D</td>
-    <td>659px x 371px</td>
-</tr>
-<tr>
-    <td><b>Tamaño de la zona de seguridad</b></td>
-    <td>N/D</td>
-    <td>N/D</td>
-    <td>618px x 348px</td>
-</tr>
-<tr>
-    <td><b>Tamaño sin foco</b></td>
-    <td>N/D</td>
-    <td>N/D</td>
-    <td>548px x 309px</td>
-</tr>
-<tr>
-    <td><b>Tamaño tiene el foco</b></td>
-    <td>N/D</td>
-    <td>N/D</td>
-    <td>618px x 348px</td>
-</tr>
-</table>
+||Iconos de realización|Ilustración de panel|Ilustración de la tabla de clasificación|
+|---|---|---|---|
+|Tamaño visible|200x200px|923x150px|N/D|
+|Tamaño real|320x320px|N/D|659x371px|
+|Tamaño de la zona de seguridad|N/D|N/D|618x348px|
+|Tamaño sin foco|N/D|N/D|548x309px|
+|Tamaño tiene el foco|N/D|N/D|618x348px|
 
 Para obtener más información sobre cómo trabajar con el centro de juegos, consulte de Apple [Guía de programación de centro de juegos](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html).
 

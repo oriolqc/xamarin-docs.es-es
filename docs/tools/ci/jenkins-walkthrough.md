@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 8d23211e28cb1b1dae13d67e32462888c66ff065
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ff754a690627e7e2f0a5cd39dd669a4c9ddd47fb
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="using-jenkins-with-xamarin"></a>Usar Jenkins con Xamarin
 
@@ -343,40 +343,14 @@ Firma y zipaligning el APK son técnicamente dos tareas independientes que se re
 
 Estos dos comandos requieren parámetros de línea de comandos que pueden variar en cada proyecto. Además, algunos de estos parámetros de línea de comandos son las contraseñas que no deben aparecer en la salida de la consola cuando se está ejecutando la compilación. Algunos de estos parámetros de línea de comandos se podrá almacenar en variables de entorno. Las variables de entorno necesarias para firma o alinear zip se describen en la tabla siguiente:
 
-<table>
-    <thead>
-        <tr>
-            <td>Variable de entorno</td>
-            <td>Descripción</td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>KEYSTORE_FILE</td>
-            <td>Se trata de la ruta de acceso para el almacén de claves para firmar el APK</td>
-        </tr>
-        <tr>
-            <td>KEYSTORE_ALIAS</td>
-            <td>La clave en el almacén de claves que se usará para firmar el APK.</td>
-        </tr>
-        <tr>
-            <td>INPUT_APK</td>
-            <td>El APK creado por `xbuild`.</td>
-        </tr>
-        <tr>
-            <td>SIGNED_APK</td>
-            <td>El APK firmado generados por `jarsigner`.</td>
-        </tr>
-        <tr>
-            <td>FINAL_APK</td>
-            <td>Este es el archivo zip alineado APK generado por `zipalign`.</td>
-        </tr>
-        <tr>
-            <td>STORE_PASS</td>
-            <td>Esta es la contraseña que se usa para tener acceso al contenido del almacén de claves para cante el archivo.</td>
-        </tr>
-    </tbody>
-</table>
+|Variable de entorno|Descripción|
+|--- |--- |
+|KEYSTORE_FILE|Se trata de la ruta de acceso para el almacén de claves para firmar el APK|
+|KEYSTORE_ALIAS|La clave en el almacén de claves que se usará para firmar el APK.|
+|INPUT_APK|El APK creado por `xbuild`.|
+|SIGNED_APK|El APK firmado generados por `jarsigner`.|
+|FINAL_APK|Este es el archivo zip alineado APK generado por `zipalign`.|
+|STORE_PASS|Esta es la contraseña que se usa para tener acceso al contenido del almacén de claves para cante el archivo.|
 
 Como se describe en la sección de requisitos, se pueden establecer estas variables de entorno durante la compilación mediante el complemento de EnvInject. El trabajo debe tener una nueva compilación paso agregó basándose en las variables de entorno de inserción, tal y como se muestra en la captura de pantalla siguiente:
 

@@ -6,11 +6,11 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 6ca5b4d70669909b952752f7d600fcac37e9f557
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 68b420f98461ee42862726a658d721b36326c203
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>¿Qué opciones de soporte técnico están disponibles para Xamarin?
 
@@ -18,28 +18,13 @@ ms.lasthandoff: 03/09/2018
 
 Como se muestra en el [página de soporte técnico de Xamarin](https://www.xamarin.com/support), hay disponibles varias opciones.  Estas son algunas recomendaciones iniciales rápidos [inspirado por desbordamiento de la pila](http://stackoverflow.com/help/product-support) acerca de cómo elegir la mejor opción:
 
-<table>
-    <tr>
-        <td>"¿Qué este error significa?" o "¿Cómo...?"</td>
-        <td><a href="http://stackoverflow.com/questions/ask?tags=xamarin">Desbordamiento de pila</a> en el <em>xamarin</em> etiqueta</td>
-    </tr>
-    <tr>
-        <td>Creo que este problema está provocado por un defecto en el código fuente de Xamarin.</td>
-        <td><a href="https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html">Xamarin Bugzilla</a></td>
-    </tr>
-    <tr>
-        <td>Tengo una idea, la solicitud de característica o la nueva solicitud de documentación.</td>
-        <td><a href="https://xamarin.uservoice.com">Página de Xamarin UserVoice</a></td>
-    </tr>
-    <tr>
-        <td>¿Qué recursos, marcos o herramientas de otros usuarios recomendamos para...? (y otros debates abiertas)</td>
-        <td><a href="https://forums.xamarin.com/">Foros de Xamarin</a></td>
-    </tr>
-    <tr>
-        <td>Tiene alguna pregunta acerca de las suscripciones, licencias y precios.</td>
-        <td>Enviar por correo electrónico o llamar a con la información de contacto en la <a href="https://www.xamarin.com/faq">preguntas más frecuentes</a></td>
-    </tr>
-</table>
+|   |   |
+|---|---|
+|"¿Qué este error significa?" o "¿Cómo...?"|[Desbordamiento de pila](http://stackoverflow.com/questions/ask?tags=xamarin) en el *xamarin* etiqueta|
+|Creo que este problema está provocado por un defecto en el código fuente de Xamarin.|[Xamarin Bugzilla](https://bugzilla.xamarin.com/page.cgi?id=bug-writing.html)|
+|Tengo una idea, la solicitud de característica o la nueva solicitud de documentación.|[Página de Xamarin UserVoice](https://xamarin.uservoice.com)|
+|¿Qué recursos, marcos o herramientas de otros usuarios recomendamos para...? (y otros debates abiertas)|[Foros de Xamarin](https://forums.xamarin.com)|
+|Tiene alguna pregunta acerca de las suscripciones, licencias y precios.|Enviar por correo electrónico o llamar a con la información de contacto en la [preguntas más frecuentes](https://www.xamarin.com/faq)|
 
 El equipo de soporte técnico de Xamarin le ayuda a supervisar cada una de estas opciones.  Recomendamos que todos los usuarios para contribuir con sus preguntas reflexivo e informes para aprovechar las ventajas de y ayudar a aumentar la Comunidad de desarrolladores de Xamarin conocimientos.  Para los defectos de sospechosos, asegúrese de enviar informes de errores cuando sea posible para garantizar que los problemas son supervisados formalmente por el equipo de ingeniería de Xamarin.
 

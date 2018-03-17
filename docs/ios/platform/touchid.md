@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: a2378cb439ceed94751e61fd44b54aae3a65bebd
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3564b4f7d41822fdd9ab167fb3e756f26678a17b
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="touch-id"></a>Id. de entrada táctil
 
@@ -39,11 +39,8 @@ La cadena de claves no puede descifrar el elemento de la cadena de claves por s�
 
 La aplicación debe consultar primero en la cadena de claves para ver si existe una contraseña. Si no existe, debe solicitar una contraseña para que el usuario no pide continuamente. Si la contraseña debe actualizarse, pedir al usuario una contraseña nueva y pase el valor actualizado a la cadena de claves.
 
-
-> ℹ️ **Tenga en cuenta**: con los secretos se recibe de la base de datos, no es simplemente recomendado, pero se espera que ningún secreto se mantienen en la memoria. Solo debe mantener un secreto para como siempre y cuando es necesario y sin duda no asignar a una variable global.
-
-
-
+> [!NOTE]
+> Después de usar un secreto recuperado de la cadena de claves, se deben purgar todas las referencias a los datos de la memoria. Nunca asignarlo a una variable global.
 
 ## <a name="keychain-acl-and-touch-id"></a>Id. de ACL de la cadena de claves y entrada táctil
 
@@ -53,32 +50,11 @@ Lista de Control de acceso es un nuevo atributo de elemento de cadena de claves 
 
 A partir de iOS 8, ahora hay una nueva directiva de presencia de usuario, `SecAccessControl`, que se aplica al enclave seguro en un iPhone 5 s y versiones posteriores. Podemos ver en la tabla siguiente, simplemente cómo la configuración del dispositivo puede influir en la evaluación de directivas:
 
-<table width="100%" border="1px">
-<thead>
-<tr>
-    <td>Configuración del dispositivo</td>
-    <td>Evaluación de directivas</td>
-    <td>Mecanismo de copia de seguridad</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-    <td>Dispositivo sin código de acceso</td>
-    <td>Sin acceso</td>
-    <td>Ninguna</td>
-</tr>
-<tr>
-    <td>Dispositivo con código de acceso</td>
-    <td>Requiere código de acceso</td>
-    <td>Ninguna</td>
-</tr>
-<tr>
-    <td>Dispositivo con el Id. de entrada táctil</td>
-    <td>Preferir Touch ID</td>
-    <td>Permite que código de acceso</td>
-</tr>
-</tbody>
-</table>
+|Configuración del dispositivo|Evaluación de directivas|Mecanismo de copia de seguridad|
+|--- |--- |--- |
+|Dispositivo sin código de acceso|Sin acceso|Ninguna|
+|Dispositivo con código de acceso|Requiere código de acceso|Ninguna|
+|Dispositivo con el Id. de entrada táctil|Preferir Touch ID|Permite que código de acceso|
 
 Pueden confiar en todas las operaciones dentro de la Enclave proteger entre sí. Esto significa que podemos utilizar el resultado de la autenticación de Touch ID para autorizar el descifrado de elemento de la cadena de claves. Al proteger Enclave también mantiene un contador de errores coincidencias Touch ID, en el que caso de un usuario tendrá que volver a usar el código de acceso.
 Un nuevo marco en iOS 8, denominado _autenticación Local_, es compatible con este proceso de autenticación en el dispositivo. Se explorará en la sección siguiente.

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 7819201e76e268ea84bf2cc5d49a5a07b20a04e3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4a3450026eff06555723b16093c7a0daf3d12ae7
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="programmatic-layout-constraints"></a>Restricciones de diseño mediante programación
 
@@ -79,32 +79,15 @@ PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Activ
 
 Donde las partes del código C# se corresponden a las partes de la ecuación determinadas como sigue:
 
-<table width="100%" border="1">
-<tr>
-<td width="50%"><b>Ecuación</b></td><td><b>Código</b></td>
-</tr>
-<tr>
-<td width="50%">Elemento 1</td><td>PurpleView</td>
-</tr>
-<tr>
-<td width="50%">Atributo 1</td><td>LeadingAnchor</td>
-</tr>
-<tr>
-<td width="50%">Relación</td><td>ConstraintEqualTo</td>
-</tr>
-<tr>
-<td width="50%">Multiplicador</td><td>El valor predeterminado es 1.0 por lo que no se especifica</td>
-</tr>
-<tr>
-<td width="50%">Elemento 2</td><td>OrangeView</td>
-</tr>
-<tr>
-<td width="50%">Atributo 2</td><td>TrailingAnchor</td>
-</tr>
-<tr>
-<td width="50%">Constante</td><td>10.0</td>
-</tr>
-</table>
+|Ecuación|Código|
+|---|---|
+|Elemento 1|PurpleView|
+|Atributo 1|LeadingAnchor|
+|Relación|ConstraintEqualTo|
+|Multiplicador|El valor predeterminado es 1.0 por lo que no se especifica|
+|Elemento 2|OrangeView|
+|Atributo 2|TrailingAnchor|
+|Constante|10.0|
 
 Además de proporcionar solo los parámetros necesarios para resolver una ecuación de restricción de esquema dado, cada uno de los métodos de diseño delimitador exigir la seguridad de tipos de los parámetros pasados a ellos. Por lo tanto horizontal restricción fija como `LeadingAnchor` o `TrailingAnchor` sólo puede utilizarse con otro delimitador horizontal tipos y multiplicadores solo se proporcionan a las restricciones de tamaño.
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 36c793e7a9b7b30bcb0cdf2c7959fd2df36c8775
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: fd6aa66a7e5e788babc0df3e94b8f3677a7625f0
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="working-with-the-file-system"></a>Trabajar con el sistema de archivos
 
@@ -238,78 +238,14 @@ Estos directorios y sus fines se enumeran a continuación:
 
 &nbsp;
 
-<table>
-  <tbody>
-    <tr>
-      <td>
-Directorio </td>
-      <td>
-Descripción </td>
-    </tr>
-    <tr>
-      <td>
-        <p>[NombreAplicación] .app /</p>
-      </td>
-      <td>
-        <p><b>En iOS 7 y versiones anteriores</b> trata el <code>ApplicationBundle</code> directorio donde se almacena el archivo ejecutable de la aplicación. La estructura de directorios que se crea en la aplicación existe en este directorio (por ejemplo, imágenes y otros tipos de archivo que se han marcado como recursos en la Visual Studio para proyectos de Mac).</p>
-        <p>Si necesita tener acceso a los archivos de contenido dentro de la agrupación de aplicaciones, la ruta de acceso a este directorio está disponible a través de la <code>NSBundle.MainBundle.BundlePath</code> propiedad.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Documentos /</p>
-      </td>
-      <td>
-        <p>Utilice este directorio para almacenar documentos de usuario y archivos de datos de aplicación.</p>
-        <p>El contenido de este directorio puede estar disponible para el usuario a través de los archivos de iTunes compartidos (aunque esto está deshabilitada de forma predeterminada). Agregar un <code>UIFileSharingEnabled</code> booleano clave en el archivo Info.plist para permitir que los usuarios accedan a estos archivos.</p>
-        <p>Incluso si una aplicación inmediatamente no habilita el uso compartido de archivos, debe evitar colocar los archivos que deben ocultarse de los usuarios en este directorio (por ejemplo, archivos de base de datos, a menos que desee compartirlos). Siempre y cuando los archivos confidenciales permanecen ocultos, estos archivos no se exponen (y potencialmente mueve, modificado o eliminado por iTunes) si el uso compartido de archivos está habilitado en una versión futura.</p>
-        <p>Puede usar el <code>Environment.GetFolderPath
-(Environment.SpecialFolder.MyDocuments)</code> método para obtener la ruta de acceso al directorio de documentos para la aplicación.</p>
-        <p>El contenido de este directorio estén respaldado por iTunes.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Biblioteca /</p>
-      </td>
-      <td>
-        <p>El directorio de bibliotecas es un buen lugar para almacenar los archivos que no se crean directamente por el usuario, como las bases de datos u otros archivos generados por la aplicación.
-El contenido de este directorio nunca se expone al usuario a través de iTunes.</p>
-        <p>Puede crear sus propios subdirectorios en la biblioteca; Sin embargo, ya hay algunos creado por el sistema directorios aquí que debe tener en cuenta, incluyendo las preferencias y las memorias caché.</p>
-        <p>El contenido de este directorio (excepto el subdirectorio cachés) estén respaldado por iTunes. Se copiarán los directorios personalizados que se crean en la biblioteca.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Preferencias de la biblioteca / /</p>
-      </td>
-      <td>
-        <p>Archivos de preferencia específica de la aplicación se almacenan en este directorio. No cree directamente estos archivos. En su lugar, use la <code>NSUserDefaults</code> clase.</p>
-        <p>El contenido de este directorio estén respaldado por iTunes.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>Biblioteca/cachés /</p>
-      </td>
-      <td>
-        <p>El directorio de caché es un buen lugar para almacenar archivos de datos que pueden ayudar a la aplicación se ejecute, pero que pueden volver a crear fácilmente si es necesario. La aplicación debe crear y eliminar estos archivos según sea necesario y poder volver a crear estos archivos si es necesario. iOS 5 también puede eliminar estos archivos (en situaciones de almacenamiento muy baja), sin embargo, no se realizará mientras se ejecuta la aplicación.</p>
-        <p>El contenido de este directorio no está respaldado por iTunes, lo que significa que no estará presentes si el usuario restaura un dispositivo, y que no estén presentes después de instala una versión actualizada de la aplicación.</p>
-        <p>Por ejemplo, en caso de que la aplicación no se puede conectar a la red, podría utilizar el directorio de caché para almacenar archivos de datos o para proporcionar una buena experiencia sin conexión. La aplicación puede guardar y recuperar estos datos rápidamente mientras se espera para las respuestas de la red, pero no es necesario realizar copias de seguridad y se puede fácilmente recuperar o volver a crear después de actualizar una versión o restauración.</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p>tmp /</p>
-      </td>
-      <td>
-        <p>Las aplicaciones pueden almacenar archivos temporales que solo son necesarios durante un breve período en este directorio. Para ahorrar espacio, los archivos se deben eliminar cuando ya no son necesarios. El sistema operativo también puede eliminar archivos desde este directorio cuando una aplicación no se está ejecutando.</p>
-        <p>El contenido de este directorio no está respaldado por iTunes.</p>
-        <p>Por ejemplo, el directorio tmp podría utilizarse para almacenar archivos temporales que se descargan para mostrar al usuario (por ejemplo, Twitter avatares o datos adjuntos de correo electrónico), pero que se puede eliminar una vez que hayan sido ver (y descargarla de nuevo si es necesarios en el futuro ).</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+|Directorio|Descripción|
+|---|---|
+|[NombreAplicación] .app /|**En iOS 7 y versiones anteriores** trata el `ApplicationBundle` directorio donde se almacena el archivo ejecutable de la aplicación. La estructura de directorios que se crea en la aplicación existe en este directorio (por ejemplo, imágenes y otros tipos de archivo que se han marcado como recursos en la Visual Studio para proyectos de Mac).<br /><br />Si necesita tener acceso a los archivos de contenido dentro de la agrupación de aplicaciones, la ruta de acceso a este directorio está disponible a través de la `NSBundle.MainBundle.BundlePath` propiedad.|
+|Documentos /|Utilice este directorio para almacenar documentos de usuario y archivos de datos de aplicación.<br /><br />El contenido de este directorio puede estar disponible para el usuario a través de los archivos de iTunes compartidos (aunque esto está deshabilitada de forma predeterminada). Agregar un `UIFileSharingEnabled` booleano clave en el archivo Info.plist para permitir que los usuarios accedan a estos archivos.<br /><br />Incluso si una aplicación inmediatamente no habilita el uso compartido de archivos, debe evitar colocar los archivos que deben ocultarse de los usuarios en este directorio (por ejemplo, archivos de base de datos, a menos que desee compartirlos). Siempre y cuando los archivos confidenciales permanecen ocultos, estos archivos no se exponen (y potencialmente mueve, modificado o eliminado por iTunes) si el uso compartido de archivos está habilitado en una versión futura.<br /><br /> Puede usar el `Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments)` método para obtener la ruta de acceso al directorio de documentos para la aplicación.<br /><br />El contenido de este directorio estén respaldado por iTunes.|
+|Biblioteca /|El directorio de bibliotecas es un buen lugar para almacenar los archivos que no se crean directamente por el usuario, como las bases de datos u otros archivos generados por la aplicación. El contenido de este directorio nunca se expone al usuario a través de iTunes.<br /><br />Puede crear sus propios subdirectorios en la biblioteca; Sin embargo, ya hay algunos creado por el sistema directorios aquí que debe tener en cuenta, incluyendo las preferencias y las memorias caché.<br /><br />El contenido de este directorio (excepto el subdirectorio cachés) estén respaldado por iTunes. Se copiarán los directorios personalizados que se crean en la biblioteca.|
+|Preferencias de la biblioteca / /|Archivos de preferencia específica de la aplicación se almacenan en este directorio. No cree directamente estos archivos. En su lugar, use la `NSUserDefaults` clase.<br /><br />El contenido de este directorio estén respaldado por iTunes.|
+|Biblioteca/cachés /|El directorio de caché es un buen lugar para almacenar archivos de datos que pueden ayudar a la aplicación se ejecute, pero que pueden volver a crear fácilmente si es necesario. La aplicación debe crear y eliminar estos archivos según sea necesario y poder volver a crear estos archivos si es necesario. iOS 5 también puede eliminar estos archivos (en situaciones de almacenamiento muy baja), sin embargo, no se realizará mientras se ejecuta la aplicación.<br /><br />El contenido de este directorio no está respaldado por iTunes, lo que significa que no estará presentes si el usuario restaura un dispositivo, y que no estén presentes después de instala una versión actualizada de la aplicación.<br /><br />Por ejemplo, en caso de que la aplicación no se puede conectar a la red, podría utilizar el directorio de caché para almacenar archivos de datos o para proporcionar una buena experiencia sin conexión. La aplicación puede guardar y recuperar estos datos rápidamente mientras se espera para las respuestas de la red, pero no es necesario realizar copias de seguridad y se puede fácilmente recuperar o volver a crear después de actualizar una versión o restauración.|
+|tmp /|Las aplicaciones pueden almacenar archivos temporales que solo son necesarios durante un breve período en este directorio. Para ahorrar espacio, los archivos se deben eliminar cuando ya no son necesarios. El sistema operativo también puede eliminar archivos desde este directorio cuando una aplicación no se está ejecutando.<br /><br />El contenido de este directorio no está respaldado por iTunes.<br /><br />Por ejemplo, el directorio tmp podría utilizarse para almacenar archivos temporales que se descargan para mostrar al usuario (por ejemplo, Twitter avatares o datos adjuntos de correo electrónico), pero que se puede eliminar una vez que hayan sido ver (y descargarla de nuevo si es necesarios en el futuro ).|
 
 Esta captura de pantalla muestra la estructura de directorios en una ventana de herramienta de búsqueda:
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/12/2018
-ms.openlocfilehash: d47499c1e309fbc67c85b55cacbbba3942188f54
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 5c214fe4124b900ea63399b97084d1ce0e181d4a
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="using-datepicker"></a>Uso de DatePicker
 
@@ -48,7 +48,7 @@ DatePicker datePicker = new DatePicker
 };
 ```
 
-Cuando un `DateTime` valor especificado en XAML, el analizador XAML usa el `DateTime.Parse` método con un `CultureInfo.InvariantCulture` argumento para convertir la cadena a un `DateTime` valor. Se deben especificar las fechas en un formato preciso: meses de dos dígitos, dos dígitos días y años de cuatro dígitos, separados por barras diagonales:
+Cuando un `DateTime` se expresa en XAML, el analizador XAML usa el `DateTime.Parse` método con un `CultureInfo.InvariantCulture` argumento para convertir la cadena a un `DateTime` valor. Se deben especificar las fechas en un formato preciso: meses de dos dígitos, dos dígitos días y años de cuatro dígitos, separados por barras diagonales:
 
 ```xaml
 <DatePicker MinimumDate="01/01/2018"
@@ -139,7 +139,7 @@ Este es el archivo XAML:
 </ContentPage>
 ```
 
-Cada `DatePicker` se le asigna un `Format` propiedad de "D" para un formato de fecha larga. Observe también que la `endDatePicker` objeto tiene un enlace que tenga como destino su `MinimumDate` propiedad. El origen de enlace está seleccionado `Date` propiedad de la `startDatePicker` objeto. Esto garantiza que la fecha de finalización es siempre posterior o igual que la fecha de inicio. Además de los dos `DatePicker` objetos, un `Switch` tiene la etiqueta "Include diurnas en total". 
+Cada `DatePicker` se le asigna un `Format` propiedad de "D" para un formato de fecha larga. Observe también que la `endDatePicker` objeto tiene un enlace que tenga como destino su `MinimumDate` propiedad. El origen de enlace está seleccionado `Date` propiedad de la `startDatePicker` objeto. Esto garantiza que la fecha de finalización es siempre posterior o igual que la fecha de inicio. Además de los dos `DatePicker` objetos, un `Switch` tiene la etiqueta "Incluyen dos días en total". 
 
 Los dos `DatePicker` vistas tienen controladores asociados a la `DateSelected` eventos y el `Switch` ha adjuntado un controlador a su `Toggled` eventos. Estos controladores de eventos están en el archivo de código subyacente y desencadenan un nuevo cálculo de los días entre las dos fechas:
 

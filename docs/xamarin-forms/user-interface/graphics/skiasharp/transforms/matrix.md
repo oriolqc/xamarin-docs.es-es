@@ -8,11 +8,11 @@ ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 9d5e65abe675ded48e9239f2cd10ceed4a7c3a52
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: b54e5258c76892620947d0a7ce673b4ff61f09f3
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="matrix-transforms"></a>Transformaciones de matriz
 
@@ -410,7 +410,7 @@ El constructor de este programa aplica a la matriz a la ruta de acceso con la si
 transformedPath.Transform(matrix);
 ```
 
-La ruta de acceso *no* conservar esta matriz como una propiedad. En su lugar, la transformación se aplica a todas las coordenadas de la ruta de acceso. Si `Transform` se llama de nuevo, la transformación se aplica de nuevo, y es la única manera de poder volver a ella mediante la aplicación de otra matriz que deshace la transformación. Afortunadamente, la `SKMatrix` estructura define un [ `TryInverse` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.TryInvert/p/SkiaSharp.SKMatrix@/) método que obtiene la matriz que invierte una matriz especificada:
+La ruta de acceso *no* conservar esta matriz como una propiedad. En su lugar, la transformación se aplica a todas las coordenadas de la ruta de acceso. Si `Transform` se llama de nuevo, la transformación se aplica de nuevo, y es la única manera de poder volver a ella mediante la aplicación de otra matriz que deshace la transformación. Afortunadamente, la `SKMatrix` estructura define un [ `TryInverse` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix.TryInvert/p/SkiaSharp.SKMatrix/) método que obtiene la matriz que invierte una matriz especificada:
 
 ```csharp
 SKMatrix inverse;

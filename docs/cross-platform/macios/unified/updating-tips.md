@@ -6,11 +6,11 @@ ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 027b5869dbf52adf70c57d192ed638b10a6c8cdc
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 31ee94b7a463a651556472967152b98ee3061a8d
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Sugerencias para actualizar el código a la API unificada
 
@@ -205,4 +205,4 @@ class BasicPinAnnotation : MKAnnotation
 - [Actualizar aplicaciones de Xamarin.Forms](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 - [Actualizar enlaces](~/cross-platform/macios/unified/update-binding.md)
 - [Trabajo con tipos nativos en aplicaciones multiplataforma](~/cross-platform/macios/native-types-cross-platform.md)
-- [Diferencias de API unificada de vs clásicos](http://developer.xamarin.comhttps://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Diferencias de API unificada de vs clásicos](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)

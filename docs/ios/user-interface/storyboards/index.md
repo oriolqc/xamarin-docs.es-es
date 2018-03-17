@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 342e8189d9dec6eaa60a999d56a7891da845d247
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a0b0ca9857e706a9a84f1c661f7f6ff294e112c1
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="introduction-to-storyboards"></a>Introducción a guiones gráficos
 
@@ -84,32 +84,12 @@ Las aplicaciones que utilizan las clases de tamaño también usarán el nuevo [ 
 
 [![](images/adaptivesegue.png "La lista desplegable Segues adaptable")](images/adaptivesegue.png#lightbox)
 
-<table>
-    <thead>
-        <tr>
-            <th>Desplazará tranquilamente</th>
-            <th>Descripción</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Mostrar</td>
-            <td>Esto es muy similar a una inserción desplazará tranquilamente, pero tiene en cuenta el contenido de la pantalla. </td>
-        </tr>
-        <tr>
-            <td>Mostrar detalles</td>
-            <td>Si la aplicación muestra una vista maestra y de detalles (por ejemplo, en un controlador de vista de división en un iPAd), el contenido reemplazará la vista de detalle. Si la aplicación muestra solamente el maestro de <strong>o</strong> detalle, el contenido reemplazará la parte superior de la pila de controlador de vista.</td>
-        </tr>
-        <tr>
-            <td>Presentación</td>
-            <td>Esto es similar a la segue Modal y permite la selección de los estilos de presentación y transición.</td>
-        </tr>
-        <tr>
-            <td>Presentación de popover</td>
-            <td>Esto presenta el contenido como un popover</td>
-        </tr>
-    </tbody>
-</table>
+|Desplazará tranquilamente|Descripción|
+|--- |--- |
+|Mostrar|Esto es muy similar a una inserción desplazará tranquilamente, pero tiene en cuenta el contenido de la pantalla.|
+|Mostrar detalles|Si la aplicación muestra una vista maestra y de detalles (por ejemplo, en un controlador de vista de división en un iPad), el contenido reemplazará la vista de detalle. Si la aplicación solo muestra el patrón o detalles, el contenido reemplazará la parte superior de la pila de controlador de vista.|
+|Presentación|Esto es similar a la segue Modal y permite la selección de los estilos de presentación y transición.|
+|Presentación de popover|Esto presenta el contenido como un popover|
 
 ### <a name="transferring-data-with-segues"></a>Transferencia de datos con Segues
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: f6d19f0f6573b17dfb3feb6bf131686413d4e68f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 047f7d7497a114bf4b7c94e50bdf09862b882794
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="objective-c-support"></a>Compatibilidad con Objective-c.
 
@@ -201,13 +201,11 @@ Debido a `NSDate` hacen referencia a fecha, todas las conversiones entre él y `
 
 Al convertir de `DateTime` a `NSDate` la fecha y hora `Kind` tener en cuenta la propiedad.
 
-<table>
-<tr><th> Tipo         </th><th> Resultados                                                                                            </th></tr>
-<!--tr><td> ------------ </td><td> -------------------------------------------------------------------------------------------------- </td></tr-->
-<tr><td> Hora UTC          </td><td> Se efectúa una conversión utilizando el objeto de fecha y hora proporcionado tal cual.                                  </td></tr>
-<tr><td> Local        </td><td> El resultado de llamar al método `ToUniversalTime ()` en la fecha y hora proporcionada objeto se usa para la conversión. </td></tr>
-<tr><td> Sin especificar  </td><td> El objeto de fecha y hora proporcionado se supone que la hora UTC, así mismo comportamiento que el tipo == Utc.                </td></tr>
-</table>
+|Tipo|Resultados                                                                                            |
+|---|---|
+|Hora UTC|Se efectúa una conversión mediante la proporcionada `DateTime` objeto tal y como está.|
+|Local|El resultado de llamar al método `ToUniversalTime()` en proporcionado `DateTime` objeto se usa para la conversión.|
+|Sin especificar|Proporcionado `DateTime` objeto se supone que la hora UTC, así mismo comportamiento que el tipo == Utc.|
 
 La conversión se realiza mediante la fórmula siguiente:
 

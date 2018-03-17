@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: f962f4619352dbaaed8c8ffcf5d8c8305cb6ad62
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7ddb4b7d4867813311448258bb4fb177ae4cd175
+ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="specialized-fragment-classes"></a>Clases especializadas fragmento
 
@@ -191,8 +191,7 @@ public class AlertDialogFragment : DialogFragment
 
 ## <a name="preferencefragment"></a>PreferenceFragment
 
-Para ayudar a administrar las preferencias, proporciona la API de fragmentos de la `PreferenceFragment` subclase. El `PreferenceFragment` es similar a la [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/
-) &ndash; mostrará una jerarquía de las preferencias para el usuario en un fragmento. Cuando el usuario interactúa con las preferencias, se guardará automáticamente en [SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html).
+Para ayudar a administrar las preferencias, proporciona la API de fragmentos de la `PreferenceFragment` subclase. El `PreferenceFragment` es similar a la [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash; mostrará una jerarquía de las preferencias para el usuario en un fragmento. Cuando el usuario interactúa con las preferencias, se guardará automáticamente en [SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html).
 En Android 3.0 o superior aplicaciones, use el `PreferenceFragment` para tratar con las preferencias de aplicaciones. En la siguiente imagen muestra un ejemplo de un `PreferenceFragment`:
 
 [![En el ejemplo se PreferencesFragment con las preferencias de inicio, cuadro de diálogo y en línea](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)
