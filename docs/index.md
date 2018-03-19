@@ -5,11 +5,11 @@ title: "Documentación de Xamarin"
 description: "Xamarin le permite crear aplicaciones nativas para Android, iOS y macOS mediante un código .NET y las interfaces de usuario específicas de plataforma. Xamarin.Forms le permite crear aplicaciones nativas, con código de interfaz de usuario compartido escrito en C# o XAML."
 featureFlags:
 - clicktale
-ms.openlocfilehash: 162d608d6eeaf0da0120308168f88fcc805b5406
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d73b8165fc1a71fbfe3202f694c4653788ccfb28
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -1041,11 +1041,11 @@ ms.lasthandoff: 03/09/2018
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-windows-simulator.svg?branch=master" alt="iOS Simulator for Windows" />
+                                                        <img src="~/media/index/xamarin-tools-windows-simulator.svg?branch=master" alt="Remoted iOS Simulator for Windows" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Simulador de iOS para Windows</h3>
+                                                    <h3>Simulador de iOS remoto para Windows</h3>
                                                     <p>Interactúe con el simulador de iOS mediante Visual Studio en Windows.</p>
                                                 </div>
                                             </div>
@@ -1098,7 +1098,7 @@ ms.lasthandoff: 03/09/2018
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="https://review.docs.microsoft.com/en-us//media/illustrations/dynamics-resource-library.svg?branch=master" alt="Xamarin Workbooks" />
+                                                        <img src="https://docs.microsoft.com/en-us/media/illustrations/dynamics-resource-library.svg" alt="Xamarin Workbooks" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
