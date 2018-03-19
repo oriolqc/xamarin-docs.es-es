@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: asb3993
+ms.author: amburns
 ms.date: 11/17/2017
-ms.openlocfilehash: d7532d052c57ad46caca0cd6d6ce26d0e77dc05f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a411c214e35f78ff9d3dd8d4e9122702d66a2156
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="automatic-provisioning"></a>Aprovisionamiento automático
 
@@ -34,23 +34,15 @@ Para inscribir la aplicación automáticamente para su implementación en un dis
 
 1. Abra un proyecto de iOS en Visual Studio para Mac.
 
-2. Abra el archivo **Info.plist**:
+2. Abra el archivo **Info.plist**.
 
-    ![Archivo Info.plist](automatic-provisioning-images/image1.png)
-
-3. En la sección **Firma**, seleccione el equipo en la lista desplegable **Equipo**:
+3. En la sección **Firma**, seleccione **Aprovisionamiento automático**:
 
     ![Lista desplegable del selector de equipo](automatic-provisioning-images/image2.png)
 
-4. Active la casilla **Administrar automáticamente la firma**, como se muestra a continuación. Con esto se inicia el proceso de firma automática, en el que Visual Studio para Mac intenta generar un Id. de aplicación, un perfil de aprovisionamiento y una identidad de firma y establecer estos artefactos de modo que se usen para firmar. Cuando se ha activado la casilla, se deshabilitan los controles manuales para seleccionar las identidades de firma.
+4. En la lista desplegable **Equipo**, seleccione su equipo.
 
-    ![Opción para administrar automáticamente los equipos](automatic-provisioning-images/image3.png)
-
-5. Se abre el siguiente cuadro de diálogo, en el que se avisa de que se va a modificar el archivo de proyecto para usar el certificado y el perfil de aprovisionamiento recién generados:
-
-    ![Cuadro de diálogo que avisa de que se va a modificar el archivo de proyecto](automatic-provisioning-images/image4.png)
-
-6. Después de unos segundos se crean y se muestran un certificado de firma y un perfil de aprovisionamiento:
+6. Después de unos segundos se crean un certificado de firma y un perfil de aprovisionamiento:
 
     ![Certificado y perfil creados correctamente](automatic-provisioning-images/image5.png)
 

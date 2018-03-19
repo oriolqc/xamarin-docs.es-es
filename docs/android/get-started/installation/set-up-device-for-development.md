@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 64036af82ea49ad4d758a89767ff0da02eef094f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 26a543cc096d96346cd4503bf4fa2382f8ca9b78
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="set-up-device-for-development"></a>Configurar el dispositivo para el desarrollo
 
@@ -119,8 +119,7 @@ Para instalar los controladores en Windows 7:
 
 ### <a name="installing-unverified-drivers-in-windows-8"></a>Instalar controladores no comprobados en Windows 8
 
-Puede que sea necesario llevar a cabo pasos adicionales para instalar un controlador no comprobado en Windows.
-8. En los pasos siguientes se describe cómo instalar los controladores para un Galaxy Nexus:
+Puede que sea necesario llevar a cabo pasos adicionales para instalar un controlador no comprobado en Windows 8. En los pasos siguientes se describe cómo instalar los controladores para un Galaxy Nexus:
 
 1.  **Obtener acceso a las opciones de arranque avanzadas de Windows 8**: este paso consiste en reiniciar el equipo para tener acceso a las opciones de arranque avanzadas. Inicie un símbolo de la línea de comandos y reinicie el equipo mediante el comando siguiente:
 

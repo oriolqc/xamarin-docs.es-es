@@ -1,6 +1,6 @@
 ---
 title: "Implementación inalámbrica"
-description: "Esta característica en versión preliminar permite la implementación en dispositivos iOS o Apple TV a través de una conexión en red"
+description: "Esta característica permite la implementación en dispositivos iOS o Apple TV a través de una conexión de red."
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
@@ -8,47 +8,40 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/09/2018
-ms.openlocfilehash: 11961a21a7c4188c505c822a35531036fd953405
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7566669fb7d607ca6616b88cb32b770537146c94
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="wireless-deployment"></a>Implementación inalámbrica
 
-_Esta característica en versión preliminar permite la implementación en dispositivos iOS o Apple TV a través de una conexión de red._
-
-![Versión preliminar](~/media/shared/preview.png)
-
-Una parte importante del flujo de trabajo del desarrollador es la implementación en un dispositivo. Xcode 9 introdujo la opción de implementación en un dispositivo iOS o Apple TV a través de una red, en lugar de tener que conectar directamente los dispositivos cada vez que quiera implementar y depurar la aplicación. Esta característica se ha introducido en Visual Studio para Mac y Visual Studio versión 15.6, que se encuentra actualmente en versión preliminar.
+Una parte importante del flujo de trabajo del desarrollador es la implementación en un dispositivo. Xcode 9 introdujo la opción de implementación en un dispositivo iOS o Apple TV a través de una red, en lugar de tener que conectar directamente los dispositivos cada vez que quiera implementar y depurar la aplicación. Esta característica se ha introducido en Visual Studio para Mac 7.4 y Visual Studio 15.6.
 
 En esta guía se detalla cómo emparejar e implementar en un dispositivo a través de la red.
 
 ## <a name="requirements"></a>Requisitos
 
-La implementación inalámbrica está disponible como característica en **versión preliminar** tanto en Visual Studio para Mac como en Visual Studio.
-
+La implementación inalámbrica está disponible como característica tanto en Visual Studio para Mac como en Visual Studio.
 
 Para usar la implementación inalámbrica, debe tener lo siguiente:
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 - macOS 10.12.4
-- La versión más reciente de Visual Studio para Mac 
-    - Para instalar este modificador en el [canal alfa o beta](https://docs.microsoft.com/en-us/visualstudio/mac/update) de Visual Studio para Mac.
+- La versión más reciente de Visual Studio para Mac
 - Xcode 9.0 o posterior
 - Un dispositivo con iOS 11.0 o tvOS 11.0 y versiones posteriores
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-- La [versión preliminar](https://www.visualstudio.com/vs/preview/) más reciente de Visual Studio
+- La versión más reciente de Visual Studio
 - Un dispositivo con iOS 11.0 o tvOS 11.0 y versiones posteriores
 
 En el host de compilación del equipo Mac, deben estar instalados los componentes siguientes:
 
 - macOS 10.12.4
-- Visual Studio para Mac Preview
-    - Para realizar la instalación del modificador en el [canal alfa o beta](https://docs.microsoft.com/en-us/visualstudio/mac/update) de Visual Studio para Mac.
+- Visual Studio para Mac
 - Xcode 9.0 o posterior
 
 -----

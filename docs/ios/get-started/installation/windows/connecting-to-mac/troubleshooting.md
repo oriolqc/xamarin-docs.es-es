@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5263d32ace14eb803bfd65b6a9b2ea5992ee1413
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ffa61004bdaaaaf400f5e0d5ed90b4e6b1dcb7e7
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="connection-troubleshooting"></a>Solución de problemas de conexión
 
@@ -240,7 +240,6 @@ Si la ventana de salida no incluye suficiente información para diagnosticar el 
 
 4. Cuando abra el archivo .zip, verá una lista de archivos similar al ejemplo siguiente. En el caso de los errores de conexión, los archivos más importantes son **\*Ide.log** y **\*Ide.svclog**. Estos archivos contienen los mismos mensajes en dos formatos ligeramente diferentes. **.svclog** es un archivo XML y resulta útil para examinar los mensajes. **.log** es un archivo de texto sin formato y es útil si quiere filtrar los mensajes mediante herramientas de línea de comandos.
 
-
     Para examinar todos los mensajes, seleccione y abra el archivo **.svclog**:
 
     [![](troubleshooting-images/troubleshooting-image13.png "Selección del archivo .svclog")](troubleshooting-images/troubleshooting-image13.png#lightbox)
@@ -319,7 +318,7 @@ Causas notificadas:
 
 Corrección pertinente: [40781](https://bugzilla.xamarin.com/show_bug.cgi?id=40781).
 
-Este problema puede ocurrir si se produce un error cuando Visual Studio actualiza la caché de componentes de MEF. Si ese es el caso, puede servir de ayuda instalar esta extensión de Visual Studio: [https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd).
+Este problema puede ocurrir si se produce un error cuando Visual Studio actualiza la caché de componentes de MEF. Si es así, instalar esta extensión de Visual Studio puede ser de ayuda: [https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd)
 
 De este modo, se borrará la caché de componentes de MEF de Visual Studio para solucionar los problemas relacionados con daños en la caché.
 

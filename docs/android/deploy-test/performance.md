@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 3871955f723d1b3aec6245bba0502ca4f955d64c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 825b566ed45e8c337a1a452ec2c76a23e6a16462
+ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="xamarinandroid-performance"></a>Rendimiento de Xamarin.Android
 
@@ -37,7 +37,7 @@ Existen varias técnicas para aumentar el rendimiento, y la percepción de rendi
 
 
 > [!NOTE]
-> Antes de leer este artículo, debería leer primero [Rendimiento multiplataforma](~/cross-platform/deploy-test/memory-perf-best-practices.md), donde se explican técnicas no específicas de una plataforma para mejorar el uso de memoria y el rendimiento de las aplicaciones compiladas con la plataforma Xamarin.
+> Antes de leer este artículo, debería leer [Rendimiento multiplataforma](~/cross-platform/deploy-test/memory-perf-best-practices.md), donde se explican técnicas no específicas de una plataforma para mejorar el uso de memoria y el rendimiento de las aplicaciones compiladas con la plataforma Xamarin.
 
 <a name="optimizelayout" />
 
@@ -156,7 +156,7 @@ public override View GetView(int position, View convertView, ViewGroup parent)
 
 Cuando el usuario se desplaza, la [`ListView`](https://developer.xamarin.com/api/type/Android.Widget.ListView/) llama a la invalidación `GetView` para solicitar nuevas vistas para mostrar: si está disponible, pasa una vista sin usar en el parámetro `convertView`. Si este valor es `null`, el código crea una nueva instancia [`View`](https://developer.xamarin.com/api/type/Android.Views.View/), de lo contrario, se pueden volver a establecer y usar las propiedades `convertView`.
 
-Para más información, vea [Row View Re-Use (Reutilización de vista de lista)](~/android/user-interface/layouts/list-view/populating.md) en [Populating a ListView with Data (Relleno de una ListView con datos)](~/android/user-interface/layouts/list-view/populating.md).
+Para más información, vea [Row View Re-Use (Reutilización de vista de lista)](~/android/user-interface/layouts/list-view/populating.md#row-view-re-use) en [Populating a ListView with Data (Relleno de una ListView con datos)](~/android/user-interface/layouts/list-view/populating.md).
 
 <a name="removeeventhandlers" />
 

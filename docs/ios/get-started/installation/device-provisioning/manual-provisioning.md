@@ -5,14 +5,14 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: asb3993
+ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: 2ad3bd55ae0abc44b0c9757bd79c2711eddf171d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e42b9d0b5eb64c17c96b66c9dbae7582551a06a0
+ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="manual-provisioning"></a>Aprovisionamiento manual
 
@@ -236,7 +236,8 @@ En este momento, el aprovisionamiento se ha completado y la aplicación está li
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-Asegúrese de establecer el selector Equipo en Ninguno en Opciones de proyecto > Firma de lote de iOS.
+> [!IMPORTANT]
+> Antes de comenzar, asegúrese de seleccionar **Aprovisionamiento manual** en **Info.plist**.
 
 1. Conecte el dispositivo a un equipo Mac.
 2. En el archivo **Info.plist** del proyecto, asegúrese de que el identificador de paquete coincide con el identificador de aplicación (a menos que este sea un carácter comodín):
