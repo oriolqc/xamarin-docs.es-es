@@ -7,12 +7,12 @@ ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/09/2018
-ms.openlocfilehash: b2da136ddfa6aab4121ba21d0e6f83b2390ba10b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: 67b150650c21c781b7081de4e1f3b095c0ea560f
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Receptores de difusión en Xamarin.Android
 
@@ -23,14 +23,14 @@ _Esta sección describe cómo utilizar un receptor de difusión._
 
 A _receptor difusión_ es un componente de Android que permite que una aplicación responder a mensajes (un Android [ `Intent` ](https://developer.xamarin.com/api/type/Android.Content.Intent/)) que se emiten por el sistema operativo Android o por una aplicación. Siguen las difusiones un _suscripción-publicación_ modelo &ndash; un evento hace una difusión que se publican y recibidos por los componentes que están interesados en el evento. 
 
-Android identifica dos categorías de difusiones:
+Android identifica dos tipos de difusiones:
 
-* **Difusión normal** &ndash; una difusión normal se enrutará a todos los destinatarios de difusión registrados en un orden indeterminado. Cada destinatario recibe el intento de un orden sin definir. 
-* **Difusión ordenados** &ndash; una difusión ordenada se entrega uno a la vez a los receptores registrados. Cuando se recibe el intento, el receptor de difusión puede modificar la intención, o bien puede terminarse la difusión.
+* **Difusión explícita** &ndash; estos tipos de difusiones destinados a una aplicación específica. El uso más común de una difusión explícita es iniciar una actividad. Un ejemplo de una difusión explícita cuando una aplicación necesita llamar a un número de teléfono; enviará un intento destinado a la aplicación de teléfono en Android y pasada en el número de teléfono que se debe marcar. Android, a continuación, enrutará el intento de la aplicación de teléfono.
+* **Implícita broadcase** &ndash; estas difusiones se envían a todas las aplicaciones en el dispositivo. Un ejemplo de una difusión implícito es el `ACTION_POWER_CONNECTED` intención. Esta intención se publica cada vez que Android detecta que se está cargando la batería en el dispositivo. Android enrutará esta intención para todas las aplicaciones que se han registrado para este evento.
 
-El receptor de difusión es una subclase de la `BroadcastReceiver` clase y se deben invalidar el [ `OnReceive` ](https://developer.xamarin.com/api/member/Android.Content.BroadcastReceiver.OnReceive/p/Android.Content.Context/Android.Content.Intent/) método. Se ejecutará Android `OnReceive` en el subproceso principal, por lo que este método debe diseñarse para ejecutar rápidamente. Se debe tener cuidado al generando subprocesos en `OnReceive` porque Android puede finalizar el proceso cuando finalice el método. Si un receptor de difusión debe realizar el trabajo de larga ejecución, a continuación, se recomienda programar una _trabajo_ mediante la `JobScheduler` o _Firebase trabajo distribuidor_. Programación de trabajo a un trabajo se tratarán en una guía independiente.
+El receptor de difusión es una subclase de la `BroadcastReceiver` tipo y se deben invalidar el [ `OnReceive` ](https://developer.xamarin.com/api/member/Android.Content.BroadcastReceiver.OnReceive/p/Android.Content.Context/Android.Content.Intent/) método. Se ejecutará Android `OnReceive` en el subproceso principal, por lo que este método debe diseñarse para ejecutar rápidamente. Se debe tener cuidado al generando subprocesos en `OnReceive` porque Android puede finalizar el proceso cuando finalice el método. Si un receptor de difusión debe realizar el trabajo de larga ejecución, a continuación, se recomienda programar una _trabajo_ mediante la `JobScheduler` o _Firebase trabajo distribuidor_. Programación de trabajo a un trabajo se tratarán en una guía independiente.
 
-Un _filtro intención_ se usa para registrar un receptor de difusión para que Android puede enrutar correctamente los mensajes. Se puede especificar el filtro de intención en tiempo de ejecución (Esto se conoce a veces como un _receptor registrado en contexto_ o como _registro dinámico_) o se puede definir estáticamente en el manifiesto Android (un _receptor registrado manifiesto_). Xamarin.Android proporciona un atributo de C#, `IntentFilterAttribute`, que registren estáticamente el filtro intención (Esto se explica con más detalle más adelante en esta guía). 
+Un _filtro intención_ se usa para registrar un receptor de difusión para que Android puede enrutar correctamente los mensajes. Se puede especificar el filtro de intención en tiempo de ejecución (Esto se conoce a veces como un _receptor registrado en contexto_ o como _registro dinámico_) o se puede definir estáticamente en el manifiesto Android (un _receptor registrado manifiesto_). Xamarin.Android proporciona un atributo de C#, `IntentFilterAttribute`, que registren estáticamente el filtro intención (Esto se explica con más detalle más adelante en esta guía). A partir de Android 8.0, no es posible que una aplicación registre estáticamente para una difusión implícita.
 
 La principal diferencia entre el destinatario registrado de manifiesto y el receptor registrado en contexto es que un receptor registrado en contexto solo responderá a las difusiones mientras se ejecuta una aplicación, mientras que un receptor registrado manifiesto puede responder a difunde aunque no se puede ejecutar la aplicación.  
 
@@ -98,9 +98,11 @@ public class MySampleBroadcastReceiver : BroadcastReceiver
 }
 ```
 
+Aplicaciones destinadas a Android 8.0 (API nivel 26) o versiones posteriores no pueden registrar estáticamente para una difusión implícita. Las aplicaciones todavía estáticamente pueden registrarse para una difusión explícita. Hay una pequeña lista de difusiones implícita que están exentos de esta restricción. Estas excepciones se describen en la [excepciones de difusión implícita](https://developer.android.com/guide/components/broadcast-exceptions.html) guía en la documentación de Android. Las aplicaciones que están interesadas en difusiones implícita deben hacer uso de forma dinámica el `RegisterReceiver` método. Este procedimiento se describe a continuación.  
+
 ### <a name="context-registering-a-broadcast-receiver"></a>Registro de contexto de un receptor de difusión 
 
-Registro del contexto de un receptor se realiza invocando la `RegisterReceiver` deben anular el registro con una llamada a método y el receptor de difusión el `UnregisterReceiver` método. Para evitar la pérdida de recursos, es importante anular el registro el receptor cuando ya no es relevante para el contexto. Por ejemplo, un servicio puede emitir un intento para informar a una actividad que las actualizaciones están disponibles para mostrarse al usuario. Cuando se inicia la actividad, se registrará para dichos intentos. Cuando se mueve la actividad en segundo plano y ya no es visible para el usuario, debe anular el registro del receptor porque la interfaz de usuario para mostrar las actualizaciones ya no está visible. El siguiente fragmento de código es un ejemplo de cómo registrar y anular el registro de un receptor de difusión en el contexto de una actividad:
+Contexto de registro (conocido también como registro dinámico) de un receptor se realiza invocando la `RegisterReceiver` deben anular el registro con una llamada a método y el receptor de difusión el `UnregisterReceiver` método. Para evitar la pérdida de recursos, es importante anular el registro el receptor cuando ya no es relevante para el contexto (la actividad o servicio). Por ejemplo, un servicio puede emitir un intento para informar a una actividad que las actualizaciones están disponibles para mostrarse al usuario. Cuando se inicia la actividad, se registrará para dichos intentos. Cuando se mueve la actividad en segundo plano y ya no es visible para el usuario, debe anular el registro del receptor porque la interfaz de usuario para mostrar las actualizaciones ya no está visible. El siguiente fragmento de código es un ejemplo de cómo registrar y anular el registro de un receptor de difusión en el contexto de una actividad:
 
 ```csharp
 [Activity(Label = "MainActivity", MainLauncher = true, Icon = "@mipmap/icon")]
@@ -136,19 +138,10 @@ En el ejemplo anterior, cuando la actividad entra en primer plano, registrará u
 
 ## <a name="publishing-a-broadcast"></a>Publicar una difusión
 
-Se publica una difusión encapsulando un _acción_ en un intento y enviar con una de las dos API: 
+Puede publicar una difusión a todas las aplicaciones instaladas en el dispositivo de creación de un objeto por intención y enviar con el `SendBroadcast` o `SendOrderedBroadcast` método.  
 
-1. **[`LocalBroadcastManager`](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html#sendBroadcast(android.content.Intent))** &ndash; Color que se publica con la `LocalBroadcastManager` sólo recibirá la aplicación; no se enrutará a otras aplicaciones. Esto es preferible, ya que proporciona un nivel adicional de seguridad manteniendo las calidades dentro de la aplicación actual, y dado que todo está en curso no hay ninguna sobrecarga asociada a realizar llamadas entre procesos. Este fragmento de código muestra cómo una actividad puede enviar una intención usando el `LocalBroadcastManager`:
-
-   ```csharp
-   Intent message = new Intent("com.xamarin.example.TEST");
-   // If desired, pass some values to the broadcast receiver.
-   intent.PutExtra("key", "value");
-   Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this).SendBroadcast(message);
-   ```
-
-2. **[`Context.SendBroadcast`](https://developer.xamarin.com/api/member/Android.Content.Context.SendBroadcast/p/Android.Content.Intent/) métodos** &ndash; hay varias implementaciones de este método.
-   Estos métodos difundirá la intención de todo el sistema. Esto proporciona un gran flexibilidad, pero significa que otras aplicaciones pueden registrarse para recibir la aplicación. Esto puede suponer un riesgo de seguridad. Las aplicaciones pueden necesitar implementar la seguridad de suma para garantizar un acceso no autorizado a la intención. Este fragmento de código es un ejemplo de cómo enviar un intento de usar uno de los `SendBroadcast` métodos:
+1. **Métodos de Context.SendBroadcast** &ndash; hay varias implementaciones de este método.
+   Estos métodos difundirá la intención de todo el sistema. Receptores de difusión thatwill recibir la intención en un orden indeterminado. Esto proporciona un gran flexibilidad, pero significa que es posible que otras aplicaciones se registre y reciba el intento. Esto puede suponer un riesgo de seguridad. Las aplicaciones pueden necesitar implementar la seguridad de suma para evitar accesos no autorizados. Una posible solución consiste en utilizar el `LocalBroadcastManager` que solo enviará mensajes dentro del espacio privado de la aplicación. Este fragmento de código es un ejemplo de cómo enviar un intento de usar uno de los `SendBroadcast` métodos:
 
    ```csharp
    Intent message = new Intent("com.xamarin.example.TEST");
@@ -156,20 +149,30 @@ Se publica una difusión encapsulando un _acción_ en un intento y enviar con un
    intent.PutExtra("key", "value");
    SendBroadcast(intent);
    ```
-        
-> [!NOTE]
-> La LocalBroadcastManager está disponible a través de la [v4 de la biblioteca de compatibilidad de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) paquete NuGet. 
 
-Este fragmento de código es otro ejemplo de enviar una difusión mediante el `Intent.SetAction` método para identificar la acción:
+    Este fragmento de código es otro ejemplo de enviar una difusión mediante el `Intent.SetAction` método para identificar la acción:
+    
+    ```csharp 
+    Intent intent = new Intent();
+    intent.SetAction("com.xamarin.example.TEST");
+    intent.PutExtra("key", "value");
+    SendBroadcast(intent);
+    ```
+   
+2. **Context.SendOrderedBroadcast** &ndash; trata de método es muy similar a `Context.SendBroadcast`, con la diferencia consiste en que la intención será publicado en tiempo de destinatarios, en el orden en que se registraron los recievers.
+   
+### <a name="localbroadcastmanager"></a>LocalBroadcastManager
 
-```csharp 
-Intent intent = new Intent();
-intent.SetAction("com.xamarin.example.TEST");
+El [v4 de la biblioteca de compatibilidad de Xamarin](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) proporciona una clase auxiliar denominada [ `LocalBroadcastManager` ](https://developer.android.com/reference/android/support/v4/content/LocalBroadcastManager.html). El `LocalBroadcastManager` está diseñado para las aplicaciones que no desea enviar o recibir las difusiones de otras aplicaciones en el dispositivo. El `LocalBroadcastManager` solo publicarán mensajes dentro del contexto de la aplicación. Otras aplicaciones en el dispositivo no pueden recibir los mensajes que se publican con la `LocalBroadcastManager`. 
+
+Este fragmento de código muestra cómo enviar una intención usando el `LocalBroadcastManager`:
+
+```csharp
+Intent message = new Intent("com.xamarin.example.TEST");
+// If desired, pass some values to the broadcast receiver.
 intent.PutExtra("key", "value");
-SendBroadcast(intent);
-```
-
-
+Android.Support.V4.Content.LocalBroadcastManager.GetInstance(this).SendBroadcast(message);
+``` 
 
 ## <a name="related-links"></a>Vínculos relacionados
 

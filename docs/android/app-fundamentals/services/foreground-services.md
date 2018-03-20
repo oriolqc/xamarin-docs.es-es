@@ -6,24 +6,44 @@ ms.assetid: C10FD999-7A91-4708-B642-0C1B0901BD24
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 03/09/2018
-ms.openlocfilehash: 96e8d1a3658a515b6b1d37cf0fdd93157954c01d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: d1267bc4a530deb6dfb6eb2e30bee2facabd8fed
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="foreground-services"></a>Servicios de primer plano
 
-Algunos servicios de llevar a cabo algunas tareas que los usuarios sean conscientes activamente de, estos servicios se conocen como _servicios de primer plano_. Un ejemplo de un servicio de primer plano es una aplicación que proporciona el usuario con direcciones al automóvil o a pie. Incluso si la aplicación está en segundo plano, es importante que el servicio tiene suficientes recursos para que funcione correctamente y que el usuario tiene una forma rápida y práctica para tener acceso a la aplicación. Para una aplicación Android, esto significa que un servicio de primer plano debe recibir la prioridad más alta que un servicio "normal" y un servicio de primer plano debe proporcionar un `Notification` que Android mostrará siempre y cuando el servicio se está ejecutando.
+Un servicio de primer plano es un tipo especial de un servicio dependiente o un servicio iniciado. En ocasiones servicios llevará a cabo tareas que los usuarios deben tener en cuenta activamente, estos servicios se denominan _servicios de primer plano_. Un ejemplo de un servicio de primer plano es una aplicación que proporciona el usuario con direcciones al automóvil o a pie. Incluso si la aplicación está en segundo plano, es importante que el servicio tiene suficientes recursos para que funcione correctamente y que el usuario tiene una forma rápida y práctica para tener acceso a la aplicación. Para una aplicación Android, esto significa que un servicio de primer plano debe recibir la prioridad más alta que un servicio "normal" y un servicio de primer plano debe proporcionar un `Notification` que Android mostrará siempre y cuando el servicio se está ejecutando.
  
-Un servicio de primer plano se crea e inicia al igual que cualquier otro servicio. Cuando se está iniciando el servicio, que se registre con Android como un servicio de primer plano.
- 
-Esta guía describe los pasos adicionales que deben tener cuidados para registrar un servicio de primer plano y para detener el servicio cuando termine.
+Para iniciar un servicio de primer plano, la aplicación debe enviar un intento que informa de Android para iniciar el servicio. A continuación, el servicio se debe registrar como un servicio de primer plano con Android. Las aplicaciones que se ejecutan en Android 8.0 (o superior) deben usar el `Context.StartForegroundService` método para iniciar el servicio, mientras que las aplicaciones que se ejecutan en dispositivos con una versión anterior de Android deben usar `Context.StartService`
+
+Este método de extensión de C# es un ejemplo de cómo iniciar un servicio de primer plano. En Android 8.0 y versiones posteriores utilizará el `StartForegroundService` método, en caso contrario antiguo `StartService` se usará el método.  
+
+```csharp
+public static void StartForegroundServiceComapt<T>(this Context context, Bundle args = null) where T : Service
+{
+    var intent = new Intent(context, typeof(T));
+    if (args != null) 
+    {
+        intent.PutExtras(args);
+    }
+
+    if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.O)
+    {
+        context.StartForegroundService(intent);
+    }
+    else
+    {
+        context.StartService(intent);
+    }
+}
+```
 
 ## <a name="registering-as-a-foreground-service"></a>Registrar como un servicio de primer plano
 
-Un servicio de primer plano es un tipo especial de un servicio dependiente o un servicio iniciado. El servicio, una vez que se ha iniciado, llama a la [ `StartForeground` ](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/) método registrarse a sí mismo con Android como un servicio de primer plano.   
+Cuando se inicia un servicio de primer plano, debe registrarse con Android invocando la [ `StartForeground` ](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/). Si el servicio se inicia con la `Service.StartForegroundService` método pero no registrarse a sí mismo, a continuación, se detiene el servicio y la aplicación que no responde una marca Android.
 
 `StartForeground` toma dos parámetros, los cuales son obligatorios:
  
@@ -78,8 +98,7 @@ La notificación de la barra de estado que se muestra también pueden quitarse p
 StopForeground(true);
 ```
 
-Si se detiene el servicio con una llamada a `StopSelf` o `StopService`, a continuación, del mismo modo se quitarán la notificación de la barra de estado.
-
+Si se detiene el servicio con una llamada a `StopSelf` o `StopService`, la notificación de la barra de estado que se va a quitar.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

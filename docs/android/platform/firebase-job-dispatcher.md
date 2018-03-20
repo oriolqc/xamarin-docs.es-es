@@ -7,12 +7,12 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/09/2018
-ms.openlocfilehash: fd5b2f8c758d8e1e9bb9276da96a410c61478d4a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: c542237523b934cb8616fda6cefdcd969b7700bd
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Distribuidor de trabajo firebase
 
@@ -27,7 +27,7 @@ Por ejemplo, un trabajo en segundo plano puede sondear un sitio Web cada pocos m
 Android ya proporciona varias API para ayudar a realizar el trabajo en segundo plano, sin embargo, ninguno de ellos son una solución completa:
 
 * **[Servicios intención](~/android/app-fundamentals/services/creating-a-service/intent-services.md)**  &ndash; servicios de intención son excelentes para realizar el trabajo, pero no proporcionan ninguna manera de programar el trabajo.
-* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager)**  &ndash; estas API sólo permiten que el trabajo programar, pero no proporciona ninguna manera de realizar el trabajo. Además, la AlarmManager solo permite restricciones basado en el tiempo, lo que significa generar una alarma en un momento determinado o después de que haya transcurrido un período de tiempo determinado. 
+* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)**  &ndash; estas API sólo permiten que el trabajo programar, pero no proporciona ninguna manera de realizar el trabajo. Además, la AlarmManager solo permite restricciones basado en el tiempo, lo que significa generar una alarma en un momento determinado o después de que haya transcurrido un período de tiempo determinado. 
 * **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)**  &ndash; JobSchedule el es una API excelente que funciona con el sistema operativo para programar trabajos. Sin embargo, solo está disponible para las aplicaciones Android que tienen como destino la API nivel 21 o versiones posteriores. 
 * **[Difusión receptores](~/android/app-fundamentals/broadcast-receivers.md)**  &ndash; Android una aplicación puede configurar receptores de difusión para realizar el trabajo en respuesta a eventos del sistema ancho o del color. Sin embargo, los receptores de difusión no proporcionan ningún control sobre cuándo se debe ejecutar el trabajo. También se limitan los cambios en el sistema operativo Android cuando funcionará receptores de difusión o los tipos de trabajo que pueden responder a. 
 * **Administrador de red de mensajes en la nube de Google** &ndash; durante mucho tiempo fuiste, sin duda, la mejor manera de forma inteligente fondo de programación de trabajo. Sin embargo, el GCMNetworkManager ya que está desusado. 

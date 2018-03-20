@@ -7,12 +7,12 @@ ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/16/2018
-ms.openlocfilehash: 5dc1fb0fb02014e123b3a161394155bde725f288
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/19/2018
+ms.openlocfilehash: 08392872037783e0caaef4f2b19127adbe95151b
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="creating-android-services"></a>Crear servicios de Android
 
@@ -43,7 +43,7 @@ Trabajo en segundo plano puede dividirse en dos clasificaciones amplias:
 
 Hay cuatro tipos diferentes de servicios Android:
 
-* **Enlazar servicio** &ndash; A _enlazados servicio_ es un servicio que tiene otros componentes (normalmente una actividad) enlazado a él. Un servicio dependiente proporciona una interfaz que permite que el componente enlazado y al servicio interactuar entre sí. Una vez que no hay ningún cliente más enlazado al servicio, Android apagará el servicio.
+* **Enlazar servicio** &ndash; A _enlazados servicio_ es un servicio que tiene otros componentes (normalmente una actividad) enlazado a él. Un servicio dependiente proporciona una interfaz que permite que el componente enlazado y al servicio interactuar entre sí. Una vez que no hay ningún cliente más enlazado al servicio, Android apagará el servicio. 
 
 * **`IntentService`** &ndash; Un  _`IntentService`_  es una subclase especializada de la `Service` clase que simplifica la creación de servicios y uso. Un `IntentService` está diseñado para controlar las llamadas autónomas individuales. A diferencia de un servicio que simultáneamente se puede satisfacer varias llamadas, un `IntentService` más parecido a un _procesador de colas de trabajo_ &ndash; trabajo está en la cola y un `IntentService` procesa cada trabajo uno a la vez en un único subproceso de trabajo. Normalmente, un`IntentService` no está enlazado a una actividad o un fragmento. 
 
@@ -57,4 +57,26 @@ Aunque la mayoría de los servicios se ejecuta en segundo plano, hay una subcate
 
 También es posible ejecutar un servicio en su propio proceso en el mismo dispositivo, esto se conoce a veces como un _servicio remoto_ o como un _servicio fuera de proceso_. Esto requiere más esfuerzo para crear, pero puede ser útil para cuando se necesita una aplicación compartir la funcionalidad con otras aplicaciones y puede, en algunos casos, mejorar la experiencia del usuario de una aplicación. 
 
-Cada uno de estos servicios tiene sus propias características y comportamientos y, por lo que se tratarán con más detalle en las guías de sus propios.
+### <a name="background-execution-limits-in-android-80"></a>Límites de la ejecución de fondo en Android 8.0
+
+A partir de Android 8.0 (API nivel 26), una aplicación Android ya no tienen la capacidad para ejecutar libremente en segundo plano. Cuando se encuentra en primer plano, una aplicación puede iniciar y ejecutar servicios sin ninguna restricción. Cuando se mueve una aplicación en segundo plano, Android concederá a la aplicación una cierta cantidad de tiempo para iniciar y usar los servicios. Una vez transcurrido ese tiempo, la aplicación ya no puede iniciar los servicios y los servicios que se iniciaron se terminará. En este punto no es posible que la aplicación realizar cualquier trabajo. Android considera que una aplicación puede estar en primer plano si se cumple una de las condiciones siguientes:
+
+* Hay una actividad visible (iniciado o en pausa).
+* La aplicación inicia un servicio de primer plano.
+* Otra aplicación está en primer plano y utiliza los componentes de una aplicación que sería lo contrario en segundo plano. Un ejemplo de esto es si una aplicación, que está en primer plano, se enlaza a un servicio suministrado por aplicación B. aplicación B, a continuación, también sería considera en primer plano y no termina con Android para ser en segundo plano.
+
+Existen algunas situaciones donde, aunque es una aplicación en segundo plano, Android reactivar la aplicación y relajar estas restricciones durante unos minutos, que permite a la aplicación realizar algún trabajo:
+* Una prioridad alta que se recibe el mensaje de la nube de Firebase por la aplicación.
+* La aplicación recibe una difusión, como 
+* La aplicación recibe un ejecuta un `PendingIntent` en respuesta a una notificación.
+
+Las aplicaciones existentes de Xamarin.Android que tenga que cambiar la forma de realizar tareas en segundo plano para evitar los problemas que pueden surgir en Android 8.0. Estas son algunas prácticas alterantives a un servicio de Android:
+
+* **Programar el trabajo para ejecutar en segundo plano mediante el programador de trabajos Android o [Firebase trabajo distribuidor](~/android/platform/firebase-job-dispatcher.md)**  &ndash; estos dos bibliotecas proporcionan un marco para que las aplicaciones aislar el trabajo en segundo plano en a _trabajos_, una unidad de trabajo discreta. Aplicaciones, a continuación, pueden programar el trabajo con el sistema operativo junto con algunos criterios sobre cuándo puede ejecutar el trabajo.
+* **Iniciar el servicio en primer plano** &ndash; un servicio de primer plano es útil para cuando la aplicación debe realizar alguna tarea en segundo plano y el usuario necesite periódicamente interactuar con esa tarea. El servicio de primer plano mostrará una notificación persistente para que el usuario sea consciente de que la aplicación ejecuta una tarea en segundo plano y también proporciona una manera de supervisar o para interactuar con la tarea. Un ejemplo de esto sería una aplicación podcasting que está reproduciendo un podcast al usuario o quizás descarga un episodio de podcast para que puede ser disfrutado más adelante. 
+* **Usar una mensaje de nube de Firebase (FCM) de alta prioridad** &ndash; Android cuando recibe una prioridad alta FCM para una aplicación, permitirá la aplicación ejecutar servicios en segundo plano durante un breve período de tiempo. Esto sería una buena alternativa a tener un servicio en segundo plano que sondea una aplicación en segundo plano. 
+* **Aplazar para cuando la aplicación se pone en primer plano** &ndash; si ninguna de las soluciones anteriores es viable, aplicaciones deben desarrollar su propio método para pausar y reanudar el trabajo cuando la aplicación se pone en primer plano.
+
+## <a name="related-links"></a>Vínculos relacionados
+
+* [Limita la ejecución en segundo plano Oreos Android](https://www.youtube.com/watch?v=Pumf_4yjTMc)

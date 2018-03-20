@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 62ac3ab4b3114447f0c67d86c601a688bb8ff1a7
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 551a0de8cd4965815c67a795fb5723d4261a173c
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="cell-appearance"></a>Aspecto de la celda
 
@@ -73,11 +73,9 @@ Tenga en cuenta que, cuando el destino sea Windows Phone 8.1, `ImageCell` no esc
 <a name="customcells" />
 
 ## <a name="custom-cells"></a>Celdas personalizadas
-Cuando las celdas integradas no proporcionan el diseño necesarias, celdas personalizadas implementan el diseño necesario. Por ejemplo, puede que desee presentar una celda con dos etiquetas que tienen el mismo peso. A `LabelCell` sería suficiente porque la `LabelCell` tiene una etiqueta que sea menor.
+Cuando las celdas integradas no proporcionan el diseño necesarias, celdas personalizadas implementan el diseño necesario. Por ejemplo, puede que desee presentar una celda con dos etiquetas que tienen el mismo peso. A `LabelCell` sería suficiente porque la `LabelCell` tiene una etiqueta que sea menor. La mayoría de las personalizaciones de celda agregan datos de solo lectura adicionales (por ejemplo, etiquetas adicionales, imágenes u otra información de presentación).
 
 Todas las celdas personalizadas deben derivarse de [ `ViewCell` ](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/), la misma clase base que todos los de la celda integrada tipos de uso.
-
-La mayoría de las personalizaciones de celda agregan datos de solo lectura adicionales (por ejemplo, etiquetas adicionales, imágenes u otra información de presentación). Si se agregan botones u otros controles que pueden concentrarse, la celda en sí puede no ser seleccionable en Android. Consulte a continuación una manera superar esta limitación.
 
 Xamarin.Forms 2 introdujo una nueva [comportamiento almacenamiento en caché](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy) en el `ListView` control que se puede establecer para mejorar el rendimiento de desplazamiento para algunos tipos de celdas personalizadas.
 
@@ -261,30 +259,6 @@ var listView = new ListView {
 ```
 
 En iOS y Android, si la [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) ha entrado en bucle los elementos y la celda personalizada utiliza un representador personalizado, el representador personalizado debe implementar correctamente la notificación de cambio de propiedad. Cuando las celdas se reutilizan sus valores de propiedad cambiará cuando se actualiza el contexto de enlace a la de una celda disponible, con `PropertyChanged` que se generen eventos. Para obtener más información, consulte [personalizar un ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md). Para obtener más información acerca del reciclaje de celda, vea [estrategia de almacenamiento en caché](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy).
-
-### <a name="enabling-row-selection-on-android"></a>Habilitar la selección de filas en Android
-
-Para permitir la selección de fila para las celdas que también incluyen elementos de entrada como botones, una sencilla [ `custom renderer` ](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) es necesario. En el código común, cree una subclase de `Button` para que se pueda agregar un representador personalizado en los proyectos de plataforma:
-
-```csharp
-public class ListButton : Button { }
-```
-
-La implementación del representador para Android simplemente establece la `Focusable` propiedad que permite que la fila que se va a ser seleccionable, así como botones seleccionable en el host. Este código se agrega al proyecto de aplicación de Android:
-
-```csharp
-[assembly: ExportRenderer (typeof (ListButton), typeof (ListButtonRenderer))]
-// ...
-public class ListButtonRenderer : ButtonRenderer {
-    protected override void OnElementChanged (ElementChangedEventArgs<ListButton> e) {
-        base.OnElementChanged (e);
-        Control.Focusable = false;
-    }
-}
-```
-
-Como se mencionó anteriormente, solo Android requiere el `ButtonRenderer` para que se implementen. iOS y plataformas de Windows Phone permiten el botón que se hizo clic en sin necesidad de implementar a un representador personalizado.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

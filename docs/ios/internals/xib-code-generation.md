@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c98d4100a758e624c851ed2294cfe0c6b7f16fdd
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7d320b3fc40c852c337e5fd1e9bda4e90920cf70
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="xib-code-generation"></a>Generación de código .xib
 
@@ -20,7 +20,7 @@ ms.lasthandoff: 02/27/2018
 
 La herramienta de generador de interfaz de Apple ("IB") se puede utilizar para diseñar visualmente las interfaces de usuario. Las definiciones de interfaz creadas por IB se guardan en **.xib** archivos. Widgets y otros objetos en **.xib** archivos pueden recibir una "clase identity", que puede ser un tipo personalizado definido por el usuario. Esto le permite personalizar el comportamiento de widgets y escribir widgets personalizados.
 
-Estas clases de usuario normalmente son subclases de las clases de controlador de interfaz de usuario. Estos tienen *tomas* (análogas a las propiedades) y *acciones* (análogo a eventos) que se puede conectar a objetos de interfaz. En tiempo de ejecución, cuando se carga el archivo IB, se crean los objetos y las salidas y las acciones se conectan a los distintos objetos de interfaz de usuario de forma dinámica. Al definir estas clases administradas, debe definir todas las acciones y las salidas para que coincida con los que espera IB. Visual Studio para Mac usa un modelo de código subyacente similar para simplificar este proceso. Esto es similar a lo que hace Xcode para Objective-C, pero el modelo de generación de código y convenciones se ha ajustado para que sea mucho más familiar para los desarrolladores de .NET.
+Estas clases de usuario normalmente son subclases de las clases de controlador de interfaz de usuario. Tienen *tomas* (análogas a las propiedades) y *acciones* (análogo a eventos) que se puede conectar a objetos de interfaz. En tiempo de ejecución, cuando se carga el archivo IB, se crean los objetos y las salidas y las acciones se conectan a los distintos objetos de interfaz de usuario de forma dinámica. Al definir estas clases administradas, debe definir todas las acciones y las salidas para que coincida con los que espera IB. Visual Studio para Mac usa un modelo de código subyacente similar para simplificar este proceso. Esto es similar a lo que hace Xcode para Objective-C, pero el modelo de generación de código y convenciones se ha ajustado para que sea mucho más familiar para los desarrolladores de .NET.
 
 Trabajar con **.xib** archivos no se admite actualmente en Xamarin.iOS para Visual Studio.
 
@@ -42,7 +42,7 @@ Visual Studio para Mac genera las clases de diseñador utilizando el espacio de 
 
 Para hacer que la clase sea reconocible Objective-C en tiempo de ejecución, Visual Studio para Mac aplica un `[Register (name)]` a la clase de atributo. Aunque registra automáticamente Xamarin.iOS `NSObject`-las clases derivadas, utiliza los nombres de .NET completo. El atributo aplicado por Visual Studio para Mac invalida esta opción para asegurarse de cada clase se registra con el nombre utilizado en el **.xib** archivo. Si utiliza las clases personalizadas en IB sin utilizar Visual Studio para Mac para generar archivos de diseñador, tendrá que aplicar esta opción manualmente para hacer visibles las clases administradas coinciden con los nombres de clase C objetivo esperados.
 
-No se pueden definir las clases en más de un **.xib**, o que entren en conflicto.
+No se puede definir clases en más de una **.xib**, o que entren en conflicto.
 
 ## <a name="non-designer-class-parts"></a>Partes de la clase de diseñador no
 
@@ -60,9 +60,9 @@ En las clases de diseñador parciales, Visual Studio para Mac genera propiedades
 
 ### <a name="outlet-properties"></a>Propiedades de salida
 
-Las clases de diseñador contienen propiedades que corresponden a todas las tomas definidas en la clase personalizada. El hecho de que se trata de propiedades es un detalle de implementación de la Xamarin.iOS al puente Objective C, para habilitar el enlace diferido. Debe considerar que sean equivalentes campos privados, diseñadas para utilizarse sólo desde la clase de código subyacente. Si desea hacerlas públicas, agregar propiedades de descriptor de acceso a la parte de la clase de diseñador no como lo haría con cualquier otro campo privado.
+Las clases de diseñador contienen propiedades que corresponden a todas las tomas definidas en la clase personalizada. El hecho de que se trata de propiedades es un detalle de implementación de la Xamarin.iOS al puente Objective C, para habilitar el enlace diferido. Debe considerar que sean equivalentes a los campos privados, diseñados para utilizarse sólo desde la clase de código subyacente. Si desea hacerlas públicas, agregar propiedades de descriptor de acceso a la parte de la clase de diseñador no, como lo haría con cualquier otro campo privado.
 
-Si se definen propiedades de salida que tiene un tipo de **identificador** (equivalente a `NSObject`), a continuación, el generador de código del diseñador actualmente determina el tipo posibles más fuerte basándose en los objetos que se ha conectado a ese toma, para su comodidad.
+Si se definen propiedades de salida que tiene un tipo de `id` (equivalente a `NSObject`), a continuación, el generador de código del diseñador actualmente determina el tipo posibles más fuerte basándose en los objetos que se ha conectado a ese toma, para su comodidad.
 Sin embargo, esto puede no admitirse en versiones futuras, por lo que se recomienda que explícitamente fuertemente tipado las salidas al definir la clase personalizada.
 
 ### <a name="action-properties"></a>Propiedades de la acción
@@ -70,12 +70,12 @@ Sin embargo, esto puede no admitirse en versiones futuras, por lo que se recomie
 Las clases de diseñador contienen métodos parciales correspondientes a todas las acciones definidas en la clase personalizada. Éstos son métodos sin una implementación. El propósito de los métodos parciales es doble:
 
 1.  Si escribe `partial` en el cuerpo de la clase de la parte de la clase de diseñador no, Visual Studio para Mac le ofrece las firmas de todos los métodos parciales no implementa para Autocompletar.
-1.  Las firmas de método parcial tienen aplicado un atributo que se expone al mundo Objective-C, por lo que pueda obtener controladas en cuanto a la acción correspondiente.
+2.  Las firmas de método parcial tienen aplicado un atributo que se expone al mundo Objective-C, por lo que puede tratar como la acción correspondiente.
 
 
 Si lo desea, puede omitir el método parcial e implementar la acción aplicando el atributo a un método diferente o dejarlo pasar explícitamente a una clase base.
 
-Si las acciones que se definen para que tenga un tipo de remitente de `id` (equivalente a `NSObject`), a continuación, el generador de código del diseñador actualmente determina el tipo posibles más fuerte en función de los objetos conectados a esa acción. Sin embargo, esto puede no admitirse en versiones futuras, por lo que se recomienda que explícitamente fuertemente tipado las acciones al definir la clase personalizada.
+Si se definen las acciones que tiene un tipo de remitente de `id` (equivalente a `NSObject`), a continuación, el generador de código del diseñador actualmente determina el tipo posibles más fuerte en función de los objetos conectados a esa acción. Sin embargo, esto puede no admitirse en versiones futuras, por lo que se recomienda que explícitamente fuertemente tipado las acciones al definir la clase personalizada.
 
 Tenga en cuenta que estos métodos parciales se crean solo en C#, porque CodeDOM no es compatible con los métodos parciales, por lo que no se generan para otros idiomas.
 
@@ -83,10 +83,10 @@ Tenga en cuenta que estos métodos parciales se crean solo en C#, porque CodeDOM
 
 En ocasiones, los usuarios desean hacer referencia a la misma clase de varios **.xib** archivos, por ejemplo con controladores de pestaña. Esto puede realizarse explícitamente que hacen referencia a la definición de clase de otro **.xib** de archivos o al definir el mismo nombre de clase nuevo en el segundo **.xib**.
 
-El último caso puede ser problemático. Se trata de hasta Visual Studio para el procesamiento de Mac **.xib** archivos individualmente. No se puede detectar automáticamente y combinar las definiciones duplicadas, por lo que puede acabar con los conflictos de aplicar el atributo de registro varias veces cuando se define la misma clase parcial en varios archivos de diseñador. Las versiones recientes de Visual Studio para Mac intentan resolver este problema, pero esto no siempre funcionen según lo previsto. En futuro es es probable que quede no compatible y, en su lugar, Visual Studio para Mac hará que todos los tipos definidos en todos los **.xib** archivos y código administrado en el proyecto directamente visible de todos los **.xib** archivos.
+El último caso puede ser problemático debido a Visual Studio para el procesamiento de Mac **.xib** archivos individualmente. No se puede detectar automáticamente y combinar las definiciones duplicadas, por lo que puede acabar con los conflictos de aplicar el atributo de registro varias veces cuando se define la misma clase parcial en varios archivos de diseñador. Las versiones recientes de Visual Studio para Mac intentan resolver este problema, pero puede que no siempre funcione según lo previsto. En el futuro esto es probable que quede no compatible y, en su lugar, Visual Studio para Mac hará que todos los tipos definidos en todos los **.xib** archivos y código administrado en el proyecto directamente visible de todos los **.xib** archivos.
 
 ## <a name="type-resolution"></a>Resolución de tipos
 
-Tipos usados en IB son nombres de tipo C de objetivo. Éstos se asignan a tipos de CLR aunque el uso de atributos de registro. Al generar el código de salida y la acción, Visual Studio para Mac resolver los tipos CLR correspondientes para todos los tipos de C objetivo ajustados por el núcleo de Xamarin.iOS y sus nombres de tipo completos.
+Tipos usados en IB son nombres de tipo C de objetivo. Éstos se asignan a tipos CLR mediante el uso de atributos de registro. Al generar el código de salida y la acción, Visual Studio para Mac resolver los tipos CLR correspondientes para todos los tipos de C objetivo ajustados por el núcleo de Xamarin.iOS y sus nombres de tipo completos.
 
 Sin embargo, el generador de código actualmente no puede resolver los tipos CLR de los nombres de tipo de objetivo-C en código de usuario o en bibliotecas, por lo que en estos casos genera el nombre de tipo literalmente. Esto significa que el tipo CLR correspondiente debe tener el mismo nombre que el tipo C de objetivo y estar en el mismo espacio de nombres que el código que lo está usando. Se ha planeado corregirse algún tiempo en el futuro teniendo en cuenta todos los tipos de C de objetivo en el proyecto durante la generación de código.
