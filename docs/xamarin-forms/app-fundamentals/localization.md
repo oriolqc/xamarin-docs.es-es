@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: ffde89558495c4b9ccb9ec41761b5fc7ca53db38
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e04ea24883bdf1e29a538aaff92c555df8e1755f
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="localization"></a>Localización
 
@@ -21,22 +21,6 @@ _Aplicaciones de Xamarin.Forms se pueden localizar con archivos de recursos. NET
 ## <a name="overview"></a>Información general
 
 El mecanismo integrado para la localización de aplicaciones .NET utiliza [RESX (archivos)](http://msdn.microsoft.com/library/ekyft91f(v=vs.90).aspx) y las clases en el `System.Resources` y `System.Globalization` los espacios de nombres. Los archivos RESX que contiene las cadenas traducidas se incrustan en el ensamblado de Xamarin.Forms, junto con una clase generada por el compilador que proporciona acceso fuertemente tipado para las traducciones. A continuación, se puede recuperar el texto de traducción en código.
-
-Este documento contiene las siguientes secciones:
-
-**Globalizar código Xamarin.Forms**
-
-* Agregar y usar recursos de cadena en una aplicación de PCL Xamarin.Forms.
-* Habilitar la detección de idioma en cada una de las aplicaciones nativas.
-
-**Localizar XAML**
-
-* Localizar XAML con un `IMarkupExtension`.
-* Habilitar la extensión de marcado en las aplicaciones nativas.
-
-**Localizar elementos específicos de la plataforma**
-
-* Localizar las imágenes y el nombre de la aplicación en las aplicaciones nativas.
 
 ### <a name="sample-code"></a>Código de ejemplo
 
@@ -651,15 +635,17 @@ using Xamarin.Forms.Xaml;
 
 namespace UsingResxLocalization
 {
-    // You exclude the 'Extension' suffix when using in Xaml markup
-    [ContentProperty ("Text")]
+    // You exclude the 'Extension' suffix when using in XAML
+    [ContentProperty("Text")]
     public class TranslateExtension : IMarkupExtension
     {
-        readonly CultureInfo ci;
+        readonly CultureInfo ci = null;
         const string ResourceId = "UsingResxLocalization.Resx.AppResources";
 
-        private static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(()=> new ResourceManager(ResourceId
-                                                                                                                  , typeof(TranslateExtension).GetTypeInfo().Assembly));
+        static readonly Lazy<ResourceManager> ResMgr = new Lazy<ResourceManager>(
+            () => new ResourceManager(ResourceId, IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly));
+
+        public string Text { get; set; }
 
         public TranslateExtension()
         {
@@ -669,24 +655,21 @@ namespace UsingResxLocalization
             }
         }
 
-        public string Text { get; set; }
-
-        public object ProvideValue (IServiceProvider serviceProvider)
+        public object ProvideValue(IServiceProvider serviceProvider)
         {
             if (Text == null)
-                return "";
+                return string.Empty;
 
             var translation = ResMgr.Value.GetString(Text, ci);
-
             if (translation == null)
             {
-                #if DEBUG
+#if DEBUG
                 throw new ArgumentException(
-                    String.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
+                    string.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
                     "Text");
-                #else
-                translation = Text; // returns the key, which GETS DISPLAYED TO THE USER
-                #endif
+#else
+                translation = Text; // HACK: returns the key, which GETS DISPLAYED TO THE USER
+#endif
             }
             return translation;
         }
@@ -699,7 +682,7 @@ Las viñetas siguientes explican los elementos importantes en el código anterio
 * La clase se denomina `TranslateExtension`, pero por convención, podemos hacer referencia a es como **Translate** en nuestra marcado.
 * La clase implementa `IMarkupExtension`, que requiere Xamarin.Forms para funcione.
 * `"UsingResxLocalization.Resx.AppResources"` es el identificador de recurso para nuestros recursos RESX. Está compuesto de nuestro espacio de nombres predeterminado, la carpeta donde se encuentran los archivos de recursos y el nombre de archivo predeterminado RESX.
-* El `ResourceManager` clase se crea mediante `typeof(TranslateExtension)` para determinar el ensamblado actual para cargar recursos.
+* El `ResourceManager` clase se crea mediante `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)` para determinar el ensamblado actual que se cargan recursos y en la caché en el método estático `ResMgr` campo. Se crea como un `Lazy` escriba por lo que su creación se aplaza hasta que se use por primera vez en el `ProvideValue` método.
 * `ci` usa el servicio de dependencia para obtener el idioma del usuario seleccionado desde el sistema operativo nativo.
 * `GetString` es el método que recupera la cadena traducida real de los archivos de recursos. En Windows Phone 8.1 y la plataforma Universal de Windows, `ci` será null porque el `ILocalize` interfaz no está implementada en estas plataformas. Esto equivale a llamar a la `GetString` método con solo el primer parámetro. En su lugar, el marco de trabajo de recursos reconocerá automáticamente la configuración regional y recuperará la cadena traducida desde el archivo RESX adecuado.
 * Control de errores se ha incluido para facilitar la depuración de recursos que faltan iniciando una excepción (en `DEBUG` sólo en modo).

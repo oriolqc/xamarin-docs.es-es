@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: edf25ebd089994c01b2fa45e77b35fad9a51e350
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 70f17b6bc8dc991534cdf4dd065c813aa0e27e96
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="java-bindings-metadata"></a>Java Bindings Metadata
 
@@ -315,7 +315,7 @@ El **EnumFields.xml** archivo contiene la asignación entre Java `int` constante
 </mapping>
 ```
 
-Aquí le hemos llevado la clase Java `SKRealReachSettings` y define una enumeración de C# llamada `SKRealReachSettings` en el espacio de nombres `Skobbler.Ngx.Map.RealReach`. El `field` entradas define el nombre de la constante de Java (ejemplo `UNIT\_SECOND`), el nombre de la entrada de enumeración (ejemplo `Second`) y el valor de entero representado por ambas entidades (ejemplo `0`). 
+Aquí le hemos llevado la clase Java `SKRealReachSettings` y define una enumeración de C# llamada `SKMeasurementUnit` en el espacio de nombres `Skobbler.Ngx.Map.RealReach`. El `field` entradas define el nombre de la constante de Java (ejemplo `UNIT_SECOND`), el nombre de la entrada de enumeración (ejemplo `Second`) y el valor de entero representado por ambas entidades (ejemplo `0`). 
 
 ### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>Definir métodos de captador o establecedor mediante EnumMethods.xml
 
@@ -330,7 +330,7 @@ Dada la `SKRealReachSettings` enum definidos anteriormente, la siguiente **EnumM
 </mapping>
 ```
 
-La primera `method` línea asigna el valor devuelto de la Java `getMeasurementUnit` método para el `SKRealReachSettings` enum. El segundo `method` línea asigna el primer parámetro de la `setMeasurementUnit` a la misma enumeración.
+La primera `method` línea asigna el valor devuelto de la Java `getMeasurementUnit` método para el `SKMeasurementUnit` enum. El segundo `method` línea asigna el primer parámetro de la `setMeasurementUnit` a la misma enumeración.
 
 Con todos estos cambios en su lugar, puede utilizar el código de seguimiento en Xamarin.Android para establecer el `MeasurementUnit`: 
 

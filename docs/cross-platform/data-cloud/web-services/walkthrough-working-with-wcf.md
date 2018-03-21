@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: b4705bc9c8fdb1a671c7de2453ea088bf2afe424
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: ee39851070be2f302125162400d2214c732faeec
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>Tutorial: trabajar con WCF
 
@@ -40,10 +40,11 @@ La primera tarea antes de nosotros consiste en crear un servicio WCF para una ap
 1. Inicie Visual Studio de 2017 y crear un nuevo proyecto.
 1. En el **nuevo proyecto** cuadro de diálogo, seleccione la **WCF > biblioteca de servicios WCF** plantilla y nombre de la solución `HelloWorldService`:
 
-  ![](walkthrough-working-with-wcf-images/new-wcf-service.png "Crear una nueva biblioteca de servicio WCF")
+    ![](walkthrough-working-with-wcf-images/new-wcf-service.png "Crear una nueva biblioteca de servicio WCF")
 
 1. En **el Explorador de soluciones**, agregue una nueva clase denominada `HelloWorldData` al proyecto:
 
+    ```csharp
         using System.Runtime.Serialization;
 
         namespace HelloWorldService
@@ -64,10 +65,13 @@ La primera tarea antes de nosotros consiste en crear un servicio WCF para una ap
                 }
             }
         }
+    ```
+
 
 1. En **el Explorador de soluciones**, cambie el nombre `IService1.cs` a `IHelloWorldService.cs`y cambie el nombre `Service1.cs` a `HelloWorldService.cs`.
 1. En **el Explorador de soluciones**, abra `IHelloWorldService.cs` y reemplace el código con el código siguiente:
 
+    ```csharp
         using System.ServiceModel;
 
         namespace HelloWorldService
@@ -82,11 +86,13 @@ La primera tarea antes de nosotros consiste en crear un servicio WCF para una ap
                 HelloWorldData GetHelloData(HelloWorldData helloWorldData);
             }
         }
-
+    ```
+  
     Este servicio proporciona dos métodos: una que toma una cadena como un parámetro y otro que toma un objeto. NET.
 
 1. En **el Explorador de soluciones**, abra `HelloWorldService.cs` y reemplace el código con el código siguiente:
 
+    ```csharp
         using System;
 
         namespace HelloWorldService
@@ -110,9 +116,11 @@ La primera tarea antes de nosotros consiste en crear un servicio WCF para una ap
                 }
             }
         }
+    ```
 
 1. En **el Explorador de soluciones**, abra `App.config`, actualizar la `name` atributo de la `<service>` nodo, el `contract` atributo de la `<endpoint>` nodo y el `baseAddress` atributo de la `<add>` nodo:
 
+    ```xml
         <?xml version="1.0" encoding="utf-8"?>
         <configuration>
             ...
@@ -133,17 +141,18 @@ La primera tarea antes de nosotros consiste en crear un servicio WCF para una ap
             </services>
             ...
         </configuration>
+    ```
 
 1. Compile y ejecute el servicio WCF. El servicio se hospedará en el cliente de prueba WCF:
 
-  ![](walkthrough-working-with-wcf-images/hosted-wcf-service.png "Servicio WCF que se ejecuta en el cliente de prueba")
+    ![](walkthrough-working-with-wcf-images/hosted-wcf-service.png "Servicio WCF que se ejecuta en el cliente de prueba")
 
 1. Con el cliente de prueba WCF que se ejecuta, inicie un explorador y navegue hasta el punto de conexión para el servicio WCF:
 
-  ![](walkthrough-working-with-wcf-images/wcf-service-browser.png "Página de información del explorador de servicio WCF")
+    ![](walkthrough-working-with-wcf-images/wcf-service-browser.png "Página de información del explorador de servicio WCF")
 
 > [!IMPORTANT]
-> **Nota:** en la siguiente sección solo es necesaria si debe aceptar las conexiones remotas en una estación de trabajo de Windows 10. La sección puede omitirse si tiene una plataforma alternativa en la que se va a implementar el servicio WCF.
+> En la siguiente sección solo es necesaria si debe aceptar las conexiones remotas en una estación de trabajo de Windows 10. La sección puede omitirse si tiene una plataforma alternativa en la que se va a implementar el servicio WCF.
 
 <a name="Allow_Remote_Access_to_IIS_Express" />
 
@@ -154,7 +163,7 @@ Hospedaje de WCF localmente es adecuado cuando sólo se incluyen las conexiones 
 1.  **Configurar IIS Express para las conexiones remotas Aceptar** -este paso consiste en Editar el archivo de configuración de IIS Express Aceptar conexiones remotas en un puerto específico y, a continuación, configurar una regla para IIS Express Aceptar el tráfico entrante.
 1.  **Agregar una excepción al Firewall de Windows** -debe abrir un puerto a través de Firewall de Windows que las aplicaciones remotas pueden usar para comunicarse con el servicio WCF.
 
-Debe conocer la dirección IP de la estación de trabajo. Para los fines de este ejemplo supondremos que nuestra estación de trabajo tiene la dirección IP 192.168.1.143.
+    Debe conocer la dirección IP de la estación de trabajo. Para los fines de este ejemplo supondremos que nuestra estación de trabajo tiene la dirección IP 192.168.1.143.
 
 1. Comencemos mediante la configuración de IIS Express para que escuche las solicitudes externas. Podemos hacerlo editando el archivo de configuración de IIS Express en `[solutiondirectory]\.vs\config\applicationhost.config`, tal y como se muestra en la captura de pantalla siguiente:
 
@@ -163,6 +172,7 @@ Debe conocer la dirección IP de la estación de trabajo. Para los fines de este
 
     Busque la `site` elemento con el nombre `HelloWorldWcfHost`. Debe tener un aspecto como el fragmento XML siguiente:
 
+    ```xml
         <site name="HelloWorldWcfHost" id="2">
             <application path="/" applicationPool="Clr4IntegratedAppPool">
                 <virtualDirectory path="/" physicalPath="\\vmware-host\Shared Folders\tom\work\xamarin\code\private-samples\webservices\HelloWorld\HelloWorldWcfHost" />
@@ -171,13 +181,17 @@ Debe conocer la dirección IP de la estación de trabajo. Para los fines de este
                 <binding protocol="http" bindingInformation="*:8733:localhost" />
             </bindings>
         </site>
-
+    ```
+ 
     Tendrá que agregar otro `binding` para abrir el puerto 8734 para el tráfico externo. Agregue el siguiente código XML para el `bindings` elemento, sustituyendo la dirección IP de su propia dirección IP:
 
-        <binding protocol="http" bindingInformation="*:8734:192.168.1.143" />
-
+    ```xml
+    <binding protocol="http" bindingInformation="*:8734:192.168.1.143" />
+    ```
+    
     Esto va a configurar IIS Express para poder aceptar tráfico HTTP procedente de cualquier dirección IP remota en el puerto 8734 la dirección IP externa del equipo. Esto por encima del fragmento de código se supone que la dirección IP del equipo que ejecuta IIS Express es 192.168.1.143. Después de los cambios, el `bindings` elemento debe ser similar al siguiente:
 
+    ```xml
         <site name="HelloWorldWcfHost" id="2">
             <application path="/" applicationPool="Clr4IntegratedAppPool">
                 <virtualDirectory path="/" physicalPath="\\vmware-host\Shared Folders\tom\work\xamarin\code\private-samples\webservices\HelloWorld\HelloWorldWcfHost" />
@@ -187,6 +201,7 @@ Debe conocer la dirección IP de la estación de trabajo. Para los fines de este
                 <binding protocol="http" bindingInformation="*:8734:192.168.1.143" />
             </bindings>
         </site>
+    ```
 
 1. A continuación, necesitamos configurar IIS Express Aceptar conexiones entrantes en el puerto 8734. Inicio de una copia de seguridad un símbolo del sistema administrativo y ejecute este comando:
 
@@ -215,7 +230,7 @@ Debe crearse un proxy de servicio web para el servicio WCF, antes de que una apl
 1. Compilar el `HelloWorldServiceProxy` proyecto.
 
 > [!NOTE]
-> **Tenga en cuenta**: una alternativa para crear el proxy con el proveedor de referencia de servicio de Web de Microsoft WCF en Visual Studio de 2017 es usar la herramienta de utilidad de metadatos de ServiceModel (svcutil.exe). Para obtener más información, consulte [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
+> Una alternativa para crear al proxy con el proveedor de referencia de servicio de Web de Microsoft WCF en Visual Studio de 2017 es usar la herramienta de utilidad de metadatos de ServiceModel (svcutil.exe). Para obtener más información, consulte [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](https://docs.microsoft.com/en-us/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe).
 
 <a name="Creating_a_Xamarin_Android_Application" />
 
@@ -227,6 +242,7 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.Android
 1. En el `HelloWorld.Android` del proyecto, agregue una referencia a la `HelloWorldServiceProxy` proyecto y una referencia a la `System.ServiceModel` espacio de nombres.
 1. En **el Explorador de soluciones**, abra `Resources/layout/main.axml` y reemplace el XML existente por el siguiente código XML:
 
+    ```xml
         <?xml version="1.0" encoding="utf-8"?>
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
                   android:orientation="vertical"
@@ -267,18 +283,22 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.Android
                         android:id="@+id/getHelloWorldDataTextView" />
             </LinearLayout>
         </LinearLayout>
-
+    ```
+    
     Las capturas de pantalla siguiente muestran la interfaz de usuario en el diseñador:
 
     [![](walkthrough-working-with-wcf-images/image09.png "Se trata de una captura de pantalla de aspecto de esta interfaz de usuario en el diseñador")](walkthrough-working-with-wcf-images/image09.png#lightbox)
-
+    
 1. En **el Explorador de soluciones**, abra `Resources/values/Strings.xml` y agregue el siguiente código XML:
 
-        <string name="say_hello_world">Say Hello World</string>
-        <string name="get_hello_world_data">Get Hello World data</string>
-
+    ```xml
+    <string name="say_hello_world">Say Hello World</string>
+    <string name="get_hello_world_data">Get Hello World data</string>
+    ```
+    
 1. En **el Explorador de soluciones**, abra `MainActivity.cs` y reemplace el código existente por el código siguiente:
 
+    ```csharp
         [Activity(Label = "HelloWorld.Android", MainLauncher = true)]
         public class MainActivity : Activity
         {
@@ -291,11 +311,13 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.Android
             TextView _sayHelloWorldTextView;
             ...
         }
+    ```
 
     Reemplace `<insert_WCF_service_endpoint_here>` con la dirección de su punto de conexión WCF.
 
 1. En `MainActivity.cs`, modifique la `OnCreate` método para que contenga el código siguiente:
 
+    ```csharp
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(bundle);
@@ -314,11 +336,13 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.Android
             _sayHelloWorldButton.Click += SayHelloWorldButtonOnClick;
             _sayHelloWorldTextView = FindViewById<TextView>(Resource.Id.sayHelloWorldTextView);
         }
-
+    ```
+    
     El código anterior inicializa las variables de instancia de la clase y se conecta algunos controladores de eventos.
 
 1. En `MainActivity.cs`, crear una instancia de la clase de proxy de cliente mediante la adición de los dos métodos siguientes:
 
+    ```csharp
         void InitializeHelloWorldServiceClient()
         {
             BasicHttpBinding binding = CreateBasicHttpBinding();
@@ -340,11 +364,13 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.Android
             binding.ReceiveTimeout = timeout;
             return binding;
         }
-
+    ```
+    
     El código anterior crea una instancia e inicializa un `HelloWorldServiceClient` objeto.
 
 1. En `MainActivity.cs`, agregar controladores incluso para los dos botones en la `Activity`:
 
+    ```csharp
         async void GetHelloWorldDataButtonOnClick(object sender, EventArgs e)
         {
             var data = new HelloWorldData
@@ -379,10 +405,11 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.Android
                 Console.WriteLine(ex.Message);
             }
         }
-
+    ```
+  
 1. Ejecute la aplicación, asegúrese de que está ejecutando el servicio WCF y haga clic en los dos botones. La aplicación llamará a WCF de forma asincrónica, siempre que el `Endpoint` campo se ha configurado correctamente:
 
-  [![](walkthrough-working-with-wcf-images/image08.png "Dentro de 30 segundos se debe recibir una respuesta de cada método WCF y nuestra aplicación debería ser similar a esta captura de pantalla")](walkthrough-working-with-wcf-images/image08.png#lightbox)
+    [![](walkthrough-working-with-wcf-images/image08.png "Dentro de 30 segundos se debe recibir una respuesta de cada método WCF y nuestra aplicación debería ser similar a esta captura de pantalla")](walkthrough-working-with-wcf-images/image08.png#lightbox)
 
 <a name="Creating_a_Xamarin_iOS_Application" />
 
@@ -407,17 +434,20 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.iOS, co
 
 1. En **el Explorador de soluciones**, abra `ViewController.cs` y agregue el código siguiente:
 
+    ```xml
         public partial class ViewController : UIViewController
         {
             static readonly EndpointAddress Endpoint = new EndpointAddress("<insert_WCF_service_endpoint_here>");
             HelloWorldServiceClient _client;
             ...
         }
-
+    ```
+  
     Reemplace `<insert_WCF_service_endpoint_here>` con la dirección de su punto de conexión WCF.
 
 1. En `ViewController.cs`, actualizar la `ViewDidLoad` método por lo que TI tiene el siguiente aspecto:
 
+    ```csharp
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
@@ -426,9 +456,11 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.iOS, co
             getHelloWorldDataButton.TouchUpInside += GetHelloWorldDataButton_TouchUpInside;
             sayHelloWorldButton.TouchUpInside += SayHelloWorldButton_TouchUpInside;
         }
-
+    ```
+  
 1. En `ViewController.cs`, agregue el `InitializeHelloWorldServiceClient` y `CreateBasicHttpBinding` métodos:
 
+    ```csharp
         void InitializeHelloWorldServiceClient()
         {
             BasicHttpBinding binding = CreateBasicHttpBinding();
@@ -450,9 +482,11 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.iOS, co
             binding.ReceiveTimeout = timeout;
             return binding;
         }
-
+    ```
+  
 1. En `ViewController.cs`, agregar controladores de eventos para el `TouchUpInside` eventos en los dos `UIButton` instancias:
 
+    ```csharp
         async void GetHelloWorldDataButton_TouchUpInside(object sender, EventArgs e)
         {
             getHelloWorldDataText.Text = "Waiting for WCF...";
@@ -487,6 +521,7 @@ El proxy de servicio WCF puede ser utilizado por una aplicación Xamarin.iOS, co
                 Console.WriteLine(ex.Message);
             }
         }
+    ```
 
 1. Ejecute la aplicación, asegúrese de que está ejecutando el servicio WCF y haga clic en los dos botones. La aplicación llamará a WCF de forma asincrónica, siempre que el `Endpoint` campo se ha configurado correctamente:
 

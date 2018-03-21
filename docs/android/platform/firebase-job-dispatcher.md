@@ -8,33 +8,32 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/19/2018
-ms.openlocfilehash: c542237523b934cb8616fda6cefdcd969b7700bd
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: fbcb0190f609efc4396429a7961c2d49ab82576f
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="firebase-job-dispatcher"></a>Distribuidor de trabajo firebase
 
 _Esta guía describe cómo programar el trabajo en segundo plano mediante la biblioteca de distribuidor de trabajo Firebase de Google._
 
-## <a name="firebase-job-dispatcher-overview"></a>Información general sobre el distribuidor de trabajo firebase
+## <a name="overview"></a>Información general
 
 Una de las mejores formas de evitar que la aplicación Android respondiendo al usuario es para asegurarse de que el trabajo complejo o de larga ejecución se realiza en segundo plano. Sin embargo, es importante que trabajo en segundo plano no afectará negativamente a la experiencia del usuario con el dispositivo. 
 
-Por ejemplo, un trabajo en segundo plano puede sondear un sitio Web cada pocos minutos para la consulta para los cambios en un determinado conjunto de datos. Esto parece inofensiva, sin embargo, esto podría tener un impacto desastroso en el dispositivo. La aplicación terminará reactivar el dispositivo, elevando la CPU a un estado de encendido, activando las radios, que realiza las solicitudes de red y, a continuación, procesar los resultados. Obtiene un rendimiento peor porque el dispositivo se apague y se devolverá al estado de inactividad de bajo consumo de energía no inmediatamente. Trabajo en segundo plano programada mal accidentalmente puede mantener el dispositivo en un estado con requisitos de energía innecesaria y excesiva. De hecho, esta actividad inofensivo aparente (un sitio Web de sondeo) inutilizará el dispositivo en un período de tiempo relativamente corto.
+Por ejemplo, un trabajo en segundo plano puede sondear un sitio Web cada tres o cuatro minutos para consultar para los cambios en un determinado conjunto de datos. Esto puede parecer benigno, sin embargo, tendría un impacto desastroso en duración de la batería. La aplicación se repetidamente reactivar el dispositivo, elevar el nivel de la CPU a un estado de energía más alto, las radios de energía, que las solicitudes de red y, a continuación, procesar los resultados. Obtiene un rendimiento peor porque el dispositivo se apague y se devolverá al estado de inactividad de bajo consumo de energía no inmediatamente. Trabajo en segundo plano programada mal accidentalmente puede mantener el dispositivo en un estado con requisitos de energía innecesaria y excesiva. Esta actividad aparentemente inocente (un sitio Web de sondeo) inutilizará el dispositivo en un período de tiempo relativamente corto.
 
-Android ya proporciona varias API para ayudar a realizar el trabajo en segundo plano, sin embargo, ninguno de ellos son una solución completa:
+Android proporciona las siguientes API para ayudar a realizar el trabajo en segundo plano, pero por sí mismos no son suficientes para la programación de trabajos inteligente. 
 
 * **[Servicios intención](~/android/app-fundamentals/services/creating-a-service/intent-services.md)**  &ndash; servicios de intención son excelentes para realizar el trabajo, pero no proporcionan ninguna manera de programar el trabajo.
-* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)**  &ndash; estas API sólo permiten que el trabajo programar, pero no proporciona ninguna manera de realizar el trabajo. Además, la AlarmManager solo permite restricciones basado en el tiempo, lo que significa generar una alarma en un momento determinado o después de que haya transcurrido un período de tiempo determinado. 
+* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)**  &ndash; estas API sólo permiten que el trabajo para programarse pero se proporciona ninguna manera de realizar el trabajo. Además, la AlarmManager solo permite restricciones basado en el tiempo, lo que significa generar una alarma en un momento determinado o después de que haya transcurrido un período de tiempo determinado. 
 * **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)**  &ndash; JobSchedule el es una API excelente que funciona con el sistema operativo para programar trabajos. Sin embargo, solo está disponible para las aplicaciones Android que tienen como destino la API nivel 21 o versiones posteriores. 
-* **[Difusión receptores](~/android/app-fundamentals/broadcast-receivers.md)**  &ndash; Android una aplicación puede configurar receptores de difusión para realizar el trabajo en respuesta a eventos del sistema ancho o del color. Sin embargo, los receptores de difusión no proporcionan ningún control sobre cuándo se debe ejecutar el trabajo. También se limitan los cambios en el sistema operativo Android cuando funcionará receptores de difusión o los tipos de trabajo que pueden responder a. 
-* **Administrador de red de mensajes en la nube de Google** &ndash; durante mucho tiempo fuiste, sin duda, la mejor manera de forma inteligente fondo de programación de trabajo. Sin embargo, el GCMNetworkManager ya que está desusado. 
+* **[Difusión receptores](~/android/app-fundamentals/broadcast-receivers.md)**  &ndash; Android una aplicación puede configurar receptores de difusión para realizar el trabajo en respuesta a eventos de todo el sistema o del color. Sin embargo, los receptores de difusión no proporcionan ningún control sobre cuándo se debe ejecutar el trabajo. También se limitan los cambios en el sistema operativo Android cuando funcionará receptores de difusión o los tipos de trabajo que pueden responder a. 
 
 Hay dos características fundamentales para realizar eficazmente el trabajo en segundo plano (a veces se denomina un _trabajo en segundo plano_ o un _trabajo_):
 
-1. **Programar el trabajo de forma inteligente** &ndash; es importante que cuando una aplicación realiza operaciones en segundo plano que lo hace como un buen ciudadano. Idealmente, la aplicación no debería exigir que se ejecute un trabajo. En su lugar, la aplicación debe especificar las condiciones que deben cumplirse para cuando el trabajo se puede ejecutar y, a continuación, programar que funcionan para ejecutar cuando se cumplen las condiciones. Esto permite Android realizar el trabajo de forma inteligente. Por ejemplo, las solicitudes de red se pueden procesar por lotes para ejecutarlos todos al mismo tiempo para sacar el máximo provecho de sobrecarga relacionados con las redes.
+1. **Programar el trabajo de forma inteligente** &ndash; es importante que cuando una aplicación realiza operaciones en segundo plano que lo hace como un buen ciudadano. Idealmente, la aplicación no debería exigir que se ejecute un trabajo. En su lugar, la aplicación debe especificar las condiciones que deben cumplirse para cuando el trabajo se puede ejecutar y, a continuación, programar ese trabajo que se ejecuta cuando se cumplen las condiciones. Esto permite Android realizar el trabajo de forma inteligente. Por ejemplo, las solicitudes de red se pueden procesar por lotes para ejecutarlos todos al mismo tiempo para sacar el máximo provecho de sobrecarga relacionados con las redes.
 2. **Encapsula el trabajo** &ndash; se debe encapsular el código para realizar el trabajo en segundo plano en un componente discreto que puede ejecutar independientemente de la interfaz de usuario y será relativamente fáciles de programar si no se puede completar el trabajo por algún motivo.
 
 El distribuidor de trabajo Firebase es una biblioteca de Google que proporciona una API fluida para simplificar la programación trabajo en segundo plano. Está diseñado para que sea el sustituto para el Administrador de nube de Google. El distribuidor de trabajo Firebase consta de las API siguientes:
@@ -66,7 +65,7 @@ Para empezar a trabajar con el distribuidor de trabajo Firebase, agregue primero
 
 Después de agregar la biblioteca de distribuidor de trabajo Firebase, cree un `JobService` clase y, a continuación, programar que se ejecute con una instancia de la `FirebaseJobDispatcher`.
 
-### <a name="creating-a-jobservice"></a>Crear un `JobService`
+### <a name="creating-a-jobservice"></a>Crear un JobService
 
 Todo el trabajo realizado por la biblioteca de Firebase trabajo distribuidor debe realizarse en un tipo que extiende el `Firebase.JobDispatcher.JobService` clase abstracta. Crear un `JobService` es muy similar a la creación de un `Service` con el marco de trabajo Android: 
 
@@ -74,7 +73,7 @@ Todo el trabajo realizado por la biblioteca de Firebase trabajo distribuidor deb
 2. Decorar la subclase con la `ServiceAttribute`. Aunque no es estrictamente necesario, se recomienda establecer explícitamente la `Name` parámetro para ayudar a depurar el `JobService`. 
 3. Agregar un `IntentFilter` para declarar el `JobService` en el **AndroidManifest.xml**. Esto también ayudará a la biblioteca de distribuidor de trabajo Firebase localizar e invocar el `JobService`.
 
-El código siguiente es un ejemplo de los más sencillos `JobService` para una aplicación:
+El código siguiente es un ejemplo de los más sencillos `JobService` para una aplicación, usando la biblioteca TPL para realizar algún trabajo de forma asincrónica:
 
 ```csharp
 [Service(Name = "com.xamarin.fjdtestapp.DemoJob")]
@@ -85,11 +84,14 @@ public class DemoJob : JobService
 
     public override bool OnStartJob(IJobParameters jobParameters)
     {
-        Log.Debug(TAG, "DemoJob::OnStartJob");
-        // Note: This runs on the main thread. Anything that takes longer than 16 milliseconds
-         // should be run on a seperate thread.
-        
-        return false; // return false because there is no more work to do.
+        Task.Run(() =>
+        {
+            // Work is happening asynchronously (code omitted)
+                       
+        });
+
+        // Return true because of the asynchronous work
+        return true;  
     }
 
     public override bool OnStopJob(IJobParameters jobParameters)
@@ -101,7 +103,7 @@ public class DemoJob : JobService
 }
 ```
 
-### <a name="creating-a-firebasejobdispatcher"></a>Crear un `FirebaseJobDispatcher`
+### <a name="creating-a-firebasejobdispatcher"></a>Crear un FirebaseJobDispatcher
 
 Antes de que se puede programar cualquier trabajo, es necesario crear un `Firebase.JobDispatcher.FirebaseJobDispatcher` objeto. El `FirebaseJobDispatcher` es responsable de programar un `JobService`. El siguiente fragmento de código es una manera de crear una instancia de la `FirebaseJobDispatcher`: 
  
@@ -121,7 +123,7 @@ FirebaseJobDispatcher dispatcher = context.CreateJobDispatcher();
 
 Una vez el `FirebaseJobDispatcher` ha sido crea una instancia, es posible crear un `Job` y ejecutar el código de la `JobService` clase. El `Job` creado por un `Job.Builder` de objetos y se describen en la sección siguiente.
 
-### <a name="creating-a-firebasejobdispatcherjob-with-the-jobbuilder"></a>Crear un `Firebase.JobDispatcher.Job` con el `Job.Builder`
+### <a name="creating-a-firebasejobdispatcherjob-with-the-jobbuilder"></a>Crear un Firebase.JobDispatcher.Job con el Job.Builder
 
 El `Firebase.JobDispatcher.Job` clase es responsable de encapsular los metadatos necesarios para ejecutar un `JobService`. A`Job` contiene información como cualquier restricción que debe cumplirse antes de poder ejecutar el trabajo, si la `Job` sea recurrente, o los desencadenadores que hará que el trabajo se ejecute.  Como mínimo, un `Job` debe tener un _etiqueta_ (una cadena única que identifica el trabajo para el `FirebaseJobDispatcher`) y el tipo de la `JobService` que se debe ejecutar. El distribuidor de trabajo Firebase creará una instancia de la `JobService` cuando llega el momento para ejecutar el trabajo.  A `Job` se crea mediante una instancia de la `Firebase.JobDispatcher.Job.JobBuilder` clase. 
 
@@ -140,7 +142,7 @@ El `Job.Builder` llevará a cabo algunas comprobaciones de validación básicas 
 * Un `Job` se programará para que se ejecute tan pronto como sea posible.
 * La estrategia de reintento de manera predeterminada para una `Job` consiste en usar un _retroceso exponencial_ (descrito en más detalle más adelante en la sección [establecer un RetryStrategy](#Setting_a_RetryStrategy))
 
-### <a name="scheduling-a-job"></a>Programar un `Job`
+### <a name="scheduling-a-job"></a>Programar un trabajo
 
 Después de crear el `Job`, debe programarse con la `FirebaseJobDispatcher` antes de ejecutarse. Existen dos métodos para programar un `Job`:
 
@@ -173,7 +175,7 @@ Cada uno de estos temas se describen más en las secciones siguientes.
 
 <a name="Passing_Parameters_to_a_Job" />
 
-#### <a name="passing-parameters-to-a-job"></a>Pasar parámetros a un trabajo
+#### <a name="passing-jarameters-to-a-job"></a>Jarameters de pasar a un trabajo
 
 Se pasan parámetros a un trabajo mediante la creación de un `Bundle` que se pasa junto con el `Job.Builder.SetExtras` método:
 
@@ -219,8 +221,6 @@ Job myJob = dispatcher.NewJobBuilder()
 ```
 
 <a name="Setting_Job_Triggers" />
-
-#### <a name="setting-job-triggers"></a>Desencadenadores de trabajo de configuración
 
 El `JobTrigger` proporciona una guía para el sistema operativo sobre cuándo debe comenzar el trabajo. A `JobTrigger` tiene un _ejecutar ventana_ que define una hora programada para saber cuándo el `Job` debe ejecutarse. La ventana de ejecución tiene una _iniciar ventana_ valor y un _ventana de finalización_ valor. La ventana de inicio es el número de segundos que debe esperar el dispositivo antes de ejecutar el trabajo y el valor de la ventana de finalización es el número máximo de segundos que deben transcurrir antes de ejecutar el `Job`. 
 
@@ -283,7 +283,7 @@ Cualquier método devolverá un valor entero:
 
 ## <a name="summary"></a>Resumen
 
-Esta guía describe cómo utilizar el distribuidor de trabajo Firebase para realizar el trabajo de forma inteligente en segundo plano. También se han descrito cómo encapsular el trabajo que se va a llevar a cabo como una `JobService` y cómo la `FirebaseJobDispatcher` programar ese trabajo, especificar los criterios con un `JobTrigger` y cómo se debe controlar los errores con un `RetryStrategy`.
+Esta guía describe cómo utilizar el distribuidor de trabajo Firebase para realizar el trabajo de forma inteligente en segundo plano. También se han descrito cómo encapsular el trabajo que se va a llevar a cabo como una `JobService` y cómo usar el `FirebaseJobDispatcher` programar ese trabajo, especificar los criterios con un `JobTrigger` y cómo se debe controlar los errores con un `RetryStrategy`.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
