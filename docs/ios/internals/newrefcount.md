@@ -6,11 +6,11 @@ ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 43b357eecb0974884db645a0b2e5c8467ddf3b5d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 723a9c4a052f7f432ba0f32ec501af3221b2696f
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="new-reference-counting-system"></a>Nuevo sistema de recuento de referencia
 
@@ -46,7 +46,7 @@ Tenga en cuenta que estas opciones se han quitado en versiones más recientes de
 
     
 > [!IMPORTANT]
-> **Nota:** una versión anterior de esta característica ha estado presente desde MonoTouch 5.2, pero solo estaba disponible para **sgen** como una vista previa experimental. Esta versión nueva y mejorada ahora también está disponible para el **Boehm** recolector de elementos no utilizados.
+> Una versión anterior de esta característica ha estado presente desde MonoTouch 5.2, pero solo estaba disponible para **sgen** como una vista previa experimental. Esta versión nueva y mejorada ahora también está disponible para el **Boehm** recolector de elementos no utilizados.
 
 
 Históricamente ha habido dos tipos de objetos administrados por Xamarin.iOS: aquellos que fueron simplemente un contenedor alrededor de un objeto nativo (objetos del mismo nivel) y aquellos que extendidos o incorpora nuevas funciones (objetos derivados) - normalmente por mantener el estado en memoria adicional. Anteriormente, era posible que se puede aumentar un objeto del mismo nivel con estado (por ejemplo al agregar un controlador de eventos de C#) pero que se permita que el objeto vaya sin referencia y, a continuación, recopilados. Esto podría provocar un bloqueo más adelante (por ejemplo, si el tiempo de ejecución de C de objetivo de llamada en el objeto administrado).

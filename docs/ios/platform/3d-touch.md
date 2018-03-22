@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d544647a2718d6b511551f4341dee51b2c68941f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c5cd2671bb66aa89117012fe394bb724f7e22e1a
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-3d-touch"></a>Introducción a la entrada táctil 3D
 
@@ -65,7 +65,7 @@ public override void TouchesMoved (NSSet touches, UIEvent evt)
 El `MaximumPossibleForce` propiedad devuelve el mayor valor posible para la `Force` propiedad de la [UITouch](https://developer.xamarin.com/api/type/UIKit.UITouch/) basándose en el dispositivo iOS que se ejecuta la aplicación en.
 
 > [!IMPORTANT]
-> **Nota:** hará que los cambios en la presión de la `TouchesMoved` evento, incluso si la X / coordenadas Y no han cambiado. Debido a este cambio de comportamiento, las aplicaciones iOS deben estar preparadas para la `TouchesMoved` eventos que se debe invocar con más frecuencia y de la X coordenadas X/y para ser el mismo que el último `TouchesMoved` llamar.
+> Hará que los cambios en la presión de la `TouchesMoved` evento, incluso si la X / coordenadas Y no han cambiado. Debido a este cambio de comportamiento, las aplicaciones iOS deben estar preparadas para la `TouchesMoved` eventos que se debe invocar con más frecuencia y de la X coordenadas X/y para ser el mismo que el último `TouchesMoved` llamar.
 
 
 
@@ -281,7 +281,7 @@ Aquí nos estamos definir dos elementos de acción rápida estáticos con las cl
 * `UIApplicationShortcutItemType` : Es un valor de cadena que se usará para identificar el elemento en nuestra aplicación. Para obtener más información, vea la sección siguiente.
 
 > [!IMPORTANT]
-> **Nota:** elementos de acción rápida de acceso directo que se establecen en los `Info.plist` no se puede obtener acceso al archivo con el `Application.ShortcutItems` propiedad. Solo se pasan en a la `HandleShortcutItem` controlador de eventos. 
+> Elementos de acceso directo de acción rápidos que se establecen en los `Info.plist` no se puede obtener acceso al archivo con el `Application.ShortcutItems` propiedad. Solo se pasan en a la `HandleShortcutItem` controlador de eventos. 
 
 
 

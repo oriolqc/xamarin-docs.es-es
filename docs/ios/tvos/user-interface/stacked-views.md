@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c40e9291e81770435535de7b0c83d6c865cbed58
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: efc0da0b0f0a800069efb00a402361a8b0cd7f1d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-stacked-view"></a>Trabajar con vista apilada
 
@@ -76,7 +76,7 @@ Si el `BaselineRelativeArrangement` propiedad es `true`, las subvistas se debe d
 * Una vista de pila Horizontal usará su vista secundaria más alto para la línea de base primero y último. Si la vista más alta es también una vista de pila, usará vista secundaria más alto el su como la línea de base.
 
 > [!IMPORTANT]
-> **Nota:** alineación de línea base no funciona en los tamaños de la vista secundaria estirada o comprimido tal y como se calculará la línea de base a la posición incorrecta. Para la alineación de línea base, asegúrese de que la vista de secundaria **alto** coincide con la vista de contenido intrínseco **alto**.
+> Alineación de línea base no funciona en tamaños de la vista secundaria estirada o comprimido como la línea de base se calculará a la posición incorrecta. Para la alineación de línea base, asegúrese de que la vista de secundaria **alto** coincide con la vista de contenido intrínseco **alto**.
 
 
 
@@ -149,7 +149,7 @@ Es la manera más fácil trabajar con vistas de pila en una aplicación Xamarin.
 -----
 
 > [!IMPORTANT]
-> **Nota:** Nota: aunque es posible asignar acciones como `TouchUpInside` a un elemento de interfaz de usuario (como un `UIButton`) en el diseñador al crear un controlador de eventos de iOS, nunca se llamará Apple TV no tiene un toque de pantalla o compatibilidad táctil eventos. Debe utilizar siempre el valor predeterminado `Action Type` al crear acciones tvos elementos de la interfaz de usuario.
+> Aunque es posible asignar acciones como `TouchUpInside` a un elemento de interfaz de usuario (como un `UIButton`) en el diseñador al crear un controlador de eventos de iOS, nunca se llamará Apple TV no tiene un toque la pantalla o admitir eventos de toque. Debe utilizar siempre el valor predeterminado `Action Type` al crear acciones tvos elementos de la interfaz de usuario.
 
 Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Hello, Guía de inicio rápido de tvOS](~/ios/tvos/get-started/hello-tvos.md).
 

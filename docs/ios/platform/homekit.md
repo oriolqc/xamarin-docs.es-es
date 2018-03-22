@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: ea51dc2c7dadc5cc430df990c9ce79eac6e941da
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 02116e8e11cb6ff050e2c885338777e1fd25c4cb
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="homekit"></a>HomeKit
 
@@ -77,7 +77,7 @@ Haga lo siguiente:
 Con esta configuración en su lugar, la aplicación ahora está lista para tener acceso a las API de Framework HomeKit. Para obtener información detallada sobre el aprovisionamiento, vea nuestra [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) y [aprovisionamiento de la aplicación](~/ios/get-started/installation/device-provisioning/index.md) guías.
 
 > [!IMPORTANT]
-> **Nota:** probar una aplicación HomeKit habilitado requiere un dispositivo iOS real que se ha aprovisionado correctamente para el desarrollo. No se pueden probar HomeKit desde el simulador de iOS.
+> Probar una aplicación HomeKit habilitado requiere un dispositivo iOS real que se ha aprovisionado correctamente para el desarrollo. No se pueden probar HomeKit desde el simulador de iOS.
 
 ## <a name="the-homekit-accessory-simulator"></a>El simulador HomeKit accesorio
 
@@ -143,7 +143,7 @@ Para establecer esta clave, haga lo siguiente:
 6. Guarde los cambios en el archivo.
 
 > [!IMPORTANT]
-> **Nota:** error al configurar el `NSHomeKitUsageDescription` clave en el `Info.plist` archivo dará como resultado de la aplicación _en modo silencioso errores_ (se cierra el sistema en tiempo de ejecución) sin errores cuando se ejecuta en iOS 10 (o posterior).
+> Error al configurar el `NSHomeKitUsageDescription` clave en el `Info.plist` archivo dará como resultado de la aplicación _en modo silencioso errores_ (se cierra el sistema en tiempo de ejecución) sin errores cuando se ejecuta en iOS 10 (o posterior).
 
 ## <a name="connecting-to-homekit"></a>Conectarse a HomeKit
 
@@ -265,7 +265,7 @@ Si el directorio de inicio se creó correctamente, debe llamar a la `UpdatePrima
 También debe supervisar el inicio del Administrador de `DidAddHome` y `DidRemoveHome` eventos y actualización de la interfaz de usuario de la aplicación según sea necesario.
 
 > [!IMPORTANT]
-> **Nota:** el `AlertView.PresentOKAlert` método usado en el código de ejemplo anterior es una clase auxiliar en la aplicación de HomeKitIntro que hace que trabajar con iOS alertas con mayor facilidad.
+> El `AlertView.PresentOKAlert` método usado en el código de ejemplo anterior es una clase auxiliar en la aplicación de HomeKitIntro que hace que trabajar con iOS alertas con mayor facilidad.
 
 
 ## <a name="finding-new-accessories"></a>Buscar nuevos Accesorios
@@ -275,7 +275,7 @@ Una vez que una ubicación principal original se ha definido o cargado desde el 
 Llame a la `StartSearchingForNewAccessories` método para empezar la búsqueda de accesorios nuevos y `StopSearchingForNewAccessories` método cuando acabe.
 
 > [!IMPORTANT]
-> **Nota:** `StartSearchingForNewAccessories` no debe dejar ejecutando durante largos períodos de tiempo, ya que afectará negativamente al tanto de la batería y el rendimiento del dispositivo iOS. Apple sugiere que realiza la llamada `StopSearchingForNewAccessories` después de un minuto o buscar solo cuando se presenta la interfaz de usuario de accesorio buscar al usuario.
+> `StartSearchingForNewAccessories` no debe dejar ejecutando durante largos períodos de tiempo, ya que afectará negativamente al tanto de la batería y el rendimiento del dispositivo iOS. Apple sugiere que realiza la llamada `StopSearchingForNewAccessories` después de un minuto o buscar solo cuando se presenta la interfaz de usuario de accesorio buscar al usuario.
 
 El `DidFindNewAccessory` evento se llamará cuando se detectan nuevos Accesorios y se agregará a la `DiscoveredAccessories` lista en el Explorador de accesorio.
 

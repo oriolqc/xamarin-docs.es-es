@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 83841e62d863bf4be4edef5c0b6b7d486f192f4d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 8fd2b5069e175a68ff7609e75775db1929507582
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="background-tasks"></a>Tareas en segundo plano
 
@@ -143,7 +143,7 @@ Una vez más, el sistema emitirá un `WKSnapshotRefreshBackgroundTask` para que 
 Cuando la aplicación marca el `WKSnapshotRefreshBackgroundTask` completado, el sistema le llevará automáticamente una instantánea de la interfaz de usuario de la aplicación.
 
 > [!IMPORTANT]
-> **Nota:** es importante siempre se programan un ` WKSnapshotRefreshBackgroundTask` después de que la aplicación ha recibido datos nuevos y actualizar su interfaz de usuario o el usuario no verá la información modificada.
+> Es importante siempre se programan un ` WKSnapshotRefreshBackgroundTask` después de que la aplicación ha recibido datos nuevos y actualizar su interfaz de usuario o el usuario no verá la información modificada.
 
 
 
@@ -630,7 +630,7 @@ Las aplicaciones que se hayan anclado a la vinculación pueden esperar el siguie
 La última aplicación que se ejecutó el usuario se considerarán el _usados más recientemente_ aplicación y ocupará la última ranura en la vinculación. Desde allí, puede elegir el usuario para anclarlo permanentemente en el área. Los usados más recientemente se tratará como cualquier otra aplicación favoritos del usuario ya ha anclado a la vinculación.
 
 > [!IMPORTANT]
-> **Nota:** aplicaciones que solo se han agregado a la pantalla Inicio no tendrá ninguna programación regular. Para recibir una programación regular y segundo plano actualiza, una aplicación _debe_ agregarse a la vinculación.
+> Aplicaciones que solo se han agregado a la pantalla Inicio no se proporcionará ninguna programación regular. Para recibir una programación regular y segundo plano actualiza, una aplicación _debe_ agregarse a la vinculación.
 
 Como se mencionó anteriormente en este documento, las instantáneas son muy importantes watchOS 3 puesto que funcionan como imágenes de la vista previa y el inicio de la aplicación. Si el usuario liquida en una aplicación en el área, se expandirá a pantalla completa, escriba el primer plano y comenzar a ejecutar, por lo que es imperativo que la instantánea sea actualizada.
 

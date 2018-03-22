@@ -7,12 +7,12 @@ ms.assetid: C2BA2705-9B20-01C2-468D-860BDFEDC157
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/06/2018
-ms.openlocfilehash: 2d5a83b9f6278406e9b643277357df253f5fd524
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/21/2018
+ms.openlocfilehash: 4225e45ecfe4a4a2cdb7e75b94823fc8fcd29fc4
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="listview"></a>ListView
 
@@ -56,10 +56,10 @@ Crear un archivo XML denominado **list_item.xml** y guardarlo en el interior del
 
 Este archivo define el diseño para cada elemento que se colocarán en el [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/).
 
-Abra la `HelloListView.cs` y hacer que la clase extienda [ `ListActivity` ](https://developer.xamarin.com/api/type/Android.App.ListActivity/) (en lugar de [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)):
+Abra `MainActivity.cs` y modifique la clase para extender [ `ListActivity` ](https://developer.xamarin.com/api/type/Android.App.ListActivity/) (en lugar de [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/)):
 
 ```csharp
-public class HelloListView : ListActivity
+public class MainActivity : ListActivity
 {
 ```
 
@@ -74,9 +74,9 @@ protected override void OnCreate (Bundle bundle)
 
     ListView.TextFilterEnabled = true;
 
-    ListView.ItemClick += delegate (object sender, ItemEventArgs args) {
-        // When clicked, show a toast with the TextView text
-        Toast.MakeText (Application, ((TextView)args.View).Text, ToastLength.Short).Show ();
+    ListView.ItemClick += delegate (object sender, AdapterView.ItemClickEventArgs args)
+    {
+        Toast.MakeText(Application, ((TextView)args.View).Text, ToastLength.Short).Show();
     };
 }
 ```
@@ -93,7 +93,12 @@ El [ `ItemClick` ](https://developer.xamarin.com/api/event/Android.Widget.Adapte
 Puede usar diseños de elemento de lista proporcionados por la plataforma en lugar de definir su propio archivo de diseño para la [ `ListAdapter` ](https://developer.xamarin.com/api/property/Android.App.ListActivity.ListAdapter/).
 Por ejemplo, pruebe a usar `Android.Resource.Layout.SimpleListItem1` en lugar de `Resource.Layout.list_item`.
 
-Después de la [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle)) método, agregue la matriz de cadenas:
+Agregue las siguientes `using` instrucción:
+
+```csharp
+using System;
+```
+A continuación, agregue la siguiente matriz de cadena como un miembro de `MainActivity`:
 
 ```csharp
 static readonly string[] countries = new String[] {
@@ -145,22 +150,23 @@ Se trata de la matriz de cadenas que se colocarán en el [ `ListView` ](https://
 
 Ejecute la aplicación. Puede desplazarse por la lista o escriba para filtrarlos y luego haga clic en un elemento para ver un mensaje. Verá algo parecido a esto:
 
-[![Captura de pantalla de ejemplo de ListView con nombres de país](images/helloviews6.png)](images/helloviews6.png#lightbox)
+[![Captura de pantalla de ejemplo de ListView con nombres de país](images/01-listview-example-sml.png)](images/01-listview-example.png#lightbox)
 
 Tenga en cuenta que el uso de una matriz de cadenas codificadas de forma rígida no es la mejor práctica de diseño. Uno se utiliza en este tutorial para simplificar, para mostrar el [ `ListView` ](https://developer.xamarin.com/api/type/Android.Widget.ListView/) widget. Lo más recomendable es hacer referencia a una matriz de cadenas que se define un recurso externo, por ejemplo, como con un `string-array` recursos en el proyecto **Resources/Values/Strings.xml** archivo. Por ejemplo:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="countries_array">
-        <item>Bahrain</item>
-        <item>Bangladesh</item>
-        <item>Barbados</item>
-        <item>Belarus</item>
-        <item>Belgium</item>
-        <item>Belize</item>
-        <item>Benin</item>
-    </string-array>
+  <string name="app_name">HelloListView</string>
+  <string-array name="countries_array">
+    <item>Bahrain</item>
+    <item>Bangladesh</item>
+    <item>Barbados</item>
+    <item>Belarus</item>
+    <item>Belgium</item>
+    <item>Belize</item>
+    <item>Benin</item>
+  </string-array>
 </resources>
 ```
 
@@ -170,6 +176,9 @@ Para usar estas cadenas de recursos para la [ `ArrayAdapter` ](https://developer
 string[] countries = Resources.GetStringArray (Resource.Array.countries_array);
 ListAdapter = new ArrayAdapter<string> (this, Resource.Layout.list_item, countries);
 ```
+Ejecute la aplicación. Verá algo parecido a esto:
+
+[![Captura de pantalla de ejemplo de ListView con una lista más pequeña de nombres](images/02-smaller-example-sml.png)](images/02-smaller-example.png#lightbox)
 
 
 ## <a name="going-further-with-listview"></a>Si continúa con el control ListView

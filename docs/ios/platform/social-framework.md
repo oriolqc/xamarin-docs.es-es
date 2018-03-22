@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 9892577d7e0ed3d3f622f881cc51db09eb44a8fd
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7a190014abd3386a3a675d50ce6a89101d0588a7
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="social-framework"></a>Framework sociales
 
@@ -22,7 +22,7 @@ _El marco de trabajo Social proporciona una API unificada para interactuar con r
 Mediante el marco sociales permite a las aplicaciones interactuar con las redes sociales de una única API sin tener que administrar la autenticación. Incluye un sistema que proporciona el controlador de vista para crear publicaciones, así como una abstracción que permite consumir API de cada red social a través de HTTP.
 
 > [!IMPORTANT]
-> **Nota:** para que una API de multiplataforma para conectarse a distintas redes sociales, consulte el [Xamarin.Social](http://components.xamarin.com/view/xamarin.social/) componente en el almacén de componentes de Xamarin.
+> Para que una API de multiplataforma para conectarse a distintas redes sociales, consulte el [Xamarin.Social](http://components.xamarin.com/view/xamarin.social/) componente en el almacén de componentes de Xamarin.
 
 ## <a name="connecting-to-twitter"></a>Conectarse a Twitter
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 510e8a6b0b2839a1a191538e7fb4e49bd005b450
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 697edde44a5d28ef24cb92a4d06a5c61609b079e
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="localization"></a>Localización
 
@@ -275,62 +275,6 @@ Esto proporciona una flexibilidad máxima para el traductor de:
 -   Algunos idiomas que tenga el valor del modificador que se puede abreviar para ajustarse en el control de interfaz de usuario, mientras que la palabra completa (traducida) puede aparecer en la etiqueta.
 -   Como alternativa, para algunos idiomas de la representación de su conmutador podría ser utilizar "I" y "O" para familiaridad cultural, pero podría ser conveniente la etiqueta para leer "On" u "Off".
 
-<!--
-# Testing
-
-Once you’ve build and localized your app, you’ll want to be able to test. That means setting your emulator/simulator or device to use another locale or language.
-
-> [!IMPORTANT]
-> **WARNING:** Be careful when you set your device to a language you cannot read, as you may not be able to navigate the menu system to return it to your native language!
-
-
-## iOS
-
-Use Settings.app to switch the language and locale of the iOS Simulator or an iOS device.
-
-On the iOS Simulator you can use the Reset Content and Settings menu item (if the device is in a foreign language and you can’t navigate back to your native tongue).
-
-![]( "ios settings to change language")
-
-## Android
-
-To change the locale on a device
-
-**Home > Menu > Settings > **
-
-Then depending on Android version
-
-**Locale & text > Select locale**
-
-or
-
-**Language & Input > Select language**
-
-![]( "android settings to change language")
-
-When you are testing on the emulator, you can navigate using the settings app as above, or you can reset the locale using the ADB tool command. Using Command Prompt on Windows or Terminal on OS X, start `adb shell` then send commands to set the emulator’s locale. **adb** can usually be found on the Mac in `/Users/YOURNAME/Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools/adb`
-
-### Spanish (Mexico)
-setprop persist.sys.language es;setprop persist.sys.country MX;stop;sleep 5;start
-
-### French (France)
-setprop persist.sys.language fr;setprop persist.sys.country FR;stop;sleep 5;start
-
-### Japanese (Japan)
-setprop persist.sys.language ja;setprop persist.sys.country JP;stop;sleep 5;start
-
-### Portuguese (Brazil)
-setprop persist.sys.language pt;setprop persist.sys.country BR;stop;sleep 5;start
-
-### English (USA)
-setprop persist.sys.language en;setprop persist.sys.country US;stop;sleep 5;start
-
-**TIP:** the default location of ADB on Mac OS X is
-`/Users/[USERNAME]/Library/Developer/Xamarin/android-sdk-mac_x86/platform-tools/adb shell`
-
--->
-
-
 ### <a name="translation-services"></a>Servicios de traducción
 
 #### <a name="machine-translation"></a>Traducción automática
@@ -343,8 +287,6 @@ Con fines de prueba podría utilizar una de las muchas herramientas de traducci�
 - [Traducir de Google](http://translate.google.com/)
 
 Hay muchas otras disponibles. La calidad de la traducción automática no considera bastar para lanzar una aplicación sin primero que se va a revisar y probado por traductores profesionales o hablantes nativos.
-
- <!--Microsoft's Multilingual Application Toolkit helps you automatically translate strings, and is demonstrated with Xamarin.Forms in [this sample]().-->
 
 #### <a name="professional-translation"></a>Traducción profesional
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: d9e38f055414ff0eca70df4a4e38aa959b7d7237
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ff19048504ee76db614306adebb71b7237139091
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Diseño automático con el Diseñador de Xamarin para iOS
 
@@ -88,7 +88,7 @@ Para crear una restricción, seleccione un identificador y arrástrelo en alguna
 Tenga en cuenta las tres líneas discontinuas de verde a través de los otros dos botones. Las líneas verdes indican *áreas de colocación*, o los atributos de otros elementos a la que se puede restringir. En la captura de pantalla anterior, los otros dos botones ofrecen 3 áreas de colocación vertical ( *inferior*, *centerY*, *arriba*) para restringir el botón. La línea discontinua verde en la parte superior de la vista significa que el controlador de vista ofrece una restricción en la parte superior de la vista y el cuadro verde sólido significa que el controlador de vista ofrece una restricción por debajo de la Guía de diseño superior.
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: guías de diseño son tipos especiales de destinos de restricción que nos permiten crear restricciones superior e inferior que tener en cuenta la presencia de barras del sistema, como barras de estado o las barras de herramientas. Uno de los usos principales es que una aplicación compatible entre iOS 6 e iOS 7, puesto que la versión más reciente tiene la vista del contenedor se extiende por debajo de la barra de estado. Para obtener más información sobre la Guía de diseño principales, consulte el [documentación de Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
+> Guías de diseño son tipos especiales de destinos de restricción que nos permiten crear la parte superior y las restricciones de la parte inferior que tener en cuenta la presencia de barras del sistema, como barras de estado o las barras de herramientas. Uno de los usos principales es que una aplicación compatible entre iOS 6 e iOS 7, puesto que la versión más reciente tiene la vista del contenedor se extiende por debajo de la barra de estado. Para obtener más información sobre la Guía de diseño principales, consulte el [documentación de Apple](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
 
 
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 33e27043c3738c5213b17786e5a88fb30a7fc017
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e868c0ee71688e208c5217d9f5a89ea3acec988c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="speech-recognition"></a>Reconocimiento de voz
 
@@ -127,7 +127,7 @@ Para proporcionar los necesarios `NSSpeechRecognitionUsageDescription` clave en 
 -----
 
 > [!IMPORTANT]
-> **Nota:** no poder proporcionar uno de los pasos anteriores `Info.plist` claves (`NSSpeechRecognitionUsageDescription` o `NSMicrophoneUsageDescription`) puede dar lugar a la aplicación que se produzca un error sin previo aviso cuando intenta acceder al reconocimiento de voz o el micrófono de audio en vivo.
+> No poder proporcionar uno de los pasos anteriores `Info.plist` claves (`NSSpeechRecognitionUsageDescription` o `NSMicrophoneUsageDescription`) puede dar lugar a la aplicación que se produzca un error sin previo aviso cuando intenta acceder al reconocimiento de voz o el micrófono de audio en vivo.
 
 
 
@@ -186,7 +186,7 @@ El `RequestAuthorization` método de la `SFSpeechRecognizer` clase solicitará p
 A `SFSpeechRecognizerAuthorizationStatus` resultado se devuelve a la `RequestAuthorization` rutina de devolución de llamada del método que puede utilizarse para tomar medidas tomando como base el permiso del usuario. 
 
 > [!IMPORTANT]
-> **Nota:** Apple sugiere espera hasta que el usuario ha iniciado una acción en la aplicación que requiere el reconocimiento de voz antes de solicitar este permiso.
+> Apple sugiere espera hasta que el usuario ha iniciado una acción en la aplicación que requiere el reconocimiento de voz antes de solicitar este permiso.
 
 ### <a name="recognizing-pre-recorded-speech"></a>Reconocimiento de voz grabado previamente
 
@@ -373,7 +373,7 @@ RecognitionTask.Cancel ();
 Es importante llamar a `RecognitionTask.Cancel` si el usuario cancela la traducción para liberar memoria y procesador del dispositivo.
 
 > [!IMPORTANT]
-> **Nota:** no poder proporcionar la `NSSpeechRecognitionUsageDescription` o `NSMicrophoneUsageDescription` `Info.plist` claves pueden dar lugar a la aplicación que se produzca un error sin previo aviso cuando intenta acceder al reconocimiento de voz o el micrófono de audio en vivo (`var node = AudioEngine.InputNode;`). Vea la **proporciona una descripción de uso** sección anterior para obtener más información.
+> No puede proporcionar el `NSSpeechRecognitionUsageDescription` o `NSMicrophoneUsageDescription` `Info.plist` claves pueden dar lugar a la aplicación que se produzca un error sin previo aviso cuando intenta acceder al reconocimiento de voz o el micrófono de audio en vivo (`var node = AudioEngine.InputNode;`). Vea la **proporciona una descripción de uso** sección anterior para obtener más información.
 
 ## <a name="speech-recognition-limits"></a>Límites de reconocimiento de voz
 

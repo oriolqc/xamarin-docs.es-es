@@ -7,11 +7,11 @@ ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 0ac2a19e9020113df273897a8ec2c86ee1763ec2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: af899bb1c5708e3fc0be88db6224d9127f5a5c6d
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="apple-pay"></a>Apple Pay
 
@@ -118,7 +118,7 @@ Para habilitar el nuevo entorno de prueba, haga lo siguiente:
 4. Use una de las tarjetas de pago de prueba desde el [Guía de Apple pagar](https://developer.apple.com/apple-pay/) para efectuar los pagos.
 
 > [!IMPORTANT]
->  **Nota:** cambiando iCloud cuentas, el dispositivo cambiará automáticamente al nuevo entorno de prueba. Sin embargo, todavía Apple **requiere** tarjetas de la aplicación se va a probar con real en un entorno de producción antes de enviarla a iTunes App Store.
+> Al cambiar las cuentas de iCloud, el dispositivo cambiará automáticamente al nuevo entorno de prueba. Sin embargo, todavía Apple **requiere** tarjetas de la aplicación se va a probar con real en un entorno de producción antes de enviarla a iTunes App Store.
 
 ## <a name="summary"></a>Resumen
 
@@ -127,7 +127,7 @@ En este artículo, analizamos los diferentes elementos necesarios para usar Appl
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [En la aplicación de compra](~/ios/platform/in-app-purchasing/index.md)
+- [Compras desde la aplicación](~/ios/platform/in-app-purchasing/index.md)
 - [Introducción a PassKit](~/ios/platform/passkit.md)
 - [PassKit](https://developer.apple.com/library/ios/documentation/PassKit/Reference/PKPaymentAuthorizationViewController_Ref/)
 - [Apple Pay](https://developer.apple.com/apple-pay/)

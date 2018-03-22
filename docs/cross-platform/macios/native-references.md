@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 5a33993bdef16191b66127dcc68c57661636c0f8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ea635dfd5b7946c6d394d72bffbb328255b56b97
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="native-references"></a>Referencias nativas
 
@@ -22,7 +22,7 @@ _Las referencias nativas ofrece la capacidad de insertar un marco nativo en un p
 Desde iOS 8.0 ha sido posible crear un marco de trabajo incrustado para compartir código entre las extensiones de aplicación y la aplicación principal en Xcode. Mediante la característica de referencia nativa será posible usar estos marcos incrustados (creados con Xcode) en Xamarin.iOS.
  
 > [!IMPORTANT]
-> **Nota:** no será posible crear marcos incrustados desde cualquier tipo de proyectos de Xamarin.iOS o Xamarin.Mac, las referencias nativas sólo permitir el consumo de los marcos (Objective-C) nativo existentes.
+> No será posible crear marcos incrustados desde cualquier tipo de proyectos de Xamarin.iOS o Xamarin.Mac, las referencias nativas solo se permiten para el consumo de los marcos (Objective-C) nativo existentes.
 
 
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/07/2017
-ms.openlocfilehash: 557521bc3bce41b9023acbf31a344a57cb63d2a1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6331912eedcd52df45c0d25d83a5b599c55ca7d2
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sirikit"></a>SiriKit
 
@@ -146,12 +146,10 @@ public partial class IntentHandler : INExtension, IINNotebookDomainHandling
 La clase debe heredar de `INExtension`, y dado que el ejemplo se va a listas de control y notas de intentos, también implementa `IINNotebookDomainHandling`.
 
 > [!NOTE]
-> **Nota sobre la nomenclatura:** hay una convención en .NET para las interfaces para llevar un prefijo con una letra mayúscula `I`, que Xamarin se adhiere a cuando se enlaza protocolos desde el SDK de iOS.
->
-> Xamarin también conserva los nombres de tipo de iOS y Apple utiliza los dos primeros caracteres en nombres de tipo para reflejar el marco de trabajo que un tipo al que pertenece.
->
-> Para el `Intents` framework, los tipos tienen el prefijo `IN*` (p. ej. `INExtension`) pero son _no_ interfaces.
-> También sigue protocolos (que se convierten en interfaces de C#) acaban con dos `I`s, como `IINAddTasksIntentHandling`.
+> - Hay una convención en .NET para las interfaces para llevar un prefijo con una letra mayúscula `I`, que Xamarin se adhiere a cuando se enlaza protocolos desde el SDK de iOS.
+> - Xamarin también conserva los nombres de tipo de iOS y Apple utiliza los dos primeros caracteres en nombres de tipo para reflejar el marco de trabajo que un tipo al que pertenece.
+> - Para el `Intents` framework, los tipos tienen el prefijo `IN*` (p. ej. `INExtension`) pero son _no_ interfaces.
+> - También sigue protocolos (que se convierten en interfaces de C#) acaban con dos `I`s, como `IINAddTasksIntentHandling`.
 
 #### <a name="handling-intents"></a>Control del color
 

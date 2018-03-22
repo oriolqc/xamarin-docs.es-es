@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 1ad37cb4a794ac47e0e2f184a730949f14e85572
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3d70aff4df91120402e2987598b8973172b46245
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-7-user-interface-overview"></a>iOS 7 introducción de la interfaz de usuario
 
@@ -173,7 +173,7 @@ Hacer referencia a la [ImageViewer](https://developer.xamarin.com/samples/mobile
 El valor de desplazamiento se genera dinámicamente después de la vista se ha agregado a la jerarquía, por lo que al intentar leer `TopLayoutGuide` y `BottomLayoutGuide` valores en `ViewDidLoad` devolverá 0. Calcular el valor después de la vista haya cargado: por ejemplo, en la `ViewDidLayoutSubviews`.
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: `TopLayoutGuide` y `BottomLayoutGuide` están en desuso en iOS 11 a favor del diseño del área segura. Apple han manifestado que el uso de la zona segura de es compatible con la versión de iOS anterior a iOS 11. Para obtener más información, consulte el [actualizar su aplicación para iOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) guía.
+> `TopLayoutGuide` y `BottomLayoutGuide` están en desuso en iOS 11 a favor del diseño del área segura. Apple han manifestado que el uso de la zona segura de es compatible con la versión de iOS anterior a iOS 11. Para obtener más información, consulte el [actualizar su aplicación para iOS 11](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md#fullscreen) guía.
 
 #### <a name="edgesforextendedlayout"></a>EdgesForExtendedLayout
 
@@ -252,7 +252,7 @@ Por ejemplo, la captura de pantalla siguiente muestra el efecto de cambiar el co
 El color del matiz puede aplicarse a imágenes así cuando la `RenderingMode` está establecido en `UIImageRenderingMode.AlwaysTemplate`.
 
 > [!IMPORTANT]
-> Nota: No se puede establecer a los colores de tinta con `UIAppearance`.
+> No puede establecerse utilizando el color del matiz `UIAppearance`.
 
 
 ### <a name="dynamic-type"></a>Tipo dinámico

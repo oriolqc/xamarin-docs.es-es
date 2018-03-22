@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/19/2018
-ms.openlocfilehash: 54ec41636f491708ea72585d3889fbbca85c8eb1
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: e07a6b72f2821e8cc65e0b0d690dbadf1a6713b6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="launch-screens"></a>Abrir pantallas
 
@@ -179,7 +179,7 @@ En iOS 8 (y versiones posteriores), el programador puede crear un guion especial
 -----
 
 > [!NOTE]
-> **Tenga en cuenta**: guión gráfico de A usar como una pantalla de inicio _debe_ incluir elementos de interfaz de usuario solo simples e integrados y **no** no los cálculos o derivar una clase personalizada.
+> Un guión gráfico que se utiliza como una pantalla de inicio _debe_ incluir elementos de interfaz de usuario solo simples e integrados y **no** no los cálculos o derivar una clase personalizada.
 
 Para obtener más información acerca de cómo crear una pantalla de inicio con un guión gráfico unificado, vea el [pantallas de inicio dinámica](~/ios/user-interface/storyboards/unified-storyboards.md#dynamic-launch-screens) sección de la [guiones gráficos unificado](~/ios/user-interface/storyboards/unified-storyboards.md) guía.
 

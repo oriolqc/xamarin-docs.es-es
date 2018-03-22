@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 77bad4c31ad0cb11476c656aa495707d2a94aa8f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2282a340811d9932f9df3a1343b22ffc35247e54
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="workout-apps"></a>Aplicaciones de entrenamiento
 
@@ -472,7 +472,7 @@ También nuevo para watchOS 3, son el movimiento en pausa (`HKWorkoutEventType.M
 Cuando la aplicación recibe un evento de movimiento en pausa, debe detener la recopilación de datos hasta que el usuario reanuda el movimiento y se recibe el evento reanuda el movimiento. Aplicación de la aplicación no debe pausar la sesión de entrenamiento en respuesta a un evento de movimiento en pausa.
 
 > [!IMPORTANT]
-> **Nota:** sólo se admiten los eventos de movimiento en pausa y reanudación de movimiento para el tipo de actividad de RunningWorkout (`HKWorkoutActivityType.Running`).
+> Solo se admiten los eventos de movimiento en pausa y reanudación de movimiento para el tipo de actividad de RunningWorkout (`HKWorkoutActivityType.Running`).
 
 De nuevo, se pueden controlar estos eventos invalidando el `DidGenerateEvent` método de la `HKWorkoutSessionDelegate`:
 
@@ -649,7 +649,7 @@ Eche un vistazo a cómo funciona este proceso:
 3. La aplicación de watchOS 3 con el valor de configuración de entrenamiento, inicia una nueva sesión de entrenamiento (`HKWorkoutSession`).
 
 > [!IMPORTANT]
-> **Nota:** para la aplicación de iPhone primaria iniciar un entrenamiento en el de Apple Watch, la aplicación watchOS 3 debe tener fondo ejecutando habilitado. Vea [habilitar la ejecución de fondo](#Enabling-Background-Running) anteriormente para obtener más detalles.
+> Para la aplicación de iPhone primaria iniciar un entrenamiento en el de Apple Watch, la aplicación watchOS 3 debe tener fondo ejecutando habilitado. Vea [habilitar la ejecución de fondo](#Enabling-Background-Running) anteriormente para obtener más detalles.
 
 Este proceso es muy similar al proceso de iniciar una sesión de entrenamiento en la aplicación watchOS 3 directamente. En su iPhone, utilice el código siguiente:
 
@@ -764,7 +764,7 @@ Llevar a cabo toda la información que se presenta en este documento, una aplica
 3. **watchOS 3 `OutdoorRunDelegate.cs`**  -personalizado `HKWorkoutSessionDelegate` para controlar los eventos para el entrenamiento.
 
 > [!IMPORTANT]
-> **Nota:** el código que se muestra en las secciones siguientes solo incluye las partes necesarias para implementar las características nuevas y mejoradas proporcionadas a las aplicaciones de entrenamiento en watchOS 3. Todo el código auxiliar y el código para presentar y actualizar la interfaz de usuario no está incluidos, pero se pueden crear fácilmente siguiendo otra documentación watchOS.<p/>
+> El código que se muestra en las secciones siguientes solo incluye las partes necesarias para implementar las características nuevas y mejoradas proporcionadas a las aplicaciones de entrenamiento en watchOS 3. Todo el código auxiliar y el código para presentar y actualizar la interfaz de usuario no está incluidos, pero se pueden crear fácilmente siguiendo otra documentación watchOS.<p/>
 
 
 

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: ce850b7890265b82774534ca0daaf25bed7e0c2d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4a6b916f991b337d8a28764f1482ddd837bad460
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="watchos-troubleshooting"></a>watchOS solución de problemas
 
@@ -33,13 +33,6 @@ Esta página contiene información adicional y soluciones alternativas para cara
 ### <a name="general"></a>General
 
 <a name="deploy" />
-<!--
-* You cannot deploy to the App Store *from within Visual Studio for Mac or Visual Studio*
-    in the current release. You should create an **Archive** in Visual Studio for Mac
-    and then switch to Xcode to upload the archive to iTunes Connect. Visual Studio
-    is not currently supported (but will be a future release). Refer to the
-    [deployment guide](~/ios/watchos/deploy-test/appstore.md) for more information.
--->
 
 - Las versiones anteriores de Visual Studio para Mac muestran incorrectamente una de la la **AppleCompanionSettings** iconos como 88 x 88 píxeles; lo que resulta en un **falta el icono de Error** si intentan volver a enviar a la aplicación Almacén.
     Este icono debería ser 87 x 87 píxeles (29 unidades para  **@3x**  pantallas de Retina). No se puede solucionar este problema en Visual Studio para Mac: modificar el recurso de imagen en Xcode o editar manualmente el **Contents.json** archivo (para que coincida con [este ejemplo](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
@@ -47,14 +40,6 @@ Esta página contiene información adicional y soluciones alternativas para cara
 - Si el proyecto de extensión de inspección **Info.plist > Id. del lote WKApp** no es [establecer correctamente](~/ios/watchos/get-started/project-references.md) para que coincida con la aplicación de inspección **Id. del lote**, el depurador no podrá conectarse y Visual Esperará Studio para Mac con el mensaje *"En espera de conexión de depurador"*.
 
 - Se admite la depuración en **notificaciones** modo pero puede ser poco confiables. Volver a intentar a veces funcionará. Confirme que la aplicación de inspección **Info.plist** `WKCompanionAppBundleIdentifier` se establece para que coincida con el identificador de paquete de la aplicación o el contenedor primario de iOS (ie. que se ejecuta en el iPhone).
-
-<!--
-- **Can't launch application on Watch simulator.** This seems to
-    be an issue with the iOS Simulator hanging when trying to
-    install an app that has changed. Xcode release notes (beta 4)
-    includes a similar known issue:
-    If the issue persists, reset the Simulator (**iOS Simulator > Reset Content and Settings...**).
--->
 
 - Diseñador de iOS no muestra flechas de punto de entrada para los controladores de interfaz de vista o notificación.
 
@@ -69,15 +54,6 @@ Esta página contiene información adicional y soluciones alternativas para cara
 ### <a name="visual-studio"></a>Programa para la mejora
 
 Compatibilidad con el Diseñador de iOS para el Kit de inspección de *requiere* la solución que se configure correctamente. Si no se establecen las referencias del proyecto (vea [cómo establecer referencias](~/ios/watchos/get-started/project-references.md)), a continuación, la superficie de diseño no funcionará correctamente.
-
-<!--
-* New Watch Kit apps created in Visual Studio might not allow
-    starting in Notifications mode.
-
-* You cannot deploy to the App Store from Visual Studio (see [notes above](#deploy)
-    and the [deployment guide](~/ios/watchos/deploy-test/appstore.md)). Use
-    Visual Studio for Mac and Xcode on your Mac Build Host.
-    -->
 
 <a name="noalpha" />
 
@@ -109,11 +85,10 @@ Es fácil quitar el canal alfa en Mac OS X utilizando la **vista previa** aplica
 ## <a name="manually-adding-interface-controller-files"></a>Cómo agregar manualmente archivos de controlador de interfaz
 
 > [!IMPORTANT]
-> Compatibilidad del Kit de inspección de Xamarin incluye el diseño de guiones gráficos de inspección en el Diseñador de iOS (en Visual Studio para Mac y Visual Studio), que no requiere los pasos descritos a continuación. Simplemente asigne un controlador de interfaz de un nombre de clase en Visual Studio para el panel de propiedades de Mac y los archivos de código de C# se creará automáticamente.
+> Soporte técnico de WatchKit de Xamarin incluye el diseño de guiones gráficos de inspección en el Diseñador de iOS (en Visual Studio para Mac y Visual Studio), que no requiere los pasos descritos a continuación. Simplemente asigne un controlador de interfaz de un nombre de clase en Visual Studio para el panel de propiedades de Mac y los archivos de código de C# se creará automáticamente.
 
 
 *Si* usa el generador de interfaz de Xcode, siga estos pasos para crear nuevos controladores de interfaz para la aplicación de inspección y habilitar la sincronización con Xcode para que las salidas y las acciones están disponibles en C#:
-
 
 1. Abra la aplicación de inspección **Interface.storyboard** en **Xcode interfaz generador**.
     
@@ -256,7 +231,7 @@ El parámetro que se debe actualizar para reflejar la aplicación es `launchsimw
 La ruta de acceso completa a la agrupación de la aplicación principal *de la aplicación de iOS que contiene la aplicación de inspección y la extensión*.
 
 > [!NOTE]
-> *Nota:* es la ruta de acceso se deben proporcionar para la *archivo .app de aplicación de iPhone*, es decir, aquella que se implementarán en el simulador de iOS y que contiene la extensión de inspección y la aplicación de inspección.
+> Es la ruta de acceso se deben proporcionar para la *archivo .app de aplicación de iPhone*, es decir, aquella que se implementarán en el simulador de iOS y que contiene la extensión de inspección y la aplicación de inspección.
 
 Ejemplo:
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: c8d66ff8199d451ce7469fa893b7673589c9e320
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f1b35905d14086dcfc0cb749c8e4cc7de1608dd5
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="auto-sizing-row-height"></a>Alto de fila de tamaño automático
 
@@ -46,7 +46,7 @@ A continuación, necesitamos seleccionar el prototipo de la celda y asígnele un
 En el caso de nuestro ejemplo, `GrowCell`. Vamos a usar este valor más adelante cuando se rellene la tabla.
 
 > [!IMPORTANT]
-> **Nota:** si la tabla contiene más de un tipo de celda (**prototipo**), debe asegurarse de que cada tipo tiene su propia estructura `Identifier` para cambiar el tamaño de fila de automática para que funcione.
+> Si la tabla contiene más de un tipo de celda (**prototipo**), debe asegurarse de que cada tipo tiene su propia estructura `Identifier` para cambiar el tamaño de fila de automática para que funcione.
 
 Para cada elemento de nuestro prototipo de celda, asignar un **nombre** para exponerlo a código de C#. Por ejemplo:
 

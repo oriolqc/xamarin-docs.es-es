@@ -6,11 +6,11 @@ ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 5e05cf0f13512478b3957070e7fa6329ea84337f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: ad75dfac55add7e03ffbdb910e0e62ebd0fd6c18
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding con tareas
 
@@ -43,7 +43,7 @@ UIApplication.SharedApplication.EndBackgroundTask(taskID);
 El proceso de registro pares una tarea con un identificador único, `taskID`y, a continuación, se ajusta en la coincidencia de `BeginBackgroundTask` y `EndBackgroundTask` llamadas. Para generar el identificador, se hace una llamada a la `BeginBackgroundTask` método en el `UIApplication` de objetos y, a continuación, iniciar la tarea de ejecución prolongada, normalmente en un nuevo subproceso. Una vez completada la tarea, llamamos a `EndBackgroundTask` y pase el mismo identificador. Esto es importante porque iOS cerrará la aplicación si un `BeginBackgroundTask` llamada no tiene una coincidencia `EndBackgroundTask`.
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: tareas de seguridad de segundo plano se pueden ejecutar en el subproceso principal o en un subproceso en segundo plano, según las necesidades de la aplicación.
+> Pueden ejecutar tareas de seguridad de segundo plano en el subproceso principal o en un subproceso en segundo plano, según las necesidades de la aplicación.
 
 
 ## <a name="performing-tasks-during-didenterbackground"></a>Realización de tareas durante la DidEnterBackground
@@ -65,7 +65,7 @@ public override void DidEnterBackground (UIApplication application) {
 Empezaremos invalidando el `DidEnterBackground` método en el `AppDelegate`, donde registramos nuestra tarea a través de `BeginBackgroundTask` como hicimos en el ejemplo anterior. A continuación, generar un nuevo subproceso y realizar la tarea de ejecución prolongada. Tenga en cuenta que la `EndBackgroundTask` es ahora realiza llamada desde dentro de la tarea de ejecución prolongada, ya que el `DidEnterBackground` ya habrá devuelto el método.
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: iOS usa un [vigilante mecanismo](http://developer.apple.com/library/ios/qa/qa1693/_index.html) para asegurarse de que la interfaz de usuario de la aplicación sigue respondiendo. Una aplicación que emplea demasiado tiempo en `DidEnterBackground` dejará de responder en la interfaz de usuario. Permite que las tareas se ejecuten en segundo plano, que comenzó `DidEnterBackground` para devolver de manera oportuna, que la interfaz de usuario siga respondiendo e impide la vigilancia de la terminación de la aplicación.
+> iOS usa un [vigilante mecanismo](http://developer.apple.com/library/ios/qa/qa1693/_index.html) para asegurarse de que la interfaz de usuario de la aplicación sigue respondiendo. Una aplicación que emplea demasiado tiempo en `DidEnterBackground` dejará de responder en la interfaz de usuario. Permite que las tareas se ejecuten en segundo plano, que comenzó `DidEnterBackground` para devolver de manera oportuna, que la interfaz de usuario siga respondiendo e impide la vigilancia de la terminación de la aplicación.
 
 
 ## <a name="handling-background-task-time-limits"></a>Límites de tiempo de tarea de segundo plano de control
@@ -153,7 +153,7 @@ else {
 ```
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: evitar la realización de llamadas para actualizar la interfaz de usuario desde el fondo en el código de 6 compatible de iOS, iOS 6 no admite actualizaciones de la interfaz de usuario de fondo y cerrará la aplicación.
+> Evitar la realización de llamadas para actualizar la interfaz de usuario desde el fondo en el código de 6 compatible de iOS, iOS 6 no admite actualizaciones de la interfaz de usuario de fondo y cerrará la aplicación.
 
 
 El `NSURLSession` API incluye un amplio conjunto de características para controlar la autenticación, administrar las transferencias de errores y notificar los errores de cliente - pero no en el servidor:. Ayuda a puente que las interrupciones en la tarea ejecutan hora introducido en iOS 7 y también proporciona compatibilidad para transferir archivos grandes de manera rápida y confiable. La siguiente sección explora esta característica de segundo.

@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: e231043b1c4b0fa7ba72f2a371545036ffb21164
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: c4ee5c0457dd1faea74cbbc30dd2d0f42087a8d0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -43,7 +43,7 @@ CloudKit admite tanto el concepto de bases de datos públicas y privadas. Bases 
 CloudKit es compatible con los datos estructurados y de forma masiva. Es capaz de controlar las transferencias de archivos grandes sin problemas. CloudKit se encarga de forma eficaz transferir archivos grandes a y desde lo servidores de iCloud en segundo plano, liberando al programador centrarse en otras tareas.
 
 > [!NOTE]
-> **Nota:** es importante tener en cuenta que es CloudKit una _tecnología de transporte_. No se ofrecen persistencia; solo permite que una aplicación enviar y recibir información de los servidores de forma eficaz.
+> Es importante tener en cuenta que es CloudKit una _tecnología de transporte_. No se ofrecen persistencia; solo permite que una aplicación enviar y recibir información de los servidores de forma eficaz.
 
 Cuando se redactó este documento, Apple inicialmente proporciona CloudKit gratuitamente con un límite más alto en la capacidad de ancho de banda y almacenamiento. Para mayor proyectos o aplicaciones con una base de usuarios grande, Apple ha indicado que se proporcionen una escala de precios asequible.
 
@@ -239,7 +239,7 @@ Las referencias se exponen en el marco de trabajo CloudKit a través de la `CKRe
 Las referencias proporcionan el mecanismo detrás de eliminaciones en cascada. Si se elimina un registro principal de la base de datos, los registros secundarios (tal y como se especifica en una relación) se eliminarán automáticamente de la base de datos.
 
 > [!NOTE]
-> **Tenga en cuenta**: pendiente punteros son una posibilidad cuando se usa CloudKit. Por ejemplo, en el momento de la aplicación tiene captura una lista de punteros de registros, seleccionado un registro y, a continuación, pregunte por el registro, el registro ya no exista en la base de datos. Una aplicación debe codificarse para controlar correctamente esta situación.
+> Punteros suplente están una posibilidad cuando utilizan CloudKit. Por ejemplo, en el momento de la aplicación tiene captura una lista de punteros de registros, seleccionado un registro y, a continuación, pregunte por el registro, el registro ya no exista en la base de datos. Una aplicación debe codificarse para controlar correctamente esta situación.
 
 Si bien no es necesario, volver referencias son preferidas cuando se trabaja con el marco de trabajo CloudKit. Apple ha ajustado el sistema para convertir el tipo de referencia más eficaz.
 
@@ -395,7 +395,7 @@ Tenga en cuenta sobre el código anterior tres cosas:
 
 
 > [!NOTE]
-> **Tenga en cuenta**: debido a la naturaleza "débil" de las comunicaciones de red móvil, donde las conexiones constantemente se quitan o interrumpen, una de las primeras consideraciones que los desarrolladores deben realizar al trabajar con CloudKit es el control de errores.
+> Debido a la naturaleza "débil" de las comunicaciones de red móvil, donde las conexiones constantemente se quitan o interrumpen, una de las primeras consideraciones que los desarrolladores deben realizar al trabajar con CloudKit es el control de errores.
 
 ### <a name="fetching-a-record"></a>Capturar un registro
 
@@ -560,7 +560,7 @@ Por último, se debe enviar una notificación de inserción para cada dispositiv
 Las suscripciones se exponen en el marco de trabajo CloudKit a través de la `CKSubscription` clase. Combinación de un tipo de registro ( `RecordType`), un predicado ( `NSPredicate`) y una notificación de inserción de Apple ( `Push`).
 
 > [!NOTE]
-> **Tenga en cuenta**: CloudKit inserciones ligeramente se han aumentado ya que contienen una carga que contiene información específica de CloudKit como la causa de la inserción de que se produzca.
+> Inserciones de CloudKit ligeramente se han aumentado ya que contienen una carga que contiene información específica de CloudKit como la causa de la inserción de que se produzca.
 
 #### <a name="how-subscriptions-work"></a>Cómo funcionan las suscripciones
 
@@ -678,7 +678,7 @@ Dado que esto procede de iCloud, hay un variado realizar una copia de la informa
 En función de los contenedores, se crea un identificador de usuario único, genera de forma aleatoria y se asociada a la cuenta de usuario iCloud (dirección de correo electrónico). Id. de usuario se devuelve a la aplicación y puede usarse en cualquier forma que considere apropiada al desarrollador.
 
 > [!NOTE]
-> **Tenga en cuenta**: aplicaciones diferentes que se ejecutan en el mismo dispositivo para el mismo usuario iCloud tendrán distintos identificadores de usuario porque están conectados a diferentes contenedores CloudKit.
+> Aplicaciones diferentes que se ejecutan en el mismo dispositivo para el mismo usuario iCloud tendrán distintos identificadores de usuario porque están conectados a diferentes contenedores CloudKit.
 
 El siguiente código obtiene el identificador de usuario CloudKit para tiene iniciada sesión en iCloud del usuario en el dispositivo:
 
@@ -810,7 +810,7 @@ El programador puede utilizar esta característica para realizar cambios en un e
 Antes de implementar la aplicación, el desarrollador puede migrar su esquema y los datos en el entorno de producción mediante **CloudKit panel**. Cuando se ejecuta en el entorno de producción, el servidor impide que una aplicación cambiar el esquema mediante programación. El desarrollador puede seguir realizando modificaciones con **CloudKit panel** pero se intenta agregar campos a un registro en el resultado del entorno de producción de errores.
 
 > [!NOTE]
-> **Nota:** iOS simulador sólo funciona con la **entorno de desarrollo**. Cuando el desarrollador está listo para probar una aplicación en un **entorno de producción**, se requiere un dispositivo de E/s físicas.
+> IOS simulador sólo funciona con la **entorno de desarrollo**. Cuando el desarrollador está listo para probar una aplicación en un **entorno de producción**, se requiere un dispositivo de E/s físicas.
 
 
 ## <a name="shipping-a-cloudkit-enabled-app"></a>Aplicación habilitada para una CloudKit de envío

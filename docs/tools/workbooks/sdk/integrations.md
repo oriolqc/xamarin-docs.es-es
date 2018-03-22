@@ -6,11 +6,11 @@ ms.assetid: 002CE0B1-96CC-4AD7-97B7-43B233EF57A6
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 2e9f1282ec567e894f4e0841ae42f791d8a77d3f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5e51aa9ab9d4d63d16b3a68d24084c872d831975
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="external-integrations"></a>Integraciones externos
 
@@ -55,6 +55,6 @@ Como con cualquier ensamblado al que hace referencia un libro o en vivo inspecci
 El ensamblado de integración es efectivamente un puente entre una aplicación o el SDK de interés y la sesión. Puede proporcionar nuevas API que tengan sentido específicamente en el contexto de un libro o en vivo inspeccionar la sesión, o no proporcionar ninguna API público y solo hay que realizar tareas "en segundo plano" como objeto de producir [representaciones](~/tools/workbooks/sdk/representations.md).
 
 > [!NOTE]
-> Nota: Las API que deben ser pública, pero no deben aparecer a través de IntelliSense se pueden marcar con el habitual `[EditorBrowsable (EditorBrowsableState.Never)]` atributo.
+> Las API que deben ser pública, pero no deben aparecer a través de IntelliSense se pueden marcar con el habitual `[EditorBrowsable (EditorBrowsableState.Never)]` atributo.
 
 [nuget]: https://nuget.org/packages/Xamarin.Workbooks.Integration

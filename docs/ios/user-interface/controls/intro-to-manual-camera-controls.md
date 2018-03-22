@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 5e44635c9dfbe9fa069272f50d035476bd1aa6b9
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: f11305fcbf8a5b9bf6552fa31ecfa1c0e8e7a68f
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manual-camera-controls"></a>Controles de la cámara manual
 
@@ -881,7 +881,7 @@ Un `AVCaptureWhiteBalanceTemperatureAndTintValues` estructura también se ha agr
 Use la `CaptureDevice.GetTemperatureAndTintValues`y `CaptureDevice.GetDeviceWhiteBalanceGains`métodos para convertir entre temperatura y tono, cromaticidad y RGB obtienen espacios de color.
 
 > [!NOTE]
-> **Tenga en cuenta**: las rutinas de conversión son más precisas, cuanto más se acerque el valor que se va a convertir es el Planckian Locus.
+> Las rutinas de conversión son más precisas, cuanto más se acerque el valor que se va a convertir es el Planckian Locus.
 
 
 

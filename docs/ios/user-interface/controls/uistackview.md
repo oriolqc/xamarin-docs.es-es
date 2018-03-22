@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 82bcd29a201be01bc8123e313e5a76b82668cb85
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b8d3fc920610b357520dfebddb79492c44d4781c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="stack-view"></a>Vista de pila
 
@@ -62,7 +62,7 @@ Dónde:
 Cuando se trabaja con una vista de pila, se puede considerar el **alineación** como el **X** y **Y** ubicación de la vista secundaria y la **distribución** como la **Alto** y **ancho**.
 
 > [!IMPORTANT]
-> **Nota:** `UIStackView` está diseñado como una vista del contenedor de representación no y por lo tanto, no se dibuja en el lienzo al igual que otras subclases de `UIView`. Por lo que establecer las propiedades como `BackgroundColor` o reemplazar `DrawRect` no tiene ningún efecto visual.
+> `UIStackView` se ha diseñado como una vista del contenedor de representación no y por lo tanto, no se dibuja en el lienzo al igual que otras subclases de `UIView`. Por lo que establecer las propiedades como `BackgroundColor` o reemplazar `DrawRect` no tiene ningún efecto visual.
 
 Continuar al diseño de interfaz de la aplicación mediante la adición de una etiqueta, ImageView, dos botones y una vista de pila Horizontal para que se parezca a lo siguiente:
 
@@ -209,7 +209,7 @@ Si el `BaselineRelativeArrangement` propiedad es `true`, las subvistas se debe d
  - Una vista de pila Horizontal usará su vista secundaria más alto para la línea de base primero y último. Si la vista más alta es también una vista de pila, usará vista secundaria más alto el su como la línea de base.
 
 > [!IMPORTANT]
-> **Nota:** alineación de línea base no funciona en los tamaños de la vista secundaria estirada o comprimido tal y como se calculará la línea de base a la posición incorrecta. Para la alineación de línea base, asegúrese de que la vista de secundaria **alto** coincide con la vista de contenido intrínseco **alto**.
+> Alineación de línea base no funciona en tamaños de la vista secundaria estirada o comprimido como la línea de base se calculará a la posición incorrecta. Para la alineación de línea base, asegúrese de que la vista de secundaria **alto** coincide con la vista de contenido intrínseco **alto**.
 
 ### <a name="common-stack-view-uses"></a>Usos comunes de vista de pila
 

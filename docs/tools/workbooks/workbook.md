@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: c111d2f873270eab78eee92edc3d884d1e92fdd8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 69c4b25e17c31d57701f99e84f6f686c65dc7028
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="interactive-workbooks"></a>Libros interactivos
 
@@ -32,7 +32,7 @@ La ventana de edición de código proporciona la finalización de código, color
 
 [ ![](workbook-images/inspector-0.6.0-repl-small.png "La ventana de edición de código proporciona la finalización de código, colorear la sintaxis, alineado live-diagnósticos y compatibilidad de instrucción de varias líneas")](workbook-images/inspector-0.6.0-repl.png#lightbox)
 
-Los libros de Xamarin se guardan en un `.workbook` archivo, que es un archivo CommonMark con algunos metadatos en la parte superior (vea [tipos de archivo de los libros](#Workbooks_Files_Types) para obtener más detalles sobre cómo se pueden guardar libros).
+Los libros de Xamarin se guardan en un `.workbook` archivo, que es un archivo CommonMark con algunos metadatos en la parte superior (vea [tipos de archivo de los libros](#workbooks-files-types) para obtener más detalles sobre cómo se pueden guardar libros).
 
 ### <a name="nuget-package-support"></a>Compatibilidad con paquetes de NuGet
 
@@ -132,7 +132,7 @@ El directorio debe contener una `index.workbook` archivo, que es el libro de tex
 Si un texto sin formato `.workbook` archivo que haga referencia a los recursos de su mismo directorio se abre en los libros 0.99.3 o versiones posteriores, cuando se guarda, se convertirá en un `.workbook` paquete. Esto es cierto en Mac y Windows.
 
 > [!NOTE]
-> **Nota:** los usuarios de Windows se abrirán el `package.workbook\index.workbook` archivo directamente, pero en caso contrario, el paquete comportará igual que en el equipo Mac.
+> Los usuarios de Windows se abrirán el `package.workbook\index.workbook` archivo directamente, pero en caso contrario, el paquete comportará igual que en el equipo Mac.
 
 ### <a name="archives"></a>Archivos
 

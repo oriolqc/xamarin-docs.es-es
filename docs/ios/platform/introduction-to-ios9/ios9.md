@@ -7,18 +7,18 @@ ms.assetid: 69A05B0E-8A0A-489F-8165-B10AC46FAF3C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: bfdf0c73226eec472eb671d5543f5ce124919ab8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3f52ef88224e65f12502c9fbf82e240233890a82
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-9-compatibility"></a>iOS 9 compatibilidad
 
 _Incluso si no planea agregar características de iOS 9 a la aplicación inmediatamente, debe volver a generar sus aplicaciones con la versión más reciente de Xamarin._
 
 > [!IMPORTANT]
-> **Nota:** esta información en esta página es para clientes con aplicaciones ya se encuentran en la tienda de aplicaciones iOS 8 o versiones anteriores, de destino que no se han enviado ya las actualizaciones para la compatibilidad de iOS 9. Si ya usa las versiones más recientes: Xcode 7 y 9 Xamarin.iOS - para el desarrollo de aplicaciones, visitan la [Introducción a iOS 9](~/ios/platform/introduction-to-ios9/index.md).
+> La información de esta página para los clientes a las aplicaciones ya se encuentran en la tienda de aplicaciones como destino iOS 8 o versiones anteriores, que no ya has enviado actualizaciones para la compatibilidad de iOS 9. Si ya usa las versiones más recientes: Xcode 7 y 9 Xamarin.iOS - para el desarrollo de aplicaciones, visitan la [Introducción a iOS 9](~/ios/platform/introduction-to-ios9/index.md).
 
 Cuando aparecían la primera beta de iOS 9, hemos identificado dos problemas con versiones anteriores de Xamarin que aparece como aplicaciones antiguas que no se pueda iniciar en iOS 9.
 

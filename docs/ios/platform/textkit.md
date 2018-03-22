@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 7ae41e99d20f0e8f3cad6b933e415002903a3294
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d3a370c3a8d930c817d38422b249b496532fa33f
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="text-kit"></a>Kit de texto
 
@@ -143,7 +143,7 @@ public class ExclusionPathView : UITextView
 Este código agrega compatibilidad para dibujar en la vista de texto con gráficos de núcleo. Puesto que la `UITextView` clase ahora está integrada para usar el Kit de texto para su representación de texto y el diseño, puede utilizar todas las características del Kit de texto, por ejemplo, configurar las rutas de acceso de exclusión.
 
 > [!IMPORTANT]
->   Nota: Este ejemplo las subclases `UITextView` para agregar un toque dibujo soporte técnico. Creación de subclases `UITextView` no es necesario para obtener las características del Kit de texto.
+> Este subclases de ejemplo `UITextView` para agregar un toque dibujo soporte técnico. Creación de subclases `UITextView` no es necesario para obtener las características del Kit de texto.
 
 
 

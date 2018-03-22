@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: d9b6b5a778e0e4d5092d1036109f82896acf639b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 083920aba3c8dc83b157b591e194c43935dcc566
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="message-app-extension-basics"></a>Conceptos básicos de extensión de la aplicación de mensaje
 
@@ -87,7 +87,7 @@ Para que una imagen que se incluirá en un módulo de etiqueta, debe cumplir los
 - Imágenes no pueden ser mayor o menor que 100 x 100 puntos que apunta 206 x 206.
 
 > [!IMPORTANT]
-> **Nota:** imágenes de etiqueta siempre deben proporcionarse en el `@3x` resolución en el intervalo de 300 x 300 a 618 x 618 píxeles. El sistema generará automáticamente la `@2x` y `@1x` versiones en tiempo de ejecución según sea necesario.
+> Imágenes de etiqueta siempre deben proporcionarse en el `@3x` resolución en el intervalo de 300 x 300 a 618 x 618 píxeles. El sistema generará automáticamente la `@2x` y `@1x` versiones en tiempo de ejecución según sea necesario.
 
 Apple sugiere probar los activos de imagen de etiqueta en varios fondos color diferentes (por ejemplo, blanco, negro, rojo, amarillo y múltiples en color) y sobre fotos, para garantizar que se muestran los mejores en todas las situaciones posibles.
 

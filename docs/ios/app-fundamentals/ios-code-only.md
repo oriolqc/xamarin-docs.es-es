@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d53dea1a46c6b42f901beb217eb00b3a3fa0fd92
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 24fc64d1bd04cb1ebefb9bf9a359efb395b45074
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-ios-user-interfaces-in-code"></a>Crear Interfaces de usuario de iOS en código
 
@@ -620,7 +620,7 @@ Para obtener más información acerca de cómo crear una pantalla de inicio, con
 - [Administración de las pantallas de inicio con guiones gráficos](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 > [!IMPORTANT]
-> **Nota:** a partir de iOS 9, Apple recomienda que se deben usar guiones gráficos como el principal método de creación de una pantalla de inicio.
+> A partir de iOS 9, Apple recomienda que se deben usar guiones gráficos como el principal método de creación de una pantalla de inicio.
 
 ### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>Crear una imagen de inicio para iOS previa 8 aplicaciones
 
@@ -629,7 +629,7 @@ Una imagen estática se puede usar además un .xib o la pantalla de inicio del g
 Esta imagen estática se puede establecer en el archivo Info.plist, o como un catálogo de activos (por iOS 7) en la aplicación. Debe proporcionar imágenes independientes para cada tamaño de dispositivo (320 x 480, 640 x 960, 640 x 1136) que puede ejecutar la aplicación. Para obtener más información sobre los tamaños de pantalla de inicio, ver el [imágenes de la pantalla de inicio](~/ios/app-fundamentals/images-icons/launch-screens.md) guía.
 
 > [!IMPORTANT]
-> **Nota:** si la aplicación no tiene ninguna pantalla Iniciar, observará que no caben completamente la pantalla. Si este es el caso, debe asegurarse de que desea incluir, al menos, una imagen de 640 x 1136 denominada `Default-568@2x.png` en su Info.plist. 
+> Si la aplicación no tiene ninguna pantalla Iniciar, observará que no caben completamente la pantalla. Si este es el caso, debe asegurarse de que desea incluir, al menos, una imagen de 640 x 1136 denominada `Default-568@2x.png` en su Info.plist. 
 
 
 

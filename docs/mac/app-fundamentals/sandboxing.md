@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9cf9cb2e4773b90ecdd9321c6627003be3fa1b8b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 71f076bb0dc7d552a041d48a6ce531dcff444de6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Espacio aislado de una aplicación Xamarin.Mac
 
@@ -174,7 +174,7 @@ A continuación, es necesario seleccionar el nuevo identificador de la aplicaci�
 6. Haga clic en el **realiza** botón.
 
 > [!IMPORTANT]
-> **Nota:** es posible que deba salga y reinicie Visual Studio para Mac prepararla para reconocer el nuevo identificador de la aplicación y perfil de aprovisionamiento que se haya instalado mediante Xcode.
+> Es posible que deba salga y reinicie Visual Studio para Mac prepararla para reconocer el nuevo identificador de la aplicación y perfil de aprovisionamiento que se haya instalado mediante Xcode.
 
 #### <a name="troubleshooting-provisioning-issues"></a>Solucionar problemas de aprovisionamiento
 
@@ -308,7 +308,7 @@ Directorio de la aplicación de Xamarin.Mac aplicación contenedor tiene las sig
 - Para _caja de zapatos_ tipos de aplicaciones (por ejemplo, aplicación de fotografía de Apple), el contenido del usuario entrarán en el contenedor.
 
 > [!IMPORTANT]
-> **Nota:** Lamentablemente, Xamarin.Mac no cuenta con cobertura del 100% API todavía (a diferencia de Xamarin.iOS), como resultado la `NSHomeDirectory` API no se ha asignado en la versión actual de Xamarin.Mac.
+> Por desgracia, Xamarin.Mac no tiene cobertura del 100% API todavía (a diferencia de Xamarin.iOS), como resultado la `NSHomeDirectory` API no se ha asignado en la versión actual de Xamarin.Mac.
 
 Como solución temporal, puede usar el código siguiente:
 
@@ -413,7 +413,7 @@ Cuando el usuario importa un archivo de recursos en el proyecto (a través de un
 Un marcador Document-Scoped pueden resolverse por cualquier aplicación que puede abrir los datos de marcador y el propio documento. Esto es compatible con la portabilidad, que permite al usuario enviar los archivos de proyecto a otro usuario y tener todos los marcadores de trabajo también para ellos.
 
 > [!IMPORTANT]
-> **Nota:** puede un Bookman Document-Scoped _sólo_ que apunte a un único archivo y no una carpeta y que el archivo no puede estar en una ubicación utilizada por el sistema (como `/private` o `/Library`).
+> Un marcador de Document-Scoped puede _sólo_ que apunte a un único archivo y no una carpeta y que el archivo no puede estar en una ubicación utilizada por el sistema (como `/private` o `/Library`).
 
 #### <a name="using-security-scoped-bookmarks"></a>Uso de marcadores de ámbito de seguridad
 
@@ -428,7 +428,7 @@ Con cualquier tipo de marcador Security-Scoped, requiere que realice los pasos s
 Una vez ceder el acceso a un recurso, debe volver al paso 4 para volver a establecer el acceso. Si se reinicia la aplicación Xamarin.Mac, debe volver al paso 3 y volver a resolver el marcador.
 
 > [!IMPORTANT]
-> **Nota:** error al liberar el acceso a recursos de direcciones URL Security-Scoped hará que una aplicación de Xamarin.Mac a la pérdida de recursos del núcleo. Como resultado, la aplicación ya no podrá agregar ubicaciones del sistema de archivos a su contenedor hasta que se reinicie.
+> Error al liberar el acceso a recursos de direcciones URL Security-Scoped hará que una aplicación de Xamarin.Mac a la pérdida de recursos del núcleo. Como resultado, la aplicación ya no podrá agregar ubicaciones del sistema de archivos a su contenedor hasta que se reinicie.
 
 ### <a name="the-app-sandbox-and-code-signing"></a>El espacio aislado de la aplicación y la firma de código
 
@@ -493,7 +493,7 @@ Diseñar una aplicación de Xamarin.Mac para el espacio aislado de la aplicació
 6. Implementar una estrategia de migración.
 
 > [!IMPORTANT]
-> **Nota:** debe no solo espacio aislado del archivo ejecutable principal en el grupo de aplicaciones, pero también cada auxiliar incluye aplicación o herramienta en ese paquete. Esto es necesario para cualquier aplicación distribuida desde la tienda de aplicaciones Mac y, si es posible, se debe realizar para cualquier otra forma de distribución de aplicaciones.
+> Debe no solo espacio aislado del archivo ejecutable principal en el grupo de aplicaciones, pero también cada auxiliar incluye aplicación o herramienta en ese paquete. Esto es necesario para cualquier aplicación distribuida desde la tienda de aplicaciones Mac y, si es posible, se debe realizar para cualquier otra forma de distribución de aplicaciones.
 
 Para obtener una lista de todos los archivos binarios del ejecutables en el paquete de la aplicación de Xamarin.Mac, escriba el comando siguiente en Terminal:
 

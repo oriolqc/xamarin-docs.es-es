@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f4a18bf8f35d1a6c615c819ea90433d1eb123422
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7f7cfcd320fcb38a9b08dfd8fe7e0fae7ff808ec
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="updating-an-application-in-the-background"></a>Actualizar una aplicación en segundo plano
 
@@ -79,7 +79,7 @@ Cuando hayamos terminados contenido de actualización, informaremos el sistema o
 Las aplicaciones que usan la captura de fondo pueden realizar llamadas para actualizar la interfaz de usuario desde el fondo. Cuando el usuario abre la aplicación, la interfaz de usuario será hasta la fecha y mostrar el contenido nuevo. Esto también actualizará instantánea de selector de aplicación de la aplicación, por lo que el usuario puede ver cuando la aplicación tiene contenido nuevo.
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: una vez `PerformFetch` es llama, la aplicación tiene aproximadamente 30 segundos para comenzar la descarga de nuevo contenido y llame a los del bloque de controlador de finalización. Si este proceso tarda demasiado largo, se terminará la aplicación. Considere el uso de capturar el fondo de la _servicio de transferencia en segundo plano_ al descargar multimedia u otros archivos grandes.
+> Una vez `PerformFetch` es llama, la aplicación tiene aproximadamente 30 segundos para comenzar la descarga de nuevo contenido y llame a los del bloque de controlador de finalización. Si este proceso tarda demasiado largo, se terminará la aplicación. Considere el uso de capturar el fondo de la _servicio de transferencia en segundo plano_ al descargar multimedia u otros archivos grandes.
 
 
 ### <a name="backgroundfetchinterval"></a>BackgroundFetchInterval
@@ -132,7 +132,7 @@ public override void DidReceiveRemoteNotification (UIApplication application, NS
 Notificaciones remotas deben usarse para las actualizaciones poco frecuentes con contenido que es fundamental para la funcionalidad de la aplicación. Para obtener más información acerca de las notificaciones remotas, consulte el Xamarin [notificaciones Push en iOS](~/ios/platform/user-notifications/deprecated/remote-notifications-in-ios.md) guía.
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: dado que el mecanismo de actualización en las notificaciones de remoto se basa en la captura de fondo, la aplicación debe iniciar la descarga de nuevo contenido y llame a del bloque de controlador de finalización 30 segundos después de recibir la notificación, o bien iOS se finalizar la aplicación. Considere la posibilidad de emparejamiento remota notificaciones con _servicio de transferencia en segundo plano_ al descargar multimedia u otros archivos grandes en segundo plano.
+> Dado que el mecanismo de actualización en las notificaciones de remoto se basa en la captura de fondo, la aplicación debe iniciar la descarga de nuevo contenido y llame a del bloque de controlador de finalización 30 segundos después de recibir la notificación, o iOS cerrará la aplicación. Considere la posibilidad de emparejamiento remota notificaciones con _servicio de transferencia en segundo plano_ al descargar multimedia u otros archivos grandes en segundo plano.
 
 
 ### <a name="silent-remote-notifications"></a>Notificaciones remotas silenciosas
@@ -156,7 +156,7 @@ Sin embargo, APN permitirá silenciosas notificaciones "superponer" junto con un
  [![](updating-an-application-in-the-background-images/silent.png "Notificaciones periódicas pueden utilizarse para insertar almacenadas notificaciones silenciosas de APNs en el dispositivo, tal y como se muestra en este diagrama")](updating-an-application-in-the-background-images/silent.png#lightbox)
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: Apple anima a los desarrolladores para enviar notificaciones de inserción silenciosa siempre que la aplicación requiere, y permiten el APN programar su entrega.
+> Apple anima a los desarrolladores para enviar notificaciones de inserción silenciosa cada vez que la aplicación requiere y permite el APN programar su entrega.
 
 
 En esta sección, hemos analizado las distintas opciones para actualizar contenido en segundo plano para ejecutar las tareas que no se ajustan a una categoría de segundo plano necesarias. Ahora, veamos algunas de estas API en acción.

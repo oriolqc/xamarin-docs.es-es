@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 4747fb73358a60d10832a1e650acd90a5a4274d1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5e4bbc22403c6c0bfa5c8dc7ac4e3a39545051d4
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ios-security-and-privacy-features"></a>Características de seguridad y privacidad de iOS
 
@@ -44,7 +44,7 @@ Se realizaron los siguientes cambios generales para la seguridad y privacidad en
 Aplicaciones que se ejecutan en iOS 10 (o posterior) deben declarar estáticamente su intención de obtener acceso a características específicas o información de usuario mediante la especificación de una o varias claves de privacidad de sus `Info.plist` archivos que explican al usuario ¿por qué la aplicación desea tener acceso.
 
 > [!IMPORTANT]
-> **Tenga en cuenta** aplicaciones que no proporcionan las claves necesarias se terminará automáticamente por el sistema cuando intenten obtener acceso a una de las funciones restringidas o información de usuario, _sin errores_! Si una aplicación inicia por error de forma inesperada en iOS 10, asegúrese de que todos los `Info.plist` se han especificado.
+> Aplicaciones que no proporcionan las claves necesarias se terminará automáticamente por el sistema cuando intenten obtener acceso a una de las funciones restringidas o información de usuario, _sin errores_! Si una aplicación inicia por error de forma inesperada en iOS 10, asegúrese de que todos los `Info.plist` se han especificado.
 
 La privacidad siguiente relacionados con las claves están disponibles:
 
@@ -109,7 +109,7 @@ Para establecer cualquiera de las claves de privacidad, haga lo siguiente:
 -----
 
 > [!IMPORTANT]
-> **Nota:** en el ejemplo proporcionado anteriormente, error al configurar el `NSHomeKitUsageDescription` clave en el `Info.plist` archivo, se crearán en la aplicación _en modo silencioso errores_ (se cierra el sistema en tiempo de ejecución) sin errores cuando se ejecuta en iOS 10 (o mayor).
+> En el ejemplo proporcionado anteriormente, error al configurar el `NSHomeKitUsageDescription` clave en el `Info.plist` archivo, se crearán en la aplicación _en modo silencioso errores_ (se cierra el sistema en tiempo de ejecución) sin errores cuando se ejecuta en iOS 10 (o posterior).
 
 <a name="Summary" />
 

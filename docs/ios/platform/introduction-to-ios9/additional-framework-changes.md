@@ -7,11 +7,11 @@ ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 773df1eec7c8694143ad6c31044ce281c1265282
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 5053d8d0cf9c1c3e6d3282ee8d6e42448e733c2c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="additional-ios-9-frameworks-changes"></a>Cambios de marcos de trabajo adicionales iOS 9
 
@@ -53,7 +53,7 @@ El marco de trabajo CloudKit simplifica el desarrollo de aplicaciones que iCloud
 El nuevo _CloudKit Web Services_ framework proporciona una biblioteca de JavaScript (CloudKit JS) que se puede incorporar en el sitio Web para proporcionar acceso a los mismos datos de CloudKit según y contenido, como la aplicación Xamarin.iOS.
 
 > [!IMPORTANT]
-> **Nota:** para poder tener acceso a, presentar o actualizar el contenido de una base de datos CloudKit CloudKit JS, debe haber previamente definido el esquema de esa base de datos.
+> Para poder tener acceso a, presentar o actualizar el contenido de una base de datos CloudKit CloudKit JS, debe haber definido previamente el esquema de esa base de datos.
 
 
 

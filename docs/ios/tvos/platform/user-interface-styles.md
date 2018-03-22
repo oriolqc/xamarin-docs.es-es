@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b970ff3570079c0e9fba10718ddcd75fbe857f2c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e400a72f4c759662e70bfecc372134f8fda05ad6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="new-user-interface-styles"></a>Estilos de la interfaz de usuario nueva
 
@@ -101,7 +101,7 @@ Además, las colecciones de rasgo tienen las siguientes características de tvOS
 - Una aplicación de tvOS puede controlar los cambios en la colección de rasgo reemplazando el `TraitCollectionDidChange` método de un `UIView` o `UIViewController` clase.
 
 > [!IMPORTANT]
-> **Nota:** no son totalmente compatibles con el anticipo Xamarin.tvOS tvos 10 `UIUserInterfaceStyle` para `UITraitCollection` todavía. Compatibilidad total con se agregará en una versión futura.
+> No son totalmente compatibles con el anticipo Xamarin.tvOS tvos 10 `UIUserInterfaceStyle` para `UITraitCollection` todavía. Compatibilidad total con se agregará en una versión futura.
 
 
 
@@ -124,7 +124,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 ```
 
 > [!IMPORTANT]
-> **Nota:** Desafortunadamente, la vista previa de Xamarin.tvOS tvos 10 no son totalmente compatibles con `UIUserInterfaceStyle` para `UITraitCollection`, por lo que este tipo de personalización no está disponible. Compatibilidad total con se agregará en una versión futura.
+> Desafortunadamente, la vista previa de Xamarin.tvOS tvos 10 no son totalmente compatibles con `UIUserInterfaceStyle` para `UITraitCollection`, por lo que este tipo de personalización no está disponible. Compatibilidad total con se agregará en una versión futura.
 
 <a name="Responding-to-Theme-Changes-Directly" />
 

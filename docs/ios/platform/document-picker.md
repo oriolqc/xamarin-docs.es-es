@@ -7,11 +7,11 @@ ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 4a8f1632076a12b1737ba8294ac8b2f28f19dc77
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25b9d6c0eebd51a7b47b31c35fb3d5b56e45c3b3
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="document-picker"></a>Selector de documento
 
@@ -221,7 +221,7 @@ Uso de composición en el diagrama anterior:
 Mediante el uso de la composición la aplicación ya no tiene que abrir un origen de datos para supervisar local y los cambios de archivo basado en la nube. Ahora puede depender de la aplicación `NSMetadataQuery` directamente.
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: unión sólo funciona si la aplicación está usando la coordinación de archivo tal como se presenta en la sección anterior. Si no se está usando el archivo coordinación, las API predeterminado al comportamiento anterior iOS 8 existente.
+> Unión sólo funciona si la aplicación está usando la coordinación de archivo tal como se presenta en la sección anterior. Si no se está usando el archivo coordinación, las API predeterminado al comportamiento anterior iOS 8 existente.
 
 
 
@@ -465,7 +465,7 @@ Haga lo siguiente:
 6.  Haga doble clic en `Entitlements.plist` en el **el Explorador de soluciones** para abrirlo en el editor.
 
     > [!IMPORTANT]
-> **Tenga en cuenta**: en Visual Studio puede que necesite abrir el editor de derechos con el botón secundario en él, seleccione **abrir con...** y seleccione el Editor de lista de propiedades
+    > En Visual Studio debe abrir el editor de derechos con el botón secundario en él, seleccione **abrir con...** y seleccione el Editor de lista de propiedades
 
 7.  Comprobar **habilitar iCloud** , **iCloud documentos** , **almacenamiento de información de clave y valor** y **CloudKit** .
 8.  Asegúrese del **contenedor** existe para la aplicación (como creada anteriormente). Ejemplo: `iCloud.com.your-company.AppName`
@@ -793,7 +793,7 @@ namespace DocPicker
 ```
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: el código anterior incluye el código de la sección lista de documentos y descubra anterior. Se presenta aquí en su totalidad, tal y como aparecería en una aplicación real. Para simplificar, este ejemplo funciona con un único archivo codificado de forma rígida (`test.txt`) únicamente.
+> El código anterior incluye el código de la sección lista de documentos y descubra anterior. Se presenta aquí en su totalidad, tal y como aparecería en una aplicación real. Para simplificar, este ejemplo funciona con un único archivo codificado de forma rígida (`test.txt`) únicamente.
 
 El código anterior expone varios métodos abreviados de unidad de iCloud para hacerlas más fácil trabajar con el resto de la aplicación.
 
@@ -902,7 +902,7 @@ if (presentationPopover!=null) {
 ```
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: el programador debe llamar a la `StartAccessingSecurityScopedResource` método de la `NSUrl` para poder acceder a un documento externo. El `StopAccessingSecurityScopedResource` método debe llamarse para liberar el bloqueo de seguridad tan pronto como se ha cargado el documento.
+> El programador debe llamar a la `StartAccessingSecurityScopedResource` método de la `NSUrl` para poder acceder a un documento externo. El `StopAccessingSecurityScopedResource` método debe llamarse para liberar el bloqueo de seguridad tan pronto como se ha cargado el documento.
 
 ### <a name="sample-output"></a>Resultados del ejemplo
 
@@ -1134,7 +1134,7 @@ En Mac OS X Yosemite, Apple no proporciona el hacia atrás compatibilidad por lo
 Después de una cuenta de usuario se ha migrado a iCloud unidad, solo los dispositivos con iCloud unidad podrá propagar los cambios a los documentos a través de los dispositivos.
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: los desarrolladores deben tener en cuenta que las nuevas características que se describen en este artículo solo están disponibles si la cuenta de usuario se ha migrado a la unidad de iCloud. 
+> Los desarrolladores deben tener en cuenta que las nuevas características que se describen en este artículo solo están disponibles si la cuenta de usuario se ha migrado a la unidad de iCloud. 
 
 ## <a name="summary"></a>Resumen
 

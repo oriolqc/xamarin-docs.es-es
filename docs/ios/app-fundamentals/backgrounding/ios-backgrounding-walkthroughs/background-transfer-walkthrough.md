@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: d5a8baec164eb5c70f6dae5b2fa4fd5271afbd1c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4ab11239caf5986bba52f080945d90a91ea9453e
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>Tutorial: usar NSURLSession y el servicio de transferencia de fondo
 
@@ -97,7 +97,7 @@ Si desea ver el progreso de una tarea de descarga, es posible invalidar el `DidW
 La API de delegado de sesión proporciona un amplio kit de herramientas para interactuar con las tareas. Para obtener una lista completa de sesión delegar métodos, consulte el `NSUrlSessionDelegate` la documentación de API.
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: sesiones de segundo plano se inician en un subproceso en segundo plano, por lo que las llamadas para actualizar la interfaz de usuario se deben ejecutar explícitamente en el subproceso de interfaz de usuario mediante una llamada a `InvokeOnMainThread` para evitar iOS finaliza la aplicación. 
+> Las sesiones de segundo plano se inician en un subproceso en segundo plano, por lo que las llamadas para actualizar la interfaz de usuario se deben ejecutar explícitamente en el subproceso de interfaz de usuario mediante una llamada a `InvokeOnMainThread` para evitar iOS finaliza la aplicación. 
 
 
 ## <a name="handling-transfer-completion"></a>Finalización de la transferencia de control

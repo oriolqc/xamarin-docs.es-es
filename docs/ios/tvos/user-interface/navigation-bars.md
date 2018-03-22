@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 9c6bbf27d4c8227d96e372e91e1ccf2c9e841ff8
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0f59e8f5e732a45f7e6148a08de80fffc56dbb26
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-navigation-controllers"></a>Trabajar con controladores de navegación
 
@@ -25,7 +25,7 @@ Barras de navegación pueden agregarse a la parte superior de las vistas para mo
 Además de título (que se muestra en el centro), barras de navegación puede contener uno o varios botones de barra de navegación (`UIBarButtonItem`) en los lados izquierdo y derecho de la barra.
 
 > [!IMPORTANT]
-> **Nota:** barras de navegación son completamente transparentes de forma predeterminada. Debe tener cuidado para asegurarse de que el contenido de la barra de navegación sigue siendo legible sobre el contenido que están bajo él. Por ejemplo, cuando en una vista de tabla o la colección se desplaza el contenido en él.
+> Barras de navegación son completamente transparentes de forma predeterminada. Debe tener cuidado para asegurarse de que el contenido de la barra de navegación sigue siendo legible sobre el contenido que están bajo él. Por ejemplo, cuando en una vista de tabla o la colección se desplaza el contenido en él.
 
 
 
@@ -77,7 +77,7 @@ Es la manera más fácil trabajar con barras de navegación en una aplicación X
 -----
 
 > [!IMPORTANT]
-> **Nota:** aunque es posible asignar eventos como `TouchUpInside` a un elemento de interfaz de usuario (por ejemplo, un UIButton) en el Diseñador de iOS, nunca se llamará Apple TV no tiene un toque la pantalla o admitir eventos de toque. Debe utilizar siempre el `Primary Action` eventos al crear controladores de eventos para tvOS elementos de la interfaz de usuario.
+> Aunque es posible asignar eventos como `TouchUpInside` a un elemento de interfaz de usuario (por ejemplo, un UIButton) en el Diseñador de iOS, nunca se llamará Apple TV no tiene un toque la pantalla o admitir eventos de toque. Debe utilizar siempre el `Primary Action` eventos al crear controladores de eventos para tvOS elementos de la interfaz de usuario.
 
 
 

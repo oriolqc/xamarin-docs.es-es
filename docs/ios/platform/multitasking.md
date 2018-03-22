@@ -9,11 +9,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 34b51f784b549caa0dda2eeda066bb39dfc13020
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 0783372cd36d5a4984d09ee055257d525e7becb1
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="multitasking-for-ipad"></a>Multitarea para iPad
 
@@ -33,7 +33,7 @@ Hay varias cosas a tener en cuenta cuando [admitir multitarea en la aplicación]
 - [Métodos abreviados de teclado de Hardware personalizado](#Custom-Hardware-Keyboard-Shortcuts)
 - [Administración de recursos](#Resource-Management-Considerations)
 
-Como desarrollador de aplicaciones también puede [desactivación de multitarea](#Opting-Out-of-Multitasking), incluido [deshabilitar la reproducción de vídeo de PIP](#Disabling-PIP-Video-Playback).
+Como desarrollador de aplicaciones también puede [rechazar multitarea](#Opting-Out-of-Multitasking), incluido [deshabilitar la reproducción de vídeo de PIP](#Disabling-PIP-Video-Playback).
 
 En este artículo se tratan los pasos necesarios para asegurarse de que se ejecuta la aplicación Xamarin.iOS correctamente en un entorno multitarea o cómo optar por no multitarea si no es un buen ajuste de la aplicación.
 
@@ -205,7 +205,7 @@ Vea el ejemplo [aplicación realizar varias tareas](http://developer.xamarin.com
 
 Incluso para las aplicaciones que ya está usando las guías de diseño y prácticas recomendadas de iOS 8, administración de recursos eficaz podría seguir siendo un problema. En iOS 9, las aplicaciones ya no tienen uso exclusivo de memoria, CPU o de otros recursos del sistema.
 
-Como resultado, debe ajustar la aplicación de Xamarin.iOS para usar de forma eficaz los recursos del sistema o que se enfrenta terminación en situaciones de memoria insuficiente. Esto es cierto igualmente de las aplicaciones que desactivación de multitarea, desde otra aplicación puede seguir ejecutando en un panel de la diapositiva sobre o una imagen en la ventana de la imagen que requieren recursos adicionales o haciendo que la frecuencia de actualización quede por debajo de 60 fotogramas por segundo.
+Como resultado, debe ajustar la aplicación de Xamarin.iOS para usar de forma eficaz los recursos del sistema o que se enfrenta terminación en situaciones de memoria insuficiente. Esto es cierto igualmente de las aplicaciones que no formen parte de multitarea, desde otra aplicación puede seguir ejecutando en un panel de la diapositiva sobre o una imagen en la ventana de la imagen que requieren recursos adicionales o haciendo que la frecuencia de actualización quede por debajo de 60 fotogramas por segundo.
 
 Tenga en cuenta las siguientes acciones del usuario y sus implicaciones:
 
@@ -223,19 +223,16 @@ Vea de Apple [Guía de eficiencia de energía para aplicaciones iOS](https://dev
 
 <a name="Opting-Out-of-Multitasking" />
 
-## <a name="opting-out-of-multitasking"></a>Fuera de la aceptación de multitarea
+## <a name="opting-out-of-multitasking"></a>No participar en de multitarea
 
 Mientras Apple sugiere que todas las aplicaciones de iOS 9 admiten multitarea, es posible que motivos muy concretos para una aplicación no demasiado, por ejemplo, juegos o aplicaciones de cámara que requieren la pantalla completa para que funcione correctamente.
 
-Para que la aplicación de Xamarin.iOS a la cancelación de la que se va a ejecutar ya sea un diapositiva Out en el panel de o en modo de vista en dos paneles, edite el proyecto **Info.plist** de archivos y compruebe **pantalla completa requiere**:
+Para que la aplicación Xamarin.iOS para no participar en la que se va a ejecutar ya sea un diapositiva Out en el panel de o en modo de vista en dos paneles, edite el proyecto **Info.plist** de archivos y compruebe **pantalla completa requiere**:
 
-[![](multitasking-images/fullscreen01.png "Fuera de la aceptación de multitarea")](multitasking-images/fullscreen01.png#lightbox)
+[![](multitasking-images/fullscreen01.png "No participar en de multitarea")](multitasking-images/fullscreen01.png#lightbox)
 
 > [!IMPORTANT]
-> **Nota:** mientras Opting horizontal de multitarea impide que la aplicación se ejecuta en la diapositiva Out o vista en dos paneles, lo hace **no** evitar que otra aplicación se ejecuten en la diapositiva Out o una imagen de vídeo de la imagen de mostrar junto con su aplicación.
-
-
-
+> Mientras optar multitarea, impide que la aplicación se ejecuta en la diapositiva Out o vista en dos paneles, no impide otra aplicación no se ejecuten en la diapositiva Out o una imagen en la imagen de vídeo desde mostrar junto con la aplicación.
 
 <a name="Disabling-PIP-Video-Playback" />
 
@@ -243,7 +240,7 @@ Para que la aplicación de Xamarin.iOS a la cancelación de la que se va a ejecu
 
 En la mayoría de los casos, la aplicación debe permitir al usuario jugar cualquier contenido de vídeo que muestra una imagen en la ventana flotante de imagen. Sin embargo, puede haber situaciones donde esto no se podría desear, como vídeos de juego escena Cortar.
 
-Para la desactivación de reproducción de vídeo de PIP, realice lo siguiente en la aplicación:
+Para no participar en la reproducción de vídeo de PIP, realice lo siguiente en la aplicación:
 
  - Si usas un `AVPlayerViewController` para mostrar el vídeo, establezca el `AllowsPictureInPicturePlayback` propiedad `false`.
  - Si usas el `AVPlayerLayer` para mostrar el vídeo, no crear una instancia de un `AVPictureInPictureController`.

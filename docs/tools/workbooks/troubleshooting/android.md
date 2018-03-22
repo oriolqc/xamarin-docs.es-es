@@ -6,11 +6,11 @@ ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: eb188abb3e757f6f66af7758ced311ae1236d3ce
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 530abec733ec1d842559bf9c898217a8e45465aa
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>Solución de problemas de los libros de Xamarin en Android
 
@@ -25,7 +25,8 @@ Debe tener un emulador que ejecuta Android 5.0 o posterior. No se admiten los em
 
 Lea [nuestra documentación sobre la configuración de emuladores de Android] [ android-emu] si no está familiarizado con el proceso.
 
-**Nota:** libros 1.1 y versiones anteriores se intente (y producirá un error) para usar los emuladores ARM si están disponibles. Para solucionar esto, emulador inicio el x86 de su elección antes de abrir o crear un libro de Android. Los libros preferirán siempre para conectarse a un emulador en ejecución, siempre que sea compatible.
+> [!NOTE]
+> Libros 1.1 y versiones anteriores se intente (y producirá un error) para usar los emuladores ARM si están disponibles. Para solucionar esto, emulador inicio el x86 de su elección antes de abrir o crear un libro de Android. Los libros preferirán siempre para conectarse a un emulador en ejecución, siempre que sea compatible.
 
 ## <a name="workbooks-wont-load"></a>No se pudo cargar los libros
 
@@ -33,7 +34,7 @@ Lea [nuestra documentación sobre la configuración de emuladores de Android] [ 
 
 En primer lugar, compruebe que el emulador tenga acceso a la red totalmente operativa mediante la comprobación de cualquier sitio Web en el Explorador de web el emulador de Windows.
 
-### <a name="visual-studio-android-emulator-cannot-connect-to-internet"></a>Emulador de Android de Visual Studio no se puede conectar a internet
+### <a name="visual-studio-android-emulator-cannot-connect-to-the-internet"></a>Emulador de Android de Visual Studio no se puede conectar a internet
 
 Si el emulador no tiene acceso a la red, debe seguir estos pasos para corregir el conmutador de red de Hyper-V. Si cambia entre redes Wi-Fi con frecuencia debe repetir periódicamente:
 

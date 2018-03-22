@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/07/2017
-ms.openlocfilehash: 20e8d843b73fca5eb49da21a7f834ebbb52f4aa9
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 6d1401728c1063ce09c5848865e4c9b3fe7687d7
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Envía de forma remota iOS Simulator (para Windows)
 
@@ -25,7 +25,7 @@ _Probar y depurar aplicaciones de iOS completamente dentro de Visual Studio en W
 Descargue el [installer](https://dl.xamarin.com/xamarin-simulator/Xamarin.Simulator.Installer.msi) e instalar en el equipo de Windows. Ya se debe instalar Visual Studio Tools para Xamarin.
 
 > [!NOTE]
-> Uso remoto de iOS simulador requiere Visual Studio un Mac conectado en red con Xamarin instalado.
+> Usar un simulador de iOS remoto en Visual Studio, requiere un Mac conectado en red con Xamarin instalado.
 
 ## <a name="getting-started"></a>Introducción
 

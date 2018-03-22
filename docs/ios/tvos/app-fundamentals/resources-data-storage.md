@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 768ee4a2f33475b5327bf9c0fd006f1da580d836
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e72c013516de5bcf97e2e9f58a7a4f5cd87c730b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="resources-and-data-storage"></a>Recursos y el almacenamiento de datos
 
@@ -35,7 +35,7 @@ Cada aplicación tvOS se proporciona un directorio de caché temporal que se des
 Como resultado, la aplicación no puede confiar en que están disponibles la próxima vez que se inicia el contenido descargado previamente. La aplicación Xamarin.tvOS siempre debe comprobar la existencia de los recursos necesarios y descargarlos según sea necesario.
 
 > [!IMPORTANT]
-> **Nota:** mientras tiene la capacidad para descargar otros activos y recursos según sea necesario, Apple advierte de consumir todo el espacio en memoria caché de la aplicación, ya que puede provocar resultados imprevisibles.
+> Mientras tiene la capacidad para descargar otros activos y recursos según sea necesario, Apple advierte de consumir todo el espacio en memoria caché de la aplicación, ya que puede provocar resultados imprevisibles.
 
 
 
@@ -70,7 +70,7 @@ Pueden seguir estos recursos en la caché de la televisión de Apple a lo largo 
 Utilice Xcode para crear paquetes de contenido relacionado (por ejemplo, todos los activos de juego nivel 2) asociados a una determinada etiqueta de recurso. Más adelante la aplicación solicitará recursos a petición mediante la especificación de esta etiqueta de recurso. La aplicación debe presentar una interfaz de usuario para el usuario que indica que el contenido se descarga. Para obtener más información, vea de Apple [Guía de recursos a petición](https://developer.apple.com/library/prerelease/tvos/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/index.html#//apple_ref/doc/uid/TP40015083).
 
 > [!IMPORTANT]
-> **Nota:** debe tener cuidado para lograr el equilibrio adecuado entre el número de veces que la aplicación tiene que descargar los recursos a petición y el tamaño de las descargas individuales. Usuario puede quedar frustrado con la aplicación si juega se interrumpe constantemente para descargar contenido nuevo o si una única descarga tarda demasiado tiempo.
+> Debe tener cuidado para lograr el equilibrio adecuado entre el número de veces que la aplicación tiene que descargar los recursos a petición y el tamaño de las descargas individuales. Usuario puede quedar frustrado con la aplicación si juega se interrumpe constantemente para descargar contenido nuevo o si una única descarga tarda demasiado tiempo.
 
 
 

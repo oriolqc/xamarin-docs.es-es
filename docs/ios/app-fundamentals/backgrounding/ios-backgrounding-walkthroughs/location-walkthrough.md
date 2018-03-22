@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: b10894d6b18d78d682825000726c5ef2cbe5ba6b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dfae07d36c67c12d254cd70c22acb01b2fc1c9b0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="walkthrough---using-background-location"></a>Tutorial: con la ubicación de fondo
 
@@ -79,7 +79,7 @@ En este tutorial se explica algunos clave backgrounding conceptos, como registra
     - `AllowsBackgroundLocationUpdates` : Es una propiedad booleana, introducida en iOS 9 que se pueden establecer para permitir que una aplicación recibir actualizaciones de ubicación cuando suspende.
 
     > [!IMPORTANT]
-    > **ADVERTENCIA**: iOS 8 (y versiones posteriores) también requiere una entrada en el **Info.plist** archivo para mostrar al usuario como parte de la solicitud de autorización.
+    > iOS 8 (y versiones posteriores) también requiere una entrada en el **Info.plist** archivo para mostrar al usuario como parte de la solicitud de autorización.
 
 1. Agregar una clave `NSLocationAlwaysUsageDescription` o `NSLocationWhenInUseUsageDescription` con una cadena que se mostrará al usuario en la alerta que solicita acceso a datos de ubicación.
 

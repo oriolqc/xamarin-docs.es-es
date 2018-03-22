@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/25/2017
-ms.openlocfilehash: 7329e8ddb5b86adcf6e1efaa805149012be8853c
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1dbff32b113bd1c3a6b2058a34c73977c59c9e5
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-xamarinmac-works"></a>Cómo funciona Xamarin.Mac
 
@@ -109,7 +109,7 @@ AOT está habilitada en Xamarin.Mac haciendo doble clic en el **nombre del proye
 ![Agregar AOT a argumentos adicionales mmp](how-it-works-images/aot01.png "agregar AOT a argumentos de mmp adicionales")
 
 > [!IMPORTANT]
-> ¡¡ADVERTENCIA! Habilitar AOT compilación aumenta en gran medida el tiempo de compilación, a veces hasta varios minutos, pero puede mejorar los tiempos de inicio de aplicaciones por un promedio del 20%. Como resultado, compilación AOT sólo debe habilitarse en **versión** la compilación de una aplicación Xamarin.Mac.
+> Habilitar AOT compilación aumenta en gran medida el tiempo de compilación, a veces hasta varios minutos, pero puede mejorar los tiempos de inicio de aplicaciones por un promedio del 20%. Como resultado, compilación AOT sólo debe habilitarse en **versión** la compilación de una aplicación Xamarin.Mac.
 
 ### <a name="aot-compilation-options"></a>Opciones de compilación de AOT
 
@@ -155,7 +155,7 @@ El registrador de estático parcial está habilitado en Xamarin.Mac haciendo dob
 Estas son algunas explicaciones más detalladas de cómo funcionan internamente las cosas:
 
 - [Selectores de Objective-c.](~/ios/internals/objective-c-selectors.md)
-- [Registrar](~/ios/internals/registrar.md)
+- [Registrador](~/ios/internals/registrar.md)
 - [API unificada de Xamarin para iOS y OS X](~/cross-platform/macios/unified/index.md)
 - [Conceptos básicos de theading](~/ios/app-fundamentals/threading.md)
 - [Delegados, protocolos y eventos](~/ios/app-fundamentals/delegates-protocols-and-events.md)

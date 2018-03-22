@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: e20c9f068fe92e0dd711e0c20d31d713a0d03f0d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 46a0920efc8d80db7f3783654630f65086907f50
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="advanced-user-notifications"></a>Notificaciones de usuario avanzado
 
@@ -145,7 +145,7 @@ Además de las notificaciones remoto presentado anteriormente, también se admit
 Notificación de iOS 10 admite datos adjuntos de multimedia de imágenes (estático y formato GIF), audio o vídeo y el sistema, mostrará automáticamente la interfaz de usuario correcto para cada uno de estos tipos de datos adjuntos cuando se presenta la notificación al usuario.
 
 > [!NOTE]
-> **Nota:** debe tener cuidado para optimizar el tamaño medio y el tiempo necesario para descargar lo archivos multimedia desde el servidor remoto (o para ensamblar los medios para las notificaciones Local) como el sistema impone límites estrictos tanto al ejecutar el servicio de la aplicación Extensión. Por ejemplo, considere la posibilidad de enviar una versión escalada hacia abajo de la imagen o un clip pequeño de un vídeo se muestre en la notificación.
+> Debe tener cuidado para optimizar el tamaño medio y el tiempo necesario para descargar lo archivos multimedia desde el servidor remoto (o para ensamblar los medios para las notificaciones Local) como el sistema impone límites estrictos tanto cuando se ejecuta la extensión de servicio de la aplicación. Por ejemplo, considere la posibilidad de enviar una versión escalada hacia abajo de la imagen o un clip pequeño de un vídeo se muestre en la notificación.
 
 ## <a name="creating-custom-user-interfaces"></a>Crear Interfaces de usuario personalizadas
 
@@ -299,7 +299,7 @@ En el caso de que la interfaz de usuario de notificación personalizada va a mos
 Para diseñar la interfaz de usuario personalizada de la extensión de contenido notificación, haga doble clic en el `MainInterface.storyboard` arrastre el archivo que se abre para su edición en el Diseñador de iOS en los elementos que necesita para compilar la interfaz deseada (como `UILabels` y `UIImageViews`).
 
 > [!NOTE]
-> **Nota:** does de la interfaz de usuario de notificación _no_ admite controles interactivos como campos de texto o botones en una extensión de contenido de notificación. Mientras se pueden agregar al guión gráfico, el usuario no podrá interactuar con ellos. Para agregar la interacción del usuario a una interfaz de usuario de notificación personalizada, utilice en su lugar las acciones personalizadas.
+> La interfaz de usuario de notificación _no_ admite controles interactivos como campos de texto o botones en una extensión de contenido de notificación. Mientras se pueden agregar al guión gráfico, el usuario no podrá interactuar con ellos. Para agregar la interacción del usuario a una interfaz de usuario de notificación personalizada, utilice en su lugar las acciones personalizadas.
 
 Una vez que se ha diseñado la interfaz de usuario y los controles necesarios se exponen al código de C#, abra el `NotificationViewController.cs` para su edición y modificar el `DidReceiveNotification` método para rellenar la interfaz de usuario cuando el usuario expande la notificación. Por ejemplo:
 

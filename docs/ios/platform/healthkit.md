@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3e21794c9f1d8f010ec323774bc93987f4b89e1d
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: e7075b67db94b6bf603bd96c637c9f7724ae1519
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -43,7 +43,7 @@ Para completar los pasos presentados en este artículo se necesita lo siguiente:
 - **iOS 8 (o posterior) dispositivo** : un dispositivo iOS ejecutando la última versión de iOS 8 o superior para las pruebas.
 
 > [!IMPORTANT]
-> **Nota:** Kit de mantenimiento se introdujo en iOS 8. Actualmente, el Kit de mantenimiento no está disponible en el simulador de iOS y depuración requiere conexión a un dispositivo de E/s físicas.
+> Kit de mantenimiento se introdujo en iOS 8. Actualmente, el Kit de mantenimiento no está disponible en el simulador de iOS y depuración requiere conexión a un dispositivo de E/s físicas.
 
 
 
@@ -216,7 +216,7 @@ El trabajo de `ValidateAuthorization()` consiste en generar el conjunto de `HKOb
 El `ReactToHealthCarePermissions()` devolución de llamada que se llamará cuando el usuario ha interactuado con el cuadro de diálogo de permisos y se pasa dos piezas de información: un `bool` valor que será `true` si el usuario ha interactuado con el cuadro de diálogo de permisos y un `NSError`que, si no es null, indica algún tipo de error asociado a presentar el cuadro de diálogo de permisos.
 
 > [!IMPORTANT]
-> **Nota:** que ser claros sobre los argumentos a esta función: el _correcto_ y _error_ parámetros no indican si el usuario tiene permiso para tener acceso a datos del Kit de mantenimiento. Sólo indican que el usuario tiene la posibilidad de permitir el acceso a los datos.
+> Para ser claros sobre los argumentos a esta función: el _correcto_ y _error_ parámetros no indican si el usuario tiene permiso para tener acceso a datos de estado Kit! Sólo indican que el usuario tiene la posibilidad de permitir el acceso a los datos.
 
 Para confirmar si la aplicación tiene acceso a los datos, el `HKHealthStore.GetAuthorizationStatus()` se utiliza, pasando `HKQuantityTypeIdentifierKey.HeartRate`. Según el estado devuelto, la aplicación habilita o deshabilita la capacidad para escribir datos. No hay ninguna experiencia de usuario estándar para tratar una denegación de acceso y hay muchas opciones posibles. En la aplicación de ejemplo, el estado se establece en un `HeartRateModel` objeto singleton que, a su vez, provoca los eventos relevantes.
 
@@ -404,7 +404,7 @@ El simulador de iOS no es compatible con el Kit de mantenimiento. Depuración de
 Conectar un dispositivo de desarrollo correctamente aprovisionados iOS 8 para el sistema. Seleccione como el destino de implementación en Visual Studio para Mac y en el menú elija **ejecutar > depurar**.
 
 > [!IMPORTANT]
-> **Nota:** errores relacionados con el aprovisionamiento se detectarán en este momento. Para solucionar errores, revise la creación y el aprovisionamiento de una sección de aplicación del Kit de estado anterior. Los componentes son: 
+> En este momento se producirá errores relacionados con el aprovisionamiento. Para solucionar errores, revise la creación y el aprovisionamiento de una sección de aplicación del Kit de estado anterior. Los componentes son: 
 >
 > - **Centro de desarrollo de iOS** -Id. de aplicación explícita & Kit de mantenimiento Habilitar perfil de aprovisionamiento. 
 > - **Opciones de proyecto** -identificador de paquete (ID de aplicación explícita) & perfil de aprovisionamiento.

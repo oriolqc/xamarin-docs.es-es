@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 3e3d1663e07b16721d1aa7253e7d0150a609718e
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 927a77d5671e877e93e5375b61220ac595891179
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-icons-and-images"></a>Trabajar con iconos e imágenes
 
@@ -28,7 +28,7 @@ Crear atractivas iconos e imágenes son una parte fundamental del desarrollo de 
 - [Configurar imágenes de proyecto Xamarin.tvOS](#Setting-Xamarin.tvOS-Project-Images) -se describen los pasos necesarios para configurar la imagen de inicio y el icono de la aplicación para la aplicación Xamarin.tvOS.
 
 > [!IMPORTANT]
-> **Nota:** todas las imágenes en Apple TV están en la resolución de 1 x (`@1x`) y debe _sólo_ utilizar imágenes de este tamaño. Incluir más grandes, gráficos de mayor resolución no solo tardan tiempo en descargar y usar más memoria y almacenamiento, pero tiene que ser vuelve a escalar dinámicamente en tiempo de ejecución y afectará negativamente al rendimiento del dibujo.
+> Todas las imágenes en Apple TV están en la resolución de 1 x (`@1x`) y debe _sólo_ utilizar imágenes de este tamaño. Incluir más grandes, gráficos de mayor resolución no solo tardan tiempo en descargar y usar más memoria y almacenamiento, pero tiene que ser vuelve a escalar dinámicamente en tiempo de ejecución y afectará negativamente al rendimiento del dibujo.
 
 <a name="Launch-Image" />
 
@@ -79,7 +79,7 @@ Contienen imágenes con capas de dos (2) a cinco (5) separar las capas que se co
 [![](icons-images-images/layered01.png "Diagrama de ordenada Z de imágenes en capas")](icons-images-images/layered01.png#lightbox)
 
 > [!IMPORTANT]
-> **Nota:** imágenes en capas son necesarias para los iconos de la aplicación y son opcionales para otros [elementos puede recibir el foco](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (por ejemplo, la imagen de estante superior). Sin embargo, Apple sugiere utilizando imágenes en capas para cualquier imagen que puede recibir el foco de la aplicación.
+> Imágenes en capas son necesarias para los iconos de la aplicación y son opcionales para otros [elementos puede recibir el foco](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (por ejemplo, la imagen de estante superior). Sin embargo, Apple sugiere utilizando imágenes en capas para cualquier imagen que puede recibir el foco de la aplicación.
 
 
 

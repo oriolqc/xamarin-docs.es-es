@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 77808ae03f5801dd3628b8966e05a574b8501f37
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 60b2e6fa65226631fe2d2c847a56852ac9ae63d2
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="unified-storyboards"></a>Guiones gráficos unificados
 
@@ -581,7 +581,7 @@ El Diseñador de iOS confirmará que el desarrollador desea convertir el formato
  [![](unified-storyboards-images/sizeclass02.png "El uso de alerta de clases de tamaño")](unified-storyboards-images/sizeclass02.png#lightbox)
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: diseño automático también debe comprobarse para que las clases de tamaño para que funcione correctamente.
+> También se debe proteger el diseño automático para que las clases de tamaño para que funcione correctamente.
 
 ### <a name="generic-device-types"></a>Tipos de dispositivos genéricos
 
@@ -630,7 +630,7 @@ Vea la sección de la clase de tamaño de este artículo para obtener más infor
 Si el programador ha utilizado guiones gráficos antes, estará familiarizados con los tipos de segue existentes de **Push**, **Modal** y **Popover**. Cuando están habilitadas las clases de tamaño en un archivo de guión gráfico unificado, los siguientes adaptable desplazará tranquilamente tipos (que corresponde a la nueva API de controlador de vista descritos anteriormente) se ponen a disposición: **mostrar** y **mostrar detalle** .
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: clases de tamaño cuando están habilitadas, cualquier existente segues will se convierten a los nuevos tipos.
+> Cuando se habilitan las clases de tamaño, cualquier existente segues will se convierten a los nuevos tipos.
 
 Tome como ejemplo un iOS 8 aplicación que utiliza un guión gráfico unificado con un controlador de vista de división que tiene un menú de navegación de juego sencillo en la vista maestra. Si el usuario hace clic en un botón de menú, se debe mostrar controlador de vista del elemento seleccionado en la sección de detalles del controlador de vista de división cuando se ejecuta en un iPad. En un iPhone View Controller del elemento se deben insertar en la pila de navegación.
 

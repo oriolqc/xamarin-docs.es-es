@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 48b8d1cf8e6242fde632bceec5d482f53037a954
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d2f14510e5968ebe24bd297365416fa8aa5a0c59
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="updating-existing-xamarinforms-apps"></a>Actualizar aplicaciones existentes de Xamarin.Forms
 
@@ -196,7 +196,7 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
 
 En ocasiones, verá un error similar al siguiente después de actualizar el paquete Xamarin.Forms NuGet. Se produce cuando el actualizador de NuGet no quita por completo las referencias a las versiones anteriores de sus **csproj** archivos.
 
->SU\_PROJECT.csproj: Error: este proyecto hace referencia a los paquetes de NuGet que faltan en este equipo. Habilitar la restauración de paquetes de NuGet para descargarlos.  Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es... /.. /Packages/Xamarin.Forms.1.2.3.6257/Build/Portable-Win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets. (EL\_PROYECTO)
+>SU\_PROJECT.csproj: Error: este proyecto hace referencia a los paquetes de NuGet que faltan en este equipo. Habilitar la restauración de paquetes de NuGet para descargarlos.  Para obtener más información, consulta http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es... /.. /Packages/Xamarin.Forms.1.2.3.6257/Build/Portable-Win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets. (EL\_PROYECTO)
 
 Para corregir estos errores, abra la **csproj** un archivo en un editor de texto y busque `<Target` elementos que hacen referencia a las versiones anteriores de Xamarin.Forms, como el elemento que se muestra a continuación. Debe eliminar manualmente este elemento completo desde el **csproj** de archivo y guardar los cambios.
 
@@ -226,7 +226,7 @@ Mientras se han contribuido cambios de NuGet para que funcione con la compatibil
 Hasta ese momento, igual que los componentes, debe cambiar los paquetes de NuGet se han incluido en el proyecto a una versión que admite las API unificada y realice una compilación limpia posteriormente.
 
 > [!IMPORTANT]
-> **Nota:** si hay un error en el formulario _"Error 3 no puede incluir 'monotouch.dll' y 'Xamarin.iOS.dll' en el mismo proyecto de Xamarin.iOS: 'Xamarin.iOS.dll' hace referencia explícitamente, mientras que se hace referencia a 'monotouch.dll' por ' xxx, Versión = 0.0.000, Culture = neutral, PublicKeyToken = null'"_ después de convertir la aplicación a las API unificado, suele ser debido a que un componente o un paquete de NuGet en el proyecto que no se ha actualizado a la API unificada. Debe quitar el componente/NuGet existente, actualice a una versión que admite las API unificada y realice una compilación limpia.
+> Si hay un error en el formulario _"Error 3 no puede incluir 'monotouch.dll' y 'Xamarin.iOS.dll' en el mismo proyecto de Xamarin.iOS: 'Xamarin.iOS.dll' hace referencia explícitamente, mientras que se hace referencia a 'monotouch.dll' por ' xxx, versión = 0.0.000, Referencia cultural = neutral, PublicKeyToken = null'"_ después de convertir la aplicación a las API unificado, suele ser debido a que un componente o un paquete de NuGet en el proyecto que no se ha actualizado a la API unificada. Debe quitar el componente/NuGet existente, actualice a una versión que admite las API unificada y realice una compilación limpia.
 
 ## <a name="enabling-64-bit-builds-of-xamarinios-apps"></a>Habilitación de 64 bits la compilación de Xamarin.iOS aplicaciones
 

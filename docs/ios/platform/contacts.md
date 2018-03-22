@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 996723db83a1f972cce26090d1253f97b6c818d3
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0a9b9651a735ef4300e19f5ccb231a616850d970
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="contacts-and-contactsui"></a>Contactos y ContactsUI
 
@@ -30,7 +30,7 @@ Los dos marcos nuevo contienen la siguiente funcionalidad:
 [![](contacts-images/add01.png "Un ejemplo de la hoja de contactos en un dispositivo iOS")](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
-> **Nota:** existente `AddressBook` y `AddressBookUI` marcos usando iOS 8 (y versiones anteriores) han quedado obsoletas en iOS 9 y debe reemplazarse por el nuevo `Contacts` y `ContactsUI` marcos tan pronto como sea posible para cualquier Xamarin.iOS existente aplicación. Nuevas aplicaciones deben escribirse en los marcos de nuevo.
+> Existente `AddressBook` y `AddressBookUI` marcos usando iOS 8 (y versiones anteriores) han quedado obsoletas en iOS 9 y debe reemplazarse por el nuevo `Contacts` y `ContactsUI` marcos tan pronto como sea posible para cualquier aplicación Xamarin.iOS existente. Nuevas aplicaciones deben escribirse en los marcos de nuevo.
 
 
 
@@ -144,7 +144,7 @@ var predicate = CNContact.GetPredicateForContacts("Appleseed");
 ```
 
 > [!IMPORTANT]
-> **Nota:** genérico y predicados compuestos no son compatibles con el marco de trabajo de contactos.
+> Predicados compuestos y no genéricos no se admiten el marco de trabajo de contactos.
 
 Por ejemplo, para limitar la búsqueda solamente para la **GivenName** y **FamilyName** propiedades del contacto, utilice el código siguiente:
 
@@ -190,7 +190,7 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 ```
 
 > [!IMPORTANT]
-> **Nota:** el `GetUnifiedContact` y `GetUnifiedContacts` métodos de la `CNContactStore` clase _sólo_ devolver un contacto parcial limitado a las propiedades solicitadas de las claves de recuperación proporcionadas.
+> El `GetUnifiedContact` y `GetUnifiedContacts` métodos de la `CNContactStore` clase _sólo_ devolver un contacto parcial limitado a las propiedades solicitadas de las claves de recuperación proporcionadas.
 
 ### <a name="unified-contacts"></a>Contactos unificadas
 

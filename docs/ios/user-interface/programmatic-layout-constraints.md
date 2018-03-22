@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 4a3450026eff06555723b16093c7a0daf3d12ae7
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 774d6e6ecdb081650c6f008b1ac83c397f788d5b
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="programmatic-layout-constraints"></a>Restricciones de diseño mediante programación
 
@@ -43,7 +43,7 @@ En las siguientes secciones tratará cada opción detalladamente.
 Mediante el uso de la `NSLayoutAnchor` (clase), tiene una interfaz fluida para crear restricciones basadas en las propiedades de anclaje de los elementos de interfaz de usuario que se restringe. Por ejemplo, expone las guías de diseño de parte superior e inferior de un controlador Vista la `TopAnchor`, `BottomAnchor` y `HeightAnchor` propiedades de anclaje mientras una vista expone las propiedades de borde, el centro, el tamaño y línea de base.
 
 > [!IMPORTANT]
-> **Nota:** además del conjunto estándar de propiedades del delimitador, vistas de iOS también incluyen la `LayoutMarginsGuides` y `ReadableContentGuide` propiedades. Estas propiedades exponen `UILayoutGuide` objetos para trabajar con los márgenes de la vista y legibles contenido guías respectivamente.
+> Además del conjunto estándar de propiedades del delimitador, vistas de iOS también incluyen la `LayoutMarginsGuides` y `ReadableContentGuide` propiedades. Estas propiedades exponen `UILayoutGuide` objetos para trabajar con los márgenes de la vista y legibles contenido guías respectivamente.
 
 Delimitadores de diseño proporcionan varios métodos para crear restricciones en un formato fácil de leer y compacto:
 
