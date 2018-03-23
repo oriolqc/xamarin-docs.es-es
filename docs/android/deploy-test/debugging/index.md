@@ -1,22 +1,22 @@
 ---
-title: "Depuración"
-description: "Cómo probar y depurar la aplicación de Xamarin.Android"
+title: Depuración
+description: Cómo probar y depurar la aplicación de Xamarin.Android
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A355A471-8195-4391-93FE-0000BCB17923
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: feb35c041349f3ce78490c8a2fc6a829f9d84a6d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/16/2018
+ms.openlocfilehash: 61d7bb1b84b225146c5ebc67e9dc89b2b17a8c21
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="debugging"></a>Depuración
 
-## <a name="debuggin-overview"></a>Información general sobre Debuggin
+## <a name="debugging-overview"></a>Información general sobre depuración
 
 Para desarrollar una aplicación de Android es necesario ejecutarla, ya sea en un hardware físico o en un emulador o simulador. El uso de hardware es el mejor enfoque, pero no siempre es el más práctico. En muchos casos, puede resultar más sencillo y rentable simular o emular el hardware de Android mediante uno de los emuladores que se describen a continuación.
 

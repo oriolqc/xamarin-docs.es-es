@@ -1,6 +1,6 @@
 ---
-title: "Solución de problemas de conexión"
-description: "En esta guía se proporcionan los pasos necesarios para solucionar los problemas que se pueden producir al usar el nuevo administrador de conexiones, incluidos los problemas de conectividad y SSH."
+title: Solución de problemas de conexión
+description: En esta guía se proporcionan los pasos necesarios para solucionar los problemas que se pueden producir al usar el nuevo administrador de conexiones, incluidos los problemas de conectividad y SSH.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1508A15-1997-4562-B537-E4A9F3DD1F06
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ffa61004bdaaaaf400f5e0d5ed90b4e6b1dcb7e7
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: d33f4ba5512985d62575885d44fdcebced8b61ed
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="connection-troubleshooting"></a>Solución de problemas de conexión
 
@@ -72,26 +72,34 @@ El host de compilación de Xamarin de versiones anteriores de Xamarin.iOS ya no 
 
 7. Una vez que haya confirmado la dirección IP del equipo Mac, intente hacer `ping` a esa dirección en `cmd.exe` en Windows:
 
-        ping 10.1.8.95
-
+    ```
+    ping 10.1.8.95
+    ```
+    
     Si se produce un error al hacer ping, significa que el equipo Mac no es _enrutable_ desde el equipo Windows. Deberá resolver ese problema en la configuración de red de área local entre los dos equipos. Asegúrese de que ambas máquinas estén en la misma red local.
 
 8. Después, pruebe si el cliente `ssh` OpenSSH puede conectarse correctamente al equipo Mac desde Windows. Una manera de instalar este programa consiste en instalar [Git para Windows](https://git-for-windows.github.io/). Luego, puede iniciar un símbolo del sistema **Git Bash** e intentar conectarlo mediante `ssh` al equipo Mac con su nombre de usuario y dirección IP:
 
-        ssh amyb@10.1.8.95
-
+    ```bash
+    ssh amyb@10.1.8.95
+    ```
+    
 <a name="stepnine" />
 
 9. Si **el paso 8 se realiza correctamente**, puede intentar ejecutar un comando simple como `ls` en la conexión:
 
-        ssh amyb@10.1.8.95 'ls'
-
+    ```bash
+    ssh amyb@10.1.8.95 'ls'
+    ```
+    
     Esto debería mostrar el contenido de su directorio particular en el equipo Mac. Si el comando `ls` funciona correctamente pero la conexión de Visual Studio sigue sin funcionar, puede comprobar la sección titulada [Problemas y limitaciones conocidos](#knownissues) sobre problemas específicos de Xamarin. Si ninguna descripción coincide con su problema, [registre un nuevo informe de errores](https://bugzilla.xamarin.com/newbug) y adjunte los registros que se indican en la sección titulada [Compruebe los archivos de registro detallado](#verboselogs).
 
 10. Si **se produce un error en el paso 8**, puede ejecutar el comando siguiente en Terminal en el equipo Mac para ver si el servidor SSH acepta _alguna_ conexión:
 
-        ssh localhost
-
+    ```bash
+    ssh localhost
+    ```
+    
 11. Si se produce un error en el paso 8 pero **el paso 10 se realiza correctamente**, lo más probable es que el problema se deba a que el puerto 22 del host de compilación de Mac no es accesible desde Windows debido a la configuración de red. Entre los posibles problemas de configuración se incluyen los siguientes:
 
     - La configuración del firewall de OS X no permite la conexión. Asegúrese de comprobar de nuevo el paso 3.
@@ -161,8 +169,10 @@ Causas notificadas:
 
     5. Agregue la línea siguiente en la parte inferior del archivo:
 
-            UseDNS no
-
+        ```
+        UseDNS no
+        ```
+        
     6. Quite las líneas que contengan `UseDNS yes` para asegurarse de que la nueva configuración surta efecto.
 
     7. Guarde el archivo.
@@ -179,16 +189,20 @@ Si los archivos de registro muestran un problema durante los pasos de instalaci�
 
 1. En el equipo Mac, ejecute el comando siguiente en Terminal:
 
-        open "$HOME/Library/Caches/Xamarin"
-
+    ```bash
+    open "$HOME/Library/Caches/Xamarin"
+    ```
+    
 2. Pulse la tecla Control y haga clic en la carpeta **XMA** y, después, seleccione **Mover a la papelera**:
 
     [![](troubleshooting-images/troubleshooting-image8.png "Mover la carpeta XMA a la Papelera")](troubleshooting-images/troubleshooting-image8.png#lightbox)
 
 3. También puede resultar útil borrar una caché que hay en Windows. Abra un símbolo del sistema como administrador en Windows:
 
-        del %localappdata%\Temp\Xamarin\XMA
-
+    ```
+    del %localappdata%\Temp\Xamarin\XMA
+    ```
+    
 ## <a name="warning-messages"></a>Mensajes de advertencia
 
 En esta sección se describen algunos de los mensajes que pueden aparecer en las ventanas de salida y los registros y que normalmente se pueden pasar por alto.
@@ -230,7 +244,7 @@ Si la ventana de salida no incluye suficiente información para diagnosticar el 
 1. Inicie Visual Studio.
 
     > [!IMPORTANT]
->  Tenga en cuenta que **.svclogs** no está habilitado de forma predeterminada. Para tener acceso, necesitará iniciar Visual Studio con registros detallados, como se explica en la guía [Registros de versión](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs). Para obtener más información, vea el blog [Troubleshooting Extensions with the Activity Log](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/) (Solución de problemas de las extensiones con el registro de actividad).
+    > Tenga en cuenta que **.svclogs** no está habilitado de forma predeterminada. Para tener acceso, necesitará iniciar Visual Studio con registros detallados, como se explica en la guía [Registros de versión](~/cross-platform/troubleshooting/questions/version-logs.md#visual-studio-startup-verbose-logs). Para obtener más información, vea el blog [Troubleshooting Extensions with the Activity Log](https://blogs.msdn.microsoft.com/visualstudio/2010/02/24/troubleshooting-extensions-with-the-activity-log/) (Solución de problemas de las extensiones con el registro de actividad).
 
 2. Intente conectarse al host de compilación.
 
@@ -272,7 +286,7 @@ Si los archivos de registro normales todavía no proporcionan suficiente informa
 
     ```bash
     grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"
-    ```
+   ```
 
 Si estos archivos de registro detallado no proporcionan suficiente información para solucionar el problema directamente, [registre un nuevo informe de errores](https://bugzilla.xamarin.com/newbug) y adjunte el archivo .zip del paso 5 y el archivo .log del paso 6.
 

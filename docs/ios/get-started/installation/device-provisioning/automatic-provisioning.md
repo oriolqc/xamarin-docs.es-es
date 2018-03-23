@@ -1,6 +1,6 @@
 ---
-title: "Aprovisionamiento automático"
-description: "Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el desarrollo de iOS consiste en aprovisionar el dispositivo iOS. En esta guía se analiza el uso de la firma automática en Visual Studio para Mac para solicitar certificados de desarrollo y perfiles."
+title: Aprovisionamiento automático
+description: Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el desarrollo de iOS consiste en aprovisionar el dispositivo iOS. En esta guía se analiza el uso de la firma automática en Visual Studio para Mac para solicitar certificados de desarrollo y perfiles.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 11/17/2017
-ms.openlocfilehash: a411c214e35f78ff9d3dd8d4e9122702d66a2156
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 271d9e3f7ae04f03a132ae2fd0ebf531fe52578c
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="automatic-provisioning"></a>Aprovisionamiento automático
 
@@ -24,7 +24,7 @@ _Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el 
 - Xcode 9 o posterior
 
 > [!IMPORTANT]
->  En esta guía se indica cómo se usa Visual Studio para Mac para configurar un dispositivo de Apple para la implementación y cómo se implementa una aplicación. Para conocer los pasos manuales del proceso, también en el caso de Visual Studio para Windows, se recomienda seguir los pasos detallados que encontrará en el [manual de aprovisionamiento](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
+> En esta guía se indica cómo se usa Visual Studio para Mac para configurar un dispositivo de Apple para la implementación y cómo se implementa una aplicación. Para conocer los pasos manuales del proceso, también en el caso de Visual Studio para Windows, se recomienda seguir los pasos detallados que encontrará en el [manual de aprovisionamiento](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
 
 ## <a name="enabling-automatic-signing"></a>Habilitación de la firma automática
 

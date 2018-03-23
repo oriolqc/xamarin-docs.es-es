@@ -1,5 +1,5 @@
 ---
-title: "Inicio rápido de Xamarin.Forms"
+title: Inicio rápido de Xamarin.Forms
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 434a12c26a5823b082751c95c2090b22c39cf081
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5ee36d63e2751eb5d09ee526755d62dda4ef537e
+ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Inicio rápido de Xamarin.Forms
 
@@ -25,824 +25,857 @@ Cree la aplicación Phoneword de la siguiente forma:
 
 1. En la pantalla **Inicio**, inicie Visual Studio. Se abrirá la página de inicio:
 
-  ![](quickstart-images/vs/start-page.png "Visual Studio")
+    ![](quickstart-images/vs/start-page.png "Visual Studio")
 
-1. Para crear un proyecto, en Visual Studio, haga clic en **Crear nuevo proyecto...**:
+2. Para crear un proyecto, en Visual Studio, haga clic en **Crear nuevo proyecto...**:
 
-  ![](quickstart-images/vs/new-solution.png "Nuevo proyecto")
+    ![](quickstart-images/vs/new-solution.png "Nuevo proyecto")
 
-1. En el cuadro de diálogo **Nuevo proyecto**, haga clic en **Multiplataforma**, seleccione la plantilla **Aplicación multiplataforma (Xamarin.Forms)**, establezca el nombre y el nombre de la solución en `Phoneword`, elija una ubicación adecuada para el proyecto y haga clic en el botón **Aceptar**:
+3. En el cuadro de diálogo **Nuevo proyecto**, haga clic en **Multiplataforma**, seleccione la plantilla **Aplicación multiplataforma (Xamarin.Forms)**, establezca el nombre y el nombre de la solución en `Phoneword`, elija una ubicación adecuada para el proyecto y haga clic en el botón **Aceptar**:
 
-  ![](quickstart-images/vs/new-project.png "Plantillas de proyectos multiplataforma")
+    ![](quickstart-images/vs/new-project.png "Plantillas de proyectos multiplataforma")
 
-1. En el cuadro de diálogo **Nueva aplicación multiplataforma**, haga clic en **Aplicación en blanco**, seleccione **Xamarin.Forms** como tecnología de IU, seleccione **.NET Standard** como estrategia de código de uso compartido y, luego, haga clic en el botón **Aceptar**:
+4. En el cuadro de diálogo **Nueva aplicación multiplataforma**, haga clic en **Aplicación en blanco**, seleccione **Xamarin.Forms** como tecnología de IU, seleccione **.NET Standard** como estrategia de código de uso compartido y, luego, haga clic en el botón **Aceptar**:
 
-  ![](quickstart-images/vs/new-app.png "Nueva aplicación multiplataforma")
+    ![](quickstart-images/vs/new-app.png "Nueva aplicación multiplataforma")
 
-1. En el **Explorador de soluciones**, en el proyecto **Phoneword**, haga doble clic en **MainPage.xaml** para abrirlo:
+5. En el **Explorador de soluciones**, en el proyecto **Phoneword**, haga doble clic en **MainPage.xaml** para abrirlo:
 
-  ![](quickstart-images/vs/open-mainpage-xaml.png "Abrir MainPage.xaml")
+    ![](quickstart-images/vs/open-mainpage-xaml.png "Abrir MainPage.xaml")
 
-1. En **MainPage.xaml**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código define mediante declaración la interfaz de usuario de la página:
+6. En **MainPage.xaml**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código define mediante declaración la interfaz de usuario de la página:
 
-        <?xml version="1.0" encoding="UTF-8"?>
-        <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-                           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                           x:Class="Phoneword.MainPage">
-            <ContentPage.Padding>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="iOS" Value="20, 40, 20, 20" />
-                    <On Platform="Android, WinPhone, Windows" Value="20" />
-                </OnPlatform>
-            </ContentPage.Padding>
-            <StackLayout>
-              <Label Text="Enter a Phoneword:" />
-              <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
-              <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
-              <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
-            </StackLayout>
-        </ContentPage>
+    ```xaml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       x:Class="Phoneword.MainPage">
+        <ContentPage.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="20, 40, 20, 20" />
+                <On Platform="Android, WinPhone, Windows" Value="20" />
+            </OnPlatform>
+        </ContentPage.Padding>
+        <StackLayout>
+          <Label Text="Enter a Phoneword:" />
+          <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
+          <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+          <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
+        </StackLayout>
+    </ContentPage>
+    ```
 
-  Guarde los cambios en **MainPage.xaml** presionando **CTRL+S** y cierre el archivo.
+    Guarde los cambios en **MainPage.xaml** presionando **CTRL+S** y cierre el archivo.
 
-1. En el **Explorador de soluciones**, expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo:
+7. En el **Explorador de soluciones**, expanda **MainPage.xaml** y haga doble clic en **MainPage.xaml.cs** para abrirlo:
 
-  ![](quickstart-images/vs/open-mainpage-codebehind.png "Abrir MainPage.xaml.cs")
+    ![](quickstart-images/vs/open-mainpage-codebehind.png "Abrir MainPage.xaml.cs")
 
-1. En **MainPage.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Los métodos `OnTranslate` y `OnCall` se ejecutarán como respuesta al clic en los botones **Traducir** y **Llamar** en la interfaz de usuario, respectivamente:
+8. En **MainPage.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Los métodos `OnTranslate` y `OnCall` se ejecutarán como respuesta al clic en los botones **Traducir** y **Llamar** en la interfaz de usuario, respectivamente:
 
-        using System;
-        using Xamarin.Forms;
+    ```csharp
+    using System;
+    using Xamarin.Forms;
 
-        namespace Phoneword
+    namespace Phoneword
+    {
+        public partial class MainPage : ContentPage
         {
-            public partial class MainPage : ContentPage
+            string translatedNumber;
+
+            public MainPage ()
             {
-                string translatedNumber;
+                InitializeComponent ();
+            }
 
-                public MainPage ()
-                {
-                    InitializeComponent ();
+            void OnTranslate (object sender, EventArgs e)
+            {
+                translatedNumber = Core.PhonewordTranslator.ToNumber (phoneNumberText.Text);
+                if (!string.IsNullOrWhiteSpace (translatedNumber)) {
+                    callButton.IsEnabled = true;
+                    callButton.Text = "Call " + translatedNumber;
+                } else {
+                    callButton.IsEnabled = false;
+                    callButton.Text = "Call";
                 }
+            }
 
-                void OnTranslate (object sender, EventArgs e)
-                {
-                    translatedNumber = Core.PhonewordTranslator.ToNumber (phoneNumberText.Text);
-                    if (!string.IsNullOrWhiteSpace (translatedNumber)) {
-                        callButton.IsEnabled = true;
-                        callButton.Text = "Call " + translatedNumber;
-                    } else {
-                        callButton.IsEnabled = false;
-                        callButton.Text = "Call";
-                    }
-                }
-
-                async void OnCall (object sender, EventArgs e)
-                {
-                    if (await this.DisplayAlert (
-                            "Dial a Number",
-                            "Would you like to call " + translatedNumber + "?",
-                            "Yes",
-                            "No")) {
-                        var dialer = DependencyService.Get<IDialer> ();
-                        if (dialer != null)
-                            dialer.Dial (translatedNumber);
-                    }
+            async void OnCall (object sender, EventArgs e)
+            {
+                if (await this.DisplayAlert (
+                        "Dial a Number",
+                        "Would you like to call " + translatedNumber + "?",
+                        "Yes",
+                        "No")) {
+                    var dialer = DependencyService.Get<IDialer> ();
+                    if (dialer != null)
+                        dialer.Dial (translatedNumber);
                 }
             }
         }
+    }
+    ```
 
-  > [!NOTE]
-  > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán más adelante.
+    > [!NOTE]
+    > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán más adelante.
 
-  Guarde los cambios en **MainPage.xaml.cs** presionando **CTRL+S** y cierre el archivo.
+    Guarde los cambios en **MainPage.xaml.cs** presionando **CTRL+S** y cierre el archivo.
 
-1. En el **Explorador de soluciones**, expanda **App.xaml** y haga doble clic en **App.xaml.cs** para abrirlo:
+9. En el **Explorador de soluciones**, expanda **App.xaml** y haga doble clic en **App.xaml.cs** para abrirlo:
 
-  ![](quickstart-images/vs/open-app-class.png "Abrir App.xaml.cs")
+    ![](quickstart-images/vs/open-app-class.png "Abrir App.xaml.cs")
 
-1. En **App.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. El constructor `App` establece la clase `MainPage` como la página que se muestra cuando se inicia la aplicación:
+10. En **App.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. El constructor `App` establece la clase `MainPage` como la página que se muestra cuando se inicia la aplicación:
 
-        using Xamarin.Forms;
-        using Xamarin.Forms.Xaml;
+    ```csharp
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
 
-        [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-        namespace Phoneword
+    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+    namespace Phoneword
+    {
+        public partial class App : Application
         {
-            public partial class App : Application
+            public App()
             {
-                public App()
-                {
-                    InitializeComponent();
-                    MainPage = new MainPage();
-                }
+                InitializeComponent();
+                MainPage = new MainPage();
+            }
 
-                protected override void OnStart()
-                {
-                    // Handle when your app starts
-                }
+            protected override void OnStart()
+            {
+                // Handle when your app starts
+            }
 
-                protected override void OnSleep()
-                {
-                    // Handle when your app sleeps
-                }
+            protected override void OnSleep()
+            {
+                // Handle when your app sleeps
+            }
 
-                protected override void OnResume()
-                {
-                    // Handle when your app resumes
-                }
+            protected override void OnResume()
+            {
+                // Handle when your app resumes
             }
         }
+    }
+    ```
 
-  Guarde los cambios en **App.xaml.cs** presionando **CTRL+S** y cierre el archivo.
+    Guarde los cambios en **App.xaml.cs** presionando **CTRL+S** y cierre el archivo.
 
-1. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword** y seleccione **Agregar > Nuevo elemento...**:
+11. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword** y seleccione **Agregar > Nuevo elemento...**:
 
-  ![](quickstart-images/vs/add-new-item.png "Agregar nuevo elemento")
+    ![](quickstart-images/vs/add-new-item.png "Agregar nuevo elemento")
 
-1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Código > Clase**, asigne al nuevo archivo el nombre **PhoneTranslator** y haga clic en el botón **Agregar**:
+12. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Código > Clase**, asigne al nuevo archivo el nombre **PhoneTranslator** y haga clic en el botón **Agregar**:
 
-  ![](quickstart-images/vs/add-translator-class.png "Agregar nueva clase")
+    ![](quickstart-images/vs/add-translator-class.png "Agregar nueva clase")
 
-1. En **PhoneTranslator.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código convertirá una palabra del teléfono en un número de teléfono:
+13. En **PhoneTranslator.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código convertirá una palabra del teléfono en un número de teléfono:
 
-        using System.Text;
+    ```csharp
+    using System.Text;
 
-        namespace Core
+    namespace Core
+    {
+        public static class PhonewordTranslator
         {
-            public static class PhonewordTranslator
+            public static string ToNumber(string raw)
             {
-                public static string ToNumber(string raw)
-                {
-                    if (string.IsNullOrWhiteSpace(raw))
-                        return null;
-
-                    raw = raw.ToUpperInvariant();
-
-                    var newNumber = new StringBuilder();
-                    foreach (var c in raw)
-                    {
-                        if (" -0123456789".Contains(c))
-                            newNumber.Append(c);
-                        else
-                        {
-                            var result = TranslateToNumber(c);
-                            if (result != null)
-                                newNumber.Append(result);
-                            // Bad character?
-                            else
-                                return null;
-                        }
-                    }
-                    return newNumber.ToString();
-                }
-
-                static bool Contains(this string keyString, char c)
-                {
-                    return keyString.IndexOf(c) >= 0;
-                }
-
-                static readonly string[] digits = {
-                    "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"
-                };
-
-                static int? TranslateToNumber(char c)
-                {
-                    for (int i = 0; i < digits.Length; i++)
-                    {
-                        if (digits[i].Contains(c))
-                            return 2 + i;
-                    }
+                if (string.IsNullOrWhiteSpace(raw))
                     return null;
-                }
-            }
-        }
 
-  Guarde los cambios en **PhoneTranslator.cs** presionando **CTRL+S** y cierre el archivo.
+                raw = raw.ToUpperInvariant();
 
-1. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword** y seleccione **Agregar > Nuevo elemento...**:
-
-  ![](quickstart-images/vs/add-new-item.png "Agregar nuevo elemento")
-
-1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Código > Interfaz**, asigne al nuevo archivo el nombre **IDialer** y haga clic en el botón **Agregar**:
-
-  ![](quickstart-images/vs/add-idialer-interface.png "Agregar nueva interfaz")
-
-1. En **IDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código define un método `Dial` que se debe implementar en cada plataforma para marcar un número de teléfono convertido:
-
-        namespace Phoneword
-        {
-            public interface IDialer
-            {
-                bool Dial(string number);
-            }
-        }
-
-  Guarde los cambios en **IDialer.cs** presionando **CTRL+S** y cierre el archivo.
-
-  > [!NOTE]
-> El código común de la aplicación ya está completo. El código del marcador de teléfono específico de la plataforma se implementará como [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
-
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.iOS** y seleccione **Agregar > Nuevo elemento...**:
-
-  ![](quickstart-images/vs/add-new-item-ios.png "Agregar nuevo elemento")
-
-1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Apple > Código > Clase**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Agregar**:
-
-  ![](quickstart-images/vs/new-phone-dialer-ios.png "Agregar nueva clase")
-
-1. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método <code>Dial</code> que se usará en la plataforma iOS para marcar un número de teléfono convertido:
-
-        using Foundation;
-        using Phoneword.iOS;
-        using UIKit;
-        using Xamarin.Forms;
-
-        [assembly: Dependency(typeof(PhoneDialer))]
-        namespace Phoneword.iOS
-        {
-            public class PhoneDialer : IDialer
-            {
-                public bool Dial(string number)
+                var newNumber = new StringBuilder();
+                foreach (var c in raw)
                 {
-                    return UIApplication.SharedApplication.OpenUrl (
-                        new NSUrl ("tel:" + number));
-                }
-            }
-        }
-
-  Guarde los cambios en **PhoneDialer.cs** presionando **CTRL+S** y cierre el archivo.
-
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.Android** y seleccione **Agregar > Nuevo elemento...**:
-
-  ![](quickstart-images/vs/add-new-item-android.png "Agregar nuevo elemento")
-
-1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Android > Clase**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Agregar**:
-
-  ![](quickstart-images/vs/new-phone-dialer-android.png "Agregar nueva clase")
-
-1. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método `Dial` que se usará en la plataforma Android para marcar un número de teléfono convertido:
-
-        using Android.Content;
-        using Android.Telephony;
-        using Phoneword.Droid;
-        using System.Linq;
-        using Xamarin.Forms;
-        using Uri = Android.Net.Uri;
-
-        [assembly: Dependency(typeof(PhoneDialer))]
-        namespace Phoneword.Droid
-        {
-            public class PhoneDialer : IDialer
-            {
-                public bool Dial(string number)
-                {
-                    var context = MainActivity.Instance;
-                    if (context == null)
-                        return false;
-
-                    var intent = new Intent (Intent.ActionCall);
-                    intent.SetData (Uri.Parse ("tel:" + number));
-
-                    if (IsIntentAvailable (context, intent)) {
-                        context.StartActivity (intent);
-                        return true;
-                    }
-
-                    return false;
-                }
-
-                public static bool IsIntentAvailable(Context context, Intent intent)
-                {
-                    var packageManager = context.PackageManager;
-
-                    var list = packageManager.QueryIntentServices (intent, 0)
-                        .Union (packageManager.QueryIntentActivities (intent, 0));
-
-                    if (list.Any ())
-                        return true;
-
-                    var manager = TelephonyManager.FromContext (context);
-                    return manager.PhoneType != PhoneType.None;
-                }
-            }
-        }
-
-  Guarde los cambios en **PhoneDialer.cs** presionando **CTRL+S** y cierre el archivo.
-
-1. En el **Explorador de soluciones**, en el proyecto **Phoneword.Android**, haga doble clic en **MainActivity.cs** para abrirlo, quite todo el código de la plantilla y reemplácelo por el siguiente:
-
-        using Android.App;
-        using Android.Content.PM;
-        using Android.OS;
-
-        namespace Phoneword.Droid
-        {
-            [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-            public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-            {
-                internal static MainActivity Instance { get; private set; }
-
-                protected override void OnCreate(Bundle bundle)
-                {
-                    TabLayoutResource = Resource.Layout.Tabbar;
-                    ToolbarResource = Resource.Layout.Toolbar;
-
-                    base.OnCreate(bundle);
-
-                    Instance = this;
-                    global::Xamarin.Forms.Forms.Init(this, bundle);
-                    LoadApplication(new App());
-                }
-            }
-        }  
-
-  Guarde los cambios en **MainActivity.cs** presionando **Ctrl+S** y cierre el archivo.
-
-1. En el **Explorador de soluciones**, en el proyecto **Phoneword.Android**, haga doble clic en **Propiedades** y seleccione la pestaña **Manifiesto de Android**:
-
-  ![](quickstart-images/vs/android-manifest.png "Abrir el manifiesto de Android")
-
-1. En la sección **Permisos necesarios**, habilite el permiso **CALL_PHONE**. Esto da permiso a la aplicación para realizar una llamada telefónica:
-
-  ![](quickstart-images/vs/android-manifest-changed.png "Habilitar el permiso CallPhone")
-
-  Guarde los cambios en el manifiesto presionando **CTRL+S** y cierre el archivo.
-
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.UWP** y seleccione **Agregar > Nuevo elemento...**:
-
-  ![](quickstart-images/vs/add-new-item-uwp.png "Agregar nuevo elemento")
-
-1. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Código > Clase**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Agregar**:
-
-  ![](quickstart-images/vs/new-phone-dialer-uwp.png "Agregar nueva clase")
-
-1. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método `Dial`, y los métodos auxiliares, que se usarán en la Plataforma universal de Windows para marcar un número de teléfono convertido:
-
-        using Phoneword.UWP;
-        using System;
-        using System.Threading.Tasks;
-        using Windows.ApplicationModel.Calls;
-        using Windows.UI.Popups;
-        using Xamarin.Forms;
-
-        [assembly: Dependency(typeof(PhoneDialer))]
-        namespace Phoneword.UWP
-        {
-            public class PhoneDialer : IDialer
-            {
-                bool dialled = false;
-
-                public bool Dial(string number)
-                {
-                    DialNumber(number);
-                    return dialled;
-                }
-
-                async Task DialNumber(string number)
-                {
-                    var phoneLine = await GetDefaultPhoneLineAsync();
-                    if (phoneLine != null)
-                    {
-                        phoneLine.Dial(number, number);
-                        dialled = true;
-                    }
+                    if (" -0123456789".Contains(c))
+                        newNumber.Append(c);
                     else
                     {
-                        var dialog = new MessageDialog("No line found to place the call");
-                        await dialog.ShowAsync();
-                        dialled = false;
+                        var result = TranslateToNumber(c);
+                        if (result != null)
+                            newNumber.Append(result);
+                        // Bad character?
+                        else
+                            return null;
                     }
                 }
+                return newNumber.ToString();
+            }
 
-                async Task<PhoneLine> GetDefaultPhoneLineAsync()
+            static bool Contains(this string keyString, char c)
+            {
+                return keyString.IndexOf(c) >= 0;
+            }
+
+            static readonly string[] digits = {
+                "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"
+            };
+
+            static int? TranslateToNumber(char c)
+            {
+                for (int i = 0; i < digits.Length; i++)
                 {
-                    var phoneCallStore = await PhoneCallManager.RequestStoreAsync();
-                    var lineId = await phoneCallStore.GetDefaultLineAsync();
-                    return await PhoneLine.FromIdAsync(lineId);
+                    if (digits[i].Contains(c))
+                        return 2 + i;
                 }
+                return null;
             }
         }
+    }
+    ```
 
-  Guarde los cambios en **PhoneDialer.cs** presionando **CTRL+S** y cierre el archivo.
+    Guarde los cambios en **PhoneTranslator.cs** presionando **CTRL+S** y cierre el archivo.
 
-1. En el **Explorador de soluciones**, en el proyecto **Phoneword.UWP**, haga clic con el botón derecho en **Referencias** y seleccione **Agregar referencia...**:
+14. En **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword** y seleccione **Agregar > Nuevo elemento...**:
 
-  ![](quickstart-images/vs/uwp-add-reference.png "Agregar referencia")
+    ![](quickstart-images/vs/add-new-item.png "Agregar nuevo elemento")
 
-1. En el cuadro de diálogo **Administrador de referencias**, seleccione **Windows universal > Extensiones > Windows Mobile Extensions for UWP** y haga clic en el botón **Aceptar**:
+15. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Código > Interfaz**, asigne al nuevo archivo el nombre **IDialer** y haga clic en el botón **Agregar**:
 
-  ![](quickstart-images/vs/uwp-add-reference-extensions.png "Agregar extensiones de Windows Mobile para UWP")
+    ![](quickstart-images/vs/add-idialer-interface.png "Agregar nueva interfaz")
 
-1. En el **Explorador de soluciones**, en el proyecto **Phoneword.UWP**, haga doble clic en **Package.appxmanifest**:
+16. En **IDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código define un método `Dial` que se debe implementar en cada plataforma para marcar un número de teléfono convertido:
 
-  ![](quickstart-images/vs/uwp-manifest.png "Abrir el manifiesto de UWP")
+    ```csharp
+    namespace Phoneword
+    {
+        public interface IDialer
+        {
+            bool Dial(string number);
+        }
+    }
+    ```
 
-1. En la página **Capacidades**, habilite la capacidad **Llamada telefónica**. Esto da permiso a la aplicación para realizar una llamada telefónica:
+    Guarde los cambios en **IDialer.cs** presionando **CTRL+S** y cierre el archivo.
 
-  ![](quickstart-images/vs/uwp-manifest-changed.png "Habilitar la funcionalidad de llamada de teléfono")
+    > [!NOTE]
+    > El código común de la aplicación ya está completo. El código del marcador de teléfono específico de la plataforma se implementará como [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
-  Guarde los cambios en el manifiesto presionando **CTRL+S** y cierre el archivo.
+17. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.iOS** y seleccione **Agregar > Nuevo elemento...**:
 
-1. En Visual Studio, seleccione el elemento de menú **Compilación > Compilar solución** (o pulse **CTRL+MAYÚS+B**). La aplicación se compilará y aparecerá un mensaje de éxito en la barra de estado de Visual Studio:
+    ![](quickstart-images/vs/add-new-item-ios.png "Agregar nuevo elemento")
 
-  ![](quickstart-images/vs/build-successful.png "Compilación correcta")
+18. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Apple > Código > Clase**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Agregar**:
 
-  Si hay errores, repita los pasos anteriores y corrija cualquier error hasta que la aplicación se compile correctamente.
+    ![](quickstart-images/vs/new-phone-dialer-ios.png "Agregar nueva clase")
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.UWP** y seleccione **Establecer como proyecto de inicio**:
+19. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método <code>Dial</code> que se usará en la plataforma iOS para marcar un número de teléfono convertido:
 
-  ![](quickstart-images/vs/uwp-set-as-startup-project.png "Establecer como proyecto de inicio")
+    ```csharp
+    using Foundation;
+    using Phoneword.iOS;
+    using UIKit;
+    using Xamarin.Forms;
 
-1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación:
+    [assembly: Dependency(typeof(PhoneDialer))]
+    namespace Phoneword.iOS
+    {
+        public class PhoneDialer : IDialer
+        {
+            public bool Dial(string number)
+            {
+                return UIApplication.SharedApplication.OpenUrl (
+                    new NSUrl ("tel:" + number));
+            }
+        }
+    }
+    ```
 
-  ![](quickstart-images/vs/start.png "Barra de herramientas de Visual Studio")
-  ![](quickstart-images/vs/phone-result-uwp.png "Aplicación Phoneword.UWP")
+    Guarde los cambios en **PhoneDialer.cs** presionando **CTRL+S** y cierre el archivo.
 
-1. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.Android** y seleccione **Establecer como proyecto de inicio**.
-1. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular que parece un botón de reproducción) para iniciar la aplicación en un emulador de Android.
-1. Si tiene un dispositivo iOS y cumple los requisitos de sistema de Mac para el desarrollo de Xamarin.Forms, use una técnica similar para implementar la aplicación en el dispositivo iOS. Otra opción es implementar la aplicación en el [simulador remoto iOS](~/tools/ios-simulator.md).
+20. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.Android** y seleccione **Agregar > Nuevo elemento...**:
 
-  Nota: No se admiten las llamadas de teléfono en ningún simulador.
+    ![](quickstart-images/vs/add-new-item-android.png "Agregar nuevo elemento")
+
+21. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Android > Clase**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Agregar**:
+
+    ![](quickstart-images/vs/new-phone-dialer-android.png "Agregar nueva clase")
+
+22. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método `Dial` que se usará en la plataforma Android para marcar un número de teléfono convertido:
+
+    ```csharp
+    using Android.Content;
+    using Android.Telephony;
+    using Phoneword.Droid;
+    using System.Linq;
+    using Xamarin.Forms;
+    using Uri = Android.Net.Uri;
+
+    [assembly: Dependency(typeof(PhoneDialer))]
+    namespace Phoneword.Droid
+    {
+        public class PhoneDialer : IDialer
+        {
+            public bool Dial(string number)
+            {
+                var context = MainActivity.Instance;
+                if (context == null)
+                    return false;
+
+                var intent = new Intent (Intent.ActionCall);
+                intent.SetData (Uri.Parse ("tel:" + number));
+
+                if (IsIntentAvailable (context, intent)) {
+                    context.StartActivity (intent);
+                    return true;
+                }
+
+                return false;
+            }
+
+            public static bool IsIntentAvailable(Context context, Intent intent)
+            {
+                var packageManager = context.PackageManager;
+
+                var list = packageManager.QueryIntentServices (intent, 0)
+                    .Union (packageManager.QueryIntentActivities (intent, 0));
+
+                if (list.Any ())
+                    return true;
+
+                var manager = TelephonyManager.FromContext (context);
+                return manager.PhoneType != PhoneType.None;
+            }
+        }
+    }
+    ```
+
+    Guarde los cambios en **PhoneDialer.cs** presionando **CTRL+S** y cierre el archivo.
+
+23. En el **Explorador de soluciones**, en el proyecto **Phoneword.Android**, haga doble clic en **MainActivity.cs** para abrirlo, quite todo el código de la plantilla y reemplácelo por el siguiente:
+
+    ```csharp
+    using Android.App;
+    using Android.Content.PM;
+    using Android.OS;
+
+    namespace Phoneword.Droid
+    {
+        [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+        {
+            internal static MainActivity Instance { get; private set; }
+
+            protected override void OnCreate(Bundle bundle)
+            {
+                TabLayoutResource = Resource.Layout.Tabbar;
+                ToolbarResource = Resource.Layout.Toolbar;
+
+                base.OnCreate(bundle);
+
+                Instance = this;
+                global::Xamarin.Forms.Forms.Init(this, bundle);
+                LoadApplication(new App());
+            }
+        }
+    }  
+    ```
+
+    Guarde los cambios en **MainActivity.cs** presionando **Ctrl+S** y cierre el archivo.
+
+24. En el **Explorador de soluciones**, en el proyecto **Phoneword.Android**, haga doble clic en **Propiedades** y seleccione la pestaña **Manifiesto de Android**:
+
+    ![](quickstart-images/vs/android-manifest.png "Abrir el manifiesto de Android")
+
+25. En la sección **Permisos necesarios**, habilite el permiso **CALL_PHONE**. Esto da permiso a la aplicación para realizar una llamada telefónica:
+
+    ![](quickstart-images/vs/android-manifest-changed.png "Habilitar el permiso CallPhone")
+
+    Guarde los cambios en el manifiesto presionando **CTRL+S** y cierre el archivo.
+
+26. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.UWP** y seleccione **Agregar > Nuevo elemento...**:
+
+    ![](quickstart-images/vs/add-new-item-uwp.png "Agregar nuevo elemento")
+
+27. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Código > Clase**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Agregar**:
+
+    ![](quickstart-images/vs/new-phone-dialer-uwp.png "Agregar nueva clase")
+
+28. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método `Dial`, y los métodos auxiliares, que se usarán en la Plataforma universal de Windows para marcar un número de teléfono convertido:
+
+    ```csharp
+    using Phoneword.UWP;
+    using System;
+    using System.Threading.Tasks;
+    using Windows.ApplicationModel.Calls;
+    using Windows.UI.Popups;
+    using Xamarin.Forms;
+
+    [assembly: Dependency(typeof(PhoneDialer))]
+    namespace Phoneword.UWP
+    {
+        public class PhoneDialer : IDialer
+        {
+            bool dialled = false;
+
+            public bool Dial(string number)
+            {
+                DialNumber(number);
+                return dialled;
+            }
+
+            async Task DialNumber(string number)
+            {
+                var phoneLine = await GetDefaultPhoneLineAsync();
+                if (phoneLine != null)
+                {
+                    phoneLine.Dial(number, number);
+                    dialled = true;
+                }
+                else
+                {
+                    var dialog = new MessageDialog("No line found to place the call");
+                    await dialog.ShowAsync();
+                    dialled = false;
+                }
+            }
+
+            async Task<PhoneLine> GetDefaultPhoneLineAsync()
+            {
+                var phoneCallStore = await PhoneCallManager.RequestStoreAsync();
+                var lineId = await phoneCallStore.GetDefaultLineAsync();
+                return await PhoneLine.FromIdAsync(lineId);
+            }
+        }
+    }
+    ```
+
+    Guarde los cambios en **PhoneDialer.cs** presionando **CTRL+S** y cierre el archivo.
+
+29. En el **Explorador de soluciones**, en el proyecto **Phoneword.UWP**, haga clic con el botón derecho en **Referencias** y seleccione **Agregar referencia...**:
+
+    ![](quickstart-images/vs/uwp-add-reference.png "Agregar referencia")
+
+30. En el cuadro de diálogo **Administrador de referencias**, seleccione **Windows universal > Extensiones > Windows Mobile Extensions for UWP** y haga clic en el botón **Aceptar**:
+
+    ![](quickstart-images/vs/uwp-add-reference-extensions.png "Agregar extensiones de Windows Mobile para UWP")
+
+31. En el **Explorador de soluciones**, en el proyecto **Phoneword.UWP**, haga doble clic en **Package.appxmanifest**:
+
+    ![](quickstart-images/vs/uwp-manifest.png "Abrir el manifiesto de UWP")
+
+31. En la página **Capacidades**, habilite la capacidad **Llamada telefónica**. Esto da permiso a la aplicación para realizar una llamada telefónica:
+
+    ![](quickstart-images/vs/uwp-manifest-changed.png "Habilitar la funcionalidad de llamada de teléfono")
+
+    Guarde los cambios en el manifiesto presionando **CTRL+S** y cierre el archivo.
+
+32. En Visual Studio, seleccione el elemento de menú **Compilación > Compilar solución** (o pulse **CTRL+MAYÚS+B**). La aplicación se compilará y aparecerá un mensaje de éxito en la barra de estado de Visual Studio:
+
+    ![](quickstart-images/vs/build-successful.png "Compilación correcta")
+
+    Si hay errores, repita los pasos anteriores y corrija cualquier error hasta que la aplicación se compile correctamente.
+
+33. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.UWP** y seleccione **Establecer como proyecto de inicio**:
+
+    ![](quickstart-images/vs/uwp-set-as-startup-project.png "Establecer como proyecto de inicio")
+
+34. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación:
+
+    ![](quickstart-images/vs/start.png "Barra de herramientas de Visual Studio")
+    ![](quickstart-images/vs/phone-result-uwp.png "Aplicación Phoneword.UWP")
+
+35. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.Android** y seleccione **Establecer como proyecto de inicio**.
+36. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular que parece un botón de reproducción) para iniciar la aplicación en un emulador de Android.
+37. Si tiene un dispositivo iOS y cumple los requisitos de sistema de Mac para el desarrollo de Xamarin.Forms, use una técnica similar para implementar la aplicación en el dispositivo iOS. Otra opción es implementar la aplicación en el [simulador remoto iOS](~/tools/ios-simulator.md).
+
+    Nota: No se admiten las llamadas de teléfono en ningún simulador.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. Para crear un nuevo proyecto, inicie Visual Studio para Mac y, en la página de inicio, haga clic en **Nuevo proyecto...**:
 
-  ![](quickstart-images/xs/new-solution.png "Nueva solución")
+    ![](quickstart-images/xs/new-solution.png "Nueva solución")
 
-1. En el cuadro de diálogo **Elija una plantilla para el nuevo proyecto**, haga clic en **Multiplataforma > Aplicación**, seleccione la plantilla **Aplicación de Forms en blanco** y haga clic en el botón **Siguiente**:
+2. En el cuadro de diálogo **Elija una plantilla para el nuevo proyecto**, haga clic en **Multiplataforma > Aplicación**, seleccione la plantilla **Aplicación de Forms en blanco** y haga clic en el botón **Siguiente**:
 
-  ![](quickstart-images/xs/choose-template.png "Elija una plantilla")
+    ![](quickstart-images/xs/choose-template.png "Elija una plantilla")
 
-1. En el cuadro de diálogo **Configurar su aplicación de Forms en blanco**, asígnele el nombre `Phoneword` a la nueva aplicación, asegúrese de que el botón de radio **Usar biblioteca de clases portable** y la casilla **Usar XAML para archivos de interfaz de usuario** estén activados, y haga clic en el botón **Siguiente**:
+3. En el cuadro de diálogo **Configurar su aplicación de Forms en blanco**, asígnele el nombre `Phoneword` a la nueva aplicación, asegúrese de que el botón de radio **Usar biblioteca de clases portable** y la casilla **Usar XAML para archivos de interfaz de usuario** estén activados, y haga clic en el botón **Siguiente**:
 
-  ![](quickstart-images/xs/configure-app.png "Configurar la aplicación de Forms")
+    ![](quickstart-images/xs/configure-app.png "Configurar la aplicación de Forms")
 
-1. En el cuadro de diálogo **Configurar su nueva aplicación de Forms en blanco**, deje los nombres de solución y proyecto establecidos en `Phoneword`, elija una ubicación adecuada para el proyecto y haga clic en el botón **Crear** para crear el proyecto:
+4. En el cuadro de diálogo **Configurar su nueva aplicación de Forms en blanco**, deje los nombres de solución y proyecto establecidos en `Phoneword`, elija una ubicación adecuada para el proyecto y haga clic en el botón **Crear** para crear el proyecto:
 
-  ![](quickstart-images/xs/configure-project.png "Configurar el proyecto de Forms")
+    ![](quickstart-images/xs/configure-project.png "Configurar el proyecto de Forms")
 
-1. En el **Panel de solución**, seleccione el proyecto **Phoneword**, haga clic con el botón derecho y seleccione **Agregar > Nuevo archivo...**:
+5. En el **Panel de solución**, seleccione el proyecto **Phoneword**, haga clic con el botón derecho y seleccione **Agregar > Nuevo archivo...**:
 
-  ![](quickstart-images/xs/add-new-file.png "Agregar nuevo archivo")
+    ![](quickstart-images/xs/add-new-file.png "Agregar nuevo archivo")
 
-1. En el cuadro de diálogo **Nuevo archivo**, seleccione **Formularios > Formularios ContentPage Xaml**, asígnele al nuevo archivo el nombre **MainPage** y haga clic en el botón **Nuevo**. Esto agregará una página denominada **MainPage** al proyecto:
+6. En el cuadro de diálogo **Nuevo archivo**, seleccione **Formularios > Formularios ContentPage Xaml**, asígnele al nuevo archivo el nombre **MainPage** y haga clic en el botón **Nuevo**. Esto agregará una página denominada **MainPage** al proyecto:
 
-  ![](quickstart-images/xs/add-mainpage-class.png "Agregar nueva ContentPage")
+    ![](quickstart-images/xs/add-mainpage-class.png "Agregar nueva ContentPage")
 
-1. En **Panel de solución**, haga doble clic en **MainPage.xaml** para abrirlo:
+7. En **Panel de solución**, haga doble clic en **MainPage.xaml** para abrirlo:
 
-  ![](quickstart-images/xs/open-mainpage-xaml.png "Abrir MainPage.xaml")
+    ![](quickstart-images/xs/open-mainpage-xaml.png "Abrir MainPage.xaml")
 
-1. En **MainPage.xaml**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código define mediante declaración la interfaz de usuario de la página:
+8. En **MainPage.xaml**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código define mediante declaración la interfaz de usuario de la página:
 
-        <?xml version="1.0" encoding="UTF-8"?>
-        <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-                           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                           x:Class="Phoneword.MainPage">
-            <ContentPage.Padding>
-                <OnPlatform x:TypeArguments="Thickness">
-                    <On Platform="iOS" Value="20, 40, 20, 20" />
-                    <On Platform="Android, WinPhone, Windows" Value="20" />
-                </OnPlatform>
-            </ContentPage.Padding>
-            <StackLayout>
-              <Label Text="Enter a Phoneword:" />
-              <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
-              <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
-              <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
-            </StackLayout>
-        </ContentPage>
+    ```xaml
+    <?xml version="1.0" encoding="UTF-8"?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                       x:Class="Phoneword.MainPage">
+        <ContentPage.Padding>
+            <OnPlatform x:TypeArguments="Thickness">
+                <On Platform="iOS" Value="20, 40, 20, 20" />
+                <On Platform="Android, WinPhone, Windows" Value="20" />
+            </OnPlatform>
+        </ContentPage.Padding>
+        <StackLayout>
+          <Label Text="Enter a Phoneword:" />
+          <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
+          <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+          <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
+        </StackLayout>
+    </ContentPage>
+    ```
 
-  Guarde los cambios en **MainPage.xaml** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
+    Guarde los cambios en **MainPage.xaml** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
 
-1. En el **Panel de solución**, haga doble clic en **MainPage.xaml.cs** para abrirlo:
+9. En el **Panel de solución**, haga doble clic en **MainPage.xaml.cs** para abrirlo:
 
-  ![](quickstart-images/xs/open-mainpage-codebehind.png "Abrir MainPage.xaml.cs")
+    ![](quickstart-images/xs/open-mainpage-codebehind.png "Abrir MainPage.xaml.cs")
 
-1. En **MainPage.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Los métodos `OnTranslate` y `OnCall` se ejecutarán como respuesta al clic en los botones **Traducir** y **Llamar** en la interfaz de usuario, respectivamente:
+10. En **MainPage.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Los métodos `OnTranslate` y `OnCall` se ejecutarán como respuesta al clic en los botones **Traducir** y **Llamar** en la interfaz de usuario, respectivamente:
 
-        using System;
-        using Xamarin.Forms;
+    ```csharp
+    using System;
+    using Xamarin.Forms;
 
-        namespace Phoneword
+    namespace Phoneword
+    {
+        public partial class MainPage : ContentPage
         {
-            public partial class MainPage : ContentPage
+            string translatedNumber;
+
+            public MainPage ()
             {
-                string translatedNumber;
+                InitializeComponent ();
+            }
 
-                public MainPage ()
-                {
-                    InitializeComponent ();
+            void OnTranslate (object sender, EventArgs e)
+            {
+                translatedNumber = Core.PhonewordTranslator.ToNumber (phoneNumberText.Text);
+                if (!string.IsNullOrWhiteSpace (translatedNumber)) {
+                    callButton.IsEnabled = true;
+                    callButton.Text = "Call " + translatedNumber;
+                } else {
+                    callButton.IsEnabled = false;
+                    callButton.Text = "Call";
                 }
+            }
 
-                void OnTranslate (object sender, EventArgs e)
-                {
-                    translatedNumber = Core.PhonewordTranslator.ToNumber (phoneNumberText.Text);
-                    if (!string.IsNullOrWhiteSpace (translatedNumber)) {
-                        callButton.IsEnabled = true;
-                        callButton.Text = "Call " + translatedNumber;
-                    } else {
-                        callButton.IsEnabled = false;
-                        callButton.Text = "Call";
-                    }
-                }
-
-                async void OnCall (object sender, EventArgs e)
-                {
-                    if (await this.DisplayAlert (
-                            "Dial a Number",
-                            "Would you like to call " + translatedNumber + "?",
-                            "Yes",
-                            "No")) {
-                        var dialer = DependencyService.Get<IDialer> ();
-                        if (dialer != null)
-                            dialer.Dial (translatedNumber);
-                    }
+            async void OnCall (object sender, EventArgs e)
+            {
+                if (await this.DisplayAlert (
+                        "Dial a Number",
+                        "Would you like to call " + translatedNumber + "?",
+                        "Yes",
+                        "No")) {
+                    var dialer = DependencyService.Get<IDialer> ();
+                    if (dialer != null)
+                        dialer.Dial (translatedNumber);
                 }
             }
         }
+    }
+    ```
 
-  > [!NOTE]
-  > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán más adelante.
+    > [!NOTE]
+    > Si intenta compilar la aplicación en este momento, se producirán errores que se corregirán más adelante.
 
-  Guarde los cambios en **MainPage.xaml.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
+    Guarde los cambios en **MainPage.xaml.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
 
-1. En el **Panel de solución**, haga doble clic en **App.xaml.cs** para abrirlo:
+11. En el **Panel de solución**, haga doble clic en **App.xaml.cs** para abrirlo:
 
-  ![](quickstart-images/xs/open-app-class.png "Abrir App.xaml.cs")
+    ![](quickstart-images/xs/open-app-class.png "Abrir App.xaml.cs")
 
-1. En **App.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. El constructor `App` establece la clase `MainPage` como la página que se muestra cuando se inicia la aplicación:
+12. En **App.xaml.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. El constructor `App` establece la clase `MainPage` como la página que se muestra cuando se inicia la aplicación:
 
-        using Xamarin.Forms;
-        using Xamarin.Forms.Xaml;
+    ```csharp
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
 
-        [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
-        namespace Phoneword
+    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+    namespace Phoneword
+    {
+        public partial class App : Application
         {
-            public partial class App : Application
+            public App()
             {
-                public App()
-                {
-                    InitializeComponent();
-                    MainPage = new MainPage();
-                }
+                InitializeComponent();
+                MainPage = new MainPage();
+            }
 
-                protected override void OnStart()
-                {
-                    // Handle when your app starts
-                }
+            protected override void OnStart()
+            {
+                // Handle when your app starts
+            }
 
-                protected override void OnSleep()
-                {
-                    // Handle when your app sleeps
-                }
+            protected override void OnSleep()
+            {
+                // Handle when your app sleeps
+            }
 
-                protected override void OnResume()
-                {
-                    // Handle when your app resumes
-                }
+            protected override void OnResume()
+            {
+                // Handle when your app resumes
             }
         }
+    }
+    ```
 
-  Guarde los cambios en **Phoneword.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
+    Guarde los cambios en **Phoneword.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
 
-1. En el **Panel de solución**, seleccione el proyecto **Phoneword**, haga clic con el botón derecho y seleccione **Agregar > Nuevo archivo...**:
+13. En el **Panel de solución**, seleccione el proyecto **Phoneword**, haga clic con el botón derecho y seleccione **Agregar > Nuevo archivo...**:
 
-  ![](quickstart-images/xs/add-new-translator-file.png "Agregar nuevo archivo")
+    ![](quickstart-images/xs/add-new-translator-file.png "Agregar nuevo archivo")
 
-1. En el cuadro de diálogo **Nuevo archivo**, seleccione **General > Clase vacía**, asigne al nuevo archivo el nombre **PhoneTranslator** y haga clic en el botón **Nuevo**:
+14. En el cuadro de diálogo **Nuevo archivo**, seleccione **General > Clase vacía**, asigne al nuevo archivo el nombre **PhoneTranslator** y haga clic en el botón **Nuevo**:
 
-  ![](quickstart-images/xs/add-translator-class.png "Agregar nueva clase")
+    ![](quickstart-images/xs/add-translator-class.png "Agregar nueva clase")
 
-1. En **PhoneTranslator.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código convertirá una palabra del teléfono en un número de teléfono:
+15. En **PhoneTranslator.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código convertirá una palabra del teléfono en un número de teléfono:
 
-        using System.Text;
+    ```csharp
+    using System.Text;
 
-        namespace Core
+    namespace Core
+    {
+        public static class PhonewordTranslator
         {
-            public static class PhonewordTranslator
+            public static string ToNumber(string raw)
             {
-                public static string ToNumber(string raw)
-                {
-                    if (string.IsNullOrWhiteSpace(raw))
-                        return null;
-
-                    raw = raw.ToUpperInvariant();
-
-                    var newNumber = new StringBuilder();
-                    foreach (var c in raw)
-                    {
-                        if (" -0123456789".Contains(c))
-                            newNumber.Append(c);
-                        else
-                        {
-                            var result = TranslateToNumber(c);
-                            if (result != null)
-                                newNumber.Append(result);
-                            // Bad character?
-                            else
-                                return null;
-                        }
-                    }
-                    return newNumber.ToString();
-                }
-
-                static bool Contains(this string keyString, char c)
-                {
-                    return keyString.IndexOf(c) >= 0;
-                }
-
-                static readonly string[] digits = {
-                    "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"
-                };
-
-                static int? TranslateToNumber(char c)
-                {
-                    for (int i = 0; i < digits.Length; i++)
-                    {
-                        if (digits[i].Contains(c))
-                            return 2 + i;
-                    }
+                if (string.IsNullOrWhiteSpace(raw))
                     return null;
-                }
-            }
-        }
 
-  Guarde los cambios en **PhoneTranslator.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
+                raw = raw.ToUpperInvariant();
 
-1. En el **Panel de solución**, seleccione el proyecto **Phoneword**, haga clic con el botón derecho y seleccione **Agregar > Nuevo archivo...**:
-
-  ![](quickstart-images/xs/add-new-interface.png "Agregar nuevo archivo")
-
-1. En el cuadro de diálogo **Nuevo archivo**, seleccione **General > Interfaz vacía**, asigne al nuevo archivo el nombre **IDialer** y haga clic en el botón **Nuevo**:
-
-  ![](quickstart-images/xs/add-idialer-interface.png "Agregar nueva interfaz")
-
-1. En **IDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código define un método `Dial` que se debe implementar en cada plataforma para marcar un número de teléfono convertido:
-
-        namespace Phoneword
-        {
-            public interface IDialer
-            {
-                bool Dial(string number);
-            }
-        }
-
-  Guarde los cambios en **IDialer.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
-
-  > [!NOTE]
-> El código común de la aplicación ya está completo. El código del marcador de teléfono específico de la plataforma se implementará como [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
-
-1. En el **Panel de solución**, seleccione el proyecto **Phoneword.iOS**, haga clic con el botón derecho y seleccione **Agregar > Nuevo archivo...**:
-
-  ![](quickstart-images/xs/add-new-file-ios.png "Agregar nuevo archivo")
-
-1. En el cuadro de diálogo **Nuevo archivo**, seleccione **General > Clase vacía**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Nuevo**:
-
-  ![](quickstart-images/xs/new-phonedialer-ios.png "Agregar nueva clase")
-
-1. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método `Dial` que se usará en la plataforma iOS para marcar un número de teléfono convertido:
-
-        using Foundation;
-        using Phoneword.iOS;
-        using UIKit;
-        using Xamarin.Forms;
-
-        [assembly: Dependency(typeof(PhoneDialer))]
-        namespace Phoneword.iOS
-        {
-            public class PhoneDialer : IDialer
-            {
-                public bool Dial(string number)
+                var newNumber = new StringBuilder();
+                foreach (var c in raw)
                 {
-                    return UIApplication.SharedApplication.OpenUrl (
-                        new NSUrl ("tel:" + number));
-                }
-            }
-        }
-
-  Guarde los cambios en **PhoneDialer.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
-
-1. En el **Panel de solución**, seleccione el proyecto **Phoneword.Droid**, haga clic con el botón derecho y seleccione **Agregar > Nuevo archivo...**:
-
-  ![](quickstart-images/xs/add-new-file-android.png "Agregar nuevo archivo")
-
-1. En el cuadro de diálogo **Nuevo archivo**, seleccione **General > Clase vacía**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Nuevo**:
-
-  ![](quickstart-images/xs/new-phonedialer-android.png "Agregar nueva clase")
-
-1. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método `Dial` que se usará en la plataforma Android para marcar un número de teléfono convertido:
-
-        using Android.Content;
-        using Android.Telephony;
-        using Phoneword.Droid;
-        using System.Linq;
-        using Xamarin.Forms;
-        using Uri = Android.Net.Uri;
-
-        [assembly: Dependency(typeof(PhoneDialer))]
-        namespace Phoneword.Droid
-        {
-            public class PhoneDialer : IDialer
-            {
-                public bool Dial(string number)
-                {
-                    var context = MainActivity.Instance;
-                    if (context == null)
-                        return false;
-
-                    var intent = new Intent (Intent.ActionCall);
-                    intent.SetData (Uri.Parse ("tel:" + number));
-
-                    if (IsIntentAvailable (context, intent)) {
-                        context.StartActivity (intent);
-                        return true;
+                    if (" -0123456789".Contains(c))
+                        newNumber.Append(c);
+                    else
+                    {
+                        var result = TranslateToNumber(c);
+                        if (result != null)
+                            newNumber.Append(result);
+                        // Bad character?
+                        else
+                            return null;
                     }
-
-                    return false;
                 }
+                return newNumber.ToString();
+            }
 
-                public static bool IsIntentAvailable(Context context, Intent intent)
+            static bool Contains(this string keyString, char c)
+            {
+                return keyString.IndexOf(c) >= 0;
+            }
+
+            static readonly string[] digits = {
+                "ABC", "DEF", "GHI", "JKL", "MNO", "PQRS", "TUV", "WXYZ"
+            };
+
+            static int? TranslateToNumber(char c)
+            {
+                for (int i = 0; i < digits.Length; i++)
                 {
-                    var packageManager = context.PackageManager;
-
-                    var list = packageManager.QueryIntentServices (intent, 0)
-                        .Union (packageManager.QueryIntentActivities (intent, 0));
-
-                    if (list.Any ())
-                        return true;
-
-                    var manager = TelephonyManager.FromContext (context);
-                    return manager.PhoneType != PhoneType.None;
+                    if (digits[i].Contains(c))
+                        return 2 + i;
                 }
+                return null;
             }
         }
+    }
+    ```
 
-  Guarde los cambios en **PhoneDialer.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
+    Guarde los cambios en **PhoneTranslator.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
 
-1. En el **Panel de solución**, en el proyecto **Phoneword.Droid**, haga doble clic en **MainActivity.cs** para abrirlo, quite todo el código de la plantilla y reemplácelo por el siguiente:
+16. En el **Panel de solución**, seleccione el proyecto **Phoneword**, haga clic con el botón derecho y seleccione **Agregar > Nuevo archivo...**:
 
-        using Android.App;
-        using Android.Content.PM;
-        using Android.OS;
+    ![](quickstart-images/xs/add-new-interface.png "Agregar nuevo archivo")
 
-        namespace Phoneword.Droid
+17. En el cuadro de diálogo **Nuevo archivo**, seleccione **General > Interfaz vacía**, asigne al nuevo archivo el nombre **IDialer** y haga clic en el botón **Nuevo**:
+
+    ![](quickstart-images/xs/add-idialer-interface.png "Agregar nueva interfaz")
+
+18. En **IDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código define un método `Dial` que se debe implementar en cada plataforma para marcar un número de teléfono convertido:
+
+    ```csharp
+    namespace Phoneword
+    {
+        public interface IDialer
         {
-            [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-            public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+            bool Dial(string number);
+        }
+    }
+    ```
+    Guarde los cambios en **IDialer.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
+
+    > [!NOTE]
+    > El código común de la aplicación ya está completo. El código del marcador de teléfono específico de la plataforma se implementará como [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
+
+19. En el **Panel de solución**, seleccione el proyecto **Phoneword.iOS**, haga clic con el botón derecho y seleccione **Agregar > Nuevo archivo...**:
+
+    ![](quickstart-images/xs/add-new-file-ios.png "Agregar nuevo archivo")
+
+20. En el cuadro de diálogo **Nuevo archivo**, seleccione **General > Clase vacía**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Nuevo**:
+
+    ![](quickstart-images/xs/new-phonedialer-ios.png "Agregar nueva clase")
+
+21. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método `Dial` que se usará en la plataforma iOS para marcar un número de teléfono convertido:
+
+    ```csharp
+    using Foundation;
+    using Phoneword.iOS;
+    using UIKit;
+    using Xamarin.Forms;
+
+    [assembly: Dependency(typeof(PhoneDialer))]
+    namespace Phoneword.iOS
+    {
+        public class PhoneDialer : IDialer
+        {
+            public bool Dial(string number)
             {
-                internal static MainActivity Instance { get; private set; }
-
-                protected override void OnCreate(Bundle bundle)
-                {
-                    TabLayoutResource = Resource.Layout.Tabbar;
-                    ToolbarResource = Resource.Layout.Toolbar;
-
-                    base.OnCreate(bundle);
-
-                    Instance = this;
-                    global::Xamarin.Forms.Forms.Init(this, bundle);
-                    LoadApplication(new App());
-                }
+                return UIApplication.SharedApplication.OpenUrl (
+                    new NSUrl ("tel:" + number));
             }
-        }        
+        }
+    }
+    ```
 
-  Guarde los cambios en **MainActivity.cs** en **Archivo > Guardar**, o bien presione **&#8984;+S** y cierre el archivo.
+    Guarde los cambios en **PhoneDialer.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
 
-1. En el **Panel de solución**, expanda la carpeta **Propiedades** y haga doble clic en el archivo **AndroidManifest.xml**:
+22. En el **Panel de solución**, seleccione el proyecto **Phoneword.Droid**, haga clic con el botón derecho y seleccione **Agregar > Nuevo archivo...**:
 
-  ![](quickstart-images/xs/android-manifest.png "Abrir el manifiesto de Android")
+    ![](quickstart-images/xs/add-new-file-android.png "Agregar nuevo archivo")
 
-1. En la sección **Permisos necesarios**, habilite el permiso **CallPhone**. Esto da permiso a la aplicación para realizar una llamada telefónica:
+23. En el cuadro de diálogo **Nuevo archivo**, seleccione **General > Clase vacía**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Nuevo**:
 
-  ![](quickstart-images/xs/android-manifest-changed.png "Habilitar el permiso CallPhone")
+    ![](quickstart-images/xs/new-phonedialer-android.png "Agregar nueva clase")
 
-  Guarde los cambios en **AndroidManifest.xml** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
+24. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método `Dial` que se usará en la plataforma Android para marcar un número de teléfono convertido:
 
-1. En el **Panel de solución**, quite la clase **PhonewordPage** del proyecto **Phoneword**. Esta página se agregó automáticamente al crear el proyecto y ya no es necesaria.
-1. En Visual Studio para Mac, seleccione el elemento de menú **Compilación > Compilar todo** (o pulse **&#8984; + B**). La aplicación se compilará y aparecerá un mensaje de éxito en la barra de herramientas de Visual Studio para Mac.
+    ```csharp
+    using Android.Content;
+    using Android.Telephony;
+    using Phoneword.Droid;
+    using System.Linq;
+    using Xamarin.Forms;
+    using Uri = Android.Net.Uri;
 
-  ![](quickstart-images/xs/build-successful.png "Compilación correcta")
+    [assembly: Dependency(typeof(PhoneDialer))]
+    namespace Phoneword.Droid
+    {
+        public class PhoneDialer : IDialer
+        {
+            public bool Dial(string number)
+            {
+                var context = MainActivity.Instance;
+                if (context == null)
+                    return false;
 
-1. Si hay errores, repita los pasos anteriores y corrija cualquier error hasta que la aplicación se compile correctamente.
-1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en el simulador de iOS:
+                var intent = new Intent (Intent.ActionCall);
+                intent.SetData (Uri.Parse ("tel:" + number));
 
-  ![](quickstart-images/xs/start.png "Barra de herramientas de Visual Studio para Mac")
-  ![](quickstart-images/xs/phoneword-result-ios.png "Simulador de iOS")
+                if (IsIntentAvailable (context, intent)) {
+                    context.StartActivity (intent);
+                    return true;
+                }
 
-  Nota: No se admiten llamadas de teléfono en el simulador de iOS.
+                return false;
+            }
 
-1. En el **Panel de solución**, seleccione el proyecto **Phoneword.Droid**, haga clic con el botón derecho y seleccione **Establecer como proyecto de inicio**:
+            public static bool IsIntentAvailable(Context context, Intent intent)
+            {
+                var packageManager = context.PackageManager;
 
-  ![](quickstart-images/xs/set-startup-project.png "Establecer como proyecto de inicio")
+                var list = packageManager.QueryIntentServices (intent, 0)
+                    .Union (packageManager.QueryIntentActivities (intent, 0));
 
-1. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en el simulador de Android:
+                if (list.Any ())
+                    return true;
 
-  ![](quickstart-images/xs/phoneword-result-android.png "Android Emulator")
+                var manager = TelephonyManager.FromContext (context);
+                return manager.PhoneType != PhoneType.None;
+            }
+        }
+    }
+    ```
 
-  Nota: No se admiten las llamadas de teléfono en los emuladores de Android.
+    Guarde los cambios en **PhoneDialer.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
+
+25. En el **Panel de solución**, en el proyecto **Phoneword.Droid**, haga doble clic en **MainActivity.cs** para abrirlo, quite todo el código de la plantilla y reemplácelo por el siguiente:
+
+    ```csharp
+    using Android.App;
+    using Android.Content.PM;
+    using Android.OS;
+
+    namespace Phoneword.Droid
+    {
+        [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+        {
+            internal static MainActivity Instance { get; private set; }
+
+            protected override void OnCreate(Bundle bundle)
+            {
+                TabLayoutResource = Resource.Layout.Tabbar;
+                ToolbarResource = Resource.Layout.Toolbar;
+
+                base.OnCreate(bundle);
+
+                Instance = this;
+                global::Xamarin.Forms.Forms.Init(this, bundle);
+                LoadApplication(new App());
+            }
+        }
+    }        
+    ```
+
+    Guarde los cambios en **MainActivity.cs** en **Archivo > Guardar**, o bien presione **&#8984;+S** y cierre el archivo.
+
+26. En el **Panel de solución**, expanda la carpeta **Propiedades** y haga doble clic en el archivo **AndroidManifest.xml**:
+
+    ![](quickstart-images/xs/android-manifest.png "Abrir el manifiesto de Android")
+
+27. En la sección **Permisos necesarios**, habilite el permiso **CallPhone**. Esto da permiso a la aplicación para realizar una llamada telefónica:
+
+    ![](quickstart-images/xs/android-manifest-changed.png "Habilitar el permiso CallPhone")
+
+    Guarde los cambios en **AndroidManifest.xml** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
+
+28. En el **Panel de solución**, quite la clase **PhonewordPage** del proyecto **Phoneword**. Esta página se agregó automáticamente al crear el proyecto y ya no es necesaria.
+29. En Visual Studio para Mac, seleccione el elemento de menú **Compilación > Compilar todo** (o pulse **&#8984; + B**). La aplicación se compilará y aparecerá un mensaje de éxito en la barra de herramientas de Visual Studio para Mac.
+
+    ![](quickstart-images/xs/build-successful.png "Compilación correcta")
+
+30. Si hay errores, repita los pasos anteriores y corrija cualquier error hasta que la aplicación se compile correctamente.
+31. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en el simulador de iOS:
+
+    ![](quickstart-images/xs/start.png "Barra de herramientas de Visual Studio para Mac")
+    ![](quickstart-images/xs/phoneword-result-ios.png "Simulador de iOS")
+
+    Nota: No se admiten llamadas de teléfono en el simulador de iOS.
+
+32. En el **Panel de solución**, seleccione el proyecto **Phoneword.Droid**, haga clic con el botón derecho y seleccione **Establecer como proyecto de inicio**:
+
+    ![](quickstart-images/xs/set-startup-project.png "Establecer como proyecto de inicio")
+
+33. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en el simulador de Android:
+
+    ![](quickstart-images/xs/phoneword-result-android.png "Android Emulator")
+
+    Nota: No se admiten las llamadas de teléfono en los emuladores de Android.
 
 -----
 

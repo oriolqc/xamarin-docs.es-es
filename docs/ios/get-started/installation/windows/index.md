@@ -1,6 +1,6 @@
 ---
-title: "Instalación de Xamarin.iOS en Windows"
-description: "En este artículo se explica cómo configurar Xamarin.iOS para Visual Studio. En él también se tratan el proceso de instalación de la extensión de Xamarin para Visual Studio y la conexión al SDK de Apple instalado en el equipo Mac."
+title: Instalación de Xamarin.iOS en Windows
+description: En este artículo se explica cómo configurar Xamarin.iOS para Visual Studio. En él también se tratan el proceso de instalación de la extensión de Xamarin para Visual Studio y la conexión al SDK de Apple instalado en el equipo Mac.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: abf85d3e-a365-44a2-b1a4-6c572c7f76dd
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/29/2017
-ms.openlocfilehash: cfbe2df23317ee3ad11c9970ab892ddcc251b9d6
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 08bf8b2b7c56983c43cf1ae080ab112e81851fbb
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="installing-xamarinios-on-windows"></a>Instalación de Xamarin.iOS en Windows
 
@@ -37,7 +37,7 @@ En el siguiente diagrama se muestra una visión general sencilla del flujo de tr
 [![Flujo de trabajo de desarrollo de Xamarin.iOS](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
->  Visual Studio inicia un proceso independiente de MSBuild para compilar los proyectos. Este proceso crea una nueva conexión con el equipo Mac, lo que significa que en realidad hay dos conexiones SSH desde Windows a Mac cuando Visual Studio compila. La compilación desde la [línea de comandos](~/ios/get-started/installation/windows/connecting-to-mac/index.md) solo crea un proceso de MSBuild. Por motivos de simplicidad de este diagrama, todas las conexiones se representan con una sola flecha.
+> Visual Studio inicia un proceso independiente de MSBuild para compilar los proyectos. Este proceso crea una nueva conexión con el equipo Mac, lo que significa que en realidad hay dos conexiones SSH desde Windows a Mac cuando Visual Studio compila. La compilación desde la [línea de comandos](~/ios/get-started/installation/windows/connecting-to-mac/index.md) solo crea un proceso de MSBuild. Por motivos de simplicidad de este diagrama, todas las conexiones se representan con una sola flecha.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -105,7 +105,7 @@ Para instalar herramientas de Xamarin.iOS en el host de mac, debe [instalar Visu
 Una vez instalado el software, siga los pasos descritos en las secciones siguientes para configurar Xamarin.iOS en macOS y permitir que Xamarin para Visual Studio se conecte.
 
 > [!IMPORTANT]
->  La máquina Windows debe utilizar la misma versión de Xamarin.iOS que el Mac al que está conectado. Para asegurarse:
+> La máquina Windows debe utilizar la misma versión de Xamarin.iOS que el Mac al que está conectado. Para asegurarse:
 >
 > - **Visual Studio 2015 y versiones anterior**: asegúrese de que se encuentra en el mismo [canal de actualizaciones](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/) que Visual Studio para Mac.
 >

@@ -1,6 +1,6 @@
 ---
 title: Compatibilidad con IPA
-description: "En este artículo se explica cómo crear un archivo IPA que pueda utilizarse para implementar una aplicación mediante la distribución ad hoc para realizar pruebas o para la distribución de aplicaciones internas en la empresa."
+description: En este artículo se explica cómo crear un archivo IPA que pueda utilizarse para implementar una aplicación mediante la distribución ad hoc para realizar pruebas o para la distribución de aplicaciones internas en la empresa.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: D253C2DB-852E-6FC6-C9FD-574730B8DB19
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: bee3480fc90c2eac5629e336c57daa90adf9c346
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fa0986141a44bbe7100268c629e606a5857e2699
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ipa-support"></a>Compatibilidad con IPA
 
@@ -151,7 +151,7 @@ Una vez que se haya creado y seleccionado el perfil de aprovisionamiento, se hay
     ![](ipa-support-images/imagevs02.png "Selección de Ad hoc en la lista desplegable Configuración")
 
     > [!NOTE]
-> Podría no haber una configuración ad hoc disponible para los proyectos de Xamarin.iOS más recientes. Si no está disponible, seleccione la configuración de **Lanzamiento**.
+    > Podría no haber una configuración ad hoc disponible para los proyectos de Xamarin.iOS más recientes. Si no está disponible, seleccione la configuración de **Lanzamiento**.
 
 3. Si incluye un archivo opcional **iTunesMetadata.plist**, haga clic en el botón **...**, selecciónelo en la lista y haga clic en el botón **Open (Abrir)**:
 
