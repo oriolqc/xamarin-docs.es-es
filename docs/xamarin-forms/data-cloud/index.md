@@ -1,18 +1,18 @@
 ---
 title: Datos y servicios en la nube
-description: "Las aplicaciones de Xamarin.Forms pueden consumir servicios web implementados con una amplia variedad de tecnologías y esta guía examinará cómo hacerlo."
+description: Las aplicaciones de Xamarin.Forms pueden consumir servicios web implementados con una amplia variedad de tecnologías y esta guía examinará cómo hacerlo.
 ms.topic: article
 ms.prod: xamarin
-ms.assetid: "0601D9D0-C8D2-4C3B-A749-A340BDBF64A4ß"
+ms.assetid: 0601D9D0-C8D2-4C3B-A749-A340BDBF64A4ß
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: 28007ee702c66f3b819430b544465d3470d571d9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 54313c3e8808ee9e563d6b55e3bf034c543a48e5
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="data--cloud-services"></a>Datos y servicios en la nube
 
@@ -24,34 +24,34 @@ Para obtener una introducción al consumo del servicio web entre plataformas en 
 
 Este artículo ofrece un tutorial de la aplicación de ejemplo de Xamarin.Forms que muestra cómo comunicar con los servicios web diferentes. Los temas tratados son la Anatomía de la aplicación, el modelo de datos, páginas e invocar operaciones del servicio web.
 
-## <a name="consuming-web-servicesxamarin-formsdata-cloudconsumingindexmd"></a>[Consumir servicios Web](~/xamarin-forms/data-cloud/consuming/index.md)
+## <a name="consuming-web-servicesxamarin-formsdata-cloudconsumingindexmd"></a>[Consumo de servicios web](~/xamarin-forms/data-cloud/consuming/index.md)
 
 Esta guía demuestra cómo comunicarse con servicios web diferente para poder crear, leer, actualizar y eliminar funcionalidad (CRUD) a una aplicación de Xamarin.Forms. Los temas tratados son comunicarse con [servicios ASMX](consuming/asmx.md), [servicios WCF](consuming/wcf.md), [servicios REST](consuming/rest.md), [aplicaciones móviles de Azure](consuming/azure.md)y [ Servicios Web de Amazon](consuming/aws.md).
 
-## <a name="authenticating-access-to-web-servicesxamarin-formsdata-cloudauthenticationindexmd"></a>[Autenticar el acceso a servicios Web](~/xamarin-forms/data-cloud/authentication/index.md)
+## <a name="authenticating-access-to-web-servicesxamarin-formsdata-cloudauthenticationindexmd"></a>[Autenticación del acceso a los servicios web](~/xamarin-forms/data-cloud/authentication/index.md)
 
 Esta guía explica cómo integrar servicios de autenticación en una aplicación de Xamarin.Forms para que los usuarios puedan compartir un back-end al tiempo que sólo tiene acceso a sus propios datos. Los temas tratados son [con la autenticación básica con un servicio REST](authentication/rest.md), [mediante el componente Xamarin.Auth para autenticarse con proveedores de identidades de OAuth](authentication/oauth.md)y el uso de la autenticación integrada que ofrece mecanismos [aplicaciones móviles de Azure](authentication/azure.md), y [Amazon Web Services](authentication/aws.md).
 
-## <a name="synchronizing-data-with-web-servicessyncindexmd"></a>[Sincronización de datos con los servicios Web](sync/index.md)
+## <a name="synchronizing-data-with-web-servicessyncindexmd"></a>[Sincronización de datos con los servicios web](sync/index.md)
 
 En este artículo se explica cómo agregar la funcionalidad de sincronización sin conexión a una aplicación de Xamarin.Forms. Sincronización sin conexión permite a los usuarios interactuar con una aplicación móvil, ver, agregar o modificar los datos, incluso cuando no hay una conexión de red. Cambios se almacenan en una base de datos local y una vez que el dispositivo está en línea, se pueden sincronizar los cambios con el servicio web.
 
-## <a name="sending-push-notificationspush-notificationsindexmd"></a>[Enviar notificaciones de inserción](push-notifications/index.md)
+## <a name="sending-push-notificationspush-notificationsindexmd"></a>[Envío de notificaciones push](push-notifications/index.md)
 
 En este artículo se muestra cómo agregar notificaciones de inserción a una aplicación de Xamarin.Forms. Centros de notificaciones de Azure proporcionan una infraestructura escalable de inserción para enviar notificaciones de inserción móviles desde cualquier back-end para cualquier plataforma móvil, mientras se elimina la complejidad de un back-end tener para comunicarse con sistemas de notificación de plataforma diferente.
 
-## <a name="storing-files-in-the-cloudstorageindexmd"></a>[Almacenar archivos en la nube](storage/index.md)
+## <a name="storing-files-in-the-cloudstorageindexmd"></a>[Almacenamiento de archivos en la nube](storage/index.md)
 
 En este artículo se muestra cómo usar Xamarin.Forms para almacenar datos binarios y texto en el almacenamiento de Azure y cómo obtener acceso a los datos. Almacenamiento de Azure es una solución de almacenamiento en nube escalables que puede utilizarse para almacenar datos estructurados y no estructurados.
 
-## <a name="searching-data-in-the-cloudsearchindexmd"></a>[Buscar datos en la nube](search/index.md)
+## <a name="searching-data-in-the-cloudsearchindexmd"></a>[Búsqueda de datos en la nube](search/index.md)
 
 Este artículo demuestra cómo usar la biblioteca de búsqueda de Microsoft Azure para integrar la búsqueda de Azure en una aplicación de Xamarin.Forms. Búsqueda de Azure es un servicio de nube que proporciona la indización y las capacidades de los datos cargados de consulta. Esto quita los requisitos de infraestructura y la complejidad del algoritmo de búsqueda tradicionalmente asociadas con la implementación de la funcionalidad de búsqueda en una aplicación.
 
-## <a name="storing-data-in-a-document-databasecosmosdbindexmd"></a>[Almacenamiento de datos en una base de datos de documento](cosmosdb/index.md)
+## <a name="storing-data-in-a-document-databasecosmosdbindexmd"></a>[Almacenamiento de datos en una base de datos de documentos](cosmosdb/index.md)
 
-Esta guía muestra cómo utilizar la biblioteca de cliente de Microsoft Azure DocumentDB para integrar una base de datos de documentos de base de datos de Azure Cosmos en una aplicación de Xamarin.Forms. Una base de datos de documentos de base de datos de Azure Cosmos es una base de datos NoSQL que proporciona acceso de latencia baja a documentos JSON, ofrecen un servicio de base de datos rápida, altamente disponible y escalable para aplicaciones que requieren replicación global y escala sin problemas.
+Esta guía muestra cómo utilizar la biblioteca de cliente estándar de .NET de base de datos de Azure Cosmos para integrar una base de datos de documentos de base de datos de Azure Cosmos en una aplicación de Xamarin.Forms. Una base de datos de documentos de base de datos de Azure Cosmos es una base de datos NoSQL que proporciona acceso de latencia baja a documentos JSON, ofrecen un servicio de base de datos rápida, altamente disponible y escalable para aplicaciones que requieren replicación global y escala sin problemas.
 
-## <a name="adding-intelligence-with-cognitive-servicescognitive-servicesindexmd"></a>[Agregar inteligencia mediante servicios cognitivos](cognitive-services/index.md)
+## <a name="adding-intelligence-with-cognitive-servicescognitive-servicesindexmd"></a>[Adición de inteligencia con Cognitive Services](cognitive-services/index.md)
 
 Esta guía explica cómo utilizar algunas de las API de servicios de Microsoft cognitivos en una aplicación de Xamarin.Forms. Servicios cognitivos son un conjunto de API, SDK y los servicios disponibles para los desarrolladores para hacer que sus aplicaciones más inteligentes agregando características tales como el reconocimiento facial, reconocimiento de voz y comprensión de lenguaje.

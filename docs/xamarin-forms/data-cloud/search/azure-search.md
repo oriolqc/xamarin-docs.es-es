@@ -1,6 +1,6 @@
 ---
-title: "Buscar datos con búsqueda de Azure"
-description: "Búsqueda de Azure es un servicio de nube que proporciona la indización y las capacidades de los datos cargados de consulta. Esto quita los requisitos de infraestructura y la complejidad del algoritmo de búsqueda tradicionalmente asociadas con la implementación de la funcionalidad de búsqueda en una aplicación. Este artículo demuestra cómo usar la biblioteca de búsqueda de Microsoft Azure para integrar la búsqueda de Azure en una aplicación de Xamarin.Forms."
+title: Buscar datos con búsqueda de Azure
+description: Búsqueda de Azure es un servicio de nube que proporciona la indización y las capacidades de los datos cargados de consulta. Esto quita los requisitos de infraestructura y la complejidad del algoritmo de búsqueda tradicionalmente asociadas con la implementación de la funcionalidad de búsqueda en una aplicación. Este artículo demuestra cómo usar la biblioteca de búsqueda de Microsoft Azure para integrar la búsqueda de Azure en una aplicación de Xamarin.Forms.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A4AEF233-3672-4174-9DBA-15BEE3030C0B
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
-ms.openlocfilehash: bf6b9f8aaa07e934a1e707b85ecaa24e4f3d99bf
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 24db1404e218eea86356f9bbc004e7d5850c2e7a
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="searching-data-with-azure-search"></a>Buscar datos con búsqueda de Azure
 
@@ -119,7 +119,7 @@ searchClient.Indexes.Delete(Constants.Index);
 
 Después de definir el índice, se pueden cargar datos a mediante uno de dos modelos:
 
-- **Modelo de extracción** : datos periódicamente es ingestión desde documentos de Azure, la base de datos de SQL Azure, almacenamiento de blobs de Azure o SQL Server hospedado en una máquina Virtual de Azure.
+- **Modelo de extracción** : datos periódicamente es ingestión desde base de datos de Azure Cosmos, la base de datos de SQL Azure, almacenamiento de blobs de Azure o SQL Server hospedado en una máquina Virtual de Azure.
 - **Modelo de inserción** – datos se envían mediante programación al índice. Éste es el modelo adoptado en este artículo.
 
 Un `SearchIndexClient` para importar datos en el índice, se debe crear la instancia. Esto puede realizarse mediante una llamada a la `SearchServiceClient.Indexes.GetClient` método, como se muestra en el ejemplo de código siguiente:

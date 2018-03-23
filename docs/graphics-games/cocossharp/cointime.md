@@ -1,6 +1,6 @@
 ---
-title: "Detalles de implementación de tiempo de moneda"
-description: "Esta guía describe los detalles de implementación en el juego de tiempo de moneda, incluidos trabajar con mapas de mosaico, creación de entidades, animar sprites y colisión eficaz de implementar."
+title: Detalles de implementación de tiempo de moneda
+description: Esta guía describe los detalles de implementación en el juego de tiempo de moneda, incluidos trabajar con mapas de mosaico, creación de entidades, animar sprites y colisión eficaz de implementar.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5D285684-0417-4E16-BD14-2D1F6DEFBB8B
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: b3827d05ae9e563ae04dd4ab1e303577f6c9d82a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 80250ca9fae98fae653c9b2837b2b1a96fb02203
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="coin-time-implementation-details"></a>Detalles de implementación de tiempo de moneda
 
@@ -61,10 +61,7 @@ Se pueden colocar los iconos, haga clic en el **mastersheet** tileset y, a conti
 1. Haga clic en el icono para dibujar
 1. Haga clic en o insertar y arrastre sobre el mapa para pintar el icono
 
-
     ![](cointime-images/image2.png "Haga clic en el icono para dibujar 1")
-
- 
 
 La parte superior izquierda de la tileset contiene todos del terreno en el tiempo de moneda. Terreno, que es sólido, incluye el **SolidCollision** propiedad, como se muestra en las propiedades del icono de la izquierda de la pantalla:
 
@@ -97,15 +94,11 @@ El proceso de agregar niveles a la hora de moneda requiere ningún cambio de có
 1. Cambiar el nombre del nuevo archivo .tmx por lo que sigue la secuencia de número de nivel con los niveles existentes, como **level8.tmx**
 1. En Visual Studio o Visual Studio para Mac, agregar el nuevo archivo .tmx a la carpeta de niveles Android. Compruebe que el archivo utiliza el **AndroidAsset** acción de compilación.
 
-
     ![](cointime-images/image8.png "Compruebe que el archivo usa la acción de compilación AndroidAsset")
-
 
 1. Agregue el nuevo archivo .tmx a la carpeta de niveles de iOS. Asegúrese de vincular el archivo desde su ubicación original y compruebe que usa el **BundleResource** acción de compilación.
 
-
     ![](cointime-images/image9.png "Asegúrese de vincular el archivo desde su ubicación original y compruebe que usa la acción de compilación BundleResource")
-
 
 El nuevo nivel debe aparecer en la pantalla Seleccione nivel como nivel 9 (nombres de archivo de nivel empiezan en 0, pero los botones de nivel comienzan por el número 1):
 
