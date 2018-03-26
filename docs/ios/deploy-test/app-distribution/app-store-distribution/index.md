@@ -1,6 +1,6 @@
 ---
-title: "Distribución a través del App Store"
-description: "En este documento se habla de los requisitos para la distribución en el App Store de Apple."
+title: Distribución a través del App Store
+description: En este documento se habla de los requisitos para la distribución en el App Store de Apple.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/23/2017
-ms.openlocfilehash: 2ee98b48feb8bc1e3431d796a7ca07a6c2e74790
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25c4cb980f77880ae690916ec45be3cd12a3cf10
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="app-store-distribution"></a>Distribución a través del App Store
 
@@ -37,7 +37,7 @@ Independientemente de cómo piense publicar una aplicación de Xamarin.iOS, tend
 Puede seleccionar el **identificador de la aplicación** y los **dispositivos** que usó para el perfil de aprovisionamiento de desarrollo, pero si todavía no tiene uno, tendrá que crear un certificado de distribución para identificar a la organización al enviar la aplicación a la tienda de aplicaciones. En la siguiente sección se explican los pasos para crear un certificado de distribución.
 
 > [!NOTE]
->  Nota: Solo los agentes de equipo y los administradores pueden crear certificados de distribución y perfiles de aprovisionamiento.
+> Solo los agentes de equipo y los administradores pueden crear certificados de distribución y perfiles de aprovisionamiento.
 
 <a name="creatingcertificate" />
 

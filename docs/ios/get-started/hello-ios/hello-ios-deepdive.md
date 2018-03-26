@@ -1,6 +1,6 @@
 ---
-title: "Hello, iOS: revisión en profundidad"
-description: "Esta guía en dos partes describe cómo compilar una aplicación básica de Xamarin.iOS mediante Visual Studio para Mac o Visual Studio, y comprender los aspectos básicos del desarrollo de aplicaciones de iOS con Xamarin. Presentará las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.iOS."
+title: 'Hello, iOS: revisión en profundidad'
+description: Esta guía en dos partes describe cómo compilar una aplicación básica de Xamarin.iOS mediante Visual Studio para Mac o Visual Studio, y comprender los aspectos básicos del desarrollo de aplicaciones de iOS con Xamarin. Presentará las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.iOS.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 61ba3a7e-fe11-4439-8bc8-9809512b8eff
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: d7a458a0a0c2da1dbb40ae7222fcd35cf7172953
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 500c3d1c6f38427a921097a0c3104254ec5cb263
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello, iOS: revisión en profundidad
 
@@ -306,7 +306,7 @@ public partial class ViewController : UIViewController
 `ViewController` ahora administra las interacciones de la jerarquía de vistas de contenido asociada a este controlador de vistas en el guión gráfico. A continuación obtendrá información sobre el rol del controlador de vistas en la administración de las vistas mediante la introducción de un proceso denominado "ciclo de vida de las vistas".
 
 > [!NOTE]
-> **Nota**: En el caso de las pantallas únicamente de objetos visuales que no requieren la interacción del usuario, la propiedad **Clase** puede dejarse en blanco en el **Panel de propiedades**. De esta forma, se establece la clase auxiliar del controlador de vistas como la implementación predeterminada de `UIViewController`, lo cual es adecuado si no va a agregar código personalizado.
+> En el caso de las pantallas únicamente de objetos visuales que no requieren la interacción del usuario, la propiedad **Clase** puede dejarse en blanco en el **Panel de propiedades**. De esta forma, se establece la clase auxiliar del controlador de vistas como la implementación predeterminada de `UIViewController`, lo cual es adecuado si no va a agregar código personalizado.
 
 ### <a name="view-lifecycle"></a>Ciclo de vida de las vistas
 
@@ -416,7 +416,7 @@ El simulador de iOS brinda una forma rápida de probar una aplicación. El simul
 Aprovisionar un dispositivo lleva tiempo y requiere una cuenta de desarrollador de Apple. En la guía [Device Provisioning (Aprovisionamiento del dispositivo)](~/ios/get-started/installation/device-provisioning/index.md) se proporcionan instrucciones precisas sobre cómo preparar un dispositivo para el desarrollo.
 
 > [!NOTE]
-> **Nota**: En este momento, debido a un requisito de Apple, es necesario tener un certificado de desarrollo o una _identidad de firma_ para compilar el código para el dispositivo o el simulador. Siga los pasos de la [guía Aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) para configurar esta opción.
+> En este momento, debido a un requisito de Apple, es necesario tener un certificado de desarrollo o una _identidad de firma_ para compilar el código para el dispositivo o el simulador. Siga los pasos de la [guía Aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) para configurar esta opción.
 
 Cuando se aprovisiona el dispositivo, puede realizar implementaciones en él al conectarlo, cambiar el destino en la barra de herramientas de compilación para el dispositivo iOS y pulsar **Start (Iniciar)** (**Play (Reproducir)**) como se muestra en la siguiente captura de pantalla:
 

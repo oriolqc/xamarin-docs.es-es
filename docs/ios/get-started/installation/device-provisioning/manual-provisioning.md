@@ -1,6 +1,6 @@
 ---
 title: Aprovisionamiento manual
-description: "Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el desarrollo de iOS consiste en aprovisionar el dispositivo iOS. En esta guía se explora el proceso de solicitar certificados y perfiles de desarrollo, trabajar con servicios de aplicaciones e implementar una aplicación en un dispositivo."
+description: Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el desarrollo de iOS consiste en aprovisionar el dispositivo iOS. En esta guía se explora el proceso de solicitar certificados y perfiles de desarrollo, trabajar con servicios de aplicaciones e implementar una aplicación en un dispositivo.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: e42b9d0b5eb64c17c96b66c9dbae7582551a06a0
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: ecda5823636a1b2d7e31a39e29f1d46cdf7118b6
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="manual-provisioning"></a>Aprovisionamiento manual
 
@@ -85,7 +85,7 @@ El perfil de desarrollador contiene certificados, sus claves asociadas y los per
 -----
 
 > [!WARNING]
-> **Nota**: La pérdida del certificado y de las claves asociadas puede causar muchos problemas, ya que requerirá que se revoquen los certificados existentes y que se vuelvan a aprovisionar los dispositivos asociados, incluidos los registrados para la implementación ad hoc. Después de configurar correctamente los certificados de desarrollo, exporte una copia de seguridad y almacénelos en un lugar seguro. Para obtener más información sobre cómo hacerlo, consulte la sección sobre la exportación y la importación de certificados y perfiles de la guía [Maintaining Certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) (Mantener certificados) en la documentación de Apple.
+> La pérdida del certificado y de las claves asociadas puede causar muchos problemas, ya que requerirá que se revoquen los certificados existentes y que se vuelvan a aprovisionar los dispositivos asociados, incluidos los registrados para la implementación ad hoc. Después de configurar correctamente los certificados de desarrollo, exporte una copia de seguridad y almacénelos en un lugar seguro. Para obtener más información sobre cómo hacerlo, consulte la sección sobre la exportación y la importación de certificados y perfiles de la guía [Maintaining Certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) (Mantener certificados) en la documentación de Apple.
 
 <a name="provisioning" />
 
@@ -209,12 +209,12 @@ Los nuevos certificados o perfiles de aprovisionamiento estarán disponibles en 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 > [!IMPORTANT]
-> **Nota**: Puede que sea necesario detener y reiniciar Visual Studio para Mac para que pueda ver los certificados o perfiles nuevos o modificados que haya actualizado Xcode.
+> Puede que sea necesario detener y reiniciar Visual Studio para Mac para que pueda ver los certificados o perfiles nuevos o modificados que haya actualizado Xcode.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 > [!IMPORTANT]
-> **Nota**: Puede que sea necesario detener y reiniciar Visual Studio para que pueda ver los certificados o perfiles nuevos o modificados que haya actualizado Xcode.
+> Puede que sea necesario detener y reiniciar Visual Studio para que pueda ver los certificados o perfiles nuevos o modificados que haya actualizado Xcode.
 
 -----
 

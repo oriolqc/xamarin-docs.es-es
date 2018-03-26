@@ -1,6 +1,6 @@
 ---
-title: "Compilación para el Mac App Store"
-description: "En esta guía se describe el proceso de creación de una aplicación Xamarin.Mac para su publicación en el Mac App Store."
+title: Compilación para el Mac App Store
+description: En esta guía se describe el proceso de creación de una aplicación Xamarin.Mac para su publicación en el Mac App Store.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 00a36d7c-937d-4657-bf6a-0de9684b8f94
@@ -8,18 +8,18 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 77365d5ed62b2ef2e81407ab1fa5aef55c592d0b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c3f94b448539b2e4073c7d8a1092df066e484dfc
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="bundle-for-mac-app-store"></a>Empaquetar para Mac App Store
 
 En esta sección se describen los aspectos básicos de la compilación de una aplicación para el lanzamiento en Mac App Store mediante Visual Studio para Mac. En función de las características adicionales (como el acceso a iCloud y las notificaciones de inserción), podría requerirse una configuración más exhaustiva que no se trata este artículo.
 
 > [!NOTE]
->  **Nota**: Antes de empezar esta sección, el desarrollador debe haber creado un perfil de aprovisionamiento de producción para poder compilar para el Mac App Store. Consulte las instrucciones que aparecen anteriormente en este documento sobre cómo crear los perfiles de aprovisionamiento necesarios.
+> Antes de empezar esta sección, el desarrollador debe haber creado un perfil de aprovisionamiento de producción para poder compilar para Mac App Store. Consulte las instrucciones que aparecen anteriormente en este documento sobre cómo crear los perfiles de aprovisionamiento necesarios.
 
 ## <a name="code-signing-options"></a>Opciones de firma de código
 

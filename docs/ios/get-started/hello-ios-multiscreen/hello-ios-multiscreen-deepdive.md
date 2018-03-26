@@ -1,6 +1,6 @@
 ---
 title: Hello, iOS Multiscreen
-description: "En esta guía de dos partes, ampliaremos la aplicación Phoneword creada en la guía Hello, iOS a fin de controlar una segunda pantalla. Además, presentaremos el modelo de diseño Modelo-Vista-Controlador, implementaremos nuestra primera navegación de iOS y conoceremos a fondo la estructura y la funcionalidad de la aplicación iOS."
+description: En esta guía de dos partes, ampliaremos la aplicación Phoneword creada en la guía Hello, iOS a fin de controlar una segunda pantalla. Además, presentaremos el modelo de diseño Modelo-Vista-Controlador, implementaremos nuestra primera navegación de iOS y conoceremos a fondo la estructura y la funcionalidad de la aplicación iOS.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: a7d4af1563cb5fe5166c289c4ee5dca6ad3ffb00
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0c21fbd86fc9069d52f5f5935f66500e9477ca02
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="hello-ios-multiscreen-deep-dive"></a>Hello, iOS Multiscreen: análisis detallado
 
@@ -40,7 +40,7 @@ Modelo-Vista-Controlador es un *modelo de diseño*: una solución de arquitectur
 El modelo MVC es útil porque proporciona una separación lógica entre diferentes partes de una aplicación GUI y facilita la reutilización del código y las vistas. Vamos a examinar más detalladamente cada uno de los tres roles.
 
 > [!NOTE]
-> **Nota**: El modelo MVC se asemeja ligeramente a la estructura de las páginas ASP.NET o las aplicaciones WPF. En estos ejemplos, la vista es el componente realmente responsable de describir la interfaz de usuario y corresponde a la página ASPX (HTML) de ASP.NET o a XAML en una aplicación WPF. El controlador es el componente que se encarga de administrar la vista y corresponde al código subyacente de ASP.NET o WPF.
+> El modelo MVC se asemeja ligeramente a la estructura de las páginas ASP.NET o las aplicaciones WPF. En estos ejemplos, la vista es el componente realmente responsable de describir la interfaz de usuario y corresponde a la página ASPX (HTML) de ASP.NET o a XAML en una aplicación WPF. El controlador es el componente que se encarga de administrar la vista y corresponde al código subyacente de ASP.NET o WPF.
 
 
 ### <a name="model"></a>Modelo
@@ -52,7 +52,7 @@ MVC es completamente independiente de la *persistencia de datos* y del *acceso* 
 En algunos casos, la parte del modelo de MVC puede estar vacía. Por ejemplo, podríamos agregar algunas páginas estáticas a la aplicación en las que se explicara cómo funciona el traductor telefónico, por qué se ha creado y cómo ponerse en contacto con nosotros para notificar errores. Estas pantallas de la aplicación se crearían con vistas y controladores, pero no tendrían ningunos datos reales del modelo.
 
 > [!NOTE]
-> **Nota**: En algunos artículos, la parte de modelo del patrón MVC puede referirse a todo el back-end de la aplicación, no solo a los datos que aparecen en la interfaz de usuario. En esta guía se usa una interpretación moderna del modelo, aunque la distinción no es especialmente importante.
+> En algunos artículos, la parte de modelo del patrón MVC puede referirse a todo el back-end de la aplicación, no solo a los datos que aparecen en la interfaz de usuario. En esta guía se usa una interpretación moderna del modelo, aunque la distinción no es especialmente importante.
 
 
 ### <a name="view"></a>Ver

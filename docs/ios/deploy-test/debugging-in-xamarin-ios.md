@@ -1,5 +1,5 @@
 ---
-title: "Depuración"
+title: Depuración
 description: Con el depurador integrado en Visual Studio para Mac o Visual Studio, se pueden depurar aplicaciones de Xamarin.iOS.
 ms.topic: article
 ms.prod: xamarin
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 18f9814941c4cd7d2719f23b6102361f013ba8a9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a449d692a2761f59135930d40ad3708d6ef2e9b9
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="debugging"></a>Depuración
 
@@ -22,7 +22,7 @@ Usar la compatibilidad con la depuración nativa de Visual Studio para Mac para 
 
 
 > [!NOTE]
-> **IMPORTANTE:** al compilar aplicaciones en modo de depuración, Xamarin.iOS generará aplicaciones más lentas y mucho mayores ya que debe instrumentarse cada línea de código. Antes de lanzar, asegúrese de hacer una compilación de versión.
+> Al compilar aplicaciones en modo de depuración, Xamarin.iOS generará aplicaciones más lentas y mucho mayores, ya que debe instrumentarse cada línea de código. Antes de lanzar, asegúrese de hacer una compilación de versión.
 
 El depurador de Xamarin.iOS se integra en el IDE y permite a los desarrolladores depurar aplicaciones de Xamarin.iOS compiladas con cualquiera de los lenguajes administrados admitidos por Xamarin.iOS en el simulador y en el dispositivo.
 

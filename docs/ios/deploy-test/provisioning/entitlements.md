@@ -1,6 +1,6 @@
 ---
 title: Trabajar con derechos
-description: "Los derechos son funciones especiales de las aplicaciones y permisos de seguridad que se conceden a las aplicaciones que están configuradas correctamente para usarlos."
+description: Los derechos son funciones especiales de las aplicaciones y permisos de seguridad que se conceden a las aplicaciones que están configuradas correctamente para usarlos.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 837a18fa09b7b1da3cf2d16d6e3e350250ae0829
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 8b5c88f4af3087f980b586113c274016935585c0
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-entitlements"></a>Trabajar con derechos
 
@@ -32,7 +32,7 @@ El archivo Entitlements.plist se usa para especificar derechos y para firmar el 
 Pero se deben seguir algunos pasos de aprovisionamiento adicionales para garantizar que la aplicación tiene un código firmado correctamente. El perfil de aprovisionamiento usado debe contener un identificador de aplicación que tenga habilitada la capacidad necesaria. Para obtener información sobre cómo hacerlo, consulte la guía [Trabajar con capacidades](~/ios/deploy-test/provisioning/capabilities/index.md).
 
 > [!IMPORTANT]
-> Nota: El archivo Entitlements.plist ayuda a rellenar las propiedades correctas para una aplicación usando funcionalidades, pero no puede generar ningún perfil de aprovisionamiento porque no está vinculado a ninguna cuenta de desarrollador de Apple. Tendrá que generar igualmente un perfil de aprovisionamiento mediante el portal para desarrolladores para implementar y distribuir la aplicación.
+> El archivo Entitlements.plist ayuda a rellenar las propiedades correctas para una aplicación usando funcionalidades, pero no puede generar ningún perfil de aprovisionamiento porque no está vinculado a ninguna cuenta de desarrollador de Apple. Tendrá que generar igualmente un perfil de aprovisionamiento mediante el portal para desarrolladores para implementar y distribuir la aplicación.
 
 ## <a name="set-entitlements-in-a-xamarinios-project"></a>Establecer derechos en un proyecto de Xamarin.iOS
 

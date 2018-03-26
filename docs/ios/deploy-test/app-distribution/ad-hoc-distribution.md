@@ -1,6 +1,6 @@
 ---
-title: "Distribución ad hoc"
-description: "En este documento se ofrece una introducción a las técnicas de distribución ad hoc que se usan principalmente para probar una aplicación de Xamarin.iOS con un gran grupo de personas."
+title: Distribución ad hoc
+description: En este documento se ofrece una introducción a las técnicas de distribución ad hoc que se usan principalmente para probar una aplicación de Xamarin.iOS con un gran grupo de personas.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 3B621CAD-103C-478A-97C3-829015F48D1A
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3d01130989336ada855e936a6597b517fab5ee69
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e0db9df11436cf1613ac5eacdf293245f99b8855
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="ad-hoc-distribution"></a>Distribución ad hoc
 
@@ -39,7 +39,7 @@ Incluso si tiene previsto publicar una aplicación de Xamarin.iOS para la implem
 En la sección siguiente se describe cómo realizar la configuración con un certificado de distribución y un perfil de aprovisionamiento de distribución.
 
 > [!NOTE]
->  Nota: Solo los agentes de equipo y los administradores pueden crear certificados de distribución y perfiles de aprovisionamiento.
+> Solo los agentes de equipo y los administradores pueden crear certificados de distribución y perfiles de aprovisionamiento.
 
 <a name="createcertificate" />
 
@@ -59,7 +59,7 @@ En la sección siguiente se describe cómo realizar la configuración con un cer
 
 6. Una vez que haya creado la CSR tal como se indica, haga clic en Continuar y cárguela en el Centro de usuarios registrados:
 
-  [![](ad-hoc-distribution-images/createcertmanually03.png "Cargue la CSR en el Centro de usuarios registrados")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
+  [![](ad-hoc-distribution-images/createcertmanually03.png "Carga de la CSR en el Centro de usuarios registrados")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
 
 7. Haga clic en Generar para crear el certificado.
 8. Por último, descargue el certificado completado y haga doble clic en el archivo para instalarlo.

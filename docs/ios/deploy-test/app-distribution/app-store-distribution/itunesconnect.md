@@ -1,6 +1,6 @@
 ---
-title: "Configuración de una aplicación en iTunes Connect"
-description: "Este artículo describe los pasos necesarios para configurar y mantener una aplicación Xamarin.iOS en iTunes Connect para que se pueda publicar y distribuir en la App Store."
+title: Configuración de una aplicación en iTunes Connect
+description: Este artículo describe los pasos necesarios para configurar y mantener una aplicación Xamarin.iOS en iTunes Connect para que se pueda publicar y distribuir en la App Store.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: dc21b21e28de155aa7a0e7b5cf9734e752cce9a2
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 3d5c84aee12c374317a797aa41446630a441f6df
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configuración de una aplicación en iTunes Connect
 
@@ -198,7 +198,7 @@ Esta sección del registro de aplicación de iTunes Connect proporciona el ident
 ### <a name="app-icon"></a>Icono de la aplicación
 
 > [!IMPORTANT]
->  **Nota**: Los iconos de aplicaciones ya no se envían a través de iTunes Connect. Deben enviarse a través del conjunto de imágenes **AppIcon** del archivo **Assets.xcassets** del proyecto. Para obtener más información, consulte la guía [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) (Icono de la App Store).
+>  Los iconos de aplicaciones ya no se envían a través de iTunes Connect. Deben enviarse a través del conjunto de imágenes **AppIcon** del archivo **Assets.xcassets** del proyecto. Para obtener más información, consulte la guía [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) (Icono de la App Store).
 
 El icono de la aplicación es la cara de la aplicación para los usuarios, por lo que debe ser fácil de recordar y mostrarse correctamente en un tamaño pequeño. Los iconos fáciles de recordar se reconocen inmediatamente, y son simples y limpios.
 

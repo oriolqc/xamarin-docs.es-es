@@ -1,6 +1,6 @@
 ---
-title: "Conexión al equipo Mac"
-description: "Xamarin.iOS para Visual Studio permite a los programadores crear, compilar y depurar aplicaciones de iOS en un equipo de Windows mediante el IDE de Visual Studio. En esta guía se explican las características proporcionadas por Xamarin.iOS para Visual Studio y cómo se realiza la conexión con el host de compilación de Mac."
+title: Conexión al equipo Mac
+description: Xamarin.iOS para Visual Studio permite a los programadores crear, compilar y depurar aplicaciones de iOS en un equipo de Windows mediante el IDE de Visual Studio. En esta guía se explican las características proporcionadas por Xamarin.iOS para Visual Studio y cómo se realiza la conexión con el host de compilación de Mac.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: c60927593f062c8ac9694d889ffbf581c09bab82
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e4f7b55fa859473e84298151bc08878bc2161192
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="connecting-to-the-mac"></a>Conexión al equipo Mac
 
@@ -39,7 +39,7 @@ En el siguiente diagrama se muestra una visión general sencilla del flujo de tr
 [![Flujo de trabajo de desarrollo de iOS](images/xma2.png)](images/xma2.png#lightbox)
 
 > [!IMPORTANT]
->  Visual Studio inicia un proceso independiente de MSBuild para compilar los proyectos. Este proceso crea una nueva conexión con el equipo Mac, lo que significa que en realidad hay dos conexiones SSH desde Windows a Mac cuando Visual Studio compila. La compilación desde la [línea de comandos](#commandline) solo crea un proceso de MSBuild. Por motivos de simplicidad de este diagrama, todas las conexiones se representan con una sola flecha.
+> Visual Studio inicia un proceso independiente de MSBuild para compilar los proyectos. Este proceso crea una nueva conexión con el equipo Mac, lo que significa que en realidad hay dos conexiones SSH desde Windows a Mac cuando Visual Studio compila. La compilación desde la [línea de comandos](#commandline) solo crea un proceso de MSBuild. Por motivos de simplicidad de este diagrama, todas las conexiones se representan con una sola flecha.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -53,7 +53,7 @@ Los requisitos del sistema pueden encontrarse en la guía [Instalación de Xamar
 #### <a name="compatibility"></a>Compatibilidad
 
 > [!IMPORTANT]
->  La máquina Windows debe utilizar la misma versión de Xamarin.iOS que el Mac al que está conectado. Para asegurarse:                                                    
+> La máquina Windows debe utilizar la misma versión de Xamarin.iOS que el Mac al que está conectado. Para asegurarse:                                                    
 >                                                                                                                 
 > - **Visual Studio 2015 y versiones anterior**: asegúrese de que se encuentra en el mismo [canal de actualizaciones](https://developer.xamarin.com/recipes/cross-platform/ide/change_updates_channel/) que Visual Studio para Mac.
 >                                                                                                                 
@@ -113,7 +113,7 @@ Seleccione un equipo Mac haciendo doble clic en él para conectarse. La primera 
 El agente utilizará estas credenciales para crear una nueva conexión de SSH para Mac. Si se realiza correctamente, se creará una clave SSH y será [registrada](#commandline) en el archivo `authorized_keys` en ese equipo Mac. En las conexiones posteriores, el agente utilizará el archivo de nombre de usuario y la clave para conectarse con el host de compilación conocido al que se haya conectado más recientemente.
 
 > [!NOTE]
->  **Nota**: Debe utilizar el _nombre de usuario_ y no el _nombre completo_ al escribir sus credenciales.  Lo puede averiguar utilizando el comando `whoami` en la Terminal.  Por ejemplo, en la siguiente captura de pantalla, el nombre de cuenta será **amyb** y no **Amy Burns**:
+> Debe utilizar el _nombre de usuario_ y no el _nombre completo_ al escribir sus credenciales.  Lo puede averiguar utilizando el comando `whoami` en la Terminal.  Por ejemplo, en la siguiente captura de pantalla, el nombre de cuenta será **amyb** y no **Amy Burns**:
 >
 > ![Búsqueda del nombre de usuario en la aplicación de Terminal](images/image5.png)
 

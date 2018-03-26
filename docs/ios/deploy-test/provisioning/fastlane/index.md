@@ -1,6 +1,6 @@
 ---
-title: "Introducción a fastlane para iOS"
-description: "En esta guía se presentan las diversas herramientas de Fastlane que se pueden usar para firmar el código de aplicaciones de iOS."
+title: Introducción a fastlane para iOS
+description: En esta guía se presentan las diversas herramientas de Fastlane que se pueden usar para firmar el código de aplicaciones de iOS.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 15ee039fbfa339a9246b2a4234f37caf685c80c6
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4bba92180e77accaa42b70843fb5dbf12c94d632
+ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Introducción a fastlane para iOS
 
@@ -44,10 +44,10 @@ El contenido proporcionado se puede usar como punto de partida para la distribuc
     error: command line tools are already installed, use "Software Update" to install updates
     ```
 
-2. Descargue las herramientas de Fastlane de [https://download.fastlane.tools](https://download.fastlane.tools). 
+2. Descargue las herramientas de fastlane de [https://download.fastlane.tools](https://download.fastlane.tools). 
 
     > [!NOTE]
-> Es posible instalar las herramientas de fastlane desde Homebrew mediante `brew cask install fastlane` o a través de Rubygems (2.0 o versiones superiores) mediante `sudo gem install fastlane –NV`. De todos modos, el instalador garantizará que las dependencias correctas estén disponibles. 
+    > Es posible instalar las herramientas de fastlane desde Homebrew mediante `brew cask install fastlane` o a través de Rubygems (2.0 o versiones superiores) mediante `sudo gem install fastlane –NV`. De todos modos, el instalador garantizará que las dependencias correctas estén disponibles. 
 
 3. Para instalar Fastlane, descomprima el archivo y haga doble clic en el ejecutable `install`. Si recibe un error que le advierte de que el archivo “no se puede abrir porque pertenece a un desarrollador sin identificar”, pulse Aceptar y haga lo siguiente:
     - Mientras mantiene presionado Ctrl, haga clic en el ejecutable `install`. Esto hará que se muestre este cuadro de diálogo:

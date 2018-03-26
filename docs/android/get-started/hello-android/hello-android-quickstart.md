@@ -1,6 +1,6 @@
 ---
-title: "Hello, Android: inicio rápido"
-description: "Esta guía en dos partes le ayudará a compilar su primera aplicación de Xamarin.Android (mediante Visual Studio o Visual Studio para Mac) y a comprender los aspectos básicos del desarrollo de aplicaciones de Android con Xamarin. A lo largo del proceso, le presentaremos las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.Android."
+title: 'Hello, Android: inicio rápido'
+description: Esta guía en dos partes le ayudará a compilar su primera aplicación de Xamarin.Android (mediante Visual Studio o Visual Studio para Mac) y a comprender los aspectos básicos del desarrollo de aplicaciones de Android con Xamarin. A lo largo del proceso, le presentaremos las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.Android.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 58197ae9f7c05ab9a838555ba5ab496550a16bce
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: bbe243b108be6e0060ba9067db58a9875c7b5153
+ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: inicio rápido
 
@@ -536,5 +536,5 @@ Ahora es el momento de analizar las herramientas y los conocimientos que ha apre
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Iconos de aplicación de Xamarin Android (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
+- [Iconos de aplicación de Xamarin para Android (ZIP)](https://github.com/xamarin/monodroid-samples/blob/master/Phoneword/Resources/XamarinAndroidIcons.zip?raw=true)
 - [Phoneword (ejemplo)](https://developer.xamarin.com/samples/monodroid/Phoneword)
