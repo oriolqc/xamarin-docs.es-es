@@ -1,6 +1,6 @@
 ---
 title: Hello, Mac
-description: "En esta guía, se muestran los pasos necesarios para crear una primera aplicación de Xamarin.Mac y, a lo largo del proceso, se presenta la cadena de herramientas de desarrollo, incluidos Visual Studio para Mac, Xcode e Interface Builder. También se presentan las salidas y las acciones, que exponen los controles de la interfaz de usuario al código y, por último, se explica cómo compilar, ejecutar y probar una aplicación de Xamarin.Mac."
+description: En esta guía, se muestran los pasos necesarios para crear una primera aplicación de Xamarin.Mac y, a lo largo del proceso, se presenta la cadena de herramientas de desarrollo, incluidos Visual Studio para Mac, Xcode e Interface Builder. También se presentan las salidas y las acciones, que exponen los controles de la interfaz de usuario al código y, por último, se explica cómo compilar, ejecutar y probar una aplicación de Xamarin.Mac.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 37D0E9E6-979B-7069-B3BE-C5F0AF99BA72
@@ -8,17 +8,17 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: fdf5d1236c0d8f797bc53d01eada1777b1d92373
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 635577bbc35d9e80147ecf7e1a59540099f85b9d
+ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="hello-mac"></a>Hello, Mac
 
 Xamarin.Mac permite el desarrollo de aplicaciones de Mac completamente nativas en C# y .NET con las mismas bibliotecas y controles de interfaz de OS X que se usan al desarrollar en *Objective-C* y *Xcode*. Ya que Xamarin.Mac se integra directamente con Xcode, el desarrollador puede usar _Interface Builder_ de Xcode para crear interfaces de usuario de una aplicación (o, si quiere, puede crearlas directamente en código de C#).
 
-Además, ya que la aplicación de Xamarin.Mac se escribe en C# y .NET, se puede compartir código back-end común con aplicaciones móviles de Xamarin.iOS y Xamarin.Android; al mismo tiempo que ofrece una experiencia nativa en todas las plataformas.
+Además, dado que las aplicaciones de Xamarin.Mac se escriben en C# y .NET, se puede compartir código back-end común con aplicaciones móviles de Xamarin.iOS y Xamarin.Android, todo a la vez que se que ofrece una experiencia nativa en todas las plataformas.
 
 En este artículo, se presentan los conceptos básicos necesarios para crear una aplicación de Mac con Xamarin.Mac, Visual Studio para Mac e Interface Builder de Xcode, mediante el proceso de compilación de una aplicación **Hello, Mac** simple que cuente el número de veces que se ha hecho clic en un botón:
 
@@ -37,7 +37,7 @@ Se tratarán los siguientes conceptos:
 
 ## <a name="requirements"></a>Requisitos
 
-Para desarrollar una aplicación maOS con Xamarin.Mac, se requiere lo siguiente:
+Para desarrollar una aplicación macOS con Xamarin.Mac, se requiere lo siguiente:
 
 - Un equipo Mac que ejecute macOS X Yosemite (10.10) o una versión posterior.
 - Xcode 7 y versiones posteriores (aunque se recomienda instalar la última versión estable del [App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)).
@@ -163,7 +163,7 @@ namespace Hello_Mac
 
 Es probable que el desarrollador no conozca este código, a no ser que haya creado una aplicación de iOS antes, pero es bastante sencillo.
 
-El método `FinishedLaunching` se ejecuta después de que se haya creado una instancia de la aplicación y es el responsable de crear realmente la ventana de la aplicación y comenzar el proceso de mostrar la vista en ella.
+El método `DidFinishLaunching` se ejecuta después de que se haya creado una instancia de la aplicación y es el responsable de crear realmente la ventana de la aplicación y comenzar el proceso de mostrar la vista en ella.
 
 Se llamará al método `WillTerminate` cuando el usuario o el sistema hayan creado una instancia de cierre de la aplicación. El desarrollador debería usar este método para finalizar la aplicación antes de salir de ella (por ejemplo, para guardar las preferencias del usuario o el tamaño y la ubicación de la ventana).
 
@@ -171,7 +171,7 @@ Se llamará al método `WillTerminate` cuando el usuario o el sistema hayan crea
 
 ### <a name="viewcontrollercs"></a>ViewController.cs
 
-Cocoa (y, por derivación, CocoaTouch) usa lo que se conoce como el patrón *Model View Controller* (MVC). La declaración `ViewController` representa que el objeto controla la ventana real de la aplicación. Por lo general, para cada ventana creada (y para muchas otras cosas dentro de las ventanas) hay un controlador, que es responsable del ciclo de vida de la ventana, como mostrarla, agregarle nuevas vistas (controles), etc.
+Cocoa (y, por derivación, CocoaTouch) usa lo que se conoce como el patrón *Model View Controller* (MVC). La declaración `ViewController` representa el objeto que controla la ventana real de la aplicación. Por lo general, para cada ventana creada (y para muchas otras cosas dentro de las ventanas) hay un controlador, que es responsable del ciclo de vida de la ventana, como mostrarla, agregarle nuevas vistas (controles), etc.
 
 La clase `ViewController` es el controlador de la ventana principal. Esto significa que es responsable del ciclo de vida de la ventana principal. Esto se examinará en detalle más adelante, ahora le echaremos un vistazo rápido:
 
@@ -248,7 +248,7 @@ El archivo `Info.plist` contiene información sobre la aplicación de Xamarin.Ma
 
 [![](hello-mac-images/infoplist01.png "Editor de plist de Visual Studio para Mac")](hello-mac-images/infoplist01.png#lightbox)
 
-Además, define qué _guión gráfico_ se usará para mostrar la interfaz de usuario de la aplicación de Xamarin.Mac en la lista desplegable **Main Interface** (Interfaz principal). En el caso del ejemplo anterior, `Main` en la lista desplegable se relaciona con `Main.storyboard` en el árbol de origen del proyecto del **Explorador de soluciones**. También define los iconos de la aplicación al especificar el *catálogo de recursos* que los contiene (AppIcons en este caso).
+También define qué _guion gráfico_ se usará para mostrar la interfaz de usuario de la aplicación de Xamarin.Mac en la lista desplegable **Interfaz principal**. En el caso del ejemplo anterior, `Main` en la lista desplegable se relaciona con `Main.storyboard` en el árbol de origen del proyecto del **Explorador de soluciones**. También define los iconos de la aplicación al especificar el *catálogo de recursos* que los contiene (AppIcons en este caso).
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
@@ -275,7 +275,7 @@ Esto debería iniciar Xcode y tener un aspecto similar al siguiente:
 Antes de comenzar a diseñar la interfaz, vea una introducción rápida de Xcode para orientarse con las principales características que usará.
 
 > [!NOTE]
-> El desarrollador no tiene que usar Xcode e Interface Builder para crear la interfaz de usuario de una aplicación de Xamarin.Mac, la interfaz de usuario se puede crear directamente desde el código de C#, pero eso está fuera del ámbito de este artículo. Por simplicidad, usará Interface Builder para crear la interfaz de usuario en el resto de este tutorial.
+> El desarrollador no tiene que usar Xcode e Interface Builder para crear la interfaz de usuario de una aplicación de Xamarin.Mac. La interfaz de usuario se puede crear directamente desde el código de C#, pero eso está fuera del ámbito de este artículo. Por simplicidad, usará Interface Builder para crear la interfaz de usuario en el resto de este tutorial.
 
 
 <a name="Components_of_Xcode" />
@@ -300,13 +300,13 @@ La sección **Navegación del proyecto** permite al desarrollador desplazarse po
 
 ### <a name="interface-hierarchy"></a>Jerarquía de la interfaz
 
-En la sección **Interface Hierarchy** (Jerarquía de la interfaz), el desarrollador puede tener acceso fácilmente a varias propiedades clave de la interfaz de usuario, como sus **marcadores de posición** y la **ventana** principal. Esta sección se puede usar para tener acceso a los elementos individuales (vistas) que conforman la interfaz de usuario y ajustar la forma en que se anidan, al arrastrarlos por la jerarquía.
+En la sección **Jerarquía de la interfaz**, el desarrollador puede tener acceso fácilmente a varias propiedades clave de la interfaz de usuario, como sus **marcadores de posición** y la **ventana** principal. Esta sección se puede usar para tener acceso a los elementos individuales (vistas) que conforman la interfaz de usuario y para ajustar la forma en que se anidan, al arrastrarlos por la jerarquía.
 
 <a name="Interface_Editor" />
 
 ### <a name="interface-editor"></a>Editor de la interfaz
 
-En la sección **Interface Editor** (Editor de la interfaz) se proporciona la superficie en que se establece la interfaz de usuario de forma gráfica. Arrastre elementos desde la sección **Biblioteca** de la sección **Properties & Utilities** (Propiedades y utilidades) para crear el diseño. Al agregar elementos de interfaz de usuario (vistas) a la superficie de diseño, se agregarán a la sección **Interface Hierarchy** (Jerarquía de la interfaz) en el orden en que aparecen en el **Interface Editor** (Editor de la interfaz).
+En la sección **Editor de la interfaz** se proporciona la superficie en la que se establece la interfaz de usuario de forma gráfica. Arrastre elementos desde la sección **Biblioteca** de la sección **Properties & Utilities** (Propiedades y utilidades) para crear el diseño. Al agregar elementos de interfaz de usuario (vistas) a la superficie de diseño, se agregarán a la sección **Interface Hierarchy** (Jerarquía de la interfaz) en el orden en que aparecen en el **Interface Editor** (Editor de la interfaz).
 
 <a name="Properties_Utilities" />
 
@@ -318,7 +318,7 @@ La sección **Properties & Utilities** (Propiedades y utilidades) se divide en d
 
 Inicialmente, esta sección está casi vacía. En cambio, si el desarrollador selecciona un elemento del **Interface Editor** (Editor de la interfaz) o de la **Interface Hierarchy** (Jerarquía de la interfaz), la sección **Propiedades** se rellenará con información sobre ese elemento y las propiedades que se pueden ajustar.
 
-En la sección **Propiedades** hay 8 *pestañas de inspectores* diferentes, como se muestra en la siguiente ilustración:
+En la sección **Propiedades** hay ocho *pestañas de inspectores* diferentes, como se muestra en la siguiente ilustración:
 
 [![](hello-mac-images/xcode05.png "Vista general de todos los inspectores")](hello-mac-images/xcode05.png#lightbox)
 
@@ -401,7 +401,7 @@ En la sección **Jerarquía de la interfaz**, puede ver cómo se muestran el dis
 
 Desde aquí, el desarrollador puede seleccionar elementos para editarlos o arrastrarlos para volver a ordenar los elementos de la interfaz de usuario si es necesario. Por ejemplo, si un elemento cubría a otro elemento de interfaz de usuario, podría arrastrarlo a la parte inferior de la lista para convertirlo en el elemento de nivel superior de la ventana.
 
-Una vez la interfaz de usuario está creada, el desarrollador tendrá que exponer los elementos de interfaz de usuario para que Xamarin.Mac pueda obtener acceso e interactuar con ellos en código de C#. En la siguiente sección, **Salidas y acciones**, se muestra cómo hacerlo.
+Una vez que la interfaz de usuario esté creada, el desarrollador tendrá que exponer los elementos de interfaz de usuario para que Xamarin.Mac pueda obtener acceso e interactuar con ellos en código de C#. En la siguiente sección, **Salidas y acciones**, se muestra cómo hacerlo.
 
 <a name="Outlets_and_Actions" />
 
@@ -490,7 +490,7 @@ Haga lo siguiente:
 Con la interfaz de usuario conectada y expuesta al código de C#, vuelva a Visual Studio para Mac y permita que se sincronicen los cambios realizados en Xcode y en Interface Builder.
 
 > [!NOTE]
-> Es probable que haya tardado mucho tiempo en crear la interfaz de usuario y las **salidas** y **acciones** de esta primera aplicación y puede parecer mucho trabajo, pero se han introducido muchos conceptos nuevos y se ha dedicado una gran cantidad de tiempo a cubrir esta nueva base. Después de trabajar un poco con Interface Builder para practicar, esta interfaz y todas sus **salidas** y **acciones** se pueden crear en un par de minutos.
+> Es probable que haya tardado mucho tiempo en crear la interfaz de usuario y las **salidas** y **acciones** de esta primera aplicación, lo cual puede parecer mucho trabajo, pero se han introducido muchos conceptos nuevos y se ha dedicado una gran cantidad de tiempo a cubrir esta nueva base. Después de trabajar un poco con Interface Builder para practicar, esta interfaz y todas sus **salidas** y **acciones** se pueden crear en un par de minutos.
 
 <a name="Synchronizing_Changes_with_Xcode" />
 
@@ -559,9 +559,9 @@ public override void ViewDidLoad ()
 }
 ```
 
-Use `ViewDidLoad`, en lugar de otro método como `Initialize`, porque se llama a `ViewDidLoad` *después* de que haya cargado el sistema operativo y se haya creado una instancia de la interfaz de usuario del archivo **.storyboard**. Si el desarrollador ha intentado tener acceso al control de etiqueta antes de que el archivo **.storyboard** haya cargado por completo y haya creado una instancia, obtendría un error `NullReferenceException` porque aún no se habría creado el control de etiqueta.
+Use `ViewDidLoad`, en lugar de otro método como `Initialize`, porque se llama a `ViewDidLoad` *después* de que haya cargado el sistema operativo y se haya creado una instancia de la interfaz de usuario del archivo **.storyboard**. Si el desarrollador ha intentado tener acceso al control de etiqueta antes de que el archivo **.storyboard** haya cargado por completo y haya creado una instancia, obtendría un error `NullReferenceException` porque aún no existiría el control de etiqueta.
 
-Después, agregue el código para responder al usuario que haga clic en el botón. Agregue la siguiente clase parcial a la clase `ViewController`:
+Después, agregue el código para responder al usuario que haga clic en el botón. Agregue el siguiente método parcial a la clase `ViewController`:
 
 ```csharp
 partial void ClickedButton (Foundation.NSObject sender) {
