@@ -1,18 +1,18 @@
 ---
 title: Parte 3. Extensiones de marcado XAML
-description: "Las extensiones de marcado XAML constituyen una característica importante de XAML que permite que las propiedades se establezca en objetos o valores que se hace referencia indirectamente desde otros orígenes. Las extensiones de marcado XAML son especialmente importantes para uso compartido de objetos y hacer referencia a las constantes se utilizan en toda una aplicación, pero encuentra su mayor utilidad enlaces de datos."
+description: Las extensiones de marcado XAML constituyen una característica importante de XAML que permite que las propiedades se establezca en objetos o valores que se hace referencia indirectamente desde otros orígenes. Las extensiones de marcado XAML son especialmente importantes para uso compartido de objetos y hacer referencia a las constantes se utilizan en toda una aplicación, pero encuentra su mayor utilidad enlaces de datos.
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
-ms.date: 10/25/2017
-ms.openlocfilehash: 1c5c4c30a7e506e19fc4dc0728fb55851ec4911f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 3/27/2018
+ms.openlocfilehash: cd881b79945c2b9c10e9bb1bc85fce98acb71026
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensiones de marcado XAML
 
@@ -45,7 +45,7 @@ Algunas páginas XAML contienen varias vistas con propiedades establecidas en lo
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
         <Button Text="Do that!"
                 HorizontalOptions="Center"
@@ -53,7 +53,7 @@ Algunas páginas XAML contienen varias vistas con propiedades establecidas en lo
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
         <Button Text="Do the other thing!"
                 HorizontalOptions="Center"
@@ -61,7 +61,7 @@ Algunas páginas XAML contienen varias vistas con propiedades establecidas en lo
                 BorderWidth="3"
                 Rotation="-15"
                 TextColor="Red"
-                FontSize="Large" />
+                FontSize="24" />
 
     </StackLayout>
 </ContentPage>
@@ -136,7 +136,7 @@ Ahora es necesario establecer la `HorizontalOptions` y `VerticalOptions` propied
         BorderWidth="3"
         Rotation="-15"
         TextColor="Red"
-        FontSize="Large" />
+        FontSize="24" />
 ```
 
 El `StaticResource` extensión de marcado siempre se delimita con llaves e incluye la clave de diccionario.
@@ -192,7 +192,7 @@ Pueden hacer referencia a esos dos recursos de la misma manera que el `LayoutOpt
         BorderWidth="{StaticResource borderWidth}"
         Rotation="{StaticResource rotationAngle}"
         TextColor="Red"
-        FontSize="Large" />
+        FontSize="24" />
 ```
 
 Para recursos de tipo `Color`, puede usar el mismo representaciones de cadena que utilizar al asignar directamente los atributos de estos tipos. Los convertidores de tipos se invocan cuando se crea el recurso. Este es un recurso de tipo `Color`:
@@ -201,14 +201,10 @@ Para recursos de tipo `Color`, puede usar el mismo representaciones de cadena qu
 <Color x:Key="textColor">Red</Color>
 ```
 
-El `FontSize` propiedad presenta un pequeño problema. La propiedad se define como de tipo `double`. Al establecer la propiedad a un miembro de la `NamedSize` enumeración como `Large`, el `FontSizeConverter` clase funciona en segundo plano para convertirla en un valor depende de la plataforma mediante el `Device.GetNamedSized` método.
-
-Sin embargo, no se puede definir un recurso para un tamaño de fuente como un `double` y establezca el valor en "Grande". En el momento que el analizador de XAML procesa el recurso, no sabe que el valor se usará como un tamaño de fuente. 
-
-La solución consiste en definir el recurso como una `string` mediante el `x:String` tipo:
+A menudo, los programas conjunto un `FontSize` propiedad a un miembro de la `NamedSize` enumeración como `Large`. El `FontSizeConverter` clase funciona en segundo plano para convertirla en un valor depende de la plataforma mediante el `Device.GetNamedSized` método. Sin embargo, al definir un recurso de tamaño de fuente, tiene más sentido usar un valor numérico, se muestra aquí como un `x:Double` tipo:
 
 ```xaml
-<x:String x:Key="fontSize">Large</x:String>
+<x:Double x:Key="fontSize">24</x:Double>
 ```
 
 Ahora todas las propiedades excepto `Text` se definen mediante la configuración de recursos:
@@ -275,7 +271,7 @@ Este es el archivo XAML completo final con tres botones de acceso a los seis val
                 BorderWidth="{StaticResource borderWidth}"
                 Rotation="{StaticResource rotationAngle}"
                 TextColor="{StaticResource textColor}"
-                FontSize"{StaticResource fontSize}" />
+                FontSize="{StaticResource fontSize}" />
 
         <Button Text="Do that!"
                 HorizontalOptions="{StaticResource horzOptions}"

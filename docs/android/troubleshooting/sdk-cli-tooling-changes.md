@@ -1,6 +1,6 @@
 ---
 title: Cambios en las Herramientas de Android SDK
-description: "Cambios en cómo el SDK de Android administra los niveles de API y AVDs instalado."
+description: Cambios en cómo el SDK de Android administra los niveles de API y AVDs instalado.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 69e9f08870a01c056951700978d07277af5edfa8
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a16aa3704d9e0a63cfabde4b620452e7e2a5bf57
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Cambios en las Herramientas de Android SDK
 
@@ -20,7 +20,7 @@ _Cambios en cómo el SDK de Android administra los niveles de API y AVDs instala
 
 ## <a name="changes-to--android-sdk-tooling"></a>Cambios en las herramientas de SDK de Android
 
-En las versiones actuales de las herramientas del SDK para Android, Google ha quitado los administradores existentes de AVD y SDK en favor de nuevos _interfaz de línea de comandos_ herramientas (CLI). El primero **android** se ha quitado el programa y los administradores de GUI (interfaz gráfica de usuario) en Visual Studio para Mac y versiones anteriores de Xamarin para Visual Studio dejará de funcionar más allá de las herramientas de SDK de Android de versión.
+En las versiones actuales de las herramientas del SDK para Android, Google ha quitado los administradores existentes de AVD y SDK en favor de nuevas herramientas de CLI (interfaz de línea de comandos). El primero **android** se ha quitado el programa y los administradores de GUI (interfaz gráfica de usuario) en Visual Studio para Mac y versiones anteriores de Xamarin para Visual Studio dejará de funcionar después de la versión 25.2.5 de las herramientas de SDK de Android.
 
 
 ![Android menú IDE de Visual Studio](sdk-cli-tooling-changes-images/android-ide-menu.png)
@@ -50,7 +50,7 @@ Hay un nuevo programa llamado **sdkmanager** en el **herramientas/bin** carpeta 
 
 **Agregado en:** herramientas de Android SDK 25.3.0 (marzo de 2017) y versiones posteriores.
 
-Hay un nuevo programa llamado **avdmanager** en el **herramientas/bin** carpeta del SDK de Android. Esta herramienta se utiliza para mantener la AVD para el emulador de Google Android. Para obtener más información sobre el uso de esta herramienta, consulte [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
+Hay un nuevo programa llamado **avdmanager** en el **herramientas/bin** carpeta del SDK de Android. Esta herramienta se utiliza para mantener la AVDs para el emulador de Google Android. Para obtener más información sobre el uso de esta herramienta, consulte [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
 
 ### <a name="downgrading"></a>Degradar
 
@@ -65,6 +65,6 @@ Todavía puede usar la GUI original mediante la ejecución de la **android** pro
 
 - [Configuración de Android SDK](~/android/get-started/installation/android-sdk.md)
 - [Descripción de los niveles de API de Android](~/android/app-fundamentals/android-api-levels.md)
-- [Herramientas de SDK de notas de la versión (Google)](https://developer.android.com/studiohttps://developer.xamarin.com/releases/sdk-tools.html)
+- [Notas de la versión de SDK Tools (Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
-- [avdmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
+- [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)

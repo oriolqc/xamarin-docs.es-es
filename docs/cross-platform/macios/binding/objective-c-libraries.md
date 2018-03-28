@@ -7,17 +7,17 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 29b846453396d37adc689fe49e80299e8f35bbe2
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 3b1894555c27e368fc80cc4ebaa1f6b40446e2aa
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="binding-objective-c-libraries"></a>Bibliotecas de enlace Objective-c.
 
 Cuando se trabaja con Xamarin.iOS o Xamarin.Mac, podría encontrar casos donde probablemente prefiera utilizar una biblioteca de C de objetivo de terceros. En estos casos, puede utilizar proyectos de enlace de Xamarin para crear un enlace de C# para las bibliotecas de Objective-C nativo. El proyecto utiliza las mismas herramientas que se usan para imponer el iOS y Mac API para C#.
 
-Este documento describe cómo enlazar Objective-C API, si va a enlazar solo las API de C, debe utilizar el mecanismo de .NET estándar para ello, [el marco de trabajo de P/Invoke](http://mono-project.com/Dllimport).
+Este documento describe cómo enlazar Objective-C API, si va a enlazar solo las API de C, debe utilizar el mecanismo de .NET estándar para ello, [el marco de trabajo de P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/).
 Obtener más información sobre cómo vincular estáticamente una biblioteca C está disponibles en la [vincular bibliotecas nativas](~/ios/platform/native-interop.md) página.
 
 Consulte nuestro complementaria [Guía de referencia de tipos de enlace](~/cross-platform/macios/binding/binding-types-reference.md).

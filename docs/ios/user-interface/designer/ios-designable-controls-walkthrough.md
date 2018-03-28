@@ -1,6 +1,6 @@
 ---
-title: "Tutorial: usar controles personalizados con el Diseñador de Xamarin para iOS"
-description: "Este artículo proporciona un tutorial paso a paso que muestra cómo crear un control personalizado y usarlo en el Diseñador de Xamarin para iOS. Muestra cómo hacer que un control esté disponible en el cuadro de herramientas del diseñador para que se puede arrastrar y colocar en una vista. Además, se muestra cómo implementar un control, por lo que se representa correctamente en tiempo de diseño y en tiempo de ejecución, así como cómo crear propiedades que se pueden establecer en tiempo de diseño."
+title: 'Tutorial: usar controles personalizados con el Diseñador de Xamarin para iOS'
+description: Este artículo proporciona un tutorial paso a paso que muestra cómo crear un control personalizado y usarlo en el Diseñador de Xamarin para iOS. Muestra cómo hacer que un control esté disponible en el cuadro de herramientas del diseñador para que se puede arrastrar y colocar en una vista. Además, se muestra cómo implementar un control, por lo que se representa correctamente en tiempo de diseño y en tiempo de ejecución, así como cómo crear propiedades que se pueden establecer en tiempo de diseño.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 3e12e33b254e58759043ed838d5c34dd7bd024fd
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4138ba0da1dd2174c53e6e35105c3199ea941f7f
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="walkthrough---using-custom-controls-with-the-xamarin-designer-for-ios"></a>Tutorial: usar controles personalizados con el Diseñador de Xamarin para iOS
 
@@ -32,15 +32,11 @@ Esta guía se da por supuesto una familiaridad con el contenido que se tratan en
 
 1. Cree una nueva solución de la **iOS > aplicaciones > única aplicación de vista > C#** plantilla, asígnele el nombre `ScratchTicket`y continúe con el Asistente para nuevo proyecto:
 
-
     [![](ios-designable-controls-walkthrough-images/01new.png "Cree una nueva solución")](ios-designable-controls-walkthrough-images/01new.png#lightbox)
-
 
 1. Crear un nuevo archivo de clase vacía denominado `ScratchTicketView`:
 
-
     [![](ios-designable-controls-walkthrough-images/02new.png "Cree una nueva clase de ScratchTicketView")](ios-designable-controls-walkthrough-images/02new.png#lightbox)
-
 
 1. Agregue el código siguiente para `ScratchTicketView` clase:
 

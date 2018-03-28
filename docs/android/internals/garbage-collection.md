@@ -1,5 +1,5 @@
 ---
-title: "recolección de elementos no utilizados"
+title: recolección de elementos no utilizados
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 298139E2-194F-4A58-BC2D-1D22231066C4
@@ -7,15 +7,15 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/15/2018
-ms.openlocfilehash: db277f20e63a59690ffaa8a8544ff9540578d3f5
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: e27e9577957229f347b217a8920eac239799da15
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="garbage-collection"></a>recolección de elementos no utilizados
 
-Xamarin.Android usa de Mono [recolector de elementos no utilizados de generación Simple](http://www.mono-project.com/Compacting_GC). Se trata de un recopilador de elementos no utilizados de barrido de marca con dos generaciones y un *el espacio de objetos grandes*, con dos tipos de colecciones: 
+Xamarin.Android usa de Mono [recolector de elementos no utilizados de generación Simple](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/). Se trata de un recopilador de elementos no utilizados de barrido de marca con dos generaciones y un *el espacio de objetos grandes*, con dos tipos de colecciones: 
 
 -   Colecciones secundarias (recopila Gen0 montón) 
 -   Colecciones principales (recopila Gen1 y objetos grandes espacio montones). 
