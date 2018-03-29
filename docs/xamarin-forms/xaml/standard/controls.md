@@ -1,6 +1,6 @@
 ---
-title: "Controles XAML estándar (versión preliminar)"
-description: "Cómo empezar a explorar la vista previa estándar de XAML de Xamarin.Forms"
+title: Controles XAML estándar (versión preliminar)
+description: Cómo empezar a explorar la vista previa estándar de XAML de Xamarin.Forms
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 287E6631-D1C5-46C5-8905-AB53D34E365D
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: b044cb849f9a8e591a8db5907211a55f77d6e45f
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 084da9cbb06c7ec9bbab6ea4dc6a1a7b15ffe692
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xaml-standard-preview-controls"></a>Controles XAML estándar (versión preliminar)
 
@@ -38,7 +38,7 @@ También es una lista de controles que tienen nombres de propiedad y enumeració
 
 ## <a name="properties-and-enumerations"></a>Propiedades y enumeraciones
 
-|Xamarin.FormsControls con propiedades actualizadas|Xamarin.FormsProperty o Enum|StandardEquivalent XAML|
+|Controles de Xamarin.Forms con propiedades actualizadas|Propiedad Xamarin.Forms o enum|XAML estándar equivalente|
 |--- |--- |--- |
 |Botón, entrada, etiqueta, DatePicker, Editor, SearchBar, TimePicker|TextColor|Primer plano|
 |VisualElement|BackgroundColor|Fondo *|

@@ -1,6 +1,6 @@
 ---
 title: Pasar argumentos en XAML
-description: "Este artículo muestra cómo utilizar los atributos XAML que pueden utilizarse para pasar argumentos a los constructores no predeterminados para llamar a métodos de generador y para especificar el tipo de argumento genérico."
+description: Este artículo muestra cómo utilizar los atributos XAML que pueden utilizarse para pasar argumentos a los constructores no predeterminados para llamar a métodos de generador y para especificar el tipo de argumento genérico.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8F3B267F-499E-4D79-9193-FCA99F199519
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2016
-ms.openlocfilehash: a30dd9b33466ac6907322f8c6b586c012452a44f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 232f60bb7afca7acf73e63bd7e11e1b6ec47fbd2
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="passing-arguments-in-xaml"></a>Pasar argumentos en XAML
 
@@ -135,7 +135,7 @@ El [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) estr
 </BoxView>
 ```
 
-El número de elementos de la `x:Arguments` etiqueta y los tipos de estos elementos, que deben coincidir con los argumentos del método de generador que se va a invocar. El [ `FromRgba` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/) método generador requiere cuatro [ `Int32` ](https://developer.xamarin.com/api/type/System.Int32/) parámetros, que representan los valores de color rojo, verde, azul y alfabéticos, comprendido entre 0 y 255 respectivamente. El [ `FromHsla` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/) método generador requiere cuatro [ `Double` ](https://developer.xamarin.com/api/type/System.Double/) parámetros, que representan el matiz, saturación, luminosidad y los valores alfa, comprendido entre 0 y 1 respectivamente. El [ `FromHex` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) método generador requiere un [ `String` ](https://developer.xamarin.com/api/type/System.String/) que representa el valor hexadecimal (A) color RGB.
+El número de elementos de la `x:Arguments` etiqueta y los tipos de estos elementos, que deben coincidir con los argumentos del método de generador que se va a invocar. El [ `FromRgba` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/) método generador requiere cuatro [ `Int32` ](https://docs.microsoft.com/dotnet/api/system.int32) parámetros, que representan los valores de color rojo, verde, azul y alfabéticos, comprendido entre 0 y 255 respectivamente. El [ `FromHsla` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/) método generador requiere cuatro [ `Double` ](https://docs.microsoft.com/dotnet/api/system.double) parámetros, que representan el matiz, saturación, luminosidad y los valores alfa, comprendido entre 0 y 1 respectivamente. El [ `FromHex` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) método generador requiere un [ `String` ](https://docs.microsoft.com/dotnet/api/system.string) que representa el valor hexadecimal (A) color RGB.
 
 Las capturas de pantalla siguientes muestran el resultado de llamar a cada uno de ellos [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) método de fábrica con los valores de argumento especificado:
 

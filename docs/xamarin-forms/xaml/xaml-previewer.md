@@ -1,6 +1,6 @@
 ---
 title: Controlador de vista previa XAML para Xamarin.Forms
-description: "Vea los diseños de Xamarin.Forms representados a medida que escribe."
+description: Vea los diseños de Xamarin.Forms representados a medida que escribe.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/24/2017
-ms.openlocfilehash: 8f4d8253d56708f77ede7b5173f3dd771e1da0ea
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a7a9c4fed92cb4ed8c8c12e97129bc8379037acb
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Controlador de vista previa XAML para Xamarin.Forms
 
@@ -26,17 +26,19 @@ Hay más información en el [notas de la versión](https://developer.xamarin.com
 
 ## <a name="getting-started"></a>Introducción
 
-### <a name="visual-studio-for-mac-on-mac"></a>Visual Studio para Mac en Mac
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Use la **Vista > otras ventanas > controlador de vista previa de Xamarin.Forms** menú en Visual Studio para abrir la ventana de vista previa. Use la **Ventana > nuevo grupo de tabulación Vertical** menú para colocarla en paralelo.
+
+[![Vista previa del control ListView en Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "controlador de vista previa de formularios en Visual Studio")](xaml-previewer-images/xamlp-list-vs.png#lightbox "controlador de vista previa de formularios en Visual Studio")
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 El **vista previa** botón se puede mostrar en el editor haciendo clic en un archivo XAML y seleccionar **abrir con > Visor XAML**. El panel de vista previa, a continuación, pueden mostrar u ocultar presionando el **vista previa** situado en la esquina superior derecha de las ventanas de documento XAML:
 
 [![Vista previa del control ListView en Visual Studio para Mac](xaml-previewer-images/xamlp-list-sml.png "controlador de vista previa de formularios en Visual Studio para Mac")](xaml-previewer-images/xamlp-list.png#lightbox "controlador de vista previa de formularios en Visual Studio para Mac")
 
-### <a name="visual-studio-on-windows"></a>Visual Studio en Windows
-
-Use la **Vista > otras ventanas > controlador de vista previa de Xamarin.Forms** menú en Visual Studio para abrir la ventana de vista previa. Use la **Ventana > nuevo grupo de tabulación Vertical** menú para colocarla en paralelo.
-
-[![Vista previa del control ListView en Visual Studio](xaml-previewer-images/xamlp-list-vs-sml.png "controlador de vista previa de formularios en Visual Studio")](xaml-previewer-images/xamlp-list-vs.png#lightbox "controlador de vista previa de formularios en Visual Studio")
+-----
 
 ## <a name="xaml-preview-options"></a>Opciones de vista previa XAML
 

@@ -1,6 +1,6 @@
 ---
 title: Ejemplos de Xamarin Player en vivo
-description: Estos son algunos ejemplos para probar con Xamarin Player en vivo
+description: Estos son algunos ejemplos para probar con Xamarin Player en vivo.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
@@ -8,32 +8,34 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 06/20/2017
-ms.openlocfilehash: 6f4ccfb70e3e8e4db0bfb692e63208b5fc89ffac
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0e624568a86b08522d68b923b2d60a86144870da
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="xamarin-live-player-samples"></a>Ejemplos de Xamarin Player en vivo
 
-_Estos son algunos ejemplos para probar con Xamarin Player en vivo_
-
-## <a name="xamarinforms"></a>Xamarin.Forms
+## <a name="get-started-with-xamarinforms"></a>Introducción a Xamarin.Forms
 
 Visite la [Galería de ejemplos](https://developer.xamarin.com/samples/xamarin-live-player/all/) para Xamarin.Forms ejemplos que funcionan con Xamarin Player en vivo.
 
-<a name="colorcontrol"/>
+## <a name="featured-samples"></a>Ejemplos de destacado
 
-## <a name="color-control-ios"></a>Control de color (iOS)
+### <a name="basic-calculatorhttpsdeveloperxamarincomsamplesmobileliveplayerbasiccalculator"></a>[Calculadora básica](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator/)
 
-Basado en el objeto [receta](https://developer.xamarin.com/recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image/), el ejemplo de Control de Color permite tomar una foto en su iPhone y ajustar los niveles de color:
+Esta aplicación Xamarin.Forms proporciona una calculadora simple que puede usar en el dispositivo Android o iOS.
 
-![Captura de pantalla de aplicación de ejemplo de Control de color](samples-images/color-control-sml.png)
+![Pantalla de ejemplo de calculadora básica](samples-images/basic-calculator-sml.png)
 
-[Descargar ejemplo](https://developer.xamarin.com/samples/mobile/LivePlayer/ColorControl/)
+### <a name="bugsweeperhttpsdeveloperxamarincomsamplesmobileliveplayerbugsweeperlp"></a>[BugSweeper](https://developer.xamarin.com/samples/mobile/LivePlayer/BugSweeperLP/)
+
+Se trata de un juego familiar con un nuevo toque. Diez errores están ocultos en una cuadrícula de 9 x 9 iconos. Para ganar, debe buscar y marcar los diez errores.
+
+![Aplicación de BugSweeper en Android](samples-images/bugsweeper-sml.png)
+
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Control de color (iOS) (ejemplo)](https://developer.xamarin.com/samples/mobile/LivePlayer/ColorControl/)
-- [Ejemplos de Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+- [Ejemplos de Reproductor en vivo de Xamarin.Forms](https://developer.xamarin.com/samples/xamarin-live-player/all/)

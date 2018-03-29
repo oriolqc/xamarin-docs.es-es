@@ -4,14 +4,10 @@ título: "Parte 6 – pruebas y aplicación tienda aprobaciones" ms.topic: artí
 
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6: probar y aprobaciones de tienda de aplicaciones
 
-<a name="Testing" />
-
 
 ## <a name="testing"></a>Pruebas
 
 Muchas aplicaciones (incluso de aplicaciones Android, en algunas tiendas) tiene que pasar un proceso de aprobación antes de publicarlos; Para probar es fundamental para garantizar la aplicación alcanza el mercado (por no hablar lo hace con los clientes). Pruebas, pueden tomar muchas formas, desde pruebas a la administración de pruebas de versiones beta a través de una amplia variedad de hardware de nivel de desarrollador unitarias.
-
- <a name="Test_on_All_Platforms" />
 
 
 ### <a name="test-on-all-platforms"></a>En todas las plataformas de pruebas
@@ -22,16 +18,12 @@ Siempre es recomendable utilizar el simulador o emulador para probar varias vers
 
 También debe probar en tantos dispositivos de hardware físico diferente como pueda.
 
- <a name="Devices_in_cloud" />
-
 
 #### <a name="devices-in-cloud"></a>Dispositivos en la nube
 
 El ecosistema de teléfono y Tablet PC móvil está aumentando el tiempo, que no se pueda probar en el número creciente de dispositivos disponibles. Para solucionar este problema una serie de servicios ofrece la capacidad de controlar de forma remota varios dispositivos diferentes para que las aplicaciones se pueden instalar y probar sin necesidad de invertir directamente en una gran cantidad de hardware.
 
 [Prueba de la aplicación Centro](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) ofrece una manera sencilla de probar aplicaciones de iOS y Android en cientos de diferentes dispositivos.
-
- <a name="Test_Management" />
 
 
 ### <a name="test-management"></a>Administración de pruebas
@@ -44,10 +36,8 @@ Al probar las aplicaciones dentro de su organización o administrar un programa 
 
 Hay una serie de servicios de ayuda para solucionar estos problemas, debe proporcionar la infraestructura que está integrado en la aplicación para recopilar y notificar sobre el uso y errores y también lo que facilita el proceso de aprovisionamiento para ayudar a inicio de sesión y administrar sus dispositivos y evaluadores .
 
-El [Xamarin visión preliminar](http://xamarin.com/insights) ofrece una solución para la segunda parte de este problema, proporciona información de uso de aplicaciones de informes y sofisticados bloqueo.
+[Centro de aplicación de Visual Studio](/appcenter/) ofrece una solución a estos problemas, lo que proporciona información de uso de aplicaciones sofisticadas, informes de errores y distribución de la versión de prueba.
 
-
- <a name="Test_Automation" />
 
 
 ### <a name="test-automation"></a>Automatización de pruebas
@@ -55,12 +45,10 @@ El [Xamarin visión preliminar](http://xamarin.com/insights) ofrece una solució
 Xamarin [UITest](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) puede usarse para crear la interfaz de usuario automatizadas scripts de prueba que se pueden ejecutar localmente o cargar en [aplicación Center Test](https://docs.microsoft.com/appcenter/test-cloud/).
 
 
- <a name="Unit_Testing" />
 
 
 ## <a name="unit-testing"></a>Pruebas unitarias
 
- <a name="Touch.Unit" />
 
 
 #### <a name="touchunit"></a>Touch.Unit
@@ -69,29 +57,13 @@ Xamarin.iOS incluye un marco de pruebas unitarias denominado Touch.Unit que sigu
 
 Consulte nuestro [pruebas unitarias con Xamarin.iOS](~/ios/deploy-test/touch.unit.md) documentación para obtener más información sobre escribir pruebas y ejecutar Touch.Unit.
 
- <a name="Andr.Unit" />
 
 
 #### <a name="andrunit"></a>Andr.Unit
 
 Hay un equivalente de código abierto de Touch.Unit para Android denominado Andr.Unit. Puede descargarlo desde [github](https://github.com/spouliot/Andr.Unit) y leer acerca de la herramienta en [ @spouliotdel blog](http://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
 
- <a name="Windows_Phone" />
 
-
-#### <a name="windows-phone"></a>Windows Phone
-
-Estos son algunos vínculos para ayudarle a configurar pruebas unitarias para Windows Phone:
-
--   [http://www.jeff.wilcox.name/2010/05/sl3-utf-bits/](http://www.jeff.wilcox.name/2010/05/sl3-utf-bits/)
--   [http://www.jeff.wilcox.name/2011/06/updated-ut-mango-bits/](http://www.jeff.wilcox.name/2011/06/updated-ut-mango-bits/)
--   [http://www.smartypantscoding.com/a-cheat-sheet-for-unit-testing-silverlight-apps-on-windows-phone-7](http://www.smartypantscoding.com/a-cheat-sheet-for-unit-testing-silverlight-apps-on-windows-phone-7)
--   [http://mobile.dzone.com/articles/unit-testing-your-windows](http://mobile.dzone.com/articles/unit-testing-your-windows)
-
-
-&nbsp;
-
- <a name="App_Store_Approvals" />
 
 
 ## <a name="app-store-approvals"></a>Aprobaciones de la tienda de aplicaciones
@@ -100,7 +72,6 @@ Apple y Microsoft operan el único almacén en las plataformas de: la tienda de 
 
 Esperando a una aplicación que se debe revisar puede ser muy estrés: presiones del negocio significan a menudo las aplicaciones se envían para su aprobación con muy poco margen para el error antes de una fecha de inicio de "destino". El propio proceso puede tardar hasta dos semanas y no es necesariamente transparente: hay comentarios limitado sobre el progreso de la aplicación hasta que finalmente se rechazan o aprobado. Rechazo puede significar que falta una ventana de marketing de oportunidad, sobre todo si se produce más de una vez y pasan semanas entre la fecha de inicio original y cuando finalmente se aprueba la aplicación.
 
- <a name="Be_prepared" />
 
 
 ### <a name="be-prepared"></a>Prepárese
@@ -117,7 +88,6 @@ Una vez que se ha aprobado su cuenta, está listo para enviar una aplicación. E
 
 El resto de esta sección tratan aspectos que debe tener en cuenta para garantizar que la aplicación se aprueba sin las interrupciones.
 
- <a name="Quality" />
 
 
 ### <a name="quality"></a>Calidad
@@ -127,8 +97,6 @@ Parece obvio, pero las aplicaciones suelen obtener rechazarán porque no cumplen
 Bloqueos son una causa habitual de rechazo. Si es demasiado fácil realizar el bloqueo de aplicación, se garantiza que se rechacen. Mayoría de los desarrolladores no enviar sus aplicaciones con la expectativa de que le bloqueará, aunque lo hacen con frecuencia. Pruebe exhaustivamente la aplicación antes de enviarlo, centrarse no solo en asegurarse de que todo funciona, sino que gestionan escenarios habituales de error móviles, como problemas de red y restricciones de recursos como memoria o espacio de almacenamiento. Utilizar el simulador y los dispositivos físicos para probar: independientemente de la medida, el código se ejecuta en un simulador, solo un dispositivo puede mostrar el rendimiento real de una aplicación. Usar como muchos dispositivos diferentes que puede encontrar y dar de alta un equipo de evaluadores beta si puede, servicios de terceros pueden ayudar a administrar comentarios y la distribución beta.
 
 Todos los sistemas operativos móviles elimina una aplicación que no se inicia con la suficiente rapidez. La longitud de tiempo permitido varía, pero en general deben tener como objetivo aplicaciones a la capacidad de respuesta en unos segundos y usar tareas en segundo plano para realizar cualquier trabajo que se tardaría más tiempo. Se rechazarán las aplicaciones que tardan demasiado tiempo en cargarse o responden no de uso normal. Siempre proporcionar comentarios del usuario cuando algo sucede en segundo plano, o la aplicación parecerá que se han bloqueado y una vez más, obtener rechazado.
-
- <a name="Check_Your_Edge_Cases" />
 
 
 ### <a name="check-your-edge-cases"></a>Compruebe los casos de borde
@@ -143,7 +111,6 @@ En la lista siguiente es un buen punto de partida para casos extremos que pueden
 -   **El hardware varía** – no olvide probar en el hardware más antiguo, más lento que tiene previsto admitir. Hay dos aspectos que pueden afectar a la aplicación: rendimiento, lo que podría ser inutilizable en un dispositivo anterior y compatibilidad con las características de hardware, como una cámara, micrófono, GPS, giroscopio u otro componente opcional. Las aplicaciones deben reducir correctamente (y de no bloqueo) cuando un componente no está disponible.
 
 
- <a name="Guidelines_are_more_than_just_a_‘guide’" />
 
 
 ### <a name="guidelines-are-more-than-just-a-guide"></a>Instrucciones son algo más que simplemente 'manual'
@@ -158,7 +125,6 @@ Los desarrolladores de Windows deben tener cuidados de forma similar; un error c
 
 Anime a los diseñadores para leer y seguir las directrices de diseño para cada plataforma.
 
- <a name="Implementing_Platform-Specific_Features" />
 
 
 ### <a name="implementing-platform-specific-features"></a>Implementar características específicas de plataforma
@@ -171,7 +137,6 @@ En cuanto a la implementación específica de la plataforma de servicios, especi
 -   **Asigna** – resulta cada vez más habitual para agregar superposiciones y otras características para móviles mapas, sin embargo tenga cuidado no ocultar el mapa 'créditos' información (por ejemplo, el logotipo de Google en iOS5) que, si lo hace, se producirá en rechazo.
 
 
- <a name="Manage_Your_Metadata" />
 
 
 ### <a name="manage-your-metadata"></a>Administrar los metadatos
@@ -185,7 +150,6 @@ Además de los problemas técnicos obvios que pueden dar lugar a una aplicación
 
 Coloque el esfuerzo en los metadatos de la aplicación como en el desarrollo y pruebas. Las aplicaciones obtener rechazadas por infracciones en los metadatos por lo que merece la pena dedicar tiempo a realizar correctamente.
 
- <a name="App_Stores:_Not_For_Everyone" />
 
 
 ### <a name="app-stores-not-for-everyone"></a>Tiendas de aplicaciones: No para todos los usuarios
@@ -198,8 +162,6 @@ Android ofrece la máxima flexibilidad en este sentido: las aplicaciones pueden 
 Apple proporciona una opción de implementación internos a los desarrolladores inscritos en iOS Developer Enterprise Program, que omite el proceso de aprobación de la tienda de aplicaciones y permite a las empresas distribuir aplicaciones internas a sus empleados.
 Por desgracia esta licencia no contempla la necesidad de distribución de aplicaciones de extranet similar a otros grupos de clientes o de proveedores cerrados. [Enterprise (y Ad Hoc) implementación](~/ios/deploy-test/app-distribution/ipa-support.md)
 
-
- <a name="App_Store_Summary" />
 
 
 ### <a name="app-store-summary"></a>Resumen de la tienda de aplicaciones

@@ -7,15 +7,15 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/06/2017
-ms.openlocfilehash: e9936bb523db8ba8777df94a03bf12f9fa718fca
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 08d15095c8d1d08a65f18d5ad867efdd89d3b795
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="android-beam"></a>Haz Android
 
-Haz Android es una nueva tecnología de cerca de comunicación de campo (NFC) en Android 4 que permite a las aplicaciones compartir información a través de NFC en cerca.
+Haz Android es una tecnología de cerca de comunicación de campo (NFC) introducida en Android 4.0 que permite a las aplicaciones compartir información a través de NFC en cerca.
 
 [![Diagrama que ilustra dos dispositivos cerca del uso compartido de información](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
 

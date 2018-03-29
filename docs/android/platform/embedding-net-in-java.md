@@ -1,18 +1,18 @@
 ---
-title: "La incrustación de .NET en Java"
-description: "Cómo utilizar una biblioteca .NET de Xamarin en un proyecto de Android nativo basado en Java"
+title: La incrustación de .NET en Java
+description: Cómo utilizar una biblioteca .NET de Xamarin en un proyecto de Android nativo basado en Java
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A489EEF3-1008-4257-BF63-FE21D8C23821
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: 1a25f4bc39e39ce58a07ed399082bf13284c16e9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.date: 03/28/2018
+ms.openlocfilehash: f0da12d739c6003257d3acf9ccefdec7e36f5349
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="embedding-net-in-java"></a>La incrustación de .NET en Java
 
@@ -25,7 +25,7 @@ Para usar el 4000 Embeddinator con Java en Android, necesitará lo siguiente:
 
 -   **Android Studio** &ndash; [Android Studio 3.x](https://developer.android.com/studio/preview/index.html) o posterior debe estar instalado.
 
--   **Xamarin.Android** &ndash; [Xamarin.Android 7.4.99](https://jenkins.mono-project.com/view/Xamarin.Android/job/xamarin-android/lastSuccessfulBuild/Azure/) o posterior debe estar instalado.
+-   **Xamarin.Android** &ndash; [Xamarin.Android 7.5](https://www.visualstudio.com/xamarin/) o posterior debe estar instalado.
 
 -   **Kit de desarrollo de Java** &ndash; [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o posterior debe estar instalado.
 

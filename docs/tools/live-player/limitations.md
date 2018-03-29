@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 08/04/2017
-ms.openlocfilehash: d551c0a82fb8f970ce5a00ec9e64ac7f49c81a44
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 71d37b79c962123bb5adf6f999e713f68086166c
+ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="limitations"></a>Limitaciones
 
@@ -21,41 +21,40 @@ ms.lasthandoff: 02/27/2018
 ## <a name="device-requirements"></a>Requisitos de dispositivo
 La aplicación de Xamarin Player en vivo es compatible con los siguientes dispositivos:
 
-### <a name="ios"></a>iOS
-- iOS 9.0 o posterior.
-- Procesador de ARM64.
-- Compruebe el [App Store](https://itunes.apple.com/us/app/xamarin-live-player/id1228841832?mt=8) para obtener una lista de dispositivos compatibles.
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
-### <a name="android"></a>Android
 - Android 4.2 o posterior.
 - ARM-v7a, ARM v8a, ARM64-v8a, x 86 o procesador x86_64.
 
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+- iOS 9.0 o posterior.
+- Procesador de ARM64.
+
+-----
 
 ## <a name="limitations"></a>Limitaciones
 
 Existen algunas limitaciones en lo que se puede ejecutar Xamarin Player en vivo, incluidos los siguientes elementos:
-
-### <a name="android"></a>Android
-- Interfaces de usuario de Android diseñadas con archivos AXML no son compatibles actualmente.
-
-### <a name="ios"></a>iOS
-- No se admiten algunas características de guión gráfico de iOS.
-- no se admiten archivos XIB de iOS.
 
 ### <a name="xamarinforms"></a>Xamarin.Forms
 - No se admiten los representadores personalizados.
 - No se admiten efectos.
 - No se admiten controles personalizados con propiedades enlazables personalizado.
 - No se admiten los recursos incrustados (ie. incrustar imágenes u otros recursos en una PCL).
+- Marcos de trabajo de otros fabricantes MVVM no son compatibles (en Internet Explorer. Prisma, Mvvm cruzada, Mvvm claro, etcetera.).
+- No se admiten los catálogos de activos en iOS.
+
+### <a name="other-project-types"></a>Otros tipos de proyecto
+- Reproductor en vivo está destinado a Android nativo o proyectos de iOS (que usan XML Android o guiones gráficos para la interfaz de usuario).
 
 ### <a name="misc"></a>Varios
-- Compatibilidad limitada para reflexión (actualmente afecta a algunos NuGets populares, como el código y Json.NET). Otros NuGets siguen siendo compatibles.
+- Compatibilidad limitada para reflexión (actualmente afecta a algunos NuGets populares, como el código y Json.NET). Otros NuGets todavía puede ser compatible.
 - No se puede invalidar algunas clases del sistema (por ejemplo, no se puede implementar una subclase).
 - Algunas características de la plataforma que requieren el aprovisionamiento no pueden trabajar en la aplicación de Xamarin Player en vivo (sin embargo se ha configurado para operaciones comunes, como acceso de la Galería fotográfica).
-- Se omiten los destinos personalizados y pasos de compilación. Por ejemplo, no se pueden incorporar herramientas como Fody.
-
-> [!WARNING]
-> **Nota:** Xamarin Player Live no funciona con Xamarin Studio
+- Se omiten los destinos personalizados y pasos de compilación. Por ejemplo, herramientas como Fody, Retit, AutoFac y no se pueden incorporar AutoMapper.
+- Proyectos de F # no se admiten en Android y compatibilidad en iOS limitada
+- Escenarios avanzados con clases genéricas personalizadas e interfaces podrían no admitirse.
 
 Notifique los problemas adicionales en [bugzilla](https://aka.ms/live-player-report-issue).
 
