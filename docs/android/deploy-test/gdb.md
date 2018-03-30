@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/05/2018
-ms.openlocfilehash: 55d72a49f90095a33577279d018e1696dda8fc42
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 246dd135b8a6e8a60bca9ba38e91ca8fd2d43674
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="gdb"></a>GDB
 
@@ -163,7 +163,7 @@ Un aspecto a tener en cuenta: el destino de MSBuild `_Gdb` terminará todas las 
 
 ### <a name="monopmip-doesnt-work"></a>`mono_pmip` no funciona
 
-La función `mono_pmip` (útil para [obtener marcos de pila administrados](http://www.mono-project.com/Debugging#Debugging_with_GDB)) se exporta desde `libmonosgen-2.0.so`, que actualmente el destino `_Gdb` no puede extraer. (Este problema se corregirá en futuras versiones).
+La función `mono_pmip` (útil para [obtener marcos de pila administrados](http://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)) se exporta desde `libmonosgen-2.0.so`, que actualmente el destino `_Gdb` no puede extraer. (Este problema se corregirá en futuras versiones).
 
 Para habilitar las funciones de llamada ubicadas en `libmonosgen-2.0.so`, cópielas del dispositivo de destino al directorio `gdb-symbols`:
 

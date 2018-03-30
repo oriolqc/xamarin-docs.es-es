@@ -1,6 +1,6 @@
 ---
 title: Windows
-description: "Este artículo explica cómo trabajar con ventanas y paneles en una aplicación Xamarin.Mac. Se describen la creación de ventanas y paneles en Xcode y el generador de interfaz, cargarlos de guiones gráficos y archivos de .xib y trabajar con ellos mediante programación."
+description: Este artículo explica cómo trabajar con ventanas y paneles en una aplicación Xamarin.Mac. Se describen la creación de ventanas y paneles en Xcode y el generador de interfaz, cargarlos de guiones gráficos y archivos de .xib y trabajar con ellos mediante programación.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f483fcfa9dfca1eb476ceab2b67e7a03bf4b6354
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 4b8de30cecb738fecb13616a3b796c0b4fa5a51a
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="windows"></a>Windows
 
@@ -20,7 +20,7 @@ _Este artículo explica cómo trabajar con ventanas y paneles en una aplicación
 
 Cuando se trabaja con C# y .NET en una aplicación Xamarin.Mac, tener acceso a las mismas ventanas y paneles que un desarrollador que trabaja *Objective-C* y *Xcode* does. Dado que Xamarin.Mac se integra directamente en Xcode, puede usar del Xcode _interfaz generador_ para crear y mantener su ventanas y paneles (o si lo desea crearlos directamente en código de C#).
 
-En función de su objetivo, una aplicación de Xamarin.Mac puede presentar una o varias ventanas en la pantalla para administrar y coordinar la información se muestra y funciona con. Las funciones principales de windows son:
+Según su propósito, una aplicación de Xamarin.Mac puede presentar una o varias ventanas en la pantalla para administrar y coordinar la información se muestra y funciona con. Las funciones principales de una ventana son:
 
 1. Para proporcionar un área en las vistas y los controles puede colocarse y administrado.
 2. Para aceptar y responder a eventos en respuesta a la interacción del usuario con el teclado y el mouse.
