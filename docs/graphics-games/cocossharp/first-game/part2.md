@@ -1,6 +1,6 @@
 ---
 title: Implementar el juego rebote
-description: "Este tutorial muestra cómo agregar lógica de juego y el contenido a una plantilla vacía para crear un juego completo llamado BouncingGame."
+description: Este tutorial muestra cómo agregar lógica de juego y el contenido a una plantilla vacía para crear un juego completo llamado BouncingGame.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: AC9FD56F-6E4A-40DA-8168-45A761D869FD
@@ -9,10 +9,10 @@ author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
 ms.openlocfilehash: 584ae03a3a773ae7e16fa7a24b9dbfa6c5056342
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="implementing-the-bouncing-game"></a>Implementar el juego rebote
 
