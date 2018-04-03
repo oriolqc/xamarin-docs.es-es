@@ -53,6 +53,7 @@
 #### [Cargar en el Mac App Store](deploy-test/publishing-to-the-app-store/uploading.md)
 ## [Conceptos avanzados y funcionamiento interno](internals/index.md)
 ### [AOT](internals/aot.md)
+### [Ensamblados disponibles](~/cross-platform/internals/available-assemblies.md?context=xamarin/mac)
 ### [Arquitectura Mac](internals/architecture.md)
 ### [Funcionamiento de Xamarin.Mac](internals/how-it-works.md)
 ### [Marcos](internals/frameworks.md)
