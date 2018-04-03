@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 5ee36d63e2751eb5d09ee526755d62dda4ef537e
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 7c90b5bcca5a6b8d2a4b52c166ae6884646a61d2
+ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Inicio rápido de Xamarin.Forms
 
@@ -31,7 +31,7 @@ Cree la aplicación Phoneword de la siguiente forma:
 
     ![](quickstart-images/vs/new-solution.png "Nuevo proyecto")
 
-3. En el cuadro de diálogo **Nuevo proyecto**, haga clic en **Multiplataforma**, seleccione la plantilla **Aplicación multiplataforma (Xamarin.Forms)**, establezca el nombre y el nombre de la solución en `Phoneword`, elija una ubicación adecuada para el proyecto y haga clic en el botón **Aceptar**:
+3. En el cuadro de diálogo **Nuevo proyecto**, haga clic en **Multiplataforma**, seleccione la plantilla **Aplicación móvil (Xamarin.Forms)**, establezca el nombre y el nombre de la solución en `Phoneword`, elija una ubicación adecuada para el proyecto y haga clic en el botón **Aceptar**:
 
     ![](quickstart-images/vs/new-project.png "Plantillas de proyectos multiplataforma")
 
