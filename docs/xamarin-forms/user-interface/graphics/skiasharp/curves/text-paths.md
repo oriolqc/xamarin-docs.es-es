@@ -1,6 +1,6 @@
 ---
 title: Las rutas de acceso y el texto
-description: "Explorar la intersección de las rutas de acceso y el texto"
+description: Explorar la intersección de las rutas de acceso y el texto
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017
-ms.openlocfilehash: b22cebf8ca5804884c559da687fe90236c7af44d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25e76b7e02aa5bf6d5e83ea8188456115c527ef3
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="paths-and-text"></a>Las rutas de acceso y el texto
 
@@ -330,4 +330,4 @@ Se ha elegido el texto en Sí para ser circulares algo así: la palabra "círcul
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

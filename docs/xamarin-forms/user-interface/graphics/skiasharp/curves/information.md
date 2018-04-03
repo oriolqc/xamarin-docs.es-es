@@ -1,6 +1,6 @@
 ---
-title: "Enumeración e información de ruta de acceso"
-description: "Obtenga información sobre las rutas de acceso y enumerar el contenido"
+title: Enumeración e información de ruta de acceso
+description: Obtenga información sobre las rutas de acceso y enumerar el contenido
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5
@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: c7edf0c8e563dad25693d184d3a44a3e66466126
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9c7e8a44a9bb4ee8cb131ffa25e4a595b4225ed6
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="path-information-and-enumeration"></a>Enumeración e información de ruta de acceso
 
@@ -511,4 +511,4 @@ Se trata de una técnica muy versátil. Si la matriz de los efectos de la ruta d
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

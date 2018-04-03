@@ -1,6 +1,6 @@
 ---
-title: "Con la herramienta de canalización MonoGame"
-description: "La herramienta de canalización MonoGame se usa para crear y administrar proyectos de contenido de MonoGame. Los archivos en proyectos de contenido son procesados por la herramienta de canalización Monogame y arroja como archivos .xnb para su uso en aplicaciones CocosSharp y MonoGame."
+title: Uso de la MonoGame PipelineTool
+description: La herramienta de canalización MonoGame se usa para crear y administrar proyectos de contenido de MonoGame. Los archivos en proyectos de contenido son procesados por la herramienta de canalización Monogame y arroja como archivos .xnb para su uso en aplicaciones CocosSharp y MonoGame.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 5c489aab66a0aaafeaaeadad0e8b95d451ec1592
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 37505b166488230be9d0e0690e415852506664f1
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>Con la herramienta de canalización MonoGame
 
@@ -35,14 +35,14 @@ La aplicación finalizada mostrará un único sprite mostrando una textura de un
 ![](walkthrough-images/image1.png "La aplicación finalizada mostrará un único sprite mostrando una textura de un archivo de .xnb")
 
 
-# <a name="monogame-pipeline-platform-discussion"></a>Análisis de las plataformas MonoGame canalización
+## <a name="monogame-pipeline-tool-discussion"></a>Descripción de la herramienta de canalización MonoGame
 
 La herramienta de canalización MonoGame está disponible en Windows, OS X y Linux. En este tutorial se ejecutará la herramienta en Windows, pero solo puede ir seguido a lo largo de Mac y Linux también. Para obtener información sobre cómo obtener la herramienta configurada en Máx o Linux, consulte [esta página](http://www.monogame.net/2015/01/09/monogame-pipeline-tool-available-for-macos-and-linux/).
 
 Es capaz de crear contenido para aplicaciones de iOS incluso cuando se ejecutan en Windows, de modo que los desarrolladores mediante la herramienta de canalización MonoGame [Xamarin Mac Agent](~/ios/get-started/installation/windows/connecting-to-mac/index.md) podrán continuar desarrollando en Windows.
 
 
-# <a name="installing-the-monogame-pipeline-tool"></a>Instalación de la herramienta de canalización MonoGame
+## <a name="installing-the-monogame-pipeline-tool"></a>Instalación de la herramienta de canalización MonoGame
 
 Empezaremos instalando el MonoGame, que incluye la canalización de contenido de MonoGame. Tenga en cuenta que la canalización de contenido de MonoGame es una descarga independiente para Mac. Todos los instaladores de MonoGame pueden encontrarse en el [página de descargas de MonoGame](http://www.monogame.net/downloads/). Se descargará MonoGame para Visual Studio, pero una vez instalado el desarrollador puede usar MonoGame en Visual Studio para Mac demasiado:
 
@@ -56,21 +56,21 @@ Inicie la herramienta de canalización MonoGame:
 
 ![](walkthrough-images/image4.png "Inicie la herramienta de canalización MonoGame")
 
-Una vez que se ejecuta la herramienta de canalización MonoGame, comenzamos podemos realizar nuestros proyectos juegos y contenidos.
+Una vez que se ejecuta la herramienta de canalización de MonoGame, comenzamos podemos realizar nuestros proyectos juegos y contenidos.
 
 
-# <a name="creating-an-empty-cocossharp-project"></a>Crear un proyecto vacío de CocosSharp
+## <a name="creating-an-empty-cocossharp-project"></a>Crear un proyecto vacío de CocosSharp
 
-El siguiente paso es crear un proyecto de CocosSharp. Es importante que se crea el proyecto CocosSharp en primer lugar por lo que podemos guardar el proyecto de contenido en la estructura de carpetas creada por el proyecto CocosSharp. Para obtener información sobre cómo crear un nuevo proyecto, vea [la Guía de BouncingGame](~/graphics-games/cocossharp/first-game/part1.md). En esta guía, se creará un proyecto denominado BouncingGame, pero cualquier proyecto CocosSharp existente funcionará sin problemas. Si tiene un proyecto existente de CocosSharp que le gustaría agregar contenido a, no dude en usar ese proyecto en lugar del proyecto BouncingGame.
+El siguiente paso es crear un proyecto de CocosSharp. Es importante que se crea el proyecto CocosSharp en primer lugar por lo que podemos guardar el proyecto de contenido en la estructura de carpetas creada por el proyecto CocosSharp. Para entender la estructura de un proyecto CocosSharp, eche un vistazo a la [BouncingGame](~/graphics-games/cocossharp/bouncing-game.md), que va a utilizar en esta guía. Sin embargo, si tiene un proyecto existente de CocosSharp que le gustaría agregar contenido a, no dude en utilizar ese proyecto en lugar de BouncingGame.
 
 Una vez creado el proyecto, se podrá ejecutarla para comprobar que compila y que tenemos todo configurado correctamente:
 
 ![](walkthrough-images/image5.png "Una vez creado el proyecto, ejecutar para comprobar que se compila y que todo lo que ha configurado correctamente")
 
 
-# <a name="creating-a-content-project"></a>Crear un proyecto de contenido
+## <a name="creating-a-content-project"></a>Crear un proyecto de contenido
 
-Ahora que tenemos un proyecto de juego, podemos crear un proyecto de canalización MonoGame. Para ello, en la selección de la herramienta de canalización MonoGame **archivo > nuevo...**  y navegue hasta la carpeta de contenido del proyecto. Para Android, se encuentra en la carpeta **[proyecto root]\BouncingGame.Android\Assets\Content\**. Para iOS, se encuentra en la carpeta **[proyecto root]\BouncingGame.iOS\Content\**.
+Ahora que tenemos un proyecto de juego, podemos crear un proyecto de canalización MonoGame. Para ello, en la instrucción select de la herramienta de canalización MonoGame **archivo > nuevo...**  y navegue hasta la carpeta de contenido del proyecto. Para Android, se encuentra en la carpeta **[proyecto root]\BouncingGame.Android\Assets\Content\**. Para iOS, se encuentra en la carpeta **[proyecto root]\BouncingGame.iOS\Content\**.
 
 Cambiar el **nombre de archivo** a **ContentProject** y haga clic en el **guardar** botón:
 
@@ -83,31 +83,31 @@ Una vez creado el proyecto, la herramienta de canalización MonoGame mostrará i
 Echemos un vistazo a algunas de las opciones más importantes para el proyecto de contenido.
 
 
-## <a name="output-folder"></a>Carpeta de salida
+### <a name="output-folder"></a>Carpeta de salida
 
 Ésta es la carpeta (en relación con el propio proyecto de contenido) en la salida **.xnb** se guardarán los archivos. Para no complicar las cosas, vamos a usar la misma carpeta para contener la entrada y archivos de salida. En otras palabras, cambiaremos la **carpeta de salida** sea **.\**  :
 
 ![](walkthrough-images/image10.png "")
 
 
-## <a name="platform"></a>Plataforma
+### <a name="platform"></a>Plataforma
 
 Esto define la plataforma de destino para el contenido. Observe que esto es **Windows** de forma predeterminada, por lo que queremos cambiar esto por nuestra plataforma de destino que es **Android** (o iOS si van a continuación junto con un proyecto de iOS).
 
 ![](walkthrough-images/image11.png "Tenga en cuenta que se trata de Windows de forma predeterminada, por lo que cambiarlo a la plataforma de destino que es Android o iOS si van a continuación junto con un proyecto de iOS")
 
 
-# <a name="processing-files-in-the-monogame-pipelinetool"></a>Procesamiento de archivos en el MonoGame PipelineTool
+## <a name="processing-files-in-the-monogame-pipeline-tool"></a>Procesamiento de archivos en la herramienta de canalización MonoGame
 
 A continuación, iremos agregando contenido en nuestro **ContentProject**. Para este proyecto, iremos agregando archivos a la raíz del proyecto, pero normalmente va a organizar los proyectos grandes su contenido en las carpetas.
 
 Vamos a agregar dos archivos al proyecto:
 
  - A **.png** archivo que se utilizará para dibujar un sprite. Este archivo puede [descargarse aquí](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/ball.png?raw=true).
- - A **.spritefont** archivo que se usará para dibujar texto en pantalla. La herramienta ContentPipeline admite la creación de nuevos archivos de .spritefont, así que no hay ningún archivo para descargar.
+ - A **.spritefont** archivo que se usará para dibujar texto en pantalla. La herramienta de canalización de contenido es compatible con la creación de nuevos archivos de .spritefont, así que no hay ningún archivo para descargar.
 
 
-## <a name="adding-a-png-file"></a>Agregar un archivo .png
+### <a name="adding-a-png-file"></a>Agregar un archivo .png
 
 Para agregar una **.png** archivo al proyecto, se podrá copiarlo en el mismo directorio que el proyecto de canalización, que tiene el **.mgcb** extensión.
 
@@ -122,7 +122,7 @@ Te enviaremos un mensaje que se va a salir de todos los valores en sus valores p
 ![](walkthrough-images/image14.png "Compruebe que la compilación ha funcionado correctamente mediante la comprobación de la carpeta de contenido de un nuevo archivo ball.xnb")
 
 
-## <a name="adding-a-spritefont-file"></a>Agregar un archivo de .spritefont
+### <a name="adding-a-spritefont-file"></a>Agregar un archivo de .spritefont
 
 Podemos crear archivo .spritefont a través de la herramienta de canalización MonoGame. CocosSharp requiere fuentes en una **fuentes** carpeta y las plantillas de CocosSharp crear automáticamente una carpeta de fuentes automáticamente. Podemos agregar esta carpeta a la herramienta de canalización MonoGame seleccionando **Editar > Agregar > carpeta existente...** . Vaya a la **contenido** carpeta y seleccione la **fuentes** carpeta y haga clic en **Aceptar**:
 
@@ -156,19 +156,19 @@ Se abrirá el archivo en cualquier editor de texto. Como nuestro **arial 36.spri
     <Size>36</Size>
 ```
  
-# <a name="using-files-at-runtime"></a>Uso de archivos en tiempo de ejecución
+## <a name="using-files-at-runtime"></a>Uso de archivos en tiempo de ejecución
 
 Los archivos de .xnb ahora se compilan y está listo para usarse en el proyecto. Iremos agregando los archivos de Visual Studio para Mac, a continuación, vamos a agregar código a nuestro `GameScene.cs` archivo para cargar estos archivos y mostrarlos.
 
 
-## <a name="adding-xnb-files-to-visual-studio-for-mac"></a>Agregar archivos de .xnb a Visual Studio para Mac
+### <a name="adding-xnb-files-to-visual-studio-for-mac"></a>Agregar archivos de .xnb a Visual Studio para Mac
 
 Primero vamos a agregar los archivos al proyecto. En Visual Studio para Mac, se podrá expandir la **BouncingGame.Android** proyecto de equipo y expanda el **activos** carpeta, el botón secundario en el **contenido** carpeta y seleccione **Agregar > Agregar archivos...** En primer lugar, se seleccionará el **ball.xnb** se generó anteriormente y haga clic en **abiertos**. A continuación, repita los pasos anteriores, pero agregue el **arial 36.xnb** archivo. Se seleccionará el **mantener el archivo en el subdirectorio actual** opción si Visual Studio para Mac le pregunta cómo agregar el archivo. Una vez terminado ambos archivos deben formar parte de nuestro proyecto:
 
 ![](walkthrough-images/image20.png "Una vez terminado ambos archivos deben formar parte del proyecto")
 
 
-## <a name="adding-gamescenecs"></a>Agregar GameScene.cs
+### <a name="adding-gamescenecs"></a>Agregar **GameScene.cs**
 
 Vamos a crear una clase denominada `GameScene,` que contendrá los objetos sprite y texto. Para ello, haga doble clic en el **BouncingGame** (no BouncingGame.Android) del proyecto y seleccione **Agregar > nuevo archivo...** . Seleccione el **General** categoría, seleccione la **clase vacía** opción y, a continuación, escriba el nombre **GameScene**.
 
@@ -214,7 +214,7 @@ namespace BouncingGame
 } 
 ```
 
-No va a tratar el código anterior ya que trabajar con objetos visuales de CocosSharp como CCSprite y CCLabelTtf se trata en la [Guía de introducción de CocosSharp](~/graphics-games/cocossharp/first-game/index.md).
+No va a tratar el código anterior ya que trabajar con objetos visuales de CocosSharp como CCSprite y CCLabelTtf se trata en la [BouncingGame guía](~/graphics-games/cocossharp/bouncing-game.md).
 
 También es necesario agregar código para cargar nuestro recién creado `GameScene`. Para ello abriremos la `GameAppDelegate.cs` archivo (que se encuentra en la **BouncingGame** PCL) y modificar el `ApplicationDidFinishLaunching` método para que aparezca:
 
@@ -236,7 +236,7 @@ Cuando se ejecuta, el juego tendrá un aspecto como:
 ![](walkthrough-images/image1.png "Cuando se ejecuta, el juego tendrá aspecto")
 
 
-# <a name="summary"></a>Resumen
+## <a name="summary"></a>Resumen
 
 Este tutorial ha mostrado cómo usar la herramienta de canalización MonoGame para crear archivos de .xnb desde un archivo .png de entrada, así como cómo crear un nuevo archivo .xnb desde un archivo .sprintefont recién creado. También se describe cómo estructurar CocosSharp proyectos para usar archivos de .xnb y cómo cargar estos archivos en tiempo de ejecución.
 

@@ -1,6 +1,6 @@
 ---
-title: "Conceptos básicos de dibujo SkiaSharp"
-description: "Obtenga información acerca de los conceptos básicos de los conceptos de gráficos de SkiaSharp y coordenadas"
+title: Conceptos básicos de dibujo SkiaSharp
+description: Obtenga información acerca de los conceptos básicos de los conceptos de gráficos de SkiaSharp y coordenadas
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,19 +8,19 @@ ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: fb12924ff181439de601ecc07e1c7f3fe63a6616
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 194081c5cb8878a418a188003d0f8c40286b2922
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="skiasharp-drawing-basics"></a>Conceptos básicos de dibujo SkiaSharp
 
 _Obtenga información acerca de los conceptos básicos de los conceptos de gráficos de SkiaSharp y coordenadas_
 
-Después de haber agregado el paquete SkiaSharp NuGet a la aplicación de Xamarin.Forms, puede empezar a usar gráficos de SkiaSharp. El [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) solución incluye varias páginas que muestran SkiaSharp técnicas de programación en lecciones progresivamente más avanzadas.
+Después de haber agregado el paquete SkiaSharp NuGet a la aplicación de Xamarin.Forms, puede empezar a usar gráficos de SkiaSharp. El [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) solución incluye varias páginas que muestran SkiaSharp técnicas de programación en lecciones progresivamente más avanzadas.
 
-Todos los programas de ejemplo en esta sección aparecen bajo el encabezado **conceptos básicos de SkiaSharp** en la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programa y en el [ **Fundamentos** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics) carpeta de la solución.
+Todos los programas de ejemplo en esta sección aparecen bajo el encabezado **conceptos básicos de SkiaSharp** en la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa y en el [ **Fundamentos** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics) carpeta de la solución.
 
 ## <a name="drawing-a-simple-circlecirclemd"></a>[Dibujo de un círculo simple](circle.md)
 
@@ -50,4 +50,4 @@ Cargue los mapas de bits de varios orígenes y mostrarlos.
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -1,6 +1,6 @@
 ---
-title: "La transformación de traducción"
-description: "Obtenga información acerca de cómo usar la transformación de traslación de desplazamiento SkiaSharp gráficos"
+title: La transformación de traducción
+description: Obtenga información acerca de cómo usar la transformación de traslación de desplazamiento SkiaSharp gráficos
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: cac2479af2778af6043a85583f9d7b518748d7da
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 771fde301a8585f25d7d83c7bf0451cf6e0cf8e9
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="the-translate-transform"></a>La transformación de traducción
 
@@ -36,7 +36,7 @@ Estos argumentos pueden ser negativos. Un segundo [ `Translate` ](https://develo
 public void Translate (SKPoint point)
 ```
 
-El **acumulado traducir** página de la [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programa de ejemplo muestra varias llamadas de la `Translate` método son acumulativos. El [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) clase muestra 20 versiones del mismo rectángulo, cada uno de ellos desplaza desde el rectángulo anterior lo suficiente para que se ajusta a lo largo de la diagonal. Este es el `PaintSurface` controlador de eventos:
+El **acumulado traducir** página de la [ **SkiaSharpForms** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa de ejemplo muestra varias llamadas de la `Translate` método son acumulativos. El [ `AccumulatedTranslate` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AccumulatedTranslatePage.cs) clase muestra 20 versiones del mismo rectángulo, cada uno de ellos desplaza desde el rectángulo anterior lo suficiente para que se ajusta a lo largo de la diagonal. Este es el `PaintSurface` controlador de eventos:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -303,4 +303,4 @@ Tenga en cuenta que la estrella mantiene la misma orientación a medida que se c
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

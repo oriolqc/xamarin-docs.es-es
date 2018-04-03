@@ -1,6 +1,6 @@
 ---
 title: Las rutas de acceso y curvas SkiaSharp
-description: "Obtenga información acerca de cómo usar SkiaSharp para dibujar curvas y usar las características de la ruta de acceso"
+description: Obtenga información acerca de cómo usar SkiaSharp para dibujar curvas y usar las características de la ruta de acceso
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 9daea43ea09f7acaa2f3cd1300785391f69c4746
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 3f2ab787d88ce2f5703a2d6ac670116ad224d32c
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="skiasharp-curves-and-paths"></a>Las rutas de acceso y curvas SkiaSharp
 
@@ -20,7 +20,7 @@ _Obtenga información acerca de cómo usar SkiaSharp para dibujar curvas y usar 
 
 La exploración de [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) métodos y propiedades que se inició en el [SkiaSharp líneas y las rutas de acceso](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md) artículo. Los artículos aquí continuar con métodos que agregan curvas a un `SKPath` objetos y otras características de la ruta de acceso eficaz de vulnerabilidad de seguridad. Verá cómo se puede especificar una ruta de acceso completa en una cadena de texto concisa, cómo utilizar los efectos de la ruta de acceso y cómo profundizar en el funcionamiento interno de la ruta de acceso.
 
-Todos los programas de ejemplo en esta sección aparecen bajo el encabezado **curvas y rutas de acceso más** en la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programa y en el [ **Curvas** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves) carpeta de la solución.
+Todos los programas de ejemplo en esta sección aparecen bajo el encabezado **curvas y rutas de acceso más** en la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa y en el [ **Curvas** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves) carpeta de la solución.
 
 ## <a name="three-ways-to-draw-an-arcarcsmd"></a>[Tres maneras de dibujar un arco](arcs.md)
 
@@ -54,4 +54,4 @@ Obtenga información sobre las rutas de acceso y enumerar el contenido
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

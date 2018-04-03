@@ -1,6 +1,6 @@
 ---
-title: "Almacenamiento en caché de textura con CCTextureCache"
-description: "Clase de CCTextureCache del CocosSharp proporciona un método estándar para organizar, caché y descargar contenido. Es especialmente útil para grandes juegos que no caben completamente en RAM, simplificando el proceso de agrupación y eliminación de las texturas."
+title: Almacenamiento en caché de textura con CCTextureCache
+description: Clase de CCTextureCache del CocosSharp proporciona un método estándar para organizar, caché y descargar contenido. Es especialmente útil para grandes juegos que no caben completamente en RAM, simplificando el proceso de agrupación y eliminación de las texturas.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 1B5F3F85-9E68-42A7-B516-E90E54BA7102
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 365e343a55a208b63f4dc52999e8857b5f0ec1f4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 350a454bc94c796b34cfeeb319481919b18d334f
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="texture-caching-using-cctexturecache"></a>Almacenamiento en caché de textura con CCTextureCache
+# <a name="texture-caching-using-cctexturecache"></a>Textura, almacenamiento en caché mediante CCTextureCache
 
 _Clase de CCTextureCache del CocosSharp proporciona un método estándar para organizar, caché y descargar contenido. Es especialmente útil para grandes juegos que no caben completamente en RAM, simplificando el proceso de agrupación y eliminación de las texturas._
 
@@ -29,7 +29,7 @@ Esta guía se describe la `CCTextureCache` y por qué es importante para el desa
  - Eliminación de texturas
 
 
-# <a name="why-texture-caching-matters"></a>¿Por qué cuestiones sobre el almacenamiento en caché de textura
+## <a name="why-texture-caching-matters"></a>¿Por qué cuestiones sobre el almacenamiento en caché de textura
 
 Almacenamiento en caché de textura es una consideración importante en el desarrollo de juego como carga de textura es una operación que consume mucho tiempo y texturas requieren una gran cantidad de RAM en tiempo de ejecución.
 
@@ -38,7 +38,7 @@ Al igual que con cualquier operación de archivo, cargando texturas del disco pu
 Como se mencionó anteriormente, las texturas también ocupan una gran cantidad de memoria en tiempo de ejecución. Por ejemplo, una imagen de fondo tienen un tamaño de la resolución de un iPhone 6 (1344 x 750) ocuparían 4 megabytes de memoria RAM: incluso si el archivo PNG es solo algunos kilobytes de tamaño. Almacenamiento en caché de textura proporciona una manera de compartir las referencias de textura dentro de una aplicación y también una manera fácil de descargar todo el contenido al realizar la transición entre los diferentes Estados de juegos.
 
 
-# <a name="texture-lifespan"></a>Tiempo de vida de textura
+## <a name="texture-lifespan"></a>Tiempo de vida de textura
 
 Las texturas CocosSharp pueden conservarse en la memoria durante toda la longitud de la ejecución de una aplicación o pueden ser duración breve. Para minimizar la memoria debe eliminar una aplicación de uso de las texturas cuando ya no necesite. Por supuesto, esto significa que las texturas pueden eliminadas y vuelto a cargar en un momento posterior, que puede aumentar los tiempos de carga o afectar al rendimiento durante la carga. 
 
@@ -58,7 +58,7 @@ Si el juego es grande finalmente lo suficientemente se cargaría suficiente text
 El diagrama anterior indica que se puede reducir el uso de memoria de textura descargar, pero esto puede requerir los tiempos de carga adicional si un jugador decida si desea reproducir un nivel. También merece la pena mencionar que las texturas UITexture y MainCharacter se cargan y no descargan nunca. Esto implica que se necesitan estas texturas en todos los niveles, por lo que siempre se mantienen en la memoria. 
 
 
-# <a name="using-sharedtexturecache"></a>Usar SharedTextureCache
+## <a name="using-sharedtexturecache"></a>Usar SharedTextureCache
 
 CocosSharp almacena automáticamente en caché las texturas al cargarlos a través de la `CCSprite` constructor. Por ejemplo el siguiente código crea solo una instancia de textura:
 
@@ -84,7 +84,7 @@ CCSprite starSprite = new CCSprite ();
 `AddImage` comprueba si el archivo de argumentos (en este caso `star.png`) ya se ha cargado. Si es así, se devuelve la instancia almacenada en caché. Si no, a continuación, se carga desde el sistema de archivos y una referencia a la textura se almacena internamente para posteriores `AddImage` llamadas. Dicho de otro modo el `star.png` imagen solo se carga una vez y las llamadas subsiguientes no necesitan acceso adicional en el disco o memoria de textura adicionales.
 
 
-# <a name="lazy-loading-vs-pre-loading-with-addimage"></a>Frente a la carga diferida. Realizar una carga previa con AddImage
+## <a name="lazy-loading-vs-pre-loading-with-addimage"></a>Frente a una carga previa con AddImage de carga diferida
 
 `AddImage` permite escribir el mismo código si la textura solicitada ya está cargada o no. Esto significa que el contenido no se cargará hasta que se necesite; Sin embargo, también Esto puede causar problemas de rendimiento en tiempo de ejecución debido a contenido imprevisible cargar.
 
@@ -114,12 +114,12 @@ void PreLoadImages()
 Esta carga previa puede dar lugar a pérdida memoria y puede aumentar el tiempo de inicio. Por ejemplo, el Reproductor puede obtener nunca realmente una puesta en marcha representado por la `powerup3.png` de textura, por lo que se cargarán innecesariamente. Por supuesto, esto puede ser un costo necesario para pagar para evitar un posible pop en juego, por lo que es normalmente lo más aconsejable precargar contenido si se ajusta en la memoria RAM.
 
 
-# <a name="disposing-textures"></a>Eliminación de texturas
+## <a name="disposing-textures"></a>Eliminación de texturas
 
 Si un juego no requiere más memoria de textura que está disponible en el dispositivo de especificación mínima texturas no es necesario van a eliminar. Por otro lado, los juegos más grandes que necesite liberar memoria de textura para dejar espacio para el contenido nuevo. Por ejemplo, un juego puede utilizar una gran cantidad de memoria que las texturas para un entorno de almacenamiento. Si el entorno solo se usa en un nivel concreto, a continuación, debe descargarse cuando finaliza el nivel.
 
 
-## <a name="disposing-a-single-texture"></a>Elimine una textura única
+### <a name="disposing-a-single-texture"></a>Elimine una textura única
 
 Quitar una textura única, primero requiere llamar a la `Dispose` método y, a continuación, la eliminación manual de la `CCTextureCache`.
 
@@ -187,7 +187,7 @@ El método Dispose deshará todas las texturas internas, borrando la memoria uti
 
 
 
-# <a name="summary"></a>Resumen
+## <a name="summary"></a>Resumen
 
 Esta guía muestra cómo utilizar la `CCTextureCache` clase para equilibrar el rendimiento de en tiempo de ejecución y de uso de memoria. `CCTexturCache.SharedTextureCache` puede especificar explícitamente o implícitamente se usa para cargar y almacenar en caché las texturas durante la vida de la aplicación, mientras `CCTextureCache` instancias pueden utilizarse para descargar las texturas para reducir el uso de memoria.
 

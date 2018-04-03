@@ -1,17 +1,17 @@
 ---
 title: Rendimiento y efectos visuales con CCRenderTexture
-description: "CCRenderTexture permite a los desarrolladores a mejorar el rendimiento de sus juegos, CocosSharp al reducir las llamadas a draw y puede utilizarse para crear efectos visuales. Esta guía incluye en el ejemplo CCRenderTexture para proporcionar un ejemplo práctico de cómo utilizar esta clase de forma eficaz."
+description: CCRenderTexture permite a los desarrolladores a mejorar el rendimiento de sus juegos, CocosSharp al reducir las llamadas a draw y puede utilizarse para crear efectos visuales. Esta guía incluye en el ejemplo CCRenderTexture para proporcionar un ejemplo práctico de cómo utilizar esta clase de forma eficaz.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: F02147C2-754B-4FB4-8BE0-8261F1C5F574
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 8283c299d0e6529ef4cf8c285ec47b4d42fc682a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 36661344fc0f4b9e132e3f721c50f82f3a8db057
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>Rendimiento y efectos visuales con CCRenderTexture
 
@@ -24,7 +24,7 @@ Esta guía examina cómo usar la `CCRenderTexture` objeto para mejorar el rendim
 ![](ccrendertexture-images/image1.png "Esta guía hace referencia al proyecto de ejemplo de CCRenderTexture")
 
 
-# <a name="card--a-typical-entity"></a>Tarjeta: una entidad típica
+## <a name="card--a-typical-entity"></a>Tarjeta: una entidad típica
 
 Antes de examinar cómo usar `CCRenderTexture` objeto, primero deberá familiarizarse nosotros mismos con el `Card` entidad que vamos a usar a lo largo de este proyecto para explorar el `CCRenderTexture` clase. El `Card` clase es una entidad típica, siguiendo el modelo de entidad que se describen en la [Guía de la entidad](~/graphics-games/cocossharp/entities.md). La clase de tarjeta tiene todos sus componentes visuales (instancias de `CCSprite` y `CCLabel`) aparecen como campos:
 
@@ -65,7 +65,7 @@ El ejemplo está codificado para exponer dos problemas que pueden producirse cua
 - Algunos efectos visuales, como la transparencia, no se puede implementar con precisión, exploraremos más adelante
 
 
-## <a name="card-draw-calls"></a>Llamadas de dibujo de tarjeta
+### <a name="card-draw-calls"></a>Llamadas de dibujo de tarjeta
 
 El código es una simplificación de lo que se pueden encontrar en un completo *juego de cartas recopilable* (CCG) como "Magic: la recopilación" o "Hearthstone". Nuestro juego solo muestra tres cartas a la vez y tiene un número pequeño de posibles unidades (azul, verde y naranja). Por el contrario, un juego completo puede tener más de veinte tarjetas que aparecen en pantalla en un momento dado y reproductores pueden tener cientos de tarjetas que elegir al crear sus barajas. Aunque el juego no sufren actualmente de problemas de rendimiento, podría un juego completo con implementación similar.
 
@@ -76,7 +76,7 @@ CocosSharp proporciona información sobre el rendimiento de la representación m
 Tenga en cuenta que a pesar de tener tres tarjetas en pantalla, tenemos las llamadas a draw años (dibuja cada tarjeta da resultado seis llamadas, el texto que muestra las cuentas de la información de rendimiento de una o más). Las llamadas a Draw tienen un impacto significativo en el rendimiento de un juego, por lo que CocosSharp proporciona varias maneras de reducir su. Una técnica se describe en el [CCSpriteSheet guía](~/graphics-games/cocossharp/ccspritesheet.md). Otra técnica consiste en utilizar el `CCRenderTexture` para reducir cada entidad hasta una llamada, tal y como examinaremos en esta guía.
 
 
-## <a name="card-transparency"></a>Transparencia de tarjeta
+### <a name="card-transparency"></a>Transparencia de tarjeta
 
 Nuestro `Card` entidad incluye un `Opacity` propiedad transparencia de control como se muestra en el siguiente fragmento de código:
 
@@ -143,7 +143,7 @@ Para ayudar a visualizar por qué ocurre esto, es necesario tener en cuenta que 
 Mediante un `CCRenderTexture` nos permite que la tarjeta toda transparente sin afectar a la representación de los componentes individuales dentro de la tarjeta, tal y como se verá más adelante en esta guía.
 
 
-# <a name="using-ccrendertexture"></a>Usar CCRenderTexture
+## <a name="using-ccrendertexture"></a>Usar CCRenderTexture
 
 Ahora que hemos identificado los problemas de representación individualmente cada componente, podrá activar representación para un `CCRenderTexture` y comparar el comportamiento.
 
@@ -159,7 +159,7 @@ protected override void AddedToScene ()
 ```
 
 
-## <a name="card-draw-calls"></a>Llamadas de dibujo de tarjeta
+### <a name="card-draw-calls"></a>Llamadas de dibujo de tarjeta
 
 Si se ejecuta el juego ahora, veremos las llamadas a draw reducidas de diecinueve a cuatro (cada tarjeta reduce entre seis a uno):
 
@@ -168,7 +168,7 @@ Si se ejecuta el juego ahora, veremos las llamadas a draw reducidas de diecinuev
 Como se mencionó anteriormente, este tipo de reducción puede tener un impacto significativo en juegos con más entidades visuales en pantalla.
 
 
-## <a name="card-transparency"></a>Transparencia de tarjeta
+### <a name="card-transparency"></a>Transparencia de tarjeta
 
 Una vez el `useRenderTextures` se establece en `true`, tarjetas transparentes se representarán de forma diferente:
 
@@ -181,7 +181,7 @@ Vamos a comparar la tarjeta de robot transparente utilizando texturas de represe
 Las diferencias más obvias se encuentran en el texto de detalles (negro en lugar de color gris claro) y el sprite robot (oscuro en lugar de luz y sin saturación).
 
 
-# <a name="ccrendertexture-details"></a>Detalles de CCRenderTexture
+## <a name="ccrendertexture-details"></a>Detalles de CCRenderTexture
 
 Ahora que hemos visto las ventajas de usar `CCRenderTexture`, echemos un vistazo a cómo se utiliza en el `Card` entidad.
 
@@ -256,7 +256,7 @@ La `SwitchToRenderTexture` puede llamarse al método cada vez que la textura tie
 En las siguientes secciones explorar el `SwitchToRenderTexture` método. 
 
 
-## <a name="ccrendertexture-size"></a>Tamaño de CCRenderTexture
+### <a name="ccrendertexture-size"></a>Tamaño de CCRenderTexture
 
 El constructor CCRenderTexture requiere dos conjuntos de dimensiones. La primera controla el tamaño de la `CCRenderTexture` cuando se dibuja, y el segundo especifica el ancho de píxel y el alto de su contenido. El `Card` crea una instancia de entidad su `CCRenderTexture` con el fondo [tamaño de contenido](https://developer.xamarin.com/api/property/CocosSharp.CCSprite.ContentSize/). Nuestro juego tiene un `DesignResolution` de 512 por 384, tal y como se muestra en `ViewController.LoadGame` en iOS y `MainActivity.LoadGame` en Android:
 
@@ -293,7 +293,7 @@ renderTexture = new CCRenderTexture(unitResolution, pixelResolution);
 ![](ccrendertexture-images/image9.png "Para comparar, puede cambiar el valor de pixelResolution para que coincida con el fondo. ContentSize sin que se va a duplicar y comparar el resultado")
 
 
-## <a name="rendering-to-a-ccrendertexture"></a>Representación de un CCRenderTexture
+### <a name="rendering-to-a-ccrendertexture"></a>Representación de un CCRenderTexture
 
 Normalmente, los objetos visuales en CocosSharp no se representan explícitamente. En su lugar, se agregan los objetos visuales a un `CCLayer` que forma parte de un `CCScene`. CocosSharp representa automáticamente el `CCScene` y su jerarquía visual en cada marco sin ningún código de representación que se va a llamar. 
 
@@ -355,7 +355,7 @@ foreach (var component in visualComponents)
 this.AddChild(renderTexture.Sprite);
 ```
 
-# <a name="summary"></a>Resumen
+## <a name="summary"></a>Resumen
 
 Esta guía se trata la `CCRenderTexture` clase mediante el uso de un `Card` entidad que se pueda usar en un juego de cartas recopilable. Ha mostrado cómo usar el `CCRenderTexture` clase para mejorar la velocidad de fotogramas e implementar correctamente la transparencia de toda la entidad.
 

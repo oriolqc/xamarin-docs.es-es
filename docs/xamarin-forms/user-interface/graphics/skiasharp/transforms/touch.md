@@ -1,6 +1,6 @@
 ---
-title: "Manipulaciones táctil"
-description: "Matriz de uso transforma para implementar arrastrar táctil, aprietan y rotación"
+title: Manipulaciones táctil
+description: Matriz de uso transforma para implementar arrastrar táctil, aprietan y rotación
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 90be80d42c20ca7509037b5f59b34cc1bddde6de
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 1fbc9826b9edd3d4c8f7e4b47c3ea835d5625343
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="touch-manipulations"></a>Manipulaciones táctil
 
@@ -691,5 +691,5 @@ El código recorre en iteración la colección y muestra la pila de mapas de bit
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Invocación de eventos de efectos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)

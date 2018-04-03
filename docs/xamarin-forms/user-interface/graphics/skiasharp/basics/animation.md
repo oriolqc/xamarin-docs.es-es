@@ -1,6 +1,6 @@
 ---
-title: "Animación básica"
-description: "Descubra cómo animar los gráficos SkiaSharp"
+title: Animación básica
+description: Descubra cómo animar los gráficos SkiaSharp
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 347ecf72356915714200835263e38519c1ad8a13
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: d9eea30e1d9e55101975e59ba9d259fba909ca0f
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="basic-animation"></a>Animación básica
 
@@ -22,7 +22,7 @@ Puede animar gráficos SkiaSharp de Xamarin.Forms provocando el `PaintSurface` m
 
 ![](animation-images/animationexample.png "Varios círculos concéntricos aparentemente expandir desde el centro")
 
-El **Pulsating elipse** página en el [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/) programa anima los dos ejes de una elipse para que parezca estar pulsating y puede incluso controlar el tasa de esta pulsaciones:
+El **Pulsating elipse** página en el [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa anima los dos ejes de una elipse para que parezca estar pulsating y puede incluso controlar el tasa de esta pulsaciones:
 
 
 El [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) archivo crea una instancia de un Xamarin.Forms `Slider` y `Label` para mostrar el valor actual del control deslizante. Se trata de una manera común de integrar un `SKCanvasView` con otras vistas de Xamarin.Forms:
@@ -251,4 +251,4 @@ El resultado es que la imagen tiene la misma cuando `t` es igual a 0 como cuando
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

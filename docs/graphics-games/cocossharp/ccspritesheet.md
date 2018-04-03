@@ -8,20 +8,20 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: ec8a641fbd15f826e92ada62f65b17dd46b369e4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7e2bb5b98b5c93fb625ce645692d8a3ccb3d143b
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="improving-framerate-with-ccspritesheet"></a>Mejorar la velocidad de fotogramas con CCSpriteSheet
+# <a name="improving-frame-rate-with-ccspritesheet"></a>Mejorar la velocidad de fotogramas con CCSpriteSheet
 
 _CCSpriteSheet proporciona funcionalidad para combinar y utilizar muchos archivos de imagen en una textura. Reducir el recuento de textura puede mejorar los tiempos de carga de un juego y velocidad de fotogramas._
 
 Muchos juegos exigen esfuerzos de optimización para ejecutar sin problemas y cargar rápidamente en hardware de dispositivos móvil. La `CCSpriteSheet` clase puede ayudar a resolver muchos problemas de rendimiento comunes detectados por CocosSharp juegos. Esta guía trata problemas comunes de rendimiento y cómo se deben tratar mediante la `CCSpriteSheet` clase.
 
 
-# <a name="what-is-a-sprite-sheet"></a>¿Qué es una hoja de Sprite?
+## <a name="what-is-a-sprite-sheet"></a>¿Qué es una hoja de sprite?
 
 A *hoja sprite*, lo que puede también se conoce como un *atlas de textura*, se muestra una imagen que combina varias imágenes en un archivo. Esto puede mejorar el rendimiento en tiempo de ejecución, así como los tiempos de carga de contenido.
 
@@ -30,7 +30,7 @@ Por ejemplo, la siguiente imagen es una hoja de sprite simple creada por tres im
 ![](ccspritesheet-images/image1.png "Las imágenes individuales pueden tener cualquier tamaño y la hoja de sprite resultante no es necesaria para completarse en su totalidad")
 
 
-## <a name="render-states"></a>Estados de representación
+### <a name="render-states"></a>Estados de representación
 
 Objetos visuales de CocosSharp (como `CCSprite`) simplificar código de representación a través de código de representación API gráfica tradicional, como MonoGame u OpenGL, que requieren la creación de los búferes de vértices (como se describe en el [dibujar gráficos 3D con Vértices en MonoGame](~/graphics-games/monogame/3d/part2.md) guía). A pesar de su sencillez, CocosSharp no elimina el costo de configuración *Estados de representación*, que son el número de veces que debe cambiar el código de representación texturas u otros Estados relacionados con la representación.
 
@@ -62,7 +62,7 @@ Estados de representación pueden resultar difíciles de optimizar porque el ord
 
 Por supuesto, la situación ideal es tener un estado de representación única, a pesar de tener varias imágenes. Juegos de CocosSharp pueden hacerlo mediante la combinación de todas las imágenes en un único archivo, a continuación, cargar archivos (junto con sus que acompaña a **.plist** archivo) en un `CCSpriteSheet`. Mediante la `CCSpriteSheet` clase es incluso más importante para juegos que tiene un gran número de imágenes, o que tienen muy complicado diseños. 
 
-## <a name="load-times"></a>Tiempos de carga
+### <a name="load-times"></a>Tiempos de carga
 
 También se combina varias imágenes en un archivo mejora los tiempos de carga de un juego por una serie de motivos:
 
@@ -70,7 +70,7 @@ También se combina varias imágenes en un archivo mejora los tiempos de carga d
  - La carga de archivos menos significa menos sobrecarga por cada archivo, como analizar los encabezados de PNG
  - La carga de archivos menos requiere menos tiempo, lo que es importante para los medios basados en disco como DVDs y unidades de disco duro del equipo tradicional de búsqueda
 
-# <a name="using-ccspritesheet-in-code"></a>Usar CCSpriteSheet en el código
+## <a name="using-ccspritesheet-in-code"></a>Usar CCSpriteSheet en el código
 
 Para crear un `CCSpriteSheet` instancia, el código debe proporcionar una imagen y un archivo que define las regiones de la imagen que se utilizará para cada fotograma. La imagen se puede cargar como un **.png** o **.xnb** archivo (si usa el [canalización contenido](~/graphics-games/cocossharp/content-pipeline/index.md)). El archivo de definición de los fotogramas es un **.plist** archivo que se puede crear manualmente o *TexturePacker* (que se tratará más adelante).
 
@@ -110,7 +110,7 @@ CCSprite sprite = new CCSprite (frame);
 Puesto que la `CCSprite` constructor puede tomar un `CCSpriteFrame` parámetro, el código nunca debe investigar los detalles de la `CCSpriteFrame`, como qué textura usa o la región de la imagen en la hoja de sprite maestro.
 
 
-#  <a name="creating-a-sprite-sheet-plist"></a>Crear un objeto Sprite hoja .plist
+## <a name="creating-a-sprite-sheet-plist"></a>Crear un .plist de hoja sprite
 
 El archivo .plist es un archivo basado en xml, que se pueden crear y editar manualmente. De forma similar, los programas de edición de imágenes pueden utilizarse para combinar varios archivos en un archivo de mayor tamaño. Desde la creación y el mantenimiento de las hojas de sprite pueden ser muy lentos, veremos el programa TexturePacker que puede exportar los archivos en el formato CocosSharp. TexturePacker ofrece una segunda y una versión "Pro" y está disponible para Windows y Mac OS. El resto de esta guía se pueden aplicar mediante el uso de la versión gratuita. 
 
@@ -124,13 +124,13 @@ Archivos de imagen (como **.png**) puede agregarse a TexturePacker mediante arra
 
 Para exportar una hoja de sprite, haga clic en el **hoja de publicación sprite** botón y seleccione una ubicación para la hoja de sprite. TexturePacker guardará un archivo .plist y un archivo de imagen.
 
-Para usar los archivos resultantes, agregue el .png y .plist a un proyecto de CocosSharp. Para obtener información sobre cómo agregar archivos a los proyectos de CocosSharp, consulte el [implementar la Guía de BouncingGame](~/graphics-games/cocossharp/first-game/part2.md). Una vez que se agregan los archivos, se pueden cargar en un `CCSpriteSheet` tal y como se mostró anteriormente en el código anterior:
+Para usar los archivos resultantes, agregue el .png y .plist a un proyecto de CocosSharp. Para obtener información sobre cómo agregar archivos a los proyectos de CocosSharp, consulte el [BouncingGame guía](~/graphics-games/cocossharp/bouncing-game.md). Una vez que se agregan los archivos, se pueden cargar en un `CCSpriteSheet` tal y como se mostró anteriormente en el código anterior:
 
 ```csharp
 CCSpriteSheet sheet = new CCSpriteSheet ("sheet.plist", "sheet.png"); 
 ```
 
-## <a name="considerations-for-maintaining-a-texturepacker-sprite-sheet"></a>Consideraciones para el mantenimiento de una hoja de TexturePacker Sprite
+### <a name="considerations-for-maintaining-a-texturepacker-sprite-sheet"></a>Consideraciones para el mantenimiento de una hoja de sprite TexturePacker
 
 A medida que se desarrollan juegos, intérpretes pueden agregar, quitar o modificar el material gráfico. Cualquier cambio requiere una hoja de sprite actualizada. Las consideraciones siguientes pueden facilitar el mantenimiento de la hoja de sprite:
 
@@ -144,7 +144,7 @@ A medida que se desarrollan juegos, intérpretes pueden agregar, quitar o modifi
 
     ![](ccspritesheet-images/image10.png "Para incluir las rutas de acceso de carpeta, haga clic en Mostrar opciones avanzadas en la sección de datos y compruebe el nombre de la carpeta Prepend")
 
-# <a name="summary"></a>Resumen
+## <a name="summary"></a>Resumen
 
 Esta guía describe cómo crear y usar el `CCSpriteSheet` clase. También se describe cómo construir archivos que se pueden cargar en `CCSpriteSheet` instancias mediante el programa de TexturePacker.
 

@@ -1,6 +1,6 @@
 ---
 title: Uso de mosaico con CocosSharp
-description: "Mosaico es una eficaz, flexible y su aplicación es para la creación de mosaico ortogonal e isométrica se asigna para juegos. CocosSharp proporciona integración incorporada para el formato de archivo nativo del mosaico."
+description: Mosaico es una eficaz, flexible y su aplicación es para la creación de mosaico ortogonal e isométrica se asigna para juegos. CocosSharp proporciona integración incorporada para el formato de archivo nativo del mosaico.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
@@ -8,11 +8,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 5a469a372a9299712be7aef46c51f3d644946535
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 68afa9d175140fd5104e83282a2f72c47625d882
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="using-tiled-with-cocossharp"></a>Uso de mosaico con CocosSharp
 
@@ -30,7 +30,7 @@ Cuando termine de tenemos la demostración siguiente:
 ![](tiled-images/image1.png "La aplicación de demostración que creó siguiendo los pasos descritos en esta guía")
 
 
-# <a name="the-purpose-of-tile-maps"></a>El propósito de mapas de mosaico
+## <a name="the-purpose-of-tile-maps"></a>El propósito de mapas de mosaico
 
 Icono mapas han existido en el desarrollo de juego de décadas, pero todavía suelen utilizarse en juegos 2D por su eficacia y esthetics. Icono mapas son lograr un nivel muy alto de eficacia a través de su uso de conjuntos de mosaico: la imagen de origen usa mosaico se asigna. Un conjunto de mosaico es una colección de imágenes que se combinan en un archivo. Aunque icono conjuntos hacen referencia a imágenes que se utilizan en las asignaciones de mosaico, archivos que contienen varias imágenes más pequeñas también se denominan hojas sprite o sprite se asigna en el desarrollo de juego. Podemos visualizar cómo se utilizan conjuntos de mosaico mediante la adición de una cuadrícula en el conjunto de icono que se usará en nuestra demostración:
 
@@ -43,7 +43,7 @@ Mapas de mosaico organizan los iconos de mosaico conjuntos individuales. Debemos
 ![](tiled-images/image4.png "Esta imagen muestra organizaciones posibles con el mismo conjunto de mosaico")
 
 
-# <a name="working-with-tmx-files"></a>Trabajar con archivos de .tmx
+## <a name="working-with-tmx-files"></a>Trabajar con archivos de .tmx
 
 El formato de archivo .tmx es un archivo XML creado por la aplicación de mosaico, que puede ser [descargar de forma gratuita en el sitio Web de mosaico](http://www.mapeditor.org/). El formato de archivo .tmx almacena la información de asignaciones de mosaico. Normalmente, un juego tendrá un archivo de .tmx para cada área de nivel o en otra diferente.
 
@@ -80,7 +80,7 @@ Si se ejecuta el juego se verá el mapa de icono aparece en la esquina inferior 
 ![](tiled-images/image6.png "Si el juego se ejecuta, el mapa de icono aparece en la esquina inferior izquierda de la pantalla")
 
 
-# <a name="considerations-for-rendering-pixel-art"></a>Consideraciones para presentar imágenes de píxeles
+## <a name="considerations-for-rendering-pixel-art"></a>Consideraciones para presentar imágenes de píxeles
 
 Imágenes de píxeles, en el contexto de desarrollo de juegos de vídeo, hace referencia a 2D arte visual que se crea normalmente por mano y suele ser una resolución baja. Imágenes de píxeles pueden ser de manera restrictiva intensivas para crear, por lo que conjuntos de mosaico de píxel prediseñadas incluyen a menudo iconos de baja resolución, como 16 o 32 alto y el ancho de píxel de tiempo. Si no se escala en tiempo de ejecución, a menudo es demasiado pequeño para tabletas y teléfonos más modernos carátulas de píxeles.
 
@@ -161,7 +161,7 @@ Ahora nuestro mapa de mosaico no aparecerá borrosa:
 ![](tiled-images/image8.png "Ahora el mapa de mosaico no aparecerá borroso")
 
 
-# <a name="using-tile-properties-at-runtime"></a>Utilizando el icono Propiedades en tiempo de ejecución
+## <a name="using-tile-properties-at-runtime"></a>Utilizando el icono Propiedades en tiempo de ejecución
 
 Hasta ahora tenemos un `CCTileMap` cargar un archivo .tmx y mostrar, pero no tenemos ninguna manera de interactuar con él. En concreto, determinados iconos (por ejemplo, nuestro Tesoro) necesitan tener lógica personalizada. Se podrá ejecutar paso a paso cómo detectar propiedades del mosaico personalizado y reaccionar a estas propiedades una vez identificadas en tiempo de ejecución de diversas maneras.
 
@@ -175,7 +175,7 @@ Si las propiedades de pecho Tesoro no aparece, haga doble clic en el Tesoro y se
 
 ![](tiled-images/image10.png "Si las propiedades de pecho Tesoro no aparece, haga doble clic en el Tesoro y seleccione Propiedades de mosaico")
 
-Propiedades del mosaico se implementan con un nombre y un valor. Para agregar una propiedad, haga clic en el  **+**  botón, escriba el nombre **IsTreasure**, haga clic en **Aceptar**, a continuación, escriba el valor **true**: 
+Propiedades del mosaico se implementan con un nombre y un valor. Para agregar una propiedad, haga clic en el **+** botón, escriba el nombre **IsTreasure**, haga clic en **Aceptar**, a continuación, escriba el valor **true**: 
 
 ![](tiled-images/image11.png "Para agregar una propiedad, haga clic en el botón, escriba el nombre IsTreasure, haga clic en Aceptar y después escriba el valor true")
 
@@ -273,7 +273,7 @@ La mayoría del código se explican por sí mismas, pero debemos hablar sobre el
 En otras palabras, se beneficiará del Tesoro en una entidad en lugar de que se va a un mosaico simple en el `CCTileMap`. Para obtener más información sobre las entidades de juegos, consulte la [guían de entidades en CocosSharp](~/graphics-games/cocossharp/entities.md).
 
 
-# <a name="summary"></a>Resumen
+## <a name="summary"></a>Resumen
 
 Este tutorial describe cómo cargar archivos de .tmx creados por el mosaico en una aplicación CocosSharp. Muestra cómo modificar la resolución de la aplicación para tener en cuenta las carátulas de píxel de menor resolución y cómo encontrar iconos por sus propiedades para realizar lógica personalizada, como la creación de instancias de entidad.
 

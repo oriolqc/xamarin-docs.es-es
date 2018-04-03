@@ -1,6 +1,6 @@
 ---
 title: Tres maneras para dibujar un arco
-description: "Obtenga información sobre cómo usar SkiaSharp para definir arcos de tres maneras diferentes"
+description: Obtenga información sobre cómo usar SkiaSharp para definir arcos de tres maneras diferentes
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: 739efa994f172a7a1de82ac02d1c10b0d80f4c30
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 86623886e2429cbf2f076fbe4583301edf684262
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tres maneras para dibujar un arco
 
@@ -670,4 +670,4 @@ Aunque las conexiones entre las líneas rectas y arcos son matemáticamente suav
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

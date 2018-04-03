@@ -1,6 +1,6 @@
 ---
-title: Detalles de juego fruity corresponden a las fechas
-description: "Esta guía revisa el juego Fruity corresponden a las fechas, tratan conceptos de desarrollo de juegos como física, administración de contenido, estado del juego y diseño de juego y CocosSharp comunes."
+title: Detalles de juego Fruity corresponden a las fechas
+description: Esta guía revisa el juego Fruity corresponden a las fechas, tratan conceptos de desarrollo de juegos como física, administración de contenido, estado del juego y diseño de juego y CocosSharp comunes.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: A5664930-F9F0-4A08-965D-26EF266FED24
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 307fdec697f2b94ddfdfe0c380e02fd69e197132
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: d37b289249e5c9e2c23b45c998d1e24960637ba6
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="fruity-falls-game-details"></a>Detalles de juego fruity corresponden a las fechas
+# <a name="fruity-falls-game-details"></a>Detalles de juego Fruity corresponden a las fechas
 
 _Esta guía revisa el juego Fruity corresponden a las fechas, tratan conceptos de desarrollo de juegos como física, administración de contenido, estado del juego y diseño de juego y CocosSharp comunes._
 
@@ -22,7 +22,7 @@ Fruity corresponden a las fechas es un juego de basada en física, simple, en el
 
 ![](fruity-falls-images/image1.png "El objetivo del juego consiste en conseguir tantos puntos como sea posible sin advertencia una caída de frutas en la Papelera incorrecta, finalizar el juego")
 
-Corresponden a las fechas Fruity extiende los conceptos presentados en el [BouncingGame guía](~/graphics-games/cocossharp/first-game/index.md) debe agregar lo siguiente:
+Corresponden a las fechas Fruity extiende los conceptos presentados en el [BouncingGame guía](~/graphics-games/cocossharp/bouncing-game.md) debe agregar lo siguiente:
 
  - El contenido de la forma de archivos PNG
  - Física avanzada
@@ -32,20 +32,20 @@ Corresponden a las fechas Fruity extiende los conceptos presentados en el [Bounc
  - Organización de código mediante las entidades de juegos
  - Juego diseño orientado a la diversión y reproducción de valor
 
-Mientras el BouncingGame se centra en la introducción a los conceptos básicos de CocosSharp, corresponden a las fechas Fruity muestra cómo ponerlo todo en conjunto en un producto acabado de juego. Puesto que esta guía hace referencia a la BouncingGame, los lectores deben primero familiarizarse con la [BouncingGame guía](~/graphics-games/cocossharp/first-game/index.md) antes de leer esta guía.
+Mientras el [BouncingGame guía](~/graphics-games/cocossharp/bouncing-game.md) Fruity corresponden a las fechas se centra en la introducción a los conceptos básicos de CocosSharp, se muestra cómo ponerlo todo en conjunto en un producto acabado de juego. Puesto que esta guía hace referencia a la BouncingGame, los lectores deben primero familiarizarse con la [BouncingGame guía](~/graphics-games/cocossharp/bouncing-game.md) antes de leer esta guía.
 
 Esta guía explica la implementación y el diseño de Fruity corresponden a las fechas para proporcionar información detallada para ayudarle a tomar su propio juego. Tratan los siguientes temas:
 
 
-- [Clase de dispositivo](#GameController_Class)
-- [Entidades de juego](#Game_Entities)
-- [Gráficos de fruta](#Fruit_Graphics)
-- [Física](#Physics)
-- [Contenido de juegos](#Game_Content)
-- [GameCoefficients](#GameCoefficients)
+- [Clase de dispositivo](#gamecontroller-class)
+- [Entidades de juego](#game-entities)
+- [Gráficos de fruta](#fruit-graphics)
+- [Física](#physics)
+- [Contenido de juego](#game-content)
+- [GameCoefficients](#gamecoefficients)
 
 
-# <a name="gamecontroller-class"></a>Clase de dispositivo
+## <a name="gamecontroller-class"></a>Clase de dispositivo
 
 El proyecto Fruity PCL cae incluye un `GameController` clase que es responsable de crear instancias de la partida y moverse entre bastidores. Esta clase se utiliza con iOS y Android proyectos para eliminar código duplicado.
 
@@ -79,7 +79,7 @@ GameView.DesignResolution = new CCSizeI (width, height);
 Por último, el `GameController` clase proporciona un método estático que se puede llamar por ninguna `CCGameScene` para realizar la transición a otro `CCScene`. Este método se usa para mover entre la `TitleScene` y `GameScene`.
 
 
-# <a name="game-entities"></a>Entidades de juego
+## <a name="game-entities"></a>Entidades de juego
 
 Corresponden a las fechas Fruity hace uso del patrón de entidad para la mayoría de los objetos del juego. Para obtener una explicación detallada de este patrón se encuentra en la [guían de entidades en CocosSharp](~/graphics-games/cocossharp/entities.md).
 
@@ -107,7 +107,7 @@ public Fruit ()
 ```
 
 
-## <a name="fruit-graphics"></a>Gráficos de fruta
+### <a name="fruit-graphics"></a>Gráficos de fruta
 
 El `CreateFruitGraphic` método crea un `CCSprite` instancia y lo agrega a la `Fruit`. El `IsAntialiased` propiedad se establece en false para dar una apariencia pixelado al juego. Este valor se establece en false en todos los `CCSprite` y `CCLabel` instancias a lo largo del juego:
 
@@ -179,7 +179,7 @@ El `extraPointsLabel` color se ajusta para mantener contraste con la imagen de f
 ![](fruity-falls-images/image4.png "El color de extraPointsLabel se ajusta para mantener contraste con la imagen de fruta y su valor PositionY se ajusta para centrar CCLabel en las frutas CCSprite")
 
 
-## <a name="collision"></a>Colisión
+### <a name="collision"></a>Colisión
 
 Fruity corresponden a las fechas implementa una solución personalizada colisión con objetos en la carpeta de geometría:
 
@@ -218,17 +218,17 @@ private void CreateCollision()
 }
 ```
 
-Se trata la lógica de colisión [más adelante en esta guía](#Collision).
+Se trata la lógica de colisión [más adelante en esta guía](#collision).
 
 
-# <a name="physics"></a>Física
+## <a name="physics"></a>Física
 
 La física en Fruity corresponden a las fechas se puede dividir en dos categorías: movimiento y la colisión. 
 
 
-## <a name="movement-using-velocity-and-acceleration"></a>Con la velocidad y la aceleración de movimiento
+### <a name="movement-using-velocity-and-acceleration"></a>Con la velocidad y la aceleración de movimiento
 
-Usa corresponden a las fechas Fruity `Velocity` y `Acceleration` valores para controlar el movimiento de sus entidades, similar a la [BouncingGame](~/graphics-games/cocossharp/first-game/index.md). Entidades implementan su lógica de movimiento de un método denominado `Activity`, que se llama una vez por fotograma. Por ejemplo, podemos ver la implementación del movimiento en el `Fruit` clase `Activity` método:
+Usa corresponden a las fechas Fruity `Velocity` y `Acceleration` valores para controlar el movimiento de sus entidades, similar a la [BouncingGame](~/graphics-games/cocossharp/bouncing-game.md). Entidades implementan su lógica de movimiento de un método denominado `Activity`, que se llama una vez por fotograma. Por ejemplo, podemos ver la implementación del movimiento en el `Fruit` clase `Activity` método:
 
 ```csharp
 public void Activity(float frameTimeInSeconds)
@@ -274,7 +274,7 @@ public void HandleInput(CCPoint touchPoint)
 }
 ```
 
-## <a name="collision"></a>Colisión
+### <a name="collision"></a>Colisión
 
 Corresponden a las fechas Fruity implementa parcial realista colisión entre las frutas y otros objetos collidable como el `Paddle` y `GameScene.Splitter`. Para facilitar la depuración de colisión, áreas de colisión de Fruity corresponden a las fechas pueden hacerse visibles cambiando el `GameCoefficients.ShowDebugInfo` en el `GameCoefficients.cs` archivo:
 
@@ -330,7 +330,8 @@ private void PerformCollision()
 }
 ```
 
-### <a name="fruitvsborders"></a>FruitVsBorders
+#### <a name="fruitvsborders"></a>FruitVsBorders
+
 `FruitVsBorders` colisión realiza su propia lógica de colisión en lugar de confiar en la lógica contenidas en una clase diferente. Esta diferencia existe porque la colisión entre fruta y bordes de la pantalla no es absolutamente sólida – es posible que fruta en movimiento paleta cuidado insertarse fuera del borde de la pantalla. Fruta se animará fuera de la pantalla cuando se llama con la paleta, pero si el Reproductor inserta lenta fruta se moverá más allá del borde y fuera de la pantalla:
 
 
@@ -352,7 +353,8 @@ private void FruitVsBorders(Fruit fruit)
 }
 ```
 
-### <a name="fruitvsbins"></a>FruitVsBins
+#### <a name="fruitvsbins"></a>FruitVsBins
+
 El `FruitVsBins` método es responsable de comprobar si se ha retrasado cualquier fruta en una de las dos ubicaciones. Si es así, el Reproductor se le adjudica puntos (si la Papelera de fruta colores a coincidencia) o la partida finaliza (si los colores no coinciden):
 
 
@@ -380,7 +382,8 @@ private void FruitVsBins(Fruit fruit)
 }
 ```
 
-### <a name="fruitvspaddle-and-fruitpolygoncollision"></a>FruitVsPaddle y FruitPolygonCollision
+#### <a name="fruitvspaddle-and-fruitpolygoncollision"></a>FruitVsPaddle y FruitPolygonCollision
+
 Fruta frente a la paleta y fruta frente a divisor (el área de separar las dos ubicaciones) colisión ambos confían en el `FruitPolygonCollision` método. Este método tiene tres partes:
 
 1. Comprobar si los objetos estén en conflicto
@@ -419,7 +422,7 @@ La expresión matemática detrás de la lógica de colisión contenida en el `Po
  
 
 
-# <a name="game-content"></a>Contenido de juegos
+## <a name="game-content"></a>Contenido de juego
 
 El material gráfico en Fruity cae distingue inmediatamente el juego de la BouncingGame. Aunque los diseños de juegos son similares, reproductores verá inmediatamente una diferencia en el aspecto de los juegos de dos. A menudo jugadores deciden si desea probar un juego por los objetos visuales. Por lo tanto, es sumamente importante que los desarrolladores invierten recursos para realizar un visualmente atractivo juegos.
 
@@ -432,7 +435,7 @@ La carátula de Fruity corresponden a las fechas se creó con los siguientes obj
  - Capacidad para crear efectos visuales simples sin animaciones de uso intensivo de recursos
 
 
-## <a name="content-location"></a>Ubicación del contenido
+### <a name="content-location"></a>Ubicación del contenido
 
 Corresponden a las fechas Fruity incluye todo su contenido en la carpeta imágenes en el proyecto de Android:
 
@@ -445,9 +448,9 @@ Estos mismos archivos se vinculan en el proyecto de iOS para evitar la duplicaci
 Merece la pena indicar que el contenido no está contenido dentro de la **Ld** o **Hd** carpetas, que forman parte de la plantilla de CocosSharp predeterminada. El **Ld** y **Hd** carpetas están diseñadas para usarse para juegos que proporcionan dos conjuntos de contenido: uno para dispositivos de menor resolución, como teléfonos y uno para dispositivos de mayor resolución, como tabletas. El material gráfico Fruity corresponden a las fechas se intencionadamente crea con un pixelado estético, por lo que no es necesario proporcionar contenido de diferentes tamaños de pantalla. Por lo tanto, la **Ld** y **Hd** carpetas se han quitado completamente desde el proyecto.
 
 
-## <a name="gamescene-layering"></a>GameScene capas
+### <a name="gamescene-layering"></a>GameScene capas
 
-Como se mencionó anteriormente en esta guía, el GameScene es responsable de todas las creación de instancias de objetos del juego, colocar y lógica entre objeto (por ejemplo, colisión). Todos los objetos se agregan a uno de los cuatro `CCLayer` instancias:
+Como se mencionó anteriormente en esta guía, el `GameScene` es responsable de todas las creación de instancias de objetos del juego, colocar y lógica entre objeto (por ejemplo, colisión). Todos los objetos se agregan a uno de los cuatro `CCLayer` instancias:
 
 
 ```csharp
@@ -488,7 +491,7 @@ private void CreateBackground()
 ```
 
 
-## <a name="vine-entity"></a>Entidad de vid
+### <a name="vine-entity"></a>Entidad de vid
 
 El `Vine` entidad se utiliza exclusivamente para el contenido: no tiene efecto en el juego. Se compone de 20 `CCSprite` instancias, un número seleccionado por prueba y error para asegurarse de que la vid siempre alcanza la parte superior de la pantalla:
 
@@ -557,7 +560,7 @@ public void Activity(float frameTimeInSeconds)
 Tenga en cuenta que una pequeña cantidad de rotación se agrega a la vid a través de la `vineAngle` coeficiente. Este valor puede cambiarse para ajustar cuánto girar el vines.
 
 
-# <a name="gamecoefficients"></a>GameCoefficients
+## <a name="gamecoefficients"></a>GameCoefficients
 
 Todos los juegos buena es el producto de iteración, por lo que corresponden a las fechas Fruity incluye una clase denominada `GameCoefficients` que controla cómo se reproduce el juego. Esta clase contiene expresivas variables que se usan en el juego para control física, diseño, creación y la puntuación.
 
@@ -606,7 +609,7 @@ public static class GameCoefficients
 ```
 
 
-# <a name="conclusion"></a>Conclusión
+## <a name="conclusion"></a>Conclusión
 
 Esta guía se han explorado el juego Fruity corresponden a las fechas. Tratan conceptos como contenido, física y administración de estado del juego.
 

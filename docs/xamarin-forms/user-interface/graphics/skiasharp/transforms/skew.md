@@ -1,6 +1,6 @@
 ---
-title: "La transformación sesga"
-description: "Vea cómo la transformación sesga puede crear objetos gráficos superpuestos en SkiaSharp"
+title: La transformación sesga
+description: Vea cómo la transformación sesga puede crear objetos gráficos superpuestos en SkiaSharp
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: a18b60d486a911e4a76298fd20a70f16ac392881
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: fd5601f380e51ec3fb3a6fdcaa491b218390b7f3
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="the-skew-transform"></a>La transformación sesga
 
@@ -252,4 +252,4 @@ Ahora la sombra se extiende desde la parte inferior de los trazos descendentes:
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

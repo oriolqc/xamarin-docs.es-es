@@ -1,6 +1,6 @@
 ---
-title: "Tres tipos de curvas de Bézier"
-description: "Explorar cómo usar SkiaSharp para representar curvas de Bézier cúbicas, cuadráticas y cónicos"
+title: Tres tipos de curvas de Bézier
+description: Explorar cómo usar SkiaSharp para representar curvas de Bézier cúbicas, cuadráticas y cónicos
 ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
@@ -8,11 +8,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: dcfcf43c89f26b4e721c9752b9cbad1f4a30cfc2
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: cea9951f22fbcf0ff07a8e2244a9bc00819ada24
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>Tres tipos de curvas de Bézier
 
@@ -553,4 +553,4 @@ En este caso es indeseable que `ConicTo` no admite pesos negativos, ya que en te
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
-- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/SkiaSharpFormsDemos/)
+- [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

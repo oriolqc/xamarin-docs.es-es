@@ -1,6 +1,6 @@
 ---
-title: "Geometría de dibujo con CCDrawNode"
-description: "CCDrawNode proporciona métodos para dibujar objetos simples como líneas, círculos y triángulos."
+title: Geometría de dibujo con CCDrawNode
+description: CCDrawNode proporciona métodos para dibujar objetos simples como líneas, círculos y triángulos.
 ms.topic: article
 ms.prod: xamarin
 ms.assetid: 46A3C3CE-74CC-4A3A-AB05-B694AE182ADB
@@ -8,20 +8,20 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: a7b62b131db3fc224ef59bdb9189b96d61129f30
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a2471981f2e88ff8af9a803ff8f5a99e5b9266f
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="drawing-geometry-with-ccdrawnode"></a>Geometría de dibujo con CCDrawNode
 
-_CCDrawNode proporciona métodos para dibujar objetos simples como líneas, círculos y triángulos._
+_`CCDrawNode` Proporciona métodos para dibujar objetos simples como líneas, círculos y triángulos._
 
 La `CCDrawNode` clase CocosSharp proporciona varios métodos para dibujar formas geométricas comunes. Hereda de la `CCNode` clase y normalmente se agrega a `CCLayer` instancias. Esta guía describe cómo usar `CCDrawNode` instancias para realizar la representación personalizada. También proporciona una lista completa de las funciones de dibujo disponibles con capturas de pantalla y ejemplos de código.
 
 
-# <a name="creating-a-ccdrawnode"></a>Crear un CCDrawNode
+## <a name="creating-a-ccdrawnode"></a>Crear un CCDrawNode
 
 La `CCDrawNode` clase puede usarse para dibujar objetos geométricos como líneas, círculos y rectángulos. Por ejemplo, el ejemplo de código siguiente muestra cómo crear un `CCDrawNode` instancia que dibuja un círculo en un `CCLayer` implementar clase:
 
@@ -52,12 +52,12 @@ Este código genera el siguiente círculo en tiempo de ejecución:
 ![](ccdrawnode-images/image1.png "Este código genera esta círculo en tiempo de ejecución")
 
 
-# <a name="draw-method-details"></a>Dibujar los detalles de método
+## <a name="draw-method-details"></a>Dibujar los detalles de método
 
 ¡Eche un vistazo a algunos detalles relacionados con el dibujo con un `CCDrawNode`:
 
 
-## <a name="draw-methods-positions-are-relative-to-the-ccdrawnode"></a>Draw métodos posiciones son relativas a la CCDrawNode
+### <a name="draw-methods-positions-are-relative-to-the-ccdrawnode"></a>Dibujar métodos posiciones son con respecto a la CCDrawNode
 
 Todos los métodos de dibujo necesitan valor de al menos una posición para dibujar. Este valor de posición es relativa a la `CCDrawNode` instancia. Esto significa que la `CCDrawNode` él mismo tiene una posición y todos dibujar las llamadas realizadas en el `CCDrawNode` tener uno o más valores de posición. Para ayudar a entender cómo se combinan estos valores, veamos algunos ejemplos.
 
@@ -94,7 +94,7 @@ Una vez que se ha llamado a un método de dibujo, no se puede modificar el objet
 Objetos dibujados por `CCNodes` también se ve afectada por la `CCNode` la instancia `Rotation` y `Scale` propiedades.
 
 
-## <a name="draw-methods-do-not-need-to-be-called-every-frame"></a>Dibujar métodos no necesita ser llama cada fotograma
+### <a name="draw-methods-do-not-need-to-be-called-every-frame"></a>No es necesario que los métodos de dibujo llamará cada marco
 
 Dibuje la necesidad de métodos que se llamará solo una vez para crear un objeto visual persistente. En el ejemplo anterior, la llamada a `DrawCircle` en el constructor de la `GameLayer` : `DrawCircle` no debe llamarse cada marco para volver a dibujar el círculo cuando se actualiza la pantalla.
 
@@ -103,7 +103,7 @@ Esto difiere de los métodos de dibujo en MonoGame, que normalmente representar�
 Si se llaman a métodos de dibujar cada fotograma, objetos finalmente se acumularán dentro de la llamada a `CCDrawNode` instancia, lo que produce una disminución en la velocidad de fotogramas tal y como se dibujan varios objetos.
 
 
-## <a name="each-ccdrawnode-supports-multiple-draw-calls"></a>Cada CCDrawNode admite varias llamadas de dibujo
+### <a name="each-ccdrawnode-supports-multiple-draw-calls"></a>Cada CCDrawNode admite varias llamadas de dibujo
 
 `CCDrawNode` instancias se pueden utilizar para dibujar varias formas. Esto permite que se incluye en un único objeto complejos objetos visuales. Por ejemplo, el código siguiente se puede usar para presentar varios círculos con una `CCDrawNode`:
 
@@ -123,25 +123,25 @@ El resultado es el siguiente gráfico:
 ![](ccdrawnode-images/image2.png "Esto da como resultado en el gráfico siguiente")
 
 
-# <a name="draw-call-examples"></a>Ejemplos de llamadas a Draw
+## <a name="draw-call-examples"></a>Ejemplos de llamadas a Draw
 
 Están disponibles en las siguientes llamadas a draw `CCDrawNode`:
 
-- [DrawCatmullRom](#DrawCatmullRom)
-- [DrawCircle](#DrawCircle)
-- [DrawCubicBezier](#DrawCubicBezier)
-- [DrawEllipse](#DrawEllipse)
-- [DrawLineList](#DrawLineList)
-- [DrawPolygon](#DrawPolygon)
-- [DrawQuadBezier](#DrawQuadBezier)
-- [DrawRect](#DrawRect)
-- [DrawSegment](#DrawSegment)
-- [DrawSolidArc](#DrawSolidArc)
-- [DrawSolidCircle](#DrawSolidCircle)
-- [DrawTriangleList](#DrawTriangleList)
+- [`DrawCatmullRom`](#drawcatmullrom)
+- [`DrawCircle`](#drawcircle)
+- [`DrawCubicBezier`](#drawcubicbezier)
+- [`DrawEllipse`](#drawellipse)
+- [`DrawLineList`](#drawlinelist)
+- [`DrawPolygon`](#drawpolygon)
+- [`DrawQuadBezier`](#drawquadbezier)
+- [`DrawRect`](#drawrect)
+- [`DrawSegment`](#drawsegment)
+- [`DrawSolidArc`](#drawsolidarc)
+- [`DrawSolidCircle`](#drawsolidcircle)
+- [`DrawTriangleList`](#drawtrianglelist)
 
 
-## <a name="drawcardinalspline"></a>DrawCardinalSpline
+### <a name="drawcardinalspline"></a>DrawCardinalSpline
 
 `DrawCardinalSpline` crea una línea curva a través de un número variable de puntos. 
 
@@ -171,7 +171,7 @@ drawNode.DrawCardinalSpline (
 ![](ccdrawnode-images/image3.png "El parámetro de segmentos controla cuántos segmentos para usar para dibujar la curva spline")
 
 
-## <a name="drawcatmullrom"></a>DrawCatmullRom
+### <a name="drawcatmullrom"></a>DrawCatmullRom
 
 `DrawCatmullRom` crea una línea curva a través de un número variable de puntos, similar a `DrawCardinalLine`. Este método no incluye un parámetro de tensión.
 
@@ -192,7 +192,7 @@ drawNode.DrawCatmullRom (
 ![](ccdrawnode-images/image4.png "DrawCatmullRom crea una línea curva a través de un número variable de puntos, parecidos a DrawCardinalLine")
 
 
-## <a name="drawcircle"></a>DrawCircle
+### <a name="drawcircle"></a>DrawCircle
 
 `DrawCircle` crea un perímetro de un círculo de un determinado `radius`.
 
@@ -208,7 +208,7 @@ drawNode.DrawCircle (
 ![](ccdrawnode-images/image5.png "DrawCircle crea un perímetro de un círculo de un radio especificado")
 
 
-## <a name="drawcubicbezier"></a>DrawCubicBezier
+### <a name="drawcubicbezier"></a>DrawCubicBezier
 
 `DrawCubicBezier` Dibuja una línea curva entre dos puntos, con puntos de control para establecer la ruta de acceso entre los dos puntos.
 
@@ -228,7 +228,7 @@ drawNode.DrawCubicBezier (
  ![](ccdrawnode-images/image6.png "DrawCubicBezier dibuja una línea curva entre dos puntos.")
 
 
-## <a name="drawellipse"></a>DrawEllipse
+### <a name="drawellipse"></a>DrawEllipse
 
 `DrawEllipse` crea el esquema de un *elipse*, que se conoce a menudo como una elipse (aunque ambos no son idénticos geométrica). La forma de la elipse puede definirse mediante un `CCRect` instancia.
 
@@ -245,7 +245,7 @@ drawNode.DrawEllipse (
 ![](ccdrawnode-images/image8.png "DrawEllipse crea el esquema de una elipse, que a menudo se conoce como una elipse")
 
 
-## <a name="drawline"></a>DrawLine
+### <a name="drawline"></a>DrawLine
 
 `DrawLine` se conecta a los puntos con una línea de un determinado valor de ancho. Este método es similar a `DrawSegment`, excepto en que crea puntos de conexión sin formato en lugar de puntos de conexión de redondeo.
 
@@ -263,7 +263,7 @@ drawNode.DrawLine (
 ![](ccdrawnode-images/image9.png "DrawLine se conecta a los puntos con una línea de un determinado valor de ancho")
 
 
-## <a name="drawlinelist"></a>DrawLineList
+### <a name="drawlinelist"></a>DrawLineList
 
 `DrawLineList` crea varias líneas mediante la conexión de cada par de puntos especificados por un `CCV3F_C4B` matriz. El `CCV3F_C4B` struct contiene valores de posición y el color. El `verts` parámetro siempre debe contener un número par de puntos, como cada línea se define mediante dos puntos.
 
@@ -288,7 +288,7 @@ drawNode.DrawLineList (verts);
 
 
 
-## <a name="drawpolygon"></a>DrawPolygon
+### <a name="drawpolygon"></a>DrawPolygon
 
 `DrawPolygon` crea un polígono rellenada con un contorno de color y de ancho variable.
 
@@ -315,7 +315,7 @@ drawNode.DrawPolygon (verts,
 ![](ccdrawnode-images/image11.png "DrawPolygon crea un polígono rellenada con un contorno de color y de ancho variable")
 
 
-## <a name="drawquadbezier"></a>DrawQuadBezier
+### <a name="drawquadbezier"></a>DrawQuadBezier
 
 `DrawQuadBezier` se conecta a dos puntos con una línea. Se comporta del mismo modo que `DrawCubicBezier` pero solo admite un único punto de control.
 
@@ -335,7 +335,7 @@ drawNode.DrawQuadBezier (
 ![](ccdrawnode-images/image12.png "DrawQuadBezier conecta dos puntos con una línea")
 
 
-## <a name="drawrect"></a>DrawRect
+### <a name="drawrect"></a>DrawRect
 
 `DrawRect` crea un rectángulo rellenada con un contorno de color y de ancho variable.
 
@@ -354,7 +354,7 @@ drawNode.DrawRect(shape,
 ![](ccdrawnode-images/image13.png "DrawRect crea un rectángulo rellenada con un contorno de color y de ancho variable")
 
 
-## <a name="drawsegment"></a>DrawSegment
+### <a name="drawsegment"></a>DrawSegment
 
 `DrawSegment` se conecta a dos puntos con una línea de ancho variable y el color. Es similar a `DrawLine`, excepto en que crea extremos redondeados en lugar de los puntos de conexión sin formato.
 
@@ -371,7 +371,7 @@ drawNode.DrawSegment (from: new CCPoint (0, 0),
 ![](ccdrawnode-images/image14.png "DrawSegment conecta dos puntos con una línea de ancho variable y color")
 
 
-## <a name="drawsolidarc"></a>DrawSolidArc
+### <a name="drawsolidarc"></a>DrawSolidArc
 
 `DrawSolidArc` crea una cuña rellenado de un color determinado y radius.
 
@@ -390,7 +390,7 @@ drawNode.DrawSolidArc(
 ![](ccdrawnode-images/image15.png "DrawSolidArc crea una cuña rellenado de un color determinado y radio")
 
 
-## <a name="drawsolidcircle"></a>DrawSolidCircle
+### <a name="drawsolidcircle"></a>DrawSolidCircle
 
 `DrawCircle` crea un círculo rellenado de un radio especificado.
 
@@ -407,7 +407,7 @@ drawNode.DrawSolidCircle(
 ![](ccdrawnode-images/image16.png "DrawCircle da lugar a un círculo rellenado de un radio especificado")
 
 
-## <a name="drawtrianglelist"></a>DrawTriangleList
+### <a name="drawtrianglelist"></a>DrawTriangleList
 
 `DrawTriangleList` crea una lista de triángulos. Cada triángulo se define mediante tres `CCV3F_C4B` instancias en una matriz. El número de vértices en la matriz se pasa a la `verts` parámetro debe ser un múltiplo de tres. Tenga en cuenta que la única información contenida en `CCV3F_C4B` es la posición de la verts y su color: el `DrawTriangleList` método no es compatible con el dibujo triángulos con texturas.
 
@@ -432,7 +432,7 @@ drawNode.DrawTriangleList (verts);
 ![](ccdrawnode-images/image17.png "DrawTriangleList crea una lista de triángulos")
 
 
-# <a name="summary"></a>Resumen
+## <a name="summary"></a>Resumen
 
 Esta guía explica cómo crear un `CCDrawNode` y realizar el procesamiento basado en el tipo primitivo. Proporciona un ejemplo de cada una de las llamadas a draw.
 

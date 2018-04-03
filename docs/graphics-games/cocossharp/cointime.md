@@ -1,5 +1,5 @@
 ---
-title: Detalles de implementación de tiempo de moneda
+title: Detalles de tiempo de juego de moneda
 description: Esta guía describe los detalles de implementación en el juego de tiempo de moneda, incluidos trabajar con mapas de mosaico, creación de entidades, animar sprites y colisión eficaz de implementar.
 ms.topic: article
 ms.prod: xamarin
@@ -8,13 +8,13 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 80250ca9fae98fae653c9b2837b2b1a96fb02203
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.openlocfilehash: 8c33b74af80a14df1626ab39ba8c055a81259194
+ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="coin-time-implementation-details"></a>Detalles de implementación de tiempo de moneda
+# <a name="coin-time-game-details"></a>Detalles de tiempo de juego de moneda
 
 _Esta guía describe los detalles de implementación en el juego de tiempo de moneda, incluidos trabajar con mapas de mosaico, creación de entidades, animar sprites y colisión eficaz de implementar._
 
@@ -24,27 +24,27 @@ Hora de la moneda es un juego para iOS y Android reformador de platino completa.
 
 Esta guía describe los detalles de la implementación en tiempo de moneda, que abarcan los temas siguientes:
 
-- [Trabajar con archivos TMX](#Working_with_TMX_Files)
-- [Nivel de carga](#Level_Loading)
-- [Agregar nuevas entidades](#Adding_New_Entities)
-- [Entidades animadas](#Animated_Entities)
+- [Trabajar con archivos tmx](#working-with-tmx-files)
+- [Nivel de carga](#level-loading)
+- [Agregar nuevas entidades](#adding-new-entities)
+- [Entidades animadas](#animated-entities)
 
 
-# <a name="content-in-coin-time"></a>Contenido en tiempo de moneda
+## <a name="content-in-coin-time"></a>Contenido en tiempo de moneda
 
 Tiempo de moneda es un proyecto de ejemplo que representa cómo puede estar organizado de un proyecto de CocosSharp completo. La hora de moneda pretende simplificar la adición y el mantenimiento del contenido de la estructura. Usa **.tmx** archivos creados por [mosaico](http://www.mapeditor.org) para niveles y los archivos XML para definir las animaciones. Modificar o agregar nuevo contenido se puede lograr con el mínimo esfuerzo. 
 
 Si bien este enfoque hace tiempo moneda un proyecto de efectivo para aprendizaje y experimentación, también refleja cómo profesionales juegos se realizan. Esta guía explica algunos de los métodos que se emplean para simplificar la adición y modificar el contenido.
 
 
-# <a name="working-with-tmx-files"></a>Trabajar con archivos TMX
+## <a name="working-with-tmx-files"></a>Trabajar con archivos tmx
 
 Niveles de tiempo de moneda se definen mediante el formato de archivo .tmx, que se genera mediante el [mosaico](http://www.mapeditor.org) editor de mapa de mosaico. Para obtener una explicación detallada sobre cómo trabajar con mosaico, consulte el [utilizando coloca en mosaico con guía Cocos agudo](~/graphics-games/cocossharp/tiled.md). 
 
 Cada nivel se define en su propio archivo .tmx contenido en el **CoinTime/activos/contenido/niveles** carpeta. Todos los niveles de tiempo de moneda compartan un archivo de tileset, que se define en el **mastersheet.tsx** archivo. Este archivo define las propiedades personalizadas de cada icono, por ejemplo, si el icono tiene colisión sólido o si el icono debe ser reemplazado por una instancia de entidad. El archivo de mastersheet.tsx permite propiedades puede definirse una sola vez y se utilizan en todos los niveles. 
 
 
-## <a name="editing-a-tile-map"></a>Edita una asignación de icono
+### <a name="editing-a-tile-map"></a>Edita una asignación de icono
 
 Para editar una asignación de icono, abra el archivo de .tmx en mosaico haciendo doble clic en el archivo .tmx o abriendo a través del menú archivo en mosaico. Moneda tiempo nivel icono mapas contienen tres capas: 
 
@@ -54,7 +54,8 @@ Para editar una asignación de icono, abra el archivo de .tmx en mosaico haciend
 
 Como a continuación se explican más adelante, el código de nivel de carga espera estos tres capas en todos los niveles de tiempo de moneda.
 
-### <a name="editing-terrain"></a>Edición de terreno
+#### <a name="editing-terrain"></a>Edición de terreno
+
 Se pueden colocar los iconos, haga clic en el **mastersheet** tileset y, a continuación, haga clic en el icono de mapa. Por ejemplo, para pintar el terreno nueva en un nivel:
 
 1. Seleccione la capa de terreno
@@ -67,7 +68,8 @@ La parte superior izquierda de la tileset contiene todos del terreno en el tiemp
 
 ![](cointime-images/image3.png "Terreno, que es sólido, incluye la propiedad SolidCollision, tal como se muestra en las propiedades del icono de la izquierda de la pantalla")
 
-### <a name="editing-entities"></a>Edición de entidades
+#### <a name="editing-entities"></a>Edición de entidades
+
 Las entidades se pueden agregarse ni quitarse de un nivel: al igual que de terreno. El **mastersheet** tileset tiene todas las entidades que se coloca sobre la mitad de la distancia horizontal, por lo que puede que no sean visibles sin tener que desplazarse a la derecha:
 
 ![](cointime-images/image4.png "El tileset mastersheet tiene todas las entidades que se coloca sobre la mitad de la distancia horizontal, por lo que puede que no sean visibles sin tener que desplazarse a la derecha")
@@ -85,7 +87,7 @@ Una vez que se ha modificado y guardado el archivo, los cambios automáticamente
 ![](cointime-images/image7.png "Una vez que se ha modificado y guardado el archivo, los cambios automáticamente se mostrarán si se compila el proyecto y ejecutar")
 
 
-## <a name="adding-new-levels"></a>Agregar nuevos niveles
+### <a name="adding-new-levels"></a>Agregar nuevos niveles
 
 El proceso de agregar niveles a la hora de moneda requiere ningún cambio de código y solo de unos pequeños cambios en el proyecto. Para agregar un nuevo nivel:
 
@@ -105,7 +107,7 @@ El nuevo nivel debe aparecer en la pantalla Seleccione nivel como nivel 9 (nombr
 ![](cointime-images/image10.png "El nuevo nivel debe aparecer en la pantalla Seleccione nivel como level 9 empieza a nombres de nivel de archivo en 0, pero los botones de nivel comienzan por el número 1")
 
 
-# <a name="level-loading"></a>Nivel de carga
+## <a name="level-loading"></a>Nivel de carga
 
 Como se muestra anteriormente, nuevos niveles no requieren ningún cambio en el código: el juego detecta automáticamente los niveles si se denomina correctamente y se agregan a la **niveles** carpeta con la acción de compilación correcta (**BundleResource**o **AndroidAsset**).
 
@@ -201,7 +203,7 @@ private void GoToLevel(int levelNumber)
 A continuación echaremos un vistazo en métodos llamados en `GoToLevel`.
 
 
-## <a name="loadlevel"></a>LoadLevel
+### <a name="loadlevel"></a>LoadLevel
 
 El `LoadLevel` método es responsable de cargar el archivo .tmx y agregarla a la `GameScene`. Este método no crea ningún objeto interactivo como colisión o entidades: simplemente crea los objetos visuales para el nivel, también se denomina el *entorno*.
 
@@ -227,7 +229,7 @@ El `CCTileMap` constructor toma un nombre de archivo, que se crea con el número
 Actualmente, CocosSharp no permite la reordenación de las capas sin quitar y volver a agregarlas a su elemento primario `CCScene` (que es el `GameScene` en este caso), por lo que las últimas líneas del método necesarios para volver a ordenar las capas.
 
 
-## <a name="createcollision"></a>CreateCollision
+### <a name="createcollision"></a>CreateCollision
 
 El `CreateCollision` método construye una `LevelCollision` instancia que se usa para realizar *colisión sólido* entre el Reproductor y el entorno.
 
@@ -245,7 +247,7 @@ Sin esta colisión, el Reproductor se incluirían en el nivel y el juego sería 
 Colisión en el tiempo de moneda se puede agregar con ningún código adicional: únicas modificaciones a los archivos de mosaico. 
 
 
-## <a name="processtileproperties"></a>ProcessTileProperties
+### <a name="processtileproperties"></a>ProcessTileProperties
 
 Una vez que se carga un nivel y se crea el conflicto, `ProcessTileProperties` se llama para realizar la lógica basada en el icono Propiedades. Tiempo de moneda incluye un `PropertyLocation` struct para definir propiedades y las coordenadas del mosaico con estas propiedades:
 
@@ -343,7 +345,7 @@ private bool TryCreateEntity(string entityType, float worldX, float worldY)
 ```
 
 
-# <a name="adding-new-entities"></a>Agregar nuevas entidades
+## <a name="adding-new-entities"></a>Agregar nuevas entidades
 
 Tiempo de moneda utiliza el modelo de entidad para sus objetos del juego (descrita en la [guían de las entidades de CocosSharp](~/graphics-games/cocossharp/entities.md)). Todas las entidades que heredan de `CCNode`, lo que significa que se pueden agregar como elementos secundarios de la `gameplayLayer`.
 
@@ -352,19 +354,19 @@ Cada tipo de entidad también se hace referencia directamente a través de una l
 El código existente proporciona una serie de tipos de entidad como ejemplos de cómo crear nuevas entidades. Los pasos siguientes se pueden utilizar para crear una nueva entidad:
 
 
-## <a name="1---define-a-new-class-using-the-entity-pattern"></a>1: definir una nueva clase utilizando el modelo de entidad
+### <a name="1---define-a-new-class-using-the-entity-pattern"></a>1: definir una nueva clase utilizando el modelo de entidad
 
 El único requisito para la creación de una entidad es crear una clase que hereda de `CCNode`. Mayoría de las entidades tiene algún objeto visual, como un `CCSprite`, que se debe agregar como elemento secundario de la entidad en su constructor.
 
-CoinTime proporciona el `AnimatedSpriteEntity` clase que simplifica la creación de entidades animadas. Las animaciones se tratarán con más detalle en la [sección animando entidades](#Animated_Entities).
+CoinTime proporciona el `AnimatedSpriteEntity` clase que simplifica la creación de entidades animadas. Las animaciones se tratarán con más detalle en la [sección animando entidades](#animated-entities).
 
 
-## <a name="2--add-a-new-entry-to-the-trycreateentity-switch-statement"></a>2: agregar una nueva entrada a la instrucción switch de TryCreateEntity
+### <a name="2--add-a-new-entry-to-the-trycreateentity-switch-statement"></a>2: agregar una nueva entrada a la instrucción switch de TryCreateEntity
 
 Instancias de la nueva entidad se deberían crear instancias en el `TryCreateEntity`. Si la entidad requiere la lógica de cada fotograma como colisión, AI o leer la entrada, la `GameScene` tiene que mantener una referencia al objeto. Si se necesitan varias instancias (como `Coin` o `Enemy` instancias), a continuación, un nuevo `List` deben agregarse a la `GameScene` clase.
 
 
-## <a name="3--modify-tile-properties-for-the-new-entity"></a>3: modificar las propiedades de icono de la nueva entidad
+### <a name="3--modify-tile-properties-for-the-new-entity"></a>3: modificar las propiedades de icono de la nueva entidad
 
 Una vez que el código es compatible con la creación de la nueva entidad, debe agregarse a la tileset la nueva entidad. Se puede editar la tileset abriendo cualquier nivel `.tmx` archivo. 
 
@@ -389,7 +391,7 @@ Debe sobrescribir el tileset existente **mastersheet.tsx** tileset:
 ![](cointime-images/image15.png "tileset debe sobrescribir el tileset mastersheet.tsx existente")
 
 
-# <a name="entity-tile-removal"></a>Eliminación del icono de entidad
+## <a name="entity-tile-removal"></a>Eliminación del icono de entidad
 
 Cuando se carga un mapa de mosaico en un juego, los mosaicos individuales son objetos estáticos. Puesto que las entidades requieren un comportamiento personalizado, como un movimiento, código en tiempo de moneda quita mosaicos cuando se crean entidades.
 
@@ -453,7 +455,7 @@ private void ProcessTileProperties()
 ```
 
 
-# <a name="entity-offsets"></a>Desplazamientos de entidad
+## <a name="entity-offsets"></a>Desplazamientos de entidad
 
 Entidades creadas desde los iconos se sitúan alineando el centro de la entidad con el centro del mosaico. Las entidades de mayor, como `Door`, usar propiedades adicionales y la lógica para colocar correctamente. 
 
@@ -493,12 +495,12 @@ private void ProcessTileProperties()
 ```
 
 
-# <a name="animated-entities"></a>Entidades animadas
+## <a name="animated-entities"></a>Entidades animadas
 
 Moneda tiempo incluye varias entidades animadas. El `Player` y `Enemy` entidades reproducción animaciones de recorrido y `Door` entidad desempeña una animación de apertura, una vez que se han recopilado todas las monedas.
 
 
-## <a name="achx-files"></a>archivos de .achx
+### <a name="achx-files"></a>archivos de .achx
 
 Las animaciones de tiempo de moneda se definen en archivos de .achx. Se define cada animación entre `AnimationChain` etiquetas, como se muestra en la siguiente animación definida en **propanimations.achx**:
 
@@ -533,7 +535,7 @@ El `FrameLength` propiedad define el número de segundos que se debe mostrar un 
 Se omiten todas las demás propiedades AnimationChain en el archivo .achx por tiempo de moneda.
 
 
-## <a name="animatedspriteentity"></a>AnimatedSpriteEntity
+### <a name="animatedspriteentity"></a>AnimatedSpriteEntity
 
 Lógica de la animación se encuentra en la `AnimatedSpriteEntity` (clase), que actúa como clase base para la mayoría de las entidades que se usa en el `GameScene`. Proporciona la funcionalidad siguiente:
 
@@ -562,7 +564,7 @@ walkRightAnimation = animations.Find (item => item.Name == "WalkRight");
 ```
 
 
-# <a name="summary"></a>Resumen
+## <a name="summary"></a>Resumen
 
 Esta guía cubre los detalles de implementación de tiempo de moneda. Tiempo de moneda se crea para que sea un completo juego, pero también es un proyecto que se puede modificar fácilmente y se expanden. Agregar nuevos niveles y la creación de nuevas entidades para comprender mejor cómo se implementa el tiempo de moneda, se aconseja dedicar realizar las modificaciones del tiempo a niveles, los lectores.
 
