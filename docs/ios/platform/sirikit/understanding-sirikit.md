@@ -1,18 +1,17 @@
 ---
-title: "Descripción de los conceptos de SiriKit"
-description: "Este artículo tratan los conceptos clave que será necesarios para trabajar con SiriKit en una aplicación de Xamarin.iOS."
-ms.topic: article
+title: Descripción de los conceptos de SiriKit
+description: Este artículo tratan los conceptos clave que será necesarios para trabajar con SiriKit en una aplicación de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 0c1253391673e48f81c12b80719db485d276013d
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 7140747307c15b51fb330a41b496079dc680e5fa
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="understanding-sirikit-concepts"></a>Descripción de los conceptos de SiriKit
 

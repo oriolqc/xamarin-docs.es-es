@@ -1,18 +1,17 @@
 ---
-title: "Localización de iOS"
-description: "Este documento tratan las características de localización del SDK de iOS y cómo tener acceso a ellos con Xamarin."
-ms.topic: article
+title: Localización de iOS
+description: Este documento tratan las características de localización del SDK de iOS y cómo tener acceso a ellos con Xamarin.
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: cc7643d89b4a45b6f6fb87bb027edb1c339a20ec
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 96ee8343bb2b99fdc0be9437aaa7737a70b8c19c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-localization"></a>Localización de iOS
 
@@ -20,7 +19,7 @@ _Este documento tratan las características de localización del SDK de iOS y c�
 
 Hacer referencia a la [codificaciones de internacionalización](encodings.md) para obtener instrucciones sobre cómo incluir páginas de códigos o conjuntos de caracteres en aplicaciones que se deben procesar datos no Unicode.
 
-## <a name="ios-platform-features"></a>Características de la plataforma de iOS
+## <a name="ios-platform-features"></a>Características de la plataforma iOS
 
 En esta sección se describe algunas de las características de localización de iOS. Vaya a la [próxima sección](#basics) para ver ejemplos y código específico.
 

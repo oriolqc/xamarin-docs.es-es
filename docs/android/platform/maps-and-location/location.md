@@ -1,18 +1,17 @@
 ---
-title: "Servicios de ubicación"
-description: "Esta guía presenta reconocimiento de ubicación en aplicaciones de Android y muestra cómo obtener la ubicación del usuario mediante la API del servicio de ubicación Android, así como el proveedor de ubicación fusionadas disponible con la API de servicios de ubicación de Google."
-ms.topic: article
+title: Servicios de ubicación
+description: Esta guía presenta reconocimiento de ubicación en aplicaciones de Android y muestra cómo obtener la ubicación del usuario mediante la API del servicio de ubicación Android, así como el proveedor de ubicación fusionadas disponible con la API de servicios de ubicación de Google.
 ms.prod: xamarin
 ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 28cfb4cda27446b914c23a2ce4e8e9f845876107
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 366c75db49a7e0f4f559b13c0871071dee2f08e3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="location-services"></a>Servicios de ubicación
 

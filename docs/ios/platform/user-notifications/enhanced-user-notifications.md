@@ -1,18 +1,17 @@
 ---
 title: Notificaciones de usuario mejorada
-description: "Este artículo explican todas las formas que se han mejorado la notificación a los usuarios mediante iOS 10 y cómo utilizarlos en una aplicación de Xamarin.iOS."
-ms.topic: article
+description: Este artículo explican todas las formas que se han mejorado la notificación a los usuarios mediante iOS 10 y cómo utilizarlos en una aplicación de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 50553cb1dc5f7ea782c0f13e32f60d7b6ce3e181
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 9fd3ff17dc9af3fd30a7d5b31e8cea7ff8669a51
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="enhanced-user-notifications"></a>Notificaciones de usuario mejorada
 
@@ -169,7 +168,7 @@ Para proporcionar los derechos necesarios, haga lo siguiente:
 2. Cambie a la **origen** vista: 
 
     [![](enhanced-user-notifications-images/setup01.png "La vista del origen")](enhanced-user-notifications-images/setup01.png#lightbox)
-3. Haga clic en el  **+**  botón para agregar una nueva clave.
+3. Haga clic en el **+** botón para agregar una nueva clave.
 4. Escriba `aps-environment` para el **propiedad**, deje el **tipo** como `String` y escribir cualquiera `development` o `production` para el **valor**: 
 
     [![](enhanced-user-notifications-images/setup02.png "La propiedad de entorno de aps")](enhanced-user-notifications-images/setup02.png#lightbox)
@@ -178,7 +177,7 @@ Para proporcionar los derechos necesarios, haga lo siguiente:
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Haga doble clic en el `Entitlements.plist` un archivo en el **el Explorador de soluciones** para abrirlo y editarlo.
-3. Haga clic en el  **+**  botón para agregar una nueva clave.
+3. Haga clic en el **+** botón para agregar una nueva clave.
 4. Escriba `aps-environment` para el **propiedad**, deje el **tipo** como `String` y escribir cualquiera `development` o `production` para el **valor**: 
 
     [![](enhanced-user-notifications-images/setup02w.png "La propiedad de entorno de aps")](enhanced-user-notifications-images/setup02.png#lightbox)

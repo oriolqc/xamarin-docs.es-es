@@ -1,17 +1,16 @@
 ---
-title: "Administración de configuración"
-ms.topic: article
+title: Administración de configuración
 ms.prod: xamarin
 ms.assetid: 50d6e780-e768-47f8-9361-3af11e56b87b
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: da6ae39f58235dd11d53f3e8396349f38fbdf9d9
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 9318f86077c9cdb98e073e4816dae4fdabbfe568
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="configuration-management"></a>Administración de configuración
 

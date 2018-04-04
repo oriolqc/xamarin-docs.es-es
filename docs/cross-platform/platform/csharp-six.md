@@ -1,7 +1,6 @@
 ---
-title: "6 nuevas características de C# información general"
-description: "La versión más reciente del lenguaje de C#, versión 6, continúa evolucionando el idioma para que tenga menos reutilizable, mejorar la claridad y coherencia más. ¿Sintaxis de inicialización de limpieza, la capacidad para usar await en bloques catch/finally y el condicional null? operador son especialmente útiles."
-ms.topic: article
+title: 6 nuevas características de C# información general
+description: La versión más reciente del lenguaje de C#, versión 6, continúa evolucionando el idioma para que tenga menos reutilizable, mejorar la claridad y coherencia más. ¿Sintaxis de inicialización de limpieza, la capacidad para usar await en bloques catch/finally y el condicional null? operador son especialmente útiles.
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.technology: xamarin-cross-platform
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 80456287c92913b048b73f40d2db6dcb16cc270d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2a189a19280576876e5d5a6a4fa34d2d00cab330
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="c-6-new-features-overview"></a>6 nuevas características de C# información general
 
@@ -52,7 +51,7 @@ Visual Studio para Mac actualiza automáticamente la instalación Mono en el sis
 
 Los usuarios de Windows deben tener [Visual Studio 2015 o 2017 ^](https://www.visualstudio.com/) instalado para compilar el código de C# 6 (incluso si decide Xamarin Studio para Windows como su IDE).
 
-^ o  *[Microsoft generar herramientas de 2015](http://www.microsoft.com/en-us/download/details.aspx?id=48159)*  de comando de línea compilación o servidores de compilación, por ejemplo.
+^ o *[Microsoft generar herramientas de 2015](http://www.microsoft.com/en-us/download/details.aspx?id=48159)* de comando de línea compilación o servidores de compilación, por ejemplo.
 
 ## <a name="using-c-6"></a>Uso de C# 6
 

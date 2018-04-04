@@ -1,18 +1,17 @@
 ---
 title: PassKit
-description: "Cartera es una aplicación de iOS de sistema que almacena y muestra los códigos de barras y otra información para vincular las transacciones del cliente en su teléfono con el mundo real."
-ms.topic: article
+description: Cartera es una aplicación de iOS de sistema que almacena y muestra los códigos de barras y otra información para vincular las transacciones del cliente en su teléfono con el mundo real.
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 279b5bc1188c973fddc033f9b592e9acec703a59
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f1c8ac92c5ff7eed5116587ed13755ddee74a877
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="passkit"></a>PassKit
 
@@ -238,7 +237,7 @@ Para crear el siguiente no pasar el identificador de tipo.
 
 El primer paso es configurar un identificador de tipo pasar para diferentes _tipo_ de pase a ser compatibles. El Id. de pasar (o identificador de tipo pasar) crea un identificador único para el paso. Se usará este identificador para vincular el paso con la cuenta de desarrollador con un certificado.
 
-1. En el [sección certificados, identificadores y los perfiles del Portal de aprovisionamiento de iOS](https://developer.apple.com/account/overview.action), vaya a **identificadores** y seleccione **pasar identificadores de tipo** . A continuación, seleccione la  **+**  botón para crear un nuevo tipo de paso: [ ![ ] (passkit-images/passid.png "crear un nuevo tipo de paso")](passkit-images/passid.png#lightbox)
+1. En el [sección certificados, identificadores y los perfiles del Portal de aprovisionamiento de iOS](https://developer.apple.com/account/overview.action), vaya a **identificadores** y seleccione **pasar identificadores de tipo** . A continuación, seleccione la **+** botón para crear un nuevo tipo de paso: [ ![ ] (passkit-images/passid.png "crear un nuevo tipo de paso")](passkit-images/passid.png#lightbox)
 
 2.   Proporcionar un **descripción** (nombre) y **identificador** (cadena única) para la fase. Tenga en cuenta que todos los identificadores de tipo pasar debe comenzar con la cadena `pass.` en este ejemplo se utiliza `pass.com.xamarin.coupon.banana` : [ ![ ] (passkit-images/register.png "proporcionar una descripción y un identificador")](passkit-images/register.png#lightbox)
 

@@ -1,18 +1,17 @@
 ---
-title: "Introducción a DependencyService"
-description: "Comprender el funcionamiento de DependencyService a las características de la plataforma nativa de acceso"
-ms.topic: article
+title: Introducción a DependencyService
+description: Comprender el funcionamiento de DependencyService a las características de la plataforma nativa de acceso
 ms.prod: xamarin
 ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 74b22f31fabf70885eca732ef021232124df71bb
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 01953d55a104a70b0451c9b796c732254afb081e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-dependencyservice"></a>Introducción a DependencyService
 

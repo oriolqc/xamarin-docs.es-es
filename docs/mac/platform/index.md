@@ -1,18 +1,17 @@
 ---
-title: "Características de la plataforma"
+title: Características de la plataforma
 description: Componentes clave de la plataforma de macOS
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 37451F65-672A-4512-8DDD-06CCDE9E5A12
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 3e18863ae91e76325a088c83fc2c11b9d6fa1125
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 2bebc42cd3b5db7dba20066e90f294e621b1e4ac
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="platform-features"></a>Características de la plataforma
 

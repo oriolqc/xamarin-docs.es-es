@@ -1,5 +1,5 @@
 #<a name="---"></a>---
-título: "Parte 6 – pruebas y aplicación tienda aprobaciones" ms.topic: artículo ms.prod: xamarin ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B ms.technology: xamarin y multiplataforma autor: asb3993 ms.author: amburns ms.date: 23/03/2017
+título: "Parte 6 – pruebas y aplicación tienda aprobaciones" ms.prod: xamarin ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B ms.technology: xamarin y multiplataforma autor: asb3993 ms.author: amburns ms.date: 23/03/2017
 ---
 
 # <a name="part-6---testing-and-app-store-approvals"></a>Parte 6: probar y aprobaciones de tienda de aplicaciones

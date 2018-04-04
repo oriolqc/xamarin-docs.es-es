@@ -1,18 +1,17 @@
 ---
 title: API de apariencia
-description: "iOS le permite aplicar la configuración de la propiedad visual en un nivel de clase estática en lugar de en objetos individuales para que el cambio se aplica a todas las instancias de ese control en la aplicación."
-ms.topic: article
+description: iOS le permite aplicar la configuración de la propiedad visual en un nivel de clase estática en lugar de en objetos individuales para que el cambio se aplica a todas las instancias de ese control en la aplicación.
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: f35256529d6d72a3f5e563dc88b9d5883a9724d4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7c7e4909cc12f49411c527af12fc0e4855979804
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="appearance-api"></a>API de apariencia
 

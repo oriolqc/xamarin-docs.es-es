@@ -1,18 +1,17 @@
 ---
-title: "Cómo funciona Xamarin.Mac"
-description: "Este documento describe el funcionamiento interno de Xamarin.Mac. En concreto, examina constructores, administración de memoria, por delante de la compilación de tiempo y el registrador."
-ms.topic: article
+title: Cómo funciona Xamarin.Mac
+description: Este documento describe el funcionamiento interno de Xamarin.Mac. En concreto, examina constructores, administración de memoria, por delante de la compilación de tiempo y el registrador.
 ms.prod: xamarin
 ms.assetid: C2053ABB-6DBF-4233-AEEA-B72FC6A81FE1
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/25/2017
-ms.openlocfilehash: a1dbff32b113bd1c3a6b2058a34c73977c59c9e5
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: baa60d177a7d7d070a218108b2f6779eeaf94f78
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="how-xamarinmac-works"></a>Cómo funciona Xamarin.Mac
 

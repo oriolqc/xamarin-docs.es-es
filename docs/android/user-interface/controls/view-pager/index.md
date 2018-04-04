@@ -1,18 +1,17 @@
 ---
 title: ViewPager
-description: "ViewPager es un administrador de diseño que le permite implementar la navegación gestural. Navegación gestural permite al usuario deslice el dedo izquierdo y derecho con el paso a través de páginas de datos. Esta guía explica cómo implementar la navegación gestural con ViewPager, con y sin fragmentos. También describe cómo agregar indicadores de página usando PagerTitleStrip y PagerTabStrip."
-ms.topic: article
+description: ViewPager es un administrador de diseño que le permite implementar la navegación gestural. Navegación gestural permite al usuario deslice el dedo izquierdo y derecho con el paso a través de páginas de datos. Esta guía explica cómo implementar la navegación gestural con ViewPager, con y sin fragmentos. También describe cómo agregar indicadores de página usando PagerTitleStrip y PagerTabStrip.
 ms.prod: xamarin
 ms.assetid: D42896C0-DE7C-4818-B171-CB2D5E5DD46A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 5e2f93eea970a15df03b00cc962ca7482624973d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bd687175048bb6a19dde21e66619667511a76796
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="viewpager"></a>ViewPager
 

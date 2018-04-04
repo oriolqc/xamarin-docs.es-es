@@ -1,18 +1,17 @@
 ---
-title: "Trabajar con tablas en el Diseñador de iOS"
-description: "En las secciones anteriores se han examinado desarrollar con tablas. En este caso, la quinta y última sección, se le agregar lo que hemos hemos visto hasta ahora y crear una aplicación básica de lista de tareas con un guión gráfico."
-ms.topic: article
+title: Trabajar con tablas en el Diseñador de iOS
+description: En las secciones anteriores se han examinado desarrollar con tablas. En este caso, la quinta y última sección, se le agregar lo que hemos hemos visto hasta ahora y crear una aplicación básica de lista de tareas con un guión gráfico.
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: e46038b21327fe8847d2c04ee1ba16960f6a059b
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 869719b1d3514fee4b45f61dcdb34a0bcf54f7b2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Trabajar con tablas en el Diseñador de iOS
 
@@ -115,7 +114,7 @@ A continuación, deberá crear un botón que agregará nuevas tareas, como se mu
 Haga lo siguiente: 
 
 -  Arrastre un **elemento de botón de barra de** desde el cuadro de herramientas hasta la _lado derecho de la barra de navegación_.
--  En el **panel de propiedades**, en **elemento de botón de barra de** seleccione **identificador: agregar** (para que sea un  *+*  además de botón). 
+-  En el **panel de propiedades**, en **elemento de botón de barra de** seleccione **identificador: agregar** (para que sea un *+* además de botón). 
 -  Asígnele un nombre para que se puedan identificar en el código en una fase posterior. Tenga en cuenta que debe proporcionar el controlador de vista de la raíz de un nombre de clase (por ejemplo **ItemViewController**) para que pueda establecer el nombre del elemento de botón de barra.
 
 

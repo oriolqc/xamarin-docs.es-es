@@ -1,17 +1,16 @@
 ---
 title: Empaquetar aplicaciones de uso
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/02/2018
-ms.openlocfilehash: a3eb5cd5b4202db8c58870c2b2c679b47f79d4aa
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: af96c0f8cf862b7a208beb5b91ecbb30598b09d9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="packaging-wear-apps"></a>Empaquetar aplicaciones de uso
 

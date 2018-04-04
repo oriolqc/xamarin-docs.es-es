@@ -1,18 +1,17 @@
 ---
 title: Trabajar con tablas y las celdas
 description: Mostrar datos con UITableView Xamarin.iOS
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/06/2016
-ms.openlocfilehash: f6abcaa3a771954785df83e80c7e46dd200e6986
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1cda3632a75c7e462e763a34fdb5b586237b670
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-tables-and-cells"></a>Trabajar con tablas y las celdas
 
@@ -33,9 +32,9 @@ Estos artículos tendrá una información completa sobre trabajar con tablas, in
 
  [Tabla partes &amp; funcionalidad](~/ios/user-interface/controls/tables/table-parts-and-functionality.md)
 
- [Rellenar una tabla con datos](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)
+ [Relleno de una tabla con datos](~/ios/user-interface/controls/tables/populating-a-table-with-data.md)
 
- [Personalizar la apariencia de una tabla](~/ios/user-interface/controls/tables/customizing-table-appearance.md)
+ [Personalización de la apariencia de una tabla](~/ios/user-interface/controls/tables/customizing-table-appearance.md)
 
  [Edición](~/ios/user-interface/controls/tables/editing.md)
  
@@ -43,7 +42,7 @@ Estos artículos tendrá una información completa sobre trabajar con tablas, in
 
  [Crear tablas en un guión gráfico.](~/ios/user-interface/controls/tables/creating-tables-in-a-storyboard.md)
  
- [Alto de fila de tamaño automático](~/ios/user-interface/controls/tables/autosizing-row-height.md)
+ [Ajuste del tamaño automático de la altura de la fila](~/ios/user-interface/controls/tables/autosizing-row-height.md)
 
 
 ## <a name="related-links"></a>Vínculos relacionados

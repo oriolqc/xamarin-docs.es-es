@@ -1,18 +1,17 @@
 ---
-title: "Imágenes e iconos"
-description: "Esta sección incluye una serie de artículos que tratan trabajar con imágenes en una aplicación Xamarin.iOS, como el uso de ellos como iconos, abrir pantallas o incluyendo ellos en proporcionar iconos para tipos de documento personalizadas y los controles."
-ms.topic: article
+title: Imágenes e iconos
+description: Esta sección incluye una serie de artículos que tratan trabajar con imágenes en una aplicación Xamarin.iOS, como el uso de ellos como iconos, abrir pantallas o incluyendo ellos en proporcionar iconos para tipos de documento personalizadas y los controles.
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 904ba5db84101651d10605fadf8e8861db0ddc1f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fd191c898d5bb015d2d394d42db1049bb0128fb7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="images-and-icons"></a>Imágenes e iconos
 
@@ -34,7 +33,7 @@ Hay varias maneras de esa imagen activos se utilizan dentro de una aplicación d
 Hay varias consideraciones que deben tenerse en cuenta al crear activos de imagen de una aplicación de iOS, así como varios lugares donde se usará esos recursos. Cada uno de ellos tiene un efecto no solo en el número de activos de imagen será necesarios, sino cómo se crean esos recursos. Los siguientes temas describen los tipos de recursos de imágenes que será necesarios, cómo esos recursos se incluyen en el paquete de la aplicación y cómo se usan los activos de imagen para proporcionar la funcionalidad necesaria:
 
 
-## <a name="displaying-an-imageiosapp-fundamentalsimages-iconsdisplaying-an-imagemd"></a>[Mostrar una imagen](~/ios/app-fundamentals/images-icons/displaying-an-image.md)
+## <a name="displaying-an-imageiosapp-fundamentalsimages-iconsdisplaying-an-imagemd"></a>[Visualización de una imagen](~/ios/app-fundamentals/images-icons/displaying-an-image.md)
 
 Este artículo se tratan incluido un recurso de imagen en una aplicación de Xamarin.iOS y mostrar esa imagen mediante el uso de código de C# o mediante la asignación a un control en el Diseñador de iOS.
 
@@ -42,7 +41,7 @@ Este artículo se tratan incluido un recurso de imagen en una aplicación de Xam
 
 Esta artículo cubre incluidos y administrar un recurso de imagen en una aplicación Xamarin.iOS para usarse como un icono de la aplicación.
 
-## <a name="alternate-app-iconsiosapp-fundamentalsimages-iconsalternate-app-iconsmd"></a>[Iconos de aplicación alternativo](~/ios/app-fundamentals/images-icons/alternate-app-icons.md)
+## <a name="alternate-app-iconsiosapp-fundamentalsimages-iconsalternate-app-iconsmd"></a>[Iconos de aplicación alternativos](~/ios/app-fundamentals/images-icons/alternate-app-icons.md)
 
 Apple ha agregado varias mejoras para iOS 10.3 que permiten a una aplicación administrar su icono:
 
@@ -52,11 +51,11 @@ Apple ha agregado varias mejoras para iOS 10.3 que permiten a una aplicación ad
  - `SetAlternameIconName` : Utilice este método para cambiar el icono de la aplicación al icono alternativo determinado.
 
 
-## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[Abrir pantallas](~/ios/app-fundamentals/images-icons/launch-screens.md)
+## <a name="launch-screensiosapp-fundamentalsimages-iconslaunch-screensmd"></a>[Pantallas de inicio](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 Este artículo incluye el uso de un tipo especial de guión gráfico para proporcionar una pantalla de inicio universal para cada tamaño de dispositivo de iOS y la resolución.
 
-## <a name="custom-document-typesiosapp-fundamentalsimages-iconscustom-document-typesmd"></a>[Tipos de documento personalizadas](~/ios/app-fundamentals/images-icons/custom-document-types.md)
+## <a name="custom-document-typesiosapp-fundamentalsimages-iconscustom-document-typesmd"></a>[Tipos de documentos personalizados](~/ios/app-fundamentals/images-icons/custom-document-types.md)
 
 Esta artículo cubre incluidos y administrar un recurso de imagen en una aplicación Xamarin.iOS para usarse como un icono de tipo de documento personalizado.
 
@@ -65,5 +64,5 @@ Esta artículo cubre incluidos y administrar un recurso de imagen en una aplicac
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Trabajar con imágenes (ejemplo)](https://developer.xamarin.com/samples/WorkingWithImages/)
-- [Hola, iPhone](~/ios/get-started/hello-ios/index.md)
+- [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
 - [Icono personalizado y directrices para la creación de imágenes](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

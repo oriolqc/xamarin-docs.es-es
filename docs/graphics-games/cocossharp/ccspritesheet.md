@@ -1,18 +1,17 @@
 ---
 title: Mejorar la velocidad de fotogramas con CCSpriteSheet
 description: CCSpriteSheet proporciona funcionalidad para combinar y utilizar muchos archivos de imagen en una textura. Reducir el recuento de textura puede mejorar los tiempos de carga de un juego y velocidad de fotogramas.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A1334030-750C-4C60-8B84-1A8A54B0D00E
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 7e2bb5b98b5c93fb625ce645692d8a3ccb3d143b
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 9487ddf5ccdb1d0caf820b10446eaff0f80a97ed
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="improving-frame-rate-with-ccspritesheet"></a>Mejorar la velocidad de fotogramas con CCSpriteSheet
 

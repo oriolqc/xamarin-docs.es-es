@@ -1,28 +1,27 @@
 ---
-title: "Características de la plataforma"
-description: "Conceptos y características de la aplicación multiplataforma."
-ms.topic: article
+title: Características de la plataforma
+description: Conceptos y características de la aplicación multiplataforma.
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: 26b33b1fbf546f734e6661380f63b574cccbcae5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1699c8bde336c040253a5560a2979de8b3fabf5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="platform-features"></a>Características de la plataforma
 
 Esta sección contiene los documentos que explican algunos conceptos y características más avanzadas de aplicación multiplataforma.
 
-##  <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Introducción al soporte técnico de Async](~/cross-platform/platform/async.md)
+##  <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Información general sobre la compatibilidad con Async](~/cross-platform/platform/async.md)
 
 Versión 5 de C# introdujo dos nuevas palabras clave para expresar las operaciones asincrónicas: async y await. Estas palabras clave le permiten escribir código simple que utiliza la biblioteca TPL para ejecutar las operaciones de larga duración (por ejemplo, el acceso a la red) en otro subproceso y obtener acceso fácilmente a los resultados de la finalización. Las versiones más recientes de Xamarin.iOS y Xamarin.Android admiten async y await: este documento proporciona explicaciones y un ejemplo de cómo usar la nueva sintaxis con Xamarin.
 
-## <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Características del lenguaje 6 C#](~/cross-platform/platform/csharp-six.md)
+## <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Características del lenguaje C# 6](~/cross-platform/platform/csharp-six.md)
 
 La versión más reciente del lenguaje de C#, versión 6, continúa evolucionando el idioma para que tenga menos reutilizable, mejorar la claridad y coherencia más. Sintaxis de inicialización de limpieza y la posibilidad de usar `await` en `catch/finally` bloques y el condicional null `?` operador son especialmente útiles.
 

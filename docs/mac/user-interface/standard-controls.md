@@ -1,18 +1,17 @@
 ---
-title: "Controles estándar"
-description: "En este artículo se explica cómo trabajar con los controles de AppKit estándar, como botones, etiquetas, campos de texto, casillas de verificación y segmentada controles en una aplicación Xamarin.Mac. Describe los agrega a una interfaz con el generador de interfaz e interactuar con ellos en el código."
-ms.topic: article
+title: Controles estándar
+description: En este artículo se explica cómo trabajar con los controles de AppKit estándar, como botones, etiquetas, campos de texto, casillas de verificación y segmentada controles en una aplicación Xamarin.Mac. Describe los agrega a una interfaz con el generador de interfaz e interactuar con ellos en el código.
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e887026b4f87d2e1bf8c7647a7845765ce8b886c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 3fe155508b60cbe502c3beca58426528d6f49c9d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="standard-controls"></a>Controles estándar
 

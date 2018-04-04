@@ -1,18 +1,17 @@
 ---
-title: "Seleccionar una foto de la biblioteca de imágenes"
-description: "Usar DependencyService para elegir una foto de la biblioteca de imágenes del teléfono"
-ms.topic: article
+title: Seleccionar una foto de la biblioteca de imágenes
+description: Usar DependencyService para elegir una foto de la biblioteca de imágenes del teléfono
 ms.prod: xamarin
 ms.assetid: 4F51B0E7-6A63-403C-B488-500CCBCE75DD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: db7f5058983195c0dcea9505f5adcd0fd03f905d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5b4e3ab12a74b0f70866dc9f41593bfd5bcec0e8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Seleccionar una foto de la biblioteca de imágenes
 

@@ -1,18 +1,17 @@
 ---
-title: "Características de Bean jalea"
-description: "Este documento proporciona una introducción de alto nivel de las nuevas características para a los desarrolladores que se introdujeron en Android 4.1. Estas características incluyen: mejorado notificaciones, las actualizaciones de carretera Android para compartir archivos de gran tamaño, las actualizaciones de detección de redes de multimedia, peer-to-peer, animaciones, nuevos permisos."
-ms.topic: article
+title: Características de Bean jalea
+description: 'Este documento proporciona una introducción de alto nivel de las nuevas características para a los desarrolladores que se introdujeron en Android 4.1. Estas características incluyen: mejorado notificaciones, las actualizaciones de carretera Android para compartir archivos de gran tamaño, las actualizaciones de detección de redes de multimedia, peer-to-peer, animaciones, nuevos permisos.'
 ms.prod: xamarin
 ms.assetid: 23F57634-2EF9-5C15-C710-B3E19A5AF7E1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 136484644779ac40e661f50ff19cf15884c864c2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1d8068ccfc8d0f159a88704370261ec5f20d8b7c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="jelly-bean-features"></a>Características de Bean jalea
 

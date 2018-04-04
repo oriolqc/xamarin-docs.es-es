@@ -1,18 +1,17 @@
 ---
 title: Registrador de Xamarin.Mac
-description: "Este documento describe el propósito del registrador de Xamarin.Mac y sus configuraciones de uso distintos."
-ms.topic: article
+description: Este documento describe el propósito del registrador de Xamarin.Mac y sus configuraciones de uso distintos.
 ms.prod: xamarin
 ms.assetid: 7CAAA6B7-D654-4AD3-BAEC-9DD01210978A
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: 8d5061850a4cb73a81e1bf4c93583eb5b6eeefec
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 4b70ac2271b23b54e7942fdc870e0f49548e6154
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinmac-registrar"></a>Registrador de Xamarin.Mac
 

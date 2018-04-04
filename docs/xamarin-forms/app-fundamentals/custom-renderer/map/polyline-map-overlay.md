@@ -1,18 +1,17 @@
 ---
 title: Resaltado de una ruta en un mapa
-description: "Este artículo explica cómo agregar una superposición de la polilínea en un mapa. Una superposición de polilínea es una serie de segmentos de línea conectados que se utiliza normalmente para mostrar una ruta en un mapa o crear cualquier forma que se necesita."
-ms.topic: article
+description: Este artículo explica cómo agregar una superposición de la polilínea en un mapa. Una superposición de polilínea es una serie de segmentos de línea conectados que se utiliza normalmente para mostrar una ruta en un mapa o crear cualquier forma que se necesita.
 ms.prod: xamarin
 ms.assetid: FBFDC715-1654-4188-82A0-FC522548BCFF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: c7becef16009596148b4de28e4e8f6892cb44fe1
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: f781a472a63d97c8859aff36b28e0fd4fa0c7756
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="highlighting-a-route-on-a-map"></a>Resaltado de una ruta en un mapa
 
@@ -31,7 +30,7 @@ Cuando un [ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Ma
 1. [Personalizar](#Customizing_the_Map) la asignación mediante la creación de un representador personalizado para la asignación en cada plataforma.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) debe inicializarse y configurado antes de su uso. Para obtener más información, consulte [ `Maps Control` ](~/xamarin-forms/user-interface/map.md).
+> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) debe inicializarse y configurado antes de su uso. Para obtener más información, vea [`Maps Control`](~/xamarin-forms/user-interface/map.md).
 
 Para obtener información acerca de cómo personalizar un mapa con un representador personalizado, consulte [personalizar un Pin de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 
@@ -303,5 +302,5 @@ Este artículo explica cómo agregar una superposición de la polilínea en un m
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Polilínea mapa Ovlerlay (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polyline/)
-- [Personalizar un Pin de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
+- [Personalización de un anclado de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/)

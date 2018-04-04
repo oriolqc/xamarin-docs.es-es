@@ -1,16 +1,15 @@
 ---
-title: "Información general sobre la arquitectura"
-ms.topic: article
+title: Información general sobre la arquitectura
 ms.prod: xamarin
 ms.assetid: 6C0226BE-A0C4-4108-B482-0A903696AB04
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: e30a3ceda01969197b339703231e6218d102df0d
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 04ed545955b10ed95a15ac0820e4a99b697e0c3e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="architecture-overview"></a>Información general sobre la arquitectura
 

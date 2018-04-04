@@ -1,18 +1,17 @@
 ---
 title: Complementos
-description: "Agregar fácilmente la funcionalidad nativa a las aplicaciones de Xamarin.Forms"
-ms.topic: article
+description: Agregar fácilmente la funcionalidad nativa a las aplicaciones de Xamarin.Forms
 ms.prod: xamarin
 ms.assetid: 8A06A420-A9D0-4BCB-B9AF-3AEA6A648A8B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2016
-ms.openlocfilehash: ad338e655c1aeb475122c837ca5c805e491f84bc
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 5770d13c46998872752820b7a0cbb222a04c3ff8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="plugins"></a>Complementos
 
@@ -35,7 +34,7 @@ También es posible crear y publicar sus propios complementos como paquetes de N
 
 Por ejemplo, la lista de complementos siguiente es todo el código fuente abierto y corresponden a los ejemplos disponibles en la [ `DependencyService` ](~/xamarin-forms/app-fundamentals/dependency-service/index.md) sección:
 
-- **Texto a voz** por James Montemagno &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/TextToSpeech) y [NuGet  ](https://www.nuget.org/packages/Xam.Plugin.Battery)
+- **Texto a voz** por James Montemagno &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/TextToSpeech) y [NuGet](https://www.nuget.org/packages/Xam.Plugin.Battery)
 - **Estado de la batería** por James Montemagno &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery) y [NuGet](https://www.nuget.org/packages/Xam.Plugins.TextToSpeech/)
 
 Los proyectos de Github pueden proporcionar un buen punto de partida para crear sus propios complementos multiplataforma, como seguir estas instrucciones para [crear un complemento para Xamarin](https://github.com/xamarin/plugins#create-a-plugin-for-xamarin).

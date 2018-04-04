@@ -1,18 +1,17 @@
 ---
 title: Bibliotecas de Mac de enlace
-description: "Se vincula guía con otros documentos que describen cómo crear enlaces para librariesl Objective-c."
-ms.topic: article
+description: Se vincula guía con otros documentos que describen cómo crear enlaces para librariesl Objective-c.
 ms.prod: xamarin
 ms.assetid: 521707CD-79D3-488A-84CB-A37EBF93AC94
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/13/2017
-ms.openlocfilehash: 918c02542ee861b44411c29b01510a92659dee42
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c70a34acbdac6339a96000a2f987d4ac4f3d6a45
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-mac-libraries"></a>Bibliotecas de Mac de enlace
 
@@ -27,7 +26,7 @@ Siga estos vínculos para obtener información sobre las bibliotecas de Objectiv
   describe todos los atributos disponibles para los autores de enlaces para controlar el proceso de generación de enlace.
 
 
-<a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Sharpie objetivo](~/cross-platform/macios/binding/objective-sharpie/index.md)
+<a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 -------------------
 
 Sharpie objetivo es una herramienta de línea de comandos para ayudar a arrancar el primer paso de un enlace.
@@ -41,5 +40,5 @@ Hacer referencia a la [ejemplo XMBindingExample Mac](https://github.com/xamarin/
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Enlace Objective-c.](~/cross-platform/macios/binding/index.md)
+- [Enlace de Objective-C](~/cross-platform/macios/binding/index.md)
 - [Bibliotecas de iOS de enlace](~/ios/platform/binding-objective-c/index.md)

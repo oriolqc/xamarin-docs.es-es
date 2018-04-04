@@ -1,18 +1,17 @@
 ---
 title: Extensiones de marcado XAML
-description: "Ampliar la variedad de orígenes de qué XAML se establecen atributos"
-ms.topic: article
+description: Ampliar la variedad de orígenes de qué XAML se establecen atributos
 ms.prod: xamarin
 ms.assetid: EB06C8B7-3FD5-47B7-A09C-A13063BD110F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 11889115b65608c750690c33052a9c86f7081e25
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b81bc4b31edd1d8b8f5f43f97885c38e889dd32c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xaml-markup-extensions"></a>Extensiones de marcado XAML
 
@@ -46,11 +45,11 @@ Cualquier valor de atributo entre llaves es *siempre* una extensión de marcado 
 
 En este artículo se divide en dos partes:
 
-## <a name="consuming-xaml-markup-extensionsconsumingmd"></a>[Consumir las extensiones de marcado XAML](consuming.md)  
+## <a name="consuming-xaml-markup-extensionsconsumingmd"></a>[Consumo de extensiones de marcado XAML](consuming.md)  
 
 Usar las extensiones de marcado XAML definidas en Xamarin.Forms.
 
-## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Crear extensiones de marcado XAML](creating.md) 
+## <a name="creating-xaml-markup-extensionscreatingmd"></a>[Creación de extensiones de marcado XAML](creating.md) 
 
 Escribir sus propias extensiones de marcado XAML personalizados.
 

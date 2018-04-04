@@ -1,18 +1,17 @@
 ---
-title: "Implementación en la tienda de aplicaciones"
-description: "Implementación de aplicaciones de inspección en la tienda de aplicaciones"
-ms.topic: article
+title: Implementación en la tienda de aplicaciones
+description: Implementación de aplicaciones de inspección en la tienda de aplicaciones
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: c5b89570fdd3df80d39c6621fcd12a23babed9ee
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a3c68a0720fbe18f35731cf1a19248c00f748877
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deploying-to-the-app-store"></a>Implementación en la tienda de aplicaciones
 
@@ -177,7 +176,7 @@ is missing icon with name pattern '*44x44@2x.png' (Home Screen 42mm).
 Asegúrese de tener la versión más reciente de Visual Studio para Mac y que su **AppIcons.appiconset** contiene un conjunto completo de imágenes. Si todavía aparece este error, vea el código fuente de la **Contents.json** para confirmar contiene una entrada para todas las imágenes necesarias. O bien, una vez que se ha asegurado de que está utilizando la versión más reciente de Xamarin, eliminar y volver a crear la **AppIcons.appiconset**.
 
 > [!IMPORTANT]
-> Hay un problema conocido en Visual Studio para la compatibilidad con icono de inspección de Mac: espera una imagen 88 x 88 píxeles para el  **29x29@3x**  imagen (que debe ser 87 x 87 píxeles).
+> Hay un problema conocido en Visual Studio para la compatibilidad con icono de inspección de Mac: espera una imagen 88 x 88 píxeles para el **29x29@3x** imagen (que debe ser 87 x 87 píxeles).
 
 
 No se puede solucionar este problema en Visual Studio para Mac: modificar el recurso de imagen en Xcode o editar manualmente el **Contents.json** archivo (para que coincida con [este ejemplo](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).

@@ -1,18 +1,17 @@
 ---
 title: Recursos de Android
-description: "Este artículo presenta el concepto de recursos Android en Xamarin.Android e indicarán cómo utilizarlas. Se describe cómo usar los recursos en la aplicación Android para admitir varios dispositivos, incluidos las densidades y diferentes tamaños de pantalla y localización de la aplicación."
-ms.topic: article
+description: Este artículo presenta el concepto de recursos Android en Xamarin.Android e indicarán cómo utilizarlas. Se describe cómo usar los recursos en la aplicación Android para admitir varios dispositivos, incluidos las densidades y diferentes tamaños de pantalla y localización de la aplicación.
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: 6546870d85f7b77e60dff0cb9e6075f982c9cb8e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 7b6ba9cdc222019bfa2e1cb9a61b54e290e69bba
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-resources"></a>Recursos de Android
 

@@ -1,18 +1,17 @@
 ---
-title: "Agregar un reconocedor de movimiento panorámico"
-description: "El movimiento panorámico se utiliza para detectar arrastrando y se implementa con la clase PanGestureRecognizer. Un escenario común para el movimiento panorámico es horizontal y verticalmente, arrastre una imagen, por lo que todo el contenido de la imagen puede verse cuando se está mostrando en una ventanilla menor que las dimensiones de la imagen. Esto se logra moviendo la imagen dentro de la ventanilla y se muestra en este artículo."
-ms.topic: article
+title: Agregar un reconocedor de movimiento panorámico
+description: El movimiento panorámico se utiliza para detectar arrastrando y se implementa con la clase PanGestureRecognizer. Un escenario común para el movimiento panorámico es horizontal y verticalmente, arrastre una imagen, por lo que todo el contenido de la imagen puede verse cuando se está mostrando en una ventanilla menor que las dimensiones de la imagen. Esto se logra moviendo la imagen dentro de la ventanilla y se muestra en este artículo.
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 4da42a92c83dcc1ec0b0ba2528de672e3fcf3be3
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ed38f7ace9e11b009aae768cda2d4af0f36c337e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="adding-a-pan-gesture-recognizer"></a>Agregar un reconocedor de movimiento panorámico
 

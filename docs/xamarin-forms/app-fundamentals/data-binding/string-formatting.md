@@ -1,18 +1,17 @@
 ---
 title: Formato de cadena
 description: Usar enlaces de datos para dar formato y mostrar objetos como cadenas
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 6735e9c03bee981f048231b53539c3b239f64484
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4e143f650c3cde7577def1a95e53b207608a088a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="string-formatting"></a>Formato de cadena
 

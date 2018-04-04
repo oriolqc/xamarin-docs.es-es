@@ -1,18 +1,17 @@
 ---
 title: Personalizar una entrada
-description: "El control de entrada de Xamarin.Forms permite una sola línea de texto que se pueda editar. Este artículo demuestra cómo crear a un representador personalizado para el control de entrada, permitiendo a los programadores reemplazar el procesamiento nativo de forma predeterminada con su propios personalización específica de la plataforma."
-ms.topic: article
+description: El control de entrada de Xamarin.Forms permite una sola línea de texto que se pueda editar. Este artículo demuestra cómo crear a un representador personalizado para el control de entrada, permitiendo a los programadores reemplazar el procesamiento nativo de forma predeterminada con su propios personalización específica de la plataforma.
 ms.prod: xamarin
 ms.assetid: 7B5DD10D-0411-424F-88D8-8A474DF16D8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 0fe7aa2316abaae33da753e99a6f2eca4870d2d0
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 1e8ef47ceb381a0e4e163aaa24795d46264195da
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="customizing-an-entry"></a>Personalizar una entrada
 

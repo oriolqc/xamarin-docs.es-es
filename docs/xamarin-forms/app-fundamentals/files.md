@@ -1,18 +1,17 @@
 ---
 title: Archivos
 description: Archivo de control con Xamarin.Forms puede realizarse mediante los recursos insertados o escribir en el sistema de archivos nativo APIs.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/22/2017
-ms.openlocfilehash: c6d10025ccc038ba160fe3c09f6ce92e97d916d2
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 8315f1a0056c6a6f084ebfe2c29f0c0c2bb30330
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="files"></a>Archivos
 

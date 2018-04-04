@@ -1,18 +1,17 @@
 ---
-title: "Notificaciones remotas con Firebase de mensajería en la nube"
-description: "Este tutorial proporciona una explicación paso a paso sobre cómo usar la mensajería de nube de Firebase para implementar notificaciones remotas (también denominadas notificaciones de inserción) en una aplicación Xamarin.Android. Muestra cómo implementar las diferentes clases que son necesarios para las comunicaciones con Firebase en la nube de mensajería (FCM), se proporcionan ejemplos de cómo configurar el manifiesto de Android para tener acceso a FCM y muestra la mensajería de nivel inferior mediante el Firebase Consola."
-ms.topic: article
+title: Notificaciones remotas con Firebase de mensajería en la nube
+description: Este tutorial proporciona una explicación paso a paso sobre cómo usar la mensajería de nube de Firebase para implementar notificaciones remotas (también denominadas notificaciones de inserción) en una aplicación Xamarin.Android. Muestra cómo implementar las diferentes clases que son necesarios para las comunicaciones con Firebase en la nube de mensajería (FCM), se proporcionan ejemplos de cómo configurar el manifiesto de Android para tener acceso a FCM y muestra la mensajería de nivel inferior mediante el Firebase Consola.
 ms.prod: xamarin
 ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 7e107fc9ced62027bc793c97a388344d74becd66
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c6e1d36d871b4bb41a1e53d6e58ba8940813b29f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="remote-notifications-with-firebase-cloud-messaging"></a>Notificaciones remotas con Firebase de mensajería en la nube
 

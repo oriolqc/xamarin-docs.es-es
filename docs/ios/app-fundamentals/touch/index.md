@@ -1,18 +1,17 @@
 ---
-title: "Entrada táctil"
-description: "Pantallas táctiles en muchos de los dispositivos actuales permiten a los usuarios interactuar rápida y eficaz con dispositivos de forma natural e intuitiva. Esta interacción no se limita solo a la detección simple toque: es posible usar los movimientos así. Por ejemplo, el movimiento de gesto de acercamiento es un ejemplo muy común de esto: empujando una parte de la pantalla con dos dedos que el usuario puede acercar o alejar. Esta guía examina táctiles y los gestos de iOS."
-ms.topic: article
+title: Entrada táctil
+description: 'Pantallas táctiles en muchos de los dispositivos actuales permiten a los usuarios interactuar rápida y eficaz con dispositivos de forma natural e intuitiva. Esta interacción no se limita solo a la detección simple toque: es posible usar los movimientos así. Por ejemplo, el movimiento de gesto de acercamiento es un ejemplo muy común de esto: empujando una parte de la pantalla con dos dedos que el usuario puede acercar o alejar. Esta guía examina táctiles y los gestos de iOS.'
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/23/2017
-ms.openlocfilehash: b0e1cf8b1cb18982fe319fef7c524aeb70be4a9b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f34b502e3c0d67f33d41bc489f7ec1d93356af99
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="touch"></a>Entrada táctil
 

@@ -1,18 +1,17 @@
 ---
-title: "Parte 4. Conceptos básicos del enlace de datos"
-description: "Enlaces de datos permiten propiedades de los dos objetos para vincularse para que un cambio en uno hace un cambio en la otra. Se trata de una herramienta muy valiosa y mientras completamente en código, se pueden definir los enlaces de datos, XAML proporciona accesos directos y la comodidad. Por lo tanto, una de las extensiones de marcado más importantes de Xamarin.Forms enlaza."
-ms.topic: article
+title: Parte 4. Conceptos básicos del enlace de datos
+description: Enlaces de datos permiten propiedades de los dos objetos para vincularse para que un cambio en uno hace un cambio en la otra. Se trata de una herramienta muy valiosa y mientras completamente en código, se pueden definir los enlaces de datos, XAML proporciona accesos directos y la comodidad. Por lo tanto, una de las extensiones de marcado más importantes de Xamarin.Forms enlaza.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: dbbbe051aab065a5b71905459f577fcacefd8bc5
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2aa6fd2f54c09921621a12af9401a6f84ae37ffa
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Conceptos básicos del enlace de datos
 

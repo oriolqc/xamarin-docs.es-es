@@ -1,18 +1,17 @@
 ---
-title: "Introducción a iOS 9"
-description: "Este artículo detallan todas las características disponibles en iOS 9 y las API nuevas y modificadas para desarrolladores de Xamarin.iOS."
-ms.topic: article
+title: Introducción a iOS 9
+description: Este artículo detallan todas las características disponibles en iOS 9 y las API nuevas y modificadas para desarrolladores de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5b26989603695cfb309fba5a5318f7ef4d2460e2
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 10ed9154b92e6f13dd71f83cf4fed47585dc795f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-9"></a>Introducción a iOS 9
 
@@ -212,7 +211,7 @@ Consulte también las partes de iOS de estos ejemplos (Asistente para Mac OS X v
 
 - [Ejemplos de iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
 - [Introducción a la entrada táctil 3D](~/ios/platform/3d-touch.md)
-- [Seguridad de transporte de la aplicación](~/ios/app-fundamentals/ats.md)
+- [Seguridad de transporte de aplicación](~/ios/app-fundamentals/ats.md)
 - [Multitarea para iPad](~/ios/platform/multitasking.md)
 - [Contactos y contactos de interfaz de usuario](~/ios/platform/contacts.md)
 - [Nuevas API de búsqueda](~/ios/platform/search/index.md)
@@ -221,7 +220,7 @@ Consulte también las partes de iOS de estos ejemplos (Asistente para Mac OS X v
 - [Mejoras de juegos](~/ios/platform/gaming/index.md)
 - [Introducción a HomeKit](~/ios/platform/homekit.md)
 - [Introducción a la entrega](~/ios/platform/handoff.md)
-- [Cambios de Framework adicionales iOS 9](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
+- [Cambios adicionales en la plataforma iOS 9](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
 - [Solución de problemas](~/ios/platform/introduction-to-ios9/troubleshooting.md)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
 - [What's New en iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

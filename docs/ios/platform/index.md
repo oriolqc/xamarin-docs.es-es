@@ -1,18 +1,17 @@
 ---
-title: "Características de la plataforma"
-description: "Documentos de esta sección tratan características específicas de iOS."
-ms.topic: article
+title: Características de la plataforma
+description: Documentos de esta sección tratan características específicas de iOS.
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/15/2017
-ms.openlocfilehash: 88ddd7c74fd800c71e63c03f6a8492ecfcc28f9f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 0a76ed52f52de144bb3da1e7be6e215ce0dfe0ab
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="platform-features"></a>Características de la plataforma
 
@@ -47,7 +46,7 @@ Explicaciones de las características introducidas en iOS 6, incluidas las vista
 
 Apple Pay se introdujo junto con iOS 8, permitiendo a los usuarios pagar por mercancías físicas, como la comida, entretenimiento y pertenencias a grupos a través de sus dispositivos iOS. Está disponible en iPhone 6 e iPhone 6 Plus y también se pueden emparejar con la de Apple Watch para las compras en el almacén. Cuando se utiliza en un iPhone, utiliza Touch ID como un medio para confirmar y autorizar las transacciones para de un usuario tarjeta de crédito o débito.
 
-##  <a name="3d-touchiosplatform3d-touchmd"></a>[Táctil 3D](~/ios/platform/3d-touch.md)
+##  <a name="3d-touchiosplatform3d-touchmd"></a>[Entrada táctil 3D](~/ios/platform/3d-touch.md)
 
 En este artículo le proporcionará e Introducción al uso de las nuevas API 3D Touch para agregar gestos confidenciales de presión a las aplicaciones de Xamarin.iOS que se ejecutan en el nuevo iPhone 6s y iPhone 6s Plus dispositivos.
 
@@ -55,11 +54,11 @@ En este artículo le proporcionará e Introducción al uso de las nuevas API 3D 
 
 La nueva API de CallKit en iOS 10 proporciona una manera para las aplicaciones VOIP para integrarse con la interfaz de usuario de iPhone y proporcionar una interfaz conocida y experiencia para el usuario final. Con esta API usuarios pueden ver e interactúa con las llamadas VOIP desde la pantalla de bloqueo del dispositivo iOS y administrar contactos mediante la aplicación de teléfono **favoritos** y **recientes** vistas.
 
-##  <a name="contacts-and-contactsuiiosplatformcontactsmd"></a>[Contactos y ContactsUI](~/ios/platform/contacts.md)
+##  <a name="contacts-and-contactsuiiosplatformcontactsmd"></a>[Contacts y ContactsUI](~/ios/platform/contacts.md)
 
 Con la introducción de iOS 9, Apple ha lanzado dos marcos nueva, `Contacts` y `ContactsUI`, que reemplace la existente libreta de direcciones y marcos de interfaz de usuario de libreta de direcciones usan por iOS 8 y versiones anteriores.
 
-##  <a name="document-pickeriosplatformdocument-pickermd"></a>[Selector de documento](~/ios/platform/document-picker.md)
+##  <a name="document-pickeriosplatformdocument-pickermd"></a>[Selector de documentos](~/ios/platform/document-picker.md)
 
 El selector de documento permite que los documentos que se comparten entre aplicaciones. Estos documentos pueden almacenarse en iCloud o en el directorio de una aplicación distinta. Los documentos se comparten a través del conjunto de [extensiones de proveedor de documento](~/ios/platform/extensions.md) el usuario ha instalado en su dispositivo.
 
@@ -87,15 +86,15 @@ Kit de mantenimiento proporciona un almacén de datos seguro para la informació
 
 Apple incorporó HomeKit en iOS 8 para proporcionar un marco común para detectar y comunicarse con dispositivos de domótica de inicio de un usuario. HomeKit proporciona una plataforma común para configurar dispositivos y configuración de acciones para controlarlos.
 
-##  <a name="in-app-purchasingiosplatformin-app-purchasingindexmd"></a>[En la aplicación de compra](~/ios/platform/in-app-purchasing/index.md)
+##  <a name="in-app-purchasingiosplatformin-app-purchasingindexmd"></a>[Compras desde la aplicación](~/ios/platform/in-app-purchasing/index.md)
 
 pueden vender aplicaciones de iOS digitales productos o servicios mediante StoreKit: un conjunto de las API proporcionadas por iOS que se comunican con servidores de Apple para realizar transacciones financieras con el usuario mediante su identificador de Apple. Las APIs StoreKit se ocupa principalmente de recuperar información de productos y llevar a cabo las transacciones: no hay ningún componente de interfaz de usuario. Las aplicaciones que implementan la compra de la aplicación deben crear su propia interfaz de usuario y realizar un seguimiento de los productos adquiridos con código personalizado para proporcionar los servicios o productos necesarios para el usuario.
 
-##  <a name="ios-gaming-apisiosplatformgamingindexmd"></a>[Juegos de API de iOS](~/ios/platform/gaming/index.md)
+##  <a name="ios-gaming-apisiosplatformgamingindexmd"></a>[API de juego de iOS](~/ios/platform/gaming/index.md)
 
 Apple ha realizado varias mejoras tecnológicas a la API de juegos en iOS 9 que resulten más fácil implementar gráficos de juegos y audio en una aplicación de Xamarin.iOS. Esto incluye la facilidad de desarrollo a través de los marcos de trabajo de alto nivel y el aprovechamiento de la potencia de GPU del dispositivo iOS para mejorar la velocidad y la capacidad de gráficos.
 
-##  <a name="message-app-integrationiosplatformmessage-app-integrationindexmd"></a>[Integración de aplicaciones de mensaje](~/ios/platform/message-app-integration/index.md)
+##  <a name="message-app-integrationiosplatformmessage-app-integrationindexmd"></a>[Integración de aplicaciones de mensajes](~/ios/platform/message-app-integration/index.md)
 
 Nuevo en 10 de iOS, una extensión de la aplicación de mensaje se integra con la **mensajes** aplicación y presenta nueva funcionalidad al usuario. La extensión puede enviar mensajes de texto, etiquetas, archivos multimedia e interactivos.
 
@@ -113,7 +112,7 @@ Este documento presenta libreta, mediante la API de Kit pasar con Xamarin.iOS y 
 
 Kit de foto es un nuevo marco que permite a las aplicaciones para la biblioteca de imágenes de sistema de consulta y crear interfaces de usuario personalizadas para ver y modificar su contenido. Incluye una serie de clases que representan la imagen y recursos de vídeo, así como las colecciones de recursos como álbumes y carpetas.
 
-##  <a name="request-app-reviewiosplatformrequest-app-reviewmd"></a>[Solicitar revisión de aplicación](~/ios/platform/request-app-review.md)
+##  <a name="request-app-reviewiosplatformrequest-app-reviewmd"></a>[Solicitud de revisión de aplicaciones](~/ios/platform/request-app-review.md)
 
 Nuevo en iOS 10.3 la `RequestReview()` método permite que una aplicación iOS pedir al usuario que calificar o revisarlo. Cuando se llama a este método en una aplicación de envío que el usuario ha instalado desde la tienda de aplicaciones, iOS 10 controlará la clasificación de toda y proceso de revisión para el programador. Dado que este proceso se rige por una directiva de almacén de la aplicación, una alerta puede o no puede mostrarse.
 
@@ -137,7 +136,7 @@ iOS 10 incluye una nueva API de voz que permite que la aplicación admitir el re
 
 Kit de texto es una nueva API que ofrece características de diseño y la representación de texto eficaz. Se basa en el marco del texto principal de nivel inferior, pero es mucho más fácil de usar que texto principal.
 
-##  <a name="touch-idiosplatformtouchidmd"></a>[Id. de entrada táctil](~/ios/platform/touchid.md)
+##  <a name="touch-idiosplatformtouchidmd"></a>[Touch ID](~/ios/platform/touchid.md)
 
 Id. de entrada táctil se introdujo en iOS 7 como un medio para autenticar al usuario - similar a un código de acceso. Sin embargo, se limitaba a desbloquear el dispositivo, uso de la tienda de aplicaciones, utilizando iTunes y autenticar sólo la cadena de claves de iCloud.
 
@@ -145,13 +144,13 @@ Id. de entrada táctil se introdujo en iOS 7 como un medio para autenticar al us
 
 Nuevo en 10, la notificación al usuario framework permite la entrega y el manejo de notificaciones locales y remotas de iOS. Con este marco de trabajo, la aplicación o extensión de la aplicación puede programar la entrega de notificaciones locales mediante la especificación de un conjunto de condiciones como la ubicación o la hora del día.
 
-##  <a name="wide-coloriosplatformwide-colormd"></a>[Color amplia](~/ios/platform/wide-color.md)
+##  <a name="wide-coloriosplatformwide-colormd"></a>[Color amplio](~/ios/platform/wide-color.md)
 
 iOS 10 y macOS Sierra mejora la compatibilidad con formatos de píxel de rango extendido y los espacios de la amplia gama de colores en todo el sistema incluidos los marcos, como los gráficos esenciales, imagen Core, sistema operativo y AVFoundation. Compatibilidad con dispositivos con pantallas de color amplia adicional se ve facilitado por proporcionar este comportamiento en toda la pila completa de gráficos.
 
 
 
-##  <a name="binding-objective-cbinding-objective-cindexmd"></a>[Enlace Objective-c.](binding-objective-c/index.md)
+##  <a name="binding-objective-cbinding-objective-cindexmd"></a>[Enlace de Objective-C](binding-objective-c/index.md)
 
 Cuando se trabaja en iOS, podría encontrar casos donde probablemente prefiera utilizar una biblioteca de C de objetivo de terceros. En estos casos, puede usar proyectos de enlace de MonoTouch para crear un enlace de C# para las bibliotecas de Objective-C nativo. El proyecto utiliza las mismas herramientas que se usan para volver a poner las API de iOS en C#. &nbsp;Este documento describe cómo enlazar las API de C de objetivo.
 
@@ -159,10 +158,10 @@ Cuando se trabaja en iOS, podría encontrar casos donde probablemente prefiera u
 
 Xamarin.iOS admite la vinculación con bibliotecas nativas de C y bibliotecas de C de objetivo. Este documento describe cómo vincular sus bibliotecas nativas de C con el proyecto de Xamarin.iOS. 
 
-## <a name="embedded-frameworksembedded-frameworksmd"></a>[Marcos de trabajo incrustados](embedded-frameworks.md)
+## <a name="embedded-frameworksembedded-frameworksmd"></a>[Plataformas admitidas](embedded-frameworks.md)
 
 Explica cómo incrustar Objective-C marcos de trabajo de usuario en aplicaciones de Xamarin.iOS.
 
-## <a name="exception-marshalingexception-marshalingmd"></a>[Cálculo de referencias de excepción](exception-marshaling.md)
+## <a name="exception-marshalingexception-marshalingmd"></a>[Serialización de excepciones](exception-marshaling.md)
 
 Describe cómo se serializan Objective-C y las excepciones administradas entre marcos nativos y administrados.

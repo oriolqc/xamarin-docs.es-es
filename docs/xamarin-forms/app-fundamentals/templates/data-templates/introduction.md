@@ -1,18 +1,17 @@
 ---
-title: "Introducción"
-description: "Plantillas de Xamarin.Forms de datos proporcionan la capacidad para definir la presentación de datos en controles que se admiten. Este artículo proporciona una introducción a las plantillas de datos, Examinar por qué son necesarios."
-ms.topic: article
+title: Introducción
+description: Plantillas de Xamarin.Forms de datos proporcionan la capacidad para definir la presentación de datos en controles que se admiten. Este artículo proporciona una introducción a las plantillas de datos, Examinar por qué son necesarios.
 ms.prod: xamarin
 ms.assetid: 4ED4ACF4-BE4A-44ED-8EAF-C03947B8663B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: e7c1a8b233538b7ad40a18e44747bef672210516
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6b71e1cb5f45a580aaf04c267028af1740cb560e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction"></a>Introducción
 
@@ -135,6 +134,6 @@ Plantillas de datos inferiores en la jerarquía de vista tienen prioridad sobre 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Aspecto de la celda](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
+- [Apariencia de etiqueta](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)
 - [Plantillas de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
 - [Plantilla de datos](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/)

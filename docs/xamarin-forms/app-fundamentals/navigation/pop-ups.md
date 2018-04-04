@@ -1,18 +1,17 @@
 ---
 title: Mostrar elementos emergentes
-description: "Xamarin.Forms ofrece dos elementos de interfaz de usuario de emergente up similar: una alerta así como una hoja de acción. Este artículo muestra cómo utilizar la hoja de alerta y la acción de las API que se va a pedir a los usuarios preguntas sencillas como guiar a los usuarios a través de tareas."
-ms.topic: article
+description: 'Xamarin.Forms ofrece dos elementos de interfaz de usuario de emergente up similar: una alerta así como una hoja de acción. Este artículo muestra cómo utilizar la hoja de alerta y la acción de las API que se va a pedir a los usuarios preguntas sencillas como guiar a los usuarios a través de tareas.'
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 87b20dfd8882bf7da58b1bd078930fb69c46a79d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 2e0a5ff433de034da0170e3aa9a19ab50ddc3cb6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="displaying-pop-ups"></a>Mostrar elementos emergentes
 

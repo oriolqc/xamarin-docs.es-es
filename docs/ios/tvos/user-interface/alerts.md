@@ -1,18 +1,17 @@
 ---
 title: Trabajar con alertas
-description: "Este artículo explica cómo trabajar con UIAlertController para mostrar un mensaje de alerta al usuario en Xamarin.tvOS."
-ms.topic: article
+description: Este artículo explica cómo trabajar con UIAlertController para mostrar un mensaje de alerta al usuario en Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 6dabba30c5242d6e7e9ef42a4025f87826a5b89e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: da4d2d952687c7e39276ca76af413b83c4519eea
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-alerts"></a>Trabajar con alertas
 

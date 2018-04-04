@@ -1,18 +1,17 @@
 ---
 title: EffectBehavior reutilizable
-description: "Los comportamientos son un enfoque útil para agregar un efecto a un control, quitar el efecto de modelo de control de código de archivos de código subyacente. Este artículo muestra cómo utilizar un comportamiento de Xamarin.Forms para agregar un efecto a un control."
-ms.topic: article
+description: Los comportamientos son un enfoque útil para agregar un efecto a un control, quitar el efecto de modelo de control de código de archivos de código subyacente. Este artículo muestra cómo utilizar un comportamiento de Xamarin.Forms para agregar un efecto a un control.
 ms.prod: xamarin
 ms.assetid: A909B24D-960A-4023-AFF6-4B9256C55ADD
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 698e2baef26a985fa40c2943cd25aefae55381f9
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a1612d1e87f0e05c859babd93fd03ac9a5736b47
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior reutilizable
 

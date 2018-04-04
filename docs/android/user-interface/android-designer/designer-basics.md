@@ -1,18 +1,17 @@
 ---
-title: "Conceptos básicos de diseñadores"
-description: "En este tema presenta las características del diseñador, se explica cómo iniciar el diseñador, describe la superficie de diseño y detalla cómo utilizar el panel de propiedades para editar las propiedades de widget."
-ms.topic: article
+title: Conceptos básicos de diseñadores
+description: En este tema presenta las características del diseñador, se explica cómo iniciar el diseñador, describe la superficie de diseño y detalla cómo utilizar el panel de propiedades para editar las propiedades de widget.
 ms.prod: xamarin
 ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: d9342dc3a8d324f03cd31e1d03600449bfcf23f1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 6bac16a8ce9859e819299689489d9aad982c1f7f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="designer-basics"></a>Conceptos básicos de diseñadores
 

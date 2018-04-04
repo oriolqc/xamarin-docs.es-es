@@ -1,18 +1,17 @@
 ---
-title: "Características de la plataforma"
-description: "Aprovechar las características específicas de la plataforma con Xamarin.Forms"
-ms.topic: article
+title: Características de la plataforma
+description: Aprovechar las características específicas de la plataforma con Xamarin.Forms
 ms.prod: xamarin
 ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: 950cc4a8611b05c22825ef89a85827fa0d3e5f7b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 454969d8a59128423d632452033b8ba84ee0bc98
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="platform-features"></a>Características de la plataforma
 
@@ -22,7 +21,7 @@ Xamarin.Forms es extensible y le permite incorporar características específica
 
 Esta guía describe cómo implementar el Material de diseño mediante la actualización de las aplicaciones existentes de Xamarin.Forms Android.
 
-## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[Indización de la aplicación y vinculación en profundidad](deep-linking.md)
+## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[Indexación de la aplicación y vinculación en profundidad](deep-linking.md)
 
 Indización de aplicación permite a las aplicaciones que de lo contrario serían olvidadas después de que algunos se usa para seguir siendo relevante que aparecen en los resultados de la búsqueda. Vinculación en profundidad permite a las aplicaciones responder a un resultado de búsqueda que contiene datos de aplicación, por lo general, vaya a una página que se hace referencia desde un vínculo profundo.
 
@@ -42,7 +41,7 @@ Xamarin.Forms tiene ahora compatibilidad con vista previa para las aplicaciones 
 
 Los formularios nativo permiten Xamarin.Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivado páginas a ser consumidos por los proyectos nativos de Xamarin.iOS y Xamarin.Android, plataforma Universal de Windows (UWP).
 
-## <a name="native-viewsnative-viewsindexmd"></a>[Vistas nativo](native-views/index.md)
+## <a name="native-viewsnative-viewsindexmd"></a>[Vistas nativas](native-views/index.md)
 
 Pueden hacer referencia directamente a las vistas nativo de la plataforma Universal de Windows, iOS y Android de Xamarin.Forms. Propiedades y los controladores de eventos se pueden establecer en vistas nativo y pueden interactuar con vistas de Xamarin.Forms.
 

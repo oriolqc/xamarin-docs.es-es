@@ -1,17 +1,17 @@
 ---
-title: "Sugerencias para la solución de problemas"
-ms.topic: article
+title: Sugerencias para la solución de problemas
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/15/2018
-ms.openlocfilehash: 015fff63c612c3acf29681b90c1e945c5e460034
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: 961f9f38687790343f225d95c74e00e98f594c28
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting-tips"></a>Sugerencias para la solución de problemas
 
@@ -200,7 +200,7 @@ Hay cuatro mensajes de consecuencia:
 -  Débil globales hacen referencia a la destrucción: estas son las líneas que empiezan por *-w-* .
 
 
-En todos los mensajes, el *grefc* valor es el recuento de referencias globales que haya creado Xamarin.Android, mientras que la *grefwc* valor es el recuento de referencias débiles de globales creados por Xamarin.Android. El *controlar* o *obj identificador* valor es el valor del identificador JNI y el carácter posterior a la '  */* ' es el tipo de valor de identificador:   */l* como referencia local, */G* para referencias globales, y */W* para referencias globales débiles.
+En todos los mensajes, el *grefc* valor es el recuento de referencias globales que haya creado Xamarin.Android, mientras que la *grefwc* valor es el recuento de referencias débiles de globales creados por Xamarin.Android. El *controlar* o *obj identificador* valor es el valor del identificador JNI y el carácter posterior a la ' */*' es el tipo de valor de identificador:   */l* como referencia local, */G* para referencias globales, y */W* para referencias globales débiles.
 
 Como parte del proceso de GC, referencias globales (+ g +) se convierten en referencias débiles de globales (causando a + w + y - g-), se ha iniciado un GC del lado de Java y, a continuación, la referencia débil global se comprueba para ver si se recopilaron. Si no mantiene la conexión, se crea un nuevo gref alrededor de la referencia débil (+ g +, -w-), en caso contrario, se destruye la referencia débil (-w).
 
@@ -270,7 +270,7 @@ Esto debería obtener activos y en funcionamiento. Si sigue teniendo problemas, 
 
 ## <a name="receiving-activation-incomplete-error-message"></a>Recibir ' mensaje de Error incompleta de activación
 
-Este problema puede producirse al usar Xamarin.Android para Visual Studio. Para resolver este problema, envíe los registros de la siguiente ubicación para  *contact@xamarin.com* .
+Este problema puede producirse al usar Xamarin.Android para Visual Studio. Para resolver este problema, envíe los registros de la siguiente ubicación para *contact@xamarin.com*.
 
 -  Ubicación del registro: **% LocalAppData %\\Xamarin\\registros**
 
@@ -301,7 +301,7 @@ Para lograr esto, averiguar la plataforma de elección a continuación y siga lo
 5. Escriba sus credenciales
 6. Compruebe si hay actualizaciones
 
-Si sigue apareciendo este mensaje de error, envíe un correo electrónico  **contact@xamarin.com** .
+Si sigue apareciendo este mensaje de error, envíe un correo electrónico **contact@xamarin.com**.
 
 
 

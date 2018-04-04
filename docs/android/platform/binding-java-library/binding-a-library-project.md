@@ -1,18 +1,17 @@
 ---
 title: Enlace de un proyecto de biblioteca de Eclipse
-description: "En este tutorial se explica cómo utilizar plantillas de proyecto Xamarin.Android para enlazar un proyecto de biblioteca de Eclipse Android."
-ms.topic: article
+description: En este tutorial se explica cómo utilizar plantillas de proyecto Xamarin.Android para enlazar un proyecto de biblioteca de Eclipse Android.
 ms.prod: xamarin
 ms.assetid: CEE90F8A-164B-4155-813A-7537A665A7E7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 7b1314c12bf97a2fa21911c747e3066858116a5f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 1c3c33f1b958aff5818b26e4408e60f449b46f41
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-an-eclipse-library-project"></a>Enlace de un proyecto de biblioteca de Eclipse
 

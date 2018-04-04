@@ -1,18 +1,17 @@
 ---
-title: "Características de círculo"
-description: "Este artículo proporciona una introducción de alto nivel de las nuevas características introducidas en Android 5.0 (círculo). Estas características incluyen un nuevo estilo de interfaz de usuario denominado Material de tema, así como nuevas características auxiliares como las animaciones, vista sombras y tintes pueden dibujar. Android 5.0 también incluye notificaciones mejoradas, dos nuevos widgets de interfaz de usuario, un nuevo programador de trabajo y una serie de nuevas API para mejorar el almacenamiento, redes, conectividad y capacidades multimedia."
-ms.topic: article
+title: Características de círculo
+description: Este artículo proporciona una introducción de alto nivel de las nuevas características introducidas en Android 5.0 (círculo). Estas características incluyen un nuevo estilo de interfaz de usuario denominado Material de tema, así como nuevas características auxiliares como las animaciones, vista sombras y tintes pueden dibujar. Android 5.0 también incluye notificaciones mejoradas, dos nuevos widgets de interfaz de usuario, un nuevo programador de trabajo y una serie de nuevas API para mejorar el almacenamiento, redes, conectividad y capacidades multimedia.
 ms.prod: xamarin
 ms.assetid: 1CE99CFE-FAAC-49FC-AEDC-1A21FC6E946E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: de6829a0a698133ad9002ead1cd7c534a30b1f6c
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: cdef611525abbe4f066959c0ac56380b1c617747
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="lollipop-features"></a>Características de círculo
 

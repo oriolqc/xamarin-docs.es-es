@@ -1,18 +1,17 @@
 ---
 title: Detalles de plataforma Android
-description: "Obtener información específica de la plataforma le permite utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar representadores personalizados o los efectos. Este artículo demuestra cómo utilizar las características de plataforma Android que se integran en Xamarin.Forms."
-ms.topic: article
+description: Obtener información específica de la plataforma le permite utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar representadores personalizados o los efectos. Este artículo demuestra cómo utilizar las características de plataforma Android que se integran en Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/17/2017
-ms.openlocfilehash: 739ee4ebeb3176d23ab1eb911baaab31a26252c4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: dfc46b5caa14c1c02d1c2afaffecc701fea59e2c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-platform-specifics"></a>Detalles de plataforma Android
 

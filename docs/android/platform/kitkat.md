@@ -1,18 +1,17 @@
 ---
-title: "Características de KitKat"
-description: "Android 4.4 (KitKat) viene equipada con gran cantidad de características para los usuarios y desarrolladores. Esta guía resalta algunas de estas características y proporciona ejemplos de código y los detalles de implementación que le ayudarán a sacar el máximo partido KitKat."
-ms.topic: article
+title: Características de KitKat
+description: Android 4.4 (KitKat) viene equipada con gran cantidad de características para los usuarios y desarrolladores. Esta guía resalta algunas de estas características y proporciona ejemplos de código y los detalles de implementación que le ayudarán a sacar el máximo partido KitKat.
 ms.prod: xamarin
 ms.assetid: D3FDEA1C-F076-406F-BCC3-2A55D2C6ADEE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 8fbb3f73fdc09f953ad5f7134020c1555d000d28
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 3c3eafc8dc18113080dd6c906025556292c43e1c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="kitkat-features"></a>Características de KitKat
 

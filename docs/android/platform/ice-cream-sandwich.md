@@ -1,18 +1,17 @@
 ---
-title: "Características de helado Sandwich"
-description: "En este artículo se describe algunas de las nuevas características disponibles para los desarrolladores de aplicaciones con la API de 4 Android - Sandwich de helado. Abarca varias tecnologías de interfaz de usuario nueva y, a continuación, examina una variedad de nuevas capacidades que ofrece Android 4 para compartir datos entre aplicaciones y dispositivos."
-ms.topic: article
+title: Características de helado Sandwich
+description: En este artículo se describe algunas de las nuevas características disponibles para los desarrolladores de aplicaciones con la API de 4 Android - Sandwich de helado. Abarca varias tecnologías de interfaz de usuario nueva y, a continuación, examina una variedad de nuevas capacidades que ofrece Android 4 para compartir datos entre aplicaciones y dispositivos.
 ms.prod: xamarin
 ms.assetid: 78E18A62-C12F-A699-37FA-44B9F6B44273
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: c2e7f9fabd462faf813299021d5f84ef0a62f790
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 3c5412629f6dcd31fb0a82634ef530569eef459a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ice-cream-sandwich-features"></a>Características de helado Sandwich
 

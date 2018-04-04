@@ -1,16 +1,16 @@
 ---
-title: "¿Por qué se realiza el envío de mi aplicación por error con: no se permiten rutas de acceso (iTunesMetadata.plist) encontrados en?"
-ms.topic: article
+title: '¿Por qué se realiza el envío de mi aplicación por error con: no se permiten rutas de acceso (iTunesMetadata.plist) encontrados en?'
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: AE1BBDC6-4D3A-4471-876B-FE28B6E59A24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 7c96a879a90999a494e9b8e14f028aa3bfd1c4a7
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3b53a967a522c63413bb136fa4d3622c6f11ef16
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--"></a>¿Por qué se realiza el envío de mi aplicación por error con: no se permiten rutas de acceso (iTunesMetadata.plist) encontrados en?
 

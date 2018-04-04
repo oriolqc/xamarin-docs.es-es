@@ -1,18 +1,17 @@
 ---
-title: "Principios de la aplicación"
+title: Principios de la aplicación
 description: Explorar los fundamentos de desarrollo de Xamarin.Forms
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: afa3bf25b1448d98c49c95a66bd0f4dc55bde39e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5a53c15ebad6081dae2ebc4bd782bcc3644620fe
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>Principios de la aplicación
 
@@ -24,7 +23,7 @@ Sugerencias para incorporar características de acceso (por ejemplo, compatibili
 
 El `Application` clase es el punto de partida para Xamarin.Forms, todas las aplicaciones que se necesita para implementar una subclase `App` para establecer la página inicial. También proporciona la `Properties` colección para el almacenamiento de datos simple. Se puede definir en C# o XAML.
 
-## <a name="app-lifecycleapp-lifecyclemd"></a>[Ciclo de vida de aplicación](app-lifecycle.md)
+## <a name="app-lifecycleapp-lifecyclemd"></a>[Ciclo de vida de la aplicación](app-lifecycle.md)
 
 El `Application` clase `OnStart`, `OnSleep`, y `OnResume` métodos, así como los eventos de navegación modal, le permiten controlar los eventos de ciclo de vida de aplicación con código personalizado.
 
@@ -48,7 +47,7 @@ El `DependencyService` proporciona un localizador simple para que pueda a interf
 
 Efectos de permitir que los controles nativos en cada plataforma para personalizarse y se utilizan normalmente para los cambios de estilo pequeño.
 
-## <a name="gesturesgesturesindexmd"></a>[movimientos](gestures/index.md)
+## <a name="gesturesgesturesindexmd"></a>[Gestos](gestures/index.md)
 
 El Xamarin.Forms [ `GestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/) clase admite tap, acercar y movimientos de panorámica en controles de interfaz de usuario.
 

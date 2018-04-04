@@ -1,18 +1,17 @@
 ---
-title: "Notificaciones remotas con la mensajería de nube de Google"
-description: "Este tutorial proporciona una explicación paso a paso de cómo usar Google Cloud Messaging para implementar notificaciones remotas (también denominadas notificaciones de inserción) en una aplicación Xamarin.Android. Describe las diferentes clases que deben implementar para comunicarse con Google (GCM Cloud Messaging), se explica cómo establecer permisos en el manifiesto de Android para tener acceso a GCM y muestra-to-end de mensajería con un programa de prueba de ejemplo."
-ms.topic: article
+title: Notificaciones remotas con la mensajería de nube de Google
+description: Este tutorial proporciona una explicación paso a paso de cómo usar Google Cloud Messaging para implementar notificaciones remotas (también denominadas notificaciones de inserción) en una aplicación Xamarin.Android. Describe las diferentes clases que deben implementar para comunicarse con Google (GCM Cloud Messaging), se explica cómo establecer permisos en el manifiesto de Android para tener acceso a GCM y muestra-to-end de mensajería con un programa de prueba de ejemplo.
 ms.prod: xamarin
 ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/13/2018
-ms.openlocfilehash: 823fad163e837adab5490446c23ab2f492679114
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 969b1b36659ac52782d30a1840ba352524e5e3c6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notificaciones remotas con la mensajería de nube de Google
 

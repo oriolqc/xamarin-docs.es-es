@@ -1,17 +1,16 @@
 ---
 title: Usar UrhoSharp
-description: "Información general sobre el motor de UrhoSharp"
-ms.topic: article
+description: Información general sobre el motor de UrhoSharp
 ms.prod: xamarin
 ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: cd30f17d631216a3ea119a262aca6d294394a77f
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cdb32c0fe9aa1a267bda5768b9026667723d694c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-urhosharp"></a>Usar UrhoSharp
 
@@ -497,7 +496,7 @@ Se pueden establecer los presupuestos de memoria por tipo de recurso: si recurso
 
 Urho3D intenta usar formatos de archivo existentes siempre que sea posible y definir los formatos de archivo personalizado sólo cuando sea absolutamente necesario, como para los modelos (*.mdl) y para animaciones (*.ani). Para estos tipos de activos, Urho proporciona un convertidor de - [AssetImporter](http://urho3d.github.io/documentation/1.4/_tools.html) que puede consumir muchos formatos 3D populares, como fbx dae, 3ds y obj, etcetera.
 
-También hay un complemento útil para Blender [https://github.com/reattiva/Urho3D-Blender](https://github.com/reattiva/Urho3D-Blender) que puede exportar sus activos Blender en el formato adecuado para Urho3D.
+También hay un complemento útil para Blender [ https://github.com/reattiva/Urho3D-Blender ](https://github.com/reattiva/Urho3D-Blender) que puede exportar sus activos Blender en el formato adecuado para Urho3D.
 
 ## <a name="background-loading-of-resources"></a>Carga en segundo plano de recursos
 
@@ -529,7 +528,7 @@ soundSource.AutoRemove = true;
 
 # <a name="particles"></a>Partículas
 
-Las partículas proporcionan una manera sencilla de agregar algunos efectos simples y económicas a la aplicación.  Puedes utilizar las partículas almacenadas en formato PEX, con herramientas como [http://onebyonedesign.com/flash/particleeditor/](http://onebyonedesign.com/flash/particleeditor/).
+Las partículas proporcionan una manera sencilla de agregar algunos efectos simples y económicas a la aplicación.  Puedes utilizar las partículas almacenadas en formato PEX, con herramientas como [ http://onebyonedesign.com/flash/particleeditor/ ](http://onebyonedesign.com/flash/particleeditor/).
 
 Las partículas son componentes que se pueden agregar a un nodo.  Debe llamar el nodo `CreateComponent<ParticleEmitter2D>` método para crear la partícula y, a continuación, configurar la partícula estableciendo la propiedad de efecto un efecto 2D que se carga desde la caché de recursos.
 

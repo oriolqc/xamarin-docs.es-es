@@ -1,18 +1,17 @@
 ---
-title: "Trabajar con iconos e imágenes"
-description: "Este artículo tratan diseñar y trabajar con iconos y las imágenes dentro de una aplicación Xamarin.tvOS."
-ms.topic: article
+title: Trabajar con iconos e imágenes
+description: Este artículo tratan diseñar y trabajar con iconos y las imágenes dentro de una aplicación Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 927a77d5671e877e93e5375b61220ac595891179
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: c888ecf3d7e0f21734f2b89176eed56bf778dbf9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-icons-and-images"></a>Trabajar con iconos e imágenes
 
@@ -122,7 +121,7 @@ Apple crea el [controlador de vista previa de Parallax](http://itunespartner.app
 
 [![](icons-images-images/layered03.png "El controlador de vista previa de Parallax")](icons-images-images/layered03.png#lightbox)
 
-Al obtener una vista previa de una imagen en capas, puede utilizar el mouse para girar la imagen y obtener una vista previa del efecto Parallax. Use la  **+**  (signo más) y  **-**  (botones para agregar y quitar capas menos).
+Al obtener una vista previa de una imagen en capas, puede utilizar el mouse para girar la imagen y obtener una vista previa del efecto Parallax. Use la **+** (signo más) y **-** (botones para agregar y quitar capas menos).
 
 Al crear una nueva imagen de capas, puede exportar en el formato LSR e incluido en el paquete de la aplicación.
 

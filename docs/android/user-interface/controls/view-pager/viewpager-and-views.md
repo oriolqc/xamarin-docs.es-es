@@ -1,18 +1,17 @@
 ---
 title: ViewPager con vistas
-description: "ViewPager es un administrador de diseño que le permite implementar la navegación gestural. Navegación gestural permite al usuario deslice el dedo izquierdo y derecho con el paso a través de páginas de datos. Esta guía explica cómo implementar una interfaz de usuario swipeable con ViewPager y PagerTabStrip, con vistas como las páginas de datos (una guía posterior describe cómo utilizar fragmentos para las páginas)."
-ms.topic: article
+description: ViewPager es un administrador de diseño que le permite implementar la navegación gestural. Navegación gestural permite al usuario deslice el dedo izquierdo y derecho con el paso a través de páginas de datos. Esta guía explica cómo implementar una interfaz de usuario swipeable con ViewPager y PagerTabStrip, con vistas como las páginas de datos (una guía posterior describe cómo utilizar fragmentos para las páginas).
 ms.prod: xamarin
 ms.assetid: 42E5379F-B0F4-4B87-A314-BF3DE405B0C8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 9c30cf9d76498e95aba6f9a003bc40c7d14e21de
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 39251f7cf6bc287b76b7921278853158bdb14d66
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="viewpager-with-views"></a>ViewPager con vistas
 

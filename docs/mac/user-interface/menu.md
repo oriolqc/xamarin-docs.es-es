@@ -1,18 +1,17 @@
 ---
-title: "Menús"
-description: "Este artículo explica cómo trabajar con menús en una aplicación Xamarin.Mac. Describe cómo crear y mantener los menús y elementos de menú en Xcode y el generador de interfaz y trabajar con ellos mediante programación."
-ms.topic: article
+title: Menús
+description: Este artículo explica cómo trabajar con menús en una aplicación Xamarin.Mac. Describe cómo crear y mantener los menús y elementos de menú en Xcode y el generador de interfaz y trabajar con ellos mediante programación.
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 52a9fc206a2c303d13d80be4de743d98056f7684
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 50c9cf333ff7965bbdfbb964a2301e677eb6aa59
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="menus"></a>Menús
 
@@ -439,7 +438,7 @@ A continuación, haga doble clic en el archivo del guión gráfico de la aplicac
 
 ![El Inspector de atributos](menu-images/action01.png "el Inspector de atributos")
 
-Haga clic en el  **+**  situado en la parte inferior de la **atributos Inspector** para agregar una nueva acción personalizada:
+Haga clic en el **+** situado en la parte inferior de la **atributos Inspector** para agregar una nueva acción personalizada:
 
 ![Agregar una nueva acción](menu-images/action02.png "agregar una nueva acción")
 

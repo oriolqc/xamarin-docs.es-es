@@ -1,18 +1,17 @@
 ---
-title: "Descripción de la integración de Java"
-description: "El ecosistema de Java incluye una colección de diferentes y gran de componentes. Muchos de estos componentes pueden utilizarse para reducir el tiempo necesario para desarrollar una aplicación Android. Este documento se presentan y proporcionar una descripción general de algunas de las formas en que los desarrolladores pueden usar estos componentes existentes de Java para mejorar su experiencia de desarrollo de aplicaciones de Xamarin.Android."
-ms.topic: article
+title: Descripción de la integración de Java
+description: El ecosistema de Java incluye una colección de diferentes y gran de componentes. Muchos de estos componentes pueden utilizarse para reducir el tiempo necesario para desarrollar una aplicación Android. Este documento se presentan y proporcionar una descripción general de algunas de las formas en que los desarrolladores pueden usar estos componentes existentes de Java para mejorar su experiencia de desarrollo de aplicaciones de Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 7B5B8695-1C49-19BF-AE99-948CDCBD2A20
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/18/2017
-ms.openlocfilehash: 213702d289adefe966f07c3ad0174156cbc69ee1
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: dbaf17479ae077fced425df5ac31bdbbc4e06b64
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="java-integration-overview"></a>Descripción de la integración de Java
 

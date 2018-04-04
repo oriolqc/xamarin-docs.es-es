@@ -1,18 +1,17 @@
 ---
 title: Celdas de Xamarin.Forms
 description: Las celdas de Xamarin.Forms se pueden agregar a ListView y TableViews.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 77DA0C89-35D6-4C09-A072-3ADE53FD56CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 0f8886546004702adbdbca7d991c67d5700e453e
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: dbc28f3d58b43bb53db39da2dcdf1ba722169264
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinforms-cells"></a>Celdas de Xamarin.Forms
 

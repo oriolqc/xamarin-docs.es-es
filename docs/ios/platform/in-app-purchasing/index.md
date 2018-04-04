@@ -1,17 +1,16 @@
 ---
-title: "Compra desde la aplicación"
-description: "aplicaciones de iOS pueden vender productos digitales y servicios mediante las API de Kit de almacén. Productos crean y administran en el portal de iTunes Connect. Apple administra el procesamiento de transacciones y aprueba todos los productos antes de que se pueden vender y una tarifa por cada transacción (actualmente 30%). Apple requiere que use la compra en la aplicación de las ventas digitales en la aplicación, pero no puede usar para la venta de mercancías físicas o servicios digitales no. Aplicaciones que ofrecen opciones de pago alternativo de servicios y productos digitales están probables que se rechacen. Este documento explica cómo configurar la aplicación para usar el Kit de almacén y proporciona ejemplos de Xamarin.iOS de los escenarios de compras en la aplicación más comunes."
-ms.topic: article
+title: Compra desde la aplicación
+description: aplicaciones de iOS pueden vender productos digitales y servicios mediante las API de Kit de almacén. Productos crean y administran en el portal de iTunes Connect. Apple administra el procesamiento de transacciones y aprueba todos los productos antes de que se pueden vender y una tarifa por cada transacción (actualmente 30%). Apple requiere que use la compra en la aplicación de las ventas digitales en la aplicación, pero no puede usar para la venta de mercancías físicas o servicios digitales no. Aplicaciones que ofrecen opciones de pago alternativo de servicios y productos digitales están probables que se rechacen. Este documento explica cómo configurar la aplicación para usar el Kit de almacén y proporciona ejemplos de Xamarin.iOS de los escenarios de compras en la aplicación más comunes.
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: af8eb556215679bab2da8f54e8231f7d7d3ed418
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7a8dec6051caeba55c45df29c085ecfcddd160d2
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="in-app-purchasing"></a>Compra desde la aplicación
 
@@ -38,17 +37,17 @@ Para admitir la compra de la aplicación debe utilizar Xamarin.iOS 5.0 o posteri
 
 ## <a name="contents"></a>Contenido
 
- * [Conceptos básicos de compra en la aplicación y configuración](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
+ * [Configuración y conceptos básicos de las compras desde la aplicación](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
- * [Almacenar la información de producto de recuperar e Introducción al Kit de](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+ * [Introducción a Store Kit y recuperación de la información del producto](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
  * [Compra de productos consumibles](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
- * [Compra de productos no consumible](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
+ * [Compra de productos no consumibles](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
 
- * [Las transacciones y comprobación](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
+ * [Transacciones y comprobación](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 
- * [Las suscripciones e informes](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
+ * [Suscripciones e informes](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
 
 
 ## <a name="summary"></a>Resumen
@@ -66,12 +65,12 @@ Este artículo tiene introdujo el concepto de compra de la aplicación, se descr
 
 - [InAppPurchaseSample](https://developer.xamarin.com/samples/StoreKit/)
 - [En la Guía de programación de compras desde la aplicación](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/StoreKitGuide/Introduction.html)
-- [Guía del desarrollador de Connect de iTunes](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/iTunesConnect_Guide.pdf)
+- [Guía para desarrolladores de iTunes Connect](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/iTunesConnect_Guide.pdf)
 - [Referencia de marco de trabajo Kit de almacén](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/StoreKit_Collection/StoreKit_Collection.pdf)
 - [Identificadores de producto de compra en la aplicación de preguntas y respuestas](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
 - [Nota técnica de compra en la aplicación](https://developer.apple.com/library/ios/#technotes/tn2259/_index.html)
 - [El envío del primer tienda de aplicaciones](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
 - [Centro de recursos de almacén de aplicación](https://developer.apple.com/appstore/index.html)
-- [Sugerencias sobre cómo presentar tienda de aplicaciones](https://developer.apple.com/appstore/resources/submission/tips.html)
-- [Directrices de revisión de la tienda de aplicaciones](https://developer.apple.com/appstore/resources/approval/guidelines.html)
+- [Sugerencias de envío al App Store](https://developer.apple.com/appstore/resources/submission/tips.html)
+- [Directrices de revisión del App Store](https://developer.apple.com/appstore/resources/approval/guidelines.html)
 - [Administrar las aplicaciones](https://developer.apple.com/appstore/resources/managing/index.html)

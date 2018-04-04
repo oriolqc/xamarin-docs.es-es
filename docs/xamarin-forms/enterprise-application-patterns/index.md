@@ -1,18 +1,17 @@
 ---
-title: "Patrones de aplicación de empresa mediante Xamarin.Forms eBook"
-description: "Guía de arquitectura para desarrollar aplicaciones de empresa de Xamarin.Forms adaptables, fácil de mantener y comprobables"
-ms.topic: article
+title: Patrones de aplicación de empresa mediante Xamarin.Forms eBook
+description: Guía de arquitectura para desarrollar aplicaciones de empresa de Xamarin.Forms adaptables, fácil de mantener y comprobables
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 7ed546ac975ce1956d94d509486e4cfb25d28100
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: b7f69e987eb4f628dfaf5422bc1ce52108d90634
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Patrones de aplicación de empresa mediante Xamarin.Forms eBook
 
@@ -22,7 +21,7 @@ _Guía de arquitectura para desarrollar aplicaciones de empresa de Xamarin.Forms
 
 Este libro electrónico proporciona instrucciones sobre cómo implementar el patrón Model-View-ViewModel (MVVM), inserción de dependencias, navegación, validación y la administración de configuración, al tiempo que mantiene el acoplamiento flexible. Además, también hay instrucciones acerca de cómo realizar la autenticación y autorización con IdentityServer, acceso a datos desde microservicios en contenedores y las pruebas unitarias.
 
-## <a name="prefaceprefacemd"></a>[Preface](preface.md)
+## <a name="prefaceprefacemd"></a>[Prefacio](preface.md)
 
 Este capítulo explica el propósito y el ámbito de la guía y a quién está destinado a.
 
@@ -40,7 +39,7 @@ Inyección de dependencia permite la separación de tipos concretos desde el có
 
 Contenedores de inyección de dependencia reducen el acoplamiento entre objetos por lo que proporciona una funcionalidad para crear instancias de clase y administrar su duración en función de la configuración del contenedor. Durante la creación de objetos, el contenedor inserta las dependencias que requiere el objeto en él. Si aún no se han creado esas dependencias, el contenedor crea y sus dependencias resuelve en primer lugar.
 
-## <a name="communicating-between-loosely-coupled-componentscommunicating-between-loosely-coupled-componentsmd"></a>[Comunicación entre débilmente acoplados componentes](communicating-between-loosely-coupled-components.md)
+## <a name="communicating-between-loosely-coupled-componentscommunicating-between-loosely-coupled-componentsmd"></a>[Comunicación entre componentes débilmente acoplados](communicating-between-loosely-coupled-components.md)
 
 El Xamarin.Forms [ `MessagingCenter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/) clase implementa la publicación-suscribirse patrón, que permita la comunicación basada en mensajes entre los componentes que son poco práctico vincular por referencias de objeto y el tipo. Este mecanismo permite publicadores y suscriptores de comunicarse sin necesidad de una referencia a entre sí, lo que ayuda a reducir las dependencias entre los componentes, mientras que permite también componentes desarrollado y probado por separado.
 
@@ -56,7 +55,7 @@ Cualquier aplicación que acepta datos proporcionados por los usuarios debe aseg
 
 En el contexto de los modelos ViewModel (MVVM) de patrón, un modelo de vista o modelo a menudo se requerirá a realizar la validación de datos y notificar los errores de validación a la vista para que el usuario puede corregirlos.
 
-## <a name="configuration-managementconfiguration-managementmd"></a>[Administración de configuración](configuration-management.md)
+## <a name="configuration-managementconfiguration-managementmd"></a>[Administración de configuraciones](configuration-management.md)
 
 Configuración permite la separación de datos que se configura el comportamiento de una aplicación desde el código, lo que permite el comportamiento puede modificarse sin volver a generar la aplicación. Configuración de la aplicación es datos que una aplicación crea y administra y configuración del usuario sea la configuración de una aplicación personalizable que afectan al comportamiento de la aplicación y no requiere frecuente ajuste de nuevo.
 

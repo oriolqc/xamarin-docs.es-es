@@ -1,17 +1,16 @@
 ---
-title: "Trabajar con la localización"
+title: Trabajar con la localización
 description: Adaptar aplicaciones watchOS para varios idiomas
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 9ad3499a232e5f2b2ef362f772ed0197e71e6bee
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c765005491f55a1bdcadb1bc5aea97f693dc4570
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="working-with-localization"></a>Trabajar con la localización
 
@@ -86,13 +85,13 @@ Cuando se procesa el guión gráfico en el reloj, los valores correctos se extra
 
 #### <a name="storyboard-images"></a>Imágenes del guión gráfico
 
-La solución de ejemplo también incluye un  **gradient@2x.png**  imagen en cada carpeta de idioma. Esta imagen puede ser diferente para cada idioma (p. ej. ha incrustado texto que se debe traducir, o use adaptado iconography).
+La solución de ejemplo también incluye un **gradient@2x.png** imagen en cada carpeta de idioma. Esta imagen puede ser diferente para cada idioma (p. ej. ha incrustado texto que se debe traducir, o use adaptado iconography).
 
 Basta con establecer la imagen **imagen** propiedad en el guión gráfico y la imagen correcta se representará en el reloj según el idioma seleccionado por el usuario.
 
 ![](localization-images/storyboard-image.png "Establecer la propiedad de imagen de las imágenes en el guión gráfico.")
 
-Nota: dado que todos los relojes de Apple tienen pantallas de Retina, solo el  **@2x**  se requiere la versión de la imagen. No es necesario especificar  **@2x**  en el guión gráfico.
+Nota: dado que todos los relojes de Apple tienen pantallas de Retina, solo el **@2x** se requiere la versión de la imagen. No es necesario especificar **@2x** en el guión gráfico.
 
 ### <a name="watch-extension"></a>Extensión de inspección
 
@@ -130,7 +129,7 @@ Las imágenes que se rellenan con el código pueden establecerse de dos maneras.
   displayImage.SetImage("gradient"); // image in Watch App (as shown above)
   ```
 
-2. Puede mover una imagen de la extensión a la inspección mediante `FromBundle` y la aplicación elegirá automáticamente la imagen correcta para la selección del idioma del usuario. En la solución de ejemplo hay una imagen  **language@2x.png**  en cada idioma carpeta y se muestra en `DetailController` utilizando el código siguiente:
+2. Puede mover una imagen de la extensión a la inspección mediante `FromBundle` y la aplicación elegirá automáticamente la imagen correcta para la selección del idioma del usuario. En la solución de ejemplo hay una imagen **language@2x.png** en cada idioma carpeta y se muestra en `DetailController` utilizando el código siguiente:
 
   ```csharp
   using (var image = UIImage.FromBundle ("language")) {
@@ -138,7 +137,7 @@ Las imágenes que se rellenan con el código pueden establecerse de dos maneras.
   }
   ```
 
-  Tenga en cuenta que no es necesario especificar el  **@2x**  cuando se hace referencia al nombre de archivo de la imagen.
+  Tenga en cuenta que no es necesario especificar el **@2x** cuando se hace referencia al nombre de archivo de la imagen.
 
 El segundo método también es aplicable si descarga una imagen desde un servidor remoto que se representará en el reloj; Sin embargo en este caso debe asegurarse de que la imagen que descarga correctamente se localiza según las preferencias del usuario.
 

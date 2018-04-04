@@ -1,18 +1,17 @@
 ---
 title: Plataforma de destino
-description: "Este artículo tratan los marcos de destino (bibliotecas de clases Base) disponibles para Xamarin.Mac y las implicaciones de su uso en el proyecto Xamarin.Mac."
-ms.topic: article
+description: Este artículo tratan los marcos de destino (bibliotecas de clases Base) disponibles para Xamarin.Mac y las implicaciones de su uso en el proyecto Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: AF21BE16-3F92-4121-AB4C-D51AC863D92D
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/10/2017
-ms.openlocfilehash: f657fc3dd87d5c39d442a863e4acc00ac320b00d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 053cdd2dbfc7741257e6630e5b11b77b1055428e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="target-framework"></a>Plataforma de destino
 

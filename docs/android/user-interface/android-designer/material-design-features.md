@@ -1,18 +1,17 @@
 ---
-title: "Características de diseño de materiales"
-description: "Este tema describe las características del diseñador que facilitan a los desarrolladores crear diseños conforme a Material diseño. Esta sección presenta y explica cómo utilizar la cuadrícula de Material, la paleta de colores de Material, la escala tipográfico y el Editor de temas."
-ms.topic: article
+title: Características de diseño de materiales
+description: Este tema describe las características del diseñador que facilitan a los desarrolladores crear diseños conforme a Material diseño. Esta sección presenta y explica cómo utilizar la cuadrícula de Material, la paleta de colores de Material, la escala tipográfico y el Editor de temas.
 ms.prod: xamarin
 ms.assetid: AC55E1B2-C239-4019-B0C3-A16F6CF0D6E0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: 9c1797398fba580ab7f34526b10e1da455eb2dc5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a764efe7f2cadd8c777f8427c0220e45eec662c9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="material-design-features"></a>Características de diseño de materiales
 

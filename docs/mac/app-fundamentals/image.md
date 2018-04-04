@@ -1,18 +1,17 @@
 ---
-title: "Imágenes"
-description: "Este artículo explica cómo trabajar con imágenes e iconos en una aplicación Xamarin.Mac. Describe cómo crear y mantener las imágenes necesarias para crear el icono de la aplicación y utilizar imágenes en código de C# y el generador de interfaz de Xcode."
-ms.topic: article
+title: Imágenes
+description: Este artículo explica cómo trabajar con imágenes e iconos en una aplicación Xamarin.Mac. Describe cómo crear y mantener las imágenes necesarias para crear el icono de la aplicación y utilizar imágenes en código de C# y el generador de interfaz de Xcode.
 ms.prod: xamarin
 ms.assetid: C6B539C2-FC6A-4C38-B839-32BFFB9B16A7
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: d8098afea87765166db8318b76adf250818a0a6f
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: dc33dc78c09c0b5b7cb7533afdd2f95b8ebd9c4e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="images"></a>Imágenes
 
@@ -46,7 +45,7 @@ Al agregar una imagen para su uso en una aplicación Xamarin.Mac, hay varios lug
 - **Árbol de proyecto principal [obsoleto]** -imágenes pueden agregarse directamente al árbol de proyectos. Al llamar a las imágenes almacenadas en el árbol de proyecto principal desde el código, se especifica ninguna ubicación de carpeta. Por ejemplo: `NSImage image = NSImage.ImageNamed("tags.png");`. 
 - **Carpeta de recursos [obsoleto]** -especial **recursos** carpeta es para cualquier archivo que formará parte de la aplicación de agrupar como general, pantalla de inicio o icono de imágenes (o cualquier otra imagen o archivo el desarrollador desea agregar). Al llamar a las imágenes almacenadas en la **recursos** carpeta desde el código, igual que las imágenes almacenados en el árbol de proyecto principal, se especifica ninguna ubicación de carpeta. Por ejemplo: `NSImage.ImageNamed("tags.png")`.
 - **Carpeta o subcarpeta [obsoleto] personalizado** -el programador puede agregar una carpeta personalizada en el árbol de origen de proyectos y almacenar las imágenes no existe. La ubicación donde se agrega el archivo se puede anidar en una subcarpeta adicional como ayuda para organizar el proyecto. Por ejemplo, si el desarrollador agrega un `Card` carpeta del proyecto y una subcarpeta de `Hearts` a esa carpeta, a continuación, almacene una imagen **Jack.png** en el `Hearts` carpeta, `NSImage.ImageNamed("Card/Hearts/Jack.png")` carga la imagen en en tiempo de ejecución.
-- **Conjuntos de imágenes de catálogo de Asset [preferido]** , agregados en OS X El capitán, **conjuntos de imágenes de catálogos de activos** contienen todas las versiones o las representaciones de una imagen que son necesarias para admitir varios dispositivos y escalar factores para su aplicación. En lugar de basarse en el nombre de archivo de activos de imagen (**@1x**,  **@2x** ).
+- **Conjuntos de imágenes de catálogo de Asset [preferido]** , agregados en OS X El capitán, **conjuntos de imágenes de catálogos de activos** contienen todas las versiones o las representaciones de una imagen que son necesarias para admitir varios dispositivos y escalar factores para su aplicación. En lugar de basarse en el nombre de archivo de activos de imagen (**@1x**, **@2x**).
 
 <a name="asset-catalogs" />
 
@@ -68,7 +67,7 @@ Como se mencionó anteriormente, un **conjuntos de imágenes de catálogos de ac
 
     [![Nombre del conjunto de editar la imagen](image-images/imageset04.png "nombre del conjunto de editar la imagen")](image-images/imageset04-large.png#lightbox)
     
-Una clase especial **Vector** tal y como se ha agregado a la clase **conjuntos de imágenes** que nos permite incluir un _PDF_ con el formato de imagen de vector en el casset en su lugar, incluidos los archivos de mapa de bits individuales en las resoluciones diferentes. Con este método, proporcionar un archivo de vector único para la  **@1x**  resolución (con formato como archivo PDF vector) y la  **@2x**  y  **@3x**  versiones del archivo se generarán en tiempo de compilación e incluidas en el paquete de la aplicación.
+Una clase especial **Vector** tal y como se ha agregado a la clase **conjuntos de imágenes** que nos permite incluir un _PDF_ con el formato de imagen de vector en el casset en su lugar, incluidos los archivos de mapa de bits individuales en las resoluciones diferentes. Con este método, proporcionar un archivo de vector único para la **@1x** resolución (con formato como archivo PDF vector) y la **@2x** y **@3x** versiones del archivo se generarán en tiempo de compilación e incluidas en el paquete de la aplicación.
 
 [![Interfaz del editor de conjunto de la imagen](image-images/imageset05.png "imágenes establecer la interfaz de editor")](image-images/imageset05-large.png#lightbox)
 
@@ -142,7 +141,7 @@ Los activos gráficos que se agregan a una aplicación de Xamarin.Mac (iconos, c
 Al crear las versiones estándares y de alta resolución de una imagen, siga esta convención de nomenclatura para el par de imagen al incluirlos en el proyecto Xamarin.Mac:
 
 - **Resolución estándar**  - **ImageName.filename extensión** (ejemplo: **tags.png**)
-- **Alta resolución**   -   **ImageName@2x.filename-extension**  (ejemplo:  **tags@2x.png** )
+- **Alta resolución**   -  **ImageName@2x.filename-extension** (ejemplo: **tags@2x.png**)
 
 Cuando se agrega a un proyecto, podría aparecer como sigue:
 
@@ -150,7 +149,7 @@ Cuando se agrega a un proyecto, podría aparecer como sigue:
 
 Cuando se asigna una imagen a un elemento de interfaz de usuario en el generador de interfaz simplemente obtendrá el archivo en el _ImageName_**.** _extensión de nombre de archivo_ formato (ejemplo: **tags.png**). El mismo para usar una imagen en el código de C#, podrá seleccionar el archivo en el _ImageName_**.** _extensión de nombre de archivo_ formato.
 
-Cuando se Xamarin.Mac aplicación se ejecuta en un equipo Mac, la _ImageName_**.** _extensión de nombre de archivo_ imagen de formato que se usará en las pantallas de resolución estándar, el  **ImageName@2x.filename-extension**  imagen se seleccionará automáticamente pantalla Retina envergadura equipos Mac.
+Cuando se Xamarin.Mac aplicación se ejecuta en un equipo Mac, la _ImageName_**.** _extensión de nombre de archivo_ imagen de formato que se usará en las pantallas de resolución estándar, el **ImageName@2x.filename-extension** imagen se seleccionará automáticamente pantalla Retina envergadura equipos Mac.
 
 
 ## <a name="using-images-in-interface-builder"></a>Uso de imágenes en el generador de interfaz
@@ -176,7 +175,7 @@ Para utilizar una imagen en el generador de interfaz, haga lo siguiente:
      ![La imagen que se muestra en el editor de la barra de herramientas](image-images/ib04.png "la imagen que se muestra en el editor de la barra de herramientas")
 6. Guarde los cambios y vuelva a Visual Studio para Mac para la sincronización con Xcode.
 
-Los pasos anteriores funcionan para cualquier elemento de interfaz de usuario que permite a su propiedad de imagen que se establecerán en el **Inspector de atributo**. Una vez más, si ha incluido un  **@2x**  versión de su archivo de imagen, se usará automáticamente en pantalla Retina según los equipos Mac.
+Los pasos anteriores funcionan para cualquier elemento de interfaz de usuario que permite a su propiedad de imagen que se establecerán en el **Inspector de atributo**. Una vez más, si ha incluido un **@2x** versión de su archivo de imagen, se usará automáticamente en pantalla Retina según los equipos Mac.
 
 > [!IMPORTANT]
 > Si la imagen no está disponible en la **nombre de la imagen** de lista desplegable, cierre el proyecto .storyboard en Xcode y vuelva a abrirlo desde Visual Studio para Mac. Si la imagen todavía no está disponible, asegúrese de que su **acción de compilación** es `BundleResource` y que la imagen se ha agregado a la **recursos** carpeta.
@@ -189,7 +188,7 @@ Al cargar una imagen en memoria mediante código C# en la aplicación Xamarin.Ma
 NSImage image = NSImage.ImageNamed("tags.png");
 ```
 
-El código anterior utiliza el método estático `ImageNamed("...")` método de la `NSImage` clase para cargar la imagen especificada en la memoria desde el **recursos** carpeta, si no se encuentra la imagen, `null` se devolverá. Como imágenes asignada en el generador de interfaz, si ha incluido un  **@2x**  versión de su archivo de imagen, se usará automáticamente en pantalla Retina según los equipos Mac.
+El código anterior utiliza el método estático `ImageNamed("...")` método de la `NSImage` clase para cargar la imagen especificada en la memoria desde el **recursos** carpeta, si no se encuentra la imagen, `null` se devolverá. Como imágenes asignada en el generador de interfaz, si ha incluido un **@2x** versión de su archivo de imagen, se usará automáticamente en pantalla Retina según los equipos Mac.
 
 Para cargar imágenes fuera de la agrupación de la aplicación (desde el sistema de archivos Mac), utilice el código siguiente:
 

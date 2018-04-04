@@ -1,18 +1,17 @@
 ---
-title: "Servicios de móvil Android en procesos remotos"
-description: "Por lo general, todos los componentes de una aplicación de Android se ejecutarán en el mismo proceso. Android servicios son una excepción significativa a este en cuanto se pueden configurar para ejecutarse en sus propios procesos y compartir con otras aplicaciones, las de otros desarrolladores de Android incluidas. Esta guía describe cómo crear y utilizar un servicio remoto Android con Xamarin."
-ms.topic: article
+title: Servicios de móvil Android en procesos remotos
+description: Por lo general, todos los componentes de una aplicación de Android se ejecutarán en el mismo proceso. Android servicios son una excepción significativa a este en cuanto se pueden configurar para ejecutarse en sus propios procesos y compartir con otras aplicaciones, las de otros desarrolladores de Android incluidas. Esta guía describe cómo crear y utilizar un servicio remoto Android con Xamarin.
 ms.prod: xamarin
 ms.assetid: 27A2E972-A690-480B-B31D-5EF1F74F673C
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: ebbb4b527b27b87bb6357723978e730304658720
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: 57be8187509ad7607c38ea17233e9ab5d25b41f1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="running-android-services-in-remote-processes"></a>Servicios de móvil Android en procesos remotos
 

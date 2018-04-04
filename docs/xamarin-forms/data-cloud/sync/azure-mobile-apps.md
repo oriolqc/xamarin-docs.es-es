@@ -1,18 +1,17 @@
 ---
-title: "Sincronización de datos sin conexión con aplicaciones móviles de Azure"
-description: "Sincronización sin conexión permite a los usuarios interactuar con una aplicación móvil, ver, agregar o modificar los datos, incluso cuando no hay una conexión de red. Cambios se almacenan en una base de datos local y una vez que el dispositivo está en línea, se pueden sincronizar los cambios con la instancia de aplicaciones móviles de Azure. En este artículo se explica cómo agregar la funcionalidad de sincronización sin conexión a una aplicación de Xamarin.Forms."
-ms.topic: article
+title: Sincronización de datos sin conexión con aplicaciones móviles de Azure
+description: Sincronización sin conexión permite a los usuarios interactuar con una aplicación móvil, ver, agregar o modificar los datos, incluso cuando no hay una conexión de red. Cambios se almacenan en una base de datos local y una vez que el dispositivo está en línea, se pueden sincronizar los cambios con la instancia de aplicaciones móviles de Azure. En este artículo se explica cómo agregar la funcionalidad de sincronización sin conexión a una aplicación de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: DBB343B0-2709-4C20-A669-5522B9956D9B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2017
-ms.openlocfilehash: 965d4987c154acc5a2f95d4ca622266ebdc2a1c2
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b083bb83dbc7266f749c4adc660a8bfb431df795
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="synchronizing-offline-data-with-azure-mobile-apps"></a>Sincronización de datos sin conexión con aplicaciones móviles de Azure
 

@@ -1,18 +1,17 @@
 ---
-title: "Navegación"
-description: "Xamarin.Forms ofrece una serie de experiencias de navegación de página diferente, dependiendo del tipo de página que se va a usar."
-ms.topic: article
+title: Navegación
+description: Xamarin.Forms ofrece una serie de experiencias de navegación de página diferente, dependiendo del tipo de página que se va a usar.
 ms.prod: xamarin
 ms.assetid: BC5D0C6C-D5A9-4B12-A492-ED1F570CEC87
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 180eed39a1aa7bf352665b9a0198a88c2fcbc5b5
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 1a184e1ebfd9d87ba82642ebdfc30a8d3f92cce1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="navigation"></a>Navegación
 
@@ -40,7 +39,7 @@ El Xamarin.Forms [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/X
 
 Xamarin.Forms también proporciona compatibilidad para las páginas modales. Una página modal anima a los usuarios a completar una tarea autocontenida que no se puede abandonar mientras no se complete o se cancele la tarea.
 
-## <a name="displaying-pop-upspop-upsmd"></a>[Mostrar elementos emergentes](pop-ups.md)
+## <a name="displaying-pop-upspop-upsmd"></a>[Visualización de elementos emergentes](pop-ups.md)
 
 Xamarin.Forms ofrece dos elementos de la interfaz de usuario emergente up como: una alerta así como una hoja de acción. Estos elementos de la interfaz se pueden utilizar para pedir a los usuarios preguntas sencillas y guiar a los usuarios a través de tareas.
 

@@ -1,18 +1,17 @@
 ---
 title: Enlace de un elemento ControlTemplate
-description: "Enlaces de plantilla permiten enlazan controles en una plantilla de control a los datos a las propiedades públicas, habilitar los valores de propiedad de los controles en la plantilla de control que puede modificarse fácilmente. En este artículo se muestra el uso de enlaces de plantilla para realizar el enlace de datos desde una plantilla de control."
-ms.topic: article
+description: Enlaces de plantilla permiten enlazan controles en una plantilla de control a los datos a las propiedades públicas, habilitar los valores de propiedad de los controles en la plantilla de control que puede modificarse fácilmente. En este artículo se muestra el uso de enlaces de plantilla para realizar el enlace de datos desde una plantilla de control.
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 5b330c448a135cbcf8fc2745debc48924e29c103
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 3b306c79aea9bd2192aa73eddcf95790a9b24353
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-from-a-controltemplate"></a>Enlace de un elemento ControlTemplate
 
@@ -68,7 +67,7 @@ El resultado es el aspecto que se muestra en las capturas de pantalla siguiente:
 
 ![](template-binding-images/teal-theme.png "Verde azulado plantilla de Control mediante enlaces de plantilla")
 
-## <a name="creating-a-templatebinding-in-c35"></a>Crear un TemplateBinding en C &#35;
+## <a name="creating-a-templatebinding-in-c35"></a>Crear un TemplateBinding en C&#35;
 
 En C#, un [ `TemplateBinding` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TemplateBinding/) se crea mediante la `TemplateBinding` constructor, como se muestra en el ejemplo de código siguiente:
 

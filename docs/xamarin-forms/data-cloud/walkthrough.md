@@ -1,18 +1,17 @@
 ---
-title: "Descripción del ejemplo"
-description: "En este tema se ofrece un tutorial de la aplicación de ejemplo de Xamarin.Forms que muestra cómo comunicar con los servicios web diferentes. Mientras que cada servicio web utiliza una aplicación de ejemplo independiente, son funciones similares y compartir clases comunes."
-ms.topic: article
+title: Descripción del ejemplo
+description: En este tema se ofrece un tutorial de la aplicación de ejemplo de Xamarin.Forms que muestra cómo comunicar con los servicios web diferentes. Mientras que cada servicio web utiliza una aplicación de ejemplo independiente, son funciones similares y compartir clases comunes.
 ms.prod: xamarin
 ms.assetid: A3FEB262-0D79-42E6-8F8B-A565618C490B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: ab44cb7a065164bb5b7501ac63bd0321b612b7ca
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: e9738a766762dd64cdfbb034d4eaa54f76aca311
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="understanding-the-sample"></a>Descripción del ejemplo
 
@@ -56,7 +55,7 @@ El proyecto PCL para cada aplicación también consta de un número de archivos 
 
 La mayoría de las aplicaciones de ejemplo contienen al menos dos páginas:
 
-- **TodoListPage** : esta página muestra una lista de `TodoItem` instancias y un icono de marca si la `TodoItem.Done` propiedad es `true`. Al hacer clic en un elemento se desplaza a la `TodoItemPage`. Además, se pueden crear elementos nuevos, haga clic en el  *+*  símbolos.
+- **TodoListPage** : esta página muestra una lista de `TodoItem` instancias y un icono de marca si la `TodoItem.Done` propiedad es `true`. Al hacer clic en un elemento se desplaza a la `TodoItemPage`. Además, se pueden crear elementos nuevos, haga clic en el *+* símbolos.
 - **TodoItemPage** : esta página muestra los detalles para seleccionado `TodoItem`y le permite editar, guardar, eliminar y hablar.
 
 Además, algunas aplicaciones de ejemplo contienen páginas adicionales que se usan para administrar el proceso de autenticación de usuario.

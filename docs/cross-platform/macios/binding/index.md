@@ -1,19 +1,18 @@
 ---
-title: Enlace Objective-c.
-ms.topic: article
+title: Enlace de Objective-C
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: e836081d79d904e2d0952386e536eefdabe361e1
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: fef2826f536042dc9be830a4c0dc358658c359d9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
-# <a name="binding-objective-c"></a>Enlace Objective-c.
+# <a name="binding-objective-c"></a>Enlace de Objective-C
 
 Esta sección incluye una amplia variedad de documentos que abarcan crear enlaces a bibliotecas de Objective-C, por lo que se puede llamar desde las aplicaciones de C# creadas con Xamarin.iOS o Xamarin.Mac.
 
@@ -21,7 +20,7 @@ Esta sección incluye una amplia variedad de documentos que abarcan crear enlace
 
 Este documento contiene algunos de los elementos internos de cómo realiza un enlace. Es un documento con cierta información técnica avanzado.
 
-##  <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Bibliotecas de enlace Objective-c.](~/cross-platform/macios/binding/objective-c-libraries.md)
+##  <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Enlace de bibliotecas de Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 
 Este documento describe el proceso usado para crear los enlaces de C# de API de C de objetivo y cómo se asignan las expresiones en Objective-C para las expresiones utilizados en .NET.
 Si va a enlazar solo las API de C, debe usar el mecanismo estándar de .NET para esto, el marco de trabajo de P/Invoke.
@@ -31,7 +30,7 @@ Si va a enlazar solo las API de C, debe usar el mecanismo estándar de .NET para
 Se trata de la Guía de referencia que describe todos los atributos disponibles para los autores de enlaces para controlar el proceso de generación de enlace.
 
 
-## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Sharpie objetivo](~/cross-platform/macios/binding/objective-sharpie/index.md)
+## <a name="objective-sharpiecross-platformmaciosbindingobjective-sharpieindexmd"></a>[Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 
 Sharpie objetivo es una herramienta de línea de comandos para ayudar a arrancar el primer paso de un enlace. Funciona mediante el análisis de los archivos de encabezado de una biblioteca nativa para asignar la API pública en la [definición de enlace](~/cross-platform/macios/binding/objective-c-libraries.md) (un proceso que también se puede realizar manualmente).
 

@@ -1,18 +1,17 @@
 ---
-title: "Solución de problemas de enlace"
-description: "Esta guía explica qué hacer si tiene dificultades para enlazar una biblioteca de C de objetivo."
-ms.topic: article
+title: Solución de problemas de enlace
+description: Esta guía explica qué hacer si tiene dificultades para enlazar una biblioteca de C de objetivo.
 ms.prod: xamarin
 ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/19/2016
-ms.openlocfilehash: 2db7fe30f05224f6b74b4d2189606da59946bda0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 7ea3e3802ec2e0baf0fe8355a41e806bacabc9ac
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="binding-troubleshooting"></a>Solución de problemas de enlace
 
@@ -45,15 +44,15 @@ Si se ejecuta en un caso donde pasando `null` produce una `ArgumentNullException
 
 Sus comentarios son importantes para nosotros. Si encuentra algún problema con Xamarin.Mac:
 
-- Compruebe el [Xamarin.Mac foros](https://forums.xamarin.com/categories/mac)
-- Buscar el [repositorio de problema](https://github.com/xamarin/xamarin-macios/issues) 
-- Antes de pasar a problemas de GitHub, se realiza un seguimiento de problemas de Xamarin en [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Por favor, busca allí para la coincidencia de problemas.
-- Si no se encuentra un problema de búsqueda de coincidencias, registre un nuevo asunto en la [repositorio de problema de GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
+- Compruebe los [foros de Xamarin.Mac](https://forums.xamarin.com/categories/mac).
+- Busque en el [repositorio de problemas](https://github.com/xamarin/xamarin-macios/issues). 
+- Antes de la migración a GitHub, los problemas de Xamarin se recopilaban en [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Busque allí para ver si están los mismos problemas.
+- Si no encuentra un problema, registre uno nuevo en el [repositorio de problemas de GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-Problemas de GitHub son todos los públicos. No es posible ocultar comentarios o datos adjuntos. 
+Los problemas de GitHub son públicos. No es posible ocultar comentarios ni datos adjuntos. 
 
-Incluya como gran parte de las acciones siguientes como sea posible:
+De la siguiente información, incluya toda la que pueda:
 
-- Un ejemplo sencillo reproducir el problema. Se trata de **inestimable** siempre que sea posible. 
-- El seguimiento de pila completo del bloqueo.
-- El código C# que rodea el bloqueo. 
+- Un ejemplo sencillo que reproduzca el problema. Siempre que sea posible, esta información es **muy útil**. 
+- El seguimiento de la pila completo del bloqueo.
+- El código de C# del bloqueo. 

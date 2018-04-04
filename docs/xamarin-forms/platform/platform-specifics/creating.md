@@ -1,18 +1,17 @@
 ---
-title: "Obtener información específica de la plataforma de creación"
-description: "Proveedores pueden crear sus propias características de la plataforma con efectos. Un efecto proporciona la funcionalidad específica, que, a continuación, se expone a través de una específica de la plataforma. El resultado es un efecto que puede consumir más fácilmente a través de XAML y a través de una API fluida de código. Este artículo demuestra cómo exponer un efecto a través de una específica de la plataforma."
-ms.topic: article
+title: Obtener información específica de la plataforma de creación
+description: Proveedores pueden crear sus propias características de la plataforma con efectos. Un efecto proporciona la funcionalidad específica, que, a continuación, se expone a través de una específica de la plataforma. El resultado es un efecto que puede consumir más fácilmente a través de XAML y a través de una API fluida de código. Este artículo demuestra cómo exponer un efecto a través de una específica de la plataforma.
 ms.prod: xamarin
 ms.assetid: 0D0E6274-6EF2-4D40-BB77-3D8E53BCD24B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/23/2016
-ms.openlocfilehash: 7cdc67f8ea1038226bb6ef8c8add8c03e9635e6a
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 6283e22d75d9e52ad3e2f300617818c98d887481
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-platform-specifics"></a>Obtener información específica de la plataforma de creación
 
@@ -274,4 +273,4 @@ Este artículo muestra cómo exponer un efecto a través de una específica de l
 
 - [ShadowPlatformSpecific (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
 - [Personalización de controles con efectos](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md)
+- [Propiedades asociadas](~/xamarin-forms/xaml/attached-properties.md)

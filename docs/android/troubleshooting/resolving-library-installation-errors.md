@@ -1,18 +1,18 @@
 ---
-title: "Resolver errores de instalación de la biblioteca"
-description: "En algunos casos, puede obtener errores durante la instalación de las bibliotecas de compatibilidad con Android. Esta guía proporciona soluciones para algunos errores comunes."
-ms.topic: article
+title: Resolver errores de instalación de la biblioteca
+description: En algunos casos, puede obtener errores durante la instalación de las bibliotecas de compatibilidad con Android. Esta guía proporciona soluciones para algunos errores comunes.
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 2AE68ACE-8496-445D-BF17-5E4097D4AE35
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 66555139cfaab2074e7461be737f997a9bb9c7a7
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 6f280a90994ff40ebd8a07d2cab49ddc2b3d6ca1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resolving-library-installation-errors"></a>Resolver errores de instalación de la biblioteca
 
@@ -104,7 +104,7 @@ Si ha intentado siguiendo los pasos de recuperación automática anteriores y si
 
     -   [android\_m2repository\_r16.zip](https://dl-ssl.google.com/android/repository/android_m2repository_r16.zip) &ndash; 0595E577D19D31708195A83087881EE6
 
-    Si el **m2repository** archivo no se muestra en esta tabla, puede crear la dirección URL de descarga anteponiendo  **https://dl-ssl.google.com/android/repository/**  en el nombre de la **m2repository** para descargar. Por ejemplo, utilice  **https://dl-ssl.google.com/android/repository/android \_m2repository\_r10.zip** para descargar **android\_m2repository\_r10.zip**.
+    Si el **m2repository** archivo no se muestra en esta tabla, puede crear la dirección URL de descarga anteponiendo **https://dl-ssl.google.com/android/repository/** en el nombre de la **m2repository** para descargar. Por ejemplo, utilice  **https://dl-ssl.google.com/android/repository/android \_m2repository\_r10.zip** para descargar **android\_m2repository\_r10.zip**.
 
 2.  Cambie el nombre del archivo con el hash de MD5 correspondiente de la URL de descarga, como se muestra en la tabla anterior. Por ejemplo, si ha descargado **android\_m2repository\_r25.zip**, cambie su nombre a **0B3F1796C97C707339FB13AE8507AF50.zip**. Si el hash MD5 para la URL de descarga del archivo descargado no se muestra en la tabla, puede usar un [en línea generador MD5](http://www.webconfs.com/online-md5-generator.php) para convertir la dirección URL en una cadena de hash MD5. 
 

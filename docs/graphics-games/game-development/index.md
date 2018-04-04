@@ -1,18 +1,17 @@
 ---
-title: "Introducción al desarrollo de juegos con Xamarin"
-description: "La naturaleza del desarrollo de juegos puede diferir considerablemente desde el desarrollo de otros tipos de aplicaciones. Este artículo es una introducción al desarrollo de juegos que ofrece tecnologías que pueden utilizarse con Xamarin.iOS y Xamarin.Android. Proporciona un análisis de alto nivel de cómo se realizan los juegos y un muestreo de tecnologías disponibles para su uso con Xamarin.iOS y Xamarin.Android."
-ms.topic: article
+title: Introducción al desarrollo de juegos con Xamarin
+description: La naturaleza del desarrollo de juegos puede diferir considerablemente desde el desarrollo de otros tipos de aplicaciones. Este artículo es una introducción al desarrollo de juegos que ofrece tecnologías que pueden utilizarse con Xamarin.iOS y Xamarin.Android. Proporciona un análisis de alto nivel de cómo se realizan los juegos y un muestreo de tecnologías disponibles para su uso con Xamarin.iOS y Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 9d1ce2da87d6f169efb5431f734695f6876cf3f0
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b2df6d431004bbfa140b6cae1d069404af92c1df
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introducción al desarrollo de juegos con Xamarin
 
@@ -97,8 +96,8 @@ Algunas canalizaciones contenidos pueden ser muy rápida y no requerir ninguna i
 Desarrollo de juegos presenta nuevos roles y títulos para los usuarios implicados en el proceso. La mayoría de los desarrolladores de juegos no pueden satisfacer el amplio conjunto de destrezas necesarias para liberar un juego completo, por lo que existe un número de disciplinas. Tenga en cuenta que esto no es una lista completa de las áreas de desarrollo: solo algunas de las más comunes.
 
 - **Programador** : la mayoría de los usuarios leer este artículo entrarán dentro de esta categoría. El rol de programador en el desarrollo de juego es similar al rol del programador en una aplicación de juego no. Responsabilidades incluyen la lógica para controlar el flujo de un juego, desarrollo de sistemas para tareas comunes en el contexto de un proyecto determinado, agregar y mostrar el contenido y, por supuesto: corrige los errores de escritura.
-- **Intérprete 2D** – intérpretes 2D son responsables de crear *2D activos*. Incluyen archivos de imagen para la interfaz gráfica de usuario, partículas, entornos y caracteres del juego. Si el juego que está desarrollando es 3D, artistas 2D no pueden ser responsables de entornos y caracteres. Puede encontrar libre carátula de su juego en [http://opengameart.org/](http://opengameart.org/) .
-- **Intérpretes 3D** – intérpretes 3D son responsables de crear *activos 3D*. Esto incluye los modelos 3D para entornos y caracteres, props (mobiliario, plantas y otros objetos inanimados). Algunos equipos de diferencian entre intérpretes 3D y animadores 3D según el tamaño del equipo. Puede encontrar libre material gráfico 3D para tu juego en [http://opengameart.org/](http://opengameart.org/) .
+- **Intérprete 2D** – intérpretes 2D son responsables de crear *2D activos*. Incluyen archivos de imagen para la interfaz gráfica de usuario, partículas, entornos y caracteres del juego. Si el juego que está desarrollando es 3D, artistas 2D no pueden ser responsables de entornos y caracteres. Puede encontrar libre carátula de su juego en [ http://opengameart.org/ ](http://opengameart.org/) .
+- **Intérpretes 3D** – intérpretes 3D son responsables de crear *activos 3D*. Esto incluye los modelos 3D para entornos y caracteres, props (mobiliario, plantas y otros objetos inanimados). Algunos equipos de diferencian entre intérpretes 3D y animadores 3D según el tamaño del equipo. Puede encontrar libre material gráfico 3D para tu juego en [ http://opengameart.org/ ](http://opengameart.org/) .
 - **Diseñador de juegos** – diseñadores juegos están responsables de definir cómo se reproduce el juego. Esto puede incluir las decisiones de alto nivel, como la configuración de la partida, el objetivo global de la partida y cómo progresa un Reproductor a través del juego. Diseñadores de juego también pueden participar en las decisiones muy detalladas como entrada de asignación a las acciones, definir coeficientes de movimiento o nivel de seguridad y diseñar el diseño del nivel. Tenga en cuenta que el término *diseñador* pueden hacer referencia a un juego diseñador o en un diseñador visual dependiendo del contexto.
 - **Diseñador de sonido** – diseñadores sonidos son responsables de activos de audio de un juego. Algunos equipos pueden distinguir entre los usuarios responsables de crear los efectos de sonido y compositores, mientras que los equipos más pequeños pueden tener un único individuo responsable de todo el audio.
 
@@ -171,9 +170,9 @@ Extraer del repositorio el [UrhoSharp guías](~/graphics-games/urhosharp/index.m
 
 Las tecnologías destacadas anteriormente es sólo un ejemplo de las tecnologías disponibles. Otras tecnologías importantes son:
 
-- **Kit de Sprite** – Xamarin proporciona compatibilidad para el marco de juegos de Sprite Kit de Apple, que proporciona acceso a toda la funcionalidad de la API nativa. Puesto que el Kit de Sprite tecnología creada por Apple, proporciona fuerte integración con el resto del ecosistema de iOS. Por supuesto, Sprite Kit no es multiplataforma, por lo que no se puede usar en Android. Para obtener más información sobre el uso de Sprite Kit, vea esta entrada: [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
-- **Kit de escena** – Xamarin también proporciona compatibilidad para el marco de escena Kit de Apple, que simplifica la implementación de gráficos 3D en aplicaciones de iOS. Kit de escena también es tecnología proporcionada por Apple, por lo que tiene la integración y consideraciones específicas de la plataforma mencionadas anteriormente para Sprite Kit. Para obtener más información sobre el Kit de escena, consulte esta publicación: [http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
-- **OpenTK –** OpenTK (que es el acrónimo abra Kit de herramientas) proporciona acceso de bajo nivel OpenGL para Mac, iOS y Apple hardware. Para obtener más información sobre OpenTK, vea la página principal en: [http://www.opentk.com/](http://www.opentk.com/)
+- **Kit de Sprite** – Xamarin proporciona compatibilidad para el marco de juegos de Sprite Kit de Apple, que proporciona acceso a toda la funcionalidad de la API nativa. Puesto que el Kit de Sprite tecnología creada por Apple, proporciona fuerte integración con el resto del ecosistema de iOS. Por supuesto, Sprite Kit no es multiplataforma, por lo que no se puede usar en Android. Para obtener más información sobre el uso de Sprite Kit, vea esta entrada:  [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
+- **Kit de escena** – Xamarin también proporciona compatibilidad para el marco de escena Kit de Apple, que simplifica la implementación de gráficos 3D en aplicaciones de iOS. Kit de escena también es tecnología proporcionada por Apple, por lo que tiene la integración y consideraciones específicas de la plataforma mencionadas anteriormente para Sprite Kit. Para obtener más información sobre el Kit de escena, vea esta entrada: [http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
+- **OpenTK –** OpenTK (que es el acrónimo abra Kit de herramientas) proporciona acceso de bajo nivel OpenGL para Mac, iOS y Apple hardware. Para obtener más información sobre OpenTK, vea la página principal en:  [http://www.opentk.com/](http://www.opentk.com/)
 
 
 # <a name="summary"></a>Resumen

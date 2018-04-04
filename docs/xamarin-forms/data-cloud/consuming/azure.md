@@ -1,18 +1,17 @@
 ---
-title: "Consumir una aplicación móvil de Azure"
-description: "Aplicaciones móviles de Azure le permiten desarrollar aplicaciones con back-ends de escalable hospedado en el servicio de aplicación de Azure, con compatibilidad para la autenticación de dispositivos móvil, sincronización sin conexión y las notificaciones de inserción. En este artículo, que sólo es aplicable a las aplicaciones móviles de Azure que usan un back-end de Node.js, explica cómo consultar, insertar, actualizar y eliminar los datos almacenados en una tabla en una instancia de aplicaciones móviles de Azure."
-ms.topic: article
+title: Consumir una aplicación móvil de Azure
+description: Aplicaciones móviles de Azure le permiten desarrollar aplicaciones con back-ends de escalable hospedado en el servicio de aplicación de Azure, con compatibilidad para la autenticación de dispositivos móvil, sincronización sin conexión y las notificaciones de inserción. En este artículo, que sólo es aplicable a las aplicaciones móviles de Azure que usan un back-end de Node.js, explica cómo consultar, insertar, actualizar y eliminar los datos almacenados en una tabla en una instancia de aplicaciones móviles de Azure.
 ms.prod: xamarin
 ms.assetid: 2B3EFD0A-2922-437D-B151-4B4DE46E2095
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 5b087700e3a5276e19454a8dafedb508758b7b71
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e2e9e2c05d3f6e467fd47b31af4f53049aab2709
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-an-azure-mobile-app"></a>Consumir una aplicación móvil de Azure
 

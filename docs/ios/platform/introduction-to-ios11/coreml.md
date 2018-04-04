@@ -1,18 +1,17 @@
 ---
-title: "Introducción a CoreML"
-description: "Aprendizaje para las aplicaciones móviles en iOS 11 automático"
-ms.topic: article
+title: Introducción a CoreML
+description: Aprendizaje para las aplicaciones móviles en iOS 11 automático
 ms.prod: xamarin
 ms.assetid: BE1E2CA1-E3AE-4C90-914C-CFDBD1DCB82B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/30/2016
-ms.openlocfilehash: 0932130275cd037b3d4414c9c7a421dbee360eeb
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 412a534829349dbbc3f3b76b166882fa6e0e1cd1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-coreml"></a>Introducción a CoreML
 

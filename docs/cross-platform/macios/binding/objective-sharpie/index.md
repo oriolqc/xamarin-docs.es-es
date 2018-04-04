@@ -1,18 +1,17 @@
 ---
 title: Sharpie objetivo
-description: "Esta sección proporciona una introducción al objetivo Sharpie, herramienta de línea de comandos de Xamarin utilizado para automatizar el proceso de creación de un enlace a una biblioteca Objective-c."
-ms.topic: article
+description: Esta sección proporciona una introducción al objetivo Sharpie, herramienta de línea de comandos de Xamarin utilizado para automatizar el proceso de creación de un enlace a una biblioteca Objective-c.
 ms.prod: xamarin
 ms.assetid: 9C0A932C-7601-4357-B3F7-62ABAC835019
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: 08796d38301ba9c6ae15c3ddfe700b1cd2166ace
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 4341aa7d2ea0bec88e9c36c1804c5a909fd6fd5c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="objective-sharpie"></a>Sharpie objetivo
 

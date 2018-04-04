@@ -1,18 +1,17 @@
 ---
-title: "Pantalla de presentación"
-description: "Una aplicación Android tarda algún tiempo en iniciarse, especialmente cuando la aplicación se inició por primera vez en un dispositivo. Una pantalla de presentación puede mostrar Inicio progreso al usuario o para indicar la personalización de marca una copia de seguridad."
-ms.topic: article
+title: Pantalla de presentación
+description: Una aplicación Android tarda algún tiempo en iniciarse, especialmente cuando la aplicación se inició por primera vez en un dispositivo. Una pantalla de presentación puede mostrar Inicio progreso al usuario o para indicar la personalización de marca una copia de seguridad.
 ms.prod: xamarin
 ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 9f88899d390f7f268f1b2f435617dc952f9eb205
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f34a3ee44b604bf0b82faf77769f3c2844e6460f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="splash-screen"></a>Pantalla de presentación
 

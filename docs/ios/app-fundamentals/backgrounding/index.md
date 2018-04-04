@@ -1,17 +1,16 @@
 ---
 title: Backgrounding
-description: "Fondo de procesamiento o backgrounding es el proceso de permitir que las aplicaciones realizar tareas en segundo plano mientras se está ejecutando otra aplicación en primer plano. Esta guía sirve como una introducción al procesamiento de iOS en segundo plano."
-ms.topic: article
+description: Fondo de procesamiento o backgrounding es el proceso de permitir que las aplicaciones realizar tareas en segundo plano mientras se está ejecutando otra aplicación en primer plano. Esta guía sirve como una introducción al procesamiento de iOS en segundo plano.
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 2bba7c0908fb78ca199cc654adad645afaf47a02
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: ae3e732008c6503f511dc4be9cad874ecfe1272d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="backgrounding"></a>Backgrounding
 
@@ -25,11 +24,11 @@ En esta guía y que acompaña a tutoriales, vamos a aprender a realizar tareas d
 
 ## <a name="contents"></a>Contenido
 
-1.  [Introducción a Backgrounding en iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
-1.  [Demostración de ciclo de vida de la aplicación](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
-1.  [Técnicas de Backgrounding de iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
-1.  [Tutoriales: Backgrounding en iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
-1.  [iOS Backgrounding instrucciones](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)
+1.  [Introducción al procesamiento en segundo plano en iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
+1.  [Demostración del ciclo de vida de la aplicación](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
+1.  [Técnicas de procesamiento en segundo plano de iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
+1.  [Tutoriales: procesamiento en segundo plano en iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+1.  [Guía del procesamiento en segundo plano de iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)
 
 ## <a name="summary"></a>Resumen
 

@@ -1,18 +1,17 @@
 ---
 title: Implementar una vista
-description: "Xamarin.Forms controles de la interfaz de usuario personalizado deben derivar de la clase de vista, que se utiliza para colocar controles en la pantalla y diseños. Este artículo demuestra cómo crear a un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo de vista previa de la cámara del dispositivo."
-ms.topic: article
+description: Xamarin.Forms controles de la interfaz de usuario personalizado deben derivar de la clase de vista, que se utiliza para colocar controles en la pantalla y diseños. Este artículo demuestra cómo crear a un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo de vista previa de la cámara del dispositivo.
 ms.prod: xamarin
 ms.assetid: 915E25E7-4A6B-4F34-B7B4-07D5F4B240F2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 30ee40272b5f7a6f5863dccf4dcae7431f6f536f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e84427ba576528ed76f5885605c423bf6499d20c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="implementing-a-view"></a>Implementar una vista
 

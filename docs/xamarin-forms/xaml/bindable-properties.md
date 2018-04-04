@@ -1,18 +1,17 @@
 ---
 title: Propiedades enlazables
-description: "En Xamarin.Forms, se amplía la funcionalidad de common language runtime (CLR) propiedades propiedades enlazables. Una propiedad enlazable es un tipo especial de propiedad, donde se realiza el seguimiento de valor de la propiedad por el sistema de propiedades de Xamarin.Forms. Este artículo proporciona una introducción a las propiedades enlazables y muestra cómo crear y consumirlos."
-ms.topic: article
+description: En Xamarin.Forms, se amplía la funcionalidad de common language runtime (CLR) propiedades propiedades enlazables. Una propiedad enlazable es un tipo especial de propiedad, donde se realiza el seguimiento de valor de la propiedad por el sistema de propiedades de Xamarin.Forms. Este artículo proporciona una introducción a las propiedades enlazables y muestra cómo crear y consumirlos.
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/02/2016
-ms.openlocfilehash: ab8c4cfd92a048efb87f7508e53fc024a9c46405
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 7e1d3c82036ef703014ae548a6719937e89d22f4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="bindable-properties"></a>Propiedades enlazables
 

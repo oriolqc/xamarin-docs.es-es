@@ -1,17 +1,16 @@
 ---
-title: "Introducción a MonoTouch.Dialog"
-description: "El MonoTouch.Dialog (MT D) el Kit de herramientas es un marco de trabajo indispensable para el desarrollo de la interfaz de usuario en Xamarin.iOS rápido de aplicaciones. MONTE D. facilita la rápida y sencilla definir la interfaz de usuario mediante un enfoque declarativo, en lugar de la tarea de controladores de navegación, tablas, etcetera de aplicación compleja. Además, monte D tiene un conjunto flexible de las API que proporcionan a los programadores con un control completo o entrega el enfoque, así como otras características, como la imagen de fondo de deslizar para actualizar, cargar, buscar soporte técnico y la generación dinámica de interfaz de usuario a través de los datos JSON. Esta guía presentan las diferentes maneras de trabajar con MT D. y, a continuación, se adentra en uso avanzado de profundidad."
-ms.topic: article
+title: Introducción a MonoTouch.Dialog
+description: El MonoTouch.Dialog (MT D) el Kit de herramientas es un marco de trabajo indispensable para el desarrollo de la interfaz de usuario en Xamarin.iOS rápido de aplicaciones. MONTE D. facilita la rápida y sencilla definir la interfaz de usuario mediante un enfoque declarativo, en lugar de la tarea de controladores de navegación, tablas, etcetera de aplicación compleja. Además, monte D tiene un conjunto flexible de las API que proporcionan a los programadores con un control completo o entrega el enfoque, así como otras características, como la imagen de fondo de deslizar para actualizar, cargar, buscar soporte técnico y la generación dinámica de interfaz de usuario a través de los datos JSON. Esta guía presentan las diferentes maneras de trabajar con MT D. y, a continuación, se adentra en uso avanzado de profundidad.
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: b9bf4c5ee803aa60a2730703e64fcf73d07efdb5
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: be979b35ffdd597dae74f1f661a381ae44433b10
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-monotouchdialog"></a>Introducción a MonoTouch.Dialog
 

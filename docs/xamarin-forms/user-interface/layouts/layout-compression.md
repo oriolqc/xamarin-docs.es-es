@@ -1,18 +1,17 @@
 ---
-title: "Compresión de diseño"
-description: "Compresión de diseño quita diseños especificados del árbol visual en un intento de mejorar el rendimiento de la presentación de página. En este artículo se explica cómo habilitar la compresión de diseño y los beneficios que puede ofrecer."
-ms.topic: article
+title: Compresión de diseño
+description: Compresión de diseño quita diseños especificados del árbol visual en un intento de mejorar el rendimiento de la presentación de página. En este artículo se explica cómo habilitar la compresión de diseño y los beneficios que puede ofrecer.
 ms.prod: xamarin
 ms.assetid: da9e1b26-9d31-4762-94c3-4039f306b7f2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2017
-ms.openlocfilehash: e03acbbac737bffd21ee3b592ab017d227f822ad
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9c698d539ab671ee2a033ae5943a46e0cc870f76
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="layout-compression"></a>Compresión de diseño
 

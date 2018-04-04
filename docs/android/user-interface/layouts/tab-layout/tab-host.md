@@ -1,18 +1,17 @@
 ---
-title: "Pestaña diseño con TabHost"
-description: "En este artículo le proporcionará una introducción de alto nivel de la la TabHost, una API más antiguos que se utilizan para crear los diseños con pestañas en una aplicación Xamarin.Android."
-ms.topic: article
+title: Pestaña diseño con TabHost
+description: En este artículo le proporcionará una introducción de alto nivel de la la TabHost, una API más antiguos que se utilizan para crear los diseños con pestañas en una aplicación Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 77B890A4-27A6-41DF-81BA-22C6116A8FB2
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 10/25/2017
-ms.openlocfilehash: e27557c65d2b3049457640a3492d090c5fa26a43
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: ae5b9020e08575bcd453703f3df14f63b288d2f5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="tab-layout-with-tabhost"></a>Pestaña diseño con TabHost
 

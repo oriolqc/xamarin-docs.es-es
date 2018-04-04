@@ -1,18 +1,17 @@
 ---
 title: comportamientos
-description: "Comportamientos le permite agregar funcionalidad a los controles de interfaz de usuario sin tener que subclase ellos. Comportamientos se escriben en código y agregar a controles en XAML o en código."
-ms.topic: article
+description: Comportamientos le permite agregar funcionalidad a los controles de interfaz de usuario sin tener que subclase ellos. Comportamientos se escriben en código y agregar a controles en XAML o en código.
 ms.prod: xamarin
 ms.assetid: 42E32AD7-8E3B-48B3-B402-E75B758DA913
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: b17b0c97ac5a8e81372a6e2814639a06c3f7a968
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: e5eef459c340764d9d373b42ac594f78c042a4de
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="behaviors"></a>comportamientos
 
@@ -22,7 +21,7 @@ _Comportamientos le permite agregar funcionalidad a los controles de interfaz de
 
 Comportamientos le permiten implementar el código que normalmente tendría que escribir como código subyacente, porque interactúa directamente con la API del control de forma que se puede conectar concisa para el control. Este artículo proporciona una introducción a los comportamientos.
 
-## <a name="attached-behaviorsattachedmd"></a>[Otros comportamientos adjuntados](attached.md)
+## <a name="attached-behaviorsattachedmd"></a>[Comportamientos asociados](attached.md)
 
 Adjunta los comportamientos son `static` clases con una o varias propiedades adjuntas. Este artículo demuestra cómo crear y utilizar los comportamientos adjuntos.
 

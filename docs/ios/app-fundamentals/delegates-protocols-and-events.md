@@ -1,18 +1,17 @@
 ---
 title: Eventos, protocolos y delegados
-description: "En este artículo se presenta la tecnología de iOS clave usada para recibir devoluciones de llamada y para rellenar los controles de interfaz de usuario con datos. Estas tecnologías son eventos, protocolos y delegados. Este artículo explica lo que cada uno de ellos es y cómo se usa cada uno en C#. Muestra cómo Xamarin.iOS usa controles de iOS para exponer familiarizado .NET eventos, así como la Xamarin.iOS proporciona compatibilidad para Objective-C conceptos como los protocolos y los delegados (delegados Objective-C no deben confundirse con los delegados de C#). En este artículo también proporciona ejemplos que muestran cómo se utilizan protocolos: tanto como base para los delegados de Objective-C y en escenarios no delegado."
-ms.topic: article
+description: 'En este artículo se presenta la tecnología de iOS clave usada para recibir devoluciones de llamada y para rellenar los controles de interfaz de usuario con datos. Estas tecnologías son eventos, protocolos y delegados. Este artículo explica lo que cada uno de ellos es y cómo se usa cada uno en C#. Muestra cómo Xamarin.iOS usa controles de iOS para exponer familiarizado .NET eventos, así como la Xamarin.iOS proporciona compatibilidad para Objective-C conceptos como los protocolos y los delegados (delegados Objective-C no deben confundirse con los delegados de C#). En este artículo también proporciona ejemplos que muestran cómo se utilizan protocolos: tanto como base para los delegados de Objective-C y en escenarios no delegado.'
 ms.prod: xamarin
 ms.assetid: 7C07F0B7-9000-C540-0FC3-631C29610447
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 69296992c503d536a4160f172022c7ce5578812f
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 4c2888eb2d0b1ae79e10ca764e7bf14a1afb6c59
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="events-protocols-and-delegates"></a>Eventos, protocolos y delegados
 

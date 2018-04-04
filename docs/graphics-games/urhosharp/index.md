@@ -1,18 +1,17 @@
 ---
 title: UrhoSharp - motor 2D o 3D
-description: "UrhoSharp es un motor 2D y 3D de alto nivel de multiplataforma que puede usarse para crear escenas 3D y 2D animados para sus aplicaciones mediante los objetos Geometry, materiales, luces y cámaras."
-ms.topic: article
+description: UrhoSharp es un motor 2D y 3D de alto nivel de multiplataforma que puede usarse para crear escenas 3D y 2D animados para sus aplicaciones mediante los objetos Geometry, materiales, luces y cámaras.
 ms.prod: xamarin
 ms.assetid: E6C5B86C-3756-49DF-843B-0B3D981E1C01
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 747c38c4a279b740bf52645c00df85ea9357f4a5
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: c8df53d90ab1245aecff3eab1393c009b7910aa5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="urhosharp---3d2d-engine"></a>UrhoSharp - motor 2D o 3D
 
@@ -26,7 +25,7 @@ UrhoSharp se distribuye como un paquete de NuGet que puede instalarse en Visual 
 
 Este artículo proporciona una descripción general de UrhoSharp y sus capacidades de visualización 3D y para su uso en juegos 3D simples.
 
-##  <a name="using-urhosharpgraphics-gamesurhosharpusingmd"></a>[Usar UrhoSharp](~/graphics-games/urhosharp/using.md)
+##  <a name="using-urhosharpgraphics-gamesurhosharpusingmd"></a>[Uso de UrhoSharp](~/graphics-games/urhosharp/using.md)
 
 En este documento se describen los conceptos básicos de UrhoSharp que le gustaría usar para compilar un juego o crear una visualización 3D para la aplicación.
 
@@ -62,7 +61,7 @@ Esta documentación contiene contenido original de Xamarin Inc., pero dibuja amp
 
 ## <a name="license"></a>Licencia
 
-La licencia de UrhoSharp está disponible en la [http://download.xamarin.com/content/licenses/URHO.LICENSE](http://download.xamarin.com/content/licenses/URHO.LICENSE)
+La licencia de UrhoSharp está disponible en el [http://download.xamarin.com/content/licenses/URHO.LICENSE](http://download.xamarin.com/content/licenses/URHO.LICENSE)
 
 
 

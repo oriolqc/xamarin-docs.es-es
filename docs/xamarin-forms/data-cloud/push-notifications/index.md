@@ -1,18 +1,17 @@
 ---
-title: "Enviar notificaciones de inserción"
-description: "Una notificación de inserción se utiliza para proporcionar información, como un mensaje desde un sistema back-end a una aplicación en un dispositivo móvil para aumentar el uso y la interacción de la aplicación. La notificación puede enviarse en cualquier momento, incluso cuando el usuario no esté usando activamente la aplicación de destino."
-ms.topic: article
+title: Enviar notificaciones de inserción
+description: Una notificación de inserción se utiliza para proporcionar información, como un mensaje desde un sistema back-end a una aplicación en un dispositivo móvil para aumentar el uso y la interacción de la aplicación. La notificación puede enviarse en cualquier momento, incluso cuando el usuario no esté usando activamente la aplicación de destino.
 ms.prod: xamarin
 ms.assetid: F58D2D81-FFAF-43DD-8A9B-3684DFEAA99D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: 07995fe53387e9939d21f86ddcf7f9fb494b1a98
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 595c7db89bf8804c34657a6119d7c3427fc1d2b3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="sending-push-notifications"></a>Enviar notificaciones de inserción
 

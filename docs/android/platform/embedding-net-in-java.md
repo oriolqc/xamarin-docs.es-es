@@ -1,18 +1,17 @@
 ---
 title: La incrustación de .NET en Java
 description: Cómo utilizar una biblioteca .NET de Xamarin en un proyecto de Android nativo basado en Java
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A489EEF3-1008-4257-BF63-FE21D8C23821
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/28/2018
-ms.openlocfilehash: f0da12d739c6003257d3acf9ccefdec7e36f5349
-ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
+ms.openlocfilehash: 0ca855975db4b20fe80e98e2e818b8fde27f558c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="embedding-net-in-java"></a>La incrustación de .NET en Java
 

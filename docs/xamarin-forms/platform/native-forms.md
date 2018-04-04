@@ -1,18 +1,17 @@
 ---
 title: Formularios nativos
-description: "Formas nativas permiten un uso derivados Xamarin.Forms contenidoPage páginas a ser consumidos por los proyectos nativos de Xamarin.iOS y Xamarin.Android, plataforma Universal de Windows (UWP). Los proyectos nativos pueden consumir derivado contenidoPage páginas que se agregan directamente al proyecto, o desde una biblioteca de clases portables (PCL), la biblioteca estándar de .NET o el proyecto compartido. Este artículo explica cómo consumir derivado contenidoPage páginas que se agregan directamente a los proyectos nativos y cómo navegar entre ellos."
-ms.topic: article
+description: Formas nativas permiten un uso derivados Xamarin.Forms contenidoPage páginas a ser consumidos por los proyectos nativos de Xamarin.iOS y Xamarin.Android, plataforma Universal de Windows (UWP). Los proyectos nativos pueden consumir derivado contenidoPage páginas que se agregan directamente al proyecto, o desde una biblioteca de clases portables (PCL), la biblioteca estándar de .NET o el proyecto compartido. Este artículo explica cómo consumir derivado contenidoPage páginas que se agregan directamente a los proyectos nativos y cómo navegar entre ellos.
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: 5a7d4ab69ff3ccd1a50ea4fccb6e494f7c73fc72
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 9d0d4e69228ce8a1d9944833bff80b22ea5f9ddd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="native-forms"></a>Formularios nativos
 

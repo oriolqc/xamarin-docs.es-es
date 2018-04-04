@@ -1,18 +1,17 @@
 ---
 title: Pasar argumentos en XAML
 description: Este artículo muestra cómo utilizar los atributos XAML que pueden utilizarse para pasar argumentos a los constructores no predeterminados para llamar a métodos de generador y para especificar el tipo de argumento genérico.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8F3B267F-499E-4D79-9193-FCA99F199519
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2016
-ms.openlocfilehash: 232f60bb7afca7acf73e63bd7e11e1b6ec47fbd2
-ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
+ms.openlocfilehash: 8d3a7fd7534ccc5eca1432e7f4656c8d0652b126
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="passing-arguments-in-xaml"></a>Pasar argumentos en XAML
 

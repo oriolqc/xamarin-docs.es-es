@@ -1,18 +1,17 @@
 ---
 title: Alertas
-description: "Este artículo explica cómo trabajar con alertas en una aplicación Xamarin.Mac. Describe cómo crear y mostrar las alertas desde el código C# y responde a las interacciones del usuario."
-ms.topic: article
+description: Este artículo explica cómo trabajar con alertas en una aplicación Xamarin.Mac. Describe cómo crear y mostrar las alertas desde el código C# y responde a las interacciones del usuario.
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 8901bb57ace4f05e8c26fdc43dfe8c476927903a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a451d0a5535915d9e52f687ae07ea028c0ccd5ef
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="alerts"></a>Alertas
 

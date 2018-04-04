@@ -1,18 +1,17 @@
 ---
-title: "Orientación del dispositivo"
-description: "Entender cómo diseñar aplicaciones que tengan un aspecto excelentes en orientación vertical y horizontal."
-ms.topic: article
+title: Orientación del dispositivo
+description: Entender cómo diseñar aplicaciones que tengan un aspecto excelentes en orientación vertical y horizontal.
 ms.prod: xamarin
 ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: cb17c224fc6102d9e0dc25853c2222734299647a
-ms.sourcegitcommit: 5fc1c4d17cd9c755604092cf7ff038a6358f8646
+ms.openlocfilehash: 9d1b10925f1455c303950eff342764b1fbc9275d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="device-orientation"></a>Orientación del dispositivo
 
@@ -88,9 +87,9 @@ Xamarin.Android admite varias opciones para especificar la orientación:
 - **ReversePortrait** &ndash; hace que la aplicación utilizar la orientación vertical, orientada hacia la dirección opuesta de habitual, de forma que aparezca "boca abajo".
 - **FullSensor** &ndash; hace que la aplicación confiar en los datos de sensor para seleccionar la orientación correcta (fuera de los 4 posibles).
 - **FullUser** &ndash; hace que la aplicación usar las preferencias del usuario orientación. Si está habilitada la rotación automática, pueden utilizar todas las 4 orientaciones.
-- **UserLandscape** &ndash;  _\[no admite\]_  hace que la aplicación utilizar la orientación horizontal, a menos que el usuario tiene la rotación automática está habilitada, en cuyo caso utilizará el sensor para determinar la orientación. Esta opción interrumpirá la compilación.
-- **UserPortrait** &ndash;  _\[no admite\]_  hace que la aplicación utilizar la orientación vertical, a menos que el usuario tiene la rotación automática está habilitada, en cuyo caso utilizará el sensor para determinar la orientación. Esta opción interrumpirá la compilación.
-- **Bloqueado** &ndash;  _\[no admite\]_  hace que la aplicación usar la orientación de la pantalla, lo que resulta en el inicio, sin responder a los cambios en el dispositivo de la física orientación. Esta opción interrumpirá la compilación.
+- **UserLandscape** &ndash; _\[no admite\]_ hace que la aplicación utilizar la orientación horizontal, a menos que el usuario tiene la rotación automática está habilitada, en cuyo caso utilizará el sensor para determinar la orientación. Esta opción interrumpirá la compilación.
+- **UserPortrait** &ndash; _\[no admite\]_ hace que la aplicación utilizar la orientación vertical, a menos que el usuario tiene la rotación automática está habilitada, en cuyo caso utilizará el sensor para determinar la orientación. Esta opción interrumpirá la compilación.
+- **Bloqueado** &ndash; _\[no admite\]_ hace que la aplicación usar la orientación de la pantalla, lo que resulta en el inicio, sin responder a los cambios en el dispositivo de la física orientación. Esta opción interrumpirá la compilación.
 
 Tenga en cuenta que las API nativas de Android proporcionan mucho control sobre cómo se administra la orientación, incluidas las opciones que contradicen explícitamente al usuario expresan las preferencias.
 

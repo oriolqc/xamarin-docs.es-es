@@ -1,17 +1,17 @@
 ---
-title: "Preguntas más frecuentes sobre licencias heredadas"
-ms.topic: article
+title: Preguntas más frecuentes sobre licencias heredadas
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: E7137ABE-9B34-4C36-BEE6-B2601183CD38
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 934c3cc2d5e506fc9f39137a9cee2d1f7d59f13e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 020c263a18f72e9837fcaa3dea2d54177245efb8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="legacy-license-frequently-asked-questions"></a>Preguntas más frecuentes sobre licencias heredadas
 
@@ -22,13 +22,13 @@ ms.lasthandoff: 02/27/2018
 ### <a name="team-license-managementteam-managementmd"></a>[Administración de licencias de equipo](team-management.md)
 Si tiene un puesto de licencia de Xamarin vacía, puede invitar a un miembro del equipo para ocupar siguiendo estos pasos.
 
-### <a name="how-do-i-change-my-accounts-email-addresschange-emailmd"></a>[¿Cómo se cambia la dirección de correo electrónico de mi cuenta?](change-email.md)
+### <a name="how-do-i-change-my-accounts-email-addresschange-emailmd"></a>[¿Cómo se puede cambiar la dirección de correo electrónico de mi cuenta?](change-email.md)
 Para cambiar la dirección de correo electrónico asociada a su cuenta de Xamarin, envíe un correo electrónico [ hello@xamarin.com ](mailto:hello@xamarin.com) desde la dirección asociada a su Xamarin cuenta e indicar la dirección nueva que le gustaría usar. 
 
-### <a name="how-do-i-manually-resynchronize-xamarin-licensesresync-licensesmd"></a>[¿Cómo sincronizar manualmente licencias de Xamarin?](resync-licenses.md)
+### <a name="how-do-i-manually-resynchronize-xamarin-licensesresync-licensesmd"></a>[¿Cómo se resincronizan manualmente licencias de Xamarin?](resync-licenses.md)
 Esta guía proporciona pasos básicos y extendidos para resyncronizing las licencias de la plataforma Xamarin para solucionar los errores de activación para heredado titulares de licencia de Xamarin.
 
-### <a name="some-specific-licensing-errorslicensing-errorsmd"></a>[Algunos errores de licencias específicos](licensing-errors.md)
+### <a name="some-specific-licensing-errorslicensing-errorsmd"></a>[Algunos errores específicos sobre licencias](licensing-errors.md)
 Esta guía incluye mensajes de error comunes y los pasos para solucionar problemas de las licencias de plataforma Xamarin heredados.
 
 ### <a name="why-cant-i-log-into-xamarin-in-visual-studio-or-visual-studio-for-maclogin-troubleshootingmd"></a>[¿Por qué no se puede registrar en Xamarin en Visual Studio o Visual Studio para Mac?](login-troubleshooting.md)

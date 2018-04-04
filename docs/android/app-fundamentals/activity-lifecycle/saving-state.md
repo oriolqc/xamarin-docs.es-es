@@ -1,18 +1,17 @@
 ---
 title: 'Tutorial: guardar el estado de actividad'
-description: "Hemos tratado la teoría de guardar el estado en la Guía del ciclo de vida de actividad; Ahora, veamos un ejemplo."
-ms.topic: article
+description: Hemos tratado la teoría de guardar el estado en la Guía del ciclo de vida de actividad; Ahora, veamos un ejemplo.
 ms.prod: xamarin
 ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: d8b44fb7f0e60db407271fd84899489bf8e65694
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: e282eeb8732bd5294da4ec4e3fe337e81107c8f3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="walkthrough---saving-the-activity-state"></a>Tutorial: guardar el estado de actividad
 

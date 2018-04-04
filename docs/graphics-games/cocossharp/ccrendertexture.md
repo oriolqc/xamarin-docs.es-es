@@ -1,17 +1,16 @@
 ---
 title: Rendimiento y efectos visuales con CCRenderTexture
 description: CCRenderTexture permite a los desarrolladores a mejorar el rendimiento de sus juegos, CocosSharp al reducir las llamadas a draw y puede utilizarse para crear efectos visuales. Esta guía incluye en el ejemplo CCRenderTexture para proporcionar un ejemplo práctico de cómo utilizar esta clase de forma eficaz.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F02147C2-754B-4FB4-8BE0-8261F1C5F574
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 36661344fc0f4b9e132e3f721c50f82f3a8db057
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 25eba08c1c72ba6fefd39b949b504f8e6fabe983
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>Rendimiento y efectos visuales con CCRenderTexture
 

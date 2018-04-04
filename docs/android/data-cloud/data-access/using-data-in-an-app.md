@@ -1,17 +1,16 @@
 ---
-title: "Utilizando los datos en una aplicación"
-ms.topic: article
+title: Utilizando los datos en una aplicación
 ms.prod: xamarin
 ms.assetid: D5932AEB-0B6E-4F37-8B32-9BE4775AEE85
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: 5350317c82d1073d7679843272e3215634f91217
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: dd2a0a58a3a8c10671609aa385629d4754ca5378
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-data-in-an-app"></a>Utilizando los datos en una aplicación
 

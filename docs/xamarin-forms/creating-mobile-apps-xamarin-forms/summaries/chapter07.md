@@ -1,17 +1,16 @@
 ---
-title: "Resumen del capítulo 7. XAML frente a código"
-ms.topic: article
+title: Resumen del capítulo 7. XAML frente a código
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 1104f7576cabfed9988154f3b6a8beb429136fb3
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 97f1ad1f818c74a294421f223c4cea0123b83373
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>Resumen del capítulo 7. XAML frente a código
 

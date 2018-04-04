@@ -1,18 +1,17 @@
 ---
 title: watchOS
 description: Compilar aplicaciones para Apple Watch con Xamarin
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 14EAE85E-460A-4145-8C8D-869D176D5C3F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 062c53a855051e70329ec18f6c69253b5ee68e7b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 5634306836b5fe0255a5d4cdf49013441206dd5f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="watchos"></a>watchOS
 
@@ -36,7 +35,7 @@ Información general breve de los controles incluidos en la aplicación de ejemp
 
 Cómo incluir características específicas de watchOS como [notificaciones](~/ios/watchos/platform/notifications.md) y [complicaciones](~/ios/watchos/platform/complications.md) en aplicaciones de inspección.
 
-##  <a name="app-fundamentalsioswatchosapp-fundamentalsindexmd"></a>[Aspectos básicos de la aplicación](~/ios/watchos/app-fundamentals/index.md)
+##  <a name="app-fundamentalsioswatchosapp-fundamentalsindexmd"></a>[Principios de la aplicación](~/ios/watchos/app-fundamentals/index.md)
 
 Trabajar con distintos aspectos de la API, watchOS incluido el [principal aplicación](~/ios/watchos/app-fundamentals/parent-app.md), [iconos](~/ios/watchos/app-fundamentals/icons.md), [diseño](~/ios/watchos/app-fundamentals/layout.md), [navegación](~/ios/watchos/app-fundamentals/navigation.md), [tamaños de pantalla](~/ios/watchos/app-fundamentals/screen-sizes.md), y [configuración](~/ios/watchos/app-fundamentals/settings.md).
 

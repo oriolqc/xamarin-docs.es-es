@@ -1,18 +1,17 @@
 ---
-title: "Mejoras en la búsqueda de la aplicación"
-description: "Este artículo tratan las mejoras de Apple ha realizado en la búsqueda de la aplicación en iOS 10 y cómo implementarlas en Xamarin.iOS."
-ms.topic: article
+title: Mejoras en la búsqueda de la aplicación
+description: Este artículo tratan las mejoras de Apple ha realizado en la búsqueda de la aplicación en iOS 10 y cómo implementarlas en Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 30124DB6-6A02-4F66-A2D9-BBC8008E6B48
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: af124c2ae0390c5321e9dd34158c7b53b33b2c48
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 036dbc6a33126d4ade1a68e853ca6ddb4b7c83cc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="app-search-enhancements"></a>Mejoras en la búsqueda de la aplicación
 

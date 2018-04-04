@@ -1,18 +1,17 @@
 ---
-title: "Gráficos de núcleo"
-description: "En este artículo se describe los marcos de iOS para los gráficos esenciales. Muestra cómo se utiliza para los gráficos esenciales para dibujar la geometría, imágenes y archivos PDF."
-ms.topic: article
+title: Gráficos de núcleo
+description: En este artículo se describe los marcos de iOS para los gráficos esenciales. Muestra cómo se utiliza para los gráficos esenciales para dibujar la geometría, imágenes y archivos PDF.
 ms.prod: xamarin
 ms.assetid: 4A30F480-0723-4B8A-9049-7CEB6211304A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 128ec8d19dc25dc2231521756ee0f00690e0d134
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: e7b28ae8014928d82628bd8069d30ca88a4be05f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="core-graphics"></a>Gráficos de núcleo
 

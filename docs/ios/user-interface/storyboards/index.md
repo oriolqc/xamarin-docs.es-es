@@ -1,18 +1,17 @@
 ---
-title: "Introducción a guiones gráficos"
-description: "Un guión gráfico es una representación visual de la apariencia y el flujo de la aplicación. Xamarin presenta un diseñador para permitir que las aplicaciones de Xamarin.iOS aprovechar las ventajas de guiones gráficos, para que pueda diseñar visualmente la pantalla de la aplicación y tener acceso a las vistas, controladores y segues con C# para tener más control."
-ms.topic: article
+title: Introducción a guiones gráficos
+description: Un guión gráfico es una representación visual de la apariencia y el flujo de la aplicación. Xamarin presenta un diseñador para permitir que las aplicaciones de Xamarin.iOS aprovechar las ventajas de guiones gráficos, para que pueda diseñar visualmente la pantalla de la aplicación y tener acceso a las vistas, controladores y segues con C# para tener más control.
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 85c05145ce2490468ac5d5fb9b8524853d46a9e3
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 647bd7d339dc56978752f7ab29de30cf8acb7e07
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-storyboards"></a>Introducción a guiones gráficos
 

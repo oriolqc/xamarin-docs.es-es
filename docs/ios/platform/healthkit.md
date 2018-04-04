@@ -1,18 +1,17 @@
 ---
 title: HealthKit
-description: "HealthKit es un marco que se introdujo en iOS 8 que proporciona un almacén de datos centralizado, seguro y coordinada de información relacionados con el estado. El sistema operativo garantiza la privacidad y seguridad de información de estado y, a la aplicación de mantenimiento, un panel para el usuario. Con el permiso del usuario, las aplicaciones pueden leer y escribir una amplia variedad de información de estado."
-ms.topic: article
+description: HealthKit es un marco que se introdujo en iOS 8 que proporciona un almacén de datos centralizado, seguro y coordinada de información relacionados con el estado. El sistema operativo garantiza la privacidad y seguridad de información de estado y, a la aplicación de mantenimiento, un panel para el usuario. Con el permiso del usuario, las aplicaciones pueden leer y escribir una amplia variedad de información de estado.
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: e7075b67db94b6bf603bd96c637c9f7724ae1519
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: a569bcff3ac33d008788bb0b946bd027fa5c0ea8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="healthkit"></a>HealthKit
 
@@ -69,14 +68,14 @@ La creación de un explícita **Id. de aplicación** y un adecuado **perfil de a
 
 Su actual **Id. de aplicaciones** incluidos en el [certificados, identificadores & perfiles](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) sección del centro de desarrollo de. A menudo, esta lista mostrará **identificador** valores de `*`, lo que indica que la **Id. de aplicación** - **nombre** puede utilizarse con cualquier número de sufijos. Este tipo *Wildcard App IDs* no se puede usar con el Kit de mantenimiento.
  
-Para crear un explícita **Id. de aplicación**, haga clic en el  **+**  botón de la superior derecha para ir a la **registrar el identificador de la aplicación de iOS** página:
+Para crear un explícita **Id. de aplicación**, haga clic en el **+** botón de la superior derecha para ir a la **registrar el identificador de la aplicación de iOS** página:
 
 
 [![](healthkit-images/image02.png "Registrar una aplicación en el Portal para desarrolladores de Apple")](healthkit-images/image02.png#lightbox)
 
 Como se muestra en la ilustración anterior, después de crear una descripción de la aplicación, use la **explícita Id. de aplicación** sección para crear un identificador para la aplicación. En el **servicios de aplicaciones** sección, verificación **Kit Health** en el **habilite los servicios de** sección.
 
-Cuando haya terminado, presione el **continuar** botón para registrar el **identificador de la aplicación** en su cuenta. Se vuelve la **certificados, identificadores y los perfiles** página. Haga clic en **perfiles de aprovisionamiento** llevará a la lista de los perfiles de aprovisionamiento actuales y haga clic en el  **+**  situado en la esquina superior derecha para ir a la **agregar iOS Perfil de aprovisionamiento** página. Seleccione el **desarrollo de aplicaciones de iOS** opción y haga clic en **continuar** para llegar a la **seleccione Id. de aplicación** página. A continuación, seleccione el explícita **identificador de la aplicación** que especificó anteriormente:
+Cuando haya terminado, presione el **continuar** botón para registrar el **identificador de la aplicación** en su cuenta. Se vuelve la **certificados, identificadores y los perfiles** página. Haga clic en **perfiles de aprovisionamiento** llevará a la lista de los perfiles de aprovisionamiento actuales y haga clic en el **+** situado en la esquina superior derecha para ir a la **agregar iOS Perfil de aprovisionamiento** página. Seleccione el **desarrollo de aplicaciones de iOS** opción y haga clic en **continuar** para llegar a la **seleccione Id. de aplicación** página. A continuación, seleccione el explícita **identificador de la aplicación** que especificó anteriormente:
 
 
 [![](healthkit-images/image03.png "Seleccione el identificador de aplicación explícita")](healthkit-images/image03.png#lightbox)

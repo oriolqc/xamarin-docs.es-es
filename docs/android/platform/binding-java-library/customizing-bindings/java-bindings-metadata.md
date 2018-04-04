@@ -1,18 +1,17 @@
 ---
 title: Java Bindings Metadata
-description: "Código de C# en Xamarin.Android llama a bibliotecas de Java a través de enlaces, que son un mecanismo que resume los detalles de bajo nivel que se especifican en Java JNI (interfaz nativa). Xamarin.Android proporciona una herramienta que genera estos enlaces. Este conjunto de herramientas permite el control del desarrollador cómo se crea un enlace con los metadatos, que permite que los procedimientos, como modificar los espacios de nombres y cambiar el nombre de los miembros. Este documento se describe el funcionamiento de metadatos, se resumen los atributos que los metadatos es compatible con y se explica cómo resolver problemas de enlace mediante la modificación de estos metadatos."
-ms.topic: article
+description: Código de C# en Xamarin.Android llama a bibliotecas de Java a través de enlaces, que son un mecanismo que resume los detalles de bajo nivel que se especifican en Java JNI (interfaz nativa). Xamarin.Android proporciona una herramienta que genera estos enlaces. Este conjunto de herramientas permite el control del desarrollador cómo se crea un enlace con los metadatos, que permite que los procedimientos, como modificar los espacios de nombres y cambiar el nombre de los miembros. Este documento se describe el funcionamiento de metadatos, se resumen los atributos que los metadatos es compatible con y se explica cómo resolver problemas de enlace mediante la modificación de estos metadatos.
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 70f17b6bc8dc991534cdf4dd065c813aa0e27e96
-ms.sourcegitcommit: d450ae06065d8f8c80f3588bc5a614cfd97b5a67
+ms.openlocfilehash: 6dea13fcda43cad22b8bea9838bbcb23b97820c7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="java-bindings-metadata"></a>Java Bindings Metadata
 
@@ -246,7 +245,7 @@ Cambia el tipo de valor devuelto de un método. Esto no cambia el atributo de va
 
 ### <a name="obfuscated"></a>protegido
 
-Herramientas que ofuscar las bibliotecas de Java pueden interferir con el generador de enlace de Xamarin.Android y su capacidad para generar clases contenedoras de C#. Características de clases ofuscadas incluyen: * incluye el nombre de clase un  **$** , es decir, **un .class $** * el nombre de clase está completamente en peligro de caracteres en minúsculas, es decir,  **a.Class**
+Herramientas que ofuscar las bibliotecas de Java pueden interferir con el generador de enlace de Xamarin.Android y su capacidad para generar clases contenedoras de C#. Características de clases ofuscadas incluyen: * incluye el nombre de clase un **$**, es decir, **un .class $** * el nombre de clase está completamente en peligro de caracteres en minúsculas, es decir,  **a.Class**
 
 Este fragmento de código es un ejemplo de cómo generar un tipo de C# "sin ofuscado":
 

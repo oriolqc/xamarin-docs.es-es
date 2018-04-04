@@ -1,18 +1,17 @@
 ---
-title: "Crear un diseño personalizado"
-description: "Xamarin.Forms define cuatro clases de diseño: StackLayout, AbsoluteLayout, RelativeLayout y cuadrícula, y cada uno de ellos organiza a sus elementos secundarios de forma diferente. Sin embargo, a veces es necesario organizar el contenido de la página con un diseño no proporcionado por Xamarin.Forms. En este artículo se explica cómo escribir una clase de diseño personalizado y se muestra una clase de WrapLayout dependientes de la orientación que sus elementos secundarios se organiza horizontalmente en la página y, a continuación, se ajusta la presentación de los elementos secundarios subsiguientes a filas adicionales."
-ms.topic: article
+title: Crear un diseño personalizado
+description: 'Xamarin.Forms define cuatro clases de diseño: StackLayout, AbsoluteLayout, RelativeLayout y cuadrícula, y cada uno de ellos organiza a sus elementos secundarios de forma diferente. Sin embargo, a veces es necesario organizar el contenido de la página con un diseño no proporcionado por Xamarin.Forms. En este artículo se explica cómo escribir una clase de diseño personalizado y se muestra una clase de WrapLayout dependientes de la orientación que sus elementos secundarios se organiza horizontalmente en la página y, a continuación, se ajusta la presentación de los elementos secundarios subsiguientes a filas adicionales.'
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: 4c7bf5f2c867faef7d9baf8d511393dbe2d129a4
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f0728ac110fcf86f44a5ccb5ddd80b00af1b8d62
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="creating-a-custom-layout"></a>Crear un diseño personalizado
 

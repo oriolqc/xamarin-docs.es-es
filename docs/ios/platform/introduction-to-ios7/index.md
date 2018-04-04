@@ -1,18 +1,17 @@
 ---
-title: "Introducción a iOS 7"
-description: "Este artículo tratan las nuevas API principales introducidas en iOS 7, incluidas las transiciones de View Controller, mejoras a las animaciones UIView, UIKit Dynamics y Kit de texto. También tratan algunos de los cambios realizados en la interfaz de usuario y las nuevas capacidades de multitarea mejorada."
-ms.topic: article
+title: Introducción a iOS 7
+description: Este artículo tratan las nuevas API principales introducidas en iOS 7, incluidas las transiciones de View Controller, mejoras a las animaciones UIView, UIKit Dynamics y Kit de texto. También tratan algunos de los cambios realizados en la interfaz de usuario y las nuevas capacidades de multitarea mejorada.
 ms.prod: xamarin
 ms.assetid: 2C33018F-D64A-4BAA-A34E-082EF311D162
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a7bebc2b73ecb564028a92340c726bd5c1f1c54b
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 9ae82eba78f099f675d21bf53a250923630a0ff6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-7"></a>Introducción a iOS 7
 
@@ -244,5 +243,5 @@ Este artículo tratan varias nuevas adiciones principales para iOS. En primer lu
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Introducción a iOS 7 (ejemplo)](https://developer.xamarin.com/samples/monotouch/IntroToiOS7)
-- [iOS 7 introducción de la interfaz de usuario](~/ios/platform/introduction-to-ios7/ios7-ui.md)
-- [Backgrounding](~/ios/app-fundamentals/backgrounding/index.md)
+- [Introducción a la interfaz de usuario de iOS 7](~/ios/platform/introduction-to-ios7/ios7-ui.md)
+- [Procesamiento en segundo plano](~/ios/app-fundamentals/backgrounding/index.md)

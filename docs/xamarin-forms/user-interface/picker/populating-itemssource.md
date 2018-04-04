@@ -1,18 +1,17 @@
 ---
-title: "Configuración ItemsSource propiedad de un selector"
-description: "La vista de selector es un control para seleccionar un elemento de texto de una lista de datos. Este artículo explica cómo rellenar un selector de datos estableciendo la propiedad ItemsSource y cómo responder a la selección de elementos por el usuario."
-ms.topic: article
+title: Configuración ItemsSource propiedad de un selector
+description: La vista de selector es un control para seleccionar un elemento de texto de una lista de datos. Este artículo explica cómo rellenar un selector de datos estableciendo la propiedad ItemsSource y cómo responder a la selección de elementos por el usuario.
 ms.prod: xamarin
 ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 5e3d20ad213df9fd9331c71c84003c7738bd5a29
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: bf3940bc1bc0318bad4d785388f9dc9292af80ca
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>Configuración ItemsSource propiedad de un selector
 
@@ -182,4 +181,4 @@ El [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/) vi
 - [Demostración de selector (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
 - [Mono aplicación (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/MonkeyAppPicker/)
 - [Selector de enlazable (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindablePicker/)
-- [Picker](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)
+- [Selector](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/)

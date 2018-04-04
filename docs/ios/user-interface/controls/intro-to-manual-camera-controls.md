@@ -1,18 +1,17 @@
 ---
-title: "Controles de la cámara manual"
-description: "El marco de AVFoundation hace más fácil que nunca que los usuarios tomar fotos magníficas permitiendo para controles de la cámara Manual. Con este marco de trabajo, una aplicación puede adoptar un control directo sobre el enfoque de cámara, balance de blanco y ajustes de exposición. Una aplicación también puede utilizar entre corchetes exposición capturas captura automáticamente imágenes con distintos ajustes de exposición. En este artículo se echar un vistazo rápido de usar los controles de cámara Manual en una aplicación móvil iOS simple 8."
-ms.topic: article
+title: Controles de la cámara manual
+description: El marco de AVFoundation hace más fácil que nunca que los usuarios tomar fotos magníficas permitiendo para controles de la cámara Manual. Con este marco de trabajo, una aplicación puede adoptar un control directo sobre el enfoque de cámara, balance de blanco y ajustes de exposición. Una aplicación también puede utilizar entre corchetes exposición capturas captura automáticamente imágenes con distintos ajustes de exposición. En este artículo se echar un vistazo rápido de usar los controles de cámara Manual en una aplicación móvil iOS simple 8.
 ms.prod: xamarin
 ms.assetid: 56340225-5F3C-4BFC-9A79-61496D7FE5B5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: f11305fcbf8a5b9bf6552fa31ecfa1c0e8e7a68f
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 8545dce1b9232e396c4c9e71ad5f20649eef2417
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="manual-camera-controls"></a>Controles de la cámara manual
 

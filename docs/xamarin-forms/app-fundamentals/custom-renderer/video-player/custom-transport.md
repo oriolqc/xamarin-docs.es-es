@@ -1,17 +1,16 @@
 ---
-title: "Controles de transporte personalizado de vídeo"
-ms.topic: article
+title: Controles de transporte personalizado de vídeo
 ms.prod: xamarin
 ms.assetid: CE9E955D-A9AC-4019-A5D7-6390D80DECA1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: b0d871068f42a03b2aba3c1482a9236b19fe0db9
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5463a91dba5840ebe655aa1509d9f98e73643d26
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="custom-video-transport-controls"></a>Controles de transporte personalizado de vídeo
 
@@ -521,19 +520,19 @@ namespace FormsVideoLibrary.UWP
 
 Uso de caracteres Unicode para simbólico **reproducir**, **pausa**, y **detener** imágenes es problemático. El [varios técnica](https://unicode-table.com/en/blocks/miscellaneous-technical/) sección del estándar Unicode define tres caracteres de símbolos aparentemente apropiados para este propósito. Estos son:
 
-- 0x23F5 (triángulo negro de Media hacia la derecha) o & #x23F5; para **reproducir**
-- 0x23F8 (doble barra vertical) o & #x23F8; para **pausar**
-- 0x23F9 (cuadrado negro) o & #x23F9; para **detener**
+- 0x23F5 (triángulo negro de Media hacia la derecha) o &#x23F5; para **reproducir**
+- 0x23F8 (doble barra vertical) o &#x23F8; para **pausar**
+- 0x23F9 (cuadrado negro) o &#x23F9; para **detener**
 
 A pesar de todo cómo estos símbolos aparecen en el explorador (y otros exploradores controlarán de maneras diferentes), no se muestran constantemente en las plataformas compatibles con Xamarin.Forms. En dispositivos iOS y UWP, el **pausa** y **detener** caracteres tienen un aspecto de gráfico, con un fondo azul 3D y un primer plano blanco. Esto no es el caso en Android, donde el símbolo es simplemente azul. Sin embargo, el punto de código 0x23F5 para **reproducir** no tiene que la misma apariencia en UWP y ni siquiera es compatible con iOS y Android.
 
 Por esta razón, no se puede usar el punto de código 0x23F5 para **reproducir**. Un buen sustituto es:
 
-- 0x25B6 (triángulo negro hacia la derecha) o & #x25B6; para **reproducir**
+- 0x25B6 (triángulo negro hacia la derecha) o &#x25B6; para **reproducir**
 
 Esto es compatible con las tres plataformas salvo que es un triángulo negro sin formato que no se parece a la apariencia 3D de **pausa** y **detener**. Una posibilidad es seguir el punto de código de 0x25B6 con un código de variante:
 
-- 0x25B6 seguido 0xFE0F (variante de 16) o & #x25B6; & #xFE0F; para **reproducir**
+- 0x25B6 seguido 0xFE0F (variante de 16) o &#x25B6; &#xFE0F; para **reproducir**
 
 Esto es lo que se utiliza en el marcado que se muestra a continuación. En iOS, proporciona el **reproducir** de símbolos de la misma apariencia 3D como el **pausa** y **detener** botones, pero la variante no funciona en UWP y Android.
 

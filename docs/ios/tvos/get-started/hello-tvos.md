@@ -1,18 +1,17 @@
 ---
-title: "Hola, tvOS Guía de inicio rápido"
-description: "Esta guía le guía por la creación de su primera aplicación Xamarin.tvOS y su cadena de herramientas de desarrollo. También presenta al diseñador de Xamarin, que expone los controles de interfaz de usuario al código y se muestra cómo crear, ejecutar y probar una aplicación Xamarin.tvOS."
-ms.topic: article
+title: Hola, tvOS Guía de inicio rápido
+description: Esta guía le guía por la creación de su primera aplicación Xamarin.tvOS y su cadena de herramientas de desarrollo. También presenta al diseñador de Xamarin, que expone los controles de interfaz de usuario al código y se muestra cómo crear, ejecutar y probar una aplicación Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: 6E0AFE58-A13B-492F-861E-D5D73EB1C4A3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/02/2018
-ms.openlocfilehash: 5eccb36b3c6a437ddc1ec055e779d8f78460643e
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0adf6e326dd29db15b6bd90626f424b803dc0bc9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hola, tvOS Guía de inicio rápido
 
@@ -253,7 +252,7 @@ No es necesario utilizar el Diseñador de Xamarin para iOS para crear la interfa
 
 Para empezar a crear la interfaz de usuario, vamos a haga doble clic en el `Main.storyboard` un archivo en el **el Explorador de soluciones** para abrirlo y editarlo en el Diseñador de iOS:
 
-[![](hello-tvos-images/designer01.png "El archivo Main.storyboard en el Explorador de soluciones")](hello-tvos-images/designer01.png#lightbox)
+[![](hello-tvos-images/designer01.png "Archivo Main.storyboard en el Explorador de soluciones")](hello-tvos-images/designer01.png#lightbox)
 
 Esto debería iniciar el diseñador y el siguiente aspecto:
 

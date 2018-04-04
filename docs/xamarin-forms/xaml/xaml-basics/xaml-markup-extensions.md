@@ -1,18 +1,17 @@
 ---
 title: Parte 3. Extensiones de marcado XAML
 description: Las extensiones de marcado XAML constituyen una característica importante de XAML que permite que las propiedades se establezca en objetos o valores que se hace referencia indirectamente desde otros orígenes. Las extensiones de marcado XAML son especialmente importantes para uso compartido de objetos y hacer referencia a las constantes se utilizan en toda una aplicación, pero encuentra su mayor utilidad enlaces de datos.
-ms.topic: article
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 3/27/2018
-ms.openlocfilehash: cd881b79945c2b9c10e9bb1bc85fce98acb71026
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: 104a3adb5d59bc7feafa3c993290247b749ce312
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensiones de marcado XAML
 

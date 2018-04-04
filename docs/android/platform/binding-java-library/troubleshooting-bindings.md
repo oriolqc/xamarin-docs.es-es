@@ -1,18 +1,17 @@
 ---
-title: "Solución de problemas de enlaces"
-description: "En este artículo se resume los varios errores comunes que pueden producirse al generar los enlaces, junto con las causas posibles y maneras sugeridas para resolverlos."
-ms.topic: article
+title: Solución de problemas de enlaces
+description: En este artículo se resume los varios errores comunes que pueden producirse al generar los enlaces, junto con las causas posibles y maneras sugeridas para resolverlos.
 ms.prod: xamarin
 ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 6d31e2a22c63f8d46893dd1928b561e1a06b19b4
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: da6286eed091114c117c723f462bbb8cac77034b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="troubleshooting-bindings"></a>Solución de problemas de enlaces
 
@@ -51,7 +50,7 @@ Una vez que haya descompilado la biblioteca Android, examine el código fuente. 
 
 - **Las clases que tienen las características de ofuscación** &ndash; características de clases ofuscadas incluyen:
 
-    - El nombre de clase incluye una  **$** , es decir, **un .class $**
+    - El nombre de clase incluye una **$**, es decir, **un .class $**
     - El nombre de clase está completamente en peligro de caracteres en minúsculas, es decir, **a.class**      
 
 - **`import` instrucciones para las bibliotecas** &ndash; identificar la biblioteca sin referencia y agregar estas dependencias para el proyecto de enlace Xamarin.Android con un **acción de compilación** de **ReferenceJar**  o **EmbedddedReferenceJar**.

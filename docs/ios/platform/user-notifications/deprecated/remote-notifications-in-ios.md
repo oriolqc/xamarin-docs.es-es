@@ -1,18 +1,17 @@
 ---
-title: "Notificaciones de inserción en iOS"
-description: "Esta sección describirá las notificaciones de inserción en iOS. Incluye el servicio de puerta de enlace de notificaciones Push de Apple y el papel que desempeña en las notificaciones de publicación para las aplicaciones de iOS. Explicará cómo crear los certificados de seguridad necesarios para habilitar las notificaciones de inserción y analizar. Por último, en esta sección se describe algunas de las tareas de mantenimiento de manera que los servidores de aplicaciones deben realizar para realizar un seguimiento de los dispositivos móviles de cliente."
-ms.topic: article
+title: Notificaciones de inserción en iOS
+description: Esta sección describirá las notificaciones de inserción en iOS. Incluye el servicio de puerta de enlace de notificaciones Push de Apple y el papel que desempeña en las notificaciones de publicación para las aplicaciones de iOS. Explicará cómo crear los certificados de seguridad necesarios para habilitar las notificaciones de inserción y analizar. Por último, en esta sección se describe algunas de las tareas de mantenimiento de manera que los servidores de aplicaciones deben realizar para realizar un seguimiento de los dispositivos móviles de cliente.
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 3af74fb9d93e22e361f2e3db00961d7955eda689
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 3a86ce5e61576faec41b5fcddf899d731d2cc57a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="push-notifications-in-ios"></a>Notificaciones de inserción en iOS
 
@@ -51,7 +50,7 @@ Cada uno de los entornos mencionados en la sección anterior requiere su propio 
 
     [![](remote-notifications-in-ios-images/image6new.png "Vaya a la sección de Id. de aplicación y crear un nuevo ID de aplicación.")](remote-notifications-in-ios-images/image6new.png#lightbox)
 
-3.  Al hacer clic en el  **+**  botón, podrá escribir la descripción y un identificador de paquete para el identificador de la aplicación, como se muestra en la captura de pantalla siguiente:
+3.  Al hacer clic en el **+** botón, podrá escribir la descripción y un identificador de paquete para el identificador de la aplicación, como se muestra en la captura de pantalla siguiente:
 
     [![](remote-notifications-in-ios-images/image7new.png "Escriba la descripción y un identificador de paquete para el identificador de aplicación")](remote-notifications-in-ios-images/image7new.png#lightbox)
 

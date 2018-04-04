@@ -1,18 +1,17 @@
 ---
-title: "Resaltar una región en un mapa"
-description: "Este artículo explica cómo agregar una capa de polígono a un mapa, para resaltar una región en el mapa. Polígonos son una forma cerrada y se rellena su interior."
-ms.topic: article
+title: Resaltar una región en un mapa
+description: Este artículo explica cómo agregar una capa de polígono a un mapa, para resaltar una región en el mapa. Polígonos son una forma cerrada y se rellena su interior.
 ms.prod: xamarin
 ms.assetid: E79EB2CF-8DD6-44A8-B47D-5F0A94FB0A63
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 6c116565842537f24d92a6d100ab1636f25c2e12
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: d87237015b9e3d896766894d552c650047137146
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="highlighting-a-region-on-a-map"></a>Resaltar una región en un mapa
 
@@ -31,7 +30,7 @@ Cuando un [ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Ma
 1. [Personalizar](#Customizing_the_Map) la asignación mediante la creación de un representador personalizado para la asignación en cada plataforma.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) debe inicializarse y configurado antes de su uso. Para obtener más información, consulte [ `Maps Control` ](~/xamarin-forms/user-interface/map.md).
+> [`Xamarin.Forms.Maps`](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) debe inicializarse y configurado antes de su uso. Para obtener más información, vea [`Maps Control`](~/xamarin-forms/user-interface/map.md).
 
 Para obtener información acerca de cómo personalizar un mapa con un representador personalizado, consulte [personalizar un Pin de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 
@@ -307,5 +306,5 @@ Este artículo explica cómo agregar una capa de polígono a un mapa, para resal
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Superposición de mapa de polígono (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
-- [Personalizar un Pin de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
+- [Personalización de un anclado de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/)

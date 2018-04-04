@@ -1,18 +1,17 @@
 ---
 title: Uso de la MonoGame PipelineTool
 description: La herramienta de canalización MonoGame se usa para crear y administrar proyectos de contenido de MonoGame. Los archivos en proyectos de contenido son procesados por la herramienta de canalización Monogame y arroja como archivos .xnb para su uso en aplicaciones CocosSharp y MonoGame.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 37505b166488230be9d0e0690e415852506664f1
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 672c57aded149200b32501a6b48165ca88726ee1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>Con la herramienta de canalización MonoGame
 

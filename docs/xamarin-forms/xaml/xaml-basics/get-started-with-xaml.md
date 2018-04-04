@@ -1,18 +1,17 @@
 ---
-title: "Parte 1. Introducción a XAML"
-description: "En una aplicación de Xamarin.Forms, XAML se usa principalmente para definir el contenido visual de una página. Un archivo XAML siempre está asociado a un archivo de código C# que proporciona compatibilidad de código para el marcado. Juntos, estos dos archivos contribuyen a una nueva definición de clase que incluye vistas secundarias y la inicialización de la propiedad. En el archivo XAML, se hace referencia a las clases y propiedades con atributos y elementos XML y se establecen los vínculos entre el código y marcado."
-ms.topic: article
+title: Parte 1. Introducción a XAML
+description: En una aplicación de Xamarin.Forms, XAML se usa principalmente para definir el contenido visual de una página. Un archivo XAML siempre está asociado a un archivo de código C# que proporciona compatibilidad de código para el marcado. Juntos, estos dos archivos contribuyen a una nueva definición de clase que incluye vistas secundarias y la inicialización de la propiedad. En el archivo XAML, se hace referencia a las clases y propiedades con atributos y elementos XML y se establecen los vínculos entre el código y marcado.
 ms.prod: xamarin
 ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 55c4fa73044b1c37e879ed7731161269bdbf8ba8
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f1d347cc37ab065e09cb2627ee2122797280f3c1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introducción a XAML
 

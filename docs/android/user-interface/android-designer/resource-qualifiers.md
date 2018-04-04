@@ -1,18 +1,17 @@
 ---
-title: "Los calificadores de recursos y opciones de visualización"
-description: "En este tema se explica cómo definir los recursos que se usará cuando se comparan algunos valores de calificador. Un ejemplo sencillo es un recurso de cadena de idioma completo. Un recurso de cadena se puede definir como el valor predeterminado, con otros recursos alternativos definidos para su uso en otros idiomas. Pueden calificar todos los tipos de recurso, incluido el diseño propio."
-ms.topic: article
+title: Los calificadores de recursos y opciones de visualización
+description: En este tema se explica cómo definir los recursos que se usará cuando se comparan algunos valores de calificador. Un ejemplo sencillo es un recurso de cadena de idioma completo. Un recurso de cadena se puede definir como el valor predeterminado, con otros recursos alternativos definidos para su uso en otros idiomas. Pueden calificar todos los tipos de recurso, incluido el diseño propio.
 ms.prod: xamarin
 ms.assetid: 2111C18A-3EDA-3787-25E1-3869FF4BE441
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/29/2018
-ms.openlocfilehash: bff6d917fc4ce65daed329f15d6648bbfe0dd069
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: bc9eb145b6d9ed7bd441d625f533c5cbbd87fccd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Los calificadores de recursos y opciones de visualización
 

@@ -1,18 +1,17 @@
 ---
-title: "Introducción a iOS 8"
-description: "Con iOS 8, Apple ha proporcionado una gran cantidad de API para excitar y satisfacen los desarrolladores y marcos de trabajo de nuevo. En esta guía le presentaremos estas nuevas API y vea cómo iOS 8 puede beneficiar a los desarrolladores y usuarios."
-ms.topic: article
+title: Introducción a iOS 8
+description: Con iOS 8, Apple ha proporcionado una gran cantidad de API para excitar y satisfacen los desarrolladores y marcos de trabajo de nuevo. En esta guía le presentaremos estas nuevas API y vea cómo iOS 8 puede beneficiar a los desarrolladores y usuarios.
 ms.prod: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 8a4fabd5cc63434950f4646336b06676f6eb915b
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 2f57547356adcbafd01851bc54e42a14454ccd6a
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-ios-8"></a>Introducción a iOS 8
 

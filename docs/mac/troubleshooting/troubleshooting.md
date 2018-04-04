@@ -1,18 +1,18 @@
 ---
 title: Sugerencias para solucionar problemas de Xamarin.Mac
 description: Este documento describen métodos para resolver los problemas que surgen al desarrollar aplicaciones de Xamarin.Mac.
-ms.topic: article
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5CBC6822-BCD7-4DAD-8468-6511250D41C4
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 9e56a0ac213af4486efa73857ff08486630463d8
-ms.sourcegitcommit: 7b88081a979381094c771421253d8a388b2afc16
+ms.openlocfilehash: 3cec5465f3f30b230cc0f4f1b865209ed327a07c
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Sugerencias para solucionar problemas de Xamarin.Mac
 

@@ -1,18 +1,17 @@
 ---
-title: "Guiones gráficos unificados"
-description: "Guiones gráficos unificados permiten iOS desarrollador crear la interfaz de usuario con un solo guión gráfico, en lugar de varios guiones gráficos, para cubrir la expansión variedad de tamaños de pantalla del dispositivo. Este artículo está diseñado para proporcionar una descripción más detallada en la operación del guión gráfico unificado en Xamarin.iOS."
-ms.topic: article
+title: Guiones gráficos unificados
+description: Guiones gráficos unificados permiten iOS desarrollador crear la interfaz de usuario con un solo guión gráfico, en lugar de varios guiones gráficos, para cubrir la expansión variedad de tamaños de pantalla del dispositivo. Este artículo está diseñado para proporcionar una descripción más detallada en la operación del guión gráfico unificado en Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 60b2e6fa65226631fe2d2c847a56852ac9ae63d2
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: d84afd0d33a6115d5d3ef9ea9b68d3370f9bb946
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="unified-storyboards"></a>Guiones gráficos unificados
 
@@ -680,7 +679,7 @@ Y cuando la aplicación se ejecuta en el simulador de iPhone, el elemento falta:
 
  [![](unified-storyboards-images/exclude05.png "El elemento que falta cuando la aplicación en ejecución en el simulador de iPhone")](unified-storyboards-images/exclude05.png#lightbox)
 
-Para quitar un caso de exclusión de un elemento, basta con seleccionar el elemento en el **superficie de diseño**, desplácese hasta la parte inferior de la **Property Explorer** y haga clic en el  **-** botón junto al caso a quitar.
+Para quitar un caso de exclusión de un elemento, basta con seleccionar el elemento en el **superficie de diseño**, desplácese hasta la parte inferior de la **Property Explorer** y haga clic en el **-**botón junto al caso a quitar.
 
 Para ver una implementación de guiones gráficos unificado, mire el `UnifiedStoryboard` Xamarin iOS 8 aplicación adjunta a este documento de ejemplo.
 

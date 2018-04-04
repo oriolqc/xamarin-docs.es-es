@@ -1,18 +1,17 @@
 ---
 title: Detalles de plataforma de Windows
-description: "Obtener información específica de la plataforma le permite utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar representadores personalizados o los efectos. Este artículo demuestra cómo utilizar la plataforma-detalles de Windows que están integrados en Xamarin.Forms."
-ms.topic: article
+description: Obtener información específica de la plataforma le permite utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar representadores personalizados o los efectos. Este artículo demuestra cómo utilizar la plataforma-detalles de Windows que están integrados en Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 22B403C0-FE6D-498A-AE53-095E6C4B527C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 01b32d1ca5356ed69480dff0d31c210a8c460417
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: d1610e4c9e6a8799362ff955061953962dd755ab
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="windows-platform-specifics"></a>Detalles de plataforma de Windows
 

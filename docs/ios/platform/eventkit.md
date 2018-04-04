@@ -1,18 +1,17 @@
 ---
 title: EventKit
-description: "Esta guía proporciona información general sobre cómo obtener acceso y trabajar con calendarios, CalendarEvents y avisos de los datos almacenados en la base de datos de calendario, tal y como se expone a través de la EventKit. Incluye las clases principales y su función en la programación de EventKit, así como un número de tareas comunes asociadas con el marco de trabajo EventKit."
-ms.topic: article
+description: Esta guía proporciona información general sobre cómo obtener acceso y trabajar con calendarios, CalendarEvents y avisos de los datos almacenados en la base de datos de calendario, tal y como se expone a través de la EventKit. Incluye las clases principales y su función en la programación de EventKit, así como un número de tareas comunes asociadas con el marco de trabajo EventKit.
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a08bc67a9af653a9a646ad62071df0400ce58c12
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: a8439586ac92f8139cf9341611125352c85706e5
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="eventkit"></a>EventKit
 

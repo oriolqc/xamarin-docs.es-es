@@ -1,18 +1,17 @@
 ---
-title: "Pruebas en dispositivos de inspección"
-description: "Implementación de aplicaciones para probar en su Apple Watch"
-ms.topic: article
+title: Pruebas en dispositivos de inspección
+description: Implementación de aplicaciones para probar en su Apple Watch
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 211f8c7066e86dac3a8351b913da0185093dcb70
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: d1d00a4d561551435e7d2333520dc614a79dcad3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="testing-on-watch-devices"></a>Pruebas en dispositivos de inspección
 
@@ -26,7 +25,7 @@ Una vez que ha seguido el [pasos de implementación](~/ios/watchos/deploy-test/i
 
 ## <a name="devices"></a>Dispositivos
 
-Probar aplicaciones de iOS en un iPhone real o iPad siempre ha requerido el dispositivo se registre en el centro de desarrollo. La lista de dispositivos tiene el siguiente aspecto (haga clic en el signo más  **+**  para agregar un dispositivo nuevo):
+Probar aplicaciones de iOS en un iPhone real o iPad siempre ha requerido el dispositivo se registre en el centro de desarrollo. La lista de dispositivos tiene el siguiente aspecto (haga clic en el signo más **+** para agregar un dispositivo nuevo):
 
 ![](device-images/devices-sml.png "La lista de dispositivos tiene el siguiente aspecto")
 

@@ -1,18 +1,17 @@
 ---
-title: "Introducción a desgaste Android"
-description: "Las guías de esta sección presentan desgaste Android, describen cómo instalar y configurar el equipo para el desarrollo de desgaste y proporcionan pasos para ayudarle a crear y ejecutar la primera aplicación Android desgaste."
-ms.topic: article
+title: Introducción a desgaste Android
+description: Las guías de esta sección presentan desgaste Android, describen cómo instalar y configurar el equipo para el desarrollo de desgaste y proporcionan pasos para ayudarle a crear y ejecutar la primera aplicación Android desgaste.
 ms.prod: xamarin
 ms.assetid: 8B9DC98A-773F-4E06-84A7-BA8208C4E864
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/18/2017
-ms.openlocfilehash: b2085343d1b6f94544d73614f5732b0ecf2f9b59
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a0b022225dd670ca6da09abbca6b3db75a55f38b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="getting-started-with-android-wear"></a>Introducción a desgaste Android
 
@@ -26,6 +25,6 @@ Proporciona una introducción básica a desgaste Android, describe sus caracter�
 
 Le guía a través de los pasos de instalación y los detalles de configuración necesarios para preparar el equipo y los dispositivos para el desarrollo de desgaste Android.
 
-## <a name="hello-wearandroidwearget-startedhello-wearmd"></a>[Hola, desgaste](~/android/wear/get-started/hello-wear.md)
+## <a name="hello-wearandroidwearget-startedhello-wearmd"></a>[Hola, Wear](~/android/wear/get-started/hello-wear.md)
 
 Este tutorial proporciona instrucciones paso a paso para crear un proyecto pequeño desgaste Android que administra los clics de botón y muestra un contador de hacer clic en el dispositivo de uso.

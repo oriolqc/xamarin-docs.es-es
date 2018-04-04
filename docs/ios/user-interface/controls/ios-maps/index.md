@@ -1,18 +1,17 @@
 ---
 title: Asignaciones
-description: "iOS incluye el MapKit framework, que resulta muy sencillo agregar se asigna a una aplicación. Con el Kit de mapa, las aplicaciones de iOS pueden agregar mapas interactivos que admiten características como la panorámica y zoom, que muestra la ubicación del usuario y gráficos enriquecidos de distribución en capas en un mapa. En este artículo se profundiza en algunas de las características del Kit de mapa, que muestra cómo sacar provecho de ellas para crear características geográficas en una aplicación"
-ms.topic: article
+description: iOS incluye el MapKit framework, que resulta muy sencillo agregar se asigna a una aplicación. Con el Kit de mapa, las aplicaciones de iOS pueden agregar mapas interactivos que admiten características como la panorámica y zoom, que muestra la ubicación del usuario y gráficos enriquecidos de distribución en capas en un mapa. En este artículo se profundiza en algunas de las características del Kit de mapa, que muestra cómo sacar provecho de ellas para crear características geográficas en una aplicación
 ms.prod: xamarin
 ms.assetid: 5DD8E56D-51C1-4AFA-B387-79B5734698ED
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 3fecf17a4f70e44ca169c825bf0dd34a5127cec8
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 0249da1754083231fa4426ae4f42ce4ad73c3f51
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="maps"></a>Asignaciones
 

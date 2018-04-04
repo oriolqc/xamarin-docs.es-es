@@ -1,18 +1,17 @@
 ---
 title: iCloud
-description: "Apple incorporó iCloud en iOS 5 como un servicio para permitir que las aplicaciones almacenar datos en servidores de Apple y que se sincroniza en todos los dispositivos usados por la misma persona (a través de su Id. de Apple). También tiene un componente de copia de seguridad, donde los datos de los dispositivos se copia de seguridad para servidores de Apple. Este documento describe cómo usar algunos de iCloud las API proporcionadas por Apple para almacenar y recuperar datos de sus servidores, con ejemplos de C# para almacenar pares de datos de clave y valor pequeños y para almacenar documentos. También se explica cómo iCloud copia de seguridad puede influir en el diseño de la aplicación."
-ms.topic: article
+description: Apple incorporó iCloud en iOS 5 como un servicio para permitir que las aplicaciones almacenar datos en servidores de Apple y que se sincroniza en todos los dispositivos usados por la misma persona (a través de su Id. de Apple). También tiene un componente de copia de seguridad, donde los datos de los dispositivos se copia de seguridad para servidores de Apple. Este documento describe cómo usar algunos de iCloud las API proporcionadas por Apple para almacenar y recuperar datos de sus servidores, con ejemplos de C# para almacenar pares de datos de clave y valor pequeños y para almacenar documentos. También se explica cómo iCloud copia de seguridad puede influir en el diseño de la aplicación.
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/09/2016
-ms.openlocfilehash: ce2130985eb954abc4b4a1f4022eec97341eb902
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: c9e7c920855d2002f52d05e28c5225f301cd62b1
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="icloud"></a>iCloud
 

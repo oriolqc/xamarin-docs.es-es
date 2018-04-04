@@ -1,17 +1,16 @@
 ---
-title: "Conceptos básicos de recursos Android"
-ms.topic: article
+title: Conceptos básicos de recursos Android
 ms.prod: xamarin
 ms.assetid: ED32E7B5-D552-284B-6385-C3EDDCC30A4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/01/2018
-ms.openlocfilehash: fba8412c53597260744bdce443a7e993a6990672
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: f6be1001e5d3455a94e677f1bb5dc52ca574b873
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-resource-basics"></a>Conceptos básicos de recursos Android
 
@@ -136,7 +135,7 @@ Por ejemplo, el contenido de un archivo de diseño, **Main.axml**, son los sigui
 </LinearLayout>
 ```
 
-Este ejemplo tiene un [ `ImageView` ](https://developer.xamarin.com/recipes/android/controls/imageview) que requiere un recurso puede dibujar denominado **marca**. El `ImageView` tiene su `src` atributo establecido en  **@drawable/flag** . Cuando se inicia la actividad, tendrá un aspecto Android en el directorio **recurso/Drawable** en un archivo denominado **flag.png** (la extensión de archivo podría ser otro formato de imagen, como **flag.jpg**) cargue ese archivo y mostrarlo en el `ImageView`.
+Este ejemplo tiene un [ `ImageView` ](https://developer.xamarin.com/recipes/android/controls/imageview) que requiere un recurso puede dibujar denominado **marca**. El `ImageView` tiene su `src` atributo establecido en **@drawable/flag**. Cuando se inicia la actividad, tendrá un aspecto Android en el directorio **recurso/Drawable** en un archivo denominado **flag.png** (la extensión de archivo podría ser otro formato de imagen, como **flag.jpg**) cargue ese archivo y mostrarlo en el `ImageView`.
 Cuando se ejecuta esta aplicación, sería algo parecido a la siguiente imagen:
 
 ![ImageView localizado](android-resource-basics-images/03-localized-screenshot.png)

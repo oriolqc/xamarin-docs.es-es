@@ -1,7 +1,6 @@
 ---
 title: Multitarea para iPad
-description: "iOS 9 es compatible con dos aplicaciones que se ejecutan en el mismo tiempo, utilizando diapositiva sobre o la vista en dos paneles. También admite la reproducción de imagen en la imagen de vídeo."
-ms.topic: article
+description: iOS 9 es compatible con dos aplicaciones que se ejecutan en el mismo tiempo, utilizando diapositiva sobre o la vista en dos paneles. También admite la reproducción de imagen en la imagen de vídeo.
 ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
 ms.technology: xamarin-ios
@@ -9,11 +8,11 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 0783372cd36d5a4984d09ee055257d525e7becb1
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 553fd6e45df897037d6ad90ef9211eef0bf27aae
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="multitasking-for-ipad"></a>Multitarea para iPad
 

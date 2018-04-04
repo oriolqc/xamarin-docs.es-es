@@ -1,18 +1,17 @@
 ---
 title: Hola, desgaste
-description: "Crear su primera aplicación Android desgaste y ejecutarlo en un dispositivo o emulador de uso. Este tutorial proporciona instrucciones paso a paso para crear un proyecto pequeño desgaste Android que administra los clics de botón y muestra un contador de hacer clic en el dispositivo de uso. Se explica cómo depurar la aplicación mediante un emulador desgaste o un dispositivo de uso que está conectado a través de Bluetooth a un teléfono Android. También proporciona un conjunto de sugerencias de depuración para desgaste Android."
-ms.topic: article
+description: Crear su primera aplicación Android desgaste y ejecutarlo en un dispositivo o emulador de uso. Este tutorial proporciona instrucciones paso a paso para crear un proyecto pequeño desgaste Android que administra los clics de botón y muestra un contador de hacer clic en el dispositivo de uso. Se explica cómo depurar la aplicación mediante un emulador desgaste o un dispositivo de uso que está conectado a través de Bluetooth a un teléfono Android. También proporciona un conjunto de sugerencias de depuración para desgaste Android.
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 8eed2d6b825a6e6dd7e956bf901246b9a630081a
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 742a10ce0042d2bbf6d5690cb7a7a6eca529a57e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-wear"></a>Hola, desgaste
 

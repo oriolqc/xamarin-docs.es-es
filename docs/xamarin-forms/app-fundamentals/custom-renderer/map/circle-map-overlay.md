@@ -1,18 +1,17 @@
 ---
-title: "Resaltado de un área Circular en un mapa"
-description: "Este artículo explica cómo agregar una superposición circular a un mapa, para resaltar un área circular de la asignación."
-ms.topic: article
+title: Resaltado de un área Circular en un mapa
+description: Este artículo explica cómo agregar una superposición circular a un mapa, para resaltar un área circular de la asignación.
 ms.prod: xamarin
 ms.assetid: 6FF8BD15-074E-4E6A-9522-F9E2BE32EF12
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 0eef31c5b9a93154b1038ffa63ee560bd738fe6b
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: a70c8fdca457e386a1490ca974e1a1ea5da2f6db
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>Resaltado de un área Circular en un mapa
 
@@ -311,5 +310,5 @@ Este artículo explica cómo agregar una superposición circular a un mapa, para
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Circular mapa Ovlerlay (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
-- [Personalizar un Pin de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
+- [Personalización de un anclado de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/)

@@ -1,18 +1,17 @@
 ---
 title: ViewPager con fragmentos
-description: "ViewPager es un administrador de diseño que le permite implementar la navegación gestural. Navegación gestural permite al usuario deslice el dedo izquierdo y derecho con el paso a través de páginas de datos. Esta guía explica cómo implementar una interfaz de usuario swipeable con ViewPager, utilizar fragmentos como las páginas de datos."
-ms.topic: article
+description: ViewPager es un administrador de diseño que le permite implementar la navegación gestural. Navegación gestural permite al usuario deslice el dedo izquierdo y derecho con el paso a través de páginas de datos. Esta guía explica cómo implementar una interfaz de usuario swipeable con ViewPager, utilizar fragmentos como las páginas de datos.
 ms.prod: xamarin
 ms.assetid: 62B6286F-3680-48F3-B91B-453692E457E5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: cd71617cce209ef0127023f69c2b503fee031e43
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 83b9123b24b39e2d7bda392d05c6595f5fc3af0d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="viewpager-with-fragments"></a>ViewPager con fragmentos
 

@@ -1,16 +1,16 @@
 ---
-title: "¿Puedo agregar archivos a o quitar archivos de un archivo IPA después de compilar en Visual Studio?"
-ms.topic: article
+title: ¿Puedo agregar archivos a o quitar archivos de un archivo IPA después de compilar en Visual Studio?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6C3082FB-C3F1-4661-BE45-64570E56DE7C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: be792c95de7aa66d64278e47b2ca6b354e611273
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: b8b61ba38491b2085233dd1b30a82bc57d2baaed
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>¿Puedo agregar archivos a o quitar archivos de un archivo IPA después de compilar en Visual Studio?
 
@@ -86,4 +86,4 @@ file missing: /Users/macuser/Library/Caches/Xamarin/mtbs/builds/iPhoneApp1/cc530
 
 Y el proceso de comprobación de la tienda de aplicaciones va a notificar un mensaje de error similar:
 
-> ERROR ITMS-90035: "firma no válida. Un recurso sellado es no válida o ausente. El archivo binario en la ruta de acceso [iPhoneApp1.app/iPhoneApp1] contiene una firma no válida. Asegúrese de que ha iniciado la aplicación con un certificado de distribución, no un certificado de ad hoc o un certificado de desarrollo. Compruebe que la configuración de firma de código en Xcode es correcta en el nivel de destino (que invalidan los valores en el nivel de proyecto). Además, asegúrese de que la agrupación que se va a cargar se compiló mediante un destino de la versión en Xcode, no un destino del simulador. Si está seguro de que es correcta la configuración de firma de código, elija "Limpia todo" en Xcode, eliminar el directorio "build" en la herramienta de búsqueda y volver a generar el versión de destino. Para obtener más información, consulte [https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"
+> ERROR ITMS-90035: "firma no válida. Un recurso sellado es no válida o ausente. El archivo binario en la ruta de acceso [iPhoneApp1.app/iPhoneApp1] contiene una firma no válida. Asegúrese de que ha iniciado la aplicación con un certificado de distribución, no un certificado de ad hoc o un certificado de desarrollo. Compruebe que la configuración de firma de código en Xcode es correcta en el nivel de destino (que invalidan los valores en el nivel de proyecto). Además, asegúrese de que la agrupación que se va a cargar se compiló mediante un destino de la versión en Xcode, no un destino del simulador. Si está seguro de que es correcta la configuración de firma de código, elija "Limpia todo" en Xcode, eliminar el directorio "build" en la herramienta de búsqueda y volver a generar el versión de destino. Para obtener más información, consulte [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"

@@ -1,18 +1,17 @@
 ---
-title: "Aspectos básicos de la aplicación"
-description: "Vínculos de este documento guías que describen los distintos conceptos necesarios para entender al desarrollar aplicaciones de Xamarin.Mac."
-ms.topic: article
+title: Aspectos básicos de la aplicación
+description: Vínculos de este documento guías que describen los distintos conceptos necesarios para entender al desarrollar aplicaciones de Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 5A36B3A7-F197-4AC3-A40D-B2C49362FF06
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/17/2015
-ms.openlocfilehash: 9b64647fdb455978c3833ce1bc37f5e8784b9a78
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 807cf0e16cafc00483cecfc578367bc110657672
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>Aspectos básicos de la aplicación
 

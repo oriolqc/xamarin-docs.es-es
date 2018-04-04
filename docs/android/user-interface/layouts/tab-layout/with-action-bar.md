@@ -1,18 +1,17 @@
 ---
-title: "Diseños con pestañas con el ActionBar"
-description: "Esta guía presenta y explica cómo usar las APIs ActionBar para crear una interfaz de usuario con pestañas en una aplicación Xamarin.Android."
-ms.topic: article
+title: Diseños con pestañas con el ActionBar
+description: Esta guía presenta y explica cómo usar las APIs ActionBar para crear una interfaz de usuario con pestañas en una aplicación Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: B7E60AAF-BDA5-4305-9000-675F0438734D
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: afaa02168dcac54115e8fca53683725926e4baed
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5956cd13708f4e7e73926fc01e6142d9cf4a8edb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Diseños con pestañas con el ActionBar
 

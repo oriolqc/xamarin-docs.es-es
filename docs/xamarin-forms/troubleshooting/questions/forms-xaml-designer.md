@@ -1,17 +1,17 @@
 ---
-title: "¿Por qué no funciona el Diseñador XAML de Visual Studio para los archivos XAML de Xamarin.Forms?"
-ms.topic: article
+title: ¿Por qué no funciona el Diseñador XAML de Visual Studio para los archivos XAML de Xamarin.Forms?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: cab2eefb-c52f-4d81-866e-8f1feabbdd64
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: fae0792b6db940bb8b4aa4772eb0b5bb42b78da1
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: 1f82f16429ca23a4ba6806f775310dd90126096e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="why-doesnt-the-visual-studio-xaml-designer-work-for-xamarinforms-xaml-files"></a>¿Por qué no funciona el Diseñador XAML de Visual Studio para los archivos XAML de Xamarin.Forms?
 

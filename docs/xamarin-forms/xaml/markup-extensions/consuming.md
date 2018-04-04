@@ -1,18 +1,17 @@
 ---
 title: Consumir las extensiones de marcado XAML
 description: Usar las extensiones de marcado de XAML disponible en Xamarin.Forms
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 0c68d2cfd43eb535fe2e02b5662250cb6e453ddd
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 25eada483e8bd2ce95cb3101dfe873ea38b283ab
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumir las extensiones de marcado XAML
 

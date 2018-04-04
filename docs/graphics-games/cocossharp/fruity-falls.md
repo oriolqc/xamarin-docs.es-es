@@ -1,18 +1,17 @@
 ---
 title: Detalles de juego Fruity corresponden a las fechas
 description: Esta guía revisa el juego Fruity corresponden a las fechas, tratan conceptos de desarrollo de juegos como física, administración de contenido, estado del juego y diseño de juego y CocosSharp comunes.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: A5664930-F9F0-4A08-965D-26EF266FED24
 ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: d37b289249e5c9e2c23b45c998d1e24960637ba6
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: 2138e27c1097e014f302cc0b9de0fa411bed89fc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="fruity-falls-game-details"></a>Detalles de juego Fruity corresponden a las fechas
 

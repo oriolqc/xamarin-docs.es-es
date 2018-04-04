@@ -1,18 +1,17 @@
 ---
 title: MessagingCenter
-description: "Xamarin.Forms incluye un simple servicio de mensajería para enviar y recibir mensajes."
-ms.topic: article
+description: Xamarin.Forms incluye un simple servicio de mensajería para enviar y recibir mensajes.
 ms.prod: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: ede78d4a041f8619ff97b3da802efb18943ef8ae
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: e8145847f3c91683aa7433208d70198998cda87f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="messagingcenter"></a>MessagingCenter
 
@@ -112,4 +111,4 @@ El MessagingCenter es una manera sencilla de reducir el acoplamiento, especialme
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [MessagingCenterSample](https://developer.xamarin.com/samples/UsingMessagingCenter)
-- [Ejemplos de Xamarin.Forms](https://github.com/xamarin/xamarin-forms-samples)
+- [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples) (Ejemplos de Xamarin.Forms)

@@ -1,18 +1,17 @@
 ---
 title: Ciclo de vida de la actividad
-description: "Las actividades son un bloque de creación fundamental de las aplicaciones de Android y pueden existir en un número de estados diferentes. El ciclo de vida de actividad comienza con la creación de instancias y termina con la destrucción e incluye muchos Estados en medio. Cuando una actividad cambia de estado, se llama al método de evento adecuado del ciclo de vida, le notifica la actividad de cambio de estado inminente y lo que le permite ejecutar el código para adaptarse a ese cambio. Este artículo examina el ciclo de vida de las actividades y explica la responsabilidad que tiene una actividad durante cada uno de estos cambios de estado como parte de una aplicación con comportamiento correcto y confiable."
-ms.topic: article
+description: Las actividades son un bloque de creación fundamental de las aplicaciones de Android y pueden existir en un número de estados diferentes. El ciclo de vida de actividad comienza con la creación de instancias y termina con la destrucción e incluye muchos Estados en medio. Cuando una actividad cambia de estado, se llama al método de evento adecuado del ciclo de vida, le notifica la actividad de cambio de estado inminente y lo que le permite ejecutar el código para adaptarse a ese cambio. Este artículo examina el ciclo de vida de las actividades y explica la responsabilidad que tiene una actividad durante cada uno de estos cambios de estado como parte de una aplicación con comportamiento correcto y confiable.
 ms.prod: xamarin
 ms.assetid: 05B34788-F2D2-4347-B66B-40AFD7B1D167
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/28/2018
-ms.openlocfilehash: 335e63ce5a36cbd0172744a35c82920853b82e5c
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f35f3e59d8b669795ade3d370894e45866cea1ff
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="activity-lifecycle"></a>Ciclo de vida de la actividad
 

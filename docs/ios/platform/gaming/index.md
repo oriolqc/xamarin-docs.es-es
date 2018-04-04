@@ -1,18 +1,17 @@
 ---
 title: Juegos de API de iOS
-description: "Este artículo tratan las nuevas mejoras de juegos proporcionadas por iOS 9 que puede usarse para mejorar su juego Xamarin.iOS gráficos y funciones de audio."
-ms.topic: article
+description: Este artículo tratan las nuevas mejoras de juegos proporcionadas por iOS 9 que puede usarse para mejorar su juego Xamarin.iOS gráficos y funciones de audio.
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: d0a66d4cfdb3050c7ad791d24e24d6917a031ee1
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 34d3d6980819510a3390e2c30069818d6dfd721f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="ios-gaming-apis"></a>Juegos de API de iOS
 

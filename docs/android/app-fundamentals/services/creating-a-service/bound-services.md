@@ -1,18 +1,17 @@
 ---
 title: Enlaza los servicios en Xamarin.Android
-description: "Servicios enlazados son Android servicios que proporcionan una interfaz de cliente y servidor que un cliente (por ejemplo, una actividad Android) puede interactuar con. Esta guía describe los componentes claves relacionados con la creación de un servicio dependiente y cómo usarlo en una aplicación Xamarin.Android."
-ms.topic: article
+description: Servicios enlazados son Android servicios que proporcionan una interfaz de cliente y servidor que un cliente (por ejemplo, una actividad Android) puede interactuar con. Esta guía describe los componentes claves relacionados con la creación de un servicio dependiente y cómo usarlo en una aplicación Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 04307eab1bc8dc28fa69315809e254c920fb6d56
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 18cfe6acae08efac85223c9c121a12f102f846cc
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Enlaza los servicios en Xamarin.Android
 
@@ -34,7 +33,7 @@ Este diagrama muestra cómo la actividad, conexión de servicio, enlazador y ser
 
 ![Un diagrama que muestra cómo se relacionan entre sí los componentes del servicio](bound-services-images/bound-services-02.png "un diagrama que muestra cómo se relacionan entre sí los componentes del servicio.")
 
-Esta guía describe cómo extender el `Service` clase para implementar un servicio dependiente. También se tratará implementar `IServiceConnection` y ampliar `Binder` para permitir que un cliente para comunicarse con el servicio. Una aplicación de ejemplo incluye en esta guía, que contiene una solución con un solo proyecto Xamarin.Android llama  **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)**  . Se trata de una aplicación muy básica que muestra cómo implementar un servicio y cómo enlazar una actividad a él. El servicio dependiente tiene una API muy sencilla con un solo método, `GetFormattedTimestamp`, que devuelve una cadena que indica al usuario cuando se ha iniciado el servicio y cuánto tiempo lleva ejecutándose. La aplicación también permite al usuario a Desenlazar manualmente y enlazar con el servicio.
+Esta guía describe cómo extender el `Service` clase para implementar un servicio dependiente. También se tratará implementar `IServiceConnection` y ampliar `Binder` para permitir que un cliente para comunicarse con el servicio. Una aplicación de ejemplo incluye en esta guía, que contiene una solución con un solo proyecto Xamarin.Android llama **[BoundServiceDemo](https://github.com/xamarin/monodroid-samples/tree/master/ApplicationFundamentals/ServiceSamples/BoundServiceDemo)** . Se trata de una aplicación muy básica que muestra cómo implementar un servicio y cómo enlazar una actividad a él. El servicio dependiente tiene una API muy sencilla con un solo método, `GetFormattedTimestamp`, que devuelve una cadena que indica al usuario cuando se ha iniciado el servicio y cuánto tiempo lleva ejecutándose. La aplicación también permite al usuario a Desenlazar manualmente y enlazar con el servicio.
 
 [![Captura de pantalla de la aplicación se ejecuta en un teléfono Android](bound-services-images/bound-services-03-sml.png)](bound-services-images/bound-services-03.png#lightbox)
 

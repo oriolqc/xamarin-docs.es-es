@@ -1,18 +1,17 @@
 ---
-title: "Página con pestañas"
-description: "El Xamarin.Forms TabbedPage consta de una lista de pestañas y un área más grande de detalle, con cada pestaña cargar contenido en el área de detalles. Este artículo demuestra cómo usar un TabbedPage para navegar por una colección de páginas."
-ms.topic: article
+title: Página con pestañas
+description: El Xamarin.Forms TabbedPage consta de una lista de pestañas y un área más grande de detalle, con cada pestaña cargar contenido en el área de detalles. Este artículo demuestra cómo usar un TabbedPage para navegar por una colección de páginas.
 ms.prod: xamarin
 ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 2ec783b6963fc4ae14166ebf1e56bf8a802ba8b4
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 11287d38ec0e01e068ca385c92e6a6efdc323aeb
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="tabbed-page"></a>Página con pestañas
 

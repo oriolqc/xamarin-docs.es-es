@@ -1,24 +1,23 @@
 ---
-title: "Errores de incrustación de .NET"
-ms.topic: article
+title: Errores de incrustación de .NET
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 90d30b92069bcd6a5c008fa8009c0392c4d26473
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 64caaf6610d9f9193a686d91b4731cd4d4953fa6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="em0xxx-binding-error-messages"></a>EM0xxx: mensajes de error de enlace
 
-P. ej. parámetros, entorno
+P. ej., parámetros, entorno
 
 <!-- 0xxx: the generator itself, e.g. parameters, environment -->
-<h3><a name="EM0000"/>EM0000: Error inesperado - complete un informe de errores en https://github.com/mono/Embeddinator-4000/issues</h3>
+<h3><a name="EM0000"/>EM0000: Error inesperado: rellene en un informe de errores https://github.com/mono/Embeddinator-4000/issues</h3>
 
 Se produjo un error inesperado. Por favor, [un problema de archivo](https://github.com/mono/Embeddinator-4000/issues) con tanta información como sea posible, incluidos:
 
@@ -68,7 +67,7 @@ Se trata de un problema conocido que se tiene la intención de corregir en una v
 
 La herramienta no pudo combinar los marcos mencionados en el mensaje de error, porque no hay un archivo común entre ellos.
 
-Esto podría indicar un error en el Embeddinator-4000; registre un informe de errores en [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) con un caso de prueba.
+Esto podría indicar un error en el Embeddinator-4000; registre un informe de errores en [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) con un caso de prueba.
 
 <h3><a name="EM0011"/>EM0011: El ensamblado `X` no existe.</h3>
 
@@ -100,11 +99,11 @@ No se pudo crear el vínculo simbólico mencionado en el mensaje de error.
 
 La sintaxis para la opción de línea de comandos `A` no se pudo analizar la herramienta. Es probable que incorrecto, por favor, póngase en contacto con la documentación o la ayuda para ver la sintaxis correcta.
 
-<h3><a name="EM0099"/>EM0099: Error interno *. Registre un informe de errores a un caso de prueba (https://github.com/mono/Embeddinator-4000/issues).</h3>
+<h3><a name="EM0099"/>EM0099: Error interno *. Registre un informe de errores con un caso de prueba (https://github.com/mono/Embeddinator-4000/issues).</h3>
 
 Este mensaje de error se notifica cuando se produce un error en una comprobación de coherencia interna en Embeddinator a 4000.
 
-Esto indica un error en el Embeddinator-4000; registre un informe de errores en [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) con un caso de prueba.
+Esto indica un error en el Embeddinator-4000; registre un informe de errores en [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) con un caso de prueba.
 
 
 <!-- 1xxx: code processing -->
@@ -141,7 +140,7 @@ Nota: Las características admitidas evolucionará con las nuevas versiones de l
 
 <h3><a name="EM1021"/>Constructor `C` tiene valores predeterminados para el que no se genera ningún contenedor.</h3>
 
-Se trata de un **advertencia** que los parámetros predeterminados de constructor `C` no genera ningún código adicional. La causa más común es que un método existente ya tiene la misma firma. P. ej. en .net es posible tener:
+Se trata de un **advertencia** que los parámetros predeterminados de constructor `C` no genera ningún código adicional. La causa más común es que un método existente ya tiene la misma firma. P. ej., en .net es posible tener:
 
 ```
 public class MyType {
@@ -173,7 +172,7 @@ Nota: Las características admitidas evolucionará con las nuevas versiones de l
 
 <h3><a name="EM1032"/>Método `M` tiene valores predeterminados para el que no se genera ningún contenedor.</h3>
 
-Se trata de un **advertencia** que los parámetros predeterminados de método `M` no genera ningún código adicional. La causa más común es que un método existente ya tiene la misma firma. P. ej. en .net es posible tener:
+Se trata de un **advertencia** que los parámetros predeterminados de método `M` no genera ningún código adicional. La causa más común es que un método existente ya tiene la misma firma. P. ej., en .net es posible tener:
 
 ```
 public class MyType {

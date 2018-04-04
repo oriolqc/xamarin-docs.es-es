@@ -1,17 +1,17 @@
 ---
-title: "¿Es posible conectarse a emuladores de Android ejecutando en un Mac de una máquina virtual de Windows?"
-ms.topic: article
+title: ¿Es posible conectarse a emuladores de Android ejecutando en un Mac de una máquina virtual de Windows?
+ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 2f0ef027d8a2d40ccf85e35d5a85eba4cd7c7ccc
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: a04258e6056b4572856d4ec05c40effec4e51910
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="is-it-possible-to-connect-to-android-emulators-running-on-a-mac-from-a-windows-vm"></a>¿Es posible conectarse a emuladores de Android ejecutando en un Mac de una máquina virtual de Windows?
 
@@ -34,7 +34,7 @@ Para conectarse a un emulador de Google Android que se ejecuta en un equipo Mac 
     emulator6 94105 macuser   21u  IPv4 0xa8dacfb1d845a51f      0t0  TCP localhost:5554 (LISTEN)
     ```
 
-    El número impar es el puerto utilizado para conectarse a `adb`. Vea también [http://developer.android.com/tools/devices/emulator.html#emulatornetworking](http://developer.android.com/tools/devices/emulator.html#emulatornetworking).
+    El número impar es el puerto utilizado para conectarse a `adb`. Vea también [ http://developer.android.com/tools/devices/emulator.html#emulatornetworking ](http://developer.android.com/tools/devices/emulator.html#emulatornetworking).
 
 4.  _Opción 1_: Use [ `nc` ](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html) para reenviar los paquetes TCP de entrada recibidos externamente en el puerto 5555 (o cualquier otro puerto desee utilizar) al puerto impares de la interfaz de bucle invertido (**127.0.0.1 5555** en este ejemplo), y para reenviar los paquetes salientes para volver a la otra manera:
 
@@ -92,13 +92,13 @@ Una pequeña Precaución: Si utiliza el puerto `5555` para el puerto local, `adb
 
 ### <a name="alternate-technique-using-adb--h-is-not-yet-supported"></a>Uso de la técnica alternativa `adb -H` aún no se admite
 
-En teoría, otra alternativa sería utilizar `adb`de capacidad integrada para conectarse a un `adb` servidor se ejecuta en un equipo remoto (Véase, por ejemplo, [http://stackoverflow.com/a/18551325](http://stackoverflow.com/a/18551325)).
+En teoría, otra alternativa sería utilizar `adb`de capacidad integrada para conectarse a un `adb` servidor se ejecuta en un equipo remoto (Véase, por ejemplo, [ http://stackoverflow.com/a/18551325 ](http://stackoverflow.com/a/18551325)).
 Pero las extensiones Xamarin.Android IDE no proporcionan actualmente una manera de configurar esta opción.
 
 ## <a name="contact-information"></a>Información de contacto
 
 Este documento describe el comportamiento actual a marzo de 2016. La técnica descrita en este documento no es parte de la serie de prueba estable para Xamarin, por lo que podría afectar en el futuro.
 
-Si observa que la técnica deja de funcionar o si observa otros errores en el documento, no dude en Agregar a la discusión en el siguiente subproceso de foro: [http://forums.xamarin.com/discussion/33702/ Android-Emulator-from-host-Device-Inside-Windows-VM](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
+Si observa que la técnica deja de funcionar o si observa otros errores en el documento, no dude en Agregar a la discusión en el siguiente subproceso de foro: [ http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm ](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
 Gracias
 

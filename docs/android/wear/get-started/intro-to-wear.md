@@ -1,18 +1,17 @@
 ---
-title: "Introducción al uso de Android"
-description: "Con la introducción de Android desgaste de Google, ya no está obligado a solo los teléfonos y tabletas en cuanto a desarrollar excelentes aplicaciones Android. Compatibilidad con del Xamarin.Android desgaste Android hace posible para que pueda ejecutar código de C# en la muñeca! Esta introducción proporciona una introducción básica a desgaste Android, describe sus características clave y ofrece una visión general de las características disponibles en 2.0 desgaste Android. Se muestran algunos de los dispositivos Android desgaste más populares y proporciona vínculos a documentación de Google Android desgaste fundamental para obtener más información."
-ms.topic: article
+title: Introducción al uso de Android
+description: Con la introducción de Android desgaste de Google, ya no está obligado a solo los teléfonos y tabletas en cuanto a desarrollar excelentes aplicaciones Android. Compatibilidad con del Xamarin.Android desgaste Android hace posible para que pueda ejecutar código de C# en la muñeca! Esta introducción proporciona una introducción básica a desgaste Android, describe sus características clave y ofrece una visión general de las características disponibles en 2.0 desgaste Android. Se muestran algunos de los dispositivos Android desgaste más populares y proporciona vínculos a documentación de Google Android desgaste fundamental para obtener más información.
 ms.prod: xamarin
 ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 4f6cfe61b5f91fb6703fdcdd20513ce6bc2dc161
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 0ab166bb71c23d456cb70d35a2794717110642fd
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-android-wear"></a>Introducción al uso de Android
 

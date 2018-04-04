@@ -1,18 +1,17 @@
 ---
-title: "Principios de la aplicación"
+title: Principios de la aplicación
 description: Conceptos de las aplicaciones principales
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 935B8BFE-23B7-4239-5C87-F4A503B889CB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 4abb8c823c62bc62fd2e6f717cc1b5bde9057e4e
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: cfb31fa6cac7c4848054cd58a1e144c2ac944262
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="application-fundamentals"></a>Principios de la aplicación
 
@@ -35,7 +34,7 @@ En este artículo introduce el concepto de recursos Android en documentos y Xama
 
 
 
-##  <a name="activity-lifecycleandroidapp-fundamentalsactivity-lifecycleindexmd"></a>[Ciclo de vida de actividad](~/android/app-fundamentals/activity-lifecycle/index.md)
+##  <a name="activity-lifecycleandroidapp-fundamentalsactivity-lifecycleindexmd"></a>[Ciclo de vida de la actividad](~/android/app-fundamentals/activity-lifecycle/index.md)
 
 Las actividades son un bloque de creación fundamental de las aplicaciones de Android y pueden existir en un número de estados diferentes. El ciclo de vida de actividad comienza con la creación de instancias y termina con la destrucción e incluye muchos Estados en medio. Cuando una actividad cambia de estado, se llama al método de evento adecuado del ciclo de vida, le notifica la actividad de cambio de estado inminente y lo que le permite ejecutar el código para adaptarse a ese cambio. Este artículo examina el ciclo de vida de las actividades y explica la responsabilidad que tiene una actividad durante cada uno de estos cambios de estado como parte de una aplicación con comportamiento correcto y confiable.
 
@@ -64,7 +63,7 @@ Puede usar la compatibilidad con herramientas integrada en Visual Studio para Ma
 Android proporciona un marco muy amplio y diverso para admitir las animaciones y los gráficos 2D. Este documento presenta estos marcos de trabajo y explica cómo crear animaciones y gráficos personalizados y usarlos en una aplicación Xamarin.Android.
 
 
-##  <a name="cpu-architecturesandroidapp-fundamentalscpu-architecturesmd"></a>[Arquitecturas de la CPU](~/android/app-fundamentals/cpu-architectures.md)
+##  <a name="cpu-architecturesandroidapp-fundamentalscpu-architecturesmd"></a>[Arquitecturas de CPU](~/android/app-fundamentals/cpu-architectures.md)
 
 Xamarin.Android es compatible con varias arquitecturas de CPU, incluidos los dispositivos de 32 bits y 64 bits. Este artículo explica cómo elegir como destino una aplicación a una o varias arquitecturas de CPU compatible con Android.
 

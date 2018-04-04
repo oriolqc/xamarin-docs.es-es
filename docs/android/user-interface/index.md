@@ -1,24 +1,23 @@
 ---
 title: Interfaz de usuario
 description: Crear Interfaces de usuario para las aplicaciones de Xamarin.Android
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: F67B7C33-BC53-2BB6-CDA7-16E4AB4A9EFB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/18/2017
-ms.openlocfilehash: 40d02def5c0aae3334ae59cec78f6d22a1d5d772
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 152f5551e2f539e8ab93121c35c2acca7eb7f2e9
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="user-interface"></a>Interfaz de usuario
 
 Las siguientes secciones explican las diversas herramientas y bloques de creación que se utilizan para crear interfaces de usuario en aplicaciones de Xamarin.Android.
 
-## <a name="android-designerandroiduser-interfaceandroid-designerindexmd"></a>[Diseñador de Android](~/android/user-interface/android-designer/index.md)
+## <a name="android-designerandroiduser-interfaceandroid-designerindexmd"></a>[Android Designer](~/android/user-interface/android-designer/index.md)
 
 Esta sección explica cómo utilizar el Diseñador de Android para colocar controles visualmente y editar las propiedades. También se explica cómo usar el diseñador para trabajar con interfaces de usuario y los recursos a través de varias configuraciones, como temas, idiomas y configuraciones del dispositivo, así como cómo diseñar vistas alternativas como horizontal y vertical.
 

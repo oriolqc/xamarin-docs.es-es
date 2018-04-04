@@ -1,18 +1,17 @@
 ---
-title: "Vistas de colección"
-description: "Vistas de colección permiten el contenido que se mostrará mediante los diseños arbitrarios. Le permiten crear con facilidad diseños de cuadrícula de fábrica, que también la ejecución de los diseños personalizados."
-ms.topic: article
+title: Vistas de colección
+description: Vistas de colección permiten el contenido que se mostrará mediante los diseños arbitrarios. Le permiten crear con facilidad diseños de cuadrícula de fábrica, que también la ejecución de los diseños personalizados.
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 7048eb9c478d7ae10787e158f18b764b258da171
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 75ad331a265c14892f101b1aa7956d2cde3beec8
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="collection-views"></a>Vistas de colección
 
@@ -140,7 +139,7 @@ Decoración vistas son puramente visual que se pueden mostrar en un `UICollectio
 
 ## <a name="data-source"></a>Origen de datos
 
-Al igual que con otras partes de operaciones de E/s, como `UITableView` y `MKMapView`, `UICollectionView` obtiene sus datos de un *origen de datos*, que se expone en Xamarin.iOS a través de la  **`UICollectionViewDataSource`**  clase. Esta clase es responsable de proporcionar contenido a los `UICollectionView` como:
+Al igual que con otras partes de operaciones de E/s, como `UITableView` y `MKMapView`, `UICollectionView` obtiene sus datos de un *origen de datos*, que se expone en Xamarin.iOS a través de la **`UICollectionViewDataSource`** clase. Esta clase es responsable de proporcionar contenido a los `UICollectionView` como:
 
 -  **Las celdas** : devuelto desde `GetCell` método.
 -  **Vistas adicionales** : devuelto desde `GetViewForSupplementaryElement` método.
