@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: e492bee2b43f2be54f450550e3f44e7da3de258e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09328e1c6d884898aed86f2cb8ab1b84bf6d5cab
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="fonts"></a>Fuentes
 
@@ -135,7 +135,7 @@ Hay un convertidor integrado para la `Font` propiedad que permite que todos los 
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-Para especificar múltiples `Font` opciones, se combinan la configuración necesaria en una cadena de atributo de fuente. Debe tener el formato la cadena del atributo de fuente `"[font-face],[attributes],[size]"`. Es importante el orden de los parámetros, todos los parámetros son opcionales y múltiples `attributes` se pueden especificar, por ejemplo:
+Para especificar varias `Font` opciones, se combinan la configuración necesaria en una cadena de atributo de fuente. Debe tener el formato la cadena del atributo de fuente `"[font-face],[attributes],[size]"`. Es importante el orden de los parámetros, todos los parámetros son opcionales y varios `attributes` se pueden especificar, por ejemplo:
 
 ```xaml
 <Label Text="Small bold text" FontAttributes="Bold" FontSize="Micro" />

@@ -7,11 +7,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: dd9694a05632cd5f37cb583d15bc93311a49cfdc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e01d3e228a0684865fb09dd7a4cbb0e2f0b49125
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>Píxeles y unidades independientes del dispositivo
 
@@ -31,7 +31,7 @@ La página en el [ **SkewSharpFormsDemos** ](https://developer.xamarin.com/sampl
 - El [ `CanvasSize` ](https://developer.xamarin.com/api/property/SkiaSharp.Views.Forms.SKCanvasView.CanvasSize/) propiedad de la `SKCanvasView` objeto.
 - El [ `Size` ](https://developer.xamarin.com/api/property/SkiaSharp.SKImageInfo.Size/) propiedad de la `SKImageInfo` valor, que es coherente con la `Width` y `Height` propiedades utilizadas en las dos páginas anteriores.
 
-El [ `SurfaceSizePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SurfaceSizePage.cs) clase muestra cómo mostrar estos valores. El constructor guarda el `SKCanvasView` objeto como un campo, por lo que son accesibles en el `PaintSurface` controlador de eventos:
+El [ `SurfaceSizePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SurfaceSizePage.cs) clase muestra cómo mostrar estos valores. El constructor guarda el `SKCanvasView` objeto como un campo, por lo que son accesibles en el `PaintSurface` controlador de eventos:
 
 ```csharp
 SKCanvasView canvasView;
@@ -114,7 +114,7 @@ Además el `DrawCircle` método `SKCanvas` también define dos `DrawOval` métod
 public void DrawOval (Single cx, Single cy, Single rx, Single ry, SKPaint paint)
 ```
 
-¿Es posible dibujar una elipse rellena la superficie de presentación? El **elipse rellenar** muestra la página Cómo. El `PaintSurface` controlador de eventos en el [ **EllipseFillPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/EllipseFillPage.xaml.cs) clase resta la mitad del ancho del trazo de la `xRadius` y `yRadius` valores para ajustarse a la elipse completa y su se describen en la superficie de presentación:
+¿Es posible dibujar una elipse rellena la superficie de presentación? El **elipse rellenar** muestra la página Cómo. El `PaintSurface` controlador de eventos en el [ **EllipseFillPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/EllipseFillPage.xaml.cs) clase resta la mitad del ancho del trazo de la `xRadius` y `yRadius` valores para ajustarse a la elipse completa y su se describen en la superficie de presentación:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

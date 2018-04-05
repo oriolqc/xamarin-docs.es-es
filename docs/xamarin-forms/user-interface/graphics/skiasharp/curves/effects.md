@@ -7,11 +7,11 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/29/2017
-ms.openlocfilehash: 4097aea4079555b26b586db5ec63fa261d5e7946
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 47f5a6fdcfb6ee795f84ca8e19c0954b68a2fae9
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="path-effects"></a>Efectos de ruta de acceso
 
@@ -50,7 +50,7 @@ El **animar texto decimal con punto** página es similar a la **texto que se des
 
 [![](effects-images/animateddottedtext-small.png "Captura de pantalla triple de la página de texto animado de números separados por puntos")](effects-images/animateddottedtext-large.png#lightbox "Triple captura de pantalla de la página de texto animado de números separados por puntos")
 
-El [ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) clase comienza por definir algunas constantes y también invalida la `OnAppearing` y `OnDisappearing` métodos para la animación:
+El [ `AnimatedDottedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) clase comienza por definir algunas constantes y también invalida la `OnAppearing` y `OnDisappearing` métodos para la animación:
 
 ```csharp
 public class AnimatedDottedTextPage : ContentPage
@@ -158,7 +158,7 @@ El **punto / guión Morph** programa anima el mismo patrón de guiones para que 
 
 [![](effects-images/dotdashmorph-small.png "Captura de pantalla triple de la página punto guión Morph")](effects-images/dotdashmorph-large.png#lightbox "Triple captura de pantalla de la página Morph de guión punto")
 
-El [ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) clase invalidaciones el `OnAppearing` y `OnDisappearing` métodos al igual que el programa anterior, pero debe define la clase la `SKPaint` objeto como un campo:
+El [ `DotDashMorphPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DotDashMorphPage.cs) clase invalidaciones el `OnAppearing` y `OnDisappearing` métodos al igual que el programa anterior, pero debe define la clase la `SKPaint` objeto como un campo:
 
 ```csharp
 public class DotDashMorphPage : ContentPage
@@ -287,7 +287,7 @@ El [ `SKPath1DPathEffectStyle` ](https://developer.xamarin.com/api/type/SkiaShar
 
 El `Translate` miembro hace que la ruta de acceso que se mantiene en la misma orientación tal y como se ha replicado a lo largo de una línea o una curva. Para `Rotate`, la ruta de acceso se gira en función de una tangente de la curva. La ruta de acceso tiene su orientación normal para las líneas horizontales. `Morph` es similar a `Rotate` salvo que la ruta de acceso también se curva para que coincida con la curvatura de la línea que se traza.
 
-El **efecto de ruta de acceso de D 1** página muestra estas tres opciones. El [ **OneDimensionalPathEffectPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml) archivo define un selector que contiene tres elementos que corresponden a los tres miembros de la enumeración:
+El **efecto de ruta de acceso de D 1** página muestra estas tres opciones. El [ **OneDimensionalPathEffectPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml) archivo define un selector que contiene tres elementos que corresponden a los tres miembros de la enumeración:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -323,7 +323,7 @@ El **efecto de ruta de acceso de D 1** página muestra estas tres opciones. El [
 </ContentPage>
 ```
 
-El [ **OneDimensionalPathEffectPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml.cs) archivo de código subyacente define tres `SKPathEffect` objetos como campos. Estos se crean usando `SKPathEffect.Create1DPath` con `SKPath` objetos creados mediante `SKPath.ParseSvgPathData`. El primero es un sencillo cuadro, el segundo es una forma de rombo y el tercero es un rectángulo. Se utilizan para mostrar los estilos de tres efecto:
+El [ **OneDimensionalPathEffectPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/OneDimensionalPathEffectPage.xaml.cs) archivo de código subyacente define tres `SKPathEffect` objetos como campos. Estos se crean usando `SKPathEffect.Create1DPath` con `SKPath` objetos creados mediante `SKPath.ParseSvgPathData`. El primero es un sencillo cuadro, el segundo es una forma de rombo y el tercero es un rectángulo. Se utilizan para mostrar los estilos de tres efecto:
 
 ```csharp
 public partial class OneDimensionalPathEffectPage : ContentPage
@@ -422,7 +422,7 @@ Buscar el valor adecuado de *un* para ajustarse a la catenaria a las dimensiones
 
 COSH (w/2/a) = 1 + h / a
 
-El método siguiente en la [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) clase incorpora ese igualdad haciendo referencia a las dos expresiones de la izquierda y derecha del signo igual como `left` y `right`. Para valores pequeños de *una*, `left` es mayor que `right`; para valores grandes de *una*, `left` es menor que `right`. El `while` bucle se reduce en un valor óptimo de *un*:
+El método siguiente en la [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) clase incorpora ese igualdad haciendo referencia a las dos expresiones de la izquierda y derecha del signo igual como `left` y `right`. Para valores pequeños de *una*, `left` es mayor que `right`; para valores grandes de *una*, `left` es menor que `right`. El `while` bucle se reduce en un valor óptimo de *un*:
 
 ```csharp
 float FindOptimumA(float width, float height)
@@ -551,7 +551,7 @@ El **cinta transportadora** página crea una ruta de acceso similar a una banda 
 
 El (0, 0) punto de la ruta de acceso de depósitos es el identificador, por lo que cuando el `phase` argumento está animado, parecen que los depósitos giran en torno a la cinta transportadora, quizás scooping de agua en la parte inferior y el volcado horizontal en la parte superior.
 
-El [ `ConveyorBeltPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ConveyorBeltPage.cs) clase implementa animación con las invalidaciones de la `OnAppearing` y `OnDisappearing` métodos. La ruta de acceso para el cubo se define en el constructor de la página:
+El [ `ConveyorBeltPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ConveyorBeltPage.cs) clase implementa animación con las invalidaciones de la `OnAppearing` y `OnDisappearing` métodos. La ruta de acceso para el cubo se define en el constructor de la página:
 
 ```csharp
 public class ConveyorBeltPage : ContentPage
@@ -712,7 +712,7 @@ El `width` argumento especifica el ancho del trazo de las líneas de trama. El `
 
 De forma predeterminada, las líneas de trama son horizontales. Si el `matrix` parámetro contiene rotación, las líneas de trama rotan hacia la derecha.
 
-El **relleno de trama** página muestra este efecto de la ruta de acceso. El [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) clase define tres efectos de ruta de acceso como campos, la primera para las líneas de trama horizontal con un ancho de 3 píxeles con un factor de escala que indica que están espaciados 6 píxeles. Por lo tanto, la separación entre las líneas es 3 píxeles. El segundo efecto de ruta de acceso es para las líneas de trama vertical con un ancho de 6 píxeles con un espaciado 24 píxeles (por lo que la separación es 18 píxeles), y el tercero es Sombreado diagonal líneas 12 espaciados anchos 36 píxeles separados. 
+El **relleno de trama** página muestra este efecto de la ruta de acceso. El [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) clase define tres efectos de ruta de acceso como campos, la primera para las líneas de trama horizontal con un ancho de 3 píxeles con un factor de escala que indica que están espaciados 6 píxeles. Por lo tanto, la separación entre las líneas es 3 píxeles. El segundo efecto de ruta de acceso es para las líneas de trama vertical con un ancho de 6 píxeles con un espaciado 24 píxeles (por lo que la separación es 18 píxeles), y el tercero es Sombreado diagonal líneas 12 espaciados anchos 36 píxeles separados. 
 
 ```csharp
 public class HatchFillPage : ContentPage
@@ -812,7 +812,7 @@ El `SKMatrix` factores de escala indican el espaciado horizontal y vertical de l
 
 La ruta de acceso replicada normalmente está alineado con los bordes superiores e izquierdos de la pantalla en lugar de en el área que se va a rellenar. Puede invalidar este comportamiento proporcionando factores de traducción entre 0 y los factores de escala para especificar el desplazamiento horizontal y vertical de los lados izquierdos y superiores.
 
-El **relleno de ruta de acceso del icono** página muestra este efecto de la ruta de acceso. La ruta de acceso que se utiliza para colocar en mosaico del área se define como un campo en el [ `PathFileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) clase. La coordenadas horizontales y verticales comprendidos entre -40 a 40, lo que significa que esta ruta de acceso es 80 píxeles cuadrados: 
+El **relleno de ruta de acceso del icono** página muestra este efecto de la ruta de acceso. La ruta de acceso que se utiliza para colocar en mosaico del área se define como un campo en el [ `PathFileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) clase. La coordenadas horizontales y verticales comprendidos entre -40 a 40, lo que significa que esta ruta de acceso es 80 píxeles cuadrados: 
 
 ```csharp
 public class PathTileFillPage : ContentPage
@@ -868,7 +868,7 @@ public static SKPathEffect CreateCorner (Single radius)
 
 Aunque el argumento único se denomina `radius` debe establecer en la mitad del radio de redondeo deseado. (Esto es una característica del código Skia subyacente).
 
-Este es el `PaintSurface` controlador en el [ `AnotherRoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/AnotherRoundedHeptagonPage.cs) clase:
+Este es el `PaintSurface` controlador en el [ `AnotherRoundedHeptagonPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/AnotherRoundedHeptagonPage.cs) clase:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -944,7 +944,7 @@ El **vibración experimentar** página le permite experimentar con distintos val
 
 [![](effects-images/jitterexperiment-small.png "Captura de pantalla de la página de vibración experimento de triple")](effects-images/jitterexperiment-large.png#lightbox "Triple screenshot of the JitterExperiment page")
 
-El programa es usase. El [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) archivo crean instancias de dos `Slider` elementos y un `SKCanvasView`:
+El programa es usase. El [ **JitterExperimentPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml) archivo crean instancias de dos `Slider` elementos y un `SKCanvasView`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -1000,7 +1000,7 @@ El programa es usase. El [ **JitterExperimentPage.xaml** ](https://github.com/xa
 </ContentPage>
 ```
 
-El `PaintSurface` controlador en el [ **JitterExperimentPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml.cs) se denomina archivo de código subyacente siempre que sea un `Slider` cambia el valor. Llama `SKPathEffect.CreateDiscrete` utilizando los dos `Slider` valores y lo usa para trazar un rectángulo:
+El `PaintSurface` controlador en el [ **JitterExperimentPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterExperimentPage.xaml.cs) se denomina archivo de código subyacente siempre que sea un `Slider` cambia el valor. Llama `SKPathEffect.CreateDiscrete` utilizando los dos `Slider` valores y lo usa para trazar un rectángulo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -1031,7 +1031,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Puede utilizar este efecto con el que rellenar, en cuyo caso el contorno del área de relleno está sujeto a estas desviaciones aleatorias. El **texto vibración** página muestra cómo utilizar este efecto de la ruta de acceso para mostrar el texto. La mayoría del código de la `PaintSurface` controlador de la [ `JitterTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/JitterTextPage.cs) clase se dedica a ajustar el tamaño y centrar el texto:
+Puede utilizar este efecto con el que rellenar, en cuyo caso el contorno del área de relleno está sujeto a estas desviaciones aleatorias. El **texto vibración** página muestra cómo utilizar este efecto de la ruta de acceso para mostrar el texto. La mayoría del código de la `PaintSurface` controlador de la [ `JitterTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/JitterTextPage.cs) clase se dedica a ajustar el tamaño y centrar el texto:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -1086,7 +1086,7 @@ Un uso básico de este método no implica en todos los efectos de la ruta de acc
 
 Por ejemplo, si la `src` ruta de acceso es un círculo simple del radio de 500 y el `SKPaint` objeto especifica un ancho del trazo de 100, el `dst` ruta de acceso se convierte en dos círculos concéntricos, uno con un radio de 450 y otra con un radio de 550. Se llama al método `GetFillPath` porque rellenar este `dst` ruta de acceso es el mismo que el trazado el `src` ruta de acceso. Pero también puede trazar el `dst` ruta de acceso para ver los contornos de ruta de acceso.
 
-El **pulse al esquema de la ruta de acceso** se muestra cómo hacerlo. El `SKCanvasView` y `TapGestureRecognizer` se crean instancias en el [ **TapToOutlineThePathPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml) archivo. El [ **TapToOutlineThePathPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml.cs) archivo de código subyacente define tres `SKPaint` objetos como campos, dos para trazado con trazar anchos de 100 y 20 y el tercero para el llenado:
+El **pulse al esquema de la ruta de acceso** se muestra cómo hacerlo. El `SKCanvasView` y `TapGestureRecognizer` se crean instancias en el [ **TapToOutlineThePathPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml) archivo. El [ **TapToOutlineThePathPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TapToOutlineThePathPage.xaml.cs) archivo de código subyacente define tres `SKPaint` objetos como campos, dos para trazado con trazar anchos de 100 y 20 y el tercero para el llenado:
 
 ```csharp
 public partial class TapToOutlineThePathPage : ContentPage
@@ -1239,7 +1239,7 @@ Un uso obvio de `CreateSum` consiste en definir un `SKPaint` objeto que rellena 
 
 [![](effects-images/catsinframe-small.png "Captura de pantalla triple de la página de gatos en marco")](effects-images/catsinframe-large.png#lightbox "Triple captura de pantalla de la página de gatos de marco")
 
-El [ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) clase comienza con la definición de varios campos. Puede reconocer el primer campo de la [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) clase desde el [ **datos de ruta de acceso de SVG** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) artículo. Segunda ruta de acceso se basa en una línea y un arco para el patrón de Festonear del marco de:
+El [ `CatsInFramePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CatsInFramePage.cs) clase comienza con la definición de varios campos. Puede reconocer el primer campo de la [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) clase desde el [ **datos de ruta de acceso de SVG** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/path-data.md) artículo. Segunda ruta de acceso se basa en una línea y un arco para el patrón de Festonear del marco de:
 
 ```csharp
 public class CatsInFramePage : ContentPage
@@ -1353,7 +1353,7 @@ Los algoritmos detrás de los efectos de la ruta de acceso siempre hacen que la 
 
 Es habitual usar `SKPathEffect.CreateCompose` para agregar cierta vibración a otro efecto de la ruta de acceso. Por supuesto, puede experimentar por su cuenta, pero este es un ejemplo ligeramente distinto:
 
-El **líneas discontinuas de trama** rellena una elipse con líneas de trama que son discontinuas. La mayoría del trabajo de la [ `DashedHatchLinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/DashedHatchLinesPage.cs) clase se lleva a cabo directamente en las definiciones de campo. Estos campos definen un efecto de guión y un efecto de trama. Se definen como `static` ya que, a continuación, se hace referencia en un `SKPathEffect.CreateCompose` llamar a en el `SKPaint` definición:
+El **líneas discontinuas de trama** rellena una elipse con líneas de trama que son discontinuas. La mayoría del trabajo de la [ `DashedHatchLinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/DashedHatchLinesPage.cs) clase se lleva a cabo directamente en las definiciones de campo. Estos campos definen un efecto de guión y un efecto de trama. Se definen como `static` ya que, a continuación, se hace referencia en un `SKPathEffect.CreateCompose` llamar a en el `SKPaint` definición:
 
 ```csharp
 public class DashedHatchLinesPage : ContentPage

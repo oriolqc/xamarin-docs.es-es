@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/17/2018
-ms.openlocfilehash: 7f6885415e1b5e0c988d13fe331703213b9b8fb7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1b317c4c82ec736c7f4c8306036e43cf04086a82
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="walkthrough---working-with-wcf"></a>Tutorial: trabajar con WCF
 
@@ -167,7 +167,6 @@ Hospedaje de WCF localmente es adecuado cuando sólo se incluyen las conexiones 
 1. Comencemos mediante la configuración de IIS Express para que escuche las solicitudes externas. Podemos hacerlo editando el archivo de configuración de IIS Express en `[solutiondirectory]\.vs\config\applicationhost.config`, tal y como se muestra en la captura de pantalla siguiente:
 
     [![](walkthrough-working-with-wcf-images/image05.png "Podemos hacerlo editando el archivo de configuración de IIS Express en solutiondirectory.vsconfigapplicationhost.config, como se muestra en esta captura de pantalla")](walkthrough-working-with-wcf-images/image05.png#lightbox)
-
 
     Busque la `site` elemento con el nombre `HelloWorldWcfHost`. Debe tener un aspecto como el fragmento XML siguiente:
 

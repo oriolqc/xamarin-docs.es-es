@@ -7,11 +7,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 4c2650d4586f210b121c4c72b79e92ce72d135fe
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09a81cd84f145512b9fbbf0db009335eac8a95a9
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-scale-transform"></a>La transformación de escala
 
@@ -60,7 +60,7 @@ public void Scale (SKPoint size)
 
 El cuarto `Scale` método se describirá en breve.
 
-El **escala básica** página muestra el `Scale` método. El [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) archivo XAML contiene dos `Slider` elementos que le permiten seleccionar los factores de escala horizontales y verticales entre 0 y 10. El [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) archivo de código subyacente usa estos valores para llamar a `Scale` antes de mostrar un rectángulo redondeado trazado con una línea discontinua y cambiará de tamaño para ajustarse a algún texto en la parte superior izquierda esquina del lienzo:
+El **escala básica** página muestra el `Scale` método. El [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) archivo XAML contiene dos `Slider` elementos que le permiten seleccionar los factores de escala horizontales y verticales entre 0 y 10. El [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) archivo de código subyacente usa estos valores para llamar a `Scale` antes de mostrar un rectángulo redondeado trazado con una línea discontinua y cambiará de tamaño para ajustarse a algún texto en la parte superior izquierda esquina del lienzo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -120,7 +120,7 @@ public void Scale (Single sx, Single sy, Single px, Single py)
 
 El `px` y `py` parámetros definen un punto que a veces se denomina el *escalado center* pero en el SkiaSharp documentación se conoce como un *dinamizar punto*. Se trata de un punto con respecto a la esquina superior izquierda del lienzo que no se ve afectado por el ajuste de escala. Los ajustes de escala se produce en relación con ese centro.
 
-El [ **centrado escala** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/CenteredScalePage.xaml.cs) página muestra el funcionamiento. El `PaintSurface` controlador es similar a la **escala básica** programa salvo que la `margin` valor se calcula para centrar el texto horizontalmente, lo cual implica que el programa funciona mejor en modo vertical:
+El [ **centrado escala** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/CenteredScalePage.xaml.cs) página muestra el funcionamiento. El `PaintSurface` controlador es similar a la **escala básica** programa salvo que la `margin` valor se calcula para centrar el texto horizontalmente, lo cual implica que el programa funciona mejor en modo vertical:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -216,7 +216,7 @@ Cuando se combinan `Translate` y `Scale` llamadas, el orden es importante. Si el
 
 El `SKPath` clase define solo lectura [ `Bounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/) propiedad que devuelve una `SKRect` definir el alcance de las coordenadas de la ruta de acceso. Por ejemplo, cuando la `Bounds` propiedad se obtiene de la ruta de acceso de hendecagram que creó anteriormente, el `Left` y `Top` propiedades del rectángulo son aproximadamente -100, el `Right` y `Bottom` son propiedades aproximadamente 100 y el `Width` y `Height` propiedades son aproximadamente 200. (La mayoría de los valores reales es un poco menor porque los puntos de las estrellas se definen mediante un círculo con un radio de 100, pero solo el punto superior es paralelo con los ejes horizontales o verticales).
 
-La disponibilidad de esta información implica que debe ser posible derivar escala y traducir factores adecuados para el escalado de una ruta de acceso para el tamaño del lienzo. El [ **escalado anisotrópico** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs) página se muestra cómo hacerlo con la estrella que señala el 11. Un *anisotrópico* escala significa que es diferente en las direcciones horizontal y verticales, lo que significa que la estrella no conserva su relación de aspecto original. Este es el código relevante el `PaintSurface` controlador:
+La disponibilidad de esta información implica que debe ser posible derivar escala y traducir factores adecuados para el escalado de una ruta de acceso para el tamaño del lienzo. El [ **escalado anisotrópico** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs) página se muestra cómo hacerlo con la estrella que señala el 11. Un *anisotrópico* escala significa que es diferente en las direcciones horizontal y verticales, lo que significa que la estrella no conserva su relación de aspecto original. Este es el código relevante el `PaintSurface` controlador:
 
 ```csharp
 SKPath path = HendecagramPage.HendecagramPath;
@@ -261,7 +261,7 @@ pathBounds.Inflate(strokePaint.StrokeWidth / 2,
 
 Esto aumenta la `pathBounds` rectángulo por 1,5 unidades en los cuatro lados. Esto es una solución razonable solo cuando se redondea a la combinación de trazo. Una unión en ángulo puede ser más larga y es difícil de calcular.
 
-También puede usar una técnica similar con texto, como el **texto anisotrópico** muestra la página. Aquí es la parte pertinente de la `PaintSurface` controlador desde la [ `AnisotropicTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/AnisotropicTextPage.cs) clase:
+También puede usar una técnica similar con texto, como el **texto anisotrópico** muestra la página. Aquí es la parte pertinente de la `PaintSurface` controlador desde la [ `AnisotropicTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicTextPage.cs) clase:
 
 ```csharp
 using (SKPaint textPaint = new SKPaint
@@ -297,7 +297,7 @@ Si tiene que conservar la relación de aspecto de los objetos gráficos, desea u
 - Escale el objeto basándose en el mínimo de las dimensiones de página horizontales y verticales dividido entre las dimensiones del objeto gráfico.
 - Traducir el centro del objeto escalado para el centro de la página.
 
-El [ `IsotropicScalingPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs) realiza estos pasos en orden inverso antes de mostrar la estrella:
+El [ `IsotropicScalingPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs) realiza estos pasos en orden inverso antes de mostrar la estrella:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

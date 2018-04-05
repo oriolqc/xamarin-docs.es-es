@@ -7,11 +7,11 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: 0451653b4ee5c85b9bcf884b6b5609a251cf577c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 051ceec148a569d00048a661e6ba8dc3ce96fc81
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="clipping-with-paths-and-regions"></a>Con las rutas de acceso y las regiones de recorte
 
@@ -23,7 +23,7 @@ A veces es necesario restringir la representación de gráficos a un área deter
 
 El *área de recorte* es el área de la pantalla en el que se representan los gráficos. No se representa todo lo que se muestra fuera del área de recorte. El área de recorte normalmente se define mediante una [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) objeto, pero también puede definir un área de recorte usando un [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) objeto. Estos dos tipos de objetos en parecen relacionados en primer lugar porque se puede crear una región de una ruta de acceso. Sin embargo, no se puede crear una ruta de acceso de una región, y son muy diferentes internamente: una ruta de acceso consta de una serie de líneas y curvas, mientras que una región se define mediante una serie de líneas de exploración horizontal.
 
-La imagen anterior se creó por la **mono a través de ojo de cerradura** página. El [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) clase define una ruta de acceso con datos SVG y utiliza el constructor para cargar un mapa de bits de recursos del programa:
+La imagen anterior se creó por la **mono a través de ojo de cerradura** página. El [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) clase define una ruta de acceso con datos SVG y utiliza el constructor para cargar un mapa de bits de recursos del programa:
 
 ```csharp
 public class MonkeyThroughKeyholePage : ContentPage
@@ -118,7 +118,7 @@ También hay un [ `ClipRect` ](https://developer.xamarin.com/api/member/SkiaShar
 public Void ClipRect(SKRect rect, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
 ```
 
-De forma predeterminada, el área de recorte resultante es una intersección del área de recorte existente y la `SKPath` o `SKRect` que se especifica en el `ClipPath` o `ClipRect` método. Esto se muestra en el **Clip forman una intersección de cuatro círculos** página. El `PaintSurface` controlador en el [ `FourCircleInteresectClipPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/FourCircleIntersectClipPage.cs) clase reutiliza el mismo `SKPath` objeto para crear cuatro círculos superpuestos, cada uno de los cuales reduce el área de recorte a través de las llamadas sucesivas a `ClipPath`:
+De forma predeterminada, el área de recorte resultante es una intersección del área de recorte existente y la `SKPath` o `SKRect` que se especifica en el `ClipPath` o `ClipRect` método. Esto se muestra en el **Clip forman una intersección de cuatro círculos** página. El `PaintSurface` controlador en el [ `FourCircleInteresectClipPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/FourCircleIntersectClipPage.cs) clase reutiliza el mismo `SKPath` objeto para crear cuatro círculos superpuestos, cada uno de los cuales reduce el área de recorte a través de las llamadas sucesivas a `ClipPath`:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -183,7 +183,7 @@ El **Clip operaciones** página muestra la diferencia entre estas dos operacione
 
 [![](clipping-images//clipoperations-small.png "Captura de pantalla triple de la página operaciones de Clip")](clipping-images/clipoperations-large.png#lightbox "Triple captura de pantalla de la página operaciones de Clip")
 
-El [ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) clase define dos `SKPaint` objetos como campos y, a continuación, divide la pantalla de en dos áreas rectangulares. Estas áreas son diferentes dependiendo de si el teléfono está en modo vertical u horizontal. El `DisplayClipOp` clase, a continuación, muestra el texto y llamadas `ClipPath` con las rutas de acceso de dos círculo para ilustrar cada operación de recorte:
+El [ `ClipOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClipOperationsPage.cs) clase define dos `SKPaint` objetos como campos y, a continuación, divide la pantalla de en dos áreas rectangulares. Estas áreas son diferentes dependiendo de si el teléfono está en modo vertical u horizontal. El `DisplayClipOp` clase, a continuación, muestra el texto y llamadas `ClipPath` con las rutas de acceso de dos círculo para ilustrar cada operación de recorte:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -286,7 +286,7 @@ Captura de pantalla siguiente muestra las áreas de recorte en función de las o
 
 ¿Son estos todas las posibilidades de combinar estos dos círculos? Tenga en cuenta la imagen resultante como una combinación de tres componentes, que por sí solas o se ve en la `Difference`, `Intersect`, y `ReverseDifference` las operaciones. El número total de combinaciones es dos a la tercera potencia u ocho. Los dos que faltan son la región original (que da como resultado de no llamar a `Op` en absoluto) y una región completamente vacía.
 
-Es más difícil para utilizar regiones para recortar porque debe crear primero una ruta de acceso y, a continuación, en una región de dicha ruta de acceso y, a continuación, combinar varias regiones. La estructura general de la **operaciones de región** es muy similar a la página **Clip Operations** pero la [ `RegionOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RegionOperationsPage.cs) clase divide la pantalla en seis áreas de y Muestra el trabajo adicional necesario para usar regiones para este trabajo:
+Es más difícil para utilizar regiones para recortar porque debe crear primero una ruta de acceso y, a continuación, en una región de dicha ruta de acceso y, a continuación, combinar varias regiones. La estructura general de la **operaciones de región** es muy similar a la página **Clip Operations** pero la [ `RegionOperationsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RegionOperationsPage.cs) clase divide la pantalla en seis áreas de y Muestra el trabajo adicional necesario para usar regiones para este trabajo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -370,7 +370,7 @@ Esto es lo que es una región: una serie de líneas de exploración horizontal q
 
 Sin embargo, cuando se reduce un área a una serie de examen líneas, estas líneas se basan en una dimensión de píxel determinado de examen. En sentido estricto, la región no es un objeto de gráficos vectoriales. Es más cercano de naturaleza a un mapa de bits monocromático comprimido a una ruta de acceso. Por lo tanto, las regiones se no se pueden escalar o girar sin perder fidelidad y, por esta razón no se transforman cuando se utiliza para las áreas de recorte.
 
-Sin embargo, puede aplicar transformaciones a regiones para fines de dibujo. El **región Paint** programa muestra claramente la naturaleza interna de las regiones. El [ `RegionPaintPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/RegionPaintPage.cs) clase crea un `SKRegion` objeto basado en un `SKPath` de un círculo de radio de 10 unidades. Una transformación, a continuación, expande ese círculo para rellenar la página:
+Sin embargo, puede aplicar transformaciones a regiones para fines de dibujo. El **región Paint** programa muestra claramente la naturaleza interna de las regiones. El [ `RegionPaintPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/RegionPaintPage.cs) clase crea un `SKRegion` objeto basado en un `SKPath` de un círculo de radio de 10 unidades. Una transformación, a continuación, expande ese círculo para rellenar la página:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -427,7 +427,7 @@ El `DrawRegion` llamada rellena la región en color naranja, mientras el `DrawPa
 
 La región es claramente una serie de coordenadas discretos.
 
-Si no necesita utilizar las transformaciones en relación con las áreas de recorte, puede utilizar regiones para recortar, como el **cuatro – hoja trébol** muestra la página. El [ `FourLeafCloverPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/FourLeafCloverPage.cs) clase construye una región compuesta de cuatro regiones circulares, establece esa región compuesta como el área de recorte y, a continuación, se dibuja una serie de 360 líneas rectas comunicados desde el centro de la página:
+Si no necesita utilizar las transformaciones en relación con las áreas de recorte, puede utilizar regiones para recortar, como el **cuatro – hoja trébol** muestra la página. El [ `FourLeafCloverPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/FourLeafCloverPage.cs) clase construye una región compuesta de cuatro regiones circulares, establece esa región compuesta como el área de recorte y, a continuación, se dibuja una serie de 360 líneas rectas comunicados desde el centro de la página:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

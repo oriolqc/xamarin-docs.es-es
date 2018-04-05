@@ -7,11 +7,11 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2017
-ms.openlocfilehash: b86068c2ed5063c25f76e81fdf477550b1437984
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 688c6218f9ac66e3dfd6cd157e43f9b639e124c6
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="bitmap-basics"></a>Conceptos básicos de mapa de bits
 
@@ -29,7 +29,7 @@ El **básica de mapas de bits** página en el **SkiaSharpFormsDemos** programa m
 - Desde un recurso incrustado en el archivo ejecutable
 - Desde la biblioteca del usuario foto
 
-Tres `SKBitmap` objetos para estos tres orígenes están definidos como campos en el [ `BasicBitmapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/BasicBitmapsPage.cs) clase:
+Tres `SKBitmap` objetos para estos tres orígenes están definidos como campos en el [ `BasicBitmapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/BasicBitmapsPage.cs) clase:
 
 ```csharp
 public class BasicBitmapsPage : ContentPage

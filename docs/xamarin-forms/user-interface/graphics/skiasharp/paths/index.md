@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f7c0fcc87253b1d5ae9d612c52ef3a32c5790c5e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2f9941305f165ec04e5fc80e3c41e3150a21a9b7
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="skiasharp-lines-and-paths"></a>Las rutas de acceso y las líneas de SkiaSharp
 
@@ -21,7 +21,7 @@ El [sección anterior](~/xamarin-forms/user-interface/graphics/skiasharp/basics/
 
 La ruta de acceso de gráficos es el enfoque más generalizado para dibujar líneas y curvas en SkiaSharp. Esta sección incluye el uso de un `SKPath` objeto que se va a dibujar líneas rectas como utilizar una colección de líneas rectas pequeños (denominada una *polilínea*) para dibujar curvas que se pueden definir matemáticamente. Una sección posterior se describe los diversos tipos de curvas compatibles con `SKPath`.
 
-Todos los programas de ejemplo en esta sección aparecen bajo el encabezado **líneas y las rutas de acceso** en la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa y en el [ **Las rutas de acceso** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Paths) carpeta de la solución.
+Todos los programas de ejemplo en esta sección aparecen bajo el encabezado **líneas y las rutas de acceso** en la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa y en el [ **Las rutas de acceso** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) carpeta de la solución.
 
 ## <a name="lines-and-stroke-capslinesmd"></a>[Líneas y extremos de trazo](lines.md)
 

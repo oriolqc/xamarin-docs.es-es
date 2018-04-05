@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017
-ms.openlocfilehash: 77005665d163e7f9f62325b94cc5c779a7873f78
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c0b793a495278d91429045d7e396917d02c1412e
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="paths-and-text"></a>Las rutas de acceso y el texto
 
@@ -45,7 +45,7 @@ Una de estas tareas se recorte. El **texto de recorte** página crea un trazado 
 
 [![](text-paths-images/clippingtext-small.png "Captura de pantalla triple de la página de recorte de texto")](text-paths-images/clippingtext-large.png#lightbox "Triple captura de pantalla de la página de texto de recorte")
 
-El [ `ClippingTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) constructor de clase carga el mapa de bits que se almacena como un recurso incrustado en el **Media** carpeta de la solución:
+El [ `ClippingTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/ClippingTextPage.cs) constructor de clase carga el mapa de bits que se almacena como un recurso incrustado en el **Media** carpeta de la solución:
 
 ```csharp
 public class ClippingTextPage : ContentPage
@@ -126,7 +126,7 @@ El **efecto de la ruta de acceso de texto** página convierte un carácter únic
 
 [![](text-paths-images/textpatheffect-small.png "Captura de pantalla triple de la página de efecto de la ruta de acceso de texto")](text-paths-images/textpatheffect-large.png#lightbox "Triple captura de pantalla de la página de efecto de la ruta de acceso de texto")
 
-Cantidad de trabajo en el [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) clase se produce en los campos y el constructor. Los dos `SKPaint` objetos definidos como campos sirven para dos propósitos diferentes: la primera (denominada `textPathPaint`) se utiliza para convertir la y comercial con un `TextSize` de 50 en una ruta de acceso para el efecto de la ruta de acceso de 1D. El segundo (`textPaint`) se usa para mostrar una versión ampliada de la "y" comercial con un efecto de esa ruta de acceso. Por esta razón, el `Style` de este segundo paint objeto se establece en `Stroke`, pero la `StrokeWidth` no se establece la propiedad porque dicha propiedad no es necesaria cuando se usa un efecto de la ruta de acceso de 1D:
+Cantidad de trabajo en el [ `TextPathEffectPath` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/TextPathEffectPage.cs) clase se produce en los campos y el constructor. Los dos `SKPaint` objetos definidos como campos sirven para dos propósitos diferentes: la primera (denominada `textPathPaint`) se utiliza para convertir la y comercial con un `TextSize` de 50 en una ruta de acceso para el efecto de la ruta de acceso de 1D. El segundo (`textPaint`) se usa para mostrar una versión ampliada de la "y" comercial con un efecto de esa ruta de acceso. Por esta razón, el `Style` de este segundo paint objeto se establece en `Stroke`, pero la `StrokeWidth` no se establece la propiedad porque dicha propiedad no es necesaria cuando se usa un efecto de la ruta de acceso de 1D:
 
 ```csharp
 public class TextPathEffectPage : ContentPage
@@ -213,7 +213,7 @@ Normalmente el [ `GetFillPath` ](https://developer.xamarin.com/api/member/SkiaSh
 
 También puede llamar a `GetFillPath` en la ruta de acceso devuelto desde `GetTextPath` pero al principio puede que no esté completamente seguro de lo que aspecto que tendrá.
 
-El **contornos de contorno de carácter** página muestra la técnica. Todo el código relevante está en el `PaintSurface` controlador de la [ `CharacterOutlineOutlinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/CharacterOutlineOutlinesPage.cs) clase.
+El **contornos de contorno de carácter** página muestra la técnica. Todo el código relevante está en el `PaintSurface` controlador de la [ `CharacterOutlineOutlinesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CharacterOutlineOutlinesPage.cs) clase.
 
 El constructor comienza creando un `SKPaint` objeto denominado `textPaint` con un `TextSize` propiedad en función del tamaño de la página. Esto se convierte en una ruta de acceso mediante el `GetTextPath` método. Los argumentos de coordenadas `GetTextPath` eficazmente del centro de la ruta de acceso en la pantalla:
 
@@ -287,7 +287,7 @@ El texto especificado en el primer argumento se intentó ejecutar a lo largo de 
 
 Este método no tiene ninguna facilidad para ofrecer orientación sobre la configuración de la `TextSize` propiedad de `SKPaint` para hacer que el texto cambiará de tamaño perfectamente para ejecutarse desde el principio de la ruta de acceso al final. A veces puede averiguar ese tamaño de texto por su cuenta. En otras ocasiones que necesitará usar funciones de medición de ruta de acceso para describir en un artículo futuro.
 
-El **texto Circular** programa de texto ajusta alrededor de un círculo. Es fácil determinar la circunferencia de un círculo, por lo que es fácil cambiar el tamaño del texto para ajustarse exactamente. El `PaintSurface` controlador de la [ `CircularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/CircularTextPage.cs) clase calcula un radio de un círculo en función del tamaño de la página. Se convierte en ese círculo `circularPath`:
+El **texto Circular** programa de texto ajusta alrededor de un círculo. Es fácil determinar la circunferencia de un círculo, por lo que es fácil cambiar el tamaño del texto para ajustarse exactamente. El `PaintSurface` controlador de la [ `CircularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/CircularTextPage.cs) clase calcula un radio de un círculo en función del tamaño de la página. Se convierte en ese círculo `circularPath`:
 
 ```csharp
 public class CircularTextPage : ContentPage

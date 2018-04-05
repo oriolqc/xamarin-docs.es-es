@@ -7,11 +7,11 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 7ea99612f85a853bcd045b773df0a01f33427a89
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fe9699894224d9a33b3a79e9b5bcd4cd41c635dd
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="svg-path-data"></a>Datos de ruta de acceso SVG
 
@@ -147,7 +147,7 @@ El método estático [ `SKPath.ParseSvgPathData` ](https://developer.xamarin.com
 
 El [ `ToSvgPathData` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ToSvgPathData()/) método es útil para obtener los datos de ruta de acceso SVG de existente `SKPath` objeto que se va a transferir a otro programa, o almacenar en un formato de archivo basado en texto, como XML. (El `ToSvgPathData` método no se muestra en el código de ejemplo de este artículo.) Hacer *no* espera `ToSvgPathData` para devolver una cadena que corresponde exactamente a las llamadas al método que crea la ruta de acceso. En concreto, descubrirá que arcos se convierten a varios `QuadTo` comandos, y cómo aparecen en los datos de ruta de acceso devuelto desde `ToSvgPathData`.
 
-El **Hello de ruta de acceso de datos** página y espera la palabra "HELLO" con datos de ruta de acceso SVG. Tanto el `SKPath` y `SKPaint` objetos se definen como campos en el [ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) clase:
+El **Hello de ruta de acceso de datos** página y espera la palabra "HELLO" con datos de ruta de acceso SVG. Tanto el `SKPath` y `SKPaint` objetos se definen como campos en el [ `PathDataHelloPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataHelloPage.cs) clase:
 
 ```csharp
 public class PathDataHelloPage : ContentPage
@@ -218,7 +218,7 @@ La ruta de acceso rellena el lienzo, que es más razonable cuando se ve en modo 
 
 [![](path-data-images/pathdatahello-small.png "Captura de pantalla triple de la página de ruta de acceso datos Hello")](path-data-images/pathdatahello-large.png#lightbox "Triple captura de pantalla de la página de ruta de acceso datos Hello")
 
-El **Cat de datos de ruta de acceso** página es similar. Los objetos de ruta de acceso y paint se definen como campos en el [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) clase:
+El **Cat de datos de ruta de acceso** página es similar. Los objetos de ruta de acceso y paint se definen como campos en el [ `PathDataCatPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) clase:
 
 ```csharp
 public class PathDataCatPage : ContentPage
@@ -291,7 +291,7 @@ Este es el programa que se ejecuta en las tres plataformas:
 
 Normalmente, cuando un `SKPath` objeto se define como un campo, se deben definir los contornos de la ruta de acceso en el constructor u otro método. Sin embargo, cuando se usan datos de ruta de acceso SVG, ha visto que se puede especificar la ruta de acceso completamente en la definición del campo.
 
-El anterior **desagradable reloj analógico** en el [ **gira la transformación** ](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) artículo muestra las manecillas del reloj como líneas simples. El **bastante analógico reloj** siguiente programa reemplaza dichas líneas con `SKPath` objetos que se definan como campos en el [ `PrettyAnalogClockPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) clase junto con `SKPaint` objetos:
+El anterior **desagradable reloj analógico** en el [ **gira la transformación** ](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/rotate.md) artículo muestra las manecillas del reloj como líneas simples. El **bastante analógico reloj** siguiente programa reemplaza dichas líneas con `SKPath` objetos que se definan como campos en el [ `PrettyAnalogClockPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PrettyAnalogClockPage.cs) clase junto con `SKPaint` objetos:
 
 ```csharp
 public class PrettyAnalogClockPage : ContentPage

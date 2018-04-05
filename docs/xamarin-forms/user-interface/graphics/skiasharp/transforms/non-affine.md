@@ -7,11 +7,11 @@ ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 52bed94724d330b74a9604c54fcfebad1e562267
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8c3d39038fbaf5ed6601102a0aa16860c7a5a7a6
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="non-affine-transforms"></a>Transformaciones no afines
 
@@ -95,7 +95,7 @@ Si x es 100, entonces la z' denominador es 2, por lo que las coordenadas x e y s
 
 El `Persp` parte de estos nombres de celda hace referencia a "perspectiva" porque el escorzo sugiere que el cuadro se inclina ahora con el lado derecho, elija el Visor.
 
-El **perspectiva de pruebas** página le permite experimentar con valores de `Persp0` y `Pers1` para hacerse una idea de cómo funcionan. Los valores razonables de estas celdas de la matriz son tan pequeños que la `Slider` en la plataforma Universal de Windows no se administre correctamente los ellos. Para alojar el problema UWP, los dos `Slider` elementos en la [ **TestPerspective.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml) deben inicializarse para el intervalo de – 1 a 1:
+El **perspectiva de pruebas** página le permite experimentar con valores de `Persp0` y `Pers1` para hacerse una idea de cómo funcionan. Los valores razonables de estas celdas de la matriz son tan pequeños que la `Slider` en la plataforma Universal de Windows no se administre correctamente los ellos. Para alojar el problema UWP, los dos `Slider` elementos en la [ **TestPerspective.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml) deben inicializarse para el intervalo de – 1 a 1:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -149,7 +149,7 @@ El **perspectiva de pruebas** página le permite experimentar con valores de `Pe
 </ContentPage>
 ```
 
-Los controladores de eventos para los controles deslizantes en el [ `TestPerspectivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml.cs) archivo de código subyacente dividir los valores por 100 para que el intervalo entre –0.01 y 0,01. Además, el constructor se carga en un mapa de bits:
+Los controladores de eventos para los controles deslizantes en el [ `TestPerspectivePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TestPerspectivePage.xaml.cs) archivo de código subyacente dividir los valores por 100 para que el intervalo entre –0.01 y 0,01. Además, el constructor se carga en un mapa de bits:
 
 ```csharp
 public partial class TestPerspectivePage : ContentPage
@@ -240,7 +240,7 @@ Es una dicha transformación no afines un *transformación inclinación*. Este t
 
 ![](non-affine-images/tapertransform.png "Un cuadro sujeto a una transformación inclinación")
 
-El [ `TaperTransform` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs) clase realiza un cálculo generalizado de una transformación no afines en función de estos parámetros:
+El [ `TaperTransform` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransform.cs) clase realiza un cálculo generalizado de una transformación no afines en función de estos parámetros:
 
 - el tamaño de la imagen que se va a transformar, rectangular
 - una enumeración que indica el lado del rectángulo que estrecha,
@@ -349,7 +349,7 @@ static class TaperTransform
 }
 ```
 
-Esta clase se utiliza en el **transformar inclinación** página. El archivo XAML crea una instancia de dos `Picker` elementos para seleccionar los valores de enumeración y un `Slider` para elegir la fracción de inclinación. El [ `PaintSurface` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/TaperTransformPage.xaml.cs#L55) controlador combina la transformación inclinación con dos traducir transformaciones que se deben realizar la transformación relativa a la esquina superior izquierda del mapa de bits:
+Esta clase se utiliza en el **transformar inclinación** página. El archivo XAML crea una instancia de dos `Picker` elementos para seleccionar los valores de enumeración y un `Slider` para elegir la fracción de inclinación. El [ `PaintSurface` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TaperTransformPage.xaml.cs#L55) controlador combina la transformación inclinación con dos traducir transformaciones que se deben realizar la transformación relativa a la esquina superior izquierda del mapa de bits:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -398,7 +398,7 @@ La transformación no afines puede transformar un rectángulo en cualquier cuadr
 
 [![](non-affine-images/shownonaffinematrix-small.png "Captura de pantalla triple de la página de la matriz no afín mostrar")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple captura de pantalla de la página de la matriz no afín mostrar")
 
-No intente realizar un ángulo interior de uno de los vértices del mapa de bits mayor de 180 grados o dos lados cruzarse entre sí, siempre que el sistema calcula correctamente la transformación usando este método desde el [ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) clase:
+No intente realizar un ángulo interior de uno de los vértices del mapa de bits mayor de 180 grados o dos lados cruzarse entre sí, siempre que el sistema calcula correctamente la transformación usando este método desde el [ `ShowNonAffineMatrixPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowNonAffineMatrixPage.xaml.cs) clase:
 
 ```csharp
 static SKMatrix ComputeMatrix(SKSize size, SKPoint ptUL, SKPoint ptUR, SKPoint ptLL, SKPoint ptLR)
@@ -459,7 +459,7 @@ Para facilitar el cálculo, este método obtiene la transformación total como u
 
 Las coordenadas finales a la derecha son los cuatro puntos asociados con los puntos cuatro táctiles. Se trata de las coordenadas finales de las esquinas del mapa de bits.
 
-Anchura y altura representan el ancho y alto del mapa de bits. La primera transformación (`S`) simplemente se escala el mapa de bits a un cuadrado de 1 píxel. La segunda transformación es la transformación no afines `N`, y el tercero es la transformación afín `A`. Esa transformación afín se basa en tres puntos, por lo que al igual que anteriormente afín [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) método y no implican la cuarta fila con el (a, b) punto.
+Anchura y altura representan el ancho y alto del mapa de bits. La primera transformación (`S`) simplemente se escala el mapa de bits a un cuadrado de 1 píxel. La segunda transformación es la transformación no afines `N`, y el tercero es la transformación afín `A`. Esa transformación afín se basa en tres puntos, por lo que al igual que anteriormente afín [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) método y no implican la cuarta fila con el (a, b) punto.
 
 El `a` y `b` valores se calculan para que la tercera transformación es afín. El código obtiene el inverso de la transformación afín y, a continuación, la utiliza para asignar la esquina inferior derecha. Es el punto (a, b).
 

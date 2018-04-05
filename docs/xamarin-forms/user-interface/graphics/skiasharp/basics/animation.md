@@ -7,11 +7,11 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 7435807e77a9a79d7fc3821675c1d959a16caa8f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 859677a3dcfcddd0b333c9ddf60c01e2093b6a5b
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="basic-animation"></a>Animación básica
 
@@ -24,7 +24,7 @@ Puede animar gráficos SkiaSharp de Xamarin.Forms provocando el `PaintSurface` m
 El **Pulsating elipse** página en el [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa anima los dos ejes de una elipse para que parezca estar pulsating y puede incluso controlar el tasa de esta pulsaciones:
 
 
-El [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) archivo crea una instancia de un Xamarin.Forms `Slider` y `Label` para mostrar el valor actual del control deslizante. Se trata de una manera común de integrar un `SKCanvasView` con otras vistas de Xamarin.Forms:
+El [ **PulsatingEllipsePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/PulsatingEllipsePage.xaml) archivo crea una instancia de un Xamarin.Forms `Slider` y `Label` para mostrar el valor actual del control deslizante. Se trata de una manera común de integrar un `SKCanvasView` con otras vistas de Xamarin.Forms:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -149,7 +149,7 @@ Tenga en cuenta que la `SKPaint` objeto se crea en un `using` bloque. Al igual q
 
  Sería una mejor solución en este caso concreto crear dos `SKPaint` objetos una vez y guárdelos como campos.
 
-Precisamente eso es el **círculos expandiendo** does de animación. El [ `ExpandingCirclesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) clase comienza con la definición de varios campos, incluidos un `SKPaint` objeto:
+Precisamente eso es el **círculos expandiendo** does de animación. El [ `ExpandingCirclesPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) clase comienza con la definición de varios campos, incluidos un `SKPaint` objeto:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage

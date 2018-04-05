@@ -7,11 +7,11 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: a718d051c2bf04e75c87b0e4a18aced4824802ba
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e5b18bd6a565639e2ca22f4637a67c4f48717f6
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="drawing-a-simple-circle"></a>Dibujar un círculo Simple
 
@@ -19,11 +19,11 @@ _Obtenga información acerca de los conceptos básicos de dibujo SkiaSharp, incl
 
 Este artículo presenta los conceptos de dibujar gráficos en Xamarin.Forms con SkiaSharp, incluida la creación de un `SKCanvasView` objeto que se va a hospedar los gráficos, control de la `PaintSurface` eventos y usar un `SKPaint` objeto para especificar el color y otros dibujos atributos.
 
-El [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa contiene todo el código de ejemplo de esta serie de artículos de SkiaSharp. La primera página se titula **círculo Simple** e invoca la clase page [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Este código muestra cómo dibujar un círculo en el centro de la página con un radio de 100 píxeles. El contorno del círculo es rojo y el interior del círculo es azul.
+El [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa contiene todo el código de ejemplo de esta serie de artículos de SkiaSharp. La primera página se titula **círculo Simple** e invoca la clase page [ `SimpleCirclePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs). Este código muestra cómo dibujar un círculo en el centro de la página con un radio de 100 píxeles. El contorno del círculo es rojo y el interior del círculo es azul.
 
 ![](circle-images/circleexample.png "Un círculo azul destacado en rojo")
 
-El [ `SimpleCirle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) página clase se deriva de `ContentPage` y contiene dos `using` directivas para los espacios de nombres SkiaSharp:
+El [ `SimpleCirle` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) página clase se deriva de `ContentPage` y contiene dos `using` directivas para los espacios de nombres SkiaSharp:
 
 ```csharp
 using SkiaSharp;

@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2018
-ms.openlocfilehash: 0068540ec385ab3be56865c7728eb3128154a2ea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43699e77bc8b7365c6d5f7fbf27e19a945e69e22
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="limitations"></a>Limitaciones
 
@@ -51,7 +51,7 @@ Existen algunas limitaciones en lo que se puede ejecutar Xamarin Player en vivo,
 - Compatibilidad limitada para reflexión (actualmente afecta a algunos NuGets populares, como el código y Json.NET). Otros NuGets todavía puede ser compatible.
 - No se puede invalidar algunas clases del sistema (por ejemplo, no se puede implementar una subclase).
 - Algunas características de la plataforma que requieren el aprovisionamiento no pueden trabajar en la aplicación de Xamarin Player en vivo (sin embargo se ha configurado para operaciones comunes, como acceso de la Galería fotográfica).
-- Se omiten los destinos personalizados y pasos de compilación. Por ejemplo, herramientas como Fody, Retit, AutoFac y no se pueden incorporar AutoMapper.
+- Se omiten los destinos personalizados y pasos de compilación. Por ejemplo, no se pueden incorporar herramientas como Fody, Refit, AutoFac y AutoMapper.
 - Proyectos de F # no se admiten en Android y compatibilidad en iOS limitada
 - Escenarios avanzados con clases genéricas personalizadas e interfaces podrían no admitirse.
 

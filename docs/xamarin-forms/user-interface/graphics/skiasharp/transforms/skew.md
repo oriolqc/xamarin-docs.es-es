@@ -7,11 +7,11 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: c9f5f9f20296b1c2443a8addeebd4d12ccaa1ab4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 39547ebaf301a9b6dca6a90cb5ede831b19862cf
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="the-skew-transform"></a>La transformación sesga
 
@@ -39,7 +39,7 @@ public void Skew (SKPoint skew)
 
 Sin embargo, no es probable que va a usar cualquiera de estos dos métodos de forma aislada.
 
-El **sesgar experimentar** página permite experimentar con sesgo valores comprendidos entre -10 y 10. Una cadena de texto está situada en la esquina superior izquierda de la página, con valores de sesgo obtenidos de dos `Slider` elementos. Este es el `PaintSurface` controlador en el [ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) clase:
+El **sesgar experimentar** página permite experimentar con sesgo valores comprendidos entre -10 y 10. Una cadena de texto está situada en la esquina superior izquierda de la página, con valores de sesgo obtenidos de dos `Slider` elementos. Este es el `PaintSurface` controlador en el [ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) clase:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -109,7 +109,7 @@ Se podría sienta más cómodo especificar sesgo como un ángulo de inclinación
 
 La relación entre el turno de 150 píxeles a 100 píxeles vertical es la tangente de ese ángulo, en este ejemplo 56.3 grados.
 
-El archivo XAML de la **sesgar experimento de ángulo** página es similar a la **ángulo sesgar** página salvo que la `Slider` elementos estar comprendido entre -90 y 90 grados. El [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) archivo de código subyacente se centra el texto en la página y se utiliza `Translate` para establecer un centro de sesgo en el centro de la página. Un valor bajo `SkewDegrees` método en la parte inferior del código convierte ángulos para sesgar valores:
+El archivo XAML de la **sesgar experimento de ángulo** página es similar a la **ángulo sesgar** página salvo que la `Slider` elementos estar comprendido entre -90 y 90 grados. El [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) archivo de código subyacente se centra el texto en la página y se utiliza `Translate` para establecer un centro de sesgo en el centro de la página. Un valor bajo `SkewDegrees` método en la parte inferior del código convierte ángulos para sesgar valores:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -154,7 +154,7 @@ Tal y como acerca a un ángulo positivos o negativos de 90 grados, acerca de la 
 
 [![](skew-images/skewangleexperiment-small.png "Captura de pantalla triple de la página de experimento de ángulo de sesgo")](skew-images/skewangleexperiment-large.png#lightbox "Triple captura de pantalla de la página de sesgo experimento de ángulo")
 
-Un sesgo horizontal negativo pequeño puede imitar oblicuo o cursiva el texto, como el **texto oblicua** muestra la página. El [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) clase muestra cómo hacerlo:
+Un sesgo horizontal negativo pequeño puede imitar oblicuo o cursiva el texto, como el **texto oblicua** muestra la página. El [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) clase muestra cómo hacerlo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

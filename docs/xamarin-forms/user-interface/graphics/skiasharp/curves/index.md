@@ -7,11 +7,11 @@ ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: 0bd13cc58d4f15b46edc03eda35f04d7ca866dec
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2b730690e508c29e9bee45ccfdd05d5dd6e92d7b
+ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="skiasharp-curves-and-paths"></a>Las rutas de acceso y curvas SkiaSharp
 
@@ -19,7 +19,7 @@ _Obtenga información acerca de cómo usar SkiaSharp para dibujar curvas y usar 
 
 La exploración de [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) métodos y propiedades que se inició en el [SkiaSharp líneas y las rutas de acceso](~/xamarin-forms/user-interface/graphics/skiasharp/paths/index.md) artículo. Los artículos aquí continuar con métodos que agregan curvas a un `SKPath` objetos y otras características de la ruta de acceso eficaz de vulnerabilidad de seguridad. Verá cómo se puede especificar una ruta de acceso completa en una cadena de texto concisa, cómo utilizar los efectos de la ruta de acceso y cómo profundizar en el funcionamiento interno de la ruta de acceso.
 
-Todos los programas de ejemplo en esta sección aparecen bajo el encabezado **curvas y rutas de acceso más** en la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa y en el [ **Curvas** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/SkiaSharpFormsDemos/SkiaSharpFormsDemos/SkiaSharpFormsDemos/Curves) carpeta de la solución.
+Todos los programas de ejemplo en esta sección aparecen bajo el encabezado **curvas y rutas de acceso más** en la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa y en el [ **Curvas** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves) carpeta de la solución.
 
 ## <a name="three-ways-to-draw-an-arcarcsmd"></a>[Tres maneras de dibujar un arco](arcs.md)
 
