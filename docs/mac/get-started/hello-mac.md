@@ -1,18 +1,18 @@
 ---
 title: Hello, Mac
 description: En esta guía, se muestran los pasos necesarios para crear una primera aplicación de Xamarin.Mac y, a lo largo del proceso, se presenta la cadena de herramientas de desarrollo, incluidos Visual Studio para Mac, Xcode e Interface Builder. También se presentan las salidas y las acciones, que exponen los controles de la interfaz de usuario al código y, por último, se explica cómo compilar, ejecutar y probar una aplicación de Xamarin.Mac.
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 37D0E9E6-979B-7069-B3BE-C5F0AF99BA72
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 635577bbc35d9e80147ecf7e1a59540099f85b9d
-ms.sourcegitcommit: 7b76c3d761b3ffb49541e2e2bcf292de6587c4e7
+ms.openlocfilehash: e5d87d42765480c97da392cf07b6599108895321
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-mac"></a>Hello, Mac
 
@@ -37,7 +37,7 @@ Se tratarán los siguientes conceptos:
 
 ## <a name="requirements"></a>Requisitos
 
-Para desarrollar una aplicación macOS con Xamarin.Mac, se requiere lo siguiente:
+Para desarrollar una aplicación maOS con Xamarin.Mac, se requiere lo siguiente:
 
 - Un equipo Mac que ejecute macOS X Yosemite (10.10) o una versión posterior.
 - Xcode 7 y versiones posteriores (aunque se recomienda instalar la última versión estable del [App Store](https://itunes.apple.com/us/app/xcode/id497799835?mt=12)).

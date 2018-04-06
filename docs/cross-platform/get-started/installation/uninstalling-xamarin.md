@@ -1,18 +1,17 @@
 ---
 title: Desinstalación de Xamarin
 description: Desinstalación de los productos de Xamarin de un equipo
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: 2c2ba84167924916c3bec27379d33c47e8dab360
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 98c10aae9e281600201570ea1fc8bb023286164d
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="uninstalling-xamarin"></a>Desinstalación de Xamarin
 

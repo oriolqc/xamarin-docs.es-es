@@ -1,18 +1,17 @@
 ---
 title: Configurar el dispositivo para el desarrollo
-description: "En este artículo se explica cómo configurar un dispositivo Android y conectarlo a un equipo de modo que el dispositivo pueda usarse para ejecutar y depurar aplicaciones de Xamarin.Android."
-ms.topic: article
+description: En este artículo se explica cómo configurar un dispositivo Android y conectarlo a un equipo de modo que el dispositivo pueda usarse para ejecutar y depurar aplicaciones de Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2017
-ms.openlocfilehash: 26a543cc096d96346cd4503bf4fa2382f8ca9b78
-ms.sourcegitcommit: 8e722d72c5d1384889f70adb26c5675544897b1f
+ms.openlocfilehash: 16716db67067f07166fa35df7e539cdf3ed1de5e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="set-up-device-for-development"></a>Configurar el dispositivo para el desarrollo
 

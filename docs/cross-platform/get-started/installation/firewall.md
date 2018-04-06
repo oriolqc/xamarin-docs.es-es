@@ -1,18 +1,17 @@
 ---
 title: Instrucciones de configuración del firewall para Xamarin
 description: Lista de los hosts que deben incluirse en la lista de permitidos del firewall para que la plataforma de Xamarin funcione en la empresa.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
-ms.openlocfilehash: 5c6e850594e23d650dbe67126143ce7d58fcaa82
-ms.sourcegitcommit: 17a9cf246a4d33cfa232016992b308df540c8e4f
+ms.openlocfilehash: bb551b548f241cacfc4cb700d247684c15f6fcf7
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-firewall-configuration-instructions"></a>Instrucciones de configuración del firewall para Xamarin
 

@@ -1,18 +1,17 @@
 ---
-title: "Solución de problemas del emulador de Android SDK"
-description: "Describe cómo identificar y resolver problemas del emulador de Android SDK"
-ms.topic: article
+title: Solución de problemas del emulador de Android SDK
+description: Describe cómo identificar y resolver problemas del emulador de Android SDK
 ms.prod: xamarin
 ms.assetid: 4B05C3C5-E1F6-47A9-B098-C31E630194F6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 486df3bbee3f8af511140e2d287f9f95571c7b3d
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: b3e55e02d27307dbcef8b6a62b2da368cd0201f3
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-sdk-emulator-troubleshooting"></a>Solución de problemas del emulador de Android SDK
 

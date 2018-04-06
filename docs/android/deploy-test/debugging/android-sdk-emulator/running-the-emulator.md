@@ -1,18 +1,17 @@
 ---
 title: Ejecutar el emulador de Android SDK
-description: "Cómo depurar la aplicación con el emulador de Android SDK"
-ms.topic: article
+description: Cómo depurar la aplicación con el emulador de Android SDK
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 89768d2562814091f0e5894c4af2edd67d68cb00
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 630520f88dd23d3860b5f42fbb9bc4eb35ca2c4b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="running-the-android-sdk-emulator"></a>Ejecutar el emulador de Android SDK
 

@@ -1,18 +1,17 @@
 ---
 title: Administrador de dispositivos Android de Xamarin
 description: El Administrador de dispositivos Android de Xamarin, actualmente en versión preliminar, reemplaza el Administrador de dispositivos de Google heredado. En esta guía se explica cómo usar el Administrador de dispositivos Android de Xamarin para crear y configurar dispositivos virtuales Android (AVD) que emulen dispositivos Android. Puede usar estos dispositivos virtuales para ejecutar y probar la aplicación sin tener que depender de un dispositivo físico.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/20/2018
-ms.openlocfilehash: 01fb21729e919872935fd63af28a13642a11fa4b
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 3dd67f25e389adda1af31f4a2b85abd4cfd751d0
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-android-device-manager"></a>Administrador de dispositivos Android de Xamarin
 

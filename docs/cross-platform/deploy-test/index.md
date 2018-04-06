@@ -1,18 +1,17 @@
 ---
-title: "Implementación y prueba"
-description: "Guías de estabilización"
-ms.topic: article
+title: Implementación y prueba
+description: Guías de estabilización
 ms.prod: xamarin
 ms.assetid: D02C62C9-47D1-4E72-8A83-602C3E7929BE
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/07/2017
-ms.openlocfilehash: ff8a54a835b382dc949ec7d84169d85e6614a3df
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: 720250997dc4c5431d946e41f835185759ef1e15
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="deployment-and-testing"></a>Implementación y prueba
 
@@ -29,6 +28,6 @@ En esta guía se describe cómo instalar NUnit 2.6.4 (y, si es necesario, cómo 
 En esta guía se explica cómo depurar varios procesos.
 
 
-##  <a name="custom-linker-configurationlinkermd"></a>[Configuración personalizada del vinculador](linker.md)
+##  <a name="custom-linker-configurationlinkermd"></a>[Configuración personalizada del enlazador](linker.md)
 
 Si el conjunto predeterminado de opciones no es suficiente, puede controlar el proceso de vinculación con un archivo XML que describe qué desea del vinculador.

@@ -1,18 +1,17 @@
 ---
 title: Publicación en el App Store
 description: En esta guía se describe cómo implementar una aplicación de Xamarin.Mac con Visual Studio para Mac. Se explica cómo se configura una cuenta de desarrollador de Mac, se describe el proceso de creación de certificados para la firma de código y se muestra cómo se usan para compilar aplicaciones de Mac que se puedan distribuir directamente o a través del Mac App Store.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: D26C5E54-EAD2-5487-264D-4263AEA1EBF2
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: e4c7b0913d43d9db3b5414c831864dae8d0b4d61
-ms.sourcegitcommit: 73bd0c7e5f237f0a1be70a6c1384309bb26609d5
+ms.openlocfilehash: 3b21dd0adfd96e1190660aa97b2850f968b5473f
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="publishing-to-the-app-store"></a>Publicación en el App Store
 

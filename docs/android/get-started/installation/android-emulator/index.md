@@ -1,18 +1,17 @@
 ---
-title: "Configuración de Android Emulator"
-description: "En esta sección se describe cómo preparar el emulador de Android SDK para probar la aplicación. Se explica cómo acelerar el emulador para obtener el máximo rendimiento y se muestra cómo se usa un administrador de emuladores para crear y personalizar los dispositivos virtuales."
-ms.topic: article
+title: Configuración de Android Emulator
+description: En esta sección se describe cómo preparar el emulador de Android SDK para probar la aplicación. Se explica cómo acelerar el emulador para obtener el máximo rendimiento y se muestra cómo se usa un administrador de emuladores para crear y personalizar los dispositivos virtuales.
 ms.prod: xamarin
 ms.assetid: 889963B7-F4DA-41D9-9B8D-B733BB71A329
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 01/25/2018
-ms.openlocfilehash: 55f5cf22718713fdcf11c49e0993f47c2f5a6f1d
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: 3c29d6b6c94abe7cc8a59486c338c0c634870d3e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="android-emulator-setup"></a>Configuración de Android Emulator
 

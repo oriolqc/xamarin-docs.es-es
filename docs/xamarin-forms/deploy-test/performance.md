@@ -1,18 +1,17 @@
 ---
 title: Rendimiento de Xamarin.Forms
-description: "Existen muchas técnicas para aumentar el rendimiento de aplicaciones de Xamarin.Forms. Colectivamente, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas."
-ms.topic: article
+description: Existen muchas técnicas para aumentar el rendimiento de aplicaciones de Xamarin.Forms. Colectivamente, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas.
 ms.prod: xamarin
 ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: a750167cb9e6bde3a4a9abe11c5386497f9a12ae
-ms.sourcegitcommit: 30055c534d9caf5dffcfdeafd6f08e666fb870a8
+ms.openlocfilehash: 5cc35dde80e4a0c28315589f4db127a922ba5a41
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinforms-performance"></a>Rendimiento de Xamarin.Forms
 

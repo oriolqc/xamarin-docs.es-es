@@ -1,17 +1,17 @@
 ---
-title: "Hello, Xamarin.Forms Multiscreen: análisis detallado"
-ms.topic: article
+title: 'Hello, Xamarin.Forms Multiscreen: análisis detallado'
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: e4faa36c-6600-48c0-94c4-b4431103a4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 91be10daaeb508ca193e734d49a21323d70e2055
-ms.sourcegitcommit: 6cd40d190abe38edd50fc74331be15324a845a28
+ms.openlocfilehash: f4e6dace59c14a0e30ef4cdea2c7dd490d645057
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinforms-multiscreen-deep-dive"></a>Hello, Xamarin.Forms Multiscreen: análisis detallado
 

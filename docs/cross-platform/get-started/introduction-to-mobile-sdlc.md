@@ -1,18 +1,17 @@
 ---
 title: Introducción al ciclo de vida de desarrollo de software móvil
 description: En este artículo, se describe el ciclo de vida de desarrollo de software con respecto a aplicaciones móviles y se describen algunas de las consideraciones necesarias para compilar proyectos móviles. Los desarrolladores que quieran empezar a compilar directamente pueden omitir esta guía y leerla más adelante para comprender mejor el desarrollo móvil.
-ms.topic: article
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: 144e71677ad5477c7e1cfb5211cc5860995642bb
-ms.sourcegitcommit: 20ca85ff638dbe3a85e601b5eb09b2f95bda2807
+ms.openlocfilehash: c49723038870b7b222bdada7823f1571c5d89d9e
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introducción al ciclo de vida de desarrollo de software móvil
 

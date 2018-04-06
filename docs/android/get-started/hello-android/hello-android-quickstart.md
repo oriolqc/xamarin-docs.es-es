@@ -1,18 +1,18 @@
 ---
 title: 'Hello, Android: inicio rápido'
 description: Esta guía en dos partes le ayudará a compilar su primera aplicación de Xamarin.Android (mediante Visual Studio o Visual Studio para Mac) y a comprender los aspectos básicos del desarrollo de aplicaciones de Android con Xamarin. A lo largo del proceso, le presentaremos las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.Android.
-ms.topic: article
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/08/2018
-ms.openlocfilehash: bbe243b108be6e0060ba9067db58a9875c7b5153
-ms.sourcegitcommit: cc38757f56aab53bce200e40f873eb8d0e5393c3
+ms.openlocfilehash: c5937cc86a8a1f8506b14774b0429bee3c8aa594
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: inicio rápido
 

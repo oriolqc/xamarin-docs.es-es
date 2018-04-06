@@ -1,18 +1,18 @@
 ---
-title: "Hello, Android Multiscreen: análisis detallado"
-description: "En esta guía de dos partes, ampliaremos la aplicación Phoneword básica creada en la guía Hello, Android a fin de controlar una segunda pantalla. Durante el proceso, presentaremos los bloques de creación de aplicaciones de Android básicos. Se incluye un análisis más profundo de la arquitectura de Android como ayuda para entender mejor la funcionalidad y la estructura de las aplicaciones de Android."
-ms.topic: article
+title: 'Hello, Android Multiscreen: análisis detallado'
+description: En esta guía de dos partes, ampliaremos la aplicación Phoneword básica creada en la guía Hello, Android a fin de controlar una segunda pantalla. Durante el proceso, presentaremos los bloques de creación de aplicaciones de Android básicos. Se incluye un análisis más profundo de la arquitectura de Android como ayuda para entender mejor la funcionalidad y la estructura de las aplicaciones de Android.
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/15/2018
-ms.openlocfilehash: acced081daa9416c5c8dcf90f769aaacd584ec9a
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.openlocfilehash: f1c19d43aa1f9010307df3fb954ac1029221ccd4
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Hello, Android Multiscreen: análisis detallado
 

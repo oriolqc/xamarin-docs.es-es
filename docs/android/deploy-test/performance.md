@@ -1,18 +1,17 @@
 ---
 title: Rendimiento de Xamarin.Android
-description: "Existen muchas técnicas para aumentar el rendimiento de las aplicaciones compiladas con Xamarin.Android. Colectivamente, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas."
-ms.topic: article
+description: Existen muchas técnicas para aumentar el rendimiento de las aplicaciones compiladas con Xamarin.Android. Colectivamente, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas.
 ms.prod: xamarin
 ms.assetid: dc2e27f2-7f71-4d57-9cf9-165528276613
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 825b566ed45e8c337a1a452ec2c76a23e6a16462
-ms.sourcegitcommit: 028936cd2fe547963c1cf82343c3ee16f658089a
+ms.openlocfilehash: a22190adc97cb80f5900dda4a073bdcdf80ef99b
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarinandroid-performance"></a>Rendimiento de Xamarin.Android
 

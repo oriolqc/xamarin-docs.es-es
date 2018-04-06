@@ -1,18 +1,18 @@
 ---
 title: Hello, Xamarin.Forms
-description: "En esta guía se proporciona una introducción para desarrollar una aplicación de Xamarin.Forms con Visual Studio para Mac o Visual Studio, y los elementos fundamentales del desarrollo de aplicaciones con Xamarin.Forms. Entre los temas que se tratan se incluyen las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.Forms."
-ms.topic: article
+description: En esta guía se proporciona una introducción para desarrollar una aplicación de Xamarin.Forms con Visual Studio para Mac o Visual Studio, y los elementos fundamentales del desarrollo de aplicaciones con Xamarin.Forms. Entre los temas que se tratan se incluyen las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.Forms.
+ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: af79e4ef-99c6-4a17-b5d1-95ab652ac7ab
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 786b22ccc6a3e1fcba2ddbe8813aada33cfdda4e
-ms.sourcegitcommit: 61f5ecc5a2b5dcfbefdef91664d7460c0ee2f357
+ms.openlocfilehash: a06bd03d7df45719b132f7cb1d9a46455dc75ddf
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="hello-xamarinforms"></a>Hello, Xamarin.Forms
 
