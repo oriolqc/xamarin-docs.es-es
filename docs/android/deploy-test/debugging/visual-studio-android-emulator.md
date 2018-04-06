@@ -1,18 +1,17 @@
 ---
 title: Emulador de Android de Visual Studio
-description: "En esta guía se explica cómo se configura y se usa el emulador de Android de Visual Studio para desarrollar aplicaciones de Xamarin.Android en Visual Studio 2015."
-ms.topic: article
+description: En esta guía se explica cómo se configura y se usa el emulador de Android de Visual Studio para desarrollar aplicaciones de Xamarin.Android en Visual Studio 2015.
 ms.prod: xamarin
 ms.assetid: CD128CB9-499F-4558-B49F-77248824EFDF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: a31d90e6d5abd574eb6187953082e1b70f66a113
-ms.sourcegitcommit: 0fdb243b46cf21be47584900805cadcd077121bf
+ms.date: 03/30/2018
+ms.openlocfilehash: bcc88ba4c46aa9abe9038d6ea65bc9c17f337da6
+ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="visual-studio-android-emulator"></a>Emulador de Android de Visual Studio
 
@@ -21,6 +20,9 @@ _En esta guía se explica cómo se configura y usa Android Emulator de Visual St
 ## <a name="visual-studio-android-emulator-overview"></a>Información general de Android Emulator de Visual Studio
 
 Microsoft Visual Studio 2015 incluye un emulador de Android que se puede usar como destino para depurar una aplicación de Xamarin.Android: el *emulador de Visual Studio para Android*. Este emulador usa las funciones de Hyper-V del equipo de desarrollo, lo que garantiza unos tiempos de inicio y de ejecución más rápidos que los del emulador predeterminado que se incluye con Android SDK. El emulador de Visual Studio para Android puede usarse como alternativa al emulador predeterminado de Android SDK al desarrollar una aplicación de Xamarin.Android.
+
+> [!NOTE]
+> El emulador de Android de Visual Studio solo es compatible con Visual Studio 2015 y no funciona con Visual Studio 2017.
 
 En esta guía se explica cómo iniciar el emulador de Microsoft Android desde Visual Studio para probar la aplicación y se describen las distintas características disponibles en el emulador. Obtendrá información sobre cómo seleccionar *perfiles de dispositivo* (similares a las definiciones de dispositivo en el emulador predeterminado de Android SDK) para simular diferentes tipos de dispositivos Android. Por último, en la sección de solución de problemas se explican los riesgos comunes y sus soluciones.
 
