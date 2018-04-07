@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: ff36deff996a92fca512158252c64e5c29046be9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 76a5c96d0e7bb85f0e6b313e2dbc058b8c2aae6d
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="list-appearance"></a>Apariencia de la lista
 
@@ -117,14 +117,12 @@ Tenga en cuenta que tenemos:
 - Cambiar el `ListView`del `ItemsSource` en la lista agrupada
 
 ### <a name="customizing-grouping"></a>Personalizar la agrupación
-Ahora que hemos visto cómo implementar básica de agrupación en ListView, veamos cómo personalizar la presentación de los encabezados de grupo.
 
-Similar a cómo el `ListView` tiene un `ItemTemplate` para definir cómo se muestran las filas, `ListView` tiene un `GroupHeaderTemplate`. Este es un ejemplo de la vista de lista anterior, con una plantilla de encabezado de grupo personalizado:
+Si se ha habilitado la agrupación en la lista, también se puede personalizar el encabezado de grupo.
 
-![](customizing-list-appearance-images/grouping-depth.png "ListView con GroupHeaderTemplate personalizada")
+Similar a cómo el `ListView` tiene un `ItemTemplate` para definir cómo se muestran las filas, `ListView` tiene un `GroupHeaderTemplate`. 
 
-
-Aquí se muestra cómo realizar ese diseño en XAML:
+A continuación se muestra un ejemplo de personalizar el encabezado de grupo en XAML:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
