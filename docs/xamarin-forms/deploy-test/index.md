@@ -17,8 +17,8 @@ ms.lasthandoff: 04/04/2018
 
 ## <a name="performanceperformancemd"></a>[Rendimiento](performance.md)
 
-Existen muchas técnicas para aumentar el rendimiento de aplicaciones de Xamarin.Forms. Colectivamente, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación.
+Existen muchas técnicas para aumentar el rendimiento de aplicaciones de Xamarin.Forms. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación.
 
 ## <a name="automated-testing-with-xamarinuitest-and-xamarin-test-clouduitest-and-test-cloudmd"></a>[Pruebas automatizadas con Xamarin.UITest y Xamarin Test Cloud](uitest-and-test-cloud.md)
 
-El componente **UITest** de Xamarin Test Cloud puede usarse con Xamarin.Forms para escribir pruebas de IU que se ejecutan en la nube en cientos de dispositivos.
+El marco **UITest** de Xamarin Test Cloud puede usarse con Xamarin.Forms para escribir pruebas de IU que se ejecutan en la nube en cientos de dispositivos.
