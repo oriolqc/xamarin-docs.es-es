@@ -6,12 +6,12 @@ ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 12/22/2017
-ms.openlocfilehash: f074bca7571188b14a36bd4e6c59a6fdf8df9339
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/04/2018
+ms.openlocfilehash: d5921c549c299197bdc442c9b883b49064655f76
+ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="android-emulator-hardware-acceleration"></a>Aceleración de hardware de Android Emulator
 
@@ -20,13 +20,14 @@ Dado que el emulador de Android SDK es muy lento sin aceleración de hardware, s
 
 ## <a name="haxm-overview"></a>Información general sobre HAXM
 
-HAXM es un motor de virtualización asistida por hardware (hipervisor) que usa la tecnología de virtualización (VT) Intel para acelerar la emulación de aplicaciones Android en un equipo host. En combinación con las imágenes de emulador x86 de Android proporcionadas por Intel y el Android SDK Manager oficial, HAXM permite una emulación de Android más rápida en sistemas compatibles con VT. Si está desarrollando en un equipo con una CPU de Intel que tiene funciones de VT, puede aprovechar las ventajas de HAXM para acelerar considerablemente el emulador de Android SDK (si no está seguro de si la CPU es compatible con VT, consulte [Determine If Your Processor Supports Intel Virtualization Technology](https://www.intel.com/content/www/us/en/support/processors/000005486.html) (Determinar si su procesador admite Intel Virtualization Technology).
+HAXM es un motor de virtualización asistida por hardware (hipervisor) que usa la tecnología de virtualización (VT) Intel para acelerar la emulación de aplicaciones Android en un equipo host. En combinación con las imágenes de emulador x86 de Android proporcionadas por Intel y el Android SDK Manager oficial, HAXM permite una emulación de Android más rápida en sistemas compatibles con VT. 
 
-El emulador de Android SDK usa HAXM automáticamente cuando está disponible. Cuando se selecciona un dispositivo virtual basado en **x86** (como se describe en [Configuration and Use](~/android/deploy-test/debugging/android-sdk-emulator/index.md) (Configuración y uso)), ese dispositivo virtual usará HAXM para la aceleración de hardware. Antes de usar el emulador de Android SDK por primera vez, conviene comprobar que HAXM esté instalado y disponible para él.
+Si está desarrollando en un equipo con una CPU de Intel que tiene funciones de VT, puede aprovechar las ventajas de HAXM para acelerar considerablemente el emulador de Android SDK (si no está seguro de si la CPU es compatible con VT, consulte [Determine If Your Processor Supports Intel Virtualization Technology](https://www.intel.com/content/www/us/en/support/processors/000005486.html) (Determinar si su procesador admite Intel Virtualization Technology).
 
 > [!NOTE]
-> No puede ejecutar HAXM en una máquina virtual.
+> No se puede ejecutar un emulador acelerado por una máquina virtual dentro de otra, como sería el caso de una hospedada en VirtualBox, VMWare o Docker. Es necesario ejecutar el emulador de Android de Google [directamente en el hardware del sistema](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
+El emulador de Android SDK usa HAXM automáticamente cuando está disponible. Cuando se selecciona un dispositivo virtual basado en **x86** (como se describe en [Configuration and Use](~/android/deploy-test/debugging/android-sdk-emulator/index.md) (Configuración y uso)), ese dispositivo virtual usará HAXM para la aceleración de hardware. Antes de usar el emulador de Android SDK por primera vez, conviene comprobar que HAXM esté instalado y disponible para él.
 
 ## <a name="verifying-haxm-installation"></a>Comprobación de la instalación de HAXM
 
@@ -42,11 +43,11 @@ Para comprobar si HAXM está disponible, consulte la ventana **Starting Android 
 
     ![Cuadro de diálogo de advertencia de rendimiento que indica que HAXM no está listo](hardware-acceleration-images/win/11-perf-warn.png)
 
-   Si se muestra una cuadro de diálogo de **advertencia de rendimiento** como este, consulte [Advertencias de rendimiento](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#perfwarn) para identificar su causa y resolver el problema.
+   Si se muestra un cuadro de diálogo de **advertencia de rendimiento** como este, consulte [Advertencias de rendimiento](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#perfwarn) para identificar su causa y resolver el problema.
 
 3. Seleccione una imagen **x86** (por ejemplo, **VisualStudio\_android-23\_x86\_phone**), haga clic en **Iniciar** y, después, en **Inicio**:
 
-    ![Iniciar el emulador de Android SDK con una imagen predeterminada de dispositivo virtual](hardware-acceleration-images/win/02-start-default-avd.png)
+    ![Inicio del emulador de Android SDK con una imagen predeterminada de dispositivo virtual](hardware-acceleration-images/win/02-start-default-avd.png)
 
 4. Espere a que aparezca el cuadro de diálogo **Starting Android Emulator** (Iniciando el emulador de Android) mientras se inicia el emulador. Si HAXM está instalado, verá el mensaje **HAX is working and emulator runs in fast virt mode** (HAX funciona y el emulador se ejecuta en modo virtual rápido), como se muestra en esta captura de pantalla:
 
@@ -68,7 +69,7 @@ Para comprobar si HAXM está disponible, consulte la ventana **Starting Android 
 
     ![Cuadro de diálogo de advertencia de rendimiento que indica que HAXM no está listo](hardware-acceleration-images/mac/04-avd-warning.png)
 
-   Si se muestra una cuadro de diálogo de **advertencia de rendimiento** como este, consulte [Advertencias de rendimiento](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#perfwarn) para identificar su causa y resolver el problema.
+   Si se muestra un cuadro de diálogo de **advertencia de rendimiento** como este, consulte [Advertencias de rendimiento](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#perfwarn) para identificar su causa y resolver el problema.
 
 3. Seleccione la imagen **x86** (por ejemplo, **Android\_Accelerated\_x86**) y haga clic en **Start (Iniciar)** y en **Launch (Ejecutar)**:
 
@@ -111,7 +112,7 @@ En la siguiente sección se explica cómo deshabilitar Hyper-V.
 
 <a name="disable-hyperv" />
 
-## <a name="disabling-hyper-v"></a>Deshabilitar Hyper-V
+## <a name="disabling-hyper-v"></a>Deshabilitación de Hyper-V
 
 Si usa Windows con Hyper-V habilitado, debe deshabilitarlo y reiniciar el equipo para instalar y usar HAXM. Puede deshabilitar Hyper-V desde el Panel de control mediante estos pasos:
 
@@ -119,11 +120,11 @@ Si usa Windows con Hyper-V habilitado, debe deshabilitarlo y reiniciar el equipo
 
 2. En el cuadro de diálogo **Programas y características** del Panel de control, haga clic en **Activar o desactivar las características de Windows**:
 
-    ![Activar o desactivar las características de Windows](hardware-acceleration-images/win/07-turn-windows-features.png)
+    ![Activación y desactivación de las características de Windows](hardware-acceleration-images/win/07-turn-windows-features.png)
 
 3. Desactive **Hyper-V** y reinicie el equipo:
 
-    ![Deshabilitar Hyper-V en el cuadro de diálogo Características de Windows](hardware-acceleration-images/win/08-uncheck-hyper-v.png)
+    ![Deshabilitación de Hyper-V en el cuadro de diálogo Características de Windows](hardware-acceleration-images/win/08-uncheck-hyper-v.png)
 
 También puede usar el siguiente cmdlet de Powershell para deshabilitar Hyper-V:
 
@@ -180,6 +181,11 @@ Si Device Guard está habilitado, siga estos pasos para deshabilitarlo:
 8. Una vez reiniciado el equipo, compruebe de nuevo que Hyper-V está deshabilitado (como se ha explicado en los pasos anteriores).
 
 Si Hyper-V aún no está deshabilitado, es posible que las directivas del equipo unido a dominio eviten que se deshabiliten Device Guard o Credential Guard. Si es así, puede solicitar una exención al administrador del dominio que le permita no usar Credential Guard. También puede usar un equipo que no esté unido a dominio para emplear HAXM.
+
+## <a name="hardware-acceleration-and-amd-cpus"></a>Aceleración de hardware y CPU AMD
+
+Dado que el emulador de Android de Google admite la aceleración de hardware AMD [únicamente en Linux](https://developer.android.com/studio/run/emulator-acceleration.html#dependencies), esta no está disponible para equipos basados en AMD que ejecuten Windows.
+
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
