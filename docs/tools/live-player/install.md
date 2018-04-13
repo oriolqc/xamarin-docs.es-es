@@ -1,6 +1,6 @@
 ---
 title: Configuración de Xamarin Live Player
-description: Editar y probar aplicaciones en tiempo real en el dispositivo iOS o Android
+description: Editar y probar aplicaciones en tiempo real en dispositivos iOS o Android
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 ms.technology: xamarin-cross-platform
@@ -61,7 +61,7 @@ Xamarin Live Player requiere:
   * En caso contrario, se le pedirá para emparejar un dispositivo cuando sea necesario.
 4. Presione el **ejecutar** botón, o seleccione una de las siguientes opciones de la **ejecutar** o menú contextual:
 
-  - **Iniciar sin depurar** : puede editar la aplicación y ver los cambios se producen en el dispositivo (la aplicación se reinicia cuando se realizan cambios y guardar el archivo).
+  - **Iniciar sin depurar** : puede editar la aplicación y ver los cambios que se producen en el dispositivo (la aplicación se reinicia cuando se realizan cambios y guarda el archivo).
   - **Iniciar depuración** : puede establecer puntos de interrupción e inspeccionar las variables, pero no se puede editar el código.
 
   Como alternativa, seleccione **Herramientas > Xamarin Player Live > Live vista actual ejecutar**, que permite editar la aplicación y ver los cambios se producen en el dispositivo. Se muestra la vista actual (en lugar de la pantalla principal de la aplicación).
@@ -105,7 +105,7 @@ Xamarin Live Player requiere:
 
   ![Opciones de menú de ejecución](install-images/run-menu.png)
 
-  - **Iniciar sin depurar** : puede editar la aplicación y ver los cambios se producen en el dispositivo (la aplicación se reinicia cuando se realizan cambios y guardar el archivo).
+  - **Iniciar sin depurar** : puede editar la aplicación y ver los cambios que se producen en el dispositivo (la aplicación se reinicia cuando se realizan cambios y guarda el archivo).
   - **Iniciar depuración** : puede establecer puntos de interrupción e inspeccionar las variables, pero no se puede editar el código.
   - **Ejecutar la vista actual de Live** : puede editar la aplicación y ver los cambios se producen en el dispositivo. Se muestra la vista actual (en lugar de la pantalla principal de la aplicación).
 
