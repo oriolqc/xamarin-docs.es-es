@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: a1adaa20bb649dd51547e3bff74e60e0d5c001af
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e8d1064e76c2ccdeb14302d30428cd932444a0f5
+ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Inicio rápido de Xamarin.Forms
 
@@ -822,7 +822,7 @@ Cree la aplicación Phoneword de la siguiente forma:
 
     namespace Phoneword.Droid
     {
-        [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+        [Activity(Label = "Phoneword", Icon = "@drawable/icon", Theme = "@style/MyTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
         public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
         {
             internal static MainActivity Instance { get; private set; }
@@ -843,6 +843,9 @@ Cree la aplicación Phoneword de la siguiente forma:
     ```
 
     Guarde los cambios en **MainActivity.cs** en **Archivo > Guardar**, o bien presione **&#8984;+S** y cierre el archivo.
+
+    > [!NOTE]
+    > En el código de ejemplo se usa `Theme="@style/MainTheme"` porque se basa en una plantilla anterior. Puede comprobar el nombre de estilo correcto en **Phoneword/Droid/Resources/values/styles.xml** si se produce un error del compilador para el nombre del tema.
 
 26. En el **Panel de solución**, expanda la carpeta **Propiedades** y haga doble clic en el archivo **AndroidManifest.xml**:
 
