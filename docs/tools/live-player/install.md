@@ -1,4 +1,4 @@
----
+﻿---
 title: Configuración de Xamarin Live Player
 description: Editar y probar aplicaciones en tiempo real en dispositivos iOS o Android
 ms.prod: xamarin
