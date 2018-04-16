@@ -15,7 +15,7 @@ ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin Live Player para Xamarin.Forms
 
-Xamarin Live Player le ayuda a iniciarse en el desarrollo con Xamarin.Forms creando aplicaciones móviles que se pueden probar en dispositivos Android o iOS. El código se ejecuta dentro de la aplicación Xamarin Live Player, por lo que no es necesario configurar ningún emulador ni usar ningún cable para implementar el código en un dispositivo. Para empezar, descargue Xamarin Live Player, conéctelo con Visual Studio, implemente el código y pruebe la aplicación.
+Xamarin Live Player le ayuda a iniciarse en el desarrollo con Xamarin.Forms creando aplicaciones móviles que se pueden probar en dispositivos Android o iOS. El código se ejecuta dentro de la aplicación Xamarin Live Player, por lo que no es necesario configurar ningún emulador ni usar ningún cable para implementar el código en un dispositivo. Para empezar, descargue Xamarin Live Player, conéctelo con Visual Studio, implemente el código y pruebe la aplicación. 
 
 Xamarin Live Player está diseñado para que los desarrolladores puedan visualizar sus ideas rápidamente en un dispositivo. Puesto que se interpreta el código fuente, puede que obtenga las [limitaciones](limitations.md) tras cierto tiempo. Además, puede que deba compilar completamente la aplicación en un dispositivo o emulador.
 
