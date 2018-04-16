@@ -15,7 +15,8 @@ ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-live-player-setup"></a>Configuración de Xamarin Live Player
 
-Xamarin Player en directo le permite realizar modificaciones en vivo en la aplicación y reflejarán los cambios en vivo en el dispositivo. El código se ejecuta dentro de la aplicación de Xamarin Player Live: no es necesario para configurar los emuladores o usar cables para implementar. Este artículo describe cómo configurar el Reproductor de Xamarin en vivo.
+Xamarin Live Player le permite modificar el código de su aplicación y reflejar los cambios en el dispositivo en directo. El código se ejecuta dentro de la aplicación Xamarin Live Player, por lo que no es necesario configurar ningún emulador ni usar ningún cable para implementar su aplicación. En este artículo se describe cómo configurar Xamarin Live Player.
+
 
 ![Característica de vista previa](~/media/shared/preview.png)
 
@@ -23,11 +24,11 @@ Xamarin Player en directo le permite realizar modificaciones en vivo en la aplic
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Xamarin Player en vivo está disponible para Android desde Google Play:
+Xamarin Live Player está disponible para Android mediante Google Play:
 
 [ ![Disponible en Google Play](install-images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
-Para dispositivos Android sin Google Play está disponible a través de Xamarin Player Live [HockeyApp](https://aka.ms/xlp-hockeyapp) distribución. Además, anticipo genera para Android se puede instalar directamente desde Google Play mediante la aceptación de los [programa beta abierta](https://play.google.com/apps/testing/com.xamarin.live)
+ara dispositivos que usan Android sin Google Play, Xamarin Live Player está disponible mediante la distribución [HockeyApp](https://aka.ms/xlp-hockeyapp). Además, las primeras versiones preliminares para Android se pueden instalar directamente desde Google Play mediante la aceptación en los [programas de versión beta abierta](https://play.google.com/apps/testing/com.xamarin.live)
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -44,7 +45,7 @@ Xamarin Live Player requiere:
 - Visual Studio 2017 15.4 u otra más reciente.
 - Un equipo con Visual Studio y un dispositivo con Xamarin Live Player en la misma red Wi-Fi.
 
-## <a name="3-using-xamarin-live-player-for-the-first-time"></a>3. Uso de Xamarin Player en vivo por primera vez
+## <a name="3-using-xamarin-live-player-for-the-first-time"></a>3. Primer uso de Xamarin Live Player
 
 1. Abra **Visual Studio 2017**.
 2. Vaya a **Herramientas > Opciones...**  y seleccione la opción **Xamarin > otros**.
@@ -59,7 +60,7 @@ Xamarin Live Player requiere:
 
   * Si ya ha emparejado un dispositivo, este estará disponible como una opción.
   * En caso contrario, se le pedirá para emparejar un dispositivo cuando sea necesario.
-4. Presione el **ejecutar** botón, o seleccione una de las siguientes opciones de la **ejecutar** o menú contextual:
+4. Presione el botón **Ejecutar** o seleccione una de las siguientes opciones del menú contextual **Ejecutar**:
 
   - **Iniciar sin depurar** : puede editar la aplicación y ver los cambios que se producen en el dispositivo (la aplicación se reinicia cuando se realizan cambios y guarda el archivo).
   - **Iniciar depuración** : puede establecer puntos de interrupción e inspeccionar las variables, pero no se puede editar el código.
@@ -84,7 +85,7 @@ Xamarin Live Player requiere:
 - Visual Studio para Mac
 - Un equipo Mac y un dispositivo en la misma red Wi-Fi
 
-## <a name="3-using-xamarin-live-player-for-the-first-time"></a>3. Uso de Xamarin Player en vivo por primera vez
+## <a name="3-using-xamarin-live-player-for-the-first-time"></a>3. Primer uso de Xamarin Live Player
 
 1. Abra **de Visual Studio para Mac**.
 2. Vaya a **Visual Studio > Preferencias...**  y seleccione la **proyectos > Xamarin Player en vivo (versión preliminar)** ficha.
@@ -101,7 +102,7 @@ Xamarin Live Player requiere:
   * En caso contrario, se le pedirá para emparejar un dispositivo cuando sea necesario.
   * Elija **Xamarin Player en vivo dispositivos...**  para administrar los dispositivos que se va a utilizar con el Reproductor de Xamarin en vivo.
 
-4. Presione el **ejecutar** botón, o seleccione una de las siguientes opciones de la **ejecutar** o menú contextual:
+4. Presione el botón **Ejecutar** o seleccione una de las siguientes opciones del menú contextual **Ejecutar**:
 
   ![Opciones de menú de ejecución](install-images/run-menu.png)
 
