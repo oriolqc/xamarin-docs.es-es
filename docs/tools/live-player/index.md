@@ -1,6 +1,6 @@
 ---
 title: Xamarin Live Player para Xamarin.Forms
-description: Iniciar el aprendizaje Xamarin rápidamente, compilar y ejecutar aplicaciones en el dispositivo Android o iOS.
+description: Iniciar el aprendizaje Xamarin rápidamente, compilar y ejecutar aplicaciones en dispositivos Android o iOS.
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
 ms.technology: xamarin-cross-platform
@@ -15,13 +15,13 @@ ms.lasthandoff: 04/04/2018
 ---
 # <a name="xamarin-live-player-for-xamarinforms"></a>Xamarin Live Player para Xamarin.Forms
 
-El Reproductor de Xamarin Live sirve como introducción al desarrollo de Xamarin.Forms de aprendizaje crear aplicaciones móviles que se pueden probar en el dispositivo Android o iOS. El código se ejecuta dentro de la aplicación de Xamarin Player Live: no es necesario para configurar los emuladores o usar cables para implementar el código. Para empezar, descargue el Reproductor de Xamarin en vivo, empareja con Visual Studio, implementar el código y probar la aplicación. 
+Xamarin Live Player le ayuda a iniciarse en el desarrollo con Xamarin.Forms creando aplicaciones móviles que se pueden probar en dispositivos Android o iOS. El código se ejecuta dentro de la aplicación Xamarin Live Player, por lo que no es necesario configurar ningún emulador ni usar ningún cable para implementar el código en un dispositivo. Para empezar, descargue Xamarin Live Player, conéctelo con Visual Studio, implemente el código y pruebe la aplicación. 
 
-El Reproductor de Xamarin en vivo está diseñado como un espacio aislado para desarrolladores obtener sus ideas visualizados rápidamente en un dispositivo de introducción. Puesto que se interpreta el código fuente puede llegar a la [limitaciones](limitations.md) después de algún tiempo y necesidad de compilar completamente la aplicación para el dispositivo o emulador.
+Xamarin Live Player está diseñado para que los desarrolladores puedan visualizar sus ideas rápidamente en un dispositivo. Puesto que se interpreta el código fuente, puede que obtenga las [limitaciones](limitations.md) tras cierto tiempo. Además, puede que deba compilar completamente la aplicación en un dispositivo o emulador.
 
-## <a name="get-started-with-xamarin-live-player"></a>Empezar a trabajar con Xamarin Player en vivo
+## <a name="get-started-with-xamarin-live-player"></a>Empezar a trabajar con Xamarin Live Player
 
-[![Xamarin Live Player: Codifique, examine, pruebe](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
+[![Xamarin Live Player: codifique, examine y pruebe](images/xamarin-live.png)](images/xamarin-live-sml.png#lightbox)
 
 1. Descargue la aplicación en que fluyen los [el programa de instalación de Xamarin Player Live](install.md) instrucciones.
 2. Habilite *Xamarin Player Live* en las **preferencias**, a continuación, seleccione el dispositivo desde la lista de **dispositivos**.
@@ -38,7 +38,7 @@ Usando la aplicación Xamarin Live Player.
 
 ## <a name="samples-to-try-with-xamarin-live-playersamplesmd"></a>[Ejemplos para probar Xamarin Live Player](samples.md)
 
-Vínculos a ejemplos que se usará con la aplicación de Xamarin Player en vivo.
+Vínculos a ejemplos para usar con la aplicación Xamarin Live Player.
 
 ## <a name="limitationslimitationsmd"></a>[Limitaciones](limitations.md)
 
