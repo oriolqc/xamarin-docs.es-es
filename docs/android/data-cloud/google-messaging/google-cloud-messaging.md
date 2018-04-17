@@ -6,12 +6,12 @@ ms.assetid: DF8EF401-F63D-4BA0-B2C6-B22DF8FD60CB
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 73ff82f3bf36aa54422c1693c6bf07731480b7f7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/12/2018
+ms.openlocfilehash: 29cccf414759a79a8ba74dfc35b7ba9f6a1cc5d6
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="google-cloud-messaging"></a>Mensajería de nube de Google
 
@@ -21,6 +21,9 @@ _Conexión compartida a Internet (GCM, Google Cloud Messaging) es un servicio qu
 
 Este tema proporciona una descripción general de cómo Google Cloud Messaging enruta los mensajes entre la aplicación y un servidor de aplicaciones, y proporciona un procedimiento paso a paso para adquirir las credenciales para que la aplicación puede usar los servicios GCM.
 
+> [!NOTE]
+> Se han producido GCM [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md) (FCM).
+> GCM API de cliente y servidor [han quedado en desuso](https://firebase.googleblog.com/2018/04/time-to-upgrade-from-gcm-to-fcm.html) y ya no estará disponible tan pronto como el 11 de abril de 2019.
 
 ## <a name="overview"></a>Información general
 

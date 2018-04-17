@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: 647ed1723bcc98b97c03ad824fbae0060854d6a2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b760f5e1d37f4bc8cc6af063552b974afa435d56
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-custom-theme"></a>Crear un tema personalizado
 
@@ -74,7 +74,7 @@ El código para crear un vértice round `BoxView` utiliza [efectos](~/xamarin-fo
 El radio de redondeo que se aplica usando un `BindableProperty` y se implementa mediante la aplicación de un [efecto](~/xamarin-forms/app-fundamentals/effects/index.md). El efecto requiere código específico de la plataforma en la [iOS](#ios) y [Android](#android) proyectos (se muestra a continuación).
 
 ```csharp
-namemspace ThemesDemo
+namespace ThemesDemo
 {
   public static class ThemeEffects
   {

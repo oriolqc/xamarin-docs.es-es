@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: b4d96ef50498b454da583a955169b9d51c29dd01
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8103dcc1c2e1e8c2375a86d51580b1ea3fcce432
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resources-and-data-storage"></a>Recursos y el almacenamiento de datos
 
@@ -55,6 +55,9 @@ Como resultado, la aplicación Xamarin.tvOS debe almacenar los datos de usuario 
 
 - **iCloud almacenamiento de información de clave y valor (KVS)** : para pequeños fragmentos de información (inferior a 1 MB) que puede requerir la aplicación (por ejemplo, las preferencias del usuario), puede usar el almacenamiento de KVS iCloud. datos de KVS iCloud se sincronizan automáticamente a la nube y todos los dispositivos del usuario ejecutan la misma aplicación. Para obtener más información, consulte el [almacenamiento de información de clave y valor](~/ios/data-cloud/introduction-to-icloud.md) sección de nuestro [Introducción a iCloud](~/ios/data-cloud/introduction-to-icloud.md) documento o de Apple [diseñar para datos de valores de clave en iCloud](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/iCloudDesignGuide/Chapters/DesigningForKey-ValueDataIniCloud.html#//apple_ref/doc/uid/TP40012094-CH7) documentación.
 - **CloudKit** : para el almacenamiento de grandes piezas de información (superior a 1 MB), use CloudKit Framework de Apple. A diferencia de iCloud almacenamiento KVS, CloudKit datos pueden compartirse entre todos los usuarios de la aplicación (como las que se va a privada a un único usuario). Formulario obtener más información, consulte nuestro [Introducción a CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) documentación o de Apple [inicio rápido de CloudKit](https://developer.apple.com/library/prerelease/tvos/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987).
+
+> [!IMPORTANT]
+> Apple [proporciona herramientas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ayudar a los desarrolladores controlen correctamente normativa General de protección de datos (GDPR) de la Unión Europea.
 
 <a name="On-Demand-Resources" />
 
