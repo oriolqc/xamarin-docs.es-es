@@ -6,165 +6,84 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: c129079aad14ac9e8aad6f73670ce9a43a36f222
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f75ced921cd240e280b5dd6f7366ccceefb5e40e
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-macos"></a>Introducción a macOS
 
 
 ## <a name="what-you-will-need"></a>Lo que necesita
 
-* Siga las instrucciones que aparecen en nuestro [introducción con Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guía.
+* Siga las instrucciones en el [introducción con Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guía.
 
-* Un ensamblado de .NET para usar con **Embeddinator 4000**.
+## <a name="hello-world"></a>Hola a todos
 
-* Una aplicación de cacao macOS
+En primer lugar, compile un ejemplo del mundo Hola simple en C#.
 
-Continúe después de haber seguido las instrucciones que aparecen en nuestro [introducción con Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guía. Si ya tiene un ensamblado .NET puede omitir directamente en **Embeddinator-4000 utilizando** sección.
+### <a name="create-c-sample"></a>Crear el ejemplo de C#
 
-## <a name="creating-a-net-assembly"></a>Crear un ensamblado .NET
+Abra Visual Studio para Mac, cree un nuevo proyecto de biblioteca de clases de Mac denominado **Hola de csharp**y guárdelo en **~/Projects/hello-from-csharp**.
 
-Para generar un ensamblado de .NET deberá abrir [Visual Studio para Mac](https://www.visualstudio.com/vs/visual-studio-mac/) y crear un nuevo **proyecto de biblioteca de .NET** de manera práctica *archivo > nueva solución > otros > .NET > biblioteca*. Haga clic en siguiente y proporcione *tiempo* como el *nombre del proyecto*y haga clic en *crear*.
-
-Siga los pasos siguientes:
-
-1. Eliminar el **MyClass.cs** archivo y la **propiedades** carpeta.
-
-2. Haga clic con el botón secundario en *proyecto tiempo > Agregar > nuevo archivo.*
-
-3. Seleccione *clase vacía* y usar **XAMWeatherFetcher** como el nombre, a continuación, haga clic en nuevo.
-
-4. Reemplace el contenido de *XAMWeatherFetcher.cs* con el código siguiente:
+Reemplace el código en el `MyClass.cs` archivo con el siguiente fragmento:
 
 ```csharp
-using System;
-using System.Json;
-using System.Net;
-
-public class XAMWeatherFetcher {
-
-    static string urlTemplate = @"https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22{0}%2C%20{1}%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
-    public string City { get; private set; }
-    public string State { get; private set; }
-
-    public XAMWeatherFetcher (string city, string state)
+using AppKit;
+public class MyNSView : NSTextView
+{
+    public MyNSView ()
     {
-        City = city;
-        State = state;
-    }
-
-    public XAMWeatherResult GetWeather ()
-    {
-        try {
-            using (var wc = new WebClient ()) {
-                var url = string.Format (urlTemplate, City, State);
-                var str = wc.DownloadString (url);
-                var json = JsonValue.Parse (str)["query"]["results"]["channel"]["item"]["condition"];
-                var result = new XAMWeatherResult (json["temp"], json["text"]);
-                return result;
-            }
-        }
-        catch (Exception ex) {
-            // Log some of the exception messages
-            Console.WriteLine (ex.Message);
-            Console.WriteLine (ex.InnerException?.Message);
-            Console.WriteLine (ex.InnerException?.InnerException?.Message);
-
-            return null;
-        }
-
-    }
-}
-
-public class XAMWeatherResult {
-    public string Temp { get; private set; }
-    public string Text { get; private set; }
-
-    public XAMWeatherResult (string temp, string text)
-    {
-        Temp = temp;
-        Text = text;
+        Value = "Hello from C#";
     }
 }
 ```
 
-Observará que `Using System.Json;` produce un error; para solucionar esto es necesario para hacer lo siguiente:
+Compile el proyecto. El ensamblado resultante se guardará como **~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csharp.dll**.
 
-1. Haga doble clic en el **referencias** carpeta.
+### <a name="bind-the-managed-assembly"></a>Enlazar el ensamblado administrado
 
-2. Haga clic en el **paquetes** ficha.
-
-3. Comprobar **System.Json**.
-
-4. Click **Ok**.
-
-Una vez que los pasos anteriores se realiza lo que debemos hacer es compilación nuestro ensamblado. NET, haga clic en *menú Generar > compilar todos los* o ⌘ + b. Compilación correcta debería aparecer el mensaje en la barra de estado superior.
-
-Ahora, haga clic en *tiempo* nodo del proyecto y seleccione *revelar en Finder*. En Finder, vaya a la *bin/Debug* carpeta; interna que encuentre **Weather.dll.**
-
-## <a name="using-embeddinator-4000"></a>Usar Embeddinator 4000
-
-Si instaló Embeddinator-4000 mediante el instalador de pkg e inicia una nueva sesión de terminal después de la instalación, puede usar el **objcgen** comando (en caso contrario, puede usar su ruta de acceso absoluta: `/Library/Frameworks/Xamarin.Embeddinator-4000.framework/Commands/objcgen`); **objcgen** es la herramienta que necesitamos para generar una biblioteca nativa de un ensamblado. NET.
-
-Abra terminal, `cd` en la carpeta que contiene Weather.dll y ejecute **objcgen** con los argumentos que se muestra a continuación:
+Ejecute el embeddinator para crear un marco nativo para el ensamblado administrado:
 
 ```shell
-cd /Users/Alex/Projects/Weather/Weather/bin/Debug
-
-objcgen --debug --outdir=output -c Weather.dll
+cd ~/Projects/hello-from-csharp
+objcgen ~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csharp.dll --target=framework --platform=macOS-modern --abi=x86_64 --outdir=output -c --debug
 ```
 
-Todo lo que necesita se colocarán en el **salida** directorio junto a *Weather.dll*. Si tiene su propio ensamblado. NET, reemplace *Weather.dll* con él y siga los mismos pasos de la sección.
+El marco de trabajo se colocará en **~/Projects/hello-from-csharp/output/hello-from-csharp.framework**.
 
-## <a name="using-the-generated-output-in-an-xcode-project"></a>Usar el resultado generado en un proyecto de Xcode
+### <a name="use-the-generated-output-in-an-xcode-project"></a>Usar el resultado generado en un proyecto de Xcode
 
-Abra Xcode y cree un nuevo **macOS cacao aplicación** y asígnele el nombre **MyWeather**. Haga clic con el botón secundario en el *nodo del proyecto MyWeather*, seleccione *agregar archivos a "MyWeather"*, navegue hasta la **salida** directorio creado por *Embeddinator 4000* y agregue los siguientes archivos:
+Abra Xcode y cree una nueva aplicación de cacao. Asígnele el nombre **Hola de csharp** y seleccione la **Objective-C** language.
 
-* Bindings.h
-* embeddinator.h
-* glib.h
-* mono support.h
-* mono_embeddinator.h
-* objc-support.h
-* libWeather.dylib
-* Weather.dll
+Abra la **~/Projects/hello-from-csharp/output** directorio en Finder, seleccione **Hola de csharp.framework**, arrástrelo al proyecto Xcode y colóquela justo encima el **Hola de csharp**  carpeta del proyecto.
 
-Asegúrese de que **copiar elementos si es necesario** está activada en el panel de opciones del cuadro de diálogo de archivo.
+![Marco de arrastrar y colocar](macos-images/hello-from-csharp-mac-drag-drop-framework.png)
 
-Ahora necesitamos para asegurarse de que **libWeather.dylib** y **Weather.dll** obtener en el grupo de aplicaciones:
+Asegúrese de que **copiar elementos si es necesario** está activada en el cuadro de diálogo que aparece y haga clic en **finalizar**.
 
-* Haga clic en *nodo del proyecto MyWeather*.
-* Seleccione *fases de compilación* ficha.
-* Agregue un nuevo *fase de copia de archivos*.
-* En *destino* seleccione **marcos** y agregue **libWeather.dylib**.
-* Agregue un nuevo *fase de copia de archivos*.
-* En *destino* seleccione **ejecutables**, agregar **Weather.dll** y asegúrese de que *código de inicio de sesión copia* está activada.
+![Copiar elementos si es necesario](macos-images/hello-from-csharp-mac-copy-items-if-needed.png)
 
-Ahora, abra **ViewController.m** y reemplace su contenido con:
+Seleccione el **Hola de csharp** proyecto y navegue hasta la **Hola de csharp** del destino **General** ficha. En el **incrustado binario** sección, agregue **Hola de csharp.framework**.
 
-```objective-c
+![Archivos binarios incrustados](macos-images/hello-from-csharp-mac-embedded-binaries.png)
+
+Abra **ViewController.m**y reemplace el contenido con:
+
+```objc
 #import "ViewController.h"
-#import "bindings.h"
+
+#include "hello-from-csharp/hello-from-csharp.h"
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    XAMWeatherFetcher * fetcher = [[XAMWeatherFetcher alloc] initWithCity:@"Boston" state:@"MA"];
-    XAMWeatherResult * weather = [fetcher getWeather];
-
-    NSString * result;
-    if (weather)
-        result = [NSString stringWithFormat:@"%@ °F - %@", weather.temp, weather.text];
-    else
-        result = @"An error occured";
-
-    NSTextField * textField = [NSTextField labelWithString:result];
-    [self.view addSubview:textField];
+    
+    MyNSView *view = [[MyNSView alloc] init];
+    view.frame = CGRectMake(0, 200, 200, 200);
+    [self.view addSubview: view];
 }
 
 @end
@@ -172,6 +91,6 @@ Ahora, abra **ViewController.m** y reemplace su contenido con:
 
 Por último, ejecute el proyecto de Xcode, y se mostrará a algo parecido a esto:
 
-![Ejecución de ejemplo MyWeather](macos-images/weather-from-csharp-macos.png)
+![Hola de ejecución en el simulador del ejemplo de C#](macos-images/hello-from-csharp-mac.png)
 
-Un ejemplo más completo y con mayor capacidad [aquí](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).
+Un ejemplo más completo y tengan una buena presentación [aquí](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).

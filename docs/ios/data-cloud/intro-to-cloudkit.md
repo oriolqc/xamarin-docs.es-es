@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: 33ceff4549e4afbb1e5fecf3bd380fdb9a3df5f2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4765b91bdc1f64be7e2ea67622db7af8634f1347
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cloudkit"></a>CloudKit
 
@@ -20,6 +20,9 @@ _iCloud API permiten que las aplicaciones de iOS 8 almacenar datos en iCloud, co
 El marco de trabajo CloudKit simplifica el desarrollo de aplicaciones que iCloud de acceso. Esto incluye la recuperación de datos de la aplicación y activos derechos así como la posibilidad de almacenar información de la aplicación de forma segura. Este kit ofrece a los usuarios un nivel de anonimato permitiendo el acceso a las aplicaciones con su identificadores de iCloud sin compartir información personal.
 
 Los programadores pueden centrarse en sus aplicaciones del lado cliente y permiten iCloud elimina la necesidad de escribir una lógica de aplicación de servidor. CloudKit proporciona autenticación, en las bases de datos públicas y privadas y los datos estructurados y los servicios de almacenamiento de activos.
+
+> [!IMPORTANT]
+> Apple [proporciona herramientas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ayudar a los desarrolladores controlen correctamente normativa General de protección de datos (GDPR) de la Unión Europea.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -149,7 +152,7 @@ Estas son las diferencias entre los tipos de base de datos:
 ||Base de datos público|Base de datos privados|
 |---|--- |--- |
 |**Tipo de datos**|Datos compartidos|Datos del usuario actual|
-|**Quota**|Tenga en cuenta en la cuota del desarrollador|Tenga en cuenta en la cuota del usuario|
+|**Cuota**|Tenga en cuenta en la cuota del desarrollador|Tenga en cuenta en la cuota del usuario|
 |**Permisos predeterminados**|Mundo legible|Usuario legible|
 |**Editar permisos**|iCloud panel Roles a través de un nivel de clase de registro|N/D|
 
