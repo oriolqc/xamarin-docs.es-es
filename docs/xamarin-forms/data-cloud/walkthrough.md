@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: e9738a766762dd64cdfbb034d4eaa54f76aca311
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 703441e3fc58beeb33e519f3781387a59c1c1cef
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-the-sample"></a>Descripción del ejemplo
 
@@ -86,7 +86,7 @@ Se tiene acceso a las operaciones del servicio Web a través de la `TodoItemMana
 
 Además, algunas aplicaciones de ejemplo contienen métodos adicionales en el `TodoItemManager` (clase), que se usan para administrar el proceso de autenticación de usuario.
 
-En lugar de invocar las operaciones del servicio web directamente, la `TodoItemManager` métodos invocan métodos en una clase dependiente que se aplica en el `TodoItemManager` constructor. Por ejemplo, una aplicación de ejemplo inserta la `SimpleDBStorage` clase en el `TodoItemManager` constructor para proporcionar la implementación que invoca las operaciones contra el servicio de SimpleDB de Amazon.
+En lugar de invocar las operaciones del servicio web directamente, la `TodoItemManager` métodos invocan métodos en una clase dependiente que se aplica en el `TodoItemManager` constructor. Por ejemplo, una aplicación de ejemplo inserta la `RestService` clase en el `TodoItemManager` constructor para proporcionar la implementación que usa las API de REST para acceder a los datos.
 
 ### <a name="translating-text-to-speech"></a>Convertir texto a voz
 
@@ -113,4 +113,3 @@ En este tema se proporciona un tutorial de la aplicación de ejemplo de Xamarin.
 - [Versión WCF (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF)
 - [Versión REST (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
 - [Versión de Azure (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzure)
-- [Versión de Amazon Web Services (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAWS)

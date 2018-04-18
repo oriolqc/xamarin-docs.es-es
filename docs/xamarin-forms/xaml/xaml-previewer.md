@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 02/24/2017
-ms.openlocfilehash: 77f9873259a2a44426007c50efbd7ff83c8a0ccb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d23f89ed8ad7956f7a366280a14ccc12ba3dac0c
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Controlador de vista previa XAML para Xamarin.Forms
 
@@ -33,7 +33,7 @@ Use la **Vista > otras ventanas > controlador de vista previa de Xamarin.Forms**
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-El **vista previa** botón se puede mostrar en el editor haciendo clic en un archivo XAML y seleccionar **abrir con > Visor XAML**. El panel de vista previa, a continuación, pueden mostrar u ocultar presionando el **vista previa** situado en la esquina superior derecha de las ventanas de documento XAML:
+El **vista previa** botón se puede mostrar en el editor haciendo clic en un archivo XAML y seleccionar **abrir con > controlador de vista previa de formularios**. El panel de vista previa, a continuación, pueden mostrar u ocultar presionando el **vista previa** situado en la esquina superior derecha de las ventanas de documento XAML:
 
 [![Vista previa del control ListView en Visual Studio para Mac](xaml-previewer-images/xamlp-list-sml.png "controlador de vista previa de formularios en Visual Studio para Mac")](xaml-previewer-images/xamlp-list.png#lightbox "controlador de vista previa de formularios en Visual Studio para Mac")
 

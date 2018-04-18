@@ -1,21 +1,21 @@
 ---
 title: Consumir servicios Web
-description: Esta guía demuestra cómo comunicarse con servicios web diferente para poder crear, leer, actualizar y eliminar funcionalidad (CRUD) a una aplicación de Xamarin.Forms. Los temas tratados son comunicarse con ASMX servicios, WCF services, REST servicios, aplicaciones móviles de Azure y servicios Web de Amazon.
+description: Esta guía demuestra cómo comunicarse con servicios web diferente para poder crear, leer, actualizar y eliminar funcionalidad (CRUD) a una aplicación de Xamarin.Forms. Los temas tratados son comunicarse con servicios ASMX, los servicios de WCF, servicios de REST y aplicaciones móviles de Azure.
 ms.prod: xamarin
 ms.assetid: 8B360BDA-E4E3-4A3F-9004-0E35362F49F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 530b57c009a1f76d3756d7315856f74b6cda2f66
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a4c842ea7fd37ade9be0a9cb3e3ff7e50a6d1491
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="consuming-web-services"></a>Consumir servicios Web
 
-_Esta guía demuestra cómo comunicarse con servicios web diferente para poder crear, leer, actualizar y eliminar funcionalidad (CRUD) a una aplicación de Xamarin.Forms. Los temas tratados son comunicarse con ASMX servicios, WCF services, REST servicios, aplicaciones móviles de Azure y servicios Web de Amazon._
+_Este guía muestra cómo comunicar con servicios web diferente para poder crear, leer, actualizar y eliminar funcionalidad (CRUD) a una aplicación de Xamarin.Forms. Los temas tratados son comunicarse con servicios ASMX, los servicios de WCF, servicios de REST y aplicaciones móviles de Azure.
 
 ## <a name="consuming-an-aspnet-web-service-asmxxamarin-formsdata-cloudconsumingasmxmd"></a>[Consumir un servicio Web ASP.NET (ASMX)](~/xamarin-forms/data-cloud/consuming/asmx.md)
 
@@ -32,11 +32,6 @@ Representational State Transfer (REST) es un estilo de arquitectura para la crea
 ## <a name="consuming-an-azure-mobile-appxamarin-formsdata-cloudconsumingazuremd"></a>[Consumir una aplicación móvil de Azure](~/xamarin-forms/data-cloud/consuming/azure.md)
 
 Aplicaciones móviles de Azure le permiten desarrollar aplicaciones con back-ends de escalable hospedado en el servicio de aplicación de Azure, con compatibilidad para la autenticación de dispositivos móvil, sincronización sin conexión y las notificaciones de inserción. En este artículo, que sólo es aplicable a las aplicaciones móviles de Azure que usan un back-end de Node.js, explica cómo consultar, insertar, actualizar y eliminar los datos almacenados en una tabla en una instancia de aplicaciones móviles de Azure.
-
-## <a name="consuming-an-amazon-simpledb-servicexamarin-formsdata-cloudconsumingawsmd"></a>[Consumir un servicio de SimpleDB de Amazon](~/xamarin-forms/data-cloud/consuming/aws.md)
-
-Amazon SimpleDB es un servicio web que proporciona la capacidad de almacenar y consultar datos en la nube de Amazon. En este artículo se explica cómo usar el SDK de AWS para .NET para consultar, crear y reemplazar y eliminar los datos almacenados en un servicio de SimpleDB.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

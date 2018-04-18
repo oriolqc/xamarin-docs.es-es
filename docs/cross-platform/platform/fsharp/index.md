@@ -7,13 +7,13 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: ed934e4a5896a004e0f226d156109df182cfebd3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 20d5a81a6a33465e5b883e495600b57400adf199
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="f35"></a>F&#35;
+# <a name="f35"></a>F&AMP;#35;
 
 F # es un lenguaje de programación de código abierto, multiplataforma, primeramente funcional y para. NET.
 
@@ -21,7 +21,7 @@ F # combina el succinctness, expresividad y facilidad de creación de tipo deduc
 
 F # está disponible como un lenguaje de programación a los usuarios de Xamarin en todas las plataformas compatibles con Xamarin: iOS, Android y macOS.
 
-- [Guía de F#](https://docs.microsoft.com/en-us/dotnet/fsharp/)
+- [Guía de F#](https://docs.microsoft.com/dotnet/fsharp/)
 - [Introducción a F # y Xamarin](overview.md)
 - [Ejemplos de F # Mobile](samples.md)
 
@@ -36,4 +36,3 @@ F # es un lenguaje compatible en Visual Studio para Mac. Entre las característi
 - Resaltado de sintaxis en F # Interactive
 - Plantillas de F # para Xamarin.Forms, iOS y Android
 - [*y mucho más...*](https://developer.xamarin.com/releases/studio/xamarin.studio_6.0/xamarin.studio_6.0/#F_Enhancements)
-

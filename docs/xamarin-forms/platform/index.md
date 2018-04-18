@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: 454969d8a59128423d632452033b8ba84ee0bc98
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd46411f3662652ef26addc76f273d6071401a6f
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="platform-features"></a>Características de la plataforma
 
@@ -33,9 +33,17 @@ Cómo usar la `Device` clase para crear un comportamiento específico de la plat
 
 Algunos estilos iOS pueden realizarse a través de **Info.plist** y `UIAppearance` API. Esta guía incluye ejemplos de cómo incluir características de iOS 9 en la aplicación de iOS de una solución Xamarin.Forms, incluidos la búsqueda de Spotlight Core.
 
+## <a name="gtkgtkmd"></a>[GTK](gtk.md)
+
+Xamarin.Forms ahora es compatible con vista previa aplicaciones GTK #.
+
 ## <a name="macmacmd"></a>[Mac](mac.md)
 
 Xamarin.Forms tiene ahora compatibilidad con vista previa para las aplicaciones de Mac OS.
+
+## <a name="wpfwpfmd"></a>[WPF](wpf.md)
+
+Xamarin.Forms tiene ahora compatibilidad con vista previa para las aplicaciones de Windows Presentation Foundation (WPF).
 
 ## <a name="native-formsnative-formsmd"></a>[Formularios nativos](native-forms.md)
 
@@ -45,7 +53,7 @@ Los formularios nativo permiten Xamarin.Forms [ `ContentPage` ](https://develope
 
 Pueden hacer referencia directamente a las vistas nativo de la plataforma Universal de Windows, iOS y Android de Xamarin.Forms. Propiedades y los controladores de eventos se pueden establecer en vistas nativo y pueden interactuar con vistas de Xamarin.Forms.
 
-## <a name="platform-specificsplatform-specificsindexmd"></a>[Platform-Specifics](platform-specifics/index.md)
+## <a name="platform-specificsplatform-specificsindexmd"></a>[Obtener información específica de la plataforma](platform-specifics/index.md)
 
 Obtener información específica de la plataforma le permite utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de representadores personalizados o los efectos.
 

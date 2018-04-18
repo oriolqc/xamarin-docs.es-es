@@ -6,11 +6,11 @@ ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 33a6dc7294db74c3c8ab451f147c941124db8982
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d9b98611c7d269e590ce6fe2ce0270ef71dacf1e
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="document-picker"></a>Selector de documento
 
@@ -38,6 +38,8 @@ Para implementar las nuevas características del selector de documento, los sigu
 -  Se ha agregado una carpeta de iCloud en el buscador de Mac OS.
 -  dispositivos iOS pueden tener acceso al contenido de la carpeta de iCloud de Mac OS.
 
+> [!IMPORTANT]
+> Apple [proporciona herramientas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ayudar a los desarrolladores controlen correctamente normativa General de protección de datos (GDPR) de la Unión Europea.
 
 ## <a name="what-is-a-document"></a>¿Qué es un documento?
 

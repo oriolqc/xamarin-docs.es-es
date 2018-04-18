@@ -5,11 +5,12 @@ ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: a75d76ad1292955003705a5ddc1d52381addc796
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/09/2018
+ms.openlocfilehash: 8bd4ce464adf316517e2e1f2299006913bc68736
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="limitations"></a>Limitaciones
 
@@ -106,6 +107,18 @@ La falta de System.Reflection. **Emitir** significa que no funcionará ningún c
 
 Pero la API de reflexión completa, incluidos Type.GetType ("someClass"), lista de métodos, lista de propiedades, atributos y valores de filas funcionará correctamente.
 
+### <a name="using-delegates-to-call-native-functions"></a>Usar a delegados para llamar a funciones nativas
+
+Para llamar a una función nativa a través de un delegado de C#, la declaración del delegado se debe decorar con uno de los siguientes atributos:
+
+- [UnmanagedFunctionPointerAttribute](https://developer.xamarin.com/api/type/System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute/) (preferido, ya que es multiplataforma y es compatible con el estándar de .NET 1.1 +)
+- [MonoNativeFunctionWrapperAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoNativeFunctionWrapperAttribute)
+
+No poder proporcionar uno de estos atributos se producirá un error en tiempo de ejecución como:
+
+```
+System.ExecutionEngineException: Attempting to JIT compile method '(wrapper managed-to-native) YourClass/YourDelegate:wrapper_aot_native(object,intptr,intptr)' while running in aot-only mode.
+```
  
  <a name="Reverse_Callbacks" />
 

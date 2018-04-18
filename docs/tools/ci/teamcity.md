@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 643ae8f30dc6447b548448f77883b204d8dc76c2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 34702fafdd0d767362b0ca32ab56e880ed7cb366
+ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-team-city-with-xamarin"></a>Usar equipo ciudad con Xamarin
 
@@ -39,7 +39,7 @@ Hay varios pasos implicados con la configuración de TeamCity:
 
 - **Crear un proyecto de TeamCity** : una vez completados los tres pasos anteriores, debemos crear un proyecto de TeamCity que contendrá todos los metadatos necesarios para recuperar el código fuente, compile los proyectos y enviar las pruebas para Xamarin Test Cloud.
 
-# <a name="requirements"></a>Requisitos
+## <a name="requirements"></a>Requisitos
 
 Experiencia con [Xamarin Test Cloud](https://developer.xamarin.com/guides/testcloud) es necesario.
 
@@ -88,7 +88,6 @@ El script de compilación puede ser tan simple como un archivo de Powershell (en
 - [**FALSIFICAR** ](http://fsharp.github.io/FAKE/) : se trata de un ADSL basado en F # que hace posible utilizar bibliotecas de .NET existentes si es necesario.
 
 El lenguaje de scripting que se usa depende de sus preferencias y requisitos. El [TaskyPro Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) ejemplo contiene un ejemplo del uso de inclinación como una [Generar script](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile).
-
 
 > [!NOTE]
 > Es posible utilizar un sistema de compilación basado en XML como MSBuild o NAnt, pero estos falta la expresividad y el mantenimiento de un DSL que está dedicado a la creación de software.
@@ -166,35 +165,35 @@ Una vez que se instala TeamCity y Visual Studio para Mac puede compilar el proye
 
 1. Inicia sesión en TeamCity a través del explorador web. Navegue hasta el proyecto de raíz:
 
-    ![](teamcity-images/image2.png "Navegue hasta el proyecto raíz") bajo el proyecto raíz, cree un nuevo proyecto secundario:
+    ![Navegue hasta el proyecto raíz](teamcity-images/image2.png "navegue hasta el proyecto raíz") bajo el proyecto raíz, cree un nuevo proyecto secundario:
 
-    ![](teamcity-images/image3.png "Navegue a la raíz de proyecto debajo de la directiva el proyecto raíz, cree un nuevo proyecto secundario")
+    ![Navegue a la raíz de proyecto debajo de la directiva el proyecto raíz, cree un nuevo proyecto secundario](teamcity-images/image3.png "navegar al proyecto debajo de la directiva la raíz de proyecto raíz, cree un nuevo proyecto secundario")
 2. Una vez creado el subproyecto, agregue una nueva configuración de compilación:
 
-    ![](teamcity-images/image5.png "Una vez creado el subproyecto, agregue una nueva configuración de compilación")
+    ![Una vez creado el subproyecto, agregue una nueva configuración de compilación](teamcity-images/image5.png "una vez que se ha creado el subproyecto, agregue una nueva configuración de compilación")
 3. Asociar un proyecto de VC se a la configuración de compilación. Esto se realiza a través de la pantalla de configuración de Control de versión:
 
-    ![](teamcity-images/image6.png "Esto se realiza a través de la pantalla de configuración de Control de versión")
+    ![Esto se realiza a través de la pantalla de configuración de Control de versión](teamcity-images/image6.png "Esto se realiza a través de la pantalla de configuración de Control de versión")
 
     Si no hay ningún proyecto de VC se crea, tiene la opción de crear uno a partir de la página nueva raíz VCS que se muestra a continuación:
 
-    ![](teamcity-images/image7.png "Si no hay ningún proyecto de VC se crea, tiene la opción de crear uno a partir de la página nueva raíz de VCS")
+    ![Si no hay ningún proyecto de VC se crea, tiene la opción de crear uno a partir de la página nueva raíz VCS](teamcity-images/image7.png "si no hay ningún proyecto de VC se crea, tiene la opción de crear uno a partir de la página nueva raíz de VCS")
 
     Una vez que se ha adjuntado la raíz de VCS, TeamCity will desproteger el proyecto e intenta automáticamente detectan pasos de compilación. Si está familiarizado con TeamCity, puede seleccionar uno de los pasos de compilación detectado. Es seguro pasar por alto los pasos de compilación detectado por ahora.
 
 4. A continuación, configure un desencadenador de compilación. Esto se situarán en cola una compilación cuando se cumplen ciertas condiciones, por ejemplo, cuando un usuario confirma el código en el repositorio. Captura de pantalla siguiente muestra cómo agregar un desencadenador de la compilación:
 
-    ![](teamcity-images/image8.png "Esta captura de pantalla muestra cómo agregar un desencadenador de compilación") se puede ver un ejemplo de cómo configurar un desencadenador de compilación en la captura de pantalla siguiente:
+    ![Esta captura de pantalla muestra cómo agregar un desencadenador de compilación](teamcity-images/image8.png "esta captura de pantalla muestra cómo agregar un desencadenador de compilación") se puede ver un ejemplo de cómo configurar un desencadenador de compilación en la captura de pantalla siguiente:
 
-    ![](teamcity-images/image9.png "Un ejemplo de cómo configurar un desencadenador de compilación puede verse en esta captura de pantalla")
+    ![Un ejemplo de cómo configurar un desencadenador de compilación puede verse en esta captura de pantalla](teamcity-images/image9.png "se puede ver un ejemplo de cómo configurar un desencadenador de compilación en esta captura de pantalla")
 
 5. La sección anterior, la parametrización de la secuencia de comandos de compilación, recomienda almacenar algunos valores como variables de entorno. Estas variables se pueden agregar a la configuración de compilación a través de la pantalla de parámetros. Agregue las variables para la clave de API de prueba en la nube, el identificador de dispositivo de iOS y el identificador de dispositivo Android, como se muestra en la captura de pantalla siguiente:
 
-    ![](teamcity-images/image11.png "Agregue las variables para la clave de API de prueba en la nube, el identificador de dispositivo de iOS y el identificador de dispositivo Android")
+    ![Agregue las variables para la clave de API de prueba en la nube, el identificador de dispositivo de iOS y el identificador de dispositivo Android](teamcity-images/image11.png "agregar las variables para la clave de API de prueba en la nube, el identificador de dispositivo de iOS y el identificador de dispositivo Android")
 
 6. El último paso es agregar un paso de compilación que se va a invocar el script de compilación para compilar la aplicación y poner la aplicación en nube de prueba. Captura de pantalla siguiente es un ejemplo de un paso de compilación que utilice un Rakefile para compilar una aplicación:
 
-    ![](teamcity-images/image12.png "Esta captura de pantalla es un ejemplo de un paso de compilación que utilice un Rakefile para compilar una aplicación")
+    ![Esta captura de pantalla es un ejemplo de un paso de compilación que utilice un Rakefile para compilar una aplicación](teamcity-images/image12.png "esta captura de pantalla es un ejemplo de un paso de compilación que utilice un Rakefile para compilar una aplicación")
 
 7. En este punto, la configuración de compilación está completa. Es una buena idea para desencadenar una compilación para confirmar que el proyecto se ha configurado correctamente. Una buena manera de hacerlo consiste en confirmar un cambio pequeño, insignificante en el repositorio. TeamCity debe detectar la confirmación e iniciar una compilación.
 
