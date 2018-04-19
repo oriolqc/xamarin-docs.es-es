@@ -104,7 +104,7 @@ Ahora permite implementar la actividad reconocedor de movimientos. Esta activida
     private float _scaleFactor = 1.0f;
     ```
 
--   Agregue el siguiente constructor a `GestureRecognizerView`. Este constructor se agregará un `ImageView` a nuestra actividad. En este punto el código todavía no se compilará &ndash; es necesario crear la clase `MyScaleListener` que le ayudará a cambiar el tamaño de la `ImageView` cuando el usuario pinches:
+-   Agregue el siguiente constructor a `GestureRecognizerView`. Este constructor se agregará un `ImageView` a nuestra actividad. En este punto el código todavía no se compilará &ndash; es necesario crear la clase `MyScaleListener` que le ayudará a cambiar el tamaño de la `ImageView` cuando el usuario pinche:
 
     ```csharp
     public GestureRecognizerView(Context context): base(context, null, 0)
@@ -129,7 +129,7 @@ Ahora permite implementar la actividad reconocedor de movimientos. Esta activida
     }
     ```
 
--   A continuación deberá actualizar la variable de instancia `_scaleFactor` como el usuario pinches el `ImageView`. Se agregará una clase denominada `MyScaleListener`. Esta clase realizará escuchas para los eventos de escala que se generará Android cuando el usuario pinches el `ImageView`.
+-   A continuación deberá actualizar la variable de instancia `_scaleFactor` como el usuario pinche el `ImageView`. Se agregará una clase denominada `MyScaleListener`. Esta clase realizará escuchas para los eventos de escala que se generará Android cuando el usuario pinche el `ImageView`.
     Agregue la siguiente clase interna para `GestureRecognizerView`. Esta clase es una `ScaleGesture.SimpleOnScaleGestureListener`. Esta clase es una clase para comodidad que los agentes de escucha pueden crear subclases cuando esté interesado en un subconjunto de gestos:
 
     ```csharp

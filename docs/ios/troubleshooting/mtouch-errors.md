@@ -532,7 +532,7 @@ Xamarin.iOS requiere los archivos de encabezado de la versión SDK especificado 
 
 Un posible solución alternativa es habilitar al vinculador administrado. Esto quitará la inclusión de API sin usar, en la mayoría de los casos, la nueva API que se encuentran los archivos de encabezado que faltan (o incompletos). Sin embargo esto no funcionará si el proyecto utiliza API que se introdujo en un SDK más reciente que aquel su Xcode proporciona.
 
-Una solución de último paja sería utilizar una versión anterior de Xamarin.iOS, que es compatible con el SDK de su proyecto requiere.
+Una solución de último recurso sería utilizar una versión anterior de Xamarin.iOS, que es compatible con el SDK de su proyecto requiere.
 
 <!-- MT0092 used by mlaunch -->
 
