@@ -34,25 +34,25 @@ La aplicación de Xamarin Live Player es compatible con los siguientes dispositi
 
 ## <a name="limitations"></a>Limitaciones
 
-Existen algunas limitaciones en lo que se puede ejecutar en Xamarin Live Player, incluidos los siguientes puntos:
+Hay algunas limitaciones en lo que se puede ejecutar en Xamarin Live Player, incluidos los siguientes elementos:
 
 ### <a name="xamarinforms"></a>Xamarin.Forms
 - No se admiten Custom Renderers.
 - No se admiten efectos.
-- No se admiten controles personalizados con propiedades enlazables.
-- No se admiten recursos embebidos (ej. imágenes u otros recursos embebidos en una PCL).
-- Frameworks MVVM de otros fabricantes no son compatibles (ej. Prism, Mvvm Cross, Mvvm Light, etc.).
+- No se admiten los controles personalizados con propiedades enlazables personalizadas.
+- No se admiten los recursos incrustados (p. ej., insertar imágenes u otros recursos en una PCL).
+- No se admiten los marcos MVVM de otros fabricantes (p. ej., Prism, Mvvm Cross, Mvvm Light, etc.).
 - No se admiten Asset Catalogs en iOS.
 
 ### <a name="other-project-types"></a>Otros tipos de proyecto
-- Xamarin Live Player no está destinado a proyectos nativos de Android o iOS (que usan archivos XML en Android o Storyboards para la interfaz de usuario de iOS).
+- Live Player no está destinado a proyectos nativos de Android o iOS (que usan XML de Android o guiones gráficos para la interfaz de usuario).
 
 ### <a name="misc"></a>Otros
-- Compatibilidad limitada para APIs de reflexión (actualmente afecta a algunos paquetes NuGets populares, como SQLite y Json.NET). Otros paquetes NuGets todavía puede ser compatible.
-- Algunas clases system no pueden sobreescribirse (por ejemplo, no puede implementar una subclase).
-- Algunas características de la plataforma que requieren aprovisionamiento no funcionan en la aplicación de Xamarin Live Player (sin embargo se ha configurado para operaciones comunes, como acceso a la Galería fotográfica).
-- Se omiten los destinos personalizados y pasos de compilación. Por ejemplo, no se pueden incorporar herramientas como Fody, Refit, AutoFac y AutoMapper.
-- Proyectos de F# no se admiten en Android y la compatibilidad con iOS es limitada
+- Compatibilidad limitada con la reflexión (actualmente, afecta a algunos NuGets populares, como SQLite y Json.NET). Puede que otros NuGets sigan siendo compatibles. Otros NuGets todavía puede ser compatible.
+- No se pueden reemplazar algunas clases del sistema (por ejemplo, no puede implementar una subclase).
+- Algunas características de la plataforma que requieren aprovisionamiento no funcionan en la aplicación Xamarin Live Player (en cambio, se ha configurado para operaciones comunes, como el acceso a la Galería fotográfica).
+- Se omiten los destinos personalizados y los pasos de compilación. Por ejemplo, no se pueden incorporar herramientas como Fody, Refit, AutoFac y AutoMapper.
+- No se admiten los proyectos de F# en Android y la compatibilidad con iOS es limitada.
 - Escenarios avanzados con clases genéricas personalizadas e interfaces podrían no admitirse.
 
 Notifique los problemas adicionales en [bugzilla](https://aka.ms/live-player-report-issue).

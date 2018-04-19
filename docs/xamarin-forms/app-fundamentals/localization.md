@@ -455,7 +455,7 @@ Una vez que haya implementado el servicio de dependencia y actualiza **Info.plis
 > [!NOTE]
 > Tenga en cuenta que se trata de Apple portugués manera ligeramente diferente que se esperaría.
 > De [sus documentos](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/LocalizingYourApp/LocalizingYourApp.html#//apple_ref/doc/uid/10000171i-CH5-SW2): _"usar pt como el identificador de idioma para portugués tal como se utiliza en Brasil y pt-PT como el identificador de idioma para portugués tal como se utiliza en Portugal"_.
-> Esto significa que cuando se elige portuguesa en una configuración regional no estándar, el idioma de reserva será portugués brasileño en iOS, a menos que se escribe código para cambiar este comportamiento (como el `ToDotnetFallbackLanguage` anteriormente).
+> Esto significa que cuando se elige portuguesa en una configuración regional no estándar, el idioma de reserva será portugués (Brasil) en iOS, a menos que se escribe código para cambiar este comportamiento (como el `ToDotnetFallbackLanguage` anteriormente).
 
 #### <a name="android-application-project"></a>Proyecto de aplicación de Android
 
