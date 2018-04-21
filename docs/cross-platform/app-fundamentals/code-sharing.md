@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 7531a8a21b6895de6113f5edd85d09a5e150877e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ec3cb08b227b268c4c755545e8bc76b9e234d093
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="sharing-code-options"></a>Opciones de código compartido
 
@@ -136,7 +136,7 @@ Es el estándar de .NET [explica con detalle aquí](~/cross-platform/app-fundame
 
 El código de uso compartido de estrategia que elija está determinado por las plataformas de que destino. Elegir un método que se adapte mejor a su proyecto.
 
-PCL o .NET estándar son una buena elección para la creación de bibliotecas de código puede compartirse (especialmente a publicar en NuGet). Los proyectos compartidos funcionan bien para los desarrolladores de aplicaciones que pretende utilizar una gran cantidad de funcionalidad específica de plataformas en sus aplicaciones entre platforma.
+PCL o .NET estándar son una buena elección para la creación de bibliotecas de código puede compartirse (especialmente a publicar en NuGet). Los proyectos compartidos funcionan bien para los desarrolladores de aplicaciones que pretende utilizar una gran cantidad de funcionalidad específica de plataformas en sus aplicaciones multiplataforma.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

@@ -8,11 +8,11 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/27/2018
-ms.openlocfilehash: 0a4bab44cfa260060c990949b45d3f5e6b103d0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: df6a848023febcb7fc65cf6616aeae3b43b39262
+ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Mensajes de error Xamarin.Mac (mmp)
 
@@ -131,7 +131,7 @@ Esto normalmente indica un error en Xamarin.Mac; registre un informe de errores 
 
 #### <a name="mm0091-this-version-of-xamarinmac-requires-the--sdk-shipped-with-xcode--either-upgrade-xcode-to-get-the-required-header-files-or-use-the-dynamic-registrar-or-set-the-managed-linker-behaviour-to-link-platform-or-link-framework-sdks-only-to-try-to-avoid-the-new-apis"></a>MM0091: Esta versión de Xamarin.Mac requiere el * SDK (incluido con Xcode *). Ya sea actualizar Xcode para obtener los archivos de encabezado necesarios o use el registrador dinámico o establecer el comportamiento del vinculador administrado vínculo plataforma o vínculo Framework SDK sólo (para tratar de evitar las nuevas API).
 
-Xamarin.Mac requiere que los archivos de encabezado de la versión SDK especificado en el mensaje de error, para compilar la aplicación con el registrador estático... La manera recomendada para corregir este error consiste en actualizar Xcode para obtener el SDK necesario, esto incluye todos los archivos de encabezado necesarios. Si tiene varias versiones de Xcode instalado, o desea usar un Xcode en una ubicación no predeterminada, asegúrese de establecer la ubicación correcta de Xcode en las preferencias de su IDE.
+Xamarin.Mac requiere los archivos de encabezado de la versión SDK especificado en el mensaje de error, para compilar la aplicación con el registrador estático. La manera recomendada para corregir este error consiste en actualizar Xcode para obtener el SDK necesario, esto incluye todos los archivos de encabezado necesarios. Si tiene varias versiones de Xcode instalado, o desea usar un Xcode en una ubicación no predeterminada, asegúrese de establecer la ubicación correcta de Xcode en las preferencias de su IDE.
 
 Es una solución alternativa, posible habilitar el vinculador administrado. Esto quitará la inclusión de API sin usar, en la mayoría de los casos, la nueva API que se encuentran los archivos de encabezado que faltan (o incompletos). Sin embargo esto no funcionará si el proyecto utiliza API que se introdujo en un SDK más reciente que aquel su Xcode proporciona.
 
@@ -219,7 +219,7 @@ Una solución de último paja sería utilizar una versión anterior de Xamarin.M
 
 #### <a name="mm1604-file-of-type-0-is-not-a-macho-file-1"></a>MM1604: El archivo de tipo {0} no es un archivo MachO ({{1}).
 
-## <a name="mm2xxx-linker"></a>MM2xxx: Linker
+## <a name="mm2xxx-linker"></a>MM2xxx: vinculador
 
 ### <a name="mm20xx-linker-general-errors"></a>MM20xx: Errores de vinculador (general)
 
@@ -435,7 +435,7 @@ Consulte la [mtouch equivalente advertencia](~/ios/troubleshooting/mtouch-errors
 
 ## <a name="mm8xxx-runtime"></a>MM8xxx: en tiempo de ejecución
 
-### <a name="mm800x-misc"></a>MM800x: misc
+### <a name="mm800x-misc"></a>MM800x: varios
 
 <!-- 8000 used by mtouch -->
 <!-- 8001 used by mtouch -->
