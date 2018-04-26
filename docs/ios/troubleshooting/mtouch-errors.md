@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 0187b65e4c10e7cc03715a997a90fbddab9bd532
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71cddc07863002a887cada2bb0db0f8d25fd1a17
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xamarinios-errors"></a>Errores de Xamarin.iOS
 
@@ -1657,7 +1657,7 @@ El ensamblado causando el problema aparece en el mensaje de error. Para corregir
 
 Ensamblados de modo mixto no pueden ser procesados por el vinculador.
 
-Consulte https://msdn.microsoft.com/en-us/library/x0w2664k.aspx para obtener más información sobre los ensamblados de modo mixto.
+Consulte https://msdn.microsoft.com/library/x0w2664k.aspx para obtener más información sobre los ensamblados de modo mixto.
 
 ## <a name="mt3xxx-aot-error-messages"></a>MT3xxx: Mensajes de error AOT
 
@@ -1721,7 +1721,7 @@ Deshabilitar la compatibilidad con Bitcode o habilitar LLVM.
 
 ## <a name="mt4xxx-code-generation-error-messages"></a>MT4xxx: Mensajes de error de generación de código
 
-### <a name="mt40xx-main"></a>MT40xx: Main
+### <a name="mt40xx-main"></a>MT40xx: principal
 
 <!--
  MT4xxx code generation
@@ -2060,7 +2060,7 @@ Compruebe que la `Register` atributo en la clase administrada se ha mencionado e
 
 <a name="MT4161" />
 
-### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161: El registrador encuentra una estructura no admitida '\*': todos los campos de una estructura también deben ser estructuras (campo '\*' con el tipo '{2}' no es una estructura).
+### <a name="mt4161-the-registrar-found-an-unsupported-structure--all-fields-in-a-structure-must-also-be-structures-field--with-type-2-is-not-a-structure"></a>MT4161: El registrador encuentra una estructura no admitida '\*': todos los campos de una estructura también deben ser estructuras (campo '\*'con el tipo'{2}' no es una estructura).
 
 El registrador encontró una estructura con campos no compatibles.
 
@@ -2179,7 +2179,7 @@ Si experimenta esto al desarrollar un proyecto de enlace para una biblioteca nat
 
 Esto normalmente indica un error en Xamarin.iOS; registre un error en [ http://bugzilla.xamarin.com ](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
 
-### <a name="mt52xx-linking"></a>MT52xx: Linking
+### <a name="mt52xx-linking"></a>MT52xx: vinculación
 
 <!--
   MT52xx linking
@@ -2425,7 +2425,7 @@ Se produjo un error al iniciar la aplicación. Revise el registro de compilació
 
 ## <a name="mt6xxx-mtouch-internal-tools-error-messages"></a>MT6xxx: mensajes de error de las herramientas de mtouch interno
 
-### <a name="mt600x-stripper"></a>MT600x: Stripper
+### <a name="mt600x-stripper"></a>MT600x: extractor
 
 <!--
  MT6xxx mtouch internal tools
@@ -2953,7 +2953,7 @@ Esto normalmente indica un error en Xamarin.iOS; registre un error en [ http://b
 
 <a name="MT8014" />
 
-### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: DelegateProxyAttribute no válido para el valor devuelto para el método *.*: The DelegateType ({2}) campo 'Controlador' es null. Registre un error en http://bugzilla.xamarin.com.
+### <a name="mt8014-invalid-delegateproxyattribute-for-the-return-value-for-the-method--the-delegatetypes-2-handler-field-is-null-please-file-a-bug-at-httpbugzillaxamarincom"></a>MT8014: DelegateProxyAttribute no válido para el valor devuelto para el método *.*: The DelegateType ({2}) 'Controlador' campo es null. Registre un error en http://bugzilla.xamarin.com.
 
 El atributo DelegateProxy para el método en cuestión no es válido.
 

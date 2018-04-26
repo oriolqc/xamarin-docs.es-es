@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: f94959062f01a363319494eb510f1a6e42fe36b6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 52f4c51258d1b635adcd697bccb7dd553acc0d5e
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="localization"></a>Localización
 
@@ -110,7 +110,7 @@ Si el usuario de la aplicación es que se va a la entrada de los datos, analizar
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-Consulte la [analizar cadenas numéricas](http://msdn.microsoft.com/en-us/library/xbtzcc4w(v=vs.110).aspx) y [analizar cadenas de fecha y hora](http://msdn.microsoft.com/en-us/library/2h3syy57(v=vs.110).aspx) artículos de MSDN para obtener información adicional.
+Consulte la [analizar cadenas numéricas](http://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) y [analizar cadenas de fecha y hora](http://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) artículos de MSDN para obtener información adicional.
 
 <a name="rtl" />
 
@@ -130,7 +130,7 @@ IOS y Android admiten diseños de derecha a izquierda y la representación de la
 
 Idiomas diferentes definan el criterio de ordenación de los alfabetos de forma diferente, incluso cuando utilicen el mismo juego de caracteres.
 
-Consulte la [detalle de comparación de cadenas](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) en [prácticas recomendadas para el uso de cadenas en .NET Framework](http://msdn.microsoft.com/en-us/library/dd465121(v=vs.110).aspx) para obtener un ejemplo donde idioma (CultureInfo) afecta al criterio de ordenación.
+Consulte la [detalle de comparación de cadenas](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) en [prácticas recomendadas para el uso de cadenas en .NET Framework](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) para obtener un ejemplo donde idioma (CultureInfo) afecta al criterio de ordenación.
 
 Es poco probable que las capacidades integradas de la base de datos en las plataformas móviles admitirán a ordenación específicos del idioma ordenación por lo que es podrán que deba implementar código adicional en la lógica de negocios.
 
@@ -187,7 +187,7 @@ Las sugerencias siguientes le ayudará a generar las cadenas que son más fácil
 
 En ocasiones, los desarrolladores adoptan el enfoque de intentar especificar palabras o frases 'fragmentos' para que puedan volver a utilizarlas a lo largo de la aplicación. Por ejemplo, para el texto "tiene 5 mensajes." pueden especificar las siguientes cadenas de traducción
 
-**Bad**:
+**Incorrecta**:
 
 ```csharp
 "You have"
@@ -198,7 +198,7 @@ En ocasiones, los desarrolladores adoptan el enfoque de intentar especificar pal
 
 y, a continuación, intente crear el corregir frase sobre la marcha en el código mediante la concatenación de cadenas:
 
-**Bad**:
+**Incorrecta**:
 
 ```csharp
 "You have" + " " + numMsgs + " " + "messages"
@@ -212,7 +212,7 @@ y, a continuación, intente crear el corregir frase sobre la marcha en el códig
 
 Algunos lenguajes de programación requieren sintaxis adicional para especificar el orden de los parámetros en una cadena, sin embargo, .NET ya es compatible con el concepto de marcadores de posición numerados, por lo que
 
-**Good**:
+**Buena**:
 
 ```csharp
 "a {0} b {1} cde {3}"
@@ -231,7 +231,7 @@ y los tokens se ordenarán como el traductor previsto. No olvide incluir una exp
 
 Evite las cadenas como `"You have {0} message/s."` usar las cadenas específicas para cada estado para proporcionar una mejor experiencia de usuario:
 
-**Good**:
+**Buena**:
 
 ```csharp
 "You have no messages."
@@ -249,7 +249,7 @@ Idiomas latinas a veces usan palabras diferentes según el sexo del sujeto. Si l
 
 También es el caso más obvio incluso en inglés, donde las cadenas hacen referencia a una persona específica o un usuario de la aplicación. Por ejemplo, algunos sitios muestran como mensajes `"Bob commented on his post"` por lo que necesita cadenas correspondientes al género masculino, mujer y no binarios o desconocido:
 
-**Good**:
+**Buena**:
 
 ```csharp
 "{0} commented on his post"
@@ -312,4 +312,4 @@ Seguir leyendo detalles técnicos para la plataforma que le interesen:
 
 - [Información general de localización de Apple](https://developer.apple.com/internationalization/)
 - [Lista de comprobación de localización de Android](http://developer.android.com/distribute/tools/localization-checklist.html)
-- [Prácticas recomendadas para desarrollar aplicaciones de uso internacional (MSDN)](http://msdn.microsoft.com/en-us/library/w7x1y988%28v=vs.90%29.aspx)
+- [Prácticas recomendadas para desarrollar aplicaciones de uso internacional (MSDN)](http://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)

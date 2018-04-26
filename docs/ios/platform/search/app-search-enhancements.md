@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 036dbc6a33126d4ade1a68e853ca6ddb4b7c83cc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0df51429ea9655b0a72d9f4c1e413fa7e37410ac
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="app-search-enhancements"></a>Mejoras en la búsqueda de la aplicación
 
@@ -107,7 +107,7 @@ Para habilitar esta característica, haga lo siguiente:
 1. Crear una extensión de la aplicación de mensaje.
 2. Agregue el `com.apple.developer.associated-domains` a los derechos de la aplicación e incluyen una lista de dominios web que hospedan las imágenes que está compartiendo la extensión de la aplicación de mensaje. Para cada dominio, especifique el `spotlight-image-search` service.
 3. Agregar un `apple-app-site-association` archivo al sitio Web que hospeda las imágenes. Este archivo incluye un diccionario para el `spotlight-image-search` de servicio e incluye el identificador de la aplicación, que es el prefijo de identificador de equipo o aplicación seguido por el identificador de paquete. El archivo puede contener hasta 500 rutas de acceso y patrones que se indizado por servicios y se incluyen en las búsquedas de imagen populares. Para obtener más información, vea de Apple [crear y cargar el archivo de asociación](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/AppSearch/UniversalLinks.html#//apple_ref/doc/uid/TP40016308-CH12-SW4) documentación.
-4. Permitir la Applebot rastrear los sitios Web. Vea de Apple [Applebot sobre](https://support.apple.com/en-us/HT204683) documentación.
+4. Permitir la Applebot rastrear los sitios Web. Vea de Apple [Applebot sobre](https://support.apple.com/HT204683) documentación.
 
 Consulte nuestro [integración de aplicaciones de mensaje](~/ios/platform/message-app-integration/index.md) documentación para obtener más detalles.
 

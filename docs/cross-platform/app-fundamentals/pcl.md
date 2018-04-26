@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: feef0a4083d2455cc189ddab6ed22762c044d848
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 799ee198f776b963bb8779d71bacc322001e2882
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-portable-class-libraries"></a>Introducción a las bibliotecas de clases portables
 
@@ -55,7 +55,7 @@ Esto incluye perfiles que son combinaciones de:
 -  Windows Phone 8
 -  Aplicaciones para UWP
 
-Puede leer más acerca de las capacidades de los perfiles diferentes en [sitio Web de Microsoft](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx) y ver otro miembro de la Comunidad [resumen del perfil PCL](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) que incluye información del marco de trabajo y otras notas compatibles.
+Puede leer más acerca de las capacidades de los perfiles diferentes en [sitio Web de Microsoft](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) y ver otro miembro de la Comunidad [resumen del perfil PCL](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) que incluye información del marco de trabajo y otras notas compatibles.
 
 
 
@@ -69,7 +69,7 @@ Crear una PCL para compartir el código tiene una serie de ventajas y desventaja
 1. El proyecto PCL puede hacer referencia fácilmente en otros proyectos de una solución o el ensamblado de salida se puede compartir para que otros usuarios hacer referencia en sus soluciones.
 
 
-**Disadvantages**
+**Desventajas**
 
 1. Dado que la misma biblioteca de clases Portable se comparte entre varias aplicaciones, bibliotecas específicas de plataforma no puede hacer referencia (p. ej. Community.CsharpSqlite.WP7).
 1. El subconjunto de la biblioteca de clases Portable no puede incluir las clases que estarían disponibles en MonoTouch y Mono para Android (por ejemplo, DllImport o System.IO.File).
@@ -429,4 +429,4 @@ En este artículo brevemente tiene explica las ventajas e inconvenientes de bibl
 - [Portable Visual Basic](~/cross-platform/platform/visual-basic/index.md)
 - [Proyectos compartidos](~/cross-platform/app-fundamentals/shared-projects.md)
 - [Opciones de código compartido](~/cross-platform/app-fundamentals/code-sharing.md)
-- [El desarrollo multiplataforma con .NET Framework (Microsoft)](http://msdn.microsoft.com/en-us/library/gg597391(v=vs.110).aspx)
+- [El desarrollo multiplataforma con .NET Framework (Microsoft)](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)

@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: a669daf5361e35305182922cdcb7c6a1fb92db47
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdbe480c45e9c0117f1437b1ee632f6ea8f142e0
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>¿Dónde puedo encontrar mi información de versión y los registros?
 
@@ -85,11 +85,11 @@ Para cada ubicación del registro, asegúrese de comprimir y adjuntar la carpeta
 
 `%LOCALAPPDATA%\Xamarin\Logs`
 
-#### <a name="a-idvs-2017-namevs-2017--visual-studio-2017"></a><a id="vs-2017" name="vs-2017" /> Visual Studio 2017
+#### <a name="a-idvs-2017-namevs-2017--visual-studio-2017"></a><a id="vs-2017" name="vs-2017" /> Visual Studio de 2017
 
 [Cómo obtener los registros de instalación de Visual Studio](https://docs.microsoft.com/visualstudio/install/troubleshooting-installation-issues#how-to-get-the-visual-studio-installation-logs)
 
-#### <a name="a-idvs-2015-namevs-2015--visual-studio-2015"></a><a id="vs-2015" name="vs-2015" /> Visual Studio 2015
+#### <a name="a-idvs-2015-namevs-2015--visual-studio-2015"></a><a id="vs-2015" name="vs-2015" /> Visual Studio de 2015
 
 #### <a name="a-idwindows-universal-installer-namewindows-universal-installer--xamarin-universal-installer"></a><a id="windows-universal-installer" name="windows-universal-installer" /> Instalador de "Universal" Xamarin
 
@@ -103,7 +103,7 @@ Se trata de los registros de la `XamarinInstaller.exe` instalador.
 msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 ```
 
-Referencia: [opciones de línea de comandos](http://msdn.microsoft.com/en-us/library/aa367988.aspx)
+Referencia: [opciones de línea de comandos](http://msdn.microsoft.com/library/aa367988.aspx)
 
 #### <a name="a-idvisual-studio-startup-verbose-logs-namevisual-studio-startup-verbose-logs-visual-studio-startup-verbose-logs"></a><a id="visual-studio-startup-verbose-logs" name="visual-studio-startup-verbose-logs" />Inicio Visual Studio, los registros detallados
 
@@ -111,7 +111,7 @@ Referencia: [opciones de línea de comandos](http://msdn.microsoft.com/en-us/lib
 devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 ```
 
-Referencia: [/Log (devenv.exe)](http://msdn.microsoft.com/en-us/library/ms241272.aspx)
+Referencia: [/Log (devenv.exe)](http://msdn.microsoft.com/library/ms241272.aspx)
 
 ### <a name="a-idmac-logs-namemac-logs-mac-logs"></a><a id="mac-logs" name="mac-logs" />Registros de Mac
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 5c6a5233c9cdc043986f106712895439fa008b41
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0706e416861e5636413577d38bf524ce9184bc4d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-file-system"></a>Trabajar con el sistema de archivos
 
@@ -77,7 +77,7 @@ using (TextReader reader = new StreamReader("./TestData/test.xml")) {
 }
 ```
 
-Consulte la documentación de MSDN para la [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml.aspx) espacio de nombres para obtener más información acerca de [serialización](http://msdn.microsoft.com/en-us/library/system.xml.serialization.aspx). También debe revisar la [Xamarin.iOS documentación](~/ios/deploy-test/linker.md) en el vinculador: por lo general, deberá agregar el `[Preserve]` atributo a las clases que se va a serializar.
+Consulte la documentación de MSDN para la [System.Xml](http://msdn.microsoft.com/library/system.xml.aspx) espacio de nombres para obtener más información acerca de [serialización](http://msdn.microsoft.com/library/system.xml.serialization.aspx). También debe revisar la [Xamarin.iOS documentación](~/ios/deploy-test/linker.md) en el vinculador: por lo general, deberá agregar el `[Preserve]` atributo a las clases que se va a serializar.
 
  <a name="Creating_Files_and_Directories" />
 
@@ -102,7 +102,7 @@ var directoryname = Path.Combine (documents, "NewDirectory");
 Directory.CreateDirectory(directoryname);
 ```
 
-Para obtener más información sobre el espacio de nombres System.IO, consulte el [la documentación de MSDN](http://msdn.microsoft.com/en-us/library/system.io.aspx).
+Para obtener más información sobre el espacio de nombres System.IO, consulte el [la documentación de MSDN](http://msdn.microsoft.com/library/system.io.aspx).
 
 
 ### <a name="serializing-json"></a>Serialización de Json
