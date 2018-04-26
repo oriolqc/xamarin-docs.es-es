@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: ee4ee83c07cf01d1324b5f127d4f77ced0df2afe
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: e28823165188d1046142e31490967367d3246422
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Crear un proyecto de UWP MonoGame
 
@@ -31,9 +31,9 @@ Desarrollo de aplicaciones de MonoGame UWP se necesita:
 - Dispositivo de configuración al modo de programador
 - [3.5 MonoGame para Visual Studio](http://www.monogame.net/2016/03/17/monogame-3-5/) o posterior
 
-Para obtener más información, vea este [página sobre la configuración para el desarrollo de Windows 10 UWP](https://msdn.microsoft.com/en-us/windows/uwp/get-started/get-set-up).
+Para obtener más información, vea este [página sobre la configuración para el desarrollo de Windows 10 UWP](https://msdn.microsoft.com/windows/uwp/get-started/get-set-up).
 
-Juegos de Xbox One se pueden desarrollar en hardware de Xbox One comercial. Se requiere software adicional en el equipo de desarrollo y Xbox One. Para obtener información acerca de cómo configurar una Xbox One para desarrollo de juegos, vea esta página en [configurando una Xbox One](https://msdn.microsoft.com/en-us/windows/uwp/xbox-apps/index).
+Juegos de Xbox One se pueden desarrollar en hardware de Xbox One comercial. Se requiere software adicional en el equipo de desarrollo y Xbox One. Para obtener información acerca de cómo configurar una Xbox One para desarrollo de juegos, vea esta página en [configurando una Xbox One](https://msdn.microsoft.com/windows/uwp/xbox-apps/index).
 
 ## <a name="creating-an-empty-template"></a>Crear una plantilla vacía
 

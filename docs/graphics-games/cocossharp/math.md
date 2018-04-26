@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: ae1300936a24ac1381496eaaf78aefb875bd5ed6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 33573d14d77f0582caca7d1e71b839563a3dd110
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="2d-math-with-cocossharp"></a>Operaciones matemáticas 2D con CocosSharp
 
@@ -264,7 +264,7 @@ Este código produce el siguiente comportamiento:
 
 `System.Math.Atan2` puede usarse para convertir un desplazamiento de un ángulo. El nombre de la función `Atan2` proceden el arco tangente de la función trigonométrica. El sufijo "2" diferencia esta función de la norma `Atan` función, que estrictamente coincide con el comportamiento matemático de arco tangente. Arco tangente es una función que devuelve un valor entre -90 y + 90 grados (o su equivalente en radianes). Muchas aplicaciones, incluidos los juegos informáticos, a menudo, requieren un total de 360 grados de valores, por lo que la `Math` clase incluye `Atan2` para satisfacer esta necesidad.
 
-Tenga en cuenta que el código anterior pasa el parámetro Y en primer lugar, a continuación, el parámetro X, al llamar a la `Atan2` método. Se trata con versiones anteriores de la habitual X, Y ordenación de las coordenadas de posición. Para obtener más información [consulte los documentos de Atan2](https://msdn.microsoft.com/en-us/library/system.math.atan2(v=vs.110).aspx).
+Tenga en cuenta que el código anterior pasa el parámetro Y en primer lugar, a continuación, el parámetro X, al llamar a la `Atan2` método. Se trata con versiones anteriores de la habitual X, Y ordenación de las coordenadas de posición. Para obtener más información [consulte los documentos de Atan2](https://msdn.microsoft.com/library/system.math.atan2(v=vs.110).aspx).
 
 También merece la pena indicar que el valor devuelto desde `Atan2` es en radianes, que es otra unidad que se usa para medir ángulos. Esta guía no se tratarán los detalles de radianes, pero tenga en cuenta que todas las funciones trigonométricas en el `System.Math` espacio de nombres use radianes, por lo que los valores deben convertirse en grados antes de que se utilizan en objetos de CocosSharp. Puede encontrar más información en radianes [en la página de Wikipedia Radián](http://en.wikipedia.org/wiki/Radian).
 

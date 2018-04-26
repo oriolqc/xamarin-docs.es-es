@@ -6,17 +6,17 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 48aa53595d7ab0ccd5fb8f3dab57198199d65b8e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b3b15736b5ec750e0b8db078cf428a7f573bc435
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-cross-platform-applications-overview"></a>Building Cross información general sobre aplicaciones de plataforma
 
 Esta guía describe la plataforma Xamarin y cómo diseñar una aplicación multiplataforma para maximizar la reutilización de código y ofrecer una experiencia nativa de alta calidad en todas las principales plataformas móviles: iOS, Android y Windows Phone.
 
-El enfoque usado en este documento es generalmente aplicable a las aplicaciones de productividad y aplicaciones de juegos, pero el foco está en la productividad y la utilidad (aplicaciones de juego no). Consulte la [Introducción a los documentos de MonoGame](https://developer.xamarin.com/guides/cross-platform/game_development/monogame/introduction/) o visite [Visual Studio Tools para Unity](https://docs.microsoft.com/en-us/visualstudio/cross-platform/visual-studio-tools-for-unity) para obtener instrucciones de desarrollo de juegos multiplataforma.
+El enfoque usado en este documento es generalmente aplicable a las aplicaciones de productividad y aplicaciones de juegos, pero el foco está en la productividad y la utilidad (aplicaciones de juego no). Consulte la [Introducción a los documentos de MonoGame](~/graphics-games/monogame/introduction/index.md) o visite [Visual Studio Tools para Unity](https://docs.microsoft.com/visualstudio/cross-platform/visual-studio-tools-for-unity) para obtener instrucciones de desarrollo de juegos multiplataforma.
 
 La frase "escribir-ejecutar una vez, en todas partes" se utiliza a menudo para ensalzaban las virtudes de un solo código base que se ejecuta sin cambios en varias plataformas. Aunque tiene la ventaja de reutilización del código, ese método conduce generalmente a las aplicaciones que tienen un conjunto de características más bajo de denominador común y una interfaz de usuario buscando genérico que no se ajusta bien en cualquiera de las plataformas de destino.
 

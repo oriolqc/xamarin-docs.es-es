@@ -6,11 +6,11 @@ ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: d8853da7d35752ef27bb23fce6d0db54540ed39d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 500b4c63131ab850b4b9d7c6a0aec49b313ec426
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>¿Qué opciones de soporte técnico están disponibles para Xamarin?
 
@@ -32,7 +32,7 @@ El equipo de soporte técnico de Xamarin le ayuda a supervisar cada una de estas
 
 ### <a name="visual-studio-email-support-incidents-for-xamarin-topics"></a>Incidentes de soporte técnico correo Visual Studio para temas de Xamarin
 
-Características del SDK de Xamarin y IDE son aptas para incidentes de soporte técnico como parte de [ventajas de suscriptor de Visual Studio](https://msdn.microsoft.com/subscriptions/bb266240) y [soporte técnico Premier de Microsoft](https://www.microsoft.com/en-us/microsoftservices/support.aspx).  Esto coincide con las directivas para otras plataformas de desarrollo en Visual Studio como UWP y ASP.NET.  Incidentes de Xamarin envían que esta forma se asignará al equipo de soporte de Xamarin.  Consulte la [preguntas más frecuentes de soporte técnico de Microsoft](https://support.microsoft.com/gp/offerprophone) para obtener más información sobre las directivas para estos incidentes.
+Características del SDK de Xamarin y IDE son aptas para incidentes de soporte técnico como parte de [ventajas de suscriptor de Visual Studio](https://msdn.microsoft.com/subscriptions/bb266240) y [soporte técnico Premier de Microsoft](https://www.microsoft.com/microsoftservices/support.aspx).  Esto coincide con las directivas para otras plataformas de desarrollo en Visual Studio como UWP y ASP.NET.  Incidentes de Xamarin envían que esta forma se asignará al equipo de soporte de Xamarin.  Consulte la [preguntas más frecuentes de soporte técnico de Microsoft](https://support.microsoft.com/gp/offerprophone) para obtener más información sobre las directivas para estos incidentes.
 
 Para la nube de la prueba de Xamarin, se pueden enviar incidentes de soporte técnico, vaya a la [página de inicio de sesión de prueba en la nube](https://testcloud.xamarin.com/login) y abrir el **admite** vínculo.
 

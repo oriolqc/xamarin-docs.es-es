@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: 13868864813a2f120857fb6347924197e374638c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ab449a58cc87699b97a1ade7721a08f771c4f55d
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-azure"></a>Microsoft Azure
 
@@ -31,7 +31,7 @@ El nuevo [servicios conectados](connected-services.md) característica de Visual
 Hay una colección de [documentación de aplicaciones móviles de Azure](~/cross-platform/data-cloud/mobile-apps.md) que le guía a través del proceso de implementación de la [Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/).
 Xamarin también ofrece un NuGet de mensajería de Azure se empaqueta para su [iOS](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.iOS/) y [Android](https://www.nuget.org/packages/Xamarin.Azure.NotificationHubs.Android/) para ayudar a implementar las notificaciones de inserción entre plataformas.
 
-Configurar las aplicaciones en el [portal de servicios de aplicación de Azure](https://portal.azure.com/) para tener acceso a aplicaciones móviles, las API Web, almacenamiento y mucho más. Obtenga información acerca de [cómo los servicios de aplicación son diferentes](http://azure.microsoft.com/en-us/updates/whats-new-with-azure-app-service/) y ver en [en estos vídeos de Microsoft](http://azure.microsoft.com/en-us/campaigns/azure-march-announcement/).
+Configurar las aplicaciones en el [portal de servicios de aplicación de Azure](https://portal.azure.com/) para tener acceso a aplicaciones móviles, las API Web, almacenamiento y mucho más. Obtenga información acerca de [cómo los servicios de aplicación son diferentes](http://azure.microsoft.com/updates/whats-new-with-azure-app-service/) y ver en [en estos vídeos de Microsoft](http://azure.microsoft.com/campaigns/azure-march-announcement/).
 
 ## <a name="active-directory-authentication"></a>Autenticación de Active Directory
 
@@ -58,7 +58,7 @@ Además el [ejemplos de documentación](https://github.com/xamarin/mobile-sample
 - [MyShoppe](https://github.com/jamesmontemagno/MyShoppe) -aplicaciones móviles de Azure.
 
 - [Compras](https://github.com/dotnet-architecture/eShopOnContainers) : muestras para la [serie de arquitectura](https://www.microsoft.com/net/learn/architecture) de libros electrónicos.
-- [MyDriving](https://azure.microsoft.com/en-us/campaigns/mydriving/) – Azure + IoT muestra de 2016 de compilación.
+- [MyDriving](https://azure.microsoft.com/campaigns/mydriving/) – Azure + IoT muestra de 2016 de compilación.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

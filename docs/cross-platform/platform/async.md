@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 0ecad6259cb0d472ac39afb0a6be980d4582812c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 638e16a47d30e1d4d61fe9e7d19a0245261e5d7f
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-support-overview"></a>Información general sobre la compatibilidad con Async
 
@@ -23,7 +23,7 @@ Acepta el funcionamiento asincrónico de Xamarin se basa en la base de Mono 3.0 
 
 Este documento presenta la nueva async y await palabras clave, a continuación, recorre algunos ejemplos sencillos implementar métodos asincrónicos en Xamarin.iOS y Xamarin.Android.
 
-Para obtener una explicación más completa de las nuevas características asincrónicas de C# 5 (incluida una gran cantidad de ejemplos y escenarios de uso diferentes), consulte la documentación de MSDN [programación asincrónica con Async y Await](http://msdn.microsoft.com/en-us/library/vstudio/hh191443.aspx).
+Para obtener una explicación más completa de las nuevas características asincrónicas de C# 5 (incluida una gran cantidad de ejemplos y escenarios de uso diferentes), consulte la documentación de MSDN [programación asincrónica con Async y Await](http://msdn.microsoft.com/library/vstudio/hh191443.aspx).
 
 La aplicación de ejemplo realiza una solicitud web asincrónica simple (sin bloquear el subproceso principal), a continuación, actualiza la interfaz de usuario con el html descargado y el número de caracteres.
 
@@ -69,7 +69,7 @@ Usar await no bloquea el subproceso del llamador: en su lugar el control se devu
 
 Cuando se complete la tarea, el método reanuda la ejecución en el mismo punto en el código. Esto incluye devolver al ámbito de un bloque try-catch-finally try (si la hay). await no se puede usar en un bloque catch o finally.
 
-Obtenga más información sobre [await en MSDN](http://msdn.microsoft.com/en-us/library/vstudio/hh156528.aspx).
+Obtenga más información sobre [await en MSDN](http://msdn.microsoft.com/library/vstudio/hh156528.aspx).
 
 ## <a name="exception-handling"></a>Control de excepciones
 
@@ -85,7 +85,7 @@ Los métodos asincrónicos que toman mucho tiempo en completarse deben admitir l
 
 La tarea, a continuación, se cancela y confirma la cancelación.
 
-Para obtener más información sobre la cancelación, consulte [cómo cancelar una tarea asincrónica](http://msdn.microsoft.com/en-us/library/vstudio/jj155761.aspx) en MSDN.
+Para obtener más información sobre la cancelación, consulte [cómo cancelar una tarea asincrónica](http://msdn.microsoft.com/library/vstudio/jj155761.aspx) en MSDN.
 
 ## <a name="example"></a>Ejemplo
 
@@ -202,9 +202,9 @@ Este documento proporciona una visión general de las nuevas palabras clave de l
 - [HttpClient (iOS) (ejemplo)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
 - [MapKitSearch (iOS) (ejemplo)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
 - [Seminario Web: C# asincrónico en iOS y Android (vídeo)](http://xamarin.wistia.com/medias/k27mc627xz)
-- [Programación asincrónica con Async y Await (MSDN)](http://msdn.microsoft.com/en-us/library/vstudio/hh191443.aspx)
-- [Ajuste de la aplicación de Async (MSDN)](http://msdn.microsoft.com/en-us/library/vstudio/jj155761.aspx)
+- [Programación asincrónica con Async y Await (MSDN)](http://msdn.microsoft.com/library/vstudio/hh191443.aspx)
+- [Ajuste de la aplicación de Async (MSDN)](http://msdn.microsoft.com/library/vstudio/jj155761.aspx)
 - [Await, interfaz de usuario y y los interbloqueos. ¡Dios mío! (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2011/01/13/10115163.aspx)
 - [Las tareas de procesamiento a medida que se completa (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2012/08/02/processing-tasks-as-they-complete.aspx)
-- [Modelo asincrónico basado en tareas [TAP]](http://msdn.microsoft.com/en-us/library/hh873175.aspx)
+- [Modelo asincrónico basado en tareas [TAP]](http://msdn.microsoft.com/library/hh873175.aspx)
 - [Asincronía en C# 5 (blog de Eric Lippert): acerca de la introducción de las palabras clave](http://blogs.msdn.com/b/ericlippert/archive/2010/11/11/whither-async.aspx)

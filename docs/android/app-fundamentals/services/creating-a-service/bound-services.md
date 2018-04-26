@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 02/16/2018
-ms.openlocfilehash: 18cfe6acae08efac85223c9c121a12f102f846cc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1cb151cc5c741a020fcbb398441ed4958ec5980b
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Enlaza los servicios en Xamarin.Android
 
@@ -263,7 +263,7 @@ Pueden desaprobar algunos puristas de programación orientada a objetos de la im
 En sentido estricto, no es necesario para el cliente saber la `TimestampService` y exponer esa clase concreta a los clientes puede hacer que la aplicación más complicado y mantenimiento a través de su duración. Un método alternativo consiste en usar una interfaz que expone el `GetFormattedTimestamp()` método y llamadas de proxy para el servicio a través de la `Binder` (o posible la clase de conexión de servicio):  
 
 ```csharp
-public class TimestampBinder : Binder, IGetTimesamp
+public class TimestampBinder : Binder, IGetTimestamp
 {
     TimestampService service;
     public TimestampBinder(TimestampService service)

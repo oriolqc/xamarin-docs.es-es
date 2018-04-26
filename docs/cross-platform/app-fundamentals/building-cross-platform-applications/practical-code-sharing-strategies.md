@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: d5f639cffc8ff2d134731374bd72663fec81c6a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6f6b88bf29e94a221b2ef58b3299348eb08d33fa
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Parte 5: prácticas de uso compartido estrategias de código
 
@@ -200,7 +200,7 @@ El almacenamiento aislado es una API común para guardar y cargar archivos a tra
 
 Es el mecanismo predeterminado para el acceso de archivos en Windows Phone (Silverlight) que se ha implementado en Xamarin.iOS y Xamarin.Android para permitir que el código de acceso a archivos comunes que se va a escribir. El `System.IO.IsolatedStorage` clase puede hacer referencia a través de las tres plataformas en un [proyecto compartido](~/cross-platform/app-fundamentals/shared-projects.md).
 
-Hacer referencia a la [las información general de almacenamiento aislado para Windows Phone](http://msdn.microsoft.com/en-us/library/windowsphone/develop/ff402541(v=vs.105).aspx) para obtener más información.
+Hacer referencia a la [las información general de almacenamiento aislado para Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) para obtener más información.
 
 Las API de almacenamiento aislado no están disponibles en [bibliotecas de clases Portable](~/cross-platform/app-fundamentals/pcl.md). Es una alternativa para PCL el [PCLStorage NuGet](https://pclstorage.codeplex.com/)
 
