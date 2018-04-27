@@ -7,10 +7,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/16/2016
 ms.openlocfilehash: 55bd4bdcfde4c91ad5c9b94bef486207466e135d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adding-a-windows-phone-app"></a>Agregar una aplicación de Windows Phone
 
@@ -36,7 +36,7 @@ Xamarin.Forms.Forms.Init (e); // requires LaunchActivatedEventArgs
 if (e.PreviousExecutionState == ApplicationExecutionState.Terminated) {}
 ```
 
- 5 . Editar **MainPage.xaml** -cambiar el elemento raíz `<Page` a `<forms:WindowsPhonePage` *y* definir la `xmlns:forms` que utiliza:
+ 5. Editar **MainPage.xaml** -cambiar el elemento raíz `<Page` a `<forms:WindowsPhonePage` *y* definir la `xmlns:forms` que utiliza:
 
 ```xaml
 <forms:WindowsPhonePage
@@ -46,13 +46,13 @@ if (e.PreviousExecutionState == ApplicationExecutionState.Terminated) {}
 </forms:WindowsPhonePage>
 ```
 
- 6 . Editar **MainPage.xaml.cs** para quitar el `: PhonePage` especificador de herencia para el nombre de clase.
+ 6. Editar **MainPage.xaml.cs** para quitar el `: PhonePage` especificador de herencia para el nombre de clase.
 
 ```csharp
 public sealed partial class MainPage  // REMOVE ": PhonePage"
 ```
 
- 7 . Todavía en **MainPage.xaml.cs**, agregue el `LoadApplication` llamar a en el `MainPage` constructor (alrededor de la línea 28) para iniciar la aplicación de Xamarin.Forms:
+ 7. Todavía en **MainPage.xaml.cs**, agregue el `LoadApplication` llamar a en el `MainPage` constructor (alrededor de la línea 28) para iniciar la aplicación de Xamarin.Forms:
 
 ```csharp
 // below this existing line
@@ -61,9 +61,9 @@ this.InitializeComponent();
 LoadApplication(new YOUR_NAMESPACE.App());
 ```
 
-8 . Haga doble clic en **Package.appxmanifest** para establecer estas capacidades que suelen ser necesarias:
+8. Haga doble clic en **Package.appxmanifest** para establecer estas capacidades que suelen ser necesarias:
 
   * Internet (cliente y servidor)
 
-9 . Por último, agregue los recursos locales (p. ej. archivos de imagen) de los proyectos existentes de plataforma que son necesarios.
+9. Por último, agregue los recursos locales (p. ej. archivos de imagen) de los proyectos existentes de plataforma que son necesarios.
 
