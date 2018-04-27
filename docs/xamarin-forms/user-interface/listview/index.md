@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: a153791893f99a472c3fcf91a205bf91ed971e13
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ddd779fc7eb1a10e74c68504367083ff0efcdfcd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="listview"></a>ListView
 
@@ -53,7 +53,7 @@ Para más información acerca de cómo personalizar las celdas de un control Lis
 ListView admite una serie de estilos de interacción, incluidos:
 
 - **[Actualización de extracción](interactivity.md#Pull_to_Refresh)**  &ndash; ListView admite la actualización de extracción en cada plataforma.
-- **[Acciones de contexto](interactivity.md#Context_Actions)**  &ndash; ListView admite realizar acciones en los elementos individuales de una lista. Por ejemplo, puede implementar la acción de deslizar rápidamente en iOS, o mantenga el puntero de acciones en Android y Windows Phone.
+- **[Acciones de contexto](interactivity.md#Context_Actions)**  &ndash; ListView admite realizar acciones en los elementos individuales de una lista. Por ejemplo, puede implementar la acción de deslizar rápidamente en iOS, o mantenga el puntero de acciones en Android.
 - **[Selección](interactivity.md#selectiontaps)**  &ndash; puede escuchar las selecciones y deselections para realizar una acción cuando una fila que se derivan.
 
 ![](images/context-default.png "ListView con acciones de contexto")

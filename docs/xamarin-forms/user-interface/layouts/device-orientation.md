@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: 9d1b10925f1455c303950eff342764b1fbc9275d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b06b17ce8f19f7f7cabe35c23de5b61db8f71dbe
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="device-orientation"></a>Orientación del dispositivo
 
@@ -28,9 +28,6 @@ En este artículo le ayudará a crear aplicaciones que aprovechan las ventajas d
 ## <a name="controlling-orientation"></a>Controlar la orientación
 
 Cuando el uso de Xamarin.Forms, es el método admitido para controlar la orientación del dispositivo que se usará la configuración para cada proyecto individual.
-
-> [!NOTE]
-> A partir de Xamarin.Forms 1.5.0 hay un error que impide que personalizado basado en el representador intenta controlar la orientación de un error. Vea [esta discusión](https://forums.xamarin.com/discussion/46653/forcing-landscape-for-a-single-page-in-ios#latest)este análisis en los foros de Xamarin para obtener más información.
 
 ### <a name="ios"></a>iOS
 
@@ -57,7 +54,6 @@ Si prefiere editar los valores mediante una interfaz de editor de valores de cla
 ![Admite dispositivos orientaciones en Visual Studio para Mac](device-orientation-images/orientation-xam-source.png)
 
 -----
-
 
 ### <a name="android"></a>Android
 
@@ -93,27 +89,9 @@ Xamarin.Android admite varias opciones para especificar la orientación:
 
 Tenga en cuenta que las API nativas de Android proporcionan mucho control sobre cómo se administra la orientación, incluidas las opciones que contradicen explícitamente al usuario expresan las preferencias.
 
-### <a name="windows-phone"></a>Windows Phone
+### <a name="universal-windows-platform"></a>Plataforma universal de Windows
 
-En Windows Phone RT, orientaciones admitidas se establecen en los <span class="UIItem">Package.appxmanifest</span> archivo. Abriendo el manifiesto revelará un panel de configuración donde se pueden seleccionar orientaciones admitidas:
-
-![](device-orientation-images/vs-winrt-config.png "Editor de Visual Package.appxmanifest")
-
-En Windows Phone 8 (Silverlight), se establecen las orientaciones compatibles en el código en el <span class="UIItem">MainPage.xaml.cs</span> archivo. En la plantilla de proyecto de forma predeterminada, el valor ya se establece con la siguiente línea de código:
-
-```csharp
-SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
-```
-
-Para especificar opciones de orientación en Windows Phone, sustituirlo por el código para habilitar las orientaciones que desee:
-
-```csharp
-SupportedOrientations = SupportedPageOrientation.PortraitOrLandscape;
-SupportedOrientations = SupportedPageOrientation.Portrait; // portrait only
-SupportedOrientations = SupportedPageOrientation.Landscape; // landscape only
-```
-
-Observe que Windows Phone admite vistas horizontal en ambos (como se muestra en vertical) orientaciones de izquierda a derecha y de derecha a izquierda. No es posible especificar que se usa.
+En la plataforma Universal de Windows (UWP), orientaciones admitidas se establecen en los **Package.appxmanifest** archivo. Abriendo el manifiesto revelará un panel de configuración donde se pueden seleccionar las orientaciones compatibles.
 
 <a name="Reacting_to_Changes_in_Orientation" />
 

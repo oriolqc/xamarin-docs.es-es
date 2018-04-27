@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 7cae53187c9bc35d55f34dca664e28280cdab062
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f179fcfc26dd73bf1655c786078dce1f6a02b3a9
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="localization"></a>Localización
 
@@ -165,7 +165,7 @@ Cuando se desarrolla una aplicación y el archivo RESX base tiene texto agregado
 </data>
 ```
 
-**AppResources.ja.resx (Japanese)**
+**AppResources.ja.resx (japonés)**
 
 ```xml
 <data name="AddButton" xml:space="preserve">
@@ -174,7 +174,7 @@ Cuando se desarrolla una aplicación y el archivo RESX base tiene texto agregado
 </data>
 ```
 
-**AppResources.pt-BR.resx (Brazilian Portuguese)**
+**AppResources.pt-BR.resx (portugués de Brasil)**
 
 ```xml
 <data name="AddButton" xml:space="preserve">
@@ -201,7 +201,7 @@ myEntry.Placeholder = AppResources.NotesPlaceholder;
 myButton.Text = AppResources.AddButton;
 ```
 
-La interfaz de usuario en iOS y Android, la plataformas de Windows se representa como se esperaría, salvo que ahora es posible traducir la aplicación en varios idiomas porque se está cargando el texto desde un recurso en vez de estar codificado de forma rígida. Esta es una captura de pantalla que muestra la interfaz de usuario en cada plataforma antes de conversión:
+La interfaz de usuario en iOS, Android y la plataforma Universal de Windows (UWP) se representa como se esperaría, salvo que ahora es posible traducir la aplicación en varios idiomas porque se está cargando el texto desde un recurso en vez de estar codificado de forma rígida. Esta es una captura de pantalla que muestra la interfaz de usuario en cada plataforma antes de conversión:
 
 ![](localization-images/simple-example-english.png "Interfaces de usuario multiplataforma antes de traducción")
 
@@ -274,7 +274,7 @@ public interface ILocalize
 }
 ```
 
-En segundo lugar, utilice la [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md) en el Xamarin.Forms `App` clase para llamar a la interfaz y establezca nuestra cultura de recursos RESX en el valor correcto. Observe que no es necesario establecer manualmente este valor para Windows Phone y la plataforma Universal de Windows desde el marco de trabajo de recursos automáticamente reconoce el idioma seleccionado en estas plataformas.
+En segundo lugar, utilice la [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md) en el Xamarin.Forms `App` clase para llamar a la interfaz y establezca nuestra cultura de recursos RESX en el valor correcto. Observe que no es necesario establecer manualmente este valor para la plataforma Universal de Windows desde el marco de trabajo de recursos automáticamente reconoce el idioma seleccionado en estas plataformas.
 
 ```csharp
 if (Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Android)
@@ -326,7 +326,7 @@ public class PlatformCulture
 
 ### <a name="platform-specific-code"></a>Código específico de plataforma
 
-El código para detectar qué idioma debe mostrar debe ser específica de la plataforma porque iOS, Android y las plataformas Windows exponen esta información de forma ligeramente diferente. El código para el `ILocalize` servicio de dependencia es proporcionados a continuación para cada plataforma, junto con los requisitos específicos de la plataforma adicionales para garantizar el texto localizado se representa correctamente.
+El código para detectar qué idioma debe mostrar debe ser específica de la plataforma porque iOS, Android y UWP exponen esta información de forma ligeramente diferente. El código para el `ILocalize` servicio de dependencia es proporcionados a continuación para cada plataforma, junto con los requisitos específicos de la plataforma adicionales para garantizar el texto localizado se representa correctamente.
 
 El código específico de la plataforma también debe controlar casos donde el sistema operativo permite al usuario configurar un identificador de configuración regional que no es compatible con. De NET `CultureInfo` clase. En estos casos, se debe escribir código personalizado para detectar configuraciones regionales no compatibles y sustituya la mejor. Configuración regional compatibles con NET.
 
@@ -553,48 +553,9 @@ Cuando este código se haya agregado al proyecto de aplicación de Android, podr
 > [!NOTE]
 >️ **advertencia:** si las cadenas traducidas están trabajando en las compilaciones de versión Android pero no durante la depuración, haga doble clic en el **proyecto Android** y seleccione **Opciones > compilar > Android Generar** y asegúrese de que el **rápida implementación de ensamblado** no esté marcada. Esta opción provoca problemas con la carga de recursos y no debe usarse si va a probar aplicaciones localizadas.
 
-#### <a name="windows-application-projects"></a>Proyectos de aplicación de Windows
+#### <a name="universal-windows-platform"></a>Plataforma universal de Windows
 
-Proyectos de Windows 8.1 y plataforma Universal de Windows (UWP) no requieren el servicio de dependencia: estas plataformas establecen automáticamente referencia cultural del recurso correctamente.
-
-Implementar la extensión de marcado XAML se describe más adelante en este documento puede requerir la `ILocalize` implementación se muestra a continuación para Windows Phone.
-
-##### <a name="windows-phone-80"></a>Windows Phone 8.0
-
-Aunque no se utiliza en el `App` de clases, aquí es la implementación de Windows Phone para el `ILocalize` servicio de dependencia. Agregar esta clase al proyecto de aplicación de Windows Phone; será necesario si implementa la extensión de marcado XAML que se describen más adelante:
-
-```csharp
-[assembly: Dependency(typeof(UsingResxLocalization.WinPhone.Localize))]
-
-namespace UsingResxLocalization.WinPhone
-{
-    public class Localize : UsingResxLocalization.ILocalize
-    {
-        public void SetLocale (CultureInfo ci) { }
-        public System.Globalization.CultureInfo GetCurrentCultureInfo ()
-        {
-            return System.Threading.Thread.CurrentThread.CurrentUICulture;
-        }
-    }
-}
-
-```
-
-Proyectos de Windows Phone 8.0 deben configurarse correctamente para que el texto localizado que se mostrará.
-Se deben seleccionar idiomas admitidos en las opciones de proyecto *y* el **WMAppManifest.xml** archivos.
-Si esta configuración no se actualiza los recursos localizados de RESX no se cargará.
-
-##### <a name="project-options"></a>Opciones de proyecto
-
-Haga doble clic en el proyecto de Windows Phone y seleccione **propiedades**. En el **aplicación** pestaña graduación el **admite referencias culturales** que admite la aplicación:
-
-[![](localization-images/winphone-projectproperties-sml.png "Proyectar las propiedades - referencias culturales admitidas")](localization-images/winphone-projectproperties.png#lightbox "proyectar las propiedades - referencias culturales admitidas")
-
-##### <a name="wmappmanifestxml"></a>WMAppManifest.xml
-
-Expanda el nodo de propiedades en el proyecto de Windows Phone y haga doble clic en el **WMAppManifest.xml** archivo. Haga clic en el **empaquetado** y a todos los idiomas admitidos por la aplicación de graduación.
-
-[![](localization-images/winphone-wmappmanifest-sml.png "Idiomas admitidos de WMAppManifest.xml -")](localization-images/winphone-wmappmanifest.png#lightbox "WMAppManifest.xml - idiomas admitidos")
+Proyectos de la plataforma de Windows (UWP) universal no requieren el servicio de dependencia. En su lugar, esta plataforma establece automáticamente referencia cultural del recurso correctamente.
 
 ##### <a name="assemblyinfocs"></a>AssemblyInfo.cs
 
@@ -683,7 +644,7 @@ Las viñetas siguientes explican los elementos importantes en el código anterio
 * `"UsingResxLocalization.Resx.AppResources"` es el identificador de recurso para nuestros recursos RESX. Está compuesto de nuestro espacio de nombres predeterminado, la carpeta donde se encuentran los archivos de recursos y el nombre de archivo predeterminado RESX.
 * El `ResourceManager` clase se crea mediante `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)` para determinar el ensamblado actual que se cargan recursos y en la caché en el método estático `ResMgr` campo. Se crea como un `Lazy` escriba por lo que su creación se aplaza hasta que se use por primera vez en el `ProvideValue` método.
 * `ci` usa el servicio de dependencia para obtener el idioma del usuario seleccionado desde el sistema operativo nativo.
-* `GetString` es el método que recupera la cadena traducida real de los archivos de recursos. En Windows Phone 8.1 y la plataforma Universal de Windows, `ci` será null porque el `ILocalize` interfaz no está implementada en estas plataformas. Esto equivale a llamar a la `GetString` método con solo el primer parámetro. En su lugar, el marco de trabajo de recursos reconocerá automáticamente la configuración regional y recuperará la cadena traducida desde el archivo RESX adecuado.
+* `GetString` es el método que recupera la cadena traducida real de los archivos de recursos. En la plataforma Universal de Windows, `ci` será null porque el `ILocalize` interfaz no está implementada en estas plataformas. Esto equivale a llamar a la `GetString` método con solo el primer parámetro. En su lugar, el marco de trabajo de recursos reconocerá automáticamente la configuración regional y recuperará la cadena traducida desde el archivo RESX adecuado.
 * Control de errores se ha incluido para facilitar la depuración de recursos que faltan iniciando una excepción (en `DEBUG` sólo en modo).
 
 El fragmento de código XAML siguiente muestra cómo utilizar la extensión de marcado. Hay dos pasos para que funcione:
@@ -809,92 +770,23 @@ La aplicación ahora localiza la imagen y el nombre de la aplicación. Esta es u
 
 ![](localization-images/android-imageicon.png "Texto de la aplicación de ejemplo de Android y la localización de imagen")
 
-### <a name="windows-phone-80-application-project"></a>Proyecto de aplicación de Windows Phone 8.0
+### <a name="universal-windows-platform-application-projects"></a>Proyectos de aplicación de plataforma universal de Windows
 
-Windows Phone no tiene integrada de manera sencilla de seleccionar una imagen localizada específica ni para localizar el nombre de la aplicación.
-
-#### <a name="images"></a>Imágenes
-
-Para evitar esta limitación en el ejemplo proporciona una sugerencia de cómo se podría implementar adaptado a la carga de imágenes mediante un [representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) para el `Image` control.
-
-Se muestra el código de representador personalizado - si el origen es un `FileImageSource` , a continuación, se extrae el nombre de archivo y crea una ruta de acceso a una imagen localizado mediante el `CurrentUICulture`. Algunos idiomas requieren un tratamiento especial para que las reservas funcionan según lo esperado; en el ejemplo, el valor predeterminado es usar solo el código de idioma de dos letras excepto en algunos casos especiales:
-
-```csharp
-using System.IO;
-using Xamarin.Forms;
-using Xamarin.Forms.Platform.WinPhone;
-
-[assembly: ExportRenderer(typeof(Image), typeof(UsingResxLocalization.WinPhone.LocalizedImageRenderer))]
-namespace UsingResxLocalization.WinPhone
-{
-    public class LocalizedImageRenderer : ImageRenderer
-    {
-        protected override void OnElementChanged(ElementChangedEventArgs<Image> e)
-        {
-            base.OnElementChanged(e);
-
-            if (e.NewElement != null)
-            {
-                var s = e.NewElement.Source as FileImageSource;
-                if (s != null)
-                {
-                    var fileName = s.File;
-                    string ci = System.Threading.Thread.CurrentThread.CurrentUICulture.ToString();
-                    // you might need some custom logic here to support particular cultures and fallbacks
-                    if (ci == "pt-BR") {
-                        // use the complete string 'as is'
-                    } else if (ci == "zh-CN") {
-                         // we could have named the image directories differently,
-                         // but this keeps them consisent with RESX file naming
-                        ci = "zh-Hans";
-                    } else if (ci == "zh-TW" || ci == "zh-HK") {
-                        ci = "zh-Hant";
-                    } else {
-                        // for all others, just use the two-character language code
-                        ci = System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName;
-                    }
-                    e.NewElement.Source = Path.Combine("Assets/" + ci + "/" + fileName);
-                }
-            }
-        }
-    }
-}
-```
-
-Este código funciona con las imágenes localizadas en la estructura de directorios que se muestra a continuación. Le recomienda para modificar el código para satisfacer sus necesidades de localización específica (por ejemplo, control de configuraciones regionales más específicas y pasar cuando las imágenes no están disponibles):
-
-![](localization-images/winphone-resources.png "Estructura de directorios de imágenes de localizada de Windows Phone")
-
-Ahora, Windows Phone localiza la imagen. Esta es una captura de pantalla del resultado (en español y chino simplificado):
-
-![](localization-images/winphone-image-sml.png "Texto de aplicación de ejemplo de Windows Phone y la localización de imagen")
-
-#### <a name="app-name"></a>Nombre de la aplicación
-
-Consulte la documentación de Microsoft para [localizar el título de la aplicación de Windows Phone 8.0](http://msdn.microsoft.com/library/windows/apps/ff967550(v=vs.105).aspx).
-
-### <a name="windows-phone-81-and-universal-windows-platform-application-projects"></a>Windows Phone 8.1 y Universal Windows proyectos de aplicación de plataforma
-
-La plataforma Universal de Windows y Windows Phone 8.1 ambas poseen una infraestructura de recurso que simplifica la localización de imágenes y el nombre de la aplicación.
+La plataforma Universal de Windows posee una infraestructura de recurso que simplifica la localización de imágenes y el nombre de la aplicación.
 
 #### <a name="images"></a>Imágenes
 
 Las imágenes se pueden localizar colocándolos en una carpeta específica del recurso, como se muestra en la captura de pantalla siguiente:
 
-![](localization-images/uwp-image-folder-structure.png "Windows Phone 8.1 y estructura de carpetas de localización de imagen UWP")
+![](localization-images/uwp-image-folder-structure.png "Estructura de carpetas de localización de imagen UWP")
 
 En tiempo de ejecución, la infraestructura de recursos de Windows seleccionará la imagen adecuada en función de la configuración regional del usuario.
-
-#### <a name="app-name"></a>Nombre de la aplicación
-
-Consulte la documentación de Microsoft para [aplicaciones de la tienda de Windows 8.1: localizar la información que describe la aplicación a los usuarios](https://msdn.microsoft.com/library/windows/apps/hh454044.aspx) y [cargar las cadenas del manifiesto de aplicación](https://msdn.microsoft.com/library/windows/apps/xaml/hh965323.aspx#loading_strings_from_the_app_manifest.).
 
 ## <a name="summary"></a>Resumen
 
 Aplicaciones de Xamarin.Forms se pueden localizar con RESX (archivos) y las clases de globalización. NET. Además de una pequeña cantidad de código específico de plataforma para detectar el idioma que prefiera el usuario, la mayoría del trabajo de localización está centralizada en el código común.
 
-Por lo general se tratan las imágenes de una manera específica de la plataforma para aprovechar las ventajas de la compatibilidad de la resolución proporcionada en iOS y Android. Windows Phone requiere código personalizado para localizar las imágenes de un modo sencillo de plataforma de entre; código de ejemplo se proporciona para agregar esta funcionalidad.
-
+Por lo general se tratan las imágenes de una manera específica de la plataforma para aprovechar las ventajas de la compatibilidad de la resolución proporcionada en iOS y Android. 
 
 ## <a name="related-links"></a>Vínculos relacionados
 

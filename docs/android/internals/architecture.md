@@ -5,12 +5,12 @@ ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: f4be88a1eabb3fa3cca733690a3f097a03516272
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 9ce1d790f5dea00ac47d5639ae8424793006445a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="architecture"></a>Arquitectura
 
@@ -70,7 +70,7 @@ Se deben tomar precauciones al desechar administrados Callable Wrappers si la in
 Las subclases de contenedor CCW administrado son donde puede residir toda la lógica específica de la aplicación "interesante". Puede tratarse de personalizado [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) subclases (como el [Activity1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13) tipo en la plantilla de proyecto predeterminada). (En concreto, se trata de cualquier *Java.Lang.Object* subclases que realizan *no* contienen un [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/) atributo personalizado o [ RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/) es *false*, que es el valor predeterminado.)
 
 Como administrar contenedores RCW, administra las subclases de contenedor CCW también contienen una referencia global, accesible a través de la [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) propiedad. Igual que con los contenedores CCW administrados, referencias globales se pueden liberar explícitamente mediante una llamada a [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/).
-A diferencia de los contenedores CCW administrados, *mucho cuidado* debe tener cuidado antes de la eliminación de instancias de este tipo, como *Dispose()*realizando una operación de la instancia interrumpirá la asignación entre la instancia de Java (una instancia de un Android Callable Wrapper) y la instancia administrada.
+A diferencia de los contenedores CCW administrados, *mucho cuidado* debe tener cuidado antes de la eliminación de instancias de este tipo, como *Dispose()* realizando una operación de la instancia interrumpirá la asignación entre la instancia de Java (una instancia de un Android Callable Wrapper) y la instancia administrada.
 
 
 ### <a name="java-activation"></a>Activación de Java
@@ -115,11 +115,7 @@ Orden de los eventos:
 
 11. El *LogTextBox (contexto, IAttributeSet, int)* constructor ejecuta *en la misma instancia que se creó en (7)* .
 
-12. ...
-
-
-Si (IntPtr, JniHandleOwnership) no se encuentra el constructor, un [System.MissingMethodException](https://developer.xamarin.com/api/type/System.MissingMethodException/) se iniciará.
-
+12. Si (IntPtr, JniHandleOwnership) constructor no se encuentra, a continuación, un System.MissingMethodException] (https://developer.xamarin.com/api/type/System.MissingMethodException/) se iniciará.
 
 <a name="Premature_Dispose_Calls" />
 

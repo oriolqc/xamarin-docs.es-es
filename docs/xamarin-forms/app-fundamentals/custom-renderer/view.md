@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: e84427ba576528ed76f5885605c423bf6499d20c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a8ab35b3ec13c76e1e00da6e3265e3e337e37b7e
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-a-view"></a>Implementar una vista
 
 _Xamarin.Forms controles de la interfaz de usuario personalizado deben derivar de la clase de vista, que se utiliza para colocar controles en la pantalla y diseños. Este artículo demuestra cómo crear a un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo de vista previa de la cámara del dispositivo._
 
-Cada vista Xamarin.Forms tiene un representador que lo acompañan para cada plataforma que crea una instancia de un control nativo. Cuando un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) se representa por una aplicación de Xamarin.Forms en iOS, el `ViewRenderer` se crea la instancia de clase, que a su vez crea una instancia nativo `UIView` control. En la plataforma Android, el `ViewRenderer` clase crea instancias nativo `View` control. En Windows Phone y la plataforma Universal de Windows (UWP), el `ViewRenderer` clase crea instancias nativo `FrameworkElement` control. Para obtener más información acerca de las clases de control nativo que se asignan a los controles de Xamarin.Forms y representador, consulte [clases del representador Base y los controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Cada vista Xamarin.Forms tiene un representador que lo acompañan para cada plataforma que crea una instancia de un control nativo. Cuando un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) se representa por una aplicación de Xamarin.Forms en iOS, el `ViewRenderer` se crea la instancia de clase, que a su vez crea una instancia nativo `UIView` control. En la plataforma Android, el `ViewRenderer` clase crea instancias nativo `View` control. En la plataforma Universal de Windows (UWP), el `ViewRenderer` clase crea instancias nativo `FrameworkElement` control. Para obtener más información acerca de las clases de control nativo que se asignan a los controles de Xamarin.Forms y representador, consulte [clases del representador Base y los controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 En el diagrama siguiente ilustra la relación entre el [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) y los controles nativos correspondientes que lo implementan:
 
@@ -263,13 +263,13 @@ namespace CustomRenderer.Droid
 
 Siempre que el `Control` propiedad es `null`, el `SetNativeControl` método se llama para crear instancias de un nuevo `CameraPreview` controlar y asignar una referencia a él en el `Control` propiedad. El `CameraPreview` control es un control personalizado específico de la plataforma que usa el `Camera` API para proporcionar el flujo de vista previa de la cámara. El `CameraPreview` control, a continuación, se configura, siempre que el representador personalizado se adjunta a un nuevo elemento de Xamarin.Forms. Esta configuración implica la creación de un nuevo nativo `Camera` de objetos para tener acceso a una cámara de determinado hardware y registrar un controlador de eventos para procesar el `Click` eventos. A su vez este controlador se detendrá e iniciará la vista previa de vídeo al que se derivan. El `Click` evento está cancelado la suscripción a si se asocia el elemento de Xamarin.Forms el representador de cambios.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Crear el representador personalizado en Windows Phone y UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Crear al representador personalizado en UWP
 
-En el ejemplo de código siguiente se muestra al representador personalizado para Windows Phone y UWP:
+En el ejemplo de código siguiente se muestra al representador personalizado para UWP:
 
 ```csharp
 [assembly: ExportRenderer (typeof(CameraPreview), typeof(CameraPreviewRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class CameraPreviewRenderer : ViewRenderer<CameraPreview, Windows.UI.Xaml.Controls.CaptureElement>
     {
@@ -317,7 +317,7 @@ namespace CustomRenderer.WinPhone81
 Siempre que el `Control` propiedad es `null`, un nuevo `CaptureElement` se crea una instancia y el `InitializeAsync` llama el método, que usa el `MediaCapture` API para proporcionar el flujo de vista previa de la cámara. El `SetNativeControl` , a continuación, se llama el método para asignar una referencia a la `CaptureElement` de instancia para el `Control` propiedad. El `CaptureElement` control expone un `Tapped` eventos que controlan el `OnCameraPreviewTapped` método para detener e iniciar la vista previa de vídeo al que se derivan. El `Tapped` evento se ha suscrito al representador personalizado se adjunta a un nuevo elemento de Xamarin.Forms y cancelado la suscripción a solo cuando el elemento el representador se adjunta a los cambios.
 
 > [!NOTE]
-> Es importante detener y eliminar los objetos que proporcionan acceso a la cámara en una aplicación de UWP o Windows Phone. Si no lo hace puede interferir con otras aplicaciones que intentan tener acceso a la cámara del dispositivo. Para obtener más información, vea y [inicio rápido: captura de vídeo mediante la API de MediaCapture](https://msdn.microsoft.com/library/windows/apps/xaml/dn642092.aspx) para las aplicaciones de Windows en tiempo de ejecución, y [mostrar la vista previa de la cámara](https://msdn.microsoft.com/windows/uwp/audio-video-camera/simple-camera-preview-access) para aplicaciones UWP.
+> Es importante detener y eliminar los objetos que proporcionan acceso a la cámara en una aplicación de UWP. Si no lo hace puede interferir con otras aplicaciones que intentan tener acceso a la cámara del dispositivo. Para obtener más información, consulte [mostrar la vista previa de la cámara](/windows/uwp/audio-video-camera/simple-camera-preview-access/).
 
 ## <a name="summary"></a>Resumen
 

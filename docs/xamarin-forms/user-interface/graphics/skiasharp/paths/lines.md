@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: b9a5e7c15fd1105a9ca4661ff38e4eb2c92dd10f
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 24bf7bd7fb2aa51968a96bdbf808030604665c26
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="lines-and-stroke-caps"></a>Líneas y extremos de trazo
 
@@ -235,7 +235,7 @@ El iPhone a la izquierda se muestra cómo el `SKPointMode.Points` hace que el mi
 
 Cuando se usa en su lugar `SKPointMode.Lines`, tal y como se muestra en la pantalla de Android en el centro, el `DrawPoints` método dibuja una línea entre cada par de `SKPoint` valores, utilizando el extremo de línea especificado, en este caso `Round`.
 
-El dispositivo móvil de Windows muestra el resultado de la `SKPointMode.Polygon` valor. Se dibuja una línea entre los puntos sucesivas de la matriz, pero si observa muy atentamente, verá que estas líneas no están conectadas. Cada una de estas líneas independientes comienza y termina con el extremo de línea especificado. Si selecciona el `Round` CAP, las líneas que parece estar conectado, pero realmente no está conectados.
+La captura de pantalla UWP muestra el resultado de la `SKPointMode.Polygon` valor. Se dibuja una línea entre los puntos sucesivas de la matriz, pero si observa muy atentamente, verá que estas líneas no están conectadas. Cada una de estas líneas independientes comienza y termina con el extremo de línea especificado. Si selecciona el `Round` CAP, las líneas que parece estar conectado, pero realmente no está conectados.
 
 Si las líneas se conectado o no es un aspecto fundamental de trabajar con rutas de acceso de gráficos.
 

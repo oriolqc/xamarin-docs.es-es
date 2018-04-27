@@ -1,17 +1,17 @@
 ---
 title: Aplicación de Xamarin Player en vivo
-description: Editar y probar aplicaciones en tiempo real en el dispositivo iOS o Android
+description: Editar y probar aplicaciones en tiempo real en dispositivos iOS o Android
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: 2ddaba4541af52ae119fbf504fdcc66ba357c113
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e3205d83ba207322d4c53c4c6e98d4890ad48a77
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="xamarin-live-player-app"></a>Aplicación de Xamarin Player en vivo
 
@@ -21,15 +21,15 @@ ms.lasthandoff: 04/04/2018
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Xamarin Player en vivo está disponible para Android desde Google Play:
+Xamarin Live Player está disponible para Android mediante Google Play:
 
-[ ![Disponible en Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
+[![Disponible en Google Play](images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
-Para dispositivos Android sin Google Play está disponible a través de Xamarin Player Live [HockeyApp](https://aka.ms/xlp-hockeyapp) distribución. Además, anticipo genera para Android se puede instalar directamente desde Google Play mediante la aceptación de los [programa beta abierta](https://play.google.com/apps/testing/com.xamarin.live)
+ara dispositivos que usan Android sin Google Play, Xamarin Live Player está disponible mediante la distribución [HockeyApp](https://aka.ms/xlp-hockeyapp). Además, las primeras versiones preliminares para Android se pueden instalar directamente desde Google Play mediante la aceptación en los [programas de versión beta abierta](https://play.google.com/apps/testing/com.xamarin.live)
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Le animamos a los usuarios unir el [aplicación Xamarin Player Live _iOS Preview_ ](https://aka.ms/liveplayeralpha) para disfrutar de un acceso rápido a las mejoras más recientes a través de TestFlight.
+Alentamos a los usuarios a unirse a la [aplicación Xamarin Live Player _iOS Preview_ ](https://aka.ms/liveplayeralpha) para disfrutar de acceso rápido a las mejoras más recientes a través de TestFlight.
 
 -----
 
@@ -53,7 +53,7 @@ Si la conexión es correcta, el código debe ejecutarse casi de inmediato en el 
 
 Presione el botón información **(i)** en la parte inferior de la aplicación para revelar el **opciones** menú:
 
-[ ![Captura de pantalla del menú de opciones](player-images/options-sml.png)](player-images/options.png#lightbox)
+[![Captura de pantalla del menú de opciones](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>Registros
 
@@ -61,11 +61,11 @@ Ver los registros para diagnosticar problemas.
 
 ### <a name="settings"></a>Configuración
 
-* Alternar visualización de errores de compilación y en tiempo de ejecución.
-* Información de versión.
-* Envíe sus comentarios.
+- Alternar visualización de errores de compilación y en tiempo de ejecución.
+- Información de versión.
+- Envíe sus comentarios.
 
-[ ![Captura de pantalla de la configuración](player-images/settings-sml.png)](player-images/settings.png#lightbox)
+[![Captura de pantalla de la configuración](player-images/settings-sml.png)](player-images/settings.png#lightbox)
 
 ## <a name="managing-devices"></a>Administración de dispositivos
 
@@ -107,9 +107,8 @@ También puede tener acceso a esta ventana desde la lista de dispositivos:
 
 Si experimenta algún problema, vea [limitaciones y solución de problemas](~/tools/live-player/troubleshooting.md).
 
-
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Limitaciones](~/tools/live-player/limitations.md)
 - [Solución de problemas](~/tools/live-player/troubleshooting.md)
-- [Ejemplos de Xamarin Player en vivo](~/tools/livehttps://developer.xamarin.com/samples.md)
+- [Ejemplos de Xamarin Live Player](samples.md)

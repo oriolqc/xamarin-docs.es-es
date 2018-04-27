@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 6288a773fb7122c16b405b8a5056b23b7a59fb6d
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: d22ebf0e150c064835fa73765a65025f10ef4c2a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-path-fill-types"></a>Los tipos de relleno de ruta de acceso
 
@@ -165,7 +165,7 @@ Normalmente, el tipo de relleno de ruta de acceso debe afectan al solo rellenos 
 
 [![](fill-types-images/fivepointedstar-small.png "Captura de pantalla triple de la página de estrella de Five-Pointed")](fill-types-images/fivepointedstar-large.png#lightbox "Triple captura de pantalla de la página de estrella de Five-Pointed")
 
-Las capturas de pantalla de Android y Windows mobile muestran los efectos de generación y par-impar típicos, pero el orden de los trazos y relleno también afecta a los resultados.
+Las capturas de pantalla de Android y UWP muestran los efectos de generación y par-impar típicos, pero el orden de los trazos y relleno también afecta a los resultados.
 
 El algoritmo de generación es dependiente de la dirección que se dibujan líneas. Normalmente cuando se va a crear una ruta de acceso, puede controlar esa dirección según sus especificaciones que se dibujan líneas desde un punto a otro. Sin embargo, el `SKPath` clase también define métodos como `AddRect` y `AddCircle` que dibujar contornos todos. Para controlar cómo se dibujan estos objetos, los métodos incluyen un parámetro de tipo [ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/), que tiene dos miembros:
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 11287d38ec0e01e068ca385c92e6a6efdc323aeb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4210f672cdc68acc45b1f547dcc2e6933298df93
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tabbed-page"></a>Página con pestañas
 
@@ -39,7 +39,6 @@ El diseño de un [ `TabbedPage` ](https://developer.xamarin.com/api/type/Xamarin
     > [!NOTE]
   > Tenga en cuenta que al utilizar AppCompat en Android, cada ficha también mostrará un icono. Además, el `TabbedPageRenderer` para Android AppCompat tiene un reemplazable `SetTabIcon` método que puede utilizarse para cargar los iconos de pestaña a una personalizada `Drawable`. Esta invalidación permite usar las imágenes SVG como iconos en un `TabbedPage`.
 
-- En Windows Phone, aparece la lista de pestañas en la parte superior de la pantalla y el área de detalles está por debajo. La pestaña nombres se convierten automáticamente en minúsculas y el usuario puede desplazarse a la colección de fichas si hay demasiados como para caber en una pantalla.
 - En los factores de forma de Tablet PC de Windows, las fichas no siempre están visibles y los usuarios necesitan deslice el dedo en profundidad (o menú contextual, si dispone de un mouse conectado) para ver las fichas en un `TabbedPage` (tal y como se muestra a continuación).
 
 ![](tabbed-page-images/windows-tabs.png "Pestañas de TabbedPage en Windows")

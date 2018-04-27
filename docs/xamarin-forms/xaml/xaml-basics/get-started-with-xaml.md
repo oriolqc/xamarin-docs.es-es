@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: f1d347cc37ab065e09cb2627ee2122797280f3c1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f8032966b49f6f023642b0d1338e8c5d740b66e0
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introducción a XAML
 
@@ -192,7 +192,7 @@ En tiempo de ejecución de código en las llamadas de proyecto de plataforma en 
 
 Aunque normalmente no es necesario dedicar mucho tiempo con archivos de código generados, en ocasiones, en tiempo de ejecución se producen excepciones en el código de los archivos generados, por lo que debe estar familiarizado con ellos.
 
-Cuando se compila y ejecuta este programa, el `Label` elemento aparece en el centro de la página como sugiere el XAML. Las tres plataformas de izquierda a derecha son iOS, Android y Windows 10 Mobile:
+Cuando se compila y ejecuta este programa, el `Label` elemento aparece en el centro de la página como sugiere el XAML. Las tres plataformas de izquierda a derecha son iOS y Android, UWP:
 
 [![](get-started-with-xaml-images/xamlsamples.png "Predeterminados de presentación de Xamarin.Forms")](get-started-with-xaml-images/xamlsamples-large.png#lightbox "mostrar Xamarin.Forms predeterminado")
 
@@ -351,11 +351,11 @@ public MainPage()
 }
 ```
 
-Establecer el `Content` propiedad de la página reemplaza la configuración de la `Content` propiedad en el archivo XAML. Al compilar e implementar la nueva versión de este programa, aparece un botón en la pantalla. Presionarlo navega a `HelloXamlPage`. Ésta es la página resultante en el iPhone, Android y Windows 10 Mobile dispositivos:
+Establecer el `Content` propiedad de la página reemplaza la configuración de la `Content` propiedad en el archivo XAML. Al compilar e implementar la nueva versión de este programa, aparece un botón en la pantalla. Presionarlo navega a `HelloXamlPage`. Ésta es la página resultante en el iPhone, Android y UWP:
 
 [![](get-started-with-xaml-images/helloxaml1.png "Girar el texto de la etiqueta")](get-started-with-xaml-images/helloxaml1-large.png#lightbox "girar el texto de etiqueta")
 
-Puede navegar hacia `MainPage` mediante la **< Atrás** botón en iOS, utilizando la flecha izquierda en la parte superior de la página o en la parte inferior del teléfono en Android, o mediante la flecha izquierda en la parte inferior de la página en Windows 10 Mobile.
+Puede navegar hacia `MainPage` mediante la **< Atrás** botón en iOS, utilizando la flecha izquierda en la parte superior de la página o en la parte inferior del teléfono en Android, o mediante la flecha izquierda en la parte superior de la página en Windows 10.
 
 Puede experimentar con el código XAML para las distintas formas representar la `Label`. Si necesita insertar caracteres Unicode en el texto, puede usar la sintaxis XML estándar. Por ejemplo, para poner el saludo en las comillas tipográficas, use:
 

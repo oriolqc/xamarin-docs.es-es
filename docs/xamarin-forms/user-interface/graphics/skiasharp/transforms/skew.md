@@ -7,11 +7,11 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: 39547ebaf301a9b6dca6a90cb5ede831b19862cf
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: c8913dcb5dbe9664f1186b1acf46f09cb8da74ed
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-skew-transform"></a>La transformación sesga
 
@@ -71,7 +71,7 @@ Valores de la `xSkew` argumento desplazar la parte inferior del texto adecuado p
 
 [![](skew-images/skewexperiment-small.png "Captura de pantalla triple de la página de experimento sesgar")](skew-images/skewexperiment-large.png#lightbox "Triple captura de pantalla de la página de experimento sesgar")
 
-Si `xSkew` es el negativo de `ySkew`, el resultado es la rotación, pero también escalar un poco como las ventanas de esta pantalla se indica.
+Si `xSkew` es el negativo de `ySkew`, el resultado es la rotación, pero también escalado algo tal y como indica la presentación UWP.
 
 Las fórmulas de transformación son los siguientes:
 

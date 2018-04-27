@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 76a5c96d0e7bb85f0e6b313e2dbc058b8c2aae6d
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: f1f0bb0ce282479a7b185257880244863bb67a60
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="list-appearance"></a>Apariencia de la lista
 
@@ -35,7 +35,7 @@ Para habilitar la agrupación:
 - Establecer el `ListView`del `ItemsSource` a dicha lista.
 - Establecer `IsGroupingEnabled` en true.
 - Establecer [ `GroupDisplayBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupDisplayBinding/) para enlazar a la propiedad de los grupos que se usa como el título del grupo.
-- [Opcional] Establecer [ `GroupShortNameBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/) para enlazar a la propiedad de los grupos que se usa como el nombre corto para el grupo. El nombre corto se utiliza para las listas de salto (columna rigt lado en iOS, cuadrícula de mosaico en Windows Phone).
+- [Opcional] Establecer [ `GroupShortNameBinding` ](http://developer.xamarin.com/api/property/Xamarin.Forms.ListView.GroupShortNameBinding/) para enlazar a la propiedad de los grupos que se usa como el nombre corto para el grupo. El nombre corto se utiliza para las listas de salto (columna de la derecha en iOS).
 
 Empiece por crear una clase para los grupos:
 
@@ -120,7 +120,7 @@ Tenga en cuenta que tenemos:
 
 Si se ha habilitado la agrupación en la lista, también se puede personalizar el encabezado de grupo.
 
-Similar a cómo el `ListView` tiene un `ItemTemplate` para definir cómo se muestran las filas, `ListView` tiene un `GroupHeaderTemplate`. 
+Similar a cómo el `ListView` tiene un `ItemTemplate` para definir cómo se muestran las filas, `ListView` tiene un `GroupHeaderTemplate`.
 
 A continuación se muestra un ejemplo de personalizar el encabezado de grupo en XAML:
 
@@ -206,7 +206,7 @@ Para crear un encabezado personalizado y un pie de página, definir las vistas d
 <a name="Row_Separators" />
 
 ## <a name="row-separators"></a>Separadores de fila
-Se muestran las líneas de separación entre `ListView` elementos de forma predeterminada en iOS y Android. Windows Phone no es compatible con líneas de separación, por ese plataformas instrucciones UX. Si prefiere ocultar las líneas de separación en iOS y Android, establezca el `SeparatorVisibility` propiedad ListView. Las opciones de `SeparatorVisibility` son:
+Se muestran las líneas de separación entre `ListView` elementos de forma predeterminada en iOS y Android. Si prefiere ocultar las líneas de separación en iOS y Android, establezca el `SeparatorVisibility` propiedad ListView. Las opciones de `SeparatorVisibility` son:
 
 * **Predeterminado** -muestra una línea de separación en iOS y Android.
 * **Ninguno** -oculta el separador en todas las plataformas.

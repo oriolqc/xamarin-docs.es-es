@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2016
-ms.openlocfilehash: d75c5714e53961ff5704c72b5508514f8cd2e898
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bcd277145de13a95a0b19aa4945b02078af52978
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layout-for-tablet-and-desktop-apps"></a>Diseño de aplicaciones de escritorio y de Tablet PC
 
@@ -18,7 +18,7 @@ Xamarin.Forms admite todos los tipos de dispositivo disponibles en las plataform
 
 * iPad,
 * Tabletas Android,
-* Tabletas de Windows y equipos de escritorio (que ejecuta Windows 8.1 o Windows 10).
+* Tabletas de Windows y equipos de escritorio (con Windows 10).
 
 Esta página se describe brevemente:
 
@@ -53,12 +53,7 @@ Revise el [recursos Android](~/android/app-fundamentals/resources-in-android/ind
 
 ### <a name="windows-tablets-and-desktops"></a>Tabletas de Windows y equipos de escritorio
 
-Para admitir las tabletas y equipos de escritorio con Windows, debe usar uno de los dos tipos de proyecto compatibles:
-
-* [Windows 8.1](~/xamarin-forms/platform/windows/installation/tablet.md) -
-  compila aplicaciones específicamente para Windows 8.1 tabletas y equipos de escritorio.
-* [Soporte técnico de Windows UWP](~/xamarin-forms/platform/windows/installation/universal.md) -
-  compila las aplicaciones universales que se ejecutan en Windows 10 teléfonos, tabletas y equipos de escritorio.
+Para admitir las tabletas y equipos de escritorio con Windows, debe usar [soporte técnico de Windows UWP](~/xamarin-forms/platform/windows/installation/index.md), que compila las aplicaciones universales que se ejecutan en Windows 10.
 
 Aplicaciones que se ejecutan en equipos de escritorio y las tabletas de Windows al que pueden ajustarse a las dimensiones arbitrarios además funcionamiento de pantalla completa.
 

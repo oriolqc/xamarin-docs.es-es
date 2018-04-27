@@ -7,11 +7,11 @@ ms.assetid: 8FE0F6DC-16BC-435F-9626-DD1790C0145A
 author: charlespetzold
 ms.author: chape
 ms.date: 05/25/2017
-ms.openlocfilehash: c5142a3abcc6d461bc277faeb02e3aacd9727bca
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 7b7bd83c474c7e0d32a693e06b5f12696ec5efa2
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="three-types-of-bzier-curves"></a>Tres tipos de curvas de Bézier
 
@@ -92,7 +92,7 @@ A continuación se ejecuta en las tres plataformas:
 
 Matemáticamente, la curva es un polinómica cúbica. La curva se corta con una línea recta en tres puntos como máximo. En el punto de inicio, la curva es siempre un punto tangente y, en la misma dirección que, de una línea recta desde el principio hasta el primer punto de control. En el punto final, la curva es siempre un punto tangente y, en la misma dirección que, de una línea recta desde el segundo control hasta el punto final.
 
-La curva de Bézier cúbica siempre está limitada por un cuadrilátero convexo conecta los cuatro puntos. Esto se denomina una *convexa*. Si los puntos de control se encuentran en la línea recta entre los puntos inicial y final, la curva de Bézier se representa como una línea recta. Pero la curva puede también entre sí, como se muestra en la captura de pantalla del dispositivo Windows Mobile.
+La curva de Bézier cúbica siempre está limitada por un cuadrilátero convexo conecta los cuatro puntos. Esto se denomina una *convexa*. Si los puntos de control se encuentran en la línea recta entre los puntos inicial y final, la curva de Bézier se representa como una línea recta. Pero la curva puede también entre sí, como se muestra en la captura de pantalla terceros.
 
 Un perfil de la ruta de acceso puede contener varias curvas de Bézier cúbicas conectadas, pero la conexión entre dos curvas de Bézier cúbicas será smooth sólo si los siguientes tres puntos son colineales (es decir, se encuentran en una línea recta):
 
@@ -208,7 +208,7 @@ Este es el programa que se ejecuta en las tres plataformas con tres ángulos dif
 
 [![](beziers-images/beziercirculararc-small.png "Captura de pantalla triple de la página de arco Circular Bézier")](beziers-images/beziercirculararc-large.png#lightbox "Triple captura de pantalla de la página de arco Circular de Bézier")
 
-Fíjese en la pantalla de Windows Mobile, y verá que la curva de Bézier en particular se desvía de un semicírculo cuando el ángulo es 180 grados, pero se muestra la pantalla de iOS que parece que se ajuste un círculo trimestre correctamente cuando el ángulo es 90 grados.
+Examine con atención la captura de pantalla terceros, y verá que la curva de Bézier en particular se desvía de un semicírculo cuando el ángulo es 180 grados, pero se muestra la pantalla de iOS que parece que se ajuste un círculo trimestre correctamente cuando el ángulo es 90 grados.
 
 Calcular las coordenadas de dos puntos de control es bastante fácil cuando el cuarto de círculo está orientado a similar al siguiente:
 

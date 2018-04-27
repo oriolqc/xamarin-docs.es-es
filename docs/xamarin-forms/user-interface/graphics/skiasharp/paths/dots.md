@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 46ab21aa5156a6deab5952f165917cc299b500ac
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 1e295ac424c311472ff175d4627c5fb12641d31f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dots-and-dashes"></a>Puntos y guiones
 
@@ -164,7 +164,7 @@ Para evitar este problema cuando se usa un extremo del trazo de `Square` o `Roun
 - {30, 10} está {20, 20} para una línea discontinua
 - {10, 10, 30, 10} está {0, 20, 20, 20} por una línea de puntos y guiones
 
-Limitar la muestra de pantalla de Windows que números separados por puntos y guiones línea para un trazo de `Round`. El `Round` cap trazo a menudo proporciona la mejor apariencia de puntos y guiones en líneas gruesas.
+Limitar la muestra de la pantalla UWP que números separados por puntos y guiones línea para un trazo de `Round`. El `Round` cap trazo a menudo proporciona la mejor apariencia de puntos y guiones en líneas gruesas.
 
 Hasta ahora no se ha realizado ninguna mención del segundo parámetro a la `SKPathEffect.CreateDash` método. Este parámetro se denomina `phase` y hace referencia a un desplazamiento dentro del modelo de puntos y guiones para el comienzo de la línea. Por ejemplo, si la matriz de guión es {10, 10} y el `phase` es 10, a continuación, la línea comienza con un espacio en lugar de un punto.
 

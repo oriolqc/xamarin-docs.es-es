@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: 78d14b9764ab0c7cafb9f09fa1c8acea3f45afde
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c913ea56af423631c48fb9ee6d8dcb95028a4144
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Pasar parámetros de efecto como propiedades de tiempo de ejecución de lenguaje común
 
@@ -184,14 +184,14 @@ namespace EffectsDemo.Droid
 
 El `OnAttached` método recupera el `ShadowEffect` instancia y las llamadas del [ `TextView.SetShadowLayer` ](https://developer.xamarin.com/api/member/Android.Widget.TextView.SetShadowLayer/p/System.Single/System.Single/System.Single/Android.Graphics.Color/) método para crear una sombra con los valores de propiedad especificado. Esta funcionalidad se ajusta en un `try` / `catch` bloquear en caso de que el control que está asociado el efecto a no tiene el `Control.Layer` propiedades. No se proporciona ninguna implementación por el `OnDetached` método porque no es necesaria ninguna limpieza.
 
-### <a name="windows-phone--universal-windows-platform-projects"></a>Windows Phone & proyectos de la plataforma Universal de Windows
+### <a name="universal-windows-platform-project"></a>Proyecto de plataforma universal de Windows
 
-El siguiente ejemplo de código muestra la `LabelShadowEffect` implementación para los proyectos de Windows Phone y la plataforma Universal de Windows (UWP):
+El siguiente ejemplo de código muestra la `LabelShadowEffect` implementación para el proyecto de plataforma Universal de Windows (UWP):
 
 ```csharp
 [assembly: ResolutionGroupName ("Xamarin")]
 [assembly: ExportEffect (typeof(LabelShadowEffect), "LabelShadowEffect")]
-namespace EffectsDemo.WinPhone81
+namespace EffectsDemo.UWP
 {
     public class LabelShadowEffect : PlatformEffect
     {
@@ -229,7 +229,7 @@ namespace EffectsDemo.WinPhone81
 }
 ```
 
-El tiempo de ejecución de Windows y la plataforma Universal de Windows no proporcionan un efecto de sombra, lo cual la `LabelShadowEffect` simula la implementación en ambas plataformas uno si agrega un segundo desplazamiento [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) detrás de la principal `Label`. El `OnAttached` método recupera el `ShadowEffect` de la instancia, crea el nuevo `Label`y establece algunas propiedades de diseño en el `Label`. A continuación, crea la sombra estableciendo la [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/), [ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/), y [ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) propiedades que permiten controlar el color y la ubicación de la `Label`. El `shadowLabel` , a continuación, se inserta desplaza detrás de la réplica principal `Label`. Esta funcionalidad se ajusta en un `try` / `catch` bloquear en caso de que el control que está asociado el efecto a no tiene el `Control.Layer` propiedades. No se proporciona ninguna implementación por el `OnDetached` método porque no es necesaria ninguna limpieza.
+La plataforma Universal de Windows no proporcionan un efecto de sombra, lo cual la `LabelShadowEffect` simula la implementación en ambas plataformas uno si agrega un segundo desplazamiento [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) detrás de la réplica principal `Label`. El `OnAttached` método recupera el `ShadowEffect` de la instancia, crea el nuevo `Label`y establece algunas propiedades de diseño en el `Label`. A continuación, crea la sombra estableciendo la [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/), [ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/), y [ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/) propiedades que permiten controlar el color y la ubicación de la `Label`. El `shadowLabel` , a continuación, se inserta desplaza detrás de la réplica principal `Label`. Esta funcionalidad se ajusta en un `try` / `catch` bloquear en caso de que el control que está asociado el efecto a no tiene el `Control.Layer` propiedades. No se proporciona ninguna implementación por el `OnDetached` método porque no es necesaria ninguna limpieza.
 
 ## <a name="summary"></a>Resumen
 
@@ -239,7 +239,7 @@ En este artículo ha demostrado usando las propiedades CLR para pasar parámetro
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Representadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
-- [Effect](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)
+- [Efecto](https://developer.xamarin.com/api/type/Xamarin.Forms.Effect/)
 - [PlatformEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.PlatformEffect%3CTContainer,TControl%3E/)
 - [RoutingEffect](https://developer.xamarin.com/api/type/Xamarin.Forms.RoutingEffect/)
 - [Efecto de sombra (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffect/)

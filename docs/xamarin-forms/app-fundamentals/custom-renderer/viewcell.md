@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 3e5f4f2d4c4025cce21026cc611af650616e69e2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4d1d4323e42df6240fee7be42ae8fac70a2b3f1f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="customizing-a-viewcell"></a>Personalizar un ViewCell
 
 _Un Xamarin.Forms ViewCell es una celda que se pueden agregar a un control ListView o TableView, que contiene una vista definida por el desarrollador. Este artículo demuestra cómo crear a un representador personalizado para un ViewCell que se hospeda dentro de un control Xamarin.Forms ListView. Esto impide que los cálculos de diseño de Xamarin.Forms se llama varias veces durante el desplazamiento de ListView._
 
-Cada celda de Xamarin.Forms tiene un representador que lo acompañan para cada plataforma que crea una instancia de un control nativo. Cuando un [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) se representa mediante una aplicación de Xamarin.Forms, en iOS la `ViewCellRenderer` se crea la instancia de clase, que a su vez crea una instancia nativo `UITableViewCell` control. En la plataforma Android, el `ViewCellRenderer` clase crea instancias nativo `View` control. En Windows Phone y la plataforma Universal de Windows (UWP), el `ViewCellRenderer` nativo crea una instancia de clase `DataTemplate`. Para obtener más información acerca de las clases de control nativo que se asignan a los controles de Xamarin.Forms y representador, consulte [clases del representador Base y los controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Cada celda de Xamarin.Forms tiene un representador que lo acompañan para cada plataforma que crea una instancia de un control nativo. Cuando un [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) se representa mediante una aplicación de Xamarin.Forms, en iOS la `ViewCellRenderer` se crea la instancia de clase, que a su vez crea una instancia nativo `UITableViewCell` control. En la plataforma Android, el `ViewCellRenderer` clase crea instancias nativo `View` control. En la plataforma Universal de Windows (UWP), el `ViewCellRenderer` nativo crea una instancia de clase `DataTemplate`. Para obtener más información acerca de las clases de control nativo que se asignan a los controles de Xamarin.Forms y representador, consulte [clases del representador Base y los controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 En el diagrama siguiente ilustra la relación entre el [ `ViewCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/) y los controles nativos correspondientes que lo implementan:
 
@@ -169,7 +169,7 @@ El `NativeCell` celda personalizada se representa por clases del representador d
 
 ![](viewcell-images/screenshots.png "NativeCell en cada plataforma")
 
-La `ViewCellRenderer` clase expone métodos específicos de la plataforma para representar la celda personalizada. Se trata de la `GetCell` método en la plataforma iOS, el `GetCellCore` método en la plataforma Android y el `GetTemplate` método en la plataforma Windows Phone.
+La `ViewCellRenderer` clase expone métodos específicos de la plataforma para representar la celda personalizada. Se trata de la `GetCell` método en la plataforma iOS, el `GetCellCore` método en la plataforma Android y el `GetTemplate` método en UWP.
 
 Cada clase de representador personalizado se decora con un `ExportRenderer` atributo que se registra el representador con Xamarin.Forms. El atributo toma dos parámetros: el nombre del tipo de la celda de Xamarin.Forms se representa y el nombre del tipo de representador personalizado. El `assembly` prefijo para el atributo especifica que el atributo se aplica a todo el ensamblado.
 
@@ -519,15 +519,15 @@ En el ejemplo de código siguiente se muestra la definición de diseño de la `N
 
 Este diseño especifica que dos `TextView` controles y `ImageView` control se usan para mostrar el contenido de la celda. Los dos `TextView` controles se orientan verticalmente dentro de un `LinearLayout` control, con todos los controles sean independientes dentro de un `RelativeLayout`.
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Crear el representador personalizado en Windows Phone y UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Crear al representador personalizado en UWP
 
-En el ejemplo de código siguiente se muestra al representador personalizado para Windows Phone y UWP:
+En el ejemplo de código siguiente se muestra al representador personalizado para UWP:
 
 ```csharp
-[assembly: ExportRenderer(typeof(NativeCell), typeof(NativeWinPhoneCellRenderer))]
-namespace CustomRenderer.WinPhone81
+[assembly: ExportRenderer(typeof(NativeCell), typeof(NativeUWPCellRenderer))]
+namespace CustomRenderer.UWP
 {
-    public class NativeWinPhoneCellRenderer : ViewCellRenderer
+    public class NativeUWPCellRenderer : ViewCellRenderer
     {
         public override Windows.UI.Xaml.DataTemplate GetTemplate(Cell cell)
         {

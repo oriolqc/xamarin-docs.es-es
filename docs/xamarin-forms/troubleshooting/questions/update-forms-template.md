@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: fce595d7722dcd053f6fc9dcad84dc9a921e55b3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6aea0faa65944f33783940178a1d2ce3ef65df1a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="can-i-update-the-xamarinforms-default-template-to-a-newer-nuget-package"></a>¿Se puede actualizar la plantilla predeterminada de Xamarin.Forms para un paquete de NuGet más reciente?
 
@@ -26,7 +26,6 @@ Esta guía usa la plantilla de Xamarin.Forms PCL como ejemplo, pero también fun
 3.  Cambie todas las apariciones de la versión anterior del paquete de formularios a la nueva versión que le gustaría usar.
     *   `FormsTemplate\FormsTemplate.vstemplate`
     *   `FormsTemplate.Android\FormsTemplate.Android.vstemplate`
-    *   `FormsTemplate.WinPhone\FormsTemplate.WinPhone.vstemplate`
     *   `FormsTemplate.iOS\FormsTemplate.iOS.vstemplate`
 
     Ejemplo: `<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`

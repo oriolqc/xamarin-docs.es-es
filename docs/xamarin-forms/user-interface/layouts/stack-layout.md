@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 638243958fce34871089b10185f150492dbd2b0d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c27f94302037e4e19c9d72131e7137c8a4004d5c
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="stacklayout"></a>StackLayout
 
@@ -215,8 +215,6 @@ Title="StackLayouts">
 El código anterior genera el siguiente diseño:
 
 ![](stack-layout-images/stack.png "StackLayout compleja")
-
-Tenga en cuenta que, debido a una diferencia en cómo se representan los botones por Windows Phone, algunos de los círculos se han reemplazado por boxviews en la captura de pantalla de Windows Phone.
 
 Tenga en cuenta que `StackLayouts`s están anidados, porque en algunos casos diseños de anidamiento puede ser más sencillo que presentar todos los elementos en el mismo diseño. Observe también que, dado que `StackLayout` no es compatible con los elementos superpuestos, la página no haya algunas de las sutiles de características de diseño encontrado en las páginas de los diseños de otros.
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: f17a6ad012aff81674db943b7d65e65ba77dca52
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 627c6773c099c9cf45f871a9bb73a201bf98271a
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>Autenticar a los usuarios con Azure Active Directory B2C
 
@@ -60,7 +60,7 @@ La biblioteca de NuGet de biblioteca de autenticación de Microsoft (MSAL) debe 
 
 ### <a name="portable-class-library"></a>Biblioteca de clases portable
 
-MSAL no es compatible con Windows Phone 8.1 y, por lo que deberá PCLs que consumen MSAL quitar este destino. Esto puede realizarse mediante redestinación PCLs para usar Profile7. Para obtener más información sobre PCL, consulte [Introducción a las bibliotecas de clases portables](~/cross-platform/app-fundamentals/pcl.md).
+PCLs que consumen MSAL deberá sea redirigida para usar Profile7. Para obtener más información sobre PCL, consulte [Introducción a las bibliotecas de clases portables](~/cross-platform/app-fundamentals/pcl.md).
 
 ### <a name="ios"></a>iOS
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d55d8c8d98828097c842cc383037db88097b963d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 035254f87e52801d5ff7419f9ad9d5503f060020
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="carousel-page"></a>Página de vista de carrusel
 
@@ -45,7 +45,7 @@ Pueden usar dos métodos para crear un [ `CarouselPage` ](https://developer.xama
 - [Rellenar](#Populating_a_CarouselPage_with_a_Page_Collection) el `CarouselPage` con una colección de elemento secundario [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instancias.
 - [Asignar](#Populating_a_CarouselPage_with_a_Template) una colección a la [ `ItemsSource` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemsSource/) propiedad y asigne un [ `DataTemplate` ](https://developer.xamarin.com/api/type/Xamarin.Forms.DataTemplate/) a la [ `ItemTemplate` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MultiPage%601.ItemTemplate/) propiedad para devolver [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instancias de objetos de la colección.
 
-Con ambos enfoques, la `CarouselPage` se va a mostrar, a continuación, cada página a su vez, con una interacción deslice el dedo moverse a la página siguiente que se mostrará. Esta experiencia de navegación se sentirán como natural y familiar a los usuarios de Windows Phone.
+Con ambos enfoques, la `CarouselPage` se va a mostrar, a continuación, cada página a su vez, con una interacción deslice el dedo moverse a la página siguiente que se mostrará. 
 
 > [!NOTE]
 > A [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) sólo se pueden rellenar con [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/) instancias, o `ContentPage` derivados.
@@ -246,7 +246,7 @@ Para obtener más información sobre la [ `CarouselPage` ](https://developer.xam
 
 ## <a name="summary"></a>Resumen
 
-Este artículo muestra cómo utilizar un [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) para navegar por una colección de páginas. El `CarouselPage` es una página que los usuarios pueden Deslizar rápidamente de lado a lado para navegar por las páginas de contenido, como una galería y ofrece una experiencia de navegación que se siente natural y familiar a los usuarios de Windows Phone.
+Este artículo muestra cómo utilizar un [ `CarouselPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.CarouselPage/) para navegar por una colección de páginas. El `CarouselPage` es una página que los usuarios pueden Deslizar rápidamente de lado a lado para navegar por las páginas de contenido, de forma muy similar a una galería.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: e555c038d66033d925da42e4c70b89d5caac8ad6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43b021b158bbb815ab8d27c393f54e0775599940
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="introduction-to-custom-renderers"></a>Introducción a los representadores de personalizado
 
@@ -19,7 +19,7 @@ _Representadores personalizados proporcionan un método eficaz para personalizar
 
 Xamarin.Forms [páginas, diseños y controles](~/xamarin-forms/user-interface/controls/index.md) presentar una API común para describir las interfaces de usuario móviles entre plataformas. Cada página, el diseño y el control se representan de manera diferente en cada plataforma, con un `Renderer` clase que a su vez crea un control nativo (que corresponde a la representación de Xamarin.Forms), lo organiza en la pantalla y agrega el comportamiento especificado en el código compartido.
 
-Los desarrolladores pueden implementar sus propias clases `Renderer` personalizadas para personalizar la apariencia o el comportamiento de un control. Los representadores personalizados para un tipo determinado se pueden agregar al proyecto de una aplicación para personalizar el control en su una lugar vez que permite que el comportamiento predeterminado en otras plataformas; o bien, se pueden agregar distintos representadores personalizados a cada proyecto de aplicación para crear una apariencia diferente en Windows Phone, iOS y Android. Sin embargo, a menudo es una respuesta exhaustiva implementar una clase de representador personalizado para llevar a cabo una personalización de control simple. Efectos simplifican este proceso y se suelen usar para cambios de estilo pequeño. Para obtener más información, consulte [Effects](~/xamarin-forms/app-fundamentals/effects/index.md) (Efectos).
+Los desarrolladores pueden implementar sus propias clases `Renderer` personalizadas para personalizar la apariencia o el comportamiento de un control. Los representadores personalizados para un tipo determinado se pueden agregar al proyecto de una aplicación para personalizar el control en su una lugar vez que permite que el comportamiento predeterminado en otras plataformas; o bien, se pueden agregar distintos representadores personalizados a cada proyecto de aplicación para crear una apariencia diferente en la plataforma Universal de Windows (UWP), iOS y Android. Sin embargo, a menudo es una respuesta exhaustiva implementar una clase de representador personalizado para llevar a cabo una personalización de control simple. Efectos simplifican este proceso y se suelen usar para cambios de estilo pequeño. Para obtener más información, consulte [Effects](~/xamarin-forms/app-fundamentals/effects/index.md) (Efectos).
 
 ## <a name="examining-why-custom-renderers-are-necessary"></a>Examinar representadores personalizados por qué son necesarios
 
@@ -51,7 +51,7 @@ El `MyEntry` control es un `Entry` controla dónde el `BackgroundColor` se estab
 El `local` prefijo de espacio de nombres puede ser cualquier cosa. Sin embargo, el `namespace` y `assembly` valores deben coincidir con los detalles del control personalizado. Una vez que se declara el espacio de nombres, el prefijo se utiliza para hacer referencia al control personalizado.
 
 > [!NOTE]
-> Definir la `xmlns` es mucho más sencillo en PCLs que los proyectos compartidos. Una PCL se compila en un ensamblado, por lo que es fácil determinar lo que el `assembly=CustomRenderer` valor debe ser. Cuando se usa proyectos compartidos, todos los recursos compartidos (incluido el código XAML) se compilan en cada uno de los proyectos de referencia, lo que significa que si los iOS, Android y Windows Phone proyectos tienen sus propios *nombres de ensamblado* es imposible para escribir el `xmlns` declaración porque el valor debe ser diferente para cada aplicación. Controles personalizados en XAML para los proyectos compartidos requerirá cada proyecto de aplicación esté configurado con el mismo nombre de ensamblado.
+> Definir la `xmlns` es mucho más sencillo en PCLs que los proyectos compartidos. Una PCL se compila en un ensamblado, por lo que es fácil determinar lo que el `assembly=CustomRenderer` valor debe ser. Cuando se usa proyectos compartidos, todos los recursos compartidos (incluido el código XAML) se compilan en cada uno de los proyectos de referencia, lo que significa que si los iOS, Android y UWP proyectos tienen sus propios *nombres de ensamblado* es imposible escribir el `xmlns` declaración porque el valor debe ser diferente para cada aplicación. Controles personalizados en XAML para los proyectos compartidos requerirá cada proyecto de aplicación esté configurado con el mismo nombre de ensamblado.
 
 El `MyEntry` control personalizado se representa en cada plataforma, con un fondo gris, como se muestra en las capturas de pantalla siguiente:
 

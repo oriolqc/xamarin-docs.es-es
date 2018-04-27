@@ -7,17 +7,17 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 4adff8a95f9981dbecc44bf177dcd98b7984a3a9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ffb013c355db34ef7456404d6f9dcaec75743420
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementar un HybridWebView
 
 _Xamarin.Forms controles de la interfaz de usuario personalizado deben derivar de la clase de vista, que se utiliza para colocar controles en la pantalla y diseños. Este artículo demuestra cómo crear a un representador personalizado para un control personalizado HybridWebView, que muestra cómo mejorar los controles específicos de la plataforma web para permitir que el código de C# que se debe invocar desde JavaScript._
 
-Cada vista Xamarin.Forms tiene un representador que lo acompañan para cada plataforma que crea una instancia de un control nativo. Cuando un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) se representa por una aplicación de Xamarin.Forms en iOS, el `ViewRenderer` se crea la instancia de clase, que a su vez crea una instancia nativo `UIView` control. En la plataforma Android, el `ViewRenderer` crea una instancia de la clase un `View` control. En Windows Phone y la plataforma Universal de Windows (UWP), el `ViewRenderer` clase crea instancias nativo `FrameworkElement` control. Para obtener más información acerca de las clases de control nativo que se asignan a los controles de Xamarin.Forms y representador, consulte [clases del representador Base y los controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Cada vista Xamarin.Forms tiene un representador que lo acompañan para cada plataforma que crea una instancia de un control nativo. Cuando un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) se representa por una aplicación de Xamarin.Forms en iOS, el `ViewRenderer` se crea la instancia de clase, que a su vez crea una instancia nativo `UIView` control. En la plataforma Android, el `ViewRenderer` crea una instancia de la clase un `View` control. En la plataforma Universal de Windows (UWP), el `ViewRenderer` clase crea instancias nativo `FrameworkElement` control. Para obtener más información acerca de las clases de control nativo que se asignan a los controles de Xamarin.Forms y representador, consulte [clases del representador Base y los controles nativos](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
 
 En el diagrama siguiente ilustra la relación entre el [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) y los controles nativos correspondientes que lo implementan:
 
@@ -417,13 +417,13 @@ Tenga en cuenta que la `JSBridge` clase mantiene una `WeakReference` a la `Hybri
 > [!IMPORTANT]
 > En Android Oreos, asegúrese de que el manifiesto de Android establece la **versión de destino Android** a **automática**. En caso contrario, este código se ejecute generará el error mensaje "invokeCSharpAction no está definido".
 
-### <a name="creating-the-custom-renderer-on-windows-phone-and-uwp"></a>Crear el representador personalizado en Windows Phone y UWP
+### <a name="creating-the-custom-renderer-on-uwp"></a>Crear al representador personalizado en UWP
 
-En el ejemplo de código siguiente se muestra al representador personalizado para Windows Phone y UWP:
+En el ejemplo de código siguiente se muestra al representador personalizado para UWP:
 
 ```csharp
 [assembly: ExportRenderer(typeof(HybridWebView), typeof(HybridWebViewRenderer))]
-namespace CustomRenderer.WinPhone81
+namespace CustomRenderer.UWP
 {
     public class HybridWebViewRenderer : ViewRenderer<HybridWebView, Windows.UI.Xaml.Controls.WebView>
     {

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: afaf0c702cdba1ba9c5d2c9d158501c50501f910
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3fc5b24474230fd2b2477f020ac24cd72996d7b1
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="hierarchical-navigation"></a>Navegación jerárquica
 
@@ -47,7 +47,7 @@ El diseño de un [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xam
 
 - En iOS, una barra de navegación está presente en la parte superior de la página que muestra un título y que tenga un *volver* botón que se devuelve a la página anterior.
 - En Android, está presente en la parte superior de la página que muestra un título, un icono, una barra de navegación y un *volver* botón que se devuelve a la página anterior. El icono se define en el `[Activity]` atributo que decora el `MainActivity` clase en el proyecto específico de la plataforma Android.
-- En Windows Phone, está presente en la parte superior de la página que muestra un título de una barra de navegación. Windows Phone no tiene la *Atrás* situado en la barra de navegación porque un en pantalla *volver* botón está presente en la parte inferior de la pantalla.
+- En la plataforma Universal de Windows está presente en la parte superior de la página que muestra un título de una barra de navegación. 
 
 En todas las plataformas, el valor de la [ `Page.Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) propiedad aparecerá como el título de página.
 

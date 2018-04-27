@@ -7,11 +7,11 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: charlespetzold
 ms.author: chape
 ms.date: 05/10/2017
-ms.openlocfilehash: c6fd0f905aceb9dddc4047abc6ad2722adf2d8e9
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: aba193ca38d60db52298fdf239d936310a4ac193
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tres maneras para dibujar un arco
 
@@ -104,7 +104,7 @@ Como puede ver, el ángulo inicial y el ángulo de barrido pueden tener valores 
 
 Este enfoque para generar un archivo es forma algorítmica la más sencilla y es fácil derivar las ecuaciones paramétricas que describen el arco. Conocer el tamaño y la ubicación de la elipse y los ángulos inicial y barrido, los puntos inicial y final del arco se puede calcular usar funciones trigonométricas simple:
 
-x = oval.MidX + (oval.Width / 2) * cos(angle)
+x = oval. MidX + (oval. Ancho / 2) * cos(angle)
 
 y = oval. MidY + (oval. Alto / 2) * sin(angle)
 
@@ -414,8 +414,6 @@ public partial class TangentArcPage : InteractivePage
 Este es el **arco tangente** página que se ejecuta en las tres plataformas:
 
 [![](arcs-images/tangentarc-small.png "Captura de pantalla triple de la página de arco tangente")](arcs-images/tangentarc-large.png#lightbox "Triple captura de pantalla de la página de arco tangente")
-
-En el dispositivo Windows Mobile, los tres puntos son colineales casi y el arco es muy pequeño.
 
 El arco tangente es perfecto para crear esquinas redondeadas, como un rectángulo redondeado. Dado que `SKPath` ya incluye un `AddRoundedRect` método, el **redondea Heptágono** página muestra cómo utilizar `ArcTo` para redondear los vértices de un polígono siete lados. (El código se ha generalizado para cualquier polígono regular.)
 

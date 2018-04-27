@@ -7,12 +7,12 @@ ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: c5937cc86a8a1f8506b14774b0429bee3c8aa594
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 44c3e4b0f05526560ff4b32808ba476110ce5e8f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: inicio rápido
 
@@ -185,11 +185,10 @@ El siguiente paso consiste en agregar código para conectar la interfaz de usuar
 (Resource.Layout.Main)`. En primer lugar, modifique el código de plantilla para que el método `OnCreate` sea similar al siguiente:
 
 ```csharp
-using System;
 using Android.App;
-using Android.Content;
-using Android.Widget;
 using Android.OS;
+using Android.Widget;
+using Core;
 
 namespace Phoneword
 {
@@ -420,13 +419,10 @@ Haga doble clic en el archivo **MainActivity.cs** en **Panel de solución** para
 Para empezar, agregue un controlador de eventos al botón **Traducir**. En la clase `MainActivity`, busque el método `OnCreate`. Agregue el código de botón dentro de `OnCreate`, debajo de las llamadas a `base.OnCreate(bundle)` y `SetContentView (Resource.Layout.Main)`. Quite el código de control del botón de plantilla de manera que el método `OnCreate` tenga el aspecto siguiente:
 
 ```csharp
-using System;
 using Android.App;
-using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using Android.Widget;
+using Core;
 
 namespace Phoneword
 {

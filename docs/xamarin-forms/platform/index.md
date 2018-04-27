@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/20/2017
-ms.openlocfilehash: fd46411f3662652ef26addc76f273d6071401a6f
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: be131bdbfeceabd72494708cdfe9a263da9bbbd8
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="platform-features"></a>Características de la plataforma
 
@@ -63,11 +63,4 @@ Hay una amplia variedad de complementos de código abierto disponible en Github,
 
 ## <a name="windowswindowsindexmd"></a>[Windows](windows/index.md)
 
-Xamarin.Forms es compatible con cuatro tipos diferentes de proyecto de Windows:
-
-* Windows Phone 8 Silverlight (la original Windows plataforma admitida por Xamarin.Forms),
-* Windows Phone 8.1 (WinRT)
-* Windows 8.1 (WinRT) y
-* Plataforma universal de Windows (Windows 10).
-
-Esta sección describen las diferencias entre ellas y cómo agregarlos a una solución de Xamarin.Forms existente.
+Xamarin.Forms dispone de compatibilidad para la plataforma Universal de Windows (UWP) en Windows 10. Este artículo describe cómo agregar un un proyecto de UWP para una solución de Xamarin.Forms existente.

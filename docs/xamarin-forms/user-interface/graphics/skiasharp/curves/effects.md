@@ -7,11 +7,11 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/29/2017
-ms.openlocfilehash: 9bdad3e7d3e16dfe906f96bce2b92cdb9ee6260a
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 76192f48bedebb183c64c83e34c3908cc85d591c
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="path-effects"></a>Efectos de ruta de acceso
 
@@ -854,7 +854,7 @@ En el `PaintSurface` controlador, el `SKPathEffect.Create2DPath` llamadas establ
 
 El escalado de la captura de pantalla original hace algo de distorsión, especialmente en la pantalla de Android.
 
-Observe que estos iconos siempre aparecen todo y nunca se truncarán. Salvo en la pantalla de Windows 10 Mobile, no es incluso evidente que el área que se está rellenando es un rectángulo redondeado. Si desea truncar estos iconos a un área determinada, utilice un trazado de recorte.
+Observe que estos iconos siempre aparecen todo y nunca se truncarán. En las primeras dos capturas de pantalla, no es incluso evidente que el área que se está rellenando es un rectángulo redondeado. Si desea truncar estos iconos a un área determinada, utilice un trazado de recorte.
 
 Pruebe a establecer el `Style` propiedad de la `SKPaint` el objeto a `Stroke`, y verá los iconos individuales que se describen en lugar de rellenado.
 

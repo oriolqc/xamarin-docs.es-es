@@ -7,11 +7,11 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 09a81cd84f145512b9fbbf0db009335eac8a95a9
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: b4a36e15bd5db72ef113748282175c6d31a95966
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="the-scale-transform"></a>La transformación de escala
 
@@ -167,7 +167,7 @@ Se coloca la esquina superior izquierda del rectángulo redondeado `margin` píx
 
 [![](scale-images/centeredscale-small.png "Captura de pantalla triple de la página de escala centrado")](scale-images/centeredscale-large.png#lightbox "Triple captura de pantalla de la página de escala centrado")
 
-El `Slider` elementos de este programa tienen un intervalo de &ndash;10 a 10. Como puede ver, los valores negativos de vertical escalado (por ejemplo, como en el Android pantalla en el centro) hará que los objetos girar alrededor del eje horizontal que pasa a través del centro de ajuste de escala. Los valores negativos de escala (como se muestra en la pantalla de Windows a la derecha) horizontal hacen objetos que se va a girar alrededor del eje vertical que pasa a través del centro de ajuste de escala.
+El `Slider` elementos de este programa tienen un intervalo de &ndash;10 a 10. Como puede ver, los valores negativos de vertical escalado (por ejemplo, como en el Android pantalla en el centro) hará que los objetos girar alrededor del eje horizontal que pasa a través del centro de ajuste de escala. Los valores negativos de escala (como se muestra en la pantalla UWP de la derecha) horizontal hacen objetos que se va a girar alrededor del eje vertical que pasa a través del centro de ajuste de escala.
 
 Esta cuarta versión de la `Scale` método es realmente un acceso directo. Desea ver cómo funciona esto si se reemplaza el `Scale` método en este código con lo siguiente:
 

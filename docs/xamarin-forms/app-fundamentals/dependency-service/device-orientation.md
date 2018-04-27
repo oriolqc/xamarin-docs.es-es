@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: b8392dad578f94380e90da24cbf44120d38f754d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09cd92b436be97f5490ac74890e4b0723bcd5701
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="checking-device-orientation"></a>Comprobación de orientación del dispositivo
 
@@ -20,7 +20,7 @@ En este artículo le ayudará a usar [ `DependencyService` ](https://developer.x
 - **[Creación de la interfaz](#Creating_the_Interface)**  &ndash; entender cómo la interfaz se crea en código compartido.
 - **[Implementación de iOS](#iOS_Implementation)**  &ndash; obtener información sobre cómo implementar la interfaz en código nativo para iOS.
 - **[Implementación de Android](#Android_Implementation)**  &ndash; obtener información sobre cómo implementar la interfaz en código nativo para Android.
-- **[Implementación de Windows](#WindowsImplementation)**  &ndash; obtener información sobre cómo implementar la interfaz en código nativo para Windows Phone y la plataforma Universal de Windows (UWP).
+- **[Implementación de UWP](#WindowsImplementation)**  &ndash; obtener información sobre cómo implementar la interfaz en código nativo para la plataforma Universal de Windows (UWP).
 - **[Implementar en el código compartido](#Implementing_in_Shared_Code)**  &ndash; obtener información sobre cómo usar `DependencyService` para llamar a la implementación nativa desde código compartido.
 
 La aplicación que utiliza `DependencyService` tendrá la estructura siguiente:
@@ -145,9 +145,9 @@ Este atributo registra la clase como una implementación de la `IDeviceOrientait
 
 <a name="WindowsImplementation" />
 
-## <a name="windows-phone-and-universal-windows-platform-implementation"></a>Windows Phone y la implementación de la plataforma Universal de Windows
+## <a name="universal-windows-platform-implementation"></a>Implementación de la plataforma universal de Windows
 
-El código siguiente implementa la `IDeviceOrientation` interfaz en la plataforma Universal de Windows y Windows Phone:
+El código siguiente implementa la `IDeviceOrientation` interfaz en la plataforma Universal de Windows:
 
 ```csharp
 namespace DependencyServiceSample.WindowsPhone

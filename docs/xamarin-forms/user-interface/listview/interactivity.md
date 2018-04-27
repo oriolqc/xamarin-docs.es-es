@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 511a7052b07a853279f91211b3e3b1219f125c59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d16c45b7f7cb7eef67a905b6fbcb9b8675b0b2ba
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="listview-interactivity"></a>Interactividad de ListView
 
@@ -53,12 +53,10 @@ Con selección habilitada:
 
 ![](interactivity-images/selection-default.png "ListView con selección habilitada")
 
-Tenga en cuenta que en Windows Phone, algunas celdas, incluidas `SwitchCell` no se actualiza su estado visual en respuesta a la selección.
-
 <a name="Context_Actions" />
 
 ## <a name="context-actions"></a>Acciones de contexto
-A menudo, los usuarios desearán realizar acciones en un elemento en un `ListView`. Por ejemplo, considere la posibilidad de obtener una lista de mensajes de correo electrónico en la aplicación de correo electrónico. En iOS, puede deslizar rápidamente para eliminar un mensaje y en Windows Phone, puede presionándolos una larga un mensaje y, a continuación, eliminarlo:
+A menudo, los usuarios desearán realizar acciones en un elemento en un `ListView`. Por ejemplo, considere la posibilidad de obtener una lista de mensajes de correo electrónico en la aplicación de correo electrónico. En iOS, puede deslizar rápidamente para eliminar un mensaje::
 
 ![](interactivity-images/context-default.png "ListView con acciones de contexto")
 
@@ -149,8 +147,6 @@ Extrae la extracción de actualización como el usuario:
 ![](interactivity-images/refresh-start.png "Extracción de ListView para actualizar en curso")
 
 Extracción de actualización que el usuario ha publicado la extracción. Esto es lo que ve el usuario mientras se está actualizando la lista: ![ ] (interactivity-images/refresh-in-progress.png "extracción ListView para actualizar completa")
-
-Tenga en cuenta que, a partir de Xamarin.Forms 1.4.3, Deslizar para actualizar no se admite en Windows Phone 8.1. En Windows phone 8, Deslizar para actualizar no es una característica de plataforma nativa, por lo que proporciona una implementación de actualización de extracción Xamarin.Forms. Por último, tenga en cuenta que extracción para la actualización no funcionará en Windows Phone si todos los elementos de la lista que caben en la pantalla (en otras palabras, si el desplazamiento vertical no es necesario).
 
 ListView expone algunos eventos que le permiten responder a eventos de actualización de extracción.
 

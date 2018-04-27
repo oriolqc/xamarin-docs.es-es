@@ -7,11 +7,11 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: e01d3e228a0684865fb09dd7a4cbb0e2f0b49125
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 95f782fd4670782217d8ce4bc055341747a71170
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="pixels-and-device-independent-units"></a>Píxeles y unidades independientes del dispositivo
 
@@ -102,7 +102,7 @@ Este es el programa que se ejecuta en las tres plataformas:
 
 Como puede ver, el `CanvasSize` propiedad de la `SKCanvasView` y `Size` propiedad de la `SKImageInfo` valor son coherentes en el informe de las dimensiones en píxeles. El `Height` y `Width` propiedades de la `SKCanvasView` son propiedades de Xamarin.Forms y el tamaño de la vista en las unidades independientes del dispositivo definidos por la plataforma de informes.
 
-El simulador de iOS 7 de la izquierda tiene 2 píxeles por unidad independiente del dispositivo, el 5 de Nexus Android en el centro de tiene 3 píxeles por unidad y la 925 Lumia Nokia a la derecha tiene 2,25 píxeles por unidad. Que de por qué los más sencillos circle parece anterior se muestra sobre el mismo tamaño en el iPhone y Windows phone, pero es más pequeñas en el teléfono Android.
+El simulador de iOS 7 de la izquierda tiene 2 píxeles por unidad independiente del dispositivo y el 5 de Nexus Android en el centro de tiene 3 píxeles por unidad. Por eso el círculo simple mostrado anteriormente tiene tamaños diferentes en distintas plataformas.
 
 Si prefiere trabajar completamente en unidades independientes del dispositivo, puede hacerlo estableciendo la `IgnorePixelScaling` propiedad de la `SKCanvasView` a `true`. Sin embargo, no podría gustan los resultados. SkiaSharp representa los gráficos en una superficie de dispositivos más pequeño, con un tamaño de píxel igual que el tamaño de la vista en unidades independientes del dispositivo. (Por ejemplo, SkiaSharp utilizaría una superficie de pantalla de 360 x 512 píxeles en el 5 de Nexus.) A continuación, aumentar la escala esa imagen en tamaño, lo que genera imágenes de mapa de bits notable dentadas.
 
