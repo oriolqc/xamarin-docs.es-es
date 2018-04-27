@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 5ca2918a0348254407fcbfff030def6c36af4988
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 71bfccdcab73b651f458dd8d9c5396bffd55004b
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="hello-ios-deep-dive"></a>Hello, iOS: revisión en profundidad
 
@@ -85,7 +85,7 @@ A la derecha se encuentra el *Panel de solución*, que contiene la estructura de
 
 En la guía de [Hello, iOS](~/ios/get-started/hello-ios/hello-ios-quickstart.md), creó una solución denominada **Phoneword** y colocó un proyecto de iOS, **Phoneword_iOS**, en él. Entre los elementos del proyecto se incluyen los siguientes:
 
--  **Referencias**: contiene los ensamblados necesarios para compilar y ejecutar la aplicación. Expanda el directorio para ver referencias a ensamblados .NET, como [System](http://msdn.microsoft.com/en-us/library/system%28v=vs.110%29.aspx), System.Core y [System.Xml](http://msdn.microsoft.com/en-us/library/system.xml%28v=vs.110%29.aspx), así como una referencia al ensamblado Xamarin.iOS de Xamarin.
+-  **Referencias**: contiene los ensamblados necesarios para compilar y ejecutar la aplicación. Expanda el directorio para ver referencias a ensamblados .NET, como [System](http://msdn.microsoft.com/library/system%28v=vs.110%29.aspx), System.Core y [System.Xml](http://msdn.microsoft.com/library/system.xml%28v=vs.110%29.aspx), así como una referencia al ensamblado Xamarin.iOS de Xamarin.
 -  **Paquetes**: en el directorio Paquetes se almacenan los paquetes NuGet listos para su uso.
 -  **Recursos**: la carpeta Recursos almacena otros medios.
 -  **Main.cs**: contiene el punto de entrada principal de la aplicación. Para iniciar la aplicación, se pasa el nombre de la clase principal de la aplicación, `AppDelegate`.

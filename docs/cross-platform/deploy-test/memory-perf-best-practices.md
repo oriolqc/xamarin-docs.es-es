@@ -1,21 +1,21 @@
 ---
 title: Rendimiento multiplataforma
-description: Existen muchas técnicas para aumentar el rendimiento de las aplicaciones compiladas con la plataforma Xamarin. Colectivamente, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas.
+description: Existen muchas técnicas para aumentar el rendimiento de las aplicaciones compiladas con la plataforma Xamarin. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas.
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: d434782e2586b1ed4f42984f2eeb72191b0dc171
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 98b4b4a9e7bc28dd444cfdcb1afdfbe64cb1aee0
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
-_Existen muchas técnicas para aumentar el rendimiento de las aplicaciones compiladas con la plataforma Xamarin. Colectivamente, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas._
+_Existen muchas técnicas para aumentar el rendimiento de las aplicaciones compiladas con la plataforma Xamarin. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas._
 
 El mal rendimiento de una aplicación se manifiesta de muchas formas. Puede hacer que parezca que una aplicación deja de responder, puede ocasionar un desplazamiento lento y puede reducir la duración de la batería. La optimización del rendimiento conlleva mucho más que la mera implementación de código eficaz. También debe tenerse en cuenta la experiencia de rendimiento de la aplicación del usuario. Por ejemplo, asegurarse de que las operaciones se ejecuten sin evitar que el usuario realice otras actividades puede ayudar a mejorar su experiencia.
 
@@ -211,7 +211,7 @@ double Compute(double x)
 
 La inicialización diferida se produce la primera vez que se accede a la propiedad `Lazy<T>.Value`. El tipo encapsulado se crea y se devuelve en el primer acceso y se almacena para cualquier acceso futuro.
 
-Para más información sobre la inicialización diferida, vea [Lazy Initialization (Inicialización diferida)](https://msdn.microsoft.com/en-us/library/dd997286(v=vs.110).aspx).
+Para más información sobre la inicialización diferida, vea [Lazy Initialization (Inicialización diferida)](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx).
 
 <a name="async" />
 
@@ -373,7 +373,7 @@ Los datos recuperados del servicio web deben almacenarse en caché localmente pa
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se han descrito y explicado técnicas para aumentar el rendimiento de las aplicaciones compiladas con la plataforma Xamarin. Colectivamente, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación.
+En este artículo se han descrito y explicado técnicas para aumentar el rendimiento de las aplicaciones compiladas con la plataforma Xamarin. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
