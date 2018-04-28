@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 74f65021c23515e78e630f907a89ffde74de4da4
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 37ecc76d9774b3f375af92f2a00c6c687358f065
+ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="cell-appearance"></a>Aspecto de la celda
 
@@ -70,7 +70,7 @@ TextCells se representan como controles nativos en tiempo de ejecución, por lo 
 <a name="customcells" />
 
 ## <a name="custom-cells"></a>Celdas personalizadas
-Cuando las celdas integradas no proporcionan el diseño necesarias, celdas personalizadas implementan el diseño necesario. Por ejemplo, puede que desee presentar una celda con dos etiquetas que tienen el mismo peso. A `LabelCell` sería suficiente porque la `LabelCell` tiene una etiqueta que sea menor. La mayoría de las personalizaciones de celda agregan datos de solo lectura adicionales (por ejemplo, etiquetas adicionales, imágenes u otra información de presentación).
+Cuando las celdas integradas no proporcionan el diseño necesarias, celdas personalizadas implementan el diseño necesario. Por ejemplo, puede que desee presentar una celda con dos etiquetas que tienen el mismo peso. A `TextCell` sería suficiente porque la `TextCell` tiene una etiqueta que sea menor. La mayoría de las personalizaciones de celda agregan datos de solo lectura adicionales (por ejemplo, etiquetas adicionales, imágenes u otra información de presentación).
 
 Todas las celdas personalizadas deben derivarse de [ `ViewCell` ](http://developer.xamarin.com/api/type/Xamarin.Forms.ViewCell/), la misma clase base que todos los de la celda integrada tipos de uso.
 
