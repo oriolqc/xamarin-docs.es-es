@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 04/23/2018
-ms.openlocfilehash: 11e876207285689b230bb2fada3a4c836443e360
-ms.sourcegitcommit: a69439ad4c9fd0abe759143687d3b23582573d90
+ms.openlocfilehash: bfb53af420b64fb9af994d3fb19293406d3acd7b
+ms.sourcegitcommit: 180a8411d912de40545f9624e2127a66ee89e7b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 04/30/2018
 ---
 # <a name="xamarin-live-reload"></a>Volver a cargar en vivo de Xamarin
 
@@ -31,7 +31,7 @@ Recarga en vivo sólo está disponible en Visual Studio de 2017 actualmente.
 * [Xamarin.Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) o superior.
 
 ## <a name="getting-started"></a>Introducción
-### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Instalar Xamarin en vivo recarga desde el catálogo de soluciones de Visual Studio.
+### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Instalar Xamarin en vivo Recargar desde el catálogo de soluciones de Visual Studio
 
 Recarga de Xamarin en vivo se distribuye a través de Visual Studio Marketplace. Para instalar la extensión, visite la [página de recarga de vida de Xamarin en Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Xamarin.XamarinLiveReload) sitio Web y haga clic en **descargar**.
 
@@ -39,9 +39,9 @@ Abra el .vsix que se descarga y haga clic en **instalar**.
 
 ![Instalador de Visual Studio confirmación de recarga de vida de Xamarin](images/LiveReloadVSIXInstall.png)
 
-> Como alternativa, puede buscar en el **en línea** pestaña en el **extensiones y actualizaciones** diálogo dentro de Visual Studio.
+Como alternativa, puede buscar en el **en línea** pestaña en el **extensiones y actualizaciones** diálogo dentro de Visual Studio.
 
-### <a name="2-configure-your-app-to-use-live-reload"></a>2. Configurar la aplicación para que use Live, volver a cargar.
+### <a name="2-configure-your-app-to-use-live-reload"></a>2. Configurar la aplicación para utilizar Live, volver a cargar
 
 Agregación Live recarga a aplicaciones móviles existentes se puede realizar en tres pasos:
 
@@ -66,7 +66,7 @@ public partial class App : Application
 }
 ```
 
-### <a name="3-start-live-reloading"></a>3. Iniciar volver a cargar en vivo.
+### <a name="3-start-live-reloading"></a>3. Iniciar volver a cargar en vivo
 
 Compile e implemente la aplicación. Una vez que la aplicación está implementado, abra un archivo XAML, realizar algunos cambios y guarde el archivo. Se volvió a implementar los cambios en el destino de implementación.
 
@@ -110,18 +110,13 @@ No. De hecho, incluso puede iniciar todos los objetivos de aplicaciones compatib
 * Solo funciona con las bibliotecas de .NET estándar.
 * No se admiten las hojas de estilos CSS.
 * Estado de la interfaz de usuario no puede mantenerse entre las nuevas implementaciones, a menos que utilice MVVM.
-
-## <a name="live-reload-server"></a>Servidor de recarga en vivo
-
-En escenarios donde una conexión de la aplicación en ejecución en el equipo (tal como se indica mediante el uso de `localhost` o `127.0.0.1` en **Herramientas > Opciones > Xamarin > Live recarga**) no es posible (es decir, los servidores de seguridad, redes diferentes), Puede configurar un servidor remoto en su lugar, lo que el IDE y la aplicación conectar a.
-
-Recarga en vivo utiliza la norma [protocolo MQTT](http://mqtt.org/) para intercambiar mensajes y, por tanto, puede comunicarse con [servidores de terceros](https://github.com/mqtt/mqtt.github.io/wiki/servers). Hay incluso [servidores públicos](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (también conocido como *corredores de bolsa*) disponibles que se pueden utilizar. Recarga en vivo se ha probado con `broker.hivemq.com` y `iot.eclipse.org` nombres de host, así como los servicios proporcionados por [www.cloudmqtt.com](https://www.cloudmqtt.com) y [www.cloudamqp.com](https://www.cloudamqp.com). También puede implementar su propio servidor MQTT en la nube, como [HiveMQ en Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud) o [conejo MQ en AWS](http://www.rabbitmq.com/ec2.html). 
-
-Puede configurar cualquier puerto, pero es habitual usar el puerto de 1883 predeterminado para los servidores remotos. Mensajes de volver a cargar activos usan-to-end AES simétrico cifrado seguro, por lo que es seguro conectarse a servidores remotos. De forma predeterminada, la clave de cifrado y el vector de inicialización (IV) se vuelven a generar en cada sesión de Visual Studio.
+* Volver a cargar recursos de toda la aplicación (es decir, **App.xaml** o comparte los diccionarios de recursos), se restablece la navegación de la aplicación.
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
-Cuando se compila la aplicación, la información de **Herramientas > Opciones > Xamarin > Live, volver a cargar** (nombre, puerto y cifrado de claves de host) se incrustan en la aplicación, así que, cuando `LiveReload.Init();` se ejecuta, ningún emparejamiento o la configuración es es necesario para la conexión se realice correctamente.
+### <a name="app-doesnt-connect"></a>No se conecta aplicación
+
+Cuando se compila la aplicación, la información de **Herramientas > Opciones > Xamarin > Live, volver a cargar** (nombre, puerto y cifrado de claves de host) se incrustan en la aplicación, así que, cuando `LiveReload.Init()` se ejecuta, ningún emparejamiento o la configuración es es necesario para la conexión se realice correctamente.
 
 Aparte de problemas de red normales (firewall, dispositivos en una red diferente), la razón principal por que la aplicación no puede conectarse correctamente IDE es porque su configuración es diferente de Visual Studio. Esto puede ocurrir si:
 
@@ -131,6 +126,13 @@ Aparte de problemas de red normales (firewall, dispositivos en una red diferente
 
 Estos casos se resuelven al generar e implementar la aplicación de nuevo.
 
+### <a name="uninstalling-preview-1"></a>Desinstalar Preview 1
+
+Si tiene una versión preliminar anterior y tiene problemas para desinstalarlo, siga estos pasos:
+
+1. Elimine la carpeta **C:\Program Files (x86) \Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\Extensions\Xamarin\LiveReload** (Nota: reemplace "Enterprise" con la edición instalada y "Vista previa" con "2017" if instala un estable frente a)
+2. Abra un **símbolo** para que Visual Studio y ejecute `devenv /updateconfiguration`. 
+
 ## <a name="tips--tricks"></a>Sugerencias y trucos
 
 * Siempre y cuando no cambie la configuración de Live recarga (incluidas las claves de cifrado, por ejemplo, si desactiva **generar automáticamente las claves de cifrado**) y realiza la compilación desde el mismo equipo, no es necesario compilar e implementar la aplicación después de la inicial implementar, a menos que cambie el código o dependencias. Se puede simplemente inicie de nuevo una aplicación implementada anteriormente y se conectará a la última host que se utiliza.
@@ -138,3 +140,21 @@ Estos casos se resuelven al generar e implementar la aplicación de nuevo.
 * No hay ninguna limitación en cuántos dispositivos pueden conectar a la misma sesión de Visual Studio. Puede implementar e iniciar la aplicación en tantos dispositivos o simuladores según sea necesario para ver el trabajo de volver a cargar en vivo en todos ellos al mismo tiempo.
 
 * Recarga en vivo sólo se volverá a cargar la parte de la interfaz de usuario de la aplicación, pero tampoco *no* volver a crear las páginas, ni reemplace el modelo de vista (o el contexto de enlace). Esto significa que la *todo* siempre se conserva el estado de la aplicación a través de recargas más rápidas, incluidas las dependencias insertadas.
+
+## <a name="live-reload-server"></a>Servidor de recarga en vivo
+
+En escenarios donde una conexión de la aplicación en ejecución en el equipo (tal como se indica mediante el uso de `localhost` o `127.0.0.1` en **Herramientas > Opciones > Xamarin > Live recarga**) no es posible (es decir, los servidores de seguridad, redes diferentes), Puede configurar un servidor remoto en su lugar, lo que el IDE y la aplicación conectar a.
+
+Recarga en vivo utiliza la norma [protocolo MQTT](http://mqtt.org/) para intercambiar mensajes y, por tanto, puede comunicarse con [servidores de terceros](https://github.com/mqtt/mqtt.github.io/wiki/servers). Hay incluso [servidores públicos](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (también conocido como *corredores de bolsa*) disponibles que se pueden utilizar. Recarga en vivo se ha probado con `broker.hivemq.com` y `iot.eclipse.org` nombres de host, así como los servicios proporcionados por [www.cloudmqtt.com](https://www.cloudmqtt.com) y [www.cloudamqp.com](https://www.cloudamqp.com). También puede implementar su propio servidor MQTT en la nube, como [HiveMQ en Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud) o [conejo MQ en AWS](http://www.rabbitmq.com/ec2.html). 
+
+Puede configurar cualquier puerto, pero es habitual usar el puerto de 1883 predeterminado para los servidores remotos. Mensajes de volver a cargar activos usan-to-end AES simétrico cifrado seguro, por lo que es seguro conectarse a servidores remotos. De forma predeterminada, la clave de cifrado y el vector de inicialización (IV) se vuelven a generar en cada sesión de Visual Studio.
+
+Probablemente la forma más sencilla consiste en instalar el [mosquitto](https://mosquitto.org) server en una VM de Ubuntu en blanco en Azure:
+
+1. Crear una nueva máquina virtual de servidor de Ubuntu en Portal de Azure
+2. Agregar una nueva regla de puerto de entrada para 1883 (puerto MQTT de forma predeterminada) en la ficha funciones de red
+3. Abra la [Shell en la nube](https://docs.microsoft.com/azure/cloud-shell/overview) (modo de bash)
+4. Escriba `ssh [USERNAME]@[PUBLIC_IP]` con el nombre de usuario que eligió en 1) y la dirección IP pública que se muestra en la página de información general de la máquina virtual
+5. Ejecutar `sudo apt-get install mosquitto`, escribir la contraseña que eligió en 1)
+
+Ahora puede usar esa dirección IP para conectarse a su propio servidor MQTT.
