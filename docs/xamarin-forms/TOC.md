@@ -16,6 +16,7 @@
 #### [Parte 4. Conceptos básicos del enlace de datos](xaml/xaml-basics/data-binding-basics.md)
 #### [Parte 5. De enlaces de datos a MVVM](xaml/xaml-basics/data-bindings-to-mvvm.md)
 ### [Compilación de XAML](xaml/xamlc.md)
+### [Recarga en vivo](xaml/live-reload.md)
 ### [Controlador de vista previa de XAML](xaml/xaml-previewer.md)
 ### [Espacios de nombres XAML](xaml/namespaces.md)
 ### [Extensiones de marcado XAML](xaml/markup-extensions/index.md)
