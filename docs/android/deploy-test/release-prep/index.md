@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/21/2018
-ms.openlocfilehash: 238e224a1dfbc17089c8b6d03e78043f77f3f383
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 18c49afdd08921b81573da94c23e66f1dd48a25f
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar una aplicación para su lanzamiento
 
@@ -192,7 +192,7 @@ Tenga en cuenta que las compilaciones de depuración establecen automáticamente
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 Incluso con la [depuración deshabilitada](#Disable_Debugging), los atacantes siguen teniendo la posibilidad de volver a empaquetar una aplicación, así como de agregar o quitar opciones de configuración o permisos. Esto les permite usar técnicas de ingeniería inversa en la aplicación, depurarla o alterarla.
-Puede usar [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) para ofuscar el código administrado e inyectar código de detección de estado de seguridad en tiempo de ejecución en una aplicación de Xamarin.Android en tiempo de compilación.
+Puede usar [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) para ofuscar el código administrado e inyectar código de detección de estado de seguridad en tiempo de ejecución en una aplicación de Xamarin.Android en tiempo de compilación para detectar si la aplicación se está ejecutando en un dispositivo liberado y reaccionar en consecuencia.
 
 Dotfuscator CE se incluye con Visual Studio, pero únicamente Visual Studio 2015 Update 3 y versiones posteriores tienen la versión correcta para que funcione con Xamarin.Android. Para usar Dotfuscator, haga clic en **Herramientas > PreEmptive Protection - Dotfuscator**.
 
@@ -202,7 +202,7 @@ Una vez que lo haya configurado, Dotfuscator CE protegerá automáticamente toda
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 Incluso con la [depuración deshabilitada](#Disable_Debugging), los atacantes siguen teniendo la posibilidad de volver a empaquetar una aplicación, así como de agregar o quitar opciones de configuración o permisos. Esto les permite usar técnicas de ingeniería inversa en la aplicación, depurarla o alterarla.
-Aunque no es compatible con Visual Studio para Mac, puede usar [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) con Visual Studio para ofuscar el código administrado e inyectar código de detección de estado de seguridad en tiempo de ejecución en una aplicación de Xamarin.Android en tiempo de compilación.
+Aunque no es compatible con Visual Studio para Mac, puede usar [Dotfuscator Community Edition (CE)](https://www.preemptive.com/products/dotfuscator/overview) con Visual Studio para ofuscar el código administrado e inyectar código de detección de estado de seguridad en tiempo de ejecución en una aplicación de Xamarin.Android en tiempo de compilación para detectar si la aplicación se está ejecutando en un dispositivo liberado y reaccionar en consecuencia.
 
 Para configurar Dotfuscator CE, consulte [Using Dotfuscator Community Edition with Xamarin](https://www.preemptive.com/obfuscating-xamarin-with-dotfuscator) (Usar Dotfuscator Community Edition con Xamarin).
 Una vez que lo haya configurado, Dotfuscator CE protegerá automáticamente todas las compilaciones que cree.

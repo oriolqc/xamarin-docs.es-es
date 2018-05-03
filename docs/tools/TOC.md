@@ -28,6 +28,7 @@
 #### [Integraciones de ejemplo](workbooks/sdk/samples.md)
 ## [Inserción de .NET](dotnet-embedding/index.md)
 ### [Introducción](dotnet-embedding/get-started/index.md)
+#### [Instalación](dotnet-embedding/get-started/install/install.md)
 #### [C](dotnet-embedding/get-started/c.md)
 #### [Java](dotnet-embedding/get-started/java/index.md)
 ##### [Android](dotnet-embedding/get-started/java/android.md)

@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 2833c645a07a3717d9baeeec11e5fa7f9087725a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 806ed841ec4db037a063bb458e1eed13226e08bd
+ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="build-process"></a>Proceso de compilación
 
@@ -52,7 +52,7 @@ La implementación rápida está habilitada de forma predeterminada y puede desh
 El proceso de compilación de Xamarin.Android se basa en MSBuild, que también es el formato de archivo de proyecto usado por Visual Studio para Mac y Visual Studio.
 Normalmente, no es necesario que los usuarios editen manualmente los archivos de MSBuild, dado que el IDE crea proyectos totalmente funcionales, los actualiza con los cambios realizados e invoca destinos de compilación según sea necesario. 
 
-Puede que los usuarios avanzados deseen realizar operaciones que no se admiten en la interfaz gráfica de usuario del IDE, así que el proceso de compilación se puede personalizar mediante la edición directa del archivo de proyecto. En esta página solo se documentan las características y personalizaciones específicas de Xamarin.Android; se pueden realizar muchas más cosas con los elementos, las propiedades y los destinos normales de MSBuild. 
+Puede que los usuarios avanzados quieran realizar operaciones que no se admiten en la interfaz gráfica de usuario del IDE, así que el proceso de compilación se puede personalizar mediante la edición directa del archivo de proyecto. En esta página solo se documentan las características y personalizaciones específicas de Xamarin.Android; se pueden realizar muchas más cosas con los elementos, las propiedades y los destinos normales de MSBuild. 
 
 <a name="Build_Targets" />
 
@@ -266,7 +266,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Cuando esta propiedad es `False`, la propiedad de MSBuild `$(AndroidFastDeploymentType)` también controla lo que se insertará en el archivo `.apk`, lo que puede afectar a los tiempos de desarrollo y recompilación.
 
--   **EnableLLVM**: una propiedad booleana que determina si se usará o no LLVM al realizar la compilación Ahead-of-Time de los ensamblados en código nativo.
+-   **EnableLLVM**: propiedad booleana que determina si se usará o no LLVM al realizar la compilación Ahead Of Time de los ensamblados en código nativo.
 
     En Xamarin.Android 5.1, se agregó compatibilidad con esta propiedad.
 
@@ -345,7 +345,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Puede definir elementos personalizados con la propiedad `$(AndroidVersionCodeProperties)`, que se define a continuación.
 
-    De forma predeterminada, el valor se establece en `{abi}{versionCode:D6}`. Si un programador desea mantener el comportamiento anterior, se puede reemplazar el valor predeterminado estableciendo la propiedad `$(AndroidUseLegacyVersionCode)` en `true`.
+    De forma predeterminada, el valor se establece en `{abi}{versionCode:D6}`. Si un programador quiere mantener el comportamiento anterior, se puede reemplazar el valor predeterminado mediante el establecimiento de la propiedad `$(AndroidUseLegacyVersionCode)` en `true`.
 
     Agregado en Xamarin.Android 7.2.
 
@@ -353,7 +353,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Agregado en Xamarin.Android 7.2.
 
--   **AndroidUseLegacyVersionCode** &ndash; Una propiedad booleana permite al desarrollador revertir el cálculo de versionCode al comportamiento anterior Xamarin.Android 8.2. SOLO debe usarse para los desarrolladores con aplicaciones en Google Play Store. Se recomienda utilizar la nueva propiedad `$(AndroidVersionCodePattern)`.
+-   **AndroidUseLegacyVersionCode**: una propiedad booleana permite al desarrollador revertir el cálculo de versionCode al comportamiento anterior Xamarin.Android 8.2. SOLO debe usarse para los desarrolladores con aplicaciones en Google Play Store. Se recomienda utilizar la nueva propiedad `$(AndroidVersionCodePattern)`.
 
     Agregado en Xamarin.Android 8.2.
 
@@ -576,7 +576,7 @@ Los archivos con esta acción de compilación se tratarán de un modo bastante s
 
 La acción de compilación `Content` no se admite (dado que no hemos descubierto cómo admitirla sin un paso seguramente costoso de primera ejecución).
 
-A partir de Xamarin.Android 5.1, intentar usar la acción de compilación `@(Content)` dará lugar a una advertencia `XA0101`.
+A partir de Xamarin.Android 5.1, si se intenta usar la acción de compilación `@(Content)` se producirá una advertencia `XA0101`.
 
 ### <a name="linkdescription"></a>LinkDescription
 
