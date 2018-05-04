@@ -5,11 +5,11 @@ title: Documentación de Xamarin
 description: Xamarin le permite crear aplicaciones nativas para Android, iOS y macOS mediante un código .NET y las interfaces de usuario específicas de plataforma. Xamarin.Forms le permite crear aplicaciones nativas, con código de interfaz de usuario compartido escrito en C# o XAML.
 featureFlags:
 - clicktale
-ms.openlocfilehash: de03c1bd1b7874e6a837fbbb9e88a353f19afca5
-ms.sourcegitcommit: 4f1b508caa8e7b6ccf85d167ea700a5d28b0347e
+ms.openlocfilehash: a2f8c6ddedcff89f357ed8a984954d9f91c0477f
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/03/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -831,12 +831,12 @@ ms.lasthandoff: 04/03/2018
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Application Fundamentals" src="~/media/index/xamarin-cross-platform-fundamentals.svg?branch=master" data-linktype="external">
+                                                        <img alt="Sharing Code" src="~/media/index/xamarin-cross-platform-fundamentals.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Principios de la aplicación</h3>
-                                                    <p>Obtenga información sobre los conceptos básicos de la escritura de código que puede compartirse para realizar tareas básicas como control de archivos o imágenes, entre otras.</p>
+                                                    <h3>Uso compartido de código</h3>
+                                                    <p>Obtenga información sobre las distintas opciones de uso compartido de código y bibliotecas entre Android, iOS y Windows.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -850,12 +850,12 @@ ms.lasthandoff: 04/03/2018
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Platform Features" src="~/media/index/xamarin-cross-platform-platform-features.svg?branch=master" data-linktype="external">
+                                                        <img alt="Language Support" src="~/media/index/xamarin-cross-platform-platform-features.svg?branch=master" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Características de la plataforma</h3>
-                                                    <p>Trabajo con características específicas de plataforma como FaceID y ARKit y las incorporaciones más recientes para iOS.</p>
+                                                    <h3>Compatibilidad con lenguajes</h3>
+                                                    <p>Los proyectos de Xamarin pueden escribirse en C# y F # y consumen bibliotecas escritas en VB. También se admiten plantillas de Razor.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -873,8 +873,8 @@ ms.lasthandoff: 04/03/2018
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Implementación y pruebas</h3>
-                                                    <p>Creación e implementación de aplicaciones para varias plataformas.</p>
+                                                    <h3>Depuración y rendimiento</h3>
+                                                    <p>Sugerencias para ayudar a mejorar la aplicación, independientemente de la plataforma de destino.</p>
                                                 </div>
                                             </div>
                                         </div>
