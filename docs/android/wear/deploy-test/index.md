@@ -1,17 +1,17 @@
 ---
-title: Implementación y prueba
-description: Cómo probar la aplicación de uso en un dispositivo Android (o el emulador) y prepararlo para su implementación.
+title: Probar, optimizar e implementar usan aplicaciones de sistema operativo
+description: Cómo probar la aplicación desgaste del sistema operativo en un dispositivo Android (o el emulador) y prepararlo para su implementación.
 ms.prod: xamarin
 ms.assetid: 3D8E5A97-F719-4E8C-B777-108DFF20C91F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 12/19/2017
-ms.openlocfilehash: e6472b3bf07750338d9ada7ca62f0a5c9e2c8a7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 9e35b383c77e246d453f03c4b6cdac7c01d32ace
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="deployment-and-testing"></a>Implementación y prueba
 

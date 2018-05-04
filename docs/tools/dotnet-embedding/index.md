@@ -7,11 +7,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: f5e778ef9ba31c1a9e880b9fc66c2e48ddb2420c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 505c2902f2b8d112597b4b9b9b07282a7810db68
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="net-embedding"></a>Inserción de .NET
 
@@ -21,15 +21,17 @@ Incrustación de .NET permite que el código existente de .NET (C#, F # y otros)
 
 Esto significa que si tiene una biblioteca de .NET que desea utilizar desde la aplicación iOS existente, puede hacerlo.   O bien, si desea vincular con una biblioteca de C++ nativo, también puede hacerlo.   O bien, use código .NET de Java.
 
+Incrustación de .NET se basa en el [Embeddinator 4000](https://github.com/mono/Embeddinator-4000) proyecto de código abierto.
+
 ## <a name="environments-and-languages"></a>Entornos e idiomas
 
-La herramienta es consciente de que el entorno que se va a utilizar, así como el idioma que se va a utilizar.   Por ejemplo, la plataforma iOS no permite la compilación de just-in-time (JIT), por lo que el embeddinator estáticamente compilará el código .NET en código nativo que se puede usar en iOS.  Otros entornos de permitir la compilación JIT y, en esos entornos, decidimos a la compilación JIT.
+La herramienta es consciente de que el entorno que se va a utilizar, así como el idioma que se va a utilizar.   Por ejemplo, la plataforma iOS no permite la compilación de just-in-time (JIT), para incrustar .NET estáticamente se compilará el código .NET en código nativo que se puede usar en iOS.  Otros entornos de permitir la compilación JIT y, en esos entornos, decidimos a la compilación JIT.
 
 Es compatible con algunos consumidores de lenguaje, por lo que pone de manifiesto código .NET como idiomática código en el lenguaje de destino.   Esta es la lista de los idiomas admitidos en la actualidad:
 
-- [**Objective-C** ](objective-c/index.md) : asignación de .NET a las API de C objetivo idiomática.
-- [**Java** ](android/index.md) : asignación de .NET a las API de Java idiomática.
-- **C**: asignación de .NET a una orientación a objetos como las API de C.
+- [**Objective-C** ](objective-c/index.md) – asignación .NET a idiomática API Objective-c.
+- [**Java** ](android/index.md) : asignación de .NET a las API de Java idiomática
+- [**C** ](get-started/c.md) : asignación de .NET a orientada a objetos como las API de C
 
 Más idiomas se proceden posteriormente.
 
@@ -37,10 +39,9 @@ Más idiomas se proceden posteriormente.
 
 Para empezar, seleccione una de nuestras guías para cada uno de los idiomas admitidos actualmente:
 
-- [**Objective-C** ](get-started/objective-c/index.md) – cubre iOS y Mac OS.
-- [**Java** ](get-started/java/index.md) – cubre macOS y Android.
-- [**C** ](get-started/c.md) – cubre el lenguaje C en plataformas de escritorio.
-
+- [**Objective-C** ](get-started/objective-c/index.md) – cubre iOS y Mac OS
+- [**Java** ](get-started/java/index.md) – cubre macOS y Android
+- [**C** ](get-started/c.md) – cubre el lenguaje C en plataformas de escritorio
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -1,18 +1,18 @@
 ---
-title: Prácticas recomendadas de 4000 Embeddinator para ObjC
+title: .NET incrustar los procedimientos recomendados para Objective-C
 ms.prod: xamarin
 ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: ca5face9865c60fabe8359c2bf356d5d5555f517
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 9f31190d54b187e1dc298fe1c2a8d443862f10de
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="embeddinator-4000-best-practices-for-objc"></a>Prácticas recomendadas de 4000 Embeddinator para ObjC
+# <a name="net-embedding-best-practices-for-objective-c"></a>Prácticas recomendadas de incrustación de .NET para Objective-C
 
 Se trata de un borrador y podrían no ser sincronizados con las características actualmente compatibles con la herramienta. Esperamos que este documento se evolucionar por separado y finalmente coincide con el final de la herramienta, es decir, le sugerimos mejores métodos a largo plazo - soluciones alternativas no inmediatas.
 
@@ -106,7 +106,7 @@ Esta regla de nomenclatura no tiene correspondencia alguna en el mundo de GC de 
 
 ## <a name="exceptions"></a>Excepciones
 
-Es muy commont en .NET para utilizar excepciones ampliamente para informar de errores. Sin embargo, son lentas y no bastante idénticos en ObjC. Siempre que sea posible se debe ocultar del programador de C de objetivo.
+Es bastante habitual en .NET para utilizar excepciones ampliamente para informar de errores. Sin embargo, son lentas y no bastante idénticas en el objetivo de C. Siempre que sea posible se debe ocultar del programador de C de objetivo.
 
 Por ejemplo, .NET `Try` patrón será mucho más fácil de consumir de código Objective-C:
 
@@ -138,6 +138,6 @@ El generador de seguir el mismo `return nil` de patrón de generadas `init*` mé
 
 Objective-C no admite operadores sobrecargados como C#, por lo que estos se convierten en los selectores de clase.
 
-["Descriptivo"](/dotnet/standard/design-guidelines/operator-overloads/) método con nombre se generan con preferencia a las sobrecargas de operador cuando se encuentra y pueden generar un más fáciles de consumir API.
+["Descriptivo"](https://docs.microsoft.com/dotnet/standard/design-guidelines/operator-overloads) genera los métodos con nombre con preferencia a las sobrecargas de operador cuando se encuentra y pueden generar un más fáciles de consumir API.
 
 Las clases que se anulan los operadores de `==` o `!=` debe invalidar el método Equals (objeto) estándar también.

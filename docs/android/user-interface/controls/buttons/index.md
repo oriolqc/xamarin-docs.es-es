@@ -1,5 +1,5 @@
 ---
-title: Botones
+title: Botones de Xamarin.Android
 description: Elementos de interfaz de usuario que el usuario puntea para llevar a cabo una acción de implementación
 ms.prod: xamarin
 ms.assetid: 4FBB7789-A8DA-4B8B-A46C-849181388A8D
@@ -7,13 +7,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 08/18/2017
-ms.openlocfilehash: a9221504f1eda589eee51096185d47d93335a7de
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b741683d7dfe80337a0085ac8d94becb0b518535
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="buttons"></a>Botones
+# <a name="buttons-in-xamarinandroid"></a>Botones de Xamarin.Android
 
 La `Button` clase se utiliza para representar varios diferentes estilos de botón en las pantallas de Android. Esta sección presentan las distintas opciones para trabajar con botones de Xamarin.Android:
 

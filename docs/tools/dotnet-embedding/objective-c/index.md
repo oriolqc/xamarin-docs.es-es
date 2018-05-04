@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 515185ca7be8b6e24c92c9f44eb6dadbaf6d9219
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 2a4a235dcb885364fdc5add5970e61f46b6e5d08
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="objective-c-support"></a>Compatibilidad con Objective-c.
 
@@ -20,7 +20,7 @@ La generación de Objective-C tiene algunas de las características especiales q
 
 ### <a name="automatic-reference-counting"></a>Recuento de referencias automático
 
-El uso de automática referencia recuento (arco) es **necesario** para llamar a los enlaces generados. Proyecto con una biblioteca basada en embeddinator debe compilarse con `-fobjc-arc`.
+El uso de automática referencia recuento (arco) es **necesario** para llamar a los enlaces generados. Proyecto con una biblioteca basada en .NET incrustar debe compilarse con `-fobjc-arc`.
 
 ### <a name="nsstring-support"></a>Compatibilidad con NSString
 

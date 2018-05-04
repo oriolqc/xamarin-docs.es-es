@@ -1,17 +1,17 @@
 ---
-title: Configuración e instalación
+title: 'Instalar y configurar desgastan onXamarin.Android de sistema operativo '
 description: Este artículo le guía a través de los pasos de instalación y los detalles de configuración necesarios para preparar el equipo y los dispositivos para el desarrollo de desgaste Android. Al final de este artículo, tendrá una instalación Xamarin.Android desgaste integrada en Visual Studio para Mac o Microsoft Visual Studio y en funcionamiento, y estará listo para comenzar a crear su primera aplicación de uso de Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 86ed62075f5c39eaf7b0e348020f4a9361764727
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 14162663c518fdd1324f2b0340592fbae491d112
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="setup-and-installation"></a>Configuración e instalación
 

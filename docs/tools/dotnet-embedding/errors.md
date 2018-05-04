@@ -1,16 +1,16 @@
 ---
-title: Incrustar los errores de .NET
+title: Errores de incrustación de .NET
 ms.prod: xamarin
 ms.assetid: 932C3F0C-D968-42D1-BB14-D97C73361983
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/11/2018
-ms.openlocfilehash: 0bc4451d8eb93b826fc673bc4e163c9b7b68c36e
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 677242ea12f8fd87d82f337eafd96a1743ad806a
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="net-embedding-errors"></a>Incrustar los errores de .NET
 
@@ -92,7 +92,7 @@ Se trata de un problema conocido que se tiene la intención de corregir en una v
 
 La herramienta no pudo combinar los marcos mencionados en el mensaje de error, porque no hay un archivo común entre ellos.
 
-Esto podría indicar un error en el Embeddinator-4000; registre un informe de errores en [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) con un caso de prueba.
+Esto podría indicar un error en la incrustación de. NET; registre un informe de errores en [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) con un caso de prueba.
 
 <a name="EM0011" />
 
@@ -142,9 +142,9 @@ La sintaxis para la opción de línea de comandos `A` no se pudo analizar la her
 
 ### <a name="em0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsgithubcommonoembeddinator-4000issues"></a>EM0099: Error interno *. Registre un informe de errores con un caso de prueba (https://github.com/mono/Embeddinator-4000/issues).
 
-Este mensaje de error se notifica cuando se produce un error en una comprobación de coherencia interna en Embeddinator a 4000.
+Este mensaje de error se notifica cuando se produce un error en una comprobación de coherencia interna de incrustación. NET.
 
-Esto indica un error en el Embeddinator-4000; registre un informe de errores en [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) con un caso de prueba.
+Esto indica un error en la incrustación de. NET; registre un informe de errores en [ https://github.com/mono/Embeddinator-4000/issues ](https://github.com/mono/Embeddinator-4000/issues) con un caso de prueba.
 
 <!-- 1xxx: code processing -->
 
@@ -189,7 +189,7 @@ public class MyType {
 }
 ```
 
-En tales casos solo dos genera `init` selectores se creará, tanto una llamada a mono, pero no existirá ningún contenedor para las versiones posteriores.
+En tales casos solo dos genera `init` selectores se creará, tanto una llamada a Mono, pero no existirá ningún contenedor para las versiones posteriores.
 
 <a name="EM1030" />
 
@@ -224,7 +224,7 @@ public class MyType {
 }
 ```
 
-En tales casos solo dos genera `increment` selectores se creará, tanto una llamada a mono, pero no existirá ningún contenedor para las versiones posteriores.
+En tales casos solo dos genera `increment` selectores se creará, tanto una llamada a Mono, pero no existirá ningún contenedor para las versiones posteriores.
 
 <a name="EM1033" />
 
@@ -236,7 +236,7 @@ Se trata de un **advertencia** que el método `M` no se genera porque otro méto
 
 ### <a name="em1034-extension-method-m-is-not-generated-inside-a-category-because-they-cannot-be-created-on-primitive-type-t-a-normal-static-method-was-generated"></a>EM1034: Método de extensión `M` no se genera dentro de una categoría porque no se crean en el tipo primitivo `T`. Se genera un método estático normal.
 
-Se trata de un **advertencia** que escriba un método de extensión en un primivite (p. ej. `System.Int32`) se ha encontrado. En ObjC no es posible crear categorías de tipo primitivo. En su lugar, el generador se generará un método estático normal.
+Se trata de un **advertencia** que escriba un método de extensión en un primivite (p. ej. `System.Int32`) se ha encontrado. En Objective C no es posible crear categorías de tipo primitivo. En su lugar, el generador se generará un método estático normal.
 
 <a name="EM1040" />
 
@@ -286,7 +286,7 @@ Se trata de un **advertencia** ese elemento `E` no se genera como su nombre entr
 
 Se trata de un **advertencia** que tienen como destino `E` se considera no compatible para casos de uso de Xamarin.iOS y Xamarin.Mac. 
 
-Consumo de bibliotecas de Embeddinator estáticos o dinámicos puede requerir pasos de trabajo adicionales o ajustes y debe evitarse en la mayoría de los casos de uso.
+Consumo de bibliotecas .NET incrustar estáticos o dinámicos puede requerir pasos de trabajo adicionales o ajustes y debe evitarse en la mayoría de los casos de uso.
 
 Considere la posibilidad de quitar el `--target` parámetro o pasar `--target=framework` en su lugar.
 

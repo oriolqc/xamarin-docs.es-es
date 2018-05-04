@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 9364b4c56951ac9ebd3870e4afe41a40f9e1f455
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e064eda3db9aa0156869cf1c7392823553af9bd2
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="binding-types-reference-guide"></a>Guía de referencia de tipos de enlace
 
@@ -1141,7 +1141,7 @@ Este atributo marca el campo de respaldo para una propiedad que se pueden anotar
 Este atributo realizará un excepciones de (Objective-C) método nativas de soporte técnico.
 En lugar de llamar `objc_msgSend` directamente, la invocación recorrerá una cama elástica personalizado que detecta las excepciones de ObjectiveC y calcula las referencias en las excepciones administradas.
 
-Actualmente sólo unos `objc_msgSend` se admiten las firmas (encontrará le indicará si una firma no se admite al vincular nativo de una aplicación que utilice el enlace produce un error con un monotouch_ falta*_objc_msgSend* símbolos), pero pueden ser más Agregar a petición.
+Actualmente sólo unos `objc_msgSend` se admiten las firmas (encontrará le indicará si una firma no se admite al vincular nativo de una aplicación que utilice el enlace produce un error con un monotouch_ falta *_objc_msgSend* símbolos), pero pueden ser más Agregar a petición.
 
 
 ### <a name="newattribute"></a>NewAttribute
@@ -1493,7 +1493,7 @@ Este atributo se aplica a los tipos de parámetro en declaraciones de delegados 
 
 Esto se utiliza normalmente para las devoluciones de llamada que se definen como este en C: objetivo
 
-```csharp
+```objc
 typedef returnType (^SomeTypeDefinition) (int parameter1, NSString *parameter2);
 ```
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 04/23/2018
-ms.openlocfilehash: bfb53af420b64fb9af994d3fb19293406d3acd7b
-ms.sourcegitcommit: 180a8411d912de40545f9624e2127a66ee89e7b2
+ms.openlocfilehash: 627225fdeef781a8b24a79e9b46627a739fd15af
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="xamarin-live-reload"></a>Volver a cargar en vivo de Xamarin
 
@@ -106,13 +106,33 @@ No. De hecho, incluso puede iniciar todos los objetivos de aplicaciones compatib
 ## <a name="limitations"></a>Limitaciones
 
 * Se admite solo volver a cargar de XAML.
-* Solo se admite en Visual Studio.
-* Solo funciona con las bibliotecas de .NET estándar.
-* No se admiten las hojas de estilos CSS.
 * Estado de la interfaz de usuario no puede mantenerse entre las nuevas implementaciones, a menos que utilice MVVM.
-* Volver a cargar recursos de toda la aplicación (es decir, **App.xaml** o comparte los diccionarios de recursos), se restablece la navegación de la aplicación.
+
+## <a name="known-issues"></a>Problemas conocidos
+
+* Solo se admite en Visual Studio.
+* Solo funciona con las bibliotecas de .NET estándar. Este problema se solucionará en la próxima versión de vista previa.
+* No se admiten las hojas de estilos CSS. Este problema se solucionará en la próxima versión de vista previa.
+* Volver a cargar recursos de toda la aplicación (es decir, **App.xaml** o comparte los diccionarios de recursos), se restablece la navegación de la aplicación. Este problema se solucionará en la próxima versión de vista previa.
+* Editar XAML mientras depuración UWP puede provocar un bloqueo en tiempo de ejecución. Solución alternativa: Use **iniciar sin depurar (CTRL+F5)** en lugar de **Iniciar depuración (F5)**.
 
 ## <a name="troubleshooting"></a>Solución de problemas
+
+### <a name="error-codes"></a>Códigos de error
+
+* **XLR001**: *el proyecto actual hace referencia la versión del paquete NuGet 'Xamarin.LiveReload' '[versión]' pero la extensión Xamarin Live recarga requiere la versión [versión].*
+
+  Con el fin de permitir la iteración rápida y evolución de la característica de Live, volver a cargar, el paquete de nuget y la extensión de Visual Studio deben coincidir exactamente. Actualizar el paquete nuget a la misma versión de la extensión que ha instalado.
+
+* **XLR002**: *recarga en vivo requiere al menos la propiedad 'MqttHostname' al compilar desde la línea de comandos. Por otra parte, defina 'EnableLiveReload' en 'false' para deshabilitar la característica.*
+
+  Las propiedades requeridas por Live recarga no están disponibles al compilar desde la línea de comandos (o en la integración continua) y, por lo tanto, se debe proporcionar explícitamente. 
+
+* **XLR003**: *paquete nuget de recarga en vivo requiere la instalación de la extensión Xamarin Live recarga Visual Studio.*
+
+  Intentó crear un proyecto que hace referencia el paquete de nuget Live recarga pero no está instalada la extensión de Visual.  
+
+
 
 ### <a name="app-doesnt-connect"></a>No se conecta aplicación
 
@@ -145,7 +165,7 @@ Si tiene una versión preliminar anterior y tiene problemas para desinstalarlo, 
 
 En escenarios donde una conexión de la aplicación en ejecución en el equipo (tal como se indica mediante el uso de `localhost` o `127.0.0.1` en **Herramientas > Opciones > Xamarin > Live recarga**) no es posible (es decir, los servidores de seguridad, redes diferentes), Puede configurar un servidor remoto en su lugar, lo que el IDE y la aplicación conectar a.
 
-Recarga en vivo utiliza la norma [protocolo MQTT](http://mqtt.org/) para intercambiar mensajes y, por tanto, puede comunicarse con [servidores de terceros](https://github.com/mqtt/mqtt.github.io/wiki/servers). Hay incluso [servidores públicos](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (también conocido como *corredores de bolsa*) disponibles que se pueden utilizar. Recarga en vivo se ha probado con `broker.hivemq.com` y `iot.eclipse.org` nombres de host, así como los servicios proporcionados por [www.cloudmqtt.com](https://www.cloudmqtt.com) y [www.cloudamqp.com](https://www.cloudamqp.com). También puede implementar su propio servidor MQTT en la nube, como [HiveMQ en Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud) o [conejo MQ en AWS](http://www.rabbitmq.com/ec2.html). 
+Recarga en vivo utiliza la norma [protocolo MQTT](http://mqtt.org/) para intercambiar mensajes y, por tanto, puede comunicarse con [servidores de terceros](https://github.com/mqtt/mqtt.github.io/wiki/servers). Hay incluso [servidores públicos](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers) (también conocido como *corredores de bolsa*) disponibles que se pueden utilizar. Recarga en vivo se ha probado con `broker.hivemq.com` y `iot.eclipse.org` nombres de host, así como los servicios proporcionados por [www.cloudmqtt.com](https://www.cloudmqtt.com) y [www.cloudamqp.com](https://www.cloudamqp.com). También puede implementar su propio servidor MQTT en la nube, como [HiveMQ en Azure](https://www.hivemq.com/blog/hivemq-on-windows-azure-mqtt-microsoft-cloud).
 
 Puede configurar cualquier puerto, pero es habitual usar el puerto de 1883 predeterminado para los servidores remotos. Mensajes de volver a cargar activos usan-to-end AES simétrico cifrado seguro, por lo que es seguro conectarse a servidores remotos. De forma predeterminada, la clave de cifrado y el vector de inicialización (IV) se vuelven a generar en cada sesión de Visual Studio.
 

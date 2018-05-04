@@ -1,17 +1,17 @@
 ---
-title: Datos y servicios en la nube
+title: Datos y servicios en la nube con Xamarin.Android
 description: Las guías de esta sección examina cómo tener acceso a datos y asegúrese de usar los servicios de nube.
 ms.prod: xamarin
 ms.assetid: 54D9D34B-D4FA-473B-BD11-75D3762920B0
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 7d96f72f3c7acaaf2e39ae94b24d7d6e3b623773
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: 216ee45df1d7d9e0d06c04b9677bc263929515c0
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="data-and-cloud-services"></a>Datos y servicios en la nube
 

@@ -1,5 +1,5 @@
 ---
-title: Controles
+title: Controles de Android (Widgets)
 description: Bloques de creación para crear Interfaces de usuario de Xamarin.Android
 ms.prod: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
@@ -7,14 +7,13 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/06/2018
-ms.openlocfilehash: 8994a8988c0e32e85aedcd9110e3583195843862
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 28418c3b3fedcd24963008eb3b59ffa782d791f1
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="controls"></a>Controles
-
+# <a name="android-controls-widgets"></a>Controles de Android (Widgets)
 
 Xamarin.Android expone todos los controles de interfaz de usuario nativa (widgets) proporcionados por Android. Estos controles pueden agregarse fácilmente a las aplicaciones de Xamarin.Android mediante el Diseñador de Android o mediante programación a través de los archivos de diseño XML. Independientemente del método que elija, Xamarin.Android expone todas las propiedades del objeto de interfaz de usuario y los métodos en C#. Las siguientes secciones presentan los controles de interfaz de usuario de Android más comunes y explican cómo incorporarlos a aplicaciones Xamarin.Android.
 

@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 72786ac4bceca2635747ebcc844a98b0ce60383f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1b2584d1e76c2f4ed0fb0a924beda3fd2554a57d
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="callbacks-on-android"></a>Devoluciones de llamada en Android
 
@@ -44,7 +44,7 @@ public abstract class AbstractClass : Java.Lang.Object
 Aquí encontrará los detalles para solucionar este problema:
 
 - `[Register]` genera un nombre de paquete "nice" en Java, obtendrá un nombre de paquete generado automáticamente sin él.
-- Creación de subclases `Java.Lang.Object` señala Embeddinator para atravesar la clase de generador de Java de Xamarin.Android.
+- Creación de subclases `Java.Lang.Object` señales a la inserción de .NET para atravesar la clase de generador de Java de Xamarin.Android.
 - Constructor vacío: es lo que desea utilizar desde el código de Java.
 - `(IntPtr, JniHandleOwnership)` constructor: es lo que Xamarin.Android va a utilizar para la creación de C#-equivalente de objetos de Java.
 - `[Export]` envía una señal Xamarin.Android para exponer el método para Java. También podemos cambiar el nombre del método, ya que todo el mundo de Java le gusta usar métodos de minúsculas.
@@ -64,7 +64,7 @@ public class JavaCallbacks : Java.Lang.Object
 ```
 `JavaCallbacks` puede ser cualquier clase para probar esto, siempre y cuando sea un `Java.Lang.Object`.
 
-Ahora, ejecute Embeddinator en el ensamblado de .NET para generar un AAR. Consulte la [Guía de introducción](~/tools/dotnet-embedding/get-started/java/android.md) para obtener más información.
+Ahora, ejecute la incrustación de .NET en el ensamblado de .NET para generar un AAR. Consulte la [Guía de introducción](~/tools/dotnet-embedding/get-started/java/android.md) para obtener más información.
 
 Después de importar el archivo AAR en Android Studio, vamos a escribir una prueba unitaria:
 
@@ -153,7 +153,7 @@ Hay un poco sucediendo aquí, hemos:
 
 Después de agregar esta clase y generar un nuevo AAR, nuestra unidad probar pasadas. Como puede ver este patrón para las devoluciones de llamada no es *ideal*, pero factible.
 
-Para obtener detalles sobre la interoperabilidad de Java, consulte las sorprendentes [Xamarin.Android documentación](https://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/working_with_jni/) sobre este asunto.
+Para obtener detalles sobre la interoperabilidad de Java, consulte las sorprendentes [Xamarin.Android documentación](~/android/platform/java-integration/working-with-jni.md) sobre este asunto.
 
 ## <a name="interfaces"></a>Interfaces
 
@@ -169,7 +169,8 @@ public interface IJavaCallback : IJavaObject
     void Send(string text);
 }
 ```
-`IJavaObject` señala Embeddinator que se trata de una interfaz Xamarin.Android, pero en caso contrario, esto es exactamente el mismo que un `abstract` clase.
+
+`IJavaObject` señala a la inserción de .NET que se trata de una interfaz Xamarin.Android, pero en caso contrario, esto es exactamente el mismo que un `abstract` clase.
 
 Puesto que Xamarin.Android actualmente no generará el código de Java para esta interfaz, agregue el siguiente Java al proyecto de C#:
 
@@ -180,7 +181,8 @@ public interface IJavaCallback {
     void send(String text);
 }
 ```
-Puede colocar el archivo en cualquier lugar, pero asegúrese de que establece la acción de compilación en `AndroidJavaSource`. Esto indicará el Embeddinator para copiarlo en el directorio adecuado que se compilan en el archivo AAR.
+
+Puede colocar el archivo en cualquier lugar, pero asegúrese de que establece la acción de compilación en `AndroidJavaSource`. Esto indicará la incrustación de .NET para copiarlo en el directorio adecuado que se compilan en el archivo AAR.
 
 Después, el `Invoker` implementación será exactamente lo mismo:
 
@@ -281,15 +283,15 @@ Hay un par de cosas pudimos para mejorar estos escenarios:
     - Esto elimina la necesidad de agregar el archivo de código fuente de Java con una acción de compilación `AndroidJavaSource`.
 1. Asegúrese de una manera de Xamarin.Android cargar una `Invoker` de clases virtuales.
     - Esto elimina la necesidad de marcar la clase en nuestro `virtual` ejemplo `abstract`.
-1. Generar `Invoker` clases para Embeddinator automáticamente
+1. Generar `Invoker` clases para .NET incrustar automáticamente
     - Esto va a ser complicado, pero es factible. Xamarin.Android ya está haciendo algo parecido a esto para los proyectos de enlace de Java.
 
-Hay mucho trabajo hacerse aquí, pero estas mejoras a Embeddinator son posibles.
+Hay mucho trabajo hacerse aquí, pero estas mejoras a la inserción de .NET son posibles.
 
 ## <a name="further-reading"></a>Información adicional
 
 * [Introducción de Android](~/tools/dotnet-embedding/get-started/java/android.md)
 * [Investigación de Android preliminar](~/tools/dotnet-embedding/android/index.md)
-* [Limitaciones de Embeddinator](~/tools/dotnet-embedding/limitations.md)
+* [Limitaciones de incrustación de .NET](~/tools/dotnet-embedding/limitations.md)
 * [En el proyecto de código abierto](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
 * [Códigos de error y descripciones](~/tools/dotnet-embedding/errors.md)

@@ -6,16 +6,15 @@ ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 03/28/2018
-ms.openlocfilehash: ed3d6ae3f8537bfae456c6919743e8c9fbfb2009
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1d50d7dbc53271a15e06a7a18d2fa95f91b76ea4
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-android"></a>Introducción a Android
 
-
-Además de los requisitos de nuestro [introducción con Java](~/tools/dotnet-embedding/get-started/java/index.md) guía también necesitará:
+Además de los requisitos de la [introducción con Java](~/tools/dotnet-embedding/get-started/java/index.md) guía también necesitará:
 
 * [Xamarin.Android 7.5](https://www.visualstudio.com/xamarin/) o posterior
 * [Android Studio 3.x](https://developer.android.com/studio/index.html) con Java 1.8
@@ -24,18 +23,19 @@ Como información general, se hará lo siguiente:
 
 * Crear un proyecto de biblioteca de C# Android
 * Instalar .NET incrustación a través de NuGet
-* Ejecute Embeddinator en el ensamblado de biblioteca de Android
+* Ejecute .NET incrustar en el ensamblado de biblioteca de Android
 * Utilice el archivo AAR generado en un proyecto de Java en Android Studio
 
 ## <a name="create-an-android-library-project"></a>Crear un proyecto de biblioteca de Android
 
-Abra Visual Studio para Windows o Mac, cree un nuevo proyecto de biblioteca de clases de Android, asígnele el nombre `hello-from-csharp`y guárdelo en `~/Projects/hello-from-csharp` o `%USERPROFILE%\Projects\hello-from-csharp`.
+Abra Visual Studio para Windows o Mac, cree un nuevo proyecto de biblioteca de clases de Android, asígnele el nombre **Hola de csharp**y guárdelo en **~/Projects/hello-from-csharp** o **%USERPROFILE%\ Projects\hello de csharp**.
 
-Agregar una nueva actividad Android denominado `HelloActivity.cs`, seguido de un diseño Android en `Resource/layout/hello.axml`.
+Agregar una nueva actividad Android denominado **HelloActivity.cs**, seguido de un diseño Android en **Resource/layout/hello.axml**.
 
 Agregue un nuevo `TextView` al diseño y cambiar el texto a algo divertido.
 
 El origen de diseño debe tener un aspecto similar al siguiente:
+
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -53,6 +53,7 @@ El origen de diseño debe tener un aspecto similar al siguiente:
 ```
 
 En la actividad, asegúrese de que se está llamando a `SetContentView` con el nuevo diseño:
+
 ```csharp
 [Activity(Label = "HelloActivity"),
     Register("hello_from_csharp.HelloActivity")]
@@ -66,68 +67,46 @@ public class HelloActivity : Activity
     }
 }
 ```
-*Nota: no se olvide la `[Register]` atributo, ver los detalles de las limitaciones*
 
-Compile el proyecto, se guardará el ensamblado resultante en `bin/Debug/hello-from-csharp.dll`.
+> [!NOTE]
+> No olvide la `[Register]` atributo. Para obtener más información, consulte [limitaciones](#current-limitations-on-android).
+
+Compile el proyecto. Se guardará el ensamblado resultante en `bin/Debug/hello-from-csharp.dll`.
 
 ## <a name="installing-net-embedding-from-nuget"></a>Instalar .NET incrustación de NuGet
 
-Elija **Agregar > Agregar paquetes de NuGet...**  e instalar `Embeddinator-4000` desde el Administrador de paquetes de NuGet: ![Administrador de paquetes de NuGet](android-images/visualstudionuget.png)
+Siga estas [instrucciones](~/tools/dotnet-embedding/get-started/install/install.md) para instalar y configurar la incrustación de .NET para el proyecto.
 
-Este modo se instalará `Embeddinator-4000.exe` en el `packages/Embeddinator-4000/tools` directory.
+La invocación de comando que se debe configurar tendrá un aspecto similar al siguiente:
 
-## <a name="run-embeddinator-4000"></a>Run Embeddinator-4000
+### <a name="visual-studio-for-mac"></a>Visual Studio para Mac
 
-Se agregará un paso posterior a la compilación para ejecutar Embeddinator y crear un archivo AAR nativo para el ensamblado de proyecto de biblioteca de Android.
-
-En Visual Studio para Mac, vaya a _Project Options > compilar > comandos personalizados_ y agregue un _después de compilar_ paso.
-
-El programa de instalación el commnd siguiente:
-```
-mono '${SolutionDir}/packages/Embeddinator-4000.0.2.0.80/tools/Embeddinator-4000.exe' '${TargetPath}' --gen=Java --platform=Android --outdir='${SolutionDir}/output' -c
+```shell
+mono '${SolutionDir}/packages/Embeddinator-4000.0.4.0.0/tools/Embeddinator-4000.exe' '${TargetPath}' --gen=Java --platform=Android --outdir='${SolutionDir}/output' -c
 ```
 
-> [!NOTE]
-> Nota: asegúrese de utilizar el número de versión instalada de NuGet
+#### <a name="visual-studio-2017"></a>Visual Studio 2017
 
-Si va a hacer el desarrollo en curso en el proyecto de C#, también puede agregar un comando personalizado para limpiar el `output` directorio antes de ejecutar Embeddinator:
-```
-rm -Rf '${SolutionDir}/output/'
-```
-
-![Acción de compilación personalizada](android-images/visualstudiocustombuild.png)
-
-El archivo AAR Android se colocarán en `~/Projects/hello-from-csharp/output/hello_from_csharp.aar`. _Nota: los guiones se reemplazan porque Java no admite nombres de paquete._
-
-### <a name="running-net-embedding-on-windows"></a>Ejecuta .NET incrustar en Windows
-
-Se configurará básicamente lo mismo, pero los menús de Visual Studio son ligeramente distintos en Windows. Los comandos de shell también son ligeramente diferentes.
-
-Vaya a **Project Options > eventos de compilación** y escriba lo siguiente en el **línea de comandos del evento posterior a la compilación** cuadro:
-```
+```shell
 set E4K_OUTPUT="$(SolutionDir)output"
 if exist %E4K_OUTPUT% rmdir /S /Q %E4K_OUTPUT%
 "$(SolutionDir)packages\Embeddinator-4000.0.2.0.80\tools\Embeddinator-4000.exe" "$(TargetPath)" --gen=Java --platform=Android --outdir=%E4K_OUTPUT% -c
 ```
 
-Por ejemplo, la captura de pantalla siguiente:
-
-![Embeddinator en Windows](android-images/visualstudiowindows.png)
-
 ## <a name="use-the-generated-output-in-an-android-studio-project"></a>Usar el resultado generado en un proyecto de Android Studio
 
 1. Abra Android Studio y cree un nuevo proyecto con un **actividad vacía**.
-2. Haga doble clic en el `app` módulo y elija **nuevo > módulo**.
+2. Haga doble clic en el **aplicación** módulo y elija **nuevo > módulo**.
 3. Seleccione **importación. JAR /. Paquete de AAR**.
-4. Utilizar el Explorador de directorios para buscar `~/Projects/hello-from-csharp/output/hello_from_csharp.aar` y haga clic en **finalizar**.
+4. Utilizar el Explorador de directorios para buscar **~/Projects/hello-from-csharp/output/hello_from_csharp.aar** y haga clic en **finalizar**.
 
 ![Importar AAR en Android Studio](android-images/androidstudioimport.png)
 
-Esto copiará el archivo AAR en un nuevo módulo denominado `hello_from_csharp`.
+Esto copiará el archivo AAR en un nuevo módulo denominado **hello_from_csharp**.
 
 ![Proyecto de Android Studio](android-images/androidstudioproject.png)
 
-Para usar el nuevo módulo de su `app`, haga clic en y elija **configuración para abrir el módulo**. En el **dependencias** ficha, agregue un nuevo **módulo dependencia** y elija `:hello_from_csharp`.
+Para usar el nuevo módulo de su **aplicación**, haga clic en y elija **configuración para abrir el módulo**. En el **dependencias** ficha, agregue un nuevo **módulo dependencia** y elija **: hello_from_csharp**.
 
 ![Android Studio dependencias](android-images/androidstudiodependencies.png)
 
@@ -148,11 +127,12 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-### <a name="assembly-compression-important"></a>Compresión de ensamblado *importante*
+### <a name="assembly-compression-important"></a>Compresión de ensamblado (*importante*)
 
 Un cambio más se requiere para la incrustación de .NET en el proyecto de Android Studio.
 
-Abra la aplicación `build.gradle` de archivos y agregue el siguiente cambio:
+Abra la aplicación **build.gradle** de archivos y agregue el siguiente cambio:
+
 ```groovy
 android {
     // ...
@@ -161,11 +141,12 @@ android {
     }
 }
 ```
+
 Xamarin.Android actualmente carga ensamblados .NET directamente desde el APK, pero requiere que los ensamblados no se comprimirá.
 
 Si no tiene este programa de instalación, la aplicación se bloqueará al iniciarse e imprimir algo parecido a esto en la consola:
 
-```csharp
+```shell
 com.xamarin.hellocsharp A/monodroid: No assemblies found in '(null)' or '<unavailable>'. Assuming this is part of Fast Deployment. Exiting...
 ```
 
@@ -181,15 +162,15 @@ Tenga en cuenta qué ha ocurrido aquí:
 * Contamos con archivos de recursos de Android
 * Hemos usado desde Java en Android Studio
 
-Por lo tanto, para que este ejemplo funcione, todos los requisitos siguientes son el programa de instalación en el APK final:
+Para que este ejemplo funcione, todos los archivos siguientes se configuran en el APK final:
 
 * Xamarin.Android está configurado en el inicio de la aplicación
-* Incluido en los ensamblados .NET `assets/assemblies`
-* `AndroidManifest.xml` modificaciones de sus actividades de C#, etcetera.
+* Ensamblados de .NET de **activos/ensamblados**
+* **AndroidManifest.xml** modificaciones para sus actividades de C#, etcetera.
 * Android recursos y activos de bibliotecas de .NET
-* [Contenedores CCW Android](https://developer.xamarin.com/guides/android/advanced_topics/java_integration_overview/android_callable_wrappers/) para cualquier `Java.Lang.Object` subclase
+* [Contenedores CCW Android](~/android/platform/java-integration/android-callable-wrappers.md) para cualquier `Java.Lang.Object` subclase
 
-Si desea obtener un tutorial adicional, consulte este vídeo de incrustación de Petzold [demostración de pintura con los dedos](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/) en un Android Studio proyecto aquí:
+Si desea obtener un tutorial adicional, consulte el vídeo siguiente, que muestra la incrustación de Petzold [demostración de pintura con los dedos](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/) en un proyecto de Android Studio:
 
 [![Embeddinator-4000 para Android](https://img.youtube.com/vi/ZVcrXUpCNpI/0.jpg)](https://www.youtube.com/watch?v=ZVcrXUpCNpI)
 
@@ -197,7 +178,8 @@ Si desea obtener un tutorial adicional, consulte este vídeo de incrustación de
 
 A partir de escribir esto, la mejor opción consiste en usar Android Studio 3.0 ([descargar aquí](https://developer.android.com/studio/index.html)).
 
-Para habilitar Java 1.8 en el módulo de aplicación `build.gradle` archivo:
+Para habilitar Java 1.8 en el módulo de aplicación **build.gradle** archivo:
+
 ```groovy
 android {
     // ...
@@ -207,9 +189,11 @@ android {
     }
 }
 ```
-También puede echar un vistazo a nuestro proyecto de prueba de Android Studio [aquí](https://github.com/mono/Embeddinator-4000/blob/master/tests/android/app/build.gradle) para obtener más detalles.
+
+También puede echar un vistazo a una [proyecto de prueba de Android Studio](https://github.com/mono/Embeddinator-4000/blob/master/tests/android/app/build.gradle) para obtener más detalles. 
 
 Si se desean usar estable de Studio Android 2.3. x, tendrá que habilitar la cadena de herramientas de conector en desuso:
+
 ```groovy
 android {
     // ..
@@ -222,29 +206,27 @@ android {
 
 ## <a name="current-limitations-on-android"></a>Limitaciones actuales en Android
 
-Ahora mismo si deriva una subclase de `Java.Lang.Object`, Xamarin.Android generará el código auxiliar de Java (Android Callable Wrapper) en lugar de Embeddinator.
+En este momento, si deriva una subclase de `Java.Lang.Object`, Xamarin.Android generará el código auxiliar de Java (Android Callable Wrapper) en lugar de incrustar. NET. Por este motivo, debe seguir las mismas reglas para la exportación de C# para Java como Xamarin.Android. Por ejemplo:
 
-Por lo que debe seguir las mismas reglas para la exportación de C# para Java como Xamarin.Android.
-
-Así, por ejemplo en C#:
 ```csharp
-    [Register("mono.embeddinator.android.ViewSubclass")]
-    public class ViewSubclass : TextView
-    {
-        public ViewSubclass(Context context) : base(context) { }
+[Register("mono.embeddinator.android.ViewSubclass")]
+public class ViewSubclass : TextView
+{
+    public ViewSubclass(Context context) : base(context) { }
 
-        [Export("apply")]
-        public void Apply(string text)
-        {
-            Text = text;
-        }
+    [Export("apply")]
+    public void Apply(string text)
+    {
+        Text = text;
     }
+}
 ```
 
 * `[Register]` es necesario asignar a un nombre de paquete de Java deseado
 * `[Export]` es necesario para que un método visible para Java
 
 Podemos usar `ViewSubclass` en Java así:
+
 ```java
 import mono.embeddinator.android.ViewSubclass;
 //...
@@ -258,7 +240,8 @@ Obtenga más información sobre [integración de Java con Xamarin.Android](~/and
 
 Incrustar un único ensamblado es sencillo; Sin embargo, es mucho más probable que tenga más de C# un ensamblado. Muchas veces tendrá dependencias en los paquetes de NuGet, como las bibliotecas de compatibilidad con Android o servicios de Google Play que complican aún más.
 
-Esto hace que un dilema, ya que Embeddinator es necesario que incluya muchos tipos de archivos en el final AAR como:
+Esto hace que un dilema, ya que incrustar .NET necesita incluir muchos tipos de archivos en el final AAR como:
+
 * Android activos
 * Recursos de Android
 * Android bibliotecas nativas
@@ -267,17 +250,21 @@ Esto hace que un dilema, ya que Embeddinator es necesario que incluya muchos tip
 Más probable es que no desea incluir estos archivos de la biblioteca de compatibilidad de Android o servicios de Google Play en su AAR, pero en su lugar utilizaría para la versión oficial de Google Android Studio.
 
 Este es el enfoque recomendado:
-* Pasar Embeddinator cualquier ensamblado al que usted es el propietario (tiene origen) y desea llamar desde Java
-* Pasar Embeddinator cualquier ensamblado al que se necesita Android activos, bibliotecas nativas o recursos de
+
+* Pasar .NET incrustar cualquier ensamblado al que usted es el propietario (tiene origen) y desea llamar desde Java
+* Pasar .NET incrustar cualquier ensamblado al que se necesita Android activos, bibliotecas nativas o recursos de
 * Agregar dependencias de Java como el Android admiten la biblioteca o servicios de Google Play en Android Studio
 
 Por lo que podría ser el comando:
-```
+
+```shell
 mono Embeddinator-4000.exe --gen=Java --platform=Android -c -o output YourMainAssembly.dll YourDependencyA.dll YourDependencyB.dll
 ```
+
 Debe excluir nada de NuGet, a menos que descubra que contiene activos Android, recursos, etc. que necesitará en el proyecto de Android Studio. También puede omitir las dependencias que no es necesario llamar desde Java y el vinculador _debe_ incluyen las partes de la biblioteca que se necesitan.
 
-Para agregar las dependencias de Java necesarias en Android Studio, su `build.gradle` archivo sería:
+Para agregar las dependencias de Java necesarias en Android Studio, el **build.gradle** archivo sería:
+
 ```groovy
 dependencies {
     // ...
@@ -291,10 +278,9 @@ dependencies {
 
 * [Devoluciones de llamada en Android](~/tools/dotnet-embedding/android/callbacks.md)
 * [Investigación de Android preliminar](~/tools/dotnet-embedding/android/index.md)
-* [Limitaciones de Embeddinator](~/tools/dotnet-embedding/limitations.md)
-* [En el proyecto de código abierto](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
+* [Limitaciones de incrustación de .NET](~/tools/dotnet-embedding/limitations.md)
+* [En el proyecto de código abierto](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
 * [Códigos de error y descripciones](~/tools/dotnet-embedding/errors.md)
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

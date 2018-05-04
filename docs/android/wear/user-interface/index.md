@@ -1,17 +1,17 @@
 ---
-title: Interfaz de usuario
-description: Crear Interfaces de usuario para las aplicaciones de Android desgaste
+title: Crear la interfaz de usuario para el sistema operativo de uso con Xamarin.Androi
+description: Crear Interfaces de usuario para llevar las aplicaciones de sistema operativo
 ms.prod: xamarin
 ms.assetid: 092A6E08-FB07-4AC2-A5BD-8A9D4E6268D8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 98f9b316661d9e0853c30a76d4bc70a6df4e38a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/25/2018
+ms.openlocfilehash: e315bd23aad1cde55081d165a6fcc73cf765ec83
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="user-interface"></a>Interfaz de usuario
 

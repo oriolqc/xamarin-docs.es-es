@@ -5,61 +5,55 @@ ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
 ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.date: 11/14/2017
-ms.openlocfilehash: 8dff45de6de7c9492b199f323656778ac5c34d57
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/19/2018
+ms.openlocfilehash: 1313d7156a1fd75fd40e2aff65404aef5ab023bb
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started-with-c"></a>introducción a C
 
-
 ## <a name="requirements"></a>Requisitos
 
-Para usar la incrustación de .NET con C necesitará un equipo que ejecuta Mac o Windows:
+Para usar la incrustación de .NET con C, necesitará un equipo que ejecuta Mac o Windows:
+
+### <a name="macos"></a>macOS
 
 * macOS 10.12 (Sierra) o posterior
 * Xcode 8.3.2 o posterior
+* [Mono](http://www.mono-project.com/download/)
+
+### <a name="windows"></a>Windows
 
 * Windows 7, 8, 10 o posterior
 * Visual Studio 2015 o versiones posterior
 
-* [Mono](http://www.mono-project.com/download/)
+## <a name="installing-net-embedding-from-nuget"></a>Instalar .NET incrustación de NuGet
 
+Siga estas [instrucciones](~/tools/dotnet-embedding/get-started/install/install.md) para instalar y configurar la incrustación de .NET para el proyecto.
 
-## <a name="installation"></a>Instalación
+Debe configurar la invocación del comando será similar (posiblemente con números de versión diferentes y las rutas de acceso):
 
-El siguiente paso es descargar e instalar las herramientas de incrustación de .NET en su equipo.
+### <a name="visual-studio-for-mac"></a>Visual Studio para Mac
 
-Compilaciones binarias para los generadores de C y Java todavía no están disponibles, pero pronto estarán disponibles.
+```shell
+mono {SolutionDir}/packages/Embeddinator-4000.0.4.0.0/tools/Embeddinator-4000.exe --gen=c --output=managed_c --platform=macos --compile managed.dll
+```
 
-Como alternativa es posible compilar desde nuestro repositorio de git, consulte el [que han contribuido](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md) documento para obtener instrucciones.
+### <a name="visual-studio-2017"></a>Visual Studio 2017
 
+```shell
+$(SolutionDir)\packages\Embeddinator-4000.0.2.0.80\tools\Embeddinator-4000.exe --gen=c --output=managed_c --platform=windows --compile managed.dll
+```
 
 ## <a name="generation"></a>Generación
-
-Para generar el código de C, invocar la herramienta de incrustación de .NET pasando los indicadores que tenga como destino el lenguaje c. derecho:
-
-### <a name="windows"></a>Windows:
-
-```csharp
-$ build/lib/Debug/Embeddinator-4000.exe --gen=c --output=managed_c --platform=windows --compile managed.dll
-```
-
-Asegúrese de que a la llamada desde un shell de comandos de Visual Studio específica a la versión de Visual Studio está como destino.
-
-### <a name="macos"></a>macOS
-
-```csharp
-$ mono build/lib/Debug/Embeddinator-4000.exe --gen=c --output=managed_c --platform=macos --compile managed.dll
-```
 
 ### <a name="output-files"></a>Archivos de salida
 
 Si todo funciona correctamente, aparecerá el siguiente resultado:
 
-```csharp
+```shell
 Parsing assemblies...
     Parsed 'managed.dll'
 Processing assemblies...
@@ -76,12 +70,12 @@ Generating binding code...
     Generated: mono_embeddinator.h
 ```
 
-Puesto que la `--compile` marca se pasa a la herramienta, incrustación de .NET debe también se compila los archivos de salida en una biblioteca compartida, que encontrará junto a los archivos generados, un `libmanaged.dylib` archivo macOS, y `managed.dll` en Windows.
+Puesto que la `--compile` marca se pasa a la herramienta, incrustación de .NET debe también se compila los archivos de salida en una biblioteca compartida, que encontrará junto a los archivos generados, un **libmanaged.dylib** archivo macOS y **managed.dll** en Windows.
 
-Para utilizar la biblioteca compartida puede incluir el `managed.h` biblioteca API administrada de archivo de encabezado de C, que proporciona las declaraciones de C correspondientes a los respectivos y vínculo con la mencionada anteriormente compilados biblioteca compartida.
+Para utilizar la biblioteca compartida, puede incluir la **managed.h** biblioteca API administrada de archivo de encabezado de C, que proporciona las declaraciones de C correspondientes a los respectivos y vínculo con la mencionada anteriormente compilados biblioteca compartida.
 
 ## <a name="further-reading"></a>Información adicional
 
-* [Limitaciones de Embeddinator](~/tools/dotnet-embedding/limitations.md)
-* [En el proyecto de código abierto](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
+* [Limitaciones de incrustación de .NET](~/tools/dotnet-embedding/limitations.md)
+* [En el proyecto de código abierto](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
 * [Códigos de error y descripciones](~/tools/dotnet-embedding/errors.md)
