@@ -8,11 +8,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: e4828f1ae5448a94fa1f52147d1aef3787e95521
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dc9b86845dc91c7fb8ec3a88a5862e5e9f6de18d
+ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="helloios-quickstart"></a>Inicio rápido de Hello.iOS
 
@@ -288,7 +288,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 **Nota**: En este tutorial se utiliza Visual Studio Enterprise 2017 en una máquina virtual de Windows 10. Su configuración puede diferir, mientras cumpla los requisitos anteriores, pero tenga en cuenta que algunas capturas de pantalla pueden parecer diferentes a las de su instalación.
 
 > [!NOTE]
-> Antes de continuar con este tutorial, se debe haber conectado ya a su Mac desde Visual Studio. Esto es porque Xamarin.iOS se basa en las herramientas de Apple para generar e iniciar las aplicaciones y el diseñador de iOS. Para realizar la configuración, siga los pasos de la guía donde se explica cómo [conectarse a Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+> Antes de continuar con este tutorial, se debe haber conectado ya a su Mac desde Visual Studio. Esto es porque Xamarin.iOS se basa en las herramientas de Apple para generar e iniciar las aplicaciones y el diseñador de iOS. Para realizar la configuración, siga los pasos de la guía [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Inicie Visual Studio desde el menú **Inicio**:
 

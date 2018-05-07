@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: f30e49122c343a967a2348c03ce4f06d9452dc76
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8aac58546e51525ae22c09218f90addef911669a
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connection-troubleshooting"></a>Solución de problemas de conexión
 
@@ -114,36 +114,36 @@ El host de compilación de Xamarin de versiones anteriores de Xamarin.iOS ya no 
 
 <a name="knownissues" />
 
-## <a name="known-issues-and-limitations"></a>Problemas y limitaciones conocidos
+### <a name="known-issues-and-limitations"></a>Problemas y limitaciones conocidos
 
 > [!NOTE]
 > Esta sección solo se aplica si ya se ha conectado correctamente al host de compilación de Mac con su nombre de usuario de Mac y su contraseña mediante el cliente SSH OpenSSH, tal como se describió en los pasos 8 y 9 anteriores.
 
-### <a name="invalid-credentials-please-try-again"></a>"Invalid credentials. Please try again." (Credenciales no válidas. Vuelva a intentarlo.)
+#### <a name="invalid-credentials-please-try-again"></a>"Invalid credentials. Please try again." (Credenciales no válidas. Vuelva a intentarlo.)
 
 Causas conocidas:
 
 - **Limitación**: este error puede aparecer al intentar iniciar sesión en el host de compilación con el _nombre completo_ de la cuenta si dicho nombre incluye un carácter acentuado. Se trata de una limitación de la [biblioteca SSH.NET](https://sshnet.codeplex.com/) que Xamarin usa para la conexión SSH. **Solución alternativa**: consulte el paso 5 anterior.
 
-### <a name="unable-to-authenticate-with-ssh-keys-please-try-to-log-in-with-credentials-first"></a>"Unable to authenticate with SSH keys. Please try to log in with credentials first" (No se pudo autenticar con claves SSH. Intente primero iniciar sesión con las credenciales.)
+#### <a name="unable-to-authenticate-with-ssh-keys-please-try-to-log-in-with-credentials-first"></a>"Unable to authenticate with SSH keys. Please try to log in with credentials first" (No se pudo autenticar con claves SSH. Intente primero iniciar sesión con las credenciales.)
 
 Causa conocida:
 
 - **Restricción de seguridad de SSH**: la mayoría de las veces, este mensaje significa que uno de los archivos o directorios en la ruta de acceso completa **$HOME/.ssh/authorized\_keys** del equipo Mac tiene permisos de escritura habilitados para _otros_ miembros o miembros de _grupo_. **Corrección habitual**: ejecute `chmod og-w "$HOME"` en un símbolo del sistema de Terminal en el equipo Mac. Para obtener más información sobre qué archivo o directorio en concreto está causando el problema, ejecute `grep sshd /var/log/system.log > "$HOME/Desktop/sshd.log"` en Terminal, abra el archivo **sshd.log** desde el escritorio y busque "Authentication refused: bad ownership or modes" (Autenticación rechazada: propiedad o modos incorrectos).
 
-### <a name="trying-to-connect-never-completes"></a>"Intentando conectar..." nunca finaliza
+#### <a name="trying-to-connect-never-completes"></a>"Intentando conectar..." nunca finaliza
 
 - **Error [52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: este problema puede darse en Xamarin 4.1 si **Shell de inicio de sesión**, en el menú contextual **Opciones avanzadas** del usuario de Mac, en **Preferencias del sistema&gt; Usuarios &amp; Grupos** , está establecido en otro valor que no sea **/bin/bash**. A partir de Xamarin 4.2, este caso corresponde al mensaje de error "No se pudo conectar". **Solución alternativa**: revierta el valor de **Shell de inicio de sesión** al original predeterminado, que es **/bin/bash**.
 
 <a name="tryagain" />
 
-### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>"Couldn't connect to MacBuildHost.local. Please try again." (Credenciales no válidas. Vuelva a intentarlo.)
+#### <a name="couldnt-connect-to-macbuildhostlocal-please-try-again"></a>"Couldn't connect to MacBuildHost.local. Please try again." (Credenciales no válidas. Vuelva a intentarlo.)
 
 Causas notificadas:
 
 - **Error**: algunos usuarios han visto el mensaje de error "An unexpected error occurred while configuring SSH for the user… Session operation has timed out" (Se produjo un error inesperado durante la configuración de SSH para el usuario… Se agotó el tiempo de operación de sesión.) junto con un error más detallado en los archivos de registro al intentar iniciar sesión en el host de compilación mediante Active Directory u otra cuenta de usuario de dominio de servicio de directorios. **Solución alternativa:** inicie sesión en el host de compilación con una cuenta de usuario local.
 
-- **Error**: algunos usuarios han visto este error al hacer doble clic en el nombre del equipo Mac en el cuadro de diálogo de conexión para intentar conectarse con el host de compilación. **Posible solución alternativa**: use la dirección IP para [agregar manualmente el equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manual-add).
+- **Error**: algunos usuarios han visto este error al hacer doble clic en el nombre del equipo Mac en el cuadro de diálogo de conexión para intentar conectarse con el host de compilación. **Posible solución alternativa**: use la dirección IP para [agregar manualmente el equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac).
 
 - **Error [35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)**: algunos usuarios se han encontrado con este error al usar una conexión de red inalámbrica entre el host de compilación de Mac y Windows. **Posible solución alternativa**: mueva ambos equipos a una conexión de red con cable.
 
@@ -181,7 +181,7 @@ Causas notificadas:
 
 <a name="clearing" />
 
-### <a name="clearing-the-broker-idb-build-and-designer-agents-on-the-mac"></a>Desactivar los agentes de Broker, IDB, compilación y diseñador en el equipo Mac
+#### <a name="clearing-the-broker-idb-build-and-designer-agents-on-the-mac"></a>Desactivar los agentes de Broker, IDB, compilación y diseñador en el equipo Mac
 
 Si los archivos de registro muestran un problema durante los pasos de instalación, carga o inicio para cualquiera de los agentes de Mac, pruebe a eliminar la carpeta de caché **XMA** para obligar a Visual Studio a volver a cargarlos.
 
@@ -201,31 +201,31 @@ Si los archivos de registro muestran un problema durante los pasos de instalaci�
     del %localappdata%\Temp\Xamarin\XMA
     ```
     
-## <a name="warning-messages"></a>Mensajes de advertencia
+### <a name="warning-messages"></a>Mensajes de advertencia
 
 En esta sección se describen algunos de los mensajes que pueden aparecer en las ventanas de salida y los registros y que normalmente se pueden pasar por alto.
 
-### <a name="there-is-a-mismatch-between-the-installed-xamarinios--and-the-local-xamarinios"></a>"There is a mismatch between the installed Xamarin.iOS… and the local Xamarin.iOS" (Hay un error de coincidencia entre la versión de Xamarin.iOS instalada… y la versión local de Xamarin.iOS)
+#### <a name="there-is-a-mismatch-between-the-installed-xamarinios--and-the-local-xamarinios"></a>"There is a mismatch between the installed Xamarin.iOS… and the local Xamarin.iOS" (Hay un error de coincidencia entre la versión de Xamarin.iOS instalada… y la versión local de Xamarin.iOS)
 
 Siempre y cuando haya confirmado que el equipo Mac y el equipo Windows están actualizados con el mismo canal de distribución de Xamarin, puede pasar por alto esta advertencia.
 
-### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>"Failed to execute 'ls /usr/bin/mono': ExitStatus=1" (Error al ejecutar 'ls /usr/bin/mono': ExitStatus=1)
+#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>"Failed to execute 'ls /usr/bin/mono': ExitStatus=1" (Error al ejecutar 'ls /usr/bin/mono': ExitStatus=1)
 
 Este mensaje se puede pasar por alto siempre y cuando el equipo Mac ejecute OS X 10.11 (El Capitan) o una versión posterior. Este mensaje no es un problema en OS X 10.11, ya que Xamarin también comprueba **/usr/local/bin/mono**, que es la ubicación correcta que se espera para `mono` en OS X 10.11.
 
-### <a name="bonjour-service-macbuildhost-did-not-respond-with-its-ip-address"></a>"Bonjour service 'MacBuildHost' did not respond with its IP address." ("MacBuildHost" del servicio Bonjour no ha respondido con su dirección IP.)
+#### <a name="bonjour-service-macbuildhost-did-not-respond-with-its-ip-address"></a>"Bonjour service 'MacBuildHost' did not respond with its IP address." ("MacBuildHost" del servicio Bonjour no ha respondido con su dirección IP.)
 
-Puede pasar por alto este mensaje a menos que vea que el cuadro de diálogo de conexión no muestra la dirección IP del host de la compilación de Mac. Si _falta_ la dirección IP en ese cuadro de diálogo, puede [agregar manualmente el equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manual-add).
+Puede pasar por alto este mensaje a menos que vea que el cuadro de diálogo de conexión no muestra la dirección IP del host de la compilación de Mac. Si _falta_ la dirección IP en ese cuadro de diálogo, puede [agregar manualmente el equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac).
 
-### <a name="invalid-user-a-from-101895-and-inputuserauthrequest-invalid-user-a-preauth"></a>"Invalid user a from 10.1.8.95" (Usuario no válido a desde 10.1.8.95) y "input\_userauth\_request: invalid user a [preauth]" (input_userauth_request: usuario no válido a [autenticación previa])
+#### <a name="invalid-user-a-from-101895-and-inputuserauthrequest-invalid-user-a-preauth"></a>"Invalid user a from 10.1.8.95" (Usuario no válido a desde 10.1.8.95) y "input\_userauth\_request: invalid user a [preauth]" (input_userauth_request: usuario no válido a [autenticación previa])
 
 Podría ver este mensaje si consulta el archivo **sshd.log**. Estos mensajes forman parte del proceso de conexión normal y aparecen porque Xamarin usa el nombre de usuario **a** temporalmente al recuperar la _huella digital de SSH_.
 
-## <a name="output-window-and-log-files"></a>Ventana de salida y archivos de registro
+### <a name="output-window-and-log-files"></a>Ventana de salida y archivos de registro
 
 Si Visual Studio produce un error al conectar con el host de compilación, hay dos ubicaciones en las que puede buscar mensajes adicionales: la ventana de salida y los archivos de registro.
 
-### <a name="output-window"></a>Resultados (Ventana)
+#### <a name="output-window"></a>Resultados (Ventana)
 
 La ventana de salida es el mejor lugar para comenzar. En ella se muestran mensajes sobre los principales pasos de conexión y errores. Para ver los mensajes de Xamarin en la ventana de salida:
 
@@ -235,7 +235,7 @@ La ventana de salida es el mejor lugar para comenzar. En ella se muestran mensaj
 
 [![](troubleshooting-images/troubleshooting-image11.png "Selección de Xamarin en la pestaña Salida")](troubleshooting-images/troubleshooting-image11.png#lightbox)
 
-### <a name="log-files"></a>Archivos de registro
+#### <a name="log-files"></a>Archivos de registro
 
 Si la ventana de salida no incluye suficiente información para diagnosticar el problema, los archivos de registro son el siguiente lugar que debe consultar. Los archivos de registro contienen mensajes de diagnóstico adicionales que no aparecen en la ventana de salida. Para ver los archivos de registro:
 
@@ -262,13 +262,13 @@ Si la ventana de salida no incluye suficiente información para diagnosticar el 
 
 <a name="verboselogs" />
 
-### <a name="verbose-log-files"></a>Archivos de registro detallados
+#### <a name="verbose-log-files"></a>Archivos de registro detallados
 
 Si los archivos de registro normales todavía no proporcionan suficiente información para diagnosticar el problema, puede probar como último recurso habilitar el registro detallado. Los registros detallados también se prefieren para los informes de errores.
 
 1. Salga de Visual Studio.
 
-2. Inicie un [**símbolo del sistema para desarrolladores**](https://msdn.microsoft.com/en-us/library/ms229859(v=vs.110).aspx).
+2. Inicie un [**símbolo del sistema para desarrolladores**](https://msdn.microsoft.com/library/ms229859(v=vs.110).aspx).
 
 3. Ejecute el comando siguiente en el símbolo del sistema para iniciar Visual Studio con el registro detallado:
 
@@ -287,6 +287,12 @@ Si los archivos de registro normales todavía no proporcionan suficiente informa
    ```
 
 Si estos archivos de registro detallado no proporcionan suficiente información para solucionar el problema directamente, [registre un nuevo informe de errores](https://bugzilla.xamarin.com/newbug) y adjunte el archivo .zip del paso 5 y el archivo .log del paso 6.
+
+## <a name="troubleshooting-automatic-mac-provisioning"></a>Solución de problemas de aprovisionamiento automático del equipo Mac
+
+### <a name="ide-log-files"></a>Archivos de registro del IDE
+
+Si se produce algún problema con el [aprovisionamiento automático del equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#automatic-mac-provisioning), eche un vistazo a los registros del IDE de Visual Studio 2017, que se almacenan en **%LOCALAPPDATA%\Xamarin\Logs\15.0**.
 
 ## <a name="troubleshooting-build-and-deployment-errors"></a>Solución de problemas de errores de compilación e implementación
 
@@ -369,5 +375,5 @@ Si está solucionando un problema de compilación y quiere asegurarse de que el 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Conexión al equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-- [Conexión de un equipo Mac al entorno de Visual Studio con XMA (vídeo)](https://university.xamarin.com/lightninglectures/xamarin-mac-agent)
+- [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+- [Xamarin Mac Build Agent - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ) (Agente de compilación de Mac de Xamarin: clase rápida de Xamarin University)

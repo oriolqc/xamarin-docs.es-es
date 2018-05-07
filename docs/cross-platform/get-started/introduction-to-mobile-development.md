@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: 2f3950509134d3f643f0ea63b6725c1b4fe38409
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6be97162d1c371b9215d59ef77a7a5044e04f6b1
+ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-mobile-development"></a>Introducción al desarrollo móvil
 
@@ -42,7 +42,7 @@ Gracias al conjunto de características eficaces y completas de Xamarin, se llen
 
 
 > [!NOTE]
-> Esta serie de introducción se centra en los primeros pasos para compilar aplicaciones iOS y Android. Microsoft ofrece tutoriales para el desarrollo de Windows Phone [aquí](http://dev.windowsphone.com/en-us/develop). Para más información sobre el desarrollo multiplataforma con Xamarin (incluidas las aplicaciones UWP para Windows), lea la guía [Building Cross-Platform Applications (Creación de aplicaciones multiplataforma)](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md).
+> Esta serie de introducción se centra en los primeros pasos para compilar aplicaciones iOS y Android. Microsoft ofrece información sobre el [desarrollo de la Plataforma universal de Windows (UWP)](https://docs.microsoft.com/windows/uwp/develop/) para tabletas y equipos de escritorio. Para más información sobre el desarrollo multiplataforma con Xamarin (incluidas las aplicaciones UWP para Windows), lea la guía [Building Cross-Platform Applications (Creación de aplicaciones multiplataforma)](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md).
 
 
 

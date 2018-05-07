@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a8264d3ebd5f294b1b77fbbafd660825d5ce5180
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 859f84fbe329d79e9e1e6a8b7445fe2a7f03af23
+ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introducción a Xamarin.iOS para Visual Studio
 
@@ -37,38 +37,24 @@ Al desarrollar para iOS en Visual Studio es necesario cumplir algunos requisitos
 Hay una serie de opciones de configuración disponibles para poder decidir cuál funciona mejor para las necesidades de desarrollo. Se enumeran a continuación:
 
 -  Usar un equipo Mac como equipo de desarrollo principal y ejecutar una máquina virtual de Windows con Visual Studio instalado. Se recomienda usar software de máquina virtual como [Parallels](http://www.parallels.com/products/desktop/) o [VMWare](http://www.vmware.com/products/fusion/).
--  Usar un equipo Mac solo como host de compilación. En este caso simplemente se conectaría a la misma red que una máquina de Windows con las herramientas [necesarias](~/cross-platform/get-started/installation/windows.md#installation) instaladas.
+-  Usar un equipo Mac solo como host de compilación. En este caso, se conectaría a la misma red que una máquina de Windows con las herramientas [necesarias](~/cross-platform/get-started/installation/windows.md#installation) instaladas.
 
 
 En cualquier caso, debe seguir estos pasos:
 
-- [Instalación de las herramientas de Xamarin.iOS en su host de Mac](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Configurar el equipo Mac](~/ios/get-started/installation/windows/index.md#configuring)
+- [Instalación de Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 - [Instalar las herramientas de Xamarin en Windows](~/cross-platform/get-started/installation/windows.md)
-
-Para desarrollar con Xamarin en Visual Studio, debe usar **como mínimo** Visual Studio 2015 Professional o posterior. Xamarin **no funciona** con las ediciones Express de Visual Studio, ya que no admiten complementos.
 
 ## <a name="connecting-to-the-mac"></a>Conexión al equipo Mac
 
-Puede conectarse al host de compilación de Mac mediante el icono de la barra de herramientas de Visual Studio (siempre que haya una aplicación de iOS abierta):
+Para conectar Visual Studio a su host de compilación de Mac, siga las instrucciones que aparecen en la guía [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png "Icono Conectar con el equipo Mac")](introduction-to-xamarin-ios-for-visual-studio-images/xma1a.png#lightbox)
-
-O bien puede ir a **Herramientas > Opciones** en Visual Studio y seleccionar **Xamarin > Configuración de iOS**:
-
- [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png "Opción iOS")](introduction-to-xamarin-ios-for-visual-studio-images/xma-ios-options.png#lightbox)
-
-Puede cambiar al host de compilación de Mac si hace clic en el botón **Find Xamarin Mac Agent (Buscar Xamarin Mac Agent)**. Aparece la pantalla siguiente para actualizar el host de compilación de Mac:
-
-  [![](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png "Cuadro de diálogo Xamarin Mac Agent")](introduction-to-xamarin-ios-for-visual-studio-images/xma-dialog.png#lightbox)
 
 
 ## <a name="visual-studio-toolbar-overview"></a>Información general sobre la barra de herramientas de Visual Studio
 
 Xamarin iOS para Visual Studio agrega elementos a la barra de herramientas estándar y a la nueva barra de herramientas de iOS.
 A continuación se explican las funciones de estas barras de herramientas.
-
-
 
 ### <a name="standard-toolbar"></a>Barra de herramientas estándar
 
@@ -174,7 +160,7 @@ Para agregar objetos a la vista, use el panel **Cuadro de herramientas** para ar
 
 ### <a name="device-logging"></a>Registro de dispositivos
 
-En Visual Studio 2015 y superior, los paneles de registro de iOS y Android están unificados
+En Visual Studio 2017, los paneles de registro de iOS y Android están unificados.
 
 La nueva ventana de herramienta Registro de dispositivos para Visual Studio permite mostrar los registros de dispositivos iOS y Android. Se puede mostrar mediante la ejecución de cualquiera de los siguientes comandos:
 

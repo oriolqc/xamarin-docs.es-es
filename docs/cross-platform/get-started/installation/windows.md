@@ -1,26 +1,24 @@
 ---
-title: Instalación de Xamarin en Visual Studio para Windows
+title: Instalación de Xamarin en Visual Studio 2017
 ms.prod: xamarin
 ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 09/29/2017
-ms.openlocfilehash: 3a2de7154ac0ac00bb18fed65ec29173e7133eb3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0f1c014f316ff4f3eb7341fa9815475175d11937
+ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/23/2018
 ---
-# <a name="installing-xamarin-in-visual-studio-on-windows"></a>Instalación de Xamarin en Visual Studio para Windows
-
-Xamarin es gratuito y se incluye en todas las ediciones de Visual Studio.
+# <a name="installing-xamarin-in-visual-studio-2017"></a>Instalación de Xamarin en Visual Studio 2017
 
 <a name="requirements" />
 
 ## <a name="requirements"></a>Requisitos
 
-Para instalar las herramientas de Visual Studio para Xamarin, se necesita lo siguiente:
+Para instalar Xamarin en Visual Studio 2017, se necesita lo siguiente:
 
 1. Windows 7 o una versión posterior.
 
@@ -28,19 +26,16 @@ Para instalar las herramientas de Visual Studio para Xamarin, se necesita lo sig
 
 3. Xamarin para Visual Studio.
 
-Tenga en cuenta que Xamarin no se puede usar con las ediciones Express de Visual Studio debido a la falta de compatibilidad con los complementos.
-
 Para obtener más información sobre los requisitos previos para instalar y usar Xamarin, consulte [Requisitos del sistema](~/cross-platform/get-started/requirements.md).
-
 
 <a name="installation" />
 
 ## <a name="installation"></a>Instalación
 
-Xamarin se puede instalar como parte de una nueva instalación de Visual Studio.
+Xamarin se puede instalar como parte de una nueva instalación de Visual Studio 2017.
 Para ello, siga estos pasos:
 
-1. Descargue Visual Studio Community, Visual Studio Professional o Visual Studio Enterprise desde la página de [Visual Studio](https://www.visualstudio.com/vs/) (en la parte inferior se encuentran los vínculos de descarga).
+1. Descargue Visual Studio 2017 Community, Visual Studio Professional o Visual Studio Enterprise desde la página de [Visual Studio](https://www.visualstudio.com/vs/) (en la parte inferior se encuentran los vínculos de descarga).
 
 2. Haga doble clic en el paquete descargado para iniciar la instalación.
 
@@ -52,24 +47,23 @@ Para ello, siga estos pasos:
 
     ![Panel Resumen en el que aparecen las opciones de Xamarin que se van a instalar](windows-images/02-summary.png)
 
-5. Cuando esté listo para comenzar la instalación de Visual Studio, haga clic en el botón **Instalar** situado en la esquina inferior derecha:
+5. Cuando esté listo para comenzar la instalación de Visual Studio 2017, haga clic en el botón **Instalar** situado en la esquina inferior derecha:
 
     ![Ubicación del botón de instalación](windows-images/03-click-install.png)
 
-   En función de la edición de Visual Studio que vaya a instalar, el proceso de instalación puede tardar bastante tiempo. Puede usar las barras de progreso para supervisar la instalación:
+   En función de la edición de Visual Studio 2017 que vaya a instalar, el proceso de instalación puede tardar bastante tiempo. Puede usar las barras de progreso para supervisar la instalación:
 
     ![Captura de pantalla de ejemplo de las barras de progreso durante la instalación](windows-images/04-progress-bars.png)
 
-6. Cuando la instalación de Visual Studio haya finalizado, haga clic en el botón **Iniciar** para iniciar Visual Studio:
+6. Cuando haya finalizado la instalación de Visual Studio 2017, haga clic en el botón **Iniciar** para iniciar Visual Studio:
 
     ![Ubicación del botón Inicio](windows-images/05-launch.png)
-
 
 <a name="vs2017" />
 
 ### <a name="adding-xamarin-to-visual-studio-2017"></a>Agregar Xamarin a Visual Studio 2017
 
-Si Visual Studio 2017 ya está instalado, puede agregar Xamarin volviendo a ejecutar el instalador de Visual Studio para modificar las cargas de trabajo (consulte [Modificar Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obtener más información). Después, siga los pasos indicados anteriormente para instalar Xamarin.
+Si Visual Studio 2017 ya está instalado, puede agregar Xamarin si vuelve a ejecutar el instalador de Visual Studio 2017 para modificar las cargas de trabajo (consulte [Modificar Visual Studio](https://docs.microsoft.com/visualstudio/install/modify-visual-studio) para obtener más información). Después, siga los pasos indicados anteriormente para instalar Xamarin.
 
 Para obtener más información sobre la descarga e instalación de Visual Studio 2017, consulte [Instalación de Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
 
@@ -90,16 +84,15 @@ Para obtener más información sobre cómo encontrar la información de la versi
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-La instalación de Visual Studio Tools para Xamarin permite empezar a escribir código para sus aplicaciones, pero requiere un paso más para configurarlo y poder compilar e implementar las aplicaciones en el simulador, el emulador y el dispositivo. Consulte las siguientes guías para completar la instalación y empezar a compilar aplicaciones multiplataforma.
+La instalación de Xamarin en Visual Studio 2017 le permite empezar a escribir código para sus aplicaciones, pero requiere un paso más para configurarlo y poder compilar e implementar las aplicaciones en el simulador, el emulador y el dispositivo. Consulte las siguientes guías para completar la instalación y empezar a compilar aplicaciones multiplataforma.
 
 ### <a name="ios"></a>iOS
 
 Para obtener información detallada, consulte la guía de [instalación de Xamarin.iOS en Windows](~/ios/get-started/installation/windows/index.md). 
 
-1. [Instalación de las herramientas de Xamarin.iOS en Mac](~/ios/get-started/installation/windows/index.md#installation)
-2. [Configuración del Mac](~/ios/get-started/installation/windows/index.md#configuration)
-3. [Configuración del desarrollador de iOS](~/ios/get-started/installation/windows/index.md#developersetup) (para ejecutar la aplicación en el dispositivo).
-4. [Conexión de Visual Studio con el host de compilación del Mac](~/ios/get-started/installation/windows/index.md#connectingtomac)
+1. [Instalación de Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)
+2. [Conexión de Visual Studio con el host de compilación del equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+3. [Configuración del desarrollador de iOS](~/ios/get-started/installation/device-provisioning/index.md): necesaria para ejecutar la aplicación en el dispositivo
 5. [Simulador remoto de iOS](~/tools/ios-simulator.md)
 6. [Introducción a Xamarin.iOS para Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 

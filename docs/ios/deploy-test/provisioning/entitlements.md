@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 6ced541ca9df6fcae1643dc14c2e19807e972822
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f158ab7e51eb7610566ed052b326fecf016add8a
+ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-entitlements"></a>Trabajar con derechos
 
@@ -127,6 +127,9 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
     - Para buscar la cadena `$(TeamIdentifierPrefix)`, regístrese en developer.apple.com y vaya **Member Center > Your Account > Developer Account Summary** (Centro para miembros > Su cuenta > Resumen de la cuenta de desarrollador) para obtener el identificador de equipo (o el identificador personal en el caso de los desarrolladores). Será una cadena de 10 caracteres (por ejemplo, A93A5CM278).
     - La cadena `$(CFBundleIdentifier)` comienza por `iCloud` y se establece al crear el contenedor de iCloud, de acuerdo con los pasos descritos en la guía [Trabajar con capacidades](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md).
     - Se pueden usar los marcadores de posición $`(TeamIdentifierPrefix)` y `$(CFBundleIdentifier)`, que se sustituirán por los valores correctos en tiempo de compilación.
+
+> [!IMPORTANT]
+> Apple [proporciona herramientas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ayudar a los desarrolladores a tratar correctamente el Reglamento general de protección de datos (RGPD) de la Unión Europea.
 
 ### <a name="app-groups"></a>Grupos de aplicaciones
 
