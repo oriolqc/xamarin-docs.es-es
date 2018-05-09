@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 83fb7a03b3426631fcf772bcb3605fea44fd4f2b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3485a7ebf9c54c2aa084dd11f32cd028cbc68aff
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="user-interface"></a>Interfaz de usuario
 
@@ -51,7 +51,7 @@ Las imágenes se pueden compartir entre plataformas con Xamarin.Forms, se pueden
 
 ## <a name="layoutslayoutsindexmd"></a>[Diseños](layouts/index.md)
 
-Xamarin.Forms tiene varios diseños para organizar contenidos en pantalla. `StackLayout`, `Grid`, `AbsoluteLayout`, `ScrollView`, y `RelativeLayout` cada uno de ellos sirve para crear interfaces de usuario atractivas y capacidad de respuesta.
+Xamarin.Forms tiene varios diseños para organizar contenidos en pantalla. `StackLayout`, `Grid`, `FlexLayout`, `AbsoluteLayout`, `ScrollView`, y `RelativeLayout` cada uno de ellos sirve para crear interfaces de usuario atractivas y capacidad de respuesta.
 
 ## <a name="listviewlistviewindexmd"></a>[ListView](listview/index.md)
 
@@ -84,6 +84,10 @@ Xamarin.Forms tiene varias vistas para presentar y recibir texto. Vistas de text
 ## <a name="themesthemesindexmd"></a>[Temas](themes/index.md)
 
 Los temas de Xamarin.Forms definen un aspecto visual concreto para los controles estándares. Una vez que agregue un tema al diccionario de recursos de la aplicación, cambiará la apariencia de los controles estándar.
+
+## <a name="visual-state-managervisual-state-managermd"></a>[Administrador de estado Visual](visual-state-manager.md)
+
+El Administrador de estado Visual proporciona una forma estructurada desencadenan cambios en la interfaz de usuario del código, incluidos el diseño que se adapta a los cambios en el tamaño o la orientación del dispositivo.
 
 ## <a name="webviewwebviewmd"></a>[WebView](webview.md)
 

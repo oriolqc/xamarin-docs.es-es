@@ -6,12 +6,12 @@ ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 02/16/2018
-ms.openlocfilehash: 1cb151cc5c741a020fcbb398441ed4958ec5980b
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.date: 05/04/2018
+ms.openlocfilehash: f4fe1bd753260f05dedb452655572d290c0781d0
+ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Enlaza los servicios en Xamarin.Android
 
@@ -42,8 +42,8 @@ Esta guía describe cómo extender el `Service` clase para implementar un servic
 Hay tres componentes que deben implementarse para una aplicación Android consumir un servicio dependiente:
 
 1. **Ampliar la `Service` clase e implementar los métodos de devolución de llamada de ciclo de vida de** &ndash; esta clase contendrá el código que realizará las tareas que se le pedirá del servicio. Esto se tratará con más detalle a continuación.
-2. **Cree una clase que implementa `IServiceConnection`**  &ndash; este objeto contiene los métodos de devolución de llamada que notifican al cliente cuando se conecta a (o se perdió la conexión) del servicio. La conexión de servicio también proporciona una referencia a un objeto que el cliente puede utilizar para interactuar directamente con el servicio. Esta referencia se conoce como el _enlazador_.
-3. **Cree una clase que implementa `IBinder`**  &ndash; A _enlazador_ implementación proporciona la API que usa un cliente para comunicarse con el servicio. El enlazador puede proporcionar una referencia al servicio enlazado, permitir que los métodos que deben invocarse directamente o bien el enlazador puede proporcionar a una API que encapsula y oculte el servicio dependiente de la aplicación cliente. Un `IBinder` debe proporcionar el código necesario para las llamadas a procedimiento remoto. No es necesario (o recomendado) para implementar el `IBinder` interfaz directamente. Un `IBinder` aplicaciones Instead deben extenderse el `Binder` que proporciona la mayor parte de la funcionalidad básica que requiere un `IBinder`.
+2. **Cree una clase que implementa `IServiceConnection`**  &ndash; esta interfaz proporciona métodos de devolución de llamada se le invoca Android para notificar al cliente cuando ha cambiado la conexión con el servicio, es decir, el cliente ha conectado o desconectado para el servicio. La conexión de servicio también proporciona una referencia a un objeto que el cliente puede utilizar para interactuar directamente con el servicio. Esta referencia se conoce como el _enlazador_.
+3. **Cree una clase que implementa `IBinder`**  &ndash; A _enlazador_ implementación proporciona la API que usa un cliente para comunicarse con el servicio. El enlazador puede proporcionar una referencia al servicio enlazado, permitir que los métodos que deben invocarse directamente o bien el enlazador puede proporcionar a una API que encapsula y oculte el servicio dependiente de la aplicación cliente. Un `IBinder` debe proporcionar el código necesario para las llamadas a procedimiento remoto. No es necesario (o recomendado) para implementar el `IBinder` interfaz directamente. En su lugar, deben ampliar aplicaciones la `Binder` tipo que proporciona la mayor parte de la funcionalidad básica que requiere un `IBinder`.
 4. **Iniciar y enlazar a un servicio** &ndash; una vez creadas la conexión de servicio, el enlazador y el servicio de la aplicación Android es responsable de iniciar el servicio y enlazar a él.
 
 Cada uno de estos pasos se describen en las siguientes secciones con más detalle.

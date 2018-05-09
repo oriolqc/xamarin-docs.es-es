@@ -1,17 +1,17 @@
 ---
-title: Abrir pantallas
+title: Abrir pantallas para las aplicaciones de Xamarin.iOS
 description: En este artículo se explica cómo crear una pantalla de inicio de la aplicación para todos los dispositivos de iOS, en cualquier resolución y la orientación, con un solo guión gráfico unificado.
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 01/19/2018
-ms.openlocfilehash: 991c2f30bcca1969e336f7269ad2a22ce6245b95
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/02/2018
+ms.openlocfilehash: d5a267bfa8655a9b9c6d4dba9d8cf9d16624ba9b
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="launch-screens"></a>Abrir pantallas
 
@@ -96,17 +96,19 @@ En iOS 8 (y versiones posteriores), el programador puede crear un guion especial
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. Cree un nuevo proyecto. En Visual Studio, seleccione **archivo > Nuevo > proyecto**y, a continuación, elija **ver solo la aplicación (iPhone)**:
-    
-    ![La ventana de nuevo proyecto, con la única aplicación de vista (iPhone) seleccionada](launch-screens-images/launch01-vs.png)
+1. Cree un nuevo proyecto. En Visual Studio, seleccione **archivo > Nuevo > proyecto > Visual C# > iPhone & iPad > iOS App (Xamarin)**:
 
-    - Denomine el proyecto, elija una ubicación y seleccione **Aceptar**.
+    ![La ventana de nuevo proyecto, con iOS (Xamarin) de la aplicación seleccionada](launch-screens-images/launch01.w157.png)
+
+    Seleccione el **ver solo la aplicación** plantilla y, a continuación, haga clic en **Aceptar**:
+
+    ![Plantilla de aplicación de la vista única](launch-screens-images/launch01-2.w157.png)
 
 2. Si **recursos > LaunchScreen.xib** existe en el **el Explorador de soluciones**, eliminar, haga doble clic en el archivo y elija **eliminar**. Este archivo se sustituirán por un guión gráfico en el paso siguiente.
 
 3. Crear un guión gráfico que se usará como la pantalla Inicio. En el **el Explorador de soluciones**, haga doble clic en el proyecto y elija **Agregar > nuevo elemento...**  seguido **guión gráfico vacío**. Nombre de este guión gráfico **LaunchScreen.storyboard** y haga clic en **agregar**:
 
-    ![La ventana Agregar nuevo elemento, con el guión gráfico vacío seleccionado](launch-screens-images/launch03-vs.png)
+    ![La ventana Agregar nuevo elemento, con el guión gráfico vacío seleccionado](launch-screens-images/launch03.w157.png)
 
 4. Configurar el proyecto para usar **LaunchScreen.storyboard** como su guión gráfico iniciar pantalla:
 
@@ -119,7 +121,7 @@ En iOS 8 (y versiones posteriores), el programador puede crear un guion especial
 
     - En el **el Explorador de soluciones**, haga doble clic en **Asset catálogos** y seleccione **agregar el catálogo de activos**. Nombre de este nuevo catálogo de Asset **activos**:
 
-    ![La ventana Agregar nuevo elemento, con el catálogo de activos seleccionada](launch-screens-images/launch05-vs.png)
+    ![La ventana Agregar nuevo elemento, con el catálogo de activos seleccionada](launch-screens-images/launch05.w157.png)
 
     - Agregar un nuevo conjunto de imagen a la **activos** catálogo de activos, como se describe en el [agregar imágenes a un conjunto de imágenes de catálogo de Asset](~/ios/app-fundamentals/images-icons/displaying-an-image.md) sección de la [mostrar una imagen](~/ios/app-fundamentals/images-icons/displaying-an-image.md) guía.
 

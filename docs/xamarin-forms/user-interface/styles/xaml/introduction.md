@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
 ms.openlocfilehash: 453c4d6edafd6493272f8ca0435fcc86e2f3b2f7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introduction-to-styles"></a>Introducción a los estilos
 
@@ -142,5 +142,5 @@ Aplicaciones de Xamarin.Forms suelen contengan varios controles que tienen un as
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Style](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
-- [Setter](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/)
+- [Estilo](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/)
+- [Establecedor](https://developer.xamarin.com/api/type/Xamarin.Forms.Setter/)

@@ -1,44 +1,24 @@
 ---
-title: Estilos
+title: Aplicaciones de estilo Xamarin.Forms
 description: Usar estilos para personalizar la apariencia
 ms.prod: xamarin
-ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
+ms.assetid: EABF5072-B89B-4356-B7B3-1C6B40358926
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/17/2016
-ms.openlocfilehash: 7a19f7597ee17282bc8b41e7f0e7e3ade2361a50
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 28/04/2018
+ms.openlocfilehash: f6a80084ea68bb57a0c8aa61ad15d16dd67c6fc4
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="styles"></a>Estilos
+# <a name="styling-xamarinforms-apps"></a>Aplicaciones de estilo Xamarin.Forms
 
-## <a name="introductionintroductionmd"></a>[Introducción](introduction.md)
+## <a name="styling-xamarinforms-apps-using-xaml-stylesxamlindexmd"></a>[Aplicaciones de Xamarin.Forms de estilo con estilos de XAML](xaml/index.md)
 
-Aplicaciones de Xamarin.Forms suelen contengan varios controles que tienen un aspecto idéntico. Configuración de la apariencia de cada control individual puede ser repetitiva y es proclive a errores. En su lugar, estilos pueden crearse que personalizan la apariencia de los controles por agrupación y propiedades de configuración disponibles en el tipo de control.
+Aplicar un estilo a una aplicación de Xamarin.Forms tradicionalmente se logra mediante la [ `Style` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Style/) clase agrupar una colección de valores de propiedad en un objeto que, a continuación, se pueden aplicar a varias instancias de elementos visuales. Esto ayuda a reducir el marcado repetitivo y permite un aspecto aplicaciones cambiarse más fácilmente.
 
-## <a name="explicit-stylesexplicitmd"></a>[Estilos explícitos](explicit.md)
+## <a name="styling-xamarinforms-apps-using-cascading-style-sheetscssindexmd"></a>[Aplicar un estilo a aplicaciones de Xamarin.Forms con hojas de estilos en cascada](css/index.md)
 
-Un *explícita* estilo es aquel que se aplica de manera selectiva a los controles estableciendo sus [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) propiedades.
-
-## <a name="implicit-stylesimplicitmd"></a>[Estilos implícitos](implicit.md)
-
-Un *implícita* estilo es aquel que se usa por todos los controles de la misma [ `TargetType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/), sin necesidad de cada control para hacer referencia al estilo.
-
-## <a name="global-stylesapplicationmd"></a>[Estilos globales](application.md)
-
-Estilos pueden ponerse a disposición globalmente agregándolos a la aplicación [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/). Esto ayuda a evitar la duplicación de estilos a través de páginas o controles.
-
-## <a name="style-inheritanceinheritancemd"></a>[Herencia de estilo](inheritance.md)
-
-Estilos pueden heredar de otros estilos para reducir la duplicación y volver a usar.
-
-## <a name="dynamic-stylesdynamicmd"></a>[Estilos dinámicos](dynamic.md)
-
-Estilos no responder a los cambios de propiedad y permanecen sin cambios para la duración de una aplicación. Sin embargo, las aplicaciones pueden responder a los cambios de estilo dinámicamente en tiempo de ejecución mediante el uso de recursos dinámicos.
-
-## <a name="device-stylesdevicemd"></a>[Estilos de dispositivo](device.md)
-
-Xamarin.Forms incluye seis *dinámica* estilos, conocidos como *dispositivo* estilos, en la [ `Devices.Styles` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) clase. Todos los seis estilos pueden aplicarse a [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) solo instancias.
+Xamarin.Forms es compatible con los elementos de estilo visual con hojas de estilos en cascada (CSS). Una hoja de estilos se compone de una lista de reglas, con cada regla que consta de uno o varios selectores y un bloque de declaración.

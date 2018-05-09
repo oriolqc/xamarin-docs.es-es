@@ -6,12 +6,12 @@ ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: a6cb08f19aac46ffa089914e28c732660caa52b2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/11/2018
+ms.openlocfilehash: 2d9f2198dbb88e7614944ac73729a4e6eca42647
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-a-jar"></a>Enlazar un. JAR
 
@@ -81,7 +81,7 @@ Antes de empezar con los pasos siguientes, descargue [2.x.x.jar picasso](http://
 
 En primer lugar, cree un nuevo proyecto de biblioteca de enlaces. En Visual Studio para Mac o en Visual Studio, cree una nueva solución y seleccione la *biblioteca enlaces Android* plantilla. (Las capturas de pantalla en este tutorial utilizan Visual Studio, pero Visual Studio para Mac es muy similar). Llame a la solución **JarBinding**: 
 
-[![Crear proyecto de biblioteca de JarBinding](binding-a-jar-images/01-new-bindings-library-sml.png)](binding-a-jar-images/01-new-bindings-library.png#lightbox)
+[![Crear proyecto de biblioteca de JarBinding](binding-a-jar-images/01-new-bindings-library-sml.w157.png)](binding-a-jar-images/01-new-bindings-library.w157.png#lightbox)
 
 La plantilla incluye una **archivos JAR** carpeta donde se agrega la. JAR(s) al proyecto de biblioteca de enlaces. Haga clic en el **archivos JAR** carpeta y seleccione **Agregar > elemento existente**: 
 
@@ -130,7 +130,7 @@ En los pasos siguientes, crearemos una aplicación mínima que utiliza la biblio
 
 En primer lugar, cree una nueva aplicación de Xamarin.Android que utiliza la biblioteca de enlaces. Haga clic en la solución y seleccione **Agregar nuevo proyecto**; asigne al nuevo proyecto **BindingTest**. Estamos creando esta aplicación en la misma solución que la biblioteca de enlaces para simplificar este tutorial; Sin embargo, la aplicación que utiliza la biblioteca de enlaces en su lugar, puede residir en una solución distinta: 
 
-[![Agregar nuevo proyecto BindingTest](binding-a-jar-images/07-add-new-project-sml.png)](binding-a-jar-images/07-add-new-project.png#lightbox)
+[![Agregar nuevo proyecto BindingTest](binding-a-jar-images/07-add-new-project-sml.w157.png)](binding-a-jar-images/07-add-new-project.w157.png#lightbox)
 
 Haga clic en el **referencias** nodo de la **BindingTest** de proyecto y seleccione **Agregar referencia...** :
 

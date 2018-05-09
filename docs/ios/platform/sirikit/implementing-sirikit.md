@@ -6,12 +6,12 @@ ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/17/2017
-ms.openlocfilehash: 5fdc05de19799ce7b553428c23f860186909bcbb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/03/2018
+ms.openlocfilehash: a4f38e93cae3c9577a0b1e32067da2cfd2e4796d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="implementing-sirikit"></a>Implementar SiriKit
 
@@ -95,7 +95,7 @@ Haga lo siguiente:
 2. Haga doble clic en el nombre de la solución en el **el Explorador de soluciones** y seleccione **agregar** > **nuevo proyecto...** .
 3. Seleccione **Visual C#** > **proyecto compartido** y haga clic en el **siguiente** botón: 
 
-    [![](implementing-sirikit-images/prep02w.png "Seleccione la biblioteca de clases")](implementing-sirikit-images/prep02w.png#lightbox)
+    [![](implementing-sirikit-images/prep02.w157-sml.png "Seleccione la biblioteca de clases")](implementing-sirikit-images/prep02.w157.png#lightbox)
 4. Escriba `MonkeyChatCommon` para el **nombre** y haga clic en el **crear** botón.
 5. Haga doble clic en el **referencias** carpeta de la aplicación principal en la **el Explorador de soluciones** y seleccione **editar referencias...** . Compruebe el **MonkeyChatCommon** del proyecto y haga clic en el **Aceptar** botón: 
 
@@ -459,7 +459,7 @@ Para agregar un `AppIntentVocabulary.plist` al proyecto de la aplicación, haga 
 
 1. Haga clic en el nombre del proyecto en el **el Explorador de soluciones** y seleccione **agregar** > **nuevo archivo...**   >  **iOS**:
 
-    [![](implementing-sirikit-images/plist01.png "Agregar una lista de propiedades")](implementing-sirikit-images/plist01.png#lightbox) 
+    [![](implementing-sirikit-images/plist01.png "Agregar una lista de propiedades")](implementing-sirikit-images/plist01.png#lightbox)
 2. Haga doble clic en el `AppIntentVocabulary.plist` un archivo en el **el Explorador de soluciones** para abrirlo y editarlo.
 3. Haga clic en el **+** para agregar una clave, establezca el **nombre** a `ParameterVocabularies` y **tipo** a `Array`:
 
@@ -521,9 +521,10 @@ Para agregar un `AppIntentVocabulary.plist` al proyecto de la aplicación, haga 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. Haga clic en el nombre del proyecto en el **el Explorador de soluciones** y seleccione **agregar** > **nuevo archivo...**   >  **iOS**:
+1. Haga clic en el nombre del proyecto en el **el Explorador de soluciones** y seleccione **Agregar > nuevo elemento... > Apple > lista de propiedades > Info.plist**:
 
-    [![](implementing-sirikit-images/plist01w.png "Agregar un nuevo Info.plist")](implementing-sirikit-images/plist01w.png#lightbox) 
+    [![](implementing-sirikit-images/plist01.w157-sml.png "Agregar un nuevo Info.plist")](implementing-sirikit-images/plist01.w157.png#lightbox)
+
 2. Haga doble clic en el `AppIntentVocabulary.plist` un archivo en el **el Explorador de soluciones** para abrirlo y editarlo.
 3. Haga clic en el **+** para agregar una clave, establezca el **nombre** a `ParameterVocabularies` y **tipo** a `Array`:
 
@@ -625,11 +626,11 @@ Para agregar una extensión de intentos para la solución, haga lo siguiente:
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Haga doble clic en el **nombre de la solución** en el **el Explorador de soluciones** y seleccione **agregar** > **Agregar nuevo proyecto...** .
-2. En el cuadro de diálogo seleccione **iOS** > **extensiones** > **intención extensión** y haga clic en el **siguiente** botón: 
+2. En el cuadro de diálogo seleccione **Visual C# > iOS extensiones > extensión intención** y haga clic en el **siguiente** botón:
 
-    [![](implementing-sirikit-images/intents05w.png "Seleccionar extensión intención")](implementing-sirikit-images/intents05w.png#lightbox)
+    [![](implementing-sirikit-images/intents05.w157-sml.png "Seleccionar extensión intención")](implementing-sirikit-images/intents05.w157.png#lightbox)
 3. A continuación, escriba un **nombre** para el intento de extensión y haga clic en el **Aceptar** botón.
-5. En el **el Explorador de soluciones**, haga doble clic en el **referencias** carpeta de la extensión de intención recién creado. Compruebe el nombre del proyecto de biblioteca de código compartido común (que la aplicación creada anteriormente) y haga clic en el **Aceptar** botón: 
+1. En el **el Explorador de soluciones**, haga doble clic en el **referencias** carpeta de la extensión de calidades recién creado y elija **Agregar > referencia**. Compruebe el nombre del proyecto de biblioteca de código compartido común (que la aplicación creada anteriormente) y haga clic en el **Aceptar** botón:
 
     [![](implementing-sirikit-images/intents08w.png "Seleccione el nombre del proyecto de biblioteca de código compartido común")](implementing-sirikit-images/intents08w.png#lightbox)
     

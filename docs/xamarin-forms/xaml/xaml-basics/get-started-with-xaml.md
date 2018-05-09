@@ -6,12 +6,12 @@ ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 10/25/2017
-ms.openlocfilehash: f8032966b49f6f023642b0d1338e8c5d740b66e0
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 04/10/2018
+ms.openlocfilehash: bc535160816ad186baaa5e802eceb6ae40347d75
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introducción a XAML
 
@@ -23,9 +23,9 @@ Para comenzar a editar el primer archivo XAML, utilice Visual Studio o Visual St
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-En Windows, use Visual Studio para seleccionar **archivo > Nuevo > proyecto** en el menú. En el **nuevo proyecto** cuadro de diálogo, seleccione **Visual C# > multiplataforma** a la izquierda y, a continuación, **aplicación de plataforma cruzada (Xamarin.Forms o nativo)** de la lista en el centro. 
+En Windows, use Visual Studio para seleccionar **archivo > Nuevo > proyecto** en el menú. En el **nuevo proyecto** cuadro de diálogo, seleccione **Visual C# > multiplataforma** situado a la izquierda y, a continuación, **Mobile App (Xamarin.Forms)** de la lista en el centro. 
 
-![](get-started-with-xaml-images/win/newprojectdialog.png "Cuadro de diálogo nuevo proyecto")
+![](get-started-with-xaml-images/win/newprojectdialog.w157.png "Cuadro de diálogo nuevo proyecto")
 
 Seleccione una ubicación para la solución, asígnele un nombre de **XamlSamples** (o lo que prefiere) y presione **Aceptar**.
 
@@ -226,7 +226,7 @@ Compruebe que el programa aún compila e implementa antes de continuar.
 
 Para agregar otros basadas en XAML `ContentPage` clases al proyecto, seleccione la **XamlSamples** PCL proyecto e invocar el **proyecto > Agregar nuevo elemento** elemento de menú. A la izquierda de la **Agregar nuevo elemento** cuadro de diálogo, seleccione **Visual C#** y **Xamarin.Forms**. En la lista seleccione **página contenido** (no **página de contenido (C#)**, que crea una página de solo código, o **vista de contenido**, que no es una página). Asigne un nombre, por ejemplo, de la página **HelloXamlPage.xaml**:
 
-![](get-started-with-xaml-images/win/addnewitemdialog.png "Agregar nuevo elemento de cuadro de diálogo")
+![](get-started-with-xaml-images/win/addnewitemdialog.w157.png "Agregar nuevo elemento de cuadro de diálogo")
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 

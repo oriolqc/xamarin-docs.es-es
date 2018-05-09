@@ -4,14 +4,14 @@ description: Controlar el flujo de información entre el origen y de destino
 ms.prod: xamarin
 ms.assetid: D087C389-2E9E-47B9-A341-5B14AC732C45
 ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 01/05/2018
-ms.openlocfilehash: fdcba9b680bd548371883788af9e4eda755d91df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: charlespetzold
+ms.author: chape
+ms.date: 05/01/2018
+ms.openlocfilehash: 1aa612d8b855158f09bc0aeaad1520a44b3d9637
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="binding-mode"></a>El modo de enlace
 
@@ -58,6 +58,7 @@ El modo de enlace se especifica con un miembro de la [ `BindingMode` ](https://d
 - [`TwoWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.TwoWay/) &ndash; datos van ambos sentidos entre el origen y de destino
 - [`OneWay`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWay/) &ndash; datos van de origen a destino
 - [`OneWayToSource`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; datos van de destino a origen
+- [`OneTime`](https://developer.xamarin.com/api/field/Xamarin.Forms.BindingMode.OneWayToSource/) &ndash; datos van desde el origen al destino, pero solo cuando la `BindingContext` cambios (nuevas con Xamarin.Forms 3.0)
 
 Cada propiedad enlazable tiene el valor predeterminado es modo de enlace que se establece cuando se crea la propiedad enlazable y que está disponible en la [ `DefaultBindingMode` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableProperty.DefaultBindingMode/) propiedad de la `BindableProperty` objeto. Este modo de enlace predeterminado indica el modo en vigor cuando esta propiedad es un destino de enlace de datos.
 
@@ -94,6 +95,15 @@ Propiedades enlazables de sólo lectura tienen un modo de enlace predeterminado 
 - `SelectedItem` propiedad de `ListView`
 
 El motivo es que un enlace en el `SelectedItem` propiedad debería intentar establecer el origen de enlace. Un ejemplo más adelante en este artículo invalida este comportamiento.
+
+### <a name="one-time-bindings"></a>Enlaces de un solo uso
+
+Varias propiedades tienen un modo de enlace predeterminado de `OneTime`. Estos son:
+
+- `IsTextPredictionEnabled` propiedad de `Entry`
+- `Text`, `BackgroundColor`, y `Style` propiedades de `Span`.
+
+Destino de propiedades con un modo de enlace de `OneTime` sólo se actualizan cuando cambia el contexto de enlace. Para los enlaces en estas propiedades de destino, esto simplifica la infraestructura de enlace ya no es necesario supervisar los cambios en las propiedades del origen.
 
 ## <a name="viewmodels-and-property-change-notifications"></a>ViewModels y notificaciones de cambio de propiedad
 
@@ -198,6 +208,8 @@ public class HslColorViewModel : INotifyPropertyChanged
 Cuando el `Color` cambios de propiedad, el método estático `GetNearestColorName` método en el `NamedColor` clase (también incluido en el **DataBindingDemos** solución) Obtiene el nombre de color más próximo y establece el `Name` propiedad. Esto `Name` propiedad tiene una privada `set` descriptor de acceso, por lo que no se puede establecer desde fuera de la clase.
 
 Cuando un modelo de vista se establece como un origen de enlace, la infraestructura de enlace asocia un controlador para el `PropertyChanged` eventos. De esta manera, el enlace puede recibir una notificación de cambios en las propiedades y, a continuación, puede establecer las propiedades de destino de los valores cambiados.
+
+Sin embargo, cuando una propiedad de destino (o la `Binding` definición en una propiedad de destino) tiene un `BindingMode` de `OneTime`, no es necesario para la infraestructura de enlaces adjuntar un controlador en el `PropertyChanged` eventos. La propiedad de destino se actualiza solo cuando la `BindingContext` cambios y no cuando se cambia la misma propiedad de origen. 
 
 El **Selector de Color sencillo** archivo XAML crea una instancia el `HslColorViewModel` en el diccionario de recursos de la página y se inicializa el `Color` propiedad. El `BindingContext` propiedad de la `Grid` está establecido en un `StaticResource` extensión para hacer referencia a ese recurso de enlace:
 

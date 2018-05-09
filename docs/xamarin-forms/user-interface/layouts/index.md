@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 864e81b6955fd5138c4055a3f202695803139ac6
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 2f57ac5b5b54b2606618c5e59fb544cae7c77e88
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="layouts"></a>Diseños de
 
@@ -28,6 +28,7 @@ A continuación, se describe cada control de diseño, así como información det
 * **[AbsoluteLayout](absolute-layout.md)**  &ndash; permiten organizar vistas mediante el establecimiento de coordenadas y cambio de tamaño en cuanto a los valores absolutos o proporciones. AbsoluteLayout puede utilizarse para vistas de las capas, así como fijarlos a la izquierda, derecha o centrado.
 * **[RelativeLayout](relative-layout.md)**  &ndash; usada para organizar vistas mediante el establecimiento de restricciones con respecto a las dimensiones y la posición de sus elementos primarios.
 * **[Cuadrícula](grid.md)**  &ndash; usada para organizar vistas en una cuadrícula. Filas y columnas se pueden especificar en cuanto a los valores absolutos o proporciones.
+* **[FlexLayout](flex-layout.md)**  &ndash; usada para organizar vistas horizontal o verticalmente con ajuste.
 * **[ScrollView](scroll-view.md)**  &ndash; utilizan para proporcionar desplazamiento cuando una vista no cabe por completo dentro de los límites de la pantalla.
 * **[LayoutOptions](layout-options.md)**  &ndash; Definir alineación y expansión de una vista, en relación con su elemento primario.
 * **[Entrada transparencia](#input_transparency)**  &ndash; especifica si un elemento recibe la entrada.
@@ -59,6 +60,23 @@ Para obtener un ejemplo de cuándo `StackLayout` podría ser una buena elección
   <Button HorizontalOptions="End" Text="Button" />
 </StackLayout>
 ```
+
+### <a name="flexlayoutflex-layoutmd"></a>[FlexLayout](flex-layout.md)
+
+El `FlexLayout` es similar a `StackLayout` en que muestra vistas secundarias horizontal o verticalmente:
+
+```xaml
+<FlexLayout Direction="Column"
+            AlignItems="Center"
+            JustifyContent="SpaceEvenly">
+        
+    <Label Text="FlexLayout in Action" />
+    <Button Text="Button" />
+    <Label Text="Another Label" />
+</FlexLayout>
+```
+
+Sin embargo, si hay demasiados elementos secundarios para caber en una sola fila o columna propio, `FlexLayout` también es capaz de esas vistas de ajuste. `FlexLayout` se basa en el módulo de diseño CSS cuadro Flexible y tiene muchas de las mismas opciones integradas para colocar y alinear a sus elementos secundarios.
 
 ### <a name="absolutelayoutabsolute-layoutmd"></a>[AbsoluteLayout](absolute-layout.md)
 

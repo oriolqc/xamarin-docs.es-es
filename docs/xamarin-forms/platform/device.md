@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 471616dffc700cf93a9f6435565222d7628bf165
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 1fc3fb17ec97ce9028abbf63cdedbfc5fec12204
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="device-class"></a>Clase de dispositivo
 
@@ -86,6 +86,28 @@ if (Device.Idiom == TargetIdiom.Phone) {
     // layout views horizontally for a larger display (tablet or desktop)
 }
 ```
+
+## <a name="deviceflowdirection"></a>Device.FlowDirection
+
+El [ `Device.FlowDirection` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) valor recupera un [ `FlowDirection` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FlowDirection/) valor de enumeración que representa la dirección del flujo actual que usa el dispositivo. Dirección de flujo es la dirección en la que el ojo examina los elementos de interfaz de usuario en la página. Los valores de la enumeración son:
+
+- [`LeftToRight`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.LeftToRight/)
+- [`RightToRight`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.RightToLeft/)
+- [`MatchParent`](https://developer.xamarin.com/api/field/Xamarin.Forms.FlowDirection.MatchParent/)
+
+En XAML, el [ `Device.FlowDirection` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.FlowDirection/) valor se puede recuperar mediante el `x:Static` extensión de marcado:
+
+```xaml
+<ContentPage ... FlowDirection="{x:Static Device.FlowDirection}"> />
+```
+
+El código equivalente en C# es:
+
+```csharp
+this.FlowDirection = Device.FlowDirection;
+```
+
+Para obtener más información acerca de la dirección de flujo, vea [localización de derecha a izquierda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
 <a name="Device_Styles" />
 

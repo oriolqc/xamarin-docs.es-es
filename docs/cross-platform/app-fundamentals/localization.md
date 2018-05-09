@@ -6,11 +6,11 @@ ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 52f4c51258d1b635adcd697bccb7dd553acc0d5e
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
-ms.translationtype: MT
+ms.openlocfilehash: 2e108947ce8237b9f48b201e60c2252cfb0bc376
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="localization"></a>Localización
 
@@ -18,7 +18,7 @@ Esta guía presentan los conceptos que subyacen *internacionalización* y *local
 
 Si desea omitir directamente a los detalles técnicos de localizar aplicaciones Xamarin, comience con uno de estos artículos de procedimientos específicos de la plataforma:
 
-- [**Xamarin.Forms** ](~/xamarin-forms/app-fundamentals/localization.md) localización entre plataformas con RESX (archivos).
+- [**Xamarin.Forms** ](~/xamarin-forms/app-fundamentals/localization/index.md) localización entre plataformas con RESX (archivos).
 - [**Xamarin.iOS** ](~/ios/app-fundamentals/localization/index.md) localización de plataforma nativa.
 - [**Xamarin.Android** ](~/android/app-fundamentals/localization.md) localización de plataforma nativa.
 
@@ -302,7 +302,7 @@ Estos conceptos se pueden aplicar a las diversas técnicas de internacionalizaci
 
 Seguir leyendo detalles técnicos para la plataforma que le interesen:
 
-- [Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization.md) localización entre plataformas con RESX (archivos).
+- [Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md) localización entre plataformas con RESX (archivos).
 - [Xamarin.iOS](~/ios/app-fundamentals/localization/index.md) localización de plataforma nativa.
 - [Xamarin.Android](~/android/app-fundamentals/localization.md) localización de plataforma nativa.
 

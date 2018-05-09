@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: 96ee8343bb2b99fdc0be9437aaa7737a70b8c19c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5ee04614a500618846ad3acf2a38f279351d6e9d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="ios-localization"></a>Localización de iOS
 
@@ -359,5 +359,5 @@ Puede obtener más información acerca de i18n y L10n para aplicaciones de iOS, 
 - [Tasky (guión gráfico localizado) (ejemplo)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10nStoryboard)
 - [Guía de localización de Apple](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html)
 - [Información general de localización entre plataformas](~/cross-platform/app-fundamentals/localization.md)
-- [Localización de Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization.md)
+- [Localización de Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [Localización de Android](~/android/app-fundamentals/localization.md)
