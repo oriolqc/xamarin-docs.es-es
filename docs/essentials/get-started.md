@@ -2,15 +2,14 @@
 title: Xamarin.Essentials
 description: Xamarin.Essentials proporciona una API sencilla multiplataforma que funciona con iOS, Android o UWP aplicación que puede tener acceso desde compartir código con independencia de cómo se crea la interfaz de usuario.
 ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 960682c4b7776214ab303e861be4e3a8bfa9388a
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: 700c148424da7e50a519659bf9766ce248e66dda
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="get-started-with-xamarinessentials"></a>Empezar a trabajar con Xamarin.Essentials
 

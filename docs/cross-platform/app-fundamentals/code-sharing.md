@@ -3,15 +3,14 @@ title: Opciones de código compartido
 description: 'Este documento compara los distintos métodos para compartir el código entre los proyectos multiplataforma: proyectos compartidos, bibliotecas de clases Portable y .NET estándar, incluidas las ventajas y desventajas de cada uno.'
 ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 97e6167304ebf50a149fce379eb34e8a46c8d3e8
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: de2e24b1746568510c84fb163efa8562ab47cf00
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="sharing-code-overview"></a>Uso compartido de información general del código
 

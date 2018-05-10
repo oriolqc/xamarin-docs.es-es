@@ -3,15 +3,14 @@ title: 'Parte 1: crear un MonoGame multiplataforma'
 description: Este tutorial muestra cómo crear un nuevo proyecto para iOS y Android mediante la opción MonoGame. El resultado es un Visual Studio para la solución de Mac con un proyecto de código compartido multiplataforma, así como un proyecto para cada plataforma. Este proyecto mostrará una pantalla azul vacía cuando se ejecuta.
 ms.prod: xamarin
 ms.assetid: FC69E69B-04D4-45DF-9BBF-2A6CDEAD9B2F
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 1c859c5a8d8c5d8b0539d4158895e816d47d3d5e
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: bd7990b94e678c205f9ce636f4eb0d28180fc6ec
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>Parte 1: crear un MonoGame multiplataforma
 
@@ -25,7 +24,7 @@ Cuando hayamos terminados, comenzaremos tiene un proyecto que tiene la estructur
 
 ## <a name="adding-monogame-to-visual-studio-for-mac"></a>Agregar MonoGame a Visual Studio para Mac
 
-MonoGame puede agregarse como un complemento de Visual Studio para Mac. En el equipo Mac, seleccione **Visual Studio para Mac** > **Administrador de complementos... ** . En Windows, seleccione ** Herramientas ** > **Administrador de complementos... ** . Seleccione el **galería** , expanda la **desarrollo de juegos** categoría y seleccione **MonoGame Addin**, a continuación, haga clic en **instalar**:
+MonoGame puede agregarse como un complemento de Visual Studio para Mac. En el equipo Mac, seleccione **Visual Studio para Mac** > **Administrador de complementos...**  . En Windows, seleccione ** Herramientas ** > **Administrador de complementos...**  . Seleccione el **galería** , expanda la **desarrollo de juegos** categoría y seleccione **MonoGame Addin**, a continuación, haga clic en **instalar**:
 
 ![Visual Studio para seleccionar MonoGame Galería de extensiones de Mac](part1-images/image2.png)
 

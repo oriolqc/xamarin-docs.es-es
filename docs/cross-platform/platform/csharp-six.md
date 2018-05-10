@@ -3,16 +3,15 @@ title: 6 nuevas características de C# información general
 description: La versión más reciente del lenguaje de C#, versión 6, continúa evolucionando el idioma para que tenga menos reutilizable, mejorar la claridad y coherencia más. ¿Sintaxis de inicialización de limpieza, la capacidad para usar await en bloques catch/finally y el condicional null? operador son especialmente útiles.
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
-ms.technology: xamarin-cross-platform
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: de6fdab62a57dddb6fcf48302b7ff9f5ec2bc9a2
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: e120b917a106d01067e073219bbe2688c2811448
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="c-6-new-features-overview"></a>6 nuevas características de C# información general
 

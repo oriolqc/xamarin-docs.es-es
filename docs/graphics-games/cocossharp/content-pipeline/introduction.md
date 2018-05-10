@@ -3,15 +3,14 @@ title: Introducción a las canalizaciones de contenido
 description: Las canalizaciones son aplicaciones o partes de las aplicaciones de contenido, que se usan para convertir archivos en un formato que se pueden cargar proyectos de juego. La canalización de contenido de MonoGame es una implementación de la canalización de contenido específica para la conversión de archivos para los proyectos CocosSharp y MonoGame.
 ms.prod: xamarin
 ms.assetid: 40628B5F-FAF7-4FA7-A929-6C3FEA83F8EC
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 2c3619fac771bd7962f6940a24d7c1ff81173d75
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a369c5ba61033eb61c0f188c03b21e08c71784fb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="introduction-to-content-pipelines"></a>Introducción a las canalizaciones de contenido
 

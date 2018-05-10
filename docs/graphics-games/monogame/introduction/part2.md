@@ -3,15 +3,14 @@ title: 'Parte 2: implementar la WalkingGame'
 description: Este tutorial muestra cómo agregar lógica de juego y el contenido a un proyecto vacío de MonoGame para crear una demostración de un sprite animado moviendo con entrada táctil.
 ms.prod: xamarin
 ms.assetid: F0622A01-DE7F-451A-A51F-129876AB6FFD
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: bc4ab2e77bfce9c9ba6043533bcfda5a359d322e
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 87678d9d77f75bccc68a667d3fb0f35b641b937c
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="part-2--implementing-the-walkinggame"></a>Parte 2: implementar la WalkingGame
 

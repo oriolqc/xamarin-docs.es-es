@@ -3,15 +3,14 @@ title: Entidades de CocosSharp
 description: El modelo de entidad es una manera eficaz para organizar el código de juego. Mejora la legibilidad, hace que el código sea más fácil de mantener y aprovecha la funcionalidad integrada de elemento primario/secundario.
 ms.prod: xamarin
 ms.assetid: 1D3261CE-AC96-4296-8A53-A76A42B927A8
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 406c416e9bbecb4726793981ae347e0172ab0dbc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 58a8d4e6fcb8a2165fafad74a5c59481d1550351
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="entities-in-cocossharp"></a>Entidades de CocosSharp
 

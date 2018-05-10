@@ -3,15 +3,14 @@ title: Introducción al desarrollo de juegos con Xamarin
 description: La naturaleza del desarrollo de juegos puede diferir considerablemente desde el desarrollo de otros tipos de aplicaciones. Este artículo es una introducción al desarrollo de juegos que ofrece tecnologías que pueden utilizarse con Xamarin.iOS y Xamarin.Android. Proporciona un análisis de alto nivel de cómo se realizan los juegos y un muestreo de tecnologías disponibles para su uso con Xamarin.iOS y Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: b2df6d431004bbfa140b6cae1d069404af92c1df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 543d3e2d4e53d1b88213ac82689073a9fb925820
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introducción al desarrollo de juegos con Xamarin
 
@@ -153,7 +152,7 @@ FEZ:
 
 Bastión:
 
-![](images/image8.jpg "Bastion")
+![](images/image8.jpg "Bastión")
 
 Para empezar a trabajar con MonoGame, diríjase a nuestro [MonoGame guías](~/graphics-games/monogame/index.md).
 

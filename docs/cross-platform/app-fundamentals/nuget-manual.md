@@ -3,15 +3,14 @@ title: Creación manual de paquetes de NuGet para Xamarin
 description: Esta página contiene algunas sugerencias para ayudarle a crear paquetes de NuGet que tienen como destino la plataforma Xamarin.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: ce8003c862205ac80dfea2095009562ae7ebb23f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 510c27cb54b91c837ca6f6b7a93f944f13097f0c
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Creación manual de paquetes de NuGet para Xamarin
 
@@ -26,7 +25,7 @@ El sitio Web de NuGet [compatibilidad con varias versiones de .NET Framework y p
 
 Hoy en día son los principales marcos de destino de Xamarin en uso:
 
-* **MonoAndroid** - Xamarin.Android
+* **MonoAndroid** -Xamarin.Android
 * **Xamarin.iOS** -Xamarin.iOS [API unificada](~/cross-platform/macios/unified/index.md) (es compatible con 64 bits)
 * **Xamarin.Mac** -perfil móvil del Xamarin.Mac, que es equivalente a la superficie Xamarin.iOS y Xamarin.Android API.
 

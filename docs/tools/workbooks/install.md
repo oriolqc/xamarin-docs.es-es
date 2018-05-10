@@ -3,14 +3,13 @@ title: Requisitos y la instalación de los libros
 description: Cómo descargar, instalar y utilizar los libros de Xamarin.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 68cac91a9b430d2abd138c0bb8bd334b65986329
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4d3217140605be8567d70e6dcf63d60a02e6b2fb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="workbooks-installation-and-requirements"></a>Requisitos y la instalación de los libros
 

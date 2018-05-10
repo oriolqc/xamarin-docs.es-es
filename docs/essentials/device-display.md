@@ -2,15 +2,14 @@
 title: Mostrar información de dispositivo Xamarin.Essentials
 description: La clase DeviceDisplay proporciona información sobre métricas de pantalla del dispositivo la aplicación se ejecuta en.
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 4e78d0d22ee0766bbccdcd1617003cc9d0ccd73c
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
-ms.translationtype: HT
+ms.openlocfilehash: 570fb6cf3eadfbbc7e189f875498d3cea0bc1514
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarinessentials-device-display-information"></a>Mostrar información de dispositivo Xamarin.Essentials
 

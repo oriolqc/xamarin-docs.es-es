@@ -3,15 +3,14 @@ title: Aplicación de Xamarin Player en vivo
 description: Editar y probar aplicaciones en tiempo real en dispositivos iOS o Android
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 05/10/2017
-ms.openlocfilehash: e3205d83ba207322d4c53c4c6e98d4890ad48a77
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 2e2a3e80c121688f9a8bfff0afe4184f19fc6619
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-live-player-app"></a>Aplicación de Xamarin Player en vivo
 

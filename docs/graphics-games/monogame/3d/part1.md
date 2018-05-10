@@ -3,15 +3,14 @@ title: Uso de la clase de modelo
 description: La clase del modelo simplifica considerablemente la representación objetos 3D complejos en comparación con el método tradicional de representación de gráficos 3D. Objetos del modelo se crean a partir de archivos de contenido, lo que permite una integración fácil de contenido con ningún código personalizado.
 ms.prod: xamarin
 ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 7e778df7fa6dd27aee8282154c99faf5ca5791ce
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 01e000b22749acb1b5c3a3203db7f372613cca16
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="using-the-model-class"></a>Uso de la clase de modelo
 

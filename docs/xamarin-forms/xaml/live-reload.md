@@ -6,12 +6,12 @@ ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 04/23/2018
-ms.openlocfilehash: 627225fdeef781a8b24a79e9b46627a739fd15af
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.date: 05/08/2018
+ms.openlocfilehash: 96054505af44c5d3e198c2b9e7e7cb30d39b02b1
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-live-reload"></a>Volver a cargar en vivo de Xamarin
 
@@ -27,8 +27,8 @@ Recarga en vivo sólo está disponible en Visual Studio de 2017 actualmente.
 
 ## <a name="requirements"></a>Requisitos
 
-* [Visual Studio 2017 15,7 Preview 4](https://www.visualstudio.com/vs/preview/) o superior con la **desarrollo móvil con .NET** carga de trabajo.
-* [Xamarin.Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) o superior.
+* [Visual Studio 2017 versión 15,7 o superior](https://www.visualstudio.com/vs/) o superior con la **desarrollo móvil con .NET** carga de trabajo.
+* [Xamarin.Forms 3.0.0 o superior](https://www.nuget.org/packages/Xamarin.Forms/) o superior.
 
 ## <a name="getting-started"></a>Introducción
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Instalar Xamarin en vivo Recargar desde el catálogo de soluciones de Visual Studio
@@ -45,8 +45,13 @@ Como alternativa, puede buscar en el **en línea** pestaña en el **extensiones 
 
 Agregación Live recarga a aplicaciones móviles existentes se puede realizar en tres pasos:
 
-1. Asegúrese de que todos los proyectos se actualizan para usar [Xamarin.Forms 3.0.354232-pre3](https://www.nuget.org/packages/Xamarin.Forms/3.0.0.354232-pre3) o superior.
-2. Instalar el **Xamarin.LiveReload** NuGet en la biblioteca estándar de .NET 2.0. No se necesita instalarse en los proyectos de plataforma. Asegúrese de que el **origen del paquete** está establecido en **todos los**.
+1. Asegúrese de que todos los proyectos se actualizan para usar [Xamarin.Forms 3.0.0 o superior](https://www.nuget.org/packages/Xamarin.Forms/) o superior.
+
+2. Agregar el **Xamarin.LiveReload** paquete NuGet:
+
+    a. **Estándar de .NET** : instalar el **Xamarin.LiveReload** NuGet en la biblioteca estándar de .NET 2.0. No se necesita instalarse en los proyectos de plataforma. Asegúrese de que el **origen del paquete** está establecido en **todos los**.
+    
+    b. **Los proyectos compartidos** : instalar el **Xamarin.LiveReload** NuGet en todos los proyectos de la plataforma (por ejemplo, Android, iOS, UWP, etcetera.). Asegúrese de que el **origen del paquete** está establecido en **todos los**.
 
 ![Agregar NuGet de recarga en vivo de Xamarin con el Administrador de paquetes de NuGet](images/addlivereloadnuget.png)
 
@@ -85,7 +90,7 @@ Puesto que la aplicación se compila, Live recarga funciona con todas las biblio
 
 ### <a name="what-changes-does-live-reload-redeploy"></a>¿Qué cambios recarga Live volver a implementar? 
 
-Recarga en vivo sólo aplica a los cambios realizados en XAML. Si realiza cambios en un archivo de C#, se requerirá una nueva compilación. Compatibilidad para volver a cargar C# está planeada para una versión futura.
+Recarga en vivo sólo aplica a los cambios realizados en XAML o CSS. Si realiza cambios en un archivo de C#, se requerirá una nueva compilación. Compatibilidad para volver a cargar C# está planeada para una versión futura.
 
 ### <a name="what-platforms-are-supported"></a>¿En qué plataformas son compatibles? 
 
@@ -111,8 +116,6 @@ No. De hecho, incluso puede iniciar todos los objetivos de aplicaciones compatib
 ## <a name="known-issues"></a>Problemas conocidos
 
 * Solo se admite en Visual Studio.
-* Solo funciona con las bibliotecas de .NET estándar. Este problema se solucionará en la próxima versión de vista previa.
-* No se admiten las hojas de estilos CSS. Este problema se solucionará en la próxima versión de vista previa.
 * Volver a cargar recursos de toda la aplicación (es decir, **App.xaml** o comparte los diccionarios de recursos), se restablece la navegación de la aplicación. Este problema se solucionará en la próxima versión de vista previa.
 * Editar XAML mientras depuración UWP puede provocar un bloqueo en tiempo de ejecución. Solución alternativa: Use **iniciar sin depurar (CTRL+F5)** en lugar de **Iniciar depuración (F5)**.
 
@@ -131,8 +134,6 @@ No. De hecho, incluso puede iniciar todos los objetivos de aplicaciones compatib
 * **XLR003**: *paquete nuget de recarga en vivo requiere la instalación de la extensión Xamarin Live recarga Visual Studio.*
 
   Intentó crear un proyecto que hace referencia el paquete de nuget Live recarga pero no está instalada la extensión de Visual.  
-
-
 
 ### <a name="app-doesnt-connect"></a>No se conecta aplicación
 

@@ -3,15 +3,14 @@ title: Resolver problemas relacionados con System.Diagnostics.Tracing y flujo de
 description: 'Caso práctico de PCL: ¿Cómo puedo resolver problemas relacionados a System.Diagnostics.Tracing para el paquete NuGet de flujo de datos TPL de Microsoft?'
 ms.prod: xamarin
 ms.assetid: 7986A556-382D-4D00-ACCF-3589B4029DE8
-ms.technology: xamarin-cross-platform
 ms.date: 04/17/2018
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: b1b56b0e831edbb6327f3ca66f6ec8dc780b46f2
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.openlocfilehash: 1acc9ccc78ad14198a59e74d1fae845790d66b16
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-package"></a>Caso práctico de PCL: ¿Cómo puedo resolver problemas relacionados a System.Diagnostics.Tracing para el paquete NuGet de flujo de datos TPL de Microsoft?
 

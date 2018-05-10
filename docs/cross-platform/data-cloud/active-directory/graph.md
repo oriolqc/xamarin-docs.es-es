@@ -3,15 +3,14 @@ title: Obtener acceso a la API Graph
 description: Uso de Active Directory para consultar la API Graph con Xamarin
 ms.prod: xamarin
 ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 59e26c95c3f08467b837341043545ce0e1f2cbe5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e177ac680a100a2723732c2ee7252ea0c16ea972
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="accessing-the-graph-api"></a>Obtener acceso a la API Graph
 

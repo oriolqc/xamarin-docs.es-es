@@ -8,11 +8,11 @@ ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 2178d567f1ccfe803ebce8b7b623c31c290999bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fec14b0f7328bee1d0866ba02f28202e8d63e8cb
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="getting-started"></a>Introducción
 
@@ -42,6 +42,10 @@ En este documento se explica el *funcionamiento de Xamarin* de alto nivel y se i
 ###  <a name="introduction-to-the-mobile-software-development-lifecyclecross-platformget-startedintroduction-to-mobile-sdlcmd"></a>[Introducción al ciclo de vida del desarrollo de software móvil](~/cross-platform/get-started/introduction-to-mobile-sdlc.md)
 
 En este artículo, se describe el ciclo de vida de desarrollo de software con respecto a aplicaciones móviles y se describen algunas de las consideraciones necesarias para compilar proyectos móviles. Los desarrolladores que quieran empezar a compilar directamente pueden omitir esta guía y leerla más adelante para comprender mejor el desarrollo móvil.
+
+##  <a name="building-cross-platform-applicationscross-platformapp-fundamentalsbuilding-cross-platform-applicationsindexmd"></a>[Creación de aplicaciones multiplataforma](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
+
+Al elegir Xamarin y tener en cuenta varios aspectos al diseñar y desarrollar las aplicaciones móviles, puede compartir gran cantidad de código entre plataformas móviles, reducir el tiempo de comercialización, aprovechar el talento existente, satisfacer la demanda de acceso móvil del cliente y reducir la complejidad multiplataforma. &nbsp;En este documento se describen las instrucciones clave para materializar estas ventajas en aplicaciones de utilidad y productividad.
 
 ###  <a name="introducing-visual-studio-for-machttpsdocsmicrosoftcomvisualstudiomac"></a>[Presentación de Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/)
 

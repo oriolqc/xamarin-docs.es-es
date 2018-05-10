@@ -8,11 +8,11 @@ ms.custom: video
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: 4a7a8a96ff22cf02d04ffdfff684d454d1a28024
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3eb3bdd7b060b661d5202c63a879f1c88d2ccdcb
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="oreo-features"></a>Características de Oreos
 
@@ -190,7 +190,7 @@ Después de usar **avdmanager** para crear el dispositivo virtual, se incluirá 
 
 -----
 
-Para obtener más información acerca de cómo configurar un emulador de Android para probar y depurar, consulte [emulador del SDK de Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Para obtener más información acerca de cómo configurar un emulador de Android para probar y depurar, consulte [emulador de Google Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
 
 Si está utilizando un dispositivo físico como un Nexus o un píxel, puede actualizar el dispositivo a través de automático a través de las actualizaciones de remotamente o descargar una imagen de sistema y flash directamente el dispositivo. Para obtener más información acerca de cómo actualizar manualmente el dispositivo para Oreos Android, consulte [generador de imágenes para dispositivos de píxel y Nexus](https://developers.google.com/android/images).
 

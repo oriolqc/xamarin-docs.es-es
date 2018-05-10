@@ -3,15 +3,14 @@ title: Uso de mosaico con CocosSharp
 description: Mosaico es una eficaz, flexible y su aplicación es para la creación de mosaico ortogonal e isométrica se asigna para juegos. CocosSharp proporciona integración incorporada para el formato de archivo nativo del mosaico.
 ms.prod: xamarin
 ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: a356ddc0412eb1dce1b35e060e6c9127525de804
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8a7782097324829b8150b968c5658a864d1fab4a
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="using-tiled-with-cocossharp"></a>Uso de mosaico con CocosSharp
 

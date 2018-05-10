@@ -7,12 +7,12 @@ ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/08/2018
-ms.openlocfilehash: 67644caedd268aac45a86c03a69ba017976fc103
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/30/2018
+ms.openlocfilehash: d8f909ab522b5bbf08a2b666fd4f64340e60b3e5
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: inicio rápido
 
@@ -108,10 +108,11 @@ En esta clase, se crea una `ListActivity` y se rellena mediante programación, p
 
 ### <a name="adding-translation-history-code"></a>Agregar código de historial de traducción
 
-Esta aplicación recopila números de teléfono (que el usuario ha traducido en la primera pantalla) y los pasa a la segunda pantalla. Los números de teléfono se almacenan como una lista de cadenas. Para admitir listas, agregue la siguiente directiva `using` a la parte superior de la clase `MainActivity`:
+Esta aplicación recopila números de teléfono (que el usuario ha traducido en la primera pantalla) y los pasa a la segunda pantalla. Los números de teléfono se almacenan como una lista de cadenas. Para admitir listas (y también Intents, que se usan más adelante), agregue las directivas `using` siguientes a la parte superior de **MainActivity.cs**:
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 Después, cree una lista vacía que se pueda rellenar con números de teléfono.
@@ -246,10 +247,11 @@ En esta clase, se crea una `ListActivity` y se rellena mediante programación, p
 
 ### <a name="adding-translation-history-code"></a>Agregar código de historial de traducción
 
-Esta aplicación recopila números de teléfono (que el usuario ha traducido en la primera pantalla) y los pasa a la segunda pantalla. Los números de teléfono se almacenan como una lista de cadenas. Para admitir listas, agregue la siguiente directiva `using` a la parte superior de la clase `MainActivity`:
+Esta aplicación recopila números de teléfono (que el usuario ha traducido en la primera pantalla) y los pasa a la segunda pantalla. Los números de teléfono se almacenan como una lista de cadenas. Para admitir listas (y también Intents, que se usan más adelante), agregue las directivas `using` siguientes a la parte superior de **MainActivity.cs**:
 
 ```csharp
 using System.Collections.Generic;
+using Android.Content;
 ```
 
 Después, cree una lista vacía que se pueda rellenar con números de teléfono. La clase `MainActivity` tendrá este aspecto:

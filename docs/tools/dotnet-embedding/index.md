@@ -3,15 +3,14 @@ title: Inserción de .NET
 description: 'Incrustación de .NET permite que el código existente de .NET (C#, F # y otros) que vayan a usar en otros lenguajes de programación'
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: 505c2902f2b8d112597b4b9b9b07282a7810db68
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: f6edf25faa00bc7c90a52b76a6e90168ccd85b32
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="net-embedding"></a>Inserción de .NET
 

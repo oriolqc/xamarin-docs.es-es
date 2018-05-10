@@ -3,15 +3,14 @@ title: Envía de forma remota iOS Simulator (para Windows)
 description: Probar y depurar aplicaciones de iOS completamente dentro de Visual Studio en Windows
 ms.prod: xamarin
 ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 04/07/2017
-ms.openlocfilehash: bcf0aa2b1677af0b980c6ca48bb29c1cad32e52d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5a1408f6595bd1e2371cd1d0421f81a3a16a5cc3
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Envía de forma remota iOS Simulator (para Windows)
 

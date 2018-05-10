@@ -3,15 +3,14 @@ title: Generador de perfiles de Xamarin
 description: Esta guía explora las características clave del generador de perfiles de Xamarin. Busca en los generadores de perfiles, generación de perfiles y cuándo debe utilizarse y en un flujo de trabajo estándar de generar perfiles de aplicaciones de Xamarin.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
-ms.technology: xamarin-cross-platform
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 3408d4e1ca50651536b9d04f64156efac4fdd0ed
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e28e2513b74faa884fb7bc3d7194f1b02844734
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="xamarin-profiler"></a>Generador de perfiles de Xamarin
 
@@ -55,7 +54,7 @@ El generador de perfiles de Xamarin es una aplicación independiente y se integr
 
 Descargue el paquete de instalación para su plataforma:
 
-- [**macOS**](https://dl.xamarin.com/profiler/profiler-mac.pkg)
+- [**MacOS**](https://dl.xamarin.com/profiler/profiler-mac.pkg)
 - [**Windows**](https://dl.xamarin.com/profiler/profiler-windows.msi)
 
 Una vez descargado, inicie el instalador para agregar el generador de perfiles de Xamarin en el sistema.

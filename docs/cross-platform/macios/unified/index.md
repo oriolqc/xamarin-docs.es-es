@@ -3,15 +3,14 @@ title: API unificada
 description: El nuevo estilo API resulta más fácil que nunca para compartir código entre Mac y iOS, así como lo que le permite admitir las aplicaciones de 32 y 64 bits con el mismo binario.
 ms.prod: xamarin
 ms.assetid: 14311617-1BC2-42CC-AF3F-9F97733EE2D0
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: d0ad5b08aaf5e7b14f75611a28d389e3f7e0477c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bee477a8e84e8cfdd20e89b7ca51c1ac40c0ee52
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="unified-api"></a>API unificada
 
@@ -236,11 +235,11 @@ Dado que algunos errores son muy comunes y el valor devuelto no resultaban útil
 
 En algunos casos tenían algunas constantes se cambió de `string` a `NSString`, p. ej. `UITableViewCell`
 
-**Classic**
+**Clásico**
 
     public virtual string ReuseIdentifier { get; }
 
-**Unified**
+**Unificado**
 
     public virtual NSString ReuseIdentifier { get; }
 
@@ -254,11 +253,11 @@ El MonoTouch original no tenía compatibilidad total con los protocolos ObjC y a
 
 Estas limitaciones se han quitado y limpiar en las API unificada. La mayoría de cambios tendrá un aspecto similar al siguiente:
 
-**Classic**
+**Clásico**
 
     public virtual AVAssetResourceLoaderDelegate Delegate { get; }
 
-**Unified**
+**Unificado**
 
     public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
 
@@ -266,11 +265,11 @@ El `I` prefijo significa **unificada** exponer una interfaz, en lugar de un tipo
 
 También se permiten algunas API para ser más precisos y fácil de usar, p. ej.:
 
-**Classic**
+**Clásico**
 
     public virtual void SelectionDidChange (NSObject uiTextInput);
 
-**Unified**
+**Unificado**
 
     public virtual void SelectionDidChange (IUITextInput uiTextInput);
 

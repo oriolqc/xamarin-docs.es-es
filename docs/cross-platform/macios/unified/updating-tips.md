@@ -2,14 +2,13 @@
 title: Sugerencias para actualizar el código a la API unificada
 ms.prod: xamarin
 ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: b23a84c990eb2418e94b414cc9750b3060c572ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 640f95e0083c73288cc8e1f183b06bd28a7b4e07
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Sugerencias para actualizar el código a la API unificada
 
@@ -162,7 +161,7 @@ Corrección: Comprobar la ortografía en `AddEllipseInRect`. Otros cambios de no
 
 Al crear una anotación personalizada mediante la creación de subclases MKAnnotation el campo Coordinate no tiene ningún establecedor, sólo un captador.
 
-[Fix](https://forums.xamarin.com/discussion/comment/109505/#Comment_109505):
+[Corregir](https://forums.xamarin.com/discussion/comment/109505/#Comment_109505):
 
 * Agregar un campo para realizar un seguimiento de la coordenada
 * devolver este campo en el captador de la propiedad de coordenadas

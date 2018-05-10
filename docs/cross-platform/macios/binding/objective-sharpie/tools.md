@@ -3,15 +3,14 @@ title: Herramientas y comandos
 description: Información general de las herramientas incluidas con el objetivo Sharpie y los argumentos de línea de comandos para poder utilizarlas.
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 8a307739134fe3b76692fbef5c1dc028af01017d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0e333ce7c336d13c8b55326a5d51a64092885dfd
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="tools--commands"></a>Herramientas y comandos
 
@@ -54,11 +53,11 @@ Objetivo Sharpie proporciona las siguientes herramientas:
 
 |Herramienta|Descripción|
 |--- |--- |
-|**xcode**|Proporciona información sobre la instalación de Xcode actual y las versiones de iOS y Mac SDK que están disponibles. Usaremos esta información más adelante cuando se generan nuestro enlaces.|
+|**Xcode**|Proporciona información sobre la instalación de Xcode actual y las versiones de iOS y Mac SDK que están disponibles. Usaremos esta información más adelante cuando se generan nuestro enlaces.|
 |**pod**|Busca, configura, instala (en un directorio local) y enlaza Objective-C [CocoaPod](https://cocoapods.org/) bibliotecas disponibles desde el repositorio principal de especificaciones. Esta herramienta se evalúa como el CocoaPod instalado para deducir automáticamente la entrada correcta para pasar a la `bind` herramienta siguiente. Novedad en la versión 3.0.|
 |**bind**|Analiza los archivos de encabezado (`*.h`) en la biblioteca de C de objetivo en la inicial [ApiDefinition.cs y StructsAndEnums.cs](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) archivos.|
 |**update**|Comprueba si hay versiones más recientes de Sharpie de objetivo y descarga e inicia el programa de instalación si está disponible.|
-|**verify-docs**|Muestra información detallada sobre `[Verify]` atributos.|
+|**Compruebe de documentos**|Muestra información detallada sobre `[Verify]` atributos.|
 |**Documentación**|Navega a este documento en el explorador web predeterminado.|
 
 Para obtener ayuda sobre una herramienta objetivo Sharpie específica, escriba el nombre de la herramienta y el `-help` opción. Por ejemplo, `sharpie xcode -help` devuelve el siguiente resultado:

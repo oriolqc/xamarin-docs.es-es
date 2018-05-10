@@ -3,15 +3,14 @@ title: Control de varias resoluciones en CocosSharp
 description: Esta guía muestra cómo trabajar con CocosSharp para desarrollar los juegos que se muestren correctamente en los dispositivos de distintas resoluciones.
 ms.prod: xamarin
 ms.assetid: 859ABF98-2646-431A-A4A8-3E7E48DA5A43
-ms.technology: xamarin-cross-platform
 author: charlespetzold
 ms.author: chape
 ms.date: 03/28/2017
-ms.openlocfilehash: 4077af2351b8ab3ef718a71cc672add54b6ef05a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 577a3edbd106b6fba298b3ee5999265ef955f9dd
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>Control de varias resoluciones en CocosSharp
 
@@ -277,7 +276,7 @@ Ahora Si ejecutamos el juego la textura de 1000 x 1000 estará totalmente visibl
 ![](resolutions-images/image12.png "Ahora Si ejecutamos el juego la textura de 1000 x 1000 estará totalmente visible")
 
 
-### <a name="defaulttexeltocontentsizeratio-details"></a>DefaultTexelToContentSizeRatio details
+### <a name="defaulttexeltocontentsizeratio-details"></a>Detalles de DefaultTexelToContentSizeRatio
 
 El `DefaultTexelToContentSizeRatio` propiedad es `static,` lo que significa que todos los objetos Sprite en la aplicación compartirán el mismo valor. Es el enfoque típico para juegos con realizados para diferentes resoluciones de activos para que contenga un conjunto completo de activos para cada categoría de resolución. De manera predeterminada el CocosSharp de Visual Studio para las plantillas de Mac proporciona **ld** y **hd** carpetas para los activos, que podría ser útiles para admitir dos conjuntos de texturas de juegos. Puede ser una carpeta de contenido de ejemplo con contenido similar:
 

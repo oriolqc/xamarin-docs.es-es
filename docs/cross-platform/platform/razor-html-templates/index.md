@@ -3,15 +3,14 @@ title: Vistas de creación HTML mediante plantillas de Razor
 description: " Uso de una página Web de pantalla completa para representar HTML puede ser una manera sencilla y eficaz para representar formatos complejos de una manera multiplataforma, especialmente si ya tiene el código HTML, Javascript y CSS desde un proyecto de sitio Web."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
-ms.openlocfilehash: fa361e48f8f7e236a3295deda2d80a02ef06b34d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 48d7778bf3225401f2819909ae6be320cfa881e3
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="building-html-views-using-razor-templates"></a>Vistas de creación HTML mediante plantillas de Razor
 
@@ -483,7 +482,7 @@ HTML puede ser bueno para la creación de prototipos y mostrar los tipos de elem
 
 Las vistas web en la plantilla se pueden ampliar fácilmente con controles específicos de la plataforma: basta con modificar la **MainStoryboard.storyboard** en el Diseñador de iOS o **Resources/layout/Main.axml** en Android.
 
-### <a name="razortodo-sample"></a>RazorTodo Sample
+### <a name="razortodo-sample"></a>Ejemplo de RazorTodo
 
 El [RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo) repositorio contiene dos soluciones independientes para mostrar las diferencias entre una aplicación completamente orientada a HTML y una aplicación que combina HTML con los controles nativos:
 
@@ -519,6 +518,6 @@ Por último, introdujo los ejemplos de RazorTodo que muestran cómo unir vistas 
 
 ### <a name="related-links"></a>Vínculos relacionados
 
-- [RazorTodo Sample](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
+- [Ejemplo de RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
 - [MVC 3: motor de vista Razor (Microsoft)](http://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
 - [Introducción a la programación Web de ASP.NET mediante la sintaxis Razor (Microsoft)](http://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)
