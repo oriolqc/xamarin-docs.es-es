@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: cf1b586c8e30b2922251104461d9ca7100b8e74e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3dda1445815f747f484458388cd856c2f9705603
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="debug-android-wear-on-an-emulator"></a>Depurar Android desgaste en un emulador
 
@@ -21,9 +21,9 @@ _Dichos artículos explican cómo depurar una aplicación de uso de Xamarin.Andr
 
 Desarrollo de aplicaciones usan Android requiere ejecutar la aplicación, ya sea en un hardware físico o al utilizar un emulador o simulador. El uso de hardware es el mejor enfoque, pero no siempre es el más práctico. En muchos casos, puede ser más sencillo y más rentable para simular o emular el hardware desgaste Android mediante un emulador, como se describe a continuación. Si no está familiarizado con el proceso de implementación y ejecución de aplicaciones usan Android, consulte [desgaste Hello,](~/android/wear/get-started/hello-wear.md).
 
-## <a name="configure-the-android-sdk-emulator"></a>Configurar el emulador del SDK de Android
+## <a name="configure-the-google-android-emulator"></a>Configurar el emulador de Google Android
 
-Para ejecutar la aplicación de uso en un emulador, debe instalar el emulador de Android SDK de Android y configurarlo para desgaste Android. Para general emulador de Android SDK información de instalación y configuración, consulte [emulador del SDK de Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Para ejecutar la aplicación de uso en un emulador, debe instalar el emulador de Android SDK de Android y configurarlo para desgaste Android. Para general emulador de Android SDK información de instalación y configuración, consulte [emulador de Google Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
 
 Cuando se crea un dispositivo virtual desgaste, seleccione un perfil de dispositivo Android desgaste (como **Android desgaste cuadrado**). Para mejorar el rendimiento, utilice el desgaste **x86** CPU/ABI tal como se muestra en este ejemplo:
 
@@ -47,4 +47,4 @@ El emulador puede dejarse en ejecución, de modo que no es necesario cerrarlo y 
  
 ## <a name="summary"></a>Resumen
  
-Esta guía explica cómo configurar el emulador del SDK de Android para el desarrollo de desgaste e iniciar un dispositivo virtual de uso para la depuración.
+Esta guía explica cómo configurar el emulador de Google Android para el desarrollo de desgaste e iniciar un dispositivo virtual de uso para la depuración.

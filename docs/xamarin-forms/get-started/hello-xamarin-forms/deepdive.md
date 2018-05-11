@@ -6,12 +6,12 @@ ms.assetid: d97aa580-1eb9-48b3-b15b-0d7421ea7ae
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/06/2018
-ms.openlocfilehash: e254aa14f5889cee6b5bee452f5275fd579eb8fc
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 04/10/2018
+ms.openlocfilehash: 9bb368ca72909489ca267794035a4c4d0883f109
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xamarinforms-deep-dive"></a>Análisis detallado de Xamarin.Forms
 
@@ -54,7 +54,7 @@ Visual Studio para Mac sigue la práctica de Visual Studio consistente en organi
 
 Los proyectos son:
 
-- Phoneword: el proyecto es el proyecto de biblioteca de clases portable (PCL) que incluye todo el código compartido y la interfaz de usuario compartida.
+- Phoneword: este proyecto es el de la biblioteca de .NET Standard que incluye todo el código compartido y la interfaz de usuario compartida.
 - Phoneword.Droid: este proyecto incluye el código específico de Android y es el punto de entrada de las aplicaciones de Android.
 - Phoneword.iOS: este proyecto incluye el código específico de iOS y es el punto de entrada de las aplicaciones de iOS.
 
@@ -94,7 +94,7 @@ Una aplicación de Xamarin.Forms tiene la misma arquitectura que una aplicación
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-Una aplicación de Xamarin.Forms tiene la misma arquitectura que una aplicación multiplataforma tradicional. El código compartido se coloca normalmente en una biblioteca de clases portable (PCL), y las aplicaciones específicas de la plataforma consumen el código compartido. En el siguiente diagrama se muestra información general de esta relación para la aplicación de Phoneword:
+Una aplicación de Xamarin.Forms tiene la misma arquitectura que una aplicación multiplataforma tradicional. El código compartido normalmente se coloca en una biblioteca de .NET Standard, y las aplicaciones específicas de la plataforma consumen el código compartido. En el siguiente diagrama se muestra información general de esta relación para la aplicación de Phoneword:
 
 ![](deepdive-images/xs/architecture.png "Arquitectura de Phoneword")
 

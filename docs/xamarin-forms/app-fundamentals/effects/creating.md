@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 6138bd1f9211248b3a260795c2ef9d3db87580be
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 12b8906dd4562e58dede181e773e4046b8434214
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-an-effect"></a>Crear un efecto
 
@@ -188,7 +188,7 @@ El `OnAttached` método establece la `Background` propiedad del control a aguama
 
 ## <a name="consuming-the-effect"></a>Consumir el efecto
 
-El proceso para consumir un efecto de una biblioteca de clases portables (PCL) de Xamarin.Forms o un proyecto de biblioteca compartida es como sigue:
+El proceso para consumir un efecto de una biblioteca Xamarin.Forms .NET estándar o un proyecto de biblioteca compartida es como sigue:
 
 1. Declare un control que se pueden personalizar mediante el efecto.
 1. Adjuntar el efecto en el control al agregarlo al control [ `Effects` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Element.Effects/) colección.
@@ -209,7 +209,7 @@ El ejemplo de código XAML siguiente muestra un [ `Entry` ](https://developer.xa
 </Entry>
 ```
 
-La `FocusEffect` clase en la PCL permite consumir el efecto en XAML y se muestra en el ejemplo de código siguiente:
+La `FocusEffect` clase en la biblioteca estándar de .NET permite consumir el efecto en XAML y se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public class FocusEffect : RoutingEffect

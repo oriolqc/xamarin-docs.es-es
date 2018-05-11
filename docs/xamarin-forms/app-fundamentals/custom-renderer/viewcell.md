@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 4d1d4323e42df6240fee7be42ae8fac70a2b3f1f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: fd96770caf92eb30e669133f592f5d780146be59
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-viewcell"></a>Personalizar un ViewCell
 
@@ -65,13 +65,13 @@ public class NativeCell : ViewCell
   }
 }
 ```
-La `NativeCell` clase se crea en el proyecto de biblioteca (PCL) de clases portables y define la API para la celda personalizada. Expone la celda personalizada `Name`, `Category`, y `ImageFilename` propiedades que se pueden mostrar a través del enlace de datos. Para más información sobre el enlace de datos, consulte [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) (Aspectos básicos del enlace de datos).
+La `NativeCell` clase se crea en el proyecto de biblioteca estándar de .NET y define la API para la celda personalizada. Expone la celda personalizada `Name`, `Category`, y `ImageFilename` propiedades que se pueden mostrar a través del enlace de datos. Para más información sobre el enlace de datos, consulte [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) (Aspectos básicos del enlace de datos).
 
 <a name="Consuming_the_Custom_Cell" />
 
 ## <a name="consuming-the-custom-cell"></a>Consumir la celda personalizada
 
-El `NativeCell` celda personalizado puede hacer referencia en Xaml en el proyecto PCL declarar un espacio de nombres para su ubicación y el uso del prefijo de espacio de nombres en el elemento de celda personalizado. El siguiente ejemplo de código muestra cómo el `NativeCell` celda personalizada puede ser utilizado por una página XAML:
+El `NativeCell` celda personalizado puede hacer referencia en Xaml en el proyecto de biblioteca estándar de .NET declarando un espacio de nombres para su ubicación y el uso del prefijo de espacio de nombres en el elemento de celda personalizado. El siguiente ejemplo de código muestra cómo el `NativeCell` celda personalizada puede ser utilizado por una página XAML:
 
 ```xaml
 <ContentPage ...

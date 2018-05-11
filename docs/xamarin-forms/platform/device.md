@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 1fc3fb17ec97ce9028abbf63cdedbfc5fec12204
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 520982491803fa0a909008ee60730a4149a75296
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="device-class"></a>Clase de dispositivo
 
@@ -155,7 +155,7 @@ El [ejemplo mapas](https://github.com/xamarin/xamarin-forms-samples/blob/master/
 
 ## <a name="devicestarttimer"></a>Device.StartTimer
 
-El `Device` clase también tiene un `StartTimer` método que proporciona una manera sencilla de desencadenar las tareas dependientes del tiempo que funciona en el código común de Xamarin.Forms (incluidos PCLs). Pasar un `TimeSpan` para establecer el intervalo y devolver `true` para mantener el temporizador de ejecución o `false` detenerla después de la llamada actual.
+El `Device` clase también tiene un `StartTimer` método que proporciona una manera sencilla de desencadenar las tareas dependientes del tiempo que funciona en el código común de Xamarin.Forms, incluida una biblioteca de .NET estándar. Pasar un `TimeSpan` para establecer el intervalo y devolver `true` para mantener el temporizador de ejecución o `false` detenerla después de la llamada actual.
 
 ```csharp
 Device.StartTimer (new TimeSpan (0, 0, 60), () => {
@@ -184,7 +184,7 @@ Tenga en cuenta que métodos mediante `async/await` no es necesario usar `BeginI
 
 ## <a name="summary"></a>Resumen
 
-El Xamarin.Forms `Device` clase permite a un control específico sobre la funcionalidad y diseños por la plataforma: incluido el código (PCL o proyectos compartidos) en común.
+El Xamarin.Forms `Device` clase permite a un control específico sobre la funcionalidad y diseños por la plataforma: incluido el código (proyectos de biblioteca de .NET estándar o proyectos compartidos) en común.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

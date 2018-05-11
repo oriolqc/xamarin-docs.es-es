@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 964e2302c290930ec62752e51e7de388cb42ee32
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 0d1afc2c14b19bbd03244affed494405776a3c99
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-listview"></a>Personalizar un control ListView
 
@@ -59,13 +59,13 @@ public class NativeListView : ListView
 }
 ```
 
-El `NativeListView` se crea en el proyecto de biblioteca (PCL) de clases portables y define la API para el control personalizado. Este control expone un `Items` propiedad que se usa para rellenar el `ListView` con datos y que puede estar enlazado a datos de visualización. También expone un `ItemSelected` evento que se desencadena cuando se selecciona un elemento en un control de lista nativo específico de la plataforma. Para más información sobre el enlace de datos, consulte [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) (Aspectos básicos del enlace de datos).
+El `NativeListView` se crea en el proyecto de biblioteca estándar de .NET y define la API para el control personalizado. Este control expone un `Items` propiedad que se usa para rellenar el `ListView` con datos y que puede estar enlazado a datos de visualización. También expone un `ItemSelected` evento que se desencadena cuando se selecciona un elemento en un control de lista nativo específico de la plataforma. Para más información sobre el enlace de datos, consulte [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md) (Aspectos básicos del enlace de datos).
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>Consumir el Control personalizado
 
-El `NativeListView` control personalizado puede hacer referencia en Xaml en el proyecto PCL declarar un espacio de nombres para su ubicación y usando el prefijo de espacio de nombres en el control. El siguiente ejemplo de código muestra cómo el `NativeListView` control personalizado se pueden usar en una página XAML:
+El `NativeListView` control personalizado puede hacer referencia en Xaml en el proyecto de biblioteca estándar de .NET declarando un espacio de nombres para su ubicación y utilizando el prefijo de espacio de nombres en el control. El siguiente ejemplo de código muestra cómo el `NativeListView` control personalizado se pueden usar en una página XAML:
 
 ```xaml
 <ContentPage ...

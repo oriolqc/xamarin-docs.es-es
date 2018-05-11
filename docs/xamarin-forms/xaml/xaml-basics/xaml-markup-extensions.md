@@ -7,11 +7,11 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 3/27/2018
-ms.openlocfilehash: 104a3adb5d59bc7feafa3c993290247b749ce312
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c110223eae2bb06f64adf3e09977d97cc7b5d71b
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensiones de marcado XAML
 
@@ -386,13 +386,13 @@ xmlns="http://xamarin.com/schemas/2014/forms"
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-Necesitará más declaraciones de espacios de nombres XML para tener acceso a otras clases. Cada declaración de espacio de nombres XML adicional define un nuevo prefijo. Para obtener acceso a las clases locales de la aplicación compartida PCL, como `AppConstants`, programadores XAML utilizan a menudo el prefijo `local`. La declaración de espacio de nombres debe indicar el nombre de espacio de nombres CLR (Common Language Runtime), también conocido como el .NET espacio de nombres, que es el nombre que aparece en C# `namespace` definición o en una `using` directiva:
+Necesitará más declaraciones de espacios de nombres XML para tener acceso a otras clases. Cada declaración de espacio de nombres XML adicional define un nuevo prefijo. Para obtener acceso a las clases locales de la biblioteca estándar de .NET de aplicación compartida, como `AppConstants`, programadores XAML utilizan a menudo el prefijo `local`. La declaración de espacio de nombres debe indicar el nombre de espacio de nombres CLR (Common Language Runtime), también conocido como el .NET espacio de nombres, que es el nombre que aparece en C# `namespace` definición o en una `using` directiva:
 
 ```csharp
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-También puede definir las declaraciones de espacio de nombres XML para los espacios de nombres de .NET en cualquier ensamblado al que hace referencia a la PCL. Por ejemplo, mostramos un `sys` prefijo para el estándar de .NET `System` espacio de nombres, que se encuentra en la **mscorlib** ensamblado, que una vez superado "Biblioteca en tiempo de ejecución objeto Microsoft Common", pero ahora significa "multilingüe estándar Objeto en tiempo de ejecución biblioteca común." Dado que se trata de otro ensamblado, también debe especificar el nombre del ensamblado, en este caso **mscorlib**:
+También puede definir las declaraciones de espacio de nombres XML para los espacios de nombres de .NET en cualquier ensamblado al que hace referencia a la biblioteca estándar. NET. Por ejemplo, mostramos un `sys` prefijo para el estándar de .NET `System` espacio de nombres, que se encuentra en la **mscorlib** ensamblado, que una vez superado "Biblioteca en tiempo de ejecución objeto Microsoft Common", pero ahora significa "multilingüe estándar Objeto en tiempo de ejecución biblioteca común." Dado que se trata de otro ensamblado, también debe especificar el nombre del ensamblado, en este caso **mscorlib**:
 
 ```csharp
 xmlns:sys="clr-namespace:System;assembly=mscorlib"

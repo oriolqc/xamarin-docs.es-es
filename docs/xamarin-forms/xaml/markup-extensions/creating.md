@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: d4ae3b42c5c926749310da6e36b6f4e9754d398c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3807ac6a91d3bf650922a01d9111dc34513d62b3
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-xaml-markup-extensions"></a>Crear extensiones de marcado XAML
 
@@ -151,7 +151,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` es útil cuando un archivo XAML que se necesita tener acceso a un archivo de imagen almacenado como un recurso incrustado en el proyecto de biblioteca de clases Portable. Usa el `Source` propiedad que se va a llamar el método estático `ImageSource.FromResource` método. Este método requiere un nombre de recurso completo, que está formada por el nombre del ensamblado, el nombre de carpeta y el nombre de archivo separados por puntos. El `ImageResourceExtension` no necesita el nombre de ensamblado se parte porque obtiene el nombre del ensamblado utilizando la reflexión y antepone a la `Source` propiedad. A pesar de todo, `ImageSource.FromResource` se debe invocar desde el ensamblado que contiene el mapa de bits, lo que significa que esta extensión de recursos XAML no puede formar parte de una biblioteca externa a menos que las imágenes están también en esa biblioteca. (Consulte la [ **imágenes incrustadas** ](~/xamarin-forms/user-interface/images.md#embedded_images) artículo para obtener más información sobre cómo acceder a los mapas de bits que se almacenan como recursos incrustados.) 
+`ImageResourceExtension` resulta útil cuando un archivo XAML necesita tener acceso a un archivo de imagen almacenado como un recurso incrustado en el proyecto de biblioteca de .NET estándar. Usa el `Source` propiedad que se va a llamar el método estático `ImageSource.FromResource` método. Este método requiere un nombre de recurso completo, que está formada por el nombre del ensamblado, el nombre de carpeta y el nombre de archivo separados por puntos. El `ImageResourceExtension` no necesita el nombre de ensamblado se parte porque obtiene el nombre del ensamblado utilizando la reflexión y antepone a la `Source` propiedad. A pesar de todo, `ImageSource.FromResource` se debe invocar desde el ensamblado que contiene el mapa de bits, lo que significa que esta extensión de recursos XAML no puede formar parte de una biblioteca externa a menos que las imágenes están también en esa biblioteca. (Consulte la [ **imágenes incrustadas** ](~/xamarin-forms/user-interface/images.md#embedded_images) artículo para obtener más información sobre cómo acceder a los mapas de bits que se almacenan como recursos incrustados.) 
 
 Aunque `ImageResourceExtension` requiere el `Source` propiedad se establece, el `Source` propiedad se indica en un atributo como la propiedad de contenido de la clase. Esto significa que el `Source=` se puede omitir la parte de la expresión entre llaves. En el **demostración de recursos de imagen** página, la `Image` elementos capturar dos imágenes con el nombre de la carpeta y el nombre de archivo separados por puntos:
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 03/11/2016
-ms.openlocfilehash: 8421355e0630a637589cb4f08c2fec4ea9cdab24
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1a982078f7a3fb2ba462cd7d6f1420b1d27618f7
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>Uso de UrhoSharp en Xamarin.Forms
 
@@ -27,10 +27,10 @@ Esto [ejemplo](https://github.com/xamarin/urho-samples/tree/master/FormsSample) 
 
 ## <a name="adding-the-urhosharp-nuget-packages"></a>Agregar los paquetes de UrhoSharp Nuget
 
-Antes de usar UrhoSharp, los desarrolladores necesitan agregar el paquete de UrhoSharp Nuget a su solución. Esta guía se da por supuesto un proyecto de Xamarin.Forms con una PCL, iOS y Android proyecto. Todo el código se escribirá en el proyecto PCL; pero UrhoSharp Nuget se deben agregar a los proyectos de Android y iOS demasiado.
+Antes de usar UrhoSharp, los desarrolladores necesitan agregar el paquete de UrhoSharp Nuget a su solución. Esta guía se da por supuesto un proyecto de Xamarin.Forms con un iOS, Android y .NET estándar proyecto de biblioteca. Todo el código se escribirá en el proyecto de biblioteca estándar. NET; pero UrhoSharp Nuget se deben agregar a los proyectos de Android y iOS demasiado.
 
 El paquete de UrhoSharp.Forms Nuget contiene todos los objetos necesarios para crear objetos de UrhoSharp. El paquete de nuget UrhoSharp.Forms incluye la `UrhoSurface` (clase), que se utiliza para hospedar UrhoSharp de Xamarin.Forms.
-Para empezar, haga doble clic en la PCL **paquetes** carpeta y seleccione **agregar paquetes...** . Escriba el término de búsqueda **UrhoSharp.Forms**, seleccione **UrhoSharp de Xamarin.Forms**, a continuación, haga clic en **Agregar paquete**.
+Para empezar, haga doble clic en el **paquetes** carpeta en el proyecto de biblioteca de .NET estándar y seleccione **agregar paquetes...** . Escriba el término de búsqueda **UrhoSharp.Forms**, seleccione **UrhoSharp de Xamarin.Forms**, a continuación, haga clic en **Agregar paquete**.
 
 [![](urhosharp-images/add-package-sml.png "Agregar cuadro de diálogo de paquetes")](urhosharp-images/add-package.png#lightbox "Agregar cuadro de diálogo de paquetes")
 

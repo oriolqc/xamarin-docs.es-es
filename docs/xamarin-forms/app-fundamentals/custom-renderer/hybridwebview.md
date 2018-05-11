@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ffb013c355db34ef7456404d6f9dcaec75743420
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: af0dbef84d8ceb178fe5c1ac6fc7194c178141dc
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementar un HybridWebView
 
@@ -74,7 +74,7 @@ public class HybridWebView : View
 }
 ```
 
-El `HybridWebView` control personalizado se crea en el proyecto de biblioteca (PCL) de clases portables y define la siguiente API para el control:
+El `HybridWebView` control personalizado se crea en el proyecto de biblioteca estándar de .NET y define la siguiente API para el control:
 
 - Un `Uri` propiedad que especifica la dirección de la página web que se va a cargar.
 - A `RegisterAction` método que se registra un `Action` con el control. Se invocará la acción registrada desde JavaScript contenida en el archivo HTML al que hace referencia a través de la `Uri` propiedad.
@@ -85,7 +85,7 @@ El `HybridWebView` control personalizado se crea en el proyecto de biblioteca (P
 
 ## <a name="consuming-the-hybridwebview"></a>Consumir el HybridWebView
 
-El `HybridWebView` control personalizado puede hacer referencia en XAML en el proyecto PCL declarar un espacio de nombres para su ubicación y usando el prefijo de espacio de nombres en el control personalizado. El siguiente ejemplo de código muestra cómo el `HybridWebView` control personalizado se pueden usar en una página XAML:
+El `HybridWebView` control personalizado puede hacer referencia en XAML en el proyecto de biblioteca estándar de .NET declarando un espacio de nombres para su ubicación y utilizando el prefijo de espacio de nombres en el control personalizado. El siguiente ejemplo de código muestra cómo el `HybridWebView` control personalizado se pueden usar en una página XAML:
 
 ```xaml
 <ContentPage ...

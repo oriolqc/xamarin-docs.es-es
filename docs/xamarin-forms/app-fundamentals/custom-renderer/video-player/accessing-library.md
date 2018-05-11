@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: eb3d66630613225c9b2becaa20f73a82f409ce7e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d0f58a4a53d41c23e993f8b8b89b3fca44e0733d
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="accessing-the-devices-video-library"></a>Obtener acceso a la biblioteca de vídeos del dispositivo
 
@@ -20,7 +20,7 @@ Más modernos dispositivos móviles y equipos de escritorio tienen la capacidad 
 
 Cada una de las tres plataformas incluye una utilidad que permite al usuario seleccionar una foto o vídeo desde la biblioteca de imágenes del dispositivo. El primer paso para reproducir un vídeo de la biblioteca de imágenes del dispositivo está generando un servicio de dependencia que invoca el selector de imagen en cada plataforma. El servicio de dependencia que se describe a continuación es muy similar al definido en el [ **seleccionar una foto de la biblioteca de imágenes** ](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md) artículo, salvo que el selector de vídeo devuelve un nombre de archivo en lugar de un `Stream`objeto.
 
-El proyecto PCL define una interfaz denominada `IVideoPicker` para el servicio de dependencia:
+El proyecto de biblioteca de .NET estándar define una interfaz denominada `IVideoPicker` para el servicio de dependencia:
 
 ```csharp
 namespace FormsVideoLibrary

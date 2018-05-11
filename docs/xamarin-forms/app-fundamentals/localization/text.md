@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: cf0e7cab0c879f8fb286c87b2aaadab2dc1453f8
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: eaa57e90ef71f13a53737aa6540e5b5bd9126ad2
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="localization"></a>Localización
 
@@ -32,7 +32,7 @@ Hay dos ejemplos relacionados con este documento:
 
 El ejemplo TodoLocalized incluye un [demostración de proyecto compartido](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized/SharedProject/) sin embargo, debido a las limitaciones del sistema de compilación no obtienen los archivos de recursos una **. designer.cs** archivo generado, lo que interrumpe la capacidad para tener acceso a cadenas traducidas fuertemente tipadas en el código.
 
-El resto de este documento se relaciona con proyectos mediante la plantilla de PCL Xamarin.Forms.
+El resto de este documento se relaciona con proyectos mediante la plantilla de biblioteca estándar de .NET de Xamarin.Forms.
 
 ## <a name="globalizing-xamarinforms-code"></a>Globalizar código Xamarin.Forms
 
@@ -46,7 +46,7 @@ Los ejemplos de destino los idiomas inglés, francés, español, alemán, chino,
 
 ### <a name="adding-resources"></a>Cómo agregar recursos
 
-El primer paso para la globalización de una aplicación de Xamarin.Forms PCL consiste en agregar los archivos de recursos RESX que se usará para almacenar todo el texto que se usa en la aplicación. Es necesario agregar un archivo RESX que contiene el texto predeterminado y, a continuación, agregar archivos RESX adicionales para cada idioma que desee admitir.
+El primer paso para la globalización de una aplicación de biblioteca estándar de .NET de Xamarin.Forms consiste en agregar los archivos de recursos RESX que se usará para almacenar todo el texto que se usa en la aplicación. Es necesario agregar un archivo RESX que contiene el texto predeterminado y, a continuación, agregar archivos RESX adicionales para cada idioma que desee admitir.
 
 #### <a name="base-language-resource"></a>Recurso de idioma base
 
@@ -98,7 +98,7 @@ Para hacer que las propiedades de cadena fuertemente tipado `public`, debe cambi
 
 -----
 
-Este cambio es opcional y solo es necesario si desea hacer referencia a las cadenas localizadas en ensamblados diferentes (por ejemplo, si coloca los archivos RESX en un ensamblado diferente en el código). El ejemplo de este tema deja las cadenas `internal` porque están definidas en el mismo ensamblado Xamarin.Forms PCL que se utilizan.
+Este cambio es opcional y solo es necesario si desea hacer referencia a las cadenas localizadas en ensamblados diferentes (por ejemplo, si coloca los archivos RESX en un ensamblado diferente en el código). El ejemplo de este tema deja las cadenas `internal` porque están definidas en el mismo ensamblado de biblioteca Xamarin.Forms .NET estándar que se utilizan.
 
 Basta con establecer la herramienta personalizada en el archivo RESX base tal y como se muestra arriba; no es necesario establecer *cualquier* herramienta de compilación en los archivos RESX específicos del idioma se describe en las secciones siguientes.
 
@@ -559,7 +559,7 @@ Proyectos de la plataforma de Windows (UWP) universal no requieren el servicio d
 
 ##### <a name="assemblyinfocs"></a>AssemblyInfo.cs
 
-Expanda el nodo de propiedades en el proyecto de biblioteca de clases portables (PCL) y haga doble clic en el **AssemblyInfo.cs** archivo. Agregue la siguiente línea al archivo para establecer el lenguaje de ensamblado de recursos neutrales en inglés:
+Expanda el nodo de propiedades en el proyecto de biblioteca estándar de .NET y haga doble clic en el **AssemblyInfo.cs** archivo. Agregue la siguiente línea al archivo para establecer el lenguaje de ensamblado de recursos neutrales en inglés:
 
 ```csharp
 [assembly: NeutralResourcesLanguage("en")]

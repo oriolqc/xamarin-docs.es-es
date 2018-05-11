@@ -6,11 +6,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: d06c3f95f55edb4870279bfc7d5326be4af4b3bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5774d91dad7b733a03219dcce1434798f70d4564
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="getting-started-with-datapages"></a>Introducción a DataPages
 
@@ -26,7 +26,7 @@ Para empezar a compilar una página de unidad de datos simple con la vista previ
 
 ## <a name="1-add-nuget-packages"></a>1. Agregar paquetes de NuGet
 
-Agregue estos paquetes de Nuget para los proyectos de aplicación y Xamarin.Forms PCL:
+Agregue estos paquetes de Nuget para los proyectos de biblioteca y aplicación Xamarin.Forms .NET estándar:
 
 * Xamarin.Forms.Pages
 * Xamarin.Forms.Theme.Base
@@ -135,7 +135,7 @@ Deben dar como resultado de los pasos anteriores en una página de datos de trab
 
 [![](get-started-images/demo-sml.png "Aplicación de ejemplo DataPages")](get-started-images/demo.png#lightbox "aplicación de ejemplo DataPages")
 
-Esto funciona porque el estilo pregenerado **"Eventos"** existe en el paquete Nuget de tema claro y tiene los estilos definidos que coincida con el origen de datos (p. ej. "title", "image", "presenter").
+Esto funciona porque el estilo pregenerado **"Eventos"** existe en el paquete Nuget de tema claro y tiene los estilos definidos que coincida con el origen de datos (p. ej. "title", "image", "presentador").
 
 Los "eventos" `StyleClass` está diseñado para mostrar el `ListDataPage` control con un personalizado `CardView` control que es definido en Xamarin.Forms.Pages. El `CardView` control tiene tres propiedades: `ImageSource`, `Text`, y `Detail`. El tema está codificado para enlazar tres campos del origen de datos (desde el archivo JSON) a estas propiedades para su presentación.
 

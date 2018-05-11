@@ -3,15 +3,14 @@ title: Desinstalación de Xamarin
 description: Desinstalación de los productos de Xamarin de un equipo
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: ae01fdcefa06dbfe3412eeac427477d898fd6ea5
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: d1b88ad97a1cecaadd84226bca61c7f2b262438d
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/09/2018
 ---
 # <a name="uninstalling-xamarin"></a>Desinstalación de Xamarin
 
@@ -58,7 +57,7 @@ rm -rf ~/Library/Application\ Support/VisualStudio/7.0/LocalInstall/Addins/
 ```
 
 > [!NOTE]
-> Para obtener información sobre cómo desinstalar Visual Studio para Mac, consulte la guía para [Desinstalar](https://docs.microsoft.com/visualstudio/mac/uninstall) en docs.microsoft.com
+> Para obtener información sobre cómo desinstalar Visual Studio para Mac, consulte el la guía para [Desinstalar](https://docs.microsoft.com/visualstudio/mac/uninstall) en docs.microsoft.com
 
 <a name="uninstallmono" />
 
@@ -158,7 +157,7 @@ Para versiones anteriores, consulte la guía para desinstalar [Workbooks](~/tool
 
 <a name="uninstallprofiler" />
 
-### <a name="uninstall-the-xamarin-profiler"></a>Desinstalación de Xamarin Profiler
+### <a name="uninstall-the-xamarin-profiler"></a>Desinstalar Xamarin Profiler
 
 Para quitar los archivos de Xamarin Profiler, use los siguientes comandos en Terminal:
 
@@ -183,7 +182,7 @@ rm -rf "~/Library/Preferences/Visual Studio/"
 
 <a name="uninstallscript" />
 
-### <a name="using-the-uninstall-script"></a>Uso del script de desinstalación
+### <a name="using-the-uninstall-script"></a>Usar el script de desinstalación
 
 Este script de desinstalación permite desinstalar Visual Studio para Mac y los componentes de Xamarin asociados en una sola operación.
 

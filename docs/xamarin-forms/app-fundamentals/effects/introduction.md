@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 7b859dd58551675c121c5600ba9c691e4280a03b
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 805b27139d644d0fac4a7c5a9e9b2c2c331d7130
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="introduction-to-effects"></a>Introducción a los efectos
 
@@ -21,7 +21,7 @@ Xamarin.Forms [páginas, diseños y controles](~/xamarin-forms/user-interface/co
 
 Los desarrolladores pueden implementar sus propias clases `Renderer` personalizadas para personalizar la apariencia o el comportamiento de un control. Sin embargo, a menudo es una respuesta exhaustiva implementar una clase de representador personalizado para llevar a cabo una personalización de control simple. Efectos simplifican este proceso, lo que permite a los controles nativos en cada plataforma para personalizar más fácilmente.
 
-Efectos se crean en proyectos específicos de plataforma de creación de subclases el `PlatformEffect` control y, a continuación, los efectos se consumen adjuntándolos a un control adecuado en un proyecto de biblioteca de clases portables (PCL) de Xamarin.Forms o biblioteca compartida.
+Efectos se crean en proyectos específicos de plataforma de creación de subclases el `PlatformEffect` control y, a continuación, los efectos se consumen adjuntándolos a un control adecuado en un proyecto de biblioteca compartida o la biblioteca estándar de .NET de Xamarin.Forms.
 
 ## <a name="why-use-an-effect-over-a-custom-renderer"></a>¿Por qué usar un efecto sobre un representador personalizado?
 

@@ -3,15 +3,14 @@ title: Compilar entre aplicaciones de la plataforma
 description: 'En un resumen de más de seis partes, esta sección describe cómo crear aplicaciones con la plataforma de desarrollo de Xamarin: de comprender el funcionamiento de Xamarin a diseñar aplicaciones móviles y, a continuación, probar e implementar las tiendas de aplicaciones distintos.'
 ms.prod: xamarin
 ms.assetid: 442FC40A-84DD-A218-0D15-EAD86594B6D7
-ms.technology: xamarin-cross-platform
 author: asb3993
 ms.author: amburns
 ms.date: 01/28/2016
-ms.openlocfilehash: b9d167d8874ecfde9094bacc26cff3e7d1b10bab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fba13ab921949cd2361e78535d5ffc96952a1336
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="sharing-code-options"></a>Opciones de código compartido
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 353575bad91c9bade0207a0aa271d9de7ec50240
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 04d3d99a5d85dd77c93e9b926e8952cc3d8a771e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-a-map-pin"></a>Personalizar un Pin de mapa
 
@@ -47,7 +47,7 @@ public class CustomMap : Map
 }
 ```
 
-El `CustomMap` control se crea en el proyecto de biblioteca (PCL) de clases portables y define la API para la asignación personalizada. El mapa personalizado expone la `CustomPins` propiedad que representa la colección de `CustomPin` objetos que se representará el control de mapa nativos en cada plataforma. La `CustomPin` clase se muestra en el ejemplo de código siguiente:
+El `CustomMap` control se crea en el proyecto de biblioteca estándar de .NET y define la API para la asignación personalizada. El mapa personalizado expone la `CustomPins` propiedad que representa la colección de `CustomPin` objetos que se representará el control de mapa nativos en cada plataforma. La `CustomPin` clase se muestra en el ejemplo de código siguiente:
 
 ```csharp
 public class CustomPin : Pin
@@ -62,7 +62,7 @@ Esta clase define un `CustomPin` como hereda las propiedades de la [ `Pin` ](htt
 
 ## <a name="consuming-the-custom-map"></a>Consumir el mapa personalizado
 
-El `CustomMap` control puede hacer referencia en XAML en el proyecto PCL declarar un espacio de nombres para su ubicación y usando el prefijo de espacio de nombres en el control de mapa personalizado. El siguiente ejemplo de código muestra cómo el `CustomMap` control puede utilizarse en una página XAML:
+El `CustomMap` control puede hacer referencia en XAML en el proyecto de biblioteca estándar de .NET declarando un espacio de nombres para su ubicación y utilizando el prefijo de espacio de nombres en el control de mapa personalizado. El siguiente ejemplo de código muestra cómo el `CustomMap` control puede utilizarse en una página XAML:
 
 ```xaml
 <ContentPage ...
@@ -322,7 +322,7 @@ void OnCalloutAccessoryControlTapped (object sender, MKMapViewAccessoryTappedEve
 }
 ```
 
-Este método abre un explorador web y se desplaza a la dirección almacenada en la `CustomMKAnnotationView.Url` propiedad. Tenga en cuenta que la dirección se ha definido al crear el `CustomPin` colección en el proyecto PCL.
+Este método abre un explorador web y se desplaza a la dirección almacenada en la `CustomMKAnnotationView.Url` propiedad. Tenga en cuenta que la dirección se ha definido al crear el `CustomPin` colección en el proyecto de biblioteca de .NET estándar.
 
 <a name="Deselecting_the_Annotation" />
 
@@ -499,7 +499,7 @@ void OnInfoWindowClick (object sender, GoogleMap.InfoWindowClickEventArgs e)
 }
 ```
 
-Este método abre un explorador web y se desplaza a la dirección almacenada en la `Url` propiedad de los recuperados `CustomPin` de instancia para el `Marker`. Tenga en cuenta que la dirección se ha definido al crear el `CustomPin` colección en el proyecto PCL.
+Este método abre un explorador web y se desplaza a la dirección almacenada en la `Url` propiedad de los recuperados `CustomPin` de instancia para el `Marker`. Tenga en cuenta que la dirección se ha definido al crear el `CustomPin` colección en el proyecto de biblioteca de .NET estándar.
 
 Para obtener más información acerca de cómo personalizar un `MapView` de la instancia, consulte [API de mapas de](~/android/platform/maps-and-location/maps/maps-api.md).
 
@@ -645,7 +645,7 @@ private async void OnInfoButtonTapped(object sender, TappedRoutedEventArgs e)
 }
 ```
 
-Este método abre un explorador web y se desplaza a la dirección almacenada en la `Url` propiedad de la `CustomPin` instancia. Tenga en cuenta que la dirección se ha definido al crear el `CustomPin` colección en el proyecto PCL.
+Este método abre un explorador web y se desplaza a la dirección almacenada en la `Url` propiedad de la `CustomPin` instancia. Tenga en cuenta que la dirección se ha definido al crear el `CustomPin` colección en el proyecto de biblioteca de .NET estándar.
 
 Para obtener más información acerca de cómo personalizar un `MapControl` de la instancia, consulte [mapas y visión general de la ubicación](https://msdn.microsoft.com/library/windows/apps/mt219699.aspx) en MSDN.
 

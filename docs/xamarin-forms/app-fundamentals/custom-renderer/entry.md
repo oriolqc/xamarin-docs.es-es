@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: c120add5a301e440911bd9794da77732e7787cc0
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c93681c3bfd8de8d813cbe98a7ac28b3ee8b74fc
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-an-entry"></a>Personalizar una entrada
 
@@ -43,13 +43,13 @@ public class MyEntry : Entry
 }
 ```
 
-El `MyEntry` control se crea en el proyecto de biblioteca (PCL) de clases portables y es simplemente una [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control. Personalización del control se llevará a cabo en el representador personalizado, por lo que no se requiere ninguna implementación adicional en el `MyEntry` control.
+El `MyEntry` control se crea en el proyecto de biblioteca estándar de .NET y es simplemente una [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) control. Personalización del control se llevará a cabo en el representador personalizado, por lo que no se requiere ninguna implementación adicional en el `MyEntry` control.
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>Consumir el Control personalizado
 
-El `MyEntry` control puede hacer referencia en XAML en el proyecto PCL declarar un espacio de nombres para su ubicación y el uso del prefijo de espacio de nombres en el elemento de control. El siguiente ejemplo de código muestra cómo el `MyEntry` control puede utilizarse en una página XAML:
+El `MyEntry` control puede hacer referencia en XAML en el proyecto de biblioteca estándar de .NET declarando un espacio de nombres para su ubicación y el uso del prefijo de espacio de nombres en el elemento de control. El siguiente ejemplo de código muestra cómo el `MyEntry` control puede utilizarse en una página XAML:
 
 ```xaml
 <ContentPage ...

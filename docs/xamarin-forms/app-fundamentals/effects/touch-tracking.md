@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: eb4ed3df4ea1f9e6aacf1c875eab17908d73cb7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e363cae4dd72a25e4768395410d4e56a8db30eba
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="invoking-events-from-effects"></a>Invocación de eventos de efectos
 
@@ -49,7 +49,7 @@ Por esta razón, el efecto de seguimiento de entrada táctil que se describe en 
 
 ## <a name="the-touch-tracking-effect-api"></a>La API de efecto de seguimiento de entrada táctil
 
-El [ **Touch demostraciones de efecto de seguimiento** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) ejemplo contiene las clases (y una enumeración) que implementa el seguimiento de táctil de bajo nivel. Estos tipos pertenecen al espacio de nombres `TouchTracking` y comenzar con la palabra `Touch`. El **TouchTrackingEffectDemos** proyecto de biblioteca de clases Portable incluye el `TouchActionType` enumeración para el tipo de eventos touch:
+El [ **Touch demostraciones de efecto de seguimiento** ](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) ejemplo contiene las clases (y una enumeración) que implementa el seguimiento de táctil de bajo nivel. Estos tipos pertenecen al espacio de nombres `TouchTracking` y comenzar con la palabra `Touch`. El **TouchTrackingEffectDemos** proyecto de biblioteca de .NET estándar incluye el `TouchActionType` enumeración para el tipo de eventos touch:
 
 ```csharp
 public enum TouchActionType
@@ -65,7 +65,7 @@ public enum TouchActionType
 
 Todas las plataformas incluyen también un evento que indica que se ha cancelado el evento de entrada táctil.
 
-El `TouchEffect` deriva la clase en la PCL `RoutingEffect` y define un evento denominado `TouchAction` y un método denominado `OnTouchAction` que invoca el `TouchAction` eventos:
+El `TouchEffect` clase en la biblioteca estándar de .NET se deriva de `RoutingEffect` y define un evento denominado `TouchAction` y un método denominado `OnTouchAction` que invoca el `TouchAction` eventos:
 
 ```csharp
 public class TouchEffect : RoutingEffect
@@ -87,7 +87,7 @@ public class TouchEffect : RoutingEffect
 
 Observe también el `Capture` propiedad. Para capturar los eventos de toque, una aplicación debe establecer esta propiedad en `true` anteriores a un `Pressed` eventos. En caso contrario, los eventos touch se comportan como los de la plataforma Universal de Windows.
 
-La `TouchActionEventArgs` clase en la PCL contiene toda la información que acompaña a cada evento:
+La `TouchActionEventArgs` clase en la biblioteca estándar de .NET contiene toda la información que acompaña a cada evento:
 
 ```csharp
 public class TouchActionEventArgs : EventArgs
@@ -112,7 +112,7 @@ public class TouchActionEventArgs : EventArgs
 
 Una aplicación puede utilizar el `Id` propiedad para realizar el seguimiento de los dedos individuales. Observe el `IsInContact` propiedad. Esta propiedad es siempre `true` para `Pressed` eventos y `false` para `Released` eventos. También es siempre `true` para `Moved` eventos en iOS y Android. El `IsInContact` propiedad podría ser `false` para `Moved` eventos en la plataforma Universal de Windows cuando se ejecuta el programa en el escritorio y el puntero del mouse se mueve sin un botón presionado.
 
-Puede usar el `TouchEffect` clase en sus propias aplicaciones mediante la inclusión del archivo de proyecto de la solución PCL o bien agregando una instancia de la `Effects` colección de cualquier elemento de Xamarin.Forms. Asociar un controlador para el `TouchAction` eventos para obtener los eventos touch.
+Puede usar el `TouchEffect` clase en sus propias aplicaciones mediante la inclusión del archivo en el proyecto de biblioteca estándar de .NET de la solución y mediante la adición de una instancia de la `Effects` colección de cualquier elemento de Xamarin.Forms. Asociar un controlador para el `TouchAction` eventos para obtener los eventos touch.
 
 Usar `TouchEffect` en su propia aplicación, también necesitará las implementaciones de plataforma que se incluye en **TouchTrackingEffectDemos** solución.
 
@@ -151,7 +151,7 @@ public class TouchEffect : PlatformEffect
         // Get the Windows FrameworkElement corresponding to the Element that the effect is attached to
         frameworkElement = Control == null ? Container : Control;
 
-        // Get access to the TouchEffect class in the PCL
+        // Get access to the TouchEffect class in the .NET Standard library
         effect = (TouchTracking.TouchEffect)Element.Effects.
                     FirstOrDefault(e => e is TouchTracking.TouchEffect);
 
@@ -203,7 +203,7 @@ public class TouchEffect : PlatformEffect
 }
 ```
 
-`OnPointerPressed` También comprueba el valor de la `Capture` propiedad de la clase efecto en las llamadas y PCL `CapturePointer` si es `true`.
+`OnPointerPressed` También comprueba el valor de la `Capture` propiedad de la clase efecto en la biblioteca estándar de .NET y las llamadas `CapturePointer` si es `true`.
 
  Los controladores de eventos UWP son incluso más sencillos:
 
@@ -267,7 +267,7 @@ void OnTouch(object sender, Android.Views.View.TouchEventArgs args)
 
             idToEffectDictionary.Add(id, this);
 
-            capture = pclTouchEffect.Capture;
+            capture = libTouchEffect.Capture;
             break;
 
 ```
@@ -278,7 +278,7 @@ El elemento se quita de la `idToEffectDictionary` cuando se publica el dedo desd
 void FireEvent(TouchEffect touchEffect, int id, TouchActionType actionType, Point pointerLocation, bool isInContact)
 {
     // Get the method to call for firing events
-    Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.pclTouchEffect.OnTouchAction;
+    Action<Element, TouchActionEventArgs> onTouchAction = touchEffect.libTouchEffect.OnTouchAction;
 
     // Get the location of the pointer within the view
     touchEffect.view.GetLocationOnScreen(twoIntArray);

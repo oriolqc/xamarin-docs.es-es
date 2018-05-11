@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
-ms.openlocfilehash: 7cb2a79fffda40f09ee75a12d6287b162566741d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b16d146c5ad1097f38c41763a3ae111e7439256f
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xaml-standard-preview"></a>Estándar XAML (versión preliminar)
 
@@ -22,7 +22,7 @@ Siga estos pasos para experimentar con el estándar de XAML de Xamarin.Forms:
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Descargue el [obtener una vista previa de paquete de NuGet aquí](https://aka.ms/xf-xamlstandard-nuget).
-2. Agregar el **Xamarin.Forms.Alias** paquete NuGet para los proyectos de Xamarin.Forms PCL, estándar de .NET y plataforma.
+2. Agregar el **Xamarin.Forms.Alias** paquete NuGet para los proyectos de plataforma y Xamarin.Forms .NET estándar.
 3. Inicializar el paquete con `Alias.Init()`
 4. Agregar un `xmlns:a` referencia `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
 5. Utilizar los tipos en XAML, vea el [referencia de controles](controls.md) para obtener más información.
@@ -30,7 +30,7 @@ Siga estos pasos para experimentar con el estándar de XAML de Xamarin.Forms:
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. Descargue el [obtener una vista previa de paquete de NuGet aquí](https://aka.ms/xf-xamlstandard-nuget).
-2. Agregar el **Xamarin.Forms.Alias** paquete NuGet para los proyectos de Xamarin.Forms PCL, estándar de .NET y plataforma.
+2. Agregar el **Xamarin.Forms.Alias** paquete NuGet para los proyectos de plataforma y Xamarin.Forms .NET estándar.
 3. Inicializar el paquete con `Alias.Init()`
 4. Agregar un `xmlns:a` referencia `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
 5. Utilizar los tipos en XAML, vea el [referencia de controles](controls.md) para obtener más información.

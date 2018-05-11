@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 2600b52b6e044ca9a3a8387bcf719dd1632c406d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 86253e42db7da2da6eb8b03e2d4a4b3c943b7e17
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="adding-intelligence-with-cognitive-services"></a>Agregar inteligencia mediante servicios cognitivos
 
@@ -70,9 +70,7 @@ El proyecto PCL también contiene algunos archivos importantes:
 
 La aplicación de ejemplo utiliza los siguientes paquetes de NuGet:
 
-- `Microsoft.Net.Http` : proporciona el `HttpClient` clase para realizar solicitudes a través de HTTP.
 - `Newtonsoft.Json` : proporciona un marco JSON para. NET.
-- `Microsoft.ProjectOxford.Face` : una biblioteca de cliente para tener acceso a la API de cara.
 - `PCLStorage` : proporciona un conjunto de las API de E/S de archivos local de multiplataforma.
 - `sqlite-net-pcl` : proporciona almacenamiento de base de datos de SQLite.
 - `Xam.Plugin.Media` : proporciona las API de selección y toma de fotografía de multiplataforma.

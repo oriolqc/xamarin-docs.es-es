@@ -6,12 +6,12 @@ ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/26/2018
-ms.openlocfilehash: f5c05ce308a10747ad3e18e4a1d141d29fd6c8a1
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 05/03/2018
+ms.openlocfilehash: 6a0107ec11955f99c62a6f59f9bf82291dee9224
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="xamarinforms-quickstart"></a>Inicio rápido de Xamarin.Forms
 
@@ -33,7 +33,7 @@ Cree la aplicación Phoneword de la siguiente forma:
 
 3. En el cuadro de diálogo **Nuevo proyecto**, haga clic en **Multiplataforma**, seleccione la plantilla **Aplicación móvil (Xamarin.Forms)**, establezca el nombre y el nombre de la solución en `Phoneword`, elija una ubicación adecuada para el proyecto y haga clic en el botón **Aceptar**:
 
-    ![](quickstart-images/vs/new-project.png "Plantillas de proyectos multiplataforma")
+    ![](quickstart-images/vs/new-project.w157.png "Plantillas de proyectos multiplataforma")
 
 4. En el cuadro de diálogo **New Cross Platform App** (Nueva aplicación multiplataforma), haga clic en **Aplicación en blanco**, seleccione **.NET Standard** como estrategia de código de uso compartido y haga clic en el botón **Aceptar**:
 
@@ -168,7 +168,7 @@ Cree la aplicación Phoneword de la siguiente forma:
 
 12. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Código > Clase**, asigne al nuevo archivo el nombre **PhoneTranslator** y haga clic en el botón **Agregar**:
 
-    ![](quickstart-images/vs/add-translator-class.png "Agregar nueva clase")
+    ![](quickstart-images/vs/add-translator-class.w157.png "Agregar nueva clase")
 
 13. En **PhoneTranslator.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código convertirá una palabra del teléfono en un número de teléfono:
 
@@ -234,7 +234,7 @@ Cree la aplicación Phoneword de la siguiente forma:
 
 15. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Código > Interfaz**, asigne al nuevo archivo el nombre **IDialer** y haga clic en el botón **Agregar**:
 
-    ![](quickstart-images/vs/add-idialer-interface.png "Agregar nueva interfaz")
+    ![](quickstart-images/vs/add-idialer-interface.w157.png "Agregar nueva interfaz")
 
 16. En **IDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código define un método `Dial` que se debe implementar en cada plataforma para marcar un número de teléfono convertido:
 
@@ -257,9 +257,9 @@ Cree la aplicación Phoneword de la siguiente forma:
 
     ![](quickstart-images/vs/add-new-item-ios.png "Agregar nuevo elemento")
 
-18. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Apple > Código > Clase**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Agregar**:
+18. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Código > Clase**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Agregar**:
 
-    ![](quickstart-images/vs/new-phone-dialer-ios.png "Agregar nueva clase")
+    ![](quickstart-images/vs/new-phone-dialer-ios.w157.png "Agregar nueva clase")
 
 19. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método <code>Dial</code> que se usará en la plataforma iOS para marcar un número de teléfono convertido:
 
@@ -291,7 +291,7 @@ Cree la aplicación Phoneword de la siguiente forma:
 
 21. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Android > Clase**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Agregar**:
 
-    ![](quickstart-images/vs/new-phone-dialer-android.png "Agregar nueva clase")
+    ![](quickstart-images/vs/new-phone-dialer-android.w157.png "Agregar nueva clase")
 
 22. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método `Dial` que se usará en la plataforma Android para marcar un número de teléfono convertido:
 
@@ -391,7 +391,7 @@ Cree la aplicación Phoneword de la siguiente forma:
 
 27. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Código > Clase**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Agregar**:
 
-    ![](quickstart-images/vs/new-phone-dialer-uwp.png "Agregar nueva clase")
+    ![](quickstart-images/vs/new-phone-dialer-uwp.w157.png "Agregar nueva clase")
 
 28. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método `Dial`, y los métodos auxiliares, que se usarán en la Plataforma universal de Windows para marcar un número de teléfono convertido:
 
@@ -523,7 +523,7 @@ Cree la aplicación Phoneword de la siguiente forma:
         <ContentPage.Padding>
             <OnPlatform x:TypeArguments="Thickness">
                 <On Platform="iOS" Value="20, 40, 20, 20" />
-                <On Platform="Android, UWP" Value="20" />
+                <On Platform="Android, WinPhone, Windows" Value="20" />
             </OnPlatform>
         </ContentPage.Padding>
         <StackLayout>
@@ -630,7 +630,7 @@ Cree la aplicación Phoneword de la siguiente forma:
     }
     ```
 
-    Guarde los cambios en **App.xaml.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
+    Guarde los cambios en **Phoneword.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
 
 13. En el **Panel de solución**, seleccione el proyecto **Phoneword**, haga clic con el botón derecho y seleccione **Agregar > Nuevo archivo...**:
 

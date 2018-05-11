@@ -2,15 +2,14 @@
 title: Transferencia de datos de Xamarin.Essentials
 description: La clase DataTransfer permite a una aplicación compartir datos como texto y web vínculos a otras aplicaciones en el dispositivo.
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
-ms.technology: xamarin-crossplatform
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 6c6521c9bacd7b3e9da67165d2d271f5a40e4d7a
-ms.sourcegitcommit: 46d3c9daa45350bdd536d9e105517f3c1c753c5b
+ms.openlocfilehash: baec3bdd89cb98d7595a524b6b9c4263ca18aa41
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="xamarinessentials-data-transfer"></a>Transferencia de datos de Xamarin.Essentials
 

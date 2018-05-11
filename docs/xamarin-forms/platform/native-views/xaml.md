@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 6dbad7352a089f482fa3a396505507da58771cef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 24e7f29e42607d4a2c957cf85dad15f659d3618e
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="native-views-in-xaml"></a>Vistas nativo en XAML
 
@@ -74,7 +74,7 @@ Propiedades enlazables y adjuntadas propiedades enlazables también pueden estab
 Constructores de widget Android suele ser necesitan el Android `Context` objeto como argumento y esto pueden ponerse a disposición a través de una propiedad estática en la `MainActivity` clase. Por lo tanto, al crear un widget de Android en XAML, el `Context` objeto generalmente se debe pasar al constructor del widget mediante el `x:Arguments` atribuir a un `x:Static` extensión de marcado. Para obtener más información, consulte [pasar argumentos a vistas Native](#passing_arguments).
 
 > [!NOTE]
-> Tenga en cuenta que una vista nativa con nombres `x:Name` no es posible en un proyecto de biblioteca de clases portables (PCL) o un proyecto de Asset compartida (SAP). Si lo hace, se generará una variable del tipo nativo, lo que provocará un error de compilación. Sin embargo, pueden ajustar vistas nativo en `ContentView` instancias y se recuperan en el archivo de código subyacente, siempre que se está usando un SAP. Para obtener más información, consulte [que hace referencia a una vista nativas desde código](#native_view_code).
+> Tenga en cuenta que una vista nativa con nombres `x:Name` no es posible en un proyecto de biblioteca estándar de .NET o un proyecto de Asset compartida (SAP). Si lo hace, se generará una variable del tipo nativo, lo que provocará un error de compilación. Sin embargo, pueden ajustar vistas nativo en `ContentView` instancias y se recuperan en el archivo de código subyacente, siempre que se está usando un SAP. Para obtener más información, consulte [que hace referencia a una vista nativas desde código](#native_view_code).
 
 <a name="native_bindings" />
 
@@ -285,7 +285,7 @@ IOS y Android botones nativos comparten la misma `OnButtonTap` controlador de ev
 
 ## <a name="subclassing-native-views"></a>Creación de subclases de vistas nativo
 
-Muchos iOS y Android vistas nativo no son adecuadas para crear instancias en XAML porque usan métodos, en lugar de propiedades, para configurar el control. La solución a este problema consiste en vistas nativo de subclase de contenedores que definen una API sencilla y compatible con XAML más que utilice propiedades para el control de la instalación, y eventos de independiente de la plataforma. Las vistas nativo ajustadas pueden, a continuación, se coloca en un proyecto de recurso compartido (SAP) y encierre entre las directivas de compilación condicional, o colocar en los proyectos específicos de la plataforma y hace referencia a partir de XAML en un proyecto de biblioteca de clases portables (PCL).
+Muchos iOS y Android vistas nativo no son adecuadas para crear instancias en XAML porque usan métodos, en lugar de propiedades, para configurar el control. La solución a este problema consiste en vistas nativo de subclase de contenedores que definen una API sencilla y compatible con XAML más que utilice propiedades para el control de la instalación, y eventos de independiente de la plataforma. Las vistas nativo ajustadas pueden, a continuación, se coloca en un proyecto de recurso compartido (SAP) y encierre entre las directivas de compilación condicional, o colocar en los proyectos específicos de la plataforma y hace referencia a partir de XAML en un proyecto de biblioteca estándar de .NET.
 
 En el ejemplo de código siguiente se muestra una página de Xamarin.Forms que consume una subclase vistas nativo:
 

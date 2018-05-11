@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 06/19/2017
-ms.openlocfilehash: 77a7f50ab9d8f351dcefcbbdd50e88e18a13645d
-ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
+ms.openlocfilehash: 9b249c67395c98c73526d741f442b7779a871873
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>¿Qué controladores USB es necesario depurar Android en Windows?
 
@@ -29,5 +29,5 @@ Según la por el fabricante, puede ser difícil realizar un seguimiento hacia ab
 
 - [Emulador de Visual Studio para Android](https://www.visualstudio.com/en-us/features/msft-android-emulator-vs.aspx)
 
-- [Emulador del SDK de Google Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
+- [Emulador de Google Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
 

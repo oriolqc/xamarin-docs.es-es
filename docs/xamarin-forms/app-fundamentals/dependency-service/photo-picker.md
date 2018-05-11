@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 6945d64e37bc7e0de930093d8a3f71590026182d
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: e552a0bf76572d50eb0d4618af69fc1179979f97
+ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="picking-a-photo-from-the-picture-library"></a>Seleccionar una foto de la biblioteca de imágenes
 
@@ -27,7 +27,7 @@ Este artículo le guía a través de la creación de una aplicación que permite
 
 ## <a name="creating-the-interface"></a>Creación de la interfaz
 
-En primer lugar, cree una interfaz en el código compartido que expresa la funcionalidad deseada. En el caso de una aplicación de selección de fotos, es necesario un solo método. Esto se define en el [ `IPicturePicker` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/IPicturePicker.cs) interfaz en la biblioteca de clases portables del código de ejemplo:
+En primer lugar, cree una interfaz en el código compartido que expresa la funcionalidad deseada. En el caso de una aplicación de selección de fotos, es necesario un solo método. Esto se define en el [ `IPicturePicker` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/IPicturePicker.cs) interfaz en la biblioteca estándar de .NET del código de ejemplo:
 
 ```csharp
 namespace DependencyServiceSample
@@ -261,7 +261,7 @@ namespace DependencyServiceSample.UWP
 
 ## <a name="implementing-in-shared-code"></a>Implementar en el código compartido
 
-Ahora que se ha implementado la interfaz para cada plataforma, la aplicación en la biblioteca de clases portables común puede sacar partido de ella.
+Ahora que se ha implementado la interfaz para cada plataforma, la aplicación en la biblioteca estándar de .NET puede sacar partido de ella.
 
 El [ `App` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceSample/DependencyServiceSample/DependencyServiceSample.cs) clase crea un `Button` para seleccionar una foto:
 
