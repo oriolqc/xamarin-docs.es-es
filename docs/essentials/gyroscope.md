@@ -5,11 +5,11 @@ ms.assetid: DA4F968A-D988-41F5-8745-1BEE693660A1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 0fa6ed6a0ced97c2600a24860c4f42aee1a24161
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: a987978882a928ad50578d3a0031bce07e60fb6e
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-gyroscope"></a>Xamarin.Essentials giroscopio
 
@@ -77,5 +77,5 @@ public class GyroscopeTest
 
 ## <a name="api"></a>API
 
-- [Código fuente de giroscopio](https://github.com/xamarin/Essentials/tree/master/Essentials/Gyroscope)
+- [Código fuente de giroscopio](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Gyroscope)
 - [Documentación de giroscopio API](xref:Xamarin.Essentials.Gyroscope)

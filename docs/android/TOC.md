@@ -81,8 +81,6 @@
 #### [GridLayout](user-interface/layouts/grid-layout.md)
 #### [Diseños con pestañas](user-interface/layouts/tab-layout/index.md)
 ##### [Pestañas de navegación con ActionBar](user-interface/layouts/tab-layout/with-action-bar.md)
-##### [Introducción a TabHost](user-interface/layouts/tab-layout/tab-host.md)
-##### [Creación de una interfaz de usuario con pestañas con TabHost](user-interface/layouts/tab-layout/creating-a-tabbed-ui.md)
 ### [Controles](user-interface/controls/index.md)
 #### [ActionBar](user-interface/controls/action-bar.md)
 #### [Autocompletar](user-interface/controls/auto-complete.md)

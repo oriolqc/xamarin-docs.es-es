@@ -6,12 +6,12 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: f34a3ee44b604bf0b82faf77769f3c2844e6460f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
-ms.translationtype: MT
+ms.date: 05/11/2018
+ms.openlocfilehash: 431cc359f4191ab2b247b3cacf0f54c3ba44cd57
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="splash-screen"></a>Pantalla de presentación
 
@@ -152,6 +152,74 @@ public class MainActivity : AppCompatActivity
     // Code omitted for brevity
 }
 ```
+
+## <a name="landscape-mode"></a>Modo horizontal
+
+La pantalla de presentación que se implementa en los pasos anteriores se mostrará correctamente en modo vertical y horizontal. Sin embargo, en algunos casos es necesario disponer de las pantallas de presentación independientes para los modos vertical y horizontal (por ejemplo, si la imagen de bienvenida es la pantalla completa).
+
+Para agregar una pantalla de presentación para el modo horizontal, siga estos pasos:
+
+1. En el **/puede dibujar recursos** carpeta, agregar la versión horizontal de la imagen de la pantalla de presentación que desee utilizar. En este ejemplo, **splash_logo_land.png** es la versión de panorama del logotipo que se utilizó en los ejemplos anteriores (utiliza negro de mensajes fallidos en lugar de azul).
+
+2. En el **/puede dibujar recursos** carpeta, crear una versión horizontal de la `layer-list` con estas características que se definió anteriormente (por ejemplo, **splash_screen_land.xml**). En este archivo, establezca la ruta de acceso de mapa de bits a la versión horizontal de la imagen de la pantalla de presentación. En el ejemplo siguiente, **splash_screen_land.xml** utiliza **splash_logo_land.png**:
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+      <item>
+        <color android:color="@color/splash_background"/>
+      </item>
+      <item>
+        <bitmap
+            android:src="@drawable/splash_logo_land"
+            android:tileMode="disabled"
+            android:gravity="center"/>
+      </item>
+    </layer-list>
+
+    ```
+
+3.  Crear el **valores de recursos-terrenos** carpeta si aún no existe.
+
+4.  Agregue los archivos **colors.xml** y **style.xml** a **valores terrenos** (estos pueden copiarse y modificarse de las existentes **values/colors.xml**y **values/style.xml** archivos).
+
+5.  Modificar **valores-tierra/style.xml** para que utilice la versión horizontal de puede dibujar para `windowBackground`. En este ejemplo, **splash_screen_land.xml** se utiliza:
+
+    ```xml
+    <resources>
+      <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
+      </style>
+        <style name="MyTheme" parent="MyTheme.Base">
+      </style>
+      <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_land</item>
+        <item name="android:windowNoTitle">true</item>  
+        <item name="android:windowFullscreen">true</item>  
+        <item name="android:windowContentOverlay">@null</item>  
+        <item name="android:windowActionBar">true</item>  
+      </style>
+    </resources>
+    ```
+
+6.  Modificar **valores-tierra/colors.xml** para configurar los colores que desee usar para la versión horizontal de la pantalla de presentación. En este ejemplo, el color de fondo de presentación se cambia a amarillo para modo horizontal:
+
+    ```xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+      <color name="primary">#2196F3</color>
+      <color name="primaryDark">#1976D2</color>
+      <color name="accent">#FFC107</color>
+      <color name="window_background">#F5F5F5</color>
+      <color name="splash_background">#FFFF00</color>
+    </resources>
+    ```
+
+7.  Compile y ejecute de nuevo la aplicación. Gire el dispositivo para horizontal mientras todavía se muestra la pantalla de presentación. La pantalla de presentación cambia a la versión horizontal:
+
+    [![Rotación de pantalla de presentación en el modo horizontal](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
+
+
+Tenga en cuenta que el uso de una pantalla de presentación de modo horizontal no siempre proporciona una experiencia sin problemas. De forma predeterminada, Android inicia la aplicación en modo vertical y realiza la transición para horizontal incluso si el dispositivo ya está en modo horizontal. Como resultado, si se inicia la aplicación mientras el dispositivo está en modo horizontal, el dispositivo brevemente presenta la pantalla de presentación vertical y, a continuación, anima giro de la vertical a la pantalla de presentación horizontal. Por desgracia, esta transición de vertical a horizontal inicial tiene lugar incluso cuando `ScreenOrientation = Android.Content.PM.ScreenOrientation.Landscape` se especifica en los indicadores de la actividad de la presentación. La mejor manera de evitar esta limitación es crear una imagen de pantalla de presentación único que representa correctamente en los modos vertical y horizontal.
 
 
 ## <a name="summary"></a>Resumen

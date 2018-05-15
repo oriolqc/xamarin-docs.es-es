@@ -5,11 +5,11 @@ ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f187fa404df09e387ed870f524239d3baabfdd3f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 0fe07f60502b27322db9486f3382b8f67d50945b
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-flashlight"></a>Linterna Xamarin.Essentials
 
@@ -119,5 +119,5 @@ Se crea una textura de la superficie de cámara para activar o desactivar el `Fl
 
 ## <a name="api"></a>API
 
-- [Código fuente de linterna](https://github.com/xamarin/Essentials/tree/master/Essentials/Flashlight)
+- [Código fuente de linterna](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Flashlight)
 - [Documentación de API de linterna](xref:Xamarin.Essentials.Flashlight)

@@ -5,11 +5,11 @@ ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: fd757bec32d2854d2c9693812dece05ef11e2f80
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: d2184f1e9817b473eac1d0b69a7637bc862de4cf
+ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/12/2018
 ---
 # <a name="xamarinessentials-connectivity"></a>Conectividad de Xamarin.Essentials
 
@@ -113,5 +113,5 @@ Es importante tener en cuenta que es posible que `Internet` notifica `NetworkAcc
 
 ## <a name="api"></a>API
 
-* [Código fuente de conectividad](https://github.com/xamarin/Essentials/tree/master/Essentials/Connectivity)
+* [Código fuente de conectividad](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Connectivity)
 * [Documentación de API de conectividad](xref:Xamarin.Essentials.Connectivity)
