@@ -1,35 +1,46 @@
 ---
 title: Aprovisionamiento automático
-description: Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el desarrollo de iOS consiste en aprovisionar el dispositivo iOS. En esta guía se analiza el uso de la firma automática en Visual Studio para Mac para solicitar certificados de desarrollo y perfiles.
+description: Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el desarrollo de iOS consiste en aprovisionar el dispositivo iOS. En esta guía se analiza el uso de la firma automática para solicitar certificados de desarrollo y perfiles.
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
-ms.date: 11/17/2017
-ms.openlocfilehash: 01818d2870c7cf59a0f15385dbb3565f07400ff0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/06/2018
+ms.openlocfilehash: 0e2ce758da2951efa0508e76cdf4eaac5384fa6b
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="automatic-provisioning"></a>Aprovisionamiento automático
 
-_Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el desarrollo de iOS consiste en aprovisionar el dispositivo iOS. En esta guía se analiza el uso de la firma automática en Visual Studio para Mac para solicitar certificados de desarrollo y perfiles._
+_Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el desarrollo de iOS consiste en aprovisionar el dispositivo iOS. En esta guía se analiza el uso de la firma automática para solicitar certificados de desarrollo y perfiles._
 
 ## <a name="requirements"></a>Requisitos
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 - Visual Studio para Mac 7.3 o posterior
 - Xcode 9 o posterior
 
-> [!IMPORTANT]
-> En esta guía se indica cómo se usa Visual Studio para Mac para configurar un dispositivo de Apple para la implementación y cómo se implementa una aplicación. Para conocer los pasos manuales del proceso, también en el caso de Visual Studio para Windows, se recomienda seguir los pasos detallados que encontrará en el [manual de aprovisionamiento](~/ios/get-started/installation/device-provisioning/manual-provisioning.md).
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+- Visual Studio 2017 versión 15.7 (o superior)
+
+También debe estar emparejado a un host de compilación de Mac que tenga lo siguiente:
+
+- Xcode 9 o posterior
+
+-----
 
 ## <a name="enabling-automatic-signing"></a>Habilitación de la firma automática
 
-Antes de iniciar el proceso de firma automática, debe asegurarse de que se haya agregado un Id. de Apple en Visual Studio para Mac, como se describe en la guía de [administración de cuentas de Apple](~/cross-platform/macios/apple-account-management.md). Una vez que haya agregado un Id. de Apple, puede usar cualquier _equipo_ asociado. Así podrá crear certificados, perfiles y otros id. a partir de los datos del equipo. El id. de equipo también se usa para crear el prefijo de un id. de aplicación que se incluirá en el archivo de aprovisionamiento. Todo esto permite a Apple comprobar su identidad.
+Antes de iniciar el proceso de firma automática, debe asegurarse de que se haya agregado un Id. de Apple en Visual Studio, como se explica en la guía [Apple Account Management](~/cross-platform/macios/apple-account-management.md) (Administración de cuentas de Apple). Una vez que haya agregado un Id. de Apple, puede usar cualquier _equipo_ asociado. Así podrá crear certificados, perfiles y otros id. a partir de los datos del equipo. El id. de equipo también se usa para crear el prefijo de un id. de aplicación que se incluirá en el archivo de aprovisionamiento. Todo esto permite a Apple comprobar su identidad.
 
 Para inscribir la aplicación automáticamente para su implementación en un dispositivo iOS, haga lo siguiente:
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
 1. Abra un proyecto de iOS en Visual Studio para Mac.
 
@@ -47,11 +58,31 @@ Para inscribir la aplicación automáticamente para su implementación en un dis
 
     Si se produce un error en la firma automática, el panel **Firma automática** muestra el motivo de ese error.
 
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+1. Empareje Visual Studio 2017 con un equipo Mac como se describe en la guía [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+
+2. Para abrir las opciones de aprovisionamiento, seleccione **Proyecto > Propiedades de aprovisionamiento...**
+
+3. Seleccione el esquema **Aprovisionamiento automático**:
+
+    ![Selección del esquema Automático](automatic-provisioning-images/prov4.png)
+
+4. Seleccione el equipo en el cuadro combinado **Equipo** para iniciar el proceso de firma automática.
+
+    ![Selección del equipo](automatic-provisioning-images/prov3.png)
+
+4. Esto inicia el proceso de firma automática. Luego Visual Studio intenta generar un Id. de aplicación, un perfil de aprovisionamiento y una identidad de firma para usar estos artefactos para la firma. Puede ver el proceso de generación en la salida de la compilación:
+
+    ![Salida de la compilación que muestra la generación de artefactos](automatic-provisioning-images/prov5.png)
+
+-----
+
 ## <a name="triggering-automatic-provisioning"></a>Inicio del aprovisionamiento automático
 
 Cuando se ha habilitado la firma automática, Visual Studio para Mac actualiza estos artefactos en caso necesario si sucede algo de lo siguiente:
 
-* Hay un dispositivo iOS conectado al equipo Mac
+* Se conecta un dispositivo iOS al equipo Mac
     - Comprueba automáticamente si el dispositivo está registrado en el portal Apple Developer. Si no es así, lo agrega y genera un nuevo perfil de aprovisionamiento que lo contiene.
 * Se ha modificado el Id. de agrupación de la aplicación
     - Actualiza el Id. de aplicación. Se crea un nuevo perfil de aprovisionamiento que contiene este Id. de aplicación.

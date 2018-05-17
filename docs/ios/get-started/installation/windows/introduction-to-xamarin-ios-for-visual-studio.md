@@ -6,12 +6,12 @@ ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 03/19/2017
-ms.openlocfilehash: 859f84fbe329d79e9e1e6a8b7445fe2a7f03af23
-ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
+ms.date: 05/02/2018
+ms.openlocfilehash: fbd48deb0b18dcd3ac0d40e379e21d5967f81e0d
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introducción a Xamarin.iOS para Visual Studio
 
@@ -48,8 +48,6 @@ En cualquier caso, debe seguir estos pasos:
 ## <a name="connecting-to-the-mac"></a>Conexión al equipo Mac
 
 Para conectar Visual Studio a su host de compilación de Mac, siga las instrucciones que aparecen en la guía [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-
 
 ## <a name="visual-studio-toolbar-overview"></a>Información general sobre la barra de herramientas de Visual Studio
 
@@ -136,14 +134,17 @@ Es posible acceder a las propiedades del proyecto de Visual Studio si se hace cl
 
 ## <a name="creating-a-new-project-for-ios-applications"></a>Creación de un nuevo proyecto para aplicaciones de iOS
 
-La creación de un nuevo proyecto de iOS desde Visual Studio se hace igual que cualquier otro tipo de proyecto. Al seleccionar **Archivo > Nuevo proyecto** se abre el cuadro de diálogo siguiente, que muestra algunas de las plantillas disponibles para crear un nuevo proyecto de iOS:
+La creación de un nuevo proyecto de iOS desde Visual Studio se hace igual que cualquier otro tipo de proyecto. Al seleccionar **Archivo > Nuevo proyecto** se abre el cuadro de diálogo siguiente, que muestra algunos de los tipos de proyectos disponibles para crear un nuevo proyecto de iOS:
 
+![Crear un proyecto nuevo](introduction-to-xamarin-ios-for-visual-studio-images/newproject.w157.png)
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/newproject.png "Creación de un proyecto nuevo")
+Al seleccionar **Aplicación de iOS (Xamarin)** se muestran las plantillas siguientes para crear una nueva aplicación Xamarin.iOS:
+
+![Selección de la plantilla para una aplicación iOS](introduction-to-xamarin-ios-for-visual-studio-images/newproject-2.w157.png)
 
 El guion gráfico y los archivos .xib se pueden editar en Visual Studio mediante el diseñador de iOS. Para crear un guion gráfico, elija una de las plantillas de guion gráfico. Esto generará un archivo **Main.storyboard** en el **Explorador de soluciones**, como se muestra en la siguiente captura de pantalla:
 
-![](introduction-to-xamarin-ios-for-visual-studio-images/solution-explorer-new.png "Archivo Main.storyboard en el Explorador de soluciones")
+![Archivo Main.storyboard en el Explorador de soluciones](introduction-to-xamarin-ios-for-visual-studio-images/solution-explorer-new.w157.png)
 
 Para empezar a crear o editar el guion gráfico, haga doble clic en `Main.storyboard` para abrirlo en el diseñador de iOS:
 

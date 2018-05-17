@@ -1,21 +1,21 @@
 ---
-title: Ejecutar el emulador de Android SDK
-description: Cómo depurar la aplicación con el emulador de Android SDK
+title: Ejecución de Google Android Emulator
+description: Cómo depurar la aplicación con Google Android Emulator
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 630520f88dd23d3860b5f42fbb9bc4eb35ca2c4b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0e290b24c0d7a98b1abaf647fe76e56867042645
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="running-the-android-sdk-emulator"></a>Ejecutar el emulador de Android SDK
+# <a name="running-the-google-android-emulator"></a>Ejecución de Google Android Emulator
 
-En esta guía, aprenderá a iniciar un dispositivo virtual en el Emulador de Android SDK para depurar y probar la aplicación.
+En esta guía se aprende a iniciar un dispositivo virtual en Google Android Emulator para depurar y probar la aplicación.
 
 ## <a name="using-a-pre-configured-virtual-device"></a>Uso de un dispositivo virtual preconfigurado
 
@@ -80,13 +80,13 @@ Tras elegir el dispositivo virtual en el menú desplegable de dispositivos, sele
 
 -----
 
-Cuando se inicie el emulador de Android, Xamarin.Android implementará la aplicación en el emulador. El emulador ejecuta la aplicación con la imagen de dispositivo virtual configurada. A continuación se muestra una captura de pantalla de ejemplo del emulador de Android SDK (el emulador está ejecutando una aplicación en blanco denominada **MyApp**):
+Cuando se inicie el emulador de Android, Xamarin.Android implementará la aplicación en el emulador. El emulador ejecuta la aplicación con la imagen de dispositivo virtual configurada. A continuación se muestra una captura de pantalla de ejemplo de Google Android Emulator (el emulador está ejecutando una aplicación en blanco denominada **MyApp**):
 
 ![El emulador está ejecutando una aplicación en blanco](running-the-emulator-images/emulator-running.png)
 
 El emulador puede dejarse en ejecución, de modo que no es necesario cerrarlo y reiniciarlo cada vez que se ejecuta la aplicación. La primera vez que se ejecuta una aplicación de Xamarin.Android en el emulador, se instala el tiempo de ejecución compartido de Xamarin.Android para el nivel de API de destino, seguido de la aplicación. La instalación del tiempo de ejecución puede tardar unos minutos, así que tendrá que esperar. La instalación del tiempo de ejecución tiene lugar solamente cuando se implementa en el emulador la primera aplicación de Xamarin.Android, &ndash;de modo que las posteriores implementaciones serán más rápidas porque solo se copiará la aplicación en el emulador.
 
-Para obtener más información sobre cómo usar el emulador de Android SDK, consulte los siguientes temas para desarrolladores de Android:
+Para obtener más información sobre cómo usar Google Android Emulator, vea los siguientes temas para desarrolladores de Android:
 
 -   [Navegar en la pantalla](https://developer.android.com/studio/run/emulator.html#navigate)
 

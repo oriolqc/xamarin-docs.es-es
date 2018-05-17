@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/25/2018
-ms.openlocfilehash: 4b51b10965f3f6e77420d657bc0f7f7d25fc6569
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: a4ce36e28bd5b6dcf78d248b1f2ba951cad9b286
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="debugging"></a>Depuración
 
@@ -21,7 +21,7 @@ En esta sección se describe cómo depurar una aplicación de Xamarin.Android en
 Para desarrollar una aplicación Android es necesario ejecutarla, ya sea en un hardware físico o mediante un emulador. El uso de hardware es el mejor enfoque, pero no siempre es el más práctico. En muchos casos, puede resultar más sencillo y rentable simular o emular el hardware de Android mediante uno de los emuladores que se describen a continuación.
 
 
-### <a name="android-sdk-emulatorandroiddeploy-testdebuggingandroid-sdk-emulatorindexmd"></a>[Emulador de Android SDK](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
+### <a name="google-android-emulatorandroiddeploy-testdebuggingandroid-sdk-emulatorindexmd"></a>[Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
 
 En estos artículos se explica cómo usar el emulador predeterminado que se proporciona con Android SDK. Este emulador está disponible para Visual Studio para Windows y Visual Studio para Mac.
 

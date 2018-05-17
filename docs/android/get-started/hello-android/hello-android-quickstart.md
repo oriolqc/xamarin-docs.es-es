@@ -8,11 +8,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/25/2018
-ms.openlocfilehash: 44c3e4b0f05526560ff4b32808ba476110ce5e8f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 7faf4ef090815ea799209e76816113f06889bd21
+ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: inicio rápido
 
@@ -64,10 +64,10 @@ Si está usando el emulador de Android de Visual Studio, Hyper-V debe estar habi
 
 Inicie Visual Studio.  Para crear un proyecto, haga clic en **Archivo > Nuevo > Proyecto**.
 
-En el cuadro de diálogo **Nuevo proyecto**, haga clic en la plantilla **Aplicación vacía (Android)**.
+En el cuadro de diálogo **Nuevo proyecto**, haga clic en la plantilla **Aplicación Android**.
 Asigne al nuevo proyecto el nombre de `Phoneword`. Haga clic en **Aceptar** para crear el nuevo proyecto:
 
-[![El nuevo proyecto es Phoneword](hello-android-quickstart-images/vs/02-new-project-name-sml.png)](hello-android-quickstart-images/vs/02-new-project-name.png#lightbox)
+[![El nuevo proyecto es Phoneword](hello-android-quickstart-images/vs/02-new-project-name-sml.w157.png)](hello-android-quickstart-images/vs/02-new-project-name.w157.png#lightbox)
 
 ### <a name="creating-the-layout"></a>Crear el diseño
 
@@ -112,9 +112,9 @@ El siguiente paso consiste en agregar código para convertir números de teléfo
 
 [![Agregar nuevo elemento](hello-android-quickstart-images/vs/12-add-new-item-sml.png)](hello-android-quickstart-images/vs/12-add-new-item.png#lightbox)
 
-En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Código** y asigne al nuevo archivo de código el nombre **PhoneTranslator.cs**:
+En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Código > Archivo de código** y asigne al nuevo archivo de código el nombre **PhoneTranslator.cs**:
 
-[![Agregar PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml.png)](hello-android-quickstart-images/vs/14-add-class.png#lightbox)
+[![Agregar PhoneTranslator.cs](hello-android-quickstart-images/vs/14-add-class-sml.w157.png)](hello-android-quickstart-images/vs/14-add-class.w157.png#lightbox)
 
 Esto crea una nueva clase de C# vacía. Inserte el código siguiente en este archivo:
 
@@ -185,10 +185,11 @@ El siguiente paso consiste en agregar código para conectar la interfaz de usuar
 (Resource.Layout.Main)`. En primer lugar, modifique el código de plantilla para que el método `OnCreate` sea similar al siguiente:
 
 ```csharp
+using System;
 using Android.App;
-using Android.OS;
+using Android.Content;
 using Android.Widget;
-using Core;
+using Android.OS;
 
 namespace Phoneword
 {
@@ -419,10 +420,13 @@ Haga doble clic en el archivo **MainActivity.cs** en **Panel de solución** para
 Para empezar, agregue un controlador de eventos al botón **Traducir**. En la clase `MainActivity`, busque el método `OnCreate`. Agregue el código de botón dentro de `OnCreate`, debajo de las llamadas a `base.OnCreate(bundle)` y `SetContentView (Resource.Layout.Main)`. Quite el código de control del botón de plantilla de manera que el método `OnCreate` tenga el aspecto siguiente:
 
 ```csharp
+using System;
 using Android.App;
-using Android.OS;
+using Android.Content;
+using Android.Runtime;
+using Android.Views;
 using Android.Widget;
-using Core;
+using Android.OS;
 
 namespace Phoneword
 {

@@ -6,11 +6,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/25/2018
-ms.openlocfilehash: 269b5a06796ae748da93f7c65b23598d9e9311df
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: b2f83c8f8ab6ab730a586b30394454f6bf6f6ba9
+ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="setup-and-installation"></a>Configuración e instalación
 
@@ -31,7 +31,7 @@ Visual Studio incluye un Android SDK Manager que reemplaza el Android SDK Manage
 
 ## <a name="android-emulator-setupandroidget-startedinstallationandroid-emulatorindexmd"></a>[Configuración de Android Emulator](~/android/get-started/installation/android-emulator/index.md)
 
-En estos artículos se explica cómo configurar el emulador de Android SDK para probar y depurar aplicaciones de Xamarin.Android.
+En estos artículos se explica cómo configurar Google Android Emulator para probar y depurar aplicaciones Xamarin.Android.
 
 ## <a name="android-device-setupandroidget-startedinstallationset-up-device-for-developmentmd"></a>[Configuración de dispositivos Android](~/android/get-started/installation/set-up-device-for-development.md)
 
