@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 5954d705e403a3c8230c3125efcf836c3930c459
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 15e1f53d053046b4a51666647ac846366d3c858b
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="walkthrough-binding-an-ios-objective-c-library"></a>Tutorial: Enlazar una biblioteca de C de objetivo de iOS
 
@@ -420,7 +420,7 @@ sdk: macosx10.11     arch: x86_64  i386
 sdk: watchos2.2      arch: armv7
 ```
 
-De lo anterior, podemos ver que tenemos la `iphoneos8.1` SDK instalado en la máquina. Con esta información en su lugar, estamos preparados para analizar el proyecto InfColorPicker `.h` archivos a la inicial **ApiDefinition.cs** y `StructsAndEnums.cs` para el proyecto InfColorPicker.
+De lo anterior, podemos ver que tenemos la `iphoneos9.3` SDK instalado en la máquina. Con esta información en su lugar, estamos preparados para analizar el proyecto InfColorPicker `.h` archivos a la inicial **ApiDefinition.cs** y `StructsAndEnums.cs` para el proyecto InfColorPicker.
 
 Escriba el siguiente comando en la aplicación Terminal:
 

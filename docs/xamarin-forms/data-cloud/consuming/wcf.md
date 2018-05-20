@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: c626008012ccdab2f8ed2c719b34a45471598d47
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 23cdc1871511fa75ba2686213d135822ca0fb971
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="consuming-a-windows-communication-foundation-wcf-web-service"></a>Consumir un servicio Web de Windows Communication Foundation (WCF)
 
@@ -42,17 +42,17 @@ El servicio WCF proporciona las siguientes operaciones:
 
 |Operación|Descripción|Parámetros|
 |--- |--- |--- |
-|GetTodoItems|Obtener una lista de elementos pendientes|
+|GetTodoItems|Obtener una lista de tareas pendientes|
 |CreateTodoItem|Crear un nuevo elemento de tarea|Un documento XML serializado TodoItem|
-|EditTodoItem|Actualizar un elemento de tarea|Un documento XML serializado TodoItem|
-|DeleteTodoItem|Eliminar un elemento de tarea|Un documento XML serializado TodoItem|
+|EditTodoItem|Actualizar una tarea pendiente|Un documento XML serializado TodoItem|
+|DeleteTodoItem|Eliminar una tarea pendiente|Un documento XML serializado TodoItem|
 
 Para obtener más información acerca del modelo de datos usado en la aplicación, consulte [modelar los datos](~/xamarin-forms/data-cloud/walkthrough.md).
 
 > [!NOTE]
 > La aplicación de ejemplo utiliza el servicio WCF hospedado en Xamarin que proporciona acceso de solo lectura para el servicio web. Por lo tanto, las operaciones que crean, actualización y eliminan datos no modificará los datos que se consume en la aplicación. Sin embargo, está disponible en una versión del servicio ASMX hospedable el **TodoWCFService** carpeta en la aplicación de ejemplo que lo acompaña. Esta versión de los permisos de servicio WCF completas hospedable crear, actualizar, leer y eliminar el acceso a los datos.
 
-A *proxy* debe generarse para consumir un servicio WCF, que permite que la aplicación para conectarse al servicio. El proxy se construye por consumo metadatos del servicio que definen los métodos y la configuración del servicio asociado. Estos metadatos se muestran en forma de un documento de lenguaje de descripción de servicios Web (WSDL) que se genera mediante el servicio web. Mediante el proveedor de referencia de servicio de Web de Microsoft WCF en Visual Studio de 2017 para agregar una referencia de servicio para el servicio web en una biblioteca estándar de .NET se puede generar el proxy. Una alternativa para crear al proxy con el proveedor de referencia de servicio de Web de Microsoft WCF en Visual Studio de 2017 es usar la herramienta de utilidad de metadatos de ServiceModel (svcutil.exe). Para obtener más información, consulte [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/).
+A *proxy* debe generarse para consumir un servicio WCF, que permite que la aplicación para conectarse al servicio. El proxy se construye por consumo metadatos del servicio que definen los métodos y la configuración del servicio asociado. Estos metadatos se muestran en forma de un documento de lenguaje de descripción de servicios Web (WSDL) que se genera mediante el servicio web. El proxy se puede crear mediante el proveedor de referencia de servicio de Web de Microsoft WCF en Visual Studio de 2017 para agregar una referencia de servicio para el servicio web en una biblioteca de .NET estándar. Una alternativa para crear al proxy con el proveedor de referencia de servicio de Web de Microsoft WCF en Visual Studio de 2017 es usar la herramienta de utilidad de metadatos de ServiceModel (svcutil.exe). Para obtener más información, consulte [la herramienta de utilidad de metadatos de ServiceModel (Svcutil.exe)](/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe/).
 
 Las clases de proxy generado proporcionan métodos para utilizar los servicios web que usan el patrón de diseño del modelo de programación asincrónica (APM). En este modelo, una operación asincrónica se implementa como dos métodos denominados *BeginOperationName* y *EndOperationName*, que empiezan y terminan la operación asincrónica.
 

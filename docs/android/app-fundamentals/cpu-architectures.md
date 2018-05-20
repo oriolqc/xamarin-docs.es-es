@@ -7,11 +7,11 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: dea5aaa16891893f649d5ec56f3e6b1ee9a18683
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: abfe22683de024f056d7798dc3ac2de13ebd953e
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="cpu-architectures"></a>Arquitecturas de CPU
 
@@ -29,7 +29,7 @@ Para obtener más información acerca de cómo funciona esto, consulte [disposit
 
 Por lo general, solo seleccionar explícitamente una arquitectura (o arquitecturas) cuando la aplicación se configura para **versión**. Cuando se configura la aplicación para **depurar**, **en tiempo de ejecución compartido de uso** y **usar implementación rápida** opciones están habilitadas, que deshabilitar la selección de la arquitectura explícita.
 
-En Visual Studio, haga doble clic en **propiedades** en su proyecto en **el Explorador de soluciones** y seleccione la **opciones Android** página. Haga clic en el **empaquetado** ficha y compruebe que **en tiempo de ejecución compartido de uso** está deshabilitado (si desactiva esta alerta le permite seleccionar qué ABIs para admitir de manera explícita). Haga clic en el **avanzadas** ficha y, en **propiedades avanzadas**, compruebe las arquitecturas que desea admitir:
+En Visual Studio, haga doble clic en el proyecto en el **el Explorador de soluciones** y seleccione **propiedades**. En el **opciones Android** página comprobación de la **propiedades de empaquetado** sección y compruebe que **en tiempo de ejecución compartido de uso** está deshabilitado (si desactiva esta alerta permite explícitamente Seleccione qué ABIs para admitir). Haga clic en el **avanzadas** botón y, en **admite arquitecturas**, compruebe las arquitecturas que desea admitir:
 
 [![Selección de armeabi y armeabi v7a](cpu-architectures-images/vs/01-abi-selections-sml.png)](cpu-architectures-images/vs/01-abi-selections.png#lightbox)
 

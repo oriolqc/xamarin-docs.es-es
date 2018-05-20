@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/07/2018
-ms.openlocfilehash: bfdfeda5821b020d7948e583a63bf9ec7e8ee324
-ms.sourcegitcommit: daa089d41cfe1ed0456d6de2f8134cf96ae072b1
+ms.openlocfilehash: 47cca2f726b0af396ea1eb287cfa4e1f1bf19724
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="resource-dictionaries"></a>Diccionarios de recursos
 
@@ -35,7 +35,7 @@ Los recursos se definen en un [ `ResourceDictionary` ](xref:Xamarin.Forms.Resour
 Un programa de Xamarin.Forms contiene solo una clase que deriva de `Application` , pero a menudo hace uso de muchas clases que derivan de `VisualElement`, incluidos los controles, diseños y páginas. Cualquiera de estos objetos pueden tener sus `Resources` propiedad establecida en un `ResourceDictionary`. Elegir dónde colocar un determinado `ResourceDictionary` impactos donde se pueden usar los recursos:
 
 - Recursos en un `ResourceDictionary` que está conectada a una vista como `Button` o `Label` solo puede aplicarse a ese objeto concreto, por lo que no resulta muy útil.
-- Recursos en un `ResourceDictionary` adjunta a un diseño como `StackLayout` o `Grid` pueden aplicarse para el diseño y todos los elementos secundarios de ese diseño. 
+- Recursos en un `ResourceDictionary` adjunta a un diseño como `StackLayout` o `Grid` pueden aplicarse para el diseño y todos los elementos secundarios de ese diseño.
 - Recursos en un `ResourceDictionary` definido en la página de nivel puede aplicarse a la página y a todos sus elementos secundarios.
 - Recursos en un `ResourceDictionary` definido en la aplicación de nivel se puede aplicar a lo largo de la aplicación.
 
@@ -187,7 +187,7 @@ Puede crear instancias de `MyResourceDictionary` colocándola entre un par de `R
         <local:MyResourceDictionary />
     </ContentPage.Resources>
     ...
-</ContentPage>  
+</ContentPage>
 ```
 
 Una instancia de `MyResourceDictionary` está establecido en el `Resources` propiedad de la `ContentPage` objeto.
@@ -258,7 +258,7 @@ Cuando se combinan [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionar
 
 ## <a name="merging-dictionaries-in-xamarinforms-30"></a>Combinación de diccionarios de Xamarin.Forms 3.0
 
-A partir de Xamarin.Forms 3.0, el proceso de combinar `ResourceDictionaries` se ha convertido en algo más fácil y más flexibles. El `MergedDictionaries` etiquetas de elemento de propiedad ya no son necesarias. En su lugar, se agrega al diccionario de recursos otro `ResourceDictionary` etiqueta con el nuevo [ `Source` ](xref:Xamarin.Forms.ResourceDictionary.Source) propiedad establecida en el nombre de archivo del archivo XAML con los recursos:
+A partir de Xamarin.Forms 3.0, el proceso de combinar [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) instancias se ha convertido en algo más fácil y más flexibles. El `MergedDictionaries` etiquetas de elemento de propiedad ya no son necesarias. En su lugar, se agrega al diccionario de recursos otro `ResourceDictionary` etiqueta con el nuevo [ `Source` ](xref:Xamarin.Forms.ResourceDictionary.Source) propiedad establecida en el nombre de archivo del archivo XAML con los recursos:
 
 ```xaml
 <ContentPage ...>
@@ -294,7 +294,7 @@ Porque Xamarin.Forms 3.0 crea automáticamente una instancia el `ResourceDiction
 </ContentPage>
 ```
 
-Esta nueva sintaxis _no_ crear una instancia de la `MyResourceDictionary` clase. En su lugar, hace referencia al archivo XAML. Por esa razón el archivo de código subyacente (**MyResourceDictionary.xaml.cs**) ya no es necesario. También puede quitar el `x:Class` atributo de la etiqueta raíz de la **MyResourceDictionary.xaml** archivo. 
+Esta nueva sintaxis _no_ crear una instancia de la `MyResourceDictionary` clase. En su lugar, hace referencia al archivo XAML. Por esa razón el archivo de código subyacente (**MyResourceDictionary.xaml.cs**) ya no es necesario. También puede quitar el `x:Class` atributo de la etiqueta raíz de la **MyResourceDictionary.xaml** archivo.
 
 ## <a name="summary"></a>Resumen
 
