@@ -6,14 +6,16 @@ ms.assetid: CC6A0D52-E9FA-4270-B3FA-84660621D6D5
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 10/13/2017
-ms.openlocfilehash: 517e21f2decd0dabbd03d752f13831a891ad7138
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/21/2018
+ms.openlocfilehash: 79e61db4c27a2d29b4ee0a9d39f2d25ea5d93303
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="advanced-concepts-and-internals"></a>Conceptos avanzados y elementos internos
+
+_Esta sección contiene temas que explican la arquitectura, diseño de la API y las limitaciones de Xamarin.Android. Además, incluye temas que explican su implementación de la colección de elementos no utilizados y los ensamblados que están disponibles en Xamarin.Android. Dado que es Xamarin.Android [código abierto](https://github.com/xamarin/xamarin-android), también es posible comprender el funcionamiento interno de Xamarin.Android mediante el examen de su código fuente._
 
 
 ##  <a name="architectureandroidinternalsarchitecturemd"></a>[Arquitectura](~/android/internals/architecture.md)

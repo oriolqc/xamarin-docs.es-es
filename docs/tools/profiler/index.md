@@ -6,11 +6,11 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 7e28e2513b74faa884fb7bc3d7194f1b02844734
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 81c6a5682fc91b49a0f7495f06e7f7b6d3f76330
+ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-profiler"></a>Generador de perfiles de Xamarin
 
@@ -24,33 +24,12 @@ El generador de perfiles de Xamarin tiene un número de instrumentos disponibles
 
 Esta guía examina los escenarios comunes de generación de perfiles y el generador de perfiles presenta como una herramienta para ayudar a analizar y optimizar aplicaciones de iOS y Android.
 
-## <a name="contents"></a>Contenido
-
-- [Descargue e instale](#Download_and_Install)
-- [Los generadores de perfiles y la generación de perfiles](#Profilers_and_Profiling)
-- [Xamarin Profiler](#Xamarin_Profiler)
-- [Compatibilidad del generador de perfiles](#Profiler_Support)
-- [Conceptos básicos del generador de perfiles](#Profiler_Basics)
-    - [Permitir que la aplicación de generación de perfiles](#Allowing_Profiling_in_your_App)
-    - [Iniciar el generador de perfiles](#Launching_the_Profiler)
-        - [Iniciar desde Visual Studio para Mac](#Launching_from_Xamarin_Studio)
-        - [Iniciar desde Visual Studio](#Launching_from_Visual_Studio)
-        - [Guardar y cargar las sesiones del generador de perfiles](#Saving_and_Loading_Profiler_Sessions)
-        - [Instrumentos y características del generador de perfiles](#Profiler_Features)
-    - [Asignaciones](#Allocations)
-    - [Generador de perfiles de tiempo](#Time_Profiler)
-    - [Ciclos](#Cycles)
-- [Generar perfiles de aplicaciones](#Profiling_Applications)
-- [Resumen](#Summary)
-
 ## <a name="download-and-install"></a>Descargue e instale
 
 > [!NOTE]
-> **Nota:** debe ser un [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) suscriptor para desbloquear esta característica en cualquier proyecto de Visual Studio Enterprise en Windows o Visual Studio para Mac en un equipo Mac.
+> Debe ser un [Visual Studio Enterprise](https://www.visualstudio.com/vs/compare/) suscriptor para desbloquear esta característica en cualquier proyecto de Visual Studio Enterprise en Windows o Visual Studio para Mac en un equipo Mac.
 
 El generador de perfiles de Xamarin es una aplicación independiente y se integra con Visual Studio para Mac y Visual Studio habilitar la generación de perfiles desde el IDE.
-
-### <a name="download"></a>Descargar
 
 Descargue el paquete de instalación para su plataforma:
 
@@ -58,7 +37,6 @@ Descargue el paquete de instalación para su plataforma:
 - [**Windows**](https://dl.xamarin.com/profiler/profiler-windows.msi)
 
 Una vez descargado, inicie el instalador para agregar el generador de perfiles de Xamarin en el sistema.
-
 
 ## <a name="profilers-and-profiling"></a>Los generadores de perfiles y la generación de perfiles
 
@@ -199,7 +177,6 @@ Puede cargar *.mlpd* archivos en el generador de perfiles, abra la aplicación i
 
 Para obtener más información, consulte [generar archivos de .mlpd ](~/tools/profiler/troubleshooting.md#gen_mlpd).
 
-
 ## <a name="profiler-features"></a>Características del generador de perfiles
 
 El generador de perfiles de Xamarin se compone de cinco secciones, como se muestra a continuación:
@@ -298,7 +275,6 @@ El diagrama de caja, tal y como se muestra en la captura de pantalla siguiente, 
 
 -----
 
-
 - **Árbol de llamadas de** – muestra de tiempo empleado en cada método:
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
@@ -340,24 +316,7 @@ Si se generan perfiles de una aplicación con cualquier otra configuración, apa
 
 -----
 
-
 Seleccione **actualización** para continuar.
-
-<!---
-## Profiling Android Applications
-
-
-Due to the recent inclusion of the profiling libraries into any new Android project template, you will find that when profiling any legacy applications you are greeted with the message dialog above.
-
-You will need to enable this to make sure that the profiling libraries are included in your Android application, for debug builds. This should not be checked for release builds as it creates overhead.
-
-
-## Profiling iOS Applications
-
-### Profiling tvOS
-
-## Profiling Mac Applications
--->
 
 ### <a name="sgen-garbage-collector-and-profiling"></a>El recolector de elementos no utilizados de SGen y generación de perfiles
 
@@ -374,7 +333,6 @@ Para obtener más información sobre la administración de memoria, consulte el 
 ## <a name="summary"></a>Resumen
 
 En esta guía se examinando la generación de perfiles es y cómo esto supone una mejora para el desarrollador. A continuación, presentamos el generador de perfiles de Xamarin, proporciona algunas historial y la información en su funcionamiento. Por último se viajado por las características del generador de perfiles de Xamarin y se han explorado instrumentos de generador de perfiles de tiempo y asignaciones.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 
