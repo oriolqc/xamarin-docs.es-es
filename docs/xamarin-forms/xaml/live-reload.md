@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: ca359e5ea700ef09249a2d8a299b6604f91e9149
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: d2aee2d6421b06f9147c656debdd58bdfe21be72
+ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="xamarin-live-reload"></a>Volver a cargar en vivo de Xamarin
 
@@ -63,8 +63,10 @@ public partial class App : Application
     public App ()
     {
         // Initialize Live Reload.
+        #if DEBUG
         LiveReload.Init();
-    
+        #endif
+        
         InitializeComponent();
         MainPage = new MainPage();
     }
@@ -134,6 +136,10 @@ No. De hecho, incluso puede iniciar todos los objetivos de aplicaciones compatib
 * **XLR003**: *paquete nuget de recarga en vivo requiere la instalación de la extensión Xamarin Live recarga Visual Studio.*
 
   Intentó crear un proyecto que hace referencia el paquete de nuget Live recarga pero no está instalada la extensión de Visual.  
+
+* *Excepción al cargar los ensamblados: System.IO.FileNotFoundException: no se pudo cargar el ensamblado ' Xamarin.Live.Reload, Version = 0.3.27.0, Culture = neutral, PublicKeyToken ='.*
+
+  El proyecto de host debería estar utilizando `PackageReference` en lugar de `packages.config`
 
 ### <a name="app-doesnt-connect"></a>No se conecta aplicación
 

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: dc83defcb3eb69cf53c205793ce77029c0947c2f
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 035365a22c487039ff811756d91ca0a8d392d628
+ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="editor"></a>Editor
 
@@ -19,8 +19,8 @@ _Entrada de texto de varias líneas_
 
 El `Editor` control se usa para aceptar la entrada de varias líneas. En este artículo se tratará:
 
-- **[Personalización](#Customization)**  &ndash; opciones de color y el teclado.
-- **[Interactividad](#Interactivity)**  &ndash; eventos que pueden escuchar para proporcionar interactividad.
+- **[Personalización](#customization)**  &ndash; opciones de color y el teclado.
+- **[Interactividad](#interactivity)**  &ndash; eventos que pueden escuchar para proporcionar interactividad.
 
 ## <a name="customization"></a>Personalización
 
