@@ -1,4 +1,4 @@
----
+﻿---
 title: Principios de la aplicación
 description: Explorar los fundamentos de desarrollo de Xamarin.Forms
 ms.prod: xamarin
@@ -21,7 +21,7 @@ Sugerencias para incorporar características de acceso (por ejemplo, compatibili
 
 ## <a name="app-classapplication-classmd"></a>[Clase de aplicación](application-class.md)
 
-La clase `Application` es el punto de partida de Xamarin.Forms: todas las aplicaciones deben implementar una subclase `App`para establecer la página inicial. También proporciona la colección `Properties`para el almacenamiento de datos simple. Se puede definir en C# o XAML.
+La clase `Application` es el punto de partida de Xamarin.Forms: todas las aplicaciones deben implementar una subclase `App` para establecer la página inicial. También proporciona la colección `Properties` para el almacenamiento simple de datos. Se puede definir en C# o XAML.
 
 ## <a name="app-lifecycleapp-lifecyclemd"></a>[Ciclo de vida de la aplicación](app-lifecycle.md)
 
@@ -41,7 +41,7 @@ El enlace de datos vincula las propiedades de dos objetos, de forma que permite 
 
 ## <a name="dependency-servicedependency-serviceindexmd"></a>[Servicio de dependencia](dependency-service/index.md)
 
-DependencyService proporciona un localizador simple para que pueda programar en interfaces de su código compartido y proporcionar implementaciones específicas de la plataforma que se resuelven automáticamente, de forma que sea más fácil hacer referencia a la funcionalidad específica de la plataforma en Xamarin.Forms.
+DependencyService proporciona un localizador simple para que pueda programar en interfaces de su código compartido y proporcionar implementaciones específicas de la plataforma que se resuelven automáticamente, de forma que es fácil hacer referencia a la funcionalidad específica de la plataforma en Xamarin.Forms.
 
 ## <a name="effectseffectsindexmd"></a>[Efectos](effects/index.md)
 
@@ -49,7 +49,7 @@ Los efectos permiten personalizar los controles nativos de cada plataforma y se 
 
 ## <a name="gesturesgesturesindexmd"></a>[Gestos](gestures/index.md)
 
-La clase [ `GestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/) de Xamarin.Forms admite los gestos de tocar, reducir y movimiento panorámico en los controles de la interfaz de usuario.
+La clase [ `GestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/) de Xamarin.Forms admite gestos de tocar, reducir y movimiento panorámico en controles de interfaz de usuario.
 
 ## <a name="localizationlocalizationindexmd"></a>[Localización](localization/index.md)
 
@@ -65,7 +65,7 @@ Xamarin.Forms `MessagingCenter` permite ver los modelos y otros componentes se c
 
 ## <a name="navigationnavigationindexmd"></a>[Navegación](navigation/index.md)
 
-Xamarin.Forms proporciona una serie de experiencias de navegación de página diferentes, en función del tipo `Page` que se use.
+Xamarin.Forms proporciona una serie de experiencias de navegación de página diferentes, en función del tipo `Page`que se use.
 
 ## <a name="templatestemplatesindexmd"></a>[Templates](templates/index.md) (Plantillas [C++])
 
