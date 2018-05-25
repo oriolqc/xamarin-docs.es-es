@@ -6,12 +6,12 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/04/2018
-ms.openlocfilehash: b1cf87ed8c5614a113a03232547a6753da26bc2d
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/17/2018
+ms.openlocfilehash: ca88159e8bcbcd4665e29b4ad8df9ffe00cfec67
+ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 05/19/2018
 ---
 # <a name="windows-installation"></a>Instalación en el equipo Windows
 
@@ -85,7 +85,8 @@ Se puede lograr una mejora considerable del rendimiento al desarrollar en equipo
 Para obtener más información sobre Google Android Emulator, Hyper-V y HAXM, vea la guía [Aceleración de hardware de Android Emulator](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
 
 > [!NOTE]
-> En versiones anteriores de Windows, HAXM no es compatible con Hyper-V. En este escenario es necesario [deshabilitar Hyper-V](/xamarin/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md?tabs=vswin#disabling-hyper-v) o usar las imágenes de emulador más lentas sin las optimizaciones de x86.
+> En versiones anteriores de Windows, HAXM no es compatible con Hyper-V. En este escenario es necesario [deshabilitar Hyper-V](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#disabling-hyper-v) o usar las imágenes de emulador más lentas sin las optimizaciones de x86.
+
 
 <a name="device" />
 
