@@ -6,12 +6,12 @@ ms.assetid: F4180997-BA21-453A-9958-D1E2940DF050
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/12/2016
-ms.openlocfilehash: e9a4a661e694b5a885f202a36f9a2916c6c339fd
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.date: 05/21/2018
+ms.openlocfilehash: ca48ad6fb7d5aae53f972f6e3b5257919d140a8d
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="xamarinforms-layouts"></a>Diseños de Xamarin.Forms
 
@@ -19,7 +19,7 @@ _Diseños de Xamarin.Forms se utilizan para crear controles de interfaz de usuar
 
 El [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout) y [ `Layout<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) las clases de Xamarin.Forms son subtipos especializadas de vistas que actúan como contenedores para otros diseños y vistas. El `Layout` propia clase se deriva de [ `View` ](views.md). Un `Layout` derivado suele contener lógica para establecer la posición y el tamaño de los elementos secundarios en las aplicaciones de Xamarin.Forms.
 
- [ ![](layouts-images/layouts-sml.png "Tipos de diseño de Xamarin.Forms")](layouts-images/layouts.png#lightbox "tipos de diseño de Xamarin.Forms")
+[![Tipos de diseño de Xamarin.Forms](layouts-images/layouts-sml.png "tipos de diseño de Xamarin.Forms")](layouts-images/layouts.png#lightbox "tipos de diseño de Xamarin.Forms")
 
 Las clases que derivan de `Layout` puede dividirse en dos categorías:
 
@@ -101,7 +101,14 @@ Estas clases derivan de [ `Layout<View>` ](https://developer.xamarin.com/api/typ
 
 |     |     |
 | --- | --- |
-| [`RelativeLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) coloca los elementos secundarios relativo a la `RelativeLayout` sí misma o a sus elementos del mismo nivel. Posición del elemento secundario se indica mediante el [propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md) que se establecen en objetos de tipo [ `Constraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/) y [ `BoundsConstraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/).<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/)/ [guía](~/xamarin-forms/user-interface/layouts/relative-layout.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![Ejemplo de RelativeLayout](layouts-images/RelativeLayout.png "RelativeLayout ejemplo")](layouts-images/RelativeLayout-Large.png#lightbox "RelativeLayout ejemplo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RelativeLayoutDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RelativeLayoutDemoPage.xaml) |
+| [`RelativeLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) coloca los elementos secundarios relativo a la `RelativeLayout` sí misma o a sus elementos del mismo nivel. Posición del elemento secundario se indica mediante el [propiedades adjuntas](~/xamarin-forms/xaml/attached-properties.md) que se establecen en objetos de tipo [ `Constraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/) y [ `BoundsConstraint` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Constraint/).<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) / [guía](~/xamarin-forms/user-interface/layouts/relative-layout.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/) | [![Ejemplo de RelativeLayout](layouts-images/RelativeLayout.png "RelativeLayout ejemplo")](layouts-images/RelativeLayout-Large.png#lightbox "RelativeLayout ejemplo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RelativeLayoutDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RelativeLayoutDemoPage.xaml) |
+|     |     |
+
+### <a name="flexlayout"></a>FlexLayout
+
+|     |     |
+| --- | --- |
+| [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) se basa en el código CSS [módulo de diseño de cuadro Flexible](http://www.w3.org/TR/css-flexbox-1/), que normalmente se conoce como _flex diseño_ o _flex-cuadro_. `FlexLayout` define propiedades enlazables seis y cinco propiedades enlazables adjuntas que permiten a los elementos secundarios se apilan o ajusta con muchas opciones de alineación y orientación.<br /><br />[Documentación de la API](xref:Xamarin.Forms.FlexLayout) / [guía](~/xamarin-forms/user-interface/layouts/flex-layout.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/) | [![Ejemplo de FlexLayout](layouts-images/FlexLayout.png "FlexLayout ejemplo")](layouts-images/FlexLayout-Large.png#lightbox "FlexLayout ejemplo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/FlexLayoutDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/FlexLayoutDemoPage.xaml) |
 |     |     |
 
 ## <a name="related-links"></a>Vínculos relacionados

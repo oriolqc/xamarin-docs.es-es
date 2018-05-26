@@ -6,12 +6,12 @@ ms.assetid: C0837996-A1E8-47F9-B3A8-98EE43B4A675
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/16/2017
-ms.openlocfilehash: 7826962cd3bf9595a63841e3f2d9fb377d1a0574
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 05/23/2018
+ms.openlocfilehash: cc6cb282565e08f7ce4401e5317fba518a74a8f3
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="ios-platform-specifics"></a>obtener información específica de la plataforma de iOS
 
@@ -28,6 +28,7 @@ En iOS, Xamarin.Forms contiene los detalles siguientes de la plataforma:
 - Controlar cuándo se produce la selección de elementos en una [ `Picker` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Picker/). Para obtener más información, consulte [controlar la selección de elementos de selector](#picker_update_mode).
 - Establecer la visibilidad de la barra de estado en un [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/). Para obtener más información, consulte [establecer la visibilidad de la barra de estado en una página](#set_status_bar_visibility).
 - Controlar si una [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) controla un gesto táctil o pasa a su contenido. Para obtener más información, consulte [retrasar toques contenido en un ScrollView](#delay_content_touches).
+- Establecer el estilo del separador en un [ `ListView` ](xref:Xamarin.Forms.ListView). Para obtener más información, consulte [establecer el estilo del separador en un control ListView](#listview-separatorstyle).
 
 <a name="blur" />
 
@@ -302,7 +303,6 @@ El resultado es que el estado de la barra de color del texto en un [ `Navigation
 Este específica de la plataforma se usa para escalar el tamaño de fuente de un [ `Entry` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) para asegurarse de que el texto de entrada se ajuste en el control. Se consume en XAML estableciendo el [ `Entry.AdjustsFontSizeToFitWidth` ](https://developer.xamarin.com/api/field/Xamarin.Forms.PlatformConfiguration.iOSSpecific.Entry.AdjustsFontSizeToFitWidthProperty/) propiedad adjunta un `boolean` valor:
 
 ```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage ...
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     <StackLayout Margin="20">
@@ -393,7 +393,6 @@ El resultado es que un determinado `UpdateMode` se aplica a la [ `Picker` ](http
 Este específica de la plataforma se usa para establecer la visibilidad de la barra de estado en un [ `Page` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Page/), e incluye la capacidad para controlar cómo la barra de estado entra o sale de la `Page`. Se consume en XAML estableciendo el `Page.PrefersStatusBarHidden` propiedad adjunta a un valor de la `StatusBarHiddenMode` enumeración y, opcionalmente, el `Page.PreferredStatusBarUpdateAnimation` propiedad adjunta a un valor de la `UIStatusBarAnimation` enumeración:
 
 ```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage ...
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.PrefersStatusBarHidden="True"
@@ -468,6 +467,45 @@ scrollView.On<iOS>().SetShouldDelayContentTouches(!scrollView.On<iOS>().ShouldDe
 El resultado es que un [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) puede deshabilitar retrasar recibir contenido los últimos retoques, así que en este escenario el [ `Slider` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Slider/) recibe el movimiento en lugar de la [ `Detail` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MasterDetailPage.Detail/) página de la [ `MasterDetailPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MasterDetailPage/):
 
 [![](ios-images/scrollview-delay-content-touches.png "Contenido de retraso ScrollView toca específica de la plataforma")](ios-images/scrollview-delay-content-touches-large.png#lightbox "ScrollView Delay Content Touches Plaform-Specific")
+
+<a name="listview-separatorstyle" />
+
+## <a name="setting-the-separator-style-on-a-listview"></a>Establecer el estilo del separador en un control ListView
+
+Este específica de la plataforma controla si el separador entre las celdas de un [ `ListView` ](xref:Xamarin.Forms.ListView) usa todo el ancho de la `ListView`. Se consume en XAML estableciendo el [ `ListView.SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SeparatorStyleProperty) propiedad adjunta a un valor de la [ `SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) enumeración:
+
+```xaml
+<ContentPage ...
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout Margin="20">
+        <ListView ... ios:ListView.SeparatorStyle="FullWidth">
+            ...
+        </ListView>
+    </StackLayout>
+</ContentPage>
+```
+
+Como alternativa, puede utilizarse desde C# utilizando la API fluida de:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+...
+
+listView.On<iOS>().SetSeparatorStyle(SeparatorStyle.FullWidth);
+```
+
+El `ListView.On<iOS>` método especifica que sólo se ejecutará este específica de la plataforma de iOS. El [ `ListView.SetSeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.ListView.SetSeparatorStyle(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.ListView},Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle)) método, en la [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) espacio de nombres, se utiliza para controlar si el separador entre las celdas de la [ `ListView` ](xref:Xamarin.Forms.ListView) usa las completas ancho de la `ListView`, con el [ `SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) enumeración proporciona dos valores posibles:
+
+- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.Default) : indica el comportamiento de separador de iOS de forma predeterminada. Este es el comportamiento predeterminado de Xamarin.Forms.
+- [`FullWidth`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle.FullWidth) : indica que se dibujará separadores de uno de los bordes de la `ListView` a otro.
+
+El resultado es que un determinado [ `SeparatorStyle` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) valor se aplica a la [ `ListView` ](xref:Xamarin.Forms.ListView), que controla el ancho del separador entre las celdas:
+
+![](ios-images/listview-separatorstyle.png "ListView SeparatorStyle específico de plataforma")
+
+> [!NOTE]
+> Una vez que se ha establecido el estilo del separador en `FullWidth`, no se puede cambiar a `Default` en tiempo de ejecución.
 
 ## <a name="summary"></a>Resumen
 

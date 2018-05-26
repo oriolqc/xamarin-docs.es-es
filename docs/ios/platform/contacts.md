@@ -7,11 +7,11 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 79d4bdd64ca777c0d74b3df199b5247ce909b02e
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.openlocfilehash: ca4235f7fb67c26ade6171d91870e74407aedbd3
+ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="contacts-and-contactsui"></a>Contactos y ContactsUI
 
@@ -127,8 +127,8 @@ Para las etiquetas de propiedad que va a mostrar en la interfaz de usuario de la
 
 ```csharp
 // Localized properties
-Console.WriteLine(CNContact.LocalizeProperty(CNContactOption.Nickname));
-Console.WriteLine(CNLabeledValue.LocalizeLabel(CNLabelKey.Home));
+Console.WriteLine(CNContact.LocalizeProperty(CNContactOptions.Nickname));
+Console.WriteLine(CNLabeledValue<NSString>.LocalizeLabel(CNLabelKey.Home));
 ```
 
 ### <a name="fetching-existing-contacts"></a>Obtener contactos existentes
