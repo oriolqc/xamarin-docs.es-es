@@ -232,6 +232,7 @@
 ### [Configuración personalizada del vinculador](deploy-test/linker.md)
 ### [Dispositivos de varios núcleos](deploy-test/multicore-devices.md)
 ### [Rendimiento](deploy-test/performance.md)
+### [Generación de perfiles](deploy-test/profiling.md)
 ### [Preparación para la versión](deploy-test/release-prep/index.md)
 #### [ProGuard](deploy-test/release-prep/proguard.md)
 ### [Firma del APK](deploy-test/signing/index.md)
