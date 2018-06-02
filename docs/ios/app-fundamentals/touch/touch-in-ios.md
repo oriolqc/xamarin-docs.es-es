@@ -6,11 +6,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 78783089303eba09b0ee36534b0078b82674a1c6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9ed90a9c4ddcd398d834cb8c91553a57e7bd5ad8
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689546"
 ---
 # <a name="touch-in-ios"></a>Entrada táctil de iOS
 
@@ -76,7 +77,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 }
 ```
 
-## <a name="multi-touch"></a>Multi-Touch
+## <a name="multi-touch"></a>Multitoque
 
 Multitoque no está habilitado de forma predeterminada en los controles. Multitoque puede habilitarse en el diseñador, iOS como se muestra en la captura de pantalla siguiente:
 
@@ -117,7 +118,7 @@ Identificadores de gestos en gran medida pueden simplificar y reducir el esfuerz
 
 Xamarin.iOS proporciona la clase `UIGestureRecognizer` como una clase base para los identificadores de gestos integrados siguientes:
 
--  *UITapGesturesRecognizer* : se trata de derivaciones de uno o más.
+-  *UITapGestureRecognizer* : se trata de derivaciones de uno o más.
 -  *UIPinchGestureRecognizer* – Pinching y propagación dedos separadas.
 -  *UIPanGestureRecognizer* : panorámica o arrastrar.
 -  *UISwipeGestureRecognizer* – Deslizar rápidamente en cualquier dirección.

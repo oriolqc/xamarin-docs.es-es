@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 04/20/2018
-ms.openlocfilehash: bedcf0603fffc9886155881f91972203104ba155
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 765c51346ac63a00838fec52bde87b38091e2dd9
+ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34689479"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Pila HttpClient y Selector de implementación de SSL/TLS para Android
 
@@ -89,9 +90,9 @@ La elección entre `AndroidClientHandler` y `HttpClientHandler` depende de las n
 
 A partir de 8.3 Xamarin.Android, `HttpClientHandler` el valor predeterminado es aburrido SSL (`btls`) como el proveedor subyacente de TLS. El proveedor de perforación SSL TLS ofrece las siguientes ventajas:
 
--   Es compatible con TLS 1.2.
+-   Es compatible con TLS 1.2 +.
 -   Admite todas las versiones de Android.
--   Proporciona compatibilidad con TLS 1.2 para ambos `HttpClient` y `WebClient`.
+-   Proporciona soporte de TLS 1.2 + para ambos `HttpClient` y `WebClient`.
 
 La desventaja de utilizar SSL de perforación como el proveedor TLS subordinado es que puede aumentar el tamaño de la APK resultante (agrega aproximadamente 1MB de tamaño APK adicionales por ABI compatible).
 
