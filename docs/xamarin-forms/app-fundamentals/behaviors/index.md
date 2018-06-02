@@ -13,21 +13,21 @@ ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/04/2018
 ---
-# <a name="behaviors"></a>comportamientos
+# <a name="behaviors"></a>comportamientos (Behaviors)
 
-_Comportamientos le permite agregar funcionalidad a los controles de interfaz de usuario sin tener que subclase ellos. Comportamientos se escriben en código y agregar a controles en XAML o en código._
+_Comportamientos (Behaviors) le permite agregar funcionalidad a los controles de la interfaz de usuario sin tener subclase ellos. Los comportamientos son escritos en código y agregados a los controles en XAML o en código._
 
 ## <a name="introduction-to-behaviorsintroductionmd"></a>[Introducción a los comportamientos](introduction.md)
 
-Comportamientos le permiten implementar el código que normalmente tendría que escribir como código subyacente, porque interactúa directamente con la API del control de forma que se puede conectar concisa para el control. Este artículo proporciona una introducción a los comportamientos.
+Los comportamientos le permiten implementar código que normalmente se tendría que escribir como Code-Behind, porque interactúa directamente con la API del control de forma que se puede ligar brevemente al control. Este artículo proporciona una introducción a los comportamientos.
 
-## <a name="attached-behaviorsattachedmd"></a>[Comportamientos asociados](attached.md)
+## <a name="attached-behaviorsattachedmd"></a>[Comportamientos asociados (Attached Behaviors)](attached.md)
 
-Adjunta los comportamientos son `static` clases con una o varias propiedades adjuntas. Este artículo demuestra cómo crear y utilizar los comportamientos adjuntos.
+Los comportamientos asociados son clases `static` (clases estáticas), con una o varias propiedades adjuntas. Este artículo demuestra cómo crear y utilizar los comportamientos adjuntos.
 
 ## <a name="xamarinforms-behaviorscreatingmd"></a>[Comportamientos de Xamarin.Forms](creating.md)
 
-Comportamientos de Xamarin.Forms se crean derivando de la [ `Behavior` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/) o [ `Behavior<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/) clase. Este artículo demuestra cómo crear y utilizar los comportamientos de Xamarin.Forms.
+Comportamientos de Xamarin.Forms se crean derivando de la clase [ `Behavior` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/) o [ `Behavior<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/). Este artículo demuestra cómo crear y utilizar los comportamientos de Xamarin.Forms.
 
 ## <a name="reusable-behaviorsreusableindexmd"></a>[Comportamientos reutilizables](reusable/index.md)
 
