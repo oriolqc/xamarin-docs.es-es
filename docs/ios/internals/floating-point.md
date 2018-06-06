@@ -1,17 +1,19 @@
 ---
-title: Punto flotante
+title: Operación de punto flotante en Xamarin.iOS
+description: Este documento describe cómo Xamarin.iOS controla la precisión de 32 bits y 64 bits operaciones de punto flotante y asociado impacto en el rendimiento.
 ms.prod: xamarin
 ms.assetid: 003F25C1-B430-4339-9C95-7DF527EBC699
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 67fcf459747152346d32eb5836fa22b99719af12
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea5d69b52cbd4c76abb236bd1a272633dde440b7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786166"
 ---
-# <a name="floating-point"></a>Punto flotante
+# <a name="floating-point-operations-in-xamarinios"></a>Operación de punto flotante en Xamarin.iOS
 
 Xamarin.iOS realizará 32 bits y 64 bits operaciones de punto flotante con precisión de 64 bits en ARM de forma predeterminada.  
 

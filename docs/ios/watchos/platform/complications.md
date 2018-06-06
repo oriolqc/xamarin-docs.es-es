@@ -1,19 +1,20 @@
 ---
-title: Complicaciones
-description: watchOS permite a los desarrolladores escribir complicaciones personalizadas para caras de inspección
+title: watchOS complicaciones en Xamarin
+description: Este documento describe cómo trabajar con las complicaciones de watchOS en Xamarin. Describe cómo agregar una complicación, escribir una complicación, plantillas y proporciona código de ejemplo.
 ms.prod: xamarin
 ms.assetid: 7ACD9A2B-CF69-46EA-B0C8-10E7D81216E8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/03/2017
-ms.openlocfilehash: c058922f97183359122a1bfa2b0e162e4ce344f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c69f65091e7d6c83afe34c6d8c06477cc5d133b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791844"
 ---
-# <a name="complications"></a>Complicaciones
+# <a name="watchos-complications-in-xamarin"></a>watchOS complicaciones en Xamarin
 
 _watchOS permite a los desarrolladores escribir complicaciones personalizadas para caras de inspección_
 
@@ -239,4 +240,4 @@ Muestra una imagen y texto, todo en una sola línea.
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Documentos de Apple](https://developer.apple.com/library/watchos/documentation/General/Conceptual/WatchKitProgrammingGuide/ComplicationEssentials.html)
-- [WWDC video](https://developer.apple.com/videos/play/wwdc2015-209/)
+- [Vídeo WWDC](https://developer.apple.com/videos/play/wwdc2015-209/)

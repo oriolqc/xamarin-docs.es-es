@@ -1,26 +1,25 @@
 ---
-title: Tecnologías de notificación en desuso
+title: Tecnologías de notificación en desuso de Xamarin.iOS
+description: Este documento describe las tecnologías de notificación de iOS que han quedado obsoletas en favor del marco de trabajo de las notificaciones de usuario, introducida en iOS 10.
 ms.prod: xamarin
 ms.assetid: 20C4F6E5-56DF-4A85-BBF0-E38C88586307
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/07/2016
-ms.openlocfilehash: eff1d999e705aa493d0481e34ead3b9b81d434f9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4becc5e296fb6e2496d9ffd863f7137419480262
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788558"
 ---
-# <a name="deprecated-notification-technologies"></a>Tecnologías de notificación en desuso
+# <a name="deprecated-notification-technologies-in-xamarinios"></a>Tecnologías de notificación en desuso de Xamarin.iOS
 
 Esta sección muestra cómo implementar local y las notificaciones de inserción en Xamarin.iOS. Se explican los distintos elementos de interfaz de usuario de una notificación de iOS y se describe la API del implica crear y mostrar una notificación.
 
 > [!IMPORTANT]
 > La información de esta sección pertenece a iOS 9 y anteriores, se han quedado aquí para compatibilidad con versiones anteriores de iOS. Para iOS 10 y versiones posteriores, consulte la [Guía de la estructura de notificación de usuario](~/ios/platform/user-notifications/index.md) para admitir tanto locales como remotos de notificación en un dispositivo iOS.
-
-
-
 
 ## <a name="sections"></a>Secciones
 

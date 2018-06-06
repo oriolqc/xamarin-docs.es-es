@@ -1,6 +1,6 @@
 ---
 title: Mensajes de error Xamarin.Mac (mmp)
-description: Una guía de referencia de errores para mmp.
+description: Este documento enumeran los errores generados por mmp, la herramienta que se usa para empaquetar los ensamblados compilados en una aplicación ejecutable de Mac.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5B26339F-A202-4E41-9229-D0BC9E77868E
@@ -8,11 +8,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/27/2018
-ms.openlocfilehash: 7f0d40e4adb16e47db18d0796afa42c66af096ce
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: f5cf4a9003d3fb468ffcf337c33730cb12238c44
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792764"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Mensajes de error Xamarin.Mac (mmp)
 

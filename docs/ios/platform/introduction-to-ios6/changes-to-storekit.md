@@ -1,5 +1,5 @@
 ---
-title: Cambios en StoreKit
+title: Cambios en StoreKit en iOS 6
 description: 'iOS 6 introduce dos cambios en la API del Kit de almacén: la capacidad para mostrar iTunes (y la tienda de aplicaciones/iBookstore) opción donde Apple va a hospedar los archivos descargables de compra de productos desde dentro de la aplicación y una aplicación de nuevo. Este documento explica cómo implementar esas características con Xamarin.iOS.'
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8a7a70c3f84518141cf44d630fb4137051d0c866
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ff717d1e4ea7da947d5534f1ce790b58d84fdfd4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787697"
 ---
-# <a name="changes-to-storekit"></a>Cambios en StoreKit
+# <a name="changes-to-storekit-in-ios-6"></a>Cambios en StoreKit en iOS 6
 
 _iOS 6 introduce dos cambios en la API del Kit de almacén: la capacidad para mostrar iTunes (y la tienda de aplicaciones/iBookstore) opción donde Apple va a hospedar los archivos descargables de compra de productos desde dentro de la aplicación y una aplicación de nuevo. Este documento explica cómo implementar esas características con Xamarin.iOS._
 
@@ -142,8 +143,8 @@ Los resultados también incluyen otros metadatos incluida la información de pre
 
 A continuación se muestran algunos ejemplos:
 
--   **aplicación de iBooks*- [http://itunes.apple.com/search?term=ibooks&amp;entidad = software&amp;país = us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
--   **Punto y el Ibooks canguro*- [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entidad = ebook&amp;país = us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us) 
+-   **aplicación de iBooks*- [http://itunes.apple.com/search?term=ibooks&amp; entidad = software&amp;país = us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us) 
+-   **Punto y el Ibooks canguro*- [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp; entidad = ebook&amp;país = us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us) 
 
 
 ### <a name="enterprise-partner-feed"></a>Fuente de socios comerciales de empresa

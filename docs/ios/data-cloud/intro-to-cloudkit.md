@@ -1,28 +1,27 @@
 ---
-title: CloudKit
-description: iCloud API permiten que las aplicaciones de iOS 8 almacenar datos en iCloud, con compatibilidad con la sincronización automática a través de una cuenta de usuario. Usar CloudKit proporciona a los usuarios una experiencia coherente y sin problemas entre dispositivos compatibles con iCloud. Este artículo tratan habilitar CloudKit en una aplicación de iOS 8 mediante la API de comodidad.
+title: CloudKit en Xamarin.iOS
+description: Este documento describe cómo trabajar con CloudKit en Xamarin.iOS. Proporciona información general de CloudKit y se explica cómo habilitarla, la API de comodidad CloudKit, escalabilidad, cuentas de usuario y entornos de desarrollo y producción.
 ms.prod: xamarin
 ms.assetid: 66B207F2-FAA0-4551-B43B-3DB9F620C397
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/11/2016
-ms.openlocfilehash: 4765b91bdc1f64be7e2ea67622db7af8634f1347
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 941d39510d05c95ff06ffd3d55685c002bd4d4e5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785062"
 ---
-# <a name="cloudkit"></a>CloudKit
-
-_iCloud API permiten que las aplicaciones de iOS 8 almacenar datos en iCloud, con compatibilidad con la sincronización automática a través de una cuenta de usuario. Usar CloudKit proporciona a los usuarios una experiencia coherente y sin problemas entre dispositivos compatibles con iCloud. Este artículo tratan habilitar CloudKit en una aplicación de iOS 8 mediante la API de comodidad._
+# <a name="cloudkit-in-xamarinios"></a>CloudKit en Xamarin.iOS
 
 El marco de trabajo CloudKit simplifica el desarrollo de aplicaciones que iCloud de acceso. Esto incluye la recuperación de datos de la aplicación y activos derechos así como la posibilidad de almacenar información de la aplicación de forma segura. Este kit ofrece a los usuarios un nivel de anonimato permitiendo el acceso a las aplicaciones con su identificadores de iCloud sin compartir información personal.
 
 Los programadores pueden centrarse en sus aplicaciones del lado cliente y permiten iCloud elimina la necesidad de escribir una lógica de aplicación de servidor. CloudKit proporciona autenticación, en las bases de datos públicas y privadas y los datos estructurados y los servicios de almacenamiento de activos.
 
 > [!IMPORTANT]
-> Apple [proporciona herramientas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ayudar a los desarrolladores controlen correctamente normativa General de protección de datos (GDPR) de la Unión Europea.
+> Apple [proporciona herramientas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ayudar a los desarrolladores a tratar correctamente el Reglamento general de protección de datos (RGPD) de la Unión Europea.
 
 ## <a name="requirements"></a>Requisitos
 

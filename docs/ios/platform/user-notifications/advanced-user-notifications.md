@@ -1,21 +1,20 @@
 ---
-title: Notificaciones de usuario avanzado
-description: En este artículo se toma una visión más profunda en el nuevo marco de las notificaciones de usuario y cómo aprovechar al máximo del mismo en una aplicación de Xamarin.iOS.
+title: Notificaciones de usuario avanzadas en Xamarin.iOS
+description: En este artículo se toma una visión más profunda en el marco de trabajo de las notificaciones de usuario, introducida en iOS 10. Se trata de las notificaciones de usuario, la interfaz de usuario de notificación, los datos adjuntos de multimedia, interfaces de usuario personalizadas y mucho más.
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/03/2018
-ms.openlocfilehash: bd8a95afc5bdd5aed958913d63f9b6cfe853677e
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 09a73ebc3dab90e6342a45c0f1fb5a40184d18a6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788535"
 ---
-# <a name="advanced-user-notifications"></a>Notificaciones de usuario avanzado
-
-_En este artículo se toma una visión más profunda en el nuevo marco de las notificaciones de usuario y cómo aprovechar al máximo del mismo en una aplicación de Xamarin.iOS._
+# <a name="advanced-user-notifications-in-xamarinios"></a>Notificaciones de usuario avanzadas en Xamarin.iOS
 
 Nuevo en 10, la notificación al usuario framework permite la entrega y el manejo de notificaciones locales y remotas de iOS. Con este marco de trabajo, una aplicación o extensión de la aplicación puede programar la entrega de notificaciones locales mediante la especificación de un conjunto de condiciones como la ubicación o la hora del día.
 

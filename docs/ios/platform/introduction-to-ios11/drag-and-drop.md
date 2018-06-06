@@ -1,19 +1,20 @@
 ---
-title: Arrastrar y colocar
-description: Implementación de arrastrar y colocar para iOS 11
+title: Arrastrar y colocar en Xamarin.iOS
+description: Este documento describe cómo implementar arrastrar y colocar en las aplicaciones de Xamarin.iOS con las API que se introdujo en iOS 11. En concreto, se describe lo que permite arrastrar y colocar en UITableView.
 ms.prod: xamarin
 ms.assetid: 0D39C4C3-D169-42F8-B3FA-7F98CF0B6F1F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/05/2016
-ms.openlocfilehash: fa6fcb2c4f5f17011307b31e4644889d066b71a9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7c41f96dae88047e64ec1e74838e3efab55958cc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786969"
 ---
-# <a name="drag-and-drop"></a>Arrastrar y colocar
+# <a name="drag-and-drop-in-xamarinios"></a>Arrastrar y colocar en Xamarin.iOS
 
 _Implementación de arrastrar y colocar para iOS 11_
 

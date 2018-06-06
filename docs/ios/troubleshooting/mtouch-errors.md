@@ -1,5 +1,6 @@
 ---
 title: Errores de Xamarin.iOS
+description: Este documento describe varios errores generados por mtouch, la herramienta que se utiliza para agrupar las aplicaciones de Xamarin.iOS. Los errores se enumeran por código y proporcionado una descripción completa.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9F76162B-D622-45DA-996B-2FBF8017E208
@@ -7,11 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 71cddc07863002a887cada2bb0db0f8d25fd1a17
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: e9332ba34f113f56859065c74c24c116a331eceb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789452"
 ---
 # <a name="xamarinios-errors"></a>Errores de Xamarin.iOS
 

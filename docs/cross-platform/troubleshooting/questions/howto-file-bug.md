@@ -1,15 +1,17 @@
 ---
 title: ¿Cuándo y cómo debería presentar un informe de errores?
+description: Este documento describe cuándo, dónde y cómo presentar un informe de errores. También proporciona prácticas recomendadas que permiten a los ingenieros mejor diagnosticar el problema de informe de errores.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: d5471195b5051725b41b8f28b3959db362297669
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 08a782e9637442a43e9c63305ddf161403519169
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781948"
 ---
 # <a name="when-and-how-should-i-file-a-bug-report"></a>¿Cuándo y cómo debería presentar un informe de errores?
 

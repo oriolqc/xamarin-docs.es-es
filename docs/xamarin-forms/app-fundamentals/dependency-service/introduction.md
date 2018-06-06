@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 88821c5315fc338b5195e42ea4b2bc3e648e6ea1
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 6a0544a58245efed696b92c543fbaf5e7e1b8365
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732832"
 ---
 # <a name="introduction-to-dependencyservice"></a>Introducción a DependencyService
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 04/27/2018
 
 ## <a name="how-dependencyservice-works"></a>Cómo funciona DependencyService
 
-Aplicaciones de Xamarin.Forms necesitan tres componentes que se utilizará `DependencyService`:
+Aplicaciones de Xamarin.Forms necesitan cuatro componentes que se utilizará `DependencyService`:
 
 - **Interfaz** &ndash; la funcionalidad necesaria se define mediante una interfaz en el código compartido.
 - **Por la implementación de la plataforma** &ndash; las clases que implementan la interfaz se deben agregar a cada proyecto de la plataforma.

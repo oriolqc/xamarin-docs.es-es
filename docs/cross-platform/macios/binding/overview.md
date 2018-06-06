@@ -1,17 +1,18 @@
 ---
-title: Información general
-description: Detalles de cómo funciona el proceso de enlace
+title: Información general de enlaces Objective-c.
+description: Este documento proporciona una visión general de maneras diferentes de crear enlaces de C# para código Objective-C, incluidos los enlaces de línea de comandos, proyectos de enlace y Sharpie de objetivo. También se explica cómo funciona el enlace.
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ce2e45a1985c64b5c479bd41140d7270fae97aee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: f9f981a9024ad9b1f780efbadeeb7e1f1636a8ae
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781749"
 ---
-# <a name="overview"></a>Información general
+# <a name="overview-of-objective-c-bindings"></a>Información general de enlaces Objective-c.
 
 _Detalles de cómo funciona el proceso de enlace_
 

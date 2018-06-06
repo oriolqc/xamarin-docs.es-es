@@ -1,23 +1,24 @@
 ---
-title: CoreImage
-description: CoreImage es un nuevo marco introducido con iOS 5 para proporcionar procesamiento de imágenes y funcionalidad de vídeo de mejora de la vida. Este artículo presenta estas características con ejemplos de Xamarin.iOS.
+title: Imagen del núcleo de Xamarin.iOS
+description: Imagen de núcleo es un nuevo marco introducido con iOS 5 para proporcionar procesamiento de imágenes y funcionalidad de vídeo de mejora de la vida. Este artículo presenta estas características con ejemplos de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 0bb2c3b8b563da53e432ad16e6518ada67a4655e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6032554a0ddbda26ff5de94f6035bc4f8c15a22a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786637"
 ---
-# <a name="coreimage"></a>CoreImage
+# <a name="core-image-in-xamarinios"></a>Imagen del núcleo de Xamarin.iOS
 
-_CoreImage es un nuevo marco introducido con iOS 5 para proporcionar procesamiento de imágenes y funcionalidad de vídeo de mejora de la vida. Este artículo presenta estas características con ejemplos de Xamarin.iOS._
+_Imagen de núcleo es un nuevo marco introducido con iOS 5 para proporcionar procesamiento de imágenes y funcionalidad de vídeo de mejora de la vida. Este artículo presenta estas características con ejemplos de Xamarin.iOS._
 
-CoreImage es un nuevo marco introducido en iOS 5 que proporciona una serie de filtros integrados y los efectos que se aplican a imágenes y vídeos, incluida la detección de cara.
+Imagen de núcleo es un nuevo marco introducido en iOS 5 que proporciona una serie de filtros integrados y los efectos que se aplican a imágenes y vídeos, incluida la detección de cara.
 
 Este documento contiene ejemplos sencillos de:
 
@@ -26,7 +27,7 @@ Este documento contiene ejemplos sencillos de:
 -  Enumerar los filtros disponibles.
 
 
-Estos ejemplos ayudarán a comenzar la incorporación de características de CoreImage en las aplicaciones de Xamarin.iOS.
+Estos ejemplos ayudarán a comenzar la incorporación de características de la imagen principal en las aplicaciones de Xamarin.iOS.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -34,7 +35,7 @@ Debe usar la versión más reciente de Xcode.
 
 ## <a name="face-detection"></a>Detección de cara
 
-La característica de detección de cara de CoreImage hace justo lo que dice, ya que intenta identificar caras de una foto y devuelve las coordenadas de las caras que reconoce. Esta información puede utilizarse para contar el número de personas de una imagen, dibuje indicadores en la imagen (p. ej. para 'etiquetado' personas en una fotografía), o cualquier otra cosa que puede considerar.
+La característica de detección de cara de imagen Core hace justo lo que dice, ya que intenta identificar caras de una foto y devuelve las coordenadas de las caras que reconoce. Esta información puede utilizarse para contar el número de personas de una imagen, dibuje indicadores en la imagen (p. ej. para 'etiquetado' personas en una fotografía), o cualquier otra cosa que puede considerar.
 
 Este código de CoreImage\SampleCode.cs muestra cómo crear y utilizar la detección de cara en una imagen incrustada:
 
@@ -219,11 +220,11 @@ Cada filtro enumerado se haya expuesto como una clase en Xamarin.iOS, por lo que
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se muestra cómo utilizar algunas de las nuevas características de framework CoreImage iOS 5 como la detección de cara y aplicar filtros a una imagen. Existen docenas de filtros de imágenes diferentes en el marco de trabajo para su uso.
+En este artículo se muestra cómo utilizar algunas de las nuevas características de framework de imagen Core iOS 5 como la detección de cara y aplicar filtros a una imagen. Existen docenas de filtros de imágenes diferentes en el marco de trabajo para su uso.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Imagen de Core (ejemplo)](https://developer.xamarin.com/samples/CoreImage/)
 - [Ajustar el brillo de una imagen, solo puede conducir y contrato](https://developer.xamarin.com/recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
-- [Uso de filtros de CoreImage](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
+- [Uso de filtros de imágenes de núcleo](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [Referencia de clase CIFilter](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)

@@ -1,5 +1,5 @@
 ---
-title: Extensiones de aplicaciones avanzadas de mensajes
+title: Extensiones de aplicaciones avanzadas de mensajes en Xamarin.iOS
 description: Este artículo muestra técnicas avanzadas para trabajar con extensiones de mensajes de aplicación en una solución de Xamarin.iOS que se integra con la aplicación de mensajes y presenta nuevas funciones para el usuario.
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: cd2cabf98c83bba7502e8533e482713a9c43f67a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eca3dcc19714251184092fbe136d0078f1ca8d54
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788031"
 ---
-# <a name="advanced-message-app-extensions"></a>Extensiones de aplicaciones avanzadas de mensajes
+# <a name="advanced-message-app-extensions-in-xamarinios"></a>Extensiones de aplicaciones avanzadas de mensajes en Xamarin.iOS
 
 _Este artículo muestra técnicas avanzadas para trabajar con extensiones de mensajes de aplicación en una solución de Xamarin.iOS que se integra con la aplicación de mensajes y presenta nuevas funciones para el usuario._
 
@@ -170,7 +171,7 @@ Llame a la `InsertMessage` de la `MSConversation` para incluir el mensaje en la 
 
 Además, la extensión puede enviar distintos tipos de datos a la conversación como:
 
-- **Text** - `ActiveConversation.InsertText ("Message", (error) => {...});`
+- **texto** - `ActiveConversation.InsertText ("Message", (error) => {...});`
 - **Datos adjuntos** - `ActiveConversation.InsertAttachment (new NSUrl ("path"), "filename", (error) => {...});`
 - **Adhesivos**  -  `ActiveConversation.InsertSticker (sticker, (obj) => {...});` donde `sticker` es una `MSSticker`.
 

@@ -1,15 +1,17 @@
 ---
 title: iOS Backgrounding con tareas
+description: Este documento describe cómo usar tareas en segundo plano para realizar tareas de larga duración después de que una aplicación se coloca en segundo plano.
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 559c8ccce0ff41dccce0fdc93d6c18a1fee3db7d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a95ca128bc6de7b2adc75511a581f5d2779d9c06
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784360"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS Backgrounding con tareas
 

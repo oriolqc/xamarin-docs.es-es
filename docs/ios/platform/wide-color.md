@@ -1,19 +1,20 @@
 ---
-title: Color amplia
-description: Este artículo tratan de color amplia y cómo se puede usar en una aplicación Xamarin.iOS o Xamarin.Mac.
+title: Color amplia en Xamarin.iOS
+description: Este documento describen color amplia y cómo se puede usar en una aplicación Xamarin.iOS o Xamarin.Mac. También proporciona una descripción general de muchos conceptos importantes relacionadas con el color, como espacios de color y canales, los elementos.
 ms.prod: xamarin
 ms.assetid: 576E978A-F182-489A-83E4-D8CDC6890B24
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 5f56b396715159cbc1539ae9a7f30cc7ad2236bf
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 173919e0d5feda6ab7d34895cc834c5f36d737a8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788786"
 ---
-# <a name="wide-color"></a>Color amplia
+# <a name="wide-color-in-xamarinios"></a>Color amplia en Xamarin.iOS
 
 _Este artículo tratan de color amplia y cómo se puede usar en una aplicación Xamarin.iOS o Xamarin.Mac._
 

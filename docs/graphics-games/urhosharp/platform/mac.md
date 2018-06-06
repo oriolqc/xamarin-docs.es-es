@@ -1,16 +1,17 @@
 ---
 title: Compatibilidad con Mac UrhoSharp
-description: El programa de instalación específico de Mac y características para UrhoSharp.
+description: Este documento explica la compatibilidad con macOS UrhoSharp. Describe cómo crear un proyecto y proporciona un vínculo a ejemplos de código.
 ms.prod: xamarin
 ms.assetid: 95FFBD36-14E9-4C17-B1E8-9A04E81E824D
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: c7210cbd5586df9018c2779bf0b92aa7c1c56e89
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: aae7b09231ae0e8f88bb9435f50fadd2ff822c1a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783348"
 ---
 # <a name="urhosharp-mac-support"></a>Compatibilidad con Mac UrhoSharp
 

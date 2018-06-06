@@ -1,5 +1,5 @@
 ---
-title: Enlace de datos y el valor de clave de codificación
+title: Enlace de datos y el valor de clave de codificación en Xamarin.Mac
 description: Este artículo incluye el uso de codificación y observar para permitir el enlace de datos a los elementos de interfaz de usuario en el generador de interfaz de Xcode de clave y valor de clave y valor.
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 48ee5d4e4a0a53de49fbba46d79424e03af6fe5c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 88567e47f488a94fcf7334584a678c9689b83306
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792143"
 ---
-# <a name="data-binding-and-key-value-coding"></a>Enlace de datos y el valor de clave de codificación
+# <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Enlace de datos y el valor de clave de codificación en Xamarin.Mac
 
 _Este artículo incluye el uso de codificación y observar para permitir el enlace de datos a los elementos de interfaz de usuario en el generador de interfaz de Xcode de clave y valor de clave y valor._
 

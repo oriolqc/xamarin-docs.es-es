@@ -1,19 +1,21 @@
 ---
-title: .NET Standard
+title: Utilizar bibliotecas estándar de .NET para compartir código
+description: Este documento describe cómo utilizar bibliotecas estándar de .NET para compartir código. Se trata de crear una biblioteca estándar de .NET, modificar su configuración y uso en una aplicación.
 ms.prod: xamarin
 ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: c70a1cb1aa05426ba6d54d8af3787f014883bfa1
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 448bbc0630388f6bf45056c90cc75586996d0623
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781038"
 ---
-# <a name="net-standard"></a>.NET Standard
+# <a name="using-net-standard-libraries-to-share-code"></a>Utilizar bibliotecas estándar de .NET para compartir código
 
-## <a name="using-net-standard-library-projects-to-share-code"></a>Usar proyectos de biblioteca estándar de .NET para compartir código
+## <a name="net-standard"></a>.NET Standard
 
 La biblioteca estándar .NET es una especificación formal de las API de .NET que están pensadas para estar disponibles en todos los entornos de ejecución de .NET. La finalidad de la biblioteca estándar consiste en establecer una mayor uniformidad en el ecosistema de .NET.
 [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) sigue estableciendo uniformidad en el comportamiento del tiempo de ejecución de .NET, pero no hay ninguna especificación parecida para las bibliotecas de clases base (BCL) de .NET para implementaciones de la biblioteca de .NET.

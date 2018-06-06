@@ -1,28 +1,26 @@
 ---
 title: Cambios de marcos de trabajo adicionales tvOS 10
-description: Este artículo trata sobre cambios adicionales, secundarios o mejoras en marcos existentes tvos 10.
+description: Este documento describe cambios menores y las mejoras realizadas en marcos existentes en iOS 10. Se trata de las actualizaciones a AVFoundation, AVKit, los datos principales, para los gráficos esenciales, Foundation, GameKit, GameplayKit y mucho más.
 ms.prod: xamarin
 ms.assetid: F771640A-F92E-4954-82D5-2D720434971E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c53726b91a0cd3e79041b9b1d51e9f7fbb1c79bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 326fb6a23048ba3d3e1d33f42c8da2fff8544c25
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788880"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>Cambios de marcos de trabajo adicionales tvOS 10
-
-_Este artículo trata sobre cambios adicionales, secundarios o mejoras en marcos existentes tvos 10._
-
 
 Además de los cambios más importantes a tvOS, Apple ha realizado modificaciones y mejoras para varios marcos de trabajo existentes en tvOS 10.
 
 <a name="AV-Foundation-Framework" />
 
-## <a name="av-foundation-framework-additions"></a>Adiciones de Framework de Foundation de AV
+## <a name="avfoundation-framework-additions"></a>Adiciones de AVFoundation Framework
 
 El marco de trabajo AVFoundation incluye las siguientes mejoras:
 

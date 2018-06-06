@@ -1,15 +1,17 @@
 ---
 title: 'Parte 3: configurar una solución de plataforma cruzada de Xamarin'
+description: Este documento describe cómo configurar una solución multiplataforma en Xamarin. Se explica código diversas estrategias de uso compartido como compartido proyectos y .NET estándar.
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: asb3993
 ms.author: amburns
 ms.date: 03/27/2017
-ms.openlocfilehash: a13765805a3bc6be05522700960b032acbc864b5
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: f802e31d851915d33cb6dbf5866f8cba3ab90303
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781277"
 ---
 # <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3: configurar una solución de plataforma cruzada de Xamarin
 

@@ -1,19 +1,20 @@
 ---
-title: Introducción
-description: Obtenga información acerca de cómo instalar la compatibilidad con Xamarin tvos y empezar a trabajar rápidamente en el desarrollo de tvOS.
+title: Introducción a tvOS en Xamarin
+description: Este documento describe cómo empezar a compilar aplicaciones tvOS con Xamarin. Vincula a una guía de instalación y una guía de inicio rápido.
 ms.prod: xamarin
 ms.assetid: 1A3D8211-A689-41D9-BCFE-AF8398992031
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: d348cfe00c1099d2e845d93c4e31ff33ae9efc75
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f794562f4113517c8b5e768b264a6dd11f088390
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788763"
 ---
-# <a name="getting-started-with-xamarintvos"></a>Introducción a Xamarin.tvOS
+# <a name="getting-started-with-tvos-in-xamarin"></a>Introducción a tvOS en Xamarin
 
 Xamarin.tvOS permite la creación de aplicaciones de tvOS nativo con la flexibilidad y la elegancia del lenguaje C# moderna, la eficacia de la biblioteca de clases Base (BCL) de .NET y Visual Studio para Mac, Visual Studio 2015 o 2017 en Windows.
 

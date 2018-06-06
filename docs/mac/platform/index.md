@@ -1,22 +1,22 @@
 ---
-title: Características de la plataforma
-description: Componentes clave de la plataforma de macOS
+title: macOS características de la plataforma
+description: 'Este documento se incluyen vínculos a las guías que describen macOS importantes y características de la plataforma de Xamarin.Mac: OpenTK, guiones gráficos, extensiones y mucho más.'
 ms.prod: xamarin
 ms.assetid: 37451F65-672A-4512-8DDD-06CCDE9E5A12
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 2bebc42cd3b5db7dba20066e90f294e621b1e4ac
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9e82db1c0f38d35c23a6cd0667bef49315ff86be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792231"
 ---
-# <a name="platform-features"></a>Características de la plataforma
+# <a name="macos-platform-features"></a>macOS características de la plataforma
 
 Documentos de esta sección tratan trabajar con características claves, específico de la plataforma de macOS en una aplicación Xamarin.Mac.
-
 
 ## <a name="introduction-to-macos-sierramacplatformintroduction-to-macos-sierraindexmd"></a>[Introducción a macOS Sierra](~/mac/platform/introduction-to-macos-sierra/index.md)
 

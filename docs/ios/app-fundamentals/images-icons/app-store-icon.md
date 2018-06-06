@@ -1,21 +1,20 @@
 ---
-title: Icono de la tienda de aplicaciones
-description: Esta artículo cubre incluidos y administrar un recurso de imagen en una aplicación Xamarin.iOS para usarse como un icono de almacén de la aplicación.
+title: Iconos de la tienda de aplicaciones de Xamarin.iOS
+description: Este documento describe cómo usar catálogos de activo para administrar un icono de la tienda de aplicaciones para una aplicación de Xamarin.iOS. Anteriormente, los iconos de la tienda de aplicaciones se administraban con iTunes Connect.
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/26/2017
-ms.openlocfilehash: f8d993ccb23817e237b9cef8074b881f3ea4b3a2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 749dbf01af382a54fe24652706f6a605ac7b20b4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783615"
 ---
-# <a name="app-store-icon"></a>Icono de la tienda de aplicaciones
-
-_Esta artículo cubre incluidos y administrar un recurso de imagen en una aplicación Xamarin.iOS para usarse como un icono de almacén de la aplicación._
+# <a name="app-store-icons-in-xamarinios"></a>Iconos de la tienda de aplicaciones de Xamarin.iOS
 
 Antes de Xcode 9 se han agregado todos los iconos de la tienda de aplicaciones a través de iTunes Connect. Sin embargo, esto ya no es el caso. Iconos de la tienda de aplicaciones deben se incluye como parte de la agrupación de proyecto y agrega dentro de un catálogo de activos. Se rechazarán las aplicaciones que no contienen un icono de la tienda de aplicaciones por Apple.
 

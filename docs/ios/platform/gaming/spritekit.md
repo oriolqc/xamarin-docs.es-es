@@ -1,33 +1,35 @@
 ---
-title: SpriteKit
+title: SpriteKit en Xamarin.iOS
+description: Este documento describe SpriteKit, marco de gráficos 2D de Apple que se integra con SceneKit, incorpora física y la animación, incluye compatibilidad con iluminación y sombreado y mucho más. SpriteKit puede utilizarse para crear juegos 2D.
 ms.prod: xamarin
 ms.assetid: 93971DAE-ED6B-48A8-8E61-15C0C79786BB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 967fd5b25213478c89d1ab849b6c0b7ac66d0e20
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b74b5a722aab240b55ed96bea2a33b162d7817eb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786774"
 ---
-# <a name="spritekit"></a>SpriteKit
+# <a name="spritekit-in-xamarinios"></a>SpriteKit en Xamarin.iOS
 
-Kit de Sprite, el marco de juego 2D de Apple, tiene algunas nuevas características interesantes de iOS 8 y OS X Yosemite. Estos incluyen la integración con el Kit de escena, compatibilidad con el sombreador, iluminación, sombras, restricciones, la generación de asignación normal y mejoras de ciencias físicas. En particular, las nuevas características de ciencias físicas asegurarse muy fácil agregar efectos realistas a un juego.
+SpriteKit, el marco de trabajo de gráficos 2D de Apple, tiene algunas nuevas características interesantes de iOS 8 y OS X Yosemite. Estos incluyen la integración con SceneKit, compatibilidad con el sombreador, iluminación, sombras, restricciones, la generación de asignación normal y mejoras de física. En particular, las nuevas características de ciencias físicas asegurarse muy fácil agregar efectos realistas a un juego.
 
 ## <a name="physics-bodies"></a>Cuerpos de ciencias físicas
 
-Kit de Sprite incluye un 2D, física cuerpo rígida API. Cada sprite tiene un cuerpo asociado física (`SKPhysicsBody`) que define las propiedades de física como masivo y fricción, así como la geometría del cuerpo en el mundo físico.
+SpriteKit incluye un 2D, física cuerpo rígida API. Cada sprite tiene un cuerpo asociado física (`SKPhysicsBody`) que define las propiedades de física como masivo y fricción, así como la geometría del cuerpo en el mundo físico.
 
 ## <a name="creating-a-physics-body-from-a-texture"></a>Crear un cuerpo física de una textura
-Kit de Sprite ahora admite derivar el cuerpo de la física de un objeto sprite de su textura. Esto facilita el implementan conflictos que tenga un aspecto más naturales.
+SpriteKit ahora admite derivar el cuerpo de la física de un objeto sprite de su textura. Esto facilita el implementan conflictos que tenga un aspecto más naturales.
 
 Por ejemplo, tenga en cuenta en la siguiente colisión cómo el plátano y mono entra en colisión casi en la superficie de cada imagen:
  
 ![](spritekit-images/image13.png "El plátano y mono entra en colisión casi en la superficie de cada imagen")
 
-Kit de Sprite facilita la creación de un cuerpo de física de este tipo posible con una sola línea de código. Basta con llamar a `SKPhysicsBody.Create` con la textura y el tamaño: sprite. PhysicsBody = SKPhysicsBody.Create (sprite. Textura, sprite. Tamaño);
+SpriteKit facilita la creación de un cuerpo de física de este tipo es posible con una sola línea de código. Basta con llamar a `SKPhysicsBody.Create` con la textura y el tamaño: sprite. PhysicsBody = SKPhysicsBody.Create (sprite. Textura, sprite. Tamaño);
 
 ## <a name="alpha-threshold"></a>Umbral alfa
 
@@ -45,7 +47,7 @@ El efecto de los ajustes del umbral alfa parecido a esto ajusta con precisión l
  
 ## <a name="physics-fields"></a>Campos de ciencias físicas
 
-Otra gran incorporación al Kit de Sprite es compatible con el nuevo campo de ciencias físicas. Estos le permiten agregar cosas como los campos de vortex, campos de gravedad radial y campos de primavera por nombrar solo unos pocos.
+Otra gran incorporación al SpriteKit es compatible con el nuevo campo de ciencias físicas. Estos le permiten agregar cosas como los campos de vortex, campos de gravedad radial y campos de primavera por nombrar solo unos pocos.
 
 Campos de física se crean mediante la clase SKFieldNode, que se agrega a una escena como cualquier otro `SKNode`. Hay una variedad de métodos de generador en `SKFieldNode` para crear campos de ciencias físicas diferentes. Puede crear un campo de primavera mediante una llamada a `SKFieldNode.CreateSpringField()`, un campo de gravedad radial mediante una llamada a `SKFieldNode.CreateRadialGravityField()`, y así sucesivamente.
 

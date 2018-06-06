@@ -1,15 +1,17 @@
 ---
 title: Guía de referencia de tipos de enlace
+description: Esta guía describe varios atributos y conceptos que son necesarios para entender al crear enlaces de C# a bibliotecas de C de objetivo.
 ms.prod: xamarin
 ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: 35e3a645a3a7f837c87d88a156051d39f49dc4ee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3de85a1e3c84366a2059a8f7c479c20ce873508d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782175"
 ---
 # <a name="binding-types-reference-guide"></a>Guía de referencia de tipos de enlace
 

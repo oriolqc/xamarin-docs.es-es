@@ -1,19 +1,20 @@
 ---
-title: Introducción a la entrada táctil 3D
-description: Este artículo incluye el uso de la nueva iPhone 6s y iPhone 6s Plus 3D Touch gestos en la aplicación.
+title: Introducción a la entrada táctil 3D en Xamarin.iOS
+description: Este artículo describe cómo usar 3D gestos táctiles introducidos en el iPhone 6s y iPhone 6s Plus. Estos movimientos Habilitar sensibilidad a la presión, peek y pop y acciones rápidas.
 ms.prod: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a0d89315b82f4931538cdabe64aade7986b2a42e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f6eb71409317661cdd571c708db062e06e63ff55
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786588"
 ---
-# <a name="introduction-to-3d-touch"></a>Introducción a la entrada táctil 3D
+# <a name="introduction-to-3d-touch-in-xamarinios"></a>Introducción a la entrada táctil 3D en Xamarin.iOS
 
 _Este artículo incluye el uso de la nueva iPhone 6s y iPhone 6s Plus 3D Touch gestos en la aplicación._
 

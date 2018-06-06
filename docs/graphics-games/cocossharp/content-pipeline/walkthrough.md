@@ -1,20 +1,21 @@
 ---
-title: Uso de la MonoGame PipelineTool
-description: La herramienta de canalización MonoGame se usa para crear y administrar proyectos de contenido de MonoGame. Los archivos en proyectos de contenido son procesados por la herramienta de canalización Monogame y arroja como archivos .xnb para su uso en aplicaciones CocosSharp y MonoGame.
+title: Con la herramienta de canalización MonoGame
+description: La herramienta de canalización MonoGame se usa para crear y administrar proyectos de contenido de MonoGame. Los archivos en proyectos de contenido son procesados por la herramienta de canalización MonoGame y arroja como archivos .xnb para su uso en aplicaciones CocosSharp y MonoGame.
 ms.prod: xamarin
 ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: charlespetzold
 ms.author: chape
 ms.date: 03/27/2017
-ms.openlocfilehash: 50e6c611e285cde9184eed242353ad08b2a941ee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 347cb7e9d417f97cb6e8d78e67b1c76a378cd188
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783304"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>Con la herramienta de canalización MonoGame
 
-_La herramienta de canalización MonoGame se usa para crear y administrar proyectos de contenido de MonoGame. Los archivos en proyectos de contenido son procesados por la herramienta de canalización Monogame y arroja como archivos .xnb para su uso en aplicaciones CocosSharp y MonoGame._
+_La herramienta de canalización MonoGame se usa para crear y administrar proyectos de contenido de MonoGame. Los archivos en proyectos de contenido son procesados por la herramienta de canalización MonoGame y arroja como archivos .xnb para su uso en aplicaciones CocosSharp y MonoGame._
 
 La herramienta de canalización MonoGame proporciona un entorno fácil de usar para convertir archivos de contenido en **.xnb** archivos para su uso en aplicaciones CocosSharp y MonoGame. Para obtener información sobre las canalizaciones de contenido y por qué son útiles para el desarrollo de juegos, consulte [esta introducción sobre las canalizaciones de contenido](~/graphics-games/cocossharp/content-pipeline/introduction.md)
 

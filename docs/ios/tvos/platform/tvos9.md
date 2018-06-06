@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: e2e3843506061cc79ad911404468477bf49dfe56
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c3c278666c5d57d00b4038ae6d3f2d7925e88537
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789029"
 ---
 # <a name="introduction-to-tvos-9"></a>Introducción a tvOS 9
 
 _Este artículo detallan todas las características disponibles en tvOS 9 y las API nuevas y modificadas para desarrolladores de Xamarin.tvOS._
-
 
 Apple ha lanzado la generación 4th del hardware de Apple TV, que incluye un rediseñada, táctil Habilitar control remoto, ejecuta el nuevo sistema operativo tvOS (basado en iOS 9).
 
@@ -66,8 +66,8 @@ El nuevo Televisor de Apple tiene las siguientes especificaciones de hardware:
  - procesador de 64 bits A8
  - 32 o 64GB de almacenamiento
  - 2GB de RAM
- - 10/100Mbps Ethernet
- - WiFi 802.11a/b/g/n/ac
+ - 10/100 Mbps Ethernet
+ - 802.11a/b/g/n/ac Wi-Fi
  - resolución de 1.080 p
  - HDMI
  - Puerto de C de USB (para el desarrollador y uso del diagnóstico solo)

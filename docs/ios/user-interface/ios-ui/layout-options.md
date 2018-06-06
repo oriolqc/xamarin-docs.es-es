@@ -1,24 +1,25 @@
 ---
-title: Opciones de diseño
+title: Opciones de diseño de Xamarin.iOS
+description: Este documento describe diferentes maneras de diseñar interfaces de usuario en Xamarin.iOS. Se trata de cambiar automáticamente el tamaño y diseño automático.
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 8f197bbffeabb708769c48f0130aa27a86b14386
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bad29eae308c8ca9f7228a1cbdfd69940894cf34
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790121"
 ---
-# <a name="layout-options"></a>Opciones de diseño
+# <a name="layout-options-in-xamarinios"></a>Opciones de diseño de Xamarin.iOS
 
 Hay dos mecanismos diferentes para controlar el diseño cuando se cambia el tamaño o girar una vista:
 
 -  **Cambiar automáticamente el tamaño** : cambiar automáticamente el tamaño del inspector en el diseñador proporciona una manera de establecer el `AutoresizingMask` propiedades. Esto le permitirá un control se acoplan a los bordes de su contenedor o corregir su tamaño. Cambiar automáticamente el tamaño funciona en todas las versiones de iOS. Esto se describe con más detalle a continuación
--  **Autodiseño** : una nueva característica de iOS6 que permite el control exhaustivo sobre las relaciones de los controles de interfaz de usuario. Permitirá el control de las posiciones de los elementos con respecto a otros elementos en la superficie de diseño. En este tema se trata con más detalle en la [Autodiseño con el Diseñador de iOS de Xamarin](~/ios/user-interface/designer/designer-auto-layout.md) guía.
-
+-  **Diseñar automáticamente** : una nueva característica de iOS 6 que permite el control exhaustivo sobre las relaciones de los controles de interfaz de usuario. Permitirá el control de las posiciones de los elementos con respecto a otros elementos en la superficie de diseño. En este tema se trata con más detalle en la [Autodiseño con el Diseñador de iOS de Xamarin](~/ios/user-interface/designer/designer-auto-layout.md) guía.
 
 ## <a name="autosizing"></a>Cambiar automáticamente el tamaño
 
@@ -55,11 +56,11 @@ imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutor
 
 También podemos ajustar los controles mediante el diseñador. Al seleccionar el struts como se muestra a continuación hará que la imagen a permanecen alineados a la derecha sin recortarla la parte inferior de la vista:
 
- [![](layout-options-images/autoresize.png "Autorotation")](layout-options-images/autoresize.png#lightbox)
+ [![](layout-options-images/autoresize.png "Rotación automática")](layout-options-images/autoresize.png#lightbox)
 
 Estas capturas de pantalla muestran cómo cambiar el tamaño de los controles o la ubicación de por sí mismos cuando se gira la pantalla:
 
- [![](layout-options-images/image44a.png "Autorotation")](layout-options-images/image44a.png#lightbox)
+ [![](layout-options-images/image44a.png "Rotación automática")](layout-options-images/image44a.png#lightbox)
 
 Tenga en cuenta que la vista de texto y el campo de texto tanto se estiran para mantener la misma izquierda y derecha de los márgenes, debido a la `FlexibleWidth` configuración. La imagen tiene el superior e izquierdo margen flexible, lo que significa que conserva la parte inferior y el margen derecho: mantener la imagen en la vista cuando se gira la pantalla. Diseños complejos suelen requieran una combinación de estos valores en cada control visible para mantener la coherencia de la interfaz de usuario y para impedir que los controles que se superponen cuando cambian los límites de la vista (debido a la rotación u otro evento de cambio de tamaño).
 

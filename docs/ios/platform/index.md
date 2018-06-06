@@ -1,34 +1,32 @@
 ---
-title: Características de la plataforma
-description: Documentos de esta sección tratan características específicas de iOS.
+title: Características de la plataforma iOS
+description: Vínculos de este documento diversas guías que describen las características introducidas en varias versiones de iOS y otras características de la plataforma de iOS.
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/15/2017
-ms.openlocfilehash: 0a76ed52f52de144bb3da1e7be6e215ce0dfe0ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 95053faa4bab0a65660772aeea39405e4a80a042
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787092"
 ---
-# <a name="platform-features"></a>Características de la plataforma
+# <a name="ios-platform-features"></a>Características de la plataforma iOS
 
 ##  <a name="introduction-to-ios-11iosplatformintroduction-to-ios11indexmd"></a>[Introducción a iOS 11](~/ios/platform/introduction-to-ios11/index.md)
 
 Cómo instalar y empezar a trabajar con la versión beta de Xcode 9 y la vista previa 11 de Xamarin soporte de iOS.
 
-
 ##  <a name="introduction-to-ios-10iosplatformintroduction-to-ios10indexmd"></a>[Introducción a iOS 10](~/ios/platform/introduction-to-ios10/index.md)
 
 IOS de Apple 10 incluye varias API y servicios que le permiten desarrollar aplicaciones con nuevas características y funcionalidades de nuevo. Con iOS 10, las aplicaciones tienen nuevas capacidades como la extensión de mapas, mensajes, teléfono y Siri. Esta sección muestra muestra sacar provecho de estas características en una aplicación de Xamarin.iOS.
 
-
 ##  <a name="introduction-to-ios-9iosplatformintroduction-to-ios9indexmd"></a>[Introducción a iOS 9](~/ios/platform/introduction-to-ios9/index.md)
 
 Esta sección definen los cambios realizados en iOS 9 al actualizar desde iOS 8 y cómo utilizar estas características en una aplicación de Xamarin.iOS.
-
 
 ##  <a name="introduction-to-ios-8iosplatformintroduction-to-ios8md"></a>[Introducción a iOS 8](~/ios/platform/introduction-to-ios8.md)
 
@@ -147,8 +145,6 @@ Nuevo en 10, la notificación al usuario framework permite la entrega y el manej
 ##  <a name="wide-coloriosplatformwide-colormd"></a>[Color amplio](~/ios/platform/wide-color.md)
 
 iOS 10 y macOS Sierra mejora la compatibilidad con formatos de píxel de rango extendido y los espacios de la amplia gama de colores en todo el sistema incluidos los marcos, como los gráficos esenciales, imagen Core, sistema operativo y AVFoundation. Compatibilidad con dispositivos con pantallas de color amplia adicional se ve facilitado por proporcionar este comportamiento en toda la pila completa de gráficos.
-
-
 
 ##  <a name="binding-objective-cbinding-objective-cindexmd"></a>[Enlace de Objective-C](binding-objective-c/index.md)
 

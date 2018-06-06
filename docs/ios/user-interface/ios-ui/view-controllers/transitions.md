@@ -1,18 +1,20 @@
 ---
-title: Transiciones de controlador de vista
+title: Visualización de transiciones de controlador en Xamarin.iOS
+description: Este documento describe cómo personalizar transiciones animadas entre controladores de la vista en aplicaciones de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: CB3AC8E2-8A47-4839-AFA5-AE33047BB26C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/14/2017
-ms.openlocfilehash: 253a2556872ea9186eec832a84f4cfff9cb1c209
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 35795002310cd79a1897061fe6e3e41b48b45b4d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790453"
 ---
-# <a name="view-controller-transitions"></a>Transiciones de controlador de vista
+# <a name="view-controller-transitions-in-xamarinios"></a>Visualización de transiciones de controlador en Xamarin.iOS
 
 UIKit agrega compatibilidad con la personalización de la transición animada que se produce cuando se presentan los controladores de la vista. Esta compatibilidad se incluye con controladores integrados, así como todos los controladores personalizados que heredan directamente de `UIViewController`. Además, `UICollectionViewController` aprovecha las ventajas de la personalización de la transición de controlador para aprovechar las transiciones animadas en diseños de la vista de colección.
 

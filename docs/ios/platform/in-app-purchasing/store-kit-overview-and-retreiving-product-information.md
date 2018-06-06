@@ -1,18 +1,20 @@
 ---
-title: Almacenar Introducción al Kit y recuperar la información de producto
+title: Información general de StoreKit y recuperar información del producto en Xamarin.iOS
+description: Este documento proporciona información general sobre StoreKit. Describe las clases utilizadas con StoreKit, pruebas StoreKit interacciones, mostrar productos para la venta, control de productos no válidos y mostrar los precios localizados.
 ms.prod: xamarin
 ms.assetid: FC21192E-6325-4389-C060-E92DBB5EBD87
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f4ecd2942a99f80854fd340be454f9d8fefa5a36
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 964b97e82db8e79cb32598d0c955fac3ab122314
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787229"
 ---
-# <a name="store-kit-overview-and-retrieving-product-information"></a>Almacenar Introducción al Kit y recuperar la información de producto
+# <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Información general de StoreKit y recuperar información del producto en Xamarin.iOS
 
 En las capturas de pantalla siguiente se muestra la interfaz de usuario para una compra en la aplicación.
 Antes de cualquier transacción tiene lugar, la aplicación debe recuperar precio del producto y una descripción para su presentación. A continuación, cuando el usuario presiona **comprar**, la aplicación realiza una solicitud a StoreKit que administra el cuadro de diálogo de confirmación y el inicio de sesión de Id. de Apple. Suponiendo que la transacción, a continuación, se realiza correctamente, StoreKit notifica el código de aplicación, que debe almacenar el resultado de la transacción y proporcionar al usuario acceso a su compra.   

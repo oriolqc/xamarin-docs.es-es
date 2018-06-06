@@ -1,5 +1,5 @@
 ---
-title: Alertas
+title: Alertas en Xamarin.Mac
 description: Este artículo explica cómo trabajar con alertas en una aplicación Xamarin.Mac. Describe cómo crear y mostrar las alertas desde el código C# y responde a las interacciones del usuario.
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: a451d0a5535915d9e52f687ae07ea028c0ccd5ef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 1eb781fe02213de6a994f56e321316b93a128b60
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792647"
 ---
-# <a name="alerts"></a>Alertas
+# <a name="alerts-in-xamarinmac"></a>Alertas en Xamarin.Mac
 
 _Este artículo explica cómo trabajar con alertas en una aplicación Xamarin.Mac. Describe cómo crear y mostrar las alertas desde el código C# y responde a las interacciones del usuario._
 
@@ -129,7 +130,7 @@ var result = alert.RunModal ();
 
 El primer botón agregado será la _botón predeterminado_ que se activará si el usuario presiona la tecla ENTRAR. El valor devuelto será un entero que representa qué botón el usuario presionado. En nuestro caso, se devolverán los valores siguientes:
 
-- **OK** - 1000.
+- **ACEPTAR** - 1000.
 - **Cancelar** : 1001.
 - **Quizá** - 1002.
 

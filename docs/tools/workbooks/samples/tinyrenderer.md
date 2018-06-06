@@ -1,15 +1,17 @@
 ---
 title: Libros de TinyRenderer
+description: Este documento describe los libros TinyRenderer, que funcionan con OpenGL. Estos libros que se ejecutan en Windows y Mac.
 ms.prod: xamarin
 ms.assetid: E4E17836-94C2-436F-ADD8-104AC574D22B
 author: topgenorth
 ms.author: toopge
 ms.date: 03/30/2017
-ms.openlocfilehash: fc0716fc3babd0b2ee835b839ae816f2cb815b0f
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 10704044042ea38dd3a5297c46371f9f9c27936c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794142"
 ---
 # <a name="tinyrenderer-workbooks"></a>Libros de TinyRenderer
 
@@ -31,7 +33,6 @@ Una serie de libros que explican el funcionamiento de OpenGL, que se ejecuta en 
 [![](tinyrenderer-images/tinyrenderer-sml.png "Ejemplo de representación de tramas de alambres")](tinyrenderer-images/tinyrenderer.png#lightbox)
 
 El código de C# en estos libros se basa en este código abierto [código de C++](https://github.com/ssloy/tinyrenderer) y el texto es de este [wiki](https://github.com/ssloy/tinyrenderer/wiki/). Agradecemos que está disponible en una licencia que nos ha permitido convertirlos en un conjunto de libros de trabajo original.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

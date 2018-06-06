@@ -1,17 +1,18 @@
 ---
-title: Almacenamiento seguro Xamarin.Essentials
-description: La clase SecureStorage ayuda a almacenar de forma segura los pares clave/valor simple.
+title: 'Xamarin.Essentials: Almacenamiento seguro'
+description: Este documento describe la clase SecureStorage en Xamarin.Essentials, lo que ayuda a almacenar de forma segura los pares clave/valor simple. Explica cómo utilizar la clase, detalles de implementación de plataforma y limitaciones.
 ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: redth
 ms.author: jodick
 ms.date: 05/04/2018
-ms.openlocfilehash: e64160a5579bffa8e9e9820db1a3ba39bdf7304e
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: d9fd5b5fd0d4dc29f4d2531521370618f97e3846
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783163"
 ---
-# <a name="xamarinessentials-secure-storage"></a>Almacenamiento seguro Xamarin.Essentials
+# <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Almacenamiento seguro
 
 ![La versión preliminar de NuGet](~/media/shared/pre-release.png)
 

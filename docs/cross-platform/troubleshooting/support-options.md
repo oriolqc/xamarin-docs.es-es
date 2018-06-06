@@ -1,15 +1,17 @@
 ---
 title: ¿Qué opciones de soporte técnico están disponibles para Xamarin?
+description: Este documento describe las distintas opciones de soporte técnico disponibles para los desarrolladores de Xamarin. Se trata de soporte del correo electrónico, desbordamiento de la pila y recursos adicionales.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: E4EF7E0F-ED86-44C9-9F98-38ECF881C7E2
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ccd19a628d5bb50212a2a6b737689cdaf7aaad76
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: a18998c6ff36a453d22b5cbe84179d70662693ba
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782312"
 ---
 # <a name="what-support-options-are-available-for-xamarin"></a>¿Qué opciones de soporte técnico están disponibles para Xamarin?
 

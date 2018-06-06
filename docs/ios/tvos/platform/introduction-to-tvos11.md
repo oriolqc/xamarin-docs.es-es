@@ -1,17 +1,18 @@
 ---
 title: Introducción a tvOS 11
-description: Nuevas características disponibles para los desarrolladores que utilizan Xamarin tvos 11
+description: Este documento proporciona una breve descripción de las nuevas características disponibles para los desarrolladores de Xamarin en tvOS 11 y vínculos a notas de la versión de Apple.
 ms.prod: xamarin
 ms.assetid: 5258F7A1-3388-4482-978C-DC33AAAEFBE6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 02/08/2018
-ms.openlocfilehash: 735b2a113256b61d4e93c52707411e43fed2eca2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 83251cfa50dde4fb2089057aaaa2771956a4a3b0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788919"
 ---
 # <a name="introduction-to-tvos-11"></a>Introducción a tvOS 11
 
@@ -36,8 +37,6 @@ Acceder a características tvOS 11 nuevas en las aplicaciones de Xamarin.tvOS:
 - Sistema operativo 2
 
 Para obtener una lista completa de los cambios introducido en tvOS 11 de Apple, consulte el [What's New en tvOS](https://developer.apple.com/library/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS_11_0.html) documento.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

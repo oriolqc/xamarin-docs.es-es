@@ -1,21 +1,20 @@
 ---
-title: Actualizaciones de diseño Visual
-description: Explorar las nuevas características de iOS 11
+title: Actualizaciones de diseño visual en iOS 11
+description: Este documento describe las actualizaciones que se introdujeron en iOS 11 de diseño visual. Se trata de los cambios en las barras de navegación, búsqueda controladores, los márgenes, contenido de pantalla completa y vistas de la tabla.
 ms.prod: xamarin
 ms.assetid: 7C300B94-0FAF-492E-A326-877419A1824B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 50858592ec6246fe825e80a3039f3640ebf708a9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bc29e021e30910c7fcc4c3b451d0a4dfe187d05
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787856"
 ---
-# <a name="visual-design-updates"></a>Actualizaciones de diseño Visual
-
-_Explorar las nuevas características de iOS 11_
+# <a name="visual-design-updates-in-ios-11"></a>Actualizaciones de diseño visual en iOS 11
 
 En iOS 11, Apple incorporó nuevos cambios visuales, incluidas las actualizaciones en la barra de navegación, barra de búsqueda y vistas de la tabla. Además, se realizaron mejoras para proporcionar mayor flexibilidad a través de los márgenes y el contenido de pantalla completa. Estos cambios se tratan en esta guía.
 

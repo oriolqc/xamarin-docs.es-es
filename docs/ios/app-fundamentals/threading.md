@@ -1,17 +1,19 @@
 ---
-title: Subprocesos
+title: Subprocesamiento en Xamarin.iOS
+description: Este documento describe cómo usar las APIs System.Threading en una aplicación de Xamarin.iOS. Se trata de la biblioteca TPL, creación de aplicaciones con capacidad de respuesta y recolección de elementos.
 ms.prod: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 63a213a62021923ac6dae8b080f3f8931621251d
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 05d015d8d255ccc8c6230b1a89e098e187b22b37
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784922"
 ---
-# <a name="threading"></a>Subprocesos
+# <a name="threading-in-xamarinios"></a>Subprocesamiento en Xamarin.iOS
 
 El tiempo de ejecución de Xamarin.iOS proporciona a los desarrolladores acceso a .NET API, ambos explícitamente al utilizar subprocesos de subprocesamiento (`System.Threading.Thread, System.Threading.ThreadPool`) e implícitamente cuando se utiliza los patrones de delegado asincrónico o los métodos BeginXXX, así como el intervalo completo de API que admiten el Biblioteca TPL.
 

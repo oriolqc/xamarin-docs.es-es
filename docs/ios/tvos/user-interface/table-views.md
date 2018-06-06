@@ -1,5 +1,5 @@
 ---
-title: Trabajar con vistas de tabla
+title: Trabajar con vistas de tabla en Xamarin tvOS
 description: Este artículo tratan diseñar y trabajar con vistas de la tabla y controladores de la vista de tabla dentro de una aplicación Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: D8F80FA9-6400-4DB7-AFC9-A28A54AD04E8
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 8864e85e4d657fc242f6c06b21c815f62055c9f4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8c74c2cc7598f50e57a6a450823e2b0ebca4b537
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789572"
 ---
-# <a name="working-with-table-views"></a>Trabajar con vistas de tabla
+# <a name="working-with-tvos-table-views-in-xamarin"></a>Trabajar con vistas de tabla en Xamarin tvOS
 
 _Este artículo tratan diseñar y trabajar con vistas de la tabla y controladores de la vista de tabla dentro de una aplicación Xamarin.tvOS._
 

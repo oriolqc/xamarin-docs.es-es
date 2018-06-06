@@ -1,21 +1,20 @@
 ---
-title: 'Tutorial: usar NSURLSession y el servicio de transferencia de fondo'
-description: En este tutorial, usamos el servicio de transferencia en segundo plano y la API de NSURLSession para iniciar la descarga de una imagen grande que continúa descargándose cuando la aplicación está en segundo plano.
+title: Transferencia en segundo plano y NSURLSession en Xamarin.iOS
+description: Este documento proporciona un tutorial que muestra cómo usar la transferencia en segundo plano y NSUrlSession para iniciar la descarga de una imagen grande y continuar la descarga cuando la aplicación se coloca en segundo plano.
 ms.prod: xamarin
 ms.assetid: 6960E025-3D5C-457A-B893-25B734F8626D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 51e1ae0a4314d0b23ec9e3236656321bd3dcb4e4
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 08a0ba1337c0d28d1f0d60d04394ccaf4a9ccfc7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783744"
 ---
-# <a name="walkthrough---using-background-transfer-service-and-nsurlsession"></a>Tutorial: usar NSURLSession y el servicio de transferencia de fondo
-
-_En este tutorial, usamos el servicio de transferencia en segundo plano y la API de NSURLSession para iniciar la descarga de una imagen grande que continúa descargándose cuando la aplicación está en segundo plano._
+# <a name="background-transfer-and-nsurlsession-in-xamarinios"></a>Transferencia en segundo plano y NSURLSession en Xamarin.iOS
 
 Se inicia una transferencia en segundo plano mediante la configuración de un fondo `NSURLSession` y poner en cola cargar o descargar tareas. Si las tareas se completan mientras la aplicación es backgrounded, suspendida o terminada, iOS notificará a la aplicación mediante una llamada al controlador de finalización de la aplicación *AppDelegate*. El siguiente diagrama muestra esto en acción:
 
