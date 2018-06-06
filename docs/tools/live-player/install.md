@@ -1,16 +1,17 @@
 ---
 title: Configuración de Xamarin Live Player
-description: Editar y probar aplicaciones en tiempo real en dispositivos iOS o Android
+description: Este documento describe cómo configurar el Reproductor de Xamarin en vivo y usarlo para realizar modificaciones en vivo en una aplicación en ejecución.
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: topgenorth
 ms.author: toopge
 ms.date: 05/14/2018
-ms.openlocfilehash: bbc935c2770fab1a853bb12fba2b7eb0283bb258
-ms.sourcegitcommit: b706fbe05344f7201fbe8f82d9dbbceb66060637
+ms.openlocfilehash: 40c03e978cd9ce4666089f1b2a1e2ee8f47dbd81
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793787"
 ---
 # <a name="xamarin-live-player-setup"></a>Configuración de Xamarin Live Player
 

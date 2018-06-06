@@ -1,21 +1,20 @@
 ---
-title: Solución de problemas
-description: Este artículo proporciona varias sugerencias de solución de problemas para trabajar con iOS 11 en aplicaciones de Xamarin.iOS.
+title: Solución de problemas de iOS 11 aplicaciones compiladas con Xamarin.iOS
+description: Este artículo describen los recursos que pueden usarse para solucionar problemas al desarrollar aplicaciones de Xamarin.iOS. Se trata de notificación de errores, notas, el blog de versiones de Xamarin y opciones de soporte técnico.
 ms.prod: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/31/2017
-ms.openlocfilehash: 181f0a1c66d05e0adf2b682f2df971f5d7d67dfb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ace24cae139c97a8735558c82e22143adbc9c064
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787551"
 ---
-# <a name="troubleshooting"></a>Solución de problemas
-
-_Este artículo proporciona varias sugerencias de solución de problemas para trabajar con iOS 11 en aplicaciones de Xamarin.iOS._
+# <a name="troubleshooting-ios-11-apps-built-with-xamarinios"></a>Solución de problemas de iOS 11 aplicaciones compiladas con Xamarin.iOS
 
 Las secciones siguientes enumeran algunos problemas conocidos que pueden surgir al usar iOS 11 con Xamarin.iOS y, cuando sea posible, la solución a estos problemas:
 

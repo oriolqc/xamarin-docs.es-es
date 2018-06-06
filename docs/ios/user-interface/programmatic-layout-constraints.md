@@ -1,5 +1,5 @@
 ---
-title: Restricciones de diseño mediante programación
+title: Restricciones de diseño mediante programación en Xamarin.iOS
 description: Esta guía presenta las restricciones de diseño automático de trabajar con iOS en código C# en lugar de crearlas en el Diseñador de iOS.
 ms.prod: xamarin
 ms.assetid: 119C8365-B470-4CD4-85F7-086F0A46DCBB
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 093101d09f5ffff637b034b3b4794aa6e785a0df
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a40a3c66369902d2d6f8dbee5a6a7e9bad8a9e05
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790606"
 ---
-# <a name="programmatic-layout-constraints"></a>Restricciones de diseño mediante programación
+# <a name="programmatic-layout-constraints-in-xamarinios"></a>Restricciones de diseño mediante programación en Xamarin.iOS
 
 _Esta guía presenta las restricciones de diseño automático de trabajar con iOS en código C# en lugar de crearlas en el Diseñador de iOS._
 

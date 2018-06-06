@@ -1,6 +1,6 @@
 ---
-title: Solución de problemas
-description: Este artículo cubre conoce los problemas que pueden producirse al trabajar con compatibilidad con tvOS de Xamarin.
+title: Solución de problemas de aplicaciones de tvOS compiladas con Xamarin
+description: Este artículo proporciona algunas sugerencias para ayudar a solucionar problemas durante el desarrollo de una aplicación de tvOS compilada con Xamarin. Se describe el problema conocido y errores específicos.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 124E4953-4DFA-42B0-BCFC-3227508FE4A6
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 86106fa5ca53e93ccffb4dd141914c01ab65a506
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e69157cf9c8a9b9405e31edb2906754328653ccb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789208"
 ---
-# <a name="troubleshooting"></a>Solución de problemas
+# <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solución de problemas de aplicaciones de tvOS compiladas con Xamarin
 
 _Este artículo cubre conoce los problemas que pueden producirse al trabajar con compatibilidad con tvOS de Xamarin._
 
@@ -128,7 +129,7 @@ Si utilizas una biblioteca de fabricante 3rd (por ejemplo, MonoGame) y la compil
 
 También debe incluir `--bitcode=asmonly` en el **argumentos adicionales táctil**, han configurado las opciones del vinculador para **vínculo todos los** y realice una compilación limpia.
 
-### <a name="itms-90471-error-the-large-icon-is-missing"></a>ITMS-90471 error. El icono grande es que faltan
+### <a name="itms-90471-error-the-large-icon-is-missing"></a>Error de ITMS 90471. El icono grande es que faltan
 
 Si recibe un mensaje en el formato "error ITMS 90471. Los iconos grandes encuentra falta"al intentar enviar una aplicación Xamarin.tvOS a la tienda de aplicaciones de TV de Apple para la versión, compruebe lo siguiente:
 

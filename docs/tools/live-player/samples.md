@@ -1,16 +1,17 @@
 ---
 title: Ejemplos de Xamarin Player en vivo
-description: Estos son algunos ejemplos para probar con Xamarin Player en vivo.
+description: Este vínculos de documento para aplicaciones de ejemplo que se utilizará al probar el Reproductor de Xamarin en vivo. Ejemplos vinculados incluyen una calculadora básica y un juego Buscaminas de error.
 ms.prod: xamarin
 ms.assetid: C71D34AD-747B-4826-838D-5138F5DCD7EF
 author: topgenorth
 ms.author: toopge
 ms.date: 06/20/2017
-ms.openlocfilehash: 67c734a76e78973aa1acf8eb2b5dec720701d3d7
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 090b52f4ebf9ec6f46426b4364f8b57b67a79324
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793734"
 ---
 # <a name="xamarin-live-player-samples"></a>Ejemplos de Xamarin Player en vivo
 
@@ -31,8 +32,6 @@ Esta aplicación Xamarin.Forms proporciona una calculadora simple que puede usar
 Se trata de un juego familiar con un nuevo toque. Diez errores están ocultos en una cuadrícula de 9 x 9 iconos. Para ganar, debe buscar y marcar los diez errores.
 
 ![Aplicación de BugSweeper en Android](samples-images/bugsweeper-sml.png)
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

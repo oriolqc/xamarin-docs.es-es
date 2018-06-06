@@ -1,17 +1,18 @@
 ---
 title: Cambios de marcos de trabajo adicionales watchOS 3
-description: Este artículo trata sobre cambios adicionales, secundarios o mejoras en marcos existentes para watchOS 3.
+description: Este documento describe los diversos cambios de framework introducidos con watchOS 3 y cómo trabajar con ellos en Xamarin. Se tratan los datos de núcleo, movimiento de núcleo, Foundation, HealthKit, HomeKit, PassKit y UIKit.
 ms.prod: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 572aaff9d010ec1ec1f48db2878859e445e2fb20
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: af44096928c5e543ac99df3faec9f2e9215f666d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791520"
 ---
 # <a name="additional-watchos-3-frameworks-changes"></a>Cambios de marcos de trabajo adicionales watchOS 3
 

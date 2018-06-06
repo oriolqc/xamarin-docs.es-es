@@ -1,16 +1,17 @@
 ---
 title: Inserción de .NET
-description: 'Incrustación de .NET permite que el código existente de .NET (C#, F # y otros) que vayan a usar en otros lenguajes de programación'
+description: 'Incrustación de .NET permite que el código existente de .NET (C#, F # y otros) para ser utilizado por código escrito en otros lenguajes de programación.'
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: f6edf25faa00bc7c90a52b76a6e90168ccd85b32
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 16f59498a49d10a43e04989136d8835bf78bd89d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793126"
 ---
 # <a name="net-embedding"></a>Inserción de .NET
 
@@ -24,7 +25,7 @@ Incrustación de .NET se basa en el [Embeddinator 4000](https://github.com/mono/
 
 ## <a name="environments-and-languages"></a>Entornos e idiomas
 
-La herramienta es consciente de que el entorno que se va a utilizar, así como el idioma que se va a utilizar.   Por ejemplo, la plataforma iOS no permite la compilación de just-in-time (JIT), para incrustar .NET estáticamente se compilará el código .NET en código nativo que se puede usar en iOS.  Otros entornos de permitir la compilación JIT y, en esos entornos, decidimos a la compilación JIT.
+La herramienta es consciente de que el entorno que se va a utilizar, así como el idioma que se va a utilizar.   Por ejemplo, la plataforma iOS no permite la compilación de just-in-time (JIT), para incrustar .NET estáticamente se compilará el código .NET en código nativo que se puede usar en iOS.  Otros entornos de permitir la compilación JIT y de esos entornos, decidimos a la compilación JIT.
 
 Es compatible con algunos consumidores de lenguaje, por lo que pone de manifiesto código .NET como idiomática código en el lenguaje de destino.   Esta es la lista de los idiomas admitidos en la actualidad:
 

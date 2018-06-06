@@ -1,18 +1,20 @@
 ---
-title: Trabajar con el diseño
+title: Trabajar con watchOS diseño de Xamarin
+description: Este documento describe cómo crear un diseño de watchOS con Xamarin. Se trata de controladores de interfaz, grupos, separadores y controles de contenido.
 ms.prod: xamarin
 ms.assetid: BEDB62A1-2249-4459-986F-413A41E63DF0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 38e26544a907ffcafdec38e3e2758d9bdac7b977
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 11ff5ec2fc8fe99a780a3d728d3d84af59794cea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790619"
 ---
-# <a name="working-with-layout"></a>Trabajar con el diseño
+# <a name="working-with-watchos-layout-in-xamarin"></a>Trabajar con watchOS diseño de Xamarin
 
 Crear diseños para el Apple Watch [tamaños de pantalla](~/ios/watchos/app-fundamentals/screen-sizes.md) presenta desafíos únicos.
 

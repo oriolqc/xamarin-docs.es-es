@@ -1,18 +1,20 @@
 ---
-title: Hacer referencia a bibliotecas nativas
+title: Hacer referencia a bibliotecas nativas en Xamarin.iOS
+description: Este documento describe cómo vincular bibliotecas nativas de C en una aplicación de Xamarin.iOS. Describe cómo crear bibliotecas nativas universales y obtener acceso a métodos de C desde C#.
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/28/2016
-ms.openlocfilehash: 4d58e869dc1357faef71ea88ed6b5ea30aaf960d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bb27ba8b2d9c1b66448f22b7f80f17ba2e483544
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787732"
 ---
-# <a name="referencing-native-libraries"></a>Hacer referencia a bibliotecas nativas
+# <a name="referencing-native-libraries-in-xamarinios"></a>Hacer referencia a bibliotecas nativas en Xamarin.iOS
 
 Xamarin.iOS admite la vinculación con bibliotecas nativas de C y bibliotecas de C de objetivo. Este documento describe cómo vincular sus bibliotecas nativas de C con el proyecto de Xamarin.iOS. Para obtener información sobre hacer lo mismo para las bibliotecas de Objective-C, consulte nuestro [enlace Objective-C tipos](~/ios/platform/binding-objective-c/index.md) documento.
 

@@ -1,18 +1,20 @@
 ---
-title: Búsqueda de Spotlight Core
+title: Búsqueda de Spotlight Core en Xamarin.iOS
+description: Este documento describe cómo usar servicios principales en una aplicación Xamarin.iOS para proporcionar vínculos a contenido de la aplicación. Describe cómo crear, restaurar, actualizar y eliminar elementos de búsqueda.
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 0074cfcdc4a80f66f64d12f8e5c0a5e81ab2b8a1
-ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
+ms.openlocfilehash: a8bc3aaa43d7830b0a3baa0768d495458b1ecfad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788044"
 ---
-# <a name="search-with-core-spotlight"></a>Búsqueda de Spotlight Core
+# <a name="search-with-core-spotlight-in-xamarinios"></a>Búsqueda de Spotlight Core en Xamarin.iOS
 
 Noticias destacadas de núcleo es un nuevo marco de iOS 9 que presenta una API de base de datos similares para agregar, editar o eliminar los vínculos a contenido dentro de la aplicación. Elementos que se han agregado mediante servicios de núcleo estarán disponibles en la búsqueda de Spotlight en el dispositivo iOS.
 

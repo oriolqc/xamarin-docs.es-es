@@ -1,17 +1,18 @@
 ---
 title: Accesibilidad en macOS
-description: Esta guía describe características para crear una aplicación accesible basada en Xamarin.Mac.
+description: Este documento describe cómo trabajar con características de accesibilidad de macOS en una aplicación Xamarin.Mac. Se trata de elementos de interfaz de usuario donde se describe en los guiones gráficos y código, controles personalizados y accesibilidad de prueba.
 ms.prod: xamarin
 ms.assetid: D7F4892B-501A-4271-A7E0-BDD1586B63AD
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: ad04e0276c046f133a6f71abb38912343d2d86b6
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b2406654a46428e8c22284f5c7d114b07a463251
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791168"
 ---
 # <a name="accessibility-on-macos"></a>Accesibilidad en macOS
 

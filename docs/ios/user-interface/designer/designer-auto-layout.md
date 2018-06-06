@@ -1,21 +1,20 @@
 ---
 title: Diseño automático con el Diseñador de Xamarin para iOS
-description: Esta guía presenta iOS diseño automático y el flujo de trabajo de las restricciones nuevas disponible en el Diseñador de Xamarin para iOS.
+description: Esta guía presenta iOS diseño automático y describe cómo utilizar el Diseñador de Xamarin para iOS para crear y modificar los diseños con las restricciones. También se explica cómo modificar restricciones en el código, animar cambios de restricción y mucho más.
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 2023483f817c365d2cfad6945b281d630317693b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 876bf3de19d2bcce7d951facc92d5b05a928cd38
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790206"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Diseño automático con el Diseñador de Xamarin para iOS
-
-_Esta guía presenta iOS diseño automático y el flujo de trabajo de las restricciones nuevas disponible en el Diseñador de Xamarin para iOS._
 
 Diseño automático (también denominada "diseño adaptable") es un enfoque de diseño dinámico. Al contrario que el sistema de diseño de transición, donde la ubicación de cada elemento es codificado de forma rígida a un punto en la pantalla, diseño automático es sobre *relaciones* -las posiciones de los elementos con respecto a otros elementos en la superficie de diseño. La esencia del diseño automático es la idea de las restricciones o las reglas que definen la posición de un elemento o un conjunto de elementos en el contexto de otros elementos en la pantalla. Dado que los elementos no están asociados a una posición determinada en la pantalla, las restricciones ayudan a crear un diseño adaptable que se ve bien en diferentes tamaños y orientaciones de dispositivo.
 

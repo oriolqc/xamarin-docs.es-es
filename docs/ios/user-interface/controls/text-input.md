@@ -1,18 +1,20 @@
 ---
-title: Entrada de texto
+title: Entrada de texto en Xamarin.iOS
+description: Este documento describe la entrada de texto en una aplicación de Xamarin.iOS. Describe el uso UITextField y UITextVIew mediante programación y en el Diseñador de iOS.
 ms.prod: xamarin
 ms.assetid: 03A7F1DC-017D-4501-91FD-82C78272CDB1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 43f1f0318bceb3da8a3d6216a49ec2af48ac155c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5d8648f5830a7adcd32d253b92fae45098f12a83
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790219"
 ---
-# <a name="text-input"></a>Entrada de texto
+# <a name="text-input-in-xamarinios"></a>Entrada de texto en Xamarin.iOS
 
 Aceptar entradas de texto del usuario se logra con la `UITextField` para las entradas de línea y UITextView de varias líneas de texto editable. Puede arrastrar cualquiera de estos controles a una pantalla y haga doble clic para establecer el texto inicial.
 

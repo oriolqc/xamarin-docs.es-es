@@ -1,21 +1,20 @@
 ---
-title: Marcos de trabajo
-description: Este documento enumera los marcos de trabajo compatibles con Xamarin.Mac.
+title: Marcos Xamarin.Mac
+description: Este documento enumeran los diversos marcos macOS disponibles para su uso al desarrollar aplicaciones de Mac con Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: E8108E77-13FE-2EC2-83FF-AFE0408D3EE6
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 7e3ccfd9f23fa5c9c158ff49f0961b5140084d06
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8b4dc591d9fd606e9ee3ef6e34d9d29f44263392
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792295"
 ---
-# <a name="frameworks"></a>Marcos de trabajo
-
-&nbsp;
+# <a name="xamarinmac-frameworks"></a>Marcos Xamarin.Mac
 
 Se admiten los siguientes marcos macOS por Xamarin.Mac:
 

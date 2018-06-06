@@ -1,18 +1,20 @@
 ---
-title: Marcos de trabajo compatibles y no compatibles
+title: Marcos de trabajo admitidas y no admitidas en tvOS
+description: 'Para ayudar a aclarar las características disponibles para las aplicaciones de tvOS, este documento proporciona dos listas de marcos de Apple: aquellos admitidos por tvOS y los que no admite tvOS.'
 ms.prod: xamarin
 ms.assetid: 28EF1337-3D0E-47AB-8A13-1B333A964FB6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 4b368a8e4d449d8fa8d0d29dab19d227bb6eee4c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8ba33d028263385eca50f8174124bbe629e3f951
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789127"
 ---
-# <a name="supported-and-unsupported-frameworks"></a>Marcos de trabajo compatibles y no compatibles
+# <a name="supported-and-unsupported-frameworks-in-tvos"></a>Marcos de trabajo admitidas y no admitidas en tvOS
 
 <a name="Supported-Frameworks" />
 
@@ -39,7 +41,7 @@ Se trata de una lista de los marcos proporcionadas por Apple para su uso en las 
 * CoreVideo
 * Darwin
 * Foundation
-* GameController
+* Dispositivo
 * GameKit
 * Juego
 * GLKit

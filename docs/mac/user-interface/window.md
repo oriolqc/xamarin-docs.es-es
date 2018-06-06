@@ -1,5 +1,5 @@
 ---
-title: Windows
+title: Windows en Xamarin.Mac
 description: Este artículo explica cómo trabajar con ventanas y paneles en una aplicación Xamarin.Mac. Se describen la creación de ventanas y paneles en Xcode y el generador de interfaz, cargarlos de guiones gráficos y archivos de .xib y trabajar con ellos mediante programación.
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: f45bc69b74d98c7b9130f2caeaee91b184c38d87
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 39efcf3554469219cc29d70ee059fe645c41280d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794077"
 ---
-# <a name="windows"></a>Windows
+# <a name="windows-in-xamarinmac"></a>Windows en Xamarin.Mac
 
 _Este artículo explica cómo trabajar con ventanas y paneles en una aplicación Xamarin.Mac. Se describen la creación de ventanas y paneles en Xcode y el generador de interfaz, cargarlos de guiones gráficos y archivos de .xib y trabajar con ellos mediante programación._
 

@@ -1,16 +1,18 @@
 ---
 title: Nuevas características de MapKit en iOS 11
+description: 'Este documento describe nuevas características de MapKit de iOS 11: agrupación marcadores, el botón brújula, la vista de escala y el botón de seguimiento de usuario.'
 ms.prod: xamarin
 ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/30/2016
-ms.openlocfilehash: 3b1ac8015a86292f00f26133277ead2f211dca33
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f73078a2dcbaeefeb5608ce7ec1e2c12b261acad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787411"
 ---
 # <a name="new-features-in-mapkit-on-ios-11"></a>Nuevas características de MapKit en iOS 11
 

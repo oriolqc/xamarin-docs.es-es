@@ -1,5 +1,5 @@
 ---
-title: Menús
+title: Menús en Xamarin.Mac
 description: Este artículo explica cómo trabajar con menús en una aplicación Xamarin.Mac. Describe cómo crear y mantener los menús y elementos de menú en Xcode y el generador de interfaz y trabajar con ellos mediante programación.
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
@@ -7,13 +7,14 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 50c9cf333ff7965bbdfbb964a2301e677eb6aa59
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cb89d1df60bafe14dcc989666f0eeb5d757e4017
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792926"
 ---
-# <a name="menus"></a>Menús
+# <a name="menus-in-xamarinmac"></a>Menús en Xamarin.Mac
 
 _Este artículo explica cómo trabajar con menús en una aplicación Xamarin.Mac. Describe cómo crear y mantener los menús y elementos de menú en Xcode y el generador de interfaz y trabajar con ellos mediante programación._
 

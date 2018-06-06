@@ -1,22 +1,20 @@
 ---
-title: Trabajar con vista apilada
-description: Este artículo tratan diseñar y trabajar con vista apiladas dentro de una aplicación Xamarin.tvOS.
+title: Trabajar con vistas de tvOS apiladas en Xamarin
+description: Este documento describe cómo ha trabajado con tvOS apiladas vistas en una aplicación compilada con Xamarin. Proporciona información general de las vistas apiladas y describe el diseño automático, colocar y ajustar el tamaño de una vista apilada, común utiliza, integración con guiones gráficos y mucho más.
 ms.prod: xamarin
 ms.assetid: 00B07F85-F30B-4DD4-8664-A61D0A1CDB0E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: a6300e4da47022199c0503e6be63b0c90f15654d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e718e525c23e78fbf846209602a07bf0f3f386e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789377"
 ---
-# <a name="working-with-stacked-view"></a>Trabajar con vista apilada
-
-_Este artículo tratan diseñar y trabajar con vista apiladas dentro de una aplicación Xamarin.tvOS._
-
+# <a name="working-with-tvos-stacked-views-in-xamarin"></a>Trabajar con vistas de tvOS apiladas en Xamarin
 
 El control de vista de pila (`UIStackView`) aprovecha la eficacia de diseño automático y las clases de tamaño para administrar una pila de subvistas, horizontal o verticalmente, que responde dinámicamente a los cambios de contenido y el tamaño de pantalla del dispositivo de TV de Apple.
 

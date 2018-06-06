@@ -1,18 +1,20 @@
 ---
-title: Control de imagen
+title: watchOS controles de imagen en Xamarin
+description: Este documento describe cómo usar controles de imagen en una aplicación de watchOS compilada con Xamarin. Describe el control de WKInterfaceImage el SetImage (método), agregar imágenes a una extensión de inspección, animaciones y mucho más.
 ms.prod: xamarin
 ms.assetid: B741C207-3427-46F3-9C90-A52BF8933FA4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 370b9f2a57716de876c7e883afdaf445186fb577
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eb58c587f737a5991a21f0efe9964353a8ab0399
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791256"
 ---
-# <a name="image-control"></a>Control de imagen
+# <a name="watchos-image-controls-in-xamarin"></a>watchOS controles de imagen en Xamarin
 
 watchOS proporciona un [ `WKInterfaceImage` ](https://developer.xamarin.com/api/type/WatchKit.WKInterfaceImage/) control para mostrar imágenes y animaciones simples. Algunos controles pueden tener también una imagen de fondo (por ejemplo, botones, grupos y controladores de interfaz).
 

@@ -1,19 +1,20 @@
 ---
-title: Solución de problemas
-description: Este artículo proporciona varias sugerencias de solución de problemas para trabajar con iOS 9 en aplicaciones de Xamarin.iOS.
+title: 'Xamarin.iOS 9: solución de problemas'
+description: Este artículo proporciona algunas sugerencias de solución de problemas para trabajar con iOS 9 en Xamarin.iOS. Análisis de XML, simuladores, las restricciones de diseño, problemas de red y muchos otros temas tratan las sugerencias.
 ms.prod: xamarin
 ms.assetid: DCE83E36-CBD9-4D96-8E7F-384CB8A54563
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 1b335fc6b19d87a46059511baf866433691b1b4d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c44d737efcf5092eb4b27d5311271005de65318b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787668"
 ---
-# <a name="troubleshooting"></a>Solución de problemas
+# <a name="xamarinios-9--troubleshooting"></a>Xamarin.iOS 9: solución de problemas
 
 _Este artículo proporciona varias sugerencias de solución de problemas para trabajar con iOS 9 en aplicaciones de Xamarin.iOS._
 
@@ -190,8 +191,6 @@ Hay al menos dos posibles soluciones para este problema:
 Con Xamarin.iOS es posible realizar la inicialización de la vista o View Controller dentro de los constructores que se llama cuando algo se expone al código administrado, pero divide el diseño de iOS.
 
 En general debe no inicializar todo lo que puede devolver la llamada código Objective-C desde el constructor porque no puede estar seguro de cuándo se llamará. Que también significa que hay un mejores sitios (otros .ctor) o llamadas a invalidar (tal y como Objective-C no tiene ningún evento) donde se debe realizar esta inicialización.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

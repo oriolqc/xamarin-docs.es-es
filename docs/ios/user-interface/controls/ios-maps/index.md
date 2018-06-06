@@ -1,21 +1,20 @@
 ---
-title: Asignaciones
-description: iOS incluye el MapKit framework, que resulta muy sencillo agregar se asigna a una aplicación. Con el Kit de mapa, las aplicaciones de iOS pueden agregar mapas interactivos que admiten características como la panorámica y zoom, que muestra la ubicación del usuario y gráficos enriquecidos de distribución en capas en un mapa. En este artículo se profundiza en algunas de las características del Kit de mapa, que muestra cómo sacar provecho de ellas para crear características geográficas en una aplicación
+title: Mapas de Xamarin.iOS
+description: Este documento describe el marco de trabajo de MapKit de iOS y cómo se utiliza con Xamarin.iOS. Describe cómo agregar un mapa, estilo, realizar una panorámica y zoom, trabajar con la ubicación del usuario, agregar anotaciones, trabajar con llamadas y superposiciones y realizar la búsqueda local.
 ms.prod: xamarin
 ms.assetid: 5DD8E56D-51C1-4AFA-B387-79B5734698ED
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 0249da1754083231fa4426ae4f42ce4ad73c3f51
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3649c8eb9c8c1a82940b8e2eece7d2bfd005d024
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790235"
 ---
-# <a name="maps"></a>Asignaciones
-
-_iOS incluye el MapKit framework, que resulta muy sencillo agregar se asigna a una aplicación. Con el Kit de mapa, las aplicaciones de iOS pueden agregar mapas interactivos que admiten características como la panorámica y zoom, que muestra la ubicación del usuario y gráficos enriquecidos de distribución en capas en un mapa. En este artículo se profundiza en algunas de las características del Kit de mapa, que muestra cómo sacar provecho de ellas para crear características geográficas en una aplicación_
+# <a name="maps-in-xamarinios"></a>Mapas de Xamarin.iOS
 
 Los mapas son una característica común en todos los sistemas operativos de dispositivos móviles modernos. iOS ofrece compatibilidad de asignación forma nativa mediante el marco del Kit de mapa. Con el Kit de mapa, las aplicaciones pueden agregar fácilmente mapas enriquecidas e interactivas. Estas asignaciones se pueden personalizar de varias maneras, como agregar anotaciones para marcar las ubicaciones en un mapa y superponer los gráficos de formas arbitrarias. Kit de mapa incluso tiene compatibilidad integrada para mostrar la ubicación actual de un dispositivo.
 

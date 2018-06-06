@@ -1,19 +1,20 @@
 ---
-title: Implementación y prueba
-description: Pruebas en dispositivos y la carga en la tienda de aplicaciones
+title: Implementar y probar aplicaciones de watchOS con Xamarin
+description: Este documento describe cómo implementar y probar aplicaciones de watchOS compiladas con Xamarin. Proporciona una lista de comprobación de implementación, se describen explícita y la aplicación de comodín identificadores y echa un vistazo a los grupos de aplicaciones.
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 47c63a01d435626fd1637b6ed5f5bb1755c717af
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 778583456e74bb7ed3a85dce96bcdbc487aef57a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790947"
 ---
-# <a name="deployment-and-testing"></a>Implementación y prueba
+# <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Implementar y probar aplicaciones de watchOS con Xamarin
 
 ## <a name="deployment-checklist"></a>Lista de comprobación de implementación
 

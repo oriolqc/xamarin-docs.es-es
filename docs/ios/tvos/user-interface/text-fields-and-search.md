@@ -1,23 +1,20 @@
 ---
-title: Trabajar con texto y campos de búsqueda
-description: Este artículo tratan diseñar y trabajar con texto y los campos de búsqueda dentro de una aplicación Xamarin.tvOS.
+title: Trabajar con tvOS texto y los campos de búsqueda de Xamarin
+description: Este documento describe cómo trabajar con campos de texto y la búsqueda en una aplicación de tvOS compilada con Xamarin. Proporciona una descripción general de los campos de texto y la búsqueda y se describen los teclados, integración de guión gráfico, modelos de datos de búsqueda y mucho más.
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 220c6e3d1c6f358c67a2f596c977f4d2132298a8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4bf71df62bd6ffd88f42d31809444cd7b3350b66
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789727"
 ---
-# <a name="working-with-text-and-search-fields"></a>Trabajar con texto y campos de búsqueda
-
-_Este artículo tratan diseñar y trabajar con texto y los campos de búsqueda dentro de una aplicación Xamarin.tvOS._
-
-
+# <a name="working-with-tvos-text-and-search-fields-in-xamarin"></a>Trabajar con tvOS texto y los campos de búsqueda de Xamarin
 
 Cuando sea necesario, la aplicación Xamarin.tvOS puede solicitar pequeños fragmentos de texto del usuario (por ejemplo, Id. de usuario y contraseñas) con un campo de texto y el teclado en pantalla:
 

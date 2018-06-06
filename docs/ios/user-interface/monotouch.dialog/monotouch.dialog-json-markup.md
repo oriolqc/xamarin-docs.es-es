@@ -1,15 +1,17 @@
 ---
 title: Marcado de Json MonoTouch.Dialog
+description: Este documento describe la sintaxis JSON que puede usarse para crear una interfaz de usuario de Xamarin.iOS mediante MonoTouch.Dialog.
 ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 02c95f06571a3c242481769846d7cab51450f2ca
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dc3f4ea87bbd381a4a1767fb9179fb1bcf0c56d8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790762"
 ---
 # <a name="monotouchdialog-json-markup"></a>Marcado de Json MonoTouch.Dialog
 

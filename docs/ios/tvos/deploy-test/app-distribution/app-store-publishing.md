@@ -1,21 +1,20 @@
 ---
 title: Publicación en la tienda de aplicaciones de TV de Apple
-description: Este artículo muestra cómo configurar, compilar y publicar una aplicación Xamarin.tvOS para su distribución a través de la tienda de aplicaciones de TV de Apple. Incluye a una guía paso a paso que explica cómo preparar la aplicación para su distribución, cómo usar herramientas de Apple para enviar la aplicación para su revisión y, por último, cómo publicar la aplicación en la tienda de aplicaciones de TV de Apple.
+description: Este documento describe cómo publicar una aplicación en la tienda de aplicaciones de TV de Apple. Describe cómo configurar, aprovisionar, crear y enviar una solicitud de tvOS creada con Xamarin.
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c72b161845f6d8492a47d95e51a80cf0b4f30271
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ac905caaf0bdefe7f0c5502be0bd63102ca5a813
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789309"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Publicación en la tienda de aplicaciones de TV de Apple
-
-_Este artículo muestra cómo configurar, compilar y publicar una aplicación Xamarin.tvOS para su distribución a través de la tienda de aplicaciones de TV de Apple. Incluye a una guía paso a paso que explica cómo preparar la aplicación para su distribución, cómo usar herramientas de Apple para enviar la aplicación para su revisión y, por último, cómo publicar la aplicación en la tienda de aplicaciones de TV de Apple._
 
 En orden distribuir aplicaciones a todos los dispositivos de Apple TV, Apple requiere que las aplicaciones se publiquen a través del *App Store de Apple TV*, realizar la ubicación de la compra integral para las aplicaciones de tvOS de la tienda de aplicaciones. Los desarrolladores de muchos tipos de aplicaciones puede mayúsculas o minúsculas en el éxito masivo de este único punto de distribución. App Store de Apple TV es una solución inmediata, los desarrolladores de aplicaciones de la oferta, sistemas de pago y de distribución.
 

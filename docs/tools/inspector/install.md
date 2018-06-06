@@ -1,21 +1,21 @@
 ---
 title: Requisitos y la instalación de inspector
-description: Cómo descargar, instalar y usar el Inspector de Xamarin.
+description: Este documento describe cómo instalar el Xamarin Inspector y describe los sistemas operativos, IDE y plataformas de aplicaciones.
 ms.prod: xamarin
 ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2017
-ms.openlocfilehash: 5bbd5c64f53e191d5ac629e20df87c2b7ca4ec00
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 80bf3cb4e8e27355ccf6213dbfd07a17e992961b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793813"
 ---
 # <a name="inspector-installation-and-requirements"></a>Requisitos y la instalación de inspector
 
 ## <a name="download-and-installation"></a>Descarga e instalación
-
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
@@ -55,7 +55,6 @@ Inspección de la aplicación activa está disponible para los clientes de empre
 |iOS (unificado)|Compatible con extra y Visual Studio|Inspeccionar aplicaciones de iOS de Windows requiere la misma versión de Inspector también esté instalado en el host de compilación de Mac.|
 |Android|Compatible con extra y Visual Studio|Debe tener como destino Android > = 4.0.3, con **fastdev** habilitado.<br />Debe usar los emuladores de Google, Visual Studio o Xamarin Android. Los emuladores de 7 Android no se permita la inspección en este momento.|
 |WPF|Solo se admite en Visual Studio en Windows|
-
 
 <a name="reporting-bugs" />
 
@@ -147,7 +146,7 @@ Si ha instalado los libros & Inspector usted mismo con un instalador descargado,
 
 > **Inicio > Configuración > sistema > aplicaciones y características**
 
-![](install-images/windows-remove.png "Libros de Xamarin y del Inspector, como se muestra en el "Aplicaciones y características"")
+![](install-images/windows-remove.png "Libros de Xamarin y del Inspector, como se muestra en el \"Aplicaciones y características\"")
 
 **Todavía debe seguir el procedimiento para el instalador de Visual Studio hacer que los libros seguros & Inspector no obtener reinstalan sin su conocimiento.**
 
@@ -167,6 +166,5 @@ En el caso de versiones anteriores, debe quitar manualmente lo siguiente:
 
 1. Eliminar la aplicación Workbooks de `"/Applications/Xamarin Workbooks.app"`
 2. Eliminar la aplicación Inspector de `"Applications/Xamarin Inspector.app"`
-2. Eliminar los complementos: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` y `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-3. Eliminar Inspector y los archivos auxiliares aquí: `/Library/Frameworks/Xamarin.Interactive.framework` y `/Library/Frameworks/Xamarin.Inspector.framework`
-
+3. Eliminar los complementos: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` y `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+4. Eliminar Inspector y los archivos auxiliares aquí: `/Library/Frameworks/Xamarin.Interactive.framework` y `/Library/Frameworks/Xamarin.Inspector.framework`

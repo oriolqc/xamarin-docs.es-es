@@ -1,19 +1,20 @@
 ---
-title: Trabajar con guiones gráficos
-description: Crear interfaces de usuario de Mac OS con guiones gráficos con Xcode.
+title: Trabajar con guiones gráficos en Xamarin.Mac
+description: Este documento describe cómo trabajar con guiones gráficos en Xamarin.Mac, examinar cómo cargarlos desde el código, el ciclo de vida del controlador de vista, la cadena de respuesta, segues, controladores de ventana, identificadores de gestos y mucho más.
 ms.prod: xamarin
 ms.assetid: DF4DF7C2-DDD7-4A32-B375-5C5446301EC5
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 3b72affd9b101b0a139301fec9f2bed343310507
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 72986ed4247c3b6f66f6f1813d74bf0a95d0de53
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792845"
 ---
-# <a name="storyboards"></a>Guiones gráficos
+# <a name="working-with-storyboards-in-xamarinmac"></a>Trabajar con guiones gráficos en Xamarin.Mac
 
 Un guión gráfico define todos de la interfaz de usuario para una aplicación determinada que se divide en una introducción a las funciones de sus controladores de la vista. En el generador de interfaz de Xcode, cada uno de estos controladores reside en su propio escena.
 

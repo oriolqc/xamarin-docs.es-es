@@ -1,21 +1,20 @@
 ---
-title: Introducción a guiones gráficos
-description: Un guión gráfico es una representación visual de la apariencia y el flujo de la aplicación. Xamarin presenta un diseñador para permitir que las aplicaciones de Xamarin.iOS aprovechar las ventajas de guiones gráficos, para que pueda diseñar visualmente la pantalla de la aplicación y tener acceso a las vistas, controladores y segues con C# para tener más control.
+title: Introducción a guiones gráficos en Xamarin.iOS
+description: Este documento proporciona una introducción a guiones gráficos en Xamarin.iOS. Describe cómo se utiliza un guión gráfico para definir una interfaz de usuario, segues y cómo utilizar el Diseñador de iOS para editar archivos de guión gráfico.
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 647bd7d339dc56978752f7ab29de30cf8acb7e07
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3366da2f5dc869c7b075bf32be238a1ebd3145d7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790973"
 ---
-# <a name="introduction-to-storyboards"></a>Introducción a guiones gráficos
-
-_Un guión gráfico es una representación visual de la apariencia y el flujo de la aplicación. Xamarin presenta un diseñador para permitir que las aplicaciones de Xamarin.iOS aprovechar las ventajas de guiones gráficos, para que pueda diseñar visualmente la pantalla de la aplicación y tener acceso a las vistas, controladores y segues con C# para tener más control._
+# <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a guiones gráficos en Xamarin.iOS
 
 En esta guía se explicará qué un guión gráfico es y examinar algunos de los componentes claves: como Segues. Veremos cómo se pueden crear y utilizar, guiones gráficos y qué ventajas que tienen para un desarrollador.
 

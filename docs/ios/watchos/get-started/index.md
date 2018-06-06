@@ -1,19 +1,20 @@
 ---
-title: Introducción a watchOS
-description: Introducción a watchOS y cómo crear aplicaciones de inspección
+title: Introducción a watchOS en Xamarin
+description: Vínculos de este documento diversas guías que describen cómo empezar a trabajar con el desarrollo de watchOS con Xamarin. El contenido vinculado proporciona una introducción a watchOS, explica cómo instalar la compatibilidad con watchOS Xamarin y muestra cómo crear una aplicación inicial.
 ms.prod: xamarin
 ms.assetid: BB938008-C013-4A1D-8229-FEEE94F83BBD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 7eabcb9a9ea300eccf34737e634168defe2948e7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 66482d72bebabbc6fd5c4f4a252ac81d1b73dd05
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790898"
 ---
-# <a name="getting-started-with-watchos"></a>Introducción a watchOS
+# <a name="getting-started-with-watchos-in-xamarin"></a>Introducción a watchOS en Xamarin
 
 _Introducción a watchOS y cómo crear aplicaciones de inspección_
 

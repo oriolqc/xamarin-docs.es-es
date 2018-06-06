@@ -1,19 +1,20 @@
 ---
-title: Pruebas en dispositivos de inspección
-description: Implementación de aplicaciones para probar en su Apple Watch
+title: Pruebas en dispositivos de Apple Watch
+description: Este documento describe cómo implementar una aplicación de watchOS compilada con Xamarin para realizar pruebas en un Apple Watch real. Describe los dispositivos, el aprovisionamiento de perfiles, pruebas y se proporcionan algunas sugerencias para solucionar problemas.
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: d1d00a4d561551435e7d2333520dc614a79dcad3
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a960d81d41ff127fa3316e6190dfbf4881305c02
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790866"
 ---
-# <a name="testing-on-watch-devices"></a>Pruebas en dispositivos de inspección
+# <a name="testing-on-apple-watch-devices"></a>Pruebas en dispositivos de Apple Watch
 
 Una vez que ha seguido el [pasos de implementación](~/ios/watchos/deploy-test/index.md) para crear identificadores de aplicación y grupos de aplicaciones (si es necesario), siga las instrucciones de esta página para:
 

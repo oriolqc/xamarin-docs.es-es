@@ -1,18 +1,19 @@
 ---
-title: Trabajar con la localización
-description: Adaptar aplicaciones watchOS para varios idiomas
+title: Trabajar con watchOS localización en Xamarin
+description: Este documento describe cómo localizar aplicaciones de watchOS compiladas con Xamarin. Se trata de aplicaciones de la inspección, las extensiones de inspección de guión gráfico cadenas en el código, texto, pruebas y mucho más.
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: c765005491f55a1bdcadb1bc5aea97f693dc4570
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4f158f1c8699ad5090eb7fade8af8918c8881d95
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790784"
 ---
-# <a name="working-with-localization"></a>Trabajar con la localización
+# <a name="working-with-watchos-localization-in-xamarin"></a>Trabajar con watchOS localización en Xamarin
 
 _Adaptar aplicaciones watchOS para varios idiomas_
 

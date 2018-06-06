@@ -1,21 +1,20 @@
 ---
-title: Funcionan con el controlador de la barra de pestañas
-description: Este artículo tratan diseñar y trabajar con el controlador de la barra de ficha dentro de una aplicación Xamarin.tvOS.
+title: Trabajar con tvOS pestaña controladores de barra de Xamarin
+description: Este documento describe cómo trabajar con controladores de la barra de ficha en una aplicación de tvOS compilada con Xamarin. Proporciona un alto nivel con respecto a la vista de barras de la ficha y se describen los elementos de la barra de ficha, integración de guión gráfico y elementos de la barra de ficha.
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 1536e37830f3b2a1e2a83c7bf5039909062d092b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ea782fc8d6a2ccef2cdd687ec467be6d49793fc0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789325"
 ---
-# <a name="working-with-tab-bar-controller"></a>Funcionan con el controlador de la barra de pestañas
-
-_Este artículo tratan diseñar y trabajar con el controlador de la barra de ficha dentro de una aplicación Xamarin.tvOS._
+# <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Trabajar con tvOS pestaña controladores de barra de Xamarin
 
 Para muchos tipos de aplicaciones de tvOS, navegación principal se presenta como una barra de pestañas dispuestos a lo largo de la parte superior de la pantalla. El usuario lectores de crédito izquierdo y derecho a través de la lista de categorías posibles y el área de contenido por debajo de los cambios para reflejar la selección del usuario.
 

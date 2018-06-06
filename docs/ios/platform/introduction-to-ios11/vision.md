@@ -1,18 +1,20 @@
 ---
-title: Marco de trabajo de visión
+title: Marco de trabajo de visión en Xamarin.iOS
+description: Este documento describe cómo usar el 11 de iOS Vision Framework en Xamarin.iOS. En concreto, se trata de la detección de rectángulo y la detección se enfrentan.
 ms.prod: xamarin
 ms.assetid: 7273ED68-7B7D-4252-B3A0-02DB2E357A8C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/31/2016
-ms.openlocfilehash: 698bf829128cff1263e98b49d29a77b75ec32ad9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c44c4b3ab12c1ba448f1befb6f831f5ad9119f18
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787424"
 ---
-# <a name="vision-framework"></a>Marco de trabajo de visión
+# <a name="vision-framework-in-xamarinios"></a>Marco de trabajo de visión en Xamarin.iOS
 
 El marco de trabajo de visión agrega una serie de nuevas características para iOS 11, incluidos los de procesamiento de imágenes:
 

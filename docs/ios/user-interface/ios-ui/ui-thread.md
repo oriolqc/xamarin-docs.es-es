@@ -1,18 +1,20 @@
 ---
-title: Trabajar con el subproceso de interfaz de usuario
+title: Trabajar con el subproceso de interfaz de usuario en Xamarin.iOS
+description: Este documento describe cómo trabajar con el subproceso de interfaz de usuario en Xamarin.iOS. Describe la ejecución de subprocesos de interfaz de usuario, proporciona un ejemplo de subproceso de fondo y examina async y await.
 ms.prod: xamarin
 ms.assetid: 98762ACA-AD5A-4E1E-A536-7AF3BE36D77E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 72f161001509519fb02a652f23eaa7805a55f7ca
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4328b84625aff4c92d6e97029ced7dde747d4fc4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790414"
 ---
-# <a name="working-with-the-ui-thread"></a>Trabajar con el subproceso de interfaz de usuario
+# <a name="working-with-the-ui-thread-in-xamarinios"></a>Trabajar con el subproceso de interfaz de usuario en Xamarin.iOS
 
 Interfaces de usuario de la aplicación siempre son un único subproceso, incluso en dispositivos multiproceso: hay sólo una representación de la pantalla y los cambios realizados en lo que se muestra deben coordinar a través de un único 'punto de acceso de '. Esto impide que varios subprocesos intentando actualizar el mismo píxel al mismo tiempo (por ejemplo).
 

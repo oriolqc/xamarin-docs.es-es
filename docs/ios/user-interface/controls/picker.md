@@ -1,19 +1,20 @@
 ---
-title: Selector de
-description: Esta guía tratará diseñar y trabajar con selectores en una aplicación de Xamarin.iOS.
+title: Control de selector de Xamarin.iOS
+description: Este documento describe cómo diseñar y trabajar con controles de selector en una aplicación de Xamarin.iOS. Describe cómo implementar un selector en código y en el Diseñador de iOS.
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/02/2017
-ms.openlocfilehash: e213124e870f1cca96a6078fd26bc7eeb1af55a1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7f46d354af86027d1e2656171c6595562d3555a6
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789917"
 ---
-# <a name="picker"></a>Selector de
+# <a name="picker-control-in-xamarinios"></a>Control de selector de Xamarin.iOS
 
 El control de selector muestra control 'rueda-like' que contiene una lista desplazable de valores con el valor seleccionado se resalta. Los usuarios gira la rueda para seleccionar la opción que deseen.
 

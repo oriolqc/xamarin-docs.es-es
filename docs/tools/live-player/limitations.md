@@ -1,18 +1,19 @@
 ---
-title: Limitaciones
-description: Algunas limitaciones de Xamarin Live Player
+title: Limitaciones de Xamarin Player en vivo
+description: Este documento describe las limitaciones de Xamarin Player en vivo. Describe los requisitos de dispositivos, características funciona con tipos de proyecto y otros temas varios.
 ms.prod: xamarin
 ms.assetid: 36A1531E-630A-4B7C-A333-4E67E5DC023C
 author: topgenorth
 ms.author: toopge
 ms.date: 03/29/2018
-ms.openlocfilehash: a3aea31f32e3bf6227cce2e3340e3d04828472a0
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: ea71391382f9e1ecb80cbf5f2d5bf127e0d6d1be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793680"
 ---
-# <a name="limitations"></a>Limitaciones
+# <a name="limitations-of-xamarin-live-player"></a>Limitaciones de Xamarin Player en vivo
 
 ![Característica de vista previa](~/media/shared/preview.png)
 
@@ -36,6 +37,7 @@ La aplicación Xamarin Live Player es compatible con los siguientes dispositivos
 Hay algunas limitaciones en lo que se puede ejecutar en Xamarin Live Player, incluidos los siguientes elementos:
 
 ### <a name="xamarinforms"></a>Xamarin.Forms
+
 - No se admiten los representadores personalizados.
 - No se admiten efectos.
 - No se admiten los controles personalizados con propiedades enlazables personalizadas.
@@ -44,9 +46,11 @@ Hay algunas limitaciones en lo que se puede ejecutar en Xamarin Live Player, inc
 - No se admiten los catálogos de activos en iOS.
 
 ### <a name="other-project-types"></a>Otros tipos de proyecto
+
 - Live Player no está destinado a proyectos nativos de Android o iOS (que usan XML de Android o guiones gráficos para la interfaz de usuario).
 
 ### <a name="misc"></a>Varios
+
 - Compatibilidad limitada con la reflexión (actualmente, afecta a algunos NuGets populares, como SQLite y Json.NET). Puede que otros NuGets sigan siendo compatibles. Otros NuGets todavía puede ser compatible.
 - No se pueden reemplazar algunas clases del sistema (por ejemplo, no puede implementar una subclase).
 - Algunas características de la plataforma que requieren aprovisionamiento no funcionan en la aplicación Xamarin Live Player (en cambio, se ha configurado para operaciones comunes, como el acceso a la Galería fotográfica).
@@ -55,7 +59,6 @@ Hay algunas limitaciones en lo que se puede ejecutar en Xamarin Live Player, inc
 - Escenarios avanzados con clases genéricas personalizadas e interfaces podrían no admitirse.
 
 Notifique los problemas adicionales en [bugzilla](https://aka.ms/live-player-report-issue).
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

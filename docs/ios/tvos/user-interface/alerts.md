@@ -1,22 +1,22 @@
 ---
-title: Trabajar con alertas
-description: Este artículo explica cómo trabajar con UIAlertController para mostrar un mensaje de alerta al usuario en Xamarin.tvOS.
+title: Trabajar con alertas de tvOS de Xamarin
+description: Este documento describe cómo trabajar con alertas de tvOS de Xamarin. Se trata de mostrar una alerta, agregar campos de texto y una clase auxiliar.
 ms.prod: xamarin
 ms.assetid: F969BB28-FF2C-4A7D-88CA-F8076AD48538
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: da4d2d952687c7e39276ca76af413b83c4519eea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b5125f150a4d57ed27041da2944f4c161434cf93
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789088"
 ---
-# <a name="working-with-alerts"></a>Trabajar con alertas
+# <a name="working-with-tvos-alerts-in-xamarin"></a>Trabajar con alertas de tvOS de Xamarin
 
 _Este artículo explica cómo trabajar con UIAlertController para mostrar un mensaje de alerta al usuario en Xamarin.tvOS._
-
 
 Si tiene que obtener la atención del usuario tvOS o pida permiso para realizar una acción destructiva (por ejemplo, para eliminar un archivo), puede presentar un mensaje de alerta con el `UIAlertViewController`:
 

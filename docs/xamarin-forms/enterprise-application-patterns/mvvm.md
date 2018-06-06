@@ -6,11 +6,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 32a7a7dd50edcc3eefe76429ddb1e5581447993e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 03a3c411c7031ece32a8987b480f96ad39909201
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793962"
 ---
 # <a name="mvvm"></a>MVVM
 
@@ -48,7 +49,7 @@ En una aplicación de Xamarin.Forms, una vista es normalmente un [ `Page` ](http
 
 Hay varias opciones para ejecutar código en el modelo de vista en respuesta a interacciones en la vista, como un clic del botón o la selección de elementos. Si un control admite comandos, el control `Command` propiedad puede estar enlazado a datos a un `ICommand` propiedad en el modelo de vista. Cuando se invoca el comando del control, se ejecutará el código en el modelo de vista. Además de los comandos, comportamientos se pueden adjuntar a un objeto en la vista y pueden realizar escuchas de un comando que se debe invocar o del evento. En respuesta, a continuación, puede invocar el comportamiento de un `ICommand` en el modelo de vista o un método en el modelo de vista.
 
-### <a name="viewmodel"></a>ViewModel
+### <a name="viewmodel"></a>Perspective
 
 El modelo de vista implementa propiedades y los comandos en las que la vista puede enlazar los datos y notifica a la vista de cualquier cambio de estado a través de eventos de notificación de cambio. Las propiedades y los comandos que proporciona el modelo de vista definen la funcionalidad para ofrecer la interfaz de usuario, pero la vista determina cómo se mostrará esa funcionalidad.
 
@@ -175,7 +176,7 @@ Este enfoque tiene la ventaja de que una aplicación tiene una única clase que 
 
 Todos los modelos de vista y clases del modelo que se puede acceder a una vista deben implementar la `INotifyPropertyChanged` interfaz. Implementa esta interfaz en un modelo de vista o una clase de modelo permite a la clase proporcionar notificaciones de cambio a los controles enlazados a datos en la vista cuando cambia el valor de propiedad subyacente.
 
-La aplicación debe llevar a cabo para el uso correcto de notificación de cambio de propiedad, si se cumplen los requisitos siguientes:
+Las aplicaciones deben llevar a cabo para el uso correcto de notificación de cambio de propiedad, si se cumplen los siguientes requisitos:
 
 -   Siempre cuando se genera un `PropertyChanged` evento si cambia el valor de una propiedad pública. No se da por supuesto que cuando se genera el `PropertyChanged` puede hacer caso omiso de evento debido a la información de cómo se produce el enlace XAML.
 -   Siempre cuando se genera un `PropertyChanged` eventos para cualquier calculan propiedades cuyos valores se utilizan en otras propiedades en la vista de modelo o el modelo.

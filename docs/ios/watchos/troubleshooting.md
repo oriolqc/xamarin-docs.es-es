@@ -1,6 +1,6 @@
 ---
 title: watchOS solución de problemas
-description: Problemas conocidos y soluciones para problemas de desarrollo watchOS.
+description: Este documento describen los problemas conocidos y soluciones alternativas para el desarrollo de watchOS con Xamarin. Describe las imágenes con problemas, cómo agregar manualmente archivos de controlador de interfaz, iniciar una aplicación de inspección de la línea de comandos y mucho más.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 27C31DB8-451E-4888-BBC1-CE0DFC2F9DEC
@@ -8,11 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 6e7a7dd09d65b88831136662d8718886aaf483c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4e84028336669738c40da9e37cd22f32ba11dfc1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791770"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS solución de problemas
 
@@ -96,7 +97,7 @@ Es fácil quitar el canal alfa en Mac OS X utilizando la **vista previa** aplica
 
 2. Arrastre una nueva `InterfaceController` en el guión gráfico:
 
-    ![](troubleshooting-images/add-1.png "A InterfaceController")
+    ![](troubleshooting-images/add-1.png "Un InterfaceController")
 
 3. Ahora puede arrastrar controles a la controladora de interfaz (p. ej. botones y etiquetas), pero no puede crear acciones o salidas todavía, porque no hay ningún **.h** archivo de encabezado. Los siguientes pasos hará que el necesario **.h** que se cree el archivo de encabezado.
 

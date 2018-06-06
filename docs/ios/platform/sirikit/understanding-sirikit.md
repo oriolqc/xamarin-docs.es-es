@@ -1,17 +1,18 @@
 ---
 title: Descripción de los conceptos de SiriKit
-description: Este artículo tratan los conceptos clave que será necesarios para trabajar con SiriKit en una aplicación de Xamarin.iOS.
+description: Este documento describe los conceptos básicos necesarios para trabajar con SiriKit en una aplicación de Xamarin.iOS. Por ejemplo, se trata del color y extensiones de interfaz de usuario de intentos, SiriKit permisos, diseñar una gran experiencia y mucho más.
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 56325345204cd2017d688375d9d51c5c83f15e26
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 62b612f2e2725e5856a39e1d4d3fc1288282167a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788935"
 ---
 # <a name="understanding-sirikit-concepts"></a>Descripción de los conceptos de SiriKit
 

@@ -1,23 +1,23 @@
 ---
-title: Solución de problemas
-description: Problemas conocidos con el Reproductor de Xamarin en vivo y cómo corregirlos.
+title: Solución de problemas de Xamarin Player en vivo
+description: Este documento describen problemas conocidos relacionados con el Reproductor de Xamarin en vivo y posibles correcciones. Se trata de problemas de conexión, problemas de configuración y mucho más.
 ms.prod: xamarin
 ms.assetid: 29A97ADA-80E0-40A1-8B26-C68FFABE7D26
 author: topgenorth
 ms.author: toopge
 ms.date: 05/17/2017
-ms.openlocfilehash: 147ce43d3fe764f71f27dce46b699142dfb99872
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3db14db2c64e024ef1c04275661f610f9407dfb7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793760"
 ---
-# <a name="troubleshooting"></a>Solución de problemas
+# <a name="troubleshooting-xamarin-live-player"></a>Solución de problemas de Xamarin Player en vivo
 
 ![Característica de vista previa](~/media/shared/preview.png)
 
 En este artículo se explica algunos problemas comunes y proporciona los pasos necesarios para corregirlos.
-
 
 ## <a name="mobile-device-does-not-connect-after-scanning-barcode-or-entering-code"></a>Dispositivos móviles no se conectan después de análisis de código de barras (o entrada del código)
 
@@ -27,7 +27,6 @@ Se produce cuando el dispositivo móvil que se ejecuta Xamarin Player Live no es
   - Si el equipo también está conectado a una red con cable, pruebe a desconectar la conexión con cable.
 - La red puede protegerse estrechamente (por ejemplo, algunas redes corporativas), que bloquea los puertos necesarios con el Reproductor de Xamarin en vivo.
 - Cierre la aplicación de Xamarin Player en vivo y reiniciarlo.
-
 
 ## <a name="error-while-trying-to-deploy-message-in-ide"></a>Mensaje "Error al intentar implementar" en el IDE
 
@@ -67,7 +66,6 @@ Dentro de la derivación de Xamarin Player Live **par** o **nuevo par**, a conti
 
 Vaya a: https://www.guidgenerator.com/online-guid-generator.aspx y generar un nuevo guid y asegúrese de que está en mayúsculas en.
 
-
 **Paso 5: Configurar dispositivo**
 
 Abra la **PlayerDeviceList.xml** una copia de seguridad en un editor, como Visual Studio o código de Visual Studio. Debe configurar manualmente el dispositivo en este archivo. De forma predeterminada, el archivo debe contener la siguiente vacío `Devices` elemento XML:
@@ -98,7 +96,6 @@ Abra la **PlayerDeviceList.xml** una copia de seguridad en un editor, como Visua
 </PlayerDevice>
 ```
 
-
 **Agregar dispositivo Android:**
 
 ```xml
@@ -118,7 +115,6 @@ Abra la **PlayerDeviceList.xml** una copia de seguridad en un editor, como Visua
 ```
 
 **Cierre y vuelva a abrir Visual Studio.** El dispositivo debería aparecer en la lista.
-
 
 ## <a name="type-or-namespace-cannot-be-found-message-in-ide"></a>"Espacio de nombres o tipo de mensaje no se encontró" en el IDE
 
@@ -141,9 +137,7 @@ Archivos AXML no se admiten actualmente en el Reproductor de Xamarin en vivo.
 
 Proyectos de Xamarin.Forms Android deben utilizar "Toolbar.axml" y "Tabbar.axml" para los nombres de los archivos de diseño relevantes. La plantilla predeterminada utiliza estos nombres; cambiarles dará lugar a problemas de representación.
 
-
 Notifique los problemas adicionales en [bugzilla](https://aka.ms/live-player-report-issue).
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

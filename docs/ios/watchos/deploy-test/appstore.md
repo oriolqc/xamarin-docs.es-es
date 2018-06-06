@@ -1,19 +1,20 @@
 ---
-title: Implementación en la tienda de aplicaciones
-description: Implementación de aplicaciones de inspección en la tienda de aplicaciones
+title: Implementar aplicaciones watchOS en la tienda de aplicaciones
+description: Este documento describe cómo implementar aplicaciones de watchOS compiladas con Xamarin a la tienda de aplicaciones. Toma un vistazo a los perfiles de aprovisionamiento de distribución y iTunes Connect, y también proporciona algunas sugerencias para solucionar problemas.
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: a3c68a0720fbe18f35731cf1a19248c00f748877
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 70613c79c2ec0c81f1dbdc218b747f809f859767
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790989"
 ---
-# <a name="deploying-to-the-app-store"></a>Implementación en la tienda de aplicaciones
+# <a name="deploying-watchos-apps-to-the-app-store"></a>Implementar aplicaciones watchOS en la tienda de aplicaciones
 
 > [!IMPORTANT]
 > No olvide revisar [Watch Kit envío Guía de Apple](https://developer.apple.com/app-store/watch/)y ver el [solución de problemas](#Troubleshooting) sección es posible que tenga problemas.
@@ -147,7 +148,7 @@ with an alpha channel. Icons should not have an alpha channel.
 
 Siga el [instrucciones para quitar el canal alfa](~/ios/watchos/troubleshooting.md) de los iconos.
 
-### <a name="cfbundleversion-mismatch"></a>CFBundleVersion Mismatch
+### <a name="cfbundleversion-mismatch"></a>Error de coincidencia de CFBundleVersion
 
 ```csharp
 CFBundleVersion Mismatch. The CFBundleVersion value '1' of watch application

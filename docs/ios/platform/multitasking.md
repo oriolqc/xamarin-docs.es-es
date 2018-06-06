@@ -1,5 +1,5 @@
 ---
-title: Multitarea para iPad
+title: Multitarea para iPad en Xamarin.iOS
 description: iOS 9 es compatible con dos aplicaciones que se ejecutan en el mismo tiempo, utilizando diapositiva sobre o la vista en dos paneles. También admite la reproducción de imagen en la imagen de vídeo.
 ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 553fd6e45df897037d6ad90ef9211eef0bf27aae
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7eacd9ece067d2ddf6363c0551055daa3df4433a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787960"
 ---
-# <a name="multitasking-for-ipad"></a>Multitarea para iPad
+# <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarea para iPad en Xamarin.iOS
 
 _iOS 9 es compatible con dos aplicaciones que se ejecutan en el mismo tiempo, utilizando diapositiva sobre o la vista en dos paneles. También admite la reproducción de imagen en la imagen de vídeo._
 
@@ -126,7 +127,7 @@ En iPad que admiten la diapositiva sobre y vista en dos paneles, puede acabar co
 
 | **Orientación** | **Aplicación principal** | **Aplicación secundaria** |
 |--- |--- |--- |
-| **Portrait** |75% de la pantalla<br />Compact Horizontal<br />Vertical normal|25% de pantalla<br />Compact Horizontal<br />Vertical normal|
+| **Vertical** |75% de la pantalla<br />Compact Horizontal<br />Vertical normal|25% de pantalla<br />Compact Horizontal<br />Vertical normal|
 | **Horizontal** |75% de la pantalla<br />Horizontal normal<br />Vertical normal|25% de pantalla<br />Compact Horizontal<br />Vertical normal|
 | **Horizontal** |50% de pantalla<br />Compact Horizontal<br />Vertical normal|50% de pantalla<br />Compact Horizontal<br />Vertical normal|
 
@@ -261,4 +262,4 @@ En este artículo se trata los pasos necesarios para asegurarse de que una aplic
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [Adopción multitarea mejoras en iPad](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/index.html#//apple_ref/doc/uid/TP40015145)
-- [entrada de blog](https://blog.xamarin.com/using-auto-layouts-for-ios-9-splitview/)
+- [Entradas del blog](https://blog.xamarin.com/using-auto-layouts-for-ios-9-splitview/)

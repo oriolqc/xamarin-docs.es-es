@@ -1,22 +1,20 @@
 ---
-title: Trabajar con botones
-description: Este artículo tratan diseñar y trabajar con botones dentro de una aplicación Xamarin.tvOS.
+title: Trabajar con botones de tvOS de Xamarin
+description: Este documento describe cómo trabajar con botones en una aplicación de tvOS compilada con Xamarin. Explica cómo trabajar con los botones en el código y en los guiones gráficos y examina cómo aplicar estilo a un botón.
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/07/2017
-ms.openlocfilehash: e915e96690fe67f0e704ec558313427f01753438
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3de732e9eee696ce21ffc5526afd44f29695a313
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789390"
 ---
-# <a name="working-with-buttons"></a>Trabajar con botones
-
-_Este artículo tratan diseñar y trabajar con botones dentro de una aplicación Xamarin.tvOS._
-
+# <a name="working-with-tvos-buttons-in-xamarin"></a>Trabajar con botones de tvOS de Xamarin
 
 Usar una instancia de la `UIButton` clase para crear un botón seleccionable, puede recibir el foco en una ventana de tvOS. Cuando el usuario selecciona un botón, envía un mensaje de acción para el objeto de destino permitir su responden de aplicación Xamarin.tvOS al usuario de la entrada.
 

@@ -1,18 +1,20 @@
 ---
-title: Progreso y los indicadores de actividad
+title: Progreso y los indicadores de actividad de Xamarin.iOS
+description: Este documento describe cómo usar indicadores de progreso y la actividad en Xamarin.iOS. Describe cómo utilizarlos mediante programación o con un guión gráfico.
 ms.prod: xamarin
 ms.assetid: 7AA887E4-51F7-4867-82C5-A8D2EA48AE07
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/11/2017
-ms.openlocfilehash: 58a492bed81a1d96a482c1396718da1c5e4af589
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 27ee788ec40bfd158dbc0d9926245b166e2954a9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790060"
 ---
-# <a name="progress-and-activity-indicators"></a>Progreso y los indicadores de actividad
+# <a name="progress-and-activity-indicators-in-xamarinios"></a>Progreso y los indicadores de actividad de Xamarin.iOS
 
 Es probable que tenga la aplicación para llevar a cabo larga ejecución de tareas como la carga o procesamiento de datos y que este retraso puede provocar un retraso en la actualización de la interfaz de usuario. Durante este período, debe utilizar siempre un indicador de progreso para asegurar que el usuario que el sistema está realizando trabajo. Esto proporciona al control de usuario que la aplicación funcione en su solicitud, que no está esperando su entrada, y puede proporcionar un medio para que detalla exactamente cuánto tiempo tiene que esperar.
 

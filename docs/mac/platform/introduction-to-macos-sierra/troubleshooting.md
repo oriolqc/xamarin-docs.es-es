@@ -1,30 +1,31 @@
 ---
-title: Solución de problemas
-description: Este artículo proporciona varias sugerencias de solución de problemas para trabajar con macOS Sierra en aplicaciones de Xamarin.Mac.
+title: Xamarin.Mac - macOS Sierra solucionar problemas
+description: Este documento proporciona varias sugerencias de solución de problemas para trabajar con macOS Sierra en aplicaciones de Xamarin.Mac. Sugerencias se refieren a la tienda de aplicaciones Mac, Apple Pay, compatibilidad binaria, CFNetwork, CloudKit y mucho más.
 ms.prod: xamarin
 ms.assetid: 323DD5EE-87CE-48E4-B234-1CF61B45A019
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/22/2016
-ms.openlocfilehash: 7ea4ec48399b42ce69b0346b1a88a1d9fb9fbf6e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5b2571d9562fd137257e2dd0ea2ada8f071bab92
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792334"
 ---
-# <a name="troubleshooting"></a>Solución de problemas
+# <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin.Mac - macOS Sierra solucionar problemas
 
 _Este artículo proporciona varias sugerencias de solución de problemas para trabajar con macOS Sierra en aplicaciones de Xamarin.Mac._
 
-siguientes secciones enumeran algunos problemas conocidos que pueden producirse al utilizar macOS Sierra con Xamarin.mac y la solución a estos problemas:
+Las siguientes secciones enumeran algunos problemas conocidos que pueden producirse al utilizar macOS Sierra con Xamarin.mac y la solución a estos problemas:
 
 - [App Store](#App-Store)
 - [Apple Pay](#Apple-Pay)
 - [Compatibilidad binaria](#Binary-Compatibility)
 - [Protocolo de HTTP CFNetwork](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)
-- [CoreImage](#CoreImage)
+- [Imagen del núcleo](#CoreImage)
 - [Notificaciones](#Notifications)
 - [NSUserActivity](#NSUserActivity)
 - [Safari](#Safari)
@@ -69,7 +70,7 @@ Las operaciones de larga ejecución devolverá un _"No tiene permiso para guarda
 
 <a name="CoreImage" />
 
-## <a name="coreimage"></a>CoreImage
+## <a name="core-image"></a>Imagen del núcleo
 
 El `CIImageProcessor` API ahora es compatible con un número arbitrario de imagen de entrada. `CIImageProcessor` API que se incluía en macOS beta Sierra 1 que se va a quitar.
 

@@ -1,21 +1,19 @@
 ---
-title: Introducción a MonoTouch.Dialog
-description: El MonoTouch.Dialog (MT D) el Kit de herramientas es un marco de trabajo indispensable para el desarrollo de la interfaz de usuario en Xamarin.iOS rápido de aplicaciones. MONTE D. facilita la rápida y sencilla definir la interfaz de usuario mediante un enfoque declarativo, en lugar de la tarea de controladores de navegación, tablas, etcetera de aplicación compleja. Además, monte D tiene un conjunto flexible de las API que proporcionan a los programadores con un control completo o entrega el enfoque, así como otras características, como la imagen de fondo de deslizar para actualizar, cargar, buscar soporte técnico y la generación dinámica de interfaz de usuario a través de los datos JSON. Esta guía presentan las diferentes maneras de trabajar con MT D. y, a continuación, se adentra en uso avanzado de profundidad.
+title: Introducción a MonoTouch.Dialog para Xamarin.iOS
+description: Este documento describe MonoTouch.Dialog (MT D), un marco para el desarrollo de interfaz de usuario de rápido y declarativo con Xamarin.iOS. Describe cómo usar las APIs MonoTouch.Dialog para crear una interfaz en el código o JSON y usar características como la actualización de extracción, búsqueda, carga de la imagen de fondo y mucho más.
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: be979b35ffdd597dae74f1f661a381ae44433b10
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6511d8deed1800a8ae655f749feccd249bf4a8c0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790843"
 ---
-# <a name="introduction-to-monotouchdialog"></a>Introducción a MonoTouch.Dialog
-
-_El MonoTouch.Dialog (MT D) el Kit de herramientas es un marco de trabajo indispensable para el desarrollo de la interfaz de usuario en Xamarin.iOS rápido de aplicaciones. MONTE D. facilita la rápida y sencilla definir la interfaz de usuario mediante un enfoque declarativo, en lugar de la tarea de controladores de navegación, tablas, etcetera de aplicación compleja. Además, monte D tiene un conjunto flexible de las API que proporcionan a los programadores con un control completo o entrega el enfoque, así como otras características, como la imagen de fondo de deslizar para actualizar, cargar, buscar soporte técnico y la generación dinámica de interfaz de usuario a través de los datos JSON. Esta guía presentan las diferentes maneras de trabajar con MT D. y, a continuación, se adentra en uso avanzado de profundidad._
-
+# <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introducción a MonoTouch.Dialog para Xamarin.iOS
 
 MonoTouch.Dialog, que se conoce como MT D para abreviar, es un Kit de herramientas de desarrollo de interfaz de usuario rápida que permite a los desarrolladores crear pantallas de aplicación y navegación con información, en lugar de la tarea de creación de controladores de la vista, tablas, etcetera. Por lo tanto, proporciona una simplificación significativa de reducción de desarrollo y el código de interfaz de usuario. Por ejemplo, considere la siguiente captura de pantalla:
 
@@ -293,7 +291,7 @@ El nombre del grupo de `RadioGroup` se usa para mostrar el valor seleccionado en
 
 ### <a name="badge-element"></a>Elemento distintivo
 
- [![](images/image15.png "Badge Element")](images/image15.png#lightbox)
+ [![](images/image15.png "Elemento distintivo")](images/image15.png#lightbox)
 
 ### <a name="float-element"></a>Elemento de punto flotante
 

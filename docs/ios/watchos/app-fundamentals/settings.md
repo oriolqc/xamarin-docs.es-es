@@ -1,18 +1,20 @@
 ---
-title: Trabajar con la configuración
+title: Trabajar con watchOS configuración de Xamarin
+description: Este documento describe cómo trabajar con la configuración de watchOS en Xamarin. Se trata de agregar valores a una solución de aplicación de inspección, mediante la configuración de la aplicación y la aplicación de Apple Watch en el iPhone.
 ms.prod: xamarin
 ms.assetid: 4B2EB192-F0A2-4010-B141-0431520594C0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 6de70eae1eb1c498336a62b4d7be5e2805de11f9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6cfbcf3b4383588819490838c2a54cdb4faf9403
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790882"
 ---
-# <a name="working-with-settings"></a>Trabajar con la configuración
+# <a name="working-with-watchos-settings-in-xamarin"></a>Trabajar con watchOS configuración de Xamarin
 
 Aplicaciones de Apple Watch pueden utilizar la misma funcionalidad de configuración como aplicaciones de iOS: la interfaz de usuario de configuración se muestra en el **de Apple Watch** aplicación de iPhone, pero los valores son accesibles en la aplicación de iPhone y también la extensión de inspección.
 

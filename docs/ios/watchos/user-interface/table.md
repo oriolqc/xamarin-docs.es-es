@@ -1,18 +1,20 @@
 ---
-title: Control de tabla
+title: watchOS controles de tabla en Xamarin
+description: Este documento describe cómo usar controles de tabla watchOS en Xamarin. Se trata de agregar una tabla, agregando un controlador de fila, crear y rellenar las filas, responde a las derivaciones y mucho más.
 ms.prod: xamarin
 ms.assetid: 7C14126D-9591-4387-A588-3C4521F11C55
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 3f596b424292dd0f4db08429bc7c5d4a885d3954
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: afb8f9a96fa14877cbd0352869e23972719a4480
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791363"
 ---
-# <a name="table-control"></a>Control de tabla
+# <a name="watchos-table-controls-in-xamarin"></a>watchOS controles de tabla en Xamarin
 
 El watchOS `WKInterfaceTable` control es mucho más fácil que su equivalente de iOS, pero realiza una función similar. Crea una lista de desplazamiento de filas que pueden incluir diseños personalizados, y que responden a eventos de toque.
 

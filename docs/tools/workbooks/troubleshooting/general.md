@@ -1,14 +1,16 @@
 ---
 title: Problemas conocidos y soluciones alternativas
+description: Este documento describe los problemas conocidos y soluciones alternativas para los libros de Xamarin. Se trata problemas CultureInfo, problemas JSON y mucho más.
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 186faf3fc4f93d1c9a4af9e3e9f72afd569fed8b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b6dc3b119d3e85369a71638f2519b2ef0c85446c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34794038"
 ---
 # <a name="known-issues--workarounds"></a>Problemas conocidos y soluciones alternativas
 
@@ -56,7 +58,7 @@ Hay un [error en el editor Monaco] [ monaco-bug] en Safari/WebKit, que se utiliz
 
 ## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>Faltan los representadores de SkiaSharp en libros 1.3
 
-A partir de los libros 1.3, hemos quitado los representadores de SkiaSharp que se incluye en los libros 0.99.0, en favor de SkiaSharp proporcionando los representadores de sí mismo, con nuestra [SDK] [/ guías/entre-plataforma/libros/sdk /].
+A partir de los libros 1.3, hemos quitado los representadores de SkiaSharp que se incluye en los libros 0.99.0, en favor de SkiaSharp proporcionando los representadores de sí mismo, utilizando nuestro [SDK](~/tools/workbooks/sdk/index.md).
 
 ### <a name="workaround"></a>Solución
 

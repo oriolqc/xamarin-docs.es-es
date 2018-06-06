@@ -1,15 +1,17 @@
 ---
-title: .NET incrustar los procedimientos recomendados para Objective-C
+title: Prácticas recomendadas de incrustación de .NET para Objective-C
+description: Este documento describe varias prácticas recomendadas para utilizar la incrustación de .NET con el objetivo de C. Se trata de exponer un subconjunto del código administrado, exponer una API chunkier, nomenclatura y mucho más.
 ms.prod: xamarin
 ms.assetid: 63C7F5D2-8933-4D4A-8348-E9CBDA45C472
 author: topgenorth
 ms.author: toopge
 ms.date: 11/14/2017
-ms.openlocfilehash: e592a76e428d23881f1fe2dc5c7254999bece517
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b4b0df6f1c7c1d5931c0c18a1508747a7c570bea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793501"
 ---
 # <a name="net-embedding-best-practices-for-objective-c"></a>Prácticas recomendadas de incrustación de .NET para Objective-C
 

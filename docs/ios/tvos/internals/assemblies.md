@@ -1,18 +1,20 @@
 ---
-title: Ensamblados
+title: Ensamblados admitidos por Xamarin tvos
+description: Para ayudar a aclarar las características disponibles para las aplicaciones de tvOS, este documento proporciona una lista de ensamblados compatibles con Xamarin para el desarrollo de tvOS.
 ms.prod: xamarin
 ms.assetid: 0B1ACF06-65FF-49E2-B6BC-7AEC55638ED8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 7d0ee27cfa2ae153ef481f943402f5fcfc5d04e4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 217ec5ea81b304555bcaf19e53c8132628628627
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788828"
 ---
-# <a name="assemblies"></a>Ensamblados
+# <a name="assemblies-supported-by-xamarin-for-tvos"></a>Ensamblados admitidos por Xamarin tvos
 
 ## <a name="supported-assemblies"></a>Ensamblados compatibles
 
@@ -46,8 +48,6 @@ Se trata de una lista de los ensamblados compatibles con Xamarin para las aplica
 ## <a name="portable-class-libraries"></a>Bibliotecas de clases portables
 
 Además de los enlaces de Mac, puede consumir Xamarin.tvOS [bibliotecas de clases Portable de .NET](~/cross-platform/app-fundamentals/pcl.md).
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 
