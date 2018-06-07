@@ -6,12 +6,12 @@ ms.assetid: 8C30F8D3-1920-453E-9E8B-D40696736FF2
 author: asb3993
 ms.author: amburns
 ms.date: 04/12/2017
-ms.openlocfilehash: 448bbc0630388f6bf45056c90cc75586996d0623
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 82a89309e6462462471f42c3504d109ff0722917
+ms.sourcegitcommit: 5db075bdd0b62d5d1d1567c267303a6a1888c8f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781038"
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34806795"
 ---
 # <a name="using-net-standard-libraries-to-share-code"></a>Utilizar bibliotecas estándar de .NET para compartir código
 
@@ -37,7 +37,7 @@ Agregar una biblioteca estándar de .NET a la solución es bastante sencillo.
 
   **Nota:** esta plantilla se cambiará a `.NET Standard` en una versión futura de Visual Studio para Mac.
 
-  ![Crear una biblioteca de clases de .NET Core](net-standard-images/vsm01.png)
+  ![Crear una biblioteca de clases de .NET Core](net-standard-images/vsm01.png "crear una nueva biblioteca de clases de núcleo de .NET")
 
 2. El proyecto de biblioteca estándar de .NET aparecerá como se muestra en el Explorador de soluciones. El nodo dependencias indicará que la biblioteca usa la [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
 
@@ -47,7 +47,7 @@ Agregar una biblioteca estándar de .NET a la solución es bastante sencillo.
 
 La configuración de la biblioteca estándar de .NET se pueden ver y cambiar, haga doble clic en el proyecto y seleccione `Options` tal y como se muestra en esta captura de pantalla:
 
-![Edición estándar de .NET framework de destino en Opciones de proyecto](net-standard-images/vsm03.png)
+![Edición estándar de .NET framework de destino en Opciones de proyecto](net-standard-images/vsm03.png "editar la versión de la plataforma de destino de .NET estándar en Opciones de proyecto")
 
 En puede cambiar la versión de `netstandard` cambiando la `Target Framework` valor de la lista desplegable.
 
@@ -67,17 +67,17 @@ Agregar una biblioteca estándar de .NET a la solución es bastante sencillo.
 
 1. En el cuadro de diálogo Agregar nuevo proyecto, seleccione la `.NET Standard` categoría y, a continuación, seleccione `Class Library(.NET Standard)`.
 
-  ![](net-standard-images/vs01.png "Crear nueva biblioteca de clases .NET estándar")
+  ![Crear una nueva biblioteca de clases de .NET estándar](net-standard-images/vs01.png "crear nueva biblioteca de clases .NET estándar")
 
 2. El proyecto de biblioteca estándar de .NET aparecerá como se muestra en el Explorador de soluciones. El nodo dependencias indicará que la biblioteca usa la [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/).
 
-  ![](net-standard-images/vs02.png "Proyecto .NET estándar de la solución")
+  ![NETStandard.Library en la carpeta de proyecto](net-standard-images/vs02.png "proyecto .NET estándar de la solución")
 
 #### <a name="editing-net-standard-library-settings"></a>Editar configuración de la biblioteca estándar de .NET
 
 La configuración de la biblioteca estándar de .NET se pueden ver y cambiar, haga doble clic en el proyecto y seleccione `Properties` tal y como se muestra en esta captura de pantalla:
 
-![](net-standard-images/vs03.png "Hacer referencia a una biblioteca estándar de .NET de la misma manera que otros proyectos")
+![Editar versiones de .NET Framework de destino estándar en Propiedades del proyecto](net-standard-images/vs03.png "hacen referencia a una biblioteca estándar de .NET de la misma manera que otros proyectos")
 
 En puede cambiar la versión de `netstandard` cambiando la `Target Framework` valor de la lista desplegable.
 
@@ -87,7 +87,7 @@ En puede cambiar la versión de `netstandard` cambiando la `Target Framework` va
 
 Una vez que se ha creado una biblioteca estándar. NET, puede agregar una referencia a él desde cualquier aplicación compatible o biblioteca de proyectos de la misma manera normalmente agregar referencias. En Visual Studio, haga doble clic en el nodo referencias y elija `Add Reference...` , a continuación, cambie a la `Solution : Projects` ficha tal como se muestra:
 
-![](net-standard-images/vs04.png "En Visual Studio, haga doble clic en el nodo referencias y elija Agregar referencia …, a continuación, cambie a la ficha de proyectos de la solución, como se muestra")
+![Hacer referencia a una biblioteca estándar de .NET](net-standard-images/vs04.png "en Visual Studio, haga doble clic en el nodo referencias y elija Agregar referencia …, a continuación, cambie a la ficha de proyectos de la solución, como se muestra")
 
 -----
 

@@ -6,18 +6,18 @@ ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
-ms.date: 05/08/2018
-ms.openlocfilehash: a714ac55c3a49b91cb21e3ba1793b9bccd7d1be2
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 06/05/2018
+ms.openlocfilehash: 0d512342f1c978c84341d20c298a9fa750800d84
+ms.sourcegitcommit: 5db075bdd0b62d5d1d1567c267303a6a1888c8f2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34806808"
 ---
 # <a name="firebase-job-dispatcher"></a>Distribuidor de trabajo firebase
 
 _Esta guía describe cómo programar el trabajo en segundo plano mediante la biblioteca de distribuidor de trabajo Firebase de Google._
 
-![Distribuidor de trabajo de firebase en la vista previa](~/media/shared/preview.png)
 
 ## <a name="overview"></a>Información general
 
@@ -65,9 +65,6 @@ El distribuidor de trabajo Firebase requiere el nivel de API de Android 9 o supe
 Para empezar a trabajar con el distribuidor de trabajo Firebase, agregue primero la [paquete Xamarin.Firebase.JobDispatcher NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher) al proyecto Xamarin.Android. Buscar el Administrador de paquetes de NuGet para la **Xamarin.Firebase.JobDispatcher** paquete (que aún está en versión preliminar).
 
 Después de agregar la biblioteca de distribuidor de trabajo Firebase, cree un `JobService` clase y, a continuación, programar que se ejecute con una instancia de la `FirebaseJobDispatcher`.
-
-> [!NOTE]
-> El enlace actual para que el distribuidor de trabajo Firebase tiene como destino una versión anterior de la biblioteca. El es una [error conocido [(https://bugzilla.xamarin.com/show_bug.cgi?id=59046)] que impide que el enlace que se está actualizando para tener como destino una versión más reciente del distribuidor de trabajo Firebase.
 
 
 ### <a name="creating-a-jobservice"></a>Crear un JobService
@@ -293,7 +290,6 @@ Esta guía describe cómo utilizar el distribuidor de trabajo Firebase para real
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Se produce un error en el generador de enlaces con ERROR irrecuperable la excepción no controlada: System.ArgumentNullException: valor no puede ser null.](https://bugzilla.xamarin.com/show_bug.cgi?id=59046)
 - [Xamarin.Firebase.JobDispatcher en NuGet](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher)
 - [firebase-trabajo-distribuidor en GitHub](https://github.com/firebase/firebase-jobdispatcher-android)
 - [Enlace de Xamarin.Firebase.JobDispatcher](https://github.com/xamarin/XamarinComponents/tree/master/Android/FirebaseJobDispatcher)
