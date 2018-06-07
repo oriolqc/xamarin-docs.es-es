@@ -1,21 +1,22 @@
 ---
-title: Controles deslizantes, los conmutadores y los controles segmentados
+title: Controles deslizantes, los conmutadores y los controles segmentados en Xamarin.iOS
+description: Este documento describen diapositivas, conmutadores y controles segmentados en Xamarin.iOS, que describen cómo trabajar con ellos mediante programación o en el Diseñador de iOS.
 ms.prod: xamarin
 ms.assetid: 85BF0EC8-E581-49CD-B9E7-98BE4C5A0F6B
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 3c98ea19b3f925e71f72b09d5356286d676a9f71
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 09a5d9e76c41eba4e16cab041daa67d3a5d8a584
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790034"
 ---
-# <a name="sliders-switches-and-segmented-controls"></a>Controles deslizantes, los conmutadores y los controles segmentados
+# <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Controles deslizantes, los conmutadores y los controles segmentados en Xamarin.iOS
 
 <a name="Sliders" />
-
 
 ## <a name="sliders"></a>Controles deslizantes
 
@@ -61,7 +62,7 @@ El control deslizante personalizado tiene el siguiente aspecto:
 
 iOS usa el `UISwitch` como un valor booleano de entrada que se puede representar con un botón de opción en otras plataformas. El usuario puede manipular el control moviendo el *thumb* entre el **activado/desactivado** posiciones.
 
- [![](slider-switch-segmented-controls-images/image28a.png "Switch")](slider-switch-segmented-controls-images/image28a.png#lightbox)
+ [![](slider-switch-segmented-controls-images/image28a.png "Conmutador")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 Se puede personalizar la apariencia del conmutador de la **panel de propiedades** del diseñador, que le permitirá controlar el estado de forma predeterminada, **activado/desactivado tono** colores y una **on/off de imagen**. Esto se muestra en la imagen siguiente:
 

@@ -1,17 +1,18 @@
 ---
 title: Introducción a iOS 6
-description: iOS 6 incluye una serie de nuevas tecnologías para el desarrollo de aplicaciones, que Xamarin.iOS 6 ofrece a los desarrolladores de C#.
+description: Vínculos de este documento a las guías que describen las características introducidas en iOS 6. Vistas de colección, PassKit, el marco de trabajo Social, y cambios en StoreKit se tratan.
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 8f3be80ffb8156c24c96b03fda8eac3907ca88bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cf623c7788137106ddbb2c23c69465f205a5a400
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787620"
 ---
 # <a name="introduction-to-ios-6"></a>Introducción a iOS 6
 
@@ -28,12 +29,12 @@ Este documento enumeran algunas de las más nuevas y emocionantes característic
 Vistas de colección permiten el contenido que se mostrará mediante los diseños arbitrarios. Le permiten crear fácilmente los diseños de cuadrícula de fábrica, que la ejecución de los diseños personalizados. Para obtener más información, vea, el [Introducción a las vistas de colección](~/ios/user-interface/controls/uicollectionview.md) [](~/ios/user-interface/controls/uicollectionview.md)guía.
 
 
-## <a name="introduction-to-pass-kitiosplatformpasskitmd"></a>[Introducción al Kit de pasar](~/ios/platform/passkit.md)
+## <a name="introduction-to-passkitiosplatformpasskitmd"></a>[Introduction to PassKit](~/ios/platform/passkit.md) (Introducción a PassKit)
 
-El marco de trabajo pasa Kit permite a las aplicaciones interactúan con pasadas digitales que se administran en la aplicación de la libreta. Para obtener más información, vea, el [Introducción a la Guía del Kit de pasar](~/ios/platform/passkit.md).
+El marco de trabajo de PassKit permite a las aplicaciones interactúan con pasadas digitales que se administran en la aplicación de la libreta. Para obtener más información, vea, el [Introducción a la Guía del Kit de pasar](~/ios/platform/passkit.md).
 
 
-##  <a name="introduction-to-event-kitiosplatformeventkitmd"></a>[Introducción al Kit de eventos](~/ios/platform/eventkit.md)
+##  <a name="introduction-to-eventkitiosplatformeventkitmd"></a>[Introducción a EventKit](~/ios/platform/eventkit.md)
 
 El marco de trabajo de EventKit proporciona una manera de tener acceso a los calendarios, los eventos de calendario y datos de avisos que almacena la base de datos de calendario. Acceso a los calendarios y el calendario de eventos ha estado disponible desde iOS 4, pero iOS 6 ahora expone el acceso a datos de avisos. Para obtener más información, consulte el [I](~/ios/platform/eventkit.md) [ntroduction a EventKit](~/ios/platform/eventkit.md) guía.
 
@@ -43,7 +44,7 @@ El marco de trabajo de EventKit proporciona una manera de tener acceso a los cal
 El marco de trabajo Social proporciona una API unificada para interactuar con redes sociales incluido Twitter y Facebook, así como SinaWeibo para los usuarios en China. Para obtener más información, vea, el [Introducción al marco sociales](~/ios/platform/social-framework.md) guía.
 
 
-##  <a name="changes-to-store-kitchanges-to-storekitmd"></a>[Cambios para almacenar Kit](changes-to-storekit.md)
+##  <a name="changes-to-storekitchanges-to-storekitmd"></a>[Cambios en StoreKit](changes-to-storekit.md)
 
 Apple ha introducido dos nuevas características en el Kit de almacén: comprar y descargar iTunes o contenido de la tienda de aplicaciones desde dentro de la aplicación y hospeda los archivos de contenido para las compras de la aplicación!. Para obtener más información, vea, el [cambia al almacén Kit](changes-to-storekit.md) guía.
 
