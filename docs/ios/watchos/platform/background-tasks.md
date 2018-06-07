@@ -1,21 +1,20 @@
 ---
-title: Tareas en segundo plano
-description: Use la nueva watchOS de tareas en segundo plano 3 para garantizar que una aplicación de inspección siempre tiene los datos y las instantáneas de acoplamiento más reciente.
+title: watchOS tareas en segundo plano en Xamarin
+description: Este documento describe cómo usar tareas en segundo plano con watchOS en Xamarin, echar un vistazo a tipos de tareas en segundo plano, uso de recursos, implementar tareas en segundo plano, programación, mejores prácticas y mucho más.
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/13/2017
-ms.openlocfilehash: 0279aed1e694e3b38dcb8189819d88740c37b6ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5ab53d4aea32cf41c492e286c18cbe85a619889a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792052"
 ---
-# <a name="background-tasks"></a>Tareas en segundo plano
-
-_Use la nueva watchOS de tareas en segundo plano 3 para garantizar que una aplicación de inspección siempre tiene los datos y las instantáneas de acoplamiento más reciente._
+# <a name="watchos-background-tasks-in-xamarin"></a>watchOS tareas en segundo plano en Xamarin
 
 Con watchOS 3, hay tres maneras principales que una aplicación de inspección mantener su información actualizada: 
 
@@ -544,8 +543,8 @@ Si bien es una aplicación en segundo plano, el sistema impone límites varias e
 
 - Que se genera solo unos segundos a que se complete cualquier tarea. El sistema toma en consideración no solo de la cantidad de tiempo transcurrido, sino también cuánta potencia de CPU que la aplicación está consumiendo para derivar este límite.
 - Cualquier aplicación que supera los límites se terminará con los códigos de error siguiente:
-    - **CPU** - 0xc51bad01
-    - **Time** - 0xc51bad02
+    - **CPU** -0xc51bad01
+    - **Tiempo** -0xc51bad02
 - El sistema impone límites diferentes según el tipo de tarea en segundo plano ha solicitado la aplicación para realizar. Por ejemplo, `WKApplicationRefreshBackgroundTask` y `WKURLSessionRefreshBackgroundTask` tareas tienen tiempos de ejecución un poco más sobre otros tipos de tareas en segundo plano.
 
 <a name="Complications-and-App-Updates" />
