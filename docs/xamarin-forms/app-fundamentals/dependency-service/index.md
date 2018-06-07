@@ -1,6 +1,6 @@
 ---
 title: DependencyService
-description: Xamarin.Forms permite a los desarrolladores definir el comportamiento de proyectos para plataformas específicas. DependencyService, a continuación, busca la implementación de la plataforma correcta, permitir que el código compartido tener acceso a la funcionalidad nativa.
+description: Xamarin.Forms permite a los desarrolladores definir el comportamiento de los proyectos para plataformas específicas. DependencyService encuentra la implementación correcta de la plataforma, permitiendo al código compartido tener acceso a la funcionalidad nativa.
 ms.prod: xamarin
 ms.assetid: 403479F2-6751-41F2-ADCE-3AF595062FE4
 ms.technology: xamarin-forms
@@ -15,11 +15,11 @@ ms.lasthandoff: 04/04/2018
 ---
 # <a name="dependencyservice"></a>DependencyService
 
-_Xamarin.Forms permite a los desarrolladores definir el comportamiento de proyectos para plataformas específicas. DependencyService, a continuación, busca la implementación de la plataforma correcta, permitir que el código compartido tener acceso a la funcionalidad nativa._
+_Xamarin.Forms permite a los desarrolladores definir el comportamiento de los proyectos para plataformas específicas. DependencyService encuentra la implementación correcta de la plataforma, permitiendo que al código compartido tener acceso a la funcionalidad nativa._
 
 Esta guía se compone de los siguientes artículos:
 
-- **[Introducción](introduction.md)**  &ndash; presenta la arquitectura global de la `DependencyService` concepto.
+- **[Introducción](introduction.md)**  &ndash; presenta la arquitectura global del concepto `DependencyService`.
 - **[Implementación de texto a voz](text-to-speech.md)**  &ndash; le guía a través de un ejemplo del uso de sistema de texto a voz nativo de cada plataforma.
 - **[Comprobación de orientación del dispositivo](device-orientation.md)**  &ndash; le guía a través de un ejemplo del uso de las API de plataforma nativa para determinar la orientación del dispositivo.
 - **[Obtener información sobre la batería](battery-info.md)**  &ndash; le guía a través de un ejemplo del uso de las API nativas para obtener información sobre el estado de la batería.
