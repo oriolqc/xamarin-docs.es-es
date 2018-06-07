@@ -17,17 +17,17 @@ ms.lasthandoff: 04/04/2018
 
 _Xamarin.Forms incluye su propia infraestructura de animación que es sencillo para crear animaciones simples, pero también son lo suficientemente versátiles como para crear animaciones complejas._
 
-Las clases de animación de Xamarin.Forms tener como destino diferentes propiedades de los elementos visuales, con una animación típica progresivamente al cambiar una propiedad de un valor a otro durante un período de tiempo. Tenga en cuenta que no hay ninguna interfaz XAML para las clases de animación de Xamarin.Forms. Sin embargo, se pueden encapsular animaciones en [comportamientos](~/xamarin-forms/app-fundamentals/behaviors/index.md) y, a continuación, hacer referencia desde XAML.
+Las clases de animación de Xamarin.Forms tienen como objetivo diferentes propiedades de elementos visuales. Una animación típica que cambia de forma progresiva una propiedad de un valor a otro durante un período de tiempo. Tenga en cuenta que no hay ninguna interfaz XAML para las clases de animación de Xamarin.Forms. Sin embargo, estas se pueden encapsular en [comportamientos](~/xamarin-forms/app-fundamentals/behaviors/index.md) y se puede hacer referencia a ellas posteriormente desde XAML.
 
 ## <a name="simple-animationssimplemd"></a>[Animaciones simples](simple.md)
 
-El [ `ViewExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/) clase proporciona métodos de extensión que pueden usarse para construir las animaciones simples que giran, escalan, traducen y atenuación [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/) instancias. Este artículo muestra cómo crear y cancelar las animaciones mediante la `ViewExtensions` clase.
+La clase [ `ViewExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/) proporciona métodos de extensión que pueden usarse para construir animaciones simples que giran, escalan, traducen y desvanecen instancias [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/). En este artículo se muestra cómo crear y cancelar animaciones mediante la clase `ViewExtensions`.
 
 ## <a name="easing-functionseasingmd"></a>[Funciones de aceleración ](easing.md)
 
-Xamarin.Forms incluye una [ `Easing` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Easing/) clase que permite especificar una función de transferencia que controla cómo aceleran las animaciones o ralentizar tal y como se está ejecutando. En este artículo se muestra cómo utilizar las funciones de aceleración predefinidas y cómo crear funciones de aceleración personalizadas.
+Xamarin.Forms incluye la clase [ `Easing` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Easing/), que permite especificar una función de transferencia que controla cómo se aceleran o ralentizan las animaciones durante su ejecución. En este artículo se muestra cómo usar las funciones de aceleración predefinidas y cómo crear funciones de aceleración personalizadas.
 
 ## <a name="custom-animationscustommd"></a>[Animaciones personalizadas](custom.md)
 
-El [ `Animation` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Animation/) clase es el bloque de creación de todas las animaciones de Xamarin.Forms, con los métodos de extensión en la [ `ViewExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/) clase crear uno o más `Animation` objetos. Este artículo muestra cómo utilizar la `Animation` clase para crear y cancelar las animaciones, sincronizar varias animaciones y crear animaciones personalizadas que animan propiedades que no están animados por los métodos existentes de la animación.
+La clase [ `Animation` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Animation/) es el bloque de creación de todas las animaciones de Xamarin.Forms. Con los métodos de extensión de la clase [ `ViewExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/) se pueden crar uno o varios objetos `Animation`. En este artículo se muestra cómo usar la clase `Animation` para crear y cancelar animaciones, sincronizar varias animaciones y crear animaciones personalizadas que animan propiedades que no están animadas mediante métodos existentes de animación.
 
