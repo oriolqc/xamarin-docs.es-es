@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30783599"
 ---
 # <a name="behaviors"></a>comportamientos
 
@@ -23,11 +24,11 @@ Los comportamientos le permiten implementar código que normalmente se tendría 
 
 ## <a name="attached-behaviorsattachedmd"></a>[Comportamientos asociados](attached.md)
 
-Los comportamientos asociados son clases 'static' con una o varias propiedades asociadas. En este artículo se muestra cómo crear y usar comportamientos asociados.
+Los comportamientos asociados son clases `static` con una o varias propiedades asociadas. En este artículo se muestra cómo crear y usar comportamientos asociados.
 
 ## <a name="xamarinforms-behaviorscreatingmd"></a>[Comportamientos de Xamarin.Forms](creating.md)
 
-Los comportamientos de Xamarin.Forms se crean mediante la derivación de las clases [ `Behavior` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/) o [ `Behavior<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/). En este artículo se muestra cómo crear y usar comportamientos de Xamarin.Forms.
+Los comportamientos de Xamarin.Forms se crean mediante la derivación de las clases [`Behavior`](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/) o [`Behavior<T>`](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/). En este artículo se muestra cómo crear y usar comportamientos de Xamarin.Forms.
 
 ## <a name="reusable-behaviorsreusableindexmd"></a>[Comportamientos reutilizables](reusable/index.md)
 

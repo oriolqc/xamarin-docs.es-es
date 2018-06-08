@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30792360"
 ---
 # <a name="animation"></a>Animación
 
@@ -21,13 +22,13 @@ Las clases de animación de Xamarin.Forms tienen como objetivo diferentes propie
 
 ## <a name="simple-animationssimplemd"></a>[Animaciones simples](simple.md)
 
-La clase [ `ViewExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/) proporciona métodos de extensión que pueden usarse para construir animaciones simples que giran, escalan, traducen y desvanecen instancias [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/). En este artículo se muestra cómo crear y cancelar animaciones mediante la clase `ViewExtensions`.
+La clase [`ViewExtensions`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/)proporciona métodos de extensión que pueden usarse para construir animaciones simples que giran, escalan, traducen y desvanecen instancias [`VisualElement`](https://developer.xamarin.com/api/type/Xamarin.Forms.VisualElement/). En este artículo se muestra cómo crear y cancelar animaciones mediante la clase `ViewExtensions`.
 
 ## <a name="easing-functionseasingmd"></a>[Funciones de aceleración ](easing.md)
 
-Xamarin.Forms incluye la clase [ `Easing` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Easing/), que permite especificar una función de transferencia que controla cómo se aceleran o ralentizan las animaciones durante su ejecución. En este artículo se muestra cómo usar las funciones de aceleración predefinidas y cómo crear funciones de aceleración personalizadas.
+Xamarin.Forms incluye la clase [`Easing`](https://developer.xamarin.com/api/type/Xamarin.Forms.Easing/), que permite especificar una función de transferencia que controla cómo se aceleran o ralentizan las animaciones durante su ejecución. En este artículo se muestra cómo usar las funciones de aceleración predefinidas y cómo crear funciones de aceleración personalizadas.
 
 ## <a name="custom-animationscustommd"></a>[Animaciones personalizadas](custom.md)
 
-La clase [ `Animation` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Animation/) es el bloque de creación de todas las animaciones de Xamarin.Forms. Con los métodos de extensión de la clase [ `ViewExtensions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/) se pueden crar uno o varios objetos `Animation`. En este artículo se muestra cómo usar la clase `Animation` para crear y cancelar animaciones, sincronizar varias animaciones y crear animaciones personalizadas que animan propiedades que no están animadas mediante métodos existentes de animación.
+La clase [`Animation`](https://developer.xamarin.com/api/type/Xamarin.Forms.Animation/)es el bloque de creación de todas las animaciones de Xamarin.Forms. Con los métodos de extensión de la clase [`ViewExtensions`](https://developer.xamarin.com/api/type/Xamarin.Forms.ViewExtensions/) se pueden crar uno o varios objetos `Animation`. En este artículo se muestra cómo usar la clase `Animation` para crear y cancelar animaciones, sincronizar varias animaciones y crear animaciones personalizadas que animan propiedades que no están animadas mediante métodos existentes de animación.
 
