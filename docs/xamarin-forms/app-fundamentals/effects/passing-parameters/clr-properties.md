@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: c913ea56af423631c48fb9ee6d8dcb95028a4144
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c85256803da137c850e502cfad917de703b161b5
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34846479"
 ---
 # <a name="passing-effect-parameters-as-common-language-runtime-properties"></a>Pasar parámetros de efecto como propiedades de tiempo de ejecución de lenguaje común
 
@@ -49,7 +50,7 @@ public class ShadowEffect : RoutingEffect
   public float DistanceY { get; set; }
 
   public ShadowEffect () : base ("MyCompany.LabelShadowEffect")
-  {         
+  {            
   }
 }
 ```

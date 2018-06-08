@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: be1a3274ff4c9a15b7ee13c29d3176229a70642c
-ms.sourcegitcommit: 271d3f7ea4abfcf87734d2c747a68cb8114d743c
+ms.openlocfilehash: 6ff36f511c5194017afd34601fc9ea2f89b1e2d4
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848114"
 ---
 # <a name="grid"></a>Cuadrícula
 
@@ -130,7 +131,7 @@ var bottomLeft = new Label { Text = "Bottom Left" };
 var bottomRight = new Label { Text = "Bottom Right" };
 
 grid.Children.Add(topLeft, 0, 0);
-grid.Children.Add(topRight, 1, 0;
+grid.Children.Add(topRight, 1, 0);
 grid.Children.Add(bottomLeft, 0, 1);
 grid.Children.Add(bottomRight, 1, 1);
 ```

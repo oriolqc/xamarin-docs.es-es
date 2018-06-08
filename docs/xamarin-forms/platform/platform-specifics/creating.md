@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/23/2016
-ms.openlocfilehash: 6283e22d75d9e52ad3e2f300617818c98d887481
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dcd22dd0d4e281245a1f6598d9a58d24a97b1f20
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848153"
 ---
 # <a name="creating-platform-specifics"></a>Obtener información específica de la plataforma de creación
 
@@ -271,6 +272,6 @@ Este artículo muestra cómo exponer un efecto a través de una específica de l
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ShadowPlatformSpecific (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
+- [ShadowPlatformSpecific (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
 - [Personalización de controles con efectos](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Propiedades asociadas](~/xamarin-forms/xaml/attached-properties.md)

@@ -1,5 +1,5 @@
 ---
-title: Reusable EventToCommandBehavior
+title: EventToCommandBehavior reutilizable
 description: Pueden utilizar comportamientos para asociar comandos a los controles que no se diseñaron para interactuar con los comandos. Este artículo muestra cómo utilizar un comportamiento de Xamarin.Forms para invocar un comando cuando se activa un evento.
 ms.prod: xamarin
 ms.assetid: EC7F6556-9776-40B8-9424-A8094482A2F3
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 530c47703d72a3d199a35dbf04f4a0b3851921b9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e89400c74c3d1afbf8954d0f88387c5967ebd534
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848240"
 ---
-# <a name="reusable-eventtocommandbehavior"></a>Reusable EventToCommandBehavior
+# <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior reutilizable
 
 _Pueden utilizar comportamientos para asociar comandos a los controles que no se diseñaron para interactuar con los comandos. Este artículo muestra cómo utilizar un comportamiento de Xamarin.Forms para invocar un comando cuando se activa un evento._
 
@@ -126,7 +127,7 @@ public class EventToCommandBehavior : BehaviorBase<View>
       resolvedParameter = Converter.Convert (eventArgs, typeof(object), null, null);
     } else {
       resolvedParameter = eventArgs;
-    }       
+    }        
 
     if (Command.CanExecute (resolvedParameter)) {
       Command.Execute (resolvedParameter);
@@ -193,5 +194,5 @@ Este artículo se muestra mediante un comportamiento de Xamarin.Forms para invoc
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Comportamiento de EventToCommand (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
-- [Behavior](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/)
-- [Behavior<T>](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/)
+- [Comportamiento](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior/)
+- [Comportamiento<T>](https://developer.xamarin.com/api/type/Xamarin.Forms.Behavior%3CT%3E/)

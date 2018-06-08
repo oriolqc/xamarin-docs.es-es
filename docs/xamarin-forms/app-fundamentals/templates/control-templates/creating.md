@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: e8a0695969609a4b0bbeb38896adae9a7c16ed07
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 214f967ccc07a7c952ba87927c34c3ab32623391
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848283"
 ---
 # <a name="creating-a-controltemplate"></a>Creación de una plantilla de control
 
@@ -214,7 +215,7 @@ Este artículo muestra cómo crear y utilizar plantillas de control. Plantillas 
 
 - [Estilos](~/xamarin-forms/user-interface/styles/index.md)
 - [Tema sencillo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simpletheme/)
-- [ControlTemplate](https://developer.xamarin.com/api/type/Xamarin.Forms.ControlTemplate/)
+- [Elemento ControlTemplate](https://developer.xamarin.com/api/type/Xamarin.Forms.ControlTemplate/)
 - [ContentPresenter](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPresenter/)
 - [ContentView](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/)
 - [ResourceDictionary](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/)

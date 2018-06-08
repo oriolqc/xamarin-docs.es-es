@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/02/2017
-ms.openlocfilehash: b083bb83dbc7266f749c4adc660a8bfb431df795
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8623127444836d3335f42f9ba7a40de6aedfef70
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848374"
 ---
 # <a name="synchronizing-offline-data-with-azure-mobile-apps"></a>Sincronización de datos sin conexión con aplicaciones móviles de Azure
 
@@ -176,7 +177,7 @@ Este artículo explica cómo agregar la funcionalidad de sincronización sin con
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [TodoAzureAuthOfflineSync (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzureAuthOfflineSync/)
+- [TodoAzureAuthOfflineSync (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzureAuthOfflineSync/)
 - [Consumir una aplicación móvil de Azure](~/xamarin-forms/data-cloud/consuming/azure.md)
 - [Autenticar a los usuarios con aplicaciones móviles de Azure](~/xamarin-forms/data-cloud/authentication/azure.md)
 - [Cliente móvil Azure SDK](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

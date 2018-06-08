@@ -6,12 +6,13 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2018
-ms.openlocfilehash: 8d7ec3f2f64fdb8be903fd13bd72bcf545265a3d
-ms.sourcegitcommit: 4f646dc5c51db975b2936169547d625c78a22b30
+ms.date: 05/30/2018
+ms.openlocfilehash: 705c3037505b61bfb364772187e0ce8ead14b27f
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847776"
 ---
 # <a name="android-platform-specifics"></a>Detalles de plataforma Android
 
@@ -26,6 +27,8 @@ En Android, Xamarin.Forms contiene los detalles siguientes de la plataforma:
 - Deshabilitar la [ `Disappearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) y [ `Appearing` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Page.Appearing/) página eventos de ciclo de vida en pausa y reanudar respectivamente, para las aplicaciones que utilizan AppCompat. Para obtener más información, consulte [deshabilitar la Disappearing y eventos de ciclo de vida de la página que aparecen](#disable_lifecycle_events).
 - Controlar si una [ `WebView` ](xref:Xamarin.Forms.WebView) puede mostrar contenido mixto. Para obtener más información, consulte [Habilitar contenido mixto en un WebView](#webview-mixed-content).
 - Establecer el método de entrada de opciones del editor para el teclado de pantalla para una [ `Entry` ](xref:Xamarin.Forms.Entry). Para obtener más información, consulte [opciones de configuración de entrada Input Method Editor](#entry-imeoptions).
+- Deshabilitar el modo de color heredado en compatible [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Para obtener más información, consulte [deshabilitar el modo de Color heredado](#legacy-color-mode).
+- Usando los valores de instantáneas de los botones de Android y relleno predeterminado. Para obtener más información, consulte [utilizando botones de Android](#button-padding-shadow).
 
 <a name="soft_input_mode" />
 
@@ -308,7 +311,7 @@ entry.On<Android>().SetImeOptions(ImeFlags.Send);
 
 El `Entry.On<Android>` método especifica que sólo se ejecutará este específica de la plataforma en Android. El [ `Entry.SetImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.SetImeOptions(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Entry},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags)) método, en la [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se usa para establecer la opción de acción del método de entrada para el teclado programable para la [ `Entry` ](xref:Xamarin.Forms.Entry), con el [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) enumeración proporciona los valores siguientes:
 
-- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Default) : indica que no se requiere ninguna clave de acción específica y que el control subyacente generará sí solo si es posible.
+- [`Default`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Default) : indica que no se requiere ninguna clave de acción específica y que el control subyacente generará sí solo si es posible. Esto será `Next` o `Done`.
 - [`None`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.None) : indica que ninguna clave de acción estará disponible.
 - [`Go`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Go) : indica que la clave de acción llevará a cabo una operación de "Ir", que tarda el usuario en el destino del texto escrito.
 - [`Search`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags.Search) : indica que la clave de acción realiza una operación de "búsqueda", que tarda el usuario a los resultados de búsqueda para el texto han escrito.
@@ -325,6 +328,83 @@ El `Entry.On<Android>` método especifica que sólo se ejecutará este específi
 El resultado es que un determinado [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) valor se aplica a del teclado de pantalla para el [ `Entry` ](xref:Xamarin.Forms.Entry), que establece el método de entrada de opciones del editor:
 
 [![Método editor-específica de la plataforma de entrada de entrada](android-images/entry-imeoptions.png "método editor-específica de la plataforma de entrada de entrada")](android-images/entry-imeoptions-large.png#lightbox "método editor-específica de la plataforma de entrada de entrada")
+
+<a name="legacy-color-mode" />
+
+## <a name="disabling-legacy-color-mode"></a>Deshabilitar el modo de Color heredado
+
+Algunas de las vistas de Xamarin.Forms las características de un modo de color heredado. En este modo, cuando la [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) propiedad de la vista se establece en `false`, la vista invalidará los colores establecidos por el usuario con los colores nativo de forma predeterminada para el estado deshabilitado. Para hacia atrás compatibilidad, este modo de color heredado sigue siendo el comportamiento predeterminado para vistas admitidas.
+
+Este específica de la plataforma deshabilita este modo heredado de color, para que sigan estando colores establecido en una vista por el usuario incluso cuando se deshabilita la vista. Se consume en XAML estableciendo el [ `VisualElement.IsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.IsLegacyColorModeEnabledProperty) propiedad adjunta `false`:
+
+```xaml
+<ContentPage ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout>
+        ...
+        <Button Text="Button"
+                TextColor="Blue"
+                BackgroundColor="Bisque"
+                android:VisualElement.IsLegacyColorModeEnabled="False" />
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+Como alternativa, puede utilizarse desde C# utilizando la API fluida de:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+_legacyColorModeDisabledButton.On<Android>().SetIsLegacyColorModeEnabled(false);
+```
+
+El `VisualElement.On<Android>` método especifica que sólo se ejecutará este específica de la plataforma en Android. El [ `VisualElement.SetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.SetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.VisualElement},System.Boolean)) método, en la [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se utiliza para controlar si se deshabilita el modo de color heredado. Además, el [ `VisualElement.GetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.GetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.VisualElement})) método se puede utilizar para devolver si está deshabilitado el modo de color heredado.
+
+El resultado es que se puede deshabilitar el modo de color heredados, para que los colores establecidos en una vista por el usuario permanecen incluso cuando se deshabilita la vista:
+
+![](android-images/legacy-color-mode-disabled.png "Modo de color heredado deshabilitado")
+
+> [!NOTE]
+> Al establecer un [ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup) en una vista, se omite por completo el modo de color heredado. Para obtener más información sobre los estados visuales, consulte [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+
+<a name="button-padding-shadow" />
+
+## <a name="using-android-buttons"></a>Con los botones de Android
+
+Este específica de la plataforma controla si los botones de Xamarin.Forms usar el relleno predeterminado y los valores de sombra de botones Android. Se consume en XAML estableciendo el [ `Button.UseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPaddingProperty) y [ `Button.UseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadowProperty) adjunta propiedades a `boolean` valores:
+
+```xaml
+<ContentPage ...
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout>
+        ...
+        <Button ...
+                android:Button.UseDefaultPadding="true"
+                android:Button.UseDefaultShadow="true" />         
+    </StackLayout>
+</ContentPage>
+```
+
+Como alternativa, puede utilizarse desde C# utilizando la API fluida de:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+button.On<Android>().SetUseDefaultPadding(true).SetUseDefaultShadow(true);
+```
+
+El `Button.On<Android>` método especifica que sólo se ejecutará este específica de la plataforma en Android. El [ `Button.SetUseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.SetUseDefaultPadding(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button},System.Boolean)) y[ `Button.SetUseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.SetUseDefaultShadow(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button},System.Boolean)) métodos, en la [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se utilizan para controlar si los botones de Xamarin.Forms utilizan el valor predeterminado relleno y los valores de sombra de botones Android. Además, el [ `Button.UseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPadding(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button})) y [ `Button.UseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadow(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button})) métodos pueden usarse para devolver si un botón usa el valor predeterminado de relleno valor y el valor de sombra de forma predeterminada, respectivamente.
+
+El resultado es que pueden usar los botones de Xamarin.Forms el relleno predeterminado y los valores de sombra de botones Android:
+
+![](android-images/button-padding-and-shadow.png "Modo de color heredado deshabilitado")
+
+Tenga en cuenta que en la captura de pantalla por encima de cada uno de ellos [ `Button` ](xref:Xamarin.Forms.Button) tiene definiciones idénticas, salvo que el derecho `Button` utiliza el valor de relleno predeterminado y los valores de instantáneas de los botones de Android.
 
 ## <a name="summary"></a>Resumen
 

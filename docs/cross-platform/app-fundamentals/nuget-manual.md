@@ -1,16 +1,17 @@
 ---
 title: Creación manual de paquetes de NuGet para Xamarin
-description: Esta página contiene algunas sugerencias para ayudarle a crear paquetes de NuGet que tienen como destino la plataforma Xamarin.
+description: Este documento contiene sugerencias para ayudarle a crear paquetes de NuGet que tienen como destino la plataforma Xamarin. Se describen los perfiles de Xamarin de paquete de NuGet, PCL NuGets con dependencias de plataforma y se vincula a varios ejemplos de código abierto.
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 510c27cb54b91c837ca6f6b7a93f944f13097f0c
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 2adfe70e1d37c7f6e6fc825de1d86513de4a985c
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34845972"
 ---
 # <a name="manually-creating-nuget-packages-for-xamarin"></a>Creación manual de paquetes de NuGet para Xamarin
 
@@ -58,7 +59,6 @@ Para aclarar:
 - **Xamarin.iOS10** coincide con Xamarin.iOS 1.0 y versiones más recientes
 - **Xamarin.iOS1.0** también coincide con Xamarin.iOS 1.0 y versiones más recientes
 
-
 ## <a name="pcl-nugets-with-platform-dependencies"></a>PCL NuGets con las dependencias de plataforma
 
 PCL perfiles están limitados en qué API pueden tener acceso de .NET framework, y por supuesto, no pueden tener acceso a código específico de la plataforma. Estos vínculos 3rd terceros explican distintos enfoques para crear paquetes de NuGet que usan PCL y las API nativas para proporcionar compatibilidad para otras plataformas y Xamarin:
@@ -77,9 +77,8 @@ Algunos ejemplos de código abierto que se pueden consultar para:
 - [**Lámina** ](https://www.nuget.org/packages/Splat/) : una biblioteca para facilitar su multiplataforma que se debe (vista [origen](https://github.com/paulcbetts/Splat)).
 - [**NGraphics** ](https://www.nuget.org/packages/NGraphics/) -una biblioteca multiplataforma para representar gráficos vectoriales en .NET (vista [origen](https://github.com/praeclarum/NGraphics/blob/master/NGraphics.nuspec)).
 
-
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [3000 Nugetizer automatizada de creación de Nuget](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
 - [Actualizando NuGets de 64 bits de iOS](http://blog.xamarin.com/how-to-update-nuget-packages-for-64-bit/)
-- [Incluir un NuGet en el proyecto](/visualstudio/mac/nuget-walkthrough/index.md)
+- [Incluir un NuGet en el proyecto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

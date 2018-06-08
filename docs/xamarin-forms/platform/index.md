@@ -6,12 +6,13 @@ ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/20/2017
-ms.openlocfilehash: be131bdbfeceabd72494708cdfe9a263da9bbbd8
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.date: 04/06/2018
+ms.openlocfilehash: 0609d15248f1827b892ae02a877382ca0ffbed18
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847636"
 ---
 # <a name="platform-features"></a>Características de la plataforma
 
@@ -41,10 +42,6 @@ Xamarin.Forms ahora es compatible con vista previa aplicaciones GTK #.
 
 Xamarin.Forms tiene ahora compatibilidad con vista previa para las aplicaciones de Mac OS.
 
-## <a name="wpfwpfmd"></a>[WPF](wpf.md)
-
-Xamarin.Forms tiene ahora compatibilidad con vista previa para las aplicaciones de Windows Presentation Foundation (WPF).
-
 ## <a name="native-formsnative-formsmd"></a>[Formularios nativos](native-forms.md)
 
 Los formularios nativo permiten Xamarin.Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivado páginas a ser consumidos por los proyectos nativos de Xamarin.iOS y Xamarin.Android, plataforma Universal de Windows (UWP).
@@ -61,6 +58,14 @@ Obtener información específica de la plataforma le permite utilizar la funcion
 
 Hay una amplia variedad de complementos de código abierto disponible en Github, Nuget y el almacén de componentes de Xamarin que ayuda a ampliar aplicaciones de Xamarin.Forms.
 
+## <a name="tizentizenmd"></a>[tizen](tizen.md)
+
+Tizen .NET le permite crear aplicaciones de .NET con Xamarin.Forms y Tizen .NET framework.
+
 ## <a name="windowswindowsindexmd"></a>[Windows](windows/index.md)
 
 Xamarin.Forms dispone de compatibilidad para la plataforma Universal de Windows (UWP) en Windows 10. Este artículo describe cómo agregar un un proyecto de UWP para una solución de Xamarin.Forms existente.
+
+## <a name="wpfwpfmd"></a>[WPF](wpf.md)
+
+Xamarin.Forms tiene ahora compatibilidad con vista previa para las aplicaciones de Windows Presentation Foundation (WPF).

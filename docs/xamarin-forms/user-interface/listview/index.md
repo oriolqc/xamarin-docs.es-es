@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/14/2015
-ms.openlocfilehash: ddd779fc7eb1a10e74c68504367083ff0efcdfcd
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 7beb9e66a6e6bc29de36fcd605c5daa0098e75a2
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848543"
 ---
 # <a name="listview"></a>ListView
 
@@ -41,8 +42,8 @@ ListView tiene un número de componentes disponibles para probar la funcionalida
 
 - **[Las celdas](customizing-cell-appearance.md)**  &ndash; datos en un control ListView se presentan en las celdas. Cada celda corresponde a una fila de datos. Hay celdas integradas que puede elegir, o puede definir su propia celda personalizado. Las celdas integradas y personalizadas pueden ser usa/definido en XAML o código.
   - **[Integrados](customizing-cell-appearance.md#Built_in_Cells)**  &ndash; integrada en las celdas, especialmente TextCell y ImageCell, puede ser grande para el rendimiento, puesto que corresponden a los controles nativos en cada plataforma.
-    - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; muestra una cadena de texto, opcionalmente con detalle. Texto de detalle se representa como una segunda línea en una fuente menor con un color de énfasis.
-    - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; muestra una imagen con texto. Aparece como una TextCell con una imagen de la izquierda.
+       - **[TextCell](customizing-cell-appearance.md#TextCell)**  &ndash; muestra una cadena de texto, opcionalmente con detalle. Texto de detalle se representa como una segunda línea en una fuente menor con un color de énfasis.
+       - **[ImageCell](customizing-cell-appearance.md#ImageCell)**  &ndash; muestra una imagen con texto. Aparece como una TextCell con una imagen de la izquierda.
   - **[Las celdas personalizadas](customizing-cell-appearance.md#customcells)**  &ndash; celdas personalizado son excelentes cuando se necesita para presentar datos complejos. Por ejemplo, una vista personalizada puede usarse para presentar una lista de canciones, incluido el álbum y del intérprete:
 
 ![](images/image-cell-default.png "ListView con ImageCells")

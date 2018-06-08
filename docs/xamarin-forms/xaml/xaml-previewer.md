@@ -6,12 +6,13 @@ ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 02/24/2017
-ms.openlocfilehash: d23f89ed8ad7956f7a366280a14ccc12ba3dac0c
-ms.sourcegitcommit: 775a7d1cbf04090eb75d0f822df57b8d8cff0c63
+ms.date: 05/31/2018
+ms.openlocfilehash: 9b87145773bf16b15c391c5c5d6d136b7aa76e39
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848361"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Controlador de vista previa XAML para Xamarin.Forms
 
@@ -55,6 +56,17 @@ Las opciones en la parte superior del panel de vista previa son:
 Algunos diseños pueden ser difíciles de visualizar sin datos enlazados a los controles de interfaz de usuario. Para que la vista previa más útil, asigne algunos datos estáticos a los controles por codificar un contexto de enlace (ya sea en el código subyacente o con XAML).
 
 Consulte de James Montemagno [entrada de blog sobre cómo agregar datos en tiempo de diseño](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) para ver cómo se enlaza a un modelo de vista estática en XAML.
+
+## <a name="detecting-design-mode"></a>Detectar el modo de diseño
+
+El método estático [ `DesignMode.IsDesignModeEnabled` ](xref:Xamarin.Forms.DesignMode.IsDesignModeEnabled) propiedad se puede examinar para determinar si la aplicación se ejecuta en el controlador de vista previa. Esto le permite especificar el código que solo se ejecutará cuando la aplicación se ejecuta en el controlador de vista previa:
+
+```csharp
+if (DesignMode.IsDesignModeEnabled)
+{
+  // Previewer only code  
+}
+```
 
 ## <a name="troubleshooting"></a>Solución de problemas
 

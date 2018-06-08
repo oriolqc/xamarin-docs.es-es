@@ -7,11 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: 13f3d5c02b8451bcd52b355fb89f7931f50a0d39
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 708fb39aa2e56861a8c9fc47ab30bd20ed20188e
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847542"
 ---
 # <a name="scrollview"></a>ScrollView
 
@@ -19,7 +20,7 @@ ms.lasthandoff: 04/04/2018
 
 [![](scroll-view-images/layouts-sml.png "Diseños de Xamarin.Forms")](scroll-view-images/layouts.png#lightbox "diseños de Xamarin.Forms")
 
-Este artículo se tratan:
+En este artículo se tratan los aspectos siguientes:
 
 - **[Propósito](#Purpose)**  &ndash; el propósito de `ScrollView` y cuando se utiliza.
 - **[Uso de](#Usage)**  &ndash; cómo usar `ScrollView` en la práctica.
@@ -55,7 +56,7 @@ En C#:
 var scroll = new ScrollView();
 Content = scroll;
 var stack = new StackLayout();
-stack.Children.Add(new BoxView { BackgroundColor = Color.Red,   HeightRequest = 600, WidthRequest = 600 });
+stack.Children.Add(new BoxView { BackgroundColor = Color.Red,    HeightRequest = 600, WidthRequest = 600 });
 stack.Children.Add(new Entry());
 ```
 

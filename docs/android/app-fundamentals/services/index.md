@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 03/19/2018
-ms.openlocfilehash: 2e942d1085822fee935ae0f23f2253f23d49a43d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 92eabbec31b654f1aefcffb99ec2ed14062e8681
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847382"
 ---
 # <a name="creating-android-services"></a>Crear servicios de Android
 
@@ -21,11 +22,11 @@ _Esta guía describen los servicios de Xamarin.Android, que son componentes de A
 
 Aplicaciones móviles no son similares a las aplicaciones de escritorio. Escritorios tienen gran cantidad de recursos, como el espacio real en pantalla, memoria, espacio de almacenamiento y una fuente de alimentación conectado, no así los dispositivos móviles. Estas restricciones forzar aplicaciones móviles para comportarse de manera diferente. Por ejemplo, la pantalla pequeña en un dispositivo móvil normalmente significa que solo una aplicación (es decir, la actividad) está visible en el momento. Otras actividades se mueven al fondo y se inserta en un estado suspendido donde no pueden realizar cualquier trabajo. Sin embargo, solo porque una aplicación Android está en segundo plano no significa que es imposible para la aplicación seguir trabajando. 
 
-Aplicaciones Android se componen de al menos uno de los siguientes cuatro componentes principales: _actividades_, _difusión receptores_, _proveedores de contenido_y _Servicios_. Las actividades son la piedra angular de muchas aplicaciones de Android excelentes ya que proporcionan la interfaz de usuario que permite al usuario interactuar con la aplicación. Sin embargo, cuando se trata de realizar simultánea o de trabajo en segundo plano, las actividades no son siempre la mejor opción.
+Las aplicaciones de Android se componen de al menos uno de los siguientes cuatro componentes principales: _actividades_, _difusión receptores_, _proveedores de contenido_y _Servicios_. Las actividades son la piedra angular de muchas aplicaciones de Android excelentes ya que proporcionan la interfaz de usuario que permite al usuario interactuar con la aplicación. Sin embargo, cuando se trata de realizar simultánea o de trabajo en segundo plano, las actividades no son siempre la mejor opción.
  
 El mecanismo principal para el trabajo en segundo plano en Android es el _servicio_. Un servicio Android es un componente que está diseñado para realizar algún trabajo sin una interfaz de usuario. Un servicio puede descargar un archivo, reproducir música o aplicar un filtro a una imagen. Servicios también pueden usarse para la comunicación entre procesos (_IPC_) entre aplicaciones Android. Por ejemplo, una aplicación Android podría usar el servicio de Reproductor de música que esté en otra aplicación o una aplicación podría exponer los datos (por ejemplo, información de contacto de una persona) a otras aplicaciones a través de un servicio. 
 
-Servicios y su capacidad para realizar tareas en segundo plano, son cruciales para proporcionar una interfaz de usuario suave y fluida. Todas las aplicaciones de Android tienen un _subproceso principal_ (también conocido como un _subproceso de interfaz de usuario_) que se ejecutan las actividades. Para que el dispositivo siga respondiendo, Android debe ser capaz de actualizar la interfaz de usuario a la velocidad de 60 fotogramas por segundo. Si una aplicación Android realiza mucho trabajo en el subproceso principal, Android, quitará los marcos, lo que a su vez hace que la interfaz de usuario aparece irregular (también conocida como _janky_). Esto significa que se debe completar todo el trabajo realizado en el subproceso de interfaz de usuario en el intervalo de tiempo entre los dos marcos, aproximadamente 16 milisegundos (1 segundo cada 60 marcos). 
+Servicios y su capacidad para realizar tareas en segundo plano, son cruciales para proporcionar una interfaz de usuario suave y fluida. Todas las aplicaciones de Android tienen un _subproceso principal_ (también conocido como un _subproceso de interfaz de usuario_) que se ejecutan las actividades. Para que el dispositivo siga respondiendo, Android debe ser capaz de actualizar la interfaz de usuario a la velocidad de 60 fotogramas por segundo. Si una aplicación Android realiza demasiado trabajo en el subproceso principal, Android, quitará los marcos, lo que a su vez hace que la interfaz de usuario aparece irregular (también conocida como _janky_). Esto significa que se debe completar todo el trabajo realizado en el subproceso de interfaz de usuario en el intervalo de tiempo entre los dos marcos, aproximadamente 16 milisegundos (1 segundo cada 60 marcos). 
 
 Para solucionar este problema, un desarrollador puede usar subprocesos en una actividad para realizar algún trabajo que podría bloquear la interfaz de usuario. Sin embargo, esto podría causar problemas. Es muy posible que Android destruirá y volver a crear las instancias de la actividad. Sin embargo, Android destruirá automáticamente los subprocesos, lo que pudieron dar lugar a pérdidas de memoria. Un buen ejemplo de esto es cuando la [dispositivo se gira](~/android/app-fundamentals/handling-rotation.md) &ndash; Android intentará destruye la instancia de la actividad y, a continuación, vuelva a crear uno nuevo:
 

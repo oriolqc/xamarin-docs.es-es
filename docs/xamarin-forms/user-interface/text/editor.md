@@ -6,12 +6,13 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/22/2017
-ms.openlocfilehash: 035365a22c487039ff811756d91ca0a8d392d628
-ms.sourcegitcommit: c024f29ff730ae20c15e99bfe0268a0e1c9d41e5
+ms.date: 05/31/2018
+ms.openlocfilehash: 317d4f140daeccc525c4267fca43e6164a8f7827
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34848322"
 ---
 # <a name="editor"></a>Editor
 
@@ -26,7 +27,7 @@ El `Editor` control se usa para aceptar la entrada de varias líneas. En este ar
 
 ### <a name="setting-and-reading-text"></a>Establecer y leer texto
 
-Editor, al igual que otras vistas de presentación de texto, expone la `Text` propiedad. `Text` puede usarse para establecer y lea el texto presentado por el `Editor`. En el ejemplo siguiente se muestra texto de configuración en XAML:
+El `Editor`, al igual que otras vistas de presentación de texto, expone la `Text` propiedad. Esta propiedad puede utilizarse para establecer y leer el texto presentado por el `Editor`. En el ejemplo siguiente se demuestra cómo establecer el `Text` propiedad en XAML:
 
 ```xaml
 <Editor Text="I am an Editor" />
@@ -44,6 +45,20 @@ Para leer texto, obtener acceso a la `Text` propiedad en C#:
 var text = MyEditor.Text;
 ```
 
+### <a name="limiting-input-length"></a>Limitar la longitud de entrada
+
+El [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) propiedad puede utilizarse para limitar la longitud de entrada que sea aceptable para el [ `Editor` ](xref:Xamarin.Forms.Editor). Esta propiedad debe establecerse en un entero positivo:
+
+```xaml
+<Editor ... MaxLength="10" />
+```
+
+```csharp
+var editor = new Editor { ... MaxLength = 10 };
+```
+
+A [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) valor de propiedad de 0 indica que no se permitirá ninguna entrada y un valor de `int.MaxValue`, que es el valor predeterminado para un [ `Editor` ](xref:Xamarin.Forms.Editor), indica que no hay ninguna límite real en el número de caracteres que pueden escribirse.
+
 ### <a name="keyboards"></a>Teclados
 
 El teclado que aparece cuando los usuarios interactúan con un `Editor` puede establecerse mediante programación a través de la [ ``Keyboard`` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Keyboard/) propiedad.
@@ -58,6 +73,23 @@ Las opciones para el tipo de teclado son:
 - **Dirección URL** &ndash; utilizado para especificar las rutas de acceso de archivo & direcciones web
 
 Hay un [ejemplo de cada teclado](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) en nuestra sección de recetas.
+
+### <a name="enabling-and-disabling-spell-checking"></a>Habilitar y deshabilitar el corrector ortográfico
+
+El [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propiedad controla si corrector ortográfico está habilitado. De forma predeterminada, la propiedad se establece en `true`. Cuando el usuario escribe texto, se indican los errores de ortografía.
+
+Sin embargo, en algunos escenarios de entrada de texto, por ejemplo, especificar un nombre de usuario, la revisión ortográfica proporciona una experiencia negativa de modo que deben deshabilitarse estableciendo la [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propiedad `false`:
+
+```xaml
+<Editor ... IsSpellCheckEnabled="false" />
+```
+
+```csharp
+var editor = new Editor { ... IsSpellCheckEnabled = false };
+```
+
+> [!NOTE]
+> Cuando el [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propiedad está establecida en `false`y no la está usando un teclado personalizado, se deshabilitará el corrector ortográfico nativo. Sin embargo, si un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) ha sido conjunto que deshabilita el corrector sobre la comprobación, como [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), el `IsSpellCheckEnabled` propiedad se omite. Por lo tanto, la propiedad no se puede usar para habilitar el corrector ortográfico para un `Keyboard` que deshabilita de forma explícita.
 
 ### <a name="colors"></a>Colores
 
