@@ -1,21 +1,22 @@
 ---
 title: Rendimiento de Xamarin.Forms
-description: Existen muchas técnicas para aumentar el rendimiento de aplicaciones de Xamarin.Forms. Colectivamente, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas.
+description: Existen muchas técnicas para aumentar el rendimiento de aplicaciones de Xamarin.Forms. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas.
 ms.prod: xamarin
 ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 5cc35dde80e4a0c28315589f4db127a922ba5a41
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bcc265c4d8410bb1aa2305f8a137c96a63c60fae
+ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/07/2018
+ms.locfileid: "34847724"
 ---
 # <a name="xamarinforms-performance"></a>Rendimiento de Xamarin.Forms
 
-_Existen muchas técnicas para aumentar el rendimiento de aplicaciones de Xamarin.Forms. Colectivamente, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas._
+_Existen muchas técnicas para aumentar el rendimiento de aplicaciones de Xamarin.Forms. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas._
 
 > [!VIDEO https://youtube.com/embed/RZvdql3Ev0E]
 
@@ -247,16 +248,16 @@ Todos los recursos que se usan en la aplicación se deben almacenar en el diccio
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Resources.App">
      <Application.Resources>
-        <ResourceDictionary>
+         <ResourceDictionary>
             <Style x:Key="HeadingLabelStyle" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="FontSize" Value="Large" />
                 <Setter Property="TextColor" Value="Red" />
             </Style>
-        </ResourceDictionary>
+         </ResourceDictionary>
      </Application.Resources>
 </Application>
 ```
@@ -269,7 +270,7 @@ Pero el código de XAML que es específico de una página no debería incluirse 
              x:Class="Test.HomePage"
              Padding="0,20,0,0">
      <ContentPage.Resources>
-        <ResourceDictionary>
+          <ResourceDictionary>
             <Style x:Key="HeadingLabelStyle" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="FontSize" Value="Large" />
@@ -319,7 +320,7 @@ Para más información sobre presentadores personalizados, vea [Personalización
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se han descrito y explicado técnicas para aumentar el rendimiento de las aplicaciones de Xamarin.Forms. Colectivamente, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación.
+En este artículo se han descrito y explicado técnicas para aumentar el rendimiento de las aplicaciones de Xamarin.Forms. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
