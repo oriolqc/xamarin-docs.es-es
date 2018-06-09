@@ -1,19 +1,20 @@
 ---
-title: Rotaciones de 3D
-description: Utilizar las transformaciones no afines para girar objetos 2D en un espacio 3D.
+title: Rotaciones de 3D en SkiaSharp
+description: En este artículo se explica cómo utilizar las transformaciones no afines para girar objetos 2D en un espacio 3D y se muestra cómo hacerlo con código de ejemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 2f5562475db17b7451fe7cb2ee8bbf4ccb782a87
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: ad4bce6eff7df65185fc3bd754c747fd0db0c9f1
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244304"
 ---
-# <a name="3d-rotations"></a>Rotaciones de 3D
+# <a name="3d-rotations-in-skiasharp"></a>Rotaciones de 3D en SkiaSharp
 
 _Utilizar las transformaciones no afines para girar objetos 2D en un espacio 3D._
 
@@ -205,15 +206,15 @@ Ahora puede usarse para transformar un punto 2D:
 
 Las fórmulas de transformación son:
 
-x' = cos(α)·x
+x' = cos (α) ·x
 
 y' = s
 
-z' = (sin(α)/depth)·x + 1
+z' = (seno (α) / profundidad) ·x + 1
 
 Ahora todo lo que dividir z':
 
-x" = cos(α)·x / ((sin(α)/depth)·x + 1)
+x"= cos ·x (α) / ((seno (α) / profundidad) ·x + 1)
 
 y"= s / ((seno (α) / profundidad) ·x + 1)
 

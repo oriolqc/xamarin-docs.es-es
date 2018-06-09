@@ -1,19 +1,20 @@
 ---
-title: Pintar con los dedos
-description: Use los dedos para dibujar en el lienzo.
+title: Pintar con los dedos en SkiaSharp
+description: En este artículo se explica cómo utilizar los dedos para pintar en el lienzo de SkiaSharp en una aplicación de Xamarin.Forms y se muestra cómo hacerlo con código de ejemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: charlespetzold
 ms.author: chape
 ms.date: 04/05/2017
-ms.openlocfilehash: 6180eb61e7850b7739c5514461796fb0aacbc4ff
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: f4c3d2ef2f6d1253f58b95559ef83af291f87b03
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243784"
 ---
-# <a name="finger-painting"></a>Pintar con los dedos
+# <a name="finger-painting-in-skiasharp"></a>Pintar con los dedos en SkiaSharp
 
 _Use los dedos para dibujar en el lienzo._
 

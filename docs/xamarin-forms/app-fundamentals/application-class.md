@@ -1,20 +1,20 @@
 ---
-title: Clase de aplicación
-description: Características de la clase de aplicación predeterminado, que puede ser C# o XAML
+title: Clase de aplicación de Xamarin.Forms
+description: Este artículo explican las características de la clase de aplicación predeterminado, que incluye una propiedad para establecer en la página inicial de la aplicación, y un diccionario persistente para almacenar valores simples en todos los cambios de estado de ciclo de vida.
 ms.prod: xamarin
 ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 4b502b0d6eea37e0b5b374cfd4740cf6a5ced478
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 15fb866d2cde9409f401d6d021b22b8cb0468795
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846395"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240546"
 ---
-# <a name="app-class"></a>Clase de aplicación
+# <a name="xamarinforms-app-class"></a>Clase de aplicación de Xamarin.Forms
 
 El `Application` clase base ofrece las siguientes características, que se exponen en el valor predeterminado de proyectos `App` subclase:
 

@@ -1,20 +1,20 @@
 ---
-title: StackLayout
-description: Utilizar StackLayout para crear colecciones de vistas a través de una dimensión.
+title: Xamarin.Forms StackLayout
+description: Este artículo explica cómo usar la clase Xamarin.Forms StackLayout para presentar las colecciones de vistas a través de una dimensión.
 ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 412ea71df2d13338725246704b342e9b93109709
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 6e278c466c352ad19575cd3a84d6e38e14ec2587
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847830"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244602"
 ---
-# <a name="stacklayout"></a>StackLayout
+# <a name="xamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
 `StackLayout` Organiza las vistas en una línea unidimensional ("pila"), ya sea horizontal o verticalmente. Vistas en un `StackLayout` se puede cambiar en función del espacio en el diseño usando las opciones de diseño. Posición se determina por el orden en que se agregaron vistas en el diseño y las opciones de diseño de las vistas.
 

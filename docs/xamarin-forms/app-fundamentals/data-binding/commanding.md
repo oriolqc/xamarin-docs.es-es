@@ -1,21 +1,22 @@
 ---
-title: La interfaz de comandos
-description: Implemente el `Command` propiedad con enlaces de datos
+title: La interfaz de comandos de Xamarin.Forms
+description: Este artículo explica cómo implementar la propiedad del comando con enlaces de datos de Xamarin.Forms. La interfaz de comandos proporciona un enfoque alternativo a la implementación de comandos que es mucho más adecuado para la arquitectura MVVM.
 ms.prod: xamarin
 ms.assetid: 69922284-F398-45C3-B4CC-B8E29BB4C533
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 7f8b40624b9434347f69a473eed3bdff5c1d3d33
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 37fe5bbcfa3dbc6aa5483c89b49c1698a00ecbb6
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241317"
 ---
-# <a name="the-command-interface"></a>La interfaz de comandos
+# <a name="the-xamarinforms-command-interface"></a>La interfaz de comandos de Xamarin.Forms
 
-En la arquitectura Model-View-ViewModel (MVVM), se definen los enlaces de datos entre las propiedades en el modelo de vista, que suele ser una clase que deriva de `INotifyPropertyChanged`y propiedades de la vista, que suele ser el archivo XAML. A veces, una aplicación tiene necesidades que van más allá de estos enlaces de propiedad exigiendo que el usuario iniciar comandos que influyen en algo en el modelo de vista. Estos comandos generalmente se señalizan mediante clics de botón o el dedo derivaciones y tradicionalmente se procesan en el archivo de código subyacente en un controlador para el `Clicked` eventos de la `Button` o `Tapped` eventos de un `TapGestureRecognizer`. 
+En la arquitectura Model-View-ViewModel (MVVM), se definen los enlaces de datos entre las propiedades en el modelo de vista, que suele ser una clase que deriva de `INotifyPropertyChanged`y propiedades de la vista, que suele ser el archivo XAML. A veces, una aplicación tiene necesidades que van más allá de estos enlaces de propiedad exigiendo que el usuario iniciar comandos que influyen en algo en el modelo de vista. Estos comandos generalmente se señalizan mediante clics de botón o el dedo derivaciones y tradicionalmente se procesan en el archivo de código subyacente en un controlador para el `Clicked` eventos de la `Button` o `Tapped` eventos de un `TapGestureRecognizer`.
 
 La interfaz de comandos proporciona un enfoque alternativo a la implementación de comandos que es mucho más adecuado para la arquitectura MVVM. El modelo de vista puede contener comandos, que son métodos que se ejecutan en respuesta a una actividad específica en la vista como una `Button` haga clic en. Enlaces de datos se definen entre estos comandos y `Button`.
 
@@ -32,7 +33,7 @@ El `Command` y `CommandParameter` propiedades también se definen mediante las c
 - [`TextCell`](https://developer.xamarin.com/api/type/Xamarin.Forms.TextCell/) y por lo tanto, [ `ImageCell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageCell/), que deriva de `TextCell`
 - [`TapGestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.TapGestureRecognizer/)
 
-[`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) define un [ `SearchCommand` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommand/) propiedad de tipo `ICommand` y un [ `SearchCommandParameter` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommandParameter/) propiedad. El [ `RefreshCommand` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.RefreshCommand/) propiedad de [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) también es de tipo `ICommand`. 
+[`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) define un [ `SearchCommand` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommand/) propiedad de tipo `ICommand` y un [ `SearchCommandParameter` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.SearchCommandParameter/) propiedad. El [ `RefreshCommand` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ListView.RefreshCommand/) propiedad de [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) también es de tipo `ICommand`.
 
 Todos estos comandos se pueden controlar en un modelo de vista de forma que no depende del objeto de interfaz de usuario determinado en la vista.
 
@@ -57,7 +58,7 @@ Para usar la interfaz de comandos, el modelo de vista contiene las propiedades d
 public ICommand MyCommand { private set; get; }
 ```
 
-El modelo de vista también debe hacer referencia a una clase que implementa el `ICommand` interfaz. Esta clase se describirá en breve. En la vista, la `Command` propiedad de un `Button` está enlazado a esa propiedad: 
+El modelo de vista también debe hacer referencia a una clase que implementa el `ICommand` interfaz. Esta clase se describirá en breve. En la vista, la `Command` propiedad de un `Button` está enlazado a esa propiedad:
 
 ```xaml
 <Button Text="Execute command"
@@ -136,7 +137,7 @@ public class PersonViewModel : INotifyPropertyChanged
 }
 ```
 
-El `PersonCollectionViewModel` se muestra a continuación crea nuevos objetos de tipo `PersonViewModel` y permite al usuario a rellenar los datos. Para ello, la clase define propiedades `IsEditing` de tipo `bool` y `PersonEdit` de tipo `PersonViewModel`. Además, la clase define tres propiedades de tipo `ICommand` y una propiedad denominada `Persons` de tipo `IList<PersonViewModel>`: 
+El `PersonCollectionViewModel` se muestra a continuación crea nuevos objetos de tipo `PersonViewModel` y permite al usuario a rellenar los datos. Para ello, la clase define propiedades `IsEditing` de tipo `bool` y `PersonEdit` de tipo `PersonViewModel`. Además, la clase define tres propiedades de tipo `ICommand` y una propiedad denominada `Persons` de tipo `IList<PersonViewModel>`:
 
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
@@ -199,7 +200,7 @@ Antes de examinar el constructor de la `PersonCollectionViewModel` de clases, ec
         <Grid.BindingContext>
             <local:PersonCollectionViewModel />
         </Grid.BindingContext>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
@@ -216,7 +217,7 @@ Antes de examinar el constructor de la `PersonCollectionViewModel` de clases, ec
         <!-- Entry Form -->
         <Grid Grid.Row="1"
               IsEnabled="{Binding IsEditing}">
-            
+
             <Grid BindingContext="{Binding PersonEdit}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
@@ -230,11 +231,11 @@ Antes de examinar el constructor de la `PersonCollectionViewModel` de clases, ec
                 </Grid.ColumnDefinitions>
 
                 <Label Text="Name: " Grid.Row="0" Grid.Column="0" />
-                <Entry Text="{Binding Name}" 
+                <Entry Text="{Binding Name}"
                        Grid.Row="0" Grid.Column="1" />
 
                 <Label Text="Age: " Grid.Row="1" Grid.Column="0" />
-                <StackLayout Orientation="Horizontal" 
+                <StackLayout Orientation="Horizontal"
                              Grid.Row="1" Grid.Column="1">
                     <Stepper Value="{Binding Age}"
                              Maximum="100" />
@@ -315,7 +316,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
     {
         (SubmitCommand as Command).ChangeCanExecute();
     }
-    
+
     void RefreshCanExecutes()
     {
         (NewCommand as Command).ChangeCanExecute();
@@ -359,9 +360,9 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
             },
             canExecute: () =>
             {
-                return PersonEdit != null && 
-                       PersonEdit.Name != null && 
-                       PersonEdit.Name.Length > 1 && 
+                return PersonEdit != null &&
+                       PersonEdit.Name != null &&
+                       PersonEdit.Name.Length > 1 &&
                        PersonEdit.Age > 0;
             });
 
@@ -373,7 +374,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 }
 ```
 
-El `canExecute` funcionar por `SubmitCommand` se llama cada vez que hay una propiedad que cambia en la `PersonViewModel` del objeto que se está editando. Devuelve `true` solo cuando la `Name` propiedad es al menos un carácter, y `Age` es mayor que 0. En ese momento, el **enviar** botón se habilita. 
+El `canExecute` funcionar por `SubmitCommand` se llama cada vez que hay una propiedad que cambia en la `PersonViewModel` del objeto que se está editando. Devuelve `true` solo cuando la `Name` propiedad es al menos un carácter, y `Age` es mayor que 0. En ese momento, el **enviar** botón se habilita.
 
 El `execute` funcionar por **enviar** quita el controlador de cambio de propiedad de la `PersonViewModel`, agrega el objeto a la `Persons` colección y devuelve todos los elementos a condiciones iniciales.
 
@@ -401,7 +402,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
             canExecute: () =>
             {
                 return IsEditing;
-            }); 
+            });
     }
 
     ···
@@ -417,7 +418,7 @@ No es necesario definir la `execute` y `canExecute` métodos como funciones lamb
 
 ## <a name="using-command-parameters"></a>Usar parámetros de comando
 
-A veces resulta práctico para uno o varios botones (u otros objetos de interfaz de usuario) compartir el mismo `ICommand` propiedad en el modelo de vista. En este caso, utilice la `CommandParameter` propiedad para distinguir entre los botones. 
+A veces resulta práctico para uno o varios botones (u otros objetos de interfaz de usuario) compartir el mismo `ICommand` propiedad en el modelo de vista. En este caso, utilice la `CommandParameter` propiedad para distinguir entre los botones.
 
 Se puede seguir usando el `Command` clase para estos compartido `ICommand` propiedades. La clase define un [constructor alternativo](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Command.Command/p/System.Action%7BSystem.Object%7D/System.Func%7BSystem.Object,System.Boolean%7D/) que acepta `execute` y `canExecute` métodos con parámetros de tipo `Object`. Se trata cómo la `CommandParameter` se pasa a estos métodos.
 
@@ -442,7 +443,7 @@ El **teclado Decimal** página muestra esta técnica mostrándole cómo implemen
         <Grid.BindingContext>
             <local:DecimalKeypadViewModel />
         </Grid.BindingContext>
-        
+
         <Grid.Resources>
             <ResourceDictionary>
                 <Style TargetType="Button">
@@ -465,51 +466,51 @@ El **teclado Decimal** página muestra esta técnica mostrándole cómo implemen
                 Command="{Binding ClearCommand}" />
 
         <Button Text="&#x21E6;"
-                Grid.Row="1" Grid.Column="2" 
+                Grid.Row="1" Grid.Column="2"
                 Command="{Binding BackspaceCommand}" />
 
         <Button Text="7"
-                Grid.Row="2" Grid.Column="0" 
+                Grid.Row="2" Grid.Column="0"
                 Command="{Binding DigitCommand}"
                 CommandParameter="7" />
 
         <Button Text="8"
-                Grid.Row="2" Grid.Column="1" 
+                Grid.Row="2" Grid.Column="1"
                 Command="{Binding DigitCommand}"
                 CommandParameter="8" />
-        
+
         <Button Text="9"
-                Grid.Row="2" Grid.Column="2" 
+                Grid.Row="2" Grid.Column="2"
                 Command="{Binding DigitCommand}"
                 CommandParameter="9" />
 
         <Button Text="4"
-                Grid.Row="3" Grid.Column="0" 
+                Grid.Row="3" Grid.Column="0"
                 Command="{Binding DigitCommand}"
                 CommandParameter="4" />
 
         <Button Text="5"
-                Grid.Row="3" Grid.Column="1" 
+                Grid.Row="3" Grid.Column="1"
                 Command="{Binding DigitCommand}"
                 CommandParameter="5" />
 
         <Button Text="6"
-                Grid.Row="3" Grid.Column="2" 
+                Grid.Row="3" Grid.Column="2"
                 Command="{Binding DigitCommand}"
                 CommandParameter="6" />
 
         <Button Text="1"
-                Grid.Row="4" Grid.Column="0" 
+                Grid.Row="4" Grid.Column="0"
                 Command="{Binding DigitCommand}"
                 CommandParameter="1" />
 
         <Button Text="2"
-                Grid.Row="4" Grid.Column="1" 
+                Grid.Row="4" Grid.Column="1"
                 Command="{Binding DigitCommand}"
                 CommandParameter="2" />
 
         <Button Text="3"
-                Grid.Row="4" Grid.Column="2" 
+                Grid.Row="4" Grid.Column="2"
                 Command="{Binding DigitCommand}"
                 CommandParameter="3" />
 
@@ -519,7 +520,7 @@ El **teclado Decimal** página muestra esta técnica mostrándole cómo implemen
                 CommandParameter="0" />
 
         <Button Text="&#x00B7;"
-                Grid.Row="5" Grid.Column="2" 
+                Grid.Row="5" Grid.Column="2"
                 Command="{Binding DigitCommand}"
                 CommandParameter="." />
     </Grid>
@@ -532,7 +533,7 @@ Aquí es el programa en acción:
 
 [![Teclado decimal](commanding-images/decimalkeyboard-small.png "teclado Decimal")](commanding-images/decimalkeyboard-large.png#lightbox "teclado Decimal")
 
-Observe que el botón de punto decimal en todas las capturas de pantalla de tres está deshabilitado porque el número introducido ya contiene un separador decimal. 
+Observe que el botón de punto decimal en todas las capturas de pantalla de tres está deshabilitado porque el número introducido ya contiene un separador decimal.
 
 El `DecimalKeypadViewModel` define un `Entry` propiedad de tipo `string` (que es la única propiedad que desencadena una `PropertyChanged` evento) y tres propiedades de tipo `ICommand`:
 
@@ -587,7 +588,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
             });
 
         ···
-    
+
     }
 
     void RefreshCanExecutes()
@@ -597,7 +598,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
     }
 
     ···
-    
+
 }
 ```
 
@@ -638,7 +639,7 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
     }
 
     ···
-    
+
 }
 ```
 
@@ -674,13 +675,13 @@ public class DecimalKeypadViewModel : INotifyPropertyChanged
     }
 
     ···
-    
+
 }
 ```
 
 El `execute` método anexa el argumento de cadena para el `Entry` propiedad. Sin embargo, si el resultado comienza con un cero (pero no un cero y un separador decimal), a continuación, ese cero inicial debe quitarse mediante el `Substring` función.
 
-El `canExecute` método `false` sólo si el argumento es el separador decimal (lo que indica que se presiona el separador decimal) y `Entry` ya contiene un separador decimal. 
+El `canExecute` método `false` sólo si el argumento es el separador decimal (lo que indica que se presiona el separador decimal) y `Entry` ya contiene un separador decimal.
 
 Todos los `execute` llamadas de métodos `RefreshCanExecutes`, que llama a `ChangeCanExecute` para ambos `DigitCommand` y `ClearCommand`. Esto garantiza que el separador decimal y los botones de retroceso están habilitadas o deshabilitadas en función de la secuencia actual de dígitos especificados.
 
@@ -753,13 +754,13 @@ public partial class MainPage : ContentPage
 }
 ```
 
-El constructor establece la `NavigateCommand` propiedad a una `execute` método que crea una instancia de la `System.Type` parámetro y, a continuación, navega a ella. Dado que la `PushAsync` llamada requiere un `await` (operador), el `execute` método debe estar marcado como asincrónicas. Esto se consigue con el `async` palabra clave antes de la lista de parámetros. 
+El constructor establece la `NavigateCommand` propiedad a una `execute` método que crea una instancia de la `System.Type` parámetro y, a continuación, navega a ella. Dado que la `PushAsync` llamada requiere un `await` (operador), el `execute` método debe estar marcado como asincrónicas. Esto se consigue con el `async` palabra clave antes de la lista de parámetros.
 
 El constructor también establece la `BindingContext` de la página a sí mismo para que hagan referencia los enlaces del `NavigateCommand` en esta clase.
 
 El orden del código de este constructor produce una diferencia: los `InitializeComponent` llamada hace que el XAML que se debe analizar, pero en ese momento, el enlace a una propiedad denominada `NavigateCommand` no se puede resolver porque `BindingContext` está establecido en `null`. Si el `BindingContext` se establece en el constructor *antes de* `NavigateCommand` se establece, el enlace se puede resolver cuando `BindingContext` está establecido, pero en ese momento, `NavigateCommand` sigue siendo `null`. Establecer `NavigateCommand` después `BindingContext` no tiene ningún efecto en el enlace porque un cambio en `NavigateCommand` no se desencadena un `PropertyChanged` eventos y el enlace no sabe que `NavigateCommand` ya es correcta.
 
-Si se establecen `NavigateCommand` y `BindingContext` (en cualquier orden) antes de la llamada a `InitializeComponent` funcionarán, dado que ambos componentes del enlace se establecen cuando el analizador XAML encuentra la definición de enlace. 
+Si se establecen `NavigateCommand` y `BindingContext` (en cualquier orden) antes de la llamada a `InitializeComponent` funcionarán, dado que ambos componentes del enlace se establecen cuando el analizador XAML encuentra la definición de enlace.
 
 Enlaces de datos en ocasiones pueden resultar difícil, pero tal y como se ha visto en esta serie de artículos, son eficaz y versátil y, en gran medida ayudan a organizar el código mediante la separación lógica subyacente de la interfaz de usuario.
 

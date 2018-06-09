@@ -1,28 +1,24 @@
 ---
 title: Rendimiento de ListView
-description: Asegúrese de gran rendimiento con la aplicación basada en ListView.
+description: Aunque ListView es una eficaz vista para mostrar los datos, tiene algunas limitaciones. En este artículo se explica cómo garantizar un rendimiento excelente con un control Xamarin.Forms ListView en una aplicación.
 ms.prod: xamarin
 ms.assetid: 1B085639-652C-4862-86EB-5D55D32B9395
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
-ms.openlocfilehash: dcd4881e2ad7f1bb4af5455805da1dd2cade3605
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4803a612e2b06e458f2859dbbbd30b970f0fc8ea
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244908"
 ---
 # <a name="listview-performance"></a>Rendimiento de ListView
 
 Al escribir aplicaciones para dispositivos móviles, es importante el rendimiento. Los usuarios han llegado a esperar el desplazamiento suave y tiempos de carga rápida. No puede satisfacer las expectativas de los usuarios de costo que las clasificaciones en el almacén de aplicaciones o en el caso de una aplicación de línea de negocio, costo su organización tiempo y dinero.
 
 Aunque [ `ListView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ListView/) es una eficaz vista para mostrar los datos, tiene algunas limitaciones. Desplazamiento de rendimiento puede verse afectado cuando se utiliza celdas personalizadas, especialmente cuando contienen demasiados niveles de anidación ver jerarquías o usar ciertas diseños que requieren una gran cantidad de medida. Afortunadamente, hay técnicas que puede usar para evitar un bajo rendimiento.
-
-En este artículo se tratan los temas siguientes:
-
-- **[Estrategia de almacenamiento en caché](#cachingstrategy)**
-- **[Mejorar el rendimiento de ListView](#improving-performance)**
 
 <a name="cachingstrategy" />
 

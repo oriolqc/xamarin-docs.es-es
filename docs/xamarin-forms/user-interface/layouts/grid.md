@@ -1,20 +1,20 @@
 ---
-title: Cuadrícula
-description: Presentar vistas en las cuadrículas.
+title: Cuadrícula de Xamarin.Forms
+description: En este artículo se explica cómo utilizar la clase de la cuadrícula de Xamarin.Forms para presentar vistas en las cuadrículas, que poseer filas y columnas.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 6ff36f511c5194017afd34601fc9ea2f89b1e2d4
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: a50144f5e0962bd74858bb7731e30cef5dd31b6d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848114"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245158"
 ---
-# <a name="grid"></a>Cuadrícula
+# <a name="xamarinforms-grid"></a>Cuadrícula de Xamarin.Forms
 
 [`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) permite organizar vistas en filas y columnas. Filas y columnas se pueden establecer tamaños proporcionales o tamaños absolutos. El `Grid` diseño no deben confundirse con las tablas tradicionales y no está pensado para presentar los datos tabulares. `Grid` no tiene el concepto de formato de celda, fila o columna. A diferencia de las tablas HTML, `Grid` puramente está diseñado para disponer de contenido.
 

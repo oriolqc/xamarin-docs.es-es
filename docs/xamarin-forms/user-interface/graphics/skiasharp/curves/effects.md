@@ -1,19 +1,20 @@
 ---
-title: Efectos de ruta de acceso
-description: Detectar varios efectos de ruta de acceso que permiten a las rutas de acceso que se usará para trazado y rellenar
+title: Efectos de ruta de acceso en SkiaSharp
+description: En este artículo se explica varios efectos de ruta de acceso de SkiaSharp que permiten a las rutas de acceso que se usará para trazado y rellenar y se muestra cómo hacerlo con código de ejemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/29/2017
-ms.openlocfilehash: 76192f48bedebb183c64c83e34c3908cc85d591c
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 2071a2fb140d0e9c78d4c86d6aa70d3606dc1f98
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244115"
 ---
-# <a name="path-effects"></a>Efectos de ruta de acceso
+# <a name="path-effects-in-skiasharp"></a>Efectos de ruta de acceso en SkiaSharp
 
 _Detectar varios efectos de ruta de acceso que permiten a las rutas de acceso que se usará para trazado y rellenar_
 
@@ -400,7 +401,7 @@ El `PaintSurface` controlador crea una curva de Bézier que itera sobre sí mism
 
 La ruta de acceso especificada en el `SKPathEffect.Create1DPath` método siempre se rellena. La ruta de acceso especificada en el `DrawPath` método siempre se traza si el `SKPaint` objeto tiene sus `PathEffect` propiedad establecida en un efecto de la ruta de acceso de 1D. Tenga en cuenta que la `pathPaint` objeto no tiene ningún `Style` configuración, que normalmente tiene como valor predeterminado `Fill`, pero la ruta de acceso se traza independientemente.
 
-El cuadro que se utiliza en el `Translate` ejemplo es 20 píxeles cuadrados y la `advance` argumento se establece en 24. Esta diferencia hace que un espacio entre los cuadros cuando la línea es aproximadamente horizontal o vertical, pero los cuadros se superponen un poco cuando la línea se diagonal porque la diagonal del cuadro es 28,3 píxeles. 
+El cuadro que se utiliza en el `Translate` ejemplo es 20 píxeles cuadrados y la `advance` argumento se establece en 24. Esta diferencia hace que un espacio entre los cuadros cuando la línea es aproximadamente horizontal o vertical, pero los cuadros se superponen un poco cuando la línea se diagonal porque la diagonal del cuadro es 28,3 píxeles.
 
 La forma de rombo en el `Rotate` ejemplo también es 20 píxeles de ancho. El `advance` se establece en 20 para que los puntos seguirán touch como el rombo se gira junto con la curvatura de la línea.
 
@@ -585,9 +586,9 @@ public class ConveyorBeltPage : ContentPage
         bucketPath.AddRect(new SKRect(-5, -3, 25, 3));
 
         // Sides
-        bucketPath.AddRoundedRect(new SKRect(25, -19, 27, 18), 10, 10, 
+        bucketPath.AddRoundedRect(new SKRect(25, -19, 27, 18), 10, 10,
                                   SKPathDirection.CounterClockwise);
-        bucketPath.AddRoundedRect(new SKRect(63, -19, 65, 18), 10, 10, 
+        bucketPath.AddRoundedRect(new SKRect(63, -19, 65, 18), 10, 10,
                                   SKPathDirection.CounterClockwise);
 
         // Five slats
@@ -595,20 +596,20 @@ public class ConveyorBeltPage : ContentPage
         {
             bucketPath.MoveTo(25, -19 + 8 * i);
             bucketPath.LineTo(25, -13 + 8 * i);
-            bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small, 
+            bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small,
                              SKPathDirection.CounterClockwise, 65, -13 + 8 * i);
             bucketPath.LineTo(65, -19 + 8 * i);
-            bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small, 
+            bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small,
                              SKPathDirection.Clockwise, 25, -19 + 8 * i);
             bucketPath.Close();
         }
 
         // Arc to suggest the hidden side
         bucketPath.MoveTo(25, -17);
-        bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small, 
+        bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small,
                          SKPathDirection.Clockwise, 65, -17);
         bucketPath.LineTo(65, -19);
-        bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small, 
+        bucketPath.ArcTo(50, 50, 0, SKPathArcSize.Small,
                          SKPathDirection.CounterClockwise, 25, -19);
         bucketPath.Close();
 
@@ -619,7 +620,7 @@ public class ConveyorBeltPage : ContentPage
     ...
 ```
 
-El código de creación de depósitos completa con dos transformaciones que hacen que el cubo un poco más grande y activarlo hacia un lado. Aplicar estas transformaciones era más fácil que ajustar todas las coordenadas en el código anterior. 
+El código de creación de depósitos completa con dos transformaciones que hacen que el cubo un poco más grande y activarlo hacia un lado. Aplicar estas transformaciones era más fácil que ajustar todas las coordenadas en el código anterior.
 
 El `PaintSurface` controlador comienza con la definición de una ruta de acceso de la cinta transportadora propio. Esto es simplemente un par de líneas y un par de comas círculos que se dibujan con una línea gris oscuro de 20 píxeles de ancho:
 
@@ -642,10 +643,10 @@ public class ConveyorBeltPage : ContentPage
         {
             // Straight verticals capped by semicircles on top and bottom
             conveyerPath.MoveTo(width, verticalMargin);
-            conveyerPath.ArcTo(width / 2, width / 2, 0, SKPathArcSize.Large, 
+            conveyerPath.ArcTo(width / 2, width / 2, 0, SKPathArcSize.Large,
                                SKPathDirection.Clockwise, 2 * width, verticalMargin);
             conveyerPath.LineTo(2 * width, info.Height - verticalMargin);
-            conveyerPath.ArcTo(width / 2, width / 2, 0, SKPathArcSize.Large, 
+            conveyerPath.ArcTo(width / 2, width / 2, 0, SKPathArcSize.Large,
                                SKPathDirection.Clockwise, width, info.Height - verticalMargin);
             conveyerPath.Close();
 
@@ -665,8 +666,8 @@ public class ConveyorBeltPage : ContentPage
             float phase = -t * spacing;
 
             // Create the buckets PathEffect
-            using (SKPathEffect bucketsPathEffect = 
-                        SKPathEffect.Create1DPath(bucketPath, spacing, phase, 
+            using (SKPathEffect bucketsPathEffect =
+                        SKPathEffect.Create1DPath(bucketPath, spacing, phase,
                                                   SKPath1DPathEffectStyle.Rotate))
             {
                 // Set it to the Paint object and draw the path again
@@ -680,7 +681,7 @@ public class ConveyorBeltPage : ContentPage
 
 La lógica para dibujar la cinta transportadora no funciona en modo horizontal.
 
-Los cubos se deben uniformemente sobre separadas en la cinta transportadora de 200 píxeles. Sin embargo, la cinta transportadora probablemente no es un múltiplo de 200 píxeles largos, lo que significa que, como el `phase` argumento de `SKPathEffect.Create1DPath` está animando, depósitos aparecerá dentro y fuera de existencia. 
+Los cubos se deben uniformemente sobre separadas en la cinta transportadora de 200 píxeles. Sin embargo, la cinta transportadora probablemente no es un múltiplo de 200 píxeles largos, lo que significa que, como el `phase` argumento de `SKPathEffect.Create1DPath` está animando, depósitos aparecerá dentro y fuera de existencia.
 
 Por este motivo, el programa en primer lugar calcula un valor denominado `length` que es la longitud de la cinta transportadora. Dado que la cinta transportadora consta de líneas rectas y círculos punto y, esto es un cálculo simple. A continuación, el número de depósitos se calcula dividiendo `length` por 200. Esto se redondea al entero más próximo, y que número es, a continuación, dividen en `length`. El resultado es un espacio para un número entero de depósitos. El `phase` argumento es simplemente una fracción de ese.
 
@@ -708,11 +709,11 @@ El [ `SKPathEffect.Create2DLines` ](https://developer.xamarin.com/api/member/Ski
 public static SKPathEffect Create2DLine (Single width, SKMatrix matrix)
 ```
 
-El `width` argumento especifica el ancho del trazo de las líneas de trama. El `matrix` parámetro es una combinación de rotación de escala y opcional. El factor de escala indica el incremento de píxeles que Skia se usa para las líneas de trama de espacio. La separación entre las líneas es el factor de escala menos el `width` argumento. Si el factor de escala es menor o igual que el `width` valor, no habrá ningún espacio entre las líneas de trama y aparece el área que se rellenará. Especifique el mismo valor para el escalado horizontal y vertical. 
+El `width` argumento especifica el ancho del trazo de las líneas de trama. El `matrix` parámetro es una combinación de rotación de escala y opcional. El factor de escala indica el incremento de píxeles que Skia se usa para las líneas de trama de espacio. La separación entre las líneas es el factor de escala menos el `width` argumento. Si el factor de escala es menor o igual que el `width` valor, no habrá ningún espacio entre las líneas de trama y aparece el área que se rellenará. Especifique el mismo valor para el escalado horizontal y vertical.
 
 De forma predeterminada, las líneas de trama son horizontales. Si el `matrix` parámetro contiene rotación, las líneas de trama rotan hacia la derecha.
 
-El **relleno de trama** página muestra este efecto de la ruta de acceso. El [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) clase define tres efectos de ruta de acceso como campos, la primera para las líneas de trama horizontal con un ancho de 3 píxeles con un factor de escala que indica que están espaciados 6 píxeles. Por lo tanto, la separación entre las líneas es 3 píxeles. El segundo efecto de ruta de acceso es para las líneas de trama vertical con un ancho de 6 píxeles con un espaciado 24 píxeles (por lo que la separación es 18 píxeles), y el tercero es Sombreado diagonal líneas 12 espaciados anchos 36 píxeles separados. 
+El **relleno de trama** página muestra este efecto de la ruta de acceso. El [ `HatchFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/HatchFillPage.cs) clase define tres efectos de ruta de acceso como campos, la primera para las líneas de trama horizontal con un ancho de 3 píxeles con un factor de escala que indica que están espaciados 6 píxeles. Por lo tanto, la separación entre las líneas es 3 píxeles. El segundo efecto de ruta de acceso es para las líneas de trama vertical con un ancho de 6 píxeles con un espaciado 24 píxeles (por lo que la separación es 18 píxeles), y el tercero es Sombreado diagonal líneas 12 espaciados anchos 36 píxeles separados.
 
 ```csharp
 public class HatchFillPage : ContentPage
@@ -721,10 +722,10 @@ public class HatchFillPage : ContentPage
 
     SKPathEffect horzLinesPath = SKPathEffect.Create2DLine(3, SKMatrix.MakeScale(6, 6));
 
-    SKPathEffect vertLinesPath = SKPathEffect.Create2DLine(6, 
+    SKPathEffect vertLinesPath = SKPathEffect.Create2DLine(6,
         Multiply(SKMatrix.MakeRotationDegrees(90), SKMatrix.MakeScale(24, 24)));
 
-    SKPathEffect diagLinesPath = SKPathEffect.Create2DLine(12, 
+    SKPathEffect diagLinesPath = SKPathEffect.Create2DLine(12,
         Multiply(SKMatrix.MakeScale(36, 36), SKMatrix.MakeRotationDegrees(45)));
 
     SKPaint strokePaint = new SKPaint
@@ -761,14 +762,14 @@ public class HatchFillPage : ContentPage
 
         using (SKPath roundRectPath = new SKPath())
         {
-            // Create a path 
+            // Create a path
             roundRectPath.AddRoundedRect(
                 new SKRect(50, 50, info.Width - 50, info.Height - 50), 100, 100);
 
             // Horizontal hatch marks
             fillPaint.PathEffect = horzLinesPath;
             fillPaint.Color = SKColors.Red;
-            canvas.DrawPath(roundRectPath, fillPaint); 
+            canvas.DrawPath(roundRectPath, fillPaint);
 
             // Vertical hatch marks
             fillPaint.PathEffect = vertLinesPath;
@@ -808,18 +809,18 @@ El [ `SKPathEffect.Create2DPath` ](https://developer.xamarin.com/api/member/Skia
 public static SKPathEffect Create2DPath (SKMatrix matrix, SKPath path)
 ```
 
-El `SKMatrix` factores de escala indican el espaciado horizontal y vertical de la ruta de acceso duplicada. Pero no se pueden girar la ruta de acceso con este `matrix` argumento; si desea que la ruta de acceso que se vayan a rotar, girar la ruta de acceso mediante el `Transform` método definido por `SKPath`. 
+El `SKMatrix` factores de escala indican el espaciado horizontal y vertical de la ruta de acceso duplicada. Pero no se pueden girar la ruta de acceso con este `matrix` argumento; si desea que la ruta de acceso que se vayan a rotar, girar la ruta de acceso mediante el `Transform` método definido por `SKPath`.
 
 La ruta de acceso replicada normalmente está alineado con los bordes superiores e izquierdos de la pantalla en lugar de en el área que se va a rellenar. Puede invalidar este comportamiento proporcionando factores de traducción entre 0 y los factores de escala para especificar el desplazamiento horizontal y vertical de los lados izquierdos y superiores.
 
-El **relleno de ruta de acceso del icono** página muestra este efecto de la ruta de acceso. La ruta de acceso que se utiliza para colocar en mosaico del área se define como un campo en el [ `PathFileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) clase. La coordenadas horizontales y verticales comprendidos entre -40 a 40, lo que significa que esta ruta de acceso es 80 píxeles cuadrados: 
+El **relleno de ruta de acceso del icono** página muestra este efecto de la ruta de acceso. La ruta de acceso que se utiliza para colocar en mosaico del área se define como un campo en el [ `PathFileFillPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathTileFillPage.cs) clase. La coordenadas horizontales y verticales comprendidos entre -40 a 40, lo que significa que esta ruta de acceso es 80 píxeles cuadrados:
 
 ```csharp
 public class PathTileFillPage : ContentPage
 {
     SKPath tilePath = SKPath.ParseSvgPathData(
-        "M -20 -20 L 2 -20, 2 -40, 18 -40, 18 -20, 40 -20, " + 
-        "40 -12, 20 -12, 20 12, 40 12, 40 40, 22 40, 22 20, " + 
+        "M -20 -20 L 2 -20, 2 -40, 18 -40, 18 -20, 40 -20, " +
+        "40 -12, 20 -12, 20 12, 40 12, 40 40, 22 40, 22 20, " +
         "-2 20, -2 40, -20 40, -20 8, -40 8, -40 -8, -20 -8 Z");
     ...
     void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -840,7 +841,7 @@ public class PathTileFillPage : ContentPage
                 paint.PathEffect = pathEffect;
 
                 canvas.DrawRoundRect(
-                    new SKRect(50, 50, info.Width - 50, info.Height - 50), 
+                    new SKRect(50, 50, info.Width - 50, info.Height - 50),
                     100, 100, paint);
             }
         }
@@ -935,7 +936,7 @@ A veces las líneas rectas perfecta de gráficos para PC no son bastante la acci
 public static SKPathEffect CreateDiscrete (Single segLength, Single deviation, UInt32 seedAssist)
 ```
 
-Puede usar este efecto de la ruta de acceso de trazado o rellenar. Las líneas se dividen en segmentos conectados: la longitud aproximada de los cuales se especifica por `segLength` y ampliar en direcciones diferentes. Especifica la extensión de la desviación de la línea original `deviation`. 
+Puede usar este efecto de la ruta de acceso de trazado o rellenar. Las líneas se dividen en segmentos conectados: la longitud aproximada de los cuales se especifica por `segLength` y ampliar en direcciones diferentes. Especifica la extensión de la desviación de la línea original `deviation`.
 
 El argumento final es un valor de inicialización usado para generar la secuencia pseudoaleatoria usada para el efecto. El efecto de vibración tendrá un aspecto un poco diferente para distintos valores de inicialización. El argumento tiene un valor predeterminado de cero, lo que significa que el efecto es el mismo cada vez que ejecuta el programa. Si desea vibración diferente cada vez que se actualiza la pantalla, puede establecer el valor de inicialización la `Millisecond` propiedad de un `DataTime.Now` valor (por ejemplo).
 
@@ -1016,7 +1017,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
     using (SKPaint paint = new SKPaint())
     {
-        paint.Style = SKPaintStyle.Stroke; 
+        paint.Style = SKPaintStyle.Stroke;
         paint.StrokeWidth = 5;
         paint.Color = SKColors.Blue;
 
@@ -1144,7 +1145,7 @@ public partial class TapToOutlineThePathPage : ContentPage
         using (SKPath circlePath = new SKPath())
         {
             circlePath.AddCircle(info.Width / 2, info.Height / 2,
-                                 Math.Min(info.Width / 2, info.Height / 2) - 
+                                 Math.Min(info.Width / 2, info.Height / 2) -
                                  redThickStroke.StrokeWidth);
 
             if (!outlineThePath)
@@ -1217,9 +1218,9 @@ using (SKPath linkPath = new SKPath())
 }
 ```
 
-El `outlinePath` objeto es, a continuación, el destinatario del contorno de `linkPath` cuando se traza con las propiedades especificadas en `strokePaint`. 
+El `outlinePath` objeto es, a continuación, el destinatario del contorno de `linkPath` cuando se traza con las propiedades especificadas en `strokePaint`.
 
-Otro ejemplo de cómo utilizar esta técnica viene a continuación para la ruta de acceso utilizada en un `SKPathEffect.Create2DPath` métodos. 
+Otro ejemplo de cómo utilizar esta técnica viene a continuación para la ruta de acceso utilizada en un `SKPathEffect.Create2DPath` métodos.
 
 ## <a name="combining-path-effects"></a>Combinando los efectos de ruta de acceso
 
@@ -1270,7 +1271,7 @@ public class CatsInFramePage : ContentPage
         StrokeWidth = 5
     };
 
-    SKPath scallopPath = 
+    SKPath scallopPath =
         SKPath.ParseSvgPathData("M 0 0 L 50 0 A 60 60 0 0 1 -50 0 Z");
 
     SKPaint framePaint = new SKPaint
@@ -1316,7 +1317,7 @@ public class CatsInFramePage : ContentPage
             outlinedCatPath);
 
         // Create a 1D path effect from the scallop path
-        SKPathEffect strokeEffect = 
+        SKPathEffect strokeEffect =
             SKPathEffect.Create1DPath(scallopPath, 75, 0, SKPath1DPathEffectStyle.Rotate);
 
         // Set the sum the effects to frame paint
@@ -1358,11 +1359,11 @@ El **líneas discontinuas de trama** rellena una elipse con líneas de trama que
 ```csharp
 public class DashedHatchLinesPage : ContentPage
 {
-    static SKPathEffect dashEffect = 
+    static SKPathEffect dashEffect =
         SKPathEffect.CreateDash(new float[] { 30, 30 }, 0);
 
     static SKPathEffect hatchEffect = SKPathEffect.Create2DLine(20,
-        Multiply(SKMatrix.MakeScale(60, 60), 
+        Multiply(SKMatrix.MakeScale(60, 60),
                  SKMatrix.MakeRotationDegrees(45)));
 
     SKPaint paint = new SKPaint()
@@ -1395,8 +1396,8 @@ public class DashedHatchLinesPage : ContentPage
 
         canvas.Clear();
 
-        canvas.DrawOval(info.Width / 2, info.Height / 2, 
-                        0.45f * info.Width, 0.45f * info.Height, 
+        canvas.DrawOval(info.Width / 2, info.Height / 2,
+                        0.45f * info.Width, 0.45f * info.Height,
                         paint);
     }
     ...

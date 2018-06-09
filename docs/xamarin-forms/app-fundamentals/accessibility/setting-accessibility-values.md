@@ -1,17 +1,18 @@
 ---
 title: Establezca los valores de accesibilidad en elementos de la interfaz de usuario
-description: Xamarin.Forms permite que los valores de accesibilidad que se establecerán en elementos de la interfaz de usuario mediante el uso de las propiedades asociadas de la clase AutomationProperties, que a su vez valores del conjunto de accesibilidad nativo. Este artículo explica cómo utilizar la clase AutomationProperties, para que un lector de pantalla puede hablar acerca de los elementos en la página.
+description: Este artículo explica cómo utilizar la clase AutomationProperties, para que un lector de pantalla puede hablar acerca de los elementos en la página.
 ms.prod: xamarin
 ms.assetid: c0bb6893-fd26-47e7-88e5-3c333c9f786c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: cf9071684061b584e1cb75cfd50b33212f42bf79
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ad7b1c41f34c14a81910d5be30fd6484919e8d39
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241889"
 ---
 # <a name="setting-accessibility-values-on-user-interface-elements"></a>Establezca los valores de accesibilidad en elementos de la interfaz de usuario
 

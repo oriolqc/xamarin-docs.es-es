@@ -1,16 +1,18 @@
 ---
 title: Resumen del capítulo 13. Mapas de bits
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del capítulo 13. Mapas de bits'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 76551057abc1abdd150591c0a1be39e9f68c4278
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d95e801f6a239e894c1f6baa68015659af9eba35
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241560"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Resumen del capítulo 13. Mapas de bits
 
@@ -156,7 +158,7 @@ Los proyectos en tiempo de ejecución de Windows admiten un mapa de bits de nome
 
 - MyImage.scale 200.jpg en 320 píxeles cuadrados
 
-Solo algunos porcentajes son válidos. Los programas de ejemplo para este libro incluyen sólo las imágenes con **escala-200** sufijos, pero incluyen actuales plantillas de solución de Xamarin.Forms **escala 100**, **escala 125**, **150 escala**, y **escala-400**. 
+Solo algunos porcentajes son válidos. Los programas de ejemplo para este libro incluyen sólo las imágenes con **escala-200** sufijos, pero incluyen actuales plantillas de solución de Xamarin.Forms **escala 100**, **escala 125**, **150 escala**, y **escala-400**.
 
 Al agregar mapas de bits a los proyectos de plataforma, el **acción de compilación** debe ser:
 

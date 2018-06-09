@@ -1,20 +1,20 @@
 ---
-title: Animaciones personalizadas
-description: La clase de animación es el bloque de creación de todas las animaciones de Xamarin.Forms, con los métodos de extensión en la clase ViewExtensions crear uno o varios objetos de animación. En este artículo se muestra cómo utilizar la clase de animación para crear y cancelar las animaciones, sincronizar varias animaciones y crear animaciones personalizadas que animan propiedades que no están animados por los métodos existentes de la animación.
+title: Animaciones personalizadas de Xamarin.Forms
+description: En este artículo se muestra cómo utilizar la clase de animación de Xamarin.FOrms para crear y cancelar las animaciones, sincronizar varias animaciones y crear animaciones personalizadas que animan propiedades que no están animados por los métodos existentes de la animación.
 ms.prod: xamarin
 ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/14/2016
-ms.openlocfilehash: 238268a3ad2b82494f1d096d0cbeba97edb90366
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 74430f6c158e74569f1b2cbfa0b6a85e8d40fbcf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847789"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242981"
 ---
-# <a name="custom-animations"></a>Animaciones personalizadas
+# <a name="custom-animations-in-xamarinforms"></a>Animaciones personalizadas de Xamarin.Forms
 
 _La clase de animación es el bloque de creación de todas las animaciones de Xamarin.Forms, con los métodos de extensión en la clase ViewExtensions crear uno o varios objetos de animación. En este artículo se muestra cómo utilizar la clase de animación para crear y cancelar las animaciones, sincronizar varias animaciones y crear animaciones personalizadas que animan propiedades que no están animados por los métodos existentes de la animación._
 

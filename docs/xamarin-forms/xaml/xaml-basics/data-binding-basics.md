@@ -1,17 +1,18 @@
 ---
 title: Parte 4. Conceptos básicos del enlace de datos
-description: Enlaces de datos permiten propiedades de los dos objetos para vincularse para que un cambio en uno hace un cambio en la otra. Se trata de una herramienta muy valiosa y mientras completamente en código, se pueden definir los enlaces de datos, XAML proporciona accesos directos y la comodidad. Por lo tanto, una de las extensiones de marcado más importantes de Xamarin.Forms enlaza.
+description: Enlaces de datos permiten propiedades de los dos objetos para vincularse para que un cambio en uno hace un cambio en la otra.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 4e3e090d826aa46d503f8c612250fd5122bc703e
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 117ddd033faedda871c33ba10c246739309e2e86
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245955"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Conceptos básicos del enlace de datos
 
@@ -85,7 +86,7 @@ Text="{Binding Value, StringFormat='The angle is {0:F0} degrees'}"
 Las propiedades pueden estar en una línea o separan en varias líneas:
 
 ```csharp
-Text="{Binding Value, 
+Text="{Binding Value,
                StringFormat='The angle is {0:F0} degrees'}"
 ```
 
@@ -101,13 +102,13 @@ Este es el programa en ejecución:
 
 [![](data-binding-basics-images/sliderbinding.png "Para ver enlaces")](data-binding-basics-images/sliderbinding-large.png#lightbox "enlaces para ver ")
 
-## <a name="the-binding-mode"></a>El modo de enlace 
+## <a name="the-binding-mode"></a>El modo de enlace
 
 Una vista única puede tener enlaces de datos en varias de sus propiedades. Sin embargo, cada vista solo puede tener un `BindingContext`, por lo que varios enlaces de datos en esa vista, deben hacer referencia a propiedades del mismo objeto.
 
 La solución a este y otros problemas implica la `Mode` propiedad, que se establece en un miembro de la `BindingMode` enumeración:
 
-- `Default` 
+- `Default`
 - `OneWay` : los valores se transfieren desde el origen al destino
 - `OneWayToSource` : los valores se transfieren desde el destino al origen
 - `TwoWay` : los valores se transfieren ambos sentidos entre el origen y de destino
@@ -323,7 +324,7 @@ Mucho mejor. Ahora todo lo que se necesita es refinar la plantilla de elemento c
 </ContentPage>
 ```
 
-Observe el uso de `OnPlatform` para definir el tamaño de un `BoxView` y el alto de la `ListView` filas. Aunque los valores de las tres plataformas son los mismos, el marcado fácilmente pudo adaptado para otros valores ajustar la presentación. 
+Observe el uso de `OnPlatform` para definir el tamaño de un `BoxView` y el alto de la `ListView` filas. Aunque los valores de las tres plataformas son los mismos, el marcado fácilmente pudo adaptado para otros valores ajustar la presentación.
 
 ## <a name="binding-value-converters"></a>Convertidores de valores de enlace
 
@@ -365,7 +366,7 @@ namespace XamlSamples
 }
 ```
 
-El `ConvertBack` método desempeñan un papel de este programa porque los enlaces son solo una manera de origen a destino. 
+El `ConvertBack` método desempeñan un papel de este programa porque los enlaces son solo una manera de origen a destino.
 
 Un enlace hace referencia a un convertidor de enlace con el `Converter` propiedad. Un convertidor de enlace también puede aceptar un parámetro especificado con el `ConverterParameter` propiedad. Para algunos versatilidad, es cómo se especifica el multiplicador. El convertidor de enlace comprueba el parámetro de convertidor para válido `double` valor.
 
@@ -388,7 +389,7 @@ Este es el resultado:
 
 [![](data-binding-basics-images/listview3.png "Enlazar a una colección con una plantilla de datos y los convertidores")](data-binding-basics-images/listview3-large.png#lightbox "enlace a una colección con una plantilla de datos y los convertidores")
 
-El `ListView` es bastante sofisticada para controlar los cambios que pueden producirse dinámicamente en la base datos, pero solo si seguir unos pasos determinados. Si la colección de elementos que se asigna a la `ItemsSource` propiedad de la `ListView` cambios en tiempo de ejecución, es decir, si los elementos se pueden agregar a o quitar de la colección: usar un `ObservableCollection` clase para estos elementos. `ObservableCollection` implementa el `INotifyCollectionChanged` interfaz, y `ListView` instalará un controlador para el `CollectionChanged` eventos.
+El `ListView` es bastante sofisticada para controlar los cambios que pueden producirse dinámicamente en los datos subyacentes, pero solo si seguir unos pasos determinados. Si la colección de elementos que se asigna a la `ItemsSource` propiedad de la `ListView` cambios en tiempo de ejecución, es decir, si los elementos se pueden agregar a o quitar de la colección: usar un `ObservableCollection` clase para estos elementos. `ObservableCollection` implementa el `INotifyCollectionChanged` interfaz, y `ListView` instalará un controlador para el `CollectionChanged` eventos.
 
 Si las propiedades de los mismos elementos cambian en tiempo de ejecución, los elementos de la colección deben implementar la `INotifyPropertyChanged` interfaz y señal los cambios a los valores de propiedad mediante el `PropertyChanged` eventos. Esto se muestra en la siguiente parte de esta serie, [parte 5. Desde el enlace de datos a MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 

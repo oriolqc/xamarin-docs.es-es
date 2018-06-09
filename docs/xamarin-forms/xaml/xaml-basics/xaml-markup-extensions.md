@@ -1,17 +1,18 @@
 ---
 title: Parte 3. Extensiones de marcado XAML
-description: Las extensiones de marcado XAML constituyen una característica importante de XAML que permite que las propiedades se establezca en objetos o valores que se hace referencia indirectamente desde otros orígenes. Las extensiones de marcado XAML son especialmente importantes para uso compartido de objetos y hacer referencia a las constantes se utilizan en toda una aplicación, pero encuentra su mayor utilidad enlaces de datos.
+description: Las extensiones de marcado XAML constituyen una característica importante de XAML que permite que las propiedades se establezca en objetos o valores que se hace referencia indirectamente desde otros orígenes.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: charlespetzold
 ms.author: chape
 ms.date: 3/27/2018
-ms.openlocfilehash: c110223eae2bb06f64adf3e09977d97cc7b5d71b
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 6fcb051d2c24c7da169106b06ad5ebfc91edafa6
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245916"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensiones de marcado XAML
 
@@ -321,8 +322,8 @@ A pesar de las similitudes de sus nombres, `x:Static` y `StaticResource` son muy
 
 - un campo estático público
 - una propiedad estática pública
-- un campo constante público 
-- un miembro de enumeración. 
+- un campo constante público
+- un miembro de enumeración.
 
 El `StaticResource` extensión de marcado es compatible con las implementaciones de XAML que define un diccionario de recursos, mientras que `x:Static` es una parte intrínseca de XAML, como la `x` revela de prefijo.
 
@@ -366,7 +367,7 @@ namespace XamlSamples
                     PagePadding = new Thickness(5, 0, 5, 0);
                     TitleFont = Font.SystemFontOfSize(40, FontAttributes.Bold);
                     break;
-                    
+
                 case Device.UWP:
                     PagePadding = new Thickness(5, 0, 5, 0);
                     TitleFont = Font.SystemFontOfSize(50, FontAttributes.Bold);

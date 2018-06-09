@@ -1,5 +1,5 @@
 ---
-title: Enlace de datos
+title: Enlace de datos de Xamarin.Forms
 description: Enlace de datos es la técnica de vincular las propiedades de dos objetos para que los cambios en una propiedad se reflejan automáticamente en la otra propiedad. Enlace de datos es una parte integral de la arquitectura de aplicación de Model-View-ViewModel (MVVM).
 ms.prod: xamarin
 ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
@@ -7,13 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: ee8481696b0ef85aec949c6def7767e57eb99e17
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a5ea5dcb5b108da52634f131fd36a91ba82f7da4
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240358"
 ---
-# <a name="data-binding"></a>Enlace de datos
+# <a name="xamarinforms-data-binding"></a>Enlace de datos de Xamarin.Forms
 
 _Enlace de datos es la técnica de vincular las propiedades de dos objetos para que los cambios en una propiedad se reflejan automáticamente en la otra propiedad. Enlace de datos es una parte integral de la arquitectura de aplicación de Model-View-ViewModel (MVVM)._
 

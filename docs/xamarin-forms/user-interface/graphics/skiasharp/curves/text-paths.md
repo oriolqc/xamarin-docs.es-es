@@ -1,25 +1,26 @@
 ---
-title: Las rutas de acceso y el texto
-description: Explorar la intersección de las rutas de acceso y el texto
+title: Las rutas de acceso y el texto de SkiaSharp
+description: Este artículo explora la intersección de las rutas de acceso de SkiaSharp y texto y se muestra cómo hacerlo con código de ejemplo.
 ms.prod: xamarin
 ms.assetid: C14C07F6-4A84-4A8C-BDB4-CD61FBF0F79B
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 08/01/2017
-ms.openlocfilehash: 9b3f906a23ed0d51237a244f3944104acc76e259
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 305ee2946d3a291e6237d5a2860eda7331193b23
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243910"
 ---
-# <a name="paths-and-text"></a>Las rutas de acceso y el texto
+# <a name="paths-and-text-in-skiasharp"></a>Las rutas de acceso y el texto de SkiaSharp
 
 _Explorar la intersección de las rutas de acceso y el texto_
 
-En los sistemas de gráfico moderno, fuentes de texto son colecciones de esquemas de carácter, normalmente definidas curvas de Bézier cuadráticas. Por lo tanto, muchos sistemas de gráfico moderno incluyen una función para convertir caracteres de texto en una ruta de acceso de gráficos. 
+En los sistemas de gráfico moderno, fuentes de texto son colecciones de esquemas de carácter, normalmente definidas curvas de Bézier cuadráticas. Por lo tanto, muchos sistemas de gráfico moderno incluyen una función para convertir caracteres de texto en una ruta de acceso de gráficos.
 
-Ya ha visto que puede trazar los contornos de caracteres de texto, así como rellenarlo. Esto le permite mostrar estos contornos de caracteres con un ancho del trazo determinado e incluso un efecto de la ruta de acceso, como se describe en el [ **efectos de ruta de acceso** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) artículo. Pero también es posible convertir una cadena de caracteres en un `SKPath` objeto. Esto significa que los contornos de texto pueden utilizarse para efectuar el recorte con técnicas que se describen en la [ **con rutas de acceso y las regiones de recorte** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md) artículo. 
+Ya ha visto que puede trazar los contornos de caracteres de texto, así como rellenarlo. Esto le permite mostrar estos contornos de caracteres con un ancho del trazo determinado e incluso un efecto de la ruta de acceso, como se describe en el [ **efectos de ruta de acceso** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/effects.md) artículo. Pero también es posible convertir una cadena de caracteres en un `SKPath` objeto. Esto significa que los contornos de texto pueden utilizarse para efectuar el recorte con técnicas que se describen en la [ **con rutas de acceso y las regiones de recorte** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/clipping.md) artículo.
 
 Además de utilizar un efecto de la ruta de acceso para trazar un esquema de caracteres, también puede crear efectos que se basan en una rutas de acceso se derivan de las cadenas de caracteres de la ruta de acceso y puede incluso combinar los dos efectos:
 
@@ -37,7 +38,7 @@ El [ `GetTextPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.
 public SKPath GetTextPath (String text, Single x, Single y)
 ```
 
-El `x` y `y` argumentos indican el punto inicial de la línea base del lado izquierdo del texto. Desempeñan la misma función aquí como en la `DrawText` método `SKCanvas`. Dentro de la ruta de acceso, la línea de base del lado izquierdo del texto tendrán las coordenadas (x, y). 
+El `x` y `y` argumentos indican el punto inicial de la línea base del lado izquierdo del texto. Desempeñan la misma función aquí como en la `DrawText` método `SKCanvas`. Dentro de la ruta de acceso, la línea de base del lado izquierdo del texto tendrán las coordenadas (x, y).
 
 El `GetTextPath` método es excesiva si simplemente desea rellenar o trazar la ruta de acceso resultante. Vector normal `DrawText` método le permite hacerlo. El `GetTextPath` método es más útil para otras tareas relacionadas con las rutas de acceso.
 
@@ -114,7 +115,7 @@ public class ClippingTextPage : ContentPage
 
         // Display bitmap to fill window but maintain aspect ratio
         SKRect rect = new SKRect(0, 0, info.Width, info.Height);
-        canvas.DrawBitmap(bitmap, 
+        canvas.DrawBitmap(bitmap,
             rect.AspectFill(new SKSize(bitmap.Width, bitmap.Height)));
     }
 }
@@ -141,7 +142,7 @@ public class TextPathEffectPage : ContentPage
         TextSize = littleSize
     };
 
-    SKPaint textPaint = new SKPaint 
+    SKPaint textPaint = new SKPaint
     {
         Style = SKPaintStyle.Stroke,
         Color = SKColors.Black
@@ -160,7 +161,7 @@ public class TextPathEffectPage : ContentPage
         textPathPaint.MeasureText(character, ref textPathPaintBounds);
 
         // Create textPath centered around (0, 0)
-        SKPath textPath = textPathPaint.GetTextPath(character, 
+        SKPath textPath = textPathPaint.GetTextPath(character,
                                                     -textPathPaintBounds.MidX,
                                                     -textPathPaintBounds.MidY);
         // Create the path effect
@@ -324,7 +325,7 @@ El `TextSize` propiedad de `textPaint` , a continuación, se ajusta para que el 
 
 [![](text-paths-images/circulartext-small.png "Captura de pantalla triple de la página de texto Circular")](text-paths-images/circulartext-large.png#lightbox "Triple captura de pantalla de la página de texto Circular")
 
-Se ha elegido el texto en Sí para ser circulares algo así: la palabra "círculo" es tanto el asunto de la oración y el objeto de una frase preposicionales. 
+Se ha elegido el texto en Sí para ser circulares algo así: la palabra "círculo" es tanto el asunto de la oración y el objeto de una frase preposicionales.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

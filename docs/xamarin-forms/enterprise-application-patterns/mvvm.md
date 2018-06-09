@@ -1,19 +1,20 @@
 ---
-title: MVVM
+title: El modelo Model-View-ViewMode
+description: En este capítulo se explica cómo la aplicación móvil eShopOnContainers usa el patrón MVVM para separar la lógica de negocios y la presentación de la aplicación en su interfaz de usuario de forma clara.
 ms.prod: xamarin
 ms.assetid: dd8c1813-df44-4947-bcee-1a1ff2334b87
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 03a3c411c7031ece32a8987b480f96ad39909201
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: fe2cace6a0fc3a1d901f55556eed09380f8f2006
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793962"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245437"
 ---
-# <a name="mvvm"></a>MVVM
+# <a name="the-model-view-viewmodel-pattern"></a>El modelo Model-View-ViewMode
 
 La experiencia del desarrollador Xamarin.Forms normalmente implica crear una interfaz de usuario en XAML y, a continuación, agregarle código subyacente que opera en la interfaz de usuario. Como las aplicaciones se modifican y aumentan de tamaño y ámbito, pueden surgir problemas de mantenimiento complejo. Estos problemas incluyen el acoplamiento apretado entre los controles de interfaz de usuario y la lógica de negocios, lo que aumenta el costo de realizar modificaciones de la interfaz de usuario y la dificultad de este tipo de código de pruebas unitarias.
 

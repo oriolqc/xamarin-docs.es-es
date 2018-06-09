@@ -1,16 +1,18 @@
 ---
 title: Resumen del capítulo 6. Clics de botón
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen de capítulo 6. Clics de botón'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: a45d1f1663b141912744e83763e7d618866159d7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9c8a4e6a6c4d62722e72ff3b27251987aa201284
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240754"
 ---
 # <a name="summary-of-chapter-6-button-clicks"></a>Resumen del capítulo 6. Clics de botón
 

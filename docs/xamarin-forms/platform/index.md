@@ -1,20 +1,20 @@
 ---
-title: Características de la plataforma
-description: Aprovechar las características específicas de la plataforma con Xamarin.Forms
+title: Características de la plataforma de Xamarin.Forms
+description: Esta guía explica cómo aprovechar características específicas de la plataforma de Xamarin.Forms aplicaciones mediante una variedad de técnicas.
 ms.prod: xamarin
 ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2018
-ms.openlocfilehash: 0609d15248f1827b892ae02a877382ca0ffbed18
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 2e8eb19411799e7723be338e9e3f6df35058eb8c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847636"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242805"
 ---
-# <a name="platform-features"></a>Características de la plataforma
+# <a name="xamarinforms-platform-features"></a>Características de la plataforma de Xamarin.Forms
 
 Xamarin.Forms es extensible y le permite incorporar características específicas de la plataforma mediante [efectos](~/xamarin-forms/app-fundamentals/effects/index.md), [representadores personalizados](~/xamarin-forms/app-fundamentals/custom-renderer/index.md), [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md), el [MessagingCenter](~/xamarin-forms/app-fundamentals/messaging-center.md)y mucho más.
 

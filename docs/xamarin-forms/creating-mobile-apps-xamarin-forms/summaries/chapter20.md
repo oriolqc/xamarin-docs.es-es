@@ -1,16 +1,18 @@
 ---
 title: Resumen de capítulo 20. E/S de archivo y asincrónico
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen de capítulo 20. E/S de archivo y asincrónico'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 521a8b18e74e078b9caafc6c79c7e418e1f5e08f
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fbcf1c9cfb1cd87ea33f47ae61a8ebe233b89736
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241873"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Resumen de capítulo 20. E/S de archivo y asincrónico
 

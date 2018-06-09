@@ -1,17 +1,18 @@
 ---
 title: Comprobación de orientación del dispositivo
-description: Utilice DependencyService para orientación del dispositivo de acceso de código compartido
+description: En este artículo se explica cómo usar la clase Xamarin.Forms DependencyService para tener acceso a la orientación del dispositivo desde código compartido.
 ms.prod: xamarin
 ms.assetid: 5F60975F-47DB-4361-B97C-2290D6F77D2F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 09cd92b436be97f5490ac74890e4b0723bcd5701
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: e21531b7f39d3876d91eea8fa6cb9e409a9deffa
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240061"
 ---
 # <a name="checking-device-orientation"></a>Comprobación de orientación del dispositivo
 

@@ -1,20 +1,20 @@
 ---
-title: Desencadenadores
-description: Responder a los cambios de la interfaz de usuario con XAML
+title: Xamarin.Forms desencadenadores
+description: En este artículo se explica cómo utilizar desencadenadores de Xamarin.Forms para responder a los cambios de la interfaz de usuario con XAML. Desencadenadores permiten expresar acciones mediante declaración en XAML que cambiar la apariencia de los controles basados en eventos o cambios de propiedad.
 ms.prod: xamarin
 ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: af5912736e2a2bd7d3347d4aa199faa3fdfe41c7
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b28ebb8845b7eae0d818e1279b4d6eaef4ad5b8b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846450"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241440"
 ---
-# <a name="triggers"></a>Desencadenadores
+# <a name="xamarinforms-triggers"></a>Xamarin.Forms desencadenadores
 
 Desencadenadores permiten expresar acciones mediante declaración en XAML que cambiar la apariencia de los controles basados en eventos o cambios de propiedad.
 

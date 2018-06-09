@@ -1,17 +1,18 @@
 ---
 title: Proyectos de instalación de Windows
-description: Adición de nuevos proyectos de Windows a una solución de Xamarin.Forms existente
+description: Las soluciones anteriores dejen Xamarin.Forms (o las creadas en macOS) no tengan proyectos de plataforma Universal de Windows y, por lo que este artículo explica cómo agregar un nuevo proyecto UWP para una solución de Xamarin.Forms existente.
 ms.prod: xamarin
 ms.assetid: A0774D2E-6994-4D91-84E8-DAB66FC92320
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: aed240dd403957e5935666d4179a6d642c411b86
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 81cad7b178948ebfcf6f424be9ab62d6b6be5b92
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242642"
 ---
 # <a name="setup-windows-projects"></a>Proyectos de instalación de Windows
 

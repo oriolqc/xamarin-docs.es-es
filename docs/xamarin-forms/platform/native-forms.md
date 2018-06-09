@@ -1,19 +1,20 @@
 ---
-title: Formularios nativos
-description: Formas nativas permiten un uso derivados Xamarin.Forms contenidoPage páginas a ser consumidos por los proyectos nativos de Xamarin.iOS y Xamarin.Android, plataforma Universal de Windows (UWP). Los proyectos nativos pueden consumir derivado contenidoPage páginas que se agregan directamente al proyecto, o desde una biblioteca estándar. NET, la biblioteca estándar de .NET o el proyecto compartido. Este artículo explica cómo consumir derivado contenidoPage páginas que se agregan directamente a los proyectos nativos y cómo navegar entre ellos.
+title: Xamarin.Forms en proyectos nativos de Xamarin
+description: Este artículo explica cómo utilizar páginas contenidoPage derivado que se agregan directamente a los proyectos nativos de Xamarin y cómo navegar entre ellos.
 ms.prod: xamarin
 ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: a103d360221650ee4f679ee285dbedd65e62f947
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: ca62b9fec3223e8da62d8e4cc6e1f69a58f335a0
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243280"
 ---
-# <a name="native-forms"></a>Formularios nativos
+# <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin.Forms en proyectos nativos de Xamarin
 
 _Formas nativas permiten un uso derivados Xamarin.Forms contenidoPage páginas a ser consumidos por los proyectos nativos de Xamarin.iOS y Xamarin.Android, plataforma Universal de Windows (UWP). Los proyectos nativos pueden consumir derivado contenidoPage páginas que se agregan directamente al proyecto, o desde una biblioteca estándar. NET, la biblioteca estándar de .NET o el proyecto compartido. Este artículo explica cómo consumir derivado contenidoPage páginas que se agregan directamente a los proyectos nativos y cómo navegar entre ellos._
 

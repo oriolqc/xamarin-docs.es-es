@@ -1,18 +1,20 @@
 ---
-title: Clase de dispositivo
+title: Clase de dispositivo de Xamarin.Forms
+description: Este artículo explica cómo utilizar la clase de dispositivo de Xamarin.Forms para un control específico sobre la funcionalidad y diseños por la plataforma.
 ms.prod: xamarin
 ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 520982491803fa0a909008ee60730a4149a75296
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: cdcd4bb08b9dac84d264f7c0c41e16d68380e1d0
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242549"
 ---
-# <a name="device-class"></a>Clase de dispositivo
+# <a name="xamarinforms-device-class"></a>Clase de dispositivo de Xamarin.Forms
 
 El [ `Device` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device/) clase contiene una serie de propiedades y métodos para ayudar a los desarrolladores personalizar el diseño y la funcionalidad de forma según la plataforma.
 

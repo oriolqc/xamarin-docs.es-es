@@ -1,19 +1,20 @@
 ---
-title: Transformaciones de matriz
-description: Profundizar más en SkiaSharp transformaciones con la matriz de transformación versátil
+title: Transformaciones de matriz en SkiaSharp
+description: En este artículo se adentra más profundo en SkiaSharp transformaciones con la matriz de transformación versátiles y se muestra cómo hacerlo con código de ejemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: charlespetzold
 ms.author: chape
 ms.date: 04/12/2017
-ms.openlocfilehash: 90fadf0081f86e7739d75c0710caeaf1775c423e
-ms.sourcegitcommit: 6f7033a598407b3e77914a85a3f650544a4b6339
+ms.openlocfilehash: 816a5f47a4a4f5c01a1fb20b5c8e7a2fc83a64b0
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244882"
 ---
-# <a name="matrix-transforms"></a>Transformaciones de matriz
+# <a name="matrix-transforms-in-skiasharp"></a>Transformaciones de matriz en SkiaSharp
 
 _Profundizar más en SkiaSharp transformaciones con la matriz de transformación versátil_
 

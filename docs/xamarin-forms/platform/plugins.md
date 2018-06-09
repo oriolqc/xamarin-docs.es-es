@@ -1,19 +1,20 @@
 ---
-title: Complementos
-description: Agregar fácilmente la funcionalidad nativa a las aplicaciones de Xamarin.Forms
+title: Consumir y crear complementos de Xamarin.Forms
+description: En este artículo se explica cómo utilizar y crear complementos de Xamarin.Forms. Complementos se usan normalmente para exponer fácilmente las características nativas de plataforma.
 ms.prod: xamarin
 ms.assetid: 8A06A420-A9D0-4BCB-B9AF-3AEA6A648A8B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2016
-ms.openlocfilehash: 5770d13c46998872752820b7a0cbb222a04c3ff8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dff9fad0da30475a0fb91c0af76a25ea50d34439
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242562"
 ---
-# <a name="plugins"></a>Complementos
+# <a name="consuming-and-creating-xamarinforms-plugins"></a>Consumir y crear complementos de Xamarin.Forms
 
 Hay muchas características de plataforma nativa que existen en todas las plataformas, pero tienen API ligeramente diferentes. Los desarrolladores escribir complementos para crear una interfaz abstracta de multiplataforma para aquellas características que también pueden compartir con otros usuarios.
 

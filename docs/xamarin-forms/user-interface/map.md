@@ -1,19 +1,20 @@
 ---
-title: Asignación
-description: Xamarin.Forms utiliza la API de asignación nativo en cada plataforma.
+title: Mapa de Xamarin.Forms
+description: En este artículo se explica cómo utilizar la clase Xamarin.Forms Map para usar la asignación nativo APIs en cada plataforma para proporcionar la que experiencia de los usuarios asigna un conocido.
 ms.prod: xamarin
 ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: 6063732e08680974b8d4a2358bfd85b176b36aec
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 9bd4c810db0397d84803be7c38f625b9b047c3da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245480"
 ---
-# <a name="map"></a>Asignación
+# <a name="xamarinforms-map"></a>Mapa de Xamarin.Forms
 
 _Xamarin.Forms utiliza la API de asignación nativo en cada plataforma._
 
@@ -80,7 +81,7 @@ Para obtener acceso a los servicios de ubicación en iOS, debe establecer las si
 - iOS 10 y versiones anteriores
     - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) : para usar los servicios de ubicación cuando la aplicación está en uso
     - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) : para usar los servicios de ubicación en todo momento    
-    
+
 Para admitir iOS 11 y versiones anteriores, puede incluir todas las claves de tres: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, y `NSLocationAlwaysUsageDescription`.
 
 La representación XML de estas claves en **Info.plist** se muestra a continuación. Debe actualizar el `string` valores para reflejar la forma en que la aplicación está utilizando la información de ubicación:

@@ -1,18 +1,18 @@
 ---
 title: Obtener información específica de la plataforma de creación
-description: Proveedores pueden crear sus propias características de la plataforma con efectos. Un efecto proporciona la funcionalidad específica, que, a continuación, se expone a través de una específica de la plataforma. El resultado es un efecto que puede consumir más fácilmente a través de XAML y a través de una API fluida de código. Este artículo demuestra cómo exponer un efecto a través de una específica de la plataforma.
+description: Este artículo demuestra cómo exponer un efecto a través de una específica de la plataforma.
 ms.prod: xamarin
 ms.assetid: 0D0E6274-6EF2-4D40-BB77-3D8E53BCD24B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/23/2016
-ms.openlocfilehash: dcd22dd0d4e281245a1f6598d9a58d24a97b1f20
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: a07ff2e206a08ee40355733ab2c1026f29de2f2f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848153"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242789"
 ---
 # <a name="creating-platform-specifics"></a>Obtener información específica de la plataforma de creación
 

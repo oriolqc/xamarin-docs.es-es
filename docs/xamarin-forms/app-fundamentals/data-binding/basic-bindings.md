@@ -1,19 +1,20 @@
 ---
-title: Enlaces básicos
-description: El contexto de enlace, orígenes y destinos de enlace de datos
+title: Enlaces de Xamarin.Forms Basic
+description: Este artículo explica cómo usar Xamarin.Forms enlace de datos, lo que vincula al menos un par de propiedades entre dos objetos, uno de los cuales es normalmente un objeto de interfaz de usuario. Estos dos objetos se denominan el destino y el origen.
 ms.prod: xamarin
 ms.assetid: 96553DF7-12EA-4FB2-AE85-3D1D59382B40
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 065258acacb8469b90dd2ca04286f0686dc90063
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f932b7dfbcccb8f1c6ccb726f5e48c2df6e93c6c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241694"
 ---
-# <a name="basic-bindings"></a>Enlaces básicos
+# <a name="xamarinforms-basic-bindings"></a>Enlaces de Xamarin.Forms Basic
 
 Un enlace de datos de Xamarin.Forms vincula un par de propiedades entre dos objetos, al menos uno de los cuales es normalmente un objeto de interfaz de usuario. Estos dos objetos se denominan el *destino* y *origen*:
 
@@ -47,7 +48,7 @@ Aunque los enlaces de datos normalmente se especifica completamente en XAML, es 
 
 El `Slider` se establece para un intervalo de 0 a 360. El propósito de este programa es girar el `Label` manipulando el `Slider`.
 
-Sin enlaces de datos, debe establecer el `ValueChanged` eventos de la `Slider` a un controlador de eventos que tiene acceso a la `Value` propiedad de la `Slider` y establece ese valor la `Rotation` propiedad de la `Label`. El enlace de datos automatiza ese trabajo; el controlador de eventos y el código en él ya no son necesarios. 
+Sin enlaces de datos, debe establecer el `ValueChanged` eventos de la `Slider` a un controlador de eventos que tiene acceso a la `Value` propiedad de la `Slider` y establece ese valor la `Rotation` propiedad de la `Label`. El enlace de datos automatiza ese trabajo; el controlador de eventos y el código en él ya no son necesarios.
 
 Puede establecer un enlace en una instancia de cualquier clase que deriva de [ `BindableObject` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BindableObject/), que incluye `Element`, `VisualElement`, `View`, y `View` derivados.  El enlace siempre se establece en el objeto de destino. El enlace hace referencia al objeto de origen. Para establecer el enlace de datos, utilice a los siguientes dos miembros de la clase de destino:
 
@@ -73,7 +74,7 @@ public partial class BasicCodeBindingPage : ContentPage
 
 La `Label` objeto es el destino de enlace, por lo que es el objeto en la que se establece esta propiedad y en el que se llama al método. El `BindingContext` propiedad indica el origen de enlace, que es el `Slider`.
 
-El `SetBinding` método se llama en el destino de enlace, pero especifica la propiedad de destino y la propiedad de origen. La propiedad de destino se especifica como un `BindableProperty` objeto: `Label.RotationProperty`. La propiedad de origen se especifica como una cadena e indica la `Value` propiedad de `Slider`. 
+El `SetBinding` método se llama en el destino de enlace, pero especifica la propiedad de destino y la propiedad de origen. La propiedad de destino se especifica como un `BindableProperty` objeto: `Label.RotationProperty`. La propiedad de origen se especifica como una cadena e indica la `Value` propiedad de `Slider`.
 
 El `SetBinding` método revela una de las reglas más importantes de los enlaces de datos:
 
@@ -120,7 +121,7 @@ El **enlace Xaml básico** es idéntica a la página **enlace código básico** 
 Al igual que en código, se establece el enlace de datos en el objeto de destino, que es el `Label`. Intervienen dos extensiones de marcado XAML. Estos son al instante reconocibles por los delimitadores de llave de apertura:
 
 - El `x:Reference` extensión de marcado es necesaria para hacer referencia al objeto de origen, que es el `Slider` denominado `slider`.
-- El `Binding` vínculos de extensión de marcado el `Rotation` propiedad de la `Label` a la `Value` propiedad de la `Slider`. 
+- El `Binding` vínculos de extensión de marcado el `Rotation` propiedad de la `Label` a la `Value` propiedad de la `Slider`.
 
 Vea el artículo [las extensiones de marcado de XAML](~/xamarin-forms/xaml/markup-extensions/index.md) para obtener más información acerca de las extensiones de marcado XAML. El `x:Reference` extensión de marcado es compatible con la [ `ReferenceExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.ReferenceExtension/) clase; `Binding` es compatible con la [ `BindingExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.BindingExtension/) clase. Como el código XML se indican los prefijos de espacio de nombres, `x:Reference` forma parte de la especificación de XAML 2009, mientras que `Binding` forma parte de Xamarin.Forms. Tenga en cuenta que no aparece ninguna marca de comillas entre las llaves.
 
@@ -185,13 +186,13 @@ public partial class AlternativeCodeBindingPage : ContentPage
 }
 ```
 
-El `Binding` constructor tiene 6 parámetros, por lo que el `source` parámetro se especifica con un argumento con nombre. El argumento es el `slider` objeto. 
+El `Binding` constructor tiene 6 parámetros, por lo que el `source` parámetro se especifica con un argumento con nombre. El argumento es el `slider` objeto.
 
 Ejecutar este programa puede resultar un poco sorprendente:
 
 [![Código alternativo enlace](basic-bindings-images/alternativecodebinding-small.png "enlace código alternativo")](basic-bindings-images/alternativecodebinding-large.png#lightbox "enlace código alternativo")
 
-La pantalla de iOS de la izquierda muestra el aspecto de la pantalla cuando la página aparece por primera vez. ¿Donde es el `Label`? 
+La pantalla de iOS de la izquierda muestra el aspecto de la pantalla cuando la página aparece por primera vez. ¿Donde es el `Label`?
 
 El problema es que el `Slider` tiene un valor inicial de 0. Esto hace que la `Scale` propiedad de la `Label` también se establezca en 0, reemplazar el valor predeterminado de 1. Esto da como resultado la `Label` siendo invisible inicialmente. Como demuestran las capturas de pantalla de plataforma Universal de Windows (UWP) y Android, puede manipular el `Slider` para realizar la `Label` aparecer de nuevo, pero su desaparición inicial es desconcertante.
 
@@ -246,7 +247,7 @@ Aunque las extensiones de marcado XAML normalmente están delimitadas por llaves
                  Path="Value" />
     </Label.Scale>
 </Label>
-``` 
+```
 
 Ahora el `Source` y `Path` propiedades son atributos normales de XAML: los valores aparecen entre comillas y los atributos no están separados por una coma. El `x:Reference` extensión de marcado también puede convertirse en un elemento de objeto:
 
@@ -267,9 +268,9 @@ Ahora el `Source` y `Path` propiedades son atributos normales de XAML: los valor
 
 Esta sintaxis no es común, pero a veces es necesario cuando se trata de objetos complejos.
 
-Establecen los ejemplos mostrados hasta ahora la `BindingContext` propiedad y el `Source` propiedad de `Binding` a una `x:Reference` extensión de marcado para hacer referencia a otra vista en la página. Estas dos propiedades son de tipo `Object`, y se pueden establecer en cualquier objeto que incluye propiedades que son adecuados para orígenes de enlace. 
+Establecen los ejemplos mostrados hasta ahora la `BindingContext` propiedad y el `Source` propiedad de `Binding` a una `x:Reference` extensión de marcado para hacer referencia a otra vista en la página. Estas dos propiedades son de tipo `Object`, y se pueden establecer en cualquier objeto que incluye propiedades que son adecuados para orígenes de enlace.
 
-En los artículos con antelación, descubrirá que puede establecer el `BindingContext` o `Source` propiedad a una `x:Static` extensión de marcado para hacer referencia al valor de una propiedad estática o un campo, o un `StaticResource` extensión de marcado para hacer referencia a un objeto almacenado en un diccionario de recursos, o directamente a un objeto, que suele ser (pero no siempre) una instancia de un modelo de vista. 
+En los artículos con antelación, descubrirá que puede establecer el `BindingContext` o `Source` propiedad a una `x:Static` extensión de marcado para hacer referencia al valor de una propiedad estática o un campo, o un `StaticResource` extensión de marcado para hacer referencia a un objeto almacenado en un diccionario de recursos, o directamente a un objeto, que suele ser (pero no siempre) una instancia de un modelo de vista.
 
 El `BindingContext` propiedad también puede establecerse en un `Binding` objeto para que la `Source` y `Path` propiedades de `Binding` definir el contexto de enlace.
 
@@ -294,7 +295,7 @@ El **herencia de contexto de enlace** ejemplo es una simple demostración de la 
 
         <StackLayout VerticalOptions="FillAndExpand"
                      BindingContext="{x:Reference slider}">
-            
+
             <Label Text="TEXT"
                    FontSize="80"
                    HorizontalOptions="Center"
@@ -309,14 +310,14 @@ El **herencia de contexto de enlace** ejemplo es una simple demostración de la 
                      Rotation="{Binding Value}" />
         </StackLayout>
 
-        <Slider x:Name="slider" 
+        <Slider x:Name="slider"
                 Maximum="360" />
-        
+
     </StackLayout>
 </ContentPage>
 ```
 
-El `BindingContext` propiedad de la `StackLayout` está establecido en el `slider` objeto. Este contexto de enlace es heredada por ambos el `Label` y `BoxView`, ambos de que tienen sus `Rotation` propiedades establecidas en el `Value` propiedad de la `Slider`: 
+El `BindingContext` propiedad de la `StackLayout` está establecido en el `slider` objeto. Este contexto de enlace es heredada por ambos el `Label` y `BoxView`, ambos de que tienen sus `Rotation` propiedades establecidas en el `Value` propiedad de la `Slider`:
 
 [![Herencia de contexto de enlace](basic-bindings-images/bindingcontextinheritance-small.png "herencia de contexto de enlace")](basic-bindings-images/bindingcontextinheritance-large.png#lightbox "herencia de contexto de enlace")
 

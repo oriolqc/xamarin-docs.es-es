@@ -1,16 +1,18 @@
 ---
 title: Orígenes de vídeo de enlace para el Reproductor
+description: Este artículo explica cómo enlazar orígenes de vídeo en el Reproductor de vídeo, uso de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 504E0C7E-051A-4AF2-B654-BAB4D0957928
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: bebf6fd905dd374822eb6974b28f1ac92a36c1bc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b0efdc1a20f52231f15b7a08eb86962e2079c678
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240035"
 ---
 # <a name="binding-video-sources-to-the-player"></a>Orígenes de vídeo de enlace para el Reproductor
 
@@ -27,7 +29,7 @@ Cuando el `Source` propiedad de la `VideoPlayer` ver se estableció como un nuev
             <RowDefinition Height="2*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+
         <video:VideoPlayer x:Name="videoPlayer"
                            Grid.Row="0" />
 

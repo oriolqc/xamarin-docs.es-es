@@ -1,16 +1,18 @@
 ---
 title: Resúmenes de capítulo para crear aplicaciones móviles con Xamarin.Forms
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: resúmenes de capítulo'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 14A1A56C-CE91-4F86-BCF2-A4CB055A861E
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 491d5dce6978f40ace877005b47e7f8c68c5a1c1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c955de49fb87dd2e284499664fdea35df20351f5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241743"
 ---
 # <a name="chapter-summaries-for-creating-mobile-apps-with-xamarinforms"></a>Resúmenes de capítulo para crear aplicaciones móviles con Xamarin.Forms
 

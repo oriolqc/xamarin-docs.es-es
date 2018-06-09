@@ -1,18 +1,20 @@
 ---
-title: Prefacio
+title: Prefacio para desarrollo de aplicaciones de empresa
+description: Este capítulo proporciona un prefacio para patrones de aplicación de empresa mediante Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: fbf32a44-1d33-4e16-a904-dc7ee5991e7c
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: e9dd5f663fc98ac1e869721517e9a3d0fb2033bb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fd085d2fb12e82233f6d3be2e2773a84539f837b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242373"
 ---
-# <a name="preface"></a>Prefacio
+# <a name="preface-to-enterprise-app-development"></a>Prefacio para desarrollo de aplicaciones de empresa
 
 Este libro electrónico proporciona una guía sobre la creación de aplicaciones de empresa entre plataformas con Xamarin.Forms. Xamarin.Forms es un Kit de herramientas de interfaz de usuario entre plataformas que permite a los desarrolladores crear fácilmente usuario nativos diseños de interfaz que se pueden compartir entre plataformas, como la plataforma Universal de Windows (UWP), iOS y Android. Proporciona una solución completa para la empresa empleado (B2E), negocio a negocio (B2B) y empresariales para las aplicaciones de consumidor (B2C), ofrece la capacidad de compartir código entre todas las plataformas de destino y para ayudar a reducir el costo total de propiedad (TCO).
 

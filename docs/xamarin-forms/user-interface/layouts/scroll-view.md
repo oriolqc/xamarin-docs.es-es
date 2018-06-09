@@ -1,20 +1,20 @@
 ---
-title: ScrollView
-description: Usar ScrollView para presentar los diseños que no se pueden ajustar en una única pantalla y tienen contenido dejar espacio para el teclado.
+title: Xamarin.Forms ScrollView
+description: En este artículo se explica cómo usar la clase Xamarin.Forms ScrollView para presentar los diseños que no cabe en una sola pantalla, y que tienen contenido dejar espacio para el teclado.
 ms.prod: xamarin
 ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/22/2016
-ms.openlocfilehash: 708fb39aa2e56861a8c9fc47ab30bd20ed20188e
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 72897013842d464ff9d46825e2b111efbaeb79b8
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847542"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245239"
 ---
-# <a name="scrollview"></a>ScrollView
+# <a name="xamarinforms-scrollview"></a>Xamarin.Forms ScrollView
 
 [`ScrollView`](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) contiene diseños y les permite desplazamiento fuera de la pantalla. `ScrollView` También se utiliza para permitir que las vistas se mueva automáticamente a la parte visible de la pantalla cuando se muestra el teclado.
 

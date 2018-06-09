@@ -1,17 +1,18 @@
 ---
 title: Conceptos básicos de XAML de Xamarin.Forms
-description: Introducción a marcado de multiplataforma para dispositivos móviles
+description: Esta guía explica cómo empezar a trabajar con XAML multiplataforma para dispositivos móviles. XAML permite a los desarrolladores definir las interfaces de usuario en aplicaciones de Xamarin.Forms mediante marcado en lugar del código.
 ms.prod: xamarin
 ms.assetid: 67CC2CD6-D10A-4B14-9696-1D3A410EFFBF
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 991d928c2c58f05098a41c84aba295a31636ab96
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 627267b95bb2d810a60f84c51e38bf5387fe1f99
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245968"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Conceptos básicos de XAML de Xamarin.Forms
 

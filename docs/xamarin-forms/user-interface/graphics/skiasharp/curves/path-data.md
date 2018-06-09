@@ -1,19 +1,20 @@
 ---
-title: Datos de ruta de acceso SVG
-description: Definir rutas de acceso mediante cadenas de texto en el formato de gráficos vectoriales escalables
+title: Datos de ruta de acceso SVG en SkiaSharp
+description: En este artículo se explica cómo definir rutas de acceso de SkiaSharp mediante cadenas de texto en el formato de gráficos vectoriales escalables y se muestra cómo hacerlo con código de ejemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: charlespetzold
 ms.author: chape
 ms.date: 05/24/2017
-ms.openlocfilehash: fe9699894224d9a33b3a79e9b5bcd4cd41c635dd
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 0453374c59c3b12842b7fb1524cc150329d84b7f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243979"
 ---
-# <a name="svg-path-data"></a>Datos de ruta de acceso SVG
+# <a name="svg-path-data-in-skiasharp"></a>Datos de ruta de acceso SVG en SkiaSharp
 
 _Definir rutas de acceso mediante cadenas de texto en el formato de gráficos vectoriales escalables_
 
@@ -65,7 +66,7 @@ L x y ...
 
 Este comando agrega una línea recta (o líneas) a la ruta de acceso y establece la nueva posición actual hasta el final de la última línea. Puede seguir el `L` con varios pares de *x* y *y* coordenadas.
 
-## <a name="horizontal-lineto"></a>**Horizontal LineTo**
+## <a name="horizontal-lineto"></a>**LineTo horizontal**
 
 ```csharp
 H x ...

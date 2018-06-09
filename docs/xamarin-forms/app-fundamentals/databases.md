@@ -1,5 +1,5 @@
 ---
-title: Bases de datos locales
+title: Bases de datos Local de Xamarin.Forms
 description: Xamarin.Forms es compatible con aplicaciones orientadas a base de datos mediante el motor de base de datos de SQLite, lo que permite cargar y guardar los objetos en el código compartido. Este artículo describe cómo pueden leer y escribir datos en una base de datos local de SQLite mediante SQLite.Net aplicaciones de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
-ms.openlocfilehash: d97fc792e2eb14f7e432d377811d1318c99b9602
-ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
+ms.openlocfilehash: 91df4d36dd8d98712063a30773f927a82676b18e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34689453"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243615"
 ---
-# <a name="local-databases"></a>Bases de datos locales
+# <a name="xamarinforms-local-databases"></a>Bases de datos Local de Xamarin.Forms
 
 _Xamarin.Forms es compatible con aplicaciones orientadas a base de datos mediante el motor de base de datos de SQLite, lo que permite cargar y guardar los objetos en el código compartido. Este artículo describe cómo pueden leer y escribir datos en una base de datos local de SQLite mediante SQLite.Net aplicaciones de Xamarin.Forms._
 

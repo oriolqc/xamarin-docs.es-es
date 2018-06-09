@@ -1,33 +1,25 @@
 ---
-title: Estilos
-description: Texto de estilo de Xamarin.Forms
+title: Estilos de texto de Xamarin.Forms
+description: Este artículo se explica cómo la aplicación de estilos al texto en las aplicaciones de Xamarin.Forms. Estilos pueden definirse una vez y utilizados por muchas vistas, pero un estilo sólo puede utilizarse con las vistas de un tipo.
 ms.prod: xamarin
 ms.assetid: 57C0CFD6-A568-46B8-ADA1-BF25681893CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 42d5da5c4171347de8c4befc773e498803fd9f36
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b8cc6493c3574180e7938050075c5a70ecebeebf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848452"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245327"
 ---
-# <a name="styles"></a>Estilos
+# <a name="xamarinforms-text-styles"></a>Estilos de texto de Xamarin.Forms
 
-_Texto de estilo de Xamarin.Forms_
-
+_Aplicación de estilos al texto de Xamarin.Forms_
 
 Estilos pueden usarse para ajustar la apariencia de las etiquetas, las entradas y editores. Estilos pueden definirse una vez y utilizados por muchas vistas, pero un estilo sólo puede utilizarse con las vistas de un tipo.
 Estilos pueden indicarse un `Key` y aplicar selectivamente mediante un control específico `Style` propiedad.
-
-En este artículo se tratan los siguientes temas:
-
-- **[Estilos integrados](#Built-In_Styles)**  &ndash; utiliza los estilos integrados para vistas basadas en texto de estilo a lo largo de la aplicación.
-- **[Estilos personalizados](#Custom_Styles)**  &ndash; definir estilos personalizados cuando las opciones integradas no son suficientes.
-- **[Aplicar estilos](#Applying_Styles)**  &ndash; estilos integrados y personalizados se aplican a las vistas.
-- **[Accesibilidad](#Accessibility)**  &ndash; Asegúrese de que texto respeta la configuración de accesibilidad.
 
 <a name="Built-In_Styles" />
 

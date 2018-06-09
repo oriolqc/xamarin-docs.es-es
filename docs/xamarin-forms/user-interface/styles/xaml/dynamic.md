@@ -1,20 +1,20 @@
 ---
-title: Estilos dinámicos
-description: Estilos no responder a los cambios de propiedad y permanecen sin cambios para la duración de una aplicación. Por ejemplo, después de asignar un estilo a un elemento visual, si se modifica una de las instancias de establecedor, quitar, o una nueva instancia de establecedor agregado, los cambios no se aplicarán al elemento visual. Sin embargo, las aplicaciones pueden responder a los cambios de estilo dinámicamente en tiempo de ejecución mediante el uso de recursos dinámicos.
+title: Estilos dinámicos de Xamarin.Forms
+description: Este artículo explica cómo una aplicación de Xamarin.Forms puede responder a los cambios de estilo dinámicamente en tiempo de ejecución mediante el uso de recursos dinámicos.
 ms.prod: xamarin
 ms.assetid: 13D4FA4B-DF10-42BF-B001-2C49367FC216
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: e0cfcbaef70f58622a21315637279740f568ada8
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 0f82e0cfde29921ea768000f17b93d04f8ad307e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848075"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245226"
 ---
-# <a name="dynamic-styles"></a>Estilos dinámicos
+# <a name="dynamic-styles-in-xamarinforms"></a>Estilos dinámicos de Xamarin.Forms
 
 _Estilos no responder a los cambios de propiedad y permanecen sin cambios para la duración de una aplicación. Por ejemplo, después de asignar un estilo a un elemento visual, si se modifica una de las instancias de establecedor, quitar, o una nueva instancia de establecedor agregado, los cambios no se aplicarán al elemento visual. Sin embargo, las aplicaciones pueden responder a los cambios de estilo dinámicamente en tiempo de ejecución mediante el uso de recursos dinámicos._
 

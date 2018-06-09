@@ -1,19 +1,20 @@
 ---
-title: Representadores personalizados
-description: Interfaces de usuario de Xamarin.Forms se representan mediante los controles nativos de la plataforma de destino, permita que las aplicaciones de Xamarin.Forms conservar la apariencia y funcionamiento adecuada para cada plataforma. Representadores personalizados permiten a los desarrolladores invalidar este proceso para personalizar la apariencia y comportamiento de los controles de Xamarin.Forms en cada plataforma.
+title: Representadores personalizados Xamarin.Forms
+description: Representadores personalizados permiten a los desarrolladores reemplazar la representación de los controles nativos en cada plataforma, para personalizar la apariencia y comportamiento de los controles de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 6a2ee4b09426e6b4ff6dac7e1fd5221fc5b6d750
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a88462052906e68fd85a07161e8b5bb63a61e69d
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239895"
 ---
-# <a name="custom-renderers"></a>Representadores personalizados
+# <a name="xamarinforms-custom-renderers"></a>Representadores personalizados Xamarin.Forms
 
 _Interfaces de usuario de Xamarin.Forms se representan mediante los controles nativos de la plataforma de destino, permita que las aplicaciones de Xamarin.Forms conservar la apariencia y funcionamiento adecuada para cada plataforma. Representadores personalizados permiten a los desarrolladores invalidar este proceso para personalizar la apariencia y comportamiento de los controles de Xamarin.Forms en cada plataforma._
 
@@ -55,7 +56,7 @@ En este artículo se muestra cómo crear un representador personalizado para un 
 
 ## <a name="implementing-a-video-playervideo-playerindexmd"></a>[Implementar un Reproductor de vídeo](video-player/index.md)
 
-Este artículo muestra cómo escribir representadores para implementar un personalizado `VideoPlayer` control que puede reproducir vídeos desde la web, los vídeos que se incrustan como recursos de la aplicación o los vídeos almacenados en la biblioteca de vídeos en el dispositivo del usuario. Se muestran varias técnicas, incluida la implementación de métodos y propiedades enlazables de solo lectura. 
+Este artículo muestra cómo escribir representadores para implementar un personalizado `VideoPlayer` control que puede reproducir vídeos desde la web, los vídeos que se incrustan como recursos de la aplicación o los vídeos almacenados en la biblioteca de vídeos en el dispositivo del usuario. Se muestran varias técnicas, incluida la implementación de métodos y propiedades enlazables de solo lectura.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

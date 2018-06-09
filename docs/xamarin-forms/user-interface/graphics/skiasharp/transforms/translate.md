@@ -1,17 +1,18 @@
 ---
 title: La transformación de traducción
-description: Obtenga información acerca de cómo usar la transformación de traslación de desplazamiento SkiaSharp gráficos
+description: Este artículo examiens cómo usar la transformación de traslación de desplazamiento SkiaSharp gráficos en aplicaciones de Xamarin.Forms y se muestra cómo hacerlo con código de ejemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: BD28ADA1-49F9-44E2-A548-46024A29882F
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 98bf81df3eed951893c6bb717d933cfb61e029d3
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: dbc7ffe5c3828876579ba72a387c86d8221c1641
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244827"
 ---
 # <a name="the-translate-transform"></a>La transformación de traducción
 

@@ -1,17 +1,18 @@
 ---
 title: Autenticar a los usuarios con aplicaciones móviles de Azure
-description: Aplicaciones móviles de Azure utilizar una variedad de proveedores de identidades externo para admitir autenticar y autorizar usuarios de la aplicación, como Facebook, Google, Microsoft, Twitter y Azure Active Directory. Para restringir el acceso a los usuarios autenticados solo se pueden establecer permisos en las tablas. Este artículo explica cómo usar aplicaciones móviles de Azure para administrar el proceso de autenticación en una aplicación de Xamarin.Forms.
+description: Este artículo explica cómo usar aplicaciones móviles de Azure para administrar el proceso de autenticación en una aplicación de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: D50D6F56-8B19-44E7-81F3-E0E1C6E240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: 5f5c69601c11a3c0d25bc804c60883841b0fb30d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fc6206a22d7527ea38a39ab034c424bfe7730abb
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241720"
 ---
 # <a name="authenticating-users-with-azure-mobile-apps"></a>Autenticar a los usuarios con aplicaciones móviles de Azure
 
@@ -185,7 +186,7 @@ Este artículo explica cómo usar aplicaciones móviles de Azure para administra
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [TodoAzureAuth (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzureAuth/)
+- [TodoAzureAuth (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzureAuth/)
 - [Consumir una aplicación móvil de Azure](~/xamarin-forms/data-cloud/consuming/azure.md)
 - [Agregar autenticación a la aplicación de Xamarin.Forms](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users/)
 - [Cliente móvil Azure SDK](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

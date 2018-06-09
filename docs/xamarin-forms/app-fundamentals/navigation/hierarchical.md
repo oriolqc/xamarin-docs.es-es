@@ -1,18 +1,18 @@
 ---
 title: Navegación jerárquica
-description: La clase NavigationPage proporciona una experiencia de navegación jerárquica donde el usuario tiene permiso navegar a través de páginas hacia delante y hacia atrás, según sea necesario. La clase implementa navegación como una pila, último en salir (LIFO) de objetos de la página. En este artículo se muestra cómo utilizar la clase NavigationPage para realizar la navegación en una pila de páginas.
+description: En este artículo se muestra cómo utilizar la clase NavigationPage para realizar la navegación en una pila de última páginas salir (LIFO).
 ms.prod: xamarin
 ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2017
-ms.openlocfilehash: 49be5b812c5ef66907e7ebf74906c25bfbb076b6
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 20dfb6e935d08c35da73a81fb401a613aa6c9bac
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847168"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242461"
 ---
 # <a name="hierarchical-navigation"></a>Navegación jerárquica
 
@@ -48,7 +48,7 @@ El diseño de un [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xam
 
 - En iOS, una barra de navegación está presente en la parte superior de la página que muestra un título y que tenga un *volver* botón que se devuelve a la página anterior.
 - En Android, está presente en la parte superior de la página que muestra un título, un icono, una barra de navegación y un *volver* botón que se devuelve a la página anterior. El icono se define en el `[Activity]` atributo que decora el `MainActivity` clase en el proyecto específico de la plataforma Android.
-- En la plataforma Universal de Windows está presente en la parte superior de la página que muestra un título de una barra de navegación. 
+- En la plataforma Universal de Windows está presente en la parte superior de la página que muestra un título de una barra de navegación.
 
 En todas las plataformas, el valor de la [ `Page.Title` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.Title/) propiedad aparecerá como el título de página.
 

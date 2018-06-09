@@ -1,18 +1,18 @@
 ---
 title: Agregar un reconocedor de gesto de alejar
-description: El gesto de alejar se usa para llevar a cabo zoom interactivo y se implementa con la clase PinchGestureRecognizer. Es un escenario común para el gesto de alejar hacer zoom interactivo de una imagen en la ubicación de esta posibilidad. Esto se logra mediante el ajuste de escala en el contenido de la ventanilla y se muestra en este artículo.
+description: Este artículo explica cómo usar el gesto de alejar para hacer zoom interactivo de una imagen en la ubicación de esta posibilidad.
 ms.prod: xamarin
 ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: b2348a1f0dfacc4a7a0e37f5c9041a07217ff802
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 3600a8bf059bf29429cce35a233cc6618daa4d79
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846118"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241782"
 ---
 # <a name="adding-a-pinch-gesture-recognizer"></a>Agregar un reconocedor de gesto de alejar
 

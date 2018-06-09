@@ -1,23 +1,24 @@
 ---
 title: Celdas de Xamarin.Forms
-description: Las celdas de Xamarin.Forms se pueden agregar a ListView y TableViews.
+description: Las celdas de Xamarin.Forms se pueden agregar a ListView y TableViews. Este artículo enumeran las celdas incluidas en Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 77DA0C89-35D6-4C09-A072-3ADE53FD56CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: dbc28f3d58b43bb53db39da2dcdf1ba722169264
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 0947027b43eacd0bac269ebf7a779746e0d22866
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243361"
 ---
 # <a name="xamarinforms-cells"></a>Celdas de Xamarin.Forms
 
 _Las celdas de Xamarin.Forms se pueden agregar a ListView y TableViews._
 
-A *celda* es un elemento especializado utilizado para los elementos de una tabla y se describe cómo se debe representar cada elemento de una lista. El [ `Cell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) clase se deriva de [ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/), desde el que [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/) también se deriva. Una celda no es un elemento visual; en su lugar, es una plantilla para crear un elemento visual. 
+A *celda* es un elemento especializado utilizado para los elementos de una tabla y se describe cómo se debe representar cada elemento de una lista. El [ `Cell` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Cell/) clase se deriva de [ `Element` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/), desde el que [ `VisualElement` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Element/) también se deriva. Una celda no es un elemento visual; en su lugar, es una plantilla para crear un elemento visual.
 
 `Cell` se utiliza exclusivamente con [ `ListView` ](views.md#listView) y [ `TableView` ](views.md#tableView) controles. Para obtener información sobre cómo usar y personalizar las celdas, consulte el [ `ListView` ](~/xamarin-forms/user-interface/listview/index.md) y [ `TableView` ](~/xamarin-forms/user-interface/tableview.md) documentación.
 

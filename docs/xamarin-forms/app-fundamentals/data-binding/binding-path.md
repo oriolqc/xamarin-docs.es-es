@@ -1,19 +1,20 @@
 ---
-title: Ruta de acceso de enlace
-description: Utilizar los enlaces de datos a las subpropiedades de acceso y miembros de colección
+title: Ruta de acceso de enlace de Xamarin.Forms
+description: Este artículo explica cómo usar enlaces de datos de Xamarin.Forms para tener acceso a miembros de la colección con la propiedad de ruta de acceso de la clase de enlace y subpropiedades.
 ms.prod: xamarin
 ms.assetid: 3CF721A5-E157-468B-AD3A-DA0A45E58E8D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: f75cfcf4bfd5ffa71699f62b30145b732421d964
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d7c3b1ba991380451b4a82c389c4d46e950bc914
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240478"
 ---
-# <a name="binding-path"></a>Ruta de acceso de enlace
+# <a name="xamarinforms-binding-path"></a>Ruta de acceso de enlace de Xamarin.Forms
 
 En todos los ejemplos de enlace de datos anteriores, el [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.Path/) propiedad de la `Binding` clase (o la [ `Path` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.Path/) propiedad de la `Binding` extensión de marcado) se ha establecido para una sola propiedad. En realidad es posible establecer `Path` a una *subpropiedad* (una propiedad de una propiedad), o a un miembro de una colección.
 
@@ -29,7 +30,7 @@ El `Time` propiedad de `TimePicker` es de tipo `TimeSpan`, pero es posible que d
 {Binding Source={x:Reference timePicker},
          Path=Time.TotalSeconds}
 ```
-         
+
 El `Time` propiedad es de tipo `TimeSpan`, que tiene un `TotalSeconds` propiedad. El `Time` y `TotalSeconds` propiedades son simply conectados con un punto. Los elementos de la `Path` cadena siempre hacen referencia a propiedades y no a los tipos de estas propiedades.
 
 Que se muestran en el ejemplo se y varios otros en el **variaciones de la ruta de acceso** página:
@@ -50,7 +51,7 @@ Que se muestran en el ejemplo se y varios otros en el **variaciones de la ruta d
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout Margin="10, 0">
         <TimePicker x:Name="timePicker" />
 
@@ -61,7 +62,7 @@ Que se muestran en el ejemplo se y varios otros en el **variaciones de la ruta d
         <Label Text="{Binding Source={x:Reference page},
                               Path=Content.Children.Count,
                               StringFormat='There are {0} children in this StackLayout'}" />
-        
+
         <Label Text="{Binding Source={x:Static globe:CultureInfo.CurrentCulture},
                               Path=DateTimeFormat.DayNames[3],
                               StringFormat='The middle day of the week is {0}'}" />
@@ -156,7 +157,7 @@ Que muestra el tipo del origen de enlace, o `DataBindingDemos.PathVariationsPage
 
 El tipo de la `Content` propiedad ahora se revele a ser `Xamarin.Forms.StackLayout`. Agregar el `Children` propiedad a la `Path` y el tipo es `Xamarin.Forms.ElementCollection'1[Xamarin.Forms.View]`, que es una clase interna de Xamarin.Forms, pero obviamente un tipo de colección. Agregar un índice a la que y el tipo es `Xamarin.Forms.Label`. Continuar de esta manera.
 
-Como Xamarin.Forms procesa la ruta de acceso de enlace, instala un `PropertyChanged` controlador sobre cualquier objeto en la ruta de acceso que implementa el `INotifyPropertyChanged` interfaz. Por ejemplo, el enlace final reacciona a un cambio en la primera `Label` porque el `Text` cambios de propiedad. 
+Como Xamarin.Forms procesa la ruta de acceso de enlace, instala un `PropertyChanged` controlador sobre cualquier objeto en la ruta de acceso que implementa el `INotifyPropertyChanged` interfaz. Por ejemplo, el enlace final reacciona a un cambio en la primera `Label` porque el `Text` cambios de propiedad.
 
 Si una propiedad en la ruta de acceso de enlace no implementa `INotifyPropertyChanged`, se pasará por alto los cambios en esa propiedad. Algunos cambios podrían invalidar completamente la ruta de acceso de enlace, por lo que debe usar esta técnica solo cuando la cadena de propiedades y subpropiedades nunca se convierten en no válido.
 

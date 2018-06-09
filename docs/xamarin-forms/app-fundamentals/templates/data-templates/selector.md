@@ -1,20 +1,20 @@
 ---
-title: Crear un DataTemplateSelector
-description: Un DataTemplateSelector puede utilizarse para elegir una plantilla de datos en tiempo de ejecución en función del valor de una propiedad enlazada a datos. Esto permite que varios DataTemplates aplicarse en el mismo tipo de objeto, para personalizar la apariencia de los objetos concretos. Este artículo demuestra cómo crear y consumir un DataTemplateSelector.
+title: Crear un Xamarin.Forms DataTemplateSelector
+description: Este artículo demuestra cómo crear y consumir un DataTemplateSelector, que se puede usar para elegir una plantilla de datos en tiempo de ejecución en función del valor de una propiedad enlazada a datos.
 ms.prod: xamarin
 ms.assetid: A4629E8F-2BAF-45CE-A76E-DF225FE8D26C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: ad8cce32cb9cfe2ea5e78f11b1250440371a9851
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 5e1f9e4ef3aa7f9c415427e280d9bdd05dfbd13c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847197"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240657"
 ---
-# <a name="creating-a-datatemplateselector"></a>Crear un DataTemplateSelector
+# <a name="creating-a-xamarinforms-datatemplateselector"></a>Crear un Xamarin.Forms DataTemplateSelector
 
 _Un DataTemplateSelector puede utilizarse para elegir una plantilla de datos en tiempo de ejecución en función del valor de una propiedad enlazada a datos. Esto permite que varios DataTemplates aplicarse en el mismo tipo de objeto, para personalizar la apariencia de los objetos concretos. Este artículo demuestra cómo crear y consumir un DataTemplateSelector._
 

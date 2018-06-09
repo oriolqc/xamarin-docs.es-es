@@ -1,18 +1,18 @@
 ---
 title: Implementar un HybridWebView
-description: Xamarin.Forms controles de la interfaz de usuario personalizado deben derivar de la clase de vista, que se utiliza para colocar controles en la pantalla y diseños. Este artículo demuestra cómo crear a un representador personalizado para un control personalizado HybridWebView, que muestra cómo mejorar los controles específicos de la plataforma web para permitir que el código de C# que se debe invocar desde JavaScript.
+description: Este artículo demuestra cómo crear a un representador personalizado para un control personalizado HybridWebView, que muestra cómo mejorar los controles específicos de la plataforma web para permitir que el código de C# que se debe invocar desde JavaScript.
 ms.prod: xamarin
 ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 3926fd5c19ad187deef16c4beb0812b3947e9544
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: d2cce7598fde4cf59a91940161e605860847623e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847246"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241304"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementar un HybridWebView
 

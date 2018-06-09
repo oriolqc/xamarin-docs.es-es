@@ -1,17 +1,18 @@
 ---
 title: La transformación de giro
-description: Explorar los efectos y animaciones posibles con la transformación de giro SkiaSharp
+description: Este artículo explora las animaciones posibles con la transformación de giro SkiaSharp y los efectos y se muestra cómo hacerlo con código de ejemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
 author: charlespetzold
 ms.author: chape
 ms.date: 03/23/2017
-ms.openlocfilehash: 354844f69c0b8755a15a3325c39e35b97d44f94d
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 514ecd16fedd7d3fda39fe20641cf0ee9ecb119e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244625"
 ---
 # <a name="the-rotate-transform"></a>La transformación de giro
 
@@ -37,7 +38,7 @@ Las fórmulas de transformación de giro son más complejas que los de traducir 
 
 x' = x•cos(α) – y•sin(α)   
 
-y` = x•sin(α) + y•cos(α)
+y' = x•sin(α) + y•cos(α)
 
 El **girar básica** página muestra el `RotateDegrees` método. El [ `BasicRotate.xaml.cs` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicRotatePage.xaml.cs) archivo muestra parte del texto con su línea de base que se centra en la página y gira según un `Slider` con un intervalo de -360 a 360. Aquí es la parte pertinente de la `PaintSurface` controlador:
 

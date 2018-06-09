@@ -1,17 +1,18 @@
 ---
 title: Parte 5. Desde los enlaces de datos para MVVM
-description: 'El modelo de arquitectura Model-View-ViewModel (MVVM) se inventaron con XAML en mente. El patrón exige una separación entre tres capas de software: la interfaz de usuario XAML, llamada a la vista; los datos subyacentes, denominado el modelo; y llama a un intermediario entre la vista y el modelo, el modelo de vista. La vista y el modelo de vista a menudo se conectan a través de enlaces de datos definidos en el archivo XAML. BindingContext para la vista normalmente es una instancia del modelo de vista.'
+description: 'El patrón MVVM exige una separación entre tres capas de software: la interfaz de usuario XAML, llamada a la vista; los datos subyacentes, denominado el modelo; y llama a un intermediario entre la vista y el modelo, el modelo de vista.'
 ms.prod: xamarin
 ms.assetid: 48B37D44-4FB1-41B2-9A5E-6D383B041F81
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: 95cd79a4bd6da47757cfeb12a2862ccb5a66fee2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e9f38377299e8094162dd2d2d73174e6f2b40369
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245776"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. Desde los enlaces de datos para MVVM
 
@@ -649,7 +650,7 @@ public class PageDataViewModel
         };
     }
 
-    public static IList<PageDataViewModel> All { private set; get; } 
+    public static IList<PageDataViewModel> All { private set; get; }
 }
 ```
 

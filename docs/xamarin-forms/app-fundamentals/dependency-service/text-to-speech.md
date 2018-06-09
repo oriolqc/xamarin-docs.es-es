@@ -1,17 +1,18 @@
 ---
 title: Implementación de texto a voz
-description: Usar DependencyService para llamar a API de texto a voz nativo de la plataforma
+description: En este artículo se explica cómo usar la clase Xamarin.Forms DependencyService para llamar a la API nativa de texto a voz de cada plataforma.
 ms.prod: xamarin
 ms.assetid: 1D6164F9-4ECE-43A6-B583-1F5D5EFC1DDF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2017
-ms.openlocfilehash: c9cf700ea798ac316e806c40cb90eedc7ded9fa5
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: 5d9e7c74878ea6a095ba28a80fe1307493acbed5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241066"
 ---
 # <a name="implementing-text-to-speech"></a>Implementación de texto a voz
 

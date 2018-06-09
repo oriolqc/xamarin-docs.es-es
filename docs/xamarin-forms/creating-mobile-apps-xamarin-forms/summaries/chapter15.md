@@ -1,16 +1,18 @@
 ---
 title: Resumen de capítulo 15. La interfaz interactiva
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen de capítulo 15. La interfaz interactiva'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F54E86F4-1CDA-474E-9B09-242060C2C13D
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c5b2bc00c4337969322193966f26ce0e151f426e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: aac49c9e74dd22642396ea8daf5ee3abd85de7bf
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241902"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Resumen de capítulo 15. La interfaz interactiva
 
@@ -23,8 +25,8 @@ Xamarin.Forms contiene 20 clases se pueden crear instancias que se derivan de `V
 - `Label`: [ **Capítulo 2. Anatomía de una aplicación**](chapter02.md)
 - `BoxView`: [ **Capítulo 3. Desplazamiento de la pila**](chapter03.md)
 - `Button`: [ **Capítulo 6. Clics de botón**](chapter06.md)
-- `Image`: [ **Capítulo 13. Bitmaps**](chapter13.md)
-- `ActivityIndicator`: [ **Capítulo 13. Bitmaps**](chapter13.md)
+- `Image`: [ **Capítulo 13. Mapas de bits**](chapter13.md)
+- `ActivityIndicator`: [ **Capítulo 13. Mapas de bits**](chapter13.md)
 - `ProgressBar`: [ **14 del capítulo. AbsoluteLayout**](chapter14.md)
 
 Las vistas de ocho en este capítulo eficazmente permiten al usuario interactuar con los tipos de datos básicos de. NET:

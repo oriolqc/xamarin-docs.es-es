@@ -1,17 +1,18 @@
 ---
 title: Reproducir un vídeo de Web
+description: En este artículo se explica cómo reproducir vídeos de web en una aplicación de Reproductor de vídeo, uso de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 1d00861a9b6d7066212189aa4a59e786cb545f12
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f9b52398efbd189153ca74ce80433863b25bd578
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846752"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240982"
 ---
 # <a name="playing-a-web-video"></a>Reproducir un vídeo de Web
 
@@ -36,7 +37,7 @@ namespace FormsVideoLibrary
             set { SetValue(SourceProperty, value); }
             get { return (VideoSource)GetValue(SourceProperty); }
         }
-        
+
         // AutoPlay property
         public static readonly BindableProperty AutoPlayProperty =
             BindableProperty.Create(nameof(AutoPlay), typeof(bool), typeof(VideoPlayer), true);
@@ -169,7 +170,7 @@ namespace FormsVideoLibrary
             if (!String.IsNullOrWhiteSpace(value))
             {
                 Uri uri;
-                return Uri.TryCreate(value, UriKind.Absolute, out uri) && uri.Scheme != "file" ? 
+                return Uri.TryCreate(value, UriKind.Absolute, out uri) && uri.Scheme != "file" ?
                                 VideoSource.FromUri(value) : VideoSource.FromResource(value);
             }
 
@@ -482,7 +483,7 @@ De forma similar, puede suprimir la presentación de los controles de transporte
                    AreTransportControlsEnabled="False" />
 ```
 
-Si establece ambas propiedades en `false`, no empiece a reproducir el vídeo y no se generará ninguna manera para iniciarlo. Debe llamar a `Play` desde el archivo de código subyacente, o para crear sus propios controles de transporte como se describe en el artículo [implementar controles de transporte de vídeo personalizado](custom-transport.md). 
+Si establece ambas propiedades en `false`, no empiece a reproducir el vídeo y no se generará ninguna manera para iniciarlo. Debe llamar a `Play` desde el archivo de código subyacente, o para crear sus propios controles de transporte como se describe en el artículo [implementar controles de transporte de vídeo personalizado](custom-transport.md).
 
 El **App.xaml** archivo incluye recursos para dos vídeos adicionales:
 
@@ -502,7 +503,7 @@ El **App.xaml** archivo incluye recursos para dos vídeos adicionales:
 
             <video:UriVideoSource x:Key="Sintel"
                                   Uri="https://archive.org/download/Sintel/sintel-2048-stereo_512kb.mp4" />
-            
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

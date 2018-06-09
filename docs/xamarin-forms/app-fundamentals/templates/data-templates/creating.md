@@ -1,5 +1,5 @@
 ---
-title: Crear una plantilla de datos
+title: Crear una plantilla de datos de Xamarin.Forms
 description: Plantillas de datos pueden crearse en línea, en un ResourceDictionary, o desde un tipo personalizado o un tipo de celda Xamarin.Forms adecuado. Este artículo exploran cada técnica.
 ms.prod: xamarin
 ms.assetid: CFF4AB5E-9069-461C-84D8-F9F6C38510AB
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: c04f33f5956eadb677c55e01bea836815ad15462
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 8aa0ad693fd1a7f086492f93f18c1e33871dee0e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848504"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240517"
 ---
-# <a name="creating-a-datatemplate"></a>Crear una plantilla de datos
+# <a name="creating-a-xamarinforms-datatemplate"></a>Crear una plantilla de datos de Xamarin.Forms
 
 _Plantillas de datos pueden crearse en línea, en un ResourceDictionary, o desde un tipo personalizado o un tipo de celda Xamarin.Forms adecuado. Este artículo exploran cada técnica._
 

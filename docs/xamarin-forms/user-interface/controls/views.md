@@ -1,17 +1,18 @@
 ---
 title: Vistas de Xamarin.Forms
-description: Xamarin.Forms vistas son los bloques de creación de interfaces de usuario móviles entre plataformas.
+description: Xamarin.Forms vistas son los bloques de creación de interfaces de usuario móviles entre plataformas. Este artículo enumeran las vistas que se incluyen en Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: b370c27a212f876231764851c894bf683ae460c3
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 414df933716c7ce5d9422e8a2b9be89ba7eff3a9
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243523"
 ---
 # <a name="xamarinforms-views"></a>Vistas de Xamarin.Forms
 
@@ -69,7 +70,7 @@ Las vistas son objetos de interfaz de usuario, como etiquetas y botones, control
 
 |     |     |
 | --- | --- |
-| [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) es un objeto rectangular que muestra el texto, y que se activa un [ `Clicked` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Button.Clicked/) evento cuando se ha presionado.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) | [![Ejemplo de botón](views-images/Button.png "botón ejemplo")](views-images/Button-Large.png#lightbox "ejemplo de botón")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ButtonDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ButtonDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ButtonDemoPage.xaml.cs) |
+| [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) es un objeto rectangular que muestra el texto, y que se activa un [ `Clicked` ](https://developer.xamarin.com/api/event/Xamarin.Forms.Button.Clicked/) evento cuando se ha presionado.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) / [guía](~/xamarin-forms/user-interface/button.md) / [ejemplo](https://developer.xamarin.com/samples/UserInterface/ButtonDemos/) | [![Ejemplo de botón](views-images/Button.png "botón ejemplo")](views-images/Button-Large.png#lightbox "ejemplo de botón")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ButtonDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ButtonDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ButtonDemoPage.xaml.cs) |
 |     |     |
 
 ### <a name="searchbar"></a>SearchBar
@@ -79,7 +80,7 @@ Las vistas son objetos de interfaz de usuario, como etiquetas y botones, control
 | [`SearchBar`](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) muestra un área para el usuario escriba una cadena de texto y un botón (o una tecla del teclado) que indica a la aplicación para realizar una búsqueda. El [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.SearchBar.Text/) propiedad proporciona acceso al texto y el [ `SearchButtonPressed` ](https://developer.xamarin.com/api/event/Xamarin.Forms.SearchBar.SearchButtonPressed/) evento indica que se ha presionado el botón.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.SearchBar/) | [![Ejemplo de SearchBar](views-images/SearchBar.png "SearchBar ejemplo")](views-images/SearchBar-Large.png#lightbox "SearchBar ejemplo")<br /> [Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SearchBarDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml.cs) |
 |     |     |
 
-## <a name="views-for-setting-values"></a>Vistas para establecer valores 
+## <a name="views-for-setting-values"></a>Vistas para establecer valores
 
 ### <a name="slider"></a>Slider
 
@@ -95,7 +96,7 @@ Las vistas son objetos de interfaz de usuario, como etiquetas y botones, control
 | [`Stepper`](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/) permite al usuario seleccionar un `double` valor de un intervalo de valores incrementales especificados con la [ `Minimum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Minimum/), [ `Maximum` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Maximum/), y [ `Increment` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Stepper.Increment/) propiedades.<br /><br />[Documentación de la API](https://developer.xamarin.com/api/type/Xamarin.Forms.Stepper/) | [![Ejemplo paso a paso desencadene](views-images/Stepper.png "ejemplo paso a paso desencadene")](views-images/Stepper-Large.png#lightbox "ejemplo paso a paso desencadene")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
 |     |     |
 
-### <a name="switch"></a>Modificador 
+### <a name="switch"></a>Modificador
 
 |     |     |
 | --- | --- |

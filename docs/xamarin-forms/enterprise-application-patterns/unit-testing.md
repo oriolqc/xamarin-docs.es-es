@@ -1,18 +1,20 @@
 ---
-title: Pruebas unitarias
+title: Aplicaciones empresariales de pruebas de unidad
+description: Este capítulo explica cómo se realiza la prueba unitaria en la aplicación móvil eShopOnContainers.
 ms.prod: xamarin
 ms.assetid: 4af82e52-f99b-4cad-b278-1745f190c240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 57201a32f5ffc0ae962f6db851a25a737e1cb17d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 06cd89e0b0871eac723e8580340173f77821e4ed
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242536"
 ---
-# <a name="unit-testing"></a>Pruebas unitarias
+# <a name="unit-testing-enterprise-apps"></a>Aplicaciones empresariales de pruebas de unidad
 
 Aplicaciones móviles tengan problemas únicos que aplicaciones de escritorio y basada en web no tienen que preocuparse. Los usuarios móviles variarán los dispositivos que se utilicen, conectividad de red, por la disponibilidad de servicios y un intervalo de otros factores. Por lo tanto, deberán probarse aplicaciones móviles que se usará en el mundo real para mejorar su calidad, confiabilidad y rendimiento. Hay muchos tipos de pruebas que deben realizarse en una aplicación, incluidas las pruebas unitarias, pruebas de integración y pruebas con pruebas que se va a la forma más común de las pruebas unitarias de interfaz de usuario.
 

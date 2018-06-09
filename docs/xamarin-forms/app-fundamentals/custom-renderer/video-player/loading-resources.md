@@ -1,22 +1,24 @@
 ---
 title: La carga de vídeos de recursos de aplicación
+description: Este artículo explica cómo cargar vídeos almacenados como recursos de la aplicación en una aplicación de Reproductor de vídeo, uso de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: F75BD540-9354-4C17-A119-57F3DEC66D54
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 89c424ee80a4ebf6363a836e752b72ee9bc5cd5a
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: f28b0dc8e25cb2e498f4101175005f05a5c5a6ef
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241037"
 ---
 # <a name="loading-application-resource-videos"></a>La carga de vídeos de recursos de aplicación
 
 Los representadores personalizados para el `VideoPlayer` vista son capaces de reproducir archivos de vídeo que se han incrustado en los proyectos de plataforma individuales como recursos de la aplicación. Sin embargo, la versión actual de `VideoPlayer` no se puede obtener acceso a los recursos incrustados en una biblioteca de .NET estándar.
 
-Para cargar estos recursos, cree una instancia de `ResourceVideoSource` estableciendo el `Path` propiedad para el nombre de archivo (o la carpeta y el nombre) del recurso. Como alternativa, puede llamar el método estático `VideoSource.FromResource` método hagan referencia al recurso. A continuación, establezca el `ResourceVideoSource` el objeto a la `Source` propiedad de `VideoPlayer`. 
+Para cargar estos recursos, cree una instancia de `ResourceVideoSource` estableciendo el `Path` propiedad para el nombre de archivo (o la carpeta y el nombre) del recurso. Como alternativa, puede llamar el método estático `VideoSource.FromResource` método hagan referencia al recurso. A continuación, establezca el `ResourceVideoSource` el objeto a la `Source` propiedad de `VideoPlayer`.
 
 ## <a name="storing-the-video-files"></a>Almacenar los archivos de vídeo
 
@@ -30,13 +32,13 @@ En el **VideoPlayerDemos** solución, el **VideoPlayerDemos.iOS** proyecto conti
 
 ### <a name="android-video-resources"></a>Recursos de vídeo Android
 
-En un proyecto Android, vídeos deben almacenarse en una subcarpeta de **recursos** denominado **sin formato**. El **sin formato** carpeta no puede contener las subcarpetas. Asigne al archivo de vídeo una `Build Action` de `AndroidResource`. Establecer el `Path` propiedad de `ResourceVideoSource` para el nombre de archivo, por ejemplo, **MyFile.mp4**. 
+En un proyecto Android, vídeos deben almacenarse en una subcarpeta de **recursos** denominado **sin formato**. El **sin formato** carpeta no puede contener las subcarpetas. Asigne al archivo de vídeo una `Build Action` de `AndroidResource`. Establecer el `Path` propiedad de `ResourceVideoSource` para el nombre de archivo, por ejemplo, **MyFile.mp4**.
 
-El **VideoPlayerDemos.Android** proyecto contiene una subcarpeta de **recursos** denominado **sin formato**, que contiene un archivo denominado **AndroidApiVideo.mp4**. 
+El **VideoPlayerDemos.Android** proyecto contiene una subcarpeta de **recursos** denominado **sin formato**, que contiene un archivo denominado **AndroidApiVideo.mp4**.
 
 ### <a name="uwp-video-resources"></a>Recursos de vídeo de UWP
 
-En un proyecto de plataforma Universal de Windows, puede almacenar vídeos en cualquier carpeta del proyecto. Asigne al archivo un `Build Action` de `Content`. Establecer el `Path` propiedad de `ResourceVideoSource` a la carpeta y el nombre de archivo, por ejemplo, **MyFolder/MyVideo.mp4**. 
+En un proyecto de plataforma Universal de Windows, puede almacenar vídeos en cualquier carpeta del proyecto. Asigne al archivo un `Build Action` de `Content`. Establecer el `Path` propiedad de `ResourceVideoSource` a la carpeta y el nombre de archivo, por ejemplo, **MyFolder/MyVideo.mp4**.
 
 El **VideoPlayerDemos.UWP** proyecto contiene una carpeta denominada **vídeos** con el archivo **UWPApiVideo.mp4**.
 
@@ -169,7 +171,7 @@ El **reproducir vídeo recursos** página en el **VideoPlayerDemos** solución u
 </ContentPage>
 ```
 
-Si el recurso de iOS se almacena en la **recursos** carpeta, y si el recurso UWP se almacena en la carpeta raíz del proyecto, puede usar el mismo nombre de archivo para las tres plataformas. Si es así, puede establecer ese nombre directamente a la `Source` propiedad de `VideoPlayer`. 
+Si el recurso de iOS se almacena en la **recursos** carpeta, y si el recurso UWP se almacena en la carpeta raíz del proyecto, puede usar el mismo nombre de archivo para las tres plataformas. Si es así, puede establecer ese nombre directamente a la `Source` propiedad de `VideoPlayer`.
 
 Aquí es esa página se ejecuta en las tres plataformas:
 

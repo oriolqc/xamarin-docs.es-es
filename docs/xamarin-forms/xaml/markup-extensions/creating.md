@@ -1,22 +1,22 @@
 ---
 title: Crear extensiones de marcado XAML
-description: Definir sus propias extensiones de marcado XAML personalizados
+description: En este artículo se explica cómo definir sus propias extensiones de marcado XAML Xamarin.Forms personalizados. Una extensión de marcado XAML es una clase que implementa la interfaz IMarkupExtension IMarkupExtension.
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 1a484aa4a19473c5a4f60b3d7bab78af7a20eecd
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: b185ea3b7260ff2be8a4dec5dc713f24dc6e6095
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848257"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245708"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Crear extensiones de marcado XAML
 
-En el nivel de programación, una extensión de marcado XAML es una clase que implementa el [ `IMarkupExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension/) o [ `IMarkupExtension<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension%3CT%3E/) interfaz. Puede explorar el código fuente de las extensiones de marcado estándar se describe a continuación, en la [ **MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) del repositorio de Xamarin.Forms GitHub. 
+En el nivel de programación, una extensión de marcado XAML es una clase que implementa el [ `IMarkupExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension/) o [ `IMarkupExtension<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.IMarkupExtension%3CT%3E/) interfaz. Puede explorar el código fuente de las extensiones de marcado estándar se describe a continuación, en la [ **MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) del repositorio de Xamarin.Forms GitHub.
 
 También es posible definir sus propias extensiones de marcado XAML personalizados derivando de `IMarkupExtension` o `IMarkupExtension<T>`. Use el formulario genérico si la extensión de marcado Obtiene un valor de un tipo determinado. Este es el caso de algunas de las extensiones de marcado de Xamarin.Forms:
 
@@ -26,7 +26,7 @@ También es posible definir sus propias extensiones de marcado XAML personalizad
 - `BindingExtension` se deriva de `IMarkupExtension<BindingBase>`
 - `ConstraintExpression` se deriva de `IMarkupExtension<Constraint>`
 
-Los dos `IMarkupExtension` interfaces definen un solo método denominado `ProvideValue`: 
+Los dos `IMarkupExtension` interfaces definen un solo método denominado `ProvideValue`:
 
 ```csharp
 public interface IMarkupExtension
@@ -92,7 +92,7 @@ El **HSL Color demostración** página muestra una variedad de maneras que `HslC
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <StackLayout>
         <BoxView>
             <BoxView.Color>
@@ -121,7 +121,7 @@ Tenga en cuenta que, cuando `HslColorExtension` es una etiqueta XML, las cuatro 
 
 ## <a name="a-markup-extension-for-accessing-bitmaps"></a>Una extensión de marcado para tener acceso a los mapas de bits
 
-El argumento `ProvideValue` es un objeto que implementa el [ `IServiceProvider` ](https://developer.xamarin.com/api/type/System.IServiceProvider/) interfaz, que se define en .NET `System` espacio de nombres. Esta interfaz tiene un miembro, un método denominado `GetService` con un `Type` argumento. 
+El argumento `ProvideValue` es un objeto que implementa el [ `IServiceProvider` ](https://developer.xamarin.com/api/type/System.IServiceProvider/) interfaz, que se define en .NET `System` espacio de nombres. Esta interfaz tiene un miembro, un método denominado `GetService` con un `Type` argumento.
 
 El `ImageResourceExtension` clase se muestra a continuación muestra un uso posible de `IServiceProvider` y `GetService` para obtener un `IXmlLineInfoProvider` objeto que puede proporcionar información de línea y el carácter que indica que se detectó un error determinado. En este caso, se produce una excepción cuando el `Source` no se estableció la propiedad:
 
@@ -152,7 +152,7 @@ class ImageResourceExtension : IMarkupExtension<ImageSource>
 }
 ```
 
-`ImageResourceExtension` resulta útil cuando un archivo XAML necesita tener acceso a un archivo de imagen almacenado como un recurso incrustado en el proyecto de biblioteca de .NET estándar. Usa el `Source` propiedad que se va a llamar el método estático `ImageSource.FromResource` método. Este método requiere un nombre de recurso completo, que está formada por el nombre del ensamblado, el nombre de carpeta y el nombre de archivo separados por puntos. El `ImageResourceExtension` no necesita el nombre de ensamblado se parte porque obtiene el nombre del ensamblado utilizando la reflexión y antepone a la `Source` propiedad. A pesar de todo, `ImageSource.FromResource` se debe invocar desde el ensamblado que contiene el mapa de bits, lo que significa que esta extensión de recursos XAML no puede formar parte de una biblioteca externa a menos que las imágenes están también en esa biblioteca. (Consulte la [ **imágenes incrustadas** ](~/xamarin-forms/user-interface/images.md#embedded_images) artículo para obtener más información sobre cómo acceder a los mapas de bits que se almacenan como recursos incrustados.) 
+`ImageResourceExtension` resulta útil cuando un archivo XAML necesita tener acceso a un archivo de imagen almacenado como un recurso incrustado en el proyecto de biblioteca de .NET estándar. Usa el `Source` propiedad que se va a llamar el método estático `ImageSource.FromResource` método. Este método requiere un nombre de recurso completo, que está formada por el nombre del ensamblado, el nombre de carpeta y el nombre de archivo separados por puntos. El `ImageResourceExtension` no necesita el nombre de ensamblado se parte porque obtiene el nombre del ensamblado utilizando la reflexión y antepone a la `Source` propiedad. A pesar de todo, `ImageSource.FromResource` se debe invocar desde el ensamblado que contiene el mapa de bits, lo que significa que esta extensión de recursos XAML no puede formar parte de una biblioteca externa a menos que las imágenes están también en esa biblioteca. (Consulte la [ **imágenes incrustadas** ](~/xamarin-forms/user-interface/images.md#embedded_images) artículo para obtener más información sobre cómo acceder a los mapas de bits que se almacenan como recursos incrustados.)
 
 Aunque `ImageResourceExtension` requiere el `Source` propiedad se establece, el `Source` propiedad se indica en un atributo como la propiedad de contenido de la clase. Esto significa que el `Source=` se puede omitir la parte de la expresión entre llaves. En el **demostración de recursos de imagen** página, la `Image` elementos capturar dos imágenes con el nombre de la carpeta y el nombre de archivo separados por puntos:
 
@@ -167,7 +167,7 @@ Aunque `ImageResourceExtension` requiere el `Source` propiedad se establece, el 
             <RowDefinition Height="*" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        
+
         <Image Source="{local:ImageResource Images.SeatedMonkey.jpg}"
                Grid.Row="0" />
 
@@ -198,7 +198,7 @@ El `GetService` llamada con un argumento de `typeof(IProvideValueTarget)` realme
 
 ## <a name="conclusion"></a>Conclusión
 
-Las extensiones de marcado XAML desempeñan un papel fundamental en XAML mediante la extensión de la capacidad de establecer los atributos de una variedad de orígenes. Además, si las extensiones de marcado XAML existentes no proporcionan exactamente lo que necesita, también puede escribir su propio. 
+Las extensiones de marcado XAML desempeñan un papel fundamental en XAML mediante la extensión de la capacidad de establecer los atributos de una variedad de orígenes. Además, si las extensiones de marcado XAML existentes no proporcionan exactamente lo que necesita, también puede escribir su propio.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

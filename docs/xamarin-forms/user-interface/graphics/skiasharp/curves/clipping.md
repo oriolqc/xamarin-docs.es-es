@@ -1,17 +1,18 @@
 ---
 title: Con las rutas de acceso y las regiones de recorte
-description: Use rutas de acceso a los gráficos de clip a áreas específicas y para crear áreas de
+description: En este artículo se explica cómo usar rutas de acceso de SkiaSharp a los gráficos de clip a áreas específicas y para crear áreas de y se muestra cómo hacerlo con código de ejemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: charlespetzold
 ms.author: chape
 ms.date: 06/16/2017
-ms.openlocfilehash: 051ceec148a569d00048a661e6ba8dc3ce96fc81
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 0d246dc4a5304b56560deb1095149e52c1f82335
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243894"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Con las rutas de acceso y las regiones de recorte
 

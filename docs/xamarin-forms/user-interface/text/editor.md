@@ -1,20 +1,20 @@
 ---
-title: Editor
-description: Entrada de texto de varias líneas
+title: Editor de Xamarin.Forms
+description: En este artículo se explica cómo usar el control del Editor de Xamarin.Forms para aceptar la entrada de texto de varias líneas en una aplicación.
 ms.prod: xamarin
 ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
-ms.openlocfilehash: 317d4f140daeccc525c4267fca43e6164a8f7827
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 7ad8c8aa77e23c5a8fb7649736ecb271f835d1a7
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848322"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245529"
 ---
-# <a name="editor"></a>Editor
+# <a name="xamarinforms-editor"></a>Editor de Xamarin.Forms
 
 _Entrada de texto de varias líneas_
 

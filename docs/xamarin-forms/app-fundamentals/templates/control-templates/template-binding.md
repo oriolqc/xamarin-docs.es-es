@@ -1,5 +1,5 @@
 ---
-title: Enlace de un elemento ControlTemplate
+title: Enlace de un elemento Xamarin.Forms ControlTemplate
 description: Enlaces de plantilla permiten enlazan controles en una plantilla de control a los datos a las propiedades públicas, habilitar los valores de propiedad de los controles en la plantilla de control que puede modificarse fácilmente. En este artículo se muestra el uso de enlaces de plantilla para realizar el enlace de datos desde una plantilla de control.
 ms.prod: xamarin
 ms.assetid: 794A663C-3A8D-438A-BD02-8E97C919B55F
@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 6b2904d06d0982fb30e9a989f03f22b726b9772e
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 99d798ce2c74da0cf7fa0d497128db628a12ead5
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34847181"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241586"
 ---
-# <a name="binding-from-a-controltemplate"></a>Enlace de un elemento ControlTemplate
+# <a name="binding-from-a-xamarinforms-controltemplate"></a>Enlace de un elemento Xamarin.Forms ControlTemplate
 
 _Enlaces de plantilla permiten enlazan controles en una plantilla de control a los datos a las propiedades públicas, habilitar los valores de propiedad de los controles en la plantilla de control que puede modificarse fácilmente. En este artículo se muestra el uso de enlaces de plantilla para realizar el enlace de datos desde una plantilla de control._
 

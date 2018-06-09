@@ -1,19 +1,20 @@
 ---
-title: Interfaz de usuario
-description: Cómo utilizar las vistas proporcionadas por Xamarin.Forms
+title: Vistas de interfaz de usuario de Xamarin.Forms
+description: Este artículo detallan los controles y los conceptos que se pueden usar al crear una interfaz de usuario en una aplicación de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2017
-ms.openlocfilehash: 3485a7ebf9c54c2aa084dd11f32cd028cbc68aff
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 55c461a7dee26462e0b9daebeb10e47afa4e5f6f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244375"
 ---
-# <a name="user-interface"></a>Interfaz de usuario
+# <a name="xamarinforms-user-interface-views"></a>Vistas de interfaz de usuario de Xamarin.Forms
 
 _Cómo utilizar las vistas proporcionadas por Xamarin.Forms_
 
@@ -24,6 +25,10 @@ Xamarin.Forms incluye su propia infraestructura de animación que es sencillo pa
 ## <a name="boxviewboxviewmd"></a>[BoxView](boxview.md)
 
 El `BoxView` es un simple rectángulo de color, pero se puede utilizar para los elementos decorativos, rudimentarios gráficos y para obtener la entrada táctil interactivo.
+
+## <a name="buttonbuttonmd"></a>[Button](button.md)
+
+El `Button` responde a un punteo o clic que dirige una aplicación para llevar a cabo una tarea determinada.
 
 ## <a name="colorscolorsmd"></a>[Colores](colors.md)
 
@@ -85,7 +90,7 @@ Xamarin.Forms tiene varias vistas para presentar y recibir texto. Vistas de text
 
 Los temas de Xamarin.Forms definen un aspecto visual concreto para los controles estándares. Una vez que agregue un tema al diccionario de recursos de la aplicación, cambiará la apariencia de los controles estándar.
 
-## <a name="visual-state-managervisual-state-managermd"></a>[Administrador de estado Visual](visual-state-manager.md)
+## <a name="visual-state-managervisual-state-managermd"></a>[Administrador de estado visual](visual-state-manager.md)
 
 El Administrador de estado Visual proporciona una forma estructurada desencadenan cambios en la interfaz de usuario del código, incluidos el diseño que se adapta a los cambios en el tamaño o la orientación del dispositivo.
 

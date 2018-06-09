@@ -1,20 +1,20 @@
 ---
-title: Aspecto de la celda
-description: Explorar las opciones para presentar los datos mientras se aprovecha de la comodidad de ListView.
+title: Personalizar la apariencia de la celda de ListView
+description: Este artículo exploran opciones para representar datos en aplicaciones de Xamarin.Forms, mientras aprovecha la comodidad del control ListView.
 ms.prod: xamarin
 ms.assetid: FD45CB91-1A8F-46FB-B432-6BC20492E456
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 14ef4abe773512f76d9823809270f27b1a0ad1a3
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 86447afbabca1384f9e46f5128a9dc00253a798c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848465"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244761"
 ---
-# <a name="cell-appearance"></a>Aspecto de la celda
+# <a name="customizing-listview-cell-appearance"></a>Personalizar la apariencia de la celda de ListView
 
 ListView presenta listas desplazables, que se pueden personalizar mediante el uso de `ViewCell`s. `ViewCells` puede utilizarse para mostrar texto e imágenes, que indica un estado verdadero/falso y recibir proporcionados por el usuario.
 

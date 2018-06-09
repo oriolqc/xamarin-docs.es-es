@@ -1,17 +1,18 @@
 ---
 title: Consumir las extensiones de marcado XAML
-description: Usar las extensiones de marcado de XAML disponible en Xamarin.Forms
+description: Este artículo explica cómo utilizar las extensiones de marcado de XAML de Xamarin.Forms para mejorar la eficacia y flexibilidad de XAML al permitir que los atributos del elemento que se pueden establecer desde una variedad de orígenes.
 ms.prod: xamarin
 ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 25eada483e8bd2ce95cb3101dfe873ea38b283ab
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 278677d45f997ac446c2a20967dc3501179bf8da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245942"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumir las extensiones de marcado XAML
 
@@ -136,7 +137,7 @@ El último ejemplo se muestra la `Device.RuntimePlatform` valor. El `Environment
 
 Este es el ejemplo que se ejecutan en las tres plataformas:
 
-[![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo")](consuming-images/staticdemo-large.png#lightbox "x:Static Demo")
+[![x: Static demostración](consuming-images/staticdemo-small.png "x: Static demostración")](consuming-images/staticdemo-large.png#lightbox "demostración x: Static")
 
 <a name="reference" />
 

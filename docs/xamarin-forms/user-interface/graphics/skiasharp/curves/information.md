@@ -1,17 +1,18 @@
 ---
 title: Enumeración e información de ruta de acceso
-description: Obtenga información sobre las rutas de acceso y enumerar el contenido
+description: Este artículo explica cómo obtener información acerca de las rutas de acceso de SkiaSharp y enumerar el contenido y se muestra cómo hacerlo con código de ejemplo.
 ms.prod: xamarin
 ms.assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 09/12/2017
-ms.openlocfilehash: 82ac4ea49462c7520219e1a621ea3946297b1b45
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 53d1fce20a0e3bc75ba34ab84b2549211567e222
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35243797"
 ---
 # <a name="path-information-and-enumeration"></a>Enumeración e información de ruta de acceso
 
@@ -27,7 +28,7 @@ También a veces resulta útil obtener todas las operaciones y los puntos que fo
 
 ## <a name="getting-the-path-length"></a>Obtener la longitud de ruta de acceso
 
-En el artículo [ **las rutas de acceso y el texto** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md) ha visto cómo utilizar la [ `DrawTextOnPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/) método para dibujar una cadena de texto cuyo previsto sigue el curso de una ruta de acceso. Pero ¿qué ocurre si desea cambiar el tamaño del texto para que se ajuste exactamente a la ruta de acceso? Para dibujar texto alrededor de un círculo, es fácil porque es fácil calcular la circunferencia de un círculo. Pero la circunferencia de una elipse o la longitud de una curva de Bézier no es tan sencilla. 
+En el artículo [ **las rutas de acceso y el texto** ](~/xamarin-forms/user-interface/graphics/skiasharp/curves/text-paths.md) ha visto cómo utilizar la [ `DrawTextOnPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawTextOnPath/p/System.String/SkiaSharp.SKPath/System.Single/System.Single/SkiaSharp.SKPaint/) método para dibujar una cadena de texto cuyo previsto sigue el curso de una ruta de acceso. Pero ¿qué ocurre si desea cambiar el tamaño del texto para que se ajuste exactamente a la ruta de acceso? Para dibujar texto alrededor de un círculo, es fácil porque es fácil calcular la circunferencia de un círculo. Pero la circunferencia de una elipse o la longitud de una curva de Bézier no es tan sencilla.
 
 El [ `SKPathMeasure` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathMeasure/) puede ayudar la clase. El [constructor](https://developer.xamarin.com/api/constructor/SkiaSharp.SKPathMeasure.SKPathMeasure/p/SkiaSharp.SKPath/System.Boolean/System.Single/) acepta un `SKPath` argumento y el [ `Length` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPathMeasure.Length/) propiedad revela su longitud.
 
@@ -151,7 +152,7 @@ public class UnicycleHalfPipePage : ContentPage
     };
 
     SKPath unicyclePath = SKPath.ParseSvgPathData(
-        "M 0 0" + 
+        "M 0 0" +
         "A 25 25 0 0 0 0 -50" +
         "A 25 25 0 0 0 0 0 Z" +
         "M 0 -25 L 0 -100" +
@@ -179,7 +180,7 @@ public class UnicycleHalfPipePage : ContentPage
         using (SKPath pipePath = new SKPath())
         {
             pipePath.MoveTo(50, 50);
-            pipePath.CubicTo(0, 1.25f * info.Height, 
+            pipePath.CubicTo(0, 1.25f * info.Height,
                              info.Width - 0, 1.25f * info.Height,
                              info.Width - 50, 50);
 
@@ -197,7 +198,7 @@ public class UnicycleHalfPipePage : ContentPage
                 t = (float)((1 - Math.Cos(t * 2 * Math.PI)) / 2);
 
                 SKMatrix matrix;
-                pathMeasure.GetMatrix(t * length, out matrix, 
+                pathMeasure.GetMatrix(t * length, out matrix,
                                       SKPathMeasureMatrixFlags.GetPositionAndTangent);
 
                 canvas.SetMatrix(matrix);
@@ -426,7 +427,7 @@ El **GlobularText** ejemplo usa este método de extensión para ajustar el texto
 
 [![](information-images/globulartext-small.png "Captura de pantalla triple de la página de texto Globular")](information-images/globulartext-large.png#lightbox "Triple captura de pantalla de la página de texto Globular")
 
-El [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) constructor de clase realiza esta transformación. Crea un `SKPaint` objeto para el texto y, a continuación, obtiene un `SKPath` objeto desde el `GetTextPath` método. Se trata de la ruta de acceso que se pasan a la `CloneWithTransform` método de extensión junto con una función de transformación: 
+El [ `GlobularTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/GlobularTextPage.cs) constructor de clase realiza esta transformación. Crea un `SKPaint` objeto para el texto y, a continuación, obtiene un `SKPath` objeto desde el `GetTextPath` método. Se trata de la ruta de acceso que se pasan a la `CloneWithTransform` método de extensión junto con una función de transformación:
 
 ```csharp
 public class GlobularTextPage : ContentPage
@@ -453,9 +454,9 @@ public class GlobularTextPage : ContentPage
 
                 globePath = textPath.CloneWithTransform((SKPoint pt) =>
                 {
-                    double longitude = (Math.PI / textPathBounds.Width) * 
+                    double longitude = (Math.PI / textPathBounds.Width) *
                                             (pt.X - textPathBounds.Left) - Math.PI / 2;
-                    double latitude = (Math.PI / textPathBounds.Height) * 
+                    double latitude = (Math.PI / textPathBounds.Height) *
                                             (pt.Y - textPathBounds.Top) - Math.PI / 2;
 
                     longitude *= 0.75;

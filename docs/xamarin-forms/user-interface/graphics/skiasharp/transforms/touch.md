@@ -1,17 +1,18 @@
 ---
 title: Manipulaciones táctil
-description: Matriz de uso transforma para implementar arrastrar táctil, aprietan y rotación
+description: En este artículo se explica cómo utilizar las transformaciones de matriz para implementar arrastrar táctil, aprietan y rotación y se muestra cómo hacerlo con código de ejemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2018
-ms.openlocfilehash: e8e5cc7b1a00f9822c4cbb4859a02b7546102ca0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a53fe287e74070adb22c2a7c67d4b7cc10b35d3e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244291"
 ---
 # <a name="touch-manipulations"></a>Manipulaciones táctil
 
@@ -753,9 +754,9 @@ public partial class SingleFingerCornerScalePage : ContentPage
 }
 ```
 
-Esto `SKMatrix` objeto se modifica la lógica de entrada táctil se muestra a continuación. 
+Esto `SKMatrix` objeto se modifica la lógica de entrada táctil se muestra a continuación.
 
-El resto del archivo de código subyacente es el `TouchEffect` controlador de eventos. Comienza mediante la conversión de la ubicación actual del dedo para un `SKPoint` valor. Para el `Pressed` el controlador de tipo de acción, comprueba que ningún otro dedo toca la pantalla, y que se encuentra dentro de los límites del mapa de bits. 
+El resto del archivo de código subyacente es el `TouchEffect` controlador de eventos. Comienza mediante la conversión de la ubicación actual del dedo para un `SKPoint` valor. Para el `Pressed` el controlador de tipo de acción, comprueba que ningún otro dedo toca la pantalla, y que se encuentra dentro de los límites del mapa de bits.
 
 La parte fundamental del código es un `if` instrucción que implica dos llamadas a la `Math.Pow` método. Este matemáticas comprueba si la ubicación del dedo fuera de una elipse rellena el mapa de bits. Si es así, es una operación de escalado. Encuentra cerca de una de las esquinas del mapa de bits y un punto de pivote se determina que es la esquina opuesta. Si se encuentra dentro de esta elipse, que es una operación de desplazamiento lateral regular:
 

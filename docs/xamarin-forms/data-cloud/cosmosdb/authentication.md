@@ -1,17 +1,18 @@
 ---
 title: Autenticar a los usuarios con una base de datos del documento de Cosmos Azure DB
-description: Bases de datos de Azure DB Cosmos documento admiten colecciones con particiones, que pueden abarcar varios servidores y particiones, que la ejecución de rendimiento y almacenamiento ilimitado. Este artículo explica cómo combinar el control de acceso con las colecciones particionadas, para que un usuario sólo puede tener acceso a sus propios documentos en una aplicación de Xamarin.Forms.
+description: Este artículo explica cómo combinar el control de acceso con las colecciones de base de datos de Azure Cosmos particiones, por lo que un usuario sólo puede tener acceso a sus propios documentos en una aplicación de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 11ED4A4C-0F05-40B2-AB06-5A0F2188EF3D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 0132f849a066976896295da8b8b67ed8bf3c3e8d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 031a48e5e10100b2c57ac067a0dda916c93d20da
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241616"
 ---
 # <a name="authenticating-users-with-an-azure-cosmos-db-document-database"></a>Autenticar a los usuarios con una base de datos del documento de Cosmos Azure DB
 

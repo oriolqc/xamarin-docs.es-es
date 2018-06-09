@@ -1,18 +1,20 @@
 ---
-title: Crear un tema personalizado
+title: Crear un tema personalizado Xamarin.Forms
+description: En este artículo se explica cómo crear un tema personalizado de Xamarin.Forms para hacer referencia a en una aplicación.
 ms.prod: xamarin
 ms.assetid: 4FE08ADC-093F-47FA-B33C-20CF08B5D7E0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
-ms.openlocfilehash: c9bc532902e9cfcc080220a05e41401e893783e4
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 018193cf0b198fd87f0f09cbfeba52e9d2a0f68b
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245584"
 ---
-# <a name="creating-a-custom-theme"></a>Crear un tema personalizado
+# <a name="creating-a-custom-xamarinforms-theme"></a>Crear un tema personalizado Xamarin.Forms
 
 ![](~/media/shared/preview.png "Esta API está actualmente en vista previa")
 

@@ -1,17 +1,18 @@
 ---
 title: Consumir un servicio Web ASP.NET (ASMX)
-description: ASMX proporciona la capacidad para crear servicios web que envían mensajes mediante el protocolo Simple de acceso a objetos (SOAP). SOAP es un protocolo independiente de la plataforma e independientes del lenguaje para crear y obtener acceso a servicios web. Los consumidores de un servicio ASMX no es necesario saber nada acerca de la plataforma, el modelo de objetos o el lenguaje de programación utilizado para implementar el servicio. Solo necesitan saber cómo enviar y recibir mensajes SOAP. Este artículo demuestra cómo consumir un servicio de ASMX SOAP desde una aplicación de Xamarin.Forms.
+description: Este artículo demuestra cómo consumir un servicio de ASMX SOAP desde una aplicación de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: D5533964-5528-4D35-9C2B-FAFB632472AC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: c45f0de039abc3f98b7c269f183e2883a495910b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6ec8168a8da64dbf3dfeb805856a4d91c9ec78ca
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242068"
 ---
 # <a name="consuming-an-aspnet-web-service-asmx"></a>Consumir un servicio Web ASP.NET (ASMX)
 
@@ -40,10 +41,10 @@ El servicio ASMX proporciona las siguientes operaciones:
 
 |Operación|Descripción|Parámetros|
 |--- |--- |--- |
-|GetTodoItems|Obtener una lista de elementos pendientes|
+|GetTodoItems|Obtener una lista de tareas pendientes|
 |CreateTodoItem|Crear un nuevo elemento de tarea|Un documento XML serializado TodoItem|
-|EditTodoItem|Actualizar un elemento de tarea|Un documento XML serializado TodoItem|
-|DeleteTodoItem|Eliminar un elemento de tarea|Un documento XML serializado TodoItem|
+|EditTodoItem|Actualizar una tarea pendiente|Un documento XML serializado TodoItem|
+|DeleteTodoItem|Eliminar una tarea pendiente|Un documento XML serializado TodoItem|
 
 Para obtener más información acerca del modelo de datos usado en la aplicación, consulte [modelar los datos](~/xamarin-forms/data-cloud/walkthrough.md).
 

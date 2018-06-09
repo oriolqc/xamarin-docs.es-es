@@ -1,17 +1,18 @@
 ---
 title: Controls Reference (Referencia de controles)
-description: Una descripción de todos los elementos visuales que se usan para crear una aplicación de Xamarin.Forms.
+description: Una descripción de todos los elementos visuales que se usan para crear una aplicación de Xamarin.Forms. Este artículo enumeran los grupos de control que constituyen la interfaz de usuario de una aplicación de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: F2A02DEE-7137-42F4-9C0A-4E1CF75EA08F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 270904b87b1e37d4c4a74d997af50517fd6ffc5f
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.openlocfilehash: 51457814bd6dbdef7f99874ee24b33a8651a1c7c
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242997"
 ---
 # <a name="controls-reference"></a>Controls Reference (Referencia de controles)
 

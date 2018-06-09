@@ -1,25 +1,26 @@
 ---
-title: Efectos
-description: Interfaces de usuario de Xamarin.Forms se representan mediante los controles nativos de la plataforma de destino, permita que las aplicaciones de Xamarin.Forms conservar la apariencia y funcionamiento adecuada para cada plataforma. Efectos de permitir que los controles nativos en cada plataforma para personalizarse sin tener que recurrir a la implementación de un representador personalizado.
+title: Efectos de Xamarin.Forms
+description: Efectos de permitir que los controles nativos en cada plataforma para personalizarse sin tener que recurrir a la implementación de un representador personalizado.
 ms.prod: xamarin
 ms.assetid: 8AF168A7-4CD9-4603-B961-15B8B1543784
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/01/2017
-ms.openlocfilehash: 63d7750294321a28dbde833f72fe6b7277ada397
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: bc1c600aa6d5ede079fe0af83370393d4f0e298f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35239701"
 ---
-# <a name="effects"></a>Efectos
+# <a name="xamarinforms-effects"></a>Efectos de Xamarin.Forms
 
 _Interfaces de usuario de Xamarin.Forms se representan mediante los controles nativos de la plataforma de destino, permita que las aplicaciones de Xamarin.Forms conservar la apariencia y funcionamiento adecuada para cada plataforma. Efectos de permitir que los controles nativos en cada plataforma para personalizarse sin tener que recurrir a la implementación de un representador personalizado._
 
 ## <a name="introduction-to-effectsintroductionmd"></a>[Introducción a los efectos](introduction.md)
 
-Efectos de permitir que los controles nativos en cada plataforma para personalizarse y se utilizan normalmente para los cambios de estilo pequeño. Este artículo proporciona una introducción a los efectos, se describen el límite entre los representadores personalizados y efectos y describe el `PlatformEffect` clase.
+Los efectos permiten personalizar los controles nativos de cada plataforma y se suelen usar para pequeños cambios de estilo. Este artículo proporciona una introducción a los efectos, se describen el límite entre los representadores personalizados y efectos y describe el `PlatformEffect` clase.
 
 ## <a name="creating-an-effectcreatingmd"></a>[Crear un efecto](creating.md)
 

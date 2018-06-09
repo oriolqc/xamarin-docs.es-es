@@ -1,17 +1,18 @@
 ---
 title: Agregar AppCompat y diseño Material
-description: Siga estos pasos para convertir las aplicaciones existentes de Xamarin.Forms Android para usar AppCompat y Material de diseño
+description: En este artículo se explica cómo convertir las aplicaciones existentes de Xamarin.Forms Android para usar AppCompat y Material de diseño.
 ms.prod: xamarin
 ms.assetid: 045FBCDF-4D45-48BB-9911-BD3938C87D58
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: 8f9820b863274453cff7e4124df683fb8518a978
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c2eed44a7c684b91ceed4493a83ff3b4e1578b5f
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35242926"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Agregar AppCompat y diseño Material
 
@@ -38,7 +39,7 @@ Asegúrese de que .NET framework de destino del proyecto Android es Android 6.0 
 
 Cree los tres archivos siguientes en el proyecto de Android y pegue el contenido siguiente. Google Proporciona una [Guía de estilo](http://www.google.com/design/spec/style/color.html#color-color-palette) y un [generador de la paleta de colores](http://www.materialpalette.com/) para ayudarle a elegir una combinación de colores alternativos a la especificada.
 
-**Resources/values/colors.xml**
+**Resources/Values/Colors.Xml**
 
 ```xml
 <resources>
@@ -49,7 +50,7 @@ Cree los tres archivos siguientes en el proyecto de Android y pegue el contenido
 </resources>
 ```
 
-**Resources/values/style.xml**
+**Resources/Values/Style.Xml**
 
 ```xml
 <resources>
@@ -67,7 +68,7 @@ Cree los tres archivos siguientes en el proyecto de Android y pegue el contenido
 
 Un estilo adicionales debe incluirse en la **v21 valores** carpeta para aplicar propiedades específicas cuando se ejecuta en el círculo Android y versiones más recientes.
 
-**Resources/values-v21/style.xml**
+**Resources/Values-v21/Style.Xml**
 
 ```xml
 <resources>
@@ -79,7 +80,7 @@ Un estilo adicionales debe incluirse en la **v21 valores** carpeta para aplicar 
 </resources>
 ```
 
-### <a name="4-update-androidmanifestxml"></a>4. Update AndroidManifest.xml
+### <a name="4-update-androidmanifestxml"></a>4. Actualizar AndroidManifest.xml
 
 Para garantizar el nuevo tema información sea utilizado, establezca el tema en el **AndroidManifest** archivo agregando `android:theme="@style/MyTheme"` (deje el resto de XML tal como estaba).
 

@@ -1,20 +1,20 @@
 ---
-title: AbsoluteLayout
-description: Utilice AbsoluteLayout para crear interfaces de usuario perfecta de píxeles.
+title: Xamarin.Forms AbsoluteLayout
+description: Este artículo explica cómo usar la clase Xamarin.Forms AbsoluteLayout para crear interfaces de usuario perfecta de píxeles. Esta clase posiciones y tamaños de los elementos secundarios proporcionales a su propio tamaño y posición o por valores absolutos.
 ms.prod: xamarin
 ms.assetid: 01A5CCE0-AD45-4806-84FD-72C007005B38
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 506a9a4916cf2cf9105d59f56648e339d664a3d2
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: f36334bca9e7401f35d4b6181b47c0f64923f652
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848400"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244462"
 ---
-# <a name="absolutelayout"></a>AbsoluteLayout
+# <a name="xamarinforms-absolutelayout"></a>Xamarin.Forms AbsoluteLayout
 
 [`AbsoluteLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) posiciones y tamaños de los elementos secundarios proporcionales a su propio tamaño y posición o por valores absolutos. Pueden ser vistas secundarias coloca y tamaño utilizando valores proporcionales o valores estáticos y proporcional y se pueden combinar valores estáticos.
 

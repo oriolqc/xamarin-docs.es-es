@@ -1,18 +1,18 @@
 ---
 title: Resaltado de un área Circular en un mapa
-description: Este artículo explica cómo agregar una superposición circular a un mapa, para resaltar un área circular de la asignación.
+description: Este artículo explica cómo agregar una superposición circular a un mapa, para resaltar un área circular de la asignación. Si bien iOS y Android proporcionan las API para agregar la superposición circular a la asignación, en UWP la superposición se representa como un polígono.
 ms.prod: xamarin
 ms.assetid: 6FF8BD15-074E-4E6A-9522-F9E2BE32EF12
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 1bec7a318bebc40c050104a51408473d89f483a5
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 06ea1e788add0064571f01dc1080147e64bb8397
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34846528"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35240290"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>Resaltado de un área Circular en un mapa
 

@@ -1,17 +1,18 @@
 ---
 title: Transformaciones no afines
-description: Crear efectos inclinación y perspectiva con la tercera columna de la matriz de transformación
+description: En este artículo se explica cómo crear perspectiva y efectos inclinación con la tercera columna de la matriz de transformación y se muestra cómo hacerlo con código de ejemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: charlespetzold
 ms.author: chape
 ms.date: 04/14/2017
-ms.openlocfilehash: 8c3d39038fbaf5ed6601102a0aa16860c7a5a7a6
-ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
+ms.openlocfilehash: 03c5b0dcbb7870e38991d7e0f4c7ac4feebfcf4e
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35244238"
 ---
 # <a name="non-affine-transforms"></a>Transformaciones no afines
 
@@ -75,7 +76,7 @@ Por lo general, `Persp0` y `Persp1` son números pequeños. Por ejemplo, suponga
 
 Las fórmulas de transformación son:
 
-x` = x / (0.01·x + 1)
+x' = x / (0.01·x + 1)
 
 y' = s / (0.01·x + 1)
 

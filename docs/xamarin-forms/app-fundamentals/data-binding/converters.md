@@ -1,19 +1,20 @@
 ---
-title: Convertidores de valores de enlace
-description: Convertir valores dentro del enlace de datos
+title: Convertidores de valores de enlace de Xamarin.Forms
+description: En este artículo se explica cómo convertir valores dentro de un enlace de datos de Xamarin.Forms mediante la implementación de un convertidor de valores (que es también conocido como un convertidor de enlace o el convertidor de valores de enlace).
 ms.prod: xamarin
 ms.assetid: 02B1BBE6-D804-490D-BDD4-8ACED8B70C92
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 260db2372977202df3d73e32645a358066146b40
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a5bd52d43ef93013537f30c7d5e0c31cbf336d07
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35241834"
 ---
-# <a name="binding-value-converters"></a>Convertidores de valores de enlace
+# <a name="xamarinforms-binding-value-converters"></a>Convertidores de valores de enlace de Xamarin.Forms
 
 Enlaces de datos normalmente transferir datos de una propiedad de origen a una propiedad de destino y, en algunos casos de la propiedad de destino a la propiedad de origen. Esta transferencia es sencilla cuando las propiedades de origen y destino son del mismo tipo, o cuando un tipo se puede convertir al tipo a través de una conversión implícita. Cuando no es el caso, debe realizarse una conversión de tipos.
 
