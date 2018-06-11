@@ -1,18 +1,18 @@
 ---
 title: Controlador de vista previa XAML para Xamarin.Forms
-description: Vea los diseños de Xamarin.Forms representados a medida que escribe.
+description: Este artículo explica cómo usar el controlador de vista previa de XAML para ver los diseños de Xamarin.Forms representados a medida que escribe. El controlador de vista previa de XAML está disponible en Visual Studio de 2017 y Visual Studio para Mac.
 ms.prod: xamarin
 ms.assetid: 84769ff1-72fd-4c44-8251-dd6d5bf8c7b2
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 05/31/2018
-ms.openlocfilehash: 9b87145773bf16b15c391c5c5d6d136b7aa76e39
-ms.sourcegitcommit: d80d93957040a14b4638a91b0eac797cfaade840
+ms.openlocfilehash: 25c8e1a34f8be5ab2f8491e75fa5aac470d55bc8
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34848361"
+ms.lasthandoff: 06/08/2018
+ms.locfileid: "35245864"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Controlador de vista previa XAML para Xamarin.Forms
 
