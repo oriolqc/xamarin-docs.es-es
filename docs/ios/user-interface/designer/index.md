@@ -7,22 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/31/2018
-ms.openlocfilehash: eadc2147a44d6077436e394a4757d367ce42e5fa
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a931373a6abba3084af3c7aefcdddc903ad1b577
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790008"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209237"
 ---
 # <a name="building-user-interfaces-with-the-ios-designer"></a>Creación de Interfaces de usuario con el Diseñador de iOS
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-=======
-# <a name="ios-designer"></a>Diseñador de iOS
-
 _El Diseñador de Xamarin para iOS es un diseñador visual para el archivo iOS formatos de guión gráfico y el generador de interfaz que está totalmente integrado con Visual Studio para Mac y Visual Studio. El Diseñador de iOS mantiene la compatibilidad completa con los formatos de guión gráfico y .xib, para que los archivos se pueden editar en Visual Studio para Mac o Visual Studio además de generador de interfaz de Xcode. Además, el Diseñador de Xamarin para iOS admite características avanzadas como controles personalizados que se procesan en tiempo de diseño en el editor._
->>>>>>> master
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

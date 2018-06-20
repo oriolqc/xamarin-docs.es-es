@@ -5,19 +5,18 @@ ms.prod: xamarin
 ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: topgenorth
 ms.author: toopge
-ms.date: 03/29/2017
-ms.openlocfilehash: 16a0474c7fc9a496409e2133714b6d4374691dbc
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/19/2018
+ms.openlocfilehash: 67cc6b42901521226322d964514f19b4b639148b
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793484"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268828"
 ---
 # <a name="inspecting-live-applications"></a>Inspeccionar las aplicaciones activas
 
 Inspección de la aplicación activa está disponible para los clientes de empresa.
 
-1. [Instalar Xamarin libros & Inspector.](~/tools/inspector/install.md)
 1. Abrir cualquier [admite el proyecto de aplicación](~/tools/inspector/install.md#supported-platforms) en Visual Studio para Mac o en Visual Studio.
 1. Ejecute la aplicación en modo de depuración.
 1. Haga clic en el **inspeccionar** botón en la barra de herramientas IDE (en Visual Studio, el **inspeccionar de aplicación actual...**  elemento de menú también está disponible en la **herramientas** o **depurar** menú).

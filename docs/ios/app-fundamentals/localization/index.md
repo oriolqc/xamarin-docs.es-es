@@ -1,19 +1,20 @@
 ---
-title: Localización de iOS
-description: Este documento tratan las características de localización del SDK de iOS y cómo tener acceso a ellos con Xamarin.
+title: Localización en Xamarin.iOS
+description: Este documento describe las características de localización de iOS y cómo usar estas características en aplicaciones de Xamarin.iOS. Se trata de idioma, configuración regional, archivos de cadenas, imágenes de inicio y mucho más.
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/28/2017
-ms.openlocfilehash: 5ee04614a500618846ad3acf2a38f279351d6e9d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 7f05243196a9b916ac5c7b73df957262604ccb11
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268815"
 ---
-# <a name="ios-localization"></a>Localización de iOS
+# <a name="localization-in-xamarinios"></a>Localización en Xamarin.iOS
 
 _Este documento tratan las características de localización del SDK de iOS y cómo tener acceso a ellos con Xamarin._
 
@@ -54,6 +55,16 @@ La configuración regional actual puede ser consultada por cualquiera de estas d
 - `NSLocale.AutoUpdatingCurrentLocale.LocaleIdentifier`
 
 El primer valor puede almacenarse en caché por el sistema operativo y por lo que podría no siempre refleja el idioma del usuario actualmente seleccionado. Utilice el valor de segundo para obtener la configuración regional seleccionada actualmente.
+
+> [!NOTE]
+> Mono (el runtime de .NET en el que se basa Xamarin.iOS) y las API de iOS de Apple son compatibles con conjuntos idénticos de combinaciones de idioma y región.
+> Por este motivo, es posible seleccionar una combinación de idioma y región en el archivo iOS **configuración** aplicación que no se asigna a un valor válido en Mono. Por ejemplo, establecer idioma del iPhone en inglés y su región en España hará que las API siguientes obtener valores distintos:
+> 
+> - `CurrentThead.CurrentCulture`: en-US (API de Mono)
+> - `CurrentThread.CurrentUICulture`: en-US (API de Mono)
+> - `NSLocale.CurrentLocale.LocaleIdentifier`: en_ES (API de Apple)
+>
+> Debido a que utiliza Mono `CurrentThread.CurrentUICulture` para seleccionar los recursos y `CurrentThread.CurrentCulture` para dar formato a fechas y monedas, localización basada en Mono (por ejemplo, con archivos .resx) no puede producir resultados esperados para estas combinaciones de idioma y región. En estas situaciones, se basan en las API de Apple para adaptar según sea necesario.
 
 ### <a name="nscurrentlocaledidchangenotification"></a>NSCurrentLocaleDidChangeNotification
 

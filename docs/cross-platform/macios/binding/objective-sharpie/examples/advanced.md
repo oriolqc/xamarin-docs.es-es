@@ -1,25 +1,25 @@
 ---
 title: Avanzadas (manual) ejemplo del mundo Real
+description: Este documento describe cómo utilizar la salida de xcodebuild como entrada de objetivo Sharpie, que proporciona una visión general de lo que hace Sharpie objetivo en segundo plano.
 ms.prod: xamarin
 ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 82bca525433e5c8fea3a29250afb83962f2e64fc
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 811b783d33a20e23a7e807861e19355a1c372b84
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209406"
 ---
 # <a name="advanced-manual-real-world-example"></a>Avanzadas (manual) ejemplo del mundo Real
 
-
 **Este ejemplo se utiliza la [biblioteca POP desde Facebook](https://github.com/facebook/pop).**
-
 
 Esta sección ofrece un enfoque más avanzado para enlace, que se usará de Apple `xcodebuild` herramienta para compilar primero el proyecto POP y, a continuación, deducir manualmente la entrada Sharpie de objetivo. Esto cubre básicamente lo que está haciendo objetivo Sharpie en segundo plano en la sección anterior.
 
-```csharp
+```
  $ git clone https://github.com/facebook/pop.git
 Cloning into 'pop'...
    _(more git clone output)_
@@ -29,7 +29,7 @@ $ cd pop
 
 Dado que la biblioteca POP tiene un proyecto de Xcode (`pop.xcodeproj`), podemos utilizar `xcodebuild` para generar POP. Este proceso a su vez puede generar archivos de encabezado que Sharpie objetivo que necesite analizar. Este es el motivo por el que compilar antes de enlace es importante. Cuando se crea a través de `xcodebuild` Asegúrese de que pasa el mismo identificador SDK y arquitectura que desea pasar al objetivo Sharpie (y recuerde, objetivo Sharpie 3.0 normalmente puede hacer por usted):
 
-```csharp
+```
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
 
 Build settings from command line:
@@ -54,7 +54,7 @@ Habrá una gran cantidad de salida de la información de compilación en la cons
 
 Ahora estamos listos enlazar POP. Sabemos que desea compilar SDK `iphoneos8.1` con el `arm64` arquitectura, y que nos preocupamos sobre los archivos de encabezado están en `build/Headers` bajo la desprotección de git POP. Si tomamos el `build/Headers` directorio, veremos un número de archivos de encabezado:
 
-```csharp
+```
 $ ls build/Headers/POP/
 POP.h                    POPAnimationTracer.h     POPDefines.h
 POPAnimatableProperty.h  POPAnimator.h            POPGeometry.h
@@ -66,7 +66,7 @@ POPAnimationPrivate.h    POPDecayAnimation.h
 
 Si miramos `POP.h`, podemos ver es el archivo de encabezado de nivel superior de la biblioteca principal que `#import`s otros archivos. Por este motivo, sólo es necesario pasar `POP.h` al objetivo Sharpie, y clang llevará a cabo el resto en segundo plano:
 
-```csharp
+```
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
     -scope build/Headers build/Headers/POP/POP.h \
     -c -Ibuild/Headers -arch arm64

@@ -7,16 +7,19 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2016
-ms.openlocfilehash: 3cf27e48fe23b9a0f035689e55a72fcc706ab266
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 73d74b59ef6e59028eec7cad19feec21908b6329
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241336"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269049"
 ---
 # <a name="consuming-an-azure-mobile-app"></a>Consumir una aplicación móvil de Azure
 
 _Aplicaciones móviles de Azure le permiten desarrollar aplicaciones con back-ends de escalable hospedado en el servicio de aplicación de Azure, con compatibilidad para la autenticación de dispositivos móvil, sincronización sin conexión y las notificaciones de inserción. En este artículo, que sólo es aplicable a las aplicaciones móviles de Azure que usan un back-end de Node.js, explica cómo consultar, insertar, actualizar y eliminar los datos almacenados en una tabla en una instancia de aplicaciones móviles de Azure._
+
+> [!NOTE]
+> A partir del 30 de junio de, todas las aplicaciones móviles de Azure nuevo se creará con TLS 1.2 de forma predeterminada. Además, se recomienda también existentes aplicaciones móviles de Azure a configurarse para usar TLS 1.2. Para obtener información sobre cómo exigir TLS 1.2 en una aplicación móvil de Azure, consulte [exigir TLS 1.2](/azure/app-service/app-service-web-tutorial-custom-ssl#enforce-tls-1112). Para obtener información sobre cómo configurar proyectos de Xamarin para usar TLS 1.2, consulte [seguridad de capa de transporte (TLS) 1.2](~/cross-platform/app-fundamentals/transport-layer-security.md).
 
 Para obtener información sobre cómo crear una instancia de aplicaciones móviles de Azure que puede ser utilizada por Xamarin.Forms, consulte [crear una aplicación de Xamarin.Forms](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-forms-get-started/). Después de seguir estas instrucciones, la aplicación de ejemplo descargable puede configurarse para usar la instancia de aplicaciones móviles de Azure estableciendo la `Constants.ApplicationURL` a la dirección URL de la instancia de aplicaciones móviles de Azure. A continuación, cuando se ejecuta la aplicación de ejemplo se conectará a la instancia de aplicaciones móviles de Azure, como se muestra en la captura de pantalla siguiente:
 

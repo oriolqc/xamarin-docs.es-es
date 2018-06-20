@@ -1,15 +1,17 @@
 ---
 title: Requisitos y la instalación de los libros
-description: Cómo descargar, instalar y utilizar los libros de Xamarin.
+description: Este documento describe cómo descargar e instalar los libros de Xamarin, hablar sobre las plataformas admitidas y requisitos del sistema.
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: 4d3217140605be8567d70e6dcf63d60a02e6b2fb
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 06/19/2018
+ms.openlocfilehash: a35038a948a89889bbf067a453b7465c1a6a7b49
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268997"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Requisitos y la instalación de los libros
 
@@ -42,8 +44,8 @@ ms.lasthandoff: 05/09/2018
 
 |Plataforma de aplicaciones|Sistemas operativos admitidos|Notas|
 |--- |--- |--- |
-|Mac (unificado)|Solo se admite en Mac|
-|iOS (unificado)|Compatible con Mac y Windows|Xamarin.iOS 11.0 y Xcode 9.0 o posterior deben instalarse en el equipo Mac. Ejecución de libros de iOS en Windows requiere un host de compilación de Mac ejecuta todo lo anterior y el [simulador de iOS remoto](~/tools/ios-simulator.md) instalado en Windows.|
+|Mac|Solo se admite en Mac|
+|iOS|Compatible con Mac y Windows|Xamarin.iOS 11.0 y Xcode 9.0 o posterior deben instalarse en el equipo Mac. Ejecución de libros de iOS en Windows requiere un host de compilación de Mac ejecuta todo lo anterior y el [simulador de iOS remoto](~/tools/ios-simulator.md) instalado en Windows.|
 |Android|Compatible con Mac y Windows|Debe usar el emulador de Google, Visual Studio o Xamarin para Android, con un dispositivo virtual > = 5.0|
 |WPF|Solo se admite en Windows|
 |Consola (.NET Framework)|Compatible con Mac y Windows|
@@ -113,7 +115,7 @@ Si tiene problemas para conectarse a sus libro Android o iOS y ya ha activado [n
 
 ### <a name="windows"></a>Windows
 
-Dependiendo de cómo se hayan adquirido libros & Inspector, es podrán que deba realizar dos procedimientos de desinstalación. Compruebe si ambos en desinstalar completamente el software.
+Según cómo haya adquirido los libros, tendrá que llevar a cabo dos procedimientos de desinstalación. Compruebe si ambos en desinstalar completamente el software.
 
 #### <a name="visual-studio-installer"></a>Instalador de Visual Studio
 
@@ -121,19 +123,19 @@ Si tiene Visual Studio de 2017, abra **instalador de Visual Studio**y busque en 
 
 #### <a name="system-uninstall"></a>Desinstalación de sistema
 
-Si ha instalado los libros & Inspector usted mismo con un instalador descargado, deberá desinstalar a través de la **aplicaciones y características** página de configuración del sistema en Windows 10 o a través de **agregar o quitar programas**en el Panel de Control en versiones anteriores de Windows.
+Si ha instalado los libros usted mismo con un instalador descargado, deberá desinstalar a través de la **aplicaciones y características** página de configuración del sistema en Windows 10 o a través de **agregar o quitar programas** en el Control En versiones anteriores de Windows del panel.
 
 > **Inicio > Configuración > sistema > aplicaciones y características**
 
-![](install-images/windows-remove.png "Los libros de Xamarin y del Inspector, como se muestra en &quot;aplicaciones &amp; características&quot;")
+![](install-images/windows-remove.png "Los libros de Xamarin que se muestran en &quot;aplicaciones &amp; características&quot;")
 
-**Todavía debe seguir el procedimiento para el instalador de Visual Studio hacer que los libros seguros & Inspector no obtener reinstalan sin su conocimiento.**
+**Todavía debe seguir el procedimiento para el instalador de Visual Studio para asegurarse de que no vuelva a instalar los libros sin su conocimiento.**
 
 <a name="uninstall-macos" />
 
 ### <a name="macos"></a>macOS
 
-A partir de [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), libros de Xamarin & Inspector se pueden desinstalar desde un terminal ejecutando:
+A partir de [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/), libros de Xamarin se puede desinstalar desde un terminal ejecutando:
 
 ```bash
 sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstall
@@ -152,7 +154,7 @@ En el caso de versiones anteriores, debe quitar manualmente lo siguiente:
 
 ## <a name="downgrading"></a>Degradar
 
-Identificador de la agrupación **aplicaciones/Xamarin Workbooks.app** cambió de `com.xamarin.Inspector` a `com.xamarin.Workbooks` en la versión 1.4 para facilitar una división futuras de los instaladores de libros de Xamarin & Inspector.
+Identificador de la agrupación **aplicaciones/Xamarin Workbooks.app** cambió de `com.xamarin.Inspector` a `com.xamarin.Workbooks` en la versión 1.4, como libros y Inspector están ahora totalmente divididas.
 
 Debido a un error en los instaladores anteriores, no es posible cambiar versiones 1.4 o posterior mediante el 1.3.2 o instaladores anteriores.
 

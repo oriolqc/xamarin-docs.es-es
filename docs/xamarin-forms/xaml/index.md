@@ -6,12 +6,13 @@ ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
-ms.date: 10/24/2016
-ms.openlocfilehash: bb3b4c4f80171f676e8b5f9a7464f4da890a4643
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/18/2018
+ms.openlocfilehash: c040c12829708418d0a705b8e9f930989900c678
+ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36209432"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>Lenguaje de marcado de aplicaciones eXtensible (XAML)
 
@@ -45,6 +46,10 @@ XAML usa el `xmlns` atributo XML para las declaraciones de espacio de nombres. E
 ## <a name="xaml-markup-extensionsmarkup-extensionsindexmd"></a>[Extensiones de marcado XAML](markup-extensions/index.md)
 
 XAML incluye las extensiones de marcado para establecer atributos en valores u objetos más allá de lo que se puede expresar con cadenas simples. Esto incluye hacer referencia a constantes, propiedades estáticas y campos, los diccionarios de recursos y enlaces de datos.
+
+## <a name="field-modifiersfield-modifiersmd"></a>[Modificadores de campo](field-modifiers.md)
+
+El `x:FieldModifier` atributo de espacio de nombres especifica el nivel de acceso para los campos generados para los elementos XAML con nombre.
 
 ## <a name="passing-argumentspassing-argumentsmd"></a>[Paso de argumentos](passing-arguments.md)
 

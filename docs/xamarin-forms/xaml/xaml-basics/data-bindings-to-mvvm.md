@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 10/25/2017
-ms.openlocfilehash: e9f38377299e8094162dd2d2d73174e6f2b40369
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: e83f8a585c4badc31bffaea53bb2f183e7b11fc9
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245776"
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36268867"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. Desde los enlaces de datos para MVVM
 
@@ -290,7 +290,7 @@ El archivo XAML siguiente contiene un `BoxView` cuyo `Color` propiedad está enl
 </ContentPage>
 ```
 
-El enlace en cada `Label` es el valor predeterminado `OneWay`. Solo se necesita para mostrar el valor. Pero el enlace en cada `Slider` es `TwoWay`. Esto permite la `Slider` se inicialicen desde el modelo de vista. Tenga en cuenta que la `Color` propiedad está establecida en `Blue` cuando se crea una instancia del modelo de vista. Pero un cambio en el `Slider` también es necesario establecer un nuevo valor para la propiedad en el modelo de vista, que, a continuación, calcula un nuevo color.
+El enlace en cada `Label` es el valor predeterminado `OneWay`. Solo se necesita para mostrar el valor. Pero el enlace en cada `Slider` es `TwoWay`. Esto permite la `Slider` se inicialicen desde el modelo de vista. Tenga en cuenta que la `Color` propiedad está establecida en `Aqua` cuando se crea una instancia del modelo de vista. Pero un cambio en el `Slider` también es necesario establecer un nuevo valor para la propiedad en el modelo de vista, que, a continuación, calcula un nuevo color.
 
 [![](data-bindings-to-mvvm-images/hslcolorscroll.png "MVVM mediante enlaces de datos bidireccional")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM mediante enlaces de datos bidireccional")
 

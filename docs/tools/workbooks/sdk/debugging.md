@@ -1,15 +1,17 @@
 ---
 title: Depuración de aplicaciones integradas
+description: Este documento describe cómo depurar aplicaciones integradas de los libros de Xamarin, lado del agente y de cliente en Windows y Mac.
 ms.prod: xamarin
 ms.assetid: 90143544-084D-49BF-B44D-7AF943668F6C
 author: topgenorth
 ms.author: toopge
-ms.date: 03/30/2017
-ms.openlocfilehash: f36ce595a739667a91d557c4cd896146c5614f51
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 06/19/2018
+ms.openlocfilehash: 6e37b1ac3d0fb78b5737ebe97b5a28ab40adb648
+ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/19/2018
+ms.locfileid: "36269062"
 ---
 # <a name="debugging-integrations"></a>Depuración de aplicaciones integradas
 
@@ -21,8 +23,8 @@ En Mac OS, aparecen mensajes de registro en el menú de Visor de registro (**Ven
 
 El registro de cliente está en las siguientes ubicaciones en macOS y Windows:
 
-- Mac: `~/Library/Logs/Xamarin/Inspector/Xamarin Inspector {date}.log`
-- Windows: `%LOCALAPPDATA%\Xamarin\Inspector\logs\Xamarin Inspector {date}.log`
+- Mac: `~/Library/Logs/Xamarin/Workbooks/Xamarin Workbooks {date}.log`
+- Windows: `%LOCALAPPDATA%\Xamarin\Workbooks\logs\Xamarin Workbooks {date}.log`
 
 Hay que tener en cuenta es que al cargar aplicaciones integradas a través de la habitual `#r` mecanismo durante el desarrollo, el ensamblado de integración se recogerán como un _dependencia_ del libro y se empaquetan con él si es una ruta de acceso absoluta no usado. Esto puede causar cambios aparezcan en no propagarse, tal y como si volver a generar la integración hiciera nada.
 
@@ -37,7 +39,7 @@ Ambos conjuntos de herramientas le permiten ver código fuente de JavaScript o T
 Para habilitar las herramientas de desarrollo para los libros de Xamarin en Mac, ejecute el siguiente comando de su terminal:
 
 ```shell
-defaults write com.xamarin.Inspector WebKitDeveloperExtras -bool true
+defaults write com.xamarin.Workbooks WebKitDeveloperExtras -bool true
 ```
 
 y, a continuación, reinicie los libros de Xamarin. Una vez hecho esto, debería ver **elemento inspeccionar** aparecen en el menú contextual y un nuevo **Developer** panel estará disponible en las preferencias de los libros. Esta opción le permite elegir si desea que las herramientas de desarrollo abiertas en el inicio:
