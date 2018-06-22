@@ -1,16 +1,17 @@
 ---
 title: Aplicaciones móviles de Microsoft Azure
-description: Ejemplos y código descarga para obtener la documentación de portal de Azure.
+description: Vínculos de este documento a las guías que describen cómo compilar una aplicación de Xamarin que está conectada a Azure. Analiza el trabajo con el componente de Azure de Xamarin, los usuarios y las notificaciones de inserción.
 ms.prod: xamarin
 ms.assetid: 7B9AA8D9-C181-4C33-8AB0-2F56E4DBFC03
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2017
-ms.openlocfilehash: 54ea6ee764054da0f24ce94303a8899971fd63af
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: baa687bfb3b2e8306e70e83b6a6ee54595110860
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780635"
 ---
 # <a name="microsoft-azure-mobile-apps"></a>Aplicaciones móviles de Microsoft Azure
 

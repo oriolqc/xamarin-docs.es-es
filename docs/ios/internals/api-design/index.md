@@ -1,19 +1,20 @@
 ---
-title: Diseño de la API
-description: Perspectiva en el diseño de la API de Xamarin.iOS
+title: Diseño de la API de Xamarin.iOS
+description: Este documento describe algunas de las orientaciones que usa para diseñar las APIs Xamarin.iOS y cómo se relacionan con objetivo C.
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: da827c5bdd25bf841f5396b10d1eeb70e132dfeb
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: a7e508ddd086936a3ffea9d76cde7d896fe4d1f3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787359"
 ---
-# <a name="api-design"></a>Diseño de la API
+# <a name="xamarinios-api-design"></a>Diseño de la API de Xamarin.iOS
 
 Además de la bibliotecas de clases Base que forman parte de Mono, core [Xamarin.iOS](http://www.xamarin.com/iOS) se suministra con enlaces para iOS varias API para permitir a los desarrolladores crear aplicaciones nativas para iOS con Mono.
 

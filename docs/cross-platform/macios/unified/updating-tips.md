@@ -1,14 +1,16 @@
 ---
 title: Sugerencias para actualizar el código a la API unificada
+description: Este documento describen errores comunes y algunas sugerencias útiles al actualizar una aplicación para usar la API de unificado de Xamarin.
 ms.prod: xamarin
 ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: 640f95e0083c73288cc8e1f183b06bd28a7b4e07
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: cab27d5dc38eeab65728f242c6f11fd445601a88
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782123"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Sugerencias para actualizar el código a la API unificada
 
@@ -20,7 +22,6 @@ Hay un [error](https://bugzilla.xamarin.com/show_bug.cgi?id=25569) en la versió
 
 ```console
 Objective-C exception thrown. Name: NSInvalidArgumentException Reason: Could not find a storyboard named 'xxx' in bundle NSBundle...
-
 ```
 
 Puede hacer lo siguiente para resolver este problema, busque el archivo de destino de compilación siguiente:
@@ -82,9 +83,9 @@ Algunas cosas que deban corregirse manualmente incluyen:
     vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
     ```
 
- * El NSObject `.ctor(IntPtr)` constructor se ha cambiado de pública a protegido ([para evitar el uso incorrecto](~/cross-platform/macios/unified/index.md#NSObject_ctor)).
+ * El NSObject `.ctor(IntPtr)` constructor se ha cambiado de pública a protegido ([para evitar el uso incorrecto](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
 
- * `NSAction` ha sido [reemplazado](~/cross-platform/macios/unified/index.md#NSAction) con el starndard .NET `Action`. Algunos delegados simple (parámetro único) también se han reemplazado por `Action<T>`.
+ * `NSAction` ha sido [reemplazado](~/cross-platform/macios/unified/overview.md#NSAction) con el starndard .NET `Action`. Algunos delegados simple (parámetro único) también se han reemplazado por `Action<T>`.
 
 Por último, hacer referencia a la [diferencias de API unificada de clásico v](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) para buscar cambios en las API en el código. Buscar [esta página](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) le ayudará a encontrar las API clásico y lo que ha se ha actualizado a.
 

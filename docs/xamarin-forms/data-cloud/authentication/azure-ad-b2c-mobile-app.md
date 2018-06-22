@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30787979"
 ---
 # <a name="integrating-azure-active-directory-b2c-with-azure-mobile-apps"></a>Integración de Azure Active Directory B2C con aplicaciones móviles de Azure
 

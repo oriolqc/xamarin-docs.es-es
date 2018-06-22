@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33918531"
 ---
 # <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-package"></a>Caso práctico de PCL: ¿Cómo puedo resolver problemas relacionados a System.Diagnostics.Tracing para el paquete NuGet de flujo de datos TPL de Microsoft?
 

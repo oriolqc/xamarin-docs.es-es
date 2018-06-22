@@ -1,19 +1,20 @@
 ---
-title: Inicio rápido de guiones gráficos
-description: Compilación iniciada macOS la obtención de interfaces de usuario con guiones gráficos.
+title: Guiones gráficos en Xamarin.Mac – inicio rápido
+description: Este documento proporciona una introducción de inicio rápido para crear interfaces de usuario con los guiones gráficos de Xamarin.Mac de macOS. Describe cómo crear un segue y crear una ventana de preferencias.
 ms.prod: xamarin
 ms.assetid: 20719B5D-8147-4E8A-A23C-8D575C7ACCEE
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: 0c366de844b119736763f7d419d6bc9bb3fbfc0a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2bf91a51a55583e2ba8ca1fc09eb3dcd0d9986cf
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792577"
 ---
-# <a name="starting-a-new-storyboard-based-project"></a>A partir de un guión gráfico nuevo proyecto basado en
+# <a name="storyboards-in-xamarinmac--quick-start"></a>Guiones gráficos en Xamarin.Mac – inicio rápido
 
 Como una introducción rápida al uso de guiones gráficos para definir la interfaz de usuario de la aplicación de Xamarin.Mac, vamos a iniciar un nuevo proyecto de Xamarin.Mac. Seleccione **Mac** > **Aplicación** > **Cocoa App** y haga clic en el botón **Siguiente**:
 

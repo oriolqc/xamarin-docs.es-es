@@ -10,6 +10,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33917478"
 ---
 # <a name="general-frequently-asked-questions"></a>Preguntas más frecuentes de general
 

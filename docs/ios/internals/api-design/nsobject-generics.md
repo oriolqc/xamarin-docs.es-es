@@ -1,18 +1,20 @@
 ---
-title: Subclases genéricas de NSObject
+title: Subclases genéricas de NSObject en Xamarin.iOS
+description: Este documento describe cómo crear crear subclases genéricas de NSObject. Examina qué puede y no se puede realizar, describe al registrador estático y echa un vistazo a rendimiento.
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 89df751d74b9b54ae8138d2e1b24c61d82c3cac8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9caad9d4990225a0468be8ee4987eaa9fea0c118
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786488"
 ---
-# <a name="generic-subclasses-of-nsobject"></a>Subclases genéricas de NSObject
+# <a name="generic-subclasses-of-nsobject-in-xamarinios"></a>Subclases genéricas de NSObject en Xamarin.iOS
 
 ## <a name="using-generics-with-nsobjects"></a>Uso de genéricos con NSObjects
 
@@ -40,7 +42,7 @@ Este documento detallan las limitaciones de la compatibilidad limitada con subcl
 
 Todos los argumentos de tipo genérico en una firma de miembro expuestos a Objective-C deben tener un `NSObject` restricción.
 
-**Good**:
+**Buena**:
 
 ```csharp
 class Generic<T> : NSObject where T: NSObject
@@ -54,7 +56,7 @@ class Generic<T> : NSObject where T: NSObject
 
 **Motivo**: el parámetro de tipo genérico es un `NSObject`, por lo que la firma de selector para `myMethod:` pueden exponerse de forma segura a Objective-C (siempre será `NSObject` o una subclase de ella).
 
-**Bad**:
+**Incorrecta**:
 
 ```csharp
 class Generic<T> : NSObject
@@ -68,7 +70,7 @@ class Generic<T> : NSObject
 
 **Motivo**: no es posible crear una firma Objective-C para los miembros exportados que puede llamar código Objective-C ya que la firma sería diferentes según el tipo exacto del tipo genérico `T`.
 
-**Good**:
+**Buena**:
 
 ```csharp
 class Generic<T> : NSObject
@@ -84,7 +86,7 @@ class Generic<T> : NSObject
 
 **Motivo**: es posible ha sin restricciones argumentos de tipo genérico siempre que no toman parte de la firma de miembros exportados.
 
-**Good**:
+**Buena**:
 
 ```csharp
 class Generic<T, U> : NSObject where T: NSObject

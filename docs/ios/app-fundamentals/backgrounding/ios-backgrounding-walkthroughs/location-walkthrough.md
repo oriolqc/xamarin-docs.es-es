@@ -1,18 +1,20 @@
 ---
-title: 'Tutorial: con la ubicación de fondo'
+title: 'Tutorial: ubicación de fondo en Xamarin.iOS'
+description: Este documento proporciona un tutorial sobre cómo utilizar la información de ubicación en una aplicación de Xamarin.iOS backgrounded. Describe el programa de instalación necesario, la interfaz de usuario y Estados de la aplicación.
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: e6c74d9ffba4f63682a905d6ebc06d02be81abf4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: aef39ef435bbbad6f643b2376832d8f8132d6a4c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784099"
 ---
-# <a name="walkthrough---using-background-location"></a>Tutorial: con la ubicación de fondo
+# <a name="walkthrough---background-location-in-xamarinios"></a>Tutorial: ubicación de fondo en Xamarin.iOS
 
 En este ejemplo, vamos a compilar aplicaciones de ubicación que imprime información acerca de la ubicación actual de iOS: latitud, longitud y otros parámetros de la pantalla. Esta aplicación muestra cómo realizar correctamente las actualizaciones de ubicación mientras la aplicación está activo o Backgrounded.
 

@@ -1,20 +1,19 @@
 ---
 title: Introducción a UrhoSharp
-description: Esto proporciona una breve introducción a los conceptos que subyacen UrhoSharp
+description: Este documento describe la estructura básica de una aplicación de UrhoSharp y vínculos a varias guías y aplicaciones de ejemplo que muestran cómo usar UrhoSharp.
 ms.prod: xamarin
 ms.assetid: 18041443-5093-4AF7-8B20-03E00478EF35
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 6fb53aa6d4bad8f8fcae8608ab0192af15fe87b1
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: d39faabc0851e3e89b03ad58a7f1ead3894efc15
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783560"
 ---
 # <a name="an-introduction-to-urhosharp"></a>Introducción a UrhoSharp
-
-_Esto proporciona una breve introducción a los conceptos que subyacen UrhoSharp_
 
 ![Logotipo de UrhoSharp](introduction-images/urhosharp-icon.png)
 

@@ -6,12 +6,13 @@ ms.assetid: 5C74ABE2-C862-4ED0-8EA5-C7FEE5251D4B
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: fe544f8ac677987f8921ccb1c11b8930811b9553
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/02/2018
+ms.openlocfilehash: 15698767ae71b68a26138169771f7f397bddd95a
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732523"
 ---
 # <a name="nougat-features"></a>Características de nueces
 
@@ -46,7 +47,7 @@ En este artículo se explica cómo empezar a compilar aplicaciones con Android n
 
 Para usar las nuevas características de Android nueces en aplicaciones basadas en Xamarin, es necesario lo siguiente:
 
--   **Visual Studio o Visual Studio para Mac** &ndash; si está usando Visual Studio, versión 4.2.0.628 o posterior de Xamarin para Visual Studio es necesaria. Si utiliza Visual Studio para Mac, versión 6.1.0 o una versión posterior de Visual Studio para Mac es necesaria.
+-   **Visual Studio o Visual Studio para Mac** &ndash; si está usando Visual Studio, versión 4.2.0.628 o posterior de Visual Studio Tools para Xamarin es necesaria. Si utiliza Visual Studio para Mac, versión 6.1.0 o una versión posterior de Visual Studio para Mac es necesaria.
 
 -   **Xamarin.Android** &ndash; Xamarin.Android 7.0 o posterior debe instalarse y configurarse con Visual Studio o Visual Studio para Mac.
 

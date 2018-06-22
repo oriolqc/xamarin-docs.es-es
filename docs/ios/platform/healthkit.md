@@ -1,21 +1,20 @@
 ---
-title: HealthKit
-description: HealthKit es un marco que se introdujo en iOS 8 que proporciona un almacén de datos centralizado, seguro y coordinada de información relacionados con el estado. El sistema operativo garantiza la privacidad y seguridad de información de estado y, a la aplicación de mantenimiento, un panel para el usuario. Con el permiso del usuario, las aplicaciones pueden leer y escribir una amplia variedad de información de estado.
+title: HealthKit en Xamarin.iOS
+description: Este documento describe HealthKit, un marco de trabajo que se introdujo en iOS 8 que proporciona un almacén de datos centralizado, seguro y coordinada de información relacionados con el estado. Se trata cómo aprovisionar una aplicación HealthKit y cómo escribir código que usa el marco de trabajo HealthKit.
 ms.prod: xamarin
 ms.assetid: E3927A21-507C-43BA-A2AD-957716BA9B52
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a569bcff3ac33d008788bb0b946bd027fa5c0ea8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 06c0231bbb9aa7b82b92e0a8c2157b8be9c8b05b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787538"
 ---
-# <a name="healthkit"></a>HealthKit
-
-_HealthKit es un marco que se introdujo en iOS 8 que proporciona un almacén de datos centralizado, seguro y coordinada de información relacionados con el estado. El sistema operativo garantiza la privacidad y seguridad de información de estado y, a la aplicación de mantenimiento, un panel para el usuario. Con el permiso del usuario, las aplicaciones pueden leer y escribir una amplia variedad de información de estado._
+# <a name="healthkit-in-xamarinios"></a>HealthKit en Xamarin.iOS
 
 Kit de mantenimiento proporciona un almacén de datos seguro para la información del usuario relacionados con el estado. Aplicaciones de Kit de mantenimiento pueden, con el permiso del usuario explícita, leer y escribir en este almacén de datos y recibir notificaciones cuando se agregan datos pertinentes. Las aplicaciones pueden presentar los datos o usuario puede usar la aplicación de mantenimiento proporcionado de Apple para ver un panel de todos sus datos.
 

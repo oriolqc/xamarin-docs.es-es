@@ -1,18 +1,20 @@
 ---
-title: Demostración de ciclo de vida de la aplicación
+title: Demostración de ciclo de vida de la aplicación para Xamarin.iOS
+description: Este documento examina varios eventos de ciclo de vida controlados por el delegado de la aplicación en una aplicación de iOS, que muestra cuándo y cómo se administran estos eventos.
 ms.prod: xamarin
 ms.assetid: 5C8AACA6-49F8-4C6D-99C3-5F443C01B230
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f03cd7d74d09fc40b88cfbf44bf54c6da5f4c149
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 64c695065012e4bf796c219c260324d9b6278ca5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783589"
 ---
-# <a name="application-lifecycle-demo"></a>Demostración de ciclo de vida de la aplicación
+# <a name="application-lifecycle-demo-for-xamarinios"></a>Demostración de ciclo de vida de la aplicación para Xamarin.iOS
 
 En esta sección, vamos a examinar una aplicación que muestra los cuatro estados de aplicación y el rol de la `AppDelegate` métodos de notificación de la aplicación de cambios cuando los Estados. La aplicación imprimirá actualizaciones en la consola cuando la aplicación cambia el estado:
 

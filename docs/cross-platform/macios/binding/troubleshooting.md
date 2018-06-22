@@ -1,16 +1,17 @@
 ---
 title: Solución de problemas de enlace
-description: Esta guía explica qué hacer si tiene dificultades para enlazar una biblioteca de C de objetivo.
+description: Esta guía explica qué hacer si tiene dificultades para enlazar una biblioteca de C de objetivo. En concreto, se trata de los enlaces que faltan, las excepciones del argumento cuando se pasa null a un enlace y errores.
 ms.prod: xamarin
 ms.assetid: 7C65A55C-71FA-46C5-A1B4-955B82559844
 author: asb3993
 ms.author: amburns
 ms.date: 10/19/2016
-ms.openlocfilehash: cb685bb60d49615c69925d17f69b0342d4f0a1a6
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b0ce6c3792d6495cabdf8acdab1a644fe75f1219
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780240"
 ---
 # <a name="binding-troubleshooting"></a>Solución de problemas de enlace
 

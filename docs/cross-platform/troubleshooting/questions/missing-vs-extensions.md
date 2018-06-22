@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33917894"
 ---
 # <a name="missing-visual-studio-extensions-after-installation"></a>Faltan extensiones de Visual Studio después de la instalación
 

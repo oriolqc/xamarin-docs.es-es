@@ -1,21 +1,20 @@
 ---
 title: Notificaciones de inserción en iOS
-description: Esta sección describirá las notificaciones de inserción en iOS. Incluye el servicio de puerta de enlace de notificaciones Push de Apple y el papel que desempeña en las notificaciones de publicación para las aplicaciones de iOS. Explicará cómo crear los certificados de seguridad necesarios para habilitar las notificaciones de inserción y analizar. Por último, en esta sección se describe algunas de las tareas de mantenimiento de manera que los servidores de aplicaciones deben realizar para realizar un seguimiento de los dispositivos móviles de cliente.
+description: Este documento describe cómo trabajar con notificaciones de inserción en iOS 9 y versiones anteriores. Se trata de certificados, el registro con el servicio de puerta de enlace de notificaciones (APNS) de Apple Push y mucho más.
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 3a86ce5e61576faec41b5fcddf899d731d2cc57a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7bb2a250b9d3cc0c8df02f432330f9fe1dc58f94
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788672"
 ---
 # <a name="push-notifications-in-ios"></a>Notificaciones de inserción en iOS
-
-_Esta sección describirá las notificaciones de inserción en iOS. Incluye el servicio de puerta de enlace de notificaciones Push de Apple y el papel que desempeña en las notificaciones de publicación para las aplicaciones de iOS. Explicará cómo crear los certificados de seguridad necesarios para habilitar las notificaciones de inserción y analizar. Por último, en esta sección se describe algunas de las tareas de mantenimiento de manera que los servidores de aplicaciones deben realizar para realizar un seguimiento de los dispositivos móviles de cliente._
 
 > [!IMPORTANT]
 > La información de esta sección pertenece a iOS 9 y anteriores, se han quedado aquí para compatibilidad con versiones anteriores de iOS. Para iOS 10 y versiones posteriores, consulte la [Guía de la estructura de notificación de usuario](~/ios/platform/user-notifications/index.md) para admitir tanto locales como remotos de notificación en un dispositivo iOS.

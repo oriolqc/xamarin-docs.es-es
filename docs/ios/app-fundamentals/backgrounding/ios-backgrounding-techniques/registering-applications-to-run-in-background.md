@@ -1,18 +1,20 @@
 ---
-title: Registrar las aplicaciones se ejecuten en segundo plano
+title: Registrar Xamarin.iOS aplicaciones se ejecuten en segundo plano
+description: Este documento describe cómo registrar una aplicación Xamarin.iOS para ejecutarse en segundo plano. Se trata de Audio aplicaciones, VoIP aplicaciones, accesorios externos y bluetooth y mucho más.
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 58ee68f765372094d68c3cf30ed6a631a67fe313
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f4774f6b4f5412c44dc985bd40129a178b1e813c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783680"
 ---
-# <a name="registering-applications-to-run-in-the-background"></a>Registrar las aplicaciones se ejecuten en segundo plano
+# <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registrar Xamarin.iOS aplicaciones se ejecuten en segundo plano
 
 Registrar tareas individuales para fondo privilegios funciona para algunas aplicaciones, pero ¿qué ocurre si una aplicación se pidió constantemente para realizar tareas importantes y de larga ejecución, como obtener instrucciones para el usuario a través de GPS? Este tipo de aplicaciones en su lugar, deben registrarse como aplicaciones conocidas de segundo plano necesarias.
 

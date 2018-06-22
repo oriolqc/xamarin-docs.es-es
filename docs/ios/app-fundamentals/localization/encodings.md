@@ -1,17 +1,19 @@
 ---
-title: Codificaciones de internacionalización
+title: Codificaciones de internacionalización de Xamarin.iOS
+description: Este documento describe codificaciones de internacionalización de Xamarin.iOS, que se tratan las codificaciones disponibles y cómo agregarlos a una aplicación.
 ms.prod: xamarin
 ms.assetid: F5117294-28BB-4583-B6A0-A339B050FDE1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 60cfc5ac8238c853cc066afe2978f91ab9c0755e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4963b0f95ae48ee56462a82d2f82a8dcaa231a23
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784131"
 ---
-# <a name="internationalization-encodings"></a>Codificaciones de internacionalización
+# <a name="internationalization-encodings-in-xamarinios"></a>Codificaciones de internacionalización de Xamarin.iOS
 
 No todas las codificaciones se incluyen en la biblioteca de clases de Xamarin.iOS de forma predeterminada.
 
@@ -36,7 +38,7 @@ Puede seleccionar uno de los siguientes:
  <a name="cjk" />
 
 
-## <a name="cjk"></a>cjk
+## <a name="cjk"></a>CJK
 
 -  CP51932
 -  CP932

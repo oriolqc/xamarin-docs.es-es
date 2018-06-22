@@ -1,18 +1,20 @@
 ---
-title: Generación de código .xib
+title: Generación de código de .xib en Xamarin.iOS
+description: Este documento describe cómo Xamarin.iOS genera código para asignar archivos .xib a C#, hacer que los controles visuales sean accesibles mediante programación.
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: b887dbf09693452f62f744669ad9713927020cea
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 064e17393747a36cd761cb2464e3239cfc17141c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786153"
 ---
-# <a name="xib-code-generation"></a>Generación de código .xib
+# <a name="xib-code-generation-in-xamarinios"></a>Generación de código de .xib en Xamarin.iOS
 
 > [!IMPORTANT]
 >  Este documento explica Visual Studio para la integración de Mac con el generador de interfaz de Xcode, ya que las acciones y las salidas no se usan en el Diseñador de Xamarin para iOS. Para obtener más información sobre el Diseñador de iOS, revise la [iOS diseñador](~/ios/user-interface/designer/index.md) documento.
@@ -31,7 +33,7 @@ Se pueden definir las clases personalizadas en un **.xib** archivo utilizando el
 
 ## <a name="generating-code"></a>Generar código
 
-Para cualquier **{0} .xib** archivo con una acción de compilación de *página*, si un **{0}.xib.designer.cs** archivo también existe en el proyecto, Visual Studio para Mac generará clases parciales en el archivo del diseñador para todas las clases de usuario que se puede encontrar en el **.xib** archivo, con las propiedades para las salidas y métodos parciales para todas las acciones. Generación de código se habilita simplemente mediante la presencia de este archivo.
+Para cualquier  **{0}.xib** archivo con una acción de compilación de *página*, si un  **{0}. xib.designer.cs** archivo también existe en el proyecto, Visual Studio para Mac generará clases parciales en el archivo del diseñador para todas las clases de usuario que puede encontrar en el **.xib** archivo, con las propiedades para las salidas y métodos parciales para todas las acciones. Generación de código se habilita simplemente mediante la presencia de este archivo.
 
 El archivo del diseñador es automáticamente se actualiza cuando el **.xib** archivo cambios y Visual Studio para Mac vuelve a obtener el foco. El archivo del diseñador no debe modificarse manualmente, como cambios serán sobrescrito próxima vez que Visual Studio para las actualizaciones de Mac el archivo.
 
@@ -49,7 +51,7 @@ Las clases de diseñador parciales no están diseñadas para usarse como-es. Dis
 
 La razón de ello es la necesidad de flexibilidad. Por ejemplo, varias clases de código subyacente podrían subclase que común administrada clase abstracta, las subclases de la clase que puede crear subclases por IB.
 
-Es convencional para colocar este elemento un **{0}.xib.cs** archivo junto a la **.xib.designer.cs {0}** archivo del diseñador.
+Es convencional para colocar este elemento un  **{0}. xib.cs** archivo junto a la  **{0}. xib.designer.cs** archivo del diseñador.
 
 <a name="generated" />
 

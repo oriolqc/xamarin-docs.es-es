@@ -12,6 +12,7 @@ metadata:
   ms.translationtype: HT
   ms.contentlocale: es-ES
   ms.lasthandoff: 05/03/2018
+  ms.locfileid: "32436390"
 abstract:
   description: Xamarin ofrece una solución para el desarrollo multiplataforma de aplicaciones para dispositivos móviles, tabletas y escritorio. En esta sección se abordan los detalles aplicables con independencia de las plataformas de destino.
   menu:

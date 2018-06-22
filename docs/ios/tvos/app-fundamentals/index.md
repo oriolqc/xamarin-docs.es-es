@@ -1,5 +1,5 @@
 ---
-title: Principios de la aplicación
+title: tvOS conceptos básicos de la aplicación
 description: Esta sección presentan las tareas y conceptos que los desarrolladores deben tener en cuenta al escribir aplicaciones de Xamarin.tvOS más comunes.
 ms.prod: xamarin
 ms.assetid: B245062F-1DD9-4BE5-8E11-728BA3C8AD4C
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/07/2016
-ms.openlocfilehash: 4ab06bd7de0b0e847d0ca31bcac9ecdefe79854e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cc9c0d26dfb9f5c97acd1d2a794ed1a9798b2eaf
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788867"
 ---
-# <a name="application-fundamentals"></a>Principios de la aplicación
+# <a name="tvos-application-fundamentals"></a>tvOS conceptos básicos de la aplicación
 
 _Esta sección presentan las tareas y conceptos que los desarrolladores deben tener en cuenta al escribir aplicaciones de Xamarin.tvOS más comunes._
 

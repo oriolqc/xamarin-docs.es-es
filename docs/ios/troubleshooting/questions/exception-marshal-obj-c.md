@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30775980"
 ---
 # <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-object"></a>¿Por qué se realiza la aplicación de iOS 9 por error con: System.Exception: no se pudo serializar el objeto Objective-C?
 

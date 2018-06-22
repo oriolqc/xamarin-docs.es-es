@@ -1,20 +1,19 @@
 ---
 title: Compatibilidad con la plataforma de UrhoSharp
-description: Cross Platform 3D/2D motor de visualización y juegos
+description: Vínculos de este documento diversas guías que describen cómo agregar Urho a un proyecto nativo existente para una plataforma específica. Se trata de Android, iOS, tvOS, macOS, Windows y Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 6205E430-1036-4CC3-8E97-AA5554E3D468
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: b9fdb205148824282d527f2483e027b14d786ff2
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 9179b0913566ee5c70fbbfabe4c17ee3b98fbeca
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783390"
 ---
 # <a name="urhosharp-platform-support"></a>Compatibilidad con la plataforma de UrhoSharp
-
-_Cross Platform 3D/2D motor de visualización y juegos_
 
 En esta sección se describe cómo agregar Urho a un proyecto nativo existente para su plataforma y cómo aprovechar las ventajas de integración específico de plataforma.
 

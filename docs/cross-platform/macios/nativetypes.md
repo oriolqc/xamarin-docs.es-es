@@ -1,29 +1,31 @@
 ---
-title: Tipos nativos
+title: Tipos nativos para iOS y Mac OS
+description: Este documento describe cómo unificado API de Xamarin asigna tipos de .NET para tipos nativos de 32 y 64 bits, según sea necesario según la arquitectura de destino de compilación.
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: 4d11d053cf4471a98cbba0f7c97be3bef39276fb
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: fc2b91a9265fcf09e4f58d5de27a1fdef9350b2d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781109"
 ---
-# <a name="native-types"></a>Tipos nativos
+# <a name="native-types-for-ios-and-macos"></a>Tipos nativos para iOS y Mac OS
 
-En el núcleo de la diferencia, Mac y API de iOS usan un tipo de datos específicos de la arquitectura que siempre es de 32 bits en plataformas de 32 bits y 64 bits en plataformas de 64 bits.
+Mac y API de iOS utilizan tipos de datos específicos de la arquitectura de 32 bits en plataformas de 32 bits y 64 bits en plataformas de 64 bits.
 
 Por ejemplo, asigna Objective-c. el `NSInteger` tipo de datos que `int32_t` en sistemas de 32 bits y a `int64_t` en sistemas de 64 bits.
 
-Para que coincida con este comportamiento, en nuestra API unificada, sustituiremos los usos anteriores de `int` (que en .NET se define como siempre que se va a `System.Int32`) a un nuevo tipo de datos: `System.nint`.  Se puede considerar "n" como "nativos", para escribir el tipo entero nativo de la plataforma.
+Para que coincida con este comportamiento, en nuestra API unificada, sustituiremos los usos anteriores de `int` (que en .NET se define como siempre que se va a `System.Int32`) a un nuevo tipo de datos: `System.nint`. Se puede considerar "n" como "nativos", para escribir el tipo entero nativo de la plataforma.
 
-Con estos nuevos tipos de datos, el mismo código fuente se compila para 32 bits, 32 bits y 64 bits o 64 bits, dependiendo de los marcadores de compilación.
+Con estos nuevos tipos de datos, el mismo código fuente se compila para crear arquitecturas de 32 bits y 64 bits, dependiendo de los marcadores de compilación.
 
 ## <a name="new-data-types"></a>Nuevos tipos de datos
 
-La siguiente tabla muestra los cambios en nuestros tipos de datos para que coincida con este nuevo mundo de 32 o 64 bits:
+La siguiente tabla muestra los cambios en nuestros tipos de datos para que coincida con este nuevo mundo de 32 y 64 bits:
 
 |Tipo nativo|tipo de respaldo de 32 bits|tipo de respaldo de 64 bits|
 |--- |--- |--- |

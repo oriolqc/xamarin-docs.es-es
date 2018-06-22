@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33920811"
 ---
 # <a name="introduction-to-game-development-with-monogame"></a>Introducción al desarrollo de juegos con MonoGame
 

@@ -1,6 +1,6 @@
 ---
 title: Enlace iOS bibliotecas
-description: Cómo crear bibliotecas nativas de iOS (y CocoaPods) accesible en aplicaciones de Xamarin.
+description: Este documento describe cómo crear C# enlaces a código Objective-C, lo que permite utilizar bibliotecas nativas y CocoaPods en una aplicación de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: EBDC50DC-B44B-4003-AB2B-1EEB868A5E01
 ms.technology: xamarin-ios
@@ -8,15 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 268900c7ab7b317b0b20f4c1ead2360fd6f9bbf0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b054595568a34616a01f2c3f3c7d85f968c3f1fa
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787178"
 ---
 # <a name="binding-ios-libraries"></a>Enlace iOS bibliotecas
-
-_Cómo crear bibliotecas nativas de iOS (y CocoaPods) accesible en aplicaciones de Xamarin._
 
 Siga estos vínculos para obtener información sobre cómo enlazar bibliotecas Objective-C y CocoaPods para Xamarin.iOS y Xamarin.Mac:
 

@@ -1,5 +1,6 @@
 ---
 title: Reglas de análisis de Xamarin.iOS
+description: Este documento describe un conjunto de reglas de análisis que compruebe la configuración de proyecto Xamarin.iOS para ayudar a determinar si la configuración más/better-optimized está disponibles.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C29B69F5-08E4-4DCC-831E-7FD692AB0886
@@ -7,11 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: d942e21208d5a66da3dd849d217be2489311b9a0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 25d2936f70981ed239626193ba6e4993f1378108
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788903"
 ---
 # <a name="xamarinios-analysis-rules"></a>Reglas de análisis de Xamarin.iOS
 

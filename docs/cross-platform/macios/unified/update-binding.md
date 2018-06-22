@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33918492"
 ---
 # <a name="migrating-a-binding-to-the-unified-api"></a>Migrar un enlace a la API unificada
 

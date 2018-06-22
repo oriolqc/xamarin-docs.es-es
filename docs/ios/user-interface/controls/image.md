@@ -1,18 +1,20 @@
 ---
-title: Mostrar imágenes
+title: Mostrar imágenes con Xamarin.iOS
+description: Este documento describe cómo mostrar imágenes en Xamarin.iOS. Incluye agregar imágenes a una aplicación ya sea mediante programación o mediante el Diseñador de iOS.
 ms.prod: xamarin
 ms.assetid: 67CA8DB6-769D-42BB-A137-3AF933789FE1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 406cfe813cbb58111769203f3b6c3fb0c2edad3c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f42cc5e4ab26c4c53d96e96420cbbba8036d6b5d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789835"
 ---
-# <a name="displaying-images"></a>Mostrar imágenes
+# <a name="displaying-images-with-xamarinios"></a>Mostrar imágenes con Xamarin.iOS
 
 Agregar imágenes a la aplicación requiere dos pasos: en primer lugar, agregue las imágenes al proyecto; a continuación, agregar controles y código para que se muestren en una pantalla. Hacer referencia a la [trabajar con imágenes](~/ios/app-fundamentals/images-icons/index.md) artículo para cobertura de imagen de control en Xamarin.iOS más detallada.
 

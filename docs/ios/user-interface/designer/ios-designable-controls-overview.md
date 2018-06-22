@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30782189"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Controles personalizados en el Diseñador de Xamarin para iOS
 

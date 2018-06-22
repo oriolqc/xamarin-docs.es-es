@@ -12,6 +12,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30780728"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Trabajar con tablas en el Diseñador de iOS
 

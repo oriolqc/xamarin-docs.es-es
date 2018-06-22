@@ -1,18 +1,20 @@
 ---
-title: Compra de productos no consumible
+title: Compra de productos no consumible en Xamarin.iOS
+description: Este documento describe los productos no consumible en Xamarin.iOS, que son características adquiridas por un usuario que siguen estando disponibles de forma indefinida, independientemente del dispositivo.
 ms.prod: xamarin
 ms.assetid: 635D9CA2-6BCA-53E1-7B10-968029AA3493
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 0a581dc222e43f8d4742bd52dc56dc691449a8f2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: db193493ea11a7963fe5fc57f0c45978c26a7a74
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786956"
 ---
-# <a name="purchasing-non-consumable-products"></a>Compra de productos no consumible
+# <a name="purchasing-non-consumable-products-in-xamarinios"></a>Compra de productos no consumible en Xamarin.iOS
 
 No consumible productos son 'propiedad' por el cliente. La expectativa es que siempre tendrán acceso a ellos, incluso si su dispositivo se pierda o le roben o adquirir una nueva. Son útiles para libros, artículos de la revista, niveles de juegos, filtros de foto, 'características pro', etcetera. Una vez que un usuario ha comprado un producto no consumible, nunca tienen que pagar por él nuevamente. Si el código accidentalmente les permite probar, StoreKit mostrará un mensaje que ya se ha comprado.
 

@@ -1,26 +1,26 @@
 ---
-title: Las suscripciones e informes
+title: Las suscripciones y los informes en Xamarin.iOS
+description: Este documento describe no renovar las suscripciones, las suscripciones gratuitas, suscripciones automáticamente renovable y usar iTunes Connect para informar sobre estos elementos.
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7ba47e8f0ec114845c14269e81bb7f078a5d4936
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7e0873107a60b48e5ebfd8e159f3bf3b85d02867
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787036"
 ---
-# <a name="subscriptions-and-reporting"></a>Las suscripciones e informes
+# <a name="subscriptions-and-reporting-in-xamarinios"></a>Las suscripciones y los informes en Xamarin.iOS
 
 ## <a name="about-non-renewing-subscriptions"></a>Acerca de las suscripciones no renovar
 
 Suscripciones de renovación no están diseñadas para los productos que representan la venta de un servicio con una restricción del tiempo como (acceso de una semana a una aplicación de navegación) o acceso de tiempo limitado a un archivo de datos.   
    
-   
-   
- Diferencias principales entre las suscripciones no renovar y otros tipos de producto:
+Diferencias principales entre las suscripciones no renovar y otros tipos de producto:
 
 -  La definición de producto en iTunes Connect no incluye el término. El código de aplicación debe ser capaz de inferir el período de validez de los Id. 
 -  Puede adquirir varias veces (como un producto compatible). Se requiere que las aplicaciones para administrar la renovación y el término/expiración de suscripción y evitar que el usuario comprar suscripciones que se superponen. 

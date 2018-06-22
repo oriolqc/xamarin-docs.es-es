@@ -7,12 +7,13 @@ ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/02/2018
-ms.openlocfilehash: b5de9d673a348ddd4b939ae387257f835b37117a
-ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
+ms.date: 06/02/2018
+ms.openlocfilehash: b0d9458238c4b3ac9ceeeb7d7ce4e2ca8b0b6de3
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732871"
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Cambios en las Herramientas de Android SDK
 
@@ -20,7 +21,7 @@ _Cambios en cómo el SDK de Android administra los niveles de API y AVDs instala
 
 ## <a name="changes-to-android-sdk-tooling"></a>Cambios en las herramientas de SDK de Android
 
-En las versiones recientes de las herramientas del SDK para Android, Google ha quitado los administradores existentes de AVD y SDK en favor de nuevas herramientas de CLI (interfaz de línea de comandos). El **android** se ha quitado el programa y los administradores de Google GUI (interfaz gráfica de usuario) en Visual Studio para Mac y versiones anteriores de Xamarin para Visual Studio dejará de funcionar después de la versión 25.2.5 de las herramientas de SDK de Android. Por ejemplo, cualquier intento de usar el **android** programa a través de la línea de comandos dará como resultado un mensaje de error similar al siguiente:
+En las versiones recientes de las herramientas del SDK para Android, Google ha quitado los administradores existentes de AVD y SDK en favor de nuevas herramientas de CLI (interfaz de línea de comandos). El **android** se ha quitado el programa y los administradores de Google GUI (interfaz gráfica de usuario) en Visual Studio para Mac y versiones anteriores de Visual Studio Tools para Xamarin dejará de funcionar después de la versión 25.2.5 de las herramientas de SDK de Android. Por ejemplo, cualquier intento de usar el **android** programa a través de la línea de comandos dará como resultado un mensaje de error similar al siguiente:
 
 ```shell
 The "android" command is deprecated.
@@ -37,7 +38,7 @@ Visual Studio y Visual Studio para Mac ahora proporcionan Xamarin reemplazos par
 
 -   Para descargar herramientas de SDK de Android, plataformas y otros componentes que necesita para el desarrollo de aplicaciones de Xamarin.Android, use la [Xamarin Android SDK Manager](~/android/get-started/installation/android-sdk.md) el Administrador de SDK en lugar de Google heredado.
 
--   Para crear y configurar dispositivos virtuales Android, use la [el Administrador de dispositivos Android Xamarin](~/android/get-started/installation/android-emulator/xamarin-device-manager.md) el administrador del emulador en lugar de Google heredado.
+-   Para crear y configurar dispositivos virtuales Android, use la [el Administrador de dispositivos Android](~/android/get-started/installation/android-emulator/device-manager.md) el administrador del emulador en lugar de Google heredado.
 
 Estas herramientas son funcionalmente equivalentes a basado en la interfaz gráfica de usuario de Google estas actualizaciones reemplazan los administradores.
 
@@ -69,7 +70,7 @@ Todavía puede usar la GUI original mediante la ejecución de la **android** pro
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Configuración de Android SDK](~/android/get-started/installation/android-sdk.md)
-- [Administrador de dispositivos Android](~/android/get-started/installation/android-emulator/xamarin-device-manager.md)
+- [Administrador de dispositivos Android](~/android/get-started/installation/android-emulator/device-manager.md)
 - [Descripción de los niveles de API de Android](~/android/app-fundamentals/android-api-levels.md)
 - [Notas de la versión de SDK Tools (Google)](https://developer.android.com/studio/releases/sdk-tools.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)

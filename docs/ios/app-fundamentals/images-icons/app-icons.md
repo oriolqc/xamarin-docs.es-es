@@ -1,21 +1,20 @@
 ---
-title: Iconos de aplicación
-description: Esta artículo cubre incluidos y administrar un recurso de imagen en una aplicación Xamarin.iOS para usarse como un icono de la aplicación.
+title: Iconos de aplicación en Xamarin.iOS
+description: 'Este documento describe cómo trabajar con varios iconos de aplicación en Xamarin.iOS: el icono de la aplicación, iconos de servicios, los iconos de configuración e ilustraciones de iTunes.'
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/22/2017
-ms.openlocfilehash: 3bf9286fe641d836f0877bfe2e17263bf9d7356e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3c07f2573aa8ac6e28b2cd6bff56a773e6206aea
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784002"
 ---
-# <a name="application-icons"></a>Iconos de aplicación
-
-_Esta artículo cubre incluidos y administrar un recurso de imagen en una aplicación Xamarin.iOS para usarse como un icono de la aplicación._
+# <a name="application-icons-in-xamarinios"></a>Iconos de aplicación en Xamarin.iOS
 
 Los siguientes temas se tratarán en detalle:
 
@@ -47,25 +46,25 @@ Se necesitarán los siguientes tamaños de activos de imagen y las soluciones pa
 
     ||3x|
     |---|---|
-    |Icono de aplicación|180x180|
+    |Icono de aplicación|180 x 180|
     |Noticias destacadas|120x120|
-    |Configuración|87x87|
+    |Configuración|87 x 87|
 
 - **iPhone: iOS 7 y 8**
 
     ||1x|2x|
     |---|---|---|
     |Icono de aplicación|60x60<sup>1</sup>|120x120|
-    |Noticias destacadas|40x40<sup>2</sup>|80x80|
+    |Noticias destacadas|40x40<sup>2</sup>|80 x 80|
     |Configuración|-|-|
 
 - **iPhone: iOS 5 y 6**
 
     ||1x|2x|
     |---|---|---|
-    |Icono de aplicación|57x57|114x114|
+    |Icono de aplicación|57x57|114 x 114|
     |Noticias destacadas|29x29|58x58|
-    |Configuración|29x29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
+    |Configuración|29 x 29<sup>3, 4</sup>|58 x 58<sup>3, 4</sup>|
 
 ### <a name="ipad-icon-sizes"></a>iPad tamaños de icono
 
@@ -73,25 +72,25 @@ Se necesitarán los siguientes tamaños de activos de imagen y las soluciones pa
 
     ||2 x (iPad Pro)|
     |---|---|
-    |Icono de aplicación|167x167<sup>6</sup>|
-    |Noticias destacadas|120x120<sup>6</sup>|
+    |Icono de aplicación|167 x 167<sup>6</sup>|
+    |Noticias destacadas|120 x 120<sup>6</sup>|
     |Configuración|58x58<sup>5</sup>|
 
 - **iPad: iOS 7 y 8**
 
     ||1x|2x|
     |---|---|---|
-    |Icono de aplicación|76x76|152x152|
-    |Noticias destacadas|40x40|80x80|
+    |Icono de aplicación|76x76|152 x 152|
+    |Noticias destacadas|40x40|80 x 80|
     |Configuración|-|-|
 
 - **iPad: iOS 5 y 6**
 
     ||1x|2x|
     |---|---|---|
-    |Icono de aplicación|72x72|144x144|
-    |Noticias destacadas|50x50|100x100|
-    |Configuración|29x29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
+    |Icono de aplicación|72x72|144 x 144|
+    |Noticias destacadas|50x50|100 x 100|
+    |Configuración|29 x 29<sup>3, 5</sup>|58 x 58<sup>3, 5</sup>|
 
  1. Tanto Visual Studio para Mac y Xcode ya no se admite la configuración de 1 imagen x para iOS 7.
  2. No se admite la configuración de una imagen de 1 x para iOS 7 cuando se usa Asset catálogos.
@@ -114,7 +113,7 @@ Para utilizar un catálogo de activos, haga lo siguiente:
 
 1. Haga doble clic en el `Info.plist` un archivo en el **el Explorador de soluciones** para abrirlo y editarlo.
 2. Desplácese hacia abajo hasta la **iconos de aplicación** sección.
-3. Desde el **origen** lista desplegable lista, asegúrese de **AppIcons** está seleccionado: 
+3. Desde el **origen** lista desplegable lista, asegúrese de **AppIcon** está seleccionado: 
 
     ![](app-icons-images/migrate01.png "Asegúrese de que está seleccionado AppIcons")
 4. Desde el **el Explorador de soluciones**, haga doble clic en el `Assets.xcassets` archivo para abrirlo y editarlo: 

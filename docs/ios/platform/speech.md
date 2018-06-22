@@ -1,5 +1,5 @@
 ---
-title: Reconocimiento de voz
+title: Reconocimiento de voz en Xamarin.iOS
 description: Este artículo presenta la nueva API de voz y muestra cómo se implementa en una aplicación Xamarin.iOS para admitir el reconocimiento de voz continua y transcribir voz (de secuencias de audio en vivos o grabados) en texto.
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: fa010f57d163cabe544176608cff2eb6efe872ad
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 00841a73f9da3c4c434419cdb37726b17c08cf31
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788366"
 ---
-# <a name="speech-recognition"></a>Reconocimiento de voz
+# <a name="speech-recognition-in-xamarinios"></a>Reconocimiento de voz en Xamarin.iOS
 
 _Este artículo presenta la nueva API de voz y muestra cómo se implementa en una aplicación Xamarin.iOS para admitir el reconocimiento de voz continua y transcribir voz (de secuencias de audio en vivos o grabados) en texto._
 

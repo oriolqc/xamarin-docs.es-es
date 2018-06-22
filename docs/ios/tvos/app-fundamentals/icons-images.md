@@ -1,21 +1,20 @@
 ---
-title: Trabajar con iconos e imágenes
-description: Este artículo tratan diseñar y trabajar con iconos y las imágenes dentro de una aplicación Xamarin.tvOS.
+title: Trabajar con tvOS iconos e imágenes en Xamarin
+description: Este documento describe cómo trabajar con iconos y las imágenes en una aplicación de tvOS compilada con Xamarin. Se trata de imágenes de inicio, imágenes en capas, el icono de la aplicación y mucho más.
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: c888ecf3d7e0f21734f2b89176eed56bf778dbf9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 59cbc53acf3ab7da12826b9d3cffb821631a0500
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788802"
 ---
-# <a name="working-with-icons-and-images"></a>Trabajar con iconos e imágenes
-
-_Este artículo tratan diseñar y trabajar con iconos y las imágenes dentro de una aplicación Xamarin.tvOS._
+# <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabajar con tvOS iconos e imágenes en Xamarin
 
 Crear atractivas iconos e imágenes son una parte fundamental del desarrollo de una experiencia de usuario atractiva para las aplicaciones de TV de Apple. Esta guía tratará los pasos necesarios para crear e incluir los activos gráficos necesarios para las aplicaciones de Xamarin.tvOS:
 

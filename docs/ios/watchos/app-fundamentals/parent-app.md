@@ -1,21 +1,20 @@
 ---
-title: Trabajar con la aplicación principal
-description: Compartir datos entre la aplicación de iOS y la inspección en watchOS 1
+title: Trabajar con la aplicación principal en Xamarin watchOS
+description: Este documento describe cómo trabajar con una aplicación de padre watchOS en Xamarin. Se trata de WatchKit extensiones de aplicaciones, aplicaciones de iOS, almacenamiento compartido y mucho más.
 ms.prod: xamarin
 ms.assetid: 9AD29833-E9CC-41A3-95D2-8A655FF0B511
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/17/2017
-ms.openlocfilehash: 769847cccb3e21fea4d8f45d8e5d0c0fb59bdd43
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3af2cce0d84e3934eeb89917990f111d29aadef1
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790697"
 ---
-# <a name="working-with-the-parent-application"></a>Trabajar con la aplicación principal
-
-_Compartir datos entre la aplicación de iOS y la inspección en watchOS 1_
+# <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabajar con la aplicación principal en Xamarin watchOS
 
 > [!IMPORTANT]
 > Acceso a la aplicación principal con los ejemplos siguientes solo funciona en aplicaciones de inspección de watchOS 1.

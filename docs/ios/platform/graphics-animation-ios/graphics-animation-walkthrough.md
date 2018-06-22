@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: usar CoreGraphics y CoreAnimation'
+title: Usar gráficos de núcleo y Core animación en Xamarin.iOS
 description: En este artículo paso a paso muestra cómo crear una aplicación que utiliza para los gráficos esenciales y la animación de núcleo. Muestra cómo dibujar en la pantalla, en respuesta a la entrada táctil de usuario, así como cómo animar una imagen que se va a recorrer a lo largo de una ruta de acceso.
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: f857accfcdec4cb60e781936d1d0836dbf8d6ffb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7a4399a5d62e2000c2a15a65da8e0e427dc039e0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787060"
 ---
-# <a name="drawing-and-animating-along-a-path"></a>Dibujo y animar a lo largo de una ruta de acceso
+# <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Usar gráficos de núcleo y Core animación en Xamarin.iOS
 
 En este tutorial vamos a dibujar un trazado con gráficos esenciales en respuesta a entrada táctil. A continuación, agregaremos un `CALayer` que contiene una imagen que se va a animar a lo largo de la ruta de acceso.
 

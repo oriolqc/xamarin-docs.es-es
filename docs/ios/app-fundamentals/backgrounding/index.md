@@ -1,18 +1,19 @@
 ---
-title: Backgrounding
+title: Backgrounding en Xamarin.iOS
 description: Fondo de procesamiento o backgrounding es el proceso de permitir que las aplicaciones realizar tareas en segundo plano mientras se está ejecutando otra aplicación en primer plano. Esta guía sirve como una introducción al procesamiento de iOS en segundo plano.
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: ae3e732008c6503f511dc4be9cad874ecfe1272d
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: b22f3ef3276129f7f46c23cc1d06666f151f5ac4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783547"
 ---
-# <a name="backgrounding"></a>Backgrounding
+# <a name="backgrounding-in-xamarinios"></a>Backgrounding en Xamarin.iOS
 
 _Fondo de procesamiento o backgrounding es el proceso de permitir que las aplicaciones realizar tareas en segundo plano mientras se está ejecutando otra aplicación en primer plano. Esta guía sirve como una introducción al procesamiento de iOS en segundo plano._
 

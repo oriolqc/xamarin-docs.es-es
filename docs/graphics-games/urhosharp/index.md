@@ -11,6 +11,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33920525"
 ---
 # <a name="urhosharp---3d2d-engine"></a>UrhoSharp - motor 2D o 3D
 

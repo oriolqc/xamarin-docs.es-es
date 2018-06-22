@@ -1,19 +1,20 @@
 ---
-title: Solicitar revisión de aplicación
-description: En este artículo se trata el método RequestReview que agrega al 10 de iOS y cómo implementarla en Xamarin.iOS de Apple.
+title: Solicitar revisión de aplicación en Xamarin.iOS
+description: En este artículo se describe el método RequestReview que agrega al 10 de iOS de Apple y explica cómo se implementa en Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 6408e707-b7dc-4557-b931-16a4d79b8930
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: 2fff227581d6eeca69d7a770308d9793a4831baf
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2b329ebad5faaa635d9a791f8760bd5f521de591
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788162"
 ---
-# <a name="request-app-review"></a>Solicitar revisión de aplicación
+# <a name="request-app-review-in-xamarinios"></a>Solicitar revisión de aplicación en Xamarin.iOS
 
 _En este artículo se trata el método RequestReview que agrega al 10 de iOS y cómo implementarla en Xamarin.iOS de Apple._
 

@@ -12,6 +12,7 @@ ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/20/2018
+ms.locfileid: "31646708"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Receptores de difusión en Xamarin.Android
 

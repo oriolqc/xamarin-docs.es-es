@@ -11,6 +11,7 @@ ms.sourcegitcommit: 66807f8927d472fbfd0ff8bc77cea9b37e7b9a4f
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/05/2018
+ms.locfileid: "30822887"
 ---
 # <a name="android-debug-log"></a>Registro de depuración de Android
 

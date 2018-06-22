@@ -1,21 +1,20 @@
 ---
-title: Guiones gráficos unificados
-description: Guiones gráficos unificados permiten iOS desarrollador crear la interfaz de usuario con un solo guión gráfico, en lugar de varios guiones gráficos, para cubrir la expansión variedad de tamaños de pantalla del dispositivo. Este artículo está diseñado para proporcionar una descripción más detallada en la operación del guión gráfico unificado en Xamarin.iOS.
+title: Guiones gráficos unificados en Xamarin.iOS
+description: Este documento describe unificados guiones gráficos en Xamarin.iOS. Guiones gráficos unificados permiten a los desarrolladores admitir varios tamaños de pantalla con una definición de interfaz.
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: d84afd0d33a6115d5d3ef9ea9b68d3370f9bb946
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6d3324a6485f2d240ec339f6ce7f03aafe51c80c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792026"
 ---
-# <a name="unified-storyboards"></a>Guiones gráficos unificados
-
-_Guiones gráficos unificados permiten iOS desarrollador crear la interfaz de usuario con un solo guión gráfico, en lugar de varios guiones gráficos, para cubrir la expansión variedad de tamaños de pantalla del dispositivo. Este artículo está diseñado para proporcionar una descripción más detallada en la operación del guión gráfico unificado en Xamarin.iOS._
+# <a name="unified-storyboards-in-xamarinios"></a>Guiones gráficos unificados en Xamarin.iOS
 
 iOS 8 incluye un mecanismo nuevo y más fácil de usar para crear la interfaz de usuario, el guión gráfico unificado. Con un solo guión gráfico para cubrir todos los tamaños de pantalla de hardware diferente, se pueden crear vistas rápidas y con capacidad de respuesta en un "diseño-una vez, utilice varios" estilo.
 
@@ -679,7 +678,7 @@ Y cuando la aplicación se ejecuta en el simulador de iPhone, el elemento falta:
 
  [![](unified-storyboards-images/exclude05.png "El elemento que falta cuando la aplicación en ejecución en el simulador de iPhone")](unified-storyboards-images/exclude05.png#lightbox)
 
-Para quitar un caso de exclusión de un elemento, basta con seleccionar el elemento en el **superficie de diseño**, desplácese hasta la parte inferior de la **Property Explorer** y haga clic en el **-**botón junto al caso a quitar.
+Para quitar un caso de exclusión de un elemento, basta con seleccionar el elemento en el **superficie de diseño**, desplácese hasta la parte inferior de la **Property Explorer** y haga clic en el **-** botón junto al caso a quitar.
 
 Para ver una implementación de guiones gráficos unificado, mire el `UnifiedStoryboard` Xamarin iOS 8 aplicación adjunta a este documento de ejemplo.
 

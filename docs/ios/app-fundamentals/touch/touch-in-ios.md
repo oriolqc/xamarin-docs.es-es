@@ -1,19 +1,20 @@
 ---
-title: Entrada táctil de iOS
+title: Eventos de toque y gestos en Xamarin.iOS
+description: Este documento describe cómo trabajar con eventos touch, multitoque, gestos, varios movimientos y gestos personalizados en las aplicaciones de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 9ed90a9c4ddcd398d834cb8c91553a57e7bd5ad8
-ms.sourcegitcommit: a4c2a63ba76b839cda99e4474e7ab46fe307cd39
+ms.openlocfilehash: 34073474ef3ef74f2fddbf487b3377224dc1aa3e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34689546"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784594"
 ---
-# <a name="touch-in-ios"></a>Entrada táctil de iOS
+# <a name="touch-events-and-gestures-in-xamarinios"></a>Eventos de toque y gestos en Xamarin.iOS
 
 Es importante comprender los eventos de toque y se describe la API en una aplicación de iOS, ya que son esenciales para todas las interacciones con el dispositivo físicas. Todas las interacciones táctiles implican una `UITouch` objeto. En este artículo se obtendrá información sobre cómo usar la `UITouch` clase y sus API para admitir la entrada táctil. Más adelante, se expandirá en nuestro conocimiento para obtener información sobre cómo admitir movimientos.
 

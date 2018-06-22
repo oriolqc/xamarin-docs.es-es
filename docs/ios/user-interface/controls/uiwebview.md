@@ -1,19 +1,20 @@
 ---
-title: Vistas Web
-description: Eliminar la ambigüedad de opciones de vista web de iOS
+title: Vistas Web Xamarin.iOS
+description: Este documento describe las distintas formas en que una aplicación de Xamarin.iOS puede mostrar el contenido web. Se trata de UIWebView, WKWebView, SFSafariViewController, Safari y seguridad de transporte de la aplicación.
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 787b5594476b3a1b5b3f6a0e8151a98c97443d00
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f720eae68415ab9efe021e53c9da4875209cd221
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790501"
 ---
-# <a name="web-views"></a>Vistas Web
+# <a name="web-views-in-xamarinios"></a>Vistas Web Xamarin.iOS
 
 Sobre la duración de iOS Apple ha lanzado un número de formas para que los desarrolladores de aplicaciones incorporar la funcionalidad de vista web en sus aplicaciones. La mayoría de los usuarios utilizan el explorador web Safari integrado en su dispositivo iOS y, por tanto, esperan que la funcionalidad de vista web de otras aplicaciones es coherente con esta experiencia. Espera que los mismos movimientos para que funcione, el rendimiento sea en el mismo nivel y la funcionalidad de la misma.
 

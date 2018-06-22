@@ -1,5 +1,5 @@
 ---
-title: CallKit
+title: CallKit en Xamarin.iOS
 description: Este artículo trata la nueva API de CallKit que Apple publicada en iOS 10 y cómo implementarla en las aplicaciones de Xamarin.iOS VOIP.
 ms.prod: xamarin
 ms.assetid: 738A142D-FFD2-4738-B3ED-57C273179848
@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: 67c761aa6656b571f16632dd1a076ff11737a424
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c674802eac9105d60471b6b130615e1b7efc1b28
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787206"
 ---
-# <a name="callkit"></a>CallKit
+# <a name="callkit-in-xamarinios"></a>CallKit en Xamarin.iOS
 
 _Este artículo trata la nueva API de CallKit que Apple publicada en iOS 10 y cómo implementarla en las aplicaciones de Xamarin.iOS VOIP._
-
 
 La nueva API de CallKit en iOS 10 proporciona una manera para las aplicaciones VOIP para integrarse con la interfaz de usuario de iPhone y proporcionar una interfaz conocida y experiencia para el usuario final. Con esta API usuarios pueden ver e interactúa con las llamadas VOIP desde la pantalla de bloqueo del dispositivo iOS y administrar contactos mediante la aplicación de teléfono **favoritos** y **recientes** vistas.
 

@@ -11,6 +11,7 @@ ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32020431"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar una aplicación para su lanzamiento
 

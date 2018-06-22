@@ -1,15 +1,16 @@
 ---
 ms.assetid: 4D47185C-8998-4903-AE64-7E2A67F9DF7A
 title: Comparación de los controles de interfaz de usuario
-description: Comprender las similitudes y diferencias entre la disponible de controles en cada plataforma.
+description: Este documento proporciona una comparación de los controles de interfaz de usuario de Xamarin.Forms, Windows Forms y WPF. También incluye vínculos a otra documentación que compara WPF a Xamarin.Forms.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 01dead601f1d4ba50140d5cd9d280ebd5412225a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: d97756952d7de724e1ef573092456e24294a74db
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782351"
 ---
 # <a name="ui-controls-comparison"></a>Comparación de los controles de interfaz de usuario
 

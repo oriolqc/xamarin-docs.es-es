@@ -1,19 +1,20 @@
 ---
-title: Cálculo de referencias de excepción
-description: Xamarin.iOS contiene nuevos eventos para ayudar a responder a las excepciones, especialmente en código nativo.
+title: Serialización en Xamarin.iOS (excepción)
+description: Este documento describe cómo trabajar con excepciones nativas y administradas en una aplicación de Xamarin.iOS. Describe una solución para estos problemas y problemas que pueden producirse.
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/05/2017
-ms.openlocfilehash: bb9c16985d958772193093434350435ce477956a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: dcf1074aacb6d139d107dac01fa86f459831d5f9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786748"
 ---
-# <a name="exception-marshaling"></a>Cálculo de referencias de excepción
+# <a name="exception-marshaling-in-xamarinios"></a>Serialización en Xamarin.iOS (excepción)
 
 _Xamarin.iOS contiene nuevos eventos para ayudar a responder a las excepciones, especialmente en código nativo._
 
@@ -108,7 +109,7 @@ En este caso, los marcos administrados solo son fotogramas 8-10, pero se produce
 
 Ejemplo de código:
 
-``` objective-c
+```objc
 -(id) setObject: (id) object forKey: (id) key
 {
     @try {
@@ -124,7 +125,7 @@ Y el `@finally` cláusula no se ejecutará porque el tiempo de ejecución de Mon
 
 Una variación de este consiste en producir una excepción administrada en código administrado y, a continuación, cuando se desenreda a través de los marcos nativos para obtener en el primer servidor administrado `catch` cláusula:
 
-``` csharp
+```csharp
 class AppDelegate : UIApplicationDelegate {
     public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
     {

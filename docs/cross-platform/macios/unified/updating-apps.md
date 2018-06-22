@@ -1,23 +1,24 @@
 ---
 title: Actualizar aplicaciones existentes a la API unificada
+description: Vínculos de este documento diversas guías que describen cómo actualizar las aplicaciones de Xamarin a la API unificada. Se trata de aplicaciones de Xamarin.iOS, Xamarin.Mac aplicaciones. Aplicaciones de Xamarin.Forms, los tipos nativos en aplicaciones multiplataforma y proyectos de enlace.
 ms.prod: xamarin
 ms.assetid: 8A654C95-5DCA-4BB5-A582-F96C2BECC81C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 588c01ef9f9ee014592c9d8dc72f2b8be20dfee3
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 2d09be7b85980e5c5a8eb209dc1b4ff3136c34b3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781636"
 ---
 # <a name="updating-existing-apps-to-the-unified-api"></a>Actualizar aplicaciones existentes a la API unificada
 
 > [!IMPORTANT]
-> **Degradación de perfil clásico:** tal y como se han agregado nuevas plataformas en Xamarin.iOS empezamos a gradualmente dejar de utilizar características del perfil clásico (monotouch.dll). Por ejemplo, la opción de no NRC (que nueva-ref-count) se ha quitado. NRC siempre se ha habilitado para unificado todas las aplicaciones (es decir, no NRC nunca fue una opción) y no tiene problemas conocidos. Las versiones futuras quitará la opción de usar Boehm como el recolector de elementos no utilizados. También era una opción nunca disponible para las aplicaciones unificadas. La eliminación completa de la compatibilidad clásico está programada para el próximo otoño con el lanzamiento de Xamarin.iOS 10.0.
-
-
-
+> La API clásica de Xamarin, que va precedida de la API unificada, está en desuso. 
+> - La última versión de Xamarin.iOS para admitir la API clásica (monotouch.dll) era Xamarin.iOS 9.10.
+> - Xamarin.Mac sigue admitiendo la API clásico, pero ya no se actualizará. Puesto que está en desuso, los desarrolladores deben mover sus aplicaciones a la API unificada.
 
 ## <a name="how-to-update-your-apps"></a>Cómo actualizar las aplicaciones
 
@@ -31,7 +32,7 @@ Hay tres pasos para actualizar sus aplicaciones:
 
 2. Utilice la herramienta de migración integrada en Visual Studio para Mac para actualizar los archivos de proyecto y los espacios de nombres.
 
-3. Corrección restantes errores de compilador relacionados con el nuevo [64 tipos](~/cross-platform/macios/nativetypes.md) y [otras API](~/cross-platform/macios/unified/index.md#deprecated-typos) que han cambiado. Extraer del repositorio [estas sugerencias](~/cross-platform/macios/unified/updating-tips.md) para obtener más información sobre las actualizaciones manuales que podrían ser necesarios.
+3. Corrección restantes errores de compilador relacionados con el nuevo [64 tipos](~/cross-platform/macios/nativetypes.md) y [otras API](~/cross-platform/macios/unified/overview.md#deprecated-typos) que han cambiado. Extraer del repositorio [estas sugerencias](~/cross-platform/macios/unified/updating-tips.md) para obtener más información sobre las actualizaciones manuales que podrían ser necesarios.
 
 Hay guías específicas para cada producto que le ayudarán a actualizar las aplicaciones a la API unificada y la compatibilidad de 64 bits:
 
@@ -55,9 +56,6 @@ Este artículo incluye el uso de la nueva iOS tipos nativos de API unificada (ni
 
 Los clientes que han creado los enlaces a bibliotecas de C objetivo deberán actualizar el proyecto de enlace para reflejar los cambios en la API subyacente (donde algunos tipos ahora será 64 bits).
 Siga estas instrucciones para [actualizar un proyecto de enlace existente para admitir la API unificada](~/cross-platform/macios/unified/update-binding.md).
-
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

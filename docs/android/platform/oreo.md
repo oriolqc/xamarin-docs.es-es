@@ -7,12 +7,13 @@ ms.technology: xamarin-android
 ms.custom: video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/01/2018
-ms.openlocfilehash: 3eb3bdd7b060b661d5202c63a879f1c88d2ccdcb
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.date: 05/30/2018
+ms.openlocfilehash: 3776a0554e5ae496f9e39612ec9bab971c6f1f88
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732767"
 ---
 # <a name="oreo-features"></a>Características de Oreos
 
@@ -133,8 +134,8 @@ Si se intenta iniciar el valor predeterminado basado en GUI de Google AVD Manage
 
 Este mensaje se muestra porque Google ya no proporciona un standlone administrador AVD de GUI que admite las API 26.0 y versiones posterior. Para Android Oreos 8.0, debe utilizar el administrador del emulador de Android Xamarin o la línea de comandos `avdmanager` herramienta para crear dispositivos virtuales para Oreos Android.
 
-Para usar el Administrador de dispositivos Android de Xamarin para crear y administrar dispositivos virtuales, consulte [el Administrador de dispositivos Android Xamarin](~/android/get-started/installation/android-emulator/xamarin-device-manager.md).
-Para crear dispositivos virtuales sin el administrador del emulador de Android de Xamarin, siga los pasos descritos en la sección siguiente.
+Para usar el Administrador de dispositivos Android para crear y administrar dispositivos virtuales, consulte [administrar dispositivos virtuales con el Administrador de dispositivos Android](~/android/get-started/installation/android-emulator/device-manager.md).
+Para crear dispositivos virtuales sin el Administrador de dispositivos Android, siga los pasos descritos en la sección siguiente.
 
 
 #### <a name="creating-virtual-devices-using-avdmanager"></a>Crear dispositivos virtuales utilicen avdmanager
@@ -190,7 +191,7 @@ Después de usar **avdmanager** para crear el dispositivo virtual, se incluirá 
 
 -----
 
-Para obtener más información acerca de cómo configurar un emulador de Android para probar y depurar, consulte [emulador de Google Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Para obtener más información acerca de cómo configurar un emulador de Android para probar y depurar, consulte [depuración con el emulador de Google Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
 
 Si está utilizando un dispositivo físico como un Nexus o un píxel, puede actualizar el dispositivo a través de automático a través de las actualizaciones de remotamente o descargar una imagen de sistema y flash directamente el dispositivo. Para obtener más información acerca de cómo actualizar manualmente el dispositivo para Oreos Android, consulte [generador de imágenes para dispositivos de píxel y Nexus](https://developers.google.com/android/images).
 

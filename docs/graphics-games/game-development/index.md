@@ -1,20 +1,19 @@
 ---
 title: Introducción al desarrollo de juegos con Xamarin
-description: La naturaleza del desarrollo de juegos puede diferir considerablemente desde el desarrollo de otros tipos de aplicaciones. Este artículo es una introducción al desarrollo de juegos que ofrece tecnologías que pueden utilizarse con Xamarin.iOS y Xamarin.Android. Proporciona un análisis de alto nivel de cómo se realizan los juegos y un muestreo de tecnologías disponibles para su uso con Xamarin.iOS y Xamarin.Android.
+description: Este documento proporciona información general de desarrollo de juegos con Xamarin, que se describe cómo se realizan los juegos y un muestreo de tecnologías disponibles para su uso con Xamarin.iOS y Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
 author: charlespetzold
 ms.author: chape
 ms.date: 03/24/2017
-ms.openlocfilehash: 543d3e2d4e53d1b88213ac82689073a9fb925820
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b1bd6d011cdc10352ce3b9258da7e16c2899d2d8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783921"
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introducción al desarrollo de juegos con Xamarin
-
-_La naturaleza del desarrollo de juegos puede diferir considerablemente desde el desarrollo de otros tipos de aplicaciones. Este artículo es una introducción al desarrollo de juegos que ofrece tecnologías que pueden utilizarse con Xamarin.iOS y Xamarin.Android. Proporciona un análisis de alto nivel de cómo se realizan los juegos y un muestreo de tecnologías disponibles para su uso con Xamarin.iOS y Xamarin.Android._
 
 Desarrollo de juegos puede ser muy interesante, especialmente teniendo en cuenta lo fácil que puede ser publicar las tareas en plataformas móviles. En este artículo se explica los conceptos y tecnologías relacionadas con el desarrollo de juegos que le ayudarán a crean juegos, si su objetivo es crear una alta calidad AAA juego o simplemente al programa para la diversión.
 

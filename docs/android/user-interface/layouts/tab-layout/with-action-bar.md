@@ -12,6 +12,7 @@ ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/27/2018
+ms.locfileid: "32020132"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Diseños con pestañas con el ActionBar
 

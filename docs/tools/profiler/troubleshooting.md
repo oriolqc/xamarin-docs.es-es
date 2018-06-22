@@ -1,20 +1,19 @@
 ---
 title: Solución de problemas de generador de perfiles de Xamarin
-description: Solución de problemas del generador de perfiles de Xamarin
+description: Este documento proporciona información para solucionar problemas relacionados con el generador de perfiles de Xamarin. Describe los problemas relacionados con el registro y diagnóstico, el IDE y otros temas relacionados.
 ms.prod: xamarin
 ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 9e2f9a35f37513ce0cb785f2bd922aeccf42dd8e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 247a18cf7f645ea90d100cb3f4900f30ac7754cc
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34793862"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Solución de problemas de generador de perfiles de Xamarin
-
-_Solución de problemas del generador de perfiles de Xamarin_
 
 ## <a name="logging-and-diagnostics"></a>Registro y diagnóstico
 
@@ -25,6 +24,7 @@ El equipo de Xamarin puede ayudar a realizar un seguimiento de problemas si prop
 - El **.mlpd** que se genera para la sesión de generación de perfiles (ver abajo).
 
 ### <a name="getting-log-outputs"></a>Obtener resultados de registro
+
 En Mac, los registros se guardan en `~/Library/Logs/Xamarin.Profiler/Profiler.<date>.log`.
 
 En Windows se guardan en `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Profiler.<date>.log` incluya el registro más reciente cada vez que envíe un problema.
@@ -49,7 +49,6 @@ El **.mlpd** para una sesión actual también pueden guardarse eligiendo **archi
 
 ![](troubleshooting-images/image17-vs.png "Guardar archivo de .mlpd en Visual Studio")
 
-
 Es importante tener en cuenta que **.mlpd** contienen una gran cantidad de información y el tamaño del archivo será grande.
 
 ## <a name="troubleshooting"></a>Solución de problemas
@@ -70,7 +69,6 @@ Compruebe las opciones siguientes para resolver este problema:
 - Asegúrese de que haya iniciado sesión y correctamente autenticado.
 - [Visual Studio] Debe contar con [Visual Studio Enterprise](https://www.visualstudio.com/vs/enterprise/) y tener una licencia válida de la empresa.
 
-
 #### <a name="i-get-an-error-when-i-try-to-launch-the-profiler"></a>Obtengo un error al intentar iniciar el generador de perfiles
 
 Si experimenta este cuadro de error cuando se utiliza el generador de perfiles de Visual Studio:
@@ -83,14 +81,11 @@ Normalmente es debido a que no se pueda iniciar para el simulador o emulador. Pr
 
 Si tiene un subproceso que desea ver en concreto, sería ideal para denominar el subproceso en la parte a partir de su creación para que obtengan get `ThreadName` en lugar de `0x0`. Por ejemplo establecer el nombre del subproceso como interfaz de usuario, podría utilizar el siguiente código:
 
-
 ```csharp
 RunOnUiThread (() => {
   Thread.CurrentThread.Name  = "UI";
 });
 ```
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

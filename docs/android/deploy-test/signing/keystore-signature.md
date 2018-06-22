@@ -11,6 +11,7 @@ ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/04/2018
+ms.locfileid: "30764643"
 ---
 # <a name="finding-your-keystores-signature"></a>Búsqueda de la firma de su almacén de claves
 

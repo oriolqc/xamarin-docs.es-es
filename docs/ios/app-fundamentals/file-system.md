@@ -1,21 +1,20 @@
 ---
-title: Trabajar con el sistema de archivos
-description: Xamarin.iOS puede utilizar las mismas clases System.IO para trabajar con directorios y archivos de iOS que le gustaría usar en cualquier aplicación. NET. Sin embargo, a pesar de las conocidas clases y métodos, iOS implementa algunas restricciones en los archivos que se pueden crear o acceder y también proporciona características especiales para determinados directorios. En este artículo se describe estas restricciones y características y se muestra cómo funciona el acceso a los archivos en una aplicación de Xamarin.iOS.
+title: Trabajar con el sistema de archivos en Xamarin.iOS
+description: Este documento describe cómo trabajar con el sistema de archivos en Xamarin.iOS. Se trata de directorios, leer archivos, serialización XML y JSON, el espacio aislado de aplicación, uso compartido de archivos a través de iTunes y mucho más.
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 0706e416861e5636413577d38bf524ce9184bc4d
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 5bcfac7911ac589e08cd6c5db8c8ea15a3497eca
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784246"
 ---
-# <a name="working-with-the-file-system"></a>Trabajar con el sistema de archivos
-
-_Xamarin.iOS puede utilizar las mismas clases System.IO para trabajar con directorios y archivos de iOS que le gustaría usar en cualquier aplicación. NET. Sin embargo, a pesar de las conocidas clases y métodos, iOS implementa algunas restricciones en los archivos que se pueden crear o acceder y también proporciona características especiales para determinados directorios. En este artículo se describe estas restricciones y características y se muestra cómo funciona el acceso a los archivos en una aplicación de Xamarin.iOS._
+# <a name="working-with-the-file-system-in-xamarinios"></a>Trabajar con el sistema de archivos en Xamarin.iOS
 
 Puede utilizar Xamarin.iOS y `System.IO` clases en el *biblioteca de clases Base (BCL) de .NET* para tener acceso al sistema de archivos de iOS. El `File` clase le permite crear, eliminar y leer archivos y el `Directory` clase le permite crear, eliminar o enumerar el contenido de los directorios. También puede usar `Stream` subclases, lo que pueden proporcionar un mayor grado de control sobre las operaciones de archivo (por ejemplo, búsqueda de compresión o posición dentro de un archivo).
 
@@ -29,15 +28,13 @@ En este artículo se describe las características y restricciones del iOS siste
 
  <a name="General_File_Access" />
 
-
 ## <a name="general-file-access"></a>Acceso a los archivos general
 
 Xamarin.iOS le permite usar .NET `System.IO` clases para las operaciones de sistema de archivos en iOS.
 
 Los fragmentos de código siguientes muestran algunas operaciones de archivo comunes. Encontrará ellas todas por debajo en la `SampleCode.cs` el archivo, en la aplicación de ejemplo de este artículo.
 
- <a name="Working_with_directories" />
-
+<a name="Working_with_directories" />
 
 ### <a name="working-with-directories"></a>Trabajar con directorios
 

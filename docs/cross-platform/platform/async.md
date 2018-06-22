@@ -1,20 +1,21 @@
 ---
-title: Información general de Async
-description: 'La versión más reciente del lenguaje de C#: versión 5 – introducido dos nuevas palabras clave para expresar las operaciones asincrónicas: async y await. Estas palabras clave le permiten escribir código simple que utiliza la biblioteca TPL para ejecutar las operaciones de larga duración (por ejemplo, el acceso a la red) en otro subproceso y obtener acceso fácilmente a los resultados de la finalización. Las versiones más recientes de Xamarin.iOS y Xamarin.Android admiten async y await: este documento proporciona explicaciones y un ejemplo de cómo usar la nueva sintaxis con Xamarin.'
+title: Información general sobre la compatibilidad con Async
+description: Este documento se describe la programación con async y await, conceptos presentados en C# 5 para que resulten más fáciles de escribir código asincrónico.
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 5d6bb9581a4429502d9a70385b3ee2ff056f30ee
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 22878695d93ae79bbbfe1b99961587ff0bf957be
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782013"
 ---
 # <a name="async-support-overview"></a>Información general sobre la compatibilidad con Async
 
-_La versión más reciente del lenguaje de C#: versión 5 – introducido dos nuevas palabras clave para expresar las operaciones asincrónicas: async y await. Estas palabras clave le permiten escribir código simple que utiliza la biblioteca TPL para ejecutar las operaciones de larga duración (por ejemplo, el acceso a la red) en otro subproceso y obtener acceso fácilmente a los resultados de la finalización. Las versiones más recientes de Xamarin.iOS y Xamarin.Android admiten async y await: este documento proporciona explicaciones y un ejemplo de cómo usar la nueva sintaxis con Xamarin._
+_C# 5 introdujo dos palabras clave para simplificar la programación asincrónica: async y await. Estas palabras clave le permiten escribir código simple que utiliza la biblioteca TPL para ejecutar las operaciones de larga duración (por ejemplo, el acceso a la red) en otro subproceso y obtener acceso fácilmente a los resultados de la finalización. Las versiones más recientes de Xamarin.iOS y Xamarin.Android admiten async y await: este documento proporciona explicaciones y un ejemplo de cómo usar la nueva sintaxis con Xamarin._
 
 Acepta el funcionamiento asincrónico de Xamarin se basa en la base de Mono 3.0 y actualiza el perfil de API desde el que se va a una versión preparadas para dispositivos móviles de Silverlight para ser una versión preparadas para dispositivos móviles de .NET 4.5.
 

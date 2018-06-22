@@ -1,22 +1,20 @@
 ---
-title: Siri remoto y controladores de Bluetooth
-description: Este artículo tratan admitir los nuevos dispositivos de juego Siri remoto y Bluetooth en sus aplicaciones Xamarin.tvOS.
+title: Siri remoto y controladores de Bluetooth tvos en Xamarin
+description: En este artículo se describe cómo trabajar con los equipos remotos de Siri y dispositivos de juego de Bluetooth en tvOS las aplicaciones escritas con Xamarin.
 ms.prod: xamarin
 ms.assetid: BDB9894A-236B-424B-9032-ACD12A6C5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 5b5893278acad999efd94c89f1ca923100f5cf7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3fc2abed202f8b2e6993890ca4e6b3c6875522e5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789195"
 ---
-# <a name="siri-remote-and-bluetooth-controllers"></a>Siri remoto y controladores de Bluetooth
-
-_Este artículo tratan admitir los nuevos dispositivos de juego Siri remoto y Bluetooth en sus aplicaciones Xamarin.tvOS._
-
+# <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri remoto y controladores de Bluetooth tvos en Xamarin
 
 Los usuarios de la aplicación Xamarin.tvOS no será su interacción con su interfaz directamente como con iOS donde pulse imágenes en la pantalla del dispositivo, pero indirectamente de a través de la sala utilizando la [Siri remoto](#The-Siri-Remote).
 
@@ -40,7 +38,7 @@ La instancia remota de Siri tiene las siguientes características y usos previst
 
 |Característica|Uso de aplicación general|Uso de aplicaciones de juegos|
 |---|---|---|
-|**Toque la superficie**<br />Deslice el dedo para navegar, presione para seleccionar el modo mantener presionado para los menús contextuales.|**Tap/Swipe**<br />Interfaz de usuario de navegación entre elementos puede recibir el foco.<br /><br />**Click**<br />Activa el elemento (enfocado) seleccionado.|**Tap/Swipe**<br />Depende de diseño de juego y puede usarse como un panel de D pulsando en los bordes.<br /><br />**Click**<br />Ejecutar la función del botón primario.|
+|**Toque la superficie**<br />Deslice el dedo para navegar, presione para seleccionar el modo mantener presionado para los menús contextuales.|**Deslice el dedo/TAP**<br />Interfaz de usuario de navegación entre elementos puede recibir el foco.<br /><br />**Haga clic en**<br />Activa el elemento (enfocado) seleccionado.|**Deslice el dedo/TAP**<br />Depende de diseño de juego y puede usarse como un panel de D pulsando en los bordes.<br /><br />**Haga clic en**<br />Ejecutar la función del botón primario.|
 |**Menu**<br />Presione para volver a la pantalla anterior o un menú.|Vuelve a la pantalla anterior y se cierra como Apple TV Home screen desde la pantalla principal de la aplicación.|Pausar y reanudar el juego, vuelve a la pantalla anterior y se cierra como Apple TV Home screen desde la pantalla principal de la aplicación.|
 |**Siri/búsqueda**<br />En los países con Siri, mantenga presionada para el control de voz, en todos los otros países, muestra la pantalla de búsqueda.|N/D|N/D|
 |**Reproducir/pausa**<br />Reproducir y pausar medio o proporciona una función secundaria en las aplicaciones.|Inicia la reproducción de multimedia y pausar y reanudar la reproducción.|Realiza la función del botón secundario u omite el vídeo de introducción (si existe).|
@@ -75,9 +73,6 @@ Además, se pueden detectar las pulsaciones de botón de menú con un reconocedo
 
 > [!IMPORTANT]
 > Debería **siempre** asignar una función al botón reproducir/pausa en el servidor remoto. Tener un botón no es funcional puede hacer que su aplicación buscar roto al usuario final. Si no tiene una función válida para este botón, asigne la misma función que el botón primario (Touch superficie haga clic en).
-
-
-
 
 <a name="Gestures-and-Storyboards" />
 
@@ -287,7 +282,7 @@ Un dispositivo de juego tiene las siguientes características y usos previstos d
 
 |Característica|Uso de aplicación general|Uso de aplicaciones de juegos|
 |---|---|---|
-|**D-Pad**|Navega por los elementos de interfaz de usuario (cambia el foco).|Depende de juego.|
+|**Panel D**|Navega por los elementos de interfaz de usuario (cambia el foco).|Depende de juego.|
 |**A**|Activa el elemento (enfocado) seleccionado.|Realiza la función del botón primario y confirma las acciones del cuadro de diálogo.|
 |**B**|Vuelve a la pantalla anterior o a la pantalla de inicio se cierra si en la pantalla principal de la aplicación.|Realiza la función del botón secundario o vuelve a la pantalla anterior.|
 |**X**|Inicia la reproducción de multimedia o pausa o reanuda la reproducción.|Depende de juego.|

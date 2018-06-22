@@ -12,6 +12,7 @@ ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/09/2018
+ms.locfileid: "33918765"
 ---
 # <a name="c-6-new-features-overview"></a>6 nuevas características de C# información general
 

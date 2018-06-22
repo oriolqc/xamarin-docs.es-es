@@ -1,21 +1,20 @@
 ---
-title: Trabajar con vistas de colección
-description: Este artículo tratan diseñar y trabajar con vistas de colección dentro de una aplicación Xamarin.tvOS.
+title: Trabajar con vistas de colección en Xamarin tvOS
+description: Este documento describe cómo trabajar con vistas de colección en una aplicación de tvOS compilada con Xamarin. Se ocupa de diseños de la vista de colección, crear las celdas y vistas adicionales, responder a eventos de usuario y mucho más.
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: 7fa38aa81e5929bdc88ceebd153d86cfcd92f20e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b411ac6bb8d1492511f9e5d2234731ae64c3a82
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789283"
 ---
-# <a name="working-with-collection-views"></a>Trabajar con vistas de colección
-
-_Este artículo tratan diseñar y trabajar con vistas de colección dentro de una aplicación Xamarin.tvOS._
+# <a name="working-with-tvos-collection-views-in-xamarin"></a>Trabajar con vistas de colección en Xamarin tvOS
 
 Las vistas de colección permiten para un grupo de contenido van a mostrar mediante diseños arbitrarios. Con la compatibilidad integrada, le permiten para los diseños de cuadrícula o lineal de creación fácil, que también la ejecución de los diseños personalizados.
 

@@ -1,17 +1,18 @@
 ---
 title: Introducción a iOS 11
-description: Descargue e instale Xcode 9
+description: Este documento describen los pasos que deben realizarse para empezar a desarrollar aplicaciones de iOS 11. Describe cómo descargar Xcode y actualizar 2017 de Visual Studio.
 ms.prod: xamarin
 ms.assetid: 794EA2C4-884B-42AC-B8C4-8C8E5474B660
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/19/2016
-ms.openlocfilehash: 2982e8acd27207452b74320cb3ea17d2ffc7375e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 494ffa4ffef09eedf2ce38f33e2e2b216a9417bb
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786917"
 ---
 # <a name="getting-started-with-ios-11"></a>Introducción a iOS 11
 

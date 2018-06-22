@@ -1,17 +1,19 @@
 ---
-title: Ejemplos
+title: Ejemplos de Sharpie objetivo
+description: Vínculos de este documento diversas guías que describen cómo utilizar la herramienta Sharpie objetivo, que se usa para automatizar el proceso de creación de enlaces de C# para código Objective-C.
 ms.prod: xamarin
 ms.assetid: 1ACB0935-6D5F-4A5F-BE28-08DA1B675F0E
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 5120626f6b95328108ecebfd3be4dff2b816006b
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 2c988e1399a3d8a1ec698c7cce44e73747bd22b7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34780522"
 ---
-# <a name="examples"></a>Ejemplos
+# <a name="objective-sharpie-examples"></a>Ejemplos de Sharpie objetivo
 
 Siga estos ejemplos para entender mejor cómo funciona Sharpie objetivo:
 

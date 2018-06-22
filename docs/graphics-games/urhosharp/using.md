@@ -1,20 +1,19 @@
 ---
-title: Usar UrhoSharp
-description: Información general sobre el motor de UrhoSharp
+title: Uso de UrhoSharp para compilar un juego en 3D
+description: Este documento proporciona una visión general de UrhoSharp, describiendo las escenas, componentes, formas, cámaras, acciones, proporcionados por el usuario, sonido y más.
 ms.prod: xamarin
 ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: charlespetzold
 ms.author: chape
 ms.date: 03/29/2017
-ms.openlocfilehash: 8eed81817620b3f68510ab2e043c3aeaafb6e78a
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: eb1e93e47528e801da08f402f452e0e8ce5014d8
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784044"
 ---
-# <a name="using-urhosharp"></a>Usar UrhoSharp
-
-_Información general sobre el motor de UrhoSharp_
+# <a name="using-urhosharp-to-build-a-3d-game"></a>Uso de UrhoSharp para compilar un juego en 3D
 
 Antes de escribir el primer juego, que desea obtener las nociones básicas de los conceptos básicos: cómo configurar la escena, cómo cargar recursos (que contiene el material gráfico) y cómo crear interacciones simples para el juego.
 

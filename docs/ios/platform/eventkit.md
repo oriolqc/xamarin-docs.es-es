@@ -1,21 +1,20 @@
 ---
-title: EventKit
-description: Esta guía proporciona información general sobre cómo obtener acceso y trabajar con calendarios, CalendarEvents y avisos de los datos almacenados en la base de datos de calendario, tal y como se expone a través de la EventKit. Incluye las clases principales y su función en la programación de EventKit, así como un número de tareas comunes asociadas con el marco de trabajo EventKit.
+title: EventKit en Xamarin.iOS
+description: Este documento describe EventKit y cómo utilizarla en Xamarin.iOS. Se trata de calendarios, los eventos de calendario y los avisos, busca las clases utilizadas normalmente al programar con EventKit y mucho más.
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: a8439586ac92f8139cf9341611125352c85706e5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3522870d3e063d1e12660094a311e9850bcefa13
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786719"
 ---
-# <a name="eventkit"></a>EventKit
-
-_Esta guía proporciona información general sobre cómo obtener acceso y trabajar con calendarios, CalendarEvents y avisos de los datos almacenados en la base de datos de calendario, tal y como se expone a través de la EventKit. Incluye las clases principales y su función en la programación de EventKit, así como un número de tareas comunes asociadas con el marco de trabajo EventKit._
+# <a name="eventkit-in-xamarinios"></a>EventKit en Xamarin.iOS
 
 iOS tiene dos relacionados con el calendario aplicaciones integradas: la aplicación de calendario y la aplicación de avisos. Es lo suficientemente sencilla comprender cómo la aplicación de calendario administra datos del calendario, pero la aplicación de avisos es menos obvia. Recordatorios realmente pueden tener fechas asociadas con ellos en términos de cuando están debido, cuando está completa, etcetera. Por lo tanto, iOS almacena todos los datos de calendario, ya sea en los eventos de calendario o avisos, en una ubicación, llama a la *base de datos de calendario*.
 

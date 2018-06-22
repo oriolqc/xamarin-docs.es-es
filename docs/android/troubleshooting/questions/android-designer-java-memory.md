@@ -6,28 +6,29 @@ ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: 32d98efd644fb033785fbae0d9689494e42b2809
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/02/2018
+ms.openlocfilehash: 691be280b80e379863cc09d0f1bba0ff5882cf21
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732926"
 ---
 # <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Ajustar los parámetros de la memoria de Java para el Diseñador de Android
 
 Los parámetros de memoria predeterminados que se utilizan cuando se inicia el `java` procesar para el Diseñador de Android podría ser incompatible con algunas configuraciones del sistema.
 
-A partir de Xamarin Studio 5.7.2.7 (y versiones posterior, Visual Studio para Mac) y Xamarin para Visual Studio 3.9.344 esta configuración puede personalizarse según un por proyecto.
+A partir de Xamarin Studio 5.7.2.7 (y versiones posterior, Visual Studio para Mac) y Visual Studio Tools para Xamarin 3.9.344, esta configuración puede personalizarse según un por proyecto.
 
 ## <a name="new-android-designer-properties-and-corresponding-java-options"></a>Nuevas propiedades del Diseñador de Android y las opciones correspondientes de Java
 
 Los nombres de propiedad siguientes corresponden a la java indicado [opción de línea de comandos](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html)
 
-- **AndroidDesignerJavaRendererMinMemory** -Xms
+- **AndroidDesignerJavaRendererMinMemory** - Xms
 
-- **AndroidDesignerJavaRendererMaxMemory** -Xmx
+- **AndroidDesignerJavaRendererMaxMemory** - Xmx
 
-- **AndroidDesignerJavaRendererPermSize** -XX:MaxPermSize
+- **AndroidDesignerJavaRendererPermSize** - XX: MaxPermSize
 
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)

@@ -1,5 +1,5 @@
 ---
-title: Framework sociales
+title: Marco sociales en Xamarin.iOS
 description: El marco de trabajo Social proporciona una API unificada para interactuar con redes sociales incluido Twitter y Facebook, así como SinaWeibo para los usuarios en China.
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: 334e05ad653d766b48f7f6028a1e98b0a0548c0c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9b7269282b18adc46f53b708a0af4934a1621d23
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788200"
 ---
-# <a name="social-framework"></a>Framework sociales
+# <a name="social-framework-in-xamarinios"></a>Marco sociales en Xamarin.iOS
 
 _El marco de trabajo Social proporciona una API unificada para interactuar con redes sociales incluido Twitter y Facebook, así como SinaWeibo para los usuarios en China._
-
 
 Mediante el marco sociales permite a las aplicaciones interactuar con las redes sociales de una única API sin tener que administrar la autenticación. Incluye un sistema que proporciona el controlador de vista para crear publicaciones, así como una abstracción que permite consumir API de cada red social a través de HTTP.
 

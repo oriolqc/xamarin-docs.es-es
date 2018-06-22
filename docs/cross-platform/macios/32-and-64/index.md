@@ -1,16 +1,17 @@
 ---
 title: Consideraciones sobre las plataformas de 32 y 64 bits
-description: Consideraciones al elegir como destino arquitecturas de 32 bits y 64 bits para la aplicación
+description: Este documento describen varias consideraciones a tener en cuenta al elegir como destino arquitecturas de 32 bits y 64 bits para una aplicación Xamarin.iOS o Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: F7126340-04B2-4A10-B14D-394E23527C1A
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/29/2017
-ms.openlocfilehash: 223da6b490e09b2fa27ab3bbf8fa123b5fa8070c
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: c722efc0bc6e8a4ea29af603f88c0e0644c2ed8c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781554"
 ---
 # <a name="3264-bit-platform-considerations"></a>Consideraciones sobre las plataformas de 32 y 64 bits
 

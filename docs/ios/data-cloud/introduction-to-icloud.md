@@ -1,21 +1,20 @@
 ---
-title: iCloud
-description: Apple incorporó iCloud en iOS 5 como un servicio para permitir que las aplicaciones almacenar datos en servidores de Apple y que se sincroniza en todos los dispositivos usados por la misma persona (a través de su Id. de Apple). También tiene un componente de copia de seguridad, donde los datos de los dispositivos se copia de seguridad para servidores de Apple. Este documento describe cómo usar algunos de iCloud las API proporcionadas por Apple para almacenar y recuperar datos de sus servidores, con ejemplos de C# para almacenar pares de datos de clave y valor pequeños y para almacenar documentos. También se explica cómo iCloud copia de seguridad puede influir en el diseño de la aplicación.
+title: Uso de iCloud con Xamarin.iOS
+description: Este documento describe iCloud y su uso en aplicaciones de Xamarin.iOS. Se trata el valor de clave de almacenamiento, almacenamiento de documentos y iCloud copia de seguridad.
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/09/2016
-ms.openlocfilehash: a62d4621a8f3ace64401d64e35c806317a591c03
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 032d5f01ae63e5aececa14390300c28623c4f371
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785549"
 ---
-# <a name="icloud"></a>iCloud
-
-_Apple incorporó iCloud en iOS 5 como un servicio para permitir que las aplicaciones almacenar datos en servidores de Apple y que se sincroniza en todos los dispositivos usados por la misma persona (a través de su Id. de Apple). También tiene un componente de copia de seguridad, donde los datos de los dispositivos se copia de seguridad para servidores de Apple. Este documento describe cómo usar algunos de iCloud las API proporcionadas por Apple para almacenar y recuperar datos de sus servidores, con ejemplos de C# para almacenar pares de datos de clave y valor pequeños y para almacenar documentos. También se explica cómo iCloud copia de seguridad puede influir en el diseño de la aplicación._
+# <a name="using-icloud-with-xamarinios"></a>Uso de iCloud con Xamarin.iOS
 
 La API de almacenamiento de iCloud en iOS 5 permite a las aplicaciones guardar documentos de usuario y datos específicos de la aplicación a una ubicación central y tener acceso a los elementos de todos los dispositivos del usuario.
 
@@ -32,7 +31,7 @@ Hay cuatro tipos de almacenamiento:
 Este documento describen los dos primeros tipos - pares de clave-valor y subclases UIDocument - y cómo usar las características de Xamarin.iOS.
 
 > [!IMPORTANT]
-> Apple [proporciona herramientas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ayudar a los desarrolladores controlen correctamente normativa General de protección de datos (GDPR) de la Unión Europea.
+> Apple [proporciona herramientas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ayudar a los desarrolladores a tratar correctamente el Reglamento general de protección de datos (RGPD) de la Unión Europea.
 
 ## <a name="requirements"></a>Requisitos
 

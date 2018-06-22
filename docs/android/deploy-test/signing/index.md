@@ -11,6 +11,7 @@ ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 05/23/2018
+ms.locfileid: "34458806"
 ---
 # <a name="signing-the-android-application-package"></a>Firmar el paquete de aplicación de Android
 

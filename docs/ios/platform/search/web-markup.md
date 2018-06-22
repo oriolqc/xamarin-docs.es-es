@@ -1,19 +1,20 @@
 ---
-title: Búsqueda con marcado Web
-description: Agrega los resultados de la búsqueda basada en web que se pueden vincular a su aplicación.
+title: Búsqueda con marcado Web en Xamarin.iOS
+description: Este documento describe cómo crear los resultados de la búsqueda basada en web que estén vinculadas a una aplicación de Xamarin.iOS. Describe cómo habilitar el contenido de web indización, por lo que el sitio Web de la aplicación puede detectar, mediante banners aplicación inteligente, vínculos universal y mucho más.
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: bc3446419ef0e469f7184d60fe8876cd2e5da520
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 438a65de3eb78f849493e3478bce5522a325d0cd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787999"
 ---
-# <a name="search-with-web-markup"></a>Búsqueda con marcado Web
+# <a name="search-with-web-markup-in-xamarinios"></a>Búsqueda con marcado Web en Xamarin.iOS
 
 Para las aplicaciones que proporcionan acceso a su contenido a través de un sitio web (no solo desde dentro de la aplicación), contenido web se puede marcar con vínculos especiales que se volverán a rastrear por Apple y proporcionan la vinculación en profundidad en la aplicación en el dispositivo del usuario iOS 9.
 

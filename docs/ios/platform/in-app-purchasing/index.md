@@ -1,21 +1,19 @@
 ---
-title: Compra desde la aplicación
-description: aplicaciones de iOS pueden vender productos digitales y servicios mediante las API de Kit de almacén. Productos crean y administran en el portal de iTunes Connect. Apple administra el procesamiento de transacciones y aprueba todos los productos antes de que se pueden vender y una tarifa por cada transacción (actualmente 30%). Apple requiere que use la compra en la aplicación de las ventas digitales en la aplicación, pero no puede usar para la venta de mercancías físicas o servicios digitales no. Aplicaciones que ofrecen opciones de pago alternativo de servicios y productos digitales están probables que se rechacen. Este documento explica cómo configurar la aplicación para usar el Kit de almacén y proporciona ejemplos de Xamarin.iOS de los escenarios de compras en la aplicación más comunes.
+title: En la aplicación de compras en Xamarin.iOS
+description: Este documento describe cómo vender productos digitales y servicios mediante las APIs StoreKit. Incluye vínculos a las guías que tratan sobre la configuración, productos consumibles, no consumible productos, transacciones, suscripciones y mucho más.
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 7a8dec6051caeba55c45df29c085ecfcddd160d2
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8a41ed44a331c91a333b95c1d62136244a6945dd
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787346"
 ---
-# <a name="in-app-purchasing"></a>Compra desde la aplicación
-
-_aplicaciones de iOS pueden vender productos digitales y servicios mediante las API de Kit de almacén. Productos crean y administran en el portal de iTunes Connect. Apple administra el procesamiento de transacciones y aprueba todos los productos antes de que se pueden vender y una tarifa por cada transacción (actualmente 30%). Apple requiere que use la compra en la aplicación de las ventas digitales en la aplicación, pero no puede usar para la venta de mercancías físicas o servicios digitales no. Aplicaciones que ofrecen opciones de pago alternativo de servicios y productos digitales están probables que se rechacen. Este documento explica cómo configurar la aplicación para usar el Kit de almacén y proporciona ejemplos de Xamarin.iOS de los escenarios de compras en la aplicación más comunes._
-
+# <a name="in-app-purchasing-in-xamarinios"></a>En la aplicación de compras en Xamarin.iOS
 
 pueden vender aplicaciones de iOS digitales productos o servicios mediante StoreKit: un conjunto de las API proporcionadas por iOS que se comunican con servidores de Apple para realizar transacciones financieras con el usuario mediante su identificador de Apple. Las APIs StoreKit se ocupa principalmente de recuperar información de productos y llevar a cabo las transacciones: no hay ningún componente de interfaz de usuario. Las aplicaciones que implementan la compra de la aplicación deben crear su propia interfaz de usuario y realizar un seguimiento de los productos adquiridos con código personalizado para proporcionar los servicios o productos necesarios para el usuario.
 
@@ -27,9 +25,7 @@ Proporcionar una funcionalidad de compra en la aplicación requiere una serie de
 -  **Creación de la interfaz de usuario y los productos por sí mismos** : se deben implementar los productos, incluidos los mecanismos para realizar un seguimiento de cada compra y copia de seguridad/restauración ellos si es necesario.
 -  **Supervisión de ventas y la recepción de los fondos** : utilice la información proporcionada por iTunes Connect para supervisar las tendencias de ventas y realizar un seguimiento de los ingresos.
 
-
 Este documento explica cómo completar todos estos pasos para proporcionar en la aplicación de compras con Xamarin.iOS.
-
 
 ## <a name="requirements"></a>Requisitos
 
@@ -39,7 +35,7 @@ Para admitir la compra de la aplicación debe utilizar Xamarin.iOS 5.0 o posteri
 
  * [Configuración y conceptos básicos de las compras desde la aplicación](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
- * [Introducción a Store Kit y recuperación de la información del producto](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+ * [Información general de StoreKit y recuperar la información de producto](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
  * [Compra de productos consumibles](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
@@ -48,7 +44,6 @@ Para admitir la compra de la aplicación debe utilizar Xamarin.iOS 5.0 o posteri
  * [Transacciones y comprobación](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 
  * [Suscripciones e informes](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
-
 
 ## <a name="summary"></a>Resumen
 

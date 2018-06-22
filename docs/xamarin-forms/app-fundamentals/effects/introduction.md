@@ -1,17 +1,18 @@
 ---
 title: Introducción a los efectos
-description: Efectos de permitir que los controles nativos en cada plataforma para personalizarse y se utilizan normalmente para los cambios de estilo pequeño. Este artículo proporciona una introducción a los efectos, describe el límite entre los representadores personalizados y efectos y describe la clase PlatformEffect.
+description: Los efectos permiten personalizar los controles nativos de cada plataforma y se suelen usar para pequeños cambios de estilo. Este artículo proporciona una introducción a los efectos, describe el límite entre los representadores personalizados y efectos y describe la clase PlatformEffect.
 ms.prod: xamarin
 ms.assetid: 30CB8615-8F39-4762-BDB7-333D2B57D112
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 805b27139d644d0fac4a7c5a9e9b2c2c331d7130
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 38805c09136405a7a241cfaeb8fa8cb6fb1a5d5f
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732728"
 ---
 # <a name="introduction-to-effects"></a>Introducción a los efectos
 

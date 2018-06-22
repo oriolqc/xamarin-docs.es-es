@@ -1,22 +1,20 @@
 ---
-title: Entrada táctil
-description: 'Pantallas táctiles en muchos de los dispositivos actuales permiten a los usuarios interactuar rápida y eficaz con dispositivos de forma natural e intuitiva. Esta interacción no se limita solo a la detección simple toque: es posible usar los movimientos así. Por ejemplo, el movimiento de gesto de acercamiento es un ejemplo muy común de esto: empujando una parte de la pantalla con dos dedos que el usuario puede acercar o alejar. Esta guía examina táctiles y los gestos de iOS.'
+title: Control de entrada táctil en aplicaciones de Xamarin.iOS
+description: Vínculos de este documento a las guías que describen cómo trabajar con tecnología táctil, multitoque, gestos y 3D en una aplicación de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/23/2017
-ms.openlocfilehash: f34b502e3c0d67f33d41bc489f7ec1d93356af99
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: eb8dce8b13345c13a6f95ae7784bd135e7d1f1f5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784167"
 ---
-# <a name="touch"></a>Entrada táctil
-
-_Pantallas táctiles en muchos de los dispositivos actuales permiten a los usuarios interactuar rápida y eficaz con dispositivos de forma natural e intuitiva. Esta interacción no se limita solo a la detección simple toque: es posible usar los movimientos así. Por ejemplo, el movimiento de gesto de acercamiento es un ejemplo muy común de esto: empujando una parte de la pantalla con dos dedos que el usuario puede acercar o alejar. Esta guía examina táctiles y los gestos de iOS._
-
+# <a name="handling-touch-in-xamarinios-apps"></a>Control de entrada táctil en aplicaciones de Xamarin.iOS
 
 Al igual que otras plataformas móviles, iOS tiene un número de formas de controlar la entrada táctil. Puede admitir multitoque: muchos puntos de contacto en la pantalla y los gestos complejas. Esta guía presentan algunos de los conceptos, así como las particularidades de la implementación táctiles y los gestos en iOS.
 
@@ -38,8 +36,6 @@ Esta guía le servirá como introducción a la entrada táctil en iOS. Para obte
 
 * [Entrada táctil 3D](~/ios/platform/3d-touch.md)
 * [Provisión de comentarios hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

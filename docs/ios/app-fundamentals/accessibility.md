@@ -1,16 +1,18 @@
 ---
 title: Accesibilidad en iOS
+description: Este documento describe la accesibilidad en iOS, tratan diversas propiedades y características que pueden utilizarse para hacer que su aplicación pueda usar tantos usuarios como sea posible.
 ms.prod: xamarin
 ms.assetid: 88D59B36-05A3-4356-AE29-EC2B69CE7162
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/18/2016
-ms.openlocfilehash: af28d0866337c769d1d6102317fc186c49ec259e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fa85459870211ff26c3bfdd3cc25f722a635952c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34783576"
 ---
 # <a name="accessibility-on-ios"></a>Accesibilidad en iOS
 
@@ -89,7 +91,7 @@ Si la interfaz de usuario se encuentra en un guión gráfico, puede proporcionar
 
 Este archivo se colocaría en la **es.lproj** directorio contenido en español.
 
-**Localizable.strings**
+**Localizable.Strings**
 
 Como alternativa, las traducciones se pueden agregar a la **Localizable.strings** archivo en el directorio contenido localizado (p. ej. **es.lproj** para español):
 

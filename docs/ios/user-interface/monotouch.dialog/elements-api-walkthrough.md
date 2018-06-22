@@ -1,18 +1,19 @@
 ---
-title: 'Tutorial: crear una aplicación mediante la API de elementos'
+title: Crear una aplicación de Xamarin.iOS mediante la API de elementos
 description: En este artículo se basa en la información presentada en la introducción de cuadro de diálogo MonoTouch artículo. Presenta un tutorial que muestra cómo utilizar el MonoTouch.Dialog (MT D) elementos API para empezar rápidamente a generar una aplicación con MT D.
 ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: e4fbf744c6f967d09e0033212024c2e2398fb768
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 64f407288da72dbf51fb3388ddf36caea377f09c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790437"
 ---
-# <a name="walkthrough---creating-an-application-using-the-elements-api"></a>Tutorial: crear una aplicación mediante la API de elementos
+# <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Crear una aplicación de Xamarin.iOS mediante la API de elementos
 
 _En este artículo se basa en la información presentada en la introducción de cuadro de diálogo MonoTouch artículo. Presenta un tutorial que muestra cómo utilizar el MonoTouch.Dialog (MT D) elementos API para empezar rápidamente a generar una aplicación con MT D._
 

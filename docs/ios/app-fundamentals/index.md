@@ -1,19 +1,20 @@
 ---
-title: Principios de la aplicación
-description: Conceptos de las aplicaciones principales
+title: Fundamentos de la aplicación de Xamarin.iOS
+description: Se vincula de documento con diversas guías que describen los conceptos fundamentales para el desarrollo de Xamarin.iOS, como la seguridad de transporte de aplicación, backgrounding, eventos y subprocesamiento.
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/21/2017
-ms.openlocfilehash: d8dc1e25de527357fe6ad3ad1328a930e0e4dc70
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdace50d851b2c99f9241b869f248e58d5b93377
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784502"
 ---
-# <a name="application-fundamentals"></a>Principios de la aplicación
+# <a name="xamarinios-application-fundamentals"></a>Fundamentos de la aplicación de Xamarin.iOS
 
 Esta sección proporciona a una guía sobre algunas de las tareas de cosas o conceptos que los desarrolladores deben tener en cuenta al desarrollar aplicaciones de Xamarin.iOS (anteriormente MonoTouch) más comunes.
 

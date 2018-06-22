@@ -12,6 +12,7 @@ ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/16/2018
+ms.locfileid: "31044670"
 ---
 # <a name="google-messaging"></a>Mensajería de Google
 

@@ -1,16 +1,17 @@
 ---
 title: Seguridad de la capa de transporte (TLS) 1.2
-description: Habilitar TLS 1.2 para los proyectos de Xamarin en Android, iOS y Mac
+description: Este documento se describe cómo desea habilitar TLS 1.2 para los proyectos de Xamarin.iOS y Xamarin.Android, Xamarin.Mac. Muestra cómo hacer esto en 2017 de Visual Studio y Visual Studio para Mac.
 ms.prod: xamarin
 ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2018
-ms.openlocfilehash: 8e27801a9feb8cf7ba1534f88479dbf7259c3e85
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 6f27d7713f2fe6426fa28f268b8e97838893aa76
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781402"
 ---
 # <a name="transport-layer-security-tls-12"></a>Seguridad de la capa de transporte (TLS) 1.2
 

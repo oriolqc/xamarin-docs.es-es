@@ -1,20 +1,19 @@
 ---
 title: Ensamblados disponibles
-description: Ensamblados disponibles en Xamarin.iOS y Xamarin.Android, Xamarin.Mac
+description: Este documento enumeran los ensamblados disponibles para su uso en Xamarin.iOS y Xamarin.Android, Xamarin.Mac. También incluye vínculos a documentación sobre las bibliotecas estándar de .NET y bibliotecas de clases Portable.
 ms.prod: xamarin
 ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: ef1dde061ffce4082922cc2eb2af1ae9b045aedd
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: b73a818d3864c7c4d1d776e104d95090e87f5877
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781912"
 ---
 # <a name="available-assemblies"></a>Ensamblados disponibles
-
-_Ensamblados disponibles en Xamarin.iOS y Xamarin.Android, Xamarin.Mac_
 
 Xamarin.iOS, Xamarin.Android y Xamarin.Mac todos se suministran con más de una docena ensamblados. Igual que Silverlight es un subconjunto de los ensamblados .NET escritorio extendido, plataformas de Xamarin también es un subconjunto extendido de varios ensamblados de .NET de escritorio y Silverlight.
 

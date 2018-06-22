@@ -1,17 +1,18 @@
 ---
-title: Linterna Xamarin.Essentials
-description: La clase linterna tiene la capacidad para activar o desactivar la cámara del dispositivo flash para convertirlos en una linterna.
+title: 'Xamarin.Essentials: linterna'
+description: Este documento describe la clase linterna en Xamarin.Essentials, que tiene la capacidad para activar o desactivar la cámara del dispositivo flash para convertirlos en una linterna.
 ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 0fe07f60502b27322db9486f3382b8f67d50945b
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: a5c559653bff38c692f0b1d881d5d8f4cac3d383
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782429"
 ---
-# <a name="xamarinessentials-flashlight"></a>Linterna Xamarin.Essentials
+# <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: linterna
 
 ![La versión preliminar de NuGet](~/media/shared/pre-release.png)
 

@@ -1,23 +1,22 @@
 ---
-title: Controles
-description: Xamarin.iOS expone todos los objetos de interfaz de usuario nativa proporcionados por Apple. Se agregan fácilmente a las aplicaciones de Xamarin.iOS con iOS diseñador, el generador de interfaz de Xcode o mediante programación. Independientemente del método que elija, Xamarin.iOS expone todas las propiedades del objeto de interfaz de usuario y los métodos en C#.
+title: Controles de interfaz de usuario en Xamarin.iOS
+description: Vínculos de este documento a las guías que describen los distintos controles de interfaz de usuario de iOS disponibles para los desarrolladores de Xamarin.iOS. Contenido vinculado describe alertas, botones, vistas de colección, imágenes, controles de la cámara manual, mapas, etiquetas, selectores, selectores de fecha y más.
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 82b2998319d4e78ee4f58a6d024032a509724537
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 477cb4e479224b9e795f3460e0f59e0aa2038630
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790047"
 ---
-# <a name="controls"></a>Controles
+# <a name="user-interface-controls-in-xamarinios"></a>Controles de interfaz de usuario en Xamarin.iOS
 
-_Xamarin.iOS expone todos los objetos de interfaz de usuario nativa proporcionados por Apple. Se agregan fácilmente a las aplicaciones de Xamarin.iOS con iOS diseñador, el generador de interfaz de Xcode o mediante programación. Independientemente del método que elija, Xamarin.iOS expone todas las propiedades del objeto de interfaz de usuario y los métodos en C#._
-
-Este documento describe algunos de los controles de interfaz de usuario de iOS más comunes y cómo utilizarlas.
+Este documento presenta algunos de los controles de interfaz de usuario de iOS más comunes y cómo utilizarlas.
 
 ## <a name="alertsalertsmd"></a>[Alertas](alerts.md)
 

@@ -1,18 +1,20 @@
 ---
-title: Actualizar una aplicación en segundo plano
+title: Actualizar una aplicación de Xamarin.iOS en segundo plano
+description: Este documento describe varias maneras de actualizar una aplicación de Xamarin.iOS que está en segundo plano, como supervisión de la región, captura de fondo y notificaciones remotas.
 ms.prod: xamarin
 ms.assetid: A2B2231A-C045-4C11-8176-F9966485197A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 370d1cba71fa695e4e01dfb93241536a8df01b11
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 973c18528eee2096b29ba86e82ceff31ecf3e207
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784070"
 ---
-# <a name="updating-an-application-in-the-background"></a>Actualizar una aplicación en segundo plano
+# <a name="updating-a-xamarinios-app-in-the-background"></a>Actualizar una aplicación de Xamarin.iOS en segundo plano
 
 Actualización en segundo plano es el proceso de reactivación de una aplicación que se ha suspendido o no se está ejecutando y actualizarla con el nuevo contenido. iOS proporciona tres opciones para actualizar contenido en segundo plano:
 

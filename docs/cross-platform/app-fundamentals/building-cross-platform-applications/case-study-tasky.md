@@ -1,20 +1,19 @@
 ---
-title: 'Caso práctico: Tasky'
-description: Este documento describe cómo se han aplicado los principios de creación de aplicaciones entre plataformas en la aplicación de ejemplo Tasky Portable. Modifica en el diseño de aplicaciones móviles, escribir código común para volver a usar e implementar proyectos para plataformas específicas que tienen como destino el iOS, Android y Windows Phone plataformas.
+title: 'Aplicación multiplataforma caso práctico: Tasky'
+description: Este documento describe cómo la aplicación de ejemplo Tasky Portable diseñada y creada como una aplicación móvil entre plataformas. Se trata de la aplicación requisitos, interfaz, modelo de datos, funcionalidad básica, implementación y mucho más.
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 1f8325bbc6b3f8aa40a08ca2c57605544ab0bc85
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 48650445d06ad3bc7ca6d4da84c9b8837f8a0f88
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782240"
 ---
-# <a name="case-study-tasky"></a>Caso práctico: Tasky
-
-_Este documento describe cómo se han aplicado los principios de creación de aplicaciones entre plataformas en la aplicación de ejemplo Tasky Portable. Modifica en el diseño de aplicaciones móviles, escribir código común para volver a usar e implementar proyectos para plataformas específicas que tienen como destino el iOS, Android y Windows Phone plataformas._
+# <a name="cross-platform-app-case-study-tasky"></a>Aplicación multiplataforma caso práctico: Tasky
 
 *Tasky* *Portable* es una aplicación de lista de tareas pendientes simple. Este documento describen cómo se diseñada y creada, siguiendo las instrucciones de la [creación de aplicaciones multiplataforma](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) documento. La descripción tratan las áreas siguientes:
 

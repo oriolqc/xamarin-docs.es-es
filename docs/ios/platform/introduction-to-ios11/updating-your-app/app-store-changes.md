@@ -1,21 +1,20 @@
 ---
-title: Cambios de la tienda de aplicaciones
-description: Explorar las nuevas características de iOS 11
+title: Cambios de la tienda de aplicaciones en iOS 11
+description: Este documento explora cambios a la tienda de aplicaciones en iOS 11. Se trata el icono de almacén de la aplicación, promocionadas compras en la aplicación, la página del producto rediseñado, comunicación con el cliente y versiones por fases.
 ms.prod: xamarin
 ms.assetid: 4A7A03FD-B4F2-4969-8676-A17260730FD6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/13/2016
-ms.openlocfilehash: 9c9355c047d2e7083ca787f473515163d8e6f5f1
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 59f5d2c0c05ec2950ae7cc74e4f5aaa2565020f0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34787395"
 ---
-# <a name="app-store-changes"></a>Cambios de la tienda de aplicaciones
-
-_Explorar las nuevas características de iOS 11_
+# <a name="app-store-changes-in-ios-11"></a>Cambios de la tienda de aplicaciones en iOS 11
 
 La App Store de iOS ha tenido un cambio de diseño completa, que no sólo permite a los usuarios desplazarse eficazmente por el almacén, sino que también le permite, como desarrollador, para promover la aplicación a los usuarios. Dichas promociones incluyen actualizaciones para las compras de la aplicación y a la página del producto. iOS 11 también agrega las actualizaciones relacionadas con cómo comunicarse con los usuarios, cómo agregar el icono de la aplicación y cómo publicar la aplicación para el público.
 

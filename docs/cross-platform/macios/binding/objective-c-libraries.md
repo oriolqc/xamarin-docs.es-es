@@ -1,15 +1,17 @@
 ---
 title: Bibliotecas de enlace Objective-c.
+description: Este documento proporciona una descripción general de cómo crear C# enlaces a código Objective-C, que describe cómo enlazar los eventos, métodos, controles personalizados y mucho más.
 ms.prod: xamarin
 ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/06/2018
-ms.openlocfilehash: fddde9dbef0e4dfb03707a970d4263983d4cf85d
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: f7c4be4254ce3e3301c0c1e98d37134f5524c23b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782325"
 ---
 # <a name="binding-objective-c-libraries"></a>Bibliotecas de enlace Objective-c.
 

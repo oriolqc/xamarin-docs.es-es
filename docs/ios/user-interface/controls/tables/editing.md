@@ -1,18 +1,20 @@
 ---
-title: Editar
+title: Editar tablas con Xamarin.iOS
+description: Este documento describe cómo editar tablas de Xamarin.iOS. Se trata de deslice el dedo para eliminar, editar el modo y la inserción de fila.
 ms.prod: xamarin
 ms.assetid: EC197F25-E865-AFA3-E5CF-B33FAB7744A0
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/22/2017
-ms.openlocfilehash: 161de0209217dde671b976afad90eaad18d8c7b0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 28ebf1157a1bfc9f7bd910fd11365b29cecb9529
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789995"
 ---
-# <a name="editing"></a>Editar
+# <a name="editing-tables-with-xamarinios"></a>Editar tablas con Xamarin.iOS
 
 Características de edición de la tabla están habilitadas al invalidar los métodos en un `UITableViewSource` subclase. El comportamiento de edición más sencillo es el gesto de deslizar rápidamente para eliminar que puedan implementarse con una invalidación del método único.
 Edición más complejas (incluidas las filas móviles) puede realizarse con la tabla en modo de edición.

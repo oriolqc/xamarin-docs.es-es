@@ -1,15 +1,16 @@
 ---
 title: Canalización de CocosSharp contenido
-description: Vínculos de este documento guías que describen la canalización de contenido de CocosSharp.
+description: Este documento vínculos a guías que describen el contenido de las canalizaciones en general y la canalización de contenido CocosSharp en particular.
 ms.prod: xamarin
 ms.assetid: 2BC895E5-BDFD-443D-A96D-86BA7042CB70
 author: charlespetzold
 ms.author: chape
-ms.openlocfilehash: 7cf4d5cd60da1703b6047f6840222946010c9300
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 908baef3a73fe1596ec5fe809f2ce45635dd9a7b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782958"
 ---
 # <a name="cocossharp-content-pipeline"></a>Canalización de CocosSharp contenido
 

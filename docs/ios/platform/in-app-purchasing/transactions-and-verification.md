@@ -1,18 +1,20 @@
 ---
-title: Las transacciones y comprobación
+title: Las transacciones y la comprobación de Xamarin.iOS
+description: Este documento describe cómo permitir la restauración de compras anteriores en una aplicación de Xamarin.iOS. También se describen maneras de proteger las compras y productos de servidor distribuida.
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: c8d86d0ce3119b3e104a65a170ab141484af44a7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2cb38df4bbabc3534f5c90c7695569d68349ccc3
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786930"
 ---
-# <a name="transactions-and-verification"></a>Las transacciones y comprobación
+# <a name="transactions-and-verification-in-xamarinios"></a>Las transacciones y la comprobación de Xamarin.iOS
 
 ## <a name="restoring-past-transactions"></a>Restaurar más allá de las transacciones
 
@@ -228,7 +230,7 @@ Vea de Apple [comprobar confirmaciones de almacén](https://developer.apple.com/
 
 #### <a name="using-aspnet"></a>Mediante ASP.NET
 
-Para los desarrolladores de C#, hay un proyecto de código abierto útil denominado [APNS-Sharp](https://github.com/Redth/APNS-Sharp) que incluye código de comprobación de recepción que funciona en ASP.NET. En concreto, el `Receipt.cs` y `ReceiptVerification.cs` archivos en el [ `Jdsoft.Apple.AppStore` ](https://github.com/Redth/APNS-Sharp/tree/master/JdSoft.Apple.AppStore) directorio puede agregarse a un sitio Web de .NET para implementar fácilmente pasos #6 a &#8; del diagrama de flujo de trabajo Server-Delivered productos.   
+Para los desarrolladores de C#, hay un proyecto de código abierto útil denominado [APNS-Sharp](https://github.com/Redth/APNS-Sharp) que incluye código de comprobación de recepción que funciona en ASP.NET. En concreto, el `Receipt.cs` y `ReceiptVerification.cs` archivos en el [ `Jdsoft.Apple.AppStore` ](https://github.com/Redth/APNS-Sharp/tree/master/JdSoft.Apple.AppStore) directorio puede agregarse a un sitio Web de .NET para implementar fácilmente pasos #6 a 8 # del diagrama de flujo de trabajo Server-Delivered productos.   
    
    
    
