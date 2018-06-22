@@ -1,16 +1,17 @@
 ---
 title: Edición de metadatos de NuGet
-description: Utilice las opciones de proyecto para modificar los metadatos de NuGet para bibliotecas multiplataforma
+description: Este documento describe cómo usar las opciones de proyecto para modificar los metadatos de NuGet para bibliotecas multiplataforma. Se trata de los metadatos necesarios y opcionales.
 ms.prod: xamarin
 ms.assetid: 147BA370-67A7-4E6C-BF17-AA7C536C0A48
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: dc2bd64339aa3deacd640cc982af5ee52d76ff07
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 3680b02003a844668b0b5c97e5d4c0d296ae3500
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34779975"
 ---
 # <a name="editing-nuget-metadata"></a>Edición de metadatos de NuGet
 

@@ -1,5 +1,5 @@
 ---
-title: Vista de pila
+title: Vistas de pila en Xamarin.iOS
 description: Este artículo incluye el uso del nuevo control UIStackView en una aplicación de Xamarin.iOS para administrar un conjunto de subvistas en la vista una pila organizada horizontal o verticalmente.
 ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/20/2017
-ms.openlocfilehash: aec1c4ceb562f528d6bcef7e4de0f2708952d2a5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a894efebe4089adefeb02007bd394c13fc77974c
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34790105"
 ---
-# <a name="stack-view"></a>Vista de pila
+# <a name="stack-views-in-xamarinios"></a>Vistas de pila en Xamarin.iOS
 
 _Este artículo incluye el uso del nuevo control UIStackView en una aplicación de Xamarin.iOS para administrar un conjunto de subvistas en la vista una pila organizada horizontal o verticalmente._
 

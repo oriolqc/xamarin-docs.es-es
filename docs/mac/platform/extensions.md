@@ -1,17 +1,18 @@
 ---
 title: Compatibilidad con las extensiones de Xamarin.Mac
-description: Este artículo trata la compatibilidad con las extensiones en Xamarin.Mac versión 2.10 (y versiones posteriores).
+description: Este documento describe la compatibilidad del Xamarin.Mac para las extensiones de buscador, compartir y hoy en día. Examina las limitaciones y problemas conocidos, vínculos a una aplicación de ejemplo y tutorial y proporciona sugerencias para trabajar con las extensiones.
 ms.prod: xamarin
 ms.assetid: 4148F1BE-DFA0-46B6-9FCD-425A6541F510
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 03936c75d31bfd01e741ad2c09096c925dc9dbfc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4cef6e89b89ef41a0c93b687c9df11a8aa971ed5
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792383"
 ---
 # <a name="xamarinmac-extension-support"></a>Compatibilidad con las extensiones de Xamarin.Mac
 

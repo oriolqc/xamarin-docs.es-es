@@ -7,11 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 04/18/2018
-ms.openlocfilehash: e8e6e98cb6ada8d8da494e408e8db66ad5038799
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 878b0097fc0f62e6b90d948d8a15ab39db4b2f3e
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732260"
 ---
 # <a name="using-sqlitenet-with-android"></a>Uso de SQLite.NET con Android
 
@@ -239,5 +240,4 @@ Esta solución también funciona para el `Mono.Data.Sqlite` biblioteca. Para obt
 
 - [DataAccess Basic (ejemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avanzada (ejemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
-- [Datos de Android recetas](https://developer.xamarin.com/recipes/android/data/)
 - [Acceso a datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/databases.md)

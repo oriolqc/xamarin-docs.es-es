@@ -1,21 +1,20 @@
 ---
-title: Barras de pestaña y controladores de la barra de pestañas
-description: aplicaciones de iOS con una interfaz de usuario de navegación de la ficha se compilan con la clase UITabBarController. En este artículo le mostraremos cómo configurar una aplicación con pestañas que contiene varios controladores y vistas. A continuación, examinaremos cómo cargar un UITabBarController cuando no es el controlador de raíz, como después de una pantalla de inicio de sesión.
+title: Barras de pestaña y controladores de la barra de pestañas en Xamarin.iOS
+description: Este documento describe los controladores de barra de pestaña de iOS y cómo utilizarlos con Xamarin.iOS. Muestra cómo configurar un UITabBarController, trabajar con imágenes, establezca los valores distintivos, trabajar con eventos y mucho más.
 ms.prod: xamarin
 ms.assetid: 7C772899-2900-F139-D642-F3C4F3F14DDC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: c3c57cceed7271ebbe707172db892a246003426b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d8b096774e60ec0e0b69e109fa5da53c25e66d25
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789763"
 ---
-# <a name="tab-bars-and-tab-bar-controllers"></a>Barras de pestaña y controladores de la barra de pestañas
-
-_aplicaciones de iOS con una interfaz de usuario de navegación de la ficha se compilan con la clase UITabBarController. En este artículo le mostraremos cómo configurar una aplicación con pestañas que contiene varios controladores y vistas. A continuación, examinaremos cómo cargar un UITabBarController cuando no es el controlador de raíz, como después de una pantalla de inicio de sesión._
+# <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barras de pestaña y controladores de la barra de pestañas en Xamarin.iOS
 
 Aplicaciones con pestañas se utilizan en iOS para admitir las interfaces de usuario donde se pueden tener acceso a varias pantallas en ningún orden concreto. A través de la `UITabBarController` (clase), las aplicaciones pueden incluir fácilmente compatibilidad para estos escenarios de la pantallas. `UITabBarController` se encarga de la administración de la pantalla, lo que permite al desarrollador de la aplicación para centrarse en los detalles de cada pantalla.
 

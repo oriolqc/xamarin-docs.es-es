@@ -12,6 +12,7 @@ metadata:
   ms.translationtype: HT
   ms.contentlocale: es-ES
   ms.lasthandoff: 05/03/2018
+  ms.locfileid: "32436484"
 abstract:
   description: Xamarin.Mac expone el macOS SDK completo para los desarrolladores de .NET. Cree aplicaciones completamente nativas en Visual Studio para Mac.
   menu:

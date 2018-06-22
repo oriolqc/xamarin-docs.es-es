@@ -1,17 +1,18 @@
 ---
-title: Xamarin.Essentials telefónico
-description: La clase PhoneDialer permite a una aplicación abrir un vínculo web en el explorador preferida de sistema optimizado o un explorador externo.
+title: 'Xamarin.Essentials: Marcador de teléfono'
+description: La clase PhoneDialer en Xamarin.Essentials permite a una aplicación abrir un vínculo web en el explorador preferida de sistema optimizado o un explorador externo.
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 112cc305457413ad057e390d46c5a765ea29514f
-ms.sourcegitcommit: 3e05b135b6ff0d607bc2378c1b6e66d2eebbcc3e
+ms.openlocfilehash: 6733e43ed4174d1dd78b2e8f70268eb54adadb98
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782858"
 ---
-# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials telefónico
+# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Marcador de teléfono
 
 ![La versión preliminar de NuGet](~/media/shared/pre-release.png)
 

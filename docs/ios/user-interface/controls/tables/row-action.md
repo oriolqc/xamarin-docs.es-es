@@ -1,5 +1,5 @@
 ---
-title: Trabajar con acciones de fila
+title: Trabajar con acciones de la fila en Xamarin.iOS
 description: Esta guía muestra cómo crear acciones personalizadas deslice el dedo para filas de tabla con UISwipeActionsConfiguration o UITableViewRowAction
 ms.prod: xamarin
 ms.assetid: 340FB633-0C46-40AA-9963-FF17D7CA6858
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 09/25/2017
-ms.openlocfilehash: c257406f3ad81e8144b47e099c9a00f3fdae30cb
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4be8b6dc66c9c047e6662067e7e3ecf81ab22893
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34789946"
 ---
-# <a name="working-with-row-actions"></a>Trabajar con acciones de fila
+# <a name="working-with-row-actions-in-xamarinios"></a>Trabajar con acciones de la fila en Xamarin.iOS
 
 _Esta guía muestra cómo crear acciones personalizadas deslice el dedo para filas de tabla con UISwipeActionsConfiguration o UITableViewRowAction_
 

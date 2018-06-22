@@ -1,24 +1,23 @@
 ---
-title: Apple Pay
+title: Pago de Apple en Xamarin.iOS
 description: Esta guía explora cómo configurar el entorno de Xamarin.iOS para su uso con Apple Pay para pagar por mercancías físicas, como comida, entretenimiento y pertenencias a grupos a través de la aplicación. Incluye información sobre los identificadores necesarios, los certificados y los derechos.
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: fc7c247e5edcdc25d53c34c922801a5497b8c367
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 7033373cddb2503e5912eb17b1e72ece759cc3ad
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786696"
 ---
-# <a name="apple-pay"></a>Apple Pay
+# <a name="apple-pay-in-xamarinios"></a>Pago de Apple en Xamarin.iOS
 
 _Esta guía explora cómo configurar el entorno de Xamarin.iOS para su uso con Apple Pay para pagar por mercancías físicas, como comida, entretenimiento y pertenencias a grupos a través de la aplicación. Incluye información sobre los identificadores necesarios, los certificados y los derechos._
 
-
 Apple Pay se introdujo junto con iOS 8, permitiendo a los usuarios pagar por mercancías físicas, como la comida, entretenimiento y pertenencias a grupos a través de sus dispositivos iOS. Está disponible en iPhone 6 e iPhone 6 Plus y también se pueden emparejar con la de Apple Watch para las compras en el almacén. Cuando se utiliza en un iPhone, utiliza Touch ID como un medio para confirmar y autorizar las transacciones para de un usuario tarjeta de crédito o débito.
-
 
 ## <a name="requirements"></a>Requisitos
 
@@ -41,7 +40,6 @@ Los marcos de trabajo usan también son una diferencia clave; [PassKit](https://
 
 Con Apple Pay, Apple [estados](https://developer.apple.com/apple-pay/Getting-Started-with-Apple-Pay.pdf) que "[] no cobra usuarios, comerciantes o a los desarrolladores usar pago de Apple para pagos". En comparación, así como tiene un 30% de la carga para cada transacción. Además, con Apple Pay, la transacción no pasa a través de Apple en absoluto, en su lugar, se lleva a cabo de una plataforma de pago.
 
-
 ## <a name="using-a-payment-processor-platform"></a>Con una plataforma de procesador de pago
 
 Una de las partes fundamentales de Apple Pay es el procesamiento de pagos. Aunque es posible hacerlo usted mismo, requiere un conocimiento significativo de criptografía
@@ -53,7 +51,6 @@ Incluyen dos opciones:
 - **Bandas** -Regístrese en [Stripe.com](https://stripe.com/) para acceder a su API.
 
 - **JudoPay** -desproteger sus [código de ejemplo de Xamarin en github](https://github.com/Judopay/Xamarin-Sample-App)y se registra en [JudoPay.com](https://www.judopay.com/).
-
 
 ## <a name="provisioning-for-apple-pay"></a>Aprovisionamiento de pago de Apple
 
@@ -70,13 +67,11 @@ Configurar una aplicación para que use Apple Pay requiere el programa de instal
 5. Agregue derechos de Apple Pay:
     - Seleccione los derechos de pago de Apple, tal como se detalla [aquí](~/ios/deploy-test/provisioning/entitlements.md), o agregar manualmente el par clave/valor del archivo de [aquí](~/ios/deploy-test/provisioning/entitlements.md)
 
-
 ## <a name="working-with-apple-pay"></a>Trabajar con la opción de pago de Apple
 
 Apple ha realizado varias mejoras en Apple Pay en iOS 10 que permiten al usuario realizar pagos seguros de sitios Web y a través de la interacción con Siri y mapas.
 
 Con iOS 10, varias nuevas API se han agregado que funcionan con iOS y watchOS para admitir redes de pago dinámico y un nuevo entorno de prueba de espacio aislado.
-
 
 ### <a name="apple-pay-website-integration"></a>Integración de sitio Web de pago de Apple
 
@@ -122,7 +117,6 @@ Para habilitar el nuevo entorno de prueba, haga lo siguiente:
 ## <a name="summary"></a>Resumen
 
 En este artículo, analizamos los diferentes elementos necesarios para usar Apple Pay dentro de la aplicación. Analizamos cómo crear un Id. de comerciante y cómo se utiliza dentro de la **Entitlements.plist**, que es necesario modificar manualmente.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -1,5 +1,5 @@
 ---
-title: Trabajar con la navegación y el foco
+title: Trabajar con tvOS navegación y el foco en Xamarin
 description: Este artículo explica el concepto de foco y cómo se utiliza para presentar y controlar la navegación dentro de una aplicación Xamarin.tvOS.
 ms.prod: xamarin
 ms.assetid: DD72E95F-AE9B-47D2-B132-5FA5FBD8026E
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/16/2017
-ms.openlocfilehash: cd60a11d860f51fd0d0e574516ca8dec1834865c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 2af3306b605ee802b72b159d5f2759d71d292a64
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34788737"
 ---
-# <a name="working-with-navigation-and-focus"></a>Trabajar con la navegación y el foco
+# <a name="working-with-tvos-navigation-and-focus-in-xamarin"></a>Trabajar con tvOS navegación y el foco en Xamarin
 
 _Este artículo explica el concepto de foco y cómo se utiliza para presentar y controlar la navegación dentro de una aplicación Xamarin.tvOS._
 
