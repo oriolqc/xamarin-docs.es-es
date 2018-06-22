@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: f843f4b1c20daba2a504bd0e70ae51f4d0405c06
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: d75cac7a21b2c74a6627845cdda8e4c04e72bddc
+ms.sourcegitcommit: eac092f84b603958c761df305f015ff84e0fad44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240251"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36309780"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Fundamentos de la aplicación de Xamarin.Forms
 
@@ -47,6 +47,10 @@ El enlace de datos vincula las propiedades de dos objetos, de forma que permite 
 ## <a name="effectseffectsindexmd"></a>[Efectos](effects/index.md)
 
 Los efectos permiten personalizar los controles nativos de cada plataforma y se suelen usar para pequeños cambios de estilo.
+
+## <a name="filesfilesmd"></a>[Archivos](files.md)
+
+Archivo de control con Xamarin.Forms se puede lograr utilizando código en una biblioteca de .NET estándar, o mediante el uso de recursos incrustados.
 
 ## <a name="gesturesgesturesindexmd"></a>[Gestos](gestures/index.md)
 

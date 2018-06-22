@@ -6,13 +6,13 @@ ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/18/2018
-ms.openlocfilehash: 123e65f1efe31935167ca8684e89e7c0b4505443
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.date: 06/21/2018
+ms.openlocfilehash: feec4993a0719a083d713e084552b18aead8ee42
+ms.sourcegitcommit: eac092f84b603958c761df305f015ff84e0fad44
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209224"
+ms.lasthandoff: 06/21/2018
+ms.locfileid: "36310145"
 ---
 # <a name="xamarinforms-local-databases"></a>Bases de datos Local de Xamarin.Forms
 
@@ -20,7 +20,7 @@ _Xamarin.Forms es compatible con aplicaciones orientadas a base de datos mediant
 
 ## <a name="overview"></a>Información general
 
-Xamarin.Forms las aplicaciones pueden utilizar el [NuGet de PCL SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/) paquete para incorporar las operaciones de base de datos en el código compartido haciendo referencia a la `SQLite` las clases que se incluyen en NuGet. Las operaciones de base de datos se pueden definir en el proyecto de biblioteca estándar de .NET de la solución de Xamarin.Forms, con los proyectos específicos de plataforma devuelve una ruta de acceso a donde se almacenará la base de datos.
+Xamarin.Forms las aplicaciones pueden utilizar el [NuGet de PCL SQLite.NET](https://www.nuget.org/packages/sqlite-net-pcl/) paquete para incorporar las operaciones de base de datos en el código compartido haciendo referencia a la `SQLite` las clases que se incluyen en NuGet. Las operaciones de base de datos se pueden definir en el proyecto de biblioteca estándar de .NET de la solución de Xamarin.Forms.
 
 El que acompaña a [aplicación de ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) es una sencilla aplicación de lista de tareas. Las capturas de pantalla siguientes muestran cómo el ejemplo se muestra en cada plataforma:
 
@@ -30,13 +30,7 @@ El que acompaña a [aplicación de ejemplo](https://github.com/xamarin/xamarin-f
 
 ## <a name="using-sqlite"></a>Uso de código
 
-Esta sección muestra cómo agregar paquetes de SQLite.Net NuGet a una solución Xamarin.Forms, escribir métodos para realizar operaciones de base de datos y usar el [ `DependencyService` ](~/xamarin-forms/app-fundamentals/dependency-service/index.md) para determinar una ubicación para almacenar la base de datos en cada plataforma.
-
-<a name="XamarinForms_PCL_Project" />
-
-### <a name="xamarinsforms-net-standard-or-pcl-project"></a>Xamarins.Forms .NET estándar o un proyecto PCL
-
-Para agregar compatibilidad de código a un proyecto de Xamarin.Forms, use la función de búsqueda de NuGet para buscar **sqlite-net-pcl** e instalar el paquete más reciente:
+Para agregar compatibilidad de SQLite en una biblioteca de Xamarin.Forms .NET estándar, use la función de búsqueda de NuGet para buscar **sqlite-net-pcl** e instalar el paquete más reciente:
 
 ![Agregar paquete de NuGet SQLite.NET PCL](databases-images/vs2017-sqlite-pcl-nuget.png "Agregar paquete de NuGet SQLite.NET PCL")
 
@@ -46,19 +40,10 @@ Hay un número de paquetes de NuGet con nombres similares, el paquete correcto t
 - **Id.:** sqlite-net-pcl
 - **Vínculo de NuGet:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
-> [!TIP]
-> Use la **sqlite-net-pcl** paquete de NuGet incluso en los proyectos de .NET estándar.
+> [!NOTE]
+> A pesar de que el nombre del paquete, utilice el **sqlite-net-pcl** paquete de NuGet incluso en los proyectos de .NET estándar.
 
-Una vez agregada la referencia, escribir una interfaz para abstraer la funcionalidad específica de la plataforma, que se usa para determinar la ubicación del archivo de base de datos. La interfaz utilizada en el ejemplo define un método único:
-
-```csharp
-public interface IFileHelper
-{
-  string GetLocalFilePath(string filename);
-}
-```
-
-Una vez que se ha definido la interfaz, use la [ `DependencyService` ](~/xamarin-forms/app-fundamentals/dependency-service/index.md) para obtener una implementación y obtener una ruta de acceso de archivo local (tenga en cuenta que esta interfaz no se ha implementado todavía). El código siguiente obtiene una implementación de la `App.Database` propiedad:
+Una vez agregada la referencia, agregue una propiedad a la `App` clase que devuelve una ruta de acceso de archivo local para almacenar la base de datos:
 
 ```csharp
 static TodoItemDatabase database;
@@ -69,14 +54,15 @@ public static TodoItemDatabase Database
   {
     if (database == null)
     {
-      database = new TodoItemDatabase(DependencyService.Get<IFileHelper>().GetLocalFilePath("TodoSQLite.db3"));
+      database = new TodoItemDatabase(
+        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TodoSQLite.db3"));
     }
     return database;
   }
 }
 ```
 
-El `TodoItemDatabase` constructor se muestra a continuación:
+El `TodoItemDatabase` constructor, que toma la ruta de acceso para el archivo de base de datos como un argumento, se muestra a continuación:
 
 ```csharp
 public TodoItemDatabase(string dbPath)
@@ -86,7 +72,7 @@ public TodoItemDatabase(string dbPath)
 }
 ```
 
-Este método crea una conexión de base de datos única que se mantiene abierta mientras se ejecuta la aplicación, por lo tanto, evitar los gastos de apertura y cierre el archivo de base de datos cada vez que se realiza una operación de base de datos.
+La ventaja de exposición de la base de datos sea un singleton que se crea una conexión de base de datos única que se mantiene abierta mientras la aplicación se ejecuta, por lo tanto, evitar los gastos de apertura y cierre el archivo de base de datos cada vez que una operación de base de datos se lleva a cabo.
 
 El resto de la `TodoItemDatabase` clase contiene consultas de código que se ejecutan multiplataforma. Código de la consulta de ejemplo se muestra a continuación (más detalles sobre la sintaxis pueden encontrarse en el [SQLite.NET utilizando](~/cross-platform/app-fundamentals/index.md) artículo):
 
@@ -126,87 +112,11 @@ public Task<int> DeleteItemAsync(TodoItem item)
 > [!NOTE]
 > La ventaja de usar la API de SQLite.Net asincrónica es esa base de datos se mueven las operaciones en subprocesos en segundo plano. Además, no hay ninguna necesidad de escribir simultaneidad adicional que el control de código porque la API se encarga de ello.
 
-Todo el código de acceso de datos se escribe en el proyecto de biblioteca estándar de .NET para compartirse en todas las plataformas. Solo una ruta de acceso de archivo local para la base de datos se requiere código específico de la plataforma, tal como se describe en las secciones siguientes.
-
-<a name="PCL_iOS" />
-
-### <a name="ios-project"></a>Proyecto de iOS
-
-Es el único código que requiere el `IFileHelper` implementación que determina la ruta de acceso del archivo de datos. El siguiente código coloca el archivo de base de datos de SQLite en el **/bases de datos de biblioteca** carpeta dentro de espacio aislado de la aplicación. Consulte la [iOS trabajar con el sistema de archivos](~/ios/app-fundamentals/file-system.md) documentación para obtener más información sobre los distintos directorios que están disponibles para el almacenamiento.
-
-```csharp
-[assembly: Dependency(typeof(FileHelper))]
-namespace Todo.iOS
-{
-  public class FileHelper : IFileHelper
-  {
-    public string GetLocalFilePath(string filename)
-    {
-      string docFolder = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-      string libFolder = Path.Combine(docFolder, "..", "Library", "Databases");
-
-      if (!Directory.Exists(libFolder))
-      {
-        Directory.CreateDirectory(libFolder);
-      }
-
-      return Path.Combine(libFolder, filename);
-    }
-  }
-}
-```
-
-Tenga en cuenta que el código incluye el `assembly:Dependency` atributo para que esta implementación es reconocible por el `DependencyService`.
-
-<a name="PCL_Android" />
-
-### <a name="android-project"></a>Proyecto de Android
-
-Es el único código que requiere el `IFileHelper` implementación que determina la ruta de acceso del archivo de datos:
-
-```csharp
-[assembly: Dependency(typeof(FileHelper))]
-namespace Todo.Droid
-{
-  public class FileHelper : IFileHelper
-  {
-    public string GetLocalFilePath(string filename)
-    {
-        string path = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
-        return Path.Combine(path, filename);
-    }
-  }
-}
-```
-
-<a name="PCL_UWP" />
-
-### <a name="windows-10-universal-windows-platform-uwp"></a>Plataforma universal de Windows (UWP) de Windows 10
-
-Implemente el `IFileHelper` interfaz mediante la específica de la plataforma `Windows.Storage` API para determinar la ruta de acceso del archivo de datos:
-
-```csharp
-using Windows.Storage;
-...
-
-[assembly: Dependency(typeof(FileHelper))]
-namespace Todo.UWP
-{
-  public class FileHelper : IFileHelper
-  {
-    public string GetLocalFilePath(string filename)
-    {
-      return Path.Combine(ApplicationData.Current.LocalFolder.Path, filename);
-    }
-  }
-}
-```
-
 ## <a name="summary"></a>Resumen
 
 Xamarin.Forms es compatible con aplicaciones orientadas a base de datos mediante el motor de base de datos de SQLite, lo que permite cargar y guardar los objetos en el código compartido.
 
-En este artículo se centra en **acceso a** una base de datos de SQLite uso de Xamarin.Forms. Para obtener más información sobre cómo trabajar con SQLite.Net propio, consulte el [SQLite.NET en Android](~/android/data-cloud/data-access/using-sqlite-orm.md) o [SQLite.NET en iOS](~/ios/data-cloud/data/using-sqlite-orm.md) documentación. La mayoría del código SQLite.Net es puede compartirse en todas las plataformas; sólo para configurar la ubicación del archivo de base de datos de SQLite necesario funcionalidad específica de la plataforma.
+En este artículo se centra en **acceso a** una base de datos de SQLite uso de Xamarin.Forms. Para obtener más información sobre cómo trabajar con SQLite.Net propio, consulte el [SQLite.NET en Android](~/android/data-cloud/data-access/using-sqlite-orm.md) o [SQLite.NET en iOS](~/ios/data-cloud/data/using-sqlite-orm.md) documentación.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
