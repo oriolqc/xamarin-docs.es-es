@@ -5,12 +5,12 @@ ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 0b6cbf9ee5621466285656a5efee68ccc2c85211
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 001cca2524e495d64c6781d8a2fc5cb58e771e6e
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783033"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321449"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: codificación geográfica
 
@@ -32,7 +32,7 @@ No se necesita ninguna instalación adicional.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Una clave de API de mapas de Bing tiene que usar funcationality de codificación geográfica. Registrarse para obtener una segunda [mapas de Bing](https://www.bingmapsportal.com/) cuenta. En **mi cuenta > Mis claves** crear una clave nueva y rellene la información según el tipo de aplicación.
+Una clave de API de mapas de Bing tiene que usar funcationality de codificación geográfica. Registrarse para obtener una segunda [mapas de Bing](https://www.bingmapsportal.com/) cuenta. En **mi cuenta > Mis claves** crear una clave nueva y rellene la información según el tipo de aplicación (que debe ser **público de aplicación de Windows (UWP, 8.x y versiones anteriores)** para aplicaciones UWP).
 
 Desde el principio de la vida de la aplicación antes de llamar a cualquiera **Geocodificación** métodos establecen la clave de API:
 
