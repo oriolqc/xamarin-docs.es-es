@@ -49,7 +49,7 @@ Estas capturas de pantalla muestran estos controles con:
 * Tema claro (solo diferencias sutiles a no tener ningún tema)
 * Tema oscuro
 
-![](images/standard-none-sml.png "Controles sin los temas de") ![ ] (images/standard-light-sml.png "controles con el tema claro") ![ ] (images/standard-dark-sml.png "controles con el tema oscuro")
+![](images/standard-none-sml.png "Controles sin los temas de") ![](images/standard-light-sml.png "controles con el tema claro") ![](images/standard-dark-sml.png "controles con el tema oscuro")
 
 <a name="styleclass" />
 
@@ -69,7 +69,7 @@ El [luz](light.md) y [oscuro](dark.md) temas ambos definen tres diferentes aspec
 
 Esto se representa con claro y oscuro como sigue:
 
-![](images/boxview-light-sml.png "BoxView con un tema claro StyleClass") ![ ] (images/boxview-dark-sml.png "BoxView con una StyleClass el tema oscuro")
+![](images/boxview-light-sml.png "BoxView con un tema claro StyleClass") ![](images/boxview-dark-sml.png "BoxView con una StyleClass el tema oscuro")
 
 <a name="builtin" />
 
