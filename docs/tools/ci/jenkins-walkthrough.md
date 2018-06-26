@@ -6,12 +6,12 @@ ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: topgenorth
 ms.author: toopge
 ms.date: 03/23/2017
-ms.openlocfilehash: 7e9069c698f82e9ec9c5009286c2a36b6722b7a8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8094f1ab78252e6d6bd8f5991bcb567b36ed1e9b
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793956"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935351"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Usar Jenkins con Xamarin
 
@@ -385,7 +385,7 @@ Una vez que todas las acciones de compilación están en su lugar, es recomendab
 
 ### <a name="submitting-tests-to-test-cloud"></a>Envío de pruebas para pruebas en la nube
 
-Pruebas automatizadas se pueden enviar a la nube de prueba mediante comandos de shell. Para obtener más información acerca de cómo configurar una serie de pruebas en la nube de la prueba de Xamarin, tenemos guías para usar [Xamarin.UITest](https://developer.xamarin.com/guides/testcloud/uitest/working-with/submitting-tests-to-xamarin-test-cloud/) o [Calabash](https://developer.xamarin.com/guides/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/).
+Pruebas automatizadas se pueden enviar a la nube de prueba mediante comandos de shell. Para obtener más información acerca de cómo configurar una serie de pruebas en la nube de la prueba de Xamarin, consulte esta guía para el uso de [Xamarin.UITest](/appcenter/test-cloud/preparing-for-upload/uitest/).
 
 
 ## <a name="summary"></a>Resumen

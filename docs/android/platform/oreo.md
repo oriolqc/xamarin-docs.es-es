@@ -7,13 +7,13 @@ ms.technology: xamarin-android
 ms.custom: video
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/30/2018
-ms.openlocfilehash: 3776a0554e5ae496f9e39612ec9bab971c6f1f88
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: a23072427a74119bfa339fea8a695cd13b775685
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732767"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935108"
 ---
 # <a name="oreo-features"></a>Características de Oreos
 
@@ -191,7 +191,7 @@ Después de usar **avdmanager** para crear el dispositivo virtual, se incluirá 
 
 -----
 
-Para obtener más información acerca de cómo configurar un emulador de Android para probar y depurar, consulte [depuración con el emulador de Google Android](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Para obtener más información acerca de cómo configurar un emulador de Android para probar y depurar, consulte [depuración en el emulador de Android](~/android/deploy-test/debugging/debug-on-emulator.md).
 
 Si está utilizando un dispositivo físico como un Nexus o un píxel, puede actualizar el dispositivo a través de automático a través de las actualizaciones de remotamente o descargar una imagen de sistema y flash directamente el dispositivo. Para obtener más información acerca de cómo actualizar manualmente el dispositivo para Oreos Android, consulte [generador de imágenes para dispositivos de píxel y Nexus](https://developers.google.com/android/images).
 

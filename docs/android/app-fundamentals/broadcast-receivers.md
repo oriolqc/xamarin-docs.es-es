@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: topgenorth
 ms.author: toopge
 ms.date: 04/20/2018
-ms.openlocfilehash: 9c17641312384634983c2cbb34fa923a9416c9f7
-ms.sourcegitcommit: 797597d902330652195931dec9ac3e0cc00792c5
+ms.openlocfilehash: 6b2e316eaf67e51801be4fcd670e80ec81c8ff08
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/20/2018
-ms.locfileid: "31646708"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935404"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Receptores de difusión en Xamarin.Android
 
@@ -25,7 +25,7 @@ A _receptor difusión_ es un componente de Android que permite que una aplicaci�
 Android identifica dos tipos de difusiones:
 
 * **Difusión explícita** &ndash; estos tipos de difusiones destinados a una aplicación específica. El uso más común de una difusión explícita es iniciar una actividad. Un ejemplo de una difusión explícita cuando una aplicación necesita llamar a un número de teléfono; enviará un intento destinado a la aplicación de teléfono en Android y pasada en el número de teléfono que se debe marcar. Android, a continuación, enrutará el intento de la aplicación de teléfono.
-* **Implícita broadcase** &ndash; estas difusiones se envían a todas las aplicaciones en el dispositivo. Un ejemplo de una difusión implícito es el `ACTION_POWER_CONNECTED` intención. Esta intención se publica cada vez que Android detecta que se está cargando la batería en el dispositivo. Android enrutará esta intención para todas las aplicaciones que se han registrado para este evento.
+* **Difusión implícita** &ndash; estas difusiones se envían a todas las aplicaciones en el dispositivo. Un ejemplo de una difusión implícito es el `ACTION_POWER_CONNECTED` intención. Esta intención se publica cada vez que Android detecta que se está cargando la batería en el dispositivo. Android enrutará esta intención para todas las aplicaciones que se han registrado para este evento.
 
 El receptor de difusión es una subclase de la `BroadcastReceiver` tipo y se deben invalidar el [ `OnReceive` ](https://developer.xamarin.com/api/member/Android.Content.BroadcastReceiver.OnReceive/p/Android.Content.Context/Android.Content.Intent/) método. Se ejecutará Android `OnReceive` en el subproceso principal, por lo que este método debe diseñarse para ejecutar rápidamente. Se debe tener cuidado al generando subprocesos en `OnReceive` porque Android puede finalizar el proceso cuando finalice el método. Si un receptor de difusión debe realizar el trabajo de larga ejecución, a continuación, se recomienda programar una _trabajo_ mediante la `JobScheduler` o _Firebase trabajo distribuidor_. Programación de trabajo a un trabajo se tratarán en una guía independiente.
 

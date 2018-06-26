@@ -1,20 +1,20 @@
 ---
-title: Asignaciones
+title: Cómo usar Google Maps y la ubicación con Xamarin.Android
 description: Este artículo describe cómo usar mapas y la ubicación con Xamarin.Android. Se ocupa de todo, desde el aprovechamiento de la aplicación de mapas integrados para directamente con la versión 2 asigna Android API de Google.
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 02/16/2018
-ms.openlocfilehash: e57dc07aefbd1c80a53f4225f5f44fe72a9ddb9a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/25/2018
+ms.openlocfilehash: a861e43152870933ba684bf693a1bd3d3ac5bd0b
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763334"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935378"
 ---
-# <a name="maps"></a>Asignaciones
+# <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Cómo usar Google Maps y la ubicación con Xamarin.Android
 
 _Este artículo describe cómo usar mapas y la ubicación con Xamarin.Android. Se ocupa de todo, desde el aprovechamiento de la aplicación de mapas integrados para directamente con la versión 2 asigna Android API de Google._
 
@@ -32,9 +32,8 @@ En primer lugar, explica cómo aprovechar las aplicaciones de mapas integrados d
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MapsAndLocationDemo_v3 (sample)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
+- [MapsAndLocationDemo_v3 (ejemplo)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
 - [Ciclo de vida de la actividad](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Obtención de una clave de la API de Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Complemento de API de Google](http://code.google.com/android/add-ons/google-apis/reference/index.html?com/google/android/maps/package-summary.html)
 - [Lista de propósitos: Invocar aplicaciones de Google en dispositivos Android](http://developer.android.com/guide/appendix/g-app-intents.html)
 - [Ubicación y mapas](http://developer.android.com/guide/topics/location/index.html)
