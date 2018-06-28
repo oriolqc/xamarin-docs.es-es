@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: topgenorth
 ms.author: toopge
 ms.date: 10/27/2017
-ms.openlocfilehash: 247a18cf7f645ea90d100cb3f4900f30ac7754cc
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 71faf79ef9b783480dbb6ff4674859a9148abca3
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793862"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066915"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Solución de problemas de generador de perfiles de Xamarin
 
@@ -67,7 +67,7 @@ Compruebe las opciones siguientes para resolver este problema:
 - Asegúrese de que la plataforma es [admite](~/tools/profiler/index.md#Profiler_Support).
 - Asegúrese de que tiene la licencia correcta.
 - Asegúrese de que haya iniciado sesión y correctamente autenticado.
-- [Visual Studio] Debe contar con [Visual Studio Enterprise](https://www.visualstudio.com/vs/enterprise/) y tener una licencia válida de la empresa.
+- [Visual Studio] Debe contar con [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/enterprise/) y tener una licencia válida de la empresa.
 
 #### <a name="i-get-an-error-when-i-try-to-launch-the-profiler"></a>Obtengo un error al intentar iniciar el generador de perfiles
 

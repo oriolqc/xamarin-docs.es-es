@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 08/31/2017
-ms.openlocfilehash: ace24cae139c97a8735558c82e22143adbc9c064
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: d8672a111faf7c45d9d8eb7f9d7dd5f993c578a1
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787551"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37067019"
 ---
 # <a name="troubleshooting-ios-11-apps-built-with-xamarinios"></a>Solución de problemas de iOS 11 aplicaciones compiladas con Xamarin.iOS
 
@@ -25,7 +25,7 @@ Las secciones siguientes enumeran algunos problemas conocidos que pueden surgir 
 
 > [!IMPORTANT]
 > Xamarin Studio no funcionará con Xcode 9.
-> [Actualice a Visual Studio para Mac](https://www.visualstudio.com/vs/).
+> [Actualice a Visual Studio para Mac](https://visualstudio.microsoft.com/vs/).
 
 <a name="Reporting-Bugs" />
 

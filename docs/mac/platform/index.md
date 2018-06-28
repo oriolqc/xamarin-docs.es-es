@@ -7,16 +7,27 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 9e82db1c0f38d35c23a6cd0667bef49315ff86be
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 539ec976e3ea28aa2e017318022bd102f2c03ae5
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792231"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066889"
 ---
 # <a name="macos-platform-features"></a>macOS características de la plataforma
 
 Documentos de esta sección tratan trabajar con características claves, específico de la plataforma de macOS en una aplicación Xamarin.Mac.
+
+## <a name="introduction-to-macos-mojavemacplatformintroduction-to-macos-mojaveindexmd"></a>[Introducción a macOS Mojave](~/mac/platform/introduction-to-macos-mojave/index.md)
+
+> [!WARNING]
+> MacOS de Xamarin soporte Mojave está actualmente en vista previa, lo que significa que puede contener errores, no es completar característica y, puede cambiar. Utilizar para la experimentación solo.
+
+Este documento proporciona una descripción general de las características nuevas y actualizadas en macOS Mojave que están disponibles para su uso al compilar aplicaciones Xamarin.Mac.
+
+## <a name="introduction-to-macos-high-sierramacplatformintroduction-to-macos-high-sierraindexmd"></a>[Introducción a macOS Sierra alta](~/mac/platform/introduction-to-macos-high-sierra/index.md)
+
+Este documento describe las características nuevas y mejoradas de macOS Sierra alta.
 
 ## <a name="introduction-to-macos-sierramacplatformintroduction-to-macos-sierraindexmd"></a>[Introducción a macOS Sierra](~/mac/platform/introduction-to-macos-sierra/index.md)
 
@@ -30,7 +41,6 @@ Hacer referencia a la [página de solución de problemas](~/cross-platform/macio
 ## <a name="introduction-to-opentkmacplatformopentkmd"></a>[Introducción a OpenTK](~/mac/platform/opentk.md)
 
 OpenTK (el Kit de herramientas abierta) es una avanzada, bajo nivel C# biblioteca que facilita el trabajo con OpenGL, OpenCL y OpenAL. OpenTK puede utilizarse para juegos, aplicaciones científicas u otros proyectos que requieren gráficos 3D, la funcionalidad de audio o de cálculo. Este artículo proporciona una breve introducción al uso de OpenTK en una aplicación Xamarin.Mac.
-
 
 ## <a name="introduction-to-storyboardsmacplatformstoryboardsindexmd"></a>[Introducción a guiones gráficos](~/mac/platform/storyboards/index.md)
 
