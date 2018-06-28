@@ -1,18 +1,20 @@
 ---
-title: Referencia de Info.plist
+title: Referencia de Info.plist para Xamarin.iOS
+description: En este documento se describen varios pares clave-valor que se pueden establecer en el archivo Info.plist de una aplicación Xamarin.iOS. Estas claves son necesarias si la aplicación lleva a cabo tareas específicas, como obtener acceso a la ubicación, las fotos, el micrófono o la cámara.
 ms.prod: xamarin
 ms.assetid: 944DFDB5-ADBA-4D6E-984C-5AEC19A1CC57
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 01/18/2017
-ms.openlocfilehash: 8ad2c5e8137dede71d9858aa144e440d984c1a75
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: fa40add67155bd982041b829264a10b9764aa950
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785481"
 ---
-# <a name="infoplist-reference"></a>Referencia de Info.plist
+# <a name="infoplist-reference-for-xamarinios"></a>Referencia de Info.plist para Xamarin.iOS
 
 Para obtener más información sobre cómo trabajar con claves de Info.Plist, lea la guía [Trabajar con seguridad y privacidad](~/ios/app-fundamentals/security-privacy.md). 
 

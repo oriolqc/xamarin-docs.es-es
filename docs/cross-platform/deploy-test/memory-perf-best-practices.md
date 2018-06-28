@@ -1,23 +1,21 @@
 ---
 title: Rendimiento multiplataforma
-description: Existen muchas técnicas para aumentar el rendimiento de las aplicaciones compiladas con la plataforma Xamarin. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas.
+description: En este documento se describen diversas técnicas que pueden usarse para mejorar el rendimiento de una aplicación móvil. Además, analiza el generador de perfiles, el recurso IDisposable, las referencias débiles, el recolector de elementos no utilizados SGen, las técnicas de reducción de tamaño y mucho más.
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: f011a92b4789da7328827f184449fd957abdf3ba
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 66234bb44bb0cae9580c119c6029603a528f882e
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34781987"
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
-_Existen muchas técnicas para aumentar el rendimiento de las aplicaciones compiladas con la plataforma Xamarin. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación. En este artículo se describen y se explican estas técnicas._
-
 El mal rendimiento de una aplicación se manifiesta de muchas formas. Puede hacer que parezca que una aplicación deja de responder, puede ocasionar un desplazamiento lento y puede reducir la duración de la batería. La optimización del rendimiento conlleva mucho más que la mera implementación de código eficaz. También debe tenerse en cuenta la experiencia de rendimiento de la aplicación del usuario. Por ejemplo, asegurarse de que las operaciones se ejecuten sin evitar que el usuario realice otras actividades puede ayudar a mejorar su experiencia.
-
 
 <a name="profiler" />
 

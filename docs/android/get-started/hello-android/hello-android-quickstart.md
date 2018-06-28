@@ -7,12 +7,13 @@ ms.assetid: 44007FA1-3ABC-4935-BF52-4613AF0553A6
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 04/25/2018
-ms.openlocfilehash: 7faf4ef090815ea799209e76816113f06889bd21
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.date: 05/30/2018
+ms.openlocfilehash: 9e4349b807c98e6f5cfbc55fa57153f99054d474
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732471"
 ---
 # <a name="hello-android-quickstart"></a>Hello, Android: inicio rápido
 
@@ -48,7 +49,7 @@ Antes de empezar, descargue y descomprima el conjunto [Iconos de aplicación y p
 
 ## <a name="configuring-emulators"></a>Configuración de los emuladores
 
-Si está usando el emulador Android SDK de Google, le recomendamos que configure el emulador para usar la aceleración de hardware. Las instrucciones para configurar la aceleración de hardware están disponibles en [Aceleración de hardware](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
+Si está usando el emulador Android SDK de Google, le recomendamos que configure el emulador para usar la aceleración de hardware. Las instrucciones para configurar la aceleración de hardware están disponibles en [Aceleración de hardware para el rendimiento del emulador](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 

@@ -1,5 +1,5 @@
 ---
-title: Trabajar con derechos
+title: Trabajar con derechos en Xamarin.iOS
 description: Los derechos son funciones especiales de las aplicaciones y permisos de seguridad que se conceden a las aplicaciones que están configuradas correctamente para usarlos.
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: f158ab7e51eb7610566ed052b326fecf016add8a
-ms.sourcegitcommit: bc39d85b4585fcb291bd30b8004b3f7edcac4602
+ms.openlocfilehash: 7e5ace306b580ba76986e89367de84e5bfd9cc40
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785309"
 ---
-# <a name="working-with-entitlements"></a>Trabajar con derechos
+# <a name="working-with-entitlements-in-xamarinios"></a>Trabajar con derechos en Xamarin.iOS
 
 _Los derechos son funcionalidades especiales de las aplicaciones y permisos de seguridad que se conceden a las aplicaciones que están configuradas correctamente para usarlos._
 

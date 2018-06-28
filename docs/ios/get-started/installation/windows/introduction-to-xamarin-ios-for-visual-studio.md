@@ -1,21 +1,20 @@
 ---
 title: Introducción a Xamarin.iOS para Visual Studio
-description: En este artículo se muestra cómo crear y probar aplicaciones de Xamarin iOS con Visual Studio. Se explica cómo usar Visual Studio para crear nuevos proyectos de iOS, crear una aplicación de iOS y luego compilar, probar y depurar con un equipo Mac en red para hospedar el compilador y el simulador de Apple y la cadena de herramientas de generación de Xamarin.
+description: En este documento se describe cómo compilar y probar aplicaciones Xamarin.iOS con Visual Studio. Se explica también cómo crear un proyecto, ejecutar y depurar una aplicación, y conectarse a un host de compilación de Mac desde Windows.
 ms.prod: xamarin
 ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2018
-ms.openlocfilehash: fbd48deb0b18dcd3ac0d40e379e21d5967f81e0d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: e07119bee6478a503ca6c586fa3348206ccd16f7
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786205"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introducción a Xamarin.iOS para Visual Studio
-
-_En este artículo se muestra cómo crear y probar aplicaciones de Xamarin iOS con Visual Studio. Se explica cómo usar Visual Studio para crear nuevos proyectos de iOS, crear una aplicación de iOS y luego compilar, probar y depurar con un equipo Mac en red para hospedar el compilador y el simulador de Apple y la cadena de herramientas de generación de Xamarin._
 
 Xamarin para Windows permite escribir y probar aplicaciones de iOS en Visual Studio con un equipo Mac en red que proporciona el servicio de compilación e implementación.
 
@@ -27,7 +26,6 @@ El desarrollo para iOS en Visual Studio ofrece una serie de ventajas:
 -  Uso de las herramientas de Visual Studio preferidas por el usuario (como **Resharper** y **Team Foundation Server**) para todos los proyectos multiplataforma, incluido el código de origen de iOS.
 -  Trabajo con un IDE conocido aprovechando los enlaces de Xamarin.iOS de todas las API de Apple.
 
-
 <a name="Requirements_and_Installation" />
 
 ## <a name="requirements-and-installation"></a>Requisitos e instalación
@@ -38,7 +36,6 @@ Hay una serie de opciones de configuración disponibles para poder decidir cuál
 
 -  Usar un equipo Mac como equipo de desarrollo principal y ejecutar una máquina virtual de Windows con Visual Studio instalado. Se recomienda usar software de máquina virtual como [Parallels](http://www.parallels.com/products/desktop/) o [VMWare](http://www.vmware.com/products/fusion/).
 -  Usar un equipo Mac solo como host de compilación. En este caso, se conectaría a la misma red que una máquina de Windows con las herramientas [necesarias](~/cross-platform/get-started/installation/windows.md#installation) instaladas.
-
 
 En cualquier caso, debe seguir estos pasos:
 
@@ -64,7 +61,6 @@ Los controles relevantes para el desarrollo de Xamarin iOS se han rodeado con un
 -  **Configuraciones de soluciones**: permite seleccionar la configuración que se va a usar (por ejemplo, Depurar, Publicar).
 -  **Plataformas de solución**: permite seleccionar iPhone o iPhoneSimulator para la implementación.
 
-
 ### <a name="ios-toolbar"></a>Barra de herramientas de iOS
 
 El aspecto de la barra de herramientas de iOS de Visual Studio es similar en todas las versiones de Visual Studio. Se muestra a continuación:
@@ -77,10 +73,7 @@ Cada elemento se explica a continuación:
 -  **Mostrar simulador de iOS**: coloca en primer plano la ventana del simulador de iOS en el equipo Mac.
 -  **Mostrar archivo IPA en servidor de compilación**: abre la aplicación Finder de Mac en la ubicación del archivo de salida IPA de la aplicación.
 
-
-
 ## <a name="ios-output-options"></a>Opciones de salida de iOS
-
 
 ### <a name="output-window"></a>Resultados (Ventana)
 
@@ -108,29 +101,23 @@ Otros paneles de salida predeterminados de Visual Studio como Depurar y Compilar
 
     [![](introduction-to-xamarin-ios-for-visual-studio-images/output1-sml.png "Salida de MSBuild")](introduction-to-xamarin-ios-for-visual-studio-images/output1-large.png#lightbox)
 
-
 ## <a name="ios-project-properties"></a>Propiedades de proyecto de iOS
 
 Es posible acceder a las propiedades del proyecto de Visual Studio si se hace clic con el botón derecho en el nombre del proyecto y se selecciona *Propiedades* en el menú contextual. Esto le permitirá configurar la aplicación de iOS, como se muestra en la siguiente captura de pantalla:
-
 
  ![](introduction-to-xamarin-ios-for-visual-studio-images/iosproperties.png "Configuración de una aplicación de iOS")
 
 -  *Firma del lote de iOS*: se conecta al equipo Mac para rellenar las identidades de firma de código y los perfiles de aprovisionamiento:
 
-
  ![](introduction-to-xamarin-ios-for-visual-studio-images/bundlesigning.png "Rellene las identidades de firma de código y los perfiles de aprovisionamiento")
 
 -  *Opciones IPA de iOS*: el archivo IPA se guardará en el sistema de archivos del equipo Mac:
-
 
  ![](introduction-to-xamarin-ios-for-visual-studio-images/ipaoptions.png "Opciones de IPA de iOS")
 
 -  *Opciones de ejecución de iOS*: configure parámetros adicionales:
 
  ![](introduction-to-xamarin-ios-for-visual-studio-images/iosrunoptions.png "Opciones de ejecución de iOS")
-
-
 
 ## <a name="creating-a-new-project-for-ios-applications"></a>Creación de un nuevo proyecto para aplicaciones de iOS
 
@@ -156,7 +143,6 @@ Para agregar objetos a la vista, use el panel **Cuadro de herramientas** para ar
 
  Para más información sobre cómo usar el diseñador de iOS, vea las guías sobre el [Diseñador](~/ios/user-interface/designer/index.md).
 
-
 ## <a name="running--debugging-ios-applications"></a>Ejecución y depuración de aplicaciones de iOS
 
 ### <a name="device-logging"></a>Registro de dispositivos
@@ -175,7 +161,6 @@ Para que los dispositivos aparezcan en el cuadro combinado, se debe cargar un pr
 
 Esta ventana de herramientas proporciona: una tabla de entradas de registro, una lista desplegable para la selección de dispositivos, una forma de borrar entradas de registro, un cuadro de búsqueda y botones para reproducir, detener y pausar.
 
-
 ### <a name="set-debugging-stops"></a>Establecer paradas de depuración
 
 En la aplicación se pueden establecer puntos de interrupción en cualquier momento para indicar al depurador que detenga temporalmente la ejecución del programa. Para establecer un punto de interrupción en Visual Studio, haga clic en el margen del editor, junto al número de línea del código en el que quiere interrumpir:
@@ -185,7 +170,6 @@ En la aplicación se pueden establecer puntos de interrupción en cualquier mome
 Inicie la depuración y use el simulador o el dispositivo para ir a un punto de interrupción de la aplicación. Cuando se alcanza un punto de interrupción, se resalta la línea y se habilita el comportamiento de depuración normal de Visual Studio: se puede entrar en el código, saltarlo o salir, examinar las variables locales o usar la ventana Inmediato.
 
 Esta captura de pantalla muestra la ejecución del simulador de iOS junto a Visual Studio con Parallels en OS X:
-
 
 ![](introduction-to-xamarin-ios-for-visual-studio-images/image19.png "Esta captura de pantalla muestra la ejecución del simulador de iOS junto a Visual Studio con Parallels en OS X")
 

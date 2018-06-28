@@ -1,21 +1,22 @@
 ---
-title: Aprovisionamiento gratuito
-description: Con el lanzamiento de Apple de Xcode 7 se incluye un cambio importante para el aprovisionamiento gratuito de los desarrolladores de iOS y Mac.
+title: Aprovisionamiento gratuito para aplicaciones Xamarin.iOS
+description: En este documento se describe la manera en que los desarrolladores de Xamarin.iOS pueden probar su aplicación en un dispositivo físico sin necesidad de iniciar sesión en el programa para desarrolladores de Apple de pago.
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 03/19/2017
-ms.openlocfilehash: 09244ebaefedb991289e5a1f67b59491ee84ed28
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 623f79f482170c6b1d8ecdb642afb2fc7acf061d
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786027"
 ---
-# <a name="free-provisioning"></a>Aprovisionamiento gratuito
+# <a name="free-provisioning-for-xamarinios-apps"></a>Aprovisionamiento gratuito para aplicaciones Xamarin.iOS
 
-_Con el lanzamiento de Apple de Xcode 7 se incluye un cambio importante para el aprovisionamiento gratuito de los desarrolladores de iOS y Mac._
+_Con el lanzamiento de Apple de Xcode 7 se incluye un cambio importante para todos los desarrolladores de iOS y Mac: el aprovisionamiento gratuito._
 
 El aprovisionamiento gratuito permite a los desarrolladores implementar su aplicación de Xamarin.iOS en sus dispositivos iOS **sin** formar parte de ningún **programa de Apple Developer**. Esto es una enorme ventaja para los desarrolladores, ya que realizar pruebas en un dispositivo supone muchos beneficios en comparación con realizarlas en un simulador, incluyendo pero sin limitarse a la memoria, el almacenamiento y la conectividad de red, entre otros.
 

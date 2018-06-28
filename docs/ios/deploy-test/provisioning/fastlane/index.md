@@ -1,21 +1,20 @@
 ---
 title: Introducción a fastlane para iOS
-description: En esta guía se presentan las diversas herramientas de Fastlane que se pueden usar para firmar el código de aplicaciones de iOS.
+description: En esta guía se presentan las diversas herramientas de Fastlane que se pueden usar para firmar el código de aplicaciones de iOS. Se describe cómo actualizar, instalar y usar las herramientas de fastlane.
 ms.prod: xamarin
 ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 68c252edecc4ebffb764c0de328ab605975471c4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ffb7e0a088bcd227f45b97229f089ef59d4d6608
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785494"
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Introducción a fastlane para iOS
-
-_En esta guía se presentan las diversas herramientas de fastlane que se pueden usar para firmar el código de aplicaciones de iOS_.
 
 fastlane es un proyecto de código abierto creado para simplificar el proceso confuso y a menudo tedioso de lanzar aplicaciones iOS y Android. Consta de varias utilidades, cada una de las cuales se encarga de un aspecto específico del lanzamiento de la aplicación, por ejemplo:
 

@@ -1,6 +1,6 @@
 ---
-title: Introducción a iOS
-description: De Hello World a Hello App Store
+title: Introducción a Xamarin.iOS
+description: Este documento contiene vínculos a guías en las que se describe cómo configurar Xamarin.iOS y cómo compilar una primera aplicación. Además, se proporciona información sobre Xamarin para programadores de Objective-C.
 ms.prod: xamarin
 ms.assetid: FA802CCF-3BA4-4F26-A7BF-FBB7D0AA889B
 ms.technology: xamarin-ios
@@ -8,13 +8,14 @@ ms.custom: xamu-video
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 11/23/2016
-ms.openlocfilehash: be25d976cc58d6c1dd0154cbdc06aab7039c544e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 237480c91a40e6ee08481664ce3981af10f97599
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785606"
 ---
-# <a name="getting-started-with-ios"></a>Introducción a iOS
+# <a name="getting-started-with-xamarinios"></a>Introducción a Xamarin.iOS
 
 Xamarin.iOS permite a los desarrolladores crear aplicaciones nativas de iOS con los mismos controles de interfaz de usuario disponibles en Objective-C y Xcode, pero con la flexibilidad y la elegancia de un lenguaje moderno (C#), la eficacia de la biblioteca de clases base (BCL) de .NET y dos IDE de primera clase: Visual Studio para Mac y Visual Studio. En esta serie se explica cómo configurar e instalar Xamarin.iOS y se tratan los aspectos básicos del desarrollo de Xamarin.iOS.
 

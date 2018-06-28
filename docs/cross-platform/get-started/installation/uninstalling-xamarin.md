@@ -1,16 +1,17 @@
 ---
 title: Desinstalación de Xamarin
-description: Desinstalación de los productos de Xamarin de un equipo
+description: En este documento se describe cómo desinstalar Xamarin en Mac y Windows. Además, se proporcionan instrucciones específicas sobre la desinstalación de Mono, Xamarin.Android, Xamarin.iOS y otras herramientas.
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: asb3993
 ms.author: amburns
 ms.date: 04/08/2017
-ms.openlocfilehash: d1b88ad97a1cecaadd84226bca61c7f2b262438d
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: d5cf15b8ecd225fb75a3cfa0017cb84bc13cce1b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782026"
 ---
 # <a name="uninstalling-xamarin"></a>Desinstalación de Xamarin
 

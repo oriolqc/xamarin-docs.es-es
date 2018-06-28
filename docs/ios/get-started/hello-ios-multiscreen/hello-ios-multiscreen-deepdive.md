@@ -1,6 +1,6 @@
 ---
-title: Hello, iOS Multiscreen
-description: En esta guía de dos partes, ampliaremos la aplicación Phoneword creada en la guía Hello, iOS a fin de controlar una segunda pantalla. Además, presentaremos el modelo de diseño Modelo-Vista-Controlador, implementaremos nuestra primera navegación de iOS y conoceremos a fondo la estructura y la funcionalidad de la aplicación iOS.
+title: Análisis detallado de Hello, iOS Multiscreen
+description: En este documento se analiza con detalle la aplicación Phoneword ampliada, para lo que se tiene en cuenta el modelo de diseño Model-View-Controller, la navegación de iOS y otros conceptos de desarrollo de iOS.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: 6f3c02bf3e5def0ad4acdb82e4c8a2606159846a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdeea6d78ec1262a0b5b613b4f483012c9df2c19
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785663"
 ---
-# <a name="hello-ios-multiscreen-deep-dive"></a>Hello, iOS Multiscreen: análisis detallado
+# <a name="hello-ios-multiscreen--deep-dive"></a>Análisis detallado de Hello, iOS Multiscreen
 
 En el tutorial Inicio rápido, creamos y ejecutamos nuestra primera aplicación de Xamarin.iOS multipantalla. Es hora de desarrollar un conocimiento más profundo de la navegación y la arquitectura de iOS.
 
@@ -82,7 +83,7 @@ El controlador de navegación tiene tres funciones principales:
 
 -  **Opcionalmente proporciona un botón Atrás**: cuando se inserta un nuevo elemento en la pila de navegación, la barra de título puede mostrar automáticamente un *botón Atrás* que permita al usuario navegar hacia atrás. Al presionar el botón Atrás, *extrae* el controlador de vista actual de la pila de navegación y carga la jerarquía de vistas de contenido anterior en la ventana:  
 
-    [![](hello-ios-multiscreen-deepdive-images/03.png "Diagrama que ilustra cómo "sacar" una carta de la baraja")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
+    [![](hello-ios-multiscreen-deepdive-images/03.png "Diagrama que ilustra cómo \"sacar\" una carta de la baraja")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
 -  **Proporciona una barra de título**: la parte superior del **controlador de navegación** se denomina *barra de título*. Es responsable de mostrar el título del controlador de vista, como se muestra en el diagrama siguiente:  

@@ -6,12 +6,13 @@ ms.assetid: 2BE4D5AD-D468-B177-8F96-837D084E7DE1
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/17/2018
-ms.openlocfilehash: ca88159e8bcbcd4665e29b4ad8df9ffe00cfec67
-ms.sourcegitcommit: 4db5f5c93f79f273d8fc462de2f405458b62fc02
+ms.date: 05/30/2018
+ms.openlocfilehash: 545636bc38240bc17837a661416702ec259caf45
+ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34732611"
 ---
 # <a name="windows-installation"></a>Instalación en el equipo Windows
 
@@ -82,7 +83,7 @@ Se puede lograr una mejora considerable del rendimiento al desarrollar en equipo
 1. Hyper-V de Microsoft &ndash; Disponible en equipos con la actualización de abril de Windows 10.
 2. Hardware Accelerated Execution Manager (HAXM) de Intel &ndash; Disponible en equipos x86 con OS X, macOS o una versión anterior de Windows.
 
-Para obtener más información sobre Google Android Emulator, Hyper-V y HAXM, vea la guía [Aceleración de hardware de Android Emulator](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
+Para más información sobre Google Android Emulator, Hyper-V y HAXM, vea la guía [Aceleración de hardware para el rendimiento del emulador](~/android/get-started/installation/android-emulator/hardware-acceleration.md).
 
 > [!NOTE]
 > En versiones anteriores de Windows, HAXM no es compatible con Hyper-V. En este escenario es necesario [deshabilitar Hyper-V](~/android/deploy-test/debugging/android-sdk-emulator/troubleshooting.md#disabling-hyper-v) o usar las imágenes de emulador más lentas sin las optimizaciones de x86.
@@ -121,6 +122,6 @@ El siguiente paso consiste en echar un vistazo a los tutoriales de [Hello, Andro
 - [Instalación de Visual Studio Tools para Xamarin](~/cross-platform/get-started/installation/windows.md)
 - [Requisitos del sistema](~/cross-platform/get-started/requirements.md)
 - [Configuración de Android SDK](~/android/get-started/installation/android-sdk.md)
-- [Google Android Emulator](~/android/get-started/installation/android-emulator/index.md)
+- [Configuración de Android Emulator](~/android/get-started/installation/android-emulator/index.md)
 - [Configurar el dispositivo para el desarrollo](~/android/get-started/installation/set-up-device-for-development.md)
 - [Ejecutar aplicaciones en Android Emulator](https://developer.android.com/studio/run/emulator#Requirements)

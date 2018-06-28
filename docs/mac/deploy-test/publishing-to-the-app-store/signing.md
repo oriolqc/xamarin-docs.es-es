@@ -1,19 +1,20 @@
 ---
-title: Firmar con el identificador de desarrollador
-description: En esta guía se explican los pasos para firmar una aplicación Xamarin.Mac con Developer ID para su publicación.
+title: Firma de aplicaciones Xamarin.Mac con un identificador de desarrollador
+description: En este documento se describe cómo firmar una aplicación Xamarin.Mac con un identificador de desarrollador para que se pueda distribuir fuera del Mac App Store. Se explican también las opciones de firma de código y la compilación.
 ms.prod: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 1a2726ec46ac51ae9848b318798afba74183360c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 130766ef7f9ab8e311db97a7209f4ec62a2ceee4
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792309"
 ---
-# <a name="sign-with-developer-id"></a>Firmar con el identificador de desarrollador
+# <a name="signing-xamarinmac-apps-with-a-developer-id"></a>Firma de aplicaciones Xamarin.Mac con un identificador de desarrollador
 
 Si el desarrollador tiene previsto distribuir una aplicación directamente a los usuarios de macOS, Apple recomienda que firme el código con su identificador de desarrollador para que se pueda instalarse en sistemas macOS con el **equipo selector** habilitado. Si la aplicación no se ha firmado, el **equipo selector** impedirá con un mensaje de alerta que los usuarios realicen la instalación (es posible omitir esta restricción si se mantiene presionada la tecla Control durante el inicio).
 

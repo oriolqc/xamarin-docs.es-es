@@ -1,21 +1,20 @@
 ---
-title: Aprovisionamiento de dispositivos
-description: Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el desarrollo de iOS consiste en aprovisionar el dispositivo iOS. En esta guía se explora el proceso de solicitar certificados y perfiles de desarrollo, trabajar con servicios de aplicaciones e implementar una aplicación en un dispositivo.
+title: Aprovisionamiento de dispositivos para Xamarin.iOS
+description: En este documento se describe cómo aprovisionar un dispositivo de modo que se pueda usar para probar una aplicación. También se explica cómo configurar una aplicación para que pueda usar funcionalidades como las notificaciones de inserción.
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 5265ee366c7e3c0e79e54d320d3d6eb57c2fd92d
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: 9721cc40319f0b4d6f0869eabccb84256122fb02
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785793"
 ---
-# <a name="device-provisioning"></a>Aprovisionamiento de dispositivos
-
-_Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el desarrollo de iOS consiste en aprovisionar el dispositivo iOS. En esta guía se explora el proceso de solicitar certificados y perfiles de desarrollo, trabajar con servicios de aplicaciones e implementar una aplicación en un dispositivo._
+# <a name="device-provisioning-for-xamarinios"></a>Aprovisionamiento de dispositivos para Xamarin.iOS
 
 Al desarrollar una aplicación de Xamarin.iOS es esencial probarla mediante su implementación en un dispositivo físico, además de en el simulador. Cuando se ejecuta en un dispositivo pueden producirse errores propios del dispositivo y problemas de rendimiento debido a los límites de hardware, como la memoria o la conectividad de red. Para realizar pruebas en un dispositivo físico, este debe estar *aprovisionado* y es necesario informar a Apple de que se usará para las pruebas.
 

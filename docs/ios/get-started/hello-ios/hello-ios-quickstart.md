@@ -1,6 +1,6 @@
 ---
 title: Inicio rápido de Hello, iOS
-description: Esta guía en dos partes describe cómo compilar una aplicación básica de Xamarin.iOS mediante Visual Studio para Mac o Visual Studio, y comprender los aspectos básicos del desarrollo de aplicaciones de iOS con Xamarin. Presentará las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.iOS.
+description: En este tutorial se muestra cómo compilar una aplicación Xamarin.iOS simple denominada Hello, iOS. Durante el proceso, se presentan las herramientas y los conceptos fundamentales que se deben entender para compilar aplicaciones Xamarin.iOS.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
@@ -8,13 +8,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 05/02/2017
-ms.openlocfilehash: c82343b3ec36512a8cfd7ba3b96862eac14bfafd
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: d9f5894f03bbfaa2145aec462dbd0ede7774354a
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785991"
 ---
-# <a name="helloios-quickstart"></a>Inicio rápido de Hello.iOS
+# <a name="hello-ios--quickstart"></a>Inicio rápido de Hello, iOS
 
 Esta guía describe cómo crear una aplicación que convierte un número de teléfono alfanumérico escrito por el usuario en un número de teléfono numérico y, después, llama a ese número. La aplicación final tiene este aspecto:
 
@@ -320,7 +321,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
 1. Con la **Etiqueta** seleccionada en la superficie de diseño, use la **Ventana Propiedades** para cambiar la propiedad **Texto** de la **Etiqueta** por "Escriba una Phoneword:"
 
-  ![](hello-ios-quickstart-images/vs-image10.png "Cambie la propiedad Text de la etiqueta a "Escriba una Phoneword"")
+  ![](hello-ios-quickstart-images/vs-image10.png "Cambie la propiedad Text de la etiqueta a \"Escriba una Phoneword\"")
 
   > [!NOTE]
   > Puede mostrar las **Propiedades** o el **Cuadro de herramientas** en cualquier momento si navega al menú **Vista**.

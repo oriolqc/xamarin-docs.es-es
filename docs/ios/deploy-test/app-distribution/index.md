@@ -1,5 +1,5 @@
 ---
-title: Introducción a la distribución de aplicaciones
+title: Introducción a la distribución de aplicaciones Xamarin.iOS
 description: Este documento contiene información general sobre las técnicas de distribución que están disponibles para las aplicaciones de Xamarin.iOS y actúa como un punto de partida a documentos más detallados sobre el tema.
 ms.prod: xamarin
 ms.assetid: 341D36DB-BB07-FA94-BCC9-5F8C0B18C179
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 76de5b46559676e36b9d1f9b71575323beec414e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 83c58fa430a0cf21e8b86e56b9dea04b3cad6d82
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784773"
 ---
-# <a name="app-distribution-overview"></a>Introducción a la distribución de aplicaciones
+# <a name="xamarinios-app-distribution-overview"></a>Introducción a la distribución de aplicaciones Xamarin.iOS
 
 _Este documento contiene información general sobre las técnicas de distribución que están disponibles para las aplicaciones Xamarin.iOS y actúa como un punto de partida a documentos más detallados sobre el tema._
 

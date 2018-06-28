@@ -1,16 +1,18 @@
 ---
 title: Guía de inicio rápido sobre Multiscreen de Xamarin.Forms
+description: En este artículo se muestra cómo ampliar la aplicación Phoneword mediante la adición de una segunda pantalla para realizar un seguimiento del historial de llamadas para la aplicación.
 ms.prod: quickstart
 ms.assetid: 255d93b9-518c-4e5d-a9cd-4dd8a7945a7f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/06/2018
-ms.openlocfilehash: 066f084187a486ca2f88882890b5e9ad277b8cff
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: c931b4f74fbfbbb7396e492cb7ad7ae5d0097bad
+ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 06/11/2018
+ms.locfileid: "35242396"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Guía de inicio rápido sobre Multiscreen de Xamarin.Forms
 
@@ -57,7 +59,7 @@ Amplíe la aplicación Phoneword de la siguiente forma:
 
     Guarde los cambios en **CallHistoryPage.xaml** presionando **CTRL+S** y cierre el archivo.
 
-5. En el **Explorador de soluciones**, haga doble clic en **App.xaml.cs** para abrirlo:
+5. En el **Explorador de soluciones**, haga doble clic en el archivo **App.xaml.cs** en el proyecto **Phoneword** compartido para abrirlo:
 
     ![](quickstart-images/vs/open-app-class.png "Abrir App.xaml.cs")
 
@@ -88,7 +90,7 @@ Amplíe la aplicación Phoneword de la siguiente forma:
 
     Guarde los cambios en **App.xaml.cs** presionando **CTRL+S** y cierre el archivo.
 
-7. En el **Explorador de soluciones**, haga doble clic en **MainPage.xaml** para abrirlo:
+7. En el **Explorador de soluciones**, haga doble clic en el archivo **MainPage.xaml** en el proyecto **Phoneword** compartido para abrirlo:
 
     ![](quickstart-images/vs/open-mainpage-xaml.png "Abrir MainPage.xaml")
 

@@ -1,17 +1,18 @@
 ---
 title: Instalación de Xamarin.iOS en Windows
-description: En este artículo, se describe cómo configurar una máquina de Windows y un host de compilación de Mac para el desarrollo de Xamarin.iOS.
+description: En este documento se describe cómo configurar un equipo Windows, como configurar un host de compilación de Mac y cómo emparejar el equipo Windows con el host de compilación de Mac para el desarrollo de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: abf85d3e-a365-44a2-b1a4-6c572c7f76dd
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/16/2018
-ms.openlocfilehash: e6f50a48481be3ca5c64332f5a182e44715740c0
-ms.sourcegitcommit: dc6ccf87223942088ca926c0dadd5b5478c683cb
+ms.openlocfilehash: 2bff37aba9b961b7308bf261377951dc96bd8e34
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786069"
 ---
 # <a name="installing-xamarinios-on-windows"></a>Instalación de Xamarin.iOS en Windows
 

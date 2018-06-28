@@ -1,16 +1,17 @@
 ---
 title: Manual de C# para desarrolladores de Objective-C
-description: Xamarin.iOS permite el uso compartido entre plataformas del código independiente de plataformas escrito en C#. Sin embargo, es posible que las aplicaciones de iOS existentes quieran aprovechar el código de Objective-C que ya se ha creado. Este artículo sirve como un breve manual para los desarrolladores de Objective-C que desean pasarse a Xamarin y el lenguaje C#.
+description: En este documento se describe C# para desarrolladores de Objective-C. Se comparan y se contrastan los dos lenguajes, para lo que se examinan los protocolos y las interfaces, las categorías y los métodos de extensión, los marcos y los ensamblados, los selectores y los parámetros con nombre, entre otras cosas.
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: c4c8e7246b4414fb4153f0dd9eb812ddff1e7b07
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 514841bb18ebed72c07377ff95127dff247f0d71
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34786218"
 ---
 # <a name="c-primer-for-objective-c-developers"></a>Manual de C# para desarrolladores de Objective-C
 

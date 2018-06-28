@@ -1,18 +1,20 @@
 ---
-title: Pruebas unitarias
+title: Pruebas unitarias de Xamarin.iOS
+description: En este documento se proporciona información general sobre cómo realizar pruebas unitarias de una aplicación Xamarin.iOS. Se describe cómo crear un proyecto de prueba unitaria, escribir pruebas y ejecutar pruebas.
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 3129302cbb2fbe9e2757986317da0ec30601b492
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ce2b452d50222ac3561dab5b76915b7ae634934b
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785468"
 ---
-# <a name="unit-testing"></a>Pruebas unitarias
+# <a name="unit-testing-xamarinios-apps"></a>Pruebas unitarias de Xamarin.iOS
 
 En este documento se describe cómo se crean pruebas unitarias para los proyectos de Xamarin.iOS.
 Las pruebas unitarias con Xamarin.iOS se realizan mediante el marco Touch.Unit, que incluye tanto un ejecutor de pruebas de iOS como una versión modificada de NUnit denominada [Touch.Unit](https://github.com/xamarin/Touch.Unit), que proporciona un conjunto conocido de API para escribir pruebas unitarias.

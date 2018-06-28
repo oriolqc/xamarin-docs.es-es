@@ -1,19 +1,20 @@
 ---
-title: Depuración de un bloqueo nativo
-description: En esta guía se describe cómo depurar las excepciones que se originan en el entorno de ejecución Objective-C.
+title: Depuración de un bloqueo nativo en una aplicación Xamarin.Mac
+description: En este documento se describe cómo depurar las excepciones que se originan en el entorno de ejecución Objective-C. Se describen también los errores de aserciones, los problemas con las devoluciones de llamada, la propagación de excepciones y mucho más.
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 10/19/2016
-ms.openlocfilehash: 211f85c32fae3ed947e01890916e0a646981a51b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 66ef76c4305e572d5cc45c142f38d89d6f17eeb0
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792130"
 ---
-# <a name="debugging-a-native-crash"></a>Depuración de un bloqueo nativo
+# <a name="debugging-a-native-crash-in-a-xamarinmac-app"></a>Depuración de un bloqueo nativo en una aplicación Xamarin.Mac
 
 ## <a name="overview"></a>Información general
 

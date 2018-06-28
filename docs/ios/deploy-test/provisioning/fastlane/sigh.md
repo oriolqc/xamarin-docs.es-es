@@ -1,16 +1,18 @@
 ---
 title: 'fastlane para iOS: sigh'
+description: En este documento se describe el comando sigh de fastlane, que se usa para crear, renovar y reparar perfiles de aprovisionamiento para todas las configuraciones de compilación de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: ee04569fbfff84eafc5f813e6a25cbf6ad53f033
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 8eedc86807035887cade48c42868649b362b7cb2
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785507"
 ---
 # <a name="fastlane-for-ios--sigh"></a>fastlane para iOS: sigh
 

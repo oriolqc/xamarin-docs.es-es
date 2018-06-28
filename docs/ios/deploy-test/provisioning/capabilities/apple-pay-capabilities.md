@@ -1,5 +1,5 @@
 ---
-title: Capacidades de Apple Pay
+title: Capacidades de Apple Pay en Xamarin.iOS
 description: Agregar capacidades a una aplicación a menudo requiere una configuración de aprovisionamiento adicional. En esta guía se describe la configuración necesaria para las capacidades de Apple Pay.
 ms.prod: xamarin
 ms.assetid: 735CC916-16A4-471B-87F7-0535E24288D7
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/15/2017
-ms.openlocfilehash: c389dc4831009d760e4a6a810b5b3c01637c822e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a3d2e6179dde1583e0fd4d175c46582bed9a2e07
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785075"
 ---
-# <a name="apple-pay-capabilities"></a>Capacidades de Apple Pay
+# <a name="apple-pay-capabilities-in-xamarinios"></a>Capacidades de Apple Pay en Xamarin.iOS
 
 _Agregar funcionalidades a una aplicación requiere con frecuencia una configuración de aprovisionamiento adicional. En esta guía se describe la configuración necesaria para las funcionalidades de Apple Pay._
 

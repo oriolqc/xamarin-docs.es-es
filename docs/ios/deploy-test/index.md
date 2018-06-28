@@ -1,22 +1,22 @@
 ---
-title: Implementación y prueba
-description: Guías de estabilización e implementación
+title: Implementar y probar aplicaciones Xamarin.iOS
+description: Este documento contiene vínculos a diversas guías en las que se describen temas relacionados con la implementación y las pruebas de una aplicación Xamarin.iOS. Por ejemplo, distribución de aplicaciones, archivos .ipa, aprovisionamiento, implementación inalámbrica, TestFlight y depuración.
 ms.prod: xamarin
 ms.assetid: 2DBF3BF9-79E7-4E24-AF26-E34C972B0169
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 515ea8e63f8309c46a7d802af1daafcb0c483762
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: a96eeefa631eb4055d8bd0af5b89160ab0899907
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34785189"
 ---
-# <a name="deployment-and-testing"></a>Implementación y prueba
+# <a name="deploying-and-testing-xamarinios-apps"></a>Implementar y probar aplicaciones Xamarin.iOS
 
 Esta sección contiene temas que se usan para probar una aplicación, además de información sobre cómo distribuirla. Estos temas incluyen aspectos como las herramientas usadas para la depuración, la implementación en evaluadores y el proceso para publicar una aplicación en App Store.
-
 
 ##  <a name="app-distributioniosdeploy-testapp-distributionindexmd"></a>[App Distribution](~/ios/deploy-test/app-distribution/index.md) (Distribución de aplicaciones)
 
@@ -46,19 +46,14 @@ TestFlight es ahora propiedad de Apple y se considera la principal manera de rea
 
 Tanto el IDE de Visual Studio como el de Visual Studio para Mac incluyen compatibilidad con la depuración de aplicaciones de Xamarin.iOS en el simulador de iOS y en dispositivos iOS. En este artículo se muestra cómo se usa el depurador y cómo se configuran las diversas opciones que admite.
 
-
 ##  <a name="touchunitiosdeploy-testtouchunitmd"></a>[Touch.Unit](~/ios/deploy-test/touch.unit.md)
 
 En este documento se describe cómo se crean pruebas unitarias para los proyectos de Xamarin.iOS.
 Las pruebas unitarias con Xamarin.iOS se realizan mediante el marco Touch.Unit, que incluye tanto un ejecutor de pruebas de iOS como una versión modificada del marco [NUnitLite](http://www.nunitlite.com/), que proporciona un conjunto conocido de API para escribir pruebas unitarias.
 
-
-
 ##  <a name="using-instruments-to-detect-native-leaks-using-markheapiosdeploy-testusing-instruments-to-detect-native-leaks-using-markheapmd"></a>[Uso de Instruments para detectar pérdidas nativas mediante MarkHeap](~/ios/deploy-test/using-instruments-to-detect-native-leaks-using-markheap.md)
 
 En este artículo se describe cómo usar Instruments en cualquier dispositivo iOS y aplicación de Xamarin.iOS. También se explica cómo generar perfiles de aplicaciones en el simulador.
-
-
 
 ##  <a name="walkthrough---using-apples-instrument-tooliosdeploy-testwalkthrough-apples-instrumentmd"></a>[Tutorial: usar la herramienta Instruments de Apple](~/ios/deploy-test/walkthrough-apples-instrument.md)
 
@@ -70,7 +65,7 @@ Se explica cómo funciona el vinculador para garantizar el paquete de aplicació
 
 ##  <a name="xamarinios-performanceperformancemd"></a>[Rendimiento de Xamarin.iOS](performance.md)
 
-Existen muchas técnicas para aumentar el rendimiento de las aplicaciones compiladas con Xamarin.iOS. Colectivamente, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación.
+Existen muchas técnicas para aumentar el rendimiento de las aplicaciones compiladas con Xamarin.iOS. En conjunto, estas técnicas pueden reducir considerablemente la cantidad de trabajo que está realizando una CPU y la cantidad de memoria consumida por una aplicación.
 
 ##  <a name="mtouchmtouchmd"></a>[mtouch](mtouch.md)
 

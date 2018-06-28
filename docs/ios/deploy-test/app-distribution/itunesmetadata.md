@@ -1,5 +1,5 @@
 ---
-title: Archivo iTunesMetadata.plist
+title: Archivo iTunesMetadata.plist en aplicaciones Xamarin.iOS
 description: En este artículo se habla sobre el archivo iTunesMetadata.plist usado para proporcionar información a iTunes sobre una aplicación de iOS con distribución ad hoc para pruebas o implementación empresarial.
 ms.prod: xamarin
 ms.assetid: 70676eba-6a99-4a3a-bccc-84359fe9c2c3
@@ -7,13 +7,14 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 1b1b0c758126acb0c1e7953ea36e5ac871ee20ef
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 39e1af5edf91ffd6811fa8d221fd56580f3b33da
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34784906"
 ---
-# <a name="the-itunesmetadataplist-file"></a>Archivo iTunesMetadata.plist
+# <a name="the-itunesmetadataplist-file-in-xamarinios-apps"></a>Archivo iTunesMetadata.plist en aplicaciones Xamarin.iOS
 
 _En este artículo se habla sobre el archivo iTunesMetadata.plist usado para proporcionar información a iTunes sobre una aplicación de iOS con distribución ad hoc para pruebas o implementación empresarial._
 

@@ -1,27 +1,24 @@
 ---
 title: Configuración de aplicaciones de Mac
-description: En esta guía se describe el proceso de configuración de una aplicación de Xamarin.Mac para su publicación.
+description: En este documento se describe el proceso de configuración de una aplicación Xamarin.Mac para su publicación. Se trata también la configuración de la aplicación, de la firma y de la compilación.
 ms.prod: xamarin
 ms.assetid: fea66a34-1581-4cd6-b714-3fbff215a542
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/12/2017
-ms.openlocfilehash: e47ff676b4dd02d5312a74fb699ed594b5e0f944
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3d62cd0c5391393773ba32146f576e12a144bac9
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34791789"
 ---
 # <a name="mac-app-configuration"></a>Configuración de aplicaciones de Mac
-
-_En esta guía se describe el proceso de configuración de una aplicación de Xamarin.Mac para su publicación._
-
 
 ## <a name="mac-app-configuration"></a>Configuración de aplicaciones de Mac
 
 Haga doble clic en el proyecto de la aplicación de Mac en Visual Studio para Mac y elija **Opciones**.
-
 
 ### <a name="application-settings"></a>Configuración de la aplicación
 
@@ -37,7 +34,6 @@ La ejecución de aplicaciones de Mac creadas con Xamarin.Mac tiene los siguiente
 
 - Un equipo Mac que ejecute Mac OS X 10.7 o una versión posterior.
 
-
 ### <a name="signing-settings"></a>Configuración de firma
 
 La sección **Firma de Mac** del cuadro de diálogo **Opciones de proyecto** permite al desarrollador firmar una aplicación de Xamarin.Mac para las pruebas, para autopublicación o para publicación a través del App Store de Apple:
@@ -46,13 +42,11 @@ La sección **Firma de Mac** del cuadro de diálogo **Opciones de proyecto** per
 
 Desde aquí seleccione la identidad, el perfil de aprovisionamiento y cualquier derecho personalizado utilizado para firmar la aplicación cuando se compila. Opcionalmente, el desarrollador puede firmar el instalador usado para instalar la aplicación en otro equipo Mac.
 
-
 ### <a name="build-settings"></a>Configuración de compilación
 
 La sección **Compilación de Mac** del cuadro de diálogo **Opciones de proyecto** permite al desarrollador seleccionar la arquitectura para una aplicación de Xamarin.Mac, para controlar qué versión de macOS será compatible con la aplicación y crear un paquete de instalación si la aplicación se compila correctamente:
 
  [![Modificar la configuración de compilación](app-configuration-images/config03.png "Modificar la configuración de compilación")](app-configuration-images/config03-large.png#lightbox)
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

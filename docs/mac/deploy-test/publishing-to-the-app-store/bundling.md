@@ -1,19 +1,20 @@
 ---
 title: Compilación para el Mac App Store
-description: En esta guía se describe el proceso de creación de una aplicación Xamarin.Mac para su publicación en el Mac App Store.
+description: En este documento se describe el proceso de empaquetado de una aplicación Xamarin.Mac para su publicación en el Mac App Store. Se explican también las opciones de firma de código y la compilación.
 ms.prod: xamarin
 ms.assetid: 00a36d7c-937d-4657-bf6a-0de9684b8f94
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: 88d813331dfce437f3668ada8f008bbbd5fdc3de
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3aeda97fa4a5a63d51623335c0721026b2394d2f
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34792065"
 ---
-# <a name="bundle-for-mac-app-store"></a>Empaquetar para Mac App Store
+# <a name="bundling-for-the-mac-app-store"></a>Compilación para el Mac App Store
 
 En esta sección se describen los aspectos básicos de la compilación de una aplicación para el lanzamiento en Mac App Store mediante Visual Studio para Mac. En función de las características adicionales (como el acceso a iCloud y las notificaciones de inserción), podría requerirse una configuración más exhaustiva que no se trata este artículo.
 
