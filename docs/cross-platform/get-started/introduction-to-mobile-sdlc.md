@@ -1,20 +1,19 @@
 ---
 title: Introducción al ciclo de vida de desarrollo de software móvil
-description: En este artículo, se describe el ciclo de vida de desarrollo de software con respecto a aplicaciones móviles y se describen algunas de las consideraciones necesarias para compilar proyectos móviles. Los desarrolladores que quieran empezar a compilar directamente pueden omitir esta guía y leerla más adelante para comprender mejor el desarrollo móvil.
+description: En este documento se describe el ciclo de vida de desarrollo de software móvil, para lo que se echa un vistazo al diseño de la experiencia de usuario, el diseño de la interfaz de usuario, el desarrollo, la estabilización, la distribución y mucho más.
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: c93a063c9c933e1b9f397d172115471473cf8f35
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 8a95f89ad41ab793d8c26631f1a967180b4c1779
+ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34782338"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introducción al ciclo de vida de desarrollo de software móvil
-
-_En este artículo, se describe el ciclo de vida de desarrollo de software con respecto a aplicaciones móviles y se describen algunas de las consideraciones necesarias para compilar proyectos móviles. Los desarrolladores que quieran empezar a compilar directamente pueden omitir esta guía y leerla más adelante para comprender mejor el desarrollo móvil._
 
 La creación de aplicaciones móviles puede ser tan fácil como abrir el IDE, juntar algunos elementos, realizar unas pruebas rápidas y enviar el resultado al App Store, todo ello en una misma tarde. O puede ser un proceso muy complicado que conlleva el diseño riguroso por adelantado, pruebas de facilidad de uso, pruebas de control de calidad en miles de dispositivos, un ciclo de vida completo de versión beta y la implementación de varias maneras diferentes.
 
