@@ -6,12 +6,12 @@ ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 author: asb3993
 ms.author: amburns
 ms.date: 09/29/2017
-ms.openlocfilehash: 419addde14d5be99833b4611a4af2a1be8756b9d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6c2fe10b9b29901dfbb6173df131d093fe726bff
+ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781483"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37066957"
 ---
 # <a name="installing-xamarin-in-visual-studio-2017"></a>Instalación de Xamarin en Visual Studio 2017
 
@@ -36,7 +36,7 @@ Para obtener más información sobre los requisitos previos para instalar y usar
 Xamarin se puede instalar como parte de una nueva instalación de Visual Studio 2017.
 Para ello, siga estos pasos:
 
-1. Descargue Visual Studio 2017 Community, Visual Studio Professional o Visual Studio Enterprise desde la página de [Visual Studio](https://www.visualstudio.com/vs/) (en la parte inferior se encuentran los vínculos de descarga).
+1. Descargue Visual Studio 2017 Community, Visual Studio Professional o Visual Studio Enterprise desde la página de [Visual Studio](https://visualstudio.microsoft.com/vs/) (en la parte inferior se encuentran los vínculos de descarga).
 
 2. Haga doble clic en el paquete descargado para iniciar la instalación.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/24/2017
-ms.openlocfilehash: f80faa961fe4bef45df33c411d914ba80e605c75
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 4bcfc821359e74b34dc2ee11419e8ee86f8cccee
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785585"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321462"
 ---
 # <a name="linking-xamarinios-apps"></a>Vincular aplicaciones Xamarin.iOS
 
@@ -159,9 +159,7 @@ El enlazador de Xamarin busca el atributo `LinkerSafe` por el nombre, no por su 
 ```csharp
 [assembly:LinkerSafe]
 // ... assembly attribute should be at top, before source
-class LinkerSafeAttribute : System.Attribute {
-    public LinkerSafeAttribute : System.base {}
-}
+class LinkerSafeAttribute : System.Attribute {}
 ```
 
 ## <a name="custom-linker-configuration"></a>Configuración personalizada del enlazador
