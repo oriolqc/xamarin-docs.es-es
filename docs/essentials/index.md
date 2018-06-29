@@ -1,15 +1,16 @@
 ---
 title: Xamarin.Essentials
-description: Xamarin.Essentials ofrece a los desarrolladores las API de multiplataforma para sus aplicaciones móviles.
+description: Vínculos de este documento diversas guías que describen Xamarin.Essentials, que proporciona a los desarrolladores con API de multiplataforma para sus aplicaciones móviles.
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: a13017cbfe6039e623a95e147f563518f4c86c3e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: 97dc5494f37da1590178bc90feb673889598bdd7
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080548"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -43,8 +44,11 @@ Siga las guías para integrar estas características Xamarin.Essentials en sus a
 * [Ubicación geográfica](geolocation.md?context=xamarin/xamarin-forms) : recuperar la ubicación del dispositivo GPS.
 * [Giroscopio](gyroscope.md?context=xamarin/xamarin-forms) : realizar un seguimiento de rotación alrededor de tres ejes principal del dispositivo.
 * [Magnetómetro](magnetometer.md?context=xamarin/xamarin-forms) : detectar la orientación del dispositivo en relación con el campo magnético de la tierra.
+* [MainThread](main-thread.md?content=xamarin/xamarin-forms) : ejecutar código en el subproceso principal de la aplicación. 
 * [Abra explorador](open-browser.md?context=xamarin/xamarin-forms) – rápida y fácilmente, abra un explorador a un sitio Web específico.
+* [Sensor de orientación](orientation-sensor.md?context=xamarin/xamarin-forms) : recuperar la orientación del dispositivo en tres espacio dimensiones.
 * [Marcador telefónico](phone-dialer.md?context=xamarin/xamarin-forms) : abra el marcador de teléfono.
+* [Power](power.md?context=xamarin/xamarin-forms) : obtener el estado de ahorro de energía del dispositivo.
 * [Preferencias](preferences.md?context=xamarin/xamarin-forms) : agregar rápida y fácilmente las preferencias de persistentes.
 * [Bloqueo de pantalla](screen-lock.md?context=xamarin/xamarin-forms) : mantener activo durante la pantalla del dispositivo.
 * [Almacenamiento seguro](secure-storage.md?context=xamarin/xamarin-forms) : de forma segura almacenar datos.

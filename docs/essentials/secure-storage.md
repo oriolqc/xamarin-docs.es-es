@@ -5,12 +5,12 @@ ms.assetid: 78856C0D-76BB-406E-A880-D5A3987B7D64
 author: redth
 ms.author: jodick
 ms.date: 05/04/2018
-ms.openlocfilehash: 4909cb3b874b1397fad10c92d8d655fadcbe8d85
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: df2aa1fd23976e8db34d7c466317a8630408af7a
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321345"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080357"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Almacenamiento seguro
 
@@ -59,6 +59,19 @@ Para recuperar un valor de almacenamiento seguro:
 ```csharp
 var oauthToken = await SecureStorage.GetAsync("oauth_token");
 ```
+
+Para quitar una clave específica, llame a:
+
+```csharp
+SecureStorage.Remove("oauth_token");
+```
+
+Para quitar todas las claves, la llamada:
+
+```csharp
+SecureStorage.RemoveAll();
+```
+
 
 ## <a name="platform-implementation-specifics"></a>Detalles de implementación de plataforma
 

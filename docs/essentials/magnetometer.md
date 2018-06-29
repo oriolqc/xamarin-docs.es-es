@@ -5,12 +5,12 @@ ms.assetid: 64DD0D41-03E2-40DD-9EC8-101CA0ED852B
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 78ed943a0fa7ca0cb249a4ac030ea6b52dcfb537
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 2c02188b5282949559e0abc5fa1b61b6b451fc8e
+ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782942"
+ms.lasthandoff: 06/28/2018
+ms.locfileid: "37080552"
 ---
 # <a name="xamarinessentials-magnetometer"></a>Xamarin.Essentials: Magnetómetro
 
@@ -77,6 +77,8 @@ Todos los datos se devuelven en microteslas.
 - **Juego** : frecuencia adecuada para juegos (no se garantiza para devolver en el subproceso de interfaz de usuario).
 - **Normal** : velocidad predeterminada adecuado para los cambios de orientación de pantalla.
 - **Interfaz de usuario** : velocidad apropiada para la interfaz de usuario general.
+
+Si no se garantiza que el controlador de eventos para ejecutar en el subproceso de interfaz de usuario y si el controlador de eventos necesita tener acceso a elementos de interfaz de usuario, use la [ `MainThread.BeginInvokeOnMainThread` ](main-thread.md) método para ejecutar ese código en el subproceso de interfaz de usuario.
 
 ## <a name="api"></a>API
 
