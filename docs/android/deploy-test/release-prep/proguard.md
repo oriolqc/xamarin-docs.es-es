@@ -1,36 +1,36 @@
 ---
 title: ProGuard
-description: ProGuard es un reductor, optimizador, ofuscador y comprobador previo de archivos de clase Java. Detecta y quita el código sin usar, analiza y optimiza el código de bytes y, después, ofusca clases y miembros de clases. En esta guía se explica cómo funciona ProGuard, cómo se habilita en el proyecto y cómo se configura. También se proporcionan varios ejemplos de configuraciones de ProGuard.
+description: ProGuard de Xamarin.Android es un reductor, optimizador y comprobador previo de archivos de clase Java. Permite detectar y quitar el código sin usar, así como analizar y optimizar el código de bytes. En esta guía se explica cómo funciona ProGuard, cómo se habilita en el proyecto y cómo se configura. También se proporcionan varios ejemplos de configuraciones de ProGuard.
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/01/2018
-ms.openlocfilehash: e65c78633ae91318bd8e9cce949bac9cc12675c0
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: efb9c73eb9bddb2b22b84fb6f3388281f32a82ab
+ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30771449"
+ms.lasthandoff: 06/22/2018
+ms.locfileid: "36321381"
 ---
 # <a name="proguard"></a>ProGuard
 
-_ProGuard es un reductor, optimizador, ofuscador y comprobador previo de archivos de clase Java. Detecta y quita el código sin usar, analiza y optimiza el código de bytes y, después, ofusca clases y miembros de clases. En esta guía se explica cómo funciona ProGuard, cómo se habilita en el proyecto y cómo se configura. También se proporcionan varios ejemplos de configuraciones de ProGuard._
+_ProGuard de Xamarin.Android es un reductor, optimizador, y comprobador previo de archivos de clase Java. Permite detectar y quitar el código sin usar, así como analizar y optimizar el código de bytes. En esta guía se explica cómo funciona ProGuard, cómo se habilita en el proyecto y cómo se configura. También se proporcionan varios ejemplos de configuraciones de ProGuard._
 
 
 ## <a name="overview"></a>Información general
 
-ProGuard detecta y quita las clases, los campos, los métodos y los atributos sin usar de la aplicación empaquetada. Incluso puede hacer lo mismo en las bibliotecas a las que se hace referencia, lo que puede ayudar a evitar el límite de 64 000 referencias. La herramienta ProGuard de Android SDK también optimiza el código de bytes, quita las instrucciones de código sin usar y ofusca las clases, campos y métodos restantes con nombres más cortos. ProGuard lee los **archivos JAR de entrada**, los reduce, los optimiza, los ofusca y los comprueba previamente y, después, escribe los resultados en uno o varios **archivos JAR de salida**. 
+ProGuard detecta y quita las clases, los campos, los métodos y los atributos sin usar de la aplicación empaquetada. Incluso puede hacer lo mismo en las bibliotecas a las que se hace referencia, lo que puede ayudar a evitar el límite de 64 000 referencias. La herramienta ProGuard de Android SDK también optimiza el código de bytes y quita las instrucciones de código sin usar. ProGuard lee los **archivos JAR de entrada**, los reduce, los optimiza y los comprueba previamente y, después, escribe los resultados en uno o varios **archivos JAR de salida**. 
 
 ProGuard procesa los APK de entrada mediante los pasos siguientes: 
 
-1.  **Paso de reducción** &ndash; ProGuard determina de forma recursiva qué clases y miembros de clases se usan. Todas las demás clases y miembros de clases se descartan. 
+1.  **Paso de reducción**: ProGuard determina de forma recursiva qué clases y miembros de clases se usan. Todas las demás clases y miembros de clases se descartan. 
 
-2.  **Paso de optimización** &ndash; ProGuard optimiza todavía más el código. 
+2.  **Paso de optimización**: ProGuard optimiza todavía más el código. 
     Entre otras optimizaciones, se pueden hacer privadas, estáticas o finales las clases y los métodos que no son puntos de entrada, se pueden quitar los parámetros sin usar y se pueden insertar algunos métodos. 
 
-3.  **Paso de ofuscación** &ndash; ProGuard cambia el nombre de las clases y los miembros de clases que no son puntos de entrada. La conservación de los puntos de entrada garantiza que todavía se pueda tener acceso a ellos mediante sus nombres originales. 
+3.  **Paso de ofuscación**: en el desarrollo nativo de Android, ProGuard cambia el nombre de las clases y los miembros de clases que no son puntos de entrada. La conservación de los puntos de entrada garantiza que todavía se pueda tener acceso a ellos mediante sus nombres originales. Sin embargo, este paso no es compatible con Xamarin.Android, dado que la aplicación se compila en lenguaje intermedio (IL).
 
 4.  **Paso de comprobación previa** &ndash; se realizan comprobaciones en los códigos de bytes de Java antes del tiempo de ejecución y se anotan los archivos de clase para que pueda aprovecharlo la máquina virtual Java. Este es el único paso que no tiene que conocer los puntos de entrada. 
 

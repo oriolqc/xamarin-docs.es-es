@@ -6,13 +6,13 @@ ms.assetid: 9116A3AA-EA00-56AF-AE70-BAEEC045EF11
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 03/21/2017
-ms.openlocfilehash: 16716db67067f07166fa35df7e539cdf3ed1de5e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 06/22/2018
+ms.openlocfilehash: 838e0df80334d6865466b189a65a3f7c590bb590
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30768287"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935365"
 ---
 # <a name="set-up-device-for-development"></a>Configurar el dispositivo para el desarrollo
 
@@ -112,7 +112,7 @@ Para instalar los controladores en Windows 7:
 
 6.  Seleccione **Buscar software de controlador en el equipo** y haga clic en **Siguiente**.
 
-7.  Haga clic en **Examinar** y busque la carpeta del controlador USB (el controlador USB de Google se encuentra en **[ruta de instalación de Android SDK]\extras\google\usb_driver**.
+7.  Haga clic en **Examinar** y busque la carpeta del controlador USB (el controlador USB de Google se encuentra en **[ruta de instalación de Android SDK]\extras\google\usb_driver**).
 
 8.  Haga clic en **Siguiente** para instalar el controlador.
 

@@ -6,13 +6,13 @@ ms.assetid: ECB327F3-FF1C-45CC-9FA6-9C11032BD5EF
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 06/02/2018
-ms.openlocfilehash: 888f126d3e58b0300ba7ce3ad1cb5a8001fc545a
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.date: 06/22/2018
+ms.openlocfilehash: a7c1aeafd94d7e2639617cda13312ee8a09e2c94
+ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34733776"
+ms.lasthandoff: 06/25/2018
+ms.locfileid: "36935333"
 ---
 # <a name="managing-virtual-devices-with-the-android-device-manager"></a>Administración de dispositivos virtuales con Android Device Manager
 
@@ -28,7 +28,7 @@ En este artículo se explica cómo se usa Android Device Manager para crear, dup
 
 [![Captura de pantalla de Android Device Manager en la pestaña Dispositivos](device-manager-images/win/01-devices-dialog-sml.png)](device-manager-images/win/01-devices-dialog.png#lightbox)
 
-Android Device Manager se usa para crear y configurar _dispositivos virtuales Android_ (AVD) que se ejecutan en [Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Android Device Manager se usa para crear y configurar _dispositivos virtuales Android_ (AVD) que se ejecutan en [Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
 Cada AVD es una configuración del emulador que simula un dispositivo Android físico. Esto permite ejecutar y probar la aplicación en diversas configuraciones que simulan diferentes dispositivos Android físicos.
 
 ## <a name="requirements"></a>Requisitos
@@ -48,7 +48,7 @@ Inicie Android Device Manager desde el menú **Herramientas**. Para ello, haga c
 
 [![Inicio desde el menú Herramientas](device-manager-images/win/04-tools-menu-sml.png)](device-manager-images/win/04-tools-menu.png#lightbox)
 
-Si ve el siguiente cuadro de diálogo de error al inicio, vea [Solucionar problemas de configuración del emulador](~/android/get-started/installation/android-emulator/troubleshooting.md) para obtener soluciones alternativas:
+Si ve el cuadro de diálogo de error siguiente al inicio, vea [Solución de problemas de Android Emulator](~/android/get-started/installation/android-emulator/troubleshooting.md) para obtener soluciones alternativas:
 
 ![Error de instancia de Android SDK](device-manager-images/win/32-sdk-error.png)
 
@@ -165,7 +165,7 @@ El menú de opciones adicionales contiene los elementos siguientes:
 
     [![Resultados de hacer clic en Mostrar en el Explorador](device-manager-images/win/24-reveal-in-explorer-sml.png)](device-manager-images/win/24-reveal-in-explorer.png#lightbox)
 
--   **Restablecimiento de fábrica**: restablece el dispositivo seleccionado a sus valores predeterminados, para lo cual borra los cambios de usuario realizados en el estado interno del dispositivo mientras estaba en ejecución (esto también borra la captura de pantalla [Arranque rápido](~/android/deploy-test/debugging/android-sdk-emulator/running-the-emulator.md#quick-boot) actual, si existe). Este cambio no altera las modificaciones que realice en el dispositivo virtual durante la creación y la edición. Aparecerá un cuadro de diálogo que le recordará que este restablecimiento no se puede deshacer. Haga clic en **Wipe user data** (Borrar los datos de usuario) para confirmar el restablecimiento.
+-   **Restablecimiento de fábrica**: restablece el dispositivo seleccionado a sus valores predeterminados, para lo cual borra los cambios de usuario realizados en el estado interno del dispositivo mientras estaba en ejecución (esto también borra la captura de pantalla [Arranque rápido](~/android/deploy-test/debugging/debug-on-emulator.md#quick-boot) actual, si existe). Este cambio no altera las modificaciones que realice en el dispositivo virtual durante la creación y la edición. Aparecerá un cuadro de diálogo que le recordará que este restablecimiento no se puede deshacer. Haga clic en **Wipe user data** (Borrar los datos de usuario) para confirmar el restablecimiento.
 
 -   **Eliminar**: elimina de forma permanente el dispositivo virtual seleccionado.
     Aparecerá un cuadro de diálogo que le recordará que la eliminación de un dispositivo no se puede deshacer. Haga clic en **Eliminar** si está seguro de que quiere eliminar el dispositivo.
@@ -181,7 +181,7 @@ En este artículo se explica cómo se usa Android Device Manager para crear, dup
 > Esta guía solo se aplica a Visual Studio para Mac.
 Xamarin Studio no es compatible con Android Device Manager.
 
-Android Device Manager se usa para crear y configurar *dispositivos virtuales Android* (AVD) que se ejecutan en [Google Android Emulator](~/android/deploy-test/debugging/android-sdk-emulator/index.md).
+Android Device Manager se usa para crear y configurar *dispositivos virtuales Android* (AVD) que se ejecutan en [Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
 Cada AVD es una configuración del emulador que simula un dispositivo Android físico. Esto permite ejecutar y probar la aplicación en diversas configuraciones que simulan diferentes dispositivos Android físicos.
 
 ## <a name="requirements"></a>Requisitos
@@ -320,15 +320,113 @@ El menú de opciones adicionales contiene los elementos siguientes:
 
 -----
 
+## <a name="troubleshooting"></a>Solución de problemas
+
+En las secciones siguientes se explica cómo diagnosticar y solucionar los problemas que pueden producirse al usar Android Device Manager para configurar dispositivos virtuales.
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+### <a name="android-sdk-in-non-standard-location"></a>Android SDK en ubicación no estándar
+
+Normalmente, Android SDK se instala en la siguiente ubicación:
+
+**C:\\Archivos de programa (x86)\\Android\\android-sdk**
+
+Si el SDK no está instalado en esta ubicación, puede obtener este error al iniciar Android Device Manager:
+
+![Error de instancia de Android SDK](troubleshooting-images/win/01-sdk-error.png)
+
+Para solucionar este problema, haga lo siguiente:
+
+1. En el escritorio de Windows, vaya a **C:\\Usuarios\\*nombre de usuario*\\AppData\\Roaming\\XamarinDeviceManager**:
+
+    ![Ubicación del archivo de registro de Android Device Manager](troubleshooting-images/win/02-log-files.png)
+
+2. Haga doble clic para abrir uno de los archivos de registro y busque la **ruta de acceso del archivo de configuración**. Por ejemplo:
+
+    [![Ruta de acceso del archivo de configuración en el archivo de registro](troubleshooting-images/win/03-config-file-path-sml.png)](troubleshooting-images/win/03-config-file-path.png#lightbox)
+
+3. Vaya a esta ubicación y haga doble clic en **user.config** para abrirlo. 
+
+4. En **user.config**, busque el elemento **&lt;UserSettings&gt;** y agréguele un atributo **AndroidSdkPath**. Establezca este atributo en la ruta de acceso en la que está instalado Android SDK en el equipo y guarde el archivo. Por ejemplo, **&lt;UserSettings&gt;** tendrá el aspecto siguiente si Android SDK se ha instalado en **C:\\Programas\\Android\\SDK**:
+        
+    ```xml
+    <UserSettings SdkLibLastWriteTimeUtcTicks="636409365200000000" AndroidSdkPath="C:\Programs\Android\SDK" />
+    ```
+
+Después de realizar este cambio en **user.config**, podrá iniciar Android Device Manager.
+
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>La instantánea deshabilita la conexión WiFi en Android Oreo
+
+Si tiene un AVD configurado para Android Oreo con acceso Wi-Fi simulado, el reinicio del AVD después de una instantánea puede provocar la deshabilitación del acceso Wi-Fi.
+
+Para evitar este problema:
+
+1. Seleccione el AVD en Android Device Manager.
+
+2. En el menú de opciones adicionales, haga clic en **Mostrar en el Explorador**.
+
+3. Vaya a **snapshots > default_boot**.
+
+4. Elimine el archivo **snapshot.pb**:
+
+    ![Ubicación del archivo snapshot.pb](troubleshooting-images/win/05-delete-snapshot.png)
+
+5. Reinicie el AVD. 
+
+Una vez realizados estos cambios, se reiniciará el AVD en un estado que permita que la conexión Wi-Fi vuelva a funcionar.
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+
+### <a name="snapshot-disables-wifi-on-android-oreo"></a>La instantánea deshabilita la conexión WiFi en Android Oreo
+
+Si tiene un AVD configurado para Android Oreo con acceso Wi-Fi simulado, el reinicio del AVD después de una instantánea puede provocar la deshabilitación del acceso Wi-Fi.
+
+Para evitar este problema:
+
+1. Seleccione el AVD en Android Device Manager.
+
+2. En el menú de opciones adicionales, haga clic en **Mostrar en Finder**.
+
+3. Vaya a **snapshots > default_boot**.
+
+4. Elimine el archivo **snapshot.pb**:
+
+    [![Ubicación del archivo snapshot.pb](troubleshooting-images/mac/02-delete-snapshot-sml.png)](troubleshooting-images/mac/02-delete-snapshot.png#lightbox)
+
+5. Reinicie el AVD. 
+
+Una vez realizados estos cambios, se reiniciará el AVD en un estado que permita que la conexión Wi-Fi vuelva a funcionar.
+
+-----
+
+### <a name="generating-a-bug-report"></a>Generación de informes de errores
+
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Si encuentra algún problema con Android Device Manager que no pueda resolver con los pasos anteriores para solucionar problemas, informe del error. Para ello, haga clic con el botón derecho en la barra del título y seleccione **Generate Bug Report** (Generar informe de errores):
+
+[![Ubicación del elemento de menú para informar de un error](troubleshooting-images/win/04-bug-report-sml.png)](troubleshooting-images/win/04-bug-report.png#lightbox)
+
+
+# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+
+Si encuentra algún problema con Android Device Manager que no pueda resolver con los pasos anteriores para solucionar problemas, informe del error. Para ello, haga clic en **Ayuda > Generate Bug Report** (Generar informe de errores):
+
+[![Ubicación del elemento de menú para informar de un error](troubleshooting-images/mac/01-bug-report-sml.png)](troubleshooting-images/mac/01-bug-report.png#lightbox)
+
+
+-----
+
 ## <a name="summary"></a>Resumen
 
-En esta guía se presenta la versión de Android Device Manager disponible en Visual Studio para Mac y Visual Studio Tools para Xamarin. Se explican características esenciales, como iniciar y detener el emulador de Android, seleccionar un dispositivo virtual Android (AVD) para su ejecución, crear dispositivos virtuales y editar un dispositivo virtual. También se describe cómo editar las propiedades de perfil de hardware para una mayor personalización.
+En esta guía se presenta la versión de Android Device Manager disponible en Visual Studio para Mac y Visual Studio Tools para Xamarin. Se explican características esenciales, como iniciar y detener el emulador de Android, seleccionar un dispositivo virtual Android (AVD) para su ejecución, crear dispositivos virtuales y editar un dispositivo virtual. Se explica cómo editar propiedades de hardware de generación de perfiles para aumentar la personalización, y se proporcionan sugerencias para solucionar problemas comunes.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Cambios en las Herramientas de Android SDK](~/android/troubleshooting/sdk-cli-tooling-changes.md)
-- [Depuración con el emulador de Android SDK](~/android/deploy-test/debugging/android-sdk-emulator/index.md)
+- [Depuración en Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md)
 - [Notas de la versión de SDK Tools (Google)](https://developer.android.com/studio/releases/sdk-tools)
 - [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)
 - [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html)
