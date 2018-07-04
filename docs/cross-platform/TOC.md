@@ -89,5 +89,4 @@
 #### [¿Por qué Visual Studio no incluye en mi compilación el proyecto de biblioteca al que se hace referencia?](troubleshooting/questions/vs-config-manager.md)
 
 ### [Actualización de referencias de componentes en NuGet](troubleshooting/component-nuget.md)
-### [Opciones de soporte técnico](troubleshooting/support-options.md)
 ## [Ejemplos](samples/index.yml)
