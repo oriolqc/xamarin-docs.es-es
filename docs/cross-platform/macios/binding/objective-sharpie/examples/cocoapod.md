@@ -1,26 +1,26 @@
 ---
-title: Ejemplo del mundo real con CocoaPods
-description: Este documento muestra cómo utilizar Sharpie objetivo para generar automáticamente las definiciones de enlace de C# desde un CocoaPod.
+title: Ejemplo del mundo real mediante CocoaPods
+description: Este documento muestra cómo usar Sharpie objetivo para generar automáticamente las definiciones de enlace de C# desde un CocoaPod.
 ms.prod: xamarin
 ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2018
-ms.openlocfilehash: 026b2c46f7c294d4ac4a110376131ec83c7c112e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: bac34f662e24c6b08a67cd8da1f41b37b43b3faf
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33947399"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37855213"
 ---
-# <a name="real-world-example-using-cocoapods"></a>Ejemplo del mundo real con CocoaPods
+# <a name="real-world-example-using-cocoapods"></a>Ejemplo del mundo real mediante CocoaPods
 
 > [!NOTE]
-> Este ejemplo se utiliza la [AFNetworking CocoaPod](https://cocoapods.org/pods/AFNetworking).
+> Este ejemplo se usa el [AFNetworking CocoaPod](https://cocoapods.org/pods/AFNetworking).
 
-Novedad en la versión 3.0, admite el enlace de CocoaPods Sharpie de objetivo y también incluye un comando (`sharpie pod`) para realizar la descarga, configurar y compilar CocoaPods muy fácil. Debería [familiarizarse con CocoaPods](https://cocoapods.org) en general antes de utilizar esta característica.
+Novedad en la versión 3.0, admite el enlace de CocoaPods Sharpie objetivo e incluso incluye un comando (`sharpie pod`) para realizar la descarga, configuración y creación de CocoaPods muy fácil. Debería [familiarizarse con CocoaPods](https://cocoapods.org) en general antes de usar esta característica.
 
-## <a name="creating-a-binding-for-a-cocoapod"></a>Crear un enlace para un CocoaPod
+## <a name="creating-a-binding-for-a-cocoapod"></a>Creación de un enlace para un CocoaPod
 
 El `sharpie pod` comando tiene una opción global y dos subcomandos:
 
@@ -37,7 +37,7 @@ Available Commands:
   bind         Bind an existing Xamarin C# CocoaPods project
 ```
 
-El `init` subcomando también tiene cierta ayuda útil:
+El `init` subcomando también tiene algo de ayuda útil:
 
 ```bash
 $ sharpie pod init -help
@@ -48,7 +48,7 @@ Init Options:
                    it even if one already exists
 ```
 
-Se pueden proporcionar varios nombres de CocoaPod y subspec para `init`.
+Se pueden proporcionar varios nombres de CocoaPod y subspec a `init`.
 
 ```bash
 $ sharpie pod init ios AFNetworking
@@ -73,7 +73,7 @@ Una vez que se ha configurado su CocoaPod, ahora puede crear el enlace:
 $ sharpie pod bind
 ```
 
-El resultado será el proyecto que se compila y, a continuación, evalúa y analizar Sharpie objetivo de CocoaPod Xcode. Un lote de salida de la consola se generarán, pero debe tener como resultado la definición de enlace al final:
+Esto dará como resultado del proyecto que se compila y, a continuación, evalúa y analizadas por objetivo Sharpie de CocoaPod Xcode. Un lote de salida de la consola se generarán, pero debe tener como resultado la definición de enlace al final:
 
 ```bash
 (... lots of build output ...)
@@ -89,9 +89,10 @@ Done.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Después de generar el **ApiDefinitions.cs** y **StructsAndEnums.cs** archivos, eche un vistazo a la siguiente documentación para generar un ensamblado que se va a usar en sus aplicaciones:
+Después de generar el **ApiDefinitions.cs** y **StructsAndEnums.cs** archivos, eche un vistazo a la siguiente documentación para generar un ensamblado que se utiliza en las aplicaciones:
 
-- [Información general de enlace Objective-c.](~/cross-platform/macios/binding/overview.md)
-- [Bibliotecas de enlace Objective-c.](~/cross-platform/macios/binding/objective-c-libraries.md)
-- [Tutorial: Enlazar una biblioteca de C de objetivo de iOS](~/ios/platform/binding-objective-c/walkthrough.md)
-
+- [Introducción al enlace de Objective-c.](~/cross-platform/macios/binding/overview.md)
+- [Enlace de bibliotecas de Objective-c.](~/cross-platform/macios/binding/objective-c-libraries.md)
+- [Tutorial: Enlazar a una biblioteca de Objective-C de iOS](~/ios/platform/binding-objective-c/walkthrough.md)
+- [Curso de Xamarin University: Creación de una biblioteca de enlaces de Objective-c.](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Curso de Xamarin University: Compilar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

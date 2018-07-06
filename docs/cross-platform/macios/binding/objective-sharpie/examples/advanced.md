@@ -1,23 +1,23 @@
 ---
-title: Avanzadas (manual) ejemplo del mundo Real
-description: Este documento describe cómo utilizar la salida de xcodebuild como entrada de objetivo Sharpie, que proporciona una visión general de lo que hace Sharpie objetivo en segundo plano.
+title: Avanzado (manual) ejemplo del mundo Real
+description: Este documento describe cómo usar la salida de xcodebuild como entrada para Sharpie objetivo, que proporciona una visión de lo que hace Sharpie objetivo debajo del capó.
 ms.prod: xamarin
 ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 811b783d33a20e23a7e807861e19355a1c372b84
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: c4f7f1e9702fb2ee0f5525343a52e3aacd85d68c
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209406"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37855265"
 ---
-# <a name="advanced-manual-real-world-example"></a>Avanzadas (manual) ejemplo del mundo Real
+# <a name="advanced-manual-real-world-example"></a>Avanzado (manual) ejemplo del mundo Real
 
-**Este ejemplo se utiliza la [biblioteca POP desde Facebook](https://github.com/facebook/pop).**
+**Este ejemplo se usa el [biblioteca POP desde Facebook](https://github.com/facebook/pop).**
 
-Esta sección ofrece un enfoque más avanzado para enlace, que se usará de Apple `xcodebuild` herramienta para compilar primero el proyecto POP y, a continuación, deducir manualmente la entrada Sharpie de objetivo. Esto cubre básicamente lo que está haciendo objetivo Sharpie en segundo plano en la sección anterior.
+Esta sección trata de un enfoque más avanzado para enlace, que se usará de Apple `xcodebuild` herramienta para compilar primero el proyecto POP y después deducen manualmente la entrada Sharpie objetivo. Esto abarca básicamente lo que hace Sharpie objetivo en segundo plano en la sección anterior.
 
 ```
  $ git clone https://github.com/facebook/pop.git
@@ -27,7 +27,7 @@ Cloning into 'pop'...
 $ cd pop
 ```
 
-Dado que la biblioteca POP tiene un proyecto de Xcode (`pop.xcodeproj`), podemos utilizar `xcodebuild` para generar POP. Este proceso a su vez puede generar archivos de encabezado que Sharpie objetivo que necesite analizar. Este es el motivo por el que compilar antes de enlace es importante. Cuando se crea a través de `xcodebuild` Asegúrese de que pasa el mismo identificador SDK y arquitectura que desea pasar al objetivo Sharpie (y recuerde, objetivo Sharpie 3.0 normalmente puede hacer por usted):
+Dado que la biblioteca de POP tiene un proyecto de Xcode (`pop.xcodeproj`), podemos utilizar `xcodebuild` para crear el punto de presencia. Este proceso a su vez puede generar archivos de encabezado que se deben analizar Sharpie objetivo. Se trata de por qué crear antes de enlace es importante. Cuando se crea a través de `xcodebuild` asegurarse de que pasa el mismo identificador SDK y arquitectura que se va a pasar al objetivo Sharpie (y recuerde, objetivo Sharpie 3.0 normalmente puede hacer por usted):
 
 ```
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
@@ -50,9 +50,9 @@ CpHeader pop/POPAnimationTracer.h build/Headers/POP/POPAnimationTracer.h
 ** BUILD SUCCEEDED **
 ```
 
-Habrá una gran cantidad de salida de la información de compilación en la consola como parte de `xcodebuild`. Como se muestra anteriormente, podemos ver que se ha ejecutado un destino de "CpHeader" en el que se copiaron los archivos de encabezado en un directorio de salida de compilación. Esto suele ocurrir y facilita el enlace: como parte de la compilación de la biblioteca nativa, archivos de encabezado a menudo se copian en una ubicación compatible "público" que puede realizar análisis más fácil para el enlace. En este caso, sabemos que los archivos de encabezado del POP se encuentran en el `build/Headers` directory.
+Habrá mucha información de salida de compilación en la consola como parte de `xcodebuild`. Tal como se muestra anteriormente, podemos ver que se ha ejecutado un destino de "CpHeader" en la que se copiaron los archivos de encabezado en un directorio de salida de compilación. Esto suele ocurrir y facilita el enlace: como parte de la compilación de la biblioteca nativa, a menudo se copian los archivos de encabezado en una ubicación consumibles "público" que puede hacer que sea más fácil analizar para el enlace. En este caso, sabemos que son archivos de encabezado del punto de presencia en la `build/Headers` directory.
 
-Ahora estamos listos enlazar POP. Sabemos que desea compilar SDK `iphoneos8.1` con el `arm64` arquitectura, y que nos preocupamos sobre los archivos de encabezado están en `build/Headers` bajo la desprotección de git POP. Si tomamos el `build/Headers` directorio, veremos un número de archivos de encabezado:
+Ahora estamos preparados enlazar el punto de presencia. Sabemos que deseamos crear para SDK `iphoneos8.1` con el `arm64` arquitectura, y que los archivos de encabezado que nos interesan están en `build/Headers` en la extracción de git POP. Si observamos el `build/Headers` directorio, veremos un número de archivos de encabezado:
 
 ```
 $ ls build/Headers/POP/
@@ -64,7 +64,7 @@ POPAnimationExtras.h     POPCustomAnimation.h     POPSpringAnimation.h
 POPAnimationPrivate.h    POPDecayAnimation.h
 ```
 
-Si miramos `POP.h`, podemos ver es el archivo de encabezado de nivel superior de la biblioteca principal que `#import`s otros archivos. Por este motivo, sólo es necesario pasar `POP.h` al objetivo Sharpie, y clang llevará a cabo el resto en segundo plano:
+Si miramos `POP.h`, podemos ver es el archivo de encabezado de nivel superior de la biblioteca principal que `#import`s otros archivos. Por este motivo, sólo necesitamos pasar `POP.h` a Sharpie objetivo, y clang encargará del resto en segundo plano:
 
 ```
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
@@ -122,19 +122,23 @@ Submitting usage data to Xamarin...
 Done.
 ```
 
-Observará que se pasa un `-scope build/Headers` argumento pasado a Sharpie de objetivo. Dado que las bibliotecas de C y C objetivo deben `#import` o `#include` otros archivos de encabezado que se muestran los detalles de implementación de la biblioteca y no las API que se va a enlazar, el `-scope` argumento indica Sharpie objetivo para pasar por alto cualquier API que no está definido en un archivo en algún lugar dentro de la `-scope` directory.
+Observará que se pasa un `-scope build/Headers` argumento Sharpie objetivo. Dado que las bibliotecas de C y Objective-C deben `#import` o `#include` otros archivos de encabezado son detalles de implementación de la biblioteca y no las API que desea enlazar, el `-scope` argumento dice Sharpie objetivo para pasar por alto cualquier API que no está definido en un archivo en algún lugar dentro de la `-scope` directory.
 
-Encontrará el `-scope` argumento suele ser opcional para las bibliotecas implementadas correctamente, sin embargo no hay peligro en proporcionar explícitamente de él.
+Encontrará el `-scope` argumento a menudo es opcional para las bibliotecas de implementada correctamente, pero no es ningún daño en suministra de forma explícita.
 
-Además, se especifica `-c -Ibuild/headers`. En primer lugar, el `-c` argumento indica objetivo Sharpie detener interpretar los argumentos de línea de comandos y pasar los argumentos subsiguientes _directamente en el compilador de clang_. Por lo tanto, `-Ibuild/Headers` incluye un argumento de compilador de clang que indique clang para buscar en `build/Headers`, que es donde están los encabezados POP. Sin este argumento clang no sabría dónde encontrar los archivos que `POP.h` es `#import`realizando una operación. _Casi todos los "problemas" con el objetivo Sharpie se reducen a pensar en lo que se debe pasar para clang_.
+Además, hemos especificado `-c -Ibuild/headers`. En primer lugar, el `-c` argumento dice Sharpie objetivo para dejar de interpretar los argumentos de línea de comandos y pase los argumentos subsiguientes _directamente al compilador clang_. Por lo tanto, `-Ibuild/Headers` es incluye un argumento de compilador de clang que indique a clang para buscar en `build/Headers`, que es donde residen los encabezados POP. Sin este argumento, clang no sabría dónde ubicar los archivos que `POP.h` es `#import`ing. _Casi todos los "problemas" con el objetivo Sharpie reducen a averiguar lo que debe pasar para clang_.
 
 ### <a name="completing-the-binding"></a>Completar el enlace
 
 Ahora ha generado el objetivo Sharpie `Binding/ApiDefinitions.cs` y `Binding/StructsAndEnums.cs` archivos.
 
-Se trata básica primer intento del objetivo Sharpie para el enlace y, en algunos casos puede ser todo lo que necesita. Como se mencionó anteriormente, sin embargo, el desarrollador normalmente deberá modificar manualmente los archivos generados al finalizar objetivo Sharpie a [corrija los problemas](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) que podría no ser automáticamente controlada por la herramienta.
+Estas son las primera pasada básica del objetivo Sharpie del enlace y, en algunos casos puede ser todo lo que necesita. Como se indicó anteriormente, sin embargo, el desarrollador normalmente tendrá que modificar manualmente los archivos generados al finalizar objetivo Sharpie a [corregir cualquier problema](~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md) que podría no ser automáticamente controlada por la herramienta.
 
-Una vez que las actualizaciones están completas, estos dos archivos ahora pueden agregarse a un proyecto de enlace en Visual Studio para Mac o se pasa directamente a la `btouch` o `bmac` herramientas para generar el enlace final.
+Una vez que finalizan las actualizaciones, estos dos archivos ahora se pueden agregar a un proyecto de enlace en Visual Studio para Mac o se pasa directamente a la `btouch` o `bmac` herramientas para producir el enlace final.
 
-Para obtener una descripción detallada del proceso de enlace, vea nuestra [instrucciones de tutorial completo](~/ios/platform/binding-objective-c/walkthrough.md).
+Para obtener una descripción detallada del proceso de enlace, consulte nuestra [instrucciones de tutorial completo](~/ios/platform/binding-objective-c/walkthrough.md).
 
+## <a name="related-links"></a>Vínculos relacionados
+
+- [Curso de Xamarin University: Creación de una biblioteca de enlaces de Objective-c.](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Curso de Xamarin University: Compilar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
