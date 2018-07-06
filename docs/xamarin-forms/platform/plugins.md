@@ -1,67 +1,70 @@
 ---
 title: Consumir y crear complementos de Xamarin.Forms
-description: En este artículo se explica cómo utilizar y crear complementos de Xamarin.Forms. Complementos se usan normalmente para exponer fácilmente las características nativas de plataforma.
+description: En este artículo se explica cómo utilizar y crear complementos de Xamarin.Forms. Complementos normalmente se usan para exponer fácilmente las características de plataforma nativa.
 ms.prod: xamarin
 ms.assetid: 8A06A420-A9D0-4BCB-B9AF-3AEA6A648A8B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/07/2016
-ms.openlocfilehash: dff9fad0da30475a0fb91c0af76a25ea50d34439
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 07/05/2018
+ms.openlocfilehash: 4d121c2dfcca380e1735da1a4ca47c42d1957b8a
+ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35242562"
+ms.lasthandoff: 07/05/2018
+ms.locfileid: "37854745"
 ---
 # <a name="consuming-and-creating-xamarinforms-plugins"></a>Consumir y crear complementos de Xamarin.Forms
 
-Hay muchas características de plataforma nativa que existen en todas las plataformas, pero tienen API ligeramente diferentes. Los desarrolladores escribir complementos para crear una interfaz abstracta de multiplataforma para aquellas características que también pueden compartir con otros usuarios.
+Hay muchas características de plataforma nativa que existen en todas las plataformas, pero tienen API ligeramente diferentes. Es una manera para que los desarrolladores pueden usar estas características mediante la creación de una interfaz de multiplataforma abstracta y, a continuación, implementar esa interfaz en las diferentes plataformas. La aplicación de Xamarin.Forms, a continuación, tiene acceso a estas implementaciones de plataforma mediante [ `DependencyService` ](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
-Estas características incluyen: estado de la batería, brújula, sensores de movimiento, ubicación geográfica, texto a voz y mucho más. Complementos permiten estas características para tener acceso fácilmente a las aplicaciones de Xamarin.Forms.
+Los desarrolladores pueden compartir este trabajo escribiendo un _complemento_ y publicarlo en NuGet.
+
+> [!NOTE]
+> Muchas características multiplataforma estaban disponibles solo a través de complementos ahora forman parte de código abierto **[Xamarin.Essentials](~/essentials/index.md)** biblioteca. Estas características incluyen: estado de la batería, brújula, sensores de movimiento, ubicación geográfica, texto a voz y mucho más. En el futuro, **Xamarin.Essentials** será el origen principal de las características multiplataforma para aplicaciones de Xamarin.Forms. Aunque los desarrolladores todavía pueden crear y publicar complementos, considere la posibilidad de que contribuyen a **Xamarin.Essentials**.
 
 ## <a name="finding-and-adding-plugins"></a>Buscar y agregar complementos
 
-La Comunidad de Xamarin creada muchos complementos entre plataformas compatibles con Xamarin.Forms - una colección grande puede encontrarse en:
+La Comunidad de Xamarin creado muchos complementos multiplataforma compatible con Xamarin.Forms. Una colección grande puede encontrarse en:
 
-[**Complementos de Xamarin**](https://github.com/xamarin/plugins)
+[**Complementos de Xamarin**](https://github.com/xamarin/XamarinComponents)
 
-Para obtener una guía para agregar paquetes de NuGet al proyecto, vea nuestro tutorial en [incluido un paquete de NuGet en el proyecto](/visualstudio/mac/nuget-walkthrough/).
+Para obtener una guía para agregar paquetes de NuGet al proyecto, consulte nuestro tutorial en [incluir un paquete de NuGet en el proyecto](/visualstudio/mac/nuget-walkthrough/).
 
+## <a name="creating-plugins"></a>Creación de complementos
 
-## <a name="creating-plugins"></a>Crear complementos
+También es posible crear y publicar sus propios complementos como paquetes de Nuget (y componentes de Xamarin). Muchos complementos existentes son de código abierto para que pueda revisar su código para comprender cómo han sido writtern.
 
-También es posible crear y publicar sus propios complementos como paquetes de Nuget (y componentes de Xamarin). Muchos complementos existentes son código abierto para que pueda revisar el código para entender cómo han sido writtern.
+Por ejemplo, la lista de los complementos siguientes son todas de código abierto y que se corresponden con algunos ejemplos en los [ `DependencyService` ](~/xamarin-forms/app-fundamentals/dependency-service/index.md) sección:
 
-Por ejemplo, la lista de complementos siguiente es todo el código fuente abierto y corresponden a los ejemplos disponibles en la [ `DependencyService` ](~/xamarin-forms/app-fundamentals/dependency-service/index.md) sección:
+- **Texto a voz** James montemagno &ndash; [GitHub](https://github.com/jamesmontemagno/TextToSpeechPlugin) y [NuGet  ](https://www.nuget.org/packages/Xam.Plugins.TextToSpeech)
+- **Estado de la batería** James montemagno &ndash; [GitHub](https://github.com/jamesmontemagno/BatteryPlugin) y [NuGet](https://www.nuget.org/packages/Xam.Plugin.Battery)
 
-- **Texto a voz** por James Montemagno &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/TextToSpeech) y [NuGet](https://www.nuget.org/packages/Xam.Plugin.Battery)
-- **Estado de la batería** por James Montemagno &ndash; [GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery) y [NuGet](https://www.nuget.org/packages/Xam.Plugins.TextToSpeech/)
+Los proyectos de Github pueden proporcionar un buen punto de partida para crear sus propios complementos multiplataforma, como seguir estas instrucciones para [crear un complemento para Xamarin](https://github.com/xamarin/XamarinComponents#create-a-plugin-for-xamarin).
 
-Los proyectos de Github pueden proporcionar un buen punto de partida para crear sus propios complementos multiplataforma, como seguir estas instrucciones para [crear un complemento para Xamarin](https://github.com/xamarin/plugins#create-a-plugin-for-xamarin).
+### <a name="structuring-cross-platform-plugin-projects"></a>Estructuración de proyectos de complemento entre plataformas
 
-### <a name="structuring-cross-platform-plugin-projects"></a>Estructura de proyectos de complemento de multiplataforma
+Aunque no hay ningún requisito concreto para diseñar un paquete de NuGet, hay algunas directrices para crear un paquete para aplicaciones multiplataforma.
 
-Aunque no hay ningún requisito concreto para diseñar un paquete de NuGet, hay algunas directrices para crear un paquete de aplicaciones multiplataforma.
+En el pasado, un complemento multiplataforma generalmente formada por los siguientes componentes:
 
-Un complemento de multiplataforma generalmente debe constar de los siguientes componentes:
-
-- PCL con una interfaz que representa la API para el complemento
-- bibliotecas con una implementación de la interfaz de clases de Windows, iOS y Android.
+- PCL con una interfaz que representa la API para el complemento,
+- las bibliotecas con una implementación de la interfaz de clase de iOS, Android y plataforma Universal de Windows (UWP).
 
 Lectura James Montemagno [entrada de blog](https://blog.xamarin.com/creating-reusable-plugins-for-xamarin-forms/) que describe el proceso de creación de complementos para Xamarin.
 
+Más recientemente, complementos pueden ser crearse con una sola plataforma múltiples. Este enfoque se describe en de James Montemagno [entrada de blog](https://montemagno.com/converting-xamarin-libraries-to-sdk-style-multi-targeted-projects/). Este enfoque se usa en los complementos de James Montemagno vinculados anteriormente, y es también utiliza el formato en **Xamarin.Essentials**.
+
 Es preferible evitar hacer referencia a Xamarin.Forms directamente desde un complemento.
-Esto puede crear problemas de conflicto de versiones cuando otros desarrolladores intentan usar el complemento. En su lugar, intente la API de diseño para que se puede utilizar cualquier aplicación Xamarin o. NET.
+Esto puede crear problemas de conflicto de versiones cuando otros desarrolladores intentan usar el complemento. En su lugar, pruebe a diseñar la API para que se puede usar cualquier aplicación de Xamarin o. NET.
 
 ### <a name="publishing-nuget-packages"></a>Publicación de paquetes de NuGet
 
-Paquetes de NuGet tienen un **nuspec** archivo, que es un archivo xml que define qué partes del proyecto se publican en el paquete. El **nuspec** archivo también incluye información sobre el paquete, como el Id., título y los autores.
+Los paquetes de NuGet tienen un **nuspec** archivo, que es un archivo xml que define qué partes del proyecto se publican en el paquete. El **nuspec** archivo también incluye información sobre el paquete, como el identificador, título y autores.
 
-Vea [documentación de NuGet](http://docs.nuget.org/create/creating-and-publishing-a-package) para obtener más información sobre cómo crear y publicar paquetes de NuGet.
-
+Consulte [documentación de NuGet](/nuget/create-packages/creating-a-package.md) para obtener más información sobre la creación y publicación de paquetes de NuGet.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Crear complementos reutilizables para Xamarin.Forms](https://blog.xamarin.com/creating-reusable-plugins-for-xamarin-forms)
-- [Usar & desarrollar complementos de Xamarin (vídeo)](https://university.xamarin.com/guestlectures/using-developing-plugins-for-xamarin)
+- [Creación de complementos reutilizables para Xamarin.Forms](https://blog.xamarin.com/creating-reusable-plugins-for-xamarin-forms)
+- [Con el mi & desarrollar complementos para Xamarin (vídeo)](https://university.xamarin.com/guestlectures/using-developing-plugins-for-xamarin)
