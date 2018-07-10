@@ -1,32 +1,30 @@
 ---
 title: Firmar el paquete de aplicación de Android
+description: Cómo firmar el paquete de aplicaciones Android (APK) para la publicación
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 05/21/2018
-ms.openlocfilehash: 6a4164ea4a56ee7c1b3c1abd05f7b1bb95aede4f
-ms.sourcegitcommit: 9f8e7393019791bbd6af4fefaa24a1602adabb4e
+ms.date: 07/02/2018
+ms.openlocfilehash: 4afcf42750cd9366bfd9fa5855fe1e7c0f114162
+ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2018
-ms.locfileid: "34458806"
+ms.lasthandoff: 07/03/2018
+ms.locfileid: "37403317"
 ---
 # <a name="signing-the-android-application-package"></a>Firmar el paquete de aplicación de Android
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+En [Preparar una aplicación para su lanzamiento](~/android/deploy-test/release-prep/index.md), ha usado **Archive Manager** para compilar la aplicación y colocarla en un archivo para su firma y publicación. En esta sección, obtendrá información sobre cómo crear una identidad de firma de Android, crear un nuevo certificado de firma para aplicaciones de Android y publicar la aplicación archivada *ad hoc* en disco. Se puede realizar una instalación de prueba del APK resultante en dispositivos Android sin pasar por una tienda de aplicaciones.
 
-En esta sección se describe el flujo de trabajo de publicación integrado para firmar el APK proporcionado por Visual Studio. En [Preparar una aplicación para su lanzamiento](~/android/deploy-test/release-prep/index.md), ha usado **Archive Manager** para compilar la aplicación y colocarla en un archivo para su firma y publicación. En esta sección, obtendrá información sobre cómo crear una identidad de firma de Android, crear un nuevo certificado de firma para aplicaciones de Android y publicar la aplicación archivada *ad hoc* en disco.
-Se puede realizar una instalación de prueba del APK resultante en dispositivos Android sin pasar por una tienda de aplicaciones.
+# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 En [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive) (Archivo para publicar), el cuadro de diálogo **Canal de distribución** ofrece dos opciones para la distribución. Seleccione **Ad-Hoc** (Ad hoc):
 
 [![Cuadro de diálogo Canal de distribución](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-En esta sección, usaremos el flujo de trabajo de publicación integrado de Visual Studio para Mac para firmar el APK. En [Preparar una aplicación para su lanzamiento](~/android/deploy-test/release-prep/index.md), se ha usado **Archive Manager** para compilar la aplicación y colocarla en un archivo para su firma y publicación. En esta sección, obtendrá información sobre cómo crear una identidad de firma de Android, crear un nuevo certificado de firma para aplicaciones de Android y publicar la aplicación archivada *ad hoc* en disco. Se puede realizar una instalación de prueba del APK resultante en dispositivos Android sin pasar por una tienda de aplicaciones.
 
 En [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive) (Archivo para publicar), el cuadro de diálogo **Sign and Distribute…** (Firmar y distribuir…) ofrece dos opciones para la distribución. Seleccione **Ad-Hoc** (Ad hoc) y haga clic en **Siguiente**:
 
@@ -58,14 +56,14 @@ En el ejemplo siguiente se muestra el tipo de información que se debe proporcio
 
 El almacén de claves resultante se encuentra en la ubicación siguiente:
 
-**C:\\Usuarios\\*NOMBRE DE USUARIO*\\AppData\\Local\\Xamarin\\Mono for Android\\alias\\alias.keystore**
+**C:\\Usuarios\\*NOMBRE DE USUARIO*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\*ALIAS*\\*ALIAS*.keystore**
 
-Por ejemplo, los pasos anteriores podrían crear una clave de firma en la ubicación siguiente:
+Por ejemplo, mediante el uso de **chimp** como alias, los pasos anteriores podrían crear una clave de firma en la ubicación siguiente:
 
-**C:\\Usuarios\\*NOMBRE DE USUARIO*\\AppData\\Local\\Xamarin\\Mono for Android\\chimp\\chimp.keystore**
+**C:\\Usuarios\\*NOMBRE DE USUARIO*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
 > [!NOTE]
-> Debe crear una copia de seguridad del archivo de almacén de claves resultante en un lugar seguro: no se incluye en la solución. Si pierde el archivo (por ejemplo, porque ha cambiado de equipo o porque ha reinstalado Windows), no podrá firmar la aplicación con el mismo certificado que las versiones anteriores.
+> Debe crear una copia de seguridad del archivo de almacén de claves y la contraseña resultantes en un lugar seguro, ya que no se incluye en la solución. Si pierde el archivo (por ejemplo, porque ha cambiado de equipo o porque ha reinstalado Windows), no podrá firmar la aplicación con el mismo certificado que las versiones anteriores.
 
 Para obtener más información sobre el almacén de claves, consulte [Finding your Keystore's MD5 or SHA1 Signature](~/android/deploy-test/signing/keystore-signature.md) (Buscar la firma MD5 o SHA1 del almacén de claves).
 
@@ -89,7 +87,7 @@ Por ejemplo, los pasos anteriores podrían crear una clave de firma en la ubicac
 
 
 > [!NOTE]
-> Debe crear una copia de seguridad del archivo de almacén de claves resultante en un lugar seguro: no se incluye en la solución. Si pierde el archivo (por ejemplo, porque ha cambiado de equipo o porque ha reinstalado su Mac), no podrá firmar la aplicación con el mismo certificado que las versiones anteriores.
+> Debe crear una copia de seguridad del archivo de almacén de claves y la contraseña resultantes en un lugar seguro, ya que no se incluye en la solución. Si pierde el archivo (por ejemplo, porque ha cambiado de equipo o porque ha reinstalado macOS), no podrá firmar la aplicación con el mismo certificado que las versiones anteriores.
 
 Para obtener más información sobre el almacén de claves, consulte [Finding your Keystore's MD5 or SHA1 Signature](~/android/deploy-test/signing/keystore-signature.md) (Buscar la firma MD5 o SHA1 del almacén de claves).
 

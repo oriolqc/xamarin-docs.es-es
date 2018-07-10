@@ -1,33 +1,33 @@
 ---
-title: 'Tutorial: usar táctil en Android'
+title: 'Tutorial: uso táctil en Android'
 ms.prod: xamarin
 ms.assetid: E281F89B-4142-4BD8-8882-FB65508BF69E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 05/09/2018
-ms.openlocfilehash: 625ba800ce498f80c0344c67e26bd79360de4002
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: d379630e3b7fa2b42bd9530e1dccd75e9634dd2f
+ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34050564"
+ms.lasthandoff: 07/10/2018
+ms.locfileid: "37935532"
 ---
-# <a name="walkthrough---using-touch-in-android"></a>Tutorial: usar táctil en Android
+# <a name="walkthrough---using-touch-in-android"></a>Tutorial: uso táctil en Android
 
-Permítanos vea cómo usar los conceptos de la sección anterior en una aplicación en funcionamiento. Se creará una aplicación con cuatro actividades. La primera actividad será un menú o un panel de control que se iniciará las otras actividades para demostrar las distintas API. Captura de pantalla siguiente muestra la actividad principal:
+Nos gustaría ver cómo usar los conceptos de la sección anterior en una aplicación de trabajo. Se creará una aplicación con cuatro actividades. La primera actividad será un menú o un panel de control que se iniciará las otras actividades para demostrar las distintas API. Captura de pantalla siguiente muestra la actividad principal:
 
 [![Captura de pantalla de ejemplo con Me toque el botón](android-touch-walkthrough-images/image14.png)](android-touch-walkthrough-images/image14.png#lightbox)
 
-La primera actividad, ejemplo Touch, mostrará cómo utilizar controladores de eventos para tocar las vistas. La actividad reconocedor de movimientos demostrará cómo subclase `Android.View.Views` y controlar los eventos, así como se muestra cómo controlar los gestos de acercar. La tercera y última actividad, **gesto personalizado**, se muestra cómo usar gestos personalizados. Para facilitar las cosas seguir y absorber, se podrá dividir este tutorial en secciones, con cada sección centrarse en una de las actividades.
+La primera actividad, ejemplo de Touch, mostrará cómo utilizar controladores de eventos para tocar las vistas. La actividad del reconocedor de gestos demostrará cómo crear subclases de `Android.View.Views` y controlar los eventos, así como se muestra cómo controlar los gestos pinch. La tercera y última actividad, **gesto personalizado**, le muestran cómo usar gestos personalizados. Para facilitar las cosas a seguir y absorber, dividiremos en este tutorial en secciones, con cada sección centrándose en una de las actividades.
 
-## <a name="touch-sample-activity"></a>Actividad de muestra de entrada táctil
+## <a name="touch-sample-activity"></a>Actividad de ejemplo de Touch
 
--   Abra el proyecto **TouchWalkthrough\_iniciar**. El **MainActivity** es establecidos en vaya &ndash; depende de nosotros implementar el comportamiento de entrada táctil en la actividad. Si ejecuta la aplicación y haga clic en **ejemplo táctil**, deben iniciar las siguientes actividades:
+-   Abra el proyecto **TouchWalkthrough\_iniciar**. El **MainActivity** está listo para ir &ndash; depende de nosotros para implementar el comportamiento de toque en la actividad. Si ejecuta la aplicación y haga clic en **Touch ejemplo**, se debe iniciar la actividad siguiente:
 
-    [![Captura de pantalla de actividad con Touch comienza muestra](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
+    [![Captura de pantalla de actividad con Touch comienza a mostrar](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
--   Ahora que hemos confirmado que inicia la actividad, abra el archivo **TouchActivity.cs** y agregue un controlador para el `Touch` eventos de la `ImageView`:
+-   Ahora que hemos confirmado que se inicia la actividad, abra el archivo **TouchActivity.cs** y agregue un controlador para el `Touch` eventos de la `ImageView`:
 
     ```csharp
     _touchMeImageView.Touch += TouchMeImageViewOnTouch;
@@ -59,23 +59,23 @@ La primera actividad, ejemplo Touch, mostrará cómo utilizar controladores de e
     }
     ```
 
-Observe que en el código anterior que se tratan los `Move` y `Down` acción de la misma. Esto es porque, aunque el usuario no puede elevación su dedo el `ImageView`, puede mover o la presión ejercida por el usuario puede cambiar. Estos tipos de cambios generará un `Move` acción.
+Tenga en cuenta en el código anterior que tratamos la `Move` y `Down` acción de la misma. Esto es porque, aunque el usuario no puede levante su dedo el `ImageView`, pueden desplazarse o la presión ejercida por el usuario puede cambiar. Estos tipos de cambios se generarán un `Move` acción.
 
-Cada vez que el usuario los últimos retoques el `ImageView`, `Touch` se generará el evento y el controlador mostrará el mensaje **Touch comienza** en la pantalla, como se muestra en la captura de pantalla siguiente:
+Cada vez que los toques del usuario la `ImageView`, el `Touch` , se generará el evento y el controlador mostrará el mensaje **comienza a tocar** en la pantalla, como se muestra en la captura de pantalla siguiente:
 
-[![Captura de pantalla de actividad táctil se inicie](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
+[![Captura de pantalla de actividad con comienza a tocar](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
-Siempre y cuando el usuario toca el `ImageView`, **Touch comienza** se mostrará en el `TextView`. Cuando el usuario ya no se usa el `ImageView`, el mensaje **Touch finaliza** se mostrará en el `TextView`, tal y como se muestra en la captura de pantalla siguiente:
+Siempre y cuando el usuario toca el `ImageView`, **comienza a tocar** se mostrará en el `TextView`. Cuando el usuario ya no esté tocando la `ImageView`, el mensaje **Touch finaliza** se mostrará en el `TextView`, tal y como se muestra en la captura de pantalla siguiente:
 
 [![Captura de pantalla de actividad con Touch finaliza](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png#lightbox)
 
 
-## <a name="gesture-recognizer-activity"></a>Actividad de reconocedor de gestos
+## <a name="gesture-recognizer-activity"></a>Actividad del reconocedor de gestos
 
-Ahora permite implementar la actividad reconocedor de movimientos. Esta actividad muestra cómo arrastrar una vista en torno a la pantalla y se muestra una manera de implementar el gesto de acercamiento.
+Ahora permite implementar la actividad del reconocedor de gestos. Esta actividad demostrará cómo arrastrar una vista en torno a la pantalla y muestran una forma de implementar acercar para alejar.
 
--   Agregar una nueva actividad a la aplicación llamada `GestureRecognizer`.
-    Edite el código para esta actividad para que sea similar el siguiente código:
+-   Agregue una nueva actividad a la aplicación llamada `GestureRecognizer`.
+    Edite el código para esta actividad para que se parezca que el código siguiente:
 
     ```csharp
     public class GestureRecognizerActivity : Activity
@@ -89,7 +89,7 @@ Ahora permite implementar la actividad reconocedor de movimientos. Esta activida
     }
     ```
 
--   Agregar un nuevo Android ver al proyecto y asígnele el nombre `GestureRecognizerView`. Agregue las siguientes variables para esta clase:
+-   Agregar una nueva Android ver al proyecto y asígnele el nombre `GestureRecognizerView`. Agregue las siguientes variables para esta clase:
 
     ```csharp
     private static readonly int InvalidPointerId = -1;
@@ -116,7 +116,7 @@ Ahora permite implementar la actividad reconocedor de movimientos. Esta activida
     }
     ```
 
--   Para dibujar la imagen en nuestra actividad, es necesario reemplazar el `OnDraw` método de la clase de vista, tal como se muestra en el siguiente fragmento de código. Este código se moverá el `ImageView` a la posición especificada por `_posX` y `_posY` así como cambiar el tamaño de la imagen según el factor de escala:
+-   Para dibujar la imagen en nuestra actividad, es necesario reemplazar el `OnDraw` método de la clase de vista, como se muestra en el siguiente fragmento de código. Este código se moverá el `ImageView` a la posición especificada por `_posX` y `_posY` , así como cambiar el tamaño de la imagen de según el factor de escala:
 
     ```csharp
     protected override void OnDraw(Canvas canvas)
@@ -130,8 +130,8 @@ Ahora permite implementar la actividad reconocedor de movimientos. Esta activida
     }
     ```
 
--   A continuación deberá actualizar la variable de instancia `_scaleFactor` como el usuario pinche el `ImageView`. Se agregará una clase denominada `MyScaleListener`. Esta clase realizará escuchas para los eventos de escala que se generará Android cuando el usuario pinche el `ImageView`.
-    Agregue la siguiente clase interna para `GestureRecognizerView`. Esta clase es una `ScaleGesture.SimpleOnScaleGestureListener`. Esta clase es una clase para comodidad que los agentes de escucha pueden crear subclases cuando esté interesado en un subconjunto de gestos:
+-   A continuación deberá actualizar la variable de instancia `_scaleFactor` como el usuario pinche el `ImageView`. Agregamos una clase denominada `MyScaleListener`. Esta clase realizará escuchas para los eventos de escala que se generará Android cuando el usuario pinche el `ImageView`.
+    Agregue la siguiente clase interna para `GestureRecognizerView`. Esta clase es un `ScaleGesture.SimpleOnScaleGestureListener`. Esta clase es una clase de conveniencia que los agentes de escucha pueden crear subclases cuando esté interesado en un subconjunto de gestos:
 
     ```csharp
     private class MyScaleListener : ScaleGestureDetector.SimpleOnScaleGestureListener
@@ -157,19 +157,19 @@ Ahora permite implementar la actividad reconocedor de movimientos. Esta activida
                 _view._scaleFactor = 0.1f;
             }
 
-            _iconview.Invalidate();
+            _view.Invalidate();
             return true;
         }
     }
     ```
 
--   El siguiente método se debe invalidar en `GestureRecognizerView` es `OnTouchEvent`. El código siguiente muestra la implementación completa de este método. Hay una gran cantidad de código en este caso, por lo que permite tardar un minuto, y observe que está sucediendo aquí. Lo primero que el método no es escalar el icono si es necesario &ndash; Esto se controla mediante una llamada a `_scaleDetector.OnTouchEvent`. A continuación intente averiguar qué acción llama a este método:
+-   El siguiente método se debe invalidar en `GestureRecognizerView` es `OnTouchEvent`. El código siguiente muestra la implementación completa de este método. Hay una gran cantidad de código por lo que vamos aquí, tómese un minuto y observe lo que sucede aquí. Lo primero que este método no es escalar el icono si es necesario &ndash; Esto se controla mediante una llamada a `_scaleDetector.OnTouchEvent`. A continuación intente averiguar qué acción se llama a este método:
 
-    - Si el usuario toca la pantalla con, se registran las posiciones X e Y y el identificador del primer puntero que tocar la pantalla.
+    - Si el usuario toca la pantalla con, se debe registrar las posiciones X e Y y el identificador del primer puntero que toca la pantalla.
 
-    - Si el usuario mueve su táctil en la pantalla, a continuación, se averiguar hasta qué punto el usuario desplaza el puntero.
+    - Si el usuario mueve su toque la pantalla, a continuación, averiguar hasta qué punto el usuario mueve el puntero.
 
-    - Si el usuario ha solucionado su dedo fuera de la pantalla, a continuación, se dejará los movimientos de seguimiento.
+    - Si el usuario eleva su dedo fuera de la pantalla, a continuación, se dejará de seguimiento de los gestos.
 
     ```csharp
     public override bool OnTouchEvent(MotionEvent ev)
@@ -231,24 +231,24 @@ Ahora permite implementar la actividad reconocedor de movimientos. Esta activida
     }
     ```
 
--   Ahora ejecute la aplicación e inicie la actividad reconocedor de movimientos.
+-   Ahora ejecute la aplicación e inicie la actividad del reconocedor de gestos.
     Cuando se inicia la pantalla debe ser similar a la captura de pantalla siguiente:
 
-    [![Pantalla de inicio de reconocedor de movimiento con icono de Android](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
+    [![Pantalla de inicio de reconocedor de gestos con icono de Android](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
 
--   Ahora pulse en el icono y arrastrarla alrededor de la pantalla. Pruebe el gesto de gesto de acercamiento. En algún momento la pantalla puede ser algo parecido a la captura de pantalla siguiente:
+-   Ahora toque el icono y arrastrarla alrededor de la pantalla. Pruebe el gesto pinch a zoom. En algún momento, la pantalla puede ser algo parecido a la captura de pantalla siguiente:
 
-    [![Icono de mover movimientos por la pantalla](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png#lightbox)
+    [![Icono de mover los gestos en torno a la pantalla](android-touch-walkthrough-images/image18.png)](android-touch-walkthrough-images/image18.png#lightbox)
 
-En este punto debe disponer de un pat en la parte posterior: acaba de implementar gesto de acercamiento en una aplicación Android. Tómese un descanso rápido y permite pasar a la tercera y última actividad en este tutorial &ndash; con gestos personalizados.
+En este momento debería disponer de un pat en la parte posterior: acaba de implementar pinch a zoom en una aplicación de Android. Tómese un descanso rápido y permite pasar a la tercera y última actividad en este tutorial &ndash; mediante gestos personalizados.
 
 ## <a name="custom-gesture-activity"></a>Actividad de gestos personalizados
 
 La pantalla final de este tutorial usará gestos personalizados.
 
-Para los fines de este tutorial, la biblioteca de movimientos ya creada con la herramienta de movimiento y agrega al proyecto en el archivo **recursos/sin formato/movimientos**. Con este bit de fuera de la vista de limpieza, permite obtener en la actividad final en el tutorial.
+Para los fines de este tutorial, la biblioteca de gestos ya se ha creado con herramienta gesto y agrega al proyecto en el archivo **recursos/sin formato/gestos**. Con este poco de limpieza de la vista, permite obtener con la actividad final en el tutorial.
 
--   Agregue un archivo de diseño denominado **personalizado\_gesto\_layout.axml** al proyecto con el siguiente contenido. El proyecto ya tiene todas las imágenes en el **recursos** carpeta:
+-   Agregue un archivo de diseño denominado **personalizado\_gesto\_layout.axml** al proyecto con el siguiente contenido. El proyecto ya tiene todas las imágenes de la **recursos** carpeta:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -281,8 +281,8 @@ Para los fines de este tutorial, la biblioteca de movimientos ya creada con la h
     private ImageView _imageView;
     ```
 
--   Editar el `OnCreate` método de esta actividad, por lo que TI es similar al código siguiente. Permite realizar un minuto para explicar lo que está sucediendo en este código. Lo primero que hacemos es crear una instancia de un `GestureOverlayView` y establézcalo como la vista de la raíz de la actividad.
-    También se asigna un controlador de eventos para el `GesturePerformed` eventos de `GestureOverlayView`. A continuación se aumentar el archivo de diseño que creó anteriormente y agregarlo como una vista secundaria de la `GestureOverlayView`. El paso final consiste en inicializar la variable `_gestureLibrary` y cargue el archivo de movimientos de los recursos de aplicación. Si no se puede cargar el archivo de movimientos por alguna razón, no hay mucho esta actividad puede hacer, por lo que es apagado:
+-   Editar el `OnCreate` método de esta actividad, por lo que TI es similar al código siguiente. Permite tomar un minuto para explicar lo que está ocurriendo en este código. Lo primero que hacemos es crear una instancia de un `GestureOverlayView` y establézcalo como la vista de la raíz de la actividad.
+    También asignamos un controlador de eventos para el `GesturePerformed` událostí `GestureOverlayView`. A continuación se infle el archivo de diseño que se creó anteriormente y agregarlo como una vista secundaria de la `GestureOverlayView`. El último paso consiste en inicializar la variable `_gestureLibrary` y cargar el archivo de movimientos de los recursos de aplicación. Si no se puede cargar el archivo de gestos por alguna razón, no hay mucho pueda hacer esta actividad, por lo que es de cierre:
 
     ```csharp
     protected override void OnCreate(Bundle bundle)
@@ -306,9 +306,9 @@ Para los fines de este tutorial, la biblioteca de movimientos ya creada con la h
     }
     ```
 
--   Lo último que es necesario para implementar el método `GestureOverlayViewOnGesturePerformed` tal y como se muestra en el siguiente fragmento de código. Cuando el `GestureOverlayView` detecta un movimiento, vuelve a llamar a este método. Lo primero que se intenta obtener un `IList<Prediction>` objetos que coinciden con el movimiento mediante una llamada a `_gestureLibrary.Recognize()`. Utilizamos un poco de LINQ para obtener la `Prediction` que tiene la máxima puntuación para el movimiento.
+-   El paso final es necesario para implementar el método `GestureOverlayViewOnGesturePerformed` tal como se muestra en el siguiente fragmento de código. Cuando el `GestureOverlayView` detecta un gesto, vuelve a llamar a este método. Lo primero que se trate de conseguir un `IList<Prediction>` objetos que coinciden con el gesto mediante una llamada a `_gestureLibrary.Recognize()`. Usamos un poco de LINQ para obtener el `Prediction` que tiene la máxima puntuación para el movimiento.
 
-    Si no hay ninguna coincidencia de gestos con un valor alto suficiente puntuación, a continuación, el controlador de eventos se cierra sin hacer nada. De lo contrario se compruebe el nombre de la predicción y cambia la imagen que se muestra según el nombre de los gestos:
+    Si no se produjo ninguna coincidencia suficiente puntuación de gestos con un valor alto, entonces el controlador de eventos se cierra sin hacer nada. De lo contrario, compruebe el nombre de la predicción y cambiar la imagen que se muestra según el nombre del gesto:
 
     ```csharp
     private void GestureOverlayViewOnGesturePerformed(object sender, GestureOverlayView.GesturePerformedEventArgs gesturePerformedEventArgs)
@@ -339,22 +339,22 @@ Para los fines de este tutorial, la biblioteca de movimientos ya creada con la h
     }
     ```
 
--   Ejecute la aplicación e iniciar la actividad personalizada reconocedor de movimientos. Debería ser similar a la captura de pantalla siguiente:
+-   Ejecute la aplicación e inicie la actividad personalizada reconocedor de gestos. Debe tener un aspecto similar a la captura de pantalla siguiente:
 
     [![Captura de pantalla con comprobar mi imagen](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png#lightbox)
 
     Ahora se dibuja una marca de verificación en la pantalla y el mapa de bits que se muestra debe ser similar a la se muestra en las capturas de pantalla siguiente:
 
-    [![Se reconoce la marca de verificación dibujado, marca de verificación](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
+    [![Marca de verificación dibujado, marca de verificación se reconoce](android-touch-walkthrough-images/image20.png)](android-touch-walkthrough-images/image20.png#lightbox)
 
-    Por último, puede dibujar un garabato en la pantalla. La casilla de verificación debería cambiar a la imagen original tal y como se muestra en estas capturas de pantalla:
+    Por último, puede dibujar un garabato en la pantalla. La casilla de verificación debería cambiar a la imagen original, como se muestra en estas capturas de pantalla:
 
-    [![Scribble en la pantalla, la imagen original se muestra](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
+    [![Se muestra en la pantalla, la imagen original Scribble de](android-touch-walkthrough-images/image21.png)](android-touch-walkthrough-images/image21.png#lightbox)
 
-Ahora tiene una descripción de cómo integrar táctiles y los gestos en una aplicación Android con Xamarin.Android.
+Ahora tiene una comprensión de cómo integrar tacto y gestos en una aplicación de Android con Xamarin.Android.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Android Touch iniciar (ejemplo)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_start)
+- [Android tocar inicio (ejemplo)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_start)
 - [Android toque Final (ejemplo)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_final)
