@@ -1,17 +1,17 @@
 ---
 title: Configuración de Xamarin Live Player
-description: Este documento describe cómo configurar el Reproductor de Xamarin en vivo y usarlo para realizar modificaciones en vivo en una aplicación en ejecución.
+description: Este documento describe cómo configurar la cuenta de Xamarin Live Player y usarlo para realizar las modificaciones dinámicas en una aplicación en ejecución.
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: topgenorth
 ms.author: toopge
 ms.date: 05/14/2018
 ms.openlocfilehash: 40c03e978cd9ce4666089f1b2a1e2ee8f47dbd81
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793787"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38831678"
 ---
 # <a name="xamarin-live-player-setup"></a>Configuración de Xamarin Live Player
 
@@ -32,9 +32,9 @@ ara dispositivos que usan Android sin Google Play, Xamarin Live Player está dis
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-Le animamos a los usuarios unirse a la aplicación de Xamarin Player Live iOS vista previa para disfrutar de un acceso rápido a las mejoras más recientes a través de TestFlight. Mediante el acceso a la vida de Xamarin Player, está aceptando a Microsoft [términos de uso](https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx) & [declaración de privacidad](https://privacy.microsoft.com/en-us/privacystatement). Microsoft puede usar la información de contacto para proporcionar actualizaciones y ofertas especiales acerca de Xamarin y otros productos de Microsoft y servicios. Puede cancelar la suscripción en cualquier momento.
+Le animamos a los usuarios se unan a la aplicación de Xamarin Live Player iOS Preview para disfrutar de acceso rápido a las mejoras más recientes a través de TestFlight. Mediante el acceso a la cuenta de Xamarin Live Player, está aceptando a Microsoft [términos de uso](https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx) & [declaración de privacidad](https://privacy.microsoft.com/en-us/privacystatement). Microsoft puede usar la información de contacto para proporcionar actualizaciones y ofertas especiales relacionadas con Xamarin y otros productos de Microsoft y servicios. Puede cancelar la suscripción en cualquier momento.
 
-Para obtener acceso a la vista previa de iOS de Xamarin Player en vivo, lleve a cabo la [información de registro de TestFlight](https://fastring.xamarinliveplayer.com/), tras el cual se recibirán un correo electrónico de TestFlight sobre cómo instalar la vista previa de iOS de Xamarin Player en vivo.
+Para obtener acceso a la versión preliminar de iOS de Xamarin Live Player, complete el [información de registro de TestFlight](https://fastring.xamarinliveplayer.com/), tras el cual recibirá un correo electrónico de TestFlight sobre cómo instalar la versión preliminar de iOS de Xamarin Live Player.
 
 -----
 
@@ -44,7 +44,7 @@ Para obtener acceso a la vista previa de iOS de Xamarin Player en vivo, lleve a 
 
 Xamarin Live Player requiere:
 
-- Visual Studio 2017 15.4 u otra más reciente.
+- Visual Studio 2017 15.4 o versiones más recientes.
 - Un equipo con Visual Studio y un dispositivo con Xamarin Live Player en la misma red Wi-Fi.
 
 ## <a name="3-using-xamarin-live-player-for-the-first-time"></a>3. Primer uso de Xamarin Live Player
@@ -75,15 +75,15 @@ Xamarin Live Player requiere:
 
   ![Ventana para emparejar un dispositivo](install-images/manage-empty-windows.png)
 
-  Si no se puede conectar con el dispositivo para el emparejamiento, puede aparecer un error.
+  Si no se puede conectar con el dispositivo de emparejamiento, puede aparecer un error.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-## <a name="2-get-visual-studio-for-mac"></a>2. Obtener Visual Studio para Mac
+## <a name="2-get-visual-studio-for-mac"></a>2. Obtenga Visual Studio para Mac
 
 Xamarin Live Player requiere:
 
-- OS X 10.11 macOS 10.12 o superior
+- OS X 10.11, macOS 10.12 o superior
 - Visual Studio para Mac
 - Un equipo Mac y un dispositivo en la misma red Wi-Fi
 
@@ -125,7 +125,7 @@ Xamarin Live Player requiere:
 
 -----
 
-Si experimenta problemas o no se puede conectar, vea [limitaciones y solución de problemas](~/tools/live-player/troubleshooting.md).
+Si experimenta problemas o no se puede conectar, consulte [limitaciones y solución de problemas](~/tools/live-player/troubleshooting.md).
 
 
 ## <a name="related-links"></a>Vínculos relacionados

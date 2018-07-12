@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms DataPages
-description: Este artículo detallan Xamarin.Forms DataPages, que proporcionan una API rápidamente y enlazar fácilmente un origen de datos a las vistas previamente integradas.
+title: Xamarin.Forms DataSourceControl
+description: Este artículo presentan DataSourceControl Xamarin.Forms, que proporcionan una API para rápidamente y enlazar fácilmente un origen de datos a las vistas precompiladas.
 ms.prod: xamarin
 ms.assetid: DF16EAEE-DB78-42CA-9C59-51D9D6CB6B95
 ms.technology: xamarin-forms
@@ -8,57 +8,57 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: 2a74b636a41a72b26776157a774f0a33ef45a075
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243335"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38815892"
 ---
-# <a name="xamarinforms-datapages"></a>Xamarin.Forms DataPages
+# <a name="xamarinforms-datapages"></a>Xamarin.Forms DataSourceControl
 
-![](~/media/shared/preview.png "Esta API está actualmente en vista previa")
+![](~/media/shared/preview.png "Esta API está actualmente en versión preliminar")
 
 > [!IMPORTANT]
-> DataPages requiere un [Xamarin.Forms tema](~/xamarin-forms/user-interface/themes/index.md) referencia a presentar.
+> DataSourceControl requiere un [Xamarin.Forms tema](~/xamarin-forms/user-interface/themes/index.md) referencia a representar.
 
-Xamarin.Forms DataPages se anunciaron en evolucionar 2016 y están disponibles como una vista previa de los clientes probar y proporcionar comentarios.
+Xamarin.Forms DataSourceControl se anunciaron en Evolve 2016 y están disponible como una vista previa para clientes probar y proporcionar comentarios.
 
-DataPages proporciona una API para rápida y fácilmente enlazar un origen de datos a las vistas previamente integradas. Elementos de lista y páginas de detalles se representarán automáticamente los datos y se pueden personalizar con temas.
+DataSourceControl proporciona una API para enlazar de forma rápida y sencilla un origen de datos a vistas precompiladas. Elementos de lista y páginas de detalle representarán los datos de forma automática y se pueden personalizar utilizando temas.
 
-Para ver cómo funciona la demostración de keynote evolucionar, visite la [Guía de introducción](get-started.md).
+Para ver cómo funciona la demostración del discurso de apertura evolucionan, consulte el [Guía de introducción](get-started.md).
 
-[![](images/demo-sml.png "Aplicación de ejemplo DataPages")](images/demo.png#lightbox "aplicación de ejemplo DataPages")
+[![](images/demo-sml.png "Aplicación de ejemplo DataSourceControl")](images/demo.png#lightbox "aplicación de ejemplo DataSourceControl")
 
 ## <a name="introduction"></a>Introducción
 
-Orígenes de datos y las páginas de datos asociadas permiten a los desarrolladores rápida y fácilmente consumir un origen de datos admitidos y representar mediante integrados que se puede personalizar la interfaz de usuario que scaffolding con temas.
+Orígenes de datos y las páginas de datos asociadas permiten a los desarrolladores rápida y fácilmente consumir un origen de datos admitidos y para representarlo mediante integradas se puede personalizar la interfaz de usuario de scaffolding que con los temas.
 
-DataPages se agregan a una aplicación de Xamarin.Forms mediante la inclusión de la **Xamarin.Forms.Pages** paquete Nuget.
+DataSourceControl se agrega a una aplicación de Xamarin.Forms mediante la inclusión de la **Xamarin.Forms.Pages** paquete Nuget.
 
 ### <a name="data-sources"></a>Orígenes de datos
 
-La vista previa tiene algunos orígenes de datos creada previamente disponibles para su uso:
+La versión preliminar tiene algunos orígenes de datos creada previamente disponibles para su uso:
 
 * **JsonDataSource**
 * **AzureDataSource** (separe Nuget)
 * **AzureEasyTableDataSource** (separe Nuget)
 
-Consulte la [Guía de introducción](get-started.md) para obtener un ejemplo de uso un `JsonDataSource`.
+Consulte la [Guía de introducción](get-started.md) para obtener un ejemplo con un `JsonDataSource`.
 
 
 ### <a name="pages--controls"></a>Las páginas y controles
 
 Las siguientes páginas y controles se incluyen para permitir el enlace sencillo para los orígenes de datos proporcionado:
 
-* **ListDataPage** : consulte la [Introducción ejemplo](get-started.md).
-* **DirectoryPage** : una lista con agrupación habilitado.
-* **PersonDetailPage** : un elemento de datos únicos en vista personalizada para un tipo de objeto específico (una entrada de contacto).
+* **ListDataPage** : vea la [Introducción al ejemplo](get-started.md).
+* **DirectoryPage** : una lista con agrupación habilitada.
+* **PersonDetailPage** : un elemento de datos únicos en la vista personalizada para un tipo de objeto específico (una entrada de contacto).
 * **DataView** : una vista para exponer datos procedentes del origen de forma genérica.
 * **CardView** : una con el estilo de vista que contiene una imagen, el texto del título y el texto de descripción.
 * **HeroImage** : una vista de la representación de imágenes.
-* **ListItem** : una vista con un diseño similar al nativas para iOS y Android enumere elementos han creado con anterioridad.
+* **ListItem** : un pregeneradas vista con un diseño similar a los elementos de lista de Android y iOS nativo.
 
-Consulte la [DataPages controla referencia](controls.md) para obtener ejemplos.
+Consulte la [DataSourceControl controla referencia](controls.md) para obtener ejemplos.
 
 
 
@@ -70,7 +70,7 @@ La infraestructura de Xamarin.Forms interactúa con un origen de datos a través
 
 * `Data` : una lista de solo lectura de elementos de datos que se pueden mostrar.
 * `IsLoading` : un valor booleano que indica si los datos se cargan y están disponibles para la representación.
-* `[key]` : un indizador para recuperar elementos.
+* `[key]` – un indizador para recuperar elementos.
 
-Existen dos métodos `MaskKey` y `UnmaskKey` que se puede utilizar para ocultar (o mostrar) las propiedades de elementos de datos (es decir impida que se representen).
+Hay dos métodos `MaskKey` y `UnmaskKey` que puede utilizarse para ocultar (o mostrar) las propiedades de elementos de datos (es decir impida que se procesa).
 La clave corresponde a la una propiedad con nombre en el objeto de elemento de datos.

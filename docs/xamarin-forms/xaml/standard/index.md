@@ -1,6 +1,6 @@
 ---
-title: Estándar XAML (versión preliminar)
-description: Este artículo explica cómo comenzar a explorar la vista previa estándar de XAML de Xamarin.Forms.
+title: XAML estándar (versión preliminar)
+description: En este artículo se explica cómo empezar a trabajar con la exploración de la versión preliminar estándar de XAML en Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 24382DF1-BE70-4608-B86F-B79FB23E4A78
 ms.technology: xamarin-forms
@@ -8,37 +8,37 @@ author: charlespetzold
 ms.author: chape
 ms.date: 11/15/2017
 ms.openlocfilehash: 61e0fa2587ce9a8794dbd32ff9de1f13da857342
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245799"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38838015"
 ---
-# <a name="xaml-standard-preview"></a>Estándar XAML (versión preliminar)
+# <a name="xaml-standard-preview"></a>XAML estándar (versión preliminar)
 
 ![Vista previa](~/media/shared/preview.png)
 
-Siga estos pasos para experimentar con el estándar de XAML de Xamarin.Forms:
+Siga estos pasos para experimentar con el estándar de XAML en Xamarin.Forms:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
-1. Descargue el [obtener una vista previa de paquete de NuGet aquí](https://aka.ms/xf-xamlstandard-nuget).
-2. Agregar el **Xamarin.Forms.Alias** paquete NuGet para los proyectos de plataforma y Xamarin.Forms .NET estándar.
+1. Descargue el [obtener una vista previa de los paquetes de NuGet aquí](https://aka.ms/xf-xamlstandard-nuget).
+2. Agregar el **Xamarin.Forms.Alias** paquete NuGet a los proyectos de Xamarin.Forms .NET Standard y plataforma.
 3. Inicializar el paquete con `Alias.Init()`
 4. Agregar un `xmlns:a` referencia `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
-5. Utilizar los tipos en XAML, vea el [referencia de controles](controls.md) para obtener más información.
+5. Usar los tipos de XAML, consulte el [referencia controles](controls.md) para obtener más información.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
-1. Descargue el [obtener una vista previa de paquete de NuGet aquí](https://aka.ms/xf-xamlstandard-nuget).
-2. Agregar el **Xamarin.Forms.Alias** paquete NuGet para los proyectos de plataforma y Xamarin.Forms .NET estándar.
+1. Descargue el [obtener una vista previa de los paquetes de NuGet aquí](https://aka.ms/xf-xamlstandard-nuget).
+2. Agregar el **Xamarin.Forms.Alias** paquete NuGet a los proyectos de Xamarin.Forms .NET Standard y plataforma.
 3. Inicializar el paquete con `Alias.Init()`
 4. Agregar un `xmlns:a` referencia `xmlns:a="clr-namespace:Xamarin.Forms.Alias;assembly=Xamarin.Forms.Alias"`
-5. Utilizar los tipos en XAML, vea el [referencia de controles](controls.md) para obtener más información.
+5. Usar los tipos de XAML, consulte el [referencia controles](controls.md) para obtener más información.
 
 -----
 
-El XAML siguiente muestra algunos controles estándar de XAML que se va a usar en un Xamarin.Forms `ContentPage`:
+El siguiente XAML muestra algunos controles XAML estándar que se usan en un objeto Xamarin.Forms `ContentPage`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -71,10 +71,10 @@ El XAML siguiente muestra algunos controles estándar de XAML que se va a usar e
 ```
 
 > [!NOTE]
-> Requerir la xmlns `a:` prefijo en los controles estándar de XAML es una limitación de la vista previa actual.
+> Requerir xmlns `a:` prefijo en los controles estándar de XAML es una limitación de la vista previa actual.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [NuGet de vista previa](https://aka.ms/xf-xamlstandard-nuget)
+- [NuGet de versión preliminar](https://aka.ms/xf-xamlstandard-nuget)
 - [Controls Reference](controls.md) (Referencia de controles)

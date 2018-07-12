@@ -1,49 +1,49 @@
 ---
-title: Aplicación de Xamarin Player en vivo
-description: Este documento describe la Xamarin Player en vivo en la aplicación, que puede utilizarse para obtener una vista previa de los cambios en el código en vivo en el dispositivo. Se tratan el programa de instalación, ejemplos, registros, configuración, administración de dispositivos y mucho más.
+title: Aplicación Xamarin Live Player
+description: Este documento describe la aplicación, que puede usarse para obtener una vista previa de cambios de código en vivo en dispositivos Xamarin Live Player. Describe el programa de instalación, ejemplos, los registros, configuración, administración de dispositivos y mucho más.
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: topgenorth
 ms.author: toopge
 ms.date: 05/14/2017
 ms.openlocfilehash: 88f7f62650484007c221aa7baaa684f872e0a8e9
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794155"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38830418"
 ---
-# <a name="xamarin-live-player-app"></a>Aplicación de Xamarin Player en vivo
+# <a name="xamarin-live-player-app"></a>Aplicación Xamarin Live Player
 
 ![Característica de vista previa](~/media/shared/preview.png)
 
-Una vez haya instalado la aplicación en su teléfono, siga el [instrucciones de instalación](~/tools/live-player/install.md) para conectarse a su equipo. Pruebe una de las [aplicaciones de ejemplo](~/tools/live-player/samples.md) para que funcione.
+Una vez que haya instalado la aplicación en su teléfono, siga el [instrucciones de instalación](~/tools/live-player/install.md) para conectarse a su equipo. Pruebe uno de los [aplicaciones de ejemplo](~/tools/live-player/samples.md) para que funcione.
 
-En el inicio, la aplicación de Xamarin Player Live aspecto (en iOS y Android respectivamente):
+En el inicio, la aplicación Xamarin Live Player este aspecto (en iOS y Android respectivamente):
 
-![Captura de pantalla de aplicación de iOS de Reproductor de Live](player-images/app-iphone-sml.png) ![Captura de pantalla de aplicación Reproductor Android en vivo](player-images/app-android-sml.png)
+![Captura de pantalla de aplicación de Reproductor iOS de Live](player-images/app-iphone-sml.png) ![Captura de pantalla de aplicación Android Player en vivo](player-images/app-android-sml.png)
 
-Cuando se presiona **par de claves para Visual Studio**, use la cámara para escanear el código de barras que muestra en el equipo:
+Al presionar **emparejar con Visual Studio**, use la cámara para escanear el código de barras que muestra en el equipo:
 
-![Captura de pantalla del analizador de código de barras de iOS](player-images/scan-iphone-sml.png) ![Captura de pantalla del analizador de código de barras Android](player-images/scan-android-sml.png)
+![Captura de pantalla del analizador de código de barras de iOS](player-images/scan-iphone-sml.png) ![Captura de pantalla del analizador de código de barras de Android](player-images/scan-android-sml.png)
 
-Si la conexión es correcta, el código debe ejecutarse casi de inmediato en el dispositivo (como el [ejemplo de la calculadora](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator)):
+Si la conexión es correcta, el código debe ejecutarse en el dispositivo casi de inmediato (como el [ejemplo Calculator](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator)):
 
-![Aplicación de calculadora de ejemplo con el dispositivo](player-images/basic-calculator-iphone-sml.png)
+![Aplicación de calculadora de ejemplo que se ejecutan en el dispositivo](player-images/basic-calculator-iphone-sml.png)
 
 ## <a name="options"></a>Opciones
 
-Presione el botón información **(i)** en la parte inferior de la aplicación para revelar el **opciones** menú:
+Presione el botón información **(i)** en la parte inferior de la aplicación para que se muestre el **opciones** menú:
 
-[![Captura de pantalla del menú de opciones](player-images/options-sml.png)](player-images/options.png#lightbox)
+[![Captura de pantalla del menú Opciones](player-images/options-sml.png)](player-images/options.png#lightbox)
 
 ### <a name="logs"></a>Registros
 
-Ver los registros para diagnosticar problemas.
+Visualización de registros para diagnosticar problemas.
 
 ### <a name="settings"></a>Configuración
 
-- Alternar visualización de errores de compilación y en tiempo de ejecución.
+- Alternar visualización de errores de compilación y tiempo de ejecución.
 - Información de versión.
 - Envíe sus comentarios.
 
@@ -51,39 +51,39 @@ Ver los registros para diagnosticar problemas.
 
 ## <a name="managing-devices"></a>Administración de dispositivos
 
-Para conectar un dispositivo por primera vez, siga las instrucciones que aparecen en [requisitos y el programa de instalación](~/tools/live-player/install.md). Puede asociar varios dispositivos (por ejemplo un iOS y un Android) y administrarlos a través del IDE.
+Para conectar un dispositivo por primera vez, siga las instrucciones de [requisitos & programa de instalación](~/tools/live-player/install.md). Puede emparejar varios dispositivos (por ejemplo, iOS y Android) y administrarlos a través del IDE.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-En Visual Studio, elija **Herramientas > Xamarin Player Live > Administrar dispositivos...**
+En Visual Studio, elija **Herramientas > Xamarin Live Player > Administrar dispositivos...**
 
 ![Administrar la ventana de dispositivos](player-images/manage-tools-menu-vs.png)
 
-Esta ventana permite hacer lo siguiente:
+Esta ventana le permite hacer lo siguiente:
 
-- Par de un nuevo dispositivo examinando el código
-- O bien emparejar un dispositivo escribiendo el código que se muestra en su pantalla
+- Emparejamiento de un dispositivo nuevo examinando el código
+- O bien emparejar un dispositivo escribiendo el código se muestra en la pantalla
 - Quitar dispositivos existentes de la lista
 
-También puede tener acceso a esta ventana desde la lista de dispositivos.
+También puede acceder a esta ventana de la lista de dispositivos.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-En Visual Studio para Mac, elija **Herramientas > (Xamarin Player Live) administrar dispositivos...**
+En Visual Studio para Mac, elija **Herramientas > (Xamarin Live Player) administrar dispositivos...**
 
 ![Administrar la ventana de dispositivos](player-images/manage-tools-menu.png)
 
-Esta ventana permite hacer lo siguiente:
+Esta ventana le permite hacer lo siguiente:
 
-- Par de un nuevo dispositivo examinando el código
-- O bien emparejar un dispositivo escribiendo el código que se muestra en su pantalla
+- Emparejamiento de un dispositivo nuevo examinando el código
+- O bien emparejar un dispositivo escribiendo el código se muestra en la pantalla
 - Quitar dispositivos existentes de la lista
 
 ![Administrar la ventana de dispositivos](player-images/manage.png)
 
-También puede tener acceso a esta ventana desde la lista de dispositivos:
+También puede acceder a esta ventana de la lista de dispositivos:
 
-![Elegir los dispositivos de Reproductor de Xamarin en directo de la lista de dispositivos](player-images/manage-device-menu.png)
+![Elija los dispositivos de Xamarin Live Player en la lista de dispositivos](player-images/manage-device-menu.png)
 
 -----
 

@@ -1,26 +1,26 @@
 ---
 title: 'Xamarin.Essentials: Bloqueo de pantalla'
-description: Este documento describe la clase ScreenLock en Xamarin.Essentials, que puede solicitar para impedir que la pantalla del modo de suspensión cuando se ejecuta la aplicación.
+description: Este documento describe la clase ScreenLock en Xamarin.Essentials, que puede solicitar para impedir que la pantalla queda suspendido cuando se ejecuta la aplicación.
 ms.assetid: 6B67C114-315E-4199-AA72-3F90E85A4909
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 3c8110b7abc86fe1d12485579f134997718540e6
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782913"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38848575"
 ---
 # <a name="xamarinessentials-screen-lock"></a>Xamarin.Essentials: Bloqueo de pantalla
 
 ![La versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-El **ScreenLock** clase puede solicitar para impedir que la pantalla del modo de suspensión cuando se ejecuta la aplicación.
+El **ScreenLock** clase puede solicitar para impedir que la pantalla queda suspendido cuando se ejecuta la aplicación.
 
-## <a name="using-screenlock"></a>Usar ScreenLock
+## <a name="using-screenlock"></a>Uso de ScreenLock
 
-Agregue una referencia a Xamarin.Essentials en la clase:
+Agregue una referencia a Xamarin.Essentials en su clase:
 
 ```csharp
 using Xamarin.Essentials;
@@ -43,5 +43,5 @@ public class ScreenLockTest
 
 ## <a name="api"></a>API
 
-- [Código de origen del bloqueo de pantalla](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/ScreenLock)
+- [Código fuente de bloqueo de pantalla](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/ScreenLock)
 - [Documentación de la API de bloqueo de pantalla](xref:Xamarin.Essentials.ScreenLock)

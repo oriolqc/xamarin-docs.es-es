@@ -1,32 +1,32 @@
 ---
 title: 'Xamarin.Essentials: Marcador de teléfono'
-description: La clase PhoneDialer en Xamarin.Essentials permite a una aplicación abrir un vínculo web en el explorador preferida de sistema optimizado o un explorador externo.
+description: La clase PhoneDialer en Xamarin.Essentials permite que una aplicación abrir un vínculo web en el explorador preferido del sistema optimizado o el explorador externo.
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 6733e43ed4174d1dd78b2e8f70268eb54adadb98
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782858"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38831402"
 ---
 # <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Marcador de teléfono
 
 ![La versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-El **PhoneDialer** clase permite a una aplicación abrir un vínculo web en el explorador preferida de sistema optimizado o un explorador externo.
+El **PhoneDialer** clase permite que una aplicación abrir un vínculo web en el explorador preferido del sistema optimizado o el explorador externo.
 
 ## <a name="using-phone-dialer"></a>Mediante el marcador de teléfono
 
-Agregue una referencia a Xamarin.Essentials en la clase:
+Agregue una referencia a Xamarin.Essentials en su clase:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-La funcionalidad de telefónico funciona mediante una llamada a la `Open` método con un número de teléfono para abrir el marcador con. Cuando `Open` se solicita la API intentarán volver a dar formato al número basándose en el código de país, si se especifica.
+La funcionalidad de marcador telefónico funciona mediante una llamada a la `Open` método con un número de teléfono para abrir el marcador con. Cuando `Open` se solicita la API intentarán volver a dar formato al número basándose en el código de país, si se especifica.
 
 ```csharp
 public class PhoneDialerTest

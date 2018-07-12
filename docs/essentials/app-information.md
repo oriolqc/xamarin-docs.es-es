@@ -1,16 +1,16 @@
 ---
 title: 'Xamarin.Essentials: Información de la aplicación'
-description: Este documento describe la clase de AppInfo en Xamarin.Essentials, que proporciona información acerca de la aplicación. Por ejemplo, muestra el nombre de la aplicación y la versión.
+description: Este documento describe la clase AppInfo en Xamarin.Essentials, que proporciona información acerca de la aplicación. Por ejemplo, muestra el nombre de la aplicación y la versión.
 ms.assetid: 15924FCB-19E0-45B2-944E-E94FD7AE12FA
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
 ms.openlocfilehash: 7e79b3003f41b8de22950624e44e8c9e0e7e7e31
-ms.sourcegitcommit: 72450a6a29599fa133ff4f16fb0b1f443d89f9dc
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37080279"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38831512"
 ---
 # <a name="xamarinessentials-app-information"></a>Xamarin.Essentials: Información de la aplicación
 
@@ -20,13 +20,13 @@ El **AppInfo** clase proporciona información acerca de la aplicación.
 
 ## <a name="using-appinfo"></a>Uso de AppInfo
 
-Agregue una referencia a Xamarin.Essentials en la clase:
+Agregue una referencia a Xamarin.Essentials en su clase:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-## <a name="obtaining-application-information"></a>Obtener información de la aplicación:
+## <a name="obtaining-application-information"></a>Obtención de información de la aplicación:
 
 La siguiente información se expone a través de la API:
 
@@ -44,9 +44,9 @@ var version = AppInfo.VersionString;
 var build = AppInfo.BuildString;
 ```
 
-## <a name="displaying-application-settings"></a>Mostrar configuración de la aplicación
+## <a name="displaying-application-settings"></a>Mostrar la configuración de aplicación
 
-El **AppInfo** clase también puede mostrar una página de configuración de mantenida por el sistema operativo para la aplicación:
+El **AppInfo** clase también puede mostrar una página de configuración mantenida por el sistema operativo para la aplicación:
 
 ```csharp
 // Display settings page

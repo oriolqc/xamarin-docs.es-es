@@ -1,5 +1,5 @@
 ---
-title: Crear un tema personalizado Xamarin.Forms
+title: Crear un tema personalizado de Xamarin.Forms
 description: En este artículo se explica cómo crear un tema personalizado de Xamarin.Forms para hacer referencia a en una aplicación.
 ms.prod: xamarin
 ms.assetid: 4FE08ADC-093F-47FA-B33C-20CF08B5D7E0
@@ -8,25 +8,25 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/01/2017
 ms.openlocfilehash: 018193cf0b198fd87f0f09cbfeba52e9d2a0f68b
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245584"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38838175"
 ---
-# <a name="creating-a-custom-xamarinforms-theme"></a>Crear un tema personalizado Xamarin.Forms
+# <a name="creating-a-custom-xamarinforms-theme"></a>Crear un tema personalizado de Xamarin.Forms
 
-![](~/media/shared/preview.png "Esta API está actualmente en vista previa")
+![](~/media/shared/preview.png "Esta API está actualmente en versión preliminar")
 
-Además de agregar un tema de un paquete de Nuget (como el [luz](~/xamarin-forms/user-interface/themes/light.md) y [oscuro](~/xamarin-forms/user-interface/themes/dark.md) temas), puede crear su propio recurso de temas de diccionario que se pueden hacer referencia en la aplicación.
+Además de agregar un tema de un paquete Nuget (como el [luz](~/xamarin-forms/user-interface/themes/light.md) y [oscuro](~/xamarin-forms/user-interface/themes/dark.md) temas), puede crear su propio recurso de temas de diccionario que se pueden hacer referencia en la aplicación.
 
 ## <a name="example"></a>Ejemplo
 
-Los tres `BoxView`s se muestra en el [página temas](~/xamarin-forms/user-interface/themes/index.md) tienen un estilo según tres clases definidas en los dos temas.
+Los tres `BoxView`s que se muestra en el [página temas](~/xamarin-forms/user-interface/themes/index.md) tienen un estilo según tres clases definidas en los dos temas descargables.
 
 Para entender cómo funcionan, el marcado siguiente crea un estilo equivalente que se puede agregar directamente a su **App.xaml**.
 
-Tenga en cuenta el `Class` atributo `Style` (en contraposición a la [ `x:Key` ](~/xamarin-forms/user-interface/styles/inheritance.md) atributo disponible en versiones anteriores de Xamarin.Forms).
+Tenga en cuenta la `Class` atributo `Style` (en contraposición a la [ `x:Key` ](~/xamarin-forms/user-interface/styles/inheritance.md) atributo disponible en versiones anteriores de Xamarin.Forms).
 
 ```xml
 <ResourceDictionary>
@@ -63,17 +63,17 @@ Tenga en cuenta el `Class` atributo `Style` (en contraposición a la [ `x:Key` ]
 </ResourceDictionary>
 ```
 
-Observará que la `Rounded` clase hace referencia a un efecto personalizado `CornerRadius`.
-El código de este efecto se indica a continuación: hacer referencia al mismo correctamente un personalizado `xmlns` deben agregarse a la **App.xaml**del elemento raíz:
+Observará que el `Rounded` clase hace referencia a un efecto personalizado `CornerRadius`.
+El código para este efecto se indica a continuación: hacer referencia a él correctamente un personalizado `xmlns` deben agregarse a la **App.xaml**del elemento raíz:
 
 ```csharp
 xmlns:local="clr-namespace:ThemesDemo;assembly=ThemesDemo"
 ```
 
-### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>Código de C# en el proyecto de biblioteca estándar de .NET o un proyecto compartido
+### <a name="c-code-in-the-net-standard-library-project-or-shared-project"></a>Código C# en el proyecto de biblioteca estándar de .NET o un proyecto compartido
 
-El código para crear un vértice round `BoxView` utiliza [efectos](~/xamarin-forms/app-fundamentals/effects/index.md).
-El radio de redondeo que se aplica usando un `BindableProperty` y se implementa mediante la aplicación de un [efecto](~/xamarin-forms/app-fundamentals/effects/index.md). El efecto requiere código específico de la plataforma en la [iOS](#ios) y [Android](#android) proyectos (se muestra a continuación).
+El código para la creación de una esquina round `BoxView` usa [efectos](~/xamarin-forms/app-fundamentals/effects/index.md).
+El radio de redondeo se aplica mediante un `BindableProperty` y se implementa aplicando un [efecto](~/xamarin-forms/app-fundamentals/effects/index.md). El efecto requiere código específico de plataforma en la [iOS](#ios) y [Android](#android) proyectos (se muestra a continuación).
 
 ```csharp
 namespace ThemesDemo
@@ -128,7 +128,7 @@ namespace ThemesDemo
 
 <a name="ios" />
 
-### <a name="c-code-in-the-ios-project"></a>Código de C# en el proyecto de iOS
+### <a name="c-code-in-the-ios-project"></a>Código C# en el proyecto de iOS
 
 ```csharp
 using System;
@@ -184,7 +184,7 @@ namespace ThemesDemo.iOS
 
 <a name="android" />
 
-### <a name="c-code-in-the-android-project"></a>Código de C# en el proyecto de Android
+### <a name="c-code-in-the-android-project"></a>Código C# en el proyecto de Android
 
 ```csharp
 using System;
@@ -257,8 +257,8 @@ namespace ThemesDemo.Droid
 
 ## <a name="summary"></a>Resumen
 
-Un tema personalizado se puede crear mediante la definición de estilos para cada control que requiere la apariencia personalizada. Varios estilos para un control deben distinguirse por diferentes `Class` atributos en el diccionario de recursos y, a continuación, aplica estableciendo la `StyleClass` atributo en el control.
+Mediante la definición de estilos para cada control que requiere una apariencia personalizada se puede crear un tema personalizado. Varios estilos de un control se deben distinguir las diferentes `Class` atributos en el diccionario de recursos y, a continuación, aplica estableciendo el `StyleClass` atributo en el control.
 
-También puede usar un estilo [efectos](~/xamarin-forms/app-fundamentals/effects/index.md) para personalizar aún más la apariencia de un control.
+También puede utilizar un estilo [efectos](~/xamarin-forms/app-fundamentals/effects/index.md) para personalizar aún más la apariencia de un control.
 
-[Estilos implícitos](~/xamarin-forms/user-interface/styles/implicit.md) (pero un `x:Key` o `Style` atributo) seguirá aplicando a todos los controles que coinciden con la `TargetType`.
+[Los estilos implícitos](~/xamarin-forms/user-interface/styles/implicit.md) (pero no un `x:Key` o `Style` atributo) seguirá aplicando a todos los controles que coinciden con la `TargetType`.
