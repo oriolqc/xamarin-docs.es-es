@@ -1,67 +1,67 @@
 ---
-title: Espacios de nombres XAML de Xamarin.Forms
-description: XAML usa el atributo XML de xmlns para las declaraciones de espacio de nombres. Este artículo presenta la sintaxis de espacio de nombres XAML y muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo.
+title: Espacios de nombres XAML en Xamarin.Forms
+description: XAML usa el atributo xmlns XML para las declaraciones de espacio de nombres. Este artículo presenta la sintaxis del espacio de nombres XAML y muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo.
 ms.prod: xamarin
 ms.assetid: C03B5553-B199-4A19-9F0F-E5BCE1DB268F
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/18/2018
-ms.openlocfilehash: 25299bc3b56c2fbb748db202e43e75be183cce66
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: 30cbb2c3aebdafe2ebf35598c520ae725e01ce65
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209302"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995149"
 ---
-# <a name="xaml-namespaces-in-xamarinforms"></a>Espacios de nombres XAML de Xamarin.Forms
+# <a name="xaml-namespaces-in-xamarinforms"></a>Espacios de nombres XAML en Xamarin.Forms
 
-_XAML usa el atributo XML de xmlns para las declaraciones de espacio de nombres. Este artículo presenta la sintaxis de espacio de nombres XAML y muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo._
+_XAML usa el atributo xmlns XML para las declaraciones de espacio de nombres. Este artículo presenta la sintaxis del espacio de nombres XAML y muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo._
 
 ## <a name="overview"></a>Información general
 
-Hay dos declaraciones de espacio de nombres XAML que siempre están dentro del elemento raíz de un archivo XAML. El primero define el espacio de nombres predeterminado, tal como se muestra en el siguiente ejemplo de código XAML:
+Hay dos declaraciones de espacio de nombres XAML que siempre están dentro del elemento raíz de un archivo XAML. La primera define el espacio de nombres predeterminado, tal como se muestra en el ejemplo de código XAML siguiente:
 
 ```csharp
 xmlns="http://xamarin.com/schemas/2014/forms"
 ```
 
-El espacio de nombres predeterminado especifica que los elementos definidos en el archivo XAML no tiene ningún prefijo hacen referencia a las clases de Xamarin.Forms, como [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/).
+El espacio de nombres predeterminado especifica que los elementos definidos dentro del archivo XAML con ningún prefijo hace referencia a clases de Xamarin.Forms, como [ `ContentPage` ](xref:Xamarin.Forms.ContentPage).
 
-La segunda declaración de espacio de nombres se utiliza el `x` de prefijo, como se muestra en el siguiente ejemplo de código XAML:
+La segunda declaración de espacio de nombres usa el `x` prefijo, como se muestra en el ejemplo de código XAML siguiente:
 
 ```csharp
 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
 ```
 
-XAML usa los prefijos para declarar espacios de nombres no predeterminado, con el prefijo que se va a utilizar al hacer referencia a tipos en el espacio de nombres. El `x` declaración de espacio de nombres especifica que los elementos definen en el código XAML con un prefijo de `x` se utilizan para los elementos y atributos que son intrínsecos de XAML (específicamente la especificación de XAML 2009).
+XAML usa los prefijos para declarar los espacios de nombres no predeterminados, con el prefijo que se va a usar cuando se hace referencia a tipos del espacio de nombres. El `x` declaración de espacio de nombres especifica que los elementos definen en el XAML con el prefijo `x` se usan para los elementos y atributos que son intrínsecos de XAML (específicamente la especificación de XAML 2009).
 
-La siguiente tabla se describen los `x` atributos de espacio de nombres admitidos por Xamarin.Forms:
+La siguiente tabla se describen los `x` atributos de espacio de nombres compatibles con Xamarin.Forms:
 
 |Construcción|Descripción|
 |--- |--- |
-|`x:Arguments`|Especifica los argumentos de constructor de un constructor no predeterminado o de una declaración de objeto del método de fábrica.|
-|`x:Class`|Especifica el espacio de nombres y el nombre de una clase definida en XAML. El nombre de clase debe coincidir con el nombre de clase del archivo de código subyacente. Tenga en cuenta que esta construcción solo puede aparecer en el elemento raíz de un archivo XAML.|
+|`x:Arguments`|Especifica los argumentos de constructor para un constructor no predeterminado, o para una declaración de objeto del método de fábrica.|
+|`x:Class`|Especifica el nombre de clase y espacio de nombres para una clase definida en XAML. El nombre de clase debe coincidir con el nombre de clase del archivo de código subyacente. Tenga en cuenta que esta construcción sólo puede aparecer en el elemento raíz de un archivo XAML.|
 |`x:FactoryMethod`|Especifica un método de fábrica que puede usarse para inicializar un objeto.|
 |`x:FieldModifier`|Especifica el nivel de acceso para los campos generados para los elementos XAML con nombre.|
-|`x:Key`|Especifica una clave única definida por el usuario para cada recurso en un `ResourceDictionary`. Valor de la clave se usa para recuperar el recurso XAML y se utiliza normalmente como argumento para el `StaticResource` extensión de marcado.|
+|`x:Key`|Especifica una clave única definida por el usuario para cada recurso en un `ResourceDictionary`. El valor de clave se usa para recuperar el recurso XAML y se utiliza normalmente como argumento para el `StaticResource` extensión de marcado.|
 |`x:Name`|Especifica un nombre de objeto en tiempo de ejecución para el elemento XAML. Establecer `x:Name` es similar a declarar una variable en el código.|
 |`x:TypeArguments`|Especifica los argumentos de tipo genérico para el constructor de un tipo genérico.|
 
-Para obtener más información sobre la `x:FieldModifier` de atributo, vea [modificadores de campo](~/xamarin-forms/xaml/field-modifiers.md). Para obtener más información sobre la `x:Arguments`, `x:FactoryMethod`, y `x:TypeArguments` atributos, vea [pasar argumentos en XAML](~/xamarin-forms/xaml/passing-arguments.md).
+Para obtener más información sobre la `x:FieldModifier` atributo, vea [modificadores de campo](~/xamarin-forms/xaml/field-modifiers.md). Para obtener más información sobre la `x:Arguments`, `x:FactoryMethod`, y `x:TypeArguments` atributos, vea [pasar argumentos en XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
-En XAML, las declaraciones de espacio de nombres heredan del elemento primario a elemento secundario. Por lo tanto, al definir un espacio de nombres en el elemento raíz de un archivo XAML, todos los elementos dentro de ese archivo heredan la declaración de espacio de nombres.
+En XAML, las declaraciones de espacio de nombres se heredan de elemento primario al elemento secundario. Por lo tanto, al definir un espacio de nombres en el elemento raíz de un archivo XAML, todos los elementos dentro de ese archivo heredan la declaración de espacio de nombres.
 
-## <a name="declaring-namespaces-for-types"></a>Declarar espacios de nombres de tipos
+## <a name="declaring-namespaces-for-types"></a>Declarar espacios de nombres para tipos
 
-Pueden hacer referencia a tipos en XAML mediante la declaración de un espacio de nombres XAML con un prefijo con la declaración de espacio de nombres especificando el nombre de espacio de nombres de Common Language Runtime (CLR) y, opcionalmente, un nombre de ensamblado. Esto se consigue mediante la definición de valores para las siguientes palabras clave dentro de la declaración de espacio de nombres:
+Pueden hacer referencia a tipos en XAML mediante la declaración de un espacio de nombres XAML con un prefijo, con la declaración de espacio de nombres que especifica el nombre del espacio de nombres de Common Language Runtime (CLR) y, opcionalmente, un nombre de ensamblado. Esto se logra mediante la definición de los valores de las siguientes palabras clave dentro de la declaración de espacio de nombres:
 
-- **espacio de nombres CLR:** o **con:** : el espacio de nombres CLR declarado dentro del ensamblado que contiene los tipos que se va a exponer como elementos XAML. Esta palabra clave es necesaria.
-- **ensamblado =** : el ensamblado que contiene el espacio de nombres CLR que se hace referencia. Este valor es el nombre del ensamblado sin la extensión de archivo. La ruta de acceso al ensamblado que se debe establecer como una referencia en el archivo de proyecto que contiene el archivo XAML que hará referencia el ensamblado. Esta palabra clave se puede omitir si el **clr-namespace** valor está comprendido en el mismo ensamblado que el código de aplicación que hace referencia a los tipos.
+- **clr-namespace:** o **mediante:** : el espacio de nombres CLR declarado dentro del ensamblado que contiene los tipos que se exponen como elementos XAML. Esta palabra clave es necesaria.
+- **ensamblado =** : el ensamblado que contiene el espacio de nombres CLR que se hace referencia. Este valor es el nombre del ensamblado, sin la extensión de archivo. La ruta de acceso al ensamblado se debe establecer como referencia en el archivo de proyecto que contiene el archivo XAML que hará referencia el ensamblado. Esta palabra clave se puede omitir si el **clr-namespace** valor está dentro del mismo ensamblado que el código de aplicación que hace referencia a los tipos.
 
-Tenga en cuenta que el carácter que separa el `clr-namespace` o `using` token respecto de su valor es un signo de dos puntos, mientras que el carácter que separa el `assembly` token respecto de su valor es un signo igual. El carácter que se va a usar entre los dos tokens es un punto y coma.
+Tenga en cuenta que el carácter que separa el `clr-namespace` o `using` símbolo (token) de su valor es un signo de dos puntos, mientras que el carácter que separa el `assembly` símbolo (token) de su valor es un signo igual. El carácter que se va a usar entre los dos tokens es un punto y coma.
 
-En el ejemplo de código siguiente se muestra una declaración de espacio de nombres XAML:
+El ejemplo de código siguiente muestra una declaración de espacio de nombres XAML:
 
 ```xaml
 <ContentPage ... xmlns:local="clr-namespace:HelloWorld" ...>
@@ -69,7 +69,7 @@ En el ejemplo de código siguiente se muestra una declaración de espacio de nom
 </ContentPage>
 ```
 
-O bien, esto puede escribirse como:
+Como alternativa, esto puede escribirse como:
 
 ```xaml
 <ContentPage ... xmlns:local="using:HelloWorld" ...>
@@ -77,7 +77,7 @@ O bien, esto puede escribirse como:
 </ContentPage>
 ```
 
-El `local` prefijo es una convención usada para indicar que los tipos en el espacio de nombres son locales de la aplicación. O bien, si los tipos están en otro ensamblado, el nombre del ensamblado debe también definirse en la declaración de espacio de nombres, como se muestra en el siguiente ejemplo de código XAML:
+El `local` prefijo es una convención que se utiliza para indicar que los tipos del espacio de nombres son locales de la aplicación. Como alternativa, si los tipos están en un ensamblado diferente, el nombre del ensamblado debe también se define en la declaración de espacio de nombres, como se muestra en el ejemplo de código XAML siguiente:
 
 ```xaml
 <ContentPage ... xmlns:behaviors="clr-namespace:Behaviors;assembly=BehaviorsLibrary" ...>
@@ -85,7 +85,7 @@ El `local` prefijo es una convención usada para indicar que los tipos en el esp
 </ContentPage>
 ```
 
-El prefijo de espacio de nombres, a continuación, se especifica al declarar una instancia de un tipo de un espacio de nombres importado, como se muestra en el siguiente ejemplo de código XAML:
+El prefijo de espacio de nombres, a continuación, se especifica al declarar una instancia de un tipo a partir de un espacio de nombres importado, como se muestra en el ejemplo de código XAML siguiente:
 
 ```xaml
 <ListView ...>
@@ -97,7 +97,7 @@ El prefijo de espacio de nombres, a continuación, se especifica al declarar una
 
 ## <a name="summary"></a>Resumen
 
-Este artículo introdujo la sintaxis de espacio de nombres XAML y muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo. XAML usa el `xmlns` pueden hacer referencia a atributos XML para las declaraciones de espacio de nombres y tipos en XAML mediante la declaración de un espacio de nombres XAML con un prefijo.
+En este artículo introdujo la sintaxis del espacio de nombres XAML y se muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo. XAML usa la `xmlns` puede hacer referencia a las declaraciones de espacio de nombres y tipos de atributo XML en XAML mediante la declaración de un espacio de nombres XAML con un prefijo.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

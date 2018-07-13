@@ -1,24 +1,24 @@
 ---
-title: Introducción a la API Xamarin.iOS
-description: Vínculos de este documento a la documentación de referencia de API de Xamarin, una guía que describe el diseño de la API de Xamarin.iOS y una lista de ensamblados que están disponibles para su uso en el desarrollo de Xamarin.
+title: Introducción a la API de Xamarin.iOS
+description: Este documento incluye vínculos a la documentación de referencia de API de Xamarin, una guía que describe el diseño de API de Xamarin.iOS y una lista de ensamblados que están disponibles para su uso en desarrollo de Xamarin.
 ms.prod: xamarin
 ms.assetid: 4C1669A4-C12B-9C49-4A39-9046576D10DC
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 81c30af4d7c95960344015ed6dcfd868deda06af
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: c6e0e770e844bf186dfb936fb8136b20f2c81daf
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786140"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994915"
 ---
-# <a name="xamarinios-api-overview"></a>Introducción a la API Xamarin.iOS
+# <a name="xamarinios-api-overview"></a>Introducción a la API de Xamarin.iOS
 
-Expone Xamarin.iOS C# / CIL enlace a la API CocoaTouch y también proporciona acceso a las API de archivo de CIL de ECMA y varias otras API. NET.
+Xamarin.iOS expone un C# / CIL de enlace a la API CocoaTouch y también proporciona acceso a las API de CIL de ECMA y varias otras API. NET.
 
- **Referencia de la API**: referencia de la API está disponible en [ https://developer.xamarin.com/api/ ](https://developer.xamarin.com/api/), comience en la [nodo Xamarin.iOS Framework](https://developer.xamarin.com/api/root/ios-unified/) para los enlaces de API para el iPhone nativo APIs o vaya a [ Nodo de bibliotecas de clases base](https://developer.xamarin.com/api/root/classlib/) para obtener documentación sobre la API. NET.
+ **Referencia de API**: referencia de la API está disponible en [ https://developer.xamarin.com/api/ ](https://docs.microsoft.com/dotnet/api/), a partir de la [nodo Xamarin.iOS Framework](https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8) para los enlaces de API para el iPhone nativo API o vaya a [ Nodo de bibliotecas de clases base](https://docs.microsoft.com/dotnet/api/?view=netstandard-2.0) para obtener documentación sobre la API. NET.
 
- **Diseño de la API**: se trata el diseño de la API para el enlace de CIL/Objective-C en el [diseño de la API de Xamarin.iOS](~/ios/internals/api-design/index.md) documento y se describe cómo se enlaza el objetivo-C y la API de C desde CocoaTouch y exponen los empleados para C# / world CIL .
+ **Diseño de API**: se trata el diseño de la API para el enlace de CIL, Objective-C en el [diseño de API de Xamarin.iOS](~/ios/internals/api-design/index.md) documento y se describe cómo enlazar el Objective-C y la API de C de CocoaTouch y los C# expone / mundo CIL .
 
- **Ensamblados**: comprobar nuestro [lista de ensamblados enlazados](~/cross-platform/internals/available-assemblies.md) para obtener una referencia detallada de las API de C# / CIL/están disponibles para su uso en Xamarin.iOS ECMA.
+ **Los ensamblados**: comprobar nuestro [lista de ensamblados enlazados](~/cross-platform/internals/available-assemblies.md) para una referencia detallada de las API de C# / CIL/ECMA están disponibles para su uso en Xamarin.iOS.

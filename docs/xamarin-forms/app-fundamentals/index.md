@@ -1,24 +1,24 @@
 ---
-title: Fundamentos de la aplicación de Xamarin.Forms
-description: Explorar los fundamentos de desarrollo de aplicaciones de Xamarin.Forms, entre otras, todos los conceptos principales requeridos, a través de dar los últimos retoques como la accesibilidad y la localización.
+title: Principios de la aplicación de Xamarin.Forms
+description: Exploración de los fundamentos de desarrollo de aplicaciones de Xamarin.Forms, incluidos todos los conceptos principales necesarios, a través de toques finales, como la localización y accesibilidad.
 ms.prod: xamarin
 ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2017
-ms.openlocfilehash: d75cac7a21b2c74a6627845cdda8e4c04e72bddc
-ms.sourcegitcommit: eac092f84b603958c761df305f015ff84e0fad44
+ms.openlocfilehash: 515dbd2683619cfcfb7a6c8ecac6bc147265ef7d
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2018
-ms.locfileid: "36309780"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995617"
 ---
-# <a name="xamarinforms-application-fundamentals"></a>Fundamentos de la aplicación de Xamarin.Forms
+# <a name="xamarinforms-application-fundamentals"></a>Principios de la aplicación de Xamarin.Forms
 
 ## <a name="accessibilityaccessibilityindexmd"></a>[Accesibilidad](accessibility/index.md)
 
-Sugerencias para incorporar características de acceso (por ejemplo, compatibilidad con herramientas de lectura de pantalla) con Xamarin.Forms.
+Sugerencias para incorporar características accesibles (por ejemplo, la compatibilidad con herramientas de lectura de pantalla) con Xamarin.Forms.
 
 ## <a name="app-classapplication-classmd"></a>[Clase de aplicación](application-class.md)
 
@@ -50,23 +50,23 @@ Los efectos permiten personalizar los controles nativos de cada plataforma y se 
 
 ## <a name="filesfilesmd"></a>[Archivos](files.md)
 
-Archivo de control con Xamarin.Forms se puede lograr utilizando código en una biblioteca de .NET estándar, o mediante el uso de recursos incrustados.
+Archivo de control con Xamarin.Forms puede lograrse mediante código en una biblioteca .NET Standard, o mediante el uso de recursos incrustados.
 
 ## <a name="gesturesgesturesindexmd"></a>[Gestos](gestures/index.md)
 
-La clase [`GestureRecognizer`](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/) de Xamarin.Forms admite gestos de tocar, reducir y movimiento panorámico en controles de interfaz de usuario.
+La clase [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) de Xamarin.Forms admite gestos de tocar, reducir y movimiento panorámico en controles de interfaz de usuario.
 
 ## <a name="localizationlocalizationindexmd"></a>[Localización](localization/index.md)
 
-El marco de trabajo de localización integrado de .NET se puede utilizar para compilar aplicaciones multilingües multiplataforma con Xamarin.Forms.
+El marco de trabajo de localización integrada de .NET puede utilizarse para generar aplicaciones multilingües multiplataforma con Xamarin.Forms.
 
 ## <a name="local-databasesdatabasesmd"></a>[Bases de datos locales](databases.md)
 
-Xamarin.Forms es compatible con aplicaciones orientadas a base de datos mediante el motor de base de datos de SQLite, lo que permite cargar y guardar los objetos en el código compartido.
+Xamarin.Forms es compatible con aplicaciones basadas en la base de datos con el motor de base de datos de SQLite, lo que permite cargar y guardar los objetos en código compartido.
 
 ## <a name="messaging-centermessaging-centermd"></a>[Centro de mensajería](messaging-center.md)
 
-Xamarin.Forms `MessagingCenter` permite ver los modelos y otros componentes se comuniquen sin necesidad de saber nada sobre entre sí además de un contrato de mensaje simple.
+Xamarin.Forms `MessagingCenter` permite ver los modelos y otros componentes se comuniquen sin tener que saber nada acerca de sí además de un contrato de mensaje simple.
 
 ## <a name="navigationnavigationindexmd"></a>[Navegación](navigation/index.md)
 

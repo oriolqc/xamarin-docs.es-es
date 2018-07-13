@@ -7,16 +7,16 @@ ms.assetid: 88882A48-3226-42D1-96ED-241250B64A84
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 2dd94d5fb8eecc5cf4a3e376bc67c2cb6afb153b
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 54238b46b759497bc6c6738673b98db833399752
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935444"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998366"
 ---
 # <a name="summary-of-chapter-14-absolute-layout"></a>Resumen del capítulo 14. Diseño absoluto
 
-Al igual que `StackLayout`, [ `AbsoluteLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/) deriva `Layout<View>` y hereda un `Children` propiedad. `AbsoluteLayout` implementa un sistema de diseño que requiere que el programador especificar las posiciones de sus elementos secundarios y, opcionalmente, su tamaño. La posición se especifica mediante la esquina superior izquierda del elemento secundario respecto a la esquina superior izquierda de la `AbsoluteLayout` en unidades independientes del dispositivo. `AbsoluteLayout` También implementa una característica de ajuste de tamaño y posición proporcional.
+Al igual que `StackLayout`, [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) deriva `Layout<View>` y hereda un `Children` propiedad. `AbsoluteLayout` implementa un sistema de diseño que requiere que el programador especificar las posiciones de sus elementos secundarios y, opcionalmente, su tamaño. La posición se especifica mediante la esquina superior izquierda del elemento secundario respecto a la esquina superior izquierda de la `AbsoluteLayout` en unidades independientes del dispositivo. `AbsoluteLayout` También implementa una característica de ajuste de tamaño y posición proporcional.
 
 `AbsoluteLayout` debe considerarse como un sistema de diseño especial que se usará sólo cuando el programador puede imponer un tamaño de los elementos secundarios (por ejemplo, `BoxView` elementos) o cuando el tamaño del elemento no afecta a la posición de los demás elementos secundarios. El `HorizontalOptions` y `VerticalOptions` propiedades no tienen ningún efecto en los elementos secundarios de un `AbsoluteLayout`.
 
@@ -24,9 +24,9 @@ Este capítulo también introduce la característica importante de *adjunta prop
 
 ## <a name="absolutelayout-in-code"></a>AbsoluteLayout en código
 
-Puede agregar un elemento secundario de la `Children` colección de un `AbsoluteLayout` utilizando el estándar [ `Add` ](https://developer.xamarin.com/api/member/System.Collections.Generic.ICollection%3CT%3E.Add/p/T/) método, pero `AbsoluteLayout` también proporciona extendido [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/) método que le permite especificar un [ `Rectangle` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Rectangle/). Otro [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/) método sólo requiere un [ `Point` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Point/), en cuyo caso el elemento secundario no está restringido y ajusta su tamaño.
+Puede agregar un elemento secundario de la `Children` colección de un `AbsoluteLayout` utilizando el estándar [ `Add` ](xref:System.Collections.Generic.ICollection`1.Add*) método, pero `AbsoluteLayout` también proporciona extendido [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Rectangle/Xamarin.Forms.AbsoluteLayoutFlags/) método que le permite especificar un [ `Rectangle` ](xref:Xamarin.Forms.Rectangle). Otro [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout+IAbsoluteList%3CT%3E.Add/p/Xamarin.Forms.View/Xamarin.Forms.Point/) método sólo requiere un [ `Point` ](xref:Xamarin.Forms.Point), en cuyo caso el elemento secundario no está restringido y ajusta su tamaño.
 
-Puede crear un `Rectangle` valor con un [constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/System.Double/System.Double/System.Double/System.Double/) que requiere cuatro valores &mdash; los dos primeros, que indica la posición de la esquina superior izquierda del elemento secundario con respecto a su elemento primario y el segundo (dos) que indica el tamaño del elemento secundario. O bien puede usar un [constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Rectangle.Rectangle/p/Xamarin.Forms.Point/Xamarin.Forms.Size/) que requiere un `Point` y un [ `Size` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Size/) valor.
+Puede crear un `Rectangle` valor con un [constructor](xref:Xamarin.Forms.Rectangle.%23ctor(System.Double,System.Double,System.Double,System.Double)) que requiere cuatro valores &mdash; los dos primeros, que indica la posición de la esquina superior izquierda del elemento secundario con respecto a su elemento primario y el segundo (dos) que indica el tamaño del elemento secundario. O bien puede usar un [constructor](xref:Xamarin.Forms.Rectangle.%23ctor(Xamarin.Forms.Point,Xamarin.Forms.Size)) que requiere un `Point` y un [ `Size` ](xref:Xamarin.Forms.Size) valor.
 
 Estos `Add` métodos se muestran en [ **AbsoluteDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/AbsoluteDemo), qué posiciones `BoxView` elementos mediante `Rectangle` valores y un `Label` elemento utilizando solo un `Point` valor.
 
@@ -34,15 +34,15 @@ El [ **ChessboardFixed** ](https://github.com/xamarin/xamarin-forms-book-samples
 
 ## <a name="attached-bindable-properties"></a>Adjunta propiedades enlazables
 
-También es posible establecer la posición y, opcionalmente, el tamaño de un elemento secundario de un `AbsoluteLayout` después de que se agregó a la `Children` colección utilizando el método estático [ `AbsoluteLayout.SetLayoutBounds` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.SetLayoutBounds/p/Xamarin.Forms.BindableObject/Xamarin.Forms.Rectangle/). El primer argumento es el elemento secundario; el segundo es un `Rectangle` objeto. Puede especificar que el elemento secundario ajusta su tamaño horizontalmente o verticalmente estableciendo los valores de ancho y alto en la [ `AbsoluteLayout.AutoSize` ](https://developer.xamarin.com/api/property/Xamarin.Forms.AbsoluteLayout.AutoSize/) constante.
+También es posible establecer la posición y, opcionalmente, el tamaño de un elemento secundario de un `AbsoluteLayout` después de que se agregó a la `Children` colección utilizando el método estático [ `AbsoluteLayout.SetLayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutBounds(Xamarin.Forms.BindableObject,Xamarin.Forms.Rectangle)). El primer argumento es el elemento secundario; el segundo es un `Rectangle` objeto. Puede especificar que el elemento secundario ajusta su tamaño horizontalmente o verticalmente estableciendo los valores de ancho y alto en la [ `AbsoluteLayout.AutoSize` ](xref:Xamarin.Forms.AbsoluteLayout.AutoSize) constante.
 
 El [ **ChessboardDynamic** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/ChessboardDynamic) ejemplo pone el `AbsoluteLayout` en un `ContentView` con un `SizeChanged` controlador para llamar a `AbsoluteLayout.SetLayoutBounds` en todos los elementos secundarios para que sean tan grande como sea posible.  
 
-La propiedad adjunta enlazable que `AbsoluteLayout` define es el campo estático de solo lectura de tipo `BindableProperty` denominado [ `AbsoluteLayout.LayoutBoundsProperty` ](https://developer.xamarin.com/api/field/Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty/). Estático `AbsoluteLayout.SetLayoutBounds` método se implementa mediante una llamada a `SetValue` secundario con el `AbsoluteLayout.LayoutBoundsProperty`. El elemento secundario contiene un diccionario en el que se almacenan la propiedad adjunta se puede enlazar y su valor. Durante el diseño, la `AbsoluteLayout` puede obtener ese valor mediante una llamada a [ `AbsoluteLayout.GetLayoutBounds` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.GetLayoutBounds/p/Xamarin.Forms.BindableObject/), que se implementa con un `GetValue` llamar.
+La propiedad adjunta enlazable que `AbsoluteLayout` define es el campo estático de solo lectura de tipo `BindableProperty` denominado [ `AbsoluteLayout.LayoutBoundsProperty` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutBoundsProperty). Estático `AbsoluteLayout.SetLayoutBounds` método se implementa mediante una llamada a `SetValue` secundario con el `AbsoluteLayout.LayoutBoundsProperty`. El elemento secundario contiene un diccionario en el que se almacenan la propiedad adjunta se puede enlazar y su valor. Durante el diseño, la `AbsoluteLayout` puede obtener ese valor mediante una llamada a [ `AbsoluteLayout.GetLayoutBounds` ](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutBounds(Xamarin.Forms.BindableObject)), que se implementa con un `GetValue` llamar.
 
 ## <a name="proportional-sizing-and-positioning"></a>Posición y dimensionamiento proporcional
 
-`AbsoluteLayout` implementa un cambio de tamaño proporcional y la posición de la característica. La clase define una segunda propiedad enlazable adjunta, [ `LayoutFlagsProperty` ](https://developer.xamarin.com/api/field/Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty/), con los métodos estáticos relacionados [ `AbsoluteLayout.SetLayoutFlags` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.SetLayoutFlags/p/Xamarin.Forms.BindableObject/Xamarin.Forms.AbsoluteLayoutFlags/) y [ `AbsoluteLayout.GetLayoutFlags` ](https://developer.xamarin.com/api/member/Xamarin.Forms.AbsoluteLayout.GetLayoutFlags/p/Xamarin.Forms.BindableObject/).
+`AbsoluteLayout` implementa un cambio de tamaño proporcional y la posición de la característica. La clase define una segunda propiedad enlazable adjunta, [ `LayoutFlagsProperty` ](xref:Xamarin.Forms.AbsoluteLayout.LayoutFlagsProperty), con los métodos estáticos relacionados [ `AbsoluteLayout.SetLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.SetLayoutFlags(Xamarin.Forms.BindableObject,Xamarin.Forms.AbsoluteLayoutFlags)) y [ `AbsoluteLayout.GetLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayout.GetLayoutFlags(Xamarin.Forms.BindableObject)).
 
 El argumento `AbsoluteLayout.SetLayoutFlags` y el valor devuelto de `AbsoluteLayout.GetLayoutFlags` es un valor de tipo [ `AbsoluteLayoutFlags` ](xref:Xamarin.Forms.AbsoluteLayoutFlags), una enumeración con los miembros siguientes:
 
@@ -87,7 +87,7 @@ Es un atributo en XAML que consta de un nombre de clase, un punto y un nombre de
 
 Puede usar `AbsoluteLayout` para construir un *superposición*, que cubre la página con otros controles, quizás para impedir que el usuario interactúa con los controles normales en la página.
 
-El [ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) ejemplo demuestra esta técnica y también se muestra la [ `ProgressBar` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ProgressBar/), que muestra la extensión a la que se ha completado un programa una tarea.
+El [ **SimpleOverlay** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/SimpleOverlay) ejemplo demuestra esta técnica y también se muestra la [ `ProgressBar` ](xref:Xamarin.Forms.ProgressBar), que muestra la extensión a la que se ha completado un programa una tarea.
 
 ## <a name="some-fun"></a>Divertirse un poco
 

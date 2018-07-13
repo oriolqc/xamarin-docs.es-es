@@ -1,45 +1,45 @@
 ---
-title: Consumir las extensiones de marcado XAML
-description: Este artículo explica cómo utilizar las extensiones de marcado de XAML de Xamarin.Forms para mejorar la eficacia y flexibilidad de XAML al permitir que los atributos del elemento que se pueden establecer desde una variedad de orígenes.
+title: Consumo de las extensiones de marcado XAML
+description: En este artículo se explica cómo usar las extensiones de marcado XAML de Xamarin.Forms para mejorar la eficacia y flexibilidad de XAML al permitir que los atributos del elemento debe establecerse en una variedad de orígenes.
 ms.prod: xamarin
 ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 01/05/2018
-ms.openlocfilehash: 278677d45f997ac446c2a20967dc3501179bf8da
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 6f0c15976871129362fb3d6d3287215d1fba2cb9
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245942"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995987"
 ---
-# <a name="consuming-xaml-markup-extensions"></a>Consumir las extensiones de marcado XAML
+# <a name="consuming-xaml-markup-extensions"></a>Consumo de las extensiones de marcado XAML
 
-Las extensiones de marcado XAML ayudar a mejorar la eficacia y flexibilidad de XAML al permitir que los atributos del elemento que se pueden establecer desde una variedad de orígenes. Varias extensiones de marcado XAML son parte de la especificación de XAML 2009. Estos aparecen en los archivos XAML con la costumbre `x` prefijo de espacio de nombres y se conocen con este prefijo. Se describen en las secciones siguientes:
+Las extensiones de marcado XAML que ayudan a mejorar la eficacia y flexibilidad de XAML al permitir que los atributos del elemento debe establecerse en una variedad de orígenes. Varias extensiones de marcado XAML forman parte de la especificación de XAML 2009. Esta información aparece en los archivos XAML con el habitual `x` prefijo de espacio de nombres y se conocen comúnmente por este prefijo. Estos métodos se describen en las secciones siguientes:
 
-- [`x:Static`](#static) &ndash; hacer referencia a propiedades estáticas, campos o miembros de la enumeración.
-- [`x:Reference`](#reference) &ndash; referencia de elementos en la página.
+- [`x:Static`](#static) &ndash; hacer referencia a propiedades estáticas, campos o los miembros de enumeración.
+- [`x:Reference`](#reference) &ndash; referencia de elementos en la página con nombre.
 - [`x:Type`](#type) &ndash; Establezca un atributo en un `System.Type` objeto.
 - [`x:Array`](#array) &ndash; construir una matriz de objetos de un tipo determinado.
 - [`x:Null`](#null) &ndash; Establezca un atributo en un `null` valor.
 
-Tres otras extensiones de marcado XAML históricamente han admitido por otras implementaciones de XAML y también son compatibles con Xamarin.Forms. Se describen más detalladamente en otros artículos:
+Tres otras extensiones de marcado XAML históricamente han sido compatible con otras implementaciones de XAML y también son compatibles con Xamarin.Forms. Estos se describen con más detalle en otros artículos:
 
-- `StaticResource` &ndash; hacer referencia a objetos de un diccionario de recursos, como se describe en el artículo [ **diccionarios de recursos**](~/xamarin-forms/xaml/resource-dictionaries.md).
-- `DynamicResource` &ndash; responder a los cambios en objetos en un diccionario de recursos, como se describe en el artículo [ **estilos dinámicos**](~/xamarin-forms/user-interface/styles/dynamic.md).
+- `StaticResource` &ndash; hacer referencia a objetos de un diccionario de recursos, como se describe en el artículo [ **los diccionarios de recursos**](~/xamarin-forms/xaml/resource-dictionaries.md).
+- `DynamicResource` &ndash; responder a cambios en los objetos en un diccionario de recursos, como se describe en el artículo [ **estilos dinámicos**](~/xamarin-forms/user-interface/styles/dynamic.md).
 - `Binding` &ndash; establecer un vínculo entre las propiedades de dos objetos, como se describe en el artículo [ **enlace de datos**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding` &ndash; realiza el enlace de datos de una plantilla de control, como se describe en el artículo [**enlace a partir de una plantilla de Control**] / guías/xamarin-forms/aplicación-fundamentals/plantillas/control-plantillas/enlace a plantilla /)
+- `TemplateBinding` &ndash; realiza el enlace de datos de una plantilla de control, como se describe en el artículo [**desde una plantilla de Control de enlace**] / guías/xamarin-forms/aplicación-Fundamentos/plantillas/control-plantillas/enlace a plantilla /)
 
-El [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/) diseño hace uso de la extensión de marcado personalizada [ `ConstraintExpression` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ConstraintExpression/). Esta extensión de marcado se describe en el artículo [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
+El [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) diseño hace uso de la extensión de marcado personalizada [ `ConstraintExpression` ](xref:Xamarin.Forms.ConstraintExpression). Esta extensión de marcado se describe en el artículo [ **RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
 <a name="static" />
 
 ## <a name="xstatic-markup-extension"></a>Extensiones de marcado x:Static
 
-El `x:Static` extensión de marcado es compatible con la [ `StaticExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.StaticExtension/) clase. La clase tiene una propiedad única denominada [ `Member` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.StaticExtension.Member/) de tipo `string` que se establece en el nombre de una constante pública, una propiedad estática, un campo estático o un miembro de enumeración.
+El `x:Static` extensión de marcado es compatible con la [ `StaticExtension` ](xref:Xamarin.Forms.Xaml.StaticExtension) clase. La clase tiene una propiedad única denominada [ `Member` ](xref:Xamarin.Forms.Xaml.StaticExtension.Member) de tipo `string` establecer en el nombre de una constante pública, una propiedad estática, campo estático o miembro de enumeración.
 
-Una manera común de utilizar `x:Static` consiste en definir una clase con algunas constantes o variables estáticas, como este pequeño `AppConstants` clase en el [ **MarkupExtensions** ](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/) programa:
+Una forma común de usar `x:Static` consiste en definir primero una clase con algunas constantes o variables estáticas, como Este diminuto `AppConstants` clase en el [ **MarkupExtensions** ](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/) programa:
 
 ```csharp
 static class AppConstants
@@ -48,7 +48,7 @@ static class AppConstants
 }
 ```
 
-El **x: Static demostración** página muestra varias maneras de utilizar el `x:Static` extensión de marcado. El enfoque más detallado crea instancias el `StaticExtension` clase entre `Label.FontSize` etiquetas de elemento de propiedad:
+El **x: Static demostración** página muestra varias maneras de usar el `x:Static` extensión de marcado. El enfoque más detallado, crea una instancia del `StaticExtension` clase entre `Label.FontSize` etiquetas de elemento de propiedad:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -70,7 +70,7 @@ El **x: Static demostración** página muestra varias maneras de utilizar el `x:
 </ContentPage>
 ```
 
-El analizador de XAML también permite la `StaticExtension` clase se abrevia como `x:Static`:
+El analizador XAML también permite la `StaticExtension` clase va a abreviar como `x:Static`:
 
 ```xaml
 <Label Text="Label No. 2">
@@ -80,38 +80,38 @@ El analizador de XAML también permite la `StaticExtension` clase se abrevia com
 </Label>
 ```
 
-Esto puede simplificar aún más, pero el cambio, introduce algunos nueva sintaxis: consta de colocar la `StaticExtension` clase y la configuración entre llaves del miembro. La expresión resultante se establece directamente en el `FontSize` atributo:
+Esto se puede simplificar aún más, pero el cambio presenta parte de la nueva sintaxis: consta de colocar el `StaticExtension` clase y la configuración entre llaves del miembro. La expresión resultante se establece directamente en el `FontSize` atributo:
 
 ```xaml
 <Label Text="Label No. 3"
        FontSize="{x:StaticExtension Member=local:AppConstants.NormalFontSize}" />
 ```
 
-Tenga en cuenta que hay *sin* comillas dentro de las llaves. El `Member` propiedad de `StaticExtension` ya no es un atributo XML. En su lugar es parte de la expresión para la extensión de marcado.
+Tenga en cuenta que hay *ningún* comillas encerrado entre llaves. El `Member` propiedad de `StaticExtension` ya no es un atributo XML. En realidad es parte de la expresión para la extensión de marcado.
 
-Tal y como se puede abreviar `x:StaticExtension` a `x:Static` cuando se use como un elemento de objeto, también puede abreviar en la expresión entre llaves:
+Tal como se puede abreviar `x:StaticExtension` a `x:Static` cuando se usa como un elemento de objeto, también puede abreviar en la expresión entre llaves:
 
 ```xaml
 <Label Text="Label No. 4"
        FontSize="{x:Static Member=local:AppConstants.NormalFontSize}" />
 ```
 
-El `StaticExtension` clase tiene un `ContentProperty` que hacen referencia a la propiedad de atributo `Member`, que marca esta propiedad como propiedad de contenido de la clase predeterminada. Para las extensiones de marcado XAML expresadas con llaves, puede eliminar el `Member=` forma parte de la expresión:
+El `StaticExtension` clase tiene un `ContentProperty` que hacen referencia a la propiedad de atributo `Member`, que marca esta propiedad como propiedad de contenido de la clase predeterminada. Para las extensiones de marcado XAML que expresa entre llaves, puede eliminar el `Member=` forma parte de la expresión:
 
 ```xaml
 <Label Text="Label No. 5"
        FontSize="{x:Static local:AppConstants.NormalFontSize}" />
 ```
 
-Esta es la forma más habitual de la `x:Static` extensión de marcado.
+Se trata de la forma más común de la `x:Static` extensión de marcado.
 
-El **demostración estático** página contiene dos ejemplos de otros. La etiqueta raíz del archivo XAML contiene una declaración de espacio de nombres XML para .NET `System` espacio de nombres:
+El **demostración estático** página contiene dos ejemplos de otros. La etiqueta a la raíz del archivo XAML contiene una declaración de espacio de nombres XML para .NET `System` espacio de nombres:
 
 ```xaml
 xmlns:sys="clr-namespace:System;assembly=mscorlib"
 ```
 
-Esto permite la `Label` tamaño de fuente se establezca en el campo estático `Math.PI`. Esto da lugar a texto pequeño en su lugar, por lo que la `Scale` propiedad está establecida en `Math.E`:
+Esto permite la `Label` tamaño de fuente debe establecerse en el campo estático `Math.PI`. Esto da como resultado texto pequeño en su lugar, por lo que la `Scale` propiedad está establecida en `Math.E`:
 
 ```xaml
 <Label Text="&#x03C0; &#x00D7; E sized text"
@@ -137,17 +137,17 @@ El último ejemplo se muestra la `Device.RuntimePlatform` valor. El `Environment
 
 Este es el ejemplo que se ejecutan en las tres plataformas:
 
-[![x: Static demostración](consuming-images/staticdemo-small.png "x: Static demostración")](consuming-images/staticdemo-large.png#lightbox "demostración x: Static")
+[![Demostración de x: Static](consuming-images/staticdemo-small.png "x: Static demostración")](consuming-images/staticdemo-large.png#lightbox "demostración x: Static")
 
 <a name="reference" />
 
 ## <a name="xreference-markup-extension"></a>x:Reference (extensión de marcado)
 
-El `x:Reference` extensión de marcado es compatible con la [ `ReferenceExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.ReferenceExtension/) clase. La clase tiene una propiedad única denominada [ `Name` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.ReferenceExtension.Name/) de tipo `string` que se establece en el nombre de un elemento en la página que se ha proporcionado un nombre con `x:Name`. Esto `Name` propiedad es la propiedad de contenido de `ReferenceExtension`, por lo que `Name=` no es necesaria cuando `x:Reference` aparece entre llaves.
+El `x:Reference` extensión de marcado es compatible con la [ `ReferenceExtension` ](xref:Xamarin.Forms.Xaml.ReferenceExtension) clase. La clase tiene una propiedad única denominada [ `Name` ](xref:Xamarin.Forms.Xaml.ReferenceExtension.Name) typu `string` establecer en el nombre de un elemento en la página que se asignó un nombre con `x:Name`. Esto `Name` propiedad es la propiedad content de `ReferenceExtension`, por lo que `Name=` no es necesaria cuando `x:Reference` aparece entre llaves.
 
-El `x:Reference` extensión de marcado se utiliza exclusivamente con enlaces de datos, que se describen con más detalle en el artículo [ **enlace de datos**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+El `x:Reference` extensión de marcado se utiliza exclusivamente con los enlaces de datos, que se describen con más detalle en el artículo [ **enlace de datos**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
-El **x: Reference demostración** página muestra dos usos de `x:Reference` con enlaces de datos, la primera que se usa para establecer el `Source` propiedad de la `Binding` objeto y el segundo donde se usa para establecer el `BindingContext` propiedad de enlaces de dos datos:
+El **x: Reference demostración** página muestra dos usos de `x:Reference` con enlaces de datos, la primera que se usa para establecer el `Source` propiedad de la `Binding` objeto y el segundo donde se usa para establecer el `BindingContext` propiedad para los enlaces de datos de dos:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -179,7 +179,7 @@ El **x: Reference demostración** página muestra dos usos de `x:Reference` con 
 </ContentPage>
 ```
 
-Ambos `x:Reference` expresiones utilizan la versión abreviada de la `ReferenceExtension` nombre de clase y eliminar el `Name=` forma parte de la expresión. En el primer ejemplo, el `x:Reference` extensión de marcado se incrusta en el `Binding` extensión de marcado. Tenga en cuenta que la `Source` y `StringFormat` configuración está separada por comas. Este es el programa que se ejecuta en las tres plataformas:
+Ambos `x:Reference` expresiones usan la versión abreviada de la `ReferenceExtension` nombre de clase y elimine el `Name=` forma parte de la expresión. En el primer ejemplo, el `x:Reference` extensión de marcado está incrustada en el `Binding` extensión de marcado. Tenga en cuenta que el `Source` y `StringFormat` configuración está separada por comas. Este es el programa que se ejecutan en las tres plataformas:
 
 [![Demostración de x: Reference](consuming-images/referencedemo-small.png "x: Reference demostración")](consuming-images/referencedemo-large.png#lightbox "x: Reference demostración")
 
@@ -187,15 +187,15 @@ Ambos `x:Reference` expresiones utilizan la versión abreviada de la `ReferenceE
 
 ## <a name="xtype-markup-extension"></a>x:Type (Extensión de marcado)
 
-El `x:Type` extensión de marcado es el equivalente XAML de C# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) palabra clave. Es compatible con la [ `TypeExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.TypeExtension/) (clase), que define una propiedad denominada [ `TypeName` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.TypeExtension.TypeName/) de tipo `string` que se establece en un nombre de clase o estructura. El `x:Type` devuelve de la extensión de marcado el [ `System.Type` ](https://developer.xamarin.com/api/type/System.Type/) objeto de esa clase o estructura. `TypeName` es la propiedad de contenido de `TypeExtension`, por lo que `TypeName=` no es necesaria cuando `x:Type` aparece con las llaves.
+El `x:Type` extensión de marcado es el equivalente XAML de C# [ `typeof` ](/dotnet/csharp/language-reference/keywords/typeof/) palabra clave. Es compatible con la [ `TypeExtension` ](xref:Xamarin.Forms.Xaml.TypeExtension) (clase), que define una propiedad denominada [ `TypeName` ](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) de tipo `string` que se establece en un nombre de clase o estructura. El `x:Type` devuelve de la extensión de marcado el [ `System.Type` ](xref:System.Type) objeto de esa clase o estructura. `TypeName` es la propiedad content de `TypeExtension`, por lo que `TypeName=` no es necesaria cuando `x:Type` aparece entre llaves.
 
-Dentro de Xamarin.Forms, hay varias propiedades que tienen argumentos de tipo `Type`. Algunos ejemplos son la [ `TargetType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/) propiedad de `Style`y el [x: TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) atributo utilizado para especificar argumentos en las clases genéricas. Sin embargo, el analizador XAML se realiza el `typeof` operación automáticamente y el `x:Type` extensión de marcado no se usa en estos casos.
+Dentro de Xamarin.Forms, hay varias propiedades que tienen argumentos de tipo `Type`. Algunos ejemplos son el [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) propiedad de `Style`y el [x: TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) atributo utilizado para especificar los argumentos en las clases genéricas. Sin embargo, el analizador XAML se realiza el `typeof` operación automáticamente y el `x:Type` extensión de marcado no se usa en estos casos.
 
-Un lugar donde `x:Type` *es* necesario es con el `x:Array` extensión de marcado, que se describe en el [próxima sección](#array).
+Un único lugar donde `x:Type` *es* necesarios es con el `x:Array` extensión de marcado, como se describe en el [siguiente sección](#array).
 
-El `x:Type` extensión de marcado también es útil al construir un menú donde cada elemento de menú corresponde a un objeto de un tipo determinado. Puede asociar un `Type` objeto con cada elemento de menú y, a continuación, crea una instancia del objeto cuando se selecciona el elemento de menú.
+El `x:Type` extensión de marcado también es útil al construir un menú donde cada elemento de menú correspondiente a un objeto de un tipo determinado. Puede asociar un `Type` con cada elemento de menú de objetos y, a continuación, cree una instancia del objeto cuando se selecciona el elemento de menú.
 
-Se trata cómo el menú de navegación en `MainPage` en el **las extensiones de marcado** programa works. El **MainPage.xaml** archivo contiene un `TableView` con cada `TextCell` corresponde a una página determinada en el programa:
+Se trata cómo el menú de navegación en `MainPage` en el **las extensiones de marcado** programa works. El **MainPage.xaml** archivo contiene un `TableView` con cada `TextCell` correspondiente a una página determinada en el programa:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -234,11 +234,11 @@ Se trata cómo el menú de navegación en `MainPage` en el **las extensiones de 
 </ContentPage>
 ```
 
-Ésta es la página principal de apertura **las extensiones de marcado**:
+Aquí está la página principal de apertura en **las extensiones de marcado**:
 
 [![Main página](consuming-images/mainpage-small.png "Main página")](consuming-images/mainpage-large.png#lightbox "Main página")
 
-Cada `CommandParameter` propiedad está establecida en un `x:Type` extensión de marcado que se hace referencia a una de las otras páginas. El `Command` propiedad se enlaza a una propiedad denominada `NavigateCommand`. Esta propiedad se define en el `MainPage` archivo de código subyacente:
+Cada `CommandParameter` propiedad está establecida en un `x:Type` extensión de marcado que se hace referencia a una de las otras páginas. El `Command` propiedad está enlazada a una propiedad denominada `NavigateCommand`. Esta propiedad se define en el `MainPage` archivo de código subyacente:
 
 ```csharp
 public partial class MainPage : ContentPage
@@ -260,9 +260,9 @@ public partial class MainPage : ContentPage
 }
 ```
 
-El `NavigateCommand` propiedad es una `Command` objeto que implementa un comando execute con un argumento de tipo `Type` &mdash; el valor de `CommandParameter`. El método usa `Activator.CreateInstance` para crear instancias de la página y, a continuación, navega a ella. El constructor concluye estableciendo la `BindingContext` de la página a sí misma, lo que permite el `Binding` en `Command` para que funcione. Consulte la [ **enlace de datos** ](~/xamarin-forms/app-fundamentals/data-binding/index.md) artículo y especialmente los [ **Commanding** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) artículo para obtener más detalles sobre este tipo de código.
+El `NavigateCommand` propiedad es un `Command` objeto que implementa un comando execute con un argumento de tipo `Type` &mdash; el valor de `CommandParameter`. Usa el método `Activator.CreateInstance` para crear una instancia de la página y, a continuación, navega a ella. El constructor concluye estableciendo el `BindingContext` de la página a sí mismo, lo que permite el `Binding` en `Command` funcione. Consulte la [ **enlace de datos** ](~/xamarin-forms/app-fundamentals/data-binding/index.md) artículo y especialmente los [ **Commanding** ](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) artículo para obtener más detalles sobre este tipo de código.
 
-El **x: Type demostración** página usa una técnica similar para crear instancias de elementos de Xamarin.Forms y agregarlos a un `StackLayout`. El archivo XAML inicialmente consta de tres `Button` elementos con sus `Command` propiedades establecidas en un `Binding` y `CommandParameter` se establecen en los tipos de las tres vistas de Xamarin.Forms:
+El **x: Type demostración** página usa una técnica similar para crear instancias de elementos de Xamarin.Forms y agregarlos a un `StackLayout`. El archivo XAML inicialmente consta de tres `Button` elementos con sus `Command` propiedades establecidas en un `Binding` y `CommandParameter` propiedades establecidas en los tipos de las tres vistas de Xamarin.Forms:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -317,22 +317,22 @@ public partial class TypeDemoPage : ContentPage
 }
 ```
 
-El método que se ejecuta cuando un `Button` se presiona crea una nueva instancia del argumento, se establece su `VerticalOptions` propiedad y lo agrega a la `StackLayout`. Los tres `Button` elementos, a continuación, compartan la página con vistas creadas de forma dinámica:
+El método que se ejecuta cuando un `Button` se presiona crea una nueva instancia del argumento, se establece su `VerticalOptions` propiedad y lo agrega a la `StackLayout`. Los tres `Button` elementos, a continuación, compartan la página con las vistas creadas dinámicamente:
 
-[![x: Type demostración](consuming-images/typedemo-small.png "x: Type demostración")](consuming-images/typedemo-large.png#lightbox "demostración x: Type")
+[![Demostración de x: Type](consuming-images/typedemo-small.png "x: Type demostración")](consuming-images/typedemo-large.png#lightbox "demostración x: Type")
 
 <a name="array" />
 
 ## <a name="xarray-markup-extension"></a>x:Array (Extensión de marcado)
 
-El `x:Array` extensión de marcado permite definir una matriz en el marcado. Es compatible con la [ `ArrayExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.ArrayExtension/) (clase), que define dos propiedades:
+El `x:Array` extensión de marcado permite definir una matriz en el marcado. Es compatible con la [ `ArrayExtension` ](xref:Xamarin.Forms.Xaml.ArrayExtension) (clase), que define dos propiedades:
 
 - `Type` de tipo `Type`, lo que indica el tipo de los elementos de la matriz.
-- `Items` de tipo `IList`, que es una colección de los mismos elementos. Se trata de la propiedad de contenido de `ArrayExtension`.
+- `Items` de tipo `IList`, que es una colección de los propios elementos. Se trata de la propiedad content de `ArrayExtension`.
 
-El `x:Array` propia extensión de marcado nunca aparece entre llaves. En su lugar, `x:Array` etiquetas de inicio y finalización delimitan la lista de elementos. Establecer el `Type` propiedad a un `x:Type` extensión de marcado.
+El `x:Array` propia extensión de marcado nunca aparece entre llaves. En su lugar, `x:Array` etiquetas inicial y final delimitan la lista de elementos. Establecer el `Type` propiedad a un `x:Type` extensión de marcado.
 
-El **x: Array demostración** página muestra cómo usar `x:Array` para agregar elementos a un `ListView` estableciendo el `ItemsSource` propiedad en una matriz:
+El **x: Array demostración** página muestra cómo usar `x:Array` para agregar elementos a un `ListView` estableciendo el `ItemsSource` propiedad a una matriz:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -374,11 +374,11 @@ El **x: Array demostración** página muestra cómo usar `x:Array` para agregar 
 </ContentPage>        
 ```
 
-El `ViewCell` crea un sencillo `BoxView` para cada entrada de color:
+El `ViewCell` crea un simple `BoxView` para cada entrada de color:
 
-[![Demostración de x: Array](consuming-images/arraydemo-small.png "x: Array demostración")](consuming-images/arraydemo-large.png#lightbox "x: Array demostración")
+[![Demostración de x: Array](consuming-images/arraydemo-small.png "x: Array demostración")](consuming-images/arraydemo-large.png#lightbox "demostración x: Array")
 
-Hay varias maneras de especificar el individuo `Color` elementos de esta matriz. Puede usar un `x:Static` extensión de marcado:
+Hay varias maneras de especificar la persona `Color` elementos de esta matriz. Puede usar un `x:Static` extensión de marcado:
 
 ```xaml
 <x:Static Member="Color.Blue" />
@@ -396,15 +396,15 @@ Hacia el final de este artículo, verá una extensión de marcado XAML personali
 <local:HslColor H="0.5" S="1.0" L="0.5" />
 ```
 
-Al definir matrices de tipos comunes como cadenas o números, use las etiquetas que aparecen en la [ **pasar argumentos de Constructor** ](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) artículo para delimitar los valores.
+Al definir matrices de tipos comunes, como cadenas o números, use las etiquetas enumeradas en el [ **pasar argumentos de Constructor** ](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) artículo para delimitar los valores.
 
 <a name="null" />
 
 ## <a name="xnull-markup-extension"></a>x:Null (Extensión de marcado)
 
-El `x:Null` extensión de marcado es compatible con la [ `NullExtension` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Xaml.NullExtension/) clase. No tiene ninguna propiedad y simplemente el equivalente XAML de C# [ `null` ](/dotnet/csharp/language-reference/keywords/null/) palabra clave.
+El `x:Null` extensión de marcado es compatible con la [ `NullExtension` ](xref:Xamarin.Forms.Xaml.NullExtension) clase. No tiene ninguna propiedad lo que es simplemente el equivalente XAML de C# [ `null` ](/dotnet/csharp/language-reference/keywords/null/) palabra clave.
 
-El `x:Null` extensión de marcado es rara vez se necesita y se usan en contadas ocasiones, pero si lo encuentra lo necesita, podrá muy contento de que existe.
+El `x:Null` extensión de marcado es rara vez es necesario y se usan en contadas ocasiones, pero si lo encuentra lo necesita, será muy contento de que existe.
 
 El **x: Null demostración** página ilustra un escenario cuando `x:Null` podría ser conveniente. Supongamos que define un modo implícito `Style` para `Label` que incluye un `Setter` que establece el `FontFamily` propiedad a un nombre de familia depende de la plataforma:
 
@@ -445,23 +445,23 @@ El **x: Null demostración** página ilustra un escenario cuando `x:Null` podrí
 </ContentPage>   
 ```
 
-A continuación, verá que para uno de los `Label` elementos, desea que todos los valores de propiedades en la parte implícita `Style` excepto para el `FontFamily`, que desea que el valor predeterminado. Puede definir otra `Style` para ese fin, pero un enfoque más sencillo consiste simplemente en establecer el `FontFamily` propiedad de ese `Label` a `x:Null`, como se muestra en el centro de `Label`.
+A continuación, verá que para uno de los `Label` elementos, desea que todos los valores de propiedades en la parte implícita `Style` , excepto para el `FontFamily`, que desee que sea el valor predeterminado. Puede definir otra `Style` para ese propósito, pero un enfoque más sencillo consiste simplemente en establecer el `FontFamily` propiedad de la instancia concreta `Label` a `x:Null`, tal y como se muestra en el centro de `Label`.
 
-Este es el programa que se ejecuta en las tres plataformas:
+Este es el programa que se ejecutan en las tres plataformas:
 
-[![x: Null demostración](consuming-images/nulldemo-small.png "x: Null demostración")](consuming-images/nulldemo-large.png#lightbox "demostración x: Null")
+[![Demostración de x: Null](consuming-images/nulldemo-small.png "x: Null demostración")](consuming-images/nulldemo-large.png#lightbox "demostración x: Null")
 
-Observe que cuatro de las `Label` elementos tienen una fuente serif, pero el centro de `Label` tiene la fuente sans-serif de forma predeterminada.
+Tenga en cuenta que cuatro de los `Label` elementos tienen una fuente de serif, pero el centro `Label` tiene la fuente sans serif de forma predeterminada.
 
 ## <a name="define-your-own-markup-extensions"></a>Definir sus propias extensiones de marcado
 
-Si se ha encontrado una necesidad de una extensión de marcado XAML que no está disponible en Xamarin.Forms, puede [crear los suyos propios](creating.md).
+Si se ha encontrado una necesidad de una extensión de marcado XAML que no está disponible en Xamarin.Forms, puede [crear las suyas propias](creating.md).
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Extensiones de marcado (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
-- [Capítulo de extensiones de marcado XAML de libreta de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
+- [Capítulo de extensiones de marcado XAML de Xamarin.Forms libro](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Diccionarios de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilos dinámicos](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)

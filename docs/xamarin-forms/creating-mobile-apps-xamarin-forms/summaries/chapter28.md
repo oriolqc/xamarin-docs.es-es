@@ -7,16 +7,16 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c10a3c1a0ed2755734fe351df39caadc88dd61c4
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: a02239906f5a30c068cb7eebd31308ad188696b3
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935138"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998103"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Resumen del capítulo 28. Ubicación y mapas
 
-Xamarin.Forms es compatible con un [ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) elemento que se deriva de `View`. Debido a los requisitos de plataforma especial que implica el uso de mapas, se implementan en un ensamblado independiente, **xamarin.Forms.Maps para**e implicar a otro espacio de nombres: `Xamarin.Forms.Maps`.
+Xamarin.Forms es compatible con un [ `Map` ](xref:Xamarin.Forms.Maps.Map) elemento que se deriva de `View`. Debido a los requisitos de plataforma especial que implica el uso de mapas, se implementan en un ensamblado independiente, **xamarin.Forms.Maps para**e implicar a otro espacio de nombres: `Xamarin.Forms.Maps`.
 
 ## <a name="the-geographic-coordinate-system"></a>El sistema de coordenadas geográfico
 
@@ -118,13 +118,13 @@ Una aplicación de Windows en tiempo de ejecución requiere una clave de autoriz
 
 El [ **MapDemos** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter28/MapDemos) ejemplo consta de un [MapsDemoHomePage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapDemosHomePage.xaml) archivo y [MapsDemoHomePage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapDemosHomePage.xaml.cs) archivo de código subyacente que permite navegar a varios programas de demostración.
 
-El [BasicMapPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/BasicMapPage.xaml) archivo muestra cómo mostrar la [ `Map` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Map/) vista. De forma predeterminada, muestra la ciudad de Roma, pero el usuario puede manipular el mapa.
+El [BasicMapPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/BasicMapPage.xaml) archivo muestra cómo mostrar la [ `Map` ](xref:Xamarin.Forms.Maps.Map) vista. De forma predeterminada, muestra la ciudad de Roma, pero el usuario puede manipular el mapa.
 
-Para deshabilitar el desplazamiento horizontal y vertical, establezca el [ `HasScrollEnabled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.HasScrollEnabled/) propiedad `false`. Para deshabilitar el zoom, establezca [ `HasZoomEnabled` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.HasZoomEnabled/) a `false`. Estas propiedades no funcionen en todas las plataformas.
+Para deshabilitar el desplazamiento horizontal y vertical, establezca el [ `HasScrollEnabled` ](xref:Xamarin.Forms.Maps.Map.HasScrollEnabled) propiedad `false`. Para deshabilitar el zoom, establezca [ `HasZoomEnabled` ](xref:Xamarin.Forms.Maps.Map.HasZoomEnabled) a `false`. Estas propiedades no funcionen en todas las plataformas.
 
 ### <a name="streets-and-terrain"></a>Calles y el terreno
 
-Puede mostrar diferentes tipos de mapas de estableciendo el `Map` propiedad [ `MapType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.MapType/) typu [ `MapType` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapType/), una enumeración con tres miembros:
+Puede mostrar diferentes tipos de mapas de estableciendo el `Map` propiedad [ `MapType` ](xref:Xamarin.Forms.Maps.Map.MapType) typu [ `MapType` ](xref:Xamarin.Forms.Maps.MapType), una enumeración con tres miembros:
 
 - [`Street`](xref:Xamarin.Forms.Maps.MapType.Street), el valor predeterminado
 - [`Satellite`](xref:Xamarin.Forms.Maps.MapType.Satellite)
@@ -134,32 +134,32 @@ El [MapTypesPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blo
 
 ### <a name="map-coordinates"></a>Coordenadas de mapa
 
-Un programa puede obtener el área actual el `Map` muestra a través de la [ `VisibleRegion` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.VisibleRegion/) propiedad. Esta propiedad es *no* respaldada por una propiedad enlazable, y no hay ningún mecanismo de notificación para indicar cuándo ha cambiado, por lo que un programa que desea supervisar la propiedad probablemente debería utilizar un temporizador para ese propósito.
+Un programa puede obtener el área actual el `Map` muestra a través de la [ `VisibleRegion` ](xref:Xamarin.Forms.Maps.Map.VisibleRegion) propiedad. Esta propiedad es *no* respaldada por una propiedad enlazable, y no hay ningún mecanismo de notificación para indicar cuándo ha cambiado, por lo que un programa que desea supervisar la propiedad probablemente debería utilizar un temporizador para ese propósito.
 
-`VisibleRegion` es de tipo [ `MapSpan` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.MapSpan/), una clase con cuatro propiedades de solo lectura:
+`VisibleRegion` es de tipo [ `MapSpan` ](xref:Xamarin.Forms.Maps.MapSpan), una clase con cuatro propiedades de solo lectura:
 
-- [`Center`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.MapSpan.Center/) de tipo [`Position`](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Position/)
-- [`LatitudeDegrees`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.MapSpan.LatitudeDegrees/) de tipo `double`, que indica el alto del área de la asignación mostrado
-- [`LongitudeDegrees`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.MapSpan.LongitudeDegrees/) de tipo `double`, que indica el ancho del área de la asignación mostrado
-- [`Radius`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.MapSpan.Radius/) de tipo [ `Distance` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Distance/), que indica el tamaño de la mayor área circular visible en el mapa
+- [`Center`](xref:Xamarin.Forms.Maps.MapSpan.Center) de tipo [`Position`](xref:Xamarin.Forms.Maps.Position)
+- [`LatitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LatitudeDegrees) de tipo `double`, que indica el alto del área de la asignación mostrado
+- [`LongitudeDegrees`](xref:Xamarin.Forms.Maps.MapSpan.LongitudeDegrees) de tipo `double`, que indica el ancho del área de la asignación mostrado
+- [`Radius`](xref:Xamarin.Forms.Maps.MapSpan.Radius) de tipo [ `Distance` ](xref:Xamarin.Forms.Maps.Distance), que indica el tamaño de la mayor área circular visible en el mapa
 
-`Position` y `Distance` son ambas estructuras. `Position` define dos propiedades de solo lectura establecidas a través de la [ `Position` constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Maps.Position.Position/p/System.Double/System.Double/):
+`Position` y `Distance` son ambas estructuras. `Position` define dos propiedades de solo lectura establecidas a través de la [ `Position` constructor](xref:Xamarin.Forms.Maps.Position.%23ctor(System.Double,System.Double)):
 
-- [`Latitude`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Position.Latitude/)
-- [`Longitude`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Position.Longitude/)
+- [`Latitude`](xref:Xamarin.Forms.Maps.Position.Latitude)
+- [`Longitude`](xref:Xamarin.Forms.Maps.Position.Longitude)
 
 `Distance` está pensado para proporcionar una distancia de unidad independiente mediante la conversión entre unidades métricas e inglesas. Un `Distance` valor se puede crear de varias maneras:
 
-- [`Distance` constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Maps.Distance.Distance/p/System.Double/) con una distancia en metros
-- [`Distance.FromMeters`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Distance.FromMeters/p/System.Double/) método estático
-- [`Distance.FromKilometers`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Distance.FromKilometers/p/System.Double/) método estático
-- [`Distance.FromMiles`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Distance.FromMiles/p/System.Double/) método estático
+- [`Distance` constructor](xref:Xamarin.Forms.Maps.Distance.%23ctor(System.Double)) con una distancia en metros
+- [`Distance.FromMeters`](xref:Xamarin.Forms.Maps.Distance.FromMeters(System.Double)) método estático
+- [`Distance.FromKilometers`](xref:Xamarin.Forms.Maps.Distance.FromKilometers(System.Double)) método estático
+- [`Distance.FromMiles`](xref:Xamarin.Forms.Maps.Distance.FromMiles(System.Double)) método estático
 
 El valor está disponible en tres propiedades:
 
-- [`Meters`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Distance.Meters/) de tipo `double`
-- [`Kilometers`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Distance.Kilometers/) de tipo `double`
-- [`Miles`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Distance.Miles/) de tipo `double`
+- [`Meters`](xref:Xamarin.Forms.Maps.Distance.Meters) de tipo `double`
+- [`Kilometers`](xref:Xamarin.Forms.Maps.Distance.Kilometers) de tipo `double`
+- [`Miles`](xref:Xamarin.Forms.Maps.Distance.Miles) de tipo `double`
 
 El [MapCoordinatesPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapCoordinatesPage.xaml) archivo contiene varias `Label` elementos para mostrar el `MapSpan` información. El [MapCoordinatesPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/MapCoordinatesPage.xaml.cs) archivo de código subyacente usa un temporizador para mantener la información que se actualiza a medida que el usuario manipula el mapa.
 
@@ -169,16 +169,16 @@ Una nueva biblioteca para este libro denominado [ **Xamarin.FormsBook.Toolkit.Ma
 
 ### <a name="setting-an-initial-location"></a>Una ubicación inicial de la configuración
 
-Puede llamar a la [ `MoveToRegion` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Map.MoveToRegion/p/Xamarin.Forms.Maps.MapSpan/) método `Map` para establecer mediante programación un nivel de zoom y la ubicación en el mapa. El argumento es de tipo `MapSpan`. Puede crear un `MapSpan` objeto mediante cualquiera de las siguientes:
+Puede llamar a la [ `MoveToRegion` ](xref:Xamarin.Forms.Maps.Map.MoveToRegion(Xamarin.Forms.Maps.MapSpan)) método `Map` para establecer mediante programación un nivel de zoom y la ubicación en el mapa. El argumento es de tipo `MapSpan`. Puede crear un `MapSpan` objeto mediante cualquiera de las siguientes:
 
-- [`MapSpan` constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Maps.MapSpan.MapSpan/p/Xamarin.Forms.Maps.Position/System.Double/System.Double/) con un `Position`y el intervalo de latitud y longitud
-- [`MapSpan.FromCenterAndRadius`](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius/p/Xamarin.Forms.Maps.Position/Xamarin.Forms.Maps.Distance/) con un `Position` y radius
+- [`MapSpan` constructor](xref:Xamarin.Forms.Maps.MapSpan.%23ctor(Xamarin.Forms.Maps.Position,System.Double,System.Double)) con un `Position`y el intervalo de latitud y longitud
+- [`MapSpan.FromCenterAndRadius`](xref:Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius(Xamarin.Forms.Maps.Position,Xamarin.Forms.Maps.Distance)) con un `Position` y radius
 
-También es posible crear un nuevo `MapSpan` desde otra existente mediante los métodos [ `ClampLatitude` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.MapSpan.ClampLatitude/p/System.Double/System.Double/) o [ `WithZoom` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.MapSpan.WithZoom/p/System.Double/).
+También es posible crear un nuevo `MapSpan` desde otra existente mediante los métodos [ `ClampLatitude` ](xref:Xamarin.Forms.Maps.MapSpan.ClampLatitude(System.Double,System.Double)) o [ `WithZoom` ](xref:Xamarin.Forms.Maps.MapSpan.WithZoom(System.Double)).
 
 El [WyomingPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml) archivo y [WyomingPage.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/WyomingPage.xaml.cs) archivo de código muestra cómo utilizar el `MoveToRegion` método para mostrar el estado de Wyoming.
 
-Como alternativa, puede usar el [ `Map` constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Maps.Map.Map/p/Xamarin.Forms.Maps.MapSpan/) con un `MapSpan` objeto para inicializar la ubicación del mapa. El [XamarinHQPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml) archivo muestra cómo hacer esto completamente en XAML para mostrar la sede central de Xamarin en San Francisco.
+Como alternativa, puede usar el [ `Map` constructor](xref:Xamarin.Forms.Maps.Map.%23ctor(Xamarin.Forms.Maps.MapSpan)) con un `MapSpan` objeto para inicializar la ubicación del mapa. El [XamarinHQPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/XamarinHQPage.xaml) archivo muestra cómo hacer esto completamente en XAML para mostrar la sede central de Xamarin en San Francisco.
 
 ### <a name="dynamic-zooming"></a>Zoom dinámico
 
@@ -188,7 +188,7 @@ El [LongitudeZoomPage.xaml](https://github.com/xamarin/xamarin-forms-book-sample
 
 ### <a name="the-phones-location"></a>La ubicación del teléfono
 
-El [ `IsShowingUser` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.IsShowingUser/) propiedad de `Map` funciona un poco distinto en las tres plataformas como el [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) archivo de muestra:
+El [ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser) propiedad de `Map` funciona un poco distinto en las tres plataformas como el [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) archivo de muestra:
 
 - En iOS, un punto azul indica la ubicación del teléfono pero manualmente debe ir allí
 - En Android, se muestra un icono que, cuando inserta mueve la asignación a la ubicación del teléfono
@@ -200,12 +200,12 @@ El [GoToLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples
 
 ### <a name="pins-and-science-museums"></a>Los PIN y museos ciencia
 
-Por último, el `Map` clase define un [ `Pins` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Map.Pins/) propiedad de tipo `IList<Pin>`. El [ `Pin` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Pin/) clase define cuatro propiedades:
+Por último, el `Map` clase define un [ `Pins` ](xref:Xamarin.Forms.Maps.Map.Pins) propiedad de tipo `IList<Pin>`. El [ `Pin` ](xref:Xamarin.Forms.Maps.Pin) clase define cuatro propiedades:
 
-- [`Label`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Pin.Label/) de tipo `string`, una propiedad necesaria
-- [`Address`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Pin.Address/) de tipo `string`, una dirección legible opcional
-- [`Position`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Pin.Position/) de tipo `Position`, que indica que el pin se muestra en el mapa
-- [`Type`](https://developer.xamarin.com/api/property/Xamarin.Forms.Maps.Pin.Type/) de tipo [ `PinType` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.PinType/), una enumeración, que no se usa
+- [`Label`](xref:Xamarin.Forms.Maps.Pin.Label) de tipo `string`, una propiedad necesaria
+- [`Address`](xref:Xamarin.Forms.Maps.Pin.Address) de tipo `string`, una dirección legible opcional
+- [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) de tipo `Position`, que indica que el pin se muestra en el mapa
+- [`Type`](xref:Xamarin.Forms.Maps.Pin.Type) de tipo [ `PinType` ](xref:Xamarin.Forms.Maps.PinType), una enumeración, que no se usa
 
 El **MapDemos** proyecto contiene el archivo [ScienceMuseums.xml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Data/ScienceMuseums.xml), que enumera los museos de ciencia de los Estados Unidos, y [ `Locations` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Locations.cs) y [ `Site` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/Site.cs) clases para deserializar estos datos.
 
@@ -223,7 +223,7 @@ El programa también muestra cómo restringir dinámicamente el número de bolos
 
 ## <a name="geocoding-and-back-again"></a>Geocodificación y volver
 
-El [ **xamarin.Forms.Maps para** ](https://developer.xamarin.com/api/namespace/Xamarin.Forms.Maps/) ensamblado también contiene un [ `Geocoder` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Maps.Geocoder/) clase con un [ `GetPositionsForAddressAsync` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync/p/System.String/) método que convierte una dirección de texto en cero o más posibles posiciones geográficas y otro método [ `GetAddressesForPositionAsync` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync/p/Xamarin.Forms.Maps.Position/) que se convierte en la otra dirección.
+El [ **xamarin.Forms.Maps para** ](xref:Xamarin.Forms.Maps) ensamblado también contiene un [ `Geocoder` ](xref:Xamarin.Forms.Maps.Geocoder) clase con un [ `GetPositionsForAddressAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync(System.String)) método que convierte una dirección de texto en cero o más posibles posiciones geográficas y otro método [ `GetAddressesForPositionAsync` ](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync(Xamarin.Forms.Maps.Position)) que se convierte en la otra dirección.
 
 El [GeocoderRoundTrip.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml) archivo y [GeocoderRoundTrip.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml.cs) archivo de código subyacente demostrar esta función.
 

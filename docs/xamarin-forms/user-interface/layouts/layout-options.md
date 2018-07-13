@@ -1,67 +1,67 @@
 ---
 title: Opciones de diseño de Xamarin.Forms
-description: Cada vista Xamarin.Forms tiene propiedades HorizontalOptions y VerticalOptions, del tipo LayoutOptions. Este artículo explica el efecto que tiene cada valor LayoutOptions en la alineación y la expansión de una vista.
+description: Cada vista Xamarin.Forms tiene propiedades HorizontalOptions y VerticalOptions, del tipo LayoutOptions. En este artículo se explica el efecto que tiene cada valor LayoutOptions en la alineación y la expansión de una vista.
 ms.prod: xamarin
 ms.assetid: 7CAB5631-5153-4DEF-8AD7-C6011CE44307
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/10/2017
-ms.openlocfilehash: dc15c05bf3633ef2ae5f71754290a7bd768dc836
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 1ede5f75925a3dafa93062d147fa349ff91f07d2
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245695"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995315"
 ---
 # <a name="layout-options-in-xamarinforms"></a>Opciones de diseño de Xamarin.Forms
 
-_Cada vista Xamarin.Forms tiene propiedades HorizontalOptions y VerticalOptions, del tipo LayoutOptions. Este artículo explica el efecto que tiene cada valor LayoutOptions en la alineación y la expansión de una vista._
+_Cada vista Xamarin.Forms tiene propiedades HorizontalOptions y VerticalOptions, del tipo LayoutOptions. En este artículo se explica el efecto que tiene cada valor LayoutOptions en la alineación y la expansión de una vista._
 
 ## <a name="overview"></a>Información general
 
-El [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) estructura encapsula dos de las preferencias de diseño:
+El [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) estructura encapsula dos de las preferencias de diseño:
 
-- **Alineación** : la vista preferida de alineación, que determina su posición y el tamaño del diseño de su primario.
-- **Expansión** : se usa únicamente por un [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)e indica si la vista debe utilizar espacio adicional, si está disponible.
+- **Alineación** – preferido de la vista de la alineación, que determina su posición y tamaño en su diseño principal.
+- **Expansión** : se usa únicamente por un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout)e indica si la vista debe utilizar el espacio adicional, si está disponible.
 
-Estas preferencias de diseño pueden aplicarse a un [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/), relativa a su elemento primario, estableciendo el [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) o [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propiedad de la `View` a uno de los campos públicos de la [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) estructura. Los campos públicos son los siguientes:
+Estas preferencias de diseño se pueden aplicar a un [ `View` ](xref:Xamarin.Forms.View)respecto a su elemento primario, estableciendo el [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) o [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propiedad de la `View` a uno de los campos públicos de la [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) estructura. Los campos públicos son los siguientes:
 
-- [`Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Start/)
-- [`Center`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Center/)
-- [`End`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.End/)
-- [`Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/)
-- [`StartAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.StartAndExpand/)
-- [`CenterAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.CenterAndExpand/)
-- [`EndAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.EndAndExpand/)
-- [`FillAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/)
+- [`Start`](xref:Xamarin.Forms.LayoutOptions.Start)
+- [`Center`](xref:Xamarin.Forms.LayoutOptions.Center)
+- [`End`](xref:Xamarin.Forms.LayoutOptions.End)
+- [`Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)
+- [`StartAndExpand`](xref:Xamarin.Forms.LayoutOptions.StartAndExpand)
+- [`CenterAndExpand`](xref:Xamarin.Forms.LayoutOptions.CenterAndExpand)
+- [`EndAndExpand`](xref:Xamarin.Forms.LayoutOptions.EndAndExpand)
+- [`FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)
 
-El `Start`, `Center`, `End`, y `Fill` campos se utilizan para definir la alineación de la vista del diseño del elemento primario:
+El `Start`, `Center`, `End`, y `Fill` campos se usan para definir la alineación de la vista del diseño del elemento primario:
 
-- Para la alineación horizontal, [ `Start` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Start/) posiciones el [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) en el lado izquierdo del diseño del elemento primario y para la alineación vertical, coloca el `View` en la parte superior de la diseño de elemento primario.
-- Para la alineación horizontal y vertical, [ `Center` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Center/) se centra horizontalmente o verticalmente la [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/).
-- Para la alineación horizontal, [ `End` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.End/) posiciones el [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) en el lado derecho del diseño del elemento primario y para la alineación vertical, coloca el `View` en la parte inferior del diseño del elemento primario.
-- Para la alineación horizontal, [ `Fill` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/) garantiza que la [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) rellena el ancho del diseño del elemento primario y para la alineación vertical, se garantiza que la `View` rellena el alto del diseño del elemento primario.
+- Para la alineación horizontal, [ `Start` ](xref:Xamarin.Forms.LayoutOptions.Start) posiciones el [ `View` ](xref:Xamarin.Forms.View) en el lado izquierdo del diseño del elemento primario y para la alineación vertical, coloca el `View` en la parte superior de la diseño del elemento primario.
+- Para la alineación horizontal y vertical, [ `Center` ](xref:Xamarin.Forms.LayoutOptions.Center) centra horizontalmente o verticalmente el [ `View` ](xref:Xamarin.Forms.View).
+- Para la alineación horizontal, [ `End` ](xref:Xamarin.Forms.LayoutOptions.End) posiciones el [ `View` ](xref:Xamarin.Forms.View) en el lado derecho del diseño del elemento primario y para la alineación vertical, coloca el `View` en la parte inferior del diseño del elemento primario.
+- Para la alineación horizontal, [ `Fill` ](xref:Xamarin.Forms.LayoutOptions.Fill) garantiza que el [ `View` ](xref:Xamarin.Forms.View) rellena el ancho del diseño del elemento primario y para la alineación vertical, garantiza que el `View` rellena el alto del diseño del elemento primario.
 
-El `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, y `FillAndExpand` valores se utilizan para definir la preferencia de alineación, y si la vista ocupan más espacio si está disponible dentro del elemento primario [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/).
+El `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, y `FillAndExpand` valores se usan para definir la preferencia de alineación, y si la vista ocupan más espacio si está disponible dentro del elemento primario [ `StackLayout` ](xref:Xamarin.Forms.StackLayout).
 
 > [!NOTE]
-> El valor predeterminado de una vista [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) y [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propiedades es [ `LayoutOptions.Fill` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/).
+> El valor predeterminado de una vista [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) y [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propiedades es [ `LayoutOptions.Fill` ](xref:Xamarin.Forms.LayoutOptions.Fill).
 
 <a name="alignment" />
 
 ## <a name="alignment"></a>Alineación
 
-Alineación controla cómo se sitúa una vista en su diseño de elemento primario cuando el diseño del elemento primario contiene espacio no utilizado (es decir, el diseño del elemento primario es mayor que el tamaño combinado de todos sus nodos secundarios).
+Alineación controla cómo se coloca una vista en su diseño principal cuando el diseño del elemento primario contiene espacio no utilizado (es decir, el diseño del elemento primario es mayor que el tamaño combinado de todos sus elementos secundarios).
 
-A [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) solo respeta el `Start`, `Center`, `End`, y `Fill` [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) campos en las vistas secundarias que se encuentran en la dirección opuesta para el `StackLayout` orientación. Por lo tanto, se ve secundarios dentro de una orientación vertical `StackLayout` puede establecer sus [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) propiedades a uno de los `Start`, `Center`, `End`, o `Fill` campos. De forma similar, vistas secundarias dentro de una orientación horizontal `StackLayout` puede establecer sus [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propiedades a uno de los `Start`, `Center`, `End`, o `Fill` campos.
+Un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) solo respeta el `Start`, `Center`, `End`, y `Fill` [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) campos en las vistas secundarias que se encuentran en la dirección opuesta para el `StackLayout` orientación. Por lo tanto, las vistas secundarias dentro de una orientación vertical `StackLayout` puede establecer sus [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) propiedades a uno de los `Start`, `Center`, `End`, o `Fill` campos. De forma similar, las vistas secundarios dentro de una orientación horizontal `StackLayout` puede establecer sus [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propiedades a uno de los `Start`, `Center`, `End`, o `Fill` campos.
 
-A [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) no respeta la `Start`, `Center`, `End`, y `Fill` [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) campos en las vistas secundarias que se encuentran en la misma dirección que el `StackLayout` orientación. Por lo tanto, una orientación vertical `StackLayout` pasa por alto el `Start`, `Center`, `End`, o `Fill` campos si están establecidos en el [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propiedades de vistas secundarias. De forma similar, una orientación horizontal `StackLayout` pasa por alto el `Start`, `Center`, `End`, o `Fill` campos si están establecidos en el [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) propiedades de vistas secundarias.
+Un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) no respeta el `Start`, `Center`, `End`, y `Fill` [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) campos en las vistas secundarias que se encuentran en la misma dirección que el `StackLayout` orientación. Por lo tanto, una orientación vertical `StackLayout` omite el `Start`, `Center`, `End`, o `Fill` campos si están establecidos en el [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propiedades de vistas secundarias. De forma similar, una orientación horizontal `StackLayout` omite el `Start`, `Center`, `End`, o `Fill` campos si están establecidos en el [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) propiedades de vistas secundarias.
 
 > [!NOTE]
-> [`LayoutOptions.Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/) Generalmente invalidaciones cambiar el tamaño de las solicitudes que se especifica utilizando el [ `HeightRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) y [ `WidthRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/) propiedades.
+> [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill) por lo general invalidaciones cambiar el tamaño de las solicitudes que se especifican mediante el [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) y [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) propiedades.
 
-El ejemplo de código XAML siguiente muestra una orientación vertical [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) donde cada elemento secundario [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) establece su [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) propiedad en uno de los campos de cuatro alineación de la [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) estructura:
+El ejemplo de código XAML siguiente muestra una orientación vertical [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) donde cada elemento secundario [ `Label` ](xref:Xamarin.Forms.Label) establece su [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) propiedad en uno de los campos de cuatro de alineación de la [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) estructura:
 
 ```xaml
 <StackLayout Margin="0,20,0,0">
@@ -73,7 +73,7 @@ El ejemplo de código XAML siguiente muestra una orientación vertical [ `StackL
 </StackLayout>
 ```
 
-El código equivalente en C# se muestra a continuación:
+El código de C# equivalente se muestra a continuación:
 
 ```csharp
 Content = new StackLayout
@@ -89,24 +89,24 @@ Content = new StackLayout
 };
 ```
 
-El código produce el diseño que se muestra en las capturas de pantalla siguiente:
+El código da como resultado el diseño que se muestra en las capturas de pantalla siguiente:
 
-[![](layout-options-images/alignment.png "Opciones de diseño de alineación")](layout-options-images/alignment-large.png#lightbox "opciones de diseño de alineación")
+[![](layout-options-images/alignment.png "Opciones de diseño de alineación")](layout-options-images/alignment-large.png#lightbox "las opciones de diseño de alineación")
 
 <a name="expansion" />
 
 ## <a name="expansion"></a>Expansión
 
-Expansión controla si una vista ocupan más espacio, si está disponible, dentro de un [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/). Si el `StackLayout` contiene espacio no utilizado (es decir, el `StackLayout` es mayor que el tamaño combinado de todos sus elementos secundarios), el espacio no utilizado se comparte de forma equitativa todas las vistas secundarias que solicitan expansión estableciendo sus [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/)o [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propiedades para un [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) campo que utiliza el `AndExpand` sufijo. Tenga en cuenta que, cuando todo el espacio en el `StackLayout` es utilizado, las opciones de expansión no tienen ningún efecto.
+Expansión controla si una vista ocupa más espacio, si está disponible dentro de un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout). Si el `StackLayout` contiene espacio no utilizado (es decir, el `StackLayout` es mayor que el tamaño combinado de todos sus elementos secundarios), el espacio no utilizado se comparte de forma equitativa todas las vistas secundarias que solicitan expansión estableciendo sus [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions)o [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propiedades para un [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) campo que utiliza el `AndExpand` sufijo. Tenga en cuenta que, cuando todo el espacio en el `StackLayout` es utilizado, las opciones de expansión no tienen ningún efecto.
 
-A [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) sólo se puede expandir vistas secundarias en la dirección de su orientación. Por lo tanto, una orientación vertical `StackLayout` puede expandir vistas secundarias que establecen sus [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propiedades a uno de los `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, o `FillAndExpand` campos, si la `StackLayout` contiene espacio no utilizado. De forma similar, una orientación horizontal `StackLayout` puede expandir vistas secundarias que establecen sus [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) propiedades a uno de los `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, o `FillAndExpand` campos, si la `StackLayout` contiene espacio no utilizado.
+Un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) sólo se puede expandir vistas secundarias en la dirección de su orientación. Por lo tanto, una orientación vertical `StackLayout` puede expandir las vistas secundarias que establecen sus [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propiedades a uno de los `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, o `FillAndExpand` campos, si la `StackLayout` contiene espacio no utilizado. De forma similar, una orientación horizontal `StackLayout` puede expandir las vistas secundarias que establecen sus [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) propiedades a uno de los `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, o `FillAndExpand` campos, si la `StackLayout` contiene espacio no utilizado.
 
-A [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) no se puede expandir vistas secundarias en la dirección opuesta a su orientación. Por lo tanto, en orientación vertical `StackLayout`, y establece la [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) propiedad en una vista secundaria a [ `StartAndExpand` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.StartAndExpand/) tiene el mismo efecto que establecer la propiedad en [ `Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Start/).
+Un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) no se puede expandir vistas secundarias en la dirección opuesta a la orientación. Por lo tanto, en orientación vertical `StackLayout`, estableciendo el [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) propiedad en una vista secundaria a [ `StartAndExpand` ](xref:Xamarin.Forms.LayoutOptions.StartAndExpand) tiene el mismo efecto que establecer la propiedad en [ `Start`](xref:Xamarin.Forms.LayoutOptions.Start).
 
 > [!NOTE]
-> Tenga en cuenta que habilitar la expansión no cambia el tamaño de una vista a menos que use [ `LayoutOptions.FillAndExpand` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/).
+> Tenga en cuenta que habilitar la expansión no cambia el tamaño de una vista a menos que lo use [ `LayoutOptions.FillAndExpand` ](xref:Xamarin.Forms.LayoutOptions.FillAndExpand).
 
-El ejemplo de código XAML siguiente muestra una orientación vertical [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) donde cada elemento secundario [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) establece su [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propiedad en uno de los campos de cuatro expansión de la [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) estructura:
+El ejemplo de código XAML siguiente muestra una orientación vertical [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) donde cada elemento secundario [ `Label` ](xref:Xamarin.Forms.Label) establece su [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propiedad en uno de los campos de cuatro de expansión desde la [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) estructura:
 
 ```xaml
 <StackLayout Margin="0,20,0,0">
@@ -123,7 +123,7 @@ El ejemplo de código XAML siguiente muestra una orientación vertical [ `StackL
 </StackLayout>
 ```
 
-El código equivalente en C# se muestra a continuación:
+El código de C# equivalente se muestra a continuación:
 
 ```csharp
 Content = new StackLayout
@@ -144,19 +144,19 @@ Content = new StackLayout
 };
 ```
 
-El código produce el diseño que se muestra en las capturas de pantalla siguiente:
+El código da como resultado el diseño que se muestra en las capturas de pantalla siguiente:
 
-[![](layout-options-images/expansion.png "Opciones de diseño de expansión")](layout-options-images/expansion-large.png#lightbox "opciones de diseño de expansión")
+[![](layout-options-images/expansion.png "Opciones de diseño de expansión")](layout-options-images/expansion-large.png#lightbox "las opciones de diseño de expansión")
 
-Cada [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) ocupe la misma cantidad de espacio en el [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/). Sin embargo, solo la última `Label`, que establece su [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) propiedad [ `FillAndExpand` ](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/) con un tamaño diferente. Además, cada `Label` separados por una pequeña de color rojo [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/), lo que permite el espacio en el `Label` ocupa para verse fácilmente.
+Cada [ `Label` ](xref:Xamarin.Forms.Label) ocupa la misma cantidad de espacio en el [ `StackLayout` ](xref:Xamarin.Forms.StackLayout). Sin embargo, solo la última `Label`, que establece su [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) propiedad [ `FillAndExpand` ](xref:Xamarin.Forms.LayoutOptions.FillAndExpand) tiene un tamaño diferente. Además, cada `Label` separados por una pequeña roja [ `BoxView` ](xref:Xamarin.Forms.BoxView), lo que permite el espacio de la `Label` ocupa para verse fácilmente.
 
 ## <a name="summary"></a>Resumen
 
-Este artículo explica el efecto que cada [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) tiene el valor de la estructura en la alineación y la expansión de una vista, en relación con su elemento primario. El `Start`, `Center`, `End`, y `Fill` campos se utilizan para definir la alineación de la vista del diseño del elemento primario y el `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, y `FillAndExpand` campos se utilizan para definir la preferencia de alineación y para determinar si la vista ocupan más espacio, si está disponible, dentro de un [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/).
+En este artículo se explica el efecto que cada [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) tiene el valor de la estructura en la alineación y la expansión de una vista, en relación con su elemento primario. El `Start`, `Center`, `End`, y `Fill` campos se usan para definir la alineación de la vista del diseño del elemento primario y el `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, y `FillAndExpand` campos se usan para definir la preferencia de alineación y para determinar si la vista ocupa más espacio, si está disponible dentro de un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout).
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [LayoutOptions (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/layoutoptions/)
-- [LayoutOptions](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/)
+- [LayoutOptions](xref:Xamarin.Forms.LayoutOptions)

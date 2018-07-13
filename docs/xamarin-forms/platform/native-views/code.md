@@ -1,49 +1,49 @@
 ---
-title: Vistas nativo en C#
-description: Pueden hacer referencia directamente a vistas nativo de iOS y Android, UWP de páginas de Xamarin.Forms creadas con C#. Este artículo muestra cómo agregar vistas nativo a un diseño de Xamarin.Forms creado con C# y cómo reemplazar el diseño de vistas personalizadas para corregir su uso de la API de medida.
+title: Vistas nativas en C#
+description: Vistas nativas de iOS, Android y UWP pueden hacer referencia directamente desde las páginas de Xamarin.Forms creadas con C#. En este artículo se muestra cómo agregar vistas nativas a un diseño de Xamarin.Forms creado con C# y cómo reemplazar el diseño de vistas personalizadas para corregir su uso de la API de medición.
 ms.prod: xamarin
 ms.assetid: 230F937C-F914-4B21-8EA1-1A2A9E644769
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: c3a79947b02e0f877fd4ea1b0ddb72486c222719
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: ad633f49c1c448529fa4c2b50483ec233c1ee841
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34050057"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996199"
 ---
-# <a name="native-views-in-c"></a>Vistas nativo en C#
+# <a name="native-views-in-c"></a>Vistas nativas en C#
 
-_Pueden hacer referencia directamente a vistas nativo de iOS y Android, UWP de páginas de Xamarin.Forms creadas con C#. Este artículo muestra cómo agregar vistas nativo a un diseño de Xamarin.Forms creado con C# y cómo reemplazar el diseño de vistas personalizadas para corregir su uso de la API de medida._
+_Vistas nativas de iOS, Android y UWP pueden hacer referencia directamente desde las páginas de Xamarin.Forms creadas con C#. En este artículo se muestra cómo agregar vistas nativas a un diseño de Xamarin.Forms creado con C# y cómo reemplazar el diseño de vistas personalizadas para corregir su uso de la API de medición._
 
 ## <a name="overview"></a>Información general
 
-Cualquier control de Xamarin.Forms que permita `Content` para establecerse, o que tenga un `Children` colección, puede agregar vistas específicas de la plataforma. Por ejemplo, un iOS `UILabel` pueden agregarse directamente a la [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) propiedad, o a la [ `StackLayout.Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) colección. Sin embargo, tenga en cuenta que esta funcionalidad requiere el uso de `#if` define en las soluciones de proyecto compartido de Xamarin.Forms y no está disponible desde soluciones de la biblioteca estándar de .NET de Xamarin.Forms.
+Cualquier control de Xamarin.Forms que permita `Content` para establecerse, o que tenga un `Children` colección, puede agregar vistas específicas de plataforma. Por ejemplo, un iOS `UILabel` pueden agregarse directamente a la [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) propiedad, o a la [ `StackLayout.Children` ](xref:Xamarin.Forms.Layout`1.Children) colección. Sin embargo, tenga en cuenta que esta funcionalidad requiere el uso de `#if` define en las soluciones de proyecto de Xamarin.Forms compartido y no está disponible desde soluciones de la biblioteca estándar de .NET de Xamarin.Forms.
 
-Las capturas de pantalla siguientes muestran específica de la plataforma vistas porque se haya agregado a un Xamarin.Forms [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/):
+Las capturas de pantalla siguientes muestran específicos de la plataforma, las vistas que se han agregado a un objeto Xamarin.Forms [ `StackLayout` ](xref:Xamarin.Forms.StackLayout):
 
-[![](code-images/screenshots-sml.png "Que contiene vistas específicas de la plataforma de StackLayout")](code-images/screenshots.png#lightbox "StackLayout que contiene vistas específicas de la plataforma")
+[![](code-images/screenshots-sml.png "Que contiene vistas específicas de la plataforma de StackLayout")](code-images/screenshots.png#lightbox "StackLayout que contiene vistas específicas de plataforma")
 
-La capacidad de agregar vistas específicas de la plataforma a un diseño de Xamarin.Forms se habilita mediante dos métodos de extensión en cada plataforma:
+La capacidad de agregar vistas específicas de plataforma a un diseño de Xamarin.Forms se habilita mediante dos métodos de extensión en cada plataforma:
 
-- `Add` : agrega una vista específica de la plataforma para la [ `Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout%3CT%3E.Children/) colección de un diseño.
-- `ToView` : toma una vista específica de la plataforma y ajusta como un Xamarin.Forms [ `View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) que se puede establecer como la `Content` propiedad de un control.
+- `Add` : agrega una vista específica de la plataforma para la [ `Children` ](xref:Xamarin.Forms.Layout`1.Children) colección de un diseño.
+- `ToView` : toma una vista específica de la plataforma y lo encapsula como un objeto Xamarin.Forms [ `View` ](xref:Xamarin.Forms.View) que se pueden establecer como el `Content` propiedad de un control.
 
-Uso de estos métodos en un proyecto compartido Xamarin.Forms necesita importar el espacio de nombres de Xamarin.Forms específico de la plataforma adecuado:
+Mediante estos métodos en un proyecto compartido Xamarin.Forms, es necesario importar el espacio de nombres de Xamarin.Forms específicos de la plataforma adecuada:
 
 - **iOS** – Xamarin.Forms.Platform.iOS
 - **Android** – Xamarin.Forms.Platform.Android
-- **Plataforma universal de Windows (UWP)** : Xamarin.Forms.Platform.UWP
+- **Plataforma universal de Windows (UWP)** – Xamarin.Forms.Platform.UWP
 
 ## <a name="adding-platform-specific-views-on-each-platform"></a>Agregar vistas específicas de la plataforma en cada plataforma
 
-En las secciones siguientes muestran cómo agregar vistas específicas de la plataforma a un diseño de Xamarin.Forms en cada plataforma.
+Las secciones siguientes muestran cómo agregar vistas específicas de plataforma a un diseño de Xamarin.Forms en cada plataforma.
 
 ### <a name="ios"></a>iOS
 
-En el ejemplo de código siguiente se muestra cómo agregar un `UILabel` a una [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) y un [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/):
+En el ejemplo de código siguiente se muestra cómo agregar un `UILabel` a un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) y un [ `ContentView` ](xref:Xamarin.Forms.ContentView):
 
 ```csharp
 var uiLabel = new UILabel {
@@ -56,11 +56,11 @@ stackLayout.Children.Add (uiLabel);
 contentView.Content = uiLabel.ToView();
 ```
 
-En el ejemplo se da por supuesto que el `stackLayout` y `contentView` instancias se han creado previamente en XAML o C#.
+El ejemplo supone que el `stackLayout` y `contentView` instancias se han creado previamente en XAML o C#.
 
 ### <a name="android"></a>Android
 
-En el ejemplo de código siguiente se muestra cómo agregar un `TextView` a una [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) y un [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/):
+En el ejemplo de código siguiente se muestra cómo agregar un `TextView` a un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) y un [ `ContentView` ](xref:Xamarin.Forms.ContentView):
 
 ```csharp
 var textView = new TextView (MainActivity.Instance) { Text = originalText, TextSize = 14 };
@@ -68,11 +68,11 @@ stackLayout.Children.Add (textView);
 contentView.Content = textView.ToView();
 ```
 
-En el ejemplo se da por supuesto que el `stackLayout` y `contentView` instancias se han creado previamente en XAML o C#.
+El ejemplo supone que el `stackLayout` y `contentView` instancias se han creado previamente en XAML o C#.
 
 ### <a name="universal-windows-platform"></a>Plataforma universal de Windows
 
-En el ejemplo de código siguiente se muestra cómo agregar un `TextBlock` a una [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) y un [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/):
+En el ejemplo de código siguiente se muestra cómo agregar un `TextBlock` a un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) y un [ `ContentView` ](xref:Xamarin.Forms.ContentView):
 
 ```csharp
 var textBlock = new TextBlock
@@ -86,17 +86,17 @@ stackLayout.Children.Add(textBlock);
 contentView.Content = textBlock.ToView();
 ```
 
-En el ejemplo se da por supuesto que el `stackLayout` y `contentView` instancias se han creado previamente en XAML o C#.
+El ejemplo supone que el `stackLayout` y `contentView` instancias se han creado previamente en XAML o C#.
 
-## <a name="overriding-platform-measurements-for-custom-views"></a>Reemplazar las mediciones de plataforma de vistas personalizadas
+## <a name="overriding-platform-measurements-for-custom-views"></a>Reemplazar las mediciones de plataforma para las vistas personalizadas
 
-Vistas personalizadas en cada plataforma implementan a menudo sólo correctamente medida para el escenario de diseño para el que se diseñaron. Por ejemplo, una vista personalizada que se han diseñado para ocupar solo la mitad del ancho disponible del dispositivo. Sin embargo, después de que se comparten con otros usuarios, la vista personalizada puede ser necesaria para ocupar el ancho total disponible del dispositivo. Por lo tanto, puede ser necesario invalidar la implementación de una medida de vistas personalizadas cuando se reutiliza en un diseño de Xamarin.Forms. Por esta razón, el `Add` y `ToView` métodos de extensión proporcionan invalidaciones que permiten a los delegados de medida que se especifique lo que pueden invalidar el diseño de la vista personalizada cuando se agrega a un diseño de Xamarin.Forms.
+Vistas personalizadas en cada plataforma implementan a menudo solo correctamente medida para el escenario de diseño para el que se diseñaron. Por ejemplo, una vista personalizada que se han diseñado que solo ocupe la mitad del ancho disponible del dispositivo. Sin embargo, después de que se comparten con otros usuarios, la vista personalizada puede requerir hasta ocupar el ancho total disponible del dispositivo. Por lo tanto, puede ser necesario reemplazar una implementación de medición de vistas personalizadas cuando se reutilizan en un diseño de Xamarin.Forms. Por ese motivo, la `Add` y `ToView` métodos de extensión ofrecen invalidaciones que permiten a los delegados de medida que se especifique, que pueden reemplazar el diseño de vista personalizada cuando se agrega a un diseño de Xamarin.Forms.
 
-En las secciones siguientes se muestran cómo invalidar el diseño de vistas personalizadas, para corregir su uso de la API de medida.
+Las siguientes secciones muestran cómo reemplazar el diseño de vistas personalizadas, para corregir su uso de la API de medición.
 
 ### <a name="ios"></a>iOS
 
-El siguiente ejemplo de código muestra la `CustomControl` (clase), que se hereda de `UILabel`:
+El siguiente ejemplo de código muestra la `CustomControl` (clase), que hereda de `UILabel`:
 
 ```csharp
 public class CustomControl : UILabel
@@ -113,7 +113,7 @@ public class CustomControl : UILabel
 }
 ```
 
-Una instancia de esta vista se agrega a un [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), como se muestra en el ejemplo de código siguiente:
+Una instancia de esta vista se agrega a un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout), tal y como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 var customControl = new CustomControl {
@@ -125,9 +125,9 @@ var customControl = new CustomControl {
 stackLayout.Children.Add (customControl);
 ```
 
-Sin embargo, dado que el `CustomControl.SizeThatFits` invalidación siempre devuelve un valor de alto de 150, la vista se mostrará con un espacio vacío por encima y por debajo de él, como se muestra en la siguiente captura de pantalla:
+Sin embargo, dado que el `CustomControl.SizeThatFits` invalidación siempre devuelve un valor de 150 de alto, se mostrará la vista con un espacio vacío por encima y debajo de él, como se muestra en la siguiente captura de pantalla:
 
-![](code-images/ios-bad-measurement.png "control personalizado con la implementación de SizeThatFits incorrectos de iOS")
+![](code-images/ios-bad-measurement.png "control personalizado con la implementación de SizeThatFits incorrecta de iOS")
 
 Una solución a este problema consiste en proporcionar un `GetDesiredSizeDelegate` implementación, como se muestra en el ejemplo de código siguiente:
 
@@ -150,19 +150,19 @@ SizeRequest? FixSize (NativeViewWrapperRenderer renderer, double width, double h
 }
 ```
 
-Este método usa el ancho proporcionado por el `CustomControl.SizeThatFits` método, pero sustituye el alto de 150 para una altura de 70. Cuando el `CustomControl` instancia se agrega a la [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), el `FixSize` método se puede especificar como el `GetDesiredSizeDelegate` corregir la medida incorrecta proporcionada por el `CustomControl` clase:
+Este método utiliza el ancho proporcionado por el `CustomControl.SizeThatFits` método, pero sustituye la altura de 150 por una altura de 70. Cuando el `CustomControl` instancia se agrega a la [ `StackLayout` ](xref:Xamarin.Forms.StackLayout), el `FixSize` método se puede especificar como el `GetDesiredSizeDelegate` para corregir la medida incorrecta proporcionada por el `CustomControl` clase:
 
 ```csharp
 stackLayout.Children.Add (customControl, FixSize);
 ```
 
-Esto resulta en la vista personalizada que se muestre correctamente, sin espacio en blanco por encima y por debajo de él, como se muestra en la captura de pantalla siguiente:
+El resultado en la vista personalizada que se muestra correctamente, sin espacio en blanco por encima y debajo de él, como se muestra en la captura de pantalla siguiente:
 
-![](code-images/ios-good-measurement.png "control personalizado con GetDesiredSize reemplazo de iOS")
+![](code-images/ios-good-measurement.png "control personalizado con invalidación GetDesiredSize iOS")
 
 ### <a name="android"></a>Android
 
-El siguiente ejemplo de código muestra la `CustomControl` (clase), que se hereda de `TextView`:
+El siguiente ejemplo de código muestra la `CustomControl` (clase), que hereda de `TextView`:
 
 ```csharp
 public class CustomControl : TextView
@@ -184,7 +184,7 @@ public class CustomControl : TextView
 }
 ```
 
-Una instancia de esta vista se agrega a un [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), como se muestra en el ejemplo de código siguiente:
+Una instancia de esta vista se agrega a un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout), tal y como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 var customControl = new CustomControl (MainActivity.Instance) {
@@ -194,7 +194,7 @@ var customControl = new CustomControl (MainActivity.Instance) {
 stackLayout.Children.Add (customControl);
 ```
 
-Sin embargo, dado que el `CustomControl.OnMeasure` invalidación siempre devuelve la mitad del ancho solicitado, la vista se mostrará que ocupan solo la mitad el ancho disponible del dispositivo, como se muestra en la captura de pantalla siguiente:
+Sin embargo, dado que el `CustomControl.OnMeasure` invalidación siempre devuelve la mitad del ancho solicitado, la vista se mostrarán ocupando sólo la mitad el ancho disponible del dispositivo, como se muestra en la captura de pantalla siguiente:
 
 ![](code-images/android-bad-measurement.png "Control personalizado de Android con implementación OnMeasure incorrecta")
 
@@ -217,19 +217,19 @@ SizeRequest? FixSize (NativeViewWrapperRenderer renderer, int widthConstraint, i
 }
 ```
 
-Este método usa el ancho proporcionado por el `CustomControl.OnMeasure` (método), pero se multiplica por dos. Cuando el `CustomControl` instancia se agrega a la [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), el `FixSize` método se puede especificar como el `GetDesiredSizeDelegate` corregir la medida incorrecta proporcionada por el `CustomControl` clase:
+Este método utiliza el ancho proporcionado por el `CustomControl.OnMeasure` método, pero la multiplica por dos. Cuando el `CustomControl` instancia se agrega a la [ `StackLayout` ](xref:Xamarin.Forms.StackLayout), el `FixSize` método se puede especificar como el `GetDesiredSizeDelegate` para corregir la medida incorrecta proporcionada por el `CustomControl` clase:
 
 ```csharp
 stackLayout.Children.Add (customControl, FixSize);
 ```
 
-Esto resulta en la vista personalizada que se va a muestre correctamente, que ocupan el ancho del dispositivo, como se muestra en la siguiente captura de pantalla:
+Esto da como resultado la vista personalizada se muestra correctamente, ocupan el ancho del dispositivo, como se muestra en la captura de pantalla siguiente:
 
 ![](code-images/android-good-measurement.png "Control personalizado de Android con el delegado GetDesiredSize personalizado")
 
 ### <a name="universal-windows-platform"></a>Plataforma universal de Windows
 
-El siguiente ejemplo de código muestra la `CustomControl` (clase), que se hereda de `Panel`:
+El siguiente ejemplo de código muestra la `CustomControl` (clase), que hereda de `Panel`:
 
 ```csharp
 public class CustomControl : Panel
@@ -282,7 +282,7 @@ public class CustomControl : Panel
 }
 ```
 
-Una instancia de esta vista se agrega a un [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), como se muestra en el ejemplo de código siguiente:
+Una instancia de esta vista se agrega a un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout), tal y como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 var brokenControl = new CustomControl {
@@ -291,11 +291,11 @@ var brokenControl = new CustomControl {
 stackLayout.Children.Add(brokenControl);
 ```
 
-Sin embargo, dado que el `CustomControl.ArrangeOverride` invalidación siempre devuelve la mitad del ancho solicitado, la vista se ajustarán a la mitad del ancho disponible del dispositivo, como se muestra en la captura de pantalla siguiente:
+Sin embargo, dado que el `CustomControl.ArrangeOverride` invalidación siempre devuelve la mitad del ancho solicitado, se recortará la vista a la mitad el ancho disponible del dispositivo, como se muestra en la captura de pantalla siguiente:
 
 ![](code-images/winrt-bad-measurement.png "Control personalizado UWP con implementación ArrangeOverride incorrecta")
 
-Una solución a este problema consiste en proporcionar una `ArrangeOverrideDelegate` implementación, al agregar la vista para la [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), como se muestra en el ejemplo de código siguiente:
+Una solución a este problema consiste en proporcionar un `ArrangeOverrideDelegate` implementación, al agregar la vista para la [ `StackLayout` ](xref:Xamarin.Forms.StackLayout), tal y como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, finalSize) =>
@@ -310,13 +310,13 @@ stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, final
 });
 ```
 
-Este método usa el ancho proporcionado por el `CustomControl.ArrangeOverride` (método), pero se multiplica por dos. Esto resulta en la vista personalizada que se va a muestre correctamente, que ocupan el ancho del dispositivo, como se muestra en la siguiente captura de pantalla:
+Este método utiliza el ancho proporcionado por el `CustomControl.ArrangeOverride` método, pero la multiplica por dos. Esto da como resultado la vista personalizada se muestra correctamente, ocupan el ancho del dispositivo, como se muestra en la captura de pantalla siguiente:
 
-![](code-images/winrt-good-measurement.png "Control personalizado UWP con ArrangeOverride delegado")
+![](code-images/winrt-good-measurement.png "Control personalizado UWP con el delegado ArrangeOverride")
 
 ## <a name="summary"></a>Resumen
 
-Este artículo explica cómo agregar vistas nativo a un diseño de Xamarin.Forms creado con C# y cómo reemplazar el diseño de vistas personalizadas para corregir su uso de la API de medida.
+En este artículo se explica cómo agregar vistas nativas a un diseño de Xamarin.Forms creado con C# y cómo reemplazar el diseño de vistas personalizadas para corregir su uso de la API de medición.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

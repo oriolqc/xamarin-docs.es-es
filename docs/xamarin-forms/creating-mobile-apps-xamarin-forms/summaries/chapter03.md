@@ -7,22 +7,22 @@ ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 5843147b82837f1a8677d8be48a8e1ca92db1a75
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 3ef8f14bd60cf612408bb9e3885ef319d3efc8c5
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935421"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998340"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumen del capítulo 3. Más profunda en texto
 
-Este capítulo se explora el [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) vista con más detalle, incluido el color, fuentes y el formato.
+Este capítulo se explora el [ `Label` ](xref:Xamarin.Forms.Label) vista con más detalle, incluido el color, fuentes y el formato.
 
 ## <a name="wrapping-paragraphs"></a>Puntos de ajuste
 
-Cuando el [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.Text/) propiedad de `Label` contiene texto largo, `Label` automáticamente ajusta en varias líneas como se muestra en el [ **Baskervilles** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles) ejemplo. Puede insertar códigos Unicode, como '\u2014' para el guión o caracteres de C# como '\r' interrumpir a una nueva línea.
+Cuando el [ `Text` ](xref:Xamarin.Forms.Label.Text) propiedad de `Label` contiene texto largo, `Label` automáticamente ajusta en varias líneas como se muestra en el [ **Baskervilles** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/Baskervilles) ejemplo. Puede insertar códigos Unicode, como '\u2014' para el guión o caracteres de C# como '\r' interrumpir a una nueva línea.
 
-Cuando el [ `HorizontalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.HorizontalOptions/) y [ `VerticalOptions` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.VerticalOptions/) las propiedades de un `Label` se establecen en `LayoutOptions.Fill`, el tamaño general de la `Label` se rige por el espacio que su contenedor hace que estén disponibles. El `Label` se dice que *restringida*. El tamaño de la `Label` es el tamaño de su contenedor.
+Cuando el [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) y [ `VerticalOptions` ](xref:Xamarin.Forms.View.VerticalOptions) las propiedades de un `Label` se establecen en `LayoutOptions.Fill`, el tamaño general de la `Label` se rige por el espacio que su contenedor hace que estén disponibles. El `Label` se dice que *restringida*. El tamaño de la `Label` es el tamaño de su contenedor.
 
 Cuando el `HorizontalOptions` y `VerticalOptions` propiedades se establecen en valores distintos de `LayoutOptions.Fill`, el tamaño de la `Label` se rige por el espacio necesario para representar el texto, hasta el tamaño de su contenedor hace que estén disponible para el `Label`. El `Label` se dice que *sin restricciones* y determina su propio tamaño.
 
@@ -38,41 +38,41 @@ Establecer el [ `LineBreakMode` ](xref:Xamarin.Forms.Label.LineBreakMode) propie
 
 ## <a name="text-and-background-colors"></a>Colores de fondo y texto
 
-Establecer el [ `TextColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.TextColor/) y [ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/) propiedades de `Label` a [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) valores para controlar el color del texto y fondo.
+Establecer el [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor) y [ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor) propiedades de `Label` a [ `Color` ](xref:Xamarin.Forms.Color) valores para controlar el color del texto y fondo.
 
 El `BackgroundColor` se aplica al fondo de toda el área ocupado por el `Label`. En función de la `HorizontalOptions` y `VerticalOptions` propiedades, que el tamaño puede ser considerablemente mayor que el área requerida para mostrar el texto. Puede usar para experimentar con distintos valores de color `HorizontalOptions`, `VerticalOptions`, `HorizontalExeAlignment`, y `VerticalTextAlignment` para ver cómo afectan al tamaño y la posición de la `Label`y el tamaño y la posición del texto dentro de la `Label`.
 
 ## <a name="the-color-structure"></a>La estructura de Color
 
-El [ `Color` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Color/) estructura le permite especificar los colores como valores de rojo, verde y azul (RGB) o valores de matiz-saturación-luminosidad HSL (), o con un nombre de color. También está disponible para indicar la transparencia de un canal alfa.
+El [ `Color` ](xref:Xamarin.Forms.Color) estructura le permite especificar los colores como valores de rojo, verde y azul (RGB) o valores de matiz-saturación-luminosidad HSL (), o con un nombre de color. También está disponible para indicar la transparencia de un canal alfa.
 
 Use un `Color` constructor para especificar:
 
-- un [tonos de gris](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/)
-- un [valor RGB](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/System.Double/System.Double/)
-- un [valor RGB de transparencia](https://developer.xamarin.com/api/constructor/Xamarin.Forms.Color.Color/p/System.Double/System.Double/System.Double/System.Double/)
+- un [tonos de gris](xref:Xamarin.Forms.Color.%23ctor(System.Double))
+- un [valor RGB](xref:Xamarin.Forms.Color.%23ctor(System.Double,System.Double,System.Double))
+- un [valor RGB de transparencia](xref:Xamarin.Forms.Color.%23ctor(System.Double,System.Double,System.Double,System.Double))
 
 Los argumentos son `double` valores comprendidos entre 0 y 1.
 
 También puede usar varios métodos estáticos para crear `Color` valores:
 
-- [`Color.FromRgb`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgb/p/System.Double/System.Double/System.Double/) para `double` valores RGB de 0 a 1
-- [`Color.FromRgb`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgb/p/System.Int32/System.Int32/System.Int32/) para los valores RGB de entero comprendido entre 0 y 255.
-- [`Color.FromRgba`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Double/System.Double/System.Double/System.Double/) para `double` valores RGB con transparencia
-- [`Color.FromRgba`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromRgba/p/System.Int32/System.Int32/System.Int32/System.Int32/) para los valores RGB de enteros con transparencia
-- [`Color.FromHsla`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHsla/p/System.Double/System.Double/System.Double/System.Double/) para `double` HSL (valores) con transparencia
-- [`Color.FromUint`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromUint/p/System.UInt32/) para un `uint` valor se calcula como (B + 256 * (G + 256 * (R + 256 * A)))
-- [`Color.FromHex`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.FromHex/p/System.String/) para un `string` formato de dígitos hexadecimales en el formulario "#AARRGGBB" o "#RRGGBB" o "#ARGB" o "#RGB", donde cada letra corresponde a un dígito hexadecimal para la versión alfa, rojo, verdes y azules de los canales. Este método es el principal utiliza para las conversiones de color XAML, como se describe en [capítulo 7, XAML frente a código](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md).
+- [`Color.FromRgb`](xref:Xamarin.Forms.Color.FromRgb(System.Double,System.Double,System.Double)) para `double` valores RGB de 0 a 1
+- [`Color.FromRgb`](xref:Xamarin.Forms.Color.FromRgb(System.Int32,System.Int32,System.Int32)) para los valores RGB de entero comprendido entre 0 y 255.
+- [`Color.FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Double,System.Double,System.Double,System.Double)) para `double` valores RGB con transparencia
+- [`Color.FromRgba`](xref:Xamarin.Forms.Color.FromRgba(System.Int32,System.Int32,System.Int32,System.Int32)) para los valores RGB de enteros con transparencia
+- [`Color.FromHsla`](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double)) para `double` HSL (valores) con transparencia
+- [`Color.FromUint`](xref:Xamarin.Forms.Color.FromUint(System.UInt32)) para un `uint` valor se calcula como (B + 256 * (G + 256 * (R + 256 * A)))
+- [`Color.FromHex`](xref:Xamarin.Forms.Color.FromHex(System.String)) para un `string` formato de dígitos hexadecimales en el formulario "#AARRGGBB" o "#RRGGBB" o "#ARGB" o "#RGB", donde cada letra corresponde a un dígito hexadecimal para la versión alfa, rojo, verdes y azules de los canales. Este método es el principal utiliza para las conversiones de color XAML, como se describe en [capítulo 7, XAML frente a código](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md).
 
 Una vez creado, un `Color` valor es inmutable. Pueden obtener las características del color de las siguientes propiedades:
 
-- [`R`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.R/)
-- [`G`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.G/)
-- [`B`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.B/)
-- [`A`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.A/)
-- [`Hue`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Hue/)
-- [`Saturation`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Saturation/)
-- [`Luminosity`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Luminosity/)
+- [`R`](xref:Xamarin.Forms.Color.R)
+- [`G`](xref:Xamarin.Forms.Color.G)
+- [`B`](xref:Xamarin.Forms.Color.B)
+- [`A`](xref:Xamarin.Forms.Color.A)
+- [`Hue`](xref:Xamarin.Forms.Color.Hue)
+- [`Saturation`](xref:Xamarin.Forms.Color.Saturation)
+- [`Luminosity`](xref:Xamarin.Forms.Color.Luminosity)
 
 Estos son todos `double` valores comprendidos entre 0 y 1.
 
@@ -84,16 +84,16 @@ Otro campo de solo lectura por estático público define un color con todos los 
 
 Varios métodos de instancia permiten la modificación de un color existente para crear un nuevo color:
 
-- [`AddLuminosity`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.AddLuminosity/p/System.Double/)
-- [`MultiplyAlpha`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.MultiplyAlpha/p/System.Double/)
-- [`WithHue`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.WithHue/p/System.Double/)
-- [`WithLuminosity`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.WithLuminosity/p/System.Double/)
-- [`WithSaturation`](https://developer.xamarin.com/api/member/Xamarin.Forms.Color.WithSaturation/p/System.Double/)
+- [`AddLuminosity`](xref:Xamarin.Forms.Color.AddLuminosity(System.Double))
+- [`MultiplyAlpha`](xref:Xamarin.Forms.Color.MultiplyAlpha(System.Double))
+- [`WithHue`](xref:Xamarin.Forms.Color.WithHue(System.Double))
+- [`WithLuminosity`](xref:Xamarin.Forms.Color.WithLuminosity(System.Double))
+- [`WithSaturation`](xref:Xamarin.Forms.Color.WithSaturation(System.Double))
 
 Por último, dos propiedades estáticas de sólo lectura definen valor de color especial:
 
-- [`Color.Default`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Default/), todos los canales se establece en &ndash;1
-- [`Color.Accent`](https://developer.xamarin.com/api/property/Xamarin.Forms.Color.Accent/)
+- [`Color.Default`](xref:Xamarin.Forms.Color.Default), todos los canales se establece en &ndash;1
+- [`Color.Accent`](xref:Xamarin.Forms.Color.Accent)
 
 `Color.Default` está diseñado para aplicar la combinación de colores de la plataforma y, por lo tanto tiene un significado diferente en contextos diferentes en distintas plataformas. De forma predeterminada, las combinaciones de colores de la plataforma son:
 
@@ -115,19 +115,19 @@ Para las plataformas Windows, normalmente se selecciona el tema de color por el 
 
 ## <a name="font-sizes-and-attributes"></a>Atributos y los tamaños de fuente
 
-Establecer el [ `FontFamily` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FontFamily/) propiedad de `Label` en una cadena como "Times Roman" para seleccionar una familia de fuentes. Sin embargo, debe especificar una familia de fuentes que se admite en la plataforma concreta, y las plataformas en este sentido son incoherentes.
+Establecer el [ `FontFamily` ](xref:Xamarin.Forms.Label.FontFamily) propiedad de `Label` en una cadena como "Times Roman" para seleccionar una familia de fuentes. Sin embargo, debe especificar una familia de fuentes que se admite en la plataforma concreta, y las plataformas en este sentido son incoherentes.
 
-Establecer el [ `FontSize` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FontSize/) propiedad de `Label` a un `double` para especificar el alto aproximado de la fuente. Consulte [capítulo 5, tratar con tamaños](chapter05.md), para obtener más detalles sobre la elección de forma inteligente los tamaños de fuente.
+Establecer el [ `FontSize` ](xref:Xamarin.Forms.Label.FontSize) propiedad de `Label` a un `double` para especificar el alto aproximado de la fuente. Consulte [capítulo 5, tratar con tamaños](chapter05.md), para obtener más detalles sobre la elección de forma inteligente los tamaños de fuente.
 
-Como alternativa, puede obtener uno de varios tamaños de fuente preestablecido depende de la plataforma. Estático [ `Device.GetNamedSize` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.GetNamedSize/p/Xamarin.Forms.NamedSize/System.Type/) método y [sobrecarga](https://developer.xamarin.com/api/member/Xamarin.Forms.Device.GetNamedSize/p/Xamarin.Forms.NamedSize/Xamarin.Forms.Element/) ambos devuelven un `double` el valor de tamaño de fuente adecuado para la plataforma en función de los miembros de la [ `NamedSize` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NamedSize/)enumeración ([`Default`](xref:Xamarin.Forms.NamedSize.Default), [ `Micro` ](xref:Xamarin.Forms.NamedSize.Micro), [ `Small` ](xref:Xamarin.Forms.NamedSize.Small), [ `Medium` ](xref:Xamarin.Forms.NamedSize.Medium),  y [ `Large` ](xref:Xamarin.Forms.NamedSize.Large)). El valor devuelto de la `Medium` miembro no es necesariamente el mismo que `Default`. El [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) ejemplo muestra el texto con estos tamaños con nombre.
+Como alternativa, puede obtener uno de varios tamaños de fuente preestablecido depende de la plataforma. Estático [ `Device.GetNamedSize` ](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,System.Type)) método y [sobrecarga](xref:Xamarin.Forms.Device.GetNamedSize(Xamarin.Forms.NamedSize,Xamarin.Forms.Element)) ambos devuelven un `double` el valor de tamaño de fuente adecuado para la plataforma en función de los miembros de la [ `NamedSize` ](xref:Xamarin.Forms.NamedSize)enumeración ([`Default`](xref:Xamarin.Forms.NamedSize.Default), [ `Micro` ](xref:Xamarin.Forms.NamedSize.Micro), [ `Small` ](xref:Xamarin.Forms.NamedSize.Small), [ `Medium` ](xref:Xamarin.Forms.NamedSize.Medium),  y [ `Large` ](xref:Xamarin.Forms.NamedSize.Large)). El valor devuelto de la `Medium` miembro no es necesariamente el mismo que `Default`. El [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) ejemplo muestra el texto con estos tamaños con nombre.
 
 Establecer el [ `FontAttributes` ](xref:Xamarin.Forms.Label.FontAttributes) propiedad de `Label` a un miembro de estos [ `FontAttributes` ](xref:Xamarin.Forms.FontAttributes) enumeración, [ `Bold` ](xref:Xamarin.Forms.FontAttributes.Bold), [ `Italic` ](xref:Xamarin.Forms.FontAttributes.Italic), o [ `None` ](xref:Xamarin.Forms.FontAttributes.None). Puede combinar el `Bold` y `Italic` miembros con el bit a bit OR operadores de C#.
 
 ## <a name="formatted-text"></a>Texto con formato
 
-En todos los ejemplos presentados hasta ahora, todo el texto muestra el `Label` se ha dado formato uniformemente. Para variar el formato dentro de una cadena de texto, no establezca la `Text` propiedad de `Label`. En su lugar, establezca el [ `FormattedText` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Label.FormattedText/) propiedad a un objeto de tipo [ `FormattedString` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FormattedString/).
+En todos los ejemplos presentados hasta ahora, todo el texto muestra el `Label` se ha dado formato uniformemente. Para variar el formato dentro de una cadena de texto, no establezca la `Text` propiedad de `Label`. En su lugar, establezca el [ `FormattedText` ](xref:Xamarin.Forms.Label.FormattedText) propiedad a un objeto de tipo [ `FormattedString` ](xref:Xamarin.Forms.FormattedString).
 
-`FormattedString` tiene un [ `Spans` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FormattedString.Spans/) propiedad que es una colección de [ `Span` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Span/) objetos. Cada `Span` objeto tiene su propio [ `Text` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.Text/), [ `FontFamily` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.FontFamily/), [ `FontSize` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.FontSize/), [ `FontAttributes` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.FontAttributes/), [ `ForegroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.ForegroundColor/), y [ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Span.BackgroundColor/) propiedades.
+`FormattedString` tiene un [ `Spans` ](xref:Xamarin.Forms.FormattedString.Spans) propiedad que es una colección de [ `Span` ](xref:Xamarin.Forms.Span) objetos. Cada `Span` objeto tiene su propio [ `Text` ](xref:Xamarin.Forms.Span.Text), [ `FontFamily` ](xref:Xamarin.Forms.Span.FontFamily), [ `FontSize` ](xref:Xamarin.Forms.Span.FontSize), [ `FontAttributes` ](xref:Xamarin.Forms.Span.FontAttributes), [ `ForegroundColor` ](xref:Xamarin.Forms.Span.ForegroundColor), y [ `BackgroundColor` ](xref:Xamarin.Forms.Span.BackgroundColor) propiedades.
 
 El [ **VariableFormattedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormText) ejemplo muestra cómo utilizar el `FormattedText` propiedad para una sola línea de texto, y [ **VariableFormattedParagraph** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/VarFormPara) demuestra esta técnica para todo el párrafo, como se muestra aquí:
 

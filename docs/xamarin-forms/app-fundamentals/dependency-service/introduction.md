@@ -1,45 +1,45 @@
 ---
 title: Introducción a DependencyService
-description: Este artículo explica cómo funciona la clase Xamarin.Forms DependencyService para tener acceso a características de plataformas nativas.
+description: En este artículo se explica cómo funciona la clase Xamarin.Forms DependencyService para acceder a características de plataforma nativa.
 ms.prod: xamarin
 ms.assetid: 5d019604-4f6f-4932-9b26-1fce3b4d88f8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
-ms.openlocfilehash: 0b81d429b0488603c7a487421cb7f32c1f3cf890
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 558a05b5fdc4c4f08194b708de886bca342dd860
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240998"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995419"
 ---
 # <a name="introduction-to-dependencyservice"></a>Introducción a DependencyService
 
 ## <a name="overview"></a>Información general
 
-[`DependencyService`](https://developer.xamarin.com/api/type/Xamarin.Forms.DependencyService/) permite que las aplicaciones llamar a la funcionalidad específica de la plataforma desde código compartido. Esta funcionalidad permite que las aplicaciones de Xamarin.Forms todo lo que puede hacer una aplicación nativa hacer.
+[`DependencyService`](xref:Xamarin.Forms.DependencyService) permite que las aplicaciones llamar a funciones específicas de plataforma desde código compartido. Esta funcionalidad permite que las aplicaciones de Xamarin.Forms todo lo que puede hacer una aplicación nativa hacer.
 
-`DependencyService` es una resolución de dependencia. En la práctica, se define una interfaz y `DependencyService` busca la implementación correcta de esa interfaz de los diversos proyectos de plataforma.
+`DependencyService` es una resolución de dependencia. En la práctica, se define una interfaz y `DependencyService` busca la correcta implementación de la interfaz de los diversos proyectos de plataforma.
 
-## <a name="how-dependencyservice-works"></a>Cómo funciona DependencyService
+## <a name="how-dependencyservice-works"></a>Funcionamiento de DependencyService
 
-Aplicaciones de Xamarin.Forms necesitan cuatro componentes que se utilizará `DependencyService`:
+Las aplicaciones de Xamarin.Forms necesitan cuatro componentes que se utilizará `DependencyService`:
 
-- **Interfaz** &ndash; la funcionalidad necesaria se define mediante una interfaz en el código compartido.
-- **Por la implementación de la plataforma** &ndash; las clases que implementan la interfaz se deben agregar a cada proyecto de la plataforma.
-- **Registro** &ndash; cada clase de implementación debe registrarse con `DependencyService` a través de un atributo de metadatos. Habilita el registro `DependencyService` para encontrar la clase de implementación y suministrarlo en lugar de la interfaz en tiempo de ejecución.
-- **La llamada a DependencyService** &ndash; compartido código debe llamar explícitamente a `DependencyService` que ponerse en contacto para las implementaciones de la interfaz.
+- **Interfaz** &ndash; se define la funcionalidad requerida por una interfaz en código compartido.
+- **Implementación por plataforma** &ndash; las clases que implementan la interfaz deben agregarse a cada proyecto de la plataforma.
+- **Registro** &ndash; cada clase de implementación debe registrarse con `DependencyService` a través de un atributo de metadatos. Habilita el registro `DependencyService` para buscar la clase de implementación y proporcionar en lugar de la interfaz en tiempo de ejecución.
+- **La llamada a DependencyService** &ndash; comparten el código debe llamar explícitamente a `DependencyService` para solicitar las implementaciones de la interfaz.
 
-Tenga en cuenta que se deben proporcionar implementaciones para cada proyecto de la plataforma en la solución. Proyectos de plataforma sin implementaciones se producirá un error en tiempo de ejecución.
+Tenga en cuenta que se deben proporcionar implementaciones para cada proyecto de la plataforma en la solución. Proyectos de la plataforma sin implementaciones se producirá un error en tiempo de ejecución.
 
 Se explica la estructura de la aplicación en el diagrama siguiente:
 
-![](introduction-images/overview-diagram.png "Estructura de aplicación DependencyService")
+![](introduction-images/overview-diagram.png "Estructura de la aplicación de DependencyService")
 
 ### <a name="interface"></a>Interfaz
 
-La interfaz de diseño definirá cómo interactuar con una funcionalidad específica de la plataforma. Tenga cuidado si está desarrollando un componente compartido como un componente o paquete de Nuget. Diseño de la API puede hacer o interrumpir un paquete. En el ejemplo siguiente se especifica una interfaz sencilla para hablar de texto que permite flexibilidad para especificar las palabras que se pronuncian pero deja la implementación se personalice para cada plataforma:
+La interfaz de diseño que definirá cómo interactuar con una funcionalidad específica de la plataforma. Tenga cuidado si está desarrollando un componente compartido como un componente o paquete de Nuget. Diseño de API puede crear o interrumpir un paquete. El ejemplo siguiente especifica una interfaz sencilla para hablar el texto que permite flexibilidad para especificar las palabras que se hablará, pero deja la implementación para personalizarse para cada plataforma:
 
 ```csharp
 public interface ITextToSpeech {
@@ -75,7 +75,7 @@ namespace UsingDependencyService.iOS
 
 ### <a name="registration"></a>Registro
 
-Cada implementación de la interfaz debe registrarse con `DependencyService` con un atributo de metadatos. El código siguiente registra la implementación para iOS:
+Cada implementación de la interfaz debe estar registrada con `DependencyService` con un atributo de metadatos. El código siguiente registra la implementación para iOS:
 
 ```csharp
 [assembly: Dependency (typeof (TextToSpeech_iOS))]
@@ -85,7 +85,7 @@ namespace UsingDependencyService.iOS
 }
 ```
 
-Reunión de todo, la implementación específica de la plataforma que se ve así:
+En resumen, la implementación específica de la plataforma tiene este aspecto:
 
 ```csharp
 [assembly: Dependency (typeof (TextToSpeech_iOS))]
@@ -112,11 +112,11 @@ namespace UsingDependencyService.iOS
 
 Nota: que se realiza el registro en el nivel de espacio de nombres, no en el nivel de clase.
 
-#### <a name="universal-windows-platform-net-native-compilation"></a>Compilación nativa de Windows universal plataforma .NET
+#### <a name="universal-windows-platform-net-native-compilation"></a>Compilación nativa de .NET de plataforma de Windows universal
 
-Los proyectos UWP que usan la opción de compilación de .NET Native deben seguir un [configuración ligeramente diferentes](~/xamarin-forms/platform/windows/installation/index.md#target-invocation-exception) al inicializar Xamarin.Forms. Compilación nativa de .NET también requiere registro ligeramente diferente para los servicios de dependencia.
+Los proyectos UWP que usan la opción de compilación .NET Native deben seguir un [configuración ligeramente diferentes](~/xamarin-forms/platform/windows/installation/index.md#target-invocation-exception) al inicializar Xamarin.Forms. Compilación nativa de .NET también requiere el registro ligeramente diferente para los servicios de dependencia.
 
-En el **App.xaml.cs** de archivos, registre manualmente cada servicio de dependencia definida en el proyecto UWP usando el `Register<T>` método, tal y como se muestra a continuación:
+En el **App.xaml.cs** de archivos, registrar manualmente cada servicio de dependencia definida en el proyecto UWP con el `Register<T>` método tal y como se muestra a continuación:
 
 ```csharp
 Xamarin.Forms.Forms.Init(e, assembliesToInclude);
@@ -124,26 +124,26 @@ Xamarin.Forms.Forms.Init(e, assembliesToInclude);
 Xamarin.Forms.DependencyService.Register<TextToSpeechImplementation>();
 ```
 
-Nota: el registro manual mediante `Register<T>` es sólo es efectivo en versión compilaciones con compilación nativa. NET. Si se omite esta línea, compilaciones de depuración seguirá funcionando, pero versiones de lanzamiento se producirá un error al cargar el servicio de dependencia.
+Nota: el registro manual mediante `Register<T>` es eficaz solo en la versión compilaciones con compilación nativa. NET. Si se omite esta línea, las compilaciones de depuración seguirá funcionando, pero compilaciones de versión se producirá un error al cargar el servicio de dependencia.
 
 ### <a name="call-to-dependencyservice"></a>La llamada a DependencyService
 
-Una vez que el proyecto se ha configurado con una interfaz común y las implementaciones para cada plataforma, use `DependencyService` para obtener la implementación correcta en tiempo de ejecución:
+Una vez que el proyecto se configuró con una interfaz común e implementaciones para cada plataforma, use `DependencyService` para obtener una implementación correcta en tiempo de ejecución:
 
 ```csharp
 DependencyService.Get<ITextToSpeech>().Speak("Hello from Xamarin Forms");
 ```
 
-`DependencyService.Get<T>` Encontrará la implementación correcta de la interfaz `T`.
+`DependencyService.Get<T>` Encontrará la correcta implementación de interfaz `T`.
 
 ### <a name="solution-structure"></a>Estructura de la solución
 
-El [UsingDependencyService solución de ejemplo](https://developer.xamarin.com/samples/UsingDependencyService/) es se muestra a continuación para iOS y Android, con los cambios de código descritos anteriormente resaltado.
+El [UsingDependencyService solución de ejemplo](https://developer.xamarin.com/samples/UsingDependencyService/) es que se muestra a continuación para iOS y Android, con los cambios de código descritos anteriormente resaltado.
 
  [![iOS y Android solución](introduction-images/solution-sml.png "DependencyService estructura de la solución de ejemplo")](introduction-images/solution.png#lightbox "DependencyService estructura de la solución de ejemplo")
 
 > [!NOTE]
-> Se **debe** proporcionar una implementación en cada proyecto de la plataforma. Si se registró ninguna implementación de interfaz, la `DependencyService` podrá resolver el `Get<T>()` método en tiempo de ejecución.
+> Le **debe** proporcionar una implementación en cada proyecto de la plataforma. Si no se registra ninguna implementación de interfaz, el `DependencyService` será no se puede resolver el `Get<T>()` método en tiempo de ejecución.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

@@ -1,87 +1,87 @@
 ---
-title: Patrones de aplicación de empresa mediante Xamarin.Forms eBook
-description: Este libro electrónico proporciona una guía de arquitectura para desarrollar aplicaciones de empresa de Xamarin.Forms adaptables, fácil de mantener y pueden someterse a prueba.
+title: Patrones de aplicación empresarial utilizando el libro electrónico de Xamarin.Forms
+description: Este libro electrónico proporciona una guía de arquitectura para el desarrollo de Xamarin.Forms adaptables, fáciles de mantener y probar las aplicaciones empresariales.
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: c401465d8a57abe1d5a1cfaf9ee2616888332ea3
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: ecfe99f66e16eafabc3117036ff065e3a35259c3
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35242168"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994353"
 ---
-# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Patrones de aplicación de empresa mediante Xamarin.Forms eBook
+# <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Patrones de aplicación empresarial utilizando el libro electrónico de Xamarin.Forms
 
-_Guía de arquitectura para desarrollar aplicaciones de empresa de Xamarin.Forms adaptables, fácil de mantener y comprobables_
+_Guía de arquitectura para el desarrollo de Xamarin.Forms adaptables, fáciles de mantener y probar las aplicaciones empresariales_
 
-![](images/cover-sml.png "Patrones de aplicación de empresa mediante Xamarin.Forms eBook")
+![](images/cover-sml.png "Patrones de aplicación empresarial utilizando el libro electrónico de Xamarin.Forms")
 
-Este libro electrónico proporciona instrucciones sobre cómo implementar el patrón Model-View-ViewModel (MVVM), inserción de dependencias, navegación, validación y la administración de configuración, al tiempo que mantiene el acoplamiento flexible. Además, también hay instrucciones acerca de cómo realizar la autenticación y autorización con IdentityServer, acceso a datos desde microservicios en contenedores y las pruebas unitarias.
+Este libro electrónico proporciona instrucciones sobre cómo implementar el patrón Model-View-ViewModel (MVVM), la inserción de dependencias, navegación, validación y la administración de configuración, manteniendo el acoplamiento flexible. Además, también hay una guía sobre cómo realizar la autenticación y autorización con IdentityServer, acceso a datos de microservicios en contenedores y las pruebas unitarias.
 
 ## <a name="prefaceprefacemd"></a>[Prefacio](preface.md)
 
-Este capítulo explica el propósito y el ámbito de la guía y a quién está destinado a.
+Este capítulo explica el propósito y el ámbito de la guía y quién lo está destinado a.
 
 ## <a name="introductionintroductionmd"></a>[Introducción](introduction.md)
 
-Los desarrolladores de aplicaciones empresariales enfrentan a varios desafíos que pueden modificar la arquitectura de la aplicación durante el desarrollo. Por lo tanto, es importante compilar una aplicación para que se puede modificar o extender con el tiempo. Diseñar para tal adaptabilidad puede ser difícil, pero normalmente implica crear particiones de una aplicación en componentes discretos y con acoplamiento flexible que pueden integrarse fácilmente juntos en una aplicación.
+Los desarrolladores de aplicaciones empresariales enfrentan a varios desafíos que pueden modificar la arquitectura de la aplicación durante el desarrollo. Por lo tanto, es importante compilar una aplicación para que se puede modificar o extendido con el tiempo. Diseño de la capacidad de dichos adaptación puede ser difícil, pero normalmente implica dividir una aplicación en componentes discretos y con acoplamiento flexible que pueden integrarse fácilmente entre sí en una aplicación.
 
 ## <a name="mvvmmvvmmd"></a>[MVVM](mvvm.md)
 
-El modelo Model-View-ViewModel (MVVM) ayuda a separar la lógica de negocios y la presentación de una aplicación desde la interfaz de usuario (UI) de forma clara. Mantener una separación clara entre la lógica de la aplicación y la interfaz de usuario ayuda a solucionar problemas de desarrollo numerosas y puede hacer que una aplicación sea más fácil probar, mantener y desarrollar. Se pueden mejorar enormemente oportunidades de reutilización de código y permite a los desarrolladores y diseñadores de interfaz de usuario más puedan colaborar fácilmente al desarrollar sus respectivos partes de una aplicación.
+El patrón Model-View-ViewModel (MVVM) ayuda a separar la lógica de negocios y la presentación de una aplicación desde su interfaz de usuario (UI). Mantener una separación clara entre la interfaz de usuario y la lógica de aplicación ayuda a abordar numerosos problemas de desarrollo y hacer más fácil probar una aplicación, mantener y evolucionar. Se pueden mejorar enormemente las oportunidades de reutilización de código y permite a los desarrolladores y diseñadores de interfaz de usuario más colaboran fácilmente al desarrollar sus respectivos partes de una aplicación.
 
 ## <a name="dependency-injectiondependency-injectionmd"></a>[Inserción de dependencias](dependency-injection.md)
 
-Inyección de dependencia permite la separación de tipos concretos desde el código que dependa de estos tipos. Normalmente usa un contenedor que contiene una lista de registros y las asignaciones entre tipos abstractos e interfaces y los tipos concretos que implementan o extienden estos tipos.
+Inserción de dependencias permite la separación de tipos concretos desde el código que dependa de estos tipos. Normalmente usa un contenedor que contiene una lista de registros y las asignaciones entre tipos e interfaces abstractos y los tipos concretos que implementan o amplían estos tipos.
 
-Contenedores de inyección de dependencia reducen el acoplamiento entre objetos por lo que proporciona una funcionalidad para crear instancias de clase y administrar su duración en función de la configuración del contenedor. Durante la creación de objetos, el contenedor inserta las dependencias que requiere el objeto en él. Si aún no se han creado esas dependencias, el contenedor crea y sus dependencias resuelve en primer lugar.
+Contenedores de inserción de dependencia reducen el acoplamiento entre objetos por lo que proporciona una funcionalidad para crear instancias de clase y administra su duración en función de la configuración del contenedor. Durante la creación de objetos, el contenedor inserta las dependencias que requiere el objeto en él. Si aún no se han creado esas dependencias, el contenedor crea y resuelve primero sus dependencias.
 
 ## <a name="communicating-between-loosely-coupled-componentscommunicating-between-loosely-coupled-componentsmd"></a>[Comunicación entre componentes débilmente acoplados](communicating-between-loosely-coupled-components.md)
 
-El Xamarin.Forms [ `MessagingCenter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MessagingCenter/) clase implementa la publicación-suscribirse patrón, que permita la comunicación basada en mensajes entre los componentes que son poco práctico vincular por referencias de objeto y el tipo. Este mecanismo permite publicadores y suscriptores de comunicarse sin necesidad de una referencia a entre sí, lo que ayuda a reducir las dependencias entre los componentes, mientras que permite también componentes desarrollado y probado por separado.
+Xamarin.Forms [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) clase implementa la publicación-patrón, que permite la comunicación basada en mensajes entre los componentes que no son convenientes para vincular mediante referencias de objeto y el tipo de suscripción. Este mecanismo permite a los publicadores y suscriptores transmitir sin tener una referencia entre sí, lo que ayuda a reducir las dependencias entre componentes, mientras que permite que los componentes que se desarrollan y prueban de forma independiente.
 
 ## <a name="navigationnavigationmd"></a>[Navegación](navigation.md)
 
-Xamarin.Forms incluye compatibilidad para la navegación en páginas, que normalmente tiene como resultado de la interacción del usuario con la interfaz de usuario o de la propia aplicación como resultado de cambios de estado interno controlado por la lógica. Sin embargo, la navegación puede ser bastante complicada implementar en aplicaciones que usan el patrón MVVM.
+Xamarin.Forms incluye compatibilidad con la navegación de página, que normalmente da como resultado de la interacción del usuario con la interfaz de usuario o de la aplicación, como resultado de los cambios de estado controlado por la lógica interna. Sin embargo, navegación puede ser difícil de implementar en las aplicaciones que usan el patrón MVVM.
 
-Este capítulo se presentan un `NavigationService` (clase), que se usa para realizar la navegación por modelo basado en la vista de modelos de vista. Colocar en la vista lógica de navegación clases del modelo significa que la lógica puede realizarse a través de las pruebas automatizadas. Además, el modelo de vista, a continuación, puede implementar la lógica para controlar el desplazamiento para asegurarse de que se aplican ciertas reglas de negocios.
+Este capítulo presenta un `NavigationService` (clase), que se usa para realizar la navegación de model first de vista de modelos de vista. Colocar en la vista lógica de navegación clases de modelo significa que la lógica puede realizarse a través de pruebas automatizadas. Además, el modelo de vista, a continuación, puede implementar la lógica para controlar el desplazamiento para garantizar que se apliquen determinadas reglas empresariales.
 
 ## <a name="validationvalidationmd"></a>[Validación](validation.md)
 
-Cualquier aplicación que acepta datos proporcionados por los usuarios debe asegurarse de que la entrada es válida. Sin validación, un usuario puede proporcionar datos a los que hace que la aplicación genere un error. La validación aplica reglas de negocios y evita que un atacante inserte datos malintencionados.
+Cualquier aplicación que acepta entradas de los usuarios debe asegurarse de que la entrada es válida. Sin validación, el usuario puede proporcionar datos a los que hará que la aplicación producirá un error. La validación aplica las reglas de negocios y evita que un atacante inserta datos malintencionados.
 
-En el contexto de los modelos ViewModel (MVVM) de patrón, un modelo de vista o modelo a menudo se requerirá a realizar la validación de datos y notificar los errores de validación a la vista para que el usuario puede corregirlos.
+En el contexto de los modelos de ViewModel (MVVM) de patrón, un modelo de vista o modelo a menudo se requerirá para realizar la validación de datos y señalar los errores de validación a la vista para que el usuario puede corregirlos.
 
 ## <a name="configuration-managementconfiguration-managementmd"></a>[Administración de configuraciones](configuration-management.md)
 
-Configuración permite la separación de datos que se configura el comportamiento de una aplicación desde el código, lo que permite el comportamiento puede modificarse sin volver a generar la aplicación. Configuración de la aplicación es datos que una aplicación crea y administra y configuración del usuario sea la configuración de una aplicación personalizable que afectan al comportamiento de la aplicación y no requiere frecuente ajuste de nuevo.
+La configuración permite la separación de datos que se configura el comportamiento de una aplicación desde el código, lo que permite el comportamiento que se puede cambiar sin volver a generar la aplicación. Configuración de la aplicación es datos que una aplicación crea y administra y configuración de usuario es la configuración de una aplicación personalizable que afectan al comportamiento de la aplicación y no requiere el ajuste de volver a frecuentes.
 
 ## <a name="containerized-microservicescontainerized-microservicesmd"></a>[Microservicios en contenedores](containerized-microservices.md)
 
-Microservicios ofrecen un enfoque de implementación que es adecuado para los requisitos de la agilidad, la escala y la confiabilidad de las aplicaciones modernas en la nube y el desarrollo de aplicaciones. Una de las principales ventajas de microservicios es que puede ser escalado horizontal de forma independiente, lo que significa que se puede escalar un área funcional específica que requiere más procesamiento alimentación eléctrica o red de ancho de banda para admitir la demanda, sin ajuste de escala innecesariamente en áreas de la aplicación que no experimentan una mayor demanda.
+Los Microservicios ofrecen un enfoque al desarrollo de aplicaciones e implementación que se adapte a los requisitos de agilidad, escalabilidad y confiabilidad de aplicaciones modernas en la nube. Una de las principales ventajas de los microservicios es que pueden ser escaladas horizontalmente de forma independiente, lo que significa que se puede escalar un área funcional específica que requiere más procesamiento de energía o ancho de banda para admitir la demanda, sin escalado innecesariamente áreas de la aplicación que no está experimentando una mayor demanda.
 
 ## <a name="authentication-and-authorizationauthentication-and-authorizationmd"></a>[Autenticación y autorización](authentication-and-authorization.md)
 
-Existen muchos enfoques a la integración de autenticación y autorización en una aplicación de Xamarin.Forms que se comunica con una aplicación web de ASP.NET MVC. En este caso, la autenticación y autorización se realizan con un microservicio de identidad en contenedores que usa IdentityServer 4. IdentityServer es un marco de trabajo de código abierto OAuth 2.0 y OpenID Connect de ASP.NET Core que se integra con la identidad de núcleo de ASP.NET para realizar la autenticación de token de portador.
+Existen muchos enfoques para integrar la autenticación y autorización en una aplicación de Xamarin.Forms que se comunica con una aplicación web ASP.NET MVC. En este caso, la autenticación y autorización se realizan con un microservicio en contenedor de identidad que usa 4 IdentityServer. IdentityServer es un marco de código abierto de OAuth 2.0 y OpenID Connect para ASP.NET Core que se integra con ASP.NET Core Identity para realizar la autenticación de token de portador.
 
 ## <a name="accessing-remote-dataaccessing-remote-datamd"></a>[Acceso a datos remotos](accessing-remote-data.md)
 
-Muchas soluciones modernas basadas en web hacen uso de servicios web, hospedadas por servidores web, para proporcionar funcionalidad de cliente remoto a aplicaciones. Las operaciones que expone un servicio web constituyen una API web y aplicaciones de cliente deben ser capaces de usar la API web sin conocer cómo se implementan las operaciones que expone la API o datos.
+Muchas soluciones modernas basadas en web hacen uso de servicios web, hospedadas por servidores web, para proporcionar funcionalidad de cliente remoto a aplicaciones. Las operaciones que expone un servicio web constituyen una API web y aplicaciones de cliente deben ser capaces de usar la API web sin necesidad de saber cómo se implementan los datos o las operaciones que expone la API.
 
 ## <a name="unit-testingunit-testingmd"></a>[Pruebas unitarias](unit-testing.md)
 
-Probar modelos y ver modelos desde aplicaciones de MVVM es idéntico a otras clases de las pruebas, y pueden utilizarse las mismas herramientas y técnicas. Sin embargo, hay determinados patrones que son típicos al modelo y clases de modelo de vista, que se pueden beneficiar de técnicas de pruebas de unidad específica.
+Probar los modelos y los modelos de vista de las aplicaciones MVVM es idéntica a las pruebas de otras clases, y se pueden usar las mismas herramientas y técnicas. Sin embargo, hay algunos patrones típicos de modelo y las clases de modelo de vista, que pueden beneficiarse de las técnicas de pruebas de unidad específica.
 
 ## <a name="feedback"></a>Comentarios
 
-Este proyecto es un sitio de la Comunidad, en el que puede publicar preguntas y proporcionar comentarios. El sitio de la Comunidad se encuentra en [GitHub](https://github.com/dotnet-architecture/eShopOnContainers). Como alternativa, pueden recibir un mensaje comentarios acerca de los libros electrónicos a [ dotnet-architecture-ebooks-feedback@service.microsoft.com ](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com).
+Este proyecto tiene un sitio de la Comunidad, en el que puede publicar preguntas y proporcionar comentarios. El sitio de la Comunidad se encuentra en [GitHub](https://github.com/dotnet-architecture/eShopOnContainers). Como alternativa, se pueden enviar comentarios sobre el libro electrónico a [ dotnet-architecture-ebooks-feedback@service.microsoft.com ](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com).
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Descargar libros electrónicos (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
+- [Descargar libro electrónico (PDF de 2Mb)](https://aka.ms/xamarinpatternsebook)
 - [eShopOnContainers (GitHub) (ejemplo)](https://github.com/dotnet-architecture/eShopOnContainers)

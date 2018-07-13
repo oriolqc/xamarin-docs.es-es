@@ -1,26 +1,26 @@
 ---
-title: Agregar un reconocedor de gesto de alejar
-description: Este artículo explica cómo usar el gesto de alejar para hacer zoom interactivo de una imagen en la ubicación de esta posibilidad.
+title: Adición de un módulo de reconocimiento del gesto Pinch
+description: En este artículo se explica cómo usar el gesto de alejar para hacer zoom interactiva de una imagen en la ubicación pinch.
 ms.prod: xamarin
 ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 3600a8bf059bf29429cce35a233cc6618daa4d79
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 37befdcd4ccbcd49e3cebda92d55ae6f70da2ad6
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241782"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998708"
 ---
-# <a name="adding-a-pinch-gesture-recognizer"></a>Agregar un reconocedor de gesto de alejar
+# <a name="adding-a-pinch-gesture-recognizer"></a>Adición de un módulo de reconocimiento del gesto Pinch
 
-_El gesto de alejar se usa para llevar a cabo zoom interactivo y se implementa con la clase PinchGestureRecognizer. Es un escenario común para el gesto de alejar hacer zoom interactivo de una imagen en la ubicación de esta posibilidad. Esto se logra mediante el ajuste de escala en el contenido de la ventanilla y se muestra en este artículo._
+_El gesto de alejar se usa para llevar a cabo zoom interactivo y se implementa con la clase PinchGestureRecognizer. Un escenario común para el gesto pinch es hacer zoom interactiva de una imagen en la ubicación pinch. Esto se consigue cambiando el contenido de la ventanilla y se muestra en este artículo._
 
 ## <a name="overview"></a>Información general
 
-Para hacer que un elemento de la interfaz de usuario puede acercar con el gesto de alejar, crear un [ `PinchGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PinchGestureRecognizer/) de la instancia, controlar el [ `PinchUpdated` ](https://developer.xamarin.com/api/event/Xamarin.Forms.PinchGestureRecognizer.PinchUpdated/) eventos, y agregue el nuevo reconocedor de movimientos para el [ `GestureRecognizers` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.GestureRecognizers/) colección en el elemento de interfaz de usuario. El siguiente ejemplo de código muestra un `PinchGestureRecognizer` conectado a un [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) elemento:
+Para que un elemento de interfaz de usuario se puede acercar con el gesto pinch, cree un [ `PinchGestureRecognizer` ](xref:Xamarin.Forms.PinchGestureRecognizer) de la instancia, controlar el [ `PinchUpdated` ](xref:Xamarin.Forms.PinchGestureRecognizer.PinchUpdated) eventos, y agregue el reconocedor de gestos de nuevo a la [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) colección en el elemento de interfaz de usuario. El siguiente ejemplo de código muestra un `PinchGestureRecognizer` adjunta a un [ `Image` ](xref:Xamarin.Forms.Image) elemento:
 
 ```csharp
 var pinchGesture = new PinchGestureRecognizer();
@@ -30,7 +30,7 @@ pinchGesture.PinchUpdated += (s, e) => {
 image.GestureRecognizers.Add(pinchGesture);
 ```
 
-También se puede lograr esto de XAML, como se muestra en el ejemplo de código siguiente:
+También se puede lograr esto en XAML, como se muestra en el ejemplo de código siguiente:
 
 ```xaml
 <Image Source="waterfront.jpg">
@@ -40,7 +40,7 @@ También se puede lograr esto de XAML, como se muestra en el ejemplo de código 
 </Image>
 ```
 
-El código para el `OnPinchUpdated` , a continuación, se agrega el controlador de eventos en el archivo de código subyacente:
+El código para el `OnPinchUpdated` , a continuación, se agrega el controlador de eventos para el archivo de código subyacente:
 
 ```csharp
 void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
@@ -49,9 +49,9 @@ void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
 }
 ```
 
-## <a name="creating-a-pinchtozoom-container"></a>Crear un contenedor de PinchToZoom
+## <a name="creating-a-pinchtozoom-container"></a>Creación de un contenedor PinchToZoom
 
-Controlar el gesto de alejar para llevar a cabo una operación de zoom requiere algunos cálculos para transformar la interfaz de usuario. Esta sección contiene una clase auxiliar generalizado para realizar las operaciones matemáticas, que se pueden usar para ampliar cualquier elemento de la interfaz de usuario de forma interactiva. En el ejemplo de código siguiente se muestra la clase `PinchToZoomContainer`:
+Controlar el gesto de alejar para llevar a cabo una operación de zoom, requiere un cálculo matemático para transformar la interfaz de usuario. Esta sección contiene una clase auxiliar generalizado para realizar los cálculos, que pueden usarse para cualquier elemento de la interfaz de usuario de zoom de forma interactiva. En el ejemplo de código siguiente se muestra la clase `PinchToZoomContainer`:
 
 ```csharp
 public class PinchToZoomContainer : ContentView
@@ -72,7 +72,7 @@ public class PinchToZoomContainer : ContentView
 }
 ```
 
-Esta clase puede ajustarse alrededor de un elemento de interfaz de usuario para que el gesto de alejar acercará el elemento de la interfaz de usuario ajustado. El ejemplo de código XAML siguiente muestra la `PinchToZoomContainer` ajuste un [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) elemento:
+Esta clase puede colocarse en torno a un elemento de interfaz de usuario para que el gesto de alejar irá el elemento de interfaz de usuario ajustado. El ejemplo de código XAML siguiente muestra la `PinchToZoomContainer` ajuste una [ `Image` ](xref:Xamarin.Forms.Image) elemento:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -91,7 +91,7 @@ Esta clase puede ajustarse alrededor de un elemento de interfaz de usuario para 
 </ContentPage>
 ```
 
-El siguiente ejemplo de código muestra cómo el `PinchToZoomContainer` ajusta un [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) elemento en una página de C#:
+El siguiente ejemplo de código muestra cómo el `PinchToZoomContainer` ajusta un [ `Image` ](xref:Xamarin.Forms.Image) elemento en una página de C#:
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -110,7 +110,7 @@ public class HomePageCS : ContentPage
 }
 ```
 
-Cuando el [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) elemento recibe un gesto de alejar, la imagen mostrada se se ha aplicado el zoom o no. El acercamiento se realiza mediante el `PinchZoomContainer.OnPinchUpdated` método, que se muestra en el ejemplo de código siguiente:
+Cuando el [ `Image` ](xref:Xamarin.Forms.Image) elemento recibe un gesto pinch, la imagen mostrada se se ha aplicado el zoom o no. El zoom se realiza mediante el `PinchZoomContainer.OnPinchUpdated` método, que se muestra en el ejemplo de código siguiente:
 
 ```csharp
 void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
@@ -160,15 +160,15 @@ void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
 }
 ```
 
-Este método actualiza el nivel de zoom del elemento de interfaz de usuario ajustado en función de gesto de alejar del usuario. Esto se logra mediante el uso de los valores de la [ `Scale` ](https://developer.xamarin.com/api/property/Xamarin.Forms.PinchGestureUpdatedEventArgs.Scale/), [ `ScaleOrigin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.PinchGestureUpdatedEventArgs.ScaleOrigin/) y [ `Status` ](https://developer.xamarin.com/api/property/Xamarin.Forms.PinchGestureUpdatedEventArgs.Status/) propiedades de la [ `PinchGestureUpdatedEventArgs` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PinchGestureUpdatedEventArgs/) instancia para calcular el factor de escala que se aplicará en el origen del gesto de alejar. El elemento de usuario ajustado está ampliado, a continuación, en el origen del gesto de alejar estableciendo su [ `TranslationX` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationX/), [ `TranslationY` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.TranslationY/), y [ `Scale` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Scale/) propiedades de los valores calculados.
+Este método actualiza el nivel de zoom del elemento de interfaz de usuario ajustado según el gesto de reducir del usuario. Esto se logra mediante el uso de los valores de la [ `Scale` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Scale), [ `ScaleOrigin` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.ScaleOrigin) y [ `Status` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Status) propiedades de la [ `PinchGestureUpdatedEventArgs` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs) instancia para calcular el factor de escala que se aplicará en el origen del gesto pinch. El elemento de usuario ajustado está ampliado, a continuación, en el origen del gesto pinch estableciendo su [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX), [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY), y [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) propiedades de los valores calculados.
 
 ## <a name="summary"></a>Resumen
 
-El gesto de alejar se usa para llevar a cabo zoom interactivo y se implementa con la [ `PinchGestureRecognizer` ](https://developer.xamarin.com/api/type/Xamarin.Forms.PinchGestureRecognizer/) clase.
+El gesto pinch se usa para llevar a cabo zoom interactivo y se implementa con la [ `PinchGestureRecognizer` ](xref:Xamarin.Forms.PinchGestureRecognizer) clase.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [PinchGesture (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PinchGesture/)
-- [GestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.GestureRecognizer/)
-- [PinchGestureRecognizer](https://developer.xamarin.com/api/type/Xamarin.Forms.PinchGestureRecognizer/)
+- [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
+- [PinchGestureRecognizer](xref:Xamarin.Forms.PinchGestureRecognizer)

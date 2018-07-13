@@ -1,42 +1,42 @@
 ---
 title: Limitaciones de Xamarin.iOS
-description: Este documento describe las limitaciones de Xamarin.iOS, hablar sobre los genéricos, genéricas subclases de NSObjects, P/Invoke en objetos genéricos y mucho más.
+description: Este documento describe las limitaciones de Xamarin.iOS, explicar los genéricos, subclases genéricas de NSObjects, P/Invoke en los objetos genéricos y mucho más.
 ms.prod: xamarin
 ms.assetid: 5AC28F21-4567-278C-7F63-9C2142C6E06A
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 04/09/2018
-ms.openlocfilehash: 8eb2cd5a749beab6f089479f5992fe3fbc16dd0a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: e154e4e1688b8a3d03459956934409fa9d5aef35
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786234"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998090"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitaciones de Xamarin.iOS
 
-Puesto que las aplicaciones en el iPhone con Xamarin.iOS se compilan en código estático, no es posible utilizar los servicios que requieren la generación de código en tiempo de ejecución.
+Puesto que las aplicaciones en el iPhone con Xamarin.iOS se compilan en código estático, no es posible usar las funciones que requieren la generación de código en tiempo de ejecución.
 
-Éstas son las limitaciones de Xamarin.iOS en comparación con el escritorio Mono:
+Éstas son las limitaciones de Xamarin.iOS en comparación con Mono de escritorio:
 
  <a name="Limited_Generics_Support" />
 
 
 ## <a name="limited-generics-support"></a>La compatibilidad con genéricos limitado
 
-A diferencia de .NET/Mono tradicional, el código en el iPhone se compila estáticamente antelación en lugar de que se compila a petición mediante un compilador JIT.
+A diferencia de Mono y .NET tradicional, el código en el iPhone se compila estáticamente antelación en lugar de que se compila a petición mediante un compilador JIT.
 
-De mono [AOT completa](http://www.mono-project.com/docs/advanced/aot/#full-aot) tecnología tiene algunas limitaciones con respecto a los genéricos, estos se deben a que se puede determinar por adelantado no cada posible genérica la creación de instancias en tiempo de compilación. Esto no es un problema para regular tiempos de ejecución de .NET o Mono como siempre se compile el código en tiempo de ejecución mediante el sólo en el compilador de tiempo. Pero esto supone un desafío para el compilador estático como Xamarin.iOS.
+Mono [AOT completa](http://www.mono-project.com/docs/advanced/aot/#full-aot) tecnología tiene algunas limitaciones con respecto a los genéricos, estos se deben a que no todas las instancias genéricas posibles se pueden determinar por adelantado en tiempo de compilación. Esto no es un problema para tiempos de ejecución de .NET o Mono regular como siempre se compila el código en tiempo de ejecución mediante el Just-in compilador Time. Pero esto supone un desafío para un compilador estático como Xamarin.iOS.
 
-Algunos de los problemas comunes que los desarrolladores experimenta, incluyen:
+Algunos de los problemas comunes que surgen a los desarrolladores, son:
 
  <a name="Generic_Subclasses_of_NSObjects_are_limited" />
 
 
-### <a name="generic-subclasses-of-nsobjects-are-limited"></a>Las subclases de NSObjects genérico están limitadas
+### <a name="generic-subclasses-of-nsobjects-are-limited"></a>Subclases genéricas de NSObjects están limitados
 
-Xamarin.iOS actualmente tiene compatibilidad limitada para crear subclases genéricas de la clase NSObject, por ejemplo, no se admite para métodos genéricos. A partir de 7.2.1, utilizando las subclases genéricas de NSObjects es posible, como esta:
+Xamarin.iOS actualmente tiene limitado el soporte técnico para la creación de subclases genéricas de NSObject (clase), por ejemplo, no se admite para métodos genéricos. A partir de 7.2.1, utilizando subclases genéricas de NSObjects es posible, como la siguiente:
 
 ```csharp
 class Foo<T> : UIView {
@@ -45,13 +45,13 @@ class Foo<T> : UIView {
 ```
 
 > [!NOTE]
-> Aunque las subclases genéricas de NSObjects son posibles, hay algunas limitaciones. Leer la [genéricas subclases de NSObject](~/ios/internals/api-design/nsobject-generics.md) documento para obtener más información
+> Aunque subclases genéricas de NSObjects son posibles, hay algunas limitaciones. Leer el [subclases genéricas de NSObject](~/ios/internals/api-design/nsobject-generics.md) documento para obtener más información
 
 
 
 ### <a name="pinvokes-in-generic-types"></a>P/invoca en tipos genéricos
 
-P/Invokes en clases genéricas no se admiten:
+No se admiten en las clases genéricas de P/Invoke:
 
 ```csharp
 class GenericType<T> {
@@ -70,26 +70,26 @@ Uso Property.SetInfo de reflexión para establecer el valor en un tipo Nullable&
  <a name="Value_types_as_Dictionary_Keys" />
 
 
-### <a name="value-types-as-dictionary-keys"></a>Tipos de valor como claves de diccionario
+### <a name="value-types-as-dictionary-keys"></a>Tipos de valor como las claves del diccionario
 
-Con un tipo de valor como un diccionario&lt;TKey, TValue&gt; clave es problemática, como el valor predeterminado el constructor de diccionario intenta usar EqualityComparer&lt;TKey&gt;. De forma predeterminada. EqualityComparer&lt;TKey&gt;. De manera predeterminada, a su vez, intenta usar la reflexión para crear instancias de un nuevo tipo que implementa el objeto IEqualityComparer&lt;TKey&gt; interfaz.
+Uso de un tipo de valor como un diccionario&lt;TKey, TValue&gt; clave es problemático, como el valor predeterminado el constructor de diccionario intenta usar EqualityComparer&lt;TKey&gt;. De forma predeterminada. EqualityComparer&lt;TKey&gt;. De forma predeterminada, a su vez, intenta usar la reflexión para crear una instancia de un nuevo tipo que implementa el objeto IEqualityComparer&lt;TKey&gt; interfaz.
 
-Esto funciona para los tipos de referencia (como la reflexión + crear un nuevo paso de tipo se omite), pero en caso de valor tipos de bloqueos y lo grabe en su lugar rápidamente una vez que se intenta utilizar en el dispositivo.
+Esto funciona para los tipos de referencia (como la reflexión + crear un nuevo paso de tipo se ha omitido), pero en caso de valor de tipos de bloqueos y quema bastante rápido una vez que intentan usar en el dispositivo.
 
- **Solución alternativa**: implementar manualmente el [IEqualityComparer&lt;TKey&gt; ](https://developer.xamarin.com/api/type/System.Collections.Generic.IEqualityComparer%601/) en un nuevo tipo de interfaz y proporcionar una instancia de ese tipo para el [diccionario&lt;TKey, TValue&gt; ](https://developer.xamarin.com/api/type/System.Collections.Generic.Dictionary%3CTKey,TValue%3E/) [(IEqualityComparer&lt;TKey&gt;)](https://developer.xamarin.com/api/type/System.Collections.Generic.IEqualityComparer%601/) constructor.
+ **Solución alternativa**: implementar manualmente el [IEqualityComparer&lt;TKey&gt; ](xref:System.Collections.Generic.IEqualityComparer`1) en un nuevo tipo de interfaz y proporcionar una instancia de ese tipo para el [diccionario&lt;TKey, TValue&gt; ](xref:System.Collections.Generic.Dictionary`2) [(IEqualityComparer&lt;TKey&gt;)](xref:System.Collections.Generic.IEqualityComparer`1) constructor.
 
 
  <a name="No_Dynamic_Code_Generation" />
 
 
-## <a name="no-dynamic-code-generation"></a>No se genera código dinámico
+## <a name="no-dynamic-code-generation"></a>Sin generación de código dinámico
 
-Puesto que el kernel del iPhone impide que una aplicación generando código dinámicamente Mono en el iPhone no admite ninguna forma de generación de código dinámico. Se incluyen los siguientes:
+Puesto que el kernel del iPhone impide que una aplicación generar dinámicamente código Mono en el iPhone no admite ninguna forma de generación de código dinámico. Se incluyen los siguientes:
 
 -  Espacio de nombres System.Reflection.Emit no está disponible.
--  No se admite para System.Runtime.Remoting.
--  No se admite para crear tipos dinámicamente (sin Type.GetType ("MyType" 1")), aunque buscar tipos existentes (Type.GetType ("System.String"), por ejemplo, funciona correctamente). 
--  Las devoluciones de llamada inversas deben registrarse con el tiempo de ejecución en tiempo de compilación.
+-  System.Runtime.Remoting no son compatibles.
+-  No se admite para la creación dinámica de tipos (ningún Type.GetType ("MyType" 1")), aunque la búsqueda de los tipos existentes (Type.GetType ("System.String"), por ejemplo, funciona bastante bien). 
+-  Las devoluciones de llamada inversos deben registrarse con el tiempo de ejecución en tiempo de compilación.
 
 
  
@@ -98,25 +98,25 @@ Puesto que el kernel del iPhone impide que una aplicación generando código din
 
 ### <a name="systemreflectionemit"></a>System.Reflection.Emit
 
-La falta de System.Reflection. **Emitir** significa que no funcionará ningún código que dependa de generación de código en tiempo de ejecución. Esto incluye cosas como:
+La falta de System.Reflection. **Emitir** significa que no funcionará ningún código que depende de la generación de código en tiempo de ejecución. Esto incluye cosas como:
 
 -  Dynamic Language Runtime.
 -  Los idiomas que se basa en Dynamic Language Runtime.
--  Remoting TransparentProxy o cualquier otra cosa que puede provocar que el tiempo de ejecución generar código de forma dinámica. 
+-  Remoting TransparentProxy o cualquier otra cosa que harían que el tiempo de ejecución generar código de forma dinámica. 
 
 
- **Importante:** no confunda **Reflection.Emit** con **reflexión**. Reflection.Emit consiste en generar código de forma dinámica y tiene ese código JIT y el código compilado en código nativo. Debido a las limitaciones en el iPhone (ninguna compilación JIT) no se admite.
+ **Importante:** no confunda **Reflection.Emit** con **reflexión**. Reflection.Emit consiste en generar código de forma dinámica y tiene ese código JIT y el código compilado en código nativo. Esto no se admite debido a las limitaciones en el iPhone (ninguna compilación JIT).
 
-Pero la API de reflexión completa, incluidos Type.GetType ("someClass"), lista de métodos, lista de propiedades, atributos y valores de filas funcionará correctamente.
+Pero toda la API de reflexión, incluidos Type.GetType ("someClass"), lista de métodos, lista de propiedades, la obtención de atributos y valores funciona perfectamente.
 
-### <a name="using-delegates-to-call-native-functions"></a>Usar a delegados para llamar a funciones nativas
+### <a name="using-delegates-to-call-native-functions"></a>Uso de delegados para llamar a funciones nativas
 
-Para llamar a una función nativa a través de un delegado de C#, la declaración del delegado se debe decorar con uno de los siguientes atributos:
+Para llamar a una función nativa a través de un delegado de C#, declaración del delegado debe decorarse con uno de los siguientes atributos:
 
-- [UnmanagedFunctionPointerAttribute](https://developer.xamarin.com/api/type/System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute/) (preferido, ya que es multiplataforma y es compatible con el estándar de .NET 1.1 +)
+- [UnmanagedFunctionPointerAttribute](xref:System.Runtime.InteropServices.UnmanagedFunctionPointerAttribute) (opción preferida, ya que es compatible con .NET Standard 1.1 + y multiplataforma)
 - [MonoNativeFunctionWrapperAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoNativeFunctionWrapperAttribute)
 
-No poder proporcionar uno de estos atributos se producirá un error en tiempo de ejecución como:
+No se puede proporcionar uno de estos atributos se producirá un error en tiempo de ejecución, como:
 
 ```
 System.ExecutionEngineException: Attempting to JIT compile method '(wrapper managed-to-native) YourClass/YourDelegate:wrapper_aot_native(object,intptr,intptr)' while running in aot-only mode.
@@ -127,12 +127,12 @@ System.ExecutionEngineException: Attempting to JIT compile method '(wrapper mana
 
 ### <a name="reverse-callbacks"></a>Invertir las devoluciones de llamada
 
-En Mono estándar es posible pasar instancias de delegados de C# a código no administrado en lugar de un puntero a función. Normalmente, el tiempo de ejecución transformaría los punteros de función en un pequeño código thunk que permite que el código no administrado para volver a llamar a código administrado.
+En Mono estándar es posible pasar instancias de delegados de C# a código no administrado en lugar de un puntero de función. Normalmente, el tiempo de ejecución transformaría esos punteros de función en un pequeño código thunk que permite que el código no administrado para volver a llamar a código administrado.
 
-Just-in-Time en Mono se implementan estos puentes compilador. Al usar el compilador de anticipado requiere iPhone en este momento no hay dos limitaciones importantes:
+En Mono se implementan estos puentes mediante Just-in-Time compilador. Al usar el compilador ahead of time requiere iPhone hay dos limitaciones importantes en este momento:
 
 -  Se deben marcar todos los métodos de devolución de llamada con el [MonoPInvokeCallbackAttribute](https://developer.xamarin.com/api/type/ObjCRuntime.MonoPInvokeCallbackAttribute) 
--  Los métodos deben ser métodos estáticos, no hay compatibilidad para la instancia métodos. 
+-  Los métodos deben ser métodos estáticos, no hay compatibilidad por ejemplo los métodos. 
  
 <a name="No_Remoting" />
 
@@ -144,16 +144,16 @@ La pila de comunicación remota no está disponible en Xamarin.iOS.
  <a name="Runtime_Disabled_Features" />
 
 
-## <a name="runtime-disabled-features"></a>En tiempo de ejecución deshabilita características
+## <a name="runtime-disabled-features"></a>En tiempo de ejecución deshabilitada características
 
-Las siguientes características se han deshabilitado en iOS de Mono en tiempo de ejecución:
+Se han deshabilitado las siguientes características en tiempo de ejecución de iOS de Mono:
 
 -  generador de perfiles
 -  Reflection.Emit
--  Funcionalidad de Reflection.Emit.Save
+-  Funcionalidad Reflection.Emit.Save
 -  Enlaces de COM
--  El motor JIT
--  Comprobador de metadatos (porque no hay ningún JIT)
+-  El motor de JIT
+-  Comprobador de metadatos (ya que no hay ningún JIT)
 
 
  <a name=".NET_API_Limitations" />
@@ -161,8 +161,8 @@ Las siguientes características se han deshabilitado en iOS de Mono en tiempo de
 
 ## <a name="net-api-limitations"></a>Limitaciones de la API de .NET
 
-La API de .NET que se expone es un subconjunto del marco completo que no todo el contenido disponible en iOS. Consulte las preguntas más frecuentes para un [lista de ensamblados compatibles actualmente](~/cross-platform/internals/available-assemblies.md).
+Expone la API de .NET es un subconjunto del marco completo como no todo lo que está disponible en iOS. Consulte las preguntas más frecuentes para una [lista de ensamblados admitidos actualmente](~/cross-platform/internals/available-assemblies.md).
 
 
 
-En concreto, el perfil de API utilizado por Xamarin.iOS no incluye System.Configuration, por lo que no es posible utilizar archivos XML externos para configurar el comportamiento del tiempo de ejecución.
+En concreto, el perfil de API utilizado por Xamarin.iOS no incluye System.Configuration, por lo que no es posible usar archivos XML externos para configurar el comportamiento del tiempo de ejecución.

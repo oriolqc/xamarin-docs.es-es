@@ -6,16 +6,16 @@ ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: f20bdbdb9fe0d25e1ba545633e271af912aab3ba
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 183079c150ad4df05424d4dbf2980a307a889352
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784721"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997203"
 ---
 # <a name="systemdata-in-xamarinios"></a>System.Data en Xamarin.iOS
 
-Xamarin.iOS 8.10 agrega compatibilidad para [System.Data](https://developer.xamarin.com/api/namespace/System.Data/), incluido el `Mono.Data.Sqlite.dll` proveedor de ADO.NET. La compatibilidad incluye la adición de las siguientes acciones [ensamblados](~/cross-platform/internals/available-assemblies.md):
+Xamarin.iOS 8.10 agrega compatibilidad para [System.Data](xref:System.Data), incluido el `Mono.Data.Sqlite.dll` proveedor ADO.NET. La compatibilidad incluye la adición de las siguientes acciones [ensamblados](~/cross-platform/internals/available-assemblies.md):
 
 -  `System.Data.dll`
 -  `System.Data.Service.Client.dll`
@@ -27,13 +27,13 @@ Xamarin.iOS 8.10 agrega compatibilidad para [System.Data](https://developer.xama
 
 ## <a name="example"></a>Ejemplo
 
-El siguiente programa crea una base de datos en `Documents/mydb.db3`, y si la base de datos previamente no existe, se rellenan con datos de ejemplo. A continuación, se consulta la base de datos, con el resultado escrito en `stderr`.
+El siguiente programa crea una base de datos en `Documents/mydb.db3`, y si la base de datos previamente no existe, se rellenan con datos de ejemplo. A continuación, se consulta la base de datos, con la salida escrita en `stderr`.
 
 ### <a name="add-references"></a>Agregar referencias
 
 En primer lugar, haga doble clic en el **referencias** nodo y elija **editar referencias...**  , a continuación, seleccione `System.Data` y `Mono.Data.Sqlite`:
 
-[![](system.data-images/edit-references-sml.png "Agregar nuevas referencias")](system.data-images/edit-references.png#lightbox)
+[![](system.data-images/edit-references-sml.png "Adición de nuevas referencias")](system.data-images/edit-references.png#lightbox)
 
 ### <a name="sample-code"></a>Código de ejemplo
 
@@ -107,12 +107,12 @@ class Demo {
 ```
 
 > [!IMPORTANT]
-> Como se mencionó en el ejemplo de código anterior, es aconsejable para incrustar las cadenas de comandos SQL ya que hace que el código sea vulnerable a [inyección de código SQL](http://en.wikipedia.org/wiki/SQL_injection).
+> Como se mencionó en el ejemplo de código anterior, es aconsejable incrustar cadenas en los comandos SQL, ya que hace que el código sea vulnerable a [inyección de código SQL](http://en.wikipedia.org/wiki/SQL_injection).
 
 
-### <a name="using-command-parameters"></a>Usar parámetros de comando
+### <a name="using-command-parameters"></a>Uso de parámetros de comando
 
-El código siguiente muestra cómo utilizar los parámetros del comando para insertar texto escrito por el usuario de forma segura en la base de datos (incluso si el texto contiene caracteres especiales de SQL como único apóstrofo):
+El código siguiente muestra cómo usar parámetros de comando para insertar texto escrito por el usuario de forma segura en la base de datos (incluso si el texto contiene caracteres especiales de SQL como único apóstrofo):
 
 ```csharp
 // user input from Textbox control
@@ -139,34 +139,34 @@ Ambos **System.Data** y **Mono.Data.Sqlite** faltan algunas funciones.
 
 ### <a name="systemdata"></a>System.Data
 
-Funcionalidad de falta de **System.Data.dll** consta de:
+La funcionalidad que falta en **System.Data.dll** consta de:
 
--  Cualquier cosa que necesite [System.CodeDom](https://developer.xamarin.com/api/namespace/System.CodeDom/) (p. ej.  [System.Data.TypedDataSetGenerator](https://developer.xamarin.com/api/type/System.Data.TypedDataSetGenerator/) )
--  Compatibilidad de archivos de configuración XML (p. ej.  [System.Data.Common.DbProviderConfigurationHandler](https://developer.xamarin.com/api/type/System.Data.Common.DbProviderConfigurationHandler/) )
--   [System.Data.Common.DbProviderFactories](https://developer.xamarin.com/api/type/System.Data.Common.DbProviderFactories/) (depende de la compatibilidad con archivos de configuración XML)
--   [System.Data.OleDb](https://developer.xamarin.com/api/namespace/System.Data.OleDb/)
--   [System.Data.Odbc](https://developer.xamarin.com/api/namespace/System.Data.Odbc/)
--  El `System.EnterpriseServices.dll` dependencia era *quitado* de `System.Data.dll` , da lugar a la eliminación de la [SqlConnection.EnlistDistributedTransaction(ITransaction)](https://developer.xamarin.com/api/member/System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction/(System.EnterpriseServices.ITransaction)) método.
+-  Todo lo que requiere [System.CodeDom](xref:System.CodeDom) (p. ej.  [System.Data.TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
+-  Compatibilidad con el archivo de configuración XML (p. ej.  [System.Data.Common.DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
+-   [System.Data.Common.DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (depende de la compatibilidad con archivos de configuración XML)
+-   [System.Data.OleDb](xref:System.Data.OleDb)
+-   [System.Data.Odbc](xref:System.Data.Odbc)
+-  El `System.EnterpriseServices.dll` dependencia era *quitado* desde `System.Data.dll` , lo que provocará la eliminación de la [SqlConnection.EnlistDistributedTransaction(ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) método.
 
 
 <a name="Mono.Data.Sqlite" />
 
 ### <a name="monodatasqlite"></a>Mono.Data.Sqlite
 
-Mientras tanto, **Mono.Data.Sqlite.dll** ha sufrido ningún cambio de código de origen, pero en su lugar puede ser host a un número de *en tiempo de ejecución* emite desde `Mono.Data.Sqlite.dll` enlaza SQLite 3.5. iOS 8, mientras tanto, se distribuye con SQLite 3.8.5. Basta con decir, algunas de las cosas han cambiado entre las dos versiones.
+Mientras tanto, **Mono.Data.Sqlite.dll** no sufrido cambios de código fuente, pero en su lugar puede ser host a un número de *en tiempo de ejecución* emite desde `Mono.Data.Sqlite.dll` enlaza SQLite 3.5. iOS 8, mientras tanto, se distribuye con SQLite 3.8.5. Basta con decir que, algunas de las cosas han cambiado entre las dos versiones.
 
-La versión anterior de operaciones de E/s se suministran con las siguientes versiones de código:
+Versión anterior de iOS se suministran con las siguientes versiones de SQLite:
 
 - **iOS 7** -versión 3.7.13.
 - **iOS 6** -versión 3.7.13.
 - **iOS 5** -versión 3.7.7.
 - **iOS 4** -versión 3.6.22.
 
-Por ejemplo, los problemas más comunes que parecen estar relacionado con la consulta de esquema de base de datos, determinar en tiempo de ejecución que éstas existen en una tabla determinada, como `Mono.Data.Sqlite.SqliteConnection.GetSchema` (reemplazar [DbConnection.GetSchema](https://developer.xamarin.com/api/member/System.Data.Common.DbConnection.GetSchema/)) y `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` () reemplazar [DbDataReader.GetSchemaTable](https://developer.xamarin.com/api/member/System.Data.Common.DbDataReader.GetSchemaTable/)). En resumen, parece que nada mediante [DataTable](https://developer.xamarin.com/api/type/System.Data.DataTable/) es probable que funcione.
+Por ejemplo, los problemas más comunes que parecen deberse a la consulta de esquema de base de datos, determinar en tiempo de ejecución que columnas hay en una tabla determinada, como `Mono.Data.Sqlite.SqliteConnection.GetSchema` (reemplazar [DbConnection.GetSchema](xref:System.Data.Common.DbConnection.GetSchema) y `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` (reemplazando [DbDataReader.GetSchemaTable](xref:System.Data.Common.DbDataReader.GetSchemaTable). En resumen, parece que cualquier cosa con [DataTable](xref:System.Data.DataTable) es probable que funcione.
 
 <a name="Data_Binding" />
 
 ## <a name="data-binding"></a>Enlace de datos
 
-Enlace de datos no se admite en este momento.
+No se admite el enlace de datos en este momento.
 

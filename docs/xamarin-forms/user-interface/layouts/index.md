@@ -1,6 +1,6 @@
 ---
 title: Diseños de Xamarin.Forms
-description: Xamarin.Forms tiene varios diseños y características para organizar el contenido en pantalla, y este artículo explica a ellos.
+description: Xamarin.Forms tiene varios diseños y características para organizar el contenido en pantalla y en este artículo se explica a ellos.
 ms.prod: xamarin
 ms.assetid: 65030DA3-C7C1-4A02-B478-811073C39139
 ms.technology: xamarin-forms
@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: d11e0e286c25f11c24dc788be8d1c29155261b7a
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: cff5f9c15f4608ecfb643d2c49dd636df8b18b5c
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244895"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995760"
 ---
 # <a name="layouts-in-xamarinforms"></a>Diseños de Xamarin.Forms
 
@@ -21,39 +21,39 @@ Xamarin.Forms tiene varios diseños y características para organizar el conteni
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
-**Diseños de Xamarin.Forms, por [Universidad de Xamarin](https://university.xamarin.com/)**
+**Los diseños de Xamarin.Forms, por [Xamarin University](https://university.xamarin.com/)**
 
-A continuación, se describe cada control de diseño, así como información detallada sobre cómo controlar los cambios de orientación de pantalla:
+A continuación, se describe cada control de diseño, así como detalles sobre cómo controlar los cambios de orientación de pantalla:
 
-* **[StackLayout](stack-layout.md)**  &ndash; usada para organizar vistas linealmente, horizontal o verticalmente. Vistas en un StackLayout pueden ser alineadas en el centro, izquierdo o derecho del diseño.
-* **[AbsoluteLayout](absolute-layout.md)**  &ndash; permiten organizar vistas mediante el establecimiento de coordenadas y cambio de tamaño en cuanto a los valores absolutos o proporciones. AbsoluteLayout puede utilizarse para vistas de las capas, así como fijarlos a la izquierda, derecha o centrado.
-* **[RelativeLayout](relative-layout.md)**  &ndash; usada para organizar vistas mediante el establecimiento de restricciones con respecto a las dimensiones y la posición de sus elementos primarios.
-* **[Cuadrícula](grid.md)**  &ndash; usada para organizar vistas en una cuadrícula. Filas y columnas se pueden especificar en cuanto a los valores absolutos o proporciones.
-* **[FlexLayout](flex-layout.md)**  &ndash; usada para organizar vistas horizontal o verticalmente con ajuste.
-* **[ScrollView](scroll-view.md)**  &ndash; utilizan para proporcionar desplazamiento cuando una vista no cabe por completo dentro de los límites de la pantalla.
-* **[LayoutOptions](layout-options.md)**  &ndash; Definir alineación y expansión de una vista, en relación con su elemento primario.
-* **[Entrada transparencia](#input_transparency)**  &ndash; especifica si un elemento recibe la entrada.
-* **[Márgenes y relleno](margin-and-padding.md)**  &ndash; muestra cómo controlar el comportamiento de diseño cuando se representa un elemento en la interfaz de usuario.
-* **[Orientación del dispositivo](device-orientation.md)**  &ndash; explica cómo controlar los cambios de orientación de dispositivo.
-* **[Diseño en dispositivos de tableta y escritorio](tablet.md)**  &ndash; muestra cómo optimizar para pantallas más grandes en cada plataforma.
-* **[Crear un diseño personalizado](custom.md)**  &ndash; explica cómo crear una clase de diseño personalizado.
-* **[Compresión de diseño](layout-compression.md)**  &ndash; quita especificado diseño el árbol visual en un intento de mejorar el rendimiento de la presentación de página.
+* **[StackLayout](stack-layout.md)**  &ndash; utilizado para organizar vistas linealmente, ya sea horizontal o verticalmente. Las vistas en un StackLayout se pueden alinear al centro, izquierdo o derecho del diseño.
+* **[AbsoluteLayout](absolute-layout.md)**  &ndash; utiliza para organizar vistas mediante el establecimiento de coordenadas, ta & maño en cuanto a los valores absolutos o proporciones. AbsoluteLayout puede utilizarse para las vistas de capas como fijarlos a la izquierda, derecha o centrado.
+* **[RelativeLayout](relative-layout.md)**  &ndash; utilizado para organizar vistas estableciendo restricciones con respecto a las dimensiones y la posición de su primario.
+* **[Cuadrícula](grid.md)**  &ndash; utilizado para organizar las vistas en una cuadrícula. En cuanto a los valores absolutos o proporciones, se pueden especificar las filas y columnas.
+* **[FlexLayout](flex-layout.md)**  &ndash; utilizado para organizar vistas horizontal o verticalmente con ajuste.
+* **[ScrollView](scroll-view.md)**  &ndash; usa para proporcionar el desplazamiento cuando una vista no cabe por completo dentro de los límites de la pantalla.
+* **[LayoutOptions](layout-options.md)**  &ndash; definen la alineación y la expansión de una vista, en relación con su elemento primario.
+* **[Transparencia de entrada](#input_transparency)**  &ndash; especifica si un elemento recibe la entrada.
+* **[Márgenes y relleno](margin-and-padding.md)**  &ndash; muestra cómo controlar el comportamiento de diseño cuando se procesa un elemento en la interfaz de usuario.
+* **[Orientación del dispositivo](device-orientation.md)**  &ndash; se explica cómo controlar los cambios de orientación del dispositivo.
+* **[Diseño en los dispositivos de tableta y escritorio](tablet.md)**  &ndash; muestra cómo optimizar para pantallas más grandes en cada plataforma.
+* **[Crear un diseño personalizado](custom.md)**  &ndash; se explica cómo crear una clase de diseño personalizado.
+* **[Compresión de diseño](layout-compression.md)**  &ndash; quita especificado diseño desde el árbol visual en un intento de mejorar el rendimiento de representación de página.
 
-Controles de plataforma también pueden usarse directamente en los diseños de Xamarin.Forms con [ **incrustar nativo** ](~/xamarin-forms/platform/native-views/index.md) (nuevo en Xamarin.Forms 2.2), y puede [ **crear diseños personalizados** ](custom.md) para cumplir requisitos específicos.
+Controles de la plataforma también pueden usarse directamente en los diseños de Xamarin.Forms con [ **incrustación nativa** ](~/xamarin-forms/platform/native-views/index.md) (nuevo en Xamarin.Forms 2.2), y puede [ **crear diseños personalizados** ](custom.md) para satisfacer los requisitos específicos.
 
 El gráfico siguiente muestra los controles de diseño:
 
-[![](images/layouts-sml.png "Diseños de Xamarin.Forms")](images/layouts.png#lightbox "diseños de Xamarin.Forms")
+[![](images/layouts-sml.png "Los diseños de Xamarin.Forms")](images/layouts.png#lightbox "los diseños de Xamarin.Forms")
 
-## <a name="choosing-the-right-layout"></a>Elegir el diseño de la derecha
+## <a name="choosing-the-right-layout"></a>Elegir el diseño correcto
 
-Los diseños que elija en la aplicación pueden ayudar a o dañar tal y como se va a crear una aplicación de Xamarin.Forms atractiva y utilizable. Tarda algún tiempo para pensar en cómo cada funciona de diseño puede ayudarle a escribir código de interfaz de usuario más limpia y más escalable. Una pantalla puede tener una combinación de diseños diferentes para lograr un diseño específico.
+Los diseños que elija en la aplicación pueden ayudar a o perjudicarle dado que está creando una aplicación de Xamarin.Forms atractiva y utilizable. Tomar algún tiempo para pensar en cómo cada funciona de diseño puede ayudarle a escribir código de interfaz de usuario más limpio y más escalable. Una pantalla puede tener una combinación de diseños diferentes para lograr un diseño específico.
 
 ### <a name="stacklayoutstack-layoutmd"></a>[StackLayout](stack-layout.md)
 
-El `StackLayout` se utiliza para mostrar vistas a lo largo de una línea horizontal o vertical. Posición y el tamaño en el diseño se determina basándose en una vista `HeightRequest`, `WidthRequest`, `HorizontalOptions` y `VerticalOptions`. `StackLayout` a menudo se usa como el diseño de base, organizar otros diseños en la pantalla.
+El `StackLayout` se utiliza para mostrar las vistas a lo largo de una línea horizontal o vertical. Posición y el tamaño en el diseño se determina basándose en una vista `HeightRequest`, `WidthRequest`, `HorizontalOptions` y `VerticalOptions`. `StackLayout` a menudo se usa como el diseño de base, organizar otros diseños en la pantalla.
 
-Para obtener un ejemplo de cuándo `StackLayout` podría ser una buena elección, piense en una aplicación que necesita para mostrar un botón y una etiqueta, con la etiqueta que se alinea a la izquierda y el botón alineado a la derecha.
+Para obtener un ejemplo de cuándo `StackLayout` podría ser una buena opción, considere la posibilidad de una aplicación que necesita para mostrar un botón y una etiqueta, con la etiqueta que se alinea a la izquierda y el botón alineado a la derecha.
 
 ```xaml
 <StackLayout Orientation="Horizontal">
@@ -64,7 +64,7 @@ Para obtener un ejemplo de cuándo `StackLayout` podría ser una buena elección
 
 ### <a name="flexlayoutflex-layoutmd"></a>[FlexLayout](flex-layout.md)
 
-El `FlexLayout` es similar a `StackLayout` en que muestra vistas secundarias horizontal o verticalmente:
+El `FlexLayout` es similar a `StackLayout` que muestra vistas secundarias horizontal o verticalmente:
 
 ```xaml
 <FlexLayout Direction="Column"
@@ -77,13 +77,13 @@ El `FlexLayout` es similar a `StackLayout` en que muestra vistas secundarias hor
 </FlexLayout>
 ```
 
-Sin embargo, si hay demasiados elementos secundarios para caber en una sola fila o columna propio, `FlexLayout` también es capaz de esas vistas de ajuste. `FlexLayout` se basa en el módulo de diseño CSS cuadro Flexible y tiene muchas de las mismas opciones integradas para colocar y alinear a sus elementos secundarios.
+Sin embargo, si hay demasiados elementos secundarios para que quepa en una sola fila o columna propio, `FlexLayout` también es capaz de ajuste de esas vistas. `FlexLayout` se basa en el módulo de diseño CSS cuadro Flexible y tiene muchas de las mismas opciones integradas para colocar y alinear a sus elementos secundarios.
 
 ### <a name="absolutelayoutabsolute-layoutmd"></a>[AbsoluteLayout](absolute-layout.md)
 
-El `AbsoluteLayout` se utiliza para mostrar vistas, con el tamaño y posición que se va a especificar ya sea como valores explícitos o en relación con el tamaño del diseño. A diferencia de `StackLayout` y `Grid`, `AbsoluteLayout` permite secundarios vistas se superponen. A diferencia de `RelativeLayout`, `AbsoluteLayout` no le permite colocar los elementos fuera de la pantalla.
+El `AbsoluteLayout` se utiliza para mostrar las vistas, con el tamaño y posición que se va a especificar como valores explícitos o en relación con el tamaño del diseño. A diferencia de `StackLayout` y `Grid`, `AbsoluteLayout` permite secundarios vistas se superponen. A diferencia de `RelativeLayout`, `AbsoluteLayout` no le permite colocar los elementos fuera de la pantalla.
 
-Para obtener un ejemplo de cuándo `AbsoluteLayout` podría ser una buena elección, piense en una aplicación que necesita para presentar las colecciones de objetos como pilas. Esto a menudo se ve cuando se presentan los álbumes de fotos o canciones. El código siguiente proporciona la apariencia de una pila, con elementos girados a fin de sugerencia en el contenido de la pila:
+Para obtener un ejemplo de cuándo `AbsoluteLayout` podría ser una buena opción, considere la posibilidad de una aplicación que necesita para presentar las colecciones de objetos como pilas. Esto suele aparecer cuando se presentan los álbumes de fotografías o canciones. El código siguiente proporciona la apariencia de una pila, con elementos girados para sugerir el contenido de la pila:
 
 En XAML:
 
@@ -100,16 +100,16 @@ En XAML:
 
 Tenga en cuenta los siguientes aspectos del código anterior:
 
-- Cada `Image` se muestra en la misma posición que él (en el centro del espacio horizontal)
-- El `Padding` es considerado por `AbsoluteLayout`, al contrario que `RelativeLayout`, que se pasa por alto.
-- `AbsoluteLayout.LayoutFlags` Especifica cómo se interpretarán los límites de diseño. En este caso `PositionProportional`, significa que las coordenadas será una relación entre el tamaño del diseño, mientras que el tamaño se interpretará como un tamaño específico.
+- Cada `Image` se muestra en la misma posición (en el centro del espacio horizontal)
+- El `Padding` es considerado por `AbsoluteLayout`, a diferencia `RelativeLayout`, que pasa por alto.
+- `AbsoluteLayout.LayoutFlags` Especifica cómo se interpretará los límites de diseño. En este caso `PositionProportional`, significa que las coordenadas será una proporción del tamaño del diseño, mientras que el tamaño se interpretará como un tamaño específico.
 - `AbsoluteLayout.Layoutbounds` Especifica la posición horizontal, posición vertical, ancho y alto en ese orden.
 
 ### <a name="relativelayoutrelative-layoutmd"></a>[RelativeLayout](relative-layout.md)
 
-El `RelativeLayout` se utiliza para mostrar vistas, con el tamaño y posición especificada como valores con respecto a los valores de la distribución o en otra vista. Valores relativos no es necesario para que coincida con él correspondiente valor en la vista relacionada. Por ejemplo, es posible establecer una vista `Width` propiedad para que sea proporcional a otra vista `X` propiedad.
+El `RelativeLayout` se utiliza para mostrar las vistas, con el tamaño y posición especificados como valores en relación con los valores de la distribución o en otra vista. Valores relativos no es necesario para que coincida con la que corresponde el valor en la vista relacionada. Por ejemplo, es posible establecer una vista `Width` propiedad sea proporcional a otra vista `X` propiedad.
 
-RelativeLayout puede utilizarse para crear interfaces de usuario que escalar proporcionalmente en tamaños de dispositivo. El código XAML siguiente implementa un diseño con cuadros en las esquinas superiores, con un asta de la bandera con la marca en el centro de:
+RelativeLayout se puede usar para crear interfaces de usuario que se escalan de forma proporcional entre tamaños de los dispositivos. El XAML siguiente implementa un diseño con los cuadros en las esquinas superiores, con un asta de la bandera con la marca en el centro:
 
 ```xaml
 <RelativeLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
@@ -133,15 +133,15 @@ RelativeLayout puede utilizarse para crear interfaces de usuario que escalar pro
 
 Tenga en cuenta los siguientes aspectos del código anterior:
 
-- Posiciones y tamaños se especifican como restricciones.
+- Como las restricciones se especifican los tamaños y posiciones.
 - Se denomina el asta de la bandera para que la marca (verde del cuadro) se puede establecer la posición en relación con el asta de la bandera.
 - Las expresiones de restricción tienen `Factor` y `Constant` propiedades, que pueden utilizarse para definir las posiciones y tamaños como múltiplos (o fracciones de segundo) de las propiedades de otros objetos, además de una constante. Las constantes pueden ser negativas.
 
 ### <a name="gridgridmd"></a>[Grid](grid.md)
 
-El `Grid` se utiliza para mostrar elementos en filas y columnas. Tenga en cuenta que la cuadrícula no es una tabla, por lo que no tiene el concepto de celdas, filas de encabezado y pie de página o los bordes entre las filas y columnas. En general, la cuadrícula no es adecuado para mostrar datos tabulares. Para que su uso, considere la posibilidad de un [ListView](~/xamarin-forms/user-interface/listview/index.md) o [TableView](~/xamarin-forms/user-interface/tableview.md).
+El `Grid` se utiliza para mostrar elementos en filas y columnas. Tenga en cuenta que la cuadrícula no es una tabla, por lo que no tiene el concepto de celdas, filas de encabezado y pie de página o bordes entre filas y columnas. En general, la cuadrícula no es adecuada para mostrar datos tabulares. Para que use, considere la posibilidad de un [ListView](~/xamarin-forms/user-interface/listview/index.md) o [TableView](~/xamarin-forms/user-interface/tableview.md).
 
-Para obtener un ejemplo de cuándo una `Grid` es el diseño de la derecha para usar, considere la posibilidad de una entrada numérica para una calculadora. Una entrada numérica para una calculadora puede consistir en cuatro filas y tres columnas, cada una con un botón. El código siguiente implementa este diseño:
+Para obtener un ejemplo de cuándo una `Grid` es el diseño correcto para usar, considere la posibilidad de una entrada numérica para una calculadora. Una entrada numérica para una calculadora puede constar de cuatro filas y tres columnas, cada uno con un botón. El código siguiente implementa este diseño:
 
 ```xaml
 <Grid>
@@ -173,46 +173,46 @@ Para obtener un ejemplo de cuándo una `Grid` es el diseño de la derecha para u
 
 Tenga en cuenta los siguientes aspectos del código anterior:
 
-- Cuadrículas y las columnas se especifican explícitamente, no inferir a partir del contenido.
-- `Height` y `Width` valores pueden establecerse en estrella, lo que significa que la cuadrícula establecerá los valores para rellenar el espacio disponible.
+- Las cuadrículas y las columnas se especifican explícitamente, no se inferirá del contenido.
+- `Height` y `Width` valores pueden establecerse en estrella, lo que significa que la cuadrícula establecerá esos valores para rellenar el espacio disponible.
 - Posición de cada botón se especifica mediante `Grid.Row`  &  `Grid.Column` propiedades.
 
 ### <a name="layoutoptionslayout-optionsmd"></a>[LayoutOptions](layout-options.md)
 
-El [ `LayoutOptions` ](https://developer.xamarin.com/api/type/Xamarin.Forms.LayoutOptions/) estructura puede utilizarse para definir la alineación y expansión de una vista, en relación con su elemento primario.
+El [ `LayoutOptions` ](xref:Xamarin.Forms.LayoutOptions) estructura puede utilizarse para definir la alineación y la expansión de una vista, en relación con su elemento primario.
 
 ### <a name="margin-and-paddingmargin-and-paddingmd"></a>[Margen y relleno](margin-and-padding.md)
 
-El [ `Margin` ](https://developer.xamarin.com/api/property/Xamarin.Forms.View.Margin/) y [ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) propiedades controlan el comportamiento de diseño cuando se representa un elemento en la interfaz de usuario.
+El [ `Margin` ](xref:Xamarin.Forms.View.Margin) y [ `Padding` ](xref:Xamarin.Forms.Layout.Padding) propiedades controlan el comportamiento de diseño cuando se procesa un elemento en la interfaz de usuario.
 
 <a name="input_transparency" />
 
 ### <a name="input-transparency"></a>Entrada de transparencia
 
-Cada elemento tiene un [ `InputTransparent` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.InputTransparent/) propiedad que se utiliza para definir si el elemento recibe la entrada. Su valor predeterminado es `false`, asegurándose de que el elemento recibe la entrada.
+Cada elemento tiene un [ `InputTransparent` ](xref:Xamarin.Forms.VisualElement.InputTransparent) propiedad que se usa para definir si el elemento recibe la entrada. Su valor predeterminado es `false`, lo que garantiza que el elemento recibe la entrada.
 
-Cuando esta propiedad está establecida en una clase de contenedor, como una clase de diseño, sus transferencias de valor a los elementos secundarios. Por consiguiente, establecer el [ `InputTransparent` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.InputTransparent/) propiedad `true` en un diseño de clase se producirá en los elementos en el diseño no recibe la entrada.
+Cuando esta propiedad está establecida en una clase de contenedor, como una clase de diseño, las transferencias de su valor a los elementos secundarios. Por consiguiente, establecer el [ `InputTransparent` ](xref:Xamarin.Forms.VisualElement.InputTransparent) propiedad `true` en un diseño de clase dará como resultado de los elementos dentro del diseño no recibir datos de entrada.
 
 ### <a name="device-orientationdevice-orientationmd"></a>[Orientación del dispositivo](device-orientation.md)
 
-Xamarin.Forms y sus diseños integrados son capaces de administrar los cambios en la orientación del dispositivo. Tenga en cuenta las orientaciones de la aplicación va a admitir, así como cómo conseguirá que utilizar el espacio proporcionado en los modos horizontal y vertical.
+Xamarin.Forms y sus diseños integrados son capaces de controlar los cambios de orientación del dispositivo. Considere la posibilidad de que las orientaciones que admitirá la aplicación, así como cómo realizará el espacio proporcionado en los modos vertical y horizontal.
 
-### <a name="layout-for-tablet-and-desktop-appstabletmd"></a>[Diseño de aplicaciones de escritorio y de Tablet PC](tablet.md)
+### <a name="layout-for-tablet-and-desktop-appstabletmd"></a>[Diseño para aplicaciones de tableta y escritorio](tablet.md)
 
-iOS, Android y plataforma Universal de Windows todas ellas admiten tamaños de pantalla más grandes en los dispositivos de tableta (así como equipos portátiles y de escritorio de Windows). Xamarin.Forms le permite optimizar la aplicación para pantallas más grandes para detectar el tipo de dispositivo y ajusta el diseño de página o usar una página totalmente diferente por completo para pantallas más grandes.
+iOS, Android y plataforma Universal de Windows todos admiten tamaños de pantalla más grandes en dispositivos de tableta (así como equipos portátiles y de escritorio para Windows). Xamarin.Forms le permite optimizar la aplicación para pantallas más grandes para detectar el tipo de dispositivo y el ajusta el diseño de página o usar una página totalmente diferente por completo para pantallas más grandes.
 
 ### <a name="creating-a-custom-layoutcustommd"></a>[Creación de un diseño personalizado](custom.md)
 
-Xamarin.Forms define cuatro clases de diseño - [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/), [ `AbsoluteLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.AbsoluteLayout/), [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RelativeLayout/), y [ `Grid` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), y cada uno de ellos organiza sus elementos secundarios de forma diferente. Sin embargo, a veces su sea necesario para organizar el contenido de la página con un diseño no proporcionada por Xamarin.Forms. En este artículo se explica cómo escribir una clase de diseño personalizado y se muestra un dependientes de la orientación `WrapLayout` clase que sus elementos secundarios se organiza horizontalmente en la página y, a continuación, se ajusta la presentación de los elementos secundarios subsiguientes a filas adicionales.
+Xamarin.Forms define cuatro clases de diseño - [ `StackLayout` ](xref:Xamarin.Forms.StackLayout), [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout), [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout), y [ `Grid` ](xref:Xamarin.Forms.Grid), y cada uno de ellos organiza sus elementos secundarios de forma diferente. Sin embargo, a veces su necesarias para organizar el contenido de la página con un diseño no proporcionan Xamarin.Forms. En este artículo se explica cómo escribir una clase de diseño personalizado y muestra una orientación distinción `WrapLayout` clase que sus elementos secundarios se organiza horizontalmente en la página y, a continuación, ajusta la presentación de los elementos secundarios subsiguientes a las filas adicionales.
 
 ### <a name="layout-compressionlayout-compressionmd"></a>[Compresión de diseño](layout-compression.md)
 
-Compresión de diseño quita diseños especificados del árbol visual en un intento de mejorar el rendimiento de la presentación de página. La ventaja de rendimiento que esto ofrece varía según la complejidad de una página, la versión del sistema operativo que se va a usar y el dispositivo en el que se ejecuta la aplicación. Sin embargo, las mejoras de rendimiento más importantes se apreciarán en los dispositivos más antiguos.
+Compresión de diseño quita diseños especificados del árbol visual en un intento de mejorar el rendimiento de representación de página. La ventaja de rendimiento que esto ofrece varía según la complejidad de una página, la versión del sistema operativo que se va a usar y el dispositivo en el que se ejecuta la aplicación. Sin embargo, las mejoras de rendimiento más importantes se apreciarán en los dispositivos más antiguos.
 
 ## <a name="making-your-choice"></a>Para facilitar su elección
 
-Tenga en cuenta que en la mayoría de los casos, puede utilizar más de una opción de diseño para implementar el diseño deseado. Cuando hay varias opciones válidas, tenga en cuenta qué enfoque será más fácil para su situación.
-No se puede realizar la mayoría de los diseños con un solo diseño, por lo que los diseños de anidamiento como sean necesarios para crear diseños más complejos.
+Tenga en cuenta que en la mayoría de los casos, puede usar más de una opción de diseño para implementar el diseño deseado. Cuando hay varias opciones válidas, considere qué enfoque será más fácil para su situación.
+No se pueden realizar la mayoría de los diseños con un solo diseño, por lo que los diseños de anidamiento como sean necesarios para crear diseños más complejos.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

@@ -1,62 +1,62 @@
 ---
 title: Cuadrícula de Xamarin.Forms
-description: En este artículo se explica cómo utilizar la clase de la cuadrícula de Xamarin.Forms para presentar vistas en las cuadrículas, que poseer filas y columnas.
+description: En este artículo se explica cómo usar la clase de la cuadrícula de Xamarin.Forms para presentar vistas en las cuadrículas, que poseen las filas y columnas.
 ms.prod: xamarin
 ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: a50144f5e0962bd74858bb7731e30cef5dd31b6d
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 01dd59d5e94b473316b03f9035d38305fad42880
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245158"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38994507"
 ---
 # <a name="xamarinforms-grid"></a>Cuadrícula de Xamarin.Forms
 
-[`Grid`](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/) permite organizar vistas en filas y columnas. Filas y columnas se pueden establecer tamaños proporcionales o tamaños absolutos. El `Grid` diseño no deben confundirse con las tablas tradicionales y no está pensado para presentar los datos tabulares. `Grid` no tiene el concepto de formato de celda, fila o columna. A diferencia de las tablas HTML, `Grid` puramente está diseñado para disponer de contenido.
+[`Grid`](xref:Xamarin.Forms.Grid) permite organizar las vistas en filas y columnas. Las filas y columnas se pueden establecer para tener tamaños proporcionales o tamaños absolutos. El `Grid` diseño no debe confundirse con las tablas tradicionales y no está diseñada para presentar los datos tabulares. `Grid` no tiene el concepto de fila, columna o formato de celdas. A diferencia de las tablas HTML, `Grid` está pensado únicamente para diseño de contenido.
 
-[![](grid-images/layouts-sml.png "Diseños de Xamarin.Forms")](grid-images/layouts.png#lightbox "diseños de Xamarin.Forms")
+[![](grid-images/layouts-sml.png "Los diseños de Xamarin.Forms")](grid-images/layouts.png#lightbox "los diseños de Xamarin.Forms")
 
-En este artículo se tratará:
+Este artículo se trata:
 
 - **[Propósito](#Purpose)**  &ndash; usos comunes de `Grid`.
-- **[Uso de](#Usage)**  &ndash; cómo usar `Grid` para lograr el diseño deseado.
-  - **[Filas y columnas](#Rows_and_Columns)**  &ndash; especificar las filas y columnas para la `Grid`.
-  - **[Colocar vistas](#Placing_Views)**  &ndash; agregar vistas a la cuadrícula en filas y columnas específicas.
+- **[Uso](#Usage)**  &ndash; cómo usar `Grid` para lograr el diseño deseado.
+  - **[Las filas y columnas](#Rows_and_Columns)**  &ndash; especificar las filas y columnas para el `Grid`.
+  - **[Colocación de las vistas](#Placing_Views)**  &ndash; agregar vistas a la cuadrícula de columnas y filas específicas.
   - **[Espaciado](#Spacing)**  &ndash; configurar los espacios entre las filas y columnas.
   - **[Intervalos](#Spans)**  &ndash; configurar elementos que se va a abarcar varias filas o columnas.
 
-![](grid-images/grid.png "Exploración de cuadrícula")
+![](grid-images/grid.png "Exploración de la cuadrícula")
 
 ## <a name="purpose"></a>Propósito
 
-`Grid` puede utilizarse para organizar vistas en una cuadrícula. Esto es útil en un número de casos:
+`Grid` puede usarse para organizar las vistas en una cuadrícula. Esto es útil en un número de casos:
 
 - Organizar botones en una aplicación de calculadora
-- Organizar botones y opciones en una cuadrícula, como las pantallas de inicio Android o iOS
-- Organizar vistas para que sean del mismo tamaño de una dimensión (como en algunas barras de herramientas)
+- Organizar botones y alternativas en una cuadrícula, como iOS o Android pantallas de inicio
+- Organizar las vistas para que sean del mismo tamaño en una dimensión (como en algunas barras de herramientas)
 
 ## <a name="usage"></a>Uso
 
-A diferencia de las tablas tradicionales, `Grid` no deduce el número y tamaño de filas y columnas del contenido. En su lugar, `Grid` tiene `RowDefinitions` y `ColumnDefinitions` colecciones. Éstos contienen definiciones de dispuestos cuántas filas y columnas. Las vistas se agregan al `Grid` con la fila especificada y los índices de columnas, que identificar qué fila y columna de una vista debe colocarse en.
+A diferencia de las tablas tradicionales, `Grid` no infiere el número y tamaño de filas y columnas del contenido. En su lugar, `Grid` tiene `RowDefinitions` y `ColumnDefinitions` colecciones. Éstos contienen las definiciones de dispuestos cuántas filas y columnas. Las vistas se agregan a `Grid` con la fila especificada y los índices de columnas, que identifican qué fila y columna que se debe colocar en una vista.
 
 <a name="Rows_and_Columns" />
 
-### <a name="rows-and-columns"></a>Filas y columnas
+### <a name="rows-and-columns"></a>Las filas y columnas
 
-Información de fila y columna se almacena en `Grid`del `RowDefinitions`  &  `ColumnDefinitions` propiedades, que son colecciones de cada de [ `RowDefinition` ](https://developer.xamarin.com/api/type/Xamarin.Forms.RowDefinition/) y [ `ColumnDefinition` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ColumnDefinition/)objetos, respectivamente. `RowDefinition` tiene una propiedad única, `Height`, y `ColumnDefinition` tiene una propiedad única, `Width`. Las opciones de alto y ancho son los siguientes:
+Información de fila y columna se almacena en `Grid`del `RowDefinitions`  &  `ColumnDefinitions` propiedades, que son colecciones de cada de [ `RowDefinition` ](xref:Xamarin.Forms.RowDefinition) y [ `ColumnDefinition` ](xref:Xamarin.Forms.ColumnDefinition)objetos, respectivamente. `RowDefinition` tiene una propiedad única, `Height`, y `ColumnDefinition` tiene una propiedad única, `Width`. Las opciones de alto y ancho son los siguientes:
 
-- **Auto** &ndash; automáticamente los tamaños para ajustar el contenido de la fila o columna. Especificado como [ `GridUnitType.Auto` ](https://developer.xamarin.com/api/type/Xamarin.Forms.GridUnitType/) en C# o como `Auto` en XAML.
-- **Proportional(*)** &ndash; cambia el tamaño de filas y columnas como una proporción de espacio restante. Especifica como un valor y `GridUnitType.Star` en C# y como `#*` en XAML, con `#` que se va a su valor deseado. Especificar una fila o columna con `*` hará que se rellene el espacio disponible.
-- **Absoluta** &ndash; cambia el tamaño de columnas y filas con valores específicos de alto y ancho fijos. Especifica como un valor y `GridUnitType.Absolute` en C# y como `#` en XAML, con `#` que se va a su valor deseado.
+- **Auto** &ndash; automáticamente los tamaños para ajustar el contenido de la fila o columna. Especificado como [ `GridUnitType.Auto` ](xref:Xamarin.Forms.GridUnitType) en C# o como `Auto` en XAML.
+- **Proportional(*)** &ndash; cambia el tamaño de filas y columnas como una proporción del espacio restante. Especificado como un valor y `GridUnitType.Star` en C# y como `#*` en XAML, con `#` que el valor deseado. Especificación de una fila o columna con `*` hará que se va a rellenar el espacio disponible.
+- **Absoluta** &ndash; tamaños de las columnas y filas con valores específicos de alto y ancho fijos. Especificado como un valor y `GridUnitType.Absolute` en C# y como `#` en XAML, con `#` que el valor deseado.
 
 > [!NOTE]
-> Los valores de ancho de las columnas se establecen como "*" de forma predeterminada en Xamarin.Forms, lo que garantiza que la columna rellenará el espacio disponible.
+> Los valores de ancho para las columnas se establecen como "*" de forma predeterminada en Xamarin.Forms, lo que garantiza que la columna rellenará el espacio disponible.
 
-Considere la posibilidad de una aplicación que necesita tres filas y dos columnas. La fila inferior debe ser exactamente 200px alto y la fila superior debe ser dos veces tan grande como la fila del medio. La columna izquierda debe ser lo suficientemente ancha para adaptarlos al contenido y la columna derecha debe rellenar el espacio restante.
+Considere la posibilidad de una aplicación que necesita tres filas y dos columnas. La fila inferior debe ser exactamente 200px alto y la fila superior debe ser dos veces más alto que la fila central. La columna izquierda debe ser lo suficientemente ancho como para que quepa el contenido y la columna derecha debe rellenar el espacio restante.
 
 En XAML:
 
@@ -86,15 +86,15 @@ grid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (200) }
 
 <a name="Placing_Views" />
 
-### <a name="placing-views-in-a-grid"></a>Colocación de vistas en una cuadrícula
+### <a name="placing-views-in-a-grid"></a>Colocación de las vistas en una cuadrícula
 
-Para colocar las vistas en una `Grid` debe agregarlas como elementos secundarios a la cuadrícula y, después, especificar qué filas y columnas que pertenecen en.
+Para colocar las vistas en un `Grid` , deberá agregarlos como elementos secundarios a la cuadrícula y, después, especifique qué fila y columna pertenecen en.
 
-En XAML, utilice `Grid.Row` y `Grid.Column` en cada vista individuales para especificar la selección de ubicación. Tenga en cuenta que `Grid.Row` y `Grid.Column` especificar ubicación basado en las listas de base cero de filas y columnas. Esto significa que en una cuadrícula de 4 x 4, la celda superior izquierda es (0,0) y la celda inferior derecha (3,3).
+En XAML, utilice `Grid.Row` y `Grid.Column` en cada vista individual para especificar la selección de ubicación. Tenga en cuenta que `Grid.Row` y `Grid.Column` especificar ubicación basándose en las listas de base cero de filas y columnas. Esto significa que en una cuadrícula 4 x 4, la celda superior izquierda es (0,0) y la celda inferior derecha es (3,3).
 
 El `Grid` se muestra a continuación contiene cuatro celdas:
 
-![](grid-images/label-grid.png "Cuadrícula con cuatro vistas")
+![](grid-images/label-grid.png "Cuadrícula de cuatro vistas")
 
 En XAML:
 
@@ -136,9 +136,9 @@ grid.Children.Add(bottomLeft, 0, 1);
 grid.Children.Add(bottomRight, 1, 1);
 ```
 
-El código anterior crea cuadrícula con cuatro etiquetas, dos columnas y dos filas. Tenga en cuenta que cada etiqueta tendrá el mismo tamaño y que las filas se expandirán para usar todo el espacio disponible.
+El código anterior crea la cuadrícula con cuatro etiquetas, dos columnas y dos filas. Tenga en cuenta que cada etiqueta tendrá el mismo tamaño y que las filas se expandirán para usar todo el espacio disponible.
 
-En el ejemplo anterior, las vistas se agregan a la [ `Grid.Children` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Grid.Children/) colección mediante la [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/) sobrecarga que especifique los argumentos izquierdo y superiores. Cuando se usa el [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) sobrecarga que especifique izquierda, derecha, arriba y argumentos de la parte inferior, mientras que la izquierda y superiores argumentos siempre hará referencia a las celdas de la [ `Grid` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/), la derecha y argumentos de la parte inferior pueden parecer que hacen referencia a las celdas que están fuera de la `Grid`. Esto es porque el argumento derecho siempre debe ser mayor que el argumento izquierdo y el argumento de la parte inferior siempre debe ser mayor que el argumento superior. En el ejemplo siguiente se muestra el código equivalente que utiliza ambos `Add` sobrecargas:
+En el ejemplo anterior, las vistas se agregan a la [ `Grid.Children` ](xref:Xamarin.Forms.Grid.Children) colección utilizando el [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/) sobrecarga que especifique los argumentos izquierdo y superiores. Cuando se usa el [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) sobrecarga que especifique a la izquierda, derecha, superior y argumentos de la parte inferior, mientras la izquierda y argumentos superiores siempre hará referencia a las celdas de la [ `Grid` ](xref:Xamarin.Forms.Grid), la derecha y argumentos de la parte inferior pueden parecer que hacen referencia a las celdas que están fuera de la `Grid`. Esto es porque el argumento derecho siempre debe ser mayor que el argumento izquierdo y el argumento final siempre debe ser mayor que el argumento superior. En el ejemplo siguiente se muestra código equivalente que utiliza ambos `Add` sobrecargas:
 
 ```csharp
 // left, top
@@ -156,12 +156,12 @@ grid.Children.Add(bottomRight, 1, 2, 1, 2);
 
 ### <a name="spacing"></a>Espaciado
 
-`Grid` tiene propiedades que permiten controlar el espaciado entre las filas y columnas.  Las propiedades siguientes están disponibles para personalizar el `Grid`:
+`Grid` tiene propiedades para controlar el espaciado entre las filas y columnas.  Las propiedades siguientes están disponibles para personalizar el `Grid`:
 
 - **ColumnSpacing** &ndash; la cantidad de espacio entre las columnas.
 - **RowSpacing** &ndash; la cantidad de espacio entre las filas.
 
-El código XAML siguiente especifica un `Grid` con dos columnas, una fila y 5 píxeles de espaciado entre las columnas:
+El XAML siguiente especifica un `Grid` con dos columnas, una fila y 5 px de espaciado entre columnas:
 
 ```xaml
 <Grid ColumnSpacing="5">
@@ -184,9 +184,9 @@ grid.ColumnDefnitions.Add(new ColumnDefinition { Width = new GridLength (1, Grid
 
 A menudo cuando se trabaja con una cuadrícula, hay un elemento que debe ocupar más de una fila o columna. Considere la posibilidad de una aplicación de calculadora simple:
 
-![](grid-images/calculator.png "Aplicación de Calulator")
+![](grid-images/calculator.png "Aplicación Calulator")
 
-Tenga en cuenta que el botón 0 abarca dos columnas, al igual que en las calculadoras integradas para cada plataforma. Esto se logra mediante la `ColumnSpan` propiedad, que especifica cuántas columnas un elemento deben ocupar. El XAML para ese botón:
+Tenga en cuenta que el botón 0 abarca dos columnas, al igual que las calculadoras integradas para cada plataforma. Esto se logra mediante el `ColumnSpan` propiedad, que especifica cuántas columnas un elemento deben ocupar. El XAML para ese botón:
 
 ```xaml
 <Button Text = "0" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" />
@@ -200,9 +200,9 @@ controlGrid.Children.Add (zeroButton, 0, 4);
 Grid.SetColumnSpan (zeroButton, 2);
 ```
 
-Tenga en cuenta que en el código, los métodos estáticos de la `Grid` clase se utilizan para realizar cambios de posición incluidos los cambios `ColumnSpan` y `RowSpan`. También tenga en cuenta que, con a diferencia de otras propiedades que se pueden establecer en cualquier momento, se establecen utilizando los métodos estáticos en ya debe puede estar en la cuadrícula antes de que se cambian.
+Tenga en cuenta que en el código, los métodos estáticos de la `Grid` clase se utilizan para realizar cambios de posicionamiento, incluidos los cambios a `ColumnSpan` y `RowSpan`. Tenga en cuenta que, con otras propiedades que se pueden establecer en cualquier momento, a diferencia de las propiedades establecidas mediante los métodos estáticos en ya deben puede estar también en la cuadrícula antes de modificarla.
 
-El XAML completando para la aplicación Calculadora anterior es la siguiente:
+El XAML completo para la aplicación de calculadora anterior es como sigue:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -294,7 +294,7 @@ BackgroundColor="#404040">
 </ContentPage>
 ```
 
-Observe que tanto la etiqueta en la parte superior de la cuadrícula y el botón de cero occuping más de una columna. Aunque se puede lograr un diseño similar con cuadrículas anidadas, la `ColumnSpan`  &  `RowSpan` enfoque es más sencillo.
+Observe que tanto la etiqueta en la parte superior de la cuadrícula y el botón cero occuping más de una columna. Aunque se podría lograr un diseño similar con cuadrículas anidadas, la `ColumnSpan`  &  `RowSpan` enfoque es más sencillo.
 
 La implementación de C#:
 
@@ -384,6 +384,6 @@ public CalculatorGridCode ()
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Creación de aplicaciones móviles con Xamarin.Forms, capítulo 17](https://developer.xamarin.com/r/xamarin-forms/book/chapter17.pdf)
-- [Grid](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid/)
+- [Grid](xref:Xamarin.Forms.Grid)
 - [Diseño (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 - [Ejemplo de BusinessTumble (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)

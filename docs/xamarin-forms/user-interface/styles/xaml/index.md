@@ -1,45 +1,45 @@
 ---
-title: Aplicaciones de Xamarin.Forms de estilo con estilos de XAML
-description: Esta guía explica cómo personalizar la apariencia de una aplicación de Xamarin.Forms mediante estilos XAML.
+title: Aplicar estilos a las aplicaciones de Xamarin.Forms con estilos XAML
+description: Esta guía explica cómo personalizar la apariencia de una aplicación de Xamarin.Forms con estilos XAML.
 ms.prod: xamarin
 ms.assetid: 344A34AA-B19A-4765-BC8A-875D9A6B5EA8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: f439e3ba888b67ac1752eae95149adcf55055943
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 5145572b30302e58c36250fff40e8b637fcd221f
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245877"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995080"
 ---
-# <a name="styling-xamarinforms-apps-using-xaml-styles"></a>Aplicaciones de Xamarin.Forms de estilo con estilos de XAML
+# <a name="styling-xamarinforms-apps-using-xaml-styles"></a>Aplicar estilos a las aplicaciones de Xamarin.Forms con estilos XAML
 
 ## <a name="introductionintroductionmd"></a>[Introducción](introduction.md)
 
-Aplicaciones de Xamarin.Forms suelen contengan varios controles que tienen un aspecto idéntico. Configuración de la apariencia de cada control individual puede ser repetitiva y es proclive a errores. En su lugar, estilos pueden crearse que personalizan la apariencia de los controles por agrupación y propiedades de configuración disponibles en el tipo de control.
+A menudo, las aplicaciones de Xamarin.Forms contienen varios controles que tienen una apariencia idéntica. Establecer la apariencia de cada control individual puede ser repetitiva y propensas a errores. En su lugar, los estilos pueden crearse que personalizar la apariencia del control mediante la agrupación y propiedades de configuración disponibles en el tipo de control.
 
 ## <a name="explicit-stylesexplicitmd"></a>[Estilos explícitos](explicit.md)
 
-Un *explícita* estilo es aquel que se aplica de manera selectiva a los controles estableciendo sus [ `Style` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.Style/) propiedades.
+Un *explícita* estilo es aquel que se aplica de manera selectiva a los controles estableciendo sus [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propiedades.
 
 ## <a name="implicit-stylesimplicitmd"></a>[Estilos implícitos](implicit.md)
 
-Un *implícita* estilo es aquel que se usa por todos los controles de la misma [ `TargetType` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Style.TargetType/), sin necesidad de cada control para hacer referencia al estilo.
+Un *implícita* estilo es aquella que se usa por todos los controles del mismo [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType), sin necesidad de cada control para hacer referencia al estilo.
 
 ## <a name="global-stylesapplicationmd"></a>[Estilos globales](application.md)
 
-Estilos pueden ponerse a disposición globalmente agregándolos a la aplicación [ `ResourceDictionary` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ResourceDictionary/). Esto ayuda a evitar la duplicación de estilos a través de páginas o controles.
+Los estilos pueden estar disponibles globalmente agregándolos a la aplicación [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary). Esto ayuda a evitar la duplicación de estilos a través de las páginas o controles.
 
 ## <a name="style-inheritanceinheritancemd"></a>[Herencia de estilo](inheritance.md)
 
-Estilos pueden heredar de otros estilos para reducir la duplicación y volver a usar.
+Los estilos pueden heredar de otros estilos para reducir la duplicación y habilitar la reutilización.
 
 ## <a name="dynamic-stylesdynamicmd"></a>[Estilos dinámicos](dynamic.md)
 
-Estilos no responder a los cambios de propiedad y permanecen sin cambios para la duración de una aplicación. Sin embargo, las aplicaciones pueden responder a los cambios de estilo dinámicamente en tiempo de ejecución mediante el uso de recursos dinámicos.
+Los estilos no responder a los cambios de propiedad y permanecen sin cambios para la duración de una aplicación. Sin embargo, las aplicaciones pueden responder a cambios de estilo dinámicamente en tiempo de ejecución mediante el uso de recursos dinámicos.
 
 ## <a name="device-stylesdevicemd"></a>[Estilos de dispositivo](device.md)
 
-Xamarin.Forms incluye seis *dinámica* estilos, conocidos como *dispositivo* estilos, en la [ `Devices.Styles` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Device+Styles/) clase. Todos los seis estilos pueden aplicarse a [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) solo instancias.
+Xamarin.Forms incluye seis *dinámica* estilos, conocidos como *dispositivo* estilos, en el [ `Devices.Styles` ](xref:Xamarin.Forms.Device.Styles) clase. Todos los seis estilos pueden aplicarse a [ `Label` ](xref:Xamarin.Forms.Label) solo instancias.

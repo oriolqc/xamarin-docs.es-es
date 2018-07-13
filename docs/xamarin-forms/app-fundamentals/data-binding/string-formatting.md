@@ -1,28 +1,28 @@
 ---
 title: Formato de cadena de Xamarin.Forms
-description: Este artículo explica cómo usar enlaces de datos de Xamarin.FOrms para dar formato y mostrar objetos como cadenas. Esto se logra estableciendo la StringFormat del enlace en una cadena de formato estándar de .NET con un marcador de posición.
+description: En este artículo se explica cómo usar enlaces de datos de Xamarin.FOrms para dar formato y mostrar los objetos como cadenas. Esto se logra estableciendo el StringFormat del enlace en una cadena de formato estándar de .NET con un marcador de posición.
 ms.prod: xamarin
 ms.assetid: 978C85B7-CB58-4483-A131-21B381A865E0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: bdac74e4ec14797ec373f86b8a94c7af4d480951
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: a876e81c67b6ec61a2cb29143cb001a7d6160032
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35240306"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998152"
 ---
 # <a name="xamarinforms-string-formatting"></a>Formato de cadena de Xamarin.Forms
 
-A veces es conveniente usar enlaces de datos para mostrar la representación de cadena de un objeto o valor. Por ejemplo, puede usar un `Label` para mostrar el valor actual de un `Slider`. En este enlace de datos, el `Slider` es el origen y el destino es el `Text` propiedad de la `Label`.
+A veces es conveniente usar enlaces de datos para mostrar la representación de cadena de un objeto o valor. Por ejemplo, desea utilizar un `Label` para mostrar el valor actual de un `Slider`. En este enlace de datos, el `Slider` es el origen y el destino es el `Text` propiedad de la `Label`.
 
-Para mostrar las cadenas en el código, la herramienta más eficaz es el método estático [ `String.Format` ](https://developer.xamarin.com/api/member/System.String.Format/p/System.String/System.Object/) método. La cadena de formato incluye códigos específicos para distintos tipos de objetos de formato, y puede incluir otro texto junto con los valores que se está dando formato. Consulte la [aplicar formato a tipos en .NET](/dotnet/standard/base-types/formatting-types/) artículo para obtener más información sobre cómo dar formato de cadena.
+Cuando se muestran las cadenas en el código, la herramienta más eficaz es estático [ `String.Format` ](xref:System.String.Format(System.String,System.Object)) método. La cadena de formato incluye códigos específicos para distintos tipos de objetos de formato, y puede incluir otros textos junto con los valores que se va a aplicar formato. Consulte la [aplicar formato a tipos en .NET](/dotnet/standard/base-types/formatting-types/) artículo para obtener más información sobre el formato de cadena.
 
 ## <a name="the-stringformat-property"></a>La propiedad StringFormat
 
-Esta función se traslada en enlaces de datos: establece el [ `StringFormat` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindingBase.StringFormat/) propiedad de `Binding` (o [ `StringFormat` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Xaml.BindingExtension.StringFormat/) propiedad de la `Binding` extensión de marcado) a un cadena con un marcador de posición de formato de .NET estándar:
+Esta función se traslada en enlaces de datos: establece el [ `StringFormat` ](xref:Xamarin.Forms.BindingBase.StringFormat) propiedad de `Binding` (o la [ `StringFormat` ](xref:Xamarin.Forms.Xaml.BindingExtension.StringFormat) propiedad de la `Binding` extensión de marcado) a un cadena con un marcador de posición de formato estándar. NET:
 
 ```xaml
 <Slider x:Name="slider" />
@@ -31,13 +31,13 @@ Esta función se traslada en enlaces de datos: establece el [ `StringFormat` ](h
                       StringFormat='The slider value is {0:F2}'}" />
 ```
 
-Tenga en cuenta que la cadena de formato está delimitada por caracteres de comillas simples (apóstrofo) para evitar el analizador de XAML de tratar las llaves como otra extensión de marcado XAML. En caso contrario, que cadena sin el carácter de comillas simples es la misma cadena que se utilizaría para mostrar un valor de punto flotante en una llamada a `String.Format`. Una especificación de formato de `F2` hace que el valor que se mostrará con dos posiciones decimales.
+Tenga en cuenta que la cadena de formato está delimitada por caracteres de comillas simples (apóstrofo) para evitar el analizador XAML de tratamiento de las llaves como otra extensión de marcado XAML. En caso contrario, esa cadena sin el carácter de comillas simples es la misma cadena que utilizaría para mostrar un valor de punto flotante en una llamada a `String.Format`. Una especificación de formato de `F2` hace que el valor que se mostrará con dos posiciones decimales.
 
-El `StringFormat` propiedad sólo tiene sentido cuando la propiedad de destino es de tipo `string`, y el modo de enlace es `OneWay` o `TwoWay`. Para enlaces bidireccionales, el `StringFormat` solo es aplicable para los valores que se pasan desde el origen al destino.
+El `StringFormat` propiedad sólo tiene sentido cuando la propiedad de destino es de tipo `string`, y el modo de enlace es `OneWay` o `TwoWay`. Para los enlaces bidireccionales, el `StringFormat` solo es aplicable para los valores que se pasa desde el origen al destino.
 
-Como verá en el siguiente artículo en el [Binding Path](binding-path.md), enlaces de datos pueden llegar a ser bastante compleja y complicadas. Al depurar estos enlaces de datos, puede agregar un `Label` en el archivo XAML con un `StringFormat` para mostrar algunos de los resultados intermedios. Incluso si se usa solo para mostrar un tipo de objeto, que puede resultar útil.
+Como verá en el siguiente artículo en el [Binding Path](binding-path.md), enlaces de datos pueden llegar a ser bastante complejo y compleja. Al depurar estos enlaces de datos, puede agregar un `Label` en el archivo XAML con un `StringFormat` mostrar algunos resultados intermedios. Incluso si se usa solo para mostrar un tipo de objeto, que puede resultar útil.
 
-El **formato de cadena** página muestra varios usos de la `StringFormat` propiedad:
+El **aplicarles un formato** página muestra varios usos de la `StringFormat` propiedad:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -101,33 +101,33 @@ El **formato de cadena** página muestra varios usos de la `StringFormat` propie
 </ContentPage>
 ```
 
-Los enlaces en el `Slider` y `TimePicker` se muestra el uso de las especificaciones de formato específicos de `double` y `TimeSpan` tipos de datos. El `StringFormat` que muestra el texto de la `Entry` vista muestra cómo especificar las comillas dobles en la cadena de formato con el uso de la `&quot;` entidad HTML.
+Los enlaces en el `Slider` y `TimePicker` muestra el uso de las especificaciones de formato específica de `double` y `TimeSpan` tipos de datos. El `StringFormat` que muestra el texto de la `Entry` vista muestra cómo especificar las comillas dobles en la cadena de formato con el uso de la `&quot;` entidad HTML.
 
-La siguiente sección en el archivo XAML es un `StackLayout` con un `BindingContext` establecido en un `x:Static` extensión de marcado que hace referencia el método estático `DateTime.Now` propiedad. El primer enlace no tiene propiedades:
+La siguiente sección en el archivo XAML es un `StackLayout` con un `BindingContext` establecido en un `x:Static` extensión de marcado que se hace referencia a estático `DateTime.Now` propiedad. El primer enlace no tiene propiedades:
 
 ```xaml
 <Label Text="{Binding}" />
 ```
 
-Esto muestra simplemente la `DateTime` valor de la `BindingContext` con formato predeterminado. Muestra el enlace la `Ticks` propiedad de `DateTime`, mientras que los otros dos enlaces mostrar el `DateTime` propio con un formato específico. Tenga en cuenta esto `StringFormat`:
+Esto muestra simplemente el `DateTime` valor de la `BindingContext` con el formato predeterminado. Muestra el segundo enlace el `Ticks` propiedad de `DateTime`, mientras que los otros dos enlaces mostrar el `DateTime` propio con un formato específico. Tenga en cuenta esto `StringFormat`:
 
 ```xaml
 <Label Text="{Binding StringFormat='The {{0:MMMM}} specifier produces {0:MMMM}'}" />
 ```
 
-Si tiene que mostrar hacia la izquierda o derecha las llaves en la cadena de formato, use simplemente un par de ellos.
+Si necesita mostrar hacia la izquierda o derecha entre llaves en la cadena de formato, simplemente use un par de ellos.
 
-Los últimos conjuntos de sección la `BindingContext` en el valor de `Math.PI` y se muestra con formato de forma predeterminada y dos tipos diferentes de formato numérico.
+Los conjuntos de la última sección del `BindingContext` al valor de `Math.PI` y se muestra con formato de forma predeterminada y dos tipos diferentes de formato numérico.
 
-Este es el programa que se ejecuta en las tres plataformas:
+Este es el programa que se ejecutan en las tres plataformas:
 
 [![Formato de cadena](string-formatting-images/stringformatting-small.png "formato de cadena")](string-formatting-images/stringformatting-large.png#lightbox "formato de cadena")
 
-## <a name="viewmodels-and-string-formatting"></a>Cadena de formato y ViewModels
+## <a name="viewmodels-and-string-formatting"></a>ViewModels y formato de cadena
 
-Cuando usas `Label` y `StringFormat` para mostrar el valor de una vista que también es el destino de un modelo de vista, se puede definir el enlace de la vista para la `Label` o desde el modelo de vista para el `Label`. En general, el segundo enfoque es mejor porque comprueba que los enlaces entre la vista y el modelo de vista se están trabajando.
+Cuando se usa `Label` y `StringFormat` para mostrar el valor de una vista que también es el destino de una clase ViewModel, puede definir el enlace de la vista para la `Label` o desde el ViewModel a la `Label`. En general, el segundo enfoque es mejor porque comprueba que funcionan los enlaces entre View y ViewModel.
 
-Este enfoque se muestra en el **mejor Selector de colores** ejemplo, que usa el mismo modelo de vista como la **Selector de Color sencillo** programa se muestra en el [ **Binding Mode** ](binding-mode.md) artículo:
+Este método se muestra en el **mejor Selector de colores** ejemplo, que usa el mismo modelo de vista como el **Selector de colores Simple** programa que aparece en el [ **Binding Mode** ](binding-mode.md) artículo:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -172,18 +172,18 @@ Este enfoque se muestra en el **mejor Selector de colores** ejemplo, que usa el 
 </ContentPage>    
 ```
 
-Ahora hay tres pares de `Slider` y `Label` elementos que están enlazados al mismo origen de propiedad en el `HslColorViewModel` objeto. La única diferencia es que `Label` tiene un `StringFormat` propiedad para mostrar cada uno de ellos `Slider` valor.
+Ahora hay tres pares de `Slider` y `Label` elementos que están enlazados al mismo origen de propiedad en el `HslColorViewModel` objeto. La única diferencia es que `Label` tiene un `StringFormat` propiedad para mostrar cada `Slider` valor.
 
-[![Selector de Color mejor](string-formatting-images/bettercolorselector-small.png "mejor el Selector de Color")](string-formatting-images/bettercolorselector-large.png#lightbox "mejor el Selector de Color")
+[![Selector de Color mejor](string-formatting-images/bettercolorselector-small.png "Selector de Color mejor")](string-formatting-images/bettercolorselector-large.png#lightbox "mejor el Selector de Color")
 
-Tal vez se pregunte cómo puede mostrar los valores RGB (rojos, verdes, azul) en formato hexadecimal de dos dígitos tradicionales. Los valores enteros no están directamente disponibles desde el `Color` estructura. Una solución sería calcular valores enteros de los componentes de color en el modelo de vista y exponerlos como propiedades. A continuación, podría formatearlos mediante el `X2` especificación de formato.
+Tal vez se pregunte cómo podría mostrar sus valores RGB (rojos, verdes y azules) en formato hexadecimal de dos dígitos tradicionales. Los valores enteros no están directamente disponibles desde el `Color` estructura. Una solución sería calcular valores enteros de los componentes de color dentro de ViewModel y exponerlos como propiedades. A continuación, puede aplicarles utilizando el `X2` especificación de formato.
 
-Otro enfoque es más general: puede escribir un *convertidor de valores de enlace* tal como se describe en el artículo de una versión posterior, [ **convertidores de valores de enlace**](converters.md).
+Otro enfoque es más general: puede escribir un *convertidor de valores de enlace* como se describe en el artículo posterior, [ **convertidores de valores de enlace**](converters.md).
 
-El siguiente artículo, sin embargo, se explora la [ **Binding Path** ](binding-path.md) con más detalle y muestran cómo se puede utilizar para hacer referencia a elementos de colecciones y subpropiedades.
+El siguiente artículo, sin embargo, explora la [ **Binding Path** ](binding-path.md) con más detalle y muestran cómo se puede utilizar para hacer referencia a elementos de las colecciones y subpropiedades.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Demostraciones de enlace de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
-- [Capítulo de enlace de datos de la libreta de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
+- [Capítulo de enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

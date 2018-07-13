@@ -1,49 +1,40 @@
 ---
 title: Xamarin.Forms WebView
-description: Este artículo explica cómo utilizar la clase Xamarin.Forms WebView para presentar local o el contenido de web de red y documentos a los usuarios.
+description: Este artículo explica cómo usar la clase Xamarin.Forms WebView para presentar local o documentos y contenido web de red a los usuarios.
 ms.prod: xamarin
 ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/09/2016
-ms.openlocfilehash: df004bd2a580e48137162d28ca3974521266ae7a
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.date: 07/10/2018
+ms.openlocfilehash: ed7bec4e25628d938218a40d157442debad8f835
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245649"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998379"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
-[WebView](https://developer.xamarin.com/api/type/Xamarin.Forms.WebView/) es una vista para mostrar web y el código HTML contenida en la aplicación. A diferencia de `OpenUri`, que lleva al usuario en el explorador web en el dispositivo, `WebView` muestra el contenido HTML dentro de la aplicación.
-
-Esta guía se compone de las siguientes secciones:
-
-- **[Contenido](#Content)**  &ndash; WebView admite diversos orígenes de contenido, incluido HTML incrustado, páginas web y las cadenas HTML.
-- **[Navegación](#Navigation)**  &ndash; WebView incluye compatibilidad para navegar a una página determinada y volviendo.
-- **[Eventos](#Events)**  &ndash; escuchar y responder a las acciones realizadas por el usuario en la vista Web.
-- **[Rendimiento](#Performance)**  &ndash; más información acerca de las características de rendimiento de WebView en cada plataforma.
-- **[Permisos](#Permissions)**  &ndash; obtener información sobre cómo establecer permisos para que funcione WebView en la aplicación.
-- **[Diseño](#Layout)**  &ndash; WebView tiene algunos requisitos muy especiales para la que se muestre. Obtenga información acerca de cómo asegurarse de que WebView muestra correctamente:
+[`WebView`](xref:Xamarin.Forms.WebView) es una vista para mostrar la web y el contenido HTML en la aplicación. A diferencia de `OpenUri`, que lleva al usuario en el explorador web en el dispositivo, `WebView` muestra el contenido HTML dentro de la aplicación.
 
 ![](webview-images/in-app-browser.png "En el Explorador de la aplicación")
 
 ## <a name="content"></a>Contenido
 
-WebView incluye soporte técnico para los siguientes tipos de contenido:
+`WebView` admite los siguientes tipos de contenido:
 
-- Sitios Web HTML y CSS &ndash; WebView es totalmente compatible con sitios Web que se escriben con HTML y CSS, incluida la compatibilidad con JavaScript.
-- Documentos &ndash; dado WebView se implementa mediante componentes nativos en cada plataforma, WebView es capaz de mostrar los documentos que están visibles en cada plataforma. Esto significa que los archivos PDF funcionan en iOS y Android.
+- Sitios Web HTML y CSS &ndash; WebView es totalmente compatible con sitios Web escritos con HTML y CSS, incluida la compatibilidad con JavaScript.
+- Documentos &ndash; porque WebView se implementa con componentes nativos en cada plataforma, WebView es capaz de mostrar los documentos que están visibles en cada plataforma. Esto significa que los archivos PDF funcionan en iOS y Android.
 - Las cadenas HTML &ndash; WebView puede mostrar las cadenas HTML de la memoria.
-- Archivos locales &ndash; WebView puede presentar cualquiera de los tipos de contenido anteriores incrustados en la aplicación.
+- Archivos locales &ndash; WebView puede presentar cualquiera de los tipos de contenido anteriores incrustado en la aplicación.
 
 > [!NOTE]
-> `WebView` en Windows no admite Silverlight, Flash o todos los controles ActiveX, incluso si son compatibles con Internet Explorer en esa plataforma.
+> `WebView` en Windows no admite Silverlight, Flash o los controles ActiveX, incluso si son compatibles con Internet Explorer en esa plataforma.
 
 ### <a name="websites"></a>Sitios web
 
-Para mostrar un sitio Web de internet, establezca el `WebView`del [ `Source` ](https://developer.xamarin.com/api/type/Xamarin.Forms.WebViewSource/) propiedad a una dirección URL de cadena:
+Para mostrar un sitio Web desde internet, establezca el `WebView`del [ `Source` ](xref:Xamarin.Forms.WebViewSource) propiedad a una dirección URL de cadena:
 
 ```csharp
 var browser = new WebView {
@@ -52,16 +43,16 @@ var browser = new WebView {
 ```
 
 > [!NOTE]
-> Las direcciones URL se deben formar totalmente con el protocolo especificado (es decir, debe tener "http://" o "https://" antepone a él).
+> Las direcciones URL se deben formar totalmente con el protocolo especificado (es decir, debe tener "http://" o "https://" antepuesto a él).
 
 #### <a name="ios-and-ats"></a>iOS y ATS
 
-Desde la versión 9, iOS solo permitirá que la aplicación para comunicarse con servidores que implementan la seguridad de los procedimientos recomendados de forma predeterminada. Valores se deben establecer `Info.plist` para habilitar la comunicación con servidores inseguras.
+Desde la versión 9, iOS solo permitirá a su aplicación comunicarse con servidores que implementan la seguridad de prácticas recomendadas de forma predeterminada. Los valores que se deben establecer `Info.plist` para habilitar la comunicación con servidores no seguras.
 
 > [!NOTE]
-> Si la aplicación requiere una conexión a un sitio Web inseguro, siempre debe escribir el dominio como una excepción mediante `NSExceptionDomains` en lugar de desactivar que ATS totalmente mediante `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` sólo debe utilizarse en situaciones de emergencias extremas.
+> Si la aplicación requiere una conexión a un sitio Web no seguro, siempre debe escribir el dominio como una excepción mediante `NSExceptionDomains` en lugar de desactivar que ATS completamente utilizando `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` solo debe usarse en situaciones de emergencias extremas.
 
-A continuación muestra cómo habilitar un dominio específico (en este caso en xamarin.com) para omitir los requisitos de ATS:
+El siguiente muestra cómo habilitar un dominio específico (en este caso en xamarin.com) para omitir los requisitos de ATS:
 
 ```xml
 <key>NSAppTransportSecurity</key>
@@ -81,7 +72,7 @@ A continuación muestra cómo habilitar un dominio específico (en este caso en 
     </dict>
 ```
 
-Es un procedimiento recomendado para habilitar sólo algunos dominios omitir ATS, lo que le permite utilizar los sitios de confianza mientras se beneficien de la seguridad adicional en dominios no confiables. A continuación muestra el método menos seguro de deshabilitar ATS para la aplicación:
+Es una práctica recomendada para permitir solo algunos dominios omitir ATS, lo que permite utilizar los sitios de confianza y seguir disfrutando de la seguridad adicional sobre los dominios de confianza. A continuación muestra el método menos seguro de deshabilitar ATS para la aplicación:
 
 ```xml
 <key>NSAppTransportSecurity</key>
@@ -91,11 +82,11 @@ Es un procedimiento recomendado para habilitar sólo algunos dominios omitir ATS
     </dict>
 ```
 
-Vea [seguridad de transporte de la aplicación](~/ios/app-fundamentals/ats.md) para obtener más información acerca de esta nueva característica de iOS 9.
+Consulte [App Transport Security](~/ios/app-fundamentals/ats.md) para obtener más información acerca de esta nueva característica de iOS 9.
 
 ### <a name="html-strings"></a>Cadenas HTML
 
-Si desea presentar una cadena HTML definido dinámicamente en el código, debe crear una instancia de [ `HtmlWebViewSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.HtmlWebViewSource/):
+Si desea presentar una cadena HTML que se define de forma dinámica en el código, deberá crear una instancia de [ `HtmlWebViewSource` ](xref:Xamarin.Forms.HtmlWebViewSource):
 
 ```csharp
 var browser = new WebView();
@@ -107,13 +98,13 @@ htmlSource.Html = @"<html><body>
 browser.Source = htmlSource;
 ```
 
-![](webview-images/html-string.png "Cadena HTML que mostrar WebView")
+![](webview-images/html-string.png "Cadena de WebView mostrar HTML")
 
-En el código anterior, `@` se utiliza para marcar el código HTML como una cadena literal, lo que significa que se omiten todos los caracteres de escape habituales.
+En el código anterior, `@` se usa para marcar el código HTML como una cadena literal, lo que significa que se omiten todos los caracteres de escape habituales.
 
-### <a name="local-html-content"></a>Contenido HTML local
+### <a name="local-html-content"></a>Contenido HTML
 
-WebView puede mostrar el contenido de HTML, CSS y Javascript incrustado dentro de la aplicación. Por ejemplo:
+WebView puede mostrar el contenido de HTML, CSS y Javascript incrustados dentro de la aplicación. Por ejemplo:
 
 ```html
 <html>
@@ -140,19 +131,19 @@ body,p,h1 {
 }
 ```
 
-Tenga en cuenta que las fuentes especificadas en el código CSS anterior debe personalizarse para cada plataforma, ya que no todas las plataformas tiene las mismas fuentes.
+Tenga en cuenta que las fuentes especificadas en las CSS anterior debe personalizarse para cada plataforma, ya que no todas las plataformas tiene las mismas fuentes.
 
-Para mostrar local contenido con un `WebView`, deberá abrir el archivo HTML como cualquier otro, a continuación, cargar el contenido como una cadena en el `Html` propiedad de un `HtmlWebViewSource`. Para obtener más información sobre los archivos de apertura, consulte [trabajar con archivos](~/xamarin-forms/app-fundamentals/files.md).
+Para mostrar local contenido mediante un `WebView`, deberá abrir el archivo HTML como cualquier otro, a continuación, cargar el contenido como una cadena en el `Html` propiedad de un `HtmlWebViewSource`. Para obtener más información sobre los archivos de apertura, consulte [trabajar con archivos](~/xamarin-forms/app-fundamentals/files.md).
 
 Las capturas de pantalla siguientes muestran el resultado de mostrar el contenido local en cada plataforma:
 
-![](webview-images/local-content.png "Mostrar WebView el contenido Local")
+![](webview-images/local-content.png "Mostrar vista Web contenido Local")
 
-Aunque se ha cargado la primera página, la `WebView` no tiene ningún conocimiento de dónde procede el código HTML. Que es un problema cuando se trabaja con páginas que hacen referencia a recursos locales. Ejemplos de cuándo podría deberse a se incluyen al vínculo local páginas unos de otros, una página hace uso de un archivo JavaScript independiente o una página que se vincula a una hoja de estilos CSS.  
+Aunque la primera página se ha cargado, el `WebView` no tiene conocimiento de dónde procede el código HTML. Que es un problema cuando se trabaja con páginas que hacen referencia a los recursos locales. Cuando el vínculo local páginas unos de otros, una página hace uso de un archivo JavaScript independiente o una página se vincula a una hoja de estilos CSS son ejemplos de cuándo esto puede suceder.  
 
-Para resolver este problema, debe indicar el `WebView` dónde encontrar archivos en el sistema de archivos. Hacerlo estableciendo la `BaseUrl` propiedad en el `HtmlWebViewSource` utilizado por el `WebView`.
+Para resolver este problema, deberá indicar el `WebView` dónde encontrar los archivos en el sistema de archivos. Hacerlo estableciendo la `BaseUrl` propiedad en el `HtmlWebViewSource` utilizado por el `WebView`.
 
-Puesto que el sistema de archivos en cada uno de los sistemas operativos es diferente, deberá determinar esa dirección URL en cada plataforma. Xamarin.Forms expone la `DependencyService` para resolver las dependencias en tiempo de ejecución en cada plataforma.
+Dado que el sistema de archivos en cada uno de los sistemas operativos es diferente, deberá determinar esa dirección URL en cada plataforma. Xamarin.Forms presenta el `DependencyService` para resolver las dependencias en tiempo de ejecución en cada plataforma.
 
 Para usar el `DependencyService`, primero defina una interfaz que se puede implementar en cada plataforma:
 
@@ -160,7 +151,7 @@ Para usar el `DependencyService`, primero defina una interfaz que se puede imple
 public interface IBaseUrl { string Get(); }
 ```
 
-Tenga en cuenta que hasta que la interfaz se implementa en cada plataforma, no se ejecutará la aplicación. En el proyecto común, asegúrese de que recuerde establecer el `BaseUrl` utilizando el `DependencyService`:
+Tenga en cuenta que hasta que la interfaz se implementa en cada plataforma, no se ejecutará la aplicación. En el proyecto común, asegúrese de que recuerde establecer la `BaseUrl` utilizando el `DependencyService`:
 
 ```csharp
 var source = new HtmlWebViewSource();
@@ -171,7 +162,7 @@ A continuación, se deben proporcionar implementaciones de la interfaz para cada
 
 #### <a name="ios"></a>iOS
 
-En iOS, el contenido web debe estar ubicado en el directorio raíz del proyecto o **recursos** directorio con la acción de compilación *BundleResource*, como se muestra a continuación:
+En iOS, el contenido web debe estar ubicado en el directorio raíz del proyecto o **recursos** directorio con la acción de compilación *BundleResource*, tal y como se muestra a continuación:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -198,7 +189,7 @@ namespace WorkingWithWebview.iOS{
 
 #### <a name="android"></a>Android
 
-En Android, coloque HTML, CSS y las imágenes en la carpeta de activos con la acción de compilación *AndroidAsset* tal y como se muestra a continuación:
+En Android, coloque las imágenes, CSS y HTML en la carpeta de activos con la acción de compilación *AndroidAsset* como se muestra a continuación:
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -223,7 +214,7 @@ namespace WorkingWithWebview.Android {
 }
 ```
 
-En Android, archivos en la **activos** carpeta también son accesibles a través del contexto de Android actual, que se expone mediante el `MainActivity.Instance` propiedad:
+En Android, archivos en el **activos** carpeta también se puede acceder mediante el contexto de Android actual, que se expone mediante el `MainActivity.Instance` propiedad:
 
 ```csharp
 var assetManager = MainActivity.Instance.Assets;
@@ -234,7 +225,7 @@ using (var streamReader = new StreamReader (assetManager.Open ("local.html"))) {
 
 #### <a name="universal-windows-platform"></a>Plataforma universal de Windows
 
-En proyectos de plataforma Universal de Windows (UWP), coloque HTML, CSS y las imágenes en la raíz del proyecto con la acción de compilación establecida en *contenido*.
+En los proyectos de plataforma Universal de Windows (UWP), coloque HTML, CSS y las imágenes en la raíz del proyecto con la acción de compilación establecida en *contenido*.
 
 El `BaseUrl` debe establecerse en `"ms-appx-web:///"`:
 
@@ -254,18 +245,18 @@ namespace WorkingWithWebview.UWP
 
 ## <a name="navigation"></a>Navegación
 
-Vista Web admite la navegación a través de varios métodos y propiedades que están disponibles:
+Vista Web admite la navegación a través de varios métodos y propiedades que están disponible:
 
-- **GoForward()** &ndash; si `CanGoForward` es true, al llamar a `GoForward` se desplaza hacia delante a la siguiente página visitada.
-- **GoBack()** &ndash; si `CanGoBack` es true, al llamar a `GoBack` se le remitirá a la última página visitada.
-- **CanGoBack** &ndash; `true` si hay páginas para volver a `false` si el explorador se encuentre en la dirección URL de inicio.
-- **CanGoForward** &ndash; `true` si el usuario navega hacia atrás y puede avanzar a una página que ya se ha visitado.
+- **GoForward()** &ndash; si `CanGoForward` es true, una llamada a `GoForward` se desplaza hacia delante a la siguiente página visitada.
+- **GoBack()** &ndash; si `CanGoBack` es true, una llamada a `GoBack` navegará a la última página visitada.
+- **CanGoBack** &ndash; `true` si hay páginas para ir a, `false` si el explorador se encuentre en la dirección URL de inicio.
+- **CanGoForward** &ndash; `true` si el usuario ha navegado hacia atrás y puede avanzar a una página que ya ha visitado.
 
-En las páginas, `WebView` no es compatible con los movimientos multitáctiles. Es importante para asegurarse de que el contenido está optimizada para móviles y aparece sin la necesidad de zoom.
+En las páginas, `WebView` no es compatible con los gestos multitoque. Es importante para asegurarse de que el contenido está optimizada para móviles y aparece sin la necesidad de zoom.
 
-Es habitual que las aplicaciones mostrar un vínculo dentro de un `WebView`, en lugar del explorador del dispositivo. En estos casos, resulta útil permitir la exploración normal, pero cuando una copia de los aciertos de usuario mientras están en el vínculo de inicio, la aplicación debe volver a la vista de aplicaciones normal.
+Es habitual que las aplicaciones mostrar un vínculo dentro de un `WebView`, en lugar del explorador del dispositivo. En estos casos, resulta útil permitir la navegación normal, pero cuando el usuario eligió una mientras están en el vínculo de inicio, la aplicación debe volver a la vista de aplicación normal.
 
-Utilice las propiedades y métodos de navegación integradas para habilitar este escenario.
+Para habilitar este escenario, utilice las propiedades y métodos de navegación integrados.
 
 Empiece por crear la página de la vista de explorador:
 
@@ -287,7 +278,7 @@ Title="In App Browser">
 </ContentPage>
 ```
 
-En el código subyacente:
+En nuestro código subyacente:
 
 ```csharp
 public partial class InAppDemo : ContentPage
@@ -325,12 +316,12 @@ Ya está.
 
 ## <a name="events"></a>Eventos
 
-WebView genera dos eventos que le ayudará a responder a cambios de estado:
+WebView genera dos eventos para ayudarle a responder a los cambios de estado:
 
-- **Navegar por** &ndash; evento generado cuando el WebView comienza a cargarse una nueva página.
-- **Navega** &ndash; evento generado cuando se carga la página y ha dejado de navegación.
+- **Navegar por** &ndash; evento se genera cuando la vista Web comienza a cargar una nueva página.
+- **Navega** &ndash; evento se genera cuando se carga la página y se ha detenido la navegación.
 
-Si prevé usar las páginas Web que toman mucho tiempo en cargar, considere el uso de esos eventos para implementar un indicador de estado. Por ejemplo el código XAML siguiente aspecto:
+Si prevé que usará las páginas Web que toman mucho tiempo en cargar, considere el uso de esos eventos para implementar un indicador de estado. Por ejemplo el XAML tiene este aspecto:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -353,7 +344,7 @@ x:Class="WebViewDemo.LoadingDemo" Title="Loading Demo">
 </ContentPage>
 ```
 
-Los controladores de dos eventos:
+Los dos controladores de eventos:
 
 ```csharp
 void webOnNavigating (object sender, WebNavigatingEventArgs e)
@@ -367,35 +358,35 @@ void webOnEndNavigating (object sender, WebNavigatedEventArgs e)
 }
 ```
 
-Esto genera el siguiente resultado (cargar):
+Esto da como resultado el siguiente resultado (cargar):
 
-![](webview-images/loading-start.png "Ejemplo de evento de navegación de WebView")
+![](webview-images/loading-start.png "Ejemplo del evento de navegación de WebView")
 
-Carga terminada:
+Termina de cargar:
 
-![](webview-images/loading-end.png "Ejemplo de navegar de un evento de vista Web")
+![](webview-images/loading-end.png "Ejemplo de eventos WebView")
 
 ## <a name="performance"></a>Rendimiento
 
-Los avances recientes que han visto cada uno de los exploradores web populares adoptar las tecnologías como la representación y la compilación de JavaScript acelerados por hardware. Desafortunadamente, debido a restricciones de seguridad, la mayoría de los avances actuales no estaba disponible en el el equaivalent iOS de `WebView`, `UIWebView`. Xamarin.Forms `WebView` utiliza `UIWebView`. Si es un problema, debe escribir un representador personalizado que utiliza `WKWebView`, que admite la exploración más rápida. Tenga en cuenta que `WKWebView` solo es compatible con iOS 8 y versiones más recientes.
+Avances recientes han visto cada uno de los exploradores web populares adoptar las tecnologías como la representación y la compilación de JavaScript de aceleración de hardware. Desafortunadamente, debido a restricciones de seguridad, la mayoría de estos avances no estaba disponible en el el equaivalent iOS de `WebView`, `UIWebView`. Xamarin.Forms `WebView` usa `UIWebView`. Si es un problema, deberá escribir un representador personalizado que usa `WKWebView`, que es compatible con una navegación más rápida. Tenga en cuenta que `WKWebView` solo es compatible con iOS 8 y versiones más recientes.
 
-WebView en Android predeterminada es tan rápido como el explorador integrado.
+WebView en Android de forma predeterminada es tan rápido como el explorador integrado.
 
-El [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) utiliza el motor de representación de Microsoft Edge. Dispositivos de escritorio y Tablet PC deberían ver el mismo rendimiento que usar el mismo explorador Edge.
+El [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) usa el motor de representación Microsoft Edge. Los dispositivos de escritorio y de tableta deben aparecer el mismo rendimiento como con el propio explorador Edge.
 
 ## <a name="permissions"></a>Permisos
 
-En orden para `WebView` para trabajar, debe asegurarse de que los permisos se establecen para cada plataforma. Tenga en cuenta que en algunas plataformas, `WebView` funcionará en modo de depuración, pero no cuando se compila para la versión. Eso es porque algunos permisos, como los de acceso a internet en Android, se establecen de manera predeterminada en Visual Studio para Mac cuando está en modo de depuración.
+En orden para `WebView` para que funcione, debe asegurarse de que los permisos se establecen para cada plataforma. Tenga en cuenta que en algunas plataformas, `WebView` funcionará en modo de depuración, pero no cuando se compila para la versión. Eso es porque algunos permisos, como los de acceso a internet en Android, se establecen de manera predeterminada Visual Studio para Mac en el modo de depuración.
 
-- **UWP** &ndash; requiere la capacidad de Internet (cliente y servidor) para mostrar el contenido de la red.
+- **UWP** &ndash; requiere la capacidad de Internet (cliente y servidor) al mostrar el contenido de la red.
 - **Android** &ndash; requiere `INTERNET` solo al mostrar el contenido de la red. El contenido local no requiere ningún permiso especial.
 - **iOS** &ndash; no requiere permisos especiales.
 
 ## <a name="layout"></a>Diseño
 
-A diferencia de la mayoría de vistas de Xamarin.Forms, `WebView` requiere que `HeightRequest` y `WidthRequest` se especifican al contenido en StackLayout o RelativeLayout. Si no puede especificar las propiedades, los `WebView` no se representará.
+A diferencia de la mayoría de vistas de Xamarin.Forms, `WebView` requiere que `HeightRequest` y `WidthRequest` se especifican al contenido en StackLayout o RelativeLayout. Si no especifica las propiedades, los `WebView` no se representará.
 
-Los ejemplos siguientes muestran diseños que intentar solucionarse, representación `WebView`s:
+Los ejemplos siguientes muestran los diseños que dar lugar a trabajar, representación `WebView`s:
 
 StackLayout con WidthRequest & HeightRequest:
 
@@ -436,7 +427,7 @@ AbsoluteLayout *sin* WidthRequest & HeightRequest:
 </AbsoluteLayout>
 ```
 
-Cuadrícula *sin* WidthRequest & HeightRequest. Cuadrícula es uno de los diseños de algunas que no requieren la especificación de anchos y altos solicitadas.:
+Cuadrícula *sin* WidthRequest & HeightRequest. Cuadrícula es uno de los diseños de algunas que no necesita especificar los anchos y altos solicitadas.:
 
 ```xaml
 <Grid>
@@ -449,8 +440,41 @@ Cuadrícula *sin* WidthRequest & HeightRequest. Cuadrícula es uno de los diseñ
 </Grid>
 ```
 
+## <a name="invoking-javascript"></a>Invocación de JavaScript
+
+El [ `WebView` ](xref:Xamarin.Forms.WebView) incluye la capacidad de invocar una función de JavaScript desde C# y se devuelve ningún resultado para el código de C# que realiza la llamada. Esto se consigue con la [ `WebView.EvaluateJavaScriptAsync` ](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) método, que se muestra en el ejemplo siguiente de la [WebView](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView) ejemplo:
+
+```csharp
+var numberEntry = new Entry { Text = "5" };
+var resultLabel = new Label();
+var webView = new WebView();
+...
+
+int number = int.Parse(numberEntry.Text);
+string result = await webView.EvaluateJavaScriptAsync($"factorial({number})");
+resultLabel.Text = $"Factorial of {number} is {result}.";
+```
+
+El [ `WebView.EvaluateJavaScriptAsync` ](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) método evalúa el código JavaScript que se especifica como argumento y devuelve los resultados como un `string`. En este ejemplo, el `factorial` se invoca la función de JavaScript, que devuelve el factorial de `number` como resultado. Esta función se define en el código HTML local de JavaScript de archivos que el [ `WebView` ](xref:Xamarin.Forms.WebView) carga y se muestra en el ejemplo siguiente:
+
+```html
+<html>
+<body>
+<script type="text/javascript">
+function factorial(num) {
+        if (num === 0 || num === 1)
+            return 1;
+        for (var i = num - 1; i >= 1; i--) {
+            num *= i;
+        }
+        return num;
+}
+</script>
+</body>
+</html>
+```
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Trabajar con WebView (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
-- [WebView (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView)
+- [Trabajar con la vista Web (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
+- [Vista Web (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView)

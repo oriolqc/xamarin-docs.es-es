@@ -7,36 +7,36 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 7860df998fbfe580362aff0f4f01374a4ae1f923
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: 3571774ddec4182f35cac6f13d4582235e2ff31a
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935558"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997431"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumen del capítulo 4. Desplazamiento de la pila
 
 Este capítulo se dedica principalmente para introducir el concepto de *diseño*, que es el término general para las clases y las técnicas que utiliza Xamarin.Forms para organizar la presentación visual de varias vistas en la página.
 
-Diseño implica varias clases que derivan de [ `Layout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout/) y [ `Layout<T>` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/). Este capítulo se centra en [ `StackLayout` ](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/).
+Diseño implica varias clases que derivan de [ `Layout` ](xref:Xamarin.Forms.Layout) y [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1). Este capítulo se centra en [ `StackLayout` ](xref:Xamarin.Forms.StackLayout).
 
-También ha introducido en este capítulo son el [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/), [ `Frame` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Frame/), y [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) clases.
+También ha introducido en este capítulo son el [ `ScrollView` ](xref:Xamarin.Forms.ScrollView), [ `Frame` ](xref:Xamarin.Forms.Frame), y [ `BoxView` ](xref:Xamarin.Forms.BoxView) clases.
 
 ## <a name="stacks-of-views"></a>Pilas de vistas
 
-[`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/) se deriva de `Layout<View>` y hereda un [ `Children` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Layout%3CT%3E/) propiedad de tipo `IList<View>`. Agregar varios elementos de vista a esta colección, y `StackLayout` mostrarlos en una pila horizontal o vertical.
+[`StackLayout`](xref:Xamarin.Forms.StackLayout) se deriva de `Layout<View>` y hereda un [ `Children` ](xref:Xamarin.Forms.Layout`1) propiedad de tipo `IList<View>`. Agregar varios elementos de vista a esta colección, y `StackLayout` mostrarlos en una pila horizontal o vertical.
 
 Establecer el [ `Orientation` ](xref:Xamarin.Forms.StackLayout.Orientation) propiedad de `StackLayout` a un miembro de la [ `StackOrientation` ](xref:Xamarin.Forms.StackOrientation) enumeración, ya sea [ `Vertical` ](xref:Xamarin.Forms.StackOrientation.Vertical) o [ `Horizontal`](xref:Xamarin.Forms.StackOrientation.Horizontal). De manera predeterminada, es `Vertical`.
 
-Establecer el [ `Spacing` ](https://developer.xamarin.com/api/property/Xamarin.Forms.StackLayout.Spacing/) propiedad de `StackLayout` a un `double` valor para especificar un espacio entre los elementos secundarios. El valor predeterminado es 6.
+Establecer el [ `Spacing` ](xref:Xamarin.Forms.StackLayout.Spacing) propiedad de `StackLayout` a un `double` valor para especificar un espacio entre los elementos secundarios. El valor predeterminado es 6.
 
 En el código, puede agregar elementos a la `Children` colección de `StackLayout` en un `for` o `foreach` bucle como se muestra en el [ **ColorLoop** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorLoop) ejemplo, o bien se puede inicializar el `Children` colección con una lista de las vistas individuales como se muestra en [ **ColorList**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorList). Los elementos secundarios deben derivar de `View` , pero puede incluir otros `StackLayout` objetos.
 
 ## <a name="scrolling-content"></a>Desplazarse por el contenido
 
-Si un `StackLayout` contiene demasiados elementos secundarios deben mostrarse en una página, puede colocar el `StackLayout` en un [ `ScrollView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ScrollView/) para permitir el desplazamiento.
+Si un `StackLayout` contiene demasiados elementos secundarios deben mostrarse en una página, puede colocar el `StackLayout` en un [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) para permitir el desplazamiento.
 
-Establecer el [ `Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ScrollView.Content/) propiedad de `ScrollView` a la vista que desee desplazarse. Esto suele ser un `StackLayout`, pero puede ser cualquier vista.
+Establecer el [ `Content` ](xref:Xamarin.Forms.ScrollView.Content) propiedad de `ScrollView` a la vista que desee desplazarse. Esto suele ser un `StackLayout`, pero puede ser cualquier vista.
 
 Establecer el [ `Orientation` ](xref:Xamarin.Forms.ScrollView.Orientation) propiedad de `ScrollView` a un miembro de la [ `ScrollOrientation` ](xref:Xamarin.Forms.ScrollOrientation) propiedad [ `Vertical` ](xref:Xamarin.Forms.ScrollOrientation.Vertical), [ `Horizontal` ](xref:Xamarin.Forms.ScrollOrientation.Horizontal), o [ `Both` ](xref:Xamarin.Forms.ScrollOrientation.Both). De manera predeterminada, es `Vertical`. Si el contenido de un `ScrollView` es un `StackLayout`, las dos orientaciones deben ser coherentes.
 
@@ -53,14 +53,14 @@ El `LayoutOptions` estructura define dos propiedades:
 
 Para su comodidad, el `LayoutOptions` estructura define también ocho campos de solo lectura estáticos del tipo `LayoutOptions` que abarcan todas las combinaciones de las propiedades de la instancia de dos:
 
-- [`LayoutOptions.Start`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Start/)
-- [`LayoutOptions.Center`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Center/)
-- [`LayoutOptions.End`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.End/)
-- [`LayoutOptions.Fill`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.Fill/)
-- [`LayoutOptions.StartAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.StartAndExpand/)
-- [`LayoutOptions.CenterAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.CenterAndExpand/)
-- [`LayoutOptions.EndAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.EndAndExpand/)
-- [`LayoutOptions.FillAndExpand`](https://developer.xamarin.com/api/field/Xamarin.Forms.LayoutOptions.FillAndExpand/)
+- [`LayoutOptions.Start`](xref:Xamarin.Forms.LayoutOptions.Start)
+- [`LayoutOptions.Center`](xref:Xamarin.Forms.LayoutOptions.Center)
+- [`LayoutOptions.End`](xref:Xamarin.Forms.LayoutOptions.End)
+- [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill)
+- [`LayoutOptions.StartAndExpand`](xref:Xamarin.Forms.LayoutOptions.StartAndExpand)
+- [`LayoutOptions.CenterAndExpand`](xref:Xamarin.Forms.LayoutOptions.CenterAndExpand)
+- [`LayoutOptions.EndAndExpand`](xref:Xamarin.Forms.LayoutOptions.EndAndExpand)
+- [`LayoutOptions.FillAndExpand`](xref:Xamarin.Forms.LayoutOptions.FillAndExpand)
 
 La siguiente discusión implica un `StackLayout` con una orientación vertical de forma predeterminada. Horizontal `StackLayout` es análoga.
 
@@ -78,21 +78,21 @@ Esto se muestra en el [ **VerticalOptionsDemo** ](https://github.com/xamarin/xam
 
 Estas dos vistas rectangulares a menudo se usan para fines de presentación.
 
-El [ `Frame` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Frame/) vista muestra un marco rectangular en torno a otra vista, que puede ser un diseño, como `StackLayout`. `Frame` hereda un [ `Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) propiedad desde [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) que establece en la vista que se mostrará en el `Frame`. El `Frame` es transparente, de forma predeterminada. Establezca las tres propiedades siguientes para personalizar la apariencia del marco:
+El [ `Frame` ](xref:Xamarin.Forms.Frame) vista muestra un marco rectangular en torno a otra vista, que puede ser un diseño, como `StackLayout`. `Frame` hereda un [ `Content` ](xref:Xamarin.Forms.ContentView.Content) propiedad desde [ `ContentView` ](xref:Xamarin.Forms.ContentView) que establece en la vista que se mostrará en el `Frame`. El `Frame` es transparente, de forma predeterminada. Establezca las tres propiedades siguientes para personalizar la apariencia del marco:
 
-- El [ `OutlineColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Frame.OutlineColor/) propiedad para que sea visible. Es habitual para establecer `OutlineColor` a `Color.Accent` cuando no conoce el esquema de color subyacente.
-- El [ `HasShadow` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Frame.HasShadow/) propiedad puede establecerse en `true` para mostrar una sombra negra en dispositivos iOS.
-- Establecer el [ `Padding` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Layout.Padding/) propiedad a un `Thickness` valor dejar un espacio entre el marco y el marco de contenido. El valor predeterminado es de 20 unidades en todos los lados.
+- El [ `OutlineColor` ](xref:Xamarin.Forms.Frame.OutlineColor) propiedad para que sea visible. Es habitual para establecer `OutlineColor` a `Color.Accent` cuando no conoce el esquema de color subyacente.
+- El [ `HasShadow` ](xref:Xamarin.Forms.Frame.HasShadow) propiedad puede establecerse en `true` para mostrar una sombra negra en dispositivos iOS.
+- Establecer el [ `Padding` ](xref:Xamarin.Forms.Layout.Padding) propiedad a un `Thickness` valor dejar un espacio entre el marco y el marco de contenido. El valor predeterminado es de 20 unidades en todos los lados.
 
 El `Frame` tiene un valor predeterminado `HorizontalOptions` y `VerticalOptions` valores de `LayoutOptions.Fill`, lo que significa que el `Frame` rellenará su contenedor. Con otras opciones, el tamaño de la `Frame` se basa en el tamaño de su contenido.
 
 El `Frame` se muestra en el [ **FramedText** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FramedText) ejemplo.
 
-El [ `BoxView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.BoxView/) muestra un área rectangular del color especificado por su [ `Color` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BoxView.Color/) propiedad.
+El [ `BoxView` ](xref:Xamarin.Forms.BoxView) muestra un área rectangular del color especificado por su [ `Color` ](xref:Xamarin.Forms.BoxView.Color) propiedad.
 
 Si el `BoxView` está restringido (su `HorizontalOptions` y `VerticalOptions` propiedades tienen sus valores predeterminados de `LayoutOptions.Fill`), el `BoxView` rellena el espacio disponible para él. Si el `BoxView` es sin restricciones (con `HorizontalOptions` y `LayoutOptions` configuración de `Start`, `Center`, o `End`), tiene una dimensión predeterminada del cuadrado de 40 unidades. Un `BoxView` puede restringir en una dimensión y sin restricciones en el otro.
 
-A menudo, estableceremos la el [ `WidthRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.WidthRequest/) y [ `HeightRequest` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.HeightRequest/) propiedades de `BoxView` para darle un tamaño específico. Esto se muestra en el [ **SizedBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) ejemplo.
+A menudo, estableceremos la el [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) y [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propiedades de `BoxView` para darle un tamaño específico. Esto se muestra en el [ **SizedBoxView** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/SizedBoxView) ejemplo.
 
 Puede usar varias instancias de `StackLayout` para combinar una `BoxView` y varias `Label` instancias en un `Frame` para mostrar un color determinado y, a continuación, coloque cada una de estas vistas en un `StackLayout` en un `ScrollView` para crear el atractivo lista de colores se muestra en el [ **ColorBlocks** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/ColorBlocks) ejemplo:
 

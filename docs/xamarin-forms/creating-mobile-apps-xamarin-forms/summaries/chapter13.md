@@ -7,16 +7,16 @@ ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: 0f9b9e27afd5dbbf52f3653995470136e794f17b
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: b27df7f63ac83206c50858175dc2945937142f78
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935204"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995474"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Resumen del capítulo 13. Mapas de bits
 
-Xamarin.Forms [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Image/) elemento muestra un mapa de bits. Todas las plataformas de Xamarin.Forms admiten los formatos de archivo JPEG, PNG, GIF y BMP.
+Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image) elemento muestra un mapa de bits. Todas las plataformas de Xamarin.Forms admiten los formatos de archivo JPEG, PNG, GIF y BMP.
 
 Mapas de bits en Xamarin.Forms proceden de cuatro lugares:
 
@@ -27,30 +27,30 @@ Mapas de bits en Xamarin.Forms proceden de cuatro lugares:
 
 Recursos de mapa de bits en la PCL son independientes de la plataforma, mientras que los recursos de mapa de bits en los proyectos de plataforma son específicos de la plataforma.
 
-El mapa de bits se especifica estableciendo el [ `Source` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Source/) propiedad de `Image` a un objeto de tipo [ `ImageSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageSource/), una clase abstracta con tres derivados:
+El mapa de bits se especifica estableciendo el [ `Source` ](xref:Xamarin.Forms.Image.Source) propiedad de `Image` a un objeto de tipo [ `ImageSource` ](xref:Xamarin.Forms.ImageSource), una clase abstracta con tres derivados:
 
-- [`UriImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.UriImageSource/) Para obtener acceso a un mapa de bits a través de web según un `Uri` objeto establecido en su [ `Uri` ](https://developer.xamarin.com/api/property/Xamarin.Forms.UriImageSource.Uri/) propiedad
-- [`FileImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.FileImageSource/) Para obtener acceso a un mapa de bits almacenado en un proyecto de aplicación de plataforma basada en una ruta de carpeta y archivo establecida en su [ `File` ](https://developer.xamarin.com/api/property/Xamarin.Forms.FileImageSource.File/) propiedad
-- [`StreamImageSource`](https://developer.xamarin.com/api/type/Xamarin.Forms.StreamImageSource/) para cargar un mapa de bits mediante .NET `Stream` objeto especificado al devolver un `Stream` desde un `Func` establecido en su [ `Stream` ](https://developer.xamarin.com/api/property/Xamarin.Forms.StreamImageSource.Stream/) propiedad
+- [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) Para obtener acceso a un mapa de bits a través de web según un `Uri` objeto establecido en su [ `Uri` ](xref:Xamarin.Forms.UriImageSource.Uri) propiedad
+- [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) Para obtener acceso a un mapa de bits almacenado en un proyecto de aplicación de plataforma basada en una ruta de carpeta y archivo establecida en su [ `File` ](xref:Xamarin.Forms.FileImageSource.File) propiedad
+- [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource) para cargar un mapa de bits mediante .NET `Stream` objeto especificado al devolver un `Stream` desde un `Func` establecido en su [ `Stream` ](xref:Xamarin.Forms.StreamImageSource.Stream) propiedad
 
 Como alternativa (y más comúnmente) puede usar los siguientes métodos estáticos de la `ImageSource` clase, todos devuelven `ImageSource` objetos:
 
-- [`ImageSource.FromUri`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromUri/p/System.Uri/) Para obtener acceso a un mapa de bits a través de web según un `Uri` objeto
-- [`ImageSource.FromResource`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/) Para obtener acceso a un mapa de bits que se almacenan como un recurso incrustado en la aplicación PCL, o [ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/System.Type/) o [ `ImageSource.FromResource` ](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromResource/p/System.String/System.Reflection.Assembly/) para tener acceso a un mapa de bits en otro ensamblado de origen
-- [`ImageSource.FromFile`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromFile/p/System.String/) Para obtener acceso a un mapa de bits desde un proyecto de aplicación de plataforma
-- [`ImageSource.FromStream`](https://developer.xamarin.com/api/member/Xamarin.Forms.ImageSource.FromStream/p/System.Func%7BSystem.IO.Stream%7D/) para cargar un mapa de bits en función de un `Stream` objeto
+- [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) Para obtener acceso a un mapa de bits a través de web según un `Uri` objeto
+- [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) Para obtener acceso a un mapa de bits que se almacenan como un recurso incrustado en la aplicación PCL; [ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Type)) o [ `ImageSource.FromResource` ](xref:Xamarin.Forms.ImageSource.FromResource(System.String,System.Reflection.Assembly)) para tener acceso a un mapa de bits en otro ensamblado de origen
+- [`ImageSource.FromFile`](xref:Xamarin.Forms.ImageSource.FromFile(System.String)) Para obtener acceso a un mapa de bits desde un proyecto de aplicación de plataforma
+- [`ImageSource.FromStream`](xref:Xamarin.Forms.ImageSource.FromStream(System.Func{System.IO.Stream})) para cargar un mapa de bits en función de un `Stream` objeto
 
 No hay ningún equivalente de la clase de la `Image.FromResource` métodos. La `UriImageSource` clase es útil si necesita controlar el almacenamiento en caché. La `FileImageSource` clase es útil en XAML. `StreamImageSource` es útil para la carga asincrónica de `Stream` objetos, mientras que `ImageSource.FromStream` es sincrónica.
 
 ## <a name="platform-independent-bitmaps"></a>Mapas de bits independiente de la plataforma
 
-El [ **WebBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapCode) proyecto carga un mapa de bits a través de web mediante `ImageSource.FromUri`. El `Image` elemento está establecido en el `Content` propiedad de la `ContentPage`, por lo que está restringido para el tamaño de la página. Independientemente del tamaño del mapa de bits, un restringida `Image` elemento se ajusta al tamaño de su contenedor y se muestra el mapa de bits en su tamaño máximo en el `Image` elemento manteniendo la proporción de aspecto del mapa de bits. Áreas de la `Image` más allá de lo que se puede colorear el mapa de bits con [ `BackgroundColor` ](https://developer.xamarin.com/api/property/Xamarin.Forms.VisualElement.BackgroundColor/).
+El [ **WebBitmapCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapCode) proyecto carga un mapa de bits a través de web mediante `ImageSource.FromUri`. El `Image` elemento está establecido en el `Content` propiedad de la `ContentPage`, por lo que está restringido para el tamaño de la página. Independientemente del tamaño del mapa de bits, un restringida `Image` elemento se ajusta al tamaño de su contenedor y se muestra el mapa de bits en su tamaño máximo en el `Image` elemento manteniendo la proporción de aspecto del mapa de bits. Áreas de la `Image` más allá de lo que se puede colorear el mapa de bits con [ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor).
 
-El [ **WebBitmapXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapXaml) ejemplo es similar pero simplemente establece la `Source` propiedad a la dirección URL. La conversión se controla mediante el [ `ImageSourceConverter` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ImageSourceConverter/) clase.
+El [ **WebBitmapXaml** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/WebBitmapXaml) ejemplo es similar pero simplemente establece la `Source` propiedad a la dirección URL. La conversión se controla mediante el [ `ImageSourceConverter` ](xref:Xamarin.Forms.ImageSourceConverter) clase.
 
 ### <a name="fit-and-fill"></a>Ajuste y relleno
 
-Puede controlar cómo se ajusta el mapa de bits estableciendo el [ `Aspect` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.Aspect/) propiedad de la `Image` a uno de los siguientes miembros de la [ `Aspect` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Aspect/) enumeración:
+Puede controlar cómo se ajusta el mapa de bits estableciendo el [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) propiedad de la `Image` a uno de los siguientes miembros de la [ `Aspect` ](xref:Xamarin.Forms.Aspect) enumeración:
 
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit): respeta la relación de aspecto (valor predeterminado)
 - [`Fill`](xref:Xamarin.Forms.Aspect.Fill): rellena el área, no respeta la relación de aspecto
@@ -84,7 +84,7 @@ El [ **MadTeaParty** ](https://github.com/xamarin/xamarin-forms-book-samples/tre
 
 El [ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) ejemplo permite al usuario explorar a través de varias imágenes existentes almacenadas en el sitio web de Xamarin. Usa .NET `WebRequest` clase para descargar un archivo JSON con la lista de mapas de bits.
 
-El programa usa un [ `ActivityIndicator` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ActivityIndicator/) para indicar que algo está ocurriendo. Ya se está cargando cada mapa de bits, solo lectura [ `IsLoading` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Image.IsLoading/) propiedad de `Image` es `true`. El `IsLoading` propiedad está respaldada por una propiedad enlazable, por lo tanto un `PropertyChanged` evento se desencadena cuando se cambia dicha propiedad. El programa se adjunta un controlador a este evento y usa el valor actual de `IsLoaded` para establecer el [ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) propiedad de la `ActivityIndicator`.
+El programa usa un [ `ActivityIndicator` ](xref:Xamarin.Forms.ActivityIndicator) para indicar que algo está ocurriendo. Ya se está cargando cada mapa de bits, solo lectura [ `IsLoading` ](xref:Xamarin.Forms.Image.IsLoading) propiedad de `Image` es `true`. El `IsLoading` propiedad está respaldada por una propiedad enlazable, por lo tanto un `PropertyChanged` evento se desencadena cuando se cambia dicha propiedad. El programa se adjunta un controlador a este evento y usa el valor actual de `IsLoaded` para establecer el [ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) propiedad de la `ActivityIndicator`.
 
 ## <a name="streaming-bitmaps"></a>Los mapas de bits de streaming
 
@@ -102,11 +102,11 @@ El "Do It Yourself" [ **DiyGradientBitmap** ](https://github.com/xamarin/xamarin
 
 ## <a name="platform-specific-bitmaps"></a>Mapas de bits específicos de la plataforma
 
-Todas las plataformas de Xamarin.Forms permiten almacenar mapas de bits en los ensamblados de aplicación de plataforma. Cuando se recuperan mediante una aplicación de Xamarin.Forms, estos mapas de bits de la plataforma son de tipo [ `FileImageSource` ](https://developer.xamarin.com/api/type/Xamarin.Forms.FileImageSource/). Se usan para:
+Todas las plataformas de Xamarin.Forms permiten almacenar mapas de bits en los ensamblados de aplicación de plataforma. Cuando se recuperan mediante una aplicación de Xamarin.Forms, estos mapas de bits de la plataforma son de tipo [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource). Se usan para:
 
-- el [ `Icon` ](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Icon/) propiedad de [`MenuItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/)
-- el [ `Icon` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/) propiedad de [`ToolbarItem`](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/)
-- el [ `Image` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) propiedad de `Button`
+- el [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) propiedad de [`MenuItem`](xref:Xamarin.Forms.MenuItem)
+- el [ `Icon` ](xref:Xamarin.Forms.MenuItem.Icon) propiedad de [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem)
+- el [ `Image` ](xref:Xamarin.Forms.Button) propiedad de `Button`
 
 Los ensamblados de plataforma ya contienen los mapas de bits para iconos y pantallas de presentación:
 
@@ -170,23 +170,23 @@ El [ **ImageTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/m
 
 ### <a name="toolbars-and-their-icons"></a>Las barras de herramientas y sus iconos
 
-Uno de los usos principales de mapas de bits específicos de la plataforma es la barra de herramientas de Xamarin.Forms, que se construye mediante la adición de [ `ToolbarItem` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ToolbarItem/) objetos a la [ `ToolbarItems` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Page.ToolbarItems/) colección definida por `Page`. `ToobarItem` se deriva de [ `MenuItem` ](https://developer.xamarin.com/api/type/Xamarin.Forms.MenuItem/) desde la que se hereda algunas propiedades.
+Uno de los usos principales de mapas de bits específicos de la plataforma es la barra de herramientas de Xamarin.Forms, que se construye mediante la adición de [ `ToolbarItem` ](xref:Xamarin.Forms.ToolbarItem) objetos a la [ `ToolbarItems` ](xref:Xamarin.Forms.Page.ToolbarItems) colección definida por `Page`. `ToobarItem` se deriva de [ `MenuItem` ](xref:Xamarin.Forms.MenuItem) desde la que se hereda algunas propiedades.
 
 Lo más importante `ToolbarItem` propiedades son:
 
-- [`Text`](https://developer.xamarin.com/api/property/Xamarin.Forms.MenuItem.Text/) para el texto que puede aparecer según la plataforma y `Order`
-- [`Icon`](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Icon/) de tipo `FileImageSource` para la imagen que puede aparecer según la plataforma y `Order`
+- [`Text`](xref:Xamarin.Forms.MenuItem.Text) para el texto que puede aparecer según la plataforma y `Order`
+- [`Icon`](xref:Xamarin.Forms.MenuItem.Icon) de tipo `FileImageSource` para la imagen que puede aparecer según la plataforma y `Order`
 - [`Order`](xref:Xamarin.Forms.ToolbarItem.Order) de tipo [ `ToolbarItemOrder` ](xref:Xamarin.Forms.ToolbarItemOrder), una enumeración con tres miembros [ `Default` ](xref:Xamarin.Forms.ToolbarItemOrder.Default), [ `Primary` ](xref:Xamarin.Forms.ToolbarItemOrder.Primary), y [ `Secondary` ](xref:Xamarin.Forms.ToolbarItemOrder.Secondary).
 
 El número de `Primary` elementos deben limitarse a tres o cuatro. Debe incluir un `Text` establecer para todos los elementos. Para la mayoría de las plataformas, sólo el `Primary` elementos requieren una `Icon` pero requiere Windows 8.1 un `Icon` para todos los elementos. Los iconos deben tener 32 unidades independientes del dispositivo cuadradas. El `FileImageSource` tipo indica que son específicos de la plataforma.
 
-El `ToolbarItem` se activa un [ `Clicked` ](https://developer.xamarin.com/api/event/Xamarin.Forms.MenuItem.Clicked/) eventos cuando se puntea muy similar a un `Button`. `ToolbarItem` también admite [ `Command` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.Command/) y [ `CommandParameter` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ToolbarItem.CommandParameter/) propiedades que se usan a menudo en relación con MVVM. (Consulte [capítulo 18, MVVM](chapter18.md)).
+El `ToolbarItem` se activa un [ `Clicked` ](xref:Xamarin.Forms.MenuItem.Clicked) eventos cuando se puntea muy similar a un `Button`. `ToolbarItem` también admite [ `Command` ](xref:Xamarin.Forms.MenuItem.Command) y [ `CommandParameter` ](xref:Xamarin.Forms.MenuItem.CommandParameter) propiedades que se usan a menudo en relación con MVVM. (Consulte [capítulo 18, MVVM](chapter18.md)).
 
-IOS y Android requieren que sea una página que muestra una barra de herramientas un [ `NavigationPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/) o una página para navegar por un `NavigationPage`. El [ **ToolbarDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) programa conjuntos el `MainPage` propiedad de su `App` clase a la [ `NavigationPage` constructor](https://developer.xamarin.com/api/constructor/Xamarin.Forms.NavigationPage.NavigationPage/p/Xamarin.Forms.Page/) con un `ContentPage` argumento y se muestra la construcción y controlador de eventos de una barra de herramientas.
+IOS y Android requieren que sea una página que muestra una barra de herramientas un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) o una página para navegar por un `NavigationPage`. El [ **ToolbarDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ToolbarDemo) programa conjuntos el `MainPage` propiedad de su `App` clase a la [ `NavigationPage` constructor](xref:Xamarin.Forms.NavigationPage.%23ctor(Xamarin.Forms.Page)) con un `ContentPage` argumento y se muestra la construcción y controlador de eventos de una barra de herramientas.
 
 ### <a name="button-images"></a>Imágenes de botón
 
-También puede usar mapas de bits específicos de la plataforma para establecer el [ `Image` ](https://developer.xamarin.com/api/property/Xamarin.Forms.Button.Image/) propiedad de `Button` un mapa de bits del cuadrado 32 unidades independientes del dispositivo, tal como lo demuestra el [ **ButtonImage** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage) ejemplo.
+También puede usar mapas de bits específicos de la plataforma para establecer el [ `Image` ](xref:Xamarin.Forms.Button.Image) propiedad de `Button` un mapa de bits del cuadrado 32 unidades independientes del dispositivo, tal como lo demuestra el [ **ButtonImage** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage) ejemplo.
 
 
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
-ms.openlocfilehash: 7f68b7c8affc11b50bdb4a2fc9589f8dcbfb45ec
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 34fb58f44e3f341fa34eef512d61f20f5d035a9b
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38830485"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998211"
 ---
 # <a name="gtk-platform-setup"></a>Configuración de la plataforma GTK #
 
@@ -211,7 +211,7 @@ GtkThemes.LoadCustomTheme ("Themes/gtkrc");
 
 ### <a name="native-forms"></a>Formularios nativos
 
-Formularios nativos permite Xamarin.Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivados de las páginas que será consumido por los proyectos nativos, incluidos los proyectos de GTK #. Esto puede realizarse mediante la creación de una instancia de la [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/)-derivados de página y convertirlo en el nativo GTK # tipo usando el `CreateContainer` método de extensión:
+Formularios nativos permite Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-derivados de las páginas que será consumido por los proyectos nativos, incluidos los proyectos de GTK #. Esto puede realizarse mediante la creación de una instancia de la [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-derivados de página y convertirlo en el nativo GTK # tipo usando el `CreateContainer` método de extensión:
 
 ```csharp
 var settingsView = new SettingsView().CreateContainer();

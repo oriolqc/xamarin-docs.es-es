@@ -7,27 +7,27 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/31/2018
-ms.openlocfilehash: 7ad8c8aa77e23c5a8fb7649736ecb271f835d1a7
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 4879ff88d5bbdab5aa92024bee7f50239a141e3b
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35245529"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38995872"
 ---
 # <a name="xamarinforms-editor"></a>Editor de Xamarin.Forms
 
-_Entrada de texto de varias líneas_
+_Entrada de texto multilínea_
 
-El `Editor` control se usa para aceptar la entrada de varias líneas. En este artículo se tratará:
+El `Editor` control se usa para aceptar la entrada de varias líneas. Este artículo se trata:
 
 - **[Personalización](#customization)**  &ndash; opciones de color y el teclado.
-- **[Interactividad](#interactivity)**  &ndash; eventos que pueden escuchar para proporcionar interactividad.
+- **[Interactividad](#interactivity)**  &ndash; eventos que se pueden escuchar para proporcionar interactividad.
 
 ## <a name="customization"></a>Personalización
 
-### <a name="setting-and-reading-text"></a>Establecer y leer texto
+### <a name="setting-and-reading-text"></a>Establecimiento y lectura de texto
 
-El `Editor`, al igual que otras vistas de presentación de texto, expone la `Text` propiedad. Esta propiedad puede utilizarse para establecer y leer el texto presentado por el `Editor`. En el ejemplo siguiente se demuestra cómo establecer el `Text` propiedad en XAML:
+El `Editor`, al igual que otras vistas de presentación de texto, expone el `Text` propiedad. Esta propiedad se puede utilizar para establecer y leer el texto presentado por el `Editor`. El ejemplo siguiente se muestra cómo establecer el `Text` propiedad en XAML:
 
 ```xaml
 <Editor Text="I am an Editor" />
@@ -39,7 +39,7 @@ En C#:
 var MyEditor = new Editor { Text = "I am an Editor" };
 ```
 
-Para leer texto, obtener acceso a la `Text` propiedad en C#:
+Para leer el texto, obtener acceso a la `Text` propiedad en C#:
 
 ```csharp
 var text = MyEditor.Text;
@@ -57,28 +57,28 @@ El [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) propiedad puede utili
 var editor = new Editor { ... MaxLength = 10 };
 ```
 
-A [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) valor de propiedad de 0 indica que no se permitirá ninguna entrada y un valor de `int.MaxValue`, que es el valor predeterminado para un [ `Editor` ](xref:Xamarin.Forms.Editor), indica que no hay ninguna límite real en el número de caracteres que pueden escribirse.
+Un [ `MaxLength` ](xref:Xamarin.Forms.InputView.MaxLength) valor de propiedad de 0 indica que no se permitirá ninguna entrada y un valor de `int.MaxValue`, que es el valor predeterminado para un [ `Editor` ](xref:Xamarin.Forms.Editor), indica que no hay ninguna límite real del número de caracteres que pueden especificarse.
 
 ### <a name="keyboards"></a>Teclados
 
-El teclado que aparece cuando los usuarios interactúan con un `Editor` puede establecerse mediante programación a través de la [ ``Keyboard`` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Keyboard/) propiedad.
+El teclado que aparece cuando los usuarios interactúan con un `Editor` se puede establecer mediante programación a través de la [ ``Keyboard`` ](xref:Xamarin.Forms.Keyboard) propiedad.
 
 Las opciones para el tipo de teclado son:
 
 - **Valor predeterminado** &ndash; el teclado predeterminado
-- **Chat** &ndash; utilizado para texto & lugares donde son útiles emoji
-- **Correo electrónico** &ndash; utiliza al especificar direcciones de correo electrónico
+- **Chat** &ndash; usado para texto y los lugares donde son útiles emoji
+- **Correo electrónico** &ndash; utilizado al especificar direcciones de correo electrónico
 - **Numérico** &ndash; usa al escribir números
-- **Teléfono** &ndash; utiliza al especificar números de teléfono
+- **Teléfono** &ndash; utilizado al especificar números de teléfono
 - **Dirección URL** &ndash; utilizado para especificar las rutas de acceso de archivo & direcciones web
 
 Hay un [ejemplo de cada teclado](https://developer.xamarin.com/recipes/cross-platform/xamarin-forms/choose-keyboard-for-entry/) en nuestra sección de recetas.
 
 ### <a name="enabling-and-disabling-spell-checking"></a>Habilitar y deshabilitar el corrector ortográfico
 
-El [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propiedad controla si corrector ortográfico está habilitado. De forma predeterminada, la propiedad se establece en `true`. Cuando el usuario escribe texto, se indican los errores de ortografía.
+El [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propiedad controla si corrector ortográfico está habilitado. De forma predeterminada, la propiedad se establece en `true`. Cuando el usuario escriba texto, se indican los errores de ortografía.
 
-Sin embargo, en algunos escenarios de entrada de texto, por ejemplo, especificar un nombre de usuario, la revisión ortográfica proporciona una experiencia negativa de modo que deben deshabilitarse estableciendo la [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propiedad `false`:
+Sin embargo, algunos escenarios de entrada de texto, como escribir un nombre de usuario, corrector ortográfico ofrece una experiencia negativa de modo que deben deshabilitarse estableciendo el [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propiedad `false`:
 
 ```xaml
 <Editor ... IsSpellCheckEnabled="false" />
@@ -89,11 +89,11 @@ var editor = new Editor { ... IsSpellCheckEnabled = false };
 ```
 
 > [!NOTE]
-> Cuando el [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propiedad está establecida en `false`y no la está usando un teclado personalizado, se deshabilitará el corrector ortográfico nativo. Sin embargo, si un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) ha sido conjunto que deshabilita el corrector sobre la comprobación, como [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), el `IsSpellCheckEnabled` propiedad se omite. Por lo tanto, la propiedad no se puede usar para habilitar el corrector ortográfico para un `Keyboard` que deshabilita de forma explícita.
+> Cuando el [ `IsSpellCheckEnabled` ](xref:Xamarin.Forms.InputView.IsSpellCheckEnabled) propiedad está establecida en `false`y no se usa un teclado personalizado, se deshabilitará el corrector ortográfico nativo. Sin embargo, si un [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) ha sido conjunto que deshabilita el corrector comprobación, como [ `Keyboard.Chat` ](xref:Xamarin.Forms.Keyboard.Chat), el `IsSpellCheckEnabled` se omite. Por lo tanto, no se puede usar la propiedad para habilitar el corrector ortográfico para un `Keyboard` que deshabilita de forma explícita.
 
 ### <a name="colors"></a>Colores
 
-`Editor` se puede establecer para usar un color de fondo personalizada a través de la `BackgroundColor` propiedad. Un cuidado especial es necesario para garantizar que los colores se podrán usar en cada plataforma. Dado que cada plataforma tiene distintos valores predeterminados para el color de texto, debe establecer un color de fondo personalizado para cada plataforma. Vea [trabajar con ajustes de plataforma](~/xamarin-forms/platform/device.md) para obtener más información acerca de cómo optimizar la interfaz de usuario para cada plataforma.
+`Editor` puede establecerse para usar un color de fondo a través de la `BackgroundColor` propiedad. Atención especial es necesaria para asegurarse de que los colores se podrán usar en cada plataforma. Dado que cada plataforma tiene distintos valores predeterminados para el color de texto, deberá establecer un color de fondo personalizado para cada plataforma. Consulte [trabajar con ajustes de la plataforma](~/xamarin-forms/platform/device.md) para obtener más información sobre la optimización de la interfaz de usuario para cada plataforma.
 
 En C#:
 
@@ -143,12 +143,12 @@ Asegúrese de que los colores de fondo y de texto que elija puede utilizar en ca
 
 `Editor` expone dos eventos:
 
-- [TextChanged](http://developer.xamarin.com/api/event/Xamarin.Forms.Editor.TextChanged/) &ndash; se produce cuando cambia el texto en el editor. Proporciona el texto antes y después del cambio.
-- [Completado](http://developer.xamarin.com/api/event/Xamarin.Forms.Editor.Completed/) &ndash; se produce cuando el usuario ha finalizado la entrada presionando la tecla ENTRAR del teclado.
+- [TextChanged](xref:Xamarin.Forms.Editor.TextChanged) &ndash; se genera cuando cambia el texto en el editor. Proporciona el texto antes y después del cambio.
+- [Completado](xref:Xamarin.Forms.Editor.Completed) &ndash; se genera cuando el usuario ha finalizado la entrada presionando la tecla ENTRAR del teclado.
 
 ### <a name="completed"></a>Completada
 
-El `Completed` eventos se usan para reaccionar a la finalización de una interacción con un `Editor`. `Completed` se produce cuando el usuario finaliza la entrada con un campo especificando la tecla ENTRAR del teclado. El controlador para el evento es un controlador de eventos genéricos, teniendo el remitente y `EventArgs`:
+El `Completed` evento sirve para reaccionar a la finalización de una interacción con un `Editor`. `Completed` se produce cuando el usuario finaliza la entrada con un campo especificando la tecla ENTRAR del teclado. El controlador para el evento es un controlador de eventos genéricos, tomando el remitente y `EventArgs`:
 
 ```csharp
 void EditorCompleted (object sender, EventArgs e)
@@ -157,7 +157,7 @@ void EditorCompleted (object sender, EventArgs e)
 }
 ```
 
-Puede suscribir el evento completado en el código y XAML:
+En el código y XAML, se puede suscribir el evento completado para:
 
 En C#:
 
@@ -194,9 +194,9 @@ Title="Editor Demo">
 
 ### <a name="textchanged"></a>TextChanged
 
-El `TextChanged` eventos se usan para reaccionar a un cambio en el contenido de un campo.
+El `TextChanged` evento sirve para reaccionar ante un cambio en el contenido de un campo.
 
-`TextChanged` se produce cada vez que la `Text` de la `Editor` cambios. El controlador para el evento toma una instancia de `TextChangedEventArgs`. `TextChangedEventArgs` proporciona acceso a los valores antiguos y nuevos de la `Editor` `Text` a través de la `OldTextValue` y `NewTextValue` propiedades:
+`TextChanged` se produce cada vez que el `Text` de la `Editor` cambios. El controlador para el evento toma una instancia de `TextChangedEventArgs`. `TextChangedEventArgs` proporciona acceso a los valores antiguos y nuevos de la `Editor` `Text` a través de la `OldTextValue` y `NewTextValue` propiedades:
 
 ```csharp
 void EditorTextChanged (object sender, TextChangedEventArgs e)
@@ -206,7 +206,7 @@ void EditorTextChanged (object sender, TextChangedEventArgs e)
 }
 ```
 
-Puede suscribir el evento completado en el código y XAML:
+En el código y XAML, se puede suscribir el evento completado para:
 
 Mediante código:
 
@@ -245,4 +245,4 @@ Title="Editor Demo">
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Texto (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
-- [Editor de API](https://developer.xamarin.com/api/type/Xamarin.Forms.Editor/)
+- [Editor de API](xref:Xamarin.Forms.Editor)
