@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: 538ca831e51069f345a8a7a53aa844352c207faa
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: a4e27f1810a16b5d13838d2e2c1067950586fab3
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36268841"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996186"
 ---
 # <a name="xamarinforms-multiscreen-quickstart"></a>Guía de inicio rápido sobre Multiscreen de Xamarin.Forms
 
@@ -63,7 +63,7 @@ Amplíe la aplicación Phoneword de la siguiente forma:
 
     ![](quickstart-images/vs/open-app-class.png "Abrir App.xaml.cs")
 
-6. En **App.xaml.cs**, importe el espacio de nombres `System.Collections.Generic`, agregue la declaración de la propiedad `PhoneNumbers`, inicialice la propiedad en el constructor `App` e inicialice la propiedad [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) para que sea una [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/). La colección `PhoneNumbers` se usará para almacenar una lista de cada número de teléfono traducido al que se ha llamado desde la aplicación:
+6. En **App.xaml.cs**, importe el espacio de nombres `System.Collections.Generic`, agregue la declaración de la propiedad `PhoneNumbers`, inicialice la propiedad en el constructor `App` e inicialice la propiedad [`MainPage`](xref:Xamarin.Forms.Application.MainPage) para que sea una [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). La colección `PhoneNumbers` se usará para almacenar una lista de cada número de teléfono traducido al que se ha llamado desde la aplicación:
 
     ```csharp
     using System.Collections.Generic;
@@ -94,7 +94,7 @@ Amplíe la aplicación Phoneword de la siguiente forma:
 
     ![](quickstart-images/vs/open-mainpage-xaml.png "Abrir MainPage.xaml")
 
-8. En **MainPage.xaml**, agregue un control [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) al final del control [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/). Se usará el botón para navegar a la página del historial de llamadas:
+8. En **MainPage.xaml**, agregue un control [`Button`](xref:Xamarin.Forms.Button) al final del control [`StackLayout`](xref:Xamarin.Forms.StackLayout). Se usará el botón para navegar a la página del historial de llamadas:
 
     ```xaml
     <StackLayout VerticalOptions="FillAndExpand"
@@ -209,7 +209,7 @@ Amplíe la aplicación Phoneword de la siguiente forma:
 
     ![](quickstart-images/xs/open-app-class.png "Abrir App.xaml.cs")
 
-7. En **App.xaml.cs**, importe el espacio de nombres `System.Collections.Generic`, agregue la declaración de la propiedad `PhoneNumbers`, inicialice la propiedad en el constructor `App` e inicialice la propiedad [`MainPage`](https://developer.xamarin.com/api/property/Xamarin.Forms.Application.MainPage/) para que sea una [`NavigationPage`](https://developer.xamarin.com/api/type/Xamarin.Forms.NavigationPage/). La colección `PhoneNumbers` se usará para almacenar una lista de cada número de teléfono traducido al que se ha llamado desde la aplicación:
+7. En **App.xaml.cs**, importe el espacio de nombres `System.Collections.Generic`, agregue la declaración de la propiedad `PhoneNumbers`, inicialice la propiedad en el constructor `App` e inicialice la propiedad [`MainPage`](xref:Xamarin.Forms.Application.MainPage) para que sea una [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). La colección `PhoneNumbers` se usará para almacenar una lista de cada número de teléfono traducido al que se ha llamado desde la aplicación:
 
     ```csharp
     using System.Collections.Generic;
@@ -240,7 +240,7 @@ Amplíe la aplicación Phoneword de la siguiente forma:
 
     ![](quickstart-images/xs/open-mainpage-xaml.png "Abrir MainPage.xaml")
 
-9. En **MainPage.xaml**, agregue un control [`Button`](https://developer.xamarin.com/api/type/Xamarin.Forms.Button/) al final del control [`StackLayout`](https://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/). Se usará el botón para navegar a la página del historial de llamadas:
+9. En **MainPage.xaml**, agregue un control [`Button`](xref:Xamarin.Forms.Button) al final del control [`StackLayout`](xref:Xamarin.Forms.StackLayout). Se usará el botón para navegar a la página del historial de llamadas:
 
     ```xaml
     <StackLayout VerticalOptions="FillAndExpand"

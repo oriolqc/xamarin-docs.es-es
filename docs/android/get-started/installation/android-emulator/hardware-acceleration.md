@@ -8,11 +8,11 @@ author: mgmclemore
 ms.author: mamcle
 ms.date: 06/22/2018
 ms.openlocfilehash: c2bef2c614d4cc0655deb9732ccefec223a8318a
-ms.sourcegitcommit: 3f2737f8abf9b855edf060474aa222e973abda3f
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37066499"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38848472"
 ---
 # <a name="hardware-acceleration-for-emulator-performance"></a>Aceleración de hardware para el rendimiento del emulador
 

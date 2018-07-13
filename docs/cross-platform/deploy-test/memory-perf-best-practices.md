@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 66234bb44bb0cae9580c119c6029603a528f882e
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: c529d1d42d582cb49a906ad6fc39a191a7389f58
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781987"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38997444"
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
@@ -87,7 +87,7 @@ public void ReadText (string filename)
 
 La clase `StreamReader` implementa `IDisposable` y el bloque `finally` llama al método `StreamReader.Dispose` para liberar el recurso.
 
-Para más información, vea [Interfaz IDisposable](https://developer.xamarin.com/api/type/System.IDisposable/).
+Para más información, vea [Interfaz IDisposable](xref:System.IDisposable).
 
 <a name="events" />
 
@@ -379,5 +379,5 @@ En este artículo se han descrito y explicado técnicas para aumentar el rendimi
 - [Introducción a Xamarin Profiler](~/tools/profiler/index.md)
 - [Rendimiento de Xamarin.Forms](~/xamarin-forms/deploy-test/performance.md)
 - [Información general sobre la compatibilidad con Async](~/cross-platform/platform/async.md)
-- [IDisposable](https://developer.xamarin.com/api/type/System.IDisposable/)
+- [IDisposable](xref:System.IDisposable)
 - [Evitar errores habituales en aplicaciones de Xamarin (vídeo)](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)

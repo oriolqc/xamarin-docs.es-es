@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/14/2018
-ms.openlocfilehash: 806ed841ec4db037a063bb458e1eed13226e08bd
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: bf8dfb43115806f28935c6dec0ebd2d6d7bd2cdc
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32019716"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38998265"
 ---
 # <a name="build-process"></a>Proceso de compilación
 
@@ -76,7 +76,7 @@ Los siguientes destinos de compilación se definen para proyectos de Xamarin.And
 
 ## <a name="build-properties"></a>Propiedades de compilación
 
-Las propiedades de MSBuild controlan el comportamiento de los destinos. Se especifican en el archivo de proyecto, por ejemplo, **MyApp.csproj**, dentro de un [elemento MSBuild PropertyGroup](http://msdn.microsoft.com/en-us/library/t4w159bs.aspx). 
+Las propiedades de MSBuild controlan el comportamiento de los destinos. Se especifican en el archivo de proyecto, por ejemplo, **MyApp.csproj**, dentro de un [elemento MSBuild PropertyGroup](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild).
 
 -   **Configuration**: especifica la configuración de compilación que se usará, como "Debug" o "Release". La propiedad Configuration se usa para determinar los valores predeterminados de otras propiedades que determinan el comportamiento de destino. Se pueden crear configuraciones adicionales dentro del IDE.
 
@@ -86,7 +86,7 @@ Las propiedades de MSBuild controlan el comportamiento de los destinos. Se espec
 
 -   **DebugSymbols**: un valor booleano que determina si el paquete de Android es depurable (tiene el atributo *debuggable*), en combinación con la propiedad `$(DebugType)`. Un paquete depurable contiene símbolos de depuración, establece el atributo `//application/@android:debuggable` en `true` y agrega automáticamente el permiso `INTERNET` para que el depurador pueda asociarlo al proceso. Una aplicación es depurable si `DebugSymbols` es `True` *y* `DebugType` es la cadena vacía o `Full`.
 
--   **DebugType**: especifica el [tipo de símbolos de depuración](http://msdn.microsoft.com/en-us/library/s5c8athz.aspx) para generar como parte de la compilación, que también afecta a si la aplicación es depurable. Los posibles valores incluyen:
+-   **DebugType**: especifica el [tipo de símbolos de depuración](https://docs.microsoft.com/visualstudio/msbuild/csc-task) para generar como parte de la compilación, que también afecta a si la aplicación es depurable. Los posibles valores incluyen:
 
     - **Full**: se generan símbolos completos. Si la propiedad de MSBuild `DebugSymbols` es también `True`, entonces el paquete de aplicación es depurable.
 
@@ -304,7 +304,8 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     -   **MidEast**: incluye las codificaciones de Oriente Medio, como *Turco (Windows)* \[iso-8859-9, CP1254\], *Hebreo (Windows)* \[windows-1255, CP1255\], *Árabe (Windows)* \[windows-1256, CP1256\], *Árabe (ISO)* \[iso-8859-6, CP28596\], *Hebreo (ISO)* \[iso-8859-8, CP28598\], *Latín 5 (ISO)* \[iso-8859-9, CP28599\] y *Hebreo (alternativa a Iso)* \[iso-8859-8, CP38598\].
 
-    -   **Other**: incluye otras codificaciones, como *Cirílico(Windows)* \[CP1251\], *Báltico (Windows)* \[iso-8859-4, CP1257\], *Vietnamita (Windows)* \[CP1258\], *Cirílico (KOI8-R)* \[koi8-r, CP1251\], *Ucraniano (KOI8-U)* \[koi8-u, CP1251\], *Báltico (ISO)* \[iso-8859-4, CP1257\], *Cirílico (ISO)* \[iso-8859-5, CP1251\], *ISCII Davenagari* \[x-iscii-de, CP57002\], *ISCII Bengalí* \[x-iscii-be, CP57003\], *ISCII Tamil* \[x-iscii-ta, CP57004\], *ISCII Telugu* \[x-iscii-te, CP57005\], *ISCII Asamés* \[x-iscii-as, CP57006\], *ISCII Oriya* \[x-iscii-or, CP57007\], *ISCII Kannada* \[x-iscii-ka, CP57008\], *ISCII Malayalam* \[x-iscii-ma, CP57009\], *ISCII Gujarati* \[x-iscii-gu, CP57010\], *ISCII Punjabi* \[x-iscii-pa, CP57011\] y *Thai (Windows)* \[CP874\].
+    -   
+          **Other**: incluye otras codificaciones, como *Cirílico(Windows)*\[CP1251\], *Báltico (Windows)*\[iso-8859-4, CP1257\], *Vietnamita (Windows)*\[CP1258\], *Cirílico (KOI8-R)*\[koi8-r, CP1251\], *Ucraniano (KOI8-U)*\[koi8-u, CP1251\], *Báltico (ISO)*\[iso-8859-4, CP1257\], *Cirílico (ISO)*\[iso-8859-5, CP1251\], *ISCII Davenagari*\[x-iscii-de, CP57002\], *ISCII Bengalí*\[x-iscii-be, CP57003\], *ISCII Tamil*\[x-iscii-ta, CP57004\], *ISCII Telugu*\[x-iscii-te, CP57005\], *ISCII Asamés*\[x-iscii-as, CP57006\], *ISCII Oriya*\[x-iscii-or, CP57007\], *ISCII Canarés*\[x-iscii-ka, CP57008\], *ISCII Malayalam*\[x-iscii-ma, CP57009\], *ISCII Gujarati*\[x-iscii-gu, CP57010\], *ISCII Punjabi*\[x-iscii-pa, CP57011\] y *Thai (Windows)*\[CP874\].
 
     -   **Rare**: incluye las codificaciones raras, como *IBM EBCDIC (Turco)* \[CP1026\], *IBM EBCDIC (Latín 1, sistemas abiertos)* \[CP1047\], *IBM EBCDIC (EE. UU. y Canadá con Euro)* \[CP1140\], *IBM EBCDIC (Alemania con Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega con Euro)* \[CP1142\], *IBM EBCDIC (Finlandia/Suecia con Euro)* \[CP1143\], *IBM EBCDIC (Italia con Euro)* \[CP1144\], *IBM EBCDIC (Latinoamérica/España con Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido con Euro)* \[CP1146\], *IBM EBCDIC (Francia con Euro)* \[CP1147\], *IBM EBCDIC (Internacional con Euro)* \[CP1148\], *IBM EBCDIC (Islandés con Euro)* \[CP1149\], *IBM EBCDIC (Alemania)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlandia/Suecia)* \[CP20278\], *IBM EBCDIC (Italia)* \[CP20280\], *IBM EBCDIC (Latinoamérica/España)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (Katakana japonés extendido)* \[CP20290\], *IBM EBCDIC (Francia)* \[CP20297\], *IBM EBCDIC (Árabe)* \[CP20420\], *IBM EBCDIC (Hebreo)* \[CP20424\], *IBM EBCDIC (Islandés)* \[CP20871\], *IBM EBCDIC (Cirílico: serbio, búlgaro)* \[CP21025\], *IBM EBCDIC (EE. UU. y Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *Árabe (ASMO 708)* \[CP708\], *Centroeuropeo (DOS)* \[CP852\]*, Cirílico (DOS)* \[CP855\], *Turco (DOS)* \[CP857\], *Europeo Occidental (DOS con Euro)* \[CP858\], *Hebreo (DOS)* \[CP862\], *Árabe (DOS)* \[CP864\], *Ruso (DOS)* \[CP866\], *Griego (DOS)* \[CP869\], *IBM EBCDIC (Latín 2)* \[CP870\], and *IBM EBCDIC (Griego)* \[CP875\].
 
@@ -484,7 +485,7 @@ Para usar el almacén de claves generado anteriormente, use el grupo de propieda
 
 ## <a name="build-actions"></a>Acciones de compilación
 
-Las *acciones de compilación* se [aplican a archivos](http://msdn.microsoft.com/en-us/library/bb629388.aspx) dentro del proyecto y controlan cómo se procesa el archivo. 
+Las *acciones de compilación* se [aplican a archivos](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items) dentro del proyecto y controlan cómo se procesa el archivo. 
 
 <a name="AndroidEnvironment" />
 
