@@ -1,6 +1,6 @@
 ---
-title: Introducción a DataPages
-description: En este artículo se explica cómo empezar a compilar una página sencilla controladas por datos mediante Xamarin.Forms DataPages.
+title: Introducción a DataSourceControl
+description: En este artículo se explica cómo empezar a crear una página sencilla controlada por datos mediante Xamarin.Forms DataSourceControl.
 ms.prod: xamarin
 ms.assetid: 6416E5FA-6384-4298-BAA1-A89381E47210
 ms.technology: xamarin-forms
@@ -8,35 +8,35 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: 1fb8a06111271d453c578cd3d2db97ec8689c995
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243082"
+ms.lasthandoff: 07/11/2018
+ms.locfileid: "38828216"
 ---
-# <a name="getting-started-with-datapages"></a>Introducción a DataPages
+# <a name="getting-started-with-datapages"></a>Introducción a DataSourceControl
 
-![](~/media/shared/preview.png "Esta API está actualmente en vista previa")
+![](~/media/shared/preview.png "Esta API está actualmente en versión preliminar")
 
 > [!IMPORTANT]
-> DataPages requiere un [Xamarin.Forms tema](~/xamarin-forms/user-interface/themes/index.md) referencia a presentar.
+> DataSourceControl requiere un [Xamarin.Forms tema](~/xamarin-forms/user-interface/themes/index.md) referencia a representar.
 
 
-Para empezar a compilar una página sencilla orientadas a datos mediante la vista previa DataPages, siga estos pasos. Esta usa demostración un estilo codificado de forma rígida ("eventos") en la vista previa de compilaciones que solo funciona con el formato JSON específico en el código.
+Para empezar a crear una página sencilla controlada por datos mediante la versión preliminar de DataSourceControl, siga estos pasos. Este usa demostración crea un estilo codificado de forma rígida ("eventos") en la vista previa que sólo funciona con el formato específico de JSON en el código.
 
-[![](get-started-images/demo-sml.png "Aplicación de ejemplo DataPages")](get-started-images/demo.png#lightbox "aplicación de ejemplo DataPages")
+[![](get-started-images/demo-sml.png "Aplicación de ejemplo DataSourceControl")](get-started-images/demo.png#lightbox "aplicación de ejemplo DataSourceControl")
 
 ## <a name="1-add-nuget-packages"></a>1. Agregar paquetes de NuGet
 
-Agregue estos paquetes de Nuget para los proyectos de biblioteca y aplicación Xamarin.Forms .NET estándar:
+Agregue estos paquetes de Nuget a los proyectos de biblioteca y aplicación Xamarin.Forms .NET Standard:
 
 * Xamarin.Forms.Pages
 * Xamarin.Forms.Theme.Base
-* Una implementación de tema Nuget (p. ej. Xamarin.Forms.Themes.Light)
+* Una implementación de tema Nuget (p ej. Xamarin.Forms.Themes.Light)
 
 ## <a name="2-add-theme-reference"></a>2. Agregar referencia de tema
 
-En el **App.xaml** , agregue un personalizado `xmlns:mytheme` para el tema y asegúrese de que el tema se combinó de diccionario de recursos de la aplicación:
+En el **App.xaml** , agregue un personalizado `xmlns:mytheme` para el tema y asegúrese de que el tema se combina con el diccionario de recursos de la aplicación:
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
@@ -49,12 +49,12 @@ En el **App.xaml** , agregue un personalizado `xmlns:mytheme` para el tema y ase
 </Application>
 ```
 
-**Importante:** también debe seguir los pasos necesarios para [cargar ensamblados de tema (abajo)](#loadtheme) agregando código reutilizable en el iOS `AppDelegate` y Android `MainActivity`. Esto se mejorará en una versión futura de vista previa.
+**Importante:** también debe seguir los pasos necesarios para [cargar ensamblados de tema (abajo)](#loadtheme) agregando código estereotipado a iOS `AppDelegate` y Android `MainActivity`. Se mejorará en versión preliminar futura.
 
 
-## <a name="3-add-a-xaml-page"></a>3. Agregar una página XAML
+## <a name="3-add-a-xaml-page"></a>3. Agregue una página XAML
 
-Agregue una nueva página XAML para la aplicación de Xamarin.Forms y *cambie la clase base* de `ContentPage` a `Xamarin.Forms.Pages.ListDataPage`. Esto debe hacerse en C# y el código XAML:
+Agregar una nueva página XAML a la aplicación de Xamarin.Forms y *cambie la clase base* desde `ContentPage` a `Xamarin.Forms.Pages.ListDataPage`. Esto debe hacerse en C# y el XAML:
 
 **Archivo de C#**
 
@@ -70,7 +70,7 @@ public partial class SessionDataPage : Xamarin.Forms.Pages.ListDataPage // was C
 
 **Archivo XAML**
 
-Además de cambiar el elemento raíz para `<p:ListDataPage>` el espacio de nombres personalizado `xmlns:p` también debe haberse agregado:
+Además de cambiar el elemento raíz para `<p:ListDataPage>` el espacio de nombres personalizado `xmlns:p` también se debe agregar:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -84,9 +84,9 @@ Además de cambiar el elemento raíz para `<p:ListDataPage>` el espacio de nombr
 </p:ListDataPage>
 ```
 
-**Subclase de aplicación**
+**Subclase de la aplicación**
 
-Cambiar el `App` constructor de clase para que la `MainPage` está establecido en un `NavigationPage` que contiene la nueva `SessionDataPage`. Una página de navegación *debe* utilizarse.
+Cambiar el `App` constructor de clase para que la `MainPage` está establecido en un `NavigationPage` que contiene el nuevo `SessionDataPage`. Una página de navegación *debe* usarse.
 
 ```csharp
 MainPage = new NavigationPage (new SessionDataPage ());
@@ -96,7 +96,7 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 Eliminar el `Content` elemento y reemplazarlo con un `p:ListDataPage.DataSource` para rellenar la página con datos. En el ejemplo siguiente Json remoto se está cargando el archivo de datos desde una dirección URL.
 
-**Nota:** la vista previa *requiere* un `StyleClass` atributo para proporcionar sugerencias de representación para el origen de datos. El `StyleClass="Events"` hace referencia a un diseño que está predefinido en la vista previa y contiene estilos *codificado de forma rígida* para que coincida con el origen de datos JSON que se va a usar.
+**Nota:** la versión preliminar *requiere* un `StyleClass` atributo para proporcionar sugerencias de representación para el origen de datos. El `StyleClass="Events"` hace referencia a un diseño que está predefinido en la vista previa y contiene los estilos *codificado de forma rígida* para que coincida con el origen de datos JSON que se va a usar.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -131,19 +131,19 @@ Un ejemplo de los datos JSON desde el [origen demostración](http://demo3143189.
 }]
 ```
 
-## <a name="4-run"></a>4. Ejecute las aplicaciones.
+## <a name="4-run"></a>4. ¡Ejecución!
 
 Deben dar como resultado de los pasos anteriores en una página de datos de trabajo:
 
-[![](get-started-images/demo-sml.png "Aplicación de ejemplo DataPages")](get-started-images/demo.png#lightbox "aplicación de ejemplo DataPages")
+[![](get-started-images/demo-sml.png "Aplicación de ejemplo DataSourceControl")](get-started-images/demo.png#lightbox "aplicación de ejemplo DataSourceControl")
 
-Esto funciona porque el estilo pregenerado **"Eventos"** existe en el paquete Nuget de tema claro y tiene los estilos definidos que coincida con el origen de datos (p. ej. "title", "image", "presentador").
+Esto funciona porque el estilo pregenerado **"Eventos"** existe en el paquete Nuget del tema claro y tiene los estilos definidos que coinciden con el origen de datos (p ej. "title", "image", "presentador").
 
-Los "eventos" `StyleClass` está diseñado para mostrar el `ListDataPage` control con un personalizado `CardView` control que es definido en Xamarin.Forms.Pages. El `CardView` control tiene tres propiedades: `ImageSource`, `Text`, y `Detail`. El tema está codificado para enlazar tres campos del origen de datos (desde el archivo JSON) a estas propiedades para su presentación.
+Los "eventos" `StyleClass` está diseñado para mostrar el `ListDataPage` control con un personalizado `CardView` control que es definido en Xamarin.Forms.Pages. El `CardView` control tiene tres propiedades: `ImageSource`, `Text`, y `Detail`. El tema está codificado para enlazar tres campos del origen de datos (desde el archivo JSON) a estas propiedades para mostrarlas.
 
 ## <a name="5-customize"></a>5. Personalizar
 
-El estilo heredado puede reemplazarse especificando una plantilla y usar enlaces de orígenes de datos. El código XAML siguiente declara una plantilla personalizada para cada fila con el nuevo `ListItemControl` y `{p:DataSourceBinding}` sintaxis que se incluye en el **Xamarin.Forms.Pages** Nuget:
+El estilo heredado puede invalidarse especificando una plantilla y usar enlaces de orígenes de datos. El XAML siguiente declara una plantilla personalizada para cada fila con el nuevo `ListItemControl` y `{p:DataSourceBinding}` sintaxis que se incluye en el **Xamarin.Forms.Pages** Nuget:
 
 ```xaml
 <p:ListDataPage.DefaultItemTemplate>
@@ -164,16 +164,16 @@ El estilo heredado puede reemplazarse especificando una plantilla y usar enlaces
 
 Proporcionando un `DataTemplate` este código invalida el `StyleClass` y en su lugar, usa el diseño predeterminado para un `ListItemControl`.
 
-[![](get-started-images/custom-sml.png "Aplicación de ejemplo DataPages")](get-started-images/custom.png#lightbox "aplicación de ejemplo DataPages")
+[![](get-started-images/custom-sml.png "Aplicación de ejemplo DataSourceControl")](get-started-images/custom.png#lightbox "aplicación de ejemplo DataSourceControl")
 
-Los programadores que prefieren C# para XAML puede crear datos de enlaces de origen demasiado (no olvide incluir un `using Xamarin.Forms.Pages;` instrucción):
+Los programadores que prefieren C# o XAML puede crear datos de origen enlaces demasiado (Recuerde incluir un `using Xamarin.Forms.Pages;` instrucción):
 
 ```csharp
 SetBinding (TitleProperty, new DataSourceBinding ("title"));
 ```
 
 
-Es un poco más trabajo para crear temas desde el principio (vea la [guía temas](~/xamarin-forms/user-interface/themes/index.md)) pero las versiones futuras de vista previa hacerlo más fácil hacer.
+Es un poco más trabajo crear temas desde el principio (vea la [guía temas](~/xamarin-forms/user-interface/themes/index.md)) pero las versiones preliminares futuras hará esto más fácil de hacer.
 
 
 ## <a name="troubleshooting"></a>Solución de problemas
@@ -182,11 +182,11 @@ Es un poco más trabajo para crear temas desde el principio (vea la [guía temas
 
 ## <a name="could-not-load-file-or-assembly-xamarinformsthemelight-or-one-of-its-dependencies"></a>No se pudo cargar el archivo o ensamblado 'Xamarin.Forms.Theme.Light' o uno de sus dependencias
 
-En la versión preliminar, es podrán que algunos temas no se pueda cargar en tiempo de ejecución. Agregue el código que se muestra a continuación, en los proyectos pertinentes para corregir este error.
+En la versión preliminar, los temas no pueda cargar en tiempo de ejecución. Agregue el código que se muestra a continuación, en los proyectos correspondientes para corregir este error.
 
 **iOS**
 
-En el **AppDelegate.cs** agregue las siguientes líneas después de `LoadApplication`
+En el **AppDelegate.cs** agregue las líneas siguientes después de `LoadApplication`
 
 ```csharp
 var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
@@ -196,7 +196,7 @@ x = typeof(Xamarin.Forms.Themes.iOS.UnderlineEffect);
 
 **Android**
 
-En el **MainActivity.cs** agregue las siguientes líneas después de `LoadApplication`
+En el **MainActivity.cs** agregue las líneas siguientes después de `LoadApplication`
 
 ```csharp
 var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
