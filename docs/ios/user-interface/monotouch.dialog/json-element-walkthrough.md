@@ -1,41 +1,45 @@
 ---
-title: Usar JSON para crear una interfaz de usuario en Xamarin.iOS
-description: MonoTouch.Dialog (MT D) incluye compatibilidad para la generación dinámica de interfaz de usuario a través de los datos JSON. En este tutorial, le mostraremos cómo usar un JSONElement para crear una interfaz de usuario de JSON que se incluyen con una aplicación, o cargado desde una dirección Url remota.
+title: Uso de JSON para crear una interfaz de usuario en Xamarin.iOS
+description: MonoTouch.Dialog (destino maestro. (D) incluye compatibilidad para la generación dinámica de la interfaz de usuario a través de los datos JSON. En este tutorial, le guiaremos a través de cómo usar un JSONElement para crear una interfaz de usuario de JSON que se incluyen con una aplicación, o cargado desde una dirección Url remota.
 ms.prod: xamarin
 ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: f9ba2cce1650260aa889e8282c091012ef8bbddc
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 94cef78bb7eedc03192071f17af765ebb702e260
+ms.sourcegitcommit: cb80df345795989528e9df78eea8a5b45d45f308
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790658"
+ms.lasthandoff: 07/14/2018
+ms.locfileid: "39038500"
 ---
-# <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>Usar JSON para crear una interfaz de usuario en Xamarin.iOS
+# <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>Uso de JSON para crear una interfaz de usuario en Xamarin.iOS
 
-_MonoTouch.Dialog (MT D) incluye compatibilidad para la generación dinámica de interfaz de usuario a través de los datos JSON. En este tutorial, le mostraremos cómo usar un JSONElement para crear una interfaz de usuario de JSON que se incluyen con una aplicación, o cargado desde una dirección Url remota._
+_MonoTouch.Dialog (destino maestro. (D) incluye compatibilidad para la generación dinámica de la interfaz de usuario a través de los datos JSON. En este tutorial, le guiaremos a través de cómo usar un JSONElement para crear una interfaz de usuario de JSON que se incluyen con una aplicación, o cargado desde una dirección Url remota._
 
-MONTE D admite crear interfaces de usuario declaradas en JSON. Cuando los elementos se declaran mediante JSON, monte D. crear automáticamente los elementos asociados de. El JSON puede cargarse desde un archivo local, un analizada `JsonObject` instancia o incluso una dirección Url remota.
+DESTINO MAESTRO. D admite crear interfaces de usuario declaradas en JSON. Cuando los elementos se declaran mediante JSON, MT. D. crear automáticamente los elementos asociados para usted. El archivo JSON puede cargarse desde un archivo local, un analizada `JsonObject` instancia, o incluso una dirección Url remota.
 
-MONTE D admite toda la gama de características que están disponibles en la API de elementos al usar JSON. Por ejemplo, la aplicación en la captura de pantalla siguiente se declara completamente mediante JSON:
+DESTINO MAESTRO. D admite la gama completa de características que están disponibles en la API de elementos cuando se usa JSON. Por ejemplo, la aplicación en la captura de pantalla siguiente se declara por completo mediante JSON:
 
-[![](json-element-walkthrough-images/01-load-from-file.png "Por ejemplo, la aplicación en esta captura de pantalla completamente se declara mediante JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ] (json-element-walkthrough-images/01-load-from-file.png "por ejemplo, la aplicación en esta captura de pantalla se declare por completo mediante JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
+[![](json-element-walkthrough-images/01-load-from-file.png "Por ejemplo, la aplicación en esta captura de pantalla se declara por completo mediante JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ] (json-element-walkthrough-images/01-load-from-file.png "por ejemplo, la aplicación en esta captura de pantalla se declara por completo mediante JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
-Vamos a volver a visitar el ejemplo de la [elementos API tutorial](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) tutorial, que muestra cómo agregar una pantalla de detalles de tarea mediante JSON.
+Retomemos el ejemplo desde el [tutorial sobre la API de elementos](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) tutorial, que muestra cómo agregar una pantalla de detalles de tarea mediante JSON.
+
+## <a name="setting-up-mtd"></a>Configuración de destino maestro. D.
+
+DESTINO MAESTRO. D. se distribuye con Xamarin.iOS. Para ello, haga doble clic en el **referencias** nodo de un Xamarin.iOS del proyecto en Visual Studio 2017 o Visual Studio para Mac y agregue una referencia a la **MonoTouch.Dialog 1** ensamblado. A continuación, agregue `using MonoTouch.Dialog` instrucciones en el origen de código según sea necesario.
 
 ## <a name="json-walkthrough"></a>Tutorial JSON
 
-El ejemplo de este tutorial permite crear tareas. Cuando una tarea está seleccionada en la primera pantalla, se presenta una pantalla de detalles, como se muestra:
+El ejemplo de este tutorial permite crear tareas. Cuando se selecciona una tarea en la primera pantalla, se presenta una pantalla de detalles como se muestra:
 
- [![](json-element-walkthrough-images/03-task-list.png "Cuando una tarea está seleccionada en la primera pantalla, se presenta una pantalla de detalles como se muestra")](json-element-walkthrough-images/03-task-list.png#lightbox)
+ [![](json-element-walkthrough-images/03-task-list.png "Cuando se selecciona una tarea en la primera pantalla, se presenta una pantalla de detalles como se muestra")](json-element-walkthrough-images/03-task-list.png#lightbox)
 
-## <a name="creating-the-json"></a>Creación de JSON
+## <a name="creating-the-json"></a>Crear el archivo JSON
 
-En este ejemplo, vamos a cargar el JSON desde un archivo en el proyecto denominado `task.json`. MONTE D. espera el JSON para que coincida con una sintaxis que refleja la API de elementos. Al igual que con la API de elementos de código, al usar JSON, se declaran secciones y dentro de estas secciones se agregue elementos. Para declarar las secciones y los elementos en JSON, utilizamos las cadenas "secciones" y "elementos" respectivamente como las claves. Para cada elemento, se establece el tipo de elemento asociado con el `type` clave. Todas las demás propiedades de elementos se establece con el nombre de propiedad como la clave.
+En este ejemplo, vamos a cargar el archivo JSON desde un archivo en el proyecto denominado `task.json`. DESTINO MAESTRO. D. espera el JSON que se ajuste a una sintaxis que refleja la API de elementos. Al igual que con la API de elementos de código, cuando se usa JSON, declaramos las secciones y dentro de esas secciones se agregue elementos. Para declarar las secciones y los elementos de JSON, usamos las cadenas "secciones" y "elementos" respectivamente como las claves. Para cada elemento, se establece el tipo del elemento asociado con el `type` clave. Cada propiedad de otros elementos se establece con el nombre de propiedad como clave.
 
-Por ejemplo, el siguiente JSON describe las secciones y los elementos para obtener los detalles de tarea:
+Por ejemplo, el siguiente código JSON describe las secciones y los elementos de los detalles de tarea:
 
 ```csharp
 {
@@ -60,20 +64,17 @@ Por ejemplo, el siguiente JSON describe las secciones y los elementos para obten
   }
 ```
 
-Observe el JSON anterior incluye un identificador para cada elemento. Cualquier elemento puede incluir un identificador para hacer referencia a él en tiempo de ejecución. Veremos cómo se utiliza en un momento cuando se muestra cómo cargar el código JSON en código.
+Tenga en cuenta el código JSON anterior incluye un identificador para cada elemento. Cualquier elemento puede incluir un identificador para hacer referencia a él en tiempo de ejecución. Veremos cómo se utiliza en un momento cuando se muestra cómo cargar el archivo JSON en el código.
 
- <a name="Loading_the_JSON_in_Code" />
+## <a name="loading-the-json-in-code"></a>Cargando el archivo JSON en el código
 
-
-## <a name="loading-the-json-in-code"></a>Cargar el código JSON en código
-
-Una vez que se ha definido el JSON, es necesario cargarlos en MT D utilizando la `JsonElement` clase. Suponiendo que un archivo con el JSON que hemos creado anteriormente se ha agregado al proyecto con el nombre sample.json y tiene una acción de compilación de contenido, cargar el `JsonElement` es tan sencillo como llamar a la siguiente línea de código:
+Una vez que se ha definido el JSON, es necesario cargarlos en el destino maestro. D. utilizar el `JsonElement` clase. Suponiendo que un archivo con el código JSON que hemos creado anteriormente se ha agregado al proyecto con el nombre de sample.json y tiene una acción de compilación de contenido, cargar el `JsonElement` es tan sencillo como llamar a la siguiente línea de código:
 
 ```csharp
 var taskElement = JsonElement.FromFile ("task.json");
 ```
 
-Puesto que se ha agregado a petición cada vez que se crea una tarea, se podrá modificar el botón que se hace clic en el ejemplo anterior de la API de elementos como se indica a continuación:
+Puesto que estamos agregando a petición cada vez que se crea una tarea, podemos modificamos el botón que se hace clic en el ejemplo anterior de la API de elementos como sigue:
 
 ```csharp
 _addButton.Clicked += (sender, e) => {
@@ -88,12 +89,9 @@ _addButton.Clicked += (sender, e) => {
 };
 ```
 
- <a name="Accessing_Elements_at_Runtime" />
+## <a name="accessing-elements-at-runtime"></a>Acceso a los elementos en tiempo de ejecución
 
-
-## <a name="accessing-elements-at-runtime"></a>Obtener acceso a elementos en tiempo de ejecución
-
-Recuerde que agregamos un identificador a ambos elementos cuando se declaró en el archivo JSON. Podemos usar la propiedad id para tener acceso a cada elemento en tiempo de ejecución para modificar sus propiedades en el código. Por ejemplo, el código siguiente hace referencia a los elementos de entrada y la fecha para establecer los valores del objeto de tarea:
+Recuerde que agregamos un identificador a ambos elementos cuando se ha declarado en el archivo JSON. Podemos usar la propiedad id para tener acceso a cada elemento en tiempo de ejecución para modificar sus propiedades en el código. Por ejemplo, el código siguiente hace referencia a los elementos de entrada y la fecha para establecer los valores desde el objeto de tarea:
 
 ```csharp
 _addButton.Clicked += (sender, e) => {
@@ -122,12 +120,9 @@ _addButton.Clicked += (sender, e) => {
 };
 ```
 
- <a name="Loading_JSON_from_a_Url" />
+## <a name="loading-json-from-a-url"></a>Cargar JSON de una dirección url
 
-
-## <a name="loading-json-from-a-url"></a>Carga JSON desde una dirección Url
-
-MONTE D también admite la carga dinámica de JSON de una dirección Url externa pasando simplemente la dirección Url al constructor de la `JsonElement`. MONTE D. expandirá la jerarquía que se declara en JSON a petición al navegar entre pantallas. Por ejemplo, considere la posibilidad de un archivo JSON como siguiente situado en la raíz del servidor web local:
+DESTINO MAESTRO. D también admite la carga dinámica de JSON de una dirección Url externa pasando simplemente la dirección Url al constructor de la `JsonElement`. DESTINO MAESTRO. D. expandirá la jerarquía que se declara en JSON a petición a medida que navega entre pantallas. Por ejemplo, considere la posibilidad de un archivo JSON, como la siguiente en la raíz del servidor web local:
 
 ```csharp
 {
@@ -153,7 +148,7 @@ MONTE D también admite la carga dinámica de JSON de una dirección Url externa
 }
 ```
 
-Se puede cargar mediante el `JsonElement` como en el código siguiente:
+Se puede cargar mediante el `JsonElement` como se muestra en el código siguiente:
 
 ```csharp
 _rootElement = new RootElement ("Json Example"){
@@ -163,27 +158,23 @@ _rootElement = new RootElement ("Json Example"){
 };
 ```
 
-En tiempo de ejecución, se recuperará y analizar Monte el archivo D. cuando el usuario navega a la segunda vista, tal y como se muestra en la captura de pantalla siguiente:
+En tiempo de ejecución, el archivo se se recuperan y analizan mediante el destino maestro. D. cuando el usuario navega a la segunda vista, como se muestra en la captura de pantalla siguiente:
 
- [![](json-element-walkthrough-images/04-json-web-example.png "El archivo se puede recuperar y analizar por MT D. cuando el usuario navega a la segunda vista")](json-element-walkthrough-images/04-json-web-example.png#lightbox)
-
- <a name="Summary" />
-
+ [![](json-element-walkthrough-images/04-json-web-example.png "El archivo se recuperará y analizado por el destino maestro. D. cuando el usuario navega a la segunda vista")](json-element-walkthrough-images/04-json-web-example.png#lightbox)
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se ha explicado cómo crear una mediante la interfaz con MT D. de JSON Ha explicado cómo carga JSON que se incluye en un archivo con la aplicación, así como desde una dirección Url remota. También muestra cómo obtener acceso a los elementos que se describen en JSON en tiempo de ejecución.
-
+En este artículo se ha explicado cómo crear una mediante la interfaz con el destino maestro. D. de JSON. Se ha mostrado cómo cargar JSON incluido en un archivo con la aplicación, así como desde una dirección Url remota. También se ha explicado cómo tener acceso a los elementos descritos en JSON en tiempo de ejecución.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [MTDJsonDemo (ejemplo)](https://developer.xamarin.com/samples/MTDJsonDemo/)
-- [Presentación en pantalla - Miguel de Icaza crea una pantalla de inicio de sesión de iOS con MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)
+- [Presentación en pantalla: Miguel de Icaza crea una pantalla de inicio de sesión de iOS con MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)
 - [Presentación en pantalla - crear fácilmente interfaces de usuario de iOS con MonoTouch.Dialog](http://youtu.be/j7OC5r8ZkYg)
 - [Introducción a MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)
-- [Tutorial de API de elementos](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
-- [Tutorial de API de reflexión](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
+- [Tutorial sobre la API de elementos](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
+- [Tutorial sobre la API de reflexión](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [Cuadro de diálogo de MonoTouch en Github](https://github.com/migueldeicaza/MonoTouch.Dialog)
-- [Aplicación de TweetStation](https://github.com/migueldeicaza/TweetStation)
+- [Aplicación TweetStation](https://github.com/migueldeicaza/TweetStation)
 - [Referencia de clase UITableViewController](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
 - [Referencia de clase UINavigationController](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
