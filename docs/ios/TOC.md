@@ -370,6 +370,7 @@
 #### [Menú (Force Touch)](watchos/user-interface/menu.md)
 #### [Entrada de texto](watchos/user-interface/text-input.md)
 ### [Características de la plataforma](watchos/platform/index.md)
+#### [Introducción a watchOS 5](watchos/platform/introduction-to-watchos5/index.md)
 #### [Introducción a watchOS 4](watchos/platform/introduction-to-watchos4.md)
 #### [Introducción a watchOS 3](watchos/platform/introduction-to-watchos3/index.md)
 ##### [Cambios adicionales en la plataforma watchOS 3](watchos/platform/introduction-to-watchos3/additional-framework-changes.md)
