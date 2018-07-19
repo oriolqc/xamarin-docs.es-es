@@ -1,33 +1,33 @@
 ---
-title: Manipulaciones táctil
-description: En este artículo se explica cómo utilizar las transformaciones de matriz para implementar arrastrar táctil, aprietan y rotación y se muestra cómo hacerlo con código de ejemplo.
+title: Manipulaciones táctiles
+description: En este artículo se explica cómo usar las transformaciones de matriz para implementar arrastrar táctil, gestos y rotación y esto se muestra con código de ejemplo.
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: charlespetzold
 ms.author: chape
 ms.date: 04/03/2018
-ms.openlocfilehash: a53fe287e74070adb22c2a7c67d4b7cc10b35d3e
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 2de5b9a3a6bf0d36330212a52ba5c7278b970efc
+ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244291"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39130912"
 ---
-# <a name="touch-manipulations"></a>Manipulaciones táctil
+# <a name="touch-manipulations"></a>Manipulaciones táctiles
 
-_Matriz de uso transforma para implementar arrastrar táctil, aprietan y rotación_
+_Transforma la matriz de uso para implementar arrastrar táctil, gestos y rotación_
 
-En entornos de multitoque como los dispositivos móviles, los usuarios normalmente usan los dedos para manipular objetos en la pantalla. Movimientos comunes como un arrastrar un solo dedo y un gesto del dedo dos pueden mover y escalar objetos o incluso intercambiarlos. Estos movimientos generalmente se implementan con matrices de transformación, y este artículo muestra cómo hacerlo.
+En entornos de multitoque, como los de dispositivos móviles, los usuarios normalmente usan los dedos para manipular objetos en la pantalla. Gestos comunes, como un arrastre con un solo dedo y casos de emergencia con dos dedos pueden mover y escalar los objetos o incluso girarlas. Estos gestos generalmente se implementan mediante matrices de transformación y, en este artículo se muestra cómo hacerlo.
 
-![](touch-images/touchmanipulationsexample.png "Un mapa de bits sujeto a la traducción, ajuste de escala y giro")
+![](touch-images/touchmanipulationsexample.png "Un mapa de bits sujeta a la traslación, escala y giro")
 
-## <a name="manipulating-one-bitmap"></a>Manipular un mapa de bits
+## <a name="manipulating-one-bitmap"></a>Manipulación de un mapa de bits
 
-El **manipulación táctil** página muestra las manipulaciones de entrada táctil en un mapa de bits única.
-Este ejemplo hace uso del efecto de seguimiento de entrada táctil presentado en el artículo [invocar eventos de efectos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
+El **manipulación táctil** página muestra las manipulaciones táctiles en un mapa de bits única.
+Este ejemplo usa el efecto de seguimiento de toque presentado en el artículo [invocar eventos de efectos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
 
-Otros archivos son compatibles con el **manipulación táctil** página. La primera es la [ `TouchManipulationMode` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationMode.cs) enumeración, que indica los distintos tipos de manipulación táctil implementada por el código podrá ver:
+Otros archivos proporcionan compatibilidad para la **manipulación táctil** página. La primera es la [ `TouchManipulationMode` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationMode.cs) enumeración, que indica los distintos tipos de manipulación táctil implementado por el código seguirá viendo:
 
 ```csharp
 enum TouchManipulationMode
@@ -41,11 +41,11 @@ enum TouchManipulationMode
 }
 ```
 
-`PanOnly` es un arrastre de un solo dedo que se implementa con la traducción. Todas las opciones siguientes también incluyen panorámica pero implican dos dedos: `IsotropicScale` es una operación de acercar los dedos que da como resultado el objeto que escala equitativamente en las direcciones horizontal y verticales. `AnisotropicScale` permite escalar distintas.
+`PanOnly` es un arrastre de un solo dedo que se implementa con la traducción. Todas las demás opciones también incluyen movimiento panorámico pero implican dos dedos: `IsotropicScale` es una operación de acercar los dedos que da como resultado el objeto que escala equitativamente en dirección horizontal y vertical. `AnisotropicScale` permite la escala desiguales.
 
-El `ScaleRotate` opción es para un dedo dos escalado y la rotación. Ajuste de escala es isótropo. Implementación de rotación de dos dedos con escalado anisotrópico es problemático porque los movimientos del dedo son esencialmente el mismo.
+El `ScaleRotate` opción está destinada a escala con dos dedos y rotación. El escalado es isótropo. Implementar con dos dedos rotación con un escalado anisotrópico es problemático porque los movimientos del dedo están prácticamente el mismo.
 
-El `ScaleDualRotate` opción agrega rotación de un solo dedo. Cuando un solo dedo arrastra el objeto, el objeto arrastrado en primer lugar se gira alrededor de su centro para que el centro del objeto que se alinee con el vector de arrastrar.
+El `ScaleDualRotate` opción agrega la rotación con un solo dedo. Cuando un solo dedo arrastra el objeto, el objeto arrastrado en primer lugar se gira en torno a su centro para que el centro del objeto se alinee con el vector de arrastrar.
 
 El [ **TouchManipulationPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationPage.xaml) archivo incluye una `Picker` con los miembros de la `TouchManipulationMode` enumeración:
 
@@ -92,9 +92,9 @@ El [ **TouchManipulationPage.xaml** ](https://github.com/xamarin/xamarin-forms-s
 </ContentPage>
 ```
 
-Hacia la parte inferior es un `SKCanvasView` y un `TouchEffect` adjunto a la celda única `Grid` que lo incluye.
+Hacia la parte inferior es un `SKCanvasView` y un `TouchEffect` adjunto a la celda única `Grid` que lo rodea.
 
-El [ **TouchManipulationPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationPage.xaml.cs) archivo de código subyacente tiene una `bitmap` campo pero no es de tipo `SKBitmap`. El tipo es `TouchManipulationBitmap` (una clase que se verá en breve):
+El [ **TouchManipulationPage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationPage.xaml.cs) archivo de código subyacente tiene un `bitmap` campo pero no es de tipo `SKBitmap`. El tipo es `TouchManipulationBitmap` (una clase que se verá en breve):
 
 ```csharp
 public partial class TouchManipulationPage : ContentPage
@@ -110,9 +110,8 @@ public partial class TouchManipulationPage : ContentPage
         Assembly assembly = GetType().GetTypeInfo().Assembly;
 
         using (Stream stream = assembly.GetManifestResourceStream(resourceID))
-        using (SKManagedStream skStream = new SKManagedStream(stream))
         {
-            SKBitmap bitmap = SKBitmap.Decode(skStream);
+            SKBitmap bitmap = SKBitmap.Decode(stream);
             this.bitmap = new TouchManipulationBitmap(bitmap);
             this.bitmap.TouchManager.Mode = TouchManipulationMode.ScaleRotate;
         }
@@ -121,9 +120,9 @@ public partial class TouchManipulationPage : ContentPage
 }
 ```
 
-El constructor crea un `TouchManipulationBitmap` objeto, pasando al constructor un `SKBitmap` obtenido de un recurso incrustado. El constructor concluye estableciendo la `Mode` propiedad de la `TouchManager` propiedad de la `TouchManipulationBitmap` objeto a un miembro de la `TouchManipulationMode` enumeración.
+El constructor crea un `TouchManipulationBitmap` objeto, pasando al constructor un `SKBitmap` obtenido de un recurso incrustado. El constructor concluye estableciendo el `Mode` propiedad de la `TouchManager` propiedad de la `TouchManipulationBitmap` objeto a un miembro de la `TouchManipulationMode` enumeración.
 
-El `SelectedIndexChanged` controlador para la `Picker` también establece este `Mode` propiedad:
+El `SelectedIndexChanged` controlador para el `Picker` también establece esto `Mode` propiedad:
 
 ```csharp
 public partial class TouchManipulationPage : ContentPage
@@ -143,7 +142,7 @@ public partial class TouchManipulationPage : ContentPage
 }
 ```
 
-El `TouchAction` controlador de la `TouchEffect` crea una instancia en las llamadas de archivo XAML dos métodos de `TouchManipulationBitmap` denominado `HitTest` y `ProcessTouchEvent`:
+El `TouchAction` controlador de la `TouchEffect` crea una instancia en el archivo XAML llama a dos métodos en `TouchManipulationBitmap` denominado `HitTest` y `ProcessTouchEvent`:
 
 ```csharp
 public partial class TouchManipulationPage : ContentPage
@@ -193,13 +192,13 @@ public partial class TouchManipulationPage : ContentPage
 }
 ```
 
-Si el `HitTest` método `true` &mdash; lo que significa que un dedo toca la pantalla dentro del área ocupada por el mapa de bits &mdash; , a continuación, el identificador de entrada táctil se agrega a la `TouchIds` colección. Este identificador representa la secuencia de eventos de entrada táctil para ese dedo hasta que levante el dedo desde la pantalla. Si varios dedos tocan el mapa de bits, la `touchIds` colección contiene un identificador de contacto para cada dedo.
+Si el `HitTest` devuelve del método `true` &mdash; lo que significa que un dedo tocó la pantalla del área ocupada por el mapa de bits &mdash; , a continuación, el Id. de toque se agrega a la `TouchIds` colección. Este identificador representa la secuencia de eventos táctiles para ese dedo hasta que se levanta el dedo desde la pantalla. Si varios dedos toca el mapa de bits, el `touchIds` colección contiene un Id. de toque para cada dedo.
 
-El `TouchAction` controlador también llama el `ProcessTouchEvent` clase `TouchManipulationBitmap`. Aquí es donde algunas (aunque no todos) de la entrada táctil real se produce el procesamiento.
+El `TouchAction` controlador también llama a la `ProcessTouchEvent` clase `TouchManipulationBitmap`. Aquí es donde algunos (aunque no todos) de la interacción real se produce el procesamiento.
 
-El [ `TouchManipulationBitmap` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationBitmap.cs) clase es una clase contenedora para `SKBitmap` que contiene el código para representar el mapa de bits y procesar los eventos de toque. Funciona junto con más generalizada código en un `TouchManipulationManager` clase (que verá en breve).
+El [ `TouchManipulationBitmap` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationBitmap.cs) clase es una clase contenedora para `SKBitmap` que contiene código para representar el mapa de bits y procesar eventos de toque. Funciona junto con más generalizado de código en un `TouchManipulationManager` clase (que verá en breve).
 
-El `TouchManipulationBitmap` constructor guarda el `SKBitmap` y crea instancias de dos propiedades, el `TouchManager` propiedad de tipo `TouchManipulationManager` y `Matrix` propiedad de tipo `SKMatrix`:
+El `TouchManipulationBitmap` constructor guarda el `SKBitmap` y crea una instancia de dos propiedades, el `TouchManager` propiedad de tipo `TouchManipulationManager` y `Matrix` propiedad de tipo `SKMatrix`:
 
 ```csharp
 class TouchManipulationBitmap
@@ -225,9 +224,9 @@ class TouchManipulationBitmap
 }
 ```
 
-Esto `Matrix` propiedad es la transformación acumulada resultante de la actividad de entrada táctil. Como verá, cada evento de entrada táctil se resuelve en una matriz, que, a continuación, se concatena con el `SKMatrix` valor almacenado por la `Matrix` propiedad.
+Esto `Matrix` propiedad es la transformación acumulada resultante de toda la actividad de toque. Como verá, cada evento de toque se resuelve en una matriz, que, a continuación, se concatena con el `SKMatrix` valor almacenado por el `Matrix` propiedad.
 
-El `TouchManipulationBitmap` objeto dibuja a sí mismo su `Paint` método. El argumento es un `SKCanvas` objeto. Esto `SKCanvas` podrían tener ya una transformación aplicada a él, por lo que la `Paint` método concatena el `Matrix` propiedad asociado con el mapa de bits a la transformación existente y restaura el lienzo cuando haya terminado:
+El `TouchManipulationBitmap` objeto dibuja a sí mismo su `Paint` método. El argumento es un `SKCanvas` objeto. Esto `SKCanvas` podrían tener ya una transformación aplicada a él, por lo que la `Paint` método concatena el `Matrix` propiedad asociada con el mapa de bits a la transformación existente y restaura el lienzo cuando haya terminado:
 
 ```csharp
 class TouchManipulationBitmap
@@ -245,11 +244,11 @@ class TouchManipulationBitmap
 }
 ```
 
-El `HitTest` método `true` si el usuario toca la pantalla en un punto dentro de los límites del mapa de bits. Como el usuario manipula el mapa de bits, el mapa de bits se puede girar, o incluso (a través de una combinación de rotación y escala anisotrópico) esté en la forma de un paralelogramo. Podría temen que el `HitTest` método debe implementar en ese caso geometría analítica bastante compleja.
+El `HitTest` devuelve del método `true` si el usuario toca la pantalla en un punto dentro de los límites del mapa de bits. Si el usuario manipula el mapa de bits, el mapa de bits se puede girar, o incluso (a través de una combinación de anisotrópico escala y rotación) esté en la forma de un paralelogramo. Es posible que temen que el `HitTest` método debe implementar en ese caso geometría analítica bastante compleja.
 
 Sin embargo, un acceso directo está disponible:
 
-Determinar si se encuentra un punto dentro de los límites de un rectángulo transformado es igual a determinar si un punto transformado inverso se encuentra dentro de los límites del rectángulo sin transformar. Que es un cantidad de cálculo sea más fácil y puede utilizar la cómoda `Contains` método definido por `SKRect`:
+Determinar si un punto se encuentra dentro de los límites de un rectángulo transformado es igual a determinar si un punto transformado inverso se encuentra dentro de los límites del rectángulo sin transformar. Eso es mucho más fácil de cálculo y puede usar la cómoda `Contains` definido por el método `SKRect`:
 
 ```csharp
 class TouchManipulationBitmap
@@ -275,7 +274,7 @@ class TouchManipulationBitmap
 }
 ```
 
-El segundo método público en `TouchManipulationBitmap` es `ProcessTouchEvent`. Cuando se llama a este método, ya se determinó que el evento de entrada táctil pertenece a este mapa de bits determinada. El método no mantiene un diccionario de [ `TouchManipulationInfo` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationInfo.cs) objetos, que es simplemente el punto anterior y el nuevo punto de cada dedo:
+El segundo método público en `TouchManipulationBitmap` es `ProcessTouchEvent`. Cuando se llama a este método, ya se determinó que el evento de toque pertenece a este mapa de bits determinado. El método no mantiene un diccionario de [ `TouchManipulationInfo` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/TouchManipulationInfo.cs) objetos, que es simplemente el punto anterior y el nuevo punto de cada dedo:
 
 ```csharp
 class TouchManipulationInfo
@@ -329,11 +328,11 @@ class TouchManipulationBitmap
 }
 ```
 
-En el `Moved` y `Released` eventos, las llamadas al método `Manipulate`. En estos momentos, la `touchDictionary` contiene uno o varios `TouchManipulationInfo` objetos. Si el `touchDictionary` contiene un elemento, es probable que la `PreviousPoint` y `NewPoint` valores no son iguales y que representan el movimiento de un dedo. Si varios dedos están tocando el mapa de bits, el diccionario contiene más de un elemento, pero solo uno de estos elementos tiene distintos `PreviousPoint` y `NewPoint` valores. El resto tienen las mismas `PreviousPoint` y `NewPoint` valores.
+En el `Moved` y `Released` eventos, las llamadas al método `Manipulate`. En estos momentos, el `touchDictionary` contiene uno o varios `TouchManipulationInfo` objetos. Si el `touchDictionary` contiene un elemento, es probable que el `PreviousPoint` y `NewPoint` valores no son iguales y representan el movimiento de un dedo. Si varios dedos tocan el mapa de bits, el diccionario contiene más de un elemento, pero solo uno de estos elementos tiene distintos `PreviousPoint` y `NewPoint` valores. El resto tienen las mismas `PreviousPoint` y `NewPoint` valores.
 
-Esto es importante: el `Manipulate` método puede asumir que está procesando el movimiento de un solo dedo. En el momento de la llamada a ninguno de los otros dedos es móvil, y si realmente desea mover (ya que es probable que), se procesarán los movimientos en las futuras llamadas a `Manipulate`.
+Esto es importante: el `Manipulate` método puede dar por hecho que está procesando el movimiento de un solo dedo. En el momento de esta llamada Mover ninguno de los otros dedos y si realmente está moviendo (ya que es probable), se procesarán los movimientos en las futuras llamadas a `Manipulate`.
 
-El `Manipulate` método la primera copia del diccionario en una matriz para su comodidad. Omite cualquier cosa que no sea el primero de dos entradas. Si más de dos dedos intentan manipular el mapa de bits, los demás se omiten. `Manipulate` es el último miembro de `TouchManipulationBitmap`:
+El `Manipulate` método copia primero el diccionario en una matriz para su comodidad. Omite cualquier cosa que no sean las dos primeras entradas. Si más de dos dedos están intentando manipular el mapa de bits, se omiten los demás. `Manipulate` es el último miembro de `TouchManipulationBitmap`:
 
 ```csharp
 class TouchManipulationBitmap
@@ -370,13 +369,13 @@ class TouchManipulationBitmap
 }
 ```
 
-Si el mapa de bits, es la manipulación de un solo dedo `Manipulate` llamadas el `OneFingerManipulate` método de la `TouchManipulationManager` objeto. Para dos dedos llama `TwoFingerManipulate`. Los argumentos a estos métodos son los mismos: el `prevPoint` y `newPoint` argumentos representan el dedo que se mueven. Pero la `pivotPoint` argumento es diferente para las dos llamadas:
+Si manipula el mapa de bits, un solo dedo `Manipulate` llamadas la `OneFingerManipulate` método de la `TouchManipulationManager` objeto. Para dos dedos, llama a `TwoFingerManipulate`. Los argumentos de estos métodos son los mismos: el `prevPoint` y `newPoint` argumentos representan el dedo que se mueven. Pero la `pivotPoint` argumento es diferente para las dos llamadas:
 
-Para la manipulación de un solo dedo, el `pivotPoint` es el centro del mapa de bits. Esto es para permitir la rotación de un solo dedo. Para la manipulación de dos dedos, el evento indica que el movimiento de un solo dedo, por lo que el `pivotPoint` es el dedo que no se mueve.
+Para la manipulación con un solo dedo, el `pivotPoint` es el centro del mapa de bits. Esto es para permitir la rotación con un solo dedo. Para la manipulación con dos dedos, el evento indica que el movimiento de un solo dedo, para que el `pivotPoint` es el dedo que no se mueve.
 
-En ambos casos, `TouchManipulationManager` devuelve un `SKMatrix` valor, que el método se concatena con el actual `Matrix` propiedad que `TouchManipulationPage` utiliza para representar el mapa de bits.
+En ambos casos, `TouchManipulationManager` devuelve un `SKMatrix` valor, que el método se concatena con el actual `Matrix` propiedad que `TouchManipulationPage` se usa para representar el mapa de bits.
 
-`TouchManipulationManager` se ha generalizado y no se utiliza ningún otro archivo excepto `TouchManipulationMode`. Es posible que pueda utilizar esta clase sin cambios en sus propias aplicaciones. Define una única propiedad de tipo `TouchManipulationMode`:
+`TouchManipulationManager` se ha generalizado y no se utiliza ningún otro archivo excepto `TouchManipulationMode`. Puede utilizar esta clase sin cambios en sus propias aplicaciones. Define una propiedad única de tipo `TouchManipulationMode`:
 
 ```csharp
 class TouchManipulationManager
@@ -387,9 +386,9 @@ class TouchManipulationManager
 ```
 
 
-Sin embargo, probablemente deseará evitar la `AnisotropicScale` opción. Es muy fácil con esta opción para manipular el mapa de bits para que uno de los factores de escala se convierte en cero. Esto hace que el mapa de bits desaparecen de la vista, nunca para devolver. Si realmente necesita escalado anisotrópico, desea mejorar la lógica para evitar resultados no deseados.
+Sin embargo, probablemente deseará evitar la `AnisotropicScale` opción. Es muy fácil con esta opción para manipular el mapa de bits para que uno de los factores de escala se convierte en cero. Esto hace que el mapa de bits desaparecen de la visión, nunca a devolver. Si realmente necesita escalado anisotrópico, desea mejorar la lógica para evitar resultados no deseados.
 
-`TouchManipulationManager` hace uso de los vectores, pero dado que no hay ningún `SKVector` estructura en SkiaSharp, `SKPoint` se utiliza en su lugar. `SKPoint` admite que el operador de resta y el resultado se pueden tratar como un vector. La lógica específica de vector solo que deba agregarse es un `Magnitude` cálculo:
+`TouchManipulationManager` hace uso de vectores, pero dado que no hay ningún `SKVector` estructura de SkiaSharp, `SKPoint` se usa en su lugar. `SKPoint` admite que el operador de resta y el resultado se pueden tratar como un vector. La lógica específica solo vector que fue necesario agregar es un `Magnitude` cálculo:
 
 ```csharp
 class TouchManipulationManager
@@ -402,9 +401,9 @@ class TouchManipulationManager
 }
 ```
 
-Cada vez que se ha seleccionado la rotación, tanto los métodos de manipulación de un solo dedo y dos dedo controlen la rotación primero. Si se detecta cualquier rotación, se quita eficazmente el componente de rotación. Lo que permanece se interpreta como la panorámica y el ajuste de escala.
+Cada vez que se ha seleccionado la rotación, tanto los métodos de manipulación de un solo dedo y con dos dedos controlen la rotación primero. Si se detecta cualquier rotación, se quita eficazmente el componente de rotación. Lo que falta se interpreta como movimiento panorámico y el escalado.
 
-Este es el `OneFingerManipulate` método. Si no se habilitó la rotación de un solo dedo, la lógica es sencilla &mdash; simplemente utiliza el punto anterior y el punto nuevo para crear un vector con el nombre `delta` que corresponde exactamente a la traducción. Con un solo dedo rotación habilitada, el método utiliza ángulos desde el punto de pivote (el centro del mapa de bits) en el punto anterior y nuevo punto para construir una matriz de rotación:
+Este es el `OneFingerManipulate` método. Si no se habilitó la rotación con un solo dedo, entonces la lógica es simple &mdash; simplemente utiliza los puntos anteriores y nuevas para construir un vector denominado `delta` que corresponde exactamente a la traducción. Con una rotación con un solo dedo habilitada, el método usa ángulos desde el punto de pivote (el centro del mapa de bits) para los puntos anteriores y nuevas para construir una matriz de rotación:
 
 ```csharp
 class TouchManipulationManager
@@ -455,7 +454,7 @@ class TouchManipulationManager
 }
 ```
 
-En el `TwoFingerManipulate` (método), el punto de pivote es la posición del dedo que no se mueve en este caso particular táctil. La rotación es muy similar a la rotación de un solo dedo y, a continuación, se denomina el vector `oldVector` (según el punto anterior) se ajusta de la rotación. El movimiento restante se interpreta como el ajuste de escala:
+En el `TwoFingerManipulate` método, el punto de pivote es la posición del dedo que no se mueve en este evento táctil en particular. La rotación es muy similar a la rotación con un solo dedo y, a continuación, el vector denominado `oldVector` (según el punto anterior) se ajusta la rotación. El movimiento restante se interpreta como el escalado:
 
 ```csharp
 class TouchManipulationManager
@@ -513,9 +512,9 @@ class TouchManipulationManager
 }
 ```
 
-Observará que no hay ninguna conversión explícita en este método. Sin embargo, tanto el `MakeRotation` y `MakeScale` métodos se basan en el punto de pivote, y que incluya una conversión implícita. Si usa dos dedos en el mapa de bits y arrastrarlos en la misma dirección, `TouchManipulation` obtendrá una serie de eventos de toque alternando entre los dos dedos. Como cada dedo se desplaza en relación con los demás, ajuste de escala o la rotación resultados, pero es negada por el movimiento del otro dedo y el resultado es traducción.
+Observará que no hay ninguna conversión explícita en este método. Sin embargo, tanto el `MakeRotation` y `MakeScale` métodos se basan en el punto de pivote y que incluye una conversión implícita. Si usa dos dedos en el mapa de bits y arrástrelos en la misma dirección, `TouchManipulation` obtendrán una serie de eventos de toque, alternando entre los dos dedos. Como cada dedo se mueve en relación con los otros, escala o rotación de resultados, pero es negada por el movimiento del otro dedo y el resultado es la traducción.
 
-La única parte restante de la **manipulación táctil** página es la `PaintSurface` controlador en el `TouchManipulationPage` archivo de código subyacente. En este caso, el `Paint` método de la `TouchManipulationBitmap`, que aplica la matriz que representa la actividad táctil acumulado:
+La única parte restante de la **manipulación táctil** página es la `PaintSurface` controlador en el `TouchManipulationPage` archivo de código subyacente. Esto llama a la `Paint` método de la `TouchManipulationBitmap`, que aplica a la matriz que representa la actividad táctil acumulada:
 
 ```csharp
 public partial class TouchManipulationPage : ContentPage
@@ -544,13 +543,13 @@ public partial class TouchManipulationPage : ContentPage
 }
 ```
 
-El `PaintSurface` controlador concluye mostrando un `MatrixDisplay` objeto muestra la matriz de entrada táctil acumulado:
+El `PaintSurface` controlador termina mostrando un `MatrixDisplay` objeto muestra la matriz acumulado táctil:
 
-[![](touch-images/touchmanipulation-small.png "Captura de pantalla triple de la página de manipulación táctil")](touch-images/touchmanipulation-large.png#lightbox "Triple captura de pantalla de la página de manipulación táctil")
+[![](touch-images/touchmanipulation-small.png "Captura de pantalla triple de la página de la manipulación táctil")](touch-images/touchmanipulation-large.png#lightbox "Triple captura de pantalla de la página de la manipulación táctil")
 
 ## <a name="manipulating-multiple-bitmaps"></a>Manipular varios mapas de bits
 
-Una de las ventajas de aislar el código de procesamiento de entrada táctil en clases como `TouchManipulationBitmap` y `TouchManipulationManager` es la capacidad de volver a usar estas clases en un programa que permite al usuario manipular varios mapas de bits.
+Una de las ventajas de aislar el código de procesamiento de toque en clases como `TouchManipulationBitmap` y `TouchManipulationManager` es la capacidad de volver a usar estas clases en un programa que permite al usuario manipular varios mapas de bits.
 
 El **vista de mapa de bits de dispersión** página muestra cómo hacerlo. En lugar de definir un campo de tipo `TouchManipulationBitmap`, [ `BitmapScatterPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BitmapScatterViewPage.xaml.cs) clase define un `List` de objetos de mapa de bits:
 
@@ -575,9 +574,8 @@ public partial class BitmapScatterViewPage : ContentPage
                 resourceID.EndsWith(".jpg"))
             {
                 using (Stream stream = assembly.GetManifestResourceStream(resourceID))
-                using (SKManagedStream skStream = new SKManagedStream(stream))
                 {
-                    SKBitmap bitmap = SKBitmap.Decode(skStream);
+                    SKBitmap bitmap = SKBitmap.Decode(stream);
                     bitmapCollection.Add(new TouchManipulationBitmap(bitmap)
                     {
                         Matrix = SKMatrix.MakeTranslation(position.X, position.Y),
@@ -592,9 +590,9 @@ public partial class BitmapScatterViewPage : ContentPage
 }
 ```
 
-El constructor se carga en todos los mapas de bits disponibles como recursos incrustados y se agregarán a la `bitmapCollection`. Tenga en cuenta que la `Matrix` propiedad se inicializa en cada `TouchManipulationBitmap` de objeto, por lo que se calcula el desplazamiento de las esquinas superior izquierda de cada mapa de bits por 100 píxeles.
+El constructor se carga en todos los mapas de bits disponibles como recursos incrustados y los agrega a la `bitmapCollection`. Tenga en cuenta que el `Matrix` propiedad se inicializa en cada `TouchManipulationBitmap` de objeto, por lo que las esquinas superior izquierda de cada mapa de bits se desplazan por 100 píxeles.
 
-La `BitmapScatterView` página también es necesario controlar los eventos de entrada táctil para varios mapas de bits. En lugar de definir una `List` de touch Id. de manipula actualmente `TouchManipulationBitmap` objetos, este programa requiere un diccionario:
+El `BitmapScatterView` página también debe controlar los eventos de toque de varios mapas de bits. En lugar de definir un `List` de touch Id. de manipulan actualmente `TouchManipulationBitmap` objetos, este programa requiere un diccionario:
 
 ```csharp
 public partial class BitmapScatterViewPage : ContentPage
@@ -658,9 +656,9 @@ public partial class BitmapScatterViewPage : ContentPage
 }
 ```
 
-Observe cómo la `Pressed` lógica recorre el `bitmapCollection` en orden inverso. Los mapas de bits a menudo superponen entre sí. Los mapas de bits más adelante en la colección se encuentran visualmente encima de los mapas de bits anteriormente en la colección. Si hay varios mapas de bits en el dedo que presiona en la pantalla, lo más alto debe ser la que se manipula mediante ese dedo.
+Observe cómo el `Pressed` lógica recorre el `bitmapCollection` en orden inverso. Los mapas de bits a menudo superponen entre sí. Los mapas de bits más adelante en la colección se encuentran visualmente encima de los mapas de bits anteriormente en la colección. Si hay varios mapas de bits en el dedo que presiona en la pantalla, lo más alto debe ser la que se manipula mediante ese dedo.
 
-Observe también que el `Pressed` lógica mueve ese mapa de bits al final de la colección para que visualmente se mueve a la parte superior de la pila de otros mapas de bits.
+Tenga en cuenta también que el `Pressed` lógica mueve ese mapa de bits al final de la colección para que se mueva visualmente en la parte superior de la pila de otros mapas de bits.
 
 En el `Moved` y `Released` eventos, el `TouchAction` llamadas del controlador de la `ProcessingTouchEvent` método `TouchManipulationBitmap` al igual que el programa anterior.
 
@@ -687,13 +685,13 @@ El código recorre en iteración la colección y muestra la pila de mapas de bit
 
 [![](touch-images/bitmapscatterview-small.png "Captura de pantalla triple de la página de vista de mapa de bits de dispersión")](touch-images/bitmapscatterview-large.png#lightbox "Triple captura de pantalla de la página de vista de mapa de bits de dispersión")
 
-## <a name="single-finger-scaling"></a>Ajuste de escala en un solo dedo
+## <a name="single-finger-scaling"></a>Escalado de un solo dedo
 
-Una operación de escalado requiere normalmente un gesto de alejar utilizando dos dedos. Sin embargo, es posible implementar escalado con un solo dedo manteniendo el dedo mover las esquinas de un mapa de bits.
+Una operación de escalado requiere normalmente un gesto de reducir con dos dedos. Sin embargo, es posible implementar el escalado con un solo dedo haciendo que el dedo mover las esquinas de un mapa de bits.
 
-Esto se muestra en el **solo dedo esquina escala** página. Dado que este ejemplo usa algo diferente del tipo de ajuste de escala que implementa en el `TouchManipulationManager` (clase), no utiliza esa clase o la `TouchManipulationBitmap` clase. En su lugar, toda la lógica de entrada táctil está en el archivo de código subyacente. Esto es un poco más fácil lógica de lo habitual porque realiza un seguimiento de un solo dedo a la vez y simplemente omite los dedos secundarias que podrían estar tocando la pantalla.
+Esto se muestra en el **solo dedo esquina escalado** página. Dado que este ejemplo usa un poco diferente del tipo de escalado que implementa en el `TouchManipulationManager` (clase), no utiliza esa clase o la `TouchManipulationBitmap` clase. En su lugar, toda la lógica de interacción es en el archivo de código subyacente. Esto es un poco más fácil lógica de lo habitual porque realiza el seguimiento de un solo dedo a la vez y simplemente omite cualquier dedos secundaria que podrían estar tocando la pantalla.
 
-El [ **SingleFingerCornerScale.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SingleFingerCornerScalePage.xaml) crea una instancia de la página el `SKCanvasView` clase y crea un `TouchEffect` objeto para realizar el seguimiento de eventos touch:
+El [ **SingleFingerCornerScale.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SingleFingerCornerScalePage.xaml) crea una instancia de la página el `SKCanvasView` clase y crea un `TouchEffect` objeto para el seguimiento de eventos de función táctil:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -716,7 +714,7 @@ El [ **SingleFingerCornerScale.xaml** ](https://github.com/xamarin/xamarin-forms
 </ContentPage>
 ```
 
-El [ **SingleFingerCornerScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SingleFingerCornerScalePage.xaml.cs) archivo carga un recurso de mapa de bits de la **Media** directorio y se muestra mediante un `SKMatrix` objeto definido como un campo:
+El [ **SingleFingerCornerScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SingleFingerCornerScalePage.xaml.cs) archivo carga un recurso de mapa de bits desde el **Media** directorio y lo muestra mediante un `SKMatrix` objeto definido como un campo:
 
 ```csharp
 public partial class SingleFingerCornerScalePage : ContentPage
@@ -733,9 +731,8 @@ public partial class SingleFingerCornerScalePage : ContentPage
         Assembly assembly = GetType().GetTypeInfo().Assembly;
 
         using (Stream stream = assembly.GetManifestResourceStream(resourceID))
-        using (SKManagedStream skStream = new SKManagedStream(stream))
         {
-            bitmap = SKBitmap.Decode(skStream);
+            bitmap = SKBitmap.Decode(stream);
         }
     }
 
@@ -754,11 +751,11 @@ public partial class SingleFingerCornerScalePage : ContentPage
 }
 ```
 
-Esto `SKMatrix` objeto se modifica la lógica de entrada táctil se muestra a continuación.
+Esto `SKMatrix` se modifica el objeto por la lógica de interacción se muestra a continuación.
 
-El resto del archivo de código subyacente es el `TouchEffect` controlador de eventos. Comienza mediante la conversión de la ubicación actual del dedo para un `SKPoint` valor. Para el `Pressed` el controlador de tipo de acción, comprueba que ningún otro dedo toca la pantalla, y que se encuentra dentro de los límites del mapa de bits.
+El resto del archivo de código subyacente es la `TouchEffect` controlador de eventos. Comienza mediante la conversión de la ubicación actual del dedo en una `SKPoint` valor. Para el `Pressed` tipo de acción, el controlador comprueba que ningún otro dedo está tocando la pantalla, y que el dedo se encuentra dentro de los límites del mapa de bits.
 
-La parte fundamental del código es un `if` instrucción que implica dos llamadas a la `Math.Pow` método. Este matemáticas comprueba si la ubicación del dedo fuera de una elipse rellena el mapa de bits. Si es así, es una operación de escalado. Encuentra cerca de una de las esquinas del mapa de bits y un punto de pivote se determina que es la esquina opuesta. Si se encuentra dentro de esta elipse, que es una operación de desplazamiento lateral regular:
+La parte fundamental del código es un `if` instrucción que implican dos llamadas a la `Math.Pow` método. Este matemáticas comprueba si la ubicación del dedo está fuera de una elipse que rellena el mapa de bits. Si es así, es una operación de escalado. El dedo se encuentra cerca de una de las esquinas del mapa de bits y un punto de pivote se determina que es la esquina opuesta. Si el dedo se encuentra dentro de esta elipse, es una operación de desplazamiento regular:
 
 ```csharp
 public partial class SingleFingerCornerScalePage : ContentPage
@@ -851,9 +848,9 @@ public partial class SingleFingerCornerScalePage : ContentPage
 }
 ```
 
-El `Moved` tipo de acción calcula una matriz correspondiente a la actividad táctil desde el momento en el dedo presiona la pantalla hasta este momento. Concatena esa matriz con la matriz en vigor en el momento en que el dedo presiona primero el mapa de bits. La operación de escalado siempre es relativa a la esquina opuesta a la que el dedo toca.
+El `Moved` tipo de acción calcula una matriz correspondiente a la actividad táctil desde el momento en que el dedo presiona la pantalla hasta este momento. Concatena esa matriz con la matriz en vigor en el momento en que el dedo presiona primero el mapa de bits. La operación de escalado siempre es relativa a la esquina opuesta a lo que el dedo toca.
 
-Para los mapas de bits pequeño o más, una elipse interior podría ocupar más del mapa de bits y dejar áreas muy pequeños en las esquinas para escalar el mapa de bits. Es preferible un enfoque ligeramente diferente, en cuyo caso puede reemplazar ese toda `if` bloque que establece `isScaling` a `true` con este código:
+Para los mapas de bits pequeño o rectangulares, una elipse interior podría ocupar más del mapa de bits y deje áreas muy pequeños en las esquinas para escalar el mapa de bits. Es preferible un enfoque un poco diferente, en cuyo caso puede reemplazar esa toda `if` bloque que establece `isScaling` a `true` con este código:
 
 ```csharp
 float halfHeight = rect.Height / 2;
@@ -897,7 +894,7 @@ else
 }
 ```
 
-Este código eficazmente divide el área del mapa de bits en una forma de rombo interiores y los cuatro triángulos en las esquinas. Esto permite mucho más grandes áreas en las esquinas de agarre y escalar el mapa de bits.
+Este código de forma eficaz divide el área del mapa de bits en una forma de rombo interiores y cuatro triángulos en las esquinas. Esto permite mucho más grandes áreas en las esquinas para captar y escalar el mapa de bits.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
