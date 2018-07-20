@@ -6,26 +6,32 @@ ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: b27df7f63ac83206c50858175dc2945937142f78
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: d863ce1c6195ddaef164c3a15817a4ff87a3c332
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995474"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156631"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Resumen del capítulo 13. Mapas de bits
+
+> [!NOTE] 
+> Notas de esta página indican áreas donde se ha dividido Xamarin.Forms desde el material presentado en el libro.
 
 Xamarin.Forms [ `Image` ](xref:Xamarin.Forms.Image) elemento muestra un mapa de bits. Todas las plataformas de Xamarin.Forms admiten los formatos de archivo JPEG, PNG, GIF y BMP.
 
 Mapas de bits en Xamarin.Forms proceden de cuatro lugares:
 
 - A través de la web tal como se especifica mediante una dirección URL
-- Incrustado como un recurso en la biblioteca de clases Portable comunes
+- Incrustado como un recurso en la biblioteca compartida
 - Incrustado como un recurso en los proyectos de aplicación de plataforma
 - Desde cualquier lugar que pueden hacer referencia a .NET `Stream` objeto, incluidos `MemoryStream`
 
-Recursos de mapa de bits en la PCL son independientes de la plataforma, mientras que los recursos de mapa de bits en los proyectos de plataforma son específicos de la plataforma.
+Recursos de mapa de bits en la biblioteca compartida son independientes de la plataforma, mientras que los recursos de mapa de bits en los proyectos de plataforma son específicos de la plataforma.
+
+> [!NOTE] 
+> El texto del libro hace referencia a bibliotecas de clases portables, que se han reemplazado por las bibliotecas de .NET Standard. Todo el código de ejemplo del libro se ha convertido para usar bibliotecas de .NET estándares.
 
 El mapa de bits se especifica estableciendo el [ `Source` ](xref:Xamarin.Forms.Image.Source) propiedad de `Image` a un objeto de tipo [ `ImageSource` ](xref:Xamarin.Forms.ImageSource), una clase abstracta con tres derivados:
 
@@ -63,7 +69,7 @@ Puede agregar un archivo de mapa de bits a una PCL o a una carpeta en la PCL. As
 El programa se establece la `VerticalOptions` y `HorizontalOptions` propiedades de la `Image` a `LayoutOptions.Center`, lo que hace el `Image` elemento sin restricciones. El `Image` y el mapa de bits tienen el mismo tamaño:
 
 - En iOS y Android, el `Image` es el tamaño de píxel del mapa de bits. Hay una asignación unívoca entre los píxeles del mapa de bits y pantalla.
-- En las plataformas de Windows en tiempo de ejecución, el `Image` es el tamaño de píxel del mapa de bits en unidades independientes del dispositivo. En la mayoría de los dispositivos, cada píxel del mapa de bits ocupa varias píxeles de la pantalla.
+- En la plataforma Universal de Windows, el `Image` es el tamaño de píxel del mapa de bits en unidades independientes del dispositivo. En la mayoría de los dispositivos, cada píxel del mapa de bits ocupa varias píxeles de la pantalla.
 
 El [ **StackedBitmap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/StackedBitmap) ejemplo pone un `Image` en una vertical `StackLayout` en XAML. Una extensión de marcado denominada [ `ImageResourceExtension` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter13/StackedBitmap/StackedBitmap/StackedBitmap/ImageResourceExtension.cs) ayuda a hacer referencia al recurso incrustado en XAML. Esta clase solo carga los recursos del ensamblado donde se encuentra, por lo que no se coloca en una biblioteca.
 
@@ -82,7 +88,10 @@ El [ **MadTeaParty** ](https://github.com/xamarin/xamarin-forms-book-samples/tre
 
 ### <a name="browsing-and-waiting"></a>Exploración y en espera
 
-El [ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) ejemplo permite al usuario explorar a través de varias imágenes existentes almacenadas en el sitio web de Xamarin. Usa .NET `WebRequest` clase para descargar un archivo JSON con la lista de mapas de bits.
+El [ **ImageBrowser** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageBrowser) ejemplo permite al usuario explorar a través de varias imágenes existentes almacenadas en el sitio web de Xamarin. Usa .NET [ `WebRequest` ](xref:System.Net.WebRequest) clase para descargar un archivo JSON con la lista de mapas de bits.
+
+> [!NOTE]
+> Deben usar programas de Xamarin.Forms [ `HttpClient` ](xref:System.Net.Http.HttpClient) lugar [ `WebRequest` ](xref:System.Net.WebRequest) para tener acceso a archivos a través de internet. 
 
 El programa usa un [ `ActivityIndicator` ](xref:Xamarin.Forms.ActivityIndicator) para indicar que algo está ocurriendo. Ya se está cargando cada mapa de bits, solo lectura [ `IsLoading` ](xref:Xamarin.Forms.Image.IsLoading) propiedad de `Image` es `true`. El `IsLoading` propiedad está respaldada por una propiedad enlazable, por lo tanto un `PropertyChanged` evento se desencadena cuando se cambia dicha propiedad. El programa se adjunta un controlador a este evento y usa el valor actual de `IsLoaded` para establecer el [ `IsRunning` ](https://api/property/Xamarin.Forms.ActivityIndicator.IsRunning/) propiedad de la `ActivityIndicator`.
 
@@ -154,7 +163,7 @@ Para un mapa de bits pensado para representarse en una pulgada cuadrada, las dis
 
 El mapa de bits siempre se representará en 160 unidades independientes del dispositivo. (La plantilla de solución de Xamarin.Forms estándar solo incluye el hdpi, xhdpi y las carpetas xxhdpi.)
 
-Los proyectos de Windows en tiempo de ejecución compatible con un esquema que consta de un factor de escala en píxeles independientes del dispositivo unitario como un porcentaje, por ejemplo de nombre de mapa de bits:
+El proyecto de UWP es compatible con un esquema de nomenclatura de mapa de bits que consta de un factor de escala en píxeles independientes del dispositivo unitario como un porcentaje, por ejemplo:
 
 - MyImage.scale-200.jpg a 320 píxeles cuadrados
 
@@ -164,7 +173,7 @@ Al agregar mapas de bits a los proyectos de plataforma, el **acción de compilac
 
 - iOS: **BundleResource**
 - Android: **AndroidResource**
-- En tiempo de ejecución de Windows: **contenido**
+- UWP: **contenido**
 
 El [ **ImageTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageTap) ejemplo crea dos objetos con apariencia de botón que consta de `Image` elementos con un `TapGestureRecognizer` instalado. Se pretende que los objetos de ser una pulgada cuadrada. El `Source` propiedad de `Image` se establece mediante `OnPlatform` y `On` objetos que se va a hacer referencia a nombres de archivo potencialmente diferentes en las plataformas. Las imágenes de mapa de bits incluyen números que indica su tamaño en píxeles, para que pueda ver el mapa de bits de tamaño se recupera y procesa.
 
@@ -188,10 +197,12 @@ IOS y Android requieren que sea una página que muestra una barra de herramienta
 
 También puede usar mapas de bits específicos de la plataforma para establecer el [ `Image` ](xref:Xamarin.Forms.Button.Image) propiedad de `Button` un mapa de bits del cuadrado 32 unidades independientes del dispositivo, tal como lo demuestra el [ **ButtonImage** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ButtonImage) ejemplo.
 
-
+> [!NOTE]
+> Se ha mejorado el uso de imágenes en los botones. Consulte [usando mapas de bits con botones](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Capítulo 13, texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf)
 - [Ejemplos de capítulo 13](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
 - [Working with Images (Trabajo con imágenes)](~/xamarin-forms/user-interface/images.md)
+- [Uso de mapas de bits con botones](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)

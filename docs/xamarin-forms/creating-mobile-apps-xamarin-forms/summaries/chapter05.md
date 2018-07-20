@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: 486800E9-C09F-4B95-9AC2-C0F8FE563BCF
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 36d208f2326c7584bc03c351b4a5b05a3f3928c9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: c82e222fd47f3a3f13043c076c488b4769659352
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995458"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156501"
 ---
 # <a name="summary-of-chapter-5-dealing-with-sizes"></a>Resumen del capítulo 5. Tratar con tamaños
+
+> [!NOTE] 
+> Notas de esta página indican áreas donde se ha dividido Xamarin.Forms desde el material presentado en el libro.
 
 Hasta ahora se han detectado varios tamaños de Xamarin.Forms:
 
@@ -36,7 +39,10 @@ Los programadores usar como destino dispositivos iPhone y iPad de Apple seguirá
 
 Android es similar. Los programadores que trabajan en unidades de *píxeles independientes de densidad* (dps), y la relación entre el dps y píxeles se basa en 160 DP pulgada.
 
-El tiempo de ejecución de Windows también se ha establecido los factores de escala que implican algo similar a 160 unidades independientes del dispositivo por pulgada.
+Teléfonos de Windows y dispositivos móviles también se han establecido los factores de escala que implican algo similar a 160 unidades independientes del dispositivo por pulgada.
+
+> [!NOTE]
+> Xamarin.Forms ya no es compatible con cualquier basado en Windows phone o dispositivo móvil.
 
 En resumen, un programador de Xamarin.Forms tienen como destino teléfonos y tabletas puede suponer que todas las unidades de medida se basan en el siguiente criterio:
 

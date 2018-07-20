@@ -6,21 +6,27 @@ ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 2ff54b65b1dca9798c91f147da7e8482649e40d2
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/18/2018
+ms.openlocfilehash: d606432174807498fd458470647109de4fa0b6b4
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996287"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156735"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Resumen del capítulo 20. E/S de archivo y Async
+
+> [!NOTE] 
+> Notas de esta página indican áreas donde se ha dividido Xamarin.Forms desde el material presentado en el libro.
 
  Una interfaz gráfica de usuario debe responder a eventos de entrada del usuario secuencialmente. Esto implica que todo el procesamiento de eventos de entrada del usuario se debe producir en un único subproceso, se suele denominado el *subproceso principal* o *el subproceso de interfaz de usuario*.
 
 Los usuarios esperan interfaces gráficas de usuario tienen capacidad de respuesta. Esto significa que un programa debe procesar rápidamente los eventos de entrada del usuario. Si no es posible, procesamiento, a continuación, debe relegado a subprocesos secundarios de ejecución.
 
 Varios programas de ejemplo en este libro se han usado el [ `WebRequest` ](xref:System.Net.WebRequest) clase. En esta clase la [ `BeginGetReponse` ](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)) método inicia un subproceso de trabajo, que llama a una función de devolución de llamada cuando se complete. Sin embargo, esa función de devolución de llamada se ejecuta en el subproceso de trabajo, por lo que el programa debe llamar a [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) método para acceder a la interfaz de usuario.
+
+> [!NOTE]
+> Deben usar programas de Xamarin.Forms [ `HttpClient` ](xref:System.Net.Http.HttpClient) lugar [ `WebRequest` ](xref:System.Net.WebRequest) para tener acceso a archivos a través de internet. `HttpClient` admite operaciones asincrónicas.
 
 Un enfoque más moderno para el procesamiento asincrónico está disponible en .NET y C#. Esto implica la [ `Task` ](xref:System.Threading.Tasks.Task) y [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) clases y otros tipos en el [ `System.Threading` ](xref:System.Threading) y [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) espacios de nombres, así como C# 5.0 `async` y `await` palabras clave. Eso es lo que en este capítulo se centra en.
 
@@ -74,13 +80,16 @@ Sin embargo, si busca estos `System.IO` clases en una PCL de Xamarin.Forms, no e
 
 Esto significa que deberá usar el [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) (primero se describe en [ **capítulo 9. Llamadas a API específicas de la plataforma** ](chapter09.md) para implementar la E/S de archivos.
 
+> [!NOTE]
+> Bibliotecas de clases portables se han reemplazado con las bibliotecas .NET Standard 2.0 y .NET Standard 2.0 es compatible con [ `System.IO` ](xref:System.IO) tipos para todas las plataformas de Xamarin.Forms. Ya no es necesario usar un `DependencyService` para la mayoría de las tareas de E/S de archivos. Consulte [manejo de archivos en Xamarin.Forms](~/xamarin-forms/app-fundamentals/files.md) un enfoque más moderno para E/S de archivos.
+
 ### <a name="a-first-shot-at-cross-platform-file-io"></a>Un primer intento en E/S de archivos entre plataformas
 
 El [ **TextFileTryout** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/TextFileTryout) ejemplo define un [ `IFileHelper` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter20/TextFileTryout/TextFileTryout/TextFileTryout/IFileHelper.cs) interfaz para E/S de archivos y las implementaciones de esta interfaz en todas las plataformas. Sin embargo, las implementaciones en tiempo de ejecución de Windows no funcionan con los métodos de esta interfaz porque los métodos de E/S de archivo de Windows en tiempo de ejecución son asincrónicos.
 
 ### <a name="accommodating-windows-runtime-file-io"></a>Adaptación de E/S de archivos en tiempo de ejecución de Windows
 
-Programas que se ejecutan en el tiempo de ejecución de Windows usan clases en el [ `Windows.Storage` ](https://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) y [ `Windows.Storage.Streams` ](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.aspx) espacios de nombres para E/S de archivos, incluido el almacenamiento local de aplicación. Dado que Microsoft ha determinado que cualquier operación que requiere que más de 50 milisegundos deben ser asincrónicos para evitar bloquear el subproceso de interfaz de usuario, estos métodos de E/S de archivo principalmente son asincrónicos.
+Programas que se ejecutan en el tiempo de ejecución de Windows usan clases en el [ `Windows.Storage` ](/uwp/api/Windows.Storage) y [ `Windows.Storage.Streams` ](/uwp/api/Windows.Storage.Streams) espacios de nombres para E/S de archivos, incluido el almacenamiento local de aplicación. Dado que Microsoft ha determinado que cualquier operación que requiere que más de 50 milisegundos deben ser asincrónicos para evitar bloquear el subproceso de interfaz de usuario, estos métodos de E/S de archivo principalmente son asincrónicos.
 
 El código que muestra este nuevo enfoque estará en una biblioteca para que se pueden usar otras aplicaciones.
 
@@ -94,8 +103,6 @@ El [ **Xamarin.FormsBook.Platform** ](https://github.com/xamarin/xamarin-forms-b
 - [**Xamarin.FormsBook.Platform.iOS**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.iOS), una biblioteca de clases de iOS
 - [**Xamarin.FormsBook.Platform.Android**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android), una biblioteca de clases de Android
 - [**Xamarin.FormsBook.Platform.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.UWP), una biblioteca de clases de Windows Universal
-- [**Xamarin.FormsBook.Platform.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Windows), una PCL para Windows 8.1.
-- [**Xamarin.FormsBook.Platform.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinPhone), una PCL para Windows Phone 8.1
 - [**Xamarin.FormsBook.Platform.WinRT**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.WinRT), un proyecto compartido para el código que es común a todas las plataformas de Windows
 
 Todos los proyectos de plataforma individuales (con la excepción de **Xamarin.FormsBook.Platform.WinRT**) tienen referencias a **Xamarin.FormsBook.Platform**. Los tres proyectos de Windows tienen una referencia a **Xamarin.FormsBook.Platform.WinRT**.
