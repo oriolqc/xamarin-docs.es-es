@@ -7,12 +7,12 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/17/2018
-ms.openlocfilehash: cbce6f414586597dc2b2788aa18b03228c128018
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 5a535d60dd01e32dc1d888d3372db13312cc069a
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130964"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156969"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Conceptos básicos de mapa de bits de SkiaSharp
 
@@ -21,6 +21,8 @@ _Cargar mapas de bits de varios orígenes y mostrarlos._
 La compatibilidad de mapas de bits de SkiaSharp es bastante extensa. Este artículo trata solo de los conceptos básicos &mdash; cargar mapas de bits y cómo mostrarlos:
 
 ![](bitmaps-images/bitmapssample.png "La presentación de dos mapas de bits")
+
+Encontrará una explicación mucho más profunda de mapas de bits en la sección [SkiaSharp Bitmaps](../bitmaps/index.md).
 
 Un mapa de bits de SkiaSharp es un objeto de tipo [ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/). Hay muchas maneras de crear un mapa de bits, pero en este artículo se restringe a sí mismo a la [ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/System.IO.Stream/) método, que carga el mapa de bits de .NET `Stream` objeto.
 

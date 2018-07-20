@@ -6,15 +6,18 @@ ms.technology: xamarin-forms
 ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: charlespetzold
 ms.author: chape
-ms.date: 11/07/2017
-ms.openlocfilehash: 02e4ea44d87360deed361d161759fa3a2808100f
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 07/19/2018
+ms.openlocfilehash: d04012d5d2ea6a7617d5c7559aa3e1532dad15d1
+ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995162"
+ms.lasthandoff: 07/19/2018
+ms.locfileid: "39156917"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>Resumen del capítulo 7. XAML frente a código
+
+> [!NOTE] 
+> Notas de esta página indican áreas donde se ha dividido Xamarin.Forms desde el material presentado en el libro.
 
 Xamarin.Forms es compatible con un lenguaje de marcado basado en XML denominado lenguaje de marcado de aplicaciones Extensible o XAML (pronunciado "zammel"). XAML proporciona una alternativa a C# en la definición del diseño de la interfaz de usuario de una aplicación de Xamarin.Forms y, en definir enlaces entre los elementos de interfaz de usuario y los datos subyacentes.
 
@@ -35,6 +38,9 @@ A veces, una propiedad debe establecerse en un objeto que no se puede expresar c
 ## <a name="adding-a-xaml-page-to-your-project"></a>Agregar una página XAML al proyecto
 
 Biblioteca de clases Portable Xamarin.Forms puede contener una página XAML cuando se crea por primera vez, o puede agregar una página XAML a un proyecto existente. En el cuadro de diálogo para agregar un nuevo elemento, elija el elemento que hace referencia a una página XAML, o `ContentPage` y XAML. (No un `ContentView`.)
+
+> [!NOTE] 
+> Opciones de Visual Studio han cambiado desde que se escribió este capítulo.
 
 Se crean dos archivos: un archivo XAML con el XAML de extensión de nombre de archivo y un archivo de C# con la extensión. xaml.cs. El archivo de C# a menudo se conoce como el *código* del archivo XAML. El archivo de código subyacente es una definición de clase parcial que se deriva de `ContentPage`. En tiempo de compilación, se analiza el XAML y se genera otra definición de clase parcial para la misma clase. Esta clase generada incluye un método denominado `InitializeComponent` que se llama desde el constructor del archivo de código subyacente.
 
@@ -72,10 +78,9 @@ El [ **TextVariations** ](https://github.com/xamarin/xamarin-forms-book-samples/
 
  [![Captura de pantalla triple de uso compartido de variaciones de texto](images/ch07fg03-small.png "variaciones de texto con formato")](images/ch07fg03-large.png#lightbox "variaciones con el formato de texto")
 
-
-
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Capítulo 7 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf)
 - [Ejemplos de capítulo 7](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
 - [Ejemplo de capítulo 7 F #](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
+- [XAML Basics](~/xamarin-forms/xaml/xaml-basics/index.md) (Conceptos básicos de XAML)
