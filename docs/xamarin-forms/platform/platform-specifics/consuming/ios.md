@@ -7,14 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: 68a38fc43cd744e0382f35baa83643a9f0f7e53d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: ab810a2fdfc659e2f5f24d2646c044e9c8638258
+ms.sourcegitcommit: 3697c2aa4208fe2ac954a8c0297394d3bcb53ede
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998991"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39175195"
 ---
-# <a name="ios-platform-specifics"></a>funcionalidades específicas de plataforma de iOS
+# <a name="ios-platform-specifics"></a>funcionalidades específicas de plataforma de iOS 
 
 _Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se muestra cómo consumir el iOS funcionalidades específicas de plataforma que se integran en Xamarin.Forms._
 
@@ -620,7 +620,7 @@ El resultado es que se puede habilitar una sombra paralela en un [ `VisualElemen
 
 Cuando un [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) se adjunta a una vista dentro de una vista desplazable, todo el pan gestos capturados por el `PanGestureRecognizer` y no se pasan a la vista de desplazamiento. Por lo tanto, ya no se desplazará la vista de desplazamiento.
 
-Este específicos de la plataforma permite una `PanGestureRecognizer` en una vista desplazable para capturar y compartir el movimiento panorámico con la vista de desplazamiento. Se consume en XAML estableciendo el [ `Application.PanGestureRecognizerShouldRecognizeSimultaneously` ](https://docs.microsoft.com/en-us/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.pangesturerecognizershouldrecognizesimultaneouslyproperty?view=xamarin-forms) propiedad adjunta `true`:
+Este específicos de la plataforma permite una `PanGestureRecognizer` en una vista desplazable para capturar y compartir el movimiento panorámico con la vista de desplazamiento. Se consume en XAML estableciendo el [ `Application.PanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.PanGestureRecognizerShouldRecognizeSimultaneouslyProperty) propiedad adjunta `true`:
 
 ```xaml
 <Application ...
@@ -640,7 +640,7 @@ using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
 Xamarin.Forms.Application.Current.On<iOS>().SetPanGestureRecognizerShouldRecognizeSimultaneously(true);
 ```
 
-El `Application.On<iOS>` método especifica que solo se ejecutarán este específicos de la plataforma de iOS. El [ `Application.SetPanGestureRecognizerShouldRecognizeSimultaneously` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.setpangesturerecognizershouldrecognizesimultaneously?view=xamarin-forms) método, en el [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) espacio de nombres, se usa para controlar si un reconocedor de movimiento panorámico en una vista desplazable capturará el movimiento panorámico, o capturar y compartir el desplazamiento panorámico con la vista desplazable de gestos. Además, el [ `Application.GetPanGestureRecognizerShouldRecognizeSimultaneously` ](https://docs.microsoft.com/dotnet/api/xamarin.forms.platformconfiguration.iosspecific.application.getpangesturerecognizershouldrecognizesimultaneously?view=xamarin-forms) método puede utilizarse para devolver si se comparte el movimiento panorámico con la vista de desplazamiento que contiene el [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer).
+El `Application.On<iOS>` método especifica que solo se ejecutarán este específicos de la plataforma de iOS. El [ `Application.SetPanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.SetPanGestureRecognizerShouldRecognizeSimultaneously(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Application},System.Boolean)) método, en el [ `Xamarin.Forms.PlatformConfiguration.iOSSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) espacio de nombres, se usa para controlar si un reconocedor de movimiento panorámico en una vista desplazable capturará el movimiento panorámico, o capturar y compartir el desplazamiento panorámico con la vista desplazable de gestos. Además, el [ `Application.GetPanGestureRecognizerShouldRecognizeSimultaneously` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.Application.GetPanGestureRecognizerShouldRecognizeSimultaneously(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.iOS,Xamarin.Forms.Application})) método puede utilizarse para devolver si se comparte el movimiento panorámico con la vista de desplazamiento que contiene el [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer).
 
 Por lo tanto, con este específicos de la plataforma habilitada, cuando un [ `ListView` ](xref:Xamarin.Forms.ListView) contiene un [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer), tanto el `ListView` y `PanGestureRecognizer` recibirán el movimiento panorámico y procesarlo. Sin embargo, con este específicos de la plataforma deshabilitada, cuando un `ListView` contiene un `PanGestureRecognizer`, el `PanGestureRecognizer` capturará el movimiento panorámico y procesarlos y el `ListView` no recibirá el movimiento panorámico.
 
