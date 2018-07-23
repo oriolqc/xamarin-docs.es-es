@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 571b5bb37ee10bb83dceef058613f955a8b7bff9
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 3525541ba0795f4e0b174b155c0ca219e3257bac
+ms.sourcegitcommit: 6433b424410a850f504e0f934bbb5baf8f093e49
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30772905"
+ms.lasthandoff: 07/16/2018
+ms.locfileid: "39067365"
 ---
 # <a name="publishing-to-google-play"></a>Publicación en Google Play
 
@@ -165,7 +165,7 @@ En la siguiente sección se explica cómo crear un nuevo proyecto de API de Goog
 
 Visual Studio para Mac cuenta con un flujo de trabajo integrado para publicar aplicaciones en Google Play. Si utiliza una versión anterior a Xamarin Studio 5.9, debe cargar manualmente el APK mediante Google Play Developer Console y, después, utilizar el cuadro de diálogo **Publish to Google Play (Publicación en Google Play)** para posteriores actualizaciones del APK. Además, debe tener al menos un APK que ya esté cargado antes de poder usar **Publish to Google Play (Publicación en Google Play)**. Si todavía no ha cargado su primer APK, debe cargarlo manualmente. Para obtener más información sobre cómo cargar manualmente un APK, consulte [Manually Uploading the APK (Cargar manualmente el APK)](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md).
 
-En [Creating a New Certificate (Crear un certificado)](~/android/deploy-test/signing/index.md#newcert) se describe la creación de un certificado para firmar aplicaciones de Android. En los siguientes pasos se describe cómo publicar una aplicación de Xamarin.Android en Google Play:
+En [Creación de un certificado](~/android/deploy-test/signing/index.md#newcert) se describe la creación de un certificado para firmar aplicaciones Android. En los siguientes pasos se describe cómo publicar una aplicación de Xamarin.Android en Google Play:
 
 1. Inicie sesión en su cuenta de desarrollador de Google Play para crear un nuevo proyecto que esté vinculado a ella.
 2. Cree un _Cliente de OAuth_ que autentique su aplicación.

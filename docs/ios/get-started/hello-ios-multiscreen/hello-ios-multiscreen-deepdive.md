@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/02/2016
-ms.openlocfilehash: cdeea6d78ec1262a0b5b613b4f483012c9df2c19
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: eaf77dd68895a3fbf677e1d0aa68125d81d709c1
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785663"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111230"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Análisis detallado de Hello, iOS Multiscreen
 
@@ -43,7 +43,6 @@ El modelo MVC es útil porque proporciona una separación lógica entre diferent
 > [!NOTE]
 > El modelo MVC se asemeja ligeramente a la estructura de las páginas ASP.NET o las aplicaciones WPF. En estos ejemplos, la vista es el componente realmente responsable de describir la interfaz de usuario y corresponde a la página ASPX (HTML) de ASP.NET o a XAML en una aplicación WPF. El controlador es el componente que se encarga de administrar la vista y corresponde al código subyacente de ASP.NET o WPF.
 
-
 ### <a name="model"></a>Modelo
 
 El objeto modelo normalmente es una representación específica de una aplicación de datos que se van a mostrar o escribir en la vista. El modelo suele estar definido de forma imprecisa, por ejemplo, en la aplicación **Phoneword_iOS**, la lista de números de teléfono (representados como una lista de cadenas) es el modelo. Si estuviéramos creando una aplicación de varias plataformas, podríamos optar por compartir el código **PhonewordTranslator** entre las aplicaciones iOS y Android. También podríamos imaginarnos ese código compartido como el modelo.
@@ -54,7 +53,6 @@ En algunos casos, la parte del modelo de MVC puede estar vacía. Por ejemplo, po
 
 > [!NOTE]
 > En algunos artículos, la parte de modelo del patrón MVC puede referirse a todo el back-end de la aplicación, no solo a los datos que aparecen en la interfaz de usuario. En esta guía se usa una interpretación moderna del modelo, aunque la distinción no es especialmente importante.
-
 
 ### <a name="view"></a>Ver
 
@@ -68,7 +66,7 @@ Los controladores también pueden administrar otros controladores. Por ejemplo, 
 
 ## <a name="navigation-controller"></a>Controlador de navegación
 
-En la aplicación Phoneword se ha usado un *controlador de navegación* para administrar la navegación entre varias pantallas. El controlador de navegación es un `UIViewController` especializado representado por la clase `UINavigationController`. En lugar de administrar una única jerarquía de vistas de contenido, el controlador de navegación administra otros controladores de vista, así como su propia jerarquía especial de vistas de contenido en forma de barra de herramientas de navegación que incluye un título, el botón Atrás y otras características opcionales.
+En la aplicación Phoneword se ha usado un controlador de navegación para administrar la navegación entre varias pantallas. El controlador de navegación es un `UIViewController` especializado representado por la clase `UINavigationController`. En lugar de administrar una única jerarquía de vistas de contenido, el controlador de navegación administra otros controladores de vista, así como su propia jerarquía especial de vistas de contenido en forma de barra de herramientas de navegación que incluye un título, el botón Atrás y otras características opcionales.
 
 El controlador de navegación es común en las aplicaciones de iOS y proporciona navegación para aplicaciones de iOS inseparables como la aplicación **Configuración**, como se muestra en la siguiente captura de pantalla:
 
@@ -86,27 +84,24 @@ El controlador de navegación tiene tres funciones principales:
     [![](hello-ios-multiscreen-deepdive-images/03.png "Diagrama que ilustra cómo \"sacar\" una carta de la baraja")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
 
 
--  **Proporciona una barra de título**: la parte superior del **controlador de navegación** se denomina *barra de título*. Es responsable de mostrar el título del controlador de vista, como se muestra en el diagrama siguiente:  
+-  **Proporciona una barra de título**: la parte superior del controlador de navegación se denomina *barra de título*. Es responsable de mostrar el título del controlador de vista, como se muestra en el diagrama siguiente:  
 
     [![](hello-ios-multiscreen-deepdive-images/04.png "La barra de título es responsable de mostrar el título del controlador de vista")](hello-ios-multiscreen-deepdive-images/04.png#lightbox)
 
-
-
-
 ### <a name="root-view-controller"></a>Controlador de vista raíz
 
-Un **controlador de navegación** no administra una jerarquía de vistas de contenido, por lo que no tiene nada que mostrar por sí mismo.
-Un **controlador de navegación** se empareja con un *controlador de vista raíz*:
+Un controlador de navegación no administra una jerarquía de vistas de contenido, por lo que no tiene nada que mostrar por sí mismo.
+Se empareja con un *controlador de vista raíz*:
 
  [![](hello-ios-multiscreen-deepdive-images/05.png "Un controlador de navegación se empareja con un controlador de vista raíz")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
-El controlador de vista raíz representa al primer controlador de vista de la pila del **controlador de navegación** y la jerarquía de vistas de contenido del controlador de vista raíz es la primera jerarquía de vistas de contenido que se carga en la ventana. Si se quiere colocar toda la aplicación en la pila del controlador de navegación, se puede pasar el Segue sin origen al **controlador de navegación** y establecer el controlador de vista de la primera pantalla como controlador de vista raíz, como se hizo en la aplicación Phoneword:
+El controlador de vista raíz representa al primer controlador de vista de la pila del controlador de navegación y la jerarquía de vistas de contenido del controlador de vista raíz es la primera jerarquía de vistas de contenido que se carga en la ventana. Si se quiere colocar toda la aplicación en la pila del controlador de navegación, se puede pasar el Segue sin origen al controlador de navegación y establecer el controlador de vista de la primera pantalla como controlador de vista raíz, como se hizo en la aplicación Phoneword:
 
  [![](hello-ios-multiscreen-deepdive-images/06.png "El segoe sin origen establece el controlador de vista de la primera pantalla como el controlador de vista raíz")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>Otras opciones de navegación
 
-El **controlador de navegación** es una forma común de controlar la navegación en iOS, pero no es la única opción. Un [controlador de barra de pestañas](~/ios/user-interface/controls/creating-tabbed-applications.md) puede dividir una aplicación en diferentes áreas funcionales; un [controlador de vista en dos paneles](https://developer.xamarin.com/recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) puede crear vistas principal y de detalles; y un [controlador de navegación flotante](http://components.xamarin.com/view/flyoutnavigation) crea una navegación que el usuario puede deslizar desde el lateral. Todos ellos se pueden combinar con un **controlador de navegación** para lograr una forma intuitiva de presentar contenido.
+El controlador de navegación es una forma común de controlar la navegación en iOS, pero no es la única opción. Por ejemplo, un [controlador de barra de pestañas](~/ios/user-interface/controls/creating-tabbed-applications.md) puede dividir una aplicación en varias áreas funcionales, y un [controlador de vista divida](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) puede usarse para crear vistas principales o detalladas. Al combinar los controladores de navegación con estos otros esquemas de navegación, obtendremos varias formas de presentar el contenido y navegar por este de forma flexible en iOS.
 
 ## <a name="handling-transitions"></a>Control de transiciones
 
@@ -202,7 +197,6 @@ La aplicación Phoneword presentó varios conceptos que no se tratan en esta gu�
 -  **Controlador de vista de tabla**: `CallHistoryController` es un controlador de vista de tabla. Un controlador de vista de tabla contiene una vista de tabla, que es la herramienta de diseño y visualización de datos más común de iOS. Las tablas están fuera del ámbito de esta guía. Para más información sobre los controladores de vista de tabla, vea la guía [Working with Tables and Cells (Trabajo con tablas y celdas)](~/ios/user-interface/controls/tables/index.md).
 -   **Id. de guion gráfico**: al establecer el identificador de guion gráfico, se crea una clase de controlador de vista en Objective-C que contiene el código subyacente para el controlador de vista del guion gráfico. El identificador de guion gráfico se usa para buscar la clase de Objective-C y crear instancias del controlador de vista en el guion gráfico. Para más información sobre los identificadores de guion gráfico, vea la guía [Introduction to Storyboards (Introducción a los guiones gráficos)](~/ios/user-interface/storyboards/index.md).
 
-
 ## <a name="summary"></a>Resumen
 
 Enhorabuena, ha completado su primera aplicación multipantalla de iOS.
@@ -210,7 +204,6 @@ Enhorabuena, ha completado su primera aplicación multipantalla de iOS.
 En esta guía se ha presentado el modelo MVC y se ha usado para crear una aplicación de varias pantallas. También se han examinado los controladores de navegación y su papel en la navegación de iOS. Ahora tiene la base necesaria para empezar a desarrollar sus propias aplicaciones de Xamarin.iOS.
 
 A continuación vamos a aprender a crear aplicaciones multiplataforma con Xamarin con las guías [Introduction to Mobile Development (Introducción al desarrollo móvil)](~/cross-platform/get-started/introduction-to-mobile-development.md) y [Building Cross-Platform Applications (Creación de aplicaciones multiplataforma)](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md).
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,18 +7,19 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: c0404a1fd8f7e878638b9483c65c637f6b4faa66
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: dd0afe03adbd021717a88cd4409e3e1351ba9b50
+ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786108"
+ms.lasthandoff: 07/18/2018
+ms.locfileid: "39111191"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Aprovisionamiento manual de Xamarin.iOS
 
 _Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el desarrollo de iOS consiste en aprovisionar el dispositivo iOS. En esta guía se analiza el uso del aprovisionamiento manual para establecer certificados de desarrollo y perfiles._
 
-<a name="signingidentity" />
+> [!NOTE]
+> Las instrucciones que se muestran en esta página son relevantes para los desarrolladores que han pagado por el acceso al programa de Apple Developer. Si tiene una cuenta gratuita, consulte la guía de [aprovisionamiento gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md) para obtener más información acerca de las pruebas en dispositivos.
 
 ## <a name="creating-a-signing-identity"></a>Creación de una identidad de firma
 
@@ -27,9 +28,9 @@ El primer paso para configurar un dispositivo de desarrollo consiste en crear un
 - Un certificado de desarrollo
 - Una clave privada
 
-Los certificados de desarrollo y las [claves](#keypairs) asociadas son fundamentales para un desarrollador de iOS, ya que establecen su identidad con Apple y lo asocian a un dispositivo determinado y a un perfil de desarrollo, como si incluyeran su firma digital en las aplicaciones. Apple busca certificados para controlar el acceso a los dispositivos en los que se puede implementar.
+Los certificados de desarrollo y las [claves](#understanding-certificate-key-pairs) asociadas son fundamentales para un desarrollador de iOS, ya que establecen su identidad con Apple y lo asocian a un dispositivo determinado y a un perfil de desarrollo, como si incluyeran su firma digital en las aplicaciones. Apple busca certificados para controlar el acceso a los dispositivos en los que se puede implementar.
 
-Los equipos de desarrollo, los certificados y los perfiles pueden administrarse mediante el acceso a la sección [Certificados, identificadores y perfiles](https://developer.apple.com/account/overview.action) del Centro de usuarios registrados de Apple. Apple requiere que tenga una identidad de firma para compilar el código para el dispositivo o el simulador.  
+Los equipos de desarrollo, los certificados y los perfiles pueden administrarse mediante el acceso a la sección [Certificados, identificadores y perfiles](https://developer.apple.com/account/overview.action) del Centro de usuarios registrados de Apple (se requiere iniciar sesión). Apple requiere que tenga una identidad de firma para compilar el código para el dispositivo o el simulador.  
 
 > [!IMPORTANT]
 > Es importante que tenga en cuenta que solo puede tener dos certificados de desarrollo de iOS en todo momento. Si necesita crear otro, deberá revocar uno existente. Si una máquina usa un certificado revocado, no podrá firmar la aplicación.
@@ -70,8 +71,6 @@ Para generar una identidad de firma, haga lo siguiente:
 
     [![](manual-provisioning-images/keychain.png "Certificado en Acceso a llaves")](manual-provisioning-images/keychain.png#lightbox)
 
-<a name="keypairs" />
-
 ### <a name="understanding-certificate-key-pairs"></a>Introducción a los pares de claves de certificado
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
@@ -89,13 +88,13 @@ El perfil de desarrollador contiene certificados, sus claves asociadas y los per
 
 <a name="provisioning" />
 
-## <a name="provisioning-an-ios-device-for-development"></a>Aprovisionar un dispositivo iOS para el desarrollo
+## <a name="provisioning-an-ios-device-for-development"></a>Aprovisionamiento de un dispositivo iOS para el desarrollo
 
 Ahora que ha establecido la identidad con Apple y tiene un certificado de desarrollo, debe configurar un perfil de aprovisionamiento y las entidades necesarias para poder implementar una aplicación en un dispositivo Apple. El dispositivo debe ejecutar una versión de iOS compatible con Xcode. Por ello, puede ser necesario actualizar el dispositivo, Xcode o ambos.
 
 <a name="adddevice" />
 
-## <a name="add-a-device"></a>Agregar un dispositivo
+## <a name="add-a-device"></a>Agregación de un dispositivo
 
 Al crear un perfil de aprovisionamiento para el desarrollo, hay que indicar qué dispositivos pueden ejecutar la aplicación. Para ello, se pueden agregar hasta 100 dispositivos por año natural en el portal para desarrolladores y, desde aquí, se pueden seleccionar los dispositivos que se agregarán a un determinado perfil de aprovisionamiento. Siga estos pasos en su Mac para agregar un dispositivo en el portal para desarrolladores.
 
@@ -136,10 +135,9 @@ Repita los pasos anteriores para todos los dispositivos iOS que se vayan a usar 
 
 Después de agregar el dispositivo en el portal para desarrolladores, deberá crear un perfil de aprovisionamiento y agregarle el dispositivo.
 
-
 <a name="provisioningprofile" />
 
-## <a name="creating-a-development-provisioning-profile"></a>Crear un perfil de aprovisionamiento de desarrollo
+## <a name="creating-a-development-provisioning-profile"></a>Creación de un perfil de aprovisionamiento de desarrollo
 
 Al igual que con el certificado de desarrollo, se pueden crear perfiles de aprovisionamiento de forma manual a través de la sección [Certificados, identificadores y perfiles](https://developer.apple.com/account/overview.action) del Centro de usuarios registrados de Apple.
 
@@ -191,7 +189,7 @@ Después de que se haya creado correctamente el perfil de aprovisionamiento, pod
 
 <a name="download" />
 
-## <a name="downloading-profiles-and-certificates-in-xcode"></a>Descargar perfiles y certificados en Xcode
+## <a name="downloading-profiles-and-certificates-in-xcode"></a>Descarga de perfiles y certificados en Xcode
 
 Los certificados y los perfiles de aprovisionamiento que se han creado en el portal para desarrolladores de Apple podrían no aparecer automáticamente en Xcode. Por lo tanto, puede ser necesario descargarlos para que Visual Studio para Mac y Visual Studio tengan acceso a ellos. Para actualizar y descargar los certificados creados en el portal para desarrolladores de Apple, haga lo siguiente:
 
@@ -228,9 +226,7 @@ Apple proporciona una selección de servicios de aplicación especiales, tambié
 * Cree un nuevo [perfil de aprovisionamiento](#provisioningprofile) que contenga dicho id. de aplicación.
 * Establecer derechos en el proyecto de Xamarin.iOS
 
-<a name="deploy" />
-
-## <a name="deploying-to-a-device"></a>Implementar en un dispositivo
+## <a name="deploying-to-a-device"></a>Implementación en un dispositivo
 
 En este momento, el aprovisionamiento se ha completado y la aplicación está lista para su implementación en el dispositivo. Para ello, siga estos pasos:
 
@@ -276,7 +272,6 @@ Si está establecido en **Automático**, Visual Studio para Mac seleccionará la
 ## <a name="summary"></a>Resumen
 
 En esta guía hemos tratado los pasos necesarios para configurar el entorno de desarrollo para Xamarin.iOS. Hemos visto cómo se firma el código de una aplicación con información sobre el desarrollador, su equipo, los dispositivos en los que se puede ejecutar la aplicación y el identificador de aplicación individual.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 
