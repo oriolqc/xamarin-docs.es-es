@@ -1,29 +1,29 @@
 ---
 title: Fuentes de Xamarin.Forms
-description: Este artículo explica cómo especificar información de fuentes de los controles que mostrar texto en aplicaciones de Xamarin.Forms.
+description: En este artículo se explica cómo especificar información de fuente en los controles que muestran texto en las aplicaciones de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 3d5fe936da9086dd7201b7ee7d91185b81eb65a1
-ms.sourcegitcommit: d70fcc6380834127fdc58595aace55b7821f9098
+ms.openlocfilehash: e6635bc13214a5a4e728fa3e71db86a8ea1c39d6
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36269036"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39202960"
 ---
 # <a name="fonts-in-xamarinforms"></a>Fuentes de Xamarin.Forms
 
-Este artículo describe cómo Xamarin.Forms le permite especificar los atributos de fuente (incluidas peso y tamaño) de los controles que muestran texto. Puede ser información de fuentes [especificadas en el código](#Setting_Font_in_Code) o [especificado en XAML](#Setting_Font_in_Xaml).
-También es posible utilizar un [fuente personalizada](#Using_a_Custom_Font).
+Este artículo describe cómo Xamarin.Forms le permite especificar atributos de fuente (incluidas peso y tamaño) en los controles que muestran texto. Puede ser información de fuente [especificado en el código](#Setting_Font_in_Code) o [especificado en XAML](#Setting_Font_in_Xaml).
+También es posible usar un [fuente personalizada](#Using_a_Custom_Font).
 
 <a name="Setting_Font_in_Code" />
 
-## <a name="setting-font-in-code"></a>Establece la fuente en código
+## <a name="setting-font-in-code"></a>Establecer fuente en el código
 
-Utilice las tres propiedades relacionadas con la fuente de todos los controles que muestran texto:
+Use las tres propiedades relacionadas con la fuente de todos los controles que muestran texto:
 
 - **FontFamily** &ndash; el `string` nombre de la fuente.
 - **FontSize** &ndash; el tamaño de fuente como un `double`.
@@ -52,11 +52,11 @@ label.FontSize = 24;
 También puede usar el `NamedSize` enumeración que tiene cuatro opciones integradas; Xamarin.Forms elige el mejor tamaño para cada plataforma.
 
 -  **Micro**
--  **Pequeña**
+-  **Pequeño**
 -  **Medio**
 -  **Grandes**
 
-El `NamedSize` enumeración puede ser utilizado, donde un `FontSize` puede especificarse mediante la `Device.GetNamedSize` método para convertir el valor para un `double`:
+El `NamedSize` enumeración puede ser dondequiera que usa un `FontSize` puede especificarse mediante la `Device.GetNamedSize` método para convertir el valor de un `double`:
 
 ```csharp
 label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
@@ -70,41 +70,17 @@ Estilos de fuente como **negrita** y *cursiva* se pueden establecer en el `FontA
 
 -  **Ninguno**
 -  **Negrita**
--  **cursiva**
+-  **Cursiva**
 
-El `FontAttribute` enumeración puede utilizarse como se indica a continuación (puede especificar un único atributo o `OR` ellos juntos):
+El `FontAttribute` enumeración se puede usar como sigue (se puede especificar un atributo único o `OR` juntarlas):
 
 ```csharp
 label.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
 ```
 
-### <a name="formattedstring"></a>FormattedString
+### <a name="setting-font-info-per-platform"></a>Información de fuente de la configuración por plataforma
 
-Algunos controles de Xamarin.Forms (como `Label`) también admite atributos de fuente distintos dentro de una cadena con el `FormattedString` clase. A `FormattedString` consta de uno o más `Span`s, cada uno de los cuales puede tener sus propio formato atributos.
-
-La `Span` clase tiene los siguientes atributos:
-
-* **Texto** &ndash; que muestre el valor
-* **FontFamily** &ndash; el nombre de fuente
-* **FontSize** &ndash; el tamaño de fuente
-* **Atributos de fuente** &ndash; como información de estilo *cursiva* y **negrita**
-* **ForegroundColor** &ndash; color del texto
-* **BackgroundColor** &ndash; color de fondo
-
-Un ejemplo de crear y mostrar un `FormattedString` se muestra a continuación &ndash; tenga en cuenta que se asigna a las etiquetas `FormattedText` propiedad y no el `Text` propiedad.
-
-```csharp
-var labelFormatted = new Label ();
-var fs = new FormattedString ();
-fs.Spans.Add (new Span { Text="Red, ", ForegroundColor = Color.Red, FontSize = 20, FontAttributes = FontAttributes.Italic });
-fs.Spans.Add (new Span { Text=" blue, ", ForegroundColor = Color.Blue, FontSize = 32 });
-fs.Spans.Add (new Span { Text=" and green!", ForegroundColor = Color.Green, FontSize = 12 });
-labelFormatted.FormattedText = fs;
-```
-
-### <a name="setting-font-info-per-platform"></a>Establecer la información de fuente por plataforma
-
-Como alternativa, el `Device.RuntimePlatform` propiedad puede utilizarse para establecer los nombres de fuente diferentes en cada plataforma, como se muestra en este código:
+Como alternativa, el `Device.RuntimePlatform` propiedad puede usarse para establecer los nombres de fuente diferente en cada plataforma, como se muestra en este código:
 
 ```csharp
 label.FontFamily = Device.RuntimePlatform == Device.iOS ? "Lobster-Regular" :
@@ -119,14 +95,14 @@ Es una buena fuente de información de fuentes para iOS [iosfonts.com](http://io
 
 ## <a name="setting-the-font-in-xaml"></a>Establecer la fuente en XAML
 
-Xamarin.Forms controla dicho texto para mostrar todos tienen un `Font` propiedad que se pueden establecer en XAML. La manera más sencilla para establecer la fuente en XAML es usar los valores de enumeración de tamaño con nombre, como se muestra en este ejemplo:
+Xamarin.Forms controla ese texto para mostrar todos tienen un `Font` propiedad que se puede establecer en XAML. La manera más sencilla para establecer la fuente en XAML es usar los valores de enumeración de tamaño con nombre, como se muestra en este ejemplo:
 
 ```xaml
 <Label Text="Login" FontSize="Large"/>
 <Label Text="Instructions" FontSize="Small"/>
 ```
 
-Hay un convertidor integrado para la `Font` propiedad que permite que todos los valores de fuente se exprese como un valor de cadena en XAML. Los ejemplos siguientes muestran cómo se pueden especificar atributos de fuente y tamaños en XAML:
+Hay un convertidor de tipos integrado para el `Font` propiedad que permite que todos los valores de fuente se exprese como un valor de cadena en XAML. Los ejemplos siguientes muestran cómo se pueden especificar atributos de fuente y tamaños en XAML:
 
 ```xaml
 <Label Text="Italics are supported" FontAttributes="Italic" />
@@ -134,7 +110,7 @@ Hay un convertidor integrado para la `Font` propiedad que permite que todos los 
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-Para especificar varias `Font` opciones, se combinan la configuración necesaria en una sola `Font` cadena de atributo. Debe tener el formato la cadena del atributo de fuente `"[font-face],[attributes],[size]"`. Es importante el orden de los parámetros, todos los parámetros son opcionales y varios `attributes` se pueden especificar, por ejemplo:
+Para especificar varias `Font` opciones, se combinan la configuración necesaria en una sola `Font` cadena de atributo. La cadena de atributos de fuente se debe dar formato como `"[font-face],[attributes],[size]"`. Es importante el orden de los parámetros, todos los parámetros son opcionales y varios `attributes` se pueden especificar, por ejemplo:
 
 ```xaml
 <Label Text="Small bold text" Font="Bold, Micro" />
@@ -142,23 +118,7 @@ Para especificar varias `Font` opciones, se combinan la configuración necesaria
 <Label Text="Really big bold and italic text" Font="Bold, Italic, 72"  />
 ```
 
-La `FormattedString` clase también puede usarse en XAML, como se muestra aquí:
-
-```xaml
-<Label>
-    <Label.FormattedText>
-        <FormattedString>
-            <FormattedString.Spans>
-                <Span Text="Red, " ForegroundColor="Red" FontAttributes="Italic" FontSize="20" />
-                <Span Text=" blue, " ForegroundColor="Blue" FontSize="32" />
-                <Span Text=" and green! " ForegroundColor="Green" FontSize="12"/>
-            </FormattedString.Spans>
-        </FormattedString>
-    </Label.FormattedText>
-</Label>
-```
-
-[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-values) Puede también pueden utilizar en XAML para representar una fuente diferente en cada plataforma. En el ejemplo siguiente utiliza una fuente personalizada de iOS (<span style="font-family:MarkerFelt-Thin">fino MarkerFelt</span>) y especifica un solo tamaño y atributos de las otras plataformas:
+[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-values) También se puede utilizar en XAML para representar una fuente diferente en cada plataforma. El ejemplo siguiente utiliza un nombre de fuente personalizados en iOS (<span style="font-family:MarkerFelt-Thin">MarkerFelt Thin</span>) y especifica solo tamaño y atributos en las otras plataformas:
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -172,26 +132,26 @@ La `FormattedString` clase también puede usarse en XAML, como se muestra aquí:
 </Label>
 ```
 
-Al especificar un nombre de fuente personalizados, siempre es una buena idea usar `OnPlatform`, ya que es difícil encontrar una fuente que está disponible en todas las plataformas.
+Al especificar un nombre de fuente personalizada, siempre es una buena idea usar `OnPlatform`, ya que es difícil encontrar una fuente que está disponible en todas las plataformas.
 
 <a name="Using_a_Custom_Font" />
 
 ## <a name="using-a-custom-font"></a>Uso de una fuente personalizada
 
-El uso de una fuente que no sea de los tipos de letra integradas requiere algún código específico de la plataforma. Esta captura de pantalla muestra la fuente personalizada **bogavante** de [fuentes de código abierto de Google](https://www.google.com/fonts) representa el uso de Xamarin.Forms.
+El uso de una fuente que no sea de los tipos de letra integrados requiere algún código específico de la plataforma. Esta captura de pantalla muestra la fuente personalizada **Lobster** desde [fuentes de código abierto de Google](https://www.google.com/fonts) representar mediante Xamarin.Forms.
 
- [![Fuente personalizada de iOS y Android](fonts-images/custom-sml.png "Custom fuentes Example")](fonts-images/custom.png#lightbox "Custom fuentes Example")
+ [![Fuente personalizada en iOS y Android](fonts-images/custom-sml.png "ejemplo de fuentes personalizado")](fonts-images/custom.png#lightbox "ejemplo de fuentes personalizado")
 
 A continuación, se describen los pasos necesarios para cada plataforma. Cuando se incluyen archivos de fuente personalizada con una aplicación, asegúrese de comprobar que permite la licencia de la fuente de distribución.
 
 ### <a name="ios"></a>iOS
 
-Es posible mostrar una fuente personalizada por asegurarse de que se carga primero, a continuación, hacer referencia a ella por su nombre mediante el Xamarin.Forms `Font` métodos.
+Es posible mostrar una fuente personalizada en primer lugar, lo que garantiza que se carga y, luego, que hace referencia a él por su nombre mediante Xamarin.Forms `Font` métodos.
 Siga las instrucciones de [esta entrada de blog](http://blog.xamarin.com/custom-fonts-in-ios/):
 
-1. Agregue el archivo de fuente con **acción de compilación: BundleResource**, y
-2. Actualización la **Info.plist** archivo (**fuentes proporcionadas por la aplicación**, o `UIAppFonts`, key), a continuación,
-3. Hacer referencia a él por su nombre siempre que defina una fuente de Xamarin.Forms.
+1. Agregar el archivo de fuentes con **acción de compilación: BundleResource**, y
+2. Actualización de la **Info.plist** archivo (**fuentes proporcionadas por la aplicación**, o `UIAppFonts`, key), a continuación,
+3. Hacer referencia al mismo nombre siempre que defina una fuente de Xamarin.Forms.
 
 ```csharp
 new Label
@@ -203,7 +163,7 @@ new Label
 
 ### <a name="android"></a>Android
 
-Xamarin.Forms para Android puede hacer referencia a una fuente personalizada que se ha agregado al proyecto siguiendo un estándar de nomenclatura específico. Primero agregue el archivo de fuente a la **activos** carpeta en el proyecto de aplicación y el conjunto *acción de compilación: AndroidAsset*. A continuación, utilice la ruta de acceso completa y *nombre de la fuente* separados por una almohadilla (#) como el nombre de la fuente de Xamarin.Forms, como se muestra en el siguiente fragmento de código:
+Xamarin.Forms para Android puede hacer referencia a una fuente personalizada que se ha agregado al proyecto siguiendo un estándar de nomenclatura. Primero agregue el archivo de fuente a la **activos** carpeta en el proyecto de aplicación y establezca *acción de compilación: AndroidAsset*. A continuación, utilice la ruta de acceso completa y *nombre de la fuente* separados por una almohadilla (#) como el nombre de fuente en Xamarin.Forms, como se muestra en el siguiente fragmento de código:
 
 ```csharp
 new Label
@@ -215,7 +175,7 @@ new Label
 
 ### <a name="windows"></a>Windows
 
-Xamarin.Forms para plataformas de Windows puede hacer referencia a una fuente personalizada que se ha agregado al proyecto siguiendo un estándar de nomenclatura específico. Primero agregue el archivo de fuente a la **/Assets/fuentes/** carpeta en el proyecto de aplicación y se establece la <span class="UIItem">compilar: contenido de la acción</span>. A continuación, utilizar el nombre completo de ruta de acceso y la fuente, seguido por una almohadilla (#) y el <span class="UIItem">nombre de la fuente</span>, como se muestra en el siguiente fragmento de código:
+Xamarin.Forms para plataformas de Windows puede hacer referencia a una fuente personalizada que se ha agregado al proyecto siguiendo un estándar de nomenclatura. Primero agregue el archivo de fuente a la **/Assets/fuentes/** carpeta en el proyecto de aplicación y establezca el <span class="UIItem">compilar: contenido de la acción</span>. A continuación, utilice la fuente y la ruta de acceso de nombre de archivo completo, seguido por una almohadilla (#) y el <span class="UIItem">nombre de la fuente</span>, tal y como se muestra el siguiente fragmento de código:
 
 ```csharp
 new Label
@@ -226,13 +186,13 @@ new Label
 ```
 
 > [!NOTE]
-> Tenga en cuenta que el nombre de archivo de fuente y el nombre de la fuente pueden ser diferentes. Para conocer el nombre de fuente en Windows, haga clic en el archivo .ttf y seleccione **vista previa**. A continuación, se puede determinar el nombre de la fuente de la ventana de vista previa.
+> Tenga en cuenta que el nombre de archivo de fuente y el nombre de fuente pueden ser diferentes. Para conocer el nombre de fuente en Windows, haga clic en el archivo .ttf y seleccione **Preview**. A continuación, se puede determinar el nombre de fuente desde la ventana Vista previa.
 
 El código común de la aplicación ya está completo. El código del marcador de teléfono específico de la plataforma se implementará como [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
 
 ### <a name="xaml"></a>XAML
 
-También puede usar [ `Device.RuntimePlatform` ](~/xamarin-forms/platform/device.md#providing-platform-values) en XAML que se debe representar una fuente personalizada:
+También puede usar [ `Device.RuntimePlatform` ](~/xamarin-forms/platform/device.md#providing-platform-values) en XAML para representar una fuente personalizada:
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -250,10 +210,9 @@ También puede usar [ `Device.RuntimePlatform` ](~/xamarin-forms/platform/device
 
 ## <a name="summary"></a>Resumen
 
-Xamarin.Forms ofrece valores predeterminados básicos para que puedas cambiar el tamaño de texto fácilmente para todas las plataformas admitidas. También le permite especificar el tipo de fuente y tamaño &ndash; incluso de forma diferente para cada plataforma &ndash; cuando se requiere un control más minucioso. El `FormattedString` clase puede usarse para construir una cadena que contiene las especificaciones de fuente diferente utilizando el `Span` clase.
+Xamarin.Forms proporciona valores predeterminados básicos para que pueda cambiar el tamaño de texto fácilmente para todas las plataformas compatibles. También permite especificar el tipo de fuente y tamaño &ndash; incluso de forma diferente para cada plataforma &ndash; cuando se requiere un control más minucioso.
 
-Información de fuentes también puede especificarse en XAML mediante atributos de una fuente con el formato correcto o la `FormattedString` elemento con `Span` elementos secundarios.
-
+También se puede especificar información de fuentes en XAML mediante atributos de fuente con el formato correcto.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 4fee67f08e86c40709aa226c40c0f7721dc26800
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 351119a8b0089f78d4ce98729a1516c3cd7bae7b
+ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998323"
+ms.lasthandoff: 07/23/2018
+ms.locfileid: "39203090"
 ---
 # <a name="customizing-a-map-pin"></a>Personalización de un Pin de mapa
 
@@ -240,7 +240,7 @@ El `GetViewForAnnotation` método se llama cuando la ubicación de la anotación
 El `GetViewForAnnotation` método acepta un `IMKAnnotation` que contiene los datos de la anotación y devuelve un `MKAnnotationView` para su presentación en el mapa y se muestra en el ejemplo de código siguiente:
 
 ```csharp
-MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
+protected override MKAnnotationView GetViewForAnnotation(MKMapView mapView, IMKAnnotation annotation)
 {
     MKAnnotationView annotationView = null;
 
@@ -273,12 +273,12 @@ Este método garantiza que la anotación se mostrará como una imagen personaliz
 1. El `GetCustomPin` método se llama para devolver los datos de NIP personalizado para la anotación.
 1. Para ahorrar memoria, la vista de la anotación se agrupa para su uso con la llamada a [ `DequeueReusableAnnotation` ](https://developer.xamarin.com/api/member/MapKit.MKMapView.DequeueReusableAnnotation/(System.String)/).
 1. El `CustomMKAnnotationView` clase extiende la `MKAnnotationView` clase con `Id` y `Url` propiedades que corresponden a las propiedades idénticas en el `CustomPin` instancia. Una nueva instancia de la `CustomMKAnnotationView` se crea, siempre que la anotación es `null`:
-  - El `CustomMKAnnotationView.Image` propiedad está establecida en la imagen que representará la anotación en el mapa.
-  - El `CustomMKAnnotationView.CalloutOffset` propiedad está establecida en un `CGPoint` que especifica que la llamada se centrará por encima de la anotación.
-  - El `CustomMKAnnotationView.LeftCalloutAccessoryView` propiedad está establecida en una imagen de un objeto monkey del que aparecerá a la izquierda del título de la anotación y dirección.
-  - El `CustomMKAnnotationView.RightCalloutAccessoryView` propiedad está establecida en un *información* botón que aparece a la derecha del título de la anotación y dirección.
-  - El `CustomMKAnnotationView.Id` propiedad está establecida en el `CustomPin.Id` propiedad devuelta por la `GetCustomPin` método. Esto permite que la anotación pueda identificarse de forma que tenga [llamada puede personalizarse aún más](#Selecting_the_Annotation)si lo desea.
-  - El `CustomMKAnnotationView.Url` propiedad está establecida en el `CustomPin.Url` propiedad devuelta por la `GetCustomPin` método. La dirección URL se abrirá cuando el usuario [pulsa el botón se muestra en la vista de accesorios de llamada correcta](#Tapping_on_the_Right_Callout_Accessory_View).
+    - El `CustomMKAnnotationView.Image` propiedad está establecida en la imagen que representará la anotación en el mapa.
+    - El `CustomMKAnnotationView.CalloutOffset` propiedad está establecida en un `CGPoint` que especifica que la llamada se centrará por encima de la anotación.
+    - El `CustomMKAnnotationView.LeftCalloutAccessoryView` propiedad está establecida en una imagen de un objeto monkey del que aparecerá a la izquierda del título de la anotación y dirección.
+    - El `CustomMKAnnotationView.RightCalloutAccessoryView` propiedad está establecida en un *información* botón que aparece a la derecha del título de la anotación y dirección.
+    - El `CustomMKAnnotationView.Id` propiedad está establecida en el `CustomPin.Id` propiedad devuelta por la `GetCustomPin` método. Esto permite que la anotación pueda identificarse de forma que tenga [llamada puede personalizarse aún más](#Selecting_the_Annotation)si lo desea.
+    - El `CustomMKAnnotationView.Url` propiedad está establecida en el `CustomPin.Url` propiedad devuelta por la `GetCustomPin` método. La dirección URL se abrirá cuando el usuario [pulsa el botón se muestra en la vista de accesorios de llamada correcta](#Tapping_on_the_Right_Callout_Accessory_View).
 1. El [ `MKAnnotationView.CanShowCallout` ](https://developer.xamarin.com/api/property/MapKit.MKAnnotationView.CanShowCallout/) propiedad está establecida en `true` para que se muestre la llamada cuando se pulsa la anotación.
 1. La anotación se devuelve para su visualización en el mapa.
 
