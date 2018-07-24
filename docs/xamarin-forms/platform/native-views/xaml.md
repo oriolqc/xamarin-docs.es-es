@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 4afdf1210a435e4631b1fe43e9415f4f9f599350
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
-ms.translationtype: HT
+ms.openlocfilehash: b7ea75c13d84cf9fe74d7a606f6127aaa6bbe3b2
+ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935496"
+ms.lasthandoff: 07/12/2018
+ms.locfileid: "38996339"
 ---
 # <a name="native-views-in-xaml"></a>Vistas nativas en XAML
 
@@ -44,7 +44,7 @@ Para hacer referencia a una vista nativa desde un archivo de código subyacente,
 
 ## <a name="consuming-native-views"></a>Consumo de vistas nativas
 
-En el ejemplo de código siguiente se muestra cómo consumir vistas nativas para cada plataforma para un objeto Xamarin.Forms [ `ContentPage` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentPage/):
+En el ejemplo de código siguiente se muestra cómo consumir vistas nativas para cada plataforma para un objeto Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -63,11 +63,11 @@ En el ejemplo de código siguiente se muestra cómo consumir vistas nativas para
 </ContentPage>
 ```
 
-Así como especificar el `clr-namespace` y `assembly` para un espacio de nombres de vista nativo, un `targetPlatform` también debe especificarse. Esto se debe establecer en uno de los valores de la [ `TargetPlatform` ](https://developer.xamarin.com/api/type/Xamarin.Forms.TargetPlatform/) enumeración y normalmente se establecerá en `iOS`, `Android`, o `Windows`. En tiempo de ejecución, el analizador XAML pasará por alto los prefijos de espacios de nombres XML que tienen un `targetPlatform` que no coincide con la plataforma en la que se ejecuta la aplicación.
+Así como especificar el `clr-namespace` y `assembly` para un espacio de nombres de vista nativo, un `targetPlatform` también debe especificarse. Esto se debe establecer en uno de los valores de la [ `TargetPlatform` ](xref:Xamarin.Forms.TargetPlatform) enumeración y normalmente se establecerá en `iOS`, `Android`, o `Windows`. En tiempo de ejecución, el analizador XAML pasará por alto los prefijos de espacios de nombres XML que tienen un `targetPlatform` que no coincide con la plataforma en la que se ejecuta la aplicación.
 
 Cada declaración de espacio de nombres puede utilizarse para hacer referencia a cualquier clase o estructura del espacio de nombres especificado. Por ejemplo, el `ios` declaración de espacio de nombres se puede usar para hacer referencia a cualquier clase o estructura desde iOS `UIKit` espacio de nombres. Se pueden establecer propiedades de la vista nativa a través de XAML, pero deben coincidir con los tipos de propiedad y objeto. Por ejemplo, el `UILabel.TextColor` propiedad está establecida en `UIColor.Red` utilizando el `x:Static` extensión de marcado y el `ios` espacio de nombres.
 
-Propiedades enlazables y adjuntadas propiedades enlazables también pueden establecerse en vistas nativas mediante el uso de la `Class.BindableProperty="value"` sintaxis. Cada vista nativa se encapsula en una plataforma específica `NativeViewWrapper` instancia, que se deriva de la [ `Xamarin.Forms.View` ](https://developer.xamarin.com/api/type/Xamarin.Forms.View/) clase. Establecer una propiedad enlazable o una propiedad enlazable adjunta en una vista nativa, el valor de propiedad transfiere al contenedor. Por ejemplo, se puede especificar un diseño centrado horizontal estableciendo `View.HorizontalOptions="Center"` en la vista nativa.
+Propiedades enlazables y adjuntadas propiedades enlazables también pueden establecerse en vistas nativas mediante el uso de la `Class.BindableProperty="value"` sintaxis. Cada vista nativa se encapsula en una plataforma específica `NativeViewWrapper` instancia, que se deriva de la [ `Xamarin.Forms.View` ](xref:Xamarin.Forms.View) clase. Establecer una propiedad enlazable o una propiedad enlazable adjunta en una vista nativa, el valor de propiedad transfiere al contenedor. Por ejemplo, se puede especificar un diseño centrado horizontal estableciendo `View.HorizontalOptions="Center"` en la vista nativa.
 
 > [!NOTE]
 > Tenga en cuenta que los estilos no se puede usar con vistas nativas, porque los estilos solo pueden tener como destino las propiedades que están respaldadas por `BindableProperty` objetos.
@@ -75,15 +75,15 @@ Propiedades enlazables y adjuntadas propiedades enlazables también pueden estab
 Constructores de widget Android requieren generalmente el Android `Context` objeto como un argumento y esto es posible acceder a través de una propiedad estática en el `MainActivity` clase. Por lo tanto, al crear un widget de Android en XAML, el `Context` objeto normalmente se debe pasar al constructor del widget mediante el `x:Arguments` atributo con un `x:Static` extensión de marcado. Para obtener más información, consulte [pasar argumentos a vistas nativas](#passing_arguments).
 
 > [!NOTE]
-> Tenga en cuenta que una vista nativa con nombres `x:Name` no es posible en un proyecto de biblioteca estándar de .NET o un proyecto de activos compartidos (SAP). Si lo hace, se generará una variable del tipo nativo, lo que provocará un error de compilación. Cada vista nativa muestra la colección de frutas enlazando su `ContentView` propiedad a la  colección. Esto permite al usuario elegir una frutas, como se muestra en las capturas de pantalla siguiente:
+> Tenga en cuenta que una vista nativa con nombres `x:Name` no es posible en un proyecto de biblioteca estándar de .NET o un proyecto de activos compartidos (SAP). Si lo hace, se generará una variable del tipo nativo, lo que provocará un error de compilación. Sin embargo, las vistas nativas pueden envolverse en `ContentView` instancias y recuperarse en el archivo de código subyacente, siempre que se utilice un SAP. Para obtener más información, consulte [Referencia a una vista nativa desde el código](#native_view_code).
 
 <a name="native_bindings" />
 
-## <a name="native-bindings"></a>Subclase de vistas nativas
+## <a name="native-bindings"></a>Enlaces nativos
 
-En iOS y Android los selectores nativos usar métodos para configurar los controles. Por lo tanto, deben ser una subclase estos selectores para exponer propiedades para que sean compatible con XAML.
+Enlace de datos se utiliza para sincronizar una interfaz de usuario con su origen de datos y simplifica la forma en que una aplicación de Xamarin.Forms muestra e interactúa con sus datos. Siempre que el objeto fuente implemente la interfaz `INotifyPropertyChanged`, los cambios en el objeto *fuente* se envían automáticamente al objeto *objetivo* por el marco vinculante, y los cambios en el objeto *objetivo* opcionalmente se pueden enviar al objeto *fuente*.
 
-En la plataforma Universal de Windows (UWP), el  ya es compatible con XAML y, por lo que no requiere la creación de subclases. Las subclases de la implementación de iOS la    vista y expone propiedades y un evento que se puede consumir fácilmente desde XAML:
+Las propiedades de las vistas nativas también pueden usar el enlace de datos. El siguiente ejemplo de código demuestra el enlace de datos usando propiedades de vistas nativas:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -113,21 +113,22 @@ En la plataforma Universal de Windows (UWP), el  ya es compatible con XAML y, po
 
 ```
 
-El [ clase expone `Entry` y ](https://developer.xamarin.com/api/type/Xamarin.Forms.Entry/) propiedades y un [ eventos. Un [ `BindingContext` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) requiere una subyacente `NativeSwitchPageViewModel` `INotifyPropertyChanged`  data model, que obtiene acceso a la  propiedades y eventos.
+La página contiene una propiedad [`Entry`](xref:Xamarin.Forms.Entry) cuya [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) se une a la `NativeSwitchPageViewModel.IsSwitchOn` propiedad. El [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) de la página se establece en una nueva instancia de la `NativeSwitchPageViewModel` clase en el archivo de código subyacente, con la clase ViewModel que implementa el `INotifyPropertyChanged` interfaz.
 
-El  proporciona el modelo de datos la  clase: El [ clase proporciona el almacenamiento subyacente para el `TwoWay` (clase), a través de la ](xref:Xamarin.Forms.BindingMode.TwoWay) propiedad. Cada vez que el elemento seleccionado en el `Entry` cambios, el `Entry`   se ejecuta el método, que actualiza el índice seleccionado y se activa el  eventos. Esto garantiza que el  propiedad siempre devolverá el último elemento seleccionado por el usuario.
+La página también contiene un conmutador para cada plataforma. Cada conmutador nativa usa un [ `TwoWay` ](xref:Xamarin.Forms.BindingMode.TwoWay) enlace para actualizar el valor de la `NativeSwitchPageViewModel.IsSwitchOn` propiedad. Por lo tanto, cuando el conmutador está desactivado, el `Entry` está deshabilitado, y cuando el modificador está activado, el `Entry` está habilitado. Las capturas de pantalla siguientes muestran cómo esta funcionalidad en cada plataforma:
 
-![](xaml-images/native-switch-disabled.png "Además, el ![ clase invalida los métodos que se utilizan para configurar el ] instancia.")
+![](xaml-images/native-switch-disabled.png "Conmutador nativo Deshabilitado")
+![](xaml-images/native-switch-enabled.png "Conmutador nativo habilitado")
 
-Las subclases de implementación para Android el `INotifyPropertyChanged` `DependencyProperty`  vista y expone propiedades y un evento que se puede consumir fácilmente desde XAML: Los elementos mostrados por la  proporcionados clase por el    asociado a la vista y los elementos se rellenan en el  cuando el  propiedad se establece en primer lugar. Cada vez que el elemento seleccionado en el [ clase cambios, el `UpdateSourceEventName` actualizaciones del controlador de eventos el ](https://developer.xamarin.com/api/property/Xamarin.Forms.Binding.UpdateSourceEventName/) propiedad. En este artículo se muestra cómo consumir vistas nativas en archivos XAML de Xamarin.Forms. NativeSwitch (ejemplo)
+Automáticamente se admiten enlaces bidireccionales siempre que implemente la propiedad nativa `INotifyPropertyChanged`, admite la observación de pares clave-valor (KVO) en iOS o es una `DependencyProperty` en UWP. Sin embargo, muchas vistas nativas no admiten la notificación de cambio de propiedad. Estas vistas, puede especificar un [ `UpdateSourceEventName` ](xref:Xamarin.Forms.Binding.UpdateSourceEventName) valor de propiedad como parte de la expresión de enlace. Esta propiedad debe establecerse en el nombre de un evento en la vista nativo que indica cuándo ha cambiado la propiedad de destino. Luego, cuando cambia el valor del conmutador nativo, se notifica a la clase `Binding` que el usuario ha cambiado el valor del conmutador y se actualiza el valor de la propiedad `NativeSwitchPageViewModel.IsSwitchOn`.
 
 <a name="passing_arguments" />
 
-## <a name="passing-arguments-to-native-views"></a>Forms2Native (ejemplo)
+## <a name="passing-arguments-to-native-views"></a>Pasar argumentos a vistas nativas
 
-NativeViewInsideContentView (ejemplo) SubclassedNativeControls (ejemplo)
+Los argumentos de constructor se pueden pasar a vistas nativas usando el atributo `x:Arguments` con una `x:Static` extensión de marcado. Además, los métodos de fábrica de vista nativa (`public static` métodos que devuelven objetos o valores del mismo tipo que la clase o estructura que define los métodos) pueden invocarse especificando el nombre del método utilizando el atributo `x:FactoryMethod` y sus argumentos utilizando el atributo `x:Arguments`.
 
-Pasar argumentos en XAML
+El ejemplo de código siguiente muestra ambas técnicas:
 
 ```xaml
 <ContentPage ...
@@ -198,12 +199,12 @@ Para obtener más información sobre cómo pasar argumentos en XAML, vea [pasar 
 
 ## <a name="referring-to-native-views-from-code"></a>Que hace referencia a vistas nativas desde código
 
-Aunque no se puede nombrar una vista nativa con el `x:Name` atributo, es posible recuperar una instancia de la vista nativa declarada en un archivo XAML de su archivo de código subyacente en un proyecto de acceso compartido, siempre que la vista nativa es un elemento secundario de un [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) que especifica un `x:Name` valor del atributo. A continuación, dentro de las directivas de compilación condicional en el archivo de código subyacente, debe:
+Aunque no se puede nombrar una vista nativa con el `x:Name` atributo, es posible recuperar una instancia de la vista nativa declarada en un archivo XAML de su archivo de código subyacente en un proyecto de acceso compartido, siempre que la vista nativa es un elemento secundario de un [ `ContentView` ](xref:Xamarin.Forms.ContentView) que especifica un `x:Name` valor del atributo. A continuación, dentro de las directivas de compilación condicional en el archivo de código subyacente, debe:
 
-1. Recuperar el [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) propiedad de valor y convertirlo en una plataforma específica `NativeViewWrapper` tipo.
+1. Recuperar el [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) propiedad de valor y convertirlo en una plataforma específica `NativeViewWrapper` tipo.
 1. Recuperar el `NativeViewWrapper.NativeElement` propiedad y convertirlo en el tipo de vista nativo.
 
-A continuación, se pueden invocar las API nativas en la vista nativa para realizar las operaciones deseadas. Este enfoque también ofrece la ventaja que varias vistas XAML nativas para diferentes plataformas pueden ser elementos secundarios del mismo [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/). En el ejemplo de código siguiente se muestra esta técnica:
+A continuación, se pueden invocar las API nativas en la vista nativa para realizar las operaciones deseadas. Este enfoque también ofrece la ventaja que varias vistas XAML nativas para diferentes plataformas pueden ser elementos secundarios del mismo [ `ContentView` ](xref:Xamarin.Forms.ContentView). En el ejemplo de código siguiente se muestra esta técnica:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -233,7 +234,7 @@ A continuación, se pueden invocar las API nativas en la vista nativa para reali
 </ContentPage>
 ```
 
-En el ejemplo anterior, las vistas nativas para cada plataforma son elementos secundarios de [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) controles, con el `x:Name` valor del atributo que se usa para recuperar el `ContentView` en el código subyacente:
+En el ejemplo anterior, las vistas nativas para cada plataforma son elementos secundarios de [ `ContentView` ](xref:Xamarin.Forms.ContentView) controles, con el `x:Name` valor del atributo que se usa para recuperar el `ContentView` en el código subyacente:
 
 ```csharp
 public partial class NativeViewInsideContentViewPage : ContentPage
@@ -275,9 +276,9 @@ public partial class NativeViewInsideContentViewPage : ContentPage
 }
 ```
 
-El [ `ContentView.Content` ](https://developer.xamarin.com/api/property/Xamarin.Forms.ContentView.Content/) acceso a la propiedad para recuperar la vista ajustada nativa como una plataforma específica `NativeViewWrapper` instancia. El `NativeViewWrapper.NativeElement` , a continuación, se obtiene acceso de propiedad para recuperar la vista nativa como tipo nativo. A continuación, se invoca la API nativa de la vista para llevar a cabo las operaciones deseadas.
+El [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) acceso a la propiedad para recuperar la vista ajustada nativa como una plataforma específica `NativeViewWrapper` instancia. El `NativeViewWrapper.NativeElement` , a continuación, se obtiene acceso de propiedad para recuperar la vista nativa como tipo nativo. A continuación, se invoca la API nativa de la vista para llevar a cabo las operaciones deseadas.
 
-IOS y Android botones nativos comparten el mismo `OnButtonTap` controlador de eventos, porque cada botón nativo consume un `EventHandler` delegar en respuesta a un evento de toque. Sin embargo, la plataforma Universal de Windows (UWP) usa un independiente `RoutedEventHandler`, que a su vez los consume el `OnButtonTap` controlador de eventos en este ejemplo. Por lo tanto, cuando un botón nativo se hace clic en, el `OnButtonTap` ejecuta el controlador de eventos, que se escala y gira el control nativo dentro de la [ `ContentView` ](https://developer.xamarin.com/api/type/Xamarin.Forms.ContentView/) denominado `contentViewTextParent`. Las capturas de pantalla siguientes muestran este que se producen en cada plataforma:
+IOS y Android botones nativos comparten el mismo `OnButtonTap` controlador de eventos, porque cada botón nativo consume un `EventHandler` delegar en respuesta a un evento de toque. Sin embargo, la plataforma Universal de Windows (UWP) usa un independiente `RoutedEventHandler`, que a su vez los consume el `OnButtonTap` controlador de eventos en este ejemplo. Por lo tanto, cuando un botón nativo se hace clic en, el `OnButtonTap` ejecuta el controlador de eventos, que se escala y gira el control nativo dentro de la [ `ContentView` ](xref:Xamarin.Forms.ContentView) denominado `contentViewTextParent`. Las capturas de pantalla siguientes muestran este que se producen en cada plataforma:
 
 ![](xaml-images/contentview.png "ContentView que contiene un Control nativo")
 
@@ -318,7 +319,7 @@ En el ejemplo de código siguiente se muestra una página de Xamarin.Forms que c
 </ContentPage>
 ```
 
-La página contiene un [ `Label` ](https://developer.xamarin.com/api/type/Xamarin.Forms.Label/) que muestra la fruta elegida por el usuario en un control nativo. El `Label` enlaza a la `SubclassedNativeControlsPageViewModel.SelectedFruit` propiedad. Un [ `BindingContext` ](https://developer.xamarin.com/api/property/Xamarin.Forms.BindableObject.BindingContext/) requiere una subyacente `SubclassedNativeControlsPageViewModel` `INotifyPropertyChanged`  data model, que obtiene acceso a la  propiedades y eventos.
+La página contiene un [ `Label` ](xref:Xamarin.Forms.Label) que muestra la fruta elegida por el usuario en un control nativo. El `Label` enlaza a la `SubclassedNativeControlsPageViewModel.SelectedFruit` propiedad. El [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) de la página se establece en una nueva instancia de la `SubclassedNativeControlsPageViewModel` clase en el archivo de código subyacente, con la clase ViewModel que implementa el `INotifyPropertyChanged` interfaz.
 
 La página también contiene una vista de selector nativo para cada plataforma. Cada vista nativa muestra la colección de frutas enlazando su `ItemSource` propiedad a la `SubclassedNativeControlsPageViewModel.Fruits` colección. Esto permite al usuario elegir una frutas, como se muestra en las capturas de pantalla siguiente:
 
