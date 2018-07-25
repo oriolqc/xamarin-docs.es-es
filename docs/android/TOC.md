@@ -113,6 +113,8 @@
 ## [Características de la plataforma](platform/index.md)
 ### [Android Beam](platform/android-beam.md)
 ### [Manifiesto de Android](platform/android-manifest.md)
+### [Acceso a archivos con Xamarin.Android](platform/files/index.md)
+#### [Almacenamiento externo](platform/files/external-storage.md)
 ### [Autenticación de huella digital](platform/fingerprint-authentication/index.md)
 #### [Introducción](platform/fingerprint-authentication/get-started.md)
 #### [Examen de huellas digitales](platform/fingerprint-authentication/scanning.md)
