@@ -1,28 +1,28 @@
 ---
 title: Imagen del núcleo de Xamarin.iOS
-description: Imagen de núcleo es un nuevo marco introducido con iOS 5 para proporcionar procesamiento de imágenes y funcionalidad de vídeo de mejora de la vida. Este artículo presenta estas características con ejemplos de Xamarin.iOS.
+description: Imagen de Core es un nuevo marco introducido con iOS 5 para proporcionar procesamiento de imágenes y funcionalidad de vídeo de mejora de live. Este artículo presenta estas características con ejemplos de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 6032554a0ddbda26ff5de94f6035bc4f8c15a22a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 7af57856079813e8cb1831a7f22a0a098a6be771
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786637"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242171"
 ---
 # <a name="core-image-in-xamarinios"></a>Imagen del núcleo de Xamarin.iOS
 
-_Imagen de núcleo es un nuevo marco introducido con iOS 5 para proporcionar procesamiento de imágenes y funcionalidad de vídeo de mejora de la vida. Este artículo presenta estas características con ejemplos de Xamarin.iOS._
+_Imagen de Core es un nuevo marco introducido con iOS 5 para proporcionar procesamiento de imágenes y funcionalidad de vídeo de mejora de live. Este artículo presenta estas características con ejemplos de Xamarin.iOS._
 
-Imagen de núcleo es un nuevo marco introducido en iOS 5 que proporciona una serie de filtros integrados y los efectos que se aplican a imágenes y vídeos, incluida la detección de cara.
+Imagen de Core es un nuevo marco introducido en iOS 5 que proporciona una serie de filtros integrados y los efectos para aplicarse a las imágenes y vídeos, incluida la detección de caras.
 
 Este documento contiene ejemplos sencillos de:
 
--  Detección de cara.
+-  Detección de caras.
 -  Aplicar filtros a una imagen
 -  Enumerar los filtros disponibles.
 
@@ -33,11 +33,11 @@ Estos ejemplos ayudarán a comenzar la incorporación de características de la 
 
 Debe usar la versión más reciente de Xcode.
 
-## <a name="face-detection"></a>Detección de cara
+## <a name="face-detection"></a>Detección de caras
 
-La característica de detección de cara de imagen Core hace justo lo que dice, ya que intenta identificar caras de una foto y devuelve las coordenadas de las caras que reconoce. Esta información puede utilizarse para contar el número de personas de una imagen, dibuje indicadores en la imagen (p. ej. para 'etiquetado' personas en una fotografía), o cualquier otra cosa que puede considerar.
+La característica de detección de cara de imagen Core hace justo lo que dice: que intenta identificar caras de una foto y devuelve las coordenadas de las caras que reconoce. Esta información puede utilizarse para contar el número de personas de una imagen, dibuje indicadores en la imagen (p ej. para "etiquetado" las personas en una fotografía), o cualquier otra cosa que puede considerar.
 
-Este código de CoreImage\SampleCode.cs muestra cómo crear y utilizar la detección de cara en una imagen incrustada:
+Este código de CoreImage\SampleCode.cs muestra cómo crear y usar la detección de caras en una imagen incrustada:
 
 ```csharp
 var image = new UIImage("photoFace.JPG");
@@ -47,17 +47,17 @@ var ciImage = CIImage.FromCGImage(image.CGImage);
 CIFeature[] features = detector.FeaturesInImage(ciImage);
 ```
 
-La matriz de características se rellenará con `CIFaceFeature` objetos (si no se detectan cualquier caras). Hay un `CIFaceFeature` para cada tipo. `CIFaceFeature` tiene las siguientes propiedades:
+La matriz de características se rellenará con `CIFaceFeature` objetos (si se detectan cualquier caras). Hay un `CIFaceFeature` para cada cara. `CIFaceFeature` tiene las siguientes propiedades:
 
--  HasMouthPosition: si se ha detectado una boca para esta fuente.
--  HasLeftEyePosition: si se ha detectado el ojo izquierdo para esta fuente.
--  HasRightEyePosition: si se ha detectado el ojo derecho para esta fuente. 
--  MouthPosition: las coordenadas de la boca para esta fuente.
--  LeftEyePosition: las coordenadas del ojo izquierdo para esta fuente.
--  RightEyePosition: las coordenadas del ojo derecho para esta fuente.
+-  HasMouthPosition: si se ha detectado una boca para esta cara.
+-  HasLeftEyePosition: si se ha detectado el ojo izquierdo para esta cara.
+-  HasRightEyePosition: si se ha detectado el ojo derecho para esta cara. 
+-  MouthPosition: las coordenadas de la boca para esta cara.
+-  LeftEyePosition: las coordenadas del ojo izquierdo para esta cara.
+-  RightEyePosition: las coordenadas del ojo para esta cara adecuada.
 
 
-Las coordenadas para todas estas propiedades tienen su origen en la parte inferior izquierda: a diferencia de UIKit que usa la parte superior izquierda como origen. Al utilizar las coordenadas en `CIFaceFeature` no olvide 'voltear'. Esta vista de la imagen personalizada básica en CoreImage\CoreImageViewController.cs muestra cómo dibujar triángulos 'indicador cara' en la imagen (tenga en cuenta el `FlipForBottomOrigin` (método)):
+Las coordenadas para todas estas propiedades tienen su origen en la parte inferior izquierda: a diferencia de UIKit que usa la parte superior izquierda como el origen. Al usar las coordenadas en `CIFaceFeature` no olvide 'póngalos'. Esta vista de imagen personalizada básica en CoreImage\CoreImageViewController.cs muestra cómo se dibujan los triángulos 'indicador cara' en la imagen (tenga en cuenta el `FlipForBottomOrigin` método):
 
 ```csharp
 public class FaceDetectImageView : UIView
@@ -102,7 +102,7 @@ public class FaceDetectImageView : UIView
 }
 ```
 
-A continuación, en el archivo SampleCode.cs la imagen y características se asignan antes de que se vuelve a dibujar la imagen:
+A continuación, en el archivo SampleCode.cs la imagen y las características se asignan antes de que se vuelve a dibujar la imagen:
 
 ```csharp
 faceView.Image = image;
@@ -112,17 +112,17 @@ faceView.SetNeedsDisplay();
 
 La captura de pantalla muestra la salida de ejemplo: las ubicaciones de las características faciales detectadas se muestran en un UITextView y dibujadas en la imagen de origen mediante CoreGraphics.
 
-Debido al modo en que lo funciona el reconocimiento facial detectará ocasionalmente cosas además de caras humanos (por ejemplo, estos monos juguete!).
+Debido a la manera en que el reconocimiento facial funciona lo detectará ocasionalmente cosas además de caras humanas (por ejemplo, estos monos juguete!).
 
 ## <a name="filters"></a>Filtros
 
-Hay más de 50 filtros integrados diferentes, y el marco de trabajo es extensible para que se pueden implementar nuevos filtros.
+Hay más de 50 distintos filtros integrados y el marco de trabajo es extensible para que se pueden implementar los nuevos filtros.
 
 ## <a name="using-filters"></a>Uso de filtros
 
-Aplicar un filtro a una imagen consta de cuatro pasos distintos: cargar la imagen, crear el filtro, aplicar el filtro y guardar (o mostrar) el resultado.
+Aplicar un filtro a una imagen consta de cuatro pasos distintos: carga de la imagen, crear el filtro, aplicar el filtro y guardar (o mostrar) el resultado.
 
-En primer lugar, cargar una imagen en un `CIImage` objeto.
+En primer lugar, cargue una imagen en un `CIImage` objeto.
 
 ```csharp
 var uiimage = UIImage.FromFile ("photo.JPG");
@@ -137,7 +137,7 @@ sepia.Image = ciimage;
 sepia.Intensity = 0.8f;
 ```
 
-En tercer lugar, tener acceso a la `OutputImage` propiedad y llame al método el `CreateCGImage` método para representar el resultado final.
+En tercer lugar, tener acceso a la `OutputImage` propiedad y llame a la `CreateCGImage` método para representar el resultado final.
 
 ```csharp
 CIImage output = sepia.OutputImage;
@@ -145,7 +145,7 @@ var context = CIContext.FromOptions(null);
 var cgimage = context.CreateCGImage (output, output.Extent);
 ```
 
-Por último, puede asignar la imagen a una vista para ver el resultado. En una aplicación del mundo real, la imagen resultante puede guardarse en el sistema de archivos, el álbum de fotos, un Tweet o correo electrónico.
+Por último, puede asignar la imagen a una vista para ver el resultado. En una aplicación real, la imagen resultante podría estar guardada en el sistema de archivos, el álbum de fotos, un Tweet o correo electrónico.
 
 ```csharp
 var ui = UIImage.FromImage (cgimage);
@@ -154,7 +154,7 @@ imgview.Image = ui;
 
 Estas capturas de pantalla muestran el resultado de la `CISepia` y `CIHueAdjust` filtros que se muestran en la CoreImage.zip código de ejemplo.
 
-Consulte la [ajustar contrato y el brillo de una imagen, solo puede conducir](https://developer.xamarin.com/recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image) para obtener un ejemplo de la `CIColorControls` filtro.
+Consulte la [ajustar contrato y el brillo de una imagen de receta](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image) para obtener un ejemplo de la `CIColorControls` filtro.
 
 ```csharp
 var uiimage = UIImage.FromFile("photo.JPG");
@@ -210,21 +210,21 @@ foreach (var filter in filters){
 }
 ```
 
-El [CIFilter Class Reference](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.html) describe los 50 filtros integrados y sus propiedades. Utilizando el código anterior puede consultar las clases de filtro, incluidos los valores predeterminados para parámetros y los valores permitidos de máximo y mínimos (que pudieron usarse para validar las entradas antes de aplicar un filtro).
+El [referencia de clase CIFilter](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.html) describe los 50 filtros integrados y sus propiedades. Con el código anterior, puede consultar las clases de filtro, incluidos los valores predeterminados para los parámetros y los valores permitidos de máximo y mínimos (que podrían usarse para validar las entradas antes de aplicar un filtro).
 
-La salida de categorías de lista es similar al siguiente en el simulador, puede desplazarse a través de la lista para ver todos los filtros y sus parámetros.
+El resultado de las categorías de lista es similar al siguiente en el simulador, puede desplazarse por la lista para ver todos los filtros y sus parámetros.
 
- [![](introduction-to-coreimage-images/coreimage05.png "La salida de categorías de lista es similar al siguiente en el simulador")](introduction-to-coreimage-images/coreimage05.png#lightbox)
+ [![](introduction-to-coreimage-images/coreimage05.png "El resultado de las categorías de lista es similar al siguiente en el simulador")](introduction-to-coreimage-images/coreimage05.png#lightbox)
 
-Cada filtro enumerado se haya expuesto como una clase en Xamarin.iOS, por lo que también puede explorar la API Xamarin.iOS.CoreImage en el Explorador de ensamblado o el uso de Autocompletar en Visual Studio para Mac o en Visual Studio. 
+Cada filtro enumerado se expone como una clase en Xamarin.iOS, por lo que también puede explorar la API de Xamarin.iOS.CoreImage en el Explorador de ensamblados o usar Autocompletar en Visual Studio para Mac o Visual Studio. 
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se muestra cómo utilizar algunas de las nuevas características de framework de imagen Core iOS 5 como la detección de cara y aplicar filtros a una imagen. Existen docenas de filtros de imágenes diferentes en el marco de trabajo para su uso.
+En este artículo se muestra cómo utilizar algunas de las nuevas características de iOS 5 imagen Core framework como la detección y aplicar filtros a una imagen. Existen docenas de filtros de imágenes diferentes disponibles en el marco de trabajo para su uso.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Imagen de Core (ejemplo)](https://developer.xamarin.com/samples/CoreImage/)
-- [Ajustar el brillo de una imagen, solo puede conducir y contrato](https://developer.xamarin.com/recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
+- [Ajustar el brillo de una imagen de receta y contrato](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/coreimage/adjust_contrast_and_brightness_of_an_image)
 - [Uso de filtros de imágenes de núcleo](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Conceptual/CoreImaging/ci_tasks/ci_tasks.html)
 - [Referencia de clase CIFilter](https://developer.apple.com/library/prerelease/ios/#documentation/GraphicsImaging/Reference/QuartzCoreFramework/Classes/CIFilter_Class/Reference/Reference.htm)
