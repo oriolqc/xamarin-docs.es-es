@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2017
-ms.openlocfilehash: 292b0814cba446c97042ba1fe52ad9414ba74760
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.openlocfilehash: ac9a90373878035ffa8ac0be9da8993bf189b6b3
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203064"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241258"
 ---
 # <a name="advanced-concepts--internals"></a>Conceptos avanzados y funcionamiento interno
 
@@ -26,4 +26,4 @@ En este artículo se explica cómo convertir una aplicación de Xamarin.Forms pa
 
 ## <a name="dependency-resolutiondependency-resolutionmd"></a>[Resolución de dependencias](dependency-resolution.md)
 
-En este artículo se explica cómo insertar un método de resolución de dependencia en Xamarin.Forms, para que el contenedor de inserción de dependencia de la aplicación tiene control sobre la construcción y la duración de los representadores personalizados, los efectos, y `DependencyService` implementaciones.
+En este artículo se explica cómo insertar un método de resolución de dependencia en Xamarin.Forms para que el contenedor de inserción de dependencia de la aplicación tiene control sobre la construcción y la duración de los representadores personalizados, los efectos, y `DependencyService` implementaciones.

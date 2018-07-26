@@ -1,33 +1,33 @@
 ---
-title: Usar gráficos de núcleo y Core animación en Xamarin.iOS
-description: En este artículo paso a paso muestra cómo crear una aplicación que utiliza para los gráficos esenciales y la animación de núcleo. Muestra cómo dibujar en la pantalla, en respuesta a la entrada táctil de usuario, así como cómo animar una imagen que se va a recorrer a lo largo de una ruta de acceso.
+title: Uso de Core gráficos y animación básica de Xamarin.iOS
+description: En este artículo paso a paso muestra cómo crear una aplicación que utiliza los principales gráficos y animación básica. Muestra cómo se dibujan en la pantalla en respuesta a la interacción del usuario, así como cómo animar una imagen para recorrer a lo largo de una ruta de acceso.
 ms.prod: xamarin
 ms.assetid: 4B96D5CD-1BF5-4520-AAA6-2B857C83815C
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: 7a4399a5d62e2000c2a15a65da8e0e427dc039e0
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: cecfd7f3a9678f298af3ed547aa7b50a18238729
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787060"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242009"
 ---
-# <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Usar gráficos de núcleo y Core animación en Xamarin.iOS
+# <a name="using-core-graphics-and-core-animation-in-xamarinios"></a>Uso de Core gráficos y animación básica de Xamarin.iOS
 
 En este tutorial vamos a dibujar un trazado con gráficos esenciales en respuesta a entrada táctil. A continuación, agregaremos un `CALayer` que contiene una imagen que se va a animar a lo largo de la ruta de acceso.
 
-Captura de pantalla siguiente muestra la aplicación completa:
+Captura de pantalla siguiente muestra la aplicación completada:
 
 ![](graphics-animation-walkthrough-images/00-final-app.png "La aplicación completada")
 
-Antes de comenzar descarga el *GraphicsDemo* ejemplo que se incluye en esta guía. Se puede descargar [aquí](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/) y se encuentra dentro de la **GraphicsWalkthrough** directorio iniciar el proyecto denominado **GraphicsDemo_starter** haciendo doble clic en él, y Abra la `DemoView` clase.
+Antes de comenzar descarga el *GraphicsDemo* ejemplo que acompaña a esta guía. Se puede descargar [aquí](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/) y se encuentra dentro de la **GraphicsWalkthrough** directory inicie el proyecto denominado **GraphicsDemo_starter** haciendo doble clic en él, y Abra el `DemoView` clase.
 
 ## <a name="drawing-a-path"></a>Dibujar un trazado
 
 
-1. En `DemoView` agregar un `CGPath` variable a la clase y crear instancias de él en el constructor. Declarar dos `CGPoint` variables, `initialPoint` y `latestPoint`, que se usará para capturar el punto de entrada táctil desde el que se construya la ruta de acceso:
+1. En `DemoView` agregar un `CGPath` variable a la clase y crear instancias de ella en el constructor. También se declare dos `CGPoint` variables, `initialPoint` y `latestPoint`, que se usará para capturar el punto de toque desde el que construimos la ruta de acceso:
     
     ```csharp
     public class DemoView : UIView
@@ -53,7 +53,7 @@ Antes de comenzar descarga el *GraphicsDemo* ejemplo que se incluye en esta guí
     using Foundation;
     ```
 
-3. A continuación, reemplace `TouchesBegan` y `TouchesMoved,` y agregue las siguientes implementaciones para capturar el punto de contacto inicial y cada punto de contacto subsiguientes respectivamente:
+3. A continuación, invalide `TouchesBegan` y `TouchesMoved,` y agregue las siguientes implementaciones para capturar el punto de toque inicial y cada punto de toque posteriores respectivamente:
 
     ```csharp
     public override void TouchesBegan (NSSet touches, UIEvent evt){
@@ -80,9 +80,9 @@ Antes de comenzar descarga el *GraphicsDemo* ejemplo que se incluye en esta guí
     }
     ```
 
-    `SetNeedsDisplay` se llamará cada vez que mueva los últimos retoques en orden para `Draw` que se llame en el siguiente paso de bucle de ejecución.
+    `SetNeedsDisplay` se llamará cada vez que mover un toque en orden para `Draw` que se llamará en el siguiente paso de bucle de ejecución.
 
-4. Vamos a agregar líneas a la ruta de acceso en la `Draw` método y el uso de una línea roja discontinua para dibujar con. [Implemente `Draw` ](~/ios/platform/graphics-animation-ios/core-graphics.md) con el código que se muestra a continuación:
+4. Vamos a agregar líneas a la ruta de acceso en el `Draw` método y el uso para dibujar con una línea roja discontinua. [Implemente `Draw` ](~/ios/platform/graphics-animation-ios/core-graphics.md) con el código se muestra a continuación:
 
     ```csharp
     public override void Draw (CGRect rect){
@@ -116,13 +116,13 @@ Antes de comenzar descarga el *GraphicsDemo* ejemplo que se incluye en esta guí
     }
     ```
 
-Si se ejecuta la aplicación, que podemos tocamos para dibujar en la pantalla, como se muestra en la captura de pantalla siguiente:
+Si se ejecuta la aplicación ahora, nos podemos táctil para dibujar en la pantalla, como se muestra en la captura de pantalla siguiente:
 
-![](graphics-animation-walkthrough-images/01-path.png "Dibujar en la pantalla")
+![](graphics-animation-walkthrough-images/01-path.png "En la pantalla de dibujo")
 
 ## <a name="animating-along-a-path"></a>Animar a lo largo de una ruta de acceso
 
-Ahora que hemos implementado el código para permitir que los usuarios pueden dibujar la ruta de acceso, vamos a agregar el código para animar una capa a lo largo de la ruta de acceso dibujado.
+Ahora que hemos implementado el código para permitir que los usuarios que se va a dibujar la ruta de acceso, vamos a agregar el código para animar una capa a lo largo de la guía dibujada.
 
 1. En primer lugar, agregue un [ `CALayer` ](~/ios/platform/graphics-animation-ios/core-animation.md) variable a la clase y crearla en el constructor:
 
@@ -149,7 +149,7 @@ Ahora que hemos implementado el código para permitir que los usuarios pueden di
             }
     ```
 
-2. A continuación, vamos a agregar la capa como una subcapa de capa de la vista cuando el usuario levanta el dedo desde la pantalla. A continuación, se creará una animación de fotogramas clave mediante la ruta de acceso, la animación de la capa `Position`.
+2. A continuación, vamos a agregar la capa como una subcapa de capa de la vista cuando el usuario levanta el dedo desde la pantalla. A continuación, vamos a crear una animación de fotograma clave mediante la ruta de acceso, si anima la capa `Position`.
 
     Para lograr esto es necesario para invalidar el `TouchesEnded` y agregue el código siguiente:
 
@@ -172,17 +172,17 @@ Ahora que hemos implementado el código para permitir que los usuarios pueden di
         }
     ```
 
-3. Ejecute la aplicación ahora y después de dibujo, una capa con una imagen se agrega y se desplaza a lo largo de la ruta de acceso dibujado:
+3. Ejecute la aplicación ahora y después de dibujo, una capa con una imagen se agrega y viaja a lo largo del trazado dibujado:
 
-![](graphics-animation-walkthrough-images/00-final-app.png "Una capa con una imagen se agrega y se desplaza a lo largo de la ruta de acceso dibujado")
+![](graphics-animation-walkthrough-images/00-final-app.png "Una capa con una imagen se agrega y viaja a lo largo del trazado dibujado")
 
 ## <a name="summary"></a>Resumen
 
-En este artículo, se avanza a través de un ejemplo que unidos entre sí los conceptos de gráficos y animación. En primer lugar, mostramos cómo usar los gráficos esenciales para dibujar un trazado en un `UIView` en respuesta a la entrada táctil de usuario. A continuación, mostramos cómo usar Core animación para convertir una imagen recorrer a lo largo de esa ruta de acceso.
+En este artículo, hemos avanzado a través de un ejemplo que vinculadas entre sí los conceptos de gráficos y animación. En primer lugar, hemos mostrado cómo usar Core Graphics para dibujar un trazado un `UIView` en respuesta a la interacción del usuario. A continuación, mostramos cómo usar animación básica para crear una imagen recorrer a lo largo de esa ruta de acceso.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Animación básica](~/ios/platform/graphics-animation-ios/core-animation.md)
 - [Gráficos básicos](~/ios/platform/graphics-animation-ios/core-graphics.md)
-- [Recetas de animación de núcleo](https://developer.xamarin.com/recipes/ios/animation/coreanimation)
+- [Recetas de animación de Core](https://github.com/xamarin/recipes/tree/master/Recipes/ios/animation/coreanimation)

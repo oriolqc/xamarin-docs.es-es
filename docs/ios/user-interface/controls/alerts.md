@@ -1,5 +1,5 @@
 ---
-title: Mostrar alertas en Xamarin.iOS
+title: Mostrar las alertas en Xamarin.iOS
 description: Este documento describe cómo mostrar las alertas en Xamarin.iOS mediante el uso de la API que se introdujo en iOS 8 UIAlertController.
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
@@ -7,42 +7,42 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/21/2017
-ms.openlocfilehash: 88233cb1ac31b2669fdc38bbc9b0835a45c6b0ce
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 788e62b30dbf533df059b0c3805e04ecf7b857aa
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789601"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241345"
 ---
-# <a name="displaying-alerts-in-xamarinios"></a>Mostrar alertas en Xamarin.iOS
+# <a name="displaying-alerts-in-xamarinios"></a>Mostrar las alertas en Xamarin.iOS
 
 A partir de iOS 8, UIAlertController tiene completado UIActionSheet reemplazado y UIAlertView de los cuales están en desuso.
 
-A diferencia de las clases que se reemplace, que son subclases de UIView, UIAlertController es una subclase de UIViewController.
+A diferencia de las clases que la reemplazó, que son subclases de UIView, UIAlertController es una subclase de UIViewController.
 
-Use `UIAlertControllerStyle` para indicar el tipo de alerta que se va a mostrar. Estos tipos de alertas son:
+Use `UIAlertControllerStyle` para indicar el tipo de alerta para mostrar. Estos tipos de alertas son:
 
 - **UIAlertControllerStyleActionSheet**
-    * Previa iOS 8 esto habría sido un UIActionSheet
+    * Preliminar iOS 8 esto habría sido un UIActionSheet
 - **UIAlertControllerStyleAlert**
-    * Previa iOS 8 esto habría sido UIAlertView 
+    * Preliminar iOS 8 esto habría sido UIAlertView 
 
 Hay tres pasos necesarios para tomar al crear un controlador de alerta:
 
-- Cree y configure la alerta con r:
+- Cree y configure la alerta con a:
     * título
     * message
     * preferredStyle
     
 - (Opcional) Agregar un campo de texto
-- Agregar las acciones necesarias
+- Agregue las acciones necesarias
 - Presentar el controlador de vista
 
-La alerta más simple contiene un solo botón, tal y como se muestra en esta captura de pantalla:
+La alerta más simple contiene un solo botón, como se muestra en esta captura de pantalla:
 
- ![Alerta con uno de los botones](alerts-images/alert1.png)
+ ![Alertar con un botón](alerts-images/alert1.png)
 
-El código para mostrar una alerta sencilla es como sigue:
+El código para mostrar una alerta simple es como sigue:
 
 ```csharp
 okayButton.TouchUpInside += (sender, e) => {
@@ -79,9 +79,9 @@ okayCancelButton.TouchUpInside += ((sender, e) => {
 
 Las alertas también pueden mostrar una hoja de acción, similar a la captura de pantalla siguiente:
 
- ![Alerta de hoja de acción](alerts-images/alert3.png)
+ ![Alerta de la hoja de acción](alerts-images/alert3.png)
 
-Se agregan botones a la alerta con la `AddAction` método:
+Los botones se agregan a la alerta con el `AddAction` método:
 
 ```csharp
 actionSheetButton.TouchUpInside += ((sender, e) => {
@@ -114,4 +114,4 @@ actionSheetButton.TouchUpInside += ((sender, e) => {
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Controles (ejemplo)](https://developer.xamarin.com/samples/Controls/)
-- [Controlador de alerta](https://developer.xamarin.com/recipes/ios/standard_controls/alertcontroller/)
+- [Controlador de alerta](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)
