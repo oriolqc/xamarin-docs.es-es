@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/02/2016
-ms.openlocfilehash: 6979d1f221a8b06b5d04d7a7f738dee86c4392e9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7db11e9c824ac46d2c9c8fce87f16154e8007ab4
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998404"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242490"
 ---
 # <a name="hello-android-multiscreen"></a>Multipantalla de Hello, Android
 
@@ -32,4 +32,4 @@ En la segunda parte de este documento, revisaremos lo que ha creado y explicarem
 
 - [Introducción a Android](http://developer.android.com/training/index.html)
 - [Depurar en Visual Studio](https://docs.microsoft.com/visualstudio/debugger/)
-- [Recetas de Visual Studio para Mac: Depuración](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)
+- [Recetas de Visual Studio para Mac: Depuración](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)

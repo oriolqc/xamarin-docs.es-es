@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 2132e1d0732a727d90e3eb7f36085f13c78c2e7c
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 6a7d3b29bd9d3ab3cfee07a30bb23daab76de22a
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30789519"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39241723"
 ---
 # <a name="hello-xamarinforms-multiscreen"></a>Hello, Xamarin.Forms Multiscreen
 
@@ -32,6 +32,6 @@ En la segunda parte de esta guía se revisa lo que se ha compilado con el fin de
 
 - [Introducción a Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Depurar en Visual Studio](http://msdn.microsoft.com/library/k0k771bt%28v=vs.90%29.aspx)
-- [Recetas de Visual Studio para Mac: Depuración](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)
+- [Recetas de Visual Studio para Mac: Depuración](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)
 - [Aprendizaje autoguiado gratuito (vídeo)](https://university.xamarin.com/self-guided)
 - [Introducción a Xamarin (vídeo)](https://developer.xamarin.com/videos/)

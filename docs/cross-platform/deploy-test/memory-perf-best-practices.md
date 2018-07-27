@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: c529d1d42d582cb49a906ad6fc39a191a7389f58
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: bd08e1f83f7b1752a2830bda1390ffae4f86b360
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997444"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242412"
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
@@ -340,7 +340,7 @@ Obtenga más información en esta entrada de blog: [How To Keep Your Android App
 
 ## <a name="optimize-image-resources"></a>Optimizar los recursos de imagen
 
-Las imágenes son uno de los recursos con más consumo usados por las aplicaciones y se suelen capturar en altas resoluciones. Aunque esto crea imágenes vibrantes llenas de detalles, las aplicaciones que muestran dichas imágenes normalmente necesitan usar más CPU para descodificar la imagen y más memoria para almacenar la imagen descodificada. Es un desperdicio descodificar una imagen de alta resolución en memoria cuando se reducirá a un tamaño menor para su presentación. Reduzca el uso de CPU y la superficie de memoria mediante la creación de varias versiones de resolución de imágenes almacenadas que se acerquen a los tamaños de presentación previstos. Por ejemplo, una imagen que aparece en una vista de lista probablemente deba tener menos resolución que una imagen que aparece en pantalla completa. Además, las versiones reducidas de imágenes de alta resolución pueden cargarse para mostrarse de forma eficaz con una repercusión mínima en la memoria. Para más información, vea [Load Large Bitmaps Efficiently (Cargar eficazmente mapas de bits grandes)](https://developer.xamarin.com/recipes/android/resources/general/load_large_bitmaps_efficiently/).
+Las imágenes son uno de los recursos con más consumo usados por las aplicaciones y se suelen capturar en altas resoluciones. Aunque esto crea imágenes vibrantes llenas de detalles, las aplicaciones que muestran dichas imágenes normalmente necesitan usar más CPU para descodificar la imagen y más memoria para almacenar la imagen descodificada. Es un desperdicio descodificar una imagen de alta resolución en memoria cuando se reducirá a un tamaño menor para su presentación. Reduzca el uso de CPU y la superficie de memoria mediante la creación de varias versiones de resolución de imágenes almacenadas que se acerquen a los tamaños de presentación previstos. Por ejemplo, una imagen que aparece en una vista de lista probablemente deba tener menos resolución que una imagen que aparece en pantalla completa. Además, las versiones reducidas de imágenes de alta resolución pueden cargarse para mostrarse de forma eficaz con una repercusión mínima en la memoria. Para más información, vea [Load Large Bitmaps Efficiently (Cargar eficazmente mapas de bits grandes)](https://github.com/xamarin/recipes/tree/master/Recipes/android/resources/general/load_large_bitmaps_efficiently).
 
 Independientemente de la resolución de la imagen, mostrar recursos de imagen puede aumentar considerablemente la superficie de memoria de la aplicación. Por tanto, solo se deberían crear cuando fuera necesario y deberían liberarse en cuanto la aplicación no los necesitara.
 

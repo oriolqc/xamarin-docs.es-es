@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 12/02/2016
-ms.openlocfilehash: 188d4b89354f97341c22036d90b55924650203ce
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a7740fa6ca79bc48568dc0a2cc87af51b5eb869e
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996634"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242123"
 ---
 # <a name="hello-android"></a>Hello, Android
 
@@ -32,4 +32,4 @@ En la segunda parte de este documento, revisará lo que ha creado y obtendrá un
 
 - [Introducción a Android](http://developer.android.com/training/index.html)
 - [Depurar en Visual Studio](https://docs.microsoft.com/visualstudio/debugger/)
-- [Recetas de Visual Studio para Mac: Depuración](https://developer.xamarin.com/recipes/cross-platform/ide/debugging/)
+- [Recetas de Visual Studio para Mac: Depuración](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)
