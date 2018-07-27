@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/13/2018
-ms.openlocfilehash: 9774dcad14c2e2fc7e1203ef887a19f4b96218ba
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 6e3cf12431440823b1d32d91927bc634f60fd5e2
+ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241480"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39270461"
 ---
 # <a name="xamarinforms-editor"></a>Editor de Xamarin.Forms
 
@@ -108,7 +108,7 @@ var editor = new Editor { Keyboard = Keyboard.Chat };
 
 Ejemplos de cada teclado pueden encontrarse en nuestra [recetas](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/choose-keyboard-for-entry) repositorio.
 
-El [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) clase también tiene un [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) método generador que puede usarse para personalizar un teclado mediante la especificación del comportamiento de mayúsculas y minúsculas, corrector ortográfico y sugerencias. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) valores de enumeración como se especifica como argumentos al método, con una personalizada `Keyboard` que se devuelve. El `KeyboardFlags` enumeración contiene los siguientes valores:
+El [ `Keyboard` ](xref:Xamarin.Forms.Keyboard) clase también tiene un [ `Create` ](xref:Xamarin.Forms.Keyboard.Create*) método generador que puede usarse para personalizar un teclado mediante la especificación del comportamiento de mayúsculas y minúsculas, corrector ortográfico y sugerencias. [`KeyboardFlags`](xref:Xamarin.Forms.KeyboardFlags) valores de enumeración se especifican como argumentos al método, con una personalizada `Keyboard` que se devuelve. El `KeyboardFlags` enumeración contiene los siguientes valores:
 
 - [`None`](xref:Xamarin.Forms.KeyboardFlags.None) : no hay características se agregan al teclado.
 - [`CapitalizeSentence`](xref:Xamarin.Forms.KeyboardFlags.CapitalizeSentence) : indica que la primera letra de la primera palabra de cada oración especificado estará automáticamente en mayúscula.
