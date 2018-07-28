@@ -1,61 +1,65 @@
 ---
-title: Conceptos básicos de aplicación Xamarin.Mac
-description: Vínculos de este documento guías que describen los distintos conceptos necesarios para entender al desarrollar aplicaciones de Xamarin.Mac.
+title: Principios de la aplicación de Xamarin.Mac
+description: Este documento incluye vínculos a guías que describen los distintos conceptos necesarios para comprender al desarrollar aplicaciones de Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 5A36B3A7-F197-4AC3-A40D-B2C49362FF06
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 12/17/2015
-ms.openlocfilehash: 1c807e97d5218e93c4eb991a9bd80219c9745c2b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: e085cf33615d216e1ce9963254050ef2b623ae40
+ms.sourcegitcommit: d0da5ce4158239abd2b36f67550e9b475055766a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791506"
+ms.lasthandoff: 07/27/2018
+ms.locfileid: "39320809"
 ---
-# <a name="xamarinmac-application-fundamentals"></a>Conceptos básicos de aplicación Xamarin.Mac
+# <a name="xamarinmac-application-fundamentals"></a>Principios de la aplicación de Xamarin.Mac
 
 ## <a name="common-patterns-and-idiomsmacapp-fundamentalspatternsmd"></a>[Patrones y expresiones comunes](~/mac/app-fundamentals/patterns.md)
 
-A lo largo de las API de Apple que se expone a través de C#, determinados patrones y giros de dar una y otra vez. Si tiene experiencia con la programación con Xamarin.iOS, estos pueden ser familiares. Documentación a menudo hará referencia a estos patrones y expresiones varias veces, por lo que tener un conocimiento sólido de ellos le ayudará a tener sentido de la documentación que encuentre.
+A lo largo de las API de Apple que se expone a través de C#, determinadas expresiones y patrones iniciará una y otra vez. Si tiene experiencia con la programación con Xamarin.iOS, estas pueden resultar familiares. Documentación a menudo hará referencia a estos patrones y expresiones varias veces, por lo que tener un conocimiento sólido de ellos le ayudarán a dar sentido a la documentación que encuentre.
 
-## <a name="understanding-mac-apismacapp-fundamentalsmac-apismd"></a>[Descripción de las API de Mac](~/mac/app-fundamentals/mac-apis.md)
+## <a name="understanding-mac-apismacapp-fundamentalsmac-apismd"></a>[Descripción de la API de Mac](~/mac/app-fundamentals/mac-apis.md)
 
-Durante gran parte del tiempo Xamarin.Mac al desarrollo, puede considerar, lectura y escritura en C# sin preocuparse excesivamente con las API subyacentes de C de objetivo. Sin embargo, en ocasiones, la que necesita para leer la documentación de API de Apple, traducir una respuesta de desbordamiento de la pila a una solución para su problema o comparar con un ejemplo existente.
+Para gran parte de su tiempo a desarrollar con Xamarin.Mac, puede pensar, leer y escribir en C# sin preocuparse de las API de Objective-C subyacente. Sin embargo, a veces podrá debe leer la documentación de API de Apple, traducir una respuesta de Stack Overflow para una solución para su problema o comparar con un ejemplo existente.
 
-## <a name="working-with-xib-filesmacapp-fundamentalsxibmd"></a>[Trabajar con archivos de .xib](~/mac/app-fundamentals/xib.md)
+## <a name="console-appsmacapp-fundamentalsconsolemd"></a>[Aplicaciones de consola](~/mac/app-fundamentals/console.md)
 
-Este artículo tratan trabajar con archivos de .xib creados en el generador de interfaz de Xcode para crear y mantener las interfaces de usuario para una aplicación Xamarin.Mac.
+También puede compilar aplicaciones de consola "sin periféricos" que tienen acceso a las API de macOS nativo con Xamarin.Mac.
 
-## <a name="storyboardxib-less-user-interface-designmacapp-fundamentalsxibless-uimd"></a>[.Storyboard/.xib menos diseño de la interfaz de usuario](~/mac/app-fundamentals/xibless-ui.md)
+## <a name="working-with-xib-filesmacapp-fundamentalsxibmd"></a>[Trabajar con archivos .xib](~/mac/app-fundamentals/xib.md)
 
-Este artículo trata la creación de interfaz de usuario de la aplicación Xamarin.Mac directamente desde el código C# sin utilizar el generador de interfaz de Xcode con .storyboard o .xib archivos.
+En este artículo se explica cómo trabajar con archivos .xib creados en Xcode Interface Builder para crear y mantener interfaces de usuario para una aplicación de Xamarin.Mac.
+
+## <a name="storyboardxib-less-user-interface-designmacapp-fundamentalsxibless-uimd"></a>[.Storyboard/.xib menos el diseño de la interfaz de usuario](~/mac/app-fundamentals/xibless-ui.md)
+
+En este artículo describe la creación de interfaz de usuario de la aplicación de Xamarin.Mac directamente desde el código de C# sin usar Interface Builder de Xcode con .storyboard o .xib archivos.
 
 ## <a name="working-with-imagesmacapp-fundamentalsimagemd"></a>[Trabajar con imágenes](~/mac/app-fundamentals/image.md)
 
-Este artículo explica cómo trabajar con imágenes e iconos en una aplicación Xamarin.Mac. Abarca la creación y mantenimiento de las imágenes necesarios para crear el icono de la aplicación y utilizar imágenes en código de C# y el generador de interfaz de Xcode.
+En este artículo se explica cómo trabajar con imágenes e iconos en una aplicación de Xamarin.Mac. Describe la creación y mantener las imágenes necesarias para crear el icono de la aplicación y usar imágenes en el código de C# y en Interface Builder de Xcode.
 
-## <a name="data-binding-and-key-value-codingmacapp-fundamentalsdatabindingmd"></a>[Enlace de datos y el valor de clave de codificación](~/mac/app-fundamentals/databinding.md)
+## <a name="data-binding-and-key-value-codingmacapp-fundamentalsdatabindingmd"></a>[Enlace de datos y la clave y valor de codificación](~/mac/app-fundamentals/databinding.md)
 
-Este artículo incluye el uso de codificación y observar para permitir el enlace de datos a los elementos de interfaz de usuario en el generador de interfaz de Xcode de clave y valor de clave y valor. Con esta técnica, reducir considerablemente la cantidad de código C# que es necesario que se escribirá para la aplicación Xamarin.Mac. 
+En este artículo se describe el uso de codificación y observación para permitir el enlace de datos a los elementos de interfaz de usuario de Interface Builder de Xcode de pares clave-valor de pares clave-valor. Con esta técnica, reducir en gran medida la cantidad de código C# que debe escribirse para su aplicación de Xamarin.Mac. 
 
 ## <a name="working-with-databasesmacapp-fundamentalsdatabasesmd"></a>[Trabajar con bases de datos](~/mac/app-fundamentals/databases.md)
 
-Este artículo incluye el uso de codificación y observar para permitir el enlace de datos con acceso directo a las bases de datos de SQLite a elementos de interfaz de usuario en el generador de interfaz de Xcode de clave y valor de clave y valor. También incluye el uso de las ORM SQLite.NET para proporcionar acceso a datos de SQLite.
+En este artículo se describe el uso de codificación y observación para permitir el enlace de datos con acceso directo a bases de datos de SQLite a elementos de interfaz de usuario en Interface Builder de Xcode de pares clave-valor de pares clave-valor. También se describe mediante el SQLite.NET ORM para proporcionar acceso a los datos de SQLite.
 
 ## <a name="working-with-copy-and-pastemacapp-fundamentalscopy-pastemd"></a>[Trabajar con copiar y pegar](~/mac/app-fundamentals/copy-paste.md)
 
-Este artículo explica cómo trabajar con la mesa de trabajo para proporcionar copiar y pegar en una aplicación Xamarin.Mac. Muestra cómo trabajar con tipos de datos estándar que se pueden compartir entre varias aplicaciones y cómo admitir datos personalizados dentro de una aplicación determinada.
+En este artículo se explica cómo trabajar con la mesa de trabajo para proporcionar copiar y pegar en una aplicación de Xamarin.Mac. Muestra cómo trabajar con tipos de datos estándar que se pueden compartir entre varias aplicaciones y cómo admitir datos personalizados dentro de una aplicación ofrecen.
 
-## <a name="sandboxing-a-xamarinmac-appmacapp-fundamentalssandboxingmd"></a>[Espacio aislado de una aplicación Xamarin.Mac](~/mac/app-fundamentals/sandboxing.md)
+## <a name="sandboxing-a-xamarinmac-appmacapp-fundamentalssandboxingmd"></a>[Espacio aislado de una aplicación de Xamarin.Mac](~/mac/app-fundamentals/sandboxing.md)
 
-Este artículo trata el espacio aislado de una aplicación Xamarin.Mac para lanzamiento de la tienda de aplicaciones. Abarca todos los elementos que van en espacio aislado: directorios de contenedor, derechos, permisos de usuario determinado, separación de privilegios y cumplimiento de kernel.
+Este artículo trata el espacio aislado de una aplicación de Xamarin.Mac para la versión en la aplicación de Store. Abarca todos los elementos que se incluyen en el espacio aislado: directorios contenedores, los derechos, los permisos de usuario determinado, separación de privilegios y cumplimiento de kernel.
 
-## <a name="playing-sound-with-avaudioplayermacapp-fundamentalssoundsmd"></a>[Reproducir sonido con AVAudioPlayer](~/mac/app-fundamentals/sounds.md)
+## <a name="playing-sound-with-avaudioplayermacapp-fundamentalssoundsmd"></a>[Reproducción de sonidos con AVAudioPlayer](~/mac/app-fundamentals/sounds.md)
 
-Este artículo muestra cómo utilizar una clase auxiliar para controlar la reproducción del sonido mediante un AVAudioPlayer.
+En este artículo se muestra cómo usar una clase auxiliar para controlar la reproducción del sonido mediante un AVAudioPlayer.
 
-## <a name="reporting-bugsmacapp-fundamentalstroubleshootingmd"></a>[Informes errores](~/mac/app-fundamentals/troubleshooting.md)
+## <a name="reporting-bugsmacapp-fundamentalstroubleshootingmd"></a>[Informar de errores](~/mac/app-fundamentals/troubleshooting.md)
 
-A veces todos hacen bloqueados mientras se trabaja en un proyecto, en la imposibilidad de obtener una API para que funcione como queremos o intentar solucionar un error. Nuestro objetivo en Xamarin es para que sea correcta para escribir las aplicaciones de escritorio y móviles y le ofrecemos algunos recursos para ayudar a.
+A veces todo un bloqueo mientras se trabaja en un proyecto, en la imposibilidad de obtener una API para trabajar como queremos o intentar solucionar un error. Nuestro objetivo en Xamarin es para que pueda tener éxito en la escritura de las aplicaciones de escritorio y móviles, y hemos proporcionado algunos recursos para ayudar a.
