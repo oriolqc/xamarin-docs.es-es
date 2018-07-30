@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 4241fe9fed260091de98ba47d68b0ad5d97ed626
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a751488b4063a594904393faa605d36c3414d2ec
+ms.sourcegitcommit: 021027b78cb2f8061b03a7c6ae59367ded32d587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785780"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39182187"
 ---
 # <a name="walkthrough---using-apples-instruments-tool"></a>Tutorial: usar la herramienta Instruments de Apple
 
@@ -23,40 +23,40 @@ En primer lugar, descargue el [ejemplo MemoryDemo](https://developer.xamarin.com
 
 ## <a name="diagnosing-the-memory-issues"></a>Diagnóstico de problemas de memoria
 
-1.  En Visual Studio para Mac, inicie **Instruments** desde el elemento de menú **Herramientas > Iniciar Instruments**.
-2.  Cargue la aplicación en el dispositivo eligiendo el elemento de menú **Ejecutar > Upload to Device (Cargar en el dispositivo)**.
-3.  Elija la plantilla **Asignaciones** (icono naranja con cuadro blanco).
+1. En Visual Studio para Mac, inicie **Instruments** desde el elemento de menú **Herramientas > Iniciar Instruments**.
+2. Cargue la aplicación en el dispositivo eligiendo el elemento de menú **Ejecutar > Upload to Device (Cargar en el dispositivo)**.
+3. Elija la plantilla **Asignaciones** (icono naranja con cuadro blanco).
 
     ![](walkthrough-apples-instrument-images/00-allocations-tempate.png "Seleccionar la plantilla Asignaciones")
 
-4.  Seleccione la aplicación **Memory Demo** en la lista **Choose a profiling template for: (Elegir una plantilla de generación de perfiles para:)** en la parte superior de la ventana. Primero haga clic en el dispositivo iOS para expandir el menú que muestra las aplicaciones instaladas.
+4. Seleccione la aplicación **Memory Demo** en la lista **Choose a profiling template for: (Elegir una plantilla de generación de perfiles para:)** en la parte superior de la ventana. Primero haga clic en el dispositivo iOS para expandir el menú que muestra las aplicaciones instaladas.
 
     ![](walkthrough-apples-instrument-images/01-mem-demo.png "Seleccionar la aplicación MemoryDemo")
 
-5.  Pulse el botón **Elegir** (extremo inferior derecho de la ventana) para iniciar **Instruments**. Esta plantilla mostrará dos elementos en el panel superior: Asignaciones y VM Tracker (Seguimiento de VM).
+5. Pulse el botón **Elegir** (extremo inferior derecho de la ventana) para iniciar **Instruments**. Esta plantilla mostrará dos elementos en el panel superior: Asignaciones y VM Tracker (Seguimiento de VM).
 
-6.  Pulse el botón **Grabar** (círculo rojo del extremo superior izquierdo) de Instruments, lo que iniciará la aplicación.
+6. Pulse el botón **Grabar** (círculo rojo del extremo superior izquierdo) de Instruments, lo que iniciará la aplicación.
 
-7.  Seleccione la fila **VM Tracker (Seguimiento de VM)** del panel superior (ahora que la aplicación se está ejecutando, contiene dos secciones: Dirty y Resident Size). En el panel **Inspector**, elija la opción **Show Display Settings (Mostrar configuración de pantalla)** (el icono de engranaje) y luego active la casilla **Automatic Snapshotting (Creación automática de instantáneas)** del extremo inferior derecho de esta captura de pantalla:
+7. Seleccione la fila **VM Tracker (Seguimiento de VM)** del panel superior (ahora que la aplicación se está ejecutando, contiene dos secciones: Dirty y Resident Size). En el panel **Inspector**, elija la opción **Show Display Settings (Mostrar configuración de pantalla)** (el icono de engranaje) y luego active la casilla **Automatic Snapshotting (Creación automática de instantáneas)** del extremo inferior derecho de esta captura de pantalla:
 
     ![](walkthrough-apples-instrument-images/02-auto-snapshot.png "Elegir la opción para mostrar la configuración de pantalla en el icono de engranaje y luego marque la casilla de creación automática de instantáneas")
 
-8.  Seleccione la fila **Asignaciones** del panel superior (ahora que la aplicación se está ejecutando indicará *All Heap and Anonymous VM*)
-9.  En el panel **Inspector**, elija la opción **Show Display Settings (Mostrar configuración de pantalla)** (el icono de engranaje) y luego haga clic en el botón **Mark Generation (Generación de marca)** para establecer una línea de base. Aparecerá un pequeño indicador rojo en la escala de tiempo de la parte superior de la ventana
-10.  Desplácese por la aplicación y vuelva a seleccionar **Mark Generation (Generación de marca)** (repita varias veces)
-11.  Haga clic en el botón **Detener**.
-12.  Expanda el nodo **Generación** con el mayor **Crecimiento** y ordene por **Crecimiento** (descendente).
-13.  Vaya del panel **Inspector** a **Show Extended Detail (Mostrar más detalles)** (la "E"), que muestra el **Seguimiento de la pila**.
+8. Seleccione la fila **Asignaciones** del panel superior (ahora que la aplicación se está ejecutando indicará *All Heap and Anonymous VM*)
+9. En el panel **Inspector**, elija la opción **Show Display Settings (Mostrar configuración de pantalla)** (el icono de engranaje) y luego haga clic en el botón **Mark Generation (Generación de marca)** para establecer una línea de base. Aparecerá un pequeño indicador rojo en la escala de tiempo de la parte superior de la ventana
+10. Desplácese por la aplicación y vuelva a seleccionar **Mark Generation (Generación de marca)** (repita varias veces)
+11. Haga clic en el botón **Detener**.
+12. Expanda el nodo **Generación** con el mayor **Crecimiento** y ordene por **Crecimiento** (descendente).
+13. Vaya del panel **Inspector** a **Show Extended Detail (Mostrar más detalles)** (la "E"), que muestra el **Seguimiento de la pila**.
 
-14.  Observe que el nodo **<no objeto>** muestra un aumento excesivo de la memoria. Haga clic en la flecha situada junto a este nodo para ver más detalles. Haga clic con el botón derecho en el seguimiento de la pila para agregar **Ubicación de origen** al panel:
+14. Observe que el nodo **&lt;no objeto>** muestra un aumento excesivo de la memoria. Haga clic en la flecha situada junto a este nodo para ver más detalles. Haga clic con el botón derecho en el seguimiento de la pila para agregar **Ubicación de origen** al panel:
 
     ![](walkthrough-apples-instrument-images/03-mem-growth.png "Agregar ubicación de origen al panel")
 
-15.  Ordene por **Tamaño** y muestre la vista **Extended Detail** (Más detalles):
+15. Ordene por **Tamaño** y muestre la vista **Extended Detail** (Más detalles):
 
     ![](walkthrough-apples-instrument-images/04-extended-detail.png "Ordenar por tamaño y mostrar la lista con más detalles")
 
-16.  Haga clic en la entrada deseada en la pila de llamadas para ver el código relacionado:
+16. Haga clic en la entrada deseada en la pila de llamadas para ver el código relacionado:
 
     ![](walkthrough-apples-instrument-images/05-related-code.png "Ver el código relacionado")
 
@@ -87,8 +87,7 @@ Ahora, cuando se ejecuta la aplicación, se reduce enormemente el uso de memoria
 
 El código mejorado está disponible en el [ejemplo MemoryDemo](https://developer.xamarin.com/samples/monotouch/Profiling/MemoryDemo/) de la solución **posterior** en Visual Studio para Mac.
 
-Este blog de la comunidad sobre [Recolección de elementos no utilizados de Xamarin.iOS](https://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/) es una referencia útil para solucionar problemas de memoria con Xamarin.iOS.
-
+Este blog de la comunidad sobre [Recolección de elementos no utilizados de Xamarin.iOS](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/) es una referencia útil para solucionar problemas de memoria con Xamarin.iOS.
 
 ## <a name="summary"></a>Resumen
 
@@ -96,8 +95,7 @@ En este artículo se muestra cómo usar Instruments para diagnosticar problemas 
 En él se ha explicado cómo iniciar Instruments desde Visual Studio para Mac, cargar la plantilla de asignación de memoria y usar instantáneas para identificar problemas de memoria.
 Por último, se ha vuelto a examinar la aplicación para comprobar que se ha corregido el problema.
 
-
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplo MemoryDemo](https://developer.xamarin.com/samples/monotouch/Profiling/MemoryDemo/)
-- [Recolección de elementos no utilizados de Xamarin.iOS](https://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/)
+- [Recolección de elementos no utilizados de Xamarin.iOS (entrada de blog)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

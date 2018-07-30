@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/13/2018
-ms.openlocfilehash: 5b5f8c80e49d66ed3bd8b008c975d1cfeda93ed4
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 7399cab611b726eb7bb72928f504086fb842fb74
+ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38832389"
+ms.lasthandoff: 07/25/2018
+ms.locfileid: "39242438"
 ---
 # <a name="xamarinforms-quickstart"></a>Inicio rápido de Xamarin.Forms
 
@@ -306,7 +306,7 @@ Cree la aplicación Phoneword de la siguiente forma:
     }
     ```
 
-    Guarde los cambios en **PhoneDialer.cs** presionando **CTRL+S** y cierre el archivo.
+    Tenga en cuenta que este código supone que se usa la API de Android más reciente. Guarde los cambios en **PhoneDialer.cs** presionando **CTRL+S** y cierre el archivo.
 
 21. En el **Explorador de soluciones**, en el proyecto **Phoneword.Android**, haga doble clic en **MainActivity.cs** para abrirlo, quite todo el código de la plantilla y reemplácelo por el siguiente:
 
@@ -434,7 +434,10 @@ Cree la aplicación Phoneword de la siguiente forma:
 
 32. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.UWP** y seleccione **Establecer como proyecto de inicio**:
 
-    ![](quickstart-images/vs/uwp-set-as-startup-project.png "Establecer como proyecto de inicio")
+    
+  ![
+  ]
+  (quickstart-images/vs/uwp-set-as-startup-project.png "Establecer como proyecto de inicio")
 
 33. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación:
 
@@ -729,7 +732,7 @@ Cree la aplicación Phoneword de la siguiente forma:
     }
     ```
 
-    Guarde los cambios en **PhoneDialer.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
+    Tenga en cuenta que este código supone que se usa la API de Android más reciente. Guarde los cambios en **PhoneDialer.cs** eligiendo **Archivo > Guardar** (o presionando **&#8984; + S**) y cierre el archivo.
 
 21. En el **Panel de solución**, en el proyecto **Phoneword.Droid**, haga doble clic en **MainActivity.cs** para abrirlo, quite todo el código de la plantilla y reemplácelo por el siguiente:
 
@@ -786,7 +789,10 @@ Cree la aplicación Phoneword de la siguiente forma:
 
 27. En el **Panel de solución**, seleccione el proyecto **Phoneword.Droid**, haga clic con el botón derecho y seleccione **Establecer como proyecto de inicio**:
 
-    ![](quickstart-images/xs/set-startup-project.png "Establecer como proyecto de inicio")
+    
+  ![
+  ]
+  (quickstart-images/xs/set-startup-project.png "Establecer como proyecto de inicio")
 
 28. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en el simulador de Android:
 

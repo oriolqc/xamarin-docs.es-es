@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/23/2017
-ms.openlocfilehash: 438bb8141818ccdb1aaf2fa604707d2fb7601cd5
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f06bf6736b427a4d77ac34957d75cd321f3dae3a
+ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792790"
+ms.lasthandoff: 07/26/2018
+ms.locfileid: "39275942"
 ---
 # <a name="hello-mac--walkthrough"></a>Tutorial Hello, Mac
 
@@ -249,7 +249,7 @@ El archivo `Info.plist` contiene información sobre la aplicación de Xamarin.Ma
 
 [![](hello-mac-images/infoplist01.png "Editor de plist de Visual Studio para Mac")](hello-mac-images/infoplist01.png#lightbox)
 
-También define qué _guion gráfico_ se usará para mostrar la interfaz de usuario de la aplicación de Xamarin.Mac en la lista desplegable **Interfaz principal**. En el caso del ejemplo anterior, `Main` en la lista desplegable se relaciona con `Main.storyboard` en el árbol de origen del proyecto del **Explorador de soluciones**. También define los iconos de la aplicación al especificar el *catálogo de recursos* que los contiene (AppIcons en este caso).
+También define qué _guion gráfico_ se usará para mostrar la interfaz de usuario de la aplicación de Xamarin.Mac en la lista desplegable **Interfaz principal**. En el caso del ejemplo anterior, `Main` en la lista desplegable se relaciona con `Main.storyboard` en el árbol de origen del proyecto del **Explorador de soluciones**. También define los iconos de la aplicación al especificar el *catálogo de recursos* que los contiene (**AppIcons** en este caso).
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 

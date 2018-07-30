@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 25129d532af0b146afedf28865649ffc9e38ee17
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9b6168eba91a87af88891b9e07e3dd395301cc48
+ms.sourcegitcommit: 021027b78cb2f8061b03a7c6ae59367ded32d587
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785617"
+ms.lasthandoff: 07/20/2018
+ms.locfileid: "39182213"
 ---
 # <a name="profiling-xamarinios-applications-with-instruments"></a>Generar perfiles de aplicaciones de Xamarin.iOS con Instruments
 
@@ -27,11 +27,11 @@ Xcode Instruments solo se ejecuta en equipos Mac.
 
 Seleccione el dispositivo y ejecute la aplicación Instruments:
 
-1.  Abra el proyecto de Xamarin.iOS en Visual Studio para Mac.
-2.  Seleccione la configuración **Depurar|iPhone**.
-3.  Conecte un dispositivo iOS al equipo.
-4.  En el menú **Ejecutar**, seleccione **Upload to Device** (Cargar en el dispositivo). Se ha compilado la aplicación y se ha cargado en el dispositivo.
-5.  En el menú **Herramientas**, seleccione **Launch Instruments** (Iniciar Instruments).
+1. Abra el proyecto de Xamarin.iOS en Visual Studio para Mac.
+2. Seleccione la configuración **Depurar|iPhone**.
+3. Conecte un dispositivo iOS al equipo.
+4. En el menú **Ejecutar**, seleccione **Upload to Device** (Cargar en el dispositivo). Se ha compilado la aplicación y se ha cargado en el dispositivo.
+5. En el menú **Herramientas**, seleccione **Launch Instruments** (Iniciar Instruments).
 
 
 Instruments se abrirá y mostrará el cuadro de diálogo siguiente:
@@ -65,4 +65,4 @@ En esta guía, se le ha explicado cómo iniciar Xcode Instruments para supervisa
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Tutorial de Instruments](~/ios/deploy-test/walkthrough-apples-instrument.md)
-- [Recolección de elementos no utilizados de Xamarin.iOS](https://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/)
+- [Recolección de elementos no utilizados de Xamarin.iOS (entrada de blog)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
