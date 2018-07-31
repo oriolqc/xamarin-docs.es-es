@@ -5,12 +5,12 @@ ms.assetid: 670C7E8A-E882-4AC0-97D2-A53D90ADD6A3
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 2c092d6767045f0af956c5dab74801077dadb51f
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 81dc67fa5a4975f31d0fbf9f7219637596a827ce
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38815653"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353664"
 ---
 # <a name="xamarinessentials-version-tracking"></a>Xamarin.Essentials: Seguimiento de la versión
 
@@ -72,9 +72,7 @@ var buildHistory = VersionTracking.BuildHistory;
 
 ## <a name="platform-implementation-specifics"></a>Detalles de implementación de plataforma
 
-Toda la información de versión se almacena utilizando la [preferencias](preferences.md) API en Xamarin.Essentials y se almacena con un nombre de archivo de **.xamarinessentials [YOUR-APP-ID de paquete]**.
-
-Desinstalar la aplicación hará que el _LocalSettings_y todas las versiones, seguimiento de la información que se va a quitar.
+Toda la información de versión se almacena utilizando la [preferencias](preferences.md) API en Xamarin.Essentials y se almacena con un nombre de archivo de **.xamarinessentials.versiontracking [YOUR-APP-ID de paquete]** y sigue el mismo persistencia de los datos que se describe en la [preferencias](preferences.md#persistence) documentación.
 
 ## <a name="api"></a>API
 

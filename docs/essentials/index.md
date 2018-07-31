@@ -5,12 +5,12 @@ ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 97dc5494f37da1590178bc90feb673889598bdd7
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 6a49f16f935f058b002d260825cfb005df0c6eef
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831558"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353768"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -44,7 +44,8 @@ Siga las guías para integrar estas características Xamarin.Essentials en sus a
 * [Ubicación geográfica](geolocation.md?context=xamarin/xamarin-forms) : recuperar la ubicación del dispositivo GPS.
 * [Giroscopio](gyroscope.md?context=xamarin/xamarin-forms) : realizar un seguimiento de giro alrededor de tres ejes principal del dispositivo.
 * [Magnetómetro](magnetometer.md?context=xamarin/xamarin-forms) : detectar la orientación del dispositivo en relación con el campo magnético de la tierra.
-* [MainThread](main-thread.md?content=xamarin/xamarin-forms) : ejecutar código en el subproceso principal de la aplicación. 
+* [MainThread](main-thread.md?content=xamarin/xamarin-forms) : ejecutar código en el subproceso principal de la aplicación.
+* [Asigna](maps.md?content=xamarin/xamarin-forms) : abra la aplicación se asigna a una ubicación específica.
 * [Abrir explorador](open-browser.md?context=xamarin/xamarin-forms) : rápida y fácilmente, abra un explorador en un sitio Web específico.
 * [Sensor de orientación](orientation-sensor.md?context=xamarin/xamarin-forms) : recuperar la orientación del dispositivo en tres espacio dimensional.
 * [Marcador telefónico](phone-dialer.md?context=xamarin/xamarin-forms) : abra el marcador de teléfono.

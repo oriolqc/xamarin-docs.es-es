@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 07/16/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: fc4f851d25837690cd3412ca142a52b1312a08b3
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: d78c0e52b96403ad27a7c5ac69a367746781b589
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270207"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351748"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>Certificados asociados de consultoría para entregar soluciones móviles
 
@@ -112,6 +112,7 @@ _Enumerados por la ubicación principal, muchos socios proporcionan servicios a 
 |[InterKnowlogy](http://www.interknowlogy.com/)|San Diego, CA, Estados Unidos|Un líder mundial en el desarrollo de aplicaciones personalizadas, InterKnowlogy aprovecha las tecnologías actuales y emergentes para proporcionar experiencias conectadas a través del tacto, gestos y voz|
 |[Soluciones InTouch](http://www.intouchsol.com )|Overland Park, KS, Estados Unidos; Londres, Reino Unido; Chicago, IL, Estados Unidos; Nueva York, NY, EE.|Somos una agencia Digital inicial dentro del Pharma y espacio de asistencia sanitaria|
 |[iTexico](http://www.itexico.com)|Austin, Texas, Estados Unidos|iTexico es una empresa de tecnología de software global que se centra en ayudar a las empresas de desarrollo para dispositivos móviles a lo largo de un proyecto de ' Äôs ciclo de vida a través de subcontratación nearshore.|
+|[JBS](https://www.jbssolutions.com)|Pennsylvania, EE. UU.|JBS es un proveedor de soluciones de software personalizado.|
 |[Kaonsoft](http://www.kaonsoft.net/)|Palo Alto, CA, Estados Unidos; Chicago, IL, Estados Unidos; Toledo, OH, Estados Unidos; Seongnam-si, Gyeonggi: no, Corea del sur|Kaonsoft es una compañía de software innovadoras que proporciona soluciones completas de extremo a otro para enterprise mobility de crear aplicaciones entre plataformas.|
 |[Katalyst Technologies Inc. ](http://www.katalysttech.com )|Evanston, IL, Estados Unidos; Atlanta, GA, Estados Unidos; Bombay, India, Maharashtra; Hyderabad, Telangana en India. Pune, Maharashtra, India|En Katalyst, creemos que la tecnología puede ser realmente un habilitador. Que ha por qué las empresas líderes de confianza nos no sólo ofrecen productos y servicios, pero cambiar la forma en que funciona su negocio principal a través de soluciones personalizadas y de alto impacto que abarcan toda la empresa.|
 |[Kleio Technology LLC](http://kleiotechnology.com)|Royal Palm Beach, Florida, Estados Unidos|Hemos trabajado tradicionalmente en una educación, marca y las identidades. nos estudiar el problema de un cliente empresarial abordarlo de diseño, la experiencia de usuario y la estrategia de contenido. Le ayudamos a empresarial para llegar a las necesidades del cliente y que sea rentable|

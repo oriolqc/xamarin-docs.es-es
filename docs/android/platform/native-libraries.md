@@ -6,22 +6,22 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 03/09/2018
-ms.openlocfilehash: 0fa66f3a16047c18af19cb7257c778b498bc0c9b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 9175996f516a980d915d1501b4b18ea23ec86cef
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30774816"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353585"
 ---
 # <a name="using-native-libraries"></a>Uso de bibliotecas nativas
 
-Xamarin.Android admite el uso de bibliotecas nativas a través del mecanismo de PInvoke estándar. También puede agrupar las bibliotecas nativas adicionales que no forman parte del sistema operativo en su .apk.
+Xamarin.Android admite el uso de bibliotecas nativas a través del mecanismo estándar de PInvoke. También puede agrupar las bibliotecas nativas adicionales que no forman parte del sistema operativo en el archivo .apk.
 
-Para implementar una biblioteca nativa con una aplicación de Xamarin.Android, agregue la biblioteca binaria para el proyecto y establezca su **acción de compilación** a **AndroidNativeLibrary**.
+Para implementar una biblioteca nativa con una aplicación de Xamarin.Android, agregue la biblioteca de binaria al proyecto y establezca su **acción de compilación** a **AndroidNativeLibrary**.
 
-Para implementar una biblioteca nativa con un proyecto de biblioteca de Xamarin.Android, agregue la biblioteca binaria para el proyecto y establezca su **acción de compilación** a **EmbeddedNativeLibrary**.
+Para implementar una biblioteca nativa con un proyecto de biblioteca de Xamarin.Android, agregue la biblioteca de binaria al proyecto y establezca su **acción de compilación** a **EmbeddedNativeLibrary**.
 
-Tenga en cuenta que puesto que Android admite varias Interfaces de binarios de aplicación (ABIs), Xamarin.Android debe saber qué ABI creada para la biblioteca nativa.
+Tenga en cuenta que puesto que Android admite varias Interfaces binarias de aplicación (ABI), Xamarin.Android debe saber para qué ABI se compila la biblioteca nativa de.
 Hay dos maneras de hacerlo:
 
 1.  Ruta de acceso "examen"
@@ -40,17 +40,24 @@ Como alternativa, puede editar el archivo de proyecto para especificar explícit
 </ItemGroup>
 ```
 
-Para obtener más información sobre el uso de bibliotecas nativas, vea [interoperabilidad con bibliotecas nativas](http://www.mono-project.com/docs/advanced/pinvoke/).
+Para obtener más información sobre el uso de bibliotecas nativas, consulte [interoperabilidad con las bibliotecas nativas](http://www.mono-project.com/docs/advanced/pinvoke/).
 
-## <a name="debugging-native-code-with-visual-studio-2015"></a>Depurar código nativo con Visual Studio 2015
+## <a name="debugging-native-code-with-visual-studio-2017"></a>Depurar código nativo con Visual Studio 2017
 
-Si usas *Visual Studio 2015*, no tiene que modificar los archivos de proyecto (tal y como se ha descrito anteriormente).
-Puede compilar y depurar C++ dentro de la solución Xamarin.Android, agregando una referencia de proyecto de C++ **biblioteca dinámica compartida (Android)** proyecto.
+Si usas *Visual Studio 2017* o superior, no tendrá que modificar los archivos de proyecto como se describió anteriormente.
+Puede compilar y depurar C++ dentro de la solución de Xamarin.Android mediante la adición de una referencia de proyecto en C++ **biblioteca dinámica compartida (Android)** proyecto. 
 
-Los desarrolladores de Visual Studio C++ pueden ver el [SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/) de ejemplo para probar la depuración de C++ en Visual Studio 2015 con Xamarin; y hacer referencia a nuestro [entrada de blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) para obtener más información.
+Para depurar código nativo de C++ en el proyecto, siga estos pasos:
+
+1. Haga doble clic en el proyecto **propiedades** y seleccione el **opciones de Android** página.
+2. Desplácese hacia abajo hasta **opciones de depuración**.
+3. En el **depurador** menú desplegable, seleccione **C++** (en lugar del predeterminado **.Net (Xamarin)**).
+
+Los desarrolladores de Visual Studio C++ pueden ver el [SanAngeles_NativeDebug](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/) un muestreo para intentar depurar C++ en Visual Studio 2017 con Xamarin; y hacer referencia a nuestro [entrada de blog](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) para obtener más información.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [SanAngeles_NativeDebug (ejemplo)](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
+- [Desarrollo de aplicaciones nativas de Xamarin Android](https://blogs.msdn.microsoft.com/vcblog/2015/02/23/developing-xamarin-android-native-applications/)

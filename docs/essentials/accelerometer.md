@@ -5,12 +5,12 @@ ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 15e2cb69806f281e88e226b7bcd87a20e149d508
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: b5a24e214eb129b4d53b94586632791c8827447b
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947314"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353846"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: acelerómetro
 
@@ -33,7 +33,7 @@ La funcionalidad de acelerómetro funciona mediante una llamada a la `Start` y `
 public class AccelerometerTest
 {
     // Set speed delay for monitoring changes.
-    SensorSpeed speed = SensorSpeed.Ui;
+    SensorSpeed speed = SensorSpeed.UI;
 
     public AccelerometerTest()
     {
@@ -41,7 +41,7 @@ public class AccelerometerTest
         Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
     }
 
-    void Accelerometer_ReadingChanged(AccelerometerChangedEventArgs e)
+    void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
     {
         var data = e.Reading;
         Console.WriteLine($"Reading: X: {data.Acceleration.X}, Y: {data.Acceleration.Y}, Z: {data.Acceleration.Z}");
@@ -81,7 +81,7 @@ Ejemplos:
 
 * Cuando se encuentra el dispositivo sin formato en una tabla, el valor de la aceleración es G + 1.00 o (+ m/s 9,81 ^ 2), que corresponden a la aceleración del dispositivo (0 m/s ^ 2) menos la fuerza de la gravedad (-m/s 9,81 ^ 2) y normalizada, como se muestra en G.
 
-* Cuando el dispositivo se encuentra plana en una tabla y se desplazados hacia el cielo con una aceleración de m/s ^ 2, el valor de la aceleración es igual A + 9.81 que corresponden a la aceleración del dispositivo (+ m/s ^ 2) menos la fuerza de la gravedad (-m/s 9,81 ^ 2) y normalizada en G. 
+* Cuando el dispositivo se encuentra plana en una tabla y se desplazados hacia el cielo con una aceleración de m/s ^ 2, el valor de la aceleración es igual A + 9.81 que corresponden a la aceleración del dispositivo (+ m/s ^ 2) menos la fuerza de la gravedad (-m/s 9,81 ^ 2) y normalizada en G.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 

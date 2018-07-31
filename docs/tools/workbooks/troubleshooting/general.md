@@ -1,22 +1,23 @@
 ---
 title: Problemas conocidos y soluciones alternativas
-description: Este documento describe los problemas conocidos y soluciones alternativas para los libros de Xamarin. Se trata problemas CultureInfo, problemas JSON y mucho más.
+description: Este documento describe problemas conocidos y soluciones para Xamarin Workbooks. Describe problemas CultureInfo, problemas JSON y mucho más.
 ms.prod: xamarin
 ms.assetid: 495958BA-C9C2-4910-9BAD-F48A425208CF
 author: topgenorth
 ms.author: toopge
-ms.openlocfilehash: b6dc3b119d3e85369a71638f2519b2ef0c85446c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 03/30/2017
+ms.openlocfilehash: d362698d2844ae6d96bba4929d509f5373742578
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794038"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351000"
 ---
 # <a name="known-issues--workarounds"></a>Problemas conocidos y soluciones alternativas
 
-## <a name="persistence-of-cultureinfo-across-cells"></a>Persistencia de CultureInfo en las celdas
+## <a name="persistence-of-cultureinfo-across-cells"></a>Persistencia de CultureInfo entre celdas
 
-Establecer `System.Threading.CurrentThread.CurrentCulture` o `System.Globalization.CultureInfo.CurrentCulture` no se conserva en las celdas del libro en destinos de libros basados en Mono (Mac, iOS y Android) debido a un [error en de Mono `AppContext.SetSwitch` ] [ appcontext-bug] implementación .
+Establecer `System.Threading.CurrentThread.CurrentCulture` o `System.Globalization.CultureInfo.CurrentCulture` no se conservan entre las celdas del libro en destinos de los libros de Mono (Mac, iOS y Android) debido a un [errores en Mono `AppContext.SetSwitch` ] [ appcontext-bug] implementación .
 
 ### <a name="workarounds"></a>Soluciones
 
@@ -26,39 +27,39 @@ using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 ```
 
-* O bien, actualización de libros 1.2.1 o versiones más recientes, que se vuelva a escribir las asignaciones a `System.Threading.CurrentThread.CurrentCulture` y `System.Globalization.CultureInfo.CurrentCulture` para proporcionar el comportamiento deseado (solucionar el error Mono).
+* O actualización de libros 1.2.1 o posterior, que se vuelva a escribir las asignaciones a `System.Threading.CurrentThread.CurrentCulture` y `System.Globalization.CultureInfo.CurrentCulture` para proporcionar el comportamiento deseado (evitar el error Mono).
 
 ## <a name="unable-to-use-newtonsoftjson"></a>No se puede usar Newtonsoft.Json
 
 ### <a name="workaround"></a>Solución
 
 * Actualizar a libros 1.2.1, que instalarán Newtonsoft.Json 9.0.1.
-  Libros 1.3, actualmente en el canal alfa, es compatible con las versiones 10 y versiones más recientes.
+  Libros 1.3, actualmente en el canal alfa, admite las versiones 10 y versiones más recientes.
 
 ### <a name="details"></a>Detalles
 
-Newtonsoft.Json 10 se liberó que aumenta su dependencia de Microsoft.CSharp que entra en conflicto con los libros de una versión que se incluye para admitir empieza a escasear `dynamic`. Esto se soluciona en la versión de vista previa de los libros 1.3, pero por ahora hemos trabajado resolver este problema mediante anclado Newtonsoft.Json específicamente a la versión 9.0.1.
+Se lanzó Newtonsoft.Json 10 que se incrementa su dependencia de Microsoft.CSharp que entra en conflicto con los libros de versión se incluye para admitir `dynamic`. Esto se trata en la versión preliminar de los libros 1.3, pero por ahora hemos trabajado solucionar este problema mediante Newtonsoft.Json anclaje específicamente a la versión 9.0.1.
 
-Paquetes de NuGet explícitamente según Newtonsoft.Json 10 o versiones más recientes solo se admiten en los libros 1.3, actualmente en el canal alfa.
+Paquetes de NuGet explícitamente según Newtonsoft.Json 10 o posterior solo se admiten en la versión 1.3 de libros, actualmente en el canal alfa.
 
 ## <a name="code-tooltips-are-blank"></a>Información sobre herramientas de código es en blanco
 
-Hay un [error en el editor Monaco] [ monaco-bug] en Safari/WebKit, que se utiliza en la aplicación de los libros de Mac, que da como resultado la representación de información sobre herramientas de código sin texto.
+Hay un [errores en el editor Monaco] [ monaco-bug] en Safari/WebKit, que se utiliza en la aplicación Workbooks de Mac, que es el resultado en el procesamiento de información sobre herramientas de código sin texto.
 
 ![](general-images/monaco-signature-help-bug.png)
 
 ### <a name="workaround"></a>Solución
 
-* Al hacer clic en la información sobre herramientas después de que aparezca, se forzará el texto que se va a representar.
+* Al hacer clic en la información sobre herramientas después de que aparezca forzará el texto que se presenta.
 
 * O actualizar a libros 1.2.1 o posterior
 
 [appcontext-bug]: https://bugzilla.xamarin.com/show_bug.cgi?id=54448
 [monaco-bug]: https://github.com/Microsoft/monaco-editor/issues/408
 
-## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>Faltan los representadores de SkiaSharp en libros 1.3
+## <a name="skiasharp-renderers-are-missing-in-workbooks-13"></a>Faltan los representadores de SkiaSharp en la versión 1.3 de libros
 
-A partir de los libros 1.3, hemos quitado los representadores de SkiaSharp que se incluye en los libros 0.99.0, en favor de SkiaSharp proporcionando los representadores de sí mismo, utilizando nuestro [SDK](~/tools/workbooks/sdk/index.md).
+A partir de los libros 1.3, hemos quitado los representadores de SkiaSharp que lanzamos al mercado en los libros 0.99.0, en favor de SkiaSharp ofrece los representadores en Sí, mediante nuestros [SDK](~/tools/workbooks/sdk/index.md).
 
 ### <a name="workaround"></a>Solución
 
@@ -66,4 +67,4 @@ A partir de los libros 1.3, hemos quitado los representadores de SkiaSharp que s
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Informes errores](~/tools/workbooks/install.md#reporting-bugs)
+- [Informar de errores](~/tools/workbooks/install.md#reporting-bugs)

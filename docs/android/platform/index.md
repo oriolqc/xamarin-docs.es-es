@@ -6,13 +6,13 @@ ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/23/2018
-ms.openlocfilehash: 762df7322607588344d570830dafc745a89ea165
-ms.sourcegitcommit: 9bb9e8297d3edd9a50585f4ba53c1b4f0bcd1d3e
+ms.date: 07/27/2018
+ms.openlocfilehash: 8e2bb43f885c162eb6dca0cf4a8ed14490ff092b
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212009"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39351569"
 ---
 # <a name="platform-features"></a>Características de la plataforma
 
@@ -45,6 +45,10 @@ Android 3.0 presentó fragmentos, que muestra cómo admitir diseños más flexib
 
 Esta guía describirá cómo es compatible con Android 6.0 _aplicación vinculación_, una técnica que permite que las aplicaciones móviles responder a las direcciones URL en los sitios Web. Trataremos cómo implementar la vinculación a la aplicación en una aplicación de Android 6.0 y cómo configurar un sitio Web para conceder permisos a la aplicación móvil para administrar vínculos de la aplicación para el dominio.
 
+
+##  <a name="android-p-previewandroidplatformandroid-pmd"></a>[Vista previa de P de Android](~/android/platform/android-p.md)
+
+En este artículo se proporciona un esquema de las nuevas características de la versión preliminar de P Android, se explica cómo preparar Xamarin.Android para el desarrollo de Android P y proporciona código de ejemplo que ilustra cómo usar las características clave de Android P en aplicaciones de Xamarin.Android.
 
 
 ##  <a name="android-8-oreoandroidplatformoreomd"></a>[Android 8 Oreo](~/android/platform/oreo.md)

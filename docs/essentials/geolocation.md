@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 11749107403fc99e1d49b63ee3b50ff105abaa57
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 0aeb2ed96e6c21def69eb2e6f305b26e2e478825
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38848756"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353859"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: ubicación geográfica
 
@@ -65,7 +65,7 @@ O editar el archivo manualmente y agregue lo siguiente:
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Debe establecer el `Location` permiso para la aplicación. Esto puede hacerse abriendo el **Package.appxmanifest** y si selecciona el **capacidades** ficha y la comprobación **ubicación**.
+Debe establecer el `Location` permiso para la aplicación. Esto puede hacerse abriendo el **Package.appxmanifest** y seleccionando el **capacidades** ficha y la comprobación **ubicación**.
 
 -----
 

@@ -1,19 +1,20 @@
 ---
-title: 'Error en tiempo de ejecución: ensamblado mscorlib.dll no se encontró o no se pudo cargar'
+title: 'Error en tiempo de ejecución: The assembly mscorlib.dll no se encontró o no se pudo cargar'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 1027E16C-2C14-4BB5-AAAB-342F3E28E22E
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 1470396e782fd2343de72e9bea042f45cd07e555
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 04/03/2018
+ms.openlocfilehash: 3510ccafed3ed1b57d8ecd1b99ee8d10f952c57c
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30778427"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350893"
 ---
-# <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loaded"></a>Error en tiempo de ejecución: ensamblado mscorlib.dll no se encontró o no se pudo cargar
+# <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loaded"></a>Error en tiempo de ejecución: The assembly mscorlib.dll no se encontró o no se pudo cargar
 
 ```
 <Warning>: The assembly mscorlib.dll was not found or could not be loaded.
@@ -21,5 +22,5 @@ ms.locfileid: "30778427"
 <Warning>: Service exited with abnormal code: 1
 ```
 
-Este problema se produce cuando el *oculto* `.monotouch-32` y `.monotouch-64` faltan carpetas en el `.xcarchive` para firmar / creación de IPA, desencadena el error en tiempo de ejecución.
+Este problema se produce cuando el *oculto* `.monotouch-32` y `.monotouch-64` faltan carpetas en el `.xcarchive` para firmar / creación IPA, desencadena el error en tiempo de ejecución.
 

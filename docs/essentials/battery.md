@@ -5,12 +5,12 @@ ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 1ed0ef5e013967545e739733c887702325f60c3f
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: 1deafed85e9400bf7d4592fc06f71c22cc0015f0
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855060"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353459"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: la batería
 
@@ -29,7 +29,7 @@ El `Battery` permiso es necesario y debe configurarse en el proyecto de Android.
 Abra el **AssemblyInfo.cs** archivo bajo el **propiedades** carpeta y agregue:
 
 ```csharp
-[assembly: UsesPermission(Android.Manifest.Permission.Battery)]
+[assembly: UsesPermission(Android.Manifest.Permission.BatteryStats)]
 ```
 
 O actualice el manifiesto de Android:
@@ -37,7 +37,7 @@ O actualice el manifiesto de Android:
 Abra el **AndroidManifest.xml** de archivos en el **propiedades** carpeta y agregue lo siguiente dentro de la **manifiesto** nodo.
 
 ```xml
-<uses-permission android:name="android.permission.BATTERY" />
+<uses-permission android:name="android.permission.BATTERY_STATS" />
 ```
 
 O haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **manifiesto de Android** encontrar el **los permisos necesarios:** área y compruebe el **batería** permiso. Esto actualizará automáticamente el **AndroidManifest.xml** archivo.
@@ -93,7 +93,7 @@ switch (source)
     case BatteryPowerSource.Battery:
         // Being powered by the battery
         break;
-    case BatteryPowerSource.Ac:
+    case BatteryPowerSource.AC:
         // Being powered by A/C unit
         break;
     case BatteryPowerSource.Usb:
@@ -138,12 +138,12 @@ No hay diferencias entre las plataformas.
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
 * Dispositivo debe usarse para probar las API. 
-* Solo devolverá `Ac` o `Battery` para `PowerSource`. 
+* Solo devolverá `AC` o `Battery` para `PowerSource`.
 * No se puede cancelar la vibración.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* Solo devolverá `Ac` o `Battery` para `PowerSource`. 
+* Solo devolverá `AC` o `Battery` para `PowerSource`.
 
 -----
 

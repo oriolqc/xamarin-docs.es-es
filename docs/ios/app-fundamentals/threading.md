@@ -1,40 +1,41 @@
 ---
 title: Subprocesamiento en Xamarin.iOS
-description: Este documento describe cómo usar las APIs System.Threading en una aplicación de Xamarin.iOS. Se trata de la biblioteca TPL, creación de aplicaciones con capacidad de respuesta y recolección de elementos.
+description: Este documento describe cómo usar las APIs System.Threading en una aplicación de Xamarin.iOS. Describe la biblioteca TPL, creación de aplicaciones con capacidad de respuesta y recolección de elementos.
 ms.prod: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: 05d015d8d255ccc8c6230b1a89e098e187b22b37
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/05/2017
+ms.openlocfilehash: 8e4ee10fdabdcbb4c6cefe02b15dc93459708364
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784922"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350425"
 ---
 # <a name="threading-in-xamarinios"></a>Subprocesamiento en Xamarin.iOS
 
-El tiempo de ejecución de Xamarin.iOS proporciona a los desarrolladores acceso a .NET API, ambos explícitamente al utilizar subprocesos de subprocesamiento (`System.Threading.Thread, System.Threading.ThreadPool`) e implícitamente cuando se utiliza los patrones de delegado asincrónico o los métodos BeginXXX, así como el intervalo completo de API que admiten el Biblioteca TPL.
+El tiempo de ejecución de Xamarin.iOS ofrece a los desarrolladores acceso a .NET API, tanto explícitamente al usar subprocesos de subprocesamiento (`System.Threading.Thread, System.Threading.ThreadPool`) e implícita al usar los patrones de delegado asincrónico o los métodos BeginXXX, así como el intervalo completo de API que admiten el Biblioteca TPL.
 
 
 
-Xamarin recomienda encarecidamente que utilice la [Task Parallel Library](http://msdn.microsoft.com/library/dd460717.aspx) (TPL) para la creación de aplicaciones por diversas razones:
--  El programador TPL predeterminado suplantará la ejecución de la tarea para el grupo de subprocesos, que a su vez crecerá dinámicamente el número de subprocesos es necesario porque el proceso realiza, evitando un escenario donde hay demasiados subprocesos terminan compiten por el tiempo de CPU. 
--  Es más fácil pensar en las operaciones en cuanto a las tareas de TPL. Fácilmente puede manipularlos, programarlas, serializar su ejecución o iniciar muchas en paralelo con un amplio conjunto de API. 
+Xamarin recomienda encarecidamente que utilice el [Task Parallel Library](http://msdn.microsoft.com/library/dd460717.aspx) (TPL) para la creación de aplicaciones por diversas razones:
+-  El programador TPL predeterminado delegará la ejecución de la tarea para el grupo de subprocesos, que a su vez crecerá dinámicamente el número de subprocesos necesarios como proceso tiene lugar, al tiempo que evita un escenario donde hay demasiados subprocesos terminan compiten por el tiempo de CPU. 
+-  Es más fácil pensar en las operaciones en términos de tareas de TPL. Fácilmente puede manipularlos, programarlos, serializar su ejecución o iniciar muchas en paralelo con un amplio conjunto de API. 
 -  Es la base para la programación con las nuevas extensiones de lenguaje C# asincrónico. 
 
 
-El grupo de subprocesos lenta crece el número de subprocesos según sea necesario según el número de núcleos de CPU disponibles en el sistema, la carga del sistema y los requisitos de su aplicación. Puede usar este grupo de subprocesos mediante la invocación de métodos en `System.Threading.ThreadPool` o mediante el valor predeterminado `System.Threading.Tasks.TaskScheduler` (parte de la *entornos paralelos*).
+El grupo de subprocesos lentamente aumentará el número de subprocesos según sea necesario en función del número de núcleos de CPU disponibles en el sistema, la carga del sistema y los requisitos de su aplicación. Puede usar este grupo de subprocesos mediante la invocación de métodos en `System.Threading.ThreadPool` o mediante el valor predeterminado `System.Threading.Tasks.TaskScheduler` (parte de la *entornos paralelos*).
 
-Normalmente los desarrolladores usar subprocesos cuando se necesitan para crear aplicaciones con capacidad de respuesta y no desea bloquear la interfaz de usuario principal ejecuta el bucle.
+Normalmente, los desarrolladores usar subprocesos cuando se necesitan para crear aplicaciones con capacidad de respuesta y no desea bloquear la interfaz de usuario principal, ejecute el bucle.
 
  <a name="Developing_Responsive_Applications" />
 
 
-## <a name="developing-responsive-applications"></a>Desarrollar aplicaciones con capacidad de respuesta
+## <a name="developing-responsive-applications"></a>Desarrollo de aplicaciones con capacidad de respuesta
 
-Acceso a elementos de interfaz de usuario debe estar limitado al mismo subproceso que se ejecuta el bucle principal para la aplicación. Si desea realizar cambios en la interfaz de usuario principal de un subproceso, se debe poner en cola el código mediante el uso de [NSObject.InvokeOnMainThread](https://developer.xamarin.com/api/type/Foundation.NSObject/), similar a la siguiente:
+Acceso a elementos de interfaz de usuario debe limitarse al mismo subproceso que ejecuta el bucle principal para la aplicación. Si desea realizar cambios en la interfaz de usuario principal de un subproceso, se debe poner en cola el código mediante el uso de [NSObject.InvokeOnMainThread](https://developer.xamarin.com/api/type/Foundation.NSObject/), similar al siguiente:
 
 ```csharp
 MyThreadedRoutine ()  
@@ -51,16 +52,16 @@ MyThreadedRoutine ()
 }
 ```
 
-Los pasos anteriores, invoca el código en el delegado en el contexto del subproceso principal, sin causar que las condiciones de carrera que podrían bloquearse la aplicación.
+Los pasos anteriores, invoca el código del delegado en el contexto del subproceso principal, sin causar las condiciones de carrera que potencialmente podrían bloquear la aplicación.
 
  <a name="Threading_and_Garbage_Collection" />
 
 
 ## <a name="threading-and-garbage-collection"></a>Subprocesamiento y recolección de elementos
 
-En el curso de ejecución, el tiempo de ejecución de C de objetivo se crear y liberar objetos. Si los objetos estén marcados para su "auto-release" el tiempo de ejecución de C objetivo liberará esos objetos para el subproceso actual de la `NSAutoReleasePool`. Xamarin.iOS crea una `NSAutoRelease` grupo para cada subproceso de la `System.Threading.ThreadPool` y para el subproceso principal. Esta extensión trata los subprocesos creados en el valor predeterminado TaskScheduler System.Threading.Tasks.
+En el curso de ejecución, el tiempo de ejecución Objective-C creará y liberar objetos. Si los objetos se marcan para "auto-release" el tiempo de ejecución Objective-C liberará esos objetos para el subproceso actual de la `NSAutoReleasePool`. Xamarin.iOS crea uno `NSAutoRelease` grupo para cada subproceso de la `System.Threading.ThreadPool` y para el subproceso principal. Esta extensión trata los subprocesos creados mediante el valor TaskScheduler predeterminado en System.Threading.Tasks.
 
-Si crea sus propios subprocesos mediante `System.Threading` tendrá que proporcionar su propiedad `NSAutoRelease` grupo para evitar que se pierdan los datos. Para ello, simplemente encapsulan el subproceso en el siguiente fragmento de código:
+Si crea sus propios subprocesos mediante `System.Threading` tendrá que proporcionar su propiedad `NSAutoRelease` grupo para evitar que se pierdan los datos. Para ello, simplemente se ajustan el subproceso en el siguiente fragmento de código:
 
 ```csharp
 void MyThreadStart (object arg)
@@ -71,7 +72,7 @@ void MyThreadStart (object arg)
 }
 ```
 
-Nota: Desde Xamarin.iOS 5.2 no tendrá que proporcionar su propio `NSAutoReleasePool` ya tal y como se proporciona automáticamente para usted.
+Nota: Desde Xamarin.iOS 5.2 no tendrá que proporcionar su propio `NSAutoReleasePool` ya que se proporciona automáticamente para usted.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

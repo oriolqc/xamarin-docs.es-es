@@ -1,41 +1,41 @@
 ---
-title: Nuevas características de MapKit en iOS 11
-description: 'Este documento describe nuevas características de MapKit de iOS 11: agrupación marcadores, el botón brújula, la vista de escala y el botón de seguimiento de usuario.'
+title: Nuevas características en MapKit en iOS 11
+description: 'Este documento describe las características nuevas de MapKit en iOS 11: agrupar los marcadores, el botón de la brújula, la vista de escala y el botón de seguimiento de usuario.'
 ms.prod: xamarin
 ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.date: 08/30/2016
-ms.openlocfilehash: f73078a2dcbaeefeb5608ce7ec1e2c12b261acad
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 08/30/2017
+ms.openlocfilehash: c060a7bbc8d5968aeaca5f84743cdf22513dfbec
+ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787411"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39350591"
 ---
-# <a name="new-features-in-mapkit-on-ios-11"></a>Nuevas características de MapKit en iOS 11
+# <a name="new-features-in-mapkit-on-ios-11"></a>Nuevas características en MapKit en iOS 11
 
-iOS 11 agrega las siguientes características nuevas a MapKit:
+iOS 11 agrega las siguientes características nuevas en MapKit:
 
 - [Anotación de agrupación en clústeres](#clustering)
-- [Botón brújula](#compass)
+- [Botón de la brújula](#compass)
 - [Vista de escala](#scale)
 - [Botón de seguimiento de usuario](#user-tracking)
 
-![Mapa que muestra marcadores en clúster y compass botón](mapkit-images/cyclemap-heading.png)
+![Mapa que muestra marcadores en clúster y botón de la brújula](mapkit-images/cyclemap-heading.png)
 
 <a name="clustering" />
 
 ## <a name="automatically-grouping-markers-while-zooming"></a>Marcadores de agrupación automáticamente al hacer zoom
 
-El ejemplo [MapKit ejemplo "Tandm"](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) muestra cómo implementar la anotación de iOS 11 nueva característica de clústeres.
+El ejemplo [MapKit ejemplo "Tandm"](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) se muestra cómo implementar la nueva anotación de iOS 11 característica de clúster.
 
 ### <a name="1-create-an-mkpointannotation-subclass"></a>1. Crear un `MKPointAnnotation` subclase
 
-La clase de anotación de punto representa cada marcador del mapa. Se pueden agregar individualmente con `MapView.AddAnnotation()` o desde una matriz mediante `MapView.AddAnnotations()`.
+La clase de anotación punto representa cada marcador del mapa. Se pueden agregar individualmente mediante `MapView.AddAnnotation()` o desde una matriz mediante `MapView.AddAnnotations()`.
 
-Clases de anotación de punto no tienen una representación visual, que solo son necesarias para representar los datos asociados con el marcador (lo que es más importante, la `Coordinate` propiedad que es su latitud y longitud en el mapa) y cualquier propiedad personalizada:
+Clases de puntos de anotación no tienen una representación visual, solo son necesarios para representar los datos asociados con el marcador (lo más importante, la `Coordinate` propiedad que es su latitud y longitud en el mapa) y todas las propiedades personalizadas:
 
 ```csharp
 public class Bike : MKPointAnnotation
@@ -57,18 +57,18 @@ public class Bike : MKPointAnnotation
 }
 ```
 
-### <a name="2-create-an-mkmarkerannotationview-subclass-for-single-markers"></a>2. Crear un `MKMarkerAnnotationView` subclase para los marcadores únicos
+### <a name="2-create-an-mkmarkerannotationview-subclass-for-single-markers"></a>2. Crear un `MKMarkerAnnotationView` subclase de marcadores únicos
 
-La vista de la anotación de marcador es la representación visual de cada anotación y estilo mediante propiedades como:
+La vista de la anotación de marcador es la representación visual de cada comentario y el estilo se realiza mediante las propiedades, como:
 
 - **MarkerTintColor** : el color del marcador.
-- **GlyphText** : mostrar texto en el marcador.
+- **GlyphText** : muestra el texto en el marcador.
 - **GlyphImage** – establece la imagen que se muestra en el marcador.
-- **DisplayPriority** – determina el orden z (comportamiento apilamiento) cuando se llena con marcadores de la asignación. Utilice uno de `Required`, `DefaultHigh`, o `DefaultLow`.
+- **DisplayPriority** : determina el orden z (comportamiento de apilamiento) cuando el mapa está saturado con marcadores. Utilice uno de `Required`, `DefaultHigh`, o `DefaultLow`.
 
 Para admitir clústeres automática, también debe establecer:
 
-- **ClusteringIdentifier** : esta propiedad controla qué marcadores obtengan agrupados juntos. Puede utilizar el mismo identificador para todos los marcadores o utilizan identificadores diferentes para controlar la manera en que están agrupados juntos.
+- **ClusteringIdentifier** : controla qué marcadores se agrupan en clústeres. Puede usar el mismo identificador para todos los marcadores, o utilizan identificadores diferentes para controlar la manera en que se agrupan juntos.
 
 ```csharp
 [Register("BikeView")]
@@ -104,16 +104,16 @@ public class BikeView : MKMarkerAnnotationView
   }
 ```
 
-### <a name="3-create-an-mkannotationview-to-represent-clusters-of-markers"></a>3. Crear un `MKAnnotationView` para representar los clústeres de marcadores
+### <a name="3-create-an-mkannotationview-to-represent-clusters-of-markers"></a>3. Crear un `MKAnnotationView` para representar clústeres de marcadores
 
-Mientras que la vista de anotación que representa un clúster de marcadores _podría_ ser una imagen sencilla, los usuarios esperan que la aplicación proporcione indicaciones visuales sobre marcadores cuántos se han agrupado.
+Mientras que la vista de anotación que representa un clúster de marcadores _podría_ ser una imagen básica, los usuarios esperan que la aplicación proporcione indicaciones visuales acerca de los marcadores de cuántos se han agrupado.
 
-El [código de ejemplo](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) CoreGraphics se utiliza para representar el número de marcadores en el clúster, así como una representación gráfica de círculo de la proporción de cada tipo de marcador.
+El [código de ejemplo](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) CoreGraphics se usa para representar el número de marcadores en el clúster, así como una representación gráfica de círculo de la proporción de cada tipo de marcador.
 
-También debe establecer:
+También se debe establecer:
 
-- **DisplayPriority** – determina el orden z (comportamiento apilamiento) cuando se llena con marcadores de la asignación. Utilice uno de `Required`, `DefaultHigh`, o `DefaultLow`.
-- **CollisionMode** : `Circle` o `Rectangle`.
+- **DisplayPriority** : determina el orden z (comportamiento de apilamiento) cuando el mapa está saturado con marcadores. Utilice uno de `Required`, `DefaultHigh`, o `DefaultLow`.
+- **CollisionMode** – `Circle` o `Rectangle`.
 
 ```csharp
 [Register("ClusterView")]
@@ -181,7 +181,7 @@ public class ClusterView : MKAnnotationView
 
 ### <a name="4-register-the-view-classes"></a>4. Registrar las clases de vista
 
-Cuando se crea el control de vista de mapa y se agrega a una vista, registre los tipos de vista de anotación para habilitar el comportamiento de agrupación en clústeres automática como la asignación de entrada y salida ampliada:
+Cuando se crea el control de vista de mapa y se agrega a una vista, registrar los tipos de vistas de anotación para habilitar el comportamiento de agrupación en clústeres automática como la asignación está ampliada de entrada y salida:
 
 ```csharp
 MapView.Register(typeof(BikeView), MKMapViewDefault.AnnotationViewReuseIdentifier);
@@ -190,23 +190,23 @@ MapView.Register(typeof(ClusterView), MKMapViewDefault.ClusterAnnotationViewReus
 
 ### <a name="5-render-the-map"></a>5. Representar el mapa.
 
-Cuando se representa el mapa, marcadores de anotación se en clúster o se representan en función del nivel de zoom. A medida que cambia el nivel de zoom, marcadores animan dentro y fuera de los clústeres.
+Cuando se procesa el mapa, marcadores de anotación se en clúster o se procesan según el nivel de zoom. A medida que cambia el nivel de zoom, los marcadores de animan dentro y fuera de los clústeres.
 
-![Simulador mostrar marcadores en clúster en el mapa](mapkit-images/cyclemap-sml.png)
+![Simulador que muestra marcadores en clúster en el mapa](mapkit-images/cyclemap-sml.png)
 
 Hacer referencia a la [asigna sección](~/ios/user-interface/controls/ios-maps/index.md) para obtener más información acerca de cómo mostrar datos con MapKit.
 
 <a name="compass" />
 
-## <a name="compass-button"></a>Botón brújula
+## <a name="compass-button"></a>Botón de la brújula
 
-iOS 11 agrega la capacidad de extraer la brújula fuera de la asignación y representarlo en otro lugar en la vista. Consulte la [aplicación de ejemplo de Tandm](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) para obtener un ejemplo.
+iOS 11, agrega la capacidad de extraer la brújula alejar el mapa y presentarlos en otro lugar en la vista. Consulte la [aplicación de ejemplo Tandm](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/) para obtener un ejemplo.
 
 Crear un botón que parece una brújula (incluido en vivo animación cuando se cambia la orientación del mapa), y lo representa en otro control.
 
 ![Botón brújula en la barra de navegación](mapkit-images/compass-sml.png)
 
-El código siguiente crea un botón brújula y lo representa en la barra de navegación:
+El código siguiente crea un botón de la brújula y lo representa en la barra de navegación:
 
 ```csharp
 var compass = MKCompassButton.FromMapView(MapView);
@@ -215,15 +215,15 @@ NavigationItem.RightBarButtonItem = new UIBarButtonItem(compass);
 MapView.ShowsCompass = false; // so we don't have two compasses!
 ```
 
-El `ShowsCompass` propiedad puede utilizarse para controlar la visibilidad de la brújula predeterminado dentro de la vista del mapa.
+El `ShowsCompass` propiedad puede utilizarse para controlar la visibilidad de la brújula predeterminada dentro de la vista del mapa.
 
 <a name="scale" />
 
 ## <a name="scale-view"></a>Vista de escala
 
-Agregar la escala en otra parte de la vista utilizando la `MKScaleView.FromMapView()` método para obtener una instancia de la vista de escala para agregar en otra parte de la jerarquía de vista.
+Agregar la escala en otra parte de la vista mediante el `MKScaleView.FromMapView()` método para obtener una instancia de la vista de escala para agregar en otra parte de la jerarquía de vistas.
 
-![Vista de escala superpuesta en un mapa](mapkit-images/scale-sml.png)
+![Vista de escala superpuesta sobre un mapa](mapkit-images/scale-sml.png)
 
 ```csharp
 var scale = MKScaleView.FromMapView(MapView);
@@ -233,15 +233,15 @@ View.AddSubview(scale); // constraints omitted for simplicity
 MapView.ShowsScale = false; // so we don't have two scale displays!
 ```
 
-El `ShowsScale` propiedad puede utilizarse para controlar la visibilidad de la brújula predeterminado dentro de la vista del mapa.
+El `ShowsScale` propiedad puede utilizarse para controlar la visibilidad de la brújula predeterminada dentro de la vista del mapa.
 
 <a name="user-tracking" />
 
 ## <a name="user-tracking-button"></a>Botón de seguimiento de usuario
 
-El botón de seguimiento de usuario centra el mapa en la ubicación del usuario actual. Use la `MKUserTrackingButton.FromMapView()` para obtener una instancia del botón, aplicar cambios de formato y agregar en otra parte de la jerarquía de vista.
+El mapa en la ubicación del usuario actual centra en el botón de seguimiento de usuario. Use el `MKUserTrackingButton.FromMapView()` método para obtener una instancia del botón, aplicar cambios de formato y agregue en otra parte de la jerarquía de vistas.
 
-![Botón de ubicación de usuario situado en un mapa](mapkit-images/user-location-sml.png)
+![Botón de la ubicación de usuario superpuesto sobre un mapa](mapkit-images/user-location-sml.png)
 
 ```csharp
 var button = MKUserTrackingButton.FromMapView(MapView);
@@ -258,4 +258,4 @@ View.AddSubview(button); // constraints omitted for simplicity
 
 - [Ejemplo de MapKit 'Tandm'](https://developer.xamarin.com/samples/monotouch/ios11/MapKitSample/)
 - [MKCompassButton](https://developer.apple.com/documentation/mapkit/mkcompassbutton)
-- [What's New en MapKit (WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/237/)
+- [Novedades en MapKit (sesión WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/237/)

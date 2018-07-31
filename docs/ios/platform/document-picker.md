@@ -1,75 +1,76 @@
 ---
-title: Selector de documento en Xamarin.iOS
-description: Este documento describe el selector de documento de iOS y explica cómo utilizarla en Xamarin.iOS. Toma un vistazo a iCloud, documentos, código de configuración comunes, las extensiones de proveedor de documento y más.
+title: Selector de documentos en Xamarin.iOS
+description: Este documento describe el selector de documentos de iOS y explica cómo usarlo en Xamarin.iOS. Da un vistazo a iCloud, documentos, código de programa de instalación común, las extensiones de proveedor de documento y más.
 ms.prod: xamarin
 ms.assetid: 89539D79-BC6E-4A3E-AEC6-69D9A6CC6818
 ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
-ms.openlocfilehash: efa1b589ad4afe26d8b87c3db1777660b3e27be6
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.date: 06/05/2017
+ms.openlocfilehash: ca0c7a6e655fdc44aa673a59be71bc83044d3085
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786891"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353339"
 ---
-# <a name="document-picker-in-xamarinios"></a>Selector de documento en Xamarin.iOS
+# <a name="document-picker-in-xamarinios"></a>Selector de documentos en Xamarin.iOS
 
-El selector de documento permite que los documentos que se comparten entre aplicaciones. Estos documentos pueden almacenarse en iCloud o en el directorio de una aplicación distinta. Los documentos se comparten a través del conjunto de [extensiones de proveedor de documento](~/ios/platform/extensions.md) el usuario ha instalado en su dispositivo. 
+El selector de documentos permite que los documentos deben compartirse entre aplicaciones. Estos documentos pueden almacenarse en iCloud o en el directorio de una aplicación diferente. Los documentos se comparten a través del conjunto de [extensiones de proveedor de documento](~/ios/platform/extensions.md) el usuario ha instalado en su dispositivo. 
 
-Debido a la dificultad de mantener sincronizados en toda la nube y aplicaciones de documentos, presentan una cierta cantidad de complejidad es necesario.
+Debido a la dificultad de mantener sincronizados en la nube y aplicaciones de documentos, presentan una cierta complejidad necesaria.
 
 ## <a name="requirements"></a>Requisitos
 
-El siguiente es necesario para completar los pasos que aparecen en este artículo:
+Para completar los pasos que aparecen en este artículo, se requiere lo siguiente:
 
--  **Xcode 7 y iOS 8 o versiones más recientes** : Xcode 7 y iOS 8 o API más recientes de Apple deben instalarse y configurarse en el equipo del desarrollador.
+-  **Xcode 7 y iOS 8 o posterior** : Xcode 7 y iOS 8 o las API más recientes de Apple deben estar instalado y configurado en el equipo del desarrollador.
 -  **Visual Studio o Visual Studio para Mac** – debe instalarse la versión más reciente de Visual Studio para Mac.
 -  **Dispositivo iOS** : un dispositivo iOS con iOS 8 o posterior.
 
-## <a name="changes-to-icloud"></a>Cambios en iCloud
+## <a name="changes-to-icloud"></a>Cambios realizados en iCloud
 
-Para implementar las nuevas características del selector de documento, los siguientes cambios se realizaron en iCloud de Apple servicio:
+Para implementar las nuevas características del selector de documentos, los siguientes cambios se realizaron en iCloud Service de Apple:
 
--  El demonio de iCloud se ha reescrito completamente con CloudKit.
--  ICloud existente características han sido cambiado el nombre iCloud unidad.
--  Se ha agregado compatibilidad para el sistema operativo Microsoft Windows en iCloud.
--  Se ha agregado una carpeta de iCloud en el buscador de Mac OS.
--  dispositivos iOS pueden tener acceso al contenido de la carpeta de iCloud de Mac OS.
+-  El demonio ha sido reescrito completamente uso directo de CloudKit iCloud.
+-  ICloud existente características han sido cambiado de nombre iCloud Drive.
+-  Se agregó compatibilidad para sistemas operativos Windows de Microsoft en iCloud.
+-  Se ha agregado una carpeta de iCloud en el Finder de Mac OS.
+-  dispositivos iOS pueden acceder al contenido de la carpeta de iCloud de Mac OS.
 
 > [!IMPORTANT]
 > Apple [proporciona herramientas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ayudar a los desarrolladores a tratar correctamente el Reglamento general de protección de datos (RGPD) de la Unión Europea.
 
 ## <a name="what-is-a-document"></a>¿Qué es un documento?
 
-Cuando se hace referencia a un documento en iCloud, es una entidad única e independiente y se debería percibir como tal por el usuario. Un usuario que desee modificar el documento o compartirlo con otros usuarios (mediante correo electrónico, por ejemplo).
+Cuando se hace referencia a un documento en iCloud, es una entidad única e independiente y se debería percibir como tales por el usuario. Un usuario que desee modificar el documento o compartirlo con otros usuarios (mediante el uso de correo electrónico, por ejemplo).
 
-Hay varios tipos de archivos que el usuario inmediatamente reconocerán como documentos, como las páginas de archivos Keynote o números. Sin embargo, no se limita a este concepto en iCloud. Por ejemplo, el estado de un juego (por ejemplo, una coincidencia de ajedrez) se puede tratar como un documento y almacenan en iCloud. Este archivo podría pasarse entre dispositivos de un usuario y que puedan recoger un juego donde lo dejó en un dispositivo diferente.
+Hay varios tipos de archivos que el usuario inmediatamente reconocerán como documentos, como páginas, archivos discurso de apertura o números. Sin embargo, iCloud no se limita a este concepto. Por ejemplo, el estado de un juego (como una coincidencia de ajedrez) se puede tratar como un documento y almacenado en iCloud. Este archivo se pueden pasar entre los dispositivos del usuario y que puedan recoger un juego donde lo dejó en un dispositivo diferente.
 
 ## <a name="dealing-with-documents"></a>Trabajar con documentos
 
-Antes de profundizar en el código necesario para usar el selector de documento con Xamarin, este artículo se va a cubre las prácticas recomendadas para trabajar con documentos de iCloud y algunas de las modificaciones realizadas en las API existentes deben para admitir el selector de documento.
+Antes de profundizar en el código necesario para usar el selector de documentos con Xamarin, este artículo se va a cubrir los procedimientos recomendados para trabajar con documentos de iCloud y varias de las modificaciones realizadas en las API existentes necesarios para admitir el selector de documentos.
 
 ### <a name="using-file-coordination"></a>Uso de coordinación de archivo
 
-Dado que un archivo se puede modificar desde varias ubicaciones diferentes, debe utilizarse la coordinación para evitar la pérdida de datos.
+Dado que un archivo se puede modificar desde varias ubicaciones diferentes, coordinación debe usarse para evitar la pérdida de datos.
 
  [![](document-picker-images/image1.png "Uso de coordinación de archivo")](document-picker-images/image1.png#lightbox)
 
-¡Eche un vistazo a la ilustración anterior:
+Echemos un vistazo a la ilustración anterior:
 
 1.  Un dispositivo iOS mediante la coordinación de archivo crea un nuevo documento y lo guarda en la carpeta de iCloud.
 2.  iCloud guarda el archivo modificado en la nube para su distribución a todos los dispositivos.
-3.  Un Mac conectado ve el archivo modificado en la carpeta iCloud y coordinación de archivo utiliza para copiar los cambios en el archivo.
-4.  Un dispositivo mediante el archivo coordinación no realiza un cambio en el archivo y lo guarda en la carpeta de iCloud. Estos cambios se replican al instante en el resto de dispositivos.
+3.  Un Mac conectado ve el archivo modificado en la carpeta de iCloud y coordinación del archivo utiliza para copiar los cambios en el archivo.
+4.  Un dispositivo mediante el archivo de coordinación no realiza un cambio en el archivo y lo guarda en la carpeta de iCloud. Estos cambios se replican al instante en el resto de dispositivos.
 
-Suponga original dispositivo iOS o Mac estaba editando el archivo, ahora se pierde y sobrescribe con la versión del archivo desde el dispositivo coordinado sus cambios. Para evitar la pérdida de datos, archivo de coordinación es obligatorio cuando se trabaja con documentos basados en la nube.
+Se supone el original estaba editando el archivo, el dispositivo iOS o Mac ahora están perdidos y se sobrescribe con la versión del archivo desde el dispositivo no coordinado de sus cambios. Para evitar la pérdida de datos, la coordinación del archivo es obligatoria cuando se trabaja con documentos basados en la nube.
 
-### <a name="using-uidocument"></a>Usar UIDocument
+### <a name="using-uidocument"></a>Uso de UIDocument
 
- `UIDocument` simplifica las cosas (o `NSDocument` en macOS) haciendo todo el trabajo pesado para el programador. Proporciona integra en archivo coordinación con las colas de segundo plano para evitar bloquear interfaz de usuario de la aplicación.
+ `UIDocument` simplifica las cosas (o `NSDocument` en macOS) haciendo todo el trabajo pesado para el desarrollador. Proporciona lo compila en archivos coordinación con las colas en segundo plano para evitar el bloqueo de la interfaz de usuario de la aplicación.
 
- `UIDocument` expone varias API de alto nivel que facilitan el esfuerzo de desarrollo de una aplicación de Xamarin para cualquier propósito el desarrollador requiere.
+ `UIDocument` expone varias API de alto nivel que facilitan el trabajo de desarrollo de una aplicación de Xamarin para cualquier finalidad que el desarrollador requiere.
 
 El código siguiente crea una subclase de `UIDocument` para implementar un documento basado en texto genérico que puede usarse para almacenar y recuperar el texto de iCloud:
 
@@ -151,13 +152,13 @@ namespace DocPicker
 }
 ```
 
-La `GenericTextDocument` clase presentado anteriormente se usará en este artículo cuando se trabaja con el selector de documento y documentos externos en una aplicación de Xamarin.iOS 8.
+La `GenericTextDocument` clase presentada más arriba se usará en este artículo cuando se trabaja con el selector de documentos y documentos externos en una aplicación Xamarin.iOS 8.
 
 ## <a name="asynchronous-file-coordination"></a>Coordinación de archivos asincrónica
 
-iOS 8 proporciona varias características nuevas de coordinación de archivos asincrónica a través de las nuevas API de coordinación de archivo. Antes de iOS 8, todas las API de coordinación archivo existente eran totalmente sincrónicas. Esto significaba que el desarrollador era responsable de implementar su propio fondo puesta en cola para evitar la coordinación de archivo desde el bloqueo de la interfaz de usuario de la aplicación.
+iOS 8 proporciona varias características nuevas de coordinación asincrónica de archivo a través de las nuevas API de coordinación de archivo. Antes de iOS 8, todas las API existentes de coordinación de archivo eran totalmente sincrónicas. Esto significaba que el desarrollador era responsable de implementar su propio fondo puesta en cola para evitar que coordinación del archivo de bloqueo de la interfaz de usuario de la aplicación.
 
-El nuevo `NSFileAccessIntent` clase contiene una dirección URL que apunta al archivo y varias opciones para controlar el tipo de coordinación necesaria. El código siguiente muestra cómo mover un archivo de una ubicación a otra mediante intentos:
+El nuevo `NSFileAccessIntent` clase contiene una dirección URL que apunta al archivo y varias opciones para controlar el tipo de coordinación necesaria. El código siguiente muestra cómo mover un archivo de una ubicación a otra mediante las intenciones:
 
 ```csharp
 // Get source options
@@ -185,66 +186,66 @@ fileCoordinator.CoordinateAccess (intents, queue, (err) => {
 });
 ```
 
-## <a name="discovering-and-listing-documents"></a>Detectar y enumerar los documentos
+## <a name="discovering-and-listing-documents"></a>Detectar y enumerar documentos
 
-La manera de detectar y mostrar documentos es mediante el uso de las existentes `NSMetadataQuery` API. En esta sección se tratará nuevas características agregadas a `NSMetadataQuery` que facilitan el trabajo con documentos incluso más fácil que nunca.
+Es la manera de detectar y lista de documentos mediante el uso de las existentes `NSMetadataQuery` API. Esta sección explica las nuevas características agregadas a `NSMetadataQuery` que hacen que trabajar con documentos incluso más fácil que nunca.
 
-### <a name="existing-behavior"></a>Comportamiento de existente
+### <a name="existing-behavior"></a>Comportamiento existente
 
-Antes de iOS 8, `NSMetadataQuery` resultó lenta a los cambios de archivo local recogida como: elimina, crea y cambia el nombre.
+Antes de iOS 8, `NSMetadataQuery` como era lento a los cambios de archivo local de recogida: elimina, crea y cambia el nombre.
 
- [![](document-picker-images/image2.png "Información general de cambios de archivo local NSMetadataQuery")](document-picker-images/image2.png#lightbox)
+ [![](document-picker-images/image2.png "Información general de los cambios de archivo local NSMetadataQuery")](document-picker-images/image2.png#lightbox)
 
 En el diagrama anterior:
 
-1.  Para los archivos que ya existen en el contenedor de la aplicación, `NSMetadataQuery` existentes `NSMetadata` registros creados previamente y puestos en cola para que estén disponibles de manera instantánea a la aplicación.
-1.  La aplicación crea un nuevo archivo en el contenedor de la aplicación.
-1.  Hay un retraso antes de `NSMetadataQuery` ve la modificación en el contenedor de la aplicación y crea los necesarios `NSMetadata` registro.
+1.  Para los archivos que ya existen en el contenedor de aplicaciones, `NSMetadataQuery` existentes `NSMetadata` registros creados previamente y puestos en cola para que estén disponibles al instante a la aplicación.
+1.  La aplicación crea un nuevo archivo en el contenedor de aplicación.
+1.  Hay un retraso antes de `NSMetadataQuery` ve la modificación en el contenedor de aplicación y crea necesario `NSMetadata` registro.
 
 
-Debido al retraso en la creación de la `NSMetadata` registros, la aplicación tenía que abrir orígenes de dos datos: uno para los cambios de archivo local y otro para la nube según los cambios.
+A causa del retraso en la creación de la `NSMetadata` registros, la aplicación tenía que tiene dos abrir orígenes de datos: uno para los cambios del archivo local y otro para la nube según los cambios.
 
 ### <a name="stitching"></a>Unión
 
-En iOS 8, `NSMetadataQuery` es más fácil de usar directamente con una nueva característica denominada composición:
+En iOS 8, `NSMetadataQuery` es más fácil de usar directamente con una nueva característica denominada composiciones:
 
- [![](document-picker-images/image3.png "NSMetadataQuery con una nueva característica denominada composición")](document-picker-images/image3.png#lightbox)
+ [![](document-picker-images/image3.png "NSMetadataQuery con una nueva característica denominada composiciones")](document-picker-images/image3.png#lightbox)
 
 Uso de composición en el diagrama anterior:
 
-1.  Al igual que antes, para los archivos que ya existen en el contenedor de la aplicación, `NSMetadataQuery` existentes `NSMetadata` registros creados previamente y cola de impresión.
+1.  Como antes, para los archivos que ya existen en el contenedor de aplicaciones, `NSMetadataQuery` existentes `NSMetadata` registros creados previamente y puestos en cola.
 1.  La aplicación crea un nuevo archivo en el contenedor de aplicación mediante la coordinación de archivo.
-1.  Un enlace en el contenedor de la aplicación ve la modificación y las llamadas `NSMetadataQuery` para crear los necesarios `NSMetadata` registro.
-1.  El `NSMetadata` se crea directamente después del archivo de registro y se pone a disposición de la aplicación.
+1.  Un enlace en el contenedor de la aplicación ve la modificación y llama a `NSMetadataQuery` para crear los `NSMetadata` registro.
+1.  El `NSMetadata` se crea directamente después del archivo de registro y está disponible para la aplicación.
 
 
-Mediante el uso de la composición la aplicación ya no tiene que abrir un origen de datos para supervisar local y los cambios de archivo basado en la nube. Ahora puede depender de la aplicación `NSMetadataQuery` directamente.
+Mediante el uso de composiciones la aplicación ya no tiene que abrir un origen de datos para supervisar local y los cambios de archivo basado en la nube. Ahora puede depender de la aplicación `NSMetadataQuery` directamente.
 
 > [!IMPORTANT]
-> Unión sólo funciona si la aplicación está usando la coordinación de archivo tal como se presenta en la sección anterior. Si no se está usando el archivo coordinación, las API predeterminado al comportamiento anterior iOS 8 existente.
+> Unión solo funciona si la aplicación está usando la coordinación del archivo tal como se presenta en la sección anterior. Si no se está usando el archivo coordinación, las API de forma predeterminada al comportamiento anterior a iOS 8 existente.
 
 
 
 
-### <a name="new-ios-8-metadata-features"></a>Nuevas características de metadatos de iOS 8
+### <a name="new-ios-8-metadata-features"></a>Nuevas características de los metadatos de iOS 8
 
-Se agregaron las siguientes características nuevas a `NSMetadataQuery` en iOS 8:
+Se han agregado las siguientes características nuevas para `NSMetadataQuery` en iOS 8:
 
--   `NSMetatadataQuery` Ahora se puede enumerar los documentos no locales almacenados en la nube.
--  Se agregaron nuevas API para tener acceso a información de metadatos en los documentos en la nube. 
--  Hay una nueva `NSUrl_PromisedItems` API que para tener acceso a los atributos de archivo de los archivos que pueden tengan o no su contenido disponible localmente.
--  Utilice la `GetPromisedItemResourceValue` método para obtener información sobre un determinado archivo o use el `GetPromisedItemResourceValues` método para obtener información sobre más de un archivo a la vez.
+-   `NSMetatadataQuery` puede enumerar los documentos no locales almacenados en la nube.
+-  Se agregaron nuevas API para tener acceso a información de metadatos en los documentos basados en la nube. 
+-  Hay un nuevo `NSUrl_PromisedItems` API que se va a tener acceso a los atributos de archivo de los archivos que pueden tengan o no su contenido disponible localmente.
+-  Utilice la `GetPromisedItemResourceValue` método para obtener información sobre un determinado archivo o use el `GetPromisedItemResourceValues` método para obtener información en más de un archivo a la vez.
 
 
-Se han agregado dos nuevos indicadores de coordinación de archivo para tratar los metadatos:
+Para tratar con los metadatos se han agregado dos nuevos indicadores de coordinación de archivo:
 
 -   `NSFileCoordinatorReadImmediatelyAvailableMetadataOnly` 
 -   `NSFileCoordinatorWriteContentIndependentMetadataOnly` 
 
 
-Con las marcas de la anteriores, el contenido del archivo de documento no es necesario que estén disponibles localmente para que puedan utilizarse.
+Con las marcas anteriores, el contenido del archivo de documento no es necesario que estén disponibles localmente para que se utilicen.
 
-El segmento de código siguiente muestra cómo utilizar `NSMetadataQuery` para consultar la existencia de un archivo concreto y generar el archivo si no existe:
+El segmento de código siguiente muestra cómo usar `NSMetadataQuery` para consultar la existencia de un archivo concreto y generar el archivo si no existe:
 
 ```csharp
 using System;
@@ -424,60 +425,60 @@ internal void RaiseDocumentLoaded(GenericTextDocument document) {
 
 ### <a name="document-thumbnails"></a>Miniaturas de documentos
 
-Apple considera que la mejor experiencia de usuario al enumerar los documentos de una aplicación consiste en utilizar las vistas previas. Esto proporciona el contexto de los usuarios finales, para que pueden identificar rápidamente el documento que desea trabajar.
+Apple se siente que es la mejor experiencia de usuario cuando se muestran los documentos de una aplicación usar las versiones preliminares. Esto proporciona el contexto de los usuarios finales, para que pueden identificar rápidamente el documento que desea trabajar.
 
-Antes de iOS 8, que muestra las vistas previas del documento requiere una implementación personalizada. Familiarizado con iOS 8 son atributos de sistema de archivos que permiten a los programadores a trabajar rápidamente con las miniaturas de documentos.
+Antes de iOS 8, que muestra vistas previas del documento requiere una implementación personalizada. Nuevo en iOS 8 son atributos del sistema de archivos que permiten al desarrollador trabajar rápidamente con las miniaturas de documentos.
 
-#### <a name="retrieving-document-thumbnails"></a>Recuperar las miniaturas de documentos 
+#### <a name="retrieving-document-thumbnails"></a>Recuperando las miniaturas de documentos 
 
 Mediante una llamada a la `GetPromisedItemResourceValue` o `GetPromisedItemResourceValues` métodos, `NSUrl_PromisedItems` API, un `NSUrlThumbnailDictionary`, se devuelve. La única clave actualmente en este diccionario es el `NSThumbnial1024X1024SizeKey` y su coincidencia `UIImage`.
 
 #### <a name="saving-document-thumbnails"></a>Guardando las miniaturas de documentos
 
-Es la manera más fácil para guardar una vista en miniatura mediante `UIDocument`. Mediante una llamada a la `GetFileAttributesToWrite` método de la `UIDocument` y establecer la vista en miniatura, se guardará automáticamente una vez el archivo del documento. El demonio de iCloud verá este cambio y propagarlo a iCloud. En Mac OS X, las miniaturas se generan automáticamente para que el programador mediante el complemento Quick Look.
+Es la manera más fácil para guardar una vista en miniatura mediante `UIDocument`. Mediante una llamada a la `GetFileAttributesToWrite` método de la `UIDocument` y establecer la miniatura, se guardará automáticamente cuando es el archivo del documento. El demonio de iCloud verá este cambio y propagarla a iCloud. En Mac OS X, se generan automáticamente miniaturas para los desarrolladores mediante el complemento de un vistazo rápido.
 
-Con los conceptos básicos sobre cómo trabajar con documentos de iCloud basándose en su lugar, junto con las modificaciones de la API existente, estamos preparados para implementar el controlador de vista de selector de documento en un Xamarin de iOS 8 aplicación móvil.
+Con los conceptos básicos de trabajar con documentos de iCloud basándose en su lugar, junto con las modificaciones a las API existente, estamos preparados para implementar el controlador de vista del selector de documentos en un ejemplo de Xamarin iOS 8 aplicación móvil.
 
 
 ## <a name="enabling-icloud-in-xamarin"></a>Habilitar iCloud en Xamarin
 
-Antes de que el selector de documento puede usarse en una aplicación de Xamarin.iOS, compatibilidad con iCloud debe habilitarse en la aplicación y a través de Apple. 
+Antes de que el selector de documentos se pueden usar en una aplicación de Xamarin.iOS, soporte técnico de iCloud debe estar habilitada tanto en la aplicación a través de Apple. 
 
-En el siguiente tutorial de pasos del proceso de aprovisionamiento de iCloud.
+El siguiente tutorial de pasos del proceso de aprovisionamiento de iCloud.
 
 1. Crear un contenedor de iCloud.
-2. Crear un identificador de aplicación que contiene el servicio de aplicaciones de iCloud.
-3. Crear un perfil de aprovisionamiento que incluye este ID. App
+2. Crear un identificador de aplicación que contiene el servicio de aplicación de iCloud.
+3. Crear un perfil de aprovisionamiento que incluya este ID. App
 
-El [trabajar con capacidades](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) guía se describen los dos primeros pasos. Para crear un perfil de aprovisionamiento, siga los pasos descritos en la [perfil de aprovisionamiento](~/ios/get-started/installation/device-provisioning/index.md#Provisioning_Profile) guía.
+El [trabajar con capacidades](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) guía le guía a través de los dos primeros pasos. Para crear un perfil de aprovisionamiento, siga los pasos descritos en la [perfil de aprovisionamiento](~/ios/get-started/installation/device-provisioning/index.md#provisioning-your-device) guía.
 
 
 
-En el siguiente tutorial de pasos del proceso de configuración de la aplicación para iCloud:
+El siguiente tutorial de pasos del proceso de configuración de la aplicación de iCloud:
 
 Haga lo siguiente:
 
-1.  Abra el proyecto en Visual Studio para Mac o en Visual Studio.
+1.  Abra el proyecto en Visual Studio para Mac o Visual Studio.
 2.  En el **el Explorador de soluciones**, haga clic en el proyecto y seleccione opciones.
-3.  En el cuadro de diálogo Opciones, seleccione **iOS aplicación**, asegúrese de que el **identificador de paquete** coincide con la que se definió en **Id. de aplicación** creado anteriormente para la aplicación. 
-4.  Seleccione **agrupación de firma de iOS**, seleccione la **Developer identidad** y **perfil de aprovisionamiento de** creada anteriormente.
+3.  En el cuadro de diálogo Opciones, seleccione **aplicación de iOS**, asegúrese de que el **identificador de paquete** coincide con el que se definió en **Id. de aplicación** creado anteriormente para la aplicación. 
+4.  Seleccione **firma de lote de iOS**, seleccione el **Developer Identity** y **perfil de aprovisionamiento** creado anteriormente.
 5.  Haga clic en el **Aceptar** botón para guardar los cambios y cerrar el cuadro de diálogo.
 6.  Haga doble clic en `Entitlements.plist` en el **el Explorador de soluciones** para abrirlo en el editor.
 
     > [!IMPORTANT]
-    > En Visual Studio debe abrir el editor de derechos con el botón secundario en él, seleccione **abrir con...** y seleccione el Editor de lista de propiedades
+    > En Visual Studio puede deberá abrir el editor de derechos con el botón secundario en él, seleccione **abrir con...** y seleccione el Editor de la lista de propiedades
 
-7.  Comprobar **habilitar iCloud** , **iCloud documentos** , **almacenamiento de información de clave y valor** y **CloudKit** .
-8.  Asegúrese del **contenedor** existe para la aplicación (como creada anteriormente). Ejemplo: `iCloud.com.your-company.AppName`
+7.  Comprobar **habilitar iCloud** , **documentos de iCloud** , **almacenamiento de pares clave-valor** y **CloudKit** .
+8.  Asegúrese del **contenedor** existe para la aplicación (tal y como se creó anteriormente). Ejemplo: `iCloud.com.your-company.AppName`
 9.  Guarde los cambios en el archivo.
 
 Para obtener más información sobre los derechos que hacen referencia a la [trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) guía.
 
-Con la instalación anterior en su lugar, ahora puede usar la aplicación documentos basados en la nube y el nuevo controlador de vista de selector de documento.
+Con la configuración anterior en su lugar, ahora puede usar la aplicación documentos basados en la nube y el nuevo controlador de vista de selector de documentos.
 
-## <a name="common-setup-code"></a>Código de configuración comunes
+## <a name="common-setup-code"></a>Código de programa de instalación común
 
-Antes de comenzar con el controlador de vista de selector de documento, hay algún código de programa de instalación estándar necesario. Iniciar mediante la modificación de la aplicación `AppDelegate.cs` de archivos y darle un aspecto similar al siguiente:
+Antes de comenzar con el controlador de vista del selector de documento, hay código de configuración estándar necesario. Iniciar mediante la modificación de la aplicación `AppDelegate.cs` de archivo y dele un aspecto similar al siguiente:
 
 ```csharp
 using System;
@@ -793,11 +794,11 @@ namespace DocPicker
 ```
 
 > [!IMPORTANT]
-> El código anterior incluye el código de la sección lista de documentos y descubra anterior. Se presenta aquí en su totalidad, tal y como aparecería en una aplicación real. Para simplificar, este ejemplo funciona con un único archivo codificado de forma rígida (`test.txt`) únicamente.
+> El código anterior incluye el código de la sección Descubra y documentos de la lista anterior. Se presenta aquí en su totalidad, tal como aparecería en una aplicación real. Por motivos de simplicidad, este ejemplo funciona con un único archivo codificado de forma rígida (`test.txt`) solo.
 
-El código anterior expone varios métodos abreviados de unidad de iCloud para hacerlas más fácil trabajar con el resto de la aplicación.
+El código anterior expone varios métodos abreviados de unidad de iCloud para que sean más fáciles trabajar con el resto de la aplicación.
 
-A continuación, agregue el código siguiente para cualquier contenedor de vista que se va a utilizar el selector de documento o trabajar con documentos en la nube o vista:
+A continuación, agregue el siguiente código para cualquier contenedor de vista que se va a utilizar el selector de documentos o trabajar con documentos basados en la nube o la vista:
 
 ```csharp
 using CloudKit;
@@ -814,43 +815,43 @@ public AppDelegate ThisApp {
 #endregion
 ```
 
-Esto agrega un acceso directo para ir a la `AppDelegate` y tener acceso a los métodos abreviados de iCloud creados anteriormente.
+Esto agrega un acceso directo para llegar a la `AppDelegate` y tener acceso a los métodos abreviados de iCloud creados anteriormente.
 
-Con este código en su lugar, echemos un vistazo a implementar el controlador de vista de selector de documento en una aplicación de iOS 8 de Xamarin.
+Con este código en su lugar, echemos un vistazo a la implementación del controlador de vista de selector de documento en una aplicación de Xamarin iOS 8.
 
-## <a name="using-the-document-picker-view-controller"></a>Utiliza el controlador de vista de selector de documento
+## <a name="using-the-document-picker-view-controller"></a>Usar el controlador de vista del selector de documentos
 
-Antes de iOS 8, era muy difícil de acceder a documentos desde otra aplicación, porque no había forma de detectar documentos fuera de la aplicación desde dentro de la aplicación.
+Antes de iOS 8, era muy difícil de obtener acceso a documentos desde otra aplicación porque no había manera de detectar los documentos fuera de la aplicación desde dentro de la aplicación.
 
-### <a name="existing-behavior"></a>Comportamiento de existente
+### <a name="existing-behavior"></a>Comportamiento existente
 
  [![](document-picker-images/image31.png "Información general de comportamiento existente")](document-picker-images/image31.png#lightbox)
 
-¡Eche un vistazo a tener acceso a un documento externo antes de iOS 8:
+Echemos un vistazo a tener acceso a un documento externo antes de iOS 8:
 
-1.  En primer lugar, el usuario tendría que abrir la aplicación que creó el documento.
+1.  En primer lugar el usuario tendría que abrir la aplicación que originalmente creó el documento.
 1.  El documento está seleccionado y el `UIDocumentInteractionController` se usa para enviar el documento a la nueva aplicación.
 1.  Por último, se coloca una copia del documento original en el contenedor de la nueva aplicación.
 
 
-Desde allí está disponible para la segunda aplicación abrir y editar el documento.
+A partir de ahí está disponible para la segunda aplicación abrir y editar el documento.
 
-### <a name="discovering-documents-outside-of-an-apps-container"></a>Detectar documentos fuera contenedor de una aplicación
+### <a name="discovering-documents-outside-of-an-apps-container"></a>Detección de documentos fuera de contenedor la aplicación en un
 
-En iOS 8, una aplicación es capaz de acceder a documentos fuera de su propio contenedor de aplicación con facilidad:
+En iOS 8, una aplicación es capaz de acceder a documentos fuera de su propio contenedor de aplicaciones con facilidad:
 
- [![](document-picker-images/image32.png "Detectar documentos fuera contenedor de una aplicación")](document-picker-images/image32.png#lightbox)
+ [![](document-picker-images/image32.png "Detección de documentos fuera de contenedor la aplicación en un")](document-picker-images/image32.png#lightbox)
 
-Con el nuevo iCloud selector de documento ( `UIDocumentPickerViewController`), una aplicación de iOS directamente puede detectar y tener acceso fuera de su contenedor de la aplicación. El `UIDocumentPickerViewController` proporciona un mecanismo para que el usuario conceder acceso a y editarlos detectó documentos a través de permisos.
+Con el nuevo selector de documentos de iCloud ( `UIDocumentPickerViewController`), una aplicación de iOS directamente puede detectar y tener acceso fuera de su contenedor de aplicación. El `UIDocumentPickerViewController` proporciona un mecanismo para el usuario conceder acceso a y editarlos detectados documentos a través de los permisos.
 
-Una aplicación debe participar en para que sus documentos aparecen en el selector de documento de iCloud y estará disponible para otras aplicaciones detectar y trabajar con ellos. Para que una aplicación de iOS 8 Xamarin compartir su contenedor de la aplicación, editarlo `Info.plist` un archivo en un editor de texto estándar y agregue las dos líneas siguientes a la parte inferior del diccionario (entre el `<dict>...</dict>` etiquetas):
+Una aplicación debe participar en para que sus documentos se muestran en el selector de documentos de iCloud y estén disponibles para otras aplicaciones a detectarlos y trabajar con ellos. Para que una aplicación Xamarin iOS 8 comparten su contenedor de aplicación, editarla `Info.plist` en un editor de texto estándar y agréguele las dos líneas siguientes a la parte inferior del diccionario (entre el `<dict>...</dict>` etiquetas):
 
 ```xml
 <key>NSUbiquitousContainerIsDocumentScopePublic</key>
 <true/>
 ```
 
-El `UIDocumentPickerViewController` proporciona un excelente nueva interfaz de usuario que permite al usuario elegir documentos. Para mostrar el controlador de vista de selector de documento en una aplicación de iOS 8 Xamarin, realice lo siguiente:
+El `UIDocumentPickerViewController` proporciona una excelente interfaz de usuario que permite al usuario elegir documentos. Para mostrar el controlador de vista del selector de documentos en una aplicación Xamarin iOS 8, realice lo siguiente:
 
 ```csharp
 using MobileCoreServices;
@@ -902,61 +903,61 @@ if (presentationPopover!=null) {
 ```
 
 > [!IMPORTANT]
-> El programador debe llamar a la `StartAccessingSecurityScopedResource` método de la `NSUrl` para poder acceder a un documento externo. El `StopAccessingSecurityScopedResource` método debe llamarse para liberar el bloqueo de seguridad tan pronto como se ha cargado el documento.
+> El programador debe llamar a la `StartAccessingSecurityScopedResource` método de la `NSUrl` poder acceder a un documento externo. El `StopAccessingSecurityScopedResource` método debe llamarse para liberar el bloqueo de seguridad tan pronto como se ha cargado el documento.
 
 ### <a name="sample-output"></a>Resultados del ejemplo
 
-Este es un ejemplo de cómo el código anterior podría mostrar un selector de documento cuando se ejecuta en un dispositivo iPhone:
+Este es un ejemplo de cómo el código anterior mostrará un selector de documentos cuando se ejecuta en un dispositivo iPhone:
 
 1.  El usuario inicia la aplicación y se muestra la interfaz principal:   
  
     [![](document-picker-images/image33.png "Se muestra la interfaz principal")](document-picker-images/image33.png#lightbox)
-1.  Las derivaciones de usuario la **acción** situado en la parte superior de la pantalla y se le pedirá que seleccione un **documento proveedor** en la lista de proveedores disponibles:   
+1.  El usuario pulsa el **acción** situado en la parte superior de la pantalla y se le pide que seleccione un **documento proveedor** en la lista de proveedores disponibles:   
  
-    [![](document-picker-images/image34.png "Seleccione un proveedor de documento de la lista de proveedores disponibles")](document-picker-images/image34.png#lightbox)
-1.  El **documento selector View Controller** se muestra para el elemento **documento proveedor**:   
+    [![](document-picker-images/image34.png "Seleccione un proveedor de documentos en la lista de proveedores disponibles")](document-picker-images/image34.png#lightbox)
+1.  El **controlador de vista de documento selector** aparece seleccionado **documento proveedor**:   
  
-    [![](document-picker-images/image35.png "Se muestra el controlador de vista de selector de documento")](document-picker-images/image35.png#lightbox)
-1.  El usuario puntea en un **carpeta de documentos de** para mostrar su contenido:   
+    [![](document-picker-images/image35.png "Se muestra el controlador de vista del selector de documentos")](document-picker-images/image35.png#lightbox)
+1.  El usuario puntea un **carpeta de documentos** para mostrar su contenido:   
  
     [![](document-picker-images/image36.png "El contenido de la carpeta de documentos")](document-picker-images/image36.png#lightbox)
-1.  El usuario selecciona un **documento** y **documento selector** está cerrado.
-1.  Se vuelve a mostrar la interfaz principal, el **documento** se carga desde el contenedor externo y su contenido se muestra.
+1.  El usuario selecciona un **documento** y **selector de documentos** está cerrado.
+1.  Se vuelve a mostrar la interfaz principal, el **documento** se carga desde el contenedor externo y su contenido de muestra.
 
 
-La presentación real del controlador de vista de documento selector depende de los proveedores de documento que el usuario ha instalado en el dispositivo y qué modo de selector de documento ha sido implemente. El ejemplo anterior está usando el modo de apertura, los otros tipos de modo se describen en detalle a continuación.
+La presentación real del controlador de vista de documento selector depende de los proveedores de documento que el usuario ha instalado en el dispositivo y qué modo selector de documento ha sido implementar. El ejemplo anterior está usando el modo de apertura, los otros tipos de modo que se tratarán en detalle a continuación.
 
-## <a name="managing-external-documents"></a>Administrar documentos externos
+## <a name="managing-external-documents"></a>Administración de documentos externos
 
-Tal y como se dijo anteriormente, antes de iOS 8, una aplicación sólo puede tener acceso a documentos que formaban parte de su contenedor de aplicación. En iOS 8 una aplicación puede tener acceso a documentos de orígenes externos:
+Como se dijo anteriormente, antes de iOS 8, una aplicación solo puede acceder a los documentos que formaban parte de su contenedor de aplicación. En iOS 8 una aplicación puede tener acceso a documentos de orígenes externos:
 
  [![](document-picker-images/image37.png "Información general sobre administración de documentos externos")](document-picker-images/image37.png#lightbox)
 
-Cuando el usuario selecciona un documento de un origen externo, se escribe un documento de referencia en el contenedor de aplicación que señala al documento original.
+Cuando el usuario selecciona un documento desde un origen externo, se escribe un documento de referencia en el contenedor de aplicaciones que apunta al documento original.
 
-Para ayudar a agregar esta nueva capacidad en las aplicaciones existentes, varias características nuevas se agregaron a la `NSMetadataQuery` API. Normalmente, una aplicación usa el ámbito de documento ubicuo para listar los documentos que se encuentran dentro de su contenedor de la aplicación. Uso de este ámbito, únicamente los documentos dentro del contenedor de la aplicación continuará para mostrarse.
+Para ayudar a agregar esta nueva funcionalidad en las aplicaciones existentes, se han agregado varias características nuevas para el `NSMetadataQuery` API. Normalmente, una aplicación usa el ámbito de documento ubicuo para listar los documentos que se encuentran dentro de su contenedor de aplicación. Con este ámbito, solo los documentos dentro del contenedor de la aplicación seguirá mostrarse.
 
-Usando el nuevo ámbito de documento externo ubicuo devolverá documentos que viven fuera del contenedor de la aplicación y devuelven los metadatos para ellos. El `NSMetadataItemUrlKey` apuntará a la dirección URL donde se encuentra realmente el documento.
+Utilizando el nuevo ámbito de documento externo ubicuo devolverá documentos que residen fuera del contenedor de aplicación y devuelve los metadatos para ellos. El `NSMetadataItemUrlKey` apuntará a la dirección URL donde se encuentra realmente el documento.
 
-A veces, una aplicación no desea trabajar con los documentos que se va a señalado por la referencia de th. En su lugar, la aplicación desea trabajar directamente con el documento de referencia. Por ejemplo, la aplicación puede mostrar el documento en la carpeta de la aplicación en la interfaz de usuario, o para permitir al usuario mover las referencias dentro de una carpeta.
+A veces, una aplicación no desea trabajar con los documentos que se apunta referencia th. En su lugar, la aplicación desea trabajar directamente con el documento de referencia. Por ejemplo, la aplicación puede mostrar el documento en la carpeta de la aplicación en la interfaz de usuario, o para permitir al usuario mover las referencias dentro de una carpeta.
 
-En iOS 8, un nuevo `NSMetadataItemUrlInLocalContainerKey` se ha proporcionado para tener acceso al documento de referencia directamente. Esta clave apunta a la referencia real al documento externo en un contenedor de la aplicación.
+En iOS 8, un nuevo `NSMetadataItemUrlInLocalContainerKey` se ha proporcionado para tener acceso al documento de referencia directamente. Esta clave apunta a la referencia real al documento externo en un contenedor de aplicación.
 
-El `NSMetadataUbiquitousItemIsExternalDocumentKey` se usa para comprobar si un documento es externo al contenedor de la aplicación. El `NSMetadataUbiquitousItemContainerDisplayNameKey` se utiliza para tener acceso al nombre del contenedor al que se aloja la copia original de un documento externo.
+El `NSMetadataUbiquitousItemIsExternalDocumentKey` se usa para probar si un documento es externo al contenedor de la aplicación. El `NSMetadataUbiquitousItemContainerDisplayNameKey` se usa para tener acceso al nombre del contenedor que se aloja la copia original de un documento externo.
 
-### <a name="why-document-references-are-required"></a>¿Por qué se requieren referencias de documento
+### <a name="why-document-references-are-required"></a>¿Por qué se requieren referencias a un documento
 
-La razón principal que iOS 8 usa referencias para tener acceso a documentos externos es para la seguridad. No hay ninguna aplicación se le concede acceso al contenedor de la otra aplicación. El selector de documento puede hacer eso, porque se está ejecutando fuera de proceso y tiene acceso al sistema de ancho.
+La razón principal que iOS 8 usa referencias para tener acceso a documentos externos es la seguridad. No hay ninguna aplicación se concede acceso al contenedor de la otra aplicación. Solo el selector de documentos puede hacer eso, porque se está ejecutando fuera de proceso y tiene acceso al sistema de ancho.
 
-Es la única forma de llegar a un documento fuera del contenedor de la aplicación mediante el selector de documento y, si la dirección URL devuelta por el selector es el ámbito de seguridad. La dirección URL con ámbito de seguridad contiene suficiente información para seleccionada del documento junto con los derechos de ámbito necesario para conceder acceso a una aplicación para el documento.
+Es la única manera de llegar a un documento fuera del contenedor de aplicación mediante el selector de documento y si la dirección URL devuelta por el selector es el ámbito de seguridad. La dirección URL con ámbito de seguridad contiene suficiente información para que se selecciona el documento junto con los derechos de ámbito necesario para conceder acceso a una aplicación en el documento.
 
-Es importante tener en cuenta que si la dirección URL con ámbito de seguridad se serializa en una cadena y, a continuación, deserializa, se perdería la información de seguridad y el archivo se debería inaccesible desde la dirección URL. La característica de referencia de documento proporciona un mecanismo para volver a los archivos que señala estas direcciones URL.
+Es importante tener en cuenta que si la dirección URL con ámbito de seguridad se serializa en una cadena y, a continuación, deserializa, se perdería la información de seguridad y el archivo serían inaccesible desde la dirección URL. La característica de referencia de documento proporciona un mecanismo para volver a los archivos que apunta a estas direcciones URL.
 
-Por tanto, si la aplicación adquiere un `NSUrl` desde uno de los documentos de referencia, ya tiene el ámbito de seguridad adjunto y puede utilizarse para tener acceso al archivo. Por este motivo, se sugiere alta que el programador utilice `UIDocument` porque controla toda esta información y procesos para ellos.
+Por tanto, si la aplicación adquiere un `NSUrl` desde uno de los documentos de referencia, ya tiene el ámbito de seguridad adjunto y se puede usar para tener acceso al archivo. Por este motivo, se sugiere alta que el programador utilice `UIDocument` porque controla toda esta información y procesos para ellos.
 
 ### <a name="using-bookmarks"></a>Utilizar marcadores
 
-No siempre es factible para enumerar los documentos de una aplicación para que reciba un documento específico, por ejemplo, al realizar la restauración del estado. iOS 8 proporciona un mecanismo para crear marcadores que se dirigen directamente un documento determinado.
+No siempre es factible para enumerar los documentos de la aplicación para volver a un documento específico, por ejemplo, al realizar la restauración del estado. iOS 8 proporciona un mecanismo para crear marcadores que se dirigen directamente un documento determinado.
 
 El código siguiente creará un marcador de un `UIDocument`del `FileUrl` propiedad:
 
@@ -988,7 +989,7 @@ catch (Exception e) {
 }
 ```
 
-La API existente de marcador se usa para crear un marcador en una existente `NSUrl` que puede guardar y cargar para proporcionar acceso directo a un archivo externo. El código siguiente restaurará un marcador que se ha creado anteriormente:
+La API existente de marcador se utiliza para crear un marcador en una existente `NSUrl` que se puede guardar y cargar para proporcionar acceso directo a un archivo externo. El código siguiente restaurará a un marcador que se creó anteriormente:
 
 ```csharp
 if (Bookmark != null) {
@@ -1015,132 +1016,132 @@ if (Bookmark != null) {
 }
 ```
 
-## <a name="open-vs-import-mode-and-the-document-picker"></a>Abra vs. Modo de importación y el selector de documento
+## <a name="open-vs-import-mode-and-the-document-picker"></a>Abra vs. Modo de importación y el selector de documentos
 
-El controlador de vista de documento selector ofrece dos modos diferentes de operación:
+El controlador de vista del selector de documentos ofrece dos modos diferentes de operación:
 
-1.  **Abrir modo** : en este modo, cuando el usuario selecciona y documento externo, el selector de documento se creará un marcador de un ámbito de seguridad en el contenedor de la aplicación.   
+1.  **Para abrir el modo** : en este modo, cuando el usuario selecciona y documento externo, el selector de documentos se creará un marcador de ámbito de seguridad en el contenedor de la aplicación.   
  
-    [![](document-picker-images/image37.png "Marcador en el contenedor de la aplicación de ámbito de seguridad")](document-picker-images/image37.png#lightbox)
-1.  **Modo de importación** : en este modo, cuando el usuario selecciona y documento externo, el selector de documento no crear un marcador, pero en su lugar, copie el archivo en una ubicación temporal y proporcionar el acceso a la aplicación al documento en esta ubicación:   
+    [![](document-picker-images/image37.png "Marcador en el contenedor de aplicaciones con ámbito de seguridad")](document-picker-images/image37.png#lightbox)
+1.  **Modo de importación** : en este modo, cuando el usuario selecciona y documento externo, el selector de documentos no crea un marcador, pero en su lugar, copiará el archivo en una ubicación temporal y proporcionan acceso a la aplicación al documento en esta ubicación:   
  
-    [![](document-picker-images/image38.png "El selector de documento se copie el archivo en una ubicación temporal y proporcionará acceso a la aplicación al documento en esta ubicación")](document-picker-images/image38.png#lightbox)   
- Una vez que termine la aplicación por algún motivo, la ubicación temporal se vacía y el archivo quitado. Si la aplicación necesita mantener el acceso al archivo, debe hacer una copia y lo coloca en su contenedor de la aplicación.
+    [![](document-picker-images/image38.png "El selector de documentos se copie el archivo en una ubicación temporal y proporcionan acceso a la aplicación al documento en esta ubicación")](document-picker-images/image38.png#lightbox)   
+ Una vez que la aplicación finaliza por algún motivo, se vacía la ubicación temporal y el archivo quitado. Si la aplicación necesita mantener el acceso al archivo, debe realizar una copia y lo coloca en su contenedor de aplicación.
 
 
-El modo de apertura es útil cuando la aplicación desea colaborar con otra aplicación y compartir los cambios realizados en el documento con esa aplicación. El modo de importación se utiliza cuando la aplicación no desea compartir sus modificaciones en un documento con otras aplicaciones.
+El modo de apertura es útil cuando la aplicación desea colaborar con otra aplicación y compartir los cambios realizados en el documento con la aplicación. El modo de importación se usa cuando la aplicación no desea compartir sus modificaciones a un documento con otras aplicaciones.
 
-## <a name="making-a-document-external"></a>Para marcar un documento externo
+## <a name="making-a-document-external"></a>Hacer que un documento externo
 
-Como se mencionó anteriormente, una aplicación de iOS 8 no tiene acceso a los contenedores de fuera de su propio contenedor de la aplicación. La aplicación puede escribir en su propio contenedor localmente o en una ubicación temporal y luego usar un modo de documento especial para mover el documento resultante fuera del contenedor de la aplicación a un usuario elegido ubicación.
+Como se mencionó anteriormente, una aplicación de iOS 8 no tiene acceso a los contenedores fuera de su propio contenedor de aplicación. La aplicación puede escribir su propio contenedor localmente o en una ubicación temporal y luego usar un modo especial de documento para mover el documento resultante fuera del contenedor de aplicación a un usuario elige la ubicación.
 
-Para mover un documento a una ubicación externa, haga lo siguiente:
+Para mover un documento a una ubicación externa, realice lo siguiente:
 
 1.  En primer lugar, cree un nuevo documento en una ubicación local o temporal.
-1.  Crear un `NSUrl` que apunte al nuevo documento.
-1.  Abra un nuevo controlador de vista de selector de documento y pasarle el `NSUrl` con el modo de `MoveToService` . 
-1.  Una vez que el usuario elige una nueva ubicación, se moverá el documento desde su ubicación actual a la nueva ubicación.
-1.  Un documento de referencia se escribirán en contenedor de la aplicación de la aplicación para que el archivo todavía son accesibles mediante la aplicación de creación.
+1.  Crear un `NSUrl` que señala al nuevo documento.
+1.  Abra un nuevo controlador de vista del selector de documento y pasarle el `NSUrl` con el modo de `MoveToService` . 
+1.  Una vez que el usuario elige una nueva ubicación, el documento se moverá desde su ubicación actual a la nueva ubicación.
+1.  Un documento de referencia se escribirán en el contenedor de aplicaciones de la aplicación para que el archivo todavía puede obtenerse mediante la aplicación de creación.
 
 
-El siguiente código se puede utilizar para mover un documento a una ubicación externa: `var picker = new UIDocumentPickerViewController (srcURL, UIDocumentPickerMode.MoveToService);`
+El código siguiente puede usarse para mover un documento a una ubicación externa: `var picker = new UIDocumentPickerViewController (srcURL, UIDocumentPickerMode.MoveToService);`
 
-El documento de referencia devuelto por el proceso anterior es exactamente el mismo que uno creado por el modo de apertura del selector de documento. Sin embargo, hay veces que la aplicación puede que desee mover un documento sin mantener una referencia a él.
+El documento de referencia devuelto por el proceso anterior es exactamente el mismo que uno creado por el modo de apertura del selector de documentos. Sin embargo, hay veces que la aplicación que desee mover un documento sin necesidad de mantener una referencia a él.
 
-Para mover un documento sin generar una referencia, utilice el `ExportToService` modo. Ejemplo: `var picker = new UIDocumentPickerViewController (srcURL, UIDocumentPickerMode.ExportToService);`
+Para mover un documento sin generar una referencia, use el `ExportToService` modo. Ejemplo: `var picker = new UIDocumentPickerViewController (srcURL, UIDocumentPickerMode.ExportToService);`
 
-Cuando se usa el `ExportToService` modo, el documento se copia en el contenedor externo y se deja la copia existente en su ubicación original.
+Cuando se usa el `ExportToService` modo, se copia el documento en el contenedor externo y la copia existente se deja en su ubicación original.
 
 ## <a name="document-provider-extensions"></a>Extensiones de proveedor de documento
 
-Con iOS 8, Apple desea que el usuario final para poder acceder a ninguno de los documentos en la nube, con independencia de que realmente existen. Para lograr este objetivo, iOS 8 proporciona un mecanismo de extensión de proveedor de documento nuevo.
+Con iOS 8, Apple desea que el usuario final para tener acceso a cualquiera de los documentos basados en la nube, con independencia de dónde se encuentren realmente. Para lograr este objetivo, iOS 8 proporciona un nuevo mecanismo de extensión de proveedor de documento.
 
-### <a name="what-is-a-document-provider-extension"></a>¿Qué es una extensión de proveedor de documento?
+### <a name="what-is-a-document-provider-extension"></a>¿Qué es una extensión de proveedor del documento?
 
-En pocas palabras, una extensión de proveedor de documento es un medio para un desarrollador o un tercero, para proporcionar un almacenamiento de documentos alternativo de aplicación que son accesibles en la misma manera como la ubicación de almacenamiento de iCloud existente.
+En pocas palabras, una extensión de proveedor de documento es una manera para un desarrollador o un tercero, para proporcionar a un almacenamiento de documentos alternativa de aplicación que se puede acceder en la misma manera como ubicación de almacenamiento de iCloud existente.
 
-El usuario puede seleccionar una de estas ubicaciones de almacenamiento alternativa en el selector de documento y pueden utilizar los modos de acceso mismo exacto (abrir, importar, mover o exportar) para trabajar con archivos en esa ubicación.
+El usuario puede seleccionar una de estas ubicaciones de almacenamiento alternativo en el selector de documento y pueden utilizar los modos de acceso mismo exacto (abrir, importar, mover o Export) para trabajar con archivos en esa ubicación.
 
 Esto se implementa mediante dos extensiones diferentes:
 
--  **Extensión de selector de documento** : proporciona un `UIViewController` subclase que proporciona una interfaz gráfica para el usuario elegir un documento desde una ubicación de almacenamiento alternativa. Esta subclase se mostrará como parte del controlador de vista de selector de documento.
--  **Proporcionar la extensión de archivo** : se trata de una extensión de ajeno a la interfaz de usuario que se encarga de proporcionar realmente el contenido de archivos. Estas extensiones se proporcionan mediante la coordinación de archivo ( `NSFileCoordinator` ). Este es otro caso importante donde se requiere la coordinación de archivo.
+-  **Extensión del selector de documentos** : proporciona un `UIViewController` subclase que proporciona una interfaz gráfica para el usuario elija un documento desde una ubicación de almacenamiento alternativa. Esta subclase se mostrará como parte del controlador de vista de selector de documentos.
+-  **Proporcionar la extensión de archivo** : se trata de una extensión que no son de interfaz de usuario que se encarga de proporcionar realmente el contenido de archivos. Estas extensiones se proporcionan mediante la coordinación de archivo ( `NSFileCoordinator` ). Se trata de otro caso importante donde se requiere la coordinación de archivo.
 
 
-El siguiente diagrama muestra el flujo de datos típico cuando se trabaja con las extensiones de proveedor de documento:
+El siguiente diagrama muestra el flujo de datos más habituales al trabajar con las extensiones de proveedor de documento:
 
- [![](document-picker-images/image39.png "Este diagrama muestra el flujo de datos habitual cuando se trabaja con las extensiones de proveedor de documento")](document-picker-images/image39.png#lightbox)
+ [![](document-picker-images/image39.png "Este diagrama muestra el flujo de datos más habituales cuando se trabaja con las extensiones de proveedor de documento")](document-picker-images/image39.png#lightbox)
 
 Se produce el siguiente proceso:
 
-1.  La aplicación presenta un controlador de selector de documento para permitir al usuario seleccionar un archivo para que funcione con.
+1.  La aplicación presenta un controlador de selector de documentos para permitir al usuario seleccionar un archivo para que funcione con.
 1.  El usuario selecciona una ubicación de archivo alternativo y personalizado `UIViewController` extensión se llama para mostrar la interfaz de usuario.
-1.  El usuario selecciona un archivo en esta ubicación y la dirección URL se pasa hacia el selector de documento.
-1.  El selector de documento selecciona la dirección URL del archivo y lo devuelve a la aplicación para el usuario para que funcione en.
-1.  La dirección URL se pasa al Coordinador de archivo para devolver el contenido de archivos a la aplicación.
-1.  El Coordinador de archivo llama a la extensión de proveedor de archivo personalizado para recuperar el archivo.
-1.  El contenido del archivo se devuelve al Coordinador de archivo.
+1.  El usuario selecciona un archivo desde esta ubicación y la dirección URL se pasa al selector de documentos.
+1.  El selector de documentos se selecciona la dirección URL del archivo y lo devuelve a la aplicación para el usuario para que funcione en.
+1.  La dirección URL se pasa al archivo de coordinador para devolver el contenido de los archivos a la aplicación.
+1.  El archivo de coordinador llama a la extensión de proveedor de archivo personalizado para recuperar el archivo.
+1.  Se devuelve el contenido del archivo al archivo de coordinador.
 1.  El contenido del archivo se devuelve a la aplicación.
 
 
 ### <a name="security-and-bookmarks"></a>Seguridad y marcadores
 
-En esta sección tendrá un rápido vistazo a cómo acceso los archivos persistentes y seguridad mediante works marcadores con extensiones de proveedor de documento. A diferencia de iCloud proveedor de documento, que guarda automáticamente los marcadores y seguridad en el contenedor de la aplicación, las extensiones de proveedor de documento no porque no son una parte del sistema de referencia de documento.
+En esta sección tardará un vistazo a cómo acceso los archivos persistentes y seguridad a través de works marcadores con extensiones de proveedor de documento. A diferencia de iCloud proveedor de documento, que guarda automáticamente los marcadores y seguridad en el contenedor de aplicaciones, las extensiones de proveedor de documento no porque no son una parte del sistema de referencia de documento.
 
-Por ejemplo: en un entorno empresarial que proporciona su propio almacén de datos segura de toda la empresa, los administradores no deseen información corporativa confidencial acceder a él o procesados por servidores iCloud pública. Por lo tanto, no se puede usar el sistema de referencia de documento integradas.
+Por ejemplo: en un entorno empresarial que proporciona su propio almacén de datos segura en toda la empresa, los administradores no deseen información corporativa confidencial acceder o procesó iCloud servidores público. Por lo tanto, no se puede utilizar el sistema de referencia de documento integradas.
 
-El sistema de marcador puede seguir usándose y es responsabilidad de la extensión de proveedor de archivo para procesar correctamente una dirección URL marcada y devolver el contenido del documento que señala se.
+Puede seguir usando el sistema de marcador y es responsabilidad de la extensión de proveedor de archivo para procesar correctamente una dirección URL del marcador y devolver el contenido del documento apuntado a él.
 
-Por motivos de seguridad, iOS 8 tiene un nivel de aislamiento que se conserva la información acerca de qué aplicación tiene acceso a qué identificador dentro de qué proveedor de archivo. Debe tenerse en cuenta que todo el acceso de archivo está controlado por este nivel de aislamiento.
+Por motivos de seguridad, iOS 8 tiene una capa de aislamiento que conserva la información sobre qué aplicaciones tiene acceso a qué identificador dentro de qué proveedor de archivos. Debe tenerse en cuenta que todo el acceso de archivo está controlado por este nivel de aislamiento.
 
-El siguiente diagrama muestra el flujo de datos cuando se trabaja con marcadores y una extensión de proveedor de documento:
+El siguiente diagrama muestra el flujo de datos al trabajar con marcadores y una extensión de proveedor de documento:
 
- [![](document-picker-images/image40.png "Este diagrama muestra el flujo de datos cuando se trabaja con marcadores y una extensión de proveedor de documento")](document-picker-images/image40.png#lightbox)
+ [![](document-picker-images/image40.png "Este diagrama muestra el flujo de datos al trabajar con marcadores y una extensión de proveedor de documento")](document-picker-images/image40.png#lightbox)
 
 Se produce el siguiente proceso:
 
-1.  La aplicación está a punto de entrar en el fondo y necesita conserva su estado. Llama a `NSUrl` para crear un marcador en un archivo de almacenamiento alternativa.
-1.  `NSUrl` llama a la extensión de archivo del proveedor para obtener una dirección URL persistente en el documento. 
-1.  La extensión del proveedor de archivo devuelve la dirección URL como una cadena a la `NSUrl` .
-1.  El `NSUrl` empaqueta la dirección URL en un marcador de posición y lo devuelve a la aplicación.
-1.  Cuando la aplicación se activa después de que se está en segundo plano y se necesita restaurar el estado, pasa el marcador `NSUrl` .
+1.  La aplicación está a punto de entrar en segundo plano y se debe conservar su estado. Llama a `NSUrl` para crear un marcador a un archivo de almacenamiento alternativa.
+1.  `NSUrl` llama a la extensión de proveedor de archivo para obtener una URL persistente al documento. 
+1.  La extensión de archivo del proveedor, se devuelve la dirección URL como una cadena a la `NSUrl` .
+1.  El `NSUrl` empaqueta la dirección URL en un marcador y lo devuelve a la aplicación.
+1.  Cuando la aplicación se activa después de que se está en segundo plano y se debe restaurar el estado, pasa el marcador `NSUrl` .
 1.  `NSUrl` llama a la extensión de archivo del proveedor con la dirección URL del archivo.
-1.  El proveedor de extensiones de archivo tiene acceso al archivo y devuelve la ubicación del archivo que se `NSUrl` .
-1.  La ubicación del archivo es empaquetar junto con información de seguridad y se devuelven a la aplicación.
+1.  El proveedor de extensión de archivo tiene acceso al archivo y devuelve la ubicación del archivo que se `NSUrl` .
+1.  La ubicación del archivo se incluye con la información de seguridad y devuelve a la aplicación.
 
 
-Desde aquí, la aplicación puede tener acceso al archivo y trabajar con ellos como normal.
+Desde aquí, la aplicación puede tener acceso al archivo y trabajar con él como normal.
 
-### <a name="writing-files"></a>Escribir en archivos
+### <a name="writing-files"></a>Escritura de archivos
 
-En esta sección se echar un vistazo rápido de cómo escribir archivos en una ubicación alternativa con un extensión de proveedor de documento funciona. La aplicación de iOS usará la coordinación de archivo para guardar información en el disco en el contenedor de la aplicación. Poco después de que se ha escrito correctamente el archivo, se notificará la extensión de archivo del proveedor del cambio.
+En esta sección tendrá una visión rápida de cómo escribir archivos en una ubicación alternativa con una extensión de proveedor de documentos de works. La aplicación de iOS usará la coordinación de archivo para guardar información en el disco en el contenedor de la aplicación. Poco después de que se ha escrito correctamente el archivo, la extensión de proveedor de archivo se notificará el cambio.
 
-En este momento, la extensión de archivo del proveedor puede iniciar cargar el archivo en la ubicación alternativa (o marcar el archivo como carga desfasada y que necesite).
+En este momento, la extensión de archivo del proveedor puede comenzar a cargar el archivo en una ubicación alternativa (o marcar el archivo como carga de datos sucio y que requiere).
 
-### <a name="creating-new-document-provider-extensions"></a>Crear nuevas extensiones de proveedor de documento
+### <a name="creating-new-document-provider-extensions"></a>Creación de nuevas extensiones de proveedor de documento
 
-Crear nuevas extensiones de proveedor de documento está fuera del ámbito de este artículo introductorio. Esta información está aquí para mostrar, en función de las extensiones de que un usuario ha cargado en su dispositivo iOS, una aplicación puede tener acceso a ubicaciones de almacenamiento de documento fuera de Apple proporciona la ubicación de iCloud.
+Creación de nuevas extensiones de proveedor de documento está fuera del ámbito de este artículo introductorio. Esta información está aquí para mostrar, en función de las extensiones de que un usuario ha cargado en su dispositivo iOS, una aplicación puede tener acceso a ubicaciones de almacenamiento de documento fuera de la manzana que proporciona la ubicación de iCloud.
 
-El desarrollador debe tener en cuenta este hecho cuando se utiliza el selector de documento y trabajar con documentos externos. No debe suponer se hospedan esos documentos en iCloud.
+El desarrollador debe tener en cuenta este hecho al usar el selector de documentos y trabajar con documentos externos. No debe suponer esos documentos se hospedan en iCloud.
 
-Para obtener más información acerca de cómo crear un proveedor de almacenamiento o una extensión de selector de documento, consulte el [Introducción a las extensiones de aplicación](~/ios/platform/extensions.md) documento.
+Para obtener más información sobre la creación de un proveedor de almacenamiento o la extensión de selector de documentos, consulte el [Introducción a las extensiones de aplicación](~/ios/platform/extensions.md) documento.
 
-## <a name="migrating-to-icloud-drive"></a>Migrar a la unidad de iCloud
+## <a name="migrating-to-icloud-drive"></a>Migración a la unidad de iCloud
 
-En iOS 8, los usuarios pueden elegir continuar con la existente iCloud sistema de documentos que se utilizan en iOS 7 (y con sistemas anteriores) o pueden optar por migrar documentos existentes en el nuevo mecanismo de unidad de iCloud.
+En iOS 8, los usuarios pueden elegir continuar usado el sistema de documentos con iCloud existente en iOS 7 (y los sistemas anteriores) o puede optar por migrar los documentos existentes en el nuevo mecanismo de unidad de iCloud.
 
-En Mac OS X Yosemite, Apple no proporciona el hacia atrás compatibilidad por lo que se deben migrar todos los documentos en iCloud unidad o ya no se actualiza en todos los dispositivos.
+En Mac OS X Yosemite, Apple no proporciona la hacia atrás compatibilidad por lo que se deben migrar todos los documentos en iCloud unidad o dejarán de actualizarse en todos los dispositivos.
 
-Después de una cuenta de usuario se ha migrado a iCloud unidad, solo los dispositivos con iCloud unidad podrá propagar los cambios a los documentos a través de los dispositivos.
+Después de una cuenta de usuario se ha migrado a la unidad de iCloud, solo los dispositivos con iCloud unidad podrá propagar los cambios a los documentos a través de esos dispositivos.
 
 > [!IMPORTANT]
-> Los desarrolladores deben tener en cuenta que las nuevas características que se describen en este artículo solo están disponibles si la cuenta de usuario se ha migrado a la unidad de iCloud. 
+> Los desarrolladores deben tener en cuenta que las nuevas características que se tratan en este artículo solo están disponibles si la cuenta de usuario se ha migrado a la unidad de iCloud. 
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se trata los cambios en las API necesarias para admitir iCloud unidad y el nuevo controlador de vista de documento selector de iCloud existente. Ha cubierto coordinación de archivo y por qué es importante al trabajar con documentos en la nube. Tiene cubierto la configuración necesaria para habilitar documentos basados en la nube en una aplicación de Xamarin.iOS y proporciona una introducción a trabajar con documentos fuera del contenedor de aplicación de una aplicación mediante el controlador de vista de selector de documento.
+En este artículo ha cubierto los cambios en las API necesarias para admitir iCloud unidad y el nuevo controlador de vista de selector de documentos de iCloud existente. Ha cubierto la coordinación de archivo y por qué es importante al trabajar con documentos basados en la nube. Se trata la configuración necesaria para habilitar documentos basados en la nube en una aplicación de Xamarin.iOS y proporciona una introducción a trabajar con documentos fuera del contenedor de aplicación de una aplicación mediante el controlador de vista del selector de documentos.
 
-Además, este artículo trata brevemente extensiones de proveedor de documento y ¿por qué el desarrollador debe ser consciente de ellos al escribir aplicaciones que pueden controlar documentos basados en la nube.
+Además, en este artículo trata brevemente las extensiones de proveedor de documento y por qué el desarrollador debe ser consciente de ellos al escribir aplicaciones que pueden controlar documentos basados en la nube.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
