@@ -4,13 +4,13 @@ description: Este documento incluye vínculos a diversas guías que describen Xa
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 6a49f16f935f058b002d260825cfb005df0c6eef
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
+ms.date: 07/30/2018
+ms.openlocfilehash: 5c625e32a70e196b5562225bdf985cd4b3a6f5db
+ms.sourcegitcommit: 0e1b64b0aa8fc0e78f0feff3c8b39a4cb8c1da61
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353768"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39361007"
 ---
 # <a name="xamarinessentials"></a>Xamarin.Essentials
 
@@ -43,6 +43,7 @@ Siga las guías para integrar estas características Xamarin.Essentials en sus a
 * [Geocodificación](geocoding.md?context=xamarin/xamarin-forms) – código geográfico y direcciones de código geográfico inversa y coordenadas.
 * [Ubicación geográfica](geolocation.md?context=xamarin/xamarin-forms) : recuperar la ubicación del dispositivo GPS.
 * [Giroscopio](gyroscope.md?context=xamarin/xamarin-forms) : realizar un seguimiento de giro alrededor de tres ejes principal del dispositivo.
+* [Selector de](launcher.md?context=xamarin/xamarin-forms) : permite que una aplicación abrir un identificador URI por el sistema.
 * [Magnetómetro](magnetometer.md?context=xamarin/xamarin-forms) : detectar la orientación del dispositivo en relación con el campo magnético de la tierra.
 * [MainThread](main-thread.md?content=xamarin/xamarin-forms) : ejecutar código en el subproceso principal de la aplicación.
 * [Asigna](maps.md?content=xamarin/xamarin-forms) : abra la aplicación se asigna a una ubicación específica.

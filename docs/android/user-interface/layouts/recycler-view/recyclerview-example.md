@@ -6,13 +6,13 @@ ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 07/13/2018
-ms.openlocfilehash: abc21c3830126346ffb877639657c973da474812
-ms.sourcegitcommit: cb80df345795989528e9df78eea8a5b45d45f308
+ms.date: 07/30/2018
+ms.openlocfilehash: d48796b3c62fc342bd86f2d58e74c5f1710174bb
+ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/14/2018
-ms.locfileid: "39038396"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39360843"
 ---
 # <a name="a-basic-recyclerview-example"></a>Un ejemplo de RecyclerView básico
 
@@ -368,7 +368,15 @@ Cuando este código se compila y ejecuta, crea la foto básica ver aplicación t
 
 [![Dos capturas de pantalla de visualización de la aplicación con tarjetas de fotos que se desplaza verticalmente fotografías](recyclerview-example-images/03-recyclerviewer-basic-sml.png)](recyclerview-example-images/03-recyclerviewer-basic.png#lightbox)
 
+Si no se va a dibujar sombras (tal y como se muestra en la captura de pantalla anterior), edite **Properties/Androidmanifest.XML** y agregue el valor de atributo siguiente a la `<application>` elemento:
+
+```xml
+android:hardwareAccelerated="true"
+```
+
 Esta aplicación básica solo admite la exploración de álbum de fotos. No responde para eventos de toque de elemento, ni maneja los cambios en los datos subyacentes. Esta funcionalidad se agrega en [ampliando el ejemplo de RecyclerView](~/android/user-interface/layouts/recycler-view/extending-the-example.md).
+
+
 
 
 ### <a name="changing-the-layoutmanager"></a>Cambiar el LayoutManager

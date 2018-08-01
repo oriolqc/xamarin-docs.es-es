@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: f2bccc9140c4c1c9d5d543a4240178f9301852bb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 54fdec74a6e1d0aee71ec0ca6809a5b40680de9f
+ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997366"
+ms.lasthandoff: 07/31/2018
+ms.locfileid: "39360817"
 ---
 # <a name="xamarinforms-scrollview"></a>Xamarin.Forms ScrollView
 
@@ -22,11 +22,11 @@ ms.locfileid: "38997366"
 
 En este artículo se tratan los aspectos siguientes:
 
-- **[Propósito](#Purpose)**  &ndash; el propósito de `ScrollView` y cuando se utiliza.
-- **[Uso](#Usage)**  &ndash; uso `ScrollView` en la práctica.
-- **[Propiedades](#Properties)**  &ndash; propiedades públicas que se pueden leer y modificar.
-- **[Métodos](#Methods)**  &ndash; métodos públicos que se pueden llamar para desplazar la vista.
-- **[Eventos](#Events)**  &ndash; eventos que pueden usarse para detectar cambios en los Estados de la vista.
+- **[Propósito](#purpose)**  &ndash; el propósito de `ScrollView` y cuando se utiliza.
+- **[Uso](#usage)**  &ndash; uso `ScrollView` en la práctica.
+- **[Propiedades](#properties)**  &ndash; propiedades públicas que se pueden leer y modificar.
+- **[Métodos](#methods)**  &ndash; métodos públicos que se pueden llamar para desplazar la vista.
+- **[Eventos](#events)**  &ndash; eventos que pueden usarse para detectar cambios en los Estados de la vista.
 
 ## <a name="purpose"></a>Propósito
 
