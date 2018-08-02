@@ -1,55 +1,53 @@
 ---
 title: Menú emergente
+description: Cómo agregar un menú emergente que se encuentra delimitado respecto a una vista determinada.
 ms.prod: xamarin
 ms.assetid: 1C58E12B-4634-4691-BF59-D5A3F6B0E6F7
 ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
-ms.date: 08/18/2017
-ms.openlocfilehash: e7fad84133ca712c531ab0d12a67db78103c7cdd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.date: 07/31/2018
+ms.openlocfilehash: d7cadde88e9ae7ee30815ee9323785038dbb1a39
+ms.sourcegitcommit: ecdc031e9e26bbbf9572885531ee1f2e623203f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763155"
+ms.lasthandoff: 08/01/2018
+ms.locfileid: "39393664"
 ---
 # <a name="popup-menu"></a>Menú emergente
 
-La `PopupMenu` clase agrega compatibilidad para mostrar los menús emergentes que están conectados a una vista determinada. La ilustración siguiente muestra un menú emergente que se presentan en un botón, el resaltado solo cuando se selecciona el segundo elemento:
+El [menú emergente](https://developer.xamarin.com/api/type/Android.Widget.PopupMenu/) (también denominado una _menú contextual_) es un menú que se encuentra delimitado respecto a una vista determinada. En el ejemplo siguiente, una sola actividad contiene un botón. Cuando el usuario pulsa el botón, se muestra un menú emergente de tres elementos:
 
- [![Ejemplo de un PopopMenu con tres tres elementos](popup-menu-images/20-popupmenu.png)](popup-menu-images/20-popupmenu.png#lightbox)
-
-Android 4 agrega un par de características nuevas para `PopupMenu` que facilitan un poco más fácil trabajar con, a saber:
-
--   **Inflate** &ndash; aumentar el método ahora está disponible directamente en la clase del menú emergente.
--   **DismissEvent** &ndash; menú emergente de la clase tiene ahora un DismissEvent.
-
-¡Eche un vistazo a estas mejoras. En este ejemplo, tenemos una sola actividad que contiene un botón. Cuando el usuario hace clic en el botón, se muestra un menú emergente tal y como se muestra a continuación:
-
- [![Ejemplo de aplicación que se ejecuta en un emulador con los botones y menús emergentes 3-item](popup-menu-images/06-popupmenu.png)](popup-menu-images/06-popupmenu.png#lightbox)
+[![Ejemplo de una aplicación con un botón y un menú emergente de tres elementos](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
 
 
-## <a name="creating-a-popup-menu"></a>Crear un menú emergente
+## <a name="creating-a-popup-menu"></a>Creación de un menú emergente
 
-Cuando se crea una instancia de la `PopupMenu`, es necesario pasar su constructor una referencia a la `Context`, así como la vista al que está asociado el menú. En este caso, creamos la `PopupMenu` en el controlador de eventos click para el botón, que se denomina `showPopupMenu`.
-Este botón también es la vista a la que se asociará el `PopupMenu`, como se muestra en el código siguiente:
+El primer paso es crear un archivo de recursos de menú para el menú y colóquelo en **recursos o menú**. Por ejemplo, el siguiente código XML es el código para el menú de tres elementos que se muestra en la captura de pantalla anterior, **Resources/menu/popup_menu.xml**:
 
-```csharp
-showPopupMenu.Click += (s, arg) => {
-    PopupMenu menu = new PopupMenu (this, showPopupMenu);
-}
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/item1"
+          android:title="item 1" />
+    <item android:id="@+id/item1"
+          android:title="item 2" />
+    <item android:id="@+id/item1"
+          android:title="item 3" />
+</menu>
 ```
 
-En Android 3, el código para aumentar el menú de un recurso XML necesario obtener una referencia a un `MenuInflator`y, a continuación, llame a su `Inflate` método con el identificador de recurso de XML que contiene el menú y la instancia de menú para aumentar en. Este enfoque funciona aún en Android 4 y posterior a medida que el código siguiente muestra:
+A continuación, cree una instancia de `PopupMenu` y anclarlo a su vista. Cuando se crea una instancia de `PopupMenu`, pasar su constructor una referencia a la `Context` , así como la vista a la que se adjuntará el menú. Como resultado, el menú emergente está anclado a esta vista durante su construcción.
+
+En el ejemplo siguiente, la `PopupMenu` se crea en el controlador de eventos click del botón (que se denomina `showPopupMenu`). Este botón también es la vista a la que el `PopupMenu` está anclada, tal como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
     PopupMenu menu = new PopupMenu (this, showPopupMenu);
-    menu.MenuInflater.Inflate (Resource.Menu.popup_menu, menu.Menu);
 };
 ```
 
-A partir de Android 4 sin embargo, ahora puede llamar `Inflate` directamente en la instancia de la `PopupMenu`. Esto hace que el código más conciso tal y como se muestra aquí:
+Por último, debe ser el menú emergente *aumentada* con el recurso de menú que se creó anteriormente. En el ejemplo siguiente, la llamada en el menú [Inflate](https://developer.xamarin.com/api/member/Android.Views.LayoutInflater.Inflate/p/System.Int32/Android.Views.ViewGroup/) se agrega el método y su [mostrar](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Show%28%29/) método se llama para mostrar:
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -59,12 +57,10 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-En el código anterior, después de que infla el menú simplemente llamamos `menu.Show` para mostrarla en la pantalla.
-
 
 ## <a name="handling-menu-events"></a>Control de eventos de menú
 
-Cuando el usuario selecciona un elemento de menú, el `MenuItemClick` se generará el evento y se omitirá el menú. Puntear en cualquier lugar fuera del menú se simplemente descartarla. En cualquier caso, a partir de Android 4, cuando se cierra el menú, su `DismissEvent` se generará. El código siguiente agrega controladores de eventos tanto para el `MenuItemClick` y `DismissEvent` eventos:
+Cuando el usuario selecciona un elemento de menú, el [MenuItemClick](https://developer.xamarin.com/api/event/Android.Widget.PopupMenu.MenuItemClick/) haga clic en, se generará el evento y se descartará el menú. Puntear en cualquier lugar fuera del menú se simplemente descarte. En cualquier caso, cuando se descarta el menú, su [DismissEvent](https://developer.xamarin.com/api/member/Android.Widget.PopupMenu.Dismiss%28%29/) , se generará. El código siguiente agrega controladores de eventos tanto para el `MenuItemClick` y `DismissEvent` eventos:
 
 ```csharp
 showPopupMenu.Click += (s, arg) => {
@@ -78,7 +74,7 @@ showPopupMenu.Click += (s, arg) => {
     menu.DismissEvent += (s2, arg2) => {
         Console.WriteLine ("menu dismissed");
     };
-            menu.Show ();
+    menu.Show ();
 };
 ```
 
@@ -87,5 +83,3 @@ showPopupMenu.Click += (s, arg) => {
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [PopupMenuDemo (ejemplo)](https://developer.xamarin.com/samples/monodroid/PopupMenuDemo/)
-- [Introducción a helado Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma 4.0 Android](http://developer.android.com/sdk/android-4.0.html)
