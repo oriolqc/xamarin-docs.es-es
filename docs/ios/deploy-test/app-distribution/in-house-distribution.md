@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/19/2017
-ms.openlocfilehash: 657370705233e923b482b67fc5afed12631c8187
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 1dff0e614943805930cf7d838110c4a42eee6f48
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785033"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353209"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribución interna para aplicaciones Xamarin.iOS
 
@@ -98,7 +98,7 @@ Al igual que con cualquier otro perfil de aprovisionamiento que cree, se necesit
 1. En el [Centro de usuarios registrados de Apple Developer](https://developer.apple.com/account/overview.action), vaya a la sección *Certificate, Identifiers and Profiles* (Certificado, identificadores y perfiles). Seleccione **App IDs** (Identificadores de aplicación) en **Identifiers** (Identificadores).
 2. Haga clic en el botón **+** y proporcione un **Nombre** que la identifique en el portal.
 3. El prefijo de la aplicación ya debería estar establecido como el identificador del equipo y no se puede cambiar. Seleccione un identificador de aplicación explícito o comodín y especifique un identificador de paquete en un formato DNS inverso como el siguiente: **Explícito**: com.[NombreDominio].[NombreAplicación] **Comodín**: com.[NombreDominio].*
-4. Seleccione los [App Services](~/ios/get-started/installation/device-provisioning/index.md#appservices) que la aplicación necesite.
+4. Seleccione los [App Services](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) que la aplicación necesite.
 5. Haga clic en el botón **Continuar** y siga las instrucciones en pantalla para crear el identificador de aplicación.
 
 Una vez que tenga los componentes necesarios para crear un perfil de distribución, siga estos pasos para crearlo:

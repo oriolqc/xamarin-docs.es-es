@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/16/2018
-ms.openlocfilehash: 22ac17e211562eccbc49cc213e06079e77dd08c0
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: 0f2418994e02c9e83506071f14901d22af4b8a66
+ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111162"
+ms.lasthandoff: 07/30/2018
+ms.locfileid: "39353326"
 ---
 # <a name="free-provisioning-for-xamarinios-apps"></a>Aprovisionamiento gratuito para aplicaciones Xamarin.iOS
 
@@ -35,7 +35,7 @@ Para implementar sus aplicaciones Xamarin.iOS en un dispositivo con el aprovisio
 - La aplicación Xamarin.iOS debe usar un id. de aplicación explícito en lugar de un id. de aplicación de carácter comodín.
 - El identificador de agrupación utilizado en su aplicación de Xamarin.iOS debe ser único y no puede haberse usado en ninguna otra aplicación anteriormente. Cualquier identificador de agrupación que se use con el aprovisionamiento gratuito **no podrá** volver a usarse.
 - Si ya ha distribuido una aplicación, no podrá implementarla con el aprovisionamiento gratuito.
-- Si su aplicación usa App Services, necesitará crear un perfil de aprovisionamiento como se detalla en la guía de [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md#appservices). 
+- Si su aplicación usa App Services, necesitará crear un perfil de aprovisionamiento como se detalla en la guía de [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services). 
 
 Consulte la sección de [limitaciones](#limitations) de este documento para obtener más información acerca de las limitaciones asociadas al aprovisionamiento gratuito, así como las [guías de distribución de aplicaciones](~/ios/deploy-test/app-distribution/index.md) para obtener más información acerca de la distribución de aplicaciones iOS.
 
@@ -144,4 +144,4 @@ En esta guía se han explorado las ventajas y limitaciones de usar el aprovision
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md)
-- [Aprovisionamiento de servicios de aplicación](~/ios/get-started/installation/device-provisioning/index.md#appservices)
+- [Aprovisionamiento de servicios de aplicación](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services)
