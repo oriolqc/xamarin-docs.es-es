@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: mgmclemore
 ms.author: mamcle
 ms.date: 02/16/2018
-ms.openlocfilehash: 6c8abbdb18bcaee405f8fe7fe8c22a930435c7e5
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 221fa9b70eeba2c4ca08433c627e5648470a7fac
+ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242451"
+ms.lasthandoff: 08/04/2018
+ms.locfileid: "39514536"
 ---
 # <a name="local-notifications"></a>Notificaciones locales
 
@@ -366,8 +366,8 @@ Este mensaje recuperado, "Saludos de MainActivity!", se muestra en el `SecondAct
 Para obtener más información acerca de cómo crear pendientes intenciones, consulte [PendingIntent](https://developer.xamarin.com/api/type/Android.App.PendingIntent/).
 
 
-<a name="notif-chan" />
-
+<a name="notif-chan"></a>
+<a name="notification-channels"></a>
 ## <a name="notification-channels"></a>Canales de notificación
 
 A partir de Android 8.0 (Oreo), puede usar el *canales de notificación* característica para crear un canal personalizables por el usuario para cada tipo de notificación que desea mostrar. Canales de notificación permiten que las notificaciones de grupo para que todas las notificaciones que registren en un anexo de canal el mismo comportamiento. Por ejemplo, podría tener un canal de notificación está pensado para las notificaciones que requieren atención inmediata y un canal "más silencioso" independiente que se usa para los mensajes informativos.
