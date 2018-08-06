@@ -21,7 +21,7 @@ DESTINO MAESTRO. D admite crear interfaces de usuario declaradas en JSON. Cuando
 
 DESTINO MAESTRO. D admite la gama completa de características que están disponibles en la API de elementos cuando se usa JSON. Por ejemplo, la aplicación en la captura de pantalla siguiente se declara por completo mediante JSON:
 
-[![](json-element-walkthrough-images/01-load-from-file.png "Por ejemplo, la aplicación en esta captura de pantalla se declara por completo mediante JSON") ](json-element-walkthrough-images/01-load-from-file.png#lightbox) [ ![ ] (json-element-walkthrough-images/01-load-from-file.png "por ejemplo, la aplicación en esta captura de pantalla se declara por completo mediante JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
+[![](json-element-walkthrough-images/01-load-from-file.png "Por ejemplo, la aplicación en esta captura de pantalla se declara por completo mediante JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox) [![](json-element-walkthrough-images/01-load-from-file.png "por ejemplo, la aplicación en esta captura de pantalla se declara por completo mediante JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 Retomemos el ejemplo desde el [tutorial sobre la API de elementos](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) tutorial, que muestra cómo agregar una pantalla de detalles de tarea mediante JSON.
 

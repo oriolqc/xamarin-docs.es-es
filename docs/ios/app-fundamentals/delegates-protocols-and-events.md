@@ -29,7 +29,7 @@ En este artículo obtendrá información sobre todos estos temas, lo que le prop
 
 Para ilustrar los protocolos y los delegados, vamos a crear una aplicación de mapa sencilla que agrega una anotación a un mapa, como se muestra aquí:
 
- [![](delegates-protocols-and-events-images/01-map.png "Un ejemplo de una aplicación de mapa sencilla que agrega una anotación a un mapa") ](delegates-protocols-and-events-images/01-map.png#lightbox) [ ![ ] (delegates-protocols-and-events-images/04-annotation-with-callout.png "una anotación en el ejemplo se agregan a un mapa")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+ [![](delegates-protocols-and-events-images/01-map.png "Un ejemplo de una aplicación de mapa sencilla que agrega una anotación a un mapa")](delegates-protocols-and-events-images/01-map.png#lightbox) [![](delegates-protocols-and-events-images/04-annotation-with-callout.png "una anotación en el ejemplo se agregan a un mapa")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 Antes de abordar esta aplicación, comencemos examinando los eventos de .NET en el UIKit.
 

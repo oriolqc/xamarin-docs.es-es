@@ -109,8 +109,8 @@ Haga clic en **compras dentro de la aplicación** para crear o editar sus produc
 
 El proceso para agregar nuevos productos consta de dos pasos:
 
-1.   Elija el tipo de producto: [ ![ ] (in-app-purchase-basics-and-configuration-images/image8.png "elegir el tipo de producto")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2.   Escriba los atributos del producto, incluidos el identificador de producto, plan de tarifa y descripciones traducidas: [ ![ ] (in-app-purchase-basics-and-configuration-images/image9.png "escribir los atributos de productos")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
+1.   Elija el tipo de producto: [![](in-app-purchase-basics-and-configuration-images/image8.png "elegir el tipo de producto")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
+2.   Escriba los atributos del producto, incluidos el identificador de producto, plan de tarifa y descripciones traducidas: [![](in-app-purchase-basics-and-configuration-images/image9.png "escribir los atributos de productos")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 A continuación se describen los campos requeridos para cada producto en la aplicación de compra
 

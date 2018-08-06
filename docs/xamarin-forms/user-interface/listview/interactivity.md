@@ -157,7 +157,7 @@ Extrae la extracción de actualización como el usuario:
 
 ![](interactivity-images/refresh-start.png "Incorporación de cambios de ListView a actualizar en curso")
 
-Incorporación de cambios de actualización como el usuario ha publicado la incorporación de cambios. Esto es lo que ve el usuario mientras se está actualizando la lista: ![ ] (interactivity-images/refresh-in-progress.png "extracción ListView a actualizar completa")
+Incorporación de cambios de actualización como el usuario ha publicado la incorporación de cambios. Esto es lo que ve el usuario mientras se está actualizando la lista: ![](interactivity-images/refresh-in-progress.png "extracción ListView a actualizar completa")
 
 ListView expone algunos eventos que le permiten dar respuesta a eventos de deslizar para actualizar.
 

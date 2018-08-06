@@ -479,7 +479,7 @@ Las aplicaciones resultantes tiene este aspecto en cada plataforma:
 
 La aplicación usa el diseño de la interfaz de usuario de iOS estándar, por ejemplo, el botón 'Agregar' se coloca en la barra de navegación y el uso integrado **signo más (+)** icono. También usa el valor predeterminado `UINavigationController` botón "Atrás" comportamiento y admite deslice el dedo para eliminar de la tabla.
 
- [![](case-study-tasky-images/ios-taskylist.png "También utiliza el comportamiento del botón Atrás de UINavigationController predeterminado y admite deslice el dedo para eliminar en la tabla") ](case-study-tasky-images/ios-taskylist.png#lightbox) [ ![ ] (case-study-tasky-images/ios-taskylist.png "también usa el valor predeterminado UINavigationController copia el comportamiento del botón y admite deslice el dedo para eliminar en la tabla")](case-study-tasky-images/ios-taskylist.png#lightbox)
+ [![](case-study-tasky-images/ios-taskylist.png "También utiliza el comportamiento del botón Atrás de UINavigationController predeterminado y admite deslice el dedo para eliminar en la tabla")](case-study-tasky-images/ios-taskylist.png#lightbox) [![](case-study-tasky-images/ios-taskylist.png "también usa el valor predeterminado UINavigationController copia el comportamiento del botón y admite deslice el dedo para eliminar en la tabla")](case-study-tasky-images/ios-taskylist.png#lightbox)
 
  <a name="Android" />
 
@@ -495,7 +495,7 @@ La aplicación de Android usa controles integrados, incluido el diseño integrad
 
 La aplicación de Windows Phone utiliza el diseño estándar, rellenar la barra en la parte inferior de la pantalla en lugar de una barra de navegación en la parte superior de la aplicación.
 
- [![](case-study-tasky-images/wp-taskylist.png "La aplicación de Windows Phone usa el diseño estándar, rellenar la barra en la parte inferior de la pantalla en lugar de una barra de navegación en la parte superior de la aplicación") ](case-study-tasky-images/wp-taskylist.png#lightbox) [ ![ ] (case-study-tasky-images/wp-taskylist.png "de Windows Phone de la aplicación utiliza el estándar diseño, rellenar la barra en la parte inferior de la pantalla en lugar de una barra de navegación en la parte superior de la aplicación")](case-study-tasky-images/wp-taskylist.png#lightbox)
+ [![](case-study-tasky-images/wp-taskylist.png "La aplicación de Windows Phone usa el diseño estándar, rellenar la barra en la parte inferior de la pantalla en lugar de una barra de navegación en la parte superior de la aplicación")](case-study-tasky-images/wp-taskylist.png#lightbox) [![](case-study-tasky-images/wp-taskylist.png "de Windows Phone de la aplicación utiliza el estándar diseño, rellenar la barra en la parte inferior de la pantalla en lugar de una barra de navegación en la parte superior de la aplicación")](case-study-tasky-images/wp-taskylist.png#lightbox)
 
  <a name="Summary" />
 

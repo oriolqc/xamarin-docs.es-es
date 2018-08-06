@@ -19,7 +19,7 @@ ms.locfileid: "34787960"
 
 _iOS 9 es compatible con dos aplicaciones que se ejecutan en el mismo tiempo, utilizando diapositiva sobre o la vista en dos paneles. También admite la reproducción de imagen en la imagen de vídeo._
 
-![](multitasking-images/about02-sml.png "Ejemplo de pantalla de dividir") ![ ] (multitasking-images/about03-sml.png "ejemplo de imagen en imagen")
+![](multitasking-images/about02-sml.png "Ejemplo de pantalla de dividir") ![](multitasking-images/about03-sml.png "ejemplo de imagen en imagen")
 
 iOS 9 agrega compatibilidad con multitarea dos aplicaciones en ejecución al mismo tiempo en un hardware específico iPad. Multitarea para iPad es compatible a través de las siguientes características:
 

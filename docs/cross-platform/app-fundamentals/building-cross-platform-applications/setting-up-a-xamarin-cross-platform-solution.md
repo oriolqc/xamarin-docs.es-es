@@ -121,7 +121,7 @@ Hacer referencia a proyectos de aplicación específico de la plataforma el cód
 
 Los proyectos de aplicación cada una referencia de proyecto compartido y contienen el código de interfaz de usuario necesario para la funcionalidad presente para el usuario, como se muestra en estas capturas de pantalla:
 
-![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "La aplicación de los proyectos cada referencia de proyecto compartido") ![ ] (setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "la aplicación de los proyectos cada referencia de proyecto compartido")
+![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "La aplicación de los proyectos cada referencia de proyecto compartido") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "la aplicación de los proyectos cada referencia de proyecto compartido")
 
 
 Se proporcionan ejemplos específicos de cómo se deben estructurar los proyectos en los casos de estudio.

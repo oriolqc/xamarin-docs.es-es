@@ -49,7 +49,7 @@ Pantallas modales pueden ser una sola escena o usar un diseño basado en la pág
 
 Plano como una pila que se puede navegar hacia atrás por, de forma similar a la forma en que se presenta `UINavigationController` funciona en iOS. Plano puede ser insertada en la pila de navegación y extrae (mediante programación o mediante la selección del usuario).
 
-![](navigation-images/hierarchy-1.png "Plano se puede insertar en la pila de navegación") ![ ] (navigation-images/hierarchy-2.png "plano puede extrae de la pila de navegación")
+![](navigation-images/hierarchy-1.png "Plano se puede insertar en la pila de navegación") ![](navigation-images/hierarchy-2.png "plano puede extrae de la pila de navegación")
 
 Al igual que con iOS, un izquierda-borde-deslice el dedo navega hacia el controlador primario en una pila de navegación jerárquica.
 
@@ -94,7 +94,7 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 Deslice el dedo interfaces basadas en la página de izquierda a derecha, similar a la forma en que `UIPageViewController` funciona en iOS. Puntos de indicador se muestran a lo largo de la parte inferior de la pantalla para mostrar la página que se muestra actualmente.
 
-![](navigation-images/paged-1.png "Primera página de ejemplo") ![ ] (navigation-images/paged-2.png "segunda página de ejemplo") ![ ] (navigation-images/paged-5.png "quinta página de ejemplo")
+![](navigation-images/paged-1.png "Primera página de ejemplo") ![](navigation-images/paged-2.png "segunda página de ejemplo") ![](navigation-images/paged-5.png "quinta página de ejemplo")
 
 
 Para convertir una interfaz basada en la página de la interfaz de usuario principal de la aplicación de inspección, use `ReloadRootControllers` con una matriz de controladores de interfaz y contextos:
