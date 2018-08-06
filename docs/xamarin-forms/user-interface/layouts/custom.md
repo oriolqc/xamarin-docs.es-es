@@ -409,8 +409,8 @@ Cuando la página que contiene el `WrapLayout` aparece, la aplicación de ejempl
 Capturas de pantalla siguientes se muestra el `WrapLayout` después de se ha girado en orientación horizontal:
 
 ![](custom-images/landscape-ios.png "Captura de pantalla de aplicación panorama de iOS de ejemplo")
-![](custom-images/landscape-android.png "captura de pantalla de ejemplo Android aplicación panorama") 
- ![ ] (custom-images/landscape-uwp.png " Captura de pantalla de ejemplo UWP aplicación panorama")
+![](custom-images/landscape-android.png "captura de pantalla de ejemplo Android aplicación panorama")
+![](custom-images/landscape-uwp.png " Captura de pantalla de ejemplo UWP aplicación panorama")
 
 El número de columnas en cada fila depende del tamaño de fotografía, el ancho de pantalla y el número de píxeles independientes del dispositivo unitario. El [ `Image` ](xref:Xamarin.Forms.Image) elementos cargar las fotos, de forma asincrónica y, por tanto, el `WrapLayout` clase recibirán llamadas frecuentes a su [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) método cada `Image` elemento recibe un nuevo tamaño en función de la fotografía cargada.
 
