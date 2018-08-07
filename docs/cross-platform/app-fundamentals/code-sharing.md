@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: B73675D2-09A3-14C1-E41E-20352B819B53
 author: conceptdev
 ms.author: crdun
-ms.date: 07/18/2018
-ms.openlocfilehash: 82a73619e4c0507e8857cc91d88ababa870013de
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.date: 08/06/2018
+ms.openlocfilehash: 98b5786ae4f071b4d8e8f854561db97aee037fdc
+ms.sourcegitcommit: aa7b0182d117e2af66ffaa4fa29b8c214ceecae1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270477"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39520290"
 ---
 # <a name="sharing-code-overview"></a>Uso compartido de información general del código
 
@@ -19,7 +19,7 @@ _Este documento compara los distintos métodos para compartir código entre proy
 
 Hay tres métodos para compartir código entre aplicaciones multiplataforma:
 
-- [**Bibliotecas de .NET standard** ](#Net_Standard) – proyectos de .NET Standard puede implementar el código compartido entre varias plataformas y puede tener acceso a un gran número de las API de .NET (según la versión). Implementación de .NET standard 1.0-1.6 progresivamente más grande conjuntos de API, mientras que .NET Standard 2.0 proporciona la mejor cobertura de.
+- [**Bibliotecas de .NET standard** ](#Net_Standard) – proyectos de .NET Standard puede implementar el código compartido entre varias plataformas y puede tener acceso a un gran número de las API de .NET (según la versión). .NET standard 1.0-1.6 implementar progresivamente más grandes conjuntos de API, mientras que .NET Standard 2.0 proporciona la mejor cobertura de la BCL de .NET (incluidas las API de .NET disponible en las aplicaciones de Xamarin).
 - [**Proyectos compartidos** ](#Shared_Projects) : usar el tipo de proyecto de activos compartidos para organizar el código fuente y usar `#if` directivas de compilador según sea necesario para administrar los requisitos específicos de la plataforma.
 - [**Bibliotecas de clases portables** ](#Portable_Class_Libraries) (en desuso): bibliotecas de clases portables (PCL) puede tener como destino varias plataformas con una superficie de API común y usar Interfaces para proporcionar funcionalidad específica de la plataforma. Las PCL están en desuso en las versiones más recientes de Visual Studio &ndash; usar .NET Standard en su lugar.
 
