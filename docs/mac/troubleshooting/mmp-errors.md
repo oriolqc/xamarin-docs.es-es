@@ -266,7 +266,7 @@ Una solución de último paja sería utilizar una versión anterior de Xamarin.M
 
 <a name="MM2012" />
 
-#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: Primera solo {0} de {1} "Hace referencia a" advertencias que se muestra. ** Este mensaje relacionado con 2009 **
+#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: Primera solo {0} de {1} "Hace referencia a" advertencias que se muestra. ** Este mensaje relacionado con 2009 \*\*
 
 <a name="MM2013" />
 
@@ -274,7 +274,7 @@ Una solución de último paja sería utilizar una versión anterior de Xamarin.M
 
 <a name="MM2014" />
 
-#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Xamarin.Mac extensiones no admite la vinculación. La solicitud para la vinculación se pasará por alto. ** Este mensaje es obsoleta en XM 3.6 + **
+#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Xamarin.Mac extensiones no admite la vinculación. La solicitud para la vinculación se pasará por alto. ** Este mensaje es obsoleta en XM 3.6 + \*\*
 
 <!-- 2015 used by mtouch -->
 
