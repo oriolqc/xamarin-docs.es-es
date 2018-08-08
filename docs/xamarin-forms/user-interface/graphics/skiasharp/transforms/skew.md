@@ -1,32 +1,32 @@
 ---
-title: La transformación sesga
-description: En este artículo se explica cómo la transformación sesga puede crear objetos gráficos superpuestos en SkiaSharp y se muestra cómo hacerlo con código de ejemplo.
+title: Transformación de sesgo
+description: En este artículo se explica cómo la transformación de sesgo puede crear objetos gráficos superpuestos de SkiaSharp y esto se muestra con código de ejemplo.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: charlespetzold
 ms.author: chape
 ms.date: 03/20/2017
-ms.openlocfilehash: 8a0d17f5cdc790aed2bd8fd671563378d5d523b1
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 951fc02dfff1721c1391c5d0c8a21452a156cfdb
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244086"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615358"
 ---
-# <a name="the-skew-transform"></a>La transformación sesga
+# <a name="the-skew-transform"></a>Transformación de sesgo
 
-_Vea cómo la transformación sesga puede crear objetos gráficos superpuestos en SkiaSharp_
+_Vea cómo la transformación de sesgo puede crear objetos gráficos superpuestos de SkiaSharp_
 
-En SkiaSharp, la transformación sesga inclina objetos gráficos, como la sombra en esta imagen:
+En SkiaSharp, la transformación de sesgo inclina a objetos gráficos, como la sombra en esta imagen:
 
-![](skew-images/skewexample.png "Un ejemplo de sesgado del programa sesgar texto de instantáneas")
+![](skew-images/skewexample.png "Un ejemplo de sesgado del programa sesgar sombra del texto")
 
 El sesgo transforma rectángulos en paralelogramos, pero una elipse sesgada sigue siendo una elipse.
 
-Aunque Xamarin.Forms define las propiedades para la traducción, ampliación y rotaciones, no hay ninguna propiedad correspondiente de Xamarin.Forms para sesgo.
+Aunque Xamarin.Forms define las propiedades de traslación, escala y rotaciones, no hay ninguna propiedad correspondiente en Xamarin.Forms para skew.
 
-El [ `Skew` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Skew/p/System.Single/System.Single/) método `SKCanvas` acepta dos argumentos de sesgo horizontal y vertical de sesgo:
+El [ `Skew` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Skew/p/System.Single/System.Single/) método `SKCanvas` acepta dos argumentos de sesgo horizontal y vertical sesgar:
 
 ```csharp
 public void Skew (Single xSkew, Single ySkew)
@@ -38,9 +38,9 @@ Un segundo [ `Skew` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanva
 public void Skew (SKPoint skew)
 ```
 
-Sin embargo, no es probable que va a usar cualquiera de estos dos métodos de forma aislada.
+Sin embargo, no es probable que se usará uno de estos dos métodos de forma aislada.
 
-El **sesgar experimentar** página permite experimentar con sesgo valores comprendidos entre -10 y 10. Una cadena de texto está situada en la esquina superior izquierda de la página, con valores de sesgo obtenidos de dos `Slider` elementos. Este es el `PaintSurface` controlador en el [ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) clase:
+El **sesgar experimentar** página permite experimentar con asimetría de valores comprendidos entre -10 y 10. Una cadena de texto se coloca en la esquina superior izquierda de la página, con valores de sesgo obtenidos dos `Slider` elementos. Este es el `PaintSurface` controlador en el [ `SkewExperimentPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewExperimentPage.xaml.cs) clase:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -68,27 +68,27 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Valores de la `xSkew` argumento desplazar la parte inferior del texto adecuado para los valores positivos o a la izquierda para los valores negativos. Valores de `ySkew` desplazar a la derecha del texto hacia abajo para los valores positivos o hacia arriba para los valores negativos:
+Los valores de la `xSkew` argumento desplazar la parte inferior del texto adecuado para los valores positivos o izquierda para los valores negativos. Los valores de `ySkew` desplazar a la derecha del texto hacia abajo para los valores positivos o suscribirse a los valores negativos:
 
-[![](skew-images/skewexperiment-small.png "Captura de pantalla triple de la página de experimento sesgar")](skew-images/skewexperiment-large.png#lightbox "Triple captura de pantalla de la página de experimento sesgar")
+[![](skew-images/skewexperiment-small.png "Captura de pantalla triple de la página del experimento sesgar")](skew-images/skewexperiment-large.png#lightbox "Triple captura de pantalla de la página del experimento sesgar")
 
-Si `xSkew` es el negativo de `ySkew`, el resultado es la rotación, pero también escalado algo tal y como indica la presentación UWP.
+Si `xSkew` es el negativo de `ySkew`, el resultado es la rotación, pero también ha escalado algo como indica la presentación UWP.
 
 Las fórmulas de transformación son los siguientes:
 
-x' = x + xSkew · y
+x' = x + xSkew (en inglés) y
 
-y' = ySkew · x + y
+y' = ySkew (en inglés) x + y
 
-Por ejemplo, si es un positivo `xSkew` valor, el transformado `x'` valor aumenta a medida que `y` aumenta. Es lo que ocasiona la inclinación.
+Por ejemplo, para un positivo `xSkew` valor transformado `x'` valor aumenta a medida que `y` aumenta. Eso es lo que hace que la inclinación.
 
-Si un ancho de píxeles de triángulo 200 y 100 píxeles de alto se sitúa con la esquina superior izquierda en el punto (0, 0) y se representa con un `xSkew` valo 1.5, los resultados de paralelogramo siguientes:
+Si un ancho de píxeles de triángulo 200 y 100 píxeles de alto se coloca con su esquina superior izquierda en el punto (0, 0) y se representa con un `xSkew` valor de 1.5, los resultados del paralelogramo siguientes:
 
 ![](skew-images/skeweffect.png "El efecto de la transformación de sesgo en un rectángulo")
 
-Las coordenadas del borde inferior tienen `y` valores de 100, por lo que es desplazan 150 píxeles a la derecha.
+Las coordenadas del borde inferior tienen `y` valores de 100, por lo que es desplazado a 150 píxeles a la derecha.
 
-Para los valores distintos de cero de `xSkew` o `ySkew`, solo el punto (0, 0) sigue siendo el mismo. Ese punto se puede considerar el centro de sesgado. Si necesita el centro del sesgo para que sea algo más (que suele ser el caso), no hay ningún `Skew` método que proporciona que. Debe combinar explícitamente `Translate` llama con el `Skew` llamar. Para centrar el sesgo en `px` y `py`, realizar las llamadas siguientes:
+Para los valores distintos de cero de `xSkew` o `ySkew`, solo el punto (0, 0) sigue siendo el mismo. Ese punto se puede considerar el centro de sesgado. Si necesita el centro del sesgo para que sea algo más (que suele ser el caso), no hay ningún `Skew` método que proporciona que. Deberá combinar explícitamente `Translate` llama con el `Skew` llamar. Para centrar el sesgo en `px` y `py`, realizar las llamadas siguientes:
 
 ```csharp
 canvas.Translate(px, py);
@@ -96,21 +96,21 @@ canvas.Skew(xSkew, ySkew);
 canvas.Translate(-px, -py);
 ```
 
-Las fórmulas de transformación compuestas son:
+Las fórmulas de la transformación compuesta son:
 
-x' = x + xSkew · (copiar y:)
+x' = x + xSkew (en inglés) (y – py)
 
-y' = ySkew · (x – px) + y
+y' = ySkew (en inglés) (x – px) + y
 
-Si `ySkew` es cero, y solo se especifica un valor distinto de cero de `xSkew`, a continuación, `px` valor no se utiliza. El valor es irrelevante y de forma similar para `ySkew` y `py`.
+Si `ySkew` es cero, y solo especificar un valor distinto de cero de `xSkew`, a continuación, `px` no se utiliza el valor. El valor es irrelevante y de forma similar para `ySkew` y `py`.
 
-Se podría sienta más cómodo especificar sesgo como un ángulo de inclinación, como el ángulo α en este diagrama:
+Se podría siente más cómodo especificando sesgo como un ángulo de inclinación, como el ángulo α en este diagrama:
 
-![](skew-images/skewangleeffect.png "El efecto de la transformación de sesgo en un rectángulo con un ángulo sesgar indicado")
+![](skew-images/skewangleeffect.png "Indica el efecto de la transformación de sesgo en un rectángulo con un ángulo de sesgo")
 
-La relación entre el turno de 150 píxeles a 100 píxeles vertical es la tangente de ese ángulo, en este ejemplo 56.3 grados.
+La relación entre el turno de 150 píxeles a la vertical 100 píxeles es la tangente del ángulo que, en este ejemplo 56.3 grados.
 
-El archivo XAML de la **sesgar experimento de ángulo** página es similar a la **ángulo sesgar** página salvo que la `Slider` elementos estar comprendido entre -90 y 90 grados. El [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) archivo de código subyacente se centra el texto en la página y se utiliza `Translate` para establecer un centro de sesgo en el centro de la página. Un valor bajo `SkewDegrees` método en la parte inferior del código convierte ángulos para sesgar valores:
+El archivo XAML de la **experimento de ángulo de sesgo** página es similar a la **ángulo de sesgo** página salvo que el `Slider` elementos oscilar entre -90 y 90 grados. El [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) centra el texto en la página de archivo de código subyacente y usa `Translate` para establecer un centro de sesgo en el centro de la página. Short `SkewDegrees` método en la parte inferior del código convierte ángulos para sesgar valores:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -151,11 +151,11 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 }
 ```
 
-Tal y como acerca a un ángulo positivos o negativos de 90 grados, acerca de la tangente infinito, pero ángulos hasta aproximadamente 80 grados o lo están para su uso:
+Como aproxima a un ángulo positivos o negativos de 90 grados, infinito aproxima a la tangente, pero son utilizables ángulos hasta aproximadamente 80 grados o algo así:
 
-[![](skew-images/skewangleexperiment-small.png "Captura de pantalla triple de la página de experimento de ángulo de sesgo")](skew-images/skewangleexperiment-large.png#lightbox "Triple captura de pantalla de la página de sesgo experimento de ángulo")
+[![](skew-images/skewangleexperiment-small.png "Captura de pantalla triple de la página del experimento de ángulo de sesgo")](skew-images/skewangleexperiment-large.png#lightbox "Triple captura de pantalla de la página del experimento de ángulo de sesgo")
 
-Un sesgo horizontal negativo pequeño puede imitar oblicuo o cursiva el texto, como el **texto oblicua** muestra la página. El [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) clase muestra cómo hacerlo:
+Un sesgo horizontal negativo pequeño puede imitar oblicua o cursiva texto, como el **texto oblicua** muestra la página. El [ `ObliqueTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) clase muestra cómo hacerlo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -187,11 +187,11 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 }
 ```
 
-El `TextAlign` propiedad de `SKPaint` está establecido en `Center`. Sin las transformaciones, la `DrawText` llamar a coordenadas de (0, 0) colocaría el texto con el centro horizontal de la línea base en la esquina superior izquierda. El `SkewDegrees` sesga el texto horizontalmente 20 grados con respecto a la línea de base. El `Translate` llamada mueve el centro horizontal de la línea de base del texto en el centro del lienzo:
+El `TextAlign` propiedad de `SKPaint` está establecido en `Center`. Sin las transformaciones, el `DrawText` llamar con las coordenadas de (0, 0) pudiera ubicar el texto con el centro horizontal de la línea base en la esquina superior izquierda. El `SkewDegrees` sesga el texto horizontalmente 20 grados con respecto a la línea base. El `Translate` llamada mueve al centro horizontal de la línea base del texto en el centro del lienzo:
 
 [![](skew-images/obliquetext-small.png "Captura de pantalla de la página de texto oblicua triple")](skew-images/obliquetext-large.png#lightbox "Triple captura de pantalla de la página de texto oblicua")
 
-El **sesgar sombra texto** página muestra cómo utilizar una combinación de una escala sesga y vertical de 45 grados para realizar una sombra de texto que se inclina fuera el texto. Aquí es la parte pertinente de la `PaintSurface` controlador:
+El **sesgar el texto con sombra** página muestra cómo usar una combinación de una escala de sesgo y vertical de 45 grados para realizar una sombra de texto que se inclina hacia fuera del texto. Aquí es la parte pertinente de la `PaintSurface` controlador:
 
 ```csharp
 using (SKPaint textPaint = new SKPaint())
@@ -220,15 +220,15 @@ using (SKPaint textPaint = new SKPaint())
 }
 ```
 
-La sombra está mostrado primero y, a continuación, el texto:
+La sombra es muestra primero y, a continuación, el texto:
 
-[![](skew-images/skewshadowtext1-small.png "Captura de pantalla triple de la página sesgar sombra texto")](skew-images/skewshadowtext1-large.png#lightbox "Triple captura de pantalla de la página sesgar texto de instantáneas")
+[![](skew-images/skewshadowtext1-small.png "Captura de pantalla de la página de texto con sombra sesgar triple")](skew-images/skewshadowtext1-large.png#lightbox "Triple captura de pantalla de la página sesgar sombra del texto")
 
-Coordenada vertical se pasa a la `DrawText` método indica la posición del texto con respecto a la línea de base. Que es la misma coordenada vertical utilizada para el centro de sesgado. Esta técnica no funcionará si la cadena de texto contiene caracteres descendentes. Por ejemplo, sustituya la palabra "extraña" para "Sombra" y aquí de resultado:
+La coordenada vertical se pasa a la `DrawText` método indica la posición del texto en relación con la línea base. Que es la misma coordenada vertical utilizada para el centro de sesgado. Esta técnica no funcionará si la cadena de texto contiene los trazos descendentes. Por ejemplo, reemplace la palabra "extraña" para "Sombra" y aquí de resultado:
 
-[![](skew-images/skewshadowtext2-small.png "Captura de pantalla triple de la página sesgar sombra texto con una palabra alternativa con trazos descendentes")](skew-images/skewshadowtext2-large.png#lightbox "Triple captura de pantalla de la página sesgar sombra texto con una palabra alternativa con trazos descendentes")
+[![](skew-images/skewshadowtext2-small.png "Captura de pantalla de la página sesgar sombra del texto con una palabra alternativa con trazos descendentes triple")](skew-images/skewshadowtext2-large.png#lightbox "Triple captura de pantalla de la página sesgar sombra del texto con una palabra alternativa con trazos descendentes")
 
-Todavía se alinean las instantáneas y el texto en la línea de base, pero el efecto solo no es correcto. Para corregir esto necesita obtener los límites de texto:
+Todavía se alinean las instantáneas y el texto en la línea base, pero el efecto simplemente no es correcto. Para corregirlo, deberá obtener los límites del texto:
 
 ```csharp
 SKRect textBounds = new SKRect();
@@ -246,7 +246,7 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 
 Ahora la sombra se extiende desde la parte inferior de los trazos descendentes:
 
-[![](skew-images/skewshadowtext3-small.png "Captura de pantalla triple de la página de texto de sombra sesgar con ajustes para los trazos descendentes")](skew-images/skewshadowtext3-large.png#lightbox "Triple captura de pantalla de la página de texto de sombra sesgar con ajustes para los trazos descendentes")
+[![](skew-images/skewshadowtext3-small.png "Captura de pantalla de la página sesgar sombra del texto con los ajustes para los trazos descendentes triple")](skew-images/skewshadowtext3-large.png#lightbox "Triple captura de pantalla de la página sesgar sombra del texto con los ajustes para los trazos descendentes")
 
 
 ## <a name="related-links"></a>Vínculos relacionados

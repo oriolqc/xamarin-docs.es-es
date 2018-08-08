@@ -2,16 +2,17 @@
 title: Dibujo en 2D con SkiaSharp
 description: Este documento proporciona información general sobre 2D multiplataforma de dibujo de SkiaSharp. Incluye vínculos a diversas guías que describen SkiaSharp y sus diversas API.
 ms.prod: xamarin
+ms.techonology: xamarin-skiasharp
 ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 author: charlespetzold
 ms.author: chape
 ms.date: 07/17/2018
-ms.openlocfilehash: 0c8cbc14308c8c4131e5aaa2bcc0ddfa798af610
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
+ms.openlocfilehash: 7207f33e56f566a5528d93f9957e2ff780a22a65
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130925"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615527"
 ---
 # <a name="2d-drawing-with-skiasharp"></a>Dibujo en 2D con SkiaSharp
 
@@ -63,11 +64,11 @@ Obtenga información sobre cómo trabajar con entre gráficos de plataforma que 
 - [Mapas de bits](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/index.md)
   * [Mostrar mapas de bits](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/displaying.md)
   * [Crear y dibujar en mapas de bits](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/drawing.md)
-  * [Recortar los mapas de bits](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/cropping.md)
+  * [Recortar mapas de bits](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/cropping.md)
   * [Visualización segmentada de mapas de bits](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/segmented.md)
-  * [Guardar mapas de bits a archivos](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/saving.md)
-  * [Acceso a los píxeles del mapa de Bits](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/pixel-bits.md)
-  * [Animar los mapas de bits](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating.md)
+  * [Guardar mapas de bits en archivos](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/saving.md)
+  * [Acceso a píxeles de mapas de bits](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/pixel-bits.md)
+  * [Animar mapas de bits](~/xamarin-forms/user-interface/graphics/skiasharp/bitmaps/animating.md)
 
 ## <a name="platform-specific-notesgraphics-gamesskiasharpplatformmd"></a>[Notas específicas de plataforma](~/graphics-games/skiasharp/platform.md)
 

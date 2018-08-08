@@ -2,17 +2,17 @@
 title: Integración con Xamarin.Forms
 description: En este artículo se explica cómo crear gráficos de SkiaSharp que responden a tocar y elementos de Xamarin.Forms y esto se muestra con código de ejemplo.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: charlespetzold
 ms.author: chape
 ms.date: 02/09/2017
-ms.openlocfilehash: 35aede1a541d0ff62f6a4a5b57256c389e5a8640
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 23dcc6f11f40283a220aba47b33717e7e5740dbe
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997535"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615852"
 ---
 # <a name="integrating-with-xamarinforms"></a>Integración con Xamarin.Forms
 

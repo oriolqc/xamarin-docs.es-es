@@ -1,42 +1,42 @@
 ---
 title: Líneas y extremos de trazo
-description: Este artículo explica cómo usar SkiaSharp para dibujar líneas con extremos de trazo diferentes en las aplicaciones de Xamarin.Forms y se muestra cómo hacerlo con código de ejemplo.
+description: En este artículo se explica cómo usar SkiaSharp para dibujar líneas con extremos de trazo diferentes en las aplicaciones de Xamarin.Forms y esto se muestra con código de ejemplo.
 ms.prod: xamarin
 ms.assetid: 1F854DDD-5D1B-4DE4-BD2D-584439429FDB
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: f63d14ae0dff5f94580c86d1c5bfdfc66bbee7f9
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 000bf24c1b06baab892f0b165c8b9eeebebce49d
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244099"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615267"
 ---
 # <a name="lines-and-stroke-caps"></a>Líneas y extremos de trazo
 
-_Aprenda cómo usar SkiaSharp para dibujar líneas con extremos de trazo diferente_
+_Obtenga información sobre cómo utilizar SkiaSharp para dibujar líneas con extremos de trazo diferente_
 
-En SkiaSharp, una sola línea de representación es muy diferente de la representación de una serie de líneas rectas conectadas. Incluso al dibujar líneas individuales, sin embargo, a menudo resulta necesaria para proporcionar a las líneas de un ancho del trazo determinado y cuanto mayor sea la línea, el más importante, se convierte en la apariencia del final de las líneas, llama a la *cap trazo*:
+En SkiaSharp, representar una sola línea es muy diferente de la representación de una serie de líneas rectas conectadas. Incluso al dibujar líneas individuales, sin embargo, a menudo resulta necesaria para proporcionar a las líneas de un ancho de trazo determinado y más ancha la línea, más importante, se convierte en la apariencia del final de las líneas, llamado el *extremo trazo*:
 
-![](lines-images/strokecapsexample.png "Las opciones de CAP de tres trazo")
+![](lines-images/strokecapsexample.png "Las opciones de extremos de tres trazo")
 
-Para dibujar líneas individuales, `SKCanvas` define un sencillo [ `DrawLine` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawLine/p/System.Single/System.Single/System.Single/System.Single/SkiaSharp.SKPaint/) método cuyos argumentos indican iniciales y finales de coordenadas de la línea con un `SKPaint` objeto:
+Para dibujar líneas individuales, `SKCanvas` define una sencilla [ `DrawLine` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawLine/p/System.Single/System.Single/System.Single/System.Single/SkiaSharp.SKPaint/) método cuyos argumentos indican iniciales y finales de coordenadas de la línea con un `SKPaint` objeto:
 
 ```csharp
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-De forma predeterminada, el `StrokeWidth` propiedad de una instancia recién creada `SKPaint` objeto es 0, que tiene el mismo efecto que un valor de 1 en la representación de una línea de un píxel en grosor. Esto parece muy delgado en dispositivos de alta resolución como teléfonos, por lo que probablemente deseará establecer el `StrokeWidth` en un valor mayor. ¿Pero cuando se empieza a dibujar líneas de un grosor considerable, que genera otro problema: cómo debe el se inicia y se termina de estas líneas gruesas representará?
+De forma predeterminada, el `StrokeWidth` propiedad de una instancia recién creada `SKPaint` objeto es 0, que tiene el mismo efecto que un valor de 1 en la representación de una línea de un píxel en el grosor. Esto parece muy ligero en dispositivos de alta resolución, como teléfonos, por lo que probablemente desee establecer el `StrokeWidth` en un valor mayor. ¿Pero cuando empiece a dibujar las líneas de un grosor de tamaño ajustable, que provoca otro problema: cómo empieza y finaliza de estas líneas gruesas la se debe representar?
 
-Se llama a la apariencia de la comienza y termina de líneas un *extremo de línea* o, en Skia, un *cap trazo*. La palabra "cap" en este contexto hace referencia a un tipo de hat &mdash; algo que se encuentra en el extremo de la línea. Establece el [ `StrokeCap` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeCap/) propiedad de la `SKPaint` objeto en uno de los siguientes miembros de la [ `SKStrokeCap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeCap/) enumeración:
+Se llama a la apariencia del final de las líneas y se inicia un *extremo de línea* o, en Skia, un *extremo trazo*. La palabra "cap" en este contexto hace referencia a un tipo de hat &mdash; algo que se encuentra en el extremo de la línea. Establece el [ `StrokeCap` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPaint.StrokeCap/) propiedad de la `SKPaint` objeto en uno de los siguientes miembros de la [ `SKStrokeCap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKStrokeCap/) enumeración:
 
 - [`Butt`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Butt/) (el valor predeterminado)
 - [`Square`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
 - [`Round`](https://developer.xamarin.com/api/field/SkiaSharp.SKStrokeCap.Round/)
 
-Se ilustran mejor con un programa de ejemplo. La segunda sección de la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa comienza con una página titulada **extremos de trazos** tomando como base la [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) clase. Esta página define una `PaintSurface` controlador de eventos que se repite en los tres miembros de la `SKStrokeCap` enumeración, mostrar el nombre del miembro de enumeración y dibujar una línea con ese extremo del trazo:
+Se ilustran mejor con un programa de ejemplo. La segunda sección de la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa comienza con una página titulada **extremos de trazo** según la [ `StrokeCapsPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) clase. Esta página define una `PaintSurface` controlador de eventos que se repite en los tres miembros de la `SKStrokeCap` enumeración, mostrar el nombre del miembro de enumeración y dibujar una línea con ese extremo trazo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -90,13 +90,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Para cada miembro de la `SKStrokeCap` enumeración, el controlador dibuja dos líneas, uno con un grosor del trazo de 50 píxeles y otra línea situado en la parte superior con un grosor del trazo de 2 píxeles. Esta segunda línea se pretende ilustrar geométrica inicial y final de la línea independiente del grosor de la línea y un extremo del trazo:
+Para cada miembro de la `SKStrokeCap` enumeración, el controlador dibuja dos líneas, uno con un grosor de trazo de 50 píxeles y otra línea situado en la parte superior con un grosor de trazo de 2 píxeles. Esta segunda línea pretende ilustrar geométrica comienzo y al final de la línea independiente del grosor de la línea y un extremo del trazo:
 
-[![](lines-images/strokecaps-small.png "Captura de pantalla triple de la página extremos de trazos")](lines-images/strokecaps-large.png#lightbox "Triple captura de pantalla de la página extremos de trazo")
+[![](lines-images/strokecaps-small.png "Captura de pantalla de la página extremos de trazo triple")](lines-images/strokecaps-large.png#lightbox "Triple captura de pantalla de la página extremos de trazo")
 
-Como puede ver, el `Square` y `Round` extremos de trazos amplían la longitud de la línea de forma eficaz por la mitad del ancho del trazo en el principio de la línea y de nuevo al final. Esta extensión se vuelve importante cuando es necesario determinar las dimensiones de un objeto graphics representado.
+Como puede ver, el `Square` y `Round` extremos de trazo amplían la longitud de la línea de forma eficaz por la mitad del ancho del trazo al principio de la línea y de nuevo al final. Esta extensión se vuelve importante cuando es necesario determinar las dimensiones de un objeto graphics representado.
 
-La `SKCanvas` clase incluye también otro método para dibujar varias líneas que resulta algo peculiar:
+La `SKCanvas` clase incluye también otro método para dibujar varias líneas que resulta bastante peculiar:
 
 ```csharp
 DrawPoints (SKPointMode mode, points, paint)
@@ -105,10 +105,10 @@ DrawPoints (SKPointMode mode, points, paint)
 El `points` parámetro es una matriz de `SKPoint` valores y `mode` es un miembro de la [ `SKPointMode` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPointMode/) enumeración, que tiene tres miembros:
 
 - [`Points`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Points/) para representar los puntos individuales
-- [`Lines`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Lines/) para conectar cada par de puntos
+- [`Lines`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Lines/) para conectarse a cada par de puntos
 - [`Polygon`](https://developer.xamarin.com/api/field/SkiaSharp.SKPointMode.Polygon/) para conectar todos los puntos consecutivos
 
-El **varias líneas** página ilustra este método. El [ `MultipleLinesPage` archivo XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) crean instancias de dos `Picker` vistas que permiten seleccionar un miembro de la `SKPointMode` enumeración y un miembro de la `SKStrokeCap` enumeración:
+El **varias líneas** página muestra este método. El [ `MultipleLinesPage` archivo XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) crean instancias de dos `Picker` vistas que le permiten seleccionar un miembro de la `SKPointMode` enumeración y un miembro de la `SKStrokeCap` enumeración:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -178,7 +178,7 @@ void OnPickerSelectedIndexChanged(object sender, EventArgs args)
 }
 ```
 
-Este controlador necesita comprobar la existencia de la `SKCanvasView` objeto porque el controlador de eventos es el primero llama cuando el `SelectedIndex` propiedad de la `Picker` se establece en 0 en el archivo XAML, y que se produce antes de la `SKCanvasView` se ha creado una instancia.
+Debe comprobar la existencia de este controlador de la `SKCanvasView` objeto porque el controlador de eventos es el primero se le llama cuando el `SelectedIndex` propiedad de la `Picker` se establece en 0 en el archivo XAML, y que se produce antes de la `SKCanvasView` se ha creado una instancia.
 
 El `PaintSurface` controlador tiene acceso a un método genérico para la obtención de los dos elementos seleccionados de la `Picker` vistas y convertirlos en valores de enumeración:
 
@@ -228,17 +228,17 @@ T GetPickerItem<T>(Picker picker)
 }
 ```
 
-La captura de pantalla muestra una variedad de `Picker` selecciones en las tres plataformas:
+La captura de pantalla muestra una variedad de `Picker` las selecciones realizadas en las tres plataformas:
 
 [![](lines-images/multiplelines-small.png "Captura de pantalla triple de la página de varias líneas")](lines-images/multiplelines-large.png#lightbox "Triple captura de pantalla de la página de varias líneas")
 
-El iPhone a la izquierda se muestra cómo el `SKPointMode.Points` hace que el miembro de enumeración `DrawPoints` para representar cada uno de los puntos en el `SKPoint` matriz como un cuadrado si el extremo de línea es `Butt` o `Square`. Se representan círculos si el extremo de línea es `Round`.
+El iPhone a la izquierda se muestra cómo el `SKPointMode.Points` hace que el miembro de enumeración `DrawPoints` para representar cada uno de los puntos de la `SKPoint` si el extremo de línea es de matriz como un cuadrado `Butt` o `Square`. Se representan los círculos si el extremo de línea es `Round`.
 
-Cuando se usa en su lugar `SKPointMode.Lines`, tal y como se muestra en la pantalla de Android en el centro, el `DrawPoints` método dibuja una línea entre cada par de `SKPoint` valores, utilizando el extremo de línea especificado, en este caso `Round`.
+Cuando se usa en su lugar `SKPointMode.Lines`, como se muestra en la pantalla de Android en el centro, el `DrawPoints` método dibuja una línea entre cada par de `SKPoint` valores, utilizando el extremo de línea especificado, en este caso `Round`.
 
-La captura de pantalla UWP muestra el resultado de la `SKPointMode.Polygon` valor. Se dibuja una línea entre los puntos sucesivas de la matriz, pero si observa muy atentamente, verá que estas líneas no están conectadas. Cada una de estas líneas independientes comienza y termina con el extremo de línea especificado. Si selecciona el `Round` CAP, las líneas que parece estar conectado, pero realmente no está conectados.
+La captura de pantalla UWP muestra el resultado de la `SKPointMode.Polygon` valor. Se dibuja una línea entre los puntos sucesivas de la matriz, pero si observa muy de cerca, verá que estas líneas no están conectadas. Cada una de estas líneas independientes comienza y termina con el extremo de línea especificado. Si selecciona el `Round` CAP, pueden aparecer las líneas se conecten, pero realmente no estén conectados.
 
-Si las líneas se conectado o no es un aspecto fundamental de trabajar con rutas de acceso de gráficos.
+Si las líneas están conectadas o no conectadas son un aspecto fundamental de trabajar con trazados de gráficos.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

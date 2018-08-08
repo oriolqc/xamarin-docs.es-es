@@ -1,38 +1,38 @@
 ---
-title: Conceptos básicos de dibujo SkiaSharp
-description: Esta guía explica los conceptos básicos de los conceptos de gráficos de SkiaSharp y coordenadas en aplicaciones de Xamarin.Forms.
+title: Conceptos básicos de dibujo de SkiaSharp
+description: Esta guía explica los conceptos básicos de los conceptos de SkiaSharp gráficos y las coordenadas en las aplicaciones de Xamarin.Forms.
 ms.prod: xamarin
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: 736921665664e559263fd56a456c5504a90124b3
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: cbd0b50d41908f41ef301f883050e9837dfcaace
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244024"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615384"
 ---
-# <a name="skiasharp-drawing-basics"></a>Conceptos básicos de dibujo SkiaSharp
+# <a name="skiasharp-drawing-basics"></a>Conceptos básicos de dibujo de SkiaSharp
 
-_Obtenga información acerca de los conceptos básicos de los conceptos de gráficos de SkiaSharp y coordenadas_
+_Conozca los aspectos básicos de las coordenadas y conceptos de gráficos de SkiaSharp_
 
-Después de haber agregado el paquete SkiaSharp NuGet a la aplicación de Xamarin.Forms, puede empezar a usar gráficos de SkiaSharp. El [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) solución incluye varias páginas que muestran SkiaSharp técnicas de programación en lecciones progresivamente más avanzadas.
+Después de haber agregado el paquete SkiaSharp NuGet a la aplicación de Xamarin.Forms, puede empezar a usar gráficos de SkiaSharp. El [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) solución incluye varias páginas que muestran las técnicas de programación en lecciones progresivamente más avanzadas de SkiaSharp.
 
 Todos los programas de ejemplo en esta sección aparecen bajo el encabezado **conceptos básicos de SkiaSharp** en la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa y en el [ **Fundamentos** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics) carpeta de la solución.
 
 ## <a name="drawing-a-simple-circlecirclemd"></a>[Dibujo de un círculo simple](circle.md)
 
-Obtenga información acerca de los conceptos básicos de dibujo SkiaSharp, incluidos lienzos y paint.
+Obtenga información sobre los conceptos básicos de dibujo de SkiaSharp, incluidos elementos Canvas y paint.
 
 ## <a name="integrating-with-xamarinformsintegrationmd"></a>[Integración con Xamarin.Forms](integration.md)
 
-Crear gráficos interactivos de SkiaSharp al responder a la entrada táctil de entrada y la integración con elementos de Xamarin.Forms.
+Crear gráficos interactivos de SkiaSharp respuesta a entrada táctil y la integración con los elementos de Xamarin.Forms.
 
 ## <a name="pixels-and-device-independent-unitspixelsmd"></a>[Píxeles y unidades independientes del dispositivo](pixels.md)
 
-Explore las diferencias entre las coordenadas SkiaSharp e Xamarin.Forms.
+Explore las diferencias entre las coordenadas de SkiaSharp e Xamarin.Forms.
 
 ## <a name="basic-animationanimationmd"></a>[Animación básica](animation.md)
 
@@ -40,11 +40,11 @@ Descubra cómo animar los gráficos de SkiaSharp.
 
 ## <a name="integrating-text-and-graphicstextmd"></a>[Integración de texto y gráficos](text.md)
 
-Consulte cómo determinar el tamaño de las cadenas de texto representado integrar texto con gráficos de SkiaSharp.
+Vea cómo determinar el tamaño de las cadenas de texto representada para integrar el texto con gráficos de SkiaSharp.
 
 ## <a name="bitmap-basicsbitmapsmd"></a>[Conceptos básicos de mapa de bits](bitmaps.md)
 
-Cargue los mapas de bits de varios orígenes y mostrarlos.
+Cargar mapas de bits de varios orígenes y mostrarlos.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

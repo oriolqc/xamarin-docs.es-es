@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 07/08/2018
-ms.openlocfilehash: 865a06e9fa430e195ce4ea3c6088785d9513dbf6
-ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
+ms.openlocfilehash: 4e1249b7a9c1e9797cbc758c3bd1b83f87d47431
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39030709"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615153"
 ---
 # <a name="introduction-to-ios-12"></a>Introducción a iOS 12
 
@@ -21,11 +21,12 @@ ms.locfileid: "39030709"
 > [!WARNING]
 > Soporte técnico de 12 de iOS de Xamarin está actualmente en versión preliminar, no es lo que significa que puede contener errores, con todas las características, y puede cambiar. Usar solo para realizar experimentos.
 
-> [!NOTE]
-> - Revise el [Introducción](get-started.md) guía para obtener instrucciones sobre cómo empezar a crear aplicaciones de iOS 12 con Xamarin.
-> - Para obtener más información, lea la versión preliminar de Xamarin [liberar la entrada de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
-
 Este documento proporciona una descripción detallada de algunas API de iOS 12 para la versión preliminar de Xamarin en qué versión proporciona enlaces de C#.
+
+Para empezar a compilar aplicaciones de iOS 12 con Xamarin, eche un vistazo a:
+
+- El [Guía de introducción](get-started.md)
+- La versión preliminar de Xamarin [liberar la entrada de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
 
 ## <a name="arkit-2"></a>ARKit 2
 
@@ -69,8 +70,12 @@ iOS 11.3 introducidas [historias clínicas](https://www.apple.com/healthcare/hea
 
 En iOS 12, las aplicaciones de iMessage admiten contextos de presentación, que permiten a las aplicaciones se ejecuten como una aplicación iMessage normal o en el contexto de una foto o un efecto de vídeo.
 
+## <a name="vision-framework"></a>Marco de trabajo de visión
+
+El marco de trabajo de visión incluye un detector de caras mejorada que puede detectar caras en las distintas orientaciones. Además, las revisiones de la solicitud ahora pueden utilizarse para seleccionar una revisión concreta de algoritmo de marco de trabajo de visión.
+
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Prepárese para iOS 12 (Apple)](https://developer.apple.com/ios/)
 - [12 de iOS versión preliminar (Apple)](https://www.apple.com/ios/ios-12-preview/)
-- Versión preliminar de Xamarin [liberar la entrada de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
+- Versión preliminar de Xamarin [liberar la entrada de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)

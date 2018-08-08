@@ -1,23 +1,24 @@
 ---
-title: Introducción a SkiaSharp
-description: Este documento proporciona una breve introducción a los conceptos básicos de SkiaSharp. En concreto, se trata de obtener y dibujo de un SKCanvas.
+title: Una introducción a SkiaSharp
+description: Este documento proporciona una breve introducción a los conceptos de SkiaSharp básicos. En concreto, se describe cómo obtener y dibuje en un SKCanvas.
 ms.prod: xamarin
+ms.techonology: xamarin-skiasharp
 ms.assetid: 19506F08-2603-465E-A806-6BD01638DE90
 author: charlespetzold
 ms.author: chape
 ms.date: 09/14/2017
-ms.openlocfilehash: a42836a49560a73b9e35ef97bfb2ba83d15812e3
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: eb4a391c52c598c6d276b75028337bf54455e7b4
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783066"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615501"
 ---
-# <a name="an-introduction-to-skiasharp"></a>Introducción a SkiaSharp
+# <a name="an-introduction-to-skiasharp"></a>Una introducción a SkiaSharp
 
-_Esto proporciona una breve introducción a los conceptos que subyacen SkiaSharp_
+_Esto proporciona una breve introducción a los conceptos de SkiaSharp_
 
-SkiaSharp proporciona una gráficos 2D enriquecida y eficaz API que puede usarse para representar búferes 2D.  Se puede utilizar para implementar elementos de la interfaz de usuario personalizada y los gráficos 2D que se pueden incorporar en la aplicación.  SkiaSharp es un enlace de .NET para la [Skia](https://skia.org) biblioteca y hereda las características y la potencia de esta biblioteca.
+SkiaSharp proporciona una gráficos 2D enriquecida y eficaz API que puede usarse para representar búferes 2D.  Puede usarlas para implementar elementos de la interfaz de usuario personalizada y gráficos 2D que se pueden incorporar en la aplicación.  SkiaSharp es un enlace de .NET para la [Skia](https://skia.org) biblioteca y hereda las características y prestaciones de esta biblioteca.
 
 La biblioteca está disponible actualmente como una multiplataforma [paquete NuGet](https://www.nuget.org/packages/SkiaSharp), puede agregarlo al proyecto mediante la adición de la referencia de NuGet.
 
@@ -35,13 +36,13 @@ using (var surface = SKSurface.Create (width: 640, height: 480, SKImageInfo.Plat
 
 ## <a name="drawing-on-skcanvas"></a>Dibujar en SKCanvas
 
-El `SKCanvas` utiliza un modelo de dibujo en esencia similares a otro dibujo modelos que podrían estar familiarizado con, usa los colores con un canal de transparencia opcional y puede dibujar líneas, arcos, texto e imágenes.
+El `SKCanvas` usa un modelo similar en espíritu a otros dibujos de plano modelos que puede que esté familiarizado con, se usan colores con un canal de transparencia opcional y puede dibujar líneas, arcos, texto e imágenes.
 
-A continuación se muestran solo algunas de las muchas cosas distintas que se pueden realizar con SkiaSharp.  En los ejemplos siguientes de la variable `canvas` es de tipo SKCanvas.
+A continuación se muestran solo algunas de las muchas cosas diferentes que pueden hacerse con SkiaSharp.  En los ejemplos siguientes, la variable `canvas` es de tipo SKCanvas.
 
-### <a name="drawing-xamagon"></a>Xamagon de dibujo
+### <a name="drawing-xamagon"></a>Dibujo de Xamarin
 
-En este ejemplo se dibuja logotipo de Xamarin el Xamagon:
+Este ejemplo dibuja el logotipo de Xamarin el Xamarin:
 
 ```csharp
 // clear the canvas / fill with white
@@ -134,9 +135,9 @@ using (var paint = new SKPaint()) {
 
 ## <a name="more-information"></a>Más información
 
-Puede encontrar más información sobre el uso de SkiaSharp en el [documentación en línea de la API](https://developer.xamarin.com/api/namespace/SkiaSharp/)
+Puede encontrar más información sobre el uso de SkiaSharp en el [documentación de API en línea](https://developer.xamarin.com/api/namespace/SkiaSharp/)
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [IOS SkiaSharp libro](https://developer.xamarin.com/workbooks/graphics/skiasharp/logo/skialogo-ios.workbook)
+- [IOS libro de SkiaSharp](https://developer.xamarin.com/workbooks/graphics/skiasharp/logo/skialogo-ios.workbook)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 06/25/2018
-ms.openlocfilehash: e45d9944a2f4fc392b5a78efb4a7751d19641c73
-ms.sourcegitcommit: cfb72be633e335147d156af3ef9527151b9e31d9
+ms.openlocfilehash: 5cbec23aa81a4637a18f83d9955a78183dadaa21
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39030670"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615208"
 ---
 # <a name="introduction-to-tvos-12"></a>Introducción a tvOS 12
 
@@ -21,11 +21,16 @@ ms.locfileid: "39030670"
 > [!WARNING]
 > Soporte técnico de 12 de tvOS de Xamarin está actualmente en versión preliminar, no es lo que significa que puede contener errores, con todas las características, y puede cambiar. Usar solo para realizar experimentos.
 
-> [!NOTE]
-> - Revise el [Introducción](~/ios/platform/introduction-to-ios12/get-started.md) guía para obtener instrucciones sobre cómo empezar a crear aplicaciones de iOS 12 y 12 de tvOS con Xamarin.
-> - Para obtener más información, lea la versión preliminar de Xamarin [liberar la entrada de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/).
-
 Este documento proporciona una descripción general de tvOS nuevos y actualizados 12 características de vista previa de qué Xamarin versión actualmente ofrece enlaces de C#.
+
+Para empezar a crear aplicaciones de 12 de tvOS con Xamarin, eche un vistazo a:
+
+- El [Guía de introducción](~/ios/platform/introduction-to-ios12/get-started.md)
+- La versión preliminar de Xamarin [liberar la entrada de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+
+## <a name="tvuikit"></a>TVUIKit
+
+tvOS 12 incluye TVUIKit, un conjunto de API que facilitan a los desarrolladores de tvOS usar controles de tvOS comunes como vistas de póster, los botones de título, las vistas de la tarjeta y Monograma vistas. tvOS 12 también presenta una propiedad que permite que las etiquetas desplazar el texto que es demasiado largo para que sean completamente visibles.
 
 ## <a name="password-autofill"></a>Relleno automático de contraseña
 
@@ -35,10 +40,18 @@ Con tvOS 12, los usuarios pueden usar sus dispositivos iOS para iniciar sesión 
 
 tvOS 12 permite todas las aplicaciones, independientemente de cómo se representan, para interactuar con el motor de foco. A través de interacciones del usuario con el control remoto de Siri, el motor de enfoque puede utilizarse con cualquier aplicación para seleccionar un elemento, sugerencia de cambios de foco posibles y actualizar naturalmente foco. Esta opción está habilitada en las aplicaciones personalizadas a través de UIKit `IUIFocusItemContainer` interfaz, el `UIFocusMovementHint` (clase), el `IUIFocusItemScrollableContainer` interfaz y otras clases relacionadas y métodos.
 
+## <a name="vision-framework"></a>Marco de trabajo de visión
+
+El marco de trabajo de visión incluye un detector de caras mejorada que puede detectar caras en las distintas orientaciones. Además, las revisiones de la solicitud ahora pueden utilizarse para seleccionar una revisión concreta de algoritmo de marco de trabajo de visión.
+
+## <a name="natural-language-framework"></a>Marco de lenguaje natural
+
+El marco de lenguaje Natural permite que las aplicaciones realizar varios tipos de análisis de lenguaje. Por ejemplo, puede usarse para identificar las partes de la oración y determinar el idioma que se representa mediante un bloque de texto.
+
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS: desarrollador de Apple (Apple)](https://developer.apple.com/tvos/)
 - [Novedades de tvOS 12 (Apple) (vídeo)](https://developer.apple.com/videos/play/wwdc2018/208/)
 - [TV (Apple)](https://www.apple.com/tv/)
-- Versión preliminar de Xamarin [liberar la entrada de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-3/)
+- Versión preliminar de Xamarin [liberar la entrada de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)

@@ -1,39 +1,39 @@
 ---
-title: Los tipos de relleno de ruta de acceso
-description: Este artículo examina los distintos efectos posibles con tipos de relleno de ruta de acceso de SkiaSharp y se muestra cómo hacerlo con código de ejemplo.
+title: Los tipos de relleno de la ruta de acceso
+description: En este artículo examina los efectos de diferentes posibles con tipos de relleno de ruta de acceso de SkiaSharp y esto se muestra con código de ejemplo.
 ms.prod: xamarin
 ms.assetid: 57103A7A-49A2-46AE-894C-7C2664682644
-ms.technology: xamarin-forms
+ms.technology: xamarin-skiasharp
 author: charlespetzold
 ms.author: chape
 ms.date: 03/10/2017
-ms.openlocfilehash: d54ebd157fcc76b0fcc15bf89c72edbcd88b42f2
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 17043054c920a69570f38b227d05980494e29139
+ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35243712"
+ms.lasthandoff: 08/07/2018
+ms.locfileid: "39615475"
 ---
-# <a name="the-path-fill-types"></a>Los tipos de relleno de ruta de acceso
+# <a name="the-path-fill-types"></a>Los tipos de relleno de la ruta de acceso
 
-_Detectar los distintos efectos posibles con tipos de relleno de ruta de acceso de SkiaSharp_
+_Descubra los distintos efectos posibles con tipos de relleno de ruta de acceso de SkiaSharp_
 
-Se pueden superponer dos perfiles en una ruta de acceso y las líneas que componen un contorno solo se pueden superponer. Cualquier área delimitada potencialmente puede rellenarse, pero no desea rellenar todas las áreas entre comillas. Por ejemplo:
+Se pueden superponer dos perfiles en una ruta de acceso y las líneas que componen un contorno solo se pueden superponer. Posiblemente se puede rellenar cualquier área delimitada, pero es posible que no desea rellenar todas las áreas cerradas. Por ejemplo:
 
-![](fill-types-images/filltypeexample.png "Que señala el cinco estrellas parcialmente filles")
+![](fill-types-images/filltypeexample.png "Señala de cinco estrellas parcialmente filles")
 
-Tiene un poco control sobre esto. El algoritmo de llenado se rige por el [ `SKFillType` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.FillType/) propiedad de `SKPath`, que establece en un miembro de la [ `SKPathFillType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathFillType/) enumeración:
+Tiene un pequeño control sobre esto. El algoritmo de relleno se rige por el [ `SKFillType` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.FillType/) propiedad de `SKPath`, que establece en un miembro de la [ `SKPathFillType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathFillType/) enumeración:
 
 - [`Winding`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.Winding/), el valor predeterminado
 - [`EvenOdd`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.EvenOdd/)
 - [`InverseWinding`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.InverseWinding/)
 - [`InverseEvenOdd`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathFillType.InverseEvenOdd/)
 
-Los algoritmos de generación y par-impar determinan si cualquier área delimitada está rellena o no rellena basándose en una hipotética línea dibujada en esa área hasta el infinito. Esa línea cruza con una o más líneas de límites que constituyen la ruta de acceso. Con el modo de generación, si el número de límites las líneas dibujadas en el equilibrio de una dirección espera el número de las líneas dibujadas en el otro sentido, a continuación, en el área no se rellena. En caso contrario, se rellena el área. El algoritmo par-impar rellena un área si el número de líneas de límite es impar.
+Los algoritmos de devanado y par-impar determinan si cualquier área delimitada se rellenan o no ha rellenado en función de una línea hipotética dibujada desde esa área hasta el infinito. Esa línea cruza una o varias líneas de límites que componen la ruta de acceso. Con el modo de generación, si el número de líneas límites en el saldo de una dirección horizontalmente el número de líneas en la otra dirección y, después, en el área no está rellena. En caso contrario, se rellena el área. El algoritmo par-impar rellena un área, si el número de líneas del límite es impar.
 
-Con muchas rutas de acceso de rutinas, el algoritmo de generación a menudo rellena todas las áreas adjuntas de una ruta de acceso. El algoritmo par-impar generalmente produce resultados más interesantes.
+Con muchas rutas rutinarias, el algoritmo devanado a menudo rellena todas las áreas cerradas de una ruta de acceso. El algoritmo par-impar generalmente produce resultados más interesantes.
 
-El ejemplo clásico es una estrella de cinco puntas, como se muestra en el **Five-Pointed estrella** página. El [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) archivo crean instancias de dos `Picker` vistas para seleccionar la ruta de acceso de relleno tipo y si la ruta de acceso se traza rellena o ambos y en qué orden:
+El ejemplo clásico es una estrella de cinco puntas, como se muestra en el **Five-Pointed estrella** página. El [FivePointedStarPage.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FivePointedStarPage.xaml) archivo crean instancias de dos `Picker` vistas para seleccionar la ruta de acceso de rellenar el tipo y si se trazan o rellena la ruta de acceso o ambos y en qué orden:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -95,7 +95,7 @@ El ejemplo clásico es una estrella de cinco puntas, como se muestra en el **Fiv
 </ContentPage>
 ```
 
-El archivo de código subyacente utiliza ambos `Picker` valores para dibujar una estrella de cinco puntas:
+El archivo de código subyacente usa ambos `Picker` valores para dibujar una estrella de cinco puntas:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -162,20 +162,20 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Normalmente, el tipo de relleno de ruta de acceso debe afectan al solo rellenos y trazos no, pero los dos `Inverse` modos afectan a rellenos y trazos. Para los rellenos, las dos `Inverse` tipos rellenar áreas oppositely para que se rellena el área situada fuera de la estrella. Para los trazos, los dos `Inverse` tipos de color todo excepto el trazo. Uso de estos tipos de relleno inversa puede producir algunos efectos impares, como se muestra en la captura de pantalla de iOS:
+Normalmente, el tipo de relleno de la ruta de acceso debe afectar a sólo rellenos y no los trazos, pero los dos `Inverse` afectan a los modos de trazos y rellenos. Para los rellenos, las dos `Inverse` tipos rellenar áreas oppositely para que se rellena el área situada fuera de la estrella. Para los dos trazos `Inverse` tipos todo excepto el trazo de color. Uso de estos tipos de relleno inversa puede producir algunos efectos impares, como se muestra en la captura de pantalla de iOS:
 
-[![](fill-types-images/fivepointedstar-small.png "Captura de pantalla triple de la página de estrella de Five-Pointed")](fill-types-images/fivepointedstar-large.png#lightbox "Triple captura de pantalla de la página de estrella de Five-Pointed")
+[![](fill-types-images/fivepointedstar-small.png "Captura de pantalla triple de la página de estrella Five-Pointed")](fill-types-images/fivepointedstar-large.png#lightbox "Triple captura de pantalla de la página de estrella Five-Pointed")
 
-Las capturas de pantalla de Android y UWP muestran los efectos de generación y par-impar típicos, pero el orden de los trazos y relleno también afecta a los resultados.
+Las capturas de pantalla de Android y UWP muestran los efectos de devanado y par-impar típicos, pero el orden del trazo y relleno también afecta a los resultados.
 
-El algoritmo de generación es dependiente de la dirección que se dibujan líneas. Normalmente cuando se va a crear una ruta de acceso, puede controlar esa dirección según sus especificaciones que se dibujan líneas desde un punto a otro. Sin embargo, el `SKPath` clase también define métodos como `AddRect` y `AddCircle` que dibujar contornos todos. Para controlar cómo se dibujan estos objetos, los métodos incluyen un parámetro de tipo [ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/), que tiene dos miembros:
+El algoritmo devanado es dependiente de la dirección que se dibujan líneas. Normalmente, al crear una ruta de acceso, puede controlar esa dirección que especifique que se dibujan líneas de un punto a otro. Sin embargo, el `SKPath` clase también define los métodos como `AddRect` y `AddCircle` que dibujar contornos todos. Para controlar cómo se dibujan estos objetos, los métodos incluyen un parámetro de tipo [ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/), que tiene dos miembros:
 
 - [`Clockwise`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathDirection.Clockwise/)
 - [`CounterClockwise`](https://developer.xamarin.com/api/field/SkiaSharp.SKPathDirection.CounterClockwise/)
 
 Los métodos de `SKPath` que incluyen un `SKPathDirection` asignarle un valor predeterminado del parámetro `Clockwise`.
 
-El **círculos superpuestos** página crea una ruta de acceso con cuatro círculos superpuestos con un tipo de relleno par-impar de la ruta de acceso:
+El **círculos superpuestos** página crea una ruta de acceso con cuatro círculos superpuestos con un tipo de relleno par-impar ruta de acceso:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -215,9 +215,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Es una imagen interesante creada con un mínimo de código:
+Es una interesante imagen creada con un mínimo de código:
 
-[![](fill-types-images/overlappingcircles-small.png "Captura de pantalla triple de la página de círculos superpuestos")](fill-types-images/overlappingcircles-large.png#lightbox "Triple captura de pantalla de la página de círculos superpuestos")
+[![](fill-types-images/overlappingcircles-small.png "Captura de pantalla de la página de círculos superpuestos triple")](fill-types-images/overlappingcircles-large.png#lightbox "Triple captura de pantalla de la página de círculos superpuestos")
 
 
 ## <a name="related-links"></a>Vínculos relacionados
