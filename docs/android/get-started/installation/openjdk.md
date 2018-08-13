@@ -1,28 +1,28 @@
 ---
-title: Versión preliminar de la distribución OpenJDK de Microsoft
-description: Guía paso a paso para configurar la distribución de OpenJDK de Microsoft.
+title: Versión preliminar de la distribución OpenJDK Mobile de Microsoft
+description: Guía paso a paso para configurar la distribución de OpenJDK de Microsoft para desarrollo móvil.
 ms.prod: xamarin
 ms.assetid: B5F8503D-F4D1-44CB-8B29-187D1E20C979
 ms.technology: xamarin-android
 author: vyedin
 ms.author: vyedin
 ms.date: 07/22/2018
-ms.openlocfilehash: 6c1346918ca6881e551f6c5b89ab16ad13d3f804
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 2022337ebd65997c7b2492137193586278f2dffd
+ms.sourcegitcommit: bf51592be39b2ae3d63d029be1d7745ee63b0ce1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242533"
+ms.lasthandoff: 08/06/2018
+ms.locfileid: "39573599"
 ---
-# <a name="microsofts-openjdk-distribution-preview"></a>Versión preliminar de la distribución OpenJDK de Microsoft
+# <a name="microsofts-mobile-openjdk-distribution-preview"></a>Versión preliminar de la distribución OpenJDK Mobile de Microsoft
 
-_En esta guía se describen los pasos para cambiar a la versión preliminar de la distribución de OpenJDK de Microsoft._
+_En esta guía se describen los pasos para cambiar a la versión preliminar de la distribución de OpenJDK de Microsoft. Esta distribución está pensada para el desarrollo móvil._
 
 ![Características de la versión preliminar](~/media/shared/preview.png)
 
 ## <a name="overview"></a>Información general
 
-A partir de Visual Studio 15.9 y Visual Studio para Mac 7.7, Visual Studio Tools para Xamarin ahora migrará desde el JDK de Oracle a una versión ligera de OpenJDK que está diseñada únicamente para el desarrollo de Android:
+A partir de Visual Studio 15.9 y Visual Studio para Mac 7.7, Visual Studio Tools para Xamarin migrará desde el JDK de Oracle a una **versión ligera de OpenJDK que está diseñada únicamente para el desarrollo de Android**:
 
 ![Nuevo flujo de trabajo que ofrece una versión preliminar web de OpenJDK en VS 15.8 versión preliminar 5](openjdk-images/openjdk.png)
 
@@ -36,7 +36,7 @@ Las ventajas de esta migración son las siguientes:
 
 - No más problemas con instaladores y servidores de terceros.
 
-Si quiere migrar antes a la experiencia mejorada, hay disponibles compilaciones de la distribución de OpenJDK para probarlas tanto en Windows como en Mac. A continuación, se describe el proceso de configuración y puede revertir al JDK de Oracle en cualquier momento.
+Si quiere migrar antes a la experiencia mejorada, hay disponibles compilaciones de la distribución de OpenJDK Mobile para probarlas tanto en Windows como en Mac. A continuación, se describe el proceso de configuración y puede revertir al JDK de Oracle en cualquier momento.
 
 ## <a name="download"></a>Descargar
 
@@ -60,17 +60,17 @@ Dirija el IDE al nuevo JDK:
 
 - **Mac** &ndash; Haga clic en **Herramientas > SDK Manager > Ubicaciones** y cambie la **Ubicación del SDK de Java (SDK)** a la ruta de acceso completa de la instalación de OpenJDK. En el ejemplo siguiente, esta ruta de acceso está establecida en **$HOME/Library/Developer/Xamarin/jdk/microsoft_dist_openjdk_1.8.0.9**.
 
-![Establecimiento de la ruta del JDK para la distribución de OpenJDK de Microsoft en un equipo Mac](openjdk-images/vsm.png)
+![Establecimiento de la ruta del JDK para la distribución de OpenJDK Mobile de Microsoft en un equipo Mac](openjdk-images/vsm.png)
 
 - **Windows** &ndash; Haga clic en **Herramientas > Opciones > Xamarin > Configuración de Android** y cambie la **Ubicación de Java Development Kit** a la ruta de acceso completa de la instalación de OpenJDK. En el ejemplo siguiente, esta ruta de acceso está establecida en **C:\\Archivos de programa\\Android\\jdk\\microsoft_dist_openjdk_1.8.0.9**:
 
-![Establecimiento de la ruta del JDK para la distribución de OpenJDK de Microsoft en un equipo Windows](openjdk-images/vs.png)
+![Establecimiento de la ruta del JDK para la distribución de OpenJDK Mobile de Microsoft en Windows](openjdk-images/vs.png)
 
 ## <a name="revert"></a>Reversión
 
 Para revertir al JDK de Oracle, cambie la ubicación del SDK de Java a la ruta de acceso del JDK de Oracle usado anteriormente y recompile la solución. En Mac, puede hacer clic en **Restaurar valores predeterminados** para revertir a la ruta de acceso del JDK de Oracle.
 
-Si tiene problemas con la distribución de OpenJDK de Microsoft, use la herramienta de comentarios del IDE para informar los problemas con el fin de que puedan hacerles seguimiento y corregirlos rápidamente.
+Si tiene problemas con la distribución de OpenJDK Mobile de Microsoft, use la herramienta de comentarios del IDE para informar los problemas con el fin de que puedan hacerles seguimiento y corregirlos rápidamente.
 
 ## <a name="known-issues--planned-fix-dates"></a>Problemas conocidos y fechas de corrección planeadas
 
@@ -78,4 +78,4 @@ Es posible que la variable de entorno `JAVA_HOME` no se esté exportando correct
 
 ## <a name="summary"></a>Resumen
 
-En este artículo aprendió a configurar el IDE para usar la versión preliminar de la distribución de OpenJDK de Microsoft, cuya versión estable está programada para más adelante en 2018.
+En este artículo aprendió a configurar el IDE para usar la versión preliminar de la distribución de OpenJDK Mobile de Microsoft, cuya versión estable está programada para más adelante en 2018.
