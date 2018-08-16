@@ -46,7 +46,7 @@ Este ejemplo se supone que es el nombre del proyecto de Xamarin.iOS `iPhoneApp1`
 
 9.  Elimine los archivos deseados de la `.ipa`. Puede moverlos a la Papelera con Finder o eliminarlos de la línea de comandos usando `Terminal.app`. Para ver el contenido de la `Payload/iPhone` archivo en el Finder, Control y haga clic en el archivo y seleccione **mostrar contenido del paquete**.
 
-10.  Con el mismo enfoque general como en el paso 3, busque el archivo de registro en `~/Library/Logs/Xamarin/MonoTouchVS/` que tiene el nombre de proyecto y el `generated session id` en el nombre: ![ ] (modify-ipa-images/build-log.png "localizar el registro de compilación del proyecto en el Finder")
+10.  Con el mismo enfoque general como en el paso 3, busque el archivo de registro en `~/Library/Logs/Xamarin/MonoTouchVS/` que tiene el nombre de proyecto y el `generated session id` en el nombre: ![](modify-ipa-images/build-log.png "localizar el registro de compilación del proyecto en el Finder")
 
 11.  Abra el registro de compilación del paso 10, por ejemplo, haciendo doble clic en él.
 
