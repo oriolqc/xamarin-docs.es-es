@@ -5,36 +5,32 @@ ms.prod: xamarin
 ms.assetid: 36A1531E-630A-4B7C-A333-4E67E5DC023C
 author: topgenorth
 ms.author: toopge
-ms.date: 03/29/2018
-ms.openlocfilehash: ea71391382f9e1ecb80cbf5f2d5bf127e0d6d1be
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.date: 08/08/2018
+ms.openlocfilehash: 99ed8d06331ac7e423791309da79d72d5a10d70f
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38815287"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251233"
 ---
 # <a name="limitations-of-xamarin-live-player"></a>Limitaciones de Xamarin Live Player
 
 ![Característica de vista previa](~/media/shared/preview.png)
 
 ## <a name="device-requirements"></a>Requisitos del dispositivo
-La aplicación Xamarin Live Player es compatible con los siguientes dispositivos:
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+La aplicación Xamarin Live Player admite los siguientes dispositivos Android:
 
 - Android 4.2 o posterior.
 - ARM-v7a, v8a de ARM, ARM64-v8a, x 86 o procesador x86_64.
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
-
-- iOS 9.0 o posterior.
-- Procesador ARM64.
-
------
-
 ## <a name="limitations"></a>Limitaciones
 
 Hay algunas limitaciones en lo que se puede ejecutar en Xamarin Live Player, incluidos los siguientes elementos:
+
+### <a name="ios"></a>iOS
+
+Live Player no está disponible para iOS.
 
 ### <a name="xamarinforms"></a>Xamarin.Forms
 
@@ -43,11 +39,10 @@ Hay algunas limitaciones en lo que se puede ejecutar en Xamarin Live Player, inc
 - No se admiten los controles personalizados con propiedades enlazables personalizadas.
 - No se admiten los recursos incrustados (p. ej., insertar imágenes u otros recursos en una PCL).
 - No se admiten los marcos MVVM de otros fabricantes (p. ej., Prism, Mvvm Cross, Mvvm Light, etc.).
-- No se admiten los catálogos de activos en iOS.
 
 ### <a name="other-project-types"></a>Otros tipos de proyecto
 
-- Live Player no está destinado a proyectos nativos de Android o iOS (que usan XML de Android o guiones gráficos para la interfaz de usuario).
+- Live Player no está pensado para proyectos nativos de Android (que usan XML de Android para la interfaz de usuario).
 
 ### <a name="misc"></a>Varios
 
@@ -55,7 +50,7 @@ Hay algunas limitaciones en lo que se puede ejecutar en Xamarin Live Player, inc
 - No se pueden reemplazar algunas clases del sistema (por ejemplo, no puede implementar una subclase).
 - Algunas características de la plataforma que requieren aprovisionamiento no funcionan en la aplicación Xamarin Live Player (en cambio, se ha configurado para operaciones comunes, como el acceso a la Galería fotográfica).
 - Se omiten los destinos personalizados y los pasos de compilación. Por ejemplo, no se pueden incorporar herramientas como Fody, Refit, AutoFac y AutoMapper.
-- No se admiten los proyectos de F# en Android y la compatibilidad con iOS es limitada.
+- No se admiten los proyectos de F #
 - Escenarios avanzados con clases genéricas personalizadas e interfaces podrían no admitirse.
 
 Informe de problemas adicionales en [bugzilla](https://aka.ms/live-player-report-issue).

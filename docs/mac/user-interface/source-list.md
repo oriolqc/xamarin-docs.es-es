@@ -1,58 +1,58 @@
 ---
 title: Listas de origen en Xamarin.Mac
-description: Este artículo explica cómo trabajar con listas de origen en una aplicación Xamarin.Mac. Describe cómo crear y mantener listas de origen en Xcode y el generador de interfaz e interactuar con ellos en el código de C#.
+description: En este artículo se explica cómo trabajar con listas de origen en una aplicación de Xamarin.Mac. Describe cómo crear y mantener listas de origen en Xcode e Interface Builder e interactuar con ellos en código de C#.
 ms.prod: xamarin
 ms.assetid: 651A3649-5AA8-4133-94D6-4873D99F7FCC
 ms.technology: xamarin-mac
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
-ms.openlocfilehash: c93d4b0855fb96897da2018596766b16e5385ab4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: de51395192ab009f5c7fa338a4414ba553610b8c
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34792777"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251143"
 ---
 # <a name="source-lists-in-xamarinmac"></a>Listas de origen en Xamarin.Mac
 
-_Este artículo explica cómo trabajar con listas de origen en una aplicación Xamarin.Mac. Describe cómo crear y mantener listas de origen en Xcode y el generador de interfaz e interactuar con ellos en el código de C#._
+_En este artículo se explica cómo trabajar con listas de origen en una aplicación de Xamarin.Mac. Describe cómo crear y mantener listas de origen en Xcode e Interface Builder e interactuar con ellos en código de C#._
 
-Cuando se trabaja con C# y .NET en una aplicación Xamarin.Mac, tiene acceso al mismo origen de muestra que un desarrollador que trabaja *Objective-C* y *Xcode* does. Dado que Xamarin.Mac se integra directamente en Xcode, puede usar del Xcode _interfaz generador_ para crear y mantener las listas de origen (o si lo desea crearlos directamente en código de C#).
+Cuando se trabaja con C# y .NET en una aplicación de Xamarin.Mac, tener acceso a los mismos listas de origen que un desarrollador que trabaje en *Objective-C* y *Xcode* does. Ya que Xamarin.Mac se integra directamente con Xcode, puede usar Xcode _Interface Builder_ para crear y mantener sus listas de origen (o bien, opcionalmente, crearlos directamente en código de C#).
 
-Una lista de origen es un tipo especial de la vista de esquema que se usa para mostrar el origen de una acción, como la barra lateral en Finder o iTunes.
+Una lista de origen es un tipo especial de vista de esquema que se usa para mostrar el origen de una acción, como la barra lateral en Finder o iTunes.
 
 [![](source-list-images/source05.png "Una lista de código fuente de ejemplo")](source-list-images/source05.png#lightbox)
 
-En este artículo, se tratarán los conceptos básicos sobre cómo trabajar con listas de origen en una aplicación Xamarin.Mac. Se recomienda trabajar a través de la [Hola, Mac](~/mac/get-started/hello-mac.md) artículo en primer lugar, específicamente el [Introducción a Xcode y el generador de interfaz](~/mac/get-started/hello-mac.md#Introduction_to_Xcode_and_Interface_Builder) y [distribuidores y acciones](~/mac/get-started/hello-mac.md#Outlets_and_Actions) secciones, tal como se explica conceptos clave y técnicas que usaremos en este artículo.
+En este artículo, trataremos los aspectos básicos de trabajar con listas de origen en una aplicación de Xamarin.Mac. Se recomienda que trabaje en el [Hello, Mac](~/mac/get-started/hello-mac.md) artículo en primer lugar, específicamente el [Introducción a Xcode e Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) y [salidas y acciones](~/mac/get-started/hello-mac.md#outlets-and-actions) secciones, tal y como se tratan los conceptos clave y las técnicas que vamos a usar en este artículo.
 
-Puede echar un vistazo a la [clases de C# exponer / métodos para Objective-C](~/mac/internals/how-it-works.md) sección de la [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) documento también se explica la `Register` y `Export` comandos Usar conexión de seguridad de las clases de C# para Objective-C objetos y elementos de interfaz de usuario.
+Es posible que desee echar un vistazo a la [clases de C# exponer / métodos a Objective-C](~/mac/internals/how-it-works.md) sección de la [funcionamiento interno de Xamarin.Mac](~/mac/internals/how-it-works.md) documentar, también explica la `Register` y `Export` comandos se usa para conexión de seguridad de las clases de C# para objetos de Objective-C y elementos de interfaz de usuario.
 
 <a name="Introduction_to_Outline_Views" />
 
 ## <a name="introduction-to-source-lists"></a>Introducción a las listas de origen
 
-Como se mencionó anteriormente, una lista de origen es un tipo especial de vista de esquema que se usa para mostrar el origen de una acción, como la barra lateral en Finder o iTunes. Una lista de origen es un tipo de tabla que permite al usuario expandir o contraer las filas de datos jerárquicos. A diferencia de una vista de tabla, los elementos en una lista de origen no están en una lista plana, están organizados en una jerarquía, como archivos y carpetas en un disco duro. Si un elemento de una lista de origen contiene otros elementos, se puede expandir o contraer por el usuario.
+Como se indicó anteriormente, una lista de origen es un tipo especial de vista de esquema que se usa para mostrar el origen de una acción, como la barra lateral en Finder o iTunes. Una lista de origen es un tipo de tabla que permite al usuario expandir o contraer las filas de datos jerárquicos. A diferencia de una vista de tabla, los elementos de una lista de origen no están en una lista plana, están organizados en una jerarquía, como archivos y carpetas en un disco duro. Si un elemento de una lista de origen contiene otros elementos, se puede expandir o contraer por el usuario.
 
-La lista de origen es una vista de esquema especialmente con estilo (`NSOutlineView`), que a su vez es una subclase de la vista de tabla (`NSTableView`) y como tal, hereda la mayor parte de su comportamiento de su clase primaria. Como resultado, muchas operaciones admitidas por una vista de esquema, también se admiten mediante una lista de origen. Una aplicación de Xamarin.Mac tiene el control de estas características y puede configurar los parámetros de la lista de origen (ya sea en código o el generador de interfaz) para activar o desactivar determinadas operaciones.
+La lista de origen es una vista de esquema especialmente con estilo (`NSOutlineView`), que a su vez es una subclase de la vista de tabla (`NSTableView`) y por lo tanto, hereda la mayor parte de su comportamiento de su clase primaria. Como resultado, muchas operaciones admitidas por una vista de esquema, también son compatibles con una lista de origen. Una aplicación de Xamarin.Mac tiene el control de estas características y puede configurar los parámetros de la lista de origen (ya sea en el código o Interface Builder) para activar o desactivar determinadas operaciones.
 
-Una lista de origen no almacena sus propios datos, en su lugar se basa en un origen de datos (`NSOutlineViewDataSource`) para proporcionar tanto las filas y las columnas necesarias, según sea necesario.
+Una lista de origen no almacena sus propios datos, en su lugar se basa en un origen de datos (`NSOutlineViewDataSource`) para proporcionar tanto las filas y columnas requeridas, según sea necesario.
 
-Se puede personalizar el comportamiento de la lista de origen proporcionando una subclase del delegado de la vista de esquema (`NSOutlineViewDelegate`) para admitir el tipo de esquema para seleccionar la funcionalidad, elemento de selección y edición, el seguimiento personalizado y vistas personalizadas para elementos individuales.
+Se puede personalizar el comportamiento de la lista de origen proporcionando una subclase del delegado de la vista de esquema (`NSOutlineViewDelegate`) para admitir el tipo de esquema para seleccionar la funcionalidad, elemento de selección y edición de seguimiento personalizado y vistas personalizadas para los elementos individuales.
 
-Dado que una lista de orígenes de gran parte de su comportamiento y la funcionalidad comparte con una vista de tabla y una vista de esquema, puede ir a través de nuestro [vistas de tabla](~/mac/user-interface/table-view.md) y [vistas de esquema](~/mac/user-interface/outline-view.md) documentación antes de continuar con este artículo.
+Dado que una lista de origen comparte gran parte de su comportamiento y funcionalidad con una vista de tabla y una vista de esquema, es posible que desea ir a través de nuestro [vistas de tabla](~/mac/user-interface/table-view.md) y [vistas de esquema](~/mac/user-interface/outline-view.md) documentación antes de continuar con este artículo.
 
 <a name="Working_with_Source_Lists" />
 
 ## <a name="working-with-source-lists"></a>Trabajar con listas de origen
 
-Una lista de origen es un tipo especial de la vista de esquema que se usa para mostrar el origen de una acción, como la barra lateral en Finder o iTunes. A diferencia de las vistas de esquema, antes de que nuestra lista de origen se define en el generador de interfaz, vamos a crear las clases de respaldo en Xamarin.Mac.
+Una lista de origen es un tipo especial de vista de esquema que se usa para mostrar el origen de una acción, como la barra lateral en Finder o iTunes. A diferencia de las vistas de esquema, antes de que definimos nuestra lista de origen en Interface Builder, vamos a crear las clases de respaldo en Xamarin.Mac.
 
-En primer lugar, vamos a crear un nuevo `SourceListItem` clase para contener los datos de nuestra lista de origen. En el **el Explorador de soluciones**, haga clic en el proyecto y seleccione **agregar** > **nuevo archivo...** Seleccione **General** > **clase vacía**, escriba `SourceListItem` para el **nombre** y haga clic en el **New** botón:
+En primer lugar, vamos a crear un nuevo `SourceListItem` clase para almacenar los datos de nuestra lista de origen. En el **el Explorador de soluciones**, haga clic en el proyecto y seleccione **agregar** > **nuevo archivo...** Seleccione **General** > **clase vacía**, escriba `SourceListItem` para el **nombre** y haga clic en el **New** botón:
 
 [![](source-list-images/source01.png "Agregar una clase vacía")](source-list-images/source01.png#lightbox)
 
-Realizar el `SourceListItem.cs` archivo aspecto similar al siguiente: 
+Realizar el `SourceListItem.cs` archivo aspecto parecido al siguiente: 
 
 ```csharp
 using System;
@@ -270,7 +270,7 @@ namespace MacOutlines
 }
 ```
 
-En el **el Explorador de soluciones**, haga clic en el proyecto y seleccione **agregar** > **nuevo archivo...** Seleccione **General** > **clase vacía**, escriba `SourceListDataSource` para el **nombre** y haga clic en el **New** botón. Realizar el `SourceListDataSource.cs` archivo aspecto similar al siguiente:
+En el **el Explorador de soluciones**, haga clic en el proyecto y seleccione **agregar** > **nuevo archivo...** Seleccione **General** > **clase vacía**, escriba `SourceListDataSource` para el **nombre** y haga clic en el **New** botón. Realizar el `SourceListDataSource.cs` archivo aspecto parecido al siguiente:
 
 ```csharp
 using System;
@@ -354,7 +354,7 @@ namespace MacOutlines
 
 Esto proporcionará los datos de nuestra lista de origen.
 
-En el **el Explorador de soluciones**, haga clic en el proyecto y seleccione **agregar** > **nuevo archivo...** Seleccione **General** > **clase vacía**, escriba `SourceListDelegate` para el **nombre** y haga clic en el **New** botón. Realizar el `SourceListDelegate.cs` archivo aspecto similar al siguiente:
+En el **el Explorador de soluciones**, haga clic en el proyecto y seleccione **agregar** > **nuevo archivo...** Seleccione **General** > **clase vacía**, escriba `SourceListDelegate` para el **nombre** y haga clic en el **New** botón. Realizar el `SourceListDelegate.cs` archivo aspecto parecido al siguiente:
 
 ```csharp
 using System;
@@ -444,9 +444,9 @@ namespace MacOutlines
 }
 ```
 
-Esto le dará el comportamiento de nuestra lista de origen.
+Esto le proporcionará el comportamiento de nuestra lista de origen.
 
-Por último, en la **el Explorador de soluciones**, haga clic en el proyecto y seleccione **agregar** > **nuevo archivo...** Seleccione **General** > **clase vacía**, escriba `SourceListView` para el **nombre** y haga clic en el **New** botón. Realizar el `SourceListView.cs` archivo aspecto similar al siguiente:
+Por último, en el **el Explorador de soluciones**, haga clic en el proyecto y seleccione **agregar** > **nuevo archivo...** Seleccione **General** > **clase vacía**, escriba `SourceListView` para el **nombre** y haga clic en el **New** botón. Realizar el `SourceListView.cs` archivo aspecto parecido al siguiente:
 
 ```csharp
 using System;
@@ -524,21 +524,21 @@ namespace MacOutlines
 }
 ```
 
-Esto crea una subclase personalizada y reutilizable de `NSOutlineView` (`SourceListView`) que podemos usar para controlar la lista de origen en cualquier aplicación Xamarin.Mac que se realizan.
+Esto crea una subclase personalizada y reutilizable de `NSOutlineView` (`SourceListView`) que podemos usar para controlar la lista de origen en cualquier aplicación de Xamarin.Mac que tomamos.
 
 <a name="Creating_and_Maintaining_Source_Lists_in_Xcode" />
 
-## <a name="creating-and-maintaining-source-lists-in-xcode"></a>Crear y mantener listas de origen en Xcode.
+## <a name="creating-and-maintaining-source-lists-in-xcode"></a>Crear y mantener listas de origen en Xcode
 
-Ahora, vamos a nuestra lista de origen en el generador de interfaz de diseño. Haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en el generador de interfaz y arrastre una vista dividida de la **biblioteca Inspector**, agregarlo al controlador de vista y configurarlo para cambiar el tamaño con la vista en la **Editor de restricciones** :
+Ahora, vamos a nuestra lista de origen en el generador de interfaz de diseño. Haga doble clic en el `Main.storyboard` archivo para abrirlo y editarlo en Interface Builder y arrastre una vista en dos paneles desde la **Inspector de biblioteca**, agréguelo al controlador de vista y configúrelo para cambiar el tamaño con la vista en el **Editor de restricciones** :
 
-[![](source-list-images/source00.png "Modificar restricciones")](source-list-images/source00.png#lightbox)
+[![](source-list-images/source00.png "Limitaciones de edición")](source-list-images/source00.png#lightbox)
 
-A continuación, arrastre una lista de origen de la **biblioteca Inspector**, agregar a la izquierda de la vista de división y configurarlo para cambiar el tamaño con la vista en la **Editor de restricciones**:
+A continuación, arrastre una lista de origen desde el **Inspector de biblioteca**, agregarlo a la izquierda de la vista en dos paneles y configúrelo para cambiar el tamaño con la vista en el **Editor de restricciones**:
 
-[![](source-list-images/source02.png "Modificar restricciones")](source-list-images/source02.png#lightbox)
+[![](source-list-images/source02.png "Limitaciones de edición")](source-list-images/source02.png#lightbox)
 
-A continuación, cambie a la **identidad vista**, seleccione la lista de origen y cambiarlo de **clase** a `SourceListView`:
+A continuación, cambie a la **identidad vista**, seleccione la lista de origen y cámbielo de **clase** a `SourceListView`:
 
 [![](source-list-images/source03.png "Establecer el nombre de clase")](source-list-images/source03.png#lightbox)
 
@@ -546,13 +546,13 @@ Por último, cree un **toma** para nuestra lista de origen denominado `SourceLis
 
 [![](source-list-images/source04.png "Configurar una salida")](source-list-images/source04.png#lightbox)
 
-Guarde los cambios y vuelva a Visual Studio para Mac para la sincronización con Xcode.
+Guarde los cambios y vuelva a Visual Studio para Mac sincronizar con Xcode.
 
 <a name="Populating the Source List" />
 
 ## <a name="populating-the-source-list"></a>Rellenar la lista de origen
 
-Editar la `RotationWindow.cs` de archivos en Visual Studio para Mac y hacerla de `AwakeFromNib` método aspecto similar al siguiente:
+Vamos a editar el `RotationWindow.cs` de archivos en Visual Studio para Mac y que sea de `AwakeFromNib` método aspecto parecido al siguiente:
 
 ```csharp
 public override void AwakeFromNib ()
@@ -591,7 +591,7 @@ public override void AwakeFromNib ()
 }
 ```
 
-El `Initialize ()` método debe llamarse en nuestra lista de origen **toma** _antes de_ todos los elementos se agregan a él. Para cada grupo de elementos, se crea un elemento primario y, a continuación, agregue los elementos de sub a ese elemento de grupo. Cada grupo, a continuación, se agrega a la colección de la lista de origen `SourceList.AddItem (...)`. Las dos últimas líneas cargar los datos de la lista de origen y expande todos los grupos:
+El `Initialize ()` método deben llamarse en nuestra lista de origen **toma** _antes_ todos los elementos se agregan a él. Para cada grupo de elementos, se crea un elemento primario y, a continuación, agregue los elementos de sub para ese elemento de grupo. Cada grupo, a continuación, se agrega a la colección de la lista de origen `SourceList.AddItem (...)`. Las dos últimas líneas cargar los datos de la lista de origen y se expande todos los grupos:
 
 ```csharp
 // Display side list
@@ -599,7 +599,7 @@ SourceList.ReloadData ();
 SourceList.ExpandItem (null, true);
 ```
 
-Por último, editar la `AppDelegate.cs` de archivos y realizar el `DidFinishLaunching` método aspecto similar al siguiente:
+Por último, edite el `AppDelegate.cs` y realice la `DidFinishLaunching` método aspecto parecido al siguiente:
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
@@ -612,7 +612,7 @@ public override void DidFinishLaunching (NSNotification notification)
 }
 ```
 
-Si ejecutamos nuestra aplicación, aparecerá el siguiente:
+Si ejecutamos nuestra aplicación, aparecerá la siguiente:
 
 [![](source-list-images/source05.png "Ejecutar una aplicación de ejemplo")](source-list-images/source05.png#lightbox)
 
@@ -620,7 +620,7 @@ Si ejecutamos nuestra aplicación, aparecerá el siguiente:
 
 ## <a name="summary"></a>Resumen
 
-En este artículo ha tomado una visión detallada de trabajar con listas de origen en una aplicación Xamarin.Mac. Hemos visto cómo crear y mantener listas de origen en el generador de interfaz de Xcode y cómo trabajar con listas de código fuente en código C#.
+En este artículo ha tomado una visión detallada de trabajar con listas de origen en una aplicación de Xamarin.Mac. Hemos visto cómo crear y mantener listas de origen en Interface Builder de Xcode y cómo trabajar con listas de origen en código C#.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

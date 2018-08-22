@@ -5,13 +5,13 @@ ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: topgenorth
 ms.author: toopge
-ms.date: 05/14/2018
-ms.openlocfilehash: 40c03e978cd9ce4666089f1b2a1e2ee8f47dbd81
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.date: 08/08/2018
+ms.openlocfilehash: 10fdc09ec946ff57b87ad4749cf6edaf04b5f7e8
+ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38831678"
+ms.lasthandoff: 08/13/2018
+ms.locfileid: "40251197"
 ---
 # <a name="xamarin-live-player-setup"></a>Configuración de Xamarin Live Player
 
@@ -20,23 +20,13 @@ Xamarin Live Player le permite modificar el código de su aplicación y reflejar
 
 ![Característica de vista previa](~/media/shared/preview.png)
 
-## <a name="1-get-the-app"></a>1. Obtener la aplicación
-
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+## <a name="1-get-the-android-app"></a>1. Obtener la aplicación de Android
 
 Xamarin Live Player está disponible para Android mediante Google Play:
 
 [ ![Disponible en Google Play](install-images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
 
 ara dispositivos que usan Android sin Google Play, Xamarin Live Player está disponible mediante la distribución [HockeyApp](https://aka.ms/xlp-hockeyapp). Además, las primeras versiones preliminares para Android se pueden instalar directamente desde Google Play mediante la aceptación en los [programas de versión beta abierta](https://play.google.com/apps/testing/com.xamarin.live)
-
-# <a name="iostabios"></a>[iOS](#tab/ios)
-
-Le animamos a los usuarios se unan a la aplicación de Xamarin Live Player iOS Preview para disfrutar de acceso rápido a las mejoras más recientes a través de TestFlight. Mediante el acceso a la cuenta de Xamarin Live Player, está aceptando a Microsoft [términos de uso](https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/default.aspx) & [declaración de privacidad](https://privacy.microsoft.com/en-us/privacystatement). Microsoft puede usar la información de contacto para proporcionar actualizaciones y ofertas especiales relacionadas con Xamarin y otros productos de Microsoft y servicios. Puede cancelar la suscripción en cualquier momento.
-
-Para obtener acceso a la versión preliminar de iOS de Xamarin Live Player, complete el [información de registro de TestFlight](https://fastring.xamarinliveplayer.com/), tras el cual recibirá un correo electrónico de TestFlight sobre cómo instalar la versión preliminar de iOS de Xamarin Live Player.
-
------
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -53,29 +43,30 @@ Xamarin Live Player requiere:
 2. Vaya a **Herramientas > Opciones...**  y seleccione la opción **Xamarin > otros**.
 3. Seleccione **Habilitar Xamarin Live Player**:
 
-  ![Seleccione la casilla Habilitar Xamarin Live Player en la ventana de opciones](install-images/vs2017-options.png)
+    ![Seleccione la casilla Habilitar Xamarin Live Player en la ventana de opciones](install-images/vs2017-options.png)
 
-2. Cree o abra un proyecto de Xamarin (o un [ejemplo](~/tools/live-player/samples.md)).
-3. Elija **Live Player** en la lista de dispositivos:
+4. Cree o abra un proyecto de Xamarin (o un [ejemplo](~/tools/live-player/samples.md)).
+5. Elija **Live Player** en la lista de dispositivos:
 
-  ![La lista de dispositivos incluye una opción de Xamarin Live Player](install-images/devices-empty-windows.png)
+    ![La lista de dispositivos incluye una opción de Xamarin Live Player](install-images/devices-empty-windows.png)
 
-  * Si ya ha emparejado un dispositivo, este estará disponible como una opción.
-  * En caso contrario, se le pedirá para emparejar un dispositivo cuando sea necesario.
-4. Presione el botón **Ejecutar** o seleccione una de las siguientes opciones del menú **Ejecutar** o del menú contextual:
+    - Si ya ha emparejado un dispositivo, este estará disponible como una opción.
+    - En caso contrario, se le pedirá para emparejar un dispositivo cuando sea necesario.
 
-  - **Iniciar sin depurar** : puede editar la aplicación y ver los cambios que se producen en el dispositivo (la aplicación se reinicia cuando se realizan cambios y guarda el archivo).
-  - **Iniciar depuración** : puede establecer puntos de interrupción e inspeccionar las variables, pero no se puede editar el código.
+6. Presione el botón **Ejecutar** o seleccione una de las siguientes opciones del menú **Ejecutar** o del menú contextual:
 
-  Como alternativa, seleccione **Herramientas > Xamarin Live Player > Ejecutar vista actual en vivo**, que permite editar la aplicación y ver los cambios que se producen en el dispositivo. Se muestra la vista actual (en lugar de la pantalla principal de la aplicación).
+    - **Iniciar sin depurar** : puede editar la aplicación y ver los cambios que se producen en el dispositivo (la aplicación se reinicia cuando se realizan cambios y guarda el archivo).
+    - **Iniciar depuración** : puede establecer puntos de interrupción e inspeccionar las variables, pero no se puede editar el código.
 
-5. Si un dispositivo ya está emparejado y se ejecuta la aplicación Xamarin Live Player en este, el código se ejecutará inmediatamente.
+    Como alternativa, seleccione **Herramientas > Xamarin Live Player > Ejecutar vista actual en vivo**, que permite editar la aplicación y ver los cambios que se producen en el dispositivo. Se muestra la vista actual (en lugar de la pantalla principal de la aplicación).
 
-  Si no hay ningún dispositivo emparejado, aparecerá un código QR con instrucciones sobre cómo asociar uno:
+7. Si un dispositivo ya está emparejado y se ejecuta la aplicación Xamarin Live Player en este, el código se ejecutará inmediatamente.
 
-  ![Ventana para emparejar un dispositivo](install-images/manage-empty-windows.png)
+    Si no hay ningún dispositivo emparejado, aparecerá un código QR con instrucciones sobre cómo asociar uno:
 
-  Si no se puede conectar con el dispositivo de emparejamiento, puede aparecer un error.
+    ![Ventana para emparejar un dispositivo](install-images/manage-empty-windows.png)
+
+    Si no se puede conectar con el dispositivo de emparejamiento, puede aparecer un error.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -93,40 +84,38 @@ Xamarin Live Player requiere:
 2. Vaya a **Visual Studio > Preferencias...**  y seleccione la pestaña **Proyectos > Xamarin Live Player (versión preliminar)**.
 3. Seleccione **Habilitar Xamarin Live Player**:
 
-  [![Seleccione la casilla Habilitar Xamarin Live Player en la ventana de opciones](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
+    [![Seleccione la casilla Habilitar Xamarin Live Player en la ventana de opciones](install-images/vsmac-options-sml.png)](install-images/vsmac-options.png#lightbox)
 
-2. Cree o abra un proyecto de Xamarin (o un [ejemplo](~/tools/live-player/samples.md)).
-3. Elija **Live Player** en la lista de dispositivos.
+4. Cree o abra un proyecto de Xamarin (o un [ejemplo](~/tools/live-player/samples.md)).
+5. Elija **Live Player** en la lista de dispositivos.
 
-  ![La lista de dispositivos incluye una opción de Xamarin Live Player](install-images/devices.png)
+    ![La lista de dispositivos incluye una opción de Xamarin Live Player](install-images/devices.png)
 
-  * Si ya ha emparejado un dispositivo, este estará disponible como una opción.
-  * En caso contrario, se le pedirá para emparejar un dispositivo cuando sea necesario.
-  * Elija **Dispositivos con Xamarin Live Player...**  para administrar los dispositivos que quiera usar con Xamarin Live Player.
+    - Si ya ha emparejado un dispositivo, este estará disponible como una opción.
+    - En caso contrario, se le pedirá para emparejar un dispositivo cuando sea necesario.
+    - Elija **Dispositivos con Xamarin Live Player...**  para administrar los dispositivos que quiera usar con Xamarin Live Player.
 
-4. Presione el botón **Ejecutar** o seleccione una de las siguientes opciones del menú **Ejecutar** o del menú contextual:
+6. Presione el botón **Ejecutar** o seleccione una de las siguientes opciones del menú **Ejecutar** o del menú contextual:
 
-  ![Opciones del menú Ejecutar](install-images/run-menu.png)
+    ![Opciones del menú Ejecutar](install-images/run-menu.png)
 
-  - **Iniciar sin depurar** : puede editar la aplicación y ver los cambios que se producen en el dispositivo (la aplicación se reinicia cuando se realizan cambios y guarda el archivo).
-  - **Iniciar depuración** : puede establecer puntos de interrupción e inspeccionar las variables, pero no se puede editar el código.
-  - **Ejecutar vista actual en vivo** : puede editar la aplicación y ver los cambios que se producen en el dispositivo. Se muestra la vista actual (en lugar de la pantalla principal de la aplicación).
+    - **Iniciar sin depurar** : puede editar la aplicación y ver los cambios que se producen en el dispositivo (la aplicación se reinicia cuando se realizan cambios y guarda el archivo).
+    - **Iniciar depuración** : puede establecer puntos de interrupción e inspeccionar las variables, pero no se puede editar el código.
+    - **Ejecutar vista actual en vivo** : puede editar la aplicación y ver los cambios que se producen en el dispositivo. Se muestra la vista actual (en lugar de la pantalla principal de la aplicación).
 
-5. Si un dispositivo ya está emparejado y se ejecuta la aplicación Xamarin Live Player en este, el código se ejecutará inmediatamente.
+7. Si un dispositivo ya está emparejado y se ejecuta la aplicación Xamarin Live Player en este, el código se ejecutará inmediatamente.
 
-  Si no hay ningún dispositivo emparejado, aparecerá un código QR con instrucciones sobre cómo asociar uno:
+    Si no hay ningún dispositivo emparejado, aparecerá un código QR con instrucciones sobre cómo asociar uno:
 
-  ![Ventana para emparejar un dispositivo](install-images/manage-empty.png)
+    ![Ventana para emparejar un dispositivo](install-images/manage-empty.png)
 
-  Si no se puede conectar el dispositivo para el emparejamiento, aparecerá un error:
+    Si no se puede conectar el dispositivo para el emparejamiento, aparecerá un error:
 
-  ![No se puede conectar al mensaje de error de dispositivo](install-images/error-cannot-connect.png)
-
+    ![No se puede conectar al mensaje de error de dispositivo](install-images/error-cannot-connect.png)
 
 -----
 
 Si experimenta problemas o no se puede conectar, consulte [limitaciones y solución de problemas](~/tools/live-player/troubleshooting.md).
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 
