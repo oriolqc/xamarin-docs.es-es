@@ -111,7 +111,7 @@ public partial class HelloBitmapPage : ContentPage
 
 El `PaintSurface` controlador procesa el mapa de bits varias veces en filas y columnas de la pantalla. Tenga en cuenta que el `Clear` método en el `PaintSurface` controlador tiene un argumento de `SKColors.Aqua`, que los colores del fondo de la superficie de presentación:
 
-[![Hola, mapa de bits ] (drawing-images/HelloBitmap.png "Hello, mapa de bits.")](drawing-images/HelloBitmap-Large.png#lightbox)
+[![Hola, mapa de bits ](drawing-images/HelloBitmap.png "Hello, mapa de bits.")](drawing-images/HelloBitmap-Large.png#lightbox)
 
 La apariencia del fondo aguamarina revela que el mapa de bits es transparente, excepto el texto.
 
