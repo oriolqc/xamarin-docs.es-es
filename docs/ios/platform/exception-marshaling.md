@@ -76,7 +76,7 @@ try {
 
 Esto es porque el desenredado de pila Objective-C no conozca los recursos administrados `catch` cláusula y no se la `finally` cláusula se ejecuta.
 
-Cuando el ejemplo de código anterior _es_ eficaz, es porque Objective-C tiene un método de notificación de las excepciones no controladas de Objective-C, [ `NSSetUncaughtExceptionHandler` ] [ 2], que Xamarin.iOS y el uso de Xamarin.Mac y en ese momento intenta convertir las excepciones Objective-C en las excepciones administradas.
+Cuando el ejemplo de código anterior _es_ eficaz, es porque Objective-C tiene un método de notificación de las excepciones no controladas de Objective-C, [`NSSetUncaughtExceptionHandler`][2], que Xamarin.iOS y el uso de Xamarin.Mac y en ese momento intenta convertir las excepciones Objective-C en las excepciones administradas.
 
 ## <a name="scenarios"></a>Escenarios
 

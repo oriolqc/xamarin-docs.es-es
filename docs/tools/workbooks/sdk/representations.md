@@ -25,7 +25,7 @@ Además de representaciones comunes, la integración de SDK proporciona API para
 
 ## <a name="external-representations"></a>Representaciones externas
 
-[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] proporciona la capacidad de registrar un [ `RepresentationProvider` ] [ repp], que debe implementar una integración para convertir de un objeto arbitrario a un formulario independiente para representar. Estas formas independientes deben implementar la [ `ISerializableObject` ] [ serobj] interfaz.
+[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] proporciona la capacidad de registrar un [`RepresentationProvider`][repp], que debe implementar una integración para convertir de un objeto arbitrario a un formulario independiente para representar. Estas formas independientes deben implementar la [ `ISerializableObject` ] [ serobj] interfaz.
 
 Implementar el `ISerializableObject` interfaz agrega un método de serialización que precisamente controla cómo se serializan los objetos. El `Serialize` método espera que un desarrollador exactamente especificará qué propiedades se van a serializar y cuál será el nombre final. Examinando el `Person` objeto en nuestro [`KitchenSink` ejemplo] [ejemplo], podemos ver cómo funciona esto:
 
@@ -71,7 +71,7 @@ public sealed class Person : ISerializableObject
 
 Representadores se implementan en JavaScript y tendrán acceso a una versión de JavaScript del objeto representado mediante `ISerializableObject`. La copia de JavaScript también tendrá un `$type` propiedad de cadena que indica el nombre de tipo. NET.
 
-Se recomienda utilizar TypeScript para código de integración de cliente, que por supuesto se compila a vainilla JavaScript. En cualquier caso, el SDK proporciona [typings] [ typings] que puede al que hace referencia directamente TypeScript o referencia al mismo simplemente manualmente si escribiendo vainilla JavaScript es preferible.
+Se recomienda utilizar TypeScript para código de integración de cliente, que por supuesto se compila a vainilla JavaScript. En cualquier caso, el SDK proporciona [typings][typings] que puede al que hace referencia directamente TypeScript o referencia al mismo simplemente manualmente si escribiendo vainilla JavaScript es preferible.
 
 El punto de integración principal para la representación es `xamarin.interactive.RendererRegistry`:
 
