@@ -85,7 +85,7 @@ xamarin.interactive.RendererRegistry.registerRenderer(
 );
 ```
 
-En este caso, `PersonRenderer` implementa el `Renderer` interfaz. Consulte la [typings] [ typings] para obtener más detalles.
+En este caso, `PersonRenderer` implementa el `Renderer` interfaz. Consulte la [typings][typings] para obtener más detalles.
 
 [typings]: https://github.com/xamarin/Workbooks/blob/master/SDK/typings/xamarin-interactive.d.ts
 [xir-color]: https://developer.xamarin.com/api/type/Xamarin.Interactive.Representations.Color/
