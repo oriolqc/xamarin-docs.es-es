@@ -1,18 +1,18 @@
 ### YamlMime:YamlDocument
+ms.openlocfilehash: a466a6591316b908ca26cb20906fd7866a20fca2
+ms.sourcegitcommit: 00a3505a73ce2213ba35bc85c06738edd1155060
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "42751882"
 documentType: LandingData
 title: Herramientas de Xamarin
 metadata:
   description: Herramientas que le ayudarán a mejorar su experiencia de desarrollo de Xamarin.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02-17-2018
+  ms.date: 08/08/2018
   ms.topic: landing-page
-  ms.openlocfilehash: b1f47f67677c2618b89b52ab2c015a8a4da48f95
-  ms.sourcegitcommit: c9ebf456e1c6924956bedb13f4ea78ff09f7b1a0
-  ms.translationtype: HT
-  ms.contentlocale: es-ES
-  ms.lasthandoff: 05/04/2018
-  ms.locfileid: "33112477"
 abstract:
   description: Herramientas que le ayudarán a mejorar su experiencia de desarrollo de Xamarin.
   menu:
@@ -28,36 +28,30 @@ sections:
     style: cards
     className: cardsC
     items:
-    - href: ~/tools/live-player/index.md
-      html: Introducción a Xamarin en minutos con la aplicación Live Player con Visual Studio.
-      image:
-        src: ~/media/index/xamarin-tools-live-player.svg?branch=master
-        href: ~/tools/live-player/index.md
-      title: Xamarin Live Player
-    - href: ~/tools/inspector/index.md
-      html: Comprenda y depure la interfaz de usuario.
-      image:
-        src: ~/media/index/xamarin-tools-inspector.svg?branch=master
-        href: ~/tools/inspector/index.md
-      title: Xamarin Inspector
-    - href: ~/tools/workbooks/index.md
-      html: Conozca la plataforma Xamarin y C# interactivamente.
-      image:
-        src: https://docs.microsoft.com/en-us/media/illustrations/dynamics-resource-library.svg
-        href: ~/tools/workbooks/index.md
-      title: Xamarin Workbooks
     - href: ~/tools/ios-simulator.md
       html: Interactúe con el simulador de iOS mediante Visual Studio en Windows.
       image:
         src: ~/media/index/xamarin-tools-windows-simulator.svg?branch=master
         href: ~/tools/ios-simulator.md
       title: Simulador de iOS para Windows
+    - href: ~/tools/inspector/index.md
+      html: Comprenda y depure la interfaz de usuario.
+      image:
+        src: ~/media/index/xamarin-tools-inspector.svg?branch=master
+        href: ~/tools/inspector/index.md
+      title: Xamarin Inspector
     - href: ~/tools/profiler/index.md
       html: Identifique y solucione problemas de rendimiento.
       image:
         src: ~/media/index/xamarin-tools-profiler.svg?branch=master
         href: ~/tools/profiler/index.md
       title: Generador de perfiles de Xamarin
+    - href: ~/tools/workbooks/index.md
+      html: Conozca la plataforma Xamarin y C# interactivamente.
+      image:
+        src: https://docs.microsoft.com/en-us/media/illustrations/dynamics-resource-library.svg
+        href: ~/tools/workbooks/index.md
+      title: Xamarin Workbooks
     - href: ~/tools/dotnet-embedding/index.md
       html: Permite que el código existente de .NET se utilice en otros lenguajes de programación.
       image:
