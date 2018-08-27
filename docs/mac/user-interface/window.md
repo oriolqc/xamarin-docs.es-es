@@ -762,7 +762,7 @@ Para agregar un nuevo Panel, haga lo siguiente:
 5. Eliminar la ventana existente y arrastre un Panel desde el **Inspector de biblioteca** en el el **Editor de la interfaz**: 
 
     [![](window-images/panels01.png "Eliminación de la ventana existente")](window-images/panels01.png#lightbox)
-6. Enlazar con el panel de la **propietario del archivo*-**ventana*- **toma**: 
+6. Enlazar con el panel de la **propietario del archivo*- **ventana*- **toma**: 
 
     [![](window-images/panels02.png "Arrastrar para crear el panel")](window-images/panels02.png#lightbox)
 7. Cambie a la **Inspector de identidad** y set (clase) del Panel `DocumentPanel`: 
