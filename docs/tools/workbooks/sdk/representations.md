@@ -25,7 +25,7 @@ Además de representaciones comunes, la integración de SDK proporciona API para
 
 ## <a name="external-representations"></a>Representaciones externas
 
-[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] proporciona la capacidad de registrar un [`RepresentationProvider`][repp], que debe implementar una integración para convertir de un objeto arbitrario a un formulario independiente para representar. Estas formas independientes deben implementar la [ `ISerializableObject` ] [ serobj] interfaz.
+[`Xamarin.Interactive.IAgent.RepresentationManager`][repman] proporciona la capacidad de registrar un [`RepresentationProvider`][repp], que debe implementar una integración para convertir de un objeto arbitrario a un formulario independiente para representar. Estas formas independientes deben implementar la [`ISerializableObject`][serobj] interfaz.
 
 Implementar el `ISerializableObject` interfaz agrega un método de serialización que precisamente controla cómo se serializan los objetos. El `Serialize` método espera que un desarrollador exactamente especificará qué propiedades se van a serializar y cuál será el nombre final. Examinando el `Person` objeto en nuestro [`KitchenSink` ejemplo] [ejemplo], podemos ver cómo funciona esto:
 
