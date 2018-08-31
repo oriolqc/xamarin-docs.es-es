@@ -8,10 +8,10 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/14/2017
 ms.openlocfilehash: b60b8a6a7c56347d6abf71f8c5149ddd556d3da8
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.sourcegitcommit: ee66db647ae9d94b54b1c5d9093075a620d0c6b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
+ms.lasthandoff: 08/28/2018
 ms.locfileid: "40251265"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows en Xamarin.Mac
@@ -762,7 +762,7 @@ Para agregar un nuevo Panel, haga lo siguiente:
 5. Eliminar la ventana existente y arrastre un Panel desde el **Inspector de biblioteca** en el el **Editor de la interfaz**: 
 
     [![](window-images/panels01.png "Eliminación de la ventana existente")](window-images/panels01.png#lightbox)
-6. Enlazar con el panel de la **propietario del archivo*- **ventana*- **toma**: 
+6. Enlazar el panel hasta el **propietario del archivo** - **ventana** - **toma**: 
 
     [![](window-images/panels02.png "Arrastrar para crear el panel")](window-images/panels02.png#lightbox)
 7. Cambie a la **Inspector de identidad** y set (clase) del Panel `DocumentPanel`: 

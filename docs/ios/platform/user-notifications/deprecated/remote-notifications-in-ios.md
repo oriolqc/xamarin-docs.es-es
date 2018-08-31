@@ -8,10 +8,10 @@ author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
 ms.openlocfilehash: f11f5d1cbde0f5eae27215af8eb6544be46c0206
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.sourcegitcommit: ee66db647ae9d94b54b1c5d9093075a620d0c6b4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
+ms.lasthandoff: 08/28/2018
 ms.locfileid: "39654820"
 ---
 # <a name="push-notifications-in-ios"></a>Notificaciones Push en iOS
@@ -81,12 +81,10 @@ Cada uno de los entornos que se mencionan en la sección anterior requiere su pr
 
 8.  Para crear un perfil de aprovisionamiento de desarrollo, vaya a la **perfiles de aprovisionamiento** sección y siga los pasos para crearla, utilizando el identificador de aplicación que acabamos de crear.
 
-9.  Una vez que haya creado el perfil de aprovisionamiento, abra **organizador de Xcode** y actualizarlo. Si el perfil de aprovisionamiento que creó aparecen no puede ser necesario descargar el perfil desde el Portal de aprovisionamiento de iOS e importarlo manualmente. Captura de pantalla siguiente muestra un ejemplo del organizador con el perfil de aprovisionamiento agregado:
-
+9.  Una vez que haya creado el perfil de aprovisionamiento, abra **organizador de Xcode** y actualizarlo. Si el perfil de aprovisionamiento que creó aparecen no puede ser necesario descargar el perfil desde el Portal de aprovisionamiento de iOS e importarlo manualmente. Captura de pantalla siguiente muestra un ejemplo del organizador con el perfil de aprovisionamiento agregado:  
     [![](remote-notifications-in-ios-images/image13new.png "Esta captura de pantalla muestra un ejemplo del organizador con el perfil de aprovisionamiento agregado")](remote-notifications-in-ios-images/image13new.png#lightbox)
 
-10.  En este momento se necesita configurar el proyecto de Xamarin.iOS para usar el recién creado el perfil de aprovisionamiento. Esto se hace desde **opciones de proyecto** cuadro de diálogo, en **firma de lote de iOS** pestaña, como se muestra en la captura de pantalla siguiente:
-
+10.  En este momento se necesita configurar el proyecto de Xamarin.iOS para usar el recién creado el perfil de aprovisionamiento. Esto se hace desde **opciones de proyecto** cuadro de diálogo, en **firma de lote de iOS** pestaña, como se muestra en la captura de pantalla siguiente:  
     [![](remote-notifications-in-ios-images/image11.png "Configurar el proyecto de Xamarin.iOS para utilizar el recién creado el perfil de aprovisionamiento")](remote-notifications-in-ios-images/image11.png#lightbox)
 
 En este momento la aplicación está configurada para trabajar con notificaciones de inserción. Sin embargo, hay unos pocos pasos más necesarios con el certificado. Este certificado está en formato DER que no es compatible con PushSharp, que requiere un certificado de intercambio de información Personal (PKCS12). Para convertir el certificado para que sea utilizable por PushSharp, siga estos pasos finales:
