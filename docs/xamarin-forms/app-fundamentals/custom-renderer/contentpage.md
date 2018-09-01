@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
 ms.openlocfilehash: 2369b249681b926476cf3938c51c99745eba9098
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.sourcegitcommit: 8888cb7d75f4469f2a1195b9a426a2e1fbf46bd8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 08/31/2018
 ms.locfileid: "38995747"
 ---
 # <a name="customizing-a-contentpage"></a>Personalización de un elemento ContentPage
@@ -197,7 +197,7 @@ namespace CustomRenderer.Droid
 
 La llamada a la clase base `OnElementChanged` método crea una instancia de un Android `ViewGroup` control, que es un grupo de vistas. Solo se procesa la secuencia en directo de cámara siempre que el representador ya no está unido a un elemento existente de Xamarin.Forms, y siempre que exista una instancia de la página que se representa mediante el representador personalizado.
 
-La página, a continuación, se personaliza mediante la invocación de una serie de métodos que usan el `Camera` API para proporcionar la secuencia en directo desde la cámara y la capacidad para capturar una foto, antes el `AddView` se invoca el método para agregar la cámara en vivo transmitir la interfaz de usuario para el `ViewGroup`.
+La página, a continuación, se personaliza mediante la invocación de una serie de métodos que usan el `Camera` API para proporcionar la secuencia en directo desde la cámara y la capacidad para capturar una foto, antes el `AddView` se invoca el método para agregar la cámara en vivo transmitir la interfaz de usuario para el `ViewGroup`. Tenga en cuenta que en Android también es necesario reemplazar el `OnLayout` método para realizar operaciones de medida y el diseño en la vista. Para obtener más información, consulte el [ejemplo de representador ContentPage](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/contentpage/).
 
 ### <a name="creating-the-page-renderer-on-uwp"></a>Creando al representador de página en UWP
 
