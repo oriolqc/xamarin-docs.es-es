@@ -3,15 +3,15 @@ layout: HubPage
 hide_bc: true
 title: Documentación de Xamarin
 description: Xamarin le permite crear aplicaciones nativas para Android, iOS y macOS mediante un código .NET y las interfaces de usuario específicas de plataforma. Xamarin.Forms le permite crear aplicaciones nativas, con código de interfaz de usuario compartido escrito en C# o XAML.
-ms.date: 05/07/2018
+ms.date: 08/08/2018
 featureFlags:
 - clicktale
-ms.openlocfilehash: bf679629f8ffa28275f32671ed87146fc0ef0a1f
-ms.sourcegitcommit: ef04a4ae1b19c1854a8e4e8315516d4030f4bbd6
+ms.openlocfilehash: d8a93775e448a9cbb12f7aafc1ca51f37107305f
+ms.sourcegitcommit: 00a3505a73ce2213ba35bc85c06738edd1155060
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "39654846"
+ms.lasthandoff: 08/23/2018
+ms.locfileid: "43780476"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -1093,25 +1093,6 @@ ms.locfileid: "39654846"
                     <li>
                         <a href="#architecture1"></a>
                         <ul id="architecture1" class="cardsC">
-                            <li>
-                                <a href="~/tools/live-player/index.md">
-                                    <div class="cardSize">
-                                        <div class="cardPadding">
-                                            <div class="card">
-                                                <div class="cardImageOuter">
-                                                    <div class="cardImage bgdAccent1">
-                                                        <img src="~/media/index/xamarin-tools-live-player.svg?branch=master" alt="Xamarin Live Player" />
-                                                    </div>
-                                                </div>
-                                                <div class="cardText">
-                                                    <h3>Xamarin Live Player</h3>
-                                                    <p>Introducción a Xamarin en minutos con la aplicación Live Player con Visual Studio.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
                             <li>
                                 <a href="~/tools/ios-simulator.md">
                                     <div class="cardSize">
