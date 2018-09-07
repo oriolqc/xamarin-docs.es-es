@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: bradumbaugh
 ms.author: brumbaug
 ms.date: 03/18/2017
-ms.openlocfilehash: df84e78709b0ff16087c4bb9816c5d45f6ec33ed
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 4145368281c2967bd1311389e5e1b1432af2c9b8
+ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30772362"
+ms.lasthandoff: 08/10/2018
+ms.locfileid: "43780504"
 ---
 # <a name="ios-build-mechanics"></a>Mecanismos de compilación de iOS
 
@@ -97,7 +97,7 @@ Teniendo en cuenta la información anterior, en la lista siguiente se proporcion
 - Consejos adicionales
   - Es mejor usar la compilación que la recompilación, ya que esta última realiza una limpieza antes de la compilación. La limpieza puede tardar mucho tiempo, ya que elimina referencias que podrían usarse.
   - Benefíciese del hecho de que el simulador no fuerza el espacio aislado. Tener recursos grandes, como vídeos u otros recursos, incluidos en el proyecto puede generar operaciones de copia de archivos costosas cada vez que la aplicación se inicia en el simulador. Evite estas operaciones costosas colocando estos archivos en el directorio principal y haga referencia a ellos en la aplicación mediante la ruta de acceso del archivo completa.  
-  - En caso de duda, use la marca `–time –time` para medir el cambio.
+  - En caso de duda, use la marca `--time --time` para medir el cambio.
 
 En la captura de pantalla siguiente se ilustra cómo establecer estas opciones para el simulador en las opciones de iOS:
 
@@ -137,7 +137,7 @@ Minimizar el tamaño de la aplicación también puede reducir el tiempo de compi
 Algunos aspectos que deben evitarse son:
 
 - Archivos binarios FAT (depurar) 
-- Deshabilitar el enlazador `–nolink` 
+- Deshabilitar el enlazador `--nolink` 
 - Deshabilitar eliminación 
   - Símbolos `--nosymbolstrip` 
   - IL (versión) `--nostrip`.  
@@ -151,7 +151,7 @@ Consejos adicionales
 - Evite implementar archivos estáticos grandes en cada compilación (depurar) 
   - Utilice UIFileSharingEnabled (info.plist). 
     - Los recursos se pueden cargar una vez. 
-- En caso de duda, use la marca `–time –time` para medir el cambio.
+- En caso de duda, use la marca `--time --time` para medir el cambio.
 
 En la captura de pantalla siguiente se ilustra cómo establecer estas opciones para el simulador en las opciones de iOS:
 
