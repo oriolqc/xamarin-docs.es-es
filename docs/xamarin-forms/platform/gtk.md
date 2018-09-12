@@ -222,4 +222,4 @@ Para obtener más información acerca de los formularios nativos, vea [formulari
 
 ## <a name="issues"></a>Problemas
 
-Se trata de una vista previa, por lo que debe esperar que no todo está lista para producción. Para el estado actual de la implementación, consulte [estado](https://github.com/jsuarezruiz/forms-gtk-progress/blob/master/Status.md)y para los problemas conocidos actuales, consulte [problemas conocidos y pendientes](https://github.com/jsuarezruiz/forms-gtk-progress/blob/master/Issues-Pending.md).
+Se trata de una vista previa, por lo que debe esperar que no todo está lista para producción. Para el estado actual de la implementación, consulte [estado](https://github.com/jsuarezruiz/forms-gtk-progress/blob/master/Status.md) y para los problemas conocidos actuales, consulte [problemas conocidos y pendientes](https://github.com/jsuarezruiz/forms-gtk-progress/blob/master/Issues-Pending.md).
