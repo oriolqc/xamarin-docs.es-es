@@ -1,4 +1,4 @@
----
+﻿---
 title: Clase Device de Xamarin.Forms
 description: En este artículo se explica cómo usar la clase Device de Xamarin.Forms para un mayor control sobre la funcionalidad y los diseños por plataforma.
 ms.prod: xamarin
@@ -18,7 +18,7 @@ ms.locfileid: "38998272"
 
 La clase [ `Device` ](xref:Xamarin.Forms.Device) contiene un número de propiedades y métodos para ayudar a los desarrolladores personalizar diseño y funcionalidad de acuerdo con cada plataforma.
 
-Además de métodos y propiedades para el código de destino en los tipos de hardware específico y tamaños, el `Device` clase incluye el [BeginInvokeOnMainThread](#Device_BeginInvokeOnMainThread) método que se debe usar al interactuar con la interfaz de usuario de controles subprocesos en segundo plano.
+Además de métodos y propiedades para asignar como destino código en tipos y tamaños específicos de harwdware, la clase `Device` incluye el método [BeginInvokeOnMainThread] (#Device_BeginInvokeOnMainThread) que se debe usar al interactuar con controles de la interfaz de usuario desde subprocesos en segundo plano.
 
 <a name="providing-platform-values" />
 
@@ -71,9 +71,9 @@ La clase [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) es una clase genéric
 
 La propiedad `Device.Idiom` puede usarse para modificar los diseños o funcionalidad según el dispositivo que en el que se este ejecutando la aplicación. El enumerador [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) contiene los siguientes valores:
 
--  **Teléfono** – iPhone, iPod touch y los dispositivos Android más estrechas que 600 DIP ^
--  **Tablet** : iPad, los dispositivos de Windows y dispositivos Android más amplio que 600 DIP ^
--  **Escritorio** : solo se devuelven en [aplicaciones para UWP](~/xamarin-forms/platform/windows/installation/index.md) en equipos de escritorio de Windows 10 (devuelve `Phone` en dispositivos móviles de Windows, como en escenarios de Continuum)
+- **Teléfono** – iPhone, iPod touch y los dispositivos Android más estrechas que 600 DIP ^
+- **Tablet** : iPad, los dispositivos de Windows y dispositivos Android más amplio que 600 DIP ^
+- **Escritorio** : solo se devuelven en [aplicaciones para UWP](~/xamarin-forms/platform/windows/installation/index.md) en equipos de escritorio de Windows 10 (devuelve `Phone` en dispositivos móviles de Windows, como en escenarios de Continuum)
 -  **TV**: dispositivos de TV con Tizen
 -  **Watch** – relojes Tizen
 -  **Unsupported** : no se utiliza
@@ -152,13 +152,13 @@ Device.OpenUri(new Uri("https://evolve.xamarin.com/"));
 
 El [ejemplo WebView](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithWebview/WorkingWithWebview/WebAppPage.cs) incluye un ejemplo que usa `OpenUri` para abrir las direcciones URL y desencadenar también llamadas telefónicas.
 
-El [ejemplo mapas](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/MapAppPage.cs) también usa `Device.OpenUri` para mostrar mapas y las direcciones mediante nativo **asigna** aplicaciones en iOS y Android.
+El [ejemplo mapas](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/MapAppPage.cs) también usa `Device.OpenUri` para mostrar mapas y las direcciones mediante la aplicacion de **Mapas** nativa en iOS y Android.
 
 <a name="Device_StartTimer" />
 
 ## <a name="devicestarttimer"></a>Device.StartTimer
 
-El `Device` clase también tiene un `StartTimer` método que proporciona una manera sencilla de desencadenar tareas dependientes del tiempo que funciona en el código común de Xamarin.Forms, incluidas una biblioteca .NET Standard. Pasar un `TimeSpan` para establecer el intervalo y devolver `true` para mantener el temporizador de ejecución o `false` para detenerlo después de la invocación actual.
+La clase `Device` también tiene un metodo `StartTimer` que proporciona una manera sencilla de desencadenar tareas dependientes del tiempo que funcionan en el código común de Xamarin.Forms, incluidas una biblioteca .NET Standard. Pasa un valor `TimeSpan` para establecer el intervalo y devuelve `true` para mantener el temporizador en ejecución o `false` para detenerlo después de la invocación actual.
 
 ```csharp
 Device.StartTimer (new TimeSpan (0, 0, 60), () => {
@@ -167,7 +167,7 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 });
 ```
 
-Si el código del temporizador interactúa con la interfaz de usuario (como establecer el texto de un `Label` o mostrar una alerta) debe realizarse dentro de un `BeginInvokeOnMainThread` expresión (ver abajo).
+Si el código del temporizador interactúa con la interfaz de usuario (como establecer el texto de un `Label` o mostrar una alerta) debe realizarse dentro de una expresión `BeginInvokeOnMainThread` (ver abajo).
 
 <a name="Device_BeginInvokeOnMainThread" />
 
@@ -187,11 +187,11 @@ Tenga en cuenta que los métodos mediante `async/await` no es necesario usar `Be
 
 ## <a name="summary"></a>Resumen
 
-Xamarin.Forms `Device` clase permite un mayor control sobre la funcionalidad y los diseños de por la plataforma: aunque el código (proyectos de biblioteca de .NET Standard o proyectos compartidos) en común.
+La clase `Device` de Xamarin.Forms permite un mayor control sobre la funcionalidad y los diseños por plataforma: incluso en código comun (proyectos de biblioteca de .NET Standard o proyectos compartidos).
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de dispositivo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
-- [Ejemplo de estilos](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
-- [Dispositivo](xref:Xamarin.Forms.Device)
+- [Ejemplo Device](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
+- [Ejemplo Styles](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Device](xref:Xamarin.Forms.Device)
