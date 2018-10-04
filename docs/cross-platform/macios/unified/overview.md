@@ -15,7 +15,7 @@ ms.locfileid: "34782000"
 ---
 # <a name="unified-api-overview"></a>Introducción a la API unificada
 
-La API de unificada de Xamarin permite compartir código entre aplicaciones de 32 y 64 bits de Mac y iOS con el mismo código binario. La API unificada se utiliza de forma predeterminada en los nuevos proyectos de Xamarin.iOS y Xamarin.Mac.
+API de unificado de Xamarin permite compartir código entre aplicaciones de 32 y 64 bits de Mac y iOS y compatibilidad con el mismo código binario. La API unificada se utiliza de forma predeterminada en los nuevos proyectos de Xamarin.iOS y Xamarin.Mac.
 
 > [!IMPORTANT]
 > La API clásica de Xamarin, que va precedida de la API unificada, está en desuso. 
@@ -55,7 +55,7 @@ Le estamos quitar el prefijo "MonoTouch" de nuestros productos de iOS y "MonoMac
 
 Esto hace más fácil compartir código entre las plataformas iOS y Mac sin tener que recurrir a la compilación condicional y esto también reducirá el ruido en la parte superior de los archivos de código fuente.
 
--  **API clásica:** El espacios de nombres usa el prefijo `MonoTouch.` o `MonoMac.`.
+-  **API clásica:** usar espacios de nombres `MonoTouch.` o `MonoMac.` prefijo.
 -  **API unificada:** No usa ningún prefijo de espacio de nombres
 
 ## <a name="runtime-defaults"></a>Valores predeterminados en tiempo de ejecución
@@ -64,13 +64,13 @@ La API unificada usa de manera predeterminada el recolector **SGen**  de element
 
 Esto soluciona número de problemas que los desarrolladores enfrentan el sistema antiguo y también facilita la [administración de memoria](~/cross-platform/deploy-test/memory-perf-best-practices.md).
 
-Tenga en cuenta que es posible habilitar el nuevo recuento de referencias incluso para el API clásico, pero el valor predeterminado es conservador y no requiere a los usuarios realizar los cambios. Con la API unificada, se tuvo la oportunidad de cambiar el valor predeterminado y proporcionar a los programadores todas las mejoras al mismo tiempo para refactorizar y volver a probar su código.
+Tenga en cuenta que es posible habilitar el nuevo recuento de referencias incluso para la API clásico, pero el valor predeterminado es conservador y no requiere a los usuarios realizar los cambios. Con la API unificada, se tuvo la oportunidad de cambiar el valor predeterminado y proporcionar a los programadores todas las mejoras al mismo tiempo que refactorizar y volver a probar su código.
 
 ## <a name="api-changes"></a>Cambios en la API
 
 Quita de la API unificada métodos desusados y no hay algunos casos donde hubiera errores tipográficos en los nombres de API al que se enlazaron a los espacios de nombres MonoTouch y MonoMac original en la API clásica. Estas instancias se han corregido en las nuevas API unificada y deben actualizarse en el componente, aplicaciones de iOS y Mac. Esta es una lista de las más comunes que pueden surgir de:
 
-|Nombre del método en el API clásico|Nombre del método la API unificada|
+|Nombre del método de API clásico|Nombre del método de API unificada|
 |--- |--- |
 |`UINavigationController.PushViewControllerAnimated()`|`UINavigationController.PushViewController()`|
 |`UINavigationController.PopViewControllerAnimated()`|`UINavigationController.PopViewController()`|
@@ -92,9 +92,9 @@ Revise el resto de esta página, y [estas sugerencias](~/cross-platform/macios/u
 
 ### <a name="nuget"></a>NuGet
 
-Los paquetes de NuGet que admitía Xamarin.iOS a través de la API clásica publicó sus ensamblados usando **Monotouch10** de la plataforma moniker.
+Los paquetes de NuGet que admitía Xamarin.iOS a través de la API clásica publicar sus ensamblados con el **Monotouch10** moniker de la plataforma.
 
-La API unificada presenta un nuevo identificador de plataforma para los paquetes compatibles - **Xamarin.iOS10**. Paquetes de NuGet existentes deberá actualizarse para agregar compatibilidad a esta plataforma, mediante la construcción frente a la API unificada.
+La API unificada presenta un nuevo identificador de plataforma para los paquetes compatibles - **Xamarin.iOS10**. Paquetes de NuGet existentes deberá actualizarse para agregar compatibilidad para esta plataforma, mediante la construcción frente a la API unificada.
 
 > [!IMPORTANT]
 > Si hay un error en el formulario _"Error 3 no puede incluir 'monotouch.dll' y 'Xamarin.iOS.dll' en el mismo proyecto de Xamarin.iOS: 'Xamarin.iOS.dll' hace referencia explícitamente, mientras que se hace referencia a 'monotouch.dll' por ' xxx, versión = 0.0.000, Referencia cultural = neutral, PublicKeyToken = null'"_ después de convertir la aplicación a las API unificado, suele ser debido a que un componente o un paquete de NuGet en el proyecto que no se ha actualizado a la API unificada. Debe quitar el componente/NuGet existente, actualice a una versión que admite las API unificada y realice una compilación limpia.
@@ -149,7 +149,7 @@ Este es el comportamiento esperado, porque la conversión desde `int` a `nint` n
 
 ### <a name="converting-datetime-to-nsdate"></a>Convertir tipos DateTime a NSDate
 
-Al usar las API unificada, la conversión implícita de `DateTime` a `NSDate` los valores ya no se realizan. Estos valores deberá convertir explícitamente de un tipo a otro. Los siguientes métodos de extensión se pueden utilizar para automatizar este proceso:
+Al usar las API unificada, la conversión implícita de `DateTime` a `NSDate` valores ya no se realiza. Estos valores deberá convertir explícitamente de un tipo a otro. Los siguientes métodos de extensión se pueden utilizar para automatizar este proceso:
 
 ```csharp
 public static DateTime NSDateToDateTime(this NSDate date)
@@ -197,7 +197,7 @@ Para evitar esa clase de problemas los constructores `IntPtr`  ahora son `protec
 
     var label = Runtime.GetNSObject<UILabel> (handle);
 
-Esta API devolverá una instancia administrada existente (si ya existe) o va a crear uno nuevo (cuando sea necesario). Ya está disponible en la API clásica y la unificada.
+Esta API devolverá una instancia administrada existente (si ya existe) o va a crear uno nuevo (cuando sea necesario). Ya está disponible en la API clásica y unificada.
 
 Tenga en cuenta que la `.ctor(NSObjectFlag)` también es ahora `protected` pero rara vez se ha utilizado esta fuera subclases.
 
