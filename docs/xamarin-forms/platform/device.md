@@ -18,15 +18,15 @@ ms.locfileid: "38998272"
 
 La clase [ `Device` ](xref:Xamarin.Forms.Device) contiene un número de propiedades y métodos para ayudar a los desarrolladores personalizar diseño y funcionalidad de acuerdo con cada plataforma.
 
-Además de métodos y propiedades correr código en los diferentes tipos de hardware y tamaños, la clase `Device` incluye [BeginInvokeOnMainThread](#Device_BeginInvokeOnMainThread) método que se debe usar al interactuar con controles de la interfaz de usuario desde subprocesos en segundo plano.
+Además de métodos y propiedades para asignar como destino código en tipos y tamaños específicos de harwdware, la clase `Device` incluye el método [BeginInvokeOnMainThread] (#Device_BeginInvokeOnMainThread) que se debe usar al interactuar con controles de la interfaz de usuario desde subprocesos en segundo plano.
 
 <a name="providing-platform-values" />
 
 ## <a name="providing-platform-specific-values"></a>Proporcionando valores específicos de plataforma
 
-Antes de la version 2.3.4 de Xamarin.Forms, se podia obtener la plataforma que ejecuta la aplicación examinando la propiedad [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) y comparandola con los valores de enumeracion [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android), [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), y [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows). De forma similar, [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) podia usarse para proporcionar valores específicos de cada plataforma a un control.
+Antes de Xamarin.Forms 2.3.4, se pudo obtener la plataforma de la aplicación se ejecuta en examinando el [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) propiedad y compararla con la [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android), [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), y [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) valores de enumeración. De forma similar, uno de los [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) sobrecargas podrían usarse para proporcionar los valores específicos de la plataforma a un control.
 
-Sin embargo, desde Xamarin.Forms 2.3.4 estas APIs se han vuelto obsoletas y remplazadas. La clase [ `Device` ](xref:Xamarin.Forms.Device) ahora contiene las constantes de texto públicas que identifican las plataformas: [ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS), [ `Device.Android` ](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`() Obsoleta), `Device.WinRT` Obsoleta [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP), y [ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS). De forma similar, el metodo [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) se ha reemplazado con los metodos [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) y [ `On` ](xref:Xamarin.Forms.On).
+Sin embargo, desde Xamarin.Forms 2.3.4 estas API se ha desusado y reemplazado. El [ `Device` ](xref:Xamarin.Forms.Device) clase ahora contiene las constantes de cadena pública que identifican las plataformas: [ `Device.iOS` ](xref:Xamarin.Forms.Device.iOS), [ `Device.Android` ](xref:Xamarin.Forms.Device.Android), `Device.WinPhone`() en desuso), `Device.WinRT` (en desuso) [ `Device.UWP` ](xref:Xamarin.Forms.Device.UWP), y [ `Device.macOS` ](xref:Xamarin.Forms.Device.macOS). De forma similar, el [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) sobrecargas se han reemplazado con el [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) y [ `On` ](xref:Xamarin.Forms.On) API.
 
 En C#, se pueden proporcionar valores específicos por plataforma mediante la creación de una instruccion `switch` con la propiedad [ `Device.RuntimePlatform` ](xref:Xamarin.Forms.Device.RuntimePlatform) y, a continuación, proporcionar las instrucciones `case` para las plataformas necesarias:
 
@@ -71,14 +71,14 @@ La clase [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) es una clase genéric
 
 La propiedad `Device.Idiom` puede usarse para modificar los diseños o funcionalidad según el dispositivo que en el que se este ejecutando la aplicación. El enumerador [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) contiene los siguientes valores:
 
--  **Phone** – iPhone, iPod touch y los dispositivos Android más estrechos que 600 dips^
--  **Tablet** : iPad, los dispositivos de Windows y dispositivos Android más amplios que 600 dips^
--  **Desktop** : solo se devuelve en [aplicaciones para UWP](~/xamarin-forms/platform/windows/installation/index.md) en equipos de escritorio de Windows 10 (devuelve `Phone` en dispositivos móviles de Windows, Incluyendo escenarios continuos)
--  **TV** – dispositivos TV Tizen
+- **Teléfono** – iPhone, iPod touch y los dispositivos Android más estrechas que 600 DIP ^
+- **Tablet** : iPad, los dispositivos de Windows y dispositivos Android más amplio que 600 DIP ^
+- **Escritorio** : solo se devuelven en [aplicaciones para UWP](~/xamarin-forms/platform/windows/installation/index.md) en equipos de escritorio de Windows 10 (devuelve `Phone` en dispositivos móviles de Windows, como en escenarios de Continuum)
+- **TV**: dispositivos de TV con Tizen
 -  **Watch** – relojes Tizen
 -  **Unsupported** : no se utiliza
 
-*^ dips no es necesariamente el número de píxeles físicos*
+*^ DIP no es necesariamente el número de píxeles físicos*
 
 `Idiom` es especialmente útil para la creación de diseños en dispositivos con pantallas más grandes, como el siguiente:
 
@@ -92,7 +92,7 @@ if (Device.Idiom == TargetIdiom.Phone) {
 
 ## <a name="deviceflowdirection"></a>Device.FlowDirection
 
-La propiedad [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) regresa un valor de enumeracion [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) que representa la dirección del flujo actual que usa el dispositivo. Dirección del flujo es la dirección en la que se analizan los elementos de interfaz de usuario en la página por el ojo. Los valores de la enumeración son:
+El [ `Device.FlowDirection` ](xref:Xamarin.Forms.VisualElement.FlowDirection) valor recupera un [ `FlowDirection` ](xref:Xamarin.Forms.FlowDirection) valor de enumeración que representa la dirección del flujo actual que usa el dispositivo. Dirección del flujo es la dirección en la que se analizan los elementos de interfaz de usuario en la página por el ojo. Los valores de la enumeración son:
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
 - [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
@@ -150,7 +150,7 @@ El metodo `OpenUri` puede usarse para desencadenar operaciones en la plataforma 
 Device.OpenUri(new Uri("https://evolve.xamarin.com/"));
 ```
 
-El [ejemplo WebView](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithWebview/WorkingWithWebview/WebAppPage.cs) incluye un ejemplo que usa `OpenUri` para abrir las direcciones URL y realizar también llamadas telefónicas.
+El [ejemplo WebView](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithWebview/WorkingWithWebview/WebAppPage.cs) incluye un ejemplo que usa `OpenUri` para abrir las direcciones URL y desencadenar también llamadas telefónicas.
 
 El [ejemplo mapas](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/MapAppPage.cs) también usa `Device.OpenUri` para mostrar mapas y las direcciones mediante la aplicacion de **Mapas** nativa en iOS y Android.
 
@@ -173,9 +173,9 @@ Si el código del temporizador interactúa con la interfaz de usuario (como esta
 
 ## <a name="devicebegininvokeonmainthread"></a>Device.BeginInvokeOnMainThread
 
-Los elementos de la interfaz de usuario nunca deben de ser accesados por los subprocesos en segundo plano, por ejemplo, el código que se ejecuta en un temporizador o un controlador de finalización para operaciones asincrónicas, como las solicitudes web. Cualquier código en segundo plano que se deba actualizar la interfaz de usuario se debe incluir en [ `BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)). Este es el equivalente de `InvokeOnMainThread` en iOS, `RunOnUiThread` en Android, y `Dispatcher.RunAsync` en Universal Windows Platform.
+Nunca se deben tener acceso a los elementos de la interfaz de usuario por los subprocesos en segundo plano, por ejemplo, el código que se ejecuta en un temporizador o un controlador de finalización para las operaciones asincrónicas, como las solicitudes web. Cualquier código en segundo plano que se deba actualizar la interfaz de usuario se debe incluir en [ `BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)). Este es el equivalente de `InvokeOnMainThread` en iOS, `RunOnUiThread` en Android, y `Dispatcher.RunAsync` en la plataforma Universal de Windows.
 
-El código Xamarin.Forms es:
+El código de Xamarin.Forms es:
 
 ```csharp
 Device.BeginInvokeOnMainThread ( () => {
