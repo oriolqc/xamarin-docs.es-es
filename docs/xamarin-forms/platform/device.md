@@ -1,4 +1,4 @@
-﻿---
+---
 title: Clase Device de Xamarin.Forms
 description: En este artículo se explica cómo usar la clase Device de Xamarin.Forms para un mayor control sobre la funcionalidad y los diseños por plataforma.
 ms.prod: xamarin
@@ -18,7 +18,7 @@ ms.locfileid: "38998272"
 
 La clase [ `Device` ](xref:Xamarin.Forms.Device) contiene un número de propiedades y métodos para ayudar a los desarrolladores personalizar diseño y funcionalidad de acuerdo con cada plataforma.
 
-Además de métodos y propiedades para asignar como destino código en tipos y tamaños específicos de harwdware, la clase `Device` incluye el método [BeginInvokeOnMainThread] (#Device_BeginInvokeOnMainThread) que se debe usar al interactuar con controles de la interfaz de usuario desde subprocesos en segundo plano.
+Además de métodos y propiedades para el código de destino en los tipos de hardware específico y tamaños, el `Device` clase incluye el [BeginInvokeOnMainThread](#Device_BeginInvokeOnMainThread) método que se debe usar al interactuar con la interfaz de usuario de controles subprocesos en segundo plano.
 
 <a name="providing-platform-values" />
 
@@ -71,9 +71,9 @@ La clase [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) es una clase genéric
 
 La propiedad `Device.Idiom` puede usarse para modificar los diseños o funcionalidad según el dispositivo que en el que se este ejecutando la aplicación. El enumerador [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) contiene los siguientes valores:
 
-- **Teléfono** – iPhone, iPod touch y los dispositivos Android más estrechas que 600 DIP ^
-- **Tablet** : iPad, los dispositivos de Windows y dispositivos Android más amplio que 600 DIP ^
-- **Escritorio** : solo se devuelven en [aplicaciones para UWP](~/xamarin-forms/platform/windows/installation/index.md) en equipos de escritorio de Windows 10 (devuelve `Phone` en dispositivos móviles de Windows, como en escenarios de Continuum)
+-  **Teléfono** – iPhone, iPod touch y los dispositivos Android más estrechas que 600 DIP ^
+-  **Tablet** : iPad, los dispositivos de Windows y dispositivos Android más amplio que 600 DIP ^
+-  **Escritorio** : solo se devuelven en [aplicaciones para UWP](~/xamarin-forms/platform/windows/installation/index.md) en equipos de escritorio de Windows 10 (devuelve `Phone` en dispositivos móviles de Windows, como en escenarios de Continuum)
 -  **TV**: dispositivos de TV con Tizen
 -  **Watch** – relojes Tizen
 -  **Unsupported** : no se utiliza
