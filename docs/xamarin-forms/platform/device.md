@@ -18,7 +18,7 @@ ms.locfileid: "38998272"
 
 La clase [ `Device` ](xref:Xamarin.Forms.Device) contiene un número de propiedades y métodos para ayudar a los desarrolladores personalizar diseño y funcionalidad de acuerdo con cada plataforma.
 
-Además de métodos y propiedades para el código de destino en los tipos de hardware específico y tamaños, el `Device` clase incluye el [BeginInvokeOnMainThread](#Device_BeginInvokeOnMainThread) método que se debe usar al interactuar con la interfaz de usuario de controles subprocesos en segundo plano.
+Además de métodos y propiedades para asignar como destino código en tipos y tamaños específicos de harwdware, la clase `Device` incluye el método [BeginInvokeOnMainThread](#Device_BeginInvokeOnMainThread) que se debe usar al interactuar con controles de la interfaz de usuario desde subprocesos en segundo plano.
 
 <a name="providing-platform-values" />
 
