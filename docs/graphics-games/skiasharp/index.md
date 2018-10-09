@@ -16,11 +16,11 @@ ms.locfileid: "39615527"
 ---
 # <a name="2d-drawing-with-skiasharp"></a>Dibujo en 2D con SkiaSharp
 
-SkiaSharp proporciona una API de C# eficaz para hacer los gráficos 2D. Funciona con [biblioteca de Google Skia](http://skia.org), la misma biblioteca que se utiliza en las pilas de gráficos de Google Chrome, Firefox y de Android.
+SkiaSharp proporciona una poderosa API de C#  para hacer gráficos en 2D. Funciona con [biblioteca Skia de Google ](http://skia.org), la misma biblioteca que se utiliza en las pilas de gráficos de Google Chrome, Firefox y de Android.
 
 [![](images/ide-sml.png "SkiaSharp proporciona una API de C# eficaz para hacer los gráficos 2D")](images/ide.png#lightbox)
 
-SkiaSharp es una biblioteca portátil y se envía cómodamente como un [paquete de NuGet multiplataforma](https://www.nuget.org/packages/SkiaSharp)y admite las siguientes plataformas de fábrica: macOS, el escritorio de Windows, Xamarin.iOS y Xamarin.Android.
+SkiaSharp es una biblioteca portátil y se usa cómodamente como un [Paquete NuGet multiplataforma](https://www.nuget.org/packages/SkiaSharp) y admite las siguientes plataformas: macOS, el escritorio de Windows, Xamarin.iOS y Xamarin.Android.
 
 ## <a name="introduction-to-skiasharpgraphics-gamesskiasharpintroductionmd"></a>[Introducción a SkiaSharp](~/graphics-games/skiasharp/introduction.md)
 
@@ -80,6 +80,6 @@ Puede examinar el [documentación de API](https://developer.xamarin.com/api/name
 
 ## <a name="work-in-progress"></a>Trabajo en curso
 
-SkiaSharp es un trabajo en curso que nos estamos compartiendo con nuestra comunidad. Aunque nos hemos enlaza las partes importantes de la API Skia, cuánto trabajo queda para que se realicen. Estamos usando la API de C estable obtenidas por Skia y nuestro plan es continuar nuestro trabajo a los enlaces de C de Skia para proporcionar una cobertura completa para las API de contribución.
+SkiaSharp es un trabajo en curso que estamos compartiendo con nuestra comunidad. Aunque hemos enlazado muchas partes importantes del API de Skia, queda mucho trabajo por hacer. Estamos usando la API estable de C obtenidas por Skia y nuestro plan es seguir contribuyendo nuestro trabajo a los enlaces de C de Skia para proporcionar una completa cobertura a las APIs.
 
 Para ayudarnos a guiar nuestros esfuerzos de enlace, deje comentarios o sugerencias como problemas en el repositorio de GitHub [ http://github.com/mono/SkiaSharp ](http://github.com/mono/SkiaSharp).
