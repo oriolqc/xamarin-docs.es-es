@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials: Compass'
-description: Este documento describe la clase Compass en Xamarin.Essentials, que le permite supervisar el encabezado de Norte magnético del dispositivo.
+description: Este documento describe la clase Compass en Xamarin.Essentials el cual le permite controlar el norte magnético del dispositivo.
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
@@ -16,7 +16,7 @@ ms.locfileid: "39353888"
 
 ![La versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-El **brújula** clase le permite supervisar el encabezado de Norte magnético del dispositivo.
+La clase **Compass** le permite controlar el norte magnético del dispositivo.
 
 ## <a name="using-compass"></a>Uso de la brújula
 
@@ -26,7 +26,7 @@ Agregue una referencia a Xamarin.Essentials en su clase:
 using Xamarin.Essentials;
 ```
 
-La funcionalidad de la brújula funciona mediante una llamada a la `Start` y `Stop` métodos para realizar escuchas de los cambios realizados en la brújula. Los cambios se enviarán a través de la `ReadingChanged` eventos. A continuación se muestra un ejemplo:
+La funcionalidad de la brújula funciona mediante una llamada a los métodos `Start` y `Stop` que controlan los cambios realizados en la brújula. Los cambios se enviarán a través de los eventos `ReadingChanged`. A continuación, se muestra un ejemplo:
 
 ```csharp
 public class CompassTest
@@ -74,15 +74,15 @@ public class CompassTest
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Android no proporciona una API para recuperar el encabezado de brújula. Usamos el acelerómetro y magnetómetro para calcular la partida el norte magnético, se recomienda por Google.
+Android no proporciona una API para recuperar el estado de la brújula. Usamos el acelerómetro y magnetómetro para calcular la partida el norte magnético, recomendado por Google.
 
-En raras ocasiones, quizás verá resultados incoherentes porque los sensores necesitan calibrarse, lo que implica mover el dispositivo en un movimiento de la figura 8. La mejor manera de hacerlo es abrir Google Maps, pulsa en el punto de su ubicación y seleccione **calibrar brújula**.
+En raras ocasiones, quizás verá resultados incoherentes porque los sensores necesitan calibrarse, lo que implica mover el dispositivo en un movimiento en forma de 8. La mejor manera de hacerlo es abrir Google Maps, pulse en el símbolo de su ubicación y seleccione **calibrar brújula**.
 
-Tenga en cuenta que ejecuta varios sensores desde la aplicación al mismo tiempo puede ajustar la velocidad del sensor.
+Tenga en cuenta que ejecuta varios sensores desde tu aplicación al mismo tiempo puede influir en la velocidad del sensor.
 
 ## <a name="low-pass-filter"></a>Filtro de paso bajo
 
-Debido a cómo la brújula Android están actualizados y se calcula que es posible que sea necesario para suavizar los valores de los valores. Un _baja pasar filtro_ pueden aplicarse que calcula el promedio de los valores de seno y coseno de los ángulos y puede activarse estableciendo el `ApplyLowPassFilter` propiedad en el `Compass` clase:
+Debido a como se calculan y actualizan los datos de la brújula de Android es posible que sea necesario rebajar la salida de los valores. Un _Filtro de paso bajo_ pueden aplicarse calculando el promedio de los valores de seno y coseno de los ángulos y puede activarse estableciendo la propiedad `ApplyLowPassFilter` en la clase `Compass`:
 
 ```csharp
 Compass.ApplyLowPassFilter = true;
