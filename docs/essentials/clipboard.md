@@ -1,6 +1,6 @@
 ---
 title: 'Xamarin.Essentials: Portapapeles'
-description: Este documento describe la clase del Portapapeles en Xamarin.Essentials, que le permite copiar y pegar texto en el Portapapeles del sistema entre aplicaciones.
+description: Este documento describe la clase Clipboard en Xamarin.Essentials, que le permite copiar y pegar texto en el Portapapeles del sistema entre aplicaciones.
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
@@ -16,17 +16,17 @@ ms.locfileid: "38842620"
 
 ![La versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-El **Portapapeles** clase le permite copiar y pegar texto en el Portapapeles del sistema entre aplicaciones.
+La clase **Clipboard** le permite copiar y pegar texto en el Portapapeles del sistema entre aplicaciones.
 
 ## <a name="using-clipboard"></a>Usar el Portapapeles
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue referencia a Xamarin.Essentials en su clase:
 
 ```csharp
 using Xamarin.Essentials;
 ```
 
-Para comprobar si el **Portapapeles** tiene actualmente listo para pegar texto:
+Para comprobar si el **Portapapeles** continue actualmente texto para pegar:
 
 ```csharp
 var hasText = Clipboard.HasText;
@@ -46,5 +46,5 @@ var text = await Clipboard.GetTextAsync();
 
 ## <a name="api"></a>API
 
-- [Código fuente de Portapapeles](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Clipboard)
-- [Documentación de API de Portapapeles](xref:Xamarin.Essentials.Clipboard)
+- [Código fuente de clase Clipboard](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Clipboard)
+- [Documentación de API Clipboard](xref:Xamarin.Essentials.Clipboard)
