@@ -4,29 +4,21 @@ description: Este documento proporciona un alto nivel de información general de
 ms.prod: xamarin
 ms.assetid: 037F7FFF-2155-4017-B99A-839CE7EC5C9C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 06/25/2018
-ms.openlocfilehash: 5cbec23aa81a4637a18f83d9955a78183dadaa21
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: f7fb8cc379a070b848c5154c9c1d4fbfc8186266
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615208"
 ---
 # <a name="introduction-to-tvos-12"></a>Introducción a tvOS 12
 
-![Vista previa](~/media/shared/preview.png)
+Este documento proporciona una descripción general de nuevos y actualizados tvOS 12.
 
-> [!WARNING]
-> Soporte técnico de 12 de tvOS de Xamarin está actualmente en versión preliminar, no es lo que significa que puede contener errores, con todas las características, y puede cambiar. Usar solo para realizar experimentos.
-
-Este documento proporciona una descripción general de tvOS nuevos y actualizados 12 características de vista previa de qué Xamarin versión actualmente ofrece enlaces de C#.
-
-Para empezar a crear aplicaciones de 12 de tvOS con Xamarin, eche un vistazo a:
-
-- El [Guía de introducción](~/ios/platform/introduction-to-ios12/get-started.md)
-- La versión preliminar de Xamarin [liberar la entrada de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+Para empezar a crear aplicaciones de 12 de tvOS con Xamarin, eche un vistazo a la [Guía de introducción](~/ios/platform/introduction-to-ios12/get-started.md).
 
 ## <a name="tvuikit"></a>TVUIKit
 
@@ -48,10 +40,13 @@ El marco de trabajo de visión incluye un detector de caras mejorada que puede d
 
 El marco de lenguaje Natural permite que las aplicaciones realizar varios tipos de análisis de lenguaje. Por ejemplo, puede usarse para identificar las partes de la oración y determinar el idioma que se representa mediante un bloque de texto.
 
+## <a name="deprecations"></a>Elementos obsoletos
+
+Con 12 tvOS, Apple ha dejado de OpenGL ES, [alientan a los desarrolladores](https://developer.apple.com/tvos/whats-new/) adoptar el sistema operativo.
+
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS: desarrollador de Apple (Apple)](https://developer.apple.com/tvos/)
 - [Novedades de tvOS 12 (Apple) (vídeo)](https://developer.apple.com/videos/play/wwdc2018/208/)
 - [TV (Apple)](https://www.apple.com/tv/)
-- Versión preliminar de Xamarin [liberar la entrada de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)

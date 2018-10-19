@@ -8,11 +8,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/02/2016
-ms.openlocfilehash: 4f5f3ab00b55de270c209d6fa7082c3acc40b5ef
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 0d0d6a2eddc03b5aaa2fecabc38a91e5f09b72ac
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39241310"
 ---
 # <a name="hello-xamarinforms"></a>Hello, Xamarin.Forms
@@ -37,4 +37,3 @@ En la segunda parte de esta guía se revisa lo que se ha compilado para comprend
 - [Recetas de Visual Studio para Mac: Depuración](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/debugging)
 - [Aprendizaje autoguiado gratuito (vídeo)](https://university.xamarin.com/self-guided)
 - [Introducción a Xamarin (vídeo)](https://developer.xamarin.com/videos/)
-- [Hello, Xamarin.Forms iOS Workbook](https://developer.xamarin.com/workbooks/xamarin-forms/getting-started/GettingStartedWithXamarinForms-ios.workbook) (Libro de iOS de Hello, Xamarin.Forms)
