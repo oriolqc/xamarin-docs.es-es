@@ -6,140 +6,28 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/11/2018
-ms.openlocfilehash: faec35ec9eb579327972471e7747ad8a38504850
-ms.sourcegitcommit: 3697c2aa4208fe2ac954a8c0297394d3bcb53ede
+ms.date: 08/03/2018
+ms.openlocfilehash: c422b9ac5af9417523f349537fda1bb0c01aa7bc
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/20/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39175182"
 ---
 # <a name="android-platform-specifics"></a>Funcionalidades específicas de plataforma Android
 
 _Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se muestra cómo consumir el Android funcionalidades específicas de plataforma que se integran en Xamarin.Forms._
 
-En Android, Xamarin.Forms contiene los detalles siguientes de la plataforma:
+## <a name="visualelements"></a>VisualElements
 
-- Establecer el modo de funcionamiento de un teclado en pantalla. Para obtener más información, consulte [establecer el modo de entrada de teclado temporal](#soft_input_mode).
-- Habilitar el desplazamiento rápido en un [ `ListView` ](xref:Xamarin.Forms.ListView) para obtener más información, consulte [Habilitar desplazamiento rápido en una ListView](#fastscroll).
-- Habilitar el gesto de deslizar rápidamente entre las páginas de un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Para obtener más información, consulte [habilitar gesto de deslizar rápidamente entre páginas en una TabbedPage](#enable_swipe_paging).
+En Android, se proporciona la siguiente funcionalidad específica de la plataforma para las páginas, vistas y diseños de Xamarin.Forms:
+
 - Controlar el orden Z de los elementos visuales para determinar el orden de dibujo. Para obtener más información, consulte [controlar la elevación de elementos visuales](#elevation).
-- Deshabilitar la [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) y [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) página eventos de ciclo de vida en pausa y reanudar, respectivamente, para las aplicaciones que usan AppCompat. Para obtener más información, consulte [deshabilitando el Disappearing y eventos de ciclo de vida de la página que aparece](#disable_lifecycle_events).
-- Controlar si un [ `WebView` ](xref:Xamarin.Forms.WebView) puede mostrar contenido mixto. Para obtener más información, consulte [Habilitar contenido mixto en un objeto WebView](#webview-mixed-content).
-- Establecer el método de entrada de opciones del editor para el teclado en pantalla para una [ `Entry` ](xref:Xamarin.Forms.Entry). Para obtener más información, consulte [opciones de configuración de entrada de Input Method Editor](#entry-imeoptions).
 - Deshabilitar el modo de color heredado en compatible [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Para obtener más información, consulte [deshabilitar el modo heredado Color](#legacy-color-mode).
-- Utilizando los valores de la sombra de los botones de Android y el relleno predeterminado. Para obtener más información, consulte [utilizando botones de Android](#button-padding-shadow).
-- Establecer la posición de la barra de herramientas y el color en un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Para obtener más información, consulte [configuración TabbedPage barra de herramientas de selección de ubicación y Color](#tabbedpage-toolbar).
-
-<a name="soft_input_mode" />
-
-## <a name="setting-the-soft-keyboard-input-mode"></a>Establecer el modo de entrada de teclado en pantalla
-
-Este específicos de la plataforma se usa para establecer el modo de funcionamiento para un área de entrada de teclado en pantalla y se consume en XAML estableciendo el [ `Application.WindowSoftInputModeAdjust` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Application.WindowSoftInputModeAdjustProperty) propiedad adjunta a un valor de la [ `WindowSoftInputModeAdjust` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust) enumeración:
-
-```xaml
-<Application ...
-             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-             android:Application.WindowSoftInputModeAdjust="Resize">
-  ...
-</Application>
-```
-
-Como alternativa, pueden usarse desde C# mediante la API fluida:
-
-```csharp
-using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
-...
-
-App.Current.On<Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Resize);
-```
-
-El `Application.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El [ `Application.UseWindowSoftInputModeAdjust` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Application.UseWindowSoftInputModeAdjust(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust)) método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se usa para establecer el modo de funcionamiento del área de entrada de teclado en pantalla, con el [ `WindowSoftInputModeAdjust` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust) enumeración que proporciona dos valores: [ `Pan` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Pan) y [ `Resize` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize). El `Pan` valor usa la [ `AdjustPan` ](https://developer.xamarin.com/api/field/Android.Views.SoftInput.AdjustPan/) la opción de ajuste, que no cambiar el tamaño de la ventana cuando un control de entrada tiene el foco. En su lugar, el contenido de la ventana distribuido para que el foco actual no está oculto por el teclado en pantalla. El `Resize` valor usa la [ `AdjustResize` ](https://developer.xamarin.com/api/field/Android.Views.SoftInput.AdjustResize/) la opción de ajuste, que cambia el tamaño de la ventana cuando un control de entrada tiene el foco, para dejar espacio para el teclado en pantalla.
-
-El resultado es que el teclado en pantalla se puede establecer el modo de funcionamiento cuando un control de entrada tiene el foco del área de entrada:
-
-[![](android-images/pan-resize.png "Teclado en pantalla funciona en modo específico de la plataforma")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
-
-<a name="fastscroll" />
-
-## <a name="enabling-fast-scrolling-in-a-listview"></a>Habilitar el desplazamiento rápido en una ListView
-
-Este específicos de la plataforma se usan para habilitar el desplazamiento rápido a través de los datos en un [ `ListView` ](xref:Xamarin.Forms.ListView). Se consume en XAML estableciendo el `ListView.IsFastScrollEnabled` propiedad adjunta un `boolean` valor:
-
-```xaml
-<ContentPage ...
-             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
-    <StackLayout Margin="20">
-        ...
-        <ListView ItemsSource="{Binding GroupedEmployees}"
-                  GroupDisplayBinding="{Binding Key}"
-                  IsGroupingEnabled="true"
-                  android:ListView.IsFastScrollEnabled="true">
-            ...
-        </ListView>
-    </StackLayout>
-</ContentPage>
-```
-
-Como alternativa, pueden usarse desde C# mediante la API fluida:
-
-```csharp
-using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
-...
-
-var listView = new Xamarin.Forms.ListView { IsGroupingEnabled = true, ... };
-listView.SetBinding(ItemsView<Cell>.ItemsSourceProperty, "GroupedEmployees");
-listView.GroupDisplayBinding = new Binding("Key");
-listView.On<Android>().SetIsFastScrollEnabled(true);
-```
-
-El `ListView.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El `ListView.SetIsFastScrollEnabled` método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se usa para habilitar el desplazamiento rápido a través de los datos en un [ `ListView` ](xref:Xamarin.Forms.ListView). Además, el `SetIsFastScrollEnabled` método puede utilizarse para activar o desactivar el desplazamiento rápido mediante una llamada a la `IsFastScrollEnabled` método para devolver si se habilita el desplazamiento rápido:
-
-```csharp
-listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScrollEnabled());
-```
-
-El resultado es ese desplazamiento rápido a través de los datos en un [ `ListView` ](xref:Xamarin.Forms.ListView) puede habilitarse, que cambia el tamaño de la miniatura de desplazamiento:
-
-[![](android-images/fastscroll.png "ListView FastScroll específico de plataforma")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
-
-<a name="enable_swipe_paging" />
-
-## <a name="enabling-swiping-between-pages-in-a-tabbedpage"></a>Habilitar el gesto de deslizar rápidamente entre páginas en una TabbedPage
-
-Este específicos de la plataforma se utilizan para habilitar el gesto de deslizar rápidamente con un gesto del dedo horizontal entre las páginas de un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Se consume en XAML estableciendo el [ `TabbedPage.IsSwipePagingEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.IsSwipePagingEnabledProperty) propiedad adjunta un `boolean` valor:
-
-```xaml
-<TabbedPage ...
-            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-            android:TabbedPage.OffscreenPageLimit="2"
-            android:TabbedPage.IsSwipePagingEnabled="true">
-    ...
-</TabbedPage>
-```
-
-Como alternativa, pueden usarse desde C# mediante la API fluida:
-
-```csharp
-using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
-...
-
-On<Android>().SetOffscreenPageLimit(2)
-             .SetIsSwipePagingEnabled(true);
-```
-
-El `TabbedPage.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El [ `TabbedPage.SetIsSwipePagingEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetIsSwipePagingEnabled(Xamarin.Forms.BindableObject,System.Boolean)) método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se utiliza para habilitar el gesto de deslizar rápidamente entre las páginas de un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Además, el `TabbedPage` clase en el `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` espacio de nombres también tiene un [ `EnableSwipePaging` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.EnableSwipePaging(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.TabbedPage})) método que permite este específicos de la plataforma, y un [ `DisableSwipePaging` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.DisableSwipePaging(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.TabbedPage})) método que deshabilita Esta plataforma específica. El [ `TabbedPage.OffscreenPageLimit` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.OffscreenPageLimitProperty) propiedad adjunta, y [ `SetOffscreenPageLimit` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetOffscreenPageLimit(Xamarin.Forms.BindableObject,System.Int32)) método, se utilizan para establecer el número de páginas que se deben conservar en un estado de inactividad a cada lado de la página actual.
-
-El resultado es que la paginación a través de las páginas se muestran por Deslizar rápidamente un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) está habilitado:
-
-![](android-images/tabbedpage-swipe.png)
 
 <a name="elevation" />
 
-## <a name="controlling-the-elevation-of-visual-elements"></a>Controlar la elevación de los elementos visuales
+### <a name="controlling-the-elevation-of-visual-elements"></a>Controlar la elevación de los elementos visuales
 
 Este específicos de la plataforma se usa para controlar la elevación o el orden Z de los elementos visuales en aplicaciones que tienen como destino API 21 o mayor. La elevación de un elemento visual determina su orden de dibujo, con elementos visuales con los valores más altos de Z occluding elementos visuales con los valores más bajos de Z. Se consume en XAML estableciendo el `VisualElement.Elevation` propiedad adjunta un `boolean` valor:
 
@@ -208,59 +96,25 @@ El resultado es que se puede controlar la elevación de los elementos visuales p
 
 ![](android-images/elevation.png)
 
-<a name="disable_lifecycle_events" />
+<a name="legacy-color-mode" />
 
-## <a name="disabling-the-disappearing-and-appearing-page-lifecycle-events"></a>Deshabilitar los eventos de ciclo de vida de página que aparece y desaparece
+### <a name="disabling-legacy-color-mode"></a>Deshabilitar el modo de Color heredado
 
-Este específicos de la plataforma se usan para deshabilitar la [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) y [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) eventos de página en la aplicación pausar y reanudar, respectivamente, para las aplicaciones que usan AppCompat. Además, incluye la capacidad para controlar si se muestra el teclado en pantalla al reanudar si se mostrara en pausa, siempre que el modo de funcionamiento del teclado en pantalla se establece en [ `WindowSoftInputModeAdjust.Resize` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize).
+Algunas de las vistas de Xamarin.Forms cuentan con un modo de color heredado. En este modo, cuando el [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) se establece la propiedad de la vista en `false`, la vista invalida los colores establecidos por el usuario con los colores nativo predeterminado para el estado deshabilitado. Para hacia atrás compatibilidad, este modo heredado de color permanece el comportamiento predeterminado para las vistas admitidas.
 
-> [!NOTE]
-> Tenga en cuenta que estos eventos están habilitados de forma predeterminada para conservar el comportamiento existente para las aplicaciones que dependen de los eventos. Deshabilitar estos eventos hace que el ciclo de eventos AppCompat coincide con el ciclo de eventos anteriores a AppCompat.
-
-Esta plataforma específicas que pueden utilizarse en XAML estableciendo el [ `Application.SendDisappearingEventOnPause` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendDisappearingEventOnPauseProperty), [ `Application.SendAppearingEventOnResume` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendAppearingEventOnResumeProperty), y [ `Application.ShouldPreserveKeyboardOnResume` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.ShouldPreserveKeyboardOnResumeProperty) propiedades adjuntas a `boolean` valores:
-
-```xaml
-<Application ...
-             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"             xmlns:androidAppCompat="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat;assembly=Xamarin.Forms.Core"
-             android:Application.WindowSoftInputModeAdjust="Resize"
-             androidAppCompat:Application.SendDisappearingEventOnPause="false"
-             androidAppCompat:Application.SendAppearingEventOnResume="false"
-             androidAppCompat:Application.ShouldPreserveKeyboardOnResume="true">
-  ...
-</Application>
-```
-
-Como alternativa, pueden usarse desde C# mediante la API fluida:
-
-```csharp
-using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
-using Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat;
-...
-
-Xamarin.Forms.Application.Current.On<Android>()
-     .UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Resize)
-     .SendDisappearingEventOnPause(false)
-     .SendAppearingEventOnResume(false)
-     .ShouldPreserveKeyboardOnResume(true);
-```
-
-El `Application.Current.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El [ `Application.SendDisappearingEventOnPause` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendDisappearingEventOnPause(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},System.Boolean)) método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) espacio de nombres, se usa para habilitar o deshabilitar la activación de la [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) eventos de página, cuando la aplicación entra en segundo plano. El [ `Application.SendAppearingEventOnResume` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendAppearingEventOnResume(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},System.Boolean)) método se utiliza para habilitar o deshabilitar la activación de la [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) eventos de página, cuando se reanuda la aplicación en segundo plano. El [ `Application.ShouldPreserveKeyboardOnResume` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.ShouldPreserveKeyboardOnResume(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},System.Boolean)) se usa el método de control si el teclado en pantalla se muestra en la reanudación, si se mostró en pausa, proporcionado que se establece el modo de funcionamiento del teclado en pantalla en [ `WindowSoftInputModeAdjust.Resize` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize).
-
-El resultado es que el [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) y [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) eventos de página no se desencadena en pausa de la aplicación y reanudación, respectivamente, y fue el teclado en pantalla de ese if que se muestra cuando la aplicación estaba en pausa, también se mostrará cuando se reanuda la aplicación:
-
-[![](android-images/keyboard-on-resume.png "Específico de plataforma de los eventos del ciclo de vida")](android-images/keyboard-on-resume-large.png#lightbox "específicos de plataforma de los eventos del ciclo de vida")
-
-<a name="webview-mixed-content" />
-
-## <a name="enabling-mixed-content-in-a-webview"></a>Lo que permite contenido mixto en una vista Web
-
-Este controles específicos de la plataforma si un [ `WebView` ](xref:Xamarin.Forms.WebView) puede mostrar contenido mixto en aplicaciones que tienen como destino API 21 o posterior. El contenido mixto es el contenido que se cargó inicialmente a través de una conexión HTTPS, pero que cargan recursos (por ejemplo, imágenes, audio, vídeo, hojas de estilo, scripts) en una conexión HTTP. Se consume en XAML estableciendo el [ `WebView.MixedContentMode` ](x:ref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.MixedContentModeProperty) propiedad adjunta a un valor de la [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) enumeración:
+Este específicos de la plataforma deshabilita este modo heredado de color, para que los colores establecidos en una vista por el usuario permanezcan incluso cuando la vista está deshabilitada. Se consume en XAML estableciendo el [ `VisualElement.IsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.IsLegacyColorModeEnabledProperty) propiedad adjunta `false`:
 
 ```xaml
 <ContentPage ...
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
-    <WebView ... android:WebView.MixedContentMode="AlwaysAllow" />
+    <StackLayout>
+        ...
+        <Button Text="Button"
+                TextColor="Blue"
+                BackgroundColor="Bisque"
+                android:VisualElement.IsLegacyColorModeEnabled="False" />
+        ...
+    </StackLayout>
 </ContentPage>
 ```
 
@@ -271,22 +125,66 @@ using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 ...
 
-webView.On<Android>().SetMixedContentMode(MixedContentHandling.AlwaysAllow);
+_legacyColorModeDisabledButton.On<Android>().SetIsLegacyColorModeEnabled(false);
 ```
 
-El `WebView.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El [ `WebView.SetMixedContentMode` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.SetMixedContentMode(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.WebView},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling)) método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se usa para controlar si se puede mostrar contenido mixto, con el [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) enumeración que proporciona tres valores posibles:
+El `VisualElement.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El [ `VisualElement.SetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.SetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.VisualElement},System.Boolean)) método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se usa para controlar si se deshabilita el modo de color heredado. Además, el [ `VisualElement.GetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.GetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.VisualElement})) método puede utilizarse para devolver si está deshabilitado el modo de color heredado.
 
-- [`AlwaysAllow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.AlwaysAllow) : indica que el [ `WebView` ](xref:Xamarin.Forms.WebView) permitirá a un origen HTTPS cargar el contenido desde un origen HTTP.
-- [`NeverAllow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.NeverAllow) : indica que el [ `WebView` ](xref:Xamarin.Forms.WebView) no permitirá que un origen HTTPS cargar el contenido desde un origen HTTP.
-- [`CompatibilityMode`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.CompatibilityMode) : indica que el [ `WebView` ](xref:Xamarin.Forms.WebView) intentará sea compatible con el enfoque del explorador de web del dispositivo más reciente. Puede tener algún contenido HTTP se puede cargar un origen de HTTPS y se bloquearán otros tipos de contenido. Los tipos de contenido que se bloquean o permiten pueden cambiar con cada versión de sistema operativo.
+El resultado es que se puede deshabilitar el modo de color heredados, para que los colores establecidos en una vista por el usuario permanezcan incluso cuando se deshabilita la vista:
 
-El resultado es que un determinado [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) valor se aplica a la [ `WebView` ](xref:Xamarin.Forms.WebView), que controla si se puede mostrar contenido mixto:
+![](android-images/legacy-color-mode-disabled.png "Modo heredado color deshabilitado")
 
-[![WebView mixto de control de contenido específico de la plataforma](android-images/webview-mixedcontent.png "WebView mixto de control de contenido específico de la plataforma")](android-images/webview-mixedcontent-large.png#lightbox "WebView mixto de control de contenido específico de la plataforma")
+> [!NOTE]
+> Al establecer un [ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup) en una vista, se omite completamente el modo de color heredado. Para obtener más información acerca de los estados visuales, vea [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+
+## <a name="views"></a>Vistas
+
+En Android, se proporciona la siguiente funcionalidad específica de la plataforma para las vistas de Xamarin.Forms:
+
+- Utilizando los valores de la sombra de los botones de Android y el relleno predeterminado. Para obtener más información, consulte [utilizando botones de Android](#button-padding-shadow).
+- Establecer el método de entrada de opciones del editor para el teclado en pantalla para una [ `Entry` ](xref:Xamarin.Forms.Entry). Para obtener más información, consulte [opciones de configuración de entrada de Input Method Editor](#entry-imeoptions).
+- Habilitar el desplazamiento rápido en un [ `ListView` ](xref:Xamarin.Forms.ListView) para obtener más información, consulte [Habilitar desplazamiento rápido en una ListView](#fastscroll).
+- Controlar si un [ `WebView` ](xref:Xamarin.Forms.WebView) puede mostrar contenido mixto. Para obtener más información, consulte [Habilitar contenido mixto en un objeto WebView](#webview-mixed-content).
+
+<a name="button-padding-shadow" />
+
+### <a name="using-android-buttons"></a>Mediante botones de Android
+
+Este específicos de la plataforma controla si los botones de Xamarin.Forms usan los valores de sombra de botones de Android y el relleno predeterminado. Se consume en XAML estableciendo el [ `Button.UseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPaddingProperty) y [ `Button.UseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadowProperty) adjunta propiedades a `boolean` valores:
+
+```xaml
+<ContentPage ...
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout>
+        ...
+        <Button ...
+                android:Button.UseDefaultPadding="true"
+                android:Button.UseDefaultShadow="true" />         
+    </StackLayout>
+</ContentPage>
+```
+
+Como alternativa, pueden usarse desde C# mediante la API fluida:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+button.On<Android>().SetUseDefaultPadding(true).SetUseDefaultShadow(true);
+```
+
+El `Button.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El [ `Button.SetUseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.SetUseDefaultPadding(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button},System.Boolean)) y[ `Button.SetUseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.SetUseDefaultShadow(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button},System.Boolean)) métodos, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se utilizan para controlar si los botones de Xamarin.Forms usan el valor predeterminado relleno y los valores de la sombra de botones de Android. Además, el [ `Button.UseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPadding(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button})) y [ `Button.UseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadow(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button})) métodos pueden usarse para devolver si un botón usa el valor predeterminado de relleno valor y el valor de la sombra de forma predeterminada, respectivamente.
+
+El resultado es que los botones de Xamarin.Forms pueden usar el relleno predeterminado y los valores de sombra de los botones de Android:
+
+![](android-images/button-padding-and-shadow.png "Modo heredado color deshabilitado")
+
+Tenga en cuenta que en la captura de pantalla encima de cada [ `Button` ](xref:Xamarin.Forms.Button) tiene definiciones idénticas, salvo que el derecho `Button` utiliza el relleno predeterminado y los valores de sombra de los botones de Android.
 
 <a name="entry-imeoptions" />
 
-## <a name="setting-entry-input-method-editor-options"></a>Opciones del Editor de métodos de entrada de configuración de entrada
+### <a name="setting-entry-input-method-editor-options"></a>Opciones del Editor de métodos de entrada de configuración de entrada
 
 Este específicos de la plataforma establece el método de entrada de opciones del editor (IME) para el teclado en pantalla para una [ `Entry` ](xref:Xamarin.Forms.Entry). Esto incluye la configuración del botón de acción del usuario en la esquina inferior del teclado en pantalla y las interacciones con el `Entry`. Se consume en XAML estableciendo el [ `Entry.ImeOptions` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Entry.ImeOptionsProperty) propiedad adjunta a un valor de la [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) enumeración:
 
@@ -330,24 +228,23 @@ El resultado es que un determinado [ `ImeFlags` ](xref:Xamarin.Forms.PlatformCon
 
 [![Entrada específica plataforma editor del método de entrada](android-images/entry-imeoptions.png "entrada específica plataforma editor del método de entrada")](android-images/entry-imeoptions-large.png#lightbox "entrada específica plataforma editor del método de entrada")
 
-<a name="legacy-color-mode" />
+<a name="fastscroll" />
 
-## <a name="disabling-legacy-color-mode"></a>Deshabilitar el modo de Color heredado
+### <a name="enabling-fast-scrolling-in-a-listview"></a>Habilitar el desplazamiento rápido en una ListView
 
-Algunas de las vistas de Xamarin.Forms cuentan con un modo de color heredado. En este modo, cuando el [ `IsEnabled` ](xref:Xamarin.Forms.VisualElement.IsEnabled) se establece la propiedad de la vista en `false`, la vista invalida los colores establecidos por el usuario con los colores nativo predeterminado para el estado deshabilitado. Para hacia atrás compatibilidad, este modo heredado de color permanece el comportamiento predeterminado para las vistas admitidas.
-
-Este específicos de la plataforma deshabilita este modo heredado de color, para que los colores establecidos en una vista por el usuario permanezcan incluso cuando la vista está deshabilitada. Se consume en XAML estableciendo el [ `VisualElement.IsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.IsLegacyColorModeEnabledProperty) propiedad adjunta `false`:
+Este específicos de la plataforma se usan para habilitar el desplazamiento rápido a través de los datos en un [ `ListView` ](xref:Xamarin.Forms.ListView). Se consume en XAML estableciendo el `ListView.IsFastScrollEnabled` propiedad adjunta un `boolean` valor:
 
 ```xaml
 <ContentPage ...
              xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
-    <StackLayout>
+    <StackLayout Margin="20">
         ...
-        <Button Text="Button"
-                TextColor="Blue"
-                BackgroundColor="Bisque"
-                android:VisualElement.IsLegacyColorModeEnabled="False" />
-        ...
+        <ListView ItemsSource="{Binding GroupedEmployees}"
+                  GroupDisplayBinding="{Binding Key}"
+                  IsGroupingEnabled="true"
+                  android:ListView.IsFastScrollEnabled="true">
+            ...
+        </ListView>
     </StackLayout>
 </ContentPage>
 ```
@@ -359,33 +256,32 @@ using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 ...
 
-_legacyColorModeDisabledButton.On<Android>().SetIsLegacyColorModeEnabled(false);
+var listView = new Xamarin.Forms.ListView { IsGroupingEnabled = true, ... };
+listView.SetBinding(ItemsView<Cell>.ItemsSourceProperty, "GroupedEmployees");
+listView.GroupDisplayBinding = new Binding("Key");
+listView.On<Android>().SetIsFastScrollEnabled(true);
 ```
 
-El `VisualElement.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El [ `VisualElement.SetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.SetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.VisualElement},System.Boolean)) método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se usa para controlar si se deshabilita el modo de color heredado. Además, el [ `VisualElement.GetIsLegacyColorModeEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.VisualElement.GetIsLegacyColorModeEnabled(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.VisualElement})) método puede utilizarse para devolver si está deshabilitado el modo de color heredado.
+El `ListView.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El `ListView.SetIsFastScrollEnabled` método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se usa para habilitar el desplazamiento rápido a través de los datos en un [ `ListView` ](xref:Xamarin.Forms.ListView). Además, el `SetIsFastScrollEnabled` método puede utilizarse para activar o desactivar el desplazamiento rápido mediante una llamada a la `IsFastScrollEnabled` método para devolver si se habilita el desplazamiento rápido:
 
-El resultado es que se puede deshabilitar el modo de color heredados, para que los colores establecidos en una vista por el usuario permanezcan incluso cuando se deshabilita la vista:
+```csharp
+listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScrollEnabled());
+```
 
-![](android-images/legacy-color-mode-disabled.png "Modo heredado color deshabilitado")
+El resultado es ese desplazamiento rápido a través de los datos en un [ `ListView` ](xref:Xamarin.Forms.ListView) puede habilitarse, que cambia el tamaño de la miniatura de desplazamiento:
 
-> [!NOTE]
-> Al establecer un [ `VisualStateGroup` ](xref:Xamarin.Forms.VisualStateGroup) en una vista, se omite completamente el modo de color heredado. Para obtener más información acerca de los estados visuales, vea [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+[![](android-images/fastscroll.png "ListView FastScroll específico de plataforma")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
 
-<a name="button-padding-shadow" />
+<a name="webview-mixed-content" />
 
-## <a name="using-android-buttons"></a>Mediante botones de Android
+### <a name="enabling-mixed-content-in-a-webview"></a>Lo que permite contenido mixto en una vista Web
 
-Este específicos de la plataforma controla si los botones de Xamarin.Forms usan los valores de sombra de botones de Android y el relleno predeterminado. Se consume en XAML estableciendo el [ `Button.UseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPaddingProperty) y [ `Button.UseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadowProperty) adjunta propiedades a `boolean` valores:
+Este controles específicos de la plataforma si un [ `WebView` ](xref:Xamarin.Forms.WebView) puede mostrar contenido mixto en aplicaciones que tienen como destino API 21 o posterior. El contenido mixto es el contenido que se cargó inicialmente a través de una conexión HTTPS, pero que cargan recursos (por ejemplo, imágenes, audio, vídeo, hojas de estilo, scripts) en una conexión HTTP. Se consume en XAML estableciendo el [ `WebView.MixedContentMode` ](x:ref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.MixedContentModeProperty) propiedad adjunta a un valor de la [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) enumeración:
 
 ```xaml
 <ContentPage ...
-            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
-    <StackLayout>
-        ...
-        <Button ...
-                android:Button.UseDefaultPadding="true"
-                android:Button.UseDefaultShadow="true" />         
-    </StackLayout>
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <WebView ... android:WebView.MixedContentMode="AlwaysAllow" />
 </ContentPage>
 ```
 
@@ -396,20 +292,98 @@ using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 ...
 
-button.On<Android>().SetUseDefaultPadding(true).SetUseDefaultShadow(true);
+webView.On<Android>().SetMixedContentMode(MixedContentHandling.AlwaysAllow);
 ```
 
-El `Button.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El [ `Button.SetUseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.SetUseDefaultPadding(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button},System.Boolean)) y[ `Button.SetUseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.SetUseDefaultShadow(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button},System.Boolean)) métodos, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se utilizan para controlar si los botones de Xamarin.Forms usan el valor predeterminado relleno y los valores de la sombra de botones de Android. Además, el [ `Button.UseDefaultPadding` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultPadding(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button})) y [ `Button.UseDefaultShadow` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Button.UseDefaultShadow(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Button})) métodos pueden usarse para devolver si un botón usa el valor predeterminado de relleno valor y el valor de la sombra de forma predeterminada, respectivamente.
+El `WebView.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El [ `WebView.SetMixedContentMode` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WebView.SetMixedContentMode(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.WebView},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling)) método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se usa para controlar si se puede mostrar contenido mixto, con el [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) enumeración que proporciona tres valores posibles:
 
-El resultado es que los botones de Xamarin.Forms pueden usar el relleno predeterminado y los valores de sombra de los botones de Android:
+- [`AlwaysAllow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.AlwaysAllow) : indica que el [ `WebView` ](xref:Xamarin.Forms.WebView) permitirá a un origen HTTPS cargar el contenido desde un origen HTTP.
+- [`NeverAllow`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.NeverAllow) : indica que el [ `WebView` ](xref:Xamarin.Forms.WebView) no permitirá que un origen HTTPS cargar el contenido desde un origen HTTP.
+- [`CompatibilityMode`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling.CompatibilityMode) : indica que el [ `WebView` ](xref:Xamarin.Forms.WebView) intentará sea compatible con el enfoque del explorador de web del dispositivo más reciente. Puede tener algún contenido HTTP se puede cargar un origen de HTTPS y se bloquearán otros tipos de contenido. Los tipos de contenido que se bloquean o permiten pueden cambiar con cada versión de sistema operativo.
 
-![](android-images/button-padding-and-shadow.png "Modo heredado color deshabilitado")
+El resultado es que un determinado [ `MixedContentHandling` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.MixedContentHandling) valor se aplica a la [ `WebView` ](xref:Xamarin.Forms.WebView), que controla si se puede mostrar contenido mixto:
 
-Tenga en cuenta que en la captura de pantalla encima de cada [ `Button` ](xref:Xamarin.Forms.Button) tiene definiciones idénticas, salvo que el derecho `Button` utiliza el relleno predeterminado y los valores de sombra de los botones de Android.
+[![WebView mixto de control de contenido específico de la plataforma](android-images/webview-mixedcontent.png "WebView mixto de control de contenido específico de la plataforma")](android-images/webview-mixedcontent-large.png#lightbox "WebView mixto de control de contenido específico de la plataforma")
+
+## <a name="pages"></a>Páginas
+
+En Android, se proporciona la siguiente funcionalidad específica de la plataforma para las páginas de Xamarin.Forms:
+
+- Establecer el alto de la barra de navegación en un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage). Para obtener más información, consulte [establecer el alto de la barra de navegación en una NavigationPage](#navigationpage-barheight).
+- Habilitar el gesto de deslizar rápidamente entre las páginas de un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Para obtener más información, consulte [habilitar gesto de deslizar rápidamente entre páginas en una TabbedPage](#enable_swipe_paging).
+- Establecer la posición de la barra de herramientas y el color en un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Para obtener más información, consulte [configuración TabbedPage barra de herramientas de selección de ubicación y Color](#tabbedpage-toolbar).
+
+<a name="navigationpage-barheight" />
+
+### <a name="setting-the-navigation-bar-height-on-a-navigationpage"></a>Configuración de la barra de navegación alto en una NavigationPage
+
+Este específicos de la plataforma establece el alto de la barra de navegación en un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage). Se consume en XAML estableciendo el [ `NavigationPage.BarHeight` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) propiedad enlazable en un valor entero:
+
+```xaml
+<NavigationPage ...
+                xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat;assembly=Xamarin.Forms.Core"
+                android:NavigationPage.BarHeight="450">
+    ...
+</NavigationPage>
+```
+
+Como alternativa, pueden usarse desde C# mediante la API fluida:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat;
+...
+
+public class AndroidNavigationPageCS : Xamarin.Forms.NavigationPage
+{
+    public AndroidNavigationPageCS()
+    {
+        On<Android>().SetBarHeight(450);
+    }
+}
+```
+
+El `NavigationPage.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en la compatibilidad de aplicaciones Android. El [ `NavigationPage.SetBarHeight` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.SetBarHeight(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.NavigationPage},System.Int32)) método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) espacio de nombres, se usa para establecer el alto de la barra de navegación en un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage). Además, el [ `NavigationPage.GetBarHeight` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.GetBarHeight(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.NavigationPage})) método puede utilizarse para devolver el alto de la barra de navegación en el `NavigationPage`.
+
+El resultado es que el alto de la barra de navegación en un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) se pueden establecer:
+
+![](android-images/navigationpage-barheight.png "NavigationPage alto de la barra de navegación")
+
+<a name="enable_swipe_paging" />
+
+### <a name="enabling-swiping-between-pages-in-a-tabbedpage"></a>Habilitar el gesto de deslizar rápidamente entre páginas en una TabbedPage
+
+Este específicos de la plataforma se utilizan para habilitar el gesto de deslizar rápidamente con un gesto del dedo horizontal entre las páginas de un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Se consume en XAML estableciendo el [ `TabbedPage.IsSwipePagingEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.IsSwipePagingEnabledProperty) propiedad adjunta un `boolean` valor:
+
+```xaml
+<TabbedPage ...
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.OffscreenPageLimit="2"
+            android:TabbedPage.IsSwipePagingEnabled="true">
+    ...
+</TabbedPage>
+```
+
+Como alternativa, pueden usarse desde C# mediante la API fluida:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+On<Android>().SetOffscreenPageLimit(2)
+             .SetIsSwipePagingEnabled(true);
+```
+
+El `TabbedPage.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El [ `TabbedPage.SetIsSwipePagingEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetIsSwipePagingEnabled(Xamarin.Forms.BindableObject,System.Boolean)) método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se utiliza para habilitar el gesto de deslizar rápidamente entre las páginas de un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Además, el `TabbedPage` clase en el `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` espacio de nombres también tiene un [ `EnableSwipePaging` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.EnableSwipePaging(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.TabbedPage})) método que permite este específicos de la plataforma, y un [ `DisableSwipePaging` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.DisableSwipePaging(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.TabbedPage})) método que deshabilita Esta plataforma específica. El [ `TabbedPage.OffscreenPageLimit` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.OffscreenPageLimitProperty) propiedad adjunta, y [ `SetOffscreenPageLimit` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.SetOffscreenPageLimit(Xamarin.Forms.BindableObject,System.Int32)) método, se utilizan para establecer el número de páginas que se deben conservar en un estado de inactividad a cada lado de la página actual.
+
+El resultado es que la paginación a través de las páginas se muestran por Deslizar rápidamente un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage) está habilitado:
+
+![](android-images/tabbedpage-swipe.png)
 
 <a name="tabbedpage-toolbar" />
 
-## <a name="setting-tabbedpage-toolbar-placement-and-color"></a>Establecer ubicación de la barra de herramientas TabbedPage y Color
+### <a name="setting-tabbedpage-toolbar-placement-and-color"></a>Establecer ubicación de la barra de herramientas TabbedPage y Color
 
 Estas funcionalidades específicas de plataforma se utilizan para establecer la selección de ubicación y color de la barra de herramientas en un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Que se consumen en XAML estableciendo el [ `TabbedPage.ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.ToolbarPlacementProperty) propiedad adjunta a un valor de la [ `ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ToolbarPlacement) enumeración y el [ `TabbedPage.BarItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.BarItemColorProperty) y [ `TabbedPage.BarSelectedItemColor` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.TabbedPage.BarSelectedItemColorProperty) adjunta propiedades a un [ `Color` ](xref:Xamarin.Forms.Color):
 
@@ -449,6 +423,86 @@ Además, el [ `TabbedPage.SetBarItemColor` ](xref:Xamarin.Forms.PlatformConfigur
 El resultado es que se pueden establecer la posición de la barra de herramientas, el color de los elementos de la barra de herramientas y el color del elemento seleccionado de la barra de herramientas en un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage):
 
 ![](android-images/tabbedpage-toolbar-placement.png)
+
+## <a name="application"></a>Application
+
+En Android, se proporciona la siguiente funcionalidad específica de la plataforma para Xamarin.Forms [ `Application` ](xref:Xamarin.Forms.Application) clase:
+
+- Establecer el modo de funcionamiento de un teclado en pantalla. Para obtener más información, consulte [establecer el modo de entrada de teclado temporal](#soft_input_mode).
+- Deshabilitar la [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) y [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) página eventos de ciclo de vida en pausa y reanudar, respectivamente, para las aplicaciones que usan AppCompat. Para obtener más información, consulte [deshabilitando el Disappearing y eventos de ciclo de vida de la página que aparece](#disable_lifecycle_events).
+
+<a name="soft_input_mode" />
+
+### <a name="setting-the-soft-keyboard-input-mode"></a>Establecer el modo de entrada de teclado en pantalla
+
+Este específicos de la plataforma se usa para establecer el modo de funcionamiento para un área de entrada de teclado en pantalla y se consume en XAML estableciendo el [ `Application.WindowSoftInputModeAdjust` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Application.WindowSoftInputModeAdjustProperty) propiedad adjunta a un valor de la [ `WindowSoftInputModeAdjust` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust) enumeración:
+
+```xaml
+<Application ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             android:Application.WindowSoftInputModeAdjust="Resize">
+  ...
+</Application>
+```
+
+Como alternativa, pueden usarse desde C# mediante la API fluida:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+App.Current.On<Android>().UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Resize);
+```
+
+El `Application.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El [ `Application.UseWindowSoftInputModeAdjust` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.Application.UseWindowSoftInputModeAdjust(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust)) método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se usa para establecer el modo de funcionamiento del área de entrada de teclado en pantalla, con el [ `WindowSoftInputModeAdjust` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust) enumeración que proporciona dos valores: [ `Pan` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Pan) y [ `Resize` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize). El `Pan` valor usa la [ `AdjustPan` ](https://developer.xamarin.com/api/field/Android.Views.SoftInput.AdjustPan/) la opción de ajuste, que no cambiar el tamaño de la ventana cuando un control de entrada tiene el foco. En su lugar, el contenido de la ventana distribuido para que el foco actual no está oculto por el teclado en pantalla. El `Resize` valor usa la [ `AdjustResize` ](https://developer.xamarin.com/api/field/Android.Views.SoftInput.AdjustResize/) la opción de ajuste, que cambia el tamaño de la ventana cuando un control de entrada tiene el foco, para dejar espacio para el teclado en pantalla.
+
+El resultado es que el teclado en pantalla se puede establecer el modo de funcionamiento cuando un control de entrada tiene el foco del área de entrada:
+
+[![](android-images/pan-resize.png "Teclado en pantalla funciona en modo específico de la plataforma")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
+
+<a name="disable_lifecycle_events" />
+
+### <a name="disabling-the-disappearing-and-appearing-page-lifecycle-events"></a>Deshabilitar los eventos de ciclo de vida de página que aparece y desaparece
+
+Este específicos de la plataforma se usan para deshabilitar la [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) y [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) eventos de página en la aplicación pausar y reanudar, respectivamente, para las aplicaciones que usan AppCompat. Además, incluye la capacidad para controlar si se muestra el teclado en pantalla al reanudar si se mostrara en pausa, siempre que el modo de funcionamiento del teclado en pantalla se establece en [ `WindowSoftInputModeAdjust.Resize` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize).
+
+> [!NOTE]
+> Tenga en cuenta que estos eventos están habilitados de forma predeterminada para conservar el comportamiento existente para las aplicaciones que dependen de los eventos. Deshabilitar estos eventos hace que el ciclo de eventos AppCompat coincide con el ciclo de eventos anteriores a AppCompat.
+
+Esta plataforma específicas que pueden utilizarse en XAML estableciendo el [ `Application.SendDisappearingEventOnPause` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendDisappearingEventOnPauseProperty), [ `Application.SendAppearingEventOnResume` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendAppearingEventOnResumeProperty), y [ `Application.ShouldPreserveKeyboardOnResume` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.ShouldPreserveKeyboardOnResumeProperty) propiedades adjuntas a `boolean` valores:
+
+```xaml
+<Application ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"             xmlns:androidAppCompat="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat;assembly=Xamarin.Forms.Core"
+             android:Application.WindowSoftInputModeAdjust="Resize"
+             androidAppCompat:Application.SendDisappearingEventOnPause="false"
+             androidAppCompat:Application.SendAppearingEventOnResume="false"
+             androidAppCompat:Application.ShouldPreserveKeyboardOnResume="true">
+  ...
+</Application>
+```
+
+Como alternativa, pueden usarse desde C# mediante la API fluida:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat;
+...
+
+Xamarin.Forms.Application.Current.On<Android>()
+     .UseWindowSoftInputModeAdjust(WindowSoftInputModeAdjust.Resize)
+     .SendDisappearingEventOnPause(false)
+     .SendAppearingEventOnResume(false)
+     .ShouldPreserveKeyboardOnResume(true);
+```
+
+El `Application.Current.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El [ `Application.SendDisappearingEventOnPause` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendDisappearingEventOnPause(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},System.Boolean)) método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat) espacio de nombres, se usa para habilitar o deshabilitar la activación de la [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) eventos de página, cuando la aplicación entra en segundo plano. El [ `Application.SendAppearingEventOnResume` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.SendAppearingEventOnResume(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},System.Boolean)) método se utiliza para habilitar o deshabilitar la activación de la [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) eventos de página, cuando se reanuda la aplicación en segundo plano. El [ `Application.ShouldPreserveKeyboardOnResume` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.Application.ShouldPreserveKeyboardOnResume(Xamarin.Forms.IPlatformElementConfiguration{Xamarin.Forms.PlatformConfiguration.Android,Xamarin.Forms.Application},System.Boolean)) se usa el método de control si el teclado en pantalla se muestra en la reanudación, si se mostró en pausa, proporcionado que se establece el modo de funcionamiento del teclado en pantalla en [ `WindowSoftInputModeAdjust.Resize` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.WindowSoftInputModeAdjust.Resize).
+
+El resultado es que el [ `Disappearing` ](xref:Xamarin.Forms.Page.Appearing) y [ `Appearing` ](xref:Xamarin.Forms.Page.Appearing) eventos de página no se desencadena en pausa de la aplicación y reanudación, respectivamente, y fue el teclado en pantalla de ese if que se muestra cuando la aplicación estaba en pausa, también se mostrará cuando se reanuda la aplicación:
+
+[![](android-images/keyboard-on-resume.png "Específico de plataforma de los eventos del ciclo de vida")](android-images/keyboard-on-resume-large.png#lightbox "específicos de plataforma de los eventos del ciclo de vida")
 
 ## <a name="summary"></a>Resumen
 

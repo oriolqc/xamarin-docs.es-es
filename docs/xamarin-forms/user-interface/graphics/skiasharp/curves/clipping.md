@@ -4,14 +4,14 @@ description: En este artículo se explica cómo usar rutas de acceso de SkiaShar
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 0c07d68535349004eeefeaa18daa9c59b889a6a7
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 87f1ad3956bdb43c82a7ab57ea9171e9a28dd558
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615293"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Recorte con trazados y regiones
@@ -22,7 +22,7 @@ A veces es necesario restringir la representación de gráficos a un área deter
 
 ![](clipping-images/clippingsample.png "Monkey a través de un principal")
 
-El *área recorte* es el área de la pantalla en la que se representan los gráficos. No se representa todo lo que se muestra fuera del área de recorte. El área de recorte normalmente se define mediante una [ `SKPath` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPath/) objeto pero también puede definir un área de recorte mediante un [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) objeto. Estos dos tipos de objetos en primer lugar parecen estar relacionadas con porque se puede crear una región de una ruta de acceso. Sin embargo, no se puede crear una ruta de acceso de una región e internamente son muy diferentes: una ruta de acceso consta de una serie de líneas y curvas, mientras que una región se define mediante una serie de líneas de exploración horizontal.
+El *área recorte* es el área de la pantalla en la que se representan los gráficos. No se representa todo lo que se muestra fuera del área de recorte. El área de recorte normalmente se define mediante un rectángulo o un [ `SKPath` ](xref:SkiaSharp.SKPath) objeto, pero también puede definir un área de recorte mediante un [ `SKRegion` ](xref:SkiaSharp.SKRegion) objeto. Estos dos tipos de objetos en primer lugar parecen estar relacionadas con porque se puede crear una región de una ruta de acceso. Sin embargo, no se puede crear una ruta de acceso de una región e internamente son muy diferentes: una ruta de acceso consta de una serie de líneas y curvas, mientras que una región se define mediante una serie de líneas de exploración horizontal.
 
 La imagen anterior se creó mediante la **Monkey a través de ojo de cerradura** página. El [ `MonkeyThroughKeyholePage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/MonkeyThroughKeyholePage.cs) clase define una ruta de acceso utilizando los datos SVG y utiliza el constructor para cargar un mapa de bits de recursos del programa:
 
@@ -104,15 +104,15 @@ El trazado de recorte cuando está sujeto a las transformaciones en vigor el `Cl
 
 ## <a name="combining-clipping-paths"></a>Combinar trazados de recorte
 
-En realidad, el área de recorte no es "set" el `ClipPath` método. En su lugar, se combina con el trazado de recorte existente, que comienza como un rectángulo de tamaño igual a la pantalla. Puede obtener los límites rectangulares del área recorte mediante la [ `ClipBounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.ClipBounds/) propiedad o el [ `ClipDeviceBounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKCanvas.ClipDeviceBounds/) propiedad. El `ClipBounds` propiedad devuelve un `SKRect` valor que refleja cualquier transforma que pueda estar en vigor. El `ClipDeviceBounds` propiedad devuelve un `RectI` valor. Esto es un rectángulo con las dimensiones de entero y describe el área de recorte en las dimensiones de píxeles reales.
+En realidad, el área de recorte no es "set" el `ClipPath` método. En su lugar, se combina con el trazado de recorte existente, que comienza como un tamaño igual al lienzo del rectángulo. Puede obtener los límites rectangulares del área recorte mediante la [ `ClipBounds` ](xref:SkiaSharp.SKCanvas.ClipBounds) propiedad o el [ `ClipDeviceBounds` ](xref:SkiaSharp.SKCanvas.ClipDeviceBounds) propiedad. El `ClipBounds` propiedad devuelve un `SKRect` valor que refleja cualquier transforma que pueda estar en vigor. El `ClipDeviceBounds` propiedad devuelve un `RectI` valor. Esto es un rectángulo con las dimensiones de entero y describe el área de recorte en las dimensiones de píxeles reales.
 
-Todas las llamadas a `ClipPath` reduce el área de recorte combinando el área de recorte con una nueva área. La sintaxis completa de la [ `ClipPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipPath/p/SkiaSharp.SKPath/SkiaSharp.SKClipOperation/System.Boolean/) método es:
+Todas las llamadas a `ClipPath` reduce el área de recorte combinando el área de recorte con una nueva área. La sintaxis completa de la [ `ClipPath` ](xref:SkiaSharp.SKCanvas.ClipPath(SkiaSharp.SKPath,SkiaSharp.SKClipOperation,System.Boolean)) método es:
 
 ```csharp
 public void ClipPath(SKPath path, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
 ```
 
-También hay un [ `ClipRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipRect/p/SkiaSharp.SKRect/SkiaSharp.SKClipOperation/System.Boolean/) método que combina el área de recorte con un rectángulo:
+También hay un [ `ClipRect` ](xref:SkiaSharp.SKCanvas.ClipRect(SkiaSharp.SKRect,SkiaSharp.SKClipOperation,System.Boolean)) método que combina el área de recorte con un rectángulo:
 
 ```csharp
 public Void ClipRect(SKRect rect, SKClipOperation operation = SKClipOperation.Intersect, Boolean antialias = false);
@@ -167,11 +167,11 @@ Lo que queda es la intersección de estos cuatro círculos:
 
 [![](clipping-images//fourcircleintersectclip-small.png "Captura de pantalla de la página cuatro Clip de círculo forman una intersección con triple")](clipping-images/fourcircleintersectclip-large.png#lightbox "Triple captura de pantalla de la página cuatro Clip de círculo forman una intersección")
 
-El [ `SKClipOperation` ](https://developer.xamarin.com/api/type/SkiaSharp.SKClipOperation/) enumeración tiene solo dos miembros:
+El [ `SKClipOperation` ](xref:SkiaSharp.SKClipOperation) enumeración tiene solo dos miembros:
 
-- [`Difference`](https://developer.xamarin.com/api/field/SkiaSharp.SKClipOperation.Difference/) Quita la ruta de acceso especificada o un rectángulo de área de recorte existente
+- `Difference` Quita la ruta de acceso especificada o un rectángulo de área de recorte existente
 
-- [`Intersect`](https://developer.xamarin.com/api/field/SkiaSharp.SKClipOperation.Intersect/) forma una intersección con la ruta de acceso especificada o un rectángulo con área de recorte existente
+- `Intersect` forma una intersección con la ruta de acceso especificada o un rectángulo con área de recorte existente
 
 Si reemplaza los cuatro `SKClipOperation.Intersect` argumentos en el `FourCircleIntersectClipPage` clase con `SKClipOperation.Difference`, verá lo siguiente:
 
@@ -248,33 +248,31 @@ Una llamada a `DrawPaint` normalmente hace que todo el lienzo para rellenarse co
 
 ## <a name="exploring-regions"></a>Exploración de las regiones
 
-Si ha explorado la documentación de API de `SKCanvas`, es posible que haya observado las sobrecargas de los `ClipPath` y `ClipRect` métodos que son similares a los métodos descritos anteriormente, pero en su lugar, tienen un parámetro denominado [ `SKRegionOperation` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegionOperation/) lugar `SKClipOperation`. `SKRegionOperation` tiene seis miembros, que proporciona un poco más flexibilidad en la combinación de rutas de acceso a las áreas de formulario recorte:
+También puede definir un área de recorte en términos de un [ `SKRegion` ](xref:SkiaSharp.SKRegion) objeto.
 
-- [`Difference`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Difference/)
+Una recién creada `SKRegion` objeto que describe un área vacía. Normalmente es la primera llamada en el objeto [ `SetRect` ](xref:SkiaSharp.SKRegion.SetRect(SkiaSharp.SKRectI)) para que la región describe un área rectangular. El parámetro `SetRect` es un `SKRectI` valor &mdash; un rectángulo entero coordina porque especifica el rectángulo de píxeles. A continuación, puede llamar a [ `SetPath` ](xref:SkiaSharp.SKRegion.SetPath(SkiaSharp.SKPath,SkiaSharp.SKRegion)) con un `SKPath` objeto. Esto crea una región que es el mismo que el interior de la ruta de acceso, pero se recorta según la región rectangular inicial.
 
-- [`Intersect`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Intersect/)
-
-- [`Union`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Union/)
-
-- [`XOR`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.XOR/)
-
-- [`ReverseDifference`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.ReverseDifference/)
-
-- [`Replace`](https://developer.xamarin.com/api/field/SkiaSharp.SKRegionOperation.Replace/)
-
-Sin embargo, las sobrecargas de `ClipPath` y `ClipRect` con `SKRegionOperation` parámetros están obsoletos y no puede utilizarse.
-
-Puede seguir usando el `SKRegionOperation` enumeración pero requiere que se defina un área de recorte en términos de un [ `SKRegion` ](https://developer.xamarin.com/api/type/SkiaSharp.SKRegion/) objeto.
-
-Una recién creada `SKRegion` objeto que describe un área vacía. Normalmente es la primera llamada en el objeto [ `SetRect` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetRect/p/SkiaSharp.SKRectI/) para que la región describe un área rectangular. El parámetro `SetRect` es un una `SKRectI` valor &mdash; el valor de rectángulo con las propiedades de entero. A continuación, puede llamar a [ `SetPath` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.SetPath/p/SkiaSharp.SKPath/SkiaSharp.SKRegion/) con un `SKPath` objeto. Esto crea una región que es el mismo que el interior de la ruta de acceso, pero se recorta según la región rectangular inicial.
-
-El `SKRegionOperation` enumeración solo entra en juego cuando se llama a uno de los [ `Op` ](https://developer.xamarin.com/api/member/SkiaSharp.SKRegion.Op/p/SkiaSharp.SKRegion/SkiaSharp.SKRegionOperation/) sobrecargas del método, como esta:
+La región también se puede modificar mediante una llamada a uno de los [ `Op` ](xref:SkiaSharp.SKRegion.Op*) sobrecargas del método, como esta:
 
 ```csharp
 public Boolean Op(SKRegion region, SKRegionOperation op)
 ```
 
-La región que se va a realizar la `Op` llamada en se combina con la región especificada como un parámetro en función de la `SKRegionOperation` miembro. Cuando finalmente se adecuado para el recorte de una región, que puede establecer como el área de recorte del lienzo mediante la [ `ClipRegion` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.ClipRegion/p/SkiaSharp.SKRegion/SkiaSharp.SKClipOperation/) método `SKCanvas`:
+El [ `SKRegionOperation` ](xref:SkiaSharp.SKRegionOperation) es similar a la enumeración `SKClipOperation` pero tiene más miembros:
+
+- `Difference`
+
+- `Intersect`
+
+- `Union`
+
+- `XOR`
+
+- `ReverseDifference`
+
+- `Replace`
+
+La región que se va a realizar la `Op` llamada en se combina con la región especificada como un parámetro en función de la `SKRegionOperation` miembro. Cuando finalmente se adecuado para el recorte de una región, que puede establecer como el área de recorte del lienzo mediante la [ `ClipRegion` ](xref:SkiaSharp.SKCanvas.ClipRegion(SkiaSharp.SKRegion,SkiaSharp.SKClipOperation)) método `SKCanvas`:
 
 ```csharp
 public void ClipRegion(SKRegion region, SKClipOperation operation = SKClipOperation.Intersect)
@@ -364,9 +362,9 @@ Esta es una gran diferencia entre el `ClipPath` método y el `ClipRegion` métod
 
 Para comprender el motivo de esta diferencia, es útil comprender qué una región está. Si ha pensado en cómo las operaciones de clip o las operaciones de región podrían implementarse internamente, probablemente parece muy complicado. Se combinan varias rutas de acceso potencialmente muy complejos y el contorno de la ruta de acceso resultante es probablemente una pesadilla algorítmica.
 
-Pero este trabajo se ha simplificado considerablemente si cada ruta de acceso se reduce a una serie de líneas de exploración horizontal, como las de tubos de vacío anticuado televisores. Cada línea de barrido es simplemente una línea horizontal con un punto inicial y un punto de conexión. Por ejemplo, se puede descomponer un círculo con un radio de 10 a 20 líneas de exploración horizontal, cada uno de los cuales comienza en la parte izquierda del círculo y termina en la parte derecha. Combinar dos círculos con cualquier operación de región pasa a ser muy sencillo porque es simplemente una cuestión de examen de las coordenadas de inicio y finalización de cada par de líneas de exploración correspondiente.
+Este trabajo se ha simplificado considerablemente si cada ruta de acceso se reduce a una serie de líneas de exploración horizontal, como las de tubos de vacío anticuado televisores. Cada línea de barrido es simplemente una línea horizontal con un punto inicial y un punto de conexión. Por ejemplo, un círculo con un radio de 10 píxeles se puede descomponer en 20 líneas de exploración horizontal, cada uno de los cuales comienza en la parte izquierda del círculo y termina en la parte derecha. Combinar dos círculos con cualquier operación de región pasa a ser muy sencillo porque es simplemente una cuestión de examen de las coordenadas de inicio y finalización de cada par de líneas de exploración correspondiente.
 
-Esto es lo que es una región: una serie de líneas de exploración horizontal que define un área.
+Esto es lo que es una región: una serie de líneas horizontales que definen un área.
 
 Sin embargo, cuando un área se reduce a una serie de análisis de las líneas, estas líneas se basan en una dimensión de píxel concreto de examen. En realidad, la región no es un objeto de gráficos vectoriales. Está más cerca de naturaleza un mapa de bits monocromático comprimido a una ruta de acceso. Por lo tanto, las regiones no se pueden escalar o girar sin perder fidelidad y por ese motivo no se transforman cuando se usa para las áreas de recorte.
 
@@ -514,5 +512,5 @@ Realmente no parece un trébol de cuatro – hoja, pero es una imagen que sería
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -1,24 +1,44 @@
 ---
-title: Notas específicas de plataforma de SkiaSharp
+title: Notas específicas de la plataforma de SkiaSharp
 description: Este documento describe los detalles específicos de la plataforma a SkiaSharp. Proporciona código de ejemplo para iOS, Android, macOS, Windows y Xamarin.Forms.
 ms.prod: xamarin
 ms.techonology: xamarin-skiasharp
 ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
-author: charlespetzold
-ms.author: chape
-ms.date: 03/24/2017
-ms.openlocfilehash: 05c6ae6553a2e869b9eb7e038abd7b1c34350551
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/03/2018
+ms.openlocfilehash: 5d6cf6b36d4f454d3124a33ab9cb289e40e0e1ed
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615813"
 ---
-# <a name="skiasharp-platform-specific-notes"></a>Notas específicas de plataforma de SkiaSharp
+# <a name="skiasharp-platform-specific-notes"></a>Notas específicas de la plataforma de SkiaSharp
 
 Los ejemplos siguientes asignación búferes de la imagen manualmente, esto se hace para ilustrar un patrón común de plataforma que se usa para dibujar en un búfer RBGA existente proporcionado por la plataforma.
 
 No es necesario usar esta expresión si no desea.  Hay una sobrecarga que se crean y administran el almacenamiento de respaldo para la imagen para usted.
+
+## <a name="android"></a>Android
+
+```csharp
+var width = (float)skiaView.Width;
+var height = (float)skiaView.Height;
+
+using (var bitmap = Bitmap.CreateBitmap (canvas.Width, canvas.Height, Bitmap.Config.Argb8888)) {
+  try {
+    using (var surface = SKSurface.Create (canvas.Width, canvas.Height, SKColorType.Rgba_8888, SKAlphaType.Premul, bitmap.LockPixels (), canvas.Width * 4)) {
+      var skcanvas = surface.Canvas;
+      skcanvas.Scale (((float)canvas.Width)/width, ((float)canvas.Height)/height);
+      // DoDraw (skcanvas);
+    }
+  } finally {
+    bitmap.UnlockPixels ();
+  }
+  canvas.DrawBitmap (bitmap, 0, 0, null);
+}
+```
 
 ## <a name="ios"></a>iOS
 
@@ -49,26 +69,6 @@ try {
   if (buff != IntPtr.Zero) {
     System.Runtime.InteropServices.Marshal.FreeCoTaskMem (buff);
   }
-}
-```
-
-## <a name="android"></a>Android
-
-```csharp
-var width = (float)skiaView.Width;
-var height = (float)skiaView.Height;
-
-using (var bitmap = Bitmap.CreateBitmap (canvas.Width, canvas.Height, Bitmap.Config.Argb8888)) {
-  try {
-    using (var surface = SKSurface.Create (canvas.Width, canvas.Height, SKColorType.Rgba_8888, SKAlphaType.Premul, bitmap.LockPixels (), canvas.Width * 4)) {
-      var skcanvas = surface.Canvas;
-      skcanvas.Scale (((float)canvas.Width)/width, ((float)canvas.Height)/height);
-      // DoDraw (skcanvas);
-    }
-  } finally {
-    bitmap.UnlockPixels ();
-  }
-  canvas.DrawBitmap (bitmap, 0, 0, null);
 }
 ```
 
@@ -116,11 +116,3 @@ using (var bitmap = new Bitmap(width, height, PixelFormat.Format32bppPArgb)) {
   e.Graphics.DrawImage(bitmap, new Rectangle(0, 0, Width, Height));
 }
 ```
-
-## <a name="xamarinforms"></a>Xamarin.Forms
-
-Para incluir SkiaSharp en su Xamarin.Forms aplicaciones consulte la Guía de [utilizando SkiaSharp en Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
-
-## <a name="related-links"></a>Vínculos relacionados
-
-- [IOS libro de SkiaSharp](https://developer.xamarin.com/workbooks/graphics/skiasharp/logo/skialogo-ios.workbook)

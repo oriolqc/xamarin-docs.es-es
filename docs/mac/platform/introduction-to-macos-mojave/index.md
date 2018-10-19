@@ -1,32 +1,24 @@
 ---
 title: Introducción a macOS Mojave
-description: Este documento proporciona un alto nivel de información general de características nuevas y actualizadas de Mojave macOS para vista previa de qué Xamarin versión actualmente ofrece enlaces de C#.
+description: Este documento proporciona un alto nivel de información general de las características nuevas y actualizadas en macOS Mojave.
 ms.prod: xamarin
 ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 07/08/2018
-ms.openlocfilehash: 916a1323127ac9be387c9465fb660dd0e7569a93
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: ce293a7c97a2cb4975baef807ded9a8fd0a90476
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39615839"
 ---
 # <a name="introduction-to-macos-mojave"></a>Introducción a macOS Mojave
 
-![Vista previa](~/media/shared/preview.png)
+Este documento proporciona un alto nivel de información general de las características nuevas y actualizadas en macOS Mojave.
 
-> [!WARNING]
-> Soporte de Xamarin para macOS SDK Mojave distribuidos con Xcode 10 está actualmente en versión preliminar, lo que significa que puede contener errores, no es característica completa, y puede cambiar. Usar solo para realizar experimentos.
-
-Este documento proporciona un alto nivel de información general de características nuevas y actualizadas de Mojave macOS para vista previa de qué Xamarin versión actualmente ofrece enlaces de C#.
-
-Para empezar a crear aplicaciones de Mojave con Xamarin de macOS, eche un vistazo a:
-
-- El [Guía de introducción](~/mac/platform/introduction-to-macos-mojave/get-started.md)
-- La versión preliminar de Xamarin [liberar la entrada de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+Para empezar a crear aplicaciones de Mojave con Xamarin de macOS, eche un vistazo a la [Guía de introducción](~/mac/platform/introduction-to-macos-mojave/get-started.md) para [Xamarin.Mac 5.0](https://developer.xamarin.com/releases/mac/xamarin.mac_5/xamarin.mac_5.0/).
 
 ## <a name="dark-mode"></a>Modo oscuro
 
@@ -44,8 +36,16 @@ El marco de lenguaje Natural permite que las aplicaciones realizar varios tipos 
 
 El marco de trabajo de visión incluye un detector de caras mejorada que puede detectar caras en las distintas orientaciones. Además, las revisiones de la solicitud ahora pueden utilizarse para seleccionar una revisión concreta de algoritmo de marco de trabajo de visión.
 
+## <a name="network-framework"></a>Marco de redes
+
+Marco de redes, la red de la pila subyacente el `URLSession` API suele utilizarse en aplicaciones de iOS, ahora está disponible como un marco de trabajo independiente, lo que sea más fácil trabajar con TCP, UDP, TLS, IPv4 e IPv6 y mucho más.
+
+## <a name="deprecations"></a>Elementos obsoletos
+
+Con macOS Mojave, Apple ha dejado de OpenGL ES y OpenCL, [alientan a los desarrolladores](https://developer.apple.com/macos/whats-new/) adoptar el sistema operativo y los sombreadores de rendimiento de sistema operativo.
+
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplos de Xamarin.Mac](https://developer.xamarin.com/samples/mac/)
 - [macOS: desarrollador de Apple](https://developer.apple.com/macos/)
-- Versión preliminar de Xamarin [liberar la entrada de blog](https://releases.xamarin.com/preview-release-xcode-10-beta-5/)
+- [Notas de la versión 5.0 de Xamarin.Mac](https://developer.xamarin.com/releases/mac/xamarin.mac_5/xamarin.mac_5.0/)

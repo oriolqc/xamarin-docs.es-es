@@ -1,5 +1,5 @@
 ---
-title: Agregar un reconocedor de gestos de movimiento de Tap
+title: Agregar un reconocedor de movimiento de tap
 description: En este artículo se explica cómo usar el gesto de pulsar para la detección de derivación de una aplicación de Xamarin.Forms. Detección de TAP se implementa con la clase TapGestureRecognizer.
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: e602ae1f140640d9a895b65d78feab3d0a3b7861
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a28afb30770f15861aef06643e7f51070199ea9b
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38994859"
 ---
-# <a name="adding-a-tap-gesture-gesture-recognizer"></a>Agregar un reconocedor de gestos de movimiento de Tap
+# <a name="adding-a-tap-gesture-recognizer"></a>Agregar un reconocedor de movimiento de tap
 
 _El gesto de pulsar se usa para la detección de tap y se implementa con la clase TapGestureRecognizer._
-
-## <a name="overview"></a>Información general
 
 Para que un elemento de interfaz de usuario puede hacer clic con el gesto de pulsar, cree un [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) de la instancia, controlar el [ `Tapped` ](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) eventos y agregue el reconocedor de gestos de nuevo a la [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) colección en el elemento de interfaz de usuario. El siguiente ejemplo de código muestra un `TapGestureRecognizer` adjunta a un [ `Image` ](xref:Xamarin.Forms.Image) elemento:
 
@@ -72,7 +70,7 @@ void OnTapGestureRecognizerTapped(object sender, EventArgs args)
 
 ## <a name="using-icommand"></a>Mediante ICommand
 
-Las aplicaciones que usan el patrón Mvvm suelen usar `ICommand` en lugar de inserción de controladores de eventos directamente. El [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) puede admitir fácilmente `ICommand` estableciendo el enlace en el código:
+Las aplicaciones que usan el patrón Model-View-ViewModel (MVVM) suelen usar `ICommand` en lugar de inserción de controladores de eventos directamente. El [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) puede admitir fácilmente `ICommand` estableciendo el enlace en el código:
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -113,10 +111,6 @@ public class TapViewModel : INotifyPropertyChanged
     //region INotifyPropertyChanged code omitted
 }
 ```
-
-## <a name="summary"></a>Resumen
-
-El gesto de pulsar se usa para la detección de tap y se implementa con la [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) clase. Se puede especificar el número de pesos para reconocer doble punteo (triples o más pulsa) comportamiento.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

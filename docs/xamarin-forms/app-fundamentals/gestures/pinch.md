@@ -1,5 +1,5 @@
 ---
-title: Adición de un módulo de reconocimiento del gesto Pinch
+title: Adición de un módulo de reconocimiento del gesto pinch
 description: En este artículo se explica cómo usar el gesto de alejar para hacer zoom interactiva de una imagen en la ubicación pinch.
 ms.prod: xamarin
 ms.assetid: 832F7810-F0CF-441A-B04A-3975F3FB8B29
@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: 37befdcd4ccbcd49e3cebda92d55ae6f70da2ad6
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f67cbb136c42a4bc476c1715ea6fd15255d71dc7
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38998708"
 ---
-# <a name="adding-a-pinch-gesture-recognizer"></a>Adición de un módulo de reconocimiento del gesto Pinch
+# <a name="adding-a-pinch-gesture-recognizer"></a>Adición de un módulo de reconocimiento del gesto pinch
 
 _El gesto de alejar se usa para llevar a cabo zoom interactivo y se implementa con la clase PinchGestureRecognizer. Un escenario común para el gesto pinch es hacer zoom interactiva de una imagen en la ubicación pinch. Esto se consigue cambiando el contenido de la ventanilla y se muestra en este artículo._
-
-## <a name="overview"></a>Información general
 
 Para que un elemento de interfaz de usuario se puede acercar con el gesto pinch, cree un [ `PinchGestureRecognizer` ](xref:Xamarin.Forms.PinchGestureRecognizer) de la instancia, controlar el [ `PinchUpdated` ](xref:Xamarin.Forms.PinchGestureRecognizer.PinchUpdated) eventos, y agregue el reconocedor de gestos de nuevo a la [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) colección en el elemento de interfaz de usuario. El siguiente ejemplo de código muestra un `PinchGestureRecognizer` adjunta a un [ `Image` ](xref:Xamarin.Forms.Image) elemento:
 
@@ -161,11 +159,6 @@ void OnPinchUpdated (object sender, PinchGestureUpdatedEventArgs e)
 ```
 
 Este método actualiza el nivel de zoom del elemento de interfaz de usuario ajustado según el gesto de reducir del usuario. Esto se logra mediante el uso de los valores de la [ `Scale` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Scale), [ `ScaleOrigin` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.ScaleOrigin) y [ `Status` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs.Status) propiedades de la [ `PinchGestureUpdatedEventArgs` ](xref:Xamarin.Forms.PinchGestureUpdatedEventArgs) instancia para calcular el factor de escala que se aplicará en el origen del gesto pinch. El elemento de usuario ajustado está ampliado, a continuación, en el origen del gesto pinch estableciendo su [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX), [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY), y [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) propiedades de los valores calculados.
-
-## <a name="summary"></a>Resumen
-
-El gesto pinch se usa para llevar a cabo zoom interactivo y se implementa con la [ `PinchGestureRecognizer` ](xref:Xamarin.Forms.PinchGestureRecognizer) clase.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

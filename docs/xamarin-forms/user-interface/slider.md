@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/10/2018
-ms.openlocfilehash: c0c433ab44c5b16fda6a01d520c41b31cb94bcc7
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 0069e59c1c09e242a74573ae66c8efade7d7f2a5
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "38998250"
 ---
 # <a name="xamarinforms-slider"></a>Control deslizante de Xamarin.Forms
@@ -44,8 +44,8 @@ El `Slider` también define varias propiedades que afectan a su apariencia:
 
 - [`MinimumTrackColor`](xref:Xamarin.Forms.Slider.MinimumTrackColorProperty) es la barra de color en el lado izquierdo del control.
 - [`MaximumTrackColor`](xref:Xamarin.Forms.Slider.MaximumTrackColorProperty) es la barra de color en el lado derecho del control.
-- [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) es el color del control de posición. Esta propiedad no se admite en la plataforma Universal de Windows.
-- [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) es la imagen que se utilizará para el control de posición de tipo [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource). Esta propiedad no se admite en la plataforma Universal de Windows.
+- [`ThumbColor`](xref:Xamarin.Forms.Slider.ThumbColorProperty) es el color del control de posición.
+- [`ThumbImage`](xref:Xamarin.Forms.Slider.ThumbImageProperty) es la imagen que se utilizará para el control de posición de tipo [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource).
 
 > [!NOTE]
 > El `ThumbColor` y `ThumbImage` propiedades son mutuamente excluyentes. Si se establecen ambas propiedades, la `ThumbImage` propiedad tendrá prioridad.
@@ -109,7 +109,7 @@ Este es el programa que se ejecutan en iOS, Android y plataforma Universal de Wi
 
 [![Código de control deslizante básica](slider-images/BasicSliderCode.png "código básico de control deslizante")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-El segundo `Label` muestra el texto "(no inicializado)" hasta que el `Slider` se manipula, que los casos, la primera `ValueChanged` eventos se activen. Tenga en cuenta que el número de posiciones decimales que se muestran es diferente para las tres plataformas. Estas diferencias están relacionadas con las implementaciones de la plataforma de la `Slider` y se describen más adelante en este artículo en la sección [diferencias de implementación de la plataforma](#implementations).
+El segundo `Label` muestra el texto "(no inicializado)" hasta que el `Slider` se manipula, lo que hace que la primera `ValueChanged` eventos se activen. Tenga en cuenta que el número de posiciones decimales que se muestran es diferente para las tres plataformas. Estas diferencias están relacionadas con las implementaciones de la plataforma de la `Slider` y se describen más adelante en este artículo en la sección [diferencias de implementación de la plataforma](#implementations).
 
 ### <a name="creating-a-slider-in-xaml"></a>Creación de un control deslizante en XAML
 
@@ -228,7 +228,7 @@ Slider slider = new Slider
 };
 ```
 
-Establecer `Maximum` a 20 no es un problema porque es mayor que el valor predeterminado `Minimum` de 0. Cuando `Minimum` está establecido, el valor es menor que el `Maximum` valor de 20.
+Establecer `Maximum` a 20 no es un problema porque es mayor que el valor predeterminado `Minimum` el valor 0. Cuando `Minimum` está establecido, el valor es menor que el `Maximum` valor de 20.
 
 El mismo problema existe en XAML. Establecer las propiedades en un orden que garantiza que `Maximum` siempre es mayor que `Minimum`:
 
@@ -292,8 +292,6 @@ La implementación de Android `Slider` se basa en el Android [ `SeekBar` ](https
 La implementación de UWP de `Slider` se basa en la UWP [ `Slider` ](/uwp/api/windows.ui.xaml.controls.slider) control. El `StepFrequency` propiedad de la UWP `Slider` se establece en la diferencia entre el `Maximum` y `Minimum` propiedades se dividen por 10, pero no mayor que 1.
 
 Por ejemplo, para el intervalo predeterminado de 0 a 1, el `StepFrequency` propiedad está establecida en 0,1. Como el `Slider` se manipula el `Value` propiedad está restringida a 0, 0.1, 0.2, 0.3, 0,4, 0,5, 0.6, 0,7, 0,8, 0,9 y 1.0. (Esto es evidente en la última página en el [ **SliderDemos** ](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos) ejemplo.) Cuando la diferencia entre el `Maximum` y `Minimum` propiedades es 10 o superior, a continuación, `StepFrequency` está establecido en 1 y el `Value` propiedad tiene valores enteros.
-
-Además, el [ `ThumbColor` ](xref:Xamarin.Forms.Slider.ThumbColorProperty) y [ `ThumbImage` ](xref:Xamarin.Forms.Slider.ThumbImageProperty) propiedades no se admiten en UWP.
 
 ### <a name="the-stepslider-solution"></a>La solución StepSlider
 
