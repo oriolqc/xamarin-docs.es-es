@@ -1,9 +1,9 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 52966029f99de421fbcbc8d6c05526e54e8866a9
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: f1e860bd5fe08e923fbec90b7ff7da142e7e5871
+ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
+ms.lasthandoff: 10/18/2018
 ms.locfileid: "39350656"
 documentType: LandingData
 title: Xamarin.Android
@@ -46,6 +46,10 @@ sections:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
       text: Aplicaciones de varias pantallas
       href: ~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
+    - image:
+        src: https://docs.microsoft.com/en-us/media/common/i_mobile-app-developement.svg
+      text: Android Pie
+      href: ~/android/platform/pie.md
 - title: Guías
   items:
   - type: list
@@ -118,6 +122,3 @@ sections:
     - title: Muestras
       href: https://developer.xamarin.com/samples/android/all/
       html: <p><a href="https://developer.xamarin.com/samples/android/all/">Ejemplos de Android</a></p>
-    - title: Libros
-      href: https://developer.xamarin.com/workbooks#android
-      html: <p><a href="https://developer.xamarin.com/workbooks#android">Libros sobre Android</a></p>
