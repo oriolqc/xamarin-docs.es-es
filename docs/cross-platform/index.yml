@@ -1,4 +1,10 @@
 ### YamlMime:YamlDocument
+ms.openlocfilehash: 9a08ccb3b00990a8b8425a2eb95d1f2390dda30e
+ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/03/2018
+ms.locfileid: "32436390"
 documentType: LandingData
 title: Guía multiplataforma
 metadata:
@@ -7,12 +13,6 @@ metadata:
   ms.author: crdun
   ms.date: 04/25/2018
   ms.topic: landing-page
-  ms.openlocfilehash: 9a08ccb3b00990a8b8425a2eb95d1f2390dda30e
-  ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
-  ms.translationtype: HT
-  ms.contentlocale: es-ES
-  ms.lasthandoff: 05/03/2018
-  ms.locfileid: "32436390"
 abstract:
   description: Xamarin ofrece una solución para el desarrollo multiplataforma de aplicaciones para dispositivos móviles, tabletas y escritorio. En esta sección se abordan los detalles aplicables con independencia de las plataformas de destino.
   menu:
@@ -64,7 +64,7 @@ sections:
         href: ~/cross-platform/get-started/index.md
       title: Introducción
     - href: ~/cross-platform/platform
-      html: 'Xamarin es compatible con C#, F # y el motor de plantillas de Razor.'
+      html: Xamarin es compatible con C#, F# y el motor de plantillas de Razor.
       image:
         src: ~/media/icons/i_app-build.svg
         href: ~/cross-platform/platform

@@ -914,7 +914,7 @@ ms.locfileid: "43780476"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Compatibilidad con lenguajes</h3>
-                                                    <p>Los proyectos de Xamarin pueden escribirse en C# y F # y consumen bibliotecas escritas en VB. También se admiten plantillas de Razor.</p>
+                                                    <p>Los proyectos de Xamarin pueden escribirse en C# y F# y consumen bibliotecas escritas en VB. También se admiten plantillas de Razor.</p>
                                                 </div>
                                             </div>
                                         </div>
