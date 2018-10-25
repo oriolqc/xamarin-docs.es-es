@@ -1,19 +1,19 @@
 ---
-title: Uso de SkiaSharp en Xamarin.Forms
+title: Gráficos de SkiaSharp en Xamarin.Forms
 description: SkiaSharp es un sistema de gráficos 2D para .NET y C# funciona con el motor de gráficos de Skia de código abierto que se usa habitualmente en productos de Google. Esta guía explica cómo usar SkiaSharp para gráficos 2D en las aplicaciones de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 2C348BEA-81DF-4794-8857-EB1DFF5E11DB
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: f7d97b798bf2a5a75af0731a665fe212491a6516
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 05c4b00f1551ffe21b3042a7da6bf0483dacf620
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615878"
 ---
-# <a name="using-skiasharp-in-xamarinforms"></a>Uso de SkiaSharp en Xamarin.Forms
+# <a name="skiasharp-graphics-in-xamarinforms"></a>Gráficos de SkiaSharp en Xamarin.Forms
 
 _Uso SkiaSharp para gráficos 2D en las aplicaciones de Xamarin.Forms_
 
@@ -31,18 +31,18 @@ SkiaSharp para Xamarin.Forms está empaquetado como un paquete de NuGet. Despué
 
 Si la aplicación de Xamarin.Forms tiene como destino iOS, use la página de propiedades de proyecto para cambiar el destino de implementación mínimo IOS 8.0.
 
-En cualquier página de C# que utiliza SkiaSharp desea incluir un `using` la directiva para el [ `SkiaSharp` ](https://developer.xamarin.com/api/namespace/SkiaSharp/) espacio de nombres, que abarca todas las SkiaSharp clases, estructuras y enumeraciones que va a usar en los gráficos la programación. También conviene un `using` la directiva para el [ `SkiaSharp.Views.Forms` ](https://developer.xamarin.com/api/namespace/SkiaSharp.Views.Forms/) espacio de nombres para las clases específicas de Xamarin.Forms. Esto es una cantidad menor espacio de nombres, con la clase más importante que es [ `SKCanvasView` ](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.SKCanvasView/). Esta clase se deriva de Xamarin.Forms `View` clase y hospede su salida gráfica de SkiaSharp.
+En cualquier página de C# que utiliza SkiaSharp desea incluir un `using` la directiva para el [ `SkiaSharp` ](xref:SkiaSharp) espacio de nombres, que abarca todas las SkiaSharp clases, estructuras y enumeraciones que va a usar en los gráficos la programación. También conviene un `using` la directiva para el [ `SkiaSharp.Views.Forms` ](xref:SkiaSharp.Views.Forms) espacio de nombres para las clases específicas de Xamarin.Forms. Esto es una cantidad menor espacio de nombres, con la clase más importante que es [ `SKCanvasView` ](xref:SkiaSharp.Views.Forms.SKCanvasView). Esta clase se deriva de Xamarin.Forms `View` clase y hospede su salida gráfica de SkiaSharp.
 
 > [!IMPORTANT]
 > El `SkiaSharp.Views.Forms` espacio de nombres también contiene un `SKGLView` clase que derive de `View` pero usa OpenGL para representar gráficos. Para fines de simplicidad, esta guía restringe a sí mismo a `SKCanvasView`, pero al usar `SKGLView` en su lugar, es bastante similar.
 
 ## <a name="skiasharp-drawing-basicsbasicsindexmd"></a>[Conceptos básicos de dibujo de SkiaSharp](basics/index.md)
 
-Algunas de las cifras más sencillas de gráficos que puede dibujar con SkiaSharp son círculos, elipses y rectángulos. Mostrar estas cifras, aprenderá acerca de las coordenadas de SkiaSharp, tamaños y colores.
+Algunas de las cifras más sencillas de gráficos que puede dibujar con SkiaSharp son círculos, elipses y rectángulos. Mostrar estas cifras, aprenderá acerca de las coordenadas de SkiaSharp, tamaños y colores. La presentación de texto y mapas de bits es más compleja, pero estos artículos también presentan estas técnicas.
 
 ## <a name="skiasharp-lines-and-pathspathsindexmd"></a>[Trazados y líneas de SkiaSharp](paths/index.md)
 
-Una ruta de acceso de gráficos es una serie de líneas rectas conectadas y curvas. Se trazan las rutas de acceso, rellenado, o ambos. En este tema abarca muchos aspectos del dibujo de líneas, incluidos los extremos de trazo y uniones y guiones y las líneas de puntos, pero no permite las geometrías de curva.
+Una ruta de acceso de gráficos es una serie de líneas rectas conectadas y curvas. Se trazan las rutas de acceso, rellenado, o ambos. En este artículo abarca muchos aspectos del dibujo de líneas, incluidos los extremos de trazo y uniones y guiones y las líneas de puntos, pero no permite las geometrías de curva.
 
 ## <a name="skiasharp-transformstransformsindexmd"></a>[Transformaciones de SkiaSharp](transforms/index.md)
 
@@ -56,8 +56,12 @@ La exploración de las rutas de acceso se continúa con la adición de curvas pa
 
 Los mapas de bits son matrices rectangulares de bits que corresponden a los píxeles de un dispositivo de pantalla. Esta serie de artículos muestra cómo cargar, guardar, mostrar, crear, dibuje en, animar y tener acceso a los bits de SkiaSharp mapas de bits.
 
+## <a name="skiasharp-effectseffectsindexmd"></a>[Efectos de SkiaSharp](effects/index.md)
+
+Los efectos son propiedades que cambiar la visualización de gráficos, incluidos los degradados lineales y circulares normal, disposición en mosaico de mapa de bits, blend modos de desenfoque y otros usuarios.
+
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [SkiaSharp con Xamarin.Forms seminario Web (vídeo)](https://channel9.msdn.com/Events/Xamarin/Xamarin-University-Presents-Webinar-Series/SkiaSharp-Graphics-for-XamarinForms)

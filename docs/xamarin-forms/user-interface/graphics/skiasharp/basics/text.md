@@ -4,29 +4,29 @@ description: En este artículo se explica cómo determinar el tamaño de la cade
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: be1524029ada79896f83517c3b439f2ad0e2c6d9
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 45b959c2d9b40cee4d86eb5eefaad724d857b4b9
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615166"
 ---
 # <a name="integrating-text-and-graphics"></a>La integración de texto y gráficos
 
 _Vea cómo determinar el tamaño de la cadena de texto representada para integrar el texto con gráficos de SkiaSharp_
 
-En este artículo se muestra cómo medir el texto, posiblemente escalar el texto a un tamaño determinado e integrar el texto con otros gráficos:
+En este artículo se muestra cómo medir el texto, escalar el texto a un tamaño determinado e integrar texto con otros gráficos:
 
 ![](text-images/textandgraphicsexample.png "Texto rodeado de rectángulos")
 
-El SkiaSharp `Canvas` clase también incluye métodos para dibujar un rectángulo ([`DrawRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawRect/p/SkiaSharp.SKRect/SkiaSharp.SKPaint/)) y un rectángulo con esquinas redondeadas ([`DrawRoundRect`](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawRoundRect/p/SkiaSharp.SKRect/System.Single/System.Single/SkiaSharp.SKPaint/)). Estos métodos requieren que el rectángulo que se define como un `SKRect` valor.
+Esta imagen también incluye un rectángulo redondeado. El SkiaSharp `Canvas` clase incluye [ `DrawRect` ](xref:SkiaSharp.SKCanvas.DrawRect*) métodos para dibujar un rectángulo y [ `DrawRoundRect` ](xref:SkiaSharp.SKCanvas.DrawRoundRect*) métodos para dibujar un rectángulo con esquinas redondeadas. Estos métodos permiten el rectángulo que se define como un `SKRect` valor o de otras maneras.
 
 El **texto enmarcado** página centros de una cadena de texto corta en la página y los bordes con un marco consta de un par de rectángulos redondeados. El [ `FramedTextPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/FramedTextPage.cs) clase muestra cómo hacerlo.
 
-En SkiaSharp usará el `SKPaint` clase para establecer los atributos de fuente y texto, pero también puede usar para obtener el tamaño del texto representado. El principio del siguiente `PaintSurface` controlador de eventos llama a dos diferentes `MeasureText` métodos. La primera [ `MeasureText` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.MeasureText/p/System.String/) llamada tiene un sencillo `string` argumento y devuelve el ancho en píxeles del texto según los atributos de fuente actual. A continuación, el sistema calcula un nuevo `TextSize` propiedad de la `SKPaint` objeto basado en ese ancho representado, actual `TextSize` propiedad y el ancho del área de visualización. Esto se pretende establecer `TextSize` para que el texto de cadena que se representará en el 90% del ancho de la pantalla:
+En SkiaSharp, use el `SKPaint` clase para establecer los atributos de fuente y texto, pero también puede usar para obtener el tamaño del texto representado. El principio del siguiente `PaintSurface` controlador de eventos llama a dos diferentes `MeasureText` métodos. La primera [ `MeasureText` ](xref:SkiaSharp.SKPaint.MeasureText(System.String)) llamada tiene un sencillo `string` argumento y devuelve el ancho en píxeles del texto según los atributos de fuente actual. A continuación, el sistema calcula un nuevo `TextSize` propiedad de la `SKPaint` objeto basado en ese ancho representado, actual `TextSize` propiedad y el ancho del área de visualización. Este cálculo se pretende establecer `TextSize` para que el texto de cadena que se representará en el 90% del ancho de la pantalla:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -56,7 +56,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-El segundo [ `MeasureText` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPaint.MeasureText/p/System.String/SkiaSharp.SKRect@/) llamada tiene un `SKRect` argumento, por lo que obtienen un ancho y alto del texto representado. El `Height` propiedad de este `SKRect` valor depende de la presencia de letras mayúsculas, los ascendentes y descendentes de la cadena de texto. Diferentes `Height` valores se notifican para las cadenas de texto "mom", "cat" y "dog", por ejemplo.
+El segundo [ `MeasureText` ](xref:SkiaSharp.SKPaint.MeasureText(System.String,SkiaSharp.SKRect@)) llamada tiene un `SKRect` argumento, por lo que obtienen un ancho y alto del texto representado. El `Height` propiedad de este `SKRect` valor depende de la presencia de letras mayúsculas, los ascendentes y descendentes de la cadena de texto. Diferentes `Height` valores se notifican para las cadenas de texto "mom", "cat" y "dog", por ejemplo.
 
 El `Left` y `Top` propiedades de la `SKRect` estructura indican las coordenadas de la esquina superior izquierda del texto representado si el texto se muestra un `DrawText` llamar con las posiciones X e Y de 0. Por ejemplo, cuando se ejecuta este programa en un simulador de iPhone 7 `TextSize` se asigna el valor 90.6254 como resultado del cálculo siguiente la primera llamada a `MeasureText`. El `SKRect` valor obtenido de la segunda llamada a `MeasureText` tiene los siguientes valores de propiedad:
 
@@ -65,7 +65,7 @@ El `Left` y `Top` propiedades de la `SKRect` estructura indican las coordenadas 
 - `Width` = 664.8214
 - `Height` = 88;
 
-Tenga en cuenta que las coordenadas X e Y se pasa a la `DrawText` método especifica el lado izquierdo del texto en la línea base. El `Top` valor indica que el texto extiende 68 píxeles por encima de esa línea de base y (si se resta 68 TI desde 88) 20 píxeles por debajo de la línea base. El `Left` valor 6 indica que el texto comienza 6 píxeles a la derecha del valor X de la `DrawText` llamar. Esto permite que el espaciado entre caracteres normales. Si desea mostrar el texto perfectamente en la esquina superior izquierda de la pantalla, pasar los valores negativos de estos `Left` y `Top` los valores de coordenadas X e Y de `DrawText`, en este ejemplo, &ndash;6 y 68.
+Tenga en cuenta que las coordenadas X e Y se pasa a la `DrawText` método especifica el lado izquierdo del texto en la línea base. El `Top` valor indica que el texto extiende 68 píxeles por encima de esa línea de base y (si se resta 68 TI desde 88) 20 píxeles por debajo de la línea base. El `Left` valor 6 indica que el texto comienza seis píxeles a la derecha del valor X de la `DrawText` llamar. Esto permite que el espaciado entre caracteres normales. Si desea mostrar el texto perfectamente en la esquina superior izquierda de la pantalla, pasar los valores negativos de estos `Left` y `Top` los valores de coordenadas X e Y de `DrawText`, en este ejemplo, &ndash;6 y 68.
 
 El `SKRect` estructura define varias propiedades útiles y métodos, algunos de los cuales se usan en el resto de la `PaintSurface` controlador. El `MidX` y `MidY` valores indican las coordenadas del centro del rectángulo. (En el ejemplo de iPhone 7, estos valores son 338.4107 y &ndash;24.) El código siguiente usa estos valores para el cálculo más sencillo de coordenadas para centrar el texto de la pantalla:
 
@@ -83,7 +83,14 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-El `PaintSurface` controlador concluye con dos llamadas a `DrawRoundRect`, ambos de los cuales requieren argumentos de `SKRect`. Esto `SKRect` valor es ciertamente es similar a la `SKRect` valor obtenido el `MeasureText` método, pero no puede ser el mismo. En primer lugar, debe ser un poco más grande para que no se dibuja el rectángulo redondeado a través de los bordes del texto y en segundo lugar, necesita que se desplazarán en el espacio para que la `Left` y `Top` valores corresponden a la esquina superior izquierda, donde es el rectángulo sea coloca. Estos dos trabajos se llevan a cabo por `Offset` y `Inflate` métodos definidos por `SKRect`:
+El `SKImageInfo` también define la estructura de información de un [ `Rect` ](xref:SkiaSharp.SKImageInfo.Rect) propiedad de tipo `SKRect`, por lo que también se puede calcular `xText` y `yText` similar al siguiente:
+
+```csharp
+float xText = info.Rect.MidX - textBounds.MidX;
+float yText = info.Rect.MidY - textBounds.MidY;
+```
+
+El `PaintSurface` controlador concluye con dos llamadas a `DrawRoundRect`, ambos de los cuales requieren argumentos de `SKRect`. Esto `SKRect` valor se basa en el `SKRect` valor obtenido el `MeasureText` método, pero no puede ser el mismo. En primer lugar, debe ser un poco más grande para que no se dibuja el rectángulo redondeado a través de los bordes del texto. En segundo lugar, necesita se indicará en el espacio para que la `Left` y `Top` valores corresponden a la esquina superior izquierda, donde es el rectángulo de colocarse. Estos dos trabajos se llevan a cabo por el [ `Offset` ](xref:SkiaSharp.SKRect.Offset*) y [ `Inflate` ](xref:SkiaSharp.SKRect.Inflate*) métodos definidos por `SKRect`:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -112,19 +119,19 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-A continuación, el resto del método es sencillo. Crea otro `SKPaint` objeto para los bordes y las llamadas `DrawRoundRect` dos veces. La segunda llamada usa un rectángulo inflado otro 10 píxeles. La primera llamada especifica un radio de redondeo de 20 píxeles. el segundo tiene un radio de 30 píxeles, por lo que parecen ser paralelo:
+A continuación, el resto del método es sencillo. Crea otro `SKPaint` objeto para los bordes y las llamadas `DrawRoundRect` dos veces. La segunda llamada usa un rectángulo inflado otro 10 píxeles. La primera llamada especifica un radio de redondeo de 20 píxeles. El segundo tiene un radio de 30 píxeles, por lo que parecen ser paralelo:
 
  [![](text-images/framedtext-small.png "Captura de pantalla de la página de texto enmarcado triple")](text-images/framedtext-large.png#lightbox "Triple captura de pantalla de la página de texto enmarcado")
 
 Puede activar su teléfono o el simulador lateralmente para ver el texto y el marco aumentan de tamaño.
 
-Si solo necesita algún texto en la pantalla del centro, puede hacerlo sin aproximadamente de medir el texto estableciendo el `TextAlign` propiedad de `SKPaint` a `SKTextAlign.Center`. La coordenada X que especifique en el `DrawText` método indica a continuación, donde se coloca el centro horizontal del texto. Si se pasa el punto medio de la pantalla para el `DrawText` método, el texto estará centrado horizontalmente y *casi* centrado verticalmente porque la línea de base se centrarán verticalmente.
+Si solo necesita algún texto en la pantalla del centro, puede hacerlo aproximadamente sin midiendo el texto. En su lugar, establezca el [ `TextAlign` ](xref:SkiaSharp.SKPaint.TextAlign) propiedad de `SKPaint` para el miembro de enumeración [ `SKTextAlign.Center` ](xref:SkiaSharp.SKTextAlign). La coordenada X que especifique en el `DrawText` método indica a continuación, donde se coloca el centro horizontal del texto. Si se pasa el punto medio de la pantalla para el `DrawText` método, el texto estará centrado horizontalmente y *casi* centrado verticalmente porque la línea de base se centrarán verticalmente.
 
-Texto en sí se puede tratar mucho, como una opción gráfica. Es una opción sencilla mostrar el esquema de los caracteres del texto en lugar de la presentación rellenada normal:
+Texto se puede tratar mucho como cualquier otro objeto gráfico. Es una opción sencilla mostrar el esquema de los caracteres de texto:
 
-[![](text-images/outlinedtext-small.png "Captura de pantalla de la página de texto que se describen el triple")](text-images/outlinedtext-large.png#lightbox "Triple captura de pantalla de la página de texto con contorno")
+[![](text-images/outlinedtext-small.png "Captura de pantalla triple de la página de texto con contorno")](text-images/outlinedtext-large.png#lightbox "Triple screenshot of the Outlined Text page")
 
-Esto se realiza cambiando el valor normal a `Style` propiedad de la `SKPaint` objeto de su valor predeterminado de `SKPaintStyle.Fill` a `SKPaintStyle.Stroke` y especificando un ancho de trazo. El `PaintSurface` controlador de la **texto con contorno** página muestra cómo hacerlo:
+Esto se consigue cambiando el valor normal a `Style` propiedad de la `SKPaint` objeto de su valor predeterminado de `SKPaintStyle.Fill` a `SKPaintStyle.Stroke`y especificando un ancho de trazo. El `PaintSurface` controlador de la **texto con contorno** página muestra cómo hacerlo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -163,10 +170,9 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
- En los últimos artículos de varias, que tiene ahora sabe cómo utilizar SkiaSharp para dibujar texto, círculos, elipses y rectángulos redondeados. El siguiente paso es [líneas de SkiaSharp y rutas de acceso](~/xamarin-forms/user-interface/graphics/skiasharp/paths/paths.md) en que se obtendrá información sobre cómo dibujar líneas conectadas en una ruta de acceso de gráficos.
-
+Otro objeto gráfica común es el mapa de bits. Que es un tema amplio que se tratan en profundidad en la sección [ **SkiaSharp Bitmaps**](../bitmaps/index.md), pero el siguiente artículo, [ **conceptos básicos de mapa de bits de SkiaSharp**](bitmaps.md), Proporciona una introducción más sencillo.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: e4b060c703077e140e0f0d2f8c4c2b824c890e8d
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: a0054c79bf0f356bcfcc48389a0a28f68f73a48b
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38997126"
 ---
 # <a name="xamarinforms-fast-renderers"></a>Representadores rápidos de Xamarin.Forms
@@ -32,6 +32,7 @@ Representadores rápidos están disponibles para los siguientes controles en 2.4
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
+- [`Frame`](xref:Xamarin.Forms.Frame)
 
 Funcionalmente, estos representadores rápidos no son distintos a los representadores originales. Sin embargo, que son actualmente experimentales y solo se puede usar agregando la siguiente línea de código para su `MainActivity` clase antes de llamar a `Forms.Init`:
 

@@ -4,14 +4,14 @@ description: En este artículo se explica cómo usar SkiaSharp para definir los 
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: e862a663b35124c1470ae5239c93409c298b19ba
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 2bb5729ff369abb6e432bfd72ab240c0ce07f28a
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615410"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tres maneras de dibujar un arco
@@ -24,11 +24,11 @@ Un arco es una curva de la circunferencia de una elipse, por ejemplo, las partes
 
 A pesar de la sencillez de esa definición, no hay ninguna manera de definir una función de dibujo del arco que cumple todas las necesidades, y por lo tanto, no hay consenso entre los sistemas de gráficos de la mejor manera de dibujar un arco. Por este motivo, la `SKPath` clase no se restringe a solo un enfoque.
 
-`SKPath` define un `AddArc` método, cinco diferentes `ArcTo` métodos y dos relative `RArcTo` métodos. Estos métodos se dividen en tres categorías, que representa tres enfoques muy diferentes al especificar un arco. Que utilice depende de la información disponible para definir el arco y cómo este arco se ajusta con los otros gráficos que se está dibujando.
+`SKPath` define un [ `AddArc` ](xref:SkiaSharp.SKPath.AddArc*) método, cinco diferentes [ `ArcTo` ](xref:SkiaSharp.SKPath.ArcTo*) métodos y relativo de dos [ `RArcTo` ](xref:SkiaSharp.SKPath.RArcTo*) métodos. Estos métodos se dividen en tres categorías, que representa tres enfoques muy diferentes al especificar un arco. Que utilice depende de la información disponible para definir el arco y cómo este arco se ajusta con los otros gráficos que se está dibujando.
 
 ## <a name="the-angle-arc"></a>El ángulo de arco
 
-El enfoque de arco de ángulo al dibujo de arcos requiere que especifique un rectángulo que delimita una elipse. El arco de la circunferencia de esta elipse se indica mediante ángulos desde el centro de la elipse que hace el principio del arco y su longitud. Dos métodos diferentes dibujan arcos de ángulo. Estos son los [ `AddArc` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.AddArc/p/SkiaSharp.SKRect/System.Single/System.Single/) método y el [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKRect/System.Single/System.Single/System.Boolean/) método:
+El enfoque de arco de ángulo al dibujo de arcos requiere que especifique un rectángulo que delimita una elipse. El arco de la circunferencia de esta elipse se indica mediante ángulos desde el centro de la elipse que indican el principio del arco y su longitud. Dos métodos diferentes dibujan arcos de ángulo. Estos son los [ `AddArc` ](xref:SkiaSharp.SKPath.AddArc(SkiaSharp.SKRect,System.Single,System.Single)) método y el [ `ArcTo` ](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKRect,System.Single,System.Single,System.Boolean)) método:
 
 ```csharp
 public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
@@ -44,15 +44,15 @@ Ambos métodos comienzan por un `SKRect` valor que define la ubicación y el tam
 
 El arco es una parte de la circunferencia de esta elipse.
 
-El `startAngle` argumento es un ángulo en grados con respecto a una línea horizontal que se dibuja desde el centro de la elipse a la derecha hacia la derecha. El `sweepAngle` argumento es relativa a la `startAngle`. Estos son `startAngle` y `sweepAngle` valores de grados de 60 y 100, respectivamente:
+El `startAngle` argumento es un ángulo en grados con respecto a una línea horizontal que se dibuja desde el centro de la elipse a la derecha hacia la derecha. El `sweepAngle` argumento es relativa a la `startAngle`. Estos son `startAngle` y `sweepAngle` valores de 60 grados y 100 grados, respectivamente:
 
 ![](arcs-images/anglearcangles.png "Los ángulos que definen un arco de ángulo")
 
-El ángulo inicial que comienza el arco. Su longitud se rige por el ángulo de barrido:
+El ángulo inicial que comienza el arco. Su longitud se rige por el ángulo de barrido. Aquí se muestra el arco en rojo:
 
 ![](arcs-images/anglearchighlight.png "El arco ángulo resaltado")
 
-La curva que se agrega a la ruta de acceso con el `AddArc` o `ArcTo` método es simplemente esa parte de la circunferencia de la elipse, que se muestra en rojo:
+La curva que se agrega a la ruta de acceso con el `AddArc` o `ArcTo` método es simplemente esa parte de la circunferencia de la elipse:
 
 ![](arcs-images/anglearc.png "El arco ángulo por sí mismo")
 
@@ -216,7 +216,7 @@ Para ver su aspecto sin la "expansión", simplemente marque como comentario el `
 
 El segundo tipo de arc admitida `SKPath` es el *arco tangente*, se denomina así porque el arco es la circunferencia de un círculo tangente a dos líneas conectadas.
 
-Se agrega un arco tangente a una ruta de acceso con una llamada a la [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKPoint/SkiaSharp.SKPoint/System.Single/) método con dos `SKPoint` parámetros, o el [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/System.Single/System.Single/System.Single/System.Single/System.Single/) sobrecarga con independiente `Single` parámetros para el puntos:
+Se agrega un arco tangente a una ruta de acceso con una llamada a la [ `ArcTo` ](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,SkiaSharp.SKPoint,System.Single)) método con dos `SKPoint` parámetros, o el [ `ArcTo` ](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,System.Single,System.Single)) sobrecarga con independiente `Single` parámetros para el puntos:
 
 ```csharp
 public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
@@ -224,7 +224,7 @@ public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
 public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 ```
 
-Esto `ArcTo` método es similar a la PostScript [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) función (página 532 en el documento PDF) y el iOS [ `AddArcToPoint` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArcToPoint/p/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) método.
+Esto `ArcTo` método es similar a la PostScript [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) función (página 532) y el iOS [ `AddArcToPoint` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArcToPoint/p/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) método.
 
 El `ArcTo` método implica tres puntos:
 
@@ -250,7 +250,7 @@ Si se cumplen las dos líneas en cualquier ángulo, se puede insertar ese círcu
 
 ![](arcs-images/tangentarctangentcircle.png "El círculo de arco tangente entre las dos líneas")
 
-No toca la curva que se agrega al contorno cualquiera de los puntos especificados en el `ArcTo` método. Está formado por una línea recta desde el punto actual hasta el primer punto tangente y un arco que termina en el segundo punto tangente:
+No toca la curva que se agrega al contorno cualquiera de los puntos especificados en el `ArcTo` método. Está formado por una línea recta desde el punto actual hasta el primer punto tangente y un arco que termina en el segundo punto tangente, que se muestra en rojo:
 
 ![](arcs-images/tangentarchighlight.png "El arco tangente resaltado entre las dos líneas")
 
@@ -493,7 +493,7 @@ Este es el programa que se ejecutan en las tres plataformas:
 
 ## <a name="the-elliptical-arc"></a>Arco elíptico
 
-Arco elíptico se agrega a una ruta de acceso con una llamada a la [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/SkiaSharp.SKPoint/System.Single/SkiaSharp.SKPathArcSize/SkiaSharp.SKPathDirection/SkiaSharp.SKPoint/) método que tiene dos `SKPoint` parámetros, o el [ `ArcTo` ](https://developer.xamarin.com/api/member/SkiaSharp.SKPath.ArcTo/p/System.Single/System.Single/System.Single/SkiaSharp.SKPathArcSize/SkiaSharp.SKPathDirection/System.Single/System.Single/) sobrecargar con independiente X e Y coordenadas:
+Arco elíptico se agrega a una ruta de acceso con una llamada a la [ `ArcTo` ](xref:SkiaSharp.SKPath.ArcTo(SkiaSharp.SKPoint,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,SkiaSharp.SKPoint)) método que tiene dos `SKPoint` parámetros, o el [ `ArcTo` ](xref:SkiaSharp.SKPath.ArcTo(System.Single,System.Single,System.Single,SkiaSharp.SKPathArcSize,SkiaSharp.SKPathDirection,System.Single,System.Single)) sobrecargar con independiente X e Y coordenadas:
 
 ```csharp
 public void ArcTo (SKPoint r, Single xAxisRotate, SKPathArcSize largeArc, SKPathDirection sweep, SKPoint xy)
@@ -531,7 +531,7 @@ Estos dos puntos, por tanto, se pueden conectar mediante un arco definido por la
 
 ![](arcs-images/ellipticalarccolors.png "Todos los cuatro arcos elípticos")
 
-Estos cuatro arcos se distinguen por las cuatro combinaciones de la [ `SKPathArcSize` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathArcSize/) y [ `SKPathDirection` ](https://developer.xamarin.com/api/type/SkiaSharp.SKPathDirection/) argumentos de tipo de enumeración para el `ArcTo` método:
+Estos cuatro arcos se distinguen por las cuatro combinaciones de la [ `SKPathArcSize` ](xref:SkiaSharp.SKPathArcSize) y [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection) argumentos de tipo de enumeración para el `ArcTo` método:
 
 - rojo: SKPathArcSize.Large y SKPathDirection.Clockwise
 - verde: SKPathArcSize.Small y SKPathDirection.Clockwise
@@ -662,10 +662,9 @@ Para obtener una mejor elección, use el `TightBounds` propiedad, que excluye lo
 
 [![](arcs-images/arcinfinitytightbounds-small.png "Captura de pantalla de la página de arco infinito con límites estrecha triple")](arcs-images/arcinfinitytightbounds-large.png#lightbox "Triple captura de pantalla de la página de arco infinito con límites estrecha")
 
-Aunque las conexiones entre los arcos y líneas rectas son matemáticamente suaves, el cambio de arco recta puede parecer un poco brusco. En la página siguiente, se presenta una mejor inicio de sesión de infinito.
-
+Aunque las conexiones entre los arcos y líneas rectas son matemáticamente suaves, el cambio de arco recta puede parecer un poco brusco. Se presenta un mejor signo infinito en el siguiente artículo en [ **tipos tres de curvas de Bézier**](beziers.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

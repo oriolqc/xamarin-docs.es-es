@@ -1,22 +1,22 @@
 ---
 title: Xamarin.Forms DatePicker
-description: DatePicker es la vista de Xamarin.Forms que permite al usuario seleccionar una fecha. En este artículo se explica cómo consumir un selector de fechas en una aplicación de Xamarin.Forms.
+description: DatePicker es una vista de Xamarin.Forms que permite al usuario seleccionar una fecha. En este artículo se explica cómo consumir un selector de fechas en una aplicación de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 68E8EF8A-42E7-4939-8ABE-64D060E609D9
 ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 06/04/2018
-ms.openlocfilehash: 553957bfa06c7b7a9c5261e426ebee4190de5ebb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7917510e910223fc6ca276bf47b1878c19557a38
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38994931"
 ---
 # <a name="xamarinforms-datepicker"></a>Xamarin.Forms DatePicker
 
-_Una vista de Xamarin.Forms que permita al usuario seleccionar una fecha_
+_Una vista de Xamarin.Forms que permite al usuario seleccionar una fecha._
 
 Xamarin.Forms [ `DatePicker` ](xref:Xamarin.Forms.DatePicker) invoca el control de selector de fecha de la plataforma y permite al usuario seleccionar una fecha. `DatePicker` define las propiedades de ocho:
 
@@ -184,6 +184,9 @@ Cuando se ejecuta el ejemplo primero, ambos `DatePicker` vistas se inicializan e
 Al puntear en cualquiera de los `DatePicker` muestra invoca el selector de fecha de la plataforma. Las tres plataformas implementan este selector de fecha de maneras muy diferentes, pero cada enfoque es familiar para los usuarios de esa plataforma:
 
 [![Seleccionar días entre fechas](datepicker-images/DaysBetweenDatesSelect.png "días entre fechas seleccione")](datepicker-images/DaysBetweenDatesSelect-Large.png#lightbox "Seleccione días entre fechas")
+
+> [!TIP]
+> En Android, el `DatePicker` cuadro de diálogo se puede personalizar invalidando el `CreateDatePickerDialog` método en un representador personalizado. Esto permite, por ejemplo, botones adicionales que se agregan al cuadro de diálogo.
 
 Una vez seleccionadas las dos fechas, la aplicación muestra el número de días entre esas fechas:
 

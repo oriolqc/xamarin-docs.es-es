@@ -1,20 +1,20 @@
 ---
-title: Obtener acceso a los bits de píxeles de SkiaSharp
+title: Acceso a los bits de píxeles del mapa de bits de SkiaSharp
 description: Descubra las distintas técnicas para obtener acceso y modificar los bits de píxeles de SkiaSharp mapas de bits.
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: 5d79dd89b5313d5d7ead665c54e9a27026cea38c
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 6d223dd051dccf7af84e4e6c35238f4ad026b00a
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615631"
 ---
-# <a name="accessing-skiasharp-pixel-bits"></a>Obtener acceso a los bits de píxeles de SkiaSharp
+# <a name="accessing-skiasharp-bitmap-pixel-bits"></a>Acceso a los bits de píxeles del mapa de bits de SkiaSharp
 
 Como se vio en el artículo [ **SkiaSharp guardar mapas de bits archivos**](saving.md), mapas de bits se almacenan normalmente en archivos en un formato comprimido, como JPEG o PNG. Al contrario, no se comprime un mapa de bits de SkiaSharp almacenada en memoria. Se almacena como una serie secuencial de píxeles. Este formato no comprimido facilita a la transferencia de los mapas de bits a una superficie de pantalla.
 
@@ -39,7 +39,7 @@ Para que pueda ver las diferencias de rendimiento entre estas técnicas, el [ **
 
 ### <a name="the-setpixel-method"></a>El método SetPixel
 
-Si solo tiene que establecer u obtener varios píxeles individuales, el [ `SetPixel` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.SetPixel/p/System.Int32/System.Int32/SkiaSharp.SKColor/) y [ `GetPixel` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.GetPixel/p/System.Int32/System.Int32/) métodos son ideales. Para cada uno de estos dos métodos, especifique la columna de tipo entero y la fila. Independientemente del formato de píxel, estos dos métodos le permiten obtener o establecer el píxel como un `SKColor` valor:
+Si solo tiene que establecer u obtener varios píxeles individuales, el [ `SetPixel` ](xref:SkiaSharp.SKBitmap.SetPixel(System.Int32,System.Int32,SkiaSharp.SKColor)) y [ `GetPixel` ](xref:SkiaSharp.SKBitmap.GetPixel(System.Int32,System.Int32)) métodos son ideales. Para cada uno de estos dos métodos, especifique la columna de tipo entero y la fila. Independientemente del formato de píxel, estos dos métodos le permiten obtener o establecer el píxel como un `SKColor` valor:
 
 ```csharp
 bitmap.SetPixel(col, row, color);
@@ -85,7 +85,7 @@ El `SetPixel` método es llamado 65.536 veces y, a continuación, sin tener en c
 
 ### <a name="the-pixels-property"></a>La propiedad de píxeles
 
-`SKBitmap` define un [ `Pixels` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Pixels/) propiedad que devuelve una matriz de `SKColor` valores para el mapa de bits completo. También puede usar `Pixels` para establecer una matriz de valores de color para el mapa de bits:
+`SKBitmap` define un [ `Pixels` ](xref:SkiaSharp.SKBitmap.Pixels) propiedad que devuelve una matriz de `SKColor` valores para el mapa de bits completo. También puede usar `Pixels` para establecer una matriz de valores de color para el mapa de bits:
 
 ```csharp
 SKColor[] pixels = bitmap.Pixels;
@@ -129,7 +129,7 @@ Tenga en cuenta que el índice de la `pixels` matriz debe calcularse desde el `r
 
 ### <a name="the-getpixels-pointer"></a>El puntero GetPixels
 
-Potencialmente la técnica más eficaz para tener acceso a los píxeles del mapa de bits es [ `GetPixels` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.GetPixels()/), para que no debe confundirse con el `GetPixel` método o la `Pixels` propiedad. Observará una diferencia con `GetPixels` en que devuelve un valor no es muy común en la programación de C#:
+Potencialmente la técnica más eficaz para tener acceso a los píxeles del mapa de bits es [ `GetPixels` ](xref:SkiaSharp.SKBitmap.GetPixels), para que no debe confundirse con el `GetPixel` método o la `Pixels` propiedad. Observará una diferencia con `GetPixels` en que devuelve un valor no es muy común en la programación de C#:
 
 ```csharp
 IntPtr pixelsAddr = bitmap.GetPixels();
@@ -145,7 +145,7 @@ byte* ptr = (byte*)pixelsAddr.ToPointer();
 
 El `ptr` variable es de tipo _puntero de byte_. Esto `ptr` variable permite obtener acceso a los bytes de memoria individuales que se usan para almacenar los píxeles del mapa de bits. Use código similar al siguiente para leer un byte de esta memoria o escribir un byte en la memoria:
 
-```sharp
+```csharp
 byte pixelComponent = *ptr;
 
 *ptr = pixelComponent;
@@ -282,7 +282,7 @@ SKBitmap FillBitmapUintPtrColor(out string description, out int milliseconds)
 
 ### <a name="the-setpixels-method"></a>El método SetPixels
 
-`SKBitmap` También define un método denominado [ `SetPixels` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.SetPixels/p/System.IntPtr/), que se llama similar al siguiente:
+`SKBitmap` También define un método denominado [ `SetPixels` ](xref:SkiaSharp.SKBitmap.SetPixels(System.IntPtr)), que se llama similar al siguiente:
 
 ```csharp
 bitmap.SetPixels(intPtr);
@@ -741,7 +741,55 @@ public partial class ColorAdjustmentPage : ContentPage
 
 Es probable que el rendimiento de este método se puede mejorar aún más mediante la creación de métodos independientes para las diversas combinaciones de tipos de color de los mapas de bits de origen y destino y evitar la comprobación del tipo para cada píxel. Otra opción consiste en tener varios `for` bucles para el `col` variable según el tipo de color.
 
+## <a name="posterization"></a>Posterización
+
+Otro trabajo común que implica el acceso a los bits de píxeles es _posterización_. Se reduce el número si colores codifican en píxeles del mapa de bits para que el resultado es similar a un póster de trazados a mano mediante una paleta de colores limitado.
+
+El **Posterizar** página lleva a cabo este proceso en una de las imágenes de monkey:
+
+```csharp
+public class PosterizePage : ContentPage
+{
+    SKBitmap bitmap =
+        BitmapExtensions.LoadBitmapResource(typeof(FillRectanglePage),
+                                            "SkiaSharpFormsDemos.Media.Banana.jpg");
+    public PosterizePage()
+    {
+        Title = "Posterize";
+
+        unsafe
+        {
+            uint* ptr = (uint*)bitmap.GetPixels().ToPointer();
+            int pixelCount = bitmap.Width * bitmap.Height;
+
+            for (int i = 0; i < pixelCount; i++)
+            {
+                *ptr++ &= 0xE0E0E0FF; 
+            }
+        }
+
+        SKCanvasView canvasView = new SKCanvasView();
+        canvasView.PaintSurface += OnCanvasViewPaintSurface;
+        Content = canvasView;
+    }
+
+    void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
+    {
+        SKImageInfo info = args.Info;
+        SKSurface surface = args.Surface;
+        SKCanvas canvas = surface.Canvas;
+
+        canvas.Clear();
+        canvas.DrawBitmap(bitmap, info.Rect, BitmapStretch.Uniform;
+    }
+}
+```
+
+El código en el constructor tiene acceso a cada píxel, realiza una operación AND bit a bit con el valor 0xE0E0E0FF y, a continuación, almacena el resultado en el mapa de bits. Los valores 0xE0E0E0FF mantiene 3 bits superiores de cada componente de color y los 5 bits inferiores se establece en 0. En lugar de 2<sup>24</sup> o 16 777 216 colores, el mapa de bits se reduce a 2<sup>9</sup> o 512 colores:
+
+[![Posterización](pixel-bits-images/Posterize.png "posterización")](pixel-bits-images/posterización-Large.png#lightbox)
+
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -4,14 +4,14 @@ description: En este artículo se explica cómo cargar mapas de bits de SkiaShar
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 92863ff9e843cabc26c568e95aab52c6d199c35e
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 7732bc2ea9a9c5a896b27ca9bd73433ecdcfd9fa
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615215"
 ---
 # <a name="bitmap-basics-in-skiasharp"></a>Conceptos básicos de mapa de bits de SkiaSharp
@@ -24,7 +24,7 @@ La compatibilidad de mapas de bits de SkiaSharp es bastante extensa. Este artíc
 
 Encontrará una explicación mucho más profunda de mapas de bits en la sección [SkiaSharp Bitmaps](../bitmaps/index.md).
 
-Un mapa de bits de SkiaSharp es un objeto de tipo [ `SKBitmap` ](https://developer.xamarin.com/api/type/SkiaSharp.SKBitmap/). Hay muchas maneras de crear un mapa de bits, pero en este artículo se restringe a sí mismo a la [ `SKBitmap.Decode` ](https://developer.xamarin.com/api/member/SkiaSharp.SKBitmap.Decode/p/System.IO.Stream/) método, que carga el mapa de bits de .NET `Stream` objeto.
+Un mapa de bits de SkiaSharp es un objeto de tipo [ `SKBitmap` ](xref:SkiaSharp.SKBitmap). Hay muchas maneras de crear un mapa de bits, pero en este artículo se restringe a sí mismo a la [ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) método, que carga el mapa de bits de .NET `Stream` objeto.
 
 El **básica de mapas de bits** página en el **SkiaSharpFormsDemos** programa muestra cómo cargar mapas de bits de tres orígenes diferentes:
 
@@ -94,13 +94,13 @@ protected override async void OnAppearing()
 }
 ```
 
-Android, producirá una excepción cuando se usa el `Stream` devuelto desde `GetStreamAsync` en el `SKBitmap.Decode` método porque está realizando una operación larga en un subproceso principal. Por este motivo, se copia el contenido del archivo de mapa de bits en un `MemoryStream` objeto `CopyToAsync`.
+El sistema operativo Android produce una excepción cuando se usa el `Stream` devuelto desde `GetStreamAsync` en el `SKBitmap.Decode` método porque está realizando una operación larga en un subproceso principal. Por este motivo, se copia el contenido del archivo de mapa de bits en un `MemoryStream` objeto `CopyToAsync`.
 
-Estático `SKBitmap.Decode` método es responsable de descodificación de archivos de mapa de bits. Funciona con varios formatos populares de mapa de bits, GIF, PNG y JPEG y almacena los resultados en un formato interno de SkiaSharp. En este momento, el `SKCanvasView` tiene que invalidar para permitir el `PaintSurface` controlador para actualizar la pantalla. 
+Estático `SKBitmap.Decode` método es responsable de descodificación de archivos de mapa de bits. Funciona con los formatos de mapa de bits GIF, PNG y JPEG y almacena los resultados en un formato interno de SkiaSharp. En este momento, el `SKCanvasView` tiene que invalidar para permitir el `PaintSurface` controlador para actualizar la pantalla. 
 
 ## <a name="loading-a-bitmap-resource"></a>Cargar un recurso de mapa de bits
 
-En términos de código, el enfoque más sencillo a la carga de los mapas de bits está incluido un recurso de mapa de bits directamente en la aplicación. El **SkiaSharpFormsDemos** programa incluye una carpeta denominada **Media** que contiene un archivo de mapa de bits llamado **monkey.png**. En el **propiedades** cuadro de diálogo para este archivo, debe asignar a este archivo una **acción de compilación** de **recurso incrustado**!
+En términos de código, el enfoque más sencillo a la carga de los mapas de bits está incluido un recurso de mapa de bits directamente en la aplicación. El **SkiaSharpFormsDemos** programa incluye una carpeta denominada **Media** que contiene varios archivos, incluido uno denominado de mapa de bits **monkey.png**. Para los mapas de bits almacenada como recursos de programa, debe usar el **propiedades** cuadro de diálogo para asignar al archivo un **acción de compilación** de **recurso incrustado**!
 
 Cada recurso incrustado tiene un *Id. de recurso* formado por el nombre del proyecto, la carpeta y el nombre de archivo, todo conectado por puntos: **SkiaSharpFormsDemos.Media.monkey.png**. Puede obtener acceso a este recurso mediante la especificación de ese recurso identificador como argumento a la [ `GetManifestResourceStream` ](xref:System.Reflection.Assembly.GetManifestResourceStream(System.String)) método de la [ `Assembly` ](xref:System.Reflection.Assembly) clase:
 
@@ -122,7 +122,7 @@ También es posible que el usuario cargar una foto de la biblioteca de imágenes
 
 El **IPhotoLibrary.cs** de archivos en el **SkiaSharpFormsDemos** proyecto y los tres **PhotoLibrary.cs** archivos en los proyectos de plataforma se han adaptado de dicho artículo. Además, el Android **MainActivity.cs** se ha modificado el archivo como se describe en el artículo y el proyecto de iOS se haya concedido permiso para acceder a la biblioteca de fotos con dos líneas hacia la parte inferior de la **info.plist**  archivo.
 
-El `BasicBitmapsPage` constructor agrega un `TapGestureRecognizer` a la `SKCanvasView` para recibir una notificación de pesos. Tras la recepción de un toque, el `Tapped` controlador obtiene acceso al servicio de dependencia de selector de imagen y las llamadas `GetImageStreamAsync`. Si un `Stream` se devuelve el objeto y, después, el contenido se copia en un `MemoryStream`, según sea necesario por algunas de las plataformas. El resto del código es similar a las otras dos técnicas:
+El `BasicBitmapsPage` constructor agrega un `TapGestureRecognizer` a la `SKCanvasView` para recibir una notificación de pesos. Tras la recepción de un toque, el `Tapped` controlador obtiene acceso al servicio de dependencia de selector de imagen y las llamadas `PickPhotoAsync`. Si un `Stream` se devuelve el objeto y, después, se pasa a la `SKBitmap.Decode` método:
 
 ```csharp
 // Add tap gesture recognizer
@@ -144,21 +144,21 @@ tapRecognizer.Tapped += async (sender, args) =>
 canvasView.GestureRecognizers.Add(tapRecognizer);
 ```
 
-Tenga en cuenta que el `Tapped` llamadas del controlador de la `InvalidateSurface` método de la `SKCanvasView` objeto. Esto genera una nueva llamada a la `PaintSurface` controlador.
+Tenga en cuenta que el `Tapped` controlador también llama a la `InvalidateSurface` método de la `SKCanvasView` objeto. Esto genera una nueva llamada a la `PaintSurface` controlador.
 
 ## <a name="displaying-the-bitmaps"></a>Mostrar los mapas de bits
 
 El `PaintSurface` controlador necesita para mostrar tres mapas de bits. El controlador se da por supuesto que el teléfono está en modo vertical y el lienzo divide verticalmente en tres partes iguales.
 
-Se muestra el mapa de bits primero con el más sencillo [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/System.Single/System.Single/SkiaSharp.SKPaint/) método. Todo lo que necesita especificar son las coordenadas X e Y donde es se coloca la esquina superior izquierda del mapa de bits:
+Se muestra el mapa de bits primero con el más sencillo [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,System.Single,System.Single,SkiaSharp.SKPaint)) método. Todo lo que necesita especificar son las coordenadas X e Y donde es se coloca la esquina superior izquierda del mapa de bits:
 
 ```csharp
 public void DrawBitmap (SKBitmap bitmap, Single x, Single y, SKPaint paint = null)
 ```
 
-Aunque un `SKPaint` parámetro está definido, tiene un valor predeterminado de `null` y puede ignorarlo. Los píxeles del mapa de bits simplemente se transfieren a los píxeles de la superficie de pantalla con una asignación uno a uno.
+Aunque un `SKPaint` parámetro está definido, tiene un valor predeterminado de `null` y puede ignorarlo. Los píxeles del mapa de bits simplemente se transfieren a los píxeles de la superficie de pantalla con una asignación uno a uno. Verá una aplicación para este `SKPaint` argumento en la sección siguiente sobre [ **SkiaSharp transparencia**](transparency.md).
 
-Un programa puede obtener las dimensiones en píxeles del mapa de bits con el [ `Width` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Width/) y [ `Height` ](https://developer.xamarin.com/api/property/SkiaSharp.SKBitmap.Height/) propiedades. Estas propiedades permiten que el programa calcular las coordenadas para colocar el mapa de bits en el centro de la tercera parte superior del lienzo:
+Un programa puede obtener las dimensiones en píxeles del mapa de bits con el [ `Width` ](xref:SkiaSharp.SKBitmap.Width) y [ `Height` ](xref:SkiaSharp.SKBitmap.Height) propiedades. Estas propiedades permiten que el programa calcular las coordenadas para colocar el mapa de bits en el centro de la tercera parte superior del lienzo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -179,13 +179,13 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Los otros dos mapas de bits se muestran con una versión de [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKPaint/) con un `SKRect` parámetro:
+Los otros dos mapas de bits se muestran con una versión de [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKPaint)) con un `SKRect` parámetro:
 
 ```csharp
 public void DrawBitmap (SKBitmap bitmap, SKRect dest, SKPaint paint = null)
 ```
 
-Una tercera versión de [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKRect/SkiaSharp.SKPaint/) tiene dos `SKRect` argumentos para especificar un subconjunto rectangular del mapa de bits para mostrar, pero esa versión no se usa en este artículo.
+Una tercera versión de [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) tiene dos `SKRect` argumentos para especificar un subconjunto rectangular del mapa de bits para mostrar, pero esa versión no se usa en este artículo.
 
 Este es el código para mostrar el mapa de bits que se cargan desde un mapa de bits del recurso incrustado:
 
@@ -243,9 +243,10 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Si ningún mapa de bits se ha cargado desde la biblioteca de imágenes, el `else` bloque muestra algún texto para pedir al usuario que pulse en la pantalla.
 
+Puede mostrar mapas de bits con diversos grados de transparencia y el artículo siguiente sobre [ **SkiaSharp transparencia** ](transparency.md) describe cómo.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 - [Seleccionar una foto de la biblioteca de imágenes](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

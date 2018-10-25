@@ -7,11 +7,11 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: 12b677c8cc4a709a865d2eaee3ea44a6babf1b05
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: ce48c4d271167b657505c52518e79c955e53b02e
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "38860672"
 ---
 # <a name="xamarin-live-reload"></a>Recarga en vivo de Xamarin
@@ -26,10 +26,12 @@ Dado que la aplicación se compila cuando se usa la recarga en vivo, funciona co
 
 La recarga en vivo sólo está disponible en Visual Studio 2017.
 
+[![Únase a esta charla en https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ## <a name="requirements"></a>Requisitos
 
-* [Visual Studio 2017 versión 15.7 o superior](https://visualstudio.microsoft.com/vs/) o superior con el **desarrollo móvil con .NET** carga de trabajo.
-* [Xamarin.Forms 3.0.0 o posterior](https://www.nuget.org/packages/Xamarin.Forms/) o superior.
+* [Visual Studio 2017 versión 15.7 o superior](https://visualstudio.microsoft.com/vs/) con el **desarrollo móvil con .NET** carga de trabajo.
+* [Xamarin.Forms 3.0.0 o posterior](https://www.nuget.org/packages/Xamarin.Forms/).
 
 ## <a name="getting-started"></a>Introducción
 ### <a name="1-install-xamarin-live-reload-from-the-visual-studio-marketplace"></a>1. Instalar la recarga en vivo de Xamarin desde Visual Studio Marketplace
@@ -121,6 +123,8 @@ No. De hecho, incluso puede iniciar sus destinos aplicaciones compatibles (Andro
 * Solo se admite en Visual Studio.
 * Vinculación debe establecerse en **no vincular** o **vincular solo SDK de marco** 
 * Volver a cargar recursos de toda la aplicación (es decir, **App.xaml** o compartir los diccionarios de recursos), se restablece la navegación de la aplicación. Esto se corregirá en la próxima versión de vista previa.
+* Recarga de ContentView actualmente requiere volver a cargar la página contenedora. Esto se corregirá en la próxima versión de vista previa.
+* Elementos que contienen AutomationId pueden producir un error de volver a cargar.
 * Editar XAML mientras la depuración de UWP puede provocar un bloqueo en tiempo de ejecución. Solución alternativa: Use **iniciar sin depurar (CTRL+F5)** en lugar de **Iniciar depuración (F5)**.
 
 ## <a name="troubleshooting"></a>Solución de problemas

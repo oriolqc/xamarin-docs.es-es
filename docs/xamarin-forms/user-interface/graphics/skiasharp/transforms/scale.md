@@ -4,21 +4,21 @@ description: En este artículo explora la transformación de escala de SkiaSharp
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/23/2017
-ms.openlocfilehash: 94105cbb83e4c6eb3558ca3fc55e505ab41f28fe
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: d4ab7ad5a0fc645c13388d76eb11cbd4e2dd72f8
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615608"
 ---
 # <a name="the-scale-transform"></a>La transformación de escala
 
 _Detectar la transformación de escala para el escalado de objetos para diversos tamaños de SkiaSharp_
 
-Como ha visto en [traducir la transformación](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/translate.md) artículo, la transformación de traslación puede mover un objeto gráfico de una ubicación a otra. En cambio, la transformación de escala cambia el tamaño del objeto gráfico:
+Como ha visto en [ **traducir la transformación** ](translate.md) artículo, la transformación de traslación puede mover un objeto gráfico de una ubicación a otra. En cambio, la transformación de escala cambia el tamaño del objeto gráfico:
 
 ![](scale-images/scaleexample.png "Una palabra alta escalada de tamaño")
 
@@ -38,7 +38,7 @@ y' = sy (en inglés) y
 
 Los valores predeterminados de los factores de traslación están 0; los valores predeterminados de los factores de escala son 1.
 
-El `SKCanvas` clase define cuatro `Scale` métodos. La primera [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/) método es para incluir casos cuando desee que la misma escala horizontal y vertical:
+El `SKCanvas` clase define cuatro `Scale` métodos. La primera [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single)) método es para incluir casos cuando desee que la misma escala horizontal y vertical:
 
 ```csharp
 public void Scale (Single s)
@@ -46,14 +46,14 @@ public void Scale (Single s)
 
 Esto se conoce como *isótropo* escalado &mdash; escala que es el mismo en ambas direcciones. Escalado isótropo conserva la relación de aspecto del objeto.
 
-El segundo [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/) método le permite especificar valores diferentes para el escalado horizontal y vertical:
+El segundo [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single)) método le permite especificar valores diferentes para el escalado horizontal y vertical:
 
 ```csharp
 public void Scale (Single sx, Single sy)
 ```
 
 Esto da como resultado *anisotrópico* escalado.
-La tercera [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/SkiaSharp.SKPoint/) método combina los dos factores de escala en una sola `SKPoint` valor:
+La tercera [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(SkiaSharp.SKPoint)) método combina los dos factores de escala en una sola `SKPoint` valor:
 
 ```csharp
 public void Scale (SKPoint size)
@@ -61,7 +61,7 @@ public void Scale (SKPoint size)
 
 El cuarto `Scale` método se describirá en breve.
 
-El **escalado básico** página muestra la `Scale` método. El [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) archivo XAML contiene dos `Slider` elementos que le permiten seleccionar los factores de escala horizontales y verticales entre 0 y 10. El [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) archivo de código subyacente usa esos valores para llamar a `Scale` antes de mostrar un rectángulo redondeado trazan con una línea discontinua y tamaño para ajustarse a algún texto en la esquina superior izquierda esquina del lienzo:
+El **escalado básico** página muestra la `Scale` método. El [ **BasicScalePage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml) archivo contiene dos `Slider` elementos que le permiten seleccionar los factores de escala horizontales y verticales entre 0 y 10. El [ **BasicScalePage.xaml.cs** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/BasicScalePage.xaml.cs) archivo de código subyacente usa esos valores para llamar a `Scale` antes de mostrar un rectángulo redondeado trazan con una línea discontinua y tamaño para ajustarse a algún texto en la esquina superior izquierda esquina del lienzo:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -113,7 +113,7 @@ El texto, el ancho de la línea discontinua, la longitud de los guiones en esa l
 
 Anisotrópico escalado hace que el ancho del trazo para convertirse en diferentes para las líneas alineado con los ejes horizontales y vertical. (Esto es también puede deducirse a partir de la primera imagen en esta página). Si no desea que el ancho del trazo se vea afectado por los factores de escala, establézcalo en 0 y siempre será un píxel de ancho, con independencia de la `Scale` configuración.
 
-El escalado es relativo a la esquina superior izquierda del lienzo. Esto podría ser exactamente lo que desea, pero no es posible. Suponga que desea colocar el texto y el rectángulo en otro lugar en el lienzo y desea ajustar la escala en relación con su centro. En ese caso puede utilizar la cuarta versión de la [ `Scale` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Scale/p/System.Single/System.Single/System.Single/System.Single/) método, que incluye dos parámetros adicionales para especificar el centro de escalado:
+El escalado es relativo a la esquina superior izquierda del lienzo. Esto podría ser exactamente lo que desea, pero no es posible. Suponga que desea colocar el texto y el rectángulo en otro lugar en el lienzo y desea ajustar la escala en relación con su centro. En ese caso puede utilizar la cuarta versión de la [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single,System.Single,System.Single)) método, que incluye dos parámetros adicionales para especificar el centro de escalado:
 
 ```csharp
 public void Scale (Single sx, Single sy, Single px, Single py)
@@ -170,7 +170,7 @@ Se coloca la esquina superior izquierda del rectángulo redondeado `margin` píx
 
 El `Slider` elementos en este programa tienen un intervalo de &ndash;10 a 10. Como puede ver, los valores negativos (por ejemplo en Android, pantalla en el centro) escalado vertical hará que los objetos se voltea alrededor del eje horizontal que pasa a través del centro de escalado. Los valores negativos (tal como se muestra en la pantalla UWP a la derecha) el escalado horizontal hará que los objetos se voltea alrededor del eje vertical que pasa a través del centro de escalado.
 
-Esta versión del cuarta el `Scale` método es realmente un acceso directo. Desea ver cómo funciona esto reemplazando el `Scale` método en este código con lo siguiente:
+La versión de la [ `Scale` ](xref:SkiaSharp.SKCanvas.Scale(System.Single,System.Single,System.Single,System.Single)) método con puntos de pivote es un acceso directo para una serie de tres `Translate` y `Scale` llamadas. Desea ver cómo funciona esto reemplazando el `Scale` método en el **centrado escala** página con lo siguiente:
 
 ```csharp
 canvas.Translate(-px, -py);
@@ -191,7 +191,7 @@ Si está familiarizado con este ejercicio en otros que sistemas de programación
 
 Con las sucesivas `Scale` y `Translate` llamadas, el centro del rectángulo redondeado está en la esquina superior izquierda, pero ahora puede escalar con respecto a la esquina superior izquierda del lienzo, que también es el centro del rectángulo redondeado.
 
-Ahora, antes de que `Scale` llamada agregue otro `Translate` llamar con los valores centrados:
+Ahora, antes de que `Scale` llamada, agregue otro `Translate` llamar con los valores centrados:
 
 ```csharp
 canvas.Translate(px, py);
@@ -215,7 +215,7 @@ Tenga en cuenta que los valores predeterminados de `sx` y `sy` son 1. Es fácil 
 
 Si combina `Translate` y `Scale` llamadas, el orden es importante. Si el `Translate` viene después de la `Scale`, los factores de traslación se escalan de forma eficaz mediante los factores de escala. Si el `Translate` precede el `Scale`, no se escalan los factores de traslación. Este proceso se vuelve un poco más claro (aunque más matemáticos) cuando se especifica el asunto de matrices de transformación.
 
-El `SKPath` clase define solo lectura [ `Bounds` ](https://developer.xamarin.com/api/property/SkiaSharp.SKPath.Bounds/) propiedad que devuelve un `SKRect` definir el alcance de las coordenadas en la ruta de acceso. Por ejemplo, cuando el `Bounds` se obtiene la propiedad de la ruta de acceso de hendecagram que creó anteriormente, el `Left` y `Top` las propiedades del rectángulo son aproximadamente -100, el `Right` y `Bottom` son propiedades aproximadamente 100 y el `Width` y `Height` propiedades son aproximadamente 200. (La mayoría de los valores reales es un poco menor porque los puntos de las estrellas se definen por un círculo con un radio de 100, pero solo el punto superior es paralelo con los ejes horizontales o verticales).
+El `SKPath` clase define solo lectura [ `Bounds` ](xref:SkiaSharp.SKPath.Bounds) propiedad que devuelve un `SKRect` definir el alcance de las coordenadas en la ruta de acceso. Por ejemplo, cuando el `Bounds` se obtiene la propiedad de la ruta de acceso de hendecagram que creó anteriormente, el `Left` y `Top` las propiedades del rectángulo son aproximadamente -100, el `Right` y `Bottom` son propiedades aproximadamente 100 y el `Width` y `Height` propiedades son aproximadamente 200. (La mayoría de los valores reales es un poco menor porque los puntos de las estrellas se definen por un círculo con un radio de 100, pero solo el punto superior es paralelo con los ejes horizontales o verticales).
 
 La disponibilidad de esta información implica que debe ser posible derivar la escala y traducir factores adecuados para el escalado de una ruta de acceso para el tamaño del lienzo. El [ **escalado anisotrópico** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/AnisotropicScalingPage.cs) página muestra con la estrella que señala la 11. Un *anisotrópico* escala significa que es desigual en dirección horizontal y vertical, lo que significa que la estrella no conserva su relación de aspecto original. Este es el código pertinente el `PaintSurface` controlador:
 
@@ -337,12 +337,12 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-El código también muestra la estrella diez veces más, cada vez que reduce el escalado factor 10% y progresivamente cambiando el color de rojo a azul:
+El código también muestra la estrella 10 veces más, cada vez que reduce el escalado factor 10% y progresivamente cambiando el color de rojo a azul:
 
 [![](scale-images/isotropicscaling-small.png "Captura de pantalla de la página escala isótropo triple")](scale-images/isotropicscaling-large.png#lightbox "Triple captura de pantalla de la página escala isótropo")
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

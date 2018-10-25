@@ -1,38 +1,44 @@
 ---
 title: Polilíneas y ecuaciones paramétricas
-description: En este artículo se explica cómo para el uso de SkiaSharp para representar cualquier línea, puede definir con ecuaciones paramétricas y esto se muestra con código de ejemplo.
+description: En este artículo se explica cómo al uso de SkiaSharp para representar cualquier línea que puede definir con ecuaciones paramétricas y esto se muestra con código de ejemplo.
 ms.prod: xamarin
 ms.assetid: 85AEBB33-E954-4364-A6E1-808FAB197BEE
 ms.technology: xamarin-skiasharp
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 9118ca8e23e4c4a9023a1add89e26c4484979c8f
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: d5896a9d4f1aac2ea90d544d638e4adf68d24140
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615800"
 ---
 # <a name="polylines-and-parametric-equations"></a>Polilíneas y ecuaciones paramétricas
 
 _Uso SkiaSharp para representar cualquier línea que se puede definir con ecuaciones paramétricas_
 
-En la parte posterior de esta guía, podrá ver los distintos métodos que `SKPath` define para presentar determinados tipos de curvas. Sin embargo, a veces es necesario dibujar un tipo de curva que no es directamente compatible con `SKPath`. En tal caso, puede usar una polilínea (una colección de líneas conectadas) para dibujar una curva que se puede definir matemáticamente. Si hace lo suficientemente pequeño como las líneas y numerosos suficiente, el resultado tendrá un aspecto similar a una curva. Este espiral es realmente 3.600 líneas poco:
+En el [ **trazados y curvas de SkiaSharp** ](../curves/index.md) sección de esta guía, podrá ver los distintos métodos que [ `SKPath` ](xref:SkiaSharp.SKPath) define para presentar determinados tipos de curvas. Sin embargo, a veces es necesario dibujar un tipo de curva que no es directamente compatible con `SKPath`. En tal caso, puede usar una polilínea (una colección de líneas conectadas) para dibujar una curva que se puede definir matemáticamente. Si hace lo suficientemente pequeño como las líneas y numerosos suficiente, el resultado tendrá un aspecto similar a una curva. Este espiral es realmente 3.600 líneas poco:
 
 ![](polylines-images/spiralexample.png "Una espiral")
 
 Generalmente es mejor definir una curva en términos de un par de ecuaciones paramétricas. Estos son las ecuaciones para coordenadas X e Y que dependen de una tercera variable, a veces denominada `t` por vez. Por ejemplo, las ecuaciones paramétricas siguientes definen un círculo con un radio de 1 que se centra en el punto (0, 0) para *t* de 0 a 1:
 
- x = y cos(2πt) = sin(2πt)
+x = cos(2πt)
+
+y = sin(2πt)
 
  Si desea que un radio mayor que 1, simplemente multiplique los valores de seno y coseno por ese radius y si necesita mover el centro a otra ubicación, agregue esos valores:
 
- x = xCenter + radius·cos(2πt) y = yCenter + radius·sin(2πt)
+x = xCenter + radius·cos(2πt)
+
+y = yCenter + radius·sin(2πt)
 
 Para una elipse con el paralelo de los ejes horizontal y vertical, intervienen dos radios:
 
-x = xCenter + xRadius·cos(2πt) y = yCenter + yRadius·sin(2πt)
+x = xCenter + xRadius·cos(2πt)
+
+y = yCenter + yRadius·sin(2πt)
 
 A continuación, puede colocar el código equivalente de SkiaSharp en un bucle que calcula los diversos puntos y agrega los de una ruta de acceso. El siguiente código de SkiaSharp crea un `SKPath` objeto para una elipse que rellena la superficie de pantalla. El bucle recorre los 360 grados directamente. El centro es mitad del ancho y alto de la superficie de pantalla y, por lo tanto, son los dos radios:
 
@@ -116,5 +122,5 @@ Tenga en cuenta que el `SKPath` se crea en un `using` bloque. Esto `SKPath` cons
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

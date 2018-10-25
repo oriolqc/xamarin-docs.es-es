@@ -4,23 +4,23 @@ description: En este artículo se explica cómo usar SkiaSharp para dibujar lín
 ms.prod: xamarin
 ms.assetid: 316A15FE-383D-4D06-8641-BAC7EE7474CA
 ms.technology: xamarin-skiasharp
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 9febfabb7b44b1ec09abda4b352691b37565cb48
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 3f2597c67459e407ac066ee19d54d134d60f3076
+ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
+ms.lasthandoff: 10/24/2018
 ms.locfileid: "39615140"
 ---
 # <a name="skiasharp-lines-and-paths"></a>Las rutas de acceso y las líneas de SkiaSharp
 
 _Use SkiaSharp para dibujar líneas y los gráficos de rutas de acceso_
 
-El [sección anterior](~/xamarin-forms/user-interface/graphics/skiasharp/basics/index.md) demostró que el SkiaSharp `SKCanvas` clase incluye varios métodos para dibujar rectángulos, elipses y rectángulos redondeados. Esta sección y en las secciones posteriores tratan las distintas clases conectadas con la creación y la representación *trazados de gráficos*.
+El [sección anterior](~/xamarin-forms/user-interface/graphics/skiasharp/basics/index.md) demostró que el SkiaSharp `SKCanvas` clase incluye varios métodos para dibujar círculos, elipses, rectángulos, rectángulos redondeados, texto y mapas de bits. Esta sección y en las secciones posteriores tratan las distintas clases conectadas con la creación y la representación *trazados de gráficos*.
 
-La ruta de acceso de gráficos es el enfoque más generalizado para dibujar líneas y curvas de SkiaSharp. En esta sección se describe el uso un `SKPath` objeto para dibujar líneas rectas y usar una colección de líneas rectas diminutas (llamado un *polyline*) para dibujar curvas que se pueden definir matemáticamente. Una sección posterior se describe los distintos tipos de curvas compatibles con `SKPath`.
+La ruta de acceso de gráficos es el enfoque más generalizado para dibujar líneas y curvas de SkiaSharp. En esta sección se describe el uso un [ `SKPath` ](xref:SkiaSharp.SKPath) objeto para dibujar líneas rectas y usar una colección de líneas rectas diminutas (llamado un *polyline*) para dibujar curvas que se pueden definir de forma algorítmica. Una sección posterior en [ **trazados y curvas de SkiaSharp** ](../curves/index.md) se describen los distintos tipos de curvas compatibles con `SKPath`.
 
 Todos los programas de ejemplo en esta sección aparecen bajo el encabezado **líneas y las rutas de acceso** en la página principal de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa y en el [ **Rutas** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) carpeta de la solución.
 
@@ -30,7 +30,7 @@ Obtenga información sobre cómo usar SkiaSharp para dibujar líneas con extremo
 
 ## <a name="path-basicspathsmd"></a>[Conceptos básicos del trazado](paths.md)
 
-Explorar el objeto de SkiaSharp SKPath para combinar varias líneas y curvas.
+Explore la SkiaSharp `SKPath` objeto para la combinación de líneas y curvas.
 
 ## <a name="the-path-fill-typesfill-typesmd"></a>[Tipos de relleno del trazado](fill-types.md)
 
@@ -51,5 +51,5 @@ Utilizar los dedos para pintar en el lienzo.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
