@@ -6,12 +6,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 4557d3b055e5c49842b9fdcff1dac9ee996e8bab
-ms.sourcegitcommit: be4da0cd7e1a915e3b8932a7e3d6bcd74c7055be
+ms.openlocfilehash: 1e353aceaf0e2c0525b82c0ccb7e7bcb73df3075
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38986023"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106070"
 ---
 # <a name="apple-account-management"></a>Administración de cuentas de Apple
 
@@ -44,13 +44,13 @@ Debe tener una cuenta de desarrollador de Apple para usar esta característica. 
 
 ## <a name="adding-an-apple-developer-account"></a>Agregar una cuenta de desarrollador de Apple
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Para abrir el cuadro de diálogo de administración de cuenta, vaya a **Visual Studio > Preferencias > cuenta de desarrollador de Apple**:
 
     ![Opciones de la cuenta de desarrollador de Apple](apple-account-management-images/image1.png)
 
-2. Presione el ** + ** botón para mostrar el inicio de sesión en el cuadro de diálogo, como se muestra a continuación: 
+2. Presione el **+** botón para mostrar el inicio de sesión en el cuadro de diálogo, como se muestra a continuación: 
 
     ![cuadro de diálogo de FastLane.](apple-account-management-images/image2.png)
 
@@ -68,7 +68,7 @@ Debe tener una cuenta de desarrollador de Apple para usar esta característica. 
 
     ![Vista Detalles de la pantalla que muestra las identidades de firma y perfiles en el equipo de aprovisionamiento](apple-account-management-images/image6.png)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Antes de empezar a agregar el ID de Apple para Visual Studio 2017, asegúrese de que es el entorno de desarrollo [emparejado con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
@@ -109,11 +109,11 @@ Para crear una nueva identidad de firma, seleccione el **Create Certificate** bo
 
 Si una opción en la lista desplegable está atenuada y no está seleccionada, significa que no tiene los permisos de equipo correcto para crear este tipo de certificado.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![crear opciones de certificado](apple-account-management-images/image8.png)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![crear opciones de certificado](apple-account-management-images/prov3.png)
 
@@ -123,11 +123,11 @@ Si una opción en la lista desplegable está atenuada y no está seleccionada, s
 
 El cuadro de diálogo de detalles del equipo también muestra una lista de todos los perfiles de aprovisionamiento conectado a su cuenta de desarrollador. Puede descargar todos los perfiles de aprovisionamiento en el equipo local presionando el **descargar todos los perfiles** botón
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Descargue la sección perfiles de aprovisionamiento](apple-account-management-images/image9.png)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Descargue la sección perfiles de aprovisionamiento](apple-account-management-images/prov4.png)
 

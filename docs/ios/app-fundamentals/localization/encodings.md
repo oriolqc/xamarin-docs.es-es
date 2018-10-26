@@ -1,36 +1,36 @@
 ---
 title: Codificaciones de internacionalización de Xamarin.iOS
-description: Este documento describe codificaciones de internacionalización de Xamarin.iOS, que se tratan las codificaciones disponibles y cómo agregarlos a una aplicación.
+description: Este documento describe las codificaciones de internacionalización en Xamarin.iOS, se tratan las codificaciones disponibles y cómo agregarlos a una aplicación.
 ms.prod: xamarin
 ms.assetid: F5117294-28BB-4583-B6A0-A339B050FDE1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: 4963b0f95ae48ee56462a82d2f82a8dcaa231a23
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: 7c59b6f1ac269c57ab720aeb6999c0f0d178bab3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784131"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112514"
 ---
 # <a name="internationalization-encodings-in-xamarinios"></a>Codificaciones de internacionalización de Xamarin.iOS
 
 No todas las codificaciones se incluyen en la biblioteca de clases de Xamarin.iOS de forma predeterminada.
 
-Para reducir el tamaño de la aplicación, Xamarin.iOS no incluye ninguna codificación específico y tendrá que indicar a mtouch para incluir los ensamblados que contienen la compatibilidad con la codificación que se necesita.
+Para reducir el tamaño de la aplicación, Xamarin.iOS no incluye ninguna codificación específica, y tendrá que indicar mtouch para incluir los ensamblados que contienen la compatibilidad con la codificación que necesita.
 
-Esto se realiza seleccionando las codificaciones adicionales desde el panel de compilación/avanzada de iOS en Visual Studio para Mac o en Visual Studio:
+Esto se realiza seleccionando las codificaciones adicionales desde el panel de compilación/avanzada de iOS en Visual Studio para Mac o Visual Studio:
 
- [![](encodings-images/00.png "Al seleccionar las codificaciones adicionales")](encodings-images/00.png#lightbox)
+ [![](encodings-images/00.png "Seleccionar las codificaciones adicionales")](encodings-images/00.png#lightbox)
 
- [![](encodings-images/00a.png "Al seleccionar las codificaciones adicionales")](encodings-images/00a.png#lightbox)
+ [![](encodings-images/00a.png "Seleccionar las codificaciones adicionales")](encodings-images/00a.png#lightbox)
 
 Puede seleccionar uno de los siguientes:
 
 -  CJK: para Chineese, japonés y coreano
 -  Oriente: árabe, hebreo, turco y Latin5.
 -  otros: cirílico, Báltico, vietnamita, tailandés y ucraniano
--  raras: EBCDIC codificaciones y otras páginas de códigos poco frecuentes
+-  poco frecuentes: EBCDIC codificaciones y otras páginas de códigos raros
 -  Oeste: idiomas occidentales, Pascua y Europa occidental
 -  todo
 
@@ -81,7 +81,7 @@ Puede seleccionar uno de los siguientes:
  <a name="rare" />
 
 
-## <a name="rare"></a>poco frecuentes
+## <a name="rare"></a>poco frecuente
 
 -  CP1026
 -  CP1047

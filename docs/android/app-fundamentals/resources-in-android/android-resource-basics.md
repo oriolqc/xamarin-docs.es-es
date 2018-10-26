@@ -3,25 +3,25 @@ title: Conceptos básicos de recursos de Android
 ms.prod: xamarin
 ms.assetid: ED32E7B5-D552-284B-6385-C3EDDCC30A4B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 207644f5a5d3d346214ba090dcd450e55fde2657
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 2673021fae2f0a0b45761bf4ed619c92fb826b13
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241323"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110139"
 ---
 # <a name="android-resource-basics"></a>Conceptos básicos de recursos de Android
 
 Casi todas las aplicaciones Android tendrán algún tipo de recursos en ellas. como mínimo a menudo tienen diseños de interfaz de usuario en forma de archivos XML. Cuando se crea una aplicación de Xamarin.Android, los recursos predeterminados son el programa de instalación de la plantilla de proyecto de Xamarin.Android:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Archivos de recursos](android-resource-basics-images/01-resource-files-vs.png)
  
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Archivos de recursos](android-resource-basics-images/01-resource-files-xs.png)
  
@@ -44,11 +44,11 @@ Los cinco archivos que componen los recursos predeterminados se crearon en la ca
 
 Creación de recursos es tan sencillo como agregar archivos al directorio para el tipo de recurso en cuestión. La siguiente captura de pantalla muestra los recursos de cadena para configuraciones regionales de alemán se agregaron a un proyecto. Cuando **Strings.xml** se agregó al archivo, el **acción de compilación** se establece automáticamente en **AndroidResource** por las herramientas de Xamarin.Android:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Acción para Strings.xml establecido en AndroidResource de compilación](android-resource-basics-images/02-build-action-vs.png)
  
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Acción para Strings.xml establecido en AndroidResource de compilación](android-resource-basics-images/02-build-action-xs.png)
  

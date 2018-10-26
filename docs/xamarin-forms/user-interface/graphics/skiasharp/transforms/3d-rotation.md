@@ -4,15 +4,15 @@ description: En este artículo se explica cómo utilizar las transformaciones no
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: 84ebdd007d17eaf0bcfc1be119cb4130299503bc
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 750f357819a85077b3f272a7a10cbd3928186681
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615670"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110295"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>Rotaciones de 3D de SkiaSharp
 
@@ -24,7 +24,7 @@ Una aplicación común de las transformaciones no afines está simulando el giro
 
 Este trabajo implica trabajar con rotaciones tridimensionales y, a continuación, derivar no afines `SKMatrix` transformación que realiza estas rotaciones 3D.
 
-Resulta difícil desarrollar `SKMatrix` transformación funciona únicamente dentro de dos dimensiones. El trabajo pasa a ser mucho más fácil cuando esta matriz 3 por 3 se deriva de una matriz de 4 x 4 utilizada en los gráficos 3D. SkiaSharp incluye la [ `SKMatrix44` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.PreConcat/p/SkiaSharp.SKMatrix44/) clase para este propósito, pero algunos en segundo plano en los gráficos 3D es necesaria para comprender las rotaciones de 3D y la matriz de transformación de 4 por 4.
+Resulta difícil desarrollar `SKMatrix` transformación funciona únicamente dentro de dos dimensiones. El trabajo pasa a ser mucho más fácil cuando esta matriz 3 por 3 se deriva de una matriz de 4 x 4 utilizada en los gráficos 3D. SkiaSharp incluye la [ `SKMatrix44` ](xref:SkiaSharp.SKMatrix44) clase para este propósito, pero algunos en segundo plano en los gráficos 3D es necesaria para comprender las rotaciones de 3D y la matriz de transformación de 4 por 4.
 
 Un sistema de coordenadas tridimensional agrega un tercer eje Z. conceptualmente llamado, el eje Z es perpendicular a la pantalla. Se indican los puntos de coordenada en el espacio 3D con tres números: (x, y, z). En el modelo 3D del sistema de coordenadas utilizado en este artículo, aumentar los valores de X son a la derecha e incrementar los valores de Y dejan de funcionar, al igual que en dos dimensiones. Los valores de Z positivos crecientes vienen fuera de la pantalla. El origen es la esquina superior izquierda, al igual que en los gráficos 2D. La pantalla se puede considerar como un plano XY con el eje Z en ángulos rectos este plano.
 
@@ -48,7 +48,7 @@ Al trabajar con una matriz de 4 por 4, es conveniente identificar las celdas con
 |  M41  M42  M43  M44  |
 </pre>
 
-Sin embargo, el SkiaSharp `Matrix44` clase es un poco diferente. La única forma de establecer u obtener los valores de celda individual en `SKMatrix44` es mediante la [ `Item` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Item/p/System.Int32/System.Int32/) indizador. Los índices de fila y columna son basado en cero en lugar de basado en uno, y se intercambian las filas y columnas. La celda M14 en el diagrama anterior se obtiene acceso mediante el indizador `[3, 0]` en un `SKMatrix44` objeto.
+Sin embargo, el SkiaSharp `Matrix44` clase es un poco diferente. La única forma de establecer u obtener los valores de celda individual en `SKMatrix44` es mediante la [ `Item` ](xref:SkiaSharp.SKMatrix44.Item(System.Int32,System.Int32)) indizador. Los índices de fila y columna son basado en cero en lugar de basado en uno, y se intercambian las filas y columnas. La celda M14 en el diagrama anterior se obtiene acceso mediante el indizador `[3, 0]` en un `SKMatrix44` objeto.
 
 En un sistema de gráficos 3D, un punto 3D (x, y, z) se convierte en una matriz de 1 al 4 para multiplicar por la matriz de transformación de 4 por 4:
 
@@ -112,7 +112,7 @@ Rotación alrededor del eje Z es igual que en los gráficos 2D:
 
 La dirección de la rotación está implícito en la situación del sistema de coordenadas. Se trata de un sistema zurdo, por lo que si el punto de control de posición de la mano izquierda hacia el aumento de los valores de un eje determinado, a la derecha de la rotación alrededor del eje X, hacia abajo de rotación alrededor del eje Y y hacia TI rotación alrededor del eje Z, a continuación, la curva de yo el otro dedo indica la dirección de rotación de ángulos positivos.
 
-`SKMatrix44` se generalizado estático [ `CreateRotation` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotation/p/System.Single/System.Single/System.Single/System.Single/) y [ `CreateRotationDegrees` ](https://developer.xamarin.com/api/member/SkiaSharp.SKMatrix44.CreateRotationDegrees/p/System.Single/System.Single/System.Single/System.Single/) métodos que le permiten especificar el eje alrededor de la cual se produce la rotación:
+`SKMatrix44` se generalizado estático [ `CreateRotation` ](xref:SkiaSharp.SKMatrix44.CreateRotation(System.Single,System.Single,System.Single,System.Single)) y [ `CreateRotationDegrees` ](xref:SkiaSharp.SKMatrix44.CreateRotationDegrees(System.Single,System.Single,System.Single,System.Single)) métodos que le permiten especificar el eje alrededor de la cual se produce la rotación:
 
 ```csharp
 public static SKMatrix44 CreateRotationDegrees (Single x, Single y, Single z, Single degrees)
@@ -220,7 +220,7 @@ y"= s / (((α) sen / profundidad) ·x + 1)
 
 Cuando se giran los objetos 2D con un ángulo positivo alrededor del eje Y, a continuación, positivo valores X se desvanecen en segundo plano mientras negativo X valores vienen al primer plano. Los valores X parecen acercarse al eje Y (que se rige por el valor de coseno) como coordenadas más alejado del eje Y se convierte en más de cerca en el Visor de o menor o mayor cuando se mueven más lejos del Visor.
 
-Cuando se usa `SKMatrix44`, realizar todas las operaciones de perspectiva y giro 3D mediante la multiplicación diversos `SKMatrix44` valores. A continuación, puede extraer una matriz bidimensional de 3 por 3 de 4 por 4 matriz utilizando el [ `Matrix` ](https://developer.xamarin.com/api/property/SkiaSharp.SKMatrix44.Matrix/) propiedad de la `SKMatrix44` clase. Esta propiedad devuelve un familiar `SKMatrix` valor.
+Cuando se usa `SKMatrix44`, realizar todas las operaciones de perspectiva y giro 3D mediante la multiplicación diversos `SKMatrix44` valores. A continuación, puede extraer una matriz bidimensional de 3 por 3 de 4 por 4 matriz utilizando el [ `Matrix` ](xref:SkiaSharp.SKMatrix44.Matrix) propiedad de la `SKMatrix44` clase. Esta propiedad devuelve un familiar `SKMatrix` valor.
 
 El **giro 3D** página permite experimentar con giro 3D. El [ **Rotation3DPage.xaml** ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/Rotation3DPage.xaml) cuatro controles deslizantes para establecer el giro alrededor del eje X, Y y Z y para establecer un valor de profundidad crea una instancia de archivo:
 
@@ -441,7 +441,7 @@ public class AnimatedRotation3DPage : ContentPage
 }
 ```
 
-El `OnAppearing` invalidación define tres Xamarin.Forms `Animation` objetos que se va a animar el `xRotationDegrees`, `yRotationDegrees`, y `zRotationDegrees` campos con distintas velocidades. Tenga en cuenta que se establecen los períodos de estas animaciones preparar números: 5 segundos, 7 segundos y 11 segundos, por lo que la combinación general solo repite cada 385 segundos o más de 10 minutos:
+El `OnAppearing` invalidación define tres Xamarin.Forms `Animation` objetos que se va a animar el `xRotationDegrees`, `yRotationDegrees`, y `zRotationDegrees` campos con distintas velocidades. Tenga en cuenta que se establecen los períodos de estas animaciones preparar números (5 segundos, 7 segundos y 11 segundos) para que la combinación general solo repite cada 385 segundos o más de 10 minutos:
 
 ```csharp
 public class AnimatedRotation3DPage : ContentPage
@@ -536,5 +536,5 @@ Este giro 3D está acotado por varias transformaciones 2D para mover el centro d
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
