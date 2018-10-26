@@ -4,15 +4,15 @@ description: Este documento contiene vínculos a guías en las que se describe e
 ms.prod: xamarin
 ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 01/18/2017
-ms.openlocfilehash: cfbb36dc7298563987bcd688927649366094ae89
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8b0f0437f40892ada7cfb362f8508c3a20715060
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785542"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113167"
 ---
 # <a name="code-signing-and-provisioning-for-xamarinios-apps"></a>Firma de código y aprovisionamiento para aplicaciones Xamarin.iOS
 

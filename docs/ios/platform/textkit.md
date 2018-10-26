@@ -4,46 +4,46 @@ description: Este documento describe cómo usar TextKit en Xamarin.iOS. TextKit 
 ms.prod: xamarin
 ms.assetid: 1D0477E8-CD1E-48A9-B7C8-7CA892069EFF
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: ac80d1d07f5649d377dd6fdefcb4911ba9ec2dcb
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f08e37d17cc32e45232d54cc4a51bb48d7ec94b1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788340"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111426"
 ---
 # <a name="textkit-in-xamarinios"></a>TextKit en Xamarin.iOS
 
-TextKit es una nueva API que ofrece características de diseño y la representación de texto eficaz. Se basa en el marco de texto de núcleo de bajo nivel, pero es mucho más fácil de usar que texto principal.
+TextKit es una nueva API que ofrece características de diseño y la representación de texto eficaz. Se basa en el marco de texto principal de bajo nivel, pero es mucho más fácil de usar que el texto principal.
 
-Para disponer de las características de TextKit a los controles estándar, varios controles de texto de iOS se han implementado volver a usar TextKit, incluidos:
+Para que las características de TextKit disponible para los controles estándar, varios controles de texto de iOS han vuelto a implementados para usar TextKit, incluyendo:
 
 -  UITextView
--  UITextField
+-  Interfaz de usuario
 -  UILabel
 
 ## <a name="architecture"></a>Arquitectura
 
-TextKit proporciona una arquitectura en capas que separa el almacenamiento de texto desde el diseño y la presentación, incluidas las siguientes clases:
+TextKit proporciona una arquitectura por capas que separa el almacenamiento de texto desde el diseño y la presentación, incluidas las siguientes clases:
 
--  `NSTextContainer` : Proporciona la geometría que se usa para el texto del diseño y el sistema de coordenadas.
--  `NSLayoutManager` – Distribuye texto activando el texto en glifos. 
--  `NSTextStorage` : Contiene los datos de texto, así como controla las actualizaciones de propiedad de texto de lote. Las actualizaciones por lotes se va a pasar al administrador de diseño para el procesamiento real de los cambios, como volver a calcular el diseño y volver a dibujar el texto.
+-  `NSTextContainer` : Proporciona el sistema de coordenadas y la geometría que se usa para el texto del diseño.
+-  `NSLayoutManager` : Coloca texto girando texto en glifos. 
+-  `NSTextStorage` : Contiene los datos de texto, así como controla las actualizaciones de propiedad de texto de lote. Las actualizaciones por lotes se entregan al administrador de diseño para el procesamiento real de los cambios, como volver a calcular el diseño y volver a dibujar el texto.
 
 
-Estas tres clases se aplican a una vista que representa el texto. Controlar vistas, como el texto integrado `UITextView`, `UITextField`, y `UILabel` aún tengan establecido, pero puede crear y aplicar a cualquier `UIView` también la instancia.
+Estas clases se aplican a una vista que representa el texto. Controlar vistas, como el texto integrado `UITextView`, `UITextField`, y `UILabel` aún tengan establecido, pero puede crear y aplicar a cualquier `UIView` también la instancia.
 
 En la siguiente ilustración se muestra esta arquitectura:
 
- ![](textkit-images/textkitarch.png "Esta ilustración muestra la arquitectura de TextKit")
+ ![](textkit-images/textkitarch.png "Esta ilustración muestra la arquitectura TextKit")
 
-## <a name="text-storage-and-attributes"></a>Almacenamiento de texto y atributos
+## <a name="text-storage-and-attributes"></a>Los atributos y el almacenamiento de texto
 
-La `NSTextStorage` clase contiene el texto que se muestra una vista. También se comunica los cambios en el texto, como cambios de caracteres o de sus atributos: para el Administrador de diseño para su presentación. `NSTextStorage` hereda de `MSMutableAttributed` cadena, lo que permite cambios en los atributos de texto que se especifique en lotes entre `BeginEditing` y `EndEditing` llamadas.
+La `NSTextStorage` clase contiene el texto que se muestra una vista. También se comunica los cambios en el texto, como los cambios realizados en caracteres o sus atributos: para el Administrador de diseño para su presentación. `NSTextStorage` hereda de `MSMutableAttributed` cadena, lo que permite cambios en los atributos de texto que se especifique en lotes entre `BeginEditing` y `EndEditing` llamadas.
 
-Por ejemplo, el fragmento de código siguiente especifica un cambio en primer plano y fondo colores, respectivamente y tiene como destino intervalos determinados:
+Por ejemplo, el fragmento de código siguiente especifica un cambio en el primer plano y fondo colores, respectivamente y tiene como destino de rangos determinados:
 
 ```csharp
 textView.TextStorage.BeginEditing ();
@@ -52,17 +52,17 @@ textView.TextStorage.AddAttribute(UIStringAttributeKey.BackgroundColor, UIColor.
 textView.TextStorage.EndEditing ();
 ```
 
-Después de `EndEditing` es llama, los cambios se envían al administrador de diseño, que a su vez lleva a cabo cualquier diseño es necesario y los cálculos de representación para el texto que se mostrará en la vista.
+Después de `EndEditing` es llamado, los cambios se envían al administrador de diseño, que a su vez lleva a cabo cualquier diseño es necesario y los cálculos de representación para el texto que se mostrará en la vista.
 
-## <a name="layout-with-exclusion-path"></a>Diseño con la ruta de acceso de exclusión
+## <a name="layout-with-exclusion-path"></a>Diseño con la ruta de exclusión
 
-TextKit también admite el diseño y permite escenarios complejos como texto de varias columna y del flujo de texto alrededor de rutas de acceso especificadas denominado *las rutas de acceso de exclusión*. Las rutas de acceso de exclusión se aplican al contenedor de texto, lo que modifica la geometría del diseño del texto, haciendo que el texto fluya alrededor de las rutas de acceso especificadas.
+TextKit también es compatible con diseño y permite escenarios complejos como texto de varias columnas y mover el texto en torno a las rutas de acceso especificadas denominado *las rutas de exclusión*. Las rutas de exclusión se aplican en el contenedor de texto, lo que modifica la geometría del diseño del texto, haciendo que el texto fluya alrededor de las rutas de acceso especificadas.
 
-Agregar una ruta de acceso de exclusión requiere la configuración del `ExclusionPaths` propiedad en el Administrador de diseño. Al establecer esta propiedad hace que el Administrador de diseño invalidar el diseño del texto y transmitir el texto alrededor de la ruta de acceso de exclusión.
+Agregar una ruta de acceso de exclusión requiere establecer el `ExclusionPaths` propiedad en el Administrador de diseño. Al establecer esta propiedad hace que el Administrador de diseño invalidar el diseño del texto y ajustar el texto en torno a la ruta de acceso de exclusión.
 
-### <a name="exclusion-based-on-a-cgpath"></a>Tomando como base un CGPath de exclusión
+### <a name="exclusion-based-on-a-cgpath"></a>Exclusión según un CGPath
 
-Tenga en cuenta la siguiente `UITextView` implementación de subclase:
+Tenga en cuenta la siguiente `UITextView` implementación subclase:
 
 ```csharp
 public class ExclusionPathView : UITextView
@@ -139,31 +139,31 @@ public class ExclusionPathView : UITextView
 }
 ```
 
-Este código agrega compatibilidad para dibujar en la vista de texto con gráficos de núcleo. Puesto que la `UITextView` clase ahora se genera para utilizar TextKit para su representación de texto y el diseño, puede utilizar todas las características de TextKit, por ejemplo, configurar las rutas de acceso de exclusión.
+Este código agrega compatibilidad para dibujar en la vista de texto con gráficos esenciales. Puesto que la `UITextView` clase ahora se ha creado para usar TextKit para su representación de texto y el diseño, puede utilizar todas las características de TextKit, como el establecimiento de las rutas de exclusión.
 
 > [!IMPORTANT]
-> Este subclases de ejemplo `UITextView` para agregar un toque dibujo soporte técnico. Creación de subclases `UITextView` no es necesario para obtener las características de TextKit.
+> Subclases de este ejemplo `UITextView` para agregar un toque soporte técnico de dibujo. Creación de subclases de `UITextView` no es necesario para obtener las características de TextKit.
 
 
 
-Después de que el usuario se dibuja en la vista de texto, el dibujado `CGPath` se aplica a un `UIBezierPath` instancia estableciendo la `UIBezierPath.CGPath` propiedad:
+Después de que el usuario se dibuja en la vista de texto, el dibujado `CGPath` se aplica a un `UIBezierPath` instancia estableciendo el `UIBezierPath.CGPath` propiedad:
 
 ```csharp
 bezierPath.CGPath = exclusionPath;
 ```
 
-Actualización de la línea de código siguiente hace que el diseño del texto actualizar alrededor de la ruta de acceso:
+Actualización de la línea de código siguiente hace que el diseño del texto actualizar en torno a la ruta de acceso:
 
 ```csharp
 TextContainer.ExclusionPaths = new UIBezierPath[] { bezierPath };
 ```
 
-Captura de pantalla siguiente muestra cómo se cambia el diseño del texto para que fluyan alrededor de la ruta de acceso dibujado:
+Captura de pantalla siguiente muestra cómo se cambia el diseño del texto para que fluyan en torno a la guía dibujada:
 
 <!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")--> 
-![](textkit-images/exclusionpath2.png "Esta captura de pantalla muestra cómo se cambia el diseño del texto para que fluyan alrededor de la ruta de acceso dibujado")
+![](textkit-images/exclusionpath2.png "Esta captura de pantalla muestra cómo se cambia el diseño del texto para que fluyan en torno a la guía dibujada")
 
-Tenga en cuenta que el Administrador de diseño `AllowsNonContiguousLayout` propiedad se establece en false en este caso. Esto hace que el diseño se vuelva a calcular para todos los casos donde el texto cambia. Si se establece en true puede mejorar el rendimiento al evitar que una actualización de diseño completo, especialmente en el caso de documentos de gran tamaño. Sin embargo, establecer `AllowsNonContiguousLayout` a true podría impedir que la ruta de acceso de exclusión actualizara el diseño en algunas circunstancias - por ejemplo, si se escribe texto en tiempo de ejecución sin un final retorno de carro antes de la ruta de acceso que se va a establecer.
+Tenga en cuenta que el Administrador de diseño `AllowsNonContiguousLayout` propiedad se establece en false en este caso. Esto hace que el diseño se vuelvan a calcular para todos los casos donde el texto cambia. Si se establece en true puede beneficiar el rendimiento evitando una actualización de diseño completo, especialmente en el caso de documentos de gran tamaño. Sin embargo, establecer `AllowsNonContiguousLayout` a true impiden que la ruta de exclusión de actualización del diseño en algunas circunstancias - por ejemplo, si se escribe texto en tiempo de ejecución sin devolver un carro final antes de la ruta de acceso que se va a establecer.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

@@ -3,15 +3,15 @@ title: Publicación en Google Play
 ms.prod: xamarin
 ms.assetid: FB1CC234-3554-8566-48BD-2B9B3A28CC7F
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3525541ba0795f4e0b174b155c0ca219e3257bac
-ms.sourcegitcommit: 6433b424410a850f504e0f934bbb5baf8f093e49
+ms.openlocfilehash: e8b1fdd933d026875ae10e76894120c8c4504769
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/16/2018
-ms.locfileid: "39067365"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123341"
 ---
 # <a name="publishing-to-google-play"></a>Publicación en Google Play
 
@@ -130,7 +130,7 @@ Se trata de una dirección URL de un vídeo de YouTube que muestra la aplicació
 
 ### <a name="publishing-to-google-play"></a>Publicación en Google Play
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Xamarin Android 7.0 introduce un flujo de trabajo integrado para publicar aplicaciones en Google Play desde Visual Studio. Si utiliza una versión de Xamarin Android anterior a la 7.0, debe cargar manualmente el APK mediante Google Play Developer Console. Además, debe tener al menos un APK que ya esté cargado para poder utilizar el flujo de trabajo integrado. Si todavía no ha cargado su primer APK, debe cargarlo manualmente. Para obtener más información, consulte [Manually Uploading the APK (Carga manual del APK)](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md).
 
@@ -161,7 +161,7 @@ En el cuadro de diálogo **Register Google API Access (Registrar acceso de API d
 
 En la siguiente sección se explica cómo crear un nuevo proyecto de API de Google y generar el _id. de cliente_ y el _secreto de cliente_ que se necesitan.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Visual Studio para Mac cuenta con un flujo de trabajo integrado para publicar aplicaciones en Google Play. Si utiliza una versión anterior a Xamarin Studio 5.9, debe cargar manualmente el APK mediante Google Play Developer Console y, después, utilizar el cuadro de diálogo **Publish to Google Play (Publicación en Google Play)** para posteriores actualizaciones del APK. Además, debe tener al menos un APK que ya esté cargado antes de poder usar **Publish to Google Play (Publicación en Google Play)**. Si todavía no ha cargado su primer APK, debe cargarlo manualmente. Para obtener más información sobre cómo cargar manualmente un APK, consulte [Manually Uploading the APK (Cargar manualmente el APK)](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md).
 
@@ -227,7 +227,7 @@ Este archivo JSON contiene el id. de cliente y el secreto del cliente que puede 
 
 #### <a name="register-google-api-access"></a>Registro del acceso de la API de Google
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Utilice el identificador de cliente y el secreto de cliente para completar el cuadro de diálogo **Cuenta de API de Google Play** de Visual Studio para Mac. Es posible proporcionar una descripción a la cuenta, lo que permite registrar más de una cuenta de Google Play y cargar futuros APK en diferentes cuentas de Google Play. Copie el id. de cliente y el secreto de cliente en este cuadro de diálogo y haga clic en **Registrar**:
 
@@ -283,7 +283,7 @@ Si se produce este error, cargue un APK manualmente, por ejemplo, una compilaci�
 
 Para resolver este error, vuelva a compilar la aplicación con un número de versión diferente y reenvíela a Google Play mediante el cuadro de diálogo **Distribution Channel (Canal de distribución)**.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Utilice el identificador de cliente y el secreto de cliente para completar el cuadro de diálogo **Cuenta de API de Google Play** de Visual Studio para Mac. Es posible proporcionar una descripción a la cuenta, lo que permite registrar más de una cuenta de Google Play y cargar futuros APK en diferentes cuentas de Google Play. Copie el id. de cliente y el secreto de cliente en este cuadro de diálogo y haga clic en **Registrar**:
 

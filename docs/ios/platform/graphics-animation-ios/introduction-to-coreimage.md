@@ -4,15 +4,15 @@ description: Imagen de Core es un nuevo marco introducido con iOS 5 para proporc
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 7af57856079813e8cb1831a7f22a0a098a6be771
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: d71f14c26865b71eca991910df4a68f2540f9715
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242171"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115415"
 ---
 # <a name="core-image-in-xamarinios"></a>Imagen del núcleo de Xamarin.iOS
 

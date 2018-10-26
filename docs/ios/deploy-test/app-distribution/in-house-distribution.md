@@ -4,15 +4,15 @@ description: En este documento, se proporciona una breve introducción a la dist
 ms.prod: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 1dff0e614943805930cf7d838110c4a42eee6f48
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
+ms.openlocfilehash: c1e1b2d7bfb43c256c71abb62e7d85a05b096419
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353209"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103587"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribución interna para aplicaciones Xamarin.iOS
 
@@ -125,11 +125,11 @@ Una vez que tenga los componentes necesarios para crear un perfil de distribuci�
 
 7. Haga clic en el botón **Generar** para crear el nuevo perfil y finalizar el proceso.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
  Es posible que tenga que salir de Visual Studio para Mac y hacer que Xcode actualice su lista de identidades de firma y perfiles de aprovisionamiento disponibles (con las instrucciones de la sección [Solicitud de identidades de firma](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download)) para que un nuevo perfil de distribución esté disponible en Visual Studio para Mac.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Es posible que tenga que salir de Visual Studio y hacer que Xcode (en el equipo Mac del host de compilación) actualice su lista de identidades de firma y perfiles de aprovisionamiento disponibles (con las instrucciones de la sección sobre cómo [solicitar identidades de firma](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download)) para que un nuevo perfil de distribución esté disponible en Visual Studio.
 

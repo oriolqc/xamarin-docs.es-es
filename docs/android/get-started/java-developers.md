@@ -4,15 +4,15 @@ description: Si es usted es desarrollador de Java, ya tiene la posibilidad de em
 ms.prod: xamarin
 ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 92bcfc888c52f9f74c8484295666da8f5ef7a14c
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: eb1d08c5dee6c7944fa42e7446b34a5dbbb45ad3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120416"
 ---
 # <a name="xamarin-for-java-developers"></a>Xamarin para desarrolladores de Java
 
@@ -433,7 +433,7 @@ Para más información sobre la compatibilidad de Xamarin con las característic
 
 Muchas de las palabras claves del lenguaje de Java también se usan en C#. También hay una serie de palabras clave de Java que tienen un equivalente en C# pero con un nombre distinto, como se indica en esta tabla:
 
-|Java|C#|Description|
+|Java|C#|Descripción|
 |---|---|---|
 |`boolean`|[bool](https://msdn.microsoft.com/en-us/library/c8f5xwh7.aspx)|Se utiliza para declarar los valores booleanos true y false.|
 |`extends`|`:`|Precede a la clase e interfaces de las que se hereda.|
@@ -450,7 +450,7 @@ Muchas de las palabras claves del lenguaje de Java también se usan en C#. Tambi
 
 Además, hay muchas palabras clave que son exclusivas de C# y que no tienen homólogo en Java. El código de Xamarin.Android suele usar las siguientes palabras clave de C# (es útil hacer referencia a esta tabla al leer [código de ejemplo](https://developer.xamarin.com/samples/android/all/) de Xamarin.Android):
 
-|C#|Description|
+|C#|Descripción|
 |---|---|
 |[as](https://msdn.microsoft.com/en-us/library/cscsdfbt.aspx)|Realiza conversiones entre tipos de referencia compatibles o tipos que aceptan valores NULL.|
 |[async](https://msdn.microsoft.com/en-us/library/hh156513.aspx)|Especifica que un método o una expresión lambda son asincrónicos.|
@@ -473,7 +473,7 @@ Además, hay muchas palabras clave que son exclusivas de C# y que no tienen hom�
 |[struct](https://msdn.microsoft.com/en-us/library/ah19swz4.aspx)|Un tipo de valor que encapsula un grupo de variables relacionadas.|
 |[typeof](https://msdn.microsoft.com/en-us/library/58918ffs.aspx)|Obtiene el tipo de un objeto.|
 |[var](https://msdn.microsoft.com/en-us/library/bb383973.aspx)|Declara una variable local con tipo implícito.|
-|[value](https://msdn.microsoft.com/en-us/library/a1khb4f8.aspx)|Hace referencia al valor que el código de cliente desea asignar a una propiedad.|
+|[valor](https://msdn.microsoft.com/en-us/library/a1khb4f8.aspx)|Hace referencia al valor que el código de cliente desea asignar a una propiedad.|
 |[virtual](https://msdn.microsoft.com/en-us/library/9fkccyh4.aspx)|Permite la invalidación de un método en una clase derivada.|
 
 

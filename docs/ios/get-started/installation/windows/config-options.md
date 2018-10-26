@@ -4,15 +4,15 @@ description: En este artículo se describe cómo configurar Visual Studio 2017 p
 ms.prod: xamarin
 ms.assetid: 22D82244-890D-4325-B3CC-C0AC49130BCA
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 04/16/2018
-ms.openlocfilehash: 70633877fb07f52ce4e7a399668be6268942b137
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 5b194d466646ad296204909435b25f4d590a70b9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785959"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104825"
 ---
 # <a name="configuring-visual-studio-2017"></a>Configuración de Visual Studio 2017
 

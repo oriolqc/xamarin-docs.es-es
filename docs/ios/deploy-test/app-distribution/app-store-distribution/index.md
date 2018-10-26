@@ -4,15 +4,15 @@ description: En este documento se describe cómo distribuir una aplicación Xama
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: b763407797cf635908cf34cce4f1a6a06325000d
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: de3af76b8479562ba048c5b62167df0f2b2a51f9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209264"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115138"
 ---
 # <a name="app-store-distribution"></a>Distribución a través del App Store
 
@@ -121,11 +121,11 @@ Una vez que tenga los componentes necesarios para crear un perfil de distribuci�
 7. Haga clic en el botón **Generar** para crear el nuevo perfil y finalizar el proceso.
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
  Es posible que tenga que salir de Visual Studio para Mac y hacer que Xcode actualice su lista de identidades de firma y perfiles de aprovisionamiento disponibles (con las instrucciones de la sección [Solicitud de identidades de firma](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download)) para que un nuevo perfil de distribución esté disponible en Visual Studio para Mac.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
  Es posible que tenga que salir de Visual Studio y hacer que Xcode (en el equipo Mac del host de compilación) actualice su lista de identidades de firma y perfiles de aprovisionamiento disponibles (con las instrucciones de la sección [Solicitud de identidades de firma](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#download)) para que un nuevo perfil de distribución esté disponible en Visual Studio.
 
@@ -137,7 +137,7 @@ Una vez que tenga los componentes necesarios para crear un perfil de distribuci�
 
 Cuando esté listo para realizar una compilación final de una aplicación de Xamarin.iOS para su venta en iTunes App Store, seleccione el perfil de distribución que creó arriba.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
  En Visual Studio para Mac, haga lo siguiente:
 
@@ -153,7 +153,7 @@ Cuando esté listo para realizar una compilación final de una aplicación de Xa
     ![](images/releasexs03.png "Seleccione la identidad de firma y los perfiles de distribución")
 5. Haga clic en el botón **Aceptar** para guardar los cambios.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
  En Visual Studio, haga lo siguiente:
 

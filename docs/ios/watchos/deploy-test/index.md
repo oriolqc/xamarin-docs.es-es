@@ -1,109 +1,109 @@
 ---
-title: Implementar y probar aplicaciones de watchOS con Xamarin
-description: Este documento describe cómo implementar y probar aplicaciones de watchOS compiladas con Xamarin. Proporciona una lista de comprobación de implementación, se describen explícita y la aplicación de comodín identificadores y echa un vistazo a los grupos de aplicaciones.
+title: Implementar y probar las aplicaciones para watchOS con Xamarin
+description: Este documento describe cómo implementar y probar las aplicaciones para watchOS con Xamarin. Proporciona una lista de comprobación de implementación, se analiza explícita y aplicación comodín identificadores y echa un vistazo a los grupos de aplicaciones.
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 778583456e74bb7ed3a85dce96bcdbc487aef57a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a0738b03c4fa0ad975b872307bb17f387b1c5fd5
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790947"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120962"
 ---
-# <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Implementar y probar aplicaciones de watchOS con Xamarin
+# <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Implementar y probar las aplicaciones para watchOS con Xamarin
 
 ## <a name="deployment-checklist"></a>Lista de comprobación de implementación
 
-Si va a implementar en una prueba de inspección, o cargar en el almacén de aplicación, debe completar los pasos de esta página:
+Si va a implementar en una prueba de inspección, o cargar en la aplicación de Store, es preciso completar los pasos de esta página:
 
-- En el **iOS centro de desarrollo de**:
-  - [Id. de aplicaciones](#App_IDs) se han creado.
+- En el **centro de desarrollo de iOS**:
+  - [Identificadores de aplicación](#App_IDs) se han creado.
   - [Grupos de aplicaciones](#App_Groups) configurado (si es necesario).
-  - Perfil de aprovisionamiento de distribución creó
+  - Perfiles de aprovisionamiento de distribución creó
 
 - En la solución:
 
-  - Compruebe el [Id. de lote y referencias de proyecto](~/ios/watchos/get-started/installation.md) están establecidos.
-  - Compruebe los iconos son [configurado correctamente](~/ios/watchos/app-fundamentals/icons.md).
+  - Compruebe el [Id. de lote y referencias de proyecto](~/ios/watchos/get-started/installation.md) se establecen.
+  - Comprobar los iconos son [configurado correctamente](~/ios/watchos/app-fundamentals/icons.md).
   - Compruebe la coincidencia de números de versión de paquete en todos los proyectos.
   - Configurar la **Entitlements.plist** para grupos de aplicaciones (si es necesario).
 
 * A continuación, siga las instrucciones para:
   - [Implementar en un Apple Watch para realizar pruebas](~/ios/watchos/deploy-test/device.md), o
-  - [Cargar en la tienda de aplicaciones](~/ios/watchos/deploy-test/appstore.md).
+  - [Cargar en la aplicación de Store](~/ios/watchos/deploy-test/appstore.md).
 
 <a name="App_IDs"/>
 
-## <a name="app-ids"></a>Id. de aplicaciones
+## <a name="app-ids"></a>Identificadores de aplicación
 
-Como se describe en el [instrucciones de instalación](~/ios/watchos/get-started/installation.md), los tres proyectos en una aplicación de inspección han relacionado con el Id. de lote, como:
+Como se describe en el [instrucciones de instalación](~/ios/watchos/get-started/installation.md), los tres proyectos en una aplicación de inspección han relacionados con el Id. de lote, como:
 
-- Xamarin.iOS unificado proyecto: `com.xamarin.WatchKitCatalog`
-- Proyecto de WatchKit extensión- `com.xamarin.WatchKitCatalog.watchkitextension`
+- Proyecto unificado de Xamarin.iOS: `com.xamarin.WatchKitCatalog`
+- Proyecto de extensión de WatchKit: `com.xamarin.WatchKitCatalog.watchkitextension`
 - Proyecto de aplicación de inspección: `com.xamarin.WatchKitCatalog.watchkitapp`
 
-Los tres proyectos requieren una distribución aprovisionamiento perfil coincidente, usando explícitamente los identificadores de aplicación para cada uno, o un carácter comodín de identificador de aplicación.
+Los tres proyectos requieren un coincidente aprovisionamiento perfil de distribución, utilizando explícitamente los identificadores de aplicación para cada uno, o un carácter comodín de identificador de aplicación.
 
-### <a name="explicit-app-ids"></a>Id. de aplicaciones explícita
+### <a name="explicit-app-ids"></a>Id. de aplicación explícito
 
-Crear un **Id. de aplicación** identificador cada de cada proyecto de paquete (que tendrá un aspecto similar al siguiente en el centro de desarrollo de iOS):
+Crear un **Id. de aplicación** para el Id. de lote de cada de cada proyecto (lo que tendrá un aspecto similar al siguiente en el centro de desarrollo de iOS):
 
-![El identificador de lote en el centro de desarrollo de iOS](images/appids-specific-sml.png)
+![El Id. de lote en el centro de desarrollo de iOS](images/appids-specific-sml.png)
 
-Al crear o configurar el Id. de aplicaciones, no olvide habilitar las características específicas de que su aplicación requiere. Esto podría incluir las notificaciones de inserción y grupos de aplicaciones.
+Al crear o configurar los identificadores de aplicación, no olvide habilitar las características específicas de que la aplicación requiere. Esto puede incluir las notificaciones de inserción y grupos de aplicaciones.
 
-Debe crear un perfil de aprovisionamiento de distribución para cada ID. App
+Deberá crear un perfil de aprovisionamiento de distribución para cada ID. App
 
-### <a name="wildcard-app-id"></a>Id. de aplicación de comodines
+### <a name="wildcard-app-id"></a>Identificador de aplicación comodín
 
 Como alternativa, puede crear un carácter comodín **Id. de aplicación** que coincide con los tres proyectos, como `com.xamarin.*`.
 
-Tenga en cuenta que algunas características no se puede usar con un identificador de aplicación de carácter comodín (por ejemplo, las notificaciones de inserción). Si la aplicación necesita estas características debe crear identificadores de aplicación explícita.
+Tenga en cuenta que algunas características no se puede usar con un Id. de aplicación de carácter comodín (por ejemplo, las notificaciones de inserción). Si la aplicación necesita estas características debe crear identificadores de aplicación explícitos.
 
-Para la distribución, solo debe crear un perfil de aprovisionamiento de distribución para el carácter comodín de identificador de aplicación.
+Para la distribución, solo necesitará crear un perfil de aprovisionamiento de distribución para el carácter comodín de identificador de aplicación.
 
 <a name="App_Groups" />
 
 ## <a name="app-groups"></a>Grupos de aplicaciones
 
-Puede usar un grupo de aplicación para compartir datos entre la aplicación de iOS y la extensión de inspección. Debe asegurarse de que tiene la solución:
+Puede usar un grupo de aplicaciones para compartir datos entre la aplicación de iOS y la extensión de inspección. Debe asegurarse de que tiene la solución:
 
-- Configurar la **grupo de aplicación** en el Portal para desarrolladores de Apple **certificados, identificadores y perfiles** sección.
+- Configura el **grupo de aplicaciones** en el Portal para desarrolladores de Apple **certificados, identificadores y perfiles** sección.
 
-- Habilitado **grupos de aplicaciones** (y proporciona el **Id. de grupo de aplicaciones**) en *ambos* la aplicación de iOS y la extensión de inspección **Id. de aplicación** y  **Entitlements.plist**.
+- Habilitado **grupos de aplicaciones** (y proporciona el **Id. de grupo de aplicación**) en *ambos* la aplicación de iOS y la extensión de inspección **Id. de aplicación** y  **Entitlements.plist**.
 
-### <a name="certificates-identifiers--profiles"></a>Certificados, identificadores y perfiles
+### <a name="certificates-identifiers--profiles"></a>Los certificados, identificadores y perfiles
 
-Para usar un grupo de aplicaciones, cree una entrada en el **grupos de aplicaciones** pantalla. En el ejemplo siguiente, el grupo se denomina con el mismo estilo de DNS inversa que se usa normalmente para los identificadores de aplicación, pero con la `group.` prefijo (que es necesario):
+Para usar un grupo de aplicaciones, cree una entrada en el **grupos de aplicaciones** pantalla. En el ejemplo siguiente, el grupo se denomina con el mismo estilo DNS inversa que se usa normalmente para los identificadores de aplicación, pero con el `group.` prefijo (que es necesario):
 
 ![El identificador](images/appgroups-new-sml.png)
 
 El grupo de aplicaciones, a continuación, aparecerá en la lista:
 
-![La lista de identificador](images/appgroups-setup-sml.png)
+![La lista de identificadores](images/appgroups-setup-sml.png)
 
-Una vez creado el grupo, puede hacer referencia en su **Id. de aplicación** configuración. No olvide incluir el iOS App y la extensión de inspección **Id. de aplicaciones**.
+Una vez creado el grupo, puede hacer referencia en su **Id. de aplicación** configuración. No olvide incluir tanto la aplicación de iOS y extensión de inspección **identificadores de aplicación**.
 
 ![Consifurations disponibles](images/appgroups-sml.png)
 
-Hacer **no** habilitar los grupos de aplicación en el identificador de aplicación de Apple Watch. No es necesario que esté habilitado en el reloj propiamente dicho.
+Hacer **no** habilitar grupos de aplicaciones en el Id. de aplicación de Apple Watch No es necesario que esté habilitado en el mismo watch.
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
-Algunas características de la aplicación (p. ej. Grupos de aplicaciones) requieren establecer los derechos.
-Haga doble clic para editar la **Entitlements.plist** archivo en estos proyectos:
+Algunas características de la aplicación (p ej. Grupos de aplicaciones) requieren que establezca los derechos.
+Haga doble clic para editar el **Entitlements.plist** archivos en estos proyectos:
 
 - proyecto de aplicación de iOS
 - Proyecto de extensión de inspección
 
 .![El editor de Entitlements.plist](images/entitlements-plist-sml.png)
 
-Hacer **no** habilite los derechos en el proyecto de aplicación de inspección. No es necesario que esté habilitado en el reloj propiamente dicho.
+Hacer **no** habilite los derechos en el proyecto de aplicación de inspección. No es necesario que esté habilitado en el mismo watch.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Guía de Apple WatchKit envío](https://developer.apple.com/app-store/watch/)
+- [Guía de envío de WatchKit de Apple](https://developer.apple.com/app-store/watch/)

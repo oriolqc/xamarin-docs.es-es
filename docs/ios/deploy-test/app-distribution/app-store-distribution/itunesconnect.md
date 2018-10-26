@@ -4,15 +4,15 @@ description: Este artículo describe los pasos necesarios para configurar y mant
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 05492f866bb083326ef1eccb8db3d624d8dc4806
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: 97b3e5323329d2df024e05f1829b12b239b37299
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209315"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103054"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configuración de una aplicación en iTunes Connect
 
@@ -135,7 +135,7 @@ Apple sugiere las siguientes directrices al elegir el nombre de la aplicación:
 - Hágalo coincidir con la funcionalidad de la aplicación.
 - Proporcione nombres localizados para mercados externos cuando proceda.
 
-### <a name="description"></a>Description
+### <a name="description"></a>Descripción
 
 Escriba una descripción clara, concisa e informativa de la aplicación y sus características. Las primeras líneas son las más importantes y le dan una oportunidad para causar una primera impresión excelente y para atraer al usuario. Describa lo que hace que su aplicación sea especial y la diferencie de otras similares.
 

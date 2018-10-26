@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: dd0afe03adbd021717a88cd4409e3e1351ba9b50
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: 3f74144f85cc045b4ea9807d3d818677e33539f2
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111191"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123471"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Aprovisionamiento manual de Xamarin.iOS
 
@@ -73,11 +73,11 @@ Para generar una identidad de firma, haga lo siguiente:
 
 ### <a name="understanding-certificate-key-pairs"></a>Introducción a los pares de claves de certificado
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 El perfil de desarrollador contiene certificados, sus claves asociadas y los perfiles de aprovisionamiento asociados con la cuenta. Cada perfil de desarrollador tiene dos versiones: una se encuentra en el portal para desarrolladores y la otra reside en un equipo Mac local. La diferencia entre ambas es el tipo de claves que contienen: _el perfil del portal contiene todas las claves públicas asociadas con los certificados, mientras que la copia del equipo Mac local contiene todas las claves privadas_. Para que los certificados sean válidos, los pares de claves deben coincidir. Conserve una copia de seguridad del perfil de desarrollador en el equipo Mac local, porque si se pierden las claves privadas, habrá que volver a generar todos los certificados y los perfiles de aprovisionamiento.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 El perfil de desarrollador contiene certificados, sus claves asociadas y los perfiles de aprovisionamiento asociados con la cuenta. Cada perfil de desarrollador tiene dos versiones: una se encuentra en el portal para desarrolladores y la otra reside en un equipo Mac. La diferencia entre ambas es el tipo de claves contienen: _el perfil del portal contiene todas las claves públicas asociadas con los certificados, mientras que la copia del equipo Mac contiene todas las claves privadas_. Para que los certificados sean válidos, los pares de claves deben coincidir. Conserve una copia de seguridad del perfil de desarrollador en el equipo Mac del host de compilación de Xamarin, porque si se pierden las claves privadas, habrá que volver a generar todos los certificados y los perfiles de aprovisionamiento.
 
@@ -204,12 +204,12 @@ Los certificados y los perfiles de aprovisionamiento que se han creado en el por
 
 Los nuevos certificados o perfiles de aprovisionamiento estarán disponibles en Visual Studio para Mac o Visual Studio y ya podrán usarse.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 > [!IMPORTANT]
 > Puede que sea necesario detener y reiniciar Visual Studio para Mac para que pueda ver los certificados o perfiles nuevos o modificados que haya actualizado Xcode.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 > [!IMPORTANT]
 > Puede que sea necesario detener y reiniciar Visual Studio para que pueda ver los certificados o perfiles nuevos o modificados que haya actualizado Xcode.
@@ -230,7 +230,7 @@ Apple proporciona una selección de servicios de aplicación especiales, tambié
 
 En este momento, el aprovisionamiento se ha completado y la aplicación está lista para su implementación en el dispositivo. Para ello, siga estos pasos:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 > [!IMPORTANT]
 > Antes de comenzar, asegúrese de seleccionar **Aprovisionamiento manual** en **Info.plist**.
@@ -249,7 +249,7 @@ Si está establecido en **Automático**, Visual Studio para Mac seleccionará la
 4. Asegúrese de establecer la configuración de compilación en **iPhone** / **iPad**, en lugar de en simulador.
 5. Haga clic en **Ejecutar** en Visual Studio para Mac y compruebe que la aplicación se ejecuta en el dispositivo.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 > [!IMPORTANT]
 > Antes de comenzar, asegúrese de seleccionar **Aprovisionamiento manual** en **Proyecto > Propiedades de aprovisionamiento…**

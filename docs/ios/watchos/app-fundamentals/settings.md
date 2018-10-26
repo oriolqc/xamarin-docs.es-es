@@ -1,30 +1,30 @@
 ---
-title: Trabajar con watchOS configuración de Xamarin
-description: Este documento describe cómo trabajar con la configuración de watchOS en Xamarin. Se trata de agregar valores a una solución de aplicación de inspección, mediante la configuración de la aplicación y la aplicación de Apple Watch en el iPhone.
+title: Trabajar con la configuración de Xamarin de watchOS
+description: Este documento describe cómo trabajar con la configuración de watchOS en Xamarin. Describe Agregar configuración a una solución de aplicación de inspección con esos valores en la aplicación y la aplicación de Apple Watch en iPhone.
 ms.prod: xamarin
 ms.assetid: 4B2EB192-F0A2-4010-B141-0431520594C0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 6cfbcf3b4383588819490838c2a54cdb4faf9403
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 36164e1e9f92b5a5520d10f769f3953cfa2ceb85
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790882"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106356"
 ---
-# <a name="working-with-watchos-settings-in-xamarin"></a>Trabajar con watchOS configuración de Xamarin
+# <a name="working-with-watchos-settings-in-xamarin"></a>Trabajar con la configuración de Xamarin de watchOS
 
-Aplicaciones de Apple Watch pueden utilizar la misma funcionalidad de configuración como aplicaciones de iOS: la interfaz de usuario de configuración se muestra en el **de Apple Watch** aplicación de iPhone, pero los valores son accesibles en la aplicación de iPhone y también la extensión de inspección.
+Las aplicaciones de Apple Watch pueden usar la misma funcionalidad de configuración como aplicaciones de iOS: la interfaz de usuario de configuración se muestra en el **Apple Watch** aplicación de iPhone, pero los valores son accesibles en la aplicación de iPhone y también la extensión de inspección.
 
-![](settings-images/intro.png "Aplicaciones de Apple Watch pueden usar la misma funcionalidad de configuración como aplicaciones de iOS")
+![](settings-images/intro.png "Las aplicaciones de Apple Watch pueden usar la misma funcionalidad de configuración como aplicaciones de iOS")
 
-La configuración se almacenará en una ubicación de archivo compartido que sea accesible para la aplicación de iOS y la extensión de la aplicación de inspección, definido por un **grupo de aplicación**. Debería [configurar un grupo de aplicación](~/ios/watchos/app-fundamentals/app-groups.md) antes de agregar la configuración mediante las instrucciones siguientes.
+La configuración se almacenarán en una ubicación compartida que sea accesible para la aplicación de iOS y la extensión de la aplicación de inspección, definido por un **grupo de aplicaciones**. Debería [configurar un grupo de aplicaciones](~/ios/watchos/app-fundamentals/app-groups.md) antes de agregar la configuración mediante las instrucciones siguientes.
 
-## <a name="add-settings-in-a-watch-solution"></a>Agregar la configuración en una solución de inspección
+## <a name="add-settings-in-a-watch-solution"></a>Agregue la configuración en una solución de supervisión
 
-En el **aplicación de iPhone** en la solución (*no* la aplicación de inspección o extensión):
+En el **aplicación de iPhone** en la solución (*no* la aplicación del reloj o extensión):
 
 1. Haga clic en **Agregar > nuevo archivo...**  y elija **Settings.bundle** (no se puede editar el nombre de la **nuevo archivo** cuadro de diálogo):
 
@@ -34,19 +34,19 @@ En el **aplicación de iPhone** en la solución (*no* la aplicación de inspecci
 
    ![](settings-images/settings-rename.png "Cambiar el nombre de la agrupación")
 
-3. Agregue una nueva clave `ApplicationGroupContainerIdentifier` a la **Root.plist** con el valor establecido para el grupo de aplicación ha configurado, (p. ej. `group.com.xamarin.WatchSettings` en el ejemplo):
+3. Agregue una nueva clave `ApplicationGroupContainerIdentifier` a la **Root.plist** con el valor establecido para el grupo de aplicaciones que se haya configurado, (p ej. `group.com.xamarin.WatchSettings` en el ejemplo):
 
    [ ![](settings-images/settings-appgroup-sml.png "Agregar una clave de ApplicationGroupContainerIdentifier a la Root.plist")](settings-images/settings-appgroup.png#lightbox)
 
-4. Editar la **Settings-Watch.bundle/Root.plist** para que contenga las opciones que se va a usar: el archivo de plantilla contiene un grupo.
-  campo de texto, modificador para alternar y control deslizante predeterminada (lo que se puede eliminar y reemplazar con su propia configuración):
+4. Editar el **Settings-Watch.bundle/Root.plist** para contener las opciones que desee usar: el archivo de plantilla contiene un grupo.
+  TextField, modificador para alternar y control deslizante de forma predeterminada (que puede eliminar y reemplazar con su propia configuración):
 
   [![](settings-images/rootplist-sml.png "Editar el Settings-Watch.bundle/Root.plist")](settings-images/rootplist.png#lightbox)
 
 
-## <a name="use-settings-in-the-watch-app"></a>Usar la configuración de la aplicación de inspección
+## <a name="use-settings-in-the-watch-app"></a>Usar la configuración de la aplicación del reloj
 
-Para obtener acceso a los valores seleccionados por el usuario, cree una `NSUserDefaults` instancia mediante el grupo de aplicación y la especificación `NSUserDefaultsType.SuiteName`:
+Para obtener acceso a los valores seleccionados por el usuario, cree un `NSUserDefaults` instancia mediante el grupo de aplicaciones y la especificación `NSUserDefaultsType.SuiteName`:
 
 ```csharp
 NSUserDefaults shared = new NSUserDefaults(
@@ -59,9 +59,9 @@ var userName = shared.StringForKey ("name_preference");
 
 ## <a name="apple-watch-app"></a>Aplicación de Apple Watch
 
-[![](settings-images/settings-app-sml.png "La nueva aplicación de Apple Watch en el iPhone")](settings-images/settings-app.png#lightbox)
+[![](settings-images/settings-app-sml.png "La nueva aplicación de Apple Watch en iPhone")](settings-images/settings-app.png#lightbox)
 
-Los usuarios interactúan con la configuración a través del nuevo **de Apple Watch** aplicación en su iPhone. Esta aplicación permite al usuario mostrar u ocultar aplicaciones en la inspección y también editar la configuración expone mediante el **Watch.bundle configuración**.
+Los usuarios interactúan con la configuración a través del nuevo **Apple Watch** aplicación en su iPhone. Esta aplicación permite al usuario mostrar u ocultar las aplicaciones en la inspección, además de editar la configuración expone mediante el **configuración Watch.bundle**.
 
 ![](settings-images/applewatch-1.png "Ejemplo de configuración de la aplicación") ![](settings-images/applewatch-2.png "ejemplo de configuración de la aplicación")
 

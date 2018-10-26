@@ -3,15 +3,15 @@ title: Carga manual del APK
 ms.prod: xamarin
 ms.assetid: 1309C251-ABF0-4412-B1F5-200DC8321A9D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 3bfddb315d74e6282004edeb10a35271dce3b9c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: df6ef208957d8dae229ebb8aee2304444b7d18fe
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30771039"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50111289"
 ---
 # <a name="manually-uploading-the-apk"></a>Carga manual del APK
 
@@ -165,7 +165,7 @@ Es posible agregar elementos al manifiesto de la aplicación para ayudar a contr
 -   [supports-screen](http://developer.android.com/guide/topics/manifest/supports-screens-element.html): Google Play usa los atributos para determinar si se puede implementar una aplicación en un dispositivo en función del tamaño de la pantalla. 
     Google Play supondrá que Android puede adaptar un diseño más pequeño en pantallas más grandes, pero no a la inversa. Así pues, una aplicación que declare su compatibilidad con pantallas normales aparecerá en las búsquedas para pantallas grandes, pero no para pantallas pequeñas. Si una determinada aplicación Xamarin.Android no proporciona un elemento `<supports-screen>` en el archivo de manifiesto, Google Play supondrá que todos los atributos tienen el valor true y que la aplicación admite todos los tamaños de pantalla. Este elemento se debe agregar manualmente a **AndroidManifest.xml**. 
 
--   [uses-configuration](http://developer.android.com/guide/topics/manifest/uses-configuration-element.html): este elemento del manifiesto se usa para solicitar determinadas características de hardware, como el tipo de teclado, los dispositivos de navegación, una pantalla táctil, etc. Este elemento se debe agregar manualmente a **AndroidManifest.xml**. 
+-   [uses-configuration](http://developer.android.com/guide/topics/manifest/uses-configuration-element.html): este elemento del manifiesto se usa para solicitar determinadas características de hardware, como el tipo de teclado, los dispositivos de navegación, una pantalla táctil, etc. Este elemento se debe agregar manualmente a **AndroidManifest.xml. 
 
 -   [uses-feature](http://developer.android.com/guide/topics/manifest/uses-feature-element.html): este elemento del manifiesto declara características de hardware o de software con las que debe contar un dispositivo para que la aplicación funcione. Este atributo es solo informativo. Google Play no mostrará la aplicación en los dispositivos que no cumplan este filtro. Aun así, la aplicación se puede instalar de otras maneras (manualmente o bien descargándola). Este elemento se debe agregar manualmente a **AndroidManifest.xml**. 
 

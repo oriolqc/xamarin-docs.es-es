@@ -4,15 +4,15 @@ description: Android puede ejecutarse en varias arquitecturas de equipo diferent
 ms.prod: xamarin
 ms.assetid: D812883C-A14A-E74B-0F72-E50071E96328
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 0288ba6aa8a3c9eb89208161f60ba831723444c5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c4fba219b7fbfef9930539f0e25fda74ae1299b1
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30771624"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105745"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Dispositivos de varios núcleos y Xamarin.Android
 
@@ -57,7 +57,7 @@ Cada ABI compatible con Android se identifica mediante un nombre único.
 
 #### <a name="armeabi"></a>armeabi
 
-Este es el nombre de una EABI para CPU basadas en ARM que admiten al menos el conjunto de instrucciones ARMv5TE. Android sigue la ABI GNU/Linux de ARM little endian. Esta ABI no es compatible con cálculos de punto flotante asistidos por hardware. Todas las operaciones de FP se realizan mediante funciones auxiliares de software que proceden de la biblioteca estática `libgcc.a` del compilador. Los dispositivos SMP no admiten `armeabi`.
+Este es el nombre de una EABI para CPU basadas en ARM que admiten al menos el conjunto de instrucciones ARMv5TE. Android sigue la ABI GNU/Linux de ARM little endian. Esta ABI no es compatible con cálculos de punto flotante asistidos por hardware. Todas las operaciones de FP se realizan mediante funciones del asistente de software que proceden de la biblioteca estática `libgcc.a` del compilador. Los dispositivos SMP no admiten `armeabi`.
 
 **Nota**: El código `armeabi` de Xamarin.Android no es seguro para subprocesos y no se debe usar en dispositivos `armeabi-v7a` de varios núcleos (se describen a continuación). El uso de código `aremabi` en un dispositivo `armeabi-v7a` de un único núcleo es seguro.
 

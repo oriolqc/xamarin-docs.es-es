@@ -4,15 +4,15 @@ description: En este documento se proporciona información general sobre cómo r
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: ce2b452d50222ac3561dab5b76915b7ae634934b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: dd590b65fdf1f83ade3453fa1266d1f6724bb8de
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785468"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121833"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Pruebas unitarias de Xamarin.iOS
 
@@ -21,13 +21,13 @@ Las pruebas unitarias con Xamarin.iOS se realizan mediante el marco Touch.Unit, 
 
 ## <a name="setting-up-a-test-project"></a>Configuración de un proyecto de pruebas
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Para configurar un marco de pruebas unitarias para el proyecto, lo único que tiene que hacer es agregar a la solución un proyecto de tipo **proyecto de pruebas unitarias de iOS**. Para ello, haga clic con el botón derecho en la solución y seleccione **Agregar > Agregar nuevo proyecto**. En la lista, seleccione **iOS > Pruebas > Unified API > iOS Unit Tests Project (Proyecto de pruebas unitarias de iOS)** (puede elegir C# o F#).
 
 ![](touch.unit-images/00.png "Elegir C# o F#")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para configurar un marco de pruebas unitarias para el proyecto, lo único que tiene que hacer es agregar a la solución un proyecto de tipo **proyecto de pruebas unitarias de iOS**. Para ello, haga clic con el botón derecho en la solución y seleccione **Agregar > Nuevo proyecto...** En la lista, seleccione **Visual C# > iOS > Unit Test App (iOS) (Aplicación de pruebas unitarias (iOS))**.
 
@@ -37,11 +37,11 @@ Para configurar un marco de pruebas unitarias para el proyecto, lo único que ti
 
 Con los pasos anteriores se crea un proyecto básico que contiene un programa básico ejecutor y que hace referencia al nuevo ensamblado MonoTouch.NUnitLite; el proyecto tendrá este aspecto:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![](touch.unit-images/01.png "El proyecto en el Explorador de soluciones")
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](touch.unit-images/01a.png "El proyecto en el Explorador de soluciones")
 
