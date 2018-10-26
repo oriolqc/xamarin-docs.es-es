@@ -6,13 +6,13 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: ed7bec4e25628d938218a40d157442debad8f835
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/02/2018
+ms.openlocfilehash: 8d68afaf0edf178bba6f18d3071de029e111edee
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998379"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118674"
 ---
 # <a name="xamarinforms-webview"></a>Xamarin.Forms WebView
 
@@ -164,11 +164,11 @@ A continuación, se deben proporcionar implementaciones de la interfaz para cada
 
 En iOS, el contenido web debe estar ubicado en el directorio raíz del proyecto o **recursos** directorio con la acción de compilación *BundleResource*, tal y como se muestra a continuación:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](webview-images/ios-vs.png "Archivos locales en iOS")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![](webview-images/ios-xs.png "Archivos locales en iOS")
 
@@ -191,11 +191,11 @@ namespace WorkingWithWebview.iOS{
 
 En Android, coloque las imágenes, CSS y HTML en la carpeta de activos con la acción de compilación *AndroidAsset* como se muestra a continuación:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![](webview-images/android-vs.png "Archivos locales en Android")
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![](webview-images/android-xs.png "Archivos locales en Android")
 
@@ -368,9 +368,14 @@ Termina de cargar:
 
 ## <a name="performance"></a>Rendimiento
 
-Avances recientes han visto cada uno de los exploradores web populares adoptar las tecnologías como la representación y la compilación de JavaScript de aceleración de hardware. Desafortunadamente, debido a restricciones de seguridad, la mayoría de estos avances no estaba disponible en el el equaivalent iOS de `WebView`, `UIWebView`. Xamarin.Forms `WebView` usa `UIWebView`. Si es un problema, deberá escribir un representador personalizado que usa `WKWebView`, que es compatible con una navegación más rápida. Tenga en cuenta que `WKWebView` solo es compatible con iOS 8 y versiones más recientes.
+Ahora, los exploradores web populares adoptarán las tecnologías como la representación y la compilación de JavaScript de aceleración de hardware. En iOS, de forma predeterminada, Xamarin.Forms `WebView` se implementa mediante el `UIWebView` clase y muchas de estas tecnologías no están disponibles en esta implementación. Sin embargo, una aplicación puede participar en utilizar iOS `WkWebView` clase implemente Xamarin.Forms `WebView`, que es compatible con una navegación más rápida. Esto se consigue agregando el código siguiente a la **AssemblyInfo.cs** archivo en el proyecto de la plataforma iOS para la aplicación:
 
-WebView en Android de forma predeterminada es tan rápido como el explorador integrado.
+```csharp
+// Opt-in to using WkWebView instead of UIWebView.
+[assembly: ExportRenderer(typeof(WebView), typeof(Xamarin.Forms.Platform.iOS.WkWebViewRenderer))]
+```
+
+`WebView` en Android de forma predeterminada es tan rápido como el explorador integrado.
 
 El [UWP WebView](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/web-view) usa el motor de representación Microsoft Edge. Los dispositivos de escritorio y de tableta deben aparecer el mismo rendimiento como con el propio explorador Edge.
 

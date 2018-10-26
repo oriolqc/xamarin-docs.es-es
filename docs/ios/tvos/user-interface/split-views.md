@@ -1,106 +1,106 @@
 ---
-title: Trabajar con tvOS controladores de la vista de división en Xamarin
-description: Este documento describe cómo trabajar con tvOS dividir las vistas en una aplicación compilada con Xamarin. Proporciona una descripción general de los controladores de la vista de división, cómo utilizarlos con guiones gráficos, obtener acceso a las vistas de maestro y detalles y mostrar y ocultar la vista maestra.
+title: Trabajar con controladores de vista dividida en Xamarin de tvOS
+description: Este documento describe cómo trabajar con tvOS dividir las vistas en una aplicación compilada con Xamarin. Proporciona una descripción general de los controladores de vista de división, cómo usarlos con guiones gráficos, obtener acceso a las vistas de maestro y detalles, mostrar y ocultar la vista maestra.
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 2dd07cd8a4e92d6d39be50ba670441d965ed4d13
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 9f1bd48378faa9ae6a4853083c93377268c38f01
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34789436"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122197"
 ---
-# <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Trabajar con tvOS controladores de la vista de división en Xamarin
+# <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Trabajar con controladores de vista dividida en Xamarin de tvOS
 
-Un controlador de vista de división presenta y administra un maestro y detalles View Controller-paralelo, en la pantalla al mismo tiempo. Se utiliza para presentar contenido persistente, puede recibir el foco en la vista maestra (sección más pequeña a la izquierda) y relacionados con controladores de la vista de división detalles en la vista de detalle (es decir, la sección mayor a la derecha).
+Un controlador de vista dividida presenta y administra un maestro y el controlador de vista de detalle por en paralelo, en la pantalla al mismo tiempo. Controladores de vista de división se utiliza para presentar contenido persistente, puede recibir el foco en la vista principal (la sección más pequeña a la izquierda) y relacionados con los detalles en la vista de detalle (la sección mayor a la derecha).
 
 [![](split-views-images/intro01.png "Vista de división de ejemplo")](split-views-images/intro01.png#lightbox)
 
 <a name="About-Split-View-Controllers" />
 
-## <a name="about-split-view-controllers"></a>Acerca de los controladores de la vista de división
+## <a name="about-split-view-controllers"></a>Acerca de los controladores de vista dividida
 
-Como se mencionó anteriormente, un controlador de vista de división administra un patrón y un controlador de vista de detalle que se presentan en paralelo, con el patrón que se va a la vista más pequeña a la izquierda, el detalle el mayor de la derecha. 
+Como se indicó anteriormente, un controlador de vista dividida administra un maestro y el controlador de vista de detalle que se presentan side-by-side, con el patrón que se va a la vista más pequeña a la izquierda, el detalle de mayor tamaño de la derecha. 
 
-Además, se oculta o se muestra el puede Master View Controller según sea necesario: 
+Además, la puede patrón controlador de vista se oculta o se muestra según sea necesario: 
 
 [![](split-views-images/intro02.png "El controlador de vista maestra oculto")](split-views-images/intro02.png#lightbox)
 
-Controladores de vistas de división a menudo se utilizan para presentar una lista de contenido se puede filtrar, con los resultados filtrados en la vista de detalle y de las categorías en la vista maestra. Esto normalmente se presenta como una vista de tabla de la izquierda y un [vista de colección](~/ios/tvos/user-interface/collection-views.md) a la derecha.
+A menudo se usan los controladores de vistas de división para presentar una lista de contenido pueden filtrar, con las categorías en la vista principal y los resultados filtrados en la vista de detalle. Esto normalmente se presenta como una vista de tabla a la izquierda y un [vista de colección](~/ios/tvos/user-interface/collection-views.md) a la derecha.
 
-Al diseñar una interfaz de usuario que requiere un controlador de vista de división, Apple sugiere utilizando Master y controladores de la vista de detalle que no cambian (sólo los cambios de contenido, no la estructura). Si necesita ver controladores de espera de intercambio, es mejor usar un controlador de navegación como la base de controlador de vista que se deba cambiar (Master o detalles).
+Al diseñar una interfaz de usuario que requiere un controlador de vista de división, Apple sugiere el uso principal y los controladores de vista de detalle que no cambian (solo los cambios de contenido, no la estructura). Si necesita controladores de vista de salida de intercambio, es mejor usar un controlador de navegación como la base de controlador de vista que se deba cambiar (principal o detalle).
 
-Apple tiene las siguientes sugerencias para trabajar con controladores de la vista de división:
+Apple tiene las siguientes sugerencias para trabajar con controladores de vista de división:
 
-- **Utilice el porcentaje de división correcto** : de forma predeterminada el controlador de vista de división utiliza una tercera parte de la pantalla para el controlador de vista maestra y dos tercios para el controlador de vista de detalle. Si lo desea, puede usar una división 50/50. Elija el porcentaje correcto para que su contenido aparezca equilibrada en pantalla.
-- **Conservar la selección de Main** : mientras el contenido en el puede vista de detalle cambio es la respuesta a la selección de un usuario en la vista maestra, deberá corregirse el contenido de la vista maestra. Además, deben mostrar claramente el elemento seleccionado actualmente en la vista maestra.
-- **Usar una única unificada título** -normalmente, deseará usar un título único, centrado en la vista de detalles, en lugar de un título en los detalles y la vista maestra.
+- **Utilice el porcentaje de división correcto** : de forma predeterminada el controlador de vista dividida usa un tercio de la pantalla para el controlador de vista de maestro y dos tercios del controlador de vista de detalle. Si lo desea, puede usar una división 50/50. Elija el porcentaje correcto para que el contenido aparezca con equilibrio de la pantalla.
+- **Conservar la selección principal** : mientras el contenido en el puede vista de detalle cambio es la respuesta a la selección de un usuario en la vista principal, debe corregirse el contenido de la vista principal. Además, debe mostrar claramente el elemento seleccionado actualmente en la vista maestra.
+- **Utilice un único título unificada** -normalmente, querrá usar un título único, centrado en la vista de detalle, en lugar de un título en los detalles y la vista maestra.
 
 <a name="Split-View-Controllers-and-Storyboards" />
 
-## <a name="split-view-controllers-and-storyboards"></a>Ver controladores de división y los guiones gráficos
+## <a name="split-view-controllers-and-storyboards"></a>Controladores de vista de división y guiones gráficos
 
-Es la manera más fácil trabajar con controladores de la vista de división en una aplicación Xamarin.tvOS agregarlos a la interfaz de usuario de la aplicación mediante el Diseñador de iOS.
+Es la manera más fácil trabajar con controladores de vista dividida en una aplicación Xamarin.tvOS agregarlos a la interfaz de usuario de la aplicación mediante el Diseñador de iOS.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-1. En el **solución Pad**, haga doble clic en el `Main.storyboard` de archivo y abrirlo y editarlo.
-1. Arrastre un **controladores de la vista de división** desde el **cuadro de herramientas** y colóquela en la vista: 
+1. En el **panel de solución**, haga doble clic en el `Main.storyboard` de archivo y abrirlo para su edición.
+1. Arrastre un **controladores de vista dividida** desde el **cuadro de herramientas** y colóquela en la vista: 
 
-    [![](split-views-images/activity01.png "Un controlador de vista de división")](split-views-images/activity01.png#lightbox)
-1. De forma predeterminada, el Diseñador de iOS instalará un controlador de navegación y un controlador de vista en la vista maestra. Si esto no encaja con los requisitos de la aplicación, simplemente eliminarlas.
-1. Si quita el valor predeterminado de la vista maestra, arrastre un nuevo controlador de vista a la superficie de diseño: 
+    [![](split-views-images/activity01.png "Un controlador de vista dividida")](split-views-images/activity01.png#lightbox)
+1. De forma predeterminada, el Diseñador de iOS se instalará un controlador de navegación y un controlador de vista en la vista maestra. Si esto no encaja con los requisitos de la aplicación, simplemente eliminarlas.
+1. Si quita el valor predeterminado de vista principal, arrastre un nuevo controlador de vista hasta la superficie de diseño: 
 
     [![](split-views-images/activity02.png "Un controlador de vista")](split-views-images/activity02.png#lightbox)
 1. Control y haga clic y arrastre desde el controlador de vista de división en el nuevo controlador de vista maestra. 
 1. Seleccione **Master** desde el **menú emergente**: 
 
-    [![](split-views-images/activity03.png "Seleccione patrón en el menú emergente")](split-views-images/activity03.png#lightbox)
-1. Diseñe el contenido de su maestro y vistas de detalles: 
+    [![](split-views-images/activity03.png "Seleccione el patrón en el menú emergente")](split-views-images/activity03.png#lightbox)
+1. Diseñar el contenido de su maestro y vistas de detalle: 
 
     [![](split-views-images/activity04.png "Ejemplo de diseño")](split-views-images/activity04.png#lightbox)
-1. Asignar **nombres** en el **ficha Widget** de la **panel de propiedades** para trabajar con los controles de interfaz de usuario en código C#.
-1. Guardar los cambios y volver a Visual Studio para Mac.
+1. Asignar **nombres** en el **ficha Widget** de la **panel de propiedades** para trabajar con los controles de IU en C# código.
+1. Guarde los cambios y vuelva a Visual Studio para Mac.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-1. En el **el Explorador de soluciones**, haga doble clic en el `Main.storyboard` de archivo y abrirlo y editarlo.
-1. Arrastre un **controladores de la vista de división** desde el **cuadro de herramientas** y colóquela en la vista: 
+1. En el **el Explorador de soluciones**, haga doble clic en el `Main.storyboard` de archivo y abrirlo para su edición.
+1. Arrastre un **controladores de vista dividida** desde el **cuadro de herramientas** y colóquela en la vista: 
 
-    [![](split-views-images/activity01-vs.png "Un controlador de vista de división")](split-views-images/activity01-vs.png#lightbox)
-1. De forma predeterminada, el Diseñador de iOS se agregará un controlador de navegación y el controlador de vista en la vista maestra. Si esto no encaja con los requisitos de la aplicación, simplemente eliminarlas.
-1. Si quita el valor predeterminado de la vista maestra, arrastre un nuevo controlador de vista a la superficie de diseño: 
+    [![](split-views-images/activity01-vs.png "Un controlador de vista dividida")](split-views-images/activity01-vs.png#lightbox)
+1. De forma predeterminada, el Diseñador de iOS agregará un controlador de navegación y el controlador de vista en la vista maestra. Si esto no encaja con los requisitos de la aplicación, simplemente eliminarlas.
+1. Si quita el valor predeterminado de vista principal, arrastre un nuevo controlador de vista hasta la superficie de diseño: 
 
     [![](split-views-images/activity02-vs.png "Un controlador de vista")](split-views-images/activity02-vs.png#lightbox)
 1. Control y haga clic y arrastre desde el controlador de vista de división en el nuevo controlador de vista maestra. 
 1. Seleccione **Master** desde el **menú emergente**: 
 
-    [![](split-views-images/activity03-vs.png "Seleccione patrón en el menú emergente")](split-views-images/activity03-vs.png#lightbox)
-1. Diseñe el contenido de su maestro y vistas de detalles: 
+    [![](split-views-images/activity03-vs.png "Seleccione el patrón en el menú emergente")](split-views-images/activity03-vs.png#lightbox)
+1. Diseñar el contenido de su maestro y vistas de detalle: 
 
     [![](split-views-images/activity04.png "Diseño de contenido")](split-views-images/activity04.png#lightbox)
-1. Asignar **nombres** en el **ficha Widget** de la **el Explorador de propiedades** para trabajar con los controles de interfaz de usuario en código C#.
+1. Asignar **nombres** en el **ficha Widget** de la **Explorador de propiedades** para trabajar con los controles de IU en C# código.
 1. Guarde los cambios.
     
 -----
 
-Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Hello, Guía de inicio rápido de tvOS](~/ios/tvos/get-started/hello-tvos.md).
+Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Hola, Guía de inicio rápido de tvOS](~/ios/tvos/get-started/hello-tvos.md).
 
 <a name="Working-with-Split-View-Controllers" />
 
-## <a name="working-with-split-view-controllers"></a>Trabajar con controladores de la vista de división
+## <a name="working-with-split-view-controllers"></a>Trabajar con controladores de vista dividida
 
-Como se mencionó anteriormente, un controlador de vista de la división se utiliza a menudo en situaciones donde se muestran contenido filtrado para el usuario. Se muestran las categorías principales de la izquierda en la vista patrón, y los resultados filtrados a la derecha en la vista de detalle según la selección del usuario.
+Como se indicó anteriormente, un controlador de vista de división se utiliza a menudo en situaciones donde se va a mostrar contenido filtrado para el usuario. Las principales categorías se muestran a la izquierda en la vista principal, y los resultados filtrados de la derecha en la vista de detalle según la selección del usuario.
 
 <a name="Accessing-Master-and-Detail" />
 
-### <a name="accessing-master-and-detail"></a>Obtener acceso a maestro y detalles
+### <a name="accessing-master-and-detail"></a>Acceso a maestro y detalles
 
-Si necesita tener acceso mediante programación maestra y controladores de la vista de detalle, use la `ViewControllers ` propiedad del controlador de vista de división. Por ejemplo:
+Si necesita tener acceso mediante programación el patrón y los controladores de vista de detalle, utilice el `ViewControllers ` propiedad del controlador de vista de división. Por ejemplo:
 
 ```csharp
 // Gain access to master and detail view controllers
@@ -112,9 +112,9 @@ Se presenta como una matriz, donde el primer elemento (0) en el controlador de v
 
 <a name="Accessing-Detail-from-Master" />
 
-### <a name="accessing-detail-from-master"></a>Obtener acceso a los detalles del maestro
+### <a name="accessing-detail-from-master"></a>Obtener acceso a los detalles del patrón
 
-Puesto que normalmente se muestra información detallada en la vista de detalle en función de la selección del usuario de la página maestra, necesitará una manera de tener acceso a los detalles del servidor maestro.
+Puesto que normalmente se muestra información detallada en la vista de detalle según la selección del usuario en el servidor maestro, necesitará una manera de obtener acceso a los detalles del servidor maestro.
 
 La manera más fácil de hacerlo es exponer una propiedad en la clase de controlador de vista maestra, por ejemplo:
 
@@ -122,7 +122,7 @@ La manera más fácil de hacerlo es exponer una propiedad en la clase de control
 public DetailViewController DetailController { get; set;}
 ```
 
-En el controlador de vista de división, invalida el `ViewDidLoad` método y Lazo conjuntamente las dos vistas. Por ejemplo:
+En el controlador de vista dividida, invalide el `ViewDidLoad` método equivalentes las dos vistas y juntos. Por ejemplo:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -140,11 +140,11 @@ public override void ViewDidLoad ()
 }
 ```
 
-Puede exponer propiedades y métodos en el controlador de vista de detalle que el maestro se puede utilizar para crear nuevos datos según sea necesario.
+Puede exponer propiedades y métodos en el controlador de vista de detalle que el maestro puede utilizar para presentar datos nuevos, según sea necesario.
 
 <a name="Showing-and-Hiding-Master" />
 
-### <a name="showing-and-hiding-master"></a>Mostrar u ocultar Master
+### <a name="showing-and-hiding-master"></a>Mostrar y ocultar Master
 
 Si lo desea, puede mostrar y ocultar el controlador de vista maestra con el `PreferredDisplayMode` propiedad del controlador de vista de división. Por ejemplo:
 
@@ -161,8 +161,8 @@ El `UISplitViewControllerDisplayMode` enumeración define cómo se presentará e
 
 - **Automática** -tvOS controlará la presentación de las vistas de detalle y maestra.
 - **PrimaryHidden** -Esto oculta el controlador de vista maestra.
-- **AllVisible** -muestra el patrón y lo controladores de la vista de detalle en paralelo. Se trata de la presentación predeterminada de su estado normal.
-- **PrimaryOverlay** -extiende en el controlador de vista de detalle y está cubierto por el patrón.
+- **AllVisible** -muestra el patrón y lo controladores de vista de detalle paralelo. Se trata de la normal, presentación predeterminada.
+- **PrimaryOverlay** -extiende en el controlador de vistas de detalle y está cubierto por el patrón.
 
 Para obtener el estado de presentación actual, use el `DisplayMode` propiedad del controlador de vista de división.
 
@@ -170,7 +170,7 @@ Para obtener el estado de presentación actual, use el `DisplayMode` propiedad d
 
 ## <a name="summary"></a>Resumen
 
-Diseñar y trabajar con controladores de la vista de división dentro de una aplicación Xamarin.tvOS se ha descrito en este artículo.
+Este artículo trata de diseñar y trabajar con controladores de vista de división dentro de una aplicación Xamarin.tvOS.
 
 
 
@@ -178,5 +178,5 @@ Diseñar y trabajar con controladores de la vista de división dentro de una apl
 
 - [Ejemplos de tvOS](https://developer.xamarin.com/samples/tvos/all/)
 - [tvOS](https://developer.apple.com/tvos/)
-- [tvOS guías de interfaz humana](https://developer.apple.com/tvos/human-interface-guidelines/)
-- [Guía de programación de aplicaciones tvos](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)
+- [Guías de interfaz humana de tvOS](https://developer.apple.com/tvos/human-interface-guidelines/)
+- [Guía de programación de aplicación de tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

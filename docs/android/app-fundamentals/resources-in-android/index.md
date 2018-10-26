@@ -1,71 +1,71 @@
 ---
 title: Recursos de Android
-description: Este artículo presenta el concepto de recursos Android en Xamarin.Android e indicarán cómo utilizarlas. Se describe cómo usar los recursos en la aplicación Android para admitir varios dispositivos, incluidos las densidades y diferentes tamaños de pantalla y localización de la aplicación.
+description: Este artículo presenta el concepto de recursos de Android en Xamarin.Android y documentará cómo usarlas. Se describe cómo usar los recursos en la aplicación Android para admitir la localización de aplicaciones y varios dispositivos, incluidas las densidades y diferentes tamaños de pantalla.
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: 7b6ba9cdc222019bfa2e1cb9a61b54e290e69bba
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d9cd6bf3ae51c6e27be88481e412995bd4113c17
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764416"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117272"
 ---
 # <a name="android-resources"></a>Recursos de Android
 
-_Este artículo presenta el concepto de recursos Android en Xamarin.Android e indicarán cómo utilizarlas. Se describe cómo usar los recursos en la aplicación Android para admitir varios dispositivos, incluidos las densidades y diferentes tamaños de pantalla y localización de la aplicación._
+_Este artículo presenta el concepto de recursos de Android en Xamarin.Android y documentará cómo usarlas. Se describe cómo usar los recursos en la aplicación Android para admitir la localización de aplicaciones y varios dispositivos, incluidas las densidades y diferentes tamaños de pantalla._
 
 
 ## <a name="overview"></a>Información general
 
-Una aplicación Android rara vez es solo el código de origen. A menudo hay muchos otros archivos que componen una aplicación: vídeo, imágenes, fuentes y archivos de audio solo por nombrar algunos. Colectivamente, estos archivos de código fuente no se conocen como recursos y se compilan (junto con el código fuente) durante el proceso de compilación y empaquetados como un APK de distribución y la instalación en dispositivos:
+Una aplicación de Android rara vez es solo el código de origen. A menudo hay muchos otros archivos que componen una aplicación: vídeo, imágenes, fuentes y los archivos de audio solo por nombrar algunos. Colectivamente, estos archivos de código fuente no se conocen como recursos y se compilan (junto con el código fuente) durante el proceso de compilación y empaquetados como un APK para su distribución e instalación en dispositivos:
 
 ![Diagrama de empaquetado](images/packaging-diagram.png)
 
-Recursos ofrecen varias ventajas con respecto a una aplicación Android:
+Recursos ofrecen varias ventajas a una aplicación de Android:
 
--  **Separación de código** &ndash; separa el código de origen de imágenes, cadenas, menús, animaciones, colores, etcetera. Por lo tanto los recursos pueden ayudar a considerablemente al localizar.
+-  **Separación de código** &ndash; separa el código de origen de imágenes, cadenas, los menús, las animaciones, colores, etcetera. Por lo tanto los recursos pueden ayudar a considerablemente al localizar.
 
--  **Varios dispositivos de destino** &ndash; proporciona compatibilidad con más sencillo de las configuraciones de dispositivos diferentes sin cambios en el código.
+-  **Tener como destino varios dispositivos** &ndash; proporciona compatibilidad con más sencillo de distintas configuraciones de dispositivos sin cambios de código.
 
--  **Comprobación de tiempo de compilación** &ndash; recursos son estáticos y compilado en la aplicación. Esto permite el uso de los recursos que se comprueban en tiempo de compilación, cuando resultará sencillo detectar y corregir los errores, en lugar de tiempo de ejecución cuando resulte más difícil de buscar y costosa corregir.
+-  **Tiempo de compilación corriente** &ndash; recursos son estáticos y compilado en la aplicación. Esto permite el uso de los recursos que se comprueba en tiempo de compilación cuando será fácil de detectar y corregir los errores, en lugar de tiempo de ejecución cuando es más difícil encontrar y costosas de corregir.
 
 Cuando se inicia un nuevo proyecto de Xamarin.Android, se crea un directorio especial denominado recursos, junto con algunos subdirectorios:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Contenido y la carpeta de recursos](images/resources-folder-vs.png)
 
-En la imagen anterior, los recursos de aplicación están organizados según su tipo en estos subdirectorios: imágenes se ubicarán en el **pueden dibujar** directorio; vistas ir en la **diseño** subdirectorio, etcetera.
+En la imagen anterior, los recursos de la aplicación se organizan según su tipo en estos subdirectorios: las imágenes se ubicarán en el **drawable** directorio; vistas ir en el **diseño** subdirectorio, etcetera.
  
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Contenido y la carpeta de recursos](images/resources-folder-xs.png)
 
-En la imagen anterior, los recursos de aplicación están organizados según su tipo en estos subdirectorios: imágenes se ubicarán en el **asignación MIP** directorio; vistas ir en la **diseño** subdirectorio, etcetera.
+En la imagen anterior, los recursos de la aplicación se organizan según su tipo en estos subdirectorios: las imágenes se ubicarán en el **mipmap** directorio; vistas ir en el **diseño** subdirectorio, etcetera.
  
 -----
 
-Hay dos maneras de obtener acceso a estos recursos en una aplicación Xamarin.Android: *mediante programación* en el código y *mediante declaración* en XML mediante una sintaxis XML especial.
+Hay dos maneras de obtener acceso a estos recursos en una aplicación de Xamarin.Android: *mediante programación* en el código y *mediante declaración* en XML mediante una sintaxis especial de XML.
 
-Se llaman a estos recursos *recursos predeterminados* y se usan para todos los dispositivos a menos que se ha especificado una coincidencia más específica. Además, todos los tipos de recursos podrán tener opcionalmente *recursos alternativos* que Android puede usar como destino dispositivos específicos. Por ejemplo, se pueden proporcionar recursos para tener como destino la configuración regional del usuario, el tamaño de la pantalla, o si el dispositivo se gira 90 grados de vertical a horizontal, etcetera. En cada uno de estos casos, Android cargará los recursos para su uso por la aplicación sin ningún esfuerzo de codificación adicional por el desarrollador.
+Estos recursos se denominan *recursos predeterminados* y se usan por todos los dispositivos, a menos que se ha especificado una coincidencia más específica. Además, todos los tipos de recursos pueden tener opcionalmente *recursos alternativos* que Android puede usar como destino dispositivos concretos. Por ejemplo, se pueden proporcionar recursos para tener como destino la configuración regional del usuario, el tamaño de pantalla, o si el dispositivo se gira 90 grados de vertical a horizontal, etcetera. En cada uno de estos casos, Android cargará los recursos para su uso por la aplicación sin ningún esfuerzo de codificación adicional por el desarrollador.
 
-Los recursos alternativos se especifican mediante la adición de una cadena corta, llama a un *calificador*, hasta el final del directorio que contiene un tipo determinado de recursos.
+Recursos alternativos se especifican mediante la adición de una cadena corta, llama a un *calificador*, hasta el final del directorio que contiene un tipo determinado de recursos.
 
-Por ejemplo, **recursos, puede dibujar-Alemania** especificará las imágenes para dispositivos que se establecen en una configuración regional alemana, mientras que **recursos, puede dibujar-fr** contendría las imágenes de dispositivos se establece en la configuración regional en francés. Un ejemplo de cómo proporcionar recursos alternativos puede verse en la imagen siguiente donde se ejecuta la misma aplicación con la configuración regional de los cambios de dispositivo:
+Por ejemplo, **recursos/drawable-de** especificará las imágenes para los dispositivos que se establecen en una configuración regional alemana, mientras que **recursos/drawable-fr** contendría las imágenes de dispositivos se establece en la configuración regional en francés. Un ejemplo de cómo proporcionar recursos alternativos se aprecia en la imagen siguiente donde se ejecuta la misma aplicación con la configuración regional de los cambios del dispositivo:
 
 ![Pantallas de ejemplo para distintas configuraciones regionales](images/localized-screenshots.png)
 
-En este artículo se echar un vistazo integral de uso de recursos y tratar los siguientes temas:
+En este artículo tomará una visión integral de uso de recursos y abarcan los siguientes temas:
 
--  **Conceptos básicos de recursos Android** &ndash; con los recursos predeterminados mediante programación o mediante declaración, agregar tipos de recursos como imágenes y fuentes a una aplicación.
+-  **Conceptos básicos de recursos Android** &ndash; con los recursos predeterminados mediante programación o declaración, agregar tipos de recursos como imágenes y las fuentes a una aplicación.
 
--  **Configuraciones específicas de dispositivo** &ndash; admitir los diferentes resoluciones de pantalla y densidades en una aplicación.
+-  **Configuraciones específicas de dispositivo** &ndash; que admiten las diferentes resoluciones de pantalla y densidades en una aplicación.
 
--  **Localización** &ndash; uso de recursos para admitir las diferentes regiones se puede utilizar una aplicación.
+-  **Localización** &ndash; con recursos para admitir las diferentes regiones se puede usar una aplicación.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

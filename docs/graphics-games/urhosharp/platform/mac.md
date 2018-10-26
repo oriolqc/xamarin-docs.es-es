@@ -1,33 +1,33 @@
 ---
 title: Compatibilidad con Mac UrhoSharp
-description: Este documento explica la compatibilidad con macOS UrhoSharp. Describe cómo crear un proyecto y proporciona un vínculo a ejemplos de código.
+description: Este documento explica la compatibilidad con macOS UrhoSharp. Describe cómo crear un proyecto y proporciona un vínculo al código de ejemplo.
 ms.prod: xamarin
 ms.assetid: 95FFBD36-14E9-4C17-B1E8-9A04E81E824D
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: aae7b09231ae0e8f88bb9435f50fadd2ff822c1a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 6d0a048020284319682c1bee0f9a1d7f9af00977
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783348"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113877"
 ---
 # <a name="urhosharp-mac-support"></a>Compatibilidad con Mac UrhoSharp
 
-_Características y el programa de instalación específico de Mac_
+_Características y configuración específica de Mac_
 
-Mientras se Urho es una biblioteca de clases portables y permite a las mismas API que se usará en la plataforma distintos para la lógica de juego, todavía tiene que inicializar Urho en el controlador específico de plataforma y en algunos casos, puede aprovechar las características específicas de plataforma .
+Aunque Urho es una biblioteca de clases portable, y permite la misma API que se usará en toda la plataforma distintos para la lógica de juego, deberá inicializar Urho en su controlador específico de plataforma y en algunos casos, deseará aprovechar las ventajas de las características específicas de plataforma .
 
-En las páginas siguientes, se asume que `MyGame` es una subclase de la `Application` clase.
+En las páginas siguientes, se supone que `MyGame` es una subclase de la `Application` clase.
 
 ## <a name="macos"></a>macOS
 
-**Admite arquitecturas:** x86/x86-64 de 32 y 64 bits.
+**Arquitecturas compatibles:** x86/x86-64 para 32 bits y 64 bits.
 
 ## <a name="creating-a-project"></a>Crear un proyecto
 
-Crear un proyecto de consola, hacen referencia a Urho NuGet y, a continuación, asegúrese de que puede localizar los activos (es decir, los directorios que contiene el directorio de datos).
+Crear un proyecto de consola, hacen referencia a Urho NuGet y, a continuación, asegúrese de que puede encontrar los recursos (es decir, los directorios que contiene el directorio de datos).
 
 ```csharp
 DesktopUrhoInitializer.AssetsDirectory = "../Assets";

@@ -1,33 +1,33 @@
 ---
 title: Introducción a macOS
-description: Este documento se describe cómo empezar a usar la incrustación de .NET con macOS. Explica los requisitos y presenta una aplicación de ejemplo para demostrar cómo enlazar un ensamblado administrado y el resultado generado en un proyecto de Xcode.
+description: Este documento se describe cómo empezar a usar la inserción de .NET con macOS. Describe los requisitos y presenta una aplicación de ejemplo para demostrar cómo enlazar el ensamblado administrado y la salida generada en un proyecto de Xcode.
 ms.prod: xamarin
 ms.assetid: AE51F523-74F4-4EC0-B531-30B71C4D36DF
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: 38049eae5e420e5f3610341c2682fa92d2ac426e
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 3de47aa57df29f52f71508977ae017dff009c282
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793694"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121573"
 ---
 # <a name="getting-started-with-macos"></a>Introducción a macOS
 
 ## <a name="what-you-will-need"></a>Lo que necesita
 
-* Siga las instrucciones en el [introducción con Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guía.
+* Siga las instrucciones de la [Introducción a Objective-C](~/tools/dotnet-embedding/get-started/objective-c/index.md) guía.
 
 ## <a name="hello-world"></a>Hola a todos
 
-En primer lugar, compile un ejemplo del mundo Hola simple en C#.
+En primer lugar, cree un sencilla hello world, ejemplo de C#.
 
-### <a name="create-c-sample"></a>Crear el ejemplo de C#
+### <a name="create-c-sample"></a>Crear un ejemplo de C#
 
-Abra Visual Studio para Mac, cree un nuevo proyecto de biblioteca de clases de Mac denominado **Hola de csharp**y guárdelo en **~/Projects/hello-from-csharp**.
+Abra Visual Studio para Mac, cree un nuevo proyecto de biblioteca de clases de Mac denominado **hello de csharp**y guárdelo en **~/Projects/hello-from-csharp**.
 
-Reemplace el código de la **MyClass.cs** archivo con el siguiente fragmento:
+Reemplace el código en el **MyClass.cs** archivo con el siguiente fragmento de código:
 
 ```csharp
 using AppKit;
@@ -44,9 +44,9 @@ Compile el proyecto. El ensamblado resultante se guardará como **~/Projects/hel
 
 ### <a name="bind-the-managed-assembly"></a>Enlazar el ensamblado administrado
 
-Una vez que tenga un ensamblado administrado, enlazar invocando la incrustación. NET.
+Una vez que un ensamblado administrado, puede enlazar mediante la invocación de inserción de .NET.
 
-Como se describe en el [instalación](~/tools/dotnet-embedding/get-started/install/install.md) guía, puede hacerlo como paso posterior a la compilación del proyecto, con un destino de MSBuild personalizado o manualmente:
+Como se describe en el [instalación](~/tools/dotnet-embedding/get-started/install/install.md) guía, esto puede hacerse como paso posterior a la compilación en el proyecto, con un destino de MSBuild personalizado o de forma manual:
 
 ```shell
 cd ~/Projects/hello-from-csharp
@@ -55,11 +55,11 @@ objcgen ~/Projects/hello-from-csharp/hello-from-csharp/bin/Debug/hello-from-csha
 
 El marco de trabajo se colocará en **~/Projects/hello-from-csharp/output/hello-from-csharp.framework**.
 
-### <a name="use-the-generated-output-in-an-xcode-project"></a>Usar el resultado generado en un proyecto de Xcode
+### <a name="use-the-generated-output-in-an-xcode-project"></a>Usar la salida generada en un proyecto de Xcode
 
-Abra Xcode y cree una nueva aplicación de cacao. Asígnele el nombre **Hola de csharp** y seleccione la **Objective-C** language.
+Abra Xcode y cree una nueva aplicación de cacao. Asígnele el nombre **hello de csharp** y seleccione el **Objective-C** lenguaje.
 
-Abra la **~/Projects/hello-from-csharp/output** directorio en Finder, seleccione **Hola de csharp.framework**, arrástrelo al proyecto Xcode y colóquela justo encima el **Hola de csharp**  carpeta del proyecto.
+Abra el **~/Projects/hello-from-csharp/output** directorio en el Finder, seleccione **hello de csharp.framework**, arrástrelo al proyecto Xcode y colóquelo justo encima el **hello de csharp**  carpeta del proyecto.
 
 ![Marco de arrastrar y colocar](macos-images/hello-from-csharp-mac-drag-drop-framework.png)
 
@@ -67,7 +67,7 @@ Asegúrese de que **copiar elementos si es necesario** está activada en el cuad
 
 ![Copiar elementos si es necesario](macos-images/hello-from-csharp-mac-copy-items-if-needed.png)
 
-Seleccione el **Hola de csharp** proyecto y navegue hasta la **Hola de csharp** del destino **General** ficha. En el **incrustado binario** sección, agregue **Hola de csharp.framework**.
+Seleccione el **hello de csharp** del proyecto y navegue hasta la **hello de csharp** del destino **General** ficha. En el **incrustado binario** sección, agregue **hello de csharp.framework**.
 
 ![Archivos binarios incrustados](macos-images/hello-from-csharp-mac-embedded-binaries.png)
 
@@ -91,8 +91,8 @@ Abra **ViewController.m**y reemplace el contenido con:
 @end
 ```
 
-Por último, ejecute el proyecto de Xcode, y se mostrará a algo parecido a esto:
+Por último, ejecute el proyecto de Xcode y se mostrará algo parecido a esto:
 
-![Hola de ejecución en el simulador del ejemplo de C#](macos-images/hello-from-csharp-mac.png)
+![Hola desde el que se ejecuta en el simulador de ejemplo de C#](macos-images/hello-from-csharp-mac.png)
 
-Un ejemplo más completo y tengan una buena presentación [está disponible aquí](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).
+Un ejemplo más completo y un mejor aspecto [está disponible aquí](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).

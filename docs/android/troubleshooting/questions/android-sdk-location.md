@@ -1,68 +1,68 @@
 ---
-title: ¿Dónde puedo configurar mi ubicaciones de SDK de Android?
+title: ¿Dónde puedo configurar mi ubicaciones de Android SDK?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 6A9DE6E9-3E27-4DD2-87D2-34E95E5D401C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 11/16/2017
-ms.openlocfilehash: e7af6635aeec72a9a0e0c01eeb6eb0a77d2a1d7b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: c004fb7717f78750e7ac1e8dc1856a32ba808638
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764013"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119493"
 ---
-# <a name="where-can-i-set-my-android-sdk-locations"></a>¿Dónde puedo configurar mi ubicaciones de SDK de Android?
+# <a name="where-can-i-set-my-android-sdk-locations"></a>¿Dónde puedo configurar mi ubicaciones de Android SDK?
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-En Visual Studio, vaya a **Herramientas > Opciones > Xamarin > configuración de Android** para ver y establecer la ubicación de SDK de Android:
+En Visual Studio, vaya a **Herramientas > Opciones > Xamarin > configuración de Android** para ver y establecer la ubicación de Android SDK:
 
-[![Pestaña de ubicaciones de ejemplo en las preferencias](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
+[![Pestaña ubicaciones de ejemplo en las preferencias](android-sdk-location-images/win/01-locations-sml.png)](android-sdk-location-images/win/01-locations.png#lightbox)
 
-La ubicación predeterminada de cada ruta de acceso es como sigue:
+La ubicación predeterminada para cada ruta de acceso es como sigue:
 
-- Ubicación del Kit de desarrollo de Java: 
+- Ubicación de Java Development Kit: 
 
-    **C:\\Program Files\\Java\\jdk1.8.0_131**
+    **C:\\archivos de programa\\Java\\jdk1.8.0_131**
 
-- Ubicación del SDK de Android: 
+- Ubicación de Android SDK: 
 
     **C:\\Archivos de programa (x86)\\Android\\android-sdk**
 
-- Ubicación del NDK de Android: 
+- Ubicación de Android NDK: 
 
     **C:\\ProgramData\\Microsoft\\AndroidNDK64\\android-ndk-r13b**
 
-Tenga en cuenta que el número de versión de la NDK puede variar. Por ejemplo, en lugar de **ndk de android de r13b**, podría ser una versión anterior como **r10e de ndk de android**.
+Tenga en cuenta que el número de versión del NDK puede variar. Por ejemplo, en lugar de **android-ndk-r13b**, podría ser una versión anterior como **android-ndk-r10e**.
 
-Para establecer la ubicación de SDK de Android, escriba la ruta de acceso completa del directorio del SDK de Android en el **ubicación de SDK de Android** cuadro. Puede navegar a la ubicación de SDK de Android en el Explorador de archivos, copie la ruta de acceso de la barra de direcciones y pegue esta ruta de acceso en la **ubicación de SDK de Android** cuadro.
-Por ejemplo, si la ubicación del SDK de Android está en **C:\\usuarios\\nombre de usuario\\AppData\\Local\\Android\\Sdk**, borre la ruta de acceso anterior en el  **Ubicación de SDK de Android** , pegue en esta ruta de acceso y haga clic en **Aceptar**.
+Para establecer la ubicación de Android SDK, escriba la ruta de acceso completa del directorio de Android SDK en el **ubicación de Android SDK** cuadro. Puede navegar a la ubicación de Android SDK en el Explorador de archivos, copiar la ruta de acceso de la barra de direcciones y pegue esta ruta de acceso en el **ubicación de Android SDK** cuadro.
+Por ejemplo, si es la ubicación de Android SDK en **C:\\usuarios\\username\\AppData\\Local\\Android\\Sdk**, desactive la antigua ruta en el  **Ubicación de Android SDK** cuadro, pegue en esta ruta de acceso y haga clic en **Aceptar**.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-En Visual Studio para Mac, vaya a **Preferencias > proyectos > ubicaciones de SDK > Android**. En el **Android** página, haga clic en el **ubicaciones** pestaña para ver y establecer la ubicación de SDK:
+En Visual Studio para Mac, vaya a **Preferencias > proyectos > ubicaciones de SDK > Android**. En el **Android** página, haga clic en el **ubicaciones** pestaña para ver y establecer la ubicación del SDK:
 
-[![Pestaña de ubicaciones de ejemplo en las preferencias](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png#lightbox)
+[![Pestaña ubicaciones de ejemplo en las preferencias](android-sdk-location-images/mac/01-locations-sml.png)](android-sdk-location-images/mac/01-locations.png#lightbox)
 
-La ubicación predeterminada de cada ruta de acceso es como sigue:
+La ubicación predeterminada para cada ruta de acceso es como sigue:
 
-- Ubicación del SDK de Android: 
+- Ubicación de Android SDK: 
 
     **~/Library/Developer/Xamarin/android-sdk-macosx**
 
-- Ubicación del NDK de Android: 
+- Ubicación de Android NDK: 
 
     **~/Library/Developer/Xamarin/android-ndk/android-ndk-r14b**
 
-- Ubicación de Java (JDK) de SDK: 
+- Ubicación de Java (JDK) SDK: 
 
-    **/usr**
+    **/ usr**
 
-Tenga en cuenta que el número de versión de la NDK puede variar. Por ejemplo, en lugar de **ndk de android de r14b**, podría ser una versión anterior como **r10e de ndk de android**.
+Tenga en cuenta que el número de versión del NDK puede variar. Por ejemplo, en lugar de **android-ndk-r14b**, podría ser una versión anterior como **android-ndk-r10e**.
 
-Para establecer la ubicación de SDK de Android, escriba la ruta de acceso completa del directorio del SDK de Android en el **ubicación de SDK de Android** cuadro. Puede seleccionar la carpeta del SDK de Android en la herramienta de búsqueda, presione **CTRL +&#8984;+ I** para ver información de la carpeta, haga clic en y arrastre la ruta de acceso a la derecha del **donde:**, copiar, a continuación, péguelo en el **SDK de Android Ubicación** cuadro el **ubicaciones** ficha. Por ejemplo, si la ubicación del SDK de Android está en **~/Library/Developer/Android/Sdk**, borre la ruta de acceso anterior en el **ubicación de SDK de Android** , pegue en esta ruta de acceso y haga clic en **Aceptar**.
+Para establecer la ubicación de Android SDK, escriba la ruta de acceso completa del directorio de Android SDK en el **ubicación de Android SDK** cuadro. Puede seleccionar la carpeta del SDK de Android en el Finder, presione **CTRL +&#8984;+ I** para ver información de la carpeta, haga clic en y arrastre la ruta de acceso a la derecha del **donde:**, copiar y luego péguelo en el **Android SDK Ubicación** cuadro el **ubicaciones** ficha. Por ejemplo, si la ubicación de Android SDK es **~/Library/Developer/Android/Sdk**, desactive la antigua ruta de acceso en el **ubicación de Android SDK** cuadro, pegue en esta ruta de acceso y haga clic en **Aceptar**.
 
 -----

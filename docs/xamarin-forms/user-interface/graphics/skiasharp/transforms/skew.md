@@ -4,15 +4,15 @@ description: En este artículo se explica cómo la transformación de sesgo pued
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 03/20/2017
-ms.openlocfilehash: 951fc02dfff1721c1391c5d0c8a21452a156cfdb
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: ecb07c69b7720f77401bf9bf454ee4b0248ad238
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615358"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113825"
 ---
 # <a name="the-skew-transform"></a>Transformación de sesgo
 
@@ -22,17 +22,17 @@ En SkiaSharp, la transformación de sesgo inclina a objetos gráficos, como la s
 
 ![](skew-images/skewexample.png "Un ejemplo de sesgado del programa sesgar sombra del texto")
 
-El sesgo transforma rectángulos en paralelogramos, pero una elipse sesgada sigue siendo una elipse.
+El sesgo convierte un rectángulo en un paralelogramo, pero una elipse sesgada sigue siendo una elipse.
 
 Aunque Xamarin.Forms define las propiedades de traslación, escala y rotaciones, no hay ninguna propiedad correspondiente en Xamarin.Forms para skew.
 
-El [ `Skew` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Skew/p/System.Single/System.Single/) método `SKCanvas` acepta dos argumentos de sesgo horizontal y vertical sesgar:
+El [ `Skew` ](xref:SkiaSharp.SKCanvas.Skew(System.Single,System.Single)) método `SKCanvas` acepta dos argumentos de sesgo horizontal y vertical sesgar:
 
 ```csharp
 public void Skew (Single xSkew, Single ySkew)
 ```
 
-Un segundo [ `Skew` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Skew/p/SkiaSharp.SKPoint/) método combina estos argumentos en una sola `SKPoint` valor:
+Un segundo [ `Skew` ](xref:SkiaSharp.SKCanvas.Skew(SkiaSharp.SKPoint)) método combina estos argumentos en una sola `SKPoint` valor:
 
 ```csharp
 public void Skew (SKPoint skew)
@@ -72,7 +72,7 @@ Los valores de la `xSkew` argumento desplazar la parte inferior del texto adecua
 
 [![](skew-images/skewexperiment-small.png "Captura de pantalla triple de la página del experimento sesgar")](skew-images/skewexperiment-large.png#lightbox "Triple captura de pantalla de la página del experimento sesgar")
 
-Si `xSkew` es el negativo de `ySkew`, el resultado es la rotación, pero también ha escalado algo como indica la presentación UWP.
+Si el `xSkew` valor es el negativo de la `ySkew` valor, el resultado es la rotación, pero también escalar un poco como indica la presentación UWP.
 
 Las fórmulas de transformación son los siguientes:
 
@@ -102,7 +102,7 @@ x' = x + xSkew (en inglés) (y – py)
 
 y' = ySkew (en inglés) (x – px) + y
 
-Si `ySkew` es cero, y solo especificar un valor distinto de cero de `xSkew`, a continuación, `px` no se utiliza el valor. El valor es irrelevante y de forma similar para `ySkew` y `py`.
+Si `ySkew` es cero, el `px` no se utiliza el valor. El valor es irrelevante y de forma similar para `ySkew` y `py`.
 
 Se podría siente más cómodo especificando sesgo como un ángulo de inclinación, como el ángulo α en este diagrama:
 
@@ -110,7 +110,7 @@ Se podría siente más cómodo especificando sesgo como un ángulo de inclinaci�
 
 La relación entre el turno de 150 píxeles a la vertical 100 píxeles es la tangente del ángulo que, en este ejemplo 56.3 grados.
 
-El archivo XAML de la **experimento de ángulo de sesgo** página es similar a la **ángulo de sesgo** página salvo que el `Slider` elementos oscilar entre -90 y 90 grados. El [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) centra el texto en la página de archivo de código subyacente y usa `Translate` para establecer un centro de sesgo en el centro de la página. Short `SkewDegrees` método en la parte inferior del código convierte ángulos para sesgar valores:
+El archivo XAML de la **experimento de ángulo de sesgo** página es similar a la **ángulo de sesgo** página salvo que el `Slider` elementos oscilar entre-90 grados y 90 grados. El [ `SkewAngleExperiment` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/SkewAngleExperimentPage.xaml.cs) centra el texto en la página de archivo de código subyacente y usa `Translate` para establecer un centro de sesgo en el centro de la página. Short `SkewDegrees` método en la parte inferior del código convierte ángulos para sesgar valores:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -224,7 +224,7 @@ La sombra es muestra primero y, a continuación, el texto:
 
 [![](skew-images/skewshadowtext1-small.png "Captura de pantalla de la página de texto con sombra sesgar triple")](skew-images/skewshadowtext1-large.png#lightbox "Triple captura de pantalla de la página sesgar sombra del texto")
 
-La coordenada vertical se pasa a la `DrawText` método indica la posición del texto en relación con la línea base. Que es la misma coordenada vertical utilizada para el centro de sesgado. Esta técnica no funcionará si la cadena de texto contiene los trazos descendentes. Por ejemplo, reemplace la palabra "extraña" para "Sombra" y aquí de resultado:
+La coordenada vertical se pasa a la `DrawText` método indica la posición del texto en relación con la línea base. Que es la misma coordenada vertical utilizada para el centro de sesgado. Esta técnica no funcionará si la cadena de texto contiene los trazos descendentes. Por ejemplo, sustituya la palabra "extraña" para "Sombra" y este es el resultado:
 
 [![](skew-images/skewshadowtext2-small.png "Captura de pantalla de la página sesgar sombra del texto con una palabra alternativa con trazos descendentes triple")](skew-images/skewshadowtext2-large.png#lightbox "Triple captura de pantalla de la página sesgar sombra del texto con una palabra alternativa con trazos descendentes")
 
@@ -251,5 +251,5 @@ Ahora la sombra se extiende desde la parte inferior de los trazos descendentes:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

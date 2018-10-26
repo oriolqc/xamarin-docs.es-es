@@ -1,37 +1,37 @@
 ---
 title: Trabajar con la entrada de texto en Xamarin watchOS
-description: Este documento describe la entrada de texto de watchOS en Xamarin. Se trata el PresentTextInputController método, tomar, texto sin formato, emojis y dictado.
+description: Este documento describe la entrada de texto de watchOS en Xamarin. Describe el PresentTextInputController método, tomar, texto sin formato, emojis y dictado.
 ms.prod: xamarin
 ms.assetid: E9CDF1DE-4233-4C39-99A9-C0AA643D314D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: da668333b3549c92264af7d4da4941ac6b5bf865
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 2092b12254008936f2c5b6a7d9dd610ff751e802
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791389"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122366"
 ---
 # <a name="working-with-watchos-text-input-in-xamarin"></a>Trabajar con la entrada de texto en Xamarin watchOS
 
-El Apple Watch no proporciona un teclado para los usuarios escribir texto, sin embargo, es compatible con algunas alternativas de inspección sencillo:
+El Apple Watch no proporciona un teclado para los usuarios a la entrada de texto, sin embargo, es compatible con algunas alternativas de inspección compatible con:
 
 - Seleccionar de una lista predefinida de opciones de texto
-- Dictado de Siri,
+- Siri dictado,
 - Elegir un emoji
 - Scribble de reconocimiento de escritura a mano de letra por letra (introducido en watchOS 3).
 
-El simulador no admite actualmente el dictado, pero se pueden realizar las pruebas en la entrada de texto otras opciones del controlador, como Scribble, como se muestra aquí:
+El simulador no admite actualmente el dictado pero todavía puede probar la entrada de texto otras opciones del controlador, como Scribble, como se muestra aquí:
 
 ![](text-input-images/textinput-sml.png "Probar la opción de scribble")
 
 Para aceptar la entrada de texto en una aplicación de inspección:
 
 1. Crear una matriz de cadenas de opciones predefinidas.
-2. Llame a `PresentTextInputController` con la matriz, si quiere permitir emoji o no y un `Action` que se llama cuando el usuario ha terminado.
-3. En la acción de conclusión, comprobar el resultado de la entrada y tome las medidas adecuadas en la aplicación (posiblemente establecer valor de texto de una etiqueta).
+2. Llame a `PresentTextInputController` con la matriz, si desea permitir emoji o no y un `Action` que se llama cuando el usuario ha terminado.
+3. En la acción de conclusión, pruebe el resultado de la entrada y tomar las medidas adecuadas en la aplicación (posiblemente establecer valor de texto de la etiqueta).
 
 El siguiente fragmento de código presenta tres opciones predefinidas para el usuario:
 
@@ -71,19 +71,19 @@ El resultado siempre se devuelve como un `NSObject` que se puede convertir en un
 
 Hay dos tipos de emoji:
 
-- Regular emoji de Unicode
+- Emoji regular de Unicode
 - Imágenes animadas
 
 Cuando el usuario elige un emoji Unicode, se devuelve como una cadena.
 
-Si se selecciona una imagen animada emoji el `result` en la finalización controlador contendrá un `NSData` objeto que contiene el emoji `UIImage`.
+Si se selecciona una imagen animada de emoji el `result` en la finalización controlador contendrá un `NSData` objeto que contiene el emoji `UIImage`.
 
 ## <a name="accepting-dictation-only"></a>Aceptar sólo dictado
 
-Para llevar al usuario directamente a la pantalla de dictado sin mostrar ninguna sugerencia (o la opción de Scribble):
+Para llevar al usuario directamente a la pantalla de dictado sin mostrar sugerencias (o la opción de Scribble):
 
 - pasar una matriz vacía de la lista de sugerencias, y
-- Set `WatchKit.WKTextInputMode.Plain`.
+- Establecer `WatchKit.WKTextInputMode.Plain`.
 
 ```csharp
 PresentTextInputController (new string[0], WatchKit.WKTextInputMode.Plain, (result) => {
@@ -96,9 +96,9 @@ PresentTextInputController (new string[0], WatchKit.WKTextInputMode.Plain, (resu
 });
 ```
 
-Cuando se habla el usuario, la pantalla de inspección muestra la siguiente pantalla que incluye el texto tal y como se entiende (por ejemplo "Esto es una prueba"):
+Cuando el usuario está hablando, la pantalla de inspección muestra la siguiente pantalla que incluye el texto tal y como se entiende (por ejemplo "Esto es una prueba"):
 
-![](text-input-images/dictation.png "Cuando se habla el usuario, la pantalla de inspección muestra el texto tal y como se entiende")
+![](text-input-images/dictation.png "Cuando el usuario está hablando, la pantalla de inspección muestra el texto tal y como se entiende")
 
 Una vez que presione el **realiza** se devolverá el texto del botón.
 
@@ -106,5 +106,5 @@ Una vez que presione el **realiza** se devolverá el texto del botón.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Del Apple documento de texto y etiquetas](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/TextandLabels.html)
+- [Apple documento de texto y etiquetas](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/TextandLabels.html)
 - [Introducción a watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md)

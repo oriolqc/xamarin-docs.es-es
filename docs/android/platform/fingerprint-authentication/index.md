@@ -1,37 +1,37 @@
 ---
-title: Autenticación de huellas dactilares
-description: Esta guía describe cómo agregar la autenticación de huellas digitales, introducida en Android 6.0, a una aplicación Xamarin.Android.
+title: Autenticación con huella digital
+description: Esta guía describe cómo agregar autenticación con huella digital, introducida en Android 6.0 a una aplicación de Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1b28b16dfd92ef3a31201ef2e86681a425a58ab8
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: cdb18cd916ddd5daab7db9839bb15ebb098d0c09
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764123"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123321"
 ---
-# <a name="fingerprint-authentication"></a>Autenticación de huellas dactilares
+# <a name="fingerprint-authentication"></a>Autenticación con huella digital
 
-_Esta guía describe cómo agregar la autenticación de huellas digitales, introducida en Android 6.0, a una aplicación Xamarin.Android._
+_Esta guía describe cómo agregar autenticación con huella digital, introducida en Android 6.0 a una aplicación de Xamarin.Android._
 
 
-## <a name="fingerprint-authentication-overview"></a>Introducción a la autenticación mediante huellas digitales
+## <a name="fingerprint-authentication-overview"></a>Información general sobre la autenticación de huella digital
 
-La llegada de los escáneres de huellas digitales en dispositivos Android proporciona aplicaciones con una alternativa al método de usuario tradicionales y la contraseña de autenticación de usuario. El uso de las huellas digitales para autenticar un usuario permite a una aplicación incorporar la seguridad que es menos intrusivo que un nombre de usuario y una contraseña.
+La llegada de los escáneres de huellas digitales en dispositivos Android proporciona aplicaciones con una alternativa al método tradicional de usuario y contraseña de autenticación de usuario. El uso de las huellas digitales para autenticar un usuario hace posible para una aplicación para incorporar la seguridad que es menos intrusivo que un nombre de usuario y una contraseña.
 
-Las APIs FingerprintManager dispositivos de destino con un lector de huellas digitales y nivel de API 23 (Android 6.0) se están ejecutando o superior. Las API se encuentran en el `Android.Hardware.Fingerprints` espacio de nombres. La biblioteca de compatibilidad de Android v4 proporciona versiones de la huella digital API diseñadas para versiones anteriores de Android. La compatibilidad de API se encuentran en el `Android.Support.v4.Hardware.Fingerprint` espacio de nombres, se distribuyen a través de la [paquete NuGet de Xamarin.Android.Support.v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
+Las APIs FingerprintManager dispositivos de destino con un escáner de huella digital y se ejecutan a nivel de API 23 (Android 6.0) o superior. Las API se encuentran en el `Android.Hardware.Fingerprints` espacio de nombres. V4 de la biblioteca de compatibilidad de Android proporciona versiones de la huella digital API diseñadas para versiones anteriores de Android. La compatibilidad de API se encuentran en el `Android.Support.v4.Hardware.Fingerprint` espacio de nombres, se distribuyen a través de la [paquete NuGet Xamarin.Android.Support.v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
 
-El [FingerprintManager](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (y su homólogo de la biblioteca de compatibilidad, [FingerprintManagerCompat](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) es la clase principal para el uso de la huella digital del análisis de hardware. Esta clase es un contenedor de SDK de Android en el servicio de nivel de sistema que administra las interacciones con el propio hardware. Es responsable de iniciar el escáner de huellas digitales y para responder a los comentarios del escáner. Esta clase tiene una interfaz bastante sencilla con solo tres miembros:
+El [FingerprintManager](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (y su equivalente de la biblioteca de compatibilidad, [FingerprintManagerCompat](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) es la clase principal para el uso de la huella digital del examen de hardware. Esta clase es un contenedor de Android SDK del servicio de nivel de sistema que administra las interacciones con el propio hardware. Es responsable de iniciar el escáner de huellas digitales y para responder a los comentarios del escáner. Esta clase tiene una interfaz de un proceso bastante sencillo con solo tres miembros:
 
-* **`Authenticate`** &ndash; Este método se inicialice el escáner de hardware e iniciar el servicio en segundo plano, con lo que se espera para que el usuario examinar su huella digital.
-* **`EnrolledFingerprints`** &ndash; Esta propiedad devolverá `true` si el usuario ha registrado las huellas digitales de uno o más con el dispositivo.
-* **`HardwareDetected`** &ndash; Esta propiedad se utiliza para determinar si el dispositivo admite el análisis de huellas digitales.
+* **`Authenticate`** &ndash; Este método se inicialice el analizador de hardware e iniciar el servicio en segundo plano, espera a que el usuario digitalizarán su huella digital.
+* **`EnrolledFingerprints`** &ndash; Esta propiedad devolverá `true` si el usuario ha registrado una o varias huellas digitales con el dispositivo.
+* **`HardwareDetected`** &ndash; Esta propiedad se utiliza para determinar si el dispositivo es compatible con el examen de huellas digitales.
 
-El `FingerprintManager.Authenticate` método se usa una aplicación Android para iniciar el analizador de huellas digitales. El fragmento de código siguiente es un ejemplo de cómo invocar mediante la compatibilidad de la biblioteca de compatibilidad con las API:
+El `FingerprintManager.Authenticate` método se usa una aplicación Android para iniciar el escáner de huella digital. El fragmento de código siguiente es un ejemplo de cómo invocarlo por medio de la compatibilidad de la biblioteca de compatibilidad con las API:
 
 ```csharp
 // context is any Android.Content.Context instance, typically the Activity 
@@ -44,13 +44,13 @@ fingerprintManager.Authenticate(FingerprintManager.CryptoObject crypto,
                                );
 ```
 
-Esta guía describe cómo utilizar el `FingerprintManager` API para mejorar una aplicación Android con la autenticación de huellas digitales. Explica cómo crear una instancia y crear un `CryptoObject` para ayudar a proteger los resultados desde el escáner de huellas digitales. Examinaremos cómo una aplicación debe subclase `FingerprintManager.AuthenticationCallback` y responder a los comentarios desde el escáner de huellas digitales. Por último, veremos cómo inscribir una huella digital en un emulador o dispositivo Android y cómo usar **adb** para simular un examen de huellas digitales.
+Esta guía describe cómo usar el `FingerprintManager` API para mejorar una aplicación Android con la autenticación con huella digital. Explica cómo crear una instancia y crear un `CryptoObject` para ayudar a proteger los resultados del escáner de huellas digitales. Examinaremos cómo una aplicación debe subclase `FingerprintManager.AuthenticationCallback` y responder a los comentarios del escáner de huellas digitales. Por último, veremos cómo inscribir una huella digital en un emulador o dispositivo Android y cómo usar **adb** para simular un examen de huellas digitales.
 
 ## <a name="requirements"></a>Requisitos
 
-Autenticación de huellas dactilares requiere Android 6.0 (nivel de API 23) o posterior y un dispositivo con un lector de huellas digitales. 
+Autenticación con huella digital requiere Android 6.0 (nivel de API 23) o superior y un dispositivo con un escáner de huellas digitales. 
 
-Una huella digital ya debe estar inscrito con el dispositivo para cada usuario que se autentique. Esto implica configurar un bloqueo de pantalla que utiliza una contraseña, el PIN, el patrón de deslice el dedo o el reconocimiento facial. Es posible simular algunas de las funciones de autenticación de huellas digitales en un emulador de Android.  Para obtener más información sobre estos dos temas, consulte el [inscribir una huella digital](enrolling-fingerprint.md) sección. 
+Una huella digital ya debe estar inscritos con el dispositivo para cada usuario que debe autenticarse. Esto implica configurar un bloqueo de pantalla que se usa una contraseña, PIN, el patrón de pasar el dedo o el reconocimiento facial. Es posible simular algunas de las funcionalidades de autenticación de huella digital en un emulador de Android.  Para obtener más información sobre estos dos temas, consulte el [inscribir una huella digital](enrolling-fingerprint.md) sección. 
 
 
 

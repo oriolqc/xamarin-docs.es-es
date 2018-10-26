@@ -1,49 +1,49 @@
 ---
-title: Ajustar los parámetros de la memoria de Java para el Diseñador de Android
+title: Ajustar los parámetros de la memoria de Java para Android designer
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: 691be280b80e379863cc09d0f1bba0ff5882cf21
-ms.sourcegitcommit: a7febc19102209b21e0696256c324f366faa444e
+ms.openlocfilehash: cf0df42ba398944a99cc4179b94f0d3cb8ba503e
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34732926"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118063"
 ---
-# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Ajustar los parámetros de la memoria de Java para el Diseñador de Android
+# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Ajustar los parámetros de la memoria de Java para Android designer
 
-Los parámetros de memoria predeterminados que se utilizan cuando se inicia el `java` procesar para el Diseñador de Android podría ser incompatible con algunas configuraciones del sistema.
+Los parámetros de memoria predeterminados que se usan al iniciar el `java` procesar para el Diseñador de Android podría ser incompatible con algunas configuraciones del sistema.
 
-A partir de Xamarin Studio 5.7.2.7 (y versiones posterior, Visual Studio para Mac) y Visual Studio Tools para Xamarin 3.9.344, esta configuración puede personalizarse según un por proyecto.
+A partir de Xamarin Studio 5.7.2.7 (y versiones posterior, Visual Studio para Mac) y Visual Studio Tools para Xamarin 3.9.344, estas opciones se pueden personalizar en cada proyecto.
 
-## <a name="new-android-designer-properties-and-corresponding-java-options"></a>Nuevas propiedades del Diseñador de Android y las opciones correspondientes de Java
+## <a name="new-android-designer-properties-and-corresponding-java-options"></a>Propiedades del Diseñador de Android nueva y las opciones correspondientes de Java
 
-Los nombres de propiedad siguientes corresponden a la java indicado [opción de línea de comandos](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html)
+Los nombres de propiedad siguientes corresponden a java indicado [opción de línea de comandos](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html)
 
-- **AndroidDesignerJavaRendererMinMemory** - Xms
+- **AndroidDesignerJavaRendererMinMemory** Xms -
 
 - **AndroidDesignerJavaRendererMaxMemory** - Xmx
 
 - **AndroidDesignerJavaRendererPermSize** - XX: MaxPermSize
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1.  Abra su solución en Visual Studio.
 
-2.  Seleccione cada proyecto de Android uno por uno en el Explorador de soluciones y haga clic en [mostrar todos los archivos](https://msdn.microsoft.com/en-us/library/4afxey9h.aspx) dos veces en cada proyecto. Puede omitir los proyectos que no contengan ninguno `.axml` archivos de diseño. Este paso se asegurará de que cada directorio del proyecto contiene un `.csproj.user` archivo.
+2.  Seleccione cada proyecto de Android uno por uno en el Explorador de soluciones y haga clic en [mostrar todos los archivos](https://msdn.microsoft.com/en-us/library/4afxey9h.aspx) dos veces en cada proyecto. Puede omitir los proyectos que no contienen ningún `.axml` archivos de diseño. Este paso garantizará que cada directorio del proyecto contiene un `.csproj.user` archivo.
 
 3.  Salga de Visual Studio.
 
-4.  Busque la `.csproj.user` archivo para cada uno de los proyectos del paso 2.
+4.  Busque el `.csproj.user` archivo para cada uno de los proyectos del paso 2.
 
-5.  Editar cada `.csproj.user` archivo en un editor de texto.
+5.  Edite cada uno `.csproj.user` archivo en un editor de texto.
 
-6.  Agregue cualquiera de las nuevas propiedades de memoria de diseñador Android dentro de un `<PropertyGroup>` elemento. Puede usar una existente `<PropertyGroup>` o cree uno nuevo. Este es un ejemplo completo `.csproj.user` archivo que incluye todos los atributos de 3 se establece en sus valores predeterminados:
+6.  Agregue cualquiera de las nuevas propiedades de memoria de diseñador Android dentro de un `<PropertyGroup>` elemento. Puede usar una existente `<PropertyGroup>` o cree uno nuevo. Este es un ejemplo completo `.csproj.user` archivo que incluye todos los atributos de 3 establece los valores predeterminados:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -59,17 +59,17 @@ Los nombres de propiedad siguientes corresponden a la java indicado [opción de 
     </Project>
     ```
 
-7.  Guarde y cierre todos los archivos `.csproj.user` archivos.
+7.  Guarde y cierre todos los datos actualizados `.csproj.user` archivos.
 
 8.  Reinicie Visual Studio y vuelva a abrir la solución.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1.  Abra la solución en Visual Studio para Mac garantizar el directorio de la solución contiene un `.userprefs` archivo.
 
 2.  Salir de Visual Studio para Mac.
 
-3.  Busque la `.userprefs` archivo en el directorio de la solución.
+3.  Busque el `.userprefs` archivo en el directorio de la solución.
 
 4.  Editar el `.userprefs` archivo en un editor de texto.
 
@@ -79,9 +79,9 @@ Los nombres de propiedad siguientes corresponden a la java indicado [opción de 
     <MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >
     ```
 
-6.  Si el `<MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >` el elemento no existe, créelo en cualquier lugar dentro de los incluye `<Properties>` elemento. No olvide reemplazar "AndroidApplication1" con el nombre del proyecto.
+6.  Si el `<MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >` elemento no existe, créelo en cualquier lugar dentro de la envolvente `<Properties>` elemento. No olvide reemplazar "AndroidApplication1" con el nombre del proyecto.
 
-7.  Agregue cualquiera de las nuevas propiedades de memoria de diseñador Android como atributos en el elemento. Este es un ejemplo completo `.userprefs` archivo que incluye todos los atributos de 3 se establece en sus valores predeterminados:
+7.  Agregue cualquiera de las nuevas propiedades de memoria de diseñador Android como atributos en el elemento. Este es un ejemplo completo `.userprefs` archivo que incluye todos los atributos de 3 establece los valores predeterminados:
 
     ```xml
     <Properties StartupItem="AndroidApplication1\AndroidApplication1.csproj">
@@ -95,7 +95,7 @@ Los nombres de propiedad siguientes corresponden a la java indicado [opción de 
     </Properties>
     ```
 
-8.  Repita los pasos 5 a 7 para cada proyecto de Android en la solución que contiene cualquier `.axml` archivos de diseño. (Es decir, agregue una `<MonoDevelop.Ide.ItemProperties.ProjectName>` elemento para cada proyecto.)
+8.  Repita los pasos del 5 al 7 para cada proyecto de Android en la solución que incluye cualquier `.axml` archivos de diseño. (Es decir, agregue uno `<MonoDevelop.Ide.ItemProperties.ProjectName>` (elemento) para cada proyecto.)
 
 9.  Guarde y cierre el `.userprefs` archivo.
 

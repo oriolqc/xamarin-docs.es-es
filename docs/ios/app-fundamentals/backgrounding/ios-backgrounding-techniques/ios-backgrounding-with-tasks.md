@@ -4,15 +4,15 @@ description: Este documento describe cómo usar tareas en segundo plano para rea
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 9d304ee64e7716413febc475e721f5eb39043109
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 48859afe2c988c1afe67d5c4350cef734f879fdf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351543"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121001"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS procesamiento en segundo plano con tareas
 
@@ -20,7 +20,7 @@ La manera más sencilla para realizar el procesamiento en segundo plano en iOS e
 
 Tareas en segundo plano pueden dividirse en tres categorías:
 
-1.  **Tareas en segundo plano Safe** : se le llama en cualquier parte de la la aplicación donde haya una tarea que no desee interrumpida debe escribir de la aplicación de segundo plano.
+1.  **Tareas en segundo plano Safe** : se le llama en cualquier lugar en la aplicación donde haya una tarea que no desea interrumpida debe escribir de la aplicación de segundo plano.
 1.  **Tareas de DidEnterBackground** : se le llama durante la `DidEnterBackground` método del ciclo de vida de aplicación para ayudar en la limpieza y el almacenamiento de estado.
 1.  **(IOS 7 +) de las transferencias en segundo plano** : un tipo especial de tarea en segundo plano que se utiliza para realizar transferencias de red en iOS 7. A diferencia de las tareas periódicas, transferencias en segundo plano no tiene un límite de tiempo determinado previamente.
 

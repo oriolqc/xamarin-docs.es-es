@@ -3,37 +3,37 @@ title: Barra de navegación
 ms.prod: xamarin
 ms.assetid: 6023DB7E-9E72-4B90-A96A-11BC297B8A3D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 476e73906e4fbe01847740f90a8da701768b29db
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ce80fab39c814204631c5cc408c3f0ee99a329e6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762817"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110562"
 ---
 # <a name="navigation-bar"></a>Barra de navegación
 
-Android 4 introdujo una nueva característica de interfaz de usuario de sistema denominada una *barra de navegación*, lo que proporciona controles de navegación en los dispositivos que no incluyen botones de hardware para **inicio**, **atrás** , y **menú**.
-Captura de pantalla siguiente muestra la barra de navegación de un dispositivo de Nexus primos:
+Android 4 introdujo una nueva característica de interfaz de usuario de sistema denominada una *barra de navegación*, que proporciona controles de navegación en los dispositivos que no incluyen los botones de hardware para **inicio**, **atrás** , y **menú**.
+Captura de pantalla siguiente muestra la barra de navegación de un dispositivo Nexus primos:
 
  [![Ejemplo de una barra de navegación de Android](navigation-bar-images/19-navbar.png)](navigation-bar-images/19-navbar.png#lightbox)
 
-Existen varios nuevos indicadores que controlan la visibilidad de la barra de navegación y sus controles, así como la visibilidad de la barra de sistema que se introdujo en Android 3. Las marcas se definen en la `Android.View.View` clase y se enumeran a continuación:
+Existen varias nuevas marcas que controlan la visibilidad de la barra de navegación y sus controles, así como la visibilidad de la barra de sistema que se introdujo en Android 3. Las marcas se definen en el `Android.View.View` clase y se enumeran a continuación:
 
 -   `SystemUiFlagVisible` &ndash; Se hace visible la barra de navegación. 
--   `SystemUiFlagLowProfile` &ndash; DIMS los controles en la barra de navegación. 
+-   `SystemUiFlagLowProfile` &ndash; DIMS controles en la barra de navegación. 
 -   `SystemUiFlagHideNavigation` &ndash; Oculta la barra de navegación. 
 
 
-Estas marcas se pueden aplicar a cualquier vista de la jerarquía de vista estableciendo la `SystemUiVisibility` propiedad. Si varias vistas tienen esta propiedad establecida, el sistema las combina con una operación OR y las aplica siempre y cuando la ventana en la que se establecen las marcas conserva el foco. Cuando se quita una vista, también se quitarán todas las marcas que estableció.
+Estas marcas se pueden aplicar a cualquier vista de la jerarquía de vistas estableciendo el `SystemUiVisibility` propiedad. Si varias vistas tienen esta propiedad establecida, el sistema las combina con una operación OR y los aplica siempre y cuando la ventana en la que se establecen las marcas conserva el foco. Cuando se quita una vista, también se quitarán los indicadores que ha establecido.
 
-En el ejemplo siguiente se muestra una aplicación sencilla que haga clic en cualquiera de los botones de cambiar el `SystemUiVisibility`:
+El ejemplo siguiente muestra una aplicación sencilla al hacer clic en cualquiera de los botones que cambia el `SystemUiVisibility`:
 
- [![Capturas de pantalla que muestra Visible, el perfil de baja y SystemUiVisibility ocultos](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
+ [![Capturas de pantalla que muestra Visible, el perfil de baja y SystemUiVisibility oculta](navigation-bar-images/18-systemuivisibility.png)](navigation-bar-images/18-systemuivisibility.png#lightbox)
 
-El código para cambiar la `SystemUiVisibility` establece la propiedad en un `TextView` de cada botón, haga clic en controlador de eventos tal y como se muestra a continuación:
+El código para cambiar el `SystemUiVisibility` establece la propiedad en un `TextView` en cada botón, haga clic en controlador de eventos como se muestra a continuación:
 
 ```csharp
 var tv = FindViewById<TextView> (Resource.Id.systemUiFlagTextView);
@@ -56,7 +56,7 @@ visibleButton.Click += delegate {
 }
 ```
 
-Además, un `SystemUiVisibility` cambiar genera un `SystemUiVisibilityChange` eventos. Igual que el valor de la `SystemUiVisibility` propiedad, un controlador para el `SystemUiVisibilityChange` eventos se pueden registrar para cualquier vista de la jerarquía. Por ejemplo, el código siguiente utiliza el `TextView` instancia registrarse para el evento:
+Además, un `SystemUiVisibility` cambiar genera un `SystemUiVisibilityChange` eventos. Igual que la configuración de la `SystemUiVisibility` propiedad, un controlador para el `SystemUiVisibilityChange` eventos se pueden registrar para cualquier vista de la jerarquía. Por ejemplo, el código siguiente usa el `TextView` instancia para registrarse en el evento:
 
 ```csharp
 tv.SystemUiVisibilityChange +=
@@ -70,5 +70,5 @@ tv.SystemUiVisibilityChange +=
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [SystemUIVisibilityDemo (ejemplo)](https://developer.xamarin.com/samples/monodroid/SystemUIVisibilityDemo/)
-- [Introducción a helado Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma 4.0 Android](http://developer.android.com/sdk/android-4.0.html)
+- [Introducción a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
+- [Plataforma Android de 4.0](http://developer.android.com/sdk/android-4.0.html)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 620404a217b2e8a31192ae6613dcec023ac366cd
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 52b82033cbd6fe0e1a44f5729c815074852230bf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995646"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115424"
 ---
 # <a name="checking-device-orientation"></a>Comprobando la orientación del dispositivo
 
@@ -29,7 +29,7 @@ La aplicación mediante `DependencyService` tendrá la siguiente estructura:
 ![](device-orientation-images/orientation-diagram.png "Estructura de la aplicación de DependencyService")
 
 > [!NOTE]
-> Es posible detectar si el dispositivo está en orientación vertical u horizontal en código compartido, como se muestra en [dispositivo Orientation]/guides/xamarin-forms/user-interface/layouts/device-orientation/#changes-in-orientation). El método descrito en este artículo usa las características nativas para obtener más información acerca de la orientación, incluso si el dispositivo está al revés.
+> Es posible detectar si el dispositivo está en orientación vertical u horizontal en código compartido, como se muestra en [orientación del dispositivo](~/xamarin-forms/user-interface/layouts/device-orientation.md#Reacting_to_Changes_in_Orientation). El método descrito en este artículo usa las características nativas para obtener más información acerca de la orientación, incluso si el dispositivo está al revés.
 
 <a name="Creating_the_Interface" />
 
@@ -215,7 +215,7 @@ public MainPage ()
 }
 ```
 
-Dará como resultado que se ejecuta esta aplicación en iOS, Android o las plataformas Windows y presione el botón en el texto del botón Actualizar con la orientación del dispositivo.
+En el texto del botón Actualizar con la orientación del dispositivo, dará como resultado que se ejecuta esta aplicación en iOS, Android o las plataformas Windows y presione el botón.
 
 ![](device-orientation-images/orientation.png "Ejemplo de orientación del dispositivo")
 

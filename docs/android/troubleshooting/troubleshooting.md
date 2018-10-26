@@ -4,15 +4,15 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 961f9f38687790343f225d95c74e00e98f594c28
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 140307dbfe55d5445c329ea83eafedd467fe58fa
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30773870"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109359"
 ---
 # <a name="troubleshooting-tips"></a>Sugerencias para la solución de problemas
 
@@ -22,51 +22,51 @@ ms.locfileid: "30773870"
 Xamarin.Android tiene unos pocos lugares para buscar al realizar el seguimiento de varios errores.
 Se incluyen los siguientes:
 
-1.  Resultados de diagnóstico MSBuild.
-2.  Registros de implementación de dispositivo.
-3.  Resultados del registro de depuración de Android.
+1.  Salida de MSBuild de diagnóstico.
+2.  Registros de implementación del dispositivo.
+3.  Salida del registro de depuración de Android.
 
 
 <a name="Diagnostic_MSBuild_Output" />
 
-## <a name="diagnostic-msbuild-output"></a>Resultado del diagnóstico de MSBuild
+## <a name="diagnostic-msbuild-output"></a>Salida de diagnóstico de MSBuild
 
-MSBuild diagnóstico puede contener información adicional relacionada con la creación de paquetes y puede contener información de implementación de paquete.
+MSBuild diagnóstico puede contener información adicional relacionada con la creación de paquetes y puede contener cierta información de implementación del paquete.
 
 Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio:
 
 1.  Haga clic en **Herramientas > Opciones...**
 2.  En la vista de árbol de la izquierda, seleccione **proyectos y soluciones > compilar y ejecutar**
-3.  En el panel derecho, establezca la lista desplegable nivel de detalle de la salida de MSBuild compilación para diagnóstico
+3.  En el panel derecho, establezca la lista desplegable nivel de detalle de salida de compilación MSBuild para el diagnóstico
 4.  Haga clic en **Aceptar**.
 5.  Limpie y recompile el paquete.
-6.  Resultados de diagnóstico está visible dentro del panel de salida.
+6.  Salida de diagnóstico es visible dentro del panel de salida.
 
 
-Para habilitar el resultado del diagnóstico de MSBuild en Visual Studio para Mac/OS X:
+Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio para Mac/OS X:
 
 1.  Haga clic en **Visual Studio para Mac > Preferencias...**
 2.  En la vista de árbol de la izquierda, seleccione **proyectos > compilar**
-3.  En el panel derecho, establezca el nivel de detalle de registro lista desplegable para diagnóstico
+3.  En el panel derecho, establezca el nivel de detalle de registro lista desplegable para el diagnóstico
 4.  Haga clic en **Aceptar**.
 5.  Reinicie Visual Studio para Mac.
 6.  Limpie y recompile el paquete.
-7.  Resultados de diagnóstico sea visible en el panel de errores (**Vista > rellena > errores** ), haciendo clic en el botón de salida de compilación.
+7.  Salida de diagnóstico está visible en el panel de errores (**Vista > paneles > errores** ), al hacer clic en el botón de salida de la compilación.
 
 
 
 
 ## <a name="device-deployment-logs"></a>Registros de implementación de dispositivo
 
-Para habilitar el registro de implementación de dispositivos en Visual Studio:
+Para habilitar el registro de implementación de dispositivos dentro de Visual Studio:
 
 1.  **Herramientas > Opciones...**>
 2.  En la vista de árbol de la izquierda, seleccione **Xamarin > configuración de Android**
-3.  En el panel derecho, habilitar [X] **el registro de depuración de extensión (escribe monodroid.log en el escritorio)** casilla de verificación.
-4.  Mensajes de registro se escriben en el archivo monodroid.log en el escritorio.
+3.  En el panel derecho, habilitar la [X] **registro de depuración de extensión (escribe monodroid.log en el escritorio)** casilla de verificación.
+4.  Los mensajes de registro se escriben en el archivo monodroid.log en el escritorio.
 
 
-Visual Studio para Mac siempre escribe registros de implementación de dispositivo. Buscándolas es ligeramente más difícil; un *AndroidUtils* archivo de registro se crea para cada día y hora en que se produzca una implementación, por ejemplo: **AndroidTools-2012-10-24_12-35-45.log**.
+Visual Studio para Mac siempre escribe registros de implementación del dispositivo. Búsqueda de ellos es un poco más difícil; un *AndroidUtils* archivo de registro se crea para cada día y hora en que una implementación se produce, por ejemplo: **AndroidTools-2012-10-24_12-35-45.log**.
 
 -  En Windows, los archivos de registro se escriben en `%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`.
 -  En OS X, los archivos de registro se escriben en `$HOME/Library/Logs/XamarinStudio-{VERSION}`.
@@ -74,16 +74,16 @@ Visual Studio para Mac siempre escribe registros de implementación de dispositi
 
 
 
-## <a name="android-debug-log-output"></a>Resultados del registro de depuración de Android
+## <a name="android-debug-log-output"></a>Salida del registro de depuración de Android
 
-Android escribirá muchos mensajes a la [el registro de depuración Android](~/android/deploy-test/debugging/android-debug-log.md).
-Xamarin.Android utiliza propiedades de sistema Android para controlar la generación de mensajes adicionales en el registro de depuración de Android. Se pueden establecer propiedades del sistema Android mediante el *setprop* comando dentro de la [Android depuración Bridge (adb)](http://developer.android.com/guide/developing/tools/adb.html):
+Android escribirá muchos mensajes a la [registro de depuración de Android](~/android/deploy-test/debugging/android-debug-log.md).
+Xamarin.Android usa las propiedades del sistema de Android para controlar la generación de mensajes adicionales en el registro de depuración de Android. Se pueden establecer las propiedades del sistema Android a través de la *setprop* comando dentro de la [Android Debug Bridge (adb)](http://developer.android.com/guide/developing/tools/adb.html):
 
 ```shell
 adb shell setprop PROPERTY_NAME PROPERTY_VALUE
 ```
 
-Propiedades del sistema se leen durante el inicio del proceso y, por tanto, debe establecer antes de que se inicia la aplicación o la aplicación debe reiniciarse después de que se cambian las propiedades del sistema.
+Propiedades del sistema se leen durante el inicio del proceso y, por tanto, debe establecer antes de que se inicia la aplicación o la aplicación debe reiniciarse después de cambian las propiedades del sistema.
 
 
 
@@ -91,28 +91,28 @@ Propiedades del sistema se leen durante el inicio del proceso y, por tanto, debe
 
 Xamarin.Android admite las siguientes propiedades del sistema:
 
--   *Debug.mono.Debug*: si una cadena no vacía, esto equivale a `*mono-debug*`.
+-   *Debug.mono.Debug*: si una cadena no vacía, esto es equivalente a `*mono-debug*`.
 
--   *Debug.mono.env*: una canalización separada ('*|*') lista de variables de entorno que se va a exportar durante el inicio de la aplicación, *antes de* mono se ha inicializado. Esto permite establecer variables de entorno que el registro mono control.
+-   *Debug.mono.env*: separados por una barra vertical ('*|*') lista de variables de entorno para exportar durante el inicio de la aplicación, *antes* mono se ha inicializado. Esto permite establecer variables de entorno en el registro de mono de ese control.
 
-    - *Tenga en cuenta*: puesto que el valor es '*|*'-separados, el valor debe tener un nivel adicional de comillas, como el \` *adb shell* \` comando quitará un conjunto de comillas.
+    - *Tenga en cuenta*: puesto que el valor es '*|*'-separados, el valor debe tener un nivel extra de citas, como el \` *shell de adb* \` comando quitará un conjunto de comillas.
 
-    - *Tenga en cuenta*: valores de propiedad del sistema Android no pueden tener más de 92 caracteres de longitud.
+    - *Tenga en cuenta*: valores de propiedad del sistema de Android no pueden tener más de 92 caracteres de longitud.
 
     - Ejemplo:
 
             adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
 
--   *Debug.mono.log*: separados por comas ('*,*') lista de componentes que debe imprimir los mensajes adicionales en el registro de depuración de Android. De forma predeterminada, se establece nada. Los componentes incluyen:
+-   *Debug.mono.log*: separados por comas ('*,*') lista de componentes que se deben imprimir los mensajes adicionales en el registro de depuración de Android. De forma predeterminada, se establece nada. Los componentes incluyen:
 
     -   *todos los*: todos los mensajes de impresión
-    -   *GC*: mensajes relacionados con la impresión GC.
+    -   *GC*: los mensajes relacionados con el GC de impresión.
     -   *gref*: imprimir los mensajes de asignación y desasignación de referencia (débil, global).
     -   *lref*: imprimir los mensajes de asignación y desasignación de referencia local.
 
-    *Tenga en cuenta*: se trata de *muy* detallado. No habilite a menos que sea realmente necesario.
+    *Tenga en cuenta*: se trata de *extremadamente* detallado. No habilite a menos que necesite realmente.
 
--   *Debug.mono.Trace*: permite establecer el [mono--seguimiento](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` configuración.
+-   *Debug.mono.Trace*: permite establecer el [mono--trace](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` configuración.
 
 
 
@@ -120,30 +120,30 @@ Xamarin.Android admite las siguientes propiedades del sistema:
 
 Este error se produce debido a una incompatibilidad con Visual Studio.
 
-- **Visual Studio 2017 Update 1** (versión 15.1 o anterior) sólo es compatible con la **System.ValueTuple NuGet 4.3.0** (o anterior).
+- **Visual Studio 2017 Update 1** (versión 15.1 o versiones anterior) sólo es compatible con la **System.ValueTuple NuGet 4.3.0** (o anterior).
 
-- **Actualización 2 de Visual Studio de 2017** (versión más reciente o 15.2) solo es compatible con la **System.ValueTuple NuGet 4.3.1** (o posterior).
+- **Visual Studio 2017 Update 2** (versión 15.2 o posterior) solo es compatible con la **System.ValueTuple NuGet 4.3.1** (o posterior).
 
-Elija System.ValueTuple NuGet correcta que se corresponde con la instalación de Visual Studio de 2017.
+Elija el paquete System.ValueTuple NuGet correcto que se corresponde con la instalación de Visual Studio 2017.
 
 
 ## <a name="gc-messages"></a>Mensajes de GC
 
-Mensajes de componentes de GC pueden verse estableciendo la propiedad del sistema debug.mono.log en un valor que contiene el catálogo global.
+Pueden ver los mensajes de componente de GC estableciendo la propiedad del sistema debug.mono.log en un valor que contiene el catálogo global.
 
-Se generan mensajes de GC siempre que el GC se ejecuta y proporciona información sobre la cantidad de trabajo el catálogo global ha:
+Se generan mensajes de GC siempre que el GC se ejecuta y proporciona información acerca de cuánto trabajo el GC ha:
 
 ```shell
 I/monodroid-gc(12331): GC cleanup summary: 81 objects tested - resurrecting 21.
 ```
 
-Información adicional de GC como información de tiempo puede generarse estableciendo la `MONO_LOG_LEVEL` variable de entorno `debug`:
+Información adicional de GC como información de tiempo puede generarse estableciendo el `MONO_LOG_LEVEL` variable de entorno `debug`:
 
 ```shell
 adb shell setprop debug.mono.env MONO_LOG_LEVEL=debug
 ```
 
-Esto dará como resultado mensajes Mono adicionales de (una gran cantidad de), incluidos estos tres consecuencias:
+Esto dará como resultado (muchas) adicionales Mono los mensajes, incluidas estas tres consecuencias:
 
 ```shell
 D/Mono (15723): GC_BRIDGE num-objects 1 num_hash_entries 81226 sccs size 81223 init 0.00ms df1 285.36ms sort 38.56ms dfs2 50.04ms setup-cb 9.95ms free-data 106.54ms user-cb 20.12ms clenanup 0.05ms links 5523436/5523436/5523096/1 dfs passes 1104 6883/11046605
@@ -153,15 +153,15 @@ D/Mono ( 2073): GC_MAJOR: (user request) pause 2.17ms, total 2.47ms, bridge 28.7
 
 En el `GC_BRIDGE` mensaje, `num-objects` es el número de objetos de puente está considerando esta fase, y `num_hash_entries` es el número de objetos procesados durante esta invocación del código de puente.
 
-En el `GC_MINOR` y `GC_MAJOR` mensajes, `total` es la cantidad de tiempo mientras está en pausa el mundo (no hay ningún subproceso se ejecuta), mientras que `bridge` es la cantidad de tiempo que se tarda en el puente de procesamiento de código (que se ocupa de la máquina virtual Java). Es el mundo *no* en pausa mientras se realiza el procesamiento de puentes.
+En el `GC_MINOR` y `GC_MAJOR` mensajes, `total` es la cantidad de tiempo mientras está en pausa el mundo (no hay subprocesos están en ejecución), mientras que `bridge` es la cantidad de tiempo empleado en el puente de procesamiento de código (que se ocupa de la máquina virtual de Java). El mundo es *no* en pausa mientras se realiza el procesamiento del puente.
 
- *En general*, cuanto mayor sea el valor de `num_hash_entries`, el más tiempo que el `bridge` tarda colecciones y cuanto mayor sea el `total` será el tiempo invertido en recopilar.
+ *En general*, cuanto mayor sea el valor de `num_hash_entries`, el más tiempo que el `bridge` adoptará colecciones y cuanto mayor sea el `total` será el tiempo dedicado a recopilar.
 
 
 
 ## <a name="global-reference-messages"></a>Mensajes de referencia global
 
-Para habilitar la referencia Global loggig (GREF), el registro, el *debug.mono.log* debe contener la propiedad del sistema *gref*, p. ej.:
+Para habilitar la referencia Global loggig (GREF) registro, el *debug.mono.log* debe contener la propiedad del sistema *gref*, p. ej.:
 
 ```shell
 adb shell setprop debug.mono.log gref
@@ -169,9 +169,9 @@ adb shell setprop debug.mono.log gref
 
 Xamarin.Android usa Android referencias globales para proporcionar las asignaciones entre las instancias de Java y las instancias administradas asociadas, como al invocar un método de Java que una instancia de Java debe proporcionarse con Java.
 
-Por desgracia, emuladores de Android solo permiten 2000 referencias globales que existen en un momento. Hardware tiene un límite de cantidad mayor de 52000 referencias globales. El límite inferior puede causar problemas al ejecutar aplicaciones en el emulador, así que saber *donde* el procedían de instancia de puede ser muy útil.
+Lamentablemente, los emuladores de Android solo permiten referencias global 2000 que exista en un momento. Hardware tiene un límite mucho mayor de 52000 referencias globales. El límite inferior puede ser problemático al ejecutar aplicaciones en el emulador, así que saber *donde* el procedían de instancia de puede ser muy útil.
 
- *Tenga en cuenta*: el recuento de referencias global es interno Xamarin.Android y no es así (y no puede ser) incluyen referencias globales suscritas por otras bibliotecas nativas cargados en el proceso. Utilice el recuento de referencias globales como una estimación.
+ *Tenga en cuenta*: el recuento de referencia global es interno de Xamarin.Android y no es así (y no puede) incluyen referencias globales que se habían retirado otras bibliotecas nativas que se cargan en el proceso. Utilice el recuento de referencias globales como una estimación.
 
 ```shell
 I/monodroid-gref(12405): +g+ grefc 108 gwrefc 0 obj-handle 0x40517468/L -> new-handle 0x40517468/L from    at Java.Lang.Object.RegisterInstance(IJavaObject instance, IntPtr value, JniHandleOwnership transfer)
@@ -195,17 +195,17 @@ I/monodroid-gref(27679): -w- grefc 1915 gwrefc 294 handle 0xde691aaf/W from take
 
 Hay cuatro mensajes de consecuencia:
 
--  Creación de referencia global: estas son las líneas que empiezan por *+ g +* y proporcionará un seguimiento de pila para la ruta de acceso del código creando.
--  Destrucción de referencia global: estas son las líneas que empiezan por *- g-* y puede proporcionar un seguimiento de pila para la ruta de acceso de código que elimine la referencia global. Si se va a eliminar el catálogo global de la gref, no se proporcionará ningún seguimiento de pila.
--  Creación de referencia de débil global: estas son las líneas que empiezan por *+ w +* .
--  Débil globales hacen referencia a la destrucción: estas son las líneas que empiezan por *-w-* .
+-  Creación de referencia global: estas son las líneas que empiezan por *+ g +* y le proporcionará un seguimiento de pila para crear la ruta del código.
+-  Destrucción de referencia global: estas son las líneas que empiezan por *- g-* y puede proporcionar un seguimiento de pila para la ruta de acceso de código que desechar la referencia global. Si se está desechando el GC de la gref, no se proporcionará ningún seguimiento de pila.
+-  Creación de hacer referencia débil global: estas son las líneas que empiezan por *+ w +* .
+-  Destrucción de hacer referencia débil globales: se trata de líneas que comienzan con *-w-* .
 
 
-En todos los mensajes, el *grefc* valor es el recuento de referencias globales que haya creado Xamarin.Android, mientras que la *grefwc* valor es el recuento de referencias débiles de globales creados por Xamarin.Android. El *controlar* o *obj identificador* valor es el valor del identificador JNI y el carácter posterior a la ' */*' es el tipo de valor de identificador:   */l* como referencia local, */G* para referencias globales, y */W* para referencias globales débiles.
+En todos los mensajes, el *grefc* valor es el recuento de referencias globales creada Xamarin.Android, mientras que el *grefwc* valor es el recuento de referencias débiles de globales creada Xamarin.Android. El *controlar* o *obj identificador* valor es el valor del identificador JNI y el carácter posterior a la ' */*' es el tipo del valor de identificador:   */l* como referencia local, */G* para referencias globales, y */W* para las referencias débiles globales.
 
-Como parte del proceso de GC, referencias globales (+ g +) se convierten en referencias débiles de globales (causando a + w + y - g-), se ha iniciado un GC del lado de Java y, a continuación, la referencia débil global se comprueba para ver si se recopilaron. Si no mantiene la conexión, se crea un nuevo gref alrededor de la referencia débil (+ g +, -w-), en caso contrario, se destruye la referencia débil (-w).
+Como parte del proceso de GC, referencias globales (+ g +) se convierten en referencias débiles de globales (causando un + w + y - g-), que se inicie un GC del lado de Java y, a continuación, la referencia débil global se comprueba para ver si recopiló. Si está todavía activa, se crea un nuevo gref en torno a la referencia débil (+ g +, -w-), en caso contrario, se destruye la referencia débil (-w).
 
-## <a name="java-instance-is-created-and-wrapped-by-a-mcw"></a>Instancia de Java se crea y se ajusta por un MCW
+## <a name="java-instance-is-created-and-wrapped-by-a-mcw"></a>Instancia de Java está creado y ajustado por un MCW
 
 ```shell
 I/monodroid-gref(27679): +g+ grefc 2211 gwrefc 0 obj-handle 0x4066df10/L -> new-handle 0x4066df10/L from ...
@@ -220,7 +220,7 @@ I/monodroid-gref(27679): -g- grefc 1952 gwrefc 259 handle 0x4066df10/G from take
 ```
 
 ## <a name="object-is-still-alive-as-handle--null"></a>Objeto todavía está activo, como identificador! = null
-## <a name="wref-turned-back-into-a-gref"></a>Wref activarse otra vez en un gref
+## <a name="wref-turned-back-into-a-gref"></a>Wref a convertirse en un gref
 
 ```shell
 I/monodroid-gref(27679): *try_take_global obj=0x4976f080 -> wref=0xde68f95f handle=0x4066df10
@@ -228,7 +228,7 @@ I/monodroid-gref(27679): +g+ grefc 1930 gwrefc 39 obj-handle 0xde68f95f/W -> new
 I/monodroid-gref(27679): -w- grefc 1930 gwrefc 38 handle 0xde68f95f/W from take_global_ref_jni
 ```
 
-## <a name="object-is-dead-as-handle--null"></a>Objeto está inactivo, como identificador == null
+## <a name="object-is-dead-as-handle--null"></a>Está inactivo, como el identificador de objeto == null
 ## <a name="wref-is-freed-no-new-gref-created"></a>Wref es liberado, no hay nuevo gref creado
 
 ```shell
@@ -236,9 +236,9 @@ I/monodroid-gref(27679): *try_take_global obj=0x4976f080 -> wref=0xde68f95f hand
 I/monodroid-gref(27679): -w- grefc 1914 gwrefc 296 handle 0xde68f95f/W from take_global_ref_jni
 ```
 
-Hay una arruga "interesante" aquí: en destinos ejecuta Android anteriores a la 4.0, el valor de gref es igual a la dirección del objeto de Java en la memoria del runtime Android. (Es decir, el catálogo global es un no mover, conservador, recopilador, y es repartir de referencias directas a esos objetos.) Por lo tanto después un g +, + w +, - g-, + g +, - w-sequence, el gref resultante tendrá el mismo valor que el valor original de gref. Esto hace que grepping a través de registros sea bastante sencilla.
+Hay un aspecto "interesante" aquí: en los destinos que ejecutan Android anteriores a 4.0, el valor de gref es igual a la dirección del objeto de Java en la memoria del runtime de Android. (Es decir, el GC es un no mover, conservador, recopilador, y es repartir de referencias directas a esos objetos.) Después de este modo un g +, + w +, - g-, + g +, - w-sequence, el gref resultante tendrá el mismo valor que el valor de gref original. Esto hace bastante sencillo grepping a través de registros.
 
-Android 4.0, sin embargo, tiene un recopilador móvil y ya no se distribuye referencias directas a Android en tiempo de ejecución objetos de máquina virtual. Por lo tanto, después de un g +, + w +, - g-, + g +, - w secuencia, el valor de gref *serán diferentes*. Si el objeto sobrevive varios catálogos globales, se desplazará por varios valores de gref, lo que es más difícil determinar dónde realmente se ha asignado una instancia de.
+Android 4.0, sin embargo, tiene un recopilador de movimiento y ya no entrega referencias directas a Android en tiempo de ejecución objetos de máquina virtual. Por lo tanto, después de un g +, + w +, - g-, + g +, - w secuencia, el valor de gref *será diferente*. Si el objeto sobrevive a varios servidores de catálogo global, pasará por varios valores de gref, lo que es más difícil determinar donde asignó realmente una instancia de.
 
 ### <a name="querying-programmatically"></a>Consultar mediante programación
 
@@ -252,26 +252,26 @@ Puede consultar el GREF y WREF recuentos consultando la `JniRuntime` objeto.
 
 ## <a name="offline-activation"></a>Activación sin conexión
 
-Si es que no se puede activar Xamarin.Android en Windows, o no se puede instalar la versión completa de Xamarin.Android en Mac OS X, consulte el [activación sin conexión](~/android/get-started/installation/index.md) página.
+Si es no se puede activar Xamarin.Android en Windows o no se puede instalar la versión completa de Xamarin.Android en Mac OS X, consulte el [activación sin conexión](~/android/get-started/installation/index.md) página.
 
 
 
 ## <a name="cant-upgrade-to-indiebusiness-from-trial-account"></a>No se puede actualizar a Indie/Business de cuenta de prueba
 
-Si ha adquirido recientemente Xamarin.Android e inició previamente una versión de prueba de Xamarin.Android, debe completar los pasos siguientes para obtener este cambio de licencia detectado por Visual Studio para Mac o en Visual Studio.
+Si ha adquirido recientemente Xamarin.Android e inició previamente una versión de prueba de Xamarin.Android, deberá completar los pasos siguientes para obtener este cambio de licencia seleccionado por Visual Studio para Mac o Visual Studio.
 
--  Cierre Visual Studio para Mac/Visual Studio
--  Quitar todos los archivos de ~/Library/MonoAndroid en Mac o %PROGRAMDATA%\Mono Android\License\ para Windows
--  Vuelva a abrir Visual Studio para Mac/Visual Studio y crear un proyecto Xamarin.Android
+-  Cierre Visual Studio para Mac o Visual Studio
+-  Quitar todos los archivos de ~/Library/MonoAndroid en Mac o %PROGRAMDATA%\Mono para Android\License\ para Windows
+-  Vuelva a abrir Visual Studio para Mac o Visual Studio y cree un proyecto de Xamarin.Android
 
 
-Esto debería obtener activos y en funcionamiento. Si sigue teniendo problemas, puede que desee intentar un [activación sin conexión](~/android/get-started/installation/index.md) para completar la activación de la estación de trabajo.
+Esto debería ayudarle a ponerse en marcha. Si sigues teniendo problemas, es posible que desee probar un [activación sin conexión](~/android/get-started/installation/index.md) para completar la activación de la estación de trabajo.
 
 
 
 ## <a name="receiving-activation-incomplete-error-message"></a>Recibir ' mensaje de Error incompleta de activación
 
-Este problema puede producirse al usar Xamarin.Android para Visual Studio. Para resolver este problema, envíe los registros de la siguiente ubicación para *contact@xamarin.com*.
+Este problema puede producirse al usar Xamarin.Android para Visual Studio. Para resolver este problema, envíe los registros desde la ubicación siguiente a *contact@xamarin.com*.
 
 -  Ubicación del registro: **% LocalAppData %\\Xamarin\\registros**
 
@@ -280,24 +280,24 @@ Este problema puede producirse al usar Xamarin.Android para Visual Studio. Para 
 
 ## <a name="receiving-error-retrieving-update-information-error-message"></a>Recibir el mensaje de Error 'Error al recuperar información de actualización'
 
-De vez en cuando, se producirá un error de una actualización con este error siguiente, que a menudo se producirá durante la comprobación de actualizaciones:
+De vez en cuando, se producirá un error de una actualización con este error siguiente, que suele ocurrir cuando la comprobación de actualizaciones:
 
-Una mayoría de las veces, este error se puede resolver simplemente por el registro de la cuenta de Xamarin y, a continuación, de nuevo en el registro.
+Una mayoría del tiempo, se puede resolver este error simplemente por el registro de su cuenta de Xamarin y, a continuación, volver registro.
 
-Para lograr esto, averiguar la plataforma de elección a continuación y siga los pasos:
+Para ello, busque la plataforma que elija a continuación y siga los pasos:
 
 **En Mac:**
 1. Abra Visual Studio para Mac
 2. Seleccione Visual Studio para Mac > cuenta...
-3. Haga clic en Cerrar sesión
+3. Haga clic en cerrar la sesión
 4. Haga clic en Inicio de sesión
 5. Escriba sus credenciales
 6. Compruebe si hay actualizaciones
 
-**En PC con Visual Studio:**
+**En el equipo con Visual Studio:**
 1. Apertura de Visual Studio
-2. Seleccionar Herramientas > cuenta de Xamarin
-3. Haga clic en Cerrar sesión
+2. Seleccione Herramientas > cuenta de Xamarin
+3. Haga clic en cerrar la sesión
 4. Haga clic en Inicio de sesión
 5. Escriba sus credenciales
 6. Compruebe si hay actualizaciones
@@ -309,38 +309,38 @@ Si sigue apareciendo este mensaje de error, envíe un correo electrónico **cont
 
 ## <a name="android-debug-logs"></a>Registros de depuración de Android
 
-El [Android registros](~/android/deploy-test/debugging/android-debug-log.md) puede proporcionar contexto adicional sobre los errores en tiempo de ejecución que está viendo.
+El [registros depurar Android](~/android/deploy-test/debugging/android-debug-log.md) puede proporcionar contexto adicional sobre los errores en tiempo de ejecución que está viendo.
 
 
 
-## <a name="floating-point-performance-is-terrible"></a>¡Rendimiento de punto flotante es terrible!
+## <a name="floating-point-performance-is-terrible"></a>¡Rendimiento de punto flotante es enorme!
 
-O bien, "mi aplicación ejecuta 10 veces más rápido con la versión de depuración que con la versión de lanzamiento!"
+Como alternativa, "mi aplicación ejecuta 10 veces más rápido con la compilación de depuración que con la versión de lanzamiento!"
 
-Xamarin.Android es compatible con varios dispositivos ABIs: *armeabi*, *armeabi v7a*, y *x86*. Dispositivo ABIs se pueden especificar en **propiedades del proyecto > pestaña de la aplicación > admite arquitecturas**.
+Xamarin.Android admite varios dispositivos ABI: *armeabi*, *armeabi-v7a*, y *x86*. ABI de dispositivo se puede especificar en **las propiedades del proyecto > pestaña aplicación > arquitecturas compatibles**.
 
-Compilaciones de depuración utilizan un paquete de Android que proporciona todas las ABIs y, por tanto, usará la ABI más rápida para el dispositivo de destino.
+Las compilaciones de depuración usar un paquete de Android que proporciona todos los ABI y, por tanto, usará la ABI más rápida para el dispositivo de destino.
 
-Versiones de lanzamiento solo incluirá el ABIs seleccionadas en la ficha de propiedades del proyecto. Puede seleccionar más de una.
+Las versiones de lanzamiento incluirá sólo la ABI seleccionado en la ficha de propiedades del proyecto. Puede seleccionar más de uno.
 
-*armeabi* es el valor predeterminado de la ABI y tiene la mayor compatibilidad de dispositivo. *Sin embargo*, armeabi no es compatible con los dispositivos con varias CPU y el hardware de punto flotante, amont otras cosas. Por lo tanto, aplicaciones con el tiempo de ejecución de la versión armeabi estará unidas a un solo núcleo y va a utilizar una implementación de software float. Ambos pueden contribuir al rendimiento considerablemente más lento de la aplicación.
+*armeabi* es el valor predeterminado de la ABI y tiene la compatibilidad más amplia de dispositivos. *Sin embargo*, armeabi no es compatible con dispositivos con varias CPU y el hardware de punto flotante, amont otras cosas. Por lo tanto, las aplicaciones con el tiempo de ejecución de la versión armeabi estarán vinculadas a un único núcleo y va a utilizar una implementación de soft-float. Ambos pueden contribuir al rendimiento considerablemente más lento de la aplicación.
 
-Si su aplicación requiere un rendimiento aceptable punto flotante (por ejemplo, juegos), debe habilitar la *armeabi v7a* ABI. Desea sólo son compatibles con el *armeabi v7a* en tiempo de ejecución, aunque esto significa que los dispositivos más antiguos que sólo admiten *armeabi* podrá ejecutar la aplicación.
-
-
-
-## <a name="could-not-locate-android-sdk"></a>No se pudo encontrar el SDK de Android
-
-Existen 2 descargas de Google Android SDK para Windows.
-Si decide que el instalador .exe, escribirá las claves del registro que indiquen Xamarin.Android donde se instaló. Si elige el archivo .zip y descomprímalo usted mismo, Xamarin.Android no sabe dónde buscar el SDK. Puede indicar Xamarin.Android donde es el SDK de Visual Studio yendo a **Herramientas > Opciones > Xamarin > configuración de Android**:
-
-[![Ubicación de SDK de Android en la configuración de Xamarin para Android](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
+Si la aplicación necesita rendimiento aceptable de punto flotante (por ejemplo, juegos), debe habilitar la *armeabi-v7a* ABI. Puede desear solo admiten la *armeabi-v7a* en tiempo de ejecución, aunque esto significa que dispositivos antiguos que sólo admiten *armeabi* podrán ejecutar la aplicación.
 
 
 
-## <a name="ide-does-not-display-target-device"></a>IDE no muestra los dispositivos de destino
+## <a name="could-not-locate-android-sdk"></a>No se pudo encontrar Android SDK
 
-A veces, intenta implementar la aplicación en un dispositivo, pero el dispositivo que desea implementar en no se muestra en el cuadro de diálogo Seleccionar dispositivo. Esto puede ocurrir cuando decida Android Debug Bridge ir de vacaciones.
+Hay 2 descargas disponibles de Google para el SDK de Android para Windows.
+Si elige al instalador .exe, escribirá las claves del registro que indican Xamarin.Android donde se instaló. Si elige el archivo .zip y descomprímalo usted mismo, Xamarin.Android no sabe dónde buscar el SDK. Puede indicar a Xamarin.Android donde es el SDK en Visual Studio, vaya a **Herramientas > Opciones > Xamarin > configuración de Android**:
+
+[![Ubicación de Android SDK en la configuración de Xamarin Android](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
+
+
+
+## <a name="ide-does-not-display-target-device"></a>IDE no muestra el dispositivo de destino
+
+A veces se intentará implementar la aplicación en un dispositivo, pero el dispositivo que desea implementar para que no se muestra en el cuadro de diálogo Seleccionar dispositivo. Esto puede ocurrir cuando Android Debug Bridge decide de vacaciones.
 
 Para diagnosticar este problema, busque el [adb programa](~/android/deploy-test/debugging/android-debug-log.md), a continuación, ejecute:
 
@@ -348,96 +348,96 @@ Para diagnosticar este problema, busque el [adb programa](~/android/deploy-test/
 adb devices
 ```
 
-Si el dispositivo no está presente, debe reiniciar el servidor de Android Debug Bridge para que se puede encontrar el dispositivo:
+Si el dispositivo no está presente, deberá reiniciar el servidor de Android Debug Bridge para que se puede encontrar el dispositivo:
 
 ```shell
 adb kill-server
 adb start-server
 ```
 
-Puede impedir que el software de sincronización HTC **adb start-server** funcione correctamente. Si el **adb start-server** comando no imprimirá el puerto que se está iniciando en, salga del programa de sincronización HTC e inténtelo de reiniciar el servidor adb.
+Es posible que el software de sincronización HTC **start-servidor adb** funcionen correctamente. Si el **start-servidor adb** comando no se imprime a qué puerto se está iniciando en, salga el software de sincronización HTC y pruebe a reiniciar el servidor adb.
 
 
-## <a name="the-specified-task-executable-keytool-could-not-be-run"></a>No se pudo ejecutar el ejecutable de la tarea especificada "keytool"
+## <a name="the-specified-task-executable-keytool-could-not-be-run"></a>No se pudo ejecutar el ejecutable de tarea especificada "keytool"
 
-Esto significa que la ruta de acceso no contiene el directorio donde se encuentra directorio de bin del SDK de Java. Compruebe que ha seguido los pasos de la [instalación](~/android/get-started/installation/index.md) guía.
+Esto significa que la ruta de acceso no contiene el directorio donde se encuentra directorio de bin del SDK de Java. Compruebe que ha seguido estos pasos desde el [instalación](~/android/get-started/installation/index.md) guía.
 
 
 ## <a name="monodroidexe-or-aresgenexe-exited-with-code-1"></a>monodroid.exe o aresgen.exe terminado con el código 1
 
-Para ayudarle a depurar este problema, vaya a Visual Studio y cambiar el nivel de detalle de MSBuild, para ello, seleccione: **Herramientas > Opciones > proyecto** y **soluciones > compilar** y **ejecutar > Contenido de salida de compilación de proyecto de MSBuild** y establezca este valor en **Normal**.
+Para ayudarle a depurar este problema, vaya a Visual Studio y cambiar el nivel de detalle de MSBuild, para ello, seleccione: **Herramientas > Opciones > proyectos** y **soluciones > compilación** y **ejecutar > Contenido de salida de compilación de proyecto de MSBuild** y establezca este valor en **Normal**.
 
 Volver a generar y comprobar el panel de salida de Visual Studio, que debe contener el error completo.
 
 ## <a name="there-is-not-enough-storage-space-on-the-device-to-deploy-the-package"></a>No hay suficiente espacio de almacenamiento en el dispositivo para implementar el paquete
 
-Esto se produce cuando no inicia el emulador desde dentro de Visual Studio. Al iniciar el emulador fuera de Visual Studio, tiene que pasar el `-partition-size 512` opciones, p. ej.
+Esto se produce cuando no inicia el emulador desde Visual Studio. Al iniciar el emulador de Visual Studio, deberá pasar el `-partition-size 512` opciones, p. ej.
 
 ```shell
 emulator -partition-size 512 -avd MonoDroid
 ```
 
-Asegúrese de utilizar el nombre correcto del simulador, es decir, [el nombre que usó al configurar el simulador](~/android/get-started/installation/windows.md#device).
+Asegúrese de usar el nombre correcto del simulador, es decir, [el nombre que usó al configurar el simulador](~/android/get-started/installation/windows.md#device).
 
 
-## <a name="installfailedinvalidapk-when-installing-a-package"></a>INSTALAR\_error\_válido\_APK al instalar un paquete
+## <a name="installfailedinvalidapk-when-installing-a-package"></a>INSTALAR\_FAILED\_válido\_APK al instalar un paquete
 
-Los nombres de paquetes Android *debe* contienen un punto ('*.*'). Edite el nombre del paquete para que contenga un punto.
+Los nombres de paquete de Android *debe* contienen un punto ('*.*'). Edite el nombre del paquete para que contenga un período.
 
--   En Visual Studio:
-    -   Haga clic con el proyecto > Propiedades
-    -   Haga clic en la ficha manifiesto de Android a la izquierda.
+-   Dentro de Visual Studio:
+    -   A la derecha, haga clic en el proyecto > Propiedades
+    -   Haga clic en la pestaña manifiesto de Android de la izquierda.
     -   Actualice el campo de nombre de paquete.
         -   Si ve el mensaje &ldquo;AndroidManifest.xml No encontrado. Haga clic para agregar uno. &rdquo;, haga clic en el vínculo y, a continuación, actualice el campo de nombre de paquete.
--   En Visual Studio para Mac:
-    -   Haga clic con el proyecto > Opciones.
-    -   Navegue a la compilación o la sección aplicación Android.
-    -   Cambie el campo de nombre de paquete para que contenga un '.'.
+-   Dentro de Visual Studio para Mac:
+    -   A la derecha, haga clic en el proyecto > Opciones.
+    -   Vaya a la compilación o sección de la aplicación Android.
+    -   Cambiar el campo de nombre de paquete para contener un '.'.
 
 
 
 
-## <a name="installfailedmissingsharedlibrary-when-installing-a-package"></a>INSTALAR\_error\_falta\_SHARED\_biblioteca al instalar un paquete
+## <a name="installfailedmissingsharedlibrary-when-installing-a-package"></a>INSTALAR\_FAILED\_falta\_SHARED\_al instalar un paquete de biblioteca
 
-Una "biblioteca compartida" en este contexto es *no* una biblioteca compartida nativo (*libfoo.so*) de archivos; en su lugar, es una biblioteca que debe instalarse por separado en el dispositivo de destino, como Google Maps.
+Es una "biblioteca compartida" en este contexto *no* una biblioteca compartida nativa (*libfoo.so*) de archivos; en realidad es una biblioteca que debe instalarse por separado en el dispositivo de destino, como Google Maps.
 
-El paquete de Android especifica qué bibliotecas compartidas son necesarios con el `<uses-library/>` elemento. Si un *requiere* biblioteca no está presente en el dispositivo de destino (por ejemplo, `//uses-library/@android:required` es *true*, que es el valor predeterminado), se producirá un error de instalación del paquete con *instalar\_ No se pudo\_falta\_SHARED\_biblioteca*.
+El paquete de Android especifica qué bibliotecas compartidas son necesarias con el `<uses-library/>` elemento. Si un *requiere* biblioteca no está presente en el dispositivo de destino (por ejemplo, `//uses-library/@android:required` es *true*, que es el valor predeterminado), se producirá un error de instalación del paquete con *instalar\_ No se pudo\_falta\_SHARED\_biblioteca*.
 
 Para determinar qué bibliotecas compartidas son necesarios, vea el *genera*
-**AndroidManifest.xml** archivo (por ejemplo, **obj\\depurar\\android \\AndroidManifest.xml**) y busque el `<uses-library/>` elementos. `<uses-library/>` elementos se pueden agregar manualmente en el proyecto **propiedades\\AndroidManifest.xml** archivo y a través de la [UsesLibraryAttribute de atributo personalizado](https://developer.xamarin.com/api/type/Android.App.UsesLibraryAttribute/).
+**AndroidManifest.xml** archivo (por ejemplo, **obj\\depurar\\android \\AndroidManifest.xml**) y busque el `<uses-library/>` elementos. `<uses-library/>` se pueden agregar manualmente elementos en el proyecto **propiedades\\AndroidManifest.xml** archivo y, a través de la [UsesLibraryAttribute de atributo personalizado](https://developer.xamarin.com/api/type/Android.App.UsesLibraryAttribute/).
 
-Por ejemplo, al agregar una referencia a ensamblado *Mono.Android.GoogleMaps.dll* agregará implícitamente un `<uses-library/>` para la biblioteca compartida de Google Maps.
+Por ejemplo, agregando una referencia de ensamblado a *Mono.Android.GoogleMaps.dll* agregará implícitamente un `<uses-library/>` para la biblioteca compartida de Google Maps.
 
 
 
-## <a name="installfailedupdateincompatible-when-installing-a-package"></a>INSTALAR\_error\_actualización\_INCOMPATIBLE al instalar un paquete
+## <a name="installfailedupdateincompatible-when-installing-a-package"></a>INSTALAR\_FAILED\_actualización\_INCOMPATIBLE al instalar un paquete
 
 Paquetes de Android tienen tres requisitos:
 
--   Deben contener un '.' (vea la entrada anterior)
--   Deben tener un nombre de paquete de cadena única (por lo tanto, la convención de inversa tld vista en los nombres de aplicación de Android, por ejemplo, com.android.chrome para la aplicación de Chrome)
+-   Deben contener un '.' (consulte la entrada anterior)
+-   Deben tener un nombre de paquete de cadena única (por lo tanto, la convención inversa tld vista en los nombres de aplicación de Android, por ejemplo, com.android.chrome para la aplicación de Chrome)
 -   Al actualizar los paquetes, el paquete debe tener la misma clave de firma.
 
 Por lo tanto, imagínese esta situación:
 
-1.  Generar & implementar la aplicación como una aplicación de depuración
+1.  Compilar e implementa la aplicación como una aplicación de depuración
 2.  Cambiar la clave de firma, por ejemplo, para usar como una aplicación de la versión (o porque no le gusta el valor predeterminado proporcionado por depurar clave de firma)
-3.  Instalar la aplicación sin eliminarlo en primer lugar, por ejemplo, depurar > Iniciar sin depurar en Visual Studio
+3.  Instalar la aplicación sin quitarlo en primer lugar, por ejemplo, depurar > Iniciar sin depurar en Visual Studio
 
 
-Cuando esto sucede, se producirá un error de instalación del paquete con una instalación\_error\_actualización\_error INCOMPATIBLE, porque el nombre del paquete no cambia mientras la firma clave ¿. El [el registro de depuración Android](~/android/deploy-test/debugging/android-debug-log.md) también contendrá un mensaje similar al:
+Cuando esto sucede, se producirá un error de instalación del paquete con una instalación\_FAILED\_actualización\_error INCOMPATIBLE, porque no ha cambiado el nombre del paquete cuando se inicia la sesión hizo clave. El [registro de depuración de Android](~/android/deploy-test/debugging/android-debug-log.md) también contendrá un mensaje similar al:
 
 ```shell
 E/PackageManager(  146): Package [PackageName] signatures do not match the previously installed version; ignoring!
 ```
 
-Para corregir este error, quite por completo la aplicación del dispositivo antes de volver a instalar.
+Para corregir este error, quite completamente la aplicación desde el dispositivo antes de volver a instalar.
 
 
-## <a name="installfaileduidchanged-when-installing-a-package"></a>INSTALAR\_error\_UID\_CAMBIADO al instalar un paquete
+## <a name="installfaileduidchanged-when-installing-a-package"></a>INSTALAR\_FAILED\_UID\_CAMBIADO al instalar un paquete
 
-Cuando se instala un paquete de Android, se asigna un *Id. de usuario* (UID).
-*A veces*, por razones desconocidas actualmente, cuando la instalación a través de una aplicación ya instalada, se producirá un error de la instalación con `INSTALL_FAILED_UID_CHANGED`:
+Cuando se instala un paquete de Android, se le asigna un *Id. de usuario* (UID).
+*A veces*, por razones desconocidas actualmente, cuando se instala a través de una aplicación ya instalada, se producirá un error de la instalación con `INSTALL_FAILED_UID_CHANGED`:
 
 ```shell
 ERROR [2015-03-23 11:19:01Z]: ANDROID: Deployment failed
@@ -448,17 +448,17 @@ Mono.AndroidTools.InstallFailedException: Failure [INSTALL_FAILED_UID_CHANGED]
    at System.Threading.Tasks.Task.Execute()
 ```
 
-Para solucionar este problema, *desinstalar completamente* el paquete de Android, ya sea mediante la instalación de la aplicación de interfaz gráfica de usuario del destino Android, o mediante `adb`:
+Para solucionar este problema, *desinstalar totalmente* el paquete de Android, ya sea mediante la instalación de la aplicación de interfaz gráfica de usuario del destino de Android, o mediante `adb`:
 
 ```shell
 $ adb uninstall @PACKAGE_NAME@
 ```
 
-**No utilice** `adb uninstall -k`, así como esto *conservar* datos de la aplicación y, por tanto, conservar el UID en conflicto en el dispositivo de destino.
+**NO USE** `adb uninstall -k`, así como esto *conservar* datos de la aplicación y, por tanto, conservar el UID en conflicto en el dispositivo de destino.
 
 
 
-## <a name="release-apps-fail-to-launch-on-device"></a>Aplicaciones de la versión no se pudo iniciar en el dispositivo
+## <a name="release-apps-fail-to-launch-on-device"></a>Las aplicaciones de la versión no se pudo iniciar en el dispositivo
 
 La salida de registro de depuración de Android contendrá un mensaje similar al:
 
@@ -472,19 +472,19 @@ E/AndroidRuntime( 1710):        at java.lang.Runtime.loadLibrary(Runtime.java:36
 
 Si es así, hay dos causas posibles:
 
-1.  El .apk no proporciona una ABI que admite el dispositivo de destino.
-    Por ejemplo, el .apk sólo contiene los archivos binarios de armeabi v7a y el dispositivo de destino sólo admite armeabi.
+1.  El archivo .apk no proporciona una ABI que admita el dispositivo de destino.
+    Por ejemplo, el .apk sólo contiene los archivos binarios de armeabi-v7a y el dispositivo de destino solo admite armeabi.
 
-2.  Un [error Android](http://code.google.com/p/android/issues/detail?id=21670). Si éste es el caso, desinstale la aplicación, entre los dedos y volver a instalar la aplicación.
+2.  Un [error Android](http://code.google.com/p/android/issues/detail?id=21670). Si este es el caso, desinstale la aplicación, entre los dedos y volver a instalar la aplicación.
 
-Para corregir (1), editar las propiedades y opciones del proyecto y [agregar compatibilidad para la ABI necesaria a la lista de ABIs admite](~/android/app-fundamentals/cpu-architectures.md). Para determinar qué necesita agregar la ABI, ejecute el siguiente comando adb en el dispositivo de destino:
+Para corregir (1), editar las propiedades y opciones del proyecto y [agregar compatibilidad con ABI necesaria a la lista de ABI admite](~/android/app-fundamentals/cpu-architectures.md). Para determinar qué ABI deberá agregar, ejecute el siguiente comando de adb contra el dispositivo de destino:
 
 ```shell
 adb shell getprop ro.product.cpu.abi
 adb shell getprop ro.product.cpu.abi2
 ```
 
-La salida contendrá el elemento principal (y base de datos secundaria opcional) ABIs.
+La salida contendrá el elemento principal (y base de datos secundaria opcional) ABI.
 
 ```shell
 $ adb shell getprop | grep ro.product.cpu
@@ -492,17 +492,17 @@ $ adb shell getprop | grep ro.product.cpu
 [ro.product.cpu.abi]: [armeabi-v7a]
 ```
 
-## <a name="the-outpath-property-is-not-set-for-project-ldquomyappcsprojrdquo"></a>La propiedad OutPath no está establecida para el proyecto &ldquo;MyApp.csproj&rdquo;
+## <a name="the-outpath-property-is-not-set-for-project-ldquomyappcsprojrdquo"></a>No se establece la propiedad OutPath proyecto &ldquo;MyApp.csproj&rdquo;
 
-Por lo general, esto significa que tiene un equipo de HP y la variable de entorno &ldquo;plataforma&rdquo; se ha establecido en algo como MCD o HPD. Esto está en conflicto con la propiedad de MSBuild Platform que generalmente se establece en &ldquo;cualquier CPU&rdquo; o &ldquo;x86&rdquo;. Debe quitar esta variable de entorno de su equipo para que pueda funcionar MSBuild:
+Por lo general, esto significa que tiene un equipo HP y la variable de entorno &ldquo;plataforma&rdquo; se ha establecido en algo como MCD o HPD. Esto entra en conflicto con la propiedad de la plataforma de MSBuild que generalmente se establece en &ldquo;cualquier CPU&rdquo; o &ldquo;x86&rdquo;. Deberá quitar esta variable de entorno de su equipo para que MSBuild pueda funcionar:
 
--   Panel de control > sistema > avanzado > Variables de entorno
+-   Panel de control > sistema > avanzadas > Variables de entorno
 
-Reinicie Visual Studio o Visual Studio para Mac e intente volver a generar. Ahora, todo debería funcionar según lo esperado.
+Reinicie Visual Studio o Visual Studio para Mac e intente volver a generar. Ahora, todo debería funcionar según lo previsto.
 
 ## <a name="javalangclasscastexception-monoandroidruntimejavaobject-cannot-be-cast-to"></a>java.lang.ClassCastException: mono.android.runtime.JavaObject no se puede convertir a...
 
-Xamarin.Android 4.x no correctamente calcular las referencias de tipos genéricos anidados correctamente. Por ejemplo, considere el siguiente C\# del código mediante [SimpleExpandableListAdapter](https://developer.xamarin.com/api/type/Android.Widget.SimpleExpandableListAdapter/):
+Xamarin.Android 4.x correctamente no serializar tipos genéricos anidados correctamente. Por ejemplo, considere el siguiente C\# del código mediante [SimpleExpandableListAdapter](https://developer.xamarin.com/api/type/Android.Widget.SimpleExpandableListAdapter/):
 
 
 ```csharp
@@ -535,7 +535,7 @@ mAdapter = new SimpleExpandableListAdapter (
 ```
 
 
-El problema es que Xamarin.Android calcula correctamente las referencias de tipos genéricos anidados. El `List<IDictionary<string, object>>` referencias se calculan para una [java.lang.ArrrayList](https://developer.xamarin.com/api/type/Java.Util.ArrayList/), pero la `ArrayList` contiene `mono.android.runtime.JavaObject` instancias (qué referencia el `Dictionary<string, object>` instancias) en lugar de algo que implementa [java.util.Map](https://developer.xamarin.com/api/type/Java.Util.IMap/), da lugar a la siguiente excepción:
+El problema es que Xamarin.Android incorrectamente calcula las referencias de tipos genéricos anidados. El `List<IDictionary<string, object>>` se está convirtiendo en un [java.lang.ArrrayList](https://developer.xamarin.com/api/type/Java.Util.ArrayList/), pero la `ArrayList` es que contiene `mono.android.runtime.JavaObject` instancias (qué referencia el `Dictionary<string, object>` instancias) en lugar de algo que implementa [java.util.Map](https://developer.xamarin.com/api/type/Java.Util.IMap/), lo que en la siguiente excepción:
 
 ```shell
 E/AndroidRuntime( 2991): FATAL EXCEPTION: main
@@ -549,7 +549,7 @@ E/AndroidRuntime( 2991):        at android.widget.ListView.fillFromTop(ListView.
 E/AndroidRuntime( 2991):        at android.widget.ListView.layoutChildren(ListView.java:1622)
 ```
 
-La solución consiste en usar proporcionado [tipos de colección de Java](~/android/internals/api-design.md) en lugar de la `System.Collections.Generic` tipos para la &ldquo;interna&rdquo; tipos. Esto provocará en tipos de Java adecuados al calcular referencias de las instancias. (El código siguiente es más complicado que es necesario para reducir la duración de gref. Se puede simplificar para modificar el código original a través de `s/List/JavaList/g` y `s/Dictionary/JavaDictionary/g` si gref duraciones no están una preocupación.)
+La solución consiste en usar proporcionado [tipos de colección de Java](~/android/internals/api-design.md) en lugar de la `System.Collections.Generic` tipos para el &ldquo;interna&rdquo; tipos. Esto provocará en tipos de Java adecuados al calcular las referencias de las instancias. (El código siguiente es más complicado de lo necesario para reducir la duración de gref. Se puede simplificar a modificar el código original a través de `s/List/JavaList/g` y `s/Dictionary/JavaDictionary/g` si gref duraciones no son una preocupación.)
 
 ```csharp
 // insert good code here
@@ -582,12 +582,12 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 }
 ```
 
-[Este problema se solucionará en una futura versión](https://bugzilla.xamarin.com/show_bug.cgi?id=5401).
+[Esto se solucionará en una futura versión](https://bugzilla.xamarin.com/show_bug.cgi?id=5401).
 
 
-## <a name="unexpected-nullreferenceexceptions"></a>NullReferenceException inesperado
+## <a name="unexpected-nullreferenceexceptions"></a>NullReferenceExceptions inesperadas
 
-En ocasiones, el [Android Debug Log](~/android/deploy-test/debugging/android-debug-log.md) mencionarán excepciones NullReferenceException que &ldquo;no puede suceder,&rdquo; o proceder de Mono para el código en tiempo de ejecución Android poco antes de la aplicación se agote:
+En ocasiones la [registro de depuración de Android](~/android/deploy-test/debugging/android-debug-log.md) mencionará excepciones NullReferenceException que &ldquo;no se puede producir,&rdquo; o proceden de Mono para Android en tiempo de ejecución código poco antes de la aplicación sufre un problema:
 
 ```shell
 E/mono(15202): Unhandled Exception: System.NullReferenceException: Object reference not set to an instance of an object
@@ -607,9 +607,9 @@ E/mono    ( 4176): at Android.Runtime.JNIEnv.NewString (string)
 E/mono    ( 4176): at Android.Util.Log.Info (string,string)
 ```
 
-Esto puede ocurrir cuando el tiempo de ejecución Android decide anular el proceso, lo cual puede suceder por una serie de motivos, incluidos alcanzando el límite GREF del destino o hacer algo &ldquo;incorrecto&rdquo; con JNI.
+Esto puede ocurrir cuando el tiempo de ejecución Android decide anular el proceso, lo que puede suceder por diversos motivos, incluidos alcanzando el límite del destino GREF o hacer algo &ldquo;incorrecto&rdquo; con JNI.
 
-Para ver si éste es el caso, compruebe el registro de depuración Android un mensaje de su proceso similar para:
+Para ver si este es el caso, compruebe el registro de depuración Android un mensaje de su proceso similar para:
 
 ```shell
 E/dalvikvm(  123): VM aborting
@@ -618,17 +618,17 @@ E/dalvikvm(  123): VM aborting
 
 ## <a name="abort-due-to-global-reference-exhaustion"></a>Anular debidos al agotamiento de referencia Global
 
-Capa JNI de Android runtime solo admite un número limitado de referencias a objetos JNI sea válida en un momento dado en el tiempo. Cuando se supera este límite, salto de cosas.
+Capa JNI del tiempo de ejecución Android solo admite un número limitado de JNI referencias a objetos para ser válido en cualquier momento dado en el tiempo. Cuando se supera este límite, salto de las cosas.
 
-El GREF (*referencia global*) límite es 2000 referencias en el emulador y hace referencia a ~ 52000 en hardware.
+El GREF (*referencia global*) límite es 2000 referencias en el emulador y hace referencia ~ 52000 en hardware.
 
-Sabrá que comience a crear demasiadas GREFs cuando vea mensajes como este en el registro de depuración Android:
+Ya sabe, que comience a crear demasiados GREFs cuando ve los mensajes como este en el registro de depuración de Android:
 
 ```shell
 D/dalvikvm(  602): GREF has increased to 1801
 ```
 
-Cuando alcance el límite GREF, se imprime un mensaje como el siguiente:
+Cuando se alcanza el límite GREF, se imprime un mensaje como el siguiente:
 
 ```shell
 D/dalvikvm(  602): GREF has increased to 2001
@@ -699,16 +699,16 @@ E/dalvikvm(  602): VM aborting
 ```
 
 
-En el ejemplo anterior (que, a propósito, procede de [errores 685215](https://bugzilla.novell.com/show_bug.cgi?id=685215)) el problema es que hay demasiados Android.Graphics.Point se están creando instancias; vea [comentario \#2](https://bugzilla.novell.com/show_bug.cgi?id=685215#c2) para obtener una lista de correcciones para Este error concreto.
+En el ejemplo anterior (que, por cierto, procede de [bug 685215](https://bugzilla.novell.com/show_bug.cgi?id=685215)) el problema es que demasiados Android.Graphics.Point se crean instancias; vea [comentario \#2](https://bugzilla.novell.com/show_bug.cgi?id=685215#c2) para obtener una lista de correcciones para Este error concreto.
 
-Por lo general, una solución útil es encontrar qué tipo tiene demasiadas instancias asignada &ndash; Android.Graphics.Point en el volcado de memoria anterior &ndash; , a continuación, busque donde se crean en el código fuente y dispose de ellos correctamente (por lo que sus Se acorta la duración de Java-Object). Esto no siempre es adecuado (\#685215 es multiproceso, por lo que la solución trivial evita la llamada a Dispose), pero es lo primero que tener en cuenta.
+Normalmente, una solución útil es encontrar qué tipo tiene demasiadas instancias asignado &ndash; Android.Graphics.Point en el volcado de memoria anterior &ndash; , a continuación, encontrar dónde se crean en el código fuente y dispose de ellos correctamente (para que sus Se ha reducido la duración de Java-Object). Esto no siempre es adecuado (\#685215 es multiproceso, por lo que la solución trivial evita la llamada a Dispose), pero es lo primero que hay que tener en cuenta.
 
 Puede habilitar [GREF registro](~/android/troubleshooting/index.md) para ver cuándo se crean GREFs y cuántos existen.
 
 
-## <a name="abort-due-to-jni-type-mismatch"></a>Anulación debido a una falta de coincidencia de tipo JNI
+## <a name="abort-due-to-jni-type-mismatch"></a>Anulación debido a una discordancia de JNI
 
-Si se desarrollar código JNI, es posible que los tipos no coinciden con correctamente, por ejemplo, si se intenta invocar `java.lang.Runnable.run` en un tipo que no implementa `java.lang.Runnable`. Cuando esto ocurre, habrá un mensaje similar al siguiente en el registro de depuración Android:
+Si desarrollar código JNI, es posible que los tipos no coinciden con correctamente, por ejemplo, si se intenta invocar `java.lang.Runnable.run` en un tipo que no implementa `java.lang.Runnable`. Cuando esto ocurre, habrá un mensaje similar al siguiente en el registro de depuración de Android:
 
 ```shell
 W/dalvikvm( 123): JNI WARNING: can't call Ljava/Type;;.method on instance of Lanother/java/Type;
@@ -721,24 +721,24 @@ E/dalvikvm( 123): VM aborting
 
 ### <a name="dynamic-code-does-not-compile"></a>No se compila código dinámico
 
-Al usar C\# dinámicos en sus aplicaciones o la biblioteca, tiene que agregar System.Core.dll, Microsoft.CSharp.dll y Mono.CSharp.dll al proyecto.
+Para usar C\# dinámico en su aplicación o biblioteca, deberá agregar System.Core.dll, Microsoft.CSharp.dll y Mono.CSharp.dll al proyecto.
 
 ### <a name="in-release-build-missingmethodexception-occurs-for-dynamic-code-at-run-time"></a>En la versión de lanzamiento, MissingMethodException se produce para código dinámico en tiempo de ejecución.
 
 -   Es probable que el proyecto de aplicación no tiene referencias a System.Core.dll, Microsoft.CSharp.dll o Mono.CSharp.dll. Asegúrese de que se hace referencia a esos ensamblados.
 
-    -   Tenga en cuenta que el código dinámico siempre los costos. Si necesita un código eficaz, considere la posibilidad de no usa código dinámico.
+    -   Tenga en cuenta ese código dinámico siempre los costos. Si necesita un código eficaz, considere la posibilidad de no usa código dinámico.
 
--   En la primera vista previa, esos ensamblados se han excluido, a menos que explícitamente se utilizan tipos de cada ensamblado por el código de aplicación. Para solucionar este problema, consulte: [http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
+-   En la primera versión preliminar, dichos ensamblados se han excluido a menos que explícitamente se utilizan tipos de cada ensamblado por el código de aplicación. Vea la siguiente solución alternativa: [http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
 
 
 ## <a name="projects-built-with-aotllvm-crash-on-x86-devices"></a>Los proyectos compilados con bloqueo AOT + LLVM en x86 dispositivos
 
-Al implementar una aplicación compilada con [AOT + LLVM](~/android/deploy-test/release-prep/index.md) en dispositivos x86, verá un mensaje de error de excepción similar al siguiente:
+Al implementar una aplicación compilada con [AOT + LLVM](~/android/deploy-test/release-prep/index.md) en dispositivos x86, es posible que vea un mensaje de error de excepción similar al siguiente:
 
 ```shell
 Assertion: should not be reached at /Users/.../external/mono/mono/mini/tramp-x86.c:124
 Fatal signal 6 (SIGABRT), code -6 in tid 4051 (amarin.bug56111)
 ```
 
-Se trata de un problema conocido como se notifica en [56111](https://bugzilla.xamarin.com/show_bug.cgi?id=56111). La solución consiste en deshabilitar LLVM.
+Se trata de un problema conocido notificado en [56111](https://bugzilla.xamarin.com/show_bug.cgi?id=56111). La solución alternativa consiste en deshabilitar LLVM.

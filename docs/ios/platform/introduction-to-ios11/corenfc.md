@@ -4,15 +4,15 @@ description: Este documento describe cómo se leen cerca de las etiquetas de com
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 09/25/2017
-ms.openlocfilehash: 1381a4564f93fd091f181949454df3f06b31ae6b
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 6888f7147796d3c00752d10387c19d0d9f269cad
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350838"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106824"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Core NFC en Xamarin.iOS
 
@@ -29,7 +29,7 @@ Hay algunas restricciones para tener en cuenta:
 - Las aplicaciones deben ser visibles en primer plano para el análisis.
 - Solo se pueden probar CoreNFC en dispositivos reales (no en el simulador).
 
-Esta página describe la configuración necesaria para usar CoreNFC y se muestra cómo usar la API mediante el ["TFCTagReader" código de ejemplo](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/).
+Esta página describe la configuración necesaria para usar CoreNFC y se muestra cómo usar la API mediante el ["NFCTagReader" código de ejemplo](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/).
 
 ## <a name="configuration"></a>Configuración
 

@@ -6,13 +6,13 @@ ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: 47cd79611cfeaf48c0422772d8f3e75eb57ba771
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/04/2018
+ms.openlocfilehash: b8e851e735fa39d015e22ce511c39ad825bc97c9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996058"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120004"
 ---
 # <a name="xamarinforms-tableview"></a>Xamarin.Forms TableView
 
@@ -216,7 +216,67 @@ C# anterior hace mucho. Permítame desglosarlo:
 
 Tenga en cuenta que nunca se define una clase para la celda personalizada. En su lugar, el `ViewCell`de propiedad de la vista está establecida para una instancia determinada de `ViewCell`.
 
+## <a name="row-height"></a>Alto de fila
 
+El [ `TableView` ](xref:Xamarin.Forms.TableView) clase tiene dos propiedades que pueden usarse para cambiar el alto de fila de celdas:
+
+- [`RowHeight`](xref:Xamarin.Forms.TableView.RowHeight) : establece el alto de cada fila a una `int`.
+- [`HasUnevenRows`](xref:Xamarin.Forms.TableView.HasUnevenRows) : las filas tienen diferentes alturas si establece en `true`. Tenga en cuenta que al establecer esta propiedad en `true`, automáticamente se calcula y aplicada por Xamarin.Forms alto de las filas.
+
+Cuando el alto del contenido en una celda de un [ `TableView` ](xref:Xamarin.Forms.TableView) se cambia la fila se actualiza implícitamente alto en la plataforma Universal de Windows (UWP) y Android. Sin embargo, en iOS debe obligársele a actualizar mediante el establecimiento la [ `HasUnevenRows` ](xref:Xamarin.Forms.TableView.HasUnevenRows) propiedad `true` y mediante una llamada a la [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) método.
+
+El siguiente ejemplo XAML se muestra un [ `TableView` ](xref:Xamarin.Forms.TableView) que contiene un [ `ViewCell` ](xref:Xamarin.Forms.ViewCell):
+
+```xaml
+<ContentPage ...>
+    <TableView ...
+               HasUnevenRows="true">
+        <TableRoot>
+            ...
+            <TableSection ...>
+                ...
+                <ViewCell x:Name="_viewCell"
+                          Tapped="OnViewCellTapped">
+                    <Grid Margin="15,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Label Text="Tap this cell." />
+                        <Label x:Name="_target"
+                               Grid.Row="1"
+                               Text="The cell has changed size."
+                               IsVisible="false" />
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>
+```
+
+Cuando el [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) se pulsa, el `OnViewCellTapped` se ejecuta el controlador de eventos:
+
+```csharp
+void OnViewCellTapped(object sender, EventArgs e)
+{
+    _target.IsVisible = !_target.IsVisible;
+    _viewCell.ForceUpdateSize();
+}
+```
+
+El `OnViewCellTapped` controlador de eventos muestra u oculta el segundo [ `Label` ](xref:Xamarin.Forms.Label) en el [ `ViewCell` ](xref:Xamarin.Forms.ViewCell)y actualiza explícitamente el tamaño de la celda mediante una llamada a la [ `Cell.ForceUpdateSize` ](xref:Xamarin.Forms.Cell.ForceUpdateSize) método.
+
+Las capturas de pantalla siguientes muestran la celda antes de que se puntea en:
+
+![](tableview-images/cell-beforeresize.png "ViewCell antes de que se va a cambiar de tamaño")
+
+Las capturas de pantalla siguientes muestran la celda después de que se puntea en:
+
+![](tableview-images/cell-afterresize.png "ViewCell después de que se va a cambiar de tamaño")
+
+> [!IMPORTANT]
+> Si esta característica está sobreutilizada, hay grandes posibilidades de degradación del rendimiento.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

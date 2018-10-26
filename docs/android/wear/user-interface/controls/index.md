@@ -1,29 +1,29 @@
 ---
-title: Controles de desgaste Android
+title: Controles de Android Wear
 ms.prod: xamarin
 ms.assetid: 5B62A5F8-5E55-4B3C-BFC4-E21CDB27C08B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 2adae250d2f59e8eee0558a92c3845c5592aa01a
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f13b716e6ead8db8e0adafd180790c67bb82a6bc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30774842"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112044"
 ---
-# <a name="android-wear-controls"></a>Controles de desgaste Android
+# <a name="android-wear-controls"></a>Controles de Android Wear
 
-Android desgaste aplicaciones pueden usar muchos de los mismos controles ya en uso para aplicaciones de Android regulares, incluida la `Button`, `TextView`y drawables la imagen. Controles de diseño incluidos `ScrollView`, `LinearLayout`, y `RelativateLayout` también puede utilizarse.
+Android Wear las aplicaciones pueden usar muchos de los mismos controles ya en uso para aplicaciones de Android normales, incluido `Button`, `TextView`y recursos drawable la imagen. Controles de diseño incluidos `ScrollView`, `LinearLayout`, y `RelativateLayout` también se puede usar.
 
-Esta página incluye vínculos a los controles específicos de uso de Android desde la [wearable biblioteca de interfaz de usuario](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary) disponibles en los proyectos de Xamarin a través de la [Wearable compatibilidad](http://www.nuget.org/packages/Xamarin.Android.Wear/) paquete NuGet. Estos controles incluyen los siguientes:
+Esta página contiene vínculos a los controles de Android Wear-específico desde el [portátiles biblioteca de interfaz de usuario](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary) disponibles en proyectos de Xamarin a través de la [compatibilidad con ponibles](http://www.nuget.org/packages/Xamarin.Android.Wear/) paquete NuGet. Estos controles incluyen lo siguiente:
 
--   **FilterUserControl** &ndash; crear una interfaz de navegación bidimensional donde el usuario se desplaza hacia abajo, a continuación, en realizar una selección (para obtener más información, consulte [FilterUserControl](~/android/wear/user-interface/controls/gridviewpager.md)):
+-   **FilterUserControl** &ndash; crear una interfaz de navegación bidimensional donde el usuario desplaza hacia abajo, a continuación, en para realizar una selección (para obtener más información, consulte [FilterUserControl](~/android/wear/user-interface/controls/gridviewpager.md)):
 
     ![Captura de pantalla de ejemplo de un FilterUserControl](images/gridviewpager.png)
 
-Otros controles importantes para las aplicaciones de uso incluyen:
+Otros controles importantes para las aplicaciones de desgaste incluyen:
 
 * `BoxInsetLayout` (consulte [trabajar con tamaños de pantalla](~/android/wear/screen-sizes.md)),
 
@@ -38,4 +38,4 @@ Otros controles importantes para las aplicaciones de uso incluyen:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Android.Support.Wearable documentos](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
+- [Android.Support.Wearable docs](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)

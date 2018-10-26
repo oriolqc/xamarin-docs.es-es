@@ -1,33 +1,33 @@
 ---
-title: Integración de aplicaciones de mensaje en Xamarin.iOS
-description: Estos artículos muestran cómo incluir una extensión de la aplicación de mensaje en una solución de Xamarin.iOS que se integra con la aplicación de mensajes para presentar la nueva funcionalidad al usuario.
+title: Mensaje de integración de aplicaciones de Xamarin.iOS
+description: Estos artículos muestran cómo incluir una extensión de aplicación de mensaje en una solución de Xamarin.iOS que se integra con la aplicación mensajes para presentar la nueva funcionalidad al usuario.
 ms.prod: xamarin
 ms.assetid: 00AF2D4C-9BA8-4265-A11F-989C93BDF723
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/29/2016
-ms.openlocfilehash: 91c0f8c536a672fb9ae2276aaa8f5ec4953ddf00
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 8343c186082303988154fd3e6ee9781c93f5d601
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34787684"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113552"
 ---
-# <a name="message-app-integration-in-xamarinios"></a>Integración de aplicaciones de mensaje en Xamarin.iOS
+# <a name="message-app-integration-in-xamarinios"></a>Mensaje de integración de aplicaciones de Xamarin.iOS
 
-_Estos artículos muestran cómo incluir una extensión de la aplicación de mensaje en una solución de Xamarin.iOS que se integra con la aplicación de mensajes para presentar la nueva funcionalidad al usuario._
+_Estos artículos muestran cómo incluir una extensión de aplicación de mensaje en una solución de Xamarin.iOS que se integra con la aplicación mensajes para presentar la nueva funcionalidad al usuario._
 
-Nuevo en 10 de iOS, una extensión de la aplicación de mensaje se integra con la **mensajes** aplicación y presenta nueva funcionalidad al usuario. La extensión puede enviar mensajes de texto, etiquetas, archivos multimedia e interactivos.
+Nuevo en iOS 10, una extensión de mensaje de la aplicación se integra con la **mensajes** funcionalidad nueva aplicación y presenta al usuario. La extensión puede enviar mensajes de texto, etiquetas, archivos multimedia e interactivos.
 
     
 ## <a name="message-app-extension-basicsiosplatformmessage-app-integrationintro-to-message-app-extensionsmd"></a>[Conceptos básicos de la extensión de aplicaciones de mensajes](~/ios/platform/message-app-integration/intro-to-message-app-extensions.md)
 
-En este artículo se muestra cómo incluir una extensión de la aplicación de mensaje en una solución de Xamarin.iOS que se integra con la **mensajes** aplicación y presenta nueva funcionalidad al usuario.
+En este artículo se muestra cómo incluir una extensión de aplicación de mensaje en una solución de Xamarin.iOS que se integra con la **mensajes** funcionalidad nueva aplicación y presenta al usuario.
 
 ## <a name="advanced-message-app-extensionsiosplatformmessage-app-integrationintro-to-message-app-extensionsmd"></a>[Extensiones avanzadas de aplicaciones de mensajes](~/ios/platform/message-app-integration/intro-to-message-app-extensions.md)
 
-Este artículo muestra técnicas avanzadas para trabajar con extensiones de mensajes de aplicación en una solución de Xamarin.iOS que se integra con la **mensajes** aplicación y presenta nueva funcionalidad al usuario.
+En este artículo muestra las técnicas avanzadas para trabajar con las extensiones de aplicación de mensaje en una solución de Xamarin.iOS que se integra con la **mensajes** funcionalidad nueva aplicación y presenta al usuario.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

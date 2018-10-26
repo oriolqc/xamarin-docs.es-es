@@ -1,73 +1,73 @@
 ---
-title: Trabajar con watchOS tamaños de pantalla de Xamarin
-description: Este documento describe cómo trabajar con diversos tamaños de pantalla de watchOS. Se trata el Diseñador de la interfaz, el simulador, watchOS watchOS y recursos de imagen.
+title: Trabajar con tamaños de pantalla de Xamarin de watchOS
+description: Este documento describe cómo trabajar con diversos tamaños de pantalla de watchOS. Describe el Diseñador de la interfaz, el simulador, watchOS watchOS y recursos de imagen.
 ms.prod: xamarin
 ms.assetid: 840DF939-2F59-4ABA-87D8-92AAC8A92BC4
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 30866c70879950acd8f43fd5880b1b24ba127fa4
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: b2f4cc71c1993e51ed55b51edd7c50d393e60873
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790716"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117504"
 ---
-# <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Trabajar con watchOS tamaños de pantalla de Xamarin
+# <a name="working-with-watchos-screen-sizes-in-xamarin"></a>Trabajar con tamaños de pantalla de Xamarin de watchOS
 
 Apple Watch está disponible en dos tamaños de pantalla:
 
 - **38mm**
-  - 136 x 170 lógicos píxeles (píxeles físicos 272 x 340)
+  - píxeles lógicos de 136 x 170 (píxeles físicos 340 x 272)
 
 - **42mm**
-  - píxeles 156 x 195 lógicos (312 x 390 píxeles físicos).
+  - píxeles lógicos de 156 x 195 (píxeles físicos 312 x 390).
 
-Tamaño de la pantalla también debe tener en cuenta al diseñar y probar las aplicaciones.
+Tamaño de la pantalla se debe tener en cuenta al diseñar y probar sus aplicaciones.
 
 ## <a name="watchos-interface-designer"></a>Diseñador de la interfaz de watchOS
 
 De forma predeterminada, Visual Studio para Mac diseñador mostrará ver controladores de interfaz en **Any Apple Watch**.
 
-![](screen-sizes-images/screen-any-sml.png "Los controladores de interfaz de diseñador muestra inspección en cualquier Apple Watch")
+![](screen-sizes-images/screen-any-sml.png "Los controladores de interfaz de diseñador muestra inspección en Any Apple Watch")
 
-Use el menú de tamaño para editar y obtener una vista previa el guión gráfico en cualquiera de los tamaños de pantalla disponibles: **38mm** o **42mm**:
+Use el menú de tamaño para editar y obtener una vista previa el guion gráfico en cualquiera de los tamaños de pantalla disponibles: **38mm** o **42mm**:
 
-![](screen-sizes-images/screen-menu-sml.png "Elegir el tamaño de 38mm o 42mm")
+![](screen-sizes-images/screen-menu-sml.png "Seleccionar el tamaño de 38mm o 42mm")
 
-El tamaño máximo de pantalla a veces representará el contenido que se trunca u oculta en la pantalla más pequeña.
-No olvide probar en dos tamaños.
+El tamaño de pantalla más grande a veces representará el contenido que se trunca u oculto en la pantalla más pequeña.
+No olvide probar en ambos tamaños.
 
 
 ### <a name="interface-design"></a>Diseño de interfaces
 
-La aplicación debe mostrar el mismo contenido en la pantalla, independientemente del tamaño y debe expandir o contraer elementos según corresponda. En Visual Studio para el Diseñador de Mac, en el Inspector de atributo, se debe usar **relativa al contenedor** o **tamaño para ajustarse a contenido** con preferencia a tamaños fijos.
+La aplicación debe mostrar el mismo contenido en la pantalla, independientemente del tamaño y debe expandir o contraer elementos según corresponda. En Visual Studio para Mac Designer, en el Inspector de atributos, se debe usar **relativa al contenedor** o **tamaño para ajustarse a contenido** con preferencia a tamaños fijos.
 
-![](screen-sizes-images/sizeattributepanel-sml.png "Usar relativo al contenedor o el tamaño para ajustar el contenido con preferencia a tamaños fijos")
+![](screen-sizes-images/sizeattributepanel-sml.png "Uso con relación al contenedor o el tamaño para ajustar el contenido con preferencia a tamaños fijos")
 
-Dado que la pantalla de inspección está rodeada por un bisel negro, no se recomienda proporcionar relleno alrededor de la interfaz. Permitir que los elementos apoyado en el borde de la pantalla y deje que el bisel forman un borde natural alrededor de la aplicación.
+Dado que la pantalla de inspección está rodeada por un bisel negro, no se recomienda proporcionar relleno alrededor de la interfaz. Permitir que los elementos en el borde de la pantalla de rest y dejar que el bisel forman un borde alrededor de la aplicación natural.
 
 
-## <a name="watchos-simulator"></a>watchOS simulador
+## <a name="watchos-simulator"></a>Simulador de watchOS
 
-Cuando prueba en el simulador puede cambiar fácilmente entre los tamaños de dos pantalla con el **Hardware > dispositivo** menú.
+Cuando las pruebas en el simulador pueden cambiar fácilmente entre los tamaños de dos pantalla mediante la **Hardware > dispositivo** menú.
 
-![](screen-sizes-images/simulator.png "El simulador puede alternar entre los tamaños de dos pantalla mediante el menú de dispositivo de Hardware")
+![](screen-sizes-images/simulator.png "El simulador puede alternar entre los tamaños de dos pantalla mediante el menú del dispositivo de Hardware")
 
 
 ## <a name="image-resources"></a>Recursos de imagen
 
-Debe usar varios activos de imagen si un solo activo no muestren correctamente en diferentes tamaños. Catálogos de activos de imagen permite que los mapas de bits independientes que se especifique para cada tamaño de:
+Debe usar varios activos de imagen si un solo recurso no muestren correctamente en diferentes tamaños. Catálogos de activos de imagen permiten especificarse para cada tamaño de los mapas de bits independientes:
 
-![](screen-sizes-images/images-xcassets.png "Editor de catálogo de activos de imagen")
+![](screen-sizes-images/images-xcassets.png "Editor del catálogo de activos de imagen")
 
 ```csharp
 // specify the asset name, the correct size will automatically be loaded
 staticImage.SetImage(UIImage.FromBundle("Walkway"));
 ```
 
-Como alternativa, utilice el código para determinar el tamaño de pantalla y cargar diferentes imágenes por completo:
+Como alternativa, puede usar código para determinar el tamaño de pantalla y cargar imágenes diferentes por completo:
 
 ```csharp
 bool large = WKInterfaceDevice.CurrentDevice.ScreenBounds.Size.Width > 136.0;
@@ -79,7 +79,7 @@ using (var image = UIImage.FromBundle (large ? "42mm-Walkway" : "38mm-Walkway"))
 }
 ```
 
-Obtenga más información sobre uso de la [control de imagen](~/ios/watchos/user-interface/image.md).
+Obtenga más información sobre uso de la [control imagen](~/ios/watchos/user-interface/image.md).
 
 
 

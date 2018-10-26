@@ -1,22 +1,22 @@
 ---
-title: ¿Cómo puedo copiar los archivos de salida de IPA a la carpeta de entrega TFS?
+title: ¿Cómo se puede copiar los archivos de salida IPA en la carpeta de entrega TFS?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B0F1E09E-7315-45BA-B7FF-44D2063EE19C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 087a20ea3b573595e6cbd2b40d77de649676391e
-ms.sourcegitcommit: dc882e9631b4ed52596b944a6fbbdde309346943
+ms.openlocfilehash: 74e2f2219dcb0908edce7f109844932639038b25
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/26/2018
-ms.locfileid: "31883714"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113045"
 ---
-# <a name="how-can-i-copy-ipa-output-files-to-the-tfs-drop-folder"></a>¿Cómo puedo copiar los archivos de salida de IPA a la carpeta de entrega TFS?
+# <a name="how-can-i-copy-ipa-output-files-to-the-tfs-drop-folder"></a>¿Cómo se puede copiar los archivos de salida IPA en la carpeta de entrega TFS?
 
-Abra la `.csproj` de archivos para el proyecto de aplicación de iOS en un editor de texto y, a continuación, agregue las siguientes líneas al final (inmediatamente antes del cierre `</Project>` etiqueta):
+Abra el `.csproj` de archivos para el proyecto de aplicación de iOS en un editor de texto y, a continuación, agregue las siguientes líneas al final (inmediatamente antes del cierre `</Project>` etiqueta):
 
 ```xml
 <PropertyGroup>
@@ -40,18 +40,16 @@ Abra la `.csproj` de archivos para el proyecto de aplicación de iOS en un edito
 
 ## <a name="notes"></a>Notas
 
--   Se trata de la misma técnica general se describe en [¿se puede cambiar la ruta de acceso de salida del archivo IPA?](~/ios/troubleshooting/questions/ipa-output-path.md). Los dos puntos importantes son el establecimiento `$(TF_BUILD_BINARIESDIRECTORY)` como carpeta de destino y para agregar una condición adicional por lo que `CopyIpa` sólo se ejecutará para versiones de TFS.
+- Ésta es la misma técnica general tratada en [¿cambiar la ruta de acceso de salida del archivo IPA?](~/ios/troubleshooting/questions/ipa-output-path.md). Son los dos puntos importantes establecer `$(TF_BUILD_BINARIESDIRECTORY)` como carpeta de destino y para agregar una condición extra por lo que `CopyIpa` se ejecutará solo para las versiones de TFS.
 
--   Para obtener una descripción de `TF_BUILD_BINARIESDIRECTORY` vea [ https://msdn.microsoft.com/library/hh850448.aspx ](https://msdn.microsoft.com/library/hh850448.aspx).
+- Para obtener una descripción de `TF_BUILD_BINARIESDIRECTORY` vea [variables de compilación predefinidos](https://docs.microsoft.com/azure/devops/pipelines/build/variables).
 
 ## <a name="additional-references"></a>Referencias adicionales
 
-- [Documentación sobre la instalación de TFS para su uso con Xamarin](https://docs.microsoft.com/vsts/tfvc/overview)
-- [Tarea de compilación de TFS: Xamarin.Android](https://docs.microsoft.com/vsts/build-release/tasks/build/xamarin-android)
-- [Tarea de compilación de TFS: Xamarin.iOS](https://docs.microsoft.com/vsts/build-release/tasks/build/xamarin-ios)
+- [Documentación sobre la instalación de TFS para su uso con Xamarin](https://docs.microsoft.com/azure/devops/repos/tfvc/overview)
+- [Tarea de compilación de Azure DevOps: Xamarin.Android](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-android)
+- [Tarea de compilación de Azure DevOps: Xamarin.iOS](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-ios)
 
 ### <a name="next-steps"></a>Pasos siguientes
-Este documento describen el comportamiento actual a partir de 3.11.666 de Xamarin para Visual Studio y host de compilación de Xamarin.iOS 8.10.3 en el equipo Mac. Para obtener más ayuda, póngase en contacto con nosotros, o si este problema permanece incluso después de la utilización de la información anterior, vea [qué opciones de soporte técnico están disponibles para Xamarin?](~/cross-platform/troubleshooting/support-options.md) para obtener información sobre las opciones de contacto, sugerencias, así como cómo registre un error nuevo si es necesario. 
 
-
-
+Este documento describe el comportamiento actual a partir de Xamarin 3.11.666 para Visual Studio y host de compilación de Xamarin.iOS 8.10.3 en el equipo Mac. Para obtener más ayuda, póngase en contacto con nosotros, o si este problema permanece incluso después de la utilización de la información anterior, consulte la sección [qué opciones de soporte técnico están disponibles para Xamarin?](~/cross-platform/troubleshooting/support-options.md) para obtener información sobre las opciones de contacto, sugerencias, así como cómo archivar un error nuevo si es necesario.

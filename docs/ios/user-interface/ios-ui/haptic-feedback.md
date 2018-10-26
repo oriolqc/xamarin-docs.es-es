@@ -1,26 +1,26 @@
 ---
-title: Proporcionar comentarios hápticos en Xamarin.iOS
-description: Este documento describe cómo proporcionar comentarios hápticos en una aplicación de Xamarin.iOS. Se trata de UIImpactFeedbackGenerator, UINotificationFeedbackGenerator y UISelectionFeedbackGenerator.
+title: Provisión de comentarios hápticos en Xamarin.iOS
+description: Este documento describe cómo proporcionar comentarios hápticos en una aplicación de Xamarin.iOS. Describe UIImpactFeedbackGenerator UINotificationFeedbackGenerator y UISelectionFeedbackGenerator.
 ms.prod: xamarin
 ms.assetid: 888106D1-58F4-453F-BACC-91D51FA39C80
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: d0dae6d6f50423474fbfebad5d630000e2160f6a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: b2c381c59ba1574e80babc2c7e68535a3deffe35
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790193"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123133"
 ---
-# <a name="providing-haptic-feedback-in-xamarinios"></a>Proporcionar comentarios hápticos en Xamarin.iOS
+# <a name="providing-haptic-feedback-in-xamarinios"></a>Provisión de comentarios hápticos en Xamarin.iOS
 
 <a name="Overview" />
 
 ## <a name="overview"></a>Información general
 
-En el iPhone 7 y iPhone 7 +, Apple ha incluido nuevas respuestas hápticos que proporcionan otras formas de ponerse en contacto físicamente el usuario. Comentarios hápticos (a menudo denominado simplemente como Haptics) usa el sentido de táctil (mediante force, vibración o movimiento) en el diseño de la interfaz de usuario. Utilice estas nuevas opciones de comentarios al tacto para obtener la atención del usuario y reforzar sus acciones.
+En el iPhone 7 y iPhone 7 Plus, Apple ha incluido las nuevas respuestas hápticos que proporcionan otras formas de captar físicamente el usuario. Comentarios hápticos (a menudo denominados simplemente Haptics) usa el sentido del tacto (a través de fuerza, vibraciones o movimiento) en el diseño de la interfaz de usuario. Utilice estas nuevas opciones de comentarios al tacto para obtener la atención del usuario y reforzar sus acciones.
 
 Los siguientes temas se tratarán en detalle:
 
@@ -33,21 +33,21 @@ Los siguientes temas se tratarán en detalle:
 
 ## <a name="about-haptic-feedback"></a>Acerca de comentarios hápticos
 
-Varios elementos de interfaz de usuario integrados ya proporcionen comentarios hápticos como selectores, los conmutadores y los controles deslizantes. iOS 10 ahora agrega la capacidad de desencadenar mediante programación haptics con una subclase concreta de la `UIFeedbackGenerator` clase.
+Varios elementos de interfaz de usuario integrados ya proporcionan comentarios hápticos como controles deslizantes, conmutadores y selectores. iOS 10 ahora agrega la posibilidad de desencadenar mediante programación haptics con una subclase concreta de la `UIFeedbackGenerator` clase.
 
 El programador puede utilizar uno de los siguientes `UIFeedbackGenerator` las subclases mediante programación los comentarios hápticos desencadenador:
 
-- `UIImpactFeedbackGenerator` -Usar este generador de comentarios para complementar una acción o tarea como presentar un "thud" cuando una vista de diapositivas en su lugar, o si dos objetos en la pantalla entran en conflicto.
-- `UINotificationFeedbackGenerator` : Use este generador de comentarios para las notificaciones, como un tipo de acción se completan, errores o cualquier otro de advertencia.
-- `UISelectionFeedbackGenerator` : Use este generador de comentarios de una selección activamente cambio como un elemento de una lista de selección.
+- `UIImpactFeedbackGenerator` -Usar este generador de comentarios para complementar una acción o tarea como presentar un "thud" cuando se desliza una vista en su lugar, o si dos objetos en la pantalla entran en conflicto.
+- `UINotificationFeedbackGenerator` -Usar este generador de comentarios para las notificaciones, como un tipo de acción completa, no se superan o cualquier otro de advertencia.
+- `UISelectionFeedbackGenerator` -Usar este generador de comentarios de una selección de cambiar activamente como un elemento de una lista de selección.
 
 <a name="UIImpactFeedbackGenerator" />
 
 ### <a name="uiimpactfeedbackgenerator"></a>UIImpactFeedbackGenerator
 
-Utilizar este generador de comentarios para complementar una acción o tarea como presentar un "thud" cuando una vista de diapositivas en su lugar, o si dos objetos en la pantalla entran en conflicto.
+Use este generador de comentarios para complementar una acción o tarea como presentar un "thud" cuando se desliza una vista en su lugar, o si dos objetos en la pantalla entran en conflicto.
 
-Utilice el código siguiente al desencadenador impacto comentarios:
+Use el siguiente código a los comentarios de impacto de desencadenador:
 
 ```csharp
 using UIKit;
@@ -61,7 +61,7 @@ impact.Prepare ();
 impact.ImpactOccurred ();
 ```
 
-Cuando el desarrollador crea una nueva instancia de la `UIImpactFeedbackGenerator` clase proporcionan un `UIImpactFeedbackStyle` especificar la intensidad de los comentarios como:
+Cuando el desarrollador crea una nueva instancia de la `UIImpactFeedbackGenerator` clase proporcionan un `UIImpactFeedbackStyle` especifica la intensidad de los comentarios como:
 
 - `Heavy`
 - `Medium`
@@ -69,15 +69,15 @@ Cuando el desarrollador crea una nueva instancia de la `UIImpactFeedbackGenerato
 
 El `Prepare` método de la `UIImpactFeedbackGenerator` se llama para informar al sistema que comentarios hápticos está a punto de producirse para que puede minimizar la latencia.
 
-El `ImpactOccurred` método, a continuación, desencadena hápticos comentarios.
+El `ImpactOccurred` método, a continuación, desencadena comentarios hápticos.
 
 <a name="UINotificationFeedbackGenerator" />
 
 ### <a name="uinotificationfeedbackgenerator"></a>UINotificationFeedbackGenerator
 
-Utilizar este generador de comentarios para las notificaciones, como un tipo de acción se completan, errores o cualquier otro de advertencia.
+Utilizar este generador de comentarios para las notificaciones, como un tipo de acción completa, no se superan o cualquier otro de advertencia.
 
-Utilice el siguiente código a los comentarios de notificación de desencadenador:
+Use el siguiente código a los comentarios de la notificación de desencadenador:
 
 ```csharp
 using UIKit;
@@ -91,9 +91,9 @@ notification.Prepare ();
 notification.NotificationOccurred (UINotificationFeedbackType.Error);
 ```
 
-Una nueva instancia de la `UINotificationFeedbackGenerator` se crea la clase y sus `Prepare` método se llama para informar al sistema que comentarios hápticos está a punto de producirse para que puede minimizar la latencia.
+Una nueva instancia de la `UINotificationFeedbackGenerator` se crea la clase y su `Prepare` método se llama para informar al sistema que comentarios hápticos está a punto de producirse para que puede minimizar la latencia.
 
-El `NotificationOccurred` se llama para desencadenar hápticos comentarios con un determinado `UINotificationFeedbackType` de:
+El `NotificationOccurred` se llama para desencadenar comentarios hápticos con un determinado `UINotificationFeedbackType` de:
 
 - `Success`
 - `Warning`
@@ -103,9 +103,9 @@ El `NotificationOccurred` se llama para desencadenar hápticos comentarios con u
 
 ### <a name="uiselectionfeedbackgenerator"></a>UISelectionFeedbackGenerator
 
-Utilice este generador de comentarios de una selección activamente cambio como un elemento de una lista de selección.
+Utilice este generador de comentarios de una selección de cambiar activamente como un elemento de una lista de selección.
 
-Utilice el siguiente código a los comentarios de selección de desencadenador:
+Use el siguiente código a los comentarios de selección del desencadenador:
 
 ```csharp
 using UIKit;
@@ -119,13 +119,13 @@ selection.Prepare ();
 selection.SelectionChanged ();
 ```
 
-Una nueva instancia de la `UISelectionFeedbackGenerator` se crea la clase y sus `Prepare` método se llama para informar al sistema que comentarios hápticos está a punto de producirse para que puede minimizar la latencia.
+Una nueva instancia de la `UISelectionFeedbackGenerator` se crea la clase y su `Prepare` método se llama para informar al sistema que comentarios hápticos está a punto de producirse para que puede minimizar la latencia.
 
-El `SelectionChanged` método, a continuación, desencadena hápticos comentarios.
+El `SelectionChanged` método, a continuación, desencadena comentarios hápticos.
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se trata los nuevos tipos de comentarios hápticos disponible en iOS 10 y cómo implementarlas en Xamarin.iOS.
+En este artículo ha cubierto los nuevos tipos de comentarios hápticos disponible en iOS 10 y cómo implementarlos en Xamarin.iOS.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

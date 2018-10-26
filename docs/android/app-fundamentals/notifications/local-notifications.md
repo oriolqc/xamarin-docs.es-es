@@ -4,15 +4,15 @@ description: En esta sección se muestra cómo implementar notificaciones locale
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 221fa9b70eeba2c4ca08433c627e5648470a7fac
-ms.sourcegitcommit: 7ffbecf4a44c204a3fce2a7fb6a3f815ac6ffa21
+ms.openlocfilehash: a4ffae0bde39450778b340b4a4c4da8fe90d0bec
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "39514536"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117686"
 ---
 <a name="compatibility"></a>
 
@@ -22,11 +22,11 @@ _En esta sección se muestra cómo implementar notificaciones locales en Xamarin
 
 ## <a name="local-notifications-overview"></a>Información general de notificaciones local
 
-Android proporciona dos áreas controlado por el sistema para mostrar iconos de notificación y la información de notificación al usuario. Cuando se publica una notificación por primera vez, su icono se muestra en el *área de notificación*, tal y como se muestra en la siguiente captura de pantalla:
+Android proporciona dos áreas controlado por el sistema para mostrar iconos de notificación y la información de notificación al usuario. Cuando se publica una notificación por primera vez, su icono se muestra en el *área de notificación*, tal y como se muestra en la captura de pantalla siguiente:
 
 ![Área de notificación de ejemplo en un dispositivo](local-notifications-images/01-notification-shade.png)
 
-Para obtener detalles acerca de la notificación, el usuario puede abrir el cajón de notificaciones (que se expande cada icono de notificación para mostrar el contenido de la notificación) y realizar todas las acciones asociadas con las notificaciones. Captura de pantalla siguiente muestra un *cajón de notificaciones* que corresponde al área de notificación que aparece anteriormente:
+Para obtener detalles acerca de la notificación, el usuario puede abrir el cajón de notificaciones (que se expande cada icono de notificación para mostrar el contenido de la notificación) y realizar todas las acciones asociadas con las notificaciones. La siguiente captura de pantalla muestra un *cajón de notificaciones* que corresponde al área de notificación que aparece anteriormente:
 
 [![Cajón de notificaciones de ejemplo que muestre tres notificaciones](local-notifications-images/02-notification-drawer-sml.png)](local-notifications-images/02-notification-drawer.png#lightbox)
 
@@ -483,7 +483,7 @@ En este formato, se muestra solo un fragmento del mensaje, termina con dos punto
 
 Este formato expandido de diseño también incluye el texto de resumen en la parte inferior de la notificación. El alto máximo de la *texto grande* notificación es 256 dp.
 
-Para crear un *texto grande* notificación, crear una instancia de un `NotificationCompat.Builder` objeto, como antes y, a continuación, crear instancias y agregue un [BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/) de objeto para el `NotificationCompat.Builder` objeto. A continuación se muestra un ejemplo:
+Para crear un *texto grande* notificación, crear una instancia de un `NotificationCompat.Builder` objeto, como antes y, a continuación, crear instancias y agregue un [BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/) de objeto para el `NotificationCompat.Builder` objeto. A continuación, se muestra un ejemplo:
 
 ```csharp
 // Instantiate the Big Text style:
@@ -581,7 +581,7 @@ Cuando el usuario arrastra hacia abajo en la notificación, se expande para most
 
 ![Expandidos la notificación de bandeja de entrada de ejemplo](local-notifications-images/21-inbox-expanded.png)
 
-Para crear un *Bandeja de entrada* notificación, crear una instancia de un `NotificationCompat.Builder` objeto, como antes y agregue un [InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/) de objeto para el `NotificationCompat.Builder`. A continuación se muestra un ejemplo:
+Para crear un *Bandeja de entrada* notificación, crear una instancia de un `NotificationCompat.Builder` objeto, como antes y agregue un [InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/) de objeto para el `NotificationCompat.Builder`. A continuación, se muestra un ejemplo:
 
 ```csharp
 // Instantiate the Inbox style:
@@ -657,14 +657,14 @@ Dado que la notificación "Pensamiento del día" es una notificación de priorid
 
 ### <a name="visibility-settings"></a>Configuración de visibilidad
 
-A partir de Android 5.0, el *visibilidad* configuración está disponible para controlar cuánto contenido de la notificación aparece en la pantalla de bloqueo segura.
+A partir de Android 5.0, el *visibilidad* configuración está disponible para controlar cuánto contenido de la notificación aparece en la pantalla de bloqueo seguras.
 Xamarin.Android define las siguientes enumeraciones para establecer la visibilidad de notificación:
 
--   `NotificationVisibility.Public` &ndash; Todo el contenido de la notificación se muestra en la pantalla de bloqueo segura.
+-   `NotificationVisibility.Public` &ndash; Todo el contenido de la notificación se muestra en la pantalla de bloqueo seguras.
 
--   `NotificationVisibility.Private` &ndash; Información esencial solo se muestra en la pantalla de bloqueo segura (por ejemplo, el icono de notificación y el nombre de la aplicación que registró), pero el resto de los detalles de la notificación están ocultos. De forma predeterminada todas las notificaciones `NotificationVisibility.Private`.
+-   `NotificationVisibility.Private` &ndash; Información esencial solo se muestra en la pantalla de bloqueo seguras (por ejemplo, el icono de notificación y el nombre de la aplicación que registró), pero el resto de los detalles de la notificación están ocultos. De forma predeterminada todas las notificaciones `NotificationVisibility.Private`.
 
--   `NotificationVisibility.Secret` &ndash; No se mostrará en la pantalla de bloqueo segura, ni siquiera en el icono de notificación. El contenido de la notificación está disponible solo después de que el usuario desbloquea el dispositivo.
+-   `NotificationVisibility.Secret` &ndash; No se mostrará en la pantalla de bloqueo seguras, ni siquiera en el icono de notificación. El contenido de la notificación está disponible solo después de que el usuario desbloquea el dispositivo.
 
 Para establecer la visibilidad de una notificación, la llamada a las aplicaciones la `SetVisibility` método de la `NotificationCompat.Builder` objeto, pasando la configuración de visibilidad. Por ejemplo, esta llamada a `SetVisibility` hace que la notificación `Private`:
 
@@ -672,11 +672,11 @@ Para establecer la visibilidad de una notificación, la llamada a las aplicacion
 builder.SetVisibility (NotificationVisibility.Private);
 ```
 
-Cuando un `Private` se publique una notificación, solo el nombre y el icono de la aplicación se muestra en la pantalla de bloqueo segura. En lugar del mensaje de notificación, el usuario ve "Desbloquear el dispositivo para ver esta notificación":
+Cuando un `Private` se publique una notificación, solo el nombre y el icono de la aplicación se muestra en la pantalla de bloqueo seguras. En lugar del mensaje de notificación, el usuario ve "Desbloquear el dispositivo para ver esta notificación":
 
 ![Desbloquee el mensaje de notificación de dispositivo](local-notifications-images/25-lockscreen-private.png)
 
-En este ejemplo, **NotificationsLab** es el nombre de la aplicación original. Esta versión de la notificación censurada aparece solo cuando la pantalla de bloqueo es seguro (es decir, protegido mediante contraseña, el patrón o PIN) &ndash; si la pantalla de bloqueo no es segura, todo el contenido de la notificación está disponible en la pantalla de bloqueo.
+En este ejemplo, **NotificationsLab** es el nombre de la aplicación original. Esta versión de la notificación censurada aparece solo cuando la pantalla de bloqueo es segura (es decir, protegido mediante contraseña, el patrón o PIN) &ndash; si la pantalla de bloqueo no es segura, todo el contenido de la notificación está disponible en la pantalla de bloqueo.
 
 
 ### <a name="category-settings"></a>Configuración de la categoría
@@ -755,9 +755,9 @@ if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
 En del este ejemplo, la aplicación **.NET Framework de destino** está establecido en Android 5.0 y **versión mínima de Android** está establecido en **Android 4.1 (nivel de API 16)**. Dado que `SetCategory` está disponible en el nivel de API 21 o posterior, llamará a este código de ejemplo `SetCategory` solo cuando está disponible &ndash; no llamará a `SetCategory` cuando el nivel de API es inferior a 21.
 
 
-### <a name="lockscreen-visibility"></a>Visibilidad de la pantalla de bloqueo
+### <a name="lock-screen-visibility"></a>Visibilidad de la pantalla de bloqueo
 
-Dado que Android no eran compatibles con notificaciones de pantalla de bloqueo antes de que Android 5.0 (API nivel 21), `NotificationCompat.Builder` no admite el `SetVisibility` método. Como se explicó anteriormente para `SetCategory`, el código puede comprobar el nivel de API en tiempo de ejecución y llamada `SetVisiblity` solo cuando está disponible:
+Dado que Android no eran compatibles con las notificaciones de pantalla de bloqueo antes de Android 5.0 (API nivel 21), `NotificationCompat.Builder` no admite el `SetVisibility` método. Como se explicó anteriormente para `SetCategory`, el código puede comprobar el nivel de API en tiempo de ejecución y llamada `SetVisiblity` solo cuando está disponible:
 
 ```csharp
 if ((int) Android.OS.Build.Version.SdkInt >= 21) {

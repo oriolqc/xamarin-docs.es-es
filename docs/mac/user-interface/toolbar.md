@@ -4,15 +4,15 @@ description: En este artículo se describe cómo trabajar con las barras de herr
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 06faaf16ffd0adc64063bfa5a264c1895b9ca9cb
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 6cb17ae0f60390564a8aa6bdb64ea612aae51b55
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251122"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120260"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Barras de herramientas de Xamarin.Mac
 
@@ -168,7 +168,7 @@ Están disponibles las propiedades siguientes:
 - **Etiqueta** : texto que se va a mostrar para el elemento en la barra de herramientas
 - **Etiqueta de paleta** -texto que se va a mostrar para el elemento en el **elementos de barra de herramientas permite** área
 - **Etiqueta** : un identificador único opcional que ayuda a identificar el elemento en el código.
-- **Identificador** -define el tipo de elemento de la barra de herramientas. Un valor personalizado se puede usar para seleccionar un elemento de barra de herramientas en el código.
+- **Identificador** -define el tipo de elemento de barra de herramientas. Un valor personalizado se puede usar para seleccionar un elemento de barra de herramientas en el código.
 - **Puede seleccionar** -si está activada, el elemento actuará como un botón de encendido y apagado.
 
 > [!IMPORTANT]

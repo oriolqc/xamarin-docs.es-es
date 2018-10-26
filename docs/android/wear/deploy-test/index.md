@@ -1,33 +1,33 @@
 ---
-title: Probar, optimizar e implementar usan aplicaciones de sistema operativo
-description: Cómo probar la aplicación desgaste del sistema operativo en un dispositivo Android (o el emulador) y prepararlo para su implementación.
+title: Probar, optimizar e implementar aplicaciones de sistema operativo de Wear
+description: Cómo probar su aplicación Wear OS en un dispositivo Android (o el emulador) y prepararlo para la implementación.
 ms.prod: xamarin
 ms.assetid: 3D8E5A97-F719-4E8C-B777-108DFF20C91F
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 9e35b383c77e246d453f03c4b6cdac7c01d32ace
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: db3f9b1c8eaed89046dd10621d5c942b21fae159
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32436058"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114748"
 ---
 # <a name="deployment-and-testing"></a>Implementación y prueba
 
-En esta sección se explica cómo probar la aplicación Android desgaste en un dispositivo Android usan (o en un emulador Android configurado para desgaste). También incluye sugerencias y obtener información acerca de cómo configurar una conexión de Bluetooth entre el equipo de desarrollo y un dispositivo Android de depuración.
-Cuando la aplicación esté lista, el último tema explica cómo preparar la aplicación para la implementación.
+Esta sección explica cómo probar la aplicación Android Wear en un dispositivo Android Wear (o en un emulador de Android configurado para desgaste). También incluye depuración sugerencias e información acerca de cómo configurar una conexión Bluetooth entre el equipo de desarrollo y un dispositivo Android.
+Cuando la aplicación está lista, el último tema explica cómo preparar la aplicación para la implementación.
 
-## <a name="debug-android-wear-on-an-emulatorandroidweardeploy-testdebug-on-emulatormd"></a>[Depurar Android desgaste en un emulador](~/android/wear/deploy-test/debug-on-emulator.md)
+## <a name="debug-android-wear-on-an-emulatorandroidweardeploy-testdebug-on-emulatormd"></a>[Depurar Android Wear en un emulador](~/android/wear/deploy-test/debug-on-emulator.md)
 
-Cómo depurar una aplicación de uso de Xamarin.Android en el emulador de Android SDK.
+Cómo depurar una aplicación de Xamarin.Android desgaste en el emulador de Android SDK.
 
 ## <a name="debug-on-a-wear-deviceandroidweardeploy-testdebug-on-devicemd"></a>[Depuración en un dispositivo Wear](~/android/wear/deploy-test/debug-on-device.md)
 
-Cómo configurar un dispositivo Android para que las aplicaciones de Xamarin.Android desgaste se pueden implementar a él directamente desde Visual Studio o Visual Studio para Mac.
+Cómo configurar un dispositivo Android para que se pueden implementar aplicaciones de Xamarin.Android desgaste en él directamente desde Visual Studio o Visual Studio para Mac.
 
-##  <a name="packaging-wear-appsandroidweardeploy-testpackagingmd"></a>[Empaquetar aplicaciones de uso](~/android/wear/deploy-test/packaging.md)
+##  <a name="packaging-wear-appsandroidweardeploy-testpackagingmd"></a>[Desgaste de empaquetado de aplicaciones](~/android/wear/deploy-test/packaging.md)
 
-Describe cómo empaquetar aplicaciones de uso de Xamarin.Android para la distribución en Google Play.
+Describe cómo empaquetar aplicaciones de desgaste de Xamarin.Android para su distribución en Google Play.
 

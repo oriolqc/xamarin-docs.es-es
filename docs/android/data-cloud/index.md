@@ -1,31 +1,31 @@
 ---
 title: Datos y servicios en la nube con Xamarin.Android
-description: Las guías de esta sección examina cómo tener acceso a datos y asegúrese de usar los servicios de nube.
+description: Las guías de esta sección examina cómo tener acceso a datos y hacer uso de servicios en la nube.
 ms.prod: xamarin
 ms.assetid: 54D9D34B-D4FA-473B-BD11-75D3762920B0
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 216ee45df1d7d9e0d06c04b9677bc263929515c0
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: 90db887ca63abe0cd33f9c1616df1d0a496465e9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32436448"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121859"
 ---
 # <a name="data-and-cloud-services"></a>Datos y servicios en la nube
 
 ## <a name="data-and-cloud-services"></a>Datos y servicios en la nube
 
-Aplicaciones de Xamarin.Android a menudo necesitan tener acceso a datos (desde una base de datos local o desde la nube), y muchas de estas aplicaciones consumen servicios web implementados con una amplia variedad de tecnologías. Las guías de esta sección examina cómo tener acceso a datos y asegúrese de usar los servicios de nube.
+Las aplicaciones de Xamarin.Android suelen necesitar acceso a datos (desde una base de datos local o desde la nube), y muchas de estas aplicaciones consumen servicios web implementados utilizando una amplia variedad de tecnologías. Las guías de esta sección examina cómo tener acceso a datos y hacer uso de servicios en la nube.
 
 ## <a name="data-accessandroiddata-clouddata-accessindexmd"></a>[Acceso a datos](~/android/data-cloud/data-access/index.md)
 
-Esta sección describe el acceso a datos en Xamarin.Android mediante código como el motor de base de datos.
+Esta sección describe el acceso a datos en Xamarin.Android usa SQLite como el motor de base de datos.
  
 ## <a name="google-messagingandroiddata-cloudgoogle-messagingindexmd"></a>[Mensajería de Google](~/android/data-cloud/google-messaging/index.md)
 
-Google proporciona mensajería de nube de Firebase y servicios de Google Cloud Messaging heredados para facilitar la mensajería entre aplicaciones móviles y aplicaciones de servidor. Esta sección proporciona información general para cada servicio que proporciona una explicación paso a paso sobre cómo utilizar estos servicios para implementar notificaciones remotas (también denominadas notificaciones de inserción) en aplicaciones de Xamarin.Android.
+Google Proporciona servicios de Google Cloud Messaging heredados para facilitar la mensajería entre aplicaciones móviles y aplicaciones de servidor y Firebase Cloud Messaging. Esta sección proporciona información general para cada servicio que proporciona una explicación paso a paso sobre cómo usar estos servicios para implementar notificaciones remotas (también denominadas notificaciones push) en las aplicaciones de Xamarin.Android.
 
 

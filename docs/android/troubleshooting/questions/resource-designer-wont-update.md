@@ -1,37 +1,37 @@
 ---
-title: No se actualizará mi archivo Resource.designer.cs Android
+title: No se actualizará mi archivo Resource.designer.cs de Android
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 3F7376E3-59CC-4722-AEED-BB50E4D952AA
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/19/2017
-ms.openlocfilehash: 6d20c92fbb61ab11fcfeda3e9d2f63fdfc5a6d54
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: ba3c2b07e7f35bf9fd84d10b74d034a02ca6a73d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30762625"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106421"
 ---
-# <a name="my-android-resourcedesignercs-file-will-not-update"></a>No se actualizará mi archivo Resource.designer.cs Android
+# <a name="my-android-resourcedesignercs-file-will-not-update"></a>No se actualizará mi archivo Resource.designer.cs de Android
 
 > [!NOTE]
-> Este problema se ha resuelto en Xamarin Studio 5.1.4 y versiones posteriores. Sin embargo, si el problema se produce en Visual Studio para Mac, registre una [nuevo error](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con el control de versiones completo completa y la información de los resultados de registro de compilación.
+> Este problema se resolvió en Xamarin Studio 5.1.4 y versiones posteriores. Sin embargo, si el problema se produce en Visual Studio para Mac, registre un [nuevo error](~/cross-platform/troubleshooting/questions/howto-file-bug.md) con el control de versiones completo completa y la información de salida del registro de compilación.
 
-Un error en Xamarin.Studio 5.1 previamente había dañado archivos .csproj eliminando parcial o totalmente el código xml en el archivo .csproj. Esto provocaría que importante partes de Android que el sistema (por ejemplo, para actualizar la Resource.designer.cs Android) de compilación genere un error. A partir de la 5.1.4 estable de la versión en el 15 de julio, este error se ha corregido; pero en muchos casos, el archivo de proyecto tiene que repararse manualmente, tal como se describe a continuación.
+Un error en la versión 5.1 Xamarin.Studio había dañado previamente archivos .csproj eliminando parcial o totalmente el código xml en el archivo .csproj. Esto provocaría que importantes del sistema (como actualizar el Resource.designer.cs de Android) de la compilación de partes de Android para producir un error. A partir de la 5.1.4 estable de la versión del 15 de julio de, este error se ha corregido; pero en muchos casos, el archivo de proyecto tiene que reparar manualmente, tal como se describe a continuación.
 
 
-## <a name="two-possible-approaches-to-fixing-up-the-project-file"></a>Dos métodos posibles para corregir el archivo de proyecto
+## <a name="two-possible-approaches-to-fixing-up-the-project-file"></a>Dos posibles enfoques para corregir el archivo de proyecto
 
 ### <a name="either"></a>Ya sea:
 
-1) Cree un nuevo proyecto de aplicación de Xamarin.Android, establezca todas las propiedades de proyecto para que coincida con el proyecto anterior y agregar todos los recursos, archivos de código fuente, etc. de nuevo en el proyecto.
+1) Crear un nuevo proyecto de aplicación de Xamarin.Android, establecer todas las propiedades del proyecto para que coincida con el proyecto antiguo y agregar todos los recursos, archivos de código fuente, etc., de nuevo en el proyecto.
 
 ### <a name="or"></a>O
 
-2) Hacer una copia de seguridad del archivo de .csproj del proyecto original, a continuación, abrirlo en un editor de texto y vuelven a agregar los elementos que faltan desde un archivo .csproj generado correctamente.
+2) Realizar una copia de seguridad del archivo de .csproj del proyecto original, ábralo en un editor de texto y vuelven a agregar los elementos que faltan de un archivo .csproj generado correctamente.
 
 ### <a name="if-this-does-not-solve-the-problem"></a>Si esto no soluciona el problema
 
-Después de experimentar con estos elementos, puede observar después de volver a agregar los elementos y volver a generar el proyecto, el archivo Resource.designer.cs actualizaría, pero todavía tendrá que cerrar y volver a abrir la solución para obtener la finalización de código para que reconozca los nuevos tipos de contenido en Resource.designer.cs. 
+Después de experimentar con estos elementos, es posible que observe que después de volver a agregar los elementos y volver a generar el proyecto, se actualizaría el archivo Resource.designer.cs, pero aún tendrá que cerrar y volver a abrir la solución para obtener la finalización de código para reconocer los nuevos tipos de contenido en Resource.designer.cs. 

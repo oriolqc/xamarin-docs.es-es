@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
 ms.date: 05/11/2018
-ms.openlocfilehash: ce48c4d271167b657505c52518e79c955e53b02e
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: f05b79e58a9fa87e13aeb45af2dbb46139051005
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38860672"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109996"
 ---
 # <a name="xamarin-live-reload"></a>Recarga en vivo de Xamarin
 
@@ -22,11 +22,10 @@ Recarga de Xamarin Live permite **realizar cambios en el XAML y ver que se refle
 
 Dado que la aplicación se compila cuando se usa la recarga en vivo, funciona con todas las bibliotecas y controles de terceros. Live works volver a cargar en todas las plataformas que Xamarin.Forms es compatible con, incluidos Android, iOS y UWP y funciona en todos los destinos de implementación válido, como simuladores, emuladores y dispositivos físicos.
 
-> [!Video https://www.youtube.com/embed/-5WJZpeXlC8]
-
-La recarga en vivo sólo está disponible en Visual Studio 2017.
-
-[![Únase a esta charla en https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> [!NOTE]
+> [Ha finalizado la vista previa dinámica de volver a cargar](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
+>
+> Hay una explicación sobre esto en [ ![Únase a esta charla en https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## <a name="requirements"></a>Requisitos
 

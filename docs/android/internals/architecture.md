@@ -3,15 +3,15 @@ title: Arquitectura
 ms.prod: xamarin
 ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: e6a30247c13deab871bf230aba53b9963981fd02
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 219c6bb4cd5718c969ba83a55596ad7b0bab8baf
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997405"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121131"
 ---
 # <a name="architecture"></a>Arquitectura
 
@@ -71,7 +71,7 @@ Debe tener cuidado cuando elimine los contenedores RCW administrada si la instan
 Contenedor CCW administrado subclases son donde puede residir toda la lógica específica de la aplicación "interesante". Estos incluyen personalizado [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) subclases (como el [Activity1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13) tipo en la plantilla de proyecto predeterminada). (En concreto, estos son cualquiera *Java.Lang.Object* subclases que hacen *no* contienen un [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/) atributo personalizado o [ RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/) es *false*, que es el valor predeterminado.)
 
 Administrado como contenedores RCW, administra las subclases de contenedor CCW también contienen una referencia global, accesible a través de la [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/) propiedad. Igual que con los contenedores RCW administrados, se pueden liberar explícitamente referencias globales mediante una llamada a [Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/).
-A diferencia de los contenedores RCW administrados, *mucho cuidado* debe realizarse antes de eliminar las instancias de este tipo, como *Dispose()* ing de la instancia interrumpirá la asignación entre la instancia de Java (una instancia de un Contenedor CCW Android) y la instancia administrada.
+A diferencia de los contenedores RCW administrados, *mucho cuidado* debe realizarse antes de eliminar las instancias de este tipo, como *Dispose()*- ing de la instancia se interrumpirá la asignación entre la instancia de Java (una instancia de un Contenedor CCW Android) y la instancia administrada.
 
 
 ### <a name="java-activation"></a>Activación de Java
@@ -88,7 +88,7 @@ Hay dos escenarios en los que el *(IntPtr, JniHandleOwnership)* constructor se d
 
 
 Tenga en cuenta que (2) es una abstracción con fugas. En Java, como en C#, las llamadas a métodos virtuales desde un constructor invocan siempre la implementación más derivada del método. Por ejemplo, el [TextView (contexto, AttributeSet, int) constructor](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/) invoca el método virtual [TextView.getDefaultMovementMethod()](http://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()), que está enlazado como el [ Propiedad TextView.DefaultMovementMethod](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/).
-Por lo tanto, si un tipo [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) tuviera que (1) [subclase TextView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [invalidar TextView.DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)y (3) [activar una instancia de la que clase a través de XML,](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) invalidado *DefaultMovementMethod* sería necesario invocar una propiedad antes de que el constructor ACW tenido la oportunidad de ejecutar y produciría antes de que el constructor de C# tenido oportunidad de ejecutarse.
+Por lo tanto, si un tipo [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs) tuviera que (1) [subclase TextView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L26), (2) [invalidar TextView.DefaultMovementMethod](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L45)y (3) [activar una instancia de la que clase a través de XML,](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Resources/layout/log_text_box_1.xml#L29) invalidado *DefaultMovementMethod* sería necesario invocar una propiedad antes de que el constructor ACW tenía una oportunidad de ejecutarse y produciría antes de la C# tenido la oportunidad de constructor ejecutar.
 
 Esto es compatible con una instancia LogTextBox a través de la [LogTextView (IntPtr, JniHandleOwnership)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L28) constructor cuando entra por primera vez la instancia ACW LogTextBox código administrado y, a continuación, invocar el [ LogTextBox (contexto, IAttributeSet, int)](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs#L41) constructor *en la misma instancia* cuando se ejecuta el constructor ACW.
 

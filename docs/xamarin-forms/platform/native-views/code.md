@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: ad633f49c1c448529fa4c2b50483ec233c1ee841
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 4a1393e60422313c781010c0d70a1a85eb671d34
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996199"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112407"
 ---
 # <a name="native-views-in-c"></a>Vistas nativas en C#
 
@@ -20,7 +20,7 @@ _Vistas nativas de iOS, Android y UWP pueden hacer referencia directamente desde
 
 ## <a name="overview"></a>Información general
 
-Cualquier control de Xamarin.Forms que permita `Content` para establecerse, o que tenga un `Children` colección, puede agregar vistas específicas de plataforma. Por ejemplo, un iOS `UILabel` pueden agregarse directamente a la [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) propiedad, o a la [ `StackLayout.Children` ](xref:Xamarin.Forms.Layout`1.Children) colección. Sin embargo, tenga en cuenta que esta funcionalidad requiere el uso de `#if` define en las soluciones de proyecto de Xamarin.Forms compartido y no está disponible desde soluciones de la biblioteca estándar de .NET de Xamarin.Forms.
+Cualquier control de Xamarin.Forms que permita `Content` debe establecerse, o que tenga un `Children` colección, puede agregar vistas específicas de plataforma. Por ejemplo, un iOS `UILabel` pueden agregarse directamente a la [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) propiedad, o a la [ `StackLayout.Children` ](xref:Xamarin.Forms.Layout`1.Children) colección. Sin embargo, tenga en cuenta que esta funcionalidad requiere el uso de `#if` define en las soluciones de proyecto de Xamarin.Forms compartido y no está disponible desde soluciones de la biblioteca estándar de .NET de Xamarin.Forms.
 
 Las capturas de pantalla siguientes muestran específicos de la plataforma, las vistas que se han agregado a un objeto Xamarin.Forms [ `StackLayout` ](xref:Xamarin.Forms.StackLayout):
 

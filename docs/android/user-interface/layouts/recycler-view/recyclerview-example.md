@@ -4,15 +4,15 @@ description: Una aplicación de ejemplo que muestra cómo usar RecyclerView.
 ms.prod: xamarin
 ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: d48796b3c62fc342bd86f2d58e74c5f1710174bb
-ms.sourcegitcommit: 0a1c392829454468dbe92f81d975e124a22b7014
+ms.openlocfilehash: 67bf38c11fd6e82e05b2a10704973ca10de03083
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/31/2018
-ms.locfileid: "39360843"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108657"
 ---
 # <a name="a-basic-recyclerview-example"></a>Un ejemplo de RecyclerView básico
 
@@ -118,7 +118,7 @@ mRecyclerView.SetLayoutManager (mLayoutManager);
 
 Este código reside en la actividad principal `OnCreate` método. El constructor para el Administrador de diseño requiere una *contexto*, por lo que `MainActivity` se pasa mediante `this` tal como se muestra anteriormente.
 
-En lugar de usar el el predefind `LinearLayoutManager`, puede conectar un administrador de diseño personalizado que muestra dos `CardView` elementos side-by-side, implementar un efecto de animación pasar para recorrer en iteración la colección de fotos. Más adelante en esta guía, verá un ejemplo de cómo modificar el diseño mediante el intercambio en un administrador de diseño diferente.
+En lugar de usar el predefind `LinearLayoutManager`, puede conectar un administrador de diseño personalizado que muestra dos `CardView` elementos side-by-side, implementar un efecto de animación pasar para recorrer en iteración la colección de fotos. Más adelante en esta guía, verá un ejemplo de cómo modificar el diseño mediante el intercambio en un administrador de diseño diferente.
 
 <a name="view-holder" />
 

@@ -1,22 +1,22 @@
 ---
-title: Rellenar una tabla con los datos de Xamarin.iOS
-description: Este documento describe cómo rellenar una tabla con datos en una aplicación de Xamarin.iOS. Se trata de UITableViewSource, reutilización de celda, agregar un índice y encabezados y pies de página.
+title: Rellenar una tabla con datos de Xamarin.iOS
+description: Este documento describe cómo rellenar una tabla con datos en una aplicación de Xamarin.iOS. Describe UITableViewSource reutilización de celda, agregar un índice y los encabezados y pies de página.
 ms.prod: xamarin
 ms.assetid: 6FE64DDF-1029-EB9B-6EEC-1C7DFDFDF3AF
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 77167bb8938ec0b3dcd30b80235ee5d9a60b4ce0
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 859afcf6ab9f3acfb56104fa68683ba28d913ce4
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790073"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50117148"
 ---
-# <a name="populating-a-table-with-data-in-xamarinios"></a>Rellenar una tabla con los datos de Xamarin.iOS
+# <a name="populating-a-table-with-data-in-xamarinios"></a>Rellenar una tabla con datos de Xamarin.iOS
 
-Para agregar filas a una `UITableView` debe implementar un `UITableViewSource` subclase e invalide los métodos que permite ver la tabla llama se rellene automáticamente.
+Para agregar filas a una `UITableView` debe implementar un `UITableViewSource` subclase e invalidación llama los métodos que permite ver la tabla se rellene automáticamente.
 
 Esta guía se incluyen:
 
@@ -28,17 +28,17 @@ Esta guía se incluyen:
 
 <a name="Subclassing_UITableViewSource" />
 
-## <a name="subclassing-uitableviewsource"></a>Creación de subclases UITableViewSource
+## <a name="subclassing-uitableviewsource"></a>Creación de subclases de UITableViewSource
 
-A `UITableViewSource` subclase se asigna a cada `UITableView`. La vista de tabla, consulta la clase de origen para determinar cómo representarse a sí misma (por ejemplo, el número de filas es necesario y el alto de cada fila si es diferente del valor predeterminado). Lo más importante, el origen proporciona cada vista de celda que se rellena con datos.
+Un `UITableViewSource` subclase se asigna a cada `UITableView`. La vista de tabla, consulta la clase de origen para determinar cómo representarse a sí misma (por ejemplo, el número de filas es necesario y el alto de cada fila si es diferente del valor predeterminado). Lo más importante, el origen proporciona cada vista de celda que se rellena con datos.
 
-Hay solo dos métodos obligatorios necesarios para que se muestren los datos de una tabla:
+Hay solo dos métodos obligatorios necesarios para crear una tabla de mostrar los datos:
 
 -   **RowsInSection** : devuelto una [ `nint` ](http://developer.xamarin.com/guides/cross-platform/macios/nativetypes/) recuento del número total de filas de datos que se debe mostrar en la tabla.
--   **GetCell** : devuelto una `UITableCellView` llena con datos para el índice de fila correspondiente pasado al método.
+-   **GetCell** : devuelto una `UITableCellView` rellena con datos para el índice de fila correspondiente pasado al método.
 
 
-El archivo de ejemplo BasicTable **TableSource.cs** incluye la implementación más sencilla posible de `UITableViewSource`. Puede ver en el siguiente fragmento de código que acepta una matriz de cadenas que se muestran en la tabla y devuelve un estilo de celda predeterminado que contiene todas las cadenas:
+El archivo de ejemplo BasicTable **TableSource.cs** tiene la implementación más sencilla posible de `UITableViewSource`. Puede ver en el siguiente fragmento de código que acepta una matriz de cadenas que se muestra en la tabla y devuelve un estilo de celda predeterminado que contiene cada cadena:
 
 ```csharp
 public class TableSource : UITableViewSource {
@@ -72,9 +72,9 @@ public class TableSource : UITableViewSource {
 }
 ```
 
-Un `UITableViewSource` puede usar cualquier estructura de datos de una matriz de cadenas simple (como se muestra en este ejemplo) para un <> de lista o en otra colección. La implementación de `UITableViewSource` métodos aísla la tabla de la estructura de datos subyacente.
+Un `UITableViewSource` puede usar cualquier estructura de datos, desde una matriz de cadenas simple (como se muestra en este ejemplo) para una lista de <> o en otra colección. La implementación de `UITableViewSource` aísla los métodos de la tabla de la estructura de datos subyacente.
 
-Para usar esta subclase, cree una matriz de cadenas para construir el origen, a continuación, asignarlo a una instancia de `UITableView`:
+Para usar esta subclase, cree una matriz de cadenas para construir el origen, a continuación, asignarla a una instancia de `UITableView`:
 
 ```csharp
 public override void ViewDidLoad ()
@@ -87,11 +87,11 @@ public override void ViewDidLoad ()
 }
 ```
 
-La tabla resultante tiene el siguiente aspecto:
+La tabla resultante tendrá este aspecto:
 
  [![](populating-a-table-with-data-images/image3.png "Tabla de ejemplo que se ejecuta")](populating-a-table-with-data-images/image3.png#lightbox)
 
-Mayoría de las tablas permite al usuario tener acceso a una fila para seleccionarlo y realizar alguna otra acción (como reproducir una canción, o llamar a un contacto o mostrar otra pantalla). Para lograr esto, hay algunas cosas que debemos hacer. En primer lugar, vamos a crear un AlertController para mostrar un mensaje cuando el usuario haga clic en una fila mediante la adición de las siguientes acciones para el `RowSelected` método:
+La mayoría de las tablas permiten al usuario tener acceso a una fila para seleccionarla y realizar alguna otra acción (por ejemplo, reproducir una canción, o llamar a un contacto o mostrar otra pantalla). Para lograr esto, hay algunas cosas que debemos hacer. En primer lugar, vamos a crear un AlertController para mostrar un mensaje cuando el usuario haga clic en una fila mediante la adición de las siguientes acciones para el `RowSelected` método:
 
 ```csharp
 public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
@@ -124,7 +124,7 @@ Modifique el método ViewDidLoad donde se crea la clase UITableViewSource para p
 ```csharp
 table.Source = new TableSource(tableItems, this);
 ```
-Por último, de nuevo en su `RowSelected` /método siguiente, llamada `PresentViewController` en el campo en caché:
+Por último, hacer una copia en su `RowSelected` método, llame a `PresentViewController` en el campo en caché:
 
 ```csharp
 public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
@@ -137,7 +137,7 @@ public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 ```
 
 
-Ahora el usuario puede tocar una fila y se mostrará una alerta:
+Ahora el usuario puede tocar una fila y aparecerá una alerta:
 
 
 
@@ -146,9 +146,9 @@ Ahora el usuario puede tocar una fila y se mostrará una alerta:
 
 ## <a name="cell-reuse"></a>Reutilización de celda
 
-En este ejemplo hay sólo seis elementos, así que no hay ningún reutilización de celda necesario. Al mostrar cientos o miles de filas, sin embargo, sería una pérdida de memoria para crear cientos o miles de `UITableViewCell` objetos cuando solo unas pocas encaje en la pantalla a la vez.
+En este ejemplo hay sólo seis elementos, así que no hay ningún reutilización de la celda necesario. Al mostrar cientos o miles de filas, sin embargo, sería un desperdicio de memoria crear cientos o miles de `UITableViewCell` objetos cuando solo unos pocos caben en la pantalla a la vez.
 
-Para evitar esta situación, cuando una celda desaparece de la pantalla de que la vista se coloca en una cola para su reutilización. Cuando el usuario se desplaza, llama a la tabla `GetCell` para solicitar nuevas vistas para mostrar: reutilizar una celda existente (que no se está mostrando) basta con llamar a la `DequeueReusableCell` método. Si una celda está disponible para su reutilización se devolverán, en caso contrario, se devuelve un valor null y el código debe crear una nueva instancia de la celda.
+Para evitar esta situación, cuando una celda desaparece de la pantalla de que su vista se coloca en una cola para su reutilización. Cuando el usuario se desplaza, llama la tabla `GetCell` para solicitar nuevas vistas para mostrar: reutilizar una celda existente (que no se muestra actualmente) basta con llamar a la `DequeueReusableCell` método. Si está disponible para su reutilización, se devuelve una celda, de lo contrario se devuelve un valor null y el código debe crear una nueva instancia de la celda.
 
 Este fragmento de código del ejemplo muestra el patrón:
 
@@ -160,13 +160,13 @@ if (cell == null)
     cell = new UITableViewCell (UITableViewCellStyle.Default, cellIdentifier);
 ```
 
-La `cellIdentifier` eficazmente crea colas independientes para distintos tipos de celda. En este ejemplo todas las celdas buscar el mismo codificado por lo que solo un identificador se usa. Si hay diferentes tipos de celda debe cada uno de ellos tienen una cadena de identificador diferente, cuando se crea una instancia y cuando se solicitan desde la cola de reutilización.
+El `cellIdentifier` realmente crea colas independientes para distintos tipos de celda. En este ejemplo todas las celdas buscar el mismo codificados para que solo un identificador se usa. Si hay diferentes tipos de celda debe cada tienen una cadena de identificador diferente, tanto cuando sus instancias se crean cuando se solicitan desde la cola de reutilización.
 
-### <a name="cell-reuse-in-ios-6"></a>Reutilización de celda en iOS 6 +
+### <a name="cell-reuse-in-ios-6"></a>Reutilización de la celda en iOS 6 +
 
-iOS 6 agrega un patrón de reutilización de celda similar a la introducción de uno con las vistas de colección. Aunque todavía se admite el patrón existente de reutilización mostrado anteriormente para con versiones anteriores es preferible la compatibilidad, este nuevo patrón tal y como elimina la necesidad de la comprobación de valores null en la celda.
+iOS 6, agrega un patrón de reutilización de celda similar a la introducción de uno con las vistas de colección. Aunque todavía se admite el patrón de reutilización existente que se muestra arriba con versiones anteriores es preferible la compatibilidad, este nuevo patrón ya que elimina la necesidad de la comprobación de null en la celda.
 
-Con el nuevo modelo de una aplicación registra la clase de celda o xib que va a usar una llamada a `RegisterClassForCellReuse` o `RegisterNibForCellReuse` en el constructor del controlador. A continuación, cuando la celda de vaciado en el `GetCell` método, simplemente call `DequeueReusableCell` pasar el identificador que se registró para la clase de celda o xib y la ruta de acceso del índice.
+Con el nuevo patrón de una aplicación registra la clase de celda o xib que va a usar al llamar a `RegisterClassForCellReuse` o `RegisterNibForCellReuse` en el constructor del controlador. Después, cuando la celda de la eliminación en el `GetCell` método, simplemente llamada `DequeueReusableCell` pasando el identificador que se ha registrado para la clase de celda o xib y la ruta de acceso de índice.
 
 Por ejemplo, el código siguiente registra una clase de celda personalizada en un UITableViewController:
 
@@ -183,7 +183,7 @@ public class MyTableViewController : UITableViewController
 }
 ```
 
-Con la clase MyCell registrada, la celda puede ser quitado de la cola en el `GetCell` método de la `UITableViewSource` sin necesidad de la comprobación de null adicional, como se muestra a continuación:
+Con la clase MyCell registrada, la celda puede se quita de la cola en el `GetCell` método de la `UITableViewSource` sin necesidad de la comprobación de null adicional, como se muestra a continuación:
 
 ```csharp
 class MyTableSource : UITableViewSource
@@ -201,7 +201,7 @@ class MyTableSource : UITableViewSource
 }
 ```
 
-Tenga en cuenta, al utilizar el patrón de reutilización de nuevo con una clase de celda personalizada, debe implementar el constructor que toma un `IntPtr`, tal y como se muestra en el fragmento de código siguiente, en caso contrario Objective-C no podrá construir una instancia de la clase de celda:
+Tenga en cuenta, al usar el nuevo patrón de volver a utilizar con una clase de celda personalizada, debe implementar el constructor que toma un `IntPtr`, tal como se muestra en el siguiente fragmento, en caso contrario, Objective-C no podrá construir una instancia de la clase de celda:
 
 ```csharp
 public class MyCell : UITableViewCell
@@ -213,17 +213,17 @@ public class MyCell : UITableViewCell
 }
 ```
 
-Puede ver ejemplos de los temas que se ha explicado anteriormente en el **BasicTable** ejemplo vinculados a este artículo.
+Puede ver ejemplos de los temas que se explicó anteriormente en el **BasicTable** ejemplo vinculados a este artículo.
 
 <a name="Adding_an_Index" />
 
 ## <a name="adding-an-index"></a>Agregar un índice
 
-Un índice ayuda al usuario a desplazarse a través de listas largas, normalmente ordenadas alfabéticamente aunque se puede indizar por cualquier criterio desea. El **BasicTableIndex** ejemplo carga una lista mucho más completa de elementos de un archivo para mostrar el índice. Cada elemento en el índice corresponde a una 'sección' de la tabla.
+Un índice ayuda al usuario a desplazarse por las listas largas, normalmente se ordenan alfabéticamente aunque se puede indizar por cualquier criterio desea. El **BasicTableIndex** ejemplo carga una lista mucho más completa de elementos de un archivo para mostrar el índice. Cada elemento en el índice corresponde a una 'sección' de la tabla.
 
  [![](populating-a-table-with-data-images/image5.png "La presentación de índice")](populating-a-table-with-data-images/image5.png#lightbox)
 
-Para admitir 'sections' necesita los datos detrás de la tabla que se desea agrupar, por lo que el ejemplo BasicTableIndex se crea un `Dictionary<>` de la matriz de cadenas con la primera letra de cada elemento como la clave de diccionario:
+Para admitir los datos detrás de la tabla deben agruparse, por lo que crea el ejemplo BasicTableIndex ' sections' un `Dictionary<>` de la matriz de cadenas con la primera letra de cada elemento como clave de diccionario:
 
 ```csharp
 indexedTableItems = new Dictionary<string, List<string>>();
@@ -237,14 +237,14 @@ foreach (var t in items) {
 keys = indexedTableItems.Keys.ToArray ();
 ```
 
-El `UITableViewSource` subclase, a continuación, necesita los métodos siguientes agregan o modifican para utilizar el `Dictionary<>` :
+El `UITableViewSource` subclase, a continuación, necesita los siguientes métodos de agregado o modificado para utilizar el `Dictionary<>` :
 
 -   **NumberOfSections** : este método es opcional, de forma predeterminada en la tabla, se da por supuesto una sección. Cuando se muestra un índice de este método debe devolver el número de elementos en el índice (por ejemplo, 26 si el índice contiene todas las letras del alfabeto inglés).
 -   **RowsInSection** : devuelve el número de filas en una sección determinada.
 -   **SectionIndexTitles** : devuelve la matriz de cadenas que se usará para mostrar el índice. El código de ejemplo devuelve una matriz de letras.
 
 
-Los métodos actualizados en el archivo de ejemplo **BasicTableIndex/TableSource.cs** este aspecto:
+Los métodos en el archivo de ejemplo actualizados **BasicTableIndex/TableSource.cs** este aspecto:
 
 ```csharp
 public override nint NumberOfSections (UITableView tableView)
@@ -261,25 +261,25 @@ public override string[] SectionIndexTitles (UITableView tableView)
 }
 ```
 
-Índices generalmente solo se usa con el estilo de tabla sin formato.
+Por lo general, los índices solo se usan con el estilo de tabla sin formato.
 
 
 <a name="Adding_Headers_and_Footers" />
 
 ## <a name="adding-headers-and-footers"></a>Agregar encabezados y pies de página
 
-Encabezados y pies de página pueden utilizarse para agrupar visualmente filas de una tabla. La estructura de datos necesaria es muy similar a la adición de un índice: `Dictionary<>` funciona muy bien. En lugar de usar el alfabeto para agrupar las celdas, en este ejemplo se agrupan las verduras por tipo botánico.
+Encabezados y pies de página pueden utilizarse para agrupar visualmente las filas de una tabla. La estructura de datos necesaria es muy similar a la adición de un índice: un `Dictionary<>` funciona realmente bien. En lugar de usar el alfabeto para agrupar las celdas, en este ejemplo agrupará las verduras por tipo botánico.
 La salida es similar a la siguiente:
 
- [![](populating-a-table-with-data-images/image6.png "Muestra los encabezados y pies de página")](populating-a-table-with-data-images/image6.png#lightbox)
+ [![](populating-a-table-with-data-images/image6.png "Ejemplos de encabezados y pies de página")](populating-a-table-with-data-images/image6.png#lightbox)
 
-Para mostrar encabezados y pies de página el `UITableViewSource` subclase requiere estos métodos adicionales:
+Para mostrar los encabezados y pies de página el `UITableViewSource` subclase requiere estos métodos adicionales:
 
 -   **TitleForHeader** : devuelve el texto que se usará como el encabezado
 -   **TitleForFooter** : devuelve el texto que se usará como el pie de página.
 
 
-Los métodos actualizados en el archivo de ejemplo **BasicTableHeaderFooter/Code/TableSource.cs** este aspecto:
+Los métodos en el archivo de ejemplo actualizados **BasicTableHeaderFooter/Code/TableSource.cs** este aspecto:
 
 ```csharp
 public override string TitleForHeader (UITableView tableView, nint section)
@@ -292,7 +292,7 @@ public override string TitleForFooter (UITableView tableView, nint section)
 }
 ```
 
-Puede personalizar aún más la apariencia del encabezado y pie de página con una vista del objeto utilizando el `GetViewForHeader` y `GetViewForFooter` reemplazos de método en `UITableViewSource`.
+Puede personalizar aún más la apariencia del encabezado y pie de página con una vista del objeto utilizando el `GetViewForHeader` y `GetViewForFooter` invalidaciones de los métodos en `UITableViewSource`.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

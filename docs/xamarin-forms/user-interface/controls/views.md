@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/12/2016
-ms.openlocfilehash: 52d8d5f6eb38e5cb501d6284d08f7317981e0dcf
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 18/10/2018
+ms.openlocfilehash: a51a3bb7726baa9142579a518767dc722870ee06
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998978"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50107533"
 ---
 # <a name="xamarinforms-views"></a>Vistas de Xamarin.Forms
 
@@ -93,7 +93,7 @@ Las vistas son objetos de interfaz de usuario, como etiquetas, botones y los con
 
 |     |     |
 | --- | --- |
-| [`Stepper`](xref:Xamarin.Forms.Stepper) permite al usuario seleccionar un `double` valor de un intervalo de valores incrementales especificado con el [ `Minimum` ](xref:Xamarin.Forms.Stepper.Minimum), [ `Maximum` ](xref:Xamarin.Forms.Stepper.Maximum), y [ `Increment` ](xref:Xamarin.Forms.Stepper.Increment) propiedades.<br /><br />[Documentación de API](xref:Xamarin.Forms.Stepper) | [![Ejemplo de componente](views-images/Stepper.png "ejemplo motor paso a paso")](views-images/Stepper-Large.png#lightbox "ejemplo motor paso a paso")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
+| [`Stepper`](xref:Xamarin.Forms.Stepper) permite al usuario seleccionar un `double` valor de un intervalo de valores incrementales especificado con el [ `Minimum` ](xref:Xamarin.Forms.Stepper.Minimum), [ `Maximum` ](xref:Xamarin.Forms.Stepper.Maximum), y [ `Increment` ](xref:Xamarin.Forms.Stepper.Increment) propiedades.<br /><br />[Documentación de API](xref:Xamarin.Forms.Stepper)  / [guía](~/xamarin-forms/user-interface/stepper.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) | [![Ejemplo de componente](views-images/Stepper.png "ejemplo motor paso a paso")](views-images/Stepper-Large.png#lightbox "ejemplo motor paso a paso")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/StepperDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/StepperDemoPage.xaml) |
 |     |     |
 
 ### <a name="switch"></a>Modificador
@@ -114,7 +114,7 @@ Las vistas son objetos de interfaz de usuario, como etiquetas, botones y los con
 
 |     |     |
 | --- | --- |
-| [`TimePicker`](xref:Xamarin.Forms.TimePicker) permite al usuario seleccionar una hora con el selector de hora de la plataforma. El [ `Time` ](xref:Xamarin.Forms.TimePicker.Time) propiedad es la hora seleccionada. Una aplicación puede supervisar los cambios en el `Time` propiedad instalando un controlador para el [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) eventos.<br /><br />[Documentación de API](xref:Xamarin.Forms.TimePicker) | [![Ejemplo de TimePicker](views-images/TimePicker.png "ejemplo TimePicker")](views-images/TimePicker-Large.png#lightbox "TimePicker ejemplo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TimePickerDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TimePickerDemoPage.xaml) |
+| [`TimePicker`](xref:Xamarin.Forms.TimePicker) permite al usuario seleccionar una hora con el selector de hora de la plataforma. El [ `Time` ](xref:Xamarin.Forms.TimePicker.Time) propiedad es la hora seleccionada. Una aplicación puede supervisar los cambios en el `Time` propiedad instalando un controlador para el [ `PropertyChanged` ](xref:Xamarin.Forms.BindableObject.PropertyChanged) eventos.<br /><br />[Documentación de API](xref:Xamarin.Forms.TimePicker) / [guía](~/xamarin-forms/user-interface/timepicker.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/TimePicker) | [![Ejemplo de TimePicker](views-images/TimePicker.png "ejemplo TimePicker")](views-images/TimePicker-Large.png#lightbox "TimePicker ejemplo")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/TimePickerDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/TimePickerDemoPage.xaml) |
 |     |     |
 
 ## <a name="views-for-editing-text"></a>Vistas para editar texto

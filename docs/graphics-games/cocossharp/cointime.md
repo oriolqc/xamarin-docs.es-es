@@ -1,114 +1,114 @@
 ---
 title: Detalles de tiempo de juego de moneda
-description: Esta guía describe los detalles de implementación en el juego de tiempo de moneda, incluidos trabajar con mapas de mosaico, creación de entidades, animar sprites y colisión eficaz de implementar.
+description: Esta guía describen los detalles de implementación en el juego de tiempo de moneda, como trabajar con mapas de mosaico, creación de entidades, animación de sprites y colisión eficaz de implementar.
 ms.prod: xamarin
 ms.assetid: 5D285684-0417-4E16-BD14-2D1F6DEFBB8B
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: 2687b1c8eca8cfb68660c8a622278aa628459d07
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.openlocfilehash: af914e10eb93aa0668743a113ffe647a939fea75
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33921942"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112629"
 ---
 # <a name="coin-time-game-details"></a>Detalles de tiempo de juego de moneda
 
-_Esta guía describe los detalles de implementación en el juego de tiempo de moneda, incluidos trabajar con mapas de mosaico, creación de entidades, animar sprites y colisión eficaz de implementar._
+_Esta guía describen los detalles de implementación en el juego de tiempo de moneda, como trabajar con mapas de mosaico, creación de entidades, animación de sprites y colisión eficaz de implementar._
 
-Hora de la moneda es un juego para iOS y Android reformador de platino completa. El objetivo del juego consiste en recopilar todas las monedas en un nivel y, a continuación, llegar a la puerta de salida evitando enemigos y obstáculos al mismo.
+Tiempo de moneda es una completa plataforma de juego para iOS y Android. El objetivo del juego consiste en recopilar todos de monedas en un nivel y, a continuación, llegar a la puerta de salida al tiempo que evita los enemigos y obstáculos.
 
-![](cointime-images/image1.png "El objetivo del juego consiste en recopilar todas las monedas en un nivel y, a continuación, llegar a la puerta de salida al evitar enemigos y obstáculos")
+![](cointime-images/image1.png "El objetivo del juego consiste en recopilar todos de monedas en un nivel y, a continuación, llegar a la puerta de salida al tiempo que evita los enemigos y obstáculos")
 
-Esta guía describe los detalles de la implementación en tiempo de moneda, que abarcan los temas siguientes:
+Esta guía describe los detalles de implementación en tiempo de moneda, que abarcan los siguientes temas:
 
 - [Trabajar con archivos tmx](#working-with-tmx-files)
 - [Nivel de carga](#level-loading)
-- [Agregar nuevas entidades](#adding-new-entities)
+- [Adición de nuevas entidades](#adding-new-entities)
 - [Entidades animadas](#animated-entities)
 
 
 ## <a name="content-in-coin-time"></a>Contenido en tiempo de moneda
 
-Tiempo de moneda es un proyecto de ejemplo que representa cómo puede estar organizado de un proyecto de CocosSharp completo. La hora de moneda pretende simplificar la adición y el mantenimiento del contenido de la estructura. Usa **.tmx** archivos creados por [mosaico](http://www.mapeditor.org) para niveles y los archivos XML para definir las animaciones. Modificar o agregar nuevo contenido se puede lograr con el mínimo esfuerzo. 
+Tiempo de moneda es un proyecto de ejemplo que representa cómo puede estar organizado de un proyecto CocosSharp completo. Moneda del tiempo estructura pretende simplificar la incorporación y el mantenimiento de contenido. Lo usa **.tmx** archivos creados por [mosaico](http://www.mapeditor.org) para los niveles y los archivos XML para definir animaciones. Modificar o agregar el nuevo contenido se puede lograr con el mínimo esfuerzo. 
 
-Si bien este enfoque hace tiempo moneda un proyecto de efectivo para aprendizaje y experimentación, también refleja cómo profesionales juegos se realizan. Esta guía explica algunos de los métodos que se emplean para simplificar la adición y modificar el contenido.
+Aunque este enfoque hace tiempo moneda un proyecto de efectivo para aprendizaje y experimentación, también refleja juegos profesionales con cómo se realizan. Esta guía explica algunos de los enfoques adoptados para simplificar la adición y modificación de contenido.
 
 
 ## <a name="working-with-tmx-files"></a>Trabajar con archivos tmx
 
-Niveles de tiempo de moneda se definen mediante el formato de archivo .tmx, que se genera mediante el [mosaico](http://www.mapeditor.org) editor de mapa de mosaico. Para obtener una explicación detallada sobre cómo trabajar con mosaico, consulte el [utilizando coloca en mosaico con guía Cocos agudo](~/graphics-games/cocossharp/tiled.md). 
+Niveles de tiempo de moneda se definen mediante el formato de archivo .tmx, que es generado por el [mosaico](http://www.mapeditor.org) icono editor de mapa. Para obtener una explicación detallada de cómo trabajar con el mosaico, vea el [uso de Tiled con Cocos Sharp guía](~/graphics-games/cocossharp/tiled.md). 
 
-Cada nivel se define en su propio archivo .tmx contenido en el **CoinTime/activos/contenido/niveles** carpeta. Todos los niveles de tiempo de moneda compartan un archivo de tileset, que se define en el **mastersheet.tsx** archivo. Este archivo define las propiedades personalizadas de cada icono, por ejemplo, si el icono tiene colisión sólido o si el icono debe ser reemplazado por una instancia de entidad. El archivo de mastersheet.tsx permite propiedades puede definirse una sola vez y se utilizan en todos los niveles. 
+Cada nivel se define en su propio archivo .tmx contenido en el **CoinTime/activos o contenido/niveles** carpeta. Todos los niveles de tiempo de moneda compartan un archivo tileset, que se define en el **mastersheet.tsx** archivo. Este archivo define las propiedades personalizadas de cada icono, por ejemplo, si el icono tiene una colisión sólida o si el icono se debe reemplazar por una instancia de entidad. El archivo mastersheet.tsx permite que las propiedades que se define una sola vez y se utiliza en todos los niveles. 
 
 
 ### <a name="editing-a-tile-map"></a>Edita una asignación de icono
 
-Para editar una asignación de icono, abra el archivo de .tmx en mosaico haciendo doble clic en el archivo .tmx o abriendo a través del menú archivo en mosaico. Moneda tiempo nivel icono mapas contienen tres capas: 
+Para editar un icono de mapa, abra el archivo de .tmx en mosaico mediante doble clic en el archivo .tmx o si lo abre a través del menú archivo en mosaico. Coin Time icono nivel mapas contienen tres capas: 
 
-- **Entidades** : este nivel contiene iconos que se reemplazará con instancias de entidades en tiempo de ejecución. Algunos ejemplos son el Reproductor, monedas, enemigos y la puerta de la finalización de nivel.
-- **Terreno** : este nivel contiene iconos que normalmente tienen colisión sólido. Colisión sólido permite que el Reproductor recorrer en estos iconos sin pasar por ella. Iconos con colisión sólido también pueden actuar como paredes y límites.
-- **Fondo** : la capa de fondo contiene iconos que se utilizan como el fondo estático. Este nivel no se desplaza cuando se mueve la cámara en el nivel, creando así la apariencia de profundidad a través de parallax.
+- **Las entidades** : este nivel contiene los iconos que se reemplazará con instancias de entidades en tiempo de ejecución. Algunos ejemplos son el Reproductor, monedas, enemigos y la puerta de final de nivel.
+- **Terreno** : este nivel contiene iconos que normalmente tienen colisión sólido. Colisión sólido permite que el Reproductor recorrer en estos iconos sin pasar por ella. Los iconos con colisiones sólido también pueden actuar como paredes y techos.
+- **En segundo plano** : la capa de fondo contiene iconos que se utilizan como el fondo estático. Esta capa no se desplaza cuando se mueve la cámara a lo largo del nivel, crear el aspecto de profundidad a través de paralaje.
 
-Como a continuación se explican más adelante, el código de nivel de carga espera estos tres capas en todos los niveles de tiempo de moneda.
+Como se analiza más adelante, el código de nivel de carga espera estas tres capas en todos los niveles de tiempo de moneda.
 
 #### <a name="editing-terrain"></a>Edición de terreno
 
-Se pueden colocar los iconos, haga clic en el **mastersheet** tileset y, a continuación, haga clic en el icono de mapa. Por ejemplo, para pintar el terreno nueva en un nivel:
+Se pueden colocar los iconos, haga clic en el **mastersheet** tileset y, a continuación, haga clic en el icono de mapa. Por ejemplo, para pintar el terreno nuevo en un nivel:
 
 1. Seleccione la capa de terreno
 1. Haga clic en el icono para dibujar
-1. Haga clic en o insertar y arrastre sobre el mapa para pintar el icono
+1. Haga clic en o insertar y arrastre el mapa para pintar el icono
 
-    ![](cointime-images/image2.png "Haga clic en el icono para dibujar 1")
+    ![](cointime-images/image2.png "Haga clic en el icono que se va a dibujar 1")
 
 La parte superior izquierda de la tileset contiene todos del terreno en el tiempo de moneda. Terreno, que es sólido, incluye el **SolidCollision** propiedad, como se muestra en las propiedades del icono de la izquierda de la pantalla:
 
 ![](cointime-images/image3.png "Terreno, que es sólido, incluye la propiedad SolidCollision, tal como se muestra en las propiedades del icono de la izquierda de la pantalla")
 
-#### <a name="editing-entities"></a>Edición de entidades
+#### <a name="editing-entities"></a>Editar entidades
 
-Las entidades se pueden agregarse ni quitarse de un nivel: al igual que de terreno. El **mastersheet** tileset tiene todas las entidades que se coloca sobre la mitad de la distancia horizontal, por lo que puede que no sean visibles sin tener que desplazarse a la derecha:
+Las entidades se pueden agregar o quitar de un nivel: igual que el terreno. El **mastersheet** tileset tiene todas las entidades que se coloca sobre mitad horizontalmente, por lo que quizá no sean visibles sin necesidad de desplazarse a la derecha:
 
-![](cointime-images/image4.png "El tileset mastersheet tiene todas las entidades que se coloca sobre la mitad de la distancia horizontal, por lo que puede que no sean visibles sin tener que desplazarse a la derecha")
+![](cointime-images/image4.png "El tileset mastersheet tiene todas las entidades que se coloca sobre mitad horizontalmente, por lo que quizá no sean visibles sin necesidad de desplazarse a la derecha")
 
-Nuevas entidades deben colocarse en el **entidades** capa.
+Nuevas entidades se deben colocar en el **entidades** capa.
 
-![](cointime-images/image5.png "Nuevas entidades deben estar ubicadas en el nivel de entidades")
+![](cointime-images/image5.png "Nuevas entidades se deben colocar en la capa de entidades")
 
-Busca el código de CoinTime el **EntityType** cuando se carga un nivel para identificar los iconos que se deben reemplazar por entidades: 
+Código de CoinTime busca el **EntityType** cuando se carga un nivel para identificar los iconos que se deben reemplazar por las entidades: 
 
-![](cointime-images/image6.png "Código de CoinTime busca el EntityType cuando se carga un nivel para identificar los iconos que se deben reemplazar por entidades")
+![](cointime-images/image6.png "Código de CoinTime busca el EntityType cuando se carga un nivel para identificar los iconos que se deben reemplazar por las entidades")
 
-Una vez que se ha modificado y guardado el archivo, los cambios automáticamente aparecerá si el proyecto se compila y ejecute:
+Una vez que se ha modificado y guardado el archivo, los cambios aparecerán automáticamente si se compila el proyecto y ejecutar:
 
-![](cointime-images/image7.png "Una vez que se ha modificado y guardado el archivo, los cambios automáticamente se mostrarán si se compila el proyecto y ejecutar")
+![](cointime-images/image7.png "Una vez que se ha modificado y guardado el archivo, los cambios aparecerán automáticamente si se compila el proyecto y ejecutar")
 
 
 ### <a name="adding-new-levels"></a>Agregar nuevos niveles
 
-El proceso de agregar niveles a la hora de moneda requiere ningún cambio de código y solo de unos pequeños cambios en el proyecto. Para agregar un nuevo nivel:
+El proceso de agregar niveles a la hora de moneda requiere ningún cambio de código y solo algunos pequeños cambios para el proyecto. Para agregar un nuevo nivel:
 
 1. Abra la carpeta de nivel se encuentra en <**CoinTime Root > \CoinTime\Assets\Content\levels**
 1. Copie y pegue uno de los niveles, como **level0.tmx**
-1. Cambiar el nombre del nuevo archivo .tmx por lo que sigue la secuencia de número de nivel con los niveles existentes, como **level8.tmx**
-1. En Visual Studio o Visual Studio para Mac, agregar el nuevo archivo .tmx a la carpeta de niveles Android. Compruebe que el archivo utiliza el **AndroidAsset** acción de compilación.
+1. Cambiar el nombre del nuevo archivo .tmx por lo que sigue la secuencia de números nivel con los niveles existentes, tales como **level8.tmx**
+1. En Visual Studio o Visual Studio para Mac, agregue el nuevo archivo .tmx a la carpeta de los niveles de Android. Compruebe que el archivo utiliza el **AndroidAsset** acción de compilación.
 
     ![](cointime-images/image8.png "Compruebe que el archivo usa la acción de compilación AndroidAsset")
 
-1. Agregue el nuevo archivo .tmx a la carpeta de niveles de iOS. Asegúrese de vincular el archivo desde su ubicación original y compruebe que usa el **BundleResource** acción de compilación.
+1. Agregue el nuevo archivo .tmx a la carpeta de los niveles de iOS. Asegúrese de vincular el archivo desde su ubicación original y compruebe que usa el **BundleResource** acción de compilación.
 
     ![](cointime-images/image9.png "Asegúrese de vincular el archivo desde su ubicación original y compruebe que usa la acción de compilación BundleResource")
 
-El nuevo nivel debe aparecer en la pantalla Seleccione nivel como nivel 9 (nombres de archivo de nivel empiezan en 0, pero los botones de nivel comienzan por el número 1):
+El nuevo objeto level debe aparecer en la pantalla Seleccione nivel como nivel 9 (nombres de archivo de nivel empiezan en 0, pero los botones de nivel comienzan con el número 1):
 
-![](cointime-images/image10.png "El nuevo nivel debe aparecer en la pantalla Seleccione nivel como level 9 empieza a nombres de nivel de archivo en 0, pero los botones de nivel comienzan por el número 1")
+![](cointime-images/image10.png "El nuevo objeto level debe aparecer en la pantalla Seleccione nivel como level 9 empieza a nombres de nivel de archivo en 0, pero los botones de nivel comienzan con el número 1")
 
 
 ## <a name="level-loading"></a>Nivel de carga
 
-Como se muestra anteriormente, nuevos niveles no requieren ningún cambio en el código: el juego detecta automáticamente los niveles si se denomina correctamente y se agregan a la **niveles** carpeta con la acción de compilación correcta (**BundleResource**o **AndroidAsset**).
+Como se muestra anteriormente, nuevos niveles no requieren ningún cambio en el código: el juego detecta automáticamente los niveles si se denominado correctamente y se agrega a la **niveles** carpeta con la acción de compilación correcta (**BundleResource**o **AndroidAsset**).
 
 La lógica para determinar el número de niveles que se encuentra en la `LevelManager` clase. Cuando una instancia de la `LevelManager` se construye (mediante el patrón singleton), el `DetermineAvailbleLevels` se llama al método:
 
@@ -148,9 +148,9 @@ private void DetermineAvailableLevels()
 }
 ```
 
-CocosSharp no proporciona un enfoque multiplataforma para detectar si los archivos están presentes, por lo que se debe confiar en la `TitleContainer` clase para intentar abrir una secuencia. Si el código para abrir una secuencia que inicia una excepción y, a continuación, el archivo no existe y el bucle while saltos. Una vez que finalice el bucle, la `NumberOfLevels` propiedad notifica el número de niveles válido forman parte del proyecto.
+CocosSharp no proporciona un enfoque multiplataforma para detectar si los archivos están presentes, por lo que tenemos que depender de la `TitleContainer` clase para intentar abrir una secuencia. Si el código para abrir una secuencia que inicia una excepción y, a continuación, el archivo no existe y el bucle while saltos. Una vez que finalice el bucle, la `NumberOfLevels` propiedad informa de cuántos niveles válidos forman parte del proyecto.
 
-El `LevelSelectScene` clase utiliza el `LevelManager.NumberOfLevels` para determinar cuántos botones para crear en el `CreateLevelButtons` método:
+El `LevelSelectScene` clase utiliza la `LevelManager.NumberOfLevels` para determinar cuántos botones para crear en el `CreateLevelButtons` método:
 
 
 ```csharp
@@ -170,7 +170,7 @@ private void CreateLevelButtons()
 }
 ```
 
-El `NumberOflevels` propiedad se utiliza para determinar los botones que deben crearse. Este código considera que la página que el usuario está viendo actualmente y solo permite crear un máximo de seis botones por página. Haga clic en el botón instancias llamada la `HandleButtonClicked` método:
+El `NumberOflevels` propiedad se utiliza para determinar qué botones se deben crear. Este código considera que la página que el usuario está viendo actualmente y solo crea un máximo de seis botones por página. Haga clic en el botón instancias llamada la `HandleButtonClicked` método:
 
 
 ```csharp
@@ -183,9 +183,9 @@ private void HandleButtonClicked(object sender, EventArgs args)
 }
 ```
 
-Este método asigna la `CurrentLevel` propiedad que se utiliza por la `GameScene` cuando se carga un nivel. Después de establecer el `CurrentLevel`, `GoToGameScene` método se genera, cambio de la escena de `LevelSelectScene` a `GameScene`.
+Este método asigna el `CurrentLevel` propiedad que está usando el `GameScene` al cargar un nivel. Después de establecer el `CurrentLevel`, `GoToGameScene` se genera el método, cambio de la escena `LevelSelectScene` a `GameScene`.
 
-El `GameScene` llamadas de constructor `GoToLevel`, que ejecuta la lógica de nivel de carga:
+El `GameScene` constructor llama a `GoToLevel`, que lleva a cabo la lógica de nivel de carga:
 
 
 ```csharp
@@ -199,7 +199,7 @@ private void GoToLevel(int levelNumber)
 }
 ```
 
-A continuación echaremos un vistazo en métodos llamados en `GoToLevel`.
+A continuación le echamos un vistazo a los métodos llamados en `GoToLevel`.
 
 
 ### <a name="loadlevel"></a>LoadLevel
@@ -223,9 +223,9 @@ private void LoadLevel(int levelNumber)
 }
 ```
 
-El `CCTileMap` constructor toma un nombre de archivo, que se crea con el número de nivel que se pasa a `LoadLevel`. Para obtener más información sobre cómo crear y trabajar con `CCTileMap` instancias, vea el [utilizando coloca en mosaico con la Guía de CocosSharp](~/graphics-games/cocossharp/tiled.md).
+El `CCTileMap` constructor toma un nombre de archivo, se crea con el número de nivel pasado a `LoadLevel`. Para obtener más información sobre cómo crear y trabajar con `CCTileMap` instancias, vea el [uso de Tiled con CocosSharp guía](~/graphics-games/cocossharp/tiled.md).
 
-Actualmente, CocosSharp no permite la reordenación de las capas sin quitar y volver a agregarlas a su elemento primario `CCScene` (que es el `GameScene` en este caso), por lo que las últimas líneas del método necesarios para volver a ordenar las capas.
+Actualmente, CocosSharp no permite la reordenación de las capas sin quitar y volver a agregarlas a su elemento principal `CCScene` (que es el `GameScene` en este caso), por lo que las últimas líneas del método son necesarios para cambiar el orden de las capas.
 
 
 ### <a name="createcollision"></a>CreateCollision
@@ -241,14 +241,14 @@ private void CreateCollision()
 }
 ```
 
-Sin esta colisión, el Reproductor se incluirían en el nivel y el juego sería reproducirse. Colisión sólido permite que el Reproductor guiará en el suelo y evita que el Reproductor de guía a través de las paredes o saltar seguridad a través de los límites máximos.
+Sin este conflicto, el Reproductor podría pasar explícitamente el nivel y sería reproduzca el juego. Colisión sólido permite que el Reproductor guiará en el suelo y se impide que el Reproductor a través de las paredes o saltar copia a través de los límites máximos.
 
-Colisión en el tiempo de moneda se puede agregar con ningún código adicional: únicas modificaciones a los archivos de mosaico. 
+Colisión en tiempo de moneda se puede agregar con ningún código adicional: solo las modificaciones a los archivos en mosaico. 
 
 
 ### <a name="processtileproperties"></a>ProcessTileProperties
 
-Una vez que se carga un nivel y se crea el conflicto, `ProcessTileProperties` se llama para realizar la lógica basada en el icono Propiedades. Tiempo de moneda incluye un `PropertyLocation` struct para definir propiedades y las coordenadas del mosaico con estas propiedades:
+Una vez que se carga un nivel y se crea la colisión, `ProcessTileProperties` se llama para realizar la lógica basada en Propiedades del mosaico. Moneda incluye un `PropertyLocation` struct para definir las propiedades y las coordenadas del mosaico con estas propiedades:
 
 
 ```csharp
@@ -262,7 +262,7 @@ public struct PropertyLocation
 }
 ```
 
-Esta estructura se usa para construir crear instancias de la entidad y quitar iconos innecesarios en el `ProcessTileProperties` método:
+Esta estructura se usa para construir instancias de entidad de crear y quitar iconos innecesarios en el `ProcessTileProperties` método:
 
 
 ```csharp
@@ -297,9 +297,9 @@ private void ProcessTileProperties()
 }
 ```
 
-El bucle foreach evalúa cada propiedad de mosaico, comprobar si la clave sea `EntityType` o `RemoveMe`. `EntityType` indica que se debe crear una instancia de entidad. `RemoveMe` indica que el icono se debe quitar por completo en tiempo de ejecución.
+El bucle foreach evalúa cada propiedad de icono, comprobando si la clave `EntityType` o `RemoveMe`. `EntityType` indica que se debe crear una instancia de entidad. `RemoveMe` indica que el icono se debe quitar por completo en tiempo de ejecución.
 
-Si una propiedad con el `EntityType` clave se encuentra, a continuación, `TryCreateEntity` se llama, los intentos de crear una entidad mediante la coincidencia con la propiedad la `EntityType` clave:
+Si una propiedad con el `EntityType` clave se encuentra, a continuación, `TryCreateEntity` se llama, que intenta crear una entidad mediante la propiedad que coincide con el `EntityType` clave:
 
 
 ```csharp
@@ -344,57 +344,57 @@ private bool TryCreateEntity(string entityType, float worldX, float worldY)
 ```
 
 
-## <a name="adding-new-entities"></a>Agregar nuevas entidades
+## <a name="adding-new-entities"></a>Adición de nuevas entidades
 
-Tiempo de moneda utiliza el modelo de entidad para sus objetos del juego (descrita en la [guían de las entidades de CocosSharp](~/graphics-games/cocossharp/entities.md)). Todas las entidades que heredan de `CCNode`, lo que significa que se pueden agregar como elementos secundarios de la `gameplayLayer`.
+Tiempo de moneda utiliza el modelo de entidad para sus objetos del juego (descrita en el [guiar las entidades de CocosSharp](~/graphics-games/cocossharp/entities.md)). Todas las entidades que heredan de `CCNode`, lo que significa que se pueden agregar como elementos secundarios de la `gameplayLayer`.
 
-Cada tipo de entidad también se hace referencia directamente a través de una lista o una sola instancia. Por ejemplo, el `Player` hace referencia a la `player` campo y todos los `Coin` instancias se hace referencia en una `coins` lista. Mantener las referencias directas a las entidades (en lugar de hacer referencia a ellas a través de la `gameLayer.Children` lista) se obtiene un código que tiene acceso a estas entidades más fáciles de leer y elimina la conversión de tipos potencialmente costosa.
+Cada tipo de entidad también se hace referencia directamente a través de una lista o una sola instancia. Por ejemplo, el `Player` hace referencia el `player` campo y todos `Coin` instancias se hace referencia en una `coins` lista. Mantener las referencias directas a las entidades (en lugar de hacer referencia a ellas a través de la `gameLayer.Children` lista) hace que el código que tiene acceso a estas entidades más fáciles de leer y elimina la conversión de tipos potencialmente costosa.
 
-El código existente proporciona una serie de tipos de entidad como ejemplos de cómo crear nuevas entidades. Los pasos siguientes se pueden utilizar para crear una nueva entidad:
+El código existente proporciona una serie de tipos de entidad como ejemplos de cómo crear nuevas entidades. Los siguientes pasos pueden utilizarse para crear una nueva entidad:
 
 
 ### <a name="1---define-a-new-class-using-the-entity-pattern"></a>1: definir una nueva clase utilizando el modelo de entidad
 
-El único requisito para la creación de una entidad es crear una clase que hereda de `CCNode`. Mayoría de las entidades tiene algún objeto visual, como un `CCSprite`, que se debe agregar como elemento secundario de la entidad en su constructor.
+El único requisito para crear una entidad es crear una clase que hereda de `CCNode`. La mayoría de las entidades tienen algún objeto visual, como un `CCSprite`, que se debe agregar como elemento secundario de la entidad en su constructor.
 
-CoinTime proporciona el `AnimatedSpriteEntity` clase que simplifica la creación de entidades animadas. Las animaciones se tratarán con más detalle en la [sección animando entidades](#animated-entities).
-
-
-### <a name="2--add-a-new-entry-to-the-trycreateentity-switch-statement"></a>2: agregar una nueva entrada a la instrucción switch de TryCreateEntity
-
-Instancias de la nueva entidad se deberían crear instancias en el `TryCreateEntity`. Si la entidad requiere la lógica de cada fotograma como colisión, AI o leer la entrada, la `GameScene` tiene que mantener una referencia al objeto. Si se necesitan varias instancias (como `Coin` o `Enemy` instancias), a continuación, un nuevo `List` deben agregarse a la `GameScene` clase.
+CoinTime proporciona el `AnimatedSpriteEntity` clase lo que simplifica la creación de entidades animadas. Las animaciones se tratarán con más detalle en la [sección entidades animado](#animated-entities).
 
 
-### <a name="3--modify-tile-properties-for-the-new-entity"></a>3: modificar las propiedades de icono de la nueva entidad
+### <a name="2--add-a-new-entry-to-the-trycreateentity-switch-statement"></a>2: agregar una nueva entrada a la instrucción switch TryCreateEntity
 
-Una vez que el código es compatible con la creación de la nueva entidad, debe agregarse a la tileset la nueva entidad. Se puede editar la tileset abriendo cualquier nivel `.tmx` archivo. 
+Las instancias de la nueva entidad deben crearse en el `TryCreateEntity`. Si la entidad requiere una lógica de cada fotograma como colisión, inteligencia artificial o leer la entrada, el `GameScene` necesita mantener una referencia al objeto. Si se necesitan varias instancias (como `Coin` o `Enemy` instancias), a continuación, un nuevo `List` deben agregarse a la `GameScene` clase.
 
-El tileset se almacena de manera independiente desde el .tmx en el **mastersheet.tsx** de archivos, por lo que debe importarse antes de que se puede editar:
 
-![](cointime-images/image11.png "El tileset se almacena de manera independiente desde el archivo .tsx, por lo que debe importarse antes de que se puede editar")
+### <a name="3--modify-tile-properties-for-the-new-entity"></a>3: modificar las propiedades de icono para la nueva entidad
 
-Una vez importado, propiedades de los iconos seleccionados son editables, y se puede agregar el EntityType:
+Una vez que el código es compatible con la creación de la nueva entidad, debe agregarse a la tileset la nueva entidad. Se puede editar el tileset abriendo cualquier nivel `.tmx` archivo. 
 
-![](cointime-images/image12.png "Una vez importado, propiedades de los iconos seleccionados son editables, y puede agregarse el EntityType")
+El tileset se almacena independientes de la .tmx en el **mastersheet.tsx** de archivos, por lo que debe importarse antes de se puede editar:
 
-Una vez creada la propiedad, su valor puede establecerse para que coincida con el nuevo `case` en `TryCreateEntity`:
+![](cointime-images/image11.png "Se almacena el tileset independiente desde el archivo .tsx, por lo que debe importarse antes de se puede editar")
 
-![](cointime-images/image13.png "Una vez creada la propiedad, su valor puede establecerse para que coincida con el nuevo caso de TryCreateEntity")
+Una vez importado, las propiedades de los iconos seleccionados son editables, y puede agregarse el EntityType:
 
-Después de que se ha cambiado el tileset, debe exportarse: Esto hace que los cambios estén disponibles para todos los demás niveles:
+![](cointime-images/image12.png "Una vez importado, las propiedades de los iconos seleccionados son editables, y se puede agregar el EntityType")
 
-![](cointime-images/image14.png "Después de que se ha cambiado el tileset, debe exportarse")
+Una vez creada la propiedad, su valor se puede establecer para que coincida con el nuevo `case` en `TryCreateEntity`:
 
-Debe sobrescribir el tileset existente **mastersheet.tsx** tileset:
+![](cointime-images/image13.png "Una vez creada la propiedad, su valor se puede establecer para que coincida con el nuevo caso de TryCreateEntity")
 
-![](cointime-images/image15.png "tileset debe sobrescribir el tileset mastersheet.tsx existente")
+Una vez modificado el tileset, debe exportarse: Esto hace que los cambios que estén disponibles para todos los demás niveles:
+
+![](cointime-images/image14.png "Una vez modificado el tileset, debe exportarse")
+
+El tileset debe sobrescribir la existente **mastersheet.tsx** tileset:
+
+![](cointime-images/image15.png "tileset debe sobrescribir la existente tileset mastersheet.tsx")
 
 
 ## <a name="entity-tile-removal"></a>Eliminación del icono de entidad
 
-Cuando se carga un mapa de mosaico en un juego, los mosaicos individuales son objetos estáticos. Puesto que las entidades requieren un comportamiento personalizado, como un movimiento, código en tiempo de moneda quita mosaicos cuando se crean entidades.
+Cuando se carga un mapa de mosaico en un juego, los iconos individuales son objetos estáticos. Puesto que las entidades requieren un comportamiento personalizado, como un movimiento, código en tiempo de moneda quita mosaicos cuando se crean las entidades.
 
-`ProcessTileProperties` incluye la lógica para quitar los iconos que crean entidades mediante el `RemoveTile` método:
+`ProcessTileProperties` incluye la lógica para quitar los iconos que creación entidades con el `RemoveTile` método:
 
 
 ```csharp
@@ -418,23 +418,23 @@ private void ProcessTileProperties()
 }
 ```
 
-Esta eliminación automática de los iconos es suficiente para las entidades que ocupan un único mosaico en tileset, por ejemplo, monedas y enemigos. Entidades mayores requieren propiedades y lógica adicional.
+Esta eliminación automática de iconos es suficiente para las entidades que ocupan un solo mosaico en tileset, por ejemplo, monedas y enemigos. Entidades mayores requieren las propiedades y lógica adicional.
 
-La puerta de requiere dos iconos para dibujar completamente:
+La puerta requiere dos iconos para dibujar completamente:
 
-![](cointime-images/image16.png "La puerta de requiere dos iconos para dibujar por completo")
+![](cointime-images/image16.png "La puerta requiere dos iconos para dibujar completamente")
 
-El icono de la parte inferior de la puerta contiene las propiedades para crear una entidad (**EntityType** establecido en **puerta**):
+El icono de la parte inferior de la puerta contiene las propiedades para la creación de una entidad (**EntityType** establecido en **puerta**):
 
 ![](cointime-images/image17.png "El icono de la parte inferior de la puerta contiene las propiedades para crear un conjunto de entidades EntityType al puerta")
 
-Dado que sólo el icono de la parte inferior de la puerta se quita cuando se crea la instancia de puerta, se necesita lógica adicional para quitar el icono superior en tiempo de ejecución. El icono superior tiene un **RemoveMe** propiedad establecida en **true**:
+Puesto que sólo el icono de la parte inferior en la puerta se quita cuando se crea la instancia de la puerta, se necesita lógica adicional para quitar el icono superior en tiempo de ejecución. El icono superior tiene un **RemoveMe** propiedad establecida en **true**:
 
 ![](cointime-images/image18.png "El icono superior tiene una propiedad RemoveMe establecida en true")
 
 
 
-Esta propiedad se utiliza para quitar iconos en `ProcessTileProperties`:
+Esta propiedad se usa para quitar los iconos de `ProcessTileProperties`:
 
 
 ```csharp
@@ -456,15 +456,15 @@ private void ProcessTileProperties()
 
 ## <a name="entity-offsets"></a>Desplazamientos de entidad
 
-Entidades creadas desde los iconos se sitúan alineando el centro de la entidad con el centro del mosaico. Las entidades de mayor, como `Door`, usar propiedades adicionales y la lógica para colocar correctamente. 
+Creado a partir de los iconos de las entidades se colocan alineando el centro de la entidad con el centro del icono. Las entidades de mayor tamaño, como `Door`, use propiedades adicionales y la lógica para colocar correctamente. 
 
-El icono de puerta de la parte inferior, que define la `Door` selección de ubicación de la entidad, especifica un **YOffset** valor 4. Sin esta propiedad, el `Door` instancia se coloca en el centro del mosaico:
+El icono de puerta de la parte inferior, que define el `Door` selección de ubicación de la entidad, especifica un **YOffset** valor 4. Sin esta propiedad, el `Door` instancia se coloca en el centro del icono:
 
 ![](cointime-images/image19.png "Sin esta propiedad, la instancia de la puerta se coloca en el centro del icono")
 
  
 
-Esto se ha corregido aplicando la **YOffset** valor en `ProcessTileProperties`:
+Corrija este problema aplicando el **YOffset** valor en `ProcessTileProperties`:
 
 
 ```csharp
@@ -496,12 +496,12 @@ private void ProcessTileProperties()
 
 ## <a name="animated-entities"></a>Entidades animadas
 
-Moneda tiempo incluye varias entidades animadas. El `Player` y `Enemy` entidades reproducción animaciones de recorrido y `Door` entidad desempeña una animación de apertura, una vez que se han recopilado todas las monedas.
+Moneda incluye varias entidades animadas. El `Player` y `Enemy` entidades reproducción animaciones de recorrido y `Door` entidad desempeña una animación de apertura de una vez que se hayan recopilado todas las monedas.
 
 
-### <a name="achx-files"></a>archivos de .achx
+### <a name="achx-files"></a>archivos .achx
 
-Las animaciones de tiempo de moneda se definen en archivos de .achx. Se define cada animación entre `AnimationChain` etiquetas, como se muestra en la siguiente animación definida en **propanimations.achx**:
+Las animaciones de tiempo de moneda se definen en archivos .achx. Cada animación se define entre `AnimationChain` etiquetas, como se muestra en la siguiente animación definida en **propanimations.achx**:
 
 
 ```xml
@@ -523,27 +523,27 @@ Las animaciones de tiempo de moneda se definen en archivos de .achx. Se define c
 </AnimationChain> 
 ```
 
-Esta animación solo contiene un solo marco, lo que da lugar a la entidad de pico mostrar una imagen estática. Las entidades pueden utilizar archivos .achx si aparecen las animaciones de uno o varios marcos. Marcos adicionales pueden agregarse a los archivos de .achx sin necesidad de realizar cambios en el código. 
+Esta animación solo contiene un solo fotograma, lo que resulta en la entidad de pico mostrar una imagen estática. Las entidades pueden utilizar archivos .achx si se muestran las animaciones de uno o varios fotogramas. Marcos adicionales se pueden agregar a los archivos .achx sin necesidad de realizar cambios en el código. 
 
-Marcos de definen qué imagen que se muestra en el `TextureName` parámetro y las coordenadas de la pantalla en el `LeftCoordinate`, `RightCoordinate`, `TopCoordinate`, y `BottomCoordinate` etiquetas. Estos representan las coordenadas de píxel del fotograma de animación en la imagen que se está usando: **mastersheet.png** en este caso.
+Marcos de definen qué imagen se muestre en el `TextureName` parámetro y las coordenadas de la pantalla en la `LeftCoordinate`, `RightCoordinate`, `TopCoordinate`, y `BottomCoordinate` etiquetas. Estos representan las coordenadas de píxel del fotograma de animación en la imagen que se usa – **mastersheet.png** en este caso.
 
 ![](cointime-images/image20.png "Estos representan las coordenadas de píxel del fotograma de animación en la imagen")
 
-El `FrameLength` propiedad define el número de segundos que se debe mostrar un marco en una animación. Las animaciones de fotogramas solo pasar por alto este valor.
+El `FrameLength` propiedad define el número de segundos que debe mostrarse un fotograma de una animación. Las animaciones de fotogramas solo pasar por alto este valor.
 
-Se omiten todas las demás propiedades AnimationChain en el archivo .achx por tiempo de moneda.
+Se omiten todas las demás propiedades AnimationChain en el archivo .achx por hora de moneda.
 
 
 ### <a name="animatedspriteentity"></a>AnimatedSpriteEntity
 
-Lógica de la animación se encuentra en la `AnimatedSpriteEntity` (clase), que actúa como clase base para la mayoría de las entidades que se usa en el `GameScene`. Proporciona la funcionalidad siguiente:
+Lógica de animación se incluye en el `AnimatedSpriteEntity` (clase), que actúa como clase base para la mayoría de las entidades que se usa en el `GameScene`. Proporciona la funcionalidad siguiente:
 
  - La carga de `.achx` archivos
  - Caché de animación de animaciones cargadas
  - Instancia de CCSprite para mostrar la animación
  - Lógica para cambiar el marco actual
 
-El constructor de picos proporciona un ejemplo sencillo de cómo cargar y usar animaciones:
+El constructor de picos proporciona un ejemplo sencillo de cómo cargar y utilizar animaciones:
 
 
 ```csharp
@@ -554,7 +554,7 @@ public Spikes ()
 }
 ```
 
-El **propAnimations.achx** sólo contiene una animación, por lo que el constructor tiene acceso a esta animación por índice. Si un archivo .achx contiene varias animaciones, animaciones pueden hacer referencia a por su nombre, como se muestra en el `Enemy` constructor:
+El **propAnimations.achx** contiene sólo una animación, por lo que el constructor tiene acceso a esta animación por índice. Si un archivo .achx contiene varias animaciones, a continuación, se pueden hacer referencia en las animaciones por nombre, como se muestra en el `Enemy` constructor:
 
 
 ```csharp
@@ -565,7 +565,7 @@ walkRightAnimation = animations.Find (item => item.Name == "WalkRight");
 
 ## <a name="summary"></a>Resumen
 
-Esta guía cubre los detalles de implementación de tiempo de moneda. Tiempo de moneda se crea para que sea un completo juego, pero también es un proyecto que se puede modificar fácilmente y se expanden. Agregar nuevos niveles y la creación de nuevas entidades para comprender mejor cómo se implementa el tiempo de moneda, se aconseja dedicar realizar las modificaciones del tiempo a niveles, los lectores.
+Esta guía cubre los detalles de implementación de tiempo de moneda. Tiempo de moneda se crea un juego completo, pero también es un proyecto que se puede modificar fácilmente y se expanden. Se anima al lector dedicar realice modificaciones de tiempo en niveles, agregar nuevos niveles y crear nuevas entidades para comprender mejor cómo se implementa el tiempo de moneda.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

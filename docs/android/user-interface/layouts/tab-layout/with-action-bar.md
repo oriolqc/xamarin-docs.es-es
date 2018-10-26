@@ -1,57 +1,57 @@
 ---
-title: Diseños con pestañas con el ActionBar
-description: Esta guía presenta y explica cómo usar las APIs ActionBar para crear una interfaz de usuario con pestañas en una aplicación Xamarin.Android.
+title: Diseños con pestañas con ActionBar
+description: Esta guía presenta y explica cómo usar las APIs ActionBar para crear una interfaz de usuario con pestañas en una aplicación de Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: B7E60AAF-BDA5-4305-9000-675F0438734D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 3e96ce2064391d585943f4d79453f8b4f8c6f583
-ms.sourcegitcommit: 1561c8022c3585655229a869d9ef3510bf83f00a
+ms.openlocfilehash: af5554d08ac6c45fc0c392bd17cef5d91251bb1a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/27/2018
-ms.locfileid: "32020132"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106512"
 ---
-# <a name="tabbed-layouts-with-the-actionbar"></a>Diseños con pestañas con el ActionBar
+# <a name="tabbed-layouts-with-the-actionbar"></a>Diseños con pestañas con ActionBar
 
-_Esta guía presenta y explica cómo usar las APIs ActionBar para crear una interfaz de usuario con pestañas en una aplicación Xamarin.Android._
+_Esta guía presenta y explica cómo usar las APIs ActionBar para crear una interfaz de usuario con pestañas en una aplicación de Xamarin.Android._
 
 
 ## <a name="overview"></a>Información general
 
-La barra de acción es un patrón de interfaz de usuario de Android que se usa para proporcionar una interfaz de usuario coherente para las características clave como pestañas, identidad de la aplicación, los menús y la búsqueda. En 3.0, Android (nivel de API 11), Google introdujo las APIs ActionBar para la plataforma Android. Las APIs ActionBar introducir temas de la interfaz de usuario para proporcionar una apariencia coherente y clases que permiten a las interfaces de usuario con pestañas. Esta guía describe cómo agregar pestañas de la barra de acciones a una aplicación Xamarin.Android. También explica cómo utilizar el v7 Android biblioteca de compatibilidad con pestañas de ActionBar de atrás para aplicaciones de Xamarin.Android destinadas a Android 2.1 para Android 2.3. 
+La barra de acciones es un patrón de interfaz de usuario de Android que se usa para proporcionar una interfaz de usuario coherente para las características clave, como pestañas, identidad de aplicación, los menús y búsqueda. En Android 3.0 (API nivel 11), Google introdujo las APIs ActionBar a la plataforma Android. Las APIs ActionBar presentar los temas de la interfaz de usuario para proporcionar una apariencia coherente y clases que permiten a las interfaces de usuario con pestañas. Esta guía describe cómo agregar pestañas de la barra de acciones a una aplicación de Xamarin.Android. También se explica cómo usar el v7 Android Support Library a restituir ActionBar fichas para aplicaciones de Xamarin.Android destinadas a Android 2.1 para Android 2.3. 
 
-Tenga en cuenta que `Toolbar` es un componente de la barra de acción más reciente y más generalizada que debe usar en lugar de `ActionBar` (`Toolbar` se ha diseñado para reemplazar `ActionBar`). Para obtener más información, consulte [barra de herramientas](~/android/user-interface/controls/tool-bar/index.md). 
+Tenga en cuenta que `Toolbar` es un componente de barra de acción más reciente y más generales que debe usar en lugar de `ActionBar` (`Toolbar` fue diseñado para reemplazar `ActionBar`). Para obtener más información, consulte [barra de herramientas](~/android/user-interface/controls/tool-bar/index.md). 
 
 
 
 ## <a name="requirements"></a>Requisitos
 
-Cualquier aplicación Xamarin.Android que tiene como destino el nivel de API 11 (Android 3.0) o posterior tiene acceso a las APIs de ActionBar como parte de las API nativas de Android. 
+Cualquier aplicación de Xamarin.Android que tiene como destino el nivel de API 11 (Android 3.0) o superior tiene acceso a las APIs de ActionBar como parte de las API nativas de Android. 
 
-Algunas de las APIs ActionBar se han trasladado volver a nivel de API 7 (Android 2.1) y están disponibles a través de la [V7 AppCompat biblioteca](http://developer.android.com/tools/support-library/features.html#v7-appcompat), que estará disponible para las aplicaciones de Xamarin.Android a través de la [biblioteca de compatibilidad de Android en Xamarin - V7 ](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) paquete.
+Algunas de las APIs ActionBar se han trasladado volver al nivel de API 7 (Android 2.1) y están disponibles a través de la [V7 AppCompat biblioteca](http://developer.android.com/tools/support-library/features.html#v7-appcompat), que está disponible para aplicaciones de Xamarin.Android a través de la [biblioteca de compatibilidad de Android de Xamarin - V7 ](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) paquete.
 
 
 
-## <a name="introducing-tabs-in-the-actionbar"></a>Introducción a las pestañas en el ActionBar
+## <a name="introducing-tabs-in-the-actionbar"></a>Introducción a las pestañas en la barra de acciones
 
-La barra de acciones intenta mostrar todas sus pestañas simultáneamente y realizar todas las pestañas de igual tamaño basándose en el ancho de la etiqueta de ficha más amplia. Esto se muestra en la captura de pantalla siguiente: 
+La barra de acciones intenta mostrar todas sus pestañas simultáneamente y todas las fichas Igualar tamaño según el ancho de la etiqueta de ficha más amplio. Esto se muestra en la captura de pantalla siguiente: 
 
-![Captura de pantalla de ejemplo de ActionBar con todas las fichas de igual tamaño que se muestra](with-action-bar-images/image1.png)
+![Captura de pantalla de ejemplo de la barra de acciones con todas las fichas de igual tamaño que se muestra](with-action-bar-images/image1.png)
 
-Cuando el ActionBar no puede mostrar todas las fichas, configurará las pestañas en una vista puede desplazar horizontalmente. El usuario puede deslizar rápidamente izquierda o derecha para ver las demás pestañas. Esta captura de pantalla de Google Play muestra un ejemplo de esto: 
+Cuando la barra de acciones no puede mostrar todas las fichas, configurará las fichas en una vista puede desplazar horizontalmente. El usuario puede pasar el dedo izquierda o derecha para ver las demás pestañas. Esta captura de pantalla de Google Play muestra un ejemplo de esto: 
 
 ![Captura de pantalla de ejemplo de pestañas en una vista puede desplazar horizontalmente](with-action-bar-images/image2.png)
 
-Cada pestaña en la barra de acciones se debe asociar con un [ *fragmento*](~/android/platform/fragments/index.md). Cuando el usuario selecciona una ficha, la aplicación mostrará el fragmento que está asociado a la ficha. El ActionBar no es responsable de mostrar el fragmento correspondiente al usuario. En su lugar, el ActionBar le notificará una aplicación acerca de los cambios de estado en una pestaña a través de una clase que implementa la interfaz ActionBar.ITabListener. Esta interfaz proporciona tres métodos de devolución de llamada que va a invocar Android cuando cambia el estado de la pestaña: 
+Cada pestaña en la barra de acciones se debe asociar con un [ *fragmento*](~/android/platform/fragments/index.md). Cuando el usuario selecciona una ficha, la aplicación mostrará el fragmento que está asociado a la pestaña. La barra de acciones no es responsable de mostrar el fragmento correspondiente al usuario. En su lugar, la barra de acciones le notificará una aplicación acerca de los cambios de estado en una pestaña a través de una clase que implementa la interfaz ActionBar.ITabListener. Esta interfaz proporciona tres métodos de devolución de llamada que se invocará Android cuando cambia el estado de la pestaña: 
 
--  **OnTabSelected** -llama a este método cuando el usuario selecciona la pestaña. Se debería mostrar el fragmento.
+-  **OnTabSelected** : este método se llama cuando el usuario selecciona la pestaña. Debe mostrar el fragmento.
 
--  **OnTabReselected** -llama a este método cuando la pestaña ya está seleccionada, pero se vuelve a estar activada por el usuario. Esta devolución de llamada se utiliza normalmente para la actualización o actualizar el fragmento mostrado.
+-  **OnTabReselected** : este método se llama cuando la pestaña ya está seleccionada, pero se vuelve a estar activada por el usuario. Esta devolución de llamada se utiliza normalmente para la actualización o actualizar el fragmento de muestra.
 
--  **OnTabUnselected** -llama a este método cuando el usuario selecciona otra ficha. Esta devolución de llamada se usa para guardar el estado en el fragmento mostrado antes, este desaparece.
+-  **OnTabUnselected** : este método se llama cuando el usuario selecciona otra pestaña. Esta devolución de llamada se usa para guardar el estado en el fragmento mostrado antes de desaparecer.
 
 Xamarin.Android ajusta el `ActionBar.ITabListener` con eventos en el `ActionBar.Tab` clase. Las aplicaciones pueden asignar a controladores de eventos a uno o varios de estos eventos. Hay tres eventos (una para cada método en `ActionBar.ITabListener`) que se producirá una pestaña de la barra de acción: 
 
@@ -61,11 +61,11 @@ Xamarin.Android ajusta el `ActionBar.ITabListener` con eventos en el `ActionBar.
 
 
 
-### <a name="adding-tabs-to-the-actionbar"></a>Agregar pestañas a la ActionBar
+### <a name="adding-tabs-to-the-actionbar"></a>Agregar pestañas a la barra de acciones
 
-El ActionBar es nativo para Android 3.0 (API nivel 11) y versiones posteriores y está disponible para cualquier aplicación Xamarin.Android destinado a esta API como mínimo. 
+La barra de acciones es nativo para Android 3.0 (API nivel 11) y versiones posteriores y está disponible para cualquier aplicación de Xamarin.Android que tenga como destino de esta API, como mínimo. 
 
-Los siguientes pasos muestran cómo agregar pestañas ActionBar a una actividad Android: 
+Los siguientes pasos muestran cómo agregar fichas de la barra de acciones a una actividad de Android: 
 
 1. En el `OnCreate` método de una actividad &ndash; *antes de inicializar los widgets de interfaz de usuario* &ndash; una aplicación debe establecer el `NavigationMode` en el `ActionBar` a `ActionBar.NavigationModeTabs` tal como se muestra en este código fragmento de código:
 
@@ -76,12 +76,12 @@ Los siguientes pasos muestran cómo agregar pestañas ActionBar a una actividad 
 
 2. Crear una nueva pestaña con `ActionBar.NewTab()`.
 
-3. Asignar controladores de eventos o proporcionar un personalizado `ActionBar.ITabListener` implementación que responderá a los eventos que se producen cuando el usuario interactúa con las pestañas de ActionBar.
+3. Asignar controladores de eventos o proporcionar una personalizada `ActionBar.ITabListener` implementación que responderá a los eventos que se producen cuando el usuario interactúa con las pestañas de la barra de acciones.
 
-4. Agregar la pestaña que se creó en el paso anterior para el `ActionBar`.
+4. La pestaña que se creó en el paso anterior para agregar el `ActionBar`.
 
 
-El código siguiente es un ejemplo del uso de estos pasos para agregar pestañas a una aplicación que utiliza los controladores de eventos para responder a los cambios de estado: 
+El código siguiente es un ejemplo del uso de estos pasos para agregar pestañas a una aplicación que usa controladores de eventos para responder a los cambios de estado: 
 
 ```csharp
 protected override void OnCreate(Bundle bundle)
@@ -108,26 +108,26 @@ protected override void OnCreate(Bundle bundle)
 ```
 
 
-#### <a name="event-handlers-vs-actionbaritablistener"></a>Controladores de eventos y ActionBar.ITabListener
+#### <a name="event-handlers-vs-actionbaritablistener"></a>Frente a los controladores de eventos ActionBar.ITabListener
 
-Las aplicaciones deben utilizar controladores de eventos y `ActionBar.ITabListener` para diferentes escenarios. Controladores de eventos ofrecen una cierta cantidad de comodidad sintáctica; evitarle tener que crear una clase e implementar `ActionBar.ITabListener`. Esta conveniencia vienen con un costo &ndash; Xamarin.Android realiza esta transformación para usted, crear una clase e implementar `ActionBar.ITabListener` para usted. Esto es correcto cuando una aplicación tiene un número limitado de pestañas. 
+Las aplicaciones deben usar controladores de eventos y `ActionBar.ITabListener` para diferentes escenarios. Controladores de eventos ofrecen una cierta comodidad sintáctica; ahorrará tener que crear una clase e implementar `ActionBar.ITabListener`. Esta conveniencia vienen con cierto costo &ndash; Xamarin.Android realiza esta transformación para usted, crear una clase e implementar `ActionBar.ITabListener` para usted. Esto está bien cuando una aplicación tiene un número limitado de pestañas. 
 
-Cuando se trabaja con muchas pestañas, o compartir la funcionalidad común entre las fichas de ActionBar, puede resultar más eficaces en cuanto a memoria y rendimiento para crear una clase personalizada que implementa `ActionBar.ITabListener`y compartir una sola instancia de la clase. Esto reducirá el número de GREF que está usando una aplicación Xamarin.Android. 
+Cuando se trabaja con muchas pestañas, o compartir la funcionalidad común entre las fichas de la barra de acciones, puede ser más eficiente en cuanto a memoria y rendimiento para crear una clase personalizada que implementa `ActionBar.ITabListener`y compartir una sola instancia de la clase. Esto reducirá el número de GREF que esté usando una aplicación de Xamarin.Android. 
 
 
 
 ### <a name="backwards-compatibility-for-older-devices"></a>Con las versiones anteriores compatibilidad para dispositivos antiguos
 
-El [biblioteca de compatibilidad de Android v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) back puertos ActionBar pestañas para Android 2.1 (API nivel 7). Las pestañas son accesibles en una aplicación Xamarin.Android una vez que este componente se ha agregado al proyecto.
+El [biblioteca de compatibilidad de Android v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) back puertos pestañas de la barra de acciones para Android 2.1 (API de nivel 7). Las pestañas son accesibles en una aplicación Xamarin.Android una vez que este componente se ha agregado al proyecto.
 
-Para usar el ActionBar, una actividad debe subclase `ActionBarActivity` y utilizar el tema de AppCompat tal como se muestra en el fragmento de código siguiente:
+Para usar la barra de acciones, una actividad debe subclase `ActionBarActivity` y utilizar el tema de AppCompat tal como se muestra en el siguiente fragmento de código:
 
 ```csharp
 [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat", MainLauncher = true, Icon = "@drawable/ic_launcher")]
 public class MainActivity: ActionBarActivity
 ```
 
-Una actividad puede obtener una referencia a su ActionBar desde el `ActionBarActivity.SupportingActionBar` propiedad. El fragmento de código siguiente muestra un ejemplo de cómo configurar la ActionBar en una actividad:
+Una actividad puede obtener una referencia a su barra de acciones desde el `ActionBarActivity.SupportingActionBar` propiedad. El fragmento de código siguiente muestra un ejemplo de la configuración de la barra de acciones en una actividad:
 
 ```csharp
 [Activity(Label = "@string/app_name", Theme = "@style/Theme.AppCompat", MainLauncher = true, Icon = "@drawable/ic_launcher")]
@@ -174,7 +174,7 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 
 ## <a name="summary"></a>Resumen
 
-En esta guía se explicó cómo crear una interfaz de usuario con pestañas en un Xamarin.Android mediante el ActionBar. Hemos aprendido cómo agregar pestañas a la ActionBar y cómo una actividad puede interactuar con eventos de pestaña a través de la `ActionBar.ITabListener` interfaz. También hemos visto cómo backports de paquete de biblioteca de compatibilidad de Android v7 AppCompat el ActionBar pestañas en versiones anteriores de Android. 
+En esta guía se explica cómo crear una interfaz de usuario con pestañas en Xamarin.Android mediante la barra de acciones. Analizamos cómo agregar pestañas a la barra de acciones y cómo una actividad puede interactuar con eventos de pestaña a través de la `ActionBar.ITabListener` interfaz. También hemos visto cómo la biblioteca de compatibilidad de Android v7 AppCompat paquete backports ActionBar las pestañas en versiones anteriores de Android. 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
@@ -185,5 +185,5 @@ En esta guía se explicó cómo crear una interfaz de usuario con pestañas en u
 - [ActionBar](http://developer.android.com/guide/topics/ui/actionbar.html)
 - [ActionBarActivity](http://developer.android.com/reference/android/support/v7/app/ActionBarActivity.html)
 - [Patrón de la barra de acciones](http://developer.android.com/design/patterns/actionbar.html)
-- [Android v7 AppCompat](http://developer.android.com/tools/support-library/features.html#v7-appcompat)
-- [Paquete de soporte técnico de Xamarin.Android biblioteca v7 AppCompat NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
+- [AppCompat de Android v7](http://developer.android.com/tools/support-library/features.html#v7-appcompat)
+- [Paquete de NuGet de soporte técnico de Xamarin.Android biblioteca v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)

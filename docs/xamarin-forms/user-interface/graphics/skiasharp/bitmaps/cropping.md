@@ -4,21 +4,21 @@ description: Obtenga información sobre cómo usar SkiaSharp para diseñar una i
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 3dd9011d19e77f52d1fe89a37e4d992c23c72ab1
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 653904da37354db52ef6bbd303355e98ddc1582f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615553"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122639"
 ---
 # <a name="cropping-skiasharp-bitmaps"></a>Recortar los mapas de bits de SkiaSharp
 
 El [ **creando y mapas de bits de dibujo de SkiaSharp** ](drawing.md) artículo se describe cómo un `SKBitmap` objeto se puede pasar a un `SKCanvas` constructor. Cualquier método de dibujo se llama en la que hace que los gráficos de lienzo para representarse en el mapa de bits. Estos métodos de dibujo incluyen `DrawBitmap`, lo que significa que esta técnica permite transferir parte o la totalidad de un mapa de bits a otro mapa de bits, quizás con las transformaciones aplicadas.
 
-Puede usar esa técnica para recortar un mapa de bits mediante una llamada a la [ `DrawBitmap` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmap/p/SkiaSharp.SKBitmap/SkiaSharp.SKRect/SkiaSharp.SKRect/SkiaSharp.SKPaint/) método con rectángulos de origen y destino:
+Puede usar esa técnica para recortar un mapa de bits mediante una llamada a la [ `DrawBitmap` ](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKRect,SkiaSharp.SKRect,SkiaSharp.SKPaint)) método con rectángulos de origen y destino:
 
 ```csharp
 canvas.DrawBitmap(bitmap, sourceRect, destRect);
@@ -744,7 +744,7 @@ En el `OnDoneButtonClicked` método, la matriz creada para los mapas de 15 bits 
 ImageSource[] imgSources = new ImageSource[15];
 ```
 
-`ImageSource` es el tipo de base de Xamarin.Forms que encapsula un mapa de bits. Afortunadamente, SkiaSharp permite la conversión de mapas de bits de SkiaSharp en Xamarin.Forms mapas de bits. El **SkiaSharp.Views.Forms** ensamblado define un [ `SKBitmapImageSource` ](https://developer.xamarin.com/api/type/SkiaSharp.Views.Forms.SKBitmapImageSource/) clase que derive de `ImageSource` pero se pueden crear en función de un SkiaSharp `SKBitmap` objeto. `SKBitmapImageSource` incluso define las conversiones entre `SKBitmapImageSource` y `SKBitmap`y de cómo `SKBitmap` objetos se almacenan en una matriz como mapas de bits de Xamarin.Forms:
+`ImageSource` es el tipo de base de Xamarin.Forms que encapsula un mapa de bits. Afortunadamente, SkiaSharp permite la conversión de mapas de bits de SkiaSharp en Xamarin.Forms mapas de bits. El **SkiaSharp.Views.Forms** ensamblado define un [ `SKBitmapImageSource` ](xref:SkiaSharp.Views.Forms.SKBitmapImageSource) clase que derive de `ImageSource` pero se pueden crear en función de un SkiaSharp `SKBitmap` objeto. `SKBitmapImageSource` incluso define las conversiones entre `SKBitmapImageSource` y `SKBitmap`y de cómo `SKBitmap` objetos se almacenan en una matriz como mapas de bits de Xamarin.Forms:
 
 ```csharp
 imgSources[4 * row + col] = (SKBitmapImageSource)bitmap;
@@ -762,5 +762,5 @@ Ahora puede colocarlas en el orden correcto. Los iconos en la misma fila o colum
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
