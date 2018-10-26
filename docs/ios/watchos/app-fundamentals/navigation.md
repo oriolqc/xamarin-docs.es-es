@@ -1,24 +1,24 @@
 ---
-title: Trabajar con la navegación en Xamarin watchOS
-description: Este documento describe cómo trabajar con la navegación en una aplicación watchOS. Se trata de interfaces modales y navegación jerárquica, interfaces basadas en la página.
+title: Trabajar con la navegación en Xamarin de watchOS
+description: Este documento describe cómo trabajar con la navegación en una aplicación para watchOS. Describe las interfaces modales, navegación jerárquica y interfaces basadas en la página.
 ms.prod: xamarin
 ms.assetid: 71A64C10-75C8-4159-A547-6A704F3B5C2E
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: c9bcfc388164060549ca7010d11671abfa8230ac
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 71978bebcdf6033a766ae2bcb75ae061ed215a8b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790645"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102378"
 ---
-# <a name="working-with-watchos-navigation-in-xamarin"></a>Trabajar con la navegación en Xamarin watchOS
+# <a name="working-with-watchos-navigation-in-xamarin"></a>Trabajar con la navegación en Xamarin de watchOS
 
-La opción de navegación más sencilla disponible en el reloj es un sencillo [emergente modal](#modal) que aparece encima de la escena actual.
+La opción de navegación más simple disponible en el reloj es una sencilla [emergente modal](#modal) que aparece encima de la escena actual.
 
-Para aplicaciones de inspección de la escena se son dos paradigmas de navegación disponibles:
+Para varios escena watch hay aplicaciones son dos paradigmas de exploración disponibles:
 
 - [Navegación jerárquica](#Hierarchical_Navigation)
 - [Interfaces basadas en la página](#Page-Based_Interfaces)
@@ -27,13 +27,13 @@ Para aplicaciones de inspección de la escena se son dos paradigmas de navegaci�
 
 ## <a name="modal-interfaces"></a>Interfaces modales
 
-Use la `PresentController` método para abrir un controlador de interfaz de forma modal. El controlador de interfaz ya debe estar definido en el **Interface.storyboard**.
+Use el `PresentController` método para abrir un controlador de interfaz de forma modal. El controlador de interfaz debe estar ya definido en el **Interface.storyboard**.
 
 ```csharp
 PresentController ("pageController","some context info");
 ```
 
-Controladores de forma modal presentan use toda la pantalla (que abarcan la escena anterior). De forma predeterminada, el título se establece en **cancelar** y puntéelo descartará el controlador.
+Los controladores de forma modal presentan utilizan toda la pantalla (que trata de la escena anterior). De forma predeterminada, el título se establece en **cancelar** y pulsando en él, se cerrará el controlador.
 
 Para cerrar mediante programación el controlador presenta de forma modal, llame a `DismissController`.
 
@@ -41,43 +41,43 @@ Para cerrar mediante programación el controlador presenta de forma modal, llame
 DismissController();
 ```
 
-Pantallas modales pueden ser una sola escena o usar un diseño basado en la página.
+Las pantallas modales pueden ser una sola escena o usar un diseño basado en la página.
 
 <a name="Hierarchical_Navigation"/>
 
 ## <a name="hierarchical-navigation"></a>Navegación jerárquica
 
-Plano como una pila que se puede navegar hacia atrás por, de forma similar a la forma en que se presenta `UINavigationController` funciona en iOS. Plano puede ser insertada en la pila de navegación y extrae (mediante programación o mediante la selección del usuario).
+Segundo plano como una pila que se puede navegar hacia atrás por, de forma similar a la forma en que se presenta `UINavigationController` funciona en iOS. Segundo plano puede inserta en la pila de navegación y extrae (ya sea mediante programación o mediante la selección del usuario).
 
 ![](navigation-images/hierarchy-1.png "Plano se puede insertar en la pila de navegación") ![](navigation-images/hierarchy-2.png "plano puede extrae de la pila de navegación")
 
-Al igual que con iOS, un izquierda-borde-deslice el dedo navega hacia el controlador primario en una pila de navegación jerárquica.
+Al igual que con iOS, un deslizamiento de edge izquierda se desplaza hasta el controlador primario en una pila de navegación jerárquica.
 
 Tanto el [WatchKitCatalog](https://developer.xamarin.com/samples/WatchKitCatalog) y [WatchTables](https://developer.xamarin.com/samples/WatchTables) ejemplos incluyen la navegación jerárquica.
 
-### <a name="pushing-and-popping-in-code"></a>Insertar y retirar en código
+### <a name="pushing-and-popping-in-code"></a>Insertando e incluyendo en el código
 
-Ver Kit no requiere un "controlador de navegación" cobros crearse como hace iOS - Inserte simplemente un controlador con el `PushController` método y una pila de navegación se crean automáticamente.
+Vea el Kit no requiere un "controlador de navegación" cobros crearse como iOS - simplemente insertar un controlador con el `PushController` método y una pila de navegación se creará automáticamente.
 
 ```csharp
 PushController("secondPageController","some context info");
 ```
 
-Pantalla de inspección incluirá un **Atrás** botón en la esquina superior izquierda, pero puede quitar mediante programación una escena de la pila de navegación utilizando `PopController`.
+Pantalla de inspección incluirá un **Atrás** botón en la esquina superior izquierda, pero puede quitar mediante programación una escena de la pila de navegación usando `PopController`.
 
 ```csharp
 PopController();
 ```
 
-Igual que con iOS, también es posible volver a la raíz de la pila de navegación utilizando `PopToRootController`.
+Como con iOS, también es posible volver a la raíz de la pila de navegación usando `PopToRootController`.
 
 ```csharp
 PopToRootController();
 ```
 
-### <a name="using-segues"></a>Usar Segues
+### <a name="using-segues"></a>Uso de los objetos Segue
 
-Segues se pueden crear entre bastidores en el guión gráfico para definir la navegación jerárquica. Obtener el contexto de la escena de destino, las llamadas al sistema operativo `GetContextForSegue` para inicializar el nuevo controlador de interfaz.
+Los objetos Segue se pueden crear entre bastidores en el guión gráfico para definir la navegación jerárquica. Para obtener el contexto de la escena de destino, las llamadas al sistema operativo `GetContextForSegue` para inicializar el nuevo controlador de interfaz.
 
 ```csharp
 public override NSObject GetContextForSegue (string segueIdentifier)
@@ -92,12 +92,12 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 
 ## <a name="page-based-interfaces"></a>Interfaces basadas en la página
 
-Deslice el dedo interfaces basadas en la página de izquierda a derecha, similar a la forma en que `UIPageViewController` funciona en iOS. Puntos de indicador se muestran a lo largo de la parte inferior de la pantalla para mostrar la página que se muestra actualmente.
+Deslice el dedo interfaces basadas en la página de izquierda a derecha, similar a la forma `UIPageViewController` funciona en iOS. Puntos de indicador se muestran en la parte inferior de la pantalla para mostrar la página que se muestra actualmente.
 
 ![](navigation-images/paged-1.png "Primera página de ejemplo") ![](navigation-images/paged-2.png "segunda página de ejemplo") ![](navigation-images/paged-5.png "quinta página de ejemplo")
 
 
-Para convertir una interfaz basada en la página de la interfaz de usuario principal de la aplicación de inspección, use `ReloadRootControllers` con una matriz de controladores de interfaz y contextos:
+Para que una interfaz basada en la página de la interfaz de usuario principal para la aplicación del reloj, utilice `ReloadRootControllers` con una matriz de los controladores de interfaz y contextos:
 
 ```csharp
 var controllerNames = new [] { "pageController", "pageController", "pageController", "pageController", "pageController" };
@@ -105,7 +105,7 @@ var contexts = new [] { "First", "Second", "Third", "Fourth", "Fifth" };
 ReloadRootControllers (controllerNames, contexts);
 ```
 
-También puede presentar un controlador en una página que no sea la raíz con `PresentController` de una de las demás escenas en una aplicación.
+También puede presentar un controlador basado en la página que no es la raíz con `PresentController` desde uno de los otros bastidores en una aplicación.
 
 ```csharp
 var controllerNames = new [] { "pageController", "pageController", "pageController", "pageController", "pageController" };

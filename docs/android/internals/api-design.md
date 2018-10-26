@@ -3,15 +3,15 @@ title: Principios de diseño de la API de Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8abb78f335b159223e9394b7845eccbba8d124da
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 53348e15d1ecc74f50cacdd422da5c80af802d1b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996352"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110724"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principios de diseño de la API de Xamarin.Android
 
@@ -167,7 +167,8 @@ El *KeyEventArgs* clase a su vez tiene una [View.KeyEventArgs.Handled](https://d
 
 Tenemos previsto agregar sobrecargas para otros métodos y constructores para exponer la conexión basada en el delegado. Además, los agentes de escucha con varias devoluciones de llamada requieren algunos inspección adicional para determinar si la implementación de devoluciones de llamada individuales es razonable, por lo que se está convirtiendo estas que se identifican. Si no hay ningún evento correspondiente, los agentes de escucha deben usarse en C#, pero no dude en los que piensa que podría tener el uso del delegado a nuestra atención. También hemos hecho algunas conversiones de interfaces sin el sufijo "Escucha" cuando estaba claro que se beneficiarían de una alternativa de delegado.
 
-Todas las interfaces de los agentes de escucha de implementan el [ `Android.Runtime.IJavaObject` ](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) interfaz debido a los detalles de implementación del enlace, por lo que las clases de agente de escucha deben implementar esta interfaz. Esto puede hacerse mediante la implementación de la interfaz del agente de escucha en una subclase de [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) o cualquier otro objeto de Java, como una actividad de Android de ajustada.
+Todas las interfaces de los agentes de escucha de implementan la [`Android.Runtime.IJavaObject`](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/)
+interfaz, debido a los detalles de implementación del enlace, por lo que las clases de agente de escucha deben implementar esta interfaz. Esto puede hacerse mediante la implementación de la interfaz del agente de escucha en una subclase de [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) o cualquier otro objeto de Java, como una actividad de Android de ajustada.
 
 
 ### <a name="runnables"></a>Runnables
@@ -262,7 +263,7 @@ Para las interfaces que contiene las constantes que implementan otras interfaces
 Como resultado, la expresión Java *MediaStore.Video.VideoColumns.TITLE* debe enlazarse a la expresión de C# *MediaStore.Video.MediaColumnsConsts.Title* que es difícil de detectar sin leer gran cantidad de documentación de Java. En la versión 1.9, será la expresión equivalente de C# [ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/).
 
 Además, tenga en cuenta la [android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/) tipo, que implementa el Java *Parcelable* interfaz. Ya que implementa la interfaz, todas las constantes de esa interfaz son accesibles "a través de" el tipo de agrupación, por ejemplo, *Bundle.CONTENTS_FILE_DESCRIPTOR* es una expresión de Java perfectamente válida.
-Anteriormente, para portar esta expresión para C# necesitaría observar todas las interfaces que se implementan para ver de qué tipo el *CONTENTS_FILE_DESCRIPTOR* procede. A partir de Xamarin.Android 1.9, las clases que implementan las interfaces de Java que contienen constantes tienen un anidada *InterfaceConsts* tipo, que contendrá todas las constantes de la interfaz heredada. Esto le permitirá traducir *Bundle.CONTENTS_FILE_DESCRIPTOR* a [ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/).
+Anteriormente, para esta expresión para el puerto C# debe observar todas las interfaces que se implementan para ver de qué tipo el *CONTENTS_FILE_DESCRIPTOR* procede. A partir de Xamarin.Android 1.9, las clases que implementan las interfaces de Java que contienen constantes tienen un anidada *InterfaceConsts* tipo, que contendrá todas las constantes de la interfaz heredada. Esto le permitirá traducir *Bundle.CONTENTS_FILE_DESCRIPTOR* a [ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/).
 
 Por último, los tipos con un *Consts* como sufijo *Android.OS.ParcelableConsts* está ahora obsoleto, aparte de los recién incorporados InterfaceConsts tipos anidados. Se quitará en Xamarin.Android 3.0.
 

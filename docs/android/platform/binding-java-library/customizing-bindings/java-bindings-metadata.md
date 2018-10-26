@@ -1,31 +1,31 @@
 ---
-title: Java Bindings Metadata
-description: Código de C# en Xamarin.Android llama a bibliotecas de Java a través de enlaces, que son un mecanismo que resume los detalles de bajo nivel que se especifican en Java JNI (interfaz nativa). Xamarin.Android proporciona una herramienta que genera estos enlaces. Este conjunto de herramientas permite el control del desarrollador cómo se crea un enlace con los metadatos, que permite que los procedimientos, como modificar los espacios de nombres y cambiar el nombre de los miembros. Este documento se describe el funcionamiento de metadatos, se resumen los atributos que los metadatos es compatible con y se explica cómo resolver problemas de enlace mediante la modificación de estos metadatos.
+title: Metadatos de los enlaces de Java
+description: C#código de Xamarin.Android, llama a las bibliotecas de Java a través de enlaces, que son un mecanismo que abstraen los detalles de bajo nivel que se especifican en Java Native Interface (JNI). Xamarin.Android proporciona una herramienta que genera estos enlaces. Estas herramientas permite el control del desarrollador cómo se crea un enlace mediante el uso de metadatos, que permite que los procedimientos como la modificación de los espacios de nombres y cambiar el nombre de los miembros. Este documento se describe el funcionamiento de los metadatos, se resumen los atributos que los metadatos admite y se explica cómo resolver problemas de enlace mediante la modificación de estos metadatos.
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 6dea13fcda43cad22b8bea9838bbcb23b97820c7
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 858f1e5c0bd2af85b419bb9a1cffb7d484f3f7e4
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30771023"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113409"
 ---
-# <a name="java-bindings-metadata"></a>Java Bindings Metadata
+# <a name="java-bindings-metadata"></a>Metadatos de los enlaces de Java
 
-_Código de C# en Xamarin.Android llama a bibliotecas de Java a través de enlaces, que son un mecanismo que resume los detalles de bajo nivel que se especifican en Java JNI (interfaz nativa). Xamarin.Android proporciona una herramienta que genera estos enlaces. Este conjunto de herramientas permite el control del desarrollador cómo se crea un enlace con los metadatos, que permite que los procedimientos, como modificar los espacios de nombres y cambiar el nombre de los miembros. Este documento se describe el funcionamiento de metadatos, se resumen los atributos que los metadatos es compatible con y se explica cómo resolver problemas de enlace mediante la modificación de estos metadatos._
+_C#código de Xamarin.Android, llama a las bibliotecas de Java a través de enlaces, que son un mecanismo que abstraen los detalles de bajo nivel que se especifican en Java Native Interface (JNI). Xamarin.Android proporciona una herramienta que genera estos enlaces. Estas herramientas permite el control del desarrollador cómo se crea un enlace mediante el uso de metadatos, que permite que los procedimientos como la modificación de los espacios de nombres y cambiar el nombre de los miembros. Este documento se describe el funcionamiento de los metadatos, se resumen los atributos que los metadatos admite y se explica cómo resolver problemas de enlace mediante la modificación de estos metadatos._
 
 
 ## <a name="overview"></a>Información general
 
-Un Xamarin.Android **Java enlace biblioteca** intenta automatizar gran parte del trabajo necesario para enlazar una biblioteca de Android existente con la Ayuda de una herramienta conocida como la _generador de enlaces_. Al enlazar una biblioteca de Java, Xamarin.Android inspeccionará las clases de Java y generar una lista de todos los paquetes, tipos y miembros que se va a enlazar. Esta lista de API se almacena en un archivo XML que se pueden encontrar en  **\{proyecto directory}\obj\Release\api.xml** para un **versión** de compilación y en  **\{proyecto Directory}\obj\Debug\api.XML** para un **depurar** de compilación.
+Xamarin.Android **biblioteca de enlaces de Java** intenta automatizar gran parte del trabajo necesario para el enlace de una biblioteca de Android existente con la Ayuda de una herramienta conocida como la _generador de enlaces_. Al enlazar una biblioteca de Java, Xamarin.Android inspeccionará las clases de Java y generar una lista de todos los paquetes, tipos y miembros que se va a enlazar. Esta lista de API se almacena en un archivo XML que puede encontrarse en  **\{proyecto directory}\obj\Release\api.xml** para un **versión** de compilación y en  **\{proyecto Directory}\obj\Debug\api.XML** para un **depurar** de compilación.
 
-![Ubicación del archivo api.xml en la carpeta obj/Debug](java-bindings-metadata-images/java-bindings-metadata-01.png)
+![Ubicación del archivo en la carpeta obj/Debug api.xml](java-bindings-metadata-images/java-bindings-metadata-01.png)
 
-El generador de enlaces utilizará el **api.xml** archivo como guía para generar las clases de contenedor de C# necesarias. El contenido de este archivo XML es una variación de Google _Android Open Source Project_ formato.
+Va a usar el generador de enlaces de la **api.xml** archivo como guía para generar el necesario C# clases contenedoras. El contenido de este archivo XML es una variación de Google _Android Open Source Project_ formato.
 El fragmento de código siguiente es un ejemplo del contenido de **api.xml**:
 
 ```xml
@@ -48,36 +48,36 @@ El fragmento de código siguiente es un ejemplo del contenido de **api.xml**:
 
 En este ejemplo, **api.xml** declara una clase en el `android` paquete denominado `Manifest` que abarca el `java.lang.Object`.
 
-En muchos casos, asistencia humano es necesaria para que la API de Java se sienta más ".NET como" o para corregir los problemas que impiden que se compile el ensamblado de enlace. Por ejemplo, puede que sea necesario cambiar los nombres de paquete de Java a espacios de nombres. NET, cambiar el nombre de una clase o cambiar el tipo de valor devuelto de un método.
+En muchos casos, es necesaria para que la API de Java se sienta más ". NET, como" o para corregir los problemas que impiden que el ensamblado de enlace de compilar ayuda humana. Por ejemplo, puede ser necesario cambiar los nombres de paquete de Java a espacios de nombres. NET, cambiar el nombre de una clase o cambiar el tipo de valor devuelto de un método.
 
 Estos cambios no se consiguen mediante la modificación de **api.xml** directamente.
-En su lugar, los cambios se registran en los archivos XML especiales que se proporcionan con la plantilla de biblioteca de enlace de Java. Cuando se compila el ensamblado de enlace Xamarin.Android, el generador de enlaces se verán influido por estos archivos de asignación al crear el ensamblado de enlace
+En su lugar, los cambios se registran en los archivos XML especiales proporcionados por la plantilla de biblioteca de enlaces de Java. Cuando se compila el ensamblado de enlace de Xamarin.Android, el generador de enlaces se verán influido por estos archivos de asignación al crear el enlace de ensamblado
 
 Estos archivos de asignación XML pueden encontrarse en el **transforma** carpeta del proyecto:
 
--   **MetaData.xml** &ndash; permite que los cambios que se realizan en la API final, como cambiar el espacio de nombres del enlace generado. 
+-   **MetaData.xml** &ndash; permite que se realicen cambios en la API de final, como cambiar el espacio de nombres del enlace generado. 
 
 -   **EnumFields.xml** &ndash; contiene la asignación entre Java `int` constantes y C# `enums` . 
 
--   **EnumMethods.xml** &ndash; permite cambiar los parámetros de método y tipos devueltos desde Java `int` constantes en C# `enums` . 
+-   **EnumMethods.xml** &ndash; permite cambiar los parámetros de método y los tipos de valor devuelto desde Java `int` constantes a C# `enums` . 
 
-El **MetaData.xml** archivo es más importante de estos archivos ya que permite cambios de propósito generales para el enlace, como:
+El **MetaData.xml** archivo es más una importación de estos archivos, ya que permite cambios de propósito generales para el enlace, como:
 
 -   Cambiar el nombre de espacios de nombres, clases, métodos o campos para que siguen convenciones. NET. 
 
--   Quitar los espacios de nombres, clases, métodos o campos que no son necesarios. 
+-   Quitar espacios de nombres, clases, métodos o campos que no son necesarios. 
 
 -   Pasar clases a diferentes espacios de nombres. 
 
--   Agregar las clases de soporte técnico adicional para realizar el diseño del enlace siguen patrones de .NET framework. 
+-   Agregar clases de soporte técnico adicional para que el diseño del enlace siguen patrones de .NET framework. 
 
-Permite mover explicar **Metadata.xml** con más detalle.
+Permite pasar a tratar **Metadata.xml** con más detalle.
 
 
 ## <a name="metadataxml-transform-file"></a>Archivo de transformación de Metadata.Xml
 
 Como ya hemos aprendido, el archivo **Metadata.xml** es utilizada por el generador de enlaces para influir en la creación del ensamblado de enlace.
-El formato de metadatos utiliza [XPath](https://www.w3.org/TR/xpath/) sintaxis y es casi idéntica a la *metadatos GAPI* se describe en [metadatos GAPI](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) guía. Esta implementación es prácticamente una implementación completa de XPath 1.0 y, por tanto, es compatible con elementos en el estándar 1.0. Este archivo es un XPath según un mecanismo eficaz para cambiar, agregar, ocultar o mover cualquier elemento o atributo en el archivo de API. Todos los elementos de regla en las especificaciones de metadatos incluyen un atributo de ruta de acceso para identificar el nodo al que se aplicará la regla. Las reglas se aplican en el orden siguiente:
+Usa el formato de metadatos [XPath](https://www.w3.org/TR/xpath/) sintaxis y es casi idéntica a la *metadatos GAPI* se describe en [metadatos GAPI](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) guía. Esta implementación es casi una implementación completa de XPath 1.0 y, por tanto, es compatible con los elementos en el estándar 1.0. Este archivo es un mecanismo eficaz de XPath en función a cambiar, agregar, ocultar o mover cualquier elemento o atributo en el archivo de la API. Todos los elementos de regla en la especificación de los metadatos incluyen un atributo de ruta de acceso para identificar el nodo al que se aplicará la regla. Las reglas se aplican en el orden siguiente:
 
 * **Agregar nodo** &ndash; anexa un nodo secundario al nodo especificado por el atributo de ruta de acceso.
 * **attr** &ndash; establece el valor de un atributo del elemento especificado por el atributo de ruta de acceso.
@@ -101,13 +101,13 @@ El siguiente es un ejemplo de un **Metadata.xml** archivo:
 </metadata>
 ```
 
-A continuación enumeran algunos de los elementos de XPath más comúnmente usados para la API de Java:
+A continuación enumeran algunos de los elementos más usados de XPath para la API de Java:
 
 -   `interface` &ndash; Se utiliza para buscar una interfaz de Java. Por ejemplo, `/interface[@name='AuthListener']`.
 
 -   `class` &ndash; Se utiliza para buscar una clase. Por ejemplo, `/class[@name='MapView']`.
 
--   `method` &ndash; Se utiliza para buscar un método en una interfaz o clase de Java. Por ejemplo, `/class[@name='MapView']/method[@name='setTitleSource']`.
+-   `method` &ndash; Se utiliza para localizar un método en una interfaz o clase de Java. Por ejemplo, `/class[@name='MapView']/method[@name='setTitleSource']`.
 
 -   `parameter` &ndash; Identificar un parámetro para un método. P. ej. `/parameter[@name='p0']`
 
@@ -115,7 +115,7 @@ A continuación enumeran algunos de los elementos de XPath más comúnmente usad
 
 ### <a name="adding-types"></a>Adición de tipos
 
-El `add-node` elemento indicará el proyecto de enlace de Xamarin.Android para agregar una nueva clase de contenedor para **api.xml**. Por ejemplo, el siguiente fragmento dirigirá el generador de enlace para crear una clase con un constructor y un único campo:
+El `add-node` elemento indicará el proyecto Xamarin.Android de enlace para agregar una nueva clase de contenedor para **api.xml**. Por ejemplo, el siguiente fragmento de código dirigirá el generador de enlace para crear una clase con un constructor y un solo campo:
 
 ```xml
 <add-node path="/api/package[@name='org.alljoyn.bus']">
@@ -129,7 +129,7 @@ El `add-node` elemento indicará el proyecto de enlace de Xamarin.Android para a
 
 ### <a name="removing-types"></a>Eliminación de tipos
 
-Es posible indicar el generador de enlaces Xamarin.Android para omitir un tipo de Java y no enlazarla. Esto se realiza agregando un `remove-node` elemento XML en el **metadata.xml** archivo:
+Es posible indicar el generador de enlaces de Xamarin.Android para omitir un tipo de Java y no enlazarlo. Esto se hace agregando un `remove-node` elemento XML a la **metadata.xml** archivo:
 
 ```xml
 <remove-node path="/api/package[@name='{package_name}']/class[@name='{name}']" />
@@ -137,26 +137,26 @@ Es posible indicar el generador de enlaces Xamarin.Android para omitir un tipo d
 
 ### <a name="renaming-members"></a>Cambiar el nombre de los miembros
 
-Cambiar el nombre de los miembros no se puede realizar mediante la edición de la **api.xml** archivo porque Xamarin.Android requiere que los nombres originales de Java JNI (interfaz nativa). Por lo tanto, la `//class/@name` no se puede modificar el atributo; si es así, el enlace no funcionará.
+Cambiar el nombre de los miembros no se puede realizar modificando directamente el **api.xml** archivo porque Xamarin.Android requiere que el nombre original de Java Native Interface (JNI). Por lo tanto, el `//class/@name` no se puede modificar el atributo; si es así, el enlace no funcionará.
 
-Considere el caso donde desea cambiar el nombre de un tipo `android.Manifest`.
-Para ello, podemos probar que editar directamente **api.xml** y cambiar el nombre de la clase de este modo:
+Considere el caso donde queremos cambiar el nombre de un tipo, `android.Manifest`.
+Para lograr esto, podemos probar que editar directamente **api.xml** y cambiar el nombre de la clase de este modo:
 
 ```xml
 <attr path="/api/package[@name='android']/class[@name='Manifest']" 
     name="name">NewName</attr>
 ```
 
-Esto provocará que el generador de enlaces de crear el siguiente código de C# para la clase de contenedor:
+Esto dará como resultado el generador de enlaces de crear los siguientes C# código para la clase de contenedor:
 
 ```csharp
 [Register ("android/NewName")]
 public class NewName : Java.Lang.Object { ... }
 ```
 
-Tenga en cuenta que la clase de contenedor ha cambiado a `NewName`, mientras que el tipo de Java original sigue siendo `Manifest`. Ya no es posible que la clase de enlace Xamarin.Android tener acceso a los métodos en `android.Manifest`; la clase de contenedor está enlazada a un tipo de Java inexistente.
+Tenga en cuenta que la clase contenedora se ha cambiado a `NewName`, mientras que el tipo de Java original sigue siendo `Manifest`. Ya no es posible que la clase de enlace de Xamarin.Android acceder a los métodos en `android.Manifest`; la clase contenedora se enlaza a un tipo de Java que no existe.
 
-Para cambiar correctamente el nombre administrado de un tipo (o un método) ajustada, es necesario establecer la `managedName` atributo tal como se muestra en este ejemplo:
+Para cambiar correctamente el nombre administrado de un tipo ajustado (o método), es necesario establecer el `managedName` atributo tal como se muestra en este ejemplo:
 
 ```xml
 <attr path="/api/package[@name='android']/class[@name='Manifest']" 
@@ -167,19 +167,19 @@ Para cambiar correctamente el nombre administrado de un tipo (o un método) ajus
 
 #### <a name="renaming-eventarg-wrapper-classes"></a>Cambiar el nombre de `EventArg` clases contenedoras
 
-Cuando el generador de enlace de Xamarin.Android identifica un `onXXX` método establecedor para una _tipo de agente de escucha_, un evento de C# y `EventArgs` subclase se generarán admitir .NET sabor API para el agente de escucha basados en Java patrón. Por ejemplo, considere la siguiente clase de Java y el método:
+Cuando el generador de enlace de Xamarin.Android identifica un `onXXX` método establecedor para un _tipo de agente de escucha_, un C# eventos y `EventArgs` subclase se generarán admitir .NET sabor API basado en Java patrón de agente de escucha. Por ejemplo, considere la siguiente clase de Java y el método:
 
 ```xml
 com.someapp.android.mpa.guidance.NavigationManager.on2DSignNextManuever(NextManueverListener listener);
 ```
 
-Xamarin.Android se quitará el prefijo `on` desde el método de establecedor y en su lugar use `2DSignNextManuever` como base para el nombre de la `EventArgs` subclase. La subclase tendrá un nombre parecido al:
+Xamarin.Android se quitará el prefijo `on` desde el método de establecedor y en su lugar use `2DSignNextManuever` como base para el nombre de la `EventArgs` subclase. La subclase se denominará algo parecido a:
 
 ```csharp
 NavigationManager.2DSignNextManueverEventArgs
 ```
 
-No es un nombre de clase de C# válido. Para corregir este problema, el autor del enlace debe utilizar el `argsType` de atributo y especifique un nombre C# válido para el `EventArgs` subclase:
+Esto no es un legal C# nombre de clase. Para corregir este problema, el autor de enlace debe utilizar el `argsType` de atributo y proporcionar válido C# nombre para el `EventArgs` subclase:
  
 ```xml
 <attr path="/api/package[@name='com.someapp.android.mpa.guidance']/
@@ -190,22 +190,22 @@ No es un nombre de clase de C# válido. Para corregir este problema, el autor de
 
  
 
-## <a name="supported-attributes"></a>Atributos admitidos
+## <a name="supported-attributes"></a>Atributos compatibles
 
 Las secciones siguientes describen algunos de los atributos para transformar las API de Java.
 
 ### <a name="argstype"></a>argsType
 
-Este atributo se coloca en los métodos de establecedor por nombrar la `EventArg` subclase que se generará para admitir los agentes de escucha de Java. Esto se describe con más detalle a continuación en la sección [cambiar el nombre de estas clases contenedoras EventArg](#Renaming_EventArg_Wrapper_Classes) más adelante en esta guía.
+Este atributo se coloca en los métodos de establecedor para el nombre del `EventArg` subclase que se generará para admitir los agentes de escucha de Java. Esto se describe con más detalle a continuación, en la sección [cambiar el nombre de clases contenedoras de EventArg](#Renaming_EventArg_Wrapper_Classes) más adelante en esta guía.
 
 ### <a name="eventname"></a>eventName
 
-Especifica un nombre de un evento. Si está vacío, desactiva la generación de eventos.
-Esto se describe con más detalle en el título de sección [cambiar el nombre de estas clases contenedoras EventArg](#Renaming_EventArg_Wrapper_Classes).
+Especifica un nombre para un evento. Si está vacío, desactiva la generación de eventos.
+Esto se describe con más detalle en el título de sección [cambiar el nombre de clases contenedoras de EventArg](#Renaming_EventArg_Wrapper_Classes).
 
 ### <a name="managedname"></a>managedName
 
-Esto se utiliza para cambiar el nombre de un paquete, la clase, el método o el parámetro. Por ejemplo, para cambiar el nombre de la clase Java `MyClass` a `NewClassName`:
+Esto se usa para cambiar el nombre de un paquete, clase, método o parámetro. Por ejemplo, para cambiar el nombre de la clase Java `MyClass` a `NewClassName`:
 
 ```xml
 <attr path="/api/package[@name='com.my.application']/class[@name='MyClass']" 
@@ -219,11 +219,11 @@ En el ejemplo siguiente se muestra una expresión XPath para cambiar el nombre d
     name="managedName">NewMethodName</attr>
 ```
 
-### <a name="managedtype"></a>managedType
+### <a name="managedtype"></a>Tipo administrado
 
-`managedType` se utiliza para cambiar el tipo de valor devuelto de un método. En algunos casos el generador de enlaces incorrectamente deducirá el tipo de valor devuelto de un método de Java, lo que dará lugar a un error en tiempo de compilación. Una posible solución en esta situación es cambiar el tipo de valor devuelto del método.
+`managedType` se utiliza para cambiar el tipo de valor devuelto de un método. En algunas situaciones el generador de enlaces incorrectamente deducirá el tipo de valor devuelto de un método de Java, lo que dará lugar a un error en tiempo de compilación. Una posible solución en esta situación consiste en cambiar el tipo de valor devuelto del método.
 
-Por ejemplo, el generador de enlaces considera que el método de Java `de.neom.neoreadersdk.resolution.compareTo()` debe devolver un `int`, que da como resultado el mensaje de error **Error CS0535: ' Alemania. Neom.Neoreadersdk.Resolution' no implementa el miembro de interfaz 'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. El fragmento de código siguiente muestra cómo cambiar el tipo de valor devuelto del método C# generado desde un `int` a una `Java.Lang.Object`: 
+Por ejemplo, el generador de enlaces que considera que el método Java `de.neom.neoreadersdk.resolution.compareTo()` debe devolver un `int`, que da como resultado el mensaje de error **Error CS0535: ' DE. Neom.Neoreadersdk.Resolution' no implementa el miembro de interfaz 'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. El fragmento de código siguiente muestra cómo cambiar el tipo de valor devuelto de generado C# método desde un `int` a un `Java.Lang.Object`: 
 
 ```xml
 <attr path="/api/package[@name='de.neom.neoreadersdk']/
@@ -235,7 +235,7 @@ Por ejemplo, el generador de enlaces considera que el método de Java `de.neom.n
 
 ### <a name="managedreturn"></a>managedReturn
 
-Cambia el tipo de valor devuelto de un método. Esto no cambia el atributo de valor devuelto (como los cambios para devolver atributos pueden causar cambios incompatibles en la firma JNI). En el ejemplo siguiente, el tipo devuelto de la `append` método se cambia de `SpannableStringBuilder` a `IAppendable` (Recuerde que C# no admite los tipos de valor devueltos covariantes):
+Cambia el tipo de valor devuelto de un método. Esto no cambia el atributo de valor devuelto (como los cambios para devolver los atributos pueden causar cambios incompatibles con la firma JNI). En el ejemplo siguiente, el tipo de devolución de la `append` se cambia el método de `SpannableStringBuilder` a `IAppendable` (Recuerde que C# no admite tipos de valor devuelto covariante):
 
 ```xml
 <attr path="/api/package[@name='android.text']/
@@ -244,23 +244,22 @@ Cambia el tipo de valor devuelto de un método. Esto no cambia el atributo de va
     name="managedReturn">Java.Lang.IAppendable</attr>
 ```
 
-### <a name="obfuscated"></a>protegido
+### <a name="obfuscated"></a>ofuscado
 
-Herramientas que ofuscar las bibliotecas de Java pueden interferir con el generador de enlace de Xamarin.Android y su capacidad para generar clases contenedoras de C#. Características de clases ofuscadas incluyen: * incluye el nombre de clase un **$**, es decir, **un .class $** * el nombre de clase está completamente en peligro de caracteres en minúsculas, es decir,  **a.Class**
+Las herramientas que ofuscar las bibliotecas de Java pueden interferir con el generador de enlace de Xamarin.Android y su capacidad para generar C# clases contenedoras. Características de ofuscación clases incluyen: * incluye el nombre de clase un **$**, es decir, **un .class $** * el nombre de clase completamente consta de caracteres en minúsculas, es decir,  **a.Class**
 
-Este fragmento de código es un ejemplo de cómo generar un tipo de C# "sin ofuscado":
+Este fragmento de código es un ejemplo de cómo generar un "sin ofuscado" C# tipo:
 
 ```xml
 <attr path="/api/package[@name='{package_name}']/class[@name='{name}']" 
     name="obfuscated">false</attr>
 ```
 
-### <a name="propertyname"></a>
-          propertyName
+### <a name="propertyname"></a>propertyName
 
 Este atributo se puede usar para cambiar el nombre de una propiedad administrada.
 
-Un caso de uso especializado `propertyName` implica la situación donde una clase de Java tiene solo un método de captador para un campo. En esta situación, el generador de enlace sería aconsejable crear una propiedad de solo escritura, algo que no se recomienda en. NET. El siguiente fragmento muestra cómo las propiedades. NET "quitar" estableciendo la `propertyName` en una cadena vacía:
+Un caso de uso especializado `propertyName` implica la situación donde una clase de Java tiene solo un método Get para un campo. En esta situación, el generador de enlace querría crear una propiedad de solo escritura, algo que no es recomendable en. NET. El siguiente fragmento muestra cómo las propiedades. NET "quitar" estableciendo la `propertyName` en una cadena vacía:
 
 ```xml
 <attr path="/api/package[@name='org.java_websocket.handshake']/class[@name='HandshakeImpl1Client']/method[@name='setResourceDescriptor' 
@@ -272,10 +271,9 @@ Un caso de uso especializado `propertyName` implica la situación donde una clas
     name="propertyName"></attr>
 ```
 
-Tenga en cuenta que los métodos establecedor y captador se creará igualmente por el generador de enlaces.
+Tenga en cuenta que los métodos establecedor y captador se seguirá creando el generador de enlaces.
 
-### <a name="sender"></a>
-          sender
+### <a name="sender"></a>sender
 
 Especifica que el parámetro de un método debe ser el `sender` parámetro cuando el método se asigna a un evento. El valor puede ser `true` o `false`. Por ejemplo:
 
@@ -289,7 +287,7 @@ Especifica que el parámetro de un método debe ser el `sender` parámetro cuand
 
 ### <a name="visibility"></a>visibilidad
 
-Este atributo se utiliza para cambiar la visibilidad de una clase, un método o una propiedad. Por ejemplo, es posible que sea necesario promover un `protected` método Java para que corresponde el contenedor de C# es `public`:
+Este atributo se utiliza para cambiar la visibilidad de una clase, método o propiedad. Por ejemplo, puede ser necesaria para promover un `protected` método de Java, por lo que TI correspondiente del C# contenedor es `public`:
 
 ```xml
 <!-- Change the visibility of a class -->
@@ -301,11 +299,11 @@ Este atributo se utiliza para cambiar la visibilidad de una clase, un método o 
 
 ## <a name="enumfieldsxml-and-enummethodsxml"></a>EnumFields.xml y EnumMethods.xml
 
-Hay casos donde las bibliotecas Android utilizan constantes enteras para representar los Estados que se pasan a las propiedades o métodos de las bibliotecas. En muchos casos, es útil enlazar estas constantes de tipo entero a las enumeraciones en C#. Para facilitar esta asignación, utilice la **EnumFields.xml** y **EnumMethods.xml** archivos del proyecto de enlace. 
+Hay casos donde las bibliotecas de Android utilizan constantes enteras para representar los Estados que se pasan a las propiedades o métodos de las bibliotecas. En muchos casos, es útil enlazar estas constantes enteras con enumeraciones en C#. Para facilitar esta asignación, utilice el **EnumFields.xml** y **EnumMethods.xml** archivos del proyecto de enlace. 
 
 ### <a name="defining-an-enum-using-enumfieldsxml"></a>Definir una enumeración con EnumFields.xml
 
-El **EnumFields.xml** archivo contiene la asignación entre Java `int` constantes y C# `enums`. Veamos el siguiente ejemplo de una enumeración de C# que se va a crear para un conjunto de `int` constantes: 
+El **EnumFields.xml** archivo contiene la asignación entre Java `int` constantes y C# `enums`. Veamos el siguiente ejemplo de un C# enum que se va a crear para un conjunto de `int` constantes: 
 
 ```xml 
 <mapping jni-class="com/skobbler/ngx/map/realreach/SKRealReachSettings" clr-enum-type="Skobbler.Ngx.Map.RealReach.SKMeasurementUnit">
@@ -315,13 +313,13 @@ El **EnumFields.xml** archivo contiene la asignación entre Java `int` constante
 </mapping>
 ```
 
-Aquí le hemos llevado la clase Java `SKRealReachSettings` y define una enumeración de C# llamada `SKMeasurementUnit` en el espacio de nombres `Skobbler.Ngx.Map.RealReach`. El `field` entradas define el nombre de la constante de Java (ejemplo `UNIT_SECOND`), el nombre de la entrada de enumeración (ejemplo `Second`) y el valor de entero representado por ambas entidades (ejemplo `0`). 
+Aquí hemos tomado la clase Java `SKRealReachSettings` y define un C# enum llamado `SKMeasurementUnit` en el espacio de nombres `Skobbler.Ngx.Map.RealReach`. El `field` entradas define el nombre de la constante de Java (ejemplo `UNIT_SECOND`), el nombre de la entrada de enumeración (ejemplo `Second`) y el valor entero representado por ambas entidades (ejemplo `0`). 
 
-### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>Definir métodos de captador o establecedor mediante EnumMethods.xml
+### <a name="defining-gettersetter-methods-using-enummethodsxml"></a>Definir métodos de captador o establecedor usando EnumMethods.xml
 
-El **EnumMethods.xml** archivo permite cambiar los parámetros de método y tipos devueltos desde Java `int` constantes en C# `enums`. En otras palabras, se asigna la lectura y escritura de las enumeraciones de C# (definidos en el **EnumFields.xml** archivo) para Java `int` constante `get` y `set` métodos.
+El **EnumMethods.xml** archivo permite cambiar los parámetros de método y los tipos de valor devuelto desde Java `int` constantes a C# `enums`. En otras palabras, se asigna la lectura y escritura de C# enumeraciones (definido en el **EnumFields.xml** archivo) para Java `int` constante `get` y `set` métodos.
 
-Dada la `SKRealReachSettings` enum definidos anteriormente, la siguiente **EnumMethods.xml** archivo tendría que definir el captador o establecedor de esta enumeración:
+Dada la `SKRealReachSettings` enum definidos anteriormente, la siguiente **EnumMethods.xml** archivo definiría el captador o establecedor de esta enumeración:
 
 ```xml
 <mapping jni-class="com/skobbler/ngx/map/realreach/SKRealReachSettings">
@@ -330,9 +328,9 @@ Dada la `SKRealReachSettings` enum definidos anteriormente, la siguiente **EnumM
 </mapping>
 ```
 
-La primera `method` línea asigna el valor devuelto de la Java `getMeasurementUnit` método para el `SKMeasurementUnit` enum. El segundo `method` línea asigna el primer parámetro de la `setMeasurementUnit` a la misma enumeración.
+La primera `method` línea asigna el valor devuelto de Java `getMeasurementUnit` método a la `SKMeasurementUnit` enum. El segundo `method` línea asigna el primer parámetro de la `setMeasurementUnit` a la misma enumeración.
 
-Con todos estos cambios en su lugar, puede utilizar el código de seguimiento en Xamarin.Android para establecer el `MeasurementUnit`: 
+Con todos estos cambios en su lugar, puede usar el código siguiente en Xamarin.Android para establecer el `MeasurementUnit`: 
 
 ```csharp
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
@@ -341,12 +339,12 @@ realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se describe cómo Xamarin.Android usa metadatos para transformar una definición de la API de la *Google* *formato AOSP*. Después de cubrir los cambios que son posibles con *Metadata.xml*, examinan las limitaciones que se encuentran al cambiar el nombre de los miembros y presenta la lista de atributos admitidos de XML, que describe cuándo se debe utilizar cada atributo.
+En este artículo se describe cómo Xamarin.Android usa metadatos para transformar una definición de API desde el *Google* *formato AOSP*. Después de cubrir los cambios que son posibles mediante *Metadata.xml*, examinan las limitaciones que se encuentran al cambiar el nombre de los miembros y lo presenta la lista de atributos admitidos de XML, que describe cuándo se debe utilizar cada atributo.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Trabajar con JNI](~/android/platform/java-integration/working-with-jni.md)
+- [Trabajo con JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Enlace de una biblioteca Java](~/android/platform/binding-java-library/index.md)
-- [GAPI Metadata](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [Metadatos GAPI](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)

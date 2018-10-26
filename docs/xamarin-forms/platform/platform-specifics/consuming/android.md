@@ -6,13 +6,13 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/03/2018
-ms.openlocfilehash: c422b9ac5af9417523f349537fda1bb0c01aa7bc
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.date: 10/01/2018
+ms.openlocfilehash: 50c7b05261cf3f07ea37373cdcdcc8f250243647
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39175182"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108982"
 ---
 # <a name="android-platform-specifics"></a>Funcionalidades específicas de plataforma Android
 
@@ -310,6 +310,7 @@ El resultado es que un determinado [ `MixedContentHandling` ](xref:Xamarin.Forms
 En Android, se proporciona la siguiente funcionalidad específica de la plataforma para las páginas de Xamarin.Forms:
 
 - Establecer el alto de la barra de navegación en un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage). Para obtener más información, consulte [establecer el alto de la barra de navegación en una NavigationPage](#navigationpage-barheight).
+- Deshabilitar las animaciones de transición al navegar a través de páginas en un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Para obtener más información, consulte [deshabilitar las animaciones de transición de página en una TabbedPage](#tabbedpage-transition-animations).
 - Habilitar el gesto de deslizar rápidamente entre las páginas de un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Para obtener más información, consulte [habilitar gesto de deslizar rápidamente entre páginas en una TabbedPage](#enable_swipe_paging).
 - Establecer la posición de la barra de herramientas y el color en un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Para obtener más información, consulte [configuración TabbedPage barra de herramientas de selección de ubicación y Color](#tabbedpage-toolbar).
 
@@ -348,6 +349,36 @@ El `NavigationPage.On<Android>` método especifica que solo se ejecutarán este 
 El resultado es que el alto de la barra de navegación en un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) se pueden establecer:
 
 ![](android-images/navigationpage-barheight.png "NavigationPage alto de la barra de navegación")
+
+<a name="tabbedpage-transition-animations" />
+
+### <a name="disabling-page-transition-animations-in-a-tabbedpage"></a>Deshabilitar las animaciones de transición de página en una TabbedPage
+
+Este específicos de la plataforma se usan para deshabilitar las animaciones de transición al navegar a través de páginas, ya sea mediante programación o cuando se usa la barra de pestañas, en un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Se consume en XAML estableciendo el `TabbedPage.IsSmoothScrollEnabled` propiedad enlazable a `false`:
+
+```xaml
+<TabbedPage ...
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.IsSmoothScrollEnabled="false">
+    ...
+</TabbedPage>
+```
+
+Como alternativa, pueden usarse desde C# mediante la API fluida:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+On<Android>().SetIsSmoothScrollEnabled(false);
+```
+
+El `TabbedPage.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El `TabbedPage.SetIsSmoothScrollEnabled` método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se usa para controlar si las animaciones de transición se mostrará al navegar entre páginas en un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage). Además, el `TabbedPage` clase en el `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` espacio de nombres también tiene los métodos siguientes:
+
+- `IsSmoothScrollEnabled`, que se usa para recuperar datos si las animaciones de transición se mostrará al navegar entre páginas en un `TabbedPage`.
+- `EnableSmoothScroll`, que se usa para habilitar animaciones de transición al navegar entre páginas en un `TabbedPage`.
+- `DisableSmoothScroll`, que se usa para deshabilitar las animaciones de transición al navegar entre páginas en un `TabbedPage`.
 
 <a name="enable_swipe_paging" />
 

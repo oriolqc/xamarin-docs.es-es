@@ -6,12 +6,12 @@ ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 256d5c81475be095c8fa0ab0408cbcf673c6b301
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f397cf595a9ae151c5f105341733b2c57023fe99
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997089"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109723"
 ---
 # <a name="xamarinforms-using-visual-basicnet"></a>Xamarin.Forms con Visual Basic.NET
 
@@ -27,7 +27,7 @@ Xamarin admite Visual Basic directamente, siga las instrucciones de esta página
 Siga estos pasos para crear un proyecto de Xamarin.Forms simple que utiliza Visual Basic:
 
 1. Cree un nuevo *Xamarin.Forms C#* solución que usa las bibliotecas de clases portables (PCL).
-Vaya a **archivo > Nuevo proyecto** y en el **nuevo proyecto** ventana Navegar a **instalado > Plantillas > Visual C# > multiplataforma** , a continuación, elija  **Cross Platform App (Xamarin.Forms o nativa) > Xamarin.Forms**.
+Vaya a **archivo > Nuevo proyecto** y en el **nuevo proyecto** ventana Navegar a **instalado > Plantillas > Visual C# > multiplataforma** , a continuación, elija **Cross Platform App (Xamarin.Forms o nativa) > Xamarin.Forms**.
 
 2. Haga doble clic en la solución y **Agregar > Nuevo proyecto**.
 
@@ -79,7 +79,7 @@ Vaya a **archivo > Nuevo proyecto** y en el **nuevo proyecto** ventana Navegar a
     ```
 
 9. Ahora necesitamos para apuntar a los proyectos de Android y iOS en el nuevo proyecto de Visual Basic.
-Haga doble clic en el **referencias** nodo en iOS y Android proyectos para abrir el **Administrador de referencias**. Paso de anular la la biblioteca portable de C# y la graduación de la biblioteca portable de VB (no olvide, hacer esto para tanto los proyectos de iOS y Android).
+Haga doble clic en el **referencias** nodo en iOS y Android proyectos para abrir el **Administrador de referencias**. Paso de anular la C# biblioteca portable y seleccione la biblioteca portable de VB (no olvide, hacer esto para tanto los proyectos de iOS y Android).
 
    [![](xamarin-forms-images/add-vb-8-sml.png "Quitar la referencia de proyecto anterior, agregue la referencia de Visual Basic")](xamarin-forms-images/add-vb-8.png#lightbox)
 

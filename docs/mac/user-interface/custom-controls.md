@@ -4,15 +4,15 @@ description: Este documento describe cómo crear controles personalizados en Xam
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 7180dd80c80515adc7312e2fe30d69852bf04eaa
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 7fde60d48c23bc48ce1602a0643a3af8ad492ec6
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251138"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104016"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Creación de controles personalizados en Xamarin.Mac
 

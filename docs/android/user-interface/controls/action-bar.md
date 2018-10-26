@@ -1,24 +1,24 @@
 ---
-title: ActionBar
+title: Barra de acciones
 ms.prod: xamarin
 ms.assetid: 84A79F1F-9E73-4E3E-80FA-B72E5686900B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 29726450e0899177f3223deeade1cb4766d933a5
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 5bb2349f141629478eb2dce995c7cbff5a954069
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30769099"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114618"
 ---
-# <a name="actionbar"></a>ActionBar
+# <a name="actionbar"></a>Barra de acciones
 
 
 ## <a name="overview"></a>Información general
 
-Cuando se usa `TabActivity`, el código para crear los iconos de ficha no tiene ningún efecto cuando se ejecuta en el marco de trabajo de Android 4.0. Aunque funcionalmente funciona igual que en las versiones de Android anteriores 2.3, la `TabActivity` propia clase está en desuso en 4.0. Se ha incorporado una nueva manera de crear una interfaz con pestañas que usa la barra de acción, que se explica a continuación.
+Cuando se usa `TabActivity`, el código para crear los iconos de ficha no tiene ningún efecto cuando se ejecuta en el marco de trabajo de Android 4.0. Aunque funcionalmente también funciona como lo hacía en versiones de Android anteriores a 2.3, la `TabActivity` propia clase ha quedado obsoleto en 4.0. Se ha introducido una nueva forma de crear una interfaz con fichas que utiliza la barra de acciones, lo que hablaremos a continuación.
 
 
 ## <a name="action-bar-tabs"></a>Pestañas de la barra de acciones
@@ -26,15 +26,15 @@ Cuando se usa `TabActivity`, el código para crear los iconos de ficha no tiene 
 La barra de acciones incluye compatibilidad para agregar interfaces con pestañas en Android 4.0.
 Captura de pantalla siguiente muestra un ejemplo de dicha interfaz.
 
-[![Captura de pantalla de aplicación que se ejecuta en un emulador; se muestran dos pestañas](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
+[![Captura de pantalla de la aplicación que se ejecuta en un emulador; se muestran dos pestañas](action-bar-images/25-actionbartabs.png)](action-bar-images/25-actionbartabs.png#lightbox)
 
-Para crear pestañas en la barra de acciones, primero es necesario establecer su `NavigationMode` propiedad para admitir las pestañas. En Android 4, un `ActionBar` propiedad está disponible en la clase de actividad, que podemos usar para establecer el `NavigationMode` similar a la siguiente:
+Para crear pestañas en la barra de acciones, primero es necesario establecer su `NavigationMode` propiedad para admitir las pestañas. En Android 4 un `ActionBar` propiedad está disponible en la clase de actividad, podemos usar para establecer el `NavigationMode` similar al siguiente:
 
 ```csharp
 this.ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
 ```
 
-Una vez hecho esto, podemos crear una pestaña mediante una llamada a la `NewTab` método en la barra de acciones. Con esta instancia de la pestaña, podemos llamar a la `SetText` y `SetIcon` métodos para establecer el texto de la etiqueta y el icono; la pestaña estas llamadas se realizan en el orden en el código se muestra a continuación:
+Una vez hecho esto, podemos crear una pestaña mediante una llamada a la `NewTab` método en la barra de acciones. Con esta instancia de la ficha, podemos llamar a la `SetText` y `SetIcon` métodos para establecer la pestaña texto de etiqueta y el icono; estas llamadas se realizan en el orden en el código se muestra a continuación:
 
 ```csharp
 var tab = this.ActionBar.NewTab ();
@@ -42,7 +42,7 @@ tab.SetText (tabText);
 tab.SetIcon (Resource.Drawable.ic_tab_white);
 ```
 
-Antes de que podemos agregar la pestaña sin embargo, es necesario controlar la `TabSelected` eventos. En este controlador, podemos crear el contenido de la ficha. Las fichas de la barra de acciones están diseñadas para trabajar con *fragmentos*, que son clases que representan una parte de la interfaz de usuario en una actividad. En este ejemplo, la vista del fragmento contiene un único `TextView`, que se aumentar en nuestro `Fragment` subclase similar al siguiente:
+Antes de que podemos agregar la pestaña sin embargo, se debe controlar la `TabSelected` eventos. En este controlador, podemos crear el contenido de la ficha. Las fichas de la barra de acciones están diseñadas para trabajar con *fragmentos*, que son clases que representan una parte de la interfaz de usuario en una actividad. En este ejemplo, la vista del fragmento contiene un único `TextView`, que se infla en nuestra `Fragment` subclase similar al siguiente:
 
 ```csharp
 class SampleTabFragment: Fragment
@@ -65,7 +65,7 @@ class SampleTabFragment: Fragment
 }
 ```
 
-El argumento de evento que se pasa en el `TabSelected` evento es de tipo `TabEventArgs`, que incluye un `FragmentTransaction` propiedad que podemos usar para agregar el fragmento tal y como se muestra a continuación:
+El argumento de evento que se pasa en el `TabSelected` evento es de tipo `TabEventArgs`, que incluye un `FragmentTransaction` propiedad que podemos usar para agregar el fragmento tal como se muestra a continuación:
 
 ```csharp
 tab.TabSelected += delegate(object sender, ActionBar.TabEventArgs e) {             
@@ -74,35 +74,35 @@ tab.TabSelected += delegate(object sender, ActionBar.TabEventArgs e) {
 };
 ```
 
-Por último, podemos agregar la pestaña en la barra de acciones mediante una llamada a la `AddTab` método tal como se muestra en este código:
+Por último, podemos agregar la pestaña a la barra de acciones mediante una llamada a la `AddTab` método tal como se muestra en este código:
 
 ```csharp
 this.ActionBar.AddTab (tab);
 ```
 
-Para obtener un ejemplo completo, vea el *HelloTabsICS* proyecto en el código de ejemplo de este documento.
+Para obtener un ejemplo completo, vea el *HelloTabsICS* proyecto en el código de ejemplo para este documento.
 
 
 ## <a name="shareactionprovider"></a>ShareActionProvider
 
-La `ShareActionProvider` clase habilita una acción de uso compartida que se realicen en una barra de acción. Se encarga de crear una vista de acción con una lista de las aplicaciones que puede controlar un intento de uso compartido y mantiene un historial de las aplicaciones usadas anteriormente para facilitar el acceso a ellos más adelante en la barra de acción. Esto permite a las aplicaciones compartir datos a través de una experiencia de usuario coherente a lo largo de Android.
+La `ShareActionProvider` clase permite una acción de uso compartida que tenga lugar de una barra de acciones. Se encarga de crear una vista de acción con una lista de aplicaciones que puede controlar un intento para compartir y mantiene un historial de las aplicaciones usadas anteriormente para facilitar el acceso a ellos más adelante desde la barra de acciones. Esto permite que las aplicaciones compartir datos a través de una experiencia de usuario que sea coherente en Android.
 
 
 ### <a name="image-sharing-example"></a>Ejemplo de uso compartido de imagen
 
-Por ejemplo, a continuación se muestra una captura de pantalla de una barra de acción con un elemento de menú para compartir una imagen (procedente del [ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) ejemplo). Cuando el usuario puntea el elemento de menú en la barra de acción, el ShareActionProvider carga la aplicación para controlar una intención de que está asociado el `ShareActionProvider`. En este ejemplo, la aplicación de mensajería se ha utilizado previamente, por lo que se presentan en la barra de acción.
+Por ejemplo, a continuación es una captura de pantalla de una barra de acción con un elemento de menú para compartir una imagen (procedente del [ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/) ejemplo). Cuando el usuario puntea el elemento de menú en la barra de acciones, el ShareActionProvider carga la aplicación para controlar una intención que está asociada el `ShareActionProvider`. En este ejemplo, la aplicación de mensajería ya se utilizó anteriormente, por lo que se presenta en la barra de acciones.
 
-[![Captura de pantalla de mensajería de icono de la aplicación en la barra de acciones](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
-
-
-Cuando el usuario hace clic en el elemento de la barra de acciones, se inicia la aplicación de mensajería que contiene la imagen compartida, tal y como se muestra a continuación:
-
-[![Captura de pantalla de aplicación de mensajería Mostrar imagen mono](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
+[![Captura de pantalla del icono de la aplicación en la barra de acciones de mensajería](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
 
-### <a name="specifying-the-action-provider-class"></a>Especifica la acción de clase de proveedor
+Cuando el usuario hace clic en el elemento de la barra de acciones, se inicia la aplicación de mensajería que contiene la imagen compartida, como se muestra a continuación:
 
-Para usar el `ShareActionProvider`, establezca el `android:actionProviderClass` del atributo en un elemento de menú en el archivo XML para el menú de la barra de acción como se indica a continuación:
+[![Captura de pantalla de la aplicación de mensajería Mostrar imagen monkey](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
+
+
+### <a name="specifying-the-action-provider-class"></a>Especifica la acción de la clase de proveedor
+
+Para usar el `ShareActionProvider`, establezca el `android:actionProviderClass` atributo en un elemento de menú en el XML para el menú de la barra de acción como sigue:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -115,9 +115,9 @@ Para usar el `ShareActionProvider`, establezca el `android:actionProviderClass` 
 ```
 
 
-### <a name="inflating-the-menu"></a>El menú lo que infla
+### <a name="inflating-the-menu"></a>El menú que infla
 
-Para aumentar el menú, reemplazamos `OnCreateOptionsMenu` en la subclase de actividad. Una vez que tenemos una referencia al menú, podemos obtener la `ShareActionProvider` desde el `ActionProvider` propiedad del elemento de menú y, a continuación, use el método SetShareIntent para establecer el `ShareActionProvider`del intento, tal y como se muestra a continuación:
+Para aumentar el menú, se muestra cómo reemplazar `OnCreateOptionsMenu` en la subclase de actividad. Una vez que tenemos una referencia al menú, podemos obtener el `ShareActionProvider` desde el `ActionProvider` propiedad del elemento de menú y, a continuación, use el método SetShareIntent para establecer el `ShareActionProvider`de intención, tal como se muestra a continuación:
 
 ```csharp
 public override bool OnCreateOptionsMenu (IMenu menu)
@@ -132,9 +132,9 @@ public override bool OnCreateOptionsMenu (IMenu menu)
 ```
 
 
-### <a name="creating-the-intent"></a>Crear la intención
+### <a name="creating-the-intent"></a>Creación de la intención
 
-El `ShareActionProvider` usará la intención, pasada a la `SetShareIntent` método en el código anterior, para iniciar la actividad apropiada. En este caso, creamos un intento para enviar una imagen mediante el código siguiente:
+El `ShareActionProvider` usará la intención, pasa a la `SetShareIntent` método en el código anterior, para iniciar la actividad apropiada. En este caso, creamos una intención para enviar una imagen mediante el código siguiente:
 
 ```csharp
 Intent CreateIntent ()
@@ -147,7 +147,7 @@ Intent CreateIntent ()
 }
 ```
 
-La imagen en el ejemplo de código anterior se incluye como un recurso con la aplicación y se copian en una ubicación públicamente accesible cuando se crea la actividad, por lo que será accesible a otras aplicaciones, como la aplicación de mensajería. El código de ejemplo que se incluye en este artículo contiene el código fuente completo de este ejemplo, que muestra su uso.
+La imagen en el ejemplo de código anterior se incluye como un recurso con la aplicación y copia en una ubicación públicamente accesible cuando se crea la actividad, por lo que estarán disponibles para otras aplicaciones, como la aplicación de mensajería. El código de ejemplo que acompaña este artículo contiene el código fuente completo de este ejemplo, que muestra su uso.
 
 
 
@@ -155,5 +155,5 @@ La imagen en el ejemplo de código anterior se incluye como un recurso con la ap
 
 - [Hola pestañas ICS (ejemplo)](https://developer.xamarin.com/samples/HelloTabsICS/)
 - [Demostración de ShareActionProvider (ejemplo)](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
-- [Introducción a helado Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma 4.0 Android](http://developer.android.com/sdk/android-4.0.html)
+- [Introducción a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
+- [Plataforma Android de 4.0](http://developer.android.com/sdk/android-4.0.html)

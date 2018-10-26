@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2018
-ms.openlocfilehash: 9bac53f71178ac321dea162d346295556a8f7adb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 070602f05170f7d37a38b184ecd3dbb7864ac73d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998760"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118765"
 ---
 # <a name="xamarinforms-platform-features"></a>Características de la plataforma de Xamarin.Forms
 
@@ -60,11 +60,11 @@ Hay una amplia variedad de complementos de código abierto en Github, Nuget y el
 
 ## <a name="tizentizenmd"></a>[Tizen](tizen.md)
 
-Tizen .NET le permite crear aplicaciones .NET con Xamarin.Forms y Tizen .NET framework.
+Tizen .NET permite crear aplicaciones .NET con Xamarin.Forms y Tizen .NET Framework.
 
 ## <a name="windowswindowsindexmd"></a>[Windows](windows/index.md)
 
-Xamarin.Forms tiene compatibilidad para la plataforma Universal de Windows (UWP) en Windows 10. En este artículo se describe cómo agregar un un proyecto UWP a una solución existente de Xamarin.Forms.
+Xamarin.Forms tiene compatibilidad para la plataforma Universal de Windows (UWP) en Windows 10. En este artículo se describe cómo agregar un proyecto UWP a una solución existente de Xamarin.Forms.
 
 ## <a name="wpfwpfmd"></a>[WPF](wpf.md)
 

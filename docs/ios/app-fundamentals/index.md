@@ -4,15 +4,15 @@ description: Este documento incluye vínculos a diversas guías que describen lo
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 06/21/2017
-ms.openlocfilehash: de337291554e81a2434dcc30c163f4789fc832eb
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+ms.openlocfilehash: a40227454b597578ff1c1c247b326e523c23493b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111217"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110477"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Principios de la aplicación de Xamarin.iOS
 
@@ -48,7 +48,7 @@ En este artículo se examina cómo usar imágenes en Xamarin.iOS, imágenes de s
 
 ## <a name="localizationiosapp-fundamentalslocalizationindexmd"></a>[Localización](~/ios/app-fundamentals/localization/index.md)
 
-Esta guía se explica el la adición de codificaciones a una aplicación de Xamarin.iOS para permitir la internacionalización.
+Esta guía explica la adición de codificaciones a una aplicación de Xamarin.iOS para permitir la internacionalización.
 
 ## <a name="working-with-property-listsiosapp-fundamentalsindexmd"></a>[Trabajar con listas de propiedades](~/ios/app-fundamentals/index.md)
 
@@ -60,7 +60,7 @@ Apple ha realizado varias mejoras en seguridad y privacidad en iOS 10 (y version
 
 ## <a name="threadingiosapp-fundamentalsthreadingmd"></a>[Subprocesamiento](~/ios/app-fundamentals/threading.md)
 
-En este artículo se describen los subprocesos en una aplicación de Xamarin.iOS y habla un poco sobre el el grupo de subprocesos. NET, aplicaciones con capacidad de respuesta y recolección de elementos.
+En este artículo se describe los subprocesos en una aplicación de Xamarin.iOS y trata un poco sobre el grupo de subprocesos. NET, aplicaciones con capacidad de respuesta y recolección de elementos.
 
 ## <a name="touchiosapp-fundamentalstouchindexmd"></a>[Entrada táctil](~/ios/app-fundamentals/touch/index.md)
 

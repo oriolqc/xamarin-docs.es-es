@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/19/2016
-ms.openlocfilehash: 180a196e0b95854815c8a74ef1d2df63407dd04f
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2b2b5726f4ca28ae37f027a700abdd688aa0b1d7
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998009"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108436"
 ---
 # <a name="introduction-to-custom-renderers"></a>Introducción a los representadores personalizados
 
@@ -52,7 +52,7 @@ El `MyEntry` control es un `Entry` controlar dónde el `BackgroundColor` está e
 El `local` prefijo de espacio de nombres puede ser cualquier cosa. Sin embargo, el `namespace` y `assembly` valores deben coincidir con los detalles del control personalizado. Una vez que se declara el espacio de nombres, el prefijo se utiliza para hacer referencia al control personalizado.
 
 > [!NOTE]
-> Definir la `xmlns` es mucho más sencillo en proyectos de biblioteca estándar de .NET que los proyectos compartidos. Una biblioteca .NET Standard se compila en un ensamblado, por lo que es fácil determinar lo que el `assembly=CustomRenderer` debe ser el valor. Cuando se usa proyectos compartidos, todos los recursos compartidos (incluido el XAML) se compilan en cada uno de los proyectos de referencia, lo que significa que si los iOS, Android y UWP proyectos tienen sus propios *nombres de ensamblado* es imposible escribir el `xmlns` declaración porque el valor debe ser diferente para cada aplicación. Controles personalizados en XAML para proyectos compartidos requerirá cada proyecto de aplicación se configura con el mismo nombre de ensamblado.
+> Definir la `xmlns` es mucho más sencillo en proyectos de biblioteca estándar de .NET que los proyectos compartidos. Una biblioteca .NET Standard se compila en un ensamblado, por lo que es fácil determinar lo que el `assembly=CustomRenderer` debe ser el valor. Cuando se usa proyectos compartidos, todos los recursos compartidos (incluido el XAML) se compilan en cada uno de los proyectos de referencia, lo que significa que si los iOS, Android y UWP proyectos tienen sus propios *nombres de ensamblado* resulta imposible escribir el `xmlns` declaración porque el valor debe ser diferente para cada aplicación. Controles personalizados en XAML para proyectos compartidos requerirá cada proyecto de aplicación se configura con el mismo nombre de ensamblado.
 
 El `MyEntry` control personalizado, a continuación, se representa en cada plataforma, con un fondo gris, como se muestra en las capturas de pantalla siguiente:
 

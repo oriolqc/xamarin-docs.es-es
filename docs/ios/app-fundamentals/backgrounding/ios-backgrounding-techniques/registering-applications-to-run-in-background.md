@@ -1,54 +1,54 @@
 ---
-title: Registrar Xamarin.iOS aplicaciones se ejecuten en segundo plano
-description: Este documento describe cómo registrar una aplicación Xamarin.iOS para ejecutarse en segundo plano. Se trata de Audio aplicaciones, VoIP aplicaciones, accesorios externos y bluetooth y mucho más.
+title: Registro de aplicaciones de Xamarin.iOS se ejecutan en segundo plano
+description: Este documento describe cómo registrar una aplicación de Xamarin.iOS para ejecutarse en segundo plano. Describe Audio aplicaciones, VoIP aplicaciones, accesorios externos y bluetooth y mucho más.
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: f4774f6b4f5412c44dc985bd40129a178b1e813c
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a0a66571d0249ef6fd65ff382f14c38f48a8af37
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783680"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105173"
 ---
-# <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registrar Xamarin.iOS aplicaciones se ejecuten en segundo plano
+# <a name="registering-xamarinios-apps-to-run-in-the-background"></a>Registro de aplicaciones de Xamarin.iOS se ejecutan en segundo plano
 
-Registrar tareas individuales para fondo privilegios funciona para algunas aplicaciones, pero ¿qué ocurre si una aplicación se pidió constantemente para realizar tareas importantes y de larga ejecución, como obtener instrucciones para el usuario a través de GPS? Este tipo de aplicaciones en su lugar, deben registrarse como aplicaciones conocidas de segundo plano necesarias.
+Registro de tareas individuales para el fondo privilegios funciona para algunas aplicaciones, pero ¿qué ocurre si una aplicación se denomina constantemente al realizar tareas importantes y de larga ejecución, como obtener instrucciones para el usuario a través de GPS? Las aplicaciones como estas en su lugar se deben registrar como aplicaciones en segundo plano necesarias conocidas.
 
-Registrar una aplicación envía una señal a iOS que la aplicación debe emitirse privilegios especiales necesarios para realizar tareas en segundo plano.
+Registrar una aplicación de señales para iOS que la aplicación debe tener privilegios especiales necesarios para realizar tareas en segundo plano.
 
-## <a name="application-registration-categories"></a>Categorías de registro de aplicación
+## <a name="application-registration-categories"></a>Categorías de registro de aplicaciones
 
-Aplicaciones registradas pueden se dividen en varias categorías:
+Las aplicaciones registradas pueden dividirse en varias categorías:
 
--  **Audio** -reproductores de música y otras aplicaciones que funcionan con el contenido de audio pueden que esté registrados para continuar con la reproducción de audio incluso cuando la aplicación ya no está en primer plano. Si una aplicación de esta categoría intenta hacer algo distinto de reproducción de audio o descarga en segundo plano, se terminará iOS.
--  **VoIP** -obtención aplicaciones de voz sobre IP (VoIP) de los mismos privilegios concedidos a las aplicaciones de audio para realizar procesamiento de audio en segundo plano. También pueden responder según sea necesario a los servicios de VoIP que ofrece para mantener activa sus conexiones.
--  **Bluetooth y accesorios externos** -reservado para las aplicaciones que necesitan comunicarse con dispositivos Bluetooth y otros accesorios de hardware externo, registro en estas categorías permite que la aplicación debe permanecer conectado al hardware.
--  **Quiosco** -aplicación de un quiosco puede continuar con la sincronización de contenido en segundo plano.
--  **Ubicación** : aplicaciones que hacen uso de GPS o datos de ubicación de red pueden enviar y recibir actualizaciones de la ubicación en segundo plano.
--  **FETCH (iOS 7 +)** : una aplicación que se ha registrado para obtener privilegios de captura de fondo pueden comprobar un proveedor para el contenido nuevo a intervalos regulares, presentar al usuario con contenido actualizado cuando regresa a la aplicación.
--  **Notificaciones remotas (iOS 7 +)** -pueden registrarse para recibir notificaciones de un proveedor de aplicaciones y use la notificación para iniciar una actualización antes de que el usuario abre la aplicación. Las notificaciones pueden aparecen en forma de notificaciones de inserción o participar para reactivar la aplicación en modo silencioso.
+-  **Audio** -reproductores de música y otras aplicaciones que funcionan con el contenido de audio se pueden registrar para continuar con la reproducción de audio incluso cuando la aplicación ya no está en primer plano. Si una aplicación de esta categoría intenta hacer algo distinto de reproducción de audio o descarga mientras está en segundo plano, iOS la finalizará.
+-  **VoIP** -obtención aplicaciones de voz a través de Internet Protocol (VoIP) de los mismos privilegios que se conceden a las aplicaciones de audio para continuar procesando el audio en segundo plano. También pueden responder según sea necesario a los servicios de VoIP que promoverlas para mantener sus conexiones activas.
+-  **Bluetooth y accesorios externos** -reservado para las aplicaciones que necesitan comunicarse con dispositivos Bluetooth y otros accesorios de hardware externo, el registro en estas categorías permite que la aplicación para mantenerse en contacto con el hardware.
+-  **Newsstand** -aplicación de quiosco A puede continuar con la sincronización de contenido en segundo plano.
+-  **Ubicación** : las aplicaciones que hacen usan de GPS o datos de ubicación de red pueden enviar y recibir actualizaciones de ubicación en segundo plano.
+-  **FETCH (iOS 7 +)** : una aplicación que se ha registrado para obtener privilegios de captura en segundo plano pueden comprobar un proveedor de contenido nuevo a intervalos regulares, presentación del usuario con contenido actualizado cuando vuelvan a la aplicación.
+-  **Notificaciones remotas (iOS 7 +)** -pueden registrarse para recibir notificaciones de un proveedor de aplicaciones y usar la notificación para iniciar una actualización antes de que el usuario abre la aplicación. Notificaciones pueden proceder en forma de notificaciones de inserción o participar para reactivar la aplicación en modo silencioso.
 
 
-Las aplicaciones se pueden registrar estableciendo la **necesario modos en segundo plano** propiedad en la aplicación *Info.plist*. Una aplicación puede registrar en tantas categorías como requiere:
+Se pueden registrar aplicaciones estableciendo el **necesario modos en segundo plano** propiedad en la aplicación *Info.plist*. Puede registrar una aplicación en tantas categorías como lo requiere:
 
  [![](registering-applications-to-run-in-background-images/bgmodes.png "Establecer los modos en segundo plano")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
 
-Para obtener una guía paso a paso para registrar una aplicación para actualizaciones de la ubicación de segundo plano, consulte la [tutorial de ubicación de fondo](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md).
+Para obtener una guía paso a paso para registrar una aplicación para las actualizaciones de ubicación en segundo plano, consulte la [tutorial de ubicación en segundo plano](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md).
 
-## <a name="application-does-not-run-in-background-property"></a>Aplicación no se ejecuta en segundo plano propiedad
+## <a name="application-does-not-run-in-background-property"></a>Aplicación no se ejecuta en la propiedad Background
 
-Otra propiedad que se pueden establecer en *Info.plist* es el *aplicación no se ejecuta en segundo plano*, o `UIApplicationExitsOnSuspend` propiedad:
+Otra propiedad que se puede establecer en *Info.plist* es el *aplicación no se ejecuta en segundo plano*, o `UIApplicationExitsOnSuspend` propiedad:
 
- [![](registering-applications-to-run-in-background-images/plist.png "Deshabilitación de segundo plano que ejecuta")](registering-applications-to-run-in-background-images/plist.png#lightbox)
+ [![](registering-applications-to-run-in-background-images/plist.png "Deshabilitar ejecución en segundo plano")](registering-applications-to-run-in-background-images/plist.png#lightbox)
 
-Esto tiene el mismo efecto que establecer la configuración de aplicación actualización en segundo plano en off en iOS 7 +, pero solo puede cambiarse en el lado de desarrollador y está disponible para iOS 4 y versiones posteriores. La aplicación se suspenderá inmediatamente después de escribir el fondo y no podrá realizar cualquier procesamiento.
+Esto tiene el mismo efecto que establecer la configuración de actualización de aplicación en segundo plano a desactivado en iOS 7 +, excepto que solo puede cambiarse en el lado del desarrollador y está disponible para iOS 4 y versiones posteriores. La aplicación se suspenderá inmediatamente después de escribir el fondo y no podrá realizar cualquier procesamiento.
 
 Utilice esta propiedad si la aplicación no está diseñada para controlar el procesamiento en segundo plano, ya que ayuda a evitar un comportamiento inesperado.
 
-## <a name="background-fetch-and-remote-notifications"></a>Captura de fondo y notificaciones remotas
+## <a name="background-fetch-and-remote-notifications"></a>Captura de fondo y las notificaciones remotas
 
-Captura de fondo y notificaciones remotas son las categorías de registro especiales introducidos en iOS 7. Estas categorías permiten a las aplicaciones recibir el nuevo contenido de un proveedor y actualizar en segundo plano. La siguiente sección explora fetch y notificaciones remotas con más detalle y presenta también reconocimiento de ubicación como medio para actualizar una aplicación en segundo plano en iOS 6.
+Captura de fondo y las notificaciones remotas son categorías especiales de registro introducidas en iOS 7. Estas categorías permiten a las aplicaciones recibir contenido nuevo de un proveedor y actualizan en segundo plano. La siguiente sección explora fetch y notificaciones remotas con mayor detalle y también introduce el reconocimiento de ubicación como medio para actualizar una aplicación en segundo plano en iOS 6.

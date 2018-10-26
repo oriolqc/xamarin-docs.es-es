@@ -4,15 +4,15 @@ description: Este documento describe cómo crear un control personalizado y su u
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 0097cdf006944a51d938ea91d3ea0b0c2aee08cf
-ms.sourcegitcommit: bf51592be39b2ae3d63d029be1d7745ee63b0ce1
+ms.openlocfilehash: d24d62bf190a2cb078bf82d7a8676f302e740762
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2018
-ms.locfileid: "39573586"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50115593"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>Uso de controles personalizados con iOS Designer
 

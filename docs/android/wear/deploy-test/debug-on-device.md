@@ -1,69 +1,69 @@
 ---
-title: Depurar en un dispositivo de uso
-description: En este artículo se explica cómo depurar una aplicación de uso de Xamarin.Android en un dispositivo de uso.
+title: Depurar en un dispositivo Wear
+description: En este artículo se explica cómo depurar una aplicación de desgaste de Xamarin.Android en un dispositivo Wear.
 ms.prod: xamarin
 ms.assetid: 01668E4B-BB83-4C26-B23A-F788173FB823
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3f3143dcda4017bbabfbd34a58a40665beea6f75
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 232fcd1d369eba1daad170986f2e2c4c913a3649
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30768056"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112483"
 ---
-# <a name="debug-on-a-wear-device"></a>Depurar en un dispositivo de uso
+# <a name="debug-on-a-wear-device"></a>Depurar en un dispositivo Wear
 
-_En este artículo se explica cómo depurar una aplicación de uso de Xamarin.Android en un dispositivo de uso._
+_En este artículo se explica cómo depurar una aplicación de desgaste de Xamarin.Android en un dispositivo Wear._
 
 
 ## <a name="overview"></a>Información general
 
-Si tiene un dispositivo Android desgaste como un Smartwatch desgaste Android, puede ejecutar la aplicación en el dispositivo en lugar de utilizar un emulador. (Si no está familiarizado con el proceso de implementación y ejecución de aplicaciones usan Android, consulte [desgaste Hello,](~/android/wear/get-started/hello-wear.md).)
+Si tiene un dispositivo Android Wear, como un Smartwatch Android Wear, puede ejecutar la aplicación en el dispositivo en lugar de usar un emulador. (Si todavía no está familiarizado con el proceso de implementar y ejecutar aplicaciones de Android Wear, vea [Hola, Wear](~/android/wear/get-started/hello-wear.md).)
 
-## <a name="prepare-the-wear-device"></a>Preparar el dispositivo de uso:
+## <a name="prepare-the-wear-device"></a>Preparar el dispositivo Wear:
 
-Siga estos pasos para habilitar la depuración en el dispositivo Android desgaste:
+Para habilitar la depuración en el dispositivo Android Wear, siga estos pasos:
 
-1.  Abra la **configuración** menú en el dispositivo Android desgaste.
+1.  Abra el **configuración** menú en el dispositivo Android Wear.
 
-2.  Desplácese hasta la parte inferior del menú y puntee **sobre**.
+2.  Desplácese hasta la parte inferior del menú y pulse **sobre**.
 
 3.  Puntee en el número de compilación 7 veces.
 
-4.  En el **configuración** menú, puntee **opciones del desarrollador**.
+4.  En el **configuración** menú, pulse **opciones del desarrollador**.
 
 5.  Confirme que **ADB depuración** está habilitado.
 
 
 ## <a name="debugging-over-usb"></a>Depuración a través de USB
 
-Si el dispositivo de desgaste tiene un puerto USB, puede conectar el dispositivo de uso en el equipo, implementar en el mismo y ejecutar o depurar la aplicación como lo haría con un teléfono Android (para obtener más información, consulte [depurar en un dispositivo](~/android/deploy-test/debugging/debug-on-device.md)).
+Si el dispositivo Wear tiene un puerto USB, puede conectar el dispositivo Wear a su equipo, implementar en él y ejecutar o depurar la aplicación como lo haría con un teléfono Android (para obtener más información, consulte [depurar en un dispositivo](~/android/deploy-test/debugging/debug-on-device.md)).
 
 
 ## <a name="debugging-over-bluetooth"></a>Depuración a través de Bluetooth
 
-Si el dispositivo desgaste no tiene un puerto USB, puede implementar la aplicación en el dispositivo de uso a través de Bluetooth mediante el enrutamiento de salida de depuración de la aplicación a un teléfono Android que esté conectado al equipo. 
+Si el dispositivo Wear no tiene un puerto USB, puede implementar la aplicación en el dispositivo Wear a través de Bluetooth mediante el enrutamiento de salida de depuración de la aplicación a un teléfono Android que está conectado al equipo. 
 
 ### <a name="prepare-your-phone"></a>Preparar el teléfono
 
-Utilice los pasos siguientes para preparar su teléfono para hacer que las conexiones de Bluetooth en el dispositivo de uso: 
+Utilice los pasos siguientes para preparar su teléfono para realizar conexiones Bluetooth al dispositivo Wear: 
 
-1.  Si no lo ha hecho ya, configure el teléfono para el desarrollo de Xamarin.Android como se explica en [establecer dispositivo para el desarrollo](~/android/get-started/installation/set-up-device-for-development.md).
+1.  Si aún no lo ha hecho, configure el teléfono para el desarrollo de Xamarin.Android como se explica en [configurar el dispositivo para el desarrollo](~/android/get-started/installation/set-up-device-for-development.md).
 
-2.  Descargar e instalar gratuitamente [desgaste Android](https://play.google.com/store/apps/details?id=com.google.android.wearable.app) aplicación desde Google Play Store.
+2.  Descargue e instale la versión gratuita [Android Wear](https://play.google.com/store/apps/details?id=com.google.android.wearable.app) aplicación desde el Store de Google Play.
 
 ### <a name="connect-the-device"></a>Conecte el dispositivo
 
-Siga estos pasos para conectar el dispositivo desgaste a su teléfono:
+Siga estos pasos para conectar el dispositivo de desgaste a su teléfono:
 
-1.  En el teléfono que actúan como intermediarios de Bluetooth (configurada anteriormente), inicie la aplicación Android desgaste. 
+1.  En el teléfono que actúe como intermediario de Bluetooth (configurada anteriormente), inicie la aplicación Android Wear. 
 
-2.  Pulse la **configuración** icono.
+2.  Pulse el **configuración** icono.
 
-3.  Habilitar **depuración a través de Bluetooth**. Debería ver los estados siguientes que se muestra en la pantalla de la aplicación usan Android:
+3.  Habilitar **depuración a través de Bluetooth**. Debería ver el estado del siguiente aparece en la pantalla de la aplicación Android Wear:
 
         Host: disconnected
         Target: connected
@@ -75,49 +75,49 @@ Siga estos pasos para conectar el dispositivo desgaste a su teléfono:
     adb connect 127.0.0.1:4444
     ```
 
-    Si el puerto 4444 no está disponible, puede usar cualquier otro puerto disponible para el que tiene acceso. 
+    Si el puerto 4444 no está disponible, puede usar cualquier puerto disponible al que se tiene acceso. 
 
-    **Tenga en cuenta**: si reinicia Visual Studio o Visual Studio para Mac, debe ejecutar estos comandos para configurar una conexión con el dispositivo de uso.
+    **Tenga en cuenta**: si reinicia Visual Studio o Visual Studio para Mac, debe ejecutar estos comandos para configurar una conexión al dispositivo Wear.
 
-5.  Cuando el dispositivo desgaste solicite, confirme que va a permitir **ADB depuración**. En la aplicación Android desgaste, debería ver el estado cambie a:
+5.  Cuando el dispositivo Wear le solicite, confirme que permitan **ADB depuración**. En la aplicación Android Wear, debería ver el estado cambie a:
 
         Host: connected
         Target: connected
 
-6.  Después de completar los pasos anteriores, ejecutando `adb devices` muestra el estado de teléfono y el dispositivo Android desgaste:
+6.  Después de completar los pasos anteriores, ejecute `adb devices` muestra el estado de teléfono y el dispositivo Android Wear:
 
         List of devices attached
         127.0.0.1:4444    device
         019ad61df0a69399  device
 
-En este momento, puede implementar la aplicación en el dispositivo de uso.
+En este momento, puede implementar la aplicación en el dispositivo de desgaste.
 
 <a name="screenshots" />
 
 ### <a name="taking-screenshots"></a>Realizar capturas de pantalla
 
-Puede tomar una captura de pantalla del dispositivo desgaste escribiendo el comando siguiente: 
+Puede realizar una captura de pantalla del dispositivo Wear escribiendo el comando siguiente: 
 
 ```shell
 adb -s 127.0.0.1:4444 shell screencap -p /sdcard/DCIM/screencap.png
 ```
 
-Copiar la captura de pantalla en el equipo, escriba el comando siguiente:
+Copie la captura de pantalla en el equipo escribiendo el comando siguiente:
 
 ```shell
 adb -s 127.0.0.1:4444 pull /sdcard/DCIM/screencap.png
 ```
 
-Eliminar la captura de pantalla en el dispositivo, escriba el comando siguiente:
+Eliminar la captura de pantalla en el dispositivo escribiendo el comando siguiente:
 
 ```shell
 adb -s 127.0.0.1:4444 shell rm /sdcard/DCIM/screencap.png
 ```
 
 
-### <a name="uninstalling-an-app"></a>Desinstalar una aplicación
+### <a name="uninstalling-an-app"></a>Desinstalación de una aplicación
 
-Puede desinstalar una aplicación desde el dispositivo desgaste escribiendo el comando siguiente:
+Puede desinstalar una aplicación desde el dispositivo wear escribiendo el comando siguiente:
 
 ```shell
 adb -s 127.0.0.1:4444 uninstall <package name>
@@ -129,24 +129,24 @@ Por ejemplo, para quitar la aplicación con el nombre del paquete `com.xamarin.w
 adb -s 127.0.0.1:4444 uninstall com.xamarin.weartest
 ```
 
-Para obtener más información sobre la depuración de dispositivos Android desgaste a través de Bluetooth, consulte [depuración a través de Bluetooth](https://developer.android.com/training/wearables/apps/bt-debugging.html).
+Para obtener más información sobre la depuración de los dispositivos Android Wear a través de Bluetooth, consulte [depuración a través de Bluetooth](https://developer.android.com/training/wearables/apps/bt-debugging.html).
 
 
-## <a name="debugging-a-wear-app-with-a-companion-phone-app"></a>Depurar una aplicación de uso con una aplicación de teléfono complementarias
+## <a name="debugging-a-wear-app-with-a-companion-phone-app"></a>Depurar una aplicación Wear con una aplicación complementaria de teléfono
 
-Aplicaciones de Android desgaste se empaquetan con una aplicación de teléfono Android complementaria para su distribución en Google Play (para obtener más información, consulte [trabajar con el empaquetado](~/android/wear/deploy-test/packaging.md)). Sin embargo, todavía desarrollar la aplicación de uso y su aplicación complementaria por separado. Al lanzar la aplicación a través de Google Play Store, la aplicación de uso se empaqueta con la aplicación complementaria y se instala automáticamente si es posible.
+Aplicaciones de Android Wear se empaquetan con una aplicación complementaria de teléfono Android para su distribución en Google Play (para obtener más información, consulte [trabajar con el empaquetado](~/android/wear/deploy-test/packaging.md)). Sin embargo, todavía desarrollar su aplicación complementaria y la aplicación Wear por separado. Cuando libere su aplicación a través el Store de Google Play, la aplicación Wear se empaqueta con la aplicación complementaria de y se instala automáticamente si es posible.
 
-Para depurar la aplicación de uso con una aplicación complementaria: 
+Para depurar la aplicación Wear con una aplicación complementaria: 
 
 1.  Compilar e implementar la aplicación complementaria en el teléfono.
 
 2.  Haga clic en el proyecto de desgaste y establézcalo como proyecto de inicio predeterminado.
 
-3.  Implementar el proyecto de uso en el dispositivo wearable.
+3.  Implementar el proyecto de desgaste en el dispositivo portátil.
 
-4.  Ejecutar y depurar la aplicación de uso en el dispositivo.
+4.  Ejecutar y depurar la aplicación desgaste del dispositivo.
 
  
 ## <a name="summary"></a>Resumen
 
-Este artículo explica cómo configurar un dispositivo Android desgaste para depuración desgaste desde Visual Studio a través de Bluetooth y cómo depurar una aplicación de uso con una aplicación de teléfono complementario. También se proporcionan sugerencias de depuración comunes para depurar una aplicación de uso a través de Bluetooth.
+En este artículo se explica cómo configurar un dispositivo Android Wear para depuración desgaste desde Visual Studio a través de Bluetooth y cómo depurar una aplicación Wear con una aplicación complementaria de teléfono. También se proporcionan sugerencias de depuración comunes para depurar una aplicación Wear a través de Bluetooth.

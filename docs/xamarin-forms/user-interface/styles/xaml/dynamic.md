@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: cedf9e3daed9a2d5f8bfa0962bf66510748b592a
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 2f336bff19302228b9c8c3a1aa87930414c44ac2
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997151"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108410"
 ---
 # <a name="dynamic-styles-in-xamarinforms"></a>Estilos dinámicos en Xamarin.Forms
 
@@ -121,8 +121,6 @@ public class DynamicStylesPageCS : ContentPage
 ```
 
 En C#, la [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) instancias uso el [ `SetDynamicResource` ](xref:Xamarin.Forms.Element.SetDynamicResource*) método para hacer referencia a `searchBarStyle`. El `OnButtonClicked` es idéntico del ejemplo XAML y cuando se ejecuta, el código del controlador de eventos `searchBarStyle` cambiará entre `blueSearchBarStyle` y `greenSearchBarStyle`.
-
-<a name="dynamic-style-inheritance">
 
 ## <a name="dynamic-style-inheritance"></a>Herencia de estilo dinámico
 

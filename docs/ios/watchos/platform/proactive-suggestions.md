@@ -1,89 +1,89 @@
 ---
-title: watchOS automático sugerencias en Xamarin
-description: Este artículo muestra cómo usar las sugerencias automático en una aplicación watchOS 3 para la interacción de unidad al permitir que el sistema de forma proactiva presentar automáticamente información útil al usuario.
+title: Sugerencias proactivas en Xamarin de watchOS
+description: Este artículo muestra cómo usar sugerencias proactivas en una aplicación de watchOS 3 para generar participación permitiendo que el sistema de forma proactiva presentar automáticamente información útil al usuario.
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 33dccd00e07062e040c2707826ef62b764e11a0e
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 979b103db478e3888d3a3c20df6afbd91d0c37d8
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34791291"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116906"
 ---
-# <a name="watchos-proactive-suggestions-in-xamarin"></a>watchOS automático sugerencias en Xamarin
+# <a name="watchos-proactive-suggestions-in-xamarin"></a>Sugerencias proactivas en Xamarin de watchOS
 
-_Este artículo muestra cómo usar las sugerencias automático en una aplicación watchOS 3 para la interacción de unidad al permitir que el sistema de forma proactiva presentar automáticamente información útil al usuario._
-
-
-Nuevo elemento a watchOS 3, formas de noticias presente sugerencias automático para que los usuarios ponerse en contacto con una aplicación de Xamarin.iOS proactivamente presente información útil automáticamente al usuario en los momentos adecuados.
+_Este artículo muestra cómo usar sugerencias proactivas en una aplicación de watchOS 3 para generar participación permitiendo que el sistema de forma proactiva presentar automáticamente información útil al usuario._
 
 
-## <a name="about-proactive-suggestions"></a>Acerca de sugerencias automático
+Nuevo para watchOS 3, formas de noticias presente sugerencias proactivas para que los usuarios interactúen con una aplicación Xamarin.iOS presente de forma proactiva información útil automáticamente al usuario en los momentos adecuados.
 
-Nueva a 3, watchOS `NSUserActivity` incluye un `MapItem` propiedad que permite que la aplicación proporcionar información de ubicación que se puede usar en otros contextos. Por ejemplo, si el hotel aplicación muestra revisa y proporciona un `MapItem` ubicación, si el usuario cambió a la aplicación de mapas, la ubicación del hotel que estaban viendo estaría disponible.
 
-La aplicación expone esta funcionalidad en el sistema mediante un conjunto de tecnologías como `NSUserActivity`, MapKit, el Reproductor de Media y UIKit. Además, al proporcionar soporte de sugerencia automático de la aplicación, obtiene una integración más profunda Siri de forma gratuita.
+## <a name="about-proactive-suggestions"></a>Acerca de sugerencias proactivas
+
+Nuevo para watchOS 3, `NSUserActivity` incluye un `MapItem` propiedad que permite que la aplicación proporcionar información de ubicación que se puede usar en otros contextos. Por ejemplo, si el hotel aplicación muestra las revisiones y proporciona un `MapItem` ubicación, si el usuario cambia a la aplicación de mapas, la ubicación del hotel estaba viendo estaría disponible.
+
+La aplicación expone esta funcionalidad al sistema mediante un conjunto de tecnologías como `NSUserActivity`, MapKit, Media Player y UIKit. Además, al proporcionar compatibilidad con sugerencias proactivas para la aplicación, obtiene una integración más profunda Siri de forma gratuita.
 
 ## <a name="location-based-suggestions"></a>Sugerencias basadas en ubicación
 
-Nuevo para watchOS 3, el `NSUserActivity` clase incluye una `MapItem` propiedad que permite al desarrollador proporcionar información de ubicación que se puede usar en otros contextos. Por ejemplo, si la aplicación muestra opiniones sobre restaurantes, el desarrollador puede establecer el `MapItem` propiedad a la ubicación del restaurante que está viendo el usuario en la aplicación. Si el usuario cambia a la aplicación de mapas, ubicación del restaurante está automáticamente disponible.
+Nuevo para watchOS 3, el `NSUserActivity` clase incluye un `MapItem` propiedad que permite al desarrollador proporcionar información de ubicación que se puede usar en otros contextos. Por ejemplo, si la aplicación muestra opiniones sobre restaurantes, el desarrollador puede establecer el `MapItem` propiedad a la ubicación del restaurante que el usuario está viendo en la aplicación. Si el usuario cambia a la aplicación de mapas, la ubicación del restaurante está automáticamente disponible.
 
-Si la aplicación admite la búsqueda de la aplicación, puede usar los nuevos componentes de la dirección de la `CSSearchableItemAttributesSet` clase para especificar las ubicaciones que el usuario que desee visitar. Estableciendo la `MapItem` propiedad, las demás propiedades son rellena de forma automática.
+Si la aplicación admite la búsqueda de la aplicación, pueden usar los nuevos componentes de la dirección de la `CSSearchableItemAttributesSet` clase para especificar las ubicaciones que el usuario que desee visitar. Estableciendo el `MapItem` propiedad, las demás propiedades son en rellenar automáticamente.
 
 Además de establecer el `Latitude` y `Longitude` de las propiedades de componente de dirección, se recomienda que la aplicación proporcione la `NamedLocation` y `PhoneNumbers` propiedades demasiado, por lo que Siri puede iniciar una llamada a la ubicación.
 
 ## <a name="contextual-siri-reminders"></a>Avisos de Siri contextuales
 
-Permite al usuario usar Siri para realizar rápidamente un aviso para ver el contenido que están viendo actualmente en la aplicación en una fecha posterior. Por ejemplo, si una revisión de restaurantes estaban viendo en la aplicación, ya que podrían invocar Siri y diga *"Recordármelo sobre esto cuando llegue a casa."* Siri generaría el recordatorio con un vínculo a la revisión en la aplicación.
+Permite al usuario usar Siri para crear rápidamente un recordatorio para ver el contenido que están viendo actualmente en la aplicación en una fecha posterior. Por ejemplo, si una revisión de restaurantes estaban viendo en la aplicación, ya que podrían invocar Siri y diga *"Recordarme esto cuando llegue a casa."* Siri generaría el recordatorio de con un vínculo a la revisión en la aplicación.
 
-## <a name="implementing-proactive-suggestions"></a>Implementación de sugerencias automático
+## <a name="implementing-proactive-suggestions"></a>Implementación de sugerencias proactivas
 
-Agregando la sugerencia automático soporte técnico para la aplicación de Xamarin.iOS es normalmente tan fácil como implementar algunas API o expandir en algunas API que ya se puede implementar la aplicación.
+Agregando la sugerencia proactiva soporte técnico para la aplicación de Xamarin.iOS es normalmente tan fácil como implementar algunas API o expandir en algunas API que ya se puede implementar la aplicación.
 
-Sugerencias automático funcionan con las aplicaciones de tres maneras principales:
+Sugerencias proactivas trabajar con las aplicaciones de tres maneras principales:
 
-- **`NSUserActivity`** -Ayuda entender la información que el usuario está trabajando actualmente con pantalla del sistema.
-- **Sugerencias de ubicación** : si la aplicación ofrece o utiliza información de ubicación según, estas formas nuevas de la oferta de extensión API para compartir esta información entre aplicaciones.
+- **`NSUserActivity`** : Ayuda al sistema a comprender qué información que el usuario está trabajando actualmente en pantalla.
+- **Sugerencias de ubicación** : si la aplicación ofrece o consume información basados en la ubicación, estas nuevas formas de API extensión oferta para compartir esta información entre aplicaciones.
 
 Y es compatible con la aplicación mediante la implementación de los siguientes:
 
-- **Contextual recordatorios de Siri** : en iOS 10, `NSUserActivity` se ha ampliado para permitir que Siri crear rápidamente un aviso para ver el contenido que están viendo actualmente en la aplicación en una fecha posterior.
-- **Sugerencias de ubicación** -iOS 10 mejora `NSUserActivity` para capturar ubicaciones ver dentro de la aplicación y promoverlos en muchos lugares en todo el sistema.
-- **Solicitudes de Siri contextual**  -  `NSUserActivity` proporciona contexto para la información mostrada Siri dentro de la aplicación para que el usuario pueda obtener direcciones o en lugar de ser una llamada Siri invocar desde dentro de la aplicación.
+- **Avisos de Siri contextuales** : en iOS 10 y `NSUserActivity` se ha ampliado para permitir que Siri crear rápidamente un recordatorio para ver el contenido que están viendo actualmente en la aplicación en una fecha posterior.
+- **Sugerencias de ubicación** -iOS 10 mejora `NSUserActivity` para capturar las ubicaciones que se ve dentro de la aplicación y promoverlas en muchos lugares del sistema.
+- **Las solicitudes de Siri contextuales**  -  `NSUserActivity` proporciona contexto a la información mostrada Siri dentro de la aplicación para que el usuario puede obtener direcciones o colocar una llamada de invocación Siri desde dentro de la aplicación.
 
-Todas estas características tienen algo en común, todas utilizan `NSUserActivity` en un formulario u otro para proporcionar su funcionalidad. 
+Todas estas características tienen algo en común, todos ellos utilizan `NSUserActivity` en una forma u otra, para proporcionar su funcionalidad. 
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-Como se indicó anteriormente, `NSUserActivity` ayuda a que el sistema entender la información que el usuario está trabajando actualmente con pantalla. `NSUserActivity` un estado atenuado almacena en caché mecanismo para capturar la actividad del usuario mientras navegan por la aplicación. Por ejemplo, si la aplicación del restaurante:
+Como se indicó anteriormente, `NSUserActivity` ayuda al sistema a comprender qué información que el usuario está trabajando actualmente en pantalla. `NSUserActivity` un estado atenuado almacena en caché el mecanismo para capturar la actividad del usuario mientras navegan por la aplicación. Por ejemplo, vea la aplicación del restaurante:
 
-[![](proactive-suggestions-images/activity02.png "La aplicación del restaurante")](proactive-suggestions-images/activity02.png#lightbox)
+[![](proactive-suggestions-images/activity02.png "La aplicación de restaurante")](proactive-suggestions-images/activity02.png#lightbox)
 
-Con las siguientes interacciones:
+Con las interacciones de la siguientes:
 
-1. Cuando el usuario trabaja con la aplicación, un `NSUserActivity` se crea para volver a crear el estado de la aplicación más tarde.
+1. Mientras el usuario trabaja con la aplicación, un `NSUserActivity` se crea para volver a crear el estado de la aplicación más adelante.
 2. Si el usuario busca un restaurante, se sigue el mismo patrón de creación de actividades.
 3. Y, de nuevo, cuando el usuario ve un resultado. En este último caso, el usuario está viendo una ubicación y en iOS 10, el sistema es más consciente de ciertos conceptos (por ejemplo, las interacciones de ubicación o comunicación).
 
 Eche un vistazo más de cerca en la última pantalla:
 
-[![](proactive-suggestions-images/activity03.png "La carga de NSUserActivity")](proactive-suggestions-images/activity03.png#lightbox)
+[![](proactive-suggestions-images/activity03.png "La carga NSUserActivity")](proactive-suggestions-images/activity03.png#lightbox)
 
 Aquí es la creación de la aplicación un `NSUserActivity` y se ha rellenado con información para volver a crear el estado más tarde. La aplicación también incluye algunos metadatos como el nombre y la dirección de la ubicación. Con esta actividad creada, la aplicación permite iOS saber que representa el estado del usuario actual.
 
-La aplicación, a continuación, decide si la actividad se anuncian por aire para la entrega, guarda como un valor temporal para obtener sugerencias de ubicación o se agregan al índice de servicios en el dispositivo para mostrar en los resultados de la búsqueda.
+La aplicación, a continuación, decide si la actividad se anunciará por transmisión terrestre para su entrega, guarda como un valor temporal para sugerencias de ubicación o agregar al índice de Spotlight en el dispositivo para mostrar en los resultados de búsqueda.
 
 Para obtener más información sobre la búsqueda de Spotlight y de entrega, vea nuestra [Introducción a la entrega](~/ios/platform/handoff.md) y [iOS 9 nuevas API de búsqueda](~/ios/platform/search/index.md) guías.
 
 ### <a name="creating-an-activity"></a>Creación de una actividad
 
-Antes de crear una actividad, un identificador de tipo de actividad necesitará crearse para identificarlo. El identificador de tipo de actividad es una cadena corta que se agrega a la `NSUserActivityTypes` matriz de la aplicación `Info.plist` archivo usado para identificar de forma única un determinado tipo de actividad de usuario. Habrá una entrada en la matriz por cada actividad que es compatible con la aplicación y se expone en la búsqueda de la aplicación. Consulte nuestro [crear la referencia de los identificadores de tipo de actividad](~/ios/platform/search/nsuseractivity.md) para obtener más detalles.
+Antes de crear una actividad, será necesario un identificador de tipo de actividad que se ha creado para identificarla. El identificador de tipo de actividad es una cadena corta que se agrega a la `NSUserActivityTypes` matriz de la aplicación `Info.plist` archivo usado para identificar de forma única un determinado tipo de actividad de usuario. Habrá una entrada en la matriz para cada actividad que la aplicación admite y se expone a la aplicación de búsqueda. Consulte nuestra [referencia de identificadores de tipo de actividad crear](~/ios/platform/search/nsuseractivity.md) para obtener más detalles.
 
-Un vistazo a un ejemplo de una actividad:
+Ver un ejemplo de una actividad:
 
 ```csharp
 // Create App Activity
@@ -106,9 +106,9 @@ activity.EligibleForPublicIndexing = true;
 activity.BecomeCurrent();
 ```
 
-Se crea una nueva actividad con un identificador de tipo de actividad. A continuación, se crean algunos metadatos que definen la actividad para que este estado se puede restaurar en una fecha posterior. A continuación, la actividad se asignó un título descriptivo y adjunta a la información de usuario. Por último, algunas capacidades se habilitan y se envía la actividad en el sistema.
+Se crea una nueva actividad con un identificador de tipo de actividad. A continuación, algunos metadatos que definen la actividad se crean por lo que este estado se puede restaurar en una fecha posterior. A continuación, la actividad tiene un título significativo y conectada a la información del usuario. Por último, algunas funcionalidades están habilitadas y se envía la actividad en el sistema.
 
-El código anterior se puede mejorar aún más para incluir los metadatos que proporciona el contexto para la actividad mediante la realización de los siguientes cambios:
+El código anterior se podría mejorar aún más para incluir los metadatos que proporciona contexto a la actividad mediante la realización de los siguientes cambios:
 
 ```csharp
 ...
@@ -123,7 +123,7 @@ activity.ContentAttributeSet = attributes;
 activity.BecomeCurrent();
 ```
 
-Si el desarrollador tiene un sitio Web que es capaz de mostrar la misma información que la aplicación, la aplicación puede contener la dirección URL y el contenido se puede mostrar en otros dispositivos que no tienen la aplicación instalada (a través de entrega):
+Si el desarrollador tiene un sitio Web que es capaz de mostrar la misma información que la aplicación, la aplicación puede incluir la dirección URL y el contenido se puede mostrar en otros dispositivos que no tienen la aplicación instalada (a través de Handoff):
 
 ```csharp
 // Restore on the web
@@ -132,7 +132,7 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 
 ### <a name="restoring-an-activity"></a>Restauración de una actividad
 
-Para responder al usuario puntee en un resultado de búsqueda (`NSUserActivity`) para la aplicación, editar la **AppDelegate.cs** archivo e invalide el `ContinueUserActivity` método. Por ejemplo:
+Para responder al usuario pulsar en un resultado de búsqueda (`NSUserActivity`) para la aplicación, edite el **AppDelegate.cs** archivo e invalidar la `ContinueUserActivity` método. Por ejemplo:
 
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
@@ -149,39 +149,39 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 }
 ```
 
-Asegúrese de que es el mismo identificador de tipo de actividad (`com.xamarin.platform`) como la actividad que creó anteriormente. La aplicación usa la información almacenada en el `NSUserActivity` para restaurar el estado en donde se dejó el usuario.
+Asegúrese de que es el mismo identificador de tipo de actividad (`com.xamarin.platform`) como la actividad que creó anteriormente. La aplicación usa la información almacenada en el `NSUserActivity` para restaurar el estado a donde se dejó el usuario.
 
-### <a name="benefits-of-creating-an-activity"></a>Ventajas de la creación de una actividad
+### <a name="benefits-of-creating-an-activity"></a>Ventajas de crear una actividad
 
-Con la mínima cantidad de código presentado anteriormente, la aplicación es ahora pueden aprovechar de tres nuevas características de iOS 10:
+Con la cantidad mínima de código anterior, la aplicación ahora es capaz de aprovechar las ventajas de las tres nuevas características de iOS 10:
 
 - **Handoff**
 - **Búsqueda de Spotlight**
 - **Avisos de Siri contextuales**
 
-En la siguiente sección se echa un vistazo a la hora de habilitar dos otras nuevas características de iOS 10:
+La siguiente sección tardará un vistazo a habilitar dos otras nuevas características de iOS 10:
 
 - **Sugerencias de ubicación**
 - **Solicitudes de Siri contextuales**
 
 ### <a name="location-based-suggestions"></a>Sugerencias basadas en ubicación 
 
-Tome como ejemplo de la aplicación de búsqueda de restaurante anterior. Si ha implementado `NSUserActivity` y rellena correctamente todos los metadatos y atributos, el usuario podrá hacer lo siguiente:
+Tome como ejemplo la aplicación de búsqueda de restaurante anterior. Si ha implementado `NSUserActivity` y rellenado correctamente todos los metadatos y los atributos, el usuario podría hacer lo siguiente:
 
-1. Buscar un restaurante en la aplicación que les gustaría usar para cumplir con un amigo en.
+1. Buscar un restaurante en la aplicación que les gustaría para cumplir con un amigo en.
 4. Si el usuario cambia a la aplicación de mapas, dirección del restaurante se sugiere automáticamente como un destino.
-5. Esto funciona incluso para las aplicaciones de terceros 3rd (que admiten `NSUserActivity`), por lo que el usuario puede cambiar a una aplicación de uso compartido de viaje y automáticamente la dirección del restaurante se sugiere así como un destino no existe.
-6. También proporciona contexto al Siri, por lo que el usuario puede invocar Siri dentro de la aplicación del restaurante y pida *"Obtener direcciones..."* y Siri le proporcionará instrucciones al restaurante el usuario está viendo.
+5. Esto funciona incluso para las aplicaciones de terceros 3rd (que admiten `NSUserActivity`), por lo que el usuario puede cambiar a una aplicación de uso compartido de andar y dirección del restaurante se sugiere automáticamente como un destino allí también.
+6. También proporciona contexto a Siri, por lo que el usuario puede invocar Siri dentro de la aplicación del restaurante y solicitar *"Obtener direcciones..."* y Siri le proporcionará instrucciones para el restaurante el usuario está viendo.
 
-Toda la funcionalidad anterior tiene algo en común, todos ellos indicarán donde procede originalmente la sugerencia de. En el caso del ejemplo anterior, es la aplicación de revisión de restaurantes ficticios.
+Toda la funcionalidad anterior tiene una cosa en común, todos ellos indican donde procede originalmente la sugerencia de. En el caso del ejemplo anterior, es la aplicación de revisión de restaurantes ficticia.
 
-watchOS 3 se ha mejorado para habilitar esta funcionalidad en una aplicación a través de varias pequeñas modificaciones y adiciones a marcos existentes:
+se ha mejorado para watchOS 3 para habilitar esta funcionalidad para una aplicación a través de varias pequeñas modificaciones y adiciones a los marcos existentes:
 
 - `NSUserActivity` tiene campos adicionales para capturar la información de ubicación que se ve dentro de la aplicación.
-- Se realizaron varias adiciones a MapKit y CoreSpotlight para capturar la ubicación.
-- Se ha agregado la funcionalidad compatible con la ubicación Siri, mapas, multitarea y otras aplicaciones en el sistema.
+- Se realizaron varias adiciones MapKit y CoreSpotlight para capturar la ubicación.
+- Se agregó la funcionalidad compatible con la ubicación de Siri, mapas, multitarea y otras aplicaciones dentro del sistema.
 
-Para implementar las sugerencias de ubicación según, comience con el mismo código de actividad presentado anteriormente:
+Para implementar sugerencias basadas en la ubicación, comience con el mismo código de actividad presentado anteriormente:
 
 ```csharp
 // Create App Activity
@@ -213,14 +213,14 @@ activity.WebPageUrl = new NSUrl("http://xamarin.com/platform");
 activity.BecomeCurrent();
 ```
 
-Si la aplicación está utilizando MapKit, resulta tan sencillo como la adición de la asignación actual `MKMapItem` a la actividad:
+Si la aplicación usa MapKit, es tan sencillo como agregar el objeto map actual `MKMapItem` a la actividad:
 
 ```csharp
 // Save MKMapItem location
 activity.MapItem = myMapItem;
 ```
 
-Si la aplicación no está utilizando MapKit, puede adoptar la búsqueda de la aplicación y especificar los nuevos atributos para la ubicación siguientes:
+Si la aplicación no está utilizando MapKit, puede adoptar la búsqueda de la aplicación y especificar los siguientes atributos nuevos para la ubicación:
 
 ```csharp
 // Provide context
@@ -240,13 +240,13 @@ attributes.SupportsPhoneCalls = true;
 attributes.SupportsNavigation = true;
 ```
 
-Eche un vistazo en el código anterior en detalle. En primer lugar, se requiere el nombre de la ubicación en todos los casos:
+Eche un vistazo en el código anterior en detalle. En primer lugar, se requiere el nombre de la ubicación en todas las instancias:
 
 ```csharp
 attributes.NamedLocation = "Apple Inc.";
 ```
 
-A continuación, el texto de descripción basándose en necesarios para el texto según instancias (por ejemplo, el teclado QuickType):
+A continuación, la descripción en función de necesarios para texto basado en texto instancias (por ejemplo, el teclado QuickType):
 
 ```csharp
 attributes.SubThoroughfare = "1";
@@ -263,13 +263,13 @@ attributes.Latitude = 37.33072;
 attributes.Longitude = 122.029674;
 ```
 
-Al establecer los números de teléfono, la aplicación puede obtener acceso a Siri por lo que el usuario puede invocar Siri desde la aplicación diciendo algo parecido, * "Llamar a esta ubicación":
+Al establecer los números de teléfono, la aplicación puede tener acceso a Siri por lo que el usuario puede invocar desde la aplicación Siri con algo, como * "Llamar a este lugar":
 
 ```csharp
 attributes.PhoneNumbers = new string[]{"(800) 275-2273"};
 ```
 
-Por último, la aplicación puede indicar si la instancia es adecuada para la navegación y llamadas de teléfono:
+Por último, la aplicación puede indicar si la instancia es adecuada para la navegación y las llamadas de teléfono:
 
 ```csharp
 attributes.SupportsPhoneCalls = true;
@@ -280,24 +280,24 @@ attributes.SupportsNavigation = true;
 Apple sugiere las siguientes prácticas recomendadas al trabajar con actividades:
 
 - Use `NeedsSave` para las actualizaciones de la carga diferida.
-- Asegúrese de mantener una referencia segura a la actividad actual.
-- Transferencia de pequeñas cargas que incluyen suficiente información para restaurar el estado.
-- Asegúrese de que los identificadores de tipo de actividad único y descriptivo usando la notación DNS inversa para especificarlos. 
+- Asegúrese de mantener una referencia fuerte a la actividad actual.
+- Solo se transfieren las cargas pequeñas que incluyan suficiente información para restaurar el estado.
+- Asegúrese de que los identificadores de tipo de actividad único y descriptivo mediante el uso de la notación DNS inversa especificarlos. 
 
-## <a name="consuming-location-suggestions"></a>Consumir sugerencias de ubicación
+## <a name="consuming-location-suggestions"></a>Consumo de sugerencias de ubicación
 
-En esta sección se tratará consumiendo sugerencias de ubicación que proceden de otras partes del sistema (por ejemplo, la aplicación de asignaciones) o con otras aplicaciones de terceros 3rd.
+En esta sección se tratará consumiendo sugerencias de ubicación que proceder de otras partes del sistema (por ejemplo, la aplicación mapas) o con otras aplicaciones de terceros 3rd.
 
-## <a name="routing-apps-and-locations-suggestions"></a>Aplicaciones de enrutamientos y sugerencias de ubicaciones
+## <a name="routing-apps-and-locations-suggestions"></a>Aplicaciones de enrutamientos y las sugerencias de ubicaciones
 
-En esta sección se echa un vistazo a la hora de consumir sugerencias de ubicación directamente desde dentro de una aplicación de enrutamiento. Para que la aplicación de enrutamiento agregar esta funcionalidad, el desarrollador aprovecharán existente `MKDirectionsRequest` marco de trabajo como se indica a continuación:
+En esta sección tardará un vistazo al consumo de sugerencias de ubicación directamente desde dentro de una aplicación de enrutamiento. Para que la aplicación de enrutamiento agregar esta funcionalidad, el desarrollador aprovechará existente `MKDirectionsRequest` framework como sigue:
 
 - Para promover la aplicación en la multitarea.
 - Para registrar la aplicación como una aplicación de enrutamiento.
-- Para controlar iniciar la aplicación con un MapKit `MKDirectionsRequest` objeto.
-- Dan watchOS la capacidad para obtener información acerca de la aplicación en función de interacción del usuario.
+- Para controlar el inicio de la aplicación con un MapKit `MKDirectionsRequest` objeto.
+- Proporcionan la capacidad para obtener información sugerir la aplicación en función de interacción de usuario de watchOS.
 
-Cuando se inicia la aplicación con un MapKit `MKDirectionsRequest` objeto, debe iniciar automáticamente lo que proporciona las instrucciones de usuario a la ubicación solicitada, o presentar una interfaz de usuario que hace más fácil para que el usuario empiece a obtener direcciones. Por ejemplo:
+Cuando se inicia la aplicación con un MapKit `MKDirectionsRequest` objeto, debe iniciar lo que proporciona las instrucciones de usuario a la ubicación solicitada automáticamente o presentar una interfaz de usuario que facilita empezar a recibir instrucciones al usuario. Por ejemplo:
 
 
 ```csharp
@@ -347,7 +347,7 @@ Si lo es, crea un `MKDirectionsRequest` desde la dirección URL:
 var request = new MKDirectionsRequest(url);
 ```
 
-Nuevo en watchOS 3, la aplicación se puede enviar una dirección que no tiene coordenadas de replicación geográfica, en las que hacen que el desarrollador debe codificar la dirección:
+Nuevo en watchOS 3, la aplicación se puede enviar una dirección que no tienen coordenadas geográficas, en los que hacen que el desarrollador debe codificar la dirección:
 
 ```csharp
 var geocoder = new CLGeocoder();
@@ -360,7 +360,7 @@ geocoder.GeocodeAddress(address, (place, err)=> {
 
 ## <a name="summary"></a>Resumen
 
-En este artículo ha tratado sugerencias automático y se ha explicado cómo el programador puede usarlos para tráfico de unidad a una aplicación de Xamarin.iOS para watchOS. Trata el paso para implementar sugerencias automático y presentan las instrucciones de uso.
+En este artículo ha cubierto sugerencias proactivas y se ha mostrado cómo los desarrolladores pueden usar para dirigir el tráfico a una aplicación de Xamarin.iOS para watchOS. Trata el paso para implementar sugerencias proactivas y presentan las directrices de uso.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

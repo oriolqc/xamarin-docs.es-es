@@ -1,37 +1,37 @@
 ---
 title: Gráficos y animación en iOS
-description: Vínculos de este documento diversas guías disponibles que tratan sobre cómo usar los marcos de imagen Core, para los gráficos esenciales y la animación de núcleo de Xamarin.iOS.
+description: Este documento incluye vínculos a diversas guías que explican cómo utilizar los marcos de imagen básica, Core gráficos y animación básica de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 3FEF45F2-C0F0-4D66-8796-9674FFE6740F
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: 5ff85874791d93428cbe2d2d45d3c7a997880068
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: 4e329c02015de0eccaebac9ffe40e1dc2691a207
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786832"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110115"
 ---
 # <a name="graphics-and-animation-in-ios"></a>Gráficos y animación en iOS
 
-![Images/00_final_app.png](images/00-final-app.png "ejecutar una aplicación de ejemplo") 
+![Images/00_final_app.png](images/00-final-app.png "una ejecución de la aplicación de ejemplo") 
 
-##  <a name="core-imageiosplatformgraphics-animation-iosintroduction-to-coreimagemd"></a>[Imagen del núcleo](~/ios/platform/graphics-animation-ios/introduction-to-coreimage.md)
+##  <a name="core-imageiosplatformgraphics-animation-iosintroduction-to-coreimagemd"></a>[Imagen de Core](~/ios/platform/graphics-animation-ios/introduction-to-coreimage.md)
 
-CoreImage es un nuevo marco introducido en iOS 5 que proporciona una serie de filtros integrados y los efectos que se aplican a imágenes y vídeos, incluida la detección de cara.
+CoreImage es un nuevo marco que se introdujo en iOS 5 que proporciona una serie de filtros integrados y los efectos para aplicarse a las imágenes y vídeos, incluida la detección de caras.
 
 ##  <a name="core-graphicsiosplatformgraphics-animation-ioscore-graphicsmd"></a>[Gráficos básicos](~/ios/platform/graphics-animation-ios/core-graphics.md)
 
-Este artículo describe el marco de trabajo de iOS para los gráficos esenciales que proporciona compatibilidad de dibujo de bajo nivel. Muestra cómo se utiliza para los gráficos esenciales para dibujar la geometría, imágenes y archivos PDF.
+Este artículo describe el marco de iOS de gráficos básicos que proporciona compatibilidad de dibujo de bajo nivel. Muestra cómo usar Core Graphics para dibujar geometría, imágenes y archivos PDF.
 
 ##  <a name="core-animationiosplatformgraphics-animation-ioscore-animationmd"></a>[Animación básica](~/ios/platform/graphics-animation-ios/core-animation.md)
 
-Este artículo examina el marco de trabajo de animación de núcleo, que muestra cómo habilita fluidos animaciones en UIKit, así como el modo de alto rendimiento para usarlo directamente para el control de animación de nivel inferior.
+En este artículo se examina el marco de animación básica, que muestra cómo permiten animaciones fluidas en UIKit, así como la de alto rendimiento se usa directamente para el control de animación de nivel inferior.
 
-##  <a name="using-core-graphics-and-core-animationiosplatformgraphics-animation-iosgraphics-animation-walkthroughmd"></a>[Uso de núcleo gráficos y animación de núcleo](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
+##  <a name="using-core-graphics-and-core-animationiosplatformgraphics-animation-iosgraphics-animation-walkthroughmd"></a>[Uso de gráficos básicos y animación básica](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
 
-En este artículo paso a paso muestra cómo crear una aplicación que utiliza para los gráficos esenciales y la animación de núcleo. Muestra cómo dibujar en la pantalla, en respuesta a la entrada táctil de usuario, así como cómo animar una imagen que se va a recorrer a lo largo de una ruta de acceso.
+En este artículo paso a paso muestra cómo crear una aplicación que utiliza los principales gráficos y animación básica. Muestra cómo se dibujan en la pantalla en respuesta a la interacción del usuario, así como cómo animar una imagen para recorrer a lo largo de una ruta de acceso.
 
 
 

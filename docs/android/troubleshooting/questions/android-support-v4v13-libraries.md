@@ -1,56 +1,56 @@
 ---
-title: Más inteligente Xamarin para Android admite v4 / paquetes de NuGet v13
+title: Más inteligentes de Xamarin Android Support v4 / v13 paquetes de NuGet
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: FE66A82A-6C05-4646-BC52-E806F5DC606C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 47ae63fbd7062be97be04bfc1f1244ec63a1c5bd
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 43627884c2f8bc4d9e5b5faa2c3af08f74487b65
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763961"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114650"
 ---
-# <a name="smarter-xamarin-android-support-v4--v13-nuget-packages"></a>Más inteligente Xamarin para Android admite v4 / paquetes de NuGet v13
+# <a name="smarter-xamarin-android-support-v4--v13-nuget-packages"></a>Más inteligentes de Xamarin Android Support v4 / v13 paquetes de NuGet
 
 ## <a name="about-the-android-support-libraries"></a>Acerca de las bibliotecas de compatibilidad con Android
 
-Google ha creado las bibliotecas de soporte técnico para realizar nuevas características disponibles en versiones anteriores de Android. En general, compatibilidad con bibliotecas tienen un número de versión en su nombre, que es el nivel más bajo de API de Android que son compatibles con (p. ej.: compatibilidad con-v4 solo pueden usarse en la API de nivel 4 y versiones posteriores. Para obtener más información en este [discusión de desbordamiento de la pila](http://stackoverflow.com/questions/9926403/android-support-package-compatibility-library-use-v4-or-v13)). 
+Google ha creado bibliotecas de soporte técnico para que las nuevas características disponibles para las versiones anteriores de Android. En general, las bibliotecas de compatibilidad tienen un número de versión en su nombre, que es el nivel más bajo de API Android son compatibles con (p. ej.: v4 de soporte técnico solo puede usarse en la API de nivel 4 y versiones posteriores. Obtener más información en este [debate de Stack Overflow](http://stackoverflow.com/questions/9926403/android-support-package-compatibility-library-use-v4-or-v13)). 
 
-Dos de las bibliotecas de soporte técnico: `Support-v4` y `Support-v13` no pueden usarse juntas en la misma aplicación, es decir, son mutuamente excluyentes. Esto es porque `Support-v13` realmente contiene todos los tipos y la implementación de `Support-v4`. Si intenta hacer referencia tanto en el mismo proyecto se producirán errores de tipo duplicado.
+Dos de las bibliotecas de compatibilidad: `Support-v4` y `Support-v13` no pueden usarse juntos en la misma aplicación, es decir, son mutuamente excluyentes. Esto es porque `Support-v13` realmente contiene todos los tipos y la implementación de `Support-v4`. Si intenta hacer referencia tanto en el mismo proyecto producirá errores de tipo duplicado.
 
-## <a name="problems-with-referencing"></a>Problemas con el de referencia
+## <a name="problems-with-referencing"></a>Problemas con la que hacen referencia a
 
-Puesto que `Support-v4` ha hecho tan popular, muchas bibliotecas de fabricantes 3rd ahora dependen de él. Podría haber elegido dependen v13 de soporte técnico en su lugar, pero es más común que depender _v4_ porque proporciona a las aplicaciones de uso de estas bibliotecas parte 3ª la opción de admitir niveles de API hasta 4.
+Puesto que `Support-v4` ha vuelto tan popular, mucha de bibliotecas de terceros 3rd ahora dependen de él. Podría haber elegido a depender v13 de soporte técnico en su lugar, pero es más común que depender de _v4_ porque ofrece a las aplicaciones con estas bibliotecas de terceros 3rd la opción de admitir los niveles de API hasta 4.
 
-Si hace referencia a una biblioteca de fabricante 3rd Xamarin el `Xamarin.Android.Support.v4.dll` enlazar a `Support-v4`, también debe hacer referencia a cualquier aplicación que usa esta biblioteca `Xamarin.Android.Support.v4.dll`. Esto es un problema cuando la misma aplicación también desea utilizar algunas de las funciones de la `Xamarin.Android.Support.v13.dll` enlazar a `Support-v13`. Si hace referencia a ambos enlaces, se producirán errores de tipo duplicado.
+Si hace referencia una biblioteca de terceros 3rd Xamarin el `Xamarin.Android.Support.v4.dll` enlazar a `Support-v4`, también debe hacer referencia a cualquier aplicación que usa esta biblioteca `Xamarin.Android.Support.v4.dll`. Esto se convierte en un problema cuando la misma aplicación también quiera usar algunas de las funcionalidades de la `Xamarin.Android.Support.v13.dll` enlazar a `Support-v13`. Si hace referencia a ambos enlaces, se producirán errores de tipo duplicado.
 
 ## <a name="type-forwarded-v4-binding-assembly"></a>Ensamblado de enlace de tipo reenviado v4
 
-Para solucionar este problema, hemos creado una clase especial `Xamarin.Android.Support.v4.dll` ensamblado que no tiene ninguna implementación, sino simplemente `[assembly: TypeForwardedTo (..)]` atributos que reenvían todos los `Support-v4` tipos a la implementación en la `Xamarin.Android.Support.v13.dll` ensamblado.
+Para solucionar este problema, hemos creado un especial `Xamarin.Android.Support.v4.dll` ensamblado que no tiene ninguna implementación, sino simplemente `[assembly: TypeForwardedTo (..)]` atributos que reenvían todos los `Support-v4` tipos a la implementación dentro de la `Xamarin.Android.Support.v13.dll` ensamblado.
 
-Esto significa que un desarrollador puede hacer referencia a él _reenvían_ ensamblado en su aplicación que cumplirá la referencia a `Xamarin.Android.Support.v4.dll` por cualquier biblioteca parte 3ª, mientras sigue permitiendo `Xamarin.Android.Support.v13.dll` para su uso en la aplicación.
+Esto significa que un desarrollador puede hacer referencia a esto _tipo reenviado_ en sus aplicaciones que cumplirán la referencia al ensamblado de `Xamarin.Android.Support.v4.dll` por las bibliotecas de terceros 3rd, mientras sigue permitiendo `Xamarin.Android.Support.v13.dll` para usarse en la aplicación.
 
 ## <a name="nuget-assistance"></a>Asistencia de NuGet
 
-Mientras que un desarrollador puede agregar manualmente las referencias correctas necesarias, se pueden usar NuGet para ayudar a elegir el ensamblado adecuado (ya sea la normal _v4_ enlace o tipo reenviado _v4_ ensamblado) cuando el paquete de NuGet está instalado.
+Mientras que un desarrollador puede agregar manualmente referencias correctas necesaria, se pueden usar NuGet para ayudarle a elegir el ensamblado adecuado (ya sea el valor normal _v4_ enlace o el tipo reenviado _v4_ ensamblado) cuando el paquete de NuGet está instalado.
 
-Por lo tanto, el `Xamarin.Android.Support.v4` paquete de NuGet ahora contiene la lógica siguiente:
+Por lo tanto, el `Xamarin.Android.Support.v4` paquete NuGet ahora contiene la lógica siguiente:
 
-Si la aplicación está destinada a 13 de nivel de API (Monigote 3.2) o superior:
+Si la aplicación está destinado a nivel de API 13 (Monigote 3.2) o superior:
 
-*   `Xamarin.Android.Support.v13` NuGet se agrega automáticamente como una dependencia
-*   El _reenvían_ `Xamarin.Android.Support.v4.dll` se hará referencia en el proyecto
+*   `Xamarin.Android.Support.v13` NuGet se agregará automáticamente como una dependencia
+*   El _tipo reenviado_ `Xamarin.Android.Support.v4.dll` se hará referencia en el proyecto
 
-Si la aplicación tiene como destino cualquier cosa inferior a 13 de nivel de API, obtendrá la normal `Xamarin.Android.Support.v4.dll` enlace al que hace referencia en el proyecto.
+Si la aplicación está destinada a algo inferior a la API de nivel de 13, obtendrá el valor normal `Xamarin.Android.Support.v4.dll` enlace hace referenciado en el proyecto.
 
 ## <a name="do-i-have-to-use-support-v13"></a>¿Tengo que usar v13 de soporte técnico?
 
-Si la aplicación tiene como destino el nivel de API 13 o superior y si decide usar el `Xamarin Android Support-v4` paquete de NuGet, la `Xamarin Android Support v13` paquete NuGet es una dependencia necesaria.
+Si su aplicación está destinada a nivel de API 13 o superior y opta por usar el `Xamarin Android Support-v4` paquete NuGet, el `Xamarin Android Support v13` paquete NuGet es una dependencia necesaria.
 
-Creemos que es el aumento de tamaño de la aplicación (los dos archivos .jar diferencian KB 17) muy pequeño merece la pena la compatibilidad y dolores de cabeza menos da como resultado.
+Creemos que es el aumento de tamaño de la aplicación (los dos archivos .jar se diferencian en 17kb) menor que merece la pena la compatibilidad y menos dolores de cabeza da como resultado.
 
-Si estás firme con sobre el uso de `Support-v4` en una aplicación que tiene como destino 13 de nivel de API o versiones posteriores, puede descargar manualmente siempre la `.nupkg`, extráigalo y hacer referencia al ensamblado.
+Si estás tanto sobre el uso de `Support-v4` en una aplicación que tiene como destino la API de nivel de 13 o superior, puede descargar manualmente siempre la `.nupkg`, extráigalo y hacer referencia al ensamblado.

@@ -1,147 +1,147 @@
 ---
 title: Introducción al desarrollo de juegos con Xamarin
-description: Este documento proporciona información general de desarrollo de juegos con Xamarin, que se describe cómo se realizan los juegos y un muestreo de tecnologías disponibles para su uso con Xamarin.iOS y Xamarin.Android.
+description: Este documento proporciona una descripción general de desarrollo de juegos con Xamarin, que describe un muestreo de las tecnologías disponibles para su uso con Xamarin.iOS y Xamarin.Android y cómo se realizan los juegos.
 ms.prod: xamarin
 ms.assetid: 0E3CDCD2-FBE4-49F5-A70E-8A7B937BAF1D
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
-ms.openlocfilehash: b1bd6d011cdc10352ce3b9258da7e16c2899d2d8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: d6e9fd03025e00da5cff5ed284bdc5f0f268a22b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783921"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122613"
 ---
 # <a name="introduction-to-game-development-with-xamarin"></a>Introducción al desarrollo de juegos con Xamarin
 
-Desarrollo de juegos puede ser muy interesante, especialmente teniendo en cuenta lo fácil que puede ser publicar las tareas en plataformas móviles. En este artículo se explica los conceptos y tecnologías relacionadas con el desarrollo de juegos que le ayudarán a crean juegos, si su objetivo es crear una alta calidad AAA juego o simplemente al programa para la diversión.
+Desarrollo de juegos puede ser muy emocionante, especialmente teniendo en cuenta sencillo se puede publicar su trabajo en plataformas móviles. En este artículo se explica los conceptos y tecnologías relacionadas con el desarrollo de juegos que le ayudarán a crean juegos, si su objetivo es crear un AAA de alta calidad juego o simplemente al programa para la diversión.
 
 En este artículo se tratan los siguientes temas:
 
-- **Juego frente a los conceptos de programación de juego no** – exploraremos algunos conceptos que son únicas para el desarrollo de juegos, o se comparten con otros tipos de desarrollo pero merecer énfasis aquí debido a su importancia.
-- **Equipo de desarrollo de juegos** : en esta sección se examina los diferentes roles en un equipo de desarrolladores de juegos.
-- **Crear una juego idea** : en esta sección puede ayudarle a crear una idea de juego nuevo: el primer paso en la creación de una nueva partida.
-- **Tecnología de desarrollo de juegos** – aquí podrá se indican algunas de las tecnologías de multiplataforma disponibles que pueden mejorar la productividad como desarrollador de juego.
+- **Juego frente a los conceptos de programación no juego** – exploraremos algunos conceptos que son exclusivas de desarrollo de juegos, o se comparten con otros tipos de desarrollo pero merecen énfasis aquí debido a su importancia.
+- **Equipo de desarrollo de juegos** : esta sección se examinan los distintos roles en un equipo de desarrolladores de juegos.
+- **Creación de una idea de juego** : en esta sección puede ayudarle a crear una nueva idea de juego: el primer paso para realizar una nueva partida.
+- **Tecnología de desarrollo de juegos** – aquí enumeraremos algunas de las tecnologías de desarrollo multiplataforma disponibles que pueden mejorar su productividad como desarrollador de juegos.
 
 
-# <a name="game-vs-non-game-programming-concepts"></a>Frente a juegos. Conceptos de programación no juego
+# <a name="game-vs-non-game-programming-concepts"></a>Vs juegos. Conceptos de programación no juego
 
-Los programadores mover al desarrollo de juegos a menudo se enfrentan a nuevos conceptos y patrones de desarrollo. Esta sección presenta una vista general de algunos de estos conceptos.
+Mover al desarrollo de juegos de los programadores a menudo se enfrentan a nuevos conceptos y patrones de desarrollo. En esta sección se presenta una visión general de algunos de estos conceptos.
 
 
 ## <a name="the-game-loop"></a>El bucle de juego
 
-Un juego habitual requiere movimiento constante o un cambio en se está produciendo en la pantalla en respuesta a la interacción del usuario y la lógica de juego automática. Esto se consigue mediante lo que se conoce normalmente como un *juego bucle*. Un bucle de juego es algún tipo de instrucción (por ejemplo, un bucle while) que se ejecuta en una alta frecuencia, por ejemplo, 30 o 60 en bucle *fotogramas por segundo*.
+Constante movimiento o cambio que se está produciendo en la pantalla en respuesta a la interacción del usuario y la lógica de juego automática requiere que un juego típico. Esto se logra a través de lo que se conoce normalmente como un *bucle de juego*. Un bucle de juego es algún tipo de instrucción (por ejemplo, un bucle while) que se ejecuta en una frecuencia de muy alta, por ejemplo, 30 o 60 de bucle *fotogramas por segundo*.
 
 El siguiente es un diagrama de un bucle de juego simple:
 
-![](images/image1.png "Se trata de un diagrama de un bucle de juego simple")
+![](images/image1.png "Se trata de un diagrama de un simple bucle de juego")
 
-Las tecnologías que trataremos más adelante se condensan y eliminan el bucle while real, pero a pesar de esta abstracción estará presente el concepto de actualizaciones de cada fotograma.
+Las tecnologías que se describen a continuación se abstraen el bucle while real, pero a pesar de esta abstracción estará presente el concepto de las actualizaciones de cada fotograma.
 
-Rendimiento del código puede tienen prioridad incluso simple de juegos. Por ejemplo: una función que tarda 10 milisegundos para ejecutar podría tener un impacto significativo en el rendimiento de un juego, especialmente si se llama más de una vez por fotograma. Si el juego se está ejecutando en 30 fotogramas por segundo, a continuación, significa que debe ejecutarse cada fotograma en 33 en milisegundos. Por el contrario, esa función no incluso puede estar apreciable si solo se ejecuta en respuesta a un clic del botón en una aplicación de juego no.
+Rendimiento del código puede tienen prioridad en incluso los más sencillos de juegos. Por ejemplo: una función que toma los 10 milisegundos para ejecutar podría tener un impacto significativo en el rendimiento de un juego, especialmente si se llama más de una vez por fotograma. Si el juego se está ejecutando a 30 fotogramas por segundo, a continuación, significa que debe ejecutar cada fotograma en 33 en milisegundos. Por el contrario, dicha función quizás no sea evidente si solo se ejecuta en respuesta a un clic de botón en una aplicación de juego no.
 
-Tipos comunes de lógica que se pueden realizar cada fotograma se incluyen:
+Tipos comunes de lógica que pueden ser realizada cada fotograma se incluyen:
 
-- **Leer entrada** : el juego que necesite comprobar si el usuario ha interactuado con el juego comprobando el hardware de entrada, como la pantalla táctil, el teclado, el mouse o el dispositivo de juego.
-- **Movimiento** : objetos que mover desde un lugar a otro se suele mover muy pequeña cantidad de cada marco para dar la impresión de un movimiento fluido.
-- **Colisión** – muchos juegos exigen que las pruebas frecuentes de si varios objetos están superpuestos o intersección. Hablaremos sobre colisión con más detalle en una sección más adelante en este artículo. Un sistema de simulación física dedicado pueden controlar el movimiento y colisión.
-- **Comprobación de las condiciones específicas del juego** : el estado de un juego puede controlarse mediante ciertas condiciones, como si el jugador ha ganado suficientes puntos o si ha agotado el tiempo asignado.
-- **Comportamiento de AI** : lógica de cada fotograma que puede utilizarse para controlar el comportamiento de objetos que no se controlan mediante el Reproductor, como el patrolling de un enemigo o el movimiento de los controladores adversario alrededor de un ovalada.
-- **Representación** : mayoría de los juegos actualizará lo que se muestra en pantalla todos los fotogramas. Esto puede realizarse en respuesta a los cambios que tienen impacto en el juego (por ejemplo, un carácter que se desplazan por un nivel) o simplemente para proporcionar visual polaco (por ejemplo, está reduciendo nieve o iconos animados).
+- **Entrada de lectura** : el juego es posible que deba comprobar si el usuario ha interactuado con el juego mediante la comprobación de hardware de entrada, como la pantalla táctil, teclado, mouse o dispositivo de juego.
+- **Movimiento** : qué mover desde un solo lugar a otro normalmente moverá muy pequeño de objetos amount, que cada fotograma para la sensación de movimiento fluido.
+- **Colisión** – muchos juegos exigen que las pruebas con frecuencia si varios objetos están superpuestos o se cruzan. Hablaremos sobre colisión con más detalle en una sección posterior de este artículo. Movimiento y colisión pueden controlarse mediante un sistema de simulación física dedicada.
+- **Comprobación de situaciones específicas de los juegos** : el estado de un juego puede controlarse mediante ciertas condiciones, por ejemplo, si el jugador ha obtenido suficientes puntos o si ha agotado el tiempo asignado.
+- **Comportamiento de inteligencia artificial** : lógica de cada fotograma que puede usarse para controlar el comportamiento de objetos que no se controlan mediante el Reproductor, como el patrolling de un enemigo o el movimiento del adversario controladores alrededor de una pista de carreras.
+- **Representación** : mayoría de los juegos actualizará a lo que se muestra en la pantalla cada fotograma. Esto puede hacerse en respuesta a los cambios que tienen impacto en el juego (como un carácter de moverse a través de un nivel) o simplemente para ofrecer un estilo visual (por ejemplo, bajan nieve o los iconos animados).
 
-Tenga en cuenta que muchas de las actividades mencionadas anteriormente pueden cambiar el estado de toda la aplicación, mientras que muchas aplicaciones de juego no tienden a cambiar el estado en respuesta a eventos que se está generando.
+Tenga en cuenta que muchas de las actividades mencionadas pueden cambiar el estado de toda la aplicación, mientras que muchas aplicaciones de juego no tienden a cambiar el estado en respuesta a eventos provocados.
 
 
-## <a name="content-loading-and-unloading"></a>Cargar contenido y descargar
+## <a name="content-loading-and-unloading"></a>Carga de contenido y la descarga
 
-Contenido manualmente carga y descargando (o va a eliminar) puede resultar necesario según qué tecnología usa en el desarrollo. Carga y descarga de activos de forma manual pueden ser necesarias para una serie de motivos:
+Contenido manualmente cargando y descargando (o eliminación) puede ser necesarias según la tecnología que usa en el desarrollo. Manualmente, carga y descarga de activos pueden ser necesarios para una serie de motivos:
 
- - Activos pueden tardar mucho tiempo en cargar en relación con la longitud de un solo fotograma. Algunos activos incluso pueden tardar segundos en cargarse, lo que graves afectarían a la experiencia si carga juega mid. Si el tiempo de carga es especialmente largo (por ejemplo, más de uno o dos segundos) que desea mostrar un elemento animado cargar pantalla ni barra de progreso.
- - Activos pueden consumir una gran cantidad de RAM, que requieren administración activa de lo que se carga para que quepan en el que se proporciona con plataformas de destino del juego.
- - Juegos que necesite mostrar más activos que pueden caber en la RAM. "Abra World" juegos a menudo incluyen entornos de gran tamaño qué reproductores puedan navegar por sin problemas, que es con ninguna pantalla de carga. En este caso debe crear un sistema personalizado para el contenido de transmisión por secuencias y administrar el uso de memoria.
+ - Los recursos pueden tardar mucho tiempo en cargar en relación con la longitud de un solo fotograma. Algunos activos incluso pueden tardar segundos en cargarse, que esto interrumpen gravemente la experiencia si carga mid juego. Si el tiempo de carga es especialmente largo (por ejemplo, más de un segundo o dos) que desea mostrar un elemento animado pantalla ni barra de progreso de carga.
+ - Los recursos pueden consumir una gran cantidad de RAM, que requieren administración activa de lo que se carga para ajustarse a los proporcionados por las plataformas de destino del juego.
+ - Juegos que deba mostrar más activos que pueden caber en la memoria RAM. "Abra World" juegos suelen incluyen entornos de gran tamaño que los jugadores pueden desplazarse a la perfección, este es con ninguna carga de pantallas. En este caso es posible que deba crear un sistema personalizado para el contenido de streaming en y administrar el uso de memoria.
 
-Formatos de archivo personalizados que tenga el procesamiento en tiempo de carga, que requieren código carga personalizada.
+Formatos de archivo personalizados que necesite el procesamiento en tiempo de carga, que requieren código carga personalizada.
 
 
 ## <a name="math"></a>Matemáticas
 
-Muchos juegos exigen matemáticas más avanzadas que las aplicaciones no juego. Por supuesto, el nivel de matemáticas depende de la complejidad del juego. Por lo general juegos 3D requieren más matemáticas que 2D. Afortunadamente siempre puede empezar a trabajar con juegos sencillos y obtener información sobre la marcha. Desarrollo de juegos puede ser una buena manera de aprender matemáticas.
+Muchos juegos exigen matemáticas más avanzadas que las aplicaciones que no sean juego. Por supuesto, el nivel de matemáticas depende de la complejidad del juego. En general, juegos en 3D requieren más matemáticas a 2D. Afortunadamente siempre puede empezar a trabajar con juegos sencillos y obtenga información sobre la marcha. Desarrollo de juegos puede ser una excelente manera de aprender matemáticas.
 
-Si está familiarizado con el plano cartesiano – que usa coordenadas X e Y para colocar los objetos, a continuación, sabrá suficiente para empezar a trabajar con el desarrollo de juegos. A continuación muestra un plano cartesiano con positivo Y que señala hacia arriba:
+Si está familiarizado con el plano cartesiano – que usa coordenadas X e Y para colocar objetos – entonces sabe lo suficiente como para empezar a trabajar con el desarrollo de juegos. A continuación muestra un plano cartesiano con positivo Y que señala hacia arriba:
 
 ![](images/image2.png "Esto muestra un plano cartesiano con positivo Y que señala hacia arriba")
 
 > [!IMPORTANT]
-> Algunas API de motores de usar un sistema de coordenadas donde aumentar el valor de un objeto Y lo moverá hacia abajo, mientras que otros sistemas usan un sistema de coordenadas donde positivo Y está activo. Tenga esto en cuenta si va a mover entre sistemas.
-Funciones trigonométricas (por ejemplo, seno y coseno) se usan normalmente en juegos 2D que implementan ninguna forma de rotación.
+> Algunas API de motores de usar un sistema de coordenadas donde aumentar el valor de un objeto Y lo moverá hacia abajo, mientras que otros sistemas usan un sistema de coordenadas donde es positivo Y seguridad. Téngalo en cuenta si va a mover entre sistemas.
+Funciones trigonométricas (por ejemplo, seno y coseno) se usan normalmente en juegos en 2D que implementan ninguna forma de rotación.
 
 
 
-Si planea realizar un juego en 3D, a continuación, es probable que debe estar familiarizado con conceptos de álgebra lineal (sobre la rotación y movimiento en un espacio 3D), así como algunos cálculo (para la implementación de aceleración).
+Si planea crear un juego 3D, a continuación, probablemente deberá estar familiarizado con conceptos de álgebra lineal (para el movimiento en un espacio 3D y giro), así como algunos cálculo (para la implementación de aceleración).
 
 
 ## <a name="content-pipelines"></a>Canalizaciones de contenido
 
-El término *canalización contenido* hace referencia al proceso que tarda un archivo en obtener desde su formato al crear (por ejemplo, un archivo de imagen .png) a su formato final cuando se utiliza en un juego. El formato final depende de que tipo de contenido se está utilizando, así como que se utiliza la tecnología para presentar el contenido.
+El término *canalización de contenido* hace referencia al proceso que un archivo que se tarda en obtener desde su formato cuando se creó (por ejemplo, un archivo de imagen .png) a su formato final cuando se usa en un juego. El formato final depende de que el tipo de contenido se está utilizando, así como los que se utiliza la tecnología para presentar el contenido.
 
-Algunas canalizaciones contenidos pueden ser muy rápida y no requerir ninguna intervención manual. Por ejemplo, mayoría de los motores de juegos y las API pueden cargar el formato de archivo PNG en su formato sin procesar. Por otro lado, necesitan más complicados formatos (por ejemplo, los modelos 3D) ser procesados en un formato diferente antes de que se va a cargar, y este proceso puede tardar algún tiempo, según el tamaño y la complejidad del recurso.
+Algunas canalizaciones de contenido pueden ser muy rápida y no requerir ningún esfuerzo manual. Por ejemplo, la mayoría de los motores de juegos y API pueden cargar el formato de archivo .png en su formato sin procesar. Por otro lado, formatos más complicados (por ejemplo, modelos 3D) que deba procesarse en un formato diferente antes de cargarse, y este proceso puede tardar algún tiempo según el tamaño y la complejidad del recurso.
 
 
 # <a name="game-development-teams"></a>Equipos de desarrollo de juegos
 
-Desarrollo de juegos presenta nuevos roles y títulos para los usuarios implicados en el proceso. La mayoría de los desarrolladores de juegos no pueden satisfacer el amplio conjunto de destrezas necesarias para liberar un juego completo, por lo que existe un número de disciplinas. Tenga en cuenta que esto no es una lista completa de las áreas de desarrollo: solo algunas de las más comunes.
+Desarrollo de juegos presenta nuevos roles y títulos de personas implicadas en el proceso. La mayoría de los desarrolladores de juegos no son puede satisfacer el amplio conjunto de habilidades necesarias para liberar un juego completo, por lo que existe un número de disciplinas. Tenga en cuenta que esto no es una lista completa de las áreas de desarrollo: sólo algunas de las más comunes.
 
-- **Programador** : la mayoría de los usuarios leer este artículo entrarán dentro de esta categoría. El rol de programador en el desarrollo de juego es similar al rol del programador en una aplicación de juego no. Responsabilidades incluyen la lógica para controlar el flujo de un juego, desarrollo de sistemas para tareas comunes en el contexto de un proyecto determinado, agregar y mostrar el contenido y, por supuesto: corrige los errores de escritura.
-- **Intérprete 2D** – intérpretes 2D son responsables de crear *2D activos*. Incluyen archivos de imagen para la interfaz gráfica de usuario, partículas, entornos y caracteres del juego. Si el juego que está desarrollando es 3D, artistas 2D no pueden ser responsables de entornos y caracteres. Puede encontrar libre carátula de su juego en [ http://opengameart.org/ ](http://opengameart.org/) .
-- **Intérpretes 3D** – intérpretes 3D son responsables de crear *activos 3D*. Esto incluye los modelos 3D para entornos y caracteres, props (mobiliario, plantas y otros objetos inanimados). Algunos equipos de diferencian entre intérpretes 3D y animadores 3D según el tamaño del equipo. Puede encontrar libre material gráfico 3D para tu juego en [ http://opengameart.org/ ](http://opengameart.org/) .
-- **Diseñador de juegos** – diseñadores juegos están responsables de definir cómo se reproduce el juego. Esto puede incluir las decisiones de alto nivel, como la configuración de la partida, el objetivo global de la partida y cómo progresa un Reproductor a través del juego. Diseñadores de juego también pueden participar en las decisiones muy detalladas como entrada de asignación a las acciones, definir coeficientes de movimiento o nivel de seguridad y diseñar el diseño del nivel. Tenga en cuenta que el término *diseñador* pueden hacer referencia a un juego diseñador o en un diseñador visual dependiendo del contexto.
-- **Diseñador de sonido** – diseñadores sonidos son responsables de activos de audio de un juego. Algunos equipos pueden distinguir entre los usuarios responsables de crear los efectos de sonido y compositores, mientras que los equipos más pequeños pueden tener un único individuo responsable de todo el audio.
+- **Programador** : la mayoría de las personas leyendo este artículo entrarán dentro de esta categoría. El rol de programador en el desarrollo de juegos es similar al rol del programador en una aplicación de juego no. Responsabilidades incluyen la escritura de lógica para controlar el flujo de un juego, desarrollo de sistemas para tareas comunes en el contexto de un proyecto determinado, agregar y mostrar el contenido y, evidentemente, corrección de errores.
+- **Artista 2D** – artistas 2D son responsables de crear *activos 2D*. Estos incluyen archivos de imagen para la interfaz gráfica de usuario, partículas, entornos y caracteres del juego. Si el juego que se está desarrollando es 3D, artistas 2D no pueden ser responsables de entornos y caracteres. Puede encontrar libre prediseñadas para su juego en [ http://opengameart.org/ ](http://opengameart.org/) .
+- **Diseñadores de 3D** – artistas 3D son responsables de crear *recursos 3D*. Estos incluyen modelos 3D para props (muebles, plantas y otros objetos inanimados), caracteres y entornos. Algunos equipos diferencian entre los artistas 3D y animadores 3D según el tamaño del equipo. Puede encontrar libre material gráfico 3D para su juego en [ http://opengameart.org/ ](http://opengameart.org/) .
+- **Diseñador de juegos** : diseñadores de juegos son responsables de definir cómo se reproduce el juego. Esto puede incluir las decisiones de alto nivel como la configuración de la partida, el objetivo global del juego, y cómo un reproductor progresa a través del juego. Diseñadores de juegos también se pueden participar en las decisiones más detalladas como entrada de asignación a las acciones, definir los coeficientes para el nivel de seguridad o de movimiento y diseñar un diseño de nivel. Tenga en cuenta que el término *diseñador* pueden hacer referencia a un diseñador de juego o un diseñador visual en función del contexto.
+- **Diseñador de sonido** : diseñadores de sonido son responsables de recursos de audio de un juego. Algunos equipos pueden diferenciar entre individuos responsables de crear efectos de sonido y compositores, mientras que los equipos más pequeños pueden tener un solo individuo responsable de todo el audio.
 
 
-# <a name="creating-a-game-idea"></a>Crear una Idea de juego
+# <a name="creating-a-game-idea"></a>Creación de una Idea de juego
 
-Diseñar un juego puede aparecer para que sea fácil que hacer: después de todo, el único requisito es "hacer algo divertido." Por desgracia, muchos desarrolladores consideran a sí mismos con pérdida cuando llegue el momento de crear una idea de que se va a iniciar el desarrollo.
+Diseñar un juego puede aparecer para que sea fácil hacer: después de todo, el único requisito es "hacer algo divertido". Por desgracia, muchos desarrolladores se encuentran en una pérdida cuando llega el momento de crear una idea de que se va a iniciar el desarrollo.
 
-No se explica fácilmente la disciplina de diseño de juego y requiere práctica para mejorar al igual que la carátula del o does de programación, pero en esta sección puede ayudarle a empezar hacia abajo de la ruta de acceso.
+No se explica con facilidad la disciplina de diseño de juegos y requiere práctica para mejorar así el arte o does de programación, pero en esta sección puede ayudarle a empezar la ruta de acceso.
 
-Nuevos programadores deben empiece poco a poco. Puede ser difícil resistir la tentación de recreación de un juego de vídeo grande y moderno, pero los juegos más pequeños pueden ser un mejor entorno de aprendizaje y hace que el progreso más rápido para ofrecer una experiencia más productiva.
+Deben comenzar nuevos desarrolladores. Puede ser difícil resistir la tentación de recreación de un juego de vídeo grande y moderno, pero los juegos más pequeños pueden ser un mejor entorno de aprendizaje y hace que el progreso más rápido para una experiencia más gratificante.
 
-Muchos juegos, ambos con el fin de juegos de aprendizaje, así como comerciales, comienzan como una mejora o modificación de un juego existente. Una manera de generar ideas consiste en Buscar en otros juegos para obtener ideas. Por ejemplo, puede considerar un juego que desee personal y pruebe a identificar qué características sobre el juego que sea divertido. Es posible que la exploración, dominio de los mecanismos del juego o cómo avanzar a través de un caso. No olvide tener en cuenta también los juegos "los" cuando se busca nuevas ideas.
+Empezar muchos juegos, ambos con el fin de juegos de aprendizaje, así como comerciales, como una mejora o modificación de un juego existente. Una manera de generar ideas es mirar otros juegos para inspirarse. Por ejemplo, puede considerar un juego que le guste personal e intenta identificar qué características sobre el juego que sea divertido. Es posible la exploración, el dominio de la mecánica del juego o progresa a través de un caso. No olvide tener en cuenta también los juegos "retro" cuando se busca nuevas ideas.
 
-Otra técnica para generar nuevas ideas es tener en cuenta un género específico, como juegos de rompecabezas, juegos de estrategia o platformers. Un género familiar para el desarrollador puede proporcionar un buen punto de partida.
+Otra técnica para generar nuevas ideas es considerar un género específico, como los juegos de rompecabezas, juegos de estrategia o plataformas. Un género familiar para el desarrollador puede proporcionar un buen punto de partida.
 
-Rehacer juegos existentes, también es una experiencia educativa, aunque esto puede limitar la viabilidad comercial del producto terminado. El proceso de creación de un juego, incluso uno que es un clon preciso, proporciona una valiosa experiencia educativa.
+Transformación de juegos existentes también es una experiencia educativa, aunque esto puede limitar la viabilidad comercial del producto terminado. El proceso de creación de un juego, incluso uno que es un clon de preciso, proporciona una experiencia educativa valiosa.
 
 
 # <a name="game-development-technology"></a>Tecnología de desarrollo de juegos
 
-Los desarrolladores que utilizan Xamarin.Android y Xamarin.iOS tienen una amplia gama de tecnologías disponibles para ayudar en el desarrollo de juego. En esta sección se describe algunas de las soluciones multiplataforma más populares.
+Los desarrolladores que usan Xamarin.iOS y Xamarin.Android tienen una amplia gama de tecnologías disponibles para ayudar en el desarrollo de juegos. En esta sección se tratan algunos de las más populares soluciones multiplataforma.
 
 
 ## <a name="cocossharp"></a>CocosSharp
 
-CocosSharp es una versión de código abierto, multiplataforma del motor de juegos 2D Cocos. El motor de proporciona acceso a Android, iOS, Mac OS X, el escritorio de Windows, Windows RT y Windows Phone.
+CocosSharp es una versión de código abierto y multiplataforma del motor de juegos de Cocos 2D. El motor proporciona acceso a Android, iOS, Mac OS X, el escritorio de Windows, Windows RT y Windows Phone.
 
-CocosSharp se centra en un programador simple API para el desarrollo de juegos en 2D. El crecimiento en juegos en dispositivos móviles ha ayudado a reignite la popularidad del desarrollo de juegos en 2D realizar CocosSharp tecnología viable para pasatiempo y proyectos comerciales similares. Se proporciona como archivos de código o .dll de origen (que pueden obtenerse a través de NuGet), pero no proporciona un editor visual; por lo tanto, cualquier interacción con el motor de CocosSharp requiere conocimientos de programación.
+CocosSharp se centra en un programador simple API para desarrollo de juegos en 2D. El crecimiento de juegos en dispositivos móviles ha ayudado a reignite la popularidad de desarrollo de juegos 2D realizar CocosSharp tecnología viable para afición por los y comerciales proyectos similares. Se proporciona como archivos de código o .dll de origen (que pueden obtenerse a través de NuGet), pero no ofrece un editor visual; por lo tanto, cualquier interacción con el motor de CocosSharp requiere conocimientos de programación.
 
 Para empezar a trabajar con CocosSharp, visite nuestro [CocosSharp guías](~/graphics-games/cocossharp/index.md).
 
-El juego enfadado Ninjas se crea con CocosSharp y, si está buscando un juego ya se está ejecutando para varias plataformas puede ser un buen punto de partida:
+El juego Ninjas enfadado se crea con CocosSharp, y puede ser un buen punto de partida si está buscando un juego está ya en ejecución para varias plataformas:
 
 ![](images/image3.png "El juego Ninjas enfadado se creó con CocosSharp")
 
-Puede descargarlo y obtener más información en el [AngryNinjas Github página](https://github.com/xamarin/AngryNinjas).
+Puede descargarlo y obtener más información, visite la [AngryNinjas Github página](https://github.com/xamarin/AngryNinjas).
 
 
 ## <a name="monogame"></a>MonoGame
 
-MonoGame es un origen de abrir, entre las versiones de plataforma de API de Microsoft XNA. MonoGame puede utilizarse para crear juegos para iOS, Android, Mac OS X, Linux, Windows, Windows RT y Windows Phone.
+MonoGame es un código abierto entre versiones de plataforma de API de Microsoft XNA. MonoGame puede utilizarse para crear juegos para iOS, Android, Mac OS X, Linux, Windows, Windows RT, PS4, PSVita, Xbox One y conmutador.
 
-A diferencia de CocosSharp, MonoGame es técnicamente no un juego motor, pero en su lugar un desarrollo de juegos API. Esto significa que para trabajar con MonoGame requiere directamente administrar objetos de juegos, manualmente objetos de dibujo e implementar objetos comunes como cámaras y *gráficos de escena* (la jerarquía primario-secundario entre los objetos del juego). Para ayudar a comprender la diferencia, tenga en cuenta que CocosSharp se basa en MonoGame. MonoGame generaliza algunas de las tecnologías específicas de la plataforma, como gráficos, representación y audio, mientras que CocosSharp proporciona código para organizar e implementar la lógica de juego.
+A diferencia de CocosSharp, MonoGame es técnicamente no un motor de juego, pero en su lugar un desarrollo de juegos de API. Esto significa que el trabajo con MonoGame requiere directamente la administración de objetos del juego, manualmente objetos de dibujo e implementar objetos comunes tales como cámaras y *gráficos de escena* (la jerarquía primaria-secundaria entre objetos del juego). Para ayudar a comprender la diferencia, considere la posibilidad de que se basa CocosSharp en MonoGame. MonoGame generaliza algunas de las tecnologías específicas de la plataforma, como gráficos, representación y audio, mientras que CocosSharp proporciona código para organizar e implementar la lógica del juego.
 
-MonoGame no ofrece un entorno de desarrollo visual estándar para trabajar con MonoGame requiere conocimientos de programación.
+MonoGame no ofrece un entorno de desarrollo visual estándar, por lo que trabajar con MonoGame requiere conocimientos de programación.
 
 Algunos ejemplos importantes de juegos con MonoGame son:
 
@@ -158,24 +158,24 @@ Para empezar a trabajar con MonoGame, diríjase a nuestro [MonoGame guías](~/gr
 
 ## <a name="urhosharp"></a>UrhoSharp
 
-UrhoSharp es un motor 2D y 3D de alto nivel de multiplataforma que puede usarse para crear escenas 3D y 2D animados para sus aplicaciones mediante los objetos Geometry, materiales, luces y cámaras.
+UrhoSharp es un motor 2D y 3D de alto nivel de desarrollo multiplataforma que puede usarse para crear animados escenas 3D y 2D para las aplicaciones con geometrías, material, luces y cámaras.
 
-![](images/urhosharp.gif "UrhoSharp es un motor 2D y 3D de alto nivel de multiplataforma que puede usarse para crear escenas 3D y 2D animados")
+![](images/urhosharp.gif "UrhoSharp es un motor 2D y 3D de alto nivel de desarrollo multiplataforma que puede usarse para crear escenas 3D y 2D animados")
 
-Extraer del repositorio el [UrhoSharp guías](~/graphics-games/urhosharp/index.md) para empezar a trabajar.
+Consulte la [guías de UrhoSharp](~/graphics-games/urhosharp/index.md) para empezar a trabajar.
 
 ## <a name="additional-technology"></a>Tecnología adicional
 
-Las tecnologías destacadas anteriormente es sólo un ejemplo de las tecnologías disponibles. Otras tecnologías importantes son:
+Las tecnologías resaltadas arriba es sólo una muestra de las tecnologías disponibles. Otras tecnologías importantes incluyen:
 
-- **Kit de Sprite** – Xamarin proporciona compatibilidad para el marco de juegos de Sprite Kit de Apple, que proporciona acceso a toda la funcionalidad de la API nativa. Puesto que el Kit de Sprite tecnología creada por Apple, proporciona fuerte integración con el resto del ecosistema de iOS. Por supuesto, Sprite Kit no es multiplataforma, por lo que no se puede usar en Android. Para obtener más información sobre el uso de Sprite Kit, vea esta entrada:  [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
-- **Kit de escena** – Xamarin también proporciona compatibilidad para el marco de escena Kit de Apple, que simplifica la implementación de gráficos 3D en aplicaciones de iOS. Kit de escena también es tecnología proporcionada por Apple, por lo que tiene la integración y consideraciones específicas de la plataforma mencionadas anteriormente para Sprite Kit. Para obtener más información sobre el Kit de escena, vea esta entrada: [http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
-- **OpenTK –** OpenTK (que es el acrónimo abra Kit de herramientas) proporciona acceso de bajo nivel OpenGL para Mac, iOS y Apple hardware. Para obtener más información sobre OpenTK, vea la página principal en:  [http://www.opentk.com/](http://www.opentk.com/)
+- **Kit de Sprite** : Xamarin ofrece soporte técnico para el marco de juego de Spritekit de Apple, que proporciona acceso a toda la funcionalidad de la API nativa. Puesto que el Sprite Kit es tecnología creada por Apple, proporciona una integración profunda con el resto del ecosistema de iOS. Por supuesto, Sprite Kit no es multiplataforma, por lo que no puede usarse en Android. Para obtener más información sobre el uso de Sprite Kit, vea esta entrada:  [http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/](http://blog.xamarin.com/make-games-with-xamarin.ios-and-sprite-kit/)
+- **Kit de escena** : Xamarin también proporciona compatibilidad para el marco Scene Kit de Apple, lo que simplifica la implementación de gráficos 3D en aplicaciones de iOS. Kit de escena también es tecnología proporcionada por Apple, por lo que tiene la integración y consideraciones específicas de la plataforma mencionadas anteriormente para Spritekit. Para obtener más información sobre el Kit de escena, vea esta entrada: [http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/](http://blog.xamarin.com/3d-in-ios-8-with-scene-kit/)
+- **OpenTK –** OpenTK (lo que significa abrir Kit de herramientas) proporciona acceso de bajo nivel OpenGL para iOS, Apple y Mac hardware. Para obtener más información sobre OpenTK, consulte la página principal en:  [http://www.opentk.com/](http://www.opentk.com/)
 
 
 # <a name="summary"></a>Resumen
 
-Este artículo trata los conceptos principales del desarrollo de juegos y proporciona información sobre cómo comenzar a realizar su primer juego. Una vez que haya terminado de este artículo, son los siguientes pasos elegir la tecnología y empezar a trabajar a través de nuestra serie de tutoriales vinculados en las secciones correspondientes anteriores.
+En este artículo se trata los conceptos principales del desarrollo de juegos y proporciona información sobre cómo comenzar a realizar su primer juego. Cuando haya terminado de este artículo, los pasos siguientes son elegir la tecnología y empezar a trabajar a través de nuestra serie de tutoriales vinculadas en las secciones correspondientes anteriores.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

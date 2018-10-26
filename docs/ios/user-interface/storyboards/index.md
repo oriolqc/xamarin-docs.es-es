@@ -4,15 +4,15 @@ description: Este documento proporciona una introducción a guiones gráficos en
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: bd8fee1b8f1941203bb0e6f00e261cbfbbccc9a7
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: e1e5ec5d064ad7610c5b7be8d18284d3610352c9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106889"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a guiones gráficos en Xamarin.iOS
 
@@ -129,7 +129,7 @@ Una vez finalizada la transición, el usuario verá la `CallHistoryController` c
 
 En ocasiones es posible que deba agregar un guion gráfico a un archivo previamente sin guiones gráficos. Una vez hacerlo en Visual Studio para Mac se puede optimizar siguiendo los pasos siguientes:
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Cree un nuevo archivo de guión gráfico, vaya a **archivo > nuevo archivo > iOS > guión gráfico**, tal y como se muestra a continuación: 
     
@@ -148,7 +148,7 @@ En ocasiones es posible que deba agregar un guion gráfico a un archivo previame
             set;
             }
             
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Cree un nuevo archivo de guión gráfico con el botón secundario en el proyecto para **Agregar > nuevo archivo > iOS > guion gráfico vacío**, tal y como se muestra a continuación: 
     

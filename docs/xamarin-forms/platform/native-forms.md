@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/11/2018
-ms.openlocfilehash: 65bb3fa070c082fa6c6c489e326a870a80fb9502
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 04d435b29f6f2f577df5025995fcc074ba5d9d9d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997528"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122756"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin.Forms en proyectos nativos de Xamarin
 
@@ -33,7 +33,7 @@ Xamarin.Forms debe inicializarse llamando el `Forms.Init` método antes de que u
 > [!NOTE]
 > El **NativeForms** solución de aplicación de ejemplo no contiene todos los proyectos de Xamarin.Forms. En su lugar, consta de un proyecto de Xamarin.iOS, un proyecto de Xamarin.Android y un proyecto de UWP. Cada proyecto es un proyecto nativo que usa formularios nativos para consumir [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-derivados de las páginas. Sin embargo, no hay ningún motivo por qué no podían consumir los proyectos nativos `ContentPage`-deriva de las páginas de un proyecto de biblioteca estándar de .NET o un proyecto compartido.
 
-Al utilizar formularios nativos, Xamarin.Forms características como [ `DependencyService` ](xref:Xamarin.Forms.DependencyService), [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter)y el motor de enlace de datos, todo el trabajo todavía.
+Al utilizar formularios nativos, Xamarin.Forms características como [ `DependencyService` ](xref:Xamarin.Forms.DependencyService), [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter)y el motor de enlace de datos, todo el trabajo todavía. Sin embargo, navegación de página debe realizarse mediante la API de exploración nativo.
 
 ## <a name="ios"></a>iOS
 

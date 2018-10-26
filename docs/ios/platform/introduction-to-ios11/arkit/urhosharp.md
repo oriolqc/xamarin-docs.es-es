@@ -4,15 +4,15 @@ description: Este documento describe cómo configurar una aplicación de ARKit e
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 08/01/2017
-ms.openlocfilehash: 728082eb27684c2176feb2038b7948986ce6a694
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 435ca560eee4f8f44443816c2a4ccec195ba5395
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351696"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103899"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Uso de ARKit con UrhoSharp en Xamarin.iOS
 
@@ -25,7 +25,7 @@ Esta página explica cómo conectar estos dos mundos juntos para crear aplicacio
 
 ## <a name="the-basics"></a>Conceptos básicos
 
-Lo que queremos hacer es presentan contenido 3D en la parte superior del mundo tal como lo ve el iPhone.   La idea es combinar el contenido procedente de la cámara del teléfono con el contenido 3D y cuando el usuario del teléfono se mueve en torno a la sala de reuniones para asegurarse de que el objeto 3D se comportan como que forma parte de esa sala: Esto se hace mediante la delimitación de los objetos en este mundo.
+Lo que queremos hacer es presentan contenido 3D en la parte superior del mundo tal como lo ve el iPhone o iPad.   La idea es combinar el contenido procedente de la cámara del dispositivo con el contenido 3D y cuando el usuario del dispositivo se mueve en torno a la sala de reuniones para asegurarse de que el objeto 3D se comportan como que forma parte de esa sala: Esto se hace mediante la delimitación de los objetos en este mundo.
 
 ![Ilustración animada de ARKit](urhosharp-images/image1.gif)
 

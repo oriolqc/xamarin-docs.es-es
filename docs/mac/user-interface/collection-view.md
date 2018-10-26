@@ -4,15 +4,15 @@ description: En este artículo se describe cómo trabajar con las vistas de cole
 ms.prod: xamarin
 ms.assetid: 6EE32256-5948-4AE4-8133-6D0B3F4173E8
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 05/24/2017
-ms.openlocfilehash: c8b4b5ff8bebf5fbbded410ae84d1aefcca2d6cc
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 904db0b97a8b21fd51722b70a63386a53e3f5347
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251196"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104042"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Vistas de colección en Xamarin.Mac
 
@@ -375,7 +375,7 @@ public override bool Selected
 
 Un origen de datos de la vista de colección (`NSCollectionViewDataSource`) proporciona todos los datos para una vista de colección y crea y rellena una celda de vista de colección (mediante el `.xib` prototipo) según sea necesario para cada elemento de la colección.
 
-Agregue una nueva clase del proyecto, llamarlo `CollectionViewDataSource` y darle un aspecto similar al siguiente:
+Agregue una nueva clase del proyecto, llámelo `CollectionViewDataSource` y darle un aspecto similar al siguiente:
 
 ```csharp
 using System;

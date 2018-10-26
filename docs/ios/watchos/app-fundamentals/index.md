@@ -1,31 +1,31 @@
 ---
-title: watchOS conceptos básicos de la aplicación
-description: Este documento proporciona vínculos a varios documentos que describen los conceptos fundamentales para el desarrollo de aplicaciones de watchOS con Xamarin.
+title: Principios de la aplicación de watchOS
+description: Este documento proporciona vínculos a varios documentos que describen los conceptos fundamentales del desarrollo de aplicaciones para watchOS con Xamarin.
 ms.prod: xamarin
 ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.openlocfilehash: 379b86c46f1d3ba8653c9f41750bce78bae945b5
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.openlocfilehash: 649a0db7e74f663b85efb9db2365dbc7a0186e0b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790583"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106837"
 ---
-# <a name="watchos-application-fundamentals"></a>watchOS conceptos básicos de la aplicación
+# <a name="watchos-application-fundamentals"></a>Principios de la aplicación de watchOS
 
 ##  <a name="parent-applicationioswatchosapp-fundamentalsparent-appmd"></a>[Aplicación principal](~/ios/watchos/app-fundamentals/parent-app.md)
 
-Ver las aplicaciones pueden comunicarse con su aplicación principal que se ejecuta en iOS.
+Las aplicaciones de Watch pueden comunicarse con su aplicación primaria que se ejecutan en iOS.
 
 ##  <a name="app-groupsioswatchosapp-fundamentalsapp-groupsmd"></a>[Grupos de aplicaciones](~/ios/watchos/app-fundamentals/app-groups.md)
 
-Compartir datos entre aplicaciones iOS e inspección y la configuración.
+Compartir datos entre aplicaciones iOS y observación y la configuración.
 
 ##  <a name="iconsioswatchosapp-fundamentalsiconsmd"></a>[Iconos](~/ios/watchos/app-fundamentals/icons.md)
 
-Cómo agregar iconos a aplicaciones de Apple Watch.
+Cómo agregar iconos a las aplicaciones de Apple Watch.
 
 ##  <a name="layoutioswatchosapp-fundamentalslayoutmd"></a>[Diseño](~/ios/watchos/app-fundamentals/layout.md)
 
@@ -33,17 +33,17 @@ Sugerencias de diseño para la creación de interfaces de usuario de Apple Watch
 
 ##  <a name="localizationioswatchosapp-fundamentalslocalizationmd"></a>[Localización](~/ios/watchos/app-fundamentals/localization.md)
 
-Una guía para traducir el contenido de las aplicaciones de Apple Watch para admitir varios idiomas.
+Una guía para traducir el contenido de la aplicación de Apple Watch para admitir varios idiomas.
 
 ##  <a name="navigationioswatchosapp-fundamentalsnavigationmd"></a>[Navegación](~/ios/watchos/app-fundamentals/navigation.md)
 
-Obtenga información acerca de las dos opciones de navegación disponibles para las aplicaciones de inspección: navegación jerárquica o en una página.
+Obtenga información acerca de las dos opciones de exploración disponibles para las aplicaciones de watch: navegación jerárquico o basado en páginas.
 
 ##  <a name="screen-sizesioswatchosapp-fundamentalsscreen-sizesmd"></a>[Tamaños de pantalla](~/ios/watchos/app-fundamentals/screen-sizes.md)
 
-Obtener una vista previa y optimizar su interfaz de usuario para ambos tamaños de inspección disponibles.
+Obtener una vista previa y optimizar su interfaz de usuario para ambos tamaños disponibles de inspección.
 
 ##  <a name="settingsioswatchosapp-fundamentalssettingsmd"></a>[Configuración](~/ios/watchos/app-fundamentals/settings.md)
 
-Agregar una pantalla de configuración de la aplicación de inspección.
+Agregar una pantalla de configuración para la aplicación del reloj.
 

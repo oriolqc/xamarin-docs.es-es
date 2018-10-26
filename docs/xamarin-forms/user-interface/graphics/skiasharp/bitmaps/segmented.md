@@ -4,15 +4,15 @@ description: Mostrar un mapa de bits de SkiaSharp para que se ajusta algunas ár
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 79AE2033-C41C-4447-95A6-76D22E913D19
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: e5bfa076a8746abd6275e9d7a8393c7c8ab53294
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: 71997acde4545fec801dfdc8147ab1a9ace7ab24
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615241"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119233"
 ---
 # <a name="segmented-display-of-skiasharp-bitmaps"></a>Visualización segmentada de mapas de bits de SkiaSharp
 
@@ -26,7 +26,7 @@ Por lo general, estos métodos se usan para representar mapas de bits que forman
 
 ## <a name="the-nine-patch-display"></a>La pantalla de revisión de nueve 
 
-Conceptualmente, [ `DrawBitmapNinePatch` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapNinePatch/p/SkiaSharp.SKBitmap/SkiaSharp.SKRectI/SkiaSharp.SKRect/SkiaSharp.SKPaint/) un mapa de bits se divide en nueve rectángulos:
+Conceptualmente, [ `DrawBitmapNinePatch` ](xref:SkiaSharp.SKCanvas.DrawBitmapNinePatch(SkiaSharp.SKBitmap,SkiaSharp.SKRectI,SkiaSharp.SKRect,SkiaSharp.SKPaint)) un mapa de bits se divide en nueve rectángulos:
 
 ![Revisión de nueve](segmented-images/NinePatch.png "nueve revisión")
 
@@ -119,14 +119,14 @@ SKRectI centerRect = new SKRectI(150, 150, 350, 350);
 
 Los dos `DrawBitmapLattice` son similares a los métodos `DrawBitmapNinePatch`, pero se ha generalizado para cualquier número de divisiones horizontales o verticales. Estas divisiones se definen mediante las matrices de enteros, que corresponden a los píxeles. 
 
-El [ `DrawBitmapLattice` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapLattice/p/SkiaSharp.SKBitmap/System.Int32[]/System.Int32[]/SkiaSharp.SKRect/SkiaSharp.SKPaint/) método con parámetros para estas matrices de enteros no parece funcionar. El [ `DrawBitmapLattice` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.DrawBitmapLattice/p/SkiaSharp.SKBitmap/SkiaSharp.SKLattice/SkiaSharp.SKRect/SkiaSharp.SKPaint/) método con un parámetro de tipo `SKLattice` funciona, y eso es lo que se utilizan en los ejemplos se muestra a continuación.
+El [ `DrawBitmapLattice` ](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,System.Int32[],System.Int32[],SkiaSharp.SKRect,SkiaSharp.SKPaint)) método con parámetros para estas matrices de enteros no parece funcionar. El [ `DrawBitmapLattice` ](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,SkiaSharp.SKLattice,SkiaSharp.SKRect,SkiaSharp.SKPaint)) método con un parámetro de tipo `SKLattice` funciona, y eso es lo que se utilizan en los ejemplos se muestra a continuación.
 
-El [ `SKLattice` ](https://developer.xamarin.com/api/type/SkiaSharp.SKLattice/) estructura define cuatro propiedades:
+El [ `SKLattice` ](xref:SkiaSharp.SKLattice) estructura define cuatro propiedades:
 
-- [`XDivs`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.XDivs/), una matriz de enteros
-- [`YDivs`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.YDivs/), una matriz de enteros
-- [`Flags`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.Flags/), una matriz de `SKLatticeFlags`, un tipo de enumeración
-- [`Bounds`](https://developer.xamarin.com/api/property/SkiaSharp.SKLattice.Bounds/) de tipo `Nullable<SKRectI>` para especificar un rectángulo de origen opcional en el mapa de bits
+- [`XDivs`](xref:SkiaSharp.SKLattice.XDivs), una matriz de enteros
+- [`YDivs`](xref:SkiaSharp.SKLattice.YDivs), una matriz de enteros
+- [`Flags`](xref:SkiaSharp.SKLattice.Flags), una matriz de `SKLatticeFlags`, un tipo de enumeración
+- [`Bounds`](xref:SkiaSharp.SKLattice.Bounds) de tipo `Nullable<SKRectI>` para especificar un rectángulo de origen opcional en el mapa de bits
 
 El `XDivs` matriz divide el ancho del mapa de bits en bandas verticales. La primera franja se extiende desde el píxel 0 a la izquierda para `XDivs[0]`. Esta banda se representa en su ancho en píxeles. La segunda banda se extiende desde `XDivs[0]` a `XDivs[1]`y se ajusta. La tercera banda se extiende desde `XDivs[1]` a `XDivs[2]` y se representa en su ancho en píxeles. La franja de último se extiende desde el último elemento de la matriz para el borde derecho del mapa de bits. Si la matriz tiene un número par de elementos, se muestra en su ancho en píxeles. En caso contrario, se ajusta. El número total de bandas verticales es uno más que el número de elementos de la matriz.
 
@@ -134,7 +134,7 @@ El `YDivs` matriz es similar. Divide el alto de la matriz en bandas horizontales
 
 Juntos, el `XDivs` y `YDivs` matriz dividir el mapa de bits en rectángulos. El número de rectángulos es igual al producto del número de franjas horizontales y el número de bandas verticales.
 
-Según la documentación de Skia, el `Flags` matriz contiene un elemento para cada rectángulo, en primer lugar en la fila superior de los rectángulos, a continuación, la segunda fila y así sucesivamente. El `Flags` matriz es de tipo [ `SKLatticeFlags` ](https://developer.xamarin.com/api/type/SkiaSharp.SKLatticeFlags/), una enumeración con los miembros siguientes:
+Según la documentación de Skia, el `Flags` matriz contiene un elemento para cada rectángulo, en primer lugar en la fila superior de los rectángulos, a continuación, la segunda fila y así sucesivamente. El `Flags` matriz es de tipo [ `SKLatticeFlags` ](xref:SkiaSharp.SKLatticeFlags), una enumeración con los miembros siguientes:
 
 - `Default` con valor 0
 - `Transparent` con el valor 1
@@ -225,5 +225,5 @@ El **Lattice mostrar** página generaliza la creación de la `Flags` matriz, lo 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

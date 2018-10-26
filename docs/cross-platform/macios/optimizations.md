@@ -3,15 +3,15 @@ title: Optimizaciones de las compilaciones
 description: Este documento explican las diversas optimizaciones que se aplican en tiempo de compilación para las aplicaciones de Xamarin.iOS y Xamarin.Mac.
 ms.prod: xamarin
 ms.assetid: 84B67E31-B217-443D-89E5-CFE1923CB14E
-author: bradumbaugh
-ms.author: brumbaug
+author: conceptdev
+ms.author: crdun
 ms.date: 04/16/2018
-ms.openlocfilehash: 432511a35f9f285d2c0060b5521256f834bb35ea
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.openlocfilehash: 7d67b924253dfea66781f16b5f83007811de5909
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351644"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119038"
 ---
 # <a name="build-optimizations"></a>Optimizaciones de las compilaciones
 

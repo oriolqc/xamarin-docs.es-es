@@ -1,23 +1,23 @@
 ---
 title: introducción a C
-description: Este documento describe cómo usar .NET incrustar para incrustar código .NET en una aplicación de C. Explica cómo utilizar la incrustación de .NET en 2017 de Visual Studio y Visual Studio para Mac.
+description: Este documento describe cómo usar la inserción de .NET para incrustar código .NET en una aplicación C. Describe cómo usar la inserción de .NET en Visual Studio 2017 y Visual Studio para Mac.
 ms.prod: xamarin
 ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 04/19/2018
-ms.openlocfilehash: 248d44f23495e45d9d35b34622de0f3b85ca3e8d
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: a16821e83dc169d7800162e1eaf45c4be661185a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34794103"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106811"
 ---
 # <a name="getting-started-with-c"></a>introducción a C
 
 ## <a name="requirements"></a>Requisitos
 
-Para usar la incrustación de .NET con C, necesitará un equipo que ejecuta Mac o Windows:
+Para usar la inserción de .NET con c#, necesitará un equipo que ejecuta Mac o Windows:
 
 ### <a name="macos"></a>macOS
 
@@ -28,13 +28,13 @@ Para usar la incrustación de .NET con C, necesitará un equipo que ejecuta Mac 
 ### <a name="windows"></a>Windows
 
 * Windows 7, 8, 10 o posterior
-* Visual Studio 2015 o versiones posterior
+* Visual Studio 2015 o posterior
 
-## <a name="installing-net-embedding-from-nuget"></a>Instalar .NET incrustación de NuGet
+## <a name="installing-net-embedding-from-nuget"></a>Instalación de inserción de .NET de NuGet
 
-Siga estas [instrucciones](~/tools/dotnet-embedding/get-started/install/install.md) para instalar y configurar la incrustación de .NET para el proyecto.
+Siga estas [instrucciones](~/tools/dotnet-embedding/get-started/install/install.md) para instalar y configurar la inserción de .NET para el proyecto.
 
-Debe configurar la invocación del comando será similar (posiblemente con números de versión diferentes y las rutas de acceso):
+Debe configurar la invocación del comando será similar a (posiblemente con números de versión diferentes y las rutas de acceso):
 
 ### <a name="visual-studio-for-mac"></a>Visual Studio para Mac
 
@@ -52,7 +52,7 @@ $(SolutionDir)\packages\Embeddinator-4000.0.2.0.80\tools\Embeddinator-4000.exe -
 
 ### <a name="output-files"></a>Archivos de salida
 
-Si todo funciona correctamente, aparecerá el siguiente resultado:
+Si todo va bien, aparecerá el siguiente resultado:
 
 ```shell
 Parsing assemblies...
@@ -71,12 +71,12 @@ Generating binding code...
     Generated: mono_embeddinator.h
 ```
 
-Puesto que la `--compile` marca se pasa a la herramienta, incrustación de .NET debe también se compila los archivos de salida en una biblioteca compartida, que encontrará junto a los archivos generados, un **libmanaged.dylib** archivo macOS y **managed.dll** en Windows.
+Puesto que la `--compile` marca se pasa a la herramienta, inserción de .NET debe también han compilado los archivos de salida en una biblioteca compartida, que se encuentra junto a los archivos generados, un **libmanaged.dylib** archivo en macOS y **managed.dll** en Windows.
 
-Para utilizar la biblioteca compartida, puede incluir la **managed.h** biblioteca API administrada de archivo de encabezado de C, que proporciona las declaraciones de C correspondientes a los respectivos y vínculo con la mencionada anteriormente compilados biblioteca compartida.
+Para consumir la biblioteca compartida, puede incluir el **managed.h** archivo de encabezado de C, que proporciona las declaraciones de C correspondientes a los respectivos managed API de biblioteca y vínculo con los mencionados anteriormente compilados biblioteca compartida.
 
 ## <a name="further-reading"></a>Información adicional
 
 * [Limitaciones de incrustación de .NET](~/tools/dotnet-embedding/limitations.md)
 * [En el proyecto de código abierto](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
-* [Códigos de error y descripciones](~/tools/dotnet-embedding/errors.md)
+* [Las descripciones y códigos de error](~/tools/dotnet-embedding/errors.md)

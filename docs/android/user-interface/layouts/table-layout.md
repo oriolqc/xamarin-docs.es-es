@@ -3,23 +3,25 @@ title: TableLayout
 ms.prod: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: f9a77655091e4b552bd4a9d440f50b6a3cbeabcc
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: 25b2393d2133c0a1f3f8354584c276fcd7ddaa4b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30763652"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114956"
 ---
 # <a name="tablelayout"></a>TableLayout
 
-[`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) es un [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/) que muestra secundarios [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) elementos en filas y columnas.
+[`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) es un [`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
+que muestra el elemento secundario [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
+elementos de filas y columnas.
 
 Inicie un nuevo proyecto denominado **HelloTableLayout**.
 
-Abra la **Resources/Layout/Main.axml** archivo e inserte lo siguiente:
+Abra el **Resources/Layout/Main.axml** archivo e inserte lo siguiente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -100,9 +102,13 @@ Abra la **Resources/Layout/Main.axml** archivo e inserte lo siguiente:
 </TableLayout>
 ```
 
-Tenga en cuenta cómo se parece a la estructura de una tabla HTML. El [ `TableLayout` ](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) elemento es como el código HTML `<table>` elemento; [ `TableRow` ](https://developer.xamarin.com/api/type/Android.Widget.TableRow/) es similar a una `<tr>` elemento; pero para las celdas, puede usar cualquier tipo de [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) elemento. En este ejemplo, un [ `TextView` ](https://developer.xamarin.com/api/type/Android.Widget.TextView/) se utiliza para cada celda. Entre algunas de las filas, también hay un basic [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/), que se utiliza para dibujar una línea horizontal.
+Tenga en cuenta cómo se parece a la estructura de una tabla HTML. El [`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/)
+elemento es como el código HTML `<table>` elemento; [`TableRow`](https://developer.xamarin.com/api/type/Android.Widget.TableRow/)
+es similar a un `<tr>` elemento; pero para las celdas, puede usar cualquier tipo de [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) elemento. En este ejemplo, un [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
+se utiliza para cada celda. Entre algunas de las filas, también hay un basic [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/), que se usa para dibujar una línea horizontal.
 
-Asegúrese de que su **HelloTableLayout** actividad carga este diseño en el [ `OnCreate()` ](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/) método:
+Asegúrese de que su **HelloTableLayout** actividad carga este diseño en el [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
+método:
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)
@@ -112,11 +118,11 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-El [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32)) método carga el archivo de diseño para la [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/), especificado por el identificador de recurso &mdash; `Resource.Layout.Main` hace referencia a la **recursos/diseño / Main.axml** archivo de diseño.
+El [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32)) método carga el archivo de diseño para el [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/), especificado por el identificador de recurso &mdash; `Resource.Layout.Main` hace referencia a la **y diseño de recursos / Main.axml** archivo de diseño.
 
 Ejecute la aplicación. Debería ver lo siguiente:
 
-[![Captura de pantalla de ejemplo de aplicación de TableLayout mostrar varias filas de tabla](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
+[![Captura de pantalla de ejemplo de aplicación TableLayout mostrar varias filas de tabla](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
 
 
 
@@ -128,5 +134,5 @@ Ejecute la aplicación. Debería ver lo siguiente:
 
 -   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 
 
-*Algunas partes de esta página son las modificaciones que se basa en el trabajo creado y comparten la Android Open Source Project y usarse de acuerdo con los términos que se describe en el*
+*Las partes de esta página son modificaciones en función de trabajo creado y compartido por el Android Open Source Project y usarse de acuerdo con los términos descritos en el*
 [*licencia de atribución 2.5 de Creative Commons* ](http://creativecommons.org/licenses/by/2.5/).

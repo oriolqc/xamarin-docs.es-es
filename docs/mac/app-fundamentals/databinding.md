@@ -4,15 +4,15 @@ description: En este artículo se describe el uso de codificación y observació
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 0adb8cda71ca8803c535679da2aecf00f3fa46a5
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 4a391160f2102fd1f069a45eb7c16aec91dfd7e0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40251000"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110386"
 ---
 # <a name="data-binding-and-key-value-coding-in-xamarinmac"></a>Enlace de datos y la clave y valor de codificación en Xamarin.Mac
 
@@ -334,7 +334,7 @@ public NSArray People {
 Dos cosas a tener en cuenta aquí:
 
 1. Hemos usado un `NSMutableArray` en lugar de una matriz de C# o colección, puesto que se trata como un requisito para enlazar datos a controles de AppKit estándar **vistas de tabla**, **vistas de esquema** y **colecciones** .
-2. La matriz de empleados se expone su conversión a un `NSArray` para datos con fines de enlace y puede cambiar su C# con el formato nombre, `People`, a uno que espera el enlace de datos, `personModelArray` en el formulario **{class_name} matriz** (tenga en cuenta que el primer carácter se ha convertido en minúsculas).
+2. La matriz de empleados se expone su conversión a un `NSArray` para datos con fines de enlace y puede cambiar su C# con el formato de nombre, `People`, a uno que espera el enlace de datos, `personModelArray` en el formulario **{class_name} matriz**(tenga en cuenta que se ha realizado el primer carácter en minúsculas).
 
 A continuación, necesitamos agregar algunos especialmente nombre métodos públicos para admitir **controladoras de matriz** y **árbol controladores**:
 

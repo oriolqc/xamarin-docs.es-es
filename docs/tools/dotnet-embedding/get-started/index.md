@@ -1,19 +1,19 @@
 ---
-title: Introducción a .NET incrustar
-description: Este documento se incluyen vínculos a diversas guías que describen cómo usar la incrustación de .NET en C, Java, Android, proyectos Objective-C, iOS y Mac OS.
+title: Introducción a la inserción de .NET
+description: Este documento se incluyen vínculos a diversas guías que describen cómo usar la inserción de .NET en C, Java, Android, los proyectos de Objective-C, iOS y macOS.
 ms.prod: xamarin
 ms.assetid: AF8A4798-EBDD-4E73-997B-C3D4FC5E9685
-author: topgenorth
-ms.author: toopge
+author: lobrien
+ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: 9829881dcb374b141bdf7fc578266ec66d90315b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 96a80d76afb769dae456e7ff9bdad32b137c6fed
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34793063"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50106219"
 ---
-# <a name="getting-started-with-net-embedding"></a>Introducción a .NET incrustar
+# <a name="getting-started-with-net-embedding"></a>Introducción a la inserción de .NET
 
 ## <a name="ccmd"></a>[C](c.md)
 
@@ -21,20 +21,20 @@ Incrustar código .NET en las aplicaciones de C.
 
 ## <a name="javajavaindexmd"></a>[Java](java/index.md)
 
-Cómo incrustar en aplicaciones de Java en distintas plataformas.
+Cómo incrustar en aplicaciones de Java en diversas plataformas.
 
 ### <a name="androidjavaandroidmd"></a>[Android](java/android.md)
 
-Específicos de Android consejos para incrustar código. NET.
+Consejos de Android específicos para insertar código. NET.
 
 ## <a name="objective-cobjective-cindexmd"></a>[Objective-C](objective-c/index.md)
 
-Cómo incrustar en el objetivo de C.
+Cómo incrustar en Objective-C.
 
 ### <a name="iosobjective-ciosmd"></a>[iOS](objective-c/ios.md)
 
-sugerencias de específicos de iOS para insertar código. NET.
+sugerencias específicas de iOS para la inserción de código. NET.
 
 ### <a name="macosobjective-cmacosmd"></a>[macOS](objective-c/macos.md)
 
-obtener sugerencias de macOS específicos para incrustar código. NET.
+sugerencias específicas de macOS para insertar código. NET.

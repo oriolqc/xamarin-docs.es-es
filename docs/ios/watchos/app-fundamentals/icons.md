@@ -4,15 +4,15 @@ description: Este documento describe los distintos iconos necesarios para una ap
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 07/26/2018
-ms.openlocfilehash: e46ecc9d78ccc5dcfbe571c9ec5350fe6c391b7e
-ms.sourcegitcommit: ffb0f3dbf77b5f244b195618316bbd8964541e42
+ms.openlocfilehash: 435af10484827826d53b767c2738e3945e0bae42
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39275929"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121378"
 ---
 # <a name="working-with-watchos-icons-in-xamarin"></a>Trabajar con iconos en Xamarin de watchOS
 

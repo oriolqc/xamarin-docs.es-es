@@ -4,15 +4,15 @@ description: Esta guía presenta Renderscript y explica cómo utilizar el intrí
 ms.prod: xamarin
 ms.assetid: 378793C7-5E3E-40E6-ABEE-BEAEF64E6A47
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 3331eb579f0aa2d7f29508773c588455c134f56a
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 5369542552a41100443c5e91ceca9e110c5c7c3c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39241193"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108735"
 ---
 # <a name="an-introduction-to-renderscript"></a>Una introducción a Renderscript
 
@@ -48,11 +48,12 @@ Hay tres conceptos importantes para usar Renderscripts en una aplicación de And
 
 3. **Memoria asignada** &ndash; se pasan datos hacia y desde un kernel a través de un  _[asignación](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)_. Un núcleo puede tener una entrada o una asignación de salida.
 
-El [Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/) espacio de nombres contiene las clases para interactuar con el tiempo de ejecución Renderscript. En concreto, el [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) clase va a administrar el ciclo de vida y los recursos del motor Renderscript. La aplicación de Android debe inicializar uno o varios [ `Android.Renderscripts.Allocation` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/) objetos. Una asignación es una API administrada que se encarga de asignación y el acceso a la memoria que se comparte entre la aplicación de Android y el tiempo de ejecución Renderscript. Normalmente, se crea una asignación para la entrada y, opcionalmente, otra asignación se crea para contener el resultado del kernel. El motor de tiempo de ejecución Renderscript y las clases contenedoras administradas asociado va a administrar el acceso a la memoria que mantiene las asignaciones, no es necesario para un desarrollador de aplicaciones Android realizar cualquier trabajo adicional.
+El [Android.Renderscripts](https://developer.xamarin.com/api/namespace/Android.Renderscripts/) espacio de nombres contiene las clases para interactuar con el tiempo de ejecución Renderscript. En concreto, el [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) clase va a administrar el ciclo de vida y los recursos del motor Renderscript. La aplicación de Android debe inicializar uno o más [`Android.Renderscripts.Allocation`](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)
+Objetos. Una asignación es una API administrada que se encarga de asignación y el acceso a la memoria que se comparte entre la aplicación de Android y el tiempo de ejecución Renderscript. Normalmente, se crea una asignación para la entrada y, opcionalmente, otra asignación se crea para contener el resultado del kernel. El motor de tiempo de ejecución Renderscript y las clases contenedoras administradas asociado va a administrar el acceso a la memoria que mantiene las asignaciones, no es necesario para un desarrollador de aplicaciones Android realizar cualquier trabajo adicional.
 
 Contendrá una asignación de uno o varios [Android.Renderscripts.Elements](https://developer.xamarin.com/api/type/Android.Renderscripts.Element/).
 Los elementos son un tipo especializado que se describen los datos de cada asignación.
-Los tipos de elemento de la salida debe coincidir con la asignación el los tipos de elemento de entrada. Cuando se ejecuta, un Renderscript se recorrer en iteración cada elemento en la asignación de entrada en paralelo y escribir los resultados en la salida de asignación. Hay dos tipos de elementos:
+Los tipos de elemento de la salida de asignación debe coincidir con los tipos de elemento de entrada. Cuando se ejecuta, un Renderscript se recorrer en iteración cada elemento en la asignación de entrada en paralelo y escribir los resultados en la salida de asignación. Hay dos tipos de elementos:
 
 - **tipo simple** &ndash; conceptualmente es igual que un tipo de datos C `float` o `char`.
 
@@ -60,7 +61,8 @@ Los tipos de elemento de la salida debe coincidir con la asignación el los tipo
 
 El motor Renderscript llevará a cabo una comprobación en tiempo de ejecución para asegurarse de que los elementos de cada asignación son compatibles con lo que requiere el kernel. Si el tipo de datos de los elementos de la asignación no coincide con el tipo de datos que está esperando el kernel, se producirá una excepción.
 
-Todos los kernels Renderscript se ajustará mediante un tipo que es un descendiente de la [ `Android.Renderscripts.Script` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Script/) clase. El `Script` clase se utiliza para definir los parámetros para un Renderscript, establezca adecuado `Allocations`, y ejecute el Renderscript. Hay dos `Script` subclases en el SDK de Android:
+Todos los kernels Renderscript se ajustará mediante un tipo que es un descendiente de la [`Android.Renderscripts.Script`](https://developer.xamarin.com/api/type/Android.Renderscripts.Script/)
+clase. El `Script` clase se utiliza para definir los parámetros para un Renderscript, establezca adecuado `Allocations`, y ejecute el Renderscript. Hay dos `Script` subclases en el SDK de Android:
 
 
 - **`Android.Renderscripts.ScriptIntrinsic`** &ndash; Algunas de las tareas más comunes de Renderscript están agrupados en el SDK de Android y son accesibles por una subclase de la [ScriptIntrinsic](https://developer.xamarin.com/api/type/Android.Renderscripts.ScriptIntrinsic/) clase. No hay ninguna necesidad de un desarrollador tomar ninguna acción adicional para usar estos scripts en su aplicación, como ya se proporcionan.
@@ -107,13 +109,15 @@ Consulte la documentación de API para obtener más información sobre cada una 
 
 A continuación se describen los pasos básicos para usar Renderscript en una aplicación de Android.
 
-**Crear un contexto Renderscript** &ndash; el [ `Renderscript` ](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/) clase es un contenedor administrado alrededor del contexto Renderscript y se controlan la inicialización, administración de recursos y limpiar. El objeto Renderscript se crea utilizando el `RenderScript.Create` método de fábrica, que toma un contexto de Android (por ejemplo, una actividad) como un parámetro. La siguiente línea de código muestra cómo inicializar el contexto de Renderscript:
+**Crear un contexto Renderscript** &ndash; el [`Renderscript`](https://developer.xamarin.com/api/type/Android.Renderscripts.RenderScript/)
+clase es un contenedor administrado alrededor del contexto Renderscript y se controlan la inicialización, administración de recursos y limpiar. El objeto Renderscript se crea utilizando el `RenderScript.Create` método de fábrica, que toma un contexto de Android (por ejemplo, una actividad) como un parámetro. La siguiente línea de código muestra cómo inicializar el contexto de Renderscript:
 
 ```csharp
 Android.Renderscripts.RenderScript renderScript = RenderScript.Create(this);
 ```
 
-**Crear asignaciones** &ndash; dependiendo de la secuencia de comandos intrínseco, puede ser necesario crear uno o dos `Allocation`s. El [ `Android.Renderscripts.Allocation` ](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/) clase tiene varios métodos de fábrica para crear instancias de una asignación para una función intrínseca. Por ejemplo, el fragmento de código siguiente muestra cómo se crea la asignación de mapas de bits.
+**Crear asignaciones** &ndash; dependiendo de la secuencia de comandos intrínseco, puede ser necesario crear uno o dos `Allocation`s. El [`Android.Renderscripts.Allocation`](https://developer.xamarin.com/api/type/Android.Renderscripts.Allocation/)
+clase tiene varios métodos de generador para crear instancias de una asignación para una función intrínseca. Por ejemplo, el fragmento de código siguiente muestra cómo se crea la asignación de mapas de bits.
 
 ```csharp
 Android.Graphics.Bitmap originalBitmap;

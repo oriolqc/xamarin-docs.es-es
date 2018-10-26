@@ -1,46 +1,46 @@
 ---
-title: Nombres de parámetros con Javadoc
-description: Este artículo explica cómo recuperar los nombres de parámetro en un proyecto de enlace de Java mediante el uso de Javadoc generado a partir del proyecto de Java.
+title: Nomenclatura de parámetros con Javadoc
+description: En este artículo se explica cómo recuperar los nombres de parámetro en un proyecto de enlace de Java mediante el uso de Javadoc generado a partir del proyecto de Java.
 ms.prod: xamarin
 ms.assetid: 59E8EF16-1322-486A-BB16-353804B77356
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/20/2017
-ms.openlocfilehash: 7517e46c5b66123dc4e12fb5562c59f569f249aa
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: e394377043953a297afed36a3ce0747a3e6d1512
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30766899"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104419"
 ---
-# <a name="naming-parameters-with-javadoc"></a>Nombres de parámetros con Javadoc
+# <a name="naming-parameters-with-javadoc"></a>Nomenclatura de parámetros con Javadoc
 
-_Este artículo explica cómo recuperar los nombres de parámetro en un proyecto de enlace de Java mediante el uso de Javadoc generado a partir del proyecto de Java._
+_En este artículo se explica cómo recuperar los nombres de parámetro en un proyecto de enlace de Java mediante el uso de Javadoc generado a partir del proyecto de Java._
 
 
 ## <a name="overview"></a>Información general
 
-Al enlazar una biblioteca Java, algunos metadatos sobre la API de enlace se pierde. En concreto los nombres de parámetros a métodos. Nombres de parámetro aparecerá como `p0`, `p1`, etcetera. Esto es porque el Java `.class` archivos no conservan los nombres de parámetro que se usaron en el código fuente de Java. 
+Al enlazar una biblioteca de Java existente, se pierde algunos metadatos sobre la API de enlazado. En concreto los nombres de parámetros a métodos. Los nombres de parámetro aparecerá como `p0`, `p1`, etcetera. Esto es porque el Java `.class` archivos no conservan los nombres de parámetro que se usaron en el código fuente de Java. 
 
-Un proyecto de enlace Xamarin.Android Java puede proporcionar los nombres de parámetro, si tiene acceso al elemento HTML Javadoc de la biblioteca original. 
+Un proyecto de enlace de Xamarin.Android Java puede proporcionar los nombres de parámetro, si tiene acceso al código HTML de Javadoc de la biblioteca original. 
 
 ## <a name="integrating-javadoc-html-into-a-java-binding-project"></a>Integración de Javadoc HTML en un proyecto de enlace de Java
 
-Integrar el código HTML de Javadoc en un proyecto de Java de enlace es un proceso manual que consta de los siguientes pasos: 
+Integrar el código HTML de Javadoc en un proyecto de Java de enlace es un proceso manual que consta de los pasos siguientes: 
 
-1.  Descargar el Javadoc para la biblioteca
-2.  Editar la `.csproj` de archivos y agregar un `<JavaDocPaths>` propiedad:
+1.  Descargue el Javadoc para la biblioteca
+2.  Editar el `.csproj` archivo y agregue un `<JavaDocPaths>` propiedad:
 3.  Limpie y recompile el proyecto
 
-Una vez hecho esto, los nombres de parámetro de Java originales deben estar presentes en las API enlazadas por un proyecto de enlace de Java. 
+Una vez hecho esto, los nombres de parámetro Java originales deben estar presentes en las API de enlazar un proyecto de enlace de Java. 
 
 
 > [!NOTE]
-> Hay una gran variedad de en la salida de JavaDoc. El archivo. Cadena de herramientas JAR enlace no admite cada permutación posibles único y, por consiguiente, algún parámetro puede no ser correctamente con el nombre.
+> Hay una gran cantidad de varianza en la salida de JavaDoc. El archivo. JAR cadena de herramientas de enlace no admite todas las permutaciones posibles única y por lo tanto algún parámetro puede no estar correctamente con nombre.
 
 
 ## <a name="summary"></a>Resumen
 
-Este artículo trata cómo usar Javadoc en un proyecto de enlace de Java para proporcionar nombres de parámetro de significado a las API de enlace. 
+En este artículo tratan cómo usar Javadoc en un proyecto de enlace de Java para proporcionar nombres de parámetro de significado para las API de enlazado. 
 

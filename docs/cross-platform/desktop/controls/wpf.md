@@ -5,12 +5,12 @@ description: Este documento se compara y contrasta WPF para Xamarin.Forms. Descr
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 4d6585715b2fc118bb350c242abccbc68791ec0b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 43eadacebf7ed877dfa28381ad77117d5988ca4b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998523"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119856"
 ---
 # <a name="wpf-vs-xamarinforms-similarities--differences"></a>Frente a WPF Xamarin.Forms: Similitudes y diferencias
 
@@ -98,7 +98,6 @@ La compatibilidad con enlaces y el motor son más similares a la implementación
     - Recopilación de ValidationRules
     - XPath
     - XmlNamespaceManager
-- `Binding.Mode` no admite `OneTime`, use simplemente `OneWay`.
 
 #### <a name="relativesource"></a>RelativeSource
 

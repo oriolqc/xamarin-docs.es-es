@@ -4,15 +4,15 @@ description: En este artículo se explica cómo crear efectos de inclinación y 
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: 13f2a1160d012a6b7720bd84340a1cdd0f991535
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: da5306ed9c301a7229d2fc5e913a4217e844bbba
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615657"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116152"
 ---
 # <a name="non-affine-transforms"></a>Transformaciones no afines
 
@@ -61,6 +61,8 @@ Sin embargo, cuando se muestran los gráficos, desea evitar la representación a
 En esta ecuación, no desea que el valor de z' como cero:
 
 z' = Persp0·x Persp1·y + Persp2
+
+Por lo tanto, estos valores tienen algunas restricciones prácticas: 
 
 El `Persp2` celda puede ser cero o no es cero. Si `Persp2` es cero, z' es cero para el punto (0, 0), y que normalmente no es deseable porque ese punto es muy común en gráficos bidimensionales. Si `Persp2` no es igual a cero, entonces no hay ninguna pérdida de generalidad si `Persp2` se fija en 1. Por ejemplo, si determina que `Persp2` debe ser 5, a continuación, puede simplemente divide todas las celdas de la matriz por 5, lo que hace que `Persp2` igual a 1, y el resultado será el mismo.
 
@@ -360,8 +362,8 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
     canvas.Clear();
 
-    TaperSide taperSide = (TaperSide)taperSidePicker.SelectedIndex;
-    TaperCorner taperCorner = (TaperCorner)taperCornerPicker.SelectedIndex;
+    TaperSide taperSide = (TaperSide)taperSidePicker.SelectedItem;
+    TaperCorner taperCorner = (TaperCorner)taperCornerPicker.SelectedItem;
     float taperFraction = (float)taperFractionSlider.Value;
 
     SKMatrix taperMatrix =
@@ -392,9 +394,9 @@ A continuación se muestran algunos ejemplos:
 
 [![](non-affine-images/tapertransform-small.png "Captura de pantalla de la página de transformar estrechamiento triple")](non-affine-images/tapertransform-large.png#lightbox "Triple captura de pantalla de la página de transformar inclinación")
 
-Otro tipo de transformaciones no afines generalizadas es un giro 3D, que se muestra en el siguiente artículo, [rotaciones 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md).
+Otro tipo de transformaciones no afines generalizadas es un giro 3D, que se muestra en el siguiente artículo, [ **rotaciones 3D**](3d-rotation.md).
 
-La transformación no afín puede transformar un rectángulo en cualquier cuadrilátero convexa. Esto se demuestra el **Mostrar matriz no afín** página. Es muy similar a la **Mostrar matriz afín** página desde la [transforma la matriz](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/matrix.md) artículo excepto que tiene una cuarta `TouchPoint` objeto para manipular la cuarta esquina del mapa de bits:
+La transformación no afín puede transformar un rectángulo en cualquier cuadrilátero convexa. Esto se demuestra el **Mostrar matriz no afín** página. Es muy similar a la **Mostrar matriz afín** página desde la [ **transforma la matriz** ](matrix.md) artículo excepto que tiene una cuarta `TouchPoint` objeto para manipular el cuarto esquina del mapa de bits:
 
 [![](non-affine-images/shownonaffinematrix-small.png "Captura de pantalla de la página se muestra la matriz no afín triple")](non-affine-images/shownonaffinematrix-large.png#lightbox "Triple captura de pantalla de la página se muestra la matriz no afines")
 
@@ -459,14 +461,14 @@ Para facilitar el cálculo, este método obtiene la transformación total como u
 
 Las coordenadas finales a la derecha son los cuatro puntos asociados con los puntos de cuatro toque. Estas son las coordenadas finales de las esquinas del mapa de bits.
 
-Anchura y altura representan el ancho y alto del mapa de bits. La primera transformación (`S`) simplemente se escala el mapa de bits a un cuadrado de 1 píxel. La segunda transformación es la transformación no afín `N`, y el tercero es la transformación afín `A`. Esa transformación afín se basa en tres puntos, por lo que al igual que la anteriormente afín [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) método y no implica la cuarta fila con el (a, b) punto.
+Anchura y altura representan el ancho y alto del mapa de bits. La primera transformación `S` simplemente se escala el mapa de bits a un cuadrado de 1 píxel. La segunda transformación es la transformación no afín `N`, y el tercero es la transformación afín `A`. Esa transformación afín se basa en tres puntos, por lo que al igual que la anteriormente afín [ `ComputeMatrix` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ShowAffineMatrixPage.xaml.cs#L68) método y no implica la cuarta fila con el (a, b) punto.
 
 El `a` y `b` se calculan los valores para que la tercera transformación es afín. El código obtiene el inverso de la transformación afín y, a continuación, usa para asignar la esquina inferior derecha. Es el punto (a, b).
 
-Otro uso de transformaciones no afines es imitar gráficos tridimensionales. En el siguiente artículo, [rotaciones 3D](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/3d-rotation.md) verá cómo girar un gráfico bidimensional en un espacio 3D.
+Otro uso de transformaciones no afines es imitar gráficos tridimensionales. En el siguiente artículo, [ **rotaciones 3D** ](3d-rotation.md) verá cómo girar un gráfico bidimensional en un espacio 3D.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

@@ -4,19 +4,19 @@ description: Aprenda a crear mapas de bits de SkiaSharp y, a continuación, dibu
 ms.prod: xamarin
 ms.technology: xamarin-skiasharp
 ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: c8ddf8c0829cea319dd93dd9c3686b94ed8eb89e
-ms.sourcegitcommit: 12d48cdf99f0d916536d562e137d0e840d818fa1
+ms.openlocfilehash: acdee7d34f913b125887f021dab39220c9560191
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/07/2018
-ms.locfileid: "39615595"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109242"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Crear y dibujar en mapas de bits de SkiaSharp
 
-Ha visto cómo una aplicación puede cargar los mapas de bits de la Web, de recursos de aplicación y de biblioteca de fotos del usuario. También es posible crear mapas de bits nuevo dentro de la aplicación. El enfoque más sencillo implica uno de los constructores de [ `SKBitmap` ](https://developer.xamarin.com/api/constructor/SkiaSharp.SKBitmap.SKBitmap/p/System.Int32/System.Int32/System.Boolean/):
+Ha visto cómo una aplicación puede cargar los mapas de bits de la Web, de recursos de aplicación y de biblioteca de fotos del usuario. También es posible crear mapas de bits nuevo dentro de la aplicación. El enfoque más sencillo implica uno de los constructores de [ `SKBitmap` ](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 
 ```csharp
 SKBitmap bitmap = new SKBitmap(width, height);
@@ -37,7 +37,7 @@ El segundo enfoque se describe en el artículo [ **acceso a píxeles de mapa de 
 
 ## <a name="drawing-on-the-bitmap"></a>Dibujar en el mapa de bits
 
-Dibujar en la superficie de un mapa de bits es igual a dibujar en una pantalla de vídeo. Para dibujar en una pantalla de vídeo, obtendrá un `SKCanvas` objeto desde el `PaintSurface` argumentos de evento. Para dibujar en un mapa de bits, se crea un `SKCanvas` objeto utilizando el [ `SKCanvas` ](https://developer.xamarin.com/api/constructor/SkiaSharp.SKCanvas.SKCanvas/p/SkiaSharp.SKBitmap/) constructor:
+Dibujar en la superficie de un mapa de bits es igual a dibujar en una pantalla de vídeo. Para dibujar en una pantalla de vídeo, obtendrá un `SKCanvas` objeto desde el `PaintSurface` argumentos de evento. Para dibujar en un mapa de bits, se crea un `SKCanvas` objeto utilizando el [ `SKCanvas` ](xref:SkiaSharp.SKCanvas.%23ctor(SkiaSharp.SKBitmap)) constructor:
 
 ```csharp
 SKCanvas canvas = new SKCanvas(bitmap);
@@ -123,9 +123,9 @@ La documentación de la `Clear` métodos de `SKCanvas` describe ellos con la ins
 
 `Clear` existe en dos versiones diferentes: 
 
-- El [ `Clear` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear/p/SkiaSharp.SKColor/) método con un `SKColor` parámetro reemplaza los píxeles de la superficie de pantalla con píxeles de ese color.
+- El [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear(SkiaSharp.SKColor)) método con un `SKColor` parámetro reemplaza los píxeles de la superficie de pantalla con píxeles de ese color.
 
-- El [ `Clear` ](https://developer.xamarin.com/api/member/SkiaSharp.SKCanvas.Clear()/) método sin parámetros reemplaza los píxeles con el [ `SKColors.Empty` ](https://developer.xamarin.com/api/property/SkiaSharp.SKColors.Empty/) color, que es un color en el que todos los componentes (rojo, verde, azul y alfa) se establecen en cero. Este color se conoce a veces como "negro transparente".
+- El [ `Clear` ](xref:SkiaSharp.SKCanvas.Clear) método sin parámetros reemplaza los píxeles con el [ `SKColors.Empty` ](xref:SkiaSharp.SKColors.Empty) color, que es un color en el que todos los componentes (rojo, verde, azul y alfa) se establecen en cero. Este color se conoce a veces como "negro transparente".
 
 Una llamada a `Clear` sin argumentos en un mapa de bits nuevo inicializa el mapa de bits completo para que sea totalmente transparente. Normalmente, nada dibujado posteriormente en el mapa de bits será opaco o parcialmente opaco.
 
@@ -151,7 +151,7 @@ No `Draw` método alguna vez realiza un mapa de bits más transparente. Solo `Cl
 
 ## <a name="bitmap-color-types"></a>Tipos de colores de mapa de bits
 
-El más sencillo `SKBitmap` constructor le permite especificar un ancho de píxel de entero y el alto del mapa de bits. Otros `SKBitmap` constructores son más complejos. Estos constructores requieren argumentos de los dos tipos de enumeración: [ `SKColorType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKColorType/) y [ `SKAlphaType` ](https://developer.xamarin.com/api/type/SkiaSharp.SKAlphaType/). Otros constructores utilizan el [ `SKImageInfo` ](https://developer.xamarin.com/api/type/SkiaSharp.SKImageInfo/) estructura, que consolida toda esta información.
+El más sencillo `SKBitmap` constructor le permite especificar un ancho de píxel de entero y el alto del mapa de bits. Otros `SKBitmap` constructores son más complejos. Estos constructores requieren argumentos de los dos tipos de enumeración: [ `SKColorType` ](xref:SkiaSharp.SKColorType) y [ `SKAlphaType` ](xref:SkiaSharp.SKAlphaType). Otros constructores utilizan el [ `SKImageInfo` ](xref:SkiaSharp.SKImageInfo) estructura, que consolida toda esta información.
 
 El `SKColorType` enumeración tiene 9 miembros. Cada uno de estos miembros describe una manera determinada de almacenamiento de los píxeles del mapa de bits:
 
@@ -161,7 +161,7 @@ El `SKColorType` enumeración tiene 9 miembros. Cada uno de estos miembros descr
 - `Argb4444` &mdash; cada píxel tiene 4 alfa, rojo, verde y azul de 16 bits
 - `Rgba8888` &mdash; cada píxel es de 32 bits, 8 para rojo, verde, azul y alfa
 - `Bgra8888` &mdash; cada píxel es de 32 bits, 8 para alfa, rojo, verde y azul
-- `Index8` &mdash; cada píxel es de 8 bits y representa un índice en una [`SKColorTable`](https://developer.xamarin.com/api/type/SkiaSharp.SKColorTable/)
+- `Index8` &mdash; cada píxel es de 8 bits y representa un índice en una [`SKColorTable`](xref:SkiaSharp.SKColorTable)
 - `Gray8` &mdash; cada píxel es de 8 bits que representa una sombra gris, del negro a blanco
 - `RgbaF16` &mdash; cada píxel es 64 bits, con rojo, verde, azul y alfa en un formato de punto flotante de 16 bits
 
@@ -596,5 +596,5 @@ Es otra tarea común que se puede controlar utilizando técnicas similares al re
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [API de SkiaSharp](https://developer.xamarin.com/api/root/SkiaSharp/)
+- [API de SkiaSharp](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)

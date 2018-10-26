@@ -4,22 +4,22 @@ description: Xamarin.Android tiene varias configuraciones de nivel de API de And
 ms.prod: xamarin
 ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 07/02/2018
-ms.openlocfilehash: 3b060567b47395bc213627c9378de4fca9db41bb
-ms.sourcegitcommit: 081a2d094774c6f75437d28b71d22607e33aae71
+author: conceptdev
+ms.author: crdun
+ms.date: 08/21/2018
+ms.openlocfilehash: aa522e5226d78c1b43bb52b97991b989491d251f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37403343"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120065"
 ---
 # <a name="understanding-android-api-levels"></a>Descripción de los niveles de API de Android
 
 _Xamarin.Android tiene varias configuraciones de nivel de API de Android que determinan la compatibilidad de la aplicación con varias versiones de Android. Esta guía explica lo que significan estos valores, cómo configurarlos y qué efecto tienen en su aplicación en tiempo de ejecución._
 
 
-## <a name="quick-start"></a>Guía de inicio rápido
+## <a name="quick-start"></a>Inicio rápido
 
 Xamarin.Android expone tres configuraciones de proyecto de nivel de API de Android:
 
@@ -35,7 +35,7 @@ Antes de configurar un nivel de API para el proyecto, debe instalar los componen
 > A partir de agosto de 2018, la consola de Google Play requerirá que nuevas aplicaciones de destino de nivel de API 26 (Android 8.0) o superior.
 Las aplicaciones existentes deberán tener como destino el nivel de API 26 o superior a partir de noviembre de 2018. Para obtener más información, consulte [mejorar la seguridad de la aplicación y el rendimiento en Google Play durante años venideros](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Normalmente, los tres niveles de API de Xamarin.Android se establecen en el mismo valor. En el **aplicación** , establezca **compilar con la versión de Android (.NET Framework de destino)** a la última versión estable de API (o, como mínimo, para la versión de Android que tiene todas las características que necesita).
 En la siguiente captura de pantalla, la plataforma de destino se establece en **Android 7.1 (API nivel 25 - Nougat)**:
@@ -50,7 +50,7 @@ Si desea mantener la compatibilidad con una versión anterior de Android, establ
 
 [![Compilar con el nivel de API 25 Nougat, versión Android mínima establecida en el nivel de API 14](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Normalmente, los tres niveles de API de Xamarin.Android se establecen en el mismo valor. Establecer **.NET framework de destino** a la última versión estable de API (o, como mínimo, para la versión de Android que tiene todas las características que necesita). Para establecer el **.NET framework de destino**, vaya a **compilar > General** en el **opciones de proyecto**. En la siguiente captura de pantalla, la plataforma de destino se establece en **usar la última plataforma instalada (8.0)**:
 
@@ -81,70 +81,17 @@ A medida que evoluciona la plataforma Android y se publican nuevas versiones de 
 
 Cada versión de Android pasa por varios nombres:
 
--   La versión de Android, como **Android 7.1**
--   Un nombre, un código como _Nougat_
--   Nivel de una API correspondiente, como **nivel de API 25**
+-   La versión de Android, como **9.0 Android**
+-   Un código (o postre) el nombre, como _circular_
+-   Nivel de una API correspondiente, como **28 de nivel de API**
 
-Un nombre de código Android puede corresponder a varias versiones y los niveles de API (tal y como se muestra en la lista siguiente), pero cada versión de Android corresponde exactamente a un nivel de API.
+Un nombre de código Android puede corresponder a varias versiones y los niveles de API (tal y como se muestra en la tabla siguiente), pero cada versión de Android corresponde exactamente a un nivel de API.
 
-Además, define Xamarin.Android *códigos de versión de compilación* que se asignan a los niveles de API de Android conocidos actualmente. En la lista siguiente puede ayudarle a traducir entre el nivel de API, versión de Android, con nombre en código y código de versión de compilación de Xamarin.Android.
+Además, define Xamarin.Android *códigos de versión de compilación* que se asignan a los niveles de API de Android conocidos actualmente. En la tabla siguiente puede ayudarle a traducir entre el nivel de API, versión de Android, con nombre en código y código de versión de compilación de Xamarin.Android (códigos de versión de compilación se definen en el `Android.OS` espacio de nombres):
 
--   **API 27 (Android 8.1)** &ndash; _Oreo_, que se lanzó de diciembre de 2017. Generar código de versión `Android.OS.BuildVersionCodes.OMr1`
+[!include[](~/android/includes/api-levels.md)]
 
--   **API 26 (Android 8.0)** &ndash; _Oreo_, que se lanzó agosto de 2017. Generar código de versión `Android.OS.BuildVersionCodes.O`
-
--   **API 25 (Android 7.1)** &ndash; _Nougat_, que se lanzó diciembre de 2016. Generar código de versión `Android.OS.BuildVersionCodes.NMr1`
-
--   **API 24 (Android 7.0)** &ndash; _Nougat_, que se lanzó agosto de 2016. Generar código de versión `Android.OS.BuildVersionCodes.N`
-
--   **API 23 (Android 6.0)** &ndash; _Marshmallow_, que se lanzó agosto de 2015. Generar código de versión `Android.OS.BuildVersionCodes.M`
-
--   **API 22 (Android 5.1)** &ndash; _Lollipop_, que se lanzó marzo de 2015. Generar código de versión `Android.OS.BuildVersionCodes.LollipopMr1`
-
--   **API 21 (Android 5.0)** &ndash; _Lollipop_, que se lanzó noviembre de 2014. Generar código de versión `Android.OS.BuildVersionCodes.Lollipop`
-
--   **API 20 (Android 4.4W)** &ndash; _Kitkat inspección_, que se lanzó junio de 2014. Generar código de versión `Android.OS.BuildVersionCodes.KitKatWatch`
-
--   **API 19 (Android 4.4)** &ndash; _Kitkat_, que se lanzó octubre de 2013. Generar código de versión `Android.OS.BuildVersionCodes.KitKat`
-
--   **API 18 (Android 4.3)** &ndash; _Jelly Bean_, que se lanzó julio de 2013. Generar código de versión `Android.OS.BuildVersionCodes.JellyBeanMr2`
-
--   **API 17 (Android 4.2-4.2.2)** &ndash; _Jelly Bean_, que se lanzó noviembre de 2012. Generar código de versión `Android.OS.BuildVersionCodes.JellyBeanMr1`
-
--   **API 16 (Android 4.1-4.1.1)** &ndash; _Jelly Bean_, que se lanzó junio de 2012. Generar código de versión `Android.OS.BuildVersionCodes.JellyBean`
-
--   **API 15 (Android 4.0.3-4.0.4)** &ndash; _Ice Cream Sandwich_, que se lanzó de diciembre de 2011. Generar código de versión `Android.OS.BuildVersionCodes.IceCreamSandwichMr1`
-
--   **API 14 (Android 4.0-4.0.2)** &ndash; _Ice Cream Sandwich_, fecha de publicación de octubre de 2011. Generar código de versión `Android.OS.BuildVersionCodes.IceCreamSandwich`
-
--   **13 de API (Android 3.2)** &ndash; _Honeycomb_, que se lanzó de junio de 2011. Generar código de versión `Android.OS.BuildVersionCodes.HoneyCombMr2`
-
--   **12 de API (Android 3.1)** &ndash; _Honeycomb_, que se lanzó mayo de 2011. Generar código de versión `Android.OS.BuildVersionCodes.HoneyCombMr1`
-
--   **API 11 (Android 3.0. x)** &ndash; _Honeycomb_, que se lanzó febrero de 2011. Generar código de versión `Android.OS.BuildVersionCodes.HoneyComb`
-
--   **API de 10 (Android 2.3.3-2.3.4)** &ndash; _Gingerbread_, que se lanzó febrero de 2011. Generar código de versión `Android.OS.BuildVersionCodes.GingerBreadMr1`
-
--   **API de 9 (Android 2.3-2.3.2)** &ndash; _Gingerbread_, que se lanzó de noviembre de 2010. Generar código de versión `Android.OS.BuildVersionCodes.GingerBread`
-
--   **8 de API (Android 2.2. x)** &ndash; _Froyo_, que se lanzó junio de 2010. Generar código de versión `Android.OS.BuildVersionCodes.Froyo`
-
--   **API de 7 (Android 2.1. x)** &ndash; _Eclair_, que se lanzó enero de 2010. Generar código de versión `Android.OS.BuildVersionCodes.EclairMr1`
-
--   **6 de API (Android 2.0.1)** &ndash; _Eclair_, que se lanzó de diciembre de 2009. Generar código de versión `Android.OS.BuildVersionCodes.Eclair01`
-
--   **5 de la API (Android 2.0)** &ndash; _Eclair_, que se lanzó noviembre de 2009. Generar código de versión `Android.OS.BuildVersionCodes.Eclair`
-
--   **4 de API (Android 1.6)** &ndash; _anillos_, que se lanzó de septiembre de 2009. Generar código de versión `Android.OS.BuildVersionCodes.Donut`
-
--   **API de 3 (Android 1.5)** &ndash; _para magdalenas glaseadas_, que se lanzó mayo de 2009. Generar código de versión `Android.OS.BuildVersionCodes.Cupcake`
-
--   **API 2 (Android 1.1)** &ndash; _Base_, que se lanzó de febrero de 2009. Generar código de versión `Android.OS.BuildVersionCodes.Base11`
-
--   **API 1 (Android 1.0)** &ndash; _Base_, fecha de publicación de octubre de 2008. Generar código de versión `Android.OS.BuildVersionCodes.Base`
-
-
-Como se indica esta lista, se publican con frecuencia nuevas versiones de Android &ndash; a veces varias versiones al año. Como resultado, se incluye el universo de dispositivos Android que podría ejecutar la aplicación de una amplia variedad de versiones de Android anteriores y recientes. ¿Cómo puede garantizar que la aplicación se ejecutará de forma coherente y confiable en muchas versiones diferentes de Android? Los niveles de API de Android pueden ayudarle a administrar este problema.
+Como se indica en esta tabla, se publican con frecuencia nuevas versiones de Android &ndash; a veces más de una versión al año. Como resultado, se incluye el universo de dispositivos Android que podría ejecutar la aplicación de una amplia variedad de versiones de Android anteriores y recientes. ¿Cómo puede garantizar que la aplicación se ejecutará de forma coherente y confiable en muchas versiones diferentes de Android? Los niveles de API de Android pueden ayudarle a administrar este problema.
 
 
 ### <a name="android-api-levels"></a>Niveles de API de Android
@@ -160,7 +107,7 @@ Cuando se compila una aplicación, contiene la siguiente información de nivel d
 Estos valores se usan para garantizar que la funcionalidad necesaria para ejecutar correctamente la aplicación está disponible en el dispositivo Android en tiempo de instalación. Si no es así, la aplicación se bloqueó su ejecución en ese dispositivo. Por ejemplo, si el nivel de API de un dispositivo Android es inferior al nivel mínimo de API que especifique para la aplicación, el dispositivo Android impedirá al usuario instalar la aplicación.
 
 
-## <a name="project-api-level-settings"></a>Configuración de nivel de API del proyecto
+## <a name="project-api-level-settings"></a>Configuración del nivel de proyecto de API
 
 Las siguientes secciones explican cómo usar SDK Manager para preparar el entorno de desarrollo para los niveles de API que desee establecer como destino, seguido de una explicación detallada de cómo configurar *.NET Framework de destino*, *mínimo Versión de Android*, y *versión Android de destino* configuración en Xamarin.Android.
 
@@ -175,12 +122,12 @@ Para poder seleccionar un nivel de API mínima o de destino en Xamarin.Android, 
 
 El *.NET Framework de destino* (también conocido como `compileSdkVersion`) es la versión de la plataforma Android específica (nivel de API) que se compila la aplicación de en tiempo de compilación. Esta configuración especifica las API que la aplicación *espera* que se usará cuando se ejecuta, pero no tiene ningún efecto en el que las API están realmente disponibles para la aplicación cuando se instala. Como resultado, cambiar la configuración de .NET Framework de destino no cambia el comportamiento de tiempo de ejecución.
 
-La plataforma de destino identifica qué versiones de la biblioteca está vinculado a la aplicación contra &ndash; Esto determina qué API que puede usar en la aplicación. Por ejemplo, si desea usar el [NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/) método que se introdujo en Android Lollipop 5.0, debe establecer la plataforma de destino en **API nivel 21 (Lollipop)** o una versión posterior. Si establece de .NET Framework su proyecto de destino a una API nivel como **API nivel 19 (KitKat)** y tratar de llamar a la `SetCategory` método en el código, obtendrá un error de compilación.
+La plataforma de destino identifica qué versiones de la biblioteca está vinculado a la aplicación contra &ndash; esta configuración determina qué API que puede usar en la aplicación. Por ejemplo, si desea usar el [NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/) método que se introdujo en Android Lollipop 5.0, debe establecer la plataforma de destino en **API nivel 21 (Lollipop)** o una versión posterior. Si establece de .NET Framework su proyecto de destino a una API nivel como **API nivel 19 (KitKat)** y tratar de llamar a la `SetCategory` método en el código, obtendrá un error de compilación.
 
 Se recomienda que siempre compilar con la *más reciente* versión de .NET Framework de destino disponible. Si lo hace, proporciona mensajes de advertencia útiles para cualquier API en desuso que podría llamarse mediante su código. Con la última versión de .NET Framework de destino es especialmente importante cuando se usa en las últimas versiones de la biblioteca de soporte técnico &ndash; cada biblioteca espera que su aplicación esté compilado en el nivel de API mínimo de la biblioteca de soporte técnico o superior. 
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para obtener acceso a la configuración de .NET Framework de destino en Visual Studio, abra las propiedades del proyecto en **el Explorador de soluciones** y seleccione el **aplicación** página:
 
@@ -188,7 +135,7 @@ Para obtener acceso a la configuración de .NET Framework de destino en Visual S
 
 Establezca la plataforma de destino seleccionando un nivel de API en el menú desplegable bajo **compilar con la versión Android** como se indicó anteriormente.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Para obtener acceso a la configuración de .NET Framework de destino en Visual Studio para Mac, haga clic en el nombre del proyecto y seleccione **opciones**; este se abre el **opciones de proyecto** cuadro de diálogo. En este cuadro de diálogo, vaya a **compilar > General** como se muestra aquí:
 
@@ -209,7 +156,7 @@ Aunque la aplicación puede generar e instalar en esta amplia variedad de plataf
 [En tiempo de ejecución busca versiones de Android](#runtimechecks), más adelante en esta guía se explica cómo agregar estas comprobaciones en tiempo de ejecución en el código.
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para obtener acceso a la configuración de la versión Android mínima en Visual Studio, abra las propiedades del proyecto en **el Explorador de soluciones** y seleccione el **manifiesto de Android** página. En el menú desplegable bajo **versión Android mínima** puede seleccionar la versión Android mínima para la aplicación:
 
@@ -217,7 +164,7 @@ Para obtener acceso a la configuración de la versión Android mínima en Visual
 
 Si selecciona **uso compilar con la versión SDK**, la versión Android mínima será el mismo que la configuración de .NET Framework de destino.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Para obtener acceso a la versión Android mínima en Visual Studio para Mac, haga clic en el nombre del proyecto y seleccione **opciones**; este se abre el **opciones de proyecto** cuadro de diálogo. Vaya a **compilar > aplicación de Android**.
 Mediante el menú desplegable a la derecha del **versión Android mínima**, puede establecer la versión Android mínima de la aplicación:
@@ -237,7 +184,7 @@ El *versión Android de destino* (también conocido como `targetSdkVersion`) es 
 
 La plataforma de destino y la versión Android de destino, al tiempo que tiene nombres muy similares, no son lo mismo. La configuración de .NET Framework de destino comunica la información de nivel de API de destino para Xamarin.Android para su uso en *tiempo de compilación*, mientras que la versión Android de destino comunica la información de nivel de API de destino a Android para su uso en  *tiempo de ejecución* (cuando la aplicación está instalado y ejecutándose en un dispositivo).
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para obtener acceso a esta configuración en Visual Studio, abra las propiedades del proyecto en **el Explorador de soluciones** y seleccione el **manifiesto de Android** página. En el menú desplegable bajo **versión Android de destino** puede seleccionar la versión Android de destino para la aplicación:
 
@@ -245,7 +192,7 @@ Para obtener acceso a esta configuración en Visual Studio, abra las propiedades
 
 Se recomienda que establezca explícitamente la versión Android de destino a la versión más reciente de Android que se usa para probar la aplicación. Idealmente, debe establecerse para la versión más reciente del SDK de Android &ndash; Esto le permite usar nuevas API antes de trabajar a través de los cambios de comportamiento. Para la mayoría de los desarrolladores, nos *no* recomienda establecer la versión Android de destino en **uso compilar con la versión SDK**.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Para obtener acceso a esta configuración en Visual Studio para Mac, haga clic en el nombre del proyecto y seleccione **opciones**; este se abre el **opciones de proyecto** cuadro de diálogo. Vaya a **compilar > aplicación de Android**. Mediante el menú desplegable a la derecha del **versión Android de destino**, puede establecer la versión Android de destino para la aplicación:
 
@@ -264,7 +211,7 @@ Para obtener más información acerca de los niveles SDK, consulte el desarrolla
 
 <a name="runtimechecks" />
 
-## <a name="runtime-checks-for-android-versions"></a>Comprobaciones en tiempo de ejecución para las versiones de Android
+## <a name="runtime-checks-for-android-versions"></a>En tiempo de ejecución busca versiones de Android
 
 Como cada versión nueva de Android, el marco de API se actualiza para proporcionar nuevas o la funcionalidad de reemplazo. Con pocas excepciones, funcionalidad de API de versiones anteriores de Android se mantiene en las versiones más recientes de Android sin modificaciones. Como resultado, si la aplicación se ejecuta en un nivel determinado de la API de Android, normalmente podrá ejecutar en un nivel de API de Android más adelante sin modificaciones. Pero ¿qué ocurre si también desea ejecutar la aplicación en versiones anteriores de Android?
 
@@ -294,22 +241,22 @@ else
 }
 ```
 
-No hay ninguna regla rápida y sencilla que se explica cómo reducir o modificar la funcionalidad de la aplicación cuando se ejecuta en versiones anteriores de Android que carecen de una o varias API. En algunos casos (como en el `SetCategory` ejemplo anterior), basta con simplemente omita la llamada de API cuando no esté disponible. Sin embargo, en otros casos, es posible que deba implementar funcionalidad alternativa para cuando `Android.OS.Build.VERSION.SdkInt` se detecta sea inferior a la API de nivel que la aplicación necesita para presentar su experiencia óptima.
+No hay ninguna regla rápida y sencilla que se explica cómo reducir o modificar la funcionalidad de la aplicación cuando se ejecuta en versiones anteriores de Android que carecen de una o varias API. En algunos casos (como en el `SetCategory` ejemplo anterior), basta con omitir la llamada de API cuando no está disponible. Sin embargo, en otros casos, es posible que deba implementar funcionalidad alternativa para cuando `Android.OS.Build.VERSION.SdkInt` se detecta sea inferior a la API de nivel que la aplicación necesita para presentar su experiencia óptima.
 
 <a name="libraries" />
 
-## <a name="api-levels-and-libraries"></a>Los niveles de API y bibliotecas
+## <a name="api-levels-and-libraries"></a>Las bibliotecas y los niveles de API
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Cuando se crea un proyecto de biblioteca de Xamarin.Android (por ejemplo, una biblioteca de clases o una biblioteca de enlaces), puede configurar solo la configuración de .NET Framework de destino &ndash; la versión Android mínima y la configuración de la versión Android de destino no está disponible. Eso es porque no hay ningún **manifiesto de Android** página:
 
 [![Solo está disponible la compilación mediante la opción de versión de Android](android-api-levels-images/vs-library-options-sml.png)](android-api-levels-images/vs-library-options.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Al crear un proyecto de biblioteca de Xamarin.Android, no hay ningún **Aplicaciónandroid** página donde puede configurar la versión Android mínima y la versión Android de destino &ndash; la versión Android mínima y destino Configuración de la versión de Android no está disponible.
-Eso es porque no hay ningún **compilar > aplicación de Android** página):
+Eso es porque no hay ningún **compilar > aplicación de Android** página:
 
 [![Página General sin opciones de versión mínimo y de destino de compilación](android-api-levels-images/xs-library-options-sml.png)](android-api-levels-images/xs-library-options.png#lightbox)
 

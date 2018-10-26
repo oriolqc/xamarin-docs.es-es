@@ -5,22 +5,22 @@ ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a894efebe4089adefeb02007bd394c13fc77974c
-ms.sourcegitcommit: 213b0315f1d6d0791e255794f87512fb253c492f
+ms.openlocfilehash: d04ce6827f6695163c7d9a8d34acc3891d854c8d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "34790105"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122678"
 ---
 # <a name="stack-views-in-xamarinios"></a>Vistas de la pila de Xamarin.iOS
 
 _En este artículo se describe el uso el nuevo control UIStackView en una aplicación de Xamarin.iOS para administrar un conjunto de subvistas en cualquiera una pila organizada horizontalmente o verticalmente._
 
 > [!IMPORTANT]
-> Tenga en cuenta que mientras StackView es compatible con el Diseñador de iOS, puede producirse errores de facilidad de uso al usar el canal estable. Cambiar el los canales alfa o Beta deben mitigar este problema. Hemos decidido presentar este tutorial con Xcode hasta que se implementan las correcciones necesarias en el canal estable.
+> Tenga en cuenta que mientras StackView es compatible con el Diseñador de iOS, puede producirse errores de facilidad de uso al usar el canal estable. Cambiar los canales alfa o Beta debe mitigar este problema. Hemos decidido presentar este tutorial con Xcode hasta que se implementan las correcciones necesarias en el canal estable.
 
 El control de vista de pila (`UIStackView`) aprovecha la eficacia del diseño automático y las clases de tamaño para administrar una pila de subvistas, ya sea horizontal o verticalmente, que responde dinámicamente para el tamaño de pantalla y la orientación del dispositivo iOS.
 

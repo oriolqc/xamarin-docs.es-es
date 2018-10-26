@@ -1,25 +1,25 @@
 ---
-title: Canalización de CocosSharp contenido
-description: Este documento vínculos a guías que describen el contenido de las canalizaciones en general y la canalización de contenido CocosSharp en particular.
+title: Canalización de contenido de CocosSharp
+description: Este documento vínculos a guías que describen las canalizaciones de contenido en general y la canalización de contenido de CocosSharp en particular.
 ms.prod: xamarin
 ms.assetid: 2BC895E5-BDFD-443D-A96D-86BA7042CB70
-author: charlespetzold
-ms.author: chape
-ms.openlocfilehash: 908baef3a73fe1596ec5fe809f2ce45635dd9a7b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: conceptdev
+ms.author: crdun
+ms.openlocfilehash: dc30279e2fd02198bbffb4c8f97d34a9bcd65b75
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782958"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113572"
 ---
-# <a name="cocossharp-content-pipeline"></a>Canalización de CocosSharp contenido
+# <a name="cocossharp-content-pipeline"></a>Canalización de contenido de CocosSharp
 
-Contenido de las canalizaciones se suelen usar en el desarrollo de juego para optimizar el contenido y darle formato, que se puede cargar en determinado hardware o con determinados marcos de desarrollo de juegos.
+Las canalizaciones de contenido a menudo se usan en el desarrollo de juegos para optimizar el contenido y darle formato, que se puede cargar en determinado hardware o con determinados marcos de desarrollo de juegos.
 
 ##  <a name="introduction-to-content-pipelinesgraphics-gamescocossharpcontent-pipelineintroductionmd"></a>[Introducción a las canalizaciones de contenido](~/graphics-games/cocossharp/content-pipeline/introduction.md)
 
-Este artículo proporciona una explicación de los conceptos de las canalizaciones de contenido, se centra principalmente en la canalización de contenido de MonoGame, que es una implementación de canalización contenido que se usa con CocosSharp y MonoGame.
+En este artículo se proporciona una explicación de los conceptos de las canalizaciones de contenido, centrándose principalmente en la canalización de contenido MonoGame, que es una implementación de canalización de contenido que se usa con CocosSharp y MonoGame.
 
 ##  <a name="walkthrough--using-the-content-pipeline-with-cocossharpgraphics-gamescocossharpcontent-pipelinewalkthroughmd"></a>[Tutorial: uso de la canalización de contenido con CocosSharp](~/graphics-games/cocossharp/content-pipeline/walkthrough.md)
 
-Este tutorial le useuses un proyecto CocosSharp para demostrar cómo se pueden cargar y usar en una aplicación .xnb archivos.  Los usuarios de MonoGame también podrán hacer referencia a este tutorial como CocosSharp y MonoGame utilizan los mismos archivos de contenido de .xnb.  
+En este tutorial le useuses un proyecto CocosSharp para demostrar cómo se pueden cargar y usar en una aplicación .xnb archivos.  Los usuarios de MonoGame también podrá hacer referencia a este tutorial como CocosSharp y MonoGame usan los mismos archivos de contenido de .xnb.  

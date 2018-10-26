@@ -1,68 +1,68 @@
 ---
-title: Hola, desgaste
-description: Crear su primera aplicación Android desgaste y ejecutarlo en un dispositivo o emulador de uso. Este tutorial proporciona instrucciones paso a paso para crear un proyecto pequeño desgaste Android que administra los clics de botón y muestra un contador de hacer clic en el dispositivo de uso. Se explica cómo depurar la aplicación mediante un emulador desgaste o un dispositivo de uso que está conectado a través de Bluetooth a un teléfono Android. También proporciona un conjunto de sugerencias de depuración para desgaste Android.
+title: Hola, Wear
+description: Cree su primera aplicación Android Wear y ejecútelo en un dispositivo o emulador desgaste. Este tutorial proporciona instrucciones paso a paso para crear un pequeño proyecto de Android Wear que administra los clics de botón y muestra un contador haga clic en el dispositivo de desgaste. Explica cómo depurar la aplicación mediante un emulador de desgaste o un dispositivo Wear que está conectado a través de Bluetooth a un teléfono Android. También se proporciona un conjunto de sugerencias de depuración para Android Wear.
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/10/2018
-ms.openlocfilehash: 17c12c4ec818c21d6697932315874ea4f63e6109
-ms.sourcegitcommit: e16517edcf471b53b4e347cd3fd82e485923d482
+ms.openlocfilehash: a8e27063040ff91f72a1cbf932b1b277a5dee63d
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33798419"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104926"
 ---
-# <a name="hello-wear"></a>Hola, desgaste
+# <a name="hello-wear"></a>Hola, Wear
 
-_Crear su primera aplicación Android desgaste y ejecutarlo en un dispositivo o emulador de uso. Este tutorial proporciona instrucciones paso a paso para crear un proyecto pequeño desgaste Android que administra los clics de botón y muestra un contador de hacer clic en el dispositivo de uso. Se explica cómo depurar la aplicación mediante un emulador desgaste o un dispositivo de uso que está conectado a través de Bluetooth a un teléfono Android. También proporciona un conjunto de sugerencias de depuración para desgaste Android._
+_Cree su primera aplicación Android Wear y ejecútelo en un dispositivo o emulador desgaste. Este tutorial proporciona instrucciones paso a paso para crear un pequeño proyecto de Android Wear que administra los clics de botón y muestra un contador haga clic en el dispositivo de desgaste. Explica cómo depurar la aplicación mediante un emulador de desgaste o un dispositivo Wear que está conectado a través de Bluetooth a un teléfono Android. También se proporciona un conjunto de sugerencias de depuración para Android Wear._
 
-![Captura de pantalla de la aplicación de uso se complete en este tutorial](hello-wear-images/example.png)
+![Captura de pantalla de la aplicación Wear realizarse en este tutorial](hello-wear-images/example.png)
 
-## <a name="your-first-wear-app"></a>La primera aplicación de uso
+## <a name="your-first-wear-app"></a>La primera aplicación Wear
 
-Siga estos pasos para crear su primera aplicación de uso de Xamarin.Android:
+Siga estos pasos para crear su primera aplicación de desgaste de Xamarin.Android:
 
 ### <a name="1-create-a-new-android-project"></a>1. Cree un nuevo proyecto de Android
 
-Crear un nuevo **aplicación Android desgaste**:
+Cree un nuevo **aplicación Android Wear**:
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Crear una nueva aplicación Android desgaste en el cuadro de diálogo nuevo proyecto](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
+[![Crear una nueva aplicación Android Wear en el cuadro de diálogo nuevo proyecto](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Crear una nueva aplicación Android desgaste en el cuadro de diálogo nueva solución](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
+[![Crear una nueva aplicación Android Wear en el cuadro de diálogo nueva solución](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
 
 
-Esta plantilla se incluye automáticamente el **Xamarin Android Wearable biblioteca** NuGet (y dependencias) por lo que tendrá acceso a los widgets de uso específicos. Si no ve la plantilla de desgaste, revise la [instalación y configuración](~/android/wear/get-started/installation.md) guía para comprobar que ha instalado un SDK de Android compatibles. 
+Esta plantilla incluye automáticamente el **biblioteca ponibles Android de Xamarin** NuGet (y las dependencias) para tener acceso a los widgets de desgaste específicos. Si no ve la plantilla de desgaste, revise el [instalación y configuración](~/android/wear/get-started/installation.md) guía para comprobar que ha instalado un SDK de Android compatible. 
 
 ### <a name="2-choose-the-correct-target-framework"></a>2. Elija el valor correcto **.NET Framework de destino**
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Asegúrese de que **mínimo Android al destino** está establecido en **Android 5.0 (círculo)** o una versión posterior: 
+Asegúrese de que **Android mínima de destino** está establecido en **Android 5.0 (Lollipop)** o una versión posterior: 
 
-[![Establecer la plataforma de destino para Android 5.0 en Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
+[![Si se establece la plataforma de destino en Android 5.0 en Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-Asegúrese de que la plataforma de destino se establece en **Android 5.0 (círculo)** o una versión posterior:
+Asegúrese de que la plataforma de destino se establece en **Android 5.0 (Lollipop)** o una versión posterior:
 
-[![Establecer la plataforma de destino para Android 5.0 en Visual Studio para Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
+[![Configuración de la plataforma de destino a Android 5.0 en Visual Studio para Mac](hello-wear-images/xs/target-framework-sml.png)](hello-wear-images/xs/target-framework.png#lightbox)
 
 -----
 
-Para obtener más información acerca de cómo establecer la plataforma de destino, vea [niveles de API de Android descripción](~/android/app-fundamentals/android-api-levels.md).
+Para obtener más información sobre cómo establecer la plataforma de destino, vea [Understanding Android API niveles](~/android/app-fundamentals/android-api-levels.md).
 
 
-### <a name="3-edit-the-mainaxml-layout"></a>3. Editar la **Main.axml** diseño
+### <a name="3-edit-the-mainaxml-layout"></a>3. Editar el **Main.axml** diseño
 
-Configurar el diseño para que contenga un `TextView` y un `Button` del ejemplo: 
+Configurar el diseño para contener un `TextView` y un `Button` del ejemplo: 
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -103,7 +103,7 @@ android:layout_height="match_parent">
 </FrameLayout>
 ```
 
-### <a name="4-edit-the-mainactivitycs-source"></a>4. Editar la **MainActivity.cs** origen
+### <a name="4-edit-the-mainactivitycs-source"></a>4. Editar el **MainActivity.cs** origen
 
 Agregue el código para incrementar un contador y lo muestra cada vez que se hace clic en el botón: 
 
@@ -131,47 +131,47 @@ public class MainActivity : Activity
 
 ### <a name="5-setup-an-emulator-or-device"></a>5. Programa de instalación de un dispositivo o emulador
 
-El siguiente paso es configurar un emulador o dispositivo para implementar y ejecutar la aplicación. Si no está familiarizado con el proceso de implementar y ejecutar aplicaciones de Xamarin.Android en general, vea el [Hello, Android Quickstart](~/android/get-started/hello-android/hello-android-quickstart.md).
+El siguiente paso es configurar un emulador o dispositivo para implementar y ejecutar la aplicación. Si todavía no está familiarizado con el proceso de implementar y ejecutar aplicaciones de Xamarin.Android en general, vea el [Hello, Android Quickstart](~/android/get-started/hello-android/hello-android-quickstart.md).
 
-Si no tiene un dispositivo Android desgaste como un Smartwatch desgaste Android, puede ejecutar la aplicación en un emulador. Para obtener información sobre la depuración de aplicaciones de uso en un emulador, consulte [depurar Android desgaste en un emulador](~/android/wear/deploy-test/debug-on-emulator.md).
+Si no tiene un dispositivo Android Wear, como un Smartwatch Android Wear, puede ejecutar la aplicación en un emulador. Para obtener información sobre la depuración de aplicaciones de desgaste en un emulador, consulte [depurar Android Wear en un emulador](~/android/wear/deploy-test/debug-on-emulator.md).
 
-Si tiene un dispositivo Android desgaste como un Smartwatch desgaste Android, puede ejecutar la aplicación en el dispositivo en lugar de utilizar un emulador. Para obtener más información sobre la depuración en un dispositivo de uso, consulte [depurar en un dispositivo desgaste](~/android/wear/deploy-test/debug-on-device.md).
+Si tiene un dispositivo Android Wear, como un Smartwatch Android Wear, puede ejecutar la aplicación en el dispositivo en lugar de usar un emulador. Para obtener más información sobre la depuración en un dispositivo Wear, consulte [depurar en un dispositivo Wear](~/android/wear/deploy-test/debug-on-device.md).
 
 
-### <a name="6-run-the-android-wear-app"></a>6. Ejecutar la aplicación de uso de Android
+### <a name="6-run-the-android-wear-app"></a>6. Ejecute la aplicación Android Wear
 
-El dispositivo Android desgaste debe aparecer en el menú desplegable de dispositivo. Asegúrese de elegir el dispositivo Android desgaste correcto o AVD antes de iniciar la depuración. Después de seleccionar el dispositivo, haga clic en el botón Reproducir para implementar la aplicación en el emulador o dispositivo.
+El dispositivo Android Wear debe aparecer en el menú desplegable de dispositivo. Asegúrese de elegir el dispositivo Android Wear correcto o AVD antes de iniciar la depuración. Después de seleccionar el dispositivo, haga clic en el botón Reproducir para implementar la aplicación en el emulador o dispositivo.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Elegir un AVD desgaste en el menú del dispositivo de Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
+[![Elegir un AVD Wear en el menú del dispositivo de Visual Studio](hello-wear-images/vs/choose-wear-sim.png)](hello-wear-images/vs/choose-wear-sim.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Elegir un AVD desgaste en Visual Studio para el menú del dispositivo de Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
+[![Elegir un AVD Wear en Visual Studio para el menú de dispositivos de Mac](hello-wear-images/xs/choose-wear-sim.png)](hello-wear-images/xs/choose-wear-sim.png#lightbox)
 
 -----
 
-Es posible que vea una **tan sólo un minuto...**  mensaje (o alguna otra pantalla intersticial) al principio: 
+Es posible que vea un **tan sólo un minuto...**  mensaje (o alguna otra pantalla intersticial) al principio: 
 
-![Ver el emulador muestra tan sólo un minuto...](hello-wear-images/please-wait.png)
+![Ver el emulador muestra sólo un minuto...](hello-wear-images/please-wait.png)
 
-Si está utilizando un emulador de inspección, puede tardar varios minutos en iniciarse la aplicación. Cuando usas Bluetooth, tarda más tiempo para implementar la aplicación a como lo haría a través de USB. (Por ejemplo, tarda aproximadamente 5 minutos para implementar esta aplicación en un Watch G LG que está conectado de Bluetooth en un teléfono Nexus 5.)
+Si usa un emulador de inspección, puede tardar un tiempo en iniciarse la aplicación. Cuando usas Bluetooth, tarda más tiempo para implementar la aplicación a como lo haría a través de USB. (Por ejemplo, tarda aproximadamente 5 minutos para implementar esta aplicación en un Watch G LG que está conectado de Bluetooth a un teléfono Nexus 5.)
 
-Después de que la aplicación se implementa correctamente, la pantalla del dispositivo desgaste debe mostrar una pantalla similar al siguiente:
+Después de la aplicación se implementa correctamente, la pantalla del dispositivo Wear debe mostrar una pantalla similar a lo siguiente:
 
-[![Pantalla inicial de la aplicación de uso](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
+[![Pantalla inicial de la aplicación Wear](hello-wear-images/mainactivity-screen.png)](hello-wear-images/mainactivity-screen.png#lightbox)
 
-Pulse la **¡CLICK ME!** botón en el dispositivo de desgaste y vea el incremento del recuento con cada derivación:
+Pulse el **¡CLICK ME!** botón en el dispositivo Wear y vea con cada vez que toque el incremento del recuento:
 
-[![Captura de pantalla de desgaste aplicación después de 3 clics](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
+[![Captura de pantalla de desgaste de la aplicación después de 3 clics](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Extraer del repositorio el [desgaste ejemplos](https://developer.xamarin.com/samples/android/Android%20Wear/) incluidas desgaste Android las aplicaciones con aplicaciones de Phone complementario.
+Consulte la [Wear ejemplos](https://developer.xamarin.com/samples/android/Android%20Wear/) , incluidas las aplicaciones de Android Wear con aplicaciones de teléfono complementarias.
 
-Cuando esté preparado para distribuir la aplicación, consulte [trabajar con el empaquetado](~/android/wear/deploy-test/packaging.md).
+Cuando esté listo para distribuir la aplicación, consulte [trabajar con el empaquetado](~/android/wear/deploy-test/packaging.md).
 
 
 ## <a name="related-links"></a>Vínculos relacionados
