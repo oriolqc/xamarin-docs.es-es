@@ -1,0 +1,37 @@
+items:
+- name: Libro electrónico sobre patrones de aplicación empresarial
+  href: index.md
+  items:
+  - name: Prefacio
+    href: preface.md
+  - name: Introducción
+    href: introduction.md
+  - name: MVVM
+    displayName: Model, View, ViewModel
+    href: mvvm.md
+  - name: Inserción de dependencias
+    displayName: DI
+    href: dependency-injection.md
+  - name: Comunicación entre componentes débilmente acoplados
+    href: communicating-between-loosely-coupled-components.md
+  - name: Navegación
+    href: navigation.md
+  - name: Validación
+    href: validation.md
+  - name: Administración de configuración
+    href: configuration-management.md
+  - name: Microservicios en contenedores
+    href: containerized-microservices.md
+  - name: Autenticación y autorización
+    href: authentication-and-authorization.md
+  - name: Acceso a datos remotos
+    href: accessing-remote-data.md
+  - name: Pruebas unitarias
+    href: unit-testing.md
+  expanded: true
+ms.openlocfilehash: bbe9a87553babb954e37138458d1f07b95c1f443
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110449"

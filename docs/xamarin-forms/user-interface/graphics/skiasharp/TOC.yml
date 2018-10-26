@@ -1,0 +1,134 @@
+items:
+- name: Gráficos de SkiaSharp en Xamarin.Forms
+  href: index.md
+  items:
+  - name: Conceptos básicos de dibujo
+    href: basics/index.md
+    items:
+    - name: Dibujo de un círculo simple
+      href: basics/circle.md
+    - name: Integración con Xamarin.Forms
+      href: basics/integration.md
+    - name: Píxeles y unidades independientes del dispositivo
+      href: basics/pixels.md
+    - name: Animación básica
+      href: basics/animation.md
+    - name: Integración de texto y gráficos
+      href: basics/text.md
+    - name: Conceptos básicos de mapa de bits
+      href: basics/bitmaps.md
+    - name: Transparencia
+      href: basics/transparency.md
+    expanded: true
+  - name: Líneas y las rutas
+    href: paths/index.md
+    items:
+    - name: Líneas y extremos de trazo
+      href: paths/lines.md
+    - name: Conceptos básicos del trazado
+      href: paths/paths.md
+    - name: Tipos de relleno del trazado
+      href: paths/fill-types.md
+    - name: Polilíneas y ecuaciones paramétricas
+      href: paths/polylines.md
+    - name: Puntos y guiones
+      href: paths/dots.md
+    - name: Pintura con los dedos
+      href: paths/finger-paint.md
+  - name: Transformaciones
+    href: transforms/index.md
+    items:
+    - name: Transformación de traslación
+      href: transforms/translate.md
+    - name: Transformación de escala
+      href: transforms/scale.md
+    - name: Transformación de rotación
+      href: transforms/rotate.md
+    - name: Transformación de sesgo
+      href: transforms/skew.md
+    - name: Transformaciones de matriz
+      href: transforms/matrix.md
+    - name: Manipulaciones táctiles
+      href: transforms/touch.md
+    - name: Transformaciones no afines
+      href: transforms/non-affine.md
+    - name: Giro 3D
+      displayName: Three-D Rotation
+      href: transforms/3d-rotation.md
+  - name: Trazados y curvas
+    href: curves/index.md
+    items:
+    - name: Tres maneras de dibujar un arco
+      href: curves/arcs.md
+    - name: Tres tipos de curvas de Bézier
+      href: curves/beziers.md
+    - name: Datos de trazado de SVG
+      href: curves/path-data.md
+    - name: Recorte con trazados y regiones
+      href: curves/clipping.md
+    - name: Efectos del trazado
+      href: curves/effects.md
+    - name: Trazados y texto
+      href: curves/text-paths.md
+    - name: Enumeración e información de trazado
+      href: curves/information.md
+  - name: Mapas de bits
+    href: bitmaps/index.md
+    items:
+    - name: Mostrar mapas de bits
+      href: bitmaps/displaying.md
+    - name: Creación y dibujo en mapas de bits
+      href: bitmaps/drawing.md
+    - name: Recortar mapas de bits
+      href: bitmaps/cropping.md
+    - name: Visualización segmentada de mapas de bits
+      href: bitmaps/segmented.md
+    - name: Guardado de mapas de bits en archivos
+      href: bitmaps/saving.md
+    - name: Acceso a píxeles de mapas de bits
+      href: bitmaps/pixel-bits.md
+    - name: Animación de mapas de bits
+      href: bitmaps/animating.md
+  - name: Efectos
+    href: effects/index.md
+    items:
+    - name: Sombreadores
+      href: effects/shaders/index.md
+      items:
+      - name: Degradado lineal
+        href: effects/shaders/linear-gradient.md
+      - name: Degradados circulares
+        href: effects/shaders/circular-gradients.md
+      - name: Mosaico de mapas de bits
+        href: effects/shaders/bitmap-tiling.md
+      - name: Ruido
+        href: effects/shaders/noise.md
+    - name: Modos de fusión
+      href: effects/blend-modes/index.md
+      items:
+      - name: Modos de fusión Porter-Duff
+        href: effects/blend-modes/porter-duff.md
+      - name: Modos de fusión separables
+        href: effects/blend-modes/separable.md
+      - name: Modos de fusión no separables
+        href: effects/blend-modes/non-separable.md
+    - name: Filtros de máscara
+      href: effects/mask-filters.md
+    - name: Filtros de imagen
+      href: effects/image-filters.md
+    - name: Filtros de color
+      href: effects/color-filters.md
+  - name: Ejemplos independientes de la plataforma
+    href: ~/graphics-games/skiasharp/introduction.md
+    items:
+    - name: Notas específicas de la plataforma
+      href: ~/graphics-games/skiasharp/platform.md
+  - name: referencia de API
+    href: /dotnet/api/skiasharp/
+  expanded: true
+ms.openlocfilehash: 59cc8bbb28a912ae32ef189c83c5d2e4f3209f31
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50130253"

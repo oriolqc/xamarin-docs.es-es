@@ -1,0 +1,234 @@
+items:
+- name: Xamarin.Mac
+  href: index.yml
+  items:
+  - name: Primeros pasos
+    href: get-started/index.md
+    items:
+    - name: Instalación
+      href: /visualstudio/mac/installation/
+    - name: Hello, Mac
+      href: get-started/hello-mac.md
+    - name: Documentación relacionada
+      href: get-started/related.md
+    expanded: true
+  - name: Principios de la aplicación
+    href: app-fundamentals/index.md
+    items:
+    - name: Accesibilidad
+      href: app-fundamentals/accessibility.md
+    - name: Patrones y expresiones comunes
+      href: app-fundamentals/patterns.md
+    - name: Aplicaciones de consola
+      href: app-fundamentals/console.md
+    - name: API de macOS
+      href: app-fundamentals/mac-apis.md
+    - name: Archivos .xib
+      href: app-fundamentals/xib.md
+    - name: Diseño de la interfaz de usuario de .storyboard/.xib-less
+      href: app-fundamentals/xibless-ui.md
+    - name: Imágenes
+      href: app-fundamentals/image.md
+    - name: Enlace de datos y codificación de clave-valor
+      href: app-fundamentals/databinding.md
+    - name: Bases de datos
+      href: app-fundamentals/databases.md
+    - name: Copiar y pegar
+      href: app-fundamentals/copy-paste.md
+    - name: Creación de un espacio aislado en una aplicación Xamarin.Mac
+      href: app-fundamentals/sandboxing.md
+    - name: Reproducción de sonidos con AVAudioPlayer
+      href: app-fundamentals/sounds.md
+  - name: Interfaz de usuario
+    href: user-interface/index.md
+    items:
+    - name: Windows
+      href: user-interface/window.md
+    - name: Cuadros de diálogo
+      href: user-interface/dialog.md
+    - name: Alertas
+      href: user-interface/alert.md
+    - name: Menús
+      href: user-interface/menu.md
+    - name: Controles estándar
+      href: user-interface/standard-controls.md
+    - name: Barras de herramientas
+      href: user-interface/toolbar.md
+    - name: Vistas de tabla
+      href: user-interface/table-view.md
+    - name: Vistas de esquema
+      href: user-interface/outline-view.md
+    - name: Listas de origen
+      href: user-interface/source-list.md
+    - name: Vistas de colección
+      href: user-interface/collection-view.md
+    - name: Creación de controles personalizados
+      href: user-interface/custom-controls.md
+  - name: Características de la plataforma
+    href: platform/index.md
+    items:
+    - name: Introducción a macOS Mojave
+      href: platform/introduction-to-macos-mojave/index.md
+      items:
+      - name: Introducción
+        href: platform/introduction-to-macos-mojave/get-started.md
+    - name: Introducción a macOS High Sierra
+      href: platform/introduction-to-macos-high-sierra/index.md
+    - name: Introducción a macOS Sierra
+      href: platform/introduction-to-macos-sierra/index.md
+      items:
+      - name: Creación de aplicaciones modernas de macOS
+        href: platform/introduction-to-macos-sierra/modern-cocoa-apps.md
+      - name: Cambios adicionales en el marco de macOS Sierra
+        href: platform/introduction-to-macos-sierra/additional-framework-changes.md
+      - name: Solución de problemas
+        href: platform/introduction-to-macos-sierra/troubleshooting.md
+    - name: Enlace de bibliotecas Mac
+      href: platform/binding.md
+    - name: Introducción a OpenTK
+      href: platform/opentk.md
+    - name: Introducción a guiones gráficos
+      href: platform/storyboards/index.md
+      items:
+      - name: Inicio rápido de guiones gráficos
+        href: platform/storyboards/quickstart.md
+      - name: Trabajo con guiones gráficos
+        href: platform/storyboards/indepth.md
+    - name: Compatibilidad con las extensiones de Xamarin.Mac
+      href: platform/extensions.md
+    - name: Plataforma de destino
+      href: platform/target-framework.md
+  - name: Implementación y prueba
+    href: deploy-test/index.md
+    items:
+    - name: Icono de aplicación
+      href: deploy-test/app-icon.md
+    - name: Depuración de un bloqueo nativo
+      href: deploy-test/debugging-native-crash.md
+    - name: Enlazador
+      href: deploy-test/linker.md
+    - name: Rendimiento
+      href: deploy-test/performance.md
+    - name: Publicación en el App Store
+      href: deploy-test/publishing-to-the-app-store/index.md
+      items:
+      - name: Certificados e identificadores
+        href: deploy-test/publishing-to-the-app-store/certificates-identifiers.md
+      - name: Perfiles de aprovisionamiento
+        href: deploy-test/publishing-to-the-app-store/profiles.md
+      - name: Configuración de aplicaciones de Mac
+        href: deploy-test/publishing-to-the-app-store/app-configuration.md
+      - name: Firmar con el identificador de desarrollador
+        href: deploy-test/publishing-to-the-app-store/signing.md
+      - name: Empaquetar para Mac App Store
+        href: deploy-test/publishing-to-the-app-store/bundling.md
+      - name: Cargar en Mac App Store
+        href: deploy-test/publishing-to-the-app-store/uploading.md
+  - name: Plataforma de Apple
+    href: ~/cross-platform/macios/index.md?context=xamarin/mac
+    items:
+    - name: Administración de cuentas Apple
+      href: ~/cross-platform/macios/apple-account-management.md?context=xamarin/mac
+    - name: Unified API
+      href: ~/cross-platform/macios/unified/index.md?context=xamarin/mac
+      items:
+      - name: Información general
+        href: ~/cross-platform/macios/unified/overview.md?context=xamarin/mac
+      - name: Actualización de aplicaciones existentes
+        href: ~/cross-platform/macios/unified/updating-apps.md?context=xamarin/mac
+      - name: Actualización de aplicaciones iOS existentes
+        href: ~/cross-platform/macios/unified/updating-ios-apps.md?context=xamarin/mac
+      - name: Actualización de aplicaciones Mac existentes
+        href: ~/cross-platform/macios/unified/updating-mac-apps.md?context=xamarin/mac
+      - name: Actualización de aplicaciones Xamarin.Forms existentes
+        href: ~/cross-platform/macios/unified/updating-xamarin-forms-apps.md?context=xamarin/mac
+      - name: Migración de un enlace a Unified API
+        href: ~/cross-platform/macios/unified/update-binding.md?context=xamarin/mac
+      - name: Sugerencias para actualizar el código a Unified API
+        href: ~/cross-platform/macios/unified/updating-tips.md?context=xamarin/mac
+    - name: Enlace de Objective-C
+      href: ~/cross-platform/macios/binding/index.md?context=xamarin/mac
+      items:
+      - name: Información general
+        href: ~/cross-platform/macios/binding/overview.md?context=xamarin/mac
+      - name: Enlace de bibliotecas de Objective-C
+        href: ~/cross-platform/macios/binding/objective-c-libraries.md?context=xamarin/mac
+      - name: Referencia de tipos de enlace
+        href: ~/cross-platform/macios/binding/binding-types-reference.md?context=xamarin/mac
+      - name: Objective Sharpie
+        href: ~/cross-platform/macios/binding/objective-sharpie/index.md?context=xamarin/mac
+        items:
+        - name: Introducción
+          href: ~/cross-platform/macios/binding/objective-sharpie/get-started.md?context=xamarin/mac
+        - name: Herramientas y comandos
+          href: ~/cross-platform/macios/binding/objective-sharpie/tools.md?context=xamarin/mac
+        - name: Características
+          href: ~/cross-platform/macios/binding/objective-sharpie/platform/index.md?context=xamarin/mac
+          items:
+          - name: ApiDefinitions y StructsAndEnums
+            href: ~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md?context=xamarin/mac
+          - name: Enlace de plataformas nativas
+            href: ~/cross-platform/macios/binding/objective-sharpie/platform/native-frameworks.md?context=xamarin/mac
+          - name: Atributos de comprobación
+            href: ~/cross-platform/macios/binding/objective-sharpie/platform/verify.md?context=xamarin/mac
+        - name: Ejemplos
+          href: ~/cross-platform/macios/binding/objective-sharpie/examples/index.md?context=xamarin/mac
+          items:
+          - name: Xcode
+            href: ~/cross-platform/macios/binding/objective-sharpie/examples/xcode.md?context=xamarin/mac
+          - name: CocoaPod
+            href: ~/cross-platform/macios/binding/objective-sharpie/examples/cocoapod.md?context=xamarin/mac
+          - name: Avanzado (manual)
+            href: ~/cross-platform/macios/binding/objective-sharpie/examples/advanced.md?context=xamarin/mac
+        - name: Historial de versiones
+          href: ~/cross-platform/macios/binding/objective-sharpie/releases.md?context=xamarin/mac
+      - name: Solución de problemas
+        href: ~/cross-platform/macios/binding/troubleshooting.md?context=xamarin/mac
+    - name: Referencias nativas
+      href: ~/cross-platform/macios/native-references.md?context=xamarin/mac
+    - name: Tipos nativos
+      href: ~/cross-platform/macios/nativetypes.md?context=xamarin/mac
+    - name: Consideraciones de plataforma de 32 y 64 bits
+      href: ~/cross-platform/macios/32-and-64/index.md?context=xamarin/mac
+      items:
+      - name: Actualización de aplicaciones unificadas de Xamarin.Mac a 64 bits
+        href: ~/cross-platform/macios/32-and-64/mac-64-bit.md?context=xamarin/mac
+    - name: Trabajo con tipos nativos en aplicaciones multiplataforma
+      href: ~/cross-platform/macios/native-types-cross-platform.md?context=xamarin/mac
+    - name: HttpClient y selector de implementación de SSL/TLS
+      href: ~/cross-platform/macios/http-stack.md?context=xamarin/mac
+    - name: Optimizaciones de las compilaciones
+      href: ~/cross-platform/macios/optimizations.md?context=xamarin/mac
+  - name: Conceptos avanzados y funcionamiento interno
+    href: internals/index.md
+    items:
+    - name: AOT
+      href: internals/aot.md
+    - name: Ensamblados disponibles
+      href: ~/cross-platform/internals/available-assemblies.md?context=xamarin/mac
+    - name: Arquitectura Mac
+      href: internals/architecture.md
+    - name: Funcionamiento de Xamarin.Mac
+      href: internals/how-it-works.md
+    - name: Marcos de trabajo
+      href: internals/frameworks.md
+    - name: registrador
+      href: internals/registrar.md
+  - name: Solución de problemas
+    href: troubleshooting/index.md
+    items:
+    - name: Sugerencias para la solución de problemas
+      href: troubleshooting/troubleshooting.md
+    - name: Mensajes de error (mmp)
+      href: troubleshooting/mmp-errors.md
+  - name: Notas de la versión
+    href: https://developer.xamarin.com/releases/mac/
+  - name: Muestras
+    href: samples/index.yml
+  expanded: true
+ms.openlocfilehash: ea86a8d1b392acc1a27902c6c95a4b6ed763ecd8
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110445"
