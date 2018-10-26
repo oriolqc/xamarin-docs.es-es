@@ -1,31 +1,31 @@
 ---
 title: Rendimiento y efectos visuales con CCRenderTexture
-description: CCRenderTexture permite a los desarrolladores a mejorar el rendimiento de sus juegos, CocosSharp al reducir las llamadas a draw y puede utilizarse para crear efectos visuales. Esta guía incluye en el ejemplo CCRenderTexture para proporcionar un ejemplo práctico de cómo utilizar esta clase de forma eficaz.
+description: CCRenderTexture permite a los desarrolladores mejorar el rendimiento de sus juegos de CocosSharp reduciendo las llamadas a draw y se puede usar para crear efectos visuales. Esta guía acompaña al ejemplo de CCRenderTexture para proporcionar un ejemplo práctico de cómo utilizar esta clase de forma eficaz.
 ms.prod: xamarin
 ms.assetid: F02147C2-754B-4FB4-8BE0-8261F1C5F574
-author: charlespetzold
-ms.author: chape
-ms.openlocfilehash: 82d39542b24c6b1669798a0b4e1fb14a81f6b44e
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+author: conceptdev
+ms.author: crdun
+ms.openlocfilehash: 2e4d9a8fdefd0c543c29061da37098e443d1c092
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33922527"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123120"
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>Rendimiento y efectos visuales con CCRenderTexture
 
-_CCRenderTexture permite a los desarrolladores a mejorar el rendimiento de sus juegos, CocosSharp al reducir las llamadas a draw y puede utilizarse para crear efectos visuales. Esta guía incluye en el ejemplo CCRenderTexture para proporcionar un ejemplo práctico de cómo utilizar esta clase de forma eficaz._
+_CCRenderTexture permite a los desarrolladores mejorar el rendimiento de sus juegos de CocosSharp reduciendo las llamadas a draw y se puede usar para crear efectos visuales. Esta guía acompaña al ejemplo de CCRenderTexture para proporcionar un ejemplo práctico de cómo utilizar esta clase de forma eficaz._
 
-La `CCRenderTexture` clase proporciona funcionalidad para representar varios objetos de CocosSharp a una textura única. Una vez creada, `CCRenderTexture` instancias pueden usarse para representar gráficos de forma eficaz y para implementar los efectos visuales. `CCRenderTexture` permite que varios objetos que se representará en una textura solo una vez. A continuación, esa textura puede ser volver a usar todos los fotogramas, lo que reduce el número total de llamadas a draw.
+La `CCRenderTexture` clase proporciona funcionalidad para representar varios objetos de CocosSharp a una textura única. Una vez creada, `CCRenderTexture` instancias pueden usarse para representar gráficos de forma eficaz y para implementar los efectos visuales. `CCRenderTexture` permite que varios objetos que van a representar en una textura solo una vez. A continuación, puede ser esa textura reutilizar cada fotograma, lo que reduce el número total de llamadas a draw.
 
-Esta guía examina cómo usar la `CCRenderTexture` objeto para mejorar el rendimiento de las tarjetas de presentación en un juego de cartas recopilable (CCG). También se muestra cómo `CCRenderTexture` puede utilizarse para hacer que una entidad completa transparente. Esta guía hace referencia el `CCRenderTexture` [proyecto de ejemplo](https://developer.xamarin.com/samples/mobile/CCRenderTexture/).
+Esta guía examina cómo usar el `CCRenderTexture` objeto para mejorar el rendimiento de las tarjetas de presentación en un juego de cartas que se pueden recopilar (CCG). También se muestra cómo `CCRenderTexture` puede usarse para hacer transparente una entidad completa. Esta guía hace referencia a la `CCRenderTexture` [proyecto de ejemplo](https://developer.xamarin.com/samples/mobile/CCRenderTexture/).
 
-![](ccrendertexture-images/image1.png "Esta guía hace referencia al proyecto de ejemplo de CCRenderTexture")
+![](ccrendertexture-images/image1.png "Esta guía se hace referencia el proyecto de ejemplo CCRenderTexture")
 
 
-## <a name="card--a-typical-entity"></a>Tarjeta: una entidad típica
+## <a name="card--a-typical-entity"></a>Tarjeta de una entidad típica
 
-Antes de examinar cómo usar `CCRenderTexture` objeto, primero deberá familiarizarse nosotros mismos con el `Card` entidad que vamos a usar a lo largo de este proyecto para explorar el `CCRenderTexture` clase. El `Card` clase es una entidad típica, siguiendo el modelo de entidad que se describen en la [Guía de la entidad](~/graphics-games/cocossharp/entities.md). La clase de tarjeta tiene todos sus componentes visuales (instancias de `CCSprite` y `CCLabel`) aparecen como campos:
+Antes de ver cómo usar `CCRenderTexture` objeto, primero deberá familiarizarse nosotros mismos con el `Card` entidad que vamos a usar a lo largo de este proyecto para explorar el `CCRenderTexture` clase. El `Card` clase es una entidad típica, siguiendo el patrón de entidades que se describen en la [guía entidad](~/graphics-games/cocossharp/entities.md). La clase de tarjeta tiene todos sus componentes visuales (las instancias de `CCSprite` y `CCLabel`) aparece como campos:
 
 
 ```csharp
@@ -41,7 +41,7 @@ class Card : CCNode
     CCLabel descriptionDisplay;
 ```
 
-Instancias de tarjeta se pueden representar mediante el uso de un `CCRenderTexture`, o mediante el dibujo de cada componente visual individualmente. Aunque cada componente es un objeto independiente, el `CCNode` relaciones jerárquicas de sistema que se usa en entidades hace el `Card` se comportan como un único objeto, al menos en su mayor parte. Por ejemplo, si un `Card` mover, cambia de tamaño o girar entidad, a continuación, se ven afectados todos los objetos visuales independientes para que la tarjeta aparezca como un único objeto. Para ver las tarjetas se comportan como un único objeto, se podrá modificar el `GameLayer.AddedToScene` método para establecer el `useRenderTextures` variable `false`:
+Las instancias de la tarjeta pueden representarse mediante el uso de un `CCRenderTexture`, o mediante el dibujo de cada componente visual individualmente. Aunque cada componente es un objeto independiente, el `CCNode` relaciones jerárquicas de sistema que se usa en las entidades hace que el `Card` se comportan como un único objeto, por lo menos en su mayor parte. Por ejemplo, si un `Card` entidad se cambia de posición, cambia el tamaño o girar, a continuación, se ven afectados todos los objetos visuales contenidos para que la tarjeta aparezca como un único objeto. Para ver las tarjetas se comportan como un único objeto, podemos modificar la `GameLayer.AddedToScene` método para establecer el `useRenderTextures` variable `false`:
 
     
 ```csharp
@@ -54,30 +54,30 @@ protected override void AddedToScene ()
 }
 ```
 
-El `GameLayer` código no mueve cada elemento visual por separado, aún cada elemento visual en el `Card` entidad se coloca correctamente:
+El `GameLayer` código no mueve cada elemento visual de forma independiente, aún cada elemento visual en el `Card` entidad se coloca correctamente:
 
-![](ccrendertexture-images/image1.png "El código GameLayer no mueve cada elemento visual por separado, pero cada elemento visual dentro de la entidad de la tarjeta se coloca correctamente")
+![](ccrendertexture-images/image1.png "El código GameLayer no mueve por separado cada elemento visual, pero cada elemento visual dentro de la entidad de la tarjeta esté colocado correctamente")
 
-El ejemplo está codificado para exponer dos problemas que pueden producirse cuando cada componente visual se representa a sí misma:
+El ejemplo se codifica para exponer dos problemas que pueden producirse cuando cada componente visual representa a sí mismo:
 
 - Rendimiento puede verse afectado debido a varias llamadas de dibujo
-- Algunos efectos visuales, como la transparencia, no se puede implementar con precisión, exploraremos más adelante
+- No se puede implementar con precisión, algunos efectos visuales, como la transparencia, tal como se analiza más adelante
 
 
 ### <a name="card-draw-calls"></a>Llamadas de dibujo de tarjeta
 
-El código es una simplificación de lo que se pueden encontrar en un completo *juego de cartas recopilable* (CCG) como "Magic: la recopilación" o "Hearthstone". Nuestro juego solo muestra tres cartas a la vez y tiene un número pequeño de posibles unidades (azul, verde y naranja). Por el contrario, un juego completo puede tener más de veinte tarjetas que aparecen en pantalla en un momento dado y reproductores pueden tener cientos de tarjetas que elegir al crear sus barajas. Aunque el juego no sufren actualmente de problemas de rendimiento, podría un juego completo con implementación similar.
+El código es una simplificación de lo que podría encontrarse en un completo *juego de cartas que se pueden recopilar* (CCG) como "Magia: la recopilación" o "Hearthstone". Nuestro juego sólo muestra tres cartas a la vez y tiene un número pequeño de posibles unidades (azul, verde y naranja). Por el contrario, un juego completo puede tener más de veinte tarjetas en pantalla en un momento dado y reproductores pueden tener cientos de tarjetas para elegir al crear sus cubiertas. Aunque nuestro juego no actualmente sufren problemas de rendimiento, es posible que un juego completo con una implementación similar.
 
-CocosSharp proporciona información sobre el rendimiento de la representación mediante la exposición de las llamadas a draw realiza por fotograma. Nuestro `GameLayer.AddedToScene` método establece la `GameView.Stats.Enabled` a `true`, da lugar a que se muestra en la parte inferior izquierda de la pantalla de información de rendimiento:
+CocosSharp proporciona una idea de rendimiento de la representación mediante la exposición de las llamadas a draw realizadas por fotograma. Nuestro `GameLayer.AddedToScene` método establece el `GameView.Stats.Enabled` a `true`, con lo que se muestra en la parte inferior izquierda de la pantalla de información de rendimiento:
 
-![](ccrendertexture-images/image2.png "El método GameLayer.AddedToScene establece el GameView.Stats.Enabled en true, lo que se muestra en la parte inferior izquierda de la pantalla de información de rendimiento")
+![](ccrendertexture-images/image2.png "El método GameLayer.AddedToScene establece el GameView.Stats.Enabled en true, lo que genera información de rendimiento que se muestra en la parte inferior izquierda de la pantalla")
 
-Tenga en cuenta que a pesar de tener tres tarjetas en pantalla, tenemos las llamadas a draw años (dibuja cada tarjeta da resultado seis llamadas, el texto que muestra las cuentas de la información de rendimiento de una o más). Las llamadas a Draw tienen un impacto significativo en el rendimiento de un juego, por lo que CocosSharp proporciona varias maneras de reducir su. Una técnica se describe en el [CCSpriteSheet guía](~/graphics-games/cocossharp/ccspritesheet.md). Otra técnica consiste en utilizar el `CCRenderTexture` para reducir cada entidad hasta una llamada, tal y como examinaremos en esta guía.
+Observe que a pesar de tener tres tarjetas en pantalla, tenemos diecinueve llamadas a draw (dibujar los resultados de cada tarjeta en seis llamadas, el texto mostrará las cuentas de la información de rendimiento para uno más). Las llamadas a Draw tienen un impacto significativo en el rendimiento de un juego, por lo que CocosSharp proporciona varias maneras para reducirlos. Una técnica se describe en el [CCSpriteSheet guía](~/graphics-games/cocossharp/ccspritesheet.md). Otra técnica consiste en usar el `CCRenderTexture` para reducir cada entidad hasta una llamada, tal como se examinarán en esta guía.
 
 
-### <a name="card-transparency"></a>Transparencia de tarjeta
+### <a name="card-transparency"></a>Transparencia de la tarjeta
 
-Nuestro `Card` entidad incluye un `Opacity` propiedad transparencia de control como se muestra en el siguiente fragmento de código:
+Nuestro `Card` entidad incluye un `Opacity` propiedad con la transparencia de control como se muestra en el siguiente fragmento de código:
 
 
 ```csharp
@@ -105,7 +105,7 @@ public override byte Opacity
 }
 ```
 
-Observe que el establecedor admite el uso de representar las texturas o en la representación de cada componente individualmente. Para ver su efecto, cambie la `opacity` valor `127` (aproximadamente la mitad opacidad) en `GameLayer.AddedToScene` que dará como resultado en cada componente que tiene un `Opacity` valo `127`:
+Tenga en cuenta que el establecedor admite el uso de representar las texturas o individualmente en cada componente de representación. Para ver su efecto, cambie el `opacity` valor `127` (aproximadamente la mitad opacidad) en `GameLayer.AddedToScene` que dará como resultado de cada componente tiene un `Opacity` valor de `127`:
 
 
 ```csharp
@@ -119,34 +119,34 @@ protected override void AddedToScene ()
 }
 ```
 
-El juego ahora representará las tarjetas con algunos transparencia, provocando que aparezcan más oscuros, puesto que el fondo es negro:
+El juego ahora representará las tarjetas con algunos transparencia, provocando que aparezcan más oscuros, puesto que es el fondo negro:
 
 ![](ccrendertexture-images/image3.png "El juego ahora representará las tarjetas con algunos transparencia, provocando que aparezcan más oscuros, puesto que el fondo es negro")
 
-A primera vista sería como si las tarjetas correctamente se realizaron transparentes. Sin embargo, la captura de pantalla muestra una serie de problemas visuales.
+A primera vista sería como si las tarjetas correctamente se realizaron transparentes. Sin embargo, la captura de pantalla muestra un número de problemas visuales.
 
-Puesto que el fondo es negro, se podría esperar que todas las partes de la tarjeta se convertiría en cuanto más oscuro sea debido a la transparencia. Es decir, se convierte en una tarjeta más transparente, más oscuro se convierte en. En opacidad 0, un `Card` es completamente transparente (totalmente negro). Sin embargo, algunas partes de la tarjeta no están más oscuros cuando opacidad cambió a `127`. Peor aún, algunas partes de la tarjeta realmente pasara a ser más brillantes cuando pasara a ser más transparentes. Echemos un vistazo a partes de la tarjeta que fueran negros *antes de* fueran transparentes – específicamente el texto de detalle y los contornos negros alrededor del gráfico de monster. Si se coloca estos en paralelo, podemos ver el impacto de aplicar la transparencia:
+Puesto que nuestro en segundo plano es negro, esperaríamos que se convertiría en todas las partes de la tarjeta más oscura debido a la transparencia. Es decir, se convierte en una tarjeta más transparente, más oscuro se convierte en. En la opacidad 0, una `Card` es completamente transparente (completamente negro). Sin embargo, algunas partes de la tarjeta no se vuelva más oscuros cuando la opacidad se cambió a `127`. Aún peor, algunas partes de la tarjeta realmente pasó a ser más brillantes al que se hicieron más trasparentes. Echemos un vistazo a las partes de la tarjeta que estaban negras *antes* fueran transparentes tanto específicamente el texto de detalle y los contornos alrededor del gráfico monster negros. Si se coloca en paralelo, podemos ver el impacto de aplicar la transparencia:
 
 ![](ccrendertexture-images/image4.png "Si se coloca en paralelo, se puede ver el impacto de aplicar la transparencia")
 
-Como se mencionó anteriormente, todas las partes de la tarjeta deben convertirse en más oscuras cuando pase a ser más transparente, pero en varios aspectos que esto no es así:
+Como se mencionó anteriormente, todas las partes de la tarjeta deben se vuelva más oscuras cuando cada vez más transparente, pero en varias áreas esto no es así:
 
-- Esquema del robot se vuelve más claro (sale de negro en gris)
-- El texto de descripción se vuelve más claro (sale de negro en gris)
-- La parte verde del robot se satura menor, pero no se cargue más oscura
+- Esquema del robot se vuelve más claro (pasa del negro al gris)
+- El texto de descripción se vuelve más claro (pasa del negro al gris)
+- La parte verde del robot se satura menor, pero no se vuelva más oscura
 
-Para ayudar a visualizar por qué ocurre esto, es necesario tener en cuenta que cada componente visual está dibujado por separado, cada parte transparente. El primer componente visual que dibuja es el fondo de la tarjeta. Elementos transparentes subsiguientes se dibujará encima de la tarjeta y se verán afectados por el fondo de la tarjeta. Si se elimina parte del texto de la tarjeta y baja el gráfico de robot, podemos ver cómo afecta el fondo de la tarjeta al robot. Observe la línea naranja en el cuadro superior se pueden ver en el robot, y que el área del robot que se superpone a la banda azul en el centro de la tarjeta se dibuja más oscuros:
+Para ayudar a visualizar el por qué ocurre esto, debemos tener en cuenta que cada componente visual está dibujado por separado, cada uno de ellos parcialmente transparente. El primer componente visual dibujar es el fondo de la tarjeta. Los elementos transparentes subsiguientes se va a dibujar encima de la tarjeta y se verán afectados por el fondo de la tarjeta. Si se quita algún texto desde la tarjeta y baja el gráfico de robot, podemos ver cómo afecta el fondo de la tarjeta al robot. Observe que la línea naranja en el cuadro superior se puede ver en el robot y que el área del robot que se superpone a la banda azul en el centro de la tarjeta se dibuja más oscuros:
 
-![](ccrendertexture-images/image5.png "Observe la línea naranja en el cuadro superior se pueden ver en el robot, y que el área del robot que se superpone a la banda azul en el centro de la tarjeta se dibuja más oscuro")
+![](ccrendertexture-images/image5.png "Observe la línea naranja en el cuadro superior se puede ver en el robot y que el área del robot que se superpone a la banda azul en el centro de la tarjeta se dibuja más oscuro")
 
-Mediante un `CCRenderTexture` nos permite que la tarjeta toda transparente sin afectar a la representación de los componentes individuales dentro de la tarjeta, tal y como se verá más adelante en esta guía.
+Mediante un `CCRenderTexture` nos permite realizar la tarjeta toda transparente sin afectar a la representación de los componentes individuales dentro de la tarjeta, como veremos más adelante en esta guía.
 
 
-## <a name="using-ccrendertexture"></a>Usar CCRenderTexture
+## <a name="using-ccrendertexture"></a>Uso de CCRenderTexture
 
-Ahora que hemos identificado los problemas de representación individualmente cada componente, podrá activar representación para un `CCRenderTexture` y comparar el comportamiento.
+Ahora que hemos identificado los problemas de representación individualmente cada componente, deberá activar la representación a un `CCRenderTexture` y comparar el comportamiento.
 
-Para habilitar la representación para un `CCRenderTexture`, cambie la `userRenderTextures` variable `true` en `GameLayer.AddedToScene`:
+Para habilitar la representación a un `CCRenderTexture`, cambie el `userRenderTextures` variable `true` en `GameLayer.AddedToScene`:
 
 
 ```csharp
@@ -160,22 +160,22 @@ protected override void AddedToScene ()
 
 ### <a name="card-draw-calls"></a>Llamadas de dibujo de tarjeta
 
-Si se ejecuta el juego ahora, veremos las llamadas a draw reducidas de diecinueve a cuatro (cada tarjeta reduce entre seis a uno):
+Si se ejecuta el juego ahora, veremos las llamadas de dibujo reducidas de diecinueve a cuatro (cada tarjeta se reduce de seis a uno):
 
-![](ccrendertexture-images/image6.png "Si el juego se ejecuta ahora, las llamadas a draw reducción de diecinueve a cuatro cada tarjeta reduce de seis a uno")
+![](ccrendertexture-images/image6.png "Si el juego se ejecuta ahora, las llamadas a draw reducción de diecinueve a cuatro cada tarjeta reducido de seis a uno")
 
 Como se mencionó anteriormente, este tipo de reducción puede tener un impacto significativo en juegos con más entidades visuales en pantalla.
 
 
-### <a name="card-transparency"></a>Transparencia de tarjeta
+### <a name="card-transparency"></a>Transparencia de la tarjeta
 
-Una vez el `useRenderTextures` se establece en `true`, tarjetas transparentes se representarán de forma diferente:
+Una vez el `useRenderTextures` está establecido en `true`, tarjetas transparentes se representarán de forma diferente:
 
-![](ccrendertexture-images/image7.png "Una vez que la useRenderTextures se establece en true, transparentes tarjetas se representará de forma diferente")
+![](ccrendertexture-images/image7.png "Una vez que el useRenderTextures está establecido en true, transparentes tarjetas se representará de forma diferente")
 
-Vamos a comparar la tarjeta de robot transparente utilizando texturas de representación (izquierda) frente a sin (derecha):
+Vamos a comparar la tarjeta de robot transparente con las texturas de representación (izquierda) frente a sin (derecha):
 
-![](ccrendertexture-images/image8.png "Comparar la tarjeta de robot transparente con vs (izquierdo) de representación texturas sin (derecha)")
+![](ccrendertexture-images/image8.png "Comparar la tarjeta de robot transparente con vs (izquierdo) de las texturas de representación sin (derecha)")
 
 Las diferencias más obvias se encuentran en el texto de detalles (negro en lugar de color gris claro) y el sprite robot (oscuro en lugar de luz y sin saturación).
 
@@ -184,17 +184,17 @@ Las diferencias más obvias se encuentran en el texto de detalles (negro en luga
 
 Ahora que hemos visto las ventajas de usar `CCRenderTexture`, echemos un vistazo a cómo se utiliza en el `Card` entidad.
 
-El `CCRenderTexture` es un lienzo que puede ser el destino de representación. Tiene dos diferencias principales en comparación con la pantalla del juego:
+El `CCRenderTexture` es un lienzo que puede ser el destino de representación. Tiene dos diferencias principales en comparación con la pantalla de juego:
 
-1. El `CCRenderTexture` persiste entre fotogramas. Esto significa que un `CCRenderTexture` es necesario representar solo cuando se producen cambios. En nuestro caso, el `Card` entidad nunca cambia, por lo que solo se representa una vez. Si cualquier `Card` componentes cambiado, a continuación, la tarjeta tendría que volver a dibujar automáticamente para su `CCRenderTexture`. Por ejemplo, si se cambia el valor de HP (puntos de estado) cuando un ataque, la tarjeta necesitaría para representarse a sí misma para reflejar el nuevo valor de HP.
-1. El `CCRenderTexture` dimensiones de píxeles no están asociados a la pantalla. Un `CCRenderTexture` puede ser mayor o menor que la resolución del dispositivo. El `Card` código crea un `CCRenderTexture` según el tamaño de su sprite de fondo. La tarjeta contiene una referencia a un `CCRenderTexture` denominado `renderTexture`:
+1. El `CCRenderTexture` persiste entre marcos. Esto significa que un `CCRenderTexture` es necesario representar solo cuando se producen cambios. En nuestro caso, el `Card` entidad nunca cambia, por lo que se procesa solo una vez. Si cualquier `Card` componentes cambiado y, después, la tarjeta deberá actualizarse a sí mismo a su `CCRenderTexture`. Por ejemplo, si se cambia el valor de HP (puntos de estado) cuando es atacado, la tarjeta necesitaría para representarse a sí misma para reflejar el nuevo valor de HP.
+1. El `CCRenderTexture` dimensiones de píxeles no están vinculadas a la pantalla. Un `CCRenderTexture` puede ser mayor o menor que la resolución del dispositivo. El `Card` código crea un `CCRenderTexture` según el tamaño de su sprite en segundo plano. La tarjeta contiene una referencia a un `CCRenderTexture` llamado `renderTexture`:
 
 
 ```csharp
 CCRenderTexture renderTexture;
 ```
 
-El `renderTexture` instancia sigue siendo `null` hasta que el `UseRenderTexture` se asigna la propiedad en true, que llama `SwitchToRenderTexture`:
+El `renderTexture` instancia permanece `null` hasta que el `UseRenderTexture` se asigna una propiedad en true, que llama a `SwitchToRenderTexture`:
 
 
 ```csharp
@@ -250,14 +250,14 @@ private void SwitchToRenderTexture()
 }
 ```
 
-La `SwitchToRenderTexture` puede llamarse al método cada vez que la textura tiene que actualizarse. Se puede llamar a si la tarjeta ya está usando su `CCRenderTexture` o cambie a la `CCRenderTexture` por primera vez.
+El `SwitchToRenderTexture` puede llamarse al método cada vez que la textura debe actualizarse. Puede llamarse si la tarjeta ya está usando su `CCRenderTexture` o que cambia el `CCRenderTexture` por primera vez.
 
-En las siguientes secciones explorar el `SwitchToRenderTexture` método. 
+Las secciones siguientes exploran el `SwitchToRenderTexture` método. 
 
 
-### <a name="ccrendertexture-size"></a>Tamaño de CCRenderTexture
+### <a name="ccrendertexture-size"></a>Tamaño CCRenderTexture
 
-El constructor CCRenderTexture requiere dos conjuntos de dimensiones. La primera controla el tamaño de la `CCRenderTexture` cuando se dibuja, y el segundo especifica el ancho de píxel y el alto de su contenido. El `Card` crea una instancia de entidad su `CCRenderTexture` con el fondo [tamaño de contenido](https://developer.xamarin.com/api/property/CocosSharp.CCSprite.ContentSize/). Nuestro juego tiene un `DesignResolution` de 512 por 384, tal y como se muestra en `ViewController.LoadGame` en iOS y `MainActivity.LoadGame` en Android:
+El constructor CCRenderTexture requiere dos conjuntos de dimensiones. La primera controla el tamaño de la `CCRenderTexture` cuando se dibuja y el segundo especifica el ancho en píxeles y el alto de su contenido. El `Card` crea una instancia de entidad su `CCRenderTexture` con el fondo [ContentSize](https://developer.xamarin.com/api/property/CocosSharp.CCSprite.ContentSize/). Nuestro juego tiene un `DesignResolution` de 512 por 384, como se muestra en `ViewController.LoadGame` en iOS y `MainActivity.LoadGame` en Android:
 
 
 ```csharp
@@ -267,11 +267,11 @@ int height = 384;
 gameView.DesignResolution = new CCSizeI(width, height);
 ```
 
-El `CCRenderTexture` se denomina constructor con la `background.ContentSize` como el primer parámetro, lo que indica que la `CCRenderTexture` debe ser tan importante como el fondo `CCSprite`. Desde el fondo de la tarjeta `CCSprite` es 200 píxeles de alto, la tarjeta ocupará aproximadamente la mitad de la altura vertical de la pantalla.
+El `CCRenderTexture` se llama al constructor con la `background.ContentSize` como primer parámetro, que indica que el `CCRenderTexture` debe ser tan importante como el fondo `CCSprite`. Desde el fondo de la tarjeta `CCSprite` es 200 píxeles de alto, la tarjeta ocupará aproximadamente la mitad de la altura vertical de la pantalla.
 
-El segundo parámetro pasado a la `CCRenderTexture` constructor especifica la resolución de píxeles de la `CCRenderTexture`. Como se describe en el [Guía de resolución de CocosSharp](~/graphics-games/cocossharp/resolutions.md), el ancho y alto del área visible en unidades de juegos a menudo no es igual que la resolución de píxeles de la pantalla. De forma similar, un CCRenderTexture podría utilizar una resolución mayor que su tamaño para que objetos visuales aparecen más nítidos en dispositivos de alta resolución.
+El segundo parámetro pasado a la `CCRenderTexture` constructor especifica la resolución de píxeles de la `CCRenderTexture`. Como se describe en el [Guía de resolución de CocosSharp](~/graphics-games/cocossharp/resolutions.md), el ancho y alto del área visible en unidades de juegos a menudo no es igual que la resolución de píxeles de la pantalla. De forma similar, un CCRenderTexture podría utilizar una resolución mayor que su tamaño para que los objetos visuales aparezcan más nítidos en dispositivos de alta resolución.
 
-La resolución de píxel es dos veces el tamaño de la CCRenderTexture para evitar que el texto de la claridad pixelado:
+La resolución de píxel es dos veces el tamaño de la CCRenderTexture para evitar que el texto de pixelado atractivo:
 
 
 ```csharp
@@ -280,7 +280,7 @@ var pixelResolution = background.ContentSize * 2;
 renderTexture = new CCRenderTexture(unitResolution, pixelResolution);
 ```
 
-Para comparar, podemos cambiar el valor de pixelResolution para que coincida con el `background.ContentSize` (sin que se duplicó) y comparar el resultado: 
+Para comparar, podemos cambiar el valor de pixelResolution para que coincida con el `background.ContentSize` (sin duplicaba) y comparar el resultado: 
 
 
 ```csharp
@@ -292,17 +292,17 @@ renderTexture = new CCRenderTexture(unitResolution, pixelResolution);
 ![](ccrendertexture-images/image9.png "Para comparar, puede cambiar el valor de pixelResolution para que coincida con el fondo. ContentSize sin que se va a duplicar y comparar el resultado")
 
 
-### <a name="rendering-to-a-ccrendertexture"></a>Representación de un CCRenderTexture
+### <a name="rendering-to-a-ccrendertexture"></a>Representar en un CCRenderTexture
 
-Normalmente, los objetos visuales en CocosSharp no se representan explícitamente. En su lugar, se agregan los objetos visuales a un `CCLayer` que forma parte de un `CCScene`. CocosSharp representa automáticamente el `CCScene` y su jerarquía visual en cada marco sin ningún código de representación que se va a llamar. 
+Normalmente, los objetos visuales en CocosSharp no se representan explícitamente. En su lugar, se agregan los objetos visuales a un `CCLayer` que forma parte de un `CCScene`. CocosSharp representa de forma automática el `CCScene` y en su jerarquía visual en cada fotograma sin ningún código de representación que se llama. 
 
-Por el contrario, el `CCRenderTexture` debe dibujarse explícitamente a. Esta representación puede dividirse en tres pasos:
+Por el contrario, el `CCRenderTexture` debe dibujarse a explícitamente. Esta representación puede dividirse en tres pasos:
 
 1. `CCRenderTexture.BeginWithClear` se llama, que indica que todas las presentaciones posteriores tendrán como destino la llamada a `CCRenderTexture`.
-1. Objetos heredar `CCNode` (como el `Card` entidad) se representan en el `CCRenderTexture` mediante una llamada a `Visit`.
+1. Heredar de los objetos `CCNode` (como el `Card` entidad) se representan en el `CCRenderTexture` mediante una llamada a `Visit`.
 1. `CCRenderTexture.End` se llama, que indica que la representación a la `CCRenderTexture` completada.
 
-Se puede representar cualquier número de objetos en un `CCRenderTexture` entre su `Begin` y `End` llamadas. Antes de su representación, todos los objetos visibles necesarios se agregan como elementos secundarios:
+Se puede representar cualquier número de objetos en un `CCRenderTexture` entre su `Begin` y `End` llamadas. Antes de la representación, todos los objetos visibles necesarios se agregan como elementos secundarios:
 
 
 ```csharp
@@ -317,7 +317,7 @@ if (!areVisualComponentsAlreadyAdded)
 }
 ```
 
-El `renderTexture` no debe formar parte de la tarjeta al representar, por lo que se quita:
+El `renderTexture` no deben formar parte de la tarjeta al representar, por lo que se quita:
 
 
 ```csharp
@@ -341,7 +341,7 @@ this.Visit();
 renderTexture.End();
 ```
 
-Una vez finalizada la representación, se quitan los componentes individuales y `CCRenderTexture` se vuelve a agregar.
+Una vez finalizado el procesamiento, se quitan los componentes individuales y el `CCRenderTexture` se vuelven a agregar.
 
 
 ```csharp
@@ -356,11 +356,11 @@ this.AddChild(renderTexture.Sprite);
 
 ## <a name="summary"></a>Resumen
 
-Esta guía se trata la `CCRenderTexture` clase mediante el uso de un `Card` entidad que se pueda usar en un juego de cartas recopilable. Ha mostrado cómo usar el `CCRenderTexture` clase para mejorar la velocidad de fotogramas e implementar correctamente la transparencia de toda la entidad.
+Esta guía se trata la `CCRenderTexture` clase mediante el uso de un `Card` entidad que se pueden usar en un juego de cartas recopilable. Se ha mostrado cómo usar el `CCRenderTexture` clase para mejorar la velocidad de fotogramas e implementar correctamente la transparencia de toda la entidad.
 
-Aunque esta guía usa un `CCRenderTexture` dentro de una entidad, esta clase puede ser usado para representar varias entidades o incluso todo `CCLayer` instancias efectos de toda la pantalla y mejoras de rendimiento.
+Aunque esta guía usa un `CCRenderTexture` dentro de una entidad, puede ser esta clase se usa para representar varias entidades o incluso todo `CCLayer` instancias para los efectos de toda la pantalla y mejoras de rendimiento.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Referencia de la API de CCRenderTexture](https://developer.xamarin.com/api/type/CocosSharp.CCRenderTexture/)
+- [Referencia de la API CCRenderTexture](https://developer.xamarin.com/api/type/CocosSharp.CCRenderTexture/)
 - [Proyecto completo (ejemplo)](https://developer.xamarin.com/samples/mobile/CCRenderTexture/)
