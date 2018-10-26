@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: d74ad52a2926fb30a528aeba29156259390c3edf
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: f787adcba78a13f6d4cad3fb446350a65e960aca
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37947249"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50123614"
 ---
 # <a name="xamarinforms-map"></a>Mapa de Xamarin.Forms
 

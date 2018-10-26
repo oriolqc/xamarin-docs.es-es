@@ -1,253 +1,253 @@
 ---
-title: Color amplia en Xamarin.iOS
-description: Este documento describen color amplia y cómo se puede usar en una aplicación Xamarin.iOS o Xamarin.Mac. También proporciona una descripción general de muchos conceptos importantes relacionadas con el color, como espacios de color y canales, los elementos.
+title: Color amplio en Xamarin.iOS
+description: Este documento aborda color amplia y cómo se puede usar en una aplicación Xamarin.iOS o Xamarin.Mac. También proporciona una descripción general de muchos conceptos importantes relacionados con el color, como espacios de colores, canales y primarios.
 ms.prod: xamarin
 ms.assetid: 576E978A-F182-489A-83E4-D8CDC6890B24
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 173919e0d5feda6ab7d34895cc834c5f36d737a8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f139bcceda12752e43a3a8330fa0a0e038e539f9
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34788786"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50121313"
 ---
-# <a name="wide-color-in-xamarinios"></a>Color amplia en Xamarin.iOS
+# <a name="wide-color-in-xamarinios"></a>Color amplio en Xamarin.iOS
 
-_Este artículo tratan de color amplia y cómo se puede usar en una aplicación Xamarin.iOS o Xamarin.Mac._
+_En este artículo se trata color amplia y cómo se puede usar en una aplicación Xamarin.iOS o Xamarin.Mac._
 
-iOS 10 y macOS Sierra mejora la compatibilidad con formatos de píxel de rango extendido y los espacios de la amplia gama de colores en todo el sistema incluidos los marcos, como los gráficos esenciales, imagen Core, sistema operativo y AVFoundation. Compatibilidad con dispositivos con pantallas de color amplia adicional se ve facilitado por proporcionar este comportamiento en toda la pila completa de gráficos.
+10 de iOS y macOS Sierra mejora la compatibilidad con formatos de píxel de rango ampliado y espacios de la amplia gama de colores en todo el sistema incluidos marcos como gráficos de Core, imagen básica, sistema operativo y AVFoundation. Compatibilidad con dispositivos con pantallas a color amplia es aún más disminuido proporcionando este comportamiento a lo largo de la pila de gráficos completa.
 
-## <a name="about-wide-color"></a>Acerca de Color amplia
+## <a name="about-wide-color"></a>Acerca de Color amplio
 
-Como se mencionó anteriormente, iOS 10 y macOS Sierra mejora la compatibilidad con formatos de píxel de rango extendido y los espacios de la amplia gama de colores en todo el sistema, incluidos los marcos, como los gráficos esenciales, imagen Core, sistema operativo y AVFoundation. Compatibilidad con dispositivos con pantallas de color amplia adicional se ve facilitado por proporcionar este comportamiento en toda la pila completa de gráficos.
+Como se indicó anteriormente, 10 de iOS y macOS Sierra mejora la compatibilidad con formatos de píxel de rango ampliado y espacios de la amplia gama de colores en todo el sistema, incluidos los marcos como gráficos de Core, imagen básica, sistema operativo y AVFoundation. Compatibilidad con dispositivos con pantallas a color amplia es aún más disminuido proporcionando este comportamiento a lo largo de la pila de gráficos completa.
 
-En el 90 Apple crea ColorSync para controlar el color que se está procesando en el equipo Mac. También ayudó a encontrar International Color Consortium (ICC) para crear y promover un conjunto de estándares para controlar el color en el hardware del equipo. Trabajo de Apple con el ICC se incluyó en ColorSync y se creó en el núcleo de OS X (que ahora se denomina macOS).
+En el 90 Apple creado ColorSync para controlar el color que se está procesando en el equipo Mac. También ayudó a encontrar International Color Consortium (ICC) para crear y promover un conjunto de estándares para controlar el color en el hardware del equipo. Trabajo de Apple con el ICC se incluyó en ColorSync y se ha compilado en el núcleo de OS X (ahora denominado macOS).
 
-Apple ha sido también a la vanguardia de la tecnología de presentación con hardware, como la Retina mostrar, la nueva P3 mostrar y Mostrar espacio de colores P3 (publicada en el iMac en 2015) y muestra el TrueTone de los profesionales de TI iPad, iPhone 7 e iPhone 7 más.
+Apple ha sido también a la vanguardia de la tecnología de presentación con el hardware como la Retina mostrar, la nueva P3 mostrar y Mostrar espacio de colores P3 (publicada en el iMac en 2015) y muestra el TrueTone en los profesionales de iPad, iPhone 7 y iPhone 7 Plus.
 
-Con Color amplia en macOS Sierra y iOS 10, Apple está cambiando la forma en que iOS y Mac OS controlan color para aprovechar al máximo de estas nuevas tecnologías de presentación.
+Con iOS 10 y Color amplia en macOS Sierra, Apple está cambiando la forma en que macOS e iOS controlan el color para aprovechar al máximo estas nuevas tecnologías de presentación.
 
-## <a name="core-color-concepts"></a>Conceptos básicos de Color
+## <a name="core-color-concepts"></a>Conceptos de Color
 
-Los siguientes conceptos de color principal deben cubrir antes de realizar un examen más profundo de color en iOS y Mac OS:
+Los siguientes conceptos de color deben abordarse antes de echar un vistazo más profundo a color en iOS y macOS:
 
 ### <a name="color-space"></a>Espacio de colores
 
-Un espacio de colores es un entorno en el que se pueden representados y comparar colores. Puede ser un espacio de dimensiones de uno a cuatro definido por la intensidad de sus componentes de color. 
+Un espacio de colores es un entorno en el que pueden representados y compararse de colores. Puede ser un espacio dimensional de uno a cuatro definido por la intensidad de sus componentes de color. 
 
 [![](wide-color-images/color00.png "Un espacio de colores")](wide-color-images/color00.png#lightbox)
 
-### <a name="color-channels"></a>Canales de color
+### <a name="color-channels"></a>Los canales de color
 
-También se pueden hacer referencia a los componentes de color como canales de Color. Algunas representaciones familiarizados sería el RGB espacios, espacios de color gris, CMYK, espacios o espacios independientes del dispositivo. 
+También se pueden hacer referencia a los componentes de color como canales de Color. Algunas representaciones familiares sería el RGB espacios, espacios de color gris, CMYK, espacios o espacios independientes del dispositivo. 
 
 [![](wide-color-images/color02.png "Los componentes de color también se conoce como canales de Color")](wide-color-images/color02.png#lightbox)
 
-### <a name="color-primaries"></a>Elementos de color
+### <a name="color-primaries"></a>Color de
 
-Los elementos de color proporcionan el sistema de coordenadas que se utiliza para comparar y colores de proceso. Colores primarios suelen pertenecen a más intensa versión del color especificado que se pueden generar en el canal de Color.
+Color de proporciona el sistema de coordenadas que se utiliza para comparar y calcular los colores. Color de suelen pertenecer a más intensa versión del color especificado que se puede generar en el canal de Color.
 
-[![](wide-color-images/color01.png "Los elementos de color proporcionan el sistema de coordenadas que se utiliza para comparar y colores de proceso")](wide-color-images/color01.png#lightbox)
+[![](wide-color-images/color01.png "Color de proporciona el sistema de coordenadas que se utiliza para comparar y calcular los colores")](wide-color-images/color01.png#lightbox)
 
-En el caso del espacio de colores RGB representado por encima, el Color de los elementos están dónde el `1.0` están delimitadas coordenadas (como `[1.0, 0.0, 0.0]` para el rojo).
+En el caso del espacio de colores RGB representado anteriormente, los primarios de Color son dónde el `1.0` ancladas coordenadas (como `[1.0, 0.0, 0.0]` para el rojo).
 
 ### <a name="color-gamut"></a>Gama de colores
 
-Gama de colores hace referencia a todos los colores que se pueden definir como una combinación de los canales de Color individuales dentro de un espacio de colores determinada.
+Gama de colores se refiere a todos los colores que se pueden definir como una combinación de los canales de Color individuales dentro de un determinado espacio de colores.
 
-[![](wide-color-images/color03.png "Ejemplo de la gama de color")](wide-color-images/color03.png#lightbox)
+[![](wide-color-images/color03.png "Ejemplo de la gama de colores")](wide-color-images/color03.png#lightbox)
 
-## <a name="what-is-wide-color"></a>¿Qué es el Color amplia
+## <a name="what-is-wide-color"></a>¿Qué es el Color amplio
 
-Antes de tratar el tema de Color amplia, debe tenerse una discusión sobre el estándar actual para el color, el espacio de Color RGB estándar (sRGB). El espacio de Color más usado en informática de hoy en día y el espacio de color predeterminado para iOS y Mac OS.
+Antes de tratar el tema de Color amplia, se debería tenía una discusión sobre el estándar actual para el color, el espacio de Color RGB estándar (sRGB). Es el espacio de colores usados en la informática de hoy en día y es el espacio de colores predeterminado para iOS y macOS.
 
 El espacio de Color sRGB tiene las siguientes propiedades:
 
 - Se basa en el estándar de ITU-R BT.709.
 - Tiene un aproximado Gamma de 2.2.
-- Representa las condiciones de iluminación típica (D65).
+- Representa las condiciones de iluminación típico (D65).
 
-Puesto que sRGB ampliamente que utilizado en la industria, un desarrollador puede realizar algunas suposiciones que es el color especificado se representarán fielmente en cualquier dispositivo que aparece. Sin embargo, esto no siempre sería el caso. Además, existen varios colores que no caben en el espacio de Color sRGB y, en consecuencia, no se puede representar en él.
+Puesto que sRGB es ampliamente que utilizado en la industria, un desarrollador puede realizar algunas suposiciones que se representará fielmente el color especificado en cualquier dispositivo en que se muestra. Sin embargo, esto no siempre puede suceder. Además, existen varios colores que no caben en el espacio de Color sRGB y, por tanto, no se puede representar en él.
 
-Por ejemplo, muchos tejidos están diseñadas con los subprocesos que utilizan muchas tintas y tintes acumulando fuera sRGB. También se crean muchos productos de una persona que se encuentra en su vida diaria con colores brillantes y colores vivos que quedan fuera del espacio de Color sRGB. Algunos de los ejemplos más contundente de colores que no pueden representarse en sRGB son cosas por naturaleza como puestas de sol, otoño, flores exóticas y aguas tropicales.
+Por ejemplo, muchos hmong está diseñados con subprocesos utilizando muchas tintas y tintes queda fuera de sRGB. También se crean muchos productos que una persona que se encuentra en su vida diaria con colores brillantes intensos que se encuentran fuera del espacio de Color sRGB. Algunos de los ejemplos más atractivos de colores que no se puede representar en sRGB son cosas por naturaleza, como puestas de sol, otoño, flores exóticas y aguas tropicales.
 
-Los usuarios que han sido capturar imágenes digitales en el formato pueden tener imágenes en sus dispositivos que contienen todos estos datos de color, aunque no puede representarse correctamente en el espacio de Color sRGB y, en consecuencia, no se muestran correctamente en la pantalla.
+Los usuarios que han sido capturar imágenes digitales en formato RAW pueden tener imágenes en sus dispositivos que contienen todos estos datos de color, aunque no puede representarse correctamente en el espacio de Color sRGB y, por tanto, no se muestra correctamente en la pantalla.
 
-### <a name="the-display-p3-color-space"></a>El espacio de Color de pantalla P3
+### <a name="the-display-p3-color-space"></a>El espacio de colores de pantalla P3
 
-2015, Apple lanzado nuevos productos (iMac y iPad Pro 9.7") que proporcionan el nuevo espacio de Color de P3 de presentación para controlar los problemas creados por el espacio de Color sRGB.
+En 2015, Apple publicó nuevos productos (iMac e iPad Pro 9.7") que proporcionan el nuevo espacio de Color para mostrar P3 para controlar los problemas creados por el espacio de Color sRGB.
 
 [![](wide-color-images/color04.png "El nuevo espacio de Color de pantalla P3")](wide-color-images/color04.png#lightbox)
 
-El espacio de Color de pantalla P3 tiene las siguientes propiedades:
+El espacio de colores de pantalla P3 tiene las siguientes propiedades:
 
-- Admite un espacio de color amplia para plataformas de hardware moderno.
-- Se basa en el estándar de SMPTE DCI-P3. P3 DCI se diseñó para los proyectores digitales pero fue modificado por Apple para admitir a monitores.
+- Admite un espacio de color amplia para plataformas de hardware modernos.
+- Según el estándar de SMPTE DCI-P3. DCI P3 se diseñó para proyectores digitales pero se ha modificado por Apple para admitir los monitores.
 - Tiene un aproximado Gamma de 2.2.
-- Representa las condiciones de iluminación típica (D65).
+- Representa las condiciones de iluminación típico (D65).
 
-Según Apple, los usuarios están cambiando sus flujos de trabajo a las plataformas móviles. Para resolver los problemas de presentación de color presentados sRGB en los dispositivos móviles (iPad los profesionales de TI), profesionales, requerida, incluido algo más que una pantalla de color amplia. Una de las soluciones era actualizar la calibración de fábrica, por lo que cada dispositivo se ha calibrado en la fábrica que garantice que desde un dispositivo a otro, presentación en color precisos y coherentes.
+Con arreglo a Apple, los usuarios están cambiando sus flujos de trabajo a sus plataformas móviles. Solucionar los problemas de presentación del color presentados por sRGB en los dispositivos móviles (iPad profesionales), professional, requerida, incluido algo más que una pantalla a color amplia. Una de las soluciones era actualizar la calibración de fábrica, por lo que se haya calibrado cada dispositivo en la fábrica que garantice que desde un dispositivo a otro, presentación en color precisos y coherentes.
 
 Otra solución es la inclusión completa, todo el sistema de administración de color que Apple ha incorporado en iOS 10 y macOS Sierra. 
 
-### <a name="the-extended-range-srgb-color-space"></a>El espacio de Color sRGB de rango extendido
+### <a name="the-extended-range-srgb-color-space"></a>El espacio de Color sRGB de rango ampliado
 
-Nuevo iOS 10 color de todo el sistema de administración tiene en cuenta para todas las aplicaciones existentes de iOS compiladas e ajustar para sRGB. Se diseñó para asegurarse de que no afecte a cualquier rendimiento de representación o una aplicación de color de estas aplicaciones.
+La nueva administración del color de todo el sistema iOS 10 debe tener en cuenta todas las aplicaciones de iOS existente que se compila y perfeccionadas para sRGB. Se ha diseñado para asegurarse de que no afecten a cualquier rendimiento de representación o una aplicación de color de estas aplicaciones.
 
-Para controlar esta situación, Apple ha incluido el espacio de Color del rango extendido sRGB en iOS 10 (y macOS Sierra).
+Para controlar esta situación, Apple ha incluido el espacio de Color sRGB de rango ampliado en iOS 10 (y macOS Sierra).
 
-El espacio de Color sRGB de rango extendido tiene las siguientes propiedades:
+El espacio de Color sRGB de rango ampliado tiene las siguientes propiedades:
 
-- Tiene todos la misma sRGB primarios.
+- Tiene todos la misma sRGB principales.
 - Tiene un aproximado Gamma de 2.2.
-- Representa las condiciones de iluminación típica (D65).
-- Es compatible con los valores negativos y los valores de mayor que uno (1).
+- Representa las condiciones de iluminación típico (D65).
+- Es compatible con los valores negativos y los valores mayor que uno (1).
 
-Por lo cual permite los valores menores que cero y mayor que uno, el sRGB de rango extendido que no solo permite el espacio de Color para las aplicaciones existentes a los colores presentes en sRGB sin aciertos de rendimiento o distorsión, pero permite el espacio de colores representar cualquier color dentro visibles espectro. Todo esto se logra mientras mantiene los mismos puntos de anclaje como el espacio de Color sRGB.
+Por lo que permite valores inferiores a cero y mayor que uno, sRGB de rango ampliado que espacio de colores no sólo permite que las aplicaciones existentes a los colores presentes en sRGB sin descensos en el rendimiento o distorsión, pero permite el espacio de colores representar cualquier color dentro de la visible espectro. Todo esto se logra manteniendo todavía los mismos puntos de anclaje que el espacio de Color sRGB.
 
 ### <a name="extended-range-srgb-in-action"></a>SRGB de rango extendido en acción
 
-Para ver cómo funcionan los valores fuera de cero y uno en el espacio de Color sRGB de rango extendido, considere el ejemplo siguiente de la de la saturación máxima roja disponible en el espacio de Color de pantalla P3:
+Para ver cómo funcionan los valores fuera de cero y uno en el espacio de Color sRGB de rango ampliado, tome el ejemplo siguiente de la de la saturación máxima rojo disponible en el espacio de colores de pantalla P3:
 
-[![](wide-color-images/color05.png "Cómo funcionan los valores fuera de cero y uno en el espacio de Color sRGB de rango extendido")](wide-color-images/color05.png#lightbox)
+[![](wide-color-images/color05.png "Cómo funcionan los valores fuera de cero y uno en el espacio de Color sRGB de rango ampliado")](wide-color-images/color05.png#lightbox)
 
-En la pantalla P3, este color se representará como `[1.0, 0.0, 0.0]` y en sRGB de rango extendido sería `[1.358, -0.074, -0.012]`. Porque están llenos sRGB valores contenidos dentro de P3 de presentación y los valores de presentación P3 sentar "fuera" de los intervalos de sRGB.
+En la pantalla P3, este color se representaría como `[1.0, 0.0, 0.0]` y en sRGB de rango ampliado sería `[1.358, -0.074, -0.012]`. Porque están llenos sRGB valores contenidos dentro de la pantalla P3 y los valores de la pantalla P3 diseñar "fuera" de los intervalos de sRGB.
 
-Para el hardware físico que permite a los valores de píxel de extrema positivo hacia extremos valores negativos, puede mostrar cualquier color disponible en el espectro visible y estos valores se pueden representar en el espacio de Color sRGB de rango extendido.
+Para el hardware físico que permite a los valores de píxel vaya de extreme positivo a valores negativos extremos, puede mostrar cualquier color disponible en el espectro visible y estos valores se pueden representar en el espacio de Color sRGB de rango ampliado.
 
 ### <a name="device-pixel-formats"></a>Formatos de píxel de dispositivo 
 
-El espacio de colores ha sido en gran medida de sRGB estandarizar sobre el uso de un formato de píxel de 8 bits, ya que es de 8 bits por canal de color principalmente suficiente para describir los colores en sRGB. Esto no es perfecta pero suficientemente bueno y proporciona un buen equilibrio entre el uso de memoria y procesador para mostrar imágenes.
+El espacio de colores ha sido en gran medida de sRGB estandarizar sobre el uso de un formato de píxel de 8 bits, ya que es de 8 bits por canal de color principalmente suficiente para describir los colores de sRGB. Esto no es perfecta, pero lo suficientemente bueno y proporciona un buen equilibrio entre el uso del procesador y memoria para mostrar imágenes.
 
-Puesto que mostrar P3 puede representar coordenadas de color fuera del espacio de colores sRGB, requiere 16 bits por canal de color para que represente correctamente los colores con el espacio de Color sRGB de rango extendido.
+Dado que pantalla P3 pueden representar las coordenadas de color fuera del espacio de color sRGB, requiere 16 bits por canal de color para representar correctamente los colores con el espacio de Color sRGB de rango ampliado.
 
 ## <a name="system-wide-wide-color-support"></a>Compatibilidad de Color amplia de todo el sistema
 
-Para satisfacer por completo color amplia y la amplia gama de colores dentro de iOS 10 y macOS Sierra, Apple amplió los siguientes marcos para aprovechar el espacio de Color sRGB de rango extendido y la presentación P3:
+Para admitir completamente color amplia y amplia gama dentro de 10 iOS y macOS Sierra, Apple ha extendido los siguientes marcos para aprovechar al máximo el espacio de Color sRGB de rango ampliado y pantalla P3:
 
 - UIKit (solo para iOS)
 - SceneKit
-- Gráficos de núcleo
+- Gráficos básicos
 - ImageIO
-- Imagen del núcleo
+- Imagen de Core
 - WebKit
 - SpriteKit
-- Animación de núcleo
+- Animación básica
 - AppKit (para macOS solo)
 
-Además, ha mejorado la compatibilidad de rango extendido sRGB espacio de colores de pantalla de Retina y mostrar P3 muestran.
+Además, ha mejorado la compatibilidad para el espacio de Color sRGB de rango ampliado pantalla retina y pantalla P3 muestran.
 
-Color amplia es compatible y puede utilizarse en los siguientes tipos de contenido de aplicación:
+Color amplio es compatible y puede usarse en los siguientes tipos de contenido de la aplicación:
 
 - Recursos de imagen estática incluidos en el paquete de aplicación.
 - Documento y red basadas en recursos de imagen.
 - Multimedia avanzada como Live fotografías o imágenes en formato RAW.
 - Imágenes de textura de sombreador de gráficos 3D.
 
-## <a name="solving-the-color-problem"></a>Para resolver el problema de Color
+## <a name="solving-the-color-problem"></a>Para solucionar el problema de Color
 
-El contenido que se muestra en una aplicación puede proceder de una amplia gama de orígenes de color con datos completos. Además, este contenido puede mostrarse en una amplia gama de dispositivos, cada uno con su propio intervalo de capacidades de visualización de color.
+El contenido que se muestra en una aplicación puede proceder de una amplia gama de orígenes y llena de color. Además, este contenido se puede mostrar en una amplia gama de dispositivos, cada uno con su propia gama de capacidades de visualización de color.
 
-Una aplicación de iOS 10 llena la diferencia entre estos dos problemas con los nuevos integrados, todo el sistema Color administrar sistemas. Este sistema garantiza que una imagen tiene el mismo aspecto en cualquier dispositivo iOS, con independencia de qué espacio de Color de la imagen se codificó en.
+Una aplicación de iOS 10 salva la diferencia entre estos dos problemas con los nuevos integrados, todo el sistema Color administrar sistemas. Este sistema garantiza que una imagen tiene el mismo aspecto en cualquier dispositivo iOS, independientemente de qué espacio de Color de la imagen se codificó en.
 
-Administración del color se inicia con cada imagen con un espacio de Color asociado (o un perfil de Color). Esta información se usa en la _el proceso de coincidencia de Color_ donde se comparan los colores de la imagen de origen a los colores en el dispositivo de salida. Puesto que cada píxel de la imagen debe ser de Color coincidente, puede llevar mucho tiempo y se coloca una carga en CPU del dispositivo.
+Administración del color comienza con todas las imágenes que tienen un espacio de colores asociado (o perfil de Color). Esta información se usa en el _el proceso de coincidencia de Color_ donde se buscan los colores de la imagen de origen a los colores en el dispositivo de salida. Puesto que cada píxel de la imagen debe ser coincide con el Color, puede llevar mucho tiempo y coloque una presión en la CPU del dispositivo.
 
-Debido a la naturaleza de la _el proceso de coincidencia de Color_, esta conversión puede ser potencialmente "pérdida" si el dispositivo de salida tiene una gama más pequeña que la imagen de origen.
+Debido a la naturaleza de la _el proceso de coincidencia de Color_, esta conversión puede ser potencialmente "con pérdida de datos" si el dispositivo de salida tiene una gama más pequeña que la imagen de origen.
 
-Afortunadamente, los cálculos que entran en el _el proceso de coincidencia de Color_ puede fácilmente ser acelerados por hardware (ya sea en la CPU o la GPU) y que funciona automáticamente mediante la compatibilidad de creación en sistemas de base como cuarzo 2D, se asegura de Apple ColorSync y animación de núcleo. Para el contenido correctamente etiquetada, codificación no es necesario para aprovechar estas características.
+Afortunadamente, los cálculos que se incluyen en el _el proceso de coincidencia de Color_ puede fácilmente ser acelerados por hardware (ya sea en la CPU o la GPU) y Apple garantiza que funciona automáticamente mediante la creación de soporte técnico en sistemas de bases como Quartz 2D, ColorSync y animación básica. Para obtener contenido etiquetado correctamente, codificación no es necesario para aprovechar estas características.
 
-Administración del color compatible en cada plataforma como se indica a continuación:
+Administración del color se admite en cada plataforma como sigue:
 
-- **macOS** -macOS ha sido color administrado desde el comienzo.
-- **iOS** -iOS admite la administración de color automático desde iOS 9.3 (y versiones posteriores).
+- **macOS** -macOS ha sido administrado desde comienzos de color.
+- **iOS** -iOS admite la administración del color automático desde iOS 9.3 (y versiones posteriores).
 
 ### <a name="designing-for-wide-gamut"></a>Diseño de la amplia gama de colores
 
-Apple tiene la siguiente sugerencia para el diseño y el uso de ancho de color, contenido de la imagen de amplia gama de aplicaciones para iOS y Mac OS:
+Apple tiene la siguiente sugerencia para el diseño y uso de ancho de color, contenido de la imagen amplia gama de aplicaciones para iOS y macOS:
 
-- Usar solo contenido de amplia gama de marca tienen sentido en la aplicación, que no deben automáticamente usarse en cualquier lugar.
-- Sólo utilice el contenido de la amplia gama de colores en colores vivos mejorará la experiencia del usuario.
-- En no es necesario cambiar todo el contenido a P3 para las aplicaciones existentes.
+- Usar solo el contenido de la amplia gama donde en la marca sentido en la aplicación, que no automáticamente se deben usar en todas partes.
+- Use solo contenido de la amplia gama donde colores vivos mejorará la experiencia del usuario.
+- No es necesario cambiar todo el contenido a P3 para las aplicaciones existentes en.
 
-Cadena de herramientas de Apple hace admiten para el contenido de la imagen de gama amplia un gradual participar en, por lo que admitir color amplia en una aplicación no es una situación de todo o nada.
+Cadena de herramientas de Apple hace que se admiten para el contenido de imagen amplia gama un gradual opt-de, por lo que admiten color amplia en una aplicación no es una situación de todo o nada.
 
-### <a name="upgrading-existing-content-to-wide-color"></a>Actualizar el contenido existente a Color amplia
+### <a name="upgrading-existing-content-to-wide-color"></a>Actualizar el contenido existente a Color amplio
 
-Apple tiene las siguientes sugerencias para actualizar el contenido existente de la imagen a color amplia:
+Apple tiene las siguientes sugerencias para actualizar el contenido existente de la imagen a color amplio:
 
-- No solo "asignar" un perfil P3 el contenido de la aplicación de edición de imágenes. Si lo hace, simplemente volverá a asignar el contenido para el nuevo espacio de Color con resultados inesperados, como el ajuste de los colores para caber en el nuevo espacio, por tanto, modificar la imagen de color existente.
-- Será necesario que el contenido de la imagen "convertirá" en el perfil de presentación P3 mediante una aplicación de edición de imágenes.
+- No sólo "asignar" un perfil de P3 para el contenido de la aplicación de edición de imágenes. Si lo hace, simplemente volverá a asignar el contenido al nuevo espacio de Color con resultados inesperados, como el ajuste de los colores para caber en el nuevo espacio, por tanto, modificar la imagen de color existente.
+- El contenido de la imagen debe "convertirse" en el perfil de pantalla P3 mediante una aplicación de edición de imágenes.
 
 ### <a name="file-formats-and-color-profiles"></a>Formatos de archivo y los perfiles de Color
 
-Apple tiene las siguientes sugerencias para los formatos de archivo y los perfiles de color utilizados en contenido de imagen de color amplia de la aplicación:
+Apple tiene las siguientes sugerencias para los formatos de archivo y los perfiles de color usados en contenido de imagen de color amplia de la aplicación:
 
-- Use el perfil de color "Mostrar P3" para los espacios de trabajo de RGB.
-- Use un 16 bits por modo de canal de color.
-- Utilizar un retraso 2015 iMac (o posterior) para previsualizar el contenido de la imagen de manera precisa.
-- Exportar recursos de imágenes como archivos PNG de 16 bits con un perfil ICC "Mostrar P3" incrustado.
+- Usar el perfil de color de la "Pantalla P3" para los espacios de trabajo de RGB.
+- Utilice un 16 bits por modo de canal de color.
+- Usar un iMac Late 2015 (o posterior) para la vista previa precisa del contenido de imagen.
+- Exportar activos de imagen como archivos PNG de 16 bits con un perfil ICC "Pantalla P3" incrustado.
 
 > [!IMPORTANT]
-> Mediante el **Guardar para Web** o **exportar activos** en las características que se encuentran en el software de edición de imágenes más populares _no_ profesional para las imágenes de color amplia ya que estas características no han sido actualizado para admitir aún las especificaciones de formato de archivo necesario.
+> Mediante el **Guardar para Web** o **exportar activos** las características que se encuentran en el software de edición de imágenes más populares _no_ profesional para las imágenes de color amplia puesto que estas características no han sido actualizado para admitir aún las especificaciones de formato de archivo necesario.
 
 ### <a name="supporting-wide-color-with-asset-catalogs"></a>Compatibilidad con Color amplia con catálogos de activos
 
-En iOS 10 y macOS Sierra, Apple ha ampliado los catálogos de recurso utilizado para incluir y clasificar el contenido de las imágenes estáticas en el paquete de la aplicación para admitir color amplia.
+En iOS 10 y macOS Sierra, Apple ha ampliado el catálogos de recursos usa para incluir y clasificación de contenido de imagen estática de lote de la aplicación para admitir color amplia.
 
-Con catálogos de activos ofrecen las siguientes ventajas a una aplicación:
+Uso de los catálogos de activos proporcionan las siguientes ventajas a una aplicación:
 
 - Proporcionan la mejor opción de implementación para los activos de imagen estática.
-- Admite la corrección de color automático.
+- Admite la corrección del color automático.
 - Admiten la optimización de formato de píxel automática.
-- Admiten la segmentación de datos de aplicación y reducción de aplicación, lo que garantiza que sólo el contenido relevante get se entregue al dispositivo del usuario final.
+- Admiten App segmentación y reducción de aplicación, lo que garantiza que solo el contenido que es relevante de get se entrega al dispositivo del usuario final.
 
-Apple ha realizado las siguientes mejoras en catálogos de activos para la compatibilidad de color amplia:
+Apple ha realizado las siguientes mejoras en catálogos de recursos para obtener soporte técnico de color amplia:
 
 - Admite el contenido de origen de 16 bits (por canal de color).
-- Admite el contenido de catalogación por gama de colores de pantalla. Se puede etiquetar contenido para el sRGB o gamas de presentación P3.
+- Admite el contenido de catalogación mediante la gama de colores de visualización. Contenido se puede etiquetar de pantalla P3 gamas o sRGB.
 
-El desarrollador tiene tres opciones para admitir contenido de color amplia en sus aplicaciones:
+El desarrollador tiene tres opciones para la compatibilidad con contenido en color amplia en sus aplicaciones:
 
-1. **No hacer nada** -puesto que el contenido de color amplia sólo debe utilizarse en situaciones donde la aplicación necesita para mostrar colores vivos (donde mejorará la experiencia del usuario), debería quedar dejarse contenido fuera de este requisito-es. Continuarán puede representarse correctamente en todas las situaciones de hardware.
-2. **Actualizar el contenido a mostrar P3** -Esto exige al programador reemplazar el contenido de imagen existente en su catálogo de activos con un archivo nuevo y actualizado en el formato de P3 y etiquetarlo como tal en el Editor activo. En tiempo de compilación, se generará una imagen derivado sRGB en estos activos.
-3. **Proporcionar contenido de activos con optimización para** -en este caso, el desarrollador proporcionará un sRGB de 8 bits y una visión de P3 de presentación de 16 bits de cada imagen en el catálogo de activos (etiquetado correctamente en el editor activo).
+1. **No hacer nada** -dado que el contenido en color amplia solo debe usarse en situaciones donde la aplicación debe mostrar colores vivos (donde mejorará la experiencia del usuario), el contenido fuera de este requisito debe dejarse como-es. Continuarán representarse correctamente en todas las situaciones de hardware.
+2. **Actualizar el contenido existente a la pantalla P3** -Esto requiere que el desarrollador reemplazar el contenido de imagen existente en su catálogo de recursos con un archivo nuevo y actualizado en el formato de P3 y etiquetarla como tal en el Editor activo. En tiempo de compilación, se generará una imagen derivados sRGB de estos recursos.
+3. **Proporcionar contenido optimizado de activos** -en este caso, el desarrollador proporcionará un sRGB de 8 bits y una visión de la pantalla P3 de 16 bits de cada imagen en el catálogo de activos (etiquetado correctamente en el editor de recursos).
 
 ### <a name="asset-catalog-deployment"></a>Implementación del catálogo de activos
 
-Se producirá lo siguiente cuando el desarrollador envía una aplicación a la tienda de aplicaciones con catálogos de activos que incluya contenido de la imagen de color amplia:
+Se producirá lo siguiente cuando el desarrollador envía una aplicación en el Store de la aplicación con los catálogos de recursos que incluyen contenido de la imagen de color amplia:
 
-- Cuando se implemente la aplicación para el usuario final, la segmentación de aplicación se asegurará de que se entrega solo la variante de contenido adecuada para el dispositivo del usuario.
-- En dispositivos que no son compatibles con color amplia, no hay ningún costo de carga para incluir el contenido de color amplia, tal y como lo nunca se envía al dispositivo.
-- `NSImage` en Mac OS Sierra (y versiones posteriores) seleccionará automáticamente la mejor representación contenida para la presentación del hardware.
+- Cuando la aplicación se implementa para el usuario final, la segmentación de la aplicación garantizará que se entrega solo la variante de contenido adecuada para el dispositivo del usuario.
+- En el dispositivo que no son compatibles con color amplia, no hay ningún costo de carga para incluir contenido en color amplia, nunca está incluido en el dispositivo.
+- `NSImage` en macOS Sierra (y versiones posteriores) seleccionará automáticamente la mejor representación de contenido para la presentación del hardware.
 - El contenido mostrado se actualizarán automáticamente cuando o si el hardware de dispositivos muestra el cambio de características.
 
-### <a name="asset-catalog-storage"></a>Almacenamiento de información de catálogo de activos
+### <a name="asset-catalog-storage"></a>Almacenamiento del catálogo de activos
 
-Almacenamiento de información de catálogo de Asset tiene las propiedades y las implicaciones para las aplicaciones siguientes:
+Almacenamiento del catálogo activo tiene implicaciones para una aplicación y propiedades siguientes:
 
 - En tiempo de compilación, Apple intenta optimizar el almacenamiento de contenido de la imagen a través de las conversiones de imágenes de alta calidad.
-- se utilizan 16 bits por canal de color para el contenido de color amplia.
-- Compresión de contenido de imagen dependiente se utiliza para reducir los tamaños entregas de contenido. Se agregaron nuevos compresiones "pérdidas" para optimizar aún más los tamaños de contenido.
+- se usan 16 bits por canal de color para el contenido de color amplia.
+- Compresión de imágenes dependientes se usa para reducir los tamaños de contenido de entrega de contenido. Se han agregado nuevas compresiones "con pérdida de datos" para optimizar aún más el contenido de los tamaños.
 
 ## <a name="colors-in-user-interfaces"></a>Colores de las Interfaces de usuario
 
-Cuando se trabaja con los colores de una interfaz de usuario, la mayoría de los píxeles en pantalla está en un color sólido. Además, la mayoría de estos píxeles no se derivan de activos de imágenes, pero se dibuja directamente por la aplicación (o por el sistema operativo en el nombre de la aplicación).
+Cuando se trabaja con los colores de una interfaz de usuario, la mayoría de los píxeles en pantalla está en un color sólido. Además, la mayoría de estos píxeles no proceden de los recursos de imágenes, pero se dibuja directamente por la aplicación (o por el sistema operativo en el nombre de la aplicación).
 
 Color de la amplia gama de colores puede presentar varios desafíos cuando se trabaja en el nivel de interfaz de usuario:
 
-- **Comunicación colores** : si hablamos de color entre los diseñadores y desarrolladores normalmente un _supone_ sRGB implicado de espacio de colores. Por lo que se puede comunicar un color como `rgb(128, 45, 56)` o `#FF0456`. En un diseño de la amplia gama de colores, estas representaciones no proporcionan información suficiente para representar con exactitud el color especificado, también se debe incluir el espacio de Color de trabajo. Apple sugiere utilizando `P3(128, 45, 56)` y `P3#FF0456` en su lugar. 
-- **Seleccionar colores** : la mayoría de la edición de imágenes populares y el diseño software sufren las mismas limitaciones que el espacio de Color sRGB al utilizar los selectores de colores integrada. El diseñador debe asegurarse de que se encuentran en el espacio de Color "Mostrar P3" en el selector de colores al trabajar con diseños de color amplia.
-- **Codificación de colores** : ambos `NSColor` (macOS) y `UIColor` (iOS & tvOS) tiene nuevos métodos de conveniencia para generar colores P3 directamente y ambos se han ampliado para admitir los colores en el espacio de Color sRGB de rango extendido también.
-- **Almacenamiento de los colores** -debe tener cuidado al almacenar amplia gama de colores colorea de documento de una aplicación. Donde 8 bits por canal de color funcionado bien para el espacio de color sRGB, deben utilizarse 16 bits por canal de color para los colores ancho. El desarrollador también debe controlar instancias de espacio de colores asumido (ya que todo estaba tradicionalmente sRGB solo).
+- **Comunicación colores** : al hablar de color entre los diseñadores y desarrolladores suele haber una _supone_ sRGB implica de espacio de colores. Es posible que se comunica un color como `rgb(128, 45, 56)` o `#FF0456`. En un diseño de la amplia gama de colores, estas representaciones no proporcionan información suficiente para representar con exactitud el color especificado, también se debe incluir el espacio de colores de trabajo. Apple sugiere el uso de `P3(128, 45, 56)` y `P3#FF0456` en su lugar. 
+- **Seleccionar colores** : la mayor parte de la edición de imágenes populares y el diseño de software sufren las mismas limitaciones que el espacio de Color sRGB al usar los selectores de colores integrada. El diseñador debe asegurarse de que se encuentran en el espacio de colores "Pantalla P3" en el selector de colores al trabajar con diseños de color amplia.
+- **Codificación de colores** : ambos `NSColor` (macOS) y `UIColor` (iOS y tvOS) tiene nuevos métodos de conveniencia para generar los colores de P3 directamente y ambos se han ampliado para admitir los colores en el espacio de Color sRGB de rango ampliado también.
+- **Almacenamiento de los colores** -debe tener cuidado al almacenar amplia gama de colores en el documento de una aplicación. Donde los 8 bits por canal de color funcionado bien para el espacio de color sRGB, 16 bits por canal de color se deben usar para los colores amplios. El desarrollador debe también esté atento a las instancias de espacio de colores asumido (ya que todo lo que tradicionalmente era sRGB solo).
 
-## <a name="colors-on-the-web"></a>Colores en la Web
+## <a name="colors-on-the-web"></a>Colores de la Web
 
-Se debe tener cuidado al trabajar con color amplia en páginas web y en dispositivos que admiten la presentación de color amplia. Si se ha etiquetado correctamente todo el contenido de imagen que se ha incluido en el sitio Web, iOS y Mac OS automáticamente coincidencia de color y mostrarlos correctamente.
+Debe tener cuidado al trabajar con colores amplia en páginas web y en dispositivos que admiten la presentación en color amplia. Si se ha etiquetado correctamente todo el contenido de imagen que se ha incluido en el sitio Web, iOS y macOS automáticamente coincidencia de color y mostrarlos correctamente.
 
-También están disponibles para ayudar a resolver activos entre P3 y sRGB dispositivos compatibles con las consultas de medios:
+También están disponibles para ayudar a resolver activos entre P3 y sRGB de los dispositivos compatibles con las consultas de medios:
 
 ```xml
 <picture>
@@ -256,17 +256,17 @@ También están disponibles para ayudar a resolver activos entre P3 y sRGB dispo
 </picture>
 ```
 
-Apple tiene también una propuesta de WebKit que le permitirá CSS en otros espacios de Color además el espacio asumido sRGB.
+Apple también tiene una propuesta de WebKit que permitirá CSS que se especifique en otros espacios de colores además el espacio asumido sRGB.
 
-## <a name="rendering-off-screen-images-in-app"></a>Representar imágenes fuera de la pantalla de aplicación
+## <a name="rendering-off-screen-images-in-app"></a>Representar imágenes fuera de la pantalla en la aplicación
 
-Según el tipo de aplicación que se está creando, podría permitir al usuario que incluya contenido de la imagen que han recopilado desde internet o creación el contenido de la imagen directamente dentro de la aplicación (por ejemplo, un dibujo vectorial aplicación por ejemplo).
+Según el tipo de aplicación que se está creando, podría permitir al usuario que incluya contenido de la imagen que han recopilado desde internet o creación contenido de la imagen directamente dentro de la aplicación (por ejemplo, un dibujo vectorial app por ejemplo).
 
-En ambos casos, la aplicación puede representar las imágenes necesarias fuera de la pantalla de color amplia mediante mejoradas características agregadas a iOS y Mac OS.
+En ambos casos, la aplicación puede representar las imágenes necesarias fuera de la pantalla en color amplio uso de características mejoradas que se agregó a iOS y macOS.
 
-### <a name="drawing-wide-color-in-ios"></a>Dibujo de Color amplia en iOS
+### <a name="drawing-wide-color-in-ios"></a>Color amplio de dibujo en iOS
 
-Antes de hablar sobre cómo dibujar correctamente una imagen de color amplia en iOS 10, eche un vistazo al código de dibujo iOS comunes siguientes:
+Antes de explicar cómo dibujar una imagen de color amplia correctamente en iOS 10, eche un vistazo al código de dibujo iOS comunes siguientes:
 
 ```csharp
 public UIImage DrawWideColorImage ()
@@ -281,13 +281,13 @@ public UIImage DrawWideColorImage ()
 }
 ```
 
-Hay problemas con el código estándar que será necesario llevarla a cabo _antes de_ se puede utilizar para dibujar una imagen de color amplia. El `UIGraphics.BeginImageContext (size)` método usado para iniciar el dibujo de la imagen de iOS tiene las siguientes limitaciones:
+Hay problemas con el código estándar que deberá solucionarse _antes_ se puede usar para dibujar una imagen de color amplia. El `UIGraphics.BeginImageContext (size)` método usado para iniciar el dibujo de imagen de iOS tiene las siguientes limitaciones:
 
 - No puede crear contextos de imagen con más de 8 bits por canal de color.
-- No puede representar colores en el espacio de Color sRGB de rango extendido.
-- No tiene la capacidad para proporcionar una interfaz para crear contextos en un espacio de colores sRGB no debido a las rutinas de C de bajo nivel que se llama en segundo plano.
+- No puede representar los colores en el espacio de Color sRGB de rango ampliado.
+- No tiene la capacidad para proporcionar una interfaz para crear contextos en un espacio de colores no sRGB debido a las rutinas de C de bajo nivel que se llama en segundo plano.
 
-Para administrar estas limitaciones y dibujar una imagen de color amplia en 10 de iOS, utilice en su lugar, el código siguiente:
+Para controlar estas limitaciones y dibujar una imagen de color amplia en iOS 10, use el siguiente código en su lugar:
 
 ```csharp
 public UIImage DrawWideColorImage ()
@@ -315,22 +315,22 @@ public UIImage DrawWideColorImage ()
 }
 ```
 
-El nuevo `UIGraphicsImageRenderer` clase crea un nuevo contexto de la imagen que es capaz de controlar el espacio de Color sRGB de rango extendido y tiene las siguientes características:
+El nuevo `UIGraphicsImageRenderer` clase crea un nuevo contexto de la imagen que es capaz de controlar el espacio de Color sRGB de rango ampliado y tiene las siguientes características:
 
-- Es totalmente color administrado de forma predeterminada.
-- Es compatible con el espacio de Color sRGB de rango extendido de forma predeterminada.
-- Determina de manera inteligente si deben representarse en el sRGB o rango extendido sRGB según las capacidades del dispositivo iOS que la aplicación se ejecuta en el espacio de colores.
-- Completamente y automáticamente administra el contexto de la imagen (`CGContext`) duración, por lo que el programador no tiene que preocuparse de que realiza la llamada comienzan y terminan comandos contextuales.
+- Es totalmente administrado de forma predeterminada el color.
+- Es compatible con el espacio de Color sRGB de rango ampliado de manera predeterminada.
+- Determina de manera inteligente si debe representar en el sRGB o sRGB de rango ampliado según las capacidades del dispositivo iOS que se ejecuta la aplicación en el espacio de colores.
+- Totalmente y automáticamente administra el contexto de la imagen (`CGContext`) duración, por lo que el desarrollador no tiene que preocuparse sobre cómo llamar a begin y end comandos de contexto.
 - Es compatible con la `UIGraphics.GetCurrentContext()` método.
 
 El `CreateImage` método de la `UIGraphicsImageRenderer` clase se llama para crear una imagen de color amplia y se pasa con el contexto de la imagen para dibujar en un controlador de finalización. Todo el dibujo se realiza dentro de este controlador de finalización como sigue:
 
-- El `UIColor.FromDisplayP3` método crea un nuevo color rojo saturado dentro de la amplia gama de espacio de colores de pantalla P3 y se utiliza para dibujar la primera mitad del rectángulo. 
-- La segunda mitad del rectángulo se dibuja en el sRGB normal totalmente saturado color rojo para la comparación.
+- El `UIColor.FromDisplayP3` método crea un nuevo color rojo saturado en la amplia gama de espacio de colores de pantalla P3 y se usa para dibujar la primera mitad del rectángulo. 
+- La segunda mitad del rectángulo se dibuja en el normal sRGB totalmente saturado en color rojo para la comparación.
 
-### <a name="drawing-wide-color-in-macos"></a>Dibujo de Color amplia en macOS
+### <a name="drawing-wide-color-in-macos"></a>Color amplio de dibujo en macOS
 
-La `NSImage` clase se ha expandido en macOS Sierra para admitir el dibujo de imágenes de Color amplia. Por ejemplo:
+La `NSImage` clase se ha ampliado en macOS Sierra para admitir el dibujo de imágenes de Color amplia. Por ejemplo:
 
 ```csharp
 var size = CGSize(250,250);
@@ -348,13 +348,13 @@ var wideColorImage = new NSImage(size, false, (drawRect) =>{
 });
 ```
 
-## <a name="rendering-on-screen-images-in-app"></a>Representación en pantalla imágenes de aplicación
+## <a name="rendering-on-screen-images-in-app"></a>Representación en pantalla de imágenes en la aplicación
 
-Para representar imágenes de color amplia en la pantalla, el proceso funciona de forma similar a dibujar una imagen de color amplia fuera de la pantalla para iOS presentada anteriormente y macOS.
+Para representar las imágenes de color amplia en pantalla, el proceso funciona de manera similar a dibujar una imagen fuera de la pantalla de color amplia para macOS e iOS presentadas más arriba.
 
-### <a name="rendering-on-screen-in-ios"></a>Representación en pantalla de iOS
+### <a name="rendering-on-screen-in-ios"></a>Representación en pantalla en iOS
 
-Cuando la aplicación necesita representar una imagen en color amplia en pantalla en iOS, invalidar la `Draw` método de la `UIView` en cuestión como de costumbre. Por ejemplo:
+Si la aplicación necesita representar una imagen en color amplia en pantalla en iOS, reemplazar el `Draw` método de la `UIView` en cuestión como de costumbre. Por ejemplo:
 
 ```csharp
 using System;
@@ -380,15 +380,15 @@ namespace MonkeyTalk
 }
 ``` 
 
-Igual con iOS 10 el `UIGraphicsImageRenderer` clase mostrado anteriormente, de forma inteligente decide si deben representarse en el sRGB o rango extendido sRGB espacio de colores en función de las capacidades del dispositivo iOS que se ejecuta la aplicación cuando el `Draw` se llama al método. Además, la `UIImageView` ha sido color administrado desde iOS 9.3.
+Como con iOS 10 el `UIGraphicsImageRenderer` clase mostrado anteriormente, de manera inteligente si debe representar en el sRGB o sRGB de rango ampliado según las capacidades del dispositivo iOS que se ejecuta la aplicación cuando el espacio de colores del `Draw` se llama al método. Además, la `UIImageView` ha sido color administrado desde iOS 9.3.
 
-Si la aplicación necesita saber cómo se realiza la representación en un `UIView` o `UIViewController`, puede comprobar la nueva `DisplayGamut` propiedad de la `UITraitCollection` clase. Este valor será una `UIDisplayGamut` enum de las acciones siguientes:
+Si la aplicación necesita saber cómo se realiza la representación en un `UIView` o `UIViewController`, puede comprobar el nuevo `DisplayGamut` propiedad de la `UITraitCollection` clase. Este valor será una `UIDisplayGamut` enumeración de las acciones siguientes:
 
 - P3
 - SRGB
 - Sin especificar
 
-Si desea que la aplicación para controlar qué espacio de Color se utiliza para dibujar una imagen, puede usar una nueva `ContentsFormat` propiedad de la `CALayer` para especificar el espacio de Color deseado. Este valor puede ser un `CAContentsFormat` enum de las acciones siguientes:
+Si desea que la aplicación para controlar qué espacio de colores se usa para dibujar una imagen, puede usar un nuevo `ContentsFormat` propiedad de la `CALayer` para especificar el espacio de Color deseado. Este valor puede ser un `CAContentsFormat` enumeración de las acciones siguientes:
 
 - Gray8Uint
 - Rgba16Float
@@ -396,7 +396,7 @@ Si desea que la aplicación para controlar qué espacio de Color se utiliza para
 
 ### <a name="rendering-on-screen-in-macos"></a>Representación en pantalla en macOS
 
-Cuando la aplicación necesita representar una imagen en color amplia en pantalla en Mac OS, invalidar la `DrawRect` método de la `NSView` en cuestión como de costumbre. Por ejemplo:
+Cuando la aplicación necesita representar una imagen en color amplia en pantalla en macOS, reemplazar el `DrawRect` método de la `NSView` en cuestión como de costumbre. Por ejemplo:
 
 ```csharp
 using System;
@@ -423,9 +423,9 @@ namespace MonkeyTalkMac
 }
 ```
 
-De nuevo, determina de manera inteligente si deben representarse en el sRGB o rango extendido sRGB según las capacidades del hardware de Mac que se ejecuta la aplicación cuando el espacio de colores del `DrawRect` se llama al método.
+De nuevo, decide de forma inteligente si debe representar en el sRGB o sRGB de rango ampliado según las capacidades del hardware de Mac que se ejecuta la aplicación cuando el espacio de colores del `DrawRect` se llama al método.
 
-Si desea que la aplicación para controlar qué espacio de Color se utiliza para dibujar una imagen, puede usar una nueva `DepthLimit` propiedad de la `NSWindow` clase para especificar el espacio de Color deseado. Este valor puede ser un `NSWindowDepth` enum de las acciones siguientes:
+Si desea que la aplicación para controlar qué espacio de colores se usa para dibujar una imagen, puede usar un nuevo `DepthLimit` propiedad de la `NSWindow` clase para especificar el espacio de Color deseado. Este valor puede ser un `NSWindowDepth` enumeración de las acciones siguientes:
 
 - OneHundredTwentyEightBitRgb
 - SixtyfourBitRgb
@@ -433,7 +433,7 @@ Si desea que la aplicación para controlar qué espacio de Color se utiliza para
 
 ## <a name="summary"></a>Resumen
 
-En este artículo ha cubierto color amplia y las formas que se pueden implementarse y utilizarse dentro de una aplicación Xamarin.iOS o Xamarin.Mac.
+En este artículo ha cubierto color amplio y las formas que se pueden implementarse y utilizarse dentro de una aplicación Xamarin.iOS o Xamarin.Mac.
 
 
 

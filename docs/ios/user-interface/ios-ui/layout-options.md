@@ -1,37 +1,37 @@
 ---
 title: Opciones de diseño de Xamarin.iOS
-description: Este documento describe diferentes maneras de diseñar interfaces de usuario en Xamarin.iOS. Se trata de cambiar automáticamente el tamaño y diseño automático.
+description: Este documento describen los diferentes métodos para diseñar interfaces de usuario de Xamarin.iOS. Describe el ajuste automático de tamaño y el diseño automático.
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: bad29eae308c8ca9f7228a1cbdfd69940894cf34
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: b35149028763691c17fe526673d023cc9b707c28
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34790121"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116659"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opciones de diseño de Xamarin.iOS
 
 Hay dos mecanismos diferentes para controlar el diseño cuando se cambia el tamaño o girar una vista:
 
--  **Cambiar automáticamente el tamaño** : cambiar automáticamente el tamaño del inspector en el diseñador proporciona una manera de establecer el `AutoresizingMask` propiedades. Esto le permitirá un control se acoplan a los bordes de su contenedor o corregir su tamaño. Cambiar automáticamente el tamaño funciona en todas las versiones de iOS. Esto se describe con más detalle a continuación
--  **Diseñar automáticamente** : una nueva característica de iOS 6 que permite el control exhaustivo sobre las relaciones de los controles de interfaz de usuario. Permitirá el control de las posiciones de los elementos con respecto a otros elementos en la superficie de diseño. En este tema se trata con más detalle en la [Autodiseño con el Diseñador de iOS de Xamarin](~/ios/user-interface/designer/designer-auto-layout.md) guía.
+-  **Cambiar el tamaño automáticamente** : ajuste automático de tamaño el inspector en el diseñador proporciona una manera de establecer el `AutoresizingMask` propiedades. Esto permitirá que un control se acoplan a los bordes de su contenedor y corregir su tamaño. Tamaño automático funciona en todas las versiones de iOS. Esto se describe más detalladamente a continuación
+-  **Diseño automático** : una nueva característica de iOS 6 que permite un mayor control sobre las relaciones de los controles de interfaz de usuario. Permitirá que el control de las posiciones de los elementos con respecto a otros elementos en la superficie de diseño. Este tema se trata con más detalle en la [diseño automático con el Diseñador de iOS de Xamarin](~/ios/user-interface/designer/designer-auto-layout.md) guía.
 
-## <a name="autosizing"></a>Cambiar automáticamente el tamaño
+## <a name="autosizing"></a>Cambiar el tamaño automáticamente
 
-Cuando un usuario cambia el tamaño de una ventana, por ejemplo, cuando se gira el dispositivo y los cambios de orientación, el sistema cambiará automáticamente el tamaño de las vistas dentro de esa ventana según sus reglas de ajuste automático de tamaño. Estas reglas se pueden establecer en C# con el `AutoresizingMask` propiedad de la `UIView` o en la **panel de propiedades** del iOS diseñador, como se muestra a continuación:
+Cuando un usuario cambia el tamaño de una ventana, como cuando se gira el dispositivo y los cambios de orientación, el sistema automáticamente cambiará el tamaño de las vistas dentro de esa ventana según sus reglas de ajuste automático de tamaño. Estas reglas se pueden establecer en C# utilizando el `AutoresizingMask` propiedad de la `UIView` o en el **panel de propiedades** de iOS Designer, como se muestra a continuación:
 
  [![](layout-options-images/image41.png "Visual Studio para Mac Diseñador")](layout-options-images/image41.png#lightbox)
 
-Cuando se selecciona un control, esto le permite especificar manualmente la ubicación y las dimensiones del control, así como elegir **cambiar automáticamente el tamaño** comportamiento. Como se muestra en la siguiente captura de pantalla, podemos utilizar la springs y struts en el control de ajuste automático de tamaño para definir la relación de la vista seleccionada a su elemento primario:
+Cuando se selecciona un control, esto le permite especificar manualmente la ubicación y las dimensiones del control, así como elegir **ajuste automático de tamaño** comportamiento. Como se muestra en la siguiente captura de pantalla, podemos usar el springs y struts en el control de tamaño automático para definir la relación de la vista seleccionada a su elemento principal:
 
  [![](layout-options-images/image42.png "Visual Studio para Mac Diseñador")](layout-options-images/image42.png#lightbox)
 
-Ajustar un *primavera* hará que la vista cambiar el tamaño en función del ancho o alto de esta vista primaria. Ajustar un *strut* hará que la vista de mantener una distancia constante entre él y su vista primaria, en ese extremo concreto.
+Ajustar un *spring* hará que la vista cambiar el tamaño según el ancho o alto de esta vista primaria. Ajustar un *strut* hará que la vista de mantener una distancia constante entre él y su vista primaria, en dicho borde determinado.
 
 Esta configuración también puede establecerse en el código:
 
@@ -41,11 +41,11 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAut
 ```
 
 
-Para probar la configuración de ajuste automático de tamaño, habilitar diferentes **admite orientaciones de dispositivo** en las opciones del proyecto:
+Para probar la configuración de ajuste automático de tamaño, habilitar diferentes **orientaciones de dispositivos compatibles** en las opciones del proyecto:
 
  [![](layout-options-images/image43a.png "Configuración de ajuste automático de tamaño")](layout-options-images/image43a.png#lightbox)
 
-Podemos utilizar el código siguiente, que hace que los controles de dos texto que se va a cambiar el tamaño horizontalmente en el código subyacente:
+Podemos usar el código siguiente, que hace que el texto de dos controles cambiar el tamaño horizontalmente en el código subyacente:
 
 ```csharp
 textview1.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
@@ -54,15 +54,15 @@ imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutor
 ```
 
 
-También podemos ajustar los controles mediante el diseñador. Al seleccionar el struts como se muestra a continuación hará que la imagen a permanecen alineados a la derecha sin recortarla la parte inferior de la vista:
+También podemos ajustar los controles mediante el diseñador. Seleccionar el struts como se muestra a continuación hará que la imagen permanezca alineado a la derecha sin que se recorta la parte inferior de la vista:
 
  [![](layout-options-images/autoresize.png "Rotación automática")](layout-options-images/autoresize.png#lightbox)
 
-Estas capturas de pantalla muestran cómo cambiar el tamaño de los controles o la ubicación de por sí mismos cuando se gira la pantalla:
+Estas capturas de pantalla muestran cómo cambiar el tamaño de los controles o la ubicación a sí mismos cuando se gira la pantalla:
 
  [![](layout-options-images/image44a.png "Rotación automática")](layout-options-images/image44a.png#lightbox)
 
-Tenga en cuenta que la vista de texto y el campo de texto tanto se estiran para mantener la misma izquierda y derecha de los márgenes, debido a la `FlexibleWidth` configuración. La imagen tiene el superior e izquierdo margen flexible, lo que significa que conserva la parte inferior y el margen derecho: mantener la imagen en la vista cuando se gira la pantalla. Diseños complejos suelen requieran una combinación de estos valores en cada control visible para mantener la coherencia de la interfaz de usuario y para impedir que los controles que se superponen cuando cambian los límites de la vista (debido a la rotación u otro evento de cambio de tamaño).
+Tenga en cuenta que la vista de texto y el campo de texto se ajustan para mantener la misma deja tanto a la derecha de los márgenes, debido a la `FlexibleWidth` configuración. La imagen tiene el superior e izquierdo margen flexible, lo que significa que conserva la parte inferior y el margen derecho: mantener la imagen en la vista cuando se gira la pantalla. Diseños complejos suelen requieran una combinación de estas opciones en todos los controles visibles para mantener la coherencia de la interfaz de usuario y para impedir que los controles se superpongan cuando cambian los límites de la vista (debido a una rotación u otro evento de cambio de tamaño).
 
 
 

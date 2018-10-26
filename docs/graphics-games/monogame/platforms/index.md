@@ -1,21 +1,21 @@
 ---
 title: Consideraciones específicas de plataforma MonoGame
-description: Vínculos de este documento a una guía que describe cómo usar MonoGame en UWP. La guía vinculada describe cómo configurar una aplicación, ejecutarla en Xbox One, contenido de referencia y mucho más.
+description: Este documento incluye vínculos a una guía que describe cómo usar MonoGame en UWP. La guía vinculada describe cómo configurar una aplicación, ejecutarla en Xbox One, el contenido de referencia y mucho más.
 ms.prod: xamarin
 ms.assetid: 36EF35F2-882C-4DCF-A95D-A36EFA47BCCC
-author: charlespetzold
-ms.author: chape
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 6781634210096fdd427f731d172218c80409866b
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 113ea7fe2224d311d854076847e8e933f11551a2
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34783222"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50113799"
 ---
 # <a name="monogame-platform-specific-considerations"></a>Consideraciones específicas de plataforma MonoGame
 
 ## <a name="monogame-on-universal-windows-platform-uwpgraphics-gamesmonogameplatformsuwpmd"></a>[MonoGame en la plataforma Universal de Windows (UWP)](~/graphics-games/monogame/platforms/uwp.md)
 
-Este tutorial explica la creación del proyecto de plataforma Universal de Windows (UWP) de MonoGame y carga de contenido. Aplicaciones UWP se pueden ejecutar en todos los dispositivos de Windows 10, incluidos los equipos de escritorio, tabletas, Windows Phone y Xbox One.
+Este tutorial describe la creación de un proyecto MonoGame Universal Windows Platform (UWP) y carga de contenido. Pueden ejecutar las aplicaciones para UWP en todos los dispositivos de Windows 10, incluidos equipos de escritorio, tabletas, teléfonos Windows y Xbox One.
 

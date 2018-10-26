@@ -1,32 +1,32 @@
 ---
 title: Eventos de toque y gestos en Xamarin.iOS
-description: Este documento describe cómo trabajar con eventos touch, multitoque, gestos, varios movimientos y gestos personalizados en las aplicaciones de Xamarin.iOS.
+description: Este documento describe cómo trabajar con eventos de toque, multitoque, gestos, varios movimientos y gestos personalizados en aplicaciones de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 34073474ef3ef74f2fddbf487b3377224dc1aa3e
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f7160c48e1b1ac85f4aa0173c0eb9f42b8fefca2
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34784594"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114774"
 ---
 # <a name="touch-events-and-gestures-in-xamarinios"></a>Eventos de toque y gestos en Xamarin.iOS
 
-Es importante comprender los eventos de toque y se describe la API en una aplicación de iOS, ya que son esenciales para todas las interacciones con el dispositivo físicas. Todas las interacciones táctiles implican una `UITouch` objeto. En este artículo se obtendrá información sobre cómo usar la `UITouch` clase y sus API para admitir la entrada táctil. Más adelante, se expandirá en nuestro conocimiento para obtener información sobre cómo admitir movimientos.
+Es importante comprender los eventos de toque y las API de contacto en una aplicación de iOS, ya que son fundamentales para todas las interacciones con el dispositivo físicas. Todas las interacciones táctiles implican un `UITouch` objeto. En este artículo, obtendrá información sobre cómo usar el `UITouch` clase y sus API para admitir la interacción. Más adelante, se expandirá en nuestro conocimiento para obtener información sobre cómo admitir gestos.
 
-## <a name="enabling-touch"></a>Habilitar la entrada táctil
+## <a name="enabling-touch"></a>Habilitación de Touch
 
-Controles de `UIKit` son: las subclases de control: por lo que depende de interacción del usuario que tienen movimientos integradas en UIKit y, por tanto, no es necesario habilitar la interacción táctil. Ya está habilitado.
+Los controles en `UIKit` son: las subclases de control: por lo que depende de la interacción del usuario que tienen los gestos integrados en UIKit y, por tanto, no es necesario habilitar la interacción táctil. Ya está habilitado.
 
-Sin embargo, muchas de las vistas en `UIKit` no tiene pantalla táctil de forma predeterminada. Hay dos maneras de habilitar la interacción táctil de un control. La primera manera consiste en comprobar la casilla habilitado de interacción de usuario en el panel de propiedades del diseñador, iOS como se muestra en la siguiente captura de pantalla:
+Sin embargo, muchas de las vistas de `UIKit` no tiene interacción habilitada de forma predeterminada. Hay dos maneras de habilitar la interacción táctil en un control. La primera manera es activar la casilla habilitado de interacción de usuario en el panel de propiedades de iOS Designer, tal como se muestra en la siguiente captura de pantalla:
 
  [![](touch-in-ios-images/image1.png "Active la casilla habilitado de interacción de usuario en el panel de propiedades del Diseñador de iOS")](touch-in-ios-images/image1.png#lightbox)
 
-También se puede usar un controlador para establecer el `UserInteractionEnabled` propiedad en true en un `UIView` clase. Esto es necesario si la interfaz de usuario se crea en el código.
+También podemos usar un controlador para establecer el `UserInteractionEnabled` propiedad en true en un `UIView` clase. Esto es necesario si se crea la interfaz de usuario en el código.
 
 La siguiente línea de código es un ejemplo:
 
@@ -36,18 +36,18 @@ imgTouchMe.UserInteractionEnabled = true;
 
 ## <a name="touch-events"></a>Eventos de funciones táctiles
 
-Hay tres fases de táctiles que se producen cuando el usuario toca la pantalla, mueve el dedo o quita su dedo. Estos métodos se definen en `UIResponder`, que es la clase base para UIView. iOS invalidará los métodos asociados en el `UIView` y `UIViewController` para controlar la entrada táctil:
+Hay tres fases de la función táctil que se producen cuando el usuario toca la pantalla, su dedo mueve o elimina su dedo. Estos métodos se definen en `UIResponder`, que es la clase base para UIView. iOS invalidará los métodos asociados en el `UIView` y `UIViewController` para controlar la interacción:
 
 -  `TouchesBegan` : Esto se denomina cuando primero se toca la pantalla.
--  `TouchesMoved` : Esto se llama cuando la ubicación de los cambios de táctil que el usuario esté desplazando los dedos alrededor de la pantalla.
--  `TouchesEnded` o `TouchesCancelled` : `TouchesEnded` se llama cuando se elevación los dedos del usuario fuera de la pantalla.  `TouchesCancelled` se invoca si iOS cancela la entrada táctil: por ejemplo, si un usuario diapositivas su mano fuera de un botón para cancelar la acción de presionar una.
+-  `TouchesMoved` : Esto se llama cuando la ubicación de los cambios táctil como el usuario esté desplazando los dedos alrededor de la pantalla.
+-  `TouchesEnded` o `TouchesCancelled` – `TouchesEnded` se llama cuando los dedos del usuario se levantan fuera de la pantalla.  `TouchesCancelled` se llama si iOS cancela el touch, por ejemplo, si un usuario desliza sonará su dedo fuera de un botón para cancelar la acción de presionar una.
 
 
-Toque eventos de forma recursiva de desplazamiento hacia abajo por la pila de UIViews, para comprobar si el evento de entrada táctil está dentro de los límites de un objeto de vista. Esto se suele denominar _la prueba de posicionamiento_. En primer lugar se llamará en el nivel superior `UIView` o `UIViewController` y, a continuación, se llamará en el `UIView` y `UIViewControllers` por debajo de ellos en la jerarquía de vista.
+Toque los eventos de forma recursiva de viaje hacia abajo a través de la pila de UIViews, para comprobar si el evento de toque está dentro de los límites de un objeto de vista. Esto se suele denominar _la prueba de posicionamiento_. En primer lugar se llamará en el primer `UIView` o `UIViewController` y, a continuación, se llamará el `UIView` y `UIViewControllers` por debajo de ellas en la jerarquía de vistas.
 
-Un `UITouch` se creará objeto cada vez que el usuario toca la pantalla. La `UITouch` objeto incluye datos sobre la entrada táctil, como cuando se produjo la entrada táctil, que se produjo, si la entrada táctil es una deslice el dedo, etcetera. Los eventos de toque se pasan a una propiedad de los últimos retoques – un `NSSet` que contiene uno o más dispositivos táctiles. Podemos usar esta propiedad para obtener una referencia a una entrada táctil y determinar la respuesta de la aplicación.
+Un `UITouch` se creará objeto cada vez que el usuario toca la pantalla. La `UITouch` objeto incluye datos sobre la entrada táctil, como cuando se produjo la entrada táctil, donde se produjo, si la entrada táctil era un dedo, etcetera. Los eventos de toque se pasan a una propiedad de un toque: un `NSSet` que contiene uno o varios toques. Podemos usar esta propiedad para obtener una referencia a una entrada táctil y determinar la respuesta de la aplicación.
 
-Las clases que reemplazar uno de los eventos de toque deben llamar primero a la implementación base y, a continuación, obtener la `UITouch` objeto asociado al evento. Para obtener una referencia al primer toque, llame a la `AnyObject` propiedad y convertirla a una `UITouch` como presentación en el ejemplo siguiente:
+Las clases que reemplazar uno de los eventos de toque, deben llamar primero a la implementación base y, a continuación, obtenga el `UITouch` objeto asociado al evento. Para obtener una referencia al primer toque, llame a la `AnyObject` propiedad y convertirla a una `UITouch` como se muestra en el ejemplo siguiente:
 
 ```csharp
 public override void TouchesBegan (NSSet touches, UIEvent evt)
@@ -61,7 +61,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 }
 ```
 
-iOS reconoce automáticamente rápida sucesivas afecta a la pantalla y recopilará todos como en un único equipo con un solo toque `UITouch` objeto. Esto hace que la comprobación para un doble punteo tan sencillo como comprobar el `TapCount` propiedad, como se muestra en el código siguiente:
+iOS reconoce automáticamente las sucesivas rápido toca en la pantalla y recopilará todos como un toque en un único `UITouch` objeto. Esto hace que la comprobación para un doble punteo tan fácil como comprobando el `TapCount` propiedad, como se muestra en el código siguiente:
 
 ```csharp
 public override void TouchesBegan (NSSet touches, UIEvent evt)
@@ -78,19 +78,19 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 }
 ```
 
-## <a name="multi-touch"></a>Multitoque
+## <a name="multi-touch"></a>La tecnología multitoque
 
-Multitoque no está habilitado de forma predeterminada en los controles. Multitoque puede habilitarse en el diseñador, iOS como se muestra en la captura de pantalla siguiente:
+La tecnología multitoque no está habilitada de forma predeterminada en los controles. La tecnología multitoque se puede habilitar en iOS Designer, como se muestra en la captura de pantalla siguiente:
 
- [![](touch-in-ios-images/image2.png "Multitoque habilitado en el Diseñador de iOS")](touch-in-ios-images/image2.png#lightbox)
+ [![](touch-in-ios-images/image2.png "La tecnología multitoque habilitada en el Diseñador de iOS")](touch-in-ios-images/image2.png#lightbox)
 
-También es posible establecer multitoque mediante programación estableciendo la `MultipleTouchEnabled` propiedad tal y como se muestra en la siguiente línea de código:
+También es posible establecer multitoque mediante programación estableciendo la `MultipleTouchEnabled` propiedad tal como se muestra en la siguiente línea de código:
 
 ```csharp
 imgTouchMe.MultipleTouchEnabled = true;
 ```
 
-Para determinar cuántos dedos toca la pantalla, use la `Count` propiedad en el `UITouch` propiedad:
+Para determinar cuántos dedos toca la pantalla, use el `Count` propiedad en el `UITouch` propiedad:
 
 ```csharp
 public override void TouchesBegan (NSSet touches, UIEvent evt)
@@ -100,9 +100,9 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 }
 ```
 
-## <a name="determining-touch-location"></a>Determinar la ubicación de entrada táctil
+## <a name="determining-touch-location"></a>Determinar la ubicación de toque
 
-El método `UITouch.LocationInView` devuelve un objeto CGPoint que contiene las coordenadas de la entrada táctil dentro de una vista determinada. Además, podemos probar para ver si esa ubicación dentro de un control llamando al método `Frame.Contains`. El fragmento de código siguiente muestra un ejemplo de esto:
+El método `UITouch.LocationInView` devuelve un objeto CGPoint que contiene las coordenadas de la entrada táctil dentro de una vista determinada. Además, podemos probar para ver si esa ubicación está dentro de un control llamando al método `Frame.Contains`. El fragmento de código siguiente muestra un ejemplo de esto:
 
 ```csharp
 if (this.imgTouchMe.Frame.Contains (touch.LocationInView (this.View)))
@@ -111,94 +111,94 @@ if (this.imgTouchMe.Frame.Contains (touch.LocationInView (this.View)))
 }
 ```
 
-Ahora que tenemos una descripción de los eventos touch en iOS, vamos a obtener información sobre identificadores de gestos.
+Ahora que tenemos una comprensión de los eventos touch en iOS, vamos a aprender acerca de los reconocedores de gestos.
 
-## <a name="gesture-recognizers"></a>Identificadores de gestos
+## <a name="gesture-recognizers"></a>Reconocedores de gestos
 
-Identificadores de gestos en gran medida pueden simplificar y reducir el esfuerzo de programación para admitir la entrada táctil en una aplicación. identificadores de gesto de iOS agregan una serie de eventos touch en un evento solo toque.
+Los reconocedores de gestos en gran medida pueden simplificar y reducir el esfuerzo de programación que admiten la función táctil en una aplicación. los reconocedores de gestos de iOS de agregado una serie de eventos de toque en un evento de toque único.
 
-Xamarin.iOS proporciona la clase `UIGestureRecognizer` como una clase base para los identificadores de gestos integrados siguientes:
+Xamarin.iOS proporciona la clase `UIGestureRecognizer` como una clase base para los reconocedores de gestos integrados siguientes:
 
--  *UITapGestureRecognizer* : se trata de derivaciones de uno o más.
--  *UIPinchGestureRecognizer* – Pinching y propagación dedos separadas.
+-  *UITapGestureRecognizer* : se trata de uno o más derivaciones.
+-  *UIPinchGestureRecognizer* – Pinching y esparce dedos separados.
 -  *UIPanGestureRecognizer* : panorámica o arrastrar.
--  *UISwipeGestureRecognizer* – Deslizar rápidamente en cualquier dirección.
+-  *UISwipeGestureRecognizer* – desplazándose en cualquier dirección.
 -  *UIRotationGestureRecognizer* : rotación de dos dedos en un movimiento hacia la derecha o hacia la izquierda.
--  *UILongPressGestureRecognizer* – presionar y mantener presionado, que se denomina a veces un presionándolos una larga o larga y haga clic en.
+-  *UILongPressGestureRecognizer* : mantenga presionada, a veces se denomina una larga presione o larga y haga clic en.
 
 
 El patrón básico para utilizar un reconocedor de movimiento es como sigue:
 
-1.  **Crear una instancia del reconocedor de movimientos** : en primer lugar, crear una instancia de un `UIGestureRecognizer` subclase. El objeto que se crea una instancia se asociará con una vista y elementos no utilizados recopilarán cuando se elimina la vista de. No es necesario crear esta vista como una variable de nivel de clase.
-1.  **Configure las opciones de movimiento** : el paso siguiente consiste en configurar el reconocedor de movimientos. Consulte la documentación de Xamarin en `UIGestureRecognizer` y sus subclases para obtener una lista de propiedades que se pueden establecer para controlar el comportamiento de un `UIGestureRecognizer` instancia.
-1.  **Configurar el destino** – debido a su herencia Objective-C, Xamarin.iOS no se genera eventos cuando un reconocedor de movimiento coincide con un gesto.  `UIGestureRecognizer` tiene un método – `AddTarget` – que puede aceptar un delegado anónimo o un selector de Objective-C con el código que se ejecutará cuando el reconocedor de movimientos realiza una coincidencia.
-1.  **Habilitar el reconocedor de movimientos** : al igual que con los eventos de entrada táctil, los movimientos se reconocen solo si están habilitadas las interacciones táctiles.
-1.  **Agregue el reconocedor de movimiento a la vista** : el último paso consiste en agregar el movimiento a una vista mediante una llamada a `View.AddGestureRecognizer` y se le pasa un objeto de reconocimiento de gestos.
+1.  **Crear una instancia el reconocedor de gestos** : en primer lugar, crear una instancia de un `UIGestureRecognizer` subclase. Se asociará el objeto que se crea una instancia por una vista y se elementos no utilizados recopilarán cuando se elimina la vista. No es necesario crear esta vista como una variable de nivel de clase.
+1.  **Configure las opciones de gesto** : el siguiente paso es configurar el reconocedor de gestos. Consulte la documentación de Xamarin en `UIGestureRecognizer` y sus subclases para obtener una lista de propiedades que se pueden establecer para controlar el comportamiento de un `UIGestureRecognizer` instancia.
+1.  **Configurar el destino** – debido a su patrimonio Objective-C, Xamarin.iOS no genera eventos cuando un reconocedor de movimiento coincide con un gesto.  `UIGestureRecognizer` tiene un método – `AddTarget` – que puede aceptar un delegado anónimo o un selector de Objective-C con el código para ejecutar cuando el reconocedor de gestos realiza una coincidencia.
+1.  **Habilitar el reconocedor de gestos** : al igual que con los eventos de toque, gestos se reconocen solo si están habilitadas las interacciones táctiles.
+1.  **Agregue el reconocedor de movimiento a la vista** : el último paso es agregar el gesto a una vista mediante una llamada a `View.AddGestureRecognizer` y se le pasa un objeto reconocedor de gestos.
 
-Hacer referencia a la [ejemplos reconocedor de gestos](~/ios/app-fundamentals/touch/ios-touch-walkthrough.md#Gesture_Recognizer_Samples) para obtener más información sobre cómo implementarlas en el código.
+Hacer referencia a la [ejemplos reconocedor de gestos](~/ios/app-fundamentals/touch/ios-touch-walkthrough.md#Gesture_Recognizer_Samples) para obtener más información acerca de cómo se implementan en el código.
 
-Cuando se llama el destino del movimiento, se pasarán como una referencia a los gestos que se ha producido. Esto permite que el destino de movimiento obtener información acerca del movimiento que se ha producido. La extensión de la información disponible depende del tipo de reconocedor de movimiento que se utilizó. Consulte la documentación de Xamarin para obtener información acerca de los datos disponibles para cada `UIGestureRecognizer` subclase.
+Cuando se llama el destino del movimiento, se pasará una referencia a los gestos que se ha producido. Esto permite que el destino de gesto obtener información sobre el gesto que se ha producido. La extensión de la información disponible depende del tipo de reconocedor de gestos que se usó. Consulte la documentación de Xamarin para obtener información acerca de los datos disponibles para cada `UIGestureRecognizer` subclase.
 
-Es importante recordar que cuando se haya agregado un reconocedor de movimiento a una vista, la vista (y todas las vistas por debajo de él) no recibirá los eventos de toque. Para permitir los eventos de toque simultáneamente con gestos, los `CancelsTouchesInView` propiedad debe establecerse en false, como se muestra en el código siguiente:
+Es importante recordar que una vez que se ha agregado un reconocedor de movimiento para una vista, la vista (y todas las vistas debajo de él) no recibirá los eventos de toque. Para permitir los eventos de toque simultáneamente con los gestos, los `CancelsTouchesInView` propiedad debe establecerse en false, como se muestra en el código siguiente:
 
 ```csharp
 _tapGesture.Recognizer.CancelsTouchesInView = false;
 ```
 
-Cada `UIGestureRecognizer` tiene una propiedad de estado que proporciona información importante sobre el estado del reconocedor de movimientos. Cada vez que cambia el valor de esta propiedad, iOS llamará al método de suscripción que proporciona una actualización. Si un reconocedor de movimiento personalizada nunca actualiza la propiedad State, nunca se llama el suscriptor, inútil el reconocedor de movimientos.
+Cada `UIGestureRecognizer` tiene una propiedad de estado que proporciona información importante sobre el estado del reconocedor de gestos. Cada vez que cambia el valor de esta propiedad, iOS llamará al método suscripción darle una actualización. Si un reconocedor de movimiento personalizada nunca actualiza la propiedad State, nunca se llama el suscriptor, inútil el reconocedor de gestos.
 
-Movimientos se pueden resumir como uno de dos tipos:
+Los gestos se pueden resumir como uno de los dos tipos:
 
-1.  *Discretos* : estos movimientos única activan la primera vez que se reconocen.
-1.  *Continuo* : estos movimientos continuarán activan mientras se reconocen.
+1.  *Discretos* : estos gestos única fire la primera vez que se reconocen.
+1.  *Continua* – continuarán estos gestos que se active, siempre se reconocen.
 
 
-Identificadores de gestos se incluye en uno de los siguientes estados:
+Los reconocedores de gestos existe en uno de los siguientes estados:
 
--  *Posibles* : este es el estado inicial de todos los identificadores de gestos. Este es el valor predeterminado la propiedad State.
--  *Began* : cuando primero se reconoce un movimiento continuo, el estado se establece en Began. Esto permite que se suscribe para diferenciar entre cuando se inicia el reconocimiento de gestos y cuando se cambia.
--  *Changed* – después de un movimiento continuo ha iniciado, pero no ha finalizado, el estado se establecerá en Changed cada vez que una entrada táctil se mueve o cambia, siempre y cuando sea aún dentro de los parámetros previstos de los gestos.
--  *Cancelar* : este estado se establecerá si el reconocedor fue de Began a Changed y, a continuación, los retoques cambiados de tal manera que ya no ajustan al patrón de los gestos.
--  *Reconoce* : el estado se establecerá cuando el reconocedor de movimientos coincide con un conjunto de los últimos retoques y le informará de que el movimiento ha finalizado el suscriptor.
--  *Finalizó* : se trata de un alias para el estado de reconoce.
--  *No se pudo* : cuando el reconocedor de movimientos ya no puede coincidir con los retoques está realizando escuchas para, el estado cambiado a Failed.
+-  *Posible* : este es el estado inicial de todos los reconocedores de gestos. Este es el valor predeterminado la propiedad State.
+-  *Began* : cuando se reconoció un gesto continua por primera vez, el estado se establece en Began. Esto permite que se suscribe para diferenciar entre cuando se inicia el reconocimiento de gestos y cuándo se puede cambiar.
+-  *Changed* – después de un movimiento continuo se ha iniciado, pero no ha finalizado, el estado se establecerá en Changed cada vez que una entrada táctil se mueve o cambia, siempre y cuando se encuentre todavía dentro de los parámetros esperados del gesto.
+-  *Cancelar* : este estado se establecerá si el reconocedor pasó de Began a ha cambiado y, a continuación, los retoques cambiados de tal forma que ya no ajustan al patrón del gesto.
+-  *Reconoce* : el estado se establecerá cuando el reconocedor de gestos coincide con un conjunto de dispositivos táctiles y le informará de que el gesto ha terminado el suscriptor.
+-  *Finalizó* : se trata de un alias para el estado reconoce.
+-  *No se pudo* : cuando el reconocedor de gestos ya no puede coincidir con los retoques está escuchando para, el estado cambiado a Failed.
 
 
 Xamarin.iOS representa estos valores en el `UIGestureRecognizerState` enumeración.
 
 ## <a name="working-with-multiple-gestures"></a>Trabajar con varios movimientos
 
-De forma predeterminada, iOS no permite gestos de forma predeterminada ejecutar al mismo tiempo. En su lugar, cada reconocedor de movimientos recibirá eventos touch en un orden no determinista. El fragmento de código siguiente muestra cómo hacer que un reconocedor de movimiento se ejecuten al mismo tiempo:
+De forma predeterminada, iOS no admite gestos predeterminados de ejecutar al mismo tiempo. En su lugar, cada reconocedor de gestos recibirá eventos de toque en un orden no determinista. El fragmento de código siguiente muestra cómo hacer que un reconocedor de movimiento se ejecuten simultáneamente:
 
 ```csharp
 gesture.ShouldRecognizeSimultaneously += (UIGestureRecognizer r) => { return true; };
 ```
 
-También es posible deshabilitar un gesto en iOS. Hay dos propiedades de delegado que permiten un reconocedor de movimiento examinar el estado de la aplicación y los eventos de toque actual, a tomar decisiones sobre cómo y si debe reconocer un gesto. Los dos eventos son:
+También es posible deshabilitar un gesto en iOS. Hay dos propiedades de delegado que permiten un reconocedor de gestos examinar el estado de la aplicación y los eventos de toque actual, a tomar decisiones acerca de cómo y si se debería reconocer un gesto. Son los dos eventos:
 
-1.  *ShouldReceiveTouch* : este delegado se llama justo antes de que el reconocedor de gestos se pasa un evento de entrada táctil y proporciona una oportunidad para examinar los retoques y decidir qué los últimos retoques será procesados por el reconocedor de movimientos.
-1.  *ShouldBegin* : Esto se llama cuando un reconocedor intenta cambiar el estado de los posibles a algún otro estado. Devuelve false, se forzará el estado del reconocedor de movimientos cambiarse a Failed.
+1.  *ShouldReceiveTouch* : este delegado se llama justo antes de que el reconocedor de gestos se pasa a un evento de toque y proporciona una oportunidad para examinar los retoques y decidir qué toques controlará el reconocedor de gestos.
+1.  *ShouldBegin* : se llama cuando un reconocedor intenta cambiar el estado de posibles a algún otro estado. Devuelve el valor false forzará el estado del reconocedor de gestos cambiarse a error.
 
 
-Puede invalidar estos métodos con un fuertemente tipado `UIGestureRecognizerDelegate`, un delegado débil o enlace a través de la sintaxis de controlador de eventos, como se muestra en el siguiente fragmento de código:
+Puede invalidar estos métodos con fuertemente tipado `UIGestureRecognizerDelegate`, un delegado débil o enlace a través de la sintaxis de controlador de eventos, como se muestra en el siguiente fragmento de código:
 
 ```csharp
 gesture.ShouldReceiveTouch += (UIGestureRecognizer r, UITouch t) => { return true; };
 ```
 
-Por último, es posible poner en cola un reconocedor de movimiento para que solo se realizará correctamente si se produce un error en otro reconocedor de movimientos. Por ejemplo, un reconocedor de movimiento único punteo solo debe ejecutarse correctamente cuando se produce un error en un reconocedor de movimiento de doble punteo. El fragmento de código siguiente muestra un ejemplo de esto:
+Por último, es posible poner en cola un reconocedor de movimiento para que solo se realizará correctamente si se produce un error en otro reconocedor de gestos. Por ejemplo, un reconocedor de movimiento solo toque solo debería realizarse correctamente cuando se produce un error en un reconocedor de movimiento de un doble punteo. El siguiente fragmento de código proporciona un ejemplo de esto:
 
 ```csharp
 singleTapGesture.RequireGestureRecognizerToFail(doubleTapGesture);
 ```
 
-## <a name="creating-a-custom-gesture"></a>Crear un gesto personalizado
+## <a name="creating-a-custom-gesture"></a>Creación de un gesto personalizado
 
-Aunque iOS proporciona algunos predeterminado identificadores de gestos, puede ser necesario crear identificadores de gesto personalizado en ciertos casos. Crear un reconocedor de movimiento personalizada implica los pasos siguientes:
+Aunque iOS proporciona algunas predeterminados los reconocedores de gestos, puede ser necesario crear los reconocedores de gestos personalizados en ciertos casos. Creación de un reconocedor de movimiento personalizada implica los pasos siguientes:
 
 1.  Subclase `UIGestureRecognizer` .
-1.  Reemplace los métodos de evento táctil adecuado.
-1.  Propagarse de estado de reconocimiento a través de la propiedad de estado de la clase base.
+1.  Invalide los métodos de evento de toque adecuado.
+1.  Ascienden en estado de reconocimiento a través de la propiedad de estado de la clase base.
 
 
-Un ejemplo práctico de esto se explicará en el [usar Touch en iOS](ios-touch-walkthrough.md) tutorial.
+Un ejemplo práctico de esto se explicará en el [usando entrada táctil en iOS](ios-touch-walkthrough.md) tutorial.

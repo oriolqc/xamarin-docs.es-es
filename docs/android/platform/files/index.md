@@ -4,15 +4,15 @@ description: Esta guía explica el acceso a los archivos en Xamarin.Android
 ms.prod: xamarin
 ms.assetid: FC1CFC58-B799-4DD6-8ED1-DE36B0E56856
 ms.technology: xamarin-android
-author: topgenorth
-ms.author: toopge
+author: conceptdev
+ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 5a4ddf606bb71bef10cf99660c198c5a8fdb1b69
-ms.sourcegitcommit: 9bb9e8297d3edd9a50585f4ba53c1b4f0bcd1d3e
+ms.openlocfilehash: 476f1c50a2f1a4199dfaf1996fc9c16615b40598
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39212231"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50116802"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Almacenamiento de archivos y acceso con Xamarin.Android
 
@@ -24,7 +24,7 @@ Es un requisito común para aplicaciones Android manipular archivos &ndash; guar
 Estas agrupaciones son conceptuales sólo y necesariamente no hacen referencia a una sola partición o el directorio en el dispositivo. Un dispositivo Android siempre proporcionará la partición para almacenamiento interno y externo. Es posible que algunos dispositivos pueden tener varias particiones que se consideran almacenamiento externo. Independientemente de la partición de las API para leer, escribir o creación de archivos es el mismo. Hay dos conjuntos de API que puede usar una aplicación de Xamarin.Android para el acceso de archivo:
 
 1. **Las API de .NET (proporcionado por Mono y ajustado por Xamarin.Android)** &ndash; entre ellos se incluyen la [aplicaciones auxiliares de sistema de archivos](~/essentials/file-system-helpers.md?context=xamarin/android) proporcionada por [Xamarin.Essentials](~/essentials/index.md?context=xamarin/android). Las API de .NET proporcionan la mejor compatibilidad multiplataforma y por lo tanto se incluirá el objetivo de esta guía en estas API.
-1. **El acceso a archivos de Java native API (proporcionado por Java y ajustado por Xamarin.Android)** &ndash; Java proporciona sus propias API para leer y escribir archivos. Estas son una alternativa aceptable completamente para a las API. NET, pero son específicas de Android y no son adecuadas para las aplicaciones que están diseñadas para ser multiplataforma.
+1. **El acceso a archivos de Java native API (proporcionado por Java y ajustado por Xamarin.Android)** &ndash; Java proporciona sus propias API para leer y escribir archivos. Estas son una alternativa a las API. NET, completamente aceptable, pero son específicas de Android y no son adecuadas para las aplicaciones que están diseñadas para ser multiplataforma.
 
 Leer y escribir en archivos son casi idéntico en Xamarin.Android y sirve para cualquier otra aplicación. NET. La aplicación de Xamarin.Android determina la ruta de acceso al archivo que se manipulará, a continuación, usa estándar .NET expresiones de acceso a archivos. Dado que las rutas de acceso reales a almacenamiento interno y externo pueden variar de un dispositivo a otro o desde la versión de Android para la versión de Android, no se recomienda codificar de forma rígida la ruta de acceso a los archivos. En su lugar, utilice las APIs Xamarin.Android para determinar la ruta de acceso a archivos. De este modo, las API de .NET para leer y escribir archivos expone las API nativas de Android que le ayudarán a determinar la ruta de acceso a los archivos de almacenamiento interno y externo.
 
@@ -79,7 +79,7 @@ Para maximizar el uso compartido de código, deben usar las aplicaciones de Xama
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>Leer o escribir en archivos en almacenamiento interno
 
-Cualquiera de los [API de C# para escribir en él](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) a un archivo son suficientes; todo lo necesario es obtener la ruta de acceso al archivo que está en el directorio asignado a la la aplicación. Se recomienda encarecidamente que async se usan versiones de las API de .NET para minimizar los problemas que pueden asociar a bloquear el subproceso principal de acceso de archivo.
+Cualquiera de los [ C# API para escribir en él](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) a un archivo son suficientes; todo lo necesario es obtener la ruta de acceso al archivo que se encuentra en el directorio asignado a la aplicación. Se recomienda encarecidamente que async se usan versiones de las API de .NET para minimizar los problemas que pueden asociar a bloquear el subproceso principal de acceso de archivo.
 
 Este fragmento de código es un ejemplo de escritura de un entero en un archivo de texto UTF-8 en el directorio de almacenamiento interno de una aplicación:
 

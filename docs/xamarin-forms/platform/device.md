@@ -6,13 +6,13 @@ ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2017
-ms.openlocfilehash: c706d50962fb707208203a97374d4ae26f141ebf
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 08/01/2018
+ms.openlocfilehash: 084c0c292cb7e527d74c77937bc69f76fc8c0658
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998272"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114325"
 ---
 # <a name="xamarinforms-device-class"></a>Clase Device de Xamarin.Forms
 
@@ -60,16 +60,18 @@ Las clases [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) y [ `On` ](xref:Xam
 </StackLayout>
 ```
 
-La clase [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) es una clase genérica y por lo que debe crearse con un atributo `x:TypeArguments` que coincida con el tipo de destino. En la clase [ `On` ](xref:Xamarin.Forms.On), el atributo [ `Platform` ](xref:Xamarin.Forms.On.Platform) puede aceptar un único valor `string` o varios valores `string` delimitados por comas.
+El [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) clase es una clase genérica que debe crearse con un `x:TypeArguments` atributo que coincida con el tipo de destino. En la clase [ `On` ](xref:Xamarin.Forms.On), el atributo [ `Platform` ](xref:Xamarin.Forms.On.Platform) puede aceptar un único valor `string` o varios valores `string` delimitados por comas.
 
 > [!IMPORTANT]
 > Proporcionar un valor incorrecto en el atributo `Platform` de la clase `On` no producirá un error. En su lugar, el código se ejecutará sin el valor específico de la plataforma que se va a aplicar.
+
+Como alternativa, el `OnPlatform` se puede usar extensión de marcado en XAML para personalizar la apariencia de la interfaz de usuario en forma de acuerdo con la plataforma. Para obtener más información, consulte [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
 
 <a name="Device_Idiom" />
 
 ## <a name="deviceidiom"></a>Device.Idiom
 
-La propiedad `Device.Idiom` puede usarse para modificar los diseños o funcionalidad según el dispositivo que en el que se este ejecutando la aplicación. El enumerador [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) contiene los siguientes valores:
+El `Device.Idiom` propiedad puede usarse para modificar los diseños o funcionalidad en función del dispositivo de la aplicación se ejecuta en. El enumerador [ `TargetIdiom` ](xref:Xamarin.Forms.TargetIdiom) contiene los siguientes valores:
 
 -  **Teléfono** – iPhone, iPod touch y los dispositivos Android más estrechas que 600 DIP ^
 -  **Tablet** : iPad, los dispositivos de Windows y dispositivos Android más amplio que 600 DIP ^
@@ -80,7 +82,7 @@ La propiedad `Device.Idiom` puede usarse para modificar los diseños o funcional
 
 *^ DIP no es necesariamente el número de píxeles físicos*
 
-`Idiom` es especialmente útil para la creación de diseños en dispositivos con pantallas más grandes, como el siguiente:
+El `Idiom` propiedad resulta especialmente útil para la creación de diseños que se benefician de las pantallas más grandes, similar al siguiente:
 
 ```csharp
 if (Device.Idiom == TargetIdiom.Phone) {
@@ -89,6 +91,25 @@ if (Device.Idiom == TargetIdiom.Phone) {
     // layout views horizontally for a larger display (tablet or desktop)
 }
 ```
+
+El [ `OnIdiom` ](xref:Xamarin.Forms.OnIdiom`1) clase proporciona la misma funcionalidad en XAML:
+
+```xaml
+<StackLayout>
+    <StackLayout.Margin>
+        <OnIdiom x:TypeArguments="Thickness">
+            <OnIdiom.Phone>0,20,0,0</OnIdiom.Phone>
+            <OnIdiom.Tablet>0,40,0,0</OnIdiom.Tablet>
+            <OnIdiom.Desktop>0,60,0,0</OnIdiom.Desktop>
+        </OnIdiom>
+    </StackLayout.Margin>
+    ...
+</StackLayout>
+```
+
+El [ `OnIdiom` ](xref:Xamarin.Forms.OnPlatform`1) clase es una clase genérica que debe crearse con un `x:TypeArguments` atributo que coincida con el tipo de destino.
+
+Como alternativa, el `OnIdiom` se puede usar extensión de marcado en XAML para personalizar la apariencia de la interfaz de usuario en función de la expresión del dispositivo se está ejecutando la aplicación en. Para obtener más información, consulte [OnIdiom Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom).
 
 ## <a name="deviceflowdirection"></a>Device.FlowDirection
 
