@@ -1,31 +1,26 @@
 ---
-title: Recarga en vivo
+title: Recarga en vivo de Xamarin (versión preliminar)
 description: Implementar y ver los cambios en el XAML se reflejan en directo, sin necesidad de otra compilación.
 ms.prod: xamarin
 ms.assetid: 4917273d-32f9-401a-a52c-5cfb53a2170d
 ms.technology: xamarin-forms
 author: pierceboggan
 ms.author: piboggan
-ms.date: 05/11/2018
-ms.openlocfilehash: f05b79e58a9fa87e13aeb45af2dbb46139051005
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+robots: noindex
+ms.date: 10/26/2018
+ms.openlocfilehash: bb30f9264cb5f3b762088e3523223b2bff8416b9
+ms.sourcegitcommit: ebc0b3838836ee5cf9e54d58866d23916664a43d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109996"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50142341"
 ---
-# <a name="xamarin-live-reload"></a>Recarga en vivo de Xamarin
-
-![Vista previa](~/media/shared/preview.png)
-
-Recarga de Xamarin Live permite **realizar cambios en el XAML y ver que se reflejen en directo, sin necesidad de otra compilación e implementar**. Los cambios realizados en el XAML se implementará en Guardar y se refleja en el destino de implementación.
-
-Dado que la aplicación se compila cuando se usa la recarga en vivo, funciona con todas las bibliotecas y controles de terceros. Live works volver a cargar en todas las plataformas que Xamarin.Forms es compatible con, incluidos Android, iOS y UWP y funciona en todos los destinos de implementación válido, como simuladores, emuladores y dispositivos físicos.
+# <a name="xamarin-live-reload-preview"></a>Recarga en vivo de Xamarin (versión preliminar)
 
 > [!NOTE]
-> [Ha finalizado la vista previa dinámica de volver a cargar](https://github.com/xamarin/Xamarin.Forms/issues/4155#issuecomment-431596130)
->
-> Hay una explicación sobre esto en [ ![Únase a esta charla en https://gitter.im/xamarin/live-reload](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/xamarin/live-reload?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+> La versión preliminar de Xamarin Live Reload ha finalizado y queremos dar las gracias a todos por sus sugerencias y comentarios. Lea nuestra [plan](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap) para Visual Studio de 2019 obtener más información sobre las nuevas características de productividad que estamos trabajando para Xamarin.Forms. Esta extensión seguirá estando disponible para Visual Studio 2017, pero no se recibe las actualizaciones futuras.
+
+Recarga de Xamarin Live permite **realizar cambios en el XAML y ver que se reflejen en directo, sin necesidad de otra compilación e implementar**. Los cambios realizados en el XAML se implementará en Guardar y se refleja en el destino de implementación.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -86,7 +81,7 @@ Live funciona de volver a cargar con los cambios realizados en cualquier archivo
 ## <a name="frequently-asked-questions"></a>Preguntas más frecuentes 
 ### <a name="is-xamarin-live-reload-available-on-visual-studio-for-mac"></a>¿Hay recarga en vivo de Xamarin en Visual Studio para Mac? 
 
-La versión preliminar inicial de Xamarin Live Reload solo está disponible para Visual Studio 2017. Compatibilidad con Visual Studio para Mac está prevista para una versión futura.
+No, la versión preliminar de Xamarin Live Reload solo está disponible para Visual Studio 2017.
 
 ### <a name="does-this-work-with-all-libraries-such-as-prism"></a>¿Esto funciona con todas las bibliotecas, como Prism? 
 
@@ -94,7 +89,7 @@ Dado que se compila la aplicación, recarga en vivo funciona con todas las bibli
 
 ### <a name="what-changes-does-live-reload-redeploy"></a>¿Qué cambios recarga en vivo volver a implementar? 
 
-La recarga en vivo sólo aplica a los cambios realizados en XAML o CSS. Si realiza cambios en un archivo de C#, se deberán volver a compilar. Compatibilidad para volver a cargar C# está prevista para una versión futura.
+La recarga en vivo sólo aplica a los cambios realizados en XAML o CSS. Si realiza cambios en un archivo de C#, se deberán volver a compilar. 
 
 ### <a name="what-platforms-are-supported"></a>¿Qué plataformas son compatibles? 
 
@@ -121,8 +116,8 @@ No. De hecho, incluso puede iniciar sus destinos aplicaciones compatibles (Andro
 
 * Solo se admite en Visual Studio.
 * Vinculación debe establecerse en **no vincular** o **vincular solo SDK de marco** 
-* Volver a cargar recursos de toda la aplicación (es decir, **App.xaml** o compartir los diccionarios de recursos), se restablece la navegación de la aplicación. Esto se corregirá en la próxima versión de vista previa.
-* Recarga de ContentView actualmente requiere volver a cargar la página contenedora. Esto se corregirá en la próxima versión de vista previa.
+* Volver a cargar recursos de toda la aplicación (es decir, **App.xaml** o compartir los diccionarios de recursos), se restablece la navegación de la aplicación. 
+* Recarga de ContentView actualmente requiere volver a cargar la página contenedora.
 * Elementos que contienen AutomationId pueden producir un error de volver a cargar.
 * Editar XAML mientras la depuración de UWP puede provocar un bloqueo en tiempo de ejecución. Solución alternativa: Use **iniciar sin depurar (CTRL+F5)** en lugar de **Iniciar depuración (F5)**.
 
