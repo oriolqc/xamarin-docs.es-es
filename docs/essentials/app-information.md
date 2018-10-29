@@ -16,11 +16,11 @@ ms.locfileid: "38831512"
 
 ![La versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-El **AppInfo** clase proporciona información acerca de la aplicación.
+La clase **AppInfo** proporciona información acerca de la aplicación.
 
 ## <a name="using-appinfo"></a>Uso de AppInfo
 
-Agregue una referencia a Xamarin.Essentials en su clase:
+Agregue referencia a Xamarin.Essentials en su clase:
 
 ```csharp
 using Xamarin.Essentials;
@@ -46,7 +46,7 @@ var build = AppInfo.BuildString;
 
 ## <a name="displaying-application-settings"></a>Mostrar la configuración de aplicación
 
-El **AppInfo** clase también puede mostrar una página de configuración mantenida por el sistema operativo para la aplicación:
+La clase **AppInfo** también puede mostrar la pagina de configuraciones de la aplicacion del sistema operativo:
 
 ```csharp
 // Display settings page
@@ -57,5 +57,5 @@ Esta página de configuración permite al usuario cambiar los permisos de aplica
 
 ## <a name="api"></a>API
 
-- [Código fuente de AppInfo](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/AppInfo)
-- [Documentación de la API de AppInfo](xref:Xamarin.Essentials.AppInfo)
+- [Código fuente de la clase AppInfo](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/AppInfo)
+- [Documentación de la API AppInfo](xref:Xamarin.Essentials.AppInfo)
