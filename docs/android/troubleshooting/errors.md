@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: b51e8b3d931ccbb511afe7d06d9be66fa104fb46
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3721ad661f4b817375b0d625c9b5cc293e6d44c
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121846"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235082"
 ---
 # <a name="xamarinandroid-errors-matrix"></a>Matriz de errores de Xamarin.Android
 
@@ -40,7 +40,7 @@ Este documento proporciona cierta información sobre los distintos códigos de e
 
 |Código de error|Descripción|
 |--- |--- |
-|XA0000|Error inesperado: rellene una [informe de errores](http://bugzilla.xamarin.com).|
+|XA0000|Error inesperado: rellene una [informe de errores](https://github.com/xamarin/xamarin-android/issues/new).|
 |XA0001|'-nombredisp proporcionó sin ninguna acción específica del dispositivo.|
 |XA0002|No se pudo analizar la variable de entorno '{0}'.|
 |XA0003|Nombre de la aplicación '{0}.exe' entra en conflicto con un nombre de ensamblado (.dll) de producto o SDK.|

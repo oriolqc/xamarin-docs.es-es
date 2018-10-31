@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: charlespetzold
 ms.author: chape
 ms.date: 07/19/2018
-ms.openlocfilehash: cf85f8d64026b436c7552033525b9d0f381fd687
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: c7a84a8bd00c5685feef84bfc4aacf02e5891c55
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156982"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234991"
 ---
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Crear aplicaciones móviles con Xamarin.Forms libro
 
-<p><img src="Images/Cover-sml.png" title="Creación de aplicaciones móviles con Xamarin.Forms libro" align="left" />El libro <i>Creating Mobile Apps with Xamarin.Forms</i> por Charles Petzold es una guía para obtener información sobre cómo escribir aplicaciones de Xamarin.Forms. El único requisito previo es el conocimiento del lenguaje de programación C#. El libro ofrece una amplia exploración en la interfaz de usuario de Xamarin.Forms y también cubre la animación, MVVM, desencadenadores, comportamientos, los diseños personalizados, los representadores personalizados y mucho más. 
+<p><img src="images/cover-sml.png" title="Creación de aplicaciones móviles con Xamarin.Forms libro" align="left" />El libro <i>Creating Mobile Apps with Xamarin.Forms</i> por Charles Petzold es una guía para obtener información sobre cómo escribir aplicaciones de Xamarin.Forms. El único requisito previo es el conocimiento de la C# lenguaje de programación. El libro ofrece una amplia exploración en la interfaz de usuario de Xamarin.Forms y también cubre la animación, MVVM, desencadenadores, comportamientos, los diseños personalizados, los representadores personalizados y mucho más. 
 
 El libro se publicó en la primavera de 2016 y no se ha actualizado desde entonces. Hay mucho en el libro que valioso permanece, pero algunos de los [material está obsoleto](#ways-in-which-the-book-is-outdated), y algunos temas ya no son completamente correcto o completo. 
 
