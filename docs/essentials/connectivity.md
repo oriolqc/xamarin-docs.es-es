@@ -1,58 +1,58 @@
 ---
-title: 'Xamarin.Essentials: conectividad'
-description: La clase de conectividad en Xamarin.Essentials le permite supervisar los cambios en las condiciones de red del dispositivo, compruebe el acceso de red actual, y cómo está conectado actualmente.
+title: 'Xamarin.Essentials: Connectivity'
+description: La clase Connectivity en Xamarin.Essentials permite supervisar los cambios en las condiciones de red del dispositivo, revisar el acceso actual a la red y cómo está conectado actualmente.
 ms.assetid: E1B1F152-B1D5-4227-965E-C0AEBF528F49
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 96b4ee0487034c651bec1dfb168fed7567b63c96
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: b0d5f28aca5d836608bc5a3423f3dc234a551ca0
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353703"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112005"
 ---
-# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: conectividad
+# <a name="xamarinessentials-connectivity"></a>Xamarin.Essentials: Connectivity
 
-![La versión preliminar de NuGet](~/media/shared/pre-release.png)
+![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-El **conectividad** permite clase supervisar los cambios en las condiciones de red del dispositivo, compruebe el acceso de red actual, y cómo está conectado actualmente.
+La clase **Connectivity** permite supervisar los cambios en las condiciones de red del dispositivo, revisar el acceso actual a la red y cómo está conectado actualmente.
 
 ## <a name="getting-started"></a>Introducción
 
-Para tener acceso a la **conectividad** se requiere la funcionalidad de la siguiente configuración específica de plataforma.
+Para acceder a la funcionalidad **Connectivity**, se requiere la siguiente configuración específica para la plataforma.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-El `AccessNetworkState` permiso es necesario y debe configurarse en el proyecto de Android. Esto se puede agregar de las maneras siguientes:
+El permiso `AccessNetworkState` es necesario y se debe configurar en el proyecto Android. Se puede agregar de las siguientes maneras:
 
-Abra el **AssemblyInfo.cs** archivo bajo el **propiedades** carpeta y agregue:
+Abra el archivo **AssemblyInfo.cs** de la carpeta **Propiedades** y agregue lo siguiente:
 
 ```csharp
 [assembly: UsesPermission(Android.Manifest.Permission.AccessNetworkState)]
 ```
 
-O actualice el manifiesto de Android:
+O BIEN, actualice el manifiesto de Android:
 
-Abra el **AndroidManifest.xml** de archivos en el **propiedades** carpeta y agregue lo siguiente dentro de la **manifiesto** nodo.
+Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue lo siguiente dentro del nodo **manifest**.
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 ```
 
-O haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **manifiesto de Android** encontrar el **los permisos necesarios:** área y compruebe el **estado de acceso de red** permiso. Esto actualizará automáticamente el **AndroidManifest.xml** archivo.
+O haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **Manifiesto de Android**, busque el área **Permisos requeridos:** y compruebe el permiso **Access Network State** (Estado de red de acceso). Esto actualizará automáticamente el archivo **AndroidManifest.xml**.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-No se requiere ninguna configuración adicional.
+No se requiere configuración adicional.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-No se requiere ninguna configuración adicional.
+No se requiere configuración adicional.
 
 -----
 
-## <a name="using-connectivity"></a>Uso de conectividad
+## <a name="using-connectivity"></a>Uso de Connectivity
 
 Agregue una referencia a Xamarin.Essentials en su clase:
 
@@ -60,7 +60,7 @@ Agregue una referencia a Xamarin.Essentials en su clase:
 using Xamarin.Essentials;
 ```
 
-Comprobar el acceso de red actual:
+Compruebe el acceso de red actual:
 
 ```csharp
 var current = Connectivity.NetworkAccess;
@@ -71,15 +71,15 @@ if (current == NetworkAccess.Internet)
 }
 ```
 
-[Acceso a la red](xref:Xamarin.Essentials.NetworkAccess) se divide en las siguientes categorías:
+[Acceso a la red](xref:Xamarin.Essentials.NetworkAccess) cae en estas categorías:
 
-* **Internet** – acceso Local y en internet.
-* **ConstrainedInternet** : limita el acceso a internet. Indica la conectividad del portal cautiva, donde se proporciona acceso local a un portal web, pero el acceso a Internet requiere que se proporcionan credenciales específicas a través de un portal.
-* **Local** : Local solo acceso de red.
-* **Ninguno** : no hay conectividad está disponible.
-* **Desconocido** : no se puede determinar la conectividad a internet.
+* **Internet**: acceso a Internet y local.
+* **ConstrainedInternet**: acceso limitado a Internet. Indica la conectividad cautiva del portal, donde se proporciona acceso local a un portal web, pero el acceso a Internet requiere que se proporcionen credenciales específicas a través de un portal.
+* **Local**: solo acceso a la red local.
+* **None**: sin conectividad disponible.
+* **Unknown**: no se puede determinar la conectividad de Internet.
 
-Puede comprobar qué tipo de [perfil de conexión](xref:Xamarin.Essentials.ConnectionProfile) esté usando activamente el dispositivo:
+Puede comprobar qué tipo de [perfil de conexión](xref:Xamarin.Essentials.ConnectionProfile) el dispositivo usa de manera activa:
 
 ```csharp
 var profiles = Connectivity.Profiles;
@@ -89,7 +89,7 @@ if (profiles.Contains(ConnectionProfile.WiFi))
 }
 ```
 
-Puede recibir un evento cuando se desencadena cada vez que el perfil de conexión o red acceder a los cambios:
+Cada vez que el perfil de conexión o el acceso a la red cambia, puede recibir un evento cuando se desencadena:
 
 ```csharp
 public class ConnectivityTest
@@ -100,7 +100,7 @@ public class ConnectivityTest
         Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
     }
 
-    void Connectivity_ConnectivityChanged(ConnectivityChangedEventArgs  e)
+    void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs  e)
     {
         var access = e.NetworkAccess;
         var profiles = e.Profiles;
@@ -110,9 +110,9 @@ public class ConnectivityTest
 
 ## <a name="limitations"></a>Limitaciones
 
-Es importante tener en cuenta que es posible que `Internet` notificada por `NetworkAccess` pero acceso completo a la web no está disponible. Debido a cómo funciona la conectividad en cada plataforma solo puede garantizar que una conexión está disponible. Por ejemplo, el dispositivo puede estar conectado a una red Wi-Fi, pero el enrutador está desconectado de internet. En esta instancia se puede registrar Internet, pero no está disponible una conexión activa.
+Es importante tener en cuenta que puede que `NetworkAccess` informe `Internet`, pero no hay disponible acceso total a la Web. Debido a cómo funciona la conectividad en cada plataforma, solo puede garantizar que hay disponible una conexión. Por ejemplo, es posible que el dispositivo esté conectado a una red Wi-Fi, pero el enrutador no está conectado a Internet. En esta instancia, puede que se indique que hay Internet, pero no hay disponible ninguna conexión activa.
 
 ## <a name="api"></a>API
 
-* [Código fuente de conectividad](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Connectivity)
-* [Documentación de API de conectividad](xref:Xamarin.Essentials.Connectivity)
+* [Código fuente de Connectivity](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Connectivity)
+* [Documentación de API de Connectivity](xref:Xamarin.Essentials.Connectivity)

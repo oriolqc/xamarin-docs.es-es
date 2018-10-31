@@ -1,25 +1,25 @@
 ---
 title: 'Xamarin.Essentials: OrientationSensor'
-description: La clase OrientationSensor le permite supervisar la orientación de un dispositivo en un espacio tridimensional.
+description: La clase OrientationSensor permite supervisar la orientación de un dispositivo en un espacio tridimensional.
 ms.assetid: F3091D93-E779-41BA-8696-23D296F2F6F5
-author: charlespetzold
-ms.author: chape
+author: jamesmontemagno
+ms.author: jamont
 ms.date: 05/21/2018
-ms.openlocfilehash: a15338795424885882ed9c86288342d196f6fda2
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 4ea6ebbb85510b5d7262cde73248af9df975b867
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353820"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112070"
 ---
 # <a name="xamarinessentials-orientationsensor"></a>Xamarin.Essentials: OrientationSensor
 
-![La versión preliminar de NuGet](~/media/shared/pre-release.png)
+![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-El **OrientationSensor** clase le permite supervisar la orientación de un dispositivo en tres espacio dimensional.
+La clase **OrientationSensor** permite supervisar la orientación de un dispositivo en un espacio tridimensional.
 
 > [!NOTE]
-> Esta clase es para determinar la orientación de un dispositivo en el espacio 3D. Si necesita determinar si vídeo del dispositivo de la pantalla está en modo vertical u horizontal, use el `Orientation` propiedad de la `ScreenMetrics` objeto disponible desde el [ `DeviceDisplay` ](device-display.md) clase.
+> Esta clase se usa para determinar la orientación de un dispositivo en un espacio tridimensional. Si tiene que determinar si la visualización de vídeo del dispositivo está en modo vertical u horizontal, use la propiedad `Orientation` del objeto `ScreenMetrics` disponible en la clase [`DeviceDisplay`](device-display.md).
 
 ## <a name="using-orientationsensor"></a>Uso de OrientationSensor
 
@@ -29,7 +29,7 @@ Agregue una referencia a Xamarin.Essentials en su clase:
 using Xamarin.Essentials;
 ```
 
-El `OrientationSensor` está habilitada mediante una llamada a la `Start` método para supervisar los cambios de orientación del dispositivo y deshabilitado mediante una llamada a la `Stop` método. Los cambios se enviarán a través de la `ReadingChanged` eventos. Este es un ejemplo de uso:
+`OrientationSensor` se habilita mediante una llamada al método `Start` para supervisar los cambios en la orientación del dispositivo y se deshabilita al llamar al método `Stop`. Los cambios se enviarán a través del evento `ReadingChanged`. Este es un uso de ejemplo:
 
 ```csharp
 
@@ -72,41 +72,41 @@ public class OrientationSensorTest
 }
 ```
 
-`OrientationSensor` las lecturas se notifican en forma de un [ `Quaternion` ](xref:System.Numerics.Quaternion) que describe la orientación del dispositivo en función de los dos sistemas de coordenadas 3D:
+Las lecturas de `OrientationSensor` se informan como un [`Quaternion`](xref:System.Numerics.Quaternion) que describe la orientación del dispositivo en función de dos sistemas de coordenadas tridimensionales:
 
-El dispositivo (normalmente un teléfono o tableta) tiene un sistema de coordenadas 3D con los ejes siguientes:
+El dispositivo (generalmente un teléfono o tableta) tiene un sistema de coordenadas tridimensional con los siguientes ejes:
 
-- El valor positivo X señala eje hacia la derecha de la pantalla en modo vertical.
-- El eje Y positivo apunta a la parte superior del dispositivo en modo vertical.
+- El eje X positivo apunta a la derecha de la visualización en modo vertical.
+- El eje Y positivo apunta a la parte de arriba del dispositivo en modo horizontal.
 - El eje Z positivo apunta fuera de la pantalla.
 
-El sistema de coordenadas 3D de la tierra tiene los ejes siguientes:
+El sistema de coordenadas tridimensional de la Tierra tiene estos ejes:
 
-- El valor positivo eje X tangente a la superficie de la tierra y puntos de este.
-- El eje Y positivo también es tangente a la superficie de la tierra y puntos de Norte.
-- El eje Z positivo es perpendicular a la superficie de la tierra y puntos de seguridad.
+- El eje X positivo es tangente a la superficie de la Tierra y apunta al este.
+- El eje Y positivo también es tangente a la superficie de la Tierra y apunta al norte.
+- El eje Z positivo es perpendicular a la superficie de la Tierra y apunta hacia arriba.
 
-El `Quaternion` describe la rotación del sistema de coordenadas del dispositivo en relación con el sistema de coordenadas de la tierra.
+`Quaternion` describe la rotación del sistema de coordenadas del dispositivo en relación con el sistema de coordenadas de la Tierra.
 
-Un `Quaternion` valor está muy estrechamente relacionada con rotación alrededor de un eje. Si un eje de rotación es el valor normalizado (un<sub>x</sub>, un<sub>y</sub>, un<sub>z</sub>), y el ángulo de giro es Θ, entonces la (X, Y, Z, W) los componentes del cuaternión son:
+Un valor `Quaternion` está estrechamente relacionado con la rotación alrededor de un eje. Si un eje de rotación es el vector normalizado (a<sub>x</sub>, a<sub>y</sub>, a<sub>z</sub>) y el ángulo de rotación es Θ, los componentes (X, Y, Z, W) del cuaternión son:
 
-(un<sub>x</sub>·sin(Θ/2), un<sub>y</sub>·sin(Θ/2), un<sub>z</sub>·sin(Θ/2), cos(Θ/2))
+(a<sub>x</sub>·sin(Θ/2), a<sub>y</sub>·sin(Θ/2), a<sub>z</sub>·sin(Θ/2), cos(Θ/2))
 
-Estos son los sistemas de coordenadas derecho, por lo que con el control de posición de la mano derecha señala en la dirección positiva del eje de rotación, la curva de los dedos indican la dirección de rotación de ángulos positivos.
+Estos son los sistemas de coordenadas de la derecha por lo que, con el pulgar de la mano derecha apuntando en la dirección positiva del eje de rotación, la curva de los dedos indica la dirección de la rotación de los ángulos positivos.
 
 Ejemplos:
 
-* Cuando se encuentra el dispositivo sin formato en una tabla con su pantalla hacia arriba, con la parte superior del dispositivo (en modo vertical), que señalan al norte, se alinean los dos sistemas de coordenadas. El `Quaternion` valor representa el cuaternión de identidad (0, 0, 0, 1). Todos los giros se pueden analizar con respecto a esta posición.
+* Cuando el dispositivo está pantalla arriba sobre una mesa, con la parte superior del mismo (en el modo vertical) apuntando al norte, los dos sistemas de coordenadas están alineados. El valor `Quaternion` representa el cuaternión de identidad (0, 0, 0, 1). Todas las rotaciones se pueden analizar en relación con esta posición.
 
-* Cuando se encuentra el dispositivo sin formato en una tabla con su pantalla hacia arriba y la parte superior del dispositivo (en modo vertical) que señala al oeste, el `Quaternion` valor es (0, 0, 0,707, 0,707). El dispositivo se ha girado 90 grados alrededor del eje Z de la tierra.
+* Cuando el dispositivo está pantalla arriba sobre una mesa y la parte superior del mismo (en el modo vertical) apunta al oeste, el valor de `Quaternion` es (0, 0, 0.707, 0.707). El dispositivo se giró 90 grados alrededor del eje Z de la Tierra.
 
-* Cuando el dispositivo se mantiene vertical para que la parte superior (en modo vertical) que señala hacia el cielo y Norte se enfrenta a la parte posterior del dispositivo, el dispositivo ha sido gira 90 grados alrededor del eje X. El `Quaternion` valor es (0,707, 0, 0, 0,707).
+* Cuando el dispositivo se sostiene de manera vertical, con la parte superior (en el modo vertical) apuntando al cielo y la parte posterior orientada al norte, es porque el dispositivo se giró 90 grados alrededor del eje X. El valor de `Quaternion` es (0.707, 0, 0, 0.707).
 
-* Si se coloca el dispositivo para que su margen izquierdo se encuentra en una tabla y la parte superior, Norte señala el dispositivo se ha girado &ndash;90 grados alrededor del eje Y (o 90 grados alrededor del eje Y negativo). El `Quaternion` valor es (0,-0.707, 0, 0,707).
+* Si el dispositivo se coloca de manera tal que el borde izquierdo esté sobre una mesa y la parte superior apunte al norte, es porque el dispositivo se giró &ndash;90 grados alrededor del eje Y (o 90 grados alrededor del eje Y negativo). El valor de `Quaternion` es (0, -0.707, 0, 0.707).
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
 ## <a name="api"></a>API
 
 - [Código fuente de OrientationSensor](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/OrientationSensor)
-- [Documentación de API OrientationSensor](xref:Xamarin.Essentials.OrientationSensor)
+- [Documentación de API de OrientationSensor](xref:Xamarin.Essentials.OrientationSensor)

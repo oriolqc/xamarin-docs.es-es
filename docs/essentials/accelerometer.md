@@ -5,18 +5,18 @@ ms.assetid: 97883573-F0D9-4854-AC7C-A654814401C5
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 53e7ca70184270662d27043387da836ad44432fe
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: 98793d82e553ffe45bf3cd37314a6fe70d856f2f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40184432"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50102677"
 ---
 # <a name="xamarinessentials-accelerometer"></a>Xamarin.Essentials: Accelerometer
 
 ![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-La clase **Accelerometer** le permite supervisar el sensor de acelerómetro del dispositivo, que indica la aceleración del dispositivo en un espacio tridimensional.
+La clase **Accelerometer** permite supervisar el sensor del acelerómetro del dispositivo, que indica la aceleración del dispositivo en un espacio tridimensional.
 
 ## <a name="using-accelerometer"></a>Uso de Accelerometer
 
@@ -77,11 +77,11 @@ El eje X es horizontal y apunta a la derecha, el eje Y es vertical y apunta haci
 
 Ejemplos:
 
-* Cuando el dispositivo se encuentra plano sobre una mesa y se mueve desde el lado izquierdo hacia la derecha, el valor de aceleración de X es positivo.
+- Cuando el dispositivo se encuentra plano sobre una mesa y se mueve desde el lado izquierdo hacia la derecha, el valor de aceleración de X es positivo.
 
-* Cuando el dispositivo se encuentra plano sobre una mesa, el valor de aceleración es + 1,00 G o (+ 9,81 m/s^2), que corresponden a la aceleración del dispositivo (0 m/s^2) menos la fuerza de la gravedad (- 9,81 m/s^2) y normalizada en G.
+- Cuando el dispositivo se encuentra plano sobre una mesa, el valor de aceleración es + 1,00 G o (+ 9,81 m/s^2), que corresponden a la aceleración del dispositivo (0 m/s^2) menos la fuerza de la gravedad (- 9,81 m/s^2) y normalizada en G.
 
-* Cuando el dispositivo se encuentra plano sobre una mesa y se mueve hacia el cielo con una aceleración de A m/s^2, el valor de la aceleración es igual A + 9,81, que corresponde a la aceleración del dispositivo (+ A m/s^2) menos la fuerza de la gravedad (- 9,81 m/s^2) y normalizada en G.
+- Cuando el dispositivo se encuentra plano sobre una mesa y se mueve hacia el cielo con una aceleración de A m/s^2, el valor de la aceleración es igual A + 9,81, que corresponde a la aceleración del dispositivo (+ A m/s^2) menos la fuerza de la gravedad (- 9,81 m/s^2) y normalizada en G.
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
