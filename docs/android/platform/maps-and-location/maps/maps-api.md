@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 69fc4fe8f8cd6031d592289e81d4c8a5ee14e054
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
-ms.translationtype: HT
+ms.openlocfilehash: a89211e4576b8d22b45bb4f675241d47c49270e6
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "36935144"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50235043"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>Uso de la API de Google Maps en su aplicación
 
-El uso de la aplicación mapas es excelente, pero a veces van a incluir asignaciones directamente en la aplicación. Además de los integrados se asigna la aplicación, Google también ofrece un [API nativas de asignación para Android](hhttps://developers.google.com/maps/documentation/android-sdk/intro).
+El uso de la aplicación mapas es excelente, pero a veces van a incluir asignaciones directamente en la aplicación. Además de los integrados se asigna la aplicación, Google también ofrece un [API nativas de asignación para Android](https://developers.google.com/maps/documentation/android-sdk/intro).
 La API de mapas es adecuada para los casos donde desee mantienen más control sobre la experiencia de asignación. Cosas que son posibles con la API de Maps incluyen:
 
 -  Cambiar mediante programación el punto de vista del mapa.
