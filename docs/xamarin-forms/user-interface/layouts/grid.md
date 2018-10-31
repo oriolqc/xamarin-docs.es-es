@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 01dd59d5e94b473316b03f9035d38305fad42880
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 392a0e6c76357ce106477ec4d5037673e5702b43
+ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994507"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50301245"
 ---
 # <a name="xamarinforms-grid"></a>Cuadrícula de Xamarin.Forms
 
@@ -22,12 +22,12 @@ ms.locfileid: "38994507"
 
 Este artículo se trata:
 
-- **[Propósito](#Purpose)**  &ndash; usos comunes de `Grid`.
-- **[Uso](#Usage)**  &ndash; cómo usar `Grid` para lograr el diseño deseado.
-  - **[Las filas y columnas](#Rows_and_Columns)**  &ndash; especificar las filas y columnas para el `Grid`.
-  - **[Colocación de las vistas](#Placing_Views)**  &ndash; agregar vistas a la cuadrícula de columnas y filas específicas.
-  - **[Espaciado](#Spacing)**  &ndash; configurar los espacios entre las filas y columnas.
-  - **[Intervalos](#Spans)**  &ndash; configurar elementos que se va a abarcar varias filas o columnas.
+- **[Propósito](#purpose)**  &ndash; usos comunes de `Grid`.
+- **[Uso](#usage)**  &ndash; cómo usar `Grid` para lograr el diseño deseado.
+  - **[Las filas y columnas](#rows-and-columns)**  &ndash; especificar las filas y columnas para el `Grid`.
+  - **[Colocación de las vistas](#placing-views-in-a-grid)**  &ndash; agregar vistas a la cuadrícula de columnas y filas específicas.
+  - **[Espaciado](#spacing)**  &ndash; configurar los espacios entre las filas y columnas.
+  - **[Intervalos](#spans)**  &ndash; configurar elementos que se va a abarcar varias filas o columnas.
 
 ![](grid-images/grid.png "Exploración de la cuadrícula")
 
@@ -42,8 +42,6 @@ Este artículo se trata:
 ## <a name="usage"></a>Uso
 
 A diferencia de las tablas tradicionales, `Grid` no infiere el número y tamaño de filas y columnas del contenido. En su lugar, `Grid` tiene `RowDefinitions` y `ColumnDefinitions` colecciones. Éstos contienen las definiciones de dispuestos cuántas filas y columnas. Las vistas se agregan a `Grid` con la fila especificada y los índices de columnas, que identifican qué fila y columna que se debe colocar en una vista.
-
-<a name="Rows_and_Columns" />
 
 ### <a name="rows-and-columns"></a>Las filas y columnas
 
@@ -83,8 +81,6 @@ grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength (1, GridUni
 grid.RowDefinitions.Add (new RowDefinition { Height = new GridLength(200)});
 grid.ColumnDefinitions.Add (new ColumnDefinition{ Width = new GridLength (200) });
 ```
-
-<a name="Placing_Views" />
 
 ### <a name="placing-views-in-a-grid"></a>Colocación de las vistas en una cuadrícula
 
