@@ -16,7 +16,7 @@ ms.locfileid: "39353524"
 
 ![La versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-El **DataTransfer** clase permite que una aplicación compartir datos como texto y web vínculos a otras aplicaciones en el dispositivo.
+La clase **DataTransfer** permite a una aplicación compartir datos como texto y vínculos web a otras aplicaciones del dispositivo.
 
 ## <a name="using-data-transfer"></a>Uso de transferencia de datos
 
@@ -26,7 +26,7 @@ Agregue una referencia a Xamarin.Essentials en su clase:
 using Xamarin.Essentials;
 ```
 
-La funcionalidad de transferencia de datos funciona mediante una llamada a la `RequestAsync` método con una carga de solicitudes de datos que incluye información para compartir con otras aplicaciones. Se pueden combinar el texto y el Uri y va a controlar cada plataforma de filtrado basado en contenido.
+La funcion transferencia de datos funciona mediante una llamada al método `RequestAsync` con algunos parametros que incluyen información para compartir con otras aplicaciones. Se pueden combinar texto y Uri, cada plataforma controlara el filtrado basado en el contenido.
 
 ```csharp
 
@@ -52,15 +52,15 @@ public class DataTransferTest
 }
 ```
 
-Interfaz de usuario para compartir a una aplicación externa que aparece cuando se realiza la solicitud:
+Interfaz de usuario para que aparece cuando se realiza la solicitud para compartir datos a una aplicación externa:
 
 ![Transferencia de datos](data-transfer-images/data-transfer.png)
 
-## <a name="platform-differences"></a>Diferencias entre las plataformas
+## <a name="platform-differences"></a>Diferencias entre plataformas
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-* `Subject` propiedad se utiliza para el objeto deseada de un mensaje.
+* La propiedad `Subject` se utiliza como el asunto deseada de un mensaje.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
@@ -69,12 +69,12 @@ Interfaz de usuario para compartir a una aplicación externa que aparece cuando 
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* `Title` le nombre de la aplicación de forma predeterminada si no se establece.
+* `Title` sera el nombre de la aplicación de forma predeterminada si no se establece.
 * `Subject` No se utiliza.
 
 -----
 
 ## <a name="api"></a>API
 
-- [Código fuente de transferencia de datos](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DataTransfer)
-- [Documentación de API de transferencia de datos](xref:Xamarin.Essentials.DataTransfer)
+- [Código fuente de la clase DataTransfer](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DataTransfer)
+- [Documentación de la API DataTransfer](xref:Xamarin.Essentials.DataTransfer)
