@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 954a0967e034e0321964e12ca0725ae2a85e3bc6
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: e9ec9288e2b8ea991ef8d41f9b601d0897631b9d
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995542"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675219"
 ---
 # <a name="xamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
@@ -85,7 +85,8 @@ También se pueden agregar desencadenadores a una `Style` declaración en un con
 
 Desencadenadores de datos utilizan el enlace de datos para supervisar otro control para hacer que el `Setter`s sea llamado. En lugar de la `Property` en un desencadenador de propiedad de atributo, establezca el `Binding` atributo para supervisar el valor especificado.
 
-El ejemplo siguiente usa la sintaxis de enlace de datos `{Binding Source={x:Reference entry}, Path=Text.Length}` que es cómo nos referimos a las propiedades de otro control. Cuando la longitud de la `entry` es cero, el desencadenador se activa. En este ejemplo el desencadenador deshabilita el botón cuando la entrada está vacía.
+El ejemplo siguiente usa la sintaxis de enlace de datos `{Binding Source={x:Reference entry}, Path=Text.Length}`
+que es cómo nos referimos a las propiedades de otro control. Cuando la longitud de la `entry` es cero, el desencadenador se activa. En este ejemplo el desencadenador deshabilita el botón cuando la entrada está vacía.
 
 ```xaml
 <!-- the x:Name is referenced below in DataTrigger-->
@@ -164,7 +165,7 @@ Las propiedades expuestas por la acción del desencadenador se pueden establecer
 
 Tenga cuidado al uso compartido de los desencadenadores en una `ResourceDictionary`, por lo que cualquier estado que se configura una vez que se aplicará a todas ellas, se compartirá entre controles de una instancia.
 
-Tenga en cuenta que no se admiten los desencadenadores de eventos `EnterActions` y `ExitActions` [se describe a continuación](#enterexit).    
+Tenga en cuenta que no se admiten los desencadenadores de eventos `EnterActions` y `ExitActions` [se describe a continuación](#enterexit).
 
 <a name="multi" />
 
@@ -202,7 +203,6 @@ El desencadenador de múltiples solo actualiza su control cuando se cumplen toda
 
 Esto puede hacerse con un `IValueConverter`. El código de convertidor siguiente transformaciones el `Text.Length` enlace en un `bool` que indica si un campo está vacío o no:
 
-
 ```csharp
 public class MultiTriggerConverter : IValueConverter
 {
@@ -234,7 +234,7 @@ Para utilizar este convertidor de tipos en un desencadenador de múltiples, prim
 A continuación se muestra el XAML. Tenga en cuenta las siguientes diferencias en el primer ejemplo de desencadenador de múltiples:
 
 * El botón tiene `IsEnabled="false"` establecido de forma predeterminada.
-* Las condiciones de desencadenador múltiple utilización el convertidor para activar el `Text.Length` valor en un valor booleano.
+* Las condiciones de desencadenador múltiple utilización el convertidor para activar el `Text.Length` valor en un `boolean`.
 * Cuando todas las condiciones son `true`, el establecedor hace que el botón `IsEnabled` propiedad `true`.
 
 ```xaml
@@ -266,7 +266,6 @@ A continuación se muestra el XAML. Tenga en cuenta las siguientes diferencias e
 
 Estas capturas de pantalla muestran la diferencia entre los dos ejemplos de desencadenador de múltiples anteriores. En la parte superior de las pantallas, texto de entrada en uno solo `Entry` es suficiente para habilitar la **guardar** botón.
 En la parte inferior de las pantallas, el **inicio de sesión** botón permanece inactivo hasta que ambos campos contienen datos.
-
 
 ![](triggers-images/multi-requireall.png "Ejemplos multiTrigger")
 
