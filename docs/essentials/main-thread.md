@@ -5,12 +5,12 @@ ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 06/26/2018
-ms.openlocfilehash: 608cd00a2134e6e3fee89c7ae25bf4627d8b23be
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: db2e79ed5c471c11e2d3dc1afe360843e5dfea6a
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112319"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675450"
 ---
 # <a name="xamarinessentials-mainthread"></a>Xamarin.Essentials: MainThread
 
@@ -23,6 +23,10 @@ La clase **MainThread** permite que las aplicaciones ejecuten código en el subp
 La mayoría de los sistemas operativos, incluidos iOS, Android y Plataforma universal de Windows, usan un modelo de un único subproceso para el código que participa en la interfaz de usuario. Este modelo resulta necesario para serializar de manera adecuada los eventos de la interfaz de usuario, incluidas pulsaciones de teclas y entradas táctiles. Con frecuencia, este subproceso se denomina el _subproceso principal_, el _subproceso de interfaz de usuario_ o el _subproceso de UI_. La desventaja que presenta este modelo es que todo el código que accede a los elementos de la interfaz de usuario se deben ejecutar en el subproceso principal de la aplicación. 
 
 Algunas veces, las aplicaciones deben usar eventos que llamar al controlador de eventos en un subproceso de ejecución secundario. (Es posible que las clases [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md) y [`OrientationSensor`](orientation-sensor.md) de Xamarin.Essentials devuelvan información en un subproceso secundario cuando se usa con velocidades más rápidas). Si el controlador de eventos debe acceder a los elementos de la interfaz de usuario, debe ejecutar ese código en el subproceso principal. La clase **MainThread** permite que la aplicación ejecute este código en el subproceso principal.
+
+## <a name="get-started"></a>Primeros pasos
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="running-code-on-the-main-thread"></a>Ejecución de código en el subproceso principal
 

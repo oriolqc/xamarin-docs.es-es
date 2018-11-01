@@ -5,18 +5,22 @@ ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 07/25/2018
-ms.openlocfilehash: ed5d909ae43ddb9e531851f5571f71517274db21
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fb4cbc2fd334d574abc57a3359fa346bc6795408
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123627"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674787"
 ---
 # <a name="xamarinessentials-maps"></a>Xamarin.Essentials: Maps
 
 ![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
 La clase **Maps** permite que una aplicación abra la aplicación de mapas instalada en una ubicación o marca de posición específica.
+
+## <a name="get-started"></a>Primeros pasos
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-maps"></a>Uso de Maps
 

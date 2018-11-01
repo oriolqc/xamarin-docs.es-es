@@ -5,18 +5,22 @@ ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 68bf7f51e9331c1296f26ad7083cf17ab8e480a0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a68837ac4447dabcf52a1d1b27913adf80b4cbd7
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102288"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675398"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Browser
 
 ![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
 La clase **Browser** permite que una aplicación abra un vínculo web en el explorador optimizado preferido del sistema o en el explorador externo.
+
+## <a name="get-started"></a>Primeros pasos
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-browser"></a>Uso de Browser
 

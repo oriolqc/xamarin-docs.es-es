@@ -1,18 +1,18 @@
 ---
 title: Xamarin.Forms MessagingCenter
-description: Este artículo explica cómo utilizar el Xamarin.Forms MessagingCenter para enviar y recibir mensajes, para reducir el acoplamiento entre clases, como los modelos de vista.
+description: En este artículo se explica cómo usar el Xamarin.Forms MessagingCenter para enviar y recibir mensajes, para reducir el acoplamiento entre clases como modelos de vista.
 ms.prod: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 49a7ecdad53c7820594f7ebc047ae6fbc5a9bc56
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.openlocfilehash: 7fef4443cacba0fa8bdb8d5df070c4244730b4f5
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209419"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675185"
 ---
 # <a name="xamarinforms-messagingcenter"></a>Xamarin.Forms MessagingCenter
 
@@ -22,11 +22,11 @@ _Xamarin.Forms incluye un simple servicio de mensajería para enviar y recibir m
 
 ## <a name="overview"></a>Información general
 
-Xamarin.Forms `MessagingCenter` permite ver los modelos y otros componentes se comuniquen sin necesidad de saber nada sobre entre sí además de un contrato de mensaje simple.
+Xamarin.Forms `MessagingCenter` permite ver los modelos y otros componentes se comuniquen sin tener que saber nada acerca de sí además de un contrato de mensaje simple.
 
 <a name="How_the_MessagingCenter_Works" />
 
-## <a name="how-the-messagingcenter-works"></a>Cómo funciona la MessagingCenter
+## <a name="how-the-messagingcenter-works"></a>Cómo funciona el MessagingCenter
 
 Hay dos partes para `MessagingCenter`:
 
@@ -36,17 +36,16 @@ Hay dos partes para `MessagingCenter`:
 
 El `MessagingService` es una clase estática con `Subscribe` y `Send` métodos que se usan en toda la solución.
 
-Mensajes tienen una cadena `message` parámetro que se utiliza como forma de *dirección* mensajes. El `Subscribe` y `Send` métodos usan parámetros genéricos para controlar aún más el modo en que se entregan los mensajes: dos mensajes con el mismo `message` texto pero los argumentos de tipo genérico diferente no se entregará al mismo suscriptor.
+Los mensajes tienen una cadena `message` parámetro que se utiliza como forma de *dirección* mensajes. El `Subscribe` y `Send` métodos usan parámetros genéricos para un mayor control sobre cómo se entregan los mensajes: dos mensajes con el mismo `message` texto pero argumentos de tipo genérico diferente no se entregará al mismo suscriptor.
 
-La API de `MessagingCenter` es simple:
+La API para `MessagingCenter` es simple:
 
--  Suscribirse&lt;TSender > (suscriptor de objeto, la acción de mensaje de cadena&lt;TSender > devolución de llamada, el origen de TSender = null)
--  Suscribirse&lt;TSender, TArgs > (suscriptor de objeto, la acción de mensaje de cadena&lt;TSender, TArgs > devolución de llamada, el origen de TSender = null)
--  Enviar&lt;TSender > (TSender remitente, mensaje de cadena)
--  Enviar&lt;TSender, TArgs > (TSender remitente, el mensaje de cadena, TArgs args)
--  Cancelar la suscripción&lt;TSender, TArgs > (suscriptor de objeto, mensaje de cadena)
--  Cancelar la suscripción&lt;TSender > (suscriptor de objeto, mensaje de cadena)
-
+- `Subscribe<TSender> (object subscriber, string message, Action<TSender> callback, TSender source = null)`
+- `Subscribe<TSender, TArgs> (object subscriber, string message, Action<TSender, TArgs> callback, TSender source = null)`
+- `Send<TSender> (TSender sender, string message)`
+- `Send<TSender, TArgs> (TSender sender, string message, TArgs args)`
+- `Unsubscribe<TSender, TArgs> (object subscriber, string message)`
+- `Unsubscribe<TSender> (object subscriber, string message)`
 
 A continuación se explican estos métodos.
 
@@ -54,11 +53,11 @@ A continuación se explican estos métodos.
 
 ## <a name="using-the-messagingcenter"></a>Uso de la MessagingCenter
 
-Como resultado de la interacción del usuario (por ejemplo, haga clic en un botón), un evento del sistema (por ejemplo, cambiar el estado de los controles) o algún otro incidente (por ejemplo, una finalización de descarga asincrónica), se pueden enviar mensajes. Los suscriptores podrían estar escuchando para cambiar la apariencia de la interfaz de usuario, guardar los datos o desencadenar otra operación.
+Como resultado de la interacción del usuario (por ejemplo, haga clic en un botón), un evento del sistema (por ejemplo, los controles de cambio de estado) o algunos otros incidentes (por ejemplo, para completar una descarga asincrónica) se pueden enviar mensajes. Los suscriptores podrían estar escuchando para cambiar la apariencia de la interfaz de usuario, guardar los datos o desencadenar otra operación.
 
 ### <a name="simple-string-message"></a>Mensaje de cadena simple
 
-El mensaje más simple contiene una cadena en el `message` parámetro. A `Subscribe` método que *escucha* para un mensaje de cadena simple se muestra a continuación: tenga en cuenta el tipo genérico debe indicarse al remitente debe ser del tipo `MainPage`. Todas las clases de la solución pueden suscribirse a los mensajes con esta sintaxis:
+El mensaje más simple contiene simplemente una cadena en el `message` parámetro. Un `Subscribe` método que *escucha* para un mensaje de cadena simple se muestra más abajo: tenga en cuenta el tipo genérico especifica que el remitente debe ser del tipo `MainPage`. Las clases en la solución pueden suscribirse al mensaje con esta sintaxis:
 
 ```csharp
 MessagingCenter.Subscribe<MainPage> (this, "Hi", (sender) => {
@@ -66,17 +65,17 @@ MessagingCenter.Subscribe<MainPage> (this, "Hi", (sender) => {
 });
 ```
 
-En el `MainPage` el siguiente código de la clase *envía* el mensaje. El `this` parámetro es una instancia de `MainPage`.
+En el `MainPage` el siguiente código de clase *envía* el mensaje. El `this` parámetro es una instancia de `MainPage`.
 
 ```csharp
 MessagingCenter.Send<MainPage> (this, "Hi");
 ```
 
-No cambia la cadena - indica el *tipo de mensaje* y se utiliza para determinar qué suscriptores para notificar. Este tipo de mensaje se usa para indicar que se produjo un evento, como "carga completado", donde no se requiere ninguna información adicional.
+No cambia la cadena - indica el *tipo de mensaje* y se usa para determinar qué suscriptores para notificar. Este tipo de mensaje se usa para indicar que se produjo un evento, como "carga completada", donde no se requiere ninguna información adicional.
 
 ### <a name="passing-an-argument"></a>Pasar un argumento
 
-Para pasar un argumento con el mensaje, especifique el argumento de tipo en el `Subscribe` argumentos genéricos y en la firma de acción.
+Para pasar un argumento con el mensaje, especifique el tipo de argumento en el `Subscribe` argumentos genéricos y en la firma de acción.
 
 ```csharp
 MessagingCenter.Subscribe<MainPage, string> (this, "Hi", (sender, arg) => {
@@ -91,11 +90,11 @@ Para enviar el mensaje con el argumento, incluya el parámetro de tipo genérico
 MessagingCenter.Send<MainPage, string> (this, "Hi", "John");
 ```
 
-Este sencillo ejemplo se usa un `string` se puede pasar el argumento, pero cualquier objeto de C#.
+Este ejemplo utiliza un `string` argumento, pero los C# se puede pasar el objeto.
 
 ### <a name="unsubscribe"></a>Cancelar la suscripción
 
-Un objeto puede cancelar la suscripción a una firma del mensaje para que no se entrega ningún mensaje futuras. El `Unsubscribe` sintaxis de método deben reflejar la firma del mensaje (por lo que sea necesario incluir el parámetro de tipo genérico para el argumento de mensaje).
+Puede cancelar la suscripción de un objeto a una firma de mensaje para que no se entregan los mensajes futuros. El `Unsubscribe` sintaxis de método debe reflejar la firma del mensaje (por lo que sea necesario incluir el parámetro de tipo genérico para el argumento de mensaje).
 
 ```csharp
 MessagingCenter.Unsubscribe<MainPage> (this, "Hi");
@@ -106,7 +105,7 @@ MessagingCenter.Unsubscribe<MainPage, string> (this, "Hi");
 
 ## <a name="summary"></a>Resumen
 
-El MessagingCenter es una manera sencilla de reducir el acoplamiento, especialmente entre modelos de vista. Se puede utilizar para enviar y recibir mensajes simples o pasar un argumento entre clases. Clases deben cancelar la suscripción a mensajes que ya no desean recibir.
+El MessagingCenter es una manera sencilla de reducir el acoplamiento, especialmente entre los modelos de vista. Se puede usar para enviar y recibir mensajes sencillos o pasar un argumento entre clases. Las clases deben cancelar la suscripción a mensajes que ya no desean recibir.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

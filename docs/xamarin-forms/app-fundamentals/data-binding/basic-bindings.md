@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: b52f249b184d49731fd5decdb5877c70e29a3b84
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: e31cba5c61624b0bca03443262b95d7497564750
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38998077"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675203"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Enlaces de Xamarin.Forms Basic
 
@@ -94,7 +94,7 @@ Sin embargo, incluido el nombre de clase es un buen recordatorio del objeto de d
 
 Al manipular el `Slider`, el `Label` gira según corresponda:
 
-[![Código Basice enlace](basic-bindings-images/basiccodebinding-small.png "enlace código básico")](basic-bindings-images/basiccodebinding-large.png#lightbox "enlace código básico")
+[![Enlace de código básico](basic-bindings-images/basiccodebinding-small.png "enlace código básico")](basic-bindings-images/basiccodebinding-large.png#lightbox "enlace código básico")
 
 El **enlace Xaml básico** es idéntica a la página **enlace código básico** excepto que define el enlace de datos completo en XAML:
 

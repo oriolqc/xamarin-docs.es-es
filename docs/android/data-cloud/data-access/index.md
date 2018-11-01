@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 19a2842fa7d29ed40052166b880bf4b26dc09e9c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 08720734de73af12d8a7383fa7d523dc350c4462
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120702"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674783"
 ---
 # <a name="xamarinandroid-data-access"></a>Acceso a datos de Xamarin.Android
 
@@ -20,18 +20,18 @@ _Mayoría de las aplicaciones tiene algún requisito para guardar los datos en e
 
 ## <a name="data-access-overview"></a>Información general sobre el acceso de datos
 
-Mayoría de las aplicaciones tiene algún requisito para guardar los datos en el dispositivo de forma local. A menos que la cantidad de datos pequeña, esto normalmente requiere una base de datos y una capa de datos en la aplicación para administrar el acceso de la base de datos. Android ambos tiene el motor de base de datos de Sqlite "integrado" y el acceso a los datos se simplifica mediante la plataforma de Xamarin que se incluye con el proveedor de datos de SQLite.
+Mayoría de las aplicaciones tiene algún requisito para guardar los datos en el dispositivo de forma local. A menos que la cantidad de datos pequeña, esto normalmente requiere una base de datos y una capa de datos en la aplicación para administrar el acceso de la base de datos. Android ambos tiene el motor de base de datos de SQLite "integrado" y el acceso a los datos se simplifica mediante la plataforma de Xamarin que se incluye con el proveedor de datos de SQLite.
 
 Xamarin.Android admite las API de acceso de base de datos, como:
 
--  Marco de trabajo ADO.NET.
--  Biblioteca de terceros 3rd SQLite-NET.
+- Marco de trabajo ADO.NET.
+- Biblioteca de terceros 3rd SQLite-NET.
 
 La mayoría del código en esta sección es completamente multiplataforma y se ejecuta en iOS o Android sin modificaciones. Hay dos aplicaciones de ejemplo descritas:
 
--  [**DataAccess_Basic** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; las operaciones de datos Simple escribe los resultados en un texto de mostrarán el control;
+- [**DataAccess_Basic** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic) &ndash; las operaciones de datos Simple escribe los resultados en un texto de mostrarán el control;
 
--  [**DataAccess_Advanced** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) &ndash; integra las operaciones de datos en una pequeña aplicación de trabajo que muestra y edita una estructura de datos simple.
+- [**DataAccess_Advanced** ](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced) &ndash; integra las operaciones de datos en una pequeña aplicación de trabajo que muestra y edita una estructura de datos simple.
 
 Ambas soluciones de ejemplo contienen proyectos de aplicación de ejemplo de Android y iOS.
 

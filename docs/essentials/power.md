@@ -5,12 +5,12 @@ ms.assetid: C176D177-8B77-4A9C-9F3B-27852A8DCD5F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 06/27/2018
-ms.openlocfilehash: 5a89dba16a93b007c5d7312221d8d33e00c7404a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 96b4aef3a8df571392d43836d46b03b025c80888
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110009"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675385"
 ---
 # <a name="xamarinessentials-power-energy-saver-status"></a>Xamarin.Essentials: estado de ahorro de energía
 
@@ -23,6 +23,10 @@ La clase **Power** proporciona información sobre el estado de ahorro de energí
 Es posible poner los dispositivos que usan baterías en el modo de ahorro en caso de baja energía. A veces, los dispositivos cambian automáticamente a este modo, por ejemplo, cuando la batería cae por debajo del 20 % de su capacidad. El sistema operativo responde al modo de ahorro de energía reduciendo las actividades que tienden a agotar la batería. Para ayudar, las aplicaciones pueden evitar el procesamiento en segundo plano u otras actividades de alta potencia cuando el modo de ahorro de energía está activado.
 
 En el caso de los dispositivos Android, la clase **Power**devuelve información importante solo para la versión 5.0 (Lollipop) y posteriores de Android.
+
+## <a name="get-started"></a>Primeros pasos
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-the-power-class"></a>Uso de la clase Power
 

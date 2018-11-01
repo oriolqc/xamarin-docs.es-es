@@ -5,18 +5,22 @@ ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 08/30/2018
-ms.openlocfilehash: 5b0d6bb2ab2621de5322a13b3b0e56e5bc6e93d8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 29eab430ae3d42934cedfdbd36d7be08e55b5d54
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123588"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675372"
 ---
 # <a name="xamarinessentials-text-to-speech"></a>Xamarin.Essentials: Text-to-Speech
 
 ![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
 La clase **TextToSpeech** permite que una aplicación utilice los motores de texto a voz para responder a texto del dispositivo y también para consultar los idiomas disponibles que el motor puede admitir.
+
+## <a name="get-started"></a>Primeros pasos
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-text-to-speech"></a>Uso de Text-to-Speech
 

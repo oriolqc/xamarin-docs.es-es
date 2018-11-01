@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: a3d0edbd933339ee8b8a0a277a4f2493cc8dc70e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 25f6cf341fcf47d5dc5320f73855bb2a4e29a9e8
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997470"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675528"
 ---
 # <a name="xamarinforms-master-detail-page"></a>Página Master-Detail de Xamarin.Forms
 
@@ -45,7 +45,7 @@ La página de detalles contiene una barra de navegación, cuyo contenido es depe
 El comportamiento de la experiencia de navegación entre páginas maestro y detalles es depende de la plataforma:
 
 - En iOS, la página de detalles *diapositivas* a la derecha, como las diapositivas de la página principal de la izquierda y la parte izquierda de los detalles de la página sigue estando visible.
-- En Android, las páginas de detalle y maestro son *superpuestos* entre sí.
+- En Android, las páginas de detalle y maestro son *superpuesta* entre sí.
 - En UWP, las páginas de detalle y maestro son *intercambiar*.
 
 Se observará un comportamiento similar en modo horizontal, salvo que la página maestra en iOS y Android tiene un ancho similar como la página principal en modo vertical, por lo que más de la página de detalles será visible.

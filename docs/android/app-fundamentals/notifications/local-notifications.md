@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: a4ffae0bde39450778b340b4a4c4da8fe90d0bec
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63f0d4d7ce5f056d8e1db6bc297258c6bc070086
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117686"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675554"
 ---
 <a name="compatibility"></a>
 
@@ -747,7 +747,7 @@ De forma similar, puede usar la aplicación `NotificationCompat.InboxStyle` y `N
 Compatibilidad con versiones anteriores de Android, dónde `SetCategory` es no está disponible, el código puede comprobar el nivel de API en tiempo de ejecución para llamar condicionalmente `SetCategory` cuando el nivel de API es igual o mayor que Android 5.0 (API nivel 21):
 
 ```csharp
-if ((int) Android.OS.Build.Version.SdkInt >= BuildVersionCodes.Lollipop) {
+if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
     builder.SetCategory (Notification.CategoryEmail);
 }
 ```
@@ -760,7 +760,7 @@ En del este ejemplo, la aplicación **.NET Framework de destino** está establec
 Dado que Android no eran compatibles con las notificaciones de pantalla de bloqueo antes de Android 5.0 (API nivel 21), `NotificationCompat.Builder` no admite el `SetVisibility` método. Como se explicó anteriormente para `SetCategory`, el código puede comprobar el nivel de API en tiempo de ejecución y llamada `SetVisiblity` solo cuando está disponible:
 
 ```csharp
-if ((int) Android.OS.Build.Version.SdkInt >= 21) {
+if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
     builder.SetVisibility (Notification.Public);
 }
 ```

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/11/2016
-ms.openlocfilehash: d418cb174861b962060757d4d1e0914e82ecd6fb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ac44981c3b82f0fbec6b18396e15502428b9d62f
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119805"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675281"
 ---
 # <a name="configuration"></a>Configuración
 
@@ -62,7 +62,7 @@ lock (locker){
 }
 ```
 
-Todos los accesos de base de datos (lecturas, escrituras, actualizaciones, etcetera) deben incluirse con el mismo bloqueo. Debe tener cuidado para evitar una situación de interbloqueo, asegúrese de que el trabajo dentro de la cláusula de bloqueo se mantiene simple y no llamar a otros métodos que también se pueden realizar un bloqueo.
+Todos los accesos de base de datos (lecturas, escrituras, actualizaciones, etc.) deben incluirse con el mismo bloqueo. Debe tener cuidado para evitar una situación de interbloqueo, asegúrese de que el trabajo dentro de la cláusula de bloqueo se mantiene simple y no llamar a otros métodos que también se pueden realizar un bloqueo.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

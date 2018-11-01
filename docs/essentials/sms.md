@@ -5,18 +5,22 @@ ms.assetid: 81A757F2-6F2A-458F-B9BE-770ADEBFAB58
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: fa55a17e99a11861b98c4d515df882ed3af58a0b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 276c1a03b1446c30e7047d454e06598b39bdad6c
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102742"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675263"
 ---
 # <a name="xamarinessentials-sms"></a>Xamarin.Essentials: SMS
 
 ![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
 La clase **SMS** permite que una aplicación abra la aplicación SMS predeterminada con un mensaje especificado para enviar un destinatario.
+
+## <a name="get-started"></a>Primeros pasos
+
+[!include[](~/essentials/includes/get-started.md)]
 
 ## <a name="using-sms"></a>Uso de SMS
 
