@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/24/2017
-ms.openlocfilehash: 7f45ea53429b30e634c99403b4159606fc616a4a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 667c98d3140d460a6d4b3a26bd898f4c169d6d85
+ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120117"
+ms.lasthandoff: 10/30/2018
+ms.locfileid: "50234887"
 ---
 # <a name="linking-xamarinios-apps"></a>Vincular aplicaciones Xamarin.iOS
 
@@ -53,7 +53,7 @@ Se ofrecen las tres opciones principales descritas a continuación:
 
 ### <a name="dont-link"></a>No vincular
 
-Deshabilitar la vinculación garantizará que no se realice ninguna modificación de los ensamblados. Por motivos de rendimiento, esta es la configuración predeterminada si tiene como destino el IDE para el simulador de iOS. Para las compilaciones de dispositivos, esto solo debe usarse como una solución alternativa a este problema siempre que el enlazador presente un error que impida que la aplicación se ejecute. Si la aplicación solo funciona con *-nolink*, envíe un [informe de errores](http://bugzilla.xamarin.com).
+Deshabilitar la vinculación garantizará que no se realice ninguna modificación de los ensamblados. Por motivos de rendimiento, esta es la configuración predeterminada si tiene como destino el IDE para el simulador de iOS. Para las compilaciones de dispositivos, esto solo debe usarse como una solución alternativa a este problema siempre que el enlazador presente un error que impida que la aplicación se ejecute. Si la aplicación solo funciona con *-nolink*, envíe un [informe de errores](https://github.com/xamarin/xamarin-macios/issues/new).
 
 Esto se corresponde con la opción *-nolink* cuando se usa la herramienta de línea de comandos mtouch.
 
