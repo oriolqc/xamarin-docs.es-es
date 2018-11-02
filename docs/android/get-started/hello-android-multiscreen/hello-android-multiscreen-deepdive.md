@@ -5,43 +5,37 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: E4150036-7760-4023-BD33-B7BDE7B7AF5B
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 02/15/2018
-ms.openlocfilehash: f1c19d43aa1f9010307df3fb954ac1029221ccd4
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+author: conceptdev
+ms.author: crdun
+ms.date: 10/05/2018
+ms.openlocfilehash: 3eee66032a33e66d3a6a22ca43cb931fbd59888f
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30767744"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50122990"
 ---
 # <a name="hello-android-multiscreen-deep-dive"></a>Hello, Android Multiscreen: análisis detallado
 
-_En esta guía de dos partes, ampliaremos la aplicación Phoneword básica creada en la guía Hello, Android a fin de controlar una segunda pantalla. Durante el proceso, presentaremos los bloques de creación de aplicaciones de Android básicos. Se incluye un análisis más profundo de la arquitectura de Android como ayuda para entender mejor la funcionalidad y la estructura de las aplicaciones de Android._
-
-## <a name="hello-android-multiscreen-deep-dive"></a>Análisis detallado de Hello, Android Multiscreen
+_En esta guía de dos partes, ampliaremos la aplicación Phoneword básica creada en la guía Hello, Android a fin de controlar una segunda pantalla. Durante el proceso, presentaremos los bloques de compilación de aplicaciones de Android básicos. Se incluye un análisis más profundo de la arquitectura de Android como ayuda para entender mejor la funcionalidad y la estructura de las aplicaciones de Android._
 
 En [Hello, Android Multiscreen Quickstart](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md) (Guía de inicio rápido de Hello, Android Multiscreen), compiló y ejecutó su primera aplicación de Xamarin.Android.
-Ahora ha llegado el momento de que conozca mejor la navegación y la arquitectura de Android para que pueda crear aplicaciones más complejas.
 
-En esta guía se exploran conceptos de arquitectura de Android más avanzados, ya que se presentan los *bloques de creación de aplicaciones* de Android. Se explica la navegación de Android con *intenciones* y se describen las opciones de navegación del hardware de Android. Además, se analizan las nuevas adiciones a la aplicación Phoneword a medida que se desarrolla una perspectiva integral de la relación de la aplicación con el sistema operativo y otras aplicaciones.
-
+En esta guía explorará una arquitectura de Android más avanzada. Se explica la navegación de Android con *intenciones* y se describen las opciones de navegación del hardware de Android. Además, se analizan las nuevas adiciones a la aplicación Phoneword a medida que se desarrolla una perspectiva integral de la relación de la aplicación con el sistema operativo y otras aplicaciones.
 
 ## <a name="android-architecture-basics"></a>Conceptos básicos de la arquitectura de Android
 
 En [Análisis detallado de Hello, Android](~/android/get-started/hello-android/hello-android-deepdive.md), aprendió que las aplicaciones de Android son programas únicos porque no tienen un único punto de entrada. En su lugar, el sistema operativo (u otra aplicación) inicia cualquiera de las actividades registradas de la aplicación que, a su vez, inicia el proceso de la aplicación. Este análisis detallado de la arquitectura de Android amplía sus conocimientos sobre cómo se construyen las aplicaciones de Android. Para ello, presenta los bloques de creación de aplicaciones de Android y sus funciones.
 
+### <a name="android-application-building-blocks"></a>Bloques de compilación de aplicaciones de Android
 
-### <a name="android-application-blocks"></a>Bloques de aplicación de Android
-
-Una aplicación de Android consta de una colección de clases de Android especiales denominadas *bloques de aplicación*, empaquetados con una serie de recursos de la aplicación (imágenes, temas, clases auxiliares, etc.). Estos se coordinan mediante un archivo XML denominado *manifiesto de Android*.
+Una aplicación de Android consta de una colección de clases de Android especiales denominadas *bloques de aplicación*, empaquetados con una serie de recursos de la aplicación (imágenes, temas, clases del asistente, etc.). Estos se coordinan mediante un archivo XML denominado *manifiesto de Android*.
 
 Los bloques de aplicación son la espina dorsal de las aplicaciones de Android, ya que permiten hacer cosas que normalmente no se pueden hacer con una clase normal. Los dos más importantes son las _actividades_ y los _servicios_:
 
--   **Actividad**: una actividad se corresponde con una pantalla con una interfaz de usuario, y como concepto se parece a una página web de una aplicación web. Por ejemplo, en una aplicación de suministro de noticias, la pantalla de inicio de sesión será la primera actividad, la lista desplazable de noticias sería otra actividad y la página de detalles de cada elemento sería la tercera actividad. Puede obtener más información sobre las actividades en la guía [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md) (Ciclo de vida de la actividad).
+- **Actividad**: una actividad se corresponde con una pantalla con una interfaz de usuario, y como concepto se parece a una página web de una aplicación web. Por ejemplo, en una aplicación de suministro de noticias, la pantalla de inicio de sesión será la primera actividad, la lista desplazable de noticias sería otra actividad y la página de detalles de cada elemento sería la tercera actividad. Puede obtener más información sobre las actividades en la guía [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md) (Ciclo de vida de la actividad).
 
--   **Servicio**: los servicios de Android admiten actividades. Para ello, asumen tareas de ejecución prolongada y las ejecutan en segundo plano. Los servicios no tiene una interfaz de usuario y se usan para controlar las tareas que no están vinculadas a pantallas &ndash; (por ejemplo, reproducir una canción en segundo plano o cargar fotografías en un servidor). Para obtener más información sobre los servicios, consulte las guías [Creating Services](~/android/app-fundamentals/services/index.md) (Crear servicios) y [Android Services](~/android/app-fundamentals/services/index.md) (Servicios de Android).
-
+- **Servicio**: los servicios de Android admiten actividades. Para ello, asumen tareas de ejecución prolongada y las ejecutan en segundo plano. Los servicios no tiene una interfaz de usuario y se usan para controlar las tareas que no están vinculadas a pantallas &ndash; (por ejemplo, reproducir una canción en segundo plano o cargar fotografías en un servidor). Para obtener más información sobre los servicios, consulte las guías [Creating Services](~/android/app-fundamentals/services/index.md) (Crear servicios) y [Android Services](~/android/app-fundamentals/services/index.md) (Servicios de Android).
 
 Una aplicación de Android podría no usar todos los tipos de bloques y, a menudo, tiene varios bloques de un mismo tipo. Por ejemplo, la aplicación Phoneword creada en [Hello, Android Quickstart](~/android/get-started/hello-android/hello-android-quickstart.md) (Guía de inicio rápido de Hello, Android) estaba formada por una sola actividad (pantalla) y algunos archivos de recursos. Una aplicación sencilla de reproductor de música podría tener varias actividades y un servicio para reproducir música cuando la aplicación está en segundo plano.
 
@@ -52,7 +46,6 @@ El diseño de Android se basa en el *principio de privilegios mínimos*, es deci
 
 Para comunicarse, los bloques de aplicación envían mensajes asincrónicos denominados *intenciones* de un lado a otro. Las intenciones contienen información sobre el bloque de recepción y, en ocasiones, algunos datos. Una intención que se envía desde un componente de una aplicación desencadena un evento que se produce en otro componente de la aplicación, lo que vincula a ambos componentes y les permite comunicarse. Mediante el envío de intenciones de un lado a otro, puede conseguir que los bloques coordinen acciones complejas, como iniciar la aplicación de cámara para que saque una fotografía y la guarde, recopilar información de ubicación o desplazarse de una pantalla a la siguiente.
 
-
 ### <a name="androidmanifestxml"></a>AndroidManifest.XML
 
 Cuando se agrega un bloque a la aplicación, se registra con un archivo XML especial denominado **manifiesto de Android**. El manifiesto realiza un seguimiento de todos los bloques de una aplicación, así como de los requisitos de la versión, los permisos y las bibliotecas &ndash; vinculadas, es decir, todo lo que el sistema operativo necesita saber para que la aplicación se ejecute. El **manifiesto de Android** también funciona con las actividades y las intenciones para controlar qué acciones son apropiadas para una actividad determinada. Estas características avanzadas del manifiesto de Android se tratan en la guía [Working with the Android Manifest](~/android/platform/android-manifest.md) (Trabajar con el manifiesto de Android).
@@ -62,7 +55,6 @@ En la versión de una sola pantalla de la aplicación Phoneword, solo se usaron 
 ## <a name="android-navigation"></a>Navegación de Android
 
 Para ir de una pantalla a otra se han empleado intenciones. Es el momento de profundizar en este código para ver cómo funcionan las intenciones y entender su función en la navegación de Android.
-
 
 ### <a name="launching-a-second-activity-with-an-intent"></a>Iniciar una segunda actividad con una intención
 
@@ -84,7 +76,6 @@ translationHistoryButton.Click += (sender, e) =>
     StartActivity(intent);
 };
 ```
-
 
 ## <a name="additional-concepts-introduced-in-phoneword"></a>Otros conceptos presentados en Phoneword
 
@@ -109,7 +100,6 @@ this.ListAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.Simple
 
 Los elementos ListView y los adaptadores están fuera del ámbito de este documento, pero se tratan de manera exhaustiva en la guía [ListViews and Adapters](~/android/user-interface/layouts/list-view/index.md) (Elementos ListView y adaptadores).
 En [Relleno de ListView con datos](~/android/user-interface/layouts/list-view/populating.md) se trata específicamente el uso de las clases `ListActivity` y `ArrayAdapter` integradas para crear y rellenar un elemento `ListView` sin definir un diseño personalizado, como se hizo en el ejemplo de Phoneword.
-
 
 ## <a name="summary"></a>Resumen
 

@@ -4,15 +4,15 @@ description: Describe cómo usar el registro de depuración para depurar aplicac
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 442606f456e6f42ee178cd93253883a1d9de52c4
-ms.sourcegitcommit: 26033c087f49873243751deded8037d2da701655
+ms.openlocfilehash: 8cf6c11675f0f3ddca0d5aea69e5e07160ef8454
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36935222"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50114787"
 ---
 # <a name="android-debug-log"></a>Registro de depuración de Android
 
@@ -33,7 +33,7 @@ El **Registro de depuración** no muestra mensajes de registro que se generan mi
 
 ## <a name="accessing-the-debug-log-from-visual-studio"></a>Acceso al registro de depuración desde Visual Studio
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para abrir la herramienta **Registro de dispositivos**, haga clic en el icono **Registro de dispositivos (logcat)** en la barra de herramientas:
 
@@ -68,7 +68,7 @@ Cuando se muestre la ventana de la herramienta **Registro de depuración**, use 
 Después de seleccionar el dispositivo, la herramienta **Registro de dispositivos** agrega las entradas del registro automáticamente desde una aplicación en ejecución (estas entradas del registro se muestran en la en la tabla de entradas del registro). El cambio entre dispositivos se detiene y se inicia el registro de dispositivos. Tenga en cuenta que un proyecto Android debe estar cargado antes de que los dispositivos aparezcan en el selector de dispositivos. Si el dispositivo no aparece en el selector de dispositivos, compruebe que está disponible en el menú desplegable de dispositivos de Visual Studio junto al botón **Iniciar**.
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Para abrir el **Registro de dispositivos**, haga clic en **Ver > Paneles > Registro de dispositivos**:
 
@@ -107,7 +107,7 @@ Después de seleccionar el dispositivo, la herramienta **Registro de dispositivo
 
 ## <a name="accessing-from-the-command-line"></a>Acceso desde la línea de comandos
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Otra opción es ver el registro de depuración a través de la línea de comandos. Abra una ventana de símbolo del sistema y navegue hasta la carpeta de herramientas de la plataforma de Android SDK (normalmente, la carpeta de herramientas de la plataforma del SDK se encuentra en **C:\\Archivos de programa (x86)\\Android\\android-sdk\\platform-tools**).
 
@@ -117,7 +117,7 @@ Si se conecta solo un dispositivo (dispositivo físico o emulador), se puede ver
 $ adb logcat
 ```
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Otra opción es ver el registro de depuración a través de la línea de comandos. Abra una ventana Terminal y navegue hasta la carpeta de herramientas de la plataforma de Android SDK (normalmente, la carpeta de herramientas de la plataforma del SDK se encuentra en **/Usuarios/nombredeusuario/Librería/Developer/Xamarin/android-sdk-macosx/platform-tools**).
 

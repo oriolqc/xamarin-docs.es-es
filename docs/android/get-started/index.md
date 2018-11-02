@@ -5,35 +5,32 @@ ms.prod: xamarin
 ms.assetid: D3BC68C5-87C1-50AF-ED0A-55EBF07CBD8B
 ms.technology: xamarin-android
 ms.custom: xamu-video
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: a60331a6c8cd1b65e51a63b221cbdb7182803bd1
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+ms.openlocfilehash: 77b721adc4a745a5bf184bfbde1985bce980ddf7
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32435821"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50110347"
 ---
-# <a name="getting-started-series"></a>Serie de introducción
+# <a name="get-started-with-xamarinandroid"></a>Introducción a Xamarin.Android
 
-##  <a name="setup-and-installationandroidget-startedinstallationindexmd"></a>[Configuración e instalación](~/android/get-started/installation/index.md)
+## <a name="setup-and-installationandroidget-startedinstallationindexmd"></a>[Configuración e instalación](~/android/get-started/installation/index.md)
 
 Configure Xamarin.Android y ejecútelo en Visual Studio. En esta sección se trata la descarga, la instalación, la configuración del emulador, el aprovisionamiento de dispositivos, etc.
 
-
-##  <a name="hello-androidandroidget-startedhello-androidindexmd"></a>[Hello, Android](~/android/get-started/hello-android/index.md)
+## <a name="hello-androidandroidget-startedhello-androidindexmd"></a>[Hello, Android](~/android/get-started/hello-android/index.md)
 
 Esta guía, que consta de dos partes, le ayudará a compilar su primera aplicación de Xamarin.Android mediante Visual Studio y a comprender los aspectos básicos del desarrollo de aplicaciones de Android con Xamarin.
 A lo largo del proceso, en esta guía se presentan las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.Android.
 
-
-##  <a name="hello-android-multiscreenandroidget-startedhello-android-multiscreenindexmd"></a>[Hello, Android Multiscreen](~/android/get-started/hello-android-multiscreen/index.md)
+## <a name="hello-android-multiscreenandroidget-startedhello-android-multiscreenindexmd"></a>[Hello, Android Multiscreen](~/android/get-started/hello-android-multiscreen/index.md)
 
 En esta guía, que consta de dos partes, ampliará la aplicación creada en la guía _Hello, Android_ a fin de implementar una segunda pantalla. Durante esta guía se presentan los *componentes básicos de la aplicación de Android* y se profundiza en la arquitectura de Android a medida que va conociendo mejor la estructura y la funcionalidad de la aplicación de Android.
 
-
-##  <a name="xamarin-for-java-developersandroidget-startedjava-developersmd"></a>[Xamarin para desarrolladores de Java](~/android/get-started/java-developers.md)
+## <a name="xamarin-for-java-developersandroidget-startedjava-developersmd"></a>[Xamarin para desarrolladores de Java](~/android/get-started/java-developers.md)
 
 En este artículo se proporciona una introducción a la programación en C# para los desarrolladores de Java y se centra principalmente en las características del lenguaje C# con las que se encontrarán los desarrolladores de Java durante el aprendizaje del desarrollo de aplicaciones Xamarin.Android.
 

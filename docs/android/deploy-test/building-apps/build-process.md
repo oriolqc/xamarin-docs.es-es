@@ -3,15 +3,15 @@ title: Proceso de compilación
 ms.prod: xamarin
 ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2018
-ms.openlocfilehash: bf8dfb43115806f28935c6dec0ebd2d6d7bd2cdc
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 63e86ef89c8d736640e7677fee6147feacc87bdc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998265"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108930"
 ---
 # <a name="build-process"></a>Proceso de compilación
 
@@ -304,8 +304,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     -   **MidEast**: incluye las codificaciones de Oriente Medio, como *Turco (Windows)* \[iso-8859-9, CP1254\], *Hebreo (Windows)* \[windows-1255, CP1255\], *Árabe (Windows)* \[windows-1256, CP1256\], *Árabe (ISO)* \[iso-8859-6, CP28596\], *Hebreo (ISO)* \[iso-8859-8, CP28598\], *Latín 5 (ISO)* \[iso-8859-9, CP28599\] y *Hebreo (alternativa a Iso)* \[iso-8859-8, CP38598\].
 
-    -   
-          **Other**: incluye otras codificaciones, como *Cirílico(Windows)*\[CP1251\], *Báltico (Windows)*\[iso-8859-4, CP1257\], *Vietnamita (Windows)*\[CP1258\], *Cirílico (KOI8-R)*\[koi8-r, CP1251\], *Ucraniano (KOI8-U)*\[koi8-u, CP1251\], *Báltico (ISO)*\[iso-8859-4, CP1257\], *Cirílico (ISO)*\[iso-8859-5, CP1251\], *ISCII Davenagari*\[x-iscii-de, CP57002\], *ISCII Bengalí*\[x-iscii-be, CP57003\], *ISCII Tamil*\[x-iscii-ta, CP57004\], *ISCII Telugu*\[x-iscii-te, CP57005\], *ISCII Asamés*\[x-iscii-as, CP57006\], *ISCII Oriya*\[x-iscii-or, CP57007\], *ISCII Canarés*\[x-iscii-ka, CP57008\], *ISCII Malayalam*\[x-iscii-ma, CP57009\], *ISCII Gujarati*\[x-iscii-gu, CP57010\], *ISCII Punjabi*\[x-iscii-pa, CP57011\] y *Thai (Windows)*\[CP874\].
+    -   **Other**: incluye otras codificaciones, como *Cirílico(Windows)*\[CP1251\], *Báltico (Windows)*\[iso-8859-4, CP1257\], *Vietnamita (Windows)*\[CP1258\], *Cirílico (KOI8-R)*\[koi8-r, CP1251\], *Ucraniano (KOI8-U)*\[koi8-u, CP1251\], *Báltico (ISO)*\[iso-8859-4, CP1257\], *Cirílico (ISO)*\[iso-8859-5, CP1251\], *ISCII Davenagari*\[x-iscii-de, CP57002\], *ISCII Bengalí*\[x-iscii-be, CP57003\], *ISCII Tamil*\[x-iscii-ta, CP57004\], *ISCII Telugu*\[x-iscii-te, CP57005\], *ISCII Asamés*\[x-iscii-as, CP57006\], *ISCII Oriya*\[x-iscii-or, CP57007\], *ISCII Canarés*\[x-iscii-ka, CP57008\], *ISCII Malayalam*\[x-iscii-ma, CP57009\], *ISCII Gujarati*\[x-iscii-gu, CP57010\], *ISCII Punjabi*\[x-iscii-pa, CP57011\] y *Thai (Windows)*\[CP874\].
 
     -   **Rare**: incluye las codificaciones raras, como *IBM EBCDIC (Turco)* \[CP1026\], *IBM EBCDIC (Latín 1, sistemas abiertos)* \[CP1047\], *IBM EBCDIC (EE. UU. y Canadá con Euro)* \[CP1140\], *IBM EBCDIC (Alemania con Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega con Euro)* \[CP1142\], *IBM EBCDIC (Finlandia/Suecia con Euro)* \[CP1143\], *IBM EBCDIC (Italia con Euro)* \[CP1144\], *IBM EBCDIC (Latinoamérica/España con Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido con Euro)* \[CP1146\], *IBM EBCDIC (Francia con Euro)* \[CP1147\], *IBM EBCDIC (Internacional con Euro)* \[CP1148\], *IBM EBCDIC (Islandés con Euro)* \[CP1149\], *IBM EBCDIC (Alemania)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlandia/Suecia)* \[CP20278\], *IBM EBCDIC (Italia)* \[CP20280\], *IBM EBCDIC (Latinoamérica/España)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (Katakana japonés extendido)* \[CP20290\], *IBM EBCDIC (Francia)* \[CP20297\], *IBM EBCDIC (Árabe)* \[CP20420\], *IBM EBCDIC (Hebreo)* \[CP20424\], *IBM EBCDIC (Islandés)* \[CP20871\], *IBM EBCDIC (Cirílico: serbio, búlgaro)* \[CP21025\], *IBM EBCDIC (EE. UU. y Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *Árabe (ASMO 708)* \[CP708\], *Centroeuropeo (DOS)* \[CP852\]*, Cirílico (DOS)* \[CP855\], *Turco (DOS)* \[CP857\], *Europeo Occidental (DOS con Euro)* \[CP858\], *Hebreo (DOS)* \[CP862\], *Árabe (DOS)* \[CP864\], *Ruso (DOS)* \[CP866\], *Griego (DOS)* \[CP869\], *IBM EBCDIC (Latín 2)* \[CP870\], and *IBM EBCDIC (Griego)* \[CP875\].
 
@@ -328,7 +327,8 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
     Algunos ejemplos: si `abi` es `armeabi` y `versionCode` en el manifiesto es `123`, `{abi}{versionCode}` producirá un código de versión de `1123` cuando `$(AndroidCreatePackagePerAbi)` sea True; de lo contrario, producirá un valor de 123.
     Si `abi` es `x86_64` y `versionCode` en el manifiesto es `44`, se generará `544` cuando `$(AndroidCreatePackagePerAbi)` sea True; de lo contrario, se producirá un valor de `44`.
 
-    Si se incluye una cadena con formato de relleno a la izquierda, `{abi}{versionCode:0000}`, produciría `50044` porque estamos rellenando a la izquierda `versionCode` con `0`. También puede usar el relleno decimal, como `{abi}{versionCode:D4}`, que funciona igual que el ejemplo anterior.
+    Si se incluye una cadena con formato de relleno a la izquierda, `{abi}{versionCode:0000}`, produciría `50044` porque estamos rellenando a la izquierda `versionCode` con `0`. Como alternativa, puede usar el relleno decimal, como `{abi}{versionCode:D4}`,
+    que hace lo mismo que el ejemplo anterior.
 
     Solo se admiten cadenas con formato de relleno "0" y "Dx", dado que el valor DEBE ser un entero.
     

@@ -4,15 +4,15 @@ description: En esta guía se examina cómo medir el tiempo de las aplicaciones 
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4145368281c2967bd1311389e5e1b1432af2c9b8
-ms.sourcegitcommit: e64c3c10d6a36b3b031d6d4dbff7af74ab2b7f21
+ms.openlocfilehash: 602a530e1c185ffeda2c6ac80a96f7795cec4cae
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "43780504"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50104848"
 ---
 # <a name="ios-build-mechanics"></a>Mecanismos de compilación de iOS
 
@@ -27,7 +27,7 @@ Las velocidades de compilación de Xamarin también pueden verse afectadas por d
 
 ## <a name="timing-apps"></a>Aplicaciones de control de tiempo
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio para Mac:
 
@@ -40,7 +40,7 @@ Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio para Mac
 7. Vea los resultados de diagnóstico en el panel de errores (Ver > Paneles > Errores); para ello, haga clic en el botón Salida de la compilación.
 
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio:
 
@@ -69,7 +69,7 @@ Total time: 1554 ms
 
 Las herramientas de Xamarin técnicamente funcionan en cualquier equipo Mac que pueda ejecutar OS X 10.10 Yosemite o posterior. Sin embargo, el rendimiento del equipo Mac puede afectar a las experiencias de desarrollador y a los tiempos de compilación.
 
-En el estado desconectado, Visual Studio en Windows solo realiza la fase de compilación de C# y no intenta realizar la vinculación o compilación AOT, empaquetar la aplicación en un lote _.app_ o firmar el lote de aplicaciones. (La fase de compilación de C# no suele crear cuellos de botella de rendimiento). Intente identificar en qué parte de la canalización la compilación se está ralentizando; para ello, compile directamente en el host de compilación de Mac en Visual Studio para Mac.
+En el estado desconectado, Visual Studio en Windows solo realiza la fase de compilación de C# y no intenta realizar la vinculación o compilación AOT, empaquetar la aplicación en un lote  _.app_ o firmar el lote de aplicaciones. (La fase de compilación de C# no suele crear cuellos de botella de rendimiento). Intente identificar en qué parte de la canalización la compilación se está ralentizando; para ello, compile directamente en el host de compilación de Mac en Visual Studio para Mac.
 
 
 Además, uno de los puntos más comunes en los que se produce lentitud es la conexión de red entre el equipo Windows y el host de compilación de Mac. Esto puede deberse a un obstáculo físico en la red, cuando se usa una conexión inalámbrica o si hay que recorrer un equipo saturado (como un servicio en la nube en Mac).
@@ -131,7 +131,7 @@ Minimizar el tamaño de la aplicación también puede reducir el tiempo de compi
   - La compilación de una única arquitectura (por ejemplo, ARM64) es más rápida que un archivo binario FAT (por ejemplo, ARMv7 + ARM64).
   - Evite optimizar los archivos PNG al depurar.
   - Considere la posibilidad de vincular todos los ensamblados. Optimice cada ensamblado. 
-  - Deshabilite la creación de símbolos de depuración con `--dsym=false`. Sin embargo, debe tener en cuenta que, al deshabilitar esto, los informes de bloqueo solo pueden resolverse en el equipo que compiló la aplicación, y solo si la aplicación no se quitó.
+  - Deshabilite la creación de símbolos de depuración con  `--dsym=false`. Sin embargo, debe tener en cuenta que, al deshabilitar esto, los informes de bloqueo solo pueden resolverse en el equipo que compiló la aplicación, y solo si la aplicación no se quitó.
 
  
 Algunos aspectos que deben evitarse son:

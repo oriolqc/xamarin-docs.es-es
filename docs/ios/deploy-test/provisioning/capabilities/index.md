@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: c897b1f5fbdf950e6858d7b73ebed60049f60e8e
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: f051becad7b6ef329d57417214eb976589386970
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785562"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120949"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabajar con capacidades en Xamarin.iOS
 
@@ -73,7 +73,7 @@ En esta sección se explica cómo usar el aprovisionamiento automático de Visua
 
 ## <a name="using-the-ide"></a>Uso de el IDE
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Las capacidades se agregan a **Entitlements.plist** en Visual Studio para Mac. Para agregar capacidades, siga estos pasos:
 
@@ -93,7 +93,7 @@ Las capacidades se agregan a **Entitlements.plist** en Visual Studio para Mac. P
 
     ![Agregar capacidades al archivo entitlements.plist](images/image18.png)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Las capacidades se agregan a **Entitlements.plist**. Para agregar capacidades en Visual Studio 2017, haga lo siguiente:
 
@@ -206,12 +206,12 @@ Una vez que se ha habilitado una funcionalidad en el servidor, se deben seguir u
 
 En la siguiente lista se detallan algunos de los problemas más comunes que pueden crear obstáculos a la hora de desarrollar una aplicación con un servicio de aplicación habilitado.
 
--   Asegúrese de que el identificador se creó y registró correctamente en la sección **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
--   Asegúrese de que el servicio se haya agregado al identificador de la aplicación (o de la extensión) y de que el servicio esté configurado para usar el grupo de aplicaciones/identificador de comerciante/contenedor creado anteriormente en la sección **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
--   Asegúrese de que se hayan instalado los perfiles de aprovisionamiento y los identificadores de aplicación y que el archivo **Info.plist** de la aplicación (en el proyecto de Xamarin) use uno de los identificadores de aplicación configurados anteriormente.
--   Asegúrese de que el archivo **Entitlements.plist** de la aplicación (del proyecto de Xamarin) tiene habilitado el servicio correcto.
+-   Asegúrese de que el identificador se ha creado y registrado correctamente en la sección  **Certificates, IDs & Profiles** (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
+-   Asegúrese de que el servicio se haya agregado al identificador de la aplicación (o de la extensión) y de que el servicio esté configurado para usar el grupo de aplicaciones, el identificador de comerciante o el contenedor creado anteriormente en la sección  **Certificates, IDs & Profiles**  (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
+-   Asegúrese de que se hayan instalado los perfiles de aprovisionamiento y los identificadores de aplicación, y que el archivo  **Info.plist**  de la aplicación (en el proyecto de Xamarin) use uno de los identificadores de aplicación configurados anteriormente.
+-   Asegúrese de que el archivo  **Entitlements.plist**  de la aplicación (en el proyecto de Xamarin) tiene habilitado el servicio correcto.
 -   Asegúrese de que en el archivo info.plist estén establecidas las claves de privacidad correspondientes.
--   En la opción **Firma de lote de iOS** de la aplicación, asegúrese de que **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
+-   En la opción  **Firma de lote de iOS** de la aplicación, asegúrese de que  **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta  _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
 
 <a name="summary" />
 

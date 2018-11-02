@@ -5,15 +5,15 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 12/02/2016
-ms.openlocfilehash: eaf77dd68895a3fbf677e1d0aa68125d81d709c1
-ms.sourcegitcommit: e98a9ce8b716796f15de7cec8c9465c4b6bb2997
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: d698cd1511e82116180a8af46891973f5f90343b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39111230"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50118973"
 ---
 # <a name="hello-ios-multiscreen--deep-dive"></a>Análisis detallado de Hello, iOS Multiscreen
 
@@ -22,15 +22,13 @@ En el tutorial Inicio rápido, creamos y ejecutamos nuestra primera aplicación 
 En esta guía se presenta el patrón *Modelo, Vista, Controlador (MVC)* y su papel en la arquitectura y la navegación de iOS.
 Luego se profundiza en el controlador de navegación y se aprende a usarlo para proporcionar una experiencia de navegación conocida en iOS.
 
-<a name="Model_View_Controller" />
-
 ## <a name="model-view-controller-mvc"></a>Modelo-Vista-Controlador (MVC)
 
 En el tutorial [Hello, iOS](~/ios/get-started/hello-ios/index.md), aprendimos que las aplicaciones de iOS solo tienen una *ventana* en la que los controladores de vista cargan sus *jerarquías de vista de contenido*. En el segundo tutorial Phoneword, agregamos una segunda pantalla a la aplicación y pasamos algunos datos (una lista de números de teléfono) entre las dos pantallas, como se muestra en el diagrama siguiente:
 
  [![](hello-ios-multiscreen-deepdive-images/08.png "Diagrama que ilustra cómo se pasan los datos entre dos pantallas")](hello-ios-multiscreen-deepdive-images/08.png#lightbox)
 
-En el ejemplo, los datos se recopilaban en la primera pantalla, se pasaban desde el primer controlador de vista al segundo y aparecían en la segunda pantalla. Esta separación de datos, controladores de vista y pantallas sigue el modelo *Modelo, Vista, Controlador (MVC)*. En las siguientes secciones se explican las ventajas del modelo, sus componentes y cómo se usa en la aplicación Phoneword.
+En el ejemplo, los datos se recopilaban en la primera pantalla, se pasaban desde el primer controlador de vista al segundo y aparecían en la segunda pantalla. Esta separación de datos, controladores de vista y pantallas sigue el patrón *Modelo, Vista, Controlador (MVC)*. En las siguientes secciones se explican las ventajas del modelo, sus componentes y cómo se usa en la aplicación Phoneword.
 
 ### <a name="benefits-of-the-mvc-pattern"></a>Ventajas del modelo MVC
 
@@ -68,9 +66,9 @@ Los controladores también pueden administrar otros controladores. Por ejemplo, 
 
 En la aplicación Phoneword se ha usado un controlador de navegación para administrar la navegación entre varias pantallas. El controlador de navegación es un `UIViewController` especializado representado por la clase `UINavigationController`. En lugar de administrar una única jerarquía de vistas de contenido, el controlador de navegación administra otros controladores de vista, así como su propia jerarquía especial de vistas de contenido en forma de barra de herramientas de navegación que incluye un título, el botón Atrás y otras características opcionales.
 
-El controlador de navegación es común en las aplicaciones de iOS y proporciona navegación para aplicaciones de iOS inseparables como la aplicación **Configuración**, como se muestra en la siguiente captura de pantalla:
+El controlador de navegación es común en las aplicaciones de iOS y proporciona navegación para aplicaciones de iOS inseparables como la aplicación **Ajustes**, como se muestra en la siguiente captura de pantalla:
 
- [![](hello-ios-multiscreen-deepdive-images/01.png "El controlador de navegación permite navegar a aplicaciones iOS, como muestra aquí la aplicación de configuración")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
+ [![](hello-ios-multiscreen-deepdive-images/01.png "El controlador de navegación permite navegar por aplicaciones de iOS, como la aplicación Ajustes que se muestra aquí")](hello-ios-multiscreen-deepdive-images/01.png#lightbox)
 
 El controlador de navegación tiene tres funciones principales:
 
@@ -91,25 +89,25 @@ El controlador de navegación tiene tres funciones principales:
 ### <a name="root-view-controller"></a>Controlador de vista raíz
 
 Un controlador de navegación no administra una jerarquía de vistas de contenido, por lo que no tiene nada que mostrar por sí mismo.
-Se empareja con un *controlador de vista raíz*:
+En su lugar, un controlador de navegación se empareja con un *controlador de vista raíz*:
 
  [![](hello-ios-multiscreen-deepdive-images/05.png "Un controlador de navegación se empareja con un controlador de vista raíz")](hello-ios-multiscreen-deepdive-images/05.png#lightbox)
 
-El controlador de vista raíz representa al primer controlador de vista de la pila del controlador de navegación y la jerarquía de vistas de contenido del controlador de vista raíz es la primera jerarquía de vistas de contenido que se carga en la ventana. Si se quiere colocar toda la aplicación en la pila del controlador de navegación, se puede pasar el Segue sin origen al controlador de navegación y establecer el controlador de vista de la primera pantalla como controlador de vista raíz, como se hizo en la aplicación Phoneword:
+El controlador de vista raíz representa al primer controlador de vista de la pila del controlador de navegación y la jerarquía de vistas de contenido del controlador de vista raíz es la primera jerarquía de vistas de contenido que se carga en la ventana. Si se quiere colocar toda la aplicación en la pila del controlador de navegación, se puede pasar el segoe sin origen al controlador de navegación y establecer el controlador de vista de la primera pantalla como controlador de vista raíz, como se hizo en la aplicación Phoneword:
 
  [![](hello-ios-multiscreen-deepdive-images/06.png "El segoe sin origen establece el controlador de vista de la primera pantalla como el controlador de vista raíz")](hello-ios-multiscreen-deepdive-images/06.png#lightbox)
 
 ### <a name="additional-navigation-options"></a>Otras opciones de navegación
 
-El controlador de navegación es una forma común de controlar la navegación en iOS, pero no es la única opción. Por ejemplo, un [controlador de barra de pestañas](~/ios/user-interface/controls/creating-tabbed-applications.md) puede dividir una aplicación en varias áreas funcionales, y un [controlador de vista divida](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) puede usarse para crear vistas principales o detalladas. Al combinar los controladores de navegación con estos otros esquemas de navegación, obtendremos varias formas de presentar el contenido y navegar por este de forma flexible en iOS.
+El controlador de navegación es una forma común de controlar la navegación en iOS, pero no es la única opción. Por ejemplo, un [controlador de barra de pestañas](~/ios/user-interface/controls/creating-tabbed-applications.md) puede dividir una aplicación en varias áreas funcionales y un [controlador de vista divida](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers) puede usarse para crear vistas principales o detalladas. Al combinar los controladores de navegación con estos otros esquemas de navegación, obtendremos varias formas de presentar el contenido y navegar por este de forma flexible en iOS.
 
 ## <a name="handling-transitions"></a>Control de transiciones
 
-En el tutorial Phoneword, la transición entre los dos controladores de vista se controló de dos maneras diferentes: primero con un Segue de guion gráfico y luego mediante programación. Vamos a examinar más detalladamente estas opciones.
+En el tutorial de Phoneword, la transición entre los dos controladores de vista se controló de dos maneras diferentes: primero con un segoe de Storyboard y luego mediante programación. Vamos a examinar más detalladamente estas opciones.
 
 ### <a name="prepareforsegue"></a>PrepareForSegue
 
-Cuando se agrega un Segue con una acción **Mostrar** al guion gráfico, se indica a iOS que inserte el segundo controlador de vista en la pila del controlador de navegación:
+Cuando se agrega un segoe con una acción **Mostrar** al Storyboard, se indica a iOS que inserte el segundo controlador de vista en la pila del controlador de navegación:
 
  [![](hello-ios-multiscreen-deepdive-images/09.png "Establecimiento del tipo de segoe en la lista desplegable")](hello-ios-multiscreen-deepdive-images/09.png#lightbox)
 
@@ -124,7 +122,7 @@ public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
 ```
 
 iOS llama a `PrepareForSegue` justo antes de que se produzca la transición y pasa el Segue creado en el guion gráfico al método.
-En este punto es necesario establecer manualmente el controlador de vista de destino del Segue. El código siguiente obtiene un identificador para el controlador de vista de destino y lo convierte en la clase adecuada, CallHistoryController en este caso:
+Llegados a este punto, es necesario establecer manualmente el controlador de vista de destino del segoe. El código siguiente obtiene un identificador para el controlador de vista de destino y lo convierte en la clase adecuada, CallHistoryController en este caso:
 
 ```csharp
 CallHistoryController callHistoryContoller = segue.DestinationViewController as CallHistoryController;
@@ -153,7 +151,7 @@ public override void PrepareForSegue (UIStoryboardSegue segue, NSObject sender)
 
 ### <a name="navigation-without-segues"></a>Navegación sin objetos Segue
 
-La transición desde el primer controlador de vista al segundo en el código es el mismo proceso que con un Segue, aunque varios pasos deben realizarse manualmente.
+La transición desde el primer controlador de vista al segundo en el código es el mismo proceso que con un segoe, aunque varios pasos deben realizarse manualmente.
 Primero se usa `this.NavigationController` para obtener una referencia al controlador de navegación en cuya pila se está. Luego se usa el método `PushViewController` del controlador de navegación para insertar manualmente el siguiente controlador de vista en la pila, pasando el controlador de vista y una opción para animar la transición (se establece en `true`).
 
 El código siguiente controla la transición de la pantalla Phoneword a la pantalla Call History:
@@ -162,7 +160,7 @@ El código siguiente controla la transición de la pantalla Phoneword a la panta
 this.NavigationController.PushViewController (callHistory, true);
 ```
 
-Para poder pasar al siguiente controlador de vista, hay que crear una instancia suya de forma manual desde el guion gráfico. Para hacerlo, se llama a `this.Storyboard.InstantiateViewController` y se pasa el identificador de guion gráfico de `CallHistoryController`:
+Para poder pasar al siguiente controlador de vista, hay que crear una instancia suya de forma manual desde Storyboard. Para ello, se llama a `this.Storyboard.InstantiateViewController` y se pasa el identificador de Storyboard de `CallHistoryController`:
 
 ```csharp
 CallHistoryController callHistory =
@@ -194,14 +192,14 @@ CallHistoryButton.TouchUpInside += (object sender, EventArgs e) => {
 La aplicación Phoneword presentó varios conceptos que no se tratan en esta guía. Entre estos conceptos se incluyen los siguientes:
 
 -  **Creación automática de controladores de vista**: cuando se escribe un nombre de clase para el controlador de vista en el **Panel de propiedades**, iOS Designer comprueba si esa clase existe y luego genera la clase de respaldo del controlador de vista. Para más información sobre esta y otras características de iOS Designer, vea la guía [Introducción a iOS Designer](~/ios/user-interface/designer/introduction.md).
--  **Controlador de vista de tabla**: `CallHistoryController` es un controlador de vista de tabla. Un controlador de vista de tabla contiene una vista de tabla, que es la herramienta de diseño y visualización de datos más común de iOS. Las tablas están fuera del ámbito de esta guía. Para más información sobre los controladores de vista de tabla, vea la guía [Working with Tables and Cells (Trabajo con tablas y celdas)](~/ios/user-interface/controls/tables/index.md).
--   **Id. de guion gráfico**: al establecer el identificador de guion gráfico, se crea una clase de controlador de vista en Objective-C que contiene el código subyacente para el controlador de vista del guion gráfico. El identificador de guion gráfico se usa para buscar la clase de Objective-C y crear instancias del controlador de vista en el guion gráfico. Para más información sobre los identificadores de guion gráfico, vea la guía [Introduction to Storyboards (Introducción a los guiones gráficos)](~/ios/user-interface/storyboards/index.md).
+-  **Controlador de vista de tabla**: `CallHistoryController` es un controlador de vista de tabla. Un controlador de vista de tabla contiene una vista de tabla, que es la herramienta de diseño y visualización de datos más común de iOS. Las tablas están fuera del ámbito de esta guía. Para obtener más información sobre los controladores de vista de tabla, vea la guía [Trabajar con tablas y las celdas](~/ios/user-interface/controls/tables/index.md).
+-   **Id. de Storyboard**: al establecer el identificador de Storyboard, se crea una clase de controlador de vista en Objective-C que contiene el código subyacente del controlador de vista en Storyboard. El identificador de Storyboard se usa para buscar la clase de Objective-C y crear instancias del controlador de vista en Storyboard. Para más información sobre los identificadores de guion gráfico, vea la guía [Introduction to Storyboards (Introducción a los guiones gráficos)](~/ios/user-interface/storyboards/index.md).
 
 ## <a name="summary"></a>Resumen
 
 Enhorabuena, ha completado su primera aplicación multipantalla de iOS.
 
-En esta guía se ha presentado el modelo MVC y se ha usado para crear una aplicación de varias pantallas. También se han examinado los controladores de navegación y su papel en la navegación de iOS. Ahora tiene la base necesaria para empezar a desarrollar sus propias aplicaciones de Xamarin.iOS.
+En esta guía se ha presentado el modelo MVC y se ha usado para crear una aplicación de varias pantallas. También se han examinado los controladores de navegación y el papel que desempeñan en la navegación de iOS. Ahora tiene la base necesaria para empezar a desarrollar sus propias aplicaciones de Xamarin.iOS.
 
 A continuación vamos a aprender a crear aplicaciones multiplataforma con Xamarin con las guías [Introduction to Mobile Development (Introducción al desarrollo móvil)](~/cross-platform/get-started/introduction-to-mobile-development.md) y [Building Cross-Platform Applications (Creación de aplicaciones multiplataforma)](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md).
 

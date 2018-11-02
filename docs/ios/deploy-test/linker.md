@@ -4,15 +4,15 @@ description: En este documento se describe el vinculador de Xamarin.iOS, que se 
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/24/2017
-ms.openlocfilehash: 4bcfc821359e74b34dc2ee11419e8ee86f8cccee
-ms.sourcegitcommit: 0be3d10bf08d1f76eab109eb891ed202615ac399
+ms.openlocfilehash: 7f45ea53429b30e634c99403b4159606fc616a4a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36321462"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120117"
 ---
 # <a name="linking-xamarinios-apps"></a>Vincular aplicaciones Xamarin.iOS
 
@@ -26,13 +26,13 @@ Como el enlazador es una herramienta estática, no puede marcar los tipos de inc
 
 ## <a name="linker-behavior"></a>Comportamiento del enlazador
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Se puede personalizar el proceso de vinculación mediante la lista desplegable del comportamiento del enlazador en **Opciones del proyecto**. Para acceder a este menú, haga doble clic en el proyecto de iOS y vaya a **Compilación de iOS > Opciones del enlazador**, como se ilustra a continuación:
 
 [![](linker-images/image1.png "Opciones del enlazador")](linker-images/image1.png#lightbox)
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Se puede personalizar el proceso de vinculación mediante la lista desplegable del comportamiento del enlazador en **Propiedades del proyecto** en Visual Studio.
 

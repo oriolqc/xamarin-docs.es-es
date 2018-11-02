@@ -1,32 +1,30 @@
 ---
 title: 'Hello, Android Multiscreen: inicio rápido'
 description: Esta guía de dos partes expande la aplicación Phoneword para controlar una segunda pantalla. Por el camino, se presentan bloques de creación básicos de aplicaciones Android con un análisis más profundo de la arquitectura de Android.
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: ED99584A-BA3B-429A-AEE5-CF3CB0116762
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
-ms.date: 04/30/2018
-ms.openlocfilehash: d8f909ab522b5bbf08a2b666fd4f64340e60b3e5
-ms.sourcegitcommit: 4b0582a0f06598f3ff8ad5b817946459fed3c42a
+author: conceptdev
+ms.author: crdun
+ms.date: 10/05/2018
+ms.openlocfilehash: 774661b36a41e4791207a54892663af13de3b3d3
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32436936"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120494"
 ---
 # <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: inicio rápido
 
 _Esta guía de dos partes expande la aplicación Phoneword para controlar una segunda pantalla. Por el camino, se presentan bloques de creación básicos de aplicaciones Android con un análisis más profundo de la arquitectura de Android._
-
-## <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: inicio rápido
 
 En la parte del tutorial de esta guía agregará una segunda pantalla a la aplicación [Phoneword](https://developer.xamarin.com/samples/monodroid/Phoneword/) para realizar un seguimiento del historial de números traducidos mediante la aplicación. La [aplicación final](https://developer.xamarin.com/samples/monodroid/PhonewordMultiscreen/) tendrá una segunda pantalla en la que se mostrarán los números "traducidos", como se muestra en la captura de pantalla de la derecha:
 
 [![Capturas de pantalla de la aplicación de ejemplo](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
 La sección complementaria [Análisis detallado](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md) revisa lo que se creó y describe la arquitectura, la navegación y otros conceptos de Android nuevos que encontrará en el camino.
-
 
 ## <a name="requirements"></a>Requisitos
 
@@ -37,13 +35,13 @@ Si quiere pasar directamente al tutorial siguiente, puede descargar la versión 
 
 En este tutorial agregará una pantalla **Translation History** (Historial de traducciones) a la aplicación **Phoneword**.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+::: zone pivot="windows"
 
 Para empezar, abra la aplicación **Phoneword** en Visual Studio y edite el archivo **Main.axml** en el **Explorador de soluciones**.
 
 ### <a name="updating-the-layout"></a>Actualización del diseño
 
-En el **cuadro de herramientas**, arrastre un **botón** hasta la superficie de diseño y colóquelo debajo de la vista de texto **TranslatedPhoneWord**. En el panel **Propiedades**, cambie el **Id** del botón por `@+id/TranslationHistoryButton`. 
+En el **cuadro de herramientas**, arrastre un **botón** hasta la superficie de diseño y colóquelo debajo de la vista de texto **TranslatedPhoneWord**. En el panel **Propiedades**, cambie el **Id** del botón por `@+id/TranslationHistoryButton`.
 
 [![Arrastrar un botón nuevo](hello-android-multiscreen-quickstart-images/vs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/vs/02-new-button.png#lightbox)
 
@@ -107,7 +105,7 @@ namespace Phoneword
 
 En esta clase, se crea una `ListActivity` y se rellena mediante programación, por lo que no es necesario crear un nuevo archivo de diseño para esta actividad. Esto se explica con más detalle en [Hello, Android Multiscreen: análisis detallado](~/android/get-started/hello-android/hello-android-deepdive.md).
 
-### <a name="adding-translation-history-code"></a>Agregar código de historial de traducción
+### <a name="adding-a-list"></a>Adición de una lista
 
 Esta aplicación recopila números de teléfono (que el usuario ha traducido en la primera pantalla) y los pasa a la segunda pantalla. Los números de teléfono se almacenan como una lista de cadenas. Para admitir listas (y también Intents, que se usan más adelante), agregue las directivas `using` siguientes a la parte superior de **MainActivity.cs**:
 
@@ -169,19 +167,20 @@ translateButton.Click += (sender, e) =>
 
 Guarde y compile la aplicación para asegurarse de que no existen errores.
 
-### <a name="running-the-app"></a>Ejecución de la aplicación
+### <a name="running-the-app"></a>Ejecutar la aplicación
 
 Implemente la aplicación en un dispositivo o emulador. En las siguientes capturas de pantalla se muestra la aplicación **Phoneword** en ejecución:
 
 [ ![Capturas de pantalla de ejemplo](hello-android-multiscreen-quickstart-images/screenshot-sml.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+::: zone-end
+::: zone pivot="macos"
 
 Para empezar, abra el proyecto **Phoneword** en Visual Studio para Mac y edite el archivo **Main.axml** en **Panel de solución**.
 
 ### <a name="updating-the-layout"></a>Actualización del diseño
 
-En el **cuadro de herramientas**, arrastre un **botón** hasta la superficie de diseño y colóquelo debajo de la vista de texto **TranslatedPhoneWord**. En el panel **Propiedades**, cambie el **Id** del botón por `@+id/TranslationHistoryButton`. 
+En el **cuadro de herramientas**, arrastre un **botón** hasta la superficie de diseño y colóquelo debajo de la vista de texto **TranslatedPhoneWord**. En el panel **Propiedades**, cambie el **Id.** del botón por `@+id/TranslationHistoryButton`:
 
 [![Arrastrar un botón nuevo](hello-android-multiscreen-quickstart-images/xs/02-new-button-sml.png)](hello-android-multiscreen-quickstart-images/xs/02-new-button.png#lightbox)
 
@@ -189,11 +188,9 @@ Establezca la propiedad **Text** del botón en `@string/translationHistory`. And
 
 [![Establecer el texto del botón Translation History (Historial de traducciones)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string-sml.png)](hello-android-multiscreen-quickstart-images/xs/03-call-history-string.png#lightbox)
 
-
 Expanda el nodo **values** situado debajo de la carpeta **Recursos** en **Panel de solución** y haga doble clic en el archivo de recursos de cadena, **Strings.xml**:
 
 [![Cadenas abiertas](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file-sml.png)](hello-android-multiscreen-quickstart-images/xs/04-strings-resources-file.png#lightbox)
-
 
 Agregue el nombre y el valor de cadena `translationHistory` al archivo **Strings.xml** y guárdelo:
 
@@ -246,7 +243,7 @@ namespace Phoneword
 
 En esta clase, se crea una `ListActivity` y se rellena mediante programación, por lo que no es necesario crear un nuevo archivo de diseño para esta actividad. Esto se explica con más detalle en la [Hello, Android Multiscreen: análisis detallado](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md).
 
-### <a name="adding-translation-history-code"></a>Agregar código de historial de traducción
+### <a name="adding-a-list"></a>Adición de una lista
 
 Esta aplicación recopila números de teléfono (que el usuario ha traducido en la primera pantalla) y los pasa a la segunda pantalla. Los números de teléfono se almacenan como una lista de cadenas. Para admitir listas (y también Intents, que se usan más adelante), agregue las directivas `using` siguientes a la parte superior de **MainActivity.cs**:
 
@@ -303,16 +300,15 @@ translateButton.Click += (sender, e) =>
 };
 ```
 
-### <a name="running-the-app"></a>Ejecución de la aplicación
+### <a name="running-the-app"></a>Ejecutar la aplicación
 
 Implemente la aplicación en un dispositivo o emulador. En las siguientes capturas de pantalla se muestra la aplicación **Phoneword** en ejecución:
 
 [ ![Capturas de pantalla de ejemplo](hello-android-multiscreen-quickstart-images/screenshot.png)](hello-android-multiscreen-quickstart-images/screenshot.png#lightbox)
 
------
+::: zone-end
 
 Enhorabuena por completar su primera aplicación multipantalla de Xamarin.Android. Ahora es el momento de analizar minuciosamente las herramientas y los conocimientos que acaba de aprender &ndash; a continuación [Hello, Android Multiscreen: análisis detallado](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md).
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

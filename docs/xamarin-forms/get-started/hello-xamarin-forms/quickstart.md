@@ -1,19 +1,20 @@
 ---
 title: Inicio rápido de Xamarin.Forms
 description: En este artículo se explica cómo crear una aplicación que convierte un número de teléfono alfanumérico especificado por el usuario en un número de teléfono numérico y que llama a ese número.
+zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 3f2f9c2d-d204-43bc-8c8a-a55ce1e6d2c8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/13/2018
-ms.openlocfilehash: 7399cab611b726eb7bb72928f504086fb842fb74
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.date: 09/13/2018
+ms.openlocfilehash: fd9b3032166470a960e97f1754d2133a5ef22631
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242438"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50109372"
 ---
 # <a name="xamarinforms-quickstart"></a>Inicio rápido de Xamarin.Forms
 
@@ -21,9 +22,9 @@ En este tutorial se muestra cómo crear una aplicación que convierte un número
 
 [![](quickstart-images/intro-app-examples-sml.png "Aplicación Phoneword")](quickstart-images/intro-app-examples.png#lightbox "Aplicación Phoneword")
 
-Cree la aplicación Phoneword de la siguiente forma:
+::: zone pivot="windows"
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+## <a name="get-started-with-visual-studio"></a>Introducción a Visual Studio
 
 1. En la pantalla **Inicio**, inicie Visual Studio. Se abrirá la página de inicio:
 
@@ -38,7 +39,8 @@ Cree la aplicación Phoneword de la siguiente forma:
     ![](quickstart-images/vs/new-project.w157.png "Plantillas de proyectos multiplataforma")
 
     > [!NOTE]
-    > Si no se asigna un nombre correcto a la solución **Phoneword**, se producirán numerosos errores de compilación.
+    > Los fragmentos de XAML y C# en este inicio rápido requieren que la solución se denomine **Phoneword**.
+    > El uso de un nombre de solución diferente originará numerosos errores de compilación al copiar el código de las instrucciones siguientes en los proyectos.
 
 4. En el cuadro de diálogo **New Cross Platform App** (Nueva aplicación multiplataforma), haga clic en **Aplicación en blanco**, seleccione **.NET Standard** como estrategia de código de uso compartido y haga clic en el botón **Aceptar**:
 
@@ -64,7 +66,7 @@ Cree la aplicación Phoneword de la siguiente forma:
         <StackLayout>
           <Label Text="Enter a Phoneword:" />
           <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
-          <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+          <Button Text="Translate" Clicked="OnTranslate" />
           <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
         </StackLayout>
     </ContentPage>
@@ -349,108 +351,19 @@ Cree la aplicación Phoneword de la siguiente forma:
 
     Guarde los cambios en el manifiesto presionando **CTRL+S** y cierre el archivo.
 
-24. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.UWP** y seleccione **Agregar > Nuevo elemento...**:
+24. Haga doble clic en el proyecto de aplicación de Android y elija **Establecer como proyecto de inicio**.
 
-    ![](quickstart-images/vs/add-new-item-uwp.png "Agregar nuevo elemento")
+25. Ejecute la aplicación de Android con el botón "flecha verde" de la barra de herramientas o seleccione **Depurar > Iniciar depuración** en el menú.
 
-25. En el cuadro de diálogo **Agregar nuevo elemento**, seleccione **Visual C# > Código > Clase**, asigne al nuevo archivo el nombre **PhoneDialer** y haga clic en el botón **Agregar**:
+    > [!WARNING]
+    > No se admiten las llamadas de teléfono en ningún simulador, por lo que es posible que la característica no funcione.
 
-    ![](quickstart-images/vs/new-phone-dialer-uwp.w157.png "Agregar nueva clase")
+26. Si tiene un dispositivo iOS y cumple los requisitos de sistema de Mac para el desarrollo de Xamarin.Forms, use una técnica similar para implementar la aplicación en el dispositivo iOS. Otra opción es implementar la aplicación en el [simulador remoto iOS](~/tools/ios-simulator/index.md).
 
-26. En **PhoneDialer.cs**, quite todo el código de plantilla y sustitúyalo por el siguiente código. Este código crea el método `Dial`, y los métodos auxiliares, que se usarán en la Plataforma universal de Windows para marcar un número de teléfono convertido:
+::: zone-end
+::: zone pivot="macos"
 
-    ```csharp
-    using Phoneword.UWP;
-    using System;
-    using System.Threading.Tasks;
-    using Windows.ApplicationModel.Calls;
-    using Windows.UI.Popups;
-    using Xamarin.Forms;
-
-    [assembly: Dependency(typeof(PhoneDialer))]
-    namespace Phoneword.UWP
-    {
-        public class PhoneDialer : IDialer
-        {
-            bool dialled = false;
-
-            public bool Dial(string number)
-            {
-                DialNumber(number);
-                return dialled;
-            }
-
-            async Task DialNumber(string number)
-            {
-                var phoneLine = await GetDefaultPhoneLineAsync();
-                if (phoneLine != null)
-                {
-                    phoneLine.Dial(number, number);
-                    dialled = true;
-                }
-                else
-                {
-                    var dialog = new MessageDialog("No line found to place the call");
-                    await dialog.ShowAsync();
-                    dialled = false;
-                }
-            }
-
-            async Task<PhoneLine> GetDefaultPhoneLineAsync()
-            {
-                var phoneCallStore = await PhoneCallManager.RequestStoreAsync();
-                var lineId = await phoneCallStore.GetDefaultLineAsync();
-                return await PhoneLine.FromIdAsync(lineId);
-            }
-        }
-    }
-    ```
-
-    Guarde los cambios en **PhoneDialer.cs** presionando **CTRL+S** y cierre el archivo.
-
-27. En el **Explorador de soluciones**, en el proyecto **Phoneword.UWP**, haga clic con el botón derecho en **Referencias** y seleccione **Agregar referencia...**:
-
-    ![](quickstart-images/vs/uwp-add-reference.png "Agregar referencia")
-
-28. En el cuadro de diálogo **Administrador de referencias**, seleccione **Windows universal > Extensiones > Windows Mobile Extensions for UWP** y haga clic en el botón **Aceptar**:
-
-    ![](quickstart-images/vs/uwp-add-reference-extensions.png "Agregar extensiones de Windows Mobile para UWP")
-
-29. En el **Explorador de soluciones**, en el proyecto **Phoneword.UWP**, haga doble clic en **Package.appxmanifest**:
-
-    ![](quickstart-images/vs/uwp-manifest.png "Abrir el manifiesto de UWP")
-
-30. En la página **Capacidades**, habilite la capacidad **Llamada telefónica**. Esto da permiso a la aplicación para realizar una llamada telefónica:
-
-    ![](quickstart-images/vs/uwp-manifest-changed.png "Habilitar la funcionalidad de llamada de teléfono")
-
-    Guarde los cambios en el manifiesto presionando **CTRL+S** y cierre el archivo.
-
-31. En Visual Studio, seleccione el elemento de menú **Compilación > Compilar solución** (o pulse **CTRL+MAYÚS+B**). La aplicación se compilará y aparecerá un mensaje de éxito en la barra de estado de Visual Studio:
-
-    ![](quickstart-images/vs/build-successful.png "Compilación correcta")
-
-    Si hay errores, repita los pasos anteriores y corrija cualquier error hasta que la aplicación se compile correctamente.
-
-32. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.UWP** y seleccione **Establecer como proyecto de inicio**:
-
-    
-  ![
-  ]
-  (quickstart-images/vs/uwp-set-as-startup-project.png "Establecer como proyecto de inicio")
-
-33. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación:
-
-    ![](quickstart-images/vs/start.png "Barra de herramientas de Visual Studio")
-    ![](quickstart-images/vs/phone-result-uwp.png "Aplicación Phoneword.UWP")
-
-34. En el **Explorador de soluciones**, haga clic con el botón derecho en el proyecto **Phoneword.Android** y seleccione **Establecer como proyecto de inicio**.
-35. En la barra de herramientas de Visual Studio, pulse el botón **Iniciar** (el botón triangular que parece un botón de reproducción) para iniciar la aplicación en un emulador de Android.
-36. Si tiene un dispositivo iOS y cumple los requisitos de sistema de Mac para el desarrollo de Xamarin.Forms, use una técnica similar para implementar la aplicación en el dispositivo iOS. Otra opción es implementar la aplicación en el [simulador remoto iOS](~/tools/ios-simulator.md).
-
-    Nota: No se admiten las llamadas de teléfono en ningún simulador.
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+## <a name="get-started-with-visual-studio-for-mac"></a>Introducción a Visual Studio para Mac
 
 1. Para crear un nuevo proyecto, inicie Visual Studio para Mac y, en la página de inicio, haga clic en **Nuevo proyecto...**:
 
@@ -469,7 +382,8 @@ Cree la aplicación Phoneword de la siguiente forma:
     ![](quickstart-images/xs/configure-project.png "Configurar el proyecto de Forms")
 
     > [!NOTE]
-    > Si no se asigna un nombre correcto a la solución y al proyecto **Phoneword**, se producirán numerosos errores de compilación.
+    > Los fragmentos de XAML y C# en este inicio rápido requieren que la solución se denomine **Phoneword**.
+    > El uso de un nombre de solución diferente originará numerosos errores de compilación al copiar el código de las instrucciones siguientes en los proyectos.
 
 5. En **Panel de solución**, haga doble clic en **MainPage.xaml** para abrirlo:
 
@@ -491,7 +405,7 @@ Cree la aplicación Phoneword de la siguiente forma:
         <StackLayout>
           <Label Text="Enter a Phoneword:" />
           <Entry x:Name="phoneNumberText" Text="1-855-XAMARIN" />
-          <Button x:Name="translateButon" Text="Translate" Clicked="OnTranslate" />
+          <Button Text="Translate" Clicked="OnTranslate" />
           <Button x:Name="callButton" Text="Call" IsEnabled="false" Clicked="OnCall" />
         </StackLayout>
     </ContentPage>
@@ -789,21 +703,18 @@ Cree la aplicación Phoneword de la siguiente forma:
 
 27. En el **Panel de solución**, seleccione el proyecto **Phoneword.Droid**, haga clic con el botón derecho y seleccione **Establecer como proyecto de inicio**:
 
-    
-  ![
-  ]
-  (quickstart-images/xs/set-startup-project.png "Establecer como proyecto de inicio")
+    ![](quickstart-images/xs/set-startup-project.png "Establecer como proyecto de inicio")
 
 28. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en el simulador de Android:
 
     ![](quickstart-images/xs/phoneword-result-android.png "Android Emulator")
 
-    Nota: No se admiten las llamadas de teléfono en los emuladores de Android.
+    > [!WARNING]
+    > No se admiten las llamadas de teléfono en Android Emulator.
 
------
+::: zone-end
 
 Enhorabuena, ha completado una aplicación de Xamarin.Forms. En el [siguiente tema](~/xamarin-forms/get-started/hello-xamarin-forms/deepdive.md) de esta guía se repasan los pasos realizados en este tutorial para comprender los aspectos básicos del desarrollo de aplicaciones mediante Xamarin.Forms.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

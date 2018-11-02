@@ -3,15 +3,15 @@ title: Búsqueda de la firma de su almacén de claves
 ms.prod: xamarin
 ms.assetid: 1b511fec-e6f6-453e-89c8-810aafb02b77
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 46b43e6689f751c4fac1e8668234fce7f953521e
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: d32b2a20fee6b2bb007ee620e0ae4203e950bb98
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30764643"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112482"
 ---
 # <a name="finding-your-keystores-signature"></a>Búsqueda de la firma de su almacén de claves
 
@@ -21,7 +21,7 @@ La firma MD5 o SHA1 de una aplicación Xamarin.Android depende del archivo **.ke
 
 Xamarin.Android firma todas las compilaciones de depuración con el mismo archivo **debug.keystore**. Este archivo se genera cuando se instala por primera vez Xamarin.Android. Los siguientes pasos detallan el proceso para buscar la firma MD5 o SHA1 de archivo predeterminado de Xamarin.Android **debug.keystore**.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Busque el archivo de Xamarin **debug.keystore** que se utiliza para firmar la aplicación. De forma predeterminada, el almacén de claves que se utiliza para firmar las versiones de depuración de una aplicación de Xamarin.Android puede encontrarse en la siguiente ubicación:
 
@@ -60,7 +60,7 @@ Certificate fingerprints:
 ```
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Busque el archivo de Xamarin **debug.keystore** que se utiliza para firmar la aplicación. De forma predeterminada, el almacén de claves que se utiliza para firmar las versiones de depuración de una aplicación de Xamarin.Android puede encontrarse en la siguiente ubicación:
 
@@ -114,20 +114,20 @@ KeyIdentifier [
 
 Los procesos para crear compilaciones de versión que se firman con un archivo **.keystore** personalizado son los mismos que los explicados anteriormente, con la versión del archivo **.keystore** reemplazando el archivo **debug.keystore** que utiliza Xamarin.Android. Sustituya sus propios valores para la contraseña de KeyStore y el nombre de alias utilizado cuando se creó el archivo del almacén de claves de la versión.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Cuando se utilice el asistente de Visual Studio **Distribuir** para firmar una aplicación de Xamarin.Android, encontrará el almacén de claves resultante en la siguiente ubicación:
 
-**C:\\Usuarios\\*NOMBRE DE USUARIO*\\AppData\\Local\\Xamarin\\Mono for Android\\alias\\alias.keystore**
+**C:\\Usuarios\\*NOMBRE DE USUARIO*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\*alias*\\*alias*.keystore**
 
 Por ejemplo, si ha seguido los pasos de [Crear un nuevo certificado](~/android/deploy-test/signing/index.md#newcertvs) para crear una nueva clave de firma, el almacén de claves de ejemplo resultante reside en la siguiente ubicación:
 
-**C:\\Usuarios\\*NOMBRE DE USUARIO*\\AppData\\Local\\Xamarin\\Mono for Android\\chimp\\chimp.keystore**
+**C:\\Usuarios\\*NOMBRE DE USUARIO*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
 Para más información sobre cómo firmar una aplicación de Xamarin.Android, vea [Firmar el paquete de aplicación de Android](~/android/deploy-test/signing/index.md).
 
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Cuando utilice el asistente de Visual Studio para Mac **Firmar y distribuir...** para firmar la aplicación, encontrará el almacén de claves resultante en la siguiente ubicación:
 

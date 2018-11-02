@@ -5,25 +5,25 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 79f57ac0-37d0-4593-9dcf-fca93ad0be65
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 12/02/2016
-ms.openlocfilehash: 573ab05c066c7ecd064942ba502634c97224d1d7
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 10/05/2018
+ms.openlocfilehash: 0e3a37364b5715650fc893ec4549749b0788087a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34786040"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50119779"
 ---
 # <a name="hello-ios-multiscreen"></a>Hello, iOS Multiscreen
 
-##  <a name="part-1-quickstartiosget-startedhello-ios-multiscreenhello-ios-multiscreen-quickstartmd"></a>[Parte 1: inicio rápido](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
+## <a name="part-1-quickstartiosget-startedhello-ios-multiscreenhello-ios-multiscreen-quickstartmd"></a>[Parte 1: inicio rápido](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md)
 
-En la primera parte de esta guía, agregará una segunda pantalla a la aplicación Phoneword para realizar un seguimiento del historial de números a los que se ha llamado mediante la aplicación.
+En la primera parte de esta guía, se agrega una segunda pantalla a la aplicación de ejemplo Phoneword para realizar un seguimiento del historial de los números que se han escrito.
 
-##  <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[Parte 2: análisis detallado](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
+## <a name="part-2-deep-diveiosget-startedhello-ios-multiscreenhello-ios-multiscreen-deepdivemd"></a>[Parte 2: análisis detallado](~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md)
 
-En la segunda parte de este documento, revisaremos lo que ha creado y explicaremos la arquitectura, la navegación y otros conceptos nuevos de iOS que surjan durante el proceso.
+En la segunda parte de este documento, se explica lo que se ha compilado, así como la arquitectura, la navegación y otros conceptos nuevos de iOS que surgen durante el proceso.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

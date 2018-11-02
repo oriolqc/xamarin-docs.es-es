@@ -4,15 +4,15 @@ description: Este documento describe las técnicas que pueden usarse para mejora
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 40a2acf28819279b2a0d5c1d50c651a79b455465
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.openlocfilehash: caf35ab601d20e1cb235ab9ebb131e6dffc614fc
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514468"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50108888"
 ---
 # <a name="xamarinios-performance"></a>Rendimiento de Xamarin.iOS
 
@@ -101,7 +101,9 @@ container.AddSubview (new MyView (container));
 
 Aquí, el objeto contenido no mantiene activo el elemento primario. Pero el elemento primario mantiene activo el elemento secundario durante la llamada realizada a `container.AddSubView`.
 
-Esto también ocurre en las API de iOS que usan el modelo de delegado o de origen de datos, donde una clase del mismo nivel contiene la implementación; por ejemplo, al establecer la propiedad [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/) o [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/) de la clase [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/).
+Esto también ocurre en las API de iOS que usan el modelo de delegado o de origen de datos, donde una clase del mismo nivel contiene la implementación; por ejemplo, al establecer la propiedad [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/)
+o [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/)
+de la clase [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/).
 
 En el caso de las clases que se crean exclusivamente para la implementación de un protocolo, por ejemplo, [`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/), en lugar de crear una subclase, puede implementar la interfaz de la clase, invalidar el método y asignar la propiedad `DataSource` a `this`.
 

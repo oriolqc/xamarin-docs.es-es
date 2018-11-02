@@ -4,15 +4,15 @@ description: Los derechos son funciones especiales de las aplicaciones y permiso
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
-ms.date: 03/15/2017
-ms.openlocfilehash: 7e5ace306b580ba76986e89367de84e5bfd9cc40
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+author: lobrien
+ms.author: laobri
+ms.date: 08/13/2018
+ms.openlocfilehash: 6e45f87b3c64abb9de22e09150935e3e5065fea4
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785309"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50103418"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Trabajar con derechos en Xamarin.iOS
 
@@ -20,12 +20,11 @@ _Los derechos son funcionalidades especiales de las aplicaciones y permisos de s
 
 En iOS, las aplicaciones se ejecutan en un _espacio aislado_, que proporciona un conjunto de reglas que limitan el acceso entre la aplicación y determinados recursos del sistema o datos de usuario. Los _derechos_ se usan para solicitar que el sistema expanda el espacio aislado para proporcionar capacidades adicionales a la aplicación.
 
-Para extender las capacidades de la aplicación, se debe proporcionar un derecho en el archivo Entitlements.plist de la aplicación. Solo se pueden extender ciertas capacidades, que se muestran en la guía [Trabajar con capacidades](~/ios/deploy-test/provisioning/capabilities/index.md) y se describen [a continuación](#keyreference). Los derechos se pasan al sistema como un par de clave/valor (normalmente solo se necesita uno por capacidad). Las claves y los valores específicos se describen en la sección [Referencia sobre las claves de derechos](#keyreference), que aparece más adelante en esta guía.
+Para extender las capacidades de la aplicación, se debe proporcionar un derecho en el archivo Entitlements.plist de la aplicación. Solo se pueden extender ciertas capacidades, que se muestran en la guía [Trabajar con capacidades](~/ios/deploy-test/provisioning/capabilities/index.md) y se describen [a continuación](#entitlement-key-reference). Los derechos se pasan al sistema como un par de clave/valor (normalmente solo se necesita uno por capacidad). Las claves y los valores específicos se describen en la sección [Referencia sobre las claves de derechos](#entitlement-key-reference), que aparece más adelante en esta guía.
 Visual Studio para Mac y Visual Studio proporcionan una interfaz clara para agregar derechos a una aplicación de Xamarin.iOS mediante el editor de Entitlements.plist.
 En esta guía se presenta el editor de Entitlements.plist y se muestra cómo usarlo. También se proporciona una referencia de todos los derechos que se pueden agregar a un proyecto de iOS para cada capacidad.
 
 ## <a name="entitlements-and-provisioning"></a>Derechos y aprovisionamiento
-
 
 El archivo Entitlements.plist se usa para especificar derechos y para firmar el paquete de aplicaciones.
 
@@ -38,7 +37,7 @@ Pero se deben seguir algunos pasos de aprovisionamiento adicionales para garanti
 
 Además de seleccionar y configurar los servicios de aplicaciones necesarios al definir el identificador de aplicación, los derechos también se deben configurar en el proyecto de Xamarin.iOS. Para ello, edite los archivos **Info.plist** y **Entitlements.plist**.
 
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Para configurar los derechos en Visual Studio para Mac, haga lo siguiente:
 
@@ -55,7 +54,7 @@ Para configurar los derechos en Visual Studio para Mac, haga lo siguiente:
 5. Seleccione y configure los derechos necesarios para la aplicación de Xamarin.iOS, de manera que coincidan con la configuración que se definió al crear el identificador de aplicación.
 6. Guarde los cambios en el archivo **Entitlements.plist**.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para configurar los derechos en Visual Studio, haga lo siguiente:
 
@@ -74,10 +73,7 @@ Para configurar los derechos en Visual Studio, haga lo siguiente:
 5. Seleccione y configure los derechos necesarios para la aplicación de Xamarin.iOS, de manera que coincidan con la configuración que se definió al crear el identificador de aplicación.
 6. Guarde los cambios en el archivo **Entitlements.plist**.
 
-
 -----
-
-<a name="add-new" />
 
 ## <a name="adding-a-new-entitlementsplist-file"></a>Agregar un nuevo archivo Entitlements.plist
 
@@ -91,8 +87,6 @@ Para agregar un archivo Entitlements.plist a Xamarin.iOS, haga lo siguiente:
 2.  En el cuadro de diálogo Nuevo archivo, seleccione **iOS > Lista de propiedades** y asígnele el nombre Derechos:
 
     ![Cuadro de diálogo Nuevo archivo](entitlements-images/image2.png)
-
-<a name="keyreference" />
 
 ## <a name="entitlement-key-reference"></a>Referencia sobre las claves de derechos
 
@@ -150,7 +144,7 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
 ### <a name="push-notifications"></a>Notificaciones push
 
 - **Clave**: aps-environment
-- **Cadena**: `production` O `development`
+- **Cadena**: `development` o `production`
 
 ### <a name="siri"></a>Siri
 
@@ -203,6 +197,12 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
 - **Descripción**: La configuración inalámbrica de accesorios permite configurar accesorios Wi-Fi MFi en la aplicación.
     - **Clave**: com.apple.external-accessory.wireless-configuration
     - **Booleano**: SÍ
+
+### <a name="classkit"></a>ClassKit
+
+- **Descripción**: ClassKit permite a los profesores ver el progreso de los estudiantes en actividades asignadas en la aplicación.
+    - **Clave**: com.apple.developer.ClassKit-environment
+    - **Cadena**: `development` o `production`
 
 ## <a name="summary"></a>Resumen
 

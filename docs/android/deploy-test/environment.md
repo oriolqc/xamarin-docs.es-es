@@ -3,15 +3,15 @@ title: Entorno de Xamarin.Android
 ms.prod: xamarin
 ms.assetid: 67BFD4E1-276C-4B9F-9BD8-A5218D2BD529
 ms.technology: xamarin-android
-author: mgmclemore
-ms.author: mamcle
+author: conceptdev
+ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: ebac7bfe826388de83fedc4be5f268773ca2526b
-ms.sourcegitcommit: 945df041e2180cb20af08b83cc703ecd1aedc6b0
+ms.openlocfilehash: f0ad51738e0bbe785773f653b06fe5f582527f0b
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2018
-ms.locfileid: "30766327"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50120884"
 ---
 # <a name="xamarinandroid-environment"></a>Entorno de Xamarin.Android
 
@@ -49,7 +49,8 @@ El tipo completo de ensamblado que debe heredar de [HttpMessageHandler](https://
 
 En Xamarin.Android 6.1, esta variable de entorno no se establece de forma predeterminada, y se usa [HttpClientHandler](https://docs.microsoft.com/dotnet/api/system.net.http.httpclienthandler?view=xamarinandroid-7.1).
 
-Como alternativa, se puede especificar que el valor `Xamarin.Android.Net.AndroidClientHandler` use [`java.net.URLConnection`](https://developer.xamarin.com/api/type/Java.Net.URLConnection/) para el acceso a la red, que *puede* permitir el uso de TLS 1.2 cuando Android lo admita.
+Como alternativa, puede especificarse el valor `Xamarin.Android.Net.AndroidClientHandler` para usar [`java.net.URLConnection`](https://developer.xamarin.com/api/type/Java.Net.URLConnection/)
+para el acceso a la red, que *puede* permitir el uso de TLS 1.2 cuando Android lo admita.
 
 Agregado en Xamarin.Android 6.1.
 

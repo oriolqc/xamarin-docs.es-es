@@ -4,15 +4,15 @@ description: Agregar capacidades a una aplicación a menudo requiere una configu
 ms.prod: xamarin
 ms.assetid: 3CBAC982-D8DE-48DD-97CD-32B551D9DB85
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: a1d2197a4cc7c7bf8fc9b69463a4679389e45ee8
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: 13d0e7a70c91c6e3e422f2e91cefc403627a340c
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785146"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50105524"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Capacidades de iCloud en Xamarin.iOS
 
@@ -107,6 +107,6 @@ En la siguiente lista se describen los pasos adicionales que se deben seguir:
 
 * Use el espacio de nombres del marco en su aplicación.
 * Agregue los derechos necesarios a la aplicación. En la guía [Trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) se proporciona información sobre los derechos necesarios y sobre cómo agregarlos.
-* En la opción **Firma de lote de iOS** de la aplicación, asegúrese de que **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
+* En la opción  **Firma de lote de iOS** de la aplicación, asegúrese de que  **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta  _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
 
 Si experimenta problemas con servicios de aplicaciones, vea la sección [Solución de problemas](~/ios/deploy-test/provisioning/capabilities/index.md) de la guía principal.

@@ -4,15 +4,15 @@ description: Agregar capacidades a una aplicación a menudo requiere una configu
 ms.prod: xamarin
 ms.assetid: 735CC916-16A4-471B-87F7-0535E24288D7
 ms.technology: xamarin-ios
-author: bradumbaugh
-ms.author: brumbaug
+author: lobrien
+ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: a3d2e6179dde1583e0fd4d175c46582bed9a2e07
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: c7a2d347970d4edfe713edab264647fb644ff74a
+ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34785075"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50112358"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Capacidades de Apple Pay en Xamarin.iOS
 
@@ -40,11 +40,11 @@ Gracias a los identificadores de comerciante, Apple Pay sabe que puede aceptar p
 
 2.  En **Identifiers** (Identificadores), seleccione **Merchant IDs** (Identificadores de comerciante) y, luego, seleccione **+** para crear un identificador de comerciante:  
 
-3.  Rellene el formulario que se muestra a continuación con una descripción y un identificador nuevos. La descripción, que se puede cambiar más tarde, le permite distinguir el identificador. El identificador debe ser único y debe comenzar con la cadena `merchant`. Apple recomienda que el identificador tenga el formato `merchant.com.[Your-App-Name]`:
+3.  Rellene el formulario que se muestra a continuación con una descripción y un identificador nuevos. La descripción, que se puede cambiar más tarde, le permite distinguir el identificador. El identificador debe ser único y debe comenzar con la cadena  `merchant`. Apple recomienda que el identificador tenga el formato `merchant.com.[Your-App-Name]`:
    
     ![Detalles del nuevo identificador de comerciante](apple-pay-capabilities-images/image58.png)
 
-4.  Confirme los detalles y presione **Register** (Registrar) para registrar el identificador: 
+4.  Confirme los detalles y presione  **Register** (Registrar) para registrar el identificador: 
     
     ![Confirmación del identificador de comerciante](apple-pay-capabilities-images/image59.png)
 
@@ -154,6 +154,6 @@ En la siguiente lista se describen los pasos adicionales que se deben seguir:
 
 * Use el espacio de nombres del marco en su aplicación.
 * Agregue los derechos necesarios a la aplicación. En la guía [Trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) se proporciona información sobre los derechos necesarios y sobre cómo agregarlos.
-* En la opción **Firma de lote de iOS** de la aplicación, asegúrese de que **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
+* En la opción  **Firma de lote de iOS** de la aplicación, asegúrese de que  **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta  _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
 
 Si experimenta problemas con servicios de aplicaciones, vea la sección [Solución de problemas](~/ios/deploy-test/provisioning/capabilities/index.md) de la guía principal.
