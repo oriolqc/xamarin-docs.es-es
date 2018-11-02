@@ -1,22 +1,22 @@
 ---
 title: EventToCommandBehavior reutilizable
-description: Comportamientos pueden utilizarse para asociar comandos a los controles que no se han diseñado para interactuar con los comandos. En este artículo muestra cómo utilizar un comportamiento de Xamarin.Forms para invocar un comando cuando se activa un evento.
+description: Comportamientos pueden utilizarse para asociar comandos a los controles que no se han diseñado para interactuar con los comandos. En este artículo muestra cómo crear y consumir un comportamiento de Xamarin.Forms para invocar un comando cuando se activa un evento.
 ms.prod: xamarin
 ms.assetid: EC7F6556-9776-40B8-9424-A8094482A2F3
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 3cc568298ba3710f7d4f092acbb2139bebe5976b
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 2609ce4ea677c6b03021a919599c250abff663a3
+ms.sourcegitcommit: 06a52ac36031d0d303ac7fc8163a59c178799c80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675294"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50911559"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior reutilizable
 
-_Comportamientos pueden utilizarse para asociar comandos a los controles que no se han diseñado para interactuar con los comandos. En este artículo muestra cómo utilizar un comportamiento de Xamarin.Forms para invocar un comando cuando se activa un evento._
+_Comportamientos pueden utilizarse para asociar comandos a los controles que no se han diseñado para interactuar con los comandos. En este artículo muestra cómo crear y consumir un comportamiento de Xamarin.Forms para invocar un comando cuando se activa un evento._
 
 ## <a name="overview"></a>Información general
 
@@ -31,6 +31,9 @@ También se pueden establecer las siguientes propiedades de comportamiento opcio
 
 - **CommandParameter** : un `object` que se pasarán al comando.
 - **Convertidor** : un [ `IValueConverter` ](xref:Xamarin.Forms.IValueConverter) implementación que cambiará el formato de los datos del argumento de evento mientras se pasa entre *origen* y *destino*por el motor de enlace.
+
+> [!NOTE]
+> El `EventToCommandBehavior` es una clase personalizada que puede encontrarse en el [ejemplo de comportamiento EventToCommand](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/), y no forma parte de Xamarin.Forms.
 
 ## <a name="creating-the-behavior"></a>Crear el comportamiento
 
