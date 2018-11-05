@@ -7,17 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: c4fba219b7fbfef9930539f0e25fda74ae1299b1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1a2739d1a3848303b3086c23c0a28a889250ee2e
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105745"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675515"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Dispositivos de varios núcleos y Xamarin.Android
 
 _Android puede ejecutarse en varias arquitecturas de equipo diferentes. En este documento se describen las distintas arquitecturas de CPU que se pueden emplear con una aplicación Xamarin.Android. También se explica cómo las aplicaciones Android se empaquetan para admitir distintas arquitecturas de CPU. Se introducirá la Interfaz binaria de aplicación (ABI) y se proporcionarán instrucciones respecto a cuáles ABI usar en una aplicación Xamarin.Android._
-
 
 ## <a name="overview"></a>Información general
 
@@ -25,19 +24,17 @@ Android permite la creación de "fat binaries" (también conocidos como binarios
 
 En concreto, cada aplicación Android admitirá al menos una *interfaz binaria de aplicación insertada* (EABI). Las EABI son convenciones específicas de programas de software insertados. Por lo general, una EABI describe cosas como:
 
--   El conjunto de instrucciones de CPU.
+- El conjunto de instrucciones de CPU.
 
--   El orden secuencial (endianness) en que la memoria se almacena y carga en tiempo de ejecución.
+- El orden secuencial (endianness) en que la memoria se almacena y carga en tiempo de ejecución.
 
--   El formato binario de archivos de objetos y bibliotecas de programa, así como el tipo de contenido que se permite o admite en estos archivos y bibliotecas.
+- El formato binario de archivos de objetos y bibliotecas de programa, así como el tipo de contenido que se permite o admite en estos archivos y bibliotecas.
 
--   Las diversas convenciones usadas para pasar datos entre el código de aplicación y el sistema (por ejemplo, cómo se usan los registros o la pila al llamar a funciones, las restricciones de alineación, etc.)
+- Las diversas convenciones usadas para pasar datos entre el código de aplicación y el sistema (por ejemplo, cómo se usan los registros o la pila al llamar a funciones, las restricciones de alineación, etc.)
 
--   Restricciones de tamaño y alineación para tipos de enumeración, estructuras, campos y matrices.
+- Restricciones de tamaño y alineación para tipos de enumeración, estructuras, campos y matrices.
 
--   La lista de símbolos de función disponibles para el código máquina en tiempo de ejecución, en general desde un conjunto de bibliotecas muy específico seleccionado.
-
-
+- La lista de símbolos de función disponibles para el código máquina en tiempo de ejecución, en general desde un conjunto de bibliotecas muy específico seleccionado.
 
 ### <a name="armeabi-and-thread-safety"></a>armeabi y la seguridad para subprocesos
 
@@ -48,12 +45,9 @@ Debido a un error en Android 4.0.0, 4.0.1, 4.0.2 y 4.0.3, las bibliotecas nativa
 > [!NOTE]
 > Xamarin.Android garantiza que `.so` se agrega al APK en el orden correcto. Este error no debería ser un problema para los usuarios de Xamarin.Android.
 
-
 ### <a name="abi-descriptions"></a>Descripciones de ABI
 
 Cada ABI compatible con Android se identifica mediante un nombre único.
-
-
 
 #### <a name="armeabi"></a>armeabi
 
@@ -61,48 +55,36 @@ Este es el nombre de una EABI para CPU basadas en ARM que admiten al menos el co
 
 **Nota**: El código `armeabi` de Xamarin.Android no es seguro para subprocesos y no se debe usar en dispositivos `armeabi-v7a` de varios núcleos (se describen a continuación). El uso de código `aremabi` en un dispositivo `armeabi-v7a` de un único núcleo es seguro.
 
-
-
 #### <a name="armeabi-v7a"></a>armeabi-v7a
 
 Se trata de otro conjunto de instrucciones de CPU basado en ARM que amplía la EABI `armeabi` descrita anteriormente. La EABI `armeabi-v7a` presenta compatibilidad con operaciones de punto flotante de hardware y varios dispositivos de CPU (SMP). Las aplicaciones que usan la EABI `armeabi-v7a` pueden esperar considerables mejoras en el rendimiento por encima de las aplicaciones que usan `armeabi`.
 
 **Nota: El código máquina** `armeabi-v7a` no se ejecuta en dispositivos de ARMv5.
 
-
-
 #### <a name="arm64-v8a"></a>arm64-v8a
 
 Se trata de un conjunto de instrucciones de 64 bits que se basa en la arquitectura de CPU de ARMv8. Esta arquitectura se usa en *Nexus 9*.
 Xamarin.Android 5.1 proporciona compatibilidad experimental con esta arquitectura (para más información, consulte [Experimental Features](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features) [Características experimentales]).
 
-
-
 #### <a name="x86"></a>x86
 
 Este es el nombre de una ABI para CPU que admiten el conjunto de instrucciones conocido comúnmente como *x86* o *IA-32*. Esta ABI corresponde a las instrucciones del conjunto de instrucciones Pentium Pro, que incluye los conjuntos de instrucciones MMX, SSE, SSE2 y SSE3. No incluye ninguna otra extensión opcional de conjunto de instrucciones IA-32 como:
 
--  La instrucción MOVBE.
--  La extensión SSE3 complementaria (SSSE3).
--  Cualquier variante de SSE4.
+- La instrucción MOVBE.
+- La extensión SSE3 complementaria (SSSE3).
+- Cualquier variante de SSE4.
 
-
-**Nota:** Aunque se ejecuta en x86, Google TV no es compatible con el NDK de Android ni
-
-
+**Nota:** Aunque se ejecuta en x86, Google TV no es compatible con el NDK de Android.
 
 #### <a name="x8664"></a>x86_64
 
 Este es el nombre de una ABI para CPU que admiten el conjunto de instrucciones x86 de 64 bits (también conocido como *x64* o *AMD64*). Xamarin.Android 5.1 proporciona compatibilidad experimental con esta arquitectura (para más información, consulte [Experimental Features](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features) [Características experimentales]).
-
 
 #### <a name="mips"></a>mips
 
 Este es el nombre de una EABI para CPU basadas en MIPS que admiten al menos el conjunto de instrucciones `MIPS32r1`. No se admiten en Android ni MIPS 16 ni `micromips`.
 
 **Nota:** Actualmente los dispositivos MIPS no se admite en Xamarin.Android, pero lo harán en una próxima versión.
-
-
 
 #### <a name="apk-file-format"></a>Formato de archivo de APK
 
@@ -112,42 +94,36 @@ El paquete de aplicaciones Android es el formato de archivo que contiene todo el
 
 Una descripción rápida del contenido del archivo `.apk`:
 
--   **AndroidManifest.xml**: este es el archivo `AndroidManifest.xml`, en formato XML binario.
+- **AndroidManifest.xml**&ndash; este es el archivo `AndroidManifest.xml`, en formato XML binario.
 
--   **classes.dex**: contiene el código de la aplicación, compilado en el formato de archivo `dex` que usa la máquina virtual en tiempo de ejecución de Android.
+- **classes.dex**&ndash; contiene el código de la aplicación, compilado en el formato de archivo `dex` que usa la máquina virtual en tiempo de ejecución de Android.
 
--   **resources.arsc**: este archivo contiene todos los recursos precompilados de la aplicación.
+- **resources.arsc**&ndash; este archivo contiene todos los recursos precompilados de la aplicación.
 
--   **lib**: este directorio contiene el código compilado de cada ABI. Contendrá una subcarpeta para cada ABI que se ha descrito en la sección anterior. En la captura de pantalla anterior, el archivo `.apk` en cuestión tiene bibliotecas nativas para `armeabi-v7a` y para `x86`.
+- **lib**: este directorio contiene el código compilado de cada ABI. Contendrá una subcarpeta para cada ABI que se ha descrito en la sección anterior. En la captura de pantalla anterior, el archivo `.apk` en cuestión tiene bibliotecas nativas para `armeabi-v7a` y para `x86`.
 
--   **META-INF**: este directorio (si existe) se usa para almacenar información de firma, paquetes y datos de configuración de extensión.
+- **META-INF**&ndash; este directorio (si existe) se usa para almacenar información de firma, paquetes y datos de configuración de extensión.
 
--   **res**: este directorio contiene los recursos que no se compilaron en `resources.arsc`.
+- **res**&ndash; este directorio contiene los recursos que no se compilaron en `resources.arsc`.
 
 > [!NOTE]
 > El archivo `libmonodroid.so` es la biblioteca nativa que necesitan todas las aplicaciones Xamarin.Android.
-
-
 
 #### <a name="android-device-abi-support"></a>Compatibilidad con ABI en dispositivos Android
 
 Cada dispositivo Android admite la ejecución de código nativo en hasta dos ABI:
 
--   **La ABI "principal"**: corresponde al código máquina usado en la imagen del sistema.
+- **La ABI "principal"**&ndash; corresponde al código máquina usado en la imagen del sistema.
 
--   **Una ABI "secundaria"**: una ABI opcional que también es compatible con la imagen del sistema.
-
+- **Una ABI "secundaria"**&ndash; una ABI opcional que también es compatible con la imagen del sistema.
 
 Por ejemplo, normalmente un dispositivo ARMv5TE solo tendrá una ABI principal de `armeabi`, mientras que un dispositivo ARMv7 especificaría una ABI principal de `armeabi-v7a` y una ABI secundaria de `armeabi`. Normalmente, un dispositivo x86 solo debería especificar una ABI principal de `x86`.
-
 
 ### <a name="android-native-library-installation"></a>Instalación de bibliotecas nativas de Android
 
 En el momento de la instalación del paquete, las bibliotecas nativas que contiene el archivo `.apk` se extraen en el directorio de biblioteca nativa de la aplicación, normalmente `/data/data/<package-name>/lib` y, por tanto, se conocen como `$APP/lib`.
 
 El comportamiento de la instalación de bibliotecas nativas de Android varía considerablemente según la versión de Android.
-
-
 
 #### <a name="installing-native-libraries-pre-android-40"></a>Instalación de bibliotecas nativas: con anterioridad a Android 4.0
 
@@ -178,15 +154,13 @@ lib/armeabi-v7a/libone.so
 lib/armeabi-v7a/libtwo.so
 ```
 
-
 #### <a name="installing-native-libraries-android-40-ndash-android-403"></a>Instalación de bibliotecas nativas: Android 4.0 &ndash; Android 4.0.3
 
 Android 4.0 Ice Cream Sandwich cambia la lógica de extracción. Enumera todas las bibliotecas nativas, comprueba si el nombre base del archivo ya se ha extraído y, si se cumplen las dos siguientes condiciones, se extrae la biblioteca:
 
--   Aún no se ha extraído.
+- Aún no se ha extraído.
 
--   La ABI de la biblioteca nativa corresponde a la ABI principal o secundaria del destino.
-
+- La ABI de la biblioteca nativa corresponde a la ABI principal o secundaria del destino.
 
 Al cumplirse estas dos condiciones, es posible un comportamiento de "combinación"; es decir, si tenemos un archivo `.apk` con el siguiente contenido:
 
@@ -239,26 +213,23 @@ $APP/lib/libone.so # from armeabi
 $APP/lib/libtwo.so # from armeabi-v7a
 ```
 
-
 ### <a name="xamarinandroid-and-abis"></a>Xamarin.Android y las ABI
 
 Xamarin.Android admite las siguientes arquitecturas:
 
--  `armeabi`
--  `armeabi-v7a`
--  `x86`
+- `armeabi`
+- `armeabi-v7a`
+- `x86`
 
 Xamarin.Android proporciona compatibilidad experimental con las arquitecturas siguientes:
 
--  `arm64-v8a`
--  `x86_64`
+- `arm64-v8a`
+- `x86_64`
 
-
-Tenga en cuenta que para ejecutar la aplicación en dispositivos de 64 bits, *no* se requieren entornos en tiempo de ejecución de 64 bits. Para más información acerca de las características experimentales en Xamarin.Android 5.1, consulte [Experimental Features](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Experimental_Features) (Características experimentales).
+> [!NOTE]
+> A partir de agosto de 2018 se necesitarán nuevas aplicaciones para alcanzar el nivel 26 de la API, y a partir de agosto de 2019 [se requerirá que las aplicaciones proporcionen versiones de 64 bits](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html) además de la versión de 32 bits.
 
 Xamarin.Android no proporciona actualmente compatibilidad con `mips`.
-
-
 
 ### <a name="declaring-supported-abis"></a>Declaración de las ABI admitidas
 
@@ -273,17 +244,14 @@ En Visual Studio para Mac, las arquitecturas admitidas se pueden seleccionar en 
 
 Existen algunas situaciones en las que puede ser necesario declarar compatibilidad adicional con ABI, por ejemplo:
 
--   Al implementar la aplicación en un dispositivo `x86`.
+- Al implementar la aplicación en un dispositivo `x86`.
 
--   Al implementar la aplicación en un dispositivo `armeabi-v7a` para garantizar la seguridad para subprocesos.
-
-
+- Al implementar la aplicación en un dispositivo `armeabi-v7a` para garantizar la seguridad para subprocesos.
 
 ## <a name="summary"></a>Resumen
 
 En este documento se tratan las distintas arquitecturas de CPU en las que se puede ejecutar una aplicación Android. Se introduce la Interfaz binaria de aplicación y cómo se usa en Android para admitir arquitecturas de CPU dispares.
 Luego, se pasa a describir cómo especificar la compatibilidad con ABI en una aplicación Xamarin.Android y se resaltan los problemas que surgen al utilizar aplicaciones Xamarin.Android en un dispositivo `armeabi-v7a` que está pensado solo para `armeabi`.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

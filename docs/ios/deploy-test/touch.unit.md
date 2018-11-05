@@ -7,45 +7,27 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: dd590b65fdf1f83ade3453fa1266d1f6724bb8de
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b995ed5cf8d8735e87fb18c3a69d43b5a079b82f
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121833"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674988"
 ---
 # <a name="unit-testing-xamarinios-apps"></a>Pruebas unitarias de Xamarin.iOS
 
 En este documento se describe cómo se crean pruebas unitarias para los proyectos de Xamarin.iOS.
 Las pruebas unitarias con Xamarin.iOS se realizan mediante el marco Touch.Unit, que incluye tanto un ejecutor de pruebas de iOS como una versión modificada de NUnit denominada [Touch.Unit](https://github.com/xamarin/Touch.Unit), que proporciona un conjunto conocido de API para escribir pruebas unitarias.
 
-## <a name="setting-up-a-test-project"></a>Configuración de un proyecto de pruebas
-
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+## <a name="setting-up-a-test-project-in-visual-studio-for-mac"></a>Configuración de un proyecto de prueba en Visual Studio para Mac
 
 Para configurar un marco de pruebas unitarias para el proyecto, lo único que tiene que hacer es agregar a la solución un proyecto de tipo **proyecto de pruebas unitarias de iOS**. Para ello, haga clic con el botón derecho en la solución y seleccione **Agregar > Agregar nuevo proyecto**. En la lista, seleccione **iOS > Pruebas > Unified API > iOS Unit Tests Project (Proyecto de pruebas unitarias de iOS)** (puede elegir C# o F#).
 
 ![](touch.unit-images/00.png "Elegir C# o F#")
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
-Para configurar un marco de pruebas unitarias para el proyecto, lo único que tiene que hacer es agregar a la solución un proyecto de tipo **proyecto de pruebas unitarias de iOS**. Para ello, haga clic con el botón derecho en la solución y seleccione **Agregar > Nuevo proyecto...** En la lista, seleccione **Visual C# > iOS > Unit Test App (iOS) (Aplicación de pruebas unitarias (iOS))**.
-
-![](touch.unit-images/00a.png "Aplicación de prueba unitaria (iOS)")
-
------
-
 Con los pasos anteriores se crea un proyecto básico que contiene un programa básico ejecutor y que hace referencia al nuevo ensamblado MonoTouch.NUnitLite; el proyecto tendrá este aspecto:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
-
 ![](touch.unit-images/01.png "El proyecto en el Explorador de soluciones")
-
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
-
-![](touch.unit-images/01a.png "El proyecto en el Explorador de soluciones")
-
------
 
 La clase `AppDelegate.cs` contiene el ejecutor de pruebas y tiene el siguiente aspecto:
 
@@ -53,27 +35,30 @@ La clase `AppDelegate.cs` contiene el ejecutor de pruebas y tiene el siguiente a
 [Register ("AppDelegate")]
 public partial class AppDelegate : UIApplicationDelegate
 {
-        UIWindow window;
-        TouchRunner runner;
+    UIWindow window;
+    TouchRunner runner;
 
-        public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-        {
-                // create a new window instance based on the screen size
-                window = new UIWindow (UIScreen.MainScreen.Bounds);
-                runner = new TouchRunner (window);
+    public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+    {
+        // create a new window instance based on the screen size
+        window = new UIWindow (UIScreen.MainScreen.Bounds);
+        runner = new TouchRunner (window);
 
-                // register every tests included in the main application/assembly
-                runner.Add (System.Reflection.Assembly.GetExecutingAssembly ());
+        // register every tests included in the main application/assembly
+        runner.Add (System.Reflection.Assembly.GetExecutingAssembly ());
 
-                window.RootViewController = new UINavigationController (runner.GetViewController ());
+        window.RootViewController = new UINavigationController (runner.GetViewController ());
 
-                // make the window visible
-                window.MakeKeyAndVisible ();
+        // make the window visible
+        window.MakeKeyAndVisible ();
 
-                return true;
-        }
+        return true;
+    }
 }
 ```
+
+> [!NOTE]
+> El tipo de proyecto de prueba unitaria de iOS no está disponible en Visual Studio 2017 en Windows.
 
 ## <a name="writing-some-tests"></a>Escritura de pruebas
 
@@ -89,28 +74,28 @@ using NUnit.Framework;
 
 namespace Fixtures {
 
-        [TestFixture]
-        public class Tests {
+    [TestFixture]
+    public class Tests {
 
-                [Test]
-                public void Pass ()
-                {
-                        Assert.True (true);
-                }
-
-                [Test]
-                public void Fail ()
-                {
-                        Assert.False (true);
-                }
-
-                [Test]
-                [Ignore ("another time")]
-                public void Ignore ()
-                {
-                        Assert.True (false);
-                }
+        [Test]
+        public void Pass ()
+        {
+                Assert.True (true);
         }
+
+        [Test]
+        public void Fail ()
+        {
+                Assert.False (true);
+        }
+
+        [Test]
+        [Ignore ("another time")]
+        public void Ignore ()
+        {
+                Assert.True (false);
+        }
+    }
 }
 ```
 
@@ -120,15 +105,14 @@ Para ejecutar este proyecto en la solución, haga clic en él con el botón dere
 
 El ejecutor de pruebas permite ver qué pruebas se registran y seleccionar individualmente las pruebas que se pueden ejecutar.
 
-[![](touch.unit-images/02.png "Lista de pruebas registradas")](touch.unit-images/02.png#lightbox) 
+[![](touch.unit-images/02-sml.png "Lista de pruebas registradas")](touch.unit-images/02.png#lightbox) 
+[![](touch.unit-images/03-sml.png "Texto individual")](touch.unit-images/03.png#lightbox) 
 
-[![](touch.unit-images/03.png "Texto individual")](touch.unit-images/03.png#lightbox) 
-
-[![](touch.unit-images/04.png "Resultados de ejecución")](touch.unit-images/04.png#lightbox)
+[![](touch.unit-images/04-sml.png "Resultados de ejecución")](touch.unit-images/04.png#lightbox)
 
 Puede ejecutar accesorios de prueba individuales si selecciona el accesorio de texto en las vistas anidadas o puede ejecutar todas las pruebas con "Run Everything (Ejecutar todo)". Si ejecuta la prueba predeterminada que se supone que incluye una prueba correcta, una incorrecta y una omitida. Este es el aspecto del informe, y puede ir directamente a las pruebas incorrectas y obtener más información sobre el error:
 
-[![](touch.unit-images/05.png "Informe de ejemplo")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "Informe de ejemplo")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/05.png "Informe de ejemplo")](touch.unit-images/05.png#lightbox)
+[![](touch.unit-images/05-sml.png "Informe de ejemplo")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/06-sml.png "Informe de ejemplo")](touch.unit-images/06.png#lightbox) [![](touch.unit-images/07-sml.png "Informe de ejemplo")](touch.unit-images/07.png#lightbox)
 
 También puede ir a la ventana Application Output (Resultado de aplicación) del IDE para ver qué pruebas se ejecutan y su estado actual.
 
@@ -139,12 +123,7 @@ Usa recursos mínimos y se ejecuta en plataformas de recursos restringidos como 
 
 Además de los métodos de la clase Assert, la funcionalidad de pruebas unitarias se divide en los siguientes espacios de nombre que forman parte de NUnitLite:
 
--   [NUnit.Framework](https://developer.xamarin.com/api/namespace/NUnit.Framework/)
--   [NUnit.Constraints](https://developer.xamarin.com/api/namespace/NUnit.Framework.Constraints/)
--   [NUnitLite](https://developer.xamarin.com/api/namespace/NUnitLite/)
--   [NUniteLite.Runner](https://developer.xamarin.com/api/namespace/NUnitLite.Runner/)
-
-
-El ejecutor de pruebas unitarias específico de Xamarin.iOS se documenta aquí:
-
--   [NUnit.UI.TouchRunner](https://developer.xamarin.com/api/type/NUnit.UI.TouchRunner/)
+- [NUnit.Framework](https://developer.xamarin.com/api/namespace/NUnit.Framework/)
+- [NUnit.Constraints](https://developer.xamarin.com/api/namespace/NUnit.Framework.Constraints/)
+- [NUnitLite](https://developer.xamarin.com/api/namespace/NUnitLite/)
+- [NUniteLite.Runner](https://developer.xamarin.com/api/namespace/NUnitLite.Runner/)
