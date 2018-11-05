@@ -69,7 +69,7 @@ Interfaz de usuario para que aparece cuando se realiza la solicitud para compart
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* `Title` sera el nombre de la aplicación de forma predeterminada si no se establece.
+* `Title` le nombre de la aplicación de forma predeterminada si no se establece.
 * `Subject` No se utiliza.
 
 -----
