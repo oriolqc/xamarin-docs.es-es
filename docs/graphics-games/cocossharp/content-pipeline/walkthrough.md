@@ -6,12 +6,12 @@ ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: fdc57e7028d3a16f9a9d2504caf1f2414d0ac94f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 84f825c19aa1ac08fbcf3e732077304218768bcc
+ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102989"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983606"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>Mediante la herramienta de canalización MonoGame
 
@@ -84,7 +84,7 @@ Echemos un vistazo a algunas de las opciones más importantes para el proyecto d
 
 ### <a name="output-folder"></a>Carpeta de salida
 
-Esta es la carpeta (en relación con el propio proyecto de contenido) donde la salida **.xnb** se guardarán los archivos. Para simplificar las cosas, vamos a usar la misma carpeta para contener la entrada y los archivos de salida. En otras palabras, se cambiará el **carpeta de salida** sea **.\**  :
+Esta es la carpeta (en relación con el propio proyecto de contenido) donde la salida **.xnb** se guardarán los archivos. Para simplificar las cosas, vamos a usar la misma carpeta para contener la entrada y los archivos de salida. En otras palabras, se cambiará el **carpeta de salida** sea **.\\**  :
 
 ![](walkthrough-images/image10.png "")
 

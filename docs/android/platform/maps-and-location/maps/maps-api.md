@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: a89211e4576b8d22b45bb4f675241d47c49270e6
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: fb7d18e6434e32941531d2c37cd8b938ec21ba90
+ms.sourcegitcommit: 28dbb5fa2fbcc7e66cd09c1d0077496fcdefac56
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235043"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "51027332"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>Uso de la API de Google Maps en su aplicación
 
@@ -40,7 +40,7 @@ Varios pasos deben realizarse antes de poder usar la API de Maps, incluidos:
 
 ### <a name="a-nameobtain-maps-key-obtain-a-google-maps-api-key"></a><a name="obtain-maps-key" />Obtener una clave de API de Google Maps
 
-El último paso es obtener una clave de API de Google Maps (tenga en cuenta que no se puede reutilizar una clave de API de la API heredada de v1 de Google Maps). Para obtener información acerca de cómo obtener y usar la clave de API con Xamarin.Android, consulte [clave de API de obtención A Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
+El primer paso es obtener una clave de API de Google Maps (tenga en cuenta que no se puede reutilizar una clave de API de la API heredada de v1 de Google Maps). Para obtener información acerca de cómo obtener y usar la clave de API con Xamarin.Android, consulte [clave de API de obtención A Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
  
 
 ### <a name="a-nameinstall-gps-sdk--install-the-google-play-services-sdk"></a><a name="install-gps-sdk" /> Instale el SDK de Google Play Services
@@ -183,7 +183,7 @@ Al igual que otras clases de fragmentos, hay dos maneras de agregar un `MapFragm
               class="com.google.android.gms.maps.MapFragment" />
     ```
 
--   **Programmaatically** : la `MapFragment` puede crearse mediante programación utilizando la [ `MapFragment.NewInstance` ](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance()) método y, a continuación, se agrega a una actividad. Este fragmento de código muestra la manera más sencilla de crear una instancia de un `MapFragment` de objeto y agregar a una actividad:
+-   **Mediante programación** : la `MapFragment` puede crearse mediante programación utilizando la [ `MapFragment.NewInstance` ](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance()) método y, a continuación, se agrega a una actividad. Este fragmento de código muestra la manera más sencilla de crear una instancia de un `MapFragment` de objeto y agregar a una actividad:
     
     ```csharp
         var mapFrag = MapFragment.NewInstance();
