@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/31/2018
-ms.openlocfilehash: e9c2a42b9108c04f18252a410d40dbc03013f6dd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8622c40e41071d6c05b05abbe2d5d8a8a844ebde
+ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123757"
+ms.lasthandoff: 11/08/2018
+ms.locfileid: "51285591"
 ---
 # <a name="ios-designer-basics"></a>conceptos básicos del Diseñador de iOS
 
@@ -459,6 +459,14 @@ Es posible utilizar iOS Designer y en Interface Builder de Xcode indistintamente
 Después de realizar modificaciones en Interface Builder de Xcode, guarde el archivo y vuelva a Visual Studio para Mac. Los cambios se sincronizarán con el proyecto de Xamarin.iOS.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+
+## <a name="revert-to-xcode"></a>Volver a Xcode
+
+Es posible utilizar iOS Designer y en Interface Builder de Xcode de forma intercambiable, sin embargo, Interface Builder de Xcode solo está disponible en Mac. Para abrir un archivo de guión gráfico o .xib en Interface Builder de Xcode en un equipo Mac, abra la solución que contiene el proyecto de Xamarin.iOS en [Visual Studio para Mac](/visualstudio/mac/), haga doble clic en el archivo y seleccione **abrir con > interfaz de Xcode El generador de**, tal y como se muestra en la captura de pantalla siguiente:
+
+[![Abrir un guion gráfico en Interface Builder de Xcode](introduction-images/22-openinxcodeinterfacebuilder-vsmac.png "abrir un guion gráfico en Interface Builder de Xcode")](introduction-images/22-openinxcodeinterfacebuilder-vsmac-large.png#lightbox)
+
+Después de realizar modificaciones en Interface Builder de Xcode, guarde el archivo y vuelva a Visual Studio para Mac. Los cambios se sincronizarán con el proyecto de Xamarin.iOS.
 
 -----
 
