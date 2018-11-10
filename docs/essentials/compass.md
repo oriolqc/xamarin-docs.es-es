@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials: Compass'
-description: Este documento describe la clase Compass en Xamarin.Essentials el cual le permite controlar el norte magnético del dispositivo.
+title: 'Xamarin.Essentials: Brújula'
+description: En este documento se describe la clase Compass de Xamarin.Essentials, que permite supervisar la dirección del norte magnético del dispositivo.
 ms.assetid: BF85B0C3-C686-43D9-811A-07DCAF8CDD86
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: c3fe98c384a87bdc08ce94e7537d1a6343767561
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
+ms.openlocfilehash: 51812f9b4f88d77bf553a26ef3a6802239e338e0
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353888"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675502"
 ---
-# <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Compass
+# <a name="xamarinessentials-compass"></a>Xamarin.Essentials: Brújula
 
-![La versión preliminar de NuGet](~/media/shared/pre-release.png)
+![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-La clase **Compass** le permite controlar el norte magnético del dispositivo.
+La clase **Compass** permite supervisar la dirección del norte magnético del dispositivo.
 
-## <a name="using-compass"></a>Uso de la brújula
+## <a name="get-started"></a>Primeros pasos
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-compass"></a>Uso de Compass
 
 Agregue una referencia a Xamarin.Essentials en su clase:
 
@@ -26,7 +30,7 @@ Agregue una referencia a Xamarin.Essentials en su clase:
 using Xamarin.Essentials;
 ```
 
-La funcionalidad de la brújula funciona mediante una llamada a los métodos `Start` y `Stop` que controlan los cambios realizados en la brújula. Los cambios se enviarán a través de los eventos `ReadingChanged`. A continuación, se muestra un ejemplo:
+La funcionalidad Compass funciona mediante una llamada a los métodos `Start` y `Stop` para realizar escuchas de los cambios realizados en la brújula. Los cambios se enviarán a través del evento `ReadingChanged`. A continuación se muestra un ejemplo:
 
 ```csharp
 public class CompassTest
@@ -70,29 +74,29 @@ public class CompassTest
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
-## <a name="platform-implementation-specifics"></a>Detalles de implementación de plataforma
+## <a name="platform-implementation-specifics"></a>Detalles de implementación de la plataforma
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-Android no proporciona una API para recuperar el estado de la brújula. Usamos el acelerómetro y magnetómetro para calcular la partida el norte magnético, recomendado por Google.
+Android no proporciona una API para recuperar la dirección de la brújula. El acelerómetro y el magnetómetro se usan para calcular la dirección del norte magnético, lo que recomienda Google.
 
-En raras ocasiones, quizás verá resultados incoherentes porque los sensores necesitan calibrarse, lo que implica mover el dispositivo en un movimiento en forma de 8. La mejor manera de hacerlo es abrir Google Maps, pulse en el símbolo de su ubicación y seleccione **calibrar brújula**.
+En casos poco habituales, es posible que vea resultados incoherentes porque sea necesario calibrar los sensores, lo que implica mover el dispositivo describiendo un ocho. La mejor manera de hacerlo es abrir Google Maps, pulsar en el punto de la ubicación y seleccionar **Calibrar la brújula**.
 
-Tenga en cuenta que ejecuta varios sensores desde tu aplicación al mismo tiempo puede influir en la velocidad del sensor.
+Tenga en cuenta que la ejecución simultánea de varios sensores desde la aplicación puede ajustar la velocidad del sensor.
 
 ## <a name="low-pass-filter"></a>Filtro de paso bajo
 
-Debido a como se calculan y actualizan los datos de la brújula de Android es posible que sea necesario rebajar la salida de los valores. Un _Filtro de paso bajo_ pueden aplicarse calculando el promedio de los valores de seno y coseno de los ángulos y puede activarse estableciendo la propiedad `ApplyLowPassFilter` en la clase `Compass`:
+Debido a la forma de calcular y actualizar los valores de la brújula de Android, es posible que sea necesario suavizarlos. Se puede aplicar un _Filtro de paso bajo_ que calcula el promedio de los valores de seno y coseno de los ángulos, y se puede activar si se establece la propiedad `ApplyLowPassFilter` de la clase `Compass`:
 
 ```csharp
 Compass.ApplyLowPassFilter = true;
 ```
 
-Esto se aplica solo a la plataforma Android. Puede leer más información [aquí](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
+Esto solo se aplica a la plataforma Android. Puede leer más información [aquí](https://github.com/xamarin/Essentials/pull/354#issuecomment-405316860).
 
 --------------
 
 ## <a name="api"></a>API
 
-- [Código fuente de la brújula](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
-- [Documentación de API de brújula](xref:Xamarin.Essentials.Compass)
+- [Código fuente de Compass](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
+- [Documentación de API para Compass](xref:Xamarin.Essentials.Compass)

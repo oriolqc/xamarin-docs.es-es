@@ -1,40 +1,42 @@
 ---
-title: 'Xamarin.Essentials: Geocodificación'
-description: La clase de Geocodificación en Xamarin.Essentials, proporciona API para ambas código geográfico un placemark a una posición coordenadas e invertir las coordenadas de código geográfico para un placemark.
+title: 'Xamarin.Essentials: Codificación geográfica'
+description: La clase Geocoding de Xamarin.Essentials proporciona API para geocodificar una marca de posición en coordenadas de posición e invertir las coordenadas de código geográfico a una marca de posición.
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: a4d6e4d9b32e665893d82693a3c858630b63d372
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: af6453cdc9a2c48a4de96d8fea95954df7107711
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353680"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674878"
 ---
-# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Geocodificación
+# <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Codificación geográfica
 
-![La versión preliminar de NuGet](~/media/shared/pre-release.png)
+![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-El **Geocodificación** clase proporciona las API para obtener un placemark a una posición coordenadas e invertir las coordenadas de código geográfico para un placemark.
+La clase **Geocoding** proporciona API para geocodificar una marca de posición en coordenadas de posición e invertir las coordenadas de código geográfico a una marca de posición.
 
-## <a name="getting-started"></a>Introducción
+## <a name="get-started"></a>Primeros pasos
 
-Para tener acceso a la **Geocodificación** se requiere la funcionalidad de la siguiente configuración específica de plataforma.
+[!include[](~/essentials/includes/get-started.md)]
+
+Para acceder a la funcionalidad de **Geocoding**, se requiere la siguiente configuración específica para la plataforma.
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-No se requiere ninguna configuración adicional.
+No se requiere configuración adicional.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-No se requiere ninguna configuración adicional.
+No se requiere configuración adicional.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-Se requiere una clave de API de Bing Maps para usar la funcionalidad de codificación geográfica. Regístrese para obtener una [mapas de Bing](https://www.bingmapsportal.com/) cuenta. En **mi cuenta > Mis claves** crear una nueva clave y rellene la información en función de su tipo de aplicación (que debe ser **aplicación pública de Windows (UWP, 8.x y versiones anteriores)** para aplicaciones UWP).
+Se requiere una clave de API de Bing Maps para usar la funcionalidad de codificación geográfica. Regístrese para obtener una cuenta de [Bing Maps](https://www.bingmapsportal.com/). En **Mi cuenta > Mis claves**, cree una clave y rellene la información en función del tipo de la aplicación (que debe ser **Aplicación pública de Windows (UWP, 8.x y versiones anteriores)** para las aplicaciones para UWP).
 
-Desde el principio en la vida de la aplicación antes de llamar a cualquier **Geocodificación** métodos establecen la clave de API:
+En una fase inicial de la vida de la aplicación, establezca la clave de API antes de llamar a los métodos de **Geocoding**:
 
 ```csharp
 Geocoding.MapKey = "YOUR-KEY-HERE";
@@ -42,7 +44,7 @@ Geocoding.MapKey = "YOUR-KEY-HERE";
 
 -----
 
-## <a name="using-geocoding"></a>Uso de Geocodificación
+## <a name="using-geocoding"></a>Uso de Geocoding
 
 Agregue una referencia a Xamarin.Essentials en su clase:
 
@@ -50,7 +52,7 @@ Agregue una referencia a Xamarin.Essentials en su clase:
 using Xamarin.Essentials;
 ```
 
-Introducción [ubicación](xref:Xamarin.Essentials.Location) coordenadas para una dirección:
+Obtención de coordenadas de [ubicación](xref:Xamarin.Essentials.Location) para una dirección:
 
 ```csharp
 try
@@ -74,9 +76,9 @@ catch (Exception ex)
 }
 ```
 
-Altitud no siempre está disponible. Si no está disponible, el `Altitude` propiedad podría ser `null` o el valor puede ser cero. Si está disponible la altitud, el valor es en metros por encima por encima del nivel del mar.
+La altitud no siempre está disponible. Si no lo está, es posible que la propiedad `Altitude` sea `null` o que el valor sea cero. Si lo está, el valor se expresa en metros sobre el nivel del mar.
 
-Introducción [placemarks](xref:Xamarin.Essentials.Placemark) para un conjunto de coordenadas existente:
+Obtención de [marcas de posición](xref:Xamarin.Essentials.Placemark) para un conjunto de coordenadas existente:
 
 ```csharp
 try
@@ -116,9 +118,9 @@ catch (Exception ex)
 
 ## <a name="distance-between-two-locations"></a>Distancia entre dos ubicaciones
 
-El [ `Location` ](xref:Xamarin.Essentials.Location) y [ `LocationExtensions` ](xref:Xamarin.Essentials.LocationExtensions) clases definen métodos para calcular la distancia entre dos ubicaciones. Consulte el artículo [ **Xamarin.Essentials: Geolocalización** ](geolocation.md#calculate-distance) para obtener un ejemplo.
+Las clases [`Location`](xref:Xamarin.Essentials.Location) y [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) definen métodos para calcular la distancia entre dos ubicaciones. Vea el artículo [**Xamarin.Essentials: Geolocation**](geolocation.md#calculate-distance) para obtener un ejemplo.
 
 ## <a name="api"></a>API
 
-- [Código fuente de geocodificación](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geocoding)
-- [Documentación de API de geocodificación](xref:Xamarin.Essentials.Geocoding)
+- [Código fuente de Geocoding](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geocoding)
+- [Documentación de API para Geocoding](xref:Xamarin.Essentials.Geocoding)

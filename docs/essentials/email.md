@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials: correo electrónico'
-description: La clase de correo electrónico en Xamarin.Essentials permite que una aplicación abrir la aplicación de correo electrónico predeterminada con una información especificada como el asunto, el cuerpo y los destinatarios (TO, CC, CCO).
+title: 'Xamarin.Essentials: Correo electrónico'
+description: La clase Email de Xamarin.Essentials permite que una aplicación abra la aplicación de correo electrónico predeterminada con información especificada incluido el asunto, el cuerpo y los destinatarios (PARA, CC, CCO).
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: f113cebfebf4238fd4b75ad8ab248e2abf61efea
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: c8d4a83caf6832f911193067324915fd6226b380
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353911"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674969"
 ---
-# <a name="xamarinessentials-email"></a>Xamarin.Essentials: correo electrónico
+# <a name="xamarinessentials-email"></a>Xamarin.Essentials: Correo electrónico
 
-![La versión preliminar de NuGet](~/media/shared/pre-release.png)
+![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-El **correo electrónico** clase permite que una aplicación abrir la aplicación de correo electrónico predeterminada con una información especificada como el asunto, el cuerpo y los destinatarios (TO, CC, CCO).
+La clase **Email** permite que una aplicación abra la aplicación de correo electrónico predeterminada con información especificada incluido el asunto, el cuerpo y los destinatarios (PARA, CC, CCO).
 
-## <a name="using-email"></a>Uso de correo electrónico
+## <a name="get-started"></a>Primeros pasos
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-email"></a>Uso de Email
 
 Agregue una referencia a Xamarin.Essentials en su clase:
 
@@ -26,7 +30,7 @@ Agregue una referencia a Xamarin.Essentials en su clase:
 using Xamarin.Essentials;
 ```
 
-La funcionalidad de correo electrónico funciona mediante una llamada a la `ComposeAsync` método un `EmailMessage` que contiene información sobre el correo electrónico:
+Para usar la funcionalidad de Email se llama al método `ComposeAsync` con un valor `EmailMessage` que contiene información sobre el correo electrónico:
 
 ```csharp
 public class EmailTest
@@ -59,5 +63,5 @@ public class EmailTest
 
 ## <a name="api"></a>API
 
-- [Código fuente de correo electrónico](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
-- [Documentación de API de correo electrónico](xref:Xamarin.Essentials.Email)
+- [Código fuente de Email](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
+- [Documentación de API para Email](xref:Xamarin.Essentials.Email)

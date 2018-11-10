@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d161a267c8ffa5040327db8e6e4f867a324b04f2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 303c96ae6cdbc9f5b327c971f962d6eac75a6fa1
+ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105812"
+ms.lasthandoff: 11/05/2018
+ms.locfileid: "50983619"
 ---
 # <a name="working-with-tables-in-the-ios-designer"></a>Trabajar con tablas en el Diseñador de iOS
 
@@ -73,7 +73,7 @@ El primer cambio en el guión gráfico es eliminar la vista de detalle existente
 
 1.  Seleccione la barra en la parte inferior del controlador de vista y elimínelo.
 2.  Arrastre un **controlador de navegación** y un **controlador de vista de tabla** en el guion gráfico en el cuadro de herramientas. 
-3.  Cree un segue desde el controlador de vista raíz en el segundo controlador de vista de tabla que se acaba de agregar. Para crear el objeto segue, Control + arrastrar *desde la celda de detalle* a la UITableViewController recién agregado. Elija la opción **mostrar*** bajo **Segue selección**. 
+3.  Cree un segue desde el controlador de vista raíz en el segundo controlador de vista de tabla que se acaba de agregar. Para crear el objeto segue, Control + arrastrar *desde la celda de detalle* a la UITableViewController recién agregado. Elija la opción **mostrar** en **Segue selección**. 
 4.  Seleccione el nuevo segue que ha creado y asígnele un identificador para este origen en el código de referencia. Haga clic en el objeto segue y escriba `TaskSegue` para el **identificador** en el **panel de propiedades**, similar al siguiente:    
   [![Segue de nomenclatura en el panel de propiedades](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 

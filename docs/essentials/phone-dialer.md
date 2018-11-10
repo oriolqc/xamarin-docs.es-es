@@ -1,24 +1,28 @@
 ---
-title: 'Xamarin.Essentials: Marcador de teléfono'
-description: La clase PhoneDialer en Xamarin.Essentials permite que una aplicación abrir un número de teléfono en el marcador
+title: 'Xamarin.Essentials: Marcador telefónico'
+description: La clase PhoneDialer de Xamarin.Essentials permite que una aplicación abra un número de teléfono en el marcador telefónico.
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 34a6c80836d8cb42b1f8fd95718fe248d4701c0f
-ms.sourcegitcommit: 7f2e44e6f628753e06a5fe2a3076fc2ec5baa081
-ms.translationtype: MT
+ms.openlocfilehash: bccc76e1602c475a5e4cc9a95d498d11f9a379b1
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/18/2018
-ms.locfileid: "39130798"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50675424"
 ---
-# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Marcador de teléfono
+# <a name="xamarinessentials-phone-dialer"></a>Xamarin.Essentials: Marcador telefónico
 
-![La versión preliminar de NuGet](~/media/shared/pre-release.png)
+![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-El **PhoneDialer** clase permite que una aplicación abrir un número de teléfono en el marcador.
+La clase **PhoneDialer** permite que una aplicación abra un número de teléfono en el marcador telefónico.
 
-## <a name="using-phone-dialer"></a>Mediante el marcador de teléfono
+## <a name="get-started"></a>Primeros pasos
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-phone-dialer"></a>Uso del marcador telefónico
 
 Agregue una referencia a Xamarin.Essentials en su clase:
 
@@ -26,7 +30,7 @@ Agregue una referencia a Xamarin.Essentials en su clase:
 using Xamarin.Essentials;
 ```
 
-La funcionalidad de marcador telefónico funciona mediante una llamada a la `Open` método con un número de teléfono para abrir el marcador con. Cuando `Open` se solicita la API intentarán volver a dar formato al número basándose en el código de país, si se especifica.
+La funcionalidad de marcador telefónico funciona mediante una llamada al método `Open` con un número de teléfono con el que abrir el marcador. Cuando se solicita `Open`, la API intentará automáticamente dar formato al número en función del código de país, si se especifica.
 
 ```csharp
 public class PhoneDialerTest
@@ -55,5 +59,5 @@ public class PhoneDialerTest
 
 ## <a name="api"></a>API
 
-- [Código fuente de marcador de teléfono](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/PhoneDialer)
-- [Documentación de la API de marcador de teléfono](xref:Xamarin.Essentials.PhoneDialer)
+- [Código fuente del marcador telefónico](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/PhoneDialer)
+- [Documentación de API para PhoneDialer](xref:Xamarin.Essentials.PhoneDialer)

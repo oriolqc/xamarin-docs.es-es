@@ -1,24 +1,28 @@
 ---
 title: 'Xamarin.Essentials: Transferencia de datos'
-description: La clase DataTransfer en Xamarin.Essentials permite que una aplicación compartir datos como texto y web vínculos a otras aplicaciones en el dispositivo.
+description: La clase DataTransfer de Xamarin.Essentials permite que una aplicación comparta datos como texto y vínculos web con otras aplicaciones del dispositivo.
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/04/2018
-ms.openlocfilehash: 31e27556a6681b144084d2177cf3fde8fe8e5459
-ms.sourcegitcommit: 51c274f37369d8965b68ff587e1c2d9865f85da7
-ms.translationtype: MT
+ms.openlocfilehash: 179d4327aa768e7aa2c81dbbffd694d078327400
+ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39353524"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50674839"
 ---
 # <a name="xamarinessentials-data-transfer"></a>Xamarin.Essentials: Transferencia de datos
 
-![La versión preliminar de NuGet](~/media/shared/pre-release.png)
+![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
-La clase **DataTransfer** permite a una aplicación compartir datos como texto y vínculos web a otras aplicaciones del dispositivo.
+La clase **DataTransfer** permite que una aplicación comparta datos como texto y vínculos web con otras aplicaciones del dispositivo.
 
-## <a name="using-data-transfer"></a>Uso de transferencia de datos
+## <a name="get-started"></a>Primeros pasos
+
+[!include[](~/essentials/includes/get-started.md)]
+
+## <a name="using-data-transfer"></a>Uso de la transferencia de datos
 
 Agregue una referencia a Xamarin.Essentials en su clase:
 
@@ -52,7 +56,7 @@ public class DataTransferTest
 }
 ```
 
-Interfaz de usuario para que aparece cuando se realiza la solicitud para compartir datos a una aplicación externa:
+Interfaz de usuario para compartir con una aplicación externa que aparece cuando se realiza la solicitud:
 
 ![Transferencia de datos](data-transfer-images/data-transfer.png)
 
@@ -60,21 +64,21 @@ Interfaz de usuario para que aparece cuando se realiza la solicitud para compart
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-* La propiedad `Subject` se utiliza como el asunto deseada de un mensaje.
+* La propiedad `Subject` se usa para el asunto deseado de un mensaje.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* `Subject` No se utiliza.
-* `Title` No se utiliza.
+* `Subject` no se usa.
+* `Title` no se usa.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* `Title` le nombre de la aplicación de forma predeterminada si no se establece.
-* `Subject` No se utiliza.
+* El valor predeterminado de `Title` será el nombre de la aplicación si no se establece.
+* `Subject` no se usa.
 
 -----
 
 ## <a name="api"></a>API
 
 - [Código fuente de la clase DataTransfer](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DataTransfer)
-- [Documentación de la API DataTransfer](xref:Xamarin.Essentials.DataTransfer)
+- [Documentación de API para DataTransfer](xref:Xamarin.Essentials.DataTransfer)
