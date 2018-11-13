@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: e1e5ec5d064ad7610c5b7be8d18284d3610352c9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 554c96cdb46041b75a48523cc2952f05d2a7b1db
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106889"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51564010"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a guiones gráficos en Xamarin.iOS
 
@@ -100,11 +100,11 @@ NSObject sender)
 {
     base.PrepareForSegue (segue, sender);
 
-    var callHistoryContoller = segue.DestinationViewController 
+    var callHistoryController = segue.DestinationViewController 
                                   as CallHistoryController;
 
-    if (callHistoryContoller != null) {
-        callHistoryContoller.PhoneNumbers = PhoneNumbers;
+    if (callHistoryController != null) {
+        callHistoryController.PhoneNumbers = PhoneNumbers;
     }
 }
 ```
@@ -112,14 +112,14 @@ NSObject sender)
 En este ejemplo, el `PrepareForSegue` método se llamará cuando se desencadene el segue por el usuario. En primer lugar, tenemos que crear una instancia del controlador de vista "receptor" y establézcalo como destino del segue View Controller. Esto se realiza mediante la línea de código siguiente:
 
 ```csharp
-var callHistoryContoller = segue.DestinationViewController as CallHistoryController;
+var callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
 El método ahora tiene la capacidad de establecer las propiedades de la `DestinationViewController`. En este ejemplo, hemos aprovechado de esto, pase una lista denominada `PhoneNumbers` a la `CallHistoryController` y asignarla a un objeto del mismo nombre:
 
 ```csharp
-if (callHistoryContoller != null) {
-        callHistoryContoller.PhoneNumbers = PhoneNumbers;
+if (callHistoryController != null) {
+        callHistoryController.PhoneNumbers = PhoneNumbers;
     }
 ```
 
@@ -368,7 +368,7 @@ Hacer referencia a la solución Storyboards.Conditional en el [ejemplo guiones g
 
 ## <a name="using-storyboard-references"></a>Usar referencias a guión gráfico
 
-Una referencia de guión gráfico permite tomar un diseño de guion gráfico grande y complejo y dividirla en guiones gráficos más pequeños que obtengan hace referencia desde el original, por lo tanto quitar quitando la complejidad y realizar el individuales guiones gráficos más fácil al diseño y mantener.
+Una referencia de guión gráfico le permite tomar un diseño de guion gráfico grande y complejo y dividirla en menor guiones gráficos que obtengan hace referencia desde el original, por lo tanto, quitando la complejidad y facilitar los guiones gráficos individuales resultantes diseñar y mantener.
 
 Además, puede proporcionar una referencia de guión gráfico una _delimitador_ a otra escena en el mismo guión gráfico o una escena concreta en uno diferente.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
-ms.openlocfilehash: 0c52db61689dd640332fb1e02e2260dda08e4686
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 906489aa3947df24662cbbd0473333caccc032c7
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115931"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527266"
 ---
 # <a name="localization-in-xamarinios"></a>Localización de Xamarin.iOS
 
@@ -248,7 +248,7 @@ Hacer referencia a la manzana [fecha formateadores](https://developer.apple.com/
 
 iOS proporciona una serie de características que ayudan en la creación de aplicaciones con reconocimiento de derecha a izquierda:
 
-- Diseño automático de uso `leading` y `trailing` los atributos de alineación del control (que corresponde a la izquierda y derecha para inglés, pero se ha invertido para idiomas de derecha a izquierda).
+- Diseño automático de uso `leading` y `trailing` atributos para la alineación del control (que corresponde a la izquierda y derecha para inglés, pero se ha invertido para idiomas de derecha a izquierda).
   El [ `UIStackView` ](~/ios/user-interface/controls/uistackview.md) control es especialmente útil para disponer los controles para tener conciencia de derecha a izquierda.
 - Use `TextAlignment = UITextAlignment.Natural` para la alineación del texto (que se dejarán para la mayoría de los lenguajes pero adecuado para RTL).
 - `UINavigationController` Voltea el botón Atrás y pasar el dedo retrocederá automáticamente.

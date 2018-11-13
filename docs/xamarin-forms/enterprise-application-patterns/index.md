@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: ecfe99f66e16eafabc3117036ff065e3a35259c3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f972a32f8daf920f2121e5aa56923c0f3a7f808a
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994353"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528447"
 ---
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Patrones de aplicación empresarial utilizando el libro electrónico de Xamarin.Forms
 
@@ -54,7 +54,7 @@ Este capítulo presenta un `NavigationService` (clase), que se usa para realizar
 
 Cualquier aplicación que acepta entradas de los usuarios debe asegurarse de que la entrada es válida. Sin validación, el usuario puede proporcionar datos a los que hará que la aplicación producirá un error. La validación aplica las reglas de negocios y evita que un atacante inserta datos malintencionados.
 
-En el contexto de los modelos de ViewModel (MVVM) de patrón, un modelo de vista o modelo a menudo se requerirá para realizar la validación de datos y señalar los errores de validación a la vista para que el usuario puede corregirlos.
+En el contexto de Model-View-ViewModel (MVVM) de patrón, un modelo de vista o modelo a menudo se requerirá para realizar la validación de datos y señalar los errores de validación a la vista para que el usuario puede corregirlos.
 
 ## <a name="configuration-managementconfiguration-managementmd"></a>[Administración de configuraciones](configuration-management.md)
 

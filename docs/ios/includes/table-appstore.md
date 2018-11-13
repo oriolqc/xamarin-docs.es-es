@@ -23,7 +23,7 @@
 |6021|Quiosco|
 |6022|Catálogos|
 
-Géneros subcarpetas de juegos (6014):
+Subgéneros de juegos (6014):
 
 |Id. de género|Nombre de género|
 |---|---|
@@ -47,7 +47,7 @@ Géneros subcarpetas de juegos (6014):
 |7018|Curiosidades|
 |7019|Palabra|
 
-Newstand (6021) géneros subcarpetas:
+Subgéneros de kiosko (6021):
 
 |Id. de género|Nombre de género|
 |---|---|

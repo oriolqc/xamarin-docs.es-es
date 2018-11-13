@@ -4,15 +4,15 @@ description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del 
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: d863ce1c6195ddaef164c3a15817a4ff87a3c332
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: ac4dd8ffc0ce407aeb9dbc36fe705a809a9c4058
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156631"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563606"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Resumen del capítulo 13. Mapas de bits
 
@@ -204,5 +204,5 @@ También puede usar mapas de bits específicos de la plataforma para establecer 
 
 - [Capítulo 13, texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch13-Apr2016.pdf)
 - [Ejemplos de capítulo 13](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13)
-- [Working with Images (Trabajo con imágenes)](~/xamarin-forms/user-interface/images.md)
+- [Trabajar con imágenes](~/xamarin-forms/user-interface/images.md)
 - [Uso de mapas de bits con botones](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons)

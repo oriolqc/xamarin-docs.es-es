@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b62943fce8a1137c3bde1c629cc4cee9b2b44f3f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b1ea26afff1477d762d106db004be82010a2d557
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103314"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527339"
 ---
 # <a name="kitkat-features"></a>Características KitKat
 
@@ -215,7 +215,7 @@ El ejemplo de código siguiente define un diseño denominado *Scene1* que contie
 </merge>
 ```
 
-El ejemplo anterior usa `merge` para hacer que el código de vista más corto y simplificar la jerarquía de vista. Puede leer más sobre `merge` diseños [aquí](http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html).
+El ejemplo anterior usa `merge` para hacer que el código de vista más corto y simplificar la jerarquía de vistas. Puede leer más sobre `merge` diseños [aquí](http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html).
 
 Una escena se crea mediante una llamada a [ `Scene.GetSceneForLayout` ](https://developer.xamarin.com/api/member/Android.Transitions.Scene.GetSceneForLayout/p/Android.Views.ViewGroup/System.Int32/Android.Content.Context/), pasando el objeto contenedor, el identificador de recurso del archivo de diseño de la escena y la actual `Context`, tal y como se muestra en el ejemplo de código siguiente:
 
@@ -282,7 +282,7 @@ TransitionManager.Go (scene1, transition);
 
 ### <a name="translucent-ui"></a>Interfaz de usuario translúcido
 
-KitKat proporciona más control sobre los temas de la aplicación con las barras de estado y navegación transclucent opcional. Puede cambiar la transparencia de los elementos de interfaz de usuario del sistema en el mismo archivo XML que se usa para definir el tema de Android. KitKat presenta las siguientes propiedades:
+KitKat proporciona más control sobre los temas de la aplicación con las barras de estado y navegación translúcidas opcionales. Puede cambiar la transparencia de los elementos de interfaz de usuario del sistema en el mismo archivo XML que se usa para definir el tema de Android. KitKat presenta las siguientes propiedades:
 
 -  `windowTranslucentStatus` -Cuando se establece como true, para la barra de estado superior translúcido.
 
@@ -322,7 +322,7 @@ La captura de pantalla siguiente muestra el tema anterior con estado translúcid
 
 El marco de trabajo de acceso de almacenamiento (SAF) es una nueva forma para que los usuarios interactuar con el contenido almacenado como imágenes, vídeos y documentos. En lugar de presentar a los usuarios un cuadro de diálogo para elegir una aplicación para administrar contenido, KitKat abre una nueva interfaz de usuario que permite a los usuarios accedan a sus datos en una ubicación agregada. Una vez que se ha elegido el contenido, se devolverá al usuario a la aplicación que solicitó el contenido y la experiencia de aplicación continuarán con normalidad.
 
-Este cambio requiere dos acciones en el lado del desarrollador: en primer lugar, las aplicaciones que requieren el contenido de proveedores deben actualizarse a una nueva forma de reqesting contenido. Segundo, las aplicaciones que escriben datos en un `ContentProvider` deben modificarse para usar el nuevo marco. Ambos escenarios dependen de la nueva [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
+Este cambio requiere dos acciones en el lado del desarrollador: en primer lugar, las aplicaciones que requieren el contenido de proveedores deben actualizarse a una nueva forma de solicitud de contenido. Segundo, las aplicaciones que escriben datos en un `ContentProvider` deben modificarse para usar el nuevo marco. Ambos escenarios dependen de la nueva [`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
 API.
 
 #### <a name="documentsprovider"></a>DocumentsProvider
@@ -344,7 +344,7 @@ StartActivityForResult (intent, save_request_code);
 
 Una llamada a `StartActivityForResult` inicia la UI SAF, que el usuario, a continuación, puede examinar para elegir una imagen:
 
-[![Captura de pantalla de ejemplo de una aplicación con el marco de trabajo de acceso de almacenamiento para ir a una imagen](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
+[![Captura de pantalla de ejemplo de una aplicación mediante el marco de trabajo de acceso de almacenamiento para la exploración de una imagen](kitkat-images/saf-ui.png)](kitkat-images/saf-ui.png#lightbox)
 
 Después de que el usuario ha elegido una imagen, `OnActivityResult` devuelve el `Android.Net.Uri` del archivo elegido. El ejemplo de código siguiente muestra la selección de imagen del usuario:
 
@@ -424,7 +424,7 @@ Tenga en cuenta que al cargar e imprimir contenido web requieren el permiso de I
 La opción de impresión normalmente aparecerá en la actividad [menú opciones](http://developer.android.com/guide/topics/ui/menus.html#options-menu).
 El menú de opciones permite a los usuarios realizar acciones en una actividad. Se encuentra en la esquina superior derecha de la pantalla y tiene este aspecto:
 
-[![Captura de pantalla de ejemplo de muestra de elemento de menú de impresión en la esquina superior derecha de la pantalla](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
+[![Captura de pantalla de ejemplo de elemento de menú de impresión muestra en la esquina superior derecha de la pantalla](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
 
 
 Se pueden definir elementos de menú adicionales en el *menú*directorio bajo *recursos*. El código siguiente define un ejemplo elemento de menú denominado [impresión](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
@@ -505,7 +505,7 @@ void PrintPage ()
 
 `Print` toma como argumentos: un nombre para el trabajo de impresión ("MyWebPage" en este ejemplo), un [`PrintDocumentAdapter`](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/)
 que genera el documento de impresión a partir del contenido, y [`PrintAttributes`](https://developer.xamarin.com/api/type/Android.Print.PrintAttributes/)
-(`null` en el ejemplo anterior). Puede especificar `PrintAttributes` para ayudar a diseñar el contenido en la página impresa, aunque los atributos predeterminados deben controlar la mayoría de escenarios.
+(`null` en el ejemplo anterior). Puede especificar `PrintAttributes` para ayudar a diseñar el contenido en la página impresa, aunque los atributos predeterminados deben controlar la mayoría de los escenarios.
 
 Una llamada a `Print` carga la interfaz de usuario de impresión, que se enumera las opciones del trabajo de impresión. La interfaz de usuario ofrece a los usuarios la opción de imprimir o guardar el contenido HTML a PDF, como se muestra en las capturas de pantalla siguiente:
 
@@ -547,7 +547,7 @@ Un servicio HCE también debe estar registrado con el manifiesto de la aplicaci�
 ```csharp
 [Service(Exported=true, Permission="android.permissions.BIND_NFC_SERVICE"),
     IntentFilter(new[] {"android.nfc.cardemulation.HOST_APDU_SERVICE"}),
-    MetaData("andorid.nfc.cardemulation.host.apdu_service",
+    MetaData("android.nfc.cardemulation.host.apdu_service",
     Resource="@xml/hceservice")]
 
 class HceService : HostApduService
@@ -599,7 +599,7 @@ La captura de pantalla siguiente muestra el contador de paso en acción:
 
 [![Captura de pantalla de la aplicación SensorsActivity mostrar un contador de paso](kitkat-images/stepcounter.png)](kitkat-images/stepcounter.png#lightbox)
 
-Puede crear un `SensorManager` mediante una llamada a `GetSystemService(SensorService)` y convirtiendo el resultado como un `SensorManager`. Para utilizar el contador de paso, llame a `GetDeafultSensor` en el `SensorManager`. Puede registrar el sensor y escuche los cambios en el recuento de pasos con la Ayuda de la [`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
+Puede crear un `SensorManager` mediante una llamada a `GetSystemService(SensorService)` y convirtiendo el resultado como un `SensorManager`. Para utilizar el contador de paso, llame a `GetDefaultSensor` en el `SensorManager`. Puede registrar el sensor y escuche los cambios en el recuento de pasos con la Ayuda de la [`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
 interfaz, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
@@ -689,7 +689,7 @@ Además de los cambios que se ha descrito anteriormente, KitKat le permite:
 -  *Pausar las animaciones* -pausar y reanudar animaciones creadas con el [`Animator`](https://developer.xamarin.com/api/type/Android.Animation.Animator/)
    clase.
 
--  *Leer dinámicamente cambiar texto* -denotan las partes de la interfaz de usuario que actualicen dinámicamente con nuevo texto como "las regiones activas" con la nueva [ `accesibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+-  *Leer dinámicamente cambiar texto* -denotan las partes de la interfaz de usuario que actualicen dinámicamente con nuevo texto como "las regiones activas" con la nueva [ `accessibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    atributo para que el nuevo texto leerá automáticamente en modo de accesibilidad.
 
 -  *Mejorar la experiencia de Audio* -Make realiza un seguimiento más alto con la [`LoudnessEnhancer`](https://developer.xamarin.com/api/type/Android.Media.Audiofx.LoudnessEnhancer/)
@@ -703,7 +703,7 @@ Además de los cambios que se ha descrito anteriormente, KitKat le permite:
 -  *Control remoto* -con unos pocos cambios en el hardware y software de lado, KitKat le permite activar un dispositivo equipado con un transmisor de infrarrojos en un control remoto mediante el `ConsumerIrService`e interactuar con dispositivos periféricos con el nuevo [`RemoteController`](https://developer.xamarin.com/api/type/Android.Media.RemoteController/)
    API.
 
-Para obtener más información sobre los cambios de API anteriores, consulte la Google [API de Android 4.4](http://developer.android.com/about/versions/android-4.4.html) información general.
+Para obtener más información sobre los cambios de API anteriores, consulte Google [API de Android 4.4](http://developer.android.com/about/versions/android-4.4.html) información general.
 
 
 ## <a name="summary"></a>Resumen

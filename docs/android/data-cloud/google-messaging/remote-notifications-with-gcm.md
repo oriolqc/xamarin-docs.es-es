@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2018
-ms.openlocfilehash: e361444f2c717ff44e0771710836f156f90cfcb8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: be96683a2e63ed802169543dcee55a3431e42130
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118895"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528811"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notificaciones remotas con Google Cloud Messaging
 
@@ -91,7 +91,7 @@ Una aplicación Android debe tener los siguientes permisos configurados para que
 -   `com.google.android.c2dm.permission.RECEIVE` &ndash; Concede permiso para nuestra aplicación para registrar y recibir mensajes de Google Cloud Messaging. (¿Qué `c2dm` significa? Esto significa _mensajería de dispositivo de nube a_, que es el predecesor de GCM ahora está en desuso. 
     GCM sigue usando `c2dm` en muchos de sus cadenas de permiso.) 
 
--   `android.permission.WAKE_LOCK` &ndash; (Opcional) Impide que el dispositivo de CPU de ir al modo de suspensión mientras se escucha un mensaje. 
+-   `android.permission.WAKE_LOCK` &ndash; (Opcional) Impide que el dispositivo de la CPU entre en suspensión mientras se escucha un mensaje. 
 
 -   `android.permission.INTERNET` &ndash; Concede acceso a internet para que la aplicación cliente pueda comunicarse con GCM. 
 
@@ -649,7 +649,7 @@ D/MyGcmListenerService(16103): Message: Hello, Xamarin!
 
 Además, debe observar que ha aparecido un nuevo icono de notificación en la Bandeja de notificación: 
 
-[![Icono Notiication aparece en el dispositivo](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
+[![Icono de notificación que aparece en el dispositivo](remote-notifications-with-gcm-images/5-icon-appears-sml.png)](remote-notifications-with-gcm-images/5-icon-appears.png#lightbox)
 
 Cuando se abre la Bandeja de notificación para ver las notificaciones, debería ver avisó remoto:
 
@@ -657,7 +657,7 @@ Cuando se abre la Bandeja de notificación para ver las notificaciones, debería
 
 Enhorabuena, la aplicación ha recibido su primera notificación remota.
 
-Tenga en cuenta que ya no se recibirán los mensajes GCM si la aplicación está detenido en vigor. Para reanudar las notificaciones después de una detención de fuerza, la aplicación debe ser manual que se reinicia. Para obtener más información acerca de esta directiva de Android, consulte [iniciar los controles en las aplicaciones detenidas](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) y esto [post de desbordamiento de pila](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
+Tenga en cuenta que ya no se recibirán los mensajes GCM si la aplicación está detenido en vigor. Para reanudar las notificaciones después de una detención de fuerza, la aplicación debe reiniciarse manualmente. Para obtener más información acerca de esta directiva de Android, consulte [iniciar los controles en las aplicaciones detenidas](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) y esto [post de desbordamiento de pila](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
 
  
 ## <a name="summary"></a>Resumen

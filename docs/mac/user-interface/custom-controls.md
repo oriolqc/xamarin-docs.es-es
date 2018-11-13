@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 7fde60d48c23bc48ce1602a0643a3af8ad492ec6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 015c1e315b6070777542a8f8c5871c00cf336b5c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104016"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527071"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Creación de controles personalizados en Xamarin.Mac
 
-Cuando se trabaja con C# y .NET en una aplicación de Xamarin.Mac, tener acceso a los mismos controles de usuario de que un desarrollador que trabaje en *Objective-C*, *Swift* y *Xcode* does . Ya que Xamarin.Mac se integra directamente con Xcode, puede usar Xcode _Interface Builder_ para crear y mantener sus controles de usuario (o bien, opcionalmente, crearlos directamente en código de C#).
+Cuando se trabaja con C# y .NET en una aplicación de Xamarin.Mac, tiene acceso para el mismo usuario que controla un desarrollador que trabaja *Objective-C*, *Swift* y *Xcode*does. Ya que Xamarin.Mac se integra directamente con Xcode, puede usar Xcode _Interface Builder_ para crear y mantener sus controles de usuario (o bien, opcionalmente, crearlos directamente en código de C#).
 
 Aunque macOS proporciona una gran variedad de controles de usuario integrados, puede que en ocasiones que necesita para crear un control personalizado para proporcionar funcionalidad no proporciona de fábrica o para que coincida con un tema de la interfaz de usuario personalizado (por ejemplo, una interfaz de juego).
 
@@ -221,7 +221,7 @@ Hay dos formas básicas que podemos agregar entrada de usuario para nuestro cont
 
 #### <a name="handling-user-input-with-override-methods"></a>Control de entrada del usuario con los métodos de invalidación
 
-Los objetos que heredan de `NSControl` (o `NSView`) tener varios invalidar los métodos de control de mouse o entrada del teclado. Para el control de ejemplo, queremos voltear el estado del modificador entre **en** y **desactivar** cuando el usuario hace clic en el control con el botón primario del mouse. Podemos agregar lo siguiente invalidar métodos a la `NSFliwSwitch` clase para controlar esto:
+Los objetos que heredan de `NSControl` (o `NSView`) tener varios invalidar los métodos de control de mouse o entrada del teclado. Para el control de ejemplo, queremos voltear el estado del modificador entre **en** y **desactivar** cuando el usuario hace clic en el control con el botón primario del mouse. Podemos agregar lo siguiente invalidar métodos a la `NSFlipSwitch` clase para controlar esto:
 
 ```csharp
 #region Mouse Handling Methods
@@ -344,7 +344,7 @@ Con la vista personalizada aún seleccionado, cambie a la **Inspector de identid
 
 [![](custom-controls-images/custom04.png "Configuración de la clase de la vista")](custom-controls-images/custom04.png#lightbox)
 
-Cambie a la **Editor del asistente** y cree un **toma** para el control personalizado (asegurándose de que va a enlazar en el `ViewControler.h` archivo y no el `.m` archivo):
+Cambie a la **Editor del asistente** y cree un **toma** para el control personalizado (asegurándose de que va a enlazar en el `ViewController.h` archivo y no el `.m` archivo):
 
 [![](custom-controls-images/custom05.png "Configurar una nueva salida")](custom-controls-images/custom05.png#lightbox)
 

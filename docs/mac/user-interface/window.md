@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 2d129c72366224cedca26df6fa1499f65d04e92d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ec907e71074a97bd5d1714e79dd504013f5c8a4b
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106980"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526980"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows en Xamarin.Mac
 
 _En este artículo se explica cómo trabajar con ventanas y paneles en una aplicación de Xamarin.Mac. Describe la creación de ventanas y paneles en Xcode e Interface Builder, cargarlos desde los guiones gráficos y archivos .xib y trabajar con ellos mediante programación._
 
-Cuando se trabaja con C# y .NET en una aplicación de Xamarin.Mac, tener acceso a la misma Windows y paneles que un desarrollador que trabaje en *Objective-C* y *Xcode* does. Ya que Xamarin.Mac se integra directamente con Xcode, puede usar Xcode _Interface Builder_ para crear y mantener sus paneles y Windows (u opcionalmente crearlas directamente en código de C#).
+Cuando se trabaja con C# y .NET en una aplicación de Xamarin.Mac, podrá tener acceso a la misma Windows y paneles que un desarrollador que trabaja *Objective-C* y *Xcode* does. Ya que Xamarin.Mac se integra directamente con Xcode, puede usar Xcode _Interface Builder_ para crear y mantener sus paneles y Windows (u opcionalmente crearlas directamente en código de C#).
 
 Según su propósito, una aplicación de Xamarin.Mac puede presentar uno o varios de Windows en la pantalla para administrar y coordinar la información se muestra y funciona con. Las funciones principales de una ventana son:
 
@@ -284,7 +284,7 @@ Por ejemplo:
 MyWindow.PerformClose(this);
 ```
 
-Intente cerrar la `MyWindow` `NSWindow` instancia. Si se realizó correctamente, se cerrará la ventana, lo contrario, se emitirá el sonido de alerta y usará permanecerá abierta.
+Intente cerrar la `MyWindow` `NSWindow` instancia. Si se realizó correctamente, se cerrará la ventana, de lo contrario, se emitirá el sonido de alerta y se mantengan abiertos.
 
 <a name="Close" />
 
@@ -377,7 +377,7 @@ namespace SourceWriter
                 alert.AddButton ("Cancel");
                 var result = alert.RunSheetModal (Window);
 
-                // Take action based on resu;t
+                // Take action based on result
                 switch (result) {
                 case 1000:
                     // Grab controller
@@ -758,7 +758,7 @@ Para agregar un nuevo Panel, haga lo siguiente:
 3. Escriba `DocumentPanel` para el **Nombre** y haga clic en el botón **Nuevo**.
 4. Haga doble clic en el `DocumentPanel.xib` archivo para abrirlo y editarlo en Interface Builder: 
 
-    [![](window-images/new02.png "Edición del panel")](window-images/new02.png#lightbox)
+    [![](window-images/new02.png "El panel de edición")](window-images/new02.png#lightbox)
 5. Eliminar la ventana existente y arrastre un Panel desde el **Inspector de biblioteca** en el **Editor de la interfaz**: 
 
     [![](window-images/panels01.png "Eliminación de la ventana existente")](window-images/panels01.png#lightbox)

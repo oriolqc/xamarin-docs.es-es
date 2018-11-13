@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: b29820cb69702f7570e10a555ebe9e3e0824653f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 325f4e99e70f88ccf642253720f4229142a169ec
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104159"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526565"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Mostrar una imagen en Xamarin.iOS
 
@@ -41,7 +41,7 @@ Para crear un nuevo conjunto de imágenes y agregar imágenes a él, realice lo 
 3. Seleccione el nuevo conjunto de imágenes y se mostrará el editor:
 
     ![](displaying-an-image-images/imageset03.png "El editor de conjunto de imágenes")
-4. Desde aquí, arrastre imágenes para cada uno de los distintos dispositivos y y las resoluciones necesarias. 
+4. Desde aquí, arrastre imágenes para cada uno de los distintos dispositivos y las resoluciones necesarias. 
 5. Haga doble clic en el nuevo conjunto de imágenes **nombre** en el **lista Assets** para editarlo: ![](displaying-an-image-images/imageset04.png "nombre del conjunto de imágenes nueva edición")
 
 Cuando se usa un **Establecer imagen** en el Diseñador de iOS, simplemente seleccione el nombre del conjunto en la lista desplegable en el Editor de propiedades:
@@ -54,7 +54,7 @@ Cuando se usa un **Establecer imagen** en el Diseñador de iOS, simplemente sele
 
     ![](displaying-an-image-images/asset5.png "Haga clic en el botón")
 
-2. Seleccione **Agregar conjunto de imagen** y el editor establece la imagen se mostrará para el nuevo conjunto de imágenes. Desde aquí, arrastre imágenes para cada uno de los distintos dispositivos y y las resoluciones necesarias. 
+2. Seleccione **Agregar conjunto de imagen** y el editor establece la imagen se mostrará para el nuevo conjunto de imágenes. Desde aquí, arrastre imágenes para cada uno de los distintos dispositivos y las resoluciones necesarias. 
 
     ![](displaying-an-image-images/asset7.png "El editor de conjunto de imágenes")
 

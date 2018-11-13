@@ -4,15 +4,15 @@ description: Este artículo explora los controles XAML estándar disponibles en 
 ms.prod: xamarin
 ms.assetid: 287E6631-D1C5-46C5-8905-AB53D34E365D
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 11/15/2017
-ms.openlocfilehash: 1b01d0773f0c2150db575875b770957eb6452f41
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: b9bf0e1ba14f4e8584bfd8492776ac7c8668df87
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38843948"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563327"
 ---
 # <a name="xaml-standard-preview-controls"></a>Controles XAML estándar (versión preliminar)
 

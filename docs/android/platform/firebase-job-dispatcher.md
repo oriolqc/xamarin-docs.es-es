@@ -1,5 +1,5 @@
 ---
-title: Distribuidor de trabajo de firebase
+title: Distribuidor de trabajo de Firebase
 description: Esta guía describe cómo programar el trabajo en segundo plano mediante la biblioteca de distribuidor de trabajo de Firebase de Google.
 ms.prod: xamarin
 ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/05/2018
-ms.openlocfilehash: 4ae1fb71209f8116b17ee7e2cb44318ef790d831
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 91bafbbdaee805ad128766bf0a770cb711597a85
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116184"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526928"
 ---
-# <a name="firebase-job-dispatcher"></a>Distribuidor de trabajo de firebase
+# <a name="firebase-job-dispatcher"></a>Distribuidor de trabajo de Firebase
 
 _Esta guía describe cómo programar el trabajo en segundo plano mediante la biblioteca de distribuidor de trabajo de Firebase de Google._
 
@@ -44,9 +44,9 @@ El distribuidor de trabajo de Firebase es una biblioteca de Google que proporcio
 * Un `Firebase.JobDispatcher.RetryStrategy` contiene información sobre lo que debe realizarse cuando se produce un error en un trabajo se ejecute correctamente. La estrategia de reintento especifica cuánto tiempo debe esperar antes de intentar volver a ejecutar el trabajo. 
 * Un `Firebase.JobDispatcher.Constraint` es un valor opcional que describe una condición que debe cumplirse antes de poder ejecutar el trabajo, como el dispositivo está en una red unmetered o cargando.
 * El `Firebase.JobDispatcher.Job` es una API que unifica las API de anteriores en una unidad de trabajo que se puede programar la `JobDispatcher`. El `Job.Builder` clase se utiliza para crear una instancia de un `Job`.
-* Un `Firebasee.JobDispatcher.JobDispatcher` usa las tres API anteriores para programar el trabajo con el sistema operativo y para proporcionar una manera de cancelar trabajos, si es necesario.
+* Un `Firebase.JobDispatcher.JobDispatcher` usa las tres API anteriores para programar el trabajo con el sistema operativo y para proporcionar una manera de cancelar trabajos, si es necesario.
 
-Para programar el trabajo con el distribuidor de trabajo de Firebase, una aplicación de Xamarin.Android debe encapsular el código en un tipo que extiende el `JobService` clase. `JobService` tiene tres métodos de ciclo de vida que se puede llamar durante la duración del trabajo:
+Para programar el trabajo con el distribuidor de trabajo de Firebase, una aplicación de Xamarin.Android debe encapsular el código en un tipo que extiende el `JobService` clase. `JobService` tiene tres métodos de ciclo de vida que se pueden llamar durante la duración del trabajo:
 
 * **`bool OnStartJob(IJobParameters parameters)`** &ndash; Este método es donde el trabajo se realizará y siempre se debe implementar. Se ejecuta en el subproceso principal. Este método devolverá `true` si hay trabajo restante, o `false` si se realiza el trabajo. 
 * **`bool OnStopJob(IJobParameters parameters)`** &ndash; Se llama cuando el trabajo se ha detenido por alguna razón. Debe devolver `true` si se debe volver a programar el trabajo para su uso posterior.
@@ -177,7 +177,7 @@ Cada uno de estos temas se tratarán más en las secciones siguientes.
 
 <a name="Passing_Parameters_to_a_Job" />
 
-#### <a name="passing-jarameters-to-a-job"></a>Jarameters pasar a un trabajo
+#### <a name="passing-parameters-to-a-job"></a>Pasar parámetros a un trabajo
 
 Los parámetros se pasan a un trabajo mediante la creación de un `Bundle` que se pasa junto con el `Job.Builder.SetExtras` método:
 
@@ -252,7 +252,7 @@ Los dos tipos de directivas de reintento se identifican con estos valores de tip
 Es posible definir un personalizado `RetryStrategy` con el `FirebaseJobDispatcher.NewRetryStrategy` método. Acepta tres parámetros:
 
 1. `int policy` &ndash; El _directiva_ es uno de los anteriores `RetryStrategy` valores, `RetryStrategy.RetryPolicyLinear`, o `RetryStrategy.RetryPolicyExponential`.
-2. `int intialBackoffSeconds` &ndash; El _retroceso inicial_ es un retraso, en segundos, que es necesario antes de intentar volver a ejecutar el trabajo. El valor predeterminado es 30 segundos. 
+2. `int initialBackoffSeconds` &ndash; El _retroceso inicial_ es un retraso, en segundos, que es necesario antes de intentar volver a ejecutar el trabajo. El valor predeterminado es 30 segundos. 
 3. `int maximumBackoffSeconds` &ndash; El _retroceso máximo_ valor declara el número máximo de segundos de retraso antes de intentar volver a ejecutar el trabajo. El valor predeterminado es 3600 segundos. 
 
 ```csharp

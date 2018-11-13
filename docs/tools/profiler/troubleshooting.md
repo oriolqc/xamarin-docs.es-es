@@ -6,12 +6,12 @@ ms.assetid: 0060E9D1-C003-4E4C-ADE8-B406978FE891
 author: lobrien
 ms.author: laobri
 ms.date: 10/27/2017
-ms.openlocfilehash: 34406ce8d4276ba36ab2ddd49e73681ff2fef773
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9b4da5b6dfe3f0254340d9175b08198bd52a45a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103756"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563347"
 ---
 # <a name="xamarin-profiler-troubleshooting"></a>Solución de problemas de Profiler de Xamarin
 
@@ -79,7 +79,7 @@ Suele ser debido a que no se pueda iniciar en el simulador o emulador. Pruebe y 
 
 #### <a name="to-watch-a-specific-thread"></a>Para ver un subproceso concreto
 
-Si tiene un subproceso que desea ver en concreto, sería ideal para el nombre del subproceso en el muy a partir de su creación para que obtengan get `ThreadName` en lugar de `0x0`. Por ejemplo establecer el nombre del subproceso como interfaz de usuario, podría utilizar el código siguiente:
+Si tiene un subproceso que desea ver en concreto, lo ideal sería que el subproceso al principio de su creación para obtener el nombre `ThreadName` en lugar de `0x0`. Por ejemplo, para establecer el nombre del subproceso como `UI`, podría usar el código siguiente:
 
 ```csharp
 RunOnUiThread (() => {

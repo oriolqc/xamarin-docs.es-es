@@ -5,12 +5,12 @@ description: Este documento compara las similitudes y diferencias entre el ciclo
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: cf25cf956fbf9fd566520d9067f0d98a9a7624aa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 653e2f849a74948d3636f594eae91cdeabfae138
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107135"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526798"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>Frente a WPF Ciclo de vida de aplicación de Xamarin.Forms
 
@@ -83,7 +83,7 @@ Xamarin.Forms se centra principalmente en escenarios móviles. Por lo tanto, las
 |--- |--- |--- |
 |Activación inicial|ctor + Window.OnLoaded|ctor + Page.OnStart|
 |Se muestra|Window.IsVisibleChanged|Page.Appearing|
-|Hidden|Window.IsVisibleChanged|Page.Disapearing|
+|Hidden|Window.IsVisibleChanged|Page.Disappearing|
 |Suspender/pierde el foco|Window.OnDeactivated|Page.OnSleep|
 |Activa o se ha obtenido foco|Window.OnActivated|Page.OnResume|
 |Cerrado|Window.OnClosing + Window.OnClosed|N/D|
@@ -139,7 +139,7 @@ Ambas plataformas usan _propiedades adjuntas_ para ajustar los elementos secunda
 
 La mecánica de la representación de WPF y Xamarin.Forms es radicalmente distinto. En WPF, los controles que cree directamente representan el contenido a los píxeles en la pantalla. WPF mantiene dos gráficos de objetos (_árboles_) para representar esto - la _árbol lógico_ representa los controles, tal como se define en el código o XAML y el _árbol visual_ representa el representación real que se produce en la pantalla que realiza directamente mediante el elemento visual (a través de un método virtual draw), o a través de definida en XAML `ControlTemplate` que puede reemplazar o personalizar. Normalmente, el árbol visual es más complejo ya que esto incluye, como los bordes alrededor de los controles, las etiquetas de contenido implícita, etcetera. WPF incluye un conjunto de API (`LogicalTreeHelper` y `VisualTreeHelper`) para examinar estos dos gráficos de objetos.
 
-En Xamarin.Forms, los controles se define en un `Page` son objetos de datos muy simples. Son similares a la representación de árbol lógico, pero nunca representar el contenido por sí solos. En su lugar, son el _modelo de datos_ que influye en la representación de elementos. El procesamiento real se realiza mediante un [separar el conjunto de _representadores visuales_ que se asignan a cada tipo de control](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Estos representadores se registran en cada uno de los proyectos específicos de la plataforma por los ensamblados específicos de la plataforma de Xamarin.Forms. Puede ver una lista [aquí](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md). Además de reemplazar o ampliar el representador, Xamarin.Forms también tiene compatibilidad para [efectos](~/xamarin-forms/app-fundamentals/effects/index.md) que se puede usar para influir en la representación nativa en una base por plataforma.
+En Xamarin.Forms, los controles se define en un `Page` son objetos de datos muy simples. Son similares a la representación de árbol lógico, pero nunca representar el contenido por sí solos. En su lugar, son el _modelo de datos_ que influye en la representación de elementos. El procesamiento real se realiza mediante un [separar el conjunto de _representadores visuales_ que se asignan a cada tipo de control](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Estos representadores se registran en cada uno de los proyectos específicos de la plataforma por los ensamblados específicos de la plataforma de Xamarin.Forms. Puede ver una lista [aquí](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md). Además de reemplazar o ampliar el representador, Xamarin.Forms también tiene compatibilidad para [efectos](~/xamarin-forms/app-fundamentals/effects/index.md) que se puede usar para influir en la representación en forma de acuerdo con la plataforma nativa.
 
 #### <a name="the-logicalvisual-tree"></a>El árbol lógico o Visual
 
@@ -179,11 +179,11 @@ Si no se define la `ResourceDictionary`, se genera un error en tiempo de ejecuci
 
 ## <a name="styles"></a>Estilos
 
-Estilos también son compatibles en Xamarin.Forms y se pueden usar al tema de los elementos de Xamarin.Forms que componen la interfaz de usuario. Que admiten la herencia de los desencadenadores (propiedad, eventos y datos) a través de `BasedOn`y las búsquedas de recursos para los valores. Los estilos se aplican a los elementos ya sea explícitamente a través de la `Style` propiedad, o implícitamente por sin proporcionar una clave de recurso: al igual que WPF.
+Estilos también son compatibles en Xamarin.Forms y se pueden usar al tema de los elementos de Xamarin.Forms que componen la interfaz de usuario. Que admiten la herencia de los desencadenadores (propiedad, eventos y datos) a través de `BasedOn`y las búsquedas de recursos para los valores. Los estilos se aplican a los elementos ya sea explícitamente mediante el `Style` propiedad, o implícitamente por sin proporcionar una clave de recurso: al igual que WPF.
 
 ### <a name="device-styles"></a>Estilos de dispositivo
 
-WPF tiene un conjunto de propiedades predefinidas (almacenados como valores estáticos en un conjunto de clases estáticas como `SystemColors`) que determinan los colores del sistema, las fuentes y las métricas en forma de valores y claves de recurso. Xamarin.Forms es similar, pero define un conjunto de [estilos de dispositivo](~/xamarin-forms/user-interface/styles/device.md) para representar las mismas cosas. Estos estilos son proporcionados por el frameowrk y establecer en valores en función del entorno en tiempo de ejecución (por ejemplo, accesibilidad).
+WPF tiene un conjunto de propiedades predefinidas (almacenados como valores estáticos en un conjunto de clases estáticas como `SystemColors`) que determinan los colores del sistema, las fuentes y las métricas en forma de valores y claves de recurso. Xamarin.Forms es similar, pero define un conjunto de [estilos de dispositivo](~/xamarin-forms/user-interface/styles/device.md) para representar las mismas cosas. Estos estilos son proporcionados por el marco de trabajo y establecer en valores en función del entorno en tiempo de ejecución (por ejemplo, accesibilidad).
 
 **WPF**
 
