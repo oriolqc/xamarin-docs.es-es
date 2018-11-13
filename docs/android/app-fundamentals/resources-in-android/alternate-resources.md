@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 0384d96ddc96f8d0b16a42f691305f26ea25881d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 16ef0d5a309281767f0fff27436dd5bec322169d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108761"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527396"
 ---
 # <a name="alternate-resources"></a>Recursos alternativos
 
@@ -54,10 +54,10 @@ Los calificadores posibles se muestran a continuación como referencia:
 
 - **Ancho disponible** &ndash; el ancho mínimo de la pantalla en el formato de w*N*dp, donde *N* es el ancho en la densidad de píxeles independientes.
   Puede cambiar este valor como el usuario gira el dispositivo. Tratan con más detalle en [creando recursos para diferentes pantallas](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
-  Disponible en nivel de API 13 (Android 3.2) y versiones posteriores. Ejemplo: el w720dp calificador se usa como destino dispositivos que tienen un ancho de 720dp mínimos.
+  Disponible en el nivel de API 13 (Android 3.2) y versiones posteriores. Ejemplo: el w720dp calificador se usa como destino dispositivos que tienen un ancho de 720dp mínimos.
 
 - **Alto disponible** &ndash; el alto mínimo de la pantalla en el formato de h*N*dp, donde *N* es el alto en dp. Puede cambiar este valor como el usuario gira el dispositivo. Tratan con más detalle en [creando recursos para diferentes pantallas](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
-  Disponible en nivel de API 13 (Android 3.2) y versiones posteriores. Por ejemplo, el h720dp calificador se usa como destino dispositivos que tienen una altura de 720dp mínimos
+  Disponible en el nivel de API 13 (Android 3.2) y versiones posteriores. Por ejemplo, el h720dp calificador se usa como destino dispositivos que tienen una altura de 720dp mínimos
 
 - **Tamaño de pantalla** &ndash; este calificador es una generalización que estos recursos son para el tamaño de pantalla. Se trata en detalle en [creando recursos para diferentes pantallas](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
   Los valores posibles son `small`, `normal`, `large` y `xlarge`. Agregado en el nivel de API 9 (Android 2.3 o Android 2.3.1/Android 2.3.2)

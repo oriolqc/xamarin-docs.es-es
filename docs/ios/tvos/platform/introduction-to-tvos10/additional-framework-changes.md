@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 8f7094cebf284f301e08faae8d94c99a73964d55
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4ca9856251d35a741d496b6e8b45b07e851e0e89
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114293"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528616"
 ---
 # <a name="additional-tvos-10-frameworks-changes"></a>Cambios de marcos adicionales tvOS 10
 
@@ -85,7 +85,7 @@ El marco de trabajo Foundation para tvOS 10 se han realizado las siguientes mejo
 
  - Use la nueva [NSDateInterval](https://developer.apple.com/reference/foundation/nsdateinterval) clase para realizar cálculos de intervalo de fecha y hora como duraciones, de comparación de intervalos y probar las intersecciones de intervalo.
  - Se han agregado nuevas propiedades a la [NSLocal](https://developer.apple.com/reference/foundation/nslocale) clase adquirir información local y los formatos de visualización disponible.
- - Use la nueva [NSMeasuerment](https://developer.apple.com/reference/foundation/nsmeasurement) clase para convertir entre distintas unidades de medida (UM) o realizar cálculos en los valores de UOMs diferentes.
+ - Use la nueva [NSMeasurement](https://developer.apple.com/reference/foundation/nsmeasurement) clase para convertir entre distintas unidades de medida (UM) o realizar cálculos en los valores de UOMs diferentes.
  - Use la nueva [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) clase para dar formato localizadas medidas para mostrar al usuario final.
  - Use la nueva [NSUnit](https://developer.apple.com/reference/foundation/nsunit) y [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) las clases para representar UOMs específicos.
 
@@ -182,7 +182,7 @@ Se han realizado las siguientes mejoras para el marco UIKit en tvOS 10:
  - El nuevo `UIGraphicsRender` clase proporciona un método orientado a objetos de creación de mapas de bits o archivos PDF de representación de UIKit o gráficos esenciales y reemplaza el desuso `UIGraphicsBeginImageContext` método.
  - El `UIUserInterfaceStyle` se ha agregado la clase para determinar qué tema de la interfaz de usuario (oscuro o claro) está activo actualmente.
  - Se ha agregado nueva compatibilidad de animación completamente interactivos, basado en objetos, puede interrumpir y van vincularse a los gestos. Del Declinatoria vea Apple [referencia del protocolo UIViewAnimating](https://developer.apple.com/reference/uikit/uiviewanimating), [referencia de clase UIViewPropertyAnimator](https://developer.apple.com/reference/uikit/uiviewpropertyanimator), [referencia del protocolo UITimingCurveProvider](https://developer.apple.com/reference/uikit/uitimingcurveprovider), [Referencia de clase UICubicTimingParameters](https://developer.apple.com/reference/uikit/uicubictimingparameters) y [referencia de clase UISpringTimingParameter](https://developer.apple.com/reference/uikit/uispringtimingparameters) para obtener más información.
- - El nuevo `UIPreviewInteraction` y `UIPreviewInteractionDelegate` permite que la aplicación de la aplicación proporcionar una interfaz personalizada para las operaciones de búsqueda peek y pop.
+ - El nuevo `UIPreviewInteraction` y `UIPreviewInteractionDelegate` permite que la aplicación proporcionar una interfaz personalizada para las operaciones de búsqueda peek y pop.
  - El nuevo `UIAccessibilityCustomRotor` clase permite que la aplicación proporcionar funcionalidad personalizada, específicos del contexto a las tecnologías de asistencia como Voice Over.
  - Use la `UIAccessibilityIsAssistiveTouchRunning` y `UIAccessibilityAssistiveTouchStatusDidChangeNotification` símbolos para determinar si está habilitado AssistiveTouch.
  - Use la `UIAccessibilityHearingDevicePairedEar` y `UIAccessibilityHearingDevicePairedEarDidChangeNotification` símbolos para obtener el estado de cualquier emparejan MFi audífonos.

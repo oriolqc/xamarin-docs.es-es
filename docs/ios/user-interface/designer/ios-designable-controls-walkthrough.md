@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: d24d62bf190a2cb078bf82d7a8676f302e740762
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0401c2c05677c719bbe4914cc7e008b650fdd198
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115593"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526247"
 ---
 # <a name="using-custom-controls-with-the-ios-designer"></a>Uso de controles personalizados con iOS Designer
 
@@ -25,7 +25,7 @@ Esta guía asume un conocimiento con el contenido que se tratan en el [guías de
 ## <a name="walkthrough"></a>Tutorial
 
 > [!IMPORTANT]
-> A partir de Xamarin.Studio 5.5, la manera en que se crean controles personalizados es ligeramente diferente a las versiones anteriores. Para crear un control personalizado, ya sea el `IComponent` interfaz es necesaria (con los métodos de implementación asociados) o la clase pueden anotarse con `[DesignTimeVisible(true)]`. El último método que se sirve en el ejemplo siguiente del tutorial.
+> A partir de Xamarin.Studio 5.5, la manera en que se crean controles personalizados es ligeramente diferente a las versiones anteriores. Para crear un control personalizado, ya sea el `IComponent` interfaz es necesaria (con los métodos de implementación asociados) o la clase se puede anotar con `[DesignTimeVisible(true)]`. El último método que se sirve en el ejemplo siguiente del tutorial.
 
 
 1. Crear una nueva solución desde la **iOS > aplicación > aplicación de vista única > C#** plantilla, asígnele el nombre `ScratchTicket`y continúe con el Asistente para nuevo proyecto:

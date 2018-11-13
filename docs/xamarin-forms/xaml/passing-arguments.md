@@ -4,15 +4,15 @@ description: En este artículo muestra cómo utilizar los atributos XAML que pue
 ms.prod: xamarin
 ms.assetid: 8F3B267F-499E-4D79-9193-FCA99F199519
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 10/25/2016
-ms.openlocfilehash: 51b72d9143895543715c519a65cf8c82aa4d12f7
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 60ca55999033adc375a139195c9c3e62da6d0184
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996553"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563763"
 ---
 # <a name="passing-arguments-in-xaml"></a>Pasar argumentos en XAML
 
@@ -161,7 +161,7 @@ Argumentos de tipo genérico para el constructor de un tipo genérico pueden esp
 </ContentPage>
 ```
 
-El [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) clase es una clase genérica y se deben crear instancias con un `x:TypeArguments` atributo que coincida con el tipo de destino. En el [ `On` ](xref:Xamarin.Forms.On) (clase), el [ `Platform` ](xref:Xamarin.Forms.On.Platform) atributo puede aceptar un único `string` valor o varios delimitada por comas `string` valores. En este ejemplo, el [ `StackLayout.Margin` ](xref:Xamarin.Forms.View.Margin) propiedad está establecida en una plataforma específica [ `Thickness` ](xref:Xamarin.Forms.Thickness).
+El [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) clase es una clase genérica y se deben crear instancias con un `x:TypeArguments` atributo que coincida con el tipo de destino. En la clase [ `On` ](xref:Xamarin.Forms.On), el atributo [ `Platform` ](xref:Xamarin.Forms.On.Platform) puede aceptar un único valor `string` o varios valores `string` delimitados por comas. En este ejemplo, el [ `StackLayout.Margin` ](xref:Xamarin.Forms.View.Margin) propiedad está establecida en una plataforma específica [ `Thickness` ](xref:Xamarin.Forms.Thickness).
 
 ## <a name="summary"></a>Resumen
 

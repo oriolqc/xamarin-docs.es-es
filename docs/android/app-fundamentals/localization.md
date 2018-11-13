@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 4f50efb7b78db67b310ccddec3eb94bfe4d2e521
-ms.sourcegitcommit: 19b37f33b0eb9a927633a3198574b779374775ff
-ms.translationtype: MT
+ms.openlocfilehash: 833bdc0fd087fcf8dbb8cce3b8b23f427302f5e7
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50301258"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526876"
 ---
 # <a name="android-localization"></a>Localización de Android
 
@@ -207,7 +207,7 @@ En esta captura de pantalla, cuatro imágenes se guardan en el **drawable** dire
 
 También puede proporcionar otros tipos de alternativa, los recursos específicos del idioma incluidos los diseños, animaciones y los archivos sin formato. Esto significa que podría proporcionar un diseño de pantalla específico para uno o varios de los idiomas de destino, por ejemplo podría crear un diseño específicamente para alemán que permite que las etiquetas de texto muy largos.
 
-Android 4.2 introdujo la compatibilidad con [derecha para idiomas de izquierda (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) si establece la configuración de la aplicación `android:supportsRtl="true"`. El calificador de recursos `"ldrtl"` puede incluirse en un nombre direcory para contener los diseños personalizados que están diseñados para mostrar de derecha a izquierda.
+Android 4.2 introdujo la compatibilidad con [derecha para idiomas de izquierda (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) si establece la configuración de la aplicación `android:supportsRtl="true"`. El calificador de recursos `"ldrtl"` puede incluirse en un nombre de directorio que contiene los diseños personalizados que están diseñados para mostrar de derecha a izquierda.
 
 Para obtener más información sobre los nombres de directorio de recursos y de reserva, consulte la documentación de Android [proporcionar recursos alternativos](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 

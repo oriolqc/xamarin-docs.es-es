@@ -7,12 +7,12 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: acdee7d34f913b125887f021dab39220c9560191
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a4fbf2bc38726ad50a07744ed4c2512efbb615bc
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109242"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527253"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Crear y dibujar en mapas de bits de SkiaSharp
 
@@ -494,7 +494,7 @@ El mapa de bits girado es lo suficientemente grande como para incluir todo el ma
 
 Se llama a otra operación que se realizan normalmente en los mapas de bits _voltear_. Conceptualmente, el mapa de bits se gira en tres dimensiones en torno a un eje vertical o eje horizontal a través del centro del mapa de bits. Volteo vertical, crea una imagen reflejada.
 
-El **impulsor de mapa de bits** página en el **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** se muestra la aplicación estos procesos. El archivo XAML contiene una `SKCanvasView` y dos botones para voltear verticalmente y horizontalmente:
+El **impulsor de mapa de bits** página en el **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** aplicación muestra estos procesos. El archivo XAML contiene una `SKCanvasView` y dos botones para voltear verticalmente y horizontalmente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

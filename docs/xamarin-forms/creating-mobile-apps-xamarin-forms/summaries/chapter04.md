@@ -4,15 +4,15 @@ description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del 
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 17e62d68f8ad2c7deff500216c0bb095ca8f4275
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: daa2c2f3b43633fd9b3359763b9d740b0def9144
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117452"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563087"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumen del capítulo 4. Desplazamiento de la pila
 
@@ -115,7 +115,7 @@ El **BlackCat** ejemplo también muestra cómo definir y acceder a los recursos 
 
 - [Capítulo 4 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf)
 - [Ejemplos de capítulo 4](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
-- [Ejemplos de capítulo 4 F #](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FS)
+- [Capítulo 4 F# ejemplos](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/FS)
 - [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md)
 - [ScrollView](~/xamarin-forms/user-interface/layouts/scroll-view.md)
 - [BoxView](~/xamarin-forms/user-interface/boxview.md)

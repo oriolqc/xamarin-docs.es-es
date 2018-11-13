@@ -4,15 +4,15 @@ description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del 
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: eabd001587034ac0bf1b86962fe63b016fe651e9
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 609b0066e033b48be55056d459e818a9acc9625c
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156579"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563334"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumen del capítulo 3. Más profunda en texto
 
@@ -139,6 +139,6 @@ El [ **NamedFontSizes** ](https://github.com/xamarin/xamarin-forms-book-samples/
 
 - [Capítulo 3 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf)
 - [Ejemplos del capítulo 3](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03)
-- [Ejemplos del capítulo 3 F #](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)
+- [Capítulo 3 F# ejemplos](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/FS)
 - [Label](~/xamarin-forms/user-interface/text/label.md)
 - [Trabajar con colores](~/xamarin-forms/user-interface/colors.md)

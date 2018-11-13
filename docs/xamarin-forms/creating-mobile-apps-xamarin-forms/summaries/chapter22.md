@@ -7,12 +7,12 @@ ms.assetid: 47C2B9AB-E688-4412-8AF5-9F633B3DA695
 author: charlespetzold
 ms.author: chape
 ms.date: 11/07/2017
-ms.openlocfilehash: c4d92784654db8e566b41c8270dbe2095bd28b94
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
-ms.translationtype: MT
+ms.openlocfilehash: 354338aedf67a02918858cbab71d866e5cd8ec9d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156605"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527149"
 ---
 # <a name="summary-of-chapter-22-animation"></a>Resumen del capítulo 22. Animación
 
@@ -48,7 +48,7 @@ Todos los métodos de animación de `ViewExtensions` devolver `Task<bool>` objet
 
 ### <a name="composite-animations"></a>Animaciones de composición
 
-Puede mezclar las animaciones esperadas y que no es "awaited" para crear animaciones compuestas. Estas son las animaciones en `ViewExtensions` que tienen como destino el `TranslatonX`, `TranslationY`, y `Scale` las propiedades de transformación:
+Puede mezclar las animaciones esperadas y que no es "awaited" para crear animaciones compuestas. Estas son las animaciones en `ViewExtensions` que tienen como destino el `TranslationX`, `TranslationY`, y `Scale` las propiedades de transformación:
 
 - [`TranslateTo`](xref:Xamarin.Forms.ViewExtensions.TranslateTo(Xamarin.Forms.VisualElement,System.Double,System.Double,System.UInt32,Xamarin.Forms.Easing))
 - [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing))
@@ -144,7 +144,7 @@ Ya hemos visto [ `ViewExtensions` ](xref:Xamarin.Forms.ViewExtensions). Define n
 
 El [ `Animation` ](xref:Xamarin.Forms.AnimationExtensions) clase tiene un [constructor](xref:Xamarin.Forms.Animation.%23ctor(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Action)) con cinco argumentos para definir métodos terminados y devolución de llamada y los parámetros de la animación.
 
-Se pueden agregar animaciones secundarias con [ `Add` ](xref:Xamarin.Forms.Animation.Add(System.Double,System.Double,Xamarin.Forms.Animation)), [ `Insert` ](xref:Xamarin.Forms.Animation.Insert(System.Double,System.Double,Xamarin.Forms.Animation)), [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(Xamarin.Forms.Animation,System.Double,System.Double)), y y sobrecarga de [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Double,System.Double)).
+Se pueden agregar animaciones secundarias con [ `Add` ](xref:Xamarin.Forms.Animation.Add(System.Double,System.Double,Xamarin.Forms.Animation)), [ `Insert` ](xref:Xamarin.Forms.Animation.Insert(System.Double,System.Double,Xamarin.Forms.Animation)), [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(Xamarin.Forms.Animation,System.Double,System.Double))y la sobrecarga de [ `WithConcurrent` ](xref:Xamarin.Forms.Animation.WithConcurrent(System.Action{System.Double},System.Double,System.Double,Xamarin.Forms.Easing,System.Double,System.Double)).
 
 El objeto de animación, a continuación, se inicia con una llamada a la [ `Commit` ](xref:Xamarin.Forms.Animation.Commit(Xamarin.Forms.IAnimatable,System.String,System.UInt32,System.UInt32,Xamarin.Forms.Easing,System.Action{System.Double,System.Boolean},System.Func{System.Boolean})) método.
 
@@ -162,7 +162,7 @@ El [ **ConcurrentAnimations** ](https://github.com/xamarin/xamarin-forms-book-sa
 
 ### <a name="beyond-the-high-level-animation-methods"></a>Más allá de los métodos de alto nivel de animación
 
-El [ **ConcurrentAnimations** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/ConcurrentAnimations) ejemplo también muestra cómo realizar animaciones en las que van más allá de las propiedades de destino de la `ViewExtensions` métodos. En un ejemplo, una serie de períodos más largas; en otro ejemplo, un `BackgroundColor` propiedad está animada.
+El [ **ConcurrentAnimations** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter22/ConcurrentAnimations) ejemplo también muestra cómo realizar animaciones en las que van más allá de las propiedades de destino por la `ViewExtensions` métodos. En un ejemplo, una serie de períodos más largas; en otro ejemplo, un `BackgroundColor` propiedad está animada.
 
 ### <a name="more-of-your-own-awaitable-methods"></a>Varias de sus propios métodos que admite await
 

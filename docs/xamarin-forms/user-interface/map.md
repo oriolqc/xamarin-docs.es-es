@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/27/2016
-ms.openlocfilehash: f787adcba78a13f6d4cad3fb446350a65e960aca
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cfa450c977ac9f1d6370f40d27f5d704cc774767
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123614"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526681"
 ---
 # <a name="xamarinforms-map"></a>Mapa de Xamarin.Forms
 
@@ -141,7 +141,7 @@ El token de autenticación, a continuación, se debe especificar en el `FormsMap
 
 <a name="Using_Maps" />
 
-## <a name="using-maps"></a>Uso de mapas
+## <a name="using-maps"></a>Uso de Maps
 
 Consulte la [MapPage.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/MobileCRM/MobileCRM.Shared/Pages/MapPage.cs) en el ejemplo MobileCRM para obtener un ejemplo de cómo se puede usar el control de mapa en el código. Un simple `MapPage` clase podría parecerse a este: tenga en cuenta que un nuevo `MapSpan` se crea para colocar la vista del mapa:
 
@@ -183,7 +183,7 @@ Válido `MapType` los valores son:
 Como se muestra en el fragmento de código anterior, proporcionando un `MapSpan` instancia a un constructor de asignación establece la vista inicial (punto central y el nivel de zoom) de la asignación cuando se cargue. El `MoveToRegion` método en la clase map, a continuación, puede utilizarse para cambiar el nivel de posición o zoom del mapa. Hay dos maneras de crear un nuevo `MapSpan` instancia:
 
 -  **MapSpan.FromCenterAndRadius()** -método estático para crear un intervalo de un `Position` y especificando un `Distance` .
--  **New () de MapSpan** -constructor que usa un `Position` y el degress de latitud y longitud para mostrar.
+-  **New () de MapSpan** -constructor que usa un `Position` y los grados de latitud y longitud para mostrar.
 
 
 Para cambiar el nivel de zoom del mapa sin modificar la ubicación, cree un nuevo `MapSpan` utilizando la ubicación actual de la `VisibleRegion.Center` propiedad del control de mapa. Un `Slider` podría usarse para controlar el zoom del mapa similar al siguiente (sin embargo, hacer zoom directamente en el control de mapa, actualmente no puede actualizar el valor del control deslizante):

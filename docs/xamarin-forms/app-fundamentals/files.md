@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
-ms.openlocfilehash: e31bb46569ed96d514ec87eacaf9f3912dcf3237
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 87084a0ccc2970f56e7ef7a6d2f4c59c49032aa0
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675164"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527370"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Control de archivos en Xamarin.Forms
 
@@ -20,7 +20,7 @@ _Archivo de control con Xamarin.Forms puede lograrse mediante código en una bib
 
 ## <a name="overview"></a>Información general
 
-El código de Xamarin.Forms se ejecuta en varias plataformas, cada una con su propio sistema de archivos. Anteriormente, esto significaba que realiza la que leer y escribir archivos era más fácilmente mediante la API de archivo nativo en cada plataforma. Como alternativa, los recursos incrustados son una solución más sencilla para distribuir los archivos de datos con una aplicación. Sin embargo, con .NET Standard 2.0 es posible compartir código de acceso de archivo en bibliotecas de .NET Standard.
+El código de Xamarin.Forms se ejecuta en varias plataformas, cada una con su propio sistema de archivos. Anteriormente, esto significaba que leer y escribir archivos se realizan más fácilmente mediante la API de archivo nativo en cada plataforma. Como alternativa, los recursos incrustados son una solución más sencilla para distribuir los archivos de datos con una aplicación. Sin embargo, con .NET Standard 2.0 es posible compartir código de acceso de archivo en bibliotecas de .NET Standard.
 
 Para obtener información sobre cómo administrar archivos de imagen, consulte el [trabajar con imágenes](~/xamarin-forms/user-interface/images.md) página.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: a008b270d4ff670a03f18318186ca038c5c0348d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 881b465643b576f5d3f4fc8121c5a873087a876c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118882"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527344"
 ---
 # <a name="device-orientation"></a>Orientación del dispositivo
 
@@ -96,7 +96,7 @@ Xamarin.Forms no ofrece los eventos nativos para notificar a la aplicación de l
 > [!NOTE]
 > Hay un paquete de NuGet existente y gratuito para recibir notificaciones de cambios de orientación en código compartido. Consulte la [repositorio de GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) para obtener más información.
 
-Como alternativa, es posible invalidar el [ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*) método en un `Page`, insertar cualquier diseño cambie la lógica no existe. El `OnSizeAllocated` se llama al método cada vez que un `Page` se asigna un nuevo tamaño, lo que ocurre siempre que se gira el dispositivo. Tenga en cuenta que la implementación base de `OnSizeAllocated` realiza funciones de diseño importante, por lo que es importante llamar a la implementación base en la invalidación:
+Como alternativa, es posible invalidar el [ `OnSizeAllocated` ](xref:Xamarin.Forms.Page.OnSizeAllocated*) método en un `Page`, insertar cualquier diseño cambie la lógica no existe. El `OnSizeAllocated` se llama al método cada vez que un `Page` se asigna un nuevo tamaño, lo que sucede cada vez que se gira el dispositivo. Tenga en cuenta que la implementación base de `OnSizeAllocated` realiza funciones de diseño importante, por lo que es importante llamar a la implementación base en la invalidación:
 
 ```csharp
 protected override void OnSizeAllocated(double width, double height)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/17/2017
-ms.openlocfilehash: d3e5da19bacf5a6847bf6226c3fdd2b1e0e46ab2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 83f9651fa7fd20709c620258833ae4a152ffd0eb
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111069"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563672"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>Eventos, protocolos y delegados de Xamarin.iOS
 
@@ -52,7 +52,7 @@ aButton.TouchUpInside += delegate {
 };
 ```
 
-El código anterior está dispuesto el `ViewDidLoad` método de la UIViewContoller. El `aButton` variable hace referencia a un botón, lo que podría agregarse en el Diseñador de iOS o con código. La siguiente ilustración muestra un botón que se ha agregado en el Diseñador de iOS:
+El código anterior está dispuesto el `ViewDidLoad` método UIViewController. El `aButton` variable hace referencia a un botón, lo que podría agregarse en el Diseñador de iOS o con código. La siguiente ilustración muestra un botón que se ha agregado en el Diseñador de iOS:
 
 [![](delegates-protocols-and-events-images/02-interface-builder-outlet-sml.png "Un botón que agregó en el Diseñador de iOS")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
 

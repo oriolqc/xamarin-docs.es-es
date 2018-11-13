@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: 4bbb217fa8a3192905d016763b961e182224aa67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c0f638afbf044a2e3e6f309839cb22137cf95912
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108774"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527019"
 ---
 # <a name="android-job-scheduler"></a>Programador de trabajos de Android
 
@@ -42,7 +42,7 @@ El programador de trabajos de Android es un marco integrado en el sistema operat
 * Un `Android.App.Job.JobService` es una clase abstracta que debe ampliarse con la lógica que se ejecutará el trabajo en el subproceso principal de la aplicación. Esto significa que el `JobService` es responsable de cómo es el trabajo se realiza de forma asincrónica.
 * Un `Android.App.Job.JobInfo` objeto contiene los criterios para guiar Android cuándo se debe ejecutar el trabajo.
 
-Para programar el trabajo con el programador de trabajos de Android, una aplicación de Xamarin.Android debe encapsular el código en una clase que extiende el `JobService` clase. `JobService` tiene tres métodos de ciclo de vida que se puede llamar durante la duración del trabajo:
+Para programar el trabajo con el programador de trabajos de Android, una aplicación de Xamarin.Android debe encapsular el código en una clase que extiende el `JobService` clase. `JobService` tiene tres métodos de ciclo de vida que se pueden llamar durante la duración del trabajo:
 
 * **BOOL (parámetros JobParameters) OnStartJob** &ndash; llama a este método la `JobScheduler` para realizar el trabajo y se ejecuta en el subproceso principal de la aplicación. Es responsabilidad de la `JobService` para realizar el trabajo de forma asincrónica y `true` si hay trabajo restante, o `false` si se realiza el trabajo.
     
@@ -130,10 +130,10 @@ public static class JobSchedulerHelpers
     }
 }
 
-// Sample usage - creates a JobBuilder for a DownloadJob andsets the Job ID to 1.
+// Sample usage - creates a JobBuilder for a DownloadJob and sets the Job ID to 1.
 var jobBuilder = this.CreateJobBuilderUsingJobId<DownloadJob>(1);
 
-var jobInfo = jobBuilder.Build();  // creats a JobInfo object.
+var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 ```
 
 Una característica eficaz de programador de trabajos de Android es la capacidad para controlar cuándo se ejecuta un trabajo o en qué condiciones de un trabajo se pueden ejecutar. La tabla siguiente describen algunos de los métodos en `JobInfo.Builder` que permitir que una aplicación influir en la que puede ejecutarse un trabajo:  
@@ -186,7 +186,7 @@ public override bool OnStartJob(JobParameters jobParameters)
 
 Para programar un trabajo, una aplicación de Xamarin.Android obtendrá una referencia a la `JobScheduler` servicio del sistema y llamar a la `JobScheduler.Schedule` método con el `JobInfo` objeto que se creó en el paso anterior. `JobScheduler.Schedule` devolverá inmediatamente con uno de dos valores enteros:
 
-* **JobScheduler.ResultSuccess** &ndash; el trabajo ha sido correctamente programada. 
+* **JobScheduler.ResultSuccess** &ndash; el trabajo se programó correctamente. 
 * **JobScheduler.ResultFailure** &ndash; no se puede programar el trabajo. Esto se debe normalmente a entrar en conflicto `JobInfo` parámetros.
 
 Este código es un ejemplo de programación de un trabajo y notificar al usuario de los resultados del intento de programación:
@@ -211,7 +211,7 @@ Es posible cancelar todos los trabajos que se han programado, o simplemente un �
 
 ```csharp
 // Cancel all jobs
-jobSchduler.CancelAll(); 
+jobScheduler.CancelAll(); 
 
 // to cancel a job with jobID = 1
 jobScheduler.Cancel(1)

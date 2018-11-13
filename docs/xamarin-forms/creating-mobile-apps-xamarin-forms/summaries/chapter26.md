@@ -4,15 +4,15 @@ description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del 
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: bdd86595c3c0805d50241eac3a131a50656a9985
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 18bfb7088d5dcb1476716e881ea54052e62d2504
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156592"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563971"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>Resumen del capítulo 26. Diseños personalizados
 

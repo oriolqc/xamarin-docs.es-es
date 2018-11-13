@@ -1,24 +1,24 @@
 ---
-title: Agregar una segunda barra de herramientas
+title: Adición de una segunda barra de herramientas
 ms.prod: xamarin
 ms.assetid: FCE0AD27-8B6B-47C6-AD19-2B1C12E1BBBF
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: b8da13afb7fd8d7198e8bfe7476b40a5cd09769a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fc95c05c1945464cd9cac8565d8a11ff1b4c7e1d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112559"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527292"
 ---
-# <a name="adding-a-second-toolbar"></a>Agregar una segunda barra de herramientas
+# <a name="adding-a-second-toolbar"></a>Adición de una segunda barra de herramientas
 
 
 ## <a name="overview"></a>Información general 
 
-El `Toolbar` puede realizar algo más que reemplazar la barra de acciones &ndash; pueden utilizarse varias veces dentro de una actividad, puede ser personalizado para su ubicación en cualquier lugar en la pantalla y se puede configurar para abarcar sólo un ancho parcial de la pantalla. Los ejemplos siguientes muestran cómo crear un segundo `Toolbar` y colóquelo en la parte inferior de la pantalla. Esto `Toolbar` implementa **copia**, **cortar**, y **pegar** elementos de menú. 
+El `Toolbar` puede realizar algo más que reemplazar la barra de acciones &ndash; pueden utilizarse varias veces dentro de una actividad, se puede personalizar para su ubicación en cualquier lugar en la pantalla y se puede configurar para abarcar sólo un ancho parcial de la pantalla. Los ejemplos siguientes muestran cómo crear un segundo `Toolbar` y colóquelo en la parte inferior de la pantalla. Esto `Toolbar` implementa **copia**, **cortar**, y **pegar** elementos de menú. 
 
 
 ## <a name="define-the-second-toolbar"></a>Definir la segunda barra de herramientas 

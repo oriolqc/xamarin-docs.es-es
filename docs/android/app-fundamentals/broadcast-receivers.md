@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 51bd3dd4c27dce19344f7660c31a0d4e741e1ad4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a411d4d85877c9868ec49f92b53ca8d7a81f9959
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121144"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528538"
 ---
 # <a name="broadcast-receivers-in-xamarinandroid"></a>Receptores de difusión en Xamarin.Android
 
@@ -97,7 +97,7 @@ public class MySampleBroadcastReceiver : BroadcastReceiver
 }
 ```
 
-Las aplicaciones que tienen como destino Android 8.0 (API nivel 26) o versiones posteriores no pueden registrar estáticamente para una difusión implícita. Las aplicaciones pueden registrarse estática para una difusión explícita. Hay una pequeña lista de difusiones implícitas que están exentos de esta restricción. Estas excepciones se describen en la [implícita excepciones difundir](https://developer.android.com/guide/components/broadcast-exceptions.html) guía en la documentación de Android. Las aplicaciones que están interesadas en la difusión implícita deben hacer uso de forma dinámica el `RegisterReceiver` método. Esto se describe a continuación.
+Las aplicaciones que tienen como destino Android 8.0 (API nivel 26) o versiones posteriores no pueden registrar estáticamente para una difusión implícita. Las aplicaciones pueden registrarse estática para una difusión explícita. Hay una pequeña lista de las difusiones implícitas que están exentos de esta restricción. Estas excepciones se describen en la [implícita excepciones difundir](https://developer.android.com/guide/components/broadcast-exceptions.html) guía en la documentación de Android. Las aplicaciones que están interesadas en la difusión implícita deben hacer uso de forma dinámica el `RegisterReceiver` método. Esto se describe a continuación.
 
 ### <a name="context-registering-a-broadcast-receiver"></a>Registro de contexto de un receptor de difusión
 

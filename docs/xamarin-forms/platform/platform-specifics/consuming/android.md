@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 50c7b05261cf3f07ea37373cdcdcc8f250243647
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3249a9706ba96ec3690a3a3a6b80a5eb261625e4
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108982"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527279"
 ---
 # <a name="android-platform-specifics"></a>Funcionalidades específicas de plataforma Android
 
@@ -270,7 +270,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 El resultado es ese desplazamiento rápido a través de los datos en un [ `ListView` ](xref:Xamarin.Forms.ListView) puede habilitarse, que cambia el tamaño de la miniatura de desplazamiento:
 
-[![](android-images/fastscroll.png "ListView FastScroll específico de plataforma")](android-images/fastscroll-large.png#lightbox "ListView FastScroll Plaform-Specific")
+[![](android-images/fastscroll.png "Específico de plataforma ListView FastScroll")](android-images/fastscroll-large.png#lightbox "ListView FastScroll específico de plataforma")
 
 <a name="webview-mixed-content" />
 
@@ -490,7 +490,7 @@ El `Application.On<Android>` método especifica que solo se ejecutarán este esp
 
 El resultado es que el teclado en pantalla se puede establecer el modo de funcionamiento cuando un control de entrada tiene el foco del área de entrada:
 
-[![](android-images/pan-resize.png "Teclado en pantalla funciona en modo específico de la plataforma")](android-images/pan-resize-large.png#lightbox "Soft Keyboard Operating Mode Plaform-Specific")
+[![](android-images/pan-resize.png "Funcionamiento modo específico de la plataforma de teclado temporal")](android-images/pan-resize-large.png#lightbox "teclado en pantalla funciona en modo específico de la plataforma")
 
 <a name="disable_lifecycle_events" />
 

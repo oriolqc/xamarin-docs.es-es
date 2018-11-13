@@ -4,15 +4,15 @@ description: Las extensiones de marcado XAML constituyen una característica imp
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 3/27/2018
-ms.openlocfilehash: 6fcb051d2c24c7da169106b06ad5ebfc91edafa6
-ms.sourcegitcommit: 3e980fbf92c69c3dd737554e8c6d5b94cf69ee3a
+ms.openlocfilehash: bffddfdb67238287b868b01edad88bc8d43e5bb1
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37935622"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563841"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensiones de marcado XAML
 

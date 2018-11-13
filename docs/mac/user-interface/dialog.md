@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 8c176944d1bec4850f084043fdab81b5c2d51ceb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.openlocfilehash: 0c95e4bcecb2ae787714b8ac6973646caada1b3e
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105212"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528863"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Cuadros de diálogo en Xamarin.Mac
 
-Cuando se trabaja con C# y .NET en una aplicación de Xamarin.Mac, tener acceso a los mismos cuadros de diálogo y Windows Modal que un desarrollador que trabaje en *Objective-C* y *Xcode* does. Ya que Xamarin.Mac se integra directamente con Xcode, puede usar Xcode _Interface Builder_ para crear y mantener su Windows Modal (o si lo desea crearlos directamente en código de C#).
+Cuando se trabaja con C# y .NET en una aplicación de Xamarin.Mac, tendrá acceso a los mismos cuadros de diálogo y Windows Modal que un desarrollador que trabaja *Objective-C* y *Xcode* does. Ya que Xamarin.Mac se integra directamente con Xcode, puede usar Xcode _Interface Builder_ para crear y mantener su Windows Modal (o si lo desea crearlos directamente en código de C#).
 
 Un cuadro de diálogo aparece en respuesta a una acción del usuario y normalmente se proporciona a los usuarios de maneras pueden completar la acción. Un cuadro de diálogo requiere una respuesta del usuario para que se pueda cerrar.
 

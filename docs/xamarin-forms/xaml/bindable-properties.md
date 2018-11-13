@@ -4,15 +4,15 @@ description: Este artículo proporciona una introducción a las propiedades enla
 ms.prod: xamarin
 ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
 ms.technology: xamarin-forms
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 241579d51d1f0af84655f439bad3adb879404e91
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 8dc53c37894af70d5183fe5c44b018fdf25af616
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995393"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563854"
 ---
 # <a name="bindable-properties"></a>Propiedades enlazables
 
@@ -54,7 +54,7 @@ Como mínimo, debe especificarse un identificador al crear un [ `BindablePropert
 - El nombre de la [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty).
 - Tipo de la propiedad.
 - El tipo del objeto propietario.
-- El valor predeterminado para la propiedad. Esto garantiza que la propiedad siempre devuelve un valor determinado de forma predeterminada cuando no está establecido, y puede ser diferente del valor predeterminado para el tipo de la propiedad. El valor predeterminado será cuando restaura la [ `ClearValue` ](xref:Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)) se llama al método en la propiedad enlazable.
+- Valor predeterminado de la propiedad. Esto garantiza que la propiedad siempre devuelve un valor determinado de forma predeterminada cuando no está establecido, y puede ser diferente del valor predeterminado para el tipo de la propiedad. El valor predeterminado será cuando restaura la [ `ClearValue` ](xref:Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)) se llama al método en la propiedad enlazable.
 
 El código siguiente muestra un ejemplo de una propiedad enlazable, con un identificador y los valores de los cuatro campos obligatorios:
 
@@ -67,7 +67,7 @@ Esto crea un [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) instanc
 
 Si lo desea, al crear un [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) de instancia, los siguientes parámetros se pueden especificar:
 
-- El modo de enlace. Esto se utiliza para especificar la dirección en la que se propaguen los cambios de valor de propiedad. En el modo de enlace predeterminada, los cambios se propaguen desde el *origen* a la *destino*.
+- Modo de enlace. Esto se utiliza para especificar la dirección en la que se propaguen los cambios de valor de propiedad. En el modo de enlace predeterminada, los cambios se propaguen desde el *origen* a la *destino*.
 - Un delegado de validación que se invocará cuando se establece el valor de propiedad. Para obtener más información, consulte [las devoluciones de llamada de validación](#validation).
 - Un delegado de cambio de propiedad que se invoca cuando ha cambiado el valor de propiedad. Para obtener más información, consulte [detectar los cambios de propiedad](#propertychanges).
 - Una propiedad de cambio de delegado que se invoca cuando cambia el valor de propiedad. Este delegado tiene la misma firma que el delegado de la propiedad ha cambiado.

@@ -5,15 +5,15 @@ ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
 ms.technology: xamarin-forms
 ms.custom: xamu-video
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: 49a0d1dd67959c5949ebe500036b849180795660
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 44d75322f151850b11e4da90486168c04496eca7
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108748"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51564023"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>El Xamarin.Forms FlexLayout
 
@@ -385,7 +385,7 @@ Dentro de cada uno de los tres `FlexLayout` vistas, un espacio en blanco `Label`
 ## <a name="the-bindable-properties-in-detail"></a>Las propiedades enlazables en detalle
 
 Ahora que ha visto algunas aplicaciones comunes de `FlexLayout`, las propiedades de `FlexLayout` se puede explorar con más detalle. 
-`FlexLayout` define las propiedades enlazables seis que establezca en el `FlexLayout` Sí, ya sea en el código o XAML, la alineación y el control orientatin. (Una de estas propiedades, [ `Position` ](xref:Xamarin.Forms.FlexLayout.Position), no se trata en este artículo.)
+`FlexLayout` define las propiedades enlazables seis que establezca en el `FlexLayout` Sí, ya sea en el código o XAML, la alineación y la orientación del control. (Una de estas propiedades, [ `Position` ](xref:Xamarin.Forms.FlexLayout.Position), no se trata en este artículo.)
 
 Puede experimentar con las restantes propiedades enlazables con cinco el **experimentar** página de la **[FlexLayoutDemos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/FlexLayoutDemos/)** ejemplo. Esta página le permite agregar o quitar elementos secundarios de un `FlexLayout` y establecer las combinaciones de las cinco propiedades enlazables. Todos los elementos secundarios de la `FlexLayout` son `Label` vistas de distintos colores y tamaños, con el `Text` propiedad establecida en un número que corresponde a su posición en la `Children` colección.
 

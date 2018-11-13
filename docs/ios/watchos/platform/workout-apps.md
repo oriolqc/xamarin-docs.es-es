@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: d755160043191f93247fd09e99f23eb85831fa8b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fd677aa802adf32ac81396f81c67264d88639967
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113903"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528785"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>las aplicaciones de entrenamiento de Xamarin de watchOS
 
@@ -469,7 +469,7 @@ public override void DidGenerateEvent (HKWorkoutSession workoutSession, HKWorkou
 
 También nuevo para watchOS 3, son el movimiento en pausa (`HKWorkoutEventType.MotionPaused`) y se reanuda el movimiento (`HKWorkoutEventType.MotionResumed`) eventos. Estos eventos se generan automáticamente por HealthKit durante un ejercicio de ejecución cuando el usuario inicia y deja de moverse.
 
-Cuando la aplicación recibe un evento de movimiento en pausa, debe detener la recopilación de datos hasta que el usuario reanuda el movimiento y se recibe el evento se reanuda el movimiento. Aplicación de la aplicación no debe pausar la sesión de entrenamiento en respuesta a un evento de movimiento en pausa.
+Cuando la aplicación recibe un evento de movimiento en pausa, debe detener la recopilación de datos hasta que el usuario reanuda el movimiento y se recibe el evento se reanuda el movimiento. Aplicación no debe pausar la sesión de entrenamiento en respuesta a un evento de movimiento en pausa.
 
 > [!IMPORTANT]
 > Solo se admiten los eventos de movimiento en pausa y reanudación de movimiento para el tipo de actividad RunningWorkout (`HKWorkoutActivityType.Running`).

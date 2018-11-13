@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/22/2018
-ms.openlocfilehash: e3cfc9a345c8ab92b35ad428b550ec42de6312e5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bc7da76084075b03ca346949b7bb764ae1313c2a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120299"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563516"
 ---
 # <a name="location-services"></a>Servicios de ubicación
 
@@ -190,7 +190,7 @@ Este método toma dos parámetros:
 
 Para notificar a una aplicación de Xamarin.Android de una actualización de la ubicación, el proveedor de ubicación fusionadas invocará el `LocationCallBack.OnLocationResult(LocationResult result)`. El `Android.Gms.Location.LocationResult` parámetro contendrá la información de ubicación de actualización.
 
-Cuando el proveedor de ubicación fusionadas detecta un cambio en la disponibilidad de datos de ubicación, llamará el `LocationProvider.OnLocationAvaibility(LocationAvailability
+Cuando el proveedor de ubicación fusionadas detecta un cambio en la disponibilidad de datos de ubicación, llamará el `LocationProvider.OnLocationAvailability(LocationAvailability
 locationAvailability)` método. Si el `LocationAvailability.IsLocationAvailable` propiedad devuelve `true`, a continuación, se puede suponer que los resultados de la ubicación de dispositivo notifican por `OnLocationResult` son tan precisa y tan actualizado como lo requiera la `LocationRequest`. Si `IsLocationAvailable` es false, no hay resultados de la ubicación será devueltos por `OnLocationResult`.
 
 Este fragmento de código es un ejemplo de implementación de la `LocationCallback` objeto:
@@ -253,9 +253,9 @@ Es una buena idea para mantener la `LocationManager` como una variable de clase,
 
 ### <a name="request-location-updates-from-the-locationmanager"></a>Actualizaciones de solicitud de ubicación de la LocationManager
 
-Una vez que la aplicación tiene una referencia a la `LocationManager`, debe indicar el `LocationManager` qué tipo de información de ubicación que son necesarios, y con qué frecuencia es esa información para actualizarse. Esto se realiza una llamada a `RequestionLocationUpdates` en el `LocationManager` objeto y pasando algunos criterios para las actualizaciones y una devolución de llamada que recibirá las actualizaciones de ubicación. Esta devolución de llamada es un tipo que debe implementar la `ILocationListener` interfaz (que se describe con más detalle más adelante en esta guía).
+Una vez que la aplicación tiene una referencia a la `LocationManager`, debe indicar el `LocationManager` qué tipo de información de ubicación que son necesarios, y con qué frecuencia es esa información para actualizarse. Esto se realiza una llamada a `RequestLocationUpdates` en el `LocationManager` objeto y pasando algunos criterios para las actualizaciones y una devolución de llamada que recibirá las actualizaciones de ubicación. Esta devolución de llamada es un tipo que debe implementar la `ILocationListener` interfaz (que se describe con más detalle más adelante en esta guía).
 
-El `RequestionLocationUpdates` método indica la ubicación del sistema de servicio que desea que la aplicación empezar a recibir actualizaciones de ubicación. Este método permite especificar el proveedor, así como los umbrales de tiempo y la distancia para controlar la frecuencia de actualización. Por ejemplo, el siguiente método por debajo de ubicación de las solicitudes las actualizaciones desde el proveedor de ubicación de GPS cada 2000 milisegundos, y solo cuando cambia la ubicación más de 1 metro:
+El `RequestLocationUpdates` método indica la ubicación del sistema de servicio que desea que la aplicación empezar a recibir actualizaciones de ubicación. Este método permite especificar el proveedor, así como los umbrales de tiempo y la distancia para controlar la frecuencia de actualización. Por ejemplo, el método siguiente solicita la ubicación actualiza cada 2000 milisegundos, desde el proveedor de ubicación de GPS y solo cuando cambia la ubicación más de 1 metro:
 
 ```csharp
 // For this example, this method is part of a class that implements ILocationListener, described below

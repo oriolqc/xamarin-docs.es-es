@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: a0738b03c4fa0ad975b872307bb17f387b1c5fd5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7d626b8a968835813d87c93e3cead57a00c14000
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120962"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528603"
 ---
 # <a name="deploying-and-testing-watchos-apps-with-xamarin"></a>Implementar y probar las aplicaciones para watchOS con Xamarin
 
@@ -50,7 +50,7 @@ Los tres proyectos requieren un coincidente aprovisionamiento perfil de distribu
 
 ### <a name="explicit-app-ids"></a>Id. de aplicación explícito
 
-Crear un **Id. de aplicación** para el Id. de lote de cada de cada proyecto (lo que tendrá un aspecto similar al siguiente en el centro de desarrollo de iOS):
+Crear un **Id. de aplicación** para el Id. de lote de cada proyecto (lo que tendrá un aspecto similar al siguiente en el centro de desarrollo de iOS):
 
 ![El Id. de lote en el centro de desarrollo de iOS](images/appids-specific-sml.png)
 
@@ -88,7 +88,7 @@ El grupo de aplicaciones, a continuación, aparecerá en la lista:
 
 Una vez creado el grupo, puede hacer referencia en su **Id. de aplicación** configuración. No olvide incluir tanto la aplicación de iOS y extensión de inspección **identificadores de aplicación**.
 
-![Consifurations disponibles](images/appgroups-sml.png)
+![Configuraciones disponibles](images/appgroups-sml.png)
 
 Hacer **no** habilitar grupos de aplicaciones en el Id. de aplicación de Apple Watch No es necesario que esté habilitado en el mismo watch.
 

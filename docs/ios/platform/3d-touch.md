@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 2bbc61c7fe843fd020093ab7080f38e6e7b180f9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 08edd3166df8392a5f3e7485a6572f0c94a38f62
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107812"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563664"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introducción a 3D Touch en Xamarin.iOS
 
@@ -78,7 +78,7 @@ Para obtener más información, consulte Apple [TouchCanvas: uso UITouch de mane
 
 3D Touch proporciona nuevas formas para interactuar con la información dentro de la aplicación más rápida que nunca, sin tener que navegar desde su ubicación actual.
 
-Por ejemplo, si la aplicación muestra una tabla de mensajes, el usuario puede presionar en disco duro en un elemento para obtener una vista previa de su contenido en una vista de superposición (que Apple como que hace referencia a un *Peek*).
+Por ejemplo, si la aplicación muestra una tabla de mensajes, el usuario puede presionar disco duro en un elemento para obtener una vista previa de su contenido en una vista de superposición (que Apple como que hace referencia a un *Peek*).
 
 [![](3d-touch-images/peekandpop01.png "Un ejemplo de inspección de contenido")](3d-touch-images/peekandpop01.png#lightbox)
 
@@ -188,7 +188,7 @@ public override void ViewDidLoad ()
 
     // Check to see if 3D Touch is available
     if (TraitCollection.ForceTouchCapability == UIForceTouchCapability.Available) {
-        // Regiser for Peek and Pop
+        // Register for Peek and Pop
         RegisterForPreviewingWithDelegate(new PreviewingDelegate(this), View);
     }
     ...

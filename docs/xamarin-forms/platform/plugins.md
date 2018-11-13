@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/05/2018
-ms.openlocfilehash: 4d121c2dfcca380e1735da1a4ca47c42d1957b8a
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: ac8e5323a2a2e05ac03294bb6919e8dfadc93655
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854745"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526525"
 ---
 # <a name="consuming-and-creating-xamarinforms-plugins"></a>Consumir y crear complementos de Xamarin.Forms
 
@@ -53,7 +53,7 @@ En el pasado, un complemento multiplataforma generalmente formada por los siguie
 
 Lectura James Montemagno [entrada de blog](https://blog.xamarin.com/creating-reusable-plugins-for-xamarin-forms/) que describe el proceso de creación de complementos para Xamarin.
 
-Más recientemente, complementos pueden ser crearse con una sola plataforma múltiples. Este enfoque se describe en de James Montemagno [entrada de blog](https://montemagno.com/converting-xamarin-libraries-to-sdk-style-multi-targeted-projects/). Este enfoque se usa en los complementos de James Montemagno vinculados anteriormente, y es también utiliza el formato en **Xamarin.Essentials**.
+Más recientemente, se pueden crear complementos con una sola plataforma múltiples. Este enfoque se describe en de James Montemagno [entrada de blog](https://montemagno.com/converting-xamarin-libraries-to-sdk-style-multi-targeted-projects/). Este enfoque se usa en los complementos de James Montemagno vinculados anteriormente, y es también utiliza el formato en **Xamarin.Essentials**.
 
 Es preferible evitar hacer referencia a Xamarin.Forms directamente desde un complemento.
 Esto puede crear problemas de conflicto de versiones cuando otros desarrolladores intentan usar el complemento. En su lugar, pruebe a diseñar la API para que se puede usar cualquier aplicación de Xamarin o. NET.

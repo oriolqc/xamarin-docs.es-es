@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 8514d3b2c423e524d03a800f5f56359f3aee4b75
-ms.sourcegitcommit: 650fd5813e243d67eea13c4bc76683c0f8134123
+ms.openlocfilehash: db312c4c102feb98791109af19185762bb25856e
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50737198"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528850"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Android ejecutar servicios en procesos remotos
 
@@ -76,7 +76,7 @@ Un servicio que está pensado para ejecutarse en su propio proceso es, básicame
 
 1. `Exported` &ndash; Esta propiedad debe establecerse en `true` para permitir que otras aplicaciones interactúen con el servicio. El valor predeterminado de esta propiedad es `false`.
 2. `Process` &ndash; Esta propiedad debe establecerse. Sirve para especificar el nombre del proceso que el servicio se ejecutará en.
-3. `IsolatedProcess` &ndash; Esta propiedad habilitará la seguridad adicional, que le indica a Android para ejecutar el servicio en un espacio aislado con el permiso mínimo para iteract con el resto del sistema. Consulte [Bugzilla 51940 - servicios con procesos aislados y clase de aplicación personalizada no se pudo resolver correctamente las sobrecargas](https://bugzilla.xamarin.com/show_bug.cgi?id=51940).
+3. `IsolatedProcess` &ndash; Esta propiedad habilitará la seguridad adicional, que le indica a Android para ejecutar el servicio en un espacio aislado con el permiso mínimo para interactuar con el resto del sistema. Consulte [Bugzilla 51940 - servicios con procesos aislados y clase de aplicación personalizada no se pudo resolver correctamente las sobrecargas](https://bugzilla.xamarin.com/show_bug.cgi?id=51940).
 4. `Permission` &ndash; Es posible controlar el acceso de cliente al servicio mediante la especificación de un permiso que los clientes deben solicitar (y recibir).
 
 Para ejecutar un servicio en su propio proceso, el `Process` propiedad en el `ServiceAttribute` debe establecerse en el nombre del servicio. Para interactuar con las aplicaciones externas, la `Exported` propiedad debe establecerse en `true`. Si `Exported` es `false`, solo los clientes en el mismo APK (es decir, la misma aplicación) y en ejecución en el mismo proceso podrán interactuar con el servicio.
@@ -129,7 +129,7 @@ Una vez el `ServiceAttribute` se ha establecido, las necesidades de servicio par
 
 ### <a name="implementing-a-handler"></a>Implementación de un controlador
 
-Para procesar las solicitudes de cliente, el servicio debe implementar un `Handler` e invalidar la `HandleMessage` methodThis es el método toma un `Message` de instancia que encapsula la llamada al método desde el cliente y convierte esa llamada en alguna acción o tarea que se llevará a cabo el servicio. El `Message` objeto expone una propiedad denominada `What` que es un valor entero, el significado de los cuales se comparte entre el cliente y el servicio y se relaciona con alguna tarea que el servicio debe realizar para el cliente.
+Para procesar las solicitudes de cliente, el servicio debe implementar un `Handler` e invalidar la `HandleMessage` methodThis es el método toma un `Message` instancia que encapsula la llamada al método desde el cliente y convierte esa llamada en alguna acción o tarea que llevará a cabo el servicio. El `Message` objeto expone una propiedad denominada `What` que es un valor entero, el significado de los cuales se comparte entre el cliente y el servicio y se relaciona con alguna tarea que el servicio debe realizar para el cliente.
 
 El siguiente fragmento de código de la aplicación de ejemplo muestra un ejemplo de `HandleMessage`. En este ejemplo, hay dos acciones que puede solicitar un cliente del servicio:
 
@@ -153,7 +153,7 @@ public class TimestampRequestHandler : Android.OS.Handler
                 break;
 
             case Constants.GET_UTC_TIMESTAMP:
-                // Call methods on the service to retrive a timestamp message.
+                // Call methods on the service to retrieve a timestamp message.
                 break;
             default:
                 Log.Warn(TAG, $"Unknown messageType, ignoring the value {messageType}.");
@@ -168,7 +168,7 @@ También es posible a los parámetros de paquete para el servicio en la `Message
 
 ### <a name="instantiating-the-messenger"></a>Crear instancias de Messenger
 
-Como se explicó anteriormente, al deserializar el `Message` objeto e invoca `Handler.HandleMessage` es la responsabilidad de la `Messenger` objeto. El `Messenger` clase también proporciona un `IBinder` objeto que el cliente usará para enviar mensajes al servicio.  
+Como se explicó anteriormente, al deserializar el `Message` objeto e invoca `Handler.HandleMessage` es responsabilidad de la `Messenger` objeto. El `Messenger` clase también proporciona un `IBinder` objeto que el cliente usará para enviar mensajes al servicio.  
 
 Cuando se inicia el servicio, creará una instancia de la `Messenger` e insertar el `Handler`. Un buen lugar para realizar esta inicialización se encuentra en la `OnCreate` método del servicio. Este fragmento de código es un ejemplo de un servicio que inicializa su propia `Handler` y `Messenger`:
 
@@ -296,7 +296,7 @@ catch (RemoteException ex)
 
 Existen varias formas diferentes de la `Message.Obtain` método. El ejemplo anterior utiliza la [ `Message.Obtain(Handler h, Int32 what)` ](https://developer.xamarin.com/api/member/Android.OS.Message.Obtain/p/Android.OS.Handler/System.Int32/). Se trata de una solicitud asincrónica a un servicio fuera de proceso; no habrá ninguna respuesta del servicio, por lo que la `Handler` está establecido en `null`. El segundo parámetro, `Int32 what`, se almacenará en el `.What` propiedad de la `Message` objeto. El `.What` propiedad se utiliza por el código en el proceso del servicio para invocar métodos en el servicio.
 
-El `Message` clase también expone dos propiedades adicionales que pueden resultar útiles para el nombre: `Arg1` y `Arg2`. Estas dos propiedades son valores enteros que pueden tener algunos especial acordados por los valores que tienen un significado entre el cliente y el servicio. Por ejemplo, `Arg1` puede contener un identificador de cliente y `Arg2` puede contener un número de pedido de compra para ese cliente. El [ `Method.Obtain(Handler h, Int32 what, Int32 arg1, Int32 arg2)` ](https://developer.xamarin.com/api/member/Android.OS.Message.Obtain/p/Android.OS.Handler/System.Int32/System.Int32/System.Int32/) puede usarse para establecer las dos propiedades cuando el `Message` se crea. Es otra manera de rellenar estos dos valores establecer el `.Arg` y `.Arg2` propiedades directamente en el `Message` objeto después de que se ha creado.
+El `Message` clase también expone dos propiedades adicionales que pueden resultar útiles al destinatario: `Arg1` y `Arg2`. Estas dos propiedades son valores enteros que pueden tener algunos especial acordados por los valores que tienen un significado entre el cliente y el servicio. Por ejemplo, `Arg1` puede contener un identificador de cliente y `Arg2` puede contener un número de pedido de compra para ese cliente. El [ `Method.Obtain(Handler h, Int32 what, Int32 arg1, Int32 arg2)` ](https://developer.xamarin.com/api/member/Android.OS.Message.Obtain/p/Android.OS.Handler/System.Int32/System.Int32/System.Int32/) puede usarse para establecer las dos propiedades cuando el `Message` se crea. Es otra manera de rellenar estos dos valores establecer el `.Arg` y `.Arg2` propiedades directamente en el `Message` objeto después de que se ha creado.
 
 ### <a name="passing-additional-values-to-the-service"></a>Pasar valores adicionales para el servicio
 

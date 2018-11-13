@@ -4,15 +4,15 @@ description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del 
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 83a445555f9f184f735c105370de20665ad704a3
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 4bfa2bed7061e031c55ccbdb7f576aa02c17581a
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156761"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563997"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Resumen del capítulo 23. Los desencadenadores y comportamientos
 
@@ -152,7 +152,7 @@ El [ **ToggleLabel** ](https://github.com/xamarin/xamarin-forms-book-samples/tre
 
 El [ **FormattedTextToggle** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/FormattedTextToggle) ejemplo amplía este concepto al cambiar entre dos `FormattedString` objetos.
 
-El [ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) clase en el **Xamarin.FormsBook.Toolkit** deriva de la biblioteca `ContentView`, define un `IsToggled` propiedad e incorpora un `ToggleBehavior` para el botón de alternancia lógica. Así resulta más fácil definir el botón de alternancia en XAML, tal como lo demuestra el [ **TranditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) ejemplo.
+El [ `ToggleBase` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/ToggleBase.cs) clase en el **Xamarin.FormsBook.Toolkit** deriva de la biblioteca `ContentView`, define un `IsToggled` propiedad e incorpora un `ToggleBehavior` para el botón de alternancia lógica. Así resulta más fácil definir el botón de alternancia en XAML, tal como lo demuestra el [ **TraditionalCheckBox** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/TraditionalCheckBox) ejemplo.
 
 El [ **SwitchCloneDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23/SwitchCloneDemo) incluye un [ `SwitchClone` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter23/SwitchCloneDemo/SwitchCloneDemo/SwitchCloneDemo/SwitchClone.cs) clase que derive de `ToggleBase` y usa un [ `TranslateAction` ](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/TranslateAction.cs)clase para construir un botón de alternancia que se parezca a Xamarin.Forms `Switch`.
 

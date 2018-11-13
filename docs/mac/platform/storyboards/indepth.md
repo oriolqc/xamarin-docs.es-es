@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 469ae19021ae524c302b8a9920aaa64bb4a681f4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 61d598f90747cf47b613012328f77b4bd8953a41
+ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117296"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51528463"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Trabajo con guiones gráficos en Xamarin.Mac
 
@@ -68,7 +68,7 @@ Se han agregado varios métodos nuevos a la `NSViewController` clase para admiti
 - `ViewDidDisappear` -Se llama a este método directamente después de la vista se ha quitado de la pantalla.
 - `UpdateViewConstraints` : Este método se llama cuando las restricciones que definen una vista auto necesidad de posición y el tamaño de diseño se puede actualizar.
 - `ViewWillLayout` : Este método se llama justo antes de que se distribuyen las subvistas de esta vista en pantalla.
-- `ViewDidLayout` -Se llama a este método directamente después de que se distribuyen las subvistas de ver en pantalla.
+- `ViewDidLayout` -Se llama a este método directamente después de que se distribuyen las subvistas de vista en pantalla.
 
 <a name="The-Responder-Chain" />
 
@@ -150,7 +150,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 }
 ```
 
-Si lo desea, puede invalidar el `ShouldPerfromSegue` método y si el objeto Segue realmente se ejecuta a través del control C# código. Para los controladores de vista presentada manualmente, llame a su `DismissController` método para quitarlos de la pantalla cuando ya no se necesitan.
+Si lo desea, puede invalidar el `ShouldPerformSegue` método y si el objeto Segue realmente se ejecuta a través del control C# código. Para los controladores de vista presentada manualmente, llame a su `DismissController` método para quitarlos de la pantalla cuando ya no se necesitan.
 
 <a name="Creating-Custom-Segues" />
 
@@ -227,7 +227,7 @@ Los controladores de ventana contienen y controlan los distintos tipos de ventan
 2. El `Storyboard` propiedad contendrá el guión gráfico que se cargó el controlador de ventana, de lo contrario, `null` si no se carga desde un guión gráfico.
 3. Puede llamar a la `DismissController` método para cerrar la ventana especificada y quitarlo de la vista.
 
-Como controladores de vista, los controladores de ventana implementar el `PerformSegue`, `PrepareForSegue` y `ShouldPerfromSegue` métodos y se puede usar como origen de una operación de Segue.
+Como controladores de vista, los controladores de ventana implementar el `PerformSegue`, `PrepareForSegue` y `ShouldPerformSegue` métodos y se puede usar como origen de una operación de Segue.
 
 Controlador de ventana es responsable de las siguientes características de una aplicación de macOS:
 
@@ -259,7 +259,7 @@ Los reconocedores de gestos siguientes están disponibles en macOS:
 
 ## <a name="using-storyboard-references"></a>Usar referencias a guión gráfico
 
-Una referencia de guión gráfico permite tomar un diseño de guion gráfico grande y complejo y dividirla en guiones gráficos más pequeños que obtengan hace referencia desde el original, por lo tanto quitar quitando la complejidad y realizar el individuales guiones gráficos más fácil al diseño y mantener.
+Una referencia de guión gráfico le permite tomar un diseño de guion gráfico grande y complejo y dividirla en menor guiones gráficos que obtengan hace referencia desde el original, por lo tanto, quitando la complejidad y facilitar los guiones gráficos individuales resultantes diseñar y mantener.
 
 Además, puede proporcionar una referencia de guión gráfico una _delimitador_ a otra escena en el mismo guión gráfico o una escena concreta en uno diferente.
 

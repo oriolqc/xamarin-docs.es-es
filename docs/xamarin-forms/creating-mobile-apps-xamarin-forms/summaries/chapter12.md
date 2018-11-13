@@ -7,18 +7,18 @@ ms.assetid: 3EAE6BDC-8EFB-464B-A87B-1C35B8387BB3
 author: charlespetzold
 ms.author: chape
 ms.date: 07/19/2018
-ms.openlocfilehash: 8ee169d15c4b5060f2a7696bfebd314ed7029570
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
-ms.translationtype: MT
+ms.openlocfilehash: 55168f8f401cca711422dc49027b2b055fba5f1f
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156946"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526759"
 ---
 # <a name="summary-of-chapter-12-styles"></a>Resumen del capítulo 12. Estilos
 
 En Xamarin.Forms, los estilos permiten varias vistas compartir una colección de valores de propiedad. Esto reduce el marcado y permite mantener coherentes temas visuales.
 
-Estilos casi siempre se definen y se consumen en el marcado. Un objeto de tipo [ `Style` ](xref:Xamarin.Forms.Style) es crear una instancia en un diccionario de recursos y, a continuación, se establece en el [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propiedad de un elemento visual mediante un `StaticResource` o `DyanamicResource` marcado extensión.
+Estilos casi siempre se definen y se consumen en el marcado. Un objeto de tipo [ `Style` ](xref:Xamarin.Forms.Style) es crear una instancia en un diccionario de recursos y, a continuación, se establece en el [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propiedad de un elemento visual mediante un `StaticResource` o `DynamicResource` marcado extensión.
 
 ## <a name="the-basic-style"></a>El estilo básico
 
@@ -40,7 +40,7 @@ No se puede establecer controladores de eventos un `Style`. El `GestureRecognize
 
 ## <a name="styles-in-code"></a>Estilos de código
 
-Aunque no es común, puede crear instancias e inicializar `Style` objetos en el código. Esto se demuestra el [ **BasicStyleCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyleCode) ejemplo.
+Aunque no es común, puede crear una instancia e inicializar `Style` objetos en el código. Esto se demuestra el [ **BasicStyleCode** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter12/BasicStyleCode) ejemplo.
 
 ## <a name="style-inheritance"></a>Herencia de estilo
 

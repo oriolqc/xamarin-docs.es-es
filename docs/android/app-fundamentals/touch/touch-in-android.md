@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 9a6f7f5c82808b6430ba1aa6178a543945ae2634
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a25a1c3be8c952536c0ef40b7f7c4a64f5748516
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104913"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527240"
 ---
 # <a name="touch-in-android"></a>Entrada táctil de Android
 
@@ -80,7 +80,7 @@ Esta interfaz proporciona seis métodos para los gestos distintos:
 -  *OnSingleTapUp* -se le llama cuando se produce un único punteo.
 
 
-En muchos casos las aplicaciones solo pueden estar interesadas en un subconjunto de los gestos. En este caso, las aplicaciones deben ampliar la clase GestureDetector.SimpleOnGestureListener y reemplazar los métodos que corresponden a los eventos que les interesan.
+En muchos casos las aplicaciones solo pueden estar interesadas en un subconjunto de los gestos. En este caso, las aplicaciones deben ampliar la clase GestureDetector.SimpleOnGestureListener y reemplazar los métodos que corresponden a los eventos que están interesados en.
 
 ## <a name="custom-gestures"></a>Gestos personalizados
 
@@ -134,7 +134,7 @@ El fragmento XML siguiente muestra cómo agregar un GestureOverlayView mediante 
     android:layout_height="match_parent" />
 ```
 
-El `GestureOverlayView` tiene varios eventos que se generará durante el proceso de dibujo de un gesto. El evento más interesante es `GesturePeformed`. Este evento se desencadena cuando el usuario ha completado su gesto de dibujo.
+El `GestureOverlayView` tiene varios eventos que se generará durante el proceso de dibujo de un gesto. El evento más interesante es `GesturePerformed`. Este evento se desencadena cuando el usuario ha completado su gesto de dibujo.
 
 Cuando se genera este evento, la actividad pide un `GestureLibrary` para intentar coincidir con el gesto creados por el usuario con uno de los movimientos de la herramienta gesto. `GestureLibrary` Devuelve una lista de objetos de predicción.
 

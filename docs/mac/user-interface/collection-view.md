@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 05/24/2017
-ms.openlocfilehash: 904db0b97a8b21fd51722b70a63386a53e3f5347
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 82dd175222289676c3dacd80522c55e71ba12180
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104042"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526838"
 ---
 # <a name="collection-views-in-xamarinmac"></a>Vistas de colección en Xamarin.Mac
 
 _En este artículo se describe cómo trabajar con las vistas de colección en una aplicación de Xamarin.Mac. Trata la creación y mantenimiento de las vistas de colección en Xcode e Interface Builder y trabajar con ellos mediante programación._
 
-Cuando trabaja con C# y .NET en una aplicación de Xamarin.Mac, el desarrollador tiene acceso a la misma vista de colección AppKit que controla un desarrollador que trabaje en *Objective-C* y *Xcode* does. Ya que Xamarin.Mac se integra directamente con Xcode, el programador usa Xcode _Interface Builder_ para crear y mantener las vistas de colección.
+Cuando se trabaja con C# y .NET en una aplicación de Xamarin.Mac, el desarrollador tiene acceso a la misma vista de colección AppKit que controla un desarrollador que trabaja *Objective-C* y *Xcode* does. Ya que Xamarin.Mac se integra directamente con Xcode, el programador usa Xcode _Interface Builder_ para crear y mantener las vistas de colección.
 
 Un `NSCollectionView` muestra una cuadrícula de subvistas organizada mediante un `NSCollectionViewLayout`. Cada vista secundaria en la cuadrícula se representa mediante un `NSCollectionViewItem` que administra la carga de contenido de la vista de un `.xib` archivo.
 

@@ -7,18 +7,18 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a202dd32bcde5cf91cce3f597c9ea7c17f4adbcd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fd97dbbe102c5a755c4a8974cf1a952c0050ac7c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113580"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527188"
 ---
 # <a name="outline-views-in-xamarinmac"></a>Vistas de esquema en Xamarin.Mac
 
 _En este artículo se explica cómo trabajar con vistas de esquema en una aplicación de Xamarin.Mac. Describe cómo crear y mantener vistas de esquema en Xcode e Interface Builder y trabajar con ellos mediante programación._
 
-Cuando se trabaja con C# y .NET en una aplicación de Xamarin.Mac, se tiene acceso al mismo esquema que ve un desarrollador que trabaje en *Objective-C* y *Xcode* does. Ya que Xamarin.Mac se integra directamente con Xcode, puede usar Xcode _Interface Builder_ para crear y mantener las vistas de esquema (o bien, opcionalmente, crearlos directamente en código de C#).
+Cuando se trabaja con C# y .NET en una aplicación de Xamarin.Mac, tiene acceso para el mismo esquema que ve un desarrollador que trabaja *Objective-C* y *Xcode* does. Ya que Xamarin.Mac se integra directamente con Xcode, puede usar Xcode _Interface Builder_ para crear y mantener las vistas de esquema (o bien, opcionalmente, crearlos directamente en código de C#).
 
 Una vista de esquema es un tipo de tabla que permite al usuario expandir o contraer las filas de datos jerárquicos. Al igual que una vista de tabla, una vista de esquema muestra datos de un conjunto de elementos relacionados, con filas que representan los elementos individuales y las columnas que representan los atributos de esos elementos. A diferencia de una vista de tabla, los elementos de una vista de esquema no están en una lista plana, están organizados en una jerarquía, como archivos y carpetas en un disco duro.
 

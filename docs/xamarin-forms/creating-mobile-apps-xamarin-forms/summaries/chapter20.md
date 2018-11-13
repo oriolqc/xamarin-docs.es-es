@@ -4,15 +4,15 @@ description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del 
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
-author: charlespetzold
-ms.author: chape
+author: davidbritch
+ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: d606432174807498fd458470647109de4fa0b6b4
-ms.sourcegitcommit: 8555a4dd1a579b2206f86c867125ee20fbc3d264
+ms.openlocfilehash: 527ecfa03adb78d8b97e95d0b6b81ceb12f0a107
+ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/19/2018
-ms.locfileid: "39156735"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51563776"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Resumen del capítulo 20. E/S de archivo y Async
 
@@ -28,7 +28,7 @@ Varios programas de ejemplo en este libro se han usado el [ `WebRequest` ](xref:
 > [!NOTE]
 > Deben usar programas de Xamarin.Forms [ `HttpClient` ](xref:System.Net.Http.HttpClient) lugar [ `WebRequest` ](xref:System.Net.WebRequest) para tener acceso a archivos a través de internet. `HttpClient` admite operaciones asincrónicas.
 
-Un enfoque más moderno para el procesamiento asincrónico está disponible en .NET y C#. Esto implica la [ `Task` ](xref:System.Threading.Tasks.Task) y [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) clases y otros tipos en el [ `System.Threading` ](xref:System.Threading) y [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) espacios de nombres, así como C# 5.0 `async` y `await` palabras clave. Eso es lo que en este capítulo se centra en.
+Un enfoque más moderno para el procesamiento asincrónico está disponible en .NET y C#. Esto implica la [ `Task` ](xref:System.Threading.Tasks.Task) y [ `Task<TResult>` ](xref:System.Threading.Tasks.Task`1) clases y otros tipos en el [ `System.Threading` ](xref:System.Threading) y [ `System.Threading.Tasks` ](xref:System.Threading.Tasks) espacios de nombres, así como el C# 5.0 `async` y `await` palabras clave. Eso es lo que en este capítulo se centra en.
 
 ## <a name="from-callbacks-to-await"></a>En las devoluciones de llamada a await
 
@@ -171,4 +171,4 @@ El [ `WebRequest` ](xref:System.Net.WebRequest) clase usada en algunos ejemplos 
 
 - [Capítulo 20 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf)
 - [Capítulo 20 muestras](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
-- [Working with Files (Trabajo con archivos)](~/xamarin-forms/app-fundamentals/files.md)
+- [Trabajar con archivos](~/xamarin-forms/app-fundamentals/files.md)

@@ -7,12 +7,12 @@ ms.assetid: 2D696CB6-B31B-42BC-8D3B-11D63B1E7D9C
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: 7f34bd5bbab4accaa30c22266dacd30692bf9ccc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 876594440c28fb0f30e0438f2ef02ae7fe89040c
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107578"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526512"
 ---
 # <a name="saving-skiasharp-bitmaps-to-files"></a>Guardar mapas de bits de SkiaSharp en archivos
 
@@ -54,13 +54,13 @@ public Boolean Encode (SKWStream dst, SKEncodedImageFormat format, Int32 quality
 
 Este método se describe más detalladamente en breve. El mapa de bits codificado se escribe en una secuencia de escritura. ('W' en `SKWStream` es el acrónimo de "escritura".) Los argumentos segundo y terceros especifican el formato de archivo y (para los formatos con pérdida de datos) la calidad deseada comprendida entre 0 y 100.
 
-Además, el [ `SKImage` ](xref:SkiaSharp.SKImage) y [ `SKPixmap` ](xref:SkiaSharp.SKPixmap) también definen clases `Encode` métodos que son un poco más versátiles y es posible que prefiera. Puede crear fácilmente un `SKImage` objeto desde un `SKBitmap` objeto estático [ `SKImage.FromBitmap` ](xref:SkiaSharp.SKImage.FromBitmap(SkiaSharp.SKBitmap)) método. Puede obtener un `SKPixmap` objeto desde un `SKBitmp` objeto utilizando el [ `PeekPixels` ](xref:SkiaSharp.SKBitmap.PeekPixels) método.
+Además, el [ `SKImage` ](xref:SkiaSharp.SKImage) y [ `SKPixmap` ](xref:SkiaSharp.SKPixmap) también definen clases `Encode` métodos que son un poco más versátiles y es posible que prefiera. Puede crear fácilmente un `SKImage` objeto desde un `SKBitmap` objeto estático [ `SKImage.FromBitmap` ](xref:SkiaSharp.SKImage.FromBitmap(SkiaSharp.SKBitmap)) método. Puede obtener un `SKPixmap` objeto desde un `SKBitmap` objeto utilizando el [ `PeekPixels` ](xref:SkiaSharp.SKBitmap.PeekPixels) método.
 
 Uno de los [ `Encode` ](xref:SkiaSharp.SKImage.Encode) métodos definidos por `SKImage` no tiene parámetros y guarda automáticamente en un formato PNG. Es muy fácil de usar ese método sin parámetros.
 
 ## <a name="platform-specific-code-for-saving-bitmap-files"></a>Código específico de plataforma para guardar los archivos de mapa de bits
 
-Cuando se codifica un `SKBitmap` dan formato a objeto en un archivo determinado, por lo general podrá dejarse con un objeto de secuencia de algún tipo o una matriz de datos. Algunos de los `Encode` métodos (incluido con ningún parámetro definido por el `SKImage`) devolver un [ `SKData` ](xref:SkiaSharp.SKData) objeto, que se puede convertir en una matriz de bytes utilizando el [ `ToArray` ](xref:SkiaSharp.SKData.ToArray) método. Estos datos, a continuación, deben guardarse en un archivo. 
+Cuando se codifica un `SKBitmap` dan formato a objeto en un archivo determinado, por lo general obtendrá un objeto de secuencia de algún tipo o una matriz de datos. Algunos de los `Encode` métodos (incluido con ningún parámetro definido por el `SKImage`) devolver un [ `SKData` ](xref:SkiaSharp.SKData) objeto, que se puede convertir en una matriz de bytes utilizando el [ `ToArray` ](xref:SkiaSharp.SKData.ToArray) método. Estos datos, a continuación, deben guardarse en un archivo. 
 
 Guardar datos en un archivo en almacenamiento local para la aplicación es bastante fácil porque puede utilizar estándar `System.IO` clases y métodos para esta tarea. Esta técnica se muestra en el artículo [ **animar los mapas de bits de SkiaSharp** ](animating.md#bitmap-animation) en relación con la animación de una serie de mapas de bits del conjunto de Mandelbrot.
 

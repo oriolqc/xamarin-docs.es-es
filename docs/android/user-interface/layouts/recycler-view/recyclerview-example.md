@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/30/2018
-ms.openlocfilehash: 67bf38c11fd6e82e05b2a10704973ca10de03083
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d71c4f0f3221d06c22876329a5933273d8d6f92d
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108657"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526772"
 ---
 # <a name="a-basic-recyclerview-example"></a>Un ejemplo de RecyclerView básico
 
@@ -118,7 +118,7 @@ mRecyclerView.SetLayoutManager (mLayoutManager);
 
 Este código reside en la actividad principal `OnCreate` método. El constructor para el Administrador de diseño requiere una *contexto*, por lo que `MainActivity` se pasa mediante `this` tal como se muestra anteriormente.
 
-En lugar de usar el predefind `LinearLayoutManager`, puede conectar un administrador de diseño personalizado que muestra dos `CardView` elementos side-by-side, implementar un efecto de animación pasar para recorrer en iteración la colección de fotos. Más adelante en esta guía, verá un ejemplo de cómo modificar el diseño mediante el intercambio en un administrador de diseño diferente.
+En lugar de usar predefinido `LinearLayoutManager`, puede conectar un administrador de diseño personalizado que muestra dos `CardView` elementos side-by-side, implementar un efecto de animación pasar para recorrer en iteración la colección de fotos. Más adelante en esta guía, verá un ejemplo de cómo modificar el diseño mediante el intercambio en un administrador de diseño diferente.
 
 <a name="view-holder" />
 
@@ -391,7 +391,7 @@ Este cambio de código reemplaza la vertical `LinearLayoutManager` con un `GridL
 
 [![Captura de pantalla de ejemplo de aplicación con fotografías de desplazamiento horizontal en una cuadrícula](recyclerview-example-images/04-gridlayoutmanager-sml.png)](recyclerview-example-images/04-gridlayoutmanager.png#lightbox)
 
-Cambiando únicamente una línea de código es es posible modificar la aplicación de visualización de fotografías para usar un diseño diferente con un comportamiento diferente.
+Cambiando únicamente una línea de código, es posible modificar la aplicación de visualización de fotografías para usar un diseño diferente con un comportamiento diferente.
 Tenga en cuenta que el código del adaptador ni el diseño XML tenía que modificarse para cambiar el estilo de diseño. 
 
 En el tema siguiente, [ampliando el ejemplo de RecyclerView](~/android/user-interface/layouts/recycler-view/extending-the-example.md), esta aplicación de ejemplo básico se ha ampliado para controlar eventos click de elemento y actualizar `RecyclerView` cuando los cambios de origen de datos subyacente.

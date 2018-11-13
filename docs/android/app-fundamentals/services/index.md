@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: b9aa29507ebb37e3912b1027419e47c82832dfa9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dfc0e1cb7239381ef2f495b0f9774d390b0dc82e
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116516"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527201"
 ---
 # <a name="creating-android-services"></a>Creación de servicios de Android
 
@@ -59,7 +59,7 @@ También es posible ejecutar un servicio en su propio proceso en el mismo dispos
 
 ### <a name="background-execution-limits-in-android-80"></a>Límites de ejecución en segundo plano en Android 8.0
 
-A partir de Android 8.0 (nivel de API 26), una aplicación Android ya no tiene la capacidad de ejecutar libremente en segundo plano. En primer plano, una aplicación puede iniciar y ejecutar los servicios sin restricciones. Cuando una aplicación se mueve en segundo plano, Android le dará a la aplicación de una cierta cantidad de tiempo para iniciar y usar los servicios. Una vez transcurrido ese tiempo, la aplicación ya no puede iniciar los servicios y se terminarán todos los servicios que se iniciaron. En este punto no es posible que la aplicación realizar cualquier trabajo. Android considera que una aplicación puede estar en primer plano, si se cumple una de las condiciones siguientes:
+A partir de Android 8.0 (nivel de API 26), una aplicación Android ya no tiene la capacidad de ejecutar libremente en segundo plano. En primer plano, una aplicación puede iniciar y ejecutar los servicios sin restricciones. Cuando una aplicación se mueve en segundo plano, Android le dará a la aplicación de una cierta cantidad de tiempo para iniciar y usar los servicios. Una vez transcurrido ese tiempo, la aplicación ya no puede iniciar los servicios y se terminarán todos los servicios que se iniciaron. En este momento no es posible que la aplicación realizar cualquier trabajo. Android considera que una aplicación puede estar en primer plano, si se cumple una de las condiciones siguientes:
 
 * Hay una actividad visible (iniciado o en pausa).
 * La aplicación ha iniciado un servicio de primer plano.
@@ -70,7 +70,7 @@ Existen algunas situaciones donde, aunque es una aplicación en segundo plano, A
 * La aplicación recibe una difusión. 
 * La aplicación recibe una ejecuta un `PendingIntent` en respuesta a una notificación.
 
-Las aplicaciones existentes de Xamarin.Android que tenga que cambiar la forma de realizar tareas en segundo plano para evitar cualquier problema que pueda surgir en Android 8.0. Estas son algunas prácticas alterantives a un servicio de Android:
+Las aplicaciones existentes de Xamarin.Android que tenga que cambiar la forma de realizar tareas en segundo plano para evitar cualquier problema que pueda surgir en Android 8.0. Estas son algunas alternativas prácticas para un servicio de Android:
 
 * **Programar el trabajo para ejecutar en segundo plano mediante el programador de trabajos de Android o el [distribuidor de trabajo de Firebase](~/android/platform/firebase-job-dispatcher.md)**  &ndash; estas dos bibliotecas proporcionan un marco para aplicaciones separar los trabajos en segundo plano en _trabajos_, una unidad de trabajo discreta. Aplicaciones, a continuación, pueden programar el trabajo con el sistema operativo junto con algunos criterios sobre cuándo puede ejecutar el trabajo.
 * **Iniciar el servicio en primer plano** &ndash; un servicio de primer plano es útil para cuando la aplicación debe realizar alguna tarea en segundo plano y el usuario que deba periódicamente interactuar con esa tarea. El servicio de primer plano mostrará una notificación persistente para que el usuario sea consciente de que la aplicación se está ejecutando una tarea en segundo plano y también proporciona una manera de supervisar o interactuar con la tarea. Un ejemplo de esto sería una aplicación de podcasting reproducir un podcast para el usuario o quizás descarga un episodio del podcast para que tenían más adelante. 

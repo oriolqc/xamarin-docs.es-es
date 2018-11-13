@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: a519af9e4bddb949b6e0547387d804f1437deb21
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0d5bfa83bee74a799398912f77f21cba10c7be45
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104614"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51526319"
 ---
 # <a name="building-tvos-user-interfaces-with-xamarin"></a>Creación de Interfaces de usuario con Xamarin de tvOS
 
 _Cobertura de general experiencia del usuario (UX), incluidos los controles de interfaz de usuario (UI), usar Interface Builder de Xcode y los principios de diseño de experiencia de usuario cuando se trabaja con Xamarin.tvOS._
 
-Cuando se trabaja con C# y .NET en una tvOS basadas en Xamarin, tiene acceso a los mismos controles de interfaz de usuario que realiza un desarrollador que trabaje en Objective-C o Swift y Xcode. Interface Builder de Xcode se puede usar para crear y mantener las Interfaces de usuario (o si lo desea crearlos directamente en C# código).
+Cuando se trabaja con C# y .NET en una tvOS basadas en Xamarin, tiene acceso a los mismos controles de interfaz de usuario que realiza un desarrollador que trabaja en Objective-C o Swift y Xcode. Interface Builder de Xcode se puede usar para crear y mantener las Interfaces de usuario (o si lo desea crearlos directamente en C# código).
 
 Las guías siguientes ofrecen información detallada sobre cómo trabajar con elementos de interfaz de usuario de tvOS en una aplicación Xamarin.tvOS. Se recomienda que trabaje en el [Hola, Guía de inicio rápido de tvOS](~/ios/tvos/get-started/hello-tvos.md) en primer lugar, ya que abarca los conceptos clave y las técnicas que vamos a usar en todos los artículos.
 
