@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 958ca967764b4547d6bdf64452e372d3ea4abd1e
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 7d0ccfeaa85e74b15f1d1bf2feae8e4404b36813
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39351527"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617350"
 documentType: LandingData
 title: Xamarin.Forms
 metadata:
@@ -57,7 +57,7 @@ sections:
     - href: ~/xamarin-forms/get-started/index.md
       html: Tutoriales para ayudarle a ponerse manos a la obra con Xamarin.Forms. Asegúrese de que todo se ha instalado correctamente y cree sus primeras aplicaciones de Xamarin.Forms.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/xamarin-forms/get-started/index.md
       title: Introducción
     - href: ~/xamarin-forms/xaml/
@@ -87,7 +87,7 @@ sections:
     - href: ~/essentials/index.md?context=xamarin/xamarin-forms
       html: API multiplataforma pensadas para las tareas habituales, por ejemplo, el acceso a los archivos, la información del dispositivo, las características de hardware y mucho más.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_multi-connect.svg
+        src: https://docs.microsoft.com/media/common/i_multi-connect.svg
         href: ~/essentials/index.md?context=xamarin/xamarin-forms
       title: Xamarin.Essentials
     - href: ~/xamarin-forms/data-cloud/
@@ -105,7 +105,7 @@ sections:
     - href: ~/xamarin-forms/internals/
       html: Información adicional sobre el funcionamiento interno de Xamarin.Forms y ayuda con características como la localización y accesibilidad.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_config-tools.svg
+        src: https://docs.microsoft.com/media/common/i_config-tools.svg
         href: ~/xamarin-forms/internals/
       title: Conceptos avanzados y funcionamiento interno
 - title: Referencia

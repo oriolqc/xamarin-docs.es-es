@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: f1e860bd5fe08e923fbec90b7ff7da142e7e5871
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 0c8ab21b0f70eed4cbdba882503ee8f82de7f11b
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39350656"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617337"
 documentType: LandingData
 title: Xamarin.Android
 metadata:
@@ -47,7 +47,7 @@ sections:
       text: Aplicaciones de varias pantallas
       href: ~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
     - image:
-        src: https://docs.microsoft.com/en-us/media/common/i_mobile-app-developement.svg
+        src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
       text: Android Pie
       href: ~/android/platform/pie.md
 - title: Guías
@@ -59,7 +59,7 @@ sections:
     - href: ~/android/get-started/index.md
       html: Tutoriales para ayudarle a ponerse manos a la obra con Xamarin.Android. Asegúrese de que todo se ha instalado correctamente y cree sus primeras aplicaciones Mac.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_get-started.svg
+        src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/android/get-started/index.md
       title: Introducción
     - href: ~/android/app-fundamentals/
@@ -83,7 +83,7 @@ sections:
     - href: ~/essentials/index.md?context=xamarin/android
       html: API multiplataforma para aplicaciones móviles.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_multi-connect.svg
+        src: https://docs.microsoft.com/media/common/i_multi-connect.svg
         href: ~/essentials/index.md?context=xamarin/android
       title: Xamarin.Essentials
     - href: ~/android/data-cloud/
@@ -101,7 +101,7 @@ sections:
     - href: ~/android/internals/
       html: Información adicional sobre el funcionamiento interno de Xamarin.Android y ayuda con características como la localización y accesibilidad.
       image:
-        src: https://docs.microsoft.com/en-us/media/common/i_advanced.svg
+        src: https://docs.microsoft.com/media/common/i_advanced.svg
         href: ~/android/internals/
       title: Conceptos avanzados y funcionamiento interno
     - href: ~/android/wear/
@@ -118,7 +118,7 @@ sections:
     items:
     - title: API
       href: https://developer.xamarin.com/api/root/MonoAndroid-lib/
-      html: <p><a href="https://developer.xamarin.com/api/root/MonoAndroid-lib/">Documentos de la API de Android</a></p><p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarinandroid-7.1">Biblioteca de clases base</a></p>
+      html: <p><a href="https://developer.xamarin.com/api/root/MonoAndroid-lib/">Documentos de la API de Android</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">Biblioteca de clases base</a></p>
     - title: Muestras
       href: https://developer.xamarin.com/samples/android/all/
       html: <p><a href="https://developer.xamarin.com/samples/android/all/">Ejemplos de Android</a></p>

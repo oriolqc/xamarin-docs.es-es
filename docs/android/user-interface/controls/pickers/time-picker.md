@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 911101d44e3ae401910b35b93d85ba3f79ddd35a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 08fa9000a1fd9c97f7881a4a13c15fabfa6dda47
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103990"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617675"
 ---
 # <a name="time-picker"></a>Selector de hora
 
@@ -279,7 +279,7 @@ Este cambio fuerza el indicador pasando a la `TimePickerDialog` constructor sea 
 
 [![Cuadro de diálogo de TimePicker en formato de 24 horas](time-picker-images/05-24hr-time-dialog-sml.png)](time-picker-images/05-24hr-time-dialog.png#lightbox)
 
-Dado que el controlador llama a [DateTime.ToShortTimeString](https://msdn.microsoft.com/en-us/library/system.datetime.toshortdatestring%28v=vs.110%29.aspx) para imprimir la hora a la actividad `TextView`, todavía se imprime el tiempo en el formato de A.M./P.M. de 12 horas de forma predeterminada.
+Dado que el controlador llama a [DateTime.ToShortTimeString](xref:System.DateTime.ToShortDateString*) para imprimir la hora a la actividad `TextView`, todavía se imprime el tiempo en el formato de A.M./P.M. de 12 horas de forma predeterminada.
 
 
 

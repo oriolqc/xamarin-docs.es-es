@@ -7,12 +7,12 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 527ecfa03adb78d8b97e95d0b6b81ceb12f0a107
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: a795b382b9bcc727b0b0872d29d30a501cfed0a6
+ms.sourcegitcommit: f3f28722198e172d81c16bdeab0cb0a581a08dd0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563776"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598904"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Resumen del capítulo 20. E/S de archivo y Async
 
@@ -23,7 +23,7 @@ ms.locfileid: "51563776"
 
 Los usuarios esperan interfaces gráficas de usuario tienen capacidad de respuesta. Esto significa que un programa debe procesar rápidamente los eventos de entrada del usuario. Si no es posible, procesamiento, a continuación, debe relegado a subprocesos secundarios de ejecución.
 
-Varios programas de ejemplo en este libro se han usado el [ `WebRequest` ](xref:System.Net.WebRequest) clase. En esta clase la [ `BeginGetReponse` ](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)) método inicia un subproceso de trabajo, que llama a una función de devolución de llamada cuando se complete. Sin embargo, esa función de devolución de llamada se ejecuta en el subproceso de trabajo, por lo que el programa debe llamar a [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) método para acceder a la interfaz de usuario.
+Varios programas de ejemplo en este libro se han usado el [ `WebRequest` ](xref:System.Net.WebRequest) clase. En esta clase la [ `BeginGetResponse` ](xref:System.Net.WebRequest.BeginGetResponse(System.AsyncCallback,System.Object)) método inicia un subproceso de trabajo, que llama a una función de devolución de llamada cuando se complete. Sin embargo, esa función de devolución de llamada se ejecuta en el subproceso de trabajo, por lo que el programa debe llamar a [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) método para acceder a la interfaz de usuario.
 
 > [!NOTE]
 > Deben usar programas de Xamarin.Forms [ `HttpClient` ](xref:System.Net.Http.HttpClient) lugar [ `WebRequest` ](xref:System.Net.WebRequest) para tener acceso a archivos a través de internet. `HttpClient` admite operaciones asincrónicas.

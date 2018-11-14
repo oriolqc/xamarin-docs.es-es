@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 008fc22d654478df3151706101ef07bc0a23acb8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4d5319005b28c5afa0906c44cfa59f0cad40de76
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111571"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617623"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 en Xamarin.iOS
 
@@ -373,7 +373,7 @@ La característica de final de los titulares de ARKit 2 es la adopción de Apple
 
 En ARKit, es fundamental para administrar los recursos manualmente. No sólo permite velocidades de fotogramas alta, en realidad es _necesario_ para evitar un confuso "inmovilización de pantalla". El marco de ARKit es diferido sobre cómo proporcionar un nuevo marco de la cámara ([`ARSession.CurrentFrame`](https://developer.xamarin.com/api/property/ARKit.ARSession.CurrentFrame/)). Hasta el actual [ `ARFrame` ](https://developer.xamarin.com/api/type/ARKit.ARFrame/) ha tenido `Dispose()` llamado en ella, ARKit no proporcionará un nuevo marco! Esto hace que el vídeo se "bloquee", aunque el resto de la aplicación está respondiendo. La solución consiste en acceder siempre `ARSession.CurrentFrame` con un `using` bloquear o llamar manualmente a `Dispose()` en él.
 
-Todos los objetos derivados de `NSObject` son `IDisposable` y `NSObject` implementa el [patrón Dispose](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/dispose-pattern), por lo que debe seguir normalmente [este modelo de implementación `Dispose` en una derivada clase](https://docs.microsoft.com/en-us/dotnet/standard/garbage-collection/implementing-dispose).
+Todos los objetos derivados de `NSObject` son `IDisposable` y `NSObject` implementa el [patrón Dispose](https://docs.microsoft.com/dotnet/standard/design-guidelines/dispose-pattern), por lo que debe seguir normalmente [este modelo de implementación `Dispose` en una derivada clase](https://docs.microsoft.com/dotnet/standard/garbage-collection/implementing-dispose).
 
 ### <a name="manipulating-transform-matrices"></a>Manipulación de matrices de transformación
 

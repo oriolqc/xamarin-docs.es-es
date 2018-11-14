@@ -1,5 +1,5 @@
 ---
-title: Ajustar los parámetros de la memoria de Java para Android designer
+title: Ajuste de los parámetros de memoria de Java para Android Designer
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: cf0df42ba398944a99cc4179b94f0d3cb8ba503e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c564789f704180e9acc9f96dcba5e7d6eb20634
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118063"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617246"
 ---
-# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Ajustar los parámetros de la memoria de Java para Android designer
+# <a name="adjusting-java-memory-parameters-for-the-android-designer"></a>Ajuste de los parámetros de memoria de Java para Android Designer
 
 Los parámetros de memoria predeterminados que se usan al iniciar el `java` procesar para el Diseñador de Android podría ser incompatible con algunas configuraciones del sistema.
 
@@ -35,7 +35,7 @@ Los nombres de propiedad siguientes corresponden a java indicado [opción de lí
 
 1.  Abra su solución en Visual Studio.
 
-2.  Seleccione cada proyecto de Android uno por uno en el Explorador de soluciones y haga clic en [mostrar todos los archivos](https://msdn.microsoft.com/en-us/library/4afxey9h.aspx) dos veces en cada proyecto. Puede omitir los proyectos que no contienen ningún `.axml` archivos de diseño. Este paso garantizará que cada directorio del proyecto contiene un `.csproj.user` archivo.
+2.  Seleccione cada proyecto de Android uno por uno en el Explorador de soluciones y haga clic en [mostrar todos los archivos](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90)) dos veces en cada proyecto. Puede omitir los proyectos que no contienen ningún `.axml` archivos de diseño. Este paso garantizará que cada directorio del proyecto contiene un `.csproj.user` archivo.
 
 3.  Salga de Visual Studio.
 

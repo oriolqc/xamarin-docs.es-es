@@ -8,17 +8,17 @@ author: pierceboggan
 ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
-ms.openlocfilehash: bb30f9264cb5f3b762088e3523223b2bff8416b9
-ms.sourcegitcommit: ebc0b3838836ee5cf9e54d58866d23916664a43d
+ms.openlocfilehash: 21ff09f2af93ee46578b959111bf744ba05a74d7
+ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50142341"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51617662"
 ---
 # <a name="xamarin-live-reload-preview"></a>Recarga en vivo de Xamarin (versión preliminar)
 
 > [!NOTE]
-> La versión preliminar de Xamarin Live Reload ha finalizado y queremos dar las gracias a todos por sus sugerencias y comentarios. Lea nuestra [plan](https://docs.microsoft.com/en-us/visualstudio/productinfo/vs-roadmap) para Visual Studio de 2019 obtener más información sobre las nuevas características de productividad que estamos trabajando para Xamarin.Forms. Esta extensión seguirá estando disponible para Visual Studio 2017, pero no se recibe las actualizaciones futuras.
+> La versión preliminar de Xamarin Live Reload ha finalizado y queremos dar las gracias a todos por sus sugerencias y comentarios. Lea nuestra [plan](https://docs.microsoft.com/visualstudio/productinfo/vs-roadmap) para Visual Studio de 2019 obtener más información sobre las nuevas características de productividad que estamos trabajando para Xamarin.Forms. Esta extensión seguirá estando disponible para Visual Studio 2017, pero no se recibe las actualizaciones futuras.
 
 Recarga de Xamarin Live permite **realizar cambios en el XAML y ver que se reflejen en directo, sin necesidad de otra compilación e implementar**. Los cambios realizados en el XAML se implementará en Guardar y se refleja en el destino de implementación.
 
