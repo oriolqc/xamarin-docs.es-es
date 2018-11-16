@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 219c6bb4cd5718c969ba83a55596ad7b0bab8baf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 815e3ddf44ae94b6b26a325599de1f4c1f6714a8
+ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121131"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681545"
 ---
 # <a name="architecture"></a>Arquitectura
 
@@ -33,7 +33,8 @@ Para obtener más información sobre cómo se comunican las clases de Android co
 
 Los paquetes de aplicación de Android son contenedores ZIP con una *.apk* la extensión de archivo. Paquetes de aplicación de Xamarin.Android tienen la misma estructura y el diseño de paquetes de Android normal, con las siguientes adiciones:
 
--   Los ensamblados de aplicación (que contiene IL) son *almacenados* sin comprimir en el *ensamblados* carpeta. Durante el proceso de inicio en la versión se basa el *.apk* es *mmap()* ed en el proceso y los ensamblados se cargan desde la memoria. Esto permite inicio de la aplicación más rápido, como los ensamblados no es necesario que deben extraerse antes de la ejecución. - *Nota:* información de ubicación del ensamblado como [Assembly.Location](xref:System.Reflection.Assembly.Location) y [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
+-   Los ensamblados de aplicación (que contiene IL) son *almacenados* sin comprimir en el *ensamblados* carpeta. Durante el proceso de inicio en la versión se basa el *.apk* es *mmap()* ed en el proceso y los ensamblados se cargan desde la memoria. Esto permite inicio de la aplicación más rápido, como los ensamblados no es necesario que deben extraerse antes de la ejecución.  
+-   *Nota:* información de ubicación del ensamblado como [Assembly.Location](xref:System.Reflection.Assembly.Location) y [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
     *no se puede basar* en versión compilaciones. No existen como entradas del sistema de archivos distintos, y no tienen que ninguna ubicación utilizable.
 
 
@@ -44,7 +45,7 @@ Las aplicaciones de Xamarin.Android también contienen *Android contenedores RCW
 
 
 
-## <a name="android-callable-wrappers"></a>Android contenedores RCW
+## <a name="android-callable-wrappers"></a>Contenedores que se pueden llamar de Android
 
 - **Contenedores invocables Android** son un [JNI](http://en.wikipedia.org/wiki/Java_Native_Interface) puente que se usa cuando el tiempo de ejecución de Android necesita invocar código administrado. Contenedores invocables Android son métodos virtuales se pueden invalidar y se pueden implementar interfaces de Java. Consulte la [Java Integration Overview](~/android/platform/java-integration/index.md) doc para obtener más información.
 

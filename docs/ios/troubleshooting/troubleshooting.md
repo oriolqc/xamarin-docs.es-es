@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 4d887d5a57aa3a632bd2f6795052c5b38f66a75a
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 4ab6b217190ea633611a9c869ec7e93befcc3c56
+ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527175"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51681571"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Sugerencias para solucionar problemas de Xamarin.iOS 
 
@@ -46,9 +46,10 @@ Puede que esté usando una codificación no se agrega de forma predeterminada. C
 
 El miembro es probable que se ha quitado el vinculador y, por tanto, no existe en el ensamblado en tiempo de ejecución.  Existen varias soluciones a este:
 
--  Agregar el [[conservar]](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) al miembro de atributo.  Esto impedirá que el vinculador quitarlo.
--  Al invocar [mtouch](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29) , utilice el **- nolink** o **- linksdkonly** opciones. -    **-nolink** deshabilita todos los vínculos.
--    **-linksdkonly** vinculará solo los ensamblados siempre Xamarin.iOS, como *monotouch.dll* o xamarin.ios.dll.
+- Agregar el [ `[Preserve]` ](http://www.go-mono.com/docs/index.aspx?link=T:MonoTouch.Foundation.PreserveAttribute) al miembro de atributo.  Esto impedirá que el vinculador quitarlo.
+- Al invocar [ **mtouch**](http://www.go-mono.com/docs/index.aspx?link=man:mtouch%281%29), utilice el **- nolink** o **- linksdkonly** opciones:
+  - **-nolink** deshabilita todos los vínculos.
+  - **-linksdkonly** vinculará solo los ensamblados siempre Xamarin.iOS, como **xamarin.ios.dll**, al tiempo que conserva todos los tipos en ensamblados creados por el usuario (es decir. los proyectos de aplicación).
 
 Tenga en cuenta que los ensamblados están vinculados para que el archivo ejecutable resultante es más pequeño; por lo tanto, al deshabilitar la vinculación puede producir un archivo ejecutable mayor que es deseable.
 

@@ -6,13 +6,13 @@ ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 03/22/2017
-ms.openlocfilehash: 0dd9832a2e4dd0803f92d6e3923fe178252211f4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/15/2018
+ms.openlocfilehash: 86055932edf82f04e11c9ae8dd684a3d77c3d830
+ms.sourcegitcommit: da2260a882dbda02732e21cad5cc9a9dd35e27e7
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103574"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51709233"
 ---
 # <a name="appearance-api-in-xamarinios"></a>Apariencia de API de Xamarin.iOS
 
@@ -32,11 +32,10 @@ Hay dos maneras diferentes de aplicar una apariencia personalizada:
 
 La aplicación de ejemplo del aspecto muestra los tres métodos, como se muestra en estas capturas de pantalla:
 
- [![](introduction-to-the-appearance-api-images/appearance01.png "La aplicación de ejemplo del aspecto muestra los tres métodos")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
+[![](introduction-to-the-appearance-api-images/appearance01-sml.png "La aplicación de ejemplo del aspecto muestra los tres métodos")](introduction-to-the-appearance-api-images/appearance01.png#lightbox)
 
 A partir de iOS 8, el proxy de apariencia se ha ampliado a TraitCollections.
  `AppearanceForTraitCollection` puede utilizarse para establecer la apariencia predeterminada de una colección de rasgo determinado. Puede leer más sobre esto en el [Introducción a guiones gráficos](~/ios/user-interface/storyboards/unified-storyboards.md) guía.
-
 
 ## <a name="setting-appearance-properties"></a>Establecer las propiedades de apariencia
 
@@ -72,7 +71,6 @@ progress2.TrackTintColor = UIColor.FromRGB (197,255,132);
 
 La API de apariencia puede ser útil al [aplicar estilos a la aplicación de iOS](~/xamarin-forms/platform/ios/theme.md#uiappearance) en soluciones de Xamarin.Forms. Unas pocas líneas en el `AppDelegate` clase puede ayudar a implementar una combinación de colores específicos sin tener que crear un [representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
-
 ### <a name="custom-themes-and-uiappearance"></a>UIAppearance y temas personalizados
 
 iOS permite muchos atributos visuales del usuario que los controles de interfaz estando "temáticos" con el *UIAppearance* API para forzar que todas las instancias de un control determinado para tener la misma apariencia. Esto se expone como una propiedad Appearance en muchas clases de control de interfaz de usuario, no en las instancias individuales del control. Establecer una propiedad de presentación en estático `Appearance` propiedad afecta a todos los controles de ese tipo en la aplicación.
@@ -91,7 +89,7 @@ Como alternativa, establezca el valor en el panel de propiedades del diseñador:
 
 La siguiente imagen ilustra que esto establece el tono sólo el control denominado 'sg1'.
 
- [![](introduction-to-the-appearance-api-images/image53.png "Establecer el tinte de control individual")](introduction-to-the-appearance-api-images/image53.png#lightbox)
+[![](introduction-to-the-appearance-api-images/image53.png "Establecer el tinte de control individual")](introduction-to-the-appearance-api-images/image53.png#lightbox)
 
 Para establecer muchos controles de esta manera sería ineficaz completamente, por lo que podemos establecer estático en su lugar `Appearance` propiedad en la propia clase. Esto se muestra en el código siguiente:
 
@@ -101,16 +99,14 @@ UISegmentedControl.Appearance.TintColor = UIColor.Magenta;
 
 La siguiente imagen ilustra ahora ambos controles segmentados con el aspecto que se establece en Magenta:
 
- [![](introduction-to-the-appearance-api-images/image54.png "Establecer el tinte de control apariencia")](introduction-to-the-appearance-api-images/image54.png#lightbox)
+[![](introduction-to-the-appearance-api-images/image54.png "Establecer el tinte de control apariencia")](introduction-to-the-appearance-api-images/image54.png#lightbox)
 
 `Appearance` se deben establecer las propiedades al principio del ciclo de vida de aplicación, como en el AppDelegate `FinishedLaunching` evento, o en un ViewController antes de que se muestran los controles afectados.
 
-
 Hacer referencia a la [Introducción a la API de apariencia](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md) para obtener más información.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Apariencia (ejemplo)](https://developer.xamarin.com/samples/monotouch/IntroToAppearance/)
+- [Apariencia (ejemplo)](https://developer.xamarin.com/samples/monotouch/Appearance/)
 - [Referencia del protocolo UIAppearance](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/)
 - [Apariencia en Xamarin.Forms](~/xamarin-forms/platform/ios/theme.md#uiappearance)
