@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: 944b10c579abd3fa6e68a2c0497602600af4f4c1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6e4ff817bcf59f071277b653175066c9727167c1
+ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111439"
+ms.lasthandoff: 11/11/2018
+ms.locfileid: "51527162"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicación de aplicaciones Xamarin.iOS en el App Store
 
@@ -123,7 +123,7 @@ Los nuevos proyectos Xamarin.iOS se establecen automáticamente en las _configur
 
 1. Asegúrese de que Visual Studio 2017 está [emparejado con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Haga clic con el botón derecho en el **nombre del proyecto** en el **Explorador de soluciones** y luego seleccione **Propiedades**.
-3. Vaya a la pestaña **Compilación de iOS** y establezca **Configuration** en **Versión** y **Plataforma** en **iPhone**.
+3. Vaya a la pestaña **Compilación de iOS** y establezca **Configuración** en **Versión** y **Plataforma** en **iPhone**.
 4. Para compilar con un SDK de iOS específico, selecciónelo en la lista **Versión del SDK**. En caso contrario, deje este valor en **Predeterminado**.
 5. La vinculación reduce el tamaño total de la aplicación, ya que elimina el código no usado. En la mayoría de los casos, la opción **Comportamiento del enlazador** debe establecerse en el valor predeterminado **Vincular solo SDK de marco**. En algunos casos, como cuando se usan bibliotecas de terceros, puede ser necesario establecer este valor en **No vincular** para asegurarse de que no se quita el código necesario. Para obtener más información, vea la guía [Vincular aplicaciones Xamarin.iOS](~/ios/deploy-test/linker.md).
 6. Active **Optimizar imágenes PNG** para reducir aún más el tamaño de la aplicación.
