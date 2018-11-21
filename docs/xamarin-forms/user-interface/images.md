@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: f79ee7af9106eea8a4792c0e4bb10c5ad5a367a9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 53179170afa1381a562699a39baaa716ecc6a5a6
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111082"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171201"
 ---
 # <a name="images-in-xamarinforms"></a>Imágenes en Xamarin.Forms
 
