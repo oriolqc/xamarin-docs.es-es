@@ -7,12 +7,12 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: a4fbf2bc38726ad50a07744ed4c2512efbb615bc
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 02ee84560b29fa95d0a16259d5bbbd6bc0144063
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527253"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171214"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Crear y dibujar en mapas de bits de SkiaSharp
 
@@ -169,7 +169,7 @@ Los dos formatos donde cada píxel es 32 píxeles (4 bytes) a menudo se denomina
 
 En la actualidad, los programadores casi siempre usar mapas de bits de color completo y no se moleste con otros formatos. La excepción es el `RgbaF16` formato, lo que permite una mayor resolución de color que incluso los formatos a todo color. Sin embargo, este formato se usa para propósitos especializados, como imágenes médicas y no tiene mucho sentido cuando se usa con las pantallas todo color estándar.
 
-Esta serie de artículos se restringirá a sí misma para la `SKBitmap` color formatos usados de forma predeterminada cuando no hay ninguna `SKColorType` miembro está especificada. Este formato de forma predeterminada se basa en la plataforma subyacente. Para las plataformas compatibles con Xamarin.Forms, el tipo de color predeterminado es:
+Esta serie de artículos se restringirá a sí misma para la `SKBitmap` color formatos usados de forma predeterminada cuando no hay ninguna `SKColorType` se especifica el miembro. Este formato de forma predeterminada se basa en la plataforma subyacente. Para las plataformas compatibles con Xamarin.Forms, el tipo de color predeterminado es:
 
 - `Rgba8888` para iOS y Android
 - `Bgra8888` para UWP

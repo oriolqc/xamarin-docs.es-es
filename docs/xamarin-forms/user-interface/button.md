@@ -6,13 +6,13 @@ ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/26/2018
-ms.openlocfilehash: cdff3e721aa91733e995e95ead533a3ad7b41a77
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.date: 11/19/2018
+ms.openlocfilehash: fbdb611df558c547a2470a8c8a9d7848ef7aa31f
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563932"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171396"
 ---
 # <a name="xamarinforms-button"></a>Botón de Xamarin.Forms
 
@@ -422,7 +422,7 @@ El `Button` hereda o define varias propiedades que afectan a su aspecto:
 - [`FontSize`](xref:Xamarin.Forms.Button.FontSize) es el tamaño del texto
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes) indica si el texto está en negrita o cursiva
 - [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) es el ancho del borde
-- [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) redondea los vértices
+- [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) es el radio de redondeo de la `Button`
 
 > [!NOTE]
 > El `Button` clase también tiene [ `Margin` ](xref:Xamarin.Forms.View.Margin) y [ `Padding` ](xref:Xamarin.Forms.Button.Padding) las propiedades que controlan el comportamiento de diseño de la `Button`. Para obtener más información, consulte [margen y relleno](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
@@ -543,6 +543,40 @@ Para ver el `Button` borde, deberá establecer un `BorderColor` a algo distinto 
 En iOS, observará que los anchos de borde grande interfieren en el interior de la `Button` e interfieren con la presentación del texto. Si opta por utilizar un elemento border con un iOS `Button`, probablemente deseará comenzar y terminar la `Text` propiedad con espacios para conservar su visibilidad.
 
 En UWP, seleccionar un `CornerRadius` que supera la mitad del alto de la `Button` produce una excepción.
+
+## <a name="button-visual-states"></a>Estados del botón visuales
+
+[`Button`](xref:Xamarin.Forms.Button) tiene un `Pressed` [ `VisualState` ](xref:Xamarin.Forms.VisualState) que puede utilizarse para iniciar un cambio visual en el `Button` cuando presiona por el usuario, siempre que lo esté habilitada.
+
+En el siguiente ejemplo XAML se muestra cómo definir un estado visual para el `Pressed` estado:
+
+```xaml
+<Button Text="Click me!"
+        ...>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="CommonStates">
+            <VisualState x:Name="Normal">
+                <VisualState.Setters>
+                    <Setter Property="Scale"
+                            Value="1" />
+                </VisualState.Setters>
+            </VisualState>
+
+            <VisualState x:Name="Pressed">
+                <VisualState.Setters>
+                    <Setter Property="Scale"
+                            Value="0.8" />
+                </VisualState.Setters>
+            </VisualState>
+
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+</ImageButton>
+```
+
+El `Pressed` [ `VisualState` ](xref:Xamarin.Forms.VisualState) especifica que, cuando el [ `Button` ](xref:Xamarin.Forms.Button) está presionado, su [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) se cambiará la propiedad de su valor predeterminado de 1 a 0,8. El `Normal` `VisualState` especifica que, cuando el `Button` está en estado normal, su `Scale` propiedad se establecerá en 1. Por lo tanto, el efecto general es que cuando el `Button` está presionado, se vuelve a escalar para que sea ligeramente más pequeñas pero cuando el `Button` está publicado, se escalan a su tamaño predeterminado.
+
+Para obtener más información acerca de los estados visuales, vea [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
 
 ## <a name="creating-a-toggle-button"></a>Creación de un botón de alternancia
 
@@ -774,7 +808,7 @@ En XAML, debe especificar solo el miembro de enumeración o el espaciado o ambos
         ContentLayout="Right, 20" />
 ```
 
-El **imagen Button Demo** página usa `OnPlatform` para especificar los nombres de archivo diferente para iOS, Android y UWP, los archivos de mapa de bits. Si desea usar el mismo nombre de archivo para las tres plataformas y evitar el uso de `OnPlatform`, necesitará para almacenar los mapas de bits UWP en el directorio raíz del proyecto.
+El **imagen Button Demo** página usa `OnPlatform` para especificar los nombres de archivo diferente para iOS, Android y UWP, los archivos de mapa de bits. Si desea usar el mismo nombre de archivo para cada plataforma y evitar el uso de `OnPlatform`, necesitará para almacenar los mapas de bits UWP en el directorio raíz del proyecto.
 
 La primera `Button` en el **imagen Button Demo** página establece el `Image` propiedad pero no la `Text` propiedad:
 

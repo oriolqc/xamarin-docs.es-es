@@ -7,16 +7,16 @@ ms.assetid: F6E20077-687C-45C4-A375-31D4F49BBFA4
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 1e42fdfdf7f90a4efb639ce8ca94f45a49f59c35
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: eaee5d7921b99ea5e14cca9f03e33699a74b06f3
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563984"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172254"
 ---
 # <a name="summary-of-chapter-28-location-and-maps"></a>Resumen del capítulo 28. Ubicación y mapas
 
-> [!NOTE] 
+> [!NOTE]
 > Notas de esta página indican áreas donde se ha dividido Xamarin.Forms desde el material presentado en el libro.
 
 Xamarin.Forms es compatible con un [ `Map` ](xref:Xamarin.Forms.Maps.Map) elemento que se deriva de `View`. Debido a los requisitos de plataforma especial que implica el uso de mapas, se implementan en un ensamblado independiente, **xamarin.Forms.Maps para**e implicar a otro espacio de nombres: `Xamarin.Forms.Maps`.
@@ -194,7 +194,7 @@ El [LongitudeZoomPage.xaml](https://github.com/xamarin/xamarin-forms-book-sample
 
 ### <a name="the-phones-location"></a>La ubicación del teléfono
 
-El [ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser) propiedad de `Map` funciona un poco distinto en las tres plataformas como el [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) archivo de muestra:
+El [ `IsShowingUser` ](xref:Xamarin.Forms.Maps.Map.IsShowingUser) propiedad de `Map` funciona un poco distinto en cada plataforma, como el [ShowLocationPage.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/ShowLocationPage.xaml) archivo de muestra:
 
 - En iOS, un punto azul indica la ubicación del teléfono pero manualmente debe ir allí
 - En Android, se muestra un icono que, cuando inserta mueve la asignación a la ubicación del teléfono

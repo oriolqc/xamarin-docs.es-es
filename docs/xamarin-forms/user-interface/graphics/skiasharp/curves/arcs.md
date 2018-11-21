@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 2bb5729ff369abb6e432bfd72ab240c0ce07f28a
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 49b2ee9cf9c8fbdb2f850461241459126750b123
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615410"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172228"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tres maneras de dibujar un arco
 
@@ -412,7 +412,7 @@ public partial class TangentArcPage : InteractivePage
 }
 ```
 
-Este es el **arco tangente** página que se ejecuta en las tres plataformas:
+Este es el **arco tangente** página que se ejecuta:
 
 [![](arcs-images/tangentarc-small.png "Captura de pantalla de la página de arco tangente triple")](arcs-images/tangentarc-large.png#lightbox "Triple captura de pantalla de la página de arco tangente")
 
@@ -487,7 +487,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-Este es el programa que se ejecutan en las tres plataformas:
+Este es el programa que se ejecuta:
 
 [![](arcs-images/roundedheptagon-small.png "Captura de pantalla de la página Heptágono redondea triple")](arcs-images/roundedheptagon-large.png#lightbox "Triple captura de pantalla de la página Heptágono redondeado")
 
@@ -582,7 +582,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 ```
 
-Aquí se está ejecutando en las tres plataformas:
+Aquí se está ejecutando:
 
 [![](arcs-images/ellipticalarc-small.png "Captura de pantalla de la página de arco elíptico triple")](arcs-images/ellipticalarc-large.png#lightbox "Triple captura de pantalla de la página de arco elíptico")
 

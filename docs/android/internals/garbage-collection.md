@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 814e975f57023424618c5ea403126f36f87467a7
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: 347793934b01d26d22455189c12b0f1d5213a40b
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235017"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170980"
 ---
 # <a name="garbage-collection"></a>recolección de elementos no utilizados
 
@@ -219,7 +219,7 @@ class MyClass : Java.Lang.Object, ISomeInterface
 }
 ```
 
-Si pasa de una inicial dispose causas `childViews` que no es válido `Handle`, el `for` acceso de bucle producirá una `ArgumentException`. Agregando explícita `Handle` null verificación antes del primer `childViews` tener acceso a la siguiente `Dispose` método evita que la excepción ocurre: 
+Si pasa de una inicial dispose causas `childViews` que no es válido `Handle`, el `for` acceso de bucle producirá una `ArgumentException`. Agregando explícita `Handle` null verificación antes del primer `childViews` tener acceso a la siguiente `Dispose` método evita que la excepción que se producen: 
 
 ```csharp
 class MyClass : Java.Lang.Object, ISomeInterface 

@@ -1,5 +1,5 @@
 ---
-title: Enlace de una biblioteca de Java
+title: Enlace de una biblioteca Java
 description: La Comunidad de Android tiene muchas bibliotecas de Java que puede usar en la aplicación; Esta guía explica cómo incorporar bibliotecas de Java en su aplicación de Xamarin.Android mediante la creación de una biblioteca de enlaces.
 ms.prod: xamarin
 ms.assetid: B39FF1D5-69C3-8A76-D268-C227A23C9485
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: b47b7611665dc3e935bba1bf89ecf9f82291fe08
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c41aecf5f8c65ad5bfba5361b77d7c7fc047cda4
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118960"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171617"
 ---
-# <a name="binding-a-java-library"></a>Enlace de una biblioteca de Java
+# <a name="binding-a-java-library"></a>Enlace de una biblioteca Java
 
 _La Comunidad de Android tiene muchas bibliotecas de Java que puede usar en la aplicación; Esta guía explica cómo incorporar bibliotecas de Java en su aplicación de Xamarin.Android mediante la creación de una biblioteca de enlaces._
 

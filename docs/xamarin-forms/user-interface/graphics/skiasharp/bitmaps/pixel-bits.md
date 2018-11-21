@@ -7,12 +7,12 @@ ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: 6d223dd051dccf7af84e4e6c35238f4ad026b00a
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: eebfe40bca6db92bae1f2fdcc9cbff3173dc4e51
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615631"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172020"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>Acceso a los bits de píxeles del mapa de bits de SkiaSharp
 
@@ -35,7 +35,7 @@ SkiaSharp proporciona varias técnicas para tener acceso a los bits de píxeles 
 
 Puede pensar en las primeras dos técnicas como "alto nivel" y los dos segundos como "bajo nivel." Hay algunos otros métodos y propiedades que puede usar, pero estos son los más valiosos.
 
-Para que pueda ver las diferencias de rendimiento entre estas técnicas, el [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) aplicación contiene una página denominada **mapa de bits degradado** que crea un mapa de bits con píxeles que combinan tonos de color rojo y azules para crear un degradado. El programa crea ocho copias diferentes del mapa de bits, todos utilizan diferentes técnicas para establecer los píxeles del mapa de bits. Cada uno de estos mapas de bits de ocho se crea en un método independiente que también establece una breve descripción de la técnica y calcula el tiempo necesario para establecer todos los píxeles. Cada método recorre en bucle la lógica de la configuración de píxel 100 veces para obtener una estimación más precisa del rendimiento. 
+Para que pueda ver las diferencias de rendimiento entre estas técnicas, el [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) aplicación contiene una página denominada **mapa de bits degradado** que crea un mapa de bits con píxeles que combinan tonos de color rojo y azules para crear un degradado. El programa crea ocho copias diferentes del mapa de bits, todos utilizan diferentes técnicas para establecer los píxeles del mapa de bits. Cada uno de estos mapas de bits de ocho se crea en un método independiente que también establece una breve descripción de la técnica y calcula el tiempo necesario para establecer todos los píxeles. Cada método recorre en bucle la lógica de la configuración de píxel 100 veces para obtener una estimación más precisa del rendimiento.
 
 ### <a name="the-setpixel-method"></a>El método SetPixel
 
@@ -55,7 +55,7 @@ Este es el método **mapa de bits degradado** que establece el contenido de un m
 public class GradientBitmapPage : ContentPage
 {
     const int REPS = 100;
-        
+
     Stopwatch stopwatch = new Stopwatch();
     ···
     SKBitmap FillBitmapSetPixel(out string description, out int milliseconds)
@@ -107,7 +107,7 @@ SKBitmap FillBitmapPixelsProp(out string description, out int milliseconds)
 
     stopwatch.Restart();
 
-    SKColor[] pixels = new SKColor[256 * 256]; 
+    SKColor[] pixels = new SKColor[256 * 256];
 
     for (int rep = 0; rep < REPS; rep++)
         for (int row = 0; row < 256; row++)
@@ -135,7 +135,7 @@ Potencialmente la técnica más eficaz para tener acceso a los píxeles del mapa
 IntPtr pixelsAddr = bitmap.GetPixels();
 ```
 
-.NET [ `IntPtr` ](xref:System.IntPtr) tipo representa un puntero. Se llama `IntPtr` porque es la longitud de un entero en el procesador nativo de la máquina en la que se ejecuta el programa, normalmente 32 bits o 64 bits de longitud. El `IntPtr` que `GetPixels` devuelve es la dirección del bloque de memoria que está usando el objeto de mapa de bits para almacenar sus píxeles real. 
+.NET [ `IntPtr` ](xref:System.IntPtr) tipo representa un puntero. Se llama `IntPtr` porque es la longitud de un entero en el procesador nativo de la máquina en la que se ejecuta el programa, normalmente 32 bits o 64 bits de longitud. El `IntPtr` que `GetPixels` devuelve es la dirección del bloque de memoria que está usando el objeto de mapa de bits para almacenar sus píxeles real.
 
 Puede convertir el `IntPtr` en un C# puntero tipo mediante el [ `ToPointer` ](xref:System.IntPtr.ToPointer) método. La sintaxis de C# puntero es igual que C y C++:
 
@@ -313,7 +313,7 @@ SKBitmap FillBitmapByteBuffer(out string description, out int milliseconds)
                 buffer[row, col, 2] = (byte)row;   // blue
                 buffer[row, col, 3] = 0xFF;        // alpha
             }
-    
+
     unsafe
     {
         fixed (byte* ptr = buffer)
@@ -459,7 +459,7 @@ public class GradientBitmapPage : ContentPage
 
     void Display(SKCanvas canvas, int index, SKRect rect)
     {
-        string text = String.Format("{0}: {1:F1} msec", descriptions[index], 
+        string text = String.Format("{0}: {1:F1} msec", descriptions[index],
                                     (double)elapsedTimes[index] / REPS);
 
         SKRect bounds = new SKRect();
@@ -497,7 +497,7 @@ Esta es una tabla que consolida los tiempos de ejecución en milisegundos:
 
 Según lo previsto, una llamada a `SetPixel` 65.536 veces es la forma de effeicient mínimos para establecer los píxeles del mapa de bits. Rellenar un `SKColor` matriz y la configuración de la `Pixels` propiedad es mucho mejor e incluso compara favorablemente con algunos de los `GetPixels` y `SetPixels` técnicas. Trabajar con `uint` valores de píxel es generalmente más rápidos que la configuración independiente `byte` componentes y convertir la `SKColor` valor entero sin signo que agrega una sobrecarga al proceso.
 
-También es interesante comparar los degradados distintos: las primeras filas de las tres plataformas son los mismos y mostrar el degradado y como estaba previsto. Esto significa que el `SetPixel` método y el `Pixels` propiedad crear correctamente los píxeles de colores independientemente del formato de píxel subyacente.
+También es interesante comparar los degradados distintos: las primeras filas de cada plataforma son los mismos y mostrar el degradado y como estaba previsto. Esto significa que el `SetPixel` método y el `Pixels` propiedad crear correctamente los píxeles de colores independientemente del formato de píxel subyacente.
 
 Las dos filas siguientes de iOS y Android capturas de pantalla también son las mismas, que confirma que el pequeño `MakePixel` método esté definido correctamente para el valor predeterminado `Rgba8888` formato de píxel para estas plataformas.
 
@@ -511,13 +511,13 @@ AA BB GG RR
 
 Se trata de la `Bgra8888` ordenación en lugar de `Rgba8888` ordenación. El `Brga8888` formato es el valor predeterminado para la plataforma Windows Universal, que es la razón por la degradados en la última fila de esa captura de pantalla son los mismos que la primera fila. Pero las dos filas intermedias son incorrectas porque el código que crea los mapas de bits supone un `Rgba8888` ordenación.
 
-Si desea utilizar el mismo código para tener acceso a los bits de píxeles en las tres plataformas, puede crear explícitamente un `SKBitmap` mediante el `Rgba8888` o `Bgra8888` formato. Si desea convertir `SKColor` valores en píxeles del mapa de bits, utilice `Bgra8888`.
+Si desea utilizar el mismo código para tener acceso a los bits de píxeles en cada plataforma, puede crear explícitamente un `SKBitmap` mediante el `Rgba8888` o `Bgra8888` formato. Si desea convertir `SKColor` valores en píxeles del mapa de bits, utilice `Bgra8888`.
 
 ## <a name="random-access-of-pixels"></a>Acceso aleatorio de píxeles
 
-El `FillBitmapBytePtr` y `FillBitmapUintPtr` métodos en el **degradado del mapa de bits** página beneficiado `for` bucles diseñados para satisfacer el mapa de bits de forma secuencial, de la fila superior a la fila inferior y, en cada fila de izquierda a derecha. El píxel se puede establecer con la misma instrucción que incrementa el puntero. 
+El `FillBitmapBytePtr` y `FillBitmapUintPtr` métodos en el **degradado del mapa de bits** página beneficiado `for` bucles diseñados para satisfacer el mapa de bits de forma secuencial, de la fila superior a la fila inferior y, en cada fila de izquierda a derecha. El píxel se puede establecer con la misma instrucción que incrementa el puntero.
 
-A veces es necesario tener acceso a los píxeles aleatoriamente en lugar de secuencialmente. Si usas el `GetPixels` enfoque, tendrá que calcular los punteros basados en la fila y columna. Esto se muestra en el **arco iris seno** página, que crea un mapa de bits que se muestra un arco iris en forma de un ciclo de una curva de seno. 
+A veces es necesario tener acceso a los píxeles aleatoriamente en lugar de secuencialmente. Si usas el `GetPixels` enfoque, tendrá que calcular los punteros basados en la fila y columna. Esto se muestra en el **arco iris seno** página, que crea un mapa de bits que se muestra un arco iris en forma de un ciclo de una curva de seno.
 
 Los colores del arco iris son más fáciles de crear mediante el modelo de color HSL (matiz, saturación, luminosidad). El `SKColor.FromHsl` método crea un `SKColor` valor con los valores de matiz comprendidos entre 0 y 360 (por ejemplo, ángulos de un círculo, pero va de rojo, pasando por verde y azul y de vuelta a rojo) y los valores de saturación y luminosidad comprendida entre 0 y 100. Para los colores de un arco iris, la saturación debe establecerse en un máximo de 100 y la luminosidad a un punto medio de 50.
 
@@ -617,7 +617,7 @@ Muchas tareas de procesamiento de imágenes implican modificar píxeles a medida
 
 Para cada color de píxel, la primera `Slider` agrega un valor de 0 a 360 para el matiz, pero, a continuación, usa el operador módulo para mantener el resultado entre 0 y 360, eficazmente desplazar los colores a lo largo del espectro (como se muestra en la captura de pantalla UWP). El segundo `Slider` le permite seleccionar un factor multiplicativo comprendida entre 0,5 y 2 para aplicar a la saturación y el tercero `Slider` hace lo mismo para la luminosidad, como se muestra en la captura de pantalla de Android.
 
-El programa mantiene dos mapas de bits, el mapa de bits de origen original denominado `srcBitmap` y el mapa de bits de destino ajustada denominado `dstBitmap`. Cada vez que un `Slider` se mueve, el sistema calcula todos los píxeles nuevo en `dstBitmap`. Por supuesto, va a experimentar los usuarios moviendo el `Slider` vistas muy rápidamente, por lo que recomienda el mejor rendimiento que puede administrar. Esto implica la `GetPixels` método para los mapas de bits de origen y destino. 
+El programa mantiene dos mapas de bits, el mapa de bits de origen original denominado `srcBitmap` y el mapa de bits de destino ajustada denominado `dstBitmap`. Cada vez que un `Slider` se mueve, el sistema calcula todos los píxeles nuevo en `dstBitmap`. Por supuesto, va a experimentar los usuarios moviendo el `Slider` vistas muy rápidamente, por lo que recomienda el mejor rendimiento que puede administrar. Esto implica la `GetPixels` método para los mapas de bits de origen y destino.
 
 El **ajuste de Color** página no controla el formato de color de los mapas de bits de origen y destino. En su lugar, contiene la lógica ligeramente diferente para `SKColorType.Rgba8888` y `SKColorType.Bgra8888` formatos. El origen y destino pueden ser diferentes formatos, y el programa seguirá funcionando.
 
@@ -764,7 +764,7 @@ public class PosterizePage : ContentPage
 
             for (int i = 0; i < pixelCount; i++)
             {
-                *ptr++ &= 0xE0E0E0FF; 
+                *ptr++ &= 0xE0E0E0FF;
             }
         }
 

@@ -6,13 +6,13 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/17/2018
-ms.openlocfilehash: 62e170558fc908b0ec13669b60eb08495c183b09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 11/14/2018
+ms.openlocfilehash: 452596d3eda9daae4b985490929c1e920a9d936e
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104958"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52170915"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Vistas de interfaz de usuario de Xamarin.Forms
 
@@ -46,13 +46,17 @@ DataSourceControl proporciona una API para enlazar de forma rápida y sencilla u
 
 El `DatePicker` permite al usuario seleccionar una fecha dentro de un intervalo especificado. Se implementa mediante el selector de fecha admitido por la plataforma concreta donde se ejecuta la aplicación.
 
-## <a name="graphics-with-skiasharpgraphicsskiasharpindexmd"></a>[Gráficos de SkiaSharp](graphics/skiasharp/index.md)
+## <a name="graphics-with-skiasharpgraphicsskiasharpindexmd"></a>[Gráficos con SkiaSharp](graphics/skiasharp/index.md)
 
 Cómo incorporar gráficos en una aplicación de Xamarin.Forms con SkiaSharp.
 
 ## <a name="imagesimagesmd"></a>[Imágenes](images.md)
 
 Las imágenes se pueden compartir entre plataformas con Xamarin.Forms, se pueden cargar específicamente para cada plataforma, o se pueden descargar para su presentación.
+
+## <a name="imagebutonimagebuttonmd"></a>[ImageButon](imagebutton.md)
+
+La `ImageButton` muestra una imagen y responde a un pulse o haga clic en que se dirige a una aplicación para llevar a cabo una tarea determinada.
 
 ## <a name="layoutslayoutsindexmd"></a>[Diseños](layouts/index.md)
 
@@ -74,7 +78,7 @@ El [ `Picker` ](xref:Xamarin.Forms.Picker) vista es un control para seleccionar 
 
 El `Slider` permite al usuario seleccionar un valor numérico de un intervalo continuo.
 
-## <a name="steppersteppermd"></a>[Motor paso a paso](stepper.md)
+## <a name="steppersteppermd"></a>[Control de incremento](stepper.md)
 
 El `Stepper` permite al usuario seleccionar un valor numérico de un intervalo de valores. Consta de dos botones etiquetados con menos y signos más. Manipulación de los dos botones cambia el valor seleccionado de forma incremental.
 

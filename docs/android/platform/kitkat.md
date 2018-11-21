@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: b1ea26afff1477d762d106db004be82010a2d557
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 7b7fa2ea99a58b875bc1dc579455511aa9bf72d1
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527339"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172098"
 ---
 # <a name="kitkat-features"></a>Características KitKat
 
@@ -413,7 +413,7 @@ La mayoría de los dispositivos que se suministran con KitKat automáticamente d
 
 #### <a name="printing-html-content"></a>Contenido HTML de impresión
 
-KitKat crea automáticamente un [ `PrintDocumentAdapter` ](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/) para obtener una vista web con `WebView.CreatePrintDocumentAdapter`. Contenido web de impresión es un esfuerzo coordinado entre un [ `WebViewClient` ](https://developer.xamarin.com/api/type/Android.Webkit.WebViewClient/) que espera a que el contenido HTML cargar y permite que la actividad que se sabe que la opción de impresión estén disponibles en el menú de opciones y el Actvity, que se espera que el usuario Seleccione la opción de impresión y las llamadas `Print`en el `PrintManager`. Esta sección trata la configuración básica necesaria para imprimir en la pantalla contenido HTML.
+KitKat crea automáticamente un [ `PrintDocumentAdapter` ](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/) para obtener una vista web con `WebView.CreatePrintDocumentAdapter`. Contenido web de impresión es un esfuerzo coordinado entre un [ `WebViewClient` ](https://developer.xamarin.com/api/type/Android.Webkit.WebViewClient/) que espera a que el contenido HTML cargar y permite que la actividad que se sabe que la opción de impresión estén disponibles en el menú de opciones y la actividad, que se espera que el usuario Seleccione la opción de impresión y las llamadas `Print`en el `PrintManager`. Esta sección trata la configuración básica necesaria para imprimir en la pantalla contenido HTML.
 
 Tenga en cuenta que al cargar e imprimir contenido web requieren el permiso de Internet:
 

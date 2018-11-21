@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: bd8973b59853a4898336ba153de4835bad46e232
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 75b78f27fd6b3a726de9075ce36364168401ec60
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113058"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171483"
 ---
 # <a name="android-wear"></a>Android Wear
 
@@ -51,7 +51,7 @@ Puede encontrar un número de [ejemplos](https://developer.xamarin.com/samples/a
 |Ejemplo|Descripción|Captura de pantalla|
 |--- |--- |--- |
 |[SkeletonWear](https://developer.xamarin.com/samples/SkeletonWear/)|Un ejemplo sencillo de los conceptos básicos de proyectos de portátiles, incluidos FilterUserControl y notificaciones interactivas.|![Captura de pantalla de Skeletonwear](images/skeleton.png)|
-|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|Una simple demostración del control WatchViewStub que detecta la forma de pantalla y carga automáticamente el diseño correcto.  Ver cómo funciona WatchViewStub en el **Resources/layout/main_actvity.xml** diseño.|![Captura de pantalla de WatchViewStub](images/watchview.png)|
+|[WatchViewStub](https://developer.xamarin.com/samples/WatchViewStub/)|Una simple demostración del control WatchViewStub que detecta la forma de pantalla y carga automáticamente el diseño correcto.  Ver cómo funciona WatchViewStub en el **Resources/layout/main_activity.xml** diseño.|![Captura de pantalla de WatchViewStub](images/watchview.png)|
 |[RecipeAssistant](https://developer.xamarin.com/samples/RecipeAssistant/)|Demostración de desgaste de las páginas de notificación, en forma de pasos de la receta. Las notificaciones se crean en RecipeService.cs.|![Captura de pantalla de RecipeAssistant](images/recipeassist.png)|
 |[ElizaChat](https://developer.xamarin.com/samples/ElizaChat/)|Ejemplo divertida de la interacción con un asistente"personal" llamado Eliza, mediante notificaciones interactivas desgaste para crear una conversación mediante respuestas predefinidas.|![Captura de pantalla de ElizaChat](images/eliza.png)|
 |[GridViewPager](https://developer.xamarin.com/samples/GridViewPager/)|FilterUserControl implementa el modelo de navegación 2D, donde el usuario pase el dedo verticalmente y horizontalmente para navegar por las opciones y el contenido.|![Captura de pantalla de FilterUserControl](images/gridviewpager.png)|

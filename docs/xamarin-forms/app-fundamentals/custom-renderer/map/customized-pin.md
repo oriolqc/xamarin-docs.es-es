@@ -6,13 +6,13 @@ ms.assetid: C5481D86-80E9-4E3D-9FB6-57B0F93711A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2017
-ms.openlocfilehash: 351119a8b0089f78d4ce98729a1516c3cd7bae7b
-ms.sourcegitcommit: 4c0093ee5d4aeb16c0e6f0c740c4796736971651
+ms.date: 10/24/2018
+ms.openlocfilehash: ab5315d169615430f5f5a733c0fa8c2ca9caa4b0
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39203090"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172306"
 ---
 # <a name="customizing-a-map-pin"></a>Personalización de un Pin de mapa
 
@@ -422,9 +422,10 @@ protected override MarkerOptions CreateMarker(Pin pin)
 }
 ```
 
-Este método crea un nuevo `MarkerOption` instancia para cada `Pin` instancia. Después de establecer la posición, la etiqueta y la dirección del marcador, su icono está establecido con el `SetIcon` método. Este método toma un `BitmapDescriptor` objeto que contiene los datos necesarios para representar el icono, con el `BitmapDescriptorFactory` clase que proporciona métodos auxiliares para simplificar la creación de la `BitmapDescriptor`.
+Este método crea un nuevo `MarkerOption` instancia para cada `Pin` instancia. Después de establecer la posición, la etiqueta y la dirección del marcador, su icono está establecido con el `SetIcon` método. Este método toma un `BitmapDescriptor` objeto que contiene los datos necesarios para representar el icono, con el `BitmapDescriptorFactory` clase que proporciona métodos auxiliares para simplificar la creación de la `BitmapDescriptor`. Para obtener más información sobre el uso de la `BitmapDescriptorFactory` clase para personalizar un marcador, consulte [personalizar un marcador](~/android/platform/maps-and-location/maps/maps-api.md).
 
-Para obtener más información sobre el uso de la `BitmapDescriptorFactory` clase para personalizar un marcador, consulte [personalizar un marcador](~/android/platform/maps-and-location/maps/maps-api.md).
+> [!NOTE]
+> Si es necesario, el `GetMarkerForPin` se puede invocar el método en el representador de mapa para recuperar un `Marker` desde un `Pin`.
 
 <a name="Customizing_the_Info_Window" />
 

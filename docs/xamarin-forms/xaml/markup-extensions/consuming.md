@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: ecb0adb09c7d6b8bca2f1ee228b8cbdaad1d0314
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 2ab7381baefc6ca013b6c8a5c9f7bf7b5cae8b10
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563958"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171721"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de las extensiones de marcado XAML
 
@@ -137,7 +137,7 @@ El último ejemplo se muestra la `Device.RuntimePlatform` valor. El `Environment
 </Label>
 ```
 
-Este es el ejemplo que se ejecutan en las tres plataformas:
+Este es el ejemplo en ejecución:
 
 [![Demostración de x: Static](consuming-images/staticdemo-small.png "x: Static demostración")](consuming-images/staticdemo-large.png#lightbox "demostración x: Static")
 
@@ -181,7 +181,7 @@ El **x: Reference demostración** página muestra dos usos de `x:Reference` con 
 </ContentPage>
 ```
 
-Ambos `x:Reference` expresiones usan la versión abreviada de la `ReferenceExtension` nombre de clase y elimine el `Name=` forma parte de la expresión. En el primer ejemplo, el `x:Reference` extensión de marcado está incrustada en el `Binding` extensión de marcado. Tenga en cuenta que el `Source` y `StringFormat` configuración está separada por comas. Este es el programa que se ejecutan en las tres plataformas:
+Ambos `x:Reference` expresiones usan la versión abreviada de la `ReferenceExtension` nombre de clase y elimine el `Name=` forma parte de la expresión. En el primer ejemplo, el `x:Reference` extensión de marcado está incrustada en el `Binding` extensión de marcado. Tenga en cuenta que el `Source` y `StringFormat` configuración está separada por comas. Este es el programa que se ejecuta:
 
 [![Demostración de x: Reference](consuming-images/referencedemo-small.png "x: Reference demostración")](consuming-images/referencedemo-large.png#lightbox "x: Reference demostración")
 
@@ -449,7 +449,7 @@ El **x: Null demostración** página ilustra un escenario cuando `x:Null` podrí
 
 A continuación, verá que para uno de los `Label` elementos, desea que todos los valores de propiedades en la parte implícita `Style` , excepto para el `FontFamily`, que desee que sea el valor predeterminado. Puede definir otra `Style` para ese propósito, pero un enfoque más sencillo consiste simplemente en establecer el `FontFamily` propiedad de la instancia concreta `Label` a `x:Null`, tal y como se muestra en el centro de `Label`.
 
-Este es el programa que se ejecutan en las tres plataformas:
+Este es el programa que se ejecuta:
 
 [![Demostración de x: Null](consuming-images/nulldemo-small.png "x: Null demostración")](consuming-images/nulldemo-large.png#lightbox "demostración x: Null")
 
@@ -493,7 +493,7 @@ El **OnPlatform demostración** página muestra cómo usar el `OnPlatform` exten
 
 En este ejemplo, las tres `OnPlatform` expresiones usan la versión abreviada de la `OnPlatformExtension` nombre de clase. Los tres `OnPlatform` conjunto de extensiones de marcado el [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), y [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propiedades de la [ `BoxView` ](xref:Xamarin.Forms.BoxView) en valores distintos en iOS, Android y UWP. Las extensiones de marcado también proporcionan valores predeterminados para estas propiedades en las plataformas que no están especificadas, al tiempo que elimina la `Default=` forma parte de la expresión. Tenga en cuenta que las propiedades de extensión de marcado que se establecen están separadas por comas.
 
-Este es el programa que se ejecutan en las tres plataformas:
+Este es el programa que se ejecuta:
 
 [![Demostración de OnPlatform](consuming-images/onplatformdemo-small.png "OnPlatform demostración")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform demostración")
 
@@ -531,7 +531,7 @@ El **OnIdiom demostración** página muestra cómo usar el `OnIdiom` extensión 
 
 En este ejemplo, las tres `OnIdiom` expresiones usan la versión abreviada de la `OnIdiomExtension` nombre de clase. Los tres `OnIdiom` conjunto de extensiones de marcado el [ `Color` ](xref:Xamarin.Forms.BoxView.Color), [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest), y [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propiedades de la [ `BoxView` ](xref:Xamarin.Forms.BoxView) en valores distintos en el teléfono, tableta y escritorio expresiones. Las extensiones de marcado también proporcionan valores predeterminados para estas propiedades en las expresiones que no se especifican, mientras se elimina el `Default=` forma parte de la expresión. Tenga en cuenta que las propiedades de extensión de marcado que se establecen están separadas por comas.
 
-Este es el programa que se ejecutan en las tres plataformas:
+Este es el programa que se ejecuta:
 
 [![Demostración de OnIdiom](consuming-images/onidiomdemo-small.png "OnIdiom demostración")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom demostración")
 

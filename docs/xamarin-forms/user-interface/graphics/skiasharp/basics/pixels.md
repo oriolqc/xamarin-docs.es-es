@@ -7,12 +7,12 @@ ms.assetid: 26C25BB8-FBE8-4B77-B01D-16A163A16890
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
-ms.openlocfilehash: 9da46f128eeb502e0f40e5861f3d04c66491565b
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: d4c890853cb6db334416fc31feb2205a203faa4a
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615306"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171929"
 ---
 # <a name="pixels-and-device-independent-units"></a>Píxeles y unidades independientes del dispositivo
 
@@ -97,7 +97,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 El método comienza la primera línea de texto con una coordenada X de 20 (para un pequeño margen a la izquierda) y una coordenada Y de `fontSpacing`, que es un poco más que lo que es necesario para mostrar el alto de la primera línea de texto completo en la parte superior de la superficie de pantalla. Después de cada llamada a `DrawText`, la coordenada Y se incrementa en uno o dos incrementos de `fontSpacing`.
 
-Este es el programa que se ejecutan en las tres plataformas:
+Este es el programa que se ejecuta:
 
 [![](pixels-images/surfacesize-small.png "Captura de pantalla triple de la página de tamaño de la superficie")](pixels-images/surfacesize-large.png#lightbox "Triple captura de pantalla de la página de tamaño de la superficie")
 
@@ -140,7 +140,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Aquí se está ejecutando en las tres plataformas:
+Aquí se está ejecutando:
 
 [![](pixels-images/ellipsefill-small.png "Captura de pantalla triple de la página de tamaño de la superficie")](pixels-images/ellipsefill-large.png#lightbox "Triple captura de pantalla de la página de tamaño de la superficie")
 

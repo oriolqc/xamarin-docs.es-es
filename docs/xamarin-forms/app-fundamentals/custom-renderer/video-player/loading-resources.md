@@ -1,40 +1,40 @@
 ---
 title: La carga de vídeos de recursos de aplicación
-description: Este artículo explica cómo cargar vídeos almacenados como recursos de la aplicación en una aplicación de Reproductor de vídeo, uso de Xamarin.Forms.
+description: Este artículo explica cómo cargar vídeos almacenados como recursos de la aplicación en una aplicación de Reproductor de vídeo mediante Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: F75BD540-9354-4C17-A119-57F3DEC66D54
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: f28b0dc8e25cb2e498f4101175005f05a5c5a6ef
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 17e9e7061e4329431a0f34abdbbb616a1aff1b43
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241037"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171331"
 ---
 # <a name="loading-application-resource-videos"></a>La carga de vídeos de recursos de aplicación
 
-Los representadores personalizados para el `VideoPlayer` vista son capaces de reproducir archivos de vídeo que se han incrustado en los proyectos de plataforma individuales como recursos de la aplicación. Sin embargo, la versión actual de `VideoPlayer` no se puede obtener acceso a los recursos incrustados en una biblioteca de .NET estándar.
+Los representadores personalizados para el `VideoPlayer` vista son capaces de reproducir archivos de vídeo que se han incrustado en los proyectos de plataforma individuales como recursos de la aplicación. Sin embargo, la versión actual de `VideoPlayer` no puede tener acceso a los recursos incrustados en una biblioteca .NET Standard.
 
-Para cargar estos recursos, cree una instancia de `ResourceVideoSource` estableciendo el `Path` propiedad para el nombre de archivo (o la carpeta y el nombre) del recurso. Como alternativa, puede llamar el método estático `VideoSource.FromResource` método hagan referencia al recurso. A continuación, establezca el `ResourceVideoSource` el objeto a la `Source` propiedad de `VideoPlayer`.
+Para cargar estos recursos, cree una instancia de `ResourceVideoSource` estableciendo el `Path` propiedad para el nombre de archivo (o la carpeta y nombre de archivo) del recurso. Como alternativa, puede llamar a estático `VideoSource.FromResource` método para hacer referencia al recurso. A continuación, establezca el `ResourceVideoSource` de objeto para el `Source` propiedad de `VideoPlayer`.
 
 ## <a name="storing-the-video-files"></a>Almacenar los archivos de vídeo
 
-Almacenamiento de un archivo de vídeo en el proyecto de la plataforma es diferente para las tres plataformas:
+Almacenamiento de un archivo de vídeo en el proyecto de la plataforma es diferente para cada plataforma.
 
 ### <a name="ios-video-resources"></a>recursos de vídeo de iOS
 
-En un proyecto de iOS, puede almacenar un vídeo en el **recursos** , o en una subcarpeta de la **recursos** carpeta. El archivo de vídeo debe tener un `Build Action` de `BundleResource`. Establecer el `Path` propiedad de `ResourceVideoSource` para el nombre de archivo, por ejemplo, **MyFile.mp4** para un archivo en el **recursos** carpeta, o **MyFolder/MyFile.mp4**, donde **MiCarpeta** es una subcarpeta de **recursos**.
+En un proyecto de iOS, puede almacenar un vídeo en el **recursos** , o en una subcarpeta de la **recursos** carpeta. El archivo de vídeo debe tener un `Build Action` de `BundleResource`. Establecer el `Path` propiedad de `ResourceVideoSource` al nombre de archivo, por ejemplo, **MyFile.mp4** para un archivo en el **recursos** carpeta, o **MyFolder/MyFile.mp4**, donde **MiCarpeta** es una subcarpeta de **recursos**.
 
-En el **VideoPlayerDemos** solución, el **VideoPlayerDemos.iOS** proyecto contiene una subcarpeta de **recursos** denominado **vídeos** que contiene un archivo denominado **iOSApiVideo.mp4**. Se trata de un breve vídeo que muestra cómo utilizar el sitio web de Xamarin para buscar documentación en el programa iOS `AVPlayerViewController` clase.
+En el **VideoPlayerDemos** solución, el **VideoPlayerDemos.iOS** proyecto contiene una subcarpeta de **recursos** denominado **vídeos** que contiene un archivo denominado **iOSApiVideo.mp4**. Se trata de un breve vídeo que muestra cómo usar el sitio web de Xamarin para encontrar documentación para iOS `AVPlayerViewController` clase.
 
-### <a name="android-video-resources"></a>Recursos de vídeo Android
+### <a name="android-video-resources"></a>Recursos de vídeo de Android
 
-En un proyecto Android, vídeos deben almacenarse en una subcarpeta de **recursos** denominado **sin formato**. El **sin formato** carpeta no puede contener las subcarpetas. Asigne al archivo de vídeo una `Build Action` de `AndroidResource`. Establecer el `Path` propiedad de `ResourceVideoSource` para el nombre de archivo, por ejemplo, **MyFile.mp4**.
+En un proyecto de Android, vídeos deben almacenarse en una subcarpeta de **recursos** denominado **raw**. El **raw** carpeta no puede contener las subcarpetas. Asigne al archivo de vídeo una `Build Action` de `AndroidResource`. Establecer el `Path` propiedad de `ResourceVideoSource` al nombre de archivo, por ejemplo, **MyFile.mp4**.
 
-El **VideoPlayerDemos.Android** proyecto contiene una subcarpeta de **recursos** denominado **sin formato**, que contiene un archivo denominado **AndroidApiVideo.mp4**.
+El **VideoPlayerDemos.Android** proyecto contiene una subcarpeta de **recursos** denominado **raw**, que contiene un archivo denominado **AndroidApiVideo.mp4**.
 
 ### <a name="uwp-video-resources"></a>Recursos de vídeo de UWP
 
@@ -42,13 +42,13 @@ En un proyecto de plataforma Universal de Windows, puede almacenar vídeos en cu
 
 El **VideoPlayerDemos.UWP** proyecto contiene una carpeta denominada **vídeos** con el archivo **UWPApiVideo.mp4**.
 
-## <a name="loading-the-video-files"></a>Cargar los archivos de vídeo
+## <a name="loading-the-video-files"></a>Al cargar los archivos de vídeo
 
-Cada una de las clases del representador plataforma contiene código en su `SetSource` método para cargar los archivos de vídeo almacenados como recursos.
+Cada una de las clases del representador de plataforma contiene código en su `SetSource` método para cargar los archivos de vídeo almacenados como recursos.
 
 ### <a name="ios-resource-loading"></a>carga de recursos de iOS
 
-La versión de iOS de `VideoPlayerRenderer` utiliza la `GetUrlForResource` método `NSBundle` para cargar el recurso. La ruta de acceso completa debe dividirse en un nombre de archivo, la extensión y el directorio. El código usa el `Path` clase .NET `System.IO` espacio de nombres para dividir la ruta de acceso en estos componentes:
+La versión de iOS de `VideoPlayerRenderer` usa el `GetUrlForResource` método `NSBundle` para cargar el recurso. La ruta de acceso completa debe dividirse en un nombre de archivo, extensión y directorio. El código usa el `Path` clase en .NET `System.IO` espacio de nombres para dividir la ruta de acceso en estos componentes:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -80,9 +80,9 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-### <a name="android-resource-loading"></a>Carga de recursos Android
+### <a name="android-resource-loading"></a>Carga de recursos de Android
 
-El Android `VideoPlayerRenderer` usa el nombre de archivo y nombre de paquete para construir un `Uri` objeto. El nombre del paquete es el nombre de la aplicación, en este caso **VideoPlayerDemos.Android**, que puede obtenerse de estático `Context.PackageName` propiedad. El resultante `Uri` , a continuación, se pasa el objeto a la `SetVideoURI` método `VideoView`:
+Android `VideoPlayerRenderer` usa el nombre de paquete y el nombre de archivo para construir un `Uri` objeto. El nombre del paquete es el nombre de la aplicación, en este caso **VideoPlayerDemos.Android**, que puede obtenerse de estático `Context.PackageName` propiedad. El resultante `Uri` objeto, a continuación, se pasa a la `SetVideoURI` método `VideoView`:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -117,7 +117,7 @@ namespace FormsVideoLibrary.Droid
 
 ### <a name="uwp-resource-loading"></a>Carga de recursos UWP
 
-UWP `VideoPlayerRenderer` construye una `Uri` objeto para la ruta de acceso y lo establece en el `Source` propiedad de `MediaElement`:
+UWP `VideoPlayerRenderer` construye un `Uri` objeto para la ruta de acceso y lo establece en el `Source` propiedad de `MediaElement`:
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -171,15 +171,15 @@ El **reproducir vídeo recursos** página en el **VideoPlayerDemos** solución u
 </ContentPage>
 ```
 
-Si el recurso de iOS se almacena en la **recursos** carpeta, y si el recurso UWP se almacena en la carpeta raíz del proyecto, puede usar el mismo nombre de archivo para las tres plataformas. Si es así, puede establecer ese nombre directamente a la `Source` propiedad de `VideoPlayer`.
+Si el recurso de iOS se almacena en el **recursos** carpeta, y si el recurso UWP se almacena en la carpeta raíz del proyecto, puede usar el mismo nombre de archivo para cada plataforma. Si es así, puede establecer ese nombre directamente a la `Source` propiedad de `VideoPlayer`.
 
-Aquí es esa página se ejecuta en las tres plataformas:
+Aquí es esa página se ejecuta:
 
-[![Reproducir vídeo recursos](loading-resources-images/playvideoresource-small.png "reproducir vídeo recursos")](loading-resources-images/playvideoresource-large.png#lightbox "reproducir vídeo recursos")
+[![Reproducir vídeo recursos](loading-resources-images/playvideoresource-small.png "reproducir vídeo recursos")](loading-resources-images/playvideoresource-large.png#lightbox "reproducir los recursos de vídeo")
 
-Ahora que ha visto cómo [cargar vídeos desde un URI de Web](web-videos.md) y cómo se juega a los recursos incrustados. Además, puede [cargar vídeos desde la biblioteca de vídeos del dispositivo](accessing-library.md).
+Ahora ha visto cómo [cargar vídeos desde un URI de Web](web-videos.md) y cómo se juega a los recursos incrustados. Además, puede [cargar vídeos desde la biblioteca de vídeos del dispositivo](accessing-library.md).
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de Reproductor de vídeo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demostraciones en el Reproductor de vídeo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

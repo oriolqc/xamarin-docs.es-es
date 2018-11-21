@@ -7,12 +7,12 @@ ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: b55067f7b4df66ccce23a7409281f4b8bbc4e9e9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d4029cbd4100b3ad83343b3bee73868b385a02e5
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111710"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171825"
 ---
 # <a name="skiasharp-image-filters"></a>Filtros de imágenes de SkiaSharp
 
@@ -29,8 +29,8 @@ En este artículo también muestra cómo utilizar un filtro de imágenes para cr
 El efecto de desenfoque creado por el [ `SKImageFilter.CreateBlur` ](xref:SkiaSharp.SKImageFilter.CreateBlur*) método estático tiene una ventaja considerable respecto a los métodos de desenfoque de la [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) clase: el filtro de imágenes puede desenfocar un mapa de bits completo. El método tiene la siguiente sintaxis:
 
 ```csharp
-public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY, 
-                                                  SKImageFilter input = null, 
+public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
+                                                  SKImageFilter input = null,
                                                   SKImageFilter.CropRect cropRect = null);
 ```
 
@@ -44,7 +44,7 @@ El **desenfoque experimentar imagen** página en el [ **SkiaSharpFormsDemos** ](
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.ImageBlurExperimentPage"
              Title="Image Blur Experiment">
-    
+
     <StackLayout>
         <skia:SKCanvasView x:Name="canvasView"
                            VerticalOptions="FillAndExpand"
@@ -59,7 +59,7 @@ El **desenfoque experimentar imagen** página en el [ **SkiaSharpFormsDemos** ](
                               Path=Value,
                               StringFormat='Sigma X = {0:F1}'}"
                HorizontalTextAlignment="Center" />
-        
+
         <Slider x:Name="sigmaYSlider"
                 Maximum="10"
                 Margin="10, 0"
@@ -145,11 +145,11 @@ Para mantener la coherencia entre los diferentes tamaños y resoluciones de dese
 El [ `SKImageFilter.CreateDropShadow` ](xref:SkiaSharp.SKImageFilter.CreateDropShadow*) método estático crea una `SKImageFilter` objeto para un efecto de sombra:
 
 ```csharp
-public static SKImageFilter CreateDropShadow (float dx, float dy, 
-                                              float sigmaX, float sigmaY, 
-                                              SKColor color, 
-                                              SKDropShadowImageFilterShadowMode shadowMode, 
-                                              SKImageFilter input = null, 
+public static SKImageFilter CreateDropShadow (float dx, float dy,
+                                              float sigmaX, float sigmaY,
+                                              SKColor color,
+                                              SKDropShadowImageFilterShadowMode shadowMode,
+                                              SKImageFilter input = null,
                                               SKImageFilter.CropRect cropRect = null);
 ```
 
@@ -159,7 +159,7 @@ El `dx` y `dy` parámetros indican los desplazamientos horizontales y verticales
 
 El `sigmaX` y `sigmaY` parámetros están desapareciendo factores de la sombra paralela.
 
-El `color` parámetro es el color de la sombra paralela. Esto `SKColor` valor puede incluir la transparencia. Una posibilidad es el valor de color `SKColors.Black.WithAlpha(0x80)` oscurecer cualquier color de fondo. 
+El `color` parámetro es el color de la sombra paralela. Esto `SKColor` valor puede incluir la transparencia. Una posibilidad es el valor de color `SKColors.Black.WithAlpha(0x80)` oscurecer cualquier color de fondo.
 
 Los dos parámetros finales son opcionales.
 
@@ -265,7 +265,7 @@ public partial class DropShadowExperimentPage : ContentPage
                                     sigmaX,
                                     sigmaY,
                                     SKColors.Red,
-                                    SKDropShadowImageFilterShadowMode.DrawShadowAndForeground); 
+                                    SKDropShadowImageFilterShadowMode.DrawShadowAndForeground);
 
             SKRect textBounds = new SKRect();
             paint.MeasureText(TEXT, ref textBounds);
@@ -280,7 +280,7 @@ public partial class DropShadowExperimentPage : ContentPage
 }
 ```
 
-Este es el programa que se ejecutan en las tres plataformas:
+Este es el programa que se ejecuta:
 
 [![Quitar instantáneas experimento](image-filters-images/DropShadowExperiment.png "Drop Shadow experimento")](image-filters-images/DropShadowExperiment-Large.png#lightbox)
 
@@ -299,22 +299,22 @@ La `SKImageFilter` clase define seis métodos que tienen nombres y parámetros, 
 
 Estos métodos crean filtros de imágenes que imitan el efecto de diferentes tipos de luz en superficies tridimensionales. El filtro de la imagen resultante ilumina los objetos bidimensionales, como si estuvieran en el espacio 3D, lo que puede provocar que aparezcan con privilegios elevados o encajada estos objetos, o con el resaltado especular.
 
-El `Distant` métodos claros suponen que la luz proviene de una distancia lejano. Con el fin de objetos reflectantes, se supone que la luz de punto en una dirección coherente en el espacio 3D, como el sol en un área pequeña de la tierra. El `Point` métodos claros imitan una bombilla situada en un espacio 3D que emite luz en todas las direcciones. El `Spot` luz tiene una posición y una dirección, como una linterna. 
+El `Distant` métodos claros suponen que la luz proviene de una distancia lejano. Con el fin de objetos reflectantes, se supone que la luz de punto en una dirección coherente en el espacio 3D, como el sol en un área pequeña de la tierra. El `Point` métodos claros imitan una bombilla situada en un espacio 3D que emite luz en todas las direcciones. El `Spot` luz tiene una posición y una dirección, como una linterna.
 
-Ubicaciones y direcciones en el espacio 3D se especifican con valores de la [ `SKPoint3` ](xref:SkiaSharp.SKPoint3) estructura, que es similar a `SKPoint` pero con tres propiedades denominadas `X`, `Y`, y `Z`. 
+Ubicaciones y direcciones en el espacio 3D se especifican con valores de la [ `SKPoint3` ](xref:SkiaSharp.SKPoint3) estructura, que es similar a `SKPoint` pero con tres propiedades denominadas `X`, `Y`, y `Z`.
 
 El número y la complejidad de los parámetros a estos métodos dificultan la experimentación con ellos. Para comenzar, el **experimentar de luz distante** página permite experimentar con los parámetros para el `CreateDistantLightDiffuse` método:
 
 ```csharp
-public static SKImageFilter CreateDistantLitDiffuse (SKPoint3 direction, 
-                                                     SKColor lightColor, 
-                                                     float surfaceScale, 
-                                                     float kd, 
-                                                     SKImageFilter input = null, 
+public static SKImageFilter CreateDistantLitDiffuse (SKPoint3 direction,
+                                                     SKColor lightColor,
+                                                     float surfaceScale,
+                                                     float kd,
+                                                     SKImageFilter input = null,
                                                      SKImageFilter.CropRect cropRect = null);
 ```
 
-La página no usa los dos últimos parámetros opcionales. 
+La página no usa los dos últimos parámetros opcionales.
 
 Tres `Slider` vistas en el XAML de archivos permiten seleccionar la `Z` coordenadas de la `SKPoint3` valor, el `surfaceScale` parámetro y el `kd` parámetro, que se define en la documentación de API como "constante de iluminación difusa":
 
@@ -331,7 +331,7 @@ Tres `Slider` vistas en el XAML de archivos permiten seleccionar la `Z` coordena
                            PaintSurface="OnCanvasViewPaintSurface"
                            VerticalOptions="FillAndExpand" />
 
-        <Slider x:Name="zSlider" 
+        <Slider x:Name="zSlider"
                 Minimum="-10"
                 Maximum="10"
                 Margin="10, 0"
@@ -342,7 +342,7 @@ Tres `Slider` vistas en el XAML de archivos permiten seleccionar la `Z` coordena
                               StringFormat='Z = {0:F0}'}"
                HorizontalTextAlignment="Center" />
 
-        <Slider x:Name="surfaceScaleSlider" 
+        <Slider x:Name="surfaceScaleSlider"
                 Minimum="-1"
                 Maximum="1"
                 Margin="10, 0"
@@ -353,7 +353,7 @@ Tres `Slider` vistas en el XAML de archivos permiten seleccionar la `Z` coordena
                               StringFormat='Surface Scale = {0:F1}'}"
                HorizontalTextAlignment="Center" />
 
-        <Slider x:Name="lightConstantSlider" 
+        <Slider x:Name="lightConstantSlider"
                 Minimum="-1"
                 Maximum="1"
                 Margin="10, 0"

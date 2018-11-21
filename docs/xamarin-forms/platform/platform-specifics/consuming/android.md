@@ -6,13 +6,13 @@ ms.assetid: C5D4AA65-9BAA-4008-8A1E-36CDB78A435D
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/01/2018
-ms.openlocfilehash: 3249a9706ba96ec3690a3a3a6b80a5eb261625e4
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 11/19/2018
+ms.openlocfilehash: 5de5899b01965a33025c8af0c1ae6c09ac60dc9b
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527279"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171292"
 ---
 # <a name="android-platform-specifics"></a>Funcionalidades específicas de plataforma Android
 
@@ -143,6 +143,7 @@ En Android, se proporciona la siguiente funcionalidad específica de la platafor
 
 - Utilizando los valores de la sombra de los botones de Android y el relleno predeterminado. Para obtener más información, consulte [utilizando botones de Android](#button-padding-shadow).
 - Establecer el método de entrada de opciones del editor para el teclado en pantalla para una [ `Entry` ](xref:Xamarin.Forms.Entry). Para obtener más información, consulte [opciones de configuración de entrada de Input Method Editor](#entry-imeoptions).
+- Habilitación de una sombra paralela en un `ImageButton`. Para obtener más información, consulte [habilitar una sombra paralela en un ImageButton](#imagebutton-drop-shadow).
 - Habilitar el desplazamiento rápido en un [ `ListView` ](xref:Xamarin.Forms.ListView) para obtener más información, consulte [Habilitar desplazamiento rápido en una ListView](#fastscroll).
 - Controlar si un [ `WebView` ](xref:Xamarin.Forms.WebView) puede mostrar contenido mixto. Para obtener más información, consulte [Habilitar contenido mixto en un objeto WebView](#webview-mixed-content).
 
@@ -227,6 +228,67 @@ El `Entry.On<Android>` método especifica que solo se ejecutarán este específi
 El resultado es que un determinado [ `ImeFlags` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.ImeFlags) se aplica el valor para el teclado en pantalla para el [ `Entry` ](xref:Xamarin.Forms.Entry), que establece el método de entrada en las opciones del editor:
 
 [![Entrada específica plataforma editor del método de entrada](android-images/entry-imeoptions.png "entrada específica plataforma editor del método de entrada")](android-images/entry-imeoptions-large.png#lightbox "entrada específica plataforma editor del método de entrada")
+
+<a name="imagebutton-drop-shadow" />
+
+### <a name="enabling-a-drop-shadow-on-a-imagebutton"></a>Habilitación de una sombra paralela en un ImageButton
+
+Este específicos de la plataforma se utilizan para habilitar una sombra paralela en un `ImageButton`. Se consume en XAML estableciendo el `ImageButton.IsShadowEnabled` propiedad enlazable a `true`, junto con un número de propiedades enlazables opcionales adicionales que controlan el efecto de sombra:
+
+```xaml
+<ContentPage ...
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core">
+    <StackLayout Margin="20">
+       <ImageButton ...
+                    Source="XamarinLogo.png"
+                    BackgroundColor="GhostWhite"
+                    android:ImageButton.IsShadowEnabled="true"
+                    android:ImageButton.ShadowColor="Gray"
+                    android:ImageButton.ShadowRadius="12">
+            <android:ImageButton.ShadowOffset>
+                <Size>
+                    <x:Arguments>
+                        <x:Double>10</x:Double>
+                        <x:Double>10</x:Double>
+                    </x:Arguments>
+                </Size>
+            </android:ImageButton.ShadowOffset>
+        </ImageButton>
+        ...
+    </StackLayout>
+</ContentPage>
+```
+
+Como alternativa, pueden usarse desde C# mediante la API fluida:
+
+```csharp
+using Xamarin.Forms.PlatformConfiguration;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+...
+
+var imageButton = new Xamarin.Forms.ImageButton { Source = "XamarinLogo.png", BackgroundColor = Color.GhostWhite, ... };
+imageButton.On<Android>()
+           .SetIsShadowEnabled(true)
+           .SetShadowColor(Color.Gray)
+           .SetShadowOffset(new Size(10, 10))
+           .SetShadowRadius(12);
+```
+
+> [!IMPORTANT]
+> Se dibuja una sombra paralela como parte de la `ImageButton` en segundo plano y el fondo se dibuja solo si el `BackgroundColor` se establece la propiedad. Por lo tanto, una sombra paralela no se dibujarán si el `ImageButton.BackgroundColor` no se establece la propiedad.
+
+El `ImageButton.On<Android>` método especifica que solo se ejecutarán este específicos de la plataforma en Android. El `ImageButton.SetIsShadowEnabled` método, en el [ `Xamarin.Forms.PlatformConfiguration.AndroidSpecific` ](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific) espacio de nombres, se usa para controlar si una sombra paralela está habilitada en el `ImageButton`. Además, se pueden invocar los métodos siguientes para controlar el efecto de sombra:
+
+- `SetShadowColor` : establece el color de la sombra paralela. El color predeterminado es [ `Color.Default` ](xref:Xamarin.Forms.Color.Default*).
+- `SetShadowOffset` : establece el desplazamiento de la sombra paralela. El desplazamiento cambia la dirección de la sombra se convierte y se especifica como un [ `Size` ](xref:Xamarin.Forms.Size) valor. El `Size` los valores de la estructura se expresan en unidades independientes del dispositivo, con el primer valor que se va a la distancia a la izquierda (valor negativo) o la derecha (valor positivo) y el segundo valor que se va a la distancia anterior (negativo) o por debajo (valor positivo) . El valor predeterminado de esta propiedad es (0.0, 0.0), que da como resultado la sombra que se va a convertir en torno a cada lado de la `ImageButton`.
+- `SetShadowRadius`: establece el radio de desenfoque utilizado para representar la sombra paralela. El valor de radio predeterminado es 10,0.
+
+> [!NOTE]
+> Se puede consultar el estado de una sombra paralela mediante una llamada a la `GetIsShadowEnabled`, `GetShadowColor`, `GetShadowOffset`, y `GetShadowRadius` métodos.
+
+El resultado es que se puede habilitar una sombra paralela en un `ImageButton`:
+
+![](android-images/imagebutton-drop-shadow.png "ImageButton con sombra paralela")
 
 <a name="fastscroll" />
 

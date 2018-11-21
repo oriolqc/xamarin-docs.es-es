@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 84870de28ffd30b2d29fb5d8fbea815e1fd0d9c4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 3397c931dcb23a29b0682699512a5b4c9018de38
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996443"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171071"
 ---
 # <a name="custom-video-transport-controls"></a>Controles de transporte de vídeo personalizado
 
@@ -212,7 +212,7 @@ namespace FormsVideoLibrary.UWP
 
 Implementar el **reproducir**, **pausar**, y **detener** funciones no es suficiente para admitir controles de transporte. A menudo el **reproducir** y **pausar** comandos se implementan con el mismo botón que cambia de apariencia para indicar si el vídeo está actualmente en pausa o reproducción. Además, el botón no debe habilitarse incluso si todavía no ha cargado el vídeo.
 
-Estos requisitos implican que el Reproductor de vídeo debe disponer de un estado actual que indica si está reproduciendo o en pausa, o si no está listo para reproducir un vídeo. (Las tres plataformas admiten también propiedades que indican si se puede pausar el vídeo, o se puede mover a una nueva posición, pero estas propiedades son aplicables para la transmisión de vídeo, en lugar de archivos de vídeo, por lo que no se admiten en el `VideoPlayer` descrito aquí.)
+Estos requisitos implican que el Reproductor de vídeo debe disponer de un estado actual que indica si está reproduciendo o en pausa, o si no está listo para reproducir un vídeo. (Cada plataforma también admite propiedades que indican si se puede pausar el vídeo, o se puede mover a una nueva posición, pero estas propiedades son aplicables para la transmisión de vídeo, en lugar de archivos de vídeo, por lo que no se admiten en el `VideoPlayer` descrito aquí.)
 
 El **VideoPlayerDemos** proyecto incluye un `VideoStatus` enumeración con tres miembros:
 
@@ -532,7 +532,7 @@ Por ese motivo, no se puede usar el punto de código 0x23F5 para **reproducir**.
 
 - 0x25B6 (triángulo negro hacia la derecha) o &#x25B6; para **reproducir**
 
-Esto es compatible con las tres plataformas, salvo que sea un triángulo negro sin formato que no se parece a la apariencia 3D de **pausar** y **detener**. Una posibilidad es seguir el punto de código 0x25B6 con un código de variante:
+Esto es compatible con cada plataforma, salvo que sea un triángulo negro sin formato que no se parece a la apariencia 3D de **pausar** y **detener**. Una posibilidad es seguir el punto de código 0x25B6 con un código de variante:
 
 - 0x25B6 seguido 0xFE0F (variante de 16) o &#x25B6; &#xFE0F; para **reproducir**
 

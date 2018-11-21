@@ -6,13 +6,13 @@ ms.assetid: C946057F-C77C-412D-82A0-DAF475A24EF5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2017
-ms.openlocfilehash: 3eb978780222da2050fc91dfa41c68ef4bd3b6f4
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 10/24/2018
+ms.openlocfilehash: 85a6bce8a1021c75064ba06f3a5daf69b7fe3e57
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996300"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171383"
 ---
 # <a name="xamarinforms-tabbed-page"></a>Página con pestañas de Xamarin.Forms
 
@@ -32,13 +32,13 @@ El diseño de un [ `TabbedPage` ](xref:Xamarin.Forms.TabbedPage)y sus pestañas,
 
 - En iOS, aparece la lista de pestañas en la parte inferior de la pantalla y el área de detalles está por encima. Cada pestaña tiene también una imagen de icono que debe ser un 30 x 30 PNG con transparencia para la resolución normal, 60 x 60 para alta resolución y 90 x 90 para iPhone 6 Plus resolución. Si hay más de cinco pestañas, un *más* aparecerá la ficha, que puede utilizarse para tener acceso a las fichas adicionales. Para obtener más información acerca de cómo cargar imágenes en una aplicación de Xamarin.Forms, consulte [trabajar con imágenes](~/xamarin-forms/user-interface/images.md). Para obtener más información acerca de los requisitos de icono, consulte [crear aplicaciones con fichas](~/ios/user-interface/controls/creating-tabbed-applications.md).
 
-    > [!NOTE]
+  > [!NOTE]
   > Tenga en cuenta que el `TabbedRenderer` para iOS tiene un reemplazable `GetIcon` método que se puede usar para cargar los iconos de pestaña de un origen especificado. Esta invalidación permite usar las imágenes SVG como iconos en un `TabbedPage`. Además, se pueden proporcionar las versiones seleccionadas y no seleccionadas de un icono.
 
 - En Android, aparece la lista de pestañas en la parte superior de la pantalla de forma predeterminada y el área de detalles está por debajo. Sin embargo, se puede mover la lista de pestañas a la parte inferior de la pantalla con una plataforma específica. Para obtener más información, consulte [configuración TabbedPage barra de herramientas de selección de ubicación y Color](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar).
 
-    > [!NOTE]
-  > Tenga en cuenta que al utilizar AppCompat en Android, cada ficha también mostrará un icono. Además, el `TabbedPageRenderer` para AppCompat Android tiene una reemplazable `SetTabIcon` método que se puede usar para cargar los iconos de pestaña de personalizada `Drawable`. Esta invalidación permite usar las imágenes SVG como iconos en un `TabbedPage`.
+  > [!NOTE]
+  > Tenga en cuenta que al utilizar AppCompat en Android, cada ficha también mostrará un icono. Además, el `TabbedPageRenderer` para AppCompat Android tiene una reemplazable `GetIconDrawable` método que se puede usar para cargar los iconos de pestaña de personalizada `Drawable`. Esta invalidación permite usar las imágenes SVG como iconos en un `TabbedPage`, y funciona con ambos superior e inferior barras de pestañas. Como alternativa, reemplazable `SetTabIcon` método puede utilizarse para cargar los iconos de pestaña de personalizada `Drawable` para barras de pestañas principales.
 
 - En los factores de forma de Tablet PC de Windows, las fichas no están siempre visibles y los usuarios necesitan deslice el dedo hacia abajo (o el botón derecho, si tienen un mouse conectado) para ver las fichas en un `TabbedPage` (como se muestra a continuación).
 

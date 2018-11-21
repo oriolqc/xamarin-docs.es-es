@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/16/2018
-ms.openlocfilehash: fa375720730630065609e328b343e16578c6f1df
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2a4b29df9148ce695f8f3ca5377e5848af1b775a
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50131994"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171604"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Reservas de enlace de Xamarin.Forms
 
@@ -44,7 +44,7 @@ En lugar de definir [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackV
 > [!NOTE]
 > No es posible establecer el `FallbackValue` propiedad con una expresión de enlace.
 
-Este es el programa que se ejecutan en las tres plataformas:
+Este es el programa que se ejecuta:
 
 ![Enlace FallbackValue](binding-fallbacks-images/bindingunavailable-detail-cropped.png "FallbackValue enlace")
 
@@ -93,7 +93,7 @@ En lugar de definir [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetN
 > [!NOTE]
 > No es posible establecer el `TargetNullValue` propiedad con una expresión de enlace.
 
-Este es el programa que se ejecutan en las tres plataformas:
+Este es el programa que se ejecuta:
 
 [![Enlace TargetNullValue](binding-fallbacks-images/bindingunavailable-small.png "TargetNullValue enlace")](binding-fallbacks-images/bindingunavailable-large.png#lightbox "TargetNullValue enlace")
 

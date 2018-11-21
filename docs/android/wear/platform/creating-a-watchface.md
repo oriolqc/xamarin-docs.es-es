@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/23/2018
-ms.openlocfilehash: f46e0d27a39c7734e63bf5603ef2e47cd5fa7aa9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 067a39838fbfe3f1b33ac0d30b5069366b11e407
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105537"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172007"
 ---
 # <a name="creating-a-watch-face"></a>Creación de una esfera del reloj
 
@@ -302,7 +302,7 @@ Este XML hace lo siguiente:
 
 3.  Declara una imagen drawable llamada `preview` que se mostrará la pantalla de selección de selector de inspección.
 
-4.  Incluye un `intent-filter` que Android sepan que `MyWatchFaceSevice` va a mostrar una esfera del reloj.
+4.  Incluye un `intent-filter` que Android sepan que `MyWatchFaceService` va a mostrar una esfera del reloj.
 
 Que se haya completado el código de las opciones básicas `WatchFace` ejemplo. El siguiente paso es agregar los recursos necesarios.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: 2980884c94bfa2cddbef89e8a2e5f6aaf778d033
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 647d9f82eab4d606a940ff887defb864d7770cc3
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615540"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171084"
 ---
 # <a name="path-basics-in-skiasharp"></a>Conceptos básicos de la ruta de acceso de SkiaSharp
 
@@ -187,7 +187,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Este es el programa que se ejecutan en las tres plataformas:
+Este es el programa que se ejecuta:
 
 [![](paths-images/strokejoins-small.png "Triple captura de pantalla de la página de trazo une")](paths-images/strokejoins-large.png#lightbox "Triple captura de pantalla de la página se une a trazo")
 

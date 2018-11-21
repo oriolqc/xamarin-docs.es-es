@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: bd865471e3efe42c44a8996a8e364b1c478b69e7
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 8354539288613353dcb7a792ace335daa5dc8f27
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615683"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171149"
 ---
 # <a name="path-effects-in-skiasharp"></a>Efectos de la ruta de acceso de SkiaSharp
 
@@ -923,7 +923,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Puede utilizar este efecto con el trazado o relleno según el `Style` propiedad de la `SKPaint` objeto. Aquí está en las tres plataformas:
+Puede utilizar este efecto con el trazado o relleno según el `Style` propiedad de la `SKPaint` objeto. Aquí se está ejecutando:
 
 [![](effects-images/anotherroundedheptagon-small.png "Captura de pantalla de la página de otro Heptágono redondea triple")](effects-images/anotherroundedheptagon-large.png#lightbox "Triple captura de pantalla de la página de otro Heptágono redondeado")
 
@@ -1068,7 +1068,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Aquí se ejecuta en modo horizontal en las tres plataformas:
+Aquí se está ejecutando en modo horizontal:
 
 [![](effects-images/jittertext-small.png "Captura de pantalla de la página de texto de vibración de triple")](effects-images/jittertext-large.png#lightbox "Triple screenshot of the JitterText page")
 

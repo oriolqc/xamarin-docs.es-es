@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 8340e952d30e21a5249edd0fa3319462bbd5ff8b
-ms.sourcegitcommit: 913763498b5d23fa4a92e877760c51164bf1aa41
+ms.openlocfilehash: 5ffc167b1e5695663dff6005f3d7e0ba0ea958db
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50150241"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52172111"
 ---
 # <a name="xamarinforms-binding-path"></a>Ruta de acceso de enlace de Xamarin.Forms
 
@@ -134,7 +134,7 @@ Por último, el último ejemplo es similar a la segunda, excepto en que hace ref
 
 Ese elemento secundario es un `Label`, que tiene un `Text` propiedad de tipo `String`, que tiene un `Length` propiedad. La primera `Label` informes el `TimeSpan` establecido el `TimePicker`, de modo que cuando se cambia el texto, el último `Label` también cambia.
 
-Este es el programa que se ejecutan en las tres plataformas:
+Este es el programa que se ejecuta:
 
 [![Las variaciones de la ruta de acceso](binding-path-images/pathvariations-small.png "variaciones de la ruta de acceso")](binding-path-images/pathvariations-large.png#lightbox "variaciones de la ruta de acceso")
 
