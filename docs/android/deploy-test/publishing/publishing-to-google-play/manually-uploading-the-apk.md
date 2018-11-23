@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: df6ef208957d8dae229ebb8aee2304444b7d18fe
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4f0378f7e2fe29a5d11c2cbc02fc736adf12577c
+ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111289"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52171734"
 ---
 # <a name="manually-uploading-the-apk"></a>Carga manual del APK
 
@@ -125,7 +125,7 @@ Para publicar una aplicación de pago se necesita una cuenta de comerciante. Par
 
 ### <a name="manage-countries"></a>Administrar países
 
-La siguiente sección, **Manage Countries (Administrar países)**, proporciona control sobre los países en los que se puede distribuir una aplicación:
+La siguiente sección, **Administrar países**, proporciona control sobre los países en los que se puede distribuir una aplicación:
 
 [![Cuadro de diálogo Manage Countries (Administrar países)](manually-uploading-the-apk-images/13-manage-countries-sml.png)](manually-uploading-the-apk-images/13-manage-countries.png#lightbox)
 
@@ -165,11 +165,11 @@ Es posible agregar elementos al manifiesto de la aplicación para ayudar a contr
 -   [supports-screen](http://developer.android.com/guide/topics/manifest/supports-screens-element.html): Google Play usa los atributos para determinar si se puede implementar una aplicación en un dispositivo en función del tamaño de la pantalla. 
     Google Play supondrá que Android puede adaptar un diseño más pequeño en pantallas más grandes, pero no a la inversa. Así pues, una aplicación que declare su compatibilidad con pantallas normales aparecerá en las búsquedas para pantallas grandes, pero no para pantallas pequeñas. Si una determinada aplicación Xamarin.Android no proporciona un elemento `<supports-screen>` en el archivo de manifiesto, Google Play supondrá que todos los atributos tienen el valor true y que la aplicación admite todos los tamaños de pantalla. Este elemento se debe agregar manualmente a **AndroidManifest.xml**. 
 
--   [uses-configuration](http://developer.android.com/guide/topics/manifest/uses-configuration-element.html): este elemento del manifiesto se usa para solicitar determinadas características de hardware, como el tipo de teclado, los dispositivos de navegación, una pantalla táctil, etc. Este elemento se debe agregar manualmente a **AndroidManifest.xml. 
+-   [uses-configuration](http://developer.android.com/guide/topics/manifest/uses-configuration-element.html): este elemento del manifiesto se usa para solicitar determinadas características de hardware, como el tipo de teclado, los dispositivos de navegación, una pantalla táctil, etc. Este elemento se debe agregar manualmente a **AndroidManifest.xml**. 
 
 -   [uses-feature](http://developer.android.com/guide/topics/manifest/uses-feature-element.html): este elemento del manifiesto declara características de hardware o de software con las que debe contar un dispositivo para que la aplicación funcione. Este atributo es solo informativo. Google Play no mostrará la aplicación en los dispositivos que no cumplan este filtro. Aun así, la aplicación se puede instalar de otras maneras (manualmente o bien descargándola). Este elemento se debe agregar manualmente a **AndroidManifest.xml**. 
 
--   [uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html): este elemento especifica que ciertas bibliotecas compartidas deben estar presentes en el dispositivo (por ejemplo, Google Maps). Este elemento también se puede especificar con `Android.App.UsesLibaryAttribute`. Por ejemplo: 
+-   [uses-library](http://developer.android.com/guide/topics/manifest/uses-library-element.html): este elemento especifica que ciertas bibliotecas compartidas deben estar presentes en el dispositivo (por ejemplo, Google Maps). Este elemento también se puede especificar con `Android.App.UsesLibraryAttribute`. Por ejemplo: 
 
     ```csharp
     [assembly: UsesLibrary("com.google.android.maps", true)]
