@@ -1,11 +1,11 @@
 ---
 ms.topic: include
 ms.openlocfilehash: e4dfd1ac12f3010939d483381a785091d71599ed
-ms.sourcegitcommit: 28dbb5fa2fbcc7e66cd09c1d0077496fcdefac56
+ms.sourcegitcommit: 676c5a6795ab4896ccd1b288424bf2040b1208aa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51210611"
+ms.lasthandoff: 11/25/2018
+ms.locfileid: "52294830"
 ---
 ## <a name="sensor-speedxrefxamarinessentialssensorspeed"></a>[Velocidad de sensor](xref:Xamarin.Essentials.SensorSpeed)
 
