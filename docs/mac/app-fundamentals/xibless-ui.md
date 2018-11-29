@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: e41f19c1a2d02537f300ae82b7f3d45bc6571e1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 076c6464359a58c2b36d157d9620673b0644cd4a
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112481"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459842"
 ---
 # <a name="storyboardxib-less-user-interface-design-in-xamarinmac"></a>diseño de interfaz de usuario de.Storyboard/.xib-less en Xamarin.Mac
 
@@ -34,7 +34,7 @@ Cuando se crea una nueva aplicación de Xamarin.Mac Cocoa, obtendrá una ventana
 
 Para cambiar a una ventana Xibless para una aplicación, realice lo siguiente:
 
-1. Abra la aplicación que desea dejar de usar `.stroyboard` o archivos .xib para definir la interfaz de usuario en Visual Studio para Mac.
+1. Abra la aplicación que desea dejar de usar `.storyboard` o archivos .xib para definir la interfaz de usuario en Visual Studio para Mac.
 2. En el **panel de solución**, haga doble clic en el **Main.storyboard** o **MainWindow.xib** de archivo y seleccione **quitar**: 
 
     ![Quitar el guión gráfico principal o la ventana](xibless-ui-images/switch01.png "quitar el guión gráfico principal o la ventana")
@@ -371,5 +371,5 @@ En este artículo ha tomado una visión detallada de la creación de la interfaz
 - [MacXibless (ejemplo)](https://developer.xamarin.com/samples/mac/MacXibless/)
 - [Windows](~/mac/user-interface/window.md)
 - [Menús](~/mac/user-interface/menu.md)
-- [Directrices de interfaz humana de macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [Directrices de la interfaz humana de macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
 - [Introducción a Windows](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/WinPanel/Introduction.html)

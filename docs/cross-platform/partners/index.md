@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
-ms.openlocfilehash: 5165d8f61973b82105c1b2e39d8bf316d0c2b42b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c61ed731f22122637963c28c42f44b84ec7fa9f4
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121430"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459959"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>Certificados asociados de consultoría para entregar soluciones móviles
 
@@ -80,7 +80,7 @@ _Enumerados por la ubicación principal, muchos socios proporcionan servicios a 
 |[DOOR3](http://door3.com/)|Nueva York, Estados Unidos|En un mundo de las agencias creativo, grandes empresas de consultoría y tiendas de implementación especializada, nos son diferentes. Nos interesa nuestro negocio, pero nos interesa nuestros clientes más.|
 |[DreamTeam Mobile](http://dreamteam-mobile.com)|Washington, D.C., Estados Unidos|DreamTeam Mobile crear nativas para iOS, Android, Windows y Mac aplicaciones con Xamarin, Swift y React Native. Creamos aplicaciones nativas para varias plataformas con compartido códigos base|
 |[Durwella](http://www.durwella.com)|Houston, Estados Unidos|Durwella es una empresa de soluciones de software que se centra en los proyectos de ingeniería y científicos|
-|[­ EastBanc Technologies](http://www.eastbanctech.com)|Washington, D.C., Estados Unidos| EastBanc Technologies es una compañía de desarrollo de software de independientes de la plataforma del ciclo de vida completo entregar soluciones de tecnología flexible|
+|[­ EastBanc Technologies](http://www.eastbanctech.com)|Washington, D.C., Estados Unidos|­ EastBanc Technologies es una compañía de desarrollo de software de independientes de la plataforma del ciclo de vida completo entregar soluciones de tecnología flexible|
 |[Borde Webware, Inc.](https://edgewebware.com)|OH, Miamisburg|Borde Webware, Inc. se proporciona con web y los servicios de diseño o desarrollo de aplicaciones móviles|
 |[eGo soluciones creativas de medios](http://ego-cms.com)|Nueva York, NY|Somos un equipo con el carácter fuerte y mentes brillantes que elaborar personalizado de iOS, Android y aplicaciones Web que las personas les encanta usar|
 |[Bot de ocho LLC](http://eightbot.com)|Chicago, IL|La movilidad es una extensión de sus aplicaciones empresariales esencial. Se ofrecen soluciones que tienen el mayor impacto en su negocio crear aplicaciones increíbles para internos y externos a usar|
@@ -290,7 +290,7 @@ _Enumerados por la ubicación principal, muchos socios proporcionan servicios a 
 
 | Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
-|[Software de vista de alto](http://www.highviewsoft.com)|Pekín, China|Visionsoft Software está centrando en ofrecer aplicaciones multiplataforma y diseño de programas de servicio en la nube, desarrollo, implementación, cursos técnicos y otros servicios de consultoría|
+|[Software de vista de alto](http://www.highviewsoft.com)|Pekín, China|Alto de la vista de Software está centrando en ofrecer aplicaciones multiplataforma y diseño de programas de servicio en la nube, desarrollo, implementación, cursos técnicos y otros servicios de consultoría|
 
 
 ## <a name="colombia"></a>Colombia

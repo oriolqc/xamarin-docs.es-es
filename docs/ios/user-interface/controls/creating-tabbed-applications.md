@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: e4ab46994ed25daaef95a709e4f9df94f3a21cd0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6a0081a9d4ee4df72dc3eecfd5c4da318c5c5d78
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114683"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459920"
 ---
 # <a name="tab-bars-and-tab-bar-controllers-in-xamarinios"></a>Barras de pestañas y controladores de la barra de pestañas de Xamarin.iOS
 
@@ -87,7 +87,7 @@ namespace TabbedApplication {
 
                 public TabController ()
                 {
-                        tab1 = new UIViewController();
+            tab1 = new UIViewController();
                         tab1.Title = "Green";
                         tab1.View.BackgroundColor = UIColor.Green;
 
@@ -121,23 +121,23 @@ Para obtener el `UITabController` para cargar como la primera pantalla, es neces
 
 ```csharp
 [Register ("AppDelegate")]
-        public partial class AppDelegate : UIApplicationDelegate
-        {
-                UIWindow window;
-                TabController tabController;
+public partial class AppDelegate : UIApplicationDelegate
+{
+    UIWindow window;
+    TabController tabController;
 
-                public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-                {
-                        window = new UIWindow (UIScreen.MainScreen.Bounds);
+    public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+    {
+        window = new UIWindow (UIScreen.MainScreen.Bounds);
 
-                        var tabController = new TabController ();
-                        window.RootViewController = tabController;
+        tabController = new TabController ();
+        window.RootViewController = tabController;
 
-                        window.MakeKeyAndVisible ();
-            
-                        return true;
-                }
-        }
+        window.MakeKeyAndVisible ();
+
+        return true;
+    }
+}
 ```
 
 Si se ejecuta la aplicación ahora, el `UITabBarController` se cargará con la primera ficha seleccionada de forma predeterminada. La selección de cualquiera de las otras pestañas ver los resultados en el controlador asociado que se presenta el `UITabBarController,` tal como se muestra a continuación donde el usuario final ha seleccionado la segunda pestaña:
@@ -309,9 +309,9 @@ Ahora tenemos que saber el controlador de vista para ocultar el botón cuando se
 
 ```csharp
 partial void InitialActionCompleted (UIButton sender)
-    {
-      aButton.Hidden = true;  
-    }
+{
+    aButton.Hidden = true;  
+}
 ```
 
 Guarde el archivo y ejecutar la aplicación. Deberíamos ver pantalla aparecerá uno y el botón desaparecen al retocar.
@@ -352,7 +352,6 @@ public override void ViewDidLoad ()
      if (ParentViewController != null){
        aButton.Hidden = true;
      }
-
 }
 ```
 

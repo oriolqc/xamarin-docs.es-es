@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: d1b1a59b432315532844f8fca3b613ff3392a7b5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: bfbb8c2b189defeb6efb07388ea34425c239c061
+ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108254"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52459894"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Notificaciones de usuario mejorada en Xamarin.iOS
 
@@ -58,7 +58,7 @@ Algunos ejemplos de notificaciones locales incluyen:
 - Avisos
 - Ubicación compatible con desencadenadores
 
-Para obtener más información, consulte Apple [Local y remoto Notification Programming Guide](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) documentación.
+Para obtener más información, consulte Apple [Local y remoto Notification Programming Guide](https://developer.apple.com/documentation/usernotifications) documentación.
 
 ### <a name="about-remote-notifications"></a>Acerca de las notificaciones remotas
 
@@ -80,7 +80,7 @@ Hay dos tipos de notificaciones remotas disponibles para una aplicación de iOS:
 - **Cara al usuario** -se muestran al usuario en el dispositivo.
 - **Las actualizaciones silenciosas** -proporcionan un mecanismo para actualizar el contenido de una aplicación de iOS en segundo plano. Cuando se recibe una actualización en modo silencioso, la aplicación puede llegar a la extracción de los servidores de quitar el contenido más reciente.
 
-Para obtener más información, consulte Apple [Local y remoto Notification Programming Guide](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) documentación.
+Para obtener más información, consulte Apple [Local y remoto Notification Programming Guide](https://developer.apple.com/documentation/usernotifications) documentación.
 
 ### <a name="about-the-existing-notifications-api"></a>Acerca de las API de notificaciones existentes
 
@@ -202,7 +202,7 @@ El token que se envía a la aplicación del lado de servidor del desarrollador d
 
 El token actúa como la clave que une a la notificación y la aplicación se usa para abrir o responder a la notificación.
 
-Para obtener más información, consulte Apple [Local y remoto Notification Programming Guide](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/) documentación.
+Para obtener más información, consulte Apple [Local y remoto Notification Programming Guide](https://developer.apple.com/documentation/usernotifications) documentación.
 
 ## <a name="notification-delivery"></a>Entrega de notificaciones
 
@@ -672,4 +672,4 @@ En este artículo ha cubierto todas las formas que se han mejorado la notificaci
 - [Ejemplos de iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
 - [Referencia de marco de Usernotifications](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
-- [Guía de programación de notificaciones locales y remotos](https://developer.apple.com/library/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
+- [Guía de programación de notificaciones locales y remotos](https://developer.apple.com/documentation/usernotifications)
