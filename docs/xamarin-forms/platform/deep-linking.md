@@ -1,23 +1,23 @@
 ---
 title: Indexación de la aplicación y vinculación en profundidad
-description: En este artículo se muestra cómo usar la indexación de la aplicación y vinculación en profundidad para que el contenido de la aplicación de Xamarin.Forms que se puede buscar en los dispositivos iOS y Android.
+description: En este artículo se explica cómo usar la indexación de la aplicación y vinculación en profundidad para que el contenido de la aplicación de Xamarin.Forms que se puede buscar en los dispositivos iOS y Android.
 ms.prod: xamarin
 ms.assetid: 410C5D19-AA3C-4E0D-B799-E288C5803226
 ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/11/2016
-ms.openlocfilehash: 7a102765a3633b8abaf01b3f090d8253230bc16b
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.date: 11/28/2018
+ms.openlocfilehash: f73760e2dc2310a9c1cd7a63a03ead37283a415f
+ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996101"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710015"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexación de la aplicación y vinculación en profundidad
 
-_Indexación de la aplicación permite a las aplicaciones que de lo contrario serían olvidadas después de unos pocos se usa para mantener su relevancia por aparezcan en los resultados de búsqueda. Vinculación en profundidad permite a las aplicaciones responder a un resultado de búsqueda que contiene los datos de la aplicación, normalmente, vaya a una página que se hace referencia desde un vínculo profundo. En este artículo se muestra cómo usar la indexación de la aplicación y vinculación en profundidad para que el contenido de la aplicación de Xamarin.Forms que se puede buscar en los dispositivos iOS y Android._
+_Indexación de la aplicación permite a las aplicaciones que de lo contrario serían olvidadas después de unos pocos se usa para mantener su relevancia por aparezcan en los resultados de búsqueda. Vinculación en profundidad permite a las aplicaciones responder a un resultado de búsqueda que contiene los datos de la aplicación, normalmente, vaya a una página que se hace referencia desde un vínculo profundo. En este artículo se explica cómo usar la indexación de la aplicación y vinculación en profundidad para que el contenido de la aplicación de Xamarin.Forms que se puede buscar en los dispositivos iOS y Android._
 
 > [!VIDEO https://youtube.com/embed/UJv4jUs7cJw]
 
@@ -32,10 +32,10 @@ La aplicación de ejemplo muestra una aplicación de lista de tareas pendientes 
 
 Cada `TodoItem` instancia creada por el usuario está indizada. Búsqueda específica de la plataforma, a continuación, puede utilizarse para localizar los datos indizados de la aplicación. Cuando el usuario puntea un elemento de resultado de búsqueda para la aplicación, se inicia la aplicación, el `TodoItemPage` se navega a y el `TodoItem` al que hace referencia desde el vínculo se muestra.
 
-Para obtener más información sobre el uso de una base de datos de SQLite, consulte [trabajar con una base de datos Local](~/xamarin-forms/app-fundamentals/databases.md).
+Para obtener más información sobre el uso de una base de datos de SQLite, consulte [bases de datos locales de Xamarin.Forms](~/xamarin-forms/app-fundamentals/databases.md).
 
 > [!NOTE]
-> Indexación de la aplicación de Xamarin.Forms y la funcionalidad de vinculación profunda solo está disponibles en las plataformas iOS y Android y requiere iOS 9 y API 23, respectivamente.
+> Indexación de la aplicación de Xamarin.Forms y funcionalidad de vinculación profunda solo está disponibles en las plataformas iOS y Android y requiere un mínimo de iOS 9 y de API 23, respectivamente.
 
 ## <a name="setup"></a>Programa de instalación
 
@@ -43,7 +43,15 @@ Las secciones siguientes proporcionan las instrucciones de instalación adiciona
 
 ### <a name="ios"></a>iOS
 
-En la plataforma iOS, no hay ninguna configuración adicional necesaria para usar esta funcionalidad.
+En la plataforma iOS, asegúrese de que el proyecto de plataforma de iOS establece el **Entitlements.plist** como el archivo de derechos personalizados para firmar el paquete.
+
+Para usar iOS vínculos universales:
+
+1. Agregar un derecho de dominios asociados a la aplicación, con el `applinks` clave, incluidos todos los dominios que admitirá la aplicación.
+1. Agregue un archivo de asociación de sitio de aplicación de Apple para su sitio Web.
+1. Agregar el `applinks` clave en el archivo de la asociación del sitio de aplicación de Apple.
+
+Para obtener más información, consulte [permitir aplicaciones y sitios Web para vincular a su contenido](https://developer.apple.com/documentation/uikit/core_app/allowing_apps_and_websites_to_link_to_your_content) en developer.apple.com.
 
 ### <a name="android"></a>Android
 
@@ -56,12 +64,20 @@ En la plataforma Android, hay una serie de requisitos previos que deben cumplirs
 Una vez que se cumplen estos requisitos previos, se requiere la siguiente configuración adicional para usar la indexación de la aplicación de Xamarin.Forms y vinculación en profundidad en la plataforma Android:
 
 1. Instalar el [Xamarin.Forms.AppLinks](https://www.nuget.org/packages/Xamarin.Forms.AppLinks/) paquete de NuGet en el proyecto de aplicación de Android.
-1. En el `MainActivity.cs` archivo, importe el `Xamarin.Forms.Platform.Android.AppLinks` espacio de nombres.
+1. En el **MainActivity.cs** , agregue una declaración para usar el `Xamarin.Forms.Platform.Android.AppLinks` espacio de nombres.
+1. En el **MainActivity.cs** , agregue una declaración para usar el `Firebase` espacio de nombres.
+1. En un explorador web, cree un nuevo proyecto a través de la [consola Firebase](https://console.firebase.google.com/).
+1. En la consola Firebase, agregar Firebase a tu aplicación para Android y escriba los datos necesarios.
+1. Descargar resultante **google-services.json** archivo.
+1. Agregar el **google-services.json** de archivos en el directorio raíz del proyecto Android y establezca su **acción de compilación** a **GoogleServicesJson**.
 1. En el `MainActivity.OnCreate` invalide, agregue la siguiente línea de código debajo `Forms.Init(this, bundle)`:
 
 ```csharp
-AndroidAppLinks.Init (this);
+FirebaseApp.InitializeApp(this);
+AndroidAppLinks.Init(this);
 ```
+
+Cuando **google-services.json** se agrega al proyecto (y el *GoogleServicesJson** se establece la acción de compilación), el proceso de compilación extrae la clave de API y el identificador de cliente y, a continuación, agrega estas credenciales para el archivo de manifiesto generado.
 
 Para obtener más información, consulte [vínculo profundo contenido con la navegación a direcciones URL Xamarin.Forms](https://blog.xamarin.com/deep-link-content-with-xamarin-forms-url-navigation/) en el blog de Xamarin.
 
@@ -75,29 +91,33 @@ El proceso de indización de una página y exponerlo a búsqueda de Spotlight y 
 En el ejemplo de código siguiente se muestra cómo crear un [ `AppLinkEntry` ](xref:Xamarin.Forms.AppLinkEntry) instancia:
 
 ```csharp
-AppLinkEntry GetAppLink (TodoItem item)
+AppLinkEntry GetAppLink(TodoItem item)
 {
-  var pageType = GetType ().ToString ();
-  var pageLink = new AppLinkEntry {
-    Title = item.Name,
-    Description = item.Notes,
-    AppLinkUri = new Uri (string.Format ("http://{0}/{1}?id={2}",
-      App.AppName, pageType, WebUtility.UrlEncode (item.ID)), UriKind.RelativeOrAbsolute),
-    IsLinkActive = true,
-    Thumbnail = ImageSource.FromFile ("monkey.png")
-  };
+    var pageType = GetType().ToString();
+    var pageLink = new AppLinkEntry
+    {
+        Title = item.Name,
+        Description = item.Notes,
+        AppLinkUri = new Uri($"http://{App.AppName}/{pageType}?id={item.ID}", UriKind.RelativeOrAbsolute),
+        IsLinkActive = true,
+        Thumbnail = ImageSource.FromFile("monkey.png")
+    };
 
-  return pageLink;
+    pageLink.KeyValues.Add("contentType", "TodoItemPage");
+    pageLink.KeyValues.Add("appName", App.AppName);
+    pageLink.KeyValues.Add("companyName", "Xamarin");
+
+    return pageLink;
 }
 ```
 
 El [ `AppLinkEntry` ](xref:Xamarin.Forms.AppLinkEntry) instancia contiene un número de propiedades cuyos valores son necesarios para la página de índice y crear un vínculo profundo. El [ `Title` ](xref:Xamarin.Forms.IAppLinkEntry.Title), [ `Description` ](xref:Xamarin.Forms.IAppLinkEntry.Description), y [ `Thumbnail` ](xref:Xamarin.Forms.IAppLinkEntry.Thumbnail) propiedades se utilizan para identificar el contenido indizado cuando aparece en los resultados de búsqueda. El [ `IsLinkActive` ](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) propiedad está establecida en `true` para indicar que actualmente se está viendo el contenido indizado. El [ `AppLinkUri` ](xref:Xamarin.Forms.IAppLinkEntry.AppLinkUri) propiedad es un `Uri` que contiene la información necesaria para volver a la página actual y mostrar actual `TodoItem`. El ejemplo siguiente muestra un ejemplo `Uri` para la aplicación de ejemplo:
 
 ```csharp
-http://deeplinking/DeepLinking.TodoItemPage?id=ec38ebd1-811e-4809-8a55-0d028fce7819
+http://deeplinking/DeepLinking.TodoItemPage?id=2
 ```
 
-Esto `Uri` contiene toda la información necesaria para iniciar el `deeplinking` aplicación, vaya a la `DeepLinking.TodoItemPage`y mostrar el `TodoItem` que tiene un `ID` de `ec38ebd1-811e-4809-8a55-0d028fce7819`.
+Esto `Uri` contiene toda la información necesaria para iniciar el `deeplinking` aplicación, vaya a la `DeepLinking.TodoItemPage`y mostrar el `TodoItem` que tiene un `ID` de 2.
 
 ## <a name="registering-content-for-indexing"></a>Registra el contenido para la indexación
 
@@ -138,30 +158,28 @@ Cuando el contenido indizado aparece en los resultados de búsqueda y un usuario
 ```csharp
 public class App : Application
 {
-  ...
+    ...
+    protected override async void OnAppLinkRequestReceived(Uri uri)
+    {
+        string appDomain = "http://" + App.AppName.ToLowerInvariant() + "/";
+        if (!uri.ToString().ToLowerInvariant().StartsWith(appDomain, StringComparison.Ordinal))
+            return;
 
-  protected override async void OnAppLinkRequestReceived (Uri uri)
-  {
-    string appDomain = "http://" + App.AppName.ToLowerInvariant () + "/";
-    if (!uri.ToString ().ToLowerInvariant ().StartsWith (appDomain)) {
-      return;
+        string pageUrl = uri.ToString().Replace(appDomain, string.Empty).Trim();
+        var parts = pageUrl.Split('?');
+        string page = parts[0];
+        string pageParameter = parts[1].Replace("id=", string.Empty);
+
+        var formsPage = Activator.CreateInstance(Type.GetType(page));
+        var todoItemPage = formsPage as TodoItemPage;
+        if (todoItemPage != null)
+        {
+            var todoItem = await App.Database.GetItemAsync(int.Parse(pageParameter));
+            todoItemPage.BindingContext = todoItem;
+            await MainPage.Navigation.PushAsync(formsPage as Page);
+        }
+        base.OnAppLinkRequestReceived(uri);
     }
-
-    string pageUrl = uri.ToString ().Replace (appDomain, string.Empty).Trim ();
-    var parts = pageUrl.Split ('?');
-    string page = parts [0];
-    string pageParameter = parts [1].Replace ("id=", string.Empty);
-
-    var formsPage = Activator.CreateInstance (Type.GetType (page));
-    var todoItemPage = formsPage as TodoItemPage;
-    if (todoItemPage != null) {
-      var todoItem = App.Database.Find (pageParameter);
-      todoItemPage.BindingContext = todoItem;
-      await MainPage.Navigation.PushAsync (formsPage as Page);
-    }
-
-    base.OnAppLinkRequestReceived (uri);
-  }
 }
 ```
 
@@ -174,23 +192,25 @@ Cada vez que se muestra la página representada por un vínculo profundo, el [ `
 El ejemplo de código siguiente se muestra cómo establecer el [ `AppLinkEntry.IsLinkActive` ](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) propiedad `true` en el [ `Page.OnAppearing` ](xref:Xamarin.Forms.Page.OnAppearing) invalidar:
 
 ```csharp
-protected override void OnAppearing ()
+protected override void OnAppearing()
 {
-  appLink = GetAppLink (BindingContext as TodoItem);
-  if (appLink != null) {
-    appLink.IsLinkActive = true;
-  }
+    appLink = GetAppLink(BindingContext as TodoItem);
+    if (appLink != null)
+    {
+        appLink.IsLinkActive = true;
+    }
 }
 ```
 
 De forma similar, cuando la página representada por un vínculo profundo se navega fuera de la [ `AppLinkEntry.IsLinkActive` ](xref:Xamarin.Forms.IAppLinkEntry.IsLinkActive) propiedad puede establecerse en `false`. En iOS y Android, Esto detiene el [ `AppLinkEntry` ](xref:Xamarin.Forms.AppLinkEntry) publicidad detiene la instancia que se anuncian para la indización de búsqueda y en iOS únicamente, TI también el `AppLinkEntry` instancia para su entrega. Esto puede realizarse en el [ `Page.OnDisappearing` ](xref:Xamarin.Forms.Page.OnDisappearing) invalidar, tal y como se muestra en el ejemplo de código siguiente:
 
 ```csharp
-protected override void OnDisappearing ()
+protected override void OnDisappearing()
 {
-  if (appLink != null) {
-    appLink.IsLinkActive = false;
-  }
+    if (appLink != null)
+    {
+        appLink.IsLinkActive = false;
+    }
 }
 ```
 
@@ -199,8 +219,9 @@ protected override void OnDisappearing ()
 En iOS, se pueden almacenar datos específicos de la aplicación al realizar la indización la página. Esto se logra mediante la adición de datos a la [ `KeyValues` ](xref:Xamarin.Forms.IAppLinkEntry.KeyValues) colección, que es un `Dictionary<string, string>` para almacenar los pares clave-valor que se usan en entrega. Comportamiento de la transición es una forma para el usuario iniciar una actividad en uno de sus dispositivos y seguir esa actividad en otro de sus dispositivos (según se identifica mediante la cuenta de iCloud del usuario). El código siguiente muestra un ejemplo de almacenar pares de clave-valor específicos de la aplicación:
 
 ```csharp
-var pageLink = new AppLinkEntry {
-  ...  
+var pageLink = new AppLinkEntry
+{
+    ...
 };
 pageLink.KeyValues.Add("appName", App.AppName);
 pageLink.KeyValues.Add("companyName", "Xamarin");
@@ -221,8 +242,7 @@ Para obtener más información acerca de la entrega, vea [Introducción a la ent
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se muestra cómo usar la indexación de la aplicación y vinculación en profundidad para que el contenido de la aplicación de Xamarin.Forms que se puede buscar en los dispositivos iOS y Android. Indexación de la aplicación permite a las aplicaciones destacar por aparezcan en los resultados de búsqueda que de lo contrario serían olvidados sobre después de unos pocos usa.
-
+En este artículo se explica cómo usar la indexación de la aplicación y vinculación en profundidad para que el contenido de la aplicación de Xamarin.Forms que se puede buscar en los dispositivos iOS y Android. Indexación de la aplicación permite a las aplicaciones destacar por aparezcan en los resultados de búsqueda que de lo contrario serían olvidados sobre después de unos pocos usa.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

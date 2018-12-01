@@ -1,5 +1,5 @@
 ---
-title: Android circular 9
+title: Android 9 Pie
 description: Cómo empezar a desarrollar aplicaciones para Android circular 9 con Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 6575DD32-9DC8-44E6-85EF-1F8BD07D3780
@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: c353341af8899960b12437d55602415a02953cbc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cd1c374fa68420e1923ef4dee0bb37a4665f3535
+ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111717"
+ms.lasthandoff: 11/30/2018
+ms.locfileid: "52710028"
 ---
 # <a name="android-pie-features"></a>Características de Android circular
 
@@ -24,9 +24,7 @@ _Cómo empezar a desarrollar aplicaciones para Android circular 9 con Xamarin.An
 
 En este artículo está estructurado para ayudarle a empezar a trabajar en el desarrollo de aplicaciones de Xamarin.Android para Android circular. Explica cómo instalar las actualizaciones necesarias, configure el SDK y preparar un emulador o dispositivo para las pruebas. También proporciona un resumen de las nuevas características de Android circular y proporciona código fuente de ejemplo que ilustra cómo usar algunas de las características clave de gráfico circular de Android.
 
-![Vista previa](~/media/shared/preview.png)
-
-Xamarin.Android 9.0 ofrece compatibilidad de versión preliminar para Android circular. Para obtener más información sobre la compatibilidad con Xamarin.Android circular Android, consulte el [Android P Developer Preview 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) notas de la versión.
+Xamarin.Android 9.0 proporciona compatibilidad con Android circular. Para obtener más información sobre la compatibilidad con Xamarin.Android circular Android, consulte el [Android P Developer Preview 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) notas de la versión.
 
 ## <a name="requirements"></a>Requisitos
 
@@ -142,7 +140,7 @@ Tenga en cuenta que el fondo blanco de la aplicación no se permite extender en 
 
 Si necesita información más detallada sobre el área de recorte en el dispositivo, puede usar el nuevo [DisplayCutout](https://developer.android.com/reference/android/view/DisplayCutout.html) clase. `DisplayCutout` representa el área de la pantalla que no se puede usar para mostrar el contenido. Puede usar esta información para recuperar la ubicación y la forma del recorte para que la aplicación no intenta mostrar el contenido de esta área que no es funcional.
 
-Para obtener más información acerca de las nuevas características de recorte de P de Android, consulte [soporte de recorte de pantalla](https://developer.android.com/preview/features#cutout).
+Para obtener más información acerca de las nuevas características de recorte de P de Android, consulte [soporte de recorte de pantalla](https://developer.android.com/about/versions/pie/android-9.0#cutout).
 
 
 
@@ -223,12 +221,12 @@ El nuevo [WifiRttManager](https://developer.android.com/reference/android/net/wi
 
 ### <a name="multi-camera-support"></a>Compatibilidad con múltiples cámara
 
-Muchos dispositivos Android más recientes tienen doble delantera o dual back cámaras que son útiles para funciones como visión estéreo, efectos visuales mejorados y capacidad de ampliación mejorada. P Android presenta una nueva [multicámara](https://developer.android.com/preview/features#camera) API que hace posible que la aplicación para utilizar un *cámara lógico* (o *lógico multicámara*) que está respaldado por dos o más cámaras físicas.
+Muchos dispositivos Android más recientes tienen doble delantera o dual back cámaras que son útiles para funciones como visión estéreo, efectos visuales mejorados y capacidad de ampliación mejorada. P Android presenta una nueva [multicámara](https://developer.android.com/about/versions/pie/android-9.0#camera) API que hace posible que la aplicación para utilizar un *cámara lógico* (o *lógico multicámara*) que está respaldado por dos o más cámaras físicas.
 Para determinar si el dispositivo es compatible con una cámara múltiple lógico, puede mirar las capacidades de cada cámara del dispositivo para ver si admite [RequestAvailableCapabilitiesLogicalMultiCamera](https://developer.android.com/reference/android/hardware/camera2/CameraMetadata#REQUEST_AVAILABLE_CAPABILITIES_LOGICAL_MULTI_CAMERA).
 
 Android circular también incluye un nuevo [Configuracióndesesión](https://developer.android.com/reference/android/hardware/camera2/params/SessionConfiguration.html) clase que puede usarse para ayudar a reducir los retrasos durante la captura inicial y elimina la necesidad de iniciar e iniciar la secuencia de la cámara.
 
-Para obtener más información acerca de la cámara múltiples, admite en Android P, vea [actualizaciones de soporte técnico y cámara multicámara](https://developer.android.com/preview/features#camera).
+Para obtener más información acerca de la cámara múltiples, admite en Android P, vea [actualizaciones de soporte técnico y cámara multicámara](https://developer.android.com/about/versions/pie/android-9.0#camera).
 
 
 ### <a name="other-features"></a>Otras características
@@ -256,7 +254,7 @@ Cuando la versión de Android de destino se establece en el nivel de API 28, hay
 
 -  Ya no se permite el acceso directo a directorio de datos de la otra aplicación mediante la ruta de acceso.
 
-Para obtener más información sobre los cambios de comportamiento en aplicaciones destinadas a Android P, consulte [los cambios de comportamiento](https://developer.android.com/preview/behavior-changes.html#p-apps).
+Para obtener más información sobre los cambios de comportamiento en aplicaciones destinadas a Android P, consulte [los cambios de comportamiento](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps).
 
 
 ## <a name="sample-code"></a>Código de ejemplo
