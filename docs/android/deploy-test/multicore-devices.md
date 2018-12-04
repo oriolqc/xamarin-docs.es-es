@@ -256,7 +256,7 @@ Luego, se pasa a describir cómo especificar la compatibilidad con ABI en una ap
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Arquitectura de MIPS](http://www.mips.com/products/product-materials/processor/mips-architecture)
-- [ABI for the ARM Architecture (PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf) (ABI para la arquitectura de ARM) (PDF)
+- [ABI para la arquitectura ARM (PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf)
 - [NDK de Android](http://developer.android.com/tools/sdk/ndk/index.html)
-- [Issue 9089:Nexus One - Won't load ANY native libraries from armeabi if there's at least one library at armeabi-v7a](http://code.google.com/p/android/issues/detail?id=9089) (Problema 9089: Nexus One no carga ninguna biblioteca nativa de armeabi si hay al menos una biblioteca en armeabi-v7a)
-- [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](http://code.google.com/p/android/issues/detail?id=25321) (Problema 24321: Galaxy Nexus 4.0.2 usa código nativo de armeabi cuando armeabi y armeabi-v7a se incluyen en apk)
+- [Problema 9089: Nexus One no carga ninguna biblioteca nativa de armeabi si hay al menos una biblioteca en armeabi-v7a](http://code.google.com/p/android/issues/detail?id=9089) 
+- [Problema 24321: Galaxy Nexus 4.0.2 usa código nativo de armeabi cuando armeabi y armeabi-v7a se incluyen en apk](http://code.google.com/p/android/issues/detail?id=25321) 
