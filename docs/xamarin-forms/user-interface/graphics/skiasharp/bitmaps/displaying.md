@@ -7,14 +7,16 @@ ms.assetid: 8E074F8D-4715-4146-8CC0-FD7A8290EDE9
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: f4cc13a5e8794eb5f2f883f35d6a0e4d34788507
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 73fdccf1f6ccee4f6610c1078f5aab14c2be3d78
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615319"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054925"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>Mostrar mapas de bits de SkiaSharp
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 El asunto de mapas de bits de SkiaSharp se introdujo en el artículo  **[conceptos básicos de mapa de bits de SkiaSharp](../basics/bitmaps.md)**. Ese artículo mostró tres formas de mapas de bits de carga y tres formas de mostrar los mapas de bits. En este artículo Revisa las técnicas necesarias para cargar mapas de bits y profundiza en el uso de la `DrawBitmap` métodos de `SKCanvas`.
 

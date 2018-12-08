@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 73aa3115e92d1e3954f5ae3eb8dcb84abf9d9efb
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: f70ab3faf6984720e395f5a41b4cabb63fe03053
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998773"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056936"
 ---
 # <a name="xamarinforms-text-styles"></a>Estilos de texto de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
 
 _Estilos de texto en Xamarin.Forms_
 

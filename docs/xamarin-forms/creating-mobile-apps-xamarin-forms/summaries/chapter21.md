@@ -7,14 +7,16 @@ ms.assetid: 3642F112-C7FA-4A74-9000-F9087BA89AD9
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 6c666329664ad7dfaa8439068a60b6135d59d229
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 56c4345dffe71f79e9d89c64478a9c6c38fc1d84
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563061"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53048823"
 ---
 # <a name="summary-of-chapter-21-transforms"></a>Resumen del capítulo 21. Transformaciones
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter21)
 
 Aparece una vista de Xamarin.Forms en la pantalla en una ubicación y un tamaño determinado por su elemento primario, que suele ser un `Layout` o `Layout<View>` derivado. El *transformar* es una característica de Xamarin.Forms que puede modificar esa ubicación, tamaño o incluso orientación.
 

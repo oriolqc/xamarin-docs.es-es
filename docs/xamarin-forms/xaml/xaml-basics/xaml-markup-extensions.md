@@ -7,14 +7,16 @@ ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
 ms.date: 3/27/2018
-ms.openlocfilehash: bffddfdb67238287b868b01edad88bc8d43e5bb1
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: a93503762528885dfc7d3b5400bf4ec716ea9fab
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563841"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056220"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensiones de marcado XAML
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _Las extensiones de marcado XAML constituyen una característica importante de XAML que permiten establecer objetos o valores que se hace referencia indirectamente desde otros orígenes de propiedades. Las extensiones de marcado XAML son especialmente importantes para compartir objetos y hacer referencia a las constantes que se utilizan en toda una aplicación, pero encuentra su mayor utilidad los enlaces de datos._
 

@@ -7,14 +7,16 @@ ms.assetid: 400AE23A-6A0B-4FA8-BD6B-DE4146B04732
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: 08a79c7685b6e7d210baf11e99edcf928df88c67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50132012"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056050"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Los degradados circulares de SkiaSharp
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 El [ `SKShader` ](xref:SkiaSharp.SKShader) clase define los métodos estáticos para crear cuatro tipos diferentes de los degradados. El [ **degradado lineal de SkiaSharp** ](linear-gradient.md) artículo se describe la [ `CreateLinearGradient` ](xref:SkiaSharp.SKShader.CreateLinearGradient*) método. En este artículo se trata los tres tipos de degradados, todos ellos se basan en círculos.
 

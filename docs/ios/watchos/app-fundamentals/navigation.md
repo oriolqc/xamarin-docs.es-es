@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 71978bebcdf6033a766ae2bcb75ae061ed215a8b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0f087e4ce8fac2d86d45b6a27dc00c3fe4ad18db
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102378"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058969"
 ---
 # <a name="working-with-watchos-navigation-in-xamarin"></a>Trabajar con la navegación en Xamarin de watchOS
 
@@ -117,5 +117,5 @@ PresentController (controllerNames, contexts);
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [WatchKitCatalog (ejemplo)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchKitCatalog/)
-- [WatchTables (ejemplo)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchTables/)
+- [WatchKitCatalog (ejemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchTables (ejemplo)](https://developer.xamarin.com//samples/monotouch/watchOS/WatchTables/)

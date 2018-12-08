@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: b6989782c438ec41911cc9317d9f911d6518132d
-ms.sourcegitcommit: 632955f8cdb80712abd8dcc30e046cb9c435b922
+ms.openlocfilehash: 7c12136a0dad0165c46f1559e7a2d61abaf7af1e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38872726"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059709"
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>Autenticar a los usuarios con Azure Active Directory B2C
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
 
 _Azure B2C de Active Directory es una solución de administración de identidades en la nube para aplicaciones móviles y web orientadas al consumidor. En este artículo se muestra cómo usar la biblioteca de autenticación de Microsoft y Azure Active Directory B2C para integrar la administración de identidades de consumidor en una aplicación móvil._
 

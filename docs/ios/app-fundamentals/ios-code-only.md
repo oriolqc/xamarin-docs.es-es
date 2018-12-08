@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 777ba2035511dfd632d64b11c2265e239a646b3a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2fa554264578ec626567ef7d28377ac80bde21d3
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109541"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060179"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Crear interfaces de usuario de iOS en código de Xamarin.iOS
 
@@ -204,7 +204,7 @@ Esto genera el controlador anidado en el controlador de navegación, como se mue
 
  [![](ios-code-only-images/image2.png "El controlador anidado en el controlador de navegación")](ios-code-only-images/image2.png#lightbox)
 
-## <a name="creating-a-view-vontroller"></a>Creación de una vista vontroller
+## <a name="creating-a-view-controller"></a>Crear un controlador de vista
 
 Ahora que hemos visto cómo agregar un controlador como el `RootViewController` de la ventana, veamos cómo crear un controlador de vista personalizada en código.
 

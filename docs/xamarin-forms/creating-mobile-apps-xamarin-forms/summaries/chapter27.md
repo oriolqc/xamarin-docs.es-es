@@ -7,14 +7,16 @@ ms.assetid: 49961953-9336-4FD4-A42F-6D9B05FF52E7
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 050d9bfd190f0683dd971557b3a919598b31fd30
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 1a992c192cb4d7fc24490257b67c1b851abcd949
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563022"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058349"
 ---
 # <a name="summary-of-chapter-27-custom-renderers"></a>Resumen del capítulo 27. Representadores personalizados
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27)
 
 > [!NOTE] 
 > Notas de esta página indican áreas donde se ha dividido Xamarin.Forms desde el material presentado en el libro.

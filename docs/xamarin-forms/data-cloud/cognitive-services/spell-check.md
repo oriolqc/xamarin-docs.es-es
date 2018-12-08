@@ -1,37 +1,39 @@
 ---
-title: Corrector ortográfico mediante la API de Bing corrector ortográfico
-description: Bing corrector ortográfico realiza la revisión ortográfica contextual para el texto, proporciona sugerencias de en línea para las palabras mal escritas. En este artículo se explica cómo utilizar la API de REST comprobar de Bing corrector para corregir los errores de ortografía en una aplicación de Xamarin.Forms.
+title: La revisión ortográfica con Bing Spell Check API
+description: Bing Spell Check realiza contextual corrector ortográfico para el texto, que proporciona sugerencias de en línea para palabras mal escritas. En este artículo se explica cómo usar Bing Spell Check REST API para corregir errores ortográficos en una aplicación de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: B40EB103-FDC0-45C6-9940-FB4ACDC2F4F9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 259be743a706c9316e2e275ff305a0fe5ad97906
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: 08ac86674e4f10d6bd17d765de2bcdf7c2d3f901
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34049914"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061764"
 ---
-# <a name="spell-checking-using-the-bing-spell-check-api"></a>Corrector ortográfico mediante la API de Bing corrector ortográfico
+# <a name="spell-checking-using-the-bing-spell-check-api"></a>La revisión ortográfica con Bing Spell Check API
 
-_Bing corrector ortográfico realiza la revisión ortográfica contextual para el texto, proporciona sugerencias de en línea para las palabras mal escritas. En este artículo se explica cómo utilizar la API de REST comprobar de Bing corrector para corregir los errores de ortografía en una aplicación de Xamarin.Forms._
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+
+_Bing Spell Check realiza contextual corrector ortográfico para el texto, que proporciona sugerencias de en línea para palabras mal escritas. En este artículo se explica cómo usar Bing Spell Check REST API para corregir errores ortográficos en una aplicación de Xamarin.Forms._
 
 ## <a name="overview"></a>Información general
 
-La API de REST comprobar de Bing corrector tiene dos modos de funcionamiento, y se debe especificar un modo al realizar una solicitud a la API:
+Bing Spell Check REST API tiene dos modos de funcionamiento y un modo debe especificarse al realizar una solicitud a la API:
 
-- `Spell` corrige un texto breve (hasta 9 palabras vacías) sin realizar ningún cambio de mayúsculas y minúsculas.
-- `Proof` corrige texto largo, proporciona correcciones de mayúsculas y minúsculas y signos de puntuación básica y suprime correcciones rigurosa.
+- `Spell` corrige un texto breve (de hasta 9 palabras) sin realizar ningún cambio de mayúsculas y minúsculas.
+- `Proof` corrige texto largo, proporciona correcciones de mayúsculas y minúsculas y puntuación básica y suprime correcciones agresivas.
 
-Para usar la API de Bing corrector comprobar, se debe obtener una clave de API. Esto se puede obtener en [intente cognitivos servicios](https://azure.microsoft.com/try/cognitive-services/)
+Para usar Bing Spell Check API, se debe obtener una clave de API. Esto puede obtenerse en [pruebe Cognitive Services](https://azure.microsoft.com/try/cognitive-services/)
 
-Para obtener una lista de los idiomas admitidos por la API de Bing corrector comprobar, consulte [idiomas admitidos](/azure/cognitive-services/bing-spell-check/bing-spell-check-supported-languages/). Para obtener más información acerca de la API de Bing corrector comprobar, consulte [Bing corrector comprobar documentación](/azure/cognitive-services/bing-spell-check/).
+Para obtener una lista de los idiomas admitidos por Bing Spell Check API, consulte [idiomas admitidos](/azure/cognitive-services/bing-spell-check/bing-spell-check-supported-languages/). Para obtener más información acerca de Bing Spell Check API, consulte [documentación de Bing Spell comprobar](/azure/cognitive-services/bing-spell-check/).
 
 ## <a name="authentication"></a>Autenticación
 
-Todas las solicitudes realizadas a la API de Bing corrector comprobar requiere una clave de API que se debe especificar como el valor de la `Ocp-Apim-Subscription-Key` encabezado. En el ejemplo de código siguiente se muestra cómo agregar la clave de API para el `Ocp-Apim-Subscription-Key` encabezado de una solicitud:
+Cada solicitud realizada a Bing Spell Check API necesita una clave de API que se debe especificar como el valor de la `Ocp-Apim-Subscription-Key` encabezado. En el ejemplo de código siguiente se muestra cómo agregar la clave de API para el `Ocp-Apim-Subscription-Key` encabezado de una solicitud:
 
 ```csharp
 public BingSpellCheckService()
@@ -41,11 +43,11 @@ public BingSpellCheckService()
 }
 ```
 
-Error al pasar una clave de API válida a la API de Bing corrector comprobar producirá un error de 401 respuesta.
+Error al pasar una clave de API válida a Bing Spell Check API se producirá un error en la 401 respuesta.
 
 ## <a name="performing-spell-checking"></a>Realizar la revisión ortográfica
 
-Corrector ortográfico se puede lograr mediante la realización de una solicitud GET o POST para la `SpellCheck` API en `https://api.cognitive.microsoft.com/bing/v7.0/SpellCheck`. Al realizar una solicitud GET, el texto que se va a comprobar la ortografía se envía como un parámetro de consulta. Al realizar una solicitud POST, se envía el texto que se va a comprobar la ortografía en el cuerpo de solicitud. Las solicitudes GET se limitan a 1500 caracteres debido a la limitación de longitud de cadena de parámetro de consulta de revisión ortográfica. Por lo tanto, las solicitudes POST normalmente deben realizarse a menos que cadenas cortas se va a comprobar la ortografía.
+Corrector ortográfico puede lograrse mediante una solicitud GET o POST a la `SpellCheck` API en `https://api.cognitive.microsoft.com/bing/v7.0/SpellCheck`. Al realizar una solicitud GET, el texto que se puede comprobar la ortografía se envía como un parámetro de consulta. Al realizar una solicitud POST, se envía el texto que se puede comprobar la ortografía en el cuerpo de solicitud. Las solicitudes GET se limitan a corrector ortográfico 1500 caracteres debido a la limitación de longitud de cadena de parámetro de consulta. Por lo tanto, normalmente se deben realizar las solicitudes POST a menos que las cadenas cortas son que se va a comprobar la ortografía.
 
 En la aplicación de ejemplo, el `SpellCheckTextAsync` método invoca el proceso de revisión ortográfica:
 
@@ -59,9 +61,9 @@ public async Task<SpellCheckResult> SpellCheckTextAsync(string text)
 }
 ```
 
-El `SpellCheckTextAsync` método genera un URI de solicitud y, a continuación, envía la solicitud a la `SpellCheck` API, que devuelve una respuesta JSON que contiene el resultado. La respuesta JSON se deserializa, con lo que se devuelve al método de llamada para su presentación.
+El `SpellCheckTextAsync` método genera un URI de solicitud y, a continuación, envía la solicitud para el `SpellCheck` API, que devuelve una respuesta JSON que contiene el resultado. La respuesta JSON se deserializa, con lo que se devuelve al método de llamada para su presentación.
 
-### <a name="configuring-spell-checking"></a>Configuración de la revisión ortográfica
+### <a name="configuring-spell-checking"></a>Configurar el corrector ortográfico
 
 El proceso de revisión ortográfica puede configurarse mediante la especificación de parámetros de consulta HTTP:
 
@@ -75,13 +77,13 @@ string GenerateRequestUri(string spellCheckEndpoint, string text, SpellCheckMode
 }
 ```
 
-Este método establece el texto que se va a comprobar la ortografía y el modo de comprobación de corrección ortográfica.
+Este método establece el texto que se puede comprobar la ortografía y el modo de comprobación de corrección ortográfica.
 
-Para obtener más información acerca de la API de REST comprobar corrector de Bing, consulte [referencia de API de comprobación de corrección ortográfica v7](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/).
+Para obtener más información acerca de Bing Spell Check REST API, consulte [referencia de Spell Check API v7](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/).
 
 ### <a name="sending-the-request"></a>Enviar la solicitud
 
-El `SendRequestAsync` método realiza la solicitud GET a la API de REST Bing corrector comprobar y devuelve la respuesta:
+El `SendRequestAsync` método realiza la solicitud GET a Bing Spell Check REST API y devuelve la respuesta:
 
 ```csharp
 async Task<string> SendRequestAsync(string url)
@@ -91,13 +93,13 @@ async Task<string> SendRequestAsync(string url)
 }
 ```
 
-Este método envía la solicitud GET a la `SpellCheck` API, con la dirección URL de solicitud especifica el texto que se deben traducir y el modo de comprobación de corrección ortográfica. La respuesta, a continuación, lee y devuelve al método de llamada.
+Este método envía la solicitud GET a la `SpellCheck` API con la URL de solicitud especifica el texto que se deben traducir y el modo de comprobación de corrección ortográfica. La respuesta, a continuación, lee y devuelve al método de llamada.
 
 El `SpellCheck` API enviará el código de estado HTTP 200 (OK) en la respuesta, siempre que la solicitud es válida, lo que indica que la solicitud es correcta y que la información solicitada está en la respuesta. Para obtener una lista de objetos de respuesta, consulte [objetos de respuesta](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference#response-objects).
 
 ### <a name="processing-the-response"></a>Procesamiento de la respuesta
 
-La respuesta de la API se devuelve en formato JSON. Los siguientes datos JSON muestran el mensaje de respuesta para el texto mal escrito `Go shappin tommorow`:
+Se devuelve la respuesta de API en formato JSON. Los siguientes datos JSON muestran el mensaje de respuesta para el texto mal escrito `Go shappin tommorow`:
 
 ```json
 {  
@@ -130,12 +132,12 @@ La respuesta de la API se devuelve en formato JSON. Los siguientes datos JSON mu
 }
 ```
 
-El `flaggedTokens` matriz contiene una matriz de palabras del texto que se marcaron como no se ha escrito correctamente o se gramaticalmente incorrecto. La matriz estará vacía si no se encuentran ningún errores ortográficos o gramaticales. Las etiquetas dentro de la matriz son:
+El `flaggedTokens` matriz contiene una matriz de palabras del texto que se han marcado como no se ha escrito correctamente o que están gramaticalmente incorrecto. La matriz estará vacía si no hay errores ortográficos o gramaticales se encuentran. Las etiquetas dentro de la matriz son:
 
-- `offset` : un desplazamiento de base cero desde el principio de la cadena de texto a la palabra que se marcó.
-- `token` : la palabra en la cadena de texto que no se ha escrito correctamente o no es gramaticalmente correcto.
-- `type` : el tipo de error que provocó la palabra se indique. Hay dos valores posibles: `RepeatedToken` y `UnknownToken`.
-- `suggestions` : una matriz de palabras que se corregirá el error de ortografía o gramática. La matriz está formada por un `suggestion` y `score`, lo que indica el nivel de confianza de que la corrección sugerida es correcta.
+- `offset` – un desplazamiento de base cero desde el principio de la cadena de texto a la palabra que se marcó.
+- `token` : la palabra en la cadena de texto que no se ha escrito correctamente o no es correcta gramaticalmente.
+- `type` : el tipo de error que provocó la palabra que se marcará. Hay dos valores posibles: `RepeatedToken` y `UnknownToken`.
+- `suggestions` : una matriz de palabras que se corregirá el error de ortografía o gramática. La matriz está formada por un `suggestion` y un `score`, lo que indica el nivel de confianza de que la corrección sugerida es correcta.
 
 En la aplicación de ejemplo, la respuesta JSON se deserializa en un `SpellCheckResult` instancia, con lo que se devuelve al método de llamada para su presentación. El siguiente ejemplo de código muestra cómo el `SpellCheckResult` instancia se procesa para su presentación:
 
@@ -147,7 +149,7 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 }
 ```
 
-Este código recorre en iteración la `FlaggedTokens` colección y reemplaza cualquier mal escrita o palabras gramaticalmente incorrectas en el texto de origen con la primera sugerencia. Las capturas de pantalla siguientes se muestran antes y después de la revisión ortográfica:
+Este código recorre el `FlaggedTokens` colección y reemplaza cualquier mal escrita o palabras gramaticalmente incorrectas en el texto de origen con la primera sugerencia. Las capturas de pantalla siguientes se muestran antes y después de la revisión ortográfica:
 
 ![](spell-check-images/before-spell-check.png "Antes de comprobar la ortografía")
 
@@ -155,11 +157,11 @@ Este código recorre en iteración la `FlaggedTokens` colección y reemplaza cua
 
 ## <a name="summary"></a>Resumen
 
-Este artículo explica cómo usar la API de REST de deletrear comprobar de Bing para corregir los errores de ortografía en una aplicación de Xamarin.Forms. Bing corrector ortográfico realiza la revisión ortográfica contextual para el texto, proporciona sugerencias de en línea para las palabras mal escritas.
+En este artículo se explica cómo usar Bing Spell Check REST API para corregir errores ortográficos en una aplicación de Xamarin.Forms. Bing Spell Check realiza contextual corrector ortográfico para el texto, que proporciona sugerencias de en línea para palabras mal escritas.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Compruebe la ortografía Bing documentación](/azure/cognitive-services/bing-spell-check/)
+- [Documentación de Bing Spell Check](/azure/cognitive-services/bing-spell-check/)
 - [Consumir un servicio Web RESTful](~/xamarin-forms/data-cloud/consuming/rest.md)
-- [Lista de tareas cognitivos servicios (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
-- [Referencia de API de Bing corrector comprobar v7](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)
+- [Todo Cognitive Services (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Referencia de Bing Spell Check API v7](/rest/api/cognitiveservices/bing-spell-check-api-v7-reference/)

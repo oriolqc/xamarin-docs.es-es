@@ -7,14 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2017
-ms.openlocfilehash: 74bd4b5600f3d5ef8b64556a9e454bb7fb0e2d21
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 366a6e9585817c5a47ba5bec14fb2f238ab23a6b
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615462"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050205"
 ---
 # <a name="paths-and-text-in-skiasharp"></a>Las rutas de acceso y el texto de SkiaSharp
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Explore la intersección de las rutas de acceso y el texto_
 

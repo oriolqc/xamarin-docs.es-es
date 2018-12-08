@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/27/2018
-ms.openlocfilehash: 9226e1d26dcc49b6ec82b71f7757eb0e22cd66ec
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 56e50f0c3dffd54fe3d95f4cd140883613c9206f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171981"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052720"
 ---
 # <a name="dependency-resolution-in-xamarinforms"></a>Resolución de dependencias en Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/)
 
 _En este artículo se explica cómo insertar un método de resolución de dependencia en Xamarin.Forms para que el contenedor de inserción de dependencia de la aplicación tiene control sobre la creación y duración de los representadores personalizados, efectos y las implementaciones de DependencyService. Los ejemplos de código en este artículo se toman de la [resolución de dependencia mediante contenedores](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/) ejemplo._
 
@@ -301,6 +303,6 @@ Cuando el [ `DependencyService.Resolve<T>` ](xref:Xamarin.Forms.DependencyServic
 
 - [Resolución de dependencia mediante contenedores (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Advanced/DependencyResolution/DIContainerDemo/)
 - [Inserción de dependencias](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md)
-- [Implementación de un Reproductor de vídeo](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
+- [Implementación de un reproductor de vídeo](~/xamarin-forms/app-fundamentals/custom-renderer/video-player/index.md)
 - [Invocación de eventos de efectos](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md)
 - [Seleccionar una foto de la biblioteca de imágenes](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

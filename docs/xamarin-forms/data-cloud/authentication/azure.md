@@ -1,60 +1,62 @@
 ---
-title: Autenticar a los usuarios con aplicaciones móviles de Azure
-description: Este artículo explica cómo usar aplicaciones móviles de Azure para administrar el proceso de autenticación en una aplicación de Xamarin.Forms.
+title: Autenticar a los usuarios con Azure Mobile Apps
+description: En este artículo se explica cómo usar Azure Mobile Apps para administrar el proceso de autenticación en una aplicación de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: D50D6F56-8B19-44E7-81F3-E0E1C6E240
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: fc6206a22d7527ea38a39ab034c424bfe7730abb
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 428e536d6895ff16a928f8cc40a8a7976d087471
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241720"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53060496"
 ---
-# <a name="authenticating-users-with-azure-mobile-apps"></a>Autenticar a los usuarios con aplicaciones móviles de Azure
+# <a name="authenticating-users-with-azure-mobile-apps"></a>Autenticar a los usuarios con Azure Mobile Apps
 
-_Aplicaciones móviles de Azure utilizar una variedad de proveedores de identidades externo para admitir autenticar y autorizar usuarios de la aplicación, como Facebook, Google, Microsoft, Twitter y Azure Active Directory. Para restringir el acceso a los usuarios autenticados solo se pueden establecer permisos en las tablas. Este artículo explica cómo usar aplicaciones móviles de Azure para administrar el proceso de autenticación en una aplicación de Xamarin.Forms._
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzureAuth/)
+
+_Azure Mobile Apps usa una variedad de proveedores de identidades externos para admitir la autenticación y autorización de usuarios de la aplicación, incluidas Facebook, Google, Microsoft, Twitter y Azure Active Directory. Pueden establecerse para restringir el acceso a los usuarios autenticados solo permisos en las tablas. En este artículo se explica cómo usar Azure Mobile Apps para administrar el proceso de autenticación en una aplicación de Xamarin.Forms._
 
 ## <a name="overview"></a>Información general
 
-El proceso para hacer que las aplicaciones móviles de Azure a administrar el proceso de autenticación en una aplicación de Xamarin.Forms es como sigue:
+El proceso para que Azure Mobile Apps administre el proceso de autenticación en una aplicación de Xamarin.Forms es como sigue:
 
-1. Registrar la aplicación móvil de Azure en el sitio del proveedor de identidades y, a continuación, establezca las credenciales generados por el proveedor en el back-end de aplicaciones móviles. Para obtener más información, consulte [registrar la aplicación para la autenticación y configurar servicios de aplicaciones](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#register-your-app-for-authentication-and-configure-app-services).
-1. Definir un nuevo esquema de dirección URL para la aplicación de Xamarin.Forms, lo que permite el sistema de autenticación redirigir a Xamarin.Forms aplicación una vez completado el proceso de autenticación. Para obtener más información, consulte [se agrega la aplicación a las direcciones URL permite redirigir de externo](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#redirecturl).
-1. Restringir el acceso al aplicaciones móviles de Azure de back-end para sólo clientes autenticados. Para obtener más información, consulte [restrinja los permisos para los usuarios autenticados](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#restrict-permissions-to-authenticated-users).
-1. Invoca la autenticación de la aplicación de Xamarin.Forms. Para obtener más información, consulte [agregar autenticación a la biblioteca de clases portable](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#add-authentication-to-the-portable-class-library), [agregar autenticación a la aplicación de iOS](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#add-authentication-to-the-ios-app), [agregar autenticación a la aplicación de Android](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#add-authentication-to-the-android-app)y [ Agregar autenticación a los proyectos de aplicación de Windows 10](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#add-authentication-to-windows-10-including-phone-app-projects).
+1. Registrar la aplicación móvil de Azure en el sitio del proveedor de identidades y, a continuación, establezca las credenciales generadas por el proveedor en el back-end de Mobile Apps. Para obtener más información, consulte [registrar la aplicación para la autenticación y configurar servicios de aplicación](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#register-your-app-for-authentication-and-configure-app-services).
+1. Definir un nuevo esquema de dirección URL para la aplicación de Xamarin.Forms, que permite que el sistema de autenticación se redirija a aplicación de Xamarin.Forms, una vez completado el proceso de autenticación. Para obtener más información, consulte [agregar la aplicación a la URL de redirección de externas permitidas](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#redirecturl).
+1. Restringir el acceso a lo back-end de Azure Mobile Apps para sólo clientes autenticados. Para obtener más información, consulte [restringir permisos a los usuarios autenticados](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#restrict-permissions-to-authenticated-users).
+1. Invoca la autenticación de la aplicación de Xamarin.Forms. Para obtener más información, consulte [agregar autenticación a la biblioteca de clases portable](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#add-authentication-to-the-portable-class-library), [agregar autenticación a la aplicación de iOS](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#add-authentication-to-the-ios-app), [agregar autenticación a la aplicación de Android](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#add-authentication-to-the-android-app)y [ Agregar autenticación a proyectos de aplicaciones de Windows 10](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users#add-authentication-to-windows-10-including-phone-app-projects).
 
 > [!NOTE]
-> En iOS 9 y versiones posteriores, seguridad de transporte de aplicación (ATS) exige conexiones seguras entre los recursos de internet (por ejemplo, el servidor de back-end de la aplicación) y la aplicación, lo que evita que la divulgación accidental de información confidencial. Puesto que ATS está habilitada de forma predeterminada en las aplicaciones compiladas para iOS 9, todas las conexiones estará sujeto a requisitos de seguridad ATS. Si las conexiones no cumplen estos requisitos, se producirá un error con una excepción.
-> Se pueden alta ATS fuera de si no es posible utilizar la `HTTPS` del protocolo y proteger la comunicación para los recursos de internet. Esto puede lograrse mediante la actualización de la aplicación **Info.plist** archivo. Para obtener más información, consulte [seguridad de transporte de la aplicación](~/ios/app-fundamentals/ats.md).
+> En iOS 9 y versiones posteriores, App Transport Security (ATS) exige que las conexiones seguras entre los recursos de internet (por ejemplo, el servidor back-end de la aplicación) y la aplicación, lo que impide la divulgación accidental de información confidencial. Puesto que ATS está habilitada de forma predeterminada en las aplicaciones compiladas para iOS 9, todas las conexiones estará sujeto a los requisitos de seguridad ATS. Si las conexiones no cumplen estos requisitos, se producirá un error con una excepción.
+> Se puede optar por en ATS de si no es posible usar la `HTTPS` del protocolo y proteger la comunicación de los recursos de internet. Esto puede lograrse mediante la actualización de la aplicación **Info.plist** archivo. Para obtener más información, consulte [App Transport Security](~/ios/app-fundamentals/ats.md).
 
-Históricamente, las aplicaciones móviles usaron vistas web incrustado para realizar la autenticación con el proveedor de identidades. Esto ya no se recomienda por las razones siguientes:
+Históricamente, las aplicaciones móviles han usado las vistas web incrustadas para realizar la autenticación con su proveedor de identidades. Esto ya no se recomienda por las razones siguientes:
 
-- La aplicación que hospeda la vista web puede tener acceso a las credenciales de autenticación completa del usuario, no solo la concesión de autorización que se ha diseñado para la aplicación. Esto infringe el principio de privilegios mínimos, como la aplicación tiene acceso a credenciales más eficaces que el que necesita, puede aumentar la superficie de ataque de la aplicación.
-- La aplicación host podría capturar los nombres de usuario y contraseñas, automáticamente envíe formularios y omitir el consentimiento del usuario y copie las cookies de sesión y usarlos para realizar acciones autenticadas como usuario.
-- Vistas web incrustado no compartan el estado de autenticación con otras aplicaciones o el explorador del dispositivo web, exigir que el usuario al inicio de sesión para cada solicitud de autorización que se considera una experiencia del usuario inferior.
-- Algunos extremos de autorización toman medidas para detectar y bloquear las solicitudes de autorización que proceden de vistas web.
+- La aplicación que hospeda la vista web puede tener acceso a las credenciales del usuario autenticación completa, no solo la concesión de autorización que fue diseñada para la aplicación. Esto infringe el principio de privilegio mínimo, ya que la aplicación tiene acceso a las credenciales más eficaces que requiere, aumentando potencialmente la superficie de ataque de la aplicación.
+- La aplicación host podría capturar los nombres de usuario y contraseñas, automáticamente enviar formularios y omitir el consentimiento del usuario y copie las cookies de sesión y usarlos para realizar acciones autenticadas como usuario.
+- Vistas web incrustadas no compartan el estado de autenticación con otras aplicaciones o el explorador web del dispositivo, solicitar al usuario que inicie sesión para cada solicitud de autorización que se considera una experiencia de usuario inferiores.
+- Algunos puntos de conexión de autorización tomar medidas para detectar y bloquear las solicitudes de autorización que procedan de vistas web.
 
-La alternativa es usar el explorador web del dispositivo para realizar la autenticación, que es el enfoque tomado por la versión más reciente de la [SDK de cliente de Azure Mobile](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/). Utilizando el explorador del dispositivo para las solicitudes de autenticación, mejora la facilidad de uso de una aplicación, ya que los usuarios sólo deben iniciar sesión en el proveedor de identidades una vez por cada dispositivo, mejorar las tasas de conversión de flujos de inicio de sesión y la autorización en la aplicación. El explorador del dispositivo también proporciona una mayor seguridad, como las aplicaciones pueden inspeccionar y modificar el contenido de una vista web, pero no se muestra en el Explorador de contenido.
+La alternativa es usar el explorador web del dispositivo para realizar la autenticación, que es el enfoque adoptado por la versión más reciente de la [SDK de Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/). Utilizando el explorador del dispositivo para las solicitudes de autenticación mejora la facilidad de uso de una aplicación, como los usuarios solo necesitan iniciar sesión en el proveedor de identidad una vez por dispositivo, mejora las tasas de conversión de flujos de inicio de sesión y la autorización en la aplicación. El explorador del dispositivo también proporciona seguridad mejorada, como las aplicaciones pueden inspeccionar y modificar el contenido en una vista web, pero no el contenido que se muestra en el explorador.
 
-## <a name="using-an-azure-mobile-apps-instance"></a>Uso de una instancia de aplicaciones móviles de Azure
+## <a name="using-an-azure-mobile-apps-instance"></a>Uso de una instancia de Azure Mobile Apps
 
-El [SDK de cliente de Azure Mobile](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/) proporciona el `MobileServiceClient` (clase), que se utiliza una aplicación de Xamarin.Forms para tener acceso a la instancia de aplicaciones móviles de Azure.
+El [SDK de Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/) proporciona el `MobileServiceClient` (clase), que usa una aplicación de Xamarin.Forms para tener acceso a la instancia de Azure Mobile Apps.
 
-La aplicación de ejemplo utiliza Google como proveedor de identidades, lo que permite a los usuarios con cuentas de Google para iniciar sesión en la aplicación de Xamarin.Forms. Mientras se utiliza Google como proveedor de identidades en este artículo, el enfoque es igualmente aplicable a otros proveedores de identidad.
+La aplicación de ejemplo utiliza Google como proveedor de identidades, que permite a los usuarios con cuentas de Google para iniciar sesión en la aplicación de Xamarin.Forms. Mientras se usa Google como proveedor de identidades en este artículo, el enfoque es igualmente aplicable a otros proveedores de identidades.
 
 <a name="logging-in" />
 
-### <a name="logging-in-users"></a>Inicio de sesión a los usuarios
+### <a name="logging-in-users"></a>Los usuarios
 
 En las capturas de pantalla siguiente se muestra la pantalla de inicio de sesión en la aplicación de ejemplo:
 
 ![](azure-images/login.png "Página de inicio de sesión")
 
-Mientras se utiliza Google como proveedor de identidades, se puede usar una variedad de otros proveedores de identidades e incluir Azure Active Directory, Microsoft, Twitter y Facebook.
+Mientras se usa Google como proveedor de identidades, se puede usar una variedad de otros proveedores de identidades, incluidos Microsoft, Facebook, Twitter y Azure Active Directory.
 
 En el ejemplo de código siguiente se muestra cómo se invoca el proceso de inicio de sesión:
 
@@ -70,7 +72,7 @@ async void OnLoginButtonClicked(object sender, EventArgs e)
 }
 ```
 
-El `App.Authenticator` propiedad es una `IAuthenticate` instancia establecido por cada proyecto específico de la plataforma. El `IAuthenticate` interfaz especifica un `AuthenticateAsync` operación que se debe proporcionar cada proyecto de la plataforma. Por lo tanto, invocar el `App.Authenticator.AuthenticateAsync` el método se ejecuta el `IAuthenticate.AuthenticateAsync` método en un proyecto de plataforma.
+El `App.Authenticator` propiedad es una `IAuthenticate` instancia establecido por cada proyecto específico de plataforma. El `IAuthenticate` interfaz especifica un `AuthenticateAsync` operación que se debe proporcionar cada proyecto de la plataforma. Por lo tanto, invoca el `App.Authenticator.AuthenticateAsync` método se ejecuta el `IAuthenticate.AuthenticateAsync` método en un proyecto de plataforma.
 
 Todos los de la plataforma `IAuthenticate.AuthenticateAsync` métodos llamada la `MobileServiceClient.LoginAsync` método para mostrar una interfaz y caché de datos de inicio de sesión. El siguiente ejemplo de código muestra la `LoginAsync` método para la plataforma de iOS:
 
@@ -116,11 +118,11 @@ public async Task<bool> AuthenticateAsync()
 }
 ```
 
-En todas las plataformas, el `MobileServiceAuthenticationProvider` enumeración se utiliza para especificar el proveedor de identidad que se utilizará en el proceso de autenticación. Cuando el `MobileServiceClient.LoginAsync` se invoca el método, aplicaciones móviles de Azure iniciará un flujo de autenticación, mostrando la página de inicio de sesión del proveedor seleccionado y generando un token de autenticación después de iniciar sesión correctamente con el proveedor de identidades. El `MobileServiceClient.LoginAsync` método devuelve un `MobileServiceUser` instancia que se almacenará en la `MobileServiceClient.CurrentUser` propiedad. Esta propiedad proporciona `UserId` y `MobileServiceAuthenticationToken` propiedades. Estos representan al usuario autenticado y un token de autenticación para el usuario. El token de autenticación se incluirán en todas las solicitudes realizadas a la instancia de aplicaciones móviles de Azure, lo que permite la aplicación de Xamarin.Forms para realizar acciones en la instancia de aplicación móvil de Azure que requieren permisos de usuario autenticado.
+En todas las plataformas, la `MobileServiceAuthenticationProvider` enumeración se utiliza para especificar el proveedor de identidades que se usará en el proceso de autenticación. Cuando el `MobileServiceClient.LoginAsync` se invoca el método, Azure Mobile Apps se inicia un flujo de autenticación al mostrar la página de inicio de sesión del proveedor seleccionado y generando un token de autenticación después de iniciar sesión correctamente con el proveedor de identidades. El `MobileServiceClient.LoginAsync` método devuelve un `MobileServiceUser` instancia que se almacenará en el `MobileServiceClient.CurrentUser` propiedad. Esta propiedad proporciona `UserId` y `MobileServiceAuthenticationToken` propiedades. Estos representan el usuario autenticado y un token de autenticación para el usuario. El token de autenticación se incluirán en todas las solicitudes realizadas a la instancia de Azure Mobile Apps, lo que permite la aplicación de Xamarin.Forms para realizar acciones en la instancia de aplicación móvil de Azure que requieren permisos de usuario autenticado.
 
 <a name="logging-out" />
 
-### <a name="logging-out-users"></a>Cerrar la sesión de los usuarios
+### <a name="logging-out-users"></a>Cerrar la sesión de usuarios
 
 En el ejemplo de código siguiente se muestra cómo se invoca el proceso de cierre de sesión:
 
@@ -137,9 +139,9 @@ async void OnLogoutButtonClicked(object sender, EventArgs e)
 }
 ```
 
-El `App.Authenticator` propiedad es una `IAuthenticate` instancia establecido por cada platformproject. El `IAuthenticate` interfaz especifica un `LogoutAsync` operación que se debe proporcionar cada proyecto de la plataforma. Por lo tanto, invocar el `App.Authenticator.LogoutAsync` el método se ejecuta el `IAuthenticate.LogoutAsync` método en un proyecto de plataforma.
+El `App.Authenticator` propiedad es una `IAuthenticate` instancia establecido por cada platformproject. El `IAuthenticate` interfaz especifica un `LogoutAsync` operación que se debe proporcionar cada proyecto de la plataforma. Por lo tanto, invoca el `App.Authenticator.LogoutAsync` método se ejecuta el `IAuthenticate.LogoutAsync` método en un proyecto de plataforma.
 
-Todos los de la plataforma `IAuthenticate.LogoutAsync` llamadas de métodos el `MobileServiceClient.LogoutAsync` método Anular autenticar el usuario ha iniciado la sesión con el proveedor de identidades. El siguiente ejemplo de código muestra la `LogoutAsync` método para la plataforma de iOS:
+Todos de la plataforma `IAuthenticate.LogoutAsync` métodos llamada la `MobileServiceClient.LogoutAsync` método para autenticar el usuario ha iniciado sesión con el proveedor de identidades a anular. El siguiente ejemplo de código muestra la `LogoutAsync` método para la plataforma de iOS:
 
 ```csharp
 public async Task<bool> LogoutAsync()
@@ -177,11 +179,11 @@ public async Task<bool> LogoutAsync()
 }
 ```
 
-Cuando el `IAuthenticate.LogoutAsync` se invoca el método, se borran las cookies establecidas por el proveedor de identidad, antes del `MobileServiceClient.LogoutAsync` método se invoca para anular autenticar el usuario ha iniciado la sesión con el proveedor de identidades.
+Cuando el `IAuthenticate.LogoutAsync` se invoca el método, se borran las cookies establecidas por el proveedor de identidades, antes del `MobileServiceClient.LogoutAsync` método se invoca para anular autenticar el usuario ha iniciado sesión con el proveedor de identidades.
 
 ## <a name="summary"></a>Resumen
 
-Este artículo explica cómo usar aplicaciones móviles de Azure para administrar el proceso de autenticación en una aplicación de Xamarin.Forms. Aplicaciones móviles de Azure utilizar una variedad de proveedores de identidades externo para admitir autenticar y autorizar usuarios de la aplicación, como Facebook, Google, Microsoft, Twitter y Azure Active Directory. La `MobileServiceClient` clase es utilizada por la aplicación de Xamarin.Forms para controlar el acceso a la instancia de aplicaciones móviles de Azure.
+En este artículo se explica cómo usar Azure Mobile Apps para administrar el proceso de autenticación en una aplicación de Xamarin.Forms. Azure Mobile Apps usa una variedad de proveedores de identidades externos para admitir la autenticación y autorización de usuarios de la aplicación, incluidas Facebook, Google, Microsoft, Twitter y Azure Active Directory. La `MobileServiceClient` clase se utiliza la aplicación de Xamarin.Forms para controlar el acceso a la instancia de Azure Mobile Apps.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
@@ -189,5 +191,5 @@ Este artículo explica cómo usar aplicaciones móviles de Azure para administra
 - [TodoAzureAuth (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoAzureAuth/)
 - [Consumir una aplicación móvil de Azure](~/xamarin-forms/data-cloud/consuming/azure.md)
 - [Agregar autenticación a la aplicación de Xamarin.Forms](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-users/)
-- [Cliente móvil Azure SDK](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)
+- [SDK de Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)
 - [MobileServiceClient](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.mobileservices.mobileserviceclient(v=azure.10).aspx)

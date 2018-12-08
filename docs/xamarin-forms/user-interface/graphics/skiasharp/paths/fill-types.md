@@ -1,5 +1,5 @@
 ---
-title: Los tipos de relleno de la ruta de acceso
+title: Tipos de relleno del trazado
 description: En este artículo examina los efectos de diferentes posibles con tipos de relleno de ruta de acceso de SkiaSharp y esto se muestra con código de ejemplo.
 ms.prod: xamarin
 ms.assetid: 57103A7A-49A2-46AE-894C-7C2664682644
@@ -7,14 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: d16f6f6023c1db0223d5d5863e19116147f948d1
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: d99bb4722beb86c3cd2f49077fb778b8d8f61397
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615475"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051813"
 ---
-# <a name="the-path-fill-types"></a>Los tipos de relleno de la ruta de acceso
+# <a name="the-path-fill-types"></a>Tipos de relleno del trazado
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Descubra los distintos efectos posibles con tipos de relleno de ruta de acceso de SkiaSharp_
 

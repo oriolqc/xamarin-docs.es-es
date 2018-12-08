@@ -7,14 +7,16 @@ ms.assetid: 173E7B22-AEC8-4F12-B657-1C0CEE01AD63
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
-ms.openlocfilehash: d4029cbd4100b3ad83343b3bee73868b385a02e5
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 517ebfb529dd26236ba157d40168fa7c75288d27
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171825"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050379"
 ---
 # <a name="skiasharp-image-filters"></a>Filtros de imágenes de SkiaSharp
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Filtros de imágenes son los efectos que funcionan en todos los bits de color de los píxeles que componen una imagen. Son más versátiles que los filtros de máscara, que solo funcionan en el canal alfa como se describe en el artículo [ **filtros de máscara de SkiaSharp**](mask-filters.md). Para usar un filtro de imagen, establezca la [ `ImageFilter` ](xref:SkiaSharp.SKPaint.ImageFilter) propiedad de `SKPaint` a un objeto de tipo [ `SKImageFilter` ](xref:SkiaSharp.SKImageFilter) que ha creado llamando a uno de los métodos estáticos de la clase.
 

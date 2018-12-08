@@ -1,5 +1,5 @@
 ---
-title: Enumeración e información de ruta de acceso
+title: Enumeración e información de trazado
 description: En este artículo se explica cómo obtener información acerca de las rutas de acceso de SkiaSharp y enumerar el contenido y esto se muestra con código de ejemplo.
 ms.prod: xamarin
 ms.assetid: 8E8C5C6A-F324-4155-8652-7A77D231B3E5
@@ -7,14 +7,16 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017
-ms.openlocfilehash: 6efefe11b31428f41bfa945aff93aa70aa764870
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 98975d51c31b8e8c52d184c631194388cd6cfa87
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39615280"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053905"
 ---
-# <a name="path-information-and-enumeration"></a>Enumeración e información de ruta de acceso
+# <a name="path-information-and-enumeration"></a>Enumeración e información de trazado
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Obtenga información acerca de las rutas de acceso y enumerar el contenido_
 

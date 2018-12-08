@@ -7,14 +7,16 @@ ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: daa2c2f3b43633fd9b3359763b9d740b0def9144
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 87846eba71278295ae6f266f6e786c0992aebd34
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563087"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052043"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumen del capítulo 4. Desplazamiento de la pila
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04)
 
 Este capítulo se dedica principalmente para introducir el concepto de *diseño*, que es el término general para las clases y las técnicas que utiliza Xamarin.Forms para organizar la presentación visual de varias vistas en la página.
 

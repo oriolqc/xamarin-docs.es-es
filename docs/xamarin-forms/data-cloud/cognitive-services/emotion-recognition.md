@@ -1,36 +1,38 @@
 ---
-title: Reconocimiento de expresión mediante la API de cara
-description: La API de cara toma una expresión facial en una imagen como entrada y devuelve los datos que incluyen los niveles de confianza a través de un conjunto de emociones para cada cara de la imagen. En este artículo se explica cómo usar la API de cara a reconocer emociones, para calificar una aplicación de Xamarin.Forms.
+title: Reconocimiento de emociones con la Face API
+description: Face API toma una expresión facial de una imagen como entrada y devuelve los datos que incluyen los niveles de confianza a través de un conjunto de emociones para cada cara de la imagen. En este artículo se explica cómo usar Face API para que reconozca las emociones para evaluar una aplicación de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 4dc04cb077b894b255eb496b2cb2983626573897
-ms.sourcegitcommit: b0a1c3969ab2a7b7fe961f4f470d1aa57b1ff2c6
+ms.openlocfilehash: d703de90378991d262a4b056b9ebc98d183e3fb8
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34049771"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056495"
 ---
-# <a name="emotion-recognition-using-the-face-api"></a>Reconocimiento de expresión mediante la API de cara
+# <a name="emotion-recognition-using-the-face-api"></a>Reconocimiento de emociones con la Face API
 
-_La API de cara toma una expresión facial en una imagen como entrada y devuelve los datos que incluyen los niveles de confianza a través de un conjunto de emociones para cada cara de la imagen. En este artículo se explica cómo usar la API de cara a reconocer emociones, para calificar una aplicación de Xamarin.Forms._
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+
+_Face API toma una expresión facial de una imagen como entrada y devuelve los datos que incluyen los niveles de confianza a través de un conjunto de emociones para cada cara de la imagen. En este artículo se explica cómo usar Face API para que reconozca las emociones para evaluar una aplicación de Xamarin.Forms._
 
 ## <a name="overview"></a>Información general
 
-La API de cara puede realizar emociones de detección para detectar ira, contempt, disgust, temor, satisfacción, neutral, tristeza y sorpresa, en una expresión facial. Universalmente y transculturalmente estas emociones se comunican a través de las mismas expresiones faciales básicas. Así como devolver un resultado de la expresión de una expresión facial, la API de cara puede también devuelve un cuadro de límite de caras detectados. Tenga en cuenta que se debe obtener una clave de API para usar la API de cara. Esto se puede obtener en [intente cognitivos servicios](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
+Face API puede realizar la detección de emociones para detectar la ira, desprecio, asco, miedo, felicidad, neutralidad, tristeza y sorpresa, en una expresión facial. Universalmente y culturas estas emociones se comunican a través de las mismas expresiones faciales básicas. Además de devolver un resultado de emociones para una expresión facial, Face API puede también devuelve un rectángulo de selección de caras detectadas. Tenga en cuenta que se debe obtener una clave de API para usar Face API. Esto puede obtenerse en [pruebe Cognitive Services](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
 
-Reconocimiento de emoción puede realizarse a través de una biblioteca de cliente y una API de REST. En este artículo se centra en la ejecución del reconocimiento de emoción a través de la API de REST. Para obtener más información acerca de la API de REST, consulte [API de REST de cara](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+Reconocimiento de emociones puede realizarse a través de una biblioteca de cliente y una API de REST. En este artículo se centra en realizar el reconocimiento de emociones a través de la API de REST. Para obtener más información acerca de la API de REST, consulte [Face API de REST](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
 
-La API de cara también puede utilizarse para reconocer las expresiones faciales de personas de vídeo y puede devolver un resumen de sus emociones. Para obtener más información, consulte [cómo analizar los vídeos en tiempo real](/azure/cognitive-services/face/face-api-how-to-topics/howtoanalyzevideo_face/).
+Face API puede usarse también para reconocer las expresiones faciales de personas en vídeo y puede devolver un resumen de sus emociones. Para obtener más información, consulte [cómo analizar vídeos en tiempo real](/azure/cognitive-services/face/face-api-how-to-topics/howtoanalyzevideo_face/).
 
-Para obtener más información acerca de la API de cara, consulte [API cara](/azure/cognitive-services/face/overview/).
+Para obtener más información acerca de Face API, consulte [Face API](/azure/cognitive-services/face/overview/).
 
 ## <a name="authentication"></a>Autenticación
 
-Todas las solicitudes realizadas a la API de cara requiere una clave de API que se debe especificar como el valor de la `Ocp-Apim-Subscription-Key` encabezado. En el ejemplo de código siguiente se muestra cómo agregar la clave de API para el `Ocp-Apim-Subscription-Key` encabezado de una solicitud:
+Cada solicitud realizada a Face API necesita una clave de API que se debe especificar como el valor de la `Ocp-Apim-Subscription-Key` encabezado. En el ejemplo de código siguiente se muestra cómo agregar la clave de API para el `Ocp-Apim-Subscription-Key` encabezado de una solicitud:
 
 ```csharp
 public FaceRecognitionService()
@@ -40,28 +42,28 @@ public FaceRecognitionService()
 }
 ```
 
-Error al pasar una clave de API válida a la API de cara se producirá un error de 401 respuesta.
+Error al pasar una clave de API válida para Face API producirá un error en la 401 respuesta.
 
 ## <a name="performing-emotion-recognition"></a>Realizar el reconocimiento de emociones
 
-Reconocimiento emociones se realiza mediante la realización de una solicitud POST que contiene una imagen a la `detect` API en `https://[location].api.cognitive.microsoft.com/face/v1.0`, donde `[location]]` es la región que se utiliza para obtener la clave de API. Los parámetros de solicitud opcionales son:
+Reconocimiento de emociones se realiza mediante una solicitud POST que contiene una imagen a la `detect` API en `https://[location].api.cognitive.microsoft.com/face/v1.0`, donde `[location]]` es la región utiliza para obtener la clave de API. Los parámetros de solicitud opcionales son:
 
-- `returnFaceId` : si se deben devolver faceIds de las caras detectadas. El valor predeterminado es `true`.
-- `returnFaceLandmarks` : si se deben devolver los hitos de la cara de las caras detectadas. El valor predeterminado es `false`.
-- `returnFaceAttributes` : si se va a analizar y devolver uno o varios especifican enfrentan a atributos. Atributos de cara admitidos incluyen `age`, `gender`, `headPose`, `smile`, `facialHair`, `glasses`, `emotion`, `hair`, `makeup`, `occlusion`, `accessories`, `blur`, `exposure`, y `noise`. Observe que el análisis de atributo de cara tiene costo adicional de cálculo y el tiempo.
+- `returnFaceId` – Si se deben devolver faceIds de las caras detectadas. El valor predeterminado es `true`.
+- `returnFaceLandmarks` – Si se deben devolver los puntos de referencia de las caras detectadas. El valor predeterminado es `false`.
+- `returnFaceAttributes` : si desea analizar y volver a especifican uno o más atributos faciales. Los atributos de cara admitidos incluyen `age`, `gender`, `headPose`, `smile`, `facialHair`, `glasses`, `emotion`, `hair`, `makeup`, `occlusion`, `accessories`, `blur`, `exposure`, y `noise`. Tenga en cuenta que el análisis de atributos de cara tiene costo adicional de cálculo y el tiempo.
 
 Contenido de la imagen se debe colocar en el cuerpo de la solicitud POST como una dirección URL o datos binarios.
 
 > [!NOTE]
 > Formatos de archivo de imagen admitidos son JPEG, PNG, GIF y BMP, y el tamaño de archivo permitido es de 1KB a 4MB.
 
-En la aplicación de ejemplo, se invoca el proceso de reconocimiento emociones mediante una llamada a la `DetectAsync` método:
+En la aplicación de ejemplo, el proceso de reconocimiento de emociones se invoca mediante una llamada a la `DetectAsync` método:
 
 ```csharp
 Face[] faces = await _faceRecognitionService.DetectAsync(photoStream, true, false, new FaceAttributeType[] { FaceAttributeType.Emotion });
 ```
 
-Esta llamada al método especifica la secuencia que contiene los datos de imagen, que se deben devolver faceIds, que no deben devolverse cara hitos y que se debe analizar la expresión de la imagen. También especifica que se devuelven los resultados como una matriz de `Face` objetos. A su vez, el `DetectAsync` método invoca el `detect` API de REST que realiza el reconocimiento de la expresión:
+Esta llamada al método especifica la secuencia que contiene los datos de imagen, que se deben devolver faceIds, que no deben devolverse faciales, y que se debe analizar la emoción de la imagen. También especifica que los resultados se devolverán como una matriz de `Face` objetos. A su vez, el `DetectAsync` método invoca el `detect` API de REST que realiza el reconocimiento de emociones:
 
 ```csharp
 public async Task<Face[]> DetectAsync(Stream imageStream, bool returnFaceId, bool returnFaceLandmarks, IEnumerable<FaceAttributeType> returnFaceAttributes)
@@ -74,14 +76,14 @@ public async Task<Face[]> DetectAsync(Stream imageStream, bool returnFaceId, boo
 }
 ```
 
-Este método genera un URI de solicitud y, a continuación, envía la solicitud a la `detect` API a través de la `SendRequestAsync` método.
+Este método genera un URI de solicitud y, a continuación, envía la solicitud para el `detect` API a través de la `SendRequestAsync` método.
 
 > [!NOTE]
-> Debe usar la misma región en las llamadas de API de cara que utiliza para obtener las claves de la suscripción. Por ejemplo, si ha adquirido las claves de la suscripción desde el `westus` región, el punto de conexión de detección de cara será `https://westus.api.cognitive.microsoft.com/face/v1.0/detect`.
+> Debe usar la misma región en las llamadas de Face API que utilizó para obtener las claves de suscripción. Por ejemplo, si ha obtenido las claves de suscripción desde el `westus` región, que será el punto de conexión de detección de caras `https://westus.api.cognitive.microsoft.com/face/v1.0/detect`.
 
 ### <a name="sending-the-request"></a>Enviar la solicitud
 
-El `SendRequestAsync` método realiza la solicitud POST a la API de cara y devuelve el resultado como un `Face` matriz:
+El `SendRequestAsync` método realiza la solicitud POST a Face API y devuelve el resultado como un `Face` matriz:
 
 ```csharp
 async Task<TResponse> SendRequestAsync<TRequest, TResponse>(HttpMethod httpMethod, string requestUrl, TRequest requestBody)
@@ -124,15 +126,15 @@ async Task<TResponse> SendRequestAsync<TRequest, TResponse>(HttpMethod httpMetho
 }
 ```
 
-Si la imagen se proporciona a través de una secuencia, el método genera la solicitud POST ajustando el flujo de imágenes en un `StreamContent` instancia, lo que proporciona contenido HTTP basado en una secuencia. Como alternativa, si la imagen se proporciona a través de una dirección URL, el método genera la solicitud POST ajustando la dirección URL en una `StringContent` instancia, lo que proporciona contenido HTTP basado en una cadena.
+Si la imagen se proporciona a través de una secuencia, el método basa la solicitud POST ajustando el flujo de imagen en un `StreamContent` instancia, que proporciona contenido HTTP basado en una secuencia. Como alternativa, si la imagen se proporciona a través de una dirección URL, el método crea la solicitud POST ajustando la dirección URL en un `StringContent` instancia, que proporciona contenido HTTP basado en una cadena.
 
-La solicitud POST, a continuación, se envía a `detect` API. La respuesta es leer, deserializar y devuelve al método de llamada.
+A continuación, se envía la solicitud POST a `detect` API. La respuesta es leer, se deserializa y se devuelve al método de llamada.
 
-El `detect` API enviará el código de estado HTTP 200 (OK) en la respuesta, siempre que la solicitud es válida, lo que indica que la solicitud es correcta y que la información solicitada está en la respuesta. Para obtener una lista de posibles respuestas de error, consulte [API de REST de cara](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
+El `detect` API enviará el código de estado HTTP 200 (OK) en la respuesta, siempre que la solicitud es válida, lo que indica que la solicitud es correcta y que la información solicitada está en la respuesta. Para obtener una lista de posibles respuestas de error, consulte [Face API de REST](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
 
 ### <a name="processing-the-response"></a>Procesamiento de la respuesta
 
-La respuesta de la API se devuelve en formato JSON. Los siguientes datos JSON muestran un mensaje de respuesta correcta típico que proporciona los datos solicitados por la aplicación de ejemplo:
+Se devuelve la respuesta de API en formato JSON. Los siguientes datos JSON muestran un mensaje de respuesta correcta típico que proporciona los datos solicitados por la aplicación de ejemplo:
 
 ```json
 [  
@@ -160,24 +162,24 @@ La respuesta de la API se devuelve en formato JSON. Los siguientes datos JSON mu
 ]
 ```
 
-Un mensaje de respuesta correcta se compone de una matriz de entradas de cara clasificadas por el tamaño del rectángulo de cara en orden descendente, mientras que una respuesta vacía no indica ninguna caras detectados. Cada uno de ellos reconoce cara incluye una serie de atributos de cara opcional, que se especifican mediante el `returnFaceAttributes` argumento pasado a la `DetectAsync` método.
+Un mensaje de respuesta correcta se compone de una matriz de entradas de cara ordenados según el tamaño del rectángulo de cara en orden descendente, mientras que una respuesta vacía no indica ningún caras detectadas. Cada uno de ellos reconoce cara incluye una serie de atributos de cara opcional, que se especifican mediante el `returnFaceAttributes` argumento para el `DetectAsync` método.
 
-En la aplicación de ejemplo, la respuesta JSON se deserializa en una matriz de `Face` objetos. Al interpretar los resultados de la API de cara, las emociones detectado deben interpretarse como la emoción con la puntuación más alta, tal y como se normalizan las puntuaciones a suma a uno. Por lo tanto, la aplicación de ejemplo muestra la emoción reconocida con la puntuación más alta para los que se enfrentan detectado más grande en la imagen. Esto se consigue con el código siguiente:
+En la aplicación de ejemplo, la respuesta JSON se deserializa en una matriz de `Face` objetos. Al interpretar los resultados de Face API, las emociones detectadas se deben interpretar como la emoción con la puntuación más alta, como las puntuaciones se normalizan para que sumen uno. Por lo tanto, la aplicación de ejemplo muestra la emoción reconocida con la puntuación más alta para la cara detectada más grande en la imagen. Esto se consigue con el código siguiente:
 
 ```csharp
 emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRankedList().FirstOrDefault().Key;
 ```
 
-Captura de pantalla siguiente muestra el resultado del proceso de reconocimiento emociones en la aplicación de ejemplo:
+Captura de pantalla siguiente muestra el resultado del proceso de reconocimiento de emociones en la aplicación de ejemplo:
 
 ![](emotion-recognition-images/emotion-recognition.png "Reconocimiento de emociones")
 
 ## <a name="summary"></a>Resumen
 
-Este artículo explica cómo usar la API de cara a reconocer emociones, para calificar una aplicación de Xamarin.Forms. La API de cara toma una expresión facial en una imagen como entrada y devuelve los datos que incluyen la confianza entre un conjunto de emociones para cada cara de la imagen.
+En este artículo se explica cómo usar Face API para que reconozca las emociones para evaluar una aplicación de Xamarin.Forms. Face API toma una expresión facial de una imagen como entrada y devuelve los datos que incluyen la confianza entre un conjunto de emociones para cada cara de la imagen.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Se enfrentan a API](/azure/cognitive-services/face/overview/).
-- [Lista de tareas cognitivos servicios (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
-- [Cara API de REST](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)
+- [Face API](/azure/cognitive-services/face/overview/).
+- [Todo Cognitive Services (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Face API de REST](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)

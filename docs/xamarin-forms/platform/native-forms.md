@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
-ms.openlocfilehash: 6232c6b561a791f170ebedd4d441f7be2a8ef92e
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: e02c04afe656b0eca3b7ae12b8b30f35836b9368
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563737"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054818"
 ---
 # <a name="xamarinforms-in-xamarin-native-projects"></a>Xamarin.Forms en proyectos nativos de Xamarin
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Native2Forms/)
 
 _Formularios nativos permitir que las páginas de Xamarin.Forms ContentPage derivadas a ser consumidos por los proyectos nativos de Xamarin.iOS, Xamarin.Android y plataforma Universal de Windows (UWP). Proyectos nativos pueden consumir derivado de ContentPage las páginas que se agregan directamente al proyecto, o desde una biblioteca .NET Standard, la biblioteca estándar de .NET o el proyecto compartido. En este artículo se explica cómo consumir derivado de ContentPage las páginas que se agregan directamente a proyectos nativos y cómo navegar entre ellos._
 

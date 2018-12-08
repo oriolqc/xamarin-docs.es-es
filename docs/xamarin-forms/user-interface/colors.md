@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: a7acb300dbbd6daa02eace955066d3227834cf67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 43854929cfc232b24cad18e276b3ba51d1e5dece
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103080"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058422"
 ---
 # <a name="colors-in-xamarinforms"></a>Colores de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/WorkingWithColors)
 
 _Xamarin.Forms proporciona una clase de Color flexible y multiplataforma._
 

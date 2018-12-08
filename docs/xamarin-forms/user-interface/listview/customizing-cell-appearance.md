@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/07/2016
-ms.openlocfilehash: 7a0f55b6d8a61f52f4ef137d83c56d86149bc3c9
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 7c19cc0f2d1f72706926d640bb7fad9323a9e17f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38996261"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53049461"
 ---
 # <a name="customizing-listview-cell-appearance"></a>Personalizar la apariencia de una celda de ListView
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
 
 ListView presenta listas desplazables, que se pueden personalizar mediante el uso de `ViewCell`s. `ViewCells` puede usarse para mostrar texto e imágenes, que indica un estado verdadero/falso y recibir datos de entrada del usuario.
 

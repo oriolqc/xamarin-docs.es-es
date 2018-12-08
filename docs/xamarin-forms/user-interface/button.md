@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: fbdb611df558c547a2470a8c8a9d7848ef7aa31f
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 7108b24f73d1f7389bf37fe8640061ae3e077300
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171396"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054429"
 ---
 # <a name="xamarinforms-button"></a>Botón de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos)
 
 _El botón se responde a un pulse o haga clic en que se dirige a una aplicación para llevar a cabo una tarea determinada._
 

@@ -7,14 +7,16 @@ ms.assetid: 19E84B5D-46B4-4B6D-A255-87BEFB011261
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: 4bfa2bed7061e031c55ccbdb7f576aa02c17581a
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: ddbb96836fa1aa9611701bd7d645d9e85ad28027
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563997"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058641"
 ---
 # <a name="summary-of-chapter-23-triggers-and-behaviors"></a>Resumen del capítulo 23. Los desencadenadores y comportamientos
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter23)
 
 Los desencadenadores y comportamientos son similares, en que ambos están diseñados para usarse en archivos XAML para simplificar las interacciones del elemento más allá del uso de enlaces de datos y para ampliar la funcionalidad de los elementos XAML. Desencadenadores y comportamientos casi siempre se utilizan con objetos de interfaz de usuario visual.
 

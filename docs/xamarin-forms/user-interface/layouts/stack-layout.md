@@ -1,34 +1,36 @@
 ---
 title: Xamarin.Forms StackLayout
-description: Este artículo explica cómo usar la clase Xamarin.Forms StackLayout para presentar las colecciones de vistas a través de una dimensión.
+description: En este artículo se explica cómo usar la clase Xamarin.Forms StackLayout para presentar las colecciones de vistas a través de una dimensión.
 ms.prod: xamarin
 ms.assetid: 6A91EA70-268C-462C-AAAF-F8DA011403F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: 6e278c466c352ad19575cd3a84d6e38e14ec2587
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: bdc03721569682cd5b4f72908fcab1e4a567b83c
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35244602"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055807"
 ---
 # <a name="xamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
-`StackLayout` Organiza las vistas en una línea unidimensional ("pila"), ya sea horizontal o verticalmente. Vistas en un `StackLayout` se puede cambiar en función del espacio en el diseño usando las opciones de diseño. Posición se determina por el orden en que se agregaron vistas en el diseño y las opciones de diseño de las vistas.
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
-[![](stack-layout-images/layouts-sml.png "Diseños de Xamarin.Forms")](stack-layout-images/layouts.png#lightbox "diseños de Xamarin.Forms")
+`StackLayout` Organiza las vistas en una línea unidimensional ("pila"), ya sea horizontal o verticalmente. Las vistas en un `StackLayout` puede ajustarse según el espacio en el diseño mediante las opciones de diseño. Posición viene determinada por el orden en que se agregaron las vistas en el diseño y las opciones de diseño de las vistas.
+
+[![](stack-layout-images/layouts-sml.png "Los diseños de Xamarin.Forms")](stack-layout-images/layouts.png#lightbox "los diseños de Xamarin.Forms")
 
 ## <a name="purpose"></a>Propósito
 
-`StackLayout` es menos complejo que otras vistas. Interfaces lineales simples pueden crearse con solo agregar vistas para un `StackLayout`y las interfaces más complejas creadas anidarlos.
+`StackLayout` es menos complejo que otras vistas. Se pueden crear interfaces lineales simple con solo agregar vistas a un `StackLayout`y las interfaces más complejas creadas por anidarlos.
 
 ## <a name="usage--behavior"></a>Uso de & comportamiento
 
 ### <a name="spacing"></a>Espaciado
 
-De forma predeterminada, `StackLayout` agregará un margen de 6px entre las vistas. Esto puede ser controlado o define para no tener ningún margen estableciendo la `Spacing` propiedad StackLayout. A continuación, muestra cómo establecer el espaciado y el efecto de las opciones de espaciado diferente:
+De forma predeterminada, `StackLayout` agregará un margen 6px entre las vistas. Puede ser controlado o establecer tener ningún margen estableciendo el `Spacing` propiedad StackLayout. La siguiente muestra cómo establecer el espaciado y el efecto de las opciones de espaciado diferente:
 
 En XAML:
 
@@ -88,25 +90,25 @@ Espaciado de diez:
 
 ### <a name="sizing"></a>Ajuste de tamaño
 
-El tamaño de una vista en un StackLayout depende de las solicitudes de alto y el ancho y las opciones de diseño. `StackLayout` aplicará el relleno. El siguiente `LayoutOption`s hará que vistas para ocupar el espacio disponible del diseño:
+El tamaño de una vista en un StackLayout depende de las solicitudes de alto y ancho y las opciones de diseño. `StackLayout` aplicará el relleno. La siguiente `LayoutOption`s hará que las vistas a ocupar espacio está disponible en el diseño:
 
-- **CenterAndExpand** &ndash; centra la vista en el diseño y se expande para ocupar espacio le asignará el diseño.
-- **EndAndExpand** &ndash; coloca la vista al final del diseño (inferior o límite de más a la derecha) y se expande para ocupar espacio le asignará el diseño.
-- **FillAndExpand** &ndash; coloca la vista para que no tiene ningún relleno y ocupa espacio le asignará el diseño.
-- **StartAndExpand** &ndash; coloca la vista al principio del diseño y ocupa espacio le dará el elemento primario.
+- **CenterAndExpand** &ndash; centra la vista dentro del diseño y se expande para ocupar espacio le asignará el diseño.
+- **EndAndExpand** &ndash; coloca la vista al final del diseño (inferior o límite más a la derecha) y se expande para ocupar espacio le asignará el diseño.
+- **FillAndExpand** &ndash; coloca la vista para que no tiene relleno y ocupa espacio le asignará el diseño.
+- **StartAndExpand** &ndash; coloca la vista al principio del diseño y ocupa espacio proporcionará el elemento primario.
 
 Para obtener más información, consulte [expansión](~/xamarin-forms/user-interface/layouts/layout-options.md#expansion).
 
 ### <a name="positioning"></a>Posición
 
-Vistas en un StackLayout puede colocarse y tamaño utilizando `LayoutOptions`. Cada vista puede indicarse `VerticalOptions` y `HorizontalOptions`, definir cómo las vistas se posicionan en relación con el diseño. Los siguientes predefinidos `LayoutOptions` están disponibles:
+Se pueden colocar y tamaño utilizando vistas en un StackLayout `LayoutOptions`. Cada vista puede proporcionarse `VerticalOptions` y `HorizontalOptions`, define cómo las vistas se posicionan en relación con el diseño. Siguiente predefinidos `LayoutOptions` están disponibles:
 
-- **Centro de** &ndash; centra la vista en el diseño.
-- **End** &ndash; coloca la vista al final del diseño (inferior o límite de más a la derecha).
-- **Rellenar** &ndash; coloca la vista para que no tiene ningún relleno.
+- **Centro de** &ndash; centra la vista dentro del diseño.
+- **End** &ndash; coloca la vista al final del diseño (inferior o límite más a la derecha).
+- **Rellenar** &ndash; coloca la vista para que no tenga ningún relleno.
 - **Iniciar** &ndash; coloca la vista al principio del diseño.
 
-El código siguiente muestra cómo establecer las opciones del diseño:
+El código siguiente muestra cómo establecer las opciones de diseño:
 
 En XAML:
 
@@ -156,11 +158,11 @@ public class StackLayoutCode : ContentPage
 
 Para obtener más información, consulte [alineación](~/xamarin-forms/user-interface/layouts/layout-options.md#alignment).
 
-## <a name="exploring-a-complex-layout"></a>Explorar un diseño complejo
+## <a name="exploring-a-complex-layout"></a>Exploración de un diseño complejo
 
-Cada uno de los diseños tiene ventajas y desventajas de la creación de diseños determinados. A lo largo de esta serie de artículos de diseño, se ha creado una aplicación de ejemplo con el mismo diseño de página que se implementa mediante tres diseños diferentes.
+Cada uno de los diseños tienen ventajas y desventajas para crear diseños determinados. A lo largo de esta serie de artículos de diseño, una aplicación de ejemplo creada con el mismo diseño de página que se implementa mediante tres diseños diferentes.
 
-Tenga en cuenta el siguiente código XAML:
+Tenga en cuenta el XAML siguiente:
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -213,11 +215,11 @@ Title="StackLayouts">
 
 ```
 
-El código anterior genera el siguiente diseño:
+El código anterior da como resultado el siguiente diseño:
 
-![](stack-layout-images/stack.png "StackLayout compleja")
+![](stack-layout-images/stack.png "StackLayout complejo")
 
-Tenga en cuenta que `StackLayouts`s están anidados, porque en algunos casos diseños de anidamiento puede ser más sencillo que presentar todos los elementos en el mismo diseño. Observe también que, dado que `StackLayout` no es compatible con los elementos superpuestos, la página no haya algunas de las sutiles de características de diseño encontrado en las páginas de los diseños de otros.
+Tenga en cuenta que `StackLayouts`s están anidadas, porque en algunos casos los diseños de anidamiento puede ser más sencillo que presentar todos los elementos del diseño del mismo. Observe también que, dado que `StackLayout` no admite elementos superpuestos, la página no dispone de algunos de los detalles de diseño se encuentra en las páginas de los otros diseños.
 
 
 

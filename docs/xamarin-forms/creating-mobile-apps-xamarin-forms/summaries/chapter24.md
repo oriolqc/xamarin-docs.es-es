@@ -7,14 +7,16 @@ ms.assetid: DDCDB49C-6008-4F72-B095-463EE21D7C23
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: d90bef4da589215247f412450905a5db541b0444
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 764a148ffffc2c69dbab5aeca872e2d10ce9f159
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563165"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052746"
 ---
 # <a name="summary-of-chapter-24-page-navigation"></a>Resumen del capítulo 24. Navegación de páginas
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24)
 
 Muchas aplicaciones constan de varias páginas, entre los que el usuario se desplaza. La aplicación siempre tiene un *principal* página o *principal* página, y a partir de ahí el usuario navega a otras páginas, que se mantienen en una pila para desplazarse hacia atrás. Otras opciones de navegación se tratan en [ **capítulo 25. Página variedades**](chapter25.md).
 

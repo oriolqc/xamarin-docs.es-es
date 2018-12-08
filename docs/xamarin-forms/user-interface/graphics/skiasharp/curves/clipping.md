@@ -7,14 +7,16 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 87f1ad3956bdb43c82a7ab57ea9171e9a28dd558
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 4f8b6b7ea0db8d46886c3391f1aef3ba20a5be44
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "39615293"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057449"
 ---
 # <a name="clipping-with-paths-and-regions"></a>Recorte con trazados y regiones
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 _Usar rutas de acceso a los gráficos de clip a áreas específicas y para crear regiones_
 

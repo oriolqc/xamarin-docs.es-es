@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: d83b2f249bb0afe4257544d6da731dbc9ac3e317
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: ac5ad85f7bdd08b0d071e7c333c959e94dcbc53f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52170941"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057499"
 ---
 # <a name="xamarinforms-slider"></a>Control deslizante de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/SliderDemos)
 
 _Usar un control deslizante para seleccionar un intervalo de valores continuos._
 

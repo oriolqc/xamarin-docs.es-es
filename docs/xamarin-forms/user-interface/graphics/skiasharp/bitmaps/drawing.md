@@ -7,14 +7,16 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 02ee84560b29fa95d0a16259d5bbbd6bc0144063
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 9e76558597928bafa25f6a217c6f0055657e4c22
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171214"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053083"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Crear y dibujar en mapas de bits de SkiaSharp
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Ha visto cómo una aplicación puede cargar los mapas de bits de la Web, de recursos de aplicación y de biblioteca de fotos del usuario. También es posible crear mapas de bits nuevo dentro de la aplicación. El enfoque más sencillo implica uno de los constructores de [ `SKBitmap` ](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 8d911108d7d72586a37a3281803eab9c0841f16c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 5eb3348df39b8931d8cdd89d8c6f54b8bb3024a0
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997117"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057436"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Adición de datos a la colección de elementos de un selector
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
 
 _La vista de selector es un control para seleccionar un elemento de texto en una lista de datos. En este artículo se explica cómo rellenar un selector de datos, éste se agrega a la colección de elementos y cómo responder a la selección de elementos por el usuario._
 

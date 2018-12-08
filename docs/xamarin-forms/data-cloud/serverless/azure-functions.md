@@ -7,14 +7,16 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 08/08/2018
-ms.openlocfilehash: d8dd6927daab563b4331e9e87c7b069d84078f66
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: be67de97360a00fb4551f8a3bdd00e7f1d5d3c90
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617441"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058118"
 ---
 # <a name="get-started-with-azure-functions"></a>Introducción a Azure Functions
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
 
 _Comience a crear su primera función de Azure que interactúa con Xamarin.Forms._
 

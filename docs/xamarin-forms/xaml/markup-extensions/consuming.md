@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2018
-ms.openlocfilehash: 2ab7381baefc6ca013b6c8a5c9f7bf7b5cae8b10
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 53c5f17672cc46ef097e979154a8911f8cdaef63
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171721"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054132"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de las extensiones de marcado XAML
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 
 Las extensiones de marcado XAML que ayudan a mejorar la eficacia y flexibilidad de XAML al permitir que los atributos del elemento debe establecerse en una variedad de orígenes. Varias extensiones de marcado XAML forman parte de la especificación de XAML 2009. Esta información aparece en los archivos XAML con el habitual `x` prefijo de espacio de nombres y se conocen comúnmente por este prefijo. En este artículo se describe las extensiones de marcado siguiente:
 

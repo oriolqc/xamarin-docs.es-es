@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e11f7c95ccc65371ec5d844505682103025cd8af
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 531fb9500bdbf9d07ac3f781113768395465bd50
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172241"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050562"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Creación de extensiones de marcado XAML
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/XAML/MarkupExtensions/)
 
 En el nivel de programación, una extensión de marcado XAML es una clase que implementa el [ `IMarkupExtension` ](xref:Xamarin.Forms.Xaml.IMarkupExtension) o [ `IMarkupExtension<T>` ](xref:Xamarin.Forms.Xaml.IMarkupExtension`1) interfaz. Puede explorar el código fuente de las extensiones de marcado estándar se describe a continuación, en el [ **MarkupExtensions** directory](https://github.com/xamarin/Xamarin.Forms/tree/master/Xamarin.Forms.Xaml/MarkupExtensions) del repositorio de Xamarin.Forms GitHub.
 

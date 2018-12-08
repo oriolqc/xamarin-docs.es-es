@@ -7,14 +7,16 @@ ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
-ms.openlocfilehash: ebd4db28b2c20bd2b9e1d93e03dd101ebc5da663
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f988c16e933214b3ce737febb89d05a451eb2f14
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50132063"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055042"
 ---
 # <a name="porter-duff-blend-modes"></a>Modos de fusión Porter Duff
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Los modos de mezcla Porter Duff nombrados de Thomas Porter y Tom Duff, que desarrolló un álgebra de la composición mientras trabajaba para Lucasfilm. Su papel [ _la composición de imágenes digitales_ ](https://graphics.pixar.com/library/Compositing/paper.pdf) se publicó en el número de julio de 1984 de _gráficos para PC_, páginas de 253 a 259. Estos modos de fusión son esenciales para la composición, que está ensamblando varias imágenes en una escena de composición:
 

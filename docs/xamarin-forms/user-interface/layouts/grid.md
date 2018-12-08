@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: ff485774b8e9ee47aae4808701e8b9d20c308e03
-ms.sourcegitcommit: 676c5a6795ab4896ccd1b288424bf2040b1208aa
+ms.openlocfilehash: 25c5077b3637c54370fa1a42a9b652ef211c0ed9
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52280483"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059345"
 ---
 # <a name="xamarinforms-grid"></a>Cuadrícula de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
 [`Grid`](xref:Xamarin.Forms.Grid) permite organizar las vistas en filas y columnas. Las filas y columnas se pueden establecer para tener tamaños proporcionales o tamaños absolutos. El `Grid` diseño no debe confundirse con las tablas tradicionales y no está diseñada para presentar los datos tabulares. `Grid` no tiene el concepto de fila, columna o formato de celdas. A diferencia de las tablas HTML, `Grid` está pensado únicamente para diseño de contenido.
 

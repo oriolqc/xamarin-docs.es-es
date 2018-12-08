@@ -7,14 +7,16 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: aa576e4af5d804eb5b8d78643ffa762b8a15c6dc
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: bd13163b513ea1f6b0381e99e65d0bd727f97735
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171773"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53055733"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Conceptos básicos del enlace de datos
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
 
 _Enlaces de datos permiten propiedades de dos objetos se vinculen para que un cambio en uno provoca un cambio en el otro. Esto es una herramienta muy valiosa, y mientras los enlaces de datos se pueden definir completamente en código, XAML proporciona accesos directos y comodidad. Por lo tanto, se enlaza una de las extensiones de marcado más importantes en Xamarin.Forms._
 

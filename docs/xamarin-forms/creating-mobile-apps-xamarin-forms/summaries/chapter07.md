@@ -7,16 +7,18 @@ ms.assetid: E91F387B-CE90-481C-8D90-CB25519BFD2B
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 1dc4fe12d3ca23a9ca87c3be7819c970683db469
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: ce4dde3716176daf826678809339afb84c25d84a
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563503"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53052574"
 ---
 # <a name="summary-of-chapter-7-xaml-vs-code"></a>Resumen del capítulo 7. XAML frente a código
 
-> [!NOTE] 
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07)
+
+> [!NOTE]
 > Notas de esta página indican áreas donde se ha dividido Xamarin.Forms desde el material presentado en el libro.
 
 Xamarin.Forms es compatible con un lenguaje de marcado basado en XML denominado lenguaje de marcado de aplicaciones Extensible o XAML (pronunciado "zammel"). XAML proporciona una alternativa a C# en la definición del diseño de la interfaz de usuario de una aplicación de Xamarin.Forms y, en definir enlaces entre los elementos de interfaz de usuario y los datos subyacentes.
@@ -39,7 +41,7 @@ A veces, una propiedad debe establecerse en un objeto que no se puede expresar c
 
 Biblioteca de clases Portable Xamarin.Forms puede contener una página XAML cuando se crea por primera vez, o puede agregar una página XAML a un proyecto existente. En el cuadro de diálogo para agregar un nuevo elemento, elija el elemento que hace referencia a una página XAML, o `ContentPage` y XAML. (No un `ContentView`.)
 
-> [!NOTE] 
+> [!NOTE]
 > Opciones de Visual Studio han cambiado desde que se escribió este capítulo.
 
 Se crean dos archivos: un archivo XAML con el XAML de extensión de nombre de archivo y un archivo de C# con la extensión. xaml.cs. El archivo de C# a menudo se conoce como el *código* del archivo XAML. El archivo de código subyacente es una definición de clase parcial que se deriva de `ContentPage`. En tiempo de compilación, se analiza el XAML y se genera otra definición de clase parcial para la misma clase. Esta clase generada incluye un método denominado `InitializeComponent` que se llama desde el constructor del archivo de código subyacente.

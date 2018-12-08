@@ -7,14 +7,16 @@ ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
-ms.openlocfilehash: eebfe40bca6db92bae1f2fdcc9cbff3173dc4e51
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: cd7c8484827a038bbcf11180296547ea6fedf929
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172020"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059209"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>Acceso a los bits de píxeles del mapa de bits de SkiaSharp
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
 
 Como se vio en el artículo [ **SkiaSharp guardar mapas de bits archivos**](saving.md), mapas de bits se almacenan normalmente en archivos en un formato comprimido, como JPEG o PNG. Al contrario, no se comprime un mapa de bits de SkiaSharp almacenada en memoria. Se almacena como una serie secuencial de píxeles. Este formato no comprimido facilita a la transferencia de los mapas de bits a una superficie de pantalla.
 
