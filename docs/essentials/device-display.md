@@ -4,19 +4,17 @@ description: En este documento se describe la clase DeviceDisplay de Xamarin.Ess
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: ebe97cf7fbb78bff17196110e835bd35ff76b826
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: d3102f0a4ed5f16c77c4a4768feb4a1565f2dd1a
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674891"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898901"
 ---
 # <a name="xamarinessentials-device-display-information"></a>Xamarin.Essentials: Información de pantalla del dispositivo
 
-![Versión preliminar de NuGet](~/media/shared/pre-release.png)
-
-La clase **DeviceDisplay** proporciona las métricas de pantalla del dispositivo en el que se ejecuta la aplicación.
+La clase **DeviceDisplay** proporciona información sobre las métricas de la pantalla del dispositivo que determinan cómo se ejecuta la aplicación. También puede solicitar que la pantalla no se apague mientras la aplicación se esté ejecutando.
 
 ## <a name="get-started"></a>Primeros pasos
 
@@ -30,50 +28,62 @@ Agregue una referencia a Xamarin.Essentials en su clase:
 using Xamarin.Essentials;
 ```
 
-## <a name="screen-metrics"></a>Métricas de pantalla
+## <a name="main-display-info"></a>Información de la pantalla principal
 
 Además de información básica del dispositivo, la clase **DeviceDisplay** contiene información sobre la pantalla y la orientación del dispositivo.
 
 ```csharp
 // Get Metrics
-var metrics = DeviceDisplay.ScreenMetrics;
+var mainDisplayInfo = DeviceDisplay.MainDisplayInfo;
 
 // Orientation (Landscape, Portrait, Square, Unknown)
-var orientation = metrics.Orientation;
+var orientation = mainDisplayInfo.Orientation;
 
 // Rotation (0, 90, 180, 270)
-var rotation = metrics.Rotation;
+var rotation = mainDisplayInfo.Rotation;
 
 // Width (in pixels)
-var width = metrics.Width;
+var width = mainDisplayInfo.Width;
 
 // Height (in pixels)
-var height = metrics.Height;
+var height = mainDisplayInfo.Height;
 
 // Screen density
-var density = metrics.Density;
+var density = mainDisplayInfo.Density;
 ```
 
 La clase **DeviceDisplay** también expone un evento al que se puede suscribir para que se desencadene siempre que cambie cualquier métrica de pantalla:
 
 ```csharp
-public class ScreenMetricsTest
+public class DisplayInfoTest
 {
-    public ScreenMetricsTest()
+    public DisplayInfoTest()
     {
         // Subscribe to changes of screen metrics
-        DeviceDisplay.ScreenMetricsChanged += OnScreenMetricsChanged;
+        DeviceDisplay.MainDisplayInfoChanged += OnMainDisplayInfoChanged;
     }
 
-    void OnScreenMetricsChanged(ScreenMetricsChangedEventArgs  e)
+    void OnMainDisplayInfoChanged(DisplayInfoChangedEventArgs  e)
     {
         // Process changes
-        var metrics = e.Metrics;
+        var displayInfo = e.DisplayInfo;
     }
 }
 ```
 
-## <a name="platform-differences"></a>Diferencias entre las plataformas
+La clase **DeviceDisplay** expone una propiedad `bool` con el nombre `KeepScreenOn`. Esta propiedad puede establecerse para que intente impedir que la pantalla del dispositivo se apague o bloquee.
+
+```csharp
+public class KeepScreenOnTest
+{
+    public void ToggleScreenLock()
+    {
+        DeviceDisplay.KeepScreenOn = !DeviceDisplay.KeepScreenOn;
+    }
+}
+```
+
+## <a name="platform-differences"></a>Diferencias entre plataformas
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -81,7 +91,7 @@ No hay diferencias.
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-* El acceso a `ScreenMetrics` se debe realizar en el subproceso de la interfaz de usuario o se iniciará una excepción. Puede usar el método [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) para ejecutar ese código en el subproceso de la interfaz de usuario.
+* El acceso a `DeviceDisplay` se debe realizar en el subproceso de la interfaz de usuario o se iniciará una excepción. Puede usar el método [`MainThread.BeginInvokeOnMainThread`](~/essentials/main-thread.md) para ejecutar ese código en el subproceso de la interfaz de usuario.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

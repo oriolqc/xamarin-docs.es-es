@@ -4,17 +4,15 @@ description: La clase Browser de Xamarin.Essentials permite que una aplicación 
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: a68837ac4447dabcf52a1d1b27913adf80b4cbd7
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: ea2a10c11a77fcb2b3ce142d176522ebf0310725
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675398"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898906"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Browser
-
-![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
 La clase **Browser** permite que una aplicación abra un vínculo web en el explorador optimizado preferido del sistema o en el explorador externo.
 
@@ -36,12 +34,14 @@ La funcionalidad Browser funciona mediante una llamada al método `OpenAsync` co
 
 public class BrowserTest
 {
-    public async Task OpenBrowser(Uri uri)
+    public async Task<bool> OpenBrowser(Uri uri)
     {
-        await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        return await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
     }
 }
 ```
+
+Este método devuelve un valor después de que el usuario _inicie_ el explorador, a veces sin que tenga que llegar a _cerrarlo_.  El resultado `bool` indica si el inicio ha sido correcto o no.
 
 ## <a name="platform-implementation-specifics"></a>Detalles de implementación de la plataforma
 

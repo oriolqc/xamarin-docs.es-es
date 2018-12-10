@@ -4,19 +4,17 @@ description: En este documento se describe la clase Battery de Xamarin.Essential
 ms.assetid: 47EB26D8-8C62-477B-A13C-6977F74E6E43
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: 6a14c939064538a405a1fe64061e0bb2e903fedd
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 3d69d082495f11c48273e9329bd2a4a61451b33f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675437"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058693"
 ---
 # <a name="xamarinessentials-battery"></a>Xamarin.Essentials: Batería
 
-![Versión preliminar de NuGet](~/media/shared/pre-release.png)
-
-La clase **Battery** permite comprobar la información de la batería del dispositivo y supervisar los cambios.
+La clase **Battery** le permite comprobar la información sobre la batería del dispositivo y supervisar los cambios. Además, ofrece información sobre el estado de ahorro de energía del dispositivo, que indica si este se está ejecutando en el modo de bajo consumo. Las aplicaciones deben evitar el procesamiento en segundo plano si el estado de ahorro de energía del dispositivo está activado.
 
 ## <a name="get-started"></a>Primeros pasos
 
@@ -65,7 +63,7 @@ using Xamarin.Essentials;
 Compruebe la información actual de la batería:
 
 ```csharp
-var level = Battery.ChargeLevel; // returns 0.0 to 1.0 or -1.0 if unable to determine.
+var level = Battery.ChargeLevel; // returns 0.0 to 1.0 or 1.0 when on AC or no battery.
 
 var state = Battery.State;
 
@@ -121,7 +119,7 @@ public class BatteryTest
         Battery.BatteryChanged += Battery_BatteryChanged;
     }
 
-    void Battery_BatteryChanged(object sender, BatteryChangedEventArgs   e)
+    void Battery_BatteryChanged(object sender, BatteryInfoChangedEventArgs   e)
     {
         var level = e.ChargeLevel;
         var state = e.State;
@@ -131,7 +129,40 @@ public class BatteryTest
 }
 ```
 
-## <a name="platform-differences"></a>Diferencias entre las plataformas
+Es posible poner los dispositivos que usan baterías en el modo de ahorro en caso de baja energía. A veces, los dispositivos cambian automáticamente a este modo, por ejemplo, cuando la batería cae por debajo del 20 % de su capacidad. El sistema operativo responde al modo de ahorro de energía reduciendo las actividades que tienden a agotar la batería. Para ayudar, las aplicaciones pueden evitar el procesamiento en segundo plano u otras actividades de alta potencia cuando el modo de ahorro de energía está activado.
+
+También puede conocer el estado de ahorro de energía actual del dispositivo con la propiedad estática `Battery.EnergySaverStatus`:
+
+```csharp
+// Get energy saver status
+var status = Battery.EnergySaverStatus;
+```
+
+Esta propiedad devuelve un miembro de la enumeración `EnergySaverStatus`, que es `On`, `Off` o `Unknown`. Si la propiedad devuelve `On`, la aplicación debe evitar el procesamiento en segundo plano o cualquier otra actividad que pueda tener un consumo energético grande.
+
+La aplicación también debe instalar un controlador de eventos. La clase **Battery** expone un evento que se desencadena cuando cambia el estado de ahorro de energía:
+
+```csharp
+public class EnergySaverTest
+{
+    public EnergySaverTest()
+    {
+        // Subscribe to changes of energy-saver status
+        Batter.EnergySaverStatusChanged += OnEnergySaverStatusChanged;
+    }
+
+    private void OnEnergySaverStatusChanged(EnergySaverStatusChangedEventArgs e)
+    {
+        // Process change
+        var status = e.EnergySaverStatus;
+    }
+}
+```
+
+Si el estado de ahorro de energía cambia a `On`, la aplicación debe detener el procesamiento en segundo plano. Si el estado cambia a `Unknown` o `Off`, la aplicación puede reanudar el procesamiento en segundo plano.
+
+
+## <a name="platform-differences"></a>Diferencias entre plataformas
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
@@ -141,7 +172,6 @@ No hay diferencias entre las plataformas.
 
 * Se debe usar el dispositivo para probar las API. 
 * Solo devolverá `AC` o `Battery` para `PowerSource`.
-* No se puede cancelar la vibración.
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 

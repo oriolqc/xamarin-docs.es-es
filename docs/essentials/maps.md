@@ -1,28 +1,26 @@
 ---
-title: 'Xamarin.Essentials: Maps'
-description: La clase Maps de Xamarin.Essentials permite que una aplicación abra la aplicación de mapas instalada en una ubicación o marca de posición específica.
+title: 'Xamarin.Essentials: Map'
+description: La clase Map de Xamarin.Essentials permite que una aplicación abra la aplicación de mapas instalada en una ubicación o marca de posición específica.
 ms.assetid: BABF40CC-8BEE-43FD-BE12-6301DF27DD33
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 07/25/2018
-ms.openlocfilehash: fb4cbc2fd334d574abc57a3359fa346bc6795408
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.date: 11/04/2018
+ms.openlocfilehash: 9797244a9f89d0658b65b132eaf541ed763be97b
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50674787"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898971"
 ---
-# <a name="xamarinessentials-maps"></a>Xamarin.Essentials: Maps
+# <a name="xamarinessentials-map"></a>Xamarin.Essentials: Map
 
-![Versión preliminar de NuGet](~/media/shared/pre-release.png)
-
-La clase **Maps** permite que una aplicación abra la aplicación de mapas instalada en una ubicación o marca de posición específica.
+La clase **Map** permite que una aplicación abra la aplicación de mapas instalada en una ubicación o marca de posición específica.
 
 ## <a name="get-started"></a>Primeros pasos
 
 [!include[](~/essentials/includes/get-started.md)]
 
-## <a name="using-maps"></a>Uso de Maps
+## <a name="using-map"></a>Uso de Map
 
 Agregue una referencia a Xamarin.Essentials en su clase:
 
@@ -30,17 +28,17 @@ Agregue una referencia a Xamarin.Essentials en su clase:
 using Xamarin.Essentials;
 ```
 
-La funcionalidad Maps funciona mediante una llamada al método `OpenAsync` con `Location` o `Placemark` abierto con `MapsLaunchOptions` opcional.
+Map funciona mediante una llamada al método `OpenAsync` con `Location` o `Placemark` abierto con `MapLaunchOptions` opcional.
 
 ```csharp
-public class MapsTest
+public class MapTest
 {
     public async Task NavigateToBuilding25()
     {
         var location = new Location(47.645160, -122.1306032);
-        var options =  new MapsLaunchOptions { Name = "Microsoft Building 25" };
+        var options =  new MapLaunchOptions { Name = "Microsoft Building 25" };
 
-        await Maps.OpenAsync(location, options);
+        await Map.OpenAsync(location, options);
     }
 }
 ```
@@ -53,7 +51,7 @@ Cuando se abre con `Placemark`, se requiere la siguiente información:
 - `Locality`
 
 ```csharp
-public class MapsTest
+public class MapTest
 {
     public async Task NavigateToBuilding25()
     {
@@ -64,57 +62,57 @@ public class MapsTest
                 Thoroughfare = "Microsoft Building 25",
                 Locality = "Redmond"
             };
-        var options =  new MapsLaunchOptions { Name = "Microsoft Building 25" };
+        var options =  new MapLaunchOptions { Name = "Microsoft Building 25" };
 
-        await Maps.OpenAsync(placemark, options);
+        await Map.OpenAsync(placemark, options);
     }
 }
 ```
 
 ## <a name="extension-methods"></a>Métodos de extensión.
 
-Si ya tiene una referencia a `Location` o a `Placemark`, puede usar el método de extensión integrado `OpenMapsAsync` con `MapsLaunchOptions` opcional:
+Si ya tiene una referencia a `Location` o a `Placemark`, puede usar el método de extensión integrado `OpenMapAsync` con `MapLaunchOptions` opcional:
 
 ```csharp
-public class MapsTest
+public class MapTest
 {
-    public async Task OpenPlacemarkOnMaps(Placemark placemark)
+    public async Task OpenPlacemarkOnMap(Placemark placemark)
     {
-        await placemark.OpenMapsAsync();
+        await placemark.OpenMapAsync();
     }
 }
 ```
 
 ## <a name="directions-mode"></a>Modo de instrucciones
 
-Si llama a `OpenMapsAsync` sin `MapsLaunchOptions`, el mapa se iniciará en la ubicación especificada. Si quiere, puede hacer que se calcule una ruta de navegación desde la posición actual del dispositivo. Para ello, establezca `MapDirectionsMode` en `MapsLaunchOptions`:
+Si llama a `OpenMapAsync` sin `MapLaunchOptions`, el mapa se iniciará en la ubicación especificada. Si quiere, puede hacer que se calcule una ruta de navegación desde la posición actual del dispositivo. Para ello, establezca `NavigationMode` en `MapLaunchOptions`:
 
 ```csharp
-public class MapsTest
+public class MapTest
 {
     public async Task NavigateToBuilding25()
     {
         var location = new Location(47.645160, -122.1306032);
-        var options =  new MapsLaunchOptions { MapDirectionsMode = MapDirectionsMode.Driving };
+        var options =  new MapLaunchOptions { NavigationMode = NavigationMode.Driving };
 
-        await Maps.OpenAsync(location, options);
+        await Map.OpenAsync(location, options);
     }
 }
 ```
 
-## <a name="platform-differences"></a>Diferencias entre las plataformas
+## <a name="platform-differences"></a>Diferencias entre plataformas
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-- `MapDirectionsMode` admite Bicycling (Bicicleta), Driving (Automóvil) y Walking (A pie).
+- `NavigationMode` admite Bicycling (Bicicleta), Driving (Automóvil) y Walking (A pie).
 
 # <a name="iostabios"></a>[iOS](#tab/ios)
 
-- `MapDirectionsMode` admite Driving (Automóvil), Transit (Transporte público) y Walking (A pie).
+- `NavigationMode` admite Driving (Automóvil), Transit (Transporte público) y Walking (A pie).
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-- `MapDirectionsMode` admite Driving (Automóvil), Transit (Transporte público) y Walking (A pie).
+- `NavigationMode` admite Driving (Automóvil), Transit (Transporte público) y Walking (A pie).
 
 --------------
 
@@ -136,5 +134,5 @@ Sin detalles de implementación específicos para la plataforma.
 
 ## <a name="api"></a>API
 
-- [Código fuente de Maps](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Maps)
-- [Documentación de API para Maps](xref:Xamarin.Essentials.Maps)
+- [Código fuente de Map](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Map)
+- [Documentación de API para Map](xref:Xamarin.Essentials.Map)
