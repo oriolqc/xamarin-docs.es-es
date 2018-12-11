@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 70d6b908beb0d04788365b104b5e4a2679b0ebe1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 100b98d12d45713b0d5f6dfb435f3aa879e7da9f
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113253"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899127"
 ---
 # <a name="ipa-support-in-xamarinios"></a>Compatibilidad con IPA en Xamarin.iOS
 
@@ -262,4 +262,5 @@ En este artículo se trata la configuración necesaria para preparar una aplicac
 - [Archivo iTunesMetadata.plist](~/ios/deploy-test/app-distribution/itunesmetadata.md)
 - [Solución de problemas](~/ios/deploy-test/troubleshooting.md)
 - [Ilustraciones de iTunes](~/ios/app-fundamentals/images-icons/app-icons.md#itunes)
-- [Distribución de aplicaciones empresariales para dispositivos iOS](http://developer.apple.com/library/ios/#featuredarticles/FA_Wireless_Enterprise_App_Distribution/Introduction/Introduction.html)
+- [Desarrollo y distribución de aplicaciones empresariales (Apple)](https://help.apple.com/xcode/mac/current/#/devba5e7054d)
+- [Distribución de aplicaciones empresariales (vídeo WWDC)](https://developer.apple.com/videos/play/wwdc2014/705/)

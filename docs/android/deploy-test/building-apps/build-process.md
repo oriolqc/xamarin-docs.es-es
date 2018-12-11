@@ -5,13 +5,13 @@ ms.assetid: 3BE5EE1E-3FF6-4E95-7C9F-7B443EE3E94C
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 03/14/2018
-ms.openlocfilehash: b63efb3f9bfa432f15415e652cd5d59f929c4488
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.date: 12/03/2018
+ms.openlocfilehash: ae005b487e13ab4d2d39b26b10c7ca08e263ef67
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617792"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899179"
 ---
 # <a name="build-process"></a>Proceso de compilación
 
@@ -76,7 +76,7 @@ Los siguientes destinos de compilación se definen para proyectos de Xamarin.And
 
 ## <a name="build-properties"></a>Propiedades de compilación
 
-Las propiedades de MSBuild controlan el comportamiento de los destinos. Se especifican en el archivo de proyecto, por ejemplo, **MyApp.csproj**, dentro de un [elemento MSBuild PropertyGroup](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild).
+Las propiedades de MSBuild controlan el comportamiento de los destinos. Se especifican en el archivo de proyecto, por ejemplo, **MyApp.csproj**, dentro de un [elemento MSBuild PropertyGroup](https://docs.microsoft.com/visualstudio/msbuild/propertygroup-element-msbuild). 
 
 -   **Configuration**: especifica la configuración de compilación que se usará, como "Debug" o "Release". La propiedad Configuration se usa para determinar los valores predeterminados de otras propiedades que determinan el comportamiento de destino. Se pueden crear configuraciones adicionales dentro del IDE.
 
@@ -94,7 +94,8 @@ Las propiedades de MSBuild controlan el comportamiento de los destinos. Se espec
 
     Si `DebugType` no está establecido o es la cadena vacía, la propiedad `DebugSymbols` controla si la aplicación es o no depurable.
 
-
+    - **AndroidGenerateLayoutBindings**: permite la generación de [diseño de código subyacente](https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/LayoutCodeBehind.md) si se establece en `true` o lo deshabilita por completo si se establece en `false`. El valor predeterminado es `false`.
+    
 ### <a name="install-properties"></a>Propiedades de instalación
 
 Las propiedades de instalación controlan el comportamiento de los destinos `Install` y `Uninstall`.
@@ -129,6 +130,16 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
     Después de Xamarin.Android 7.1, se agregó compatibilidad con esta propiedad.
 
     De forma predeterminada, esta propiedad es `False`.
+
+-   **AndroidD8JarPath**: ruta de acceso a `d8.jar` para su uso con el compilador de dex de d8. El valor predeterminado es una ruta de acceso en la instalación de Xamarin.Android. Para obtener más información, vea la documentación sobre [D8 y R8][d8-r8].
+
+-   **AndroidDexTool**: propiedad de estilo de la enumeración con los valores válidos de `dx` o `d8`. Indica el compilador de [dex][dex] que se usa durante el proceso de compilación de Xamarin.Android.
+    Actualmente tiene como valor predeterminado `dx`. Para obtener más información, vea la documentación sobre [D8 y R8][d8-r8].
+
+    [dex]: https://source.android.com/devices/tech/dalvik/dalvik-bytecode
+    [d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
+
+-   **AndroidEnableDesugar**: propiedad booleana que determina si `desugar` está habilitado. Android no admite actualmente todas las características de Java 8 y la cadena de herramientas predeterminada implementa las nuevas características de lenguaje ejecutando transformaciones de código de bytes, llamadas `desugar`, en la salida del compilador `javac`. El valor predeterminado es `False` si se usa `AndroidDexTool=dx` y `True` si se usa `AndroidDexTool=d8`.
 
 -   **AndroidEnableMultiDex**: una propiedad booleana que determina si se usará la compatibilidad con Multi-Dex en el archivo `.apk` final.
 
@@ -229,6 +240,14 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
     <AndroidLinkSkip>Assembly1;Assembly2</AndroidLinkSkip>
     ```
 
+-   **AndroidLinkTool**: propiedad de estilo de la enumeración con los valores válidos de `proguard` o `r8`. Indica el reductor de código que se usa con el código Java. Actualmente el valor predeterminado es una cadena vacía o `proguard` si `$(AndroidEnableProguard)` es `True`. Para obtener más información, vea la documentación sobre [D8 y R8][d8-r8].
+
+    [d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
+
+-   **LinkerDumpDependencies**: propiedad bool que permite la generación del archivo de dependencias del enlazador. Este archivo se puede usar como entrada para la herramienta [illinkanalyzer](https://github.com/mono/linker/tree/master/analyzer).
+
+    El valor predeterminado es False.
+
 -   **AndroidManagedSymbols**: una propiedad booleana que controla si se generan puntos de secuencia para que la información de nombre de archivo y número de línea se pueda extraer de los seguimientos de pila de `Release`.
 
     Agregado en Xamarin.Android 6.1.
@@ -236,6 +255,8 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 -   **AndroidManifest**: especifica un nombre de archivo para usar como plantilla para el archivo [`AndroidManifest.xml` de la aplicación ](~/android/platform/android-manifest.md).
     Durante la compilación, cualquier otro valor necesario se combina para producir el archivo `AndroidManifest.xml` real.
     `$(AndroidManifest)` debe contener el nombre de paquete en el atributo `/manifest/@package`.
+
+-   **AndroidD8JarPath**: ruta de acceso a `r8.jar` para su uso con el compilador y reductor de dex de d8. El valor predeterminado es una ruta de acceso en la instalación de Xamarin.Android. Para obtener más información, vea la documentación sobre [D8 y R8][d8-r8].
 
 -   **AndroidSdkBuildToolsVersion**: el paquete de compilación de herramientas de Android SDK proporciona, entre otras, las herramientas **aapt** y **zipalign**. Se pueden instalar varias versiones diferentes del paquete de herramientas de compilación al mismo tiempo. Para realizar el paquete de herramientas de compilación elegido para empaquetar, se comprueba y usa una versión de herramientas de compilación "preferida", si existe; *en caso contrario*, se usa el paquete de herramientas de compilación instalado con la versión más alta.
 
@@ -245,7 +266,6 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Los valores admitidos son:
 
-    -   `armeabi`
     -   `armeabi-v7a`
     -   `x86`
     -   `arm64-v8a`: requiere Xamarin.Android 5.1 y versiones posteriores.
@@ -265,7 +285,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Esta propiedad debe ser `True` para compilaciones de versión y `False` para compilaciones de depuración. *Puede* que deba ser `True` en las compilaciones de depuración si la implementación rápida no admite el dispositivo de destino.
 
-    Cuando esta propiedad es `False`, la propiedad de MSBuild `$(AndroidFastDeploymentType)` también controla lo que se insertará en el archivo `.apk`, lo que puede afectar a los tiempos de desarrollo y recompilación.
+    Cuando esta propiedad es `False`, la propiedad `$(AndroidFastDeploymentType)` de MSBuild controla también lo que se insertará en el archivo `.apk`, lo que puede afectar a los tiempos de implementación y recompilación.
 
 -   **EnableLLVM**: propiedad booleana que determina si se usará o no LLVM al realizar la compilación Ahead Of Time de los ensamblados en código nativo.
 
@@ -284,10 +304,11 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
     Si es `True`, los archivos de [ProguardConfiguration](#ProguardConfiguration) se usarán para controlar la ejecución de `proguard`.
 
 -   **JavaMaximumHeapSize**: especifica el valor del parámetro **java**
-    `-Xmx` que se usará al compilar el archivo `.dex` como parte del proceso de empaquetado. Si no se especifica, no se proporciona la opción `-Xmx` a **java**.
+    `-Xmx` que se usará al compilar el archivo `.dex` como parte del proceso de empaquetado. Si no se especifica, la opción `-Xmx` suministra **java** con un valor de `1G`. Se ha detectado que esto suele ser necesario en Windows en comparación con otras plataformas.
 
     Es necesario especificar esta propiedad si el destino [`_CompileDex` produce un error `java.lang.OutOfMemoryError`](https://bugzilla.xamarin.com/show_bug.cgi?id=18327).
 
+    Personalice el valor cambiando lo siguiente:
     ```xml
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     ```
@@ -335,7 +356,6 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
     Elementos de clave predefinidos
 
     -   **abi**: inserta la ABI de destino para la aplicación.
-        -   1 &ndash; `armeabi`
         -   2 &ndash; `armeabi-v7a`
         -   3 &ndash; `x86`
         -   4 &ndash; `arm64-v8a`
@@ -351,7 +371,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     Agregado en Xamarin.Android 7.2.
 
--   **AndroidVersionCodeProperties**: propiedad de cadena que permite al desarrollador definir elementos personalizados para usar con `AndroidVersionCodePattern`. Tienen el formato de un par `key=value`. Todos los elementos de `value` deben ser valores enteros. Por ejemplo: `screen=23;target=$(_SupportedApiLevel)`. Como puede ver, pueden hacer uso de propiedades de MSBuild existentes o personalizadas en la cadena.
+-   **AndroidVersionCodeProperties**: propiedad de cadena que permite al desarrollador definir elementos personalizados para usar con `AndroidVersionCodePattern`. Tienen el formato de un par `key=value`. Todos los elementos de `value` deben ser valores enteros. Por ejemplo: `screen=23;target=$(_AndroidApiLevel)`. Como puede ver, pueden hacer uso de propiedades de MSBuild existentes o personalizadas en la cadena.
 
     Agregado en Xamarin.Android 7.2.
 
@@ -370,6 +390,65 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 -  **AndroidApkSignerAdditionalArguments** &ndash; Una propiedad de cadena que permite al desarrollador proporcionar argumentos adicionales a la herramienta `apksigner`.
 
     Agregado en Xamarin.Android 8.2.
+
+-  **AndroidLintEnabled**: propiedad bool que permite al desarrollador ejecutar la herramienta `lint` de Android como parte del proceso de empaquetado.
+
+    -   **AndroidLintEnabledIssues**: lista separada por comas de problemas lint que se habilita.
+
+    -   **AndroidLintEnabledIssues**: lista separada por comas de problemas lint que se deshabilita.
+
+    -   **AndroidLintCheckIssues**: lista separada por comas de problemas lint que hay que comprobar. 
+       Nota: Solo se comprobarán estos problemas.
+
+    -   **AndroidLintConfig**: se trata de una acción de compilación para un archivo de configuración de tipo lint. Puede usarse para habilitar o deshabilitar la comprobación de problemas. Varios archivos pueden usar esta acción de compilación ya que su contenido se va a combinar.
+
+    Vea la [Ayuda de Lint](http://www.androiddocs.com/tools/help/lint.html) para obtener más información sobre las herramientas `lint` de Android.
+
+-  **AndroidGenerateJniMarshalMethods**: se trata de una propiedad bool que permite la generación de métodos de serialización JNI como parte del proceso de compilación. Reduce en gran medida el uso de System.Reflection en el código de aplicación auxiliar de enlace.
+
+   De forma predeterminada, se establecerá en False. Si los desarrolladores quieren usar la nueva característica de métodos de serialización JNI, pueden establecer
+
+    ```xml
+    <AndroidGenerateJniMarshalMethods>True</AndroidGenerateJniMarshalMethods>
+    ```
+
+    en su csproj. Especifique también la propiedad en la línea de comandos mediante
+
+    `/p:AndroidGenerateJniMarshalMethods=True`
+
+    **Experimental**. Se ha agregado en Xamarin.Android 9.2.
+    El valor predeterminado es False.
+
+- **AndroidGenerateJniMarshalMethodsAdditionalArguments**: propiedad de cadena que se puede usar para agregar parámetros adicionales a la invocación de `jnimarshalmethod-gen.exe`.  Resulta útil para la depuración, por lo que se pueden usar opciones tales como `-v`, `-d` o `--keeptemp`.
+
+   El valor predeterminado es una cadena vacía. Se puede establecer en el archivo csproj o en la línea de comandos. Por ejemplo:
+
+    ```xml
+    <AndroidGenerateJniMarshalMethodsAdditionalArguments>-v -d --keeptemp</AndroidGenerateJniMarshalMethodsAdditionalArguments>
+    ```
+
+   O bien
+
+    `/p:AndroidGenerateJniMarshalMethodsAdditionalArguments="-v -d --keeptemp"`
+
+    Se ha agregado en Xamarin.Android 9.2.
+
+- **AndroidMultiDexClassListExtraArgs**: propiedad de cadena que permite a los desarrolladores pasar argumentos adicionales a `com.android.multidex.MainDexListBuilder` al generar el archivo `multidex.keep`. 
+
+    Un caso específico es si se obtiene el siguiente error durante la compilación de `dx`.
+
+        com.android.dex.DexException: Too many classes in --main-dex-list, main dex capacity exceeded
+
+    Si recibe este error puede agregar lo siguiente al elemento .csproj.
+
+    ```xml
+    <DxExtraArguments>--force-jumbo </DxExtraArguments>
+    <AndroidMultiDexClassListExtraArgs>--disable-annotation-resolution-workaround</AndroidMultiDexClassListExtraArgs>
+    ```
+
+    Esto debe permitir que el paso `dx` se realice correctamente.
+
+    Se ha agregado en Xamarin.Android 8.3.
 
 ### <a name="binding-project-build-properties"></a>Propiedades de compilación de proyectos de enlace
 
@@ -408,9 +487,7 @@ Las siguientes propiedades de MSBuild se usan con [proyectos de enlace](~/androi
 
       - Almacenamiento en caché de `jmethodID` de los constructores de JCW (Java Callable Wrapper) para subclases administradas.
 
-    El valor predeterminado es `XamarinAndroid`.
-
-    El valor predeterminado cambiará en futuras versiones.
+    El valor predeterminado es `XAJavaInterop1`.
 
 
 ### <a name="resource-properties"></a>Propiedades del recurso
@@ -427,8 +504,31 @@ Las propiedades del recurso controlan la generación del archivo `Resource.desig
 
 -   **AndroidExplicitCrunch**: si va a compilar una aplicación con un gran número de recursos Drawable locales, una compilación inicial (o recompilación) puede tardar minutos en completarse. Para acelerar el proceso de compilación, intente incluir esta propiedad y establecerla en `True`. Cuando se establece esta propiedad, el proceso de compilación analiza previamente los archivos .png.
 
+    Nota: Esta opción no es compatible con la opción `$(AndroidUseAapt2)`. Si `$(AndroidUseAapt2)` está habilitada, se deshabilitará esta funcionalidad. Si quiere seguir usando esta característica, establezca `$(AndroidUseAapt2)` en `False`.
+
     **Experimental**. Agregado en Xamarin.Android 7.0.
 
+-  **AndroidUseAapt2**: propiedad bool que permite al desarrollador controlar el uso de la herramienta `aapt2` para el empaquetado.
+    De forma predeterminada, este valor se establecerá en False y usaremos `aapt`.
+    Si el desarrollador quiere usar la nueva funcionalidad de `aapt2` puede establecerlo
+        
+    ```xml
+    <AndroidUseAapt2>True</AndroidUseAapt2>
+    ```
+        
+    en su csproj. Especifique también la propiedad en la línea de comandos mediante
+
+    `/p:AndroidUseAapt2=True`
+
+    Se ha agregado en Xamarin.Android 8.3.
+
+-   **AndroidAapt2CompileExtraArgs**: especifica opciones adicionales de la línea de comandos que se pasan al comando **aapt2 compile** al procesar recursos de Android.
+
+    Se ha agregado en Xamarin.Android 9.1.
+
+-   **AndroidAapt2LinkExtraArgs**: especifica opciones adicionales de la línea de comandos que se pasan al comando **aapt2 link** al procesar recursos de Android.
+
+    Se ha agregado en Xamarin.Android 9.1.
 
 <a name="Signing_Properties" />
 
@@ -542,6 +642,18 @@ Quizás los usuarios más avanzados deseen que recursos diferentes se usen en di
 </ItemGroup>
 ```
 
+### <a name="androidboundlayout"></a>AndroidBoundLayout
+
+Indica que el archivo de diseño debe tener código subyacente generado en caso de que la propiedad `AndroidGenerateLayoutBindings` se establezca en `false`. En todos los demás aspectos es idéntica a `AndroidResource`, descrito anteriormente. Esta acción **solo** se puede usar con archivos de diseño:
+
+```xml
+<AndroidBoundLayout Include="Resources\layout\Main.axml" />
+```
+
+### <a name="androidfragmenttype"></a>AndroidFragmentType
+
+Especifica el tipo completo predeterminado que se usará para todos los elementos de diseño de `<fragment>` al generar el código de los enlaces de diseño. El valor predeterminado de la propiedad es el tipo estándar `Android.App.Fragment` de Android.
+
 
 ### <a name="androidnativelibrary"></a>AndroidNativeLibrary
 
@@ -552,7 +664,7 @@ Tenga en cuenta que puesto que Android admite varias interfaces binarias de apli
 1.  Examinando la ruta de acceso.
 2.  Mediante el atributo de elemento `Abi`.
 
-Con el examen de la ruta de acceso, el nombre del directorio principal de la biblioteca nativa se utiliza para especificar la ABI a la que se dirige la biblioteca. Por lo tanto, si agrega `lib/armeabi/libfoo.so` a la compilación, la ABI se examina como `armeabi`. 
+Con el examen de la ruta de acceso, el nombre del directorio principal de la biblioteca nativa se utiliza para especificar la ABI a la que se dirige la biblioteca. Por lo tanto, si agrega `lib/armeabi-v7a/libfoo.so` a la compilación, la ABI se examina como `armeabi-v7a`. 
 
 
 #### <a name="item-attribute-name"></a>Nombre del atributo de elemento
@@ -562,7 +674,7 @@ Con el examen de la ruta de acceso, el nombre del directorio principal de la bib
 ```xml
 <ItemGroup>
   <AndroidNativeLibrary Include="path/to/libfoo.so">
-    <Abi>armeabi</Abi>
+    <Abi>armeabi-v7a</Abi>
   </AndroidNativeLibrary>
 </ItemGroup>
 ```
@@ -572,7 +684,13 @@ Con el examen de la ruta de acceso, el nombre del directorio principal de la bib
 
 La acción de compilación de `AndroidAarLibrary` se debe utilizar para hacer referencia directamente a los archivos .aar. Esta acción de compilación la utilizan normalmente componentes de Xamarin. Es decir, para incluir referencias a archivos .aar que son necesarios para que funcionen Google Play y otros servicios.
 
-Los archivos con esta acción de compilación se tratarán de un modo bastante similar a los recursos incrustados en proyectos de biblioteca. El archivo .aar se extrae en el directorio intermedio. Después, los recursos y los archivos .jar se incluirán en los grupos de elementos pertinentes.  
+Los archivos con esta acción de compilación se tratarán de un modo bastante similar a los recursos incrustados en proyectos de biblioteca. El archivo .aar se extrae en el directorio intermedio. Después, los recursos y los archivos .jar se incluirán en los grupos de elementos pertinentes. 
+
+### <a name="androidlintconfig"></a>AndroidLintConfig
+
+La acción de compilación "AndroidLintConfig" se debe usar con la propiedad de compilación `AndroidLintEnabled`. Los archivos con esta acción de compilación se combinan y se pasan a las herramientas `lint` de Android. Deben ser archivos xml que contengan información sobre las pruebas que se habilitan o deshabilitan.
+
+Vea la [documentación de lint](http://www.androiddocs.com/tools/help/lint.html) para obtener más información.
 
 ### <a name="content"></a>Contenido
 

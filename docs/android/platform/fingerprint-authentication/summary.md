@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 3baaaef22916354a6fab28b0b0c6358c9bc25c91
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 535eabe07cb4f4d36e6a6f918b5717efcc99185d
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114917"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52898837"
 ---
 # <a name="fingerprint-authentication-guidance"></a>Orientación de la autenticación de huella digital
 
@@ -41,4 +41,4 @@ Si aún no lo ha hecho, debe mirar el [aplicación de ejemplo](https://github.co
 
 - [Aplicación de ejemplo de guía de huellas digitales](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide)
 - [Ejemplo de cuadro de diálogo de huellas digitales](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/)
-- [Icono de huella digital](https://developer.android.com https://developer.xamarin.com/samples/FingerprintDialog/res/drawable-hdpi/ic_fp_40px.html)
+- [Icono de huella digital](https://raw.githubusercontent.com/xamarin/monodroid-samples/master/FingerprintGuide/FingerprintSampleApp/Resources/drawable-hdpi/ic_fp_40px.png)
