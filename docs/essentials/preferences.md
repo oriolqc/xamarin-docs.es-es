@@ -4,17 +4,15 @@ description: En este documento se describe la clase Preferences de Xamarin.Essen
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 05/04/2018
-ms.openlocfilehash: d50fe3853ab87d5bc14ac15a442140218a1b0fe0
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.date: 11/04/2018
+ms.openlocfilehash: 0144cdd4e12d53e0ac82af24a932825491db9e41
+ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617558"
+ms.lasthandoff: 12/05/2018
+ms.locfileid: "52899089"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferencias
-
-![Versión preliminar de NuGet](~/media/shared/pre-release.png)
 
 La clase **Preferences** ayuda a almacenar las preferencias de la aplicación en un almacén de clave y valor.
 
