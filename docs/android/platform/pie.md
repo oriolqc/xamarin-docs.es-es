@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: cd1c374fa68420e1923ef4dee0bb37a4665f3535
-ms.sourcegitcommit: 215cad17324ba3fbc23487ce66cd4e1cc74eb879
+ms.openlocfilehash: 49e3a0189d0887343f2636d6931a00cc819800c0
+ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710028"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53267643"
 ---
 # <a name="android-pie-features"></a>Características de Android circular
 
@@ -24,7 +24,7 @@ _Cómo empezar a desarrollar aplicaciones para Android circular 9 con Xamarin.An
 
 En este artículo está estructurado para ayudarle a empezar a trabajar en el desarrollo de aplicaciones de Xamarin.Android para Android circular. Explica cómo instalar las actualizaciones necesarias, configure el SDK y preparar un emulador o dispositivo para las pruebas. También proporciona un resumen de las nuevas características de Android circular y proporciona código fuente de ejemplo que ilustra cómo usar algunas de las características clave de gráfico circular de Android.
 
-Xamarin.Android 9.0 proporciona compatibilidad con Android circular. Para obtener más información sobre la compatibilidad con Xamarin.Android circular Android, consulte el [Android P Developer Preview 3](https://developer.xamarin.com/releases/android/xamarin.android_9/xamarin.android_9.0/#android-p-dp1) notas de la versión.
+Xamarin.Android 9.0 proporciona compatibilidad con Android circular. Para obtener más información sobre la compatibilidad con Xamarin.Android circular Android, consulte el [Android P Developer Preview 3](https://docs.microsoft.com/xamarin/android/release-notes/9/9.0/#android-p-dp1) notas de la versión.
 
 ## <a name="requirements"></a>Requisitos
 
