@@ -1,6 +1,6 @@
 ---
-title: Agregar un reconocedor de movimiento panorámico
-description: Este artículo explica cómo utilizar un movimiento panorámico a horizontalmente y verticalmente movimiento panorámico hacia una imagen, por lo que todo el contenido de imagen pueden verse cuando se muestra en una ventanilla más pequeña que las dimensiones de imagen.
+title: Adición de un reconocedor de gesto de desplazamiento lateral
+description: En este artículo se explica cómo usar un gesto de desplazamiento lateral para desplazar una imagen de forma horizontal y vertical, a fin de poder ver todo el contenido de imagen cuando se muestre en una ventanilla más pequeña que las dimensiones de la imagen.
 ms.prod: xamarin
 ms.assetid: 42CBD2CF-432D-4F19-A05E-D569BB7F8713
 ms.technology: xamarin-forms
@@ -9,16 +9,16 @@ ms.author: dabritch
 ms.date: 01/21/2016
 ms.openlocfilehash: 59e9f4c61bda86faa5a55d70ef91411adb14da6d
 ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/18/2018
 ms.locfileid: "38996811"
 ---
-# <a name="adding-a-pan-gesture-recognizer"></a>Agregar un reconocedor de movimiento panorámico
+# <a name="adding-a-pan-gesture-recognizer"></a>Adición de un reconocedor de gesto de desplazamiento lateral
 
-_El movimiento panorámico se utiliza para detectar el movimiento de dedos alrededor de la pantalla y aplicar ese movimiento al contenido y se implementa con la `PanGestureRecognizer` clase. Un escenario común para el movimiento panorámico es una imagen, de movimiento panorámico horizontal y verticalmente para que todo el contenido de imagen pueden verse cuando se muestra en una ventanilla más pequeña que las dimensiones de imagen. Esto se logra al mover la imagen dentro de la ventanilla y se muestra en este artículo._
+_El gesto de desplazamiento lateral se usa para detectar el movimiento de los dedos alrededor de la pantalla y aplicar ese movimiento al contenido, y se implementa con la clase `PanGestureRecognizer`. Un escenario habitual para el gesto de desplazamiento lateral consiste en desplazar una imagen de forma horizontal y vertical, para poder ver todo el contenido de imagen cuando se muestre en una ventanilla más pequeña que las dimensiones de la imagen. Esto se logra moviendo la imagen dentro de la ventanilla, y se muestra en este artículo._
 
-Para que un elemento de interfaz de usuario móvil con el movimiento panorámico, cree un [ `PanGestureRecognizer` ](xref:Xamarin.Forms.PanGestureRecognizer) de la instancia, controlar el [ `PanUpdated` ](xref:Xamarin.Forms.PanGestureRecognizer.PanUpdated) eventos, y agregue el reconocedor de gestos de nuevo a la [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) colección en el elemento de interfaz de usuario. El siguiente ejemplo de código muestra un `PanGestureRecognizer` adjunta a un [ `Image` ](xref:Xamarin.Forms.Image) elemento:
+Para que un elemento de interfaz de usuario se pueda mover con el gesto de desplazamiento lateral, cree una instancia de [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer), controle el evento [`PanUpdated`](xref:Xamarin.Forms.PanGestureRecognizer.PanUpdated) y agregue el nuevo reconocedor de gestos a la colección [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) en el elemento de interfaz de usuario. En el ejemplo de código siguiente se muestra un elemento `PanGestureRecognizer` adjunto a un elemento [`Image`](xref:Xamarin.Forms.Image):
 
 ```csharp
 var panGesture = new PanGestureRecognizer();
@@ -28,7 +28,7 @@ panGesture.PanUpdated += (s, e) => {
 image.GestureRecognizers.Add(panGesture);
 ```
 
-También se puede lograr esto en XAML, como se muestra en el ejemplo de código siguiente:
+Esto también se puede lograr en XAML, como se muestra en el ejemplo de código siguiente:
 
 ```xaml
 <Image Source="MonoMonkey.jpg">
@@ -38,7 +38,7 @@ También se puede lograr esto en XAML, como se muestra en el ejemplo de código 
 </Image>
 ```
 
-El código para el `OnPanUpdated` , a continuación, se agrega el controlador de eventos para el archivo de código subyacente:
+Después, se agrega el código para el controlador de eventos `OnPanUpdated` al archivo de código subyacente:
 
 ```csharp
 void OnPanUpdated (object sender, PanUpdatedEventArgs e)
@@ -48,11 +48,11 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
 ```
 
 > [!NOTE]
-> Panorámica correcto en Android requiere la [paquete NuGet de Xamarin.Forms 2.1.0-pre1](https://www.nuget.org/packages/Xamarin.Forms/2.1.0.6501-pre1) como mínimo.
+> El desplazamiento lateral correcto en Android requiere el [paquete NuGet Xamarin.Forms 2.1.0-pre1](https://www.nuget.org/packages/Xamarin.Forms/2.1.0.6501-pre1) como mínimo.
 
-## <a name="creating-a-pan-container"></a>Creación de un contenedor de panorámica
+## <a name="creating-a-pan-container"></a>Creación de un contenedor de desplazamiento lateral
 
-Esta sección contiene una clase auxiliar generalizado que realiza la panorámica de forma libre, que normalmente es adecuada para navegar dentro de imágenes o mapas. Controlar el movimiento panorámico para llevar a cabo esta operación requiere un cálculo matemático para transformar la interfaz de usuario. Este matemáticas se usan para aplicar una panorámica solo dentro de los límites del elemento de interfaz de usuario ajustado. En el ejemplo de código siguiente se muestra la clase `PanContainer`:
+Esta sección contiene una clase auxiliar generalizada que realiza el desplazamiento lateral de forma libre, que normalmente es adecuado para navegar dentro de imágenes o mapas. El control del gesto de desplazamiento lateral para realizar esta operación requiere un cálculo matemático para transformar la interfaz de usuario. Este cálculo matemático se usa para el desplazamiento lateral solo dentro de los límites del elemento de interfaz de usuario ajustado. En el ejemplo de código siguiente se muestra la clase `PanContainer`:
 
 ```csharp
 public class PanContainer : ContentView
@@ -75,7 +75,7 @@ public class PanContainer : ContentView
 }
 ```
 
-Esta clase puede colocarse en torno a un elemento de interfaz de usuario para que el gesto desplazar el elemento de interfaz de usuario ajustado. El ejemplo de código XAML siguiente muestra la `PanContainer` ajuste una [ `Image` ](xref:Xamarin.Forms.Image) elemento:
+Esta clase se puede encapsular en un elemento de interfaz de usuario para que el gesto desplace el elemento de interfaz de usuario encapsulado. En el ejemplo de código XAML siguiente se muestra la encapsulación de `PanContainer` en un elemento [`Image`](xref:Xamarin.Forms.Image):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -92,7 +92,7 @@ Esta clase puede colocarse en torno a un elemento de interfaz de usuario para qu
 </ContentPage>
 ```
 
-El siguiente ejemplo de código muestra cómo el `PanContainer` ajusta un [ `Image` ](xref:Xamarin.Forms.Image) elemento en una página de C#:
+En el ejemplo de código siguiente se muestra cómo el elemento `PanContainer` encapsula un elemento [`Image`](xref:Xamarin.Forms.Image) en una página de C#:
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -115,9 +115,9 @@ public class HomePageCS : ContentPage
 }
 ```
 
-En ambos ejemplos, el [ `WidthRequest` ](xref:Xamarin.Forms.VisualElement.WidthRequest) y [ `HeightRequest` ](xref:Xamarin.Forms.VisualElement.HeightRequest) propiedades se establecen en los valores de anchura y altura de la imagen que se va a mostrar.
+En los dos ejemplos, las propiedades [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) y [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) se establecen en los valores de alto y ancho de la imagen que se va a mostrar.
 
-Cuando el [ `Image` ](xref:Xamarin.Forms.Image) elemento recibe un movimiento panorámico, la imagen mostrada se estar distribuida. El desplazamiento panorámico se realiza mediante el `PanContainer.OnPanUpdated` método, que se muestra en el ejemplo de código siguiente:
+Cuando el elemento [`Image`](xref:Xamarin.Forms.Image) recibe un gesto de desplazamiento lateral, se desplaza lateralmente la imagen mostrada. El desplazamiento lateral se realiza mediante el método `PanContainer.OnPanUpdated`, que se muestra en el ejemplo de código siguiente:
 
 ```csharp
 void OnPanUpdated (object sender, PanUpdatedEventArgs e)
@@ -140,12 +140,12 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
 }
 ```
 
-Este método actualiza el contenido visible del elemento de interfaz de usuario ajustado, según el gesto de panorámica del usuario. Esto se logra mediante el uso de los valores de la [ `TotalX` ](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalX) y [ `TotalY` ](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalY) propiedades de la [ `PanUpdatedEventArgs` ](xref:Xamarin.Forms.PanUpdatedEventArgs) instancia para calcular la dirección y distancia de la panorámica. El `App.ScreenWidth` y `App.ScreenHeight` propiedades proporcionan el alto y ancho de la ventanilla y se establecen en el ancho de pantalla y los valores del alto de pantalla del dispositivo de los proyectos específicos de la plataforma correspondiente. El elemento de usuario ajustado es distribuido, a continuación, estableciendo su [ `TranslationX` ](xref:Xamarin.Forms.VisualElement.TranslationX) y [ `TranslationY` ](xref:Xamarin.Forms.VisualElement.TranslationY) propiedades a los valores calculados.
+Este método actualiza el contenido visible del elemento de interfaz de usuario encapsulado, en función del gesto de desplazamiento lateral del usuario. Esto se logra mediante el uso de los valores de las propiedades [`TotalX`](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalX) y [`TotalY`](xref:Xamarin.Forms.PanUpdatedEventArgs.TotalY) de la instancia de [`PanUpdatedEventArgs`](xref:Xamarin.Forms.PanUpdatedEventArgs) para calcular la dirección y la distancia del desplazamiento lateral. Las propiedades `App.ScreenWidth` y `App.ScreenHeight` proporcionan el alto y ancho de la ventanilla, y se establecen en los valores de ancho y alto de la pantalla del dispositivo por los proyectos específicos de la plataforma correspondiente. Después, se realiza el desplazamiento lateral del elemento de usuario encapsulado, mediante el establecimiento de sus propiedades [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) y [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) en los valores calculados.
 
-Cuando el movimiento panorámico contenido en un elemento que no ocupe toda la pantalla, el alto y ancho del área de visualización se pueden obtener desde el elemento [ `Height` ](xref:Xamarin.Forms.VisualElement.Height) y [ `Width` ](xref:Xamarin.Forms.VisualElement.Width) propiedades.
+Al desplazar lateralmente el contenido de un elemento que no ocupa toda la pantalla, el alto y ancho de la ventanilla se pueden obtener de las propiedades [`Height`](xref:Xamarin.Forms.VisualElement.Height) y [`Width`](xref:Xamarin.Forms.VisualElement.Width) del elemento.
 
 > [!NOTE]
-> Mostrar imágenes de alta resolución puede aumentar considerablemente la superficie de memoria de una aplicación. Por lo tanto, se debe sólo crear cuando sea necesario y debe liberarse en cuanto la aplicación ya no los necesita. Para más información, vea [Optimizar los recursos de imagen](~/xamarin-forms/deploy-test/performance.md#optimizeimages).
+> Mostrar imágenes de alta resolución puede aumentar considerablemente la superficie de memoria de una aplicación. Por tanto, solo se deberían crear cuando sea necesario y deberían liberarse en cuanto la aplicación ya no las necesite. Para más información, vea [Optimizar los recursos de imagen](~/xamarin-forms/deploy-test/performance.md#optimizeimages).
 
 ## <a name="related-links"></a>Vínculos relacionados
 

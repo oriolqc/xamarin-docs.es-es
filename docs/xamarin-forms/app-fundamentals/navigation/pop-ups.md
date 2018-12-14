@@ -1,6 +1,6 @@
 ---
-title: Visualización de elementos emergentes
-description: 'Xamarin.Forms proporciona dos elementos de interfaz de usuario similar a registro emergente: una alerta y una hoja de acción. En este artículo muestra cómo utilizar la hoja de alerta y la acción de las API de pedir a los usuarios preguntas sencillas y guiar a los usuarios a través de tareas.'
+title: Mostrar elementos emergentes
+description: 'Xamarin.Forms proporciona dos elementos de la interfaz de usuario similares a elementos emergentes: una alerta y una hoja de acción. En este artículo, se muestra cómo usar las API de hoja de acción y alerta para realizar preguntas sencillas a los usuarios y guiarlos en la realización de tareas.'
 ms.prod: xamarin
 ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
@@ -9,20 +9,20 @@ ms.author: dabritch
 ms.date: 12/01/2017
 ms.openlocfilehash: 156c2f9dca47a7755d4f810d7921a05662388ded
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38996719"
 ---
-# <a name="displaying-pop-ups"></a>Visualización de elementos emergentes
+# <a name="displaying-pop-ups"></a>Mostrar elementos emergentes
 
-_Xamarin.Forms proporciona dos elementos de interfaz de usuario similar a registro emergente: una alerta y una hoja de acción. En este artículo muestra cómo utilizar la hoja de alerta y la acción de las API de pedir a los usuarios preguntas sencillas y guiar a los usuarios a través de tareas._
+_Xamarin.Forms proporciona dos elementos de la interfaz de usuario similares a elementos emergentes: una alerta y una hoja de acción. En este artículo, se muestra cómo usar las API de hoja de acción y alerta para realizar preguntas sencillas a los usuarios y guiarlos en la realización de tareas._
 
-Mostrar una alerta o pedirle que tomar una decisión es una tarea común de interfaz de usuario. Xamarin.Forms tiene dos métodos el [ `Page` ](xref:Xamarin.Forms.Page) clase para interactuar con el usuario a través de una ventana emergente: [ `DisplayAlert` ](xref:Xamarin.Forms.Page.DisplayAlert*) y [ `DisplayActionSheet` ](xref:Xamarin.Forms.Page.DisplayActionSheet*). Se representan con los controles nativos adecuados en cada plataforma.
+Mostrar una alerta o pedir al usuario que seleccione una opción es una tarea común de la interfaz de usuario. Xamarin.Forms tiene dos métodos en la clase [`Page`](xref:Xamarin.Forms.Page) para interactuar con el usuario mediante un elemento emergente: [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) y [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*). Se representan con controles nativos adecuados en cada plataforma.
 
 ## <a name="displaying-an-alert"></a>Mostrar una alerta
 
-Todas las plataformas compatibles con Xamarin.Forms tienen una ventana emergente modal para avisar al usuario o formular preguntas sencillas de ellos. Para mostrar estas alertas en Xamarin.Forms, use el [ `DisplayAlert` ](xref:Xamarin.Forms.Page.DisplayAlert*) método en cualquier [ `Page` ](xref:Xamarin.Forms.Page). La siguiente línea de código muestra un mensaje simple para el usuario:
+Todas las plataformas compatibles con Xamarin.Forms tienen una ventana emergente modal para mostrar alertas al usuario o realizar preguntas sencillas. Para mostrar estas alertas en Xamarin.Forms, use el método [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) en cualquier elemento [`Page`](xref:Xamarin.Forms.Page). En la siguiente línea de código, se muestra un mensaje sencillo al usuario:
 
 ```csharp
 DisplayAlert ("Alert", "You have been alerted", "OK");
@@ -30,9 +30,9 @@ DisplayAlert ("Alert", "You have been alerted", "OK");
 
 ![](pop-ups-images/alert.png "Cuadro de diálogo de alerta con un botón")
 
-En este ejemplo no recopila información del usuario. La alerta se muestra modalmente y una vez descartado el usuario continúa interactuando con la aplicación.
+En este ejemplo, no se recopila información del usuario. La alerta se muestra modalmente y, después de cerrarla, el usuario sigue interactuando con la aplicación.
 
-El [ `DisplayAlert` ](xref:Xamarin.Forms.Page.DisplayAlert*) método también se puede utilizar para capturar la respuesta de un usuario presenta dos botones y devolviendo un `boolean`. Para obtener una respuesta de una alerta, escriba un texto de ambos botones y `await` el método. Después de que el usuario selecciona una de las opciones que se devolverá la respuesta a su código. Tenga en cuenta la `async` y `await` palabras clave en el código de ejemplo siguiente:
+El método [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) también se puede usar para capturar la respuesta de un usuario mediante la presentación de dos botones y la devolución de un elemento `boolean`. Para obtener una respuesta de una alerta, agregue texto para los dos botones y use `await` para esperar el método. Cuando el usuario seleccione una de las opciones, se devolverá la respuesta al código. Observe las palabras clave `async` y `await` en el código de ejemplo siguiente:
 
 ```csharp
 async void OnAlertYesNoClicked (object sender, EventArgs e)
@@ -42,13 +42,13 @@ async void OnAlertYesNoClicked (object sender, EventArgs e)
 }
 ```
 
-[![DisplayAlert](pop-ups-images/alert2-sml.png "cuadro de diálogo con dos botones de alerta")](pop-ups-images/alert2.png#lightbox "cuadro de diálogo con dos botones de alertas")
+[![DisplayAlert](pop-ups-images/alert2-sml.png "Cuadro de diálogo de alerta con dos botones")](pop-ups-images/alert2.png#lightbox "Alert Dialog with Two Buttons")
 
-## <a name="guiding-users-through-tasks"></a>Fundamentales a los usuarios a través de tareas
+## <a name="guiding-users-through-tasks"></a>Guiar a los usuarios en la realización de tareas
 
-El [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) es un elemento de interfaz de usuario comunes en iOS. Xamarin.Forms [ `DisplayActionSheet` ](xref:Xamarin.Forms.Page.DisplayActionSheet*) método le permite incluir este control en las aplicaciones entre plataformas, representación nativas alternativas en Android y UWP.
+El elemento [UIActionSheet](https://developer.apple.com/library/ios/documentation/uikit/reference/uiactionsheet_class/Reference/Reference.html) es un elemento de interfaz de usuario común en iOS. El método [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) de Xamarin.Forms le permite incluir este control en aplicaciones multiplataforma, lo que representa alternativas nativas en Android y UWP.
 
-Para mostrar una hoja de acción, `await` [ `DisplayActionSheet` ](xref:Xamarin.Forms.Page.DisplayActionSheet*) en cualquier [ `Page` ](xref:Xamarin.Forms.Page), pasando el mensaje y botón etiquetas como cadenas. El método devuelve la etiqueta de cadena del botón que se hizo clic el usuario. Aquí se muestra un ejemplo sencillo:
+Para mostrar una hoja de acción, use `await` [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) en cualquier elemento [`Page`](xref:Xamarin.Forms.Page) y pase el mensaje y las etiquetas de botón como cadenas. Este método devuelve la etiqueta de cadena del botón en el que hizo clic el usuario. A continuación, se muestra un ejemplo sencillo:
 
 ```csharp
 async void OnActionSheetSimpleClicked (object sender, EventArgs e)
@@ -58,9 +58,9 @@ async void OnActionSheetSimpleClicked (object sender, EventArgs e)
 }
 ```
 
-![](pop-ups-images/action.png "Cuadro de diálogo como ActionSheet")
+![](pop-ups-images/action.png "Cuadro de diálogo de ActionSheet")
 
-El `destroy` botón se representa de forma diferente a los demás y puede dejarse `null` o se ha especificado como el tercer parámetro de cadena. En el ejemplo siguiente se usa el `destroy` botón:
+El botón `destroy` se representa de forma distinta y puede dejarse como `null`, o bien se puede especificar como el tercer parámetro de cadena. En el ejemplo siguiente, se usa el botón `destroy`:
 
 ```csharp
 async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
@@ -70,11 +70,11 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 }
 ```
 
-[![DisplayActionSheet](pop-ups-images/action2-sml.png "cuadro de diálogo de hoja de acción con el botón de destruir")](pop-ups-images/action2.png#lightbox "cuadro de diálogo de hoja de acción con el botón de destrucción")
+[![DisplayActionSheet](pop-ups-images/action2-sml.png "Cuadro de diálogo de hoja de acción con el botón Destruir")](pop-ups-images/action2.png#lightbox "Action Sheet Dialog with Destroy Button")
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se muestra mediante la hoja de alerta y la acción de las API de pedir a los usuarios preguntas sencillas y guiar a los usuarios a través de tareas. Xamarin.Forms tiene dos métodos el [ `Page` ](xref:Xamarin.Forms.Page) clase para interactuar con el usuario a través de una ventana emergente: [ `DisplayAlert` ](xref:Xamarin.Forms.Page.DisplayAlert*) y [ `DisplayActionSheet` ](xref:Xamarin.Forms.Page.DisplayActionSheet*), y son ambos se representan con los controles nativos adecuados en cada plataforma.
+En este artículo, se muestra cómo usar las API de hoja de acción y alerta para realizar preguntas sencillas a los usuarios y guiarlos en la realización de tareas. Xamarin.Forms tiene dos métodos en la clase [`Page`](xref:Xamarin.Forms.Page) para interactuar con el usuario mediante una ventana emergente ([`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*) y [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*)) y ambos se representan con controles nativos correspondientes en cada plataforma.
 
 
 

@@ -1,6 +1,6 @@
 ---
-title: Reproducir un vídeo de Web
-description: En este artículo se explica cómo reproducir vídeos web en una aplicación de Reproductor de vídeo mediante Xamarin.Forms.
+title: Reproducción de un vídeo web
+description: En este artículo se explica cómo reproducir vídeos web en una aplicación de reproductor de vídeo, mediante Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 75781A10-865D-4BA8-8D6B-E3DA012922BC
 ms.technology: xamarin-forms
@@ -9,14 +9,14 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 7f40d0d11fc932121b4ff7789969bbb1e354024c
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52172215"
 ---
-# <a name="playing-a-web-video"></a>Reproducir un vídeo de Web
+# <a name="playing-a-web-video"></a>Reproducción de un vídeo web
 
-El `VideoPlayer` clase define un `Source` propiedad que se utiliza para especificar el origen del archivo de vídeo, así como un `AutoPlay` propiedad. `AutoPlay` tiene un valor predeterminado de `true`, lo que significa que el vídeo debería comenzar a reproducirse automáticamente una vez `Source` se ha establecido:
+La clase `VideoPlayer` define una propiedad `Source` que se usa para especificar el origen del archivo de vídeo, así como una propiedad `AutoPlay`. El valor predeterminado de `AutoPlay` es `true`, lo que significa que el vídeo se debería comenzar a reproducir de forma automática después de establecer `Source`:
 
 ```csharp
 using System;
@@ -52,11 +52,11 @@ namespace FormsVideoLibrary
 }
 ```
 
-El `Source` propiedad es de tipo `VideoSource`, que está basado en Xamarin.Forms [ `ImageSource` ](xref:Xamarin.Forms.ImageSource) abstracta de la clase y sus tres derivados [ `UriImageSource` ](xref:Xamarin.Forms.UriImageSource), [ `FileImageSource` ](xref:Xamarin.Forms.FileImageSource), y [ `StreamImageSource` ](xref:Xamarin.Forms.StreamImageSource). No hay ninguna opción de la secuencia está disponible para el `VideoPlayer` sin embargo, porque iOS y Android no admiten reproducir un vídeo desde una secuencia.
+La propiedad `Source` es de tipo `VideoSource`, que se modela a partir de la clase abstracta [`ImageSource`](xref:Xamarin.Forms.ImageSource) de Xamarin.Forms y sus tres derivadas [`UriImageSource`](xref:Xamarin.Forms.UriImageSource), [`FileImageSource`](xref:Xamarin.Forms.FileImageSource) y [`StreamImageSource`](xref:Xamarin.Forms.StreamImageSource). Pero no hay ninguna opción de hacer streaming disponible para `VideoPlayer`, porque iOS y Android no admiten la reproducción de un vídeo desde una secuencia.
 
 ## <a name="video-sources"></a>Orígenes de vídeo
 
-El resumen `VideoSource` clase consta únicamente de los tres métodos estáticos que crean instancias de las tres clases que derivan de `VideoSource`:
+La clase abstracta `VideoSource` consta únicamente de tres métodos estáticos que crean las instancias de las tres clases que se derivan de `VideoSource`:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -82,7 +82,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-La `UriVideoSource` clase se utiliza para especificar un archivo de vídeo descargable con un URI. Define una propiedad única de tipo `string`:
+La clase `UriVideoSource` se usa para especificar un archivo de vídeo descargable con un URI. Define una única propiedad de tipo `string`:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -101,9 +101,9 @@ namespace FormsVideoLibrary
 }
 ```
 
-Los objetos de tipo de control `UriVideoSource` se describe a continuación.
+El control de los objetos de tipo `UriVideoSource` se describe a continuación.
 
-El `ResourceVideoSource` clase se utiliza para tener acceso a archivos de vídeo que se almacenan como recursos incrustados en la aplicación de plataforma, también se especifica con un `string` propiedad:
+La clase `ResourceVideoSource` se usa para acceder a los archivos de vídeo que se almacenan como recursos insertados en la aplicación de plataforma, que también se especifica con una propiedad `string`:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -122,9 +122,9 @@ namespace FormsVideoLibrary
 }
 ```
 
-Los objetos de tipo de control `ResourceVideoSource` se describe en el artículo [cargar vídeos de recursos de aplicación](loading-resources.md). La `VideoPlayer` clase no tiene ninguna facilidad para cargar un archivo de vídeo almacenado como un recurso en la biblioteca estándar. NET.
+El control de los objetos de tipo `ResourceVideoSource` se describe en el artículo [Carga de vídeos de recursos de aplicación](loading-resources.md). La clase `VideoPlayer` no tiene ninguna función para cargar un archivo de vídeo almacenado como un recurso en la biblioteca de .NET Standard.
 
-La `FileVideoSource` clase se utiliza para tener acceso a archivos de vídeo desde la biblioteca de vídeos del dispositivo. También es la única propiedad de tipo `string`:
+La clase `FileVideoSource` se usa para acceder a los archivos de vídeo desde la biblioteca de vídeos del dispositivo. La única propiedad también es de tipo `string`:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -143,9 +143,9 @@ namespace FormsVideoLibrary
 }
 ```
 
-Los objetos de tipo de control `FileVideoSource` se describe en el artículo [acceso a la biblioteca de vídeos del dispositivo](accessing-library.md).
+El control de los objetos de tipo `FileVideoSource` se describe en el artículo [Acceso a la biblioteca de vídeos del dispositivo](accessing-library.md).
 
-El `VideoSource` clase incluye un `TypeConverter` atributo que hace referencia a `VideoSourceConverter`:
+La clase `VideoSource` incluye un atributo `TypeConverter` que hace referencia a `VideoSourceConverter`:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -158,7 +158,7 @@ namespace FormsVideoLibrary
 }
 ```
 
-Se invoca este convertidor de tipos cuando el `Source` propiedad se establece en una cadena en XAML. Este es el `VideoSourceConverter` clase:
+Este convertidor de tipos se invoca cuando la propiedad `Source` se establece en una cadena en XAML. Esta es la clase `VideoSourceConverter`:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -180,15 +180,15 @@ namespace FormsVideoLibrary
 }
 ```
 
-El `ConvertFromInvariantString` método intenta convertir la cadena en un `Uri` objeto. Si lo consigue, y el esquema no es `file:`, el método devuelve un `UriVideoSource`. De lo contrario, devuelve un `ResourceVideoSource`.
+El método `ConvertFromInvariantString` intenta convertir la cadena en un objeto `Uri`. Si lo consigue, y el esquema no es `file:`, el método devuelve un elemento `UriVideoSource`. De lo contrario, devuelve un elemento `ResourceVideoSource`.
 
-## <a name="setting-the-video-source"></a>Establecer el origen de vídeo
+## <a name="setting-the-video-source"></a>Establecimiento del origen de vídeo
 
-Toda la otra lógica que implican los orígenes de vídeo se implementa en los representadores de plataforma individuales. Las secciones siguientes muestran cómo los representadores de plataforma reproducirán vídeos cuando la `Source` propiedad está establecida en un `UriVideoSource` objeto.
+El resto de la lógica que implica orígenes de vídeo se implementa en los representadores de cada plataforma. En las secciones siguientes se muestra cómo los representadores de plataforma reproducen vídeos cuando la propiedad `Source` se establece en un objeto `UriVideoSource`.
 
-### <a name="the-ios-video-source"></a>El origen de vídeo de iOS
+### <a name="the-ios-video-source"></a>Origen de vídeo de iOS
 
-Dos secciones de la `VideoPlayerRenderer` están implicados en la configuración del origen de vídeo del Reproductor de vídeo. Cuando Xamarin.Forms crea primero un objeto de tipo `VideoPlayer`, `OnElementChanged` se llama al método con el `NewElement` propiedad del objeto de argumentos que se establece en el que `VideoPlayer`. El `OnElementChanged` llamadas al método `SetSource`:
+Dos secciones de `VideoPlayerRenderer` están implicadas en la configuración del origen de vídeo del reproductor de vídeo. Cuando Xamarin.Forms crea por primera vez un objeto de tipo `VideoPlayer`, se llama al método `OnElementChanged` con la propiedad `NewElement` del objeto de argumentos establecida en ese objeto `VideoPlayer`. El método `OnElementChanged` llama a `SetSource`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -221,9 +221,9 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-Más adelante en, cuando el `Source` se cambia la propiedad, el `OnElementPropertyChanged` se llama al método con un `PropertyName` propiedad de "Origen", y `SetSource` se llama de nuevo.
+Más adelante, cuando se cambia la propiedad `Source`, se llama al método `OnElementPropertyChanged` con una propiedad `PropertyName` de "Source" (Origen), y se vuelve a llamar a `SetSource`.
 
-Para reproducir un archivo de vídeo en iOS, un objeto de tipo [ `AVAsset` ](https://developer.xamarin.com/api/type/AVFoundation.AVAsset/) se crea por primera vez para encapsular el archivo de vídeo, y que se usa para crear un [ `AVPlayerItem` ](https://developer.xamarin.com/api/type/AVFoundation.AVPlayerItem/), que, a continuación, se pasa a la `AVPlayer`objeto. Este es el modo `SetSource` método controla el `Source` cuando es de tipo de propiedad `UriVideoSource`:
+Para reproducir un archivo de vídeo en iOS, primero se crea un objeto de tipo [`AVAsset`](https://developer.xamarin.com/api/type/AVFoundation.AVAsset/) para encapsular el archivo de vídeo, que se usa para crear un elemento [`AVPlayerItem`](https://developer.xamarin.com/api/type/AVFoundation.AVPlayerItem/), que después se pasa al objeto `AVPlayer`. Esta es la forma en la que el método `SetSource` controla la propiedad `Source` cuando es de tipo `UriVideoSource`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -268,9 +268,9 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-El `AutoPlay` propiedad no tiene ningún analógico en las clases de vídeo de iOS, por lo que se examina la propiedad al final de la `SetSource` método para llamar a la `Play` método en el `AVPlayer` objeto.
+La propiedad `AutoPlay` no cuenta con ninguna análoga en las clases de vídeo de iOS, por lo que se examina al final del método `SetSource` para llamar al método `Play` en el objeto `AVPlayer`.
 
-En algunos casos, vídeos continuación reproduciendo después de la página con el `VideoPlayer` vuelve a navegar a la página principal. Para detener el vídeo, el `ReplaceCurrentItemWithPlayerItem` también se establece el `Dispose` invalidar:
+En algunos casos, los vídeos se siguen reproduciendo después de que la página con el elemento `VideoPlayer` haya vuelto a la página principal. Para detener el vídeo, `ReplaceCurrentItemWithPlayerItem` también se establece en la invalidación de `Dispose`:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -292,9 +292,9 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-### <a name="the-android-video-source"></a>El origen de vídeo de Android
+### <a name="the-android-video-source"></a>Origen de vídeo de Android
 
-Android `VideoPlayerRenderer` debe establecer el origen del Reproductor de vídeo cuando la `VideoPlayer` se primero crea y posterior cuando la `Source` los cambios de propiedad:
+El objeto `VideoPlayerRenderer` de Android debe establecer el origen del reproductor de vídeo al crear `VideoPlayer` por primera vez y posteriormente cuando cambia la propiedad `Source`:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -327,7 +327,7 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-El `SetSource` método controla los objetos de tipo `UriVideoSource` mediante una llamada a `SetVideoUri` en el `VideoView` con Android `Uri` objeto creado a partir de la cadena de URI. El `Uri` clase debe calificarse por completo aquí para distinguirlo de .NET `Uri` clase:
+El método `SetSource` controla los objetos de tipo `UriVideoSource` mediante una llamada a `SetVideoUri` en `VideoView` con un objeto `Uri` de Android creado a partir de la cadena de URI. Aquí la clase `Uri` es completa para distinguirla de la clase `Uri` de .NET:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -362,15 +362,15 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-Android `VideoView` no tiene la correspondiente `AutoPlay` propiedad, por lo que el `Start` se llama al método si se ha establecido un nuevo vídeo.
+El objeto `VideoView` de Android no tiene una propiedad `AutoPlay` correspondiente, por lo que se llama al método `Start` si se ha establecido un vídeo nuevo.
 
-Hay una diferencia entre el comportamiento de iOS y Android representadores si el `Source` propiedad de `VideoPlayer` está establecido en `null`, o si el `Uri` propiedad de `UriVideoSource` está establecido en `null` o una cadena vacía. Si el Reproductor de vídeo de iOS se está reproduciendo un vídeo, y `Source` está establecido en `null` (o la cadena es `null` o en blanco), `ReplaceCurrentItemWithPlayerItem` se llama con `null` valor. El vídeo actual se reemplaza y detiene la reproducción.
+Hay una diferencia entre el comportamiento de los representadores de iOS y Android si la propiedad `Source` de `VideoPlayer` se establece en `null`, o bien si la propiedad `Uri` de `UriVideoSource` se establece en `null` o en una cadena vacía. Si en el reproductor de vídeo de iOS se está reproduciendo un vídeo, y `Source` está establecido en `null` (o la cadena es `null` o está en blanco), se llama a `ReplaceCurrentItemWithPlayerItem` con el valor `null`. Se reemplaza el vídeo actual y se detiene la reproducción.
 
-Android no admite una utilidad similar. Si el `Source` propiedad está establecida en `null`, el `SetSource` método simplemente lo ignora y el vídeo actual sigue reproduciéndose.
+Android no admite una función similar. Si la propiedad `Source` se establece en `null`, el método `SetSource` simplemente la ignora y se sigue reproduciendo el vídeo actual.
 
-### <a name="the-uwp-video-source"></a>El origen de vídeo de UWP
+### <a name="the-uwp-video-source"></a>Origen de vídeo de UWP
 
-UWP `MediaElement` define un `AutoPlay` propiedad, que se controla en el representador como cualquier otra propiedad:
+El objeto `MediaElement` de UWP define una propiedad `AutoPlay`, que se controla en el representador como cualquier otra propiedad:
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -407,7 +407,7 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-El `SetSource` identificadores de propiedad un `UriVideoSource` objeto estableciendo la `Source` propiedad de `MediaElement` para .NET `Uri` valor, o a `null` si el `Source` propiedad de `VideoPlayer` está establecido en `null`:
+La propiedad `SetSource` controla un objeto `UriVideoSource` mediante el establecimiento de la propiedad `Source` de `MediaElement` en un valor `Uri` de .NET, o bien en `null` si la propiedad `Source` de `VideoPlayer` se establece en `null`:
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -445,9 +445,9 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-## <a name="setting-a-url-source"></a>Establecer un origen de la dirección URL
+## <a name="setting-a-url-source"></a>Establecimiento de un origen de dirección URL
 
-Con la implementación de estas propiedades en los representadores de tres, es posible reproducir un vídeo desde un origen de la dirección URL. El **reproducir vídeo Web** página en el [ **VideoPlayDemos** ]( https://developer.xamarin.com/samples/xamarin-forms/customrenderers/videoplayerdemos/index.md) programa está definido por el siguiente archivo XAML:
+Con la implementación de estas propiedades en los tres representadores, es posible reproducir un vídeo desde un origen de dirección URL. La página **Play Web Video** (Reproducir vídeo web) del programa [**VideoPlayDemos**]( https://developer.xamarin.com/samples/xamarin-forms/customrenderers/videoplayerdemos/index.md) se define con el siguiente archivo XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -461,31 +461,31 @@ Con la implementación de estas propiedades en los representadores de tres, es p
 </ContentPage>
 ```
 
-El `VideoSourceConverter` clase convierte la cadena en un `UriVideoSource`. Cuando se desplaza a la **reproducir el vídeo de Web** página, el vídeo empieza a cargar y empieza a reproducir cuando se ha descargado y almacenado en búfer una cantidad suficiente de datos. El vídeo es aproximadamente 10 minutos de longitud:
+La clase `VideoSourceConverter` convierte la cadena en un elemento `UriVideoSource`. Cuando se desplaza a la página **Play Web Video**, se empieza a cargar el vídeo y se inicia la reproducción cuando se ha descargado y almacenado en búfer una cantidad de datos suficiente. El vídeo tiene aproximadamente 10 minutos de duración:
 
-[![Reproducir vídeo Web](web-videos-images/playwebvideo-small.png "reproducir vídeo Web")](web-videos-images/playwebvideo-large.png#lightbox "reproducir vídeo Web")
+[![Reproducir vídeo web](web-videos-images/playwebvideo-small.png "Play Web Video")](web-videos-images/playwebvideo-large.png#lightbox "Play Web Video")
 
-En cada una de las plataformas, los controles de transporte fundido de salida si no se usan pero que pueden restaurarse para ver, puntee en el vídeo.
+En cada una de las plataformas, los controles de transporte se atenúan si no se usan, pero puede pulsar en el vídeo para restaurarlos y verlos.
 
-Puede impedir que el vídeo se inicie automáticamente al establecer el `AutoPlay` propiedad `false`:
+Para impedir que el vídeo se inicie de forma automática, establezca la propiedad `AutoPlay` en `false`:
 
 ```xaml
 <video:VideoPlayer Source="https://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4"
                    AutoPlay="false" />
 ```
 
-Deberá presionar el **reproducir** botón para iniciar el vídeo.
+Tendrá que presionar el botón **Reproducir** para iniciar el vídeo.
 
-De forma similar, puede suprimir la presentación de los controles de transporte estableciendo el `AreTransportControlsEnabled` propiedad `false`:
+De forma similar, puede suprimir la presentación de los controles de transporte si establece la propiedad `AreTransportControlsEnabled` en `false`:
 
 ```xaml
 <video:VideoPlayer Source="https://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4"
                    AreTransportControlsEnabled="False" />
 ```
 
-Si establece ambas propiedades en `false`, no empiece a reproducir el vídeo y no habrá ninguna manera de iniciarlo. Debe llamar a `Play` desde el archivo de código subyacente, o crear sus propios controles de transporte como se describe en el artículo [implementar controles de transporte de vídeo personalizado](custom-transport.md).
+Si establece las dos propiedades en `false`, el vídeo no empezará a reproducirse y no habrá ninguna manera de iniciarlo. Tendría que llamar a `Play` desde el archivo de código subyacente, o bien crear controles de transporte propios como se describe en el artículo [Implementación de controles de transporte de vídeo personalizados](custom-transport.md).
 
-El **App.xaml** archivo incluye recursos para dos vídeos adicionales:
+En el archivo **App.xaml** se incluyen recursos para dos vídeos adicionales:
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
@@ -509,13 +509,13 @@ El **App.xaml** archivo incluye recursos para dos vídeos adicionales:
 </Application>
 ```
 
-Hacer referencia a una de estas otras películas, puede reemplazar la dirección URL explícita en el **PlayWebVideo.xaml** de archivos con un `StaticResource` extensión de marcado, en cuyo caso `VideoSourceConverter` no es necesario para crear el `UriVideoSource` objeto:
+Para hacer referencia a una de estas películas, puede reemplazar la dirección URL explícita en el archivo **PlayWebVideo.xaml** con una extensión de marcado `StaticResource`, en cuyo caso no se necesitará `VideoSourceConverter` para crear el objeto `UriVideoSource`:
 
 ```xaml
 <video:VideoPlayer Source="{StaticResource ElephantsDream}" />
 ```
 
-Como alternativa, puede establecer el `Source` propiedad desde un archivo de vídeo en un `ListView`, tal y como se describe en el siguiente artículo, [enlace fuentes de vídeo al Reproductor](source-bindings.md).
+Como alternativa, puede establecer la propiedad `Source` de un archivo de vídeo en un elemento `ListView`, como se describe en el artículo siguiente, [Enlace de orígenes de vídeo al reproductor](source-bindings.md).
 
 
 
@@ -523,4 +523,4 @@ Como alternativa, puede establecer el `Source` propiedad desde un archivo de ví
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones en el Reproductor de vídeo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demostraciones de reproductor de vídeo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

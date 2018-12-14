@@ -1,6 +1,6 @@
 ---
 title: Reservas de enlace de Xamarin.Forms
-description: En este artículo se explica cómo fortalecer los enlaces mediante la definición de los valores de reserva que se usará si se produce un error de enlace.
+description: En este artículo se explica cómo hacer que los enlaces sean más sólidos mediante la definición de los valores de reserva que se usarán si se produce un error de enlace.
 ms.prod: xamarin
 ms.assetid: 637ACD9D-3E5D-4014-86DE-A77D1FEF238A
 ms.technology: xamarin-forms
@@ -9,32 +9,32 @@ ms.author: dabritch
 ms.date: 08/16/2018
 ms.openlocfilehash: 2a4b29df9148ce695f8f3ca5377e5848af1b775a
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52171604"
 ---
 # <a name="xamarinforms-binding-fallbacks"></a>Reservas de enlace de Xamarin.Forms
 
-En ocasiones dan error enlaces de datos, porque no se puede resolver el origen de enlace o porque el enlace se realiza correctamente pero devuelve un `null` valor. Si bien estos escenarios se pueden controlar con los convertidores de tipos de valor, u otro código adicional, los enlaces de datos se pueden realizar más sólidos mediante la definición de valores de reserva para su uso si se produce un error en el proceso de enlace. Esto puede realizarse mediante la definición de la [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) y [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNullValue) propiedades en una expresión de enlace. Dado que estas propiedades residen en el [ `BindingBase` ](xref:Xamarin.Forms.BindingBase) (clase), puede usarse con los enlaces, enlaces compilados y con el `Binding` extensión de marcado.
+En ocasiones, los enlaces de datos producen errores, porque no se puede resolver el origen de enlace o porque el enlace se realiza correctamente pero devuelve un valor `null`. Si bien estos escenarios se pueden controlar con los convertidores de valor, u otro código adicional, los enlaces de datos pueden hacerse más sólidos mediante la definición de valores de reserva para su uso si se produce un error en el proceso de enlace. Esto puede realizarse mediante la definición de las propiedades [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) y [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) en una expresión de enlace. Dado que estas propiedades residen en la clase [`BindingBase`](xref:Xamarin.Forms.BindingBase), pueden usarse con enlaces, con enlaces compilados y con la extensión de marcado `Binding`.
 
 > [!NOTE]
-> El uso de la [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) y [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNullValue) propiedades en una expresión de enlace es opcional.
+> El uso de las propiedades [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) y [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) en una expresión de enlace es opcional.
 
-## <a name="defining-a-fallback-value"></a>Definir un valor de reserva
+## <a name="defining-a-fallback-value"></a>Definición de un valor de reserva
 
-El [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) propiedad permite que se puede definir un valor reserva que se usará cuando el enlace *origen* no se puede resolver. Un escenario común para establecer esta propiedad es cuando se enlaza a las propiedades de origen que podrían no existir en todos los objetos en una colección enlazada tipos heterogéneos.
+La propiedad [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) permite que se pueda definir un valor de reserva que se usará cuando el *origen* del enlace no se pueda resolver. Un escenario común para establecer esta propiedad es cuando se realiza el enlace con propiedades de origen que podrían no existir en todos los objetos en una colección enlazada de tipos heterogéneos.
 
-El **MonkeyDetail** ilustra la página Configuración del [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) propiedad:
+La página **MonkeyDetail** ilustra el establecimiento de la propiedad [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue):
 
 ```xaml
 <Label Text="{Binding Population, FallbackValue='Population size unknown'}"
        ... />   
 ```
 
-El enlace en el [ `Label` ](xref:Xamarin.Forms.Label) define un [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) valor que se establecerá en el destino si no se puede resolver el origen de enlace. Por lo tanto, el valor definido por el `FallbackValue` propiedad se mostrará si el `Population` propiedad no existe en el objeto enlazado. Tenga en cuenta que aquí la `FallbackValue` valor de propiedad está delimitado por caracteres de comillas simples (apóstrofo).
+El enlace en [`Label`](xref:Xamarin.Forms.Label) define un valor de [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) que se establecerá en el destino si no se puede resolver el origen del enlace. Por lo tanto, el valor definido por la propiedad `FallbackValue` se mostrará si la propiedad `Population` no existe en el objeto enlazado. Tenga en cuenta que aquí, el valor de la propiedad `FallbackValue` está delimitado por caracteres de comillas simples (apóstrofo).
 
-En lugar de definir [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) valores de propiedad en línea, se recomienda que para definirlas como recursos en un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary). La ventaja de este enfoque es que estos valores se definen una vez en una sola ubicación y son localizables más fácilmente. A continuación, se pueden recuperar los recursos mediante el `StaticResource` extensión de marcado:
+En lugar de definir los valores de la propiedad [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) en línea, se recomienda definirlos como recursos en [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). La ventaja de este enfoque es que estos valores se definen una vez en una sola ubicación y son localizables más fácilmente. Posteriormente, se pueden recuperar los recursos mediante la extensión de marcado `StaticResource`:
 
 ```xaml
 <Label Text="{Binding Population, FallbackValue={StaticResource populationUnknown}}"
@@ -42,22 +42,22 @@ En lugar de definir [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackV
 ```
 
 > [!NOTE]
-> No es posible establecer el `FallbackValue` propiedad con una expresión de enlace.
+> No es posible establecer la propiedad `FallbackValue` con una expresión de enlace.
 
-Este es el programa que se ejecuta:
+Esta es la ejecución del programa:
 
-![Enlace FallbackValue](binding-fallbacks-images/bindingunavailable-detail-cropped.png "FallbackValue enlace")
+![Enlace FallbackValue](binding-fallbacks-images/bindingunavailable-detail-cropped.png "FallbackValue Binding")
 
-Cuando el `FallbackValue` propiedad no está establecida en una expresión de enlace y la ruta de acceso de enlace o parte de la ruta de acceso no se resuelve, [ `BindableProperty.DefaultValue` ](xref:Xamarin.Forms.BindableProperty.DefaultValue) se establece en el destino. Sin embargo, cuando el `FallbackValue` propiedad está establecida y la ruta de acceso de enlace o parte de la ruta de acceso no se resuelve, el valor de la `FallbackValue` propiedad value se establece en el destino. Por lo tanto, en el **MonkeyDetail** página el [ `Label` ](xref:Xamarin.Forms.Label) muestra "Tamaño de la población desconocido", porque le falta el elemento enlazado un `Population` propiedad.
+Cuando el `FallbackValue` propiedad no está establecida en una expresión de enlace y la ruta de acceso del enlace o parte de la ruta de acceso no se resuelve, [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) se establece en el destino. Sin embargo, cuando la propiedad `FallbackValue` está establecida y la ruta de acceso del enlace o parte de la ruta de acceso no se resuelve, el valor de la propiedad del valor `FallbackValue` se establece en el destino. Por lo tanto, en la página **MonkeyDetail**, [`Label`](xref:Xamarin.Forms.Label) muestra el mensaje "Population size unknown" ("Tamaño de la población desconocido"), porque al elemento enlazado le falta una propiedad `Population`.
 
 > [!IMPORTANT]
-> No se ejecuta un convertidor de valores definido en una expresión de enlace cuando la [ `FallbackValue` ](xref:Xamarin.Forms.BindingBase.FallbackValue) propiedad está establecida.
+> Un convertidor de valores definido no se ejecuta en una expresión de enlace cuando la propiedad [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) está establecida.
 
-## <a name="defining-a-null-replacement-value"></a>Definir un valor de reemplazo de null
+## <a name="defining-a-null-replacement-value"></a>Definición de un valor de reemplazo nulo
 
-El [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNullValue) propiedad permite definir un valor de reemplazo que se usará cuando el enlace *origen* se ha resuelto, pero el valor es `null`. Un escenario común para establecer esta propiedad es cuando se enlaza a las propiedades de origen que podrían ser `null` en una colección enlazada.
+La propiedad [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) permite que se pueda definir un valor de reemplazo que se usará cuando el *origen* del enlace se resuelva pero el valor sea `null`. Un escenario común para establecer esta propiedad es cuando se realiza el enlace con propiedades de origen que podrían ser `null` en una colección enlazada.
 
-El **monos** ilustra la página Configuración del [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNullValue) propiedad:
+La página **Monkeys** ilustra el establecimiento de la propiedad [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue):
 
 ```xaml
 <ListView ItemsSource="{Binding Monkeys}"
@@ -79,9 +79,9 @@ El **monos** ilustra la página Configuración del [ `TargetNullValue` ](xref:Xa
 </ListView>
 ```
 
-Los enlaces en el [ `Image` ](xref:Xamarin.Forms.Image) y [ `Label` ](xref:Xamarin.Forms.Label) definen [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNullValue) valores que se aplicará si la ruta de acceso de enlace devuelve `null`. Por lo tanto, los valores definidos por el `TargetNullValue` se mostrarán las propiedades para los objetos de la colección donde el `ImageUrl` y `Location` propiedades no están definidas. Tenga en cuenta que aquí la `TargetNullValue` los valores de propiedad están delimitados por caracteres de comillas simples (apóstrofo).
+Los enlaces en [`Image`](xref:Xamarin.Forms.Image) y [`Label`](xref:Xamarin.Forms.Label) definen valores [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) que se aplicará si la ruta de acceso de enlace devuelve `null`. Por lo tanto, los valores definidos por las propiedades `TargetNullValue` se mostrarán para los objetos de la colección donde las propiedades `ImageUrl` y `Location` no estén definidas. Tenga en cuenta que aquí, los valores de la propiedad `TargetNullValue` están delimitados por caracteres de comillas simples (apóstrofo).
 
-En lugar de definir [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetNullValue) valores de propiedad en línea, se recomienda que para definirlas como recursos en un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary). La ventaja de este enfoque es que estos valores se definen una vez en una sola ubicación y son localizables más fácilmente. A continuación, se pueden recuperar los recursos mediante el `StaticResource` extensión de marcado:
+En lugar de definir los valores de la propiedad [`TargetNullValue`](xref:Xamarin.Forms.BindingBase.TargetNullValue) en línea, se recomienda definirlos como recursos en [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). La ventaja de este enfoque es que estos valores se definen una vez en una sola ubicación y son localizables más fácilmente. Posteriormente, se pueden recuperar los recursos mediante la extensión de marcado `StaticResource`:
 
 ```xaml
 <Image Source="{Binding ImageUrl, TargetNullValue={StaticResource fallbackImageUrl}}"
@@ -91,17 +91,17 @@ En lugar de definir [ `TargetNullValue` ](xref:Xamarin.Forms.BindingBase.TargetN
 ```
 
 > [!NOTE]
-> No es posible establecer el `TargetNullValue` propiedad con una expresión de enlace.
+> No es posible establecer la propiedad `TargetNullValue` con una expresión de enlace.
 
-Este es el programa que se ejecuta:
+Esta es la ejecución del programa:
 
-[![Enlace TargetNullValue](binding-fallbacks-images/bindingunavailable-small.png "TargetNullValue enlace")](binding-fallbacks-images/bindingunavailable-large.png#lightbox "TargetNullValue enlace")
+[![Enlace TargetNullValue](binding-fallbacks-images/bindingunavailable-small.png "TargetNullValue Binding")](binding-fallbacks-images/bindingunavailable-large.png#lightbox "TargetNullValue Binding")
 
-Cuando el `TargetNullValue` propiedad no está establecida en una expresión de enlace, un valor de origen de `null` se convertirán si se define un convertidor de valores, si un `StringFormat` está definido, y, a continuación, se establece el resultado en el destino. Sin embargo, cuando el `TargetNullValue` propiedad se establece un valor de origen de `null` se convertirán si se ha definido un convertidor de valores, y si sigue siendo `null` después de la conversión, el valor de la `TargetNullValue` propiedad está establecida en el destino.
+Cuando la propiedad `TargetNullValue` no está establecida en una expresión de enlace, un valor de origen de `null` se convertirá si se define un convertidor de valores, se le aplicará formato si se define `StringFormat` y, a continuación, se establecerá el resultado en el destino. Sin embargo, cuando la propiedad `TargetNullValue` está establecida, un valor de origen de `null` se convertirá si se ha definido un convertidor de valores, y si sigue siendo `null` después de la conversión, el valor de la propiedad `TargetNullValue` está establecido en el destino.
 
 > [!IMPORTANT]
-> No se aplicará el formato de cadena en una expresión de enlace cuando la `TargetNullValue` se establece la propiedad.
+> No se aplicará formato a la cadena en una expresión de enlace cuando la propiedad `TargetNullValue` esté establecida.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de enlace de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demos de enlace de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)

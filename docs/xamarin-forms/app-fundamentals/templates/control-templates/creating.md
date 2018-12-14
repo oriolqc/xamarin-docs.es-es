@@ -1,6 +1,6 @@
 ---
 title: Creación de una plantilla de control
-description: Plantillas de control se pueden definir en el nivel de aplicación o página. En este artículo se muestra cómo crear y usar plantillas de control.
+description: Las plantillas de control se pueden definir en el nivel de aplicación o en el de página. En este artículo se explica cómo crear y consumir plantillas de control.
 ms.prod: xamarin
 ms.assetid: A9AEB052-FBF5-4589-9BD4-6D6F62BED7F1
 ms.technology: xamarin-forms
@@ -9,18 +9,18 @@ ms.author: dabritch
 ms.date: 03/08/2016
 ms.openlocfilehash: b83668f6836b1d5d98f67592bf3e2b01e7319edc
 ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/12/2018
 ms.locfileid: "38998198"
 ---
 # <a name="creating-a-controltemplate"></a>Creación de una plantilla de control
 
-_Plantillas de control se pueden definir en el nivel de aplicación o página. En este artículo se muestra cómo crear y usar plantillas de control._
+_Las plantillas de control se pueden definir en el nivel de aplicación o en el de página. En este artículo se explica cómo crear y consumir plantillas de control._
 
-## <a name="creating-a-controltemplate-in-xaml"></a>Creación de una clase ControlTemplate en XAML
+## <a name="creating-a-controltemplate-in-xaml"></a>Creación de una plantilla de control en XAML
 
-Para definir un [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) en el nivel de aplicación, un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) deben agregarse a la `App` clase. De forma predeterminada, todas las aplicaciones de Xamarin.Forms creadas a partir de una plantilla de usar el **aplicación** clase para implementar el [ `Application` ](xref:Xamarin.Forms.Application) subclase. Para declarar un `ControlTemplate` en el nivel de aplicación, en la aplicación `ResourceDictionary` mediante XAML, el valor predeterminado **aplicación** clase debe reemplazarse por un XAML **aplicación** clase y código subyacente asociado, como se muestra en el ejemplo de código siguiente:
+Para definir un elemento [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) en el nivel de aplicación, se debe agregar un objeto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) a la clase `App`. De forma predeterminada, en todas las aplicaciones de Xamarin.Forms creadas a partir de una plantilla se usa la clase **App** para implementar la subclase [`Application`](xref:Xamarin.Forms.Application). Para declarar un elemento `ControlTemplate` en el nivel de aplicación, en el objeto `ResourceDictionary` de la aplicación con XAML, la clase **App** predeterminada se debe reemplazar por una clase **App** de XAML y el código subyacente asociado, como se muestra en el ejemplo de código siguiente:
 
 ```xaml
 <Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SimpleTheme.App">
@@ -48,9 +48,9 @@ Para definir un [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) en el 
 </Application>
 ```
 
-Cada [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) instancia se crea como un objeto reutilizable en una [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary).  Esto se consigue asignando un único cada declaración `x:Key` atributo, que le proporciona una clave descriptiva en el `ResourceDictionary`.
+Cada instancia de [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) se crea como un objeto reutilizable en un elemento [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary).  Esto se consigue mediante la asignación de un atributo `x:Key` único a cada declaración, para proporcionarle una clave descriptiva en el objeto `ResourceDictionary`.
 
-El ejemplo de código siguiente muestra asociado `App` código subyacente:
+En el ejemplo de código siguiente se muestra el código subyacente de `App` asociado:
 
 ```csharp
 public partial class App : Application
@@ -63,9 +63,9 @@ public partial class App : Application
 }
 ```
 
-Así como la configuración de la [ `MainPage` ](xref:Xamarin.Forms.Application.MainPage) propiedad, el código subyacente también debe llamar a la `InitializeComponent` método para cargar y analizar el XAML asociado.
+Además de establecer la propiedad [`MainPage`](xref:Xamarin.Forms.Application.MainPage), el código subyacente también debe llamar al método `InitializeComponent` para cargar y analizar el código XAML asociado.
 
-El siguiente ejemplo de código muestra un [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) aplicando el `TealTemplate` a la [ `ContentView` ](xref:Xamarin.Forms.ContentView):
+En el ejemplo de código siguiente se muestra un elemento [`ContentPage`](xref:Xamarin.Forms.ContentPage) que aplica `TealTemplate` a [`ContentView`](xref:Xamarin.Forms.ContentView):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SimpleTheme.HomePage">
@@ -79,13 +79,13 @@ El siguiente ejemplo de código muestra un [ `ContentPage` ](xref:Xamarin.Forms.
 </ContentPage>
 ```
 
-El `TealTemplate` se asigna a la [ `ContentView.ControlTemplate` ](xref:Xamarin.Forms.TemplatedView.ControlTemplate) propiedad utilizando el `StaticResource` extensión de marcado. El [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) propiedad está establecida en un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) que define el contenido que se mostrará en el [ `ContentPage` ](xref:Xamarin.Forms.ContentPage). Este contenido se mostrarán mediante el [ `ContentPresenter` ](xref:Xamarin.Forms.ContentPresenter) contenidos en el `TealTemplate`. El resultado es el aspecto que se muestra en las capturas de pantalla siguiente:
+El elemento `TealTemplate` se asigna a la propiedad [`ContentView.ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) mediante la extensión de marcado `StaticResource`. La propiedad [`ContentView.Content`](xref:Xamarin.Forms.ContentView.Content) se establece en un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) que define el contenido que se mostrará en [`ContentPage`](xref:Xamarin.Forms.ContentPage). Este contenido se mostrará mediante el elemento [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) incluido en `TealTemplate`. El resultado es el aspecto que se muestra en las capturas de pantalla siguientes:
 
-![](creating-images/teal-theme.png "Plantilla de Control verde azulado")
+![](creating-images/teal-theme.png "Plantilla de control de color verde azulado")
 
-### <a name="re-theming-an-application-at-runtime"></a>Una aplicación en tiempo de ejecución de RE-temas
+### <a name="re-theming-an-application-at-runtime"></a>Cambio de los temas de una aplicación en tiempo de ejecución
 
-Al hacer clic en el **cambiar tema** botón ejecuta el `OnButtonClicked` método, que se muestra en el ejemplo de código siguiente:
+Al hacer clic en el botón **Cambiar tema** se ejecuta el método `OnButtonClicked`, que se muestra en el ejemplo de código siguiente:
 
 ```csharp
 void OnButtonClicked (object sender, EventArgs e)
@@ -95,16 +95,16 @@ void OnButtonClicked (object sender, EventArgs e)
 }
 ```
 
-Este método reemplaza activo [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) instancia con la alternativa `ControlTemplate` instancia, lo que resulta en la captura de pantalla siguiente:
+Este método reemplaza la instancia activa de [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) con la instancia de `ControlTemplate` alternativa, lo que da como resultado la captura de pantalla siguiente:
 
-![](creating-images/aqua-theme.png "Plantilla de Control aguamarina")
+![](creating-images/aqua-theme.png "Plantilla de control aguamarina")
 
 > [!NOTE]
-> En un `ContentPage`, `Content` se puede asignar la propiedad y el `ControlTemplate` también se puede establecer la propiedad. Cuando esto ocurre, si la `ControlTemplate` contiene un `ContentPresenter` de instancia, el contenido asignado a la `Content` propiedad estará presentada por el `ContentPresenter` dentro de la `ControlTemplate`.
+> En un elemento `ContentPage`, se puede asignar la propiedad `Content` y también se puede establecer la propiedad `ControlTemplate`. En ese caso, si `ControlTemplate` contiene una instancia de `ContentPresenter`, el contenido asignado a la propiedad `Content` se presentará por medio del elemento `ContentPresenter` de `ControlTemplate`.
 
 ### <a name="setting-a-controltemplate-with-a-style"></a>Configuración de una clase ControlTemplate con un estilo
 
-Un [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) también se pueden aplicar mediante un [ `Style` ](xref:Xamarin.Forms.Style) para expandir la capacidad de tema. Esto puede lograrse mediante la creación de un *implícita* o *explícita* estilo para la vista de destino en un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)y estableciendo el `ControlTemplate` propiedad del destino ver en el [ `Style` ](xref:Xamarin.Forms.Style) instancia. El siguiente ejemplo de código muestra un *implícita* estilo que se han agregado para el nivel de aplicación [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary):
+Una clase [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) también se puede aplicar mediante un elemento [`Style`](xref:Xamarin.Forms.Style) para expandir la capacidad del tema. Esto se puede lograr mediante la creación de un estilo *implícito* o *explícito* para la vista de destino en un objeto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), y estableciendo la propiedad `ControlTemplate` de la vista de destino en la instancia de [`Style`](xref:Xamarin.Forms.Style). En el ejemplo de código siguiente se muestra un estilo *implícito* que se ha agregado al objeto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) de nivel de aplicación:
 
 ```xaml
 <Style TargetType="ContentView">
@@ -112,7 +112,7 @@ Un [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) también se pueden 
 </Style>
 ```
 
-Dado que el [ `Style` ](xref:Xamarin.Forms.Style) instancia es *implícita*, se aplicará a todos los `ContentView` las instancias de la aplicación. Por lo tanto, ya no es necesario establecer la [ `ContentView.ControlTemplate` ](xref:Xamarin.Forms.TemplatedView.ControlTemplate) propiedad, como se muestra en el ejemplo de código siguiente:
+Como la instancia de [`Style`](xref:Xamarin.Forms.Style) es *implícita*, se aplicará a todas las instancias de `ContentView` de la aplicación. Por tanto, ya no es necesario establecer la propiedad [`ContentView.ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate), como se muestra en el ejemplo de código siguiente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SimpleTheme.HomePage">
@@ -122,11 +122,11 @@ Dado que el [ `Style` ](xref:Xamarin.Forms.Style) instancia es *implícita*, se 
 </ContentPage>
 ```
 
-Para obtener más información sobre los estilos, consulte [estilos](~/xamarin-forms/user-interface/styles/index.md).
+Para obtener más información sobre los estilos, vea [Estilos](~/xamarin-forms/user-interface/styles/index.md).
 
-### <a name="creating-a-controltemplate-at-page-level"></a>Creación de una clase ControlTemplate en nivel de página
+### <a name="creating-a-controltemplate-at-page-level"></a>Creación de una plantilla de control en el nivel de página
 
-Además de crear [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) en el nivel de aplicación, también se pueden crear instancias en el nivel de página, tal como se muestra en el ejemplo de código siguiente:
+Además de crear instancias de [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) en el nivel de aplicación, también se pueden crear en el nivel de página, como se muestra en el ejemplo de código siguiente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="SimpleTheme.HomePage">
@@ -146,11 +146,11 @@ Además de crear [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) en el
 </ContentPage>
 ```
 
-Cuando se agrega un [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) en el nivel de página, un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) se agrega a la [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)y, a continuación, el `ControlTemplate` se incluyen las instancias en el `ResourceDictionary`.
+Cuando se agrega un elemento [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) en el nivel de página, se agrega un objeto [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) a [`ContentPage`](xref:Xamarin.Forms.ContentPage) y, después, se incluyen las instancias de `ControlTemplate` en el objeto `ResourceDictionary`.
 
-## <a name="creating-a-controltemplate-in-c35"></a>Creación de un clase ControlTemplate en C&#35;
+## <a name="creating-a-controltemplate-in-c35"></a>Creación de una plantilla de control en C&#35;
 
-Para definir un [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) en el nivel de aplicación, un `class` debe crearse que representa el `ControlTemplate`. La clase debe derivar de la [diseño](~/xamarin-forms/user-interface/layouts/index.md) que se va a usar para la plantilla, tal como se muestra en el ejemplo de código siguiente:
+Para definir un elemento [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) en el nivel de aplicación, se debe crear un objeto `class` que represente el elemento `ControlTemplate`. La clase se debe derivar del [diseño](~/xamarin-forms/user-interface/layouts/index.md) que se usa para la plantilla, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 class TealTemplate : Grid
@@ -171,9 +171,9 @@ class AquaTemplate : Grid
 }
 ```
 
-El `AquaTemplate` es idéntica a la clase el `TealTemplate` clase salvo que se usan colores diferentes para el [ `BoxView.Color` ](xref:Xamarin.Forms.BoxView.Color) y [ `Label.TextColor` ](xref:Xamarin.Forms.Label.TextColor) propiedades.
+La clase `AquaTemplate` es idéntica a la clase `TealTemplate`, salvo que se usan otros colores para las propiedades [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) y [`Label.TextColor`](xref:Xamarin.Forms.Label.TextColor).
 
-El siguiente ejemplo de código muestra un [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) aplicando el `TealTemplate` a la [ `ContentView` ](xref:Xamarin.Forms.ContentView):
+En el ejemplo de código siguiente se muestra un elemento [`ContentPage`](xref:Xamarin.Forms.ContentPage) que aplica `TealTemplate` a [`ContentView`](xref:Xamarin.Forms.ContentView):
 
 ```csharp
 public class HomePageCS : ContentPage
@@ -202,13 +202,13 @@ public class HomePageCS : ContentPage
 }
 ```
 
-El [ `ControlTemplate` ](xref:Xamarin.Forms.ControlTemplate) las instancias se crean especificando el tipo de las clases que definen las plantillas de control, en el `ControlTemplate` constructor.
+Las instancias de [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) se crean mediante la especificación del tipo de las clases que definen las plantillas de control, en el constructor `ControlTemplate`.
 
-El [ `ContentView.Content` ](xref:Xamarin.Forms.ContentView.Content) propiedad está establecida en un [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) que define el contenido que se mostrará en el [ `ContentPage` ](xref:Xamarin.Forms.ContentPage). Este contenido se mostrarán mediante el [ `ContentPresenter` ](xref:Xamarin.Forms.ContentPresenter) contenidos en el `TealTemplate`. El mismo mecanismo descrito anteriormente se usa para cambiar el tema en tiempo de ejecución para el `AquaTheme`.
+La propiedad [`ContentView.Content`](xref:Xamarin.Forms.ContentView.Content) se establece en un elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) que define el contenido que se mostrará en [`ContentPage`](xref:Xamarin.Forms.ContentPage). Este contenido se mostrará mediante el elemento [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) incluido en `TealTemplate`. El mismo mecanismo descrito anteriormente se usa para cambiar el tema en tiempo de ejecución para el objeto `AquaTheme`.
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se muestra cómo crear y usar plantillas de control. Plantillas de control se pueden definir en el nivel de aplicación o página.
+En este artículo se ha explicado cómo crear y consumir plantillas de control. Las plantillas de control se pueden definir en el nivel de aplicación o en el de página.
 
 
 ## <a name="related-links"></a>Vínculos relacionados

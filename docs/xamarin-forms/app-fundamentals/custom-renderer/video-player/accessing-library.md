@@ -1,6 +1,6 @@
 ---
-title: Acceso a la biblioteca de vídeos del dispositivo
-description: Este artículo explica cómo obtener acceso a la biblioteca de vídeos del dispositivo en una aplicación de Reproductor de vídeo mediante Xamarin.Forms.
+title: Acceder a la biblioteca de vídeos del dispositivo
+description: En este artículo se explica cómo usar Xamarin.Forms para acceder a la biblioteca de vídeos del dispositivo en una aplicación de reproductor de vídeo.
 ms.prod: xamarin
 ms.assetid: 364C1D43-EAAE-45B9-BE24-0DA5AE74C4D9
 ms.technology: xamarin-forms
@@ -9,20 +9,20 @@ ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 619469e4c4fd3901491c20d6215ec0a25c49f69d
 ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/20/2018
 ms.locfileid: "52171188"
 ---
-# <a name="accessing-the-devices-video-library"></a>Acceso a la biblioteca de vídeos del dispositivo
+# <a name="accessing-the-devices-video-library"></a>Acceder a la biblioteca de vídeos del dispositivo
 
-Más modernos dispositivos móviles y equipos de escritorio tienen la capacidad de grabar vídeos uso de la cámara del dispositivo. Los vídeos que se crea un usuario, a continuación, se almacenan como archivos en el dispositivo. Estos archivos se pueden recuperar de la biblioteca de imágenes y desempeñados por la `VideoPlayer` clase igual que cualquier otro vídeo.
+Los dispositivos móviles y los equipos de escritorio más modernos tienen la capacidad de grabar vídeos mediante la cámara que llevan incorporada. Los vídeos que un usuario crea se almacenan como archivos en el dispositivo. Estos archivos se pueden recuperar de la biblioteca de imágenes, y la clase `VideoPlayer` puede reproducirlos igual que cualquier otro vídeo.
 
 ## <a name="the-photo-picker-dependency-service"></a>El servicio de dependencia del selector de fotos
 
-Cada una de las plataformas incluye una utilidad que permite al usuario seleccionar una foto o vídeo desde la biblioteca de imágenes del dispositivo. El primer paso para reproducir un vídeo de biblioteca de imágenes del dispositivo está creando un servicio de dependencia que invoca el selector de imagen en cada plataforma. Es muy similar a uno definido en el servicio de dependencia se describe a continuación el [ **seleccionar una foto de la biblioteca de imágenes** ](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md) artículo, salvo que el selector de vídeo que devuelve un nombre de archivo en lugar de un `Stream`objeto.
+Cada una de las plataformas incluye una utilidad que permite al usuario seleccionar una foto o un vídeo de la biblioteca de imágenes del dispositivo. El primer paso para reproducir un vídeo de la biblioteca de imágenes del dispositivo consiste en crear un servicio de dependencia que invoque al selector de imagen en cada plataforma. El servicio de dependencia descrito anteriormente es muy similar al que se define en el artículo [**Seleccionar una foto de la biblioteca de imágenes**](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md), salvo que el selector de vídeo devuelve un nombre de archivo en lugar de un objeto `Stream`.
 
-El proyecto de biblioteca .NET Standard define una interfaz denominada `IVideoPicker` para el servicio de dependencia:
+El proyecto de la biblioteca de .NET Standard define una interfaz denominada `IVideoPicker` para el servicio de dependencia:
 
 ```csharp
 namespace FormsVideoLibrary
@@ -38,7 +38,7 @@ Cada una de las plataformas contiene una clase denominada `VideoPicker` que impl
 
 ### <a name="the-ios-video-picker"></a>El selector de vídeo de iOS
 
-IOS `VideoPicker` usa iOS [ `UIImagePickerController` ](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) para tener acceso a la biblioteca de imágenes, especifica que debe estar restringido a los vídeos (denominados "movies") en iOS `MediaType` propiedad. Tenga en cuenta que `VideoPicker` implementa explícitamente la `IVideoPicker` interfaz. Tenga en cuenta también la `Dependency` atributo que identifica esta clase como un servicio de dependencia. Estos son los dos requisitos que permiten Xamarin.Forms encontrar el servicio de dependencia en el proyecto de plataforma:
+`VideoPicker` de iOS utiliza [`UIImagePickerController`](https://developer.xamarin.com/api/type/UIKit.UIImagePickerController/) para acceder a la biblioteca de imágenes y especifica que dicho acceso debe restringirse a los vídeos (denominados "películas") de la propiedad `MediaType` de iOS. Tenga en cuenta que `VideoPicker` implementa explícitamente la interfaz de `IVideoPicker`. Tenga en cuenta también el atributo `Dependency` que identifica esta clase como un servicio de dependencia. Estos son los dos requisitos que permiten a Xamarin.Forms encontrar el servicio de dependencia en el proyecto de la plataforma:
 
 ```csharp
 using System;
@@ -102,7 +102,7 @@ namespace FormsVideoLibrary.iOS
 
 ### <a name="the-android-video-picker"></a>El selector de vídeo de Android
 
-La implementación de Android `IVideoPicker` requiere un método de devolución de llamada que forma parte de la actividad de la aplicación. Por ese motivo, la `MainActivity` clase define dos propiedades, un campo y un método de devolución de llamada:
+La implementación de Android de `IVideoPicker` requiere un método de devolución de llamada que forma parte de la actividad de la aplicación. Por ese motivo, la clase `MainActivity` define dos propiedades, un campo y un método de devolución de llamada:
 
 ```csharp
 namespace VideoPlayerDemos.Droid
@@ -144,7 +144,7 @@ namespace VideoPlayerDemos.Droid
 }
 ```
 
-El `OnCreate` método `MainActivity` almacena su propia instancia en estático `Current` propiedad. Esto permite la implementación de `IVideoPicker` para obtener el `MainActivity` instancia para iniciar el **seleccione vídeo** selector:
+El método `OnCreate` en `MainActivity` almacena su propia instancia en la propiedad `Current` estática. Esto permite a la implementación de `IVideoPicker` obtener la instancia de `MainActivity` para iniciar el selector **Seleccione vídeo**:
 
 ```csharp
 using System;
@@ -186,11 +186,11 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-Las adiciones a la `MainActivity` objeto son el único código de la [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) solución donde el código de aplicación normal debe modificarse para admitir el `FormsVideoLibrary` clases.
+Las adiciones al objeto `MainActivity` son el único código de la solución [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) en que el código de aplicación normal debe modificarse para admitir las clases `FormsVideoLibrary`.
 
 ### <a name="the-uwp-video-picker"></a>El selector de vídeo de UWP
 
-La implementación de UWP de la `IVideoPicker` interfaz utiliza UWP [ `FileOpenPicker` ](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/). Comienza la búsqueda de archivos con la biblioteca de imágenes y restringe los tipos de archivo MP4 y WMV (vídeo de Windows Media):
+La implementación de UWP de la interfaz de `IVideoPicker` utiliza el [`FileOpenPicker`](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/) de UWP. Inicia la búsqueda de archivos con la biblioteca de imágenes y restringe los tipos de archivo a MP4 y WMV (vídeo de Windows Media):
 
 ```csharp
 using System;
@@ -227,7 +227,7 @@ namespace FormsVideoLibrary.UWP
 
 ## <a name="invoking-the-dependency-service"></a>Invocar el servicio de dependencia
 
-El **reproducir vídeo de la biblioteca** página de la [ **VideoPlayerDemos** ](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) programa muestra cómo usar el servicio de dependencia de selector de vídeo. El archivo XAML contiene una `VideoPlayer` instancia y un `Button` con la etiqueta **mostrar vídeo biblioteca**:
+En la página **Reproducir vídeo de la biblioteca** del programa [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) se muestra cómo utilizar el servicio de dependencia del selector de vídeo. El archivo XAML contiene una instancia de `VideoPlayer` y un `Button` con la etiqueta **Mostrar la biblioteca de vídeos**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -247,7 +247,7 @@ El **reproducir vídeo de la biblioteca** página de la [ **VideoPlayerDemos** ]
 </ContentPage>
 ```
 
-El archivo de código subyacente contiene el `Clicked` controlador para el `Button`. Invocar el servicio de dependencia es necesario llamar a `DependencyService.Get` para obtener la implementación de un `IVideoPicker` interfaz en el proyecto de la plataforma. El `GetVideoFileAsync` , a continuación, se llama al método en esa instancia:
+El archivo de código subyacente contiene el controlador de `Clicked` para el `Button`. Para invocar el servicio de dependencia es necesario llamar a `DependencyService.Get` para obtener la implementación de una interfaz de `IVideoPicker` en el proyecto de plataforma. A continuación, se llama al método `GetVideoFileAsync` en esa instancia:
 
 ```csharp
 namespace VideoPlayerDemos
@@ -280,13 +280,13 @@ namespace VideoPlayerDemos
 }
 ```
 
-El `Clicked` controlador, a continuación, utiliza ese nombre de archivo para crear un `FileVideoSource` objeto y establecerlo en el `Source` propiedad de la `VideoPlayer`.
+Posteriormente, el controlador de `Clicked` utiliza ese nombre de archivo para crear un objeto `FileVideoSource` y establecerlo en la propiedad `Source` del `VideoPlayer`.
 
-Cada uno de los `VideoPlayerRenderer` clases contiene código en su `SetSource` método para objetos de tipo `FileVideoSource`. Se muestran a continuación:
+Cada una de las clases `VideoPlayerRenderer` contiene código en su método `SetSource` para objetos de tipo `FileVideoSource`. Se muestran a continuación:
 
 ### <a name="handling-ios-files"></a>Control de archivos de iOS
 
-La versión de iOS de `VideoPlayerRenderer` procesos `FileVideoSource` objetos mediante el uso de estático `Asset.FromUrl` método con el nombre de archivo. Esto crea un `AVAsset` objeto que representa el archivo de biblioteca de imágenes del dispositivo:
+La versión de iOS de `VideoPlayerRenderer` procesa los objetos `FileVideoSource` mediante el uso del método `Asset.FromUrl` estático con el nombre de archivo. Esto crea un objeto `AVAsset` que representa el archivo de la biblioteca de imágenes del dispositivo:
 
 ```csharp
 namespace FormsVideoLibrary.iOS
@@ -316,7 +316,7 @@ namespace FormsVideoLibrary.iOS
 
 ### <a name="handling-android-files"></a>Control de archivos de Android
 
-Al procesar los objetos de tipo `FileVideoSource`, la implementación de Android `VideoPlayerRenderer` usa el `SetVideoPath` método `VideoView` para especificar el archivo de biblioteca de imágenes del dispositivo:
+Al procesar los objetos de tipo `FileVideoSource`, la implementación de Android de `VideoPlayerRenderer` utiliza el método `SetVideoPath` de `VideoView` para especificar el archivo de biblioteca de imágenes del dispositivo:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -346,9 +346,9 @@ namespace FormsVideoLibrary.Droid
 }
 ```
 
-### <a name="handling-uwp-files"></a>Control de archivos UWP
+### <a name="handling-uwp-files"></a>Control de archivos de UWP
 
-Cuando se administran los objetos de tipo `FileVideoSource`, la implementación de UWP de la `SetSource` método necesita para crear un `StorageFile` objeto, abra ese archivo para leerlo y pase el objeto de secuencia al `SetSource` método de la `MediaElement`:
+Al controlar los objetos de tipo `FileVideoSource`, la implementación de UWP del método `SetSource` debe crear un objeto `StorageFile`, abrir ese archivo para leerlo y pasar el objeto de secuencia al método `SetSource` del `MediaElement`:
 
 ```csharp
 namespace FormsVideoLibrary.UWP
@@ -382,11 +382,11 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-Para cada plataforma, el vídeo empieza a reproducirse casi inmediatamente después de que el vídeo se establece el origen porque el archivo se encuentra en el dispositivo y no debe descargarse.
+En todas las plataformas, el vídeo empieza a reproducirse casi inmediatamente después de establecer el origen de vídeo porque el archivo se encuentra en el dispositivo y no debe descargarse.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones en el Reproductor de vídeo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demostraciones de reproductor de vídeo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 - [Seleccionar una foto de la biblioteca de imágenes](~/xamarin-forms/app-fundamentals/dependency-service/photo-picker.md)

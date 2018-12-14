@@ -1,6 +1,6 @@
 ---
-title: Agregar un reconocedor de movimiento de tap
-description: En este artículo se explica cómo usar el gesto de pulsar para la detección de derivación de una aplicación de Xamarin.Forms. Detección de TAP se implementa con la clase TapGestureRecognizer.
+title: Adición de un reconocedor de gesto de pulsar
+description: En este artículo se explica cómo usar el gesto de pulsar para la detección de pulsaciones en una aplicación de Xamarin.Forms. La detección de pulsaciones se implementa con la clase TapGestureRecognizer.
 ms.prod: xamarin
 ms.assetid: 1D150BAF-4157-49BC-90A0-153323B8EBCF
 ms.technology: xamarin-forms
@@ -9,16 +9,16 @@ ms.author: dabritch
 ms.date: 01/21/2016
 ms.openlocfilehash: a28afb30770f15861aef06643e7f51070199ea9b
 ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/18/2018
 ms.locfileid: "38994859"
 ---
-# <a name="adding-a-tap-gesture-recognizer"></a>Agregar un reconocedor de movimiento de tap
+# <a name="adding-a-tap-gesture-recognizer"></a>Adición de un reconocedor de gesto de pulsar
 
-_El gesto de pulsar se usa para la detección de tap y se implementa con la clase TapGestureRecognizer._
+_El gesto de pulsar se usa para la detección de pulsaciones y se implementa con la clase TapGestureRecognizer._
 
-Para que un elemento de interfaz de usuario puede hacer clic con el gesto de pulsar, cree un [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) de la instancia, controlar el [ `Tapped` ](xref:Xamarin.Forms.TapGestureRecognizer.Tapped) eventos y agregue el reconocedor de gestos de nuevo a la [ `GestureRecognizers` ](xref:Xamarin.Forms.View.GestureRecognizers) colección en el elemento de interfaz de usuario. El siguiente ejemplo de código muestra un `TapGestureRecognizer` adjunta a un [ `Image` ](xref:Xamarin.Forms.Image) elemento:
+Para que se pueda hacer clic en un elemento de interfaz de usuario con el gesto de pulsar, cree una instancia de [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer), controle el evento [`Tapped`](xref:Xamarin.Forms.TapGestureRecognizer.Tapped), y agregue el nuevo reconocedor de gestos a la colección [`GestureRecognizers`](xref:Xamarin.Forms.View.GestureRecognizers) en el elemento de interfaz de usuario. En el ejemplo de código siguiente se muestra un elemento `TapGestureRecognizer` adjunto a un elemento [`Image`](xref:Xamarin.Forms.Image):
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -28,19 +28,19 @@ tapGestureRecognizer.Tapped += (s, e) => {
 image.GestureRecognizers.Add(tapGestureRecognizer);
 ```
 
-De forma predeterminada, la imagen responderá a derivaciones único. Establecer el [ `NumberOfTapsRequired` ](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) propiedad que se va a esperar un doble punteo (o más derivaciones si es necesario).
+De forma predeterminada, la imagen responderá a pulsaciones simples. Establezca la propiedad [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) para que espere una pulsación doble (o más pulsaciones si es necesario).
 
 ```csharp
 tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 ```
 
-Cuando [ `NumberOfTapsRequired` ](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) se establece superiores a uno, el controlador de eventos solo se ejecuta si se producen las derivaciones dentro de un período de tiempo (período no es configurable). Si las derivaciones de segunda (o posteriores) no se producen dentro de ese período se omite y se reinicia el recuento de derivación de' '.
+Cuando se establece [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) por encima de uno, el controlador de eventos solo se ejecuta si las pulsaciones se producen dentro de un período de tiempo concreto (que no se puede configurar). Si la segunda pulsación (o las posteriores) no se producen dentro de ese período, se omiten y se reinicia el "recuento de pulsaciones".
 
 <a name="Using_Xaml" />
 
 ## <a name="using-xaml"></a>Uso de Xaml
 
-Un reconocedor de movimiento se puede agregar a un control en Xaml mediante las propiedades adjuntas. La sintaxis para agregar un [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) a una imagen se muestra a continuación (en este caso se define un *doble punteo* eventos):
+Un reconocedor de gestos se puede agregar a un control en Xaml mediante propiedades adjuntas. La sintaxis para agregar un elemento [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) a una imagen se muestra a continuación (en este caso se define un evento de *pulsación doble*):
 
 ```xaml
 <Image Source="tapped.jpg">
@@ -52,7 +52,7 @@ Un reconocedor de movimiento se puede agregar a un control en Xaml mediante las 
 </Image>
 ```
 
-El código para el controlador de eventos (en el ejemplo) incrementa un contador y cambia la imagen de color a negro &amp; blanco.
+El código para el controlador de eventos (en el ejemplo) incrementa un contador y cambia la imagen de color a blanco y negro.
 
 ```csharp
 void OnTapGestureRecognizerTapped(object sender, EventArgs args)
@@ -68,9 +68,9 @@ void OnTapGestureRecognizerTapped(object sender, EventArgs args)
 }
 ```
 
-## <a name="using-icommand"></a>Mediante ICommand
+## <a name="using-icommand"></a>Uso de ICommand
 
-Las aplicaciones que usan el patrón Model-View-ViewModel (MVVM) suelen usar `ICommand` en lugar de inserción de controladores de eventos directamente. El [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) puede admitir fácilmente `ICommand` estableciendo el enlace en el código:
+Las aplicaciones que usan el patrón Model-View-ViewModel (MVVM) suelen usar `ICommand` en lugar de conectar controladores de eventos directamente. El elemento [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) puede admitir fácilmente `ICommand` estableciendo el enlace en el código:
 
 ```csharp
 var tapGestureRecognizer = new TapGestureRecognizer();
@@ -90,7 +90,7 @@ o con Xaml:
 </Image>
 ```
 
-El código completo para este modelo de vista se puede encontrar en el ejemplo. La correspondiente `Command` a continuación se muestran los detalles de implementación:
+El código completo para este modelo de vista se puede encontrar en el ejemplo. A continuación se muestran los detalles de implementación de `Command` relevantes:
 
 ```csharp
 public class TapViewModel : INotifyPropertyChanged

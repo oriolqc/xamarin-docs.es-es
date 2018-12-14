@@ -1,6 +1,6 @@
 ---
-title: Xamarin.Forms se compilan los enlaces
-description: En este artículo se explica cómo usar enlaces compilados para mejorar el rendimiento de enlace de datos en las aplicaciones de Xamarin.Forms.
+title: Enlaces compilados de Xamarin.Forms
+description: En este artículo se explica cómo usar enlaces compilados para mejorar el rendimiento del enlace de datos en las aplicaciones de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: ABE6B7F7-875E-4402-A1D2-845CE374402B
 ms.technology: xamarin-forms
@@ -9,38 +9,38 @@ ms.author: dabritch
 ms.date: 10/25/2018
 ms.openlocfilehash: 0b350082c834076a1d69427644259087d64bf26a
 ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 10/25/2018
 ms.locfileid: "50111702"
 ---
-# <a name="xamarinforms-compiled-bindings"></a>Xamarin.Forms se compilan los enlaces
+# <a name="xamarinforms-compiled-bindings"></a>Enlaces compilados de Xamarin.Forms
 
-_Enlaces compilados se resuelven más rápidamente que los enlaces clásicos, lo que mejora el rendimiento de enlace de datos en las aplicaciones de Xamarin.Forms._
+_Los enlaces compilados se resuelven más rápidamente que los enlaces clásicos, lo cual mejora el rendimiento del enlace de datos en las aplicaciones de Xamarin.Forms._
 
-Enlaces de datos tienen dos problemas principales:
+Los enlaces de datos tienen dos problemas principales:
 
-1. No hay ninguna validación en tiempo de compilación de expresiones de enlace. En su lugar, los enlaces se resuelven en tiempo de ejecución. Por lo tanto, todos los enlaces no válidos no se detectan hasta en tiempo de ejecución cuando la aplicación no se comporta según lo esperado o aparecen mensajes de error.
-1. No son más rentable. Los enlaces se resuelven en tiempo de ejecución mediante la inspección de objetos de uso general (reflejo) y la sobrecarga de hacerlo varía en función de la plataforma.
+1. No hay ninguna validación de las expresiones de enlace en tiempo de compilación. Alternativamente, los enlaces se resuelven en tiempo de ejecución. Por lo tanto, los enlaces no válidos no se detectan hasta el tiempo de ejecución, cuando la aplicación no se comporta según lo esperado o aparecen mensajes de error.
+1. No son rentables. Los enlaces se resuelven en tiempo de ejecución mediante la inspección de objetos de uso general (reflejo); el trabajo adicional que supone llevarlo a cabo varía en función de la plataforma.
 
-Enlaces compilados mejoran el rendimiento de enlace de datos en las aplicaciones de Xamarin.Forms mediante la resolución de expresiones de enlace en tiempo de compilación en lugar de en tiempo de ejecución. Además, esta validación en tiempo de compilación de expresiones de enlace permite un mejor experiencia de solución de problemas porque los enlaces no válidos se notifican como errores de compilación de desarrollador.
+Los enlaces compilados mejoran el rendimiento de enlace de datos en las aplicaciones de Xamarin.Forms mediante la resolución de expresiones de enlace en tiempo de compilación en lugar de en tiempo de ejecución. Además, esta validación en tiempo de compilación de expresiones de enlace permite una mejor experiencia de solución de problemas, porque los enlaces no válidos se notifican como errores de compilación.
 
-Es el proceso para usar enlaces compilados:
+El proceso para usar enlaces compilados es el siguiente:
 
-1. Habilitar la compilación de XAML. Para obtener más información sobre la compilación de XAML, vea [compilación XAML](~/xamarin-forms/xaml/xamlc.md).
-1. Establecer un `x:DataType` atributo un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement) para el tipo del objeto que el `VisualElement` y sus elementos secundarios se enlazará. Tenga en cuenta que este atributo se vuelva a definir en cualquier ubicación en una jerarquía de vistas.
+1. Habilite la compilación XAML. Para obtener más información acerca de la compilación XAML, consulte [XAML Compilation](~/xamarin-forms/xaml/xamlc.md) (Compilación XAML).
+1. Establezca un atributo `x:DataType` de un elemento [`VisualElement`](xref:Xamarin.Forms.VisualElement) para el tipo del objeto al cual `VisualElement` y sus elementos secundarios se enlazará. Tenga en cuenta que este atributo puede volver a definirse en cualquier ubicación en una jerarquía de vistas.
 
 > [!NOTE]
-> Se recomienda para establecer el `x:DataType` atributo del mismo nivel en la jerarquía de vistas como la [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) está establecido.
+> Se recomienda establecer el atributo `x:DataType` en el mismo nivel de la jerarquía de vistas en que está establecido [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext).
 
-En tiempo de compilación XAML, las expresiones de enlace no válido se notificarán como errores de compilación. Sin embargo, el compilador XAML solo notificará un error de compilación para la primera expresión de enlace no válido que encuentra. Las expresiones de enlace válido que se definen en el `VisualElement` o sus elementos secundarios será compilado, independientemente de si el [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) está establecido en XAML o código. Compilar una expresión de enlace genera un código compilado que se obtendrá un valor de una propiedad en el *origen*y establézcalo en la propiedad en el *destino* que se especifica en el marcado. Además, dependiendo de la expresión de enlace, el código generado puede observar los cambios en el valor de la *origen* propiedad y actualizar el *destino* propiedad y se puede insertar los cambios desde el *destino* a la *origen*.
+En tiempo de compilación XAML, las expresiones de enlace no válidas se notificarán como errores de compilación. Sin embargo, el compilador XAML solo notificará un error de compilación para la primera expresión de enlace no válida que encuentre. Las expresiones de enlace válidas que se definen en `VisualElement` o en sus elementos secundarios se compilarán, independientemente de si [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) está establecido en XAML o en código. La compilación de una expresión de enlace genera un código compilado que obtendrá un valor de una propiedad en el *origen* y lo establecerá en la propiedad en el *destino* que se especifica en el marcado. Además, dependiendo de la expresión de enlace, el código generado puede observar cambios en el valor de la propiedad de *origen* y actualizar la propiedad de *destino*, y puede insertar los cambios desde el *destino* de nuevo al *origen*.
 
 > [!IMPORTANT]
-> Enlaces compilados actualmente están deshabilitados para las expresiones de enlace que definen el [ `Source` ](xref:Xamarin.Forms.Binding.Source) propiedad. Esto es porque el `Source` propiedad siempre se establece mediante la `x:Reference` extensión de marcado, que no se puede resolver en tiempo de compilación.
+> Los enlaces compilados actualmente están deshabilitados para las expresiones de enlace que definen la propiedad [`Source`](xref:Xamarin.Forms.Binding.Source). Esto es así porque la propiedad `Source` siempre se establece mediante la extensión de marcado `x:Reference`, que no se puede resolver en tiempo de compilación.
 
 ## <a name="using-compiled-bindings"></a>Uso de enlaces compilados
 
-El **compilado Selector de colores** página se muestra el uso compilados enlaces entre las vistas de Xamarin.Forms y las propiedades de ViewModel:
+En la página **Compiled Color Selector** (Selector de colores compilados) se muestra el uso de enlaces compilados entre las vistas de Xamarin.Forms y las propiedades de ViewModel:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -68,26 +68,26 @@ El **compilado Selector de colores** página se muestra el uso compilados enlace
 </ContentPage>
 ```
 
-La raíz [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) crea una instancia de la `HslColorViewModel` e inicializa el `Color` propiedad dentro de las etiquetas de elemento de propiedad para el [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) propiedad. Esta raíz `StackLayout` también define la `x:DataType` atributo como el tipo de modelo de vista, lo que indica que las expresiones de enlace en la raíz `StackLayout` jerarquía de vistas que se va a compilar. Esto se puede comprobar si cambia cualquiera de las expresiones de enlace para enlazar a una propiedad ViewModel inexistente, lo que dará lugar a un error de compilación.
+El elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) raíz crea una instancia de `HslColorViewModel` e inicializa la propiedad `Color` dentro de las etiquetas de elemento de propiedad para la propiedad [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext). El elemento `StackLayout` raíz también define el atributo `x:DataType` como el tipo ViewModel, lo cual indica que todas las expresiones de enlace en la jerarquía de vistas `StackLayout` raíz se compilarán. Esto se puede comprobar cambiando cualquiera de las expresiones de enlace para enlazar a una propiedad ViewModel inexistente, lo cual generará a un error de compilación.
 
 > [!IMPORTANT]
-> El `x:DataType` se puede volver a definido en cualquier momento en una jerarquía de vistas de atributo.
+> El atributo `x:DataType` puede volver a definirse en cualquier punto de una jerarquía de vistas.
 
-El [ `BoxView` ](xref:Xamarin.Forms.BoxView), [ `Label` ](xref:Xamarin.Forms.Label) elementos, y [ `Slider` ](xref:Xamarin.Forms.Slider) vistas heredan el contexto de enlace desde el [ `StackLayout` ](xref:Xamarin.Forms.StackLayout). Estas vistas son todos los destinos de enlace que hacen referencia a las propiedades de origen en el modelo de vista. Para el [ `BoxView.Color` ](xref:Xamarin.Forms.BoxView.Color) propiedad y el [ `Label.Text` ](xref:Xamarin.Forms.Label.Text) propiedad, los enlaces de datos son `OneWay` : se establecen las propiedades de la vista de las propiedades en ViewModel. Sin embargo, el [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) propiedad usa un `TwoWay` enlace. Esto permite que cada `Slider` debe establecerse de ViewModel y también del modelo de vista debe establecerse de cada uno `Slider`.
+Los elementos [`BoxView`](xref:Xamarin.Forms.BoxView), [`Label`](xref:Xamarin.Forms.Label) y las vistas [`Slider`](xref:Xamarin.Forms.Slider) heredan el contexto de enlace del elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout). Todas estas vistas son destinos de enlace que hacen referencia a las propiedades de origen en ViewModel. Para la propiedad [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) y la propiedad [`Label.Text`](xref:Xamarin.Forms.Label.Text), los enlaces de datos son `OneWay`; las propiedades de las vista se establecen a partir de las propiedades en ViewModel. Sin embargo, la propiedad [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) utiliza un enlace `TwoWay`. Esto permite que cada `Slider` se establezca a partir de ViewModel, y que ViewModel se establezca a partir de cada `Slider`.
 
-Cuando la aplicación se ejecuta primero, el [ `BoxView` ](xref:Xamarin.Forms.BoxView), [ `Label` ](xref:Xamarin.Forms.Label) elementos, y [ `Slider` ](xref:Xamarin.Forms.Slider) elementos están establecidos de la clase ViewModel basada en inicial `Color` propiedad establecida cuando se crea una instancia de ViewModel. Esto se muestra en las capturas de pantalla siguiente:
+Cuando la aplicación se ejecuta por primera vez, los elementos [`BoxView`](xref:Xamarin.Forms.BoxView), [`Label`](xref:Xamarin.Forms.Label), y los elementos [`Slider`](xref:Xamarin.Forms.Slider) están establecidos a partir de ViewModel en base a la propiedad `Color` inicial establecida cuando se creó una instancia de ViewModel. Esto se muestra en la captura de pantalla siguiente:
 
-[![Compilar Selector de colores](compiled-bindings-images/compiledcolorselector-small.png "compilado Selector de colores")](compiled-bindings-images/compiledcolorselector-large.png#lightbox "compilado Selector de colores")
+[![Selector de colores compilados](compiled-bindings-images/compiledcolorselector-small.png "Compiled Color Selector")](compiled-bindings-images/compiledcolorselector-large.png#lightbox "Compiled Color Selector")
 
-Como se manipulan los controles deslizantes, el [ `BoxView` ](xref:Xamarin.Forms.BoxView) y [ `Label` ](xref:Xamarin.Forms.Label) elementos se actualizan en consecuencia.
+A medida que se manipulan los controles deslizantes, los elementos [`BoxView`](xref:Xamarin.Forms.BoxView) y [`Label`](xref:Xamarin.Forms.Label) se actualizan del modo correspondiente.
 
-Para obtener más información acerca de este selector de colores, consulte [ViewModels y notificaciones de cambio de propiedad](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#viewmodels-and-property-change-notifications).
+Para obtener más información acerca de este selector de colores, consulte [ViewModels and Property-Change Notifications](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#viewmodels-and-property-change-notifications) (ViewModels y las notificaciones de cambio de propiedad).
 
-## <a name="using-compiled-bindings-in-a-datatemplate"></a>Uso de enlaces compilados en una DataTemplate
+## <a name="using-compiled-bindings-in-a-datatemplate"></a>Uso de enlaces compilados en DataTemplate
 
-Los enlaces en un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) se interpretan en el contexto del objeto con plantilla. Por lo tanto, cuando utilice compila los enlaces en un `DataTemplate`, `DataTemplate` debe declarar el tipo de su objeto de datos mediante el `x:DataType` atributo.
+Los enlaces en [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) se interpretan en el contexto del objeto del cual se crea la plantilla. Por lo tanto, cuando utilice enlaces de compilación en `DataTemplate`, `DataTemplate` debe declarar el tipo de su objeto de datos mediante el atributo `x:DataType`.
 
-El **compila la lista de colores** página se muestra el uso de enlaces compilados en un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate):
+En la página **Compiled Color List** (Lista de colores compilados) se muestra el uso de enlaces compilados en [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -120,21 +120,21 @@ El **compila la lista de colores** página se muestra el uso de enlaces compilad
 </ContentPage>
 ```
 
-El [ `ListView.ItemsSource` ](xref:Xamarin.Forms.ListView) propiedad está establecida en estático `NamedColor.All` propiedad. El `NamedColor` clase usa la reflexión de .NET para enumerar todos los campos públicos estáticos en la [ `Color` ](xref:Xamarin.Forms.Color) estructura y almacenarlas con sus nombres en una colección que es accesible desde estático `All` propiedad. Por lo tanto, el `ListView` se rellena con todos los `NamedColor` instancias. Para cada elemento de la `ListView`, el contexto de enlace para el elemento está establecido en un `NamedColor` objeto. El [ `BoxView` ](xref:Xamarin.Forms.BoxView) y [ `Label` ](xref:Xamarin.Forms.Label) elementos en el [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) están enlazados a `NamedColor` propiedades.
+La propiedad [`ListView.ItemsSource`](xref:Xamarin.Forms.ListView) está establecida en la propiedad `NamedColor.All` estática. La clase `NamedColor` usa la fijación de .NET para enumerar todos los campos públicos estáticos en la estructura de [`Color`](xref:Xamarin.Forms.Color) y almacenarlos con sus nombres en una colección que sea accesible desde la propiedad `All` estática. Por lo tanto, `ListView` se rellena con todas las instancias de `NamedColor`. Para cada elemento de `ListView`, el contexto de enlace para el elemento está establecido en un objeto `NamedColor`. Los elementos [`BoxView`](xref:Xamarin.Forms.BoxView) y [`Label`](xref:Xamarin.Forms.Label) de [`ViewCell`](xref:Xamarin.Forms.ViewCell) están enlazados a propiedades `NamedColor`.
 
-Tenga en cuenta que el [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) define la `x:DataType` atributo sea el `NamedColor` tipo, que indica que los en las expresiones de enlace el `DataTemplate` jerarquía de vistas que se va a compilar. Esto se puede comprobar si se cambia cualquiera de las expresiones de enlace para enlazar a un inexistente `NamedColor` propiedad, que se producirá un error de compilación.
+Tenga en cuenta que [`x:DataType``NamedColor` define el atributo `DataTemplate` para ser del tipo `DataTemplate`, lo cual indica que todas las expresiones de enlace en la jerarquía de vistas ](xref:Xamarin.Forms.DataTemplate) se compilarán. Esto se puede comprobar cambiando cualquiera de las expresiones de enlace para enlazar a una propiedad `NamedColor` inexistente, lo cual generará a un error de compilación.
 
-Cuando la aplicación se ejecuta primero, el [ `ListView` ](xref:Xamarin.Forms.ListView) se rellena con `NamedColor` instancias. Cuando un elemento de la `ListView` está activada, el [ `BoxView.Color` ](xref:Xamarin.Forms.BoxView.Color) propiedad se establece en el color del elemento seleccionado en el `ListView`:
+Cuando la aplicación se ejecuta por primera vez, [`ListView`](xref:Xamarin.Forms.ListView) se rellena con instancias de `NamedColor`. Cuando un elemento de `ListView` está seleccionado, la propiedad [`BoxView.Color`](xref:Xamarin.Forms.BoxView.Color) se establece en el color del elemento seleccionado en `ListView`:
 
-[![Compila la lista de colores](compiled-bindings-images/compiledcolorlist-small.png "compilado Color lista]")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Compiled Color List")
+[![Lista de colores compilados](compiled-bindings-images/compiledcolorlist-small.png "Compiled Color List]")](compiled-bindings-images/compiledcolorlist-large.png#lightbox "Compiled Color List")
 
-Seleccionar otros elementos de la [ `ListView` ](xref:Xamarin.Forms.BoxView) actualiza el color de la [ `BoxView` ](xref:Xamarin.Forms.BoxView).
+Al seleccionar otros elementos de [`ListView`](xref:Xamarin.Forms.BoxView) se actualiza el color de [`BoxView`](xref:Xamarin.Forms.BoxView).
 
-## <a name="combining-compiled-bindings-with-classic-bindings"></a>Enlaces de combinación que se compilan con enlaces clásicos
+## <a name="combining-compiled-bindings-with-classic-bindings"></a>Combinación de enlaces compilados con enlaces clásicos
 
-Las expresiones de enlace solo se compilan para la jerarquía de vistas que el `x:DataType` atributo se define en. Por el contrario, todas las vistas en una jerarquía en el que el `x:DataType` no está definido el atributo usará enlaces clásicos. Por lo tanto, es posible combinar compilados enlaces y enlaces clásicos en una página. Por ejemplo, en la anterior sección las vistas dentro de la [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) utilizan enlaces compilados, mientras que el [ `BoxView` ](xref:Xamarin.Forms.BoxView) que se establece en el color seleccionado en el [ `ListView` ](xref:Xamarin.Forms.ListView) no lo hace.
+Las expresiones de enlace solo se compilan para la jerarquía de vistas en la cual está definido el atributo `x:DataType`. Por contra, todas las vistas en una jerarquía en la cual el atributo `x:DataType` no esté definido utilizarán enlaces clásicos. Por lo tanto, es posible combinar enlaces compilados y enlaces clásicos en una página. Por ejemplo, en la sección anterior, las vistas dentro de [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) utilizan enlaces compilados, mientras que el elemento [`BoxView`](xref:Xamarin.Forms.BoxView) que se establece en el color seleccionado en [`ListView`](xref:Xamarin.Forms.ListView), no lo hace.
 
-Estructurar una cuidadosa de `x:DataType` atributos, por tanto, pueden provocar una página mediante enlaces compilados y clásicos. Como alternativa, el `x:DataType` atributo se puede volver a definido en cualquier momento en una jerarquía de vistas para `null` utilizando el `x:Null` extensión de marcado. Esto indica que las expresiones de enlace dentro de la jerarquía de vistas utilizará enlaces clásicos. El *enlaces mixto* página muestra este enfoque:
+Una estructuración cuidadosa de atributos `x:DataType`, por lo tanto, puede conseguir que una página utilice enlaces compilados y clásicos. De forma alternativa, el atributo `x:DataType` se puede volver a definir en cualquier punto en una jerarquía de vistas para `null` utilizando la extensión de marcado `x:Null`. Esto indica que las expresiones de enlace dentro de la jerarquía de vistas utilizarán enlaces clásicos. La página *Mixed Bindings* (Enlaces mixtos) muestra este enfoque:
 
 ```xaml
 <StackLayout x:DataType="local:HslColorViewModel">
@@ -156,21 +156,21 @@ Estructurar una cuidadosa de `x:DataType` atributos, por tanto, pueden provocar 
 </StackLayout>   
 ```
 
-La raíz [ `StackLayout` ](xref:Xamarin.Forms.StackLayout) establece la `x:DataType` atributo sea el `HslColorViewModel` tipo, que indica que cualquier expresión de enlace en la raíz `StackLayout` jerarquía de vistas que se va a compilar. Sin embargo, interno `StackLayout` redefine el `x:DataType` atributo `null` con el `x:Null` expresión marcado. Por lo tanto, las expresiones de enlace de interno `StackLayout` usan enlaces clásicos. Solo el [ `BoxView` ](xref:Xamarin.Forms.BoxView), dentro de la raíz `StackLayout` ver la jerarquía, los enlaces de usos compilados.
+El elemento [`StackLayout`](xref:Xamarin.Forms.StackLayout) raíz establece el atributo `x:DataType` para ser del tipo `HslColorViewModel`, lo cual indica que todas las expresiones de enlace en la jerarquía de vistas `StackLayout` se compilarán. Sin embargo, el `StackLayout` interno redefine el atributo `x:DataType` en `null` con la expresión de marcado `x:Null`. Por lo tanto, las expresiones de enlace dentro del `StackLayout` interno usan enlaces clásicos. Solo [`BoxView`](xref:Xamarin.Forms.BoxView), dentro de la jerarquía de vistas `StackLayout` raíz, utiliza enlaces compilados.
 
-Para obtener más información sobre la `x:Null` expresión marcado, vea [x: Null Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#null).
+Para obtener más información acerca de la expresión de marcado `x:Null`, consulte [x:Null Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#null) (Extensión de marcado x:Null).
 
 ## <a name="performance"></a>Rendimiento
 
-Enlaces compilados mejoran el rendimiento, con la ventaja de rendimiento varying de enlace de datos. Las pruebas unitarias revelan que:
+Los enlaces compilados mejoran el rendimiento del enlace de datos, con unas ventajas de rendimiento variables. Las pruebas de unidades muestran lo siguiente:
 
-- Un enlace compilado que utiliza la notificación de cambio de propiedad (es decir, un `OneWay`, `OneWayToSource`, o `TwoWay` enlace) se resuelve aproximadamente 8 veces más rápidos que un enlace clásico.
-- Un enlace compilado que no utiliza la notificación de cambio de propiedad (es decir, un `OneTime` enlace) se resuelve aproximadamente 20 veces más rápidos que un enlace clásico.
-- Establecer el [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) en un enlace compilado que utiliza la propiedad notificación de cambio (es decir, un `OneWay`, `OneWayToSource`, o `TwoWay` enlace) es aproximadamente 5 veces más rápido que establecer el `BindingContext`en un enlace clásico.
-- Establecer el [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) en un enlace compilado que no usa la propiedad notificación de cambio (es decir, un `OneTime` enlace) es aproximadamente 7 veces más rápido que el valor la `BindingContext` en un enlace clásico.
+- Un enlace compilado que utiliza la notificación de cambio de propiedad (es decir, un enlace `OneWay`, `OneWayToSource` o `TwoWay`) se resuelve aproximadamente 8 veces más rápidamente que un enlace clásico.
+- Un enlace compilado que no utiliza la notificación de cambio de propiedad (es decir, un enlace `OneTime`) se resuelve aproximadamente 20 veces más rápidamente que un enlace clásico.
+- El establecimiento de [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) en un enlace compilado que utiliza la notificación de cambio de propiedad (es decir, un enlace `OneWay`, `OneWayToSource` o `TwoWay`) se resuelve aproximadamente 5 veces más rápidamente que el establecimiento de `BindingContext` en un enlace clásico.
+- El establecimiento de [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) en un enlace compilado que no utiliza la notificación de cambio de propiedad (es decir, un enlace `OneTime`) se resuelve aproximadamente 7 veces más rápidamente que el establecimiento de `BindingContext` en un enlace clásico.
 
-Estas diferencias de rendimiento se pueden ampliar en dispositivos móviles, depende de la plataforma que se va a usar, la versión del sistema operativo que se utiliza y el dispositivo en el que se ejecuta la aplicación.
+Estas diferencias de rendimiento se pueden ampliar en dispositivos móviles, dependiendo de la plataforma que se utilice, la versión del sistema operativo que se utilice y el dispositivo en el que se ejecute la aplicación.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de enlace de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Demos de enlace de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)

@@ -1,6 +1,6 @@
 ---
 title: Control de archivos en Xamarin.Forms
-description: Archivo de control con Xamarin.Forms puede lograrse mediante código en una biblioteca .NET Standard, o mediante el uso de recursos incrustados.
+description: El control de archivos con Xamarin.Forms puede lograrse mediante código en una biblioteca de .NET Standard o con recursos incrustados.
 ms.prod: xamarin
 ms.assetid: 9987C3F6-5F04-403B-BBB4-ECB024EA6CC8
 ms.technology: xamarin-forms
@@ -9,72 +9,72 @@ ms.author: dabritch
 ms.date: 06/21/2018
 ms.openlocfilehash: 87084a0ccc2970f56e7ef7a6d2f4c59c49032aa0
 ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 11/11/2018
 ms.locfileid: "51527370"
 ---
 # <a name="file-handling-in-xamarinforms"></a>Control de archivos en Xamarin.Forms
 
-_Archivo de control con Xamarin.Forms puede lograrse mediante código en una biblioteca .NET Standard, o mediante el uso de recursos incrustados._
+_El control de archivos con Xamarin.Forms puede lograrse mediante código en una biblioteca de .NET Standard o con recursos incrustados._
 
 ## <a name="overview"></a>Información general
 
-El código de Xamarin.Forms se ejecuta en varias plataformas, cada una con su propio sistema de archivos. Anteriormente, esto significaba que leer y escribir archivos se realizan más fácilmente mediante la API de archivo nativo en cada plataforma. Como alternativa, los recursos incrustados son una solución más sencilla para distribuir los archivos de datos con una aplicación. Sin embargo, con .NET Standard 2.0 es posible compartir código de acceso de archivo en bibliotecas de .NET Standard.
+El código de Xamarin.Forms se ejecuta en varias plataformas, cada una con su propio sistema de archivos. Anteriormente, esto significaba que las acciones de leer y escribir en archivos se realizaban con mayor facilidad mediante las API de archivo nativas de cada plataforma. Como alternativa, los recursos incrustados son una solución más sencilla para distribuir archivos de datos con una aplicación. Pero, con .NET Standard 2.0, se puede compartir el código de acceso a archivos en bibliotecas de .NET Standard.
 
-Para obtener información sobre cómo administrar archivos de imagen, consulte el [trabajar con imágenes](~/xamarin-forms/user-interface/images.md) página.
+Para obtener información sobre cómo controlar archivos de imagen, vea la página [Trabajar con imágenes](~/xamarin-forms/user-interface/images.md).
 
 <a name="Loading_and_Saving_Files" />
 
 ## <a name="saving-and-loading-files"></a>Guardar y cargar archivos
 
-El `System.IO` clases pueden utilizarse para tener acceso el sistema de archivos en cada plataforma. El `File` clase le permite crear, eliminar y leer archivos y el `Directory` clase le permite crear, eliminar o enumerar el contenido de los directorios. También puede usar el `Stream` subclases, lo que pueden proporcionar un mayor grado de control sobre las operaciones de archivo (por ejemplo, la búsqueda de compresión o posición dentro de un archivo).
+Las clases `System.IO` pueden usarse para acceder al sistema de archivos en cada plataforma. La clase `File` le permite crear, eliminar y leer archivos, mientras que la clase `Directory` le permite crear, eliminar o enumerar el contenido de directorios. También puede usar la subclases `Stream`, que pueden proporcionar un mayor nivel de control sobre las operaciones de archivo (como la compresión o la búsqueda de ubicaciones en un archivo).
 
-Se puede escribir un archivo de texto mediante el `File.WriteAllText` método:
+Un archivo de texto se puede escribir con el método `File.WriteAllText`:
 
 ```csharp
 File.WriteAllText(fileName, text);
 ```
 
-Se puede leer un archivo de texto utilizando la `File.ReadAllText` método:
+Un archivo de texto se puede leer con el método `File.ReadAllText`:
 
 ```csharp
 string text = File.ReadAllText(fileName);
 ```
 
-Además, el `File.Exists` método determina si existe el archivo especificado:
+Además, el método `File.Exists` determina si existe el archivo especificado:
 
 ```csharp
 bool doesExist = File.Exists(fileName);
 ```
 
-La ruta de acceso del archivo en cada plataforma puede determinarse a partir de una biblioteca .NET Standard con un valor de la [ `Environment.SpecialFolder` ](xref:System.Environment.SpecialFolder) enumeración como el primer argumento para el `Environment.GetFolderPath` método. A continuación, se pueden combinar con un nombre de archivo con el `Path.Combine` método:
+La ruta del archivo en cada plataforma puede determinarse desde una biblioteca de .NET Standard mediante el uso de un valor de la enumeración [`Environment.SpecialFolder`](xref:System.Environment.SpecialFolder) como el primer argumento para el método `Environment.GetFolderPath`. Después, esto puede combinarse con un nombre de archivo con el método `Path.Combine`:
 
 ```csharp
 string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "temp.txt");
 ```
 
-Estas operaciones se muestran en la aplicación de ejemplo, que incluye una página que se guarda y carga de texto:
+Estas operaciones se demuestran en la aplicación de ejemplo, donde se incluye una página que guarda y carga texto:
 
-[![Guardar y cargar texto](files-images/saveandload-sml.png "guardar y cargar archivos de aplicación")](files-images/saveandload.png#lightbox "guardar y cargar archivos de aplicación")
+[![Guardar y cargar texto](files-images/saveandload-sml.png "Guardar y cargar archivos en la aplicación")](files-images/saveandload.png#lightbox "Saving and Loading Files in App")
 
 <a name="Loading_Files_Embedded_as_Resources" />
 
-## <a name="loading-files-embedded-as-resources"></a>Cargar archivos incrustados como recursos
+## <a name="loading-files-embedded-as-resources"></a>Cargar archivos insertados como recursos
 
-Para incrustar un archivo en un **.NET Standard** ensamblado, crear o agregar un archivo y asegúrese de que **acción de compilación: EmbeddedResource**.
+Para insertar un archivo en un ensamblado de **.NET Standard**, cree o agregue un archivo y asegúrese de usar esta **acción de compilación: EmbeddedResource**.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![Configurar incrustados la acción de compilación de recursos](files-images/vs-embeddedresource-sml.png "configuración EmbeddedResource BuildAction")](files-images/vs-embeddedresource.png#lightbox "configuración EmbeddedResource BuildAction")
+[![Configurar una acción de compilación de recurso incrustado](files-images/vs-embeddedresource-sml.png "Establecer BuildAction como EmbeddedResource")](files-images/vs-embeddedresource.png#lightbox "Setting EmbeddedResource BuildAction")
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![Archivo de texto incrustado en PCL, configurar acción de compilación de recurso incrustado](files-images/xs-embeddedresource-sml.png "configuración EmbeddedResource BuildAction")](files-images/xs-embeddedresource.png#lightbox "configuración EmbeddedResource BuildAction")
+[![Archivo de texto insertado en PCL, configurando la acción de compilación del recurso incrustado](files-images/xs-embeddedresource-sml.png "Establecer BuildAction como EmbeddedResource")](files-images/xs-embeddedresource.png#lightbox "Setting EmbeddedResource BuildAction")
 
 -----
 
-`GetManifestResourceStream` se usa para tener acceso al archivo incrustado utilizando su **Id. de recurso**. De forma predeterminada, el identificador de recurso es el nombre de archivo como precedida del espacio de nombres predeterminado para el proyecto está incrustado en - en este caso es el ensamblado **WorkingWithFiles** y es el nombre de archivo **PCLTextResource.txt**, por lo que es el identificador de recurso `WorkingWithFiles.PCLTextResource.txt`.
+`GetManifestResourceStream` se usa para acceder al archivo incrustado mediante su **identificador de recurso**. De forma predeterminada, el identificador de recurso es el nombre de archivo que tiene como prefijo el espacio de nombres predeterminado para el proyecto donde se inserta (en este caso, el ensamblado es **WorkingWithFiles** y el nombre de archivo es **PCLTextResource.txt**, por lo que el identificador de recurso es `WorkingWithFiles.PCLTextResource.txt`).
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
@@ -85,11 +85,11 @@ using (var reader = new System.IO.StreamReader (stream)) {
 }
 ```
 
-El `text` variable, a continuación, puede utilizarse para mostrar el texto o en caso contrario, se usa en el código. Esta captura de pantalla de la [aplicación de ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/) muestra el texto representado en un `Label` control.
+Después, la variable `text` puede usarse para mostrar el texto o, en cualquier caso, usarlo en el código. En esta captura de pantalla de la [aplicación de ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/), se muestra el texto representado en un control `Label`.
 
- [![Archivo de texto incrustado en PCL](files-images/pcltext-sml.png "archivo de texto incrustado en PCL que se muestra en la aplicación")](files-images/pcltext.png#lightbox "archivo de texto incrustado en PCL que se muestra en la aplicación")
+ [![Archivo de texto insertado en PCL](files-images/pcltext-sml.png "Archivo de texto insertado en PCL mostrado en la aplicación")](files-images/pcltext.png#lightbox "Embedded Text File in PCL Displayed in App")
 
-Cargar y deserializar un documento XML es igualmente sencilla. El código siguiente muestra un archivo XML que se está cargado y deserializarse desde un recurso y, a continuación, enlaza a un `ListView` para su presentación. El archivo XML contiene una matriz de `Monkey` objetos (la clase se define en el código de ejemplo).
+Cargar y deserializar código XML es igual de sencillo. En el código siguiente, se muestra un archivo XML que se carga y se deserializa desde un recurso y, después, se enlaza a `ListView` para mostrarlo. El archivo XML contiene una matriz de objetos `Monkey` (la clase se define en el código de ejemplo).
 
 ```csharp
 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(LoadResourceText)).Assembly;
@@ -103,21 +103,21 @@ var listView = new ListView ();
 listView.ItemsSource = monkeys;
 ```
 
- [![Archivo XML incrustado en PCL, que se muestran en ListView](files-images/pclxml-sml.png "archivo XML incrustado en PCL que se muestran en ListView")](files-images/pclxml.png#lightbox "archivo XML incrustado en PCL que se muestran en ListView")
+ [![Archivo XML insertado en PCL, mostrado en ListView](files-images/pclxml-sml.png "Archivo XML insertado en PCL mostrado en ListView")](files-images/pclxml.png#lightbox "Embedded XML File in PCL Displayed in ListView")
 
 <a name="Embedding_in_Shared_Projects" />
 
-## <a name="embedding-in-shared-projects"></a>Incrustar en los proyectos compartidos
+## <a name="embedding-in-shared-projects"></a>Insertar en proyectos compartidos
 
-Proyectos compartidos también pueden contener archivos como recursos incrustados, sin embargo, dado que el contenido de un proyecto compartido se compila en los proyectos de referencia, el prefijo usado para incrustado pueden cambiar los identificadores de recursos de archivo. Esto significa que el identificador de recurso para cada archivo incrustado puede ser diferente para cada plataforma.
+Los proyectos compartidos también pueden contener archivos como recursos incrustados; pero, como el contenido de un proyecto compartido se compila en los proyectos a los que se hace referencia, el prefijo usado para los identificadores de recursos del archivo incrustado puede cambiar. Esto quiere decir que el identificador de recurso para cada archivo incrustado puede ser distinto para cada plataforma.
 
-Hay dos soluciones para este problema con los proyectos compartidos:
+Hay disponibles dos soluciones a este problema con los proyectos compartidos:
 
--  **Sincronizar los proyectos** -editar las propiedades del proyecto para cada plataforma para usar el **mismo** espacio de nombres predeterminada y el nombre de ensamblado. Este valor, a continuación, puede ser "codificados" como prefijo para los identificadores en el proyecto compartido de recursos incrustado.
--  **directivas de compilador #if** -usar directivas de compilador que establezca el prefijo de Id. de recurso correcto y use ese valor para construir dinámicamente el identificador de recurso correcto.
+-  **Sincronizar los proyectos**: edite las propiedades del proyecto para cada plataforma con el fin de usar el mismo nombre de ensamblado y el **mismo** espacio de nombres predeterminado. Después, este valor se puede “codificar de forma rígida” como el prefijo para los identificadores de recursos incrustados en el proyecto compartido.
+-  **Directivas de compilador #if**: use directivas de compilador para establecer el prefijo de identificador de recurso correcto y use ese valor para crear de forma dinámica el identificador de recurso correcto.
 
 
-A continuación se muestra código que ilustra la segunda opción. Directivas de compilador se usan para seleccionar el prefijo de recurso codificado de forma rígida (que normalmente es el mismo que el espacio de nombres predeterminado para el proyecto que hace referencia). El `resourcePrefix` variable, a continuación, se usa para crear un identificador de recurso válido concatenando el nombre de archivo del recurso incrustado.
+A continuación, se muestra un ejemplo de código de la segunda opción. Las directivas de compilador se usan para seleccionar el prefijo del recurso codificado de forma rígida (que suele ser el mismo que el espacio de nombres predeterminado del proyecto al que se hace referencia). Después, la variable `resourcePrefix` se usa para crear un identificador de recurso válido al concatenarlo con el nombre de archivo del recurso incrustado.
 
 ```csharp
 #if __IOS__
@@ -136,17 +136,17 @@ Stream stream = assembly.GetManifestResourceStream
 
 <a name="Organizing_Resources" />
 
-### <a name="organizing-resources"></a>Organizar los recursos
+### <a name="organizing-resources"></a>Organización de recursos
 
-Los ejemplos anteriores se supone que el archivo está incrustado en la raíz del proyecto de biblioteca estándar. NET, en cuyo caso el identificador de recurso es la forma **Namespace.Filename.Extension**, tales como `WorkingWithFiles.PCLTextResource.txt` y `WorkingWithFiles.iOS.SharedTextResource.txt`.
+En los ejemplos anteriores, se da por supuesto que el archivo está insertado en el directorio raíz del proyecto de la biblioteca de .NET Standard, por lo que el identificador de recurso tendría el formato **EspacioDeNombres.NombreDeArchivo.Extensión**, como `WorkingWithFiles.PCLTextResource.txt` y `WorkingWithFiles.iOS.SharedTextResource.txt`.
 
-Es posible organizar los recursos incrustados en las carpetas. Cuando se coloca un recurso incrustado en una carpeta, el nombre de carpeta se convierte en parte del identificador del recurso (separado por puntos), por lo que se convierte en el formato de Id. de recurso **Namespace.Folder.Filename.Extension**. Colocación de los archivos utilizados en la aplicación de ejemplo en una carpeta **MiCarpeta** haría que los identificadores de recurso correspondiente `WorkingWithFiles.MyFolder.PCLTextResource.txt` y `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
+Los recursos incrustados se pueden organizar en carpetas. Cuando un recurso incrustado se coloca en una carpeta, el nombre de carpeta se convierte en parte del identificador de recurso (separado por puntos), de forma que el formato del identificador de recurso se convierte en **EspacioDeNombres.Carpeta.NombreDeArchivo.Extensión**. Al colocar los archivos usados en la aplicación de ejemplo en una carpeta **MyFolder**, los identificadores de recurso correspondientes serían `WorkingWithFiles.MyFolder.PCLTextResource.txt` y `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
 
 <a name="Debugging_Embedded_Resources" />
 
-### <a name="debugging-embedded-resources"></a>Depuración de recursos incrustados
+### <a name="debugging-embedded-resources"></a>Depurar recursos incrustados
 
-Dado que a veces es difícil de entender por qué no se puede cargar un recurso determinado, el siguiente código de depuración se puede agregar temporalmente a una aplicación para ayudarle a confirmar que los recursos están configurados correctamente. Dará como resultado conocidos todos los recursos incrustados en el ensamblado especificado para el **errores** pad para ayudar a depurar problemas de carga de recursos.
+Como a veces es difícil comprender por qué no se carga un recurso específico, puede agregarse de forma temporal el siguiente código de depuración a una aplicación para ayudar a confirmar que los recursos se han configurado correctamente. En el panel **Errores**, se mostrarán todos los recursos incrustados conocidos en el ensamblado específico para ayudar a depurar los problemas de carga de recursos.
 
 ```csharp
 using System.Reflection;
@@ -160,11 +160,11 @@ foreach (var res in assembly.GetManifestResourceNames()) {
 
 ## <a name="summary"></a>Resumen
 
-Este artículo le haya mostrado algunas operaciones de archivos simple para guardar y cargar texto en el dispositivo y para cargar recursos incrustados. Es posible compartir código de acceso de archivo en bibliotecas de .NET Standard con .NET Standard 2.0.
+En este artículo, se muestran algunas operaciones de archivo sencillas para guardar y cargar texto en el dispositivo y para cargar recursos incrustados. Con .NET Standard 2.0, se puede compartir el código de acceso a archivos en bibliotecas de .NET Standard.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [FilesSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples) (Ejemplos de Xamarin.Forms)
-- [Trabajar con el sistema de archivos de Xamarin.iOS](~/ios/app-fundamentals/file-system.md)
+- [Trabajar con el sistema de archivos en Xamarin.iOS](~/ios/app-fundamentals/file-system.md)
 
