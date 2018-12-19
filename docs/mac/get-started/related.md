@@ -22,7 +22,7 @@ Además de la sección de Mac de [developer.xamarin.com](~/mac/get-started/index
 
 - **[Mac Dev Center](https://developer.apple.com/devcenter/mac/) de Apple**: en muchos casos un ejemplo de qué API llamar en Objective-C se puede convertir a C# de una forma sencilla. Vea [Understanding Mac APIs](~/mac/app-fundamentals/mac-apis.md) (Descripción de las API de Mac) para más información sobre cómo hacerlo.
 
-- [**Stack Overflow**](http://stackoverflow.com/): un excelente recurso para preguntas sencillas como ["How do I auto expand all nodes in an NSOutlineView"](http://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes) ("¿Cómo puedo expandir automáticamente todos los nodos de una NSOutlineView?"). Estos ejemplos estarán a menudo en Objective C y deben convertirse a C#, pero hay un subconjunto de respuestas en C#.
+- [**Stack Overflow**](http://stackoverflow.com/): un excelente recurso para preguntas sencillas como ["¿Cómo puedo expandir automáticamente todos los nodos de una NSOutlineView?"](http://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes). Estos ejemplos estarán a menudo en Objective C y deben convertirse a C#, pero hay un subconjunto de respuestas en C#.
 
 ## <a name="user-interface"></a>Interfaz de usuario
 
