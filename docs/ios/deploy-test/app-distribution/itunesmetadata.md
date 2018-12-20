@@ -20,7 +20,7 @@ _En este artículo se habla sobre el archivo iTunesMetadata.plist usado para pro
 
 Cuando se crea una aplicación de iOS en iTune Connect (ya sea para su venta o su distribución gratuita desde iTunes App Store), el desarrollador puede especificar información como el género de la aplicación, el subgénero, el aviso sobre derechos de autor, los dispositivos iOS admitidos y los requisitos del dispositivo. En el caso de las aplicaciones de iOS que se proporcionan a evaluadores o usuarios empresariales mediante distribución ad hoc, falta esta información.
 
-Para proporcionar la información que falta en una distribución ad hoc, se puede crear un archivo `iTunesMetadata.plist` opcional e incluirlo en el archivo IPA de las aplicaciones. Este archivo plist es un archivo XML con un formato especial (vea [Property List Programming Guide (Guía de programación de la lista de propiedades)](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) para obtener más información) que contiene pares de clave/valor que definen la información sobre una aplicación de iOS determinada.
+Para proporcionar la información que falta en una distribución ad hoc, se puede crear un archivo `iTunesMetadata.plist` opcional e incluirlo en el archivo IPA de las aplicaciones. Este archivo plist es un archivo XML con un formato especial (vea [Property List Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) [Guía de programación de la lista de propiedades] para obtener más información) que contiene pares de clave/valor que definen la información sobre una aplicación de iOS determinada.
 
 <a name="iTunesMetadata_contents" />
 

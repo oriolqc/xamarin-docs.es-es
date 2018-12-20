@@ -38,7 +38,7 @@ Consulte [Xamarin.UITest](/appcenter/test-cloud/uitest/) para confirmar que el p
 
 UITest automatiza la interfaz de usuario activando controles en la pantalla y ejecutando entradas allí donde un usuario interactuaría normalmente con la aplicación. Para habilitar pruebas que pueden *pulsar un botón* o *escribir texto en un cuadro*, el código de prueba necesita una forma de identificar los controles de la pantalla.
 
-Para que el código de UITest pueda hacer referencia a los controles, cada control necesita un identificador único. En Xamarin.Forms, la forma recomendada de establecer este identificador es mediante la propiedad a[`AutomationId`](xref:Xamarin.Forms.Element.AutomationId), como se muestra a continuación:
+Para que el código de UITest pueda hacer referencia a los controles, cada control necesita un identificador único. En Xamarin.Forms, la forma recomendada de establecer este identificador es mediante la propiedad [`AutomationId`](xref:Xamarin.Forms.Element.AutomationId), como se muestra a continuación:
 
 ```csharp
 var b = new Button {

@@ -36,9 +36,9 @@ Si quiere migrar antes a la experiencia mejorada, hay disponibles compilaciones 
 
 ## <a name="download"></a>Descargar
 
-La distribución de Mobile OpenJDK se instala automáticamente por usted si selecciona los paquetes de Android SDK en el instalador de Visual Studio de Windows. Se incluirá en la actualización a la versión 15.9 para los usuarios que hayan seleccionado Android SDK.
+La distribución de Mobile OpenJDK se instala automáticamente si selecciona los paquetes de Android SDK en el instalador de Visual Studio de Windows. Se incluirá en la actualización a la versión 15.9 para los usuarios que hayan seleccionado Android SDK.
 
-En Mac, Mobile OpenJDK se instalará por usted como parte de la carga de trabajo de Android en instalaciones nuevas. Para los usuarios actuales de Visual Studio para Mac, se les solicitará que lo instalen como parte de la actualización a la versión 7.7. El IDE le solicitará que cambie al nuevo JDK y a partir del próximo reinicio ya se habrá aplicado el cambio.
+En Mac, Mobile OpenJDK se instalará como parte de la carga de trabajo de Android en instalaciones nuevas. Para los usuarios actuales de Visual Studio para Mac, se les solicitará que lo instalen como parte de la actualización a la versión 7.7. El IDE le solicitará que cambie al nuevo JDK y a partir del próximo reinicio ya se habrá aplicado el cambio.
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
@@ -73,7 +73,7 @@ Este problema puede darse en algunos entornos corporativos. OpenJDK ya está en 
 
 ### <a name="unknown-update-type-zip-when-upgrading-visual-studio-for-mac-to-77"></a>Mensaje "tipo de actualización desconocida: zip" al actualizar Visual Studio para Mac a la versión 7.7
 
-Este problema puede producirse si intenta actualizar una versión anterior de Visual Studio para Mac a la versión 7.7. Para solucionarlo, desmarque OpenJDK en el actualizador, instale las demás actualizaciones y compruebe de nuevo si hay actualizaciones para conseguir el paquete de OpenJDK. Si sigue teniendo problemas, puede seguir los [pasos de solución de errores anteriores](#troubleshooting) para instalar OpenJDK manualmente. Informe de un error y adjunte los registros si se encuentra con este problema.
+Este problema puede producirse si intenta actualizar una versión anterior de Visual Studio para Mac a la versión 7.7. Para solucionarlo, desactive OpenJDK en el actualizador, instale las demás actualizaciones y compruebe de nuevo si hay actualizaciones para conseguir el paquete de OpenJDK. Si sigue teniendo problemas, puede seguir los [pasos de solución de errores anteriores](#troubleshooting) para instalar OpenJDK manualmente. Informe de un error y adjunte los registros si se encuentra con este problema.
 
 ## <a name="summary"></a>Resumen
 

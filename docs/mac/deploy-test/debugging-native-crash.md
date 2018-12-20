@@ -159,7 +159,7 @@ Thread 0 Crashed:: Dispatch queue: com.apple.main-thread
 
 ```
 
-Esta guía lo ayudará a rastrear los errores de este tipo, si se producen, e informar de ellos correctamente para que se puedan corregir y solucionarse en su código.
+Esta guía lo ayudará a rastrear los errores de este tipo, si se producen, e informar de ellos correctamente para que se puedan corregir y solucionar en su código.
 
 ### <a name="locating"></a>Búsqueda
 
