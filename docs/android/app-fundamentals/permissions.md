@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 1a73896e4f98a6535bcd7ed66f478d168b01157f
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 204dd903586164691d068a956e741c406df10b36
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526889"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746874"
 ---
 # <a name="permissions-in-xamarinandroid"></a>Permisos de Xamarin.Android
 
@@ -139,7 +139,7 @@ else
 
 Es una práctica recomendada para informar al usuario sobre por qué un permiso es necesario para una aplicación para que se puede realizar una decisión informada para conceder el permiso. Un ejemplo de esto sería una aplicación que toma fotografías y geográfica etiquetas ellos. Está claro al usuario que es necesario el permiso de la cámara, pero podría no ser claro por qué la aplicación también necesita la ubicación del dispositivo. El razonamiento debe mostrar un mensaje para ayudar al usuario a entender por qué el permiso de ubicación es deseable y que se requiere el permiso de la cámara.
 
-El `ActivityCompat.ShouldShowRequestPermissionRational` método se usa para determinar si la lógica que se debe mostrar al usuario. Este método devolverá `true` si debe mostrarse el motivo de un permiso determinado. Esta captura de pantalla muestra un ejemplo de un Snackbar mostrado por una aplicación que explica por qué la aplicación necesita conocer la ubicación del dispositivo:
+El `ActivityCompat.ShouldShowRequestPermissionRationale` método se usa para determinar si la lógica que se debe mostrar al usuario. Este método devolverá `true` si debe mostrarse el motivo de un permiso determinado. Esta captura de pantalla muestra un ejemplo de un Snackbar mostrado por una aplicación que explica por qué la aplicación necesita conocer la ubicación del dispositivo:
 
 ![Justificación de la ubicación](permissions-images/07-rationale-snackbar.png) 
 

@@ -1,18 +1,18 @@
 ---
 title: Creación de extensiones de marcado XAML
-description: En este artículo se explica cómo definir sus propias extensiones de marcado XAML de Xamarin.Forms personalizados. Una extensión de marcado XAML es una clase que implementa la interfaz IMarkupExtension IMarkupExtension.
+description: En este artículo se explica cómo definir sus propias extensiones de marcado XAML de Xamarin.Forms personalizados. Una extensión de marcado XAML es una clase que implementa la IMarkupExtension o IMarkupExtension<T> interfaz.
 ms.prod: xamarin
 ms.assetid: 797C1EF9-1C8E-4208-8610-9B79CCF17D46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 531fb9500bdbf9d07ac3f781113768395465bd50
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e69d4b9dcf93c095804c5ac46527c03049580d1c
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050562"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746809"
 ---
 # <a name="creating-xaml-markup-extensions"></a>Creación de extensiones de marcado XAML
 

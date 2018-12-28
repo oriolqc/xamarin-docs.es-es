@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 4ab6b217190ea633611a9c869ec7e93befcc3c56
-ms.sourcegitcommit: ae34d048aeb23a99678ae768cdeef0c92ca36b51
+ms.openlocfilehash: 146b05cf7ca2bbd05e952ecc9064fbb9168d179a
+ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51681571"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53609940"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Sugerencias para solucionar problemas de Xamarin.iOS 
 
@@ -123,13 +123,13 @@ Los archivos de diseñador se generan mediante la configuración de espacio de n
 
 Configuración de Namespace puede encontrarse en el cuadro de diálogo Opciones del proyecto. El espacio de nombres predeterminado se encuentra en la **General -> configuración de Main** sección. Si está en blanco, se usa el nombre del proyecto como el valor predeterminado. Configuración de espacio de nombres más avanzada puede encontrarse en el **código fuente -> directivas de nomenclatura .NET** sección.
 
-## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>Para las acciones de advertencia: el método privado 'Foo' nunca se utiliza. (CS0169)
+## <a name="warning-for-actions-the-private-method-foo-is-never-used-cs0169"></a>Advertencia para las acciones: Nunca se utiliza el método privado "Foo". (CS0169)
 
 Acciones para los archivos del generador de interfaz se conectan a los widgets mediante la reflexión en tiempo de ejecución, por lo que se espera que esta advertencia.
 
 Puede usar "advertencia #pragma deshabilita 0169" "Habilitar la advertencia #pragma 0169" alrededor de las acciones si desea suprimir esta advertencia solo para estos métodos, o agregar 0169 al campo "Ignorar advertencias" en las opciones del compilador si desea deshabilitarlo para todo el proyecto (no se recomienda).
 
-## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>no se pudo mtouch con el siguiente mensaje: no se puede abrir el ensamblado ' / path/to/yourproject.exe'
+## <a name="mtouch-failed-with-the-following-message-cannot-open-assembly-pathtoyourprojectexe"></a>no se pudo mtouch con el siguiente mensaje: No se puede abrir el ensamblado ' / path/to/yourproject.exe'
 
 Si ve este mensaje de error, por lo general el problema es que la ruta de acceso absoluta al proyecto contiene un espacio. Esto se solucionará en una versión futura de Xamarin.iOS, pero puede solucionar el problema, mueva el proyecto a una carpeta sin espacios en blanco.
 
@@ -212,7 +212,7 @@ Este problema es muy poco frecuente y muy difíciles de reproducir, normalmente 
 
 Adjunte los registros XS, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP} .log**, y **componentes-{TIMESTAMP} .log**(en versiones anteriores de MonoDevelop/XS, simplemente enviar **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**).
 
- **Nota: Se ha corregido el problema anterior en XS 2.2 Final**
+ **NOTA: Se ha corregido el problema anterior en XS 2.2 Final**
 
 ## <a name="compiled-application-is-very-large"></a>Aplicación compilada es muy grande
 
@@ -281,9 +281,9 @@ y se debe resolver el problema.
 
 Visual Studio para Mac 2.2 tiene un error que hace que no vuelva a detectar los certificados de distribución que contienen una coma. Actualice a Visual Studio para Mac 2.2.1.
 
-## <a name="error-afcfilerefwrite-returned-1-during-upload"></a>Error "AFCFileRefWrite devuelto: 1" durante la carga
+## <a name="error-afcfilerefwrite-returned-1-during-upload"></a>Error "AFCFileRefWrite devuelve: 1" durante la carga
 
-Al cargar una aplicación en el dispositivo puede recibir un Error "AFCFileRefWrite devuelto: 1". Esto puede ocurrir si tiene un archivo de longitud cero.
+Al cargar una aplicación en el dispositivo puede recibir un Error "AFCFileRefWrite devuelve: 1". Esto puede ocurrir si tiene un archivo de longitud cero.
 
 ## <a name="error-mtouch-failed-with-no-output"></a>Error "se produjo ninguna salida mtouch"
 
@@ -317,7 +317,7 @@ Siga estos pasos:
 -  Crear un archivo Info.plist personalizado para el proyecto y establecer explícitamente MinimumOSVersion a 3.0 en ella.   Esto reemplazará el valor de MinimumOSVersion 3.2 establecido por Xamarin.iOS.   Si no lo hace, la aplicación no podrá ejecutar en un iPhone.
 -  Recompilación, código postal y carga a iTunes conectan.
 
-## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>Excepción no controlada: System.Exception: no se pudo encontrar someSelector selector: en {type}
+## <a name="unhandled-exception-systemexception-failed-to-find-selector-someselector-on-type"></a>Excepción no controlada: System.Exception: No se pudo encontrar someSelector selector: en {type}
 
 Esta excepción se debe a uno de tres cosas:
 
@@ -398,7 +398,7 @@ Esto se puede utilizar como el nombre del archivo ejecutable en CFBundleExecutab
 
  * "El valor no debe incluir cualquier extensión de nombre de". - [http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](http://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
 
-## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>Error: "tipo de atributo personalizado 0 x 43 no se admite" al hacer doble clic en archivos .xib
+## <a name="error-custom-attribute-type-0x43-is-not-supported-when-double-clicking-xib-files"></a>Error: "No se admite el tipo de atributo personalizado 0 x 43" al hacer doble clic en archivos .xib
 
 Esto se debe al intentar abrir archivos .xib cuando las variables de entorno se establecen incorrectamente. Esto no debería ocurrir con el uso normal de Visual Studio para Mac/Xamarin.iOS y vuelve a abrir Visual Studio para Mac desde /Applications debería corregir el problema.
 
@@ -416,23 +416,3 @@ Para comprobar la acción de compilación, haga clic con el botón derecho en el
 Al incluir 3rd bibliotecas de terceros en la aplicación de Xamarin.iOS, podría obtener un error en el formulario "System.NotSupportedException: No hay datos disponibles para la codificación 437" al intentar compilar y ejecutar la aplicación. Por ejemplo, bibliotecas, como `Ionic.Zip.ZipFile`, puede producir esta excepción durante la operación.
 
 Esto puede solucionarse, abra las opciones para el proyecto de Xamarin.iOS, que se va a **compilación de iOS** > **internacionalización** y comprobando la **West** internacionalización.
-
-
-
-<a name="Can't_upgrade_to_Indie/Business_from_Trial_Account" />
-
-
-## <a name="cant-upgrade-to-indiebusiness-from-trial-account"></a>No se puede actualizar a Indie/Business de cuenta de prueba
-
-Si ha adquirido recientemente Xamarin.iOS e inició previamente una versión de prueba de Xamarin.iOS, deberá completar los pasos siguientes para obtener este cambio de licencia seleccionado por Visual Studio para Mac o Visual Studio.
-
--  Cierre Visual Studio para Mac o Visual Studio
--  Quitar todos los archivos de ~/Library/MonoTouch en Mac o %PROGRAMDATA%\MonoTouch\License\ para Windows
--  Vuelva a abrir Visual Studio para Mac o Visual Studio y compilar un proyecto de Xamarin.iOS
-
-
-## <a name="receiving-activation-incomplete-error-message"></a>Recibir el mensaje de Error 'Incompleta de activación'
-
-Esto puede ocurrir cuando se usa Xamarin.iOS para Visual Studio. Para resolver este problema, envíe los registros desde la ubicación siguiente a [ contact@xamarin.com ](mailto:contact@xamarin.com).
-
--  Ubicación del registro: %LocalAppData%/Xamarin/Logs

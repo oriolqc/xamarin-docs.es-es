@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: c2c0e516c864ec4073d5bb54b77754f58064d6b0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f498aab5bfaffc08a22f62a318f8f9f73ab0afca
+ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116750"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53609914"
 ---
 # <a name="xamarinmac-troubleshooting-tips"></a>Sugerencias para solucionar problemas de Xamarin.Mac
 
@@ -110,10 +110,6 @@ Para proyectos de Xamarin.Mac existentes, deberá crear manualmente el **Entitle
 Escriba `Entitlements` para el nombre y haga clic en el **New** botón. Si el proyecto anteriormente incluye un archivo de derechos, se le pedirá para agregarlo al proyecto en lugar de crear un nuevo archivo:
 
 [![Comprobar la sobrescritura de un archivo](troubleshooting-images/entitlements04.png "comprobando la sobrescritura de un archivo")](troubleshooting-images/entitlements04-large.png#lightbox)
-
-## <a name="contacting-support-business-or-enterprise-licenses"></a>Ponerse en contacto con soporte técnico (licencias business o enterprise)
-
-Si tiene una licencia de enterprise o business, es apto para solicitar ayuda directamente a los ingenieros de Xamarin a través de incidencias de soporte técnico. Consulte [xamarin.com/support](http://xamarin.com/support) para obtener más información.
 
 ## <a name="community-support-on-the-forums"></a>Soporte de la Comunidad en los foros
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 8df7e14088486d0eff9a6370303e83c5e69d4484
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8bc319b53e4a93d5cac35c4f8c3263b72dfe45e2
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119109"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746913"
 ---
 # <a name="images-in-xamarinmac"></a>Imágenes de Xamarin.Mac
 
@@ -219,22 +219,23 @@ MyIcon.Image = NSImage.ImageNamed ("MessageIcon");
 Agregue la siguiente función pública para el controlador de vista:
 
 ```csharp
-public NSImage ImageTintedWithColor (NSImage image, NSColor tint)
-{
-    var tintedImage = image.Copy () as NSImage;
-    var frame = new CGRect (0, 0, image.Size.Width, image.Size.Height);
+public NSImage ImageTintedWithColor(NSImage sourceImage, NSColor tintColor)
+    => NSImage.ImageWithSize(sourceImage.Size, false, rect => {
+        // Draw the original source image
+        sourceImage.DrawInRect(rect, CGRect.Empty, NSCompositingOperation.SourceOver, 1f);
 
-    // Apply tint
-    tintedImage.LockFocus ();
-    tint.Set ();
-    NSGraphics.RectFill (frame, NSCompositingOperation.SourceAtop);
-    tintedImage.UnlockFocus ();
-    tintedImage.Template = false;
+        // Apply tint
+        tintColor.Set();
+        NSGraphics.RectFill(rect, NSCompositingOperation.SourceAtop);
 
-    // Return tinted image
-    return tintedImage;
-}
+        return true;
+    });
 ```
+
+> [!IMPORTANT]
+> Especialmente con la llegada de modo oscuro en macOS Mojave, es importante evitar la `LockFocus` API cuando se representa personalizado de rear `NSImage` objetos. Dichas imágenes se vuelven estáticos y no se actualizará automáticamente para reflejar los cambios de densidad de aspecto o presentación.
+>
+> Empleando el mecanismo de controlador anterior, volver a representar para condiciones dinámicas se realizará automáticamente cuando el `NSImage` se hospeda, por ejemplo, en un `NSImageView`.
 
 Por último, para una imagen de plantilla de matiz, llame a esta función en la imagen para colorear:
 

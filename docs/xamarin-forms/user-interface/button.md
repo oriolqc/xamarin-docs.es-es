@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: 7108b24f73d1f7389bf37fe8640061ae3e077300
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 250b3de2ef41ce488165f3149c72ce28c39e53a3
+ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054429"
+ms.lasthandoff: 12/21/2018
+ms.locfileid: "53746900"
 ---
 # <a name="xamarinforms-button"></a>Botón de Xamarin.Forms
 
@@ -138,7 +138,7 @@ button.Clicked += OnButtonClicked;
 
 ## <a name="disabling-the-button"></a>Deshabilitar el botón
 
-A veces, una aplicación está en un estado determinado donde un determinado `Button` haga clic en no es una operación válida. En esos casos, el `Button` debe deshabilitarse estableciendo su `IsEnabled` propiedad `false`. El ejemplo clásico es un `Entry` control para un nombre de archivo acompañada de un archivo-abrir `Button`: el `Button` debe habilitarse solo si se ha escrito algún texto en el `Entry`.
+A veces, una aplicación está en un estado determinado donde un determinado `Button` haga clic en no es una operación válida. En esos casos, el `Button` debe deshabilitarse estableciendo su `IsEnabled` propiedad `false`. El ejemplo clásico es un `Entry` control para un nombre de archivo acompañada de un archivo-abrir `Button`: El `Button` debe habilitarse solo si se ha escrito algún texto en el `Entry`.
 Puede usar un `DataTrigger` para esta tarea, como se muestra en el [ **datos desencadenadores** ](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers) artículo.
 
 ## <a name="using-the-command-interface"></a>Mediante la interfaz de comandos
@@ -409,7 +409,7 @@ El resultado es que el `Label` solo gira mientras un dedo se encuentra en contac
 
 [![Presione y suelte el botón](button-images/PressAndReleaseButton.png "presione y suelte el botón")](button-images/PressAndReleaseButton-Large.png)
 
-Este tipo de comportamiento tiene aplicaciones para juegos: un dedo mantenido en un `Button` podría provocar que un objeto de la pantalla en movimiento en una dirección determinada.
+Este tipo de comportamiento tiene aplicaciones de juegos: Un dedo mantenido en un `Button` podría provocar que un objeto de la pantalla en movimiento en una dirección determinada.
 
 <a name="button-appearance" />
 
@@ -573,7 +573,7 @@ En el siguiente ejemplo XAML se muestra cómo definir un estado visual para el `
 
         </VisualStateGroup>
     </VisualStateManager.VisualStateGroups>
-</ImageButton>
+</Button>
 ```
 
 El `Pressed` [ `VisualState` ](xref:Xamarin.Forms.VisualState) especifica que, cuando el [ `Button` ](xref:Xamarin.Forms.Button) está presionado, su [ `Scale` ](xref:Xamarin.Forms.VisualElement.Scale) se cambiará la propiedad de su valor predeterminado de 1 a 0,8. El `Normal` `VisualState` especifica que, cuando el `Button` está en estado normal, su `Scale` propiedad se establecerá en 1. Por lo tanto, el efecto general es que cuando el `Button` está presionado, se vuelve a escalar para que sea ligeramente más pequeñas pero cuando el `Button` está publicado, se escalan a su tamaño predeterminado.
@@ -582,7 +582,7 @@ Para obtener más información acerca de los estados visuales, vea [Xamarin.Form
 
 ## <a name="creating-a-toggle-button"></a>Creación de un botón de alternancia
 
-Es posible crear subclases `Button` para que funcione como un conmutador activar / desactivar: pulse el botón una vez para el botón de alternancia en y pulse de nuevo para desactivarlo.
+Es posible crear subclases `Button` para que funcione como un conmutador activar / desactivar: Pulse el botón una vez para el botón de alternancia en y pulse de nuevo para desactivarlo.
 
 La siguiente `ToggleButton` clase se deriva de `Button` y define un nuevo evento denominado `Toggled` y una propiedad booleana denominada `IsToggled`. Estas son las mismas dos definido por el Xamarin.Forms [ `Switch` ](xref:Xamarin.Forms.Switch):
 
