@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: ab5315d169615430f5f5a733c0fa8c2ca9caa4b0
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 15cba21eed510ec13bfa3dc3f176fce30fb4ed68
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172306"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059384"
 ---
 # <a name="customizing-a-map-pin"></a>Personalización de un anclado de mapa
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
 
 _En este artículo se explica cómo crear un representador personalizado para el control de mapa, que muestra un mapa nativo con una marca personalizada y una vista personalizada de los datos de marca en cada plataforma._
 
@@ -136,7 +138,7 @@ El proceso de creación de la clase de representador personalizada es el siguien
 1. Agregue un atributo `ExportRenderer` a la clase de representador personalizada para especificar que se utilizará para representar el mapa personalizado de Xamarin.Forms. Este atributo se usa para registrar al representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
-> Proporcionar un representador personalizado en cada proyecto de la plataforma es un paso opcional. Si no se registra un representador personalizado, se usará el representador predeterminado de la clase base del control.
+> Proporcionar un representador personalizado en cada proyecto de la plataforma es un paso opcional. Si no hay un representador personalizado registrado, se usa el representador predeterminado de la clase base del control.
 
 El siguiente diagrama ilustra las responsabilidades de cada proyecto en la aplicación de ejemplo, junto con las relaciones entre ellos:
 
@@ -146,7 +148,7 @@ Las clases del representador específico de la plataforma, que se derivan de la 
 
 ![](customized-pin-images/screenshots.png "CustomMap en cada plataforma")
 
-La clase `MapRenderer` expone el método `OnElementChanged`, al que se llama cuando se crea un mapa personalizado de Xamarin.Forms para representar el control nativo correspondiente. Este método toma un parámetro `ElementChangedEventArgs` que contiene propiedades `OldElement` y `NewElement`. Estas propiedades representan el elemento de Xamarin.Forms que al que se *adjuntó* el representador y el elemento de Xamarin.Forms al que se *adjunta* el representador, respectivamente. En la aplicación de ejemplo la propiedad `OldElement` será `null` y la propiedad `NewElement` contendrá una referencia a la instancia `CustomMap`.
+La clase `MapRenderer` expone el método `OnElementChanged`, al que se llama cuando se crea un mapa personalizado de Xamarin.Forms para representar el control nativo correspondiente. Este método toma un parámetro `ElementChangedEventArgs` que contiene propiedades `OldElement` y `NewElement`. Estas propiedades representan al elemento de Xamarin.Forms al que *estaba* asociado el representador y al elemento de Xamarin.Forms al que *está* asociado el representador, respectivamente. En la aplicación de ejemplo la propiedad `OldElement` será `null` y la propiedad `NewElement` contendrá una referencia a la instancia `CustomMap`.
 
 El lugar para realizar la personalización de controles nativos es una versión reemplazada del método `OnElementChanged` en cada clase de representador específica de la plataforma. Una referencia con tipo para el control nativo que se usa en la plataforma puede obtenerse a través de la propiedad `Control`. Además, se puede obtener una referencia al control de Xamarin.Forms que se representa mediante la propiedad `Element`.
 
@@ -169,7 +171,7 @@ protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.
 
 Solo se debe configurar el control nativo y suscribir los controladores de eventos cuando se adjunta el presentador personalizado a un nuevo elemento de Xamarin.Forms. De forma similar, solo se debe cancelar la suscripción de los controladores de eventos que se han suscrito cuando cambia el elemento al que está asociado el presentador. Adoptar este enfoque facilita crear un presentador personalizado que no sufra pérdidas de memoria.
 
-Cada clase de presentador personalizado se decora con un atributo `ExportRenderer` que registra el representador con Xamarin.Forms. El atributo toma dos parámetros: el nombre de tipo de control personalizado de Xamarin.Forms que se representa y el nombre de tipo del representador personalizado. El prefijo `assembly` para el atributo especifica que el atributo se aplica a todo el ensamblado.
+Cada clase de presentador personalizado se decora con un atributo `ExportRenderer` que registra el representador con Xamarin.Forms. El atributo toma dos parámetros: el nombre de tipo del control personalizado de Xamarin.Forms que se va a representar y el nombre de tipo del representador personalizado. El prefijo `assembly` para el atributo especifica que el atributo se aplica a todo el ensamblado.
 
 En las secciones siguientes se describe la implementación de cada clase de representador personalizado específico de plataforma.
 

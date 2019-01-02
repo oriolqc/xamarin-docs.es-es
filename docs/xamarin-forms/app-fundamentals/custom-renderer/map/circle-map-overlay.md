@@ -7,28 +7,30 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 3064296d4c78a3342fb27afc971c37a029987e5e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: ed671063aad55cb6c4730494f024a2ec2a016de1
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998562"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051936"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>Resaltado de un área circular en un mapa
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
 
 _En este artículo se explica cómo agregar una superposición circular a un mapa, para resaltar un área circular del mapa._
 
 ## <a name="overview"></a>Información general
 
-Una superposición es un gráfico en capas en un mapa. Las superposiciones admiten dibujar contenido gráfico que se escala con el mapa a medida que se amplía. En las capturas de pantalla siguientes se muestra el resultado de agregar una superposición circular a un mapa:
+Una superposición es un gráfico superpuesto en una capa en un mapa. Las superposiciones admiten dibujar contenido gráfico que se escala con el mapa a medida que se amplía. En las capturas de pantalla siguientes se muestra el resultado de agregar una superposición circular a un mapa:
 
 ![](circle-map-overlay-images/screenshots.png)
 
-Cuando una aplicación de Xamarin.Forms representa un control [`Map`](xref:Xamarin.Forms.Maps.Map), en iOS se crea la instancia de la clase `MapRenderer`, que a su vez crea una instancia del control `MKMapView` nativo. En la plataforma Android, la clase `MapRenderer` crea una instancia del control `MapView` nativo. En la Plataforma universal de Windows (UWP), la clase `MapRenderer` crea una instancia de `MapControl` nativa. El proceso de representación puede aprovecharse para implementar las personalizaciones del mapa específicas de la plataforma al crear un representador personalizado para un `Map` en cada plataforma. El proceso para hacer esto es el siguiente:
+Cuando una aplicación de Xamarin.Forms representa un control [`Map`](xref:Xamarin.Forms.Maps.Map), en iOS se crea la instancia de la clase `MapRenderer`, que a su vez crea una instancia del control `MKMapView` nativo. En la plataforma de Android, la clase `MapRenderer` crea una instancia de un control `MapView` nativo. En la Plataforma universal de Windows (UWP), la clase `MapRenderer` crea una instancia de un elemento `MapControl` nativo. El proceso de representación se puede aprovechar para implementar personalizaciones de mapa específicas de cada plataforma mediante la creación de un representador personalizado para un elemento `Map` en cada plataforma. Para hacerlo, siga este procedimiento:
 
 1. [Cree](#Creating_the_Custom_Map) un mapa personalizado de Xamarin.Forms.
-1. [Consuma](#Consuming_the_Custom_Map) el mapa personalizado de Xamarin.Forms.
-1. [Personalice](#Customizing_the_Map) el mapa mediante la creación de un representador personalizado para el mapa en cada plataforma.
+1. [Use](#Consuming_the_Custom_Map) el mapa personalizado desde Xamarin.Forms.
+1. [Personalice](#Customizing_the_Map) el mapa; para hacerlo, cree un representador personalizado para el mapa en cada plataforma.
 
 > [!NOTE]
 > [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) debe inicializarse y configurarse antes de su uso. Para obtener más información, consulte [`Maps Control`](~/xamarin-forms/user-interface/map.md)
@@ -62,7 +64,7 @@ public class CustomMap : Map
 
 ### <a name="consuming-the-custom-map"></a>Consumo del mapa personalizado
 
-Para consumir el control `CustomMap`, declare una instancia del mismo en la instancia de la página XAML:
+Para usar el control `CustomMap`, declare una instancia de este en la instancia de la página de XAML:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -75,7 +77,7 @@ Para consumir el control `CustomMap`, declare una instancia del mismo en la inst
 </ContentPage>
 ```
 
-De manera alternativa, para consumir el control `CustomMap`, declare una instancia del mismo en la instancia de la página C#:
+También puede usar el control `CustomMap` mediante la declaración de una instancia de este en la instancia de la página de C#:
 
 ```csharp
 public class MapPageCS : ContentPage

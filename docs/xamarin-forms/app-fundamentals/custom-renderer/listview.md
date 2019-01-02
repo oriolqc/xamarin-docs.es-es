@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: b3b73d542faebdb8ab85c989d7812368f4f3ffac
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 39ba281f036b9c57f85629390f5ba76377c99dd8
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38997496"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054216"
 ---
 # <a name="customizing-a-listview"></a>Personalización de una ListView
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/listview/)
 
 _Una ListView de Xamarin.Forms es una vista que muestra una colección de datos como una lista vertical. En este artículo se muestra cómo crear un representador personalizado que encapsula los controles de lista específica de la plataforma y los diseños de celda nativa, lo que permite tener más control sobre el rendimiento del control de lista nativa._
 
@@ -538,7 +540,7 @@ La apariencia y el contenido de cada celda `ListView` nativa se definen mediante
 </DataTemplate>
 ```
 
-El `DataTemplate` especifica los controles utilizados para mostrar el contenido de la celda y su diseño y apariencia. Dos controles de `TextBlock` y un control de `Image` se usan para mostrar el contenido de la celda mediante el enlace de datos. Además, una instancia del `ConcatImageExtensionConverter` se utiliza para concatenar la extensión de archivo `.jpg` para cada nombre de archivo de imagen. Esto garantiza que el control `Image` puede cargar y representar la imagen cuando se establece su propiedad `Source`.
+El `DataTemplate` especifica los controles utilizados para mostrar el contenido de la celda y su diseño y apariencia. Dos controles de `TextBlock` y un control de `Image` se usan para mostrar el contenido de la celda mediante el enlace de datos. Además, una instancia de `ConcatImageExtensionConverter` se utiliza para concatenar la extensión de archivo `.jpg` para cada nombre de archivo de imagen. Esto garantiza que el control `Image` puede cargar y representar la imagen cuando se establece su propiedad `Source`.
 
 #### <a name="responding-to-a-property-change-on-the-custom-control"></a>Responde a un cambio de propiedad en el control personalizado
 

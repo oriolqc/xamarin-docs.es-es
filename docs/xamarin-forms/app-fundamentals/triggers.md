@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: e9ec9288e2b8ea991ef8d41f9b601d0897631b9d
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 7a273d43ce43ca2946e1ff3177fc4575cd92a534
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675219"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050613"
 ---
 # <a name="xamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/WorkingWithTriggers)
 
 Los desencadenadores permiten expresar acciones de forma declarativa en XAML que cambian la apariencia de controles en función de eventos o cambios en propiedades.
 

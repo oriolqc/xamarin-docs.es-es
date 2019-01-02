@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: 13730dce5d4698085abe10cb93da5ba50b87ab01
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 49f66164c707f91f298b2e5cb09b35f1767186cf
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106434"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051586"
 ---
 # <a name="binding-from-a-xamarinforms-controltemplate"></a>Enlace de una clase ControlTemplate de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simplethemewithtemplatebinding/)
 
 _Los enlaces a plantilla permiten a los controles en una plantilla de control enlazar datos a propiedades públicas, lo que permite que los valores de propiedad en los controles de la plantilla de control se puedan cambiar fácilmente. En este artículo se muestra cómo usar enlaces a plantilla para realizar el enlace de datos desde una plantilla de control._
 

@@ -7,22 +7,24 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/18/2017
-ms.openlocfilehash: 6d1948214b97a1b536b07b6420c32e4d27124518
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 0351436259bb782e4f8e3a3405b9620c4e8b20bb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38997548"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050756"
 ---
 # <a name="implementing-text-to-speech"></a>Implementación de texto a voz
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 
 Este artículo le guía durante el proceso de creación de una aplicación multiplataforma que usa [`DependencyService`](xref:Xamarin.Forms.DependencyService) para acceder a API nativas de texto a voz:
 
 - **[Creación de la interfaz](#Creating_the_Interface)** &ndash; comprenda cómo se crea la interfaz en código compartido.
-- **[Implementación de iOS](#iOS_Implementation)** &ndash; aprenda a implementar la interfaz en código nativo para iOS.
-- **[Implementación de Android](#Android_Implementation)** &ndash; aprenda a implementar la interfaz en código nativo para Android.
-- **[Implementación de UWP](#WindowsImplementation)** &ndash; aprenda a implementar la interfaz en código nativo para Plataforma universal de Windows (UWP).
-- **[Implementación en código compartido](#Implementing_in_Shared_Code)** &ndash; aprenda a usar `DependencyService` para llamar a la implementación nativa desde código compartido.
+- **[Implementación de iOS](#iOS_Implementation)**: obtenga información sobre cómo implementar la interfaz en código nativo para iOS.
+- **[Implementación de Android](#Android_Implementation)**: aprenda a implementar la interfaz en código nativo para Android.
+- **[Implementación de UWP](#WindowsImplementation)**: aprenda a implementar la interfaz en código nativo para Plataforma universal de Windows (UWP).
+- **[Implementación en código compartido](#Implementing_in_Shared_Code)**: aprenda a usar `DependencyService` para llamar a la implementación nativa desde código compartido.
 
 La aplicación que usa `DependencyService` tiene la siguiente estructura:
 
@@ -175,4 +177,3 @@ Si se ejecuta esta aplicación en iOS, Android o UWP y se presiona el botón, la
 
 - [Uso de DependencyService (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [Ejemplo de DependencyService](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/DependencyServiceSample/)
-

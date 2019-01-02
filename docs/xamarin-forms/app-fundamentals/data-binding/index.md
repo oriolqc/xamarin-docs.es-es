@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/23/2018
-ms.openlocfilehash: def97ab77781c7a7156d4c4178097184614f3e8b
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: c607cecf6c7044fa4c8d0270a5b8d1471d3f9227
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "35240358"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059066"
 ---
 # <a name="xamarinforms-data-binding"></a>Enlace de datos de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 _El enlace de datos es la técnica que consiste en vincular las propiedades de dos objetos para que los cambios en una propiedad se reflejen automáticamente en la otra propiedad. El enlace de datos es una parte integral de la arquitectura de aplicación Model-View-ViewModel (MVVM)._
 
@@ -71,6 +73,6 @@ Use enlaces compilados para mejorar el rendimiento del enlace de datos.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demos de enlace de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)

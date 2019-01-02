@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 8ee9926eb3b726673711141e7c75a68b607d02d3
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 22392603e337205dcdd4909dc61b6c22ca2f00b9
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994707"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057975"
 ---
 # <a name="implementing-a-view"></a>Implementación de una vista
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/)
 
 _Los controles de interfaz de usuario personalizados de Xamarin.Forms deben derivar de la clase View, que se usa para colocar diseños y controles en la pantalla. En este artículo se muestra cómo crear un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo de vista previa de la cámara del dispositivo._
 
@@ -115,7 +117,7 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 1. Agregue un atributo `ExportRenderer` a la clase del representador personalizado para especificar que se va a usar para representar el control personalizado de Xamarin.Forms. Este atributo se usa para registrar el representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
-> En la mayoría de los elementos de Xamarin.Forms, es opcional proporcionar un representador personalizado en cada proyecto de plataforma. Si no hay un representador personalizado registrado, se usa el representador predeterminado de la clase base del control. Pero los representadores personalizados son necesarios en cada proyecto de plataforma al representar un elemento [View](xref:Xamarin.Forms.View).
+> Para la mayoría de los elementos de Xamarin.Forms, proporcionar un representador personalizado en cada proyecto de la plataforma es un paso opcional. Si no hay un representador personalizado registrado, se usa el representador predeterminado de la clase base del control. Pero los representadores personalizados son necesarios en cada proyecto de plataforma al representar un elemento [View](xref:Xamarin.Forms.View).
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 

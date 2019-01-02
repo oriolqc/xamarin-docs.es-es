@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 00697ca0adf3a34abec90c2f96d9fd9c273d06bb
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: 1677f86379310ee6d5e0973108f85db2a328cd23
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239789"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53048836"
 ---
 # <a name="implementing-a-video-player"></a>Implementación de un reproductor de vídeo
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 A veces es conveniente reproducir archivos de vídeo en una aplicación de Xamarin.Forms. En esta serie de artículos se explica cómo escribir representadores personalizados para iOS, Android y la plataforma Universal de Windows (UWP) para una clase de Xamarin.Forms denominada `VideoPlayer`.
 
@@ -70,4 +72,4 @@ Todos los reproductores de vídeo de la plataforma tienen una barra de posición
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demos de reproductor de vídeo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demostraciones de reproductor de vídeo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)

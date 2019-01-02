@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 44aee8500c7de2ae56b59049368d6025ec49cc5e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 32d0775baa75b70ebc118457945efc0f6c0acec2
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38994833"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057066"
 ---
 # <a name="xamarinforms-modal-pages"></a>Páginas modales de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Modal/)
 
 _Xamarin.Forms es compatible con las páginas modales. Una página modal anima a los usuarios a completar una tarea autocontenida que no se puede abandonar mientras no se complete o se cancele la tarea. En este artículo se muestra cómo navegar a páginas modales._
 

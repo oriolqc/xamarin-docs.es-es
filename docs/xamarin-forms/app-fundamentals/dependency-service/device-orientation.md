@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 52b82033cbd6fe0e1a44f5729c815074852230bf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a63d0d4c90bff36e55d98b731217133fe5958c1f
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115424"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051476"
 ---
 # <a name="checking-device-orientation"></a>Comprobación de la orientación del dispositivo
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/UsingDependencyService)
 
 Este artículo le ayudará a usar [`DependencyService`](xref:Xamarin.Forms.DependencyService) para comprobar la orientación del dispositivo desde código compartido con las API nativas en cada plataforma. Este tutorial se basa en el complemento `DeviceOrientation` existente de Ali Özgür. Para obtener más información, vea el [repositorio de GitHub](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation).
 

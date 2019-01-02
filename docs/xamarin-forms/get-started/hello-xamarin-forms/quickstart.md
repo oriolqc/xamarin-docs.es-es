@@ -9,14 +9,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/13/2018
-ms.openlocfilehash: f836d6212dfdff6c9840e2d780def3df72bc7c27
-ms.sourcegitcommit: 744c0a50420bb091fca8b92a84c20e61c741cf9e
+ms.openlocfilehash: fcd7f1b9d88b7305f9cccd12a799d71c793c42b4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/01/2018
-ms.locfileid: "52742890"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057462"
 ---
 # <a name="xamarinforms-quickstart"></a>Inicio rápido de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Phoneword/)
 
 En este tutorial se muestra cómo crear una aplicación que convierte un número de teléfono alfanumérico especificado por el usuario en un número de teléfono numérico y que llama a ese número. A continuación se muestra la aplicación final:
 

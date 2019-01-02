@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: a0a58cf05c97221a73cd0784b7859bb9c84cef86
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 0511cd1a4cf76368623c56ef53cd98323114f98e
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "38994681"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53058995"
 ---
 # <a name="hierarchical-navigation"></a>Navegación jerárquica
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Hierarchical/)
 
 _La clase NavigationPage proporciona una experiencia de navegación jerárquica en la que el usuario puede navegar por las páginas hacia adelante y hacia atrás, como quiera. La clase implementa la navegación como una pila de objetos de página en la que el último en entrar es el primero en salir (LIFO). En este artículo se muestra cómo utilizar la clase NavigationPage para realizar la navegación en una pila de páginas._
 
@@ -89,7 +91,7 @@ Al invocar el método [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*
 Sin embargo, el orden exacto en el que se producen estos eventos depende de la plataforma. Para obtener más información, consulte el [capítulo 24](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf) del libro sobre Xamarin.Forms de Charles Petzold.
 
 > [!NOTE]
-> Las llamadas a las invalidaciones de [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) y [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) no se pueden tratar como indicaciones garantizadas de navegación de páginas. Por ejemplo, en iOS, la invalidación de `OnDisappearing` se llama en la página activa cuando la aplicación finaliza.
+> Las llamadas a [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) y las invalidaciones de [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) no se pueden tratar como indicaciones garantizadas de navegación de páginas. Por ejemplo, en iOS, la invalidación de `OnDisappearing` se llama en la página activa cuando la aplicación finaliza.
 
 ### <a name="popping-pages-from-the-navigation-stack"></a>Sacar páginas de la pila de navegación
 
@@ -184,7 +186,7 @@ A continuación, se establece la propiedad [`Label.Text`](xref:Xamarin.Forms.Lab
 
 ### <a name="passing-data-through-a-bindingcontext"></a>Pasar datos a través de un objeto BindingContext
 
-Un enfoque alternativo para pasar datos a otra página durante la navegación es establecer el [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página nueva en los datos, como se muestra en el ejemplo de código siguiente:
+Un enfoque alternativo para pasar datos a otra página durante la navegación es establecer el [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página nueva en los datos, como se muestra en el siguiente ejemplo de código:
 
 ```csharp
 async void OnNavigateButtonClicked (object sender, EventArgs e)
@@ -202,9 +204,9 @@ async void OnNavigateButtonClicked (object sender, EventArgs e)
 }
 ```
 
-Este código establece el [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la instancia de `SecondPage` en la instancia de `Contact` y, a continuación, navega a la `SecondPage`.
+Este código establece el [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la instancia de `SecondPage` en la instancia de `Contact` y después navega a la `SecondPage`.
 
-A continuación, la `SecondPage` utiliza el enlace de datos para mostrar los datos de la instancia de `Contact`, como se muestra en el ejemplo de código XAML siguiente:
+Después, la `SecondPage` utiliza el enlace de datos para mostrar los datos de la instancia de `Contact`, como se muestra en el ejemplo de código XAML siguiente:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

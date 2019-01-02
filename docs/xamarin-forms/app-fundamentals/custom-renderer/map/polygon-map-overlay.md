@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: 0a11e9c25922531727ad2fee3bbed9c8d4e2b80c
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 9859df6856f118dcfbc6bb4553b10882295866b2
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998139"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057263"
 ---
 # <a name="highlighting-a-region-on-a-map"></a>Resaltado de una región en un mapa
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
 
 _En este artículo se explica cómo agregar una superposición de polígono a un mapa para resaltar una región del mapa. Los polígonos son una forma cerrada y tienen relleno en su interior._
 

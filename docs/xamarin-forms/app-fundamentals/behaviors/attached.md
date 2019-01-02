@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 2c9bd9ad4e7572b9eae6f0073da8a2c8f1e7c9fc
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 98c15f3e3503ccae164c2bb14b6de13c227893d6
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38995351"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051561"
 ---
 # <a name="attached-behaviors"></a>Comportamientos asociados
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/behaviors/attachednumericvalidationbehavior/)
 
 _Los comportamientos asociados son clases estáticas con una o varias propiedades asociadas. En este artículo, se explica cómo crear y usar comportamientos asociados._
 

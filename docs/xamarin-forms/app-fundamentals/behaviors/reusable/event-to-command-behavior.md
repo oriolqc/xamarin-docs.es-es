@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
-ms.openlocfilehash: 8bf8f86cf708806d1c17b3fe4eda0755f98fd646
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 1c2aea9a5dead1962cfd4bb71d1a1211e8b98ee9
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563191"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056712"
 ---
 # <a name="reusable-eventtocommandbehavior"></a>EventToCommandBehavior reutilizable
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
 
 _Los comportamientos se pueden usar para asociar comandos a los controles que no se han diseñado para interactuar con los comandos. En este artículo se explica cómo crear y consumir un comportamiento de Xamarin.Forms para invocar un comando cuando se desencadena un evento._
 
@@ -208,4 +210,4 @@ En este artículo se ha explicado el uso de un comportamiento de Xamarin.Forms p
 
 - [Comportamiento de EventToCommand (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
 - [Behavior](xref:Xamarin.Forms.Behavior)
-- [Behavior&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)
+- [Comportamiento&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
-ms.openlocfilehash: f67cbb136c42a4bc476c1715ea6fd15255d71dc7
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 2eb6e6f94887301b78f401bf73a4ffaa01559c37
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "38998708"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059397"
 ---
 # <a name="adding-a-pinch-gesture-recognizer"></a>Agregar un reconocedor de gestos de reducir
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/PinchGesture/)
 
 _El gesto de reducir se usa para realizar un zoom interactivo y se implementa con la clase PinchGestureRecognizer. Un escenario común para el gesto de reducir es realizar un zoom interactivo de una imagen en la ubicación donde se realice el gesto. Esto se logra al escalar el contenido de la ventanilla, como se demuestra en este artículo._
 

@@ -7,18 +7,20 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/19/2018
-ms.openlocfilehash: aa060bd16bc0220f6a6026106ff6c8d786daebc1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3b8cf7ec8a42ed031699d8f5e02f32c6eb61458
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105043"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053872"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementación de HybridWebView
 
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/hybridwebview/)
+
 _Los controles de interfaz de usuario personalizados de Xamarin.Forms deben derivar de la clase View, que se usa para colocar diseños y controles en la pantalla. En este artículo se muestra cómo crear un representador personalizado para un control personalizado HybridWebView, lo que mejora los controles web específicos de la plataforma para permitir la invocación de código de C# desde JavaScript._
 
-Todas las vistas de Xamarin.Forms tienen un representador adjunto para cada plataforma que crea una instancia de un control nativo. Cuando una aplicación de Xamarin.Forms representa una instancia de [`View`](xref:Xamarin.Forms.View) en iOS, se crea una instancia de la clase `ViewRenderer`, que a su vez crea una instancia del control `UIView` nativo. En la plataforma Android, la clase `ViewRenderer` crea una instancia de un control `View`. En Plataforma universal de Windows (UWP), la clase `ViewRenderer` crea una instancia de un control `FrameworkElement` nativo. Para obtener más información sobre el representador y las clases de control nativo a las que se asignan los controles de Xamarin.Forms, vea [Clases base y controles nativos del representador](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md).
+Todas las vistas de Xamarin.Forms tienen un representador adjunto para cada plataforma que crea una instancia de un control nativo. Cuando una aplicación de Xamarin.Forms representa una instancia de [`View`](xref:Xamarin.Forms.View) en iOS, se crea una instancia de la clase `ViewRenderer`, que a su vez crea una instancia del control `UIView` nativo. En la plataforma Android, la clase `ViewRenderer` crea una instancia de un control `View`. En Plataforma universal de Windows (UWP), la clase `ViewRenderer` crea una instancia de un control `FrameworkElement` nativo. Para obtener más información sobre el representador y las clases de control nativo a las que se asignan los controles de Xamarin.Forms, vea [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) (Clases base y controles nativos del representador).
 
 El siguiente diagrama muestra la relación entre la clase [`View`](xref:Xamarin.Forms.View) y los controles nativos correspondientes que la implementan:
 
@@ -151,7 +153,7 @@ El proceso para crear la clase del representador personalizado es el siguiente:
 1. Agregue un atributo `ExportRenderer` a la clase del representador personalizado para especificar que se va a usar para representar el control personalizado de Xamarin.Forms. Este atributo se usa para registrar el representador personalizado con Xamarin.Forms.
 
 > [!NOTE]
-> En la mayoría de los elementos de Xamarin.Forms, es opcional proporcionar un representador personalizado en cada proyecto de plataforma. Si no hay un representador personalizado registrado, se usa el representador predeterminado de la clase base del control. Pero los representadores personalizados son necesarios en cada proyecto de plataforma al representar un elemento [View](xref:Xamarin.Forms.View).
+> Para la mayoría de los elementos de Xamarin.Forms, proporcionar un representador personalizado en cada proyecto de la plataforma es un paso opcional. Si no hay un representador personalizado registrado, se usa el representador predeterminado de la clase base del control. Pero los representadores personalizados son necesarios en cada proyecto de plataforma al representar un elemento [View](xref:Xamarin.Forms.View).
 
 El siguiente diagrama muestra las responsabilidades de cada proyecto de la aplicación de ejemplo, junto con las relaciones entre ellos:
 
@@ -189,7 +191,7 @@ protected override void OnElementChanged (ElementChangedEventArgs<NativeListView
 
 Solo se debe crear una instancia de un nuevo control nativo una vez, cuando la propiedad `Control` es `null`. Solo se debe configurar el control y suscribir los controladores de eventos cuando se adjunta el presentador personalizado a un nuevo elemento de Xamarin.Forms. De forma similar, solo se debe cancelar la suscripción de los controladores de eventos que se han suscrito cuando cambia el elemento al que está asociado el presentador. La adopción de este enfoque ayuda a crear un representador personalizado eficaz que no sufra pérdidas de memoria.
 
-Cada clase de presentador personalizado se decora con un atributo `ExportRenderer` que registra el representador con Xamarin.Forms. El atributo toma dos parámetros: el nombre de tipo del control personalizado de Xamarin.Forms que se va a representar y el nombre de tipo del representador personalizado. El prefijo `assembly` del atributo especifica que el atributo se aplica a todo el ensamblado.
+Cada clase de representador personalizado se decora con un atributo `ExportRenderer` que registra el representador con Xamarin.Forms. El atributo toma dos parámetros: el nombre de tipo del control personalizado de Xamarin.Forms que se va a representar y el nombre de tipo del representador personalizado. El prefijo `assembly` del atributo especifica que el atributo se aplica a todo el ensamblado.
 
 En las secciones siguientes se habla de la estructura de la página web cargada por cada control web nativo, el proceso para invocar a C# desde JavaScript y su implementación en cada clase de representador personalizado específico de la plataforma.
 
