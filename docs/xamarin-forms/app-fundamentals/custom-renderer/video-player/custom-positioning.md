@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: b5f3c9dcbaa6ba1a9e86568ccabe38416cc653f2
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: cf2de96022366165e726bc3e6447bb88f30a26bb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35241915"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53057144"
 ---
 # <a name="custom-video-positioning"></a>Barra de posición de vídeo personalizada
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 Los controles de transporte que cada plataforma implementa incluyen una barra de posición. Esta barra es similar a un control deslizante o una barra de desplazamiento y muestra la ubicación actual del vídeo dentro de su duración total. Además, el usuario puede manipular la barra de posición para avanzar o retroceder a una nueva posición en el vídeo.
 
@@ -172,7 +174,7 @@ El descriptor de acceso `get` devuelve la posición actual del vídeo mientras s
 
 En iOS y Android, la propiedad que obtiene la posición actual solo tiene un descriptor de acceso `get`, y hay disponible un método `Seek` para realizar esta segunda tarea. Si se piensa bien, un método `Seek` por separado parece ser un enfoque más sensato que una sola propiedad `Position`. Una sola propiedad `Position` tiene un problema inherente: mientras se reproduce el vídeo, la propiedad `Position` debe actualizarse continuamente para reflejar la nueva posición. Pero no es recomendable que la mayoría de los cambios en la propiedad `Position` hagan que el reproductor de vídeo se mueva a una nueva posición en el vídeo. Si eso ocurriera, el reproductor de vídeo, como respuesta, buscaría el último valor de la propiedad `Position` y el vídeo no avanzaría.
 
-A pesar de las dificultades de implementar una propiedad `Position` con descriptores de acceso `set` y `get`, se ha elegido este enfoque porque es coherente con el `MediaElement` de UWP y tiene una gran ventaja respecto al enlace de datos: la propiedad `Position` del `VideoPlayer` puede enlazarse al control deslizante que se utiliza para mostrar la posición y buscar una posición nueva. Sin embargo, se deben tomar varias precauciones al implementar esta propiedad `Position` para evitar bucles de retroalimentación.
+A pesar de las dificultades de la implementación de una propiedad `Position` con los descriptores de acceso `set` y `get`, se ha elegido este enfoque porque es coherente con UWP `MediaElement`, y tiene una gran ventaja con el enlace de datos: La propiedad `Position` de `VideoPlayer` pueden estar enlazada al control deslizante que se usa para mostrar la posición y para buscar una nueva posición. Sin embargo, se deben tomar varias precauciones al implementar esta propiedad `Position` para evitar bucles de retroalimentación.
 
 ### <a name="setting-and-getting-ios-position"></a>Establecer y obtener la posición en iOS
 

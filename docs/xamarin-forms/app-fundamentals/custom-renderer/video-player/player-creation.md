@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 0090ec798e8d7b1dfb9bd8e25f09d71ec0353b45
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 69e5d74bf9beea02ca8accf6e1f8eb1ccaa5c9fa
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171916"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53061964"
 ---
 # <a name="creating-the-platform-video-players"></a>Creación de reproductores de vídeo de plataforma
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 La solución [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) contiene todo el código necesario para implementar un reproductor de vídeo para Xamarin.Forms. También incluye una serie de páginas en las que se muestra cómo usar el reproductor de vídeo dentro de una aplicación. Todo el código `VideoPlayer` y sus representadores de plataforma residen en carpetas de proyecto denominadas `FormsVideoLibrary` que además usan el espacio de nombres `FormsVideoLibrary`. Esto debería facilitar la copia de los archivos en la propia aplicación y la referencia a las clases.
 
@@ -460,7 +462,7 @@ namespace FormsVideoLibrary.UWP
 }
 ```
 
-Se necesita una propiedad más para empezar a reproducir un vídeo: es la propiedad `Source` fundamental que hace referencia a un archivo de vídeo. La implementación de la propiedad `Source` se describe en el siguiente artículo, [Reproducción de un vídeo de web](web-videos.md).
+Una propiedad más es necesaria para empezar a reproducir un vídeo: se trata de la propiedad fundamental `Source` que hace referencia a un archivo de vídeo. La implementación de la propiedad `Source` se describe en el siguiente artículo, [Reproducción de un vídeo de web](web-videos.md).
 
 
 ## <a name="related-links"></a>Vínculos relacionados

@@ -6,15 +6,17 @@ ms.assetid: 6A724681-55EB-45B8-9EED-7E412AB19DD2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/01/2017
-ms.openlocfilehash: 0a5e2c1a7a7807da91fd98e617467ea251a25bc0
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.date: 12/14/2018
+ms.openlocfilehash: 9b5150eff0290ef5858198459108699be9f9b273
+ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527409"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411770"
 ---
 # <a name="invoking-events-from-effects"></a>Invocación de eventos desde efectos
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
 
 _Un efecto puede definir e invocar un evento, señalando cambios en la vista nativa subyacente. En este artículo se muestra cómo implementar seguimiento multitáctil de bajo nivel y cómo se generan eventos que indican actividad táctil._
 
@@ -351,6 +353,9 @@ static Dictionary<long, TouchRecognizer> idToTouchDictionary =
 ```
 
 Gran parte de la estructura de esta clase `TouchRecognizer` es similar a la de la clase `TouchEffect` de Android.
+
+> [!IMPORTANT]
+> Muchas de las vistas de `UIKit` no tienen la funcionalidad táctil habilitada de forma predeterminada. La funcionalidad táctil se puede habilitar agregando `view.UserInteractionEnabled = true;` a la invalidación `OnAttached` en la clase `TouchEffect` en el proyecto de iOS. Esto debe ocurrir después obtener `UIView`, que se corresponde con el elemento al que está asociado el efecto.
 
 ## <a name="putting-the-touch-effect-to-work"></a>Poner el efecto táctil en funcionamiento
 

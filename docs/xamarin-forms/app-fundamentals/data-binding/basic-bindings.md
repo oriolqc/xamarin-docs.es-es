@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: e31cba5c61624b0bca03443262b95d7497564750
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 62dae2f85abb7327e133f008e27e2519ccdc2f68
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675203"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53051988"
 ---
 # <a name="xamarinforms-basic-bindings"></a>Enlaces básicos de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 Un enlace de datos de Xamarin.Forms enlaza un par de propiedades entre dos objetos, del que al menos uno suele ser un objeto de interfaz de usuario. Estos dos objetos se denominan el *destino* y el *origen*:
 
@@ -135,7 +137,7 @@ Pero eso no es correcto. Ese marcado establece la propiedad `BindingContext` en 
 
 Observe que la propiedad de origen se especifica con la propiedad [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) de `BindingExtension`, que se corresponde con la propiedad [`Path`](xref:Xamarin.Forms.Binding.Path) de la clase [`Binding`](xref:Xamarin.Forms.Binding).
 
-El marcado que se muestra en la página **Enlace XAML básico** se puede simplificar: en las extensiones de marcado XAML como `x:Reference` y `Binding` se pueden definir atributos de *propiedad de contenido*, lo que para las extensiones de marcado XAML significa que no es necesario que aparezca el nombre de propiedad. La propiedad `Name` es la propiedad de contenido de `x:Reference` y la propiedad `Path` es la propiedad de contenido de `Binding`, lo que significa que se pueden eliminar de las expresiones:
+El marcado que se muestra en la página **Basic XAML Binding** (Enlace XAML básico) se puede simplificar: en las extensiones de marcado XAML como `x:Reference` y `Binding` se pueden definir atributos de *propiedad de contenido*, lo que para las extensiones de marcado XAML significa que no es necesario que aparezca el nombre de propiedad. La propiedad `Name` es la propiedad de contenido de `x:Reference` y la propiedad `Path` es la propiedad de contenido de `Binding`, lo que significa que se pueden eliminar de las expresiones:
 
 ```xaml
 <Label Text="TEXT"
@@ -329,5 +331,5 @@ En el [artículo siguiente](binding-mode.md), verá cómo el *modo de enlace* pu
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de enlace de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

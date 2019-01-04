@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 8efd93204b848113e0ed95c8066a5506eb517ac6
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 2dd7efb9f295143775961afb97e70b5f241d1337
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52170954"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056128"
 ---
 # <a name="xamarinforms-string-formatting"></a>Formato de cadena de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 A veces es conveniente usar enlaces de datos para mostrar la representación de cadena de un objeto o valor. Por ejemplo, es posible que quiera utilizar una `Label` para mostrar el valor actual de un `Slider`. En este enlace de datos, `Slider` es el origen y el destino es la propiedad `Text` de `Label`.
 
@@ -178,7 +180,7 @@ Ahora hay tres pares de elementos `Slider` y `Label` que están enlazados a la m
 
 Tal vez se pregunte cómo podría mostrar sus valores RGB (rojos, verdes y azules) en formato hexadecimal de dos dígitos tradicional. Los valores enteros no están directamente disponibles desde la estructura de `Color`. Una solución sería calcular valores enteros de los componentes de color dentro de ViewModel y exponerlos como propiedades. Después puede aplicarles formato utilizando la especificación de formato `X2`.
 
-Otro enfoque es más general: puede escribir un *convertidor de valores de enlace* como se describe en el siguiente artículo, [**Xamarin.Forms Binding Value Converters**](converters.md) (Convertidores de valores de enlace de Xamarin.Forms).
+Otro enfoque es más general: puede escribir un *convertidor de valores de enlace* como se describe en el siguiente artículo, [**Convertidor de valores de enlace de Xamarin.Forms**](converters.md).
 
 Empero, el siguiente artículo explora la [**Ruta de enlace**](binding-path.md) con más detalle y muestra cómo se puede utilizar para hacer referencia a elementos de las colecciones y subpropiedades.
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 68c7869254ae861cef8307431d925368082be921
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 37fbc0107414521a87c263d327ffd9b8940384eb
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675268"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53053469"
 ---
 # <a name="the-xamarinforms-command-interface"></a>La interfaz de comandos de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 En la arquitectura Model-View-ViewModel (MVVM), los enlaces de datos se definen entre las propiedades de ViewModel, que suele ser una clase que se deriva de `INotifyPropertyChanged`, y las propiedades en la vista, que suele ser el archivo XAML. A veces, una aplicación tiene necesidades que van más allá de estos enlaces de propiedad y solicita al usuario que inicie comandos que influyen en el modelo de vista. Por lo general, estos comandos se señalizan mediante clics de botón o pulsaciones con el dedo, y tradicionalmente se procesan en el archivo de código subyacente en un controlador para el evento `Clicked` del elemento `Button` o el evento `Tapped` de un elemento `TapGestureRecognizer`.
 
@@ -412,7 +414,7 @@ public class PersonCollectionViewModel : INotifyPropertyChanged
 
 El método `canExecute` devuelve `true` en cualquier momento que se modifique un elemento `PersonViewModel`.
 
-Estas técnicas se podrían adaptar para escenarios más complejos: una propiedad de `PersonCollectionViewModel` se podría enlazar a la propiedad `SelectedItem` del objeto `ListView` para editar los elementos existentes, y se podría agregar un botón **Delete** para eliminar esos elementos.
+Estas técnicas se podrían adaptar para escenarios más complejos: una propiedad de `PersonCollectionViewModel` se podría enlazar a la propiedad `SelectedItem` del objeto `ListView` para editar los elementos existentes, y se podría agregar un botón **Delete** (Eliminar) para eliminar esos elementos.
 
 No es necesario definir los métodos `execute` y `canExecute` como funciones lambda. Puede escribirlos como métodos privados estándar en el modelo de vista y hacer referencia a ellos en constructores de `Command`. Pero este enfoque tiende a crear una gran cantidad de métodos a los que solo se hace referencia una vez en el modelo de vista.
 
@@ -765,5 +767,5 @@ En ocasiones, los enlaces de datos pueden resultar complicados, pero como ha vis
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de enlace de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter18.md)

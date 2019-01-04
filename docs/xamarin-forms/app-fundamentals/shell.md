@@ -6,13 +6,13 @@ ms.assetid: 1A674212-72DB-4AA4-B626-A4EC135AD1A0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2018
-ms.openlocfilehash: 933368f7ca1435ece4f20945b2f8e905f7584217
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 12/11/2018
+ms.openlocfilehash: 422311c766584cbd27d0ab0c42adee042e9aac3e
+ms.sourcegitcommit: 408b78dd6eded4696469e316af7922a5991f2211
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899388"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53246300"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
@@ -50,7 +50,7 @@ En cada `ContentPage`, se pueden agregar instancias adicionales de `ContentPage`
 
 ## <a name="bootstrapping-a-shell-application"></a>Arranque de una aplicación de Shell
 
-Una aplicación de Shell se arranca estableciendo la propiedad `MainPage` de la clase `App` en una nueva instancia de `Shell`:
+Una aplicación de Shell se arranca estableciendo la propiedad `MainPage` de la clase `App` en una nueva instancia de un archivo de Shell:
 
 ```csharp
 namespace TailwindTraders.Mobile
@@ -62,13 +62,13 @@ namespace TailwindTraders.Mobile
             InitializeComponent();
 
             Forms.SetFlags("Shell_Experimental");
-            MainPage = new Shell();
+            MainPage = new TheShell();
         }
     }
 }
 ```
 
-La clase `Shell` es un archivo XAML que describe la estructura visual de la aplicación.
+La clase `TheShell` es un archivo XAML que describe la estructura visual de la aplicación.
 
 > [!IMPORTANT]
 > Shell es en este momento experimental y solo puede usarse agregando `Forms.SetFlags("Shell_Experimental");` a la clase `App` (antes de crear la instancia `Shell`) o al proyecto de plataforma (antes de invocar el método `Forms.Init`).
@@ -83,13 +83,13 @@ Un archivo de Shell se compone de tres elementos jerárquicos:
 
 Ninguno de estos elementos representan ninguna interfaz de usuario, sino más bien la organización de la estructura visual de la aplicación. Shell tomará estos elementos y generará la interfaz de usuario de navegación para el contenido.
 
-En el XAML siguiente se muestra un ejemplo sencillo de un archivo `Shell`:
+En el XAML siguiente se muestra un ejemplo sencillo de un archivo de Shell:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TailwindTraders"
-       x:Class=" TailwindTraders.Shell"
+       xmlns:local="clr-namespace:TailwindTraders.Mobile.Features.Shell"
+       x:Class="TailwindTraders.Mobile.Features.Shell.TheShell"
        Title="TailwindTraders">
     <ShellItem Title="Home">
         <ShellSection>
@@ -97,7 +97,7 @@ En el XAML siguiente se muestra un ejemplo sencillo de un archivo `Shell`:
                 <local:HomePage />
             </ShellContent>
         </ShellSection>
-    <ShellItem>
+    </ShellItem>
 </Shell>
 ```
 
@@ -117,8 +117,8 @@ Se puede aumentar el número de elementos del control flotante agregando más in
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TailwindTraders"
-       x:Class=" TailwindTraders.Shell"
+       xmlns:local="clr-namespace:TailwindTraders.Mobile.Features.Shell"
+       x:Class="TailwindTraders.Mobile.Features.Shell.TheShell"
        Title="TailwindTraders">
     <ShellItem Title="Home">
         <ShellSection>
@@ -152,7 +152,7 @@ Además, puede personalizarse la apariencia de cada `ShellItem` estableciendo la
 
 Este código simplemente cambia la posición del texto de cada `ShellItem` en el control flotante. Tenga en cuenta que Shell proporciona las propiedades `Title` (y `Icon`) en el elemento `BindingContext` del objeto `DataTemplate`.
 
-## <a name="flyout"></a>Control flotante
+## <a name="flyout"></a>Flyout
 
 El control flotante es el menú raíz de la aplicación y consta de un encabezado de control flotante y elementos de menú:
 
@@ -292,7 +292,7 @@ Esto da como resultado que las instancias `MenuItem` tengan su texto representad
 
 ![Elementos de menú en negrita](shell-images/menuitems-bold.png "Bold menu items")
 
-## <a name="tabs"></a>Pestañas
+## <a name="tabs"></a>Tabulaciones
 
 Las instancias `ShellSection` se representarán como pestañas inferiores, siempre que haya varias instancias de `ShellSection` en un solo `ShellItem`:
 
@@ -349,7 +349,7 @@ El estilo de las pestañas se puede cambiar con estilos XAML o proporcionando un
 
 Shell incluye una experiencia de navegación basada en identificadores URI. Los URI ofrecen una experiencia de navegación mejorada que permite la navegación a cualquier página de la aplicación, sin tener que seguir una jerarquía de navegación establecida. También ofrece la posibilidad de navegar hacia atrás sin tener que visitar todas las páginas de la pila de navegación.
 
-Esta navegación basada en identificadores URI se logra con rutas, que son segmentos de URI que se utilizan para navegar dentro de la aplicación. El archivo `Shell` debe declarar un esquema de ruta, un host de ruta y una ruta:
+Esta navegación basada en identificadores URI se logra con rutas, que son segmentos de URI que se utilizan para navegar dentro de la aplicación. El archivo de Shell debe declarar un esquema de ruta, un host de ruta y una ruta:
 
 ```xaml
 <Shell ...
@@ -362,9 +362,9 @@ Esta navegación basada en identificadores URI se logra con rutas, que son segme
 
 Juntos, los valores de las propiedades `RouteScheme`, `RouteHost` y `Route` forman el identificador URI raíz de `app://www.microsoft.com/tailwindtraders`.
 
-Cada elemento de la clase `Shell` también puede definir una propiedad de ruta que se puede usar en la navegación mediante programación.
+Cada elemento del archivo de Shell también puede definir una propiedad de ruta que se puede usar en la navegación mediante programación.
 
-En el constructor `Shell`, o en cualquier otra ubicación que se ejecute antes de invocar una ruta, se pueden registrar explícitamente rutas adicionales para cualquier página que no esté representada por un elemento de Shell (como las instancias de `MenuItem`):
+En el constructor del archivo de Shell, o en cualquier otra ubicación que se ejecute antes de invocar una ruta, se pueden registrar explícitamente rutas adicionales para cualquier página que no esté representada por un elemento de Shell (como las instancias de `MenuItem`):
 
 ```csharp
 Routing.RegisterRoute("productcategory", typeof(ProductCategoryPage));

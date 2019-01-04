@@ -6,12 +6,12 @@ ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2017
-ms.openlocfilehash: f3b1f5c11a02710de8d0ffd09741acb3017f5cb6
-ms.sourcegitcommit: 47709db4d115d221e97f18bc8111c95723f6cb9b
+ms.openlocfilehash: cefcc7084b2abab4af61f07ef1f33a4f4c363f69
+ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "43780537"
+ms.lasthandoff: 12/31/2018
+ms.locfileid: "53815209"
 ---
 # <a name="introduction-to-mobile-development"></a>Introducción al desarrollo móvil
 
@@ -61,7 +61,7 @@ En ambos casos, las aplicaciones de Xamarin usan un tiempo de ejecución que lo 
 
 Las aplicaciones de Xamarin se compilan en un subconjunto de la BCL de .NET conocido como el perfil móvil de Xamarin. Este perfil se ha creado específicamente para aplicaciones móviles y se ha empaquetado en MonoTouch.dll y Mono.Android.dll (para iOS y Android respectivamente). Se parece mucho a la manera en que las aplicaciones de Silverlight (y Moonlight) se compilan en el perfil de .NET de Silverlight/Moonlight. De hecho, el perfil móvil de Xamarin es equivalente al perfil de Silverlight 4.0 con un conjunto de clases de BCL agregadas de nuevo.
 
-Para obtener una lista completa de las clases y los ensamblados disponibles, consulte [Xamarin.iOS Assembly List](~/cross-platform/internals/available-assemblies.md) (Lista de ensamblados de Xamarin.iOS) y [Xamarin.Android Assembly List](~/cross-platform/internals/available-assemblies.md) (Lista de ensamblados de Xamarin.Android).
+Para obtener una lista completa de las clases y los ensamblados disponibles, consulte [Xamarin.iOS Assembly List](~/cross-platform/internals/available-assemblies.md?context=xamarin/ios) (Lista de ensamblados de Xamarin.iOS) y [Xamarin.Android Assembly List](~/cross-platform/internals/available-assemblies.md?context=xamarin/android) (Lista de ensamblados de Xamarin.Android).
 
 Además de la BCL, estos archivos .dll incluyen contenedores para casi todo el SDK de iOS y Android, lo que permite invocar las API del SDK subyacente directamente desde C#.
 

@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
-ms.openlocfilehash: 5ffc167b1e5695663dff6005f3d7e0ba0ea958db
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: 0c63e33309802f0945ad94a858af45f6b29b2cc4
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172111"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53050785"
 ---
 # <a name="xamarinforms-binding-path"></a>Ruta de acceso de enlace de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 En todos los ejemplos de enlace de datos anteriores, la propiedad [`Path`](xref:Xamarin.Forms.Binding.Path) de la clase `Binding` (o la propiedad [`Path`](xref:Xamarin.Forms.Xaml.BindingExtension.Path) de la extensión de marcado `Binding`) se había establecido en una sola propiedad. En realidad es posible establecer `Path` en una *subpropiedad* (una propiedad de una propiedad), o bien en un miembro de una colección.
 
@@ -165,5 +167,5 @@ Si una propiedad en la ruta de acceso de enlace no implementa `INotifyPropertyCh
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de enlace de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

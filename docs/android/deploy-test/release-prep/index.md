@@ -6,15 +6,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/21/2018
-ms.openlocfilehash: a8858839c51e519ac50dd59d223a6c15cee9e6bf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dff57b142745729d5d38db4cce892bb1d55796a6
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123458"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53059735"
 ---
 # <a name="preparing-an-application-for-release"></a>Preparar una aplicación para su lanzamiento
-
 
 Después de haber codificado y probado una aplicación, es necesario preparar un paquete para la distribución. La primera tarea en la preparación de este paquete es compilar la aplicación para el lanzamiento, lo que implica principalmente establecer algunos atributos de la aplicación.
 
@@ -64,7 +63,6 @@ En estos ejemplos, `@drawable/icon` hace referencia a un archivo de icono que se
 
 Normalmente, `using Android.App` se declara en la parte superior de **AssemblyInfo.cs** (el espacio de nombres del atributo `Application` es `Android.App`); sin embargo, puede que necesite agregar esta instrucción `using` si todavía no está presente.
 
-
 <a name="Versioning" />
 
 ## <a name="version-the-application"></a>Versión de la aplicación
@@ -102,7 +100,7 @@ El modo de versión desactiva el tiempo de ejecución compartido y activa la vin
 
 -   Configuración: Ninguna &ndash; Tamaño de Xamarin.Android 4.2.5 = 17,4 MB.
 
--   Configuración: Solo ensamblados de SDK &ndash; Tamaño de Xamarin.Android 4.2.5 = 3 MB.
+-   Configuración: Solo ensamblados de SDK &ndash; Tamaño de Xamarin.Android 4.2.5 = 3,0 MB.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -136,7 +134,6 @@ Las opciones para controlar el enlazador son las siguientes:
 -----
 
 La vinculación puede producir algunos efectos secundarios no deseados, por lo que es importante que la aplicación se vuelva a probar en el modo de versión en un dispositivo físico.
-
 
 ### <a name="proguard"></a>ProGuard
 
@@ -184,7 +181,6 @@ El manifiesto de Android contiene el atributo `android:debuggable`, que controla
 ```
 
 Tenga en cuenta que las compilaciones de depuración establecen automáticamente algunos permisos para que la depuración sea más sencilla (como **Internet** y **ReadExternalStorage**). Sin embargo, las compilaciones de versión solo utilizan los permisos que usted configure explícitamente. Si al cambiar a la compilación de versión, la aplicación pierde un permiso que estaba disponible en la compilación de depuración, compruebe que ha habilitado explícitamente este permiso en la lista **Permisos necesarios** como se describe en [Permisos](~/android/app-fundamentals/permissions.md). 
- 
 
 <a name="dotfuscator" id="dotfuscator" />
 
@@ -228,14 +224,13 @@ La opción **compilación AOT** (de la página [Propiedades de empaquetado](#Set
 
 La opción **compilación AOT** necesita una licencia de Enterprise o superior. **Compilación AOT** solo está disponible cuando el proyecto se configura para el modo de versión, y está deshabilitado de manera predeterminada. Para obtener más información sobre la compilación AOT, consulte [AOT](http://www.mono-project.com/docs/advanced/aot/).
 
-
 #### <a name="llvm-optimizing-compiler"></a>Compilador de optimización de LLVM
 
 El _Compilador de optimización de LLVM_ creará un código compilado más pequeño y rápido y convertirá ensamblados compilados mediante AOT en código nativo, pero a costa de tiempos de compilación más lentos. El compilador de LLVM está deshabilitado de manera predeterminada. Para usar el compilador de LLVM, es necesario habilitar primero la opción **Compilación de AOT** en la página [Propiedades de empaquetado](#Set_Packaging_Properties).
 
 
 > [!NOTE]
-> La opción **Compilador de optimización de LLVM** necesita una licencia de empresa.  
+> La opción **Compilador de optimización de LLVM** necesita una licencia Enterprise.  
 
 <a name="Set_Packaging_Properties" />
 
@@ -257,16 +252,13 @@ Las propiedades de empaquetado se pueden establecer en **Opciones de proyecto**,
 
 Muchas de estas propiedades, como **Use Shared Runtime** (Usar tiempo de ejecución compartido) y **Use Fast Deployment** (Usar implementación rápida), están pensadas para el modo de depuración. Pero cuando la aplicación está configurada para el modo de versión, hay otras opciones que determinan cómo [se optimiza la aplicación para el tamaño y la velocidad de ejecución](#shrink_apk), [cómo se protege contra la alteración](#protect_app) y cómo puede empaquetarse para admitir distintas arquitecturas y restricciones de tamaño.
 
-
 ### <a name="specify-supported-architectures"></a>Especificar arquitecturas compatibles
 
 Al preparar una aplicación Xamarin.Android para publicarla, es necesario especificar las arquitecturas de CPU que se admiten. Un APK único puede contener código máquina para admitir varias arquitecturas diferentes. Consulte [Arquitecturas de CPU](~/android/app-fundamentals/cpu-architectures.md) para obtener más información sobre la compatibilidad con varias arquitecturas de CPU.
 
-
 ### <a name="generate-one-package-apk-per-selected-abi"></a>Generar un paquete (.APK) por ABI seleccionado
 
 Cuando esta opción está habilitada, se creará un APK para cada uno de los ABI admitidos (seleccionados en la pestaña **Opciones avanzadas**, como se describe en [Arquitecturas de CPU](~/android/app-fundamentals/cpu-architectures.md)) en lugar de un único APK grande para todos los ABI que se admiten. Esta opción solo está disponible cuando el proyecto se configura para el modo de versión, y está deshabilitado de manera predeterminada.
-
 
 ### <a name="multi-dex"></a>Multi-Dex
 
@@ -292,7 +284,6 @@ Cuando haya concluido todos los pasos anteriores, compile la aplicación (selecc
 
 -----
 
-
 <a name="archive" />
 
 ## <a name="archive-for-publishing"></a>Archivo para la publicación
@@ -310,7 +301,6 @@ La opción **Archivo…** inicia **Archive Manager** y comienza el proceso de ar
 Otra forma de crear un archivo consiste en hacer clic con el botón derecho en la solución en el **Explorador de soluciones** y seleccionar **Archivar todo…**, con lo que se compila la solución y se archivan todos los proyectos de Xamarin que pueden generar un archivo:
 
 [![Archivar todo](images/vs/09-archive-all-sml.png)](images/vs/09-archive-all.png#lightbox)
-
 
 Tanto la opción **Archivo** como la opción **Archivar todo** inician automáticamente **Archive Manager**. Para iniciar **Archive Manager** directamente, haga clic en el elemento de menú **Herramientas > Archive Manager…**:
 
@@ -370,7 +360,6 @@ En este ejemplo, en **Archive Manager** solo se muestra una aplicación archivad
 
 [![Firmar y distribuir](images/xs/09-sign-and-distribute-sml.png)](images/xs/09-sign-and-distribute.png#lightbox)
 
-
 Desde aquí, es posible seleccionar el canal de distribución:
 
 -   **Ad hoc**: guarda un APK firmado en el disco para que se pueda transferir localmente a dispositivos Android. Vaya a [Signing the App Package](~/android/deploy-test/signing/index.md) (Firmar el paquete de aplicación) para obtener información sobre cómo crear una identidad de firma de Android, crear un certificado de firma para aplicaciones de Android y publicar una versión &ldquo;ad hoc&rdquo; de la aplicación en disco. Esta es una buena forma de crear un APK para realizar pruebas.
@@ -380,7 +369,6 @@ Desde aquí, es posible seleccionar el canal de distribución:
     Vaya a [Publicación en Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) para obtener información sobre cómo firmar y publicar un APK en Google Play Store.
 
 -----
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

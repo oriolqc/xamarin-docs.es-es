@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 03dbaa36cc1fa4a6a169f9456e0fd5b0fdc0d295
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 0e8b727fb520b6901bf397c9cfb67947897cbc8b
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563945"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53056969"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modo de enlace de Xamarin.Forms
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
 
 En el [artículo anterior](basic-bindings.md), las páginas **Enlace de código alternativo** y **Enlace XAML alternativo** contenían un objeto `Label` con su propiedad `Scale` enlazada a la propiedad `Value` de un elemento `Slider`. Como el valor inicial de `Slider` es 0, la propiedad `Scale` de `Label` se establece en 0 en lugar de 1, y el elemento `Label` desaparece.
 
@@ -112,7 +114,7 @@ En la página **Selector de colores simple** se muestra el uso de un modelo de v
 
 El modelo de vista es el origen del enlace de datos. El modelo de vista *no* define propiedades enlazables, pero implementa un mecanismo de notificación que permite que la infraestructura de enlace reciba una notificación cuando cambia el valor de una propiedad. Este mecanismo de notificación es la interfaz [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged), que define una única propiedad denominada [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). Una clase que implemente esta interfaz normalmente desencadena el evento cuando cambia el valor de una de sus propiedades públicas. No es necesario desencadenar el evento si la propiedad no cambia nunca. (La interfaz `INotifyPropertyChanged` también se implementa mediante `BindableObject` y se desencadena un evento `PropertyChanged` cada vez que una propiedad enlazable cambia de valor).
 
-La clase `HslColorViewModel` define cinco propiedades: las propiedades `Hue`, `Saturation`, `Luminosity` y `Color` están interrelacionadas. Cuando cambia el valor de cualquiera de los tres componentes de color, se vuelve a calcular la propiedad `Color` y se desencadenan eventos `PropertyChanged` para las cuatro propiedades:
+La `HslColorViewModel` clase define cinco propiedades: las propiedades `Hue`, `Saturation`, `Luminosity` y `Color` están interrelacionadas. Cuando cambia el valor de cualquiera de los tres componentes de color, se vuelve a calcular la propiedad `Color` y se desencadenan eventos `PropertyChanged` para las cuatro propiedades:
 
 ```csharp
 public class HslColorViewModel : INotifyPropertyChanged
@@ -256,7 +258,7 @@ El archivo XAML **Selector de colores simple** crea una instancia de `HslColorVi
 </ContentPage>
 ```
 
-Los elementos `BoxView`, `Label` y tres vistas `Slider` heredan el contexto de enlace del elemento `Grid`. Todas estas vistas son destinos de enlace que hacen referencia a las propiedades de origen en el modelo de vista. Para la propiedad `Color` de `BoxView`, y la propiedad `Text` de `Label`, los enlaces de datos son `OneWay`: las propiedades de la vista se establecen a partir de las propiedades del modelo de vista.
+Los elementos `BoxView`, `Label` y tres vistas `Slider` heredan el contexto de enlace del elemento `Grid`. Todas estas vistas son destinos de enlace que hacen referencia a las propiedades de origen en el modelo de vista. Para la propiedad `Color` de `BoxView` y la propiedad `Text` de `Label`, los enlaces de datos son `OneWay`: Las propiedades de la vista se establecen de las propiedades de ViewModel.
 
 Pero la propiedad `Value` de `Slider` es `TwoWay`. Esto permite que cada elemento `Slider` se establezca a partir del modelo de vista, y también que el modelo de vista se establezca a partir de cada elemento `Slider`.
 
@@ -685,5 +687,5 @@ En el artículo siguiente verá cómo especificar los [**formatos de cadena**](s
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de enlace de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) (Demos de enlace de datos [ejemplo])
 - [Capítulo sobre enlace de datos del libro de Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

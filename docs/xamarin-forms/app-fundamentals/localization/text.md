@@ -7,14 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 09fe3587e4e435383822e50bd12616747b807f82
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7eea0a4eba201d7332c5e3e5222729bcb5e14a07
+ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108462"
+ms.lasthandoff: 12/07/2018
+ms.locfileid: "53054066"
 ---
 # <a name="localization"></a>Localización
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
 
 _Las aplicaciones de Xamarin.Forms se pueden localizar con archivos de recursos. NET._
 
@@ -154,7 +156,7 @@ Los archivos de recursos específicos de idioma deben seguir una convención de 
 
 El patrón general consiste en usar códigos de idioma de dos letras, pero hay algunos ejemplos (por ejemplo, chino) donde se usa un formato diferente, y otros ejemplos (por ejemplo, portugués de Brasil) donde se requiere un identificador de configuración regional de cuatro caracteres.
 
-Estos archivos de recursos específicos de idioma *no* requieren una clase parcial **. designer.cs** para poder agregarse como archivos XML normales, con la **acción de compilación: EmbeddedResource** establecida. Esta captura de pantalla muestra una solución que contiene los archivos de recursos específicos de idioma:
+Estos archivos de recursos específicos de idioma *no* requieren una clase parcial **. designer.cs** para poder agregarse como archivos XML normales, con **Acción de compilación: EmbeddedResource** establecida. Esta captura de pantalla muestra una solución que contiene los archivos de recursos específicos de idioma:
 
 ![](text-images/appresources-langs.png "Archivos de recursos específicos de idioma")
 
@@ -255,7 +257,7 @@ Compruebe lo siguiente para resolver los problemas que surgen cuando no se puede
 
 * El espacio de nombres predeterminado para el proyecto coincide con el espacio de nombres raíz en el archivo **AppResources.Designer.cs**.
 * Si el archivo **AppResources.resx** se encuentra en un subdirectorio, el nombre del subdirectorio debe formar parte del espacio de nombres *y* debe formar parte del identificador de recursos.
-* El archivo **AppResources.resx** tiene la **Build Action (Acción de compilación): EmbeddedResource**.
+* El archivo **AppResources.resx** tiene la **Acción de compilación: EmbeddedResource**.
 * La opción **Project Options > Source Code > .NET Naming Policies > Use Visual Studio-style resources names** (Opciones del proyecto > Código fuente > Directivas de nomenclatura de .NET > Usar nombres de recursos de estilo Visual Studio) está activada. Puede desactivarla, si lo prefiere, pero los espacios de nombres que se usan al hacer referencia a los recursos RESX tendrán que actualizarse en toda la aplicación.
 
 #### <a name="doesnt-work-in-debug-mode-android-only"></a>No funciona en modo de DEPURACIÓN (solo Android)
@@ -556,7 +558,7 @@ namespace UsingResxLocalization.Android
 Una vez que este código se haya agregado al proyecto de aplicación de Android, podrá mostrar automáticamente las cadenas traducidas.
 
 > [!NOTE]
->**ADVERTENCIA:** Si las cadenas traducidas funcionan en las compilaciones de Android PUBLICADAS pero no durante la depuración, haga clic con el botón derecho en **Android Project** (Proyecto de Android), seleccione **Options > Build > Android Build** (Opciones > Compilar > Compilación de Android) y asegúrese de que la opción **Fast assembly deployment** (Implementación de ensamblado rápido) NO esté activada. Esta opción provoca problemas con la carga de recursos y no debe usarse si se están probando aplicaciones localizadas.
+>**ADVERTENCIA:** Si las cadenas traducidas funcionan en las compilaciones de Android PUBLICADAS pero no durante la depuración, haga clic con el botón derecho en **Android Project** (Proyecto de Android), seleccione **Options > Build > Android Build** (Opciones > Compilar > Compilación de Android ) y asegúrese de que la opción **Fast assembly deployment** (Implementación de ensamblado rápido) NO esté activada. Esta opción provoca problemas con la carga de recursos y no debe usarse si se están probando aplicaciones localizadas.
 
 Para obtener más información sobre la localización de Android, consulte [Localización de Android](~/android/app-fundamentals/localization.md).
 
