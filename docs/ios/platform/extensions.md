@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 9c28cc892536ebe841fb28e8313cf380c7f051b6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f892774b4899fcbac46e8cc7bc2b0dd0336cc036
+ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120429"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012287"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensiones de iOS de Xamarin.iOS
 
@@ -452,7 +452,7 @@ Para obtener más información, consulte el [grupos de aplicaciones](~/ios/deplo
 
 ## <a name="precautions-and-considerations"></a>Precauciones y consideraciones
 
-Las extensiones tienen significativamente menos memoria a su disposición que cuando las aplicaciones. Se espera para realizar rápidamente y con intrusiones mínima para el usuario y la aplicación se hospedan en. Sin embargo, una extensión también debe proporcionar una función distintiva y útil a la aplicación con una interfaz de usuario con marca que permiten al usuario identificar el desarrollador de la extensión que lo consume o una aplicación de contenedor que pertenecen.
+Las extensiones tienen significativamente menos memoria a su disposición de las aplicaciones lo hacen. Se espera para realizar rápidamente y con intrusiones mínima para el usuario y la aplicación se hospedan en. Sin embargo, una extensión también debe proporcionar una función distintiva y útil a la aplicación con una interfaz de usuario con marca que permiten al usuario identificar el desarrollador de la extensión que lo consume o una aplicación de contenedor que pertenecen.
 
 Dadas estas requisito estricto, solo se deben implementar las extensiones que se han probado exhaustivamente y optimizado para rendimiento y consumo de memoria. 
 

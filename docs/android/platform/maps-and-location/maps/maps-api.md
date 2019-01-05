@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/07/2018
-ms.openlocfilehash: 8df8a4f5e59675164e7d06b682c61094078edc4f
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: db442f45c615b680264e79262f62062eb6a6bfd5
+ms.sourcegitcommit: f5fce8308b2e7c39c5b0c904e5f38a4ce2b55c87
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171045"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54012300"
 ---
 # <a name="using-the-google-maps-api-in-your-application"></a>Uso de la API de Google Maps en su aplicación
 
@@ -45,7 +45,7 @@ El primer paso es obtener una clave de API de Google Maps (tenga en cuenta que n
 
 ### <a name="a-nameinstall-gps-sdk--install-the-google-play-services-sdk"></a><a name="install-gps-sdk" /> Instale el SDK de Google Play Services
 
-Google Play Services es una tecnología de Google que permite a las aplicaciones Android aprovechar las ventajas de las distintas características de Google como Google +, de facturación en la aplicación y asignaciones. Estas características son accesibles en dispositivos Android como servicios en segundo plano, f, que se encuentran en el [APK de Google Play Services](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en).
+Google Play Services es una tecnología de Google que permite a las aplicaciones Android aprovechar las ventajas de las distintas características de Google como Google +, de facturación en la aplicación y asignaciones. Estas características son accesibles en dispositivos Android como servicios en segundo plano, que se encuentran en el [APK de Google Play Services](https://play.google.com/store/apps/details?id=com.google.android.gms&hl=en).
 
 Las aplicaciones de Android interactúan con Google Play Services a través de la biblioteca de cliente de Google Play Services. Esta biblioteca contiene las interfaces y clases de los servicios individuales, como los mapas. El diagrama siguiente muestra la relación entre una aplicación de Android y Google Play Services:
 
