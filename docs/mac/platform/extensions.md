@@ -7,16 +7,16 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 60b981a764a2656210730ae0602ff32dc580cd0a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0f4d6bb042f8bc8d48b45d7148984a53e3ce3437
+ms.sourcegitcommit: e3e851080e6ea0b77e355487a61348d8e0419b09
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117569"
+ms.lasthandoff: 01/07/2019
+ms.locfileid: "54060075"
 ---
 # <a name="xamarinmac-extension-support"></a>Compatibilidad con las extensiones de Xamarin.Mac
 
-En la versión preliminar de Xamarin.Mac 2.10 se agregó compatibilidad para varios puntos de extensión de macOS:
+En Xamarin.Mac 2.10 se agregó compatibilidad para varios puntos de extensión de macOS:
 
 - Finder
 - Compartir
@@ -59,10 +59,10 @@ Un proyecto de Xamarin.Mac de ejemplo que contiene pequeños, pueden encontrar a
 
 ## <a name="summary"></a>Resumen
 
-En este artículo ha tomado un vistazo rápido a trabajar con las extensiones en una aplicación de versión Xamarin.Max 2.10 (y versiones posteriores).
+En este artículo ha tomado un vistazo rápido a trabajar con las extensiones en una aplicación de 2.10 (y versiones posteriores) de la versión de Xamarin.Mac.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
-- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) (Directrices de interfaz humana de OS X)
+- [Directrices de la interfaz humana de macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
