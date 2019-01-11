@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2017
-ms.openlocfilehash: 5eb3348df39b8931d8cdd89d8c6f54b8bb3024a0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 6eb1e9a6f9c46fd7337003e05daa10d408fb5108
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057436"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54208017"
 ---
 # <a name="adding-data-to-a-pickers-items-collection"></a>Adición de datos a la colección de elementos de un selector
 
@@ -58,7 +58,7 @@ Además de agregar datos utilizando el `Items.Add` método, datos también se pu
 Un [ `Picker` ](xref:Xamarin.Forms.Picker) admite la selección de un elemento a la vez. Cuando un usuario selecciona un elemento, el [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) desencadena el evento y el [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) se actualiza la propiedad en un entero que representa el índice del elemento seleccionado en la lista. El `SelectedIndex` propiedad es un número de base cero que indica el elemento que el usuario seleccionado. Si se selecciona ningún elemento, que es el caso cuando la `Picker` en primer lugar se crea y se inicializa, `SelectedIndex` será -1.
 
 > [!NOTE]
-> Elemento de comportamiento de la selección en un [ `Picker` ](xref:Xamarin.Forms.Picker) puede personalizarse en iOS con una plataforma específica. Para obtener más información, consulte [selección de elementos de control de selector de](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#picker_update_mode).
+> Elemento de comportamiento de la selección en un [ `Picker` ](xref:Xamarin.Forms.Picker) puede personalizarse en iOS con una plataforma específica. Para obtener más información, consulte [selección de elementos de control de selector de](~/xamarin-forms/platform/ios/picker-selection.md).
 
 El siguiente ejemplo de código muestra la `OnPickerSelectedIndexChanged` método de controlador de eventos, que es ejecutado cuando la [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) desencadena el evento:
 

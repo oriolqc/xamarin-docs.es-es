@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 53348e15d1ecc74f50cacdd422da5c80af802d1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 54479a7ed66c83d1d97d51cc93e3df3241ec740f
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110724"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207939"
 ---
 # <a name="xamarinandroid-api-design-principles"></a>Principios de diseño de la API de Xamarin.Android
 
@@ -322,6 +322,6 @@ Por ejemplo, considere la posibilidad de [Activity.requestWindowFeature (int fea
 En estos casos, nos esforzamos por agrupar constantes relacionadas en una enumeración de .NET y reasignar el método para realizar la enumeración en su lugar.
 Al hacerlo, se pueden ofrecer IntelliSense de selección de los valores posibles.
 
-El ejemplo anterior se convierte en: [Activity.RequestWindowFeature (WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/)).
+El ejemplo anterior se convierte en: [Activity.RequestWindowFeature (WindowFeatures featureId)](https://developer.xamarin.com/api/member/Android.App.Activity.RequestWindowFeature/p/Android.Views.WindowFeatures/).
 
-Tenga en cuenta que esto es un proceso muy manual para averiguar qué constantes forman un conjunto y las API que consumen estas constantes. Registre los errores para cualquier uso de las constantes de la API que sería mejor expresada como una enumeración.
+Tenga en cuenta que esto es un proceso muy manual para averiguar qué constantes forman un conjunto y las API que consumen estas constantes. Registre los errores para las constantes utilizadas en la API que sería mejor expresada como una enumeración.

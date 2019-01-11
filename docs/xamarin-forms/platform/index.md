@@ -6,13 +6,13 @@ ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/06/2018
-ms.openlocfilehash: 070602f05170f7d37a38b184ecd3dbb7864ac73d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.date: 01/08/2018
+ms.openlocfilehash: 3f0156926f8d7a31e2e80318d7b05a909f158653
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118765"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207731"
 ---
 # <a name="xamarinforms-platform-features"></a>Características de la plataforma de Xamarin.Forms
 
@@ -20,11 +20,7 @@ Xamarin.Forms es extensible y le permite incorporar características específica
 
 ## <a name="androidandroidindexmd"></a>[Android](android/index.md)
 
-Esta guía describe cómo implementar Material Design mediante la actualización de aplicaciones de Xamarin.Forms Android existentes.
-
-## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[Indexación de la aplicación y vinculación en profundidad](deep-linking.md)
-
-Indexación de la aplicación permite a las aplicaciones que de lo contrario serían olvidadas después de unos pocos se usa para mantener su relevancia por aparezcan en los resultados de búsqueda. Vinculación en profundidad permite a las aplicaciones responder a un resultado de búsqueda que contiene los datos de la aplicación, normalmente, vaya a una página que se hace referencia desde un vínculo profundo.
+Esta guía describe los detalles de plataforma Android proporcionados por Xamarin.Forms y cómo implementar Material Design mediante la actualización de aplicaciones de Xamarin.Forms Android existentes.
 
 ## <a name="device-classdevicemd"></a>[Clase de dispositivo](device.md)
 
@@ -32,15 +28,7 @@ Cómo usar el `Device` clase para crear un comportamiento específico de la plat
 
 ## <a name="iosiosindexmd"></a>[iOS](ios/index.md)
 
-Algunos estilos de iOS se pueden realizar a través de **Info.plist** y `UIAppearance` API. Esta guía incluye ejemplos de cómo incluir características de iOS 9 en la aplicación de iOS de una solución Xamarin.Forms, incluidos la búsqueda de Spotlight Core.
-
-## <a name="gtkgtkmd"></a>[GTK](gtk.md)
-
-Xamarin.Forms tiene ahora soporte técnico de vista previa para aplicaciones de GTK #.
-
-## <a name="macmacmd"></a>[Mac](mac.md)
-
-Xamarin.Forms tiene ahora la compatibilidad de versión preliminar para las aplicaciones de Mac OS.
+Esta guía describen los detalles plataforma de iOS proporcionados por Xamarin.Forms y cómo realizar aplicar estilos a través de iOS adicionales **Info.plist** y `UIAppearance` API.
 
 ## <a name="native-formsnative-formsmd"></a>[Formularios nativos](native-forms.md)
 
@@ -52,20 +40,8 @@ Pueden hacer referencia directamente a vistas nativas de iOS, Android y la plata
 
 ## <a name="platform-specificsplatform-specificsindexmd"></a>[Funcionalidades específicas de plataforma](platform-specifics/index.md)
 
-Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de representadores personalizados o los efectos.
-
-## <a name="pluginspluginsmd"></a>[Complementos](plugins.md)
-
-Hay una amplia variedad de complementos de código abierto en Github, Nuget y el Store del componente Xamarin para ayudar a ampliar las aplicaciones de Xamarin.Forms.
-
-## <a name="tizentizenmd"></a>[Tizen](tizen.md)
-
-Tizen .NET permite crear aplicaciones .NET con Xamarin.Forms y Tizen .NET Framework.
+Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de representadores personalizados o los efectos. Además, los proveedores pueden crear sus propias funcionalidades específicas de plataforma con efectos.
 
 ## <a name="windowswindowsindexmd"></a>[Windows](windows/index.md)
 
-Xamarin.Forms tiene compatibilidad para la plataforma Universal de Windows (UWP) en Windows 10. En este artículo se describe cómo agregar un proyecto UWP a una solución existente de Xamarin.Forms.
-
-## <a name="wpfwpfmd"></a>[WPF](wpf.md)
-
-Xamarin.Forms tiene ahora soporte técnico de vista previa para aplicaciones de Windows Presentation Foundation (WPF).
+Esta guía describe los detalles plataforma de Windows proporcionados Xamarin.Forms y cómo agregar un proyecto UWP a una solución existente de Xamarin.Forms.

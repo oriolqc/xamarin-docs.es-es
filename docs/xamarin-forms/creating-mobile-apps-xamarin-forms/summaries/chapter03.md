@@ -1,18 +1,18 @@
 ---
 title: Resumen del capítulo 3. Más profunda en texto
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del capítulo 3. Más profunda en texto'
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 3. Más profunda en texto'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2E5581A6-4D3E-4BD5-9FDB-ACBA0F0FC734
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: db1ab31249cc40d3496770877e492d652bcfc517
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 11b0a9c5b165df2b0d02bb09fb282cc18290e6ca
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052600"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207861"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumen del capítulo 3. Más profunda en texto
 
@@ -28,7 +28,7 @@ Cuando el [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) y [
 
 Cuando el `HorizontalOptions` y `VerticalOptions` propiedades se establecen en valores distintos de `LayoutOptions.Fill`, el tamaño de la `Label` se rige por el espacio necesario para representar el texto, hasta el tamaño de su contenedor hace que estén disponible para el `Label`. El `Label` se dice que *sin restricciones* y determina su propio tamaño.
 
-(Nota: los términos *restringida* y *sin restricciones* podría no ser intuitivo, como una vista sin restricciones es generalmente más pequeña que una vista restringida. Además, estos términos no se usan sistemáticamente en los primeros capítulos del libro.)
+(Tenga en cuenta: Los términos *restringida* y *sin restricciones* podría no ser intuitivo, como una vista sin restricciones es generalmente más pequeña que una vista restringida. Además, estos términos no se usan sistemáticamente en los primeros capítulos del libro.)
 
 Una vista, como un `Label` puede restringir en una dimensión y sin restricciones en el otro. Un `Label` sólo ajustar texto en varias líneas si está restringido horizontalmente.
 
@@ -99,8 +99,8 @@ Por último, dos propiedades estáticas de sólo lectura definen valor de color 
 
 `Color.Default` está diseñado para aplicar la combinación de colores de la plataforma y, por lo tanto tiene un significado diferente en contextos diferentes en distintas plataformas. De forma predeterminada, las combinaciones de colores de la plataforma son:
 
-- iOS: oscuro texto sobre un fondo claro
-- Android: Claro a oscuro texto sobre un fondo claro o texto sobre un fondo oscuro (en el libro) (para Material de diseño a través de AppCompat en el **maestro** rama del repositorio de código de ejemplo)
+- iOS: Texto oscuro sobre un fondo claro
+- Android: Claro, oscuro texto sobre un fondo claro o texto sobre un fondo oscuro (en el libro) (para Material de diseño a través de AppCompat en el **maestro** rama del repositorio de código de ejemplo)
 - UWP: Texto oscuro sobre un fondo claro
 
 El `Color.Accent` valor resultados en un color específico de la plataforma (y a veces seleccionable por el usuario) que está visible en un fondo oscuro o claro.
@@ -109,7 +109,7 @@ El `Color.Accent` valor resultados en un color específico de la plataforma (y a
 
 Las diferentes plataformas tienen una combinación de colores predeterminada como se muestra en la lista anterior.
 
-Cuando el destino es Android, es posible cambiar a un esquema de la luz de oscuro especificando un tema claro en el archivo Android.Manifest.xml o [agregar AppCompat y Material Design](~/xamarin-forms/platform/android/appcompat.md).
+Cuando el destino es Android, es posible cambiar a un esquema de la luz de oscuro especificando un tema claro en el archivo Android.Manifest.xml o [agregar AppCompat y Material Design](~/xamarin-forms/platform/android/appcompat-material-design.md).
 
 Para las plataformas Windows, normalmente se selecciona el tema de color por el usuario, pero puede agregar un `RequestedTheme` atributo establecido en `Light` o `Dark` en el archivo App.xaml de la plataforma. De forma predeterminada, el archivo App.xaml en el proyecto de UWP contiene un `RequestedTheme` atributo establecido en `Light`.
 
