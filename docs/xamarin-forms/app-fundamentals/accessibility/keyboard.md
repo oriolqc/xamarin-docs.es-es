@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/15/2018
-ms.openlocfilehash: 69fc1cd146227e464e70c347d3e28d250a7f1346
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 3e3331489c3b437366f4bdcc6990fe282d213a6a
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050444"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207887"
 ---
 # <a name="keyboard-navigation-in-xamarinforms"></a>Navegación mediante teclado en Xamarin.Forms
 
@@ -58,7 +58,7 @@ La captura de pantalla siguiente muestra el orden de tabulación predeterminado 
 Aquí, el orden de tabulación está basado en filas y es el orden en el cual los controles se indican en el XAML. Por lo tanto, al presionar la tecla TAB se navega por instancias [`Entry`](xref:Xamarin.Forms.Entry) de nombre, seguidas por instancias `Entry` de apellido. Sin embargo, una experiencia más intuitiva sería usar una navegación por tabulación de la columna en primer lugar, para que al presionar la tecla TAB se navegara por los pares de nombre y apellido. Esto puede lograrse mediante la especificación del orden de tabulación de los controles de entrada.
 
 > [!NOTE]
-> En la Plataforma universal de Windows, se pueden definir métodos abreviados de teclado que proporcionen una manera intuitiva para que los usuarios puedan navegar rápidamente e interactuar con la interfaz de usuario visible de la aplicación a través de un teclado, en lugar de a través de funciones táctiles o un mouse. Para obtener más información, consulte [Setting VisualElement Access Keys](~/xamarin-forms/platform/platform-specifics/consuming/windows.md#visualelement-accesskeys) (Configuración de claves de acceso de VisualElement).
+> En la Plataforma universal de Windows, se pueden definir métodos abreviados de teclado que proporcionen una manera intuitiva para que los usuarios puedan navegar rápidamente e interactuar con la interfaz de usuario visible de la aplicación a través de un teclado, en lugar de a través de funciones táctiles o un mouse. Para obtener más información, consulte [Setting VisualElement Access Keys](~/xamarin-forms/platform/windows/visualelement-access-keys.md) (Configuración de claves de acceso de VisualElement).
 
 ## <a name="setting-the-tab-order"></a>Configuración del orden de tabulación
 

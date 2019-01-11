@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: 0511cd1a4cf76368623c56ef53cd98323114f98e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: f69acd60d7a80607528e4a39ee6a8bfbc19711f5
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058995"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207978"
 ---
 # <a name="hierarchical-navigation"></a>Navegación jerárquica
 
@@ -344,9 +344,9 @@ Esto da como resultado un [`Slider`](xref:Xamarin.Forms.Slider) que se muestra e
 > [!IMPORTANT]
 > Muchas vistas no aparecen en la barra de navegación, salvo que el tamaño de la vista se especifique con las propiedades [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) y [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest). Como alternativa, la vista puede encapsularse en un [`StackLayout`](xref:Xamarin.Forms.StackLayout) con las propiedades [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) y [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) establecidas en los valores adecuados.
 
-Tenga en cuenta que, dado que la clase [`Layout`](xref:Xamarin.Forms.Layout) deriva de la clase [`View`](xref:Xamarin.Forms.View), la propiedad adjunta [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) se puede establecer para mostrar una clase de diseño que contiene varias vistas. En iOS y la Plataforma universal de Windows (UWP), la altura de la barra de navegación no se puede cambiar y, por tanto, se recortará si la vista que se muestra en la barra de navegación es mayor que el tamaño predeterminado de la barra de navegación. Sin embargo, en Android, la altura de la barra de navegación se puede cambiar estableciendo la propiedad enlazable [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) en un `double` que represente la altura nueva. Para obtener más información, consulte [Establecer la altura de la barra de navegación en una NavigationPage](~/xamarin-forms/platform/platform-specifics/consuming/android.md#navigationpage-barheight).
+Tenga en cuenta que, dado que la clase [`Layout`](xref:Xamarin.Forms.Layout) deriva de la clase [`View`](xref:Xamarin.Forms.View), la propiedad adjunta [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) se puede establecer para mostrar una clase de diseño que contiene varias vistas. En iOS y la Plataforma universal de Windows (UWP), la altura de la barra de navegación no se puede cambiar y, por tanto, se recortará si la vista que se muestra en la barra de navegación es mayor que el tamaño predeterminado de la barra de navegación. Sin embargo, en Android, la altura de la barra de navegación se puede cambiar estableciendo la propiedad enlazable [`NavigationPage.BarHeight`](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat.NavigationPage.BarHeightProperty) en un `double` que represente la altura nueva. Para obtener más información, consulte [Establecer la altura de la barra de navegación en una NavigationPage](~/xamarin-forms/platform/android/navigationpage-bar-height.md).
 
-Como alternativa, para sugerir una barra de exploración extendida, se puede colocar una parte del contenido en la barra de navegación y otra en una vista en la parte superior del contenido de la página que coincida con el color de la barra de navegación. Además, en iOS, la línea y la sombra del separador que se encuentran en la parte inferior de la barra de navegación se pueden quitar estableciendo la propiedad enlazable [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) en `true`. Para obtener más información, consulte [Ocultar el separador de la barra de navegación en una NavigationPage](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#navigationpage-hideseparatorbar).
+Como alternativa, para sugerir una barra de exploración extendida, se puede colocar una parte del contenido en la barra de navegación y otra en una vista en la parte superior del contenido de la página que coincida con el color de la barra de navegación. Además, en iOS, la línea y la sombra del separador que se encuentran en la parte inferior de la barra de navegación se pueden quitar estableciendo la propiedad enlazable [`NavigationPage.HideNavigationBarSeparator`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.NavigationPage.HideNavigationBarSeparatorProperty) en `true`. Para obtener más información, consulte [Ocultar el separador de la barra de navegación en una NavigationPage](~/xamarin-forms/platform/ios/navigation-bar-separator.md).
 
 > [!NOTE]
 > Las propiedades [`BackButtonTitle`](xref:Xamarin.Forms.NavigationPage.BackButtonTitleProperty), [`Title`](xref:Xamarin.Forms.Page.Title), [`TitleIcon`](xref:Xamarin.Forms.NavigationPage.TitleIconProperty) y [`TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) pueden definir valores que ocupan espacio en la barra de navegación. Mientras que el tamaño de la barra de navegación varía según la plataforma y el tamaño de pantalla, al establecer todas estas propiedades se producirán conflictos a causa del espacio limitado disponible. En lugar de intentar utilizar una combinación de estas propiedades, es posible que, si solo establece la propiedad `TitleView`, pueda elaborar mejor el diseño de la barra de navegación deseado.
@@ -355,7 +355,7 @@ Como alternativa, para sugerir una barra de exploración extendida, se puede col
 
 Al mostrar una [`View`](xref:Xamarin.Forms.View) en la barra de navegación de una [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), hay una serie de limitaciones que debe conocer:
 
-- En iOS, las vistas colocadas en la barra de navegación de una `NavigationPage` se muestran en una posición diferente según si están habilitados los títulos de gran tamaño. Para obtener más información sobre cómo habilitar títulos grandes, consulte [Mostrar títulos grandes](~/xamarin-forms/platform/platform-specifics/consuming/ios.md#large_title).
+- En iOS, las vistas colocadas en la barra de navegación de una `NavigationPage` se muestran en una posición diferente según si están habilitados los títulos de gran tamaño. Para obtener más información sobre cómo habilitar títulos grandes, consulte [Mostrar títulos grandes](~/xamarin-forms/platform/ios/page-large-title.md).
 - En Android, colocar las vistas en la barra de navegación de una `NavigationPage` solo puede realizarse en las aplicaciones que utilizan la compatibilidad de aplicaciones.
 - No se recomienda colocar vistas grandes y complejas, como [`ListView`](xref:Xamarin.Forms.ListView) y [`TableView`](xref:Xamarin.Forms.TableView), en la barra de navegación de una `NavigationPage`.
 

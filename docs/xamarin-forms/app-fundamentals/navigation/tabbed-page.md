@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: d19d8590171e585b6f65b2a63fc9847d7d672a56
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 4e2d33276c865695d70abb2d8e00b3b80d446839
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058426"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207991"
 ---
 # <a name="xamarinforms-tabbed-page"></a>TabbedPage de Xamarin.Forms
 
@@ -37,7 +37,7 @@ El diseño de una instancia de [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) y s
   > [!NOTE]
   > Observe que el elemento `TabbedRenderer` para iOS tiene un método reemplazable `GetIcon` que se puede usar para cargar iconos de pestaña desde un origen especificado. Esta invalidación permite usar imágenes SVG como iconos en un elemento `TabbedPage`. Además, se pueden proporcionar versiones seleccionadas y sin seleccionar de un icono.
 
-- En Android, la lista de pestañas aparece en la parte superior de la pantalla de forma predeterminada y el área de detalles está debajo. Pero se puede mover la lista de pestañas a la parte inferior de la pantalla con una plataforma específica. Para obtener más información, vea [Establecer ubicación de la barra de herramientas TabbedPage y Color](~/xamarin-forms/platform/platform-specifics/consuming/android.md#tabbedpage-toolbar).
+- En Android, la lista de pestañas aparece en la parte superior de la pantalla de forma predeterminada y el área de detalles está debajo. Pero se puede mover la lista de pestañas a la parte inferior de la pantalla con una plataforma específica. Para obtener más información, vea [Establecer ubicación de la barra de herramientas TabbedPage y Color](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
 
   > [!NOTE]
   > Tenga en cuenta que al usar AppCompat en Android, cada pestaña también muestra un icono. Además, el elemento `TabbedPageRenderer` para Android AppCompat tiene un método reemplazable `GetIconDrawable` que se puede usar para cargar iconos de pestaña desde un elemento `Drawable` personalizado. Esta invalidación permite usar imágenes SVG como iconos en un elemento `TabbedPage` y funciona con barras de pestañas superiores e inferiores. También se puede usar el método reemplazable `SetTabIcon` para cargar iconos de pestaña desde un elemento `Drawable` personalizado para barras de pestañas superiores.
