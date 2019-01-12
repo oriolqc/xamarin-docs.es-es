@@ -6,12 +6,12 @@ ms.assetid: 81174493-02D3-4FF5-AD57-04F3288A7F94
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 2357003e3a855981f053c48a596b932d9ba36d90
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2bbf0bda42b7bce483d9d036ebf39314dcb73072
+ms.sourcegitcommit: fabd3b51dca6d904009d0670137c5fb5ee6c32ef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104966"
+ms.lasthandoff: 01/12/2019
+ms.locfileid: "54249195"
 ---
 # <a name="inspector-installation-and-requirements"></a>Los requisitos e instalación de inspector
 
@@ -52,7 +52,7 @@ Inspección de la aplicación activa está disponible para los clientes empresar
 |Plataforma de aplicaciones|Compatibilidad con IDE|Notas|
 |--- |--- |--- |
 |Mac|Solo se admiten en Visual Studio para Mac|
-|iOS|Compatible en Visual Studio 2017 y Visual Studio para Mac| |
+|iOS|Compatible en Visual Studio 2017 y Visual Studio para Mac| Comportamiento del enlazador debe establecerse en **no vincular** (bajo **compilación de iOS** opciones del proyecto) |
 |Android|Compatible en Visual Studio 2017 y Visual Studio para Mac|Debe tener como destino Android > = 4.0.3, con **fastdev** habilitado.<br />Debe usar los emuladores de Google, Visual Studio o Xamarin Android. Los emuladores de Android 7 no pueden permitir que la inspección en este momento.|
 |WPF|Solo se admite en Visual Studio 2017|
 
@@ -115,7 +115,7 @@ Para iOS y Android, es vital que sabemos qué dispositivo está depurando en cua
 - Nombre del dispositivo tal como se muestra en el IDE
 - Versión del sistema operativo del dispositivo
 - Android: Compruebe que está usando un x86 emulador
-- Android: ¿En qué plataforma emulador está usando? ¿Emulador de Google? ¿Emulador de Android de Visual Studio? ¿Xamarin Android Player?
+- Android: ¿Qué plataforma emulador usa? ¿Emulador de Google? ¿Emulador de Android de Visual Studio? ¿Xamarin Android Player?
 - ¿La aplicación que está depurando correctamente aparecerá y funcionará en el dispositivo?
 - ¿Tiene conectividad de red (comprobar a través del explorador web) en el dispositivo?
 
