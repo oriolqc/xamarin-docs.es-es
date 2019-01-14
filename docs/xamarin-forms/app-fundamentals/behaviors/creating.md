@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
-ms.openlocfilehash: 5b94202628c1bcc09d5d2191cb803d58c3e0f0f8
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e52ee0a14098c967923f8d92ac47bc64dac08e8c
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054886"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207900"
 ---
 # <a name="xamarinforms-behaviors"></a>Comportamientos de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/behaviors/numericvalidationbehavior/)
 
-_Los comportamientos de Xamarin.Forms se crean mediante la derivación de la clase Behavior o Behavior<T>. En este artículo se explica cómo crear y consumir comportamientos de Xamarin.Forms._
+_Los comportamientos de Xamarin.Forms se crean mediante la derivación de la clase Behavior o Behavior&lt;T&gt;. En este artículo se explica cómo crear y consumir comportamientos de Xamarin.Forms._
 
 ## <a name="overview"></a>Información general
 

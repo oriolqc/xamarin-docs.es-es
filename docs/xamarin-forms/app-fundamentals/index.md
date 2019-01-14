@@ -6,13 +6,13 @@ ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/03/2018
-ms.openlocfilehash: 015a7dfa3d55b411e6626ae2ac70fd2930661e65
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 01/08/2018
+ms.openlocfilehash: a65946f21f8ced00e9ad64aec590df37acab1528
+ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898997"
+ms.lasthandoff: 01/10/2019
+ms.locfileid: "54207822"
 ---
 # <a name="xamarinforms-application-fundamentals"></a>Aspectos básicos de la aplicación de Xamarin.Forms
 
@@ -27,6 +27,10 @@ La clase `Application` es el punto de partida para Xamarin.Forms: todas las apli
 ## <a name="app-lifecycleapp-lifecyclemd"></a>[Ciclo de vida de la aplicación](app-lifecycle.md)
 
 La clase `Application` y los métodos `OnStart`, `OnSleep` y `OnResume`, así como los eventos de navegación modal, permiten controlar los eventos del ciclo de vida de la aplicación con código personalizado.
+
+## <a name="application-indexing-and-deep-linkingdeep-linkingmd"></a>[Indexación de la aplicación y vinculación en profundidad](deep-linking.md)
+
+La indexación de la aplicación permite a aplicaciones que de lo contrario se olvidarían tras unos pocos usos mantener su pertinencia al aparecer en los resultados de la búsqueda. La vinculación en profundidad permite a las aplicaciones responder a un resultado de la búsqueda que contiene datos de aplicación, normalmente al navegar a una página a la que se hace referencia a partir de un vínculo profundo.
 
 ## <a name="behaviorsbehaviorsindexmd"></a>[Comportamientos](behaviors/index.md)
 
@@ -50,7 +54,7 @@ Con los efectos se pueden personalizar los controles nativos de cada plataforma 
 
 ## <a name="filesfilesmd"></a>[Archivos](files.md)
 
-El control de archivos con Xamarin.Forms puede lograrse mediante código en una biblioteca .NET Standard o usando recursos insertados.
+El control de archivos con Xamarin.Forms puede lograrse mediante código en una biblioteca de .NET Standard o con recursos incrustados.
 
 ## <a name="gesturesgesturesindexmd"></a>[Gestos](gestures/index.md)
 
