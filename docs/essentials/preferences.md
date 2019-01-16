@@ -4,13 +4,14 @@ description: En este documento se describe la clase Preferences de Xamarin.Essen
 ms.assetid: AA81BCBD-79BA-448F-942B-BA4415CA50FF
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
-ms.openlocfilehash: 0144cdd4e12d53e0ac82af24a932825491db9e41
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.date: 01/15/2019
+ms.custom: video
+ms.openlocfilehash: 6d57b5ce9cb61363eef24b230f6cf71894f66198
+ms.sourcegitcommit: 53f5e83f4e246be703917d7cc719c8cc959517ab
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899089"
+ms.lasthandoff: 01/15/2019
+ms.locfileid: "54317887"
 ---
 # <a name="xamarinessentials-preferences"></a>Xamarin.Essentials: Preferencias
 
@@ -68,7 +69,7 @@ En **Preferences** se admiten los tipos de datos siguientes:
 
 ## <a name="implementation-details"></a>Detalles de implementación
 
-Los valores de `DateTime` se almacenan en un formato binario de 64 bits (entero largo) mediante dos métodos definidos por la clase `DateTime`: el método [`ToBinary`](xref:System.DateTime.ToBinary) se usa para codificar el valor `DateTime` y el método [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) descodifica el valor. Vea la documentación de estos métodos para obtener los ajustes que se podrían realizar en los valores descodificados cuando se almacena un valor `DateTime` que no es de hora universal coordinada (UTC).
+Los valores de `DateTime` se almacenan en un formato binario de 64 bits (entero largo) mediante dos métodos definidos por la clase `DateTime`: El método [`ToBinary`](xref:System.DateTime.ToBinary) se usa para codificar el valor `DateTime`, mientras que el método [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) descodifica el valor. Vea la documentación de estos métodos para obtener los ajustes que se podrían realizar en los valores descodificados cuando se almacena un valor `DateTime` que no es de hora universal coordinada (UTC).
 
 ## <a name="platform-implementation-specifics"></a>Detalles de implementación de la plataforma
 
@@ -98,3 +99,9 @@ Cuando se almacena una cadena, esta API está pensada para almacenar pequeñas c
 
 - [Código fuente de Preferences](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Preferences)
 - [Documentación de API para Preferences](xref:Xamarin.Essentials.Preferences)
+
+## <a name="related-video"></a>Vídeo relacionado
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Preferences-Essential-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
