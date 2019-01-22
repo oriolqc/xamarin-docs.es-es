@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 741e18d84c25bb4479480949a271a5845e99daa1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c552d97f64b28ed47a9226047862bffcfa8c9e3
+ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118466"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418691"
 ---
 # <a name="using-sqlitenet-with-android"></a>Uso de SQLite.NET con Android
 
@@ -23,7 +23,7 @@ Para incluir la biblioteca de SQLite.NET en una aplicación de Xamarin, agregue 
 - **Nombre del paquete:** sqlite-net-pcl
 - **Autor:** Frank A. Krueger
 - **Id.:** sqlite-net-pcl
-- **Dirección URL:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 [![Paquete SQLite.NET NuGet](using-sqlite-orm-images/image1a-sml.png "paquete SQLite.NET NuGet")](using-sqlite-orm-images/image1a.png#lightbox)
 
@@ -136,7 +136,7 @@ Atributos comunes que se pueden aplicar a las clases para controlar cómo se alm
 -   **[MaxLength(value)]**  &ndash; Restringir la longitud de una propiedad de texto cuando se intenta realizar una inserción de una base de datos. Usar código esto debe validar antes de insertar el objeto como este atributo es sólo 'activan' cuando la inserción de una base de datos o se intenta realizar la operación de actualización.
 
 -   **[Omitir]**  &ndash; SQLite.NET hace que para pasar por alto esta propiedad.
-    Esto es especialmente útil para las propiedades que tienen un tipo que no pueden almacenarse en la base de datos o propiedades que las colecciones de modelos que no se puede resolver automáticamente es SQLite.
+    Esto es especialmente útil para las propiedades que tienen un tipo que no pueden almacenarse en la base de datos o propiedades que modelan las recopilaciones que no se puede resolver automáticamente SQLite.
 
 -   **[Unique]**  &ndash; Garantiza que son únicos los valores de la columna de base de datos subyacente.
 
@@ -205,7 +205,7 @@ Puede comprobar el `rowcount` para confirmar el número de filas afectado (elimi
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>Uso de SQLite.NET con varios subprocesos
 
-SQLite es compatible con tres modos diferentes de subprocesamiento: *único subproceso*, *multiproceso*, y *Serialized*. Si desea tener acceso a la base de datos desde varios subprocesos sin restricciones, puede configurar SQLite para usar el **Serialized** el modo de subprocesamiento. Es importante establecer este modo al principio de la aplicación (por ejemplo, al principio de la `OnCreate` método).
+SQLite es compatible con tres modos diferentes de subprocesos: *Subproceso único*, *multiproceso*, y *serializa*. Si desea tener acceso a la base de datos desde varios subprocesos sin restricciones, puede configurar SQLite para usar el **Serialized** el modo de subprocesamiento. Es importante establecer este modo al principio de la aplicación (por ejemplo, al principio de la `OnCreate` método).
 
 Para cambiar el modo de subprocesamiento, llame a `SqliteConnection.SetConfig`. Por ejemplo, esta línea de código configura SQLite para **Serialized** modo: 
 
