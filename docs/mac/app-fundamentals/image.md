@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 8bc319b53e4a93d5cac35c4f8c3263b72dfe45e2
-ms.sourcegitcommit: 9492e417f739772bf264f5944d6bae056e130480
+ms.openlocfilehash: 719efc87b8843d0d2fcd2643aab23aa6849d940a
+ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53746913"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841385"
 ---
 # <a name="images-in-xamarinmac"></a>Imágenes de Xamarin.Mac
 
@@ -82,7 +82,7 @@ El siguiente debe tenerse en cuenta al usar imágenes vectoriales PDF en catálo
 - Esto no es soporte completo de vector como el PDF estará rasterizada a un mapa de bits en tiempo de compilación y los mapas de bits se incluye en la aplicación final.
 - No se puede ajustar el tamaño de la imagen una vez que se estableció en el catálogo de activos. Si se intenta cambiar el tamaño de la imagen (ya sea en el código o mediante el uso de diseño automático y las clases de tamaño) la imagen se distorsiona al igual que cualquier otro mapa de bits.
 
-Cuando se usa un **Establecer imagen** en Interface Builder de Xcode, puede seleccionar simplemente el nombre del conjunto en la lista desplegable en el **Inspector de atributos**: **
+Cuando se usa un **Establecer imagen** en Interface Builder de Xcode, puede seleccionar simplemente el nombre del conjunto en la lista desplegable en el **Inspector de atributos**:
 
 ![Seleccionar una imagen establecido en Interface Builder de Xcode](image-images/imageset06.png "seleccionando una imagen establecido en Interface Builder de Xcode")
 
