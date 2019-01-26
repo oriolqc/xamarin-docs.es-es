@@ -6,13 +6,14 @@ ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 02/09/2018
-ms.openlocfilehash: 6e63d60d12a80abb8f229b2daf0767ad54a83314
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.custom: video
+ms.date: 01/22/2019
+ms.openlocfilehash: 6d64acdcc84c16f33a1f543bf1c9506ae7c8e347
+ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118908"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54479698"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Implementación inalámbrica para aplicaciones Xamarin.iOS y tvOS
 
@@ -58,7 +59,7 @@ El siguiente proceso de emparejamiento solo tiene que producirse una vez por cad
 
 1. Abra Xcode y vaya a **Window > Devices and Simulators** (Ventana > Dispositivos y simuladores).
 2. Conecte el dispositivo iOS a su equipo Mac con un cable relámpago. Puede que tenga que seleccionar la opción **Trust This Computer** (Confiar en este equipo) en el dispositivo.
-3. Seleccione el dispositivo y luego active la casilla **Connect via network** (Conectar a través de la red) para emparejar el dispositivo: ![ventana Devices and Simulators (Dispositivos y simuladores) con la opción Connect via network (Conectar a través de la red) resaltada](wireless-deployment-images/image2.png)
+3. Seleccione el dispositivo y, a continuación, active la casilla **Connect via network** (Conectarse mediante una red) para emparejar su dispositivo:  ![Ventana del simulador y dispositivo que muestra la opción de conectarse mediante una red](wireless-deployment-images/image2.png)
 
 ### <a name="pairing-an-apple-tv-with-xcode"></a>Emparejamiento de un dispositivo Apple TV con Xcode
 
@@ -105,3 +106,9 @@ La depuración inalámbrica se habilita automáticamente tras la implementación
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Emparejamiento de un dispositivo inalámbrico con Xcode](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/devbc48d1bad)
+
+## <a name="related-video"></a>Vídeo relacionado
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Debug-to-iOS-Devices-Over-Wi-Fi/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

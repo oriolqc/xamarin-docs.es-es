@@ -1,5 +1,5 @@
 ---
-title: 'Hello, Android Multiscreen: inicio rápido'
+title: 'Hello, Android Multiscreen: Inicio rápido'
 description: Esta guía de dos partes expande la aplicación Phoneword para controlar una segunda pantalla. Por el camino, se presentan bloques de creación básicos de aplicaciones Android con un análisis más profundo de la arquitectura de Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -9,14 +9,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: 774661b36a41e4791207a54892663af13de3b3d3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dcc60243957bb1a7720c08dc7a5ce51caf585ce8
+ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120494"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54418665"
 ---
-# <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: inicio rápido
+# <a name="hello-android-multiscreen-quickstart"></a>Hello, Android Multiscreen: Inicio rápido
 
 _Esta guía de dos partes expande la aplicación Phoneword para controlar una segunda pantalla. Por el camino, se presentan bloques de creación básicos de aplicaciones Android con un análisis más profundo de la arquitectura de Android._
 
@@ -143,7 +143,7 @@ translationHistoryButton.Click += (sender, e) =>
 };
 ```
 
-Actualice el botón **Traducir** para agregar el número de teléfono a la lista de `phoneNumbers`. El controlador `Click` de `TranslateHistoryButton` debería ser similar al código siguiente:
+Actualice el botón **Traducir** para agregar el número de teléfono a la lista de `phoneNumbers`. El controlador `Click` de `translateButton` debería ser similar al código siguiente:
 
 ```csharp
 // Add code to translate number

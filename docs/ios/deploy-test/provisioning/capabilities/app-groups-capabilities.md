@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 56284f1d3c5fec479badf91852acba2bf538bddd
-ms.sourcegitcommit: cb484bd529bf2d8e48e5b3d086bdfc31895ec209
+ms.openlocfilehash: f75c4777ce7a47e983683bf3d92ac20ab1b15c1c
+ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411744"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54841359"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Capacidades de los grupos de aplicaciones en Xamarin.iOS
 
@@ -26,16 +26,16 @@ Un grupo de aplicaciones permite que aplicaciones diferentes (o una aplicación 
 
 ## <a name="configure-a-new-app-group"></a>Configurar un nuevo grupo de aplicaciones
 
-La ubicación compartida se configura mediante un  [grupo de aplicaciones](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19), que se configura en la sección  **Certificates, Identifiers & Profiles**  (Certificados, identificadores y perfiles) del  [Centro para desarrolladores de Apple](https://developer.apple.com/account/). También se debe hacer referencia a este valor en el archivo Entitlements.plist de cada proyecto.
+La ubicación compartida se configura mediante un [grupo de aplicaciones](https://developer.apple.com/library/content/documentation/Miscellaneous/Reference/EntitlementKeyReference/Chapters/EnablingAppSandbox.html#//apple_ref/doc/uid/TP40011195-CH4-SW19), que se configura en la sección **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles) del [Centro para desarrolladores de Apple](https://developer.apple.com/account/). También se debe hacer referencia a este valor en el archivo Entitlements.plist de cada proyecto.
 
 El grupo de aplicaciones tendrá un identificador, que suele ser el identificador de paquete con un prefijo group. de grupo. Por ejemplo, el identificador de paquete  `com.xamarin.WatchSettings`  tendría el grupo de aplicaciones  `group.com.xamarin.WatchSettings`.
 
 Para crear un grupo de aplicaciones, haga lo siguiente:
 
-1.  Vaya al  [Centro para desarrolladores de iOS](https://developer.apple.com/account/) de Apple, abra su  **cuenta** e inicie sesión.
+1.  Vaya al  [Centro para desarrolladores de iOS](https://developer.apple.com/account/) de Apple, abra su **cuenta** e inicie sesión.
 2.  Seleccione **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles).
 3.  En **Identifiers** (Identificadores), seleccione **App Groups** (Grupos de aplicaciones) y haga clic en el botón **+** para crear un grupo.
-4.  Escriba un **nombre** y un **identificador** para el nuevo grupo y haga clic en el botón **Continuar** : 
+4.  Escriba un **nombre** y un **identificador** para el nuevo grupo y haga clic en el botón **Continue** (Continuar): 
    
     ![Agregar detalles del grupo de aplicaciones](app-groups-capabilities-images/image52.png)
 
@@ -55,17 +55,17 @@ Haga lo siguiente:
 
     ![Agregar servicios de aplicaciones en el grupo de aplicaciones](app-groups-capabilities-images/image53.png)
 
-6.  Compruebe la configuración y haga clic en el botón  **Registrar**  para crear el identificador de aplicación.
+6.  Compruebe la configuración y haga clic en el botón **Register** (Registrar) para crear el identificador de aplicación.
 7.  Haga clic en el botón **Listo** para volver a la lista de identificadores de aplicación registrados.
-8.  Seleccione el identificador de aplicación que acaba de crear en la lista y haga clic en el botón  **Editar** :
+8.  Seleccione el identificador de aplicación recién creado en la lista y haga clic en el botón **Editar**:
 
     ![Selección del identificador de aplicación en la lista](app-groups-capabilities-images/image54.png)
 
-9.  En  **Service App Group** (Grupo de aplicaciones de servicio), haga clic en el botón  **Editar** :
+9.  Debajo de Servicio, en **App Group** (Grupo de aplicaciones), haga clic en el botón **Editar**:
 
     ![Selección del identificador de aplicación en la lista](app-groups-capabilities-images/image55.png)
 
-10. Seleccione el grupo de aplicaciones que ha creado anteriormente y haga clic en el botón  **Continuar** :
+10. Seleccione el grupo de aplicaciones que se creó anteriormente y haga clic en el botón **Continuar**:
 
     ![Agregar el grupo de aplicaciones](app-groups-capabilities-images/image56.png)
 
@@ -78,6 +78,6 @@ En la siguiente lista se describen los pasos adicionales que se deben seguir:
 
 * Use el espacio de nombres del marco en su aplicación.
 * Agregue los derechos necesarios a la aplicación. En la guía [Trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) se proporciona información sobre los derechos necesarios y sobre cómo agregarlos.
-* En la opción  **Firma de lote de iOS** de la aplicación, asegúrese de que  **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta  _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
+* En la opción **Firma de lote de iOS** de la aplicación, asegúrese de que **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta  _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
 
 Si experimenta problemas con servicios de aplicaciones, vea la sección [Solución de problemas](~/ios/deploy-test/provisioning/capabilities/index.md) de la guía principal.
