@@ -100,7 +100,7 @@ Una buena solución para los desarrolladores de aplicaciones para escribir códi
 ## <a name="portable-class-libraries"></a>Bibliotecas de clases portables
 
 > [!TIP]
-> Se recomiendan las bibliotecas .NET standard 2.0 a través de bibliotecas de clases portables.
+> Se recomiendan las bibliotecas .NET standard 2.0 en lugar de las bibliotecas de clases portables.
 
 Las bibliotecas de clases Portable [explica con detalle aquí](~/cross-platform/app-fundamentals/pcl.md).
 
