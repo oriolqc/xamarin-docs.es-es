@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/13/2017
-ms.openlocfilehash: 0645b326576a68c97479bc5b59aabaa104f87ae2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9308d3a746a5a0a43cf47cc5ea809c0f82bbe7b
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114267"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233827"
 ---
 # <a name="app-transport-security-in-xamarinios"></a>Seguridad de transporte de la aplicación de Xamarin.iOS
 
@@ -27,11 +27,11 @@ Como se indicó anteriormente, ATS garantiza que todas las comunicaciones de int
 
 Para las aplicaciones existentes, implementar el `HTTPS` protocolo siempre que sea posible. Para nuevas aplicaciones de Xamarin.iOS, debe usar `HTTPS` exclusivamente al comunicarse con los recursos de internet. Además, la comunicación de alto nivel API debe cifrarse con la versión 1.2 de TLS con confidencialidad directa.
 
-Las conexiones realizadas con [NSUrlConnection](https://developer.xamarin.com/api/type/Foundation.NSUrlConnection/), [CFUrl](https://developer.xamarin.com/api/type/CoreFoundation.CFUrl/) o [NSUrlSession](https://developer.xamarin.com/api/type/Foundation.NSUrlSession/) usará ATS de forma predeterminada en las aplicaciones compiladas para iOS 9 y OS X 10.11 (El capitán).
+Las conexiones realizadas con [NSUrlConnection](xref:Foundation.NSUrlConnection), [CFUrl](xref:CoreFoundation.CFUrl) o [NSUrlSession](xref:Foundation.NSUrlSession) usará ATS de forma predeterminada en las aplicaciones compiladas para iOS 9 y OS X 10.11 (El capitán).
 
 ## <a name="default-ats-behavior"></a>Comportamiento predeterminado de ATS
 
-Puesto que ATS está habilitada de forma predeterminada en las aplicaciones compiladas para iOS 9 y OS X 10.11 (El capitán), todas las conexiones mediante [NSUrlConnection](https://developer.xamarin.com/api/type/Foundation.NSUrlConnection/), [CFUrl](https://developer.xamarin.com/api/type/CoreFoundation.CFUrl/) o [NSUrlSession](https://developer.xamarin.com/api/type/Foundation.NSUrlSession/) estará sujeto a Requisitos de seguridad ATS. Si las conexiones no cumplen estos requisitos, se producirá un error con una excepción.
+Puesto que ATS está habilitada de forma predeterminada en las aplicaciones compiladas para iOS 9 y OS X 10.11 (El capitán), todas las conexiones mediante [NSUrlConnection](xref:Foundation.NSUrlConnection), [CFUrl](xref:CoreFoundation.CFUrl) o [NSUrlSession](xref:Foundation.NSUrlSession) estará sujeto a Requisitos de seguridad ATS. Si las conexiones no cumplen estos requisitos, se producirá un error con una excepción.
 
 ### <a name="ats-connection-requirements"></a>Requisitos de ATS conexión
 
