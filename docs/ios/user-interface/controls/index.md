@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 25b17dbebebf7bcae92ebdc294c798101d39b987
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d5b7d4a372704079343a357c1d341a5260fcf583
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121625"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233281"
 ---
 # <a name="user-interface-controls-in-xamarinios"></a>Controles de interfaz de usuario en Xamarin.iOS
 
@@ -54,13 +54,13 @@ Un usuario específico póngala selectores de establecer la fecha o la hora. Par
 
 ## <a name="progress-and-activity-indicatorsprogress-activity-indicatormd"></a>[Indicadores de progreso y actividad](progress-activity-indicator.md)
 
-iOS ofrece dos maneras principales para indicar el progreso de la aplicación: indicadores de actividad (incluida una determinada _red_ indicador de actividad) y barras de progreso.
+iOS ofrece dos maneras principales para indicar el progreso de la aplicación: Indicadores de actividad (incluida una determinada _red_ indicador de actividad) y barras de progreso.
 
 ## <a name="search-barssearchbarmd"></a>[Las barras de búsqueda](searchbar.md)
 
 El UISearchBar se usa para buscar a través de una lista de valores. 
 
-## <a name="sliders-steppers-and-segmented-controlsslider-switch-segmented-controlsmd"></a>[Controles deslizantes, Steppers y controles segmentados](slider-switch-segmented-controls.md)
+## <a name="sliders-switches-and-segmented-controlsslider-switch-segmented-controlsmd"></a>[Controles deslizantes, conmutadores y controles segmentados](slider-switch-segmented-controls.md)
 
 El control deslizante permite la selección simple de un valor dentro de un intervalo numérico. iOS usa el `UISwitch` como un valor booleano de entrada que puede representarse mediante un botón de radio en otras plataformas. Un Control segmentado es una forma organizada para permitir a los usuarios interactuar con un número pequeño de opciones.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 00bf7290d5f7165feb5b67cd91c15a96b7d3eaf8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c409fcc018379401c1ab40573495da12a8220c5a
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118375"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233671"
 ---
 # <a name="custom-controls-in-the-xamarin-designer-for-ios"></a>Controles personalizados en el Diseñador de Xamarin para iOS
 
@@ -24,8 +24,8 @@ El Diseñador de Xamarin para iOS es una herramienta eficaz para visualizar la i
 
 En la superficie de diseño se representará un control que cumple todos los requisitos siguientes:
 
-1.  Es una subclase directa o indirecta de [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) o [UIViewController](https://developer.xamarin.com/api/type/UIKit.UIView/Controller). Otros [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/) subclases aparecerá como un icono en la superficie de diseño.
-2.  Tiene un [RegisterAttribute](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) exponerlo a Objective-C.
+1.  Es una subclase directa o indirecta de [UIView](xref:UIKit.UIView) o [UIViewController](xref:UIKit.UIViewController). Otros [NSObject](xref:Foundation.NSObject) subclases aparecerá como un icono en la superficie de diseño.
+2.  Tiene un [RegisterAttribute](xref:Foundation.RegisterAttribute) exponerlo a Objective-C.
 3.  Tiene [el constructor de IntPtr necesario](~/ios/internals/api-design/index.md).
 4.  O bien implementa el [IComponent](xref:System.ComponentModel.IComponent) interfaz o tiene un [DesignTimeVisibleAttribute](xref:System.ComponentModel.DesignTimeVisibleAttribute) establecida en True.
 
@@ -38,17 +38,17 @@ El diseñador no admite cargar bibliotecas de Objective-C de terceros.
 Una propiedad declarada por un control personalizado aparecerá en el panel de propiedades si se cumplen las condiciones siguientes:
 
 1.  La propiedad tiene un captador público y un establecedor.
-1.  La propiedad tiene un [ExportAttribute](https://developer.xamarin.com/api/type/Foundation.ExportAttribute/) , así como un [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) establecida en True.
-1.  El tipo de propiedad es un tipo numérico, tipo de enumeración, string, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](https://developer.xamarin.com/api/type/UIKit.UIColor/), o [UIImage](https://developer.xamarin.com/api/type/UIKit.UIImage/). Esta lista de tipos compatibles se puede expandir en el futuro.
+1.  La propiedad tiene un [ExportAttribute](xref:Foundation.ExportAttribute) , así como un [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) establecida en True.
+1.  El tipo de propiedad es un tipo numérico, tipo de enumeración, string, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](xref:UIKit.UIColor), o [UIImage](xref:UIKit.UIImage). Esta lista de tipos compatibles se puede expandir en el futuro.
 
 
 La propiedad también puede estar representada con un [atributo DisplayNameAttribute](xref:System.ComponentModel.DisplayNameAttribute) para especificar la etiqueta que se muestra para él en el panel de propiedades.
 
 ## <a name="initialization"></a>Inicialización
 
-Para `UIViewController` subclases, debe usar el [ViewDidLoad](https://developer.xamarin.com/api/member/UIKit.UIViewController.ViewDidLoad/) método para el código que depende de las vistas que creó en el diseñador.
+Para `UIViewController` subclases, debe usar el [ViewDidLoad](xref:UIKit.UIViewController.ViewDidLoad) método para el código que depende de las vistas que creó en el diseñador.
 
-Para `UIView` y otros `NSObject` subclases, el [AwakeFromNib](https://developer.xamarin.com/api/member/Foundation.NSObject.AwakeFromNib/) método es el lugar recomendado para realizar la inicialización del control personalizado una vez que se carga desde el archivo de diseño. Esto es porque no se establecerán todas las propiedades personalizadas que se establece en el panel de la propiedad cuando se ejecuta el constructor del control, pero se establecerán antes `AwakeFromNib` se denomina:
+Para `UIView` y otros `NSObject` subclases, el [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) método es el lugar recomendado para realizar la inicialización del control personalizado una vez que se carga desde el archivo de diseño. Esto es porque no se establecerán todas las propiedades personalizadas que se establece en el panel de la propiedad cuando se ejecuta el constructor del control, pero se establecerán antes `AwakeFromNib` se denomina:
 
 
 ```csharp
@@ -138,7 +138,7 @@ Para corregir la situación anterior, inicializar el `Counter` propiedad en otro
 
 En la superficie de diseño, debe cumplir un control personalizado algunas restricciones:
 
--  Recursos del lote de aplicación no están disponibles en modo de diseño. Las imágenes están disponibles cuando se cargan a través de [UIImage métodos](https://developer.xamarin.com/api/type/UIKit.UIImage/%2fM) .
+-  Recursos del lote de aplicación no están disponibles en modo de diseño. Las imágenes están disponibles cuando se cargan a través de [UIImage métodos](xref:UIKit.UIImage) .
 -  Las operaciones asincrónicas, como solicitudes web, no deben realizarse en modo de diseño. La superficie de diseño no es compatible con la animación o cualquier otra actualización asincrónica a la interfaz de usuario del control.
 
 

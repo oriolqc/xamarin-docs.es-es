@@ -6,12 +6,12 @@ ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 369e1a37cc75bb4d10cc71d8f79ed1dd473378ba
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c5a3cdbc8a8d5a046db90ffa48b12709359da98
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119441"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55234035"
 ---
 # <a name="binding-types-reference-guide"></a>Guía de referencia de tipos de enlace
 
@@ -246,7 +246,7 @@ Cuando este atributo se aplica a la definición de interfaz marcará el construc
 
 <a name="CategoryAttribute" />
 
-### <a name="categoryattribute"></a>Atributo CategoryAttribute
+### <a name="categoryattribute"></a>CategoryAttribute
 
 Utilice este atributo en una definición de tipo para enlazar las categorías de Objective-C y exponer como C# métodos de extensión para reflejar la manera de Objective-C expone la funcionalidad.
 
@@ -1181,7 +1181,7 @@ public class MyClass {
 }
 ```
 
-Los usuarios de su código, a continuación, pueden suscribirse fácilmente a las notificaciones que se registran en el [NSDefaultCenter](https://developer.xamarin.com/api/property/Foundation.NSNotificationCenter.DefaultCenter/) mediante código similar al siguiente:
+Los usuarios de su código, a continuación, pueden suscribirse fácilmente a las notificaciones que se registran en el [NSDefaultCenter](xref:Foundation.NSNotificationCenter.DefaultCenter) mediante código similar al siguiente:
 
 ```csharp
 var token = MyClass.Notifications.ObserverDidStart ((notification) => {
@@ -1203,7 +1203,7 @@ El valor devuelto de `ObserveDidStart` puede usarse fácilmente dejar de recibir
 token.Dispose ();
 ```
 
-O bien puede llamar [NSNotification.DefaultCenter.RemoveObserver](https://developer.xamarin.com/api/member/Foundation.NSNotificationCenter.RemoveObserver/p/Foundation.NSObject//) y pasar el token. Si la notificación contiene parámetros, debe especificar una aplicación auxiliar `EventArgs` interfaz como esta:
+O bien puede llamar [NSNotification.DefaultCenter.RemoveObserver](xref:Foundation.NSNotificationCenter.RemoveObserver(Foundation.NSObject)) y pasar el token. Si la notificación contiene parámetros, debe especificar una aplicación auxiliar `EventArgs` interfaz como esta:
 
 ```csharp
 interface MyClass {
@@ -1226,7 +1226,7 @@ interface MyScreenChangedEventArgs {
 }
 ```
 
-Lo anterior, se generará un `MyScreenChangedEventArgs` clase con el `ScreenX` y `ScreenY` propiedades que se capturará los datos desde el [NSNotification.UserInfo](https://developer.xamarin.com/api/property/Foundation.NSNotification.UserInfo/) con las claves del diccionario `ScreenXKey` y `ScreenYKey` respectivamente y se aplican las conversiones adecuadas. El `[ProbePresence]` atributo se utiliza para el generador para sondear si la clave se establece el `UserInfo`, en lugar de intentar extraer el valor. Esto se usa para los casos donde la presencia de la clave es el valor (normalmente por los valores booleanos).
+Lo anterior, se generará un `MyScreenChangedEventArgs` clase con el `ScreenX` y `ScreenY` propiedades que se capturará los datos desde el [NSNotification.UserInfo](xref:Foundation.NSNotification.UserInfo) con las claves del diccionario `ScreenXKey` y `ScreenYKey` respectivamente y se aplican las conversiones adecuadas. El `[ProbePresence]` atributo se utiliza para el generador para sondear si la clave se establece el `UserInfo`, en lugar de intentar extraer el valor. Esto se usa para los casos donde la presencia de la clave es el valor (normalmente por los valores booleanos).
 
 Esto le permite escribir código como este:
 
@@ -1942,13 +1942,13 @@ También puede aplicar el atributo en el nivel de ensamblado y se aplicará a to
 
 Con Xamarin.iOS 8.0 se introdujo la compatibilidad para crear fácilmente clases fuertemente tipadas que ajustan `NSDictionaries`.
 
-Aunque siempre ha sido posible utilizar el [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) del tipo de datos junto con una API manual, ahora resulta mucho más fácil de hacerlo.  Para obtener más información, consulte [exponer tipos de seguro](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types).
+Aunque siempre ha sido posible utilizar el [DictionaryContainer](xref:Foundation.DictionaryContainer) del tipo de datos junto con una API manual, ahora resulta mucho más fácil de hacerlo.  Para obtener más información, consulte [exponer tipos de seguro](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types).
 
 <a name="StrongDictionary" />
 
 ### <a name="strongdictionary"></a>StrongDictionary
 
-Cuando este atributo se aplica a una interfaz, el generador creará una clase con el mismo nombre que la interfaz que se deriva de [DictionaryContainer](https://developer.xamarin.com/api/type/Foundation.DictionaryContainer/) y convierte cada propiedad definida en la interfaz en fuertemente tipados captador y establecedor para el diccionario.
+Cuando este atributo se aplica a una interfaz, el generador creará una clase con el mismo nombre que la interfaz que se deriva de [DictionaryContainer](xref:Foundation.DictionaryContainer) y convierte cada propiedad definida en la interfaz en fuertemente tipados captador y establecedor para el diccionario.
 
 Esto genera automáticamente una clase que se puede crear instancias de una existente `NSDictionary` o que se han creado nuevos.
 

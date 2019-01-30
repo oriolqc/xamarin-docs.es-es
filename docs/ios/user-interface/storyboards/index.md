@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 554c96cdb46041b75a48523cc2952f05d2a7b1db
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 6294d696fe309e1952124caaaace89d40ad24bc6
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51564010"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233567"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a guiones gráficos en Xamarin.iOS
 
@@ -249,7 +249,7 @@ public MainViewController (IntPtr handle) : base (handle)
 ```
 
 
-Cuando se crea un guión gráfico mediante el diseñador, el IDE agrega automáticamente el [[registrar]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) atributo en la parte superior de la `designer.cs` clase y pasar un identificador de cadena, que es idéntico al identificador de guión gráfico especificado en el paso anterior. Esta opción vinculará el C# a la escena en el guión gráfico relevante.
+Cuando se crea un guión gráfico mediante el diseñador, el IDE agrega automáticamente el [[registrar]](xref:Foundation.RegisterAttribute) atributo en la parte superior de la `designer.cs` clase y pasar un identificador de cadena, que es idéntico al identificador de guión gráfico especificado en el paso anterior. Esta opción vinculará el C# a la escena en el guión gráfico relevante.
 
 En algún momento desea agregar una clase existente que fue **no** creado en el diseñador. En este caso, podría registrar esta clase como normal:
 
@@ -319,13 +319,13 @@ Antes de comenzar, siga los pasos 1 a 8 anteriores. En estos pasos se crea el gu
 
 1. Ahora, vamos a compilar nuestra interfaz de usuario y agregar las vistas adicionales enumeradas en la `MainViewController` para darle un aspecto similar en la captura de pantalla siguiente:
 
-    - Interfaz de usuario
+    - UITextField
         - Nombre: PasswordTextField
-        - Marcador de posición: 'escribir la contraseña secreta'
+        - Marcador de posición: 'Escribir la contraseña secreta'
     - UILabel
-        - Texto: "Error: incorrecto de contraseña. No se deben pasar!'
-        - Colores: rojo
-        - Alineación: Centro
+        - Texto: 'Error: Contraseña incorrecta. No se deben pasar!'
+        - Color: Rojo
+        - Alineación: Centrar
         - Líneas: 2
         - Casilla 'Hidden' activada 
         

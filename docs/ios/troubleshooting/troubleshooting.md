@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2018
-ms.openlocfilehash: 146b05cf7ca2bbd05e952ecc9064fbb9168d179a
-ms.sourcegitcommit: d294c967a18e6d91f3909c052eeff98ede1a21f6
+ms.openlocfilehash: 650ed00557a3dd819ab2920a7646f93199b98b9e
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53609940"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233957"
 ---
 # <a name="troubleshooting-tips-for-xamarinios"></a>Sugerencias para solucionar problemas de Xamarin.iOS 
 
@@ -75,7 +75,7 @@ TypeName XXXX {
 
 La definición anterior se genera automáticamente por Visual Studio para Mac para los archivos XIB que se agregan a Visual Studio para Mac en el `NAME_OF_YOUR_XIB_FILE.designer.xib.cs` archivo.
 
-Además, los tipos que contiene el código anterior deben ser una subclase de [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/).  Si el tipo contenedor es dentro de un espacio de nombres, también debe tener un [[registrar]](https://developer.xamarin.com/api/type/Foundation.RegisterAttribute/) atributo que proporciona un nombre de tipo sin un espacio de nombres (como el generador de interfaz no es compatible con espacios de nombres de tipos):
+Además, los tipos que contiene el código anterior deben ser una subclase de [NSObject](xref:Foundation.NSObject).  Si el tipo contenedor es dentro de un espacio de nombres, también debe tener un [[registrar]](xref:Foundation.RegisterAttribute) atributo que proporciona un nombre de tipo sin un espacio de nombres (como el generador de interfaz no es compatible con espacios de nombres de tipos):
 
 ```csharp
 namespace Samples.GLPaint {

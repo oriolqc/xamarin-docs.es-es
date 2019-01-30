@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: 38e71914d9f7f6bb46ebeee8d548968c207d3b16
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 8b3b9a5b110432f33e06edf7ab51c582681e4ea3
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617766"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233736"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Métodos abreviados de Siri de Xamarin.iOS
 
@@ -72,9 +72,9 @@ El **Info.plist** archivo también contiene lo siguiente:
 </array>
 ```
 
-Esto `NSUserActivityTypes` par clave/valor indica que Chef sopa sabe cómo tratar un `OrderSoupIntent`y un [ `NSUserActivity` ](https://developer.xamarin.com/api/type/Foundation.NSUserActivity/) tener un [ `ActivityType` ](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.ActivityType/) de "com.xamarin.SoupChef.viewMenu".
+Esto `NSUserActivityTypes` par clave/valor indica que Chef sopa sabe cómo tratar un `OrderSoupIntent`y un [ `NSUserActivity` ](xref:Foundation.NSUserActivity) tener un [ `ActivityType` ](xref:Foundation.NSUserActivity.ActivityType) de "com.xamarin.SoupChef.viewMenu".
 
-Las actividades y los intentos personalizados pasados a la aplicación, en lugar de sus extensiones, se controlan en el `AppDelegate` (un [ `UIApplicationDelegate` ](https://developer.xamarin.com/api/type/UIKit.UIApplicationDelegate/)) por el [ `ContinueUserActivity` ](https://developer.xamarin.com/api/member/UIKit.UIApplicationDelegate.ContinueUserActivity/) método.
+Las actividades y los intentos personalizados pasados a la aplicación, en lugar de sus extensiones, se controlan en el `AppDelegate` (un [ `UIApplicationDelegate` ](xref:UIKit.UIApplicationDelegate) por la [ `ContinueUserActivity` ](xref:UIKit.UIApplicationDelegate.ContinueUserActivity*) método.
 
 ### <a name="entitlementsplist"></a>Entitlements.plist
 
@@ -89,7 +89,7 @@ El **Entitlements.plist** de archivos en el **SoupChef** proyecto contiene lo si
 <true/>
 ```
 
-Esta configuración indica que la aplicación usa el grupo de aplicaciones "group.com.xamarin.SoupChef". El **SoupChefIntents** extensión de la aplicación usa este mismo grupo de aplicaciones, lo que permite a los dos proyectos compartir [`NSUserDefaults`](https://developer.xamarin.com/api/type/Foundation.NSUserDefaults/)
+Esta configuración indica que la aplicación usa el grupo de aplicaciones "group.com.xamarin.SoupChef". El **SoupChefIntents** extensión de la aplicación usa este mismo grupo de aplicaciones, lo que permite a los dos proyectos compartir [`NSUserDefaults`](xref:Foundation.NSUserDefaults)
 datos.
 
 El `com.apple.developer.siri` clave indica que la aplicación interactúa con Siri.
@@ -103,7 +103,7 @@ Para crear un acceso directo que se abre una aplicación que muestre el contenid
 
 ### <a name="setting-up-an-nsuseractivity"></a>Configurar un NSUserActivity
 
-En la pantalla del menú, `SoupMenuViewController` crea un `NSUserActivity` y lo asigna al controlador de vista [ `UserActivity` ](https://developer.xamarin.com/api/property/UIKit.UIResponder.UserActivity/) propiedad:
+En la pantalla del menú, `SoupMenuViewController` crea un `NSUserActivity` y lo asigna al controlador de vista [ `UserActivity` ](xref:UIKit.UIResponder.UserActivity) propiedad:
 
 ```csharp
 public override void ViewDidLoad()
@@ -149,8 +149,8 @@ public static NSUserActivity ViewMenuActivity {
 Tenga en cuenta lo siguiente:
 
 - Establecer `EligibleForPrediction` a `true` indica que puede predecir esta actividad Siri y la superficie, como un acceso directo.
-- El [ `ContentAttributeSet` ](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.ContentAttributeSet/) matriz es un estándar [ `CSSearchableItemAttributeSet` ](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/) usa para incluir un `NSUserActivity` en los resultados de búsqueda de iOS.
-- [`SuggestedInvocationPhrase`](https://developer.xamarin.com/api/property/Foundation.NSUserActivity.SuggestedInvocationPhrase/) es una frase que Siri sugerirá al usuario como una opción posible al asignar una frase a un acceso directo.
+- El [ `ContentAttributeSet` ](xref:Foundation.NSUserActivity.ContentAttributeSet) matriz es un estándar [ `CSSearchableItemAttributeSet` ](https://developer.xamarin.com/api/type/CoreSpotlight.CSSearchableItemAttributeSet/) usa para incluir un `NSUserActivity` en los resultados de búsqueda de iOS.
+- [`SuggestedInvocationPhrase`](xref:Foundation.NSUserActivity.SuggestedInvocationPhrase) es una frase que Siri sugerirá al usuario como una opción posible al asignar una frase a un acceso directo.
 
 ### <a name="handling-an-nsuseractivity-shortcut"></a>Control de acceso directo de una NSUserActivity
 
@@ -600,7 +600,7 @@ public void ConfigureView(
 
 Sopa Chef proporciona una interfaz para asignar un acceso directo de voz a cada pedido, lo que permite a Sopa de orden con Siri. De hecho, la interfaz usada para registrar y asignar accesos directos de voz proporcionada por iOS y requiere muy poco código personalizado.
 
-En `OrderDetailViewController`, cuando un usuario pulsa en la tabla **agregar a Siri** fila, el [ `RowSelected` ](https://developer.xamarin.com/api/member/UIKit.UITableViewSource.RowSelected/) método presenta una pantalla para agregar o editar un acceso directo de voz:
+En `OrderDetailViewController`, cuando un usuario pulsa en la tabla **agregar a Siri** fila, el [ `RowSelected` ](xref:UIKit.UITableViewSource.RowSelected*) método presenta una pantalla para agregar o editar un acceso directo de voz:
 
 ```csharp
 public override void RowSelected(UITableView tableView, NSIndexPath indexPath)

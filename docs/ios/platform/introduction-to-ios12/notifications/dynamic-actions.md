@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 9/4/2018
-ms.openlocfilehash: 8a2755de3dc43ccff88cbdf4dc9c4f9ba2d532c0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ddd3e1e6cc3a3a9b42ddb7a597ed2db0ee495d41
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111707"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233320"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Botones de acción de notificación dinámico de Xamarin.iOS
 
@@ -35,9 +35,9 @@ Crear y registrar las categorías de notificación mientras se inicia una aplica
 Por ejemplo, en el [aplicación de ejemplo](#sample-app-redgreennotifications), `FinishedLaunching` método `AppDelegate` hace lo siguiente:
 
 - Define una categoría para las notificaciones de color rojo y otro para las notificaciones de verde
-- Estas categorías se registra mediante una llamada a la [`SetNotificationCategories`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenter.SetNotificationCategories/)
+- Estas categorías se registra mediante una llamada a la [`SetNotificationCategories`](xref:UserNotifications.UNUserNotificationCenter.SetNotificationCategories*)
 método de `UNUserNotificationCenter`
-- Asocia un único [`UNNotificationAction`](https://developer.xamarin.com/api/type/UserNotifications.UNNotificationAction/)
+- Asocia un único [`UNNotificationAction`](xref:UserNotifications.UNNotificationAction)
 para cada categoría
 
 El código de ejemplo siguiente muestra cómo funciona esto:
@@ -74,12 +74,12 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
 }
 ```
 
-Según este código, cualquier notificación cuya [`Content.CategoryIdentifier`](https://developer.xamarin.com/api/property/UserNotifications.UNNotificationContent.CategoryIdentifier/)
+Según este código, cualquier notificación cuya [`Content.CategoryIdentifier`](xref:UserNotifications.UNNotificationContent.CategoryIdentifier)
 estará "categoría roja" o "green-category", de forma predeterminada, mostrar un **girar 20 º** botón de acción.
 
 ## <a name="in-app-handling-of-notification-action-buttons"></a>En la aplicación control de botones de acción de notificación
 
-`UNUserNotificationCenter` tiene un `Delegate` propiedad de tipo [ `IUNUserNotificationCenterDelegate` ](https://developer.xamarin.com/api/type/UserNotifications.UNUserNotificationCenterDelegate_Extensions/).
+`UNUserNotificationCenter` tiene un `Delegate` propiedad de tipo [ `IUNUserNotificationCenterDelegate` ](xref:UserNotifications.IUNUserNotificationCenterDelegate).
 
 En la aplicación de ejemplo, `AppDelegate` configura a sí mismo como delegado del centro de notificaciones de usuario en `FinishedLaunching`:
 
@@ -95,7 +95,7 @@ public override bool FinishedLaunching(UIApplication application, NSDictionary l
         // ...
 ```
 
-A continuación, `AppDelegate` implementa [`DidReceiveNotificationResponse`](https://developer.xamarin.com/api/member/UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse/)
+A continuación, `AppDelegate` implementa [`DidReceiveNotificationResponse`](xref:UserNotifications.UNUserNotificationCenterDelegate_Extensions.DidReceiveNotificationResponse*)
 para controlar las derivaciones de botón de acción:
 
 ```csharp
@@ -125,7 +125,7 @@ Esta implementación de `DidReceiveNotificationResponse` no controla la notifica
 
 Una extensión de contenido de notificación contiene un controlador de vista que define la interfaz para una notificación personalizada.
 
-Puede utilizar este controlador de vista el `GetNotificationActions` y `SetNotificationActions` métodos en su [`ExtensionContext`](https://developer.xamarin.com/api/property/UIKit.UIViewController.ExtensionContext/)
+Puede utilizar este controlador de vista el `GetNotificationActions` y `SetNotificationActions` métodos en su [`ExtensionContext`](xref:UIKit.UIViewController.ExtensionContext)
 propiedad para obtener acceso y modificar los botones de acción de la notificación.
 
 En la aplicación de ejemplo, el controlador de vista de la extensión de contenido notificación modifica los botones de acción sólo al responder a una derivación de un botón de acción ya existente.

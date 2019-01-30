@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/12/2017
-ms.openlocfilehash: b51ee6b547cc53761f23379e7233bb710090a61b
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: 5d3c8b6bd8f7f788a1de74feddf7fcb378fa5818
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "39351735"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233645"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Selectores de Objective-C en Xamarin.iOS
 
@@ -36,9 +36,9 @@ La declaración (de la documentación de Apple) es:
 Esta API tiene las siguientes características:
 
 - El tipo de valor devuelto es `CGSize` para la API unificada.
-- El `font` parámetro es un [UIFont](https://developer.xamarin.com/api/type/UIKit.UIFont/) (y un tipo derivado (indirectamente) [NSObject](https://developer.xamarin.com/api/type/Foundation.NSObject/)) y se asigna a [System.IntPtr](xref:System.IntPtr).
+- El `font` parámetro es un [UIFont](xref:UIKit.UIFont) (y un tipo derivado (indirectamente) [NSObject](xref:Foundation.NSObject)y se asigna a [System.IntPtr](xref:System.IntPtr).
 - El `width` parámetro, un `CGFloat`, se asigna a `nfloat`.
-- El `lineBreakMode` parámetro, un [ `UILineBreakMode` ](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc), ya se ha enlazado en Xamarin.iOS como la [`UILineBreakMode`](https://developer.xamarin.com/api/type/UIKit.UILineBreakMode/)
+- El `lineBreakMode` parámetro, un [ `UILineBreakMode` ](https://developer.apple.com/documentation/uikit/uilinebreakmode?language=objc), ya se ha enlazado en Xamarin.iOS como la [`UILineBreakMode`](xref:UIKit.UILineBreakMode)
 Enumeración.
 
 En resumen, la `objc_msgSend` debe coincidir con la declaración:
@@ -149,7 +149,7 @@ Una vez que tenga un nombre de selector, puede crear un [ `ObjCRuntime.Selector`
 
 ### <a name="calling-objcmsgsend"></a>Una llamada a objc_msgSend
 
-`objc_msgSend` envía un mensaje (selector) a un objeto. Esta familia de funciones tarda al menos dos argumentos necesarios: el destino del selector (una instancia o clase controlar), el selector de sí mismo y los argumentos necesarios para el selector. Los argumentos de la instancia y el selector deben ser `System.IntPtr`, y todos los argumentos restantes deben coincidir con el tipo que espera el selector, por ejemplo un `nint` para un `int`, o un `System.IntPtr` para todos los `NSObject`-tipos derivados. Use el [`NSObject.Handle`](https://developer.xamarin.com/api/property/Foundation.NSObject.Handle/)
+`objc_msgSend` envía un mensaje (selector) a un objeto. Esta familia de funciones tarda al menos dos argumentos necesarios: el destino del selector (una instancia o clase controlar), el selector de sí mismo y los argumentos necesarios para el selector. Los argumentos de la instancia y el selector deben ser `System.IntPtr`, y todos los argumentos restantes deben coincidir con el tipo que espera el selector, por ejemplo un `nint` para un `int`, o un `System.IntPtr` para todos los `NSObject`-tipos derivados. Use el [`NSObject.Handle`](xref:Foundation.NSObject.Handle)
 propiedad que se va a obtener un `IntPtr` para una instancia de tipo C de objetivo.
 
 Hay más de un `objc_msgSend` función:

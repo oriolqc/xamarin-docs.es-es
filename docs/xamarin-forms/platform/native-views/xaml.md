@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/24/2016
-ms.openlocfilehash: 4b33d1d149d3ac85d01dfcbe0d144416fd953426
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 4f5f32871c273fc7ac3bab8fd9bcbcac03fc47fa
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052909"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233814"
 ---
 # <a name="native-views-in-xaml"></a>Vistas nativas en XAML
 
@@ -182,7 +182,7 @@ El ejemplo de código siguiente muestra ambas técnicas:
 </ContentPage>
 ```
 
-El [ `UIFont.FromName` ](https://developer.xamarin.com/api/member/UIKit.UIFont.FromName/) método de generador que se usa para establecer el [ `UILabel.Font` ](https://developer.xamarin.com/api/property/UIKit.UILabel.Font/) propiedad a un nuevo [ `UIFont` ](https://developer.xamarin.com/api/type/UIKit.UIFont/) en iOS. El `UIFont` nombre y tamaño se especifican mediante los argumentos del método que son elementos secundarios de la `x:Arguments` atributo.
+El [ `UIFont.FromName` ](xref:UIKit.UIFont.FromName*) método de generador que se usa para establecer el [ `UILabel.Font` ](xref:UIKit.UILabel.Font) propiedad a un nuevo [ `UIFont` ](xref:UIKit.UIFont) en iOS. El `UIFont` nombre y tamaño se especifican mediante los argumentos del método que son elementos secundarios de la `x:Arguments` atributo.
 
 El [ `Typeface.Create` ](https://developer.xamarin.com/api/member/Android.Graphics.Typeface.Create/p/System.String/Android.Graphics.TypefaceStyle/) método de generador que se usa para establecer el [ `TextView.Typeface` ](https://developer.xamarin.com/api/property/Android.Widget.TextView.Typeface/) propiedad a un nuevo [ `Typeface` ](https://developer.xamarin.com/api/type/Android.Graphics.Typeface/) en Android. El `Typeface` nombre de familia y estilo se especifican mediante los argumentos del método que son elementos secundarios de la `x:Arguments` atributo.
 
@@ -331,7 +331,7 @@ En iOS y Android los selectores nativos usar métodos para configurar los contro
 
 ### <a name="ios"></a>iOS
 
-Las subclases de la implementación de iOS la [ `UIPickerView` ](https://developer.xamarin.com/api/type/UIKit.UIPickerView/) vista y expone propiedades y un evento que se puede consumir fácilmente desde XAML:
+Las subclases de la implementación de iOS la [ `UIPickerView` ](xref:UIKit.UIPickerView) vista y expone propiedades y un evento que se puede consumir fácilmente desde XAML:
 
 ```csharp
 public class MyUIPickerView : UIPickerView
@@ -376,7 +376,7 @@ public class MyUIPickerView : UIPickerView
 }
 ```
 
-El `MyUIPickerView` clase expone `ItemsSource` y `SelectedItem` propiedades y un `SelectedItemChanged` eventos. Un [ `UIPickerView` ](https://developer.xamarin.com/api/type/UIKit.UIPickerView/) requiere una subyacente [ `UIPickerViewModel` ](https://developer.xamarin.com/api/type/UIKit.UIPickerViewModel/) data model, que obtiene acceso a la `MyUIPickerView` propiedades y eventos. El `UIPickerViewModel` proporciona el modelo de datos la `PickerModel` clase:
+El `MyUIPickerView` clase expone `ItemsSource` y `SelectedItem` propiedades y un `SelectedItemChanged` eventos. Un [ `UIPickerView` ](xref:UIKit.UIPickerView) requiere una subyacente [ `UIPickerViewModel` ](xref:UIKit.UIPickerViewModel) data model, que obtiene acceso a la `MyUIPickerView` propiedades y eventos. El `UIPickerViewModel` proporciona el modelo de datos la `PickerModel` clase:
 
 ```csharp
 class PickerModel : UIPickerViewModel
@@ -419,7 +419,7 @@ class PickerModel : UIPickerViewModel
 }
 ```
 
-El `PickerModel` clase proporciona el almacenamiento subyacente para el `MyUIPickerView` (clase), a través de la `Items` propiedad. Cada vez que el elemento seleccionado en el `MyUIPickerView` cambios, el [ `Selected` ](https://developer.xamarin.com/api/member/UIKit.UIPickerViewModel.Selected/) se ejecuta el método, que actualiza el índice seleccionado y se activa el `ItemChanged` eventos. Esto garantiza que el `SelectedItem` propiedad siempre devolverá el último elemento seleccionado por el usuario. Además, el `PickerModel` clase invalida los métodos que se utilizan para configurar el `MyUIPickerView` instancia.
+El `PickerModel` clase proporciona el almacenamiento subyacente para el `MyUIPickerView` (clase), a través de la `Items` propiedad. Cada vez que el elemento seleccionado en el `MyUIPickerView` cambios, el [ `Selected` ](xref:UIKit.UIPickerViewModel.Selected*) se ejecuta el método, que actualiza el índice seleccionado y se activa el `ItemChanged` eventos. Esto garantiza que el `SelectedItem` propiedad siempre devolverá el último elemento seleccionado por el usuario. Además, el `PickerModel` clase invalida los métodos que se utilizan para configurar el `MyUIPickerView` instancia.
 
 ### <a name="android"></a>Android
 

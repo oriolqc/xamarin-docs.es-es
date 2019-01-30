@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/11/2017
-ms.openlocfilehash: 923eebc2674abdbbd66d9db11bebf9f503928569
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3c46aa1244699671d46560b0029197981a86d005
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107331"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233333"
 ---
 # <a name="search-bars-in-xamarinios"></a>Barras de búsqueda de Xamarin.iOS
 
@@ -84,7 +84,7 @@ A continuación se explican estas propiedades:
 
 - **Mensaje de texto, el marcador de posición,** – estas propiedades se usan para sugerir e indicarle cómo los usuarios deben utilizar la barra de búsqueda. Por ejemplo, si la aplicación muestra una lista de almacenes podría usar la propiedad de símbolo del sistema para indicar que los usuarios pueden "escribir una ciudad, el nombre del artículo o el código postal"
 - **Buscar el estilo** : puede establecer la barra de búsqueda para ser **Prominent** o **mínimo**. Utilizando los destacados teñir todo lo demás en pantalla, excepto en la barra de búsqueda, provocando el enfoque que se dibujará en la barra de búsqueda. La barra de búsqueda de estilo mínima se mezcla con su entorno.
-- **Capacidades** : habilitación de estas propiedades solo muestra el elemento de interfaz de usuario. Se debe implementar la funcionalidad para ellos, se genera el evento correcto tal como se detalla en el [documentos de la API de la barra de búsqueda](https://developer.xamarin.com/api/type/UIKit.UISearchBar/)
+- **Capacidades** : habilitación de estas propiedades solo muestra el elemento de interfaz de usuario. Se debe implementar la funcionalidad para ellos, se genera el evento correcto tal como se detalla en el [documentos de la API de la barra de búsqueda](xref:UIKit.UISearchBar)
     - Muestra los resultados de búsqueda / botón marcadores: muestra un icono de resultados de búsqueda o marcadores en la barra de búsqueda
     - Muestra el botón Cancelar: permite a los usuarios para salir de la función de búsqueda. Se recomienda que esta opción está seleccionada.
     - Muestra a la barra de ámbito: Esto permite a los usuarios limitar el ámbito de la búsqueda. Por ejemplo, al realizar búsquedas en la aplicación de música, el usuario puede seleccionar si desean buscar música o su biblioteca para una canción determinada o un intérprete. Para mostrar varias opciones, agregue una matriz de títulos para el **ScopeBarTitles** propiedad.

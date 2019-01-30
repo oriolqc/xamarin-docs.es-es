@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: fc08824ba973f5d50dbe92950d57c4ea8ecc3147
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 020afef6b2eb3743fd17118b2922bac4d4c32239
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054017"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233996"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tres maneras de dibujar un arco
 
@@ -38,7 +38,7 @@ public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
 public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean forceMoveTo)
 ```
 
-Estos métodos son idénticos a la de Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) y [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) métodos. IOS [ `AddArc` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArc/p/System.Boolean/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) método es similar pero está restringido a arcos de la circunferencia de un círculo en lugar de generalizarse para una elipse.
+Estos métodos son idénticos a la de Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) y [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) métodos. IOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) método es similar pero está restringido a arcos de la circunferencia de un círculo en lugar de generalizarse para una elipse.
 
 Ambos métodos comienzan por un `SKRect` valor que define la ubicación y el tamaño de una elipse:
 
@@ -58,7 +58,7 @@ La curva que se agrega a la ruta de acceso con el `AddArc` o `ArcTo` método es 
 
 ![](arcs-images/anglearc.png "El arco ángulo por sí mismo")
 
-El `startAngle` o `sweepAngle` los argumentos pueden ser negativos: es hacia la derecha para los valores positivos del arco `sweepAngle` y hacia la izquierda para los valores negativos.
+El `startAngle` o `sweepAngle` los argumentos pueden ser negativos: El arco es hacia la derecha para los valores positivos de `sweepAngle` y hacia la izquierda para los valores negativos.
 
 Sin embargo, `AddArc` does *no* definir un contorno cerrado. Si se llama a `LineTo` después `AddArc`, se dibuja una línea desde el final del arco hasta el punto en el `LineTo` método y el mismo puede decirse `ArcTo`.
 
@@ -226,7 +226,7 @@ public void ArcTo (SKPoint point1, SKPoint point2, Single radius)
 public void ArcTo (Single x1, Single y1, Single x2, Single y2, Single radius)
 ```
 
-Esto `ArcTo` método es similar a la PostScript [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) función (página 532) y el iOS [ `AddArcToPoint` ](https://developer.xamarin.com/api/member/CoreGraphics.CGPath.AddArcToPoint/p/System.nfloat/System.nfloat/System.nfloat/System.nfloat/System.nfloat/) método.
+Esto `ArcTo` método es similar a la PostScript [ `arct` ](https://www.adobe.com/products/postscript/pdfs/PLRM.pdf) función (página 532) y el iOS [ `AddArcToPoint` ](xref:CoreGraphics.CGPath.AddArcToPoint(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat)) método.
 
 El `ArcTo` método implica tres puntos:
 
@@ -521,7 +521,7 @@ Si, a continuación, se coloca esta elipse superpuesta para que toca los dos pun
 
 ![](arcs-images/ellipticalarcellipse1.png "El primer conjunto de arcos elípticos")
 
-Se pueden distinguir estos dos arcos de dos maneras: el arco superior es mayor que el arco de la parte inferior y, como se dibuja el arco de izquierda a derecha, superior se dibuja en sentido mientras la parte inferior se dibuja en una dirección hacia la izquierda.
+Estos dos arcos se pueden distinguir de dos maneras: El arco superior es mayor que el arco de la parte inferior y, como se dibuja el arco de izquierda a derecha, superior se dibuja en sentido mientras la parte inferior se dibuja en una dirección hacia la izquierda.
 
 También es posible ajustar la elipse entre los dos puntos de otro modo:
 
