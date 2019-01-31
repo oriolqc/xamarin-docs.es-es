@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 0f39eb78d46b6156231a165f950f4698e63fc073
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: bd6013a0fc1d4f3dfc2d863860052310fed55e4d
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055746"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292147"
 ---
 # <a name="xamarinforms-xaml-basics"></a>Conceptos básicos de XAML de Xamarin.Forms
 
@@ -101,17 +101,12 @@ Estas características son *no* extensiones XML. XAML es XML completamente váli
 
 ## <a name="requirements"></a>Requisitos
 
-En este artículo se da por supuesto familiarizado con Xamarin.Forms. Leer [An Introduction to Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md) es muy recomendable.
-
-En este artículo también se da por supuesto un poco familiarizado con XML, incluyendo la descripción del uso de las declaraciones de espacio de nombres XML y los términos *elemento*, *etiqueta*, y *atributo*.
+En este artículo se da por supuesto familiarizado con Xamarin.Forms. En este artículo también se da por supuesto un poco familiarizado con XML, incluyendo la descripción del uso de las declaraciones de espacio de nombres XML y los términos *elemento*, *etiqueta*, y *atributo*.
 
 Cuando esté familiarizado con XML y Xamarin.Forms, comience a leer [parte 1. Introducción a XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md).
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
-- [Introducción a Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Creación de libro de Mobile Apps](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
 - [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/) (Ejemplos de Xamarin.Forms)

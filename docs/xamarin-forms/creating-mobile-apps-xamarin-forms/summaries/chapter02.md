@@ -1,18 +1,18 @@
 ---
 title: Resumen del capítulo 2 del documento. Anatomía de una aplicación
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del capítulo 2. Anatomía de una aplicación'
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 2 del documento. Anatomía de una aplicación'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 8764EB7D-8331-4CF7-9BE1-26D0DEE9E0BB
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
-ms.openlocfilehash: 948d25ce379944691053a5ff76ba3b2284385251
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 2236faa67367fa2104280f42ee28056613d1901b
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052642"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292264"
 ---
 # <a name="summary-of-chapter-2-anatomy-of-an-app"></a>Resumen del capítulo 2 del documento. Anatomía de una aplicación
 
@@ -206,4 +206,4 @@ Estas dos propiedades se definen únicamente por `Label`, mientras que el `Horiz
 - [Capítulo 2 del documento de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch02-Apr2016.pdf)
 - [Ejemplos del capítulo 2](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02)
 - [Capítulo 2 F# ejemplos](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/FS)
-- [Introducción a Xamarin.Forms](~/xamarin-forms/get-started/index.md)
+- [Introducción a Xamarin.Forms](~/get-started/index.md)

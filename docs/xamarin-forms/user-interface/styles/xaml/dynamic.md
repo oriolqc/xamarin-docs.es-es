@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: f1c491bd2e19f44151e2efb317fe40d2d122ecae
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 260c215df52eb31139998438cc0eda10a887be65
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058533"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55291965"
 ---
 # <a name="dynamic-styles-in-xamarinforms"></a>Estilos dinámicos en Xamarin.Forms
 
@@ -206,12 +206,6 @@ public class DynamicStylesInheritancePageCS : ContentPage
 ```
 
 El `tealSearchBarStyle` se asigna directamente a la [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propiedad de la [ `SearchBar` ](xref:Xamarin.Forms.SearchBar) instancias. Esto `Style` establece algunas propiedades adicionales y utiliza el [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) propiedad para hacer referencia a `searchBarStyle`. El [ `SetDynamicResource` ](xref:Xamarin.Forms.Element.SetDynamicResource*) método no es necesario aquí porque `tealSearchBarStyle` no cambiará, excepto para el `Style` deriva de. Por lo tanto, `tealSearchBarStyle` mantiene un vínculo a `searchBarStyle` y se modifica cuando cambia el estilo de base.
-
-## <a name="summary"></a>Resumen
-
-Los estilos no responder a los cambios de propiedad y permanecen sin cambios para la duración de una aplicación. Sin embargo, las aplicaciones pueden responder a cambios de estilo dinámicamente en tiempo de ejecución mediante el uso de recursos dinámicos. Además, *dinámica* pueden derivarse de estilos con el [ `BaseResourceKey` ](xref:Xamarin.Forms.Style.BaseResourceKey) propiedad.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

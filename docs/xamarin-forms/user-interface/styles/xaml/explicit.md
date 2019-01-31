@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
-ms.openlocfilehash: 5b3d6f486f802fda1a384b7a8e53b104c1251fdd
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: fcbdeac5ebceccddee68fcca635a3935944ecac8
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058251"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55291939"
 ---
 # <a name="explicit-styles-in-xamarinforms"></a>Estilos explícitos en Xamarin.Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "53058251"
 
 _Un estilo explícito es aquella que se aplica de manera selectiva a los controles estableciendo sus propiedades de estilo._
 
-## <a name="creating-an-explicit-style-in-xaml"></a>Creación de un estilo explícito en XAML
+## <a name="create-an-explicit-style-in-xaml"></a>Crear un estilo explícito en XAML
 
 Para declarar un [ `Style` ](xref:Xamarin.Forms.Style) en el nivel de página, un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) debe agregarse a la página y, a continuación, uno o varios `Style` declaraciones pueden incluirse en el `ResourceDictionary`. Un `Style` estará *explícita* proporcionando su declaración un `x:Key` atributo, que proporciona una clave descriptiva en el `ResourceDictionary`. *Explícita* estilos, a continuación, se deben aplicar a los elementos visuales específicos estableciendo sus [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propiedades.
 
@@ -70,7 +70,7 @@ El [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) define tres *
 
 Además, el último [ `Label` ](xref:Xamarin.Forms.Label) tiene un [ `Style` ](xref:Xamarin.Forms.Style) aplicado a él, pero también invalida la [ `TextColor` ](xref:Xamarin.Forms.Label.TextColor) propiedad a una diferente `Color`valor.
 
-### <a name="creating-an-explicit-style-at-the-control-level"></a>Creación de un estilo explícito en el Control de nivel
+### <a name="create-an-explicit-style-at-the-control-level"></a>Crear un estilo explícito en el nivel de control
 
 Además de crear *explícita* estilos en el nivel de página, también pueden crearse en el nivel de control, tal como se muestra en el ejemplo de código siguiente:
 
@@ -97,7 +97,7 @@ En este ejemplo, el *explícita* [ `Style` ](xref:Xamarin.Forms.Style) instancia
 
 Para obtener información sobre cómo crear estilos en una aplicación [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), consulte [estilos globales](~/xamarin-forms/user-interface/styles/application.md).
 
-## <a name="creating-an-explicit-style-in-c35"></a>Creación de un estilo explícito en C&#35;
+## <a name="create-an-explicit-style-in-c35"></a>Crear un estilo explícito en C&#35;
 
 [`Style`](xref:Xamarin.Forms.Style) las instancias se pueden agregar a una página [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) colección en C# mediante la creación de un nuevo [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)y, a continuación, agregando el `Style` instancias para el `ResourceDictionary`, tal y como se muestra en el ejemplo de código siguiente:
 
@@ -180,12 +180,6 @@ public class ExplicitStylesPageCS : ContentPage
 ```
 
 El constructor define tres *explícita* estilos que se aplican a la página [ `Label` ](xref:Xamarin.Forms.Label) instancias. Cada `Style` se utiliza para mostrar texto en un color diferente, y también establece la fuente de las opciones de diseño de tamaño y horizontales y verticales. Cada `Style` se aplica a otro `Label` estableciendo su [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propiedades. Además, el último `Label` tiene un `Style` aplicado a él, pero también invalida la `TextColor` propiedad en otro `Color` valor.
-
-## <a name="summary"></a>Resumen
-
-Un [ `Style` ](xref:Xamarin.Forms.Style) estará *explícita* proporcionando su declaración un `x:Key` de atributo y, a continuación, aplicar selectivamente, a los controles estableciendo sus [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propiedades.
-
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 

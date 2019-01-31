@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/14/2018
-ms.openlocfilehash: ecf8a1e6d7c248c7141039844324d45d28700854
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: c3759430ce40397418d2f47794e8ecc555ef3ed4
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53049348"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292290"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Vistas de interfaz de usuario de Xamarin.Forms
 
@@ -122,5 +122,4 @@ Xamarin.Forms usa el control del explorador web nativos en cada plataforma y pue
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Introducción a Xamarin.Forms](~/xamarin-forms/get-started/introduction-to-xamarin-forms.md)
 - [Galería de Xamarin.Forms (ejemplo)](https://developer.xamarin.com/samples/FormsGallery/)
