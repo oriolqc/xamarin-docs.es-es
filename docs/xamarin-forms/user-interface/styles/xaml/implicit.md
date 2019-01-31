@@ -6,13 +6,13 @@ ms.assetid: 02A75F3B-4389-49D4-A2F4-AFD473A4A161
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/17/2016
-ms.openlocfilehash: c30e6c0060407720e0324a3327607100db3960d6
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 01/30/2019
+ms.openlocfilehash: 67b8bac62cacb091323d084e1c7cec9accc30844
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056154"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55291978"
 ---
 # <a name="implicit-styles-in-xamarinforms"></a>Estilos implícitos en Xamarin.Forms
 
@@ -20,7 +20,7 @@ ms.locfileid: "53056154"
 
 _Un estilo implícito es aquella que se usa por todos los controles de la mismo TargetType, sin necesidad de cada control para hacer referencia al estilo._
 
-## <a name="creating-an-implicit-style-in-xaml"></a>Creación de un estilo implícito en XAML
+## <a name="create-an-implicit-style-in-xaml"></a>Crear un estilo implícito en XAML
 
 Para declarar un [ `Style` ](xref:Xamarin.Forms.Style) en el nivel de página, un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) debe agregarse a la página y, a continuación, uno o varios `Style` declaraciones pueden incluirse en el `ResourceDictionary`. Un `Style` estará *implícita* al no especificar un `x:Key` atributo. A continuación, se aplicará el estilo a los elementos visuales que coinciden con el `TargetType` exactamente, pero no a los elementos que se derivan de la `TargetType` valor.
 
@@ -57,7 +57,7 @@ El [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) define una so
 
 Además, la cuarta [ `Entry` ](xref:Xamarin.Forms.Entry) invalida la [ `BackgroundColor` ](xref:Xamarin.Forms.VisualElement.BackgroundColor) y [ `TextColor` ](xref:Xamarin.Forms.Entry.TextColor) propiedades del estilo implícito a diferentes `Color`valores.
 
-### <a name="creating-an-implicit-style-at-the-control-level"></a>Creación de un estilo implícito en el Control de nivel
+### <a name="create-an-implicit-style-at-the-control-level"></a>Crear un estilo implícito en el nivel de control
 
 Además de crear *implícita* estilos en el nivel de página, también pueden crearse en el nivel de control, tal como se muestra en el ejemplo de código siguiente:
 
@@ -84,7 +84,7 @@ En este ejemplo, el *implícita* [ `Style` ](xref:Xamarin.Forms.Style) se asigna
 
 Para obtener información sobre cómo crear estilos en una aplicación [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary), consulte [estilos globales](~/xamarin-forms/user-interface/styles/application.md).
 
-## <a name="creating-an-implicit-style-in-c35"></a>Creación de un estilo implícito en C&#35;
+## <a name="create-an-implicit-style-in-c35"></a>Crear un estilo implícito en C&#35;
 
 [`Style`](xref:Xamarin.Forms.Style) las instancias se pueden agregar a una página [ `Resources` ](xref:Xamarin.Forms.VisualElement.Resources) colección en C# mediante la creación de un nuevo [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary)y, a continuación, agregando el `Style` instancias para el `ResourceDictionary`, tal y como se muestra en el ejemplo de código siguiente:
 
@@ -119,11 +119,40 @@ public class ImplicitStylesPageCS : ContentPage
 
 El constructor define una sola *implícita* estilo que se aplica a la página [ `Entry` ](xref:Xamarin.Forms.Entry) instancias. El `Style` se usa para mostrar el texto azul sobre un fondo amarillo, y también establece otras opciones de apariencia. El `Style` se agrega a la página [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) sin especificar un `key` cadena. Por lo tanto, el `Style` se aplica a todas la `Entry` implícitamente instancias que coinciden con el [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) propiedad de la `Style` exactamente. Sin embargo, el `Style` no se aplica a la `CustomEntry` instancia, que es una subclase `Entry`.
 
-## <a name="summary"></a>Resumen
+## <a name="apply-a-style-to-derived-types"></a>Aplicar un estilo a los tipos derivados
 
-Un *implícita* estilo es aquella que está usando todos los elementos visuales de la misma [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType), sin necesidad de cada control para hacer referencia al estilo. Un `Style` estará *implícita* al no especificar un `x:Key` atributo. En su lugar, el `x:Key` atributo se convertirá automáticamente en el valor de la [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) propiedad.
+El [ `Style.ApplyToDerivedTypes` ](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) propiedad permite que un estilo que se aplicará a los controles que se derivan del tipo base al que hace referencia el [ `TargetType` ](xref:Xamarin.Forms.Style.TargetType) propiedad. Por lo tanto, establecer esta propiedad en `true` permite un único estilo como destino varios tipos, siempre que los tipos se derivan del tipo base especificado en el `TargetType` propiedad.
 
+El ejemplo siguiente muestra un estilo implícito que establece el color de fondo [ `Button` ](xref:Xamarin.Forms.Button) instancias a rojo:
 
+```xaml
+<Style TargetType="Button"
+       ApplyToDerivedTypes="True">
+    <Setter Property="BackgroundColor"
+            Value="Red" />
+</Style>
+```
+
+Colocación de este estilo en un nivel de página [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) dará como resultado lo que se aplica a todos los [ `Button` ](xref:Xamarin.Forms.Button) instancias en la página así como todos los controles que derivan de `Button`. Sin embargo, si la [ `ApplyToDerivedTypes` ](xref:Xamarin.Forms.Style.ApplyToDerivedTypes) permaneció sin establecer la propiedad, el estilo se aplicaría solo a `Button` instancias.
+
+El código de C# equivalente es:
+
+```csharp
+var buttonStyle = new Style(typeof(Button))
+{
+    ApplyToDerivedTypes = true,
+    Setters =
+    {
+        new Setter
+        {
+            Property = VisualElement.BackgroundColorProperty,
+            Value = Color.Red
+        }
+    }
+};
+
+Resources = new ResourceDictionary { buttonStyle };
+```
 
 ## <a name="related-links"></a>Vínculos relacionados
 

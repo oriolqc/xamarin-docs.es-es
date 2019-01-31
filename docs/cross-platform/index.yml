@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 091f94f66e07309ca5c6cc6ba69e0631e17eb0c0
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 430fcdc6066c677d74955670cef0979b19802835
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617285"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292121"
 documentType: LandingData
 title: Guía multiplataforma
 metadata:
@@ -38,7 +38,7 @@ sections:
     - image:
         src: ~/media/icons/i_desktop-phone.svg
       text: Xamarin.Forms
-      href: ~/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md
+      href: ~/get-started/quickstarts/index.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
       text: Android
@@ -101,7 +101,7 @@ sections:
     items:
     - title: Xamarin.Forms
       href: ~/xamarin-forms/index.yml
-      html: <p><a href="~/xamarin-forms/get-started/index.md">Primeros pasos</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">Principios de la aplicación</a><br /><a href="~/xamarin-forms/user-interface/index.md">Interfaz de usuario</a><br /><a href="~/xamarin-forms/platform/index.md">Características de la plataforma</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Implementación y pruebas</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Datos y servicios en la nube</a><br /><a href="~/xamarin-forms/internals/index.md">Conceptos avanzados y funcionamiento interno</a></p>
+      html: <p><a href="~/get-started/quickstarts/index.md">Primeros pasos</a><br /><a href="~/xamarin-forms/app-fundamentals/index.md">Principios de la aplicación</a><br /><a href="~/xamarin-forms/user-interface/index.md">Interfaz de usuario</a><br /><a href="~/xamarin-forms/platform/index.md">Características de la plataforma</a><br /><a href="~/xamarin-forms/deploy-test/index.md">Implementación y pruebas</a><br /><a href="~/xamarin-forms/xaml/index.md">XAML</a><br /><a href="~/xamarin-forms/data-cloud/index.md">Datos y servicios en la nube</a><br /><a href="~/xamarin-forms/internals/index.md">Conceptos avanzados y funcionamiento interno</a></p>
     - title: Android
       href: ~/android/index.yml
       html: <p><a href="~/android/get-started/index.md">Primeros pasos</a><br /><a href="~/android/app-fundamentals/index.md">Principios de la aplicación</a><br /><a href="~/android/user-interface/index.md">Interfaz de usuario</a><br /><a href="~/android/platform/index.md">Características de la plataforma</a><br /><a href="~/android/deploy-test/index.md">Implementación y pruebas</a><br /><a href="~/android/data-cloud/index.md">Datos y servicios en la nube</a><br /><a href="~/android/internals/index.md">Conceptos avanzados y funcionamiento interno</a></p>
