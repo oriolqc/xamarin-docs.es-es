@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/24/2017
-ms.openlocfilehash: 667c98d3140d460a6d4b3a26bd898f4c169d6d85
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.openlocfilehash: 04f92988d4d367abd5e6e864d4450aee2e6c1df2
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50234887"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233801"
 ---
 # <a name="linking-xamarinios-apps"></a>Vincular aplicaciones Xamarin.iOS
 
@@ -147,7 +147,7 @@ Los usuarios pueden seleccionar entre vincular solo los ensamblados del SDK y no
 
 Esto suele ocurrir porque no desean agregar atributos `[Preserve]` manualmente a su código.  El inconveniente es que no se vincularán las bibliotecas de terceros y, en general, se trata de una buena opción predeterminada, ya que no es posible saber si una biblioteca de terceros es apta o no para el enlazador.
 
-Si dispone de una biblioteca en el proyecto o es un desarrollador de bibliotecas reutilizables y desea que el enlazador trate el ensamblado como vinculable, lo único que tiene que hacer es agregar el atributo [`LinkerSafe`](https://developer.xamarin.com/api/type/Foundation.LinkerSafeAttribute/) a nivel de ensamblado, como se indica a continuación:
+Si dispone de una biblioteca en el proyecto o es un desarrollador de bibliotecas reutilizables y desea que el enlazador trate el ensamblado como vinculable, lo único que tiene que hacer es agregar el atributo [`LinkerSafe`](xref:Foundation.LinkerSafeAttribute) a nivel de ensamblado, como se indica a continuación:
 
 ```csharp
 [assembly:LinkerSafe]
