@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: f01074823f865b1717920d8364c67828453b6437
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 01c743b4b0eff81bbf4c41e1c2f387e0dc40c067
+ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617749"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55233762"
 ---
 # <a name="xamarinios-performance"></a>Rendimiento de Xamarin.iOS
 
@@ -25,7 +25,7 @@ Este documento describe las técnicas que pueden usarse para mejorar el rendimie
 
 ## <a name="avoid-strong-circular-references"></a>Evitar referencias circulares seguras
 
-En algunas situaciones es posible crear referencias circulares seguras que podrían impedir que el recolector de elementos no utilizados reclame memoria de los objetos. Por ejemplo, considere el caso en el que una subclase derivada de [`NSObject`](https://developer.xamarin.com/api/type/Foundation.NSObject/), como una clase que hereda de [`UIView`](https://developer.xamarin.com/api/type/UIKit.UIView/), se agrega a un contenedor derivado de `NSObject` y se hace referencia fuerte a la misma desde Objective-C, como se muestra en el ejemplo de código siguiente:
+En algunas situaciones es posible crear referencias circulares seguras que podrían impedir que el recolector de elementos no utilizados reclame memoria de los objetos. Por ejemplo, considere el caso en el que una subclase derivada de [`NSObject`](xref:Foundation.NSObject), como una clase que hereda de [`UIView`](xref:UIKit.UIView), se agrega a un contenedor derivado de `NSObject` y se hace referencia fuerte a la misma desde Objective-C, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 class Container : UIView
@@ -56,7 +56,7 @@ container.AddSubview (new MyView (container));
 
 Cuando este código crea la instancia `Container`, el objeto de C# tendrá una referencia fuerte a un objeto de Objective-C. De forma similar, la instancia `MyView` también tendrá una referencia fuerte a un objeto de Objective-C.
 
-Además, la llamada a `container.AddSubview` aumentará el recuento de referencias en la instancia `MyView` no administrada. Cuando esto sucede, el tiempo de ejecución de Xamarin.iOS crea una instancia `GCHandle` para mantener activo el objeto `MyView` en código administrado, porque no hay ninguna garantía de que otros objetos administrados mantengan una referencia al mismo. Desde una perspectiva de código administrado, el objeto `MyView` se reclamaría tras la llamada a [`AddSubview`](https://developer.xamarin.com/api/member/UIKit.UIView.AddSubview/p/UIKit.UIView/) si no fuera por el `GCHandle`.
+Además, la llamada a `container.AddSubview` aumentará el recuento de referencias en la instancia `MyView` no administrada. Cuando esto sucede, el tiempo de ejecución de Xamarin.iOS crea una instancia `GCHandle` para mantener activo el objeto `MyView` en código administrado, porque no hay ninguna garantía de que otros objetos administrados mantengan una referencia al mismo. Desde una perspectiva de código administrado, el objeto `MyView` se reclamaría tras la llamada a [`AddSubview`](xref:UIKit.UIView.AddSubview(UIKit.UIView)) si no fuera por el `GCHandle`.
 
 El objeto `MyView` no administrado tendrá un `GCHandle` que apunta al objeto administrado, conocido como *vínculo fuerte*. El objeto administrado contendrá una referencia a la instancia `Container`. A su vez, la instancia `Container` tendrá una referencia administrada al objeto `MyView`.
 
@@ -103,7 +103,7 @@ Aquí, el objeto contenido no mantiene activo el elemento primario. Pero el elem
 
 Esto también ocurre en las API de iOS que usan el modelo de delegado o de origen de datos, donde una clase del mismo nivel contiene la implementación; por ejemplo, al establecer la propiedad [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/)
 o [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/)
-de la clase [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/).
+de la clase [`UITableView`](xref:UIKit.UITableView).
 
 En el caso de las clases que se crean exclusivamente para la implementación de un protocolo, por ejemplo, [`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/), en lugar de crear una subclase, puede implementar la interfaz de la clase, invalidar el método y asignar la propiedad `DataSource` a `this`.
 
@@ -219,7 +219,7 @@ Para más información, vea [Rules to Avoid Retain Cycles](http://www.cocoawithl
 
 ## <a name="optimize-table-views"></a>Optimizar las vistas de tabla
 
-Los usuarios esperan un desplazamiento sin problemas y unos tiempos de carga rápidos para las instancias de [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/). Pero el rendimiento del desplazamiento puede verse afectado si las celdas contienen jerarquías de vista profundamente anidadas o si las celdas contienen diseños complejos. Pero hay técnicas que se pueden usar para evitar un mal rendimiento de `UITableView`:
+Los usuarios esperan un desplazamiento sin problemas y unos tiempos de carga rápidos para las instancias de [`UITableView`](xref:UIKit.UITableView). Pero el rendimiento del desplazamiento puede verse afectado si las celdas contienen jerarquías de vista profundamente anidadas o si las celdas contienen diseños complejos. Pero hay técnicas que se pueden usar para evitar un mal rendimiento de `UITableView`:
 
 - Reutilizar las celdas. Para más información, vea [Reutilizar celdas](#reusecells).
 - Reducir el número de subvistas.
@@ -228,11 +228,11 @@ Los usuarios esperan un desplazamiento sin problemas y unos tiempos de carga rá
 - Hacer que la celda, y otras vistas, sean opacas.
 - Evitar la escala de imágenes y los degradados.
 
-Colectivamente, estas técnicas facilitan que las instancias de [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) se desplacen sin problemas.
+Colectivamente, estas técnicas facilitan que las instancias de [`UITableView`](xref:UIKit.UITableView) se desplacen sin problemas.
 
 ### <a name="reuse-cells"></a>Reutilizar las celdas
 
-Al mostrar cientos de filas en una [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/), sería un desperdicio de memoria crear cientos de objetos [`UITableViewCell`](https://developer.xamarin.com/api/type/UIKit.UITableViewCell/) cuando solo un pequeño número de ellos se muestra en pantalla a la vez. En su lugar, se pueden cargar en la memoria solo las celdas visibles en la pantalla y cargar el **contenido** en estas celdas reutilizadas. Esto evita la creación de instancias de cientos de objetos adicionales, con lo que se ahorra tiempo y memoria.
+Al mostrar cientos de filas en una [`UITableView`](xref:UIKit.UITableView), sería un desperdicio de memoria crear cientos de objetos [`UITableViewCell`](xref:UIKit.UITableViewCell) cuando solo un pequeño número de ellos se muestra en pantalla a la vez. En su lugar, se pueden cargar en la memoria solo las celdas visibles en la pantalla y cargar el **contenido** en estas celdas reutilizadas. Esto evita la creación de instancias de cientos de objetos adicionales, con lo que se ahorra tiempo y memoria.
 
 Por tanto, cuando una celda desaparece de la pantalla, su vista puede colocarse en una cola para su reutilización, como se muestra en el ejemplo de código siguiente:
 
@@ -250,13 +250,13 @@ class MyTableSource : UITableViewSource
 }
 ```
 
-Cuando el usuario se desplaza, la [`UITableView`](https://developer.xamarin.com/api/type/UIKit.UITableView/) llama a la invalidación de `GetCell` para solicitar nuevas vistas para mostrar. Esta invalidación llama al método [`DequeueReusableCell`](https://developer.xamarin.com/api/member/UIKit.UITableView.DequeueReusableCell/p/Foundation.NSString/) y, si hay una celda disponible para su reutilización, se devuelve.
+Cuando el usuario se desplaza, la [`UITableView`](xref:UIKit.UITableView) llama a la invalidación de `GetCell` para solicitar nuevas vistas para mostrar. Esta invalidación llama al método [`DequeueReusableCell`](xref:UIKit.UITableView.DequeueReusableCell(Foundation.NSString)) y, si hay una celda disponible para su reutilización, se devuelve.
 
 Para más información, vea [Reutilizar celdas](~/ios/user-interface/controls/tables/populating-a-table-with-data.md) en [Rellenar una tabla con datos](~/ios/user-interface/controls/tables/populating-a-table-with-data.md).
 
 ## <a name="use-opaque-views"></a>Usar vistas opacas
 
-Asegúrese de que las vistas que no tienen transparencia definida tienen establecida su propiedad [`Opaque`](https://developer.xamarin.com/api/property/UIKit.UIView.Opaque/). Esto garantizará que el sistema de dibujo represente las vistas de forma óptima. Esto es especialmente importante cuando se incrusta una vista en una [`UIScrollView`](https://developer.xamarin.com/api/type/UIKit.UIScrollView/) o cuando forma parte de una animación compleja. De lo contrario, el sistema de dibujo compondrá las vistas con otro contenido, lo que puede afectar considerablemente al rendimiento.
+Asegúrese de que las vistas que no tienen transparencia definida tienen establecida su propiedad [`Opaque`](xref:UIKit.UIView.Opaque). Esto garantizará que el sistema de dibujo represente las vistas de forma óptima. Esto es especialmente importante cuando se incrusta una vista en una [`UIScrollView`](xref:UIKit.UIScrollView) o cuando forma parte de una animación compleja. De lo contrario, el sistema de dibujo compondrá las vistas con otro contenido, lo que puede afectar considerablemente al rendimiento.
 
 ## <a name="avoid-fat-xibs"></a>Evitar FAT XIB
 
@@ -264,7 +264,7 @@ Aunque en gran medida los XIB se han sustituido por guiones gráficos, hay algun
 
 ## <a name="optimize-image-resources"></a>Optimizar los recursos de imagen
 
-Las imágenes son uno de los recursos con más consumo usados por las aplicaciones y se suelen capturar en altas resoluciones. Por tanto, al mostrar una imagen del paquete de la aplicación en una [`UIImageView`](https://developer.xamarin.com/api/type/UIKit.UIImageView/), asegúrese de que la imagen y `UIImageView` tienen el mismo tamaño. La escala de imágenes en tiempo de ejecución puede ser una operación costosa, especialmente si la `UIImageView` está incrustada en una [`UIScrollView`](https://developer.xamarin.com/api/type/UIKit.UIScrollView/).
+Las imágenes son uno de los recursos con más consumo usados por las aplicaciones y se suelen capturar en altas resoluciones. Por tanto, al mostrar una imagen del paquete de la aplicación en una [`UIImageView`](xref:UIKit.UIImageView), asegúrese de que la imagen y `UIImageView` tienen el mismo tamaño. La escala de imágenes en tiempo de ejecución puede ser una operación costosa, especialmente si la `UIImageView` está incrustada en una [`UIScrollView`](xref:UIKit.UIScrollView).
 
 Para más información, vea [Optimizar los recursos de imagen](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages) en la guía [Rendimiento multiplataforma](~/cross-platform/deploy-test/memory-perf-best-practices.md).
 
