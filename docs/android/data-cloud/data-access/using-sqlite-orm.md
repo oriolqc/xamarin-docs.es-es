@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/18/2018
-ms.openlocfilehash: 3c552d97f64b28ed47a9226047862bffcfa8c9e3
-ms.sourcegitcommit: 56b2f5cda7c37874618736d6129f19a8976826f0
+ms.openlocfilehash: 6525cb321537a7cefb24feb1e77b532068b098ef
+ms.sourcegitcommit: d8edb1b9e7fd61979014d5f5f091ee135ab70e34
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54418691"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55712090"
 ---
 # <a name="using-sqlitenet-with-android"></a>Uso de SQLite.NET con Android
 
@@ -207,9 +207,11 @@ Puede comprobar el `rowcount` para confirmar el número de filas afectado (elimi
 
 SQLite es compatible con tres modos diferentes de subprocesos: *Subproceso único*, *multiproceso*, y *serializa*. Si desea tener acceso a la base de datos desde varios subprocesos sin restricciones, puede configurar SQLite para usar el **Serialized** el modo de subprocesamiento. Es importante establecer este modo al principio de la aplicación (por ejemplo, al principio de la `OnCreate` método).
 
-Para cambiar el modo de subprocesamiento, llame a `SqliteConnection.SetConfig`. Por ejemplo, esta línea de código configura SQLite para **Serialized** modo: 
+Para cambiar el modo de subprocesamiento, llame a `SqliteConnection.SetConfig`. Por ejemplo, esta línea de código configura SQLite para **Serialized** modo:
 
 ```csharp
+using using Mono.Data.Sqlite;
+...
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
 
@@ -225,16 +227,17 @@ La versión de SQLite Android tiene una limitación que requiere algunos pasos m
     internal static extern int sqlite3_initialize();
     ```
 
-
 2.  Al principio de la `OnCreate` método, agregue este código al apagado SQLite, configúrela para **Serialized** modo y reinicializar SQLite:
 
     ```csharp
+    using using Mono.Data.Sqlite;
+    ...
     sqlite3_shutdown();
     SqliteConnection.SetConfig(SQLiteConfig.Serialized);
     sqlite3_initialize();
     ```
 
-Esta solución también funciona con el `Mono.Data.Sqlite` biblioteca. Para obtener más información acerca de SQLite y subprocesamiento múltiple, consulte [SQLite y varios subprocesos](https://www.sqlite.org/threadsafe.html). 
+Esta solución también funciona con el `Mono.Data.Sqlite` biblioteca. Para obtener más información acerca de SQLite y subprocesamiento múltiple, consulte [SQLite y varios subprocesos](https://www.sqlite.org/threadsafe.html).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
