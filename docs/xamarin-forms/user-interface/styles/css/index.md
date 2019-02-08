@@ -7,13 +7,13 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/19/2018
-ms.openlocfilehash: d56cf660fb5aa73b300a36c5abd8ff9338791747
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/13/2018
+ms.openlocfilehash: f84a6dac64300eb17a45576ae83f9b94208f5732
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054860"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831929"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Aplicar estilos a las aplicaciones de Xamarin.Forms con hojas de estilos en cascada (CSS)
 
@@ -376,8 +376,8 @@ Las siguientes propiedades CSS son compatibles con Xamarin.Forms (en el **valore
 |`background-color`|`VisualElement`|_Color_ \| `initial` |`background-color: springgreen;`|
 |`background-image`|`Page`|_Cadena_ \| `initial` |`background-image: bg.png;`|
 |`border-color`|`Button`, `Frame`, `ImageButton`|_Color_ \| `initial`|`border-color: #9acd32;`|
-|`border-radius`|`BoxView`|_Doble_ \| `initial` |`border-radius: 10;`|
-|`border-width`|`Button`|_Doble_ \| `initial` |`border-width: .5;`|
+|`border-radius`|`BoxView`, `Button`, `Frame`, `ImageButton`|_Doble_ \| `initial` |`border-radius: 10;`|
+|`border-width`|`Button`, `ImageButton`|_Doble_ \| `initial` |`border-width: .5;`|
 |`color`|`ActivityIndicator`, `BoxView`, `Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `ProgressBar`, `SearchBar`, `Switch`, `TimePicker`|_Color_ \| `initial` |`color: rgba(255, 0, 0, 0.3);`|
 |`column-gap`|`Grid`|_Doble_ \| `initial`|`column-gap: 9;`|
 |`direction`|`VisualElement`|`ltr` \| `rtl` \| `inherit` \| `initial` |`direction: rtl;`|

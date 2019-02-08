@@ -7,21 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/30/2018
-ms.openlocfilehash: 06cf5d2a862a5db2f94fca655b69c45d16375854
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 4f69e88e0abff1236dc8365d88c8efbdf58b4031
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059157"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831709"
 ---
 # <a name="listview-data-sources"></a>Orígenes de datos de ListView
 
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/SwitchEntryTwoBinding)
 
 Un [ `ListView` ](xref:Xamarin.Forms.ListView) se utiliza para mostrar listas de datos. Aprenderemos acerca de cómo rellenar un ListView con datos y cómo podemos enlazar al elemento seleccionado.
-
-- **[Establecer ItemsSource](#ItemsSource)**  &ndash; usa una sencilla lista o matriz.
-- **[Enlace de datos](#Data_Binding)**  &ndash; establece una relación entre un modelo y el ListView. El enlace es ideal para el patrón MVVM.
 
 ## <a name="itemssource"></a>ItemsSource
 

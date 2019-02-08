@@ -6,13 +6,13 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/04/2018
-ms.openlocfilehash: c611828e2dc3ee7a373836ec01af90d4899f97f6
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/13/2018
+ms.openlocfilehash: ce1ba235a309e2388bd5eea7d70a1d72852fc615
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062223"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831864"
 ---
 # <a name="xamarinforms-label"></a>Etiqueta de Xamarin.Forms
 
@@ -293,6 +293,119 @@ Las capturas de pantalla siguientes muestran el resultado de la configuración d
 
 ![](label-images/span-lineheight.png "Ejemplo de span LineHeight")
 
+## <a name="hyperlinks"></a>Hipervínculos
+
+El texto mostrado por [ `Label` ](xref:Xamarin.Forms.Label) y [ `Span` ](xref:Xamarin.Forms.Span) instancias se pueden convertir en hipervínculos con el siguiente enfoque:
+
+1. Establecer el `TextColor` y `TextDecoration` propiedades de la [ `Label` ](xref:Xamarin.Forms.Label) o [ `Span` ](xref:Xamarin.Forms.Span).
+1. Agregar un [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) a la [ `GestureRecognizers` ](xref:Xamarin.Forms.GestureElement.GestureRecognizers) colección de la [ `Label` ](xref:Xamarin.Forms.Label) o [ `Span` ](xref:Xamarin.Forms.Span), cuya [ `Command` ](xref:Xamarin.Forms.TapGestureRecognizer.Command) propiedad se enlaza a un `ICommand`y cuyo [ `CommandParameter` ](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) propiedad contiene la dirección URL para abrir.
+1. Definir la `ICommand` que ejecutará el [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer).
+1. Escribir el código que se ejecutará por la `ICommand`.
+
+El ejemplo de código siguiente, tomado de la [demostraciones de hipervínculo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) ejemplo, se muestra un [ `Label` ](xref:Xamarin.Forms.Label) cuyo contenido se establece desde varios [ `Span` ](xref:Xamarin.Forms.Span) instancias:
+
+```xaml
+<Label>
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Alternatively, click " />
+            <Span Text="here"
+                  TextColor="Blue"
+                  TextDecorations="Underline">
+                <Span.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                          CommandParameter="https://docs.microsoft.com/xamarin/" />
+                </Span.GestureRecognizers>
+            </Span>
+            <Span Text=" to view Xamarin documentation." />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+```
+
+En este ejemplo, la primera y tercera [ `Span` ](xref:Xamarin.Forms.Span) instancias comprenden el texto, mientras que el segundo `Span` representa un hipervínculo tappable. Tiene el color del texto establecido en azul, y tiene una decoración de texto subrayado. Esto crea la apariencia de un hipervínculo, como se muestra en las capturas de pantalla siguiente:
+
+[![Hipervínculos](label-images/hyperlinks-small.png "hipervínculos")](label-images/hyperlinks-large.png#lightbox)
+
+Cuando se pulsa el hipervínculo, el [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) responderá mediante la ejecución de la `ICommand` definido por su [ `Command` ](xref:Xamarin.Forms.TapGestureRecognizer.Command) propiedad. Además, la dirección URL especificada por el [ `CommandParameter` ](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) propiedad se pasará a la `ICommand` como un parámetro.
+
+El código subyacente para la página XAML contiene el `TapCommand` implementación:
+
+```csharp
+public partial class MainPage : ContentPage
+{
+    public ICommand TapCommand => new Command<string>(OpenBrowser);
+
+    public MainPage()
+    {
+        InitializeComponent();
+        BindingContext = this;
+    }
+
+    void OpenBrowser(string url)
+    {
+        Device.OpenUri(new Uri(url));
+    }
+}
+```
+
+El `TapCommand` ejecuta el `OpenBrowser` método, pasando el [ `TapGestureRecognizer.CommandParameter` ](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) valor de propiedad como un parámetro. A su vez, llama este método la [ `Device.OpenUri` ](xref:Xamarin.Forms.Device.OpenUri*) método para abrir la dirección URL en un explorador web. Por lo tanto, el efecto general es que cuando se pulsa el hipervínculo en la página, aparece un explorador web y la dirección URL asociada con el hipervínculo se navega.
+
+### <a name="creating-a-reusable-hyperlink-class"></a>Creación de una clase reutilizable de hipervínculo
+
+El enfoque anterior para crear un hipervínculo requiere escribir código repetitivo cada vez que requieren un hipervínculo en la aplicación. Sin embargo, tanto el [ `Label` ](xref:Xamarin.Forms.Label) y [ `Span` ](xref:Xamarin.Forms.Span) las clases pueden ser subclase crear `HyperlinkLabel` y `HyperlinkSpan` clases, con el reconocedor de gestos y el formato de texto código agregado ahí.
+
+El ejemplo de código siguiente, tomado de la [demostraciones de hipervínculo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) ejemplo, se muestra un `HyperlinkSpan` clase:
+
+```csharp
+public class HyperlinkSpan : Span
+{
+    public static readonly BindableProperty UrlProperty =
+        BindableProperty.Create(nameof(Url), typeof(string), typeof(HyperlinkSpan), null);
+
+    public string Url
+    {
+        get { return (string)GetValue(UrlProperty); }
+        set { SetValue(UrlProperty, value); }
+    }
+
+    public HyperlinkSpan()
+    {
+        TextDecorations = TextDecorations.Underline;
+        TextColor = Color.Blue;
+        GestureRecognizers.Add(new TapGestureRecognizer
+        {
+            Command = new Command(() => Device.OpenUri(new Uri(Url)))
+        });
+    }
+}
+```
+
+El `HyperlinkSpan` clase define un `Url` propiedad y asociados [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty), y el constructor establece el aspecto de los hipervínculos y el [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) que responderá Cuando se pulsa el hipervínculo. Cuando un `HyperlinkSpan` se pulsa, el `TapGestureRecognizer` responderá mediante la ejecución de la [ `Device.OpenUri` ](xref:Xamarin.Forms.Device.OpenUri*) método para abrir la dirección URL, especificada por el `Url` propiedad en un explorador web.
+
+La `HyperlinkSpan` clase puede utilizarse mediante la adición de una instancia de la clase para el XAML:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HyperlinkDemo"
+             x:Class="HyperlinkDemo.MainPage">
+    <StackLayout>
+        ...
+        <Label>
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Alternatively, click " />
+                    <local:HyperlinkSpan Text="here"
+                                         Url="https://docs.microsoft.com/appcenter/" />
+                    <Span Text=" to view AppCenter documentation." />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>
+</ContentPage>
+```
+
 ## <a name="styling-labels"></a>Etiquetas de estilo
 
 Las secciones anteriores tratan la configuración [ `Label` ](xref:Xamarin.Forms.Label) y [ `Span` ](xref:Xamarin.Forms.Span) las propiedades de por instancia. Sin embargo, los conjuntos de propiedades se pueden agrupar en un estilo que se aplica de manera coherente a una o varias vistas. Esto puede mejorar la legibilidad del código y realizar cambios de diseño sea más fácil de implementar. Para obtener más información, consulte [estilos](~/xamarin-forms/user-interface/text/styles.md).
@@ -300,6 +413,7 @@ Las secciones anteriores tratan la configuración [ `Label` ](xref:Xamarin.Forms
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Texto (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Hipervínculos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Hyperlinks)
 - [Creación de aplicaciones móviles con Xamarin.Forms, capítulo 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [API de etiqueta](xref:Xamarin.Forms.Label)
 - [Intervalo de API](xref:Xamarin.Forms.Span)

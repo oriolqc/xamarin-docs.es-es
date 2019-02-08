@@ -6,24 +6,19 @@ ms.assetid: DC8009B0-4371-4D60-885A-5362FC7EE3E5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/08/2016
-ms.openlocfilehash: 8adac1711271324b70731a085088bd8805391d31
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 12/13/2018
+ms.openlocfilehash: 71962c5e7d2f4c360e14b2040779498d4be95282
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059462"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831800"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizar la apariencia de ListView
 
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/Grouping)
 
-`ListView` tiene opciones para controlar la presentación de la lista global, además de subyacente `ViewCell`s. Las opciones son:
-
-- [**Agrupación** ](#Grouping) &ndash; agrupar elementos en ListView para una navegación más sencilla y organización mejorada.
-- [**Encabezados y pies de página** ](#Headers_and_Footers) &ndash; mostrar información al principio y al final de la vista que se desplaza con los demás elementos.
-- [**Separadores de fila** ](#Row_Separators) &ndash; mostrar u ocultar las líneas de separación entre los elementos.
-- [**Las filas de alto variable** ](#Row_Heights) &ndash; de forma predeterminada, todas las filas tienen el mismo alto, pero esto se puede cambiar para permitir que las filas con distintas alturas para mostrarse.
+[`ListView`](xref:Xamarin.Forms.ListView) tiene la capacidad para controlar la presentación de la lista, además del [ `ViewCell` ](xref:Xamarin.Forms.ViewCell) instancias para cada fila de la lista.
 
 <a name="Grouping" />
 
@@ -83,7 +78,7 @@ static PageTypeGroup()
 }
 ```
 
-En el código anterior también lo llamemos `Add` en elementos de `groups`, que son instancias del tipo `PageTypeGroup`. Esto es posible porque `PageTypeGroup` hereda de `List<PageModel>`. Este es un ejemplo de la lista de patrón de listas que se ha indicado anteriormente.
+En el código anterior, también lo llamemos `Add` en elementos de `groups`, que son instancias del tipo `PageTypeGroup`. Esto es posible porque `PageTypeGroup` hereda de `List<PageModel>`. Este es un ejemplo de la lista de patrón de listas que se ha indicado anteriormente.
 
 Este es el XAML para mostrar la lista agrupada:
 
@@ -205,6 +200,14 @@ Para crear un encabezado personalizado y un pie de página, definir las vistas d
 ```
 
 ![](customizing-list-appearance-images/header-custom.png "ListView con encabezado personalizado y el pie de página")
+
+## <a name="scrollbar-visibility"></a>Visibilidad de la barra de desplazamiento
+
+[`ListView`](xref:Xamarin.Forms.ListView) tiene `HorizontalScrollBarVisibility` y `VerticalScrollBarVisibility` propiedades, que obtención o establece un [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valor que representa el momento de la barra de desplazamiento horizontal o vertical, está visible. Ambas propiedades se pueden establecer en los siguientes valores:
+
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica el comportamiento de barra de desplazamiento predeterminado para la plataforma, y es el valor predeterminado para el `HorizontalScrollBarVisibility` y `VerticalScrollBarVisibility` propiedades.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento serán visibles, incluso cuando el contenido no se ajusta en la vista.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento no será visibles, si el contenido no cabe en la vista de eventos.
 
 <a name="Row_Separators" />
 

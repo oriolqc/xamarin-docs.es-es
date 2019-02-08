@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
-ms.openlocfilehash: 08ac86674e4f10d6bd17d765de2bcdf7c2d3f901
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 79b973784dd978bff15c7a706083c70df83ba1c8
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061764"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831851"
 ---
 # <a name="spell-checking-using-the-bing-spell-check-api"></a>La revisión ortográfica con Bing Spell Check API
 
@@ -154,6 +154,9 @@ Este código recorre el `FlaggedTokens` colección y reemplaza cualquier mal esc
 ![](spell-check-images/before-spell-check.png "Antes de comprobar la ortografía")
 
 ![](spell-check-images/after-spell-check.png "Después de comprobar la ortografía")
+
+> [!NOTE]
+> El ejemplo anterior usa `Replace` por motivos de simplicidad, pero a través de una gran cantidad de texto podría reemplazar el token erróneo. La API proporciona el `offset` valor que debe usarse en aplicaciones de producción para identificar la ubicación correcta en el texto de origen para realizar una actualización.
 
 ## <a name="summary"></a>Resumen
 
