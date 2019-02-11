@@ -7,17 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 97b3e5323329d2df024e05f1829b12b239b37299
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 52cd8a15f1b5b232deef62a8e87910b092aad94c
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103054"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831955"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configuración de una aplicación en iTunes Connect
 
 > [!IMPORTANT]
-> Apple [ha indicado](https://developer.apple.com/news/?id=05072018a) que a partir de julio de 2018 todas las aplicaciones y actualizaciones que se envían al App Store deben haberse compilado con el SDK de iOS 11y [ser compatibles con la pantalla del iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> Apple [ha comunicado](https://developer.apple.com/ios/submit/) que, a partir de marzo de 2019, las aplicaciones y actualizaciones que se envíen al App Store deberán haberse compilado con el SDK de iOS 12.1 o posterior, incluido en Xcode 10.1 y versiones posteriores.
+> Las aplicaciones también deberán admitir los tamaños de pantalla del iPhone XS y el iPad Pro de 12.9".
 
 iTunes Connect es un conjunto de herramientas basadas en web que, entre otras cosas, permiten administrar aplicaciones de iOS en la App Store. Una aplicación Xamarin.iOS deberá estar correctamente instalada y configurada en iTunes Connect para poder enviarla a Apple para su revisión y publicación como una aplicación gratuita o para su venta en la App Store.
 
@@ -359,7 +360,7 @@ En este artículo se describe cómo usar iTunes Connect para preparar una aplica
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Working with Images (Trabajo con imágenes)](~/ios/app-fundamentals/images-icons/index.md)
-- [Guía de flujo de trabajo de desarrollo de aplicaciones de iOS: distribución de aplicaciones](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
+- [Guía sobre los flujos de trabajo de desarrollo de aplicaciones iOS: distribución de aplicaciones](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
 - [Sugerencias de envío al App Store](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [Directrices de revisión del App Store](https://developer.apple.com/appstore/resources/approval/guidelines.html)
 - [Guía para desarrolladores de iTunes Connect](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html#//apple_ref/doc/uid/TP40011225-CH1-SW1)

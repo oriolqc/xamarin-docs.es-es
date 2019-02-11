@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: 6e4ff817bcf59f071277b653175066c9727167c1
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: babfc85de645b285812421d453d51d5be6dceb1c
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527162"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55831942"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicación de aplicaciones Xamarin.iOS en el App Store
 
@@ -30,7 +30,8 @@ En esta guía se describen los pasos que se deben seguir para preparar una aplic
 > - Compilar la aplicación y enviarla a Apple
 
 > [!IMPORTANT]
-> Apple [ha indicado](https://developer.apple.com/news/?id=05072018a) que, a partir de julio de 2018, todas las aplicaciones y actualizaciones que se envían al App Store deben haberse compilado con el SDK de iOS 11 y [deben ser compatibles con la pantalla del iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> Apple [ha comunicado](https://developer.apple.com/ios/submit/) que, a partir de marzo de 2019, las aplicaciones y actualizaciones que se envíen al App Store deberán haberse compilado con el SDK de iOS 12.1 o posterior, incluido en Xcode 10.1 y versiones posteriores.
+> Las aplicaciones también deberán admitir los tamaños de pantalla del iPhone XS y el iPad Pro de 12.9".
 
 ## <a name="app-store-guidelines"></a>Directrices del App Store
 

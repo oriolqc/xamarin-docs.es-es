@@ -7,19 +7,20 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: de3af76b8479562ba048c5b62167df0f2b2a51f9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 14cf2910767e9c205e5ddc8f580020505f54ef46
+ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115138"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832033"
 ---
 # <a name="app-store-distribution"></a>Distribución a través del App Store
 
 Una vez que se ha desarrollado una aplicación de Xamarin.iOS, el siguiente paso del ciclo de vida de desarrollo de software es distribuirla a los usuarios mediante iTunes App Store. Es la forma más habitual de distribuir aplicaciones. Al publicar una aplicación en el App Store de Apple, se puede poner a disposición de los consumidores de todo el mundo.
 
 > [!IMPORTANT]
-> Apple [ha indicado](https://developer.apple.com/news/?id=05072018a) que a partir de julio de 2018 todas las aplicaciones y actualizaciones que se envían al App Store deben haberse compilado con el SDK de iOS 11y [ser compatibles con la pantalla del iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> Apple [ha comunicado](https://developer.apple.com/ios/submit/) que, a partir de marzo de 2019, las aplicaciones y actualizaciones que se envíen al App Store deberán haberse compilado con el SDK de iOS 12.1 o posterior, incluido en Xcode 10.1 y versiones posteriores.
+> Las aplicaciones también deberán admitir los tamaños de pantalla del iPhone XS y el iPad Pro de 12.9".
 
 Distribución de una aplicación: al igual que al desarrollar una aplicación, exige que se aprovisionen las aplicaciones mediante el *perfil de aprovisionamiento* adecuado. Los perfiles de aprovisionamiento son archivos que contienen información de firma de código, así como la identidad de la aplicación y el mecanismo de distribución previsto. También contienen información sobre en qué dispositivos se puede implementar la aplicación para la distribución que no se realice a través del App Store.
 
@@ -63,11 +64,11 @@ Puede seleccionar el **identificador de la aplicación** y los **dispositivos** 
 
 Como alternativa, se puede solicitar un certificado mediante el cuadro de diálogo Preferencias de Xcode. Para ello, siga estos pasos:
 
-1.   Seleccione el equipo y haga clic en **Manage Certificates…** (Administrar certificados): [![](images/selectteam.png "Seleccionar el equipo y ver los detalles")](images/selectteam.png#lightbox).
+1.   Seleccione el equipo y haga clic en **Manage Certificates…** (Administrar certificados…): [![](images/selectteam.png "Selección del equipo y opción Ver detalles")](images/selectteam.png#lightbox)
 
-2.   A continuación, haga clic en el botón **Create** (Crear) junto a **iOS Distribution Certificate** (Certificado de distribución de iOS): [![](images/selectcert.png "Crear un certificado de distribución de iOS")](images/selectcert.png#lightbox).
+2.   Luego, haga clic en el botón **Crear** situado junto a **iOS Distribution Certificate** (Certificado de distribución de iOS): [![](images/selectcert.png "Creación de un certificado de distribución de iOS")](images/selectcert.png#lightbox)
 
-3.   Según los privilegios del equipo, se generará la identidad de firma, tal como se muestra a continuación, o puede que tenga que esperar hasta que un administrador o agente de equipo la apruebe: [![](images/generated.png "se genera la identidad de firma y se muestra un cuadro de diálogo")](images/generated.png#lightbox).
+3.   Según los privilegios del equipo, se generará la identidad de firma, tal como se muestra a continuación, o puede que tenga que esperar hasta que un administrador o agente de equipo la apruebe: [![](images/generated.png "Generación de la identidad de firma y cuadro de diálogo")](images/generated.png#lightbox)
 
 
 <a name="creatingprofile" />
