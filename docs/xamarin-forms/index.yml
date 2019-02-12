@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 95df735c07def5b3f7a0ad2e7e3eb1e114cc5e8f
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 00d8e1459501b4643dea12b1d36939534a66833f
+ms.sourcegitcommit: 5405a376fe1b1e08c834eb565aaa5b1849a0fcdc
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292251"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986492"
 documentType: LandingData
 title: Xamarin.Forms
 metadata:
@@ -62,11 +62,11 @@ sections:
     style: cards
     className: cardsB
     items:
-    - href: ~/get-started/quickstarts/index.md
+    - href: ~/get-started/index.md
       html: Tutoriales para ayudarle a ponerse manos a la obra con Xamarin.Forms. Asegúrese de que todo se ha instalado correctamente y cree sus primeras aplicaciones de Xamarin.Forms.
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/get-started/quickstarts/index.md
+        href: ~/get-started/index.md
       title: Introducción
     - href: ~/xamarin-forms/xaml/
       html: Cree interfaces de usuario de forma declarativa y compártalas entre plataformas de escritorio y para dispositivos móviles.
