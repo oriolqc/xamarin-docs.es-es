@@ -7,12 +7,12 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
-ms.openlocfilehash: c6328135e0310c7b10b89bf2e32ce62869b15cfb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: e7327deead917f55d1e7ac8af5302b6dccf6fead
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059991"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240362"
 ---
 # <a name="polylines-and-parametric-equations"></a>Polilíneas y ecuaciones paramétricas
 
@@ -26,21 +26,21 @@ En el [ **trazados y curvas de SkiaSharp** ](../curves/index.md) sección de est
 
 Generalmente es mejor definir una curva en términos de un par de ecuaciones paramétricas. Estos son las ecuaciones para coordenadas X e Y que dependen de una tercera variable, a veces denominada `t` por vez. Por ejemplo, las ecuaciones paramétricas siguientes definen un círculo con un radio de 1 que se centra en el punto (0, 0) para *t* de 0 a 1:
 
-x = cos(2πt)
+`x = cos(2πt)`
 
-y = sin(2πt)
+`y = sin(2πt)`
 
  Si desea que un radio mayor que 1, simplemente multiplique los valores de seno y coseno por ese radius y si necesita mover el centro a otra ubicación, agregue esos valores:
 
-x = xCenter + radius·cos(2πt)
+`x = xCenter + radius·cos(2πt)`
 
-y = yCenter + radius·sin(2πt)
+`y = yCenter + radius·sin(2πt)`
 
 Para una elipse con el paralelo de los ejes horizontal y vertical, intervienen dos radios:
 
-x = xCenter + xRadius·cos(2πt)
+`x = xCenter + xRadius·cos(2πt)`
 
-y = yCenter + yRadius·sin(2πt)
+`y = yCenter + yRadius·sin(2πt)`
 
 A continuación, puede colocar el código equivalente de SkiaSharp en un bucle que calcula los diversos puntos y agrega los de una ruta de acceso. El siguiente código de SkiaSharp crea un `SKPath` objeto para una elipse que rellena la superficie de pantalla. El bucle recorre los 360 grados directamente. El centro es mitad del ancho y alto de la superficie de pantalla y, por lo tanto, son los dos radios:
 

@@ -7,12 +7,12 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
-ms.openlocfilehash: 835663b2d9a9fa8557a31570f91492da95be7a9a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: ee1df713315559c076fbfaed6f5a34057940ff36
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059196"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240401"
 ---
 # <a name="path-effects-in-skiasharp"></a>Efectos de la ruta de acceso de SkiaSharp
 
@@ -416,13 +416,13 @@ Buscar muy similares y verá que estos no son realmente círculos. Cada vínculo
 
 Una cadena o un cable de distribución de peso uniforme se bloquea en forma de un catenaria. Un arco creado en forma de un catenaria invertido se beneficia de una distribución equitativa de presión de la ponderación de un arco. La catenaria tiene una descripción matemática aparentemente simple:
 
-y = un (en inglés) COSH(x / a)
+`y = a · cosh(x / a)`
 
 El *cosh* es la función de coseno hiperbólico. Para *x* igual a 0, *cosh* es cero y *y* es igual a *un*. Es el centro de la catenaria. Al igual que el *coseno* función, *cosh* se dice que *incluso*, lo que significa que *cosh(–x)* es igual a *cosh(x)*, y aumentan los valores para aumentar los argumentos positivos o negativos. Estos valores describen las curvas que conforman los lados de la catenaria.
 
 Buscar el valor adecuado de *un* para ajustarse a la catenaria las dimensiones de la página del teléfono no es un cálculo directo. Si *w* y *h* es el ancho y alto de un rectángulo, el valor óptimo de *un* satisface la siguiente ecuación:
 
-COSH (w/2/a) = 1 + h / a
+`cosh(w / 2 / a) = 1 + h / a`
 
 El método siguiente en el [ `LinkedChainPage` ](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/LinkedChainPage.cs) clase incorpora igualdad haciendo referencia a las dos expresiones de la izquierda y derecha del signo igual como `left` y `right`. Para valores pequeños de *un*, `left` es mayor que `right`; para valores grandes de *un*, `left` es menor que `right`. El `while` bucle se reduce en un valor óptimo de *un*:
 
@@ -794,13 +794,13 @@ public class HatchFillPage : ContentPage
 }
 ```
 
-Si observa detenidamente los resultados, verá que no se limitan las líneas de sombreado de color rojo y azul exactamente al rectángulo redondeado. (Aparentemente es una característica del código subyacente de Skia.) Si esto no es satisfactoria, se muestra un enfoque alternativo para las líneas de sombreado diagonal en verde: el rectángulo redondeado se utiliza como un trazado de recorte y las líneas de trama se dibujan en la página completa.
+Si observa detenidamente los resultados, verá que no se limitan las líneas de sombreado de color rojo y azul exactamente al rectángulo redondeado. (Aparentemente es una característica del código subyacente de Skia.) Si esto no es satisfactoria, se muestra un enfoque alternativo para las líneas de sombreado diagonal en verde: El rectángulo redondeado se utiliza como un trazado de recorte y las líneas de trama se dibujan en la página completa.
 
 El `PaintSurface` controlador concluye con una llamada a simplemente trazar el rectángulo redondeado, para que pueda ver la discrepancia con las líneas de sombreado de color rojo y azul:
 
 [![](effects-images/hatchfill-small.png "Captura de pantalla de la página de la trama de relleno triple")](effects-images/hatchfill-large.png#lightbox "Triple captura de pantalla de la página de la trama de relleno")
 
-La pantalla Android realmente no ser así: el escalado de la captura de pantalla ha provocado la finas líneas rojas y finos espacios consolidar en líneas rojas aparentemente más amplios y espacios más amplios.
+La pantalla Android realmente no ser así: El escalado de la captura de pantalla ha provocado finos espacios para consolidar en líneas rojas aparentemente más amplia y la más amplias espacios finas líneas rojas y.
 
 ## <a name="filling-with-a-path"></a>Rellenar con una ruta de acceso
 
@@ -1086,7 +1086,7 @@ public Boolean GetFillPath (SKPath src, SKPath dst, SKRect cullRect, Single resS
 
 Solo se necesitan los dos primeros argumentos. El método tiene acceso a la ruta de acceso al que hace referencia el `src` argumento, modifica los datos de ruta de acceso basados en las propiedades de trazo en el `SKPaint` objeto (incluido el `PathEffect` propiedad) y, a continuación, escribe los resultados en el `dst` ruta de acceso. El `resScale` parámetro permite reducir la precisión para crear una ruta de acceso de destino más pequeño y el `cullRect` argumento puede eliminar perfiles fuera de un rectángulo.
 
-Un uso básico de este método no implica los efectos de la ruta de acceso: si el `SKPaint` objeto tiene su `Style` propiedad establecida en `SKPaintStyle.Stroke`y *no* tiene su `PathEffect` establecido, a continuación, `GetFillPath` crea una ruta de acceso que representa un *esquema* de la ruta de acceso de origen como si hubiera sido trazado por las propiedades de pintura.
+Un uso básico de este método no implica en todos los efectos de la ruta de acceso: Si el `SKPaint` objeto tiene su `Style` propiedad establecida en `SKPaintStyle.Stroke`y *no* tiene su `PathEffect` establecido, a continuación, `GetFillPath` crea una ruta de acceso que representa un *esquema*de la ruta de acceso de origen como si hubiera sido trazado por las propiedades de pintura.
 
 Por ejemplo, si la `src` ruta de acceso es un círculo simple del radio de 500 y el `SKPaint` objeto especifica un ancho de trazo de 100, el `dst` ruta de acceso se convierte en dos círculos concéntricos, uno con un radio de 450 y otro con un radio de 550. Se llama al método `GetFillPath` porque rellena esta información `dst` ruta de acceso es el mismo que el trazado el `src` ruta de acceso. Pero también puede trazar la `dst` ruta de acceso para ver los contornos de ruta de acceso.
 

@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: 020afef6b2eb3743fd17118b2922bac4d4c32239
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: cfa96273b6c23d755925b08c9daec22c94627be7
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233996"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240440"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tres maneras de dibujar un arco
 
@@ -107,9 +107,9 @@ Como puede ver, el ángulo inicial y ángulo de barrido pueden tener los valores
 
 Este enfoque para generar un arco es forma algorítmica el más sencillo, y es fácil derivar las ecuaciones paramétricas que describen el arco. Conocer el tamaño y ubicación de la elipse y los ángulos de inicio y el barrido, los puntos inicial y final del arco se puede calcular mediante trigonometría simple:
 
-x = oval. MidX + (la elipse. Ancho / 2) * cos(angle)
+`x = oval.MidX + (oval.Width / 2) * cos(angle)`
 
-y = oval. MidY + (la elipse. Alto / 2) * sin(angle)
+`y = oval.MidY + (oval.Height / 2) * sin(angle)`
 
 El `angle` valor sea `startAngle` o `startAngle + sweepAngle`.
 
@@ -606,9 +606,9 @@ El radio del círculo es de 100 unidades y la hipotenusa del triángulo es 150 u
 
 A continuación, se pueden calcular las coordenadas del punto tangente con esta información:
 
-x = 112·cos(41.8) = 83
+`x = 112·cos(41.8) = 83`
 
-y = 112·sin(41.8) = 75
+`y = 112·sin(41.8) = 75`
 
 Los cuatro puntos de tangencia son todo lo que es necesario establecer una sesión de infinito centrado en el punto (0, 0) de radios de círculo de 100:
 

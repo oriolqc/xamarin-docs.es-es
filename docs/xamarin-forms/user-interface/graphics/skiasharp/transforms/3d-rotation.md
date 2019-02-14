@@ -7,12 +7,12 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
-ms.openlocfilehash: a4f69287a6f97f3181d88a2d93d308df2676476a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7ac9ec458f16357ef50e23c459a9b0e1f79bdd97
+ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052694"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56240375"
 ---
 # <a name="3d-rotations-in-skiasharp"></a>Rotaciones de 3D de SkiaSharp
 
@@ -63,25 +63,25 @@ En un sistema de gráficos 3D, un punto 3D (x, y, z) se convierte en una matriz 
 
 Como 2D transformaciones que tienen lugar en tres dimensiones, las transformaciones 3D se supone que tienen lugar en cuatro dimensiones. La cuarta dimensión se conoce como W y el espacio 3D se supone que existe dentro del espacio de 4D donde las coordenadas de W son iguales a 1. Las fórmulas de transformación son los siguientes:
 
-x' = M11·x M21·y M31·z + + M41
+`x' = M11·x + M21·y + M31·z + M41`
 
-y' = M12·x M22·y M32·z + + M42
+`y' = M12·x + M22·y + M32·z + M42`
 
-z' = M13·x M23·y M33·z + + M43
+`z' = M13·x + M23·y + M33·z + M43`
 
-w' = M14·x M24·y M34·z + + M44
+`w' = M14·x + M24·y + M34·z + M44`
 
 En las fórmulas de transformación resulta evidente que las celdas `M11`, `M22`, `M33` son factores de escala en las direcciones X, Y y Z, y `M41`, `M42`, y `M43` son factores de traslación en la X, Y y Z direcciones.
 
 Para volver a convertir estas coordenadas en el espacio 3D donde W es igual a 1, x', y', y z 'coordenadas son todos divididas por w':
 
-x"= x' / w'
+`x" = x' / w'`
 
-y"= s ' / w'
+`y" = y' / w'`
 
-z"= z' / w'
+`z" = z' / w'`
 
-w"= w' / w' = 1
+`w" = w' / w' = 1`
 
 División por w' proporciona una perspectiva en el espacio 3D. Si w' es igual a 1, a continuación, se produce ninguna perspectiva.
 
@@ -140,7 +140,7 @@ La razón para el nombre del argumento `depth` será evidente en breve. Ese cód
 
 Como resultado de las fórmulas de transformación en el siguiente cálculo de w':
 
-w' = – z o profundidad + 1
+`w' = –z / depth + 1`
 
 Esto sirve para reducir las coordenadas X e Y cuando los valores de Z son inferiores a cero (conceptualmente detrás del plano XY) y aumentar las coordenadas X e Y para los valores positivos de Z. Cuando la coordenada Z es igual a `depth`, a continuación, w' es cero, y las coordenadas se convierten en infinitas. Los sistemas de gráficos tridimensionales se basan en una metáfora de la cámara y el `depth` aquí el valor representa la distancia de la cámara desde el origen del sistema de coordenadas. Si un objeto gráfico tiene una Z es coordinar `depth` unidades desde el origen, conceptualmente es tocar la lente de la cámara y pasa a ser más grande.
 
@@ -173,9 +173,9 @@ w' = M14·x M24·y + M44
 
 Además, el punto z' coordenadas también es irrelevante aquí. Cuando se muestra un objeto 3D en un sistema de gráficos 2D, se contrae a un objeto bidimensional pasando por alto los valores de las coordenadas Z. Las fórmulas de transformación son en realidad, estos dos:
 
-x"= x' / w'
+`x" = x' / w'`
 
-y"= s ' / w'
+`y" = y' / w'`
 
 Esto significa que la tercera fila *y* se puede omitir la tercera columna de la matriz de 4 por 4.
 
@@ -208,17 +208,17 @@ Ahora puede usarse para transformar un punto de 2D:
 
 Las fórmulas de transformación son:
 
-x' = cos (α) ·x
+`x' = cos(α)·x`
 
-y' = s
+`y' = y`
 
-z' = (Sen (α) / profundidad) ·x + 1
+`z' = (sin(α)/depth)·x + 1`
 
 Ahora todo lo dividido z ":
 
-x"= cos ·x (α) / (((α) sen / profundidad) ·x + 1)
+`x" = cos(α)·x / ((sin(α)/depth)·x + 1)`
 
-y"= s / (((α) sen / profundidad) ·x + 1)
+`y" = y / ((sin(α)/depth)·x + 1)`
 
 Cuando se giran los objetos 2D con un ángulo positivo alrededor del eje Y, a continuación, positivo valores X se desvanecen en segundo plano mientras negativo X valores vienen al primer plano. Los valores X parecen acercarse al eje Y (que se rige por el valor de coseno) como coordenadas más alejado del eje Y se convierte en más de cerca en el Visor de o menor o mayor cuando se mueven más lejos del Visor.
 
