@@ -8,14 +8,14 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/02/2018
-ms.openlocfilehash: f79a509e3122cbccbe6bf10040f8143432c9d66c
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 02e0484a417b5d42129fa4e7a6ab9576c1817d74
+ms.sourcegitcommit: 8e8f83da636b63d14d1305c43a99736a00b9f590
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "43780510"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55969598"
 ---
-# <a name="hello-mac--walkthrough"></a>Tutorial Hello, Mac
+# <a name="hello-mac-walkthrough"></a>Tutorial Hello, Mac
 
 Xamarin.Mac permite desarrollar aplicaciones de Mac completamente nativas en C# y .NET con las mismas API de macOS que se usan al desarrollar en *Objective-C* o *Swift*. Ya que Xamarin.Mac se integra directamente con Xcode, el desarrollador puede usar _Interface Builder_ de Xcode para crear interfaces de usuario de una aplicación (o, si quiere, puede crearlas directamente en código de C#).
 
@@ -338,7 +338,7 @@ Siga estos pasos para usar Interface Builder:
 
     [![](hello-mac-images/xcode12.png "Cambio del tamaño de la etiqueta")](hello-mac-images/xcode12.png#lightbox)
 
-7. Seleccione el botón que acaba de agregar en el **Interface Editor** (Editor de la interfaz) y haga clic en el icono del **Editor de restricciones** en la parte inferior de la ventana:
+7. Seleccione el botón que acaba de agregar en **Interface Editor** (Editor de la interfaz) y haga clic en el icono del **Editor de restricciones** en la parte inferior de la ventana:
 
     [![](hello-mac-images/xcode13.png "Agregar restricciones al botón")](hello-mac-images/xcode13.png#lightbox)
 

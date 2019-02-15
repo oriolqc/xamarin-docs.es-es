@@ -1,5 +1,5 @@
 ---
-title: 'Hello, Android: inicio rápido'
+title: 'Hello, Android: Inicio rápido'
 description: Esta guía en dos partes le ayudará a compilar su primera aplicación de Xamarin.Android (mediante Visual Studio o Visual Studio para Mac) y a comprender los aspectos básicos del desarrollo de aplicaciones de Android con Xamarin. A lo largo del proceso, le presentaremos las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -9,16 +9,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: e359defee98ada74a76726673f6d3db21c0f4db3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 378861dfecb2109269677fe13ed4df629a09da67
+ms.sourcegitcommit: 6d41b5d48fd626d3f649809ed5480e5356755f14
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121586"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "55986268"
 ---
-# <a name="hello-android-quickstart"></a>Hello, Android: inicio rápido
+# <a name="hello-android-quickstart"></a>Hello, Android: Inicio rápido
 
 _Esta guía, que consta de dos partes, le ayudará a compilar su primera aplicación de Xamarin.Android mediante Visual Studio y a comprender los aspectos básicos del desarrollo de aplicaciones de Android con Xamarin._
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/monodroid/Phoneword/)
 
 Creará una aplicación que convierte un número de teléfono alfanumérico (escrito por el usuario) en un número de teléfono numérico y muestra ese número al usuario. La aplicación final tiene este aspecto:
 
@@ -74,6 +76,12 @@ Después de que el nuevo proyecto se haya creado, expanda la carpeta **Recursos*
 Haga doble clic en **activity_main.axml** para abrirla en Android Designer. Este es el archivo de diseño para la pantalla de la aplicación:
 
 [![Archivo axml de actividad abierto](hello-android-quickstart-images/vs/03-open-layout-w158-sml.png)](hello-android-quickstart-images/vs/03-open-layout-w158.png#lightbox)
+
+> [!TIP]
+> Las versiones más recientes de Visual Studio contienen una plantilla de aplicación ligeramente diferente.
+>
+> 1. En lugar de **activity_main.axml**, el diseño está en **content_main.axml**.
+> 2. El diseño predeterminado será `RelativeLayout`. Para que el resto de los pasos de esta página funcionen, debe cambiar la etiqueta `<RelativeLayout>` por `<LinearLayout>` y agregar otro atributo `android:orientation="vertical"` a la etiqueta de apertura `LinearLayout`.
 
 En el **Cuadro de herramientas** (el área de la izquierda), escriba `text` en el campo de búsqueda y arrastre un widget de **Texto (grande)** a la superficie de diseño (el área del centro):
 

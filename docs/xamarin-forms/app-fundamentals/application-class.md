@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: 9acd1b8f25696267578f5cc269eb1b0c738be571
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: dbee8d3f55edee9c862b4c883b63b55f98972b48
+ms.sourcegitcommit: 0c2745c1593eee3ecb40ab882e854a13ca72bc86
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675099"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56078425"
 ---
 # <a name="xamarinforms-app-class"></a>Clase App de Xamarin.Forms
 
@@ -149,7 +149,6 @@ public class App : Xamarin.Forms.Application
 Luego se crean instancias de esta clase en cada proyecto específico de plataforma y se pasa al método `LoadApplication`, que es donde se carga `MainPage` y se muestra al usuario.
 El código para cada plataforma se muestra en las secciones siguientes. Las plantillas de solución de Xamarin.Forms más recientes ya contienen todo este código, preconfigurado para la aplicación.
 
-
 ### <a name="ios-project"></a>Proyecto de iOS
 
 La clase `AppDelegate` de iOS hereda de `FormsApplicationDelegate`. Debe:
@@ -196,8 +195,6 @@ public class MainActivity : FormsAppCompatActivity
 
 ### <a name="universal-windows-project-uwp-for-windows-10"></a>Proyecto universal de Windows (UWP) para Windows 10
 
-Vea [Proyectos de instalación de Windows](~/xamarin-forms/platform/windows/installation/index.md) para obtener información sobre la compatibilidad de UWP en Xamarin.Forms.
-
 La página principal del proyecto de UWP debe heredar de `WindowsPage`:
 
 ```xaml
@@ -222,4 +219,6 @@ public sealed partial class MainPage
  }
 ```
 
-Observe que se debe llamar a `Forms.Init()` en **App.xaml.cs** alrededor de la línea 63.
+Tenga en cuenta que `Forms.Init()` debe llamarse desde **App.xaml.cs** en el proyecto UWP.
+
+Para obtener más información, consulte [Proyectos de instalación de Windows](~/xamarin-forms/platform/windows/installation/index.md), donde se incluyen instrucciones para agregar un proyecto UWP a una solución existente de Xamarin.Forms cuyo destino no es UWP.
