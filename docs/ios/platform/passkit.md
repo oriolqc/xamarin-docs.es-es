@@ -17,7 +17,7 @@ ms.locfileid: "50121404"
 # <a name="passkit-in-xamarinios"></a>PassKit en Xamarin.iOS
 
 La aplicación de iOS Wallet permite a los usuarios almacenar tarjetas digitales en sus dispositivos.
-Los comercios generan estas tarjetas y las envían al cliente mediante correo electrónico, direcciones URL o a través de la aplicación de iOS del comercio. Estas tarjetas pueden representar varias cosas, desde entradas de cine hasta tarjetas de fidelización o tarjetas de embarque. El marco de PassKit permite a los desarrolladores interactuar con las tarjetas mediante programación.
+Estas fases se generan por los comercios y se envían al cliente por correo electrónico, direcciones URL, o a través de la aplicación de iOS de comerciante. Estos pases pueden representar varias cosas, de vales de película a tarjetas de fidelización de embarque. El marco de PassKit permite a los desarrolladores interactuar con las tarjetas mediante programación.
 
 Este documento presenta Wallet y mediante la API de PassKit con Xamarin.iOS.
 
@@ -56,7 +56,7 @@ Cada parte del ecosistema tiene un rol claramente definido:
 -   **Wallet**: aplicación de iOS integrada de Apple que almacena y muestra tarjetas. Este es el único lugar en que se representan las tarjetas para usarlas en el mundo real (es decir, se muestra el código de barras junto con todos los datos localizados en la tarjeta).
 -   **Aplicaciones complementarias**: aplicaciones de iOS 6 compiladas por proveedores de tarjetas para ampliar la funcionalidad de las tarjetas que emiten, como dar un valor añadido a la tarjeta de una tienda, cambiar el asiento en una tarjeta de embarque u otra función específica del negocio. Las aplicaciones complementarias no son necesarias para que una tarjeta sea útil.
 -   **Su servidor**: un servidor seguro donde se pueden generar y firmar las tarjetas para distribuirse. Su aplicación complementaria puede conectarse al servidor para generar nuevas tarjetas o solicitar actualizaciones de tarjetas existentes. Si quiere, también puede implementar la API de servicio web a la que llamaría Wallet para actualizar las tarjetas.
--    **Servidores de APNS**: el servidor tiene la capacidad de notificar a Wallet las actualizaciones de una tarjeta en un dispositivo determinado con APNS. Envíe una notificación de inserción a Wallet, que después se pondrá en contacto con el servidor para obtener detalles del cambio. Las aplicaciones complementarias no tienen que implementar APNS para esta característica (pueden escuchar la notificación `PKPassLibraryDidChangeNotification`).
+-   **Servidores de APNS**: el servidor tiene la capacidad de notificar a Wallet las actualizaciones de una tarjeta en un dispositivo determinado con APNS. Envíe una notificación de inserción a Wallet, que después se pondrá en contacto con el servidor para obtener detalles del cambio. Las aplicaciones complementarias no tienen que implementar APNS para esta característica (pueden escuchar la notificación `PKPassLibraryDidChangeNotification`).
 -   **Conduit Apps**: aplicaciones que no manipulan directamente las tarjetas (como ocurre con las aplicaciones complementarias), pero que pueden mejorar su utilidad al reconocer las tarjetas y permitir que se agreguen a Wallet. Los clientes de correo electrónico, exploradores de redes sociales y otras aplicaciones de agregación de datos pueden encontrar datos adjuntos o vínculos a las tarjetas.
 
 Todo el ecosistema parece complejo, por lo que conviene tener en cuenta que algunos componentes son opcionales y mucho más fácil de implementaciones de PassKit son posibles.
@@ -70,8 +70,8 @@ Una tarjeta es una colección de datos que representan una entrada, un cupón o 
 Actualmente cinco tipos admitidos, que se pueden distinguir en la aplicación Wallet por el diseño y el borde superior del pase:
 
 -  **Entrada de evento**: pequeño recorte semicircular.
--  **Tarjeta de embarque**: muescas en los lados, se puede especificar el icono específico del transporte (por ejemplo, bus, tren o avión).
--  **Tarjeta de tienda**: parte superior redondeada, como una tarjeta de crédito o débito.
+-   **Tarjeta de embarque**: muescas en los lados, se puede especificar el icono específico del transporte (por ejemplo, bus, tren o avión). bus, tren, avión).
+-   **Tarjeta de tienda**: parte superior redondeada, como una tarjeta de crédito o débito.
 -  **Cupón** : perforado a lo largo de la parte superior.
 -  **Genérica**: igual que la tarjeta de tienda, parte superior redondeada.
 
@@ -225,7 +225,7 @@ Para crear un Pass Type ID (identificador del tipo de tarjeta), realice lo sigui
 
 El primer paso es configurar un Pass Type ID (identificador del tipo de tarjeta) para que se admitan todos los _tipos_ diferentes de tarjeta. El Pass ID (identificador de tarjeta) o el Pass Type identifier (identificador del tipo de tarjeta) crea un identificador único de la tarjeta. Usaremos este identificador para vincular la tarjeta con su cuenta de desarrollador mediante un certificado.
 
-1.   En la sección [Certificates, Identifiers, and Profiles (Certificados, identificadores y perfiles) del Portal de aprovisionamiento de iOS](https://developer.apple.com/account/overview.action), vaya a **Identifiers** (Identificadores) y seleccione **Pass Type IDs** (Identificadores del tipo de tarjeta). Después, seleccione el botón **+** para crear un tipo de tarjeta: [ ![](passkit-images/passid.png "crear un tipo de tarjeta")](passkit-
+1. En la sección [Certificates, Identifiers, and Profiles (Certificados, identificadores y perfiles) del Portal de aprovisionamiento de iOS](https://developer.apple.com/account/overview.action), vaya a **Identifiers** (Identificadores) y seleccione **Pass Type IDs** (Identificadores del tipo de tarjeta). Después, seleccione el botón **+** para crear un tipo de tarjeta: [ ![](passkit-images/passid.png "crear un tipo de tarjeta")](passkit-images/passid.png#lightbox)
 
 2.   Proporcione una **Descripción** (nombre) y un **Identificador** (cadena única) para la tarjeta. Tenga en cuenta que todos los Pass Type IDs (identificadores del tipo de tarjeta) deben comenzar con la cadena `pass.` En este ejemplo, usamos `pass.com.xamarin.coupon.banana`: [ ![](passkit-images/register.png "proporcionar una descripción y un identificador")](passkit-images/register.png#lightbox)
 
