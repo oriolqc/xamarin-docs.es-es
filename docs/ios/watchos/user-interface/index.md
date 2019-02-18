@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/19/2016
-ms.openlocfilehash: a7be193cee60b40f70b3dd4a840e0a26ccb8c3b2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c8ef76f24b017f5e3e6bec9d39534f3626e79147
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109008"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321108"
 ---
 # <a name="watchos-user-interface-controls-in-xamarin"></a>Controles de interfaz de usuario de Xamarin de watchOS
 
@@ -38,10 +38,10 @@ Los nombres de todos los controles mediante programación tiene como prefijo `WK
 |[Menu](~/ios/watchos/user-interface/menu.md)|Definir el menú presionado force en el guión gráfico e implementar las acciones para cada botón en el código.<br />[Documentación de menú del Control (Force Touch)](~/ios/watchos/user-interface/menu.md)<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/ControllerDetailController.cs)|![](Images/controller.png)|
 |Entrada de texto|Use `PresentTextInputController` y `WKTextInputMode` enumeración.<br />[Documentación de entrada de texto](~/ios/watchos/user-interface/text-input.md)<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TextInputController.cs)|![](Images/textinput.png)|
 |Corona digital|La corona Digital puede usarse para dirigir un selector o su rotación se puede realizar el seguimiento en el código.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs)|![](Images/digital-crown.png)|
-|Gestos|Hay cuatro tipos de reconocimiento de gestos que se pueden agregar a una escena: Tap, deslice el dedo, panorámica y LongPress.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
+|Gestos|Hay cuatro tipos de reconocimiento de gestos que se pueden agregar a una escena: TAP, deslice el dedo, panorámica y LongPress.<br />[Código de catálogo](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [WatchKitCatalog (ejemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [Referencia de API del Kit de inspección](https://developer.xamarin.com/api/namespace/WatchKit/)
+- [Referencia de API del Kit de inspección](xref:WatchKit)

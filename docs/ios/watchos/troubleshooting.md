@@ -8,16 +8,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 7bfb0cad8bbc025bc5dba39abe3699ae77ee83ba
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 70ef341c066c77e214761d75c173faef00266e4c
+ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526486"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56321160"
 ---
 # <a name="watchos-troubleshooting"></a>watchOS solución de problemas
 
-Esta página contiene información adicional y soluciones alternativas para las características aún en desarrollo. Algunas de estas soluciones solo se aplican a las versiones de vista previa.
+Esta página contiene información adicional y soluciones alternativas para problemas que surjan.
 
 - [Problemas conocidos](#knownissues)
 
@@ -45,7 +45,7 @@ Esta página contiene información adicional y soluciones alternativas para las 
 - Diseñador de iOS no muestra flechas de punto de entrada para los controladores de interfaz de vista o una notificación.
 
 - No se puede agregar dos `WKNotificationControllers` a un guión gráfico.
-    Solución alternativa: La `notificationCategory` siempre se inserta el elemento en el guión gráfico XML con el mismo `id`. Para solucionar este problema, puede agregar controladores de notificación de dos (o más), abra el archivo de guión gráfico en un editor de texto y, a continuación, cambie manualmente el `id` elemento para que sea único.
+    Solución: El `notificationCategory` siempre se inserta el elemento en el guión gráfico XML con el mismo `id`. Para solucionar este problema, puede agregar controladores de notificación de dos (o más), abra el archivo de guión gráfico en un editor de texto y, a continuación, cambie manualmente el `id` elemento para que sea único.
 
     [![](troubleshooting-images/duplicate-id-sml.png "Abriendo el guión gráfico de archivos en un editor de texto y cambie manualmente el elemento id para que sean únicos")](troubleshooting-images/duplicate-id.png#lightbox)
 
@@ -260,7 +260,7 @@ Los argumentos restantes se explican a continuación:
 
 ### <a name="--sdkroot"></a>--sdkroot
 
-Requerido. Especifica la ruta de acceso de Xcode (6.2 o posterior).
+Obligatorio. Especifica la ruta de acceso de Xcode (6.2 o posterior).
 
 Ejemplo:
 
@@ -268,7 +268,7 @@ Ejemplo:
  --sdkroot /Applications/Xcode.app/Contents/Developer/
 ```
 
-### <a name="--device"></a>--dispositivo
+### <a name="--device"></a>--device
 
 El dispositivo simulador para ejecutar. Esto se puede especificar de dos maneras: mediante el udid de un dispositivo específico, o mediante una combinación de tipo en tiempo de ejecución y el dispositivo.
 
