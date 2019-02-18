@@ -17,7 +17,7 @@ ms.locfileid: "55293381"
 ---
 # <a name="get-started-with-xamarinforms"></a>Introducción a Xamarin.Forms
 
-_Xamarin.Forms es un kit de herramientas de interfaz de usuario multiplataforma que permite a los desarrolladores crear eficazmente diseños de interfaz de usuario nativa que se pueden compartir entre aplicaciones de iOS, Android y Plataforma universal de Windows. Esta serie de artículos presenta los conceptos básicos del desarrollo de Xamarin.Forms y describe la compilación de una aplicación multiplataforma y con varias página._
+_Xamarin.Forms es un kit de herramientas de interfaz de usuario multiplataforma que permite a los desarrolladores crear eficazmente diseños de interfaz de usuario nativa que puede ser compartida entre aplicaciones de iOS, Android y Plataforma universal de Windows. Esta serie de artículos presenta los conceptos básicos del desarrollo de Xamarin.Forms y describe la compilación de una aplicación multiplataforma y con varias página._
 
 ## <a name="requirementsinstallationmd"></a>[Requisitos](installation.md)
 
