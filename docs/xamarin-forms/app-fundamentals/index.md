@@ -74,7 +74,7 @@ Xamarin.Forms admite aplicaciones de base de datos que usan el motor de base de 
 
 ## <a name="navigationnavigationindexmd"></a>[Navegación](navigation/index.md)
 
-Xamarin.Forms proporciona una serie de experiencias de navegación de páginas diferente, en función del tipo de `Page` que se use.
+Xamarin.Forms proporciona una serie de experiencias de navegación de páginas diferentes, en función del tipo de `Page` que se use.
 
 ## <a name="shellshellmd"></a>[Shell](shell.md)
 
