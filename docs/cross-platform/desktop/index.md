@@ -26,7 +26,7 @@ Referencia rápida de buscar los controles equivalente en formularios Windows Fo
 
 ## <a name="porting-guidanceportingmd"></a>[Guía de migración](porting.md)
 
-Con el analizador de portabilidad para ayudar a migrar el código de aplicación de escritorio (excepto la interfaz de usuario) a Xamarin.Forms.
+Utilizando el Analizador de Portabilidad para ayudar a migrar el código de la aplicación de escritorio (excluyendo la interfaz de usuario) a Xamarin.Forms.
 
 ## <a name="samplessamplesmd"></a>[Ejemplos](samples.md)
 
