@@ -29,7 +29,7 @@ _XAML es un lenguaje de marcado declarativo que puede utilizarse para definir la
 
 ## <a name="xaml-basicsxaml-basicsindexmd"></a>[XAML Basics](xaml-basics/index.md) (Conceptos básicos de XAML)
 
-XAML permite a los desarrolladores definir interfaces de usuario en aplicaciones de Xamarin.Forms mediante marcado en lugar de código. XAML nunca es necesario en un programa de Xamarin.Forms, pero es dispone de herramientas y, a menudo es más coherente visualmente y más concisa que el código equivalente. XAML es especialmente adecuada para su uso con la arquitectura de aplicaciones populares de Model-View-ViewModel (MVVM): XAML define la vista que esté vinculada a ViewModel código a través de enlaces de datos basados en XAML.
+XAML permite a los desarrolladores definir interfaces de usuario en aplicaciones de Xamarin.Forms mediante marcado en lugar de código. XAML nunca es necesario en un programa de Xamarin.Forms, pero dispone de herramientas y, a menudo es más coherente visualmente y más concisa que el código equivalente. XAML es especialmente adecuada para su uso con la arquitectura de aplicaciones populares de Model-View-ViewModel (MVVM): XAML define la vista que esté vinculada a ViewModel código a través de enlaces de datos basados en XAML.
 
 ## <a name="xaml-compilationxamlcmd"></a>[Compilación de XAML](xamlc.md)
 
@@ -37,7 +37,7 @@ XAML se puede compilar de forma opcional directamente en lenguaje intermedio (IL
 
 ## <a name="xaml-previewerxaml-previewermd"></a>[Controlador de vista previa de XAML](xaml-previewer.md)
 
-El [controlador de vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer.md) presenta una vista previa dinámica de una página side-by-side con el marcado XAML, lo que permite ver la interfaz de usuario representan a medida que escribe.
+El [controlador de vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer.md) presenta una vista previa dinámica de una página side-by-side con el marcado XAML, lo que permite ver la interfaz de usuario representada a medida que escribe.
 
 ## <a name="xaml-namespacesnamespacesmd"></a>[Espacios de nombres XAML](namespaces.md)
 
@@ -45,7 +45,7 @@ XAML usa la `xmlns` atributo XML para las declaraciones de espacio de nombres. E
 
 ## <a name="xaml-custom-namespace-schemascustom-namespace-schemasmd"></a>[Esquemas XAML Namespace personalizado](custom-namespace-schemas.md)
 
-Se puede definir un esquema del espacio de nombres personalizado de XAML con el `XmlnsDefinitionAttribute` (clase), que especifica una asignación entre una dirección URL personalizada y uno o varios espacios de nombres CLR. El esquema del espacio de nombres personalizado, a continuación, puede utilizarse en las declaraciones de espacio de nombres XAML.
+Se puede definir un esquema del espacio de nombres personalizado de XAML con el `XmlnsDefinitionAttribute` (clase), que especifica una asignación entre una dirección URL personalizada y uno o varios espacios de nombres CLR. El esquema del espacio de nombres personalizado se puede utilizar en las declaraciones de espacio de nombres XAML.
 
 ## <a name="xaml-markup-extensionsmarkup-extensionsindexmd"></a>[Extensiones de marcado XAML](markup-extensions/index.md)
 
