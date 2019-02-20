@@ -22,7 +22,7 @@ _Azure Search es un servicio en la nube que proporciona la indización y consult
 
 ## <a name="overview"></a>Información general
 
-Datos se almacenan en Azure Search como índices y documentos. Un *índice* es un almacén de datos que se pueden buscar por el servicio Azure Search y es conceptualmente similar a una tabla de base de datos. Un *documento* es una unidad única de datos en un índice de búsqueda y es conceptualmente similar a una fila de la base de datos. Al cargar documentos y enviar consultas de búsqueda para Azure Search, las solicitudes se realizan en un índice específico en el servicio de búsqueda.
+Los datos se almacenan en Azure Search como índices y documentos. Un *índice* es un almacén de datos que se pueden buscar por el servicio Azure Search y es conceptualmente similar a una tabla de base de datos. Un *documento* es una unidad única de datos en un índice de búsqueda y es conceptualmente similar a una fila de la base de datos. Al cargar los documentos y enviar las consultas de búsqueda para Azure Search, las solicitudes se realizan en un índice específico en el servicio de búsqueda.
 
 Cada solicitud realizada a Azure Search debe incluir el nombre del servicio y una clave de API. Hay dos tipos de clave de API:
 
