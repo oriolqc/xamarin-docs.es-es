@@ -21,7 +21,7 @@ _Xamarin.Forms es un kit de herramientas de interfaz de usuario multiplataforma 
 
 ## <a name="requirementsinstallationmd"></a>[Requisitos](installation.md)
 
-Información general sobre los requisitos de plataforma de las aplicaciones desarrolladas con Xamarin.Forms, así como los requisitos mínimos del sistema para el desarrollo con Xamarin.Forms en Visual Studio para Mac y Visual Studio.
+Información general sobre los requisitos de plataforma de las aplicaciones desarrolladas con Xamarin.Forms así como los requisitos mínimos del sistema para el desarrollo con Xamarin.Forms en Visual Studio para Mac y Visual Studio.
 
 ## <a name="installationcross-platformget-startedinstallationindexmd"></a>[Instalación](~/cross-platform/get-started/installation/index.md)
 
