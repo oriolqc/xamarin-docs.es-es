@@ -22,7 +22,7 @@ Sugerencias para incorporar características accesibles (como por ejemplo, la co
 
 ## <a name="app-classapplication-classmd"></a>[Clase de aplicación](application-class.md)
 
-La clase `Application` es el punto de partida para Xamarin.Forms: todas las aplicaciones necesitan implementar una subclase `App` para establecer la página inicial. También proporciona la recopilación `Properties` para el almacenamiento de datos sencillo. Se puede definir en C# o XAML.
+La clase `Application` es el punto de partida para Xamarin.Forms: todas las aplicaciones necesitan implementar una subclase `App` para establecer la página inicial. También proporciona la recopilación `Properties` para el almacenamiento de datos sencillos. Se puede definir en C# o XAML.
 
 ## <a name="app-lifecycleapp-lifecyclemd"></a>[Ciclo de vida de la aplicación](app-lifecycle.md)
 
