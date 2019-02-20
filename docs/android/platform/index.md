@@ -16,7 +16,7 @@ ms.locfileid: "50104705"
 ---
 # <a name="platform-features"></a>Características de la plataforma
 
-_Documentos de esta sección tratan características específicas de Android. Aquí encontrará temas como usa fragmentos, trabajar con mapas y encapsular datos con los proveedores de contenido._
+_Los documentos de esta sección tratan características específicas de Android. Aquí encontrará temas sobre fragmentos, trabajo con mapas y encapsulamiento de datos con los proveedores de contenido._
 
 ## <a name="android-beamandroidplatformandroid-beammd"></a>[Android Beam](~/android/platform/android-beam.md)
 
