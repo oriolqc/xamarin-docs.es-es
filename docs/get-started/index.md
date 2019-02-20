@@ -49,7 +49,7 @@ Siga esta guía de inicio rápido para aplicar estilo a una aplicación de Xamar
 
 ## <a name="quickstart-deep-divequickstartsdeepdivemd"></a>[Análisis detallado de inicio rápido](quickstarts/deepdive.md)
 
-En este artículo examina los aspectos básicos del desarrollo de aplicaciones con Xamarin.Forms y proporciona una profundización en las aplicaciones desarrolladas a lo largo de los inicios rápidos.
+Este artículo examina los aspectos básicos del desarrollo de aplicaciones con Xamarin.Forms y proporciona una profundización en las aplicaciones desarrolladas a lo largo de los inicios rápidos.
 
 ## <a name="get-started-with-xamarin-university"></a>Introducción a Xamarin University
 
