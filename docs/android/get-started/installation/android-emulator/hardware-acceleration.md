@@ -8,12 +8,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/27/2018
-ms.openlocfilehash: 5c79ffd824033f528eb65d07581efefcf3895a9b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6f5a5512cef6ad870f60bca397404df450775de3
+ms.sourcegitcommit: ec99e64ee346adc3c338db13e93100bafee75460
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113227"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331888"
 ---
 # <a name="hardware-acceleration-for-emulator-performance-hyper-v--haxm"></a>Aceleración de hardware para el rendimiento del emulador (Hyper-V y HAXM)
 
@@ -31,8 +31,8 @@ Las tecnologías de virtualización siguientes están disponibles para la aceler
 1. **Hyper-V y Hypervisor Platform de Microsoft**.
    [Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/) es una característica de virtualización de Windows que permite ejecutar sistemas de equipos virtualizados en un equipo host físico.
 
-2. **Hardware Accelerated Execution Manager (HAXM) de Intel**. 
-   [HAXM](https://software.intel.com/articles/intel-hardware-accelerated-execution-manager-intel-haxm) es un motor de virtualización para los equipos que ejecutan CPU de Intel.
+2. **Hardware Accelerated Execution Manager (HAXM) de Intel**.
+   HAXM es un motor de virtualización para los equipos que ejecutan CPU de Intel.
 
 Para obtener un rendimiento óptimo, se recomienda el uso de Hyper-V para la aceleración de Android Emulator. Si Hyper-V no está disponible en el equipo, puede utilizarse HAXM. Android Emulator usará automáticamente la aceleración de hardware si se cumplen los criterios siguientes:
 
