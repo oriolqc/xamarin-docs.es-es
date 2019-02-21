@@ -18,7 +18,7 @@ ms.locfileid: "35242360"
 
 _En este artículo se explica cómo convertir una aplicación de Xamarin.Forms para usar .NET 2.0 estándar._
 
-Estándar de .NET es una especificación de API de .NET que se van a estar disponible en todas las implementaciones. NET. Resulta más fácil compartir código entre aplicaciones de escritorio, aplicaciones móviles y juegos y servicios de nube, aunando las API idénticas a las diferentes plataformas. Para obtener información acerca de las plataformas compatibles con el estándar. NET, vea [soporte de implementación de .NET](/dotnet/standard/net-standard#net-implementation-support/).
+Estándar de .NET es una especificación de API de .NET que va a estar disponible en todas las implementaciones. NET. Resulta más fácil compartir código entre aplicaciones de escritorio, aplicaciones móviles, juegos y servicios de nube aunando las API idénticas a las diferentes plataformas. Para obtener información acerca de las plataformas compatibles con el estándar. NET, vea [soporte de implementación de .NET](/dotnet/standard/net-standard#net-implementation-support/).
 
 Bibliotecas de .NET estándar son la sustitución de las bibliotecas de clases portables (PCL). Sin embargo, una biblioteca que tenga como destino .NET estándar sigue siendo una PCL y se conoce como una PCL basado en .NET estándar. Ciertos perfiles PCL se asignan a versiones de .NET estándar y para los perfiles que tienen una asignación, los tipos de dos biblioteca podrán hacer referencia a entre sí. Para obtener más información, consulte [compatibilidad PCL](/dotnet/standard/net-standard#pcl-compatibility).
 
