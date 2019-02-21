@@ -1,19 +1,14 @@
 ---
 title: Lenguaje de marcado de aplicaciones eXtensible (XAML)
-description: XAML es un lenguaje de marcado declarativo que puede utilizarse para definir las interfaces de usuario. La interfaz de usuario se define en un archivo XML utilizando la sintaxis XAML, mientras que el comportamiento de tiempo de ejecución se define en un archivo de código subyacente independiente.
+description: 'XAML es un lenguaje de marcado declarativo que puede utilizarse para definir las interfaces de usuario. La interfaz de usuario se define en un archivo XML utilizando la sintaxis XAML, mientras que el comportamiento de tiempo de ejecución se define en un archivo de código subyacente independiente.'
 ms.prod: xamarin
 ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2018
-ms.openlocfilehash: 7195d56cfee91544f0626a8f89c886cde36752e5
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831722"
 ---
+
 # <a name="extensible-application-markup-language-xaml"></a>Lenguaje de marcado de aplicaciones eXtensible (XAML)
 
 _XAML es un lenguaje de marcado declarativo que puede utilizarse para definir las interfaces de usuario. La interfaz de usuario se define en un archivo XML utilizando la sintaxis XAML, mientras que el comportamiento de tiempo de ejecución se define en un archivo de código subyacente independiente._
@@ -29,7 +24,7 @@ _XAML es un lenguaje de marcado declarativo que puede utilizarse para definir la
 
 ## <a name="xaml-basicsxaml-basicsindexmd"></a>[XAML Basics](xaml-basics/index.md) (Conceptos básicos de XAML)
 
-XAML permite a los desarrolladores definir interfaces de usuario en aplicaciones de Xamarin.Forms mediante marcado en lugar de código. XAML nunca es necesario en un programa de Xamarin.Forms, pero es dispone de herramientas y, a menudo es más coherente visualmente y más concisa que el código equivalente. XAML es especialmente adecuada para su uso con la arquitectura de aplicaciones populares de Model-View-ViewModel (MVVM): XAML define la vista que esté vinculada a ViewModel código a través de enlaces de datos basados en XAML.
+XAML permite a los desarrolladores definir interfaces de usuario en aplicaciones de Xamarin.Forms mediante marcado en lugar de código. XAML nunca es necesario en un programa de Xamarin.Forms, pero dispone de herramientas y, a menudo es más coherente visualmente y más concisa que el código equivalente. XAML es especialmente adecuada para su uso con la arquitectura de aplicaciones populares de Model-View-ViewModel (MVVM): XAML define la vista que esté vinculada a ViewModel código a través de enlaces de datos basados en XAML.
 
 ## <a name="xaml-compilationxamlcmd"></a>[Compilación de XAML](xamlc.md)
 
@@ -37,7 +32,7 @@ XAML se puede compilar de forma opcional directamente en lenguaje intermedio (IL
 
 ## <a name="xaml-previewerxaml-previewermd"></a>[Controlador de vista previa de XAML](xaml-previewer.md)
 
-El [controlador de vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer.md) presenta una vista previa dinámica de una página side-by-side con el marcado XAML, lo que permite ver la interfaz de usuario representan a medida que escribe.
+El [controlador de vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer.md) presenta una vista previa dinámica de una página side-by-side con el marcado XAML, lo que permite ver la interfaz de usuario representada a medida que escribe.
 
 ## <a name="xaml-namespacesnamespacesmd"></a>[Espacios de nombres XAML](namespaces.md)
 

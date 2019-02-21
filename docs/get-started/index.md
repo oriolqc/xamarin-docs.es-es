@@ -8,13 +8,8 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: 3e44ee07d8d5c1bb63a16bd33d128630d3d121f8
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293381"
 ---
+
 # <a name="get-started-with-xamarinforms"></a>Introducción a Xamarin.Forms
 
 _Xamarin.Forms es un kit de herramientas de interfaz de usuario multiplataforma que permite a los desarrolladores crear eficazmente diseños de interfaz de usuario nativa que se pueden compartir entre aplicaciones de iOS, Android y Plataforma universal de Windows. Esta serie de artículos presenta los conceptos básicos del desarrollo de Xamarin.Forms y describe la compilación de una aplicación multiplataforma y con varias página._
