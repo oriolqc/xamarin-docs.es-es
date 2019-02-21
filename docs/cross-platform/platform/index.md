@@ -23,7 +23,7 @@ Versión 5 de C# introdujo dos nuevas palabras clave para expresar las operacion
 
 ### <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Características del lenguaje C# 6](~/cross-platform/platform/csharp-six.md)
 
-La versión más reciente del lenguaje de C#, versión 6, continúa evolucionando el idioma para que tenga menos reutilizable, mejorar la claridad y coherencia más. Sintaxis de inicialización de limpieza y la posibilidad de usar `await` en `catch/finally` bloques y el condicional null `?` operador son especialmente útiles.
+La versión más reciente del lenguaje C#, versión 6, continúa evolucionando el lenguaje para reducir la repetición de código, mejorar la claridad y aumentar la coherencia. La sintaxis de inicialización más limpia, la posibilidad de usar await en bloques de catch/finally y el operador condicional null ? son especialmente útiles.
 
 ## <a name="ffsharpindexmd"></a>[F#](fsharp/index.md)
 
