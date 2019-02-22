@@ -40,7 +40,7 @@ XAML usa la `xmlns` atributo XML para las declaraciones de espacio de nombres. E
 
 ## <a name="xaml-custom-namespace-schemascustom-namespace-schemasmd"></a>[Esquemas XAML Namespace personalizado](custom-namespace-schemas.md)
 
-Se puede definir un esquema del espacio de nombres personalizado de XAML con el `XmlnsDefinitionAttribute` (clase), que especifica una asignación entre una dirección URL personalizada y uno o varios espacios de nombres CLR. El esquema del espacio de nombres personalizado, a continuación, puede utilizarse en las declaraciones de espacio de nombres XAML.
+Se puede definir un esquema del espacio de nombres personalizado XAML con la clase `XmlnsDefinitionAttribute`, que especifica una asignación entre una dirección URL personalizada y uno o varios espacios de nombres CLR. El esquema del espacio de nombres personalizado se puede usar en las declaraciones del espacio de nombres XAML.
 
 ## <a name="xaml-markup-extensionsmarkup-extensionsindexmd"></a>[Extensiones de marcado XAML](markup-extensions/index.md)
 
