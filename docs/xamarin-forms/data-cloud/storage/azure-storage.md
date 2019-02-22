@@ -138,7 +138,7 @@ El `CloudStorageAccount.Parse` método analiza una cadena de conexión y devuelv
 > [!NOTE]
 > Los nombres de contenedor deben estar en minúsculas y deben empezar por una letra o un número. Además, solo puede contener letras, números y guiones y debe tener entre 3 y 63 caracteres.
 
-El `GetContainer` método se invoca como sigue:
+El `GetContainer` método se invoca de la siguiente manera:
 
 ```csharp
 var container = GetContainer(containerType);
