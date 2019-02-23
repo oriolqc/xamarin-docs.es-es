@@ -6,12 +6,12 @@ ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: dd987b6d1a6db8e27544ddd95cdc219bb5f783b5
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 1ebc450a285d47fe1eedb0f8d72d6c9dc2b95644
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526655"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666888"
 ---
 # <a name="xamarin-live-player-setup"></a>Configuración de Xamarin Live Player
 
@@ -22,11 +22,7 @@ Xamarin Live Player le permite modificar el código de su aplicación y reflejar
 
 ## <a name="1-get-the-android-app"></a>1. Obtener la aplicación de Android
 
-Xamarin Live Player está disponible para Android mediante Google Play:
-
-[ ![Disponible en Google Play](install-images/google-play-badge.png)](https://play.google.com/store/apps/details?id=com.xamarin.live)
-
-ara dispositivos que usan Android sin Google Play, Xamarin Live Player está disponible mediante la distribución [HockeyApp](https://aka.ms/xlp-hockeyapp). Además, las primeras versiones preliminares para Android se pueden instalar directamente desde Google Play mediante la aceptación en los [programas de versión beta abierta](https://play.google.com/apps/testing/com.xamarin.live)
+Xamarin Live Player está disponible para Android por instalar directamente desde [HockeyApp](https://aka.ms/xlp-hockeyapp).
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 

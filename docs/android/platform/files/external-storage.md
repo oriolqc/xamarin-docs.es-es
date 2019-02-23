@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: fa0ad282fedecec8f5ca4e94e7119c36ef182261
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 846a8fd45b8e39fb11270374af47a5b6cb83fa01
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116022"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666940"
 ---
 # <a name="external-storage"></a>Almacenamiento externo
 
@@ -53,16 +53,16 @@ El parámetro `GetExternalFilesDir()` es una cadena que especifica un _directori
 
 | `Android.OS.Environment` | Directorio |
 |-|-|
-| DirectoryAlarms | **_PRIVADA\_externo\_almacenamiento_  /alarmas** |
-| DirectoryDcim | **_PRIVADA\_EXTERNO\_ALMACENAMIENTO_/DCIM** |
-| DirectoryDownloads | **_PRIVADA\_externo\_almacenamiento_  /descargar** |
-| DirectoryDocuments | **_PRIVADA\_externo\_almacenamiento_  /documentos** |
-| DirectoryMovies | **_PRIVADA\_externo\_almacenamiento_/Movies** |
-| DirectoryMusic | **_PRIVADA\_externo\_almacenamiento_/Music** |
-| DirectoryNotifications | **_PRIVADA\_externo\_almacenamiento_  /Notifications** |
-| DirectoryPodcasts | **_PRIVADA\_externo\_almacenamiento_/Podcasts** |
-| DirectoryRingtones | **_PRIVADA\_externo\_almacenamiento_/Ringtones** |
-| DirectoryPictures | **_PRIVADA\_externo\_almacenamiento_  /fotos** |
+| DirectoryAlarms | **_PRIVATE\_EXTERNAL\_STORAGE_/Alarms** |
+| DirectoryDcim | **_PRIVATE\_EXTERNAL\_STORAGE_/DCIM** |
+| DirectoryDownloads | **_PRIVATE\_EXTERNAL\_STORAGE_/Download** |
+| DirectoryDocuments | **_PRIVATE\_EXTERNAL\_STORAGE_/Documents** |
+| DirectoryMovies | **_PRIVATE\_EXTERNAL\_STORAGE_/Movies** |
+| DirectoryMusic | **_PRIVATE\_EXTERNAL\_STORAGE_/Music** |
+| DirectoryNotifications | **_PRIVATE\_EXTERNAL\_STORAGE_/Notifications** |
+| DirectoryPodcasts | **_PRIVATE\_EXTERNAL\_STORAGE_/Podcasts** |
+| DirectoryRingtones | **_PRIVATE\_EXTERNAL\_STORAGE_/Ringtones** |
+| DirectoryPictures | **_PRIVATE\_EXTERNAL\_STORAGE_/Pictures** |
 
 Para dispositivos que tienen varias particiones de almacenamiento externo, cada partición tendrá un directorio que está pensado para archivos privados. El método `Android.Content.Context.GetExternalFilesDirs(string type)` devolverá una matriz de `Java.IO.Files`. Cada objeto representa un directorio específico de la aplicación privado en todos los dispositivos de almacenamiento compartido y externos en la aplicación puede colocar los archivos posee.
 
@@ -80,7 +80,7 @@ Archivos públicos son archivos que existen en un almacenamiento externo que no 
 Este documento se hará referencia en el directorio de almacenamiento para archivos públicos en un almacenamiento externo como _pública\_externo\_almacenamiento_.
 
 
-Android admite también el concepto de directorios de la aplicación en _pública\_externo\_almacenamiento_. Estos directorios son exactamente el mismo que el diretories de aplicación para `_PRIVATE\_EXTERNAL\_STORAGE_` y se describen en la tabla en la sección anterior. El método `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` devolverá un `Java.IO.File` objetos que corresponden a un directorio de aplicaciones pública. El `directoryType` parámetro es un parámetro obligatorio y no puede ser `null`.
+Android admite también el concepto de directorios de la aplicación en _pública\_externo\_almacenamiento_. Estos directorios son exactamente iguales que los directorios de aplicación para `_PRIVATE\_EXTERNAL\_STORAGE_` y se describen en la tabla en la sección anterior. El método `Android.OS.Environment.GetExternalStoragePublicDirectory(string directoryType)` devolverá un `Java.IO.File` objetos que corresponden a un directorio de aplicaciones pública. El `directoryType` parámetro es un parámetro obligatorio y no puede ser `null`.
 
 Por ejemplo, al llamar a `Environment.GetExternalStoragePublicDirectory(Environment.DirectoryDocuments).AbsolutePath` devolverá una cadena que será similar:
 
