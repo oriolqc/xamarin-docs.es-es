@@ -24,7 +24,7 @@ Este libro electrónico proporciona instrucciones sobre cómo implementar el pat
 
 ## <a name="prefaceprefacemd"></a>[Prefacio](preface.md)
 
-Este capítulo explica el propósito y el ámbito de la guía y quién lo está destinado a.
+Este capítulo explica el propósito y el ámbito de la guía y a quién lo está destinado.
 
 ## <a name="introductionintroductionmd"></a>[Introducción](introduction.md)
 
