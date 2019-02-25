@@ -36,7 +36,7 @@ También puede [Descargue capítulos individuales](#download-chapters-and-summar
 
 ## <a name="samples"></a>Muestras
 
-Los ejemplos estan [disponible en github](https://github.com/xamarin/xamarin-forms-book-samples)e  incluyen proyectos de iOS, Android y la plataforma Universal de Windows (UWP). (Xamarin.Forms ya no es compatible con Windows 10 Mobile, pero las aplicaciones de Xamarin.Forms se ejecutarán en el escritorio de Windows 10).
+Los ejemplos están [disponibles en github](https://github.com/xamarin/xamarin-forms-book-samples) e incluyen proyectos de iOS, Android y la Plataforma universal de Windows (UWP). (Xamarin.Forms ya no es compatible con Windows 10 Mobile, pero las aplicaciones de Xamarin.Forms se ejecutarán en el escritorio de Windows 10).
 
 ## <a name="chapter-summaries"></a>Resumen del capítulo
 
