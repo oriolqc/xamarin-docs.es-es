@@ -8,19 +8,18 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
-ms.openlocfilehash: 1aa21a416f4abca0440e96e25aebe5f834a717ce
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 3a488b3a9f729da5d4bee8c1262190b15c2e9240
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209360"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666901"
 ---
 # <a name="mac-platform-setup"></a>Configuración de la plataforma Mac
 
 ![Vista previa](~/media/shared/preview.png)
 
-Antes de empezar, cree (o usar una existente) proyecto de Xamarin.Forms.
-Solo puede agregar aplicaciones de Mac con Visual Studio para Mac.
+Antes de empezar, cree (o usar una existente) proyecto de Xamarin.Forms. Solo puede agregar aplicaciones de Mac con Visual Studio para Mac.
 
 > [!VIDEO https://youtube.com/embed/mvQ7jzaNseM]
 
@@ -38,13 +37,13 @@ Siga estas instrucciones para agregar una aplicación de Mac que se ejecutará e
 
 4. Revise la configuración y presione **crear**. En estos pasos se muestran a continuación:
 
-  ![Instrucciones animadas que muestra cómo agregar una aplicación Cocoa](mac-images/add-macos-proj.gif)
+    ![Instrucciones animadas que muestra cómo agregar una aplicación Cocoa](mac-images/add-macos-proj.gif)
 
-5. En el proyecto de Mac, haga doble clic en **paquetes > Agregar paquetes...**  para agregar la [Xamarin.Forms/2.3.5.235-pre2](https://www.nuget.org/packages/Xamarin.Forms/2.3.5.235-pre2) NuGet. También debe actualizar los otros proyectos a esta versión.
+5. En el proyecto de Mac, haga doble clic en **paquetes > Agregar paquetes...**  para agregar la [Xamarin.Forms](https://www.nuget.org/packages/Xamarin.Forms/) NuGet. También debe actualizar los otros proyectos para usar la misma versión del paquete Xamarin.Forms NuGet.
 
 6. En el proyecto de Mac, haga doble clic en **referencias** y agregue una referencia al proyecto de Xamarin.Forms (proyecto de biblioteca de proyecto compartido o .NET Standard).
 
-  ![Agregue una referencia al proyecto de código compartido de Xamarin.Forms](mac-images/references-sml.png)
+    ![Agregue una referencia al proyecto de código compartido de Xamarin.Forms](mac-images/references-sml.png)
 
 7. Actualización **Main.cs** para inicializar el `AppDelegate`:
 
@@ -90,16 +89,16 @@ Siga estas instrucciones para agregar una aplicación de Mac que se ejecutará e
         {
             Forms.Init();
             LoadApplication(new App());
-            base.DidFinishLaunching(notification); 
+            base.DidFinishLaunching(notification);
         }
     }
     ```
 
 9. Haga doble clic en **Main.storyboard** para editar en Xcode. Seleccione el **ventana** y _desactive_ el **controlador inicial es** casilla (Esto es porque el código anterior crea una ventana):
 
-  [![Desactive la casilla de controlador inicial está en Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
+    [![Desactive la casilla de controlador inicial está en Xcode](mac-images/xcode-init-controller-sml.png)](mac-images/xcode-init-controller.png#lightbox)
 
-  Puede editar el sistema de menú en el guión gráfico para quitar elementos no deseados.
+    Puede editar el sistema de menú en el guión gráfico para quitar elementos no deseados.
 
 10. Por último, agregue cualquier recurso local (p ej. archivos de imagen) de los proyectos existentes de plataforma que son necesarios.
 
@@ -137,26 +136,11 @@ Se trata de una vista previa, por lo que debe esperar que no todo está lista pa
 
 ### <a name="not-all-nugets-are-ready-for-macos"></a>No todos los paquetes de NuGet están listos para macOS
 
-Los paquetes deben tener como destino "xamarinmac20" para que funcione en un proyecto de macOS. Es posible que algunas de las bibliotecas que usa aún no admite macOS.
-
-En este caso, deberá enviar una solicitud al mantenedor del proyecto para agregarlo. Hasta que tengan soporte técnico, deberá buscar otras alternativas.
+Es posible que algunas de las bibliotecas que usa aún no admite macOS. En este caso, deberá enviar una solicitud al mantenedor del proyecto para agregarlo. Hasta que tengan soporte técnico, deberá buscar otras alternativas.
 
 ### <a name="missing-xamarinforms-features"></a>Características de Xamarin.Forms que faltan
 
-No todas las características de Xamarin.Forms son completadas en esta versión preliminar; Esta es una lista de algunas de las funciones que no se ha implementado:
-
-* Pie de página
-* Imagen: aspecto
-* Admitir ListView – ScrollTo, UnevenRows, actualizar, SeparatorColor, SeparatorVisibility
-* MasterDetailPage – BackgroundColor
-* Navegación: InsertPageBefore
-* OpenGLRenderer
-* Selector – implementación enlazable/Observable
-* TabbedPage – BarBackgroundColor, BarTextColor
-* TableView – UnevenRows
-* ForceUpdateSize ViewCell – IsEnabled,
-* WebView – WebNavigationEvents mayoría
-
+No todas las características de Xamarin.Forms son completadas en esta versión preliminar. Para obtener más información, consulte [compatibilidad con la plataforma macOS estado](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support-macOS-Status) en el [Xamarin.Forms](https://github.com/xamarin/Xamarin.Forms) repositorio de GitHub.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
