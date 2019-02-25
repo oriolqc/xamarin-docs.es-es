@@ -28,7 +28,7 @@ Este capítulo explica el propósito y el ámbito de la guía y quién lo está 
 
 ## <a name="introductionintroductionmd"></a>[Introducción](introduction.md)
 
-Los desarrolladores de aplicaciones empresariales enfrentan a varios desafíos que pueden modificar la arquitectura de la aplicación durante el desarrollo. Por lo tanto, es importante compilar una aplicación para que se puede modificar o extendido con el tiempo. Diseño de la capacidad de dichos adaptación puede ser difícil, pero normalmente implica dividir una aplicación en componentes discretos y con acoplamiento flexible que pueden integrarse fácilmente entre sí en una aplicación.
+Los desarrolladores de aplicaciones empresariales enfrentan a varios desafíos que pueden modificar la arquitectura de la aplicación durante el desarrollo. Por lo tanto, es importante compilar una aplicación para que se puede modificar o extender con el tiempo. Diseño de la capacidad de dichos adaptación puede ser difícil, pero normalmente implica dividir una aplicación en componentes discretos y con acoplamiento flexible que pueden integrarse fácilmente entre sí en una aplicación.
 
 ## <a name="mvvmmvvmmd"></a>[MVVM](mvvm.md)
 
