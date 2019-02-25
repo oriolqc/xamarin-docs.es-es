@@ -70,7 +70,7 @@ Xamarin.Forms tiene varios diseños para organizar contenidos en pantalla. `Stac
 
 ## <a name="listviewlistviewindexmd"></a>[ListView](listview/index.md)
 
-Xamarin.Forms proporciona un control de vista de lista para mostrar las filas de desplazamiento de datos. El control incluye acciones contextuales, `HasUnevenRows` ajuste de tamaño automático, personalización de separador, Deslizar para actualizar y encabezados y pies de página.
+Xamarin.Forms proporciona un control de vista de lista para mostrar las filas del desplazamiento de datos. El control incluye acciones contextuales, `HasUnevenRows` ajusta el tamaño automático, personalización de separador, Deslizar para actualizar, encabezados y pies de página.
 
 ## <a name="mapsmapmd"></a>[Mapas](map.md)
 
