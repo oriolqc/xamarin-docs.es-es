@@ -134,7 +134,7 @@ También puede controlar el orden de foco con el `nextFocusDown`, `nextFocusLeft
 
 ## <a name="accessibility-and-localization"></a>Localización y accesibilidad
 
-En los ejemplos anteriores son la descripción de la sugerencia y contenido establece directamente en el valor de presentación. Es preferible utilizar los valores de un **Strings.xml** archivo, como esto:
+En los ejemplos anteriores está la descripción de la sugerencia y contenido establece directamente en el valor de presentación. Es preferible utilizar los valores de un **Strings.xml** archivo, como esto:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
