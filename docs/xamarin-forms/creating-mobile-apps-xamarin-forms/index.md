@@ -1,19 +1,14 @@
 ---
 title: Crear aplicaciones móviles con Xamarin.Forms libro
-description: Obtenga información sobre el desarrollo de aplicaciones de Xamarin.Forms con la versión de la creación de Mobile Apps con book de Xamarin.Forms, de Charles Petzold electrónica.
+description: 'Obtenga información sobre el desarrollo de aplicaciones de Xamarin.Forms con la versión de la creación de Mobile Apps con book de Xamarin.Forms, de Charles Petzold electrónica.'
 ms.prod: xamarin
 ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
-ms.openlocfilehash: 5dae8f1907b9a61018e335a8fe19ad319d95741d
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207874"
 ---
+
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Crear aplicaciones móviles con Xamarin.Forms libro
 
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples)
@@ -36,7 +31,7 @@ También puede [Descargue capítulos individuales](#download-chapters-and-summar
 
 ## <a name="samples"></a>Muestras
 
-Los ejemplos están [disponibles en github](https://github.com/xamarin/xamarin-forms-book-samples) e incluyen proyectos de iOS, Android y la Plataforma universal de Windows (UWP). (Xamarin.Forms ya no es compatible con Windows 10 Mobile, pero las aplicaciones de Xamarin.Forms se ejecutarán en el escritorio de Windows 10).
+Los ejemplos están [disponibles en github](https://github.com/xamarin/xamarin-forms-book-samples) e  incluyen proyectos de iOS, Android y la Plataforma universal de Windows (UWP). (Xamarin.Forms ya no es compatible con Windows 10 Mobile, pero las aplicaciones de Xamarin.Forms se ejecutarán en el escritorio de Windows 10).
 
 ## <a name="chapter-summaries"></a>Resumen del capítulo
 
