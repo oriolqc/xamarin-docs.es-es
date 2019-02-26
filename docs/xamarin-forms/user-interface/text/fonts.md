@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/22/2017
-ms.openlocfilehash: 1b90a3184b89ba9147525a87b52e048bbb59f5af
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 9441522af53a1240707eeb21ff9f583501d2491d
+ms.sourcegitcommit: 16a42b69176a40cde71e177079b11e15d300d042
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061161"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56795451"
 ---
 # <a name="fonts-in-xamarinforms"></a>Fuentes de Xamarin.Forms
 
@@ -97,27 +97,19 @@ Es una buena fuente de información de fuentes para iOS [iosfonts.com](http://io
 
 ## <a name="setting-the-font-in-xaml"></a>Establecer la fuente en XAML
 
-Xamarin.Forms controla ese texto para mostrar todos tienen un `Font` propiedad que se puede establecer en XAML. La manera más sencilla para establecer la fuente en XAML es usar los valores de enumeración de tamaño con nombre, como se muestra en este ejemplo:
+Xamarin.Forms controla ese texto para mostrar todos tienen un `FontSize` propiedad que se puede establecer en XAML. La manera más sencilla para establecer la fuente en XAML es usar los valores de enumeración de tamaño con nombre, como se muestra en este ejemplo:
 
 ```xaml
 <Label Text="Login" FontSize="Large"/>
 <Label Text="Instructions" FontSize="Small"/>
 ```
 
-Hay un convertidor de tipos integrado para el `Font` propiedad que permite que todos los valores de fuente se exprese como un valor de cadena en XAML. Los ejemplos siguientes muestran cómo se pueden especificar atributos de fuente y tamaños en XAML:
+Hay un convertidor de tipos integrado para el `FontSize` propiedad que permite que todos los valores de fuente se exprese como un valor de cadena en XAML. Además, el `FontAttributes` propiedad puede utilizarse para especificar atributos de fuente:
 
 ```xaml
 <Label Text="Italics are supported" FontAttributes="Italic" />
 <Label Text="Biggest NamedSize" FontSize="Large" />
 <Label Text="Use size 72" FontSize="72" />
-```
-
-Para especificar varias `Font` opciones, se combinan la configuración necesaria en una sola `Font` cadena de atributo. La cadena de atributos de fuente se debe dar formato como `"[font-face],[attributes],[size]"`. Es importante el orden de los parámetros, todos los parámetros son opcionales y varios `attributes` se pueden especificar, por ejemplo:
-
-```xaml
-<Label Text="Small bold text" Font="Bold, Micro" />
-<Label Text="Medium custom font" Font="MarkerFelt-Thin, 42" />
-<Label Text="Really big bold and italic text" Font="Bold, Italic, 72"  />
 ```
 
 [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-values) También se puede utilizar en XAML para representar una fuente diferente en cada plataforma. El ejemplo siguiente utiliza un nombre de fuente personalizados en iOS (<span style="font-family:MarkerFelt-Thin">MarkerFelt Thin</span>) y especifica solo tamaño y atributos en las otras plataformas:
