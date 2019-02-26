@@ -60,7 +60,7 @@ Los mapas de bits son matrices rectangulares de bits que corresponden a los píx
 
 ## <a name="skiasharp-effectseffectsindexmd"></a>[Efectos de SkiaSharp](effects/index.md)
 
-Los efectos son propiedades que cambiar la visualización de gráficos, incluidos los degradados lineales y circulares normal, disposición en mosaico de mapa de bits, blend modos de desenfoque y otros usuarios.
+Los efectos son propiedades que cambian la visualización de gráficos, incluidos los degradados lineales y circulares normal, disposición en mosaico de mapa de bits, blend modos de desenfoque y otros usuarios.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
