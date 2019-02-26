@@ -52,7 +52,7 @@ Este capítulo presenta un `NavigationService` (clase), que se usa para realizar
 
 ## <a name="validationvalidationmd"></a>[Validación](validation.md)
 
-Cualquier aplicación que acepta entradas de los usuarios debe asegurarse de que la entrada es válida. Sin validación, el usuario puede proporcionar datos a los que hará que la aplicación producirá un error. La validación aplica las reglas de negocios y evita que un atacante inserta datos malintencionados.
+Cualquier aplicación que acepta entradas de los usuarios debe asegurarse de que la entrada es válida. Sin validación, el usuario puede proporcionar datos a los que hará que la aplicación producirá un error. La validación aplica las reglas de negocios y evita que un atacante inserte datos malintencionados.
 
 En el contexto de Model-View-ViewModel (MVVM) de patrón, un modelo de vista o modelo a menudo se requerirá para realizar la validación de datos y señalar los errores de validación a la vista para que el usuario puede corregirlos.
 
