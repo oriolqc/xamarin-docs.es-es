@@ -1,19 +1,14 @@
 ---
 title: Patrones de aplicación empresarial utilizando el libro electrónico de Xamarin.Forms
-description: Este libro electrónico proporciona una guía de arquitectura para el desarrollo de Xamarin.Forms adaptables, fáciles de mantener y probar las aplicaciones empresariales.
+description: 'Este libro electrónico proporciona una guía de arquitectura para el desarrollo de Xamarin.Forms adaptables, fáciles de mantener y probar las aplicaciones empresariales.'
 ms.prod: xamarin
 ms.assetid: 28cfed6c-6175-4223-a8cc-798d40bf0832
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: f972a32f8daf920f2121e5aa56923c0f3a7f808a
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528447"
 ---
+
 # <a name="enterprise-application-patterns-using-xamarinforms-ebook"></a>Patrones de aplicación empresarial utilizando el libro electrónico de Xamarin.Forms
 
 _Guía de arquitectura para el desarrollo de Xamarin.Forms adaptables, fáciles de mantener y probar las aplicaciones empresariales_
