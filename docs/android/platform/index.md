@@ -1,19 +1,14 @@
 ---
 title: Características de la plataforma de Xamarin.Android
-description: Documentos de esta sección tratan características específicas de Android. Aquí encontrará temas como usa fragmentos, trabajar con mapas y encapsular datos con los proveedores de contenido.
+description: 'Documentos de esta sección tratan características específicas de Android. Aquí encontrará temas como usa fragmentos, trabajar con mapas y encapsular datos con los proveedores de contenido.'
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 8ce50ab9a1bcd029a0db97e6dd66518d646d82ef
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104705"
 ---
+
 # <a name="platform-features"></a>Características de la plataforma
 
 _Los documentos de esta sección tratan características específicas de Android. Aquí encontrará temas sobre fragmentos, trabajo con mapas y encapsulamiento de datos con los proveedores de contenido._
