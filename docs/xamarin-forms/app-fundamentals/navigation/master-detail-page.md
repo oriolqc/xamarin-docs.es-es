@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 3bfb8a10eab1a8a75a3f2048de1ce219df9bde66
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 854b3fdbd34444cfb052d36287cf5cd47a36a2e0
+ms.sourcegitcommit: 0044d04990faa0b144b8626a4fceea0fdff95cfe
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057670"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56666914"
 ---
 # <a name="xamarinforms-master-detail-page"></a>MasterDetailPage de Xamarin.Forms
 
@@ -48,7 +48,7 @@ El comportamiento de la experiencia de navegación entre las páginas maestra y 
 
 - En iOS, la página de detalles *se desliza* hacia la derecha cuando la página maestra se desliza desde la izquierda, y la parte izquierda de la página de detalles sigue siendo visible.
 - En Android, las páginas maestra y de detalles se *superponen*.
-- En UWP, las páginas maestra y de detalles se *intercambian*.
+- En UWP, la página maestra se desplaza desde el lateral izquierdo de la página de detalles, siempre que la propiedad [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) esté establecida en `Popover`. Para obtener más información, consulte [Control del comportamiento de presentación de la página de detalles](#Controlling_the_Detail_Page_Display_Behavior).
 
 En el modo horizontal se observa un comportamiento similar, salvo que la página maestra en iOS y Android tiene un ancho similar al de la página maestra en modo vertical, así que se ve más superficie de la página de detalles.
 
@@ -291,7 +291,6 @@ Pero el valor de la propiedad [`MasterBehavior`](xref:Xamarin.Forms.MasterDetail
 ## <a name="summary"></a>Resumen
 
 En este artículo se ha explicado cómo usar una instancia de [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) y cómo navegar entre sus páginas de información. `MasterDetailPage` de Xamarin.Forms es una página que administra dos páginas de información relacionada: una página maestra que presenta elementos y una página de detalles que muestra detalles sobre elementos de la página maestra.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 
