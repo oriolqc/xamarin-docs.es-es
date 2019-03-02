@@ -7,16 +7,11 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/07/2018
-ms.openlocfilehash: a90ae27bb4e0085d1cd0c5b36cf7c00fe5ebfec6
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292225"
 ---
+
 # <a name="android-platform-features"></a>Características de la plataforma Android
 
-Desarrollo de aplicaciones de Xamarin.Forms para Android requiere Visual Studio. El [página requisitos](~/get-started/installation.md) contiene más información sobre los requisitos previos.
+Desarrollo de aplicaciones de Xamarin.Forms para Android requiere Visual Studio. El [página requisitos](~/get-started/requirements.md) contiene más información sobre los requisitos previos.
 
 ## <a name="platform-specifics"></a>Funcionalidades específicas de plataforma
 

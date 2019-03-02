@@ -9,16 +9,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: aacc63af53d7408b61f01054d49fa2b436588fc7
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 8e466c80468551f8262cfe49556d9527a147de4c
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55293348"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197555"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Análisis detallado de inicio rápido de Xamarin.Forms
 
-En el [inicio rápido de Xamarin.Forms](~/get-started/index.md), se creó la aplicación de notas. En este artículo se revisa lo que se ha compilado para comprender los aspectos fundamentales del funcionamiento de las aplicaciones de Xamarin.Forms.
+En el [inicio rápido de Xamarin.Forms](~/get-started/index.yml), se creó la aplicación de notas. En este artículo se revisa lo que se ha compilado para comprender los aspectos fundamentales del funcionamiento de las aplicaciones de Xamarin.Forms.
 
 ::: zone pivot="windows"
 
@@ -373,7 +373,7 @@ Para obtener más información sobre la navegación jerárquica, consulte [Hiera
 
 El enlace de datos se usa para simplificar la forma en que una aplicación de Xamarin.Forms muestra e interactúa con sus datos. Establece una conexión entre la interfaz de usuario y la aplicación subyacente. La clase [`BindableObject`](xref:Xamarin.Forms.BindableObject) contiene gran parte de la infraestructura para admitir el enlace de datos.
 
-El enlace de datos conecta dos objetos, denominados *origen* y *destino*. El objeto de *origen* proporciona los datos. El objeto de *destino* usa (y, a menudo, muestra) los datos del objeto de origen. Por ejemplo, un control [`Editor`](xref:Xamarin.Forms.Editor) (objeto de *destino*) normalmente enlazará su propiedad [`Text`](xref:Xamarin.Forms.Editor.Text) a una propiedad `string` pública en un objeto de *origen*. En el diagrama siguiente se muestra la relación de enlace:
+El enlace de datos conecta dos objetos, denominados *origen* y *destino*. El objeto de *origen* proporciona los datos. El objeto de *destino* usa (y, a menudo, muestra) los datos del objeto de origen. Por ejemplo, un [ `Editor` ](xref:Xamarin.Forms.Editor) (*destino* objeto) normalmente enlazará su [ `Text` ](xref:Xamarin.Forms.Editor.Text) propiedad para un público `string` propiedad en un *origen* objeto. En el diagrama siguiente se muestra la relación de enlace:
 
 ![](deepdive-images/data-binding.png "Enlace de datos")
 

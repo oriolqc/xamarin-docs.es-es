@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
-ms.openlocfilehash: b027dd23b9144a865bc16b55ebac71855bae0725
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 552ad4d2de6e2560dc4301a9b5cc0ce6a5edb348
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292043"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197122"
 ---
 # <a name="android-build-error--the-linkassemblies-task-failed-unexpectedly"></a>Error de compilación de Android: tarea LinkAssemblies el error inesperado
 
-Es posible que vea un mensaje de error `The "LinkAssemblies" task failed unexpectedly` al compilar un proyecto de Xamarin.Android que usa formularios. Esto sucede cuando el vinculador está activo (normalmente en un *versión* compilación para reducir el tamaño del paquete de aplicación); y se produce debido a los destinos de Android no se actualizan a la última versión de framework. (Obtener más información: [Xamarin.Forms para Android requisitos](~/get-started/installation.md#android))
+Es posible que vea un mensaje de error `The "LinkAssemblies" task failed unexpectedly` al compilar un proyecto de Xamarin.Android que usa formularios. Esto sucede cuando el vinculador está activo (normalmente en un *versión* compilación para reducir el tamaño del paquete de aplicación); y se produce debido a los destinos de Android no se actualizan a la última versión de framework. (Obtener más información: [Xamarin.Forms para Android requisitos](~/get-started/requirements.md#android))
 
 La solución a este problema consiste en asegurarse de que dispone de las versiones de Android SDK más reciente compatibles y establezca el **.NET Framework de destino** a **usar la plataforma más reciente instalada**. También se recomienda que establezca el **versión Android de destino** a **Use la versión de Framework de destino** y **versión Android mínima** en API 15 o superior. Esto se considera la configuración admitida.
 

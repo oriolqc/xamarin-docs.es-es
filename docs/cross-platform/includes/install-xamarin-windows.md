@@ -1,11 +1,11 @@
 ---
 ms.topic: include
-ms.openlocfilehash: bcf68de7261e25c94f042f4479a39e449c1929fb
-ms.sourcegitcommit: 676c5a6795ab4896ccd1b288424bf2040b1208aa
-ms.translationtype: HT
+ms.openlocfilehash: 5fccbcf56037b4c4538ccfa16515ea63aa53c57c
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/25/2018
-ms.locfileid: "52295078"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57199811"
 ---
 Xamarin se puede instalar como parte de una _nueva_ instalación de Visual Studio 2017, con los pasos siguientes:
 
@@ -15,23 +15,23 @@ Xamarin se puede instalar como parte de una _nueva_ instalación de Visual Studi
 
 3. Seleccione la carga de trabajo **Desarrollo para dispositivos móviles con .NET** en la pantalla de instalación:
 
-    ![Selección de Desarrollo para dispositivos móviles con .NET en la pantalla Cargas de trabajo](~/cross-platform/get-started/installation/windows-images/01-mobile-dev-workload.png)
+    ![Selección de Desarrollo para dispositivos móviles con .NET en la pantalla Cargas de trabajo](~/get-started/installation/windows-images/01-mobile-dev-workload.png)
 
 4. Con la opción **Desarrollo para dispositivos móviles con .NET** seleccionada, eche un vistazo al panel **Detalles de la instalación** de la derecha. Aquí puede anular la selección de opciones de desarrollo para dispositivos móviles que no quiera instalar.
 
-    ![Panel Detalles de la instalación en el que aparecen las opciones de Xamarin que se van a instalar](~/cross-platform/get-started/installation/windows-images/02-summary.png)
+    ![Panel Detalles de la instalación en el que aparecen las opciones de Xamarin que se van a instalar](~/get-started/installation/windows-images/02-summary.png)
 
 5. Cuando esté listo para comenzar la instalación de Visual Studio 2017, haga clic en el botón **Instalar** situado en la esquina inferior derecha:
 
-    ![Botón Instalar](~/cross-platform/get-started/installation/windows-images/03-click-install.png)
+    ![Botón Instalar](~/get-started/installation/windows-images/03-click-install.png)
 
    En función de la edición de Visual Studio 2017 que vaya a instalar, el proceso de instalación puede tardar bastante tiempo. Puede usar las barras de progreso para supervisar la instalación:
 
-    ![Barras de progreso durante la instalación](~/cross-platform/get-started/installation/windows-images/04-progress-bars.png)
+    ![Barras de progreso durante la instalación](~/get-started/installation/windows-images/04-progress-bars.png)
 
 6. Cuando haya finalizado la instalación de Visual Studio 2017, haga clic en el botón **Iniciar** para iniciar Visual Studio:
 
-    ![Ubicación del botón Inicio](~/cross-platform/get-started/installation/windows-images/05-launch.png)
+    ![Ubicación del botón Inicio](~/get-started/installation/windows-images/05-launch.png)
 
 <a name="vs2017" />
 
