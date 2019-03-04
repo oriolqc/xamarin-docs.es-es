@@ -6,12 +6,12 @@ ms.assetid: BBE47BA8-78BC-6A2B-63BA-D1A45CB1D3A5
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: f4558d5172d7dcbd2e14e6b74a347dd2f1e3a234
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.openlocfilehash: 8fb373aa5081c8937da5110bad47c3f0decf0126
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292134"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197243"
 ---
 # <a name="part-4---dealing-with-multiple-platforms"></a>Parte 4: Trabajo con varias plataformas
 
@@ -95,7 +95,7 @@ Las ventajas y desventajas de las interfaces se aplican igualmente a la herencia
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Consulte la [Xamarin.Forms](~/get-started/index.md) documentación.
+Consulte la [Xamarin.Forms](~/get-started/index.yml) documentación.
 
 ### <a name="other-cross-platform-libraries"></a>Otras bibliotecas multiplataforma
 
