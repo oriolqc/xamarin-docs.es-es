@@ -1,4 +1,4 @@
-﻿---
+---
 title: Patrones de aplicación empresarial utilizando el libro electrónico de Xamarin.Forms
 description: 'Este libro electrónico proporciona una guía de arquitectura para el desarrollo de Xamarin.Forms adaptables, fáciles de mantener y probar las aplicaciones empresariales.'
 ms.prod: xamarin
@@ -27,7 +27,7 @@ Los desarrolladores de aplicaciones empresariales enfrentan a varios desafíos q
 
 ## <a name="mvvmmvvmmd"></a>[MVVM](mvvm.md)
 
-El patrón Modelo-Vista-Modelo de vista (MVVM) ayuda a separar la lógica de negocios y presentación de una aplicación de su interfaz de usuario. Mantener una separación clara entre la lógica de aplicación y la interfaz de usuario ayuda a abordar numerosos problemas de desarrollo y puede hacer que probar una aplicación, mantenerla y desarrollarla sea más fácil. También puede mejorar enormemente las oportunidades de reutilización de código y permite a los desarrolladores y diseñadores de interfaz de usuario colaborar con mayor facilidad al desarrollar sus respectivos elementos de una aplicación.
+El patrón Model-View-ViewModel (MVVM) ayuda a separar la lógica de negocios y la presentación de una aplicación desde su interfaz de usuario (UI). Mantener una separación clara entre la interfaz de usuario y la lógica de aplicación ayuda a abordar numerosos problemas de desarrollo y hacer más fácil probar una aplicación, mantener y evolucionar. Se pueden mejorar enormemente las oportunidades de reutilización de código y permite a los desarrolladores y diseñadores de interfaz de usuario más colaboran fácilmente al desarrollar sus respectivos partes de una aplicación.
 
 ## <a name="dependency-injectiondependency-injectionmd"></a>[Inserción de dependencias](dependency-injection.md)
 
@@ -53,7 +53,7 @@ En el contexto de Model-View-ViewModel (MVVM) de patrón, un modelo de vista o m
 
 ## <a name="configuration-managementconfiguration-managementmd"></a>[Administración de configuraciones](configuration-management.md)
 
-La configuración permite la separación de datos que configuran el comportamiento de una aplicación desde el código, lo que permite cambiar el comportamiento sin volver a compilar la aplicación. La configuración de la aplicación se compone de datos que una aplicación crea y administra, y la configuración de usuario es la configuración personalizable de una aplicación que afecta al comportamiento de la aplicación y no es necesario volver a ajustarla a menudo.
+La configuración permite la separación de datos que se configura el comportamiento de una aplicación desde el código, lo que permite el comportamiento que se puede cambiar sin volver a generar la aplicación. Configuración de la aplicación es datos que una aplicación crea y administra y configuración de usuario es la configuración de una aplicación personalizable que afectan al comportamiento de la aplicación y no requiere el ajuste de volver a frecuentes.
 
 ## <a name="containerized-microservicescontainerized-microservicesmd"></a>[Microservicios en contenedores](containerized-microservices.md)
 

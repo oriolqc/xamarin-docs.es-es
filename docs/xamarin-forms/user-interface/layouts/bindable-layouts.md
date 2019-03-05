@@ -1,5 +1,5 @@
 ---
-title: Puede enlazables diseños de Xamarin.Forms
+title: Diseños enlazables en Xamarin.Forms
 description: Diseños enlazables habilitar clases de diseño generar su contenido mediante un enlace a una colección de elementos, con la opción para establecer la apariencia de cada elemento con un DataTemplate.
 ms.prod: xamarin
 ms.assetid: 824C3319-20A0-42D0-8632-CDECD98349C3
@@ -81,7 +81,7 @@ BindableLayout.SetItemsSource(stackLayout, viewModel.User.TopFollowers);
 BindableLayout.SetItemTemplate(stackLayout, circleImageTemplate);
 ```
 
-En este ejemplo, una vista `CircleImage` definida en la [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) mostrará todos los elementos de la colección `TopFollowers`:
+En este ejemplo, una vista `CircleImage` definida en la  [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) mostrará todos los elementos de la colección `TopFollowers`:
 
 ![El diseño se puede enlazar con un DataTemplate](bindable-layouts-images/top-followers.png "enlazable diseño con una plantilla de datos")
 
@@ -125,7 +125,7 @@ La clase `TechItemTemplateSelector` define las propiedades `DefaultTemplate` y `
 
 ![El diseño se puede enlazar con un DataTemplateSelector](bindable-layouts-images/favorite-tech.png "Diseño enlazable con un selector de plantillas de datos")
 
-	Para obtener más información acerca de los selectores de plantilla de datos, vea [creando un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+Para obtener más información acerca de los selectores de plantilla de datos, vea [creando un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
