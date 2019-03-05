@@ -1,4 +1,4 @@
----
+﻿---
 title: Patrones de aplicación empresarial utilizando el libro electrónico de Xamarin.Forms
 description: 'Este libro electrónico proporciona una guía de arquitectura para el desarrollo de Xamarin.Forms adaptables, fáciles de mantener y probar las aplicaciones empresariales.'
 ms.prod: xamarin
