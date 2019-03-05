@@ -18,21 +18,21 @@ ms.locfileid: "55832256"
 
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/)
 
-Los Diseños enlazables permiten que cualquier clase de diseño que deriva de la clase [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) genere su contenido al enlazarse a una colección de elementos, con la opción de establecer la apariencia de cada elemento con un [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Los diseños enlazables son proporcionados por la clase `BindableLayout`, la cual expone las siguientes propiedades adjuntas:
+Los diseños enlazables permiten que cualquier clase de diseño que deriva de la clase [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) genere su contenido al enlazarse a una colección de elementos, con la opción de establecer la apariencia de cada elemento con una [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Los diseños enlazables los proporciona la clase `BindableLayout`, que expone las siguientes propiedades adjuntas:
 
-- `ItemsSource` – especifica la colección de elementos `IEnumerable` que va a mostrar el diseño.
-- `ItemTemplate` – especifica el [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) que se aplicará a cada elemento de la colección de elementos que muestra el diseño.
-- `ItemTemplateSelector` – especifica el [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) que se usará para elegir un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) para un elemento en tiempo de ejecución.
+- `ItemsSource`: especifica la colección de elementos `IEnumerable` que va a mostrar el diseño.
+- `ItemTemplate`: especifica la [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) que se aplicará a cada elemento de la colección de elementos que muestra el diseño.
+- `ItemTemplateSelector`: especifica el [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) que se usará para elegir una [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) para un elemento en tiempo de ejecución.
 
-Estas propiedades se pueden conectar a las clases [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout), [ `FlexLayout` ](xref:Xamarin.Forms.FlexLayout), [`Grid`](xref:Xamarin.Forms.Grid), [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout), y [`StackLayout`](xref:Xamarin.Forms.StackLayout), las cuales derivan todas de la clase [`Layout<T>`](xref:Xamarin.Forms.Layout`1).
+Estas propiedades se pueden conectar a las clases [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout), [ `FlexLayout` ](xref:Xamarin.Forms.FlexLayout), [`Grid`](xref:Xamarin.Forms.Grid), [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) y [`StackLayout`](xref:Xamarin.Forms.StackLayout), que derivan de la clase [`Layout<T>`](xref:Xamarin.Forms.Layout`1).
 
 > [!NOTE]
-> La propiedad `ItemTemplate` tiene prioridad incluso cuando ambas propiedades `ItemTemplate` y `ItemTemplateSelector` estén asignadas.
+> La propiedad `ItemTemplate` tiene prioridad cuando están establecidas ambas propiedades `ItemTemplate` e `ItemTemplateSelector`.
 
-La clase `Layout<T>` expone una colección [ `Children` ](xref:Xamarin.Forms.Layout`1.Children), al que se agregan los elementos secundarios de un diseño. Cuando la propiedad `BinableLayout.ItemsSource` se establece en una colección de elementos y se adjunta a una clase derivada de[ `Layout<T>` ](xref:Xamarin.Forms.Layout`1), cada elemento de la colección se agrega a la colección `Layout<T>.Children` para ser mostrado por el diseño. Por lo tanto, la clase derivada de `Layout<T>` actualizará sus vistas secundarias cuando existan cambios en la colección subyacente. Para obtener más información sobre el ciclo de diseño de Xamarin.Forms, consulte [crear un diseño personalizado](~/xamarin-forms/user-interface/layouts/custom.md).
+La clase `Layout<T>` expone una colección [ `Children` ](xref:Xamarin.Forms.Layout`1.Children), a la que se agregan los elementos secundarios de un diseño. Cuando se establece la propiedad `BinableLayout.ItemsSource` en una colección de elementos y se adjunta a una clase derivada de [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1), cada elemento de la colección se agrega a la colección `Layout<T>.Children` para que el diseño lo muestre. Después, la clase derivada de `Layout<T>` actualizará sus vistas secundarias cuando cambie la colección subyacente. Para obtener más información sobre el ciclo de diseño de Xamarin.Forms, consulte [Crear un diseño personalizado](~/xamarin-forms/user-interface/layouts/custom.md).
 
 > [!IMPORTANT]
-> Los Diseños enlazables sólo deben usarse cuando la colección de elementos para mostrar es pequeña y el desplazamiento y la selección no sean necesarios. Aunque el desplazamiento puede proporcionarse ajustando un diseño enlazable en un [ `ScrollView`](xref:Xamarin.Forms.ScrollView), no es recomendado debido a que los Diseños enlazables carecen de virtualización de interfaz de usuario. Cuando se requiera desplazamiento, se debe usar una vista desplazable que incluya virtualización de interfaz de usuario, como [ `ListView` ](xref:Xamarin.Forms.ListView) o `CollectionView`. Ignorar esta recomendación puede provocar problemas de rendimiento.
+> Los diseños enlazables solo deben usarse cuando la colección de elementos que se mostrará es pequeña y no se necesiten el desplazamiento ni la selección. Aunque el desplazamiento puede proporcionarse al encapsular un diseño enlazable en un [ `ScrollView`](xref:Xamarin.Forms.ScrollView), no se recomienda, ya que los diseños enlazables carecen de virtualización de interfaz de usuario. Cuando se requiera el desplazamiento, se debe usar una vista desplazable que incluya virtualización de interfaz de usuario, como [ `ListView` ](xref:Xamarin.Forms.ListView) o `CollectionView`. Ignorar esta recomendación puede provocar problemas de rendimiento.
 
 ## <a name="populating-a-bindable-layout-with-data"></a>Rellenar un diseño enlazable con datos
 
@@ -81,11 +81,11 @@ BindableLayout.SetItemsSource(stackLayout, viewModel.User.TopFollowers);
 BindableLayout.SetItemTemplate(stackLayout, circleImageTemplate);
 ```
 
-En este ejemplo, todos los elementos de la colección `TopFollowers` será mostrados por una vista `CircleImage`s definida en el [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
+En este ejemplo, una vista `CircleImage` definida en la [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) mostrará todos los elementos de la colección `TopFollowers`:
 
 ![El diseño se puede enlazar con un DataTemplate](bindable-layouts-images/top-followers.png "enlazable diseño con una plantilla de datos")
 
-Para obtener más información acerca de las plantillas de datos, véase [plantillas de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+Para obtener más información acerca de las plantillas de datos, vea [plantillas de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="choosing-item-appearance-at-runtime"></a>Elegir la apariencia del elemento en tiempo de ejecución
 
@@ -125,7 +125,7 @@ La clase `TechItemTemplateSelector` define las propiedades `DefaultTemplate` y `
 
 ![El diseño se puede enlazar con un DataTemplateSelector](bindable-layouts-images/favorite-tech.png "Diseño enlazable con un selector de plantillas de datos")
 
-Para obtener más información acerca de los selectores de plantilla de datos, véase [creando un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
+	Para obtener más información acerca de los selectores de plantilla de datos, vea [creando un Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
