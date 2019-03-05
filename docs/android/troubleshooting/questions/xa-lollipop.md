@@ -7,16 +7,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: ffae20f3e62d8f735e4645143f08a94fd04744b1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7e31f9ad46a04b648a6a1f24c075426f7d98a663
+ms.sourcegitcommit: 6655cccf9d3be755773c2f774b5918e0b141bf84
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105277"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305612"
 ---
 # <a name="what-version-of-xamarinandroid-added-lollipop-support"></a>¿Qué versión de Xamarin.Android agrega compatibilidad con Lollipop?
 
-**Nota:** en esta guía se escribió originalmente para la versión preliminar de L Android.
+**Nota:** Esta guía se escribió originalmente para la versión preliminar de L Android.
 
 -   [Xamarin.Android 4.17](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.17/) ha agregado compatibilidad con la versión preliminar de L Android.
 -   [Xamarin.Android 4.20](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.20/) agrega compatibilidad con Android Lollipop.
@@ -33,7 +33,7 @@ El mensaje de error siguiente (o similar) puede aparecer:
 Error 1 Could not find android.jar for API Level 21.
 ```
 
-Este mensaje significa que no está instalada la plataforma Android SDK para API nivel 21. Instálela en Android SDK Manager (Herramientas > Abrir Android SDK Manager...), o cambiar el proyecto de Xamarin.Android para tener como destino una versión de API que está instalada.
+Este mensaje significa que no está instalada la plataforma Android SDK para API nivel 21. Instálela en Android SDK Manager (**Herramientas > Abrir Android SDK Manager...** ), o cambiar el proyecto de Xamarin.Android para tener como destino una versión de API que está instalada.
 
 Existen algunas soluciones para resolver este problema:
 
@@ -46,7 +46,7 @@ Existen algunas soluciones para resolver este problema:
 3. Cambiar temporalmente a la versión preliminar de Android API nivel 21 "L" [1]:
 
     1.  Eliminar el **% LOCALAPPDATA %\\Android\\android-sdk\\plataformas\\21 de android** 
-    2.  Extraer [1] en **C:\\usuarios\\<username>\\AppData\\Local\\Android\\android-sdk\\plataformas** para crear un **android-L** carpeta.
+    2.  Extraer [1] en **C:\\usuarios\\&lt;username&gt;\\AppData\\Local\\Android\\android-sdk\\plataformas**  para crear un **android-L** carpeta.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -69,10 +69,10 @@ Existen algunas soluciones para resolver este problema:
 
 3. Cambiar temporalmente a la versión preliminar de Android API nivel 21 "L" [1]:
 
-    1.  Eliminar **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/android-21**
+    1.  Delete **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/android-21**
     2.  Extraer [1] en **/Users/username/Library/Developer/Xamarin/android-sdk-macosx** para crear un **android-L** carpeta.
 
 -----
 
 
-[1]: [https://dl-ssl.google.com/android/repository/android-L_r04.zip](https://dl-ssl.google.com/android/repository/android-L_r04.zip)
+[1] - [https://dl-ssl.google.com/android/repository/android-L_r04.zip](https://dl-ssl.google.com/android/repository/android-L_r04.zip)
