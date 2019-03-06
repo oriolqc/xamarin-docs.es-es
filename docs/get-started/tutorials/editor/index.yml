@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Tutorial sobre el editor de Xamarin.Forms
+metadata:
+  title: Tutorial sobre el editor de Xamarin.Forms
+  description: Obtenga información sobre cómo aceptar la entrada de texto de varias líneas mediante el editor de Xamarin.Forms.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 04/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 4e295304727cdd316c818dc4cb88ffb6da6a45de
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57197951"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Creación de un editor
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/create.md)]
+- title: Respuesta a los cambios de texto
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/text-changes.md)]
+- title: Personalización del comportamiento
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/behavior.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Tutorial sobre las etiquetas de Xamarin.Forms
+metadata:
+  title: Tutorial sobre las etiquetas de Xamarin.Forms
+  description: Obtenga información sobre cómo mostrar texto mediante la vista de etiquetas de Xamarin.Forms, tanto en una línea como en varias.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 01/31/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 6fa07fb712669607dad404cbe093001611f98a54
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198701"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Creación de una etiqueta
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/create.md)]
+- title: Cambio del aspecto
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/appearance.md)]
+- title: Presentación de texto con formato
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/formatted-text.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

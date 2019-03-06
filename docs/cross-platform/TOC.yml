@@ -2,29 +2,12 @@ items:
 - name: Multiplataforma
   href: index.yml
   items:
-  - name: Primeros pasos
+  - name: Creación de aplicaciones móviles
     href: get-started/index.md
     items:
     - name: Requisitos
       displayName: System requirements
       href: get-started/requirements.md
-    - name: Instalación
-      href: get-started/installation/index.md
-      items:
-      - name: Instalación de Xamarin en un equipo Windows
-        href: get-started/installation/windows.md
-        items:
-        - name: Instalación de versiones preliminares de Xamarin (Windows)
-          href: get-started/installation/windows-preview.md
-      - name: Instalación de Visual Studio para Mac
-        href: /visualstudio/mac/installation/
-        items:
-        - name: Instalación de versiones preliminares de Xamarin (Mac)
-          href: /visualstudio/mac/update/
-      - name: Instrucciones de configuración del firewall para Xamarin
-        href: get-started/installation/firewall.md
-      - name: Desinstalación de Xamarin
-        href: get-started/installation/uninstalling-xamarin.md
     - name: Introducción al desarrollo móvil
       href: get-started/introduction-to-mobile-development.md
     - name: Introducción al ciclo de vida de desarrollo de software para dispositivos móviles
@@ -74,6 +57,8 @@ items:
         href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
     - name: Paquetes NuGet (manual)
       href: app-fundamentals/nuget-manual.md
+    - name: Utilizar bibliotecas de C o C++ en aplicaciones multiplataforma
+      href: cpp/index.md
   - name: Compatibilidad con lenguajes
     href: platform/index.md
     items:
@@ -190,9 +175,9 @@ items:
   - name: Muestras
     href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 6de69aacc37d17086e49ae1a7571879686168a42
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 083bc3dc1dbd392977b0d4902e37fe0f78513c29
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50130261"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197334"

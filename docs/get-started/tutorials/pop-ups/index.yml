@@ -1,0 +1,30 @@
+### YamlMime:Tutorial
+title: Tutorial sobre los elementos emergentes de Xamarin.Forms
+metadata:
+  title: Tutorial sobre los elementos emergentes de Xamarin.Forms
+  description: Obtenga información sobre cómo mostrar alertas y hojas de acción con Xamarin.Forms, para formular preguntas sencillas a los usuarios y guiar a los usuarios a través de las tareas.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 02/19/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 7943f6caf94328d265ba03f90821a0075d1b02fe
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198921"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Visualización de una alerta
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/display-alert.md)]
+- title: Visualización de una hoja de acciones
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/display-action-sheet.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

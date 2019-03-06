@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Tutorial sobre el servicio web de Xamarin.Forms
+metadata:
+  title: Tutorial sobre el servicio web de Xamarin.Forms
+  description: Obtenga información sobre cómo consumir servicios web basados en REST mediante aplicaciones de Xamarin.Forms.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 13/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: e41967ca934e05494762c2b9b678dc8e29bc1ff5
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57198621"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Incorporación de Newtonsoft.Json
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/add-newtonsoft-json.md)]
+- title: Creación de clases de servicios web
+  durationInMinutes: 6
+  content: >
+    [!INCLUDE [](includes/create-web-service-classes.md)]
+- title: Consumo de clases de servicios web
+  durationInMinutes: 5
+  content: >
+    [!INCLUDE [](includes/consume-web-service-classes.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'

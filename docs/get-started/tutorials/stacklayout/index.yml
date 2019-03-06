@@ -1,0 +1,34 @@
+### YamlMime:Tutorial
+title: Tutorial sobre el diseño de pila de Xamarin.Forms
+metadata:
+  title: Tutorial sobre el diseño de pila de Xamarin.Forms
+  description: Obtenga información sobre cómo organizar las vistas en una pila unidimensional mediante el objeto StackLayout de Xamarin.Forms, ya sea horizontal o verticalmente.
+  audience: Developer
+  level: Beginner
+  ms.topic: interactive-tutorial
+  ms.date: 07/02/2019
+  author: davidbritch
+  ms.author: dabritch
+  ms.openlocfilehash: 24ab316baf8a0be14d78d35e52698e2bff224dcc
+  ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+  ms.translationtype: HT
+  ms.contentlocale: es-ES
+  ms.lasthandoff: 03/01/2019
+  ms.locfileid: "57197851"
+items:
+- durationInMinutes: 1
+  content: >
+    [!INCLUDE [](includes/intro.md)]
+- title: Creación de un diseño de pila
+  durationInMinutes: 3
+  content: >
+    [!INCLUDE [](includes/create.md)]
+- title: Especificación de la orientación
+  durationInMinutes: 2
+  content: >
+    [!INCLUDE [](includes/orientation.md)]
+- title: Control de la alineación y la expansión
+  durationInMinutes: 4
+  content: >
+    [!INCLUDE [](includes/alignment-expansion.md)]
+- content: '[!INCLUDE [](includes/completed.md)]'
