@@ -6,7 +6,7 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/07/2018
+ms.date: 02/22/2019
 ---
 
 # <a name="ios-platform-features"></a>Características de la plataforma iOS
@@ -25,8 +25,11 @@ La siguiente funcionalidad específica de la plataforma se proporciona para las 
 
 Se proporciona la siguiente funcionalidad específica de la plataforma para las vistas de Xamarin.Forms en iOS:
 
+- Establecer el [ `Cell` ](xref:Xamarin.Forms.Cell) color de fondo. Para obtener más información, consulte [Color de fondo de celda en iOS](cell-background-color.md).
 - Asegurarse de que especifica el texto se ajusta a un [ `Entry` ](xref:Xamarin.Forms.Entry) ajustando el tamaño de fuente. Para obtener más información, consulte [tamaño de fuente de entrada en iOS](entry-font-size.md).
 - Establecer el color de cursor de un [ `Entry` ](xref:Xamarin.Forms.Entry). Para obtener más información, consulte [Color de Cursor de movimiento en iOS](entry-cursor-color.md).
+- Controlar si [ `ListView` ](xref:Xamarin.Forms.ListView) las celdas de encabezado float durante el desplazamiento. Para obtener más información, consulte [ListView el estilo del encabezado de grupo en iOS](listview-group-header-style.md).
+- Controlar si las animaciones de fila están deshabilitadas cuando la [ `ListView` ](xref:Xamarin.Forms.ListView) se está actualizando la colección de elementos. Para obtener más información, consulte [ListView fila animaciones en iOS](listview-row-animations.md).
 - Establecer el estilo del separador en un [ `ListView` ](xref:Xamarin.Forms.ListView). Para obtener más información, consulte [estilo del separador de ListView en iOS](listview-separator-style.md).
 - Controlar cuándo se produce la selección de elementos en un [ `Picker` ](xref:Xamarin.Forms.Picker). Para obtener más información, consulte [selector de selección de elementos en iOS](picker-selection.md).
 - Habilitar la [ `Slider.Value` ](xref:Xamarin.Forms.Slider.Value) propiedad debe establecerse si pulsa en una posición en la [ `Slider` ](xref:Xamarin.Forms.Slider) barra, en lugar de tener que arrastrar la `Slider` thumb. Para obtener más información, consulte [pulse de Thumb deslizante en iOS](slider-thumb.md).

@@ -1,18 +1,18 @@
 ---
 title: Esquemas personalizados Namespace XAML en Xamarin.Forms
-description: Un esquema del espacio de nombres personalizado de XAML puede definirse con la clase XmlnsDefinitionAttribute, que especifica una asignación entre una dirección URL personalizada y uno o varios espacios de nombres CLR. El esquema del espacio de nombres personalizado, a continuación, puede utilizarse en las declaraciones de espacio de nombres XAML.
+description: Un esquema del espacio de nombres personalizado de XAML puede definirse con la clase XmlnsDefinitionAttribute, que especifica una asignación entre una dirección URL personalizada y uno o varios espacios de nombres CLR. El esquema del espacio de nombres personalizado se puede usar en las declaraciones del espacio de nombres XAML.
 ms.prod: xamarin
 ms.assetid: FDF201A1-8C35-4569-A728-F9B0A0C5B31A
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/21/2018
-ms.openlocfilehash: 8167ff00d3e4d7167772f6f5a578da6197c0d72d
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: 2e09e89fe17956efaef910638e827b69a5795bc0
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832254"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557222"
 ---
 # <a name="xaml-custom-namespace-schemas-in-xamarinforms"></a>Esquemas personalizados Namespace XAML en Xamarin.Forms
 
@@ -144,4 +144,5 @@ El resultado es que dos `CircleButton` se muestran las instancias:
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Esquemas personalizados de Namespace (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/XAML/CustomNamespaceSchemas/)
+- [XAML Namespace recomienda prefijos](custom-prefix.md)
 - [Espacios de nombres XAML en Xamarin.Forms](namespaces.md)

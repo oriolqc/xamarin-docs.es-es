@@ -1,19 +1,14 @@
 ---
 title: Texto en Xamarin.Forms
-description: Xamarin.Forms tiene tres vistas principales para trabajar con texto y, en este artículo se explica cómo usarlas para escribir y mostrar texto en las aplicaciones de Xamarin.Forms.
+description: 'Xamarin.Forms tiene tres vistas principales para trabajar con texto y, en este artículo se explica cómo usarlas para escribir y mostrar texto en las aplicaciones de Xamarin.Forms.'
 ms.prod: xamarin
 ms.assetid: 4DBA7689-E5C8-4583-8FB4-02AB208B4416
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
-ms.openlocfilehash: 0563921a59bc698e2360a06b482c7f4994e56f6e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060017"
 ---
+
 # <a name="text-in-xamarinforms"></a>Texto en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
@@ -66,7 +61,7 @@ Consulte la [Editor](editor.md) artículo para obtener más información.
 
 ## <a name="fontsfontsmd"></a>[Fuentes](fonts.md)
 
-El `Label` control admite el uso de las fuentes integradas en cada plataforma o las fuentes personalizadas que se incluye con la aplicación de configuración de fuente diferente. Consulte la [fuentes](fonts.md) artículo para obtener más información.
+Muchos controles admiten la configuración de fuente diferente utilizando las fuentes integradas en cada plataforma, o fuentes personalizadas que se incluye con la aplicación. Consulte la [fuentes](fonts.md) artículo para obtener más información.
 
 <a name="Styles" />
 

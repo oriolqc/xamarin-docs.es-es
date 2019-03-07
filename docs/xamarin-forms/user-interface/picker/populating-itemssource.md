@@ -6,13 +6,13 @@ ms.assetid: 8ECF390C-9DB2-4441-B9A3-101AE7E5AEC5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/11/2017
-ms.openlocfilehash: 8e05a5f1c52183f29f22cbcd9655c26dc934e7d8
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.date: 02/26/2019
+ms.openlocfilehash: 2c7daca80a207d0c060fc3a867b1eda03dd65258
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207859"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557082"
 ---
 # <a name="setting-a-pickers-itemssource-property"></a>Establecer la propiedad ItemsSource de un selector
 
@@ -27,7 +27,9 @@ Xamarin.Forms 2.3.4 mejoró la [ `Picker` ](xref:Xamarin.Forms.Picker) vista agr
 Un [ `Picker` ](xref:Xamarin.Forms.Picker) se pueden rellenar con datos estableciendo sus [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) propiedad a un `IList` colección. Debe ser de cada elemento de la colección, o derivado de, escriba `object`. Se pueden agregar elementos en XAML, inicialice el `ItemsSource` propiedad desde una matriz de elementos:
 
 ```xaml
-<Picker x:Name="picker" Title="Select a monkey">
+<Picker x:Name="picker"
+        Title="Select a monkey"
+        TitleColor="Red">
   <Picker.ItemsSource>
     <x:Array Type="{x:Type x:String}">
       <x:String>Baboon</x:String>
@@ -57,7 +59,7 @@ monkeyList.Add("Golden Lion Tamarin");
 monkeyList.Add("Howler Monkey");
 monkeyList.Add("Japanese Macaque");
 
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.ItemsSource = monkeyList;
 ```
 
@@ -106,13 +108,16 @@ Este método obtiene la [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIn
 Un [ `Picker` ](xref:Xamarin.Forms.Picker) puede también se rellena con datos mediante el uso de enlace de datos para enlazar su [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) propiedad a un `IList` colección. En XAML Esto se logra con la [ `Binding` ](xref:Xamarin.Forms.Xaml.BindingExtension) extensión de marcado:
 
 ```xaml
-<Picker Title="Select a monkey" ItemsSource="{Binding Monkeys}" ItemDisplayBinding="{Binding Name}" />
+<Picker Title="Select a monkey"
+        TitleColor="Red"
+        ItemsSource="{Binding Monkeys}"
+        ItemDisplayBinding="{Binding Name}" />
 ```
 
 El código de C# equivalente se muestra a continuación:
 
 ```csharp
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
 picker.ItemDisplayBinding = new Binding("Name");
 ```
@@ -137,6 +142,7 @@ Enlace de datos puede usarse para establecer un objeto con el [ `SelectedItem` ]
 
 ```xaml
 <Picker Title="Select a monkey"
+        TitleColor="Red"
         ItemsSource="{Binding Monkeys}"
         ItemDisplayBinding="{Binding Name}"
         SelectedItem="{Binding SelectedMonkey}" />
@@ -149,7 +155,7 @@ Enlace de datos puede usarse para establecer un objeto con el [ `SelectedItem` ]
 El código de C# equivalente se muestra a continuación:
 
 ```csharp
-var picker = new Picker { Title = "Select a monkey" };
+var picker = new Picker { Title = "Select a monkey", TitleColor = Color.Red };
 picker.SetBinding(Picker.ItemsSourceProperty, "Monkeys");
 picker.SetBinding(Picker.SelectedItemProperty, "SelectedMonkey");
 picker.ItemDisplayBinding = new Binding("Name");
@@ -173,10 +179,6 @@ El [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) datos de la propie
 
 > [!NOTE]
 > Tenga en cuenta que el [ `SelectedItem` ](xref:Xamarin.Forms.Picker.SelectedItem) y [ `SelectedIndex` ](xref:Xamarin.Forms.Picker.SelectedIndex) ambas propiedades admiten enlaces bidireccionales de forma predeterminada.
-
-## <a name="summary"></a>Resumen
-
-El [ `Picker` ](xref:Xamarin.Forms.Picker) vista es un control para seleccionar un elemento de texto en una lista de datos. En este artículo se explica cómo rellenar un `Picker` con datos estableciendo el [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) propiedad y cómo responder a la selección de elementos por el usuario. Este enfoque, que se introdujo en Xamarin.Forms 2.3.4, es el enfoque recomendado para interactuar con un `Picker`.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

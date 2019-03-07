@@ -103,9 +103,9 @@ Los temas de Xamarin.Forms definen una apariencia visual específica para los co
 
 El `TimePicker` permite al usuario seleccionar una hora. Se implementa mediante el selector de hora compatible con la plataforma concreta donde se ejecuta la aplicación.
 
-## <a name="visualvisualmd"></a>[Visual](visual.md)
+## <a name="visualvisualindexmd"></a>[Visual](visual/index.md)
 
-Este artículo presentan Xamarin.Forms Visual, que representa las vistas de forma idéntica, o idéntica en gran medida, en iOS y Android.
+Xamarin.Forms Visual permite que los representadores de forma selectiva se aplique a `VisualElement` objetos, sin necesidad de controles de Xamarin.Forms subclase.
 
 ## <a name="visual-state-managervisual-state-managermd"></a>[Administrador de estado visual](visual-state-manager.md)
 

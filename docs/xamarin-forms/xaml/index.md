@@ -6,7 +6,7 @@ ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/18/2018
+ms.date: 02/28/2019
 ---
 
 # <a name="extensible-application-markup-language-xaml"></a>Lenguaje de marcado de aplicaciones eXtensible (XAML)
@@ -38,9 +38,13 @@ El [controlador de vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer.md)
 
 XAML usa la `xmlns` atributo XML para las declaraciones de espacio de nombres. Este artículo presenta la sintaxis del espacio de nombres XAML y muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo.
 
-## <a name="xaml-custom-namespace-schemascustom-namespace-schemasmd"></a>[Esquemas XAML Namespace personalizado](custom-namespace-schemas.md)
+## <a name="xaml-custom-namespace-schemascustom-namespace-schemasmd"></a>[Esquemas de espacio de nombres personalizado XAML](custom-namespace-schemas.md)
 
 Se puede definir un esquema del espacio de nombres personalizado XAML con la clase `XmlnsDefinitionAttribute`, que especifica una asignación entre una dirección URL personalizada y uno o varios espacios de nombres CLR. El esquema del espacio de nombres personalizado se puede usar en las declaraciones del espacio de nombres XAML.
+
+## <a name="xaml-namespace-recommended-prefixescustom-prefixmd"></a>[XAML Namespace recomienda prefijos](custom-prefix.md)
+
+La `XmlnsPrefixAttribute` clase puede ser usada por los autores de controles para especificar un prefijo recomendado para asociar a un espacio de nombres XAML para el uso XAML.
 
 ## <a name="xaml-markup-extensionsmarkup-extensionsindexmd"></a>[Extensiones de marcado XAML](markup-extensions/index.md)
 

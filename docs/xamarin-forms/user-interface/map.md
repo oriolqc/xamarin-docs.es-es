@@ -6,13 +6,13 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/27/2016
-ms.openlocfilehash: 1d164c8593e358a97b21f42bf7116f64d0ac460d
-ms.sourcegitcommit: 6e84adf7358dc05f4d888ab2674de70d88214090
+ms.date: 02/27/2018
+ms.openlocfilehash: edba18eea3ea2b7b843dba70ff0b4b67cbab1ab1
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/31/2018
-ms.locfileid: "53815222"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557121"
 ---
 # <a name="xamarinforms-map"></a>Mapa de Xamarin.Forms
 
@@ -20,13 +20,8 @@ ms.locfileid: "53815222"
 
 _Xamarin.Forms utiliza la asignación nativa API en cada plataforma._
 
-Xamarin.Forms.Maps para utiliza la asignación nativa API en cada plataforma. Esto proporciona una experiencia rápida, familiar mapas para los usuarios, pero significa que se necesitan algunos pasos de configuración que se adhiere a cada requisitos específicos de API de plataformas.
+Xamarin.Forms.Maps para utiliza la asignación nativa API en cada plataforma. Esto proporciona una experiencia rápida, familiar mapas para los usuarios, pero significa que algunos pasos de configuración son necesarias para cumplir con requisitos de cada API de plataformas.
 Una vez configurado, el `Map` funciona igual que cualquier otro elemento de Xamarin.Forms en el código común de control.
-
-* [Asigna la inicialización](#Maps_Initialization) : mediante `Map` requiere código de inicialización adicional al inicio.
-* [Configuración de la plataforma](#Platform_Configuration) -cada plataforma requiere cierta configuración se asigna a trabajar.
-* [Uso de mapas de C#](#Using_Maps) -mostrar mapas y ancla mediante C#.
-* [Uso de mapas de XAML](#Using_Xaml) -mostrar un mapa con XAML.
 
 Se ha utilizado el control de mapa en el [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/) ejemplo, que se muestra a continuación.
 
@@ -65,7 +60,7 @@ Agregue esta llamada en los siguientes archivos para cada plataforma:
 -  **Android** -archivo MainActivity.cs, en el `OnCreate` método.
 -  **UWP** -archivo MainPage.xaml.cs, en el `MainPage` constructor.
 
-Una vez que se ha agregado el paquete de NuGet y llama al método de inicialización dentro de cada tipo de aplicaciones, `Xamarin.Forms.Maps` API pueden usarse en el proyecto de biblioteca estándar de .NET común o el código de proyecto compartido.
+Una vez que se ha agregado el paquete de NuGet y llama al método de inicialización dentro de cada aplicación, `Xamarin.Forms.Maps` API pueden usarse en el proyecto de biblioteca estándar de .NET común o el código de proyecto compartido.
 
 <a name="Platform_Configuration" />
 
@@ -100,7 +95,6 @@ La representación XML de estas claves en **Info.plist** se muestra a continuaci
 El **Info.plist** también se pueden agregar entradas en **origen** vista mientras edita el **Info.plist** archivo:
 
 ![Info.plist para iOS 8](map-images/ios8-map-permissions.png "iOS 8 entradas de Info.plist necesaria")
-
 
 ### <a name="android"></a>Android
 
@@ -143,7 +137,7 @@ El token de autenticación, a continuación, se debe especificar en el `FormsMap
 
 <a name="Using_Maps" />
 
-## <a name="using-maps"></a>Uso de Maps
+## <a name="using-maps"></a>Uso de mapas
 
 Consulte la [MapPage.cs](https://github.com/xamarin/xamarin-forms-samples/blob/master/MobileCRM/MobileCRM.Shared/Pages/MapPage.cs) en el ejemplo MobileCRM para obtener un ejemplo de cómo se puede usar el control de mapa en el código. Un simple `MapPage` clase podría parecerse a este: tenga en cuenta que un nuevo `MapSpan` se crea para colocar la vista del mapa:
 
@@ -179,8 +173,7 @@ Válido `MapType` los valores son:
 -  Satélite
 -  Calle (predeterminado)
 
-
-### <a name="map-region-and-mapspan"></a>MapSpan y la región de mapa
+### <a name="map-region-and-mapspan"></a>Región del mapa y MapSpan
 
 Como se muestra en el fragmento de código anterior, proporcionando un `MapSpan` instancia a un constructor de asignación establece la vista inicial (punto central y el nivel de zoom) de la asignación cuando se cargue. El `MoveToRegion` método en la clase map, a continuación, puede utilizarse para cambiar el nivel de posición o zoom del mapa. Hay dos maneras de crear un nuevo `MapSpan` instancia:
 
@@ -223,30 +216,31 @@ map.Pins.Add(pin);
 -  SavedPin
 -  SearchResult
 
-
 <a name="Using_Xaml" />
 
-## <a name="using-xaml"></a>Uso de Xaml
+## <a name="using-xaml"></a>Uso de XAML
 
-MAPS también pueden colocarse en los diseños de Xaml como se muestra en este fragmento de código.
+MAPS también pueden colocarse en los diseños XAML como se muestra en este fragmento de código.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
-    x:Class="MapDemo.MapPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="MapDemo.MapPage">
     <StackLayout VerticalOptions="StartAndExpand" Padding="30">
         <maps:Map WidthRequest="320" HeightRequest="200"
-            x:Name="MyMap"
-            IsShowingUser="true"
-            MapType="Hybrid"
-        />
+                  x:Name="MyMap"
+                  IsShowingUser="true"
+                  MapType="Hybrid" />
     </StackLayout>
 </ContentPage>
 ```
 
-El `MapRegion` y `Pins` se puede establecer en el código mediante el `MyMap` referencia (o lo que se denomina el mapa). Tenga en cuenta que adicional `xmlns` definición de espacio de nombres es necesario para hacer referencia a los controles de xamarin.Forms.Maps para.
+> [!NOTE]
+> Más `xmlns` definición de espacio de nombres es necesario para hacer referencia a los controles de xamarin.Forms.Maps para.
+
+El `MapRegion` y `Pins` se puede establecer en el código mediante el `MyMap` referencia (o lo que se denomina el mapa).
 
 ```csharp
 MyMap.MoveToRegion(
@@ -254,14 +248,44 @@ MyMap.MoveToRegion(
         new Position(37,-122), Distance.FromMiles(1)));
 ```
 
-<a name="Summary" />
+## <a name="populating-a-map-with-data-using-data-binding"></a>Rellenar un mapa con datos mediante el enlace de datos
 
-## <a name="summary"></a>Resumen
+El [ `Map` ](xref:Xamarin.Forms.Maps.Map) clase también expone las siguientes propiedades:
 
-El xamarin.Forms.Maps para es NuGet independiente que se debe agregar a cada proyecto de una solución de Xamarin.Forms. Código de inicialización adicional es necesario, como también algunos pasos de configuración de iOS, Android y UWP.
+- `ItemsSource` : especifica la colección de `IEnumerable` elementos para mostrar.
+- `ItemTemplate` : especifica el [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) para aplicar a cada elemento de la colección de elementos mostrados.
 
-Una vez configurada la API de mapas se puede usar para representar mapas con marcadores de pin en unas pocas líneas de código. Se pueden mejorar aún más mapas con un [representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
+Por lo tanto, un [ `Map` ](xref:Xamarin.Forms.Maps.Map) se pueden rellenar con datos mediante el uso de enlace de datos para enlazar su `ItemsSource` propiedad a un `IEnumerable` colección:
 
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="WorkingWithMaps.PinItemsSourcePage">
+    <Grid>
+        ...
+        <maps:Map x:Name="map"
+                  ItemsSource="{Binding Locations}">
+            <maps:Map.ItemTemplate>
+                <DataTemplate>
+                    <maps:Pin Position="{Binding Position}"
+                              Address="{Binding Address}"
+                              Label="{Binding Description}" />
+                </DataTemplate>
+            </maps:Map.ItemTemplate>
+        </maps:Map>
+        ...
+    </Grid>
+</ContentPage>
+```
+
+El `ItemsSource` datos de la propiedad se enlaza a la `Locations` propiedad del modelo de vista conectada, que devuelve un `ObservableCollection` de `Location` objetos, que es un tipo personalizado. Cada `Location` objeto define `Address` y `Description` propiedades de tipo `string`y un `Position` propiedad de tipo [ `Position` ](xref:Xamarin.Forms.Maps.Position).
+
+La apariencia de cada elemento de la `IEnumerable` colección se define estableciendo la `ItemTemplate` propiedad a un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) que contiene un [ `Pin` ](xref:Xamarin.Forms.Maps.Pin) objeto que se enlaza a datos propiedades adecuadas.
+
+El siguientes capturas de pantalla se muestra un [ `Map` ](xref:Xamarin.Forms.Maps.Map) mostrando un [ `Pin` ](xref:Xamarin.Forms.Maps.Pin) colección utilizando el enlace de datos:
+
+[![Captura de pantalla de mapa con datos enlazados PIN, en iOS y Android](map-images/pins-itemssource.png "chinchetas con datos enlazados")](map-images/pins-itemssource-large.png#lightbox "chinchetas con datos enlazados")
 
 ## <a name="related-links"></a>Vínculos relacionados
 

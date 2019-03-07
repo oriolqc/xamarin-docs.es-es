@@ -6,13 +6,13 @@ ms.assetid: 36B1C645-26E0-4874-B6B6-BDBF77662878
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/10/2018
-ms.openlocfilehash: ac5ad85f7bdd08b0d071e7c333c959e94dcbc53f
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 02/27/2019
+ms.openlocfilehash: fa339d9fd404cf74aa603d853abde5f9128e57b5
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057499"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557313"
 ---
 # <a name="xamarinforms-slider"></a>Control deslizante de Xamarin.Forms
 
@@ -38,6 +38,8 @@ El `Slider` convierte la `Value` propiedad para que esté entre `Minimum` y `Max
 `Slider` define un [ `ValueChanged` ](xref:Xamarin.Forms.Slider.ValueChanged) evento que se desencadena cuando el `Value` cambios, ya sea a través de la manipulación del usuario de la `Slider` o cuando el programa establece la `Value` propiedad directamente. Un `ValueChanged` evento se desencadena cuando el `Value` propiedad se convierte como se describe en el párrafo anterior.
 
 El [ `ValueChangedEventArgs` ](xref:Xamarin.Forms.ValueChangedEventArgs) objeto que acompaña a la `ValueChanged` eventos tiene dos propiedades, ambos de tipo `double`: [ `OldValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.OldValue) y [ `NewValue` ](xref:Xamarin.Forms.ValueChangedEventArgs.NewValue). En el momento en el evento se desencadena, el valor de `NewValue` es el mismo que el `Value` propiedad de la `Slider` objeto.
+
+`Slider` También define `DragStarted` y `DragCompleted` eventos, que se activan al principio y al final de la acción de arrastrar. A diferencia de la [ `ValueChanged` ](xref:Xamarin.Forms.Slider.ValueChanged) eventos, el `DragStarted` y `DragCompleted` solo se desencadenan los eventos mediante la manipulación de usuario de la `Slider`. Cuando el `DragStarted` desencadena el evento, el `DragStartedCommand`, del tipo `ICommand`, se ejecuta. De forma similar, cuando el `DragCompleted` desencadena el evento, el `DragCompletedCommand`, del tipo `ICommand`, se ejecuta.
 
 > [!WARNING]
 > No utilice opciones de diseño horizontal sin restricciones de `Center`, `Start`, o `End` con `Slider`. En Android y UWP, la `Slider` contrae a una barra de longitud cero y en iOS, la barra es muy breve. Mantenga el valor predeterminado `HorizontalOptions` de `Fill`y no use un ancho de `Auto` al poner `Slider` en un `Grid` diseño.
@@ -203,7 +205,7 @@ El **enlaces básicos de control deslizante** página muestra cómo escribir un 
 </ContentPage>
 ```
 
-El `Rotation` propiedad de la primera `Label` está enlazado a la `Value` propiedad de la `Slider`, ya que es el `Text` propiedad del segundo `Label` con un `StringFormat` especificación. El **enlaces básicos de control deslizante** página funciones un poco diferente de las dos páginas anteriores: cuando la página aparece por primera vez, el segundo `Label` muestra la cadena de texto con el valor. Esta es una ventaja del uso de enlace de datos. Para mostrar texto sin el enlace de datos, deberá inicializar específicamente el `Text` propiedad de la `Label` o simular una activación de la `ValueChanged` eventos llamando al controlador de eventos desde el constructor de clase.
+El `Rotation` propiedad de la primera `Label` está enlazado a la `Value` propiedad de la `Slider`, ya que es el `Text` propiedad del segundo `Label` con un `StringFormat` especificación. El **enlaces básicos de control deslizante** página funciones un poco diferente de las dos páginas anteriores: Cuando aparece la página por primera vez, el segundo `Label` muestra la cadena de texto con el valor. Esta es una ventaja del uso de enlace de datos. Para mostrar texto sin el enlace de datos, deberá inicializar específicamente el `Text` propiedad de la `Label` o simular una activación de la `ValueChanged` eventos llamando al controlador de eventos desde el constructor de clase.
 
 <a name="precautions" />
 
