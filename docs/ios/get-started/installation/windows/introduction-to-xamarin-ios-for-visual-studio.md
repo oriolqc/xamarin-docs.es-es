@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
-ms.openlocfilehash: 396c6a19a86c3c8f5429d5da1251d69fc8d57309
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5f2617272cfdc84fa2b835ce44919d2599a1dce6
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114085"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197204"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introducción a Xamarin.iOS para Visual Studio
 
@@ -35,12 +35,12 @@ Al desarrollar para iOS en Visual Studio es necesario cumplir algunos requisitos
 Hay una serie de opciones de configuración disponibles para poder decidir cuál funciona mejor para las necesidades de desarrollo. Se enumeran a continuación:
 
 -  Usar un equipo Mac como equipo de desarrollo principal y ejecutar una máquina virtual de Windows con Visual Studio instalado. Se recomienda usar software de máquina virtual como [Parallels](http://www.parallels.com/products/desktop/) o [VMWare](http://www.vmware.com/products/fusion/).
--  Usar un equipo Mac solo como host de compilación. En este caso, se conectaría a la misma red que una máquina de Windows con las herramientas [necesarias](~/cross-platform/get-started/installation/windows.md#installation) instaladas.
+-  Usar un equipo Mac solo como host de compilación. En este caso, se conectaría a la misma red que una máquina de Windows con las herramientas [necesarias](~/get-started/installation/windows.md#installation) instaladas.
 
 En cualquier caso, debe seguir estos pasos:
 
 - [Instalación de Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Instalar las herramientas de Xamarin en Windows](~/cross-platform/get-started/installation/windows.md)
+- [Instalar las herramientas de Xamarin en Windows](~/get-started/installation/windows.md)
 
 ## <a name="connecting-to-the-mac"></a>Conexión al equipo Mac
 

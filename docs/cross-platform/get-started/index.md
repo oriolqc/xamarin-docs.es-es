@@ -1,22 +1,17 @@
 ---
 title: Introducción a Xamarin
-description: Este documento contiene vínculos a diversas guías en las que se describe cómo empezar el desarrollo de Xamarin. En el contenido vinculado se explica cómo compilar una primera aplicación, se proporciona una introducción general al desarrollo móvil y se echa un vistazo al aprendizaje con Xamarin University.
+description: 'Este documento contiene vínculos a diversas guías en las que se describe cómo empezar el desarrollo de Xamarin. En el contenido vinculado se explica cómo compilar una primera aplicación, se proporciona una introducción general al desarrollo móvil y se echa un vistazo al aprendizaje con Xamarin University.'
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
-ms.openlocfilehash: 1b98dcb175c7e28e0ae101bea172aa2a98d3502e
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292173"
 ---
-# <a name="get-started-with-xamarin"></a>Introducción a Xamarin
 
-Antes de comenzar, consulte los [requisitos del sistema](requirements.md) y las [instrucciones de instalación](installation/index.md) para asegurarse de que todo está listo.
+# <a name="building-mobile-apps"></a>Creación de aplicaciones móviles
+
+Antes de comenzar, consulte los [requisitos del sistema](requirements.md) y las [instrucciones de instalación](~/get-started/installation/index.md) para asegurarse de que todo está listo.
 
 ## <a name="build-your-first-app"></a>Compilación de la primera aplicación
 
@@ -57,4 +52,4 @@ Más información sobre Visual Studio para Mac, el Entorno de desarrollo integra
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Requisitos del sistema](requirements.md)
-- [Instrucciones de instalación](~/cross-platform/get-started/installation/index.md)
+- [Instrucciones de instalación](~/get-started/installation/index.md)
