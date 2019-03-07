@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: f6815b54867b47bb32ede41470712dac65b6d410
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 1a08803930eaaa3c2c5c5f8b8aa9561a9a7b8d88
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53062183"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557248"
 ---
 # <a name="images-in-xamarinforms"></a>Imágenes en Xamarin.Forms
 
@@ -44,7 +44,7 @@ El [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) propiedad determina cómo la im
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -Recorta la imagen para que rellene el área de presentación conservando el aspecto (ie. ninguna distorsión).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -Letterbox la imagen (si es necesario) para que quepa la imagen completa en el área de presentación, con espacio en blanco que se agrega a la parte superior o inferior o lados dependiendo de si la imagen es ancho o alto.
 
-Se pueden cargar imágenes desde un [archivo local](#Local_Images), un [recurso incrustado](#embedded-images), o [descargado](#Downloading_Images).
+Se pueden cargar imágenes desde un [archivo local](#Local_Images), un [recurso incrustado](#embedded-images), o [descargado](#Downloading_Images). Además, pueden mostrar iconos de la fuente del [ `Image` ](xref:Xamarin.Forms.Image) vista mediante la especificación de los datos del icono de fuente en un `FontImageSource` objeto. Para obtener más información, consulte [mostrar iconos de fuente](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) en el [fuentes](~/xamarin-forms/user-interface/text/fonts.md) guía.
 
 ## <a name="local-images"></a>Imágenes locales
 
@@ -54,7 +54,7 @@ Para usar una imagen única en todas las aplicaciones, *se debe usar el mismo no
 
 - **iOS** : la preferida en forma de administrar y admitir imágenes, ya que es usar iOS 9 **conjuntos de imágenes del catálogo de activos**, que debe contener todas las versiones de una imagen que son necesarias para admitir varios dispositivos y factores de escala de un aplicación. Para obtener más información, consulte [agregar imágenes a un conjunto de imágenes de catálogo de activos](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 - **Android** -colocar imágenes en el **recursos/drawable** directorio con **acción de compilación: AndroidResource**. También se pueden proporcionar versiones de alta y baja resolución de una imagen (en un nombre apropiado **recursos** subdirectorios como **drawable ldpi**, **drawable-hdpi**y **drawable xhdpi**).
-- **Plataforma universal de Windows (UWP)** -colocar imágenes en el directorio raíz de la aplicación con **acción de compilación: contenido**.
+- **Plataforma universal de Windows (UWP)** -colocar imágenes en el directorio raíz de la aplicación con **acción de compilación: Contenido**.
 
 > [!IMPORTANT]
 > Antes de iOS 9, las imágenes normalmente se colocaron en el **recursos** carpeta con **acción de compilación: BundleResource**. Sin embargo, este método para trabajar con imágenes en una aplicación de iOS en desuso por Apple. Para obtener más información, consulte [tamaños de imagen y nombres de archivo](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
@@ -118,7 +118,7 @@ Para incrustar una imagen en un proyecto, haga doble clic para agregar nuevos el
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-![](images-images/vs-buildaction.png "Establecer acción de compilación: EmbeddedResource")
+![](images-images/vs-buildaction.png "Establezca la acción de compilación: EmbeddedResource")
 
 El **acción de compilación** se pueden ver y cambiar en el **propiedades** ventana para un archivo.
 
@@ -128,7 +128,7 @@ El IDE ha generado este comportamiento predeterminado mediante la concatenación
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-![](images-images/xs-buildaction.png "Establecer acción de compilación: EmbeddedResource")
+![](images-images/xs-buildaction.png "Establezca la acción de compilación: EmbeddedResource")
 
 **Acción de compilación** también se pueden ver y cambiar en el **propiedades** panel para un archivo.
 Este panel muestra la **Id. de recurso** que se utiliza para hacer referencia al recurso en el código. En la captura de pantalla siguiente, la **Id. de recurso** es **WorkingWithImages.beach.jpg**.
@@ -297,6 +297,8 @@ Establecer iconos y pantallas de presentación de las aplicaciones de Xamarin.Fo
 ## <a name="icons"></a>Iconos
 
 Consulte la [iOS trabajar con imágenes](~/ios/app-fundamentals/images-icons/index.md), [Google iconografía](http://developer.android.com/design/style/iconography.html), y [directrices para los recursos de icono y el icono](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) para obtener más información sobre cómo crear estos recursos de la aplicación.
+
+Además, pueden mostrar iconos de la fuente del [ `Image` ](xref:Xamarin.Forms.Image) vista mediante la especificación de los datos del icono de fuente en un `FontImageSource` objeto. Para obtener más información, consulte [mostrar iconos de fuente](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) en el [fuentes](~/xamarin-forms/user-interface/text/fonts.md) guía.
 
 ## <a name="splash-screens"></a>Pantallas de presentación
 
