@@ -1,19 +1,14 @@
 ---
 title: Emparejar con Mac para el desarrollo de Xamarin.iOS
-description: En esta guía, se describe cómo usar Emparejar con Mac para conectar Visual Studio 2017 a un host de compilación de Mac. Se describe cómo habilitar el inicio de sesión remoto en el equipo Mac, cómo conectarse al equipo Mac desde Visual Studio 2017, cómo agregar manualmente un host de compilación de Mac al equipo Windows y mucho más.
+description: 'En esta guía, se describe cómo usar Emparejar con Mac para conectar Visual Studio 2017 a un host de compilación de Mac. Se describe cómo habilitar el inicio de sesión remoto en el equipo Mac, cómo conectarse al equipo Mac desde Visual Studio 2017, cómo agregar manualmente un host de compilación de Mac al equipo Windows y mucho más.'
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: 8e87a284e684dff14a2ea0fcfbf34158ed8adefa
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899140"
 ---
+
 # <a name="pair-to-mac-for-xamarinios-development"></a>Emparejar con Mac para el desarrollo de Xamarin.iOS
 
 _En esta guía, se describe cómo usar Emparejar con Mac para conectar Visual Studio 2017 a un host de compilación de Mac._
@@ -42,7 +37,7 @@ Emparejar con Mac permite el flujo de trabajo de desarrollo siguiente:
 > 
 > Antes de seguir las instrucciones de esta guía, complete los pasos siguientes:
 > 
-> - En un equipo Windows, [instale Visual Studio 2017](~/cross-platform/get-started/installation/windows.md).
+> - En un equipo Windows, [instale Visual Studio 2017](~/get-started/installation/windows.md).
 > - En un equipo Mac, [instale Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) y [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation).
 >    - _Debe abrir manualmente Xcode después de realizar la instalación_ para poder agregar componentes adicionales.
 >
@@ -160,7 +155,7 @@ Si no ve un equipo Mac determinado en el cuadro de diálogo **Emparejar con Mac*
 
 ## <a name="automatic-mac-provisioning"></a>Aprovisionamiento automático del equipo Mac
 
-A partir de [Visual Studio 2017 versión 15.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Emparejar con Mac proporciona automáticamente al equipo Mac el software necesario para compilar aplicaciones de Xamarin.iOS: Mono, Xamarin.iOS (el marco del software, no el IDE de Visual Studio para Mac) y diversas herramientas relacionadas con Xcode (pero no Xcode).
+A partir de la [versión 15.6 de Visual Studio 2017](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes#automatic-macos-provisioning), Emparejar con Mac aprovisiona automáticamente un Mac con el software necesario para compilar aplicaciones de Xamarin.iOS: Mono, Xamarin.iOS (el marco de software, no el IDE de Visual Studio para Mac) y varias herramientas relacionadas con Xcode (pero no el propio Xcode).
 
 > [!IMPORTANT]
 > - Emparejar con Mac no puede instalar Xcode; debe instalarlo manualmente en el host de compilación de Mac. Se requiere para el desarrollo de Xamarin.iOS.
@@ -234,7 +229,7 @@ Los parámetros pasados a `msbuild` en el ejemplo anterior son:
 - `ServerPassword`: contraseña que se usará al iniciar sesión en el host de compilación de Mac.
 
 > [!NOTE]
-> Visual Studio 2017 almacena `msbuild` en el siguiente directorio: **C:\Archivos de programa (x86)\Microsoft Visual Studio\2017\\&lt;versión&gt;\MSBuild\15.0\Bin**
+> Visual Studio 2017 almacena `msbuild` en el directorio siguiente: **C:\Program Files (x86)\Microsoft Visual Studio\2017\\&lt;Versión&gt;\MSBuild\15.0\Bin**
 
 La primera vez que Emparejar con Mac inicia sesión en un host de compilación de Mac concreto desde Visual Studio 2017 o la línea de comandos, configura claves SSH. Con estas claves, no se necesitará el nombre de usuario ni la contraseña en los futuros inicios de sesión. Las claves recién creadas se almacenan en **%LOCALAPPDATA%\Xamarin\MonoTouch**.
 

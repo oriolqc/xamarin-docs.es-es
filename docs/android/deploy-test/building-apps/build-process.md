@@ -6,20 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/03/2018
-ms.openlocfilehash: ae005b487e13ab4d2d39b26b10c7ca08e263ef67
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 99b5798e8d3cd5723f99aa2483d5d1c0eff8d57c
+ms.sourcegitcommit: 6655cccf9d3be755773c2f774b5918e0b141bf84
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899179"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305651"
 ---
 # <a name="build-process"></a>Proceso de compilación
-
 
 ## <a name="overview"></a>Información general
 
 El proceso de compilación de Xamarin.Android es responsable de pegarlo todo junto y [generar `Resource.designer.cs`](~/android/internals/api-design.md), admitir `AndroidAsset`, `AndroidResource` y otras [acciones de compilación](#Build_Actions), generar [contenedores Android invocables](~/android/platform/java-integration/android-callable-wrappers.md) y generar un archivo `.apk` para su ejecución en dispositivos Android.
-
 
 ## <a name="application-packages"></a>Paquetes de aplicación
 
@@ -43,7 +41,7 @@ El entorno de tiempo de ejecución compartido se puede deshabilitar en las compi
 
 La *implementación rápida* funciona junto con el entorno de tiempo de ejecución compartido para reducir incluso más el tamaño del paquete de aplicaciones Android. Para lograr esto, los ensamblados de la aplicación no se incluyen dentro del paquete. En su lugar, se copian en el destino mediante `adb push`. Este proceso acelera el ciclo de compilación, implementación y depuración dado que *solo* cambian los ensamblados; el paquete no se vuelve a instalar. Solo los ensamblados actualizados se vuelven a sincronizar con el dispositivo de destino. 
 
-Se sabe que la implementación rápida genera errores en los dispositivos que impiden que `adb` se sincronicen con el directorio `/data/data/@PACKAGE_NAME@/files/.__override__`. 
+Se sabe que la implementación rápida genera errores en los dispositivos que impiden que `adb` se sincronicen con el directorio `/data/data/@PACKAGE_NAME@/files/.__override__`.
 
 La implementación rápida está habilitada de forma predeterminada y puede deshabilitarse en las compilaciones de depuración si se establece la propiedad `$(EmbedAssembliesIntoApk)` en `True`.
 
@@ -86,7 +84,7 @@ Las propiedades de MSBuild controlan el comportamiento de los destinos. Se espec
 
 -   **DebugSymbols**: un valor booleano que determina si el paquete de Android es depurable (tiene el atributo *debuggable*), en combinación con la propiedad `$(DebugType)`. Un paquete depurable contiene símbolos de depuración, establece el atributo `//application/@android:debuggable` en `true` y agrega automáticamente el permiso `INTERNET` para que el depurador pueda asociarlo al proceso. Una aplicación es depurable si `DebugSymbols` es `True` *y* `DebugType` es la cadena vacía o `Full`.
 
--   **DebugType**: especifica el [tipo de símbolos de depuración](https://docs.microsoft.com/visualstudio/msbuild/csc-task) para generar como parte de la compilación, que también afecta a si la aplicación es depurable. Los posibles valores incluyen:
+-   **DebugType**: especifica el [tipo de símbolos de depuración](https://docs.microsoft.com/visualstudio/msbuild/csc-task) para generar como parte de la compilación, que también afecta a si la aplicación es depurable. Entre los posibles valores se incluyen:
 
     - **Full**: se generan símbolos completos. Si la propiedad de MSBuild `DebugSymbols` es también `True`, entonces el paquete de aplicación es depurable.
 
@@ -199,7 +197,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     *Nota*: Si la compatibilidad con TLS 1.2 es necesaria en las versiones de Android anteriores a la 5.0, *o* si se requiere con `System.Net.WebClient` y las API relacionadas, se debe usar `$(AndroidTlsProvider)`.
 
-    *Nota*: La compatibilidad con esta propiedad funciona estableciendo la variable de entorno [`XA_HTTP_CLIENT_HANDLER_TYPE`](~/android/deploy-test/environment.md).
+    *Nota*: La compatibilidad con esta propiedad funciona estableciendo la [variable de entorno `XA_HTTP_CLIENT_HANDLER_TYPE`](~/android/deploy-test/environment.md).
     Tendrá prioridad un valor `$XA_HTTP_CLIENT_HANDLER_TYPE` en un archivo con una acción de compilación de `@(AndroidEnvironment)`.
 
     Agregado en Xamarin.Android 6.1.
@@ -211,11 +209,11 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     - `legacy`: usa la implementación de SSL administrada histórica para la interacción de red. Aquí *no* se admite TLS 1.2.
 
-    - `default`: Permita *Mono* para elegir el proveedor TLS de forma predeterminada.
+    - `default`: permite que *Mono* elija el proveedor TLS de forma predeterminada.
       Esto es equivalente a `legacy`, incluso en Xamarin.Android 7.3.  
       *Nota*: Es poco probable que este valor aparezca en los valores `.csproj`, ya que el valor "Default" de IDE provoca la *eliminación* de la propiedad `$(AndroidTlsProvider)`.
 
-    - Anular/la cadena vacía: en Xamarin.Android 7.1, esto equivale a `legacy`.  
+    - Anular la cadena vacía: En Xamarin.Android 7.1, esto equivale a `legacy`.  
       En Xamarin.Android 7.3, esto equivale a `btls`.
 
     El valor predeterminado es la cadena vacía.
@@ -244,7 +242,7 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     [d8-r8]: https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/D8andR8.md
 
--   **LinkerDumpDependencies**: propiedad bool que permite la generación del archivo de dependencias del enlazador. Este archivo se puede usar como entrada para la herramienta [illinkanalyzer](https://github.com/mono/linker/tree/master/analyzer).
+-   **LinkerDumpDependencies**: propiedad bool que permite la generación del archivo de dependencias del enlazador. Este archivo se puede usar como entrada para la herramienta [illinkanalyzer](https://github.com/mono/linker/blob/master/src/analyzer/README.md).
 
     El valor predeterminado es False.
 
@@ -327,9 +325,9 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
     -   **Other**: incluye otras codificaciones, como *Cirílico(Windows)*\[CP1251\], *Báltico (Windows)*\[iso-8859-4, CP1257\], *Vietnamita (Windows)*\[CP1258\], *Cirílico (KOI8-R)*\[koi8-r, CP1251\], *Ucraniano (KOI8-U)*\[koi8-u, CP1251\], *Báltico (ISO)*\[iso-8859-4, CP1257\], *Cirílico (ISO)*\[iso-8859-5, CP1251\], *ISCII Davenagari*\[x-iscii-de, CP57002\], *ISCII Bengalí*\[x-iscii-be, CP57003\], *ISCII Tamil*\[x-iscii-ta, CP57004\], *ISCII Telugu*\[x-iscii-te, CP57005\], *ISCII Asamés*\[x-iscii-as, CP57006\], *ISCII Oriya*\[x-iscii-or, CP57007\], *ISCII Canarés*\[x-iscii-ka, CP57008\], *ISCII Malayalam*\[x-iscii-ma, CP57009\], *ISCII Gujarati*\[x-iscii-gu, CP57010\], *ISCII Punjabi*\[x-iscii-pa, CP57011\] y *Thai (Windows)*\[CP874\].
 
-    -   **Rare**: incluye las codificaciones raras, como *IBM EBCDIC (Turco)* \[CP1026\], *IBM EBCDIC (Latín 1, sistemas abiertos)* \[CP1047\], *IBM EBCDIC (EE. UU. y Canadá con Euro)* \[CP1140\], *IBM EBCDIC (Alemania con Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega con Euro)* \[CP1142\], *IBM EBCDIC (Finlandia/Suecia con Euro)* \[CP1143\], *IBM EBCDIC (Italia con Euro)* \[CP1144\], *IBM EBCDIC (Latinoamérica/España con Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido con Euro)* \[CP1146\], *IBM EBCDIC (Francia con Euro)* \[CP1147\], *IBM EBCDIC (Internacional con Euro)* \[CP1148\], *IBM EBCDIC (Islandés con Euro)* \[CP1149\], *IBM EBCDIC (Alemania)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlandia/Suecia)* \[CP20278\], *IBM EBCDIC (Italia)* \[CP20280\], *IBM EBCDIC (Latinoamérica/España)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (Katakana japonés extendido)* \[CP20290\], *IBM EBCDIC (Francia)* \[CP20297\], *IBM EBCDIC (Árabe)* \[CP20420\], *IBM EBCDIC (Hebreo)* \[CP20424\], *IBM EBCDIC (Islandés)* \[CP20871\], *IBM EBCDIC (Cirílico: serbio, búlgaro)* \[CP21025\], *IBM EBCDIC (EE. UU. y Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *Árabe (ASMO 708)* \[CP708\], *Centroeuropeo (DOS)* \[CP852\]*, Cirílico (DOS)* \[CP855\], *Turco (DOS)* \[CP857\], *Europeo Occidental (DOS con Euro)* \[CP858\], *Hebreo (DOS)* \[CP862\], *Árabe (DOS)* \[CP864\], *Ruso (DOS)* \[CP866\], *Griego (DOS)* \[CP869\], *IBM EBCDIC (Latín 2)* \[CP870\], and *IBM EBCDIC (Griego)* \[CP875\].
+    -   **Rare**: incluye las codificaciones raras, como *IBM EBCDIC (Turco)* \[CP1026\], *IBM EBCDIC (Latín 1, sistemas abiertos)* \[CP1047\], *IBM EBCDIC (EE. UU. y Canadá con Euro)* \[CP1140\], *IBM EBCDIC (Alemania con Euro)* \[CP1141\], *IBM EBCDIC (Dinamarca/Noruega con Euro)* \[CP1142\], *IBM EBCDIC (Finlandia/Suecia con Euro)* \[CP1143\], *IBM EBCDIC (Italia con Euro)* \[CP1144\], *IBM EBCDIC (Latinoamérica/España con Euro)* \[CP1145\], *IBM EBCDIC (Reino Unido con Euro)* \[CP1146\], *IBM EBCDIC (Francia con Euro)* \[CP1147\], *IBM EBCDIC (Internacional con Euro)* \[CP1148\], *IBM EBCDIC (Islandés con Euro)* \[CP1149\], *IBM EBCDIC (Alemania)* \[CP20273\], *IBM EBCDIC (Dinamarca/Noruega)* \[CP20277\], *IBM EBCDIC (Finlandia/Suecia)* \[CP20278\], *IBM EBCDIC (Italia)* \[CP20280\], *IBM EBCDIC (Latinoamérica/España)* \[CP20284\], *IBM EBCDIC (Reino Unido)* \[CP20285\], *IBM EBCDIC (Katakana japonés extendido)* \[CP20290\], *IBM EBCDIC (Francia)* \[CP20297\], *IBM EBCDIC (Árabe)* \[CP20420\], *IBM EBCDIC (Hebreo)* \[CP20424\], *IBM EBCDIC (Islandés)* \[CP20871\], *IBM EBCDIC (Cirílico: serbio, búlgaro)* \[CP21025\], *IBM EBCDIC (EE. UU. y Canadá)* \[CP37\], *IBM EBCDIC (Internacional)* \[CP500\], *Árabe (ASMO 708)* \[CP708\], *Centroeuropeo (DOS)* \[CP852\]*, Cirílico (DOS)* \[CP855\], *Turco (DOS)* \[CP857\], *Europeo Occidental (DOS con Euro)* \[CP858\], *Hebreo (DOS)* \[CP862\], *Árabe (DOS)* \[CP864\], *Ruso (DOS)* \[CP866\], *Griego (DOS)* \[CP869\], *IBM EBCDIC (Latín 2)* \[CP870\] y *IBM EBCDIC (Griego)* \[CP875\].
 
-    -   **West**: incluye las codificaciones occidentales, como *Europeo Occidental (Mac)* \[macintosh, CP10000\], *Islandés (Mac)* \[x-mac-icelandic, CP10079\], *Centroeuropeo (Windows)* \[iso-8859-2, CP1250\], *Europeo Occidental (Windows)* \[iso-8859-1, CP1252\], *Griego (Windows)* \[iso-8859-7, CP1253\], *Centroeuropeo (ISO)* \[iso-8859-2, CP28592\], *Latín 3 (ISO)* \[iso-8859-3, CP28593\], *Griego (ISO)* \[iso-8859-7, CP28597\], *Latín 9 (ISO)* \[iso-8859-15, CP28605\], *Estados Unidos OEM* \[CP437\], *Europeo Occidental (DOS)* \[CP850\], *Portugués (DOS)* \[CP860\], *Islandés (DOS)* \[CP861\], *Francés canadiense (DOS)* \[CP863\], and *Nórdico (DOS)* \[CP865\].
+    -   **West**: incluye las codificaciones occidentales, como *Europeo Occidental (Mac)* \[macintosh, CP10000\], *Islandés (Mac)* \[x-mac-icelandic, CP10079\], *Centroeuropeo (Windows)* \[iso-8859-2, CP1250\], *Europeo Occidental (Windows)* \[iso-8859-1, CP1252\], *Griego (Windows)* \[iso-8859-7, CP1253\], *Centroeuropeo (ISO)* \[iso-8859-2, CP28592\], *Latín 3 (ISO)* \[iso-8859-3, CP28593\], *Griego (ISO)* \[iso-8859-7, CP28597\], *Latín 9 (ISO)* \[iso-8859-15, CP28605\], *Estados Unidos OEM* \[CP437\], *Europeo Occidental (DOS)* \[CP850\], *Portugués (DOS)* \[CP860\], *Islandés (DOS)* \[CP861\], *Francés canadiense (DOS)* \[CP863\] y *Nórdico (DOS)* \[CP865\].
 
 
     ```xml
@@ -454,9 +452,9 @@ Las [propiedades de firma](#Signing_Properties) también son importantes al empa
 
 Las siguientes propiedades de MSBuild se usan con [proyectos de enlace](~/android/platform/binding-java-library/index.md):
 
--   **AndroidClassParser**: una propiedad de cadena que controla cómo se analizan los archivos `.jar`. Los posibles valores incluyen:
+-   **AndroidClassParser**: una propiedad de cadena que controla cómo se analizan los archivos `.jar`. Entre los posibles valores se incluyen:
 
-    - **class-parse**: usa `class-parse.exe` para analizar el código de bytes directamente, sin ayuda de una JVM. Este valor es experimental. 
+    - **class-parse**: usa `class-parse.exe` para analizar el código de bytes de Java directamente, sin ayuda de una JVM. Este valor es experimental. 
 
 
     - **jar2xml**: usa `jar2xml.jar` para utilizar la reflexión de Java y extraer tipos y miembros de un archivo `.jar`.
@@ -473,7 +471,7 @@ Las siguientes propiedades de MSBuild se usan con [proyectos de enlace](~/androi
 
     El valor predeterminado cambiará en futuras versiones.
 
--   **AndroidCodegenTarget**: una propiedad de cadena que controla la ABI de destino de generación de código. Los posibles valores incluyen:
+-   **AndroidCodegenTarget**: una propiedad de cadena que controla la ABI de destino de generación de código. Entre los posibles valores se incluyen:
 
     - **XamarinAndroid**: usa la API de enlace de JNI presente desde Mono para Android 1.0. Los ensamblados de enlace compilados con Xamarin.Android 5.0 o posterior solo se pueden ejecutar en Xamarin.Android 5.0 o posterior (adiciones de API/ABI), pero el *origen* es compatible con versiones de producto anteriores.
 

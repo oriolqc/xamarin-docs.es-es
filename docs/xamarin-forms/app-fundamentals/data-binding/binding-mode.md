@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 0e8b727fb520b6901bf397c9cfb67947897cbc8b
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 1a8611e5dd0be77eeef065d546f6a0642f384b00
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056969"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557287"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modo de enlace de Xamarin.Forms
 
@@ -101,10 +101,7 @@ La razón es que el resultado de un enlace en la propiedad `SelectedItem` debe s
 
 ### <a name="one-time-bindings"></a>Enlaces de un solo uso
 
-Varias propiedades enlazables tienen un modo de enlace predeterminado de `OneTime`. Estos son:
-
-- Propiedad `IsTextPredictionEnabled` de `Entry`
-- Propiedades `Text`, `BackgroundColor` y `Style` de `Span`.
+Varias propiedades enlazables tienen un modo de enlace predeterminado de `OneTime`, que incluye la propiedad `IsTextPredictionEnabled` de `Entry`.
 
 Las propiedades de destino con un modo de enlace de `OneTime` solo se actualizan cuando cambia el contexto de enlace. Para los enlaces en estas propiedades de destino, esto simplifica la infraestructura de enlace ya que no es necesario supervisar los cambios en las propiedades de origen.
 
