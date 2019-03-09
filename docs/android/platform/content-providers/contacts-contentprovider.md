@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2018
-ms.openlocfilehash: 95d11ef692ec8b43c128cb55a21d0973151cd24a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 48bb334e7e400d57e7eddc23b0b4ff183a7eba9b
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120442"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669419"
 ---
 # <a name="using-the-contacts-contentprovider"></a>Uso de ContentProvider de contactos
 
@@ -108,7 +108,7 @@ var cursor = (ICursor)loader.LoadInBackground();
 
 El `CursorLoader` garantiza que todas las operaciones de cursor se realizan en un subproceso en segundo plano y pueden inteligentemente volver a usar un cursor existente entre las instancias de actividad cuando una actividad se reinicia (por ejemplo, debido a un cambio de configuración) en su lugar que volver a cargar los datos de nuevo.
 
-También pueden usar las versiones anteriores de Android el `CursorLoader` clase utilizando el [v4 compatibilidad con bibliotecas](http://developer.android.com/tools/support-library/index.html).
+También pueden usar las versiones anteriores de Android el `CursorLoader` clase utilizando el [v4 compatibilidad con bibliotecas](https://developer.android.com/tools/support-library/index.html).
 
 
 

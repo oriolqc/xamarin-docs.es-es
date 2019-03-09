@@ -1,19 +1,14 @@
 ---
 title: Cómo usar Google Maps y la ubicación con Xamarin.Android
-description: En este artículo se explica cómo usar mapas y ubicación con Xamarin.Android. Abarca todo, desde el aprovechamiento de la aplicación como mapas integrados para usar la versión 2 asigna Android API de Google directamente.
+description: 'En este artículo se explica cómo usar mapas y ubicación con Xamarin.Android. Abarca todo, desde el aprovechamiento de la aplicación como mapas integrados para usar la versión 2 asigna Android API de Google directamente.'
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: fa7fff86e9a7e23bf332f2d62c3ec1a6ed3c54e1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117146"
 ---
+
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Cómo usar Google Maps y la ubicación con Xamarin.Android
 
 _En este artículo se explica cómo usar mapas y ubicación con Xamarin.Android. Abarca todo, desde el aprovechamiento de la aplicación como mapas integrados para usar la versión 2 asigna Android API de Google directamente._
@@ -35,5 +30,5 @@ En primer lugar, explica cómo aprovechar la aplicación de mapas integrados de 
 - [MapsAndLocationDemo_v3 (ejemplo)](https://developer.xamarin.com/samples/monodroid/MapsAndLocationDemo_v3/)
 - [Ciclo de vida de la actividad](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Obtención de una clave de la API de Google Maps](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
-- [Lista de calidades: Invocar las aplicaciones de Google en dispositivos Android](http://developer.android.com/guide/appendix/g-app-intents.html)
-- [Ubicación y mapas](http://developer.android.com/guide/topics/location/index.html)
+- [Lista de las intenciones: Invocar las aplicaciones de Google en dispositivos Android](https://developer.android.com/guide/appendix/g-app-intents.html)
+- [Ubicación y mapas](https://developer.android.com/guide/topics/location/index.html)

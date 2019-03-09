@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 0df39dc51cf17e1b9ecfd2279d047020f0237cb6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1195685db9e85e7fba006272ef300e22d47d1fa6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123099"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666401"
 ---
 # <a name="using-native-libraries"></a>Uso de bibliotecas nativas
 
@@ -40,7 +40,7 @@ Como alternativa, puede editar el archivo de proyecto para especificar explícit
 </ItemGroup>
 ```
 
-Para obtener más información sobre el uso de bibliotecas nativas, consulte [interoperabilidad con las bibliotecas nativas](http://www.mono-project.com/docs/advanced/pinvoke/).
+Para obtener más información sobre el uso de bibliotecas nativas, consulte [interoperabilidad con las bibliotecas nativas](https://www.mono-project.com/docs/advanced/pinvoke/).
 
 ## <a name="debugging-native-code-with-visual-studio-2017"></a>Depurar código nativo con Visual Studio 2017
 
@@ -59,5 +59,5 @@ Los desarrolladores de Visual Studio C++ pueden ver el [SanAngeles_NativeDebug](
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SanAngeles_NativeDebug (ejemplo)](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
+- [SanAngeles_NativeDebug (sample)](https://developer.xamarin.com/samples/monodroid/SanAngeles_NDK/)
 - [Desarrollo de aplicaciones nativas de Xamarin Android](https://blogs.msdn.microsoft.com/vcblog/2015/02/23/developing-xamarin-android-native-applications/)

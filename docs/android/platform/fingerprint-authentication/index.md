@@ -1,20 +1,15 @@
 ---
-title: Autenticación con huella digital
-description: Esta guía describe cómo agregar autenticación con huella digital, introducida en Android 6.0 a una aplicación de Xamarin.Android.
+title: Autenticación de huella digital
+description: 'Esta guía describe cómo agregar autenticación con huella digital, introducida en Android 6.0 a una aplicación de Xamarin.Android.'
 ms.prod: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: cdb18cd916ddd5daab7db9839bb15ebb098d0c09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123321"
 ---
-# <a name="fingerprint-authentication"></a>Autenticación con huella digital
+
+# <a name="fingerprint-authentication"></a>Autenticación de huella digital
 
 _Esta guía describe cómo agregar autenticación con huella digital, introducida en Android 6.0 a una aplicación de Xamarin.Android._
 
@@ -25,7 +20,7 @@ La llegada de los escáneres de huellas digitales en dispositivos Android propor
 
 Las APIs FingerprintManager dispositivos de destino con un escáner de huella digital y se ejecutan a nivel de API 23 (Android 6.0) o superior. Las API se encuentran en el `Android.Hardware.Fingerprints` espacio de nombres. V4 de la biblioteca de compatibilidad de Android proporciona versiones de la huella digital API diseñadas para versiones anteriores de Android. La compatibilidad de API se encuentran en el `Android.Support.v4.Hardware.Fingerprint` espacio de nombres, se distribuyen a través de la [paquete NuGet Xamarin.Android.Support.v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
 
-El [FingerprintManager](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (y su equivalente de la biblioteca de compatibilidad, [FingerprintManagerCompat](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) es la clase principal para el uso de la huella digital del examen de hardware. Esta clase es un contenedor de Android SDK del servicio de nivel de sistema que administra las interacciones con el propio hardware. Es responsable de iniciar el escáner de huellas digitales y para responder a los comentarios del escáner. Esta clase tiene una interfaz de un proceso bastante sencillo con solo tres miembros:
+El [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (y su equivalente de la biblioteca de compatibilidad, [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) es la clase principal para el uso de la huella digital del examen de hardware. Esta clase es un contenedor de Android SDK del servicio de nivel de sistema que administra las interacciones con el propio hardware. Es responsable de iniciar el escáner de huellas digitales y para responder a los comentarios del escáner. Esta clase tiene una interfaz de un proceso bastante sencillo con solo tres miembros:
 
 * **`Authenticate`** &ndash; Este método se inicialice el analizador de hardware e iniciar el servicio en segundo plano, espera a que el usuario digitalizarán su huella digital.
 * **`EnrolledFingerprints`** &ndash; Esta propiedad devolverá `true` si el usuario ha registrado una o varias huellas digitales con el dispositivo.
@@ -61,8 +56,8 @@ Una huella digital ya debe estar inscritos con el dispositivo para cada usuario 
 
 - [Aplicación de ejemplo de guía de huellas digitales](https://developer.xamarin.com/samples/monodroid/FingerprintGuide/)
 - [Ejemplo de cuadro de diálogo de huellas digitales](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/)
-- [Solicitar permisos en tiempo de ejecución](http://developer.android.com/training/permissions/requesting.html)
-- [android.hardware.fingerprint](http://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
-- [android.support.v4.hardware.fingerprint](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)
+- [Solicitar permisos en tiempo de ejecución](https://developer.android.com/training/permissions/requesting.html)
+- [android.hardware.fingerprint](https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
+- [android.support.v4.hardware.fingerprint](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)
 - [Android.Content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
 - [API de huellas digitales y pagos (vídeo)](https://youtu.be/VOn7VrTRlA4)

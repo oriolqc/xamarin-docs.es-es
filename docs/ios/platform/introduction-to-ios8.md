@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: 8e95e674f52cb23be769473e27dc8eb785a77820
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9299322eb20561444262c2b2ba87191d2bddcde4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116048"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668756"
 ---
 # <a name="introduction-to-ios-8"></a>Introducción a iOS 8
 
@@ -151,9 +151,9 @@ Para obtener más información, consulte nuestra [SpriteKit](~/ios/platform/gami
 ## <a name="other-changes"></a>Otros cambios
 Así como los cambios más importantes en iOS 8 que se han descrito anteriormente, Apple ha actualizado además muchos marcos de trabajo existentes. Se detallan a continuación:
 
-- **[Principales imagen](https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImagingRef/index.html#//apple_ref/doc/uid/TP40001171)**  : Apple ha ampliado en su marco de procesamiento de imagen mediante la adición de una mejor compatibilidad para la detección de regiones rectangulares, y los códigos QR dentro de las imágenes. Mike Bluestein ahonda en su blog titulada post [detección de imágenes en iOS 8](http://blog.xamarin.com/image-detection-in-ios-8/)
+- **[Principales imagen](https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImagingRef/index.html#//apple_ref/doc/uid/TP40001171)**  : Apple ha ampliado en su marco de procesamiento de imagen mediante la adición de una mejor compatibilidad para la detección de regiones rectangulares, y los códigos QR dentro de las imágenes. Mike Bluestein ahonda en su blog titulada post [detección de imágenes en iOS 8](https://blog.xamarin.com/image-detection-in-ios-8/)
 
-## <a name="deprecated-apis"></a>Interfaces API en desuso
+## <a name="deprecated-apis"></a>Interfaces API desusadas
 Con todas las mejoras realizadas en iOS 8, han en varias API en desuso. A continuación se detallan algunas de ellas.
 
 - **[UIApplication](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/cl/UIApplication)**  : los métodos y propiedades que se usa para registrar las notificaciones remotas han en desuso. Estos son registerForRemoteNotificationTypes y enabledRemoteNotificationTypes.

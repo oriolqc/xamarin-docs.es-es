@@ -6,18 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: f13b716e6ead8db8e0adafd180790c67bb82a6bc
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112044"
 ---
+
 # <a name="android-wear-controls"></a>Controles de Android Wear
 
 Android Wear las aplicaciones pueden usar muchos de los mismos controles ya en uso para aplicaciones de Android normales, incluido `Button`, `TextView`y recursos drawable la imagen. Controles de diseño incluidos `ScrollView`, `LinearLayout`, y `RelativateLayout` también se puede usar.
 
-Esta página contiene vínculos a los controles de Android Wear-específico desde el [portátiles biblioteca de interfaz de usuario](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary) disponibles en proyectos de Xamarin a través de la [compatibilidad con ponibles](http://www.nuget.org/packages/Xamarin.Android.Wear/) paquete NuGet. Estos controles incluyen lo siguiente:
+Esta página contiene vínculos a los controles de Android Wear-específico desde el [portátiles biblioteca de interfaz de usuario](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary) disponibles en proyectos de Xamarin a través de la [compatibilidad con ponibles](https://www.nuget.org/packages/Xamarin.Android.Wear/) paquete NuGet. Estos controles incluyen lo siguiente:
 
 -   **FilterUserControl** &ndash; crear una interfaz de navegación bidimensional donde el usuario desplaza hacia abajo, a continuación, en para realizar una selección (para obtener más información, consulte [FilterUserControl](~/android/wear/user-interface/controls/gridviewpager.md)):
 

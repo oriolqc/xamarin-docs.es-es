@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: ccf5d97ff553fd304c4a3af158085d490bb665b7
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: b2f11bd09e1b1b3fd7af29a026229494a081ad11
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267604"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668561"
 ---
 # <a name="troubleshooting-tips"></a>Sugerencias para la solución de problemas
 
@@ -77,7 +77,7 @@ Visual Studio para Mac siempre escribe registros de implementación del disposit
 ## <a name="android-debug-log-output"></a>Salida del registro de depuración de Android
 
 Android escribirá muchos mensajes a la [registro de depuración de Android](~/android/deploy-test/debugging/android-debug-log.md).
-Xamarin.Android usa las propiedades del sistema de Android para controlar la generación de mensajes adicionales en el registro de depuración de Android. Se pueden establecer las propiedades del sistema Android a través de la *setprop* comando dentro de la [Android Debug Bridge (adb)](http://developer.android.com/guide/developing/tools/adb.html):
+Xamarin.Android usa las propiedades del sistema de Android para controlar la generación de mensajes adicionales en el registro de depuración de Android. Se pueden establecer las propiedades del sistema Android a través de la *setprop* comando dentro de la [Android Debug Bridge (adb)](https://developer.android.com/guide/developing/tools/adb.html):
 
 ```shell
 adb shell setprop PROPERTY_NAME PROPERTY_VALUE
@@ -91,28 +91,28 @@ Propiedades del sistema se leen durante el inicio del proceso y, por tanto, debe
 
 Xamarin.Android admite las siguientes propiedades del sistema:
 
--   *Debug.mono.Debug*: Si una cadena no vacía, esto es equivalente a `*mono-debug*`.
+-   *debug.mono.debug*: Si una cadena no vacía, esto es equivalente a `*mono-debug*`.
 
--   *Debug.mono.env*: Separados por una barra vertical ('*|*') lista de variables de entorno para exportar durante el inicio de la aplicación, *antes* mono se ha inicializado. Esto permite establecer variables de entorno en el registro de mono de ese control.
+-   *debug.mono.env*: Separados por una barra vertical ('*|*') lista de variables de entorno para exportar durante el inicio de la aplicación, *antes* mono se ha inicializado. Esto permite establecer variables de entorno en el registro de mono de ese control.
 
-    - *Tenga en cuenta*: Puesto que el valor es '*|*'-separados, el valor debe tener un nivel extra de citas, como el \` *shell de adb* \` comando quitará un conjunto de comillas.
+    - *Nota*: Puesto que el valor es '*|*'-separados, el valor debe tener un nivel extra de citas, como el \` *shell de adb* \` comando quitará un conjunto de comillas.
 
-    - *Tenga en cuenta*: Los valores de propiedad del sistema de Android no pueden tener más de 92 caracteres de longitud.
+    - *Nota*: Los valores de propiedad del sistema de Android no pueden tener más de 92 caracteres de longitud.
 
     - Ejemplo:
 
             adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
 
--   *Debug.mono.log*: Separados por comas ('*,*') lista de componentes que se deben imprimir los mensajes adicionales en el registro de depuración de Android. De forma predeterminada, se establece nada. Los componentes incluyen:
+-   *debug.mono.log*: Separados por comas ('*,*') lista de componentes que se deben imprimir los mensajes adicionales en el registro de depuración de Android. De forma predeterminada, se establece nada. Los componentes incluyen:
 
-    -   *todos los*: Imprimir todos los mensajes
-    -   *GC*: Imprimir los mensajes relacionados con el catálogo global.
+    -   *all*: Imprimir todos los mensajes
+    -   *gc*: Imprimir los mensajes relacionados con el catálogo global.
     -   *gref*: Imprimir los mensajes de asignación y desasignación de referencia (débil, global).
     -   *lref*: Imprimir los mensajes de asignación y desasignación de referencia local.
 
     *Tenga en cuenta*: se trata de *extremadamente* detallado. No habilite a menos que necesite realmente.
 
--   *Debug.mono.Trace*: Permite establecer el [mono--trace](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` configuración.
+-   *debug.mono.trace*: Permite establecer el [mono--trace](http://docs.go-mono.com/?link=man%3amono(1)) `=PROPERTY_VALUE` configuración.
 
 
 

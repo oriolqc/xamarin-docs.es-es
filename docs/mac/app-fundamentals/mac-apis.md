@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/02/2017
-ms.openlocfilehash: 209ce2b5fb2fbb357f23e6ccc9bb849fbfedc81d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c387bbead1ac56d7f4c4c05a79c430302e50aec1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115658"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668288"
 ---
 # <a name="macos-apis-for-xamarinmac-developers"></a>macOS, las API para desarrolladores de Xamarin.Mac
 
@@ -68,7 +68,7 @@ Ahora que ha descubierto el selector de Objective-C que se debe invocar, el sigu
 
 3. Puede usar el [documentación en línea de API de Xamarin.Mac](https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0) .
 
-4. Miguel proporciona una vista de "Rosetta piedra" de las APIs Xamarin.Mac [aquí](http://tirania.org/tmp/rosetta.html) que puede buscar a través de una API determinada. Si la API no es AppKit o específicas de macOS, es posible no existe.
+4. Miguel proporciona una vista de "Rosetta piedra" de las APIs Xamarin.Mac [aquí](https://tirania.org/tmp/rosetta.html) que puede buscar a través de una API determinada. Si la API no es AppKit o específicas de macOS, es posible no existe.
 
 <!--
 Note: In some cases, the assembly browser can hit a bug where it will open but not jump to the right definition. Keep that tab open, switch back to your source code and try again.

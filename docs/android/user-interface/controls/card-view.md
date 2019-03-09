@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 019d89261687d1139ebced9400afbdf5eaf7a128
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: cdb75207bff3f15a54d0cdd90fa0833da9c145e6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109203"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670654"
 ---
 # <a name="cardview"></a>CardView
 
@@ -37,7 +37,7 @@ Se requiere lo siguiente para usar nuevo Android 5.0 y versiones posteriores car
 
 -  **SDK de Android** &ndash; Android 5.0 (API 21) o posterior debe estar instalado a través de Android SDK Manager.
 
--  **Java JDK 1.8** &ndash; JDK 1.7 puede usarse si se está específicamente dirigidos a API nivel 23 y versiones anteriores. Está disponible en JDK 1.8 [Oracle](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+-  **Java JDK 1.8** &ndash; JDK 1.7 puede usarse si se está específicamente dirigidos a API nivel 23 y versiones anteriores. Está disponible en JDK 1.8 [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 La aplicación también debe incluir el `Xamarin.Android.Support.v7.CardView` paquete. Para agregar el `Xamarin.Android.Support.v7.CardView` paquetes en Visual Studio para Mac:
 
@@ -56,7 +56,7 @@ Para agregar el `Xamarin.Android.Support.v7.CardView` paquetes en Visual Studio:
 3. Cuando **Xamarin Support Library v7 CardView** aparece, haga clic en **instalar**.
 
 Para obtener información sobre cómo configurar un proyecto de aplicación de Android 5.0, consulte [configuración de un proyecto de Android 5.0](~/android/platform/lollipop.md).
-Para obtener más información acerca de cómo instalar paquetes de NuGet, consulte [Tutorial: incluidos unos NuGet en el proyecto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
+Para obtener más información acerca de cómo instalar paquetes de NuGet, consulte [Tutorial: Incluir NuGet en el proyecto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
 
 ## <a name="introducing-cardview"></a>Introducción a CardView

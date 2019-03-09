@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/07/2018
-ms.openlocfilehash: d8ee5f867c9a4d724c54c14b5afdd005f1b805d3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f3d0394f6b2388918f728bd5a25e9e809a832ca6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115775"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670979"
 ---
 # <a name="linearlayout"></a>LinearLayout
 
@@ -126,7 +126,7 @@ Ejecute la aplicación. Debería ver lo siguiente:
 
 [![Captura de pantalla de aplicación se organizan horizontalmente LinearLayout primer, segundo verticalmente](linear-layout-images/helloviews1.png)](linear-layout-images/helloviews1.png#lightbox)
 
-Observe cómo los atributos XML definen el comportamiento de la vista. Intente experimentar con valores diferentes para `android:layout_weight` ver cómo se distribuye el espacio en pantalla en función del peso de cada elemento. Consulte la [comunes de diseño de objetos](http://developer.android.com/guide/topics/ui/declaring-layout.html) documento para obtener más información acerca de cómo [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
+Observe cómo los atributos XML definen el comportamiento de la vista. Intente experimentar con valores diferentes para `android:layout_weight` ver cómo se distribuye el espacio en pantalla en función del peso de cada elemento. Consulte la [comunes de diseño de objetos](https://developer.android.com/guide/topics/ui/declaring-layout.html) documento para obtener más información acerca de cómo [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
 Controla el `android:layout_weight` atributo.
 
 

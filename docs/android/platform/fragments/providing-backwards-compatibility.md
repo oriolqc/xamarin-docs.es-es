@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/12/2017
-ms.openlocfilehash: 18dac665eec1c5d3ac64065c37e73022670c1ba5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 48ef40ce8560fd9fbb842dde70622d968591ab98
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108852"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666910"
 ---
 # <a name="providing-backwards-compatibility-with-the-android-support-package"></a>Con las versiones anteriores proporcionar compatibilidad con el paquete de compatibilidad con Android
 
-La utilidad de fragmentos sería limitados sin compatibilidad con Android dispositivos (API nivel 11) 3.0 con versiones anteriores. Para proporcionar esta funcionalidad, Google introdujo el [Support Library](http://developer.android.com/sdk/compatibility-library.html) (llamado originalmente el *Android Compatibility Library* cuando se lanzó) qué backports algunas de las API desde las versiones más recientes de Android a versiones anteriores de Android. Es el paquete de soporte técnico de Android que permite a los dispositivos que ejecutan Android 1.6 (API nivel 4) para Android 2.3.3. (Nivel de API 10).
+La utilidad de fragmentos sería limitados sin compatibilidad con Android dispositivos (API nivel 11) 3.0 con versiones anteriores. Para proporcionar esta funcionalidad, Google introdujo el [Support Library](https://developer.android.com/sdk/compatibility-library.html) (llamado originalmente el *Android Compatibility Library* cuando se lanzó) qué backports algunas de las API desde las versiones más recientes de Android a versiones anteriores de Android. Es el paquete de soporte técnico de Android que permite a los dispositivos que ejecutan Android 1.6 (API nivel 4) para Android 2.3.3. (Nivel de API 10).
 
 > [!NOTE]
 > Solo el `ListFragment` y `DialogFragment` están disponibles a través del paquete de compatibilidad con Android. Ninguno de los demás fragmentos subclases, tales como el `PreferenceFragment,` se admiten en el paquete de compatibilidad con Android. No funcionará en las aplicaciones Android 3.0. 

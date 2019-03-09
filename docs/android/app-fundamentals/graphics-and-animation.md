@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: c49b8855bccaf2eca825096746769d7f201736c5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7f4f7fd3af1e90307a84037f01ddf8e52b1ee030
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116893"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669055"
 ---
 # <a name="graphics-and-animation"></a>Gráficos y animación
 
@@ -25,7 +25,7 @@ A pesar de que se ejecutan en dispositivos que son tradicionalmente de energía 
 
 Por suerte para nosotros, modernas plataformas móviles tienen marcos muy eficaces para la creación de animaciones sofisticadas y gráficos personalizados conservando la facilidad de uso. Esto permite a los desarrolladores agregar interactividad con muy poco esfuerzo.
 
-Marcos de la API de la interfaz de usuario de Android más o menos se pueden dividir en dos categorías: gráficos y animación.
+Marcos de la API de la interfaz de usuario de Android más o menos se pueden dividir en dos categorías: Gráficos y animación.
 
 Gráficos más se dividen en diferentes enfoques para realizar gráficos 2D y 3D. Gráficos 3D están disponibles a través de un número de marcos como OpenGL ES (una versión específica móvil de OpenGL) y marcos de terceros como MonoGame (un multiplataforma Kit de herramientas compatible con el Kit de herramientas XNA) integrados. Aunque los gráficos 3D no están dentro del ámbito de este artículo, examinaremos las técnicas de dibujos 2D integradas.
 
@@ -57,7 +57,7 @@ Además, algunos tipos de interacción pueden producirse sin capacidades de audi
 
 Las aplicaciones son más fáciles de utilizar en estas situaciones, si se han diseñado teniendo en mente la accesibilidad: proporcionar sugerencias y asistencia de navegación de la interfaz de usuario y asegurarse de que no hay contenido de texto o descripciones de los elementos visuales de la interfaz de usuario.
 
-Consulte [Guía de accesibilidad de Google](http://developer.android.com/guide/topics/ui/accessibility/) para obtener más información sobre cómo usar la API de accesibilidad de Android.
+Consulte [Guía de accesibilidad de Google](https://developer.android.com/guide/topics/ui/accessibility/) para obtener más información sobre cómo usar la API de accesibilidad de Android.
 
 
 
@@ -76,23 +76,23 @@ Recursos drawable se definen en un archivo XML en el directorio `/Resources/draw
 En tiempo de ejecución, una aplicación de Android cargará estos recursos y usar las instrucciones incluidas en estos archivos XML para crear gráficos en 2D.
 Android define varios tipos diferentes de recursos Drawable:
 
--   [ShapeDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) &ndash; se trata de un objeto Drawable que dibuja una forma geométrica primitiva y se aplica un conjunto limitado de efectos gráficos de esa forma. Son muy útiles para cosas como personalizar los botones o establecer el fondo de objetos TextView. Vemos un ejemplo de cómo usar un `ShapeDrawable` más adelante en este artículo.
+-   [ShapeDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape) &ndash; se trata de un objeto Drawable que dibuja una forma geométrica primitiva y se aplica un conjunto limitado de efectos gráficos de esa forma. Son muy útiles para cosas como personalizar los botones o establecer el fondo de objetos TextView. Vemos un ejemplo de cómo usar un `ShapeDrawable` más adelante en este artículo.
 
--   [StateListDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#StateList) &ndash; es un recurso Drawable que cambiarán en función del estado de un control de widget de apariencia. Por ejemplo, un botón puede cambiar su apariencia dependiendo de si está presionado o no.
+-   [StateListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#StateList) &ndash; es un recurso Drawable que cambiarán en función del estado de un control de widget de apariencia. Por ejemplo, un botón puede cambiar su apariencia dependiendo de si está presionado o no.
 
--   [LayerDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) &ndash; este recurso Drawable que se apilarán varios otro recursos drawable uno sobre otro. Un ejemplo de un *LayerDrawable* se muestra en la captura de pantalla siguiente:
+-   [LayerDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) &ndash; este recurso Drawable que se apilarán varios otro recursos drawable uno sobre otro. Un ejemplo de un *LayerDrawable* se muestra en la captura de pantalla siguiente:
 
     ![Ejemplo de LayerDrawable](graphics-and-animation-images/image1.png)
 
--   [TransitionDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Transition) &ndash; se trata de un *LayerDrawable* pero con una diferencia. Un *TransitionDrawable* puede animar una capa que aparecen encima de otro.
+-   [TransitionDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Transition) &ndash; se trata de un *LayerDrawable* pero con una diferencia. Un *TransitionDrawable* puede animar una capa que aparecen encima de otro.
 
--   [LevelListDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) &ndash; esto es muy similar a un *StateListDrawable* en que se mostrará una imagen basada en determinadas condiciones. Sin embargo, a diferencia de un *StateListDrawable*, *LevelListDrawable* muestra una imagen basada en un valor entero. Un ejemplo de un *LevelListDrawable* sería mostrar la fortaleza de una señal de Wi-Fi. Como la fuerza de los cambios de la señal de Wi-Fi, puede dibujar que se muestra cambiará en consecuencia.
+-   [LevelListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList) &ndash; esto es muy similar a un *StateListDrawable* en que se mostrará una imagen basada en determinadas condiciones. Sin embargo, a diferencia de un *StateListDrawable*, *LevelListDrawable* muestra una imagen basada en un valor entero. Un ejemplo de un *LevelListDrawable* sería mostrar la fortaleza de una señal de Wi-Fi. Como la fuerza de los cambios de la señal de Wi-Fi, puede dibujar que se muestra cambiará en consecuencia.
 
--   [ScaleDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; como su nombre implica, estos recursos Drawable proporciona escalado y la funcionalidad de recorte. El *ScaleDrawable* escalará otro Drawable, mientras el *ClipDrawable* ajustará Drawable otro.
+-   [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip) &ndash; como su nombre implica, estos recursos Drawable proporciona escalado y la funcionalidad de recorte. El *ScaleDrawable* escalará otro Drawable, mientras el *ClipDrawable* ajustará Drawable otro.
 
--   [InsetDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; Drawable esta se aplicará márgenes en los lados de otro recurso Drawable. Se usa cuando una vista tiene un fondo que es menor que los límites de la vista reales.
+-   [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset) &ndash; Drawable esta se aplicará márgenes en los lados de otro recurso Drawable. Se usa cuando una vista tiene un fondo que es menor que los límites de la vista reales.
 
--   XML [BitmapDrawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap) &ndash; este archivo es un conjunto de instrucciones en XML, que se van a realizar en un mapa de bits real. Algunas acciones que puede llevar a cabo Android son tramado, segmentación y suavizado de contorno. Uno de los usos muy común de esto es un mapa de bits en el fondo de un diseño en mosaico.
+-   XML [BitmapDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap) &ndash; este archivo es un conjunto de instrucciones en XML, que se van a realizar en un mapa de bits real. Algunas acciones que puede llevar a cabo Android son tramado, segmentación y suavizado de contorno. Uno de los usos muy común de esto es un mapa de bits en el fondo de un diseño en mosaico.
 
 
 #### <a name="drawable-example"></a>Ejemplo drawable
@@ -148,7 +148,7 @@ Para ver lo que esto tendría el siguiente aspecto, ejecute el *AnimationsDemo* 
 
 ![Vista de texto con un fondo personalizado, puede dibujar con un degradado y las esquinas redondeadas](graphics-and-animation-images/image1.png)
 
-Para obtener más información acerca de los elementos XML y la sintaxis de recursos Drawable, consulte [documentación de Google](http://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
+Para obtener más información acerca de los elementos XML y la sintaxis de recursos Drawable, consulte [documentación de Google](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
 
 
 ### <a name="using-the-canvas-drawing-api"></a>Mediante la API de dibujo de lienzo
@@ -443,7 +443,7 @@ Este artículo presenta una gran cantidad de nuevos conceptos y API que ayudará
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Demostración de animación (ejemplo)](https://developer.xamarin.com/samples/monodroid/AnimationDemo)
-- [Gráficos y animación](http://developer.android.com/guide/topics/graphics/index.html)
+- [Gráficos y animación](https://developer.android.com/guide/topics/graphics/index.html)
 - [Usar animaciones para que sus aplicaciones móviles cobren vida](http://youtu.be/ikSk_ILg3d0)
 - [AnimationDrawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.AnimationDrawable/)
 - [Canvas](https://developer.xamarin.com/api/type/Android.Graphics.Canvas/)

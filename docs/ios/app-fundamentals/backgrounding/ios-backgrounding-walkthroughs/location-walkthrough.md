@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 0d6dac02ac82b74c9b0e33f5fff0b82223df1f47
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b857ee97951f0abfdf8e082ca9a826d5580d24ab
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108683"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669198"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Tutorial: ubicación en segundo plano en Xamarin.iOS
 
@@ -103,7 +103,7 @@ En este tutorial se explica alguna clave procesamiento en segundo plano de los c
 
     Hay varios aspectos importantes que ocurre en este método. En primer lugar, realizamos una comprobación para ver si la aplicación tiene acceso a datos de ubicación en el dispositivo. Comprobarlo mediante una llamada a `LocationServicesEnabled` en el `CLLocationManager`. Este método devolverá **false** si el usuario ha denegado el acceso a información de ubicación de la aplicación.
 
-1. A continuación, indique la frecuencia con el Administrador de ubicación para actualizar. `CLLocationManager` proporciona muchas opciones para filtrar y cómo configurar datos de ubicación, incluida la frecuencia de las actualizaciones. En este ejemplo, establezca el `DesiredAccuracy` para actualizar cada vez que cambia la ubicación mediante un medidor. Para obtener más información sobre cómo configurar la frecuencia de actualización de la ubicación y otras preferencias, consulte el [referencia de clase CLLocationManager](http://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) en la documentación de Apple.
+1. A continuación, indique la frecuencia con el Administrador de ubicación para actualizar. `CLLocationManager` proporciona muchas opciones para filtrar y cómo configurar datos de ubicación, incluida la frecuencia de las actualizaciones. En este ejemplo, establezca el `DesiredAccuracy` para actualizar cada vez que cambia la ubicación mediante un medidor. Para obtener más información sobre cómo configurar la frecuencia de actualización de la ubicación y otras preferencias, consulte el [referencia de clase CLLocationManager](https://developer.apple.com/library/ios/#documentation/CoreLocation/Reference/CLLocationManager_Class/CLLocationManager/CLLocationManager.html) en la documentación de Apple.
 
 1. Por último, llame a `StartUpdatingLocation` en el `CLLocationManager` instancia. Esto indica al administrador de ubicación para obtener una corrección inicial en la ubicación actual y a empezar a enviar las actualizaciones
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 2fa554264578ec626567ef7d28377ac80bde21d3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 2b3ba0a0cf31ae2c2d631da8b595390c973957d6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060179"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670686"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Crear interfaces de usuario de iOS en código de Xamarin.iOS
 
@@ -20,7 +20,7 @@ La interfaz de usuario de una aplicación de iOS es como un escaparate: la aplic
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-En el diagrama siguiente se muestran las relaciones entre la ventana, las vistas, las subvistas y el controlador de vistas que, de forma conjunta, proporcionan la interfaz de usuario a la pantalla del dispositivo: 
+En el diagrama siguiente se muestran las relaciones entre la ventana, las vistas, las subvistas y el controlador de vistas que, de forma conjunta, proporcionan la interfaz de usuario a la pantalla del dispositivo:
 
 [![](ios-code-only-images/image9.png "Este diagrama ilustra las relaciones entre la ventana, vistas, las subvistas y controlador de vista")](ios-code-only-images/image9.png#lightbox)
 
@@ -28,7 +28,7 @@ Estas jerarquías de vista pueden crearse mediante el [diseñador Xamarin para i
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-En el diagrama siguiente se muestran las relaciones entre la ventana, las vistas, las subvistas y el controlador de vistas que, de forma conjunta, proporcionan la interfaz de usuario a la pantalla del dispositivo: 
+En el diagrama siguiente se muestran las relaciones entre la ventana, las vistas, las subvistas y el controlador de vistas que, de forma conjunta, proporcionan la interfaz de usuario a la pantalla del dispositivo:
 
 [![](ios-code-only-images/image9.png "Este diagrama ilustra las relaciones entre la ventana, vistas, las subvistas y controlador de vista")](ios-code-only-images/image9.png#lightbox)
 
@@ -65,9 +65,9 @@ La plantilla proyecto vacío agrega 4 archivos al proyecto:
 ## <a name="ios-templates"></a>plantillas de iOS
 
 
-Visual Studio para Mac no proporciona una plantilla vacía. Todas las plantillas incluyen compatibilidad con guiones gráficos, que Apple recomienda como medio principal para crear una interfaz de usuario. Sin embargo, es posible crear la interfaz de usuario completamente en código. 
+Visual Studio para Mac no proporciona una plantilla vacía. Todas las plantillas incluyen compatibilidad con guiones gráficos, que Apple recomienda como medio principal para crear una interfaz de usuario. Sin embargo, es posible crear la interfaz de usuario completamente en código.
 
-Los pasos siguientes le guiarán en el proceso de quitar el guión gráfico de una aplicación: 
+Los pasos siguientes le guiarán en el proceso de quitar el guión gráfico de una aplicación:
 
 
 1. Use la plantilla de aplicación de vista única para crear un nuevo proyecto de iOS:
@@ -291,7 +291,7 @@ Window.RootViewController = navController;
 Ahora cuando cargue la aplicación, el `CustomViewController` se carga dentro de un controlador de navegación:
 
  [![](ios-code-only-images/customvc.png "Se carga el CustomViewController dentro de un controlador de navegación")](ios-code-only-images/customvc.png#lightbox)
- 
+
 Al hacer clic en el botón, le _inserción_ un nuevo controlador de vista en la pila de navegación:
 
 [![](ios-code-only-images/customvca.png "Inserta un nuevo controlador de vista en la pila de navegación")](ios-code-only-images/customvca.png#lightbox)
@@ -306,7 +306,7 @@ Por ejemplo, vamos a editar el `CustomViewController` para crear una pantalla de
 
 ### <a name="adding-the-text-fields"></a>Agregar los campos de texto
 
-En primer lugar, quite el controlador de botón y eventos que se agregó en el [inicializar la vista](#Initializing_the_View) sección. 
+En primer lugar, quite el controlador de botón y eventos que se agregó en el [inicializar la vista](#initializing-the-view) sección. 
 
 Agregar un control para el nombre de usuario, crear e inicializar un `UITextField` y, a continuación, agregarlo a la jerarquía de vistas, tal como se muestra a continuación:
 
@@ -359,7 +359,7 @@ public class CustomViewController : UIViewController
             SecureTextEntry = true
         };
 
-      View.AddSubview(usernameField); 
+      View.AddSubview(usernameField);
       View.AddSubview(passwordField);
    }
 }
@@ -414,7 +414,7 @@ Con estos cambios, la vista tendrá este aspecto:
 iOS proporciona una utilidad para agregar varias vistas a la jerarquía de vistas con `AddSubviews`.
 
 ```csharp
-View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton }); 
+View.AddSubviews(new UIView[] { usernameField, passwordField, submitButton });
 ```
 
 ## <a name="adding-button-functionality"></a>Agregar la funcionalidad de botón
@@ -610,12 +610,12 @@ Para obtener más información sobre cómo crear una pantalla de inicio, consult
 
 ### <a name="creating-a-launch-image-for-pre-ios-8-applications"></a>Creación de una imagen de inicio para previa iOS 8 aplicaciones
 
-Si su aplicación tiene como destino las versiones anteriores a iOS 8, una imagen estática puede usarse además de un .xib o la pantalla de inicio del guión gráfico. 
+Si su aplicación tiene como destino las versiones anteriores a iOS 8, una imagen estática puede usarse además de un .xib o la pantalla de inicio del guión gráfico.
 
 Esta imagen estática se puede establecer en el archivo Info.plist, o como un catálogo de recursos (para iOS 7) en la aplicación. Deberá proporcionar imágenes independientes para cada tamaño de dispositivo (320 x 480, 960 x 640, 640 x 1136) que puede ejecutar su aplicación. Para obtener más información sobre los tamaños de pantalla de inicio, ver el [imágenes de pantalla de inicio](~/ios/app-fundamentals/images-icons/launch-screens.md) guía.
 
 > [!IMPORTANT]
-> Si la aplicación no tiene que ninguna pantalla de inicio, es posible que tenga en cuenta que no caben completamente la pantalla. Si este es el caso, debe asegurarse de que deben incluir, al menos, una imagen de 640 x 1136 denominada `Default-568@2x.png` al archivo Info.plist. 
+> Si la aplicación no tiene que ninguna pantalla de inicio, es posible que tenga en cuenta que no caben completamente la pantalla. Si este es el caso, debe asegurarse de que deben incluir, al menos, una imagen de 640 x 1136 denominada `Default-568@2x.png` al archivo Info.plist.
 
 ## <a name="summary"></a>Resumen
 

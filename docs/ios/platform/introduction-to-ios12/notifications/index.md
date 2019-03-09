@@ -6,13 +6,7 @@ ms.assetid: 137C719D-6D97-4D5B-9877-F6F35BF85FF0
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 9/4/2018
-ms.openlocfilehash: f4abc3c87a4c38da8863347fa08f198dece791a8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111708"
+ms.date: 09/04/2018
 ---
 # <a name="notifications-in-ios-12"></a>Notificaciones en iOS 12
 
@@ -20,7 +14,7 @@ ms.locfileid: "50111708"
 
 iOS 12 permite enviar las alertas críticas. Alertas críticas reproducción un sonido independientemente de si no molestar está habilitada o el conmutador de timbre está desactivada.
 
-## <a name="dynamic-notification-action-buttonsdynamic-actionsmd"></a>[Botones de acción de notificación dinámico](dynamic-actions.md)
+## <a name="dynamic-notification-action-buttonsdynamic-actionsmd"></a>[Botones de acción de notificaciones dinámicas](dynamic-actions.md)
 
 Con iOS 12, las notificaciones ahora pueden modificar sus botones de acción en tiempo de ejecución.
 Si lo hace, permite mostrar las acciones más relevantes para el contenido de la notificación y la interacción del usuario con él.
@@ -33,7 +27,7 @@ Con el fin de ayudar a los usuarios para administrar el número de notificacione
 
 En iOS 12, la interfaz de usuario personalizada de una notificación puede incluir controles interactivos.
 
-## <a name="notification-managementmanagementmd"></a>[Administración de notificación](management.md)
+## <a name="notification-managementmanagementmd"></a>[Administración de notificaciones](management.md)
 
 iOS 12 can vínculo profundo a la pantalla de administración de notificación de una aplicación, lo que facilita a los usuarios habilitar o deshabilitar determinados tipos de notificaciones.
 

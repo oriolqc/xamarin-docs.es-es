@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/17/2017
-ms.openlocfilehash: 83f9651fa7fd20709c620258833ae4a152ffd0eb
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.openlocfilehash: 5ccefdb5e527e67338714896905734c74278d00a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563672"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671888"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>Eventos, protocolos y delegados de Xamarin.iOS
 
@@ -64,7 +64,7 @@ Después de selecciona una ubicación, un método nuevo se crea y con cable de s
 
 [![](delegates-protocols-and-events-images/05-interface-builder-action-sml.png "Se escribirá un mensaje en la consola cuando se hace clic en el botón")](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
 
-Para obtener más detalles sobre el patrón de acción de destino iOS, consulte la sección de acción de destino de [las competencias de aplicación para iOS](http://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) en la biblioteca de desarrolladores de iOS de Apple.
+Para obtener más detalles sobre el patrón de acción de destino iOS, consulte la sección de acción de destino de [las competencias de aplicación para iOS](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) en la biblioteca de desarrolladores de iOS de Apple.
 
 Para obtener más información sobre cómo usar el Diseñador de iOS con Xamarin.iOS, consulte el [iOS Designer Overview](~/ios/user-interface/designer/index.md) documentación.
 
@@ -388,6 +388,6 @@ A continuación, hemos aprendido acerca de los protocolos de Objective-C, inclui
 - [Protocolos, delegados y eventos (ejemplo)](https://developer.xamarin.com/samples/Protocols_Delegates_Events/)
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
 - [Tipos de enlace de Objective-c.](~/ios/platform/binding-objective-c/index.md)
-- [El lenguaje de programación Objective-c.](http://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
-- [Diseño de Interfaces de usuario en Xcode 4](http://developer.apple.com/library/ios/#documentation/IDEs/Conceptual/Xcode4TransitionGuide/InterfaceBuilder/InterfaceBuilder.html)
-- [Competencias de aplicación para iOS](http://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)
+- [El lenguaje de programación Objective-c.](https://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)
+- [Diseño de Interfaces de usuario en Xcode 4](https://developer.apple.com/library/ios/#documentation/IDEs/Conceptual/Xcode4TransitionGuide/InterfaceBuilder/InterfaceBuilder.html)
+- [Competencias de aplicación para iOS](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html)

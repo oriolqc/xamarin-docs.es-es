@@ -6,12 +6,12 @@ ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
 author: lobrien
 ms.author: laobri
 ms.date: 07/19/2017
-ms.openlocfilehash: 5468495885e3af2afa2692ccad9191b669fa3328
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: f2db5f4acd57cbf887d9955d9ea61fce4427c1c3
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "37066512"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672409"
 ---
 # <a name="introduction-to-continuous-integration-with-xamarin"></a>Introducción a la integración continua con Xamarin
 
@@ -39,10 +39,6 @@ Aplicaciones móviles presentan desafíos únicos para la integración continua.
 El [App Center Test](https://docs.microsoft.com/appcenter/test-cloud) corrige este problema concreto al probar aplicaciones directamente en cientos de dispositivos físicos. Los desarrolladores escribir pruebas de aceptación automatizadas, que permiten realizar pruebas de interfaz de usuario eficaz. Una vez que estas pruebas se cargan en App Center, el servidor CI puede ejecutarlos automáticamente como parte de un proceso de CI como se muestra en el diagrama siguiente:
 
 [![](intro-to-ci-images/intro02-small.png "Una vez que estas pruebas se cargan en App Center, el servidor CI puede ejecutar automáticamente como parte de un proceso de CI como se muestra en este diagrama")](intro-to-ci-images/intro02.png#lightbox)
-
-# <a name="components-of-continuous-integration"></a>Componentes de integración continua
-
-Hay un extenso ecosistema de herramientas comerciales y de código abierto diseñado para admitir elementos de configuración. Esta sección explica algunas de las más comunes.
 
 ## <a name="version-control"></a>Control de versiones
 
@@ -92,8 +88,8 @@ Con Visual Studio Team Services, cree una definición de compilación independie
 
 Con Team Foundation Server, configure una máquina de compilación como sigue para plataformas de destino específico:
 
-- **Android y Windows:** instalar Visual Studio y Xamarin (para Android y Windows ambos) de las herramientas y configure con las licencias de Xamarin. También es necesario mover el SDK de Android en una ubicación compartida en el servidor de agente de compilación de TFS de donde pueda encontrarlo. Para obtener más información, consulte [configurar TFVC](https://docs.microsoft.com/azure/devops/repos/tfvc/overview).
-- **iOS y Xamarin:** instalar Visual Studio y las herramientas de Xamarin en el servidor de Windows con la licencia apropiada. A continuación, instale Visual Studio para Mac en un equipo Mac OS X accesible desde la red, que servirá como host de compilación y crear el paquete de aplicación final (IPA para iOS, la aplicación para OS X).
+- **Android y Windows:** Instale Visual Studio y las herramientas de Xamarin (para Android y Windows ambos) y configure con las licencias de Xamarin. También es necesario mover el SDK de Android en una ubicación compartida en el servidor de agente de compilación de TFS de donde pueda encontrarlo. Para obtener más información, consulte [configurar TFVC](https://docs.microsoft.com/azure/devops/repos/tfvc/overview).
+- **iOS y Xamarin:** Instale Visual Studio y las herramientas de Xamarin en el servidor de Windows con la licencia apropiada. A continuación, instale Visual Studio para Mac en un equipo Mac OS X accesible desde la red, que servirá como host de compilación y crear el paquete de aplicación final (IPA para iOS, la aplicación para OS X).
 
 El siguiente diagrama muestra esta topología:
 
@@ -115,7 +111,3 @@ Otro entorno común de CI puede ser completamente OS X que se basa. Este escenar
 
 > [!IMPORTANT]
 > **Jenkins es [no compatible con Microsoft](~/cross-platform/troubleshooting/questions/xamarin-jenkins.md).**
-
-# <a name="summary"></a>Resumen
-
-Este documento introdujo el concepto de la integración continua y las ventajas que aporta a los equipos de desarrollo de software. Se trató la importancia del control de versiones junto con los roles y responsabilidades del servidor de compilación. El documento después continúa a explicar algunas de las herramientas que se pueden usar para el control de código fuente y los servidores de compilación. También presentamos App Center Test, que permite a los desarrolladores publicar excelentes aplicaciones mediante la ejecución de pruebas automatizadas que resultarán la calidad y la funcionalidad de sus aplicaciones. Obtener información más detallada sobre el envío de aplicaciones y pruebas a App Center pueden encontrarse [aquí](https://docs.microsoft.com/appcenter/test-cloud). Por último, para ayudar a comprender cómo estas herramientas y los componentes funcionan conjuntamente, se describen varios entornos de CI diferentes que las organizaciones pueden establecer para la integración continua. Para obtener más información con proyectos de Xamarin en Visual Studio Team Services y Team Foundation Server, vea [configurar TFVC](https://docs.microsoft.com/azure/devops/repos/tfvc/overview/) y esto [introducción la integración continua](https://docs.microsoft.com/azure/devops/pipelines/get-started-designer/). Del mismo modo, si usa Jenkins, consulte [usando Jenkins con Xamarin](~/tools/ci/jenkins-walkthrough.md) para obtener información detallada sobre cómo configurar la integración continua.

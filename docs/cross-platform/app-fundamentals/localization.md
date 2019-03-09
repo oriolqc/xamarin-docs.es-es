@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 85e4e98cfbc96936c19642a200885b54cf745aa4
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 4799d6aaa095127e242c5e0750db686519d0c21d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617519"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670797"
 ---
 # <a name="localization"></a>Localización
 
@@ -111,7 +111,7 @@ Si los datos se está pasando por el usuario de la aplicación, analizarlo media
 double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 ```
 
-Consulte la [analizar cadenas numéricas](http://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) y [analizar cadenas de fecha y hora](http://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) artículos de MSDN para obtener más información.
+Consulte la [analizar cadenas numéricas](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) y [analizar cadenas de fecha y hora](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) artículos de MSDN para obtener más información.
 
 <a name="rtl" />
 
@@ -131,7 +131,7 @@ IOS y Android admiten diseños de derecha a izquierda y la representación de fu
 
 Idiomas diferentes definen el criterio de ordenación de sus alfabetos de forma diferente, incluso cuando usan el mismo juego de caracteres.
 
-Consulte la [detalle de comparación de cadenas](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) en [prácticas recomendadas para el uso de cadenas en .NET Framework](http://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) para obtener un ejemplo donde el criterio de ordenación afecta a la lenguaje (CultureInfo).
+Consulte la [detalle de comparación de cadenas](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx#the_details_of_string_comparison) en [prácticas recomendadas para el uso de cadenas en .NET Framework](https://msdn.microsoft.com/library/dd465121(v=vs.110).aspx) para obtener un ejemplo donde el criterio de ordenación afecta a la lenguaje (CultureInfo).
 
 No es probable que las capacidades de base de datos integradas en las plataformas móviles admitirán a específico del lenguaje orden por lo que es pueden que deba implementar código adicional en la lógica de negocios.
 
@@ -284,7 +284,7 @@ Para crear características de traducción en su aplicación, tenga en cuenta la
 Con fines de prueba podría utilizar una de las muchas herramientas de traducción en línea para incluir algún texto localizado en la aplicación durante el desarrollo:
 
 - [Traductor de Bing](https://www.bing.com/translator/)
-- [Traducir de Google](http://translate.google.com/)
+- [Google Translate](http://translate.google.com/)
 
 Hay muchos otros disponibles. La calidad de la traducción automática por lo general no se considera bastante buena como para publicar una aplicación sin que primero se revisado y probado por traductores profesionales o hablantes nativos.
 
@@ -312,5 +312,5 @@ Continúe leyendo los detalles técnicos para la plataforma que le interese:
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Información general de localización de Apple](https://developer.apple.com/internationalization/)
-- [Lista de comprobación de localización de Android](http://developer.android.com/distribute/tools/localization-checklist.html)
-- [Prácticas recomendadas para desarrollar aplicaciones internacionalizadas (MSDN)](http://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)
+- [Lista de comprobación de localización de Android](https://developer.android.com/distribute/tools/localization-checklist.html)
+- [Prácticas recomendadas para desarrollar aplicaciones internacionalizadas (MSDN)](https://msdn.microsoft.com/library/w7x1y988%28v=vs.90%29.aspx)

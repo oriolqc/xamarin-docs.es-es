@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Enlazar a una biblioteca de Objective-C de iOS'
+title: 'Tutorial: Enlace de una biblioteca de Objective-C de iOS'
 description: En este artículo se proporciona un tutorial práctico de creación de un enlace de Xamarin.iOS para una biblioteca existente de Objective-C, InfColorPicker. Trata temas como compilar una biblioteca estática de Objective-C, enlace y utilizar el enlace en una aplicación de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: a4cdb76ac1ecea3ee21e7b74314b6d3bfae09719
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fcf4e6d9b281eaac4be888c499e537f7397528a0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118999"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669276"
 ---
-# <a name="walkthrough-binding-an-ios-objective-c-library"></a>Tutorial: Enlazar a una biblioteca de Objective-C de iOS
+# <a name="walkthrough-binding-an-ios-objective-c-library"></a>Tutorial: Enlace de una biblioteca de Objective-C de iOS
 
 _En este artículo se proporciona un tutorial práctico de creación de un enlace de Xamarin.iOS para una biblioteca existente de Objective-C, InfColorPicker. Trata temas como compilar una biblioteca estática de Objective-C, enlace y utilizar el enlace en una aplicación de Xamarin.iOS._
 
@@ -81,11 +81,11 @@ Necesita usar uno de los métodos siguientes para instalar las herramientas:
     Europa:~ kmullins$ xcode-select --install
     ```
 
-    - Le pedirá que instale las herramientas de línea de comandos, haga clic en el **instalar** botón: [ ![](walkthrough-images/xcode01.png "instalar las herramientas de línea de comandos")](walkthrough-images/xcode01.png#lightbox)
+    - Le pedirá que instale las herramientas de línea de comandos, haga clic en el **instalar** botón:   [![](walkthrough-images/xcode01.png "Instalar las herramientas de línea de comandos")](walkthrough-images/xcode01.png#lightbox)
 
-    - Las herramientas se descargará y se instala desde servidores de Apple: [ ![](walkthrough-images/xcode02.png "descargar las herramientas")](walkthrough-images/xcode02.png#lightbox)
+    - Las herramientas se descargará y se instala desde servidores de Apple:   [![](walkthrough-images/xcode02.png "Descargar las herramientas")](walkthrough-images/xcode02.png#lightbox)
 
-- **Descargas para desarrolladores de Apple** -paquete de las herramientas de línea de comandos está disponible el [descargas para desarrolladores de Apple]() página web. Inicie sesión con su identificador de Apple, a continuación, buscar y descargar las herramientas de línea de comandos: [ ![](walkthrough-images/xcode03.png "buscar las herramientas de línea de comandos")](walkthrough-images/xcode03.png#lightbox)
+- **Descargas para desarrolladores de Apple** -paquete de las herramientas de línea de comandos está disponible el [descargas para desarrolladores de Apple](https://developer.apple.com/downloads/index.action) página web. Inicie sesión con su identificador de Apple, a continuación, buscar y descargar las herramientas de línea de comandos: [![](walkthrough-images/xcode03.png "Buscar las herramientas de línea de comandos")](walkthrough-images/xcode03.png#lightbox)
 
 Con las herramientas de línea de comandos instaladas, estamos listos continuar con el tutorial.
 
@@ -184,7 +184,7 @@ La creación de un contenido de grasas binario es un proceso de tres pasos:
 
 Aunque estos tres pasos son bastante sencillos, y puede ser necesario repetirlos en el futuro si la biblioteca de Objective-C recibe las actualizaciones o si se requieren correcciones de errores. Si decide automatizar estos pasos, se simplificará el mantenimiento futuro y soporte técnico del proyecto de enlace de iOS.
 
-Hay muchas herramientas disponibles para automatizar tareas - un script de shell, [rake](http://rake.rubyforge.org/), [xbuild](http://www.mono-project.com/docs/tools+libraries/tools/xbuild/), y [realizar](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Cuando se instalan las herramientas de línea de comandos de Xcode, instalamos make, por lo que es el sistema de compilación que se usará para este tutorial. Este es un **archivos MAKE** que puede usar para crear una biblioteca compartida de arquitectura de múltiples que funcionará en un dispositivo iOS y el simulador para la biblioteca de cualquier:
+Hay muchas herramientas disponibles para automatizar tareas - un script de shell, [rake](http://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), y [realizar](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). Cuando se instalan las herramientas de línea de comandos de Xcode, instalamos make, por lo que es el sistema de compilación que se usará para este tutorial. Este es un **archivos MAKE** que puede usar para crear una biblioteca compartida de arquitectura de múltiples que funcionará en un dispositivo iOS y el simulador para la biblioteca de cualquier:
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
@@ -326,7 +326,7 @@ Siga estos pasos para agregar la biblioteca:
 
 1. Navegue hasta la `libInfColorPickerSDK.a` y presione la **agregar** botón:
 
-    ![](walkthrough-images/bind05vs.png "Agregar libInfColorPickerSDK.a")
+    ![](walkthrough-images/bind05vs.png "Adding libInfColorPickerSDK.a")
 
 1. El archivo se incluirán en el proyecto.
 
@@ -708,7 +708,7 @@ public override void ViewDidLoad ()
 
 ```
 
-**Controlar la colorPickerControllerDidFinish: mensaje** : si el `ViewController` está terminado, iOS enviará el mensaje `colorPickerControllerDidFinish:` a la `WeakDelegate`. Es necesario crear un C# método que puede controlar este mensaje. Para ello, creamos un C# método y, a continuación, agregar adornos a él con el `ExportAttribute`. Editar `ViewController`y agregue el siguiente método a la clase:
+**Controlar la colorPickerControllerDidFinish: Mensaje** : si el `ViewController` está terminado, iOS enviará el mensaje `colorPickerControllerDidFinish:` a la `WeakDelegate`. Es necesario crear un C# método que puede controlar este mensaje. Para ello, creamos un C# método y, a continuación, agregar adornos a él con el `ExportAttribute`. Editar `ViewController`y agregue el siguiente método a la clase:
 
 ```csharp
 [Export("colorPickerControllerDidFinish:")]
@@ -733,6 +733,6 @@ En este artículo ha avanzado a través del proceso de creación y uso de un pro
 - [Detalles de enlace](~/cross-platform/macios/binding/overview.md)
 - [Guía de referencia de tipos de enlace](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin para desarrolladores de Objective-C](~/ios/get-started/objective-c-developers/index.md)
-- [Instrucciones de diseño de .NET Framework](http://msdn.microsoft.com/library/ms229042.aspx)
+- [Instrucciones de diseño de .NET Framework](https://msdn.microsoft.com/library/ms229042.aspx)
 - [Curso de Xamarin University: Creación de una biblioteca de enlaces de Objective-c.](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Curso de Xamarin University: Compilar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Curso de Xamarin University: Generar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -5,12 +5,12 @@ ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 3f8e9e2e8608467367af6523c8b89bd8f757d491
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: c2caf1583e3099903cb0b05628ed6b2984a954d9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52899062"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671421"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Linterna
 
@@ -44,7 +44,7 @@ Abra el archivo **AndroidManifest.xml** de la carpeta **Propiedades** y agregue 
 
 O haga clic con el botón derecho en el proyecto de Android y abra las propiedades del proyecto. En **Manifiesto de Android**, busque el área **Permisos necesarios:** y active los permisos **FLASHLIGHT** (Linterna) y **CAMERA** (Cámara). Esto actualizará automáticamente el archivo **AndroidManifest.xml**.
 
-Mediante la adición de estos permisos [Google Play filtrará automáticamente los dispositivos](http://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) sin necesidad de hardware específico. Para solucionarlo, agregue lo siguiente al archivo AssemblyInfo.cs del proyecto de Android:
+Mediante la adición de estos permisos [Google Play filtrará automáticamente los dispositivos](https://developer.android.com/guide/topics/manifest/uses-feature-element.html#permissions-features) sin necesidad de hardware específico. Para solucionarlo, agregue lo siguiente al archivo AssemblyInfo.cs del proyecto de Android:
 
 ```csharp
 [assembly: UsesFeature("android.hardware.camera", Required = false)]

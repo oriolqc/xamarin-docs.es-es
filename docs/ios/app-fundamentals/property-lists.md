@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 7056f7beb623bee32c767a3f2827efa6eb2a6136
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 87015163eca9fdb2fb8cee35e74d5031314fd42e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118804"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670835"
 ---
 # <a name="working-with-property-lists-in-xamarinios"></a>Trabajar con listas de propiedades de Xamarin.iOS
 
@@ -110,9 +110,9 @@ El panel Avanzadas controla los tipos de documento y los esquemas de dirección 
 
 Para las aplicaciones que admiten la apertura de determinados tipos de archivos, que proporciona iOS la `CFBundleDocumentTypes` clave. Si deseamos que nuestra aplicación para admitir ciertos tipos de archivo conocidos: por ejemplo, archivos PDF: se recomienda agregar el valor PDF a la clave. Esta sección proporciona una manera cómoda de escribir los datos que se almacenarán en el `CFBundleDocumentTypes` clave en el `Info.plist` archivo.
 
-Consulte la documentación sobre [registrar el archivo de tipos de su aplicación admite](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html) para obtener más información sobre cómo configurar estos valores.
+Consulte la documentación sobre [registrar el archivo de tipos de su aplicación admite](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html) para obtener más información sobre cómo configurar estos valores.
 
-## <a name="utis"></a>Uti
+## <a name="utis"></a>UTIs
 
 A veces, una aplicación necesita admitir la apertura de un tipo de archivo personalizado. Por ejemplo, nos conviene abrir archivos de imagen con una extensión personalizada *.xam*. Para especificar un tipo de archivo personalizados, vamos a crear una UTI - identificador de tipo Universal - personalizado mediante la `UIExportedTypeDeclarations` clave. La captura de pantalla siguiente muestra cómo crear un UTI personalizado para la extensión .xam:
 
@@ -146,7 +146,7 @@ Visual Studio para Mac también detecta el tipo de propiedad, como se muestra:
 
  [![](property-lists-images/image33.png "Los tipos de propiedad disponibles")](property-lists-images/image33.png#lightbox)
 
-Revise Apple [recursos relacionados de la aplicación](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) vínculos para obtener más información sobre las propiedades opcionales.
+Revise Apple [recursos relacionados de la aplicación](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) vínculos para obtener más información sobre las propiedades opcionales.
 
  <a name="Entitlements" />
 
@@ -158,7 +158,7 @@ En este artículo se muestra con los editores de .plist gráfica y avanzado para
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [IDE](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide)
-- [Recursos relacionados con la aplicación](http://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html)
-- [Registra el archivo de tipos que admite la aplicación](http://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html)
+- [Recursos relacionados con la aplicación](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html)
+- [Registra el archivo de tipos que admite la aplicación](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Articles/RegisteringtheFileTypesYourAppSupports.html)
 - [Implementar esquemas de dirección URL personalizada](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html)
 - [Referencia del formato de catálogo activo](https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_ref-Asset_Catalog_Format/index.html#//apple_ref/doc/uid/TP40015170-CH18-SW1)

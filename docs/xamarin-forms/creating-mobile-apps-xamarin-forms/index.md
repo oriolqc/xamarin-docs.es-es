@@ -108,7 +108,7 @@ A veces, el libro hace referencia a la _en tiempo de ejecución de Windows_. Se 
 
 Una biblioteca .NET Standard 2.0 no es compatible con cualquier versión de Windows 10 Mobile. Por lo tanto, una aplicación de Xamarin.Forms mediante una biblioteca .NET Standard no se ejecutará en un dispositivo Windows 10 Mobile. Aplicaciones de Xamarin.Forms continúan ejecutándose en el escritorio de Windows 10, versiones 10.0.16299.0 y versiones posteriores.
 
-Xamarin.Forms tiene compatibilidad con la versión preliminar de la [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), y [Tizen](/xamarin-forms/platform/other/tizen.md) plataformas.
+Xamarin.Forms tiene compatibilidad con la versión preliminar de la [Mac](~/xamarin-forms/platform/other/mac.md), [WPF](~/xamarin-forms/platform/other/wpf.md), [GTK #](~/xamarin-forms/platform/other/gtk.md), y [Tizen](~/xamarin-forms/platform/other/tizen.md) plataformas.
 
 ### <a name="chapter-summaries"></a>Resumen del capítulo
 

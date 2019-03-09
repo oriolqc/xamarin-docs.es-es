@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 7b7fa2ea99a58b875bc1dc579455511aa9bf72d1
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: b3981572e4d2629fd88d1e255fc7459bfe8912f1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52172098"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669016"
 ---
 # <a name="kitkat-features"></a>Características KitKat
 
@@ -96,7 +96,7 @@ KitKat simplifica la mensajería para el usuario al agregar todo el contenido SM
 
 ### <a name="webview-apps"></a>Aplicaciones de WebView
 
-[WebView](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) obtuvo un cambio en KitKat. El cambio más importante es mayor seguridad para cargar contenido en un `WebView`. Aunque la mayoría de las aplicaciones destinadas a versiones anteriores de API debería funcionar según lo previsto, probar aplicaciones que usan el `WebView` clase es muy recomendable. Para obtener más información acerca de afectado APIs WebView hacen referencia a la de Android [migrar a WebView en Android 4.4](http://developer.android.com/guide/webapps/migrating.html) documentación.
+[WebView](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) obtuvo un cambio en KitKat. El cambio más importante es mayor seguridad para cargar contenido en un `WebView`. Aunque la mayoría de las aplicaciones destinadas a versiones anteriores de API debería funcionar según lo previsto, probar aplicaciones que usan el `WebView` clase es muy recomendable. Para obtener más información acerca de afectado APIs WebView hacen referencia a la de Android [migrar a WebView en Android 4.4](https://developer.android.com/guide/webapps/migrating.html) documentación.
 
 <a name="user_experience" />
 
@@ -259,7 +259,7 @@ Se puede definir una transición personalizada en un archivo de recursos xml en 
 
 [![Ubicación del archivo transition.xml bajo el directorio de recursos/transición](kitkat-images/resources.png)](kitkat-images/resources.png#lightbox)
 
-Ejemplo de código siguiente define una transición que anima durante 5 segundos y usa el [pasar por alto los interpolador](http://developer.android.com/reference/android/views/animation/OvershootInterpolator.html):
+Ejemplo de código siguiente define una transición que anima durante 5 segundos y usa el [pasar por alto los interpolador](https://developer.android.com/reference/android/views/animation/OvershootInterpolator.html):
 
 ```xml
 <changeBounds
@@ -280,7 +280,7 @@ A continuación, se agrega la nueva transición a la `Go` llamada que comienza l
 TransitionManager.Go (scene1, transition);
 ```
 
-### <a name="translucent-ui"></a>Interfaz de usuario translúcido
+### <a name="translucent-ui"></a>Translucent UI
 
 KitKat proporciona más control sobre los temas de la aplicación con las barras de estado y navegación translúcidas opcionales. Puede cambiar la transparencia de los elementos de interfaz de usuario del sistema en el mismo archivo XML que se usa para definir el tema de Android. KitKat presenta las siguientes propiedades:
 
@@ -396,7 +396,7 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 Tenga en cuenta que [`ContentResolver.OpenOutputStream(Android.Net.Uri)`](https://developer.xamarin.com/api/member/Android.Content.ContentResolver.OpenOutputStream/(Android.Net.Uri))
 Devuelve un `System.IO.Stream`, por lo que se puede escribir todo el proceso de transmisión por secuencias en. NET.
 
-Para obtener más información sobre la carga, crear y editar contenido con el marco de trabajo de acceso de almacenamiento, consulte el [documentación de Android para el marco de trabajo de acceso de almacenamiento](http://developer.android.com/guide/topics/providers/document-provider.html).
+Para obtener más información sobre la carga, crear y editar contenido con el marco de trabajo de acceso de almacenamiento, consulte el [documentación de Android para el marco de trabajo de acceso de almacenamiento](https://developer.android.com/guide/topics/providers/document-provider.html).
 
 ### <a name="printing"></a>Impresión
 
@@ -421,7 +421,7 @@ Tenga en cuenta que al cargar e imprimir contenido web requieren el permiso de I
 
 ##### <a name="print-menu-item"></a>Elemento de menú de impresión
 
-La opción de impresión normalmente aparecerá en la actividad [menú opciones](http://developer.android.com/guide/topics/ui/menus.html#options-menu).
+La opción de impresión normalmente aparecerá en la actividad [menú opciones](https://developer.android.com/guide/topics/ui/menus.html#options-menu).
 El menú de opciones permite a los usuarios realizar acciones en una actividad. Se encuentra en la esquina superior derecha de la pantalla y tiene este aspecto:
 
 [![Captura de pantalla de ejemplo de elemento de menú de impresión muestra en la esquina superior derecha de la pantalla](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
@@ -656,7 +656,7 @@ Reiniciar el dispositivo restablece el recuento de pasos en 0. La aplicación re
 
 ### <a name="screen-recording"></a>Grabación de pantalla
 
-KitKat incluye pantalla nueva grabación de capacidades para que los desarrolladores pueden registrar aplicaciones en acción. Grabación de pantalla está disponible a través de la [Android Debug Bridge (ADB)](http://developer.android.com/tools/help/adb.html) cliente, que se puede descargar como parte del SDK de Android.
+KitKat incluye pantalla nueva grabación de capacidades para que los desarrolladores pueden registrar aplicaciones en acción. Grabación de pantalla está disponible a través de la [Android Debug Bridge (ADB)](https://developer.android.com/tools/help/adb.html) cliente, que se puede descargar como parte del SDK de Android.
 
 Para grabar la pantalla, conectar el dispositivo; a continuación, busque la instalación del SDK de Android, vaya a la **platform-tools** directorio y ejecute el **adb** cliente:
 
@@ -678,18 +678,18 @@ Puede encontrar el vídeo en el dispositivo, aparecerá en la galería una vez c
 
 Además de los cambios que se ha descrito anteriormente, KitKat le permite:
 
--  *Utilice la pantalla completa* -KitKat introduce un nuevo [modo envolvente](http://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)) para examinar el contenido, jugar y ejecutan otras aplicaciones que pueden beneficiarse de una experiencia de pantalla completa.
+-  *Utilice la pantalla completa* -KitKat introduce un nuevo [modo envolvente](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int)) para examinar el contenido, jugar y ejecutan otras aplicaciones que pueden beneficiarse de una experiencia de pantalla completa.
 
 -  *Personalizar las notificaciones* -obtener detalles adicionales sobre las notificaciones del sistema con el [`NotificationListenerService`](https://developer.xamarin.com/api/type/Android.Service.Notification.NotificationListenerService/)
    . Esto le permite presentar la información de forma distinta dentro de la aplicación.
 
--  *Crear el reflejo de recursos Drawable* -recursos Drawable tienen un nuevo [`autoMirrored`](http://developer.android.com/reference/android/R.attr.html#autoMirrored)
+-  *Crear el reflejo de recursos Drawable* -recursos Drawable tienen un nuevo [`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
    atributo que indica al sistema cree una versión reflejada para las imágenes que requieren Voltear para diseños de izquierda a derecha.
 
 -  *Pausar las animaciones* -pausar y reanudar animaciones creadas con el [`Animator`](https://developer.xamarin.com/api/type/Android.Animation.Animator/)
    clase.
 
--  *Leer dinámicamente cambiar texto* -denotan las partes de la interfaz de usuario que actualicen dinámicamente con nuevo texto como "las regiones activas" con la nueva [ `accessibilityLiveRegion`](http://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+-  *Leer dinámicamente cambiar texto* -denotan las partes de la interfaz de usuario que actualicen dinámicamente con nuevo texto como "las regiones activas" con la nueva [ `accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    atributo para que el nuevo texto leerá automáticamente en modo de accesibilidad.
 
 -  *Mejorar la experiencia de Audio* -Make realiza un seguimiento más alto con la [`LoudnessEnhancer`](https://developer.xamarin.com/api/type/Android.Media.Audiofx.LoudnessEnhancer/)
@@ -703,7 +703,7 @@ Además de los cambios que se ha descrito anteriormente, KitKat le permite:
 -  *Control remoto* -con unos pocos cambios en el hardware y software de lado, KitKat le permite activar un dispositivo equipado con un transmisor de infrarrojos en un control remoto mediante el `ConsumerIrService`e interactuar con dispositivos periféricos con el nuevo [`RemoteController`](https://developer.xamarin.com/api/type/Android.Media.RemoteController/)
    API.
 
-Para obtener más información sobre los cambios de API anteriores, consulte Google [API de Android 4.4](http://developer.android.com/about/versions/android-4.4.html) información general.
+Para obtener más información sobre los cambios de API anteriores, consulte Google [API de Android 4.4](https://developer.android.com/about/versions/android-4.4.html) información general.
 
 
 ## <a name="summary"></a>Resumen
@@ -714,5 +714,5 @@ En este artículo introdujo algunas de las nuevas API disponibles en Android 4.4
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplo de KitKat](https://developer.xamarin.com/samples/KitKat/)
-- [Android 4.4 API](http://developer.android.com/about/versions/android-4.4.html)
-- [KitKat Android](http://developer.android.com/about/versions/kitkat.html)
+- [Android 4.4 API](https://developer.android.com/about/versions/android-4.4.html)
+- [KitKat Android](https://developer.android.com/about/versions/kitkat.html)

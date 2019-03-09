@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 54c9e4fad71d74fe40fc119592a45f6c94b47056
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f9b73428531deeacc7bdea271cdc0c2872038e99
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122262"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666964"
 ---
 # <a name="gallery"></a>Galería
 
@@ -57,7 +57,7 @@ Inicie un nuevo proyecto denominado *HelloGallery*.
 
 [![Captura de pantalla del nuevo proyecto de Android en el cuadro de diálogo nueva solución](gallery-images/hellogallery1-sml.png)](gallery-images/hellogallery1.png#lightbox)
 
-Buscar algunas fotos que le gustaría utilizar, o [descargar estas imágenes de ejemplo](http://developer.android.com/shareables/sample_images.zip).
+Buscar algunas fotos que le gustaría utilizar, o [descargar estas imágenes de ejemplo](https://developer.android.com/shareables/sample_images.zip).
 Agregue los archivos de imagen al proyecto **recursos/Drawable** directory. En el **propiedades** ventana, establezca la acción de compilación para cada uno al **AndroidResource**.
 
 Abra **Resources/Layout/Main.axml** e inserte lo siguiente:

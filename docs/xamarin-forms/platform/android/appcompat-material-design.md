@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/27/2017
-ms.openlocfilehash: c2eed44a7c684b91ceed4493a83ff3b4e1578b5f
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: cade72aaad60c30993f6b11e98704addd218ffae
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209320"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667495"
 ---
 # <a name="adding-appcompat-and-material-design"></a>Adición de AppCompat y Material Design
 
@@ -39,7 +39,7 @@ Asegúrese de que .NET framework de destino del proyecto Android es Android 6.0 
 
 Cree los tres archivos siguientes en el proyecto de Android y pegue el contenido siguiente. Google Proporciona una [Guía de estilo](http://www.google.com/design/spec/style/color.html#color-color-palette) y un [generador de la paleta de colores](http://www.materialpalette.com/) para ayudarle a elegir una combinación de colores alternativos a la especificada.
 
-**Resources/Values/Colors.Xml**
+**Resources/values/colors.xml**
 
 ```xml
 <resources>
@@ -50,7 +50,7 @@ Cree los tres archivos siguientes en el proyecto de Android y pegue el contenido
 </resources>
 ```
 
-**Resources/Values/Style.Xml**
+**Resources/values/style.xml**
 
 ```xml
 <resources>
@@ -68,7 +68,7 @@ Cree los tres archivos siguientes en el proyecto de Android y pegue el contenido
 
 Un estilo adicionales debe incluirse en el **valores v21** carpeta para aplicar propiedades específicas cuando se ejecuta en Android Lollipop y versiones más recientes.
 
-**Resources/Values-v21/Style.Xml**
+**Resources/values-v21/style.xml**
 
 ```xml
 <resources>
@@ -80,11 +80,11 @@ Un estilo adicionales debe incluirse en el **valores v21** carpeta para aplicar 
 </resources>
 ```
 
-### <a name="4-update-androidmanifestxml"></a>4. Actualización de AndroidManifest.xml
+### <a name="4-update-androidmanifestxml"></a>4. Update AndroidManifest.xml
 
 Para garantizar este nuevo tema información sea utilizado, establezca el tema en el **AndroidManifest** archivo agregando `android:theme="@style/MyTheme"` (deje el resto del código XML tal como estaba).
 
-**Properties/Androidmanifest.Xml**
+**Properties/AndroidManifest.xml**
 
 ```xml
 ...
@@ -114,7 +114,7 @@ Crear **Tabbar.axml** y **Toolbar.axml** archivos en el **y diseño de los recur
 ```
 
 Algunas propiedades de las pestañas se han establecido como la gravedad de la ficha `fill` y modo a `fixed`.
-Si tiene muchas pestañas desea cambiarlo a desplazable - lea el Android [TabLayout documentación](http://developer.android.com/reference/android/support/design/widget/TabLayout.html) para obtener más información.
+Si tiene muchas pestañas desea cambiarlo a desplazable - lea el Android [TabLayout documentación](https://developer.android.com/reference/android/support/design/widget/TabLayout.html) para obtener más información.
 
 **Resources/layout/Toolbar.axml**
 

@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: c41aecf5f8c65ad5bfba5361b77d7c7fc047cda4
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171617"
 ---
+
 # <a name="binding-a-java-library"></a>Enlace de una biblioteca Java
 
 _La Comunidad de Android tiene muchas bibliotecas de Java que puede usar en la aplicación; Esta guía explica cómo incorporar bibliotecas de Java en su aplicación de Xamarin.Android mediante la creación de una biblioteca de enlaces._
@@ -103,7 +98,7 @@ La documentación de API debe ser el doclet predeterminado desde Java8, Java7 o 
 
 ## <a name="including-a-native-library-in-a-binding"></a>Incluir una biblioteca nativa en un enlace
 
-Puede ser necesario incluir un **.so** biblioteca en un proyecto Xamarin.Android de enlace como parte de una biblioteca de Java de enlace. Cuando se ejecuta el código Java ajustado, se producirá un error en Xamarin.Android para que el mensaje de error y de la llamada JNI _java.lang.UnsatisfiedLinkError: no se encontró el método nativo:_ aparecerá en el logcat fuera de la aplicación.
+Puede ser necesario incluir un **.so** biblioteca en un proyecto Xamarin.Android de enlace como parte de una biblioteca de Java de enlace. Cuando se ejecuta el código Java ajustado, se producirá un error en Xamarin.Android para que el mensaje de error y de la llamada JNI _java.lang.UnsatisfiedLinkError: No se encontró el método nativo:_ aparecerá en el logcat fuera de la aplicación.
 
 Corregir este problema consiste en cargar manualmente el **.so** biblioteca con una llamada a `Java.Lang.JavaSystem.LoadLibrary`. Por ejemplo suponiendo que la biblioteca compartida por un proyecto de Xamarin.Android **libpocketsphinx_jni.so** incluido en el proyecto de enlace con una acción de compilación **EmbeddedNativeLibrary**, el siguiente fragmento de código (se ejecutará antes de usar la biblioteca compartida) se cargará el **.so** biblioteca:
 
@@ -145,5 +140,5 @@ Las siguientes guías de escenario de enlace le permite enlazar una biblioteca d
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Trabajo con JNI](~/android/platform/java-integration/working-with-jni.md)
-- [Metadatos GAPI](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [Metadatos GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
 - [Uso de bibliotecas nativas](~/android/platform/native-libraries.md)

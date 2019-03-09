@@ -6,13 +6,13 @@ ms.technology: xamarin-forms
 ms.assetid: F4A37564-B18B-42FF-B841-9A1949895AB6
 author: davidbritch
 ms.author: dabritch
-ms.date: 3/27/2018
-ms.openlocfilehash: a93503762528885dfc7d3b5400bf4ec716ea9fab
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.date: 03/27/2018
+ms.openlocfilehash: 86abe932e9c244e1a959042cfc995bc184f89cc9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056220"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671291"
 ---
 # <a name="part-3-xaml-markup-extensions"></a>Parte 3. Extensiones de marcado XAML
 
@@ -403,7 +403,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib"
 
 Tenga en cuenta que la palabra clave `clr-namespace` seguida de dos puntos y, a continuación, el nombre de espacio de nombres. NET, seguido por un punto y coma, la palabra clave `assembly`, un signo igual y el nombre del ensamblado.
 
-Sí, sigue una coma `clr-namespace` pero sigue el signo igual `assembly`. La sintaxis se definió en este modo deliberadamente: declaraciones de espacios de nombres XML más hacen referencia a un URI que empieza como un nombre de esquema de URI `http`, que siempre está seguido de dos puntos. El `clr-namespace` parte de esta cadena está pensado para imitar esta convención.
+Sí, sigue una coma `clr-namespace` pero sigue el signo igual `assembly`. La sintaxis se definió en este modo deliberadamente: La mayoría de las declaraciones de espacio de nombres XML hacen referencia a un URI que empieza como un nombre de esquema de URI `http`, que siempre está seguido de dos puntos. El `clr-namespace` parte de esta cadena está pensado para imitar esta convención.
 
 Ambas declaraciones de espacio de nombres de estos se incluyen en el **StaticConstantsPage** ejemplo. Tenga en cuenta que el `BoxView` dimensiones se establecen en `Math.PI` y `Math.E`, pero ha escalado por un factor de 100:
 
@@ -547,7 +547,7 @@ A continuación se ofrece un ejemplo:
 </ContentPage>
 ```
 
-Quizás la lección más importante que se deben realizar desde este ejemplo es la sintaxis de la extensión de marcado: comillas no deben aparecer dentro de las llaves de una extensión de marcado. Al escribir la extensión de marcado en un archivo XAML, es normal que desee incluir los valores de las propiedades de comillas. ¡Resistir la tentación!
+Quizás la lección más importante que se deben realizar desde este ejemplo es la sintaxis de la extensión de marcado: Comillas no deben aparecer dentro de las llaves de una extensión de marcado. Al escribir la extensión de marcado en un archivo XAML, es normal que desee incluir los valores de las propiedades de comillas. ¡Resistir la tentación!
 
 Este es el programa que se ejecuta:
 

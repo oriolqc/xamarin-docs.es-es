@@ -6,13 +6,9 @@ ms.assetid: 156D6D1C-83CA-4088-BA08-40B22312269C
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 649a0db7e74f663b85efb9db2365dbc7a0186e0b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106837"
+ms.date: 03/17/2017
 ---
+
 # <a name="watchos-application-fundamentals"></a>Principios de la aplicación de watchOS
 
 ##  <a name="parent-applicationioswatchosapp-fundamentalsparent-appmd"></a>[Aplicación principal](~/ios/watchos/app-fundamentals/parent-app.md)
@@ -46,4 +42,3 @@ Obtener una vista previa y optimizar su interfaz de usuario para ambos tamaños 
 ##  <a name="settingsioswatchosapp-fundamentalssettingsmd"></a>[Configuración](~/ios/watchos/app-fundamentals/settings.md)
 
 Agregar una pantalla de configuración para la aplicación del reloj.
-

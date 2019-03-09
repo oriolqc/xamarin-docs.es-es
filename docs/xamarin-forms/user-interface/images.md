@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 1a08803930eaaa3c2c5c5f8b8aa9561a9a7b8d88
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 5c1d73acfef7a4384db7220daf7319251eb61f85
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557248"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670992"
 ---
 # <a name="images-in-xamarinforms"></a>Imágenes en Xamarin.Forms
 
@@ -44,7 +44,7 @@ El [ `Aspect` ](xref:Xamarin.Forms.Image.Aspect) propiedad determina cómo la im
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) -Recorta la imagen para que rellene el área de presentación conservando el aspecto (ie. ninguna distorsión).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) -Letterbox la imagen (si es necesario) para que quepa la imagen completa en el área de presentación, con espacio en blanco que se agrega a la parte superior o inferior o lados dependiendo de si la imagen es ancho o alto.
 
-Se pueden cargar imágenes desde un [archivo local](#Local_Images), un [recurso incrustado](#embedded-images), o [descargado](#Downloading_Images). Además, pueden mostrar iconos de la fuente del [ `Image` ](xref:Xamarin.Forms.Image) vista mediante la especificación de los datos del icono de fuente en un `FontImageSource` objeto. Para obtener más información, consulte [mostrar iconos de fuente](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) en el [fuentes](~/xamarin-forms/user-interface/text/fonts.md) guía.
+Se pueden cargar imágenes desde un [archivo local](#local-images), un [recurso incrustado](#embedded-images), o [descargado](#downloading-images). Además, pueden mostrar iconos de la fuente del [ `Image` ](xref:Xamarin.Forms.Image) vista mediante la especificación de los datos del icono de fuente en un `FontImageSource` objeto. Para obtener más información, consulte [mostrar iconos de fuente](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) en el [fuentes](~/xamarin-forms/user-interface/text/fonts.md) guía.
 
 ## <a name="local-images"></a>Imágenes locales
 
@@ -92,7 +92,7 @@ El método preferido para administrar imágenes desde iOS 9 es arrastrar imágen
 
 Antes de iOS 9, las versiones de retina de la imagen podrían colocarse en el **recursos** carpeta - dos y tres veces la resolución con una **@2x** o **@3x**sufijos en el nombre de archivo antes de la extensión de archivo (p ej. **myimage@2x.png**). Sin embargo, este método para trabajar con imágenes en una aplicación de iOS en desuso por Apple. Para obtener más información, consulte [tamaños de imagen y nombres de archivo](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 
-Imágenes de Android resolución alternativo deben colocarse en [directorios especialmente denominada](http://developer.android.com/guide/practices/screens_support.html) en el proyecto Android, como se muestra en la captura de pantalla siguiente:
+Imágenes de Android resolución alternativo deben colocarse en [directorios especialmente denominada](https://developer.android.com/guide/practices/screens_support.html) en el proyecto Android, como se muestra en la captura de pantalla siguiente:
 
 [![Ubicación de la imagen de varias resoluciones Android](images-images/xs-highdpisolution-sml.png "ubicación de la imagen de varias resoluciones Android")](images-images/xs-highdpisolution.png#lightbox "ubicación de la imagen de varias resoluciones de Android")
 
@@ -296,7 +296,7 @@ Establecer iconos y pantallas de presentación de las aplicaciones de Xamarin.Fo
 
 ## <a name="icons"></a>Iconos
 
-Consulte la [iOS trabajar con imágenes](~/ios/app-fundamentals/images-icons/index.md), [Google iconografía](http://developer.android.com/design/style/iconography.html), y [directrices para los recursos de icono y el icono](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) para obtener más información sobre cómo crear estos recursos de la aplicación.
+Consulte la [iOS trabajar con imágenes](~/ios/app-fundamentals/images-icons/index.md), [Google iconografía](https://developer.android.com/design/style/iconography.html), y [directrices para los recursos de icono y el icono](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) para obtener más información sobre cómo crear estos recursos de la aplicación.
 
 Además, pueden mostrar iconos de la fuente del [ `Image` ](xref:Xamarin.Forms.Image) vista mediante la especificación de los datos del icono de fuente en un `FontImageSource` objeto. Para obtener más información, consulte [mostrar iconos de fuente](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) en el [fuentes](~/xamarin-forms/user-interface/text/fonts.md) guía.
 
@@ -316,5 +316,5 @@ Imágenes de pantalla de presentación y de icono de aplicación están configur
 
 - [WorkingWithImages (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
 - [iOS trabajar con imágenes](~/ios/app-fundamentals/images-icons/index.md)
-- [Iconografía Android](http://developer.android.com/design/style/iconography.html)
+- [Iconografía Android](https://developer.android.com/design/style/iconography.html)
 - [Directrices para los recursos de icono y el icono](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/)

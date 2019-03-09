@@ -6,12 +6,12 @@ ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
 author: asb3993
 ms.author: amburns
-ms.openlocfilehash: ce5c8f7cf30407e64464c412359263b52e134675
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: a5083e1d31377caece1b8fb4faf33b6e3ff88202
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267396"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672461"
 ---
 # <a name="tips-for-updating-code-to-the-unified-api"></a>Sugerencias para actualizar el código a Unified API
 
@@ -88,7 +88,7 @@ Algunas cosas que es posible que deba corregirse manualmente incluyen:
 
  * `NSAction` ha sido [reemplazado](~/cross-platform/macios/unified/overview.md#NSAction) con el .NET starndard `Action`. También se han reemplazado algunos delegados simple (parámetro único) con `Action<T>`.
 
-Por último, hacer referencia a la [diferencias clásico v Unified API](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) para buscar cambios en las API en el código. Buscar [esta página](http://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) le ayudará a encontrar las API clásicas y lo que ha se ha actualizado a.
+Por último, hacer referencia a la [diferencias clásico v Unified API](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) para buscar cambios en las API en el código. Buscar [esta página](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) le ayudará a encontrar las API clásicas y lo que ha se ha actualizado a.
 
 **Nota:** el `MonoTouch.Dialog` espacio de nombres permanece igual después de la migración. Si el código usa **MonoTouch.Dialog** debe continuar usar ese espacio de nombres: *no* cambiar `MonoTouch.Dialog` a `Dialog`!
 
@@ -163,14 +163,14 @@ Corrección: Corrija la ortografía a `AddEllipseInRect`. Otros cambios de nombr
 
 Al crear una anotación personalizada mediante la creación de subclases de MKAnnotation el campo de coordenadas no tiene ningún establecedor, solo un captador.
 
-[Corregir](https://forums.xamarin.com/discussion/comment/109505/#Comment_109505):
+[Fix](https://forums.xamarin.com/discussion/comment/109505/#Comment_109505):
 
 * Agregar un campo para realizar un seguimiento de la coordenada
 * devolver este campo en el captador de la propiedad de coordenadas
 * Invalide el método SetCoordinate y establezca el campo
 * Llamar a SetCoordinate en su constructor con el parámetro pasado coordenado
 
-Debe ser similar al siguiente:
+Debería tener un aspecto similar al siguiente:
 
 ```csharp
 class BasicPinAnnotation : MKAnnotation

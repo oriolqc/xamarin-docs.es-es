@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 09/06/2018
-ms.openlocfilehash: f21eca052ef13fd0e3d6efa261e1ff70b3b14372
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1a9856a5b6257c82b2072e9eb44be481373abfcf
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120715"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671863"
 ---
 # <a name="splash-screen"></a>Pantalla de presentación
 
@@ -52,7 +52,7 @@ La pantalla de presentación se implementa como una actividad que muestra la mar
 
 La pantalla de presentación mostrará un pueden dibujar en el fondo de la actividad de la pantalla de presentación XML. Es necesario utilizar una imagen de mapa de bits (como PNG o JPG) para la imagen para mostrar.
 
-En esta guía, usamos un [lista capa](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) para centrar la imagen de pantalla de bienvenida en la aplicación. El fragmento de código siguiente es un ejemplo de un `drawable` de recursos mediante un `layer-list`:
+En esta guía, usamos un [lista capa](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList) para centrar la imagen de pantalla de bienvenida en la aplicación. El fragmento de código siguiente es un ejemplo de un `drawable` de recursos mediante un `layer-list`:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -229,5 +229,5 @@ Esta guía describe una forma de implementar una pantalla de presentación en un
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [SplashScreen (ejemplo)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
-- [lista de capas Drawable](http://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
+- [lista de capas Drawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
 - [ Patrones de diseño de materiales: las pantallas de inicio](https://material.io/design/communication/launch-screen.html#usage)

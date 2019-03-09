@@ -6,12 +6,12 @@ ms.assetid: AEF4ED0E-391F-4FA4-9F18-842BC24C272D
 author: asb3993
 ms.author: amburns
 ms.date: 03/13/2018
-ms.openlocfilehash: 213632ae26ae60797e39bc718a95057fb7238609
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8882a7cd36eab5e7905585f5de4d6585dfb53439
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113357"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672266"
 ---
 # <a name="available-assemblies"></a>Ensamblados disponibles
 
@@ -34,7 +34,7 @@ También pueden usar los proyectos de Xamarin [bibliotecas de clases portables d
 Estos son los ensamblados disponibles en el **Administrador de referencias > ensamblados > Framework** (Visual Studio 2017) y **editar referencias > paquetes** (Visual Studio para Mac) y su compatibilidad con las plataformas Xamarin.
 
 > [!div class="mx-tdCol2BreakAll"]
-> |Ensamblado|Compatibilidad con la API|Xamarin iOS|Xamarin Android|Mac de Xamarin|
+> |Ensamblado|Compatibilidad con la API|Xamarin iOS|Xamarin Android|Xamarin Mac|
 > |--------|-----------------|-----------|---------------|-----------|
 > |FSharp.Core.dll| |✓|✓|✓|
 > |l18N.dll|Incluye CJK, Oriente, otros, es poco habitual, oeste|✓|✓|✓|
@@ -42,41 +42,41 @@ Estos son los ensamblados disponibles en el **Administrador de referencias > ens
 > |Mono.CSharp.dll| |✓|✓|✓|
 > |Mono.Data.Sqlite.dll|Proveedor de ADO.NET para SQLite; vea las limitaciones.|✓|✓|✓|
 > |Mono.Data.Tds.dll|Compatibilidad de protocolo TDS; utilizado para [System.Data.SqlClient](xref:System.Data.SqlClient) soporte técnico en [System.Data](xref:System.Data).|✓|✓|✓|
-> |Mono.Dynamic. &#8203;Interpreter.dll| |✓| | |
+> |Mono.Dynamic.&#8203;Interpreter.dll| |✓| | |
 > |Mono.Security.dll|API criptográficas.|✓|✓|✓|
 > |monotouch.dll|Este ensamblado contiene el enlace a la API CocoaTouch de C#. Esto solo está disponible en proyectos Classic de iOS.|✓| | |
-> |MonoTouch. &#8203;1.dll del cuadro de diálogo| |✓| | |
-> |MonoTouch. &#8203;NUnitLite.dll| |✓| | |
+> |MonoTouch.&#8203;Dialog-1.dll| |✓| | |
+> |MonoTouch.&#8203;NUnitLite.dll| |✓| | |
 > |mscorlib.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |OpenTK-1.0.dll|El objeto de OpenGL/OpenAL orientada a servicios de API, ampliadas para proporcionar compatibilidad con dispositivos de iPhone.|✓|✓|✓|
-> |System.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), además de los tipos de los espacios de nombres siguientes:<br />System.Collections.Specialized<br />Sistema. &#8203;ComponentModel<br />System.ComponentModel.Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System.IO.Compression.FileSystem<br />System.Net<br />System.Net.Cache<br />System.Net.Mail<br />System.Net.Mime<br />System.Net. &#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System.Runtime. &#8203;InteropServices<br />System.Runtime.Versioning<br />System.Security. &#8203;AccessControl<br />System.Security.Authentication<br />System.Security. &#8203;Criptografía<br />System.Security.Permissions<br />System.Threading<br />System.Timers|✓|✓|✓|
-> |Sistema. &#8203;ComponentModel. &#8203;Composition.dll| |✓|✓|✓|
+> |System.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), además de los tipos de los espacios de nombres siguientes:<br />System.Collections.Specialized<br />System.&#8203;ComponentModel<br />System.ComponentModel.Design<br />System.Diagnostics<br />System.IO<br />System.IO.Compression<br />System.IO.Compression.FileSystem<br />System.Net<br />System.Net.Cache<br />System.Net.Mail<br />System.Net.Mime<br />System.Net.&#8203;NetworkInformation<br />System.Net.Security<br />System.Net.Sockets<br />System.Runtime.&#8203;InteropServices<br />System.Runtime.Versioning<br />System.Security.&#8203;AccessControl<br />System.Security.Authentication<br />System.Security.&#8203;Cryptography<br />System.Security.Permissions<br />System.Threading<br />System.Timers|✓|✓|✓|
+> |System.&#8203;ComponentModel.&#8203;Composition.dll| |✓|✓|✓|
 > |System.&#8203;ComponentModel.&#8203;DataAnnotations.dll| |✓|✓|✓|
 > |System.Core.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.Data.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx) , con [alguna funcionalidad eliminado](~/ios/data-cloud/system.data.md).|✓|✓|✓|
-> |System.Data. &#8203;Servicios. &#8203;Client.dll|Cliente de oData completa.|✓|✓|✓|
-> |System.IO. &#8203;Compresión| |✓|✓|✓|
-> |System.IO. &#8203;Compresión. &#8203;FileSystem| |✓|✓|✓|
-> |System.Json.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |System.Net. &#8203;Http.dll| |✓|✓|✓|
-> |Sistema. &#8203;Numerics.dll| |✓|✓|✓|
-> |System.Runtime. &#8203;Serialization.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
-> |Sistema. &#8203;ServiceModel.dll|Pila de WCF tal como está presente en [Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Data.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx) , con [alguna funcionalidad eliminado](~/ios/data-cloud/system.data.md).|✓|✓|✓|
+> |System.Data.&#8203;Services.&#8203;Client.dll|Cliente de oData completa.|✓|✓|✓|
+> |System.IO.&#8203;Compression| |✓|✓|✓|
+> |System.IO.&#8203;Compression.&#8203;FileSystem| |✓|✓|✓|
+> |System.Json.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.Net.&#8203;Http.dll| |✓|✓|✓|
+> |System.&#8203;Numerics.dll| |✓|✓|✓|
+> |System.Runtime.&#8203;Serialization.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
+> |System.&#8203;ServiceModel.dll|Pila de WCF tal como está presente en [Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx)|✓|✓|✓|
 > |System.&#8203;ServiceModel.&#8203;Internals.dll| |✓|✓|✓|
-> |Sistema. &#8203;ServiceModel. &#8203;Web.dll|[Silverlight](http://msdn.microsoft.com/library/cc838194(VS.95).aspx), además de los tipos de los espacios de nombres siguientes: <br />Sistema<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
-> |Sistema. &#8203;Transactions.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx); forma parte de [System.Data](~/ios/data-cloud/system.data.md) admite.|✓|✓|✓|
-> |System.Web. &#8203;Services.dll|Servicios Web básicos del perfil de .NET 3.5, con las características de servidor quitado.|✓|✓|✓|
-> |Sistema. &#8203;Windows.dll| |✓|✓|✓|
-> |Sistema. &#8203;Xml.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
-> |System.Xml. &#8203;Linq.dll|[.NET 3.5](http://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |System.&#8203;ServiceModel.&#8203;Web.dll|[Silverlight](https://msdn.microsoft.com/library/cc838194(VS.95).aspx), además de los tipos de los espacios de nombres siguientes: <br />Sistema<br />System.ServiceModel.Channels<br />System.ServiceModel.Description<br />System.ServiceModel.Web|✓|✓|✓|
+> |System.&#8203;Transactions.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx); forma parte de [System.Data](~/ios/data-cloud/system.data.md) admite.|✓|✓|✓|
+> |System.Web.&#8203;Services.dll|Servicios Web básicos del perfil de .NET 3.5, con las características de servidor quitado.|✓|✓|✓|
+> |System.&#8203;Windows.dll| |✓|✓|✓|
+> |System.&#8203;Xml.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
+> |System.Xml.&#8203;Linq.dll|[.NET 3.5](https://msdn.microsoft.com/library/ms229335.aspx)|✓|✓|✓|
 > |System.Xml.Serialization.dll| |✓|✓|✓|
 > |Xamarin.iOS.dll|Este ensamblado contiene el enlace a la API CocoaTouch de C#. Esto solo se usa en proyectos de iOS unificado.|✓| | |
 > |Java.Interop.dll| | |✓| |
 > |Mono.Android.dll| | |✓| |
-> |Mono.Android. &#8203;Export.dll| | |✓| |
+> |Mono.Android.&#8203;Export.dll| | |✓| |
 > |Mono.Posix.dll| | |✓| |
 > |System.&#8203;EnterpriseServices.dll| | |✓| |
-> |Xamarin.Android. &#8203;NUnitLite.dll| | |✓| |
-> |Mono.CompilerServices. &#8203;SymbolWriter.dll|Los programadores de compiladores.| | |✓|
+> |Xamarin.Android.&#8203;NUnitLite.dll| | |✓| |
+> |Mono.CompilerServices.&#8203;SymbolWriter.dll|Los programadores de compiladores.| | |✓|
 > |Xamarin.Mac.dll| | | |✓|
-> |Sistema. &#8203;Drawing.dll|System.Drawing no se admite en la API unificadas de Xamarin.Mac, .NET 4.5 o marcos de trabajo móviles. Puede agregarse compatibilidad de System.Drawing para iOS y macOS usando el [sysdrawing coregraphics](https://github.com/mono/sysdrawing-coregraphics) biblioteca|✓| |✓|
+> |System.&#8203;Drawing.dll|System.Drawing no se admite en la API unificadas de Xamarin.Mac, .NET 4.5 o marcos de trabajo móviles. Puede agregarse compatibilidad de System.Drawing para iOS y macOS usando el [sysdrawing coregraphics](https://github.com/mono/sysdrawing-coregraphics) biblioteca|✓| |✓|

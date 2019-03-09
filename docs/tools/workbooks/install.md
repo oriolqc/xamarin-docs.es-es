@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 7bef5de57b7ac709ebab4c39feedbec369e6bd14
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b1303f21225d3ae7b7d3a796e4845afbfe554a22
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122431"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667717"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Los requisitos e instalación de los libros
 
@@ -103,10 +103,10 @@ Si tiene problemas para conectar su iOS o Android libro y ya ha comprobado [nues
 - Nombre del dispositivo que está intentando conectarse a
 - Versión del sistema operativo del dispositivo
 - Android: Compruebe que está usando un x86 emulador
-- Android: ¿En qué plataforma emulador está usando? ¿Emulador de Google?
+- Android: ¿Qué plataforma emulador usa? ¿Emulador de Google?
   ¿Emulador de Android de Visual Studio? ¿Xamarin Android Player?
-- iOS en Windows: ¿qué versión del simulador remoto de Xamarin iOS ha instalado (consulte **agregar o quitar programas** en **Panel de Control**)?
-- iOS en Windows: proporcione también información de versión de plataforma para el host de compilación de Mac
+- iOS en Windows: ¿Qué versión del simulador remoto de Xamarin iOS ha instalado (consulte **agregar o quitar programas** en **Panel de Control**)?
+- iOS en Windows: Proporcione también información de versión de plataforma para el host de compilación de Mac
 - ¿Tiene conectividad de red (comprobar a través del explorador web) en el dispositivo?
 
 [bugs]: https://github.com/Microsoft/workbooks/issues/new
@@ -160,5 +160,5 @@ Debido a un error en los instaladores anteriores, no es posible cambiar las vers
 
 Para cambiar de 1,4 o posterior a 1.3.2 o anterior:
 
-1. [Desinstalación manual de Workbooks e Inspector](#macOS)
+1. [Desinstalación manual de Workbooks e Inspector](#uninstall-macos)
 2. Ejecute el 1.3.2 o una versión anterior `.pkg` instalador

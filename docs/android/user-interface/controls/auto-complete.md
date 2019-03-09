@@ -1,19 +1,19 @@
 ---
-title: Finalización automática
+title: Autocompletar
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: 134b8e93279dd60f860e44a444e75e0200e66b99
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.openlocfilehash: cf2221380e5ddbd8278cc2d387c6eb185d990c1a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "30764455"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671903"
 ---
-# <a name="auto-complete"></a>Finalización automática
+# <a name="auto-complete"></a>Autocompletar
 
 `AutoCompleteTextView` es un elemento de vista de texto editable que muestra sugerencias de finalización automáticamente mientras el usuario está escribiendo. La lista de sugerencias se muestra en un menú desde el que el usuario puede elegir un elemento que se va a reemplazar el contenido del cuadro de edición con desplegable.
 
@@ -205,5 +205,5 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 *Las partes de esta página son modificaciones en función de trabajo creado y compartido por el Android Open Source Project y usarse de acuerdo con los términos descritos en el* 
  [ *licencia de atribución 2.5 de Creative Commons* ](http://creativecommons.org/licenses/by/2.5/) *. En este tutorial se basa en el* 
- [ *tutorial Android autocompletado*](http://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
+ [ *tutorial Android autocompletado*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
  *.*

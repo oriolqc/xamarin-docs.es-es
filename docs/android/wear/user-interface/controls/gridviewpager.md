@@ -1,25 +1,25 @@
 ---
-title: FilterUserControl
+title: GridViewPager
 ms.prod: xamarin
 ms.assetid: A1CDD5F0-049B-4DFA-A268-8A875D26A675
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/02/2018
-ms.openlocfilehash: 1cb71fa2c73b9ab151555559b22def4be1cf5c73
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 81bb4e302f81b58eec91ea2a2aef985adbf72e2c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112772"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670927"
 ---
-# <a name="gridviewpager"></a>FilterUserControl
+# <a name="gridviewpager"></a>GridViewPager
 
 El [FilterUserControl](https://developer.xamarin.com/samples/GridViewPager/) ejemplo muestra cómo implementar el patrón de navegación selector 2D para Android Wear.
 
 ![Captura de pantalla de ejemplo de FilterUserControl en una pantalla cuadrada](gridviewpager-images/gridviewpager.png)
 
-En primer lugar agregue el [soporte de Xamarin Android Wear](http://www.nuget.org/packages/Xamarin.Android.Wear/) paquete NuGet al proyecto.
+En primer lugar agregue el [soporte de Xamarin Android Wear](https://www.nuget.org/packages/Xamarin.Android.Wear/) paquete NuGet al proyecto.
 
 El diseño XML este aspecto:
 
@@ -31,8 +31,8 @@ El diseño XML este aspecto:
     android:keepScreenOn="true" />
 ```
 
-Crear un [`GridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
-(o una subclase, como [`FragmentGridPagerAdapter`](http://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
+Crear un [`GridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/GridPagerAdapter.html)
+(o una subclase, como [`FragmentGridPagerAdapter`](https://developer.android.com/reference/android/support/wearable/view/FragmentGridPagerAdapter.html)
 para proporcionar vistas para mostrar que el usuario navega.
 
 El [adaptador de ejemplo](https://github.com/xamarin/monodroid-samples/blob/master/wear/GridViewPager/GridViewPager/SimpleGridPagerAdapter.cs) se muestra cómo implementar los métodos necesarios, incluidas las invalidaciones para `RowCount`, `GetColumnCount`, `GetBackground`, y `GetFragment`
@@ -49,4 +49,4 @@ pager.Adapter = new SimpleGridPagerAdapter (this, FragmentManager);
 
 - [Documento de selector 2D de Google](https://developer.android.com/training/wearables/ui/2d-picker.html)
 - [Android.support.wearable docs](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
-- [FilterUserControl (ejemplo)](https://developer.xamarin.com/samples/GridViewPager/)
+- [GridViewPager (sample)](https://developer.xamarin.com/samples/GridViewPager/)

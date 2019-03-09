@@ -1,18 +1,13 @@
 ---
 title: Introducción a Java
-description: Este documento describe cómo empezar a usar la inserción de .NET con Java. Describe los requisitos del sistema, instalación y las plataformas compatibles.
+description: 'Este documento describe cómo empezar a usar la inserción de .NET con Java. Describe los requisitos del sistema, instalación y las plataformas compatibles.'
 ms.prod: xamarin
 ms.assetid: B9A25E9B-3EC2-489A-8AD3-F78287609747
 author: lobrien
 ms.author: laobri
 ms.date: 03/28/2018
-ms.openlocfilehash: 74146378d2ee534b357abd73ff7e1563a49a7e4a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121755"
 ---
+
 # <a name="getting-started-with-java"></a>Introducción a Java
 
 Se trata de la página de introducción para Java, que cubre los aspectos básicos para todas las plataformas compatibles.
@@ -22,7 +17,7 @@ Se trata de la página de introducción para Java, que cubre los aspectos básic
 Para usar la inserción de .NET con Java, necesitará:
 
 * Java 1.8 o posterior
-* [Mono 5.0](http://www.mono-project.com/download/)
+* [Mono 5.0](https://www.mono-project.com/download/)
 
 Para Mac:
 

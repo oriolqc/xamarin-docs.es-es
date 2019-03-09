@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 24d73bfcc28601f6a7ebbecb71d8c0e9f6864ac3
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 07bcbfe046fd689e08eed4e64495b56d083ceeb8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675346"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671525"
 ---
 # <a name="using-json-to-create-a-user-interface-in-xamarinios"></a>Uso de JSON para crear una interfaz de usuario en Xamarin.iOS
 
@@ -169,7 +169,7 @@ En este artículo se ha explicado cómo crear una mediante la interfaz con el de
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MTDJsonDemo (ejemplo)](https://developer.xamarin.com/samples/MTDJsonDemo/)
+- [MTDJsonDemo (sample)](https://developer.xamarin.com/samples/MTDJsonDemo/)
 - [Presentación en pantalla: Miguel de Icaza crea una pantalla de inicio de sesión de iOS con MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)
 - [Presentación en pantalla - crear fácilmente interfaces de usuario de iOS con MonoTouch.Dialog](http://youtu.be/j7OC5r8ZkYg)
 - [Introducción a MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)
@@ -177,5 +177,5 @@ En este artículo se ha explicado cómo crear una mediante la interfaz con el de
 - [Tutorial sobre la API de reflexión](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [Cuadro de diálogo de MonoTouch en Github](https://github.com/migueldeicaza/MonoTouch.Dialog)
 - [Aplicación TweetStation](https://github.com/migueldeicaza/TweetStation)
-- [Referencia de clase UITableViewController](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [Referencia de clase UINavigationController](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [Referencia de clase UITableViewController](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [Referencia de clase UINavigationController](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

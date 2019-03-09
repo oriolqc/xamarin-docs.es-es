@@ -6,12 +6,12 @@ ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
 author: lobrien
 ms.author: laobri
 ms.date: 03/23/2017
-ms.openlocfilehash: f9d6775b5d31aa98087b8b8cb6aa1401429afd96
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7f66c97ce4b7880d32dfd87aec0691a26a08cfd2
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120689"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669432"
 ---
 # <a name="using-jenkins-with-xamarin"></a>Uso de Jenkins con Xamarin
 
@@ -153,7 +153,7 @@ En el orden de una estación de trabajo de macOS interactuar con un servidor de 
     ```
     $ tf
     Team Explorer Everywhere Command Line Client (version 11.0.0.201306181526)
-    
+
     Available commands and their options:
     ```
 
@@ -230,7 +230,7 @@ La primera tarea Jenkins es recuperar el código fuente desde el sistema de admi
 
 #### <a name="using-git-for-source-code-control"></a>Uso de Git para Control de código fuente
 
-Si está utilizando TFS para el control de código fuente [omitir](#Using_TFS_for_Source_Code_Management) esta sección y vaya a la sección siguiente con TFS.
+Si está utilizando TFS para el control de código fuente [omitir](#Using-TFS-for-Source-Code-Management) esta sección y vaya a la sección siguiente con TFS.
 
 Jenkins es compatible con Git desde el principio: no hay complementos adicionales son necesarias. Para usar Git, haga clic en el **Git** botón de radio y escriba la dirección URL para el repositorio de Git, como se muestra en la captura de pantalla siguiente:
 

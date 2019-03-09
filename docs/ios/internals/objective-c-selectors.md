@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/12/2017
-ms.openlocfilehash: 5d3c8b6bd8f7f788a1de74feddf7fcb378fa5818
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: cf39d548dc83fae67e8703d42e9387b8f19504e6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233645"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669758"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Selectores de Objective-C en Xamarin.iOS
 
 Se basa en el lenguaje de Objective-C *selectores*. Un selector es un mensaje que se puede enviar a un objeto o un *clase*. [Xamarin.iOS](~/ios/internals/api-design/index.md) mapas selectores a los métodos de instancia de la instancia y los selectores de métodos estáticos de clase.
 
-A diferencia de las funciones de C normales (y como funciones miembro de C++), no se puede invocar directamente un selector utilizando [P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/) en su lugar, los selectores se envían a una clase de Objective-C o la instancia mediante el [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
+A diferencia de las funciones de C normales (y como funciones miembro de C++), no se puede invocar directamente un selector utilizando [P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/) en su lugar, los selectores se envían a una clase de Objective-C o la instancia mediante el [`objc_msgSend`](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
 función.
 
 Para obtener más información acerca de los mensajes en Objective-C, eche un vistazo a Apple [trabajar con objetos](https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ProgrammingWithObjectiveC/WorkingwithObjects/WorkingwithObjects.html#//apple_ref/doc/uid/TP40011210-CH4-SW2) guía.

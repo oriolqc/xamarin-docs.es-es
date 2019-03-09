@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/14/2016
-ms.openlocfilehash: 7066acc82603b1c74dea2b7f0050bc63c46316f1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: de04a2d7f42ec36c464c75ced73bf8f8029ec1da
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122238"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672617"
 ---
 # <a name="hello-watchos--walkthrough"></a>Hola, watchOS: tutorial
 
@@ -160,4 +160,4 @@ Enhorabuena, ha obtenido por sí mismo una aplicación de inspección.
 
 - [Introducción (ejemplo)](https://developer.xamarin.com/samples/monotouch/WatchKit/GettingStarted/)
 - [Configuración e instalación](~/ios/watchos/get-started/installation.md)
-- [Primer vídeo de la aplicación del reloj](http://blog.xamarin.com/your-first-watch-kit-app/)
+- [Primer vídeo de la aplicación del reloj](https://blog.xamarin.com/your-first-watch-kit-app/)

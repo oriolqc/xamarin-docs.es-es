@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: df8ee3da8a1341cd1dd879e8e70687d9fbd9957b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 63cbe556783ffe22512ff5312817d522120bd15e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117439"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670576"
 ---
 # <a name="creating-resources-for-varying-screens"></a>Creación de recursos para diferentes pantallas
 
@@ -30,7 +30,7 @@ Unos términos y conceptos son importantes para comprender para admitir varias p
 
 - **Independiente de la densidad de píxeles (dp)** &ndash; una unidad virtual de medida para permitir que los diseños diseñarse independientes de densidad. Esta fórmula se utiliza para convertir dp en píxeles de pantalla:
 
-    px &equals; dp &times; PPP &divide; 160
+    px &equals; dp &times; dpi &divide; 160
 
 - **Orientación** &ndash; orientación de la pantalla se considera horizontal cuando resulta más ancha alta. En cambio, orientación vertical es cuando la pantalla es más alta ancha. Puede cambiar la orientación durante la vigencia de una aplicación como el usuario gira el dispositivo.
 
@@ -50,7 +50,7 @@ Sin embargo, es posible que el escalado hará que se ve borroso de mapas de bits
 
 ### <a name="declare-the-supported-screen-size"></a>Declara el tamaño de pantalla compatibles
 
-Declarar el tamaño de pantalla, se garantiza que solo los dispositivos compatibles pueden descargar la aplicación. Esto se consigue estableciendo la [admite pantallas](http://developer.android.com/guide/topics/manifest/supports-screens-element.html) elemento en el **AndroidManifest.xml** archivo. Este elemento se utiliza para especificar qué tamaños de pantalla son compatibles con la aplicación. Se considera una pantalla dada se admite si la aplicación puede colocar correctamente sus diseños para rellenar la pantalla. Mediante el uso de este elemento del manifiesto, la aplicación no se mostrará en [ *Google Play* ](https://play.google.com/) para dispositivos que no cumplen las especificaciones de la pantalla. Sin embargo, la aplicación se ejecutará en dispositivos con pantallas no compatibles, pero los diseños que pueden aparecer borrosos y pixelada.
+Declarar el tamaño de pantalla, se garantiza que solo los dispositivos compatibles pueden descargar la aplicación. Esto se consigue estableciendo la [admite pantallas](https://developer.android.com/guide/topics/manifest/supports-screens-element.html) elemento en el **AndroidManifest.xml** archivo. Este elemento se utiliza para especificar qué tamaños de pantalla son compatibles con la aplicación. Se considera una pantalla dada se admite si la aplicación puede colocar correctamente sus diseños para rellenar la pantalla. Mediante el uso de este elemento del manifiesto, la aplicación no se mostrará en [ *Google Play* ](https://play.google.com/) para dispositivos que no cumplen las especificaciones de la pantalla. Sin embargo, la aplicación se ejecutará en dispositivos con pantallas no compatibles, pero los diseños que pueden aparecer borrosos y pixelada.
 
 Pantalla compatibles descubiertos seises se declaran en el **Properites/AndroidManifest.xml** archivo de la solución:
 
@@ -64,7 +64,7 @@ Pantalla compatibles descubiertos seises se declaran en el **Properites/AndroidM
 
 -----
 
-Editar **AndroidManifest.xml** para incluir [admite pantallas](http://developer.android.com/guide/topics/manifest/supports-screens-element.html):
+Editar **AndroidManifest.xml** para incluir [admite pantallas](https://developer.android.com/guide/topics/manifest/supports-screens-element.html):
 
 ```xml
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
@@ -178,7 +178,7 @@ Este sitio Web le ayudará con la creación de mapas de bits que tienen como des
 
 Android se ejecuta en un número de dispositivos desconcertante, y la combinación de tamaños de pantalla y densidades de pantalla puede parecer abrumador. Las siguientes sugerencias pueden ayudar a minimizar el esfuerzo necesario para admitir varios dispositivos:
 
-- **Solo se diseñan y desarrollan por lo que necesita** &ndash; hay muchos dispositivos diferentes ahí fuera, pero algunos existen en factores de forma poco frecuentes que pueden tardar un esfuerzo significativo para diseñar y desarrollar para. El [ **tamaño de pantalla y la densidad** ](http://developer.android.com/resources/dashboard/screens.html) panel es una página de Google que proporciona datos sobre el desglose de la matriz de densidad de pantalla o el tamaño de pantalla. Este desglose proporciona información sobre cómo el esfuerzo de desarrollo sobre la compatibilidad con pantallas.
+- **Solo se diseñan y desarrollan por lo que necesita** &ndash; hay muchos dispositivos diferentes ahí fuera, pero algunos existen en factores de forma poco frecuentes que pueden tardar un esfuerzo significativo para diseñar y desarrollar para. El [ **tamaño de pantalla y la densidad** ](https://developer.android.com/resources/dashboard/screens.html) panel es una página de Google que proporciona datos sobre el desglose de la matriz de densidad de pantalla o el tamaño de pantalla. Este desglose proporciona información sobre cómo el esfuerzo de desarrollo sobre la compatibilidad con pantallas.
 
 - **Utilice DPs en lugar de píxeles** -píxeles se convierten en problemáticos como cambios de densidad de pantalla. No codificar valores en píxeles. Evite los píxeles en favor de dp (independientes de la densidad de píxeles).
 

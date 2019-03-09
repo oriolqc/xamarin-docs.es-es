@@ -1,19 +1,14 @@
 ---
 title: Imágenes e iconos en Xamarin.iOS
-description: Esta sección incluye una variedad de artículos que tratan cómo trabajar con imágenes en una aplicación de Xamarin.iOS, como el uso de ellos como iconos, pantallas de inicio o incluido ellos en los controles y proporcionar iconos para tipos de documento personalizadas.
+description: 'Esta sección incluye una variedad de artículos que tratan cómo trabajar con imágenes en una aplicación de Xamarin.iOS, como el uso de ellos como iconos, pantallas de inicio o incluido ellos en los controles y proporcionar iconos para tipos de documento personalizadas.'
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 09afcac8dcecd5a1d05961c2981c0940fff00a01
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102365"
 ---
+
 # <a name="images-and-icons-in-xamarinios"></a>Imágenes e iconos en Xamarin.iOS
 
 _Esta sección incluye una variedad de artículos que tratan cómo trabajar con imágenes en una aplicación de Xamarin.iOS, como el uso de ellos como iconos, pantallas de inicio o incluido ellos en los controles y proporcionar iconos para tipos de documento personalizadas._
@@ -66,4 +61,4 @@ Este plano de artículo incluido y administrar un recurso de imagen en una aplic
 
 - [Trabajar con imágenes (ejemplo)](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Icono personalizado y directrices para la creación de imagen](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)
+- [Icono personalizado y directrices para la creación de imagen](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html)

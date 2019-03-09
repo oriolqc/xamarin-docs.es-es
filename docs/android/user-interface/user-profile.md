@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/22/2018
-ms.openlocfilehash: 2d9dc54801c4df084007a2903becf0c68bf1c6df
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0613411e5436a0ea8ed08bf4af52dae84a9a701c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109970"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670899"
 ---
 # <a name="user-profile"></a>Perfil de usuario
 
@@ -112,4 +112,4 @@ Trabajar con el perfil de usuario es similar a la interacción con otros datos e
 
 - [ContactsProviderDemo (ejemplo)](https://developer.xamarin.com/samples/monodroid/ContactsProviderDemo/)
 - [Introducción a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma Android de 4.0](http://developer.android.com/sdk/android-4.0.html)
+- [Plataforma Android de 4.0](https://developer.android.com/sdk/android-4.0.html)

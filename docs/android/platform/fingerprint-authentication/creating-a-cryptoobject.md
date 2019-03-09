@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1658934bedce11a42701eb023a42fc9e617b654d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1305a8a1f39d34b5e91e478a769750911afb2b3e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113773"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669662"
 ---
 # <a name="creating-a-cryptoobject"></a>Creación de un CryptoObject
 
@@ -110,13 +110,13 @@ Es importante tener en cuenta que existen algunas situaciones donde Android pued
 * El usuario ha deshabilitado el bloqueo de pantalla.
 * El usuario ha cambiado el bloqueo de pantalla (el tipo de la screenlock o el PIN o el patrón utilizado).
 
-Cuando esto sucede, `Cipher.Init` producirá un [ `KeyPermanentlyInvalidatedException` ](http://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html). El código de ejemplo anterior se intercepta esa excepción, elimine la clave y, a continuación, cree una nueva.
+Cuando esto sucede, `Cipher.Init` producirá un [ `KeyPermanentlyInvalidatedException` ](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html). El código de ejemplo anterior se intercepta esa excepción, elimine la clave y, a continuación, cree una nueva.
 
 La siguiente sección describe cómo crear la clave y almacenarla en el dispositivo.
 
 ## <a name="creating-a-secret-key"></a>Creación de una clave secreta
 
-El `CryptoObjectHelper` clase usa el Android [ `KeyGenerator` ](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/) para crear una clave y almacenarla en el dispositivo. La `KeyGenerator` clase puede crear la clave, pero necesita algunos metadatos sobre el tipo de clave que se va a crear. Esta información se proporciona por una instancia de la [ `KeyGenParameterSpec` ](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) clase. 
+El `CryptoObjectHelper` clase usa el Android [ `KeyGenerator` ](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/) para crear una clave y almacenarla en el dispositivo. La `KeyGenerator` clase puede crear la clave, pero necesita algunos metadatos sobre el tipo de clave que se va a crear. Esta información se proporciona por una instancia de la [ `KeyGenParameterSpec` ](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) clase. 
 
 Un `KeyGenerator` se crea una instancia mediante el `GetInstance` método de fábrica. El código de ejemplo usa el [ _estándar de cifrado avanzado_ ](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (_AES_) como el algoritmo de cifrado. AES se dividir los datos en bloques de un tamaño fijo y se cifrarán cada uno de los bloques.
 
@@ -160,12 +160,12 @@ Ahora que hemos visto cómo crear un `CryptoObject`, permite pasar a ver cómo e
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Cifrado](https://developer.xamarin.com/api/type/Javax.Crypto.Cipher/)
-- [FingerprintManager.CryptoObject](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
-- [FingerprintManagerCompat.CryptoObject](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
+- [FingerprintManager.CryptoObject](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
+- [FingerprintManagerCompat.CryptoObject](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
 - [KeyGenerator](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/)
-- [KeyGenParameterSpec](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
-- [KeyGenParameterSpec.Builder](http://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
-- [KeyPermanentlyInvalidatedException](http://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)
-- [KeyProperties](http://developer.android.com/reference/android/security/keystore/KeyProperties.html)
+- [KeyGenParameterSpec](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
+- [KeyGenParameterSpec.Builder](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
+- [KeyPermanentlyInvalidatedException](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)
+- [KeyProperties](https://developer.android.com/reference/android/security/keystore/KeyProperties.html)
 - [AES](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard)
 - [RFC 2315 - PCKS #7](https://tools.ietf.org/html/rfc2315)

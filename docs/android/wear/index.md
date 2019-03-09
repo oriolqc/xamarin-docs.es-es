@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
-ms.openlocfilehash: 75b78f27fd6b3a726de9075ce36364168401ec60
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52171483"
 ---
+
 # <a name="android-wear"></a>Android Wear
 
 Android Wear es una versión de Android que está diseñado para dispositivos portátiles, como relojes inteligentes. Esta sección incluye instrucciones sobre cómo instalar y configurar las herramientas necesarias para el desarrollo de desgaste, un tutorial paso a paso para crear el primer dispositivo Wear y una lista de ejemplos que se pueden consultar para crear su propia desgaste de las aplicaciones.
@@ -64,21 +59,21 @@ Consulte estos vídeos los vínculos que tratan de Xamarin.Android con desgaste 
 
 |Descripción|Captura de pantalla|
 |--- |--- |
-|[Android L y mucho más](http://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; The Android L Developer Preview se introdujo una enorme cantidad de nuevas API para los desarrolladores pueden aprovechar, incluido Material Design, notificaciones y las animaciones nuevas, entre otras.|![Captura de pantalla de vídeo de presentación](images/video-android-l.png)|
-|[C#en mis oídos y en los ojos: Google Glass y Android Wear](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; portátiles informática puede parecer algo en el futuro (o un episodio de Inspector Gadget), pero muchas personas ya están adoptando el futuro hoy mismo! C#los desarrolladores saben y ya tienen las herramientas y los conocimientos necesarios para aprovechar la eficacia de los dispositivos portátiles (desde evolucionan 2014).|![Captura de pantalla de vídeo de presentación](images/video-eyes-ears.png)|
+|[Android L y mucho más](https://blog.xamarin.com/webinar-recording-android-l-and-so-much-more/) &ndash; The Android L Developer Preview se introdujo una enorme cantidad de nuevas API para los desarrolladores pueden aprovechar, incluido Material Design, notificaciones y las animaciones nuevas, entre otras.|![Captura de pantalla de vídeo de presentación](images/video-android-l.png)|
+|[C#está en mis oídos y en los ojos: Google Glass y Android Wear](https://www.youtube.com/watch?v=80H8tXByZQc) &ndash; portátiles informática puede parecer algo en el futuro (o un episodio de Inspector Gadget), pero muchas personas ya están adoptando el futuro hoy mismo! C#los desarrolladores saben y ya tienen las herramientas y los conocimientos necesarios para aprovechar la eficacia de los dispositivos portátiles (desde evolucionan 2014).|![Captura de pantalla de vídeo de presentación](images/video-eyes-ears.png)|
 |[Novedades de Xamarin.Android](https://www.youtube.com/watch?v=Gpqc2XZIQfU) &ndash; L Android, Android Wear, Android TV, Android Auto, Material Design y arte; ¿qué hace este significa para usted como desarrollador de Xamarin? desde 2014 evolucionan.|![Captura de pantalla de vídeo de presentación](Images/video-whats-new.png)|
 
 
 <!--
 
 March 18
-http://blog.xamarin.com/android-wear/
+https://blog.xamarin.com/android-wear/
 
 August 14
-http://blog.xamarin.com/android-l-developer-preview-android-wear-support/
+https://blog.xamarin.com/android-l-developer-preview-android-wear-support/
 
 August 27
-http://blog.xamarin.com/tips-for-your-first-android-wear-app/
+https://blog.xamarin.com/tips-for-your-first-android-wear-app/
 
 Watch Face
 https://github.com/Redth/Xamarin.Wear.WatchFace

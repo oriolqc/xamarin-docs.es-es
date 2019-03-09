@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: 42ec5ddb6846ccf733f2bf18812f43e7afd45f34
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 92c068ceb3d382ed4612318dc987d950ec7e7ef2
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058583"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672552"
 ---
 # <a name="sending-push-notifications-from-azure-mobile-apps"></a>Envío de notificaciones Push desde aplicaciones móviles de Azure
 
@@ -58,7 +58,7 @@ Para obtener más información sobre Azure Notification Hubs, consulte [Azure No
 El proceso para integrar un centro de notificaciones de Azure en una instancia de Azure Mobile Apps es como sigue:
 
 1. Cree una instancia de Azure Mobile Apps. Para obtener más información, consulte [consumir una aplicación móvil de Azure](~/xamarin-forms/data-cloud/consuming/azure.md).
-1. Configurar un centro de notificaciones. Para obtener más información, consulte [configurar un centro de notificaciones](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#create-hub).
+1. Configurar un centro de notificaciones. Para obtener más información, consulte [configurar un centro de notificaciones](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#configure-hub).
 1. Actualizar la instancia de Azure Mobile Apps para enviar notificaciones de inserción. Para obtener más información, consulte [actualizar el proyecto de servidor para enviar notificaciones push](/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started-push#update-the-server-project-to-send-push-notifications).
 1. Registrar con cada PNS.
 1. Configurar el centro de notificaciones para comunicarse con cada PNS.

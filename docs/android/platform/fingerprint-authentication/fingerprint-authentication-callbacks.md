@@ -1,19 +1,19 @@
 ---
-title: Responder a las devoluciones de llamada de autenticación
+title: Respuesta a las devoluciones de llamada de autenticación
 ms.prod: xamarin
 ms.assetid: 6533AFC9-1A1C-4897-A154-4D4ECFE27761
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/06/2017
-ms.openlocfilehash: 17a1c94ad3b9bde67537ea7113352f0fc10d2a08
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c720a30a59eea8f1ed74033da8d1c045a1fb9109
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110126"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666871"
 ---
-# <a name="responding-to-authentication-callbacks"></a>Responder a las devoluciones de llamada de autenticación
+# <a name="responding-to-authentication-callbacks"></a>Respuesta a las devoluciones de llamada de autenticación
 
 El escáner de huella digital se ejecuta en segundo plano en su propio subproceso, y cuando haya finalizado notificará los resultados del análisis mediante la invocación de un método de `FingerprintManager.AuthenticationCallback` en el subproceso de interfaz de usuario. Una aplicación Android debe proporcionar su propio controlador que amplía esta clase abstracta, implementar todos los métodos siguientes:
 
@@ -101,7 +101,7 @@ Tenga en cuenta que `OnAuthenticationError` se invocará cuando se cancela el ex
 
 ## <a name="help-codes-and-error-message-ids"></a>Ayuda de códigos y los identificadores de mensaje de Error 
 
-Pueden encontrar una lista y una descripción de los códigos de error y ayuda en la [documentación del SDK de Android](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) para la clase FingerprintManager. Xamarin.Android representa estos valores con el `Android.Hardware.Fingerprints.FingerprintState` enum:
+Pueden encontrar una lista y una descripción de los códigos de error y ayuda en la [documentación del SDK de Android](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) para la clase FingerprintManager. Xamarin.Android representa estos valores con el `Android.Hardware.Fingerprints.FingerprintState` enum:
 
 
 -   **`AcquiredGood`** &ndash; (valor 0) La imagen que se adquirió ha sido buena.
@@ -156,5 +156,5 @@ Pueden encontrar una lista y una descripción de los códigos de error y ayuda e
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Cifrado](https://docs.oracle.com/javase/7/docs/api/javax/crypto/Cipher.html)
-- [AuthenticationCallback](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html)
-- [AuthenticationCallback](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.AuthenticationCallback.html)
+- [AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html)
+- [AuthenticationCallback](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.AuthenticationCallback.html)

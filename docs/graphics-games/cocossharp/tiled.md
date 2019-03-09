@@ -6,12 +6,12 @@ ms.assetid: 804C042C-F62A-4E6C-B10F-06528637F0E2
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 4582b59a8a441c9e22761d498126898e66db08c1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8e7ef890af264bb08827d86c635d555184f1ec00
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117933"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672513"
 ---
 # <a name="using-tiled-with-cocossharp"></a>Uso de Tiled con CocosSharp
 
@@ -35,7 +35,7 @@ Mapas de mosaico han existido en el desarrollo de juegos durante décadas, pero 
 
 ![](tiled-images/image2.png "Una vista visualizada de cómo se utilizan conjuntos de mosaico mediante la adición de que una cuadrícula en el icono del conjunto que se usará en la demostración")
 
-Icono mapas organizan los iconos de mosaico conjuntos individuales. Debemos mencionar que cada asignación de icono no se necesita almacenar su propia copia del icono set – en su lugar, varios mapas de mosaico pueden hacer referencia el mismo conjunto de icono. Esto significa que, además del conjunto de mosaico, mapas de icono requieren muy poca memoria. Esto permite la creación de un gran número de asignaciones de mosaico, incluso cuando se usan para crear un área de juego grandes, como un [desplazamiento plataformas](http://en.wikipedia.org/wiki/Platform_game) entorno. A continuación muestra con el mismo conjunto de mosaico de organizaciones posibles:
+Icono mapas organizan los iconos de mosaico conjuntos individuales. Debemos mencionar que cada asignación de icono no se necesita almacenar su propia copia del icono set – en su lugar, varios mapas de mosaico pueden hacer referencia el mismo conjunto de icono. Esto significa que, además del conjunto de mosaico, mapas de icono requieren muy poca memoria. Esto permite la creación de un gran número de asignaciones de mosaico, incluso cuando se usan para crear un área de juego grandes, como un [desplazamiento plataformas](https://en.wikipedia.org/wiki/Platform_game) entorno. A continuación muestra con el mismo conjunto de mosaico de organizaciones posibles:
 
 ![](tiled-images/image3.png "Esta imagen muestra organizaciones posibles con el mismo conjunto de icono")
 

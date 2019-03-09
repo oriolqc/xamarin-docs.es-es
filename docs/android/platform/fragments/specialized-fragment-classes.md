@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 1011d74be971a3acba33c8f2f811e8f89e20cfc4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 75d95d630415cdaa4c0c1ed3b8ddebb32b8e3c4d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108449"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670071"
 ---
 # <a name="specialized-fragment-classes"></a>Clases de fragmentos especializadas
 
@@ -191,7 +191,7 @@ public class AlertDialogFragment : DialogFragment
 
 ## <a name="preferencefragment"></a>PreferenceFragment
 
-Para ayudar a administrar las preferencias, proporciona la API de fragmentos el `PreferenceFragment` subclase. El `PreferenceFragment` es similar a la [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash; mostrará una jerarquía de las preferencias para el usuario en un fragmento. Cuando el usuario interactúa con las preferencias, se guardarán automáticamente en [SharedPreferences](http://developer.android.com/reference/android/content/SharedPreferences.html).
+Para ayudar a administrar las preferencias, proporciona la API de fragmentos el `PreferenceFragment` subclase. El `PreferenceFragment` es similar a la [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash; mostrará una jerarquía de las preferencias para el usuario en un fragmento. Cuando el usuario interactúa con las preferencias, se guardarán automáticamente en [SharedPreferences](https://developer.android.com/reference/android/content/SharedPreferences.html).
 En Android 3.0 o aplicaciones de mayor, utilice el `PreferenceFragment` para tratar con las preferencias en las aplicaciones. En la siguiente imagen muestra un ejemplo de un `PreferenceFragment`:
 
 [![Ejemplo PreferencesFragment con inline, cuadro de diálogo y las preferencias de inicio](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)

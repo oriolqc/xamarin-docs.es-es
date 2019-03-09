@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 775f378be383674e2bf90e2e8a72d82033ef0fbf
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 8edabfc6fa3988af0dd38dbfd9daeb1c4003c33e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675262"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670771"
 ---
 # <a name="monotouchdialog-json-markup"></a>Marcado Json de MonoTouch.Dialog
 
@@ -346,7 +346,7 @@ Esto lo hará con una sola entrada.
  <a name="textcolor" />
 
 
-### <a name="textcolor"></a>TextColor
+### <a name="textcolor"></a>textcolor
 
 El color que se utilizará para el texto.
 
@@ -476,7 +476,7 @@ El texto de sugerencia que se muestra cuando la entrada tiene un valor vacío.
  <a name="return-key" />
 
 
-### <a name="return-key"></a>tecla de retorno
+### <a name="return-key"></a>return-key
 
 La etiqueta utilizada para la tecla ENTRAR. Los valores posibles son:
 
@@ -545,6 +545,6 @@ Puede crear una celda que cuando se puntea insertará un UIWebView que represent
 {
         "type": "html",
         "caption": "Miguel's blog",
-        "url": "http://tirania.org/blog" 
+        "url": "https://tirania.org/blog" 
 }
 ```

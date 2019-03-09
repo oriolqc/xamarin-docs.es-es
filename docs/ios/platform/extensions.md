@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 10b692099bae6f444474394144eb7e8bb46d749f
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: e02d7a13a1fd5b554943f9facd6c9f120096a6a5
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233931"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667820"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensiones de iOS de Xamarin.iOS
 
@@ -45,7 +45,7 @@ Las extensiones tienen una serie de limitaciones, algunos de los cuales son comu
 Las limitaciones universales son:
 
 - El [Kit Health](~/ios/platform/healthkit.md) y [la interfaz de usuario del Kit de evento](~/ios/platform/eventkit.md) marcos de trabajo no están disponibles
-- No se pueden usar las extensiones [extendidos modos en segundo plano](http://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
+- No se pueden usar las extensiones [extendidos modos en segundo plano](https://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
 - Las extensiones no pueden acceder a los micrófonos o cámaras del dispositivo (aunque es posible que acceden a los archivos multimedia existentes)
 - Las extensiones no pueden recibir datos de aire Drop (aunque pueden transmitir datos a través de aire Drop)
 - [UIActionSheet](xref:UIKit.UIActionSheet) y [UIAlertView](xref:UIKit.UIAlertView) no están disponibles; deben usar las extensiones [UIAlertController](xref:UIKit.UIAlertController)
@@ -71,11 +71,11 @@ Si elige una de la aplicación de extensiones, su `UIViewController` se creará 
 
 Las extensiones pueden comunicarse con sus aplicaciones de Host a través de un [NSExtensionContext](xref:Foundation.NSExtensionContext) objeto. Algunas extensiones tienen las operaciones que reciben las devoluciones de llamada asincrónicas con los resultados. Estas devoluciones de llamada se ejecutará en subprocesos en segundo plano y la extensión debe tener esto en cuenta; Por ejemplo, mediante el uso de [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) si desean actualizar la interfaz de usuario. Consulte la [comunicarse con la aplicación Host](#Communicating-with-the-Host-App) sección para obtener más detalles.
 
-De forma predeterminada, las extensiones y sus aplicaciones de contenedor no pueden comunicarse, a pesar de que se instalan conjuntamente. En algunos casos, la aplicación de contenedor es básicamente un contenedor "shipping" vacío se sirve cuyo propósito una vez que la extensión está instalada. Sin embargo, si las circunstancias, la aplicación de contenedor y la extensión pueden compartir los recursos de un área común. Además, un **hoy extensión** puede solicitar su aplicación de contenedor para abrir una dirección URL. Este comportamiento se muestra en el [evolucionar Countdown Widget](http://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
+De forma predeterminada, las extensiones y sus aplicaciones de contenedor no pueden comunicarse, a pesar de que se instalan conjuntamente. En algunos casos, la aplicación de contenedor es básicamente un contenedor "shipping" vacío se sirve cuyo propósito una vez que la extensión está instalada. Sin embargo, si las circunstancias, la aplicación de contenedor y la extensión pueden compartir los recursos de un área común. Además, un **hoy extensión** puede solicitar su aplicación de contenedor para abrir una dirección URL. Este comportamiento se muestra en el [evolucionar Countdown Widget](https://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
 
 ## <a name="creating-an-extension"></a>Creación de una extensión
 
-Extensiones (y sus aplicaciones de contenedor) deben ser archivos binarios de 64 bits y compiladas con Xamarin.iOS [API unificadas](http://developer.xamarin.com/guides/cross-platform/macios/unified). Al desarrollar una extensión, las soluciones contendrá al menos dos proyectos: la aplicación de contenedor y un proyecto para cada contenedor de la extensión proporciona. 
+Extensiones (y sus aplicaciones de contenedor) deben ser archivos binarios de 64 bits y compiladas con Xamarin.iOS [API unificadas](https://developer.xamarin.com/guides/cross-platform/macios/unified). Al desarrollar una extensión, las soluciones contendrá al menos dos proyectos: la aplicación de contenedor y un proyecto para cada contenedor de la extensión proporciona. 
 
 ### <a name="container-app-project-requirements"></a>Requisitos del proyecto de aplicación de contenedor
 

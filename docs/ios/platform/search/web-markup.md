@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 243408ce6e2236b75ea35dfd17633a9a24493c1b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4ee07e4b47ed9e1bdca0efc814ad44e513f68e80
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50102807"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672370"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Búsqueda con marcado Web en Xamarin.iOS
 
@@ -163,7 +163,7 @@ Apple actualmente admite los siguientes tipos de esquema de schema.org:
  - InteractionCount
  - Ofertas
  - Organización
- - Rangoprecio
+ - PriceRange
  - Receta
  - SearchAction
 
@@ -209,7 +209,7 @@ Por último, el siguiente código HTML agregaría una acción para obtener instr
 
 ```
 
-Para obtener más información, consulte Apple [sitio para desarrolladores de aplicación de búsqueda](http://developer.apple.com/ios/search/).
+Para obtener más información, consulte Apple [sitio para desarrolladores de aplicación de búsqueda](https://developer.apple.com/ios/search/).
 
 
 

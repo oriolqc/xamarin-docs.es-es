@@ -1,5 +1,5 @@
 ---
-title: ¿Qué controladores USB es necesario depurar Android en Windows?
+title: ¿Qué controladores USB son necesario para depurar Android en Windows?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 36EC7341-A2A4-409C-BD4F-330BAC505123
@@ -7,20 +7,20 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: 8b996a1cc89acedc47c7169ec579dfb99dae788f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 85045967f5c63eb39c45f917b957d2a393a3a068
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114540"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670303"
 ---
-# <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>¿Qué controladores USB es necesario depurar Android en Windows?
+# <a name="what-usb-drivers-do-i-need-to-debug-android-on-windows"></a>¿Qué controladores USB son necesario para depurar Android en Windows?
 
 ## <a name="finding-usb-drivers"></a>Buscar controladores USB
 
-Para depurar en un dispositivo Android al desarrollar en Windows; deberá instalar a un controlador USB compatible. Android SDK Manager incluye "Controlador USB de Google" de forma predeterminada, lo que agrega compatibilidad para dispositivos de Nexus como se describe aquí: [http://developer.android.com/sdk/win-usb.html](http://developer.android.com/sdk/win-usb.html)
+Para depurar en un dispositivo Android al desarrollar en Windows; deberá instalar a un controlador USB compatible. Android SDK Manager incluye "Controlador USB de Google" de forma predeterminada, lo que agrega compatibilidad para dispositivos de Nexus como se describe aquí: [https://developer.android.com/sdk/win-usb.html](https://developer.android.com/sdk/win-usb.html)
 
-Otros dispositivos requieren controladores USB específicamente publicados por el fabricante del dispositivo. En esta guía se incluyen algunos vínculos para los fabricantes más comunes: [http://developer.android.com/tools/extras/oem-usb.html](http://developer.android.com/tools/extras/oem-usb.html)
+Otros dispositivos requieren controladores USB específicamente publicados por el fabricante del dispositivo. En esta guía se incluyen algunos vínculos para los fabricantes más comunes: [https://developer.android.com/tools/extras/oem-usb.html](https://developer.android.com/tools/extras/oem-usb.html)
 
 ## <a name="alternatives"></a>Alternativas
 

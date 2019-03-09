@@ -1,19 +1,14 @@
 ---
 title: Introducción a MonoTouch.Dialog para Xamarin.iOS
-description: Este documento describe MonoTouch.Dialog (destino maestro. (D), un marco para el desarrollo de la interfaz de usuario rápida y declarativa con Xamarin.iOS. Describe cómo usar las APIs MonoTouch.Dialog para crear una interfaz en código o JSON y usar características como la incorporación de cambios para actualizar, búsqueda, carga de la imagen de fondo y mucho más.
+description: 'Este documento describe MonoTouch.Dialog (destino maestro. (D), un marco para el desarrollo de la interfaz de usuario rápida y declarativa con Xamarin.iOS. Describe cómo usar las APIs MonoTouch.Dialog para crear una interfaz en código o JSON y usar características como la incorporación de cambios para actualizar, búsqueda, carga de la imagen de fondo y mucho más.'
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: c291a440a1937d2b0f1c229e3fa969caedba9ab9
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675463"
 ---
+
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introducción a MonoTouch.Dialog para Xamarin.iOS
 
 MonoTouch.Dialog, que se conoce como el destino maestro. D para abreviar, es un Kit de herramientas de desarrollo de la interfaz de usuario rápida que permite a los desarrolladores crear pantallas de la aplicación y la navegación mediante información en lugar de la tarea de creación de controladores de vistas, tablas, etcetera. Por lo tanto, proporciona una simplificación significativa de reducción de desarrollo y el código de interfaz de usuario. Por ejemplo, considere la siguiente captura de pantalla:
@@ -55,7 +50,7 @@ Por ejemplo, cada vez que se necesita una tabla, se necesita un origen de datos 
 DESTINO MAESTRO. D. simplifica encapsular todo el código en una API genérica para la creación de la tabla. A continuación, proporciona una abstracción por encima de esa API que permite que un objeto declarativas enlace sintaxis que facilita aún más. Por lo tanto, hay dos API disponible en el destino maestro. D:
 
 -   **API de bajo nivel elementos** : el *Elements API* se basa en la creación de un árbol jerárquico de los elementos que representan las pantallas y sus componentes. La API de elementos proporciona a los desarrolladores la máxima flexibilidad y control en la creación de interfaces de usuario. Además, la API de elementos ha avanzado compatibilidad con definición declarativa a través de JSON, que permite la declaración increíblemente rápido, así como la generación dinámica de la interfaz de usuario desde un servidor. 
--   **API de reflexión de alto nivel** : también conocido como el *enlace**API* , en las clases que se anotan con sugerencias de interfaz de usuario y, a continuación, el destino maestro. D. crea las pantallas en función de los objetos y proporciona un enlace entre lo que se muestra (opcionalmente) en pantalla, modificar y el objeto subyacente de seguridad automáticamente.   El ejemplo anterior muestra el uso de la API de reflexión. Esta API no proporciona el control específico que hace de los elementos de la API, pero reduce aún más complejidad creando automáticamente a la jerarquía de elementos en función de atributos de clase. 
+-   **API de reflexión de alto nivel** : también conocido como el *enlace**API* , en las clases que se anotan con sugerencias de interfaz de usuario y, a continuación, el destino maestro. D. crea las pantallas en función de los objetos y proporciona un enlace entre lo que se muestra (opcionalmente) en pantalla, modificar y el objeto subyacente de seguridad automáticamente. El ejemplo anterior muestra el uso de la API de reflexión. Esta API no proporciona el control específico que hace de los elementos de la API, pero reduce aún más complejidad creando automáticamente a la jerarquía de elementos en función de atributos de clase. 
 
 
 DESTINO MAESTRO. D. viene empaquetada con un conjunto grande de creado en los elementos de interfaz de usuario para la creación de la pantalla, pero también reconoce la necesidad de elementos personalizados y los diseños de pantalla de opciones avanzadas. Por lo tanto, la extensibilidad es que una primera clase con las características preparadas en la API. Los desarrolladores pueden ampliar los elementos existentes o crear otros nuevos y, a continuación, se integran sin problemas.
@@ -393,7 +388,7 @@ El `JsonElement` es una subclase de `RootElement` que abarca un `RootElement` pa
 El `JsonElement` es un `RootElement` que se pueden crear instancias de dos formas. Crea una versión un `RootElement` que cargará el contenido a petición. Estos se crean mediante el uso de la `JsonElement` constructores que toman un argumento adicional al final, la dirección url para cargar el contenido de:
 
 ```csharp
-var je = new JsonElement ("Dynamic Data", "http://tirania.org/tmp/demo.json");
+var je = new JsonElement ("Dynamic Data", "https://tirania.org/tmp/demo.json");
 ```
 
 El otro formulario crea los datos desde un archivo local o una existente `System.Json.JsonObject` que ya han analizado:
@@ -591,8 +586,8 @@ Este artículo trata una gran cantidad de información acerca de MonoTouch.Dialo
 - [Presentación en pantalla - crear fácilmente interfaces de usuario de iOS con MonoTouch.Dialog](http://youtu.be/j7OC5r8ZkYg)
 - [Tutorial: creación de una aplicación con Elements API](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [Tutorial: creación de una aplicación con Reflection API](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
-- [Tutorial: uso de un elemento JSON para crear una interfaz de usuario](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
+- [Tutorial: Uso de un elemento JSON para crear una interfaz de usuario](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)
 - [Marcado JSON de MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)
 - [Cuadro de diálogo de MonoTouch en Github](https://github.com/migueldeicaza/MonoTouch.Dialog)
-- [Referencia de clase UITableViewController](http://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
-- [Referencia de clase UINavigationController](http://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)
+- [Referencia de clase UITableViewController](https://developer.apple.com/library/ios/#DOCUMENTATION/UIKit/Reference/UITableViewController_Class/Reference/Reference.html)
+- [Referencia de clase UINavigationController](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UINavigationController_Class/Reference/Reference.html)

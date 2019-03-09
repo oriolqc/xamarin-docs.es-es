@@ -7,13 +7,8 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/08/2017
-ms.openlocfilehash: 5d88ffb44d12ee142314c74ca8e749164cbfe3b9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105966"
 ---
+
 # <a name="tabbed-layouts"></a>Diseños con pestañas
 
 
@@ -34,6 +29,6 @@ Las fichas son un patrón de interfaz de usuario populares en aplicaciones móvi
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Pestañas de material Design -](https://material.io/guidelines/components/tabs.html)- [ActionBar](http://developer.android.com/guide/topics/ui/actionbar.html)
+- [Pestañas de material Design -](https://material.io/guidelines/components/tabs.html)- [ActionBar](https://developer.android.com/guide/topics/ui/actionbar.html)
 - [Paquete de NuGet de compatibilidad con Android biblioteca v7 AppCompat](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
-- [biblioteca de appcompat V7](http://developer.android.com/tools/support-library/features.html#v7-appcompat)
+- [biblioteca de appcompat V7](https://developer.android.com/tools/support-library/features.html#v7-appcompat)

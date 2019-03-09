@@ -1,18 +1,13 @@
 ---
 title: Introducción a Objective-c.
-description: Este documento se describe cómo empezar a usar la inserción de .NET con Objective-C. Describe los requisitos, la instalación de inserción de .NET de NuGet y las plataformas compatibles.
+description: 'Este documento se describe cómo empezar a usar la inserción de .NET con Objective-C. Describe los requisitos, la instalación de inserción de .NET de NuGet y las plataformas compatibles.'
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
-ms.openlocfilehash: c7bac0612679131383d3b89f24904c8083fa925b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103106"
 ---
+
 # <a name="getting-started-with-objective-c"></a>Introducción a Objective-c.
 
 Se trata de la página de introducción para Objective-C, que cubre los aspectos básicos para todas las plataformas compatibles.
@@ -23,7 +18,7 @@ Para usar la inserción de .NET con Objective-C, necesitará un equipo Mac que e
 
 * macOS 10.12 (Sierra) o posterior
 * Xcode 8.3.2 o posterior
-* [Mono 5.0](http://www.mono-project.com/download/)
+* [Mono 5.0](https://www.mono-project.com/download/)
 
 Puede instalar [Visual Studio para Mac](https://visualstudio.microsoft.com/vs/mac/) para editar y compilar su C# código.
 

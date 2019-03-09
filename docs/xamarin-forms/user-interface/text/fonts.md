@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/04/2019
-ms.openlocfilehash: fc989ef73c9248bd359c9b1d35aaa9bdde846690
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 530fcf638454373ae68391e4e11bca85dd2fff63
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557065"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669562"
 ---
 # <a name="fonts-in-xamarinforms"></a>Fuentes de Xamarin.Forms
 
@@ -140,7 +140,7 @@ A continuación, se describen los pasos necesarios para cada plataforma. Cuando 
 ### <a name="ios"></a>iOS
 
 Es posible mostrar una fuente personalizada en primer lugar, lo que garantiza que se carga y, luego, que hace referencia a él por su nombre mediante Xamarin.Forms `Font` métodos.
-Siga las instrucciones de [esta entrada de blog](http://blog.xamarin.com/custom-fonts-in-ios/):
+Siga las instrucciones de [esta entrada de blog](https://blog.xamarin.com/custom-fonts-in-ios/):
 
 1. Agregar el archivo de fuentes con **acción de compilación: BundleResource**, y
 2. Actualización de la **Info.plist** archivo (**fuentes proporcionadas por la aplicación**, o `UIAppFonts`, key), a continuación,

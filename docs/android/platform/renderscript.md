@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 5369542552a41100443c5e91ceca9e110c5c7c3c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8364310d23739c05ff97ea8aa8fa4c56f89ea40c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108735"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670732"
 ---
 # <a name="an-introduction-to-renderscript"></a>Una introducción a Renderscript
 
@@ -20,7 +20,7 @@ _Esta guía presenta Renderscript y explica cómo utilizar el intrínseco Render
 
 ## <a name="overview"></a>Información general
 
-RenderScript es un marco de programación creado por Google con el fin de mejorar el rendimiento de las aplicaciones de Android que requieren muchos recursos informáticos. Es una API basada en bajo nivel, de alto rendimiento [C99](http://en.wikipedia.org/wiki/C99). Dado que es un API que se ejecutará en las CPU, GPU o DSP de bajo nivel, Renderscript es ideal para aplicaciones Android que necesitan realizar alguna de las siguientes:
+RenderScript es un marco de programación creado por Google con el fin de mejorar el rendimiento de las aplicaciones de Android que requieren muchos recursos informáticos. Es una API basada en bajo nivel, de alto rendimiento [C99](https://en.wikipedia.org/wiki/C99). Dado que es un API que se ejecutará en las CPU, GPU o DSP de bajo nivel, Renderscript es ideal para aplicaciones Android que necesitan realizar alguna de las siguientes:
 
 * Gráficos
 * Procesamiento de imágenes

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/12/2018
-ms.openlocfilehash: be96683a2e63ed802169543dcee55a3431e42130
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: e5a5e44a61d352b5de05564ebb7192d21ed83dfa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528811"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668899"
 ---
 # <a name="remote-notifications-with-google-cloud-messaging"></a>Notificaciones remotas con Google Cloud Messaging
 
@@ -617,7 +617,7 @@ GCM, reenvía a su vez, este mensaje a la aplicación cliente. Vamos a crear **M
 
 ### <a name="try-it"></a>¡Inténtelo!
 
-Ahora estamos listos para probar la aplicación cliente. Si usa un emulador o si el dispositivo se comunica con GCM a través de Wi-Fi, debe abrir los siguientes puertos TCP en el firewall obtener a través de los mensajes de GCM: 5228, 5229 y 5230.
+Ahora estamos listos para probar la aplicación cliente. Si usa un emulador o dispositivo se comunica con GCM a través de Wi-Fi, debe abrir los siguientes puertos TCP en el firewall obtener a través de los mensajes de GCM: 5228, 5229 y 5230.
 
 Iniciar la aplicación cliente y vea la ventana de salida. Después de la `RegistrationIntentService` recibe correctamente un registro de token de GCM, la ventana de salida debe mostrar el token con la salida de registro similar al siguiente:
 
@@ -657,7 +657,7 @@ Cuando se abre la Bandeja de notificación para ver las notificaciones, debería
 
 Enhorabuena, la aplicación ha recibido su primera notificación remota.
 
-Tenga en cuenta que ya no se recibirán los mensajes GCM si la aplicación está detenido en vigor. Para reanudar las notificaciones después de una detención de fuerza, la aplicación debe reiniciarse manualmente. Para obtener más información acerca de esta directiva de Android, consulte [iniciar los controles en las aplicaciones detenidas](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) y esto [post de desbordamiento de pila](http://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
+Tenga en cuenta que ya no se recibirán los mensajes GCM si la aplicación está detenido en vigor. Para reanudar las notificaciones después de una detención de fuerza, la aplicación debe reiniciarse manualmente. Para obtener más información acerca de esta directiva de Android, consulte [iniciar los controles en las aplicaciones detenidas](https://developer.android.com/about/versions/android-3.1.html#launchcontrols) y esto [post de desbordamiento de pila](https://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
 
  
 ## <a name="summary"></a>Resumen

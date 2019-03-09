@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: aa522e5226d78c1b43bb52b97991b989491d251f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8690be7551046a26339f58029da5f3f58e18cd15
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120065"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672591"
 ---
 # <a name="understanding-android-api-levels"></a>Descripción de los niveles de API de Android
 
@@ -118,7 +118,7 @@ Para poder seleccionar un nivel de API mínima o de destino en Xamarin.Android, 
 
 <a name="framework" />
 
-### <a name="target-framework"></a>Plataforma de destino
+### <a name="target-framework"></a>Versión de .NET Framework de destino
 
 El *.NET Framework de destino* (también conocido como `compileSdkVersion`) es la versión de la plataforma Android específica (nivel de API) que se compila la aplicación de en tiempo de compilación. Esta configuración especifica las API que la aplicación *espera* que se usará cuando se ejecuta, pero no tiene ningún efecto en el que las API están realmente disponibles para la aplicación cuando se instala. Como resultado, cambiar la configuración de .NET Framework de destino no cambia el comportamiento de tiempo de ejecución.
 
@@ -281,5 +281,5 @@ Esta guía explica cómo se usan los niveles de API de Android para administrar 
 - [Configuración de Android SDK](~/android/get-started/installation/android-sdk.md)
 - [Cambia las herramientas de CLI de SDK](~/android/troubleshooting/sdk-cli-tooling-changes.md)
 - [Selección su compileSdkVersion, minSdkVersion y targetSdkVersion](https://medium.com/google-developers/picking-your-compilesdkversion-minsdkversion-targetsdkversion-a098a0341ebd)
-- [¿Qué es el nivel de API?](http://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
+- [¿Qué es el nivel de API?](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html#ApiLevels)
 - [Nombres, etiquetas y los números de compilación](https://source.android.com/source/build-numbers)

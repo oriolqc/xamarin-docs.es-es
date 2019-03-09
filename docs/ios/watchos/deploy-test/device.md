@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: f4a21e25f418cc81d5f210098ded648b3d70ae14
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 9c15e9205b96a02caa182e47b71c6d36c8bff1aa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116737"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671057"
 ---
 # <a name="testing-on-apple-watch-devices"></a>Las pruebas en dispositivos de Apple Watch
 
@@ -152,7 +152,7 @@ Si el **resultado de la aplicación** se bloquea la ventana que muestra
 waiting for debugger to connect
 ```
 
-Compruebe si alguno de los paquetes de NuGet que se han incluido en el proyecto tiene una dependencia **Microsoft.Bcl.Build**. Esto se agrega automáticamente con algunas bibliotecas publicada por Microsoft, incluidos los populares [Microsoft Http Client Libraries](http://www.nuget.org/packages/Microsoft.Net.Http/).
+Compruebe si alguno de los paquetes de NuGet que se han incluido en el proyecto tiene una dependencia **Microsoft.Bcl.Build**. Esto se agrega automáticamente con algunas bibliotecas publicada por Microsoft, incluidos los populares [Microsoft Http Client Libraries](https://www.nuget.org/packages/Microsoft.Net.Http/).
 
 El **Microsoft.Bcl.Build.targets** archivo que se agrega a la **.csproj** puede interferir con el empaquetado de extensiones de iOS durante la implementación. Puede realizar un seguimiento el [error](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
 Una posible solución alternativa consiste en modificar el archivo .csproj y mover manualmente el **Microsoft.Bcl.Build.targets** a ser el último elemento.

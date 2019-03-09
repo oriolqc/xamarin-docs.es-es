@@ -6,12 +6,12 @@ ms.assetid: 5C241AB4-F97E-4B61-B93C-F5D307BCD517
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 60386b3629e8ed9d2fd1ff165cd2c04d9571b51a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ac84d5b28b0f211dccb1697a4b3dbbc9cedf81e9
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106239"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670173"
 ---
 # <a name="2d-math-with-cocossharp"></a>Matemáticas 2D con CocosSharp
 
@@ -19,12 +19,12 @@ _Esta guía trata las matemáticas 2D para el desarrollo de juegos. Usa CocosSha
 
 Para colocar y mover objetos con el código es una parte fundamental de desarrollo de juegos de todos los tamaños. Colocar y mover requieren el uso de matemáticas, si un juego requiere mover un objeto a lo largo de una línea recta, o el uso de trigonometría de rotación. Este documento trata los temas siguientes:
 
- - Progreso
+ - Velocidad
  - Aceleración
  - Girar objetos CocosSharp
  - Usando la rotación con progreso
 
-Los desarrolladores que no tienen un fondo de matemáticas seguro o que han olvidados estos temas desde la escuela, no es necesario preocuparse: este documento interrumpirá conceptos hacia abajo en partes de pequeño tamaño y se adjuntará a explicaciones teóricas con ejemplos prácticos. En resumen, este artículo responderá a la pregunta de matemáticas viejos estudiantes: "Cuando en realidad necesito utilizar este material?"
+Los desarrolladores que no tienen un fondo de matemáticas seguro o que han olvidados estos temas desde la escuela, no es necesario preocuparse: este documento interrumpirá conceptos hacia abajo en partes de pequeño tamaño y se adjuntará a explicaciones teóricas con ejemplos prácticos. En resumen, este artículo responderán a la pregunta de matemáticas viejos estudiantes: "Si realmente necesito utilizar este material?"
 
 
 ## <a name="requirements"></a>Requisitos
@@ -32,7 +32,7 @@ Los desarrolladores que no tienen un fondo de matemáticas seguro o que han olvi
 Aunque este documento se centra principalmente en el lado de CocosSharp matemático, ejemplos de código suponen trabajar con objetos heredar formulario `CCNode`. Además, desde `CCNode` no incluyen valores para la velocidad y la aceleración, el código supone trabajar con entidades que proporcionan valores como VelocityX, VelocityY, AccelerationX y AccelerationY. Para obtener más información sobre las entidades, consulte nuestro tutorial en [entidades de CocosSharp](~/graphics-games/cocossharp/entities.md).
 
 
-## <a name="velocity"></a>Progreso
+## <a name="velocity"></a>Velocidad
 
 Los desarrolladores de juegos usa el término *velocity* para describir cómo un objeto está moviendo – específicamente rapidez algo se mueve y la dirección que sea móvil. 
 
@@ -266,7 +266,7 @@ Este código produce el siguiente comportamiento:
 
 Tenga en cuenta que el código anterior pasa el parámetro Y en primer lugar, a continuación, el parámetro X, al llamar a la `Atan2` método. Se trata con versiones anteriores de la habitual X, Y ordenación de las coordenadas de posición. Para obtener más información [consulte los documentos Atan2](https://msdn.microsoft.com/library/system.math.atan2(v=vs.110).aspx).
 
-También merece la pena tener en cuenta que el valor devuelto desde `Atan2` está en radianes, que es otra unidad que se usa para medir los ángulos. Esta guía no se explican los detalles de radianes, pero tenga en cuenta que todas las funciones trigonométricas en el `System.Math` espacio de nombres use radianes, por lo que los valores deben convertirse a grados antes de que se usa en los objetos de CocosSharp. Puede encontrar más información en radianes [en la página de Wikipedia en radianes](http://en.wikipedia.org/wiki/Radian).
+También merece la pena tener en cuenta que el valor devuelto desde `Atan2` está en radianes, que es otra unidad que se usa para medir los ángulos. Esta guía no se explican los detalles de radianes, pero tenga en cuenta que todas las funciones trigonométricas en el `System.Math` espacio de nombres use radianes, por lo que los valores deben convertirse a grados antes de que se usa en los objetos de CocosSharp. Puede encontrar más información en radianes [en la página de Wikipedia en radianes](https://en.wikipedia.org/wiki/Radian).
 
 #### <a name="forward-angle"></a>Ángulo hacia delante
 

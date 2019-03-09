@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: bb8aec5a5054c28cf7862d14148e7f2000fa3a35
-ms.sourcegitcommit: c77f84a0686d16de6ac630271fccac719fd9eec4
+ms.openlocfilehash: a6a4ef9fb36fde067fa58fec9a6206b1dbc1fbf0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56307923"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668353"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitaciones de Xamarin.iOS
 
@@ -27,7 +27,7 @@ Puesto que las aplicaciones que usan Xamarin.iOS se compilan en código estátic
 
 A diferencia de Mono y .NET tradicional, el código en el iPhone se compila estáticamente antelación en lugar de que se compila a petición mediante un compilador JIT.
 
-Mono [AOT completa](http://www.mono-project.com/docs/advanced/aot/#full-aot) tecnología tiene algunas limitaciones con respecto a los genéricos, estos se deben a que no todas las instancias genéricas posibles se pueden determinar por adelantado en tiempo de compilación. Esto no es un problema para tiempos de ejecución de .NET o Mono regular como siempre se compila el código en tiempo de ejecución mediante el Just-in compilador Time. Pero esto supone un desafío para un compilador estático como Xamarin.iOS.
+Mono [AOT completa](https://www.mono-project.com/docs/advanced/aot/#full-aot) tecnología tiene algunas limitaciones con respecto a los genéricos, estos se deben a que no todas las instancias genéricas posibles se pueden determinar por adelantado en tiempo de compilación. Esto no es un problema para tiempos de ejecución de .NET o Mono regular como siempre se compila el código en tiempo de ejecución mediante el Just-in compilador Time. Pero esto supone un desafío para un compilador estático como Xamarin.iOS.
 
 Algunos de los problemas comunes que surgen a los desarrolladores, son:
 

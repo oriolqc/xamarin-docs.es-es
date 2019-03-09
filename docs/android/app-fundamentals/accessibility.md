@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 3cce3270b9df2aad0037b1ab96f169cc4b564766
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: d004b753c89f3995e8dc511877bd115a894396fc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528135"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671629"
 ---
 # <a name="accessibility-on-android"></a>Accesibilidad en Android
 
@@ -174,12 +174,12 @@ La ventaja de almacenar texto en un archivo independiente es que se pueden propo
 
 ## <a name="testing-accessibility"></a>Probar la accesibilidad
 
-Siga [estos pasos](http://developer.android.com/training/accessibility/testing.html#how-to) para habilitar TalkBack y explorar con el tacto probar la accesibilidad en los dispositivos Android.
+Siga [estos pasos](https://developer.android.com/training/accessibility/testing.html#how-to) para habilitar TalkBack y explorar con el tacto probar la accesibilidad en los dispositivos Android.
 
 Es posible que deba instalar [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) desde Google Play si no aparece en **configuración > accesibilidad**.
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Accesibilidad de multiplataforma](~/cross-platform/app-fundamentals/accessibility.md)
-- [API de accesibilidad de Android](http://developer.android.com/guide/topics/ui/accessibility/index.html)
+- [Accesibilidad multiplataforma](~/cross-platform/app-fundamentals/accessibility.md)
+- [API de accesibilidad de Android](https://developer.android.com/guide/topics/ui/accessibility/index.html)

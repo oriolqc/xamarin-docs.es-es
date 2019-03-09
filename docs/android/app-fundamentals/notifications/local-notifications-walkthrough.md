@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 7cf1dde6c65d2971cecd0a59a2e11d6c2d50ee2a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e60ed6cc49921fc7b6e8e2616a6b0bf6f8abb401
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119194"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670095"
 ---
 # <a name="walkthrough---using-local-notifications-in-xamarinandroid"></a>Tutorial: uso de notificaciones locales en Xamarin.Android
 
@@ -255,7 +255,7 @@ Cuando haga clic en la notificación, debería desaparecer y se debe iniciar nue
 
 [![Segunda captura de pantalla de actividad](local-notifications-walkthrough-images/5-second-activity-sml.png)](local-notifications-walkthrough-images/5-second-activity.png#lightbox)
 
-¡Enhorabuena! En este momento ha completado el tutorial de notificaciones local de Android y tiene un ejemplo funcional que se puede consultar. Hay mucho más a las notificaciones que hemos mostrado aquí, si desea obtener más información, eche un vistazo a [documentación de Google sobre notificaciones](http://developer.android.com/guide/topics/ui/notifiers/notifications.html).
+¡Enhorabuena! En este momento ha completado el tutorial de notificaciones local de Android y tiene un ejemplo funcional que se puede consultar. Hay mucho más a las notificaciones que hemos mostrado aquí, si desea obtener más información, eche un vistazo a [documentación de Google sobre notificaciones](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
 
 ## <a name="summary"></a>Resumen

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 48859afe2c988c1afe67d5c4350cef734f879fdf
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c8d1abebf6dec2b7b5fe76d57ff851fad457f2a8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121001"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669835"
 ---
 # <a name="ios-backgrounding-with-tasks"></a>iOS procesamiento en segundo plano con tareas
 
@@ -67,7 +67,7 @@ public override void DidEnterBackground (UIApplication application) {
 Comenzamos invalidando el `DidEnterBackground` método en el `AppDelegate`, donde registramos nuestra tarea a través de `BeginBackgroundTask` como hicimos en el ejemplo anterior. A continuación, se genera un nuevo proceso y realiza la tarea de ejecución prolongada. Tenga en cuenta que el `EndBackgroundTask` es ahora realiza llamada desde dentro de la tarea de ejecución prolongada, ya que el `DidEnterBackground` ya habrá devuelto el método.
 
 > [!IMPORTANT]
-> iOS usa una [vigilante mecanismo](http://developer.apple.com/library/ios/qa/qa1693/_index.html) para asegurarse de que la interfaz de usuario de la aplicación sigue respondiendo. Una aplicación que se emplea demasiado tiempo en `DidEnterBackground` deja de responder en la interfaz de usuario. Permite iniciar las tareas se ejecuten en segundo plano `DidEnterBackground` para devolver de manera oportuna, que la interfaz de usuario siga respondiendo y evitando que el guardián de eliminación de la aplicación.
+> iOS usa una [vigilante mecanismo](https://developer.apple.com/library/ios/qa/qa1693/_index.html) para asegurarse de que la interfaz de usuario de la aplicación sigue respondiendo. Una aplicación que se emplea demasiado tiempo en `DidEnterBackground` deja de responder en la interfaz de usuario. Permite iniciar las tareas se ejecuten en segundo plano `DidEnterBackground` para devolver de manera oportuna, que la interfaz de usuario siga respondiendo y evitando que el guardián de eliminación de la aplicación.
 
 
 ## <a name="handling-background-task-time-limits"></a>Límites de tiempo de tarea en segundo plano de control

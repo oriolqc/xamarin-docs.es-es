@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
-ms.openlocfilehash: 63f0d4d7ce5f056d8e1db6bc297258c6bc070086
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.openlocfilehash: 362041efc5a19dfb70430054f3e4636d4fdfbd7e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675554"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672758"
 ---
 <a name="compatibility"></a>
 
@@ -84,7 +84,7 @@ Android incluye compatibilidad con metadatos de la notificación, por lo que pue
 
 -   **Categoría** &ndash; informa al sistema cómo controlar la notificación en diversas circunstancias, como cuando el dispositivo se *no molestar* modo.
 
-**Nota:** **visibilidad** y **categoría** se presentaron en Android 5.0 y no están disponibles en versiones anteriores de Android. A partir de Android 8.0, [canales de notificación](#notif-chan) sirven para controlar cómo se presentan las notificaciones al usuario.
+**Nota:** **Visibilidad** y **categoría** se presentaron en Android 5.0 y no están disponibles en versiones anteriores de Android. A partir de Android 8.0, [canales de notificación](#notif-chan) sirven para controlar cómo se presentan las notificaciones al usuario.
 
 
 ### <a name="expanded-layouts"></a>Diseños expandidos
@@ -113,7 +113,7 @@ Android admite tres estilos de diseño expandida para las notificaciones de even
 
 A partir de Android 8.0 (Oreo), puede usar el *canales de notificación* característica para crear un canal personalizables por el usuario para cada tipo de notificación que desea mostrar. Canales de notificación permiten que las notificaciones de grupo para que todas las notificaciones que registren en un anexo de canal el mismo comportamiento. Por ejemplo, podría tener un canal de notificación está pensado para las notificaciones que requieren atención inmediata y un canal "más silencioso" independiente que se usa para los mensajes informativos.
 
-El **YouTube** aplicación que se instala con Android Oreo muestra dos categorías de notificación: **descargar notificaciones** y **notificaciones generales**:
+El **YouTube** aplicación que se instala con Android Oreo muestra dos categorías de notificación: **Descargue las notificaciones** y **notificaciones generales**:
 
 [![Pantallas de notificación de YouTube en Android Oreo](local-notifications-images/27-youtube-sml.png)](local-notifications-images/27-youtube.png#lightbox)
 
@@ -219,7 +219,7 @@ Debe proporcionar al menos la siguiente información para cada notificación:
 
 -   El texto de la notificación
 
-El ejemplo de código siguiente muestra cómo usar `NotificationCompat.Builder` para generar una notificación básica. Tenga en cuenta que `NotificationCompat.Builder` métodos admiten [encadenamiento de método](http://en.wikipedia.org/wiki/Method_chaining); es decir, cada método devuelve el objeto de generador para que pueda usar el resultado de la última llamada de método para invocar la llamada al método siguiente:
+El ejemplo de código siguiente muestra cómo usar `NotificationCompat.Builder` para generar una notificación básica. Tenga en cuenta que `NotificationCompat.Builder` métodos admiten [encadenamiento de método](https://en.wikipedia.org/wiki/Method_chaining); es decir, cada método devuelve el objeto de generador para que pueda usar el resultado de la última llamada de método para invocar la llamada al método siguiente:
 
 ```csharp
 // Instantiate the builder and set notification elements:
@@ -332,7 +332,7 @@ Una notificación permanece visible hasta que se produce una de estas tres cosas
 
 -   La aplicación llama a `NotificationManager.CancelAll`.
 
-Para obtener más información acerca de cómo actualizar las notificaciones de Android, consulte [modificar una notificación](http://developer.android.com/training/notify-user/managing.html#Updating).
+Para obtener más información acerca de cómo actualizar las notificaciones de Android, consulte [modificar una notificación](https://developer.android.com/training/notify-user/managing.html#Updating).
 
 
 ### <a name="starting-an-activity-from-a-notification"></a>A partir de una actividad desde una notificación
@@ -375,7 +375,7 @@ Este código es muy similar al código de notificación en la sección anterior,
 
 Al puntear en esta notificación lleva al usuario a la actividad de origen.
 
-En una aplicación de producción, la aplicación debe controlar la *pila de retroceso* cuando el usuario presiona el **volver** botón dentro de la actividad de notificación (si no está familiarizado con las tareas de Android y la pila de retroceso, consulte [ Tareas y pila de retroceso](http://developer.android.com/guide/components/tasks-and-back-stack.html)).
+En una aplicación de producción, la aplicación debe controlar la *pila de retroceso* cuando el usuario presiona el **volver** botón dentro de la actividad de notificación (si no está familiarizado con las tareas de Android y la pila de retroceso, consulte [ Tareas y pila de retroceso](https://developer.android.com/guide/components/tasks-and-back-stack.html)).
 En la mayoría de los casos, navegar hacia atrás fuera de la actividad de notificación debe devolver el usuario fuera de la aplicación y volver a la pantalla principal. Para administrar la pila de retroceso, la aplicación usa el [TaskStackBuilder](https://developer.xamarin.com/api/type/Android.App.TaskStackBuilder/) clase para crear un `PendingIntent` con una pila de retroceso.
 
 Otra consideración del mundo real es que la actividad de origen que necesite enviar datos a la actividad de notificación. Por ejemplo, la notificación puede indicar que ha llegado un mensaje de texto, y la actividad de notificación (mensaje ver la pantalla), se requiere el identificador del mensaje para mostrar el mensaje al usuario. La actividad que crea el `PendingIntent` puede usar el [Intent.PutExtra](https://developer.xamarin.com/api/member/Android.Content.Intent.PutExtra/p/System.String/System.String/) método para agregar datos (por ejemplo, una cadena) a la intención para que estos datos se pasan a la actividad de notificación.
@@ -770,15 +770,15 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
 
 En este artículo se explica cómo crear notificaciones locales en Android. Describe la Anatomía de una notificación, se ha explicado cómo usar `NotificationCompat.Builder` para crear notificaciones, cómo las notificaciones de estilo en iconos grandes, *texto grande*, *imagen* y *Bandeja de entrada*  formatos, cómo establecer la configuración de los metadatos como la prioridad, visibilidad y categoría de notificación y cómo iniciar una actividad desde una notificación. En este artículo también se describe cómo funcionan estas opciones de notificación con el nuevo aviso, pantalla de bloqueo, y *no molestar* las características introducidas en Android 5.0. Por último, ha aprendido a usar `NotificationCompat.Builder` para mantener la notificación de compatibilidad con versiones anteriores de Android.
 
-Para obtener instrucciones acerca de las notificaciones de diseño para Android, vea [notificaciones](http://developer.android.com/guide/topics/ui/notifiers/notifications.html).
+Para obtener instrucciones acerca de las notificaciones de diseño para Android, vea [notificaciones](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [NotificationsLab (ejemplo)](https://developer.xamarin.com/samples/monodroid/android5.0/NotificationsLab/)
+- [NotificationsLab (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/NotificationsLab/)
 - [LocalNotifications (ejemplo)](https://developer.xamarin.com/samples/monodroid/LocalNotifications/)
 - [Notificaciones locales en el tutorial de Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md)
-- [Notificar al usuario](http://developer.android.com/training/notify-user/index.html)
+- [Notificar al usuario](https://developer.android.com/training/notify-user/index.html)
 - [Notificación](https://developer.xamarin.com/api/type/Android.App.Notification/)
 - [NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/)
 - [NotificationCompat.Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html)

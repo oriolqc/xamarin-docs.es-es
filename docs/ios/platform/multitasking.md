@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 78f9aa47cce2fe0059bd7f4d4ff637d14fb8c669
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 68c2ae6eace2669d2ea6c77d72f4476d767c0a7d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112527"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672448"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarea para iPad en Xamarin.iOS
 
@@ -128,8 +128,8 @@ En dispositivos iPad que admiten la diapositiva sobre y vista en dos paneles, pu
 | **Orientación** | **Aplicación principal** | **Aplicación secundaria** |
 |--- |--- |--- |
 | **Vertical** |75% de la pantalla<br />Compact Horizontal<br />Regular Vertical|25% de la pantalla<br />Compact Horizontal<br />Regular Vertical|
-| **Horizontal** |75% de la pantalla<br />Regular Horizontal<br />Regular Vertical|25% de la pantalla<br />Compact Horizontal<br />Regular Vertical|
-| **Horizontal** |50% de la pantalla<br />Compact Horizontal<br />Regular Vertical|50% de la pantalla<br />Compact Horizontal<br />Regular Vertical|
+| **Landscape** |75% de la pantalla<br />Regular Horizontal<br />Regular Vertical|25% de la pantalla<br />Compact Horizontal<br />Regular Vertical|
+| **Landscape** |50% de la pantalla<br />Compact Horizontal<br />Regular Vertical|50% de la pantalla<br />Compact Horizontal<br />Regular Vertical|
 
 En el ejemplo [MuliTask](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) aplicación, si se ejecuta en un iPad en el modo horizontal de pantalla completa, presentará la lista y la vista de detalles al mismo tiempo:
 
@@ -197,7 +197,7 @@ Si ejecutamos esta aplicación en un iPad con un teclado de hardware conectados 
 
 [![](multitasking-images/keyboard03.png "El elemento emergente de métodos abreviados de teclado")](multitasking-images/keyboard03.png#lightbox)
 
-Vea el ejemplo [aplicación realizar varias tareas](http://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) para una implementación de ejemplo.
+Vea el ejemplo [aplicación realizar varias tareas](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) para una implementación de ejemplo.
 
 <a name="Resource-Management-Considerations" />
 

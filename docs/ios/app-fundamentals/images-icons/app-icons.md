@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/22/2017
-ms.openlocfilehash: ef8e694bc3c617774035ad5cf7902ca3f5b06813
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 51ccf3faa2524035a30b26af6652959699663e24
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118518"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672539"
 ---
 # <a name="application-icons-in-xamarinios"></a>Iconos de aplicación de Xamarin.iOS
 
@@ -46,51 +46,51 @@ Los siguientes tamaños de activos de imagen y resoluciones será necesaria para
 
     ||3x|
     |---|---|
-    |Icono de aplicación|180 x 180|
+    |Icono de aplicación|180x180|
     |Contenido destacado|120x120|
-    |Configuración|87 x 87.|
+    |Configuración|87x87|
 
 - **iPhone: iOS 7 y 8**
 
     ||1x|2x|
     |---|---|---|
     |Icono de aplicación|60x60<sup>1</sup>|120x120|
-    |Contenido destacado|40x40<sup>2</sup>|80 x 80|
+    |Contenido destacado|40x40<sup>2</sup>|80x80|
     |Configuración|-|-|
 
 - **iPhone: iOS 5 y 6**
 
     ||1x|2x|
     |---|---|---|
-    |Icono de aplicación|57x57|114 x 114|
+    |Icono de aplicación|57x57|114x114|
     |Contenido destacado|29x29|58x58|
-    |Configuración|29 x 29<sup>3, 4</sup>|58 x 58<sup>3, 4</sup>|
+    |Configuración|29x29<sup>3, 4</sup>|58x58<sup>3, 4</sup>|
 
 ### <a name="ipad-icon-sizes"></a>Tamaño de los iconos de iPad
 
-- **iPad: iOS 9 y 10**
+- **iPad: iOS 9 & 10**
 
-    ||2 x (iPad Pro)|
+    ||2x (iPad Pro)|
     |---|---|
-    |Icono de aplicación|167 x 167<sup>6</sup>|
-    |Contenido destacado|120 x 120<sup>6</sup>|
+    |Icono de aplicación|167x167<sup>6</sup>|
+    |Contenido destacado|120x120<sup>6</sup>|
     |Configuración|58x58<sup>5</sup>|
 
 - **iPad: iOS 7 y 8**
 
     ||1x|2x|
     |---|---|---|
-    |Icono de aplicación|76x76|152 x 152|
-    |Contenido destacado|40x40|80 x 80|
+    |Icono de aplicación|76x76|152x152|
+    |Contenido destacado|40x40|80x80|
     |Configuración|-|-|
 
 - **iPad: iOS 5 y 6**
 
     ||1x|2x|
     |---|---|---|
-    |Icono de aplicación|72x72|144 x 144|
-    |Contenido destacado|50x50|100 x 100|
-    |Configuración|29 x 29<sup>3, 5</sup>|58 x 58<sup>3, 5</sup>|
+    |Icono de aplicación|72x72|144x144|
+    |Contenido destacado|50x50|100x100|
+    |Configuración|29x29<sup>3, 5</sup>|58x58<sup>3, 5</sup>|
 
  1. Tanto con Visual Studio para Mac y Xcode ya no se admite establecer 1 imagen x para iOS 7.
  2. No se admite el establecimiento de una imagen de 1 x para iOS 7 cuando se usa catálogos de activos.
@@ -212,4 +212,4 @@ Para especificar las ilustraciones de iTunes, haga lo siguiente:
 
 - [Trabajar con imágenes (ejemplo)](https://developer.xamarin.com/samples/WorkingWithImages/)
 - [Hello, iPhone](~/ios/get-started/hello-ios/index.md)
-- [Icono personalizado y directrices para la creación de imagen](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))
+- [Icono personalizado y directrices para la creación de imagen](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html))

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: 22eb8f999450ed8fb46b1f7809c92540be13aa65
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 841a11f9cb48786a046802288ce05e7ae186688a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105927"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671721"
 ---
 # <a name="togglebutton"></a>ToggleButton
 
@@ -47,12 +47,12 @@ Tenga en cuenta que el [ `ToggleButton` ](https://developer.xamarin.com/api/type
 Ejecute la aplicación.
 
 
-**Sugerencia:** si tiene que cambiar manualmente el estado (por ejemplo, cuando carga guardado [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), use el [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
+**Sugerencia:** Si tiene que cambiar manualmente el estado (por ejemplo, cuando carga guardado [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), use el [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
 establecedor de propiedades o [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
 .
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [ToggleButton](http://developer.android.com/reference/android/widget/ToggleButton.html)
-- [Switch](http://developer.android.com/reference/android/widget/Switch.html)
+- [ToggleButton](https://developer.android.com/reference/android/widget/ToggleButton.html)
+- [Switch](https://developer.android.com/reference/android/widget/Switch.html)

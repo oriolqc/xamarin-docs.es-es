@@ -6,18 +6,18 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
-ms.openlocfilehash: 16ef0d5a309281767f0fff27436dd5bec322169d
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: e71e79b58d912ecb697576e92ae921a848f24f4c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527396"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671183"
 ---
 # <a name="alternate-resources"></a>Recursos alternativos
 
 Recursos alternativos son aquellos recursos que tienen como destino un dispositivo específico o una configuración de tiempo de ejecución, como el idioma actual, el tamaño de pantalla en particular o la densidad de píxeles. Si Android puede coincidir con un recurso que es más específico para un determinado dispositivo o una configuración que el recurso predeterminado, ese recurso se usará en su lugar. Si no encuentra un recurso alternativo que coincida con la configuración actual, se cargarán los recursos predeterminados. Cómo Android decide qué recursos se utilizarán en una aplicación se tratarán con más detalle a continuación, en la sección ubicación de recursos
 
-Recursos alternativos se organizan como un subdirectorio dentro de la carpeta de recursos según el tipo de recurso, al igual que los recursos predeterminados. El nombre del subdirectorio recursos alternativo está en el formulario: _ResourceType_-_calificador_
+Recursos alternativos se organizan como un subdirectorio dentro de la carpeta de recursos según el tipo de recurso, al igual que los recursos predeterminados. Es el nombre del subdirectorio recursos alternativos en el formulario: _ResourceType_-_Qualifier_
 
 *Calificador* es un nombre que identifica una configuración de dispositivo específico.
 Puede haber más de un calificador en un nombre, cada uno de ellos separados por un guión. Por ejemplo, la captura de pantalla siguiente muestra un proyecto simple que tiene recursos alternativos para varias configuraciones, como la configuración regional, densidad de pantalla, orientación y tamaño de pantalla:
@@ -43,10 +43,10 @@ Las siguientes reglas se aplican al agregar calificadores a un tipo de recurso:
 
 Los calificadores posibles se muestran a continuación como referencia:
 
-- **MCC y MNC** &ndash; el [código de país móvil](http://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) y, opcionalmente, el [código de la red móvil](http://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). La tarjeta SIM proporcionará la MCC, mientras que la red que está conectado el dispositivo que proporcionará el MNC. Aunque es posible que las configuraciones regionales de destino mediante el código de país móvil, el enfoque recomendado es usar el calificador de idioma especificado a continuación. Por ejemplo, para los recursos de destino va a Alemania, sería el calificador `mcc262`. A los recursos de destino de T-Mobile en Estados Unidos, el calificador es `mcc310-mnc026`.
+- **MCC y MNC** &ndash; el [código de país móvil](https://en.wikipedia.org/wiki/List_of_mobile_country_codes) (MCC) y, opcionalmente, el [código de la red móvil](https://en.wikipedia.org/wiki/Mobile_Network_Code) (MNC). La tarjeta SIM proporcionará la MCC, mientras que la red que está conectado el dispositivo que proporcionará el MNC. Aunque es posible que las configuraciones regionales de destino mediante el código de país móvil, el enfoque recomendado es usar el calificador de idioma especificado a continuación. Por ejemplo, para los recursos de destino va a Alemania, sería el calificador `mcc262`. A los recursos de destino de T-Mobile en Estados Unidos, el calificador es `mcc310-mnc026`.
   Para obtener una lista completa de códigos de país móvil y de red móvil consulte <http://mcc-mnc.com/>.
 
-- **Lenguaje** &ndash; dos letras [código ISO 639-1 lenguaje](http://en.wikipedia.org/wiki/ISO_639-1) y, opcionalmente, seguido de dos letras [código de región ISO 3166-alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
+- **Lenguaje** &ndash; dos letras [código ISO 639-1 lenguaje](https://en.wikipedia.org/wiki/ISO_639-1) y, opcionalmente, seguido de dos letras [código de región ISO 3166-alpha-2](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
   Si se proporcionan los calificadores de ambos, se separan mediante un `-r`. Por ejemplo, para configuraciones regionales de francés de destino, a continuación, el calificador de `fr` se utiliza. Para establecer como destino las configuraciones regionales francés canadiense, la `fr-rCA` se utilizaría. Para obtener una lista completa de códigos de idioma y región, consulte [códigos para la representación de los nombres de lenguajes](http://www.loc.gov/standards/iso639-2/php/English_list.php) y [elementos de código y los nombres de país](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm).
 
 - **Ancho mínimo** &ndash; especifica el ancho de pantalla más pequeño que la aplicación está diseñada para ejecutarse en. Tratan con más detalle en [creando recursos para diferentes pantallas](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
@@ -123,7 +123,7 @@ Los calificadores posibles se muestran a continuación como referencia:
 -  **Versión de la plataforma (nivel de API)** &ndash; nivel de la API compatible con el dispositivo en el formato v*N*, donde *N* es el nivel de API que se ha elegido. Por ejemplo, v11 destinará un nivel de API 11 (Android 3.0) dispositivo.
 
 
-Para obtener información más completa sobre recursos vea calificadores [proporcionar recursos](http://developer.android.com/guide/topics/resources/providing-resources.html) en el sitio Web para desarrolladores de Android.
+Para obtener información más completa sobre recursos vea calificadores [proporcionar recursos](https://developer.android.com/guide/topics/resources/providing-resources.html) en el sitio Web para desarrolladores de Android.
 
 
 ## <a name="how-android-determines-what-resources-to-use"></a>Cómo Android determina qué recursos que se usarán

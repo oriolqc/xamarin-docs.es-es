@@ -1,5 +1,5 @@
 ---
-title: Metadatos de los enlaces de Java
+title: Metadatos de enlaces Java
 description: C#código de Xamarin.Android, llama a las bibliotecas de Java a través de enlaces, que son un mecanismo que abstraen los detalles de bajo nivel que se especifican en Java Native Interface (JNI). Xamarin.Android proporciona una herramienta que genera estos enlaces. Estas herramientas permite el control del desarrollador cómo se crea un enlace mediante el uso de metadatos, que permite que los procedimientos como la modificación de los espacios de nombres y cambiar el nombre de los miembros. Este documento se describe el funcionamiento de los metadatos, se resumen los atributos que los metadatos admite y se explica cómo resolver problemas de enlace mediante la modificación de estos metadatos.
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
@@ -7,14 +7,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: 858f1e5c0bd2af85b419bb9a1cffb7d484f3f7e4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ce9bf0293b846299cc7cd06773ce936f725715fa
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113409"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669900"
 ---
-# <a name="java-bindings-metadata"></a>Metadatos de los enlaces de Java
+# <a name="java-bindings-metadata"></a>Metadatos de enlaces Java
 
 _C#código de Xamarin.Android, llama a las bibliotecas de Java a través de enlaces, que son un mecanismo que abstraen los detalles de bajo nivel que se especifican en Java Native Interface (JNI). Xamarin.Android proporciona una herramienta que genera estos enlaces. Estas herramientas permite el control del desarrollador cómo se crea un enlace mediante el uso de metadatos, que permite que los procedimientos como la modificación de los espacios de nombres y cambiar el nombre de los miembros. Este documento se describe el funcionamiento de los metadatos, se resumen los atributos que los metadatos admite y se explica cómo resolver problemas de enlace mediante la modificación de estos metadatos._
 
@@ -77,7 +77,7 @@ Permite pasar a tratar **Metadata.xml** con más detalle.
 ## <a name="metadataxml-transform-file"></a>Archivo de transformación de Metadata.Xml
 
 Como ya hemos aprendido, el archivo **Metadata.xml** es utilizada por el generador de enlaces para influir en la creación del ensamblado de enlace.
-Usa el formato de metadatos [XPath](https://www.w3.org/TR/xpath/) sintaxis y es casi idéntica a la *metadatos GAPI* se describe en [metadatos GAPI](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) guía. Esta implementación es casi una implementación completa de XPath 1.0 y, por tanto, es compatible con los elementos en el estándar 1.0. Este archivo es un mecanismo eficaz de XPath en función a cambiar, agregar, ocultar o mover cualquier elemento o atributo en el archivo de la API. Todos los elementos de regla en la especificación de los metadatos incluyen un atributo de ruta de acceso para identificar el nodo al que se aplicará la regla. Las reglas se aplican en el orden siguiente:
+Usa el formato de metadatos [XPath](https://www.w3.org/TR/xpath/) sintaxis y es casi idéntica a la *metadatos GAPI* se describe en [metadatos GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata) guía. Esta implementación es casi una implementación completa de XPath 1.0 y, por tanto, es compatible con los elementos en el estándar 1.0. Este archivo es un mecanismo eficaz de XPath en función a cambiar, agregar, ocultar o mover cualquier elemento o atributo en el archivo de la API. Todos los elementos de regla en la especificación de los metadatos incluyen un atributo de ruta de acceso para identificar el nodo al que se aplicará la regla. Las reglas se aplican en el orden siguiente:
 
 * **Agregar nodo** &ndash; anexa un nodo secundario al nodo especificado por el atributo de ruta de acceso.
 * **attr** &ndash; establece el valor de un atributo del elemento especificado por el atributo de ruta de acceso.
@@ -219,7 +219,7 @@ En el ejemplo siguiente se muestra una expresión XPath para cambiar el nombre d
     name="managedName">NewMethodName</attr>
 ```
 
-### <a name="managedtype"></a>Tipo administrado
+### <a name="managedtype"></a>managedType
 
 `managedType` se utiliza para cambiar el tipo de valor devuelto de un método. En algunas situaciones el generador de enlaces incorrectamente deducirá el tipo de valor devuelto de un método de Java, lo que dará lugar a un error en tiempo de compilación. Una posible solución en esta situación consiste en cambiar el tipo de valor devuelto del método.
 
@@ -244,7 +244,7 @@ Cambia el tipo de valor devuelto de un método. Esto no cambia el atributo de va
     name="managedReturn">Java.Lang.IAppendable</attr>
 ```
 
-### <a name="obfuscated"></a>ofuscado
+### <a name="obfuscated"></a>obfuscated
 
 Las herramientas que ofuscar las bibliotecas de Java pueden interferir con el generador de enlace de Xamarin.Android y su capacidad para generar C# clases contenedoras. Características de ofuscación clases incluyen: * incluye el nombre de clase un **$**, es decir, **un .class $** * el nombre de clase completamente consta de caracteres en minúsculas, es decir,  **a.Class**
 
@@ -255,7 +255,8 @@ Este fragmento de código es un ejemplo de cómo generar un "sin ofuscado" C# ti
     name="obfuscated">false</attr>
 ```
 
-### <a name="propertyname"></a>propertyName
+### <a name="propertyname"></a>
+  propertyName
 
 Este atributo se puede usar para cambiar el nombre de una propiedad administrada.
 
@@ -273,7 +274,8 @@ Un caso de uso especializado `propertyName` implica la situación donde una clas
 
 Tenga en cuenta que los métodos establecedor y captador se seguirá creando el generador de enlaces.
 
-### <a name="sender"></a>sender
+### <a name="sender"></a>
+  sender
 
 Especifica que el parámetro de un método debe ser el `sender` parámetro cuando el método se asigna a un evento. El valor puede ser `true` o `false`. Por ejemplo:
 
@@ -347,4 +349,4 @@ En este artículo se describe cómo Xamarin.Android usa metadatos para transform
 
 - [Trabajo con JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Enlace de una biblioteca Java](~/android/platform/binding-java-library/index.md)
-- [Metadatos GAPI](http://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)
+- [Metadatos GAPI](https://www.mono-project.com/docs/gui/gtksharp/gapi/#metadata)

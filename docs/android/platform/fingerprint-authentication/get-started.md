@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/17/2018
-ms.openlocfilehash: 05069272bfa25cc1f003d4aeb83e15bd223c2830
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 731aeaf0ad89a44211072962bf9891851a44ffcc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118479"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667729"
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>Introducción a la autenticación con huella digital
 
@@ -99,19 +99,19 @@ if (permissionResult == Android.Content.PM.Permission.Granted)
 else
 {
     // No permission. Go and ask for permissions and don't start the scanner. See
-    // http://developer.android.com/training/permissions/requesting.html
+    // https://developer.android.com/training/permissions/requesting.html
 }
 ```
 
 Comprobación de todas estas condiciones cada vez que la aplicación ofrece opciones de autenticación garantizará que el usuario obtiene la mejor experiencia de usuario. Los cambios o actualizaciones a su dispositivo o sistema operativo pueden afectar a la disponibilidad de la autenticación con huella digital. Si decide almacenar en caché los resultados de cualquiera de estas comprobaciones, asegúrese de cumplir los requisitos de escenarios de actualización.
 
-Para obtener más información sobre cómo solicitar permisos en Android 6.0, consulte la Guía de Android [solicitar permisos en tiempo de ejecución](http://developer.android.com/training/permissions/requesting.html).
+Para obtener más información sobre cómo solicitar permisos en Android 6.0, consulte la Guía de Android [solicitar permisos en tiempo de ejecución](https://developer.android.com/training/permissions/requesting.html).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Contexto](https://developer.xamarin.com/api/type/Android.Content.Context/)
+- [Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
 - [ContextCompat](https://developer.xamarin.com/api/type/Android.Support.V4.Content.ContextCompat/)
 - [KeyguardManager](https://developer.xamarin.com/api/type/Android.App.KeyguardManager/)
-- [FingerprintManager](http://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
-- [FingerprintManagerCompat](http://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
-- [Solicitar permisos en tiempo de ejecución](http://developer.android.com/training/permissions/requesting.html)
+- [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
+- [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
+- [Solicitar permisos en tiempo de ejecución](https://developer.android.com/training/permissions/requesting.html)

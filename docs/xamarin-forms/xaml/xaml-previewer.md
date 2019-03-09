@@ -8,12 +8,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
-ms.openlocfilehash: 4258eca8e18229420ceb043a010c896137187653
-ms.sourcegitcommit: c6ff24b524d025d7e87b7b9c25f04c740dd93497
+ms.openlocfilehash: 7834b87687db8fd1a3d51a40a4657b24e46bac17
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240388"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670407"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Controlador de vista previa XAML para Xamarin.Forms
 
@@ -21,7 +21,7 @@ _Vea los diseños de Xamarin.Forms representan a medida que escribe._
 
 ## <a name="requirements"></a>Requisitos
 
-Los proyectos requieren el paquete Xamarin.Forms NuGet más reciente para el controlador de vista previa de XAML para que funcione. Vista previa de aplicaciones para Android requiere [JDK 1.8 x64](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
+Los proyectos requieren el paquete Xamarin.Forms NuGet más reciente para el controlador de vista previa de XAML para que funcione. Vista previa de aplicaciones para Android requiere [JDK 1.8 x64](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 Puede encontrar más información en el [notas de la versión](https://developer.xamarin.com/releases/studio/xamarin.studio_6.2/xamarin.studio_6.2/#Xamarin_Forms_Previewer).
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
-ms.openlocfilehash: cd80154602cc22668768fe217da7371b77ded003
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: fa32783617fce99514560677184f17be904cd42d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112394"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670338"
 ---
 # <a name="launching-the-maps-application"></a>Iniciar la aplicación de mapas
 
@@ -55,7 +55,7 @@ Las versiones del URI que toman una consulta (es decir, los términos calles dir
 
 
 
-Para obtener más información acerca de los esquemas de URI geográfica, consulte [mostrar una ubicación en un mapa](http://developer.android.com/guide/components/intents-common.html#Maps).
+Para obtener más información acerca de los esquemas de URI geográfica, consulte [mostrar una ubicación en un mapa](https://developer.android.com/guide/components/intents-common.html#Maps).
 
 
 ## <a name="street-view"></a>Vista de calle

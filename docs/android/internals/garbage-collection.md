@@ -6,16 +6,16 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: 347793934b01d26d22455189c12b0f1d5213a40b
-ms.sourcegitcommit: 5fc171a45697f7c610d65f74d1f3cebbac445de6
+ms.openlocfilehash: c5a4247b2e10706014c9f92a487803e4a718c1a6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52170980"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671989"
 ---
 # <a name="garbage-collection"></a>recolección de elementos no utilizados
 
-Xamarin.Android usa Mono [Simple elementos no utilizados generacional](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/). Se trata de un recolector de elementos de marcar y limpiar con dos generaciones y un *el espacio de objetos grandes*, con dos tipos de colecciones: 
+Xamarin.Android usa Mono [Simple elementos no utilizados generacional](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/). Se trata de un recolector de elementos de marcar y limpiar con dos generaciones y un *el espacio de objetos grandes*, con dos tipos de colecciones: 
 
 -   Colecciones secundarias (recopila Gen0 montón) 
 -   Colecciones principales (recopila Gen1 y objetos grandes montones de espacio). 
@@ -37,16 +37,16 @@ Hay tres categorías de tipos de objeto.
 -   **Objetos administrados**: tipos que hacen *no* heredar [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) , por ejemplo, [System.String](xref:System.String). 
     Se recopilan normalmente por el GC. 
 
--   **Los objetos de Java**: tipos de Java que están presentes dentro de la máquina virtual de tiempo de ejecución Android pero no se exponen a la máquina virtual de Mono. Estos son aburridos y no se tratará más adelante. Se recopilan normalmente por el tiempo de ejecución Android máquina virtual. 
+-   **Los objetos de Java**: Tipos de Java que están presentes dentro de la máquina virtual de tiempo de ejecución Android pero no se exponen a la máquina virtual de Mono. Estos son aburridos y no se tratará más adelante. Se recopilan normalmente por el tiempo de ejecución Android máquina virtual. 
 
 -   **Emparejar objetos**: los tipos que implementan [IJavaObject](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) , por ejemplo, todos [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) y [Java.Lang.Throwable](https://developer.xamarin.com/api/type/Java.Lang.Throwable/) subclases. Las instancias de estos tipos tienen dos "halfs" un *administrado del mismo nivel* y un *punto nativo*. El interlocutor administrado es una instancia de la C# clase. El mismo nivel nativo es una instancia de una clase de Java en el tiempo de ejecución de máquina virtual, Android y el C# [IJavaObject.Handle](https://developer.xamarin.com/api/property/Android.Runtime.IJavaObject.Handle/) propiedad contiene una referencia global de JNI al mismo nivel nativo. 
 
 
 Hay dos tipos de elementos del mismo nivel nativos:
 
--   **Elementos del mismo nivel de marco de trabajo** : tipos de Java "Normal" que sabe nada de Xamarin.Android, por ejemplo, [android.content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/).
+-   **Elementos del mismo nivel de marco de trabajo** : "Normal" tipos de Java que sabe nada de Xamarin.Android, por ejemplo, [android.content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/).
 
--   **Elementos del mismo nivel de usuario** : [Android contenedores RCW](~/android/platform/java-integration/working-with-jni.md) que se generan en tiempo de compilación para cada subclase Java.Lang.Object presente dentro de la aplicación.
+-   **Elementos del mismo nivel de usuario** : [Contenedores invocables Android](~/android/platform/java-integration/working-with-jni.md) que se generan en tiempo de compilación para cada subclase Java.Lang.Object presente dentro de la aplicación.
 
 
 Como hay dos máquinas virtuales dentro de un proceso de Xamarin.Android, hay dos tipos de colecciones de elementos no utilizados:
@@ -69,7 +69,7 @@ El resultado final de todo esto es que una instancia de un objeto del mismo nive
 
 ## <a name="object-cycles"></a>Ciclos de objetos
 
-Objetos del mismo nivel son lógicamente presentes en el tiempo de ejecución de Android y Mono las máquinas virtuales. Por ejemplo, un [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) instancia administrada del mismo nivel tendrán correspondiente [android.app.Activity](http://developer.android.com/reference/android/app/Activity.html) instancia de Java del mismo nivel de marco de trabajo. Todos los objetos que heredan de [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) puede esperarse que tienen representaciones en ambas máquinas virtuales. 
+Objetos del mismo nivel son lógicamente presentes en el tiempo de ejecución de Android y Mono las máquinas virtuales. Por ejemplo, un [Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) instancia administrada del mismo nivel tendrán correspondiente [android.app.Activity](https://developer.android.com/reference/android/app/Activity.html) instancia de Java del mismo nivel de marco de trabajo. Todos los objetos que heredan de [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) puede esperarse que tienen representaciones en ambas máquinas virtuales. 
 
 Todos los objetos que tengan representación en ambas máquinas virtuales tendrán duraciones que se han ampliado en comparación con los objetos que están presentes solo dentro de una sola máquina virtual (como un [ `System.Collections.Generic.List<int>` ](xref:System.Collections.Generic.List%601)). Una llamada a [GC. Recopilar](xref:System.GC.Collect) necesariamente no recopilar estos objetos, como debe asegurarse de que el objeto no se hace referencia a cualquier máquina virtual antes de recopilar, el GC de Xamarin.Android. 
 
@@ -78,7 +78,7 @@ Para reducir la duración del objeto, [Java.Lang.Object.Dispose()](https://devel
 
 ## <a name="automatic-collections"></a>Colecciones automática
 
-A partir [versión 4.1.0](https://developer.xamarin.com/releases/android/mono_for_android_4/mono_for_android_4.1.0), Xamarin.Android realiza automáticamente un GC completo cuando se sobrepasa un umbral de gref. Este umbral es el 90% de la conocida grefs máximo para la plataforma: grefs 1800 en el emulador (máximo de 2000) y 46800 grefs en hardware (52000 máximo). *Nota:* Xamarin.Android solo cuenta los grefs creado por [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)y no sabrá acerca de cualquier otro grefs creadas en el proceso. Se trata de un método heurístico *sólo*. 
+A partir [versión 4.1.0](https://developer.xamarin.com/releases/android/mono_for_android_4/mono_for_android_4.1.0), Xamarin.Android realiza automáticamente un GC completo cuando se sobrepasa un umbral de gref. Este umbral es el 90% de la conocida grefs máximo para la plataforma: 1800 grefs en el emulador (máximo de 2000) y 46800 grefs en hardware (52000 máximo). *Nota:* Xamarin.Android solo cuenta los grefs creado por [Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/)y no sabrá acerca de cualquier otro grefs creadas en el proceso. Se trata de un método heurístico *sólo*. 
 
 Cuando se realiza una recopilación automática, se imprimirá un mensaje similar al siguiente en el registro de depuración:
 
@@ -102,10 +102,10 @@ El puente de GC funciona durante una recolección de Mono y las cifras de a qué
 
 Este proceso complicado es lo que permite a las subclases de `Java.Lang.Object` para referencia libremente cualquiera los objetos; quita las restricciones sobre qué Java se pueden enlazar objetos a C#. Debido a esta complejidad, el proceso de puente puede ser muy costoso y puede provocar apreciables pausas en una aplicación. Si la aplicación está experimentando una pausa significativa, merece la pena investigar una de las siguientes tres implementaciones de puente de GC: 
 
--   **Tarjan** -según un diseño completamente nuevo del puente GC [algoritmo de Robert Tarjan y hacer referencia a la propagación hacia atrás](http://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
+-   **Tarjan** -según un diseño completamente nuevo del puente GC [algoritmo de Robert Tarjan y hacer referencia a la propagación hacia atrás](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
     Tiene el mejor rendimiento en nuestras cargas de trabajo simuladas, pero también tiene el recurso compartido de mayor tamaño del código experimental. 
 
--   **Nuevo** -una revisión importante del código original, corregir las dos instancias de comportamiento cuadrática pero conservando el algoritmo básico (basado en [algoritmo del Kosaraju](http://en.wikipedia.org/wiki/Kosaraju's_algorithm) para buscar fuertemente conectados componentes). 
+-   **Nuevo** -una revisión importante del código original, corregir las dos instancias de comportamiento cuadrática pero conservando el algoritmo básico (basado en [algoritmo del Kosaraju](https://en.wikipedia.org/wiki/Kosaraju's_algorithm) para buscar fuertemente conectados componentes). 
 
 -   **Antiguo** -la implementación original (se considera más estable de los tres). Este es el puente que debe usar una aplicación si el `GC_BRIDGE` pausas son aceptables. 
 
@@ -166,7 +166,7 @@ using (var d = Drawable.CreateFromPath ("path/to/filename"))
     imageView.SetImageDrawable (d);
 ```
 
-El ejemplo anterior es segura porque el mismo nivel que [Drawable.CreateFromPath()](https://developer.xamarin.com/api/member/Android.Graphics.Drawables.Drawable.CreateFromPath/) devuelve hará referencia a un elemento del mismo nivel de marco de trabajo, *no* un elemento del mismo nivel de usuario. El `Dispose()` llamar al final de la `using` bloque interrumpirá la relación entre los recursos administrados [Drawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.Drawable/) y framework [Drawable](http://developer.android.com/reference/android/graphics/drawable/Drawable.html) instancias, lo que permite que la instancia de Java recopilan tan pronto como necesita el tiempo de ejecución de Android. Esto sería *no* ser seguros si la instancia del mismo nivel hace referencia a un elemento del mismo nivel de usuario; vamos a usar la información "external" para *saber* que la `Drawable` no puede hacer referencia a un elemento del mismo nivel de usuario y, por tanto, el `Dispose()` llamar de forma segura. 
+El ejemplo anterior es segura porque el mismo nivel que [Drawable.CreateFromPath()](https://developer.xamarin.com/api/member/Android.Graphics.Drawables.Drawable.CreateFromPath/) devuelve hará referencia a un elemento del mismo nivel de marco de trabajo, *no* un elemento del mismo nivel de usuario. El `Dispose()` llamar al final de la `using` bloque interrumpirá la relación entre los recursos administrados [Drawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.Drawable/) y framework [Drawable](https://developer.android.com/reference/android/graphics/drawable/Drawable.html) instancias, lo que permite que la instancia de Java recopilan tan pronto como necesita el tiempo de ejecución de Android. Esto sería *no* ser seguros si la instancia del mismo nivel hace referencia a un elemento del mismo nivel de usuario; vamos a usar la información "external" para *saber* que la `Drawable` no puede hacer referencia a un elemento del mismo nivel de usuario y, por tanto, el `Dispose()` llamar de forma segura. 
 
 
 #### <a name="disposing-other-types"></a>Eliminación de otros tipos 
@@ -351,14 +351,14 @@ El recolector de elementos no utilizados de Xamarin.Android puede configurarse e
 
 El `MONO_GC_PARAMS` variable de entorno es una lista separada por comas de los parámetros siguientes: 
 
--   `nursery-size` = *tamaño* : establece el tamaño de la guardería. El tamaño se especifica en bytes y debe ser una potencia de dos. Los sufijos `k` , `m` y `g` puede utilizarse para especificar kilo, mega y gigabytes, respectivamente. Queda es la primera generación (de dos). Un vivero más grande normalmente acelerará el programa, pero obviamente usará más memoria. Guardería predeterminado el tamaño de 512 kb. 
+-   `nursery-size` = *tamaño* : Establece el tamaño de la guardería. El tamaño se especifica en bytes y debe ser una potencia de dos. Los sufijos `k` , `m` y `g` puede utilizarse para especificar kilo, mega y gigabytes, respectivamente. Queda es la primera generación (de dos). Un vivero más grande normalmente acelerará el programa, pero obviamente usará más memoria. Guardería predeterminado el tamaño de 512 kb. 
 
--   `soft-heap-limit` = *tamaño* : el máximo de destino administrado consumo de memoria para la aplicación. Cuando el uso de memoria es inferior al valor especificado, el GC está optimizado para el tiempo de ejecución (menos colecciones). 
+-   `soft-heap-limit` = *tamaño* : El consumo máximo de memoria administrada de destino para la aplicación. Cuando el uso de memoria es inferior al valor especificado, el GC está optimizado para el tiempo de ejecución (menos colecciones). 
     Por encima de este límite, el GC está optimizado para el uso de memoria (colecciones más). 
 
--   `evacuation-threshold` = *umbral* : establece el umbral de evacuación en porcentaje. El valor debe ser un entero en el intervalo de 0 a 100. El valor predeterminado es 66. Si encuentra que la fase de barrido de la colección que la ocupación de un tipo de bloque de montón concreto es menor que este porcentaje, hará una copia colección para ese tipo de bloque en la siguiente recolección principal, restaurando ocupación al próximo al 100%. Un valor de 0 desactiva la evacuación. 
+-   `evacuation-threshold` = *umbral* : Establece el umbral de evacuación en porcentaje. El valor debe ser un entero en el intervalo de 0 a 100. El valor predeterminado es 66. Si encuentra que la fase de barrido de la colección que la ocupación de un tipo de bloque de montón concreto es menor que este porcentaje, hará una copia colección para ese tipo de bloque en la siguiente recolección principal, restaurando ocupación al próximo al 100%. Un valor de 0 desactiva la evacuación. 
 
--   `bridge-implementation` = *implementación de puente* : esta acción establecerá la opción de puente de GC para ayudar a resolver GC problemas de rendimiento. Hay tres valores posibles: *antiguo* , *nueva* , *tarjan*.
+-   `bridge-implementation` = *implementación de puente* : Esto establecerá la opción de puente de GC para ayudar a resolver problemas de rendimiento de GC. Hay tres valores posibles: *antiguo* , *nueva* , *tarjan*.
 
 -   `bridge-require-precise-merge`: El Tarjan puente contiene una optimización que, en raras ocasiones, hacen que un objeto sea recopila un GC después de que primero se convierte en elementos no utilizados. Incluye esta opción deshabilita que la optimización, lo más predecible, pero potencialmente más lento de GC.
 

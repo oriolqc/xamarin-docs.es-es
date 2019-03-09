@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 9e83c9a8c1e2740596a981598cafbbfb65e2caf2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 24fc14b0342591c56f5bf91862b0d94759a42834
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119246"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670108"
 ---
 # <a name="jelly-bean-features"></a>Jelly Bean características
 
@@ -79,7 +79,7 @@ Como el `TimeAnimator` instancia se está ejecutando, éste invocará `ITimeAnim
 
 ### <a name="application-stack-navigation"></a>Navegación de la pila de aplicación
 
-Android 4.1 mejora la navegación de la pila de aplicación que se introdujo en Android 3.0. Especificando el `ParentName` propiedad de la `ActivityAttribute`, Android puede abrir la actividad primaria adecuada cuando el usuario presiona el [botón](http://developer.android.com/design/patterns/navigation.html#up-vs-back) en la barra de acción - Android creará una instancia de la actividad especificada por el `ParentName`propiedad. Esto permite que las aplicaciones conservar la jerarquía de actividades que realizan una tarea determinada.
+Android 4.1 mejora la navegación de la pila de aplicación que se introdujo en Android 3.0. Especificando el `ParentName` propiedad de la `ActivityAttribute`, Android puede abrir la actividad primaria adecuada cuando el usuario presiona el [botón](https://developer.android.com/design/patterns/navigation.html#up-vs-back) en la barra de acción - Android creará una instancia de la actividad especificada por el `ParentName`propiedad. Esto permite que las aplicaciones conservar la jerarquía de actividades que realizan una tarea determinada.
 
 Para la mayoría de las aplicaciones establecer el `ParentName` en la actividad es información suficiente para Android proporcionar el comportamiento correcto para navegar por la pila de aplicaciones; Android la síntesis de la pila de retroceso necesaria mediante la creación de una serie de intentos para cada actividad primaria. Sin embargo, puesto que es una pila de aplicaciones artificial, cada actividad sintético no tendrá el estado guardado que tendría una actividad natural. Para proporcionar el estado guardado en una actividad primaria sintético, una actividad puede invalidar el `OnPrepareNavigationUpTaskStack` método. Este método recibe un `TaskStackBuilder` los objetos de instancia que tendrá una colección de intención que Android usará para crear la pila de retroceso. La actividad puede modificar estos intentos para que, al crear la actividad sintética, recibirá la información de estado adecuado.
 
@@ -145,11 +145,11 @@ mediaActionPlayer.Release();
 
 
 
-### <a name="connectivity"></a>conectividad
+### <a name="connectivity"></a>Conectividad
 
 
 
-#### <a name="android-beam"></a>Haz de Android
+#### <a name="android-beam"></a>Android Beam
 
 Haz de Android es una tecnología de NFC en función que permite que dos de los dispositivos Android se comuniquen entre sí. Android 4.1 ofrece compatibilidad mejorada para la transferencia de archivos de gran tamaño. Cuando se usa el nuevo método `NfcAdapter.SetBeamPushUris()` Android cambiará entre los mecanismos de transporte alternativo (por ejemplo, Bluetooth) para lograr una velocidad de transferencia rápida.
 
@@ -284,6 +284,6 @@ En este artículo, a continuación, se pasa a introducir las actualizaciones a l
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplo de animación de tiempo (ejemplo)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TimeAnimatorExample/)
-- [Android 4.1 API](http://developer.android.com/about/versions/android-4.1.html)
-- [Tareas y pilas atrás](http://developer.android.com/guide/components/tasks-and-back-stack.html)
-- [Navegación con atrás y arriba](http://developer.android.com/design/patterns/navigation.html)
+- [Android 4.1 API](https://developer.android.com/about/versions/android-4.1.html)
+- [Tareas y pilas atrás](https://developer.android.com/guide/components/tasks-and-back-stack.html)
+- [Navegación con atrás y arriba](https://developer.android.com/design/patterns/navigation.html)

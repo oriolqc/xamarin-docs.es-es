@@ -6,13 +6,13 @@ ms.assetid: 610A0834-1141-4D09-A05E-B7ADF99462C5
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
-ms.date: 8/29/2018
-ms.openlocfilehash: cd9e92e2c96d0a0696633e49869f2661e410d343
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.date: 08/29/2018
+ms.openlocfilehash: 83340ce2d5db145c29166d90d3a5180b1767d7ca
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233593"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672500"
 ---
 # <a name="type-registrar-for-xamarinios"></a>Registrador de nombres de tipo para Xamarin.iOS
 
@@ -144,7 +144,7 @@ A continuación se muestran algunos ejemplos de los errores capturados por el re
 
     ```csharp
     [Register]
-    class MyDemo : NSObject 
+    class MyDemo : NSObject
     {
         [Export ("foo:")]
         void Foo (NSString str);
@@ -178,7 +178,7 @@ A continuación se muestran algunos ejemplos de los errores capturados por el re
 
 Algunos aspectos a tener en cuenta sobre el nuevo registrador:
 
-- Algunas bibliotecas de terceros deben actualizarse para que funcione con el nuevo sistema de registro. Consulte [necesarias modificaciones](#required_modifications) a continuación para obtener más detalles.
+- Algunas bibliotecas de terceros deben actualizarse para que funcione con el nuevo sistema de registro. Consulte [necesarias modificaciones](#required-modifications) a continuación para obtener más detalles.
 
 - La desventaja a corto plazo también es que se debe usar Clang si se usa el marco de trabajo de las cuentas (Esto es porque Apple **accounts.h** encabezado solo se puede compilar si Clang). Agregar `--compiler:clang` a los argumentos mtouch adicionales para usar Clang si usa Xcode 4.6 o una versión anterior (Xamarin.iOS seleccionará automáticamente Clang en Xcode 5.0 o versiones posteriores.)
 
@@ -203,6 +203,8 @@ El sistema de registro antiguo tiene las siguientes desventajas:
 - Se podrían exportar dos métodos que tienen la misma firma de Objective-C. Nuevo aún cuál se llamaría desde Objective-C era aleatorio (pero este problema no era tan común como lo anterior, principalmente porque era la única manera de experimentar realmente este error invalidar el método administrado desafortunado).
 - El conjunto de métodos que se exportó era ligeramente diferente entre compilaciones dinámicas y estáticas.
 - No funcione correctamente cuando se exportan las clases genéricas (qué implementación genérica exacto que se ejecuta en tiempo de ejecución sería aleatoria, resultante de forma eficaz un comportamiento indeterminado).
+
+<a name="required-modifications" />
 
 ## <a name="new-registrar-required-changes-to-bindings"></a>Nuevo registrador: los cambios requeridos para los enlaces
 

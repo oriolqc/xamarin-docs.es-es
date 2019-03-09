@@ -1,17 +1,17 @@
 ---
 title: Introducción a Sharpie objetivo
-description: Este documento proporciona una descripción general de Sharpie objetivo, la herramienta usada para automatizar la creación de enlaces de C# para código de Objective-C.
+description: Este documento proporciona información general de Sharpie objetivo, la herramienta usada para automatizar la creación de C# enlaces a código de Objective-C.
 ms.prod: xamarin
 ms.assetid: 577512BF-1A90-41E5-89DE-9E056C478678
 author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
-ms.openlocfilehash: da8c51c4ba4df74afac950bbff867221e7307d6e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.openlocfilehash: c1831467ca0cbb4329a1e77fb355698f2d16cd6a
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854784"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670121"
 ---
 # <a name="getting-started-with-objective-sharpie"></a>Introducción a Sharpie objetivo
 
@@ -36,7 +36,7 @@ Ejecute el instalador y siga todas las indicaciones en pantalla desde el Asisten
 
 ## <a name="basic-walkthrough"></a>Tutorial básico
 
-Sharpie objetivo es una herramienta de línea de comandos proporcionados por Xamarin que ayuda a crear las definiciones necesarias para enlazar una biblioteca de Objective-C parte 3ª con C#.
+Sharpie objetivo es una herramienta de línea de comandos proporcionada por Xamarin que ayuda a crear las definiciones necesarias para enlazar una biblioteca de Objective-C parte 3ª a C#.
 Incluso cuando se usa Sharpie objetivo, el desarrollador *le* que necesite modificar los archivos generados al finalizar Sharpie objetivo para solucionar cualquier problema que no se puede controlar automáticamente la herramienta.
 
 Siempre que sea posible, objetivo Sharpie indicará las API con las que tiene alguna duda sobre cómo enlazar correctamente (muchas construcciones en el código nativo son ambiguas).
@@ -48,7 +48,7 @@ El resultado de objetivo Sharpie es un par de archivos - [ `ApiDefinition.cs` y 
 > Objetivo Sharpie incluye una **principales** regla para el uso adecuado: absolutamente se debe pasar los argumentos de línea de comandos del compilador de clang correcta con el fin de garantizar el análisis correcto. Esto es porque el Sharpie objetivo de fase de análisis es simplemente una herramienta [implementado con la API de clang libtooling](http://clang.llvm.org/docs/LibTooling.html).
 
 Esto significa que el objetivo Sharpie tiene toda la funcionalidad de Clang (el compilador de C/Objective-C/C++ que realmente se compila la biblioteca nativa que enlazaría) y todo su conocimiento interno de los archivos de encabezado para el enlace.
-En lugar de convertir el objeto analizado [AST](http://en.wikipedia.org/wiki/Abstract_syntax_tree) al código de objeto, objetivo Sharpie traduce el AST de C# enlace "scaffolding" adecuado para la entrada a la `bmac` y `btouch` herramientas de enlace de Xamarin.
+En lugar de convertir el objeto analizado [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) al código de objeto, objetivo Sharpie traduce el AST a un C# enlace "aplicar la técnica scaffolding" adecuado para la entrada a la `bmac` y `btouch` herramientas de enlace de Xamarin.
 
 Si objetivo Sharpie errores durante el análisis, significa que clang cerradas durante su análisis de la fase tratando de construir el AST y necesita averiguar por qué.
 
@@ -62,4 +62,4 @@ Si la biblioteca que le interesa está disponible como un CocoaPod, se recomiend
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Curso de Xamarin University: Creación de una biblioteca de enlaces de Objective-c.](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Curso de Xamarin University: Compilar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Curso de Xamarin University: Generar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

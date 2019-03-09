@@ -1,5 +1,5 @@
 ---
-title: ¿Dónde puedo encontrar mi información de versión y los registros?
+title: ¿Dónde se puede encontrar mi información de versión y los registros?
 description: Este documento describe dónde buscar para buscar los registros y la información de versión de Xamarin. Esta información es útil al diagnosticar problemas, enviando los errores o la obtención de soporte técnico.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -7,16 +7,16 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: 2c3ded2233810ff4e903596d65f64097aa3b0445
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ee4b39aed64d7339bd561cccc49a2959a6daba5c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118232"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668314"
 ---
-# <a name="where-can-i-find-my-version-information-and-logs"></a>¿Dónde puedo encontrar mi información de versión y los registros?
+# <a name="where-can-i-find-my-version-information-and-logs"></a>¿Dónde se puede encontrar mi información de versión y los registros?
 
-## <a name="outline"></a>Esquema
+## <a name="outline"></a>Contorno
 
 - [Información de versión](#version-information)
     - Información de versión de Windows
@@ -100,7 +100,7 @@ Estos son los registros desde el `XamarinInstaller.exe` instalador.
 msiexec /i Xamarin.msi /l*vx "%USERPROFILE%\Desktop\Xamarin.log"
 ```
 
-Referencia: [opciones de línea de comandos](http://msdn.microsoft.com/library/aa367988.aspx)
+Referencia: [Opciones de línea de comandos](https://msdn.microsoft.com/library/aa367988.aspx)
 
 #### <a name="a-idvisual-studio-startup-verbose-logs-namevisual-studio-startup-verbose-logs-visual-studio-startup-verbose-logs"></a><a id="visual-studio-startup-verbose-logs" name="visual-studio-startup-verbose-logs" />Inicio de Visual Studio, los registros detallados
 
@@ -108,7 +108,7 @@ Referencia: [opciones de línea de comandos](http://msdn.microsoft.com/library/a
 devenv.exe /log "%USERPROFILE%\Desktop\VisualStudio.log"
 ```
 
-Referencia: [/Log (devenv.exe)](http://msdn.microsoft.com/library/ms241272.aspx)
+Referencia: [/Log (devenv.exe)](https://msdn.microsoft.com/library/ms241272.aspx)
 
 ### <a name="a-idmac-logs-namemac-logs-mac-logs"></a><a id="mac-logs" name="mac-logs" />Registros de Mac
 
@@ -145,7 +145,7 @@ Estos son los registros desde el `XamarinInstaller.dmg` instalador.
 3.  Limpie y recompile el proyecto.
 
 4.  Copie y pegue la salida de compilación desde el IDE en un archivo de texto.
-     - Visual Studio (Windows): **Ver > salida > Mostrar resultados desde: compilación**
+     - Visual Studio (Windows): **Ver > salida > Mostrar resultados desde: Compilación**
      - Visual Studio para Mac: **Vista > paneles > errores > salida de la compilación (ficha)**
 
 ## <a name="a-iddebug-logs-for-xamarin-apps-namedebug-logs-for-xamarin-apps-debug-logs-for-xamarinandroid-and-xamarinios-apps"></a><a id="debug-logs-for-xamarin-apps" name="debug-logs-for-xamarin-apps" />Depurar registros para aplicaciones de Xamarin.Android y Xamarin.iOS
@@ -158,9 +158,9 @@ Estos son los registros desde el `XamarinInstaller.dmg` instalador.
 
 ### <a name="visual-studio"></a>Programa para la mejora
 
-**Ver > salida > Mostrar resultados desde: depurar**
+**Ver > salida > Mostrar resultados desde: Depurar**
 
-### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />Android [ `adb` ](http://developer.android.com/tools/help/adb.html) logcat registros
+### <a name="a-idadb-logcat-nameadb-logcat-android-adbhttpsdeveloperandroidcomtoolshelpadbhtml-logcat-logs"></a><a id="adb-logcat" name="adb-logcat" />Android [ `adb` ](https://developer.android.com/tools/help/adb.html) logcat registros
 
 Después de ejecutar el `adb` comando, adjunte back el **android_logcat.txt** archivo desde el escritorio. Estas instrucciones se supone que tiene solo un dispositivo conectado.
 

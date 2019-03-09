@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 859afcf6ab9f3acfb56104fa68683ba28d913ce4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5363e3a2210bdcf1efb870ac808ecb37584de6a7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117148"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668925"
 ---
 # <a name="populating-a-table-with-data-in-xamarinios"></a>Rellenar una tabla con datos de Xamarin.iOS
 
@@ -34,7 +34,7 @@ Un `UITableViewSource` subclase se asigna a cada `UITableView`. La vista de tabl
 
 Hay solo dos métodos obligatorios necesarios para crear una tabla de mostrar los datos:
 
--   **RowsInSection** : devuelto una [ `nint` ](http://developer.xamarin.com/guides/cross-platform/macios/nativetypes/) recuento del número total de filas de datos que se debe mostrar en la tabla.
+-   **RowsInSection** : devuelto una [ `nint` ](https://developer.xamarin.com/guides/cross-platform/macios/nativetypes/) recuento del número total de filas de datos que se debe mostrar en la tabla.
 -   **GetCell** : devuelto una `UITableCellView` rellena con datos para el índice de fila correspondiente pasado al método.
 
 

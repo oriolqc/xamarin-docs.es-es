@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/02/2018
-ms.openlocfilehash: bf2842679aded21c9677d9cef31910f273518acd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: de2b92a4007f085a14c16f0c1e8ca9e568df1aff
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119181"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668378"
 ---
 # <a name="nougat-features"></a>Características de nougat
 
@@ -27,7 +27,7 @@ Este artículo se proporciona un resumen de las características introducidas en
 
 [![Imágenes de imagen prominente de tabletas y teléfonos ejecutan Android Nougat Android](nougat-images/android-n-hero-sml.png)](nougat-images/android-n-hero.png#lightbox)
 
-Para obtener más información acerca de las API de Android 7.x, consulte [Android 7.1 para desarrolladores](http://developer.android.com/preview/api-overview.html).
+Para obtener más información acerca de las API de Android 7.x, consulte [Android 7.1 para desarrolladores](https://developer.android.com/preview/api-overview.html).
 Para obtener una lista de problemas conocidos de Xamarin.Android 7.0, vea el [notas de la versión](https://developer.xamarin.com/releases/android/xamarin.android_7/xamarin.android_7.0/).
 
 Android Nougat proporciona muchas características nuevas de interés para los desarrolladores de Xamarin.Android. Entre ellas se incluyen:
@@ -53,7 +53,7 @@ Para usar las nuevas características de Android Nougat en aplicaciones basadas 
 
 -   **SDK de Android** -Android 7.0 SDK (API 24) o posterior debe estar instalado a través de Android SDK Manager.
 
--   **Kit para desarrolladores de Java** &ndash; el desarrollo de Xamarin Android 7.0 requiere [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o posterior si está desarrollando para el nivel de API 24 o superior (JDK 8 también admite los niveles de API anteriores al 24). La versión de 64 bits de JDK 8 es necesaria si utiliza controles personalizados o la vista previa de formularios.
+-   **Kit para desarrolladores de Java** &ndash; el desarrollo de Xamarin Android 7.0 requiere [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o posterior si está desarrollando para el nivel de API 24 o superior (JDK 8 también admite los niveles de API anteriores al 24). La versión de 64 bits de JDK 8 es necesaria si utiliza controles personalizados o la vista previa de formularios.
 
 > [!IMPORTANT]
 > Xamarin.Android no admite JDK 9.

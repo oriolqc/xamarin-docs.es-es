@@ -1,19 +1,14 @@
 ---
 title: Recursos de Android
-description: Este artículo presenta el concepto de recursos de Android en Xamarin.Android y documentará cómo usarlas. Se describe cómo usar los recursos en la aplicación Android para admitir la localización de aplicaciones y varios dispositivos, incluidas las densidades y diferentes tamaños de pantalla.
+description: 'Este artículo presenta el concepto de recursos de Android en Xamarin.Android y documentará cómo usarlas. Se describe cómo usar los recursos en la aplicación Android para admitir la localización de aplicaciones y varios dispositivos, incluidas las densidades y diferentes tamaños de pantalla.'
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/01/2018
-ms.openlocfilehash: d9cd6bf3ae51c6e27be88481e412995bd4113c17
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117272"
 ---
+
 # <a name="android-resources"></a>Recursos de Android
 
 _Este artículo presenta el concepto de recursos de Android en Xamarin.Android y documentará cómo usarlas. Se describe cómo usar los recursos en la aplicación Android para admitir la localización de aplicaciones y varios dispositivos, incluidas las densidades y diferentes tamaños de pantalla._
@@ -71,6 +66,6 @@ En este artículo tomará una visión integral de uso de recursos y abarcan los 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Uso de recursos de Android](~/android/app-fundamentals/resources-in-android/android-assets.md)
-- [Principios de la aplicación](http://developer.android.com/guide/topics/fundamentals.html)
-- [Recursos de la aplicación](http://developer.android.com/guide/topics/resources/index.html)
-- [Compatibilidad con varias pantallas](http://developer.android.com/guide/practices/screens_support.html)
+- [Principios de la aplicación](https://developer.android.com/guide/topics/fundamentals.html)
+- [Recursos de la aplicación](https://developer.android.com/guide/topics/resources/index.html)
+- [Compatibilidad con varias pantallas](https://developer.android.com/guide/practices/screens_support.html)

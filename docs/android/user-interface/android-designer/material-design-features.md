@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
-ms.openlocfilehash: eb636c3b7a41adbab9162e192ead65def377a1a0
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5e6d7b4bdfdf7ea48d26537cb41c763656b050e0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118986"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669666"
 ---
 # <a name="xamarinandroid-designer-material-design-features"></a>Características de diseño del diseñador Material de Xamarin.Android
 
@@ -90,7 +90,7 @@ Tal como se muestra en el ejemplo siguiente, la **heredar** pestaña muestra la 
 [![Heredar de pestaña](material-design-features-images/vs/06-inherit-tab-w158-sml.png)](material-design-features-images/vs/06-inherit-tab-w158.png#lightbox)
 
 En este ejemplo, el **tema predeterminado** hereda de un estilo que usa `@color/background_material_light` pero la reemplaza con `color/material_grey_50`, que tiene un valor de código de color de `#fffafafa`.
-Para obtener más información sobre la herencia de estilo, consulte [estilos y temas](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
+Para obtener más información sobre la herencia de estilo, consulte [estilos y temas](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### <a name="color-picker"></a>Selector de colores
 
@@ -214,7 +214,7 @@ Al hacer clic en este icono, se abre un elemento flotante de cuadro de diálogo 
 La parte superior de la paleta de colores muestra los colores de Material Design principales mientras que la parte inferior de la paleta muestra un intervalo de tonos de color principal seleccionado. Por ejemplo, cuando selecciona **Indigo**, una colección de **Indigo** matices se muestra en la parte inferior del cuadro de diálogo.
 Cuando se selecciona un tono, se cambia el color de la propiedad para el matiz seleccionado. En el ejemplo siguiente, la `Background Tint` del botón cambia a *500 Indigo*:
 
-[![Elija Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
+[![Choose Indigo 500](material-design-features-images/xs/06-indigo-sml.png)](material-design-features-images/xs/06-indigo.png#lightbox)
 
 `Background Tint` se establece en el código de color para *500 Indigo* (`#ff3f51b5`), y el diseñador actualiza el color de fondo del botón para reflejar este cambio:
 
@@ -271,7 +271,7 @@ Tal como se muestra en el ejemplo siguiente, la **heredar** pestaña muestra la 
 [![Heredar de pestaña](material-design-features-images/xs/13-inherit-sml.png)](material-design-features-images/xs/13-inherit.png#lightbox)
 
 En este ejemplo, el **tema predeterminado** hereda de un estilo que usa `@color/background_material_dark` pero la reemplaza con `color/material_grey_850`, que tiene un valor de código de color de `#ff303030`.
-Para obtener más información sobre la herencia de estilo, consulte [estilos y temas](http://developer.android.com/guide/topics/ui/themes.html#Inheritance).
+Para obtener más información sobre la herencia de estilo, consulte [estilos y temas](https://developer.android.com/guide/topics/ui/themes.html#Inheritance).
 
 ### <a name="color-picker"></a>Selector de colores
 

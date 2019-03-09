@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: fc3a30473b4a38b21f89c5be201c8191658aae63
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 13fd84d8e23c18606696532b1c6e8db301b52f3c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050327"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668548"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Instalación y uso de watchOS en Xamarin
 
@@ -178,7 +178,7 @@ De forma predeterminada se inicia una aplicación de inspección en normal **apl
 
 Al usar Xcode 6, solo el iPhone 5, iPhone 5S, iPhone 6 y iPhone 6 Plus puede activar la pantalla externa cualquiera **Apple Watch - 38mm** o **Apple Watch - 42mm** donde las aplicaciones de watch será muestra.
 
-**Nota:** recordar que la pantalla de inspección no aparecen automáticamente en el simulador de iOS al usar Xcode 6.
+**Nota:** Recuerde que la pantalla de inspección no aparecen automáticamente en el simulador de iOS al usar Xcode 6.
 Use la **Hardware > pantallas externas** menú para mostrar la pantalla de inspección.
 
 <a name="custommodes" />
@@ -232,5 +232,5 @@ Los archivos de plantilla de watchOS (como `InterfaceController`, `ExtensionDele
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [WatchKitCatalog (ejemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [Primer vídeo de la aplicación del reloj](http://blog.xamarin.com/your-first-watch-kit-app/)
+- [Primer vídeo de la aplicación del reloj](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Sugerencias de WatchKit de Apple](https://developer.apple.com/watchkit/tips/)

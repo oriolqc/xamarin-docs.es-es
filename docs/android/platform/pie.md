@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: 49e3a0189d0887343f2636d6931a00cc819800c0
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: fa41affc57714254a12623f79da3dc1396ecd009
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267643"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670164"
 ---
 # <a name="android-pie-features"></a>Características de Android circular
 
@@ -34,7 +34,7 @@ En la lista siguiente es necesaria para usar las características de Android cir
 
 -   **Xamarin.Android** &ndash; Xamarin.Android 9.0.0.17 o posterior debe estar instalado con Visual Studio (Xamarin.Android se instala automáticamente como parte de la **desarrollo móvil con .NET** carga de trabajo).
 
--   **Kit para desarrolladores de Java** &ndash; el desarrollo de Xamarin Android 9.0 requiere [JDK 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (o bien puede probar la versión preliminar de la distribución de Microsoft de la [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 se instala automáticamente como parte de la **desarrollo móvil con .NET** carga de trabajo.
+-   **Kit para desarrolladores de Java** &ndash; el desarrollo de Xamarin Android 9.0 requiere [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (o bien puede probar la versión preliminar de la distribución de Microsoft de la [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 se instala automáticamente como parte de la **desarrollo móvil con .NET** carga de trabajo.
 
 -   **SDK de Android** &ndash; API del SDK de Android 28 o posterior debe instalarse a través de Android SDK Manager.
 

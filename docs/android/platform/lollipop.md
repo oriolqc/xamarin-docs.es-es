@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: d79c0563d1dc9a2cfe75b702300982bb4d38553b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d6173e1886eaf807decd960b07acc022bb17c04d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117868"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669081"
 ---
 # <a name="lollipop-features"></a>Características de círculo
 
@@ -49,9 +49,9 @@ Para usar las nuevas características de Android 5.0 en aplicaciones basadas en 
 
 -   **SDK de Android** &ndash; Android 5.0 (API 21) o posterior debe estar instalado a través de Android SDK Manager.
 
--   **Kit para desarrolladores de Java** &ndash; requiere Xamarin.Android [JDK 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o posterior si está desarrollando para el nivel de API 24 o superior (JDK 1.8 también admite los niveles de API anteriores al 24, incluido el círculo). La versión de 64 bits del JDK 1.8 es necesaria si utiliza controles personalizados o la vista previa de formularios.
+-   **Kit para desarrolladores de Java** &ndash; requiere Xamarin.Android [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) o posterior si está desarrollando para el nivel de API 24 o superior (JDK 1.8 también admite los niveles de API anteriores al 24, incluido el círculo). La versión de 64 bits del JDK 1.8 es necesaria si utiliza controles personalizados o la vista previa de formularios.
 
-Aún puede usar [JDK 1.7](http://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) si está desarrollando contenido específicamente para el nivel de API 23 o una versión anterior.
+Aún puede usar [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) si está desarrollando contenido específicamente para el nivel de API 23 o una versión anterior.
 
 
 ## <a name="setting-up-an-android-50-project"></a>Configuración de un proyecto Android 5.0
@@ -70,7 +70,7 @@ Para crear un proyecto de Android 5.0, debe instalar los paquetes SDK y herramie
 
     [![Instalación de paquetes de SDK de Android 5.0 en Android SDK Manager](lollipop-images/android-l-sdk-pkgs-sml.png)](lollipop-images/android-l-sdk-pkgs.png#lightbox)
 
-   Para obtener más información sobre cómo usar Android SDK Manager, consulte [SDK Manager](http://developer.android.com/tools/help/sdk-manager.html).
+   Para obtener más información sobre cómo usar Android SDK Manager, consulte [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html).
 
 4. Cree un nuevo proyecto de Xamarin.Android. Si está familiarizado con el desarrollo de Android con Xamarin, consulte [Hello, Android](~/android/get-started/hello-android/index.md) para obtener información acerca de cómo crear proyectos de Android. Al crear un proyecto de Android, asegúrese de configurar las opciones de versión para Android 5.0.
    En Visual Studio para Mac, vaya a **opciones de proyecto &gt; compilar &gt; General** y establecer **.NET framework de destino** a **Android 5.0 (Lollipop)** o más adelante:
@@ -99,7 +99,7 @@ Android 5.0, se utiliza el tiempo de ejecución de Android nueva (arte) como el 
 
 -   **Depuración de aplicación mejorada** &ndash; arte proporciona más detalles de diagnóstico le ayudan a analizar las excepciones y los informes de bloqueo.
 
-Las aplicaciones existentes deben funcionar sin cambios en el arte &ndash; excepto para las aplicaciones que aprovechan técnicas únicas para el tiempo de ejecución Dalvik anterior, que puede no funcionar en imágenes. Para obtener más información sobre estos cambios, consulte [comportamiento de comprobación de la aplicación en tiempo de ejecución de Android (ART)](http://developer.android.com/guide/practices/verifying-apps-art.html).
+Las aplicaciones existentes deben funcionar sin cambios en el arte &ndash; excepto para las aplicaciones que aprovechan técnicas únicas para el tiempo de ejecución Dalvik anterior, que puede no funcionar en imágenes. Para obtener más información sobre estos cambios, consulte [comportamiento de comprobación de la aplicación en tiempo de ejecución de Android (ART)](https://developer.android.com/guide/practices/verifying-apps-art.html).
 
 
 ### <a name="notification-changes"></a>Cambios de notificación
@@ -124,7 +124,7 @@ En la mayoría de los casos, la portabilidad de la funcionalidad de notificació
 
 4.  Establecer la categoría de las notificaciones, por lo que se controlan correctamente en el nuevo Android 5.0 *no molestar* modo.
 
-Si las notificaciones están presentes los controles de transporte, los medios para mostrar estado de la reproducción, use `RemoteControlClient`, o llamar a `ActivityManager.GetRecentTasks`, consulte [importantes cambios de comportamiento](http://developer.android.com/preview/api-overview.html#Behaviors) para obtener más información acerca de cómo actualizar las notificaciones para Android 5.0.
+Si las notificaciones están presentes los controles de transporte, los medios para mostrar estado de la reproducción, use `RemoteControlClient`, o llamar a `ActivityManager.GetRecentTasks`, consulte [importantes cambios de comportamiento](https://developer.android.com/preview/api-overview.html#Behaviors) para obtener más información acerca de cómo actualizar las notificaciones para Android 5.0.
 
 Para obtener información sobre cómo crear notificaciones en Android, consulte [notificaciones locales](~/android/app-fundamentals/notifications/local-notifications.md). El [compatibilidad](~/android/app-fundamentals/notifications/local-notifications.md#compatibility) sección de este artículo explica cómo crear notificaciones que son compatibles con hacia abajo con versiones anteriores de Android.
 
@@ -157,7 +157,7 @@ Las animaciones de comentarios de Touch proporcionan a los usuarios comentarios 
 
 Contacto táctil inicial con el botón se produce en la primera imagen de la izquierda, mientras que la secuencia restante (de izquierda a derecha) muestra cómo el efecto dominó se extiende hasta el borde del botón. Cuando finaliza la animación de ripple, devuelve la vista de aspecto original. La animación de ripple predeterminada tiene lugar en una fracción de segundo, pero la longitud de la animación se puede personalizar para las longitudes larga o más cortas de tiempo.
 
-Para obtener más información sobre touch animaciones de comentarios en Android 5.0, consulte [personalizar comentarios Touch](http://developer.android.com/training/material/animations.html#Touch).
+Para obtener más información sobre touch animaciones de comentarios en Android 5.0, consulte [personalizar comentarios Touch](https://developer.android.com/training/material/animations.html#Touch).
 
 
 ### <a name="activity-transition-animations"></a>Animaciones de transición de actividad
@@ -206,7 +206,7 @@ Transiciones de un elemento compartido admiten varios tipos de animaciones, como
 
 -   Cambiar el tipo de tamaño y la escala de una vista.
 
-Para obtener más información acerca de las animaciones de transición de actividad en Android 5.0, consulte [Personalizar actividad transiciones](http://developer.android.com/training/material/animations.html#Transitions).
+Para obtener más información acerca de las animaciones de transición de actividad en Android 5.0, consulte [Personalizar actividad transiciones](https://developer.android.com/training/material/animations.html#Transitions).
 
 
 ### <a name="view-state-transition-animations"></a>Animaciones de transición de estado de vista
@@ -217,7 +217,7 @@ Android 5.0 hace posible para las animaciones que se ejecuta cuando cambia el es
 
 -   Definir la funcionalidad de animación que se ejecuta cuando cambia el estado de una vista. El nuevo `StateListAnimator` clase le permite definir una animación que se ejecuta cuando cambia el estado de una vista.
 
-Para obtener más información sobre animaciones de transición de estado de vista en Android 5.0, consulte [animar los cambios de estado de vista](http://developer.android.com/training/material/animations.html#ViewState).
+Para obtener más información sobre animaciones de transición de estado de vista en Android 5.0, consulte [animar los cambios de estado de vista](https://developer.android.com/training/material/animations.html#ViewState).
 
 
 ### <a name="reveal-effect"></a>Mostrar el efecto
@@ -232,7 +232,7 @@ La secuencia siguiente muestra una animación de efecto de revelar que tiene lug
 
 Revelar las animaciones se pueden invertir; es decir, el círculo de recorte puede reducir para ocultar la vista en lugar de ampliar para mostrar la vista.
 
-Para obtener más información en el efecto de revelar Android 5.0, consulte [usar el efecto de revelar](http://developer.android.com/training/material/animations.html#Reveal).
+Para obtener más información en el efecto de revelar Android 5.0, consulte [usar el efecto de revelar](https://developer.android.com/training/material/animations.html#Reveal).
 
 
 ### <a name="curved-motion"></a>Movimiento curva
@@ -245,7 +245,7 @@ Además de estas características de animación, Android 5.0 también proporcion
 
 -   **Lineal\_out\_lenta\_en** &ndash; empieza con una velocidad máxima y lentamente desacelera al final de la animación.
 
-Puede usar el nuevo `PathInterpolator` clase para especificar cómo realiza la interpolación de movimiento. `PathInterpolator` es un interpolador que atraviesa las rutas de acceso de animación según los puntos de control especificados y curvas de movimiento. Para obtener más información acerca de cómo especificar la configuración de movimiento curvas en Android 5.0, consulte [Use curvas movimiento](http://developer.android.com/training/material/animations.html#CurvedMotion).
+Puede usar el nuevo `PathInterpolator` clase para especificar cómo realiza la interpolación de movimiento. `PathInterpolator` es un interpolador que atraviesa las rutas de acceso de animación según los puntos de control especificados y curvas de movimiento. Para obtener más información acerca de cómo especificar la configuración de movimiento curvas en Android 5.0, consulte [Use curvas movimiento](https://developer.android.com/training/material/animations.html#CurvedMotion).
 
 
 ## <a name="view-shadows--elevation"></a>Vista sombras & elevación
@@ -258,7 +258,7 @@ El ejemplo siguiente muestra las sombras tinte vacío `TextView` controlar cuand
 
 Configuración de la sombra de la vista puede ser estática (como se indicó anteriormente) o puede usarse en las animaciones para hacer que una vista aparecen temporalmente subiendo por encima de fondo de la vista. Puede usar el `ViewPropertyAnimator` clase para animar la elevación de una vista. La elevación de una vista es la suma de su diseño `elevation` configuración más una `translationZ` propiedad que se puede establecer a través de un `ViewPropertyAnimator` llamada al método.
 
-Para obtener más información acerca de las sombras de vista de Android 5.0, consulte [definir sombras y vistas de recorte](http://developer.android.com/training/material/shadows-clipping.html).
+Para obtener más información acerca de las sombras de vista de Android 5.0, consulte [definir sombras y vistas de recorte](https://developer.android.com/training/material/shadows-clipping.html).
 
 
 ## <a name="color-features"></a>Características de color
@@ -282,7 +282,7 @@ Este logotipo se muestra sobre un fondo azul circular tal como se muestra en los
 
 ![Ejemplos del logotipo anterior con la configuración de un tono diferente](lollipop-images/drawable-tinting.png)
 
-Para obtener más información acerca de tintes pueden dibujar en Android 5.0, consulte [tintes Drawable](http://developer.android.com/training/material/drawables.html#DrawableTint).
+Para obtener más información acerca de tintes pueden dibujar en Android 5.0, consulte [tintes Drawable](https://developer.android.com/training/material/drawables.html#DrawableTint).
 
 
 ### <a name="prominent-color-extraction"></a>Extracción de Color destacado
@@ -307,7 +307,7 @@ Por ejemplo, en las capturas de pantalla siguiente, un aplicación de visualizac
 
 En las capturas de pantalla anterior, la barra de acciones se establece en el "vibrante light" extraído color y el fondo se establece en la "vibrante oscuridad" extraída color. En cada ejemplo anterior, se incluye para ilustrar los colores de paleta que se han extraído de la imagen de una fila de cuadrados de color pequeñas.
 
-Para obtener más información acerca de la extracción de color en Android 5.0, consulte [extraer destacado colores de una imagen](http://developer.android.com/training/material/drawables.html#ColorExtract).
+Para obtener más información acerca de la extracción de color en Android 5.0, consulte [extraer destacado colores de una imagen](https://developer.android.com/training/material/drawables.html#ColorExtract).
 
 
 ## <a name="new-ui-widgets"></a>Nuevos Widgets de interfaz de usuario
@@ -410,7 +410,7 @@ Las siguientes API permiten estas nuevas características:
 
 -   `CaptureResult` &ndash; Proporciona los resultados de una operación de captura de imagen.
 
-Para obtener más información acerca de la cámara nueva API en Android 5.0, consulte [Media](http://developer.android.com/about/versions/android-5.0.html#Media).
+Para obtener más información acerca de la cámara nueva API en Android 5.0, consulte [Media](https://developer.android.com/about/versions/android-5.0.html#Media).
 
 ### <a name="audio-playback"></a>Reproducción de audio
 
@@ -422,7 +422,7 @@ Para obtener más información acerca de la cámara nueva API en Android 5.0, co
 
 -   `WRITE_NON_BLOCKING` &ndash; Esta opción simplifica el almacenamiento en búfer y el subprocesamiento múltiple para algunas aplicaciones.
 
-Para obtener más información acerca de `AudioTrack` mejoras en Android 5.0, consulte [Media](http://developer.android.com/about/versions/android-5.0.html#Media).
+Para obtener más información acerca de `AudioTrack` mejoras en Android 5.0, consulte [Media](https://developer.android.com/about/versions/android-5.0.html#Media).
 
 ### <a name="media-playback-control"></a>Control de reproducción multimedia
 
@@ -434,7 +434,7 @@ Android 5.0 presenta la nueva `Android.Media.MediaController` clase, que sustitu
 
 Además, puede usar el nuevo `Android.App.Notification.MediaStyle` clase para asociar una sesión de medios con contenido enriquecido de notificación (por ejemplo, extraer y mostrar las carátulas de álbum).
 
-Para obtener más información sobre las nuevas características de control de reproducción de medios en Android 5.0, consulte [Media](http://developer.android.com/about/versions/android-5.0.html#Media).
+Para obtener más información sobre las nuevas características de control de reproducción de medios en Android 5.0, consulte [Media](https://developer.android.com/about/versions/android-5.0.html#Media).
 
 ### <a name="storage"></a>Almacenamiento
 
@@ -446,7 +446,7 @@ Android 5.0 actualiza el marco de trabajo de acceso de almacenamiento para que s
 
 -   Para obtener las rutas de acceso a directorios de medios en todos los dispositivos de almacenamiento compartido, llame al nuevo `Android.Content.Context.GetExternalMediaDirs` método.
 
-Para obtener más información sobre el almacenamiento de la nueva API en Android 5.0, consulte [almacenamiento](http://developer.android.com/preview/api-overview.html#Storage).
+Para obtener más información sobre el almacenamiento de la nueva API en Android 5.0, consulte [almacenamiento](https://developer.android.com/preview/api-overview.html#Storage).
 
 ### <a name="wireless--connectivity"></a>Conectividad e inalámbricas
 
@@ -458,13 +458,13 @@ Android 5.0 agrega las siguientes mejoras de API para la conectividad e inalámb
 
 -   Mejoras de NFC que resulte más fácil utilizar la funcionalidad de las comunicaciones de cerca de campo para compartir datos con otros dispositivos.
 
-Para obtener más información acerca de la nueva inalámbrica y conectividad API en Android 5.0, consulte [conectividad e inalámbricos](http://developer.android.com/preview/api-overview.html#Wireless).
+Para obtener más información acerca de la nueva inalámbrica y conectividad API en Android 5.0, consulte [conectividad e inalámbricos](https://developer.android.com/preview/api-overview.html#Wireless).
 
 ### <a name="job-scheduling"></a>Programación de trabajos
 
 Android 5.0 presenta una nueva `JobScheduler` API que puede ayudar a los usuarios minimizar la batería se agote rápidamente programando ciertas tareas para ejecutarse únicamente cuando el dispositivo está conectado y de carga. Esta característica de programador de trabajo también puede usarse para programar una tarea que se ejecuta cuando las condiciones son más adecuadas para esa tarea, como la descarga de un archivo grande cuando el dispositivo está conectado a través de una red Wi-Fi en lugar de una red de uso medido.
 
-Para obtener más información acerca de la nueva API en Android 5.0 de programación de trabajos, consulte [programación de trabajos](http://developer.android.com/preview/api-overview.html#JobScheduler).
+Para obtener más información acerca de la nueva API en Android 5.0 de programación de trabajos, consulte [programación de trabajos](https://developer.android.com/preview/api-overview.html#JobScheduler).
 
 ## <a name="summary"></a>Resumen
 
@@ -491,7 +491,7 @@ Si está familiarizado con el desarrollo de Xamarin Android, lea [configuración
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Vista previa para desarrolladores de Android L](http://developer.android.com/preview/index.html)
+- [Vista previa para desarrolladores de Android L](https://developer.android.com/preview/index.html)
 - [Obtenga el SDK de Android](https://developer.android.com/sdk/index.html#Other)
-- [Diseño de materiales](http://developer.android.com/preview/material/index.html)
+- [Diseño de materiales](https://developer.android.com/preview/material/index.html)
 - [Principios de diseño de materiales](http://static.googleusercontent.com/media/www.google.com/en/us/design/material-design.pdf)

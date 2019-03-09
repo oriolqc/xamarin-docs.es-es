@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2017
-ms.openlocfilehash: f43147d98599d36aa136e4ddc2975205e0e69e26
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8f20666ddf5f74ff9451a22e289790eb14071f90
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122847"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672201"
 ---
 # <a name="textureview"></a>TextureView
 
@@ -75,6 +75,6 @@ Para usar el `TextureView`, aceleración de hardware debe estar habilitada, que 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [TextureViewDemo (ejemplo)](https://developer.xamarin.com/samples/monodroid/TextureViewDemo/)
+- [TextureViewDemo (sample)](https://developer.xamarin.com/samples/monodroid/TextureViewDemo/)
 - [Introducción a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma Android de 4.0](http://developer.android.com/sdk/android-4.0.html)
+- [Plataforma Android de 4.0](https://developer.android.com/sdk/android-4.0.html)

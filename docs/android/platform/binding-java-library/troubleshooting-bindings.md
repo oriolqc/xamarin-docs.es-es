@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: f54da980834b44bbca7dc8619943769f8f429a7a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b0bb7cbb6160865af5b1e40d40c7b999a8bd5ebc
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115294"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668522"
 ---
 # <a name="troubleshooting-bindings"></a>Solución de problemas de enlaces
 
@@ -79,7 +79,7 @@ Esta sección enumera algunos de los mensajes de error comunes o los síntomas q
 A veces no se generarán tipos o bloqueos imprevistos pueden producirse porque está usando ya sea una versión posterior o anterior de Java en comparación con lo que la biblioteca que se compiló con. Vuelva a compilar la biblioteca de Android con la misma versión de JDK que está usando el proyecto de Xamarin.Android.
 
 
-### <a name="problem-at-least-one-java-library-is-required"></a>Problema: es necesaria al menos una biblioteca de Java
+### <a name="problem-at-least-one-java-library-is-required"></a>Problema: Se requiere al menos una biblioteca de Java
 
 Recibe el error "al menos una biblioteca de Java es obligatoria,", aunque una. Se ha agregado el archivo JAR.
 
@@ -88,7 +88,7 @@ Recibe el error "al menos una biblioteca de Java es obligatoria,", aunque una. S
 Asegúrese de que la acción de compilación se establece en `EmbeddedJar`. Dado que hay varias acciones de compilación para. Archivos JAR (como `InputJar`, `EmbeddedJar`, `ReferenceJar` y `EmbeddedReferenceJar`), el generador de enlace no puede adivinar automáticamente cuál utilizar de forma predeterminada. Para obtener más información acerca de las acciones de compilación, véase [acciones de compilación](~/android/platform/binding-java-library/index.md).
 
 
-### <a name="problem-binding-tools-cannot-load-the-jar-library"></a>Problema: Las herramientas de enlace no se puede cargar el. Biblioteca JAR
+### <a name="problem-binding-tools-cannot-load-the-jar-library"></a>Problema: Herramientas de enlace no se puede cargar el. Biblioteca JAR
 
 El generador de biblioteca de enlace no se puede cargar el. Biblioteca JAR.
 
@@ -142,9 +142,9 @@ Xamarin.Android incluye una serie de campos de Java que se asignan a las enumera
 
 #### <a name="possible-causes"></a>Causas posibles:
 
-El motivo más probable de este error es que una biblioteca de Java obligatoria debe agregarse al proyecto de aplicación (**.csproj**). . Archivos JAR no se resuelven automáticamente. Un enlace de la biblioteca de Java no siempre se genera en un ensamblado de usuario que no existe en el emulador o dispositivo de destino (como Google Maps **maps.jar**). Esto no es el caso de soporte técnico del proyecto de biblioteca de Android, como la biblioteca. Archivo JAR se incrusta en el archivo dll de biblioteca. Por ejemplo: [4288 errores](https://bugzilla.xamarin.com/show_bug.cgi?id=4288)
+El motivo más probable de este error es que una biblioteca de Java obligatoria debe agregarse al proyecto de aplicación (**.csproj**). . Archivos JAR no se resuelven automáticamente. Un enlace de la biblioteca de Java no siempre se genera en un ensamblado de usuario que no existe en el emulador o dispositivo de destino (como Google Maps **maps.jar**). Esto no es el caso de soporte técnico del proyecto de biblioteca de Android, como la biblioteca. Archivo JAR se incrusta en el archivo dll de biblioteca. Por ejemplo: [Error 4288](https://bugzilla.xamarin.com/show_bug.cgi?id=4288)
 
-### <a name="problem-duplicate-custom-eventargs-types"></a>Problema: Duplicar tipos personalizados de EventArgs
+### <a name="problem-duplicate-custom-eventargs-types"></a>Problema: Tipos de EventArgs personalizados duplicados
 
 Se produce un error en la compilación debido a los tipos de EventArgs personalizados duplicados. Se produce un error similar al siguiente:
 
@@ -222,7 +222,7 @@ Se trata de un problema que ocurre con los métodos de Java de enlace con tipos 
     </attr>
     ```
 
-### <a name="problem-name-collisions-on-inner-classes--properties"></a>Problema: El nombre colisiones en las clases internas o propiedades
+### <a name="problem-name-collisions-on-inner-classes--properties"></a>Problema: Conflictos en las clases internas de nombres y propiedades
 
 Visibilidad en conflicto en los objetos heredados.
 
@@ -238,7 +238,7 @@ En Java, no es necesario que una clase derivada tiene la misma visibilidad que s
 
 ### <a name="problem-a-so-library-required-by-the-binding-is-not-loading"></a>Problema: Un **.so** biblioteca requerido por el enlace está cargando no
 
-Algunos proyectos de enlace también pueden depender de funcionalidad en un **.so** biblioteca. Es posible que Xamarin.Android no se cargará automáticamente la **.so** biblioteca. Cuando se ejecuta el código Java ajustado, se producirá un error en Xamarin.Android para que el mensaje de error y de la llamada JNI _java.lang.UnsatisfiedLinkError: no se encontró el método nativo:_ aparecerá en el logcat fuera de la aplicación.
+Algunos proyectos de enlace también pueden depender de funcionalidad en un **.so** biblioteca. Es posible que Xamarin.Android no se cargará automáticamente la **.so** biblioteca. Cuando se ejecuta el código Java ajustado, se producirá un error en Xamarin.Android para que el mensaje de error y de la llamada JNI _java.lang.UnsatisfiedLinkError: No se encontró el método nativo:_ aparecerá en el logcat fuera de la aplicación.
 
 Corregir este problema consiste en cargar manualmente el **.so** biblioteca con una llamada a `Java.Lang.JavaSystem.LoadLibrary`. Por ejemplo suponiendo que la biblioteca compartida por un proyecto de Xamarin.Android **libpocketsphinx_jni.so** incluido en el proyecto de enlace con una acción de compilación **EmbeddedNativeLibrary**, el siguiente fragmento de código (se ejecutará antes de usar la biblioteca compartida) se cargará el **.so** biblioteca:
 
@@ -253,8 +253,8 @@ En este artículo, se enumeran problemas comunes de solución de problemas asoci
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Proyectos de biblioteca](http://developer.android.com/tools/projects/index.html#LibraryProjects)
+- [Proyectos de biblioteca](https://developer.android.com/tools/projects/index.html#LibraryProjects)
 - [Trabajo con JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Habilitar la salida de diagnóstico](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output)
 - [Xamarin para desarrolladores de Android](~/android/get-started/java-developers.md)
-- [JD GUI](http://jd.benow.ca/)
+- [JD-GUI](http://jd.benow.ca/)

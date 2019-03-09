@@ -1,19 +1,14 @@
 ---
 title: Fragmentos
-description: Android 3.0 presentó fragmentos, que muestra cómo admitir diseños más flexibles de los muchas diferentes tamaños de pantalla que se encuentra en teléfonos y tabletas. En este artículo tratará cómo usar fragmentos para desarrollar aplicaciones de Xamarin.Android y también cómo admitir fragmentos en Android dispositivos (API nivel 11) 3.0.
+description: 'Android 3.0 presentó fragmentos, que muestra cómo admitir diseños más flexibles de los muchas diferentes tamaños de pantalla que se encuentra en teléfonos y tabletas. En este artículo tratará cómo usar fragmentos para desarrollar aplicaciones de Xamarin.Android y también cómo admitir fragmentos en Android dispositivos (API nivel 11) 3.0.'
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: bc4441c7ee0c36af990297bad1b0c2f0e77123f3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113292"
 ---
+
 # <a name="fragments"></a>Fragmentos
 
 _Android 3.0 presentó fragmentos, que muestra cómo admitir diseños más flexibles de los muchas diferentes tamaños de pantalla que se encuentra en teléfonos y tabletas. En este artículo tratará cómo usar fragmentos para desarrollar aplicaciones de Xamarin.Android y también cómo admitir fragmentos en Android dispositivos (API nivel 11) 3.0._
@@ -63,6 +58,6 @@ Es posible usar los fragmentos en versiones anteriores de Android mediante el pa
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Galería Honeycomb (ejemplo)](https://developer.xamarin.com/samples/monodroid/HoneycombGallery)
-- [Fragmentos](http://developer.android.com/guide/topics/fundamentals/fragments.html)
-- [Paquete de soporte técnico](http://developer.android.com/sdk/compatibility-library.html)
+- [Fragmentos](https://developer.android.com/guide/topics/fundamentals/fragments.html)
+- [Paquete de soporte técnico](https://developer.android.com/sdk/compatibility-library.html)
 - [Seminario Web MOTODEV: Presentación de fragmentos](http://motodev.adobeconnect.com/p9h1aqk3ttn/)
