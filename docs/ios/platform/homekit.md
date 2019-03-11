@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 22b6fd101c0b983fe7b4a7d0891dc4674a11a02a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6793190fa3278455a00d7ea08ab52a643c369a35
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121196"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672825"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit en Xamarin.iOS
 
@@ -39,7 +39,7 @@ HomeKit organiza todos los dispositivos de automatización en una ubicación det
 La colección se almacena en una configuración base de datos principal que será automáticamente la copia de seguridad y sincronizados en todos los dispositivos del usuario de iOS. HomeKit proporciona las siguientes clases para trabajar con la base de datos en configuración de inicio:
 
 - `HMHome` : Es el contenedor de nivel superior que contiene toda la información y las configuraciones para todos los dispositivos de automatización del hogar en una ubicación física única (p ej. una sola familia residencia). El usuario podría tener más de una residencia, como su casa principal y una casa de vacaciones. O bien, podrían tener diferentes "aloja" en la misma propiedad, como el principal de enrutamiento y una casa de invitado a través del garaje. En cualquier caso, al menos una `HMHome` objeto _debe_ configurarse y almacenan antes de que se puede escribir cualquier otra información de HomeKit.
-- `HMRoom` : Aunque opcional, un `HMRoom` permite al usuario definir salas específicas dentro de una casa (`HMHome`), como: cocina, baño, garaje o sala de estar. El usuario puede agrupar todos los dispositivos de automatización del hogar en una ubicación específica en su casa en un `HMRoom` y actuar como una unidad. Por ejemplo, solicitando Siri para apagar las luces de garaje.
+- `HMRoom` : Aunque opcional, un `HMRoom` permite al usuario definir salas específicas dentro de una casa (`HMHome`), como: Cocina, baño, garaje o sala de estar. El usuario puede agrupar todos los dispositivos de automatización del hogar en una ubicación específica en su casa en un `HMRoom` y actuar como una unidad. Por ejemplo, solicitando Siri para apagar las luces de garaje.
 - `HMAccessory` -Esto representa un usuario individual, HomeKit físico habiliten el dispositivo de automatización que se ha instalado en lugar de residencia del usuario (como un termostato inteligente). Cada `HMAccessory` se asigna a un `HMRoom`. Si el usuario no ha configurado las salas, HomeKit asigna accesorios a un salón predeterminado especial.
 - `HMService` : Representa un servicio suministrado por un determinado `HMAccessory`, como el estado de activación/desactivación de una luz o su color (si se admite el cambio de color). Cada `HMAccessory` puede tener más de un servicio, como la apertura de la tapa de garaje que también incluye una luz. Además, un determinado `HMAccessory` podría tener servicios, como la actualización de firmware, que se encuentran fuera del control de usuario.
 - `HMZone` -Permite al usuario agrupar una colección de `HMRoom` objetos en zonas lógicas, como siesta, escaleras abajo o sótano. Aunque es opcional, esto permite interacciones como preguntar Siri para activar todos de la luz está desactivado.
@@ -52,7 +52,7 @@ Debido a los requisitos de seguridad impuestos por HomeKit, una aplicación de X
 
 Haga lo siguiente:
 
-1. Inicie sesión en el [Portal Apple Developer](http://developer.apple.com).
+1. Inicie sesión en el [Portal Apple Developer](https://developer.apple.com).
 2. Haga clic en **certificados, identificadores y perfiles**.
 3. Si aún no lo ha hecho, haga clic en **identificadores** y crear un identificador para la aplicación (por ejemplo, `com.company.appname`), editar de lo contrario, su identificador existente.
 4. Asegúrese de que el **HomeKit** service se ha comprobado para el identificador dado: 
@@ -405,7 +405,7 @@ El `HMCharacteristicType` enum proporciona un conjunto de valores de metadatos d
  - CurrentHorizontalTilt
  - CurrentLightLevel
  - CurrentLockMechanismState
- - currentPosition
+ - CurrentPosition
  - CurrentRelativeHumidity
  - CurrentSecuritySystemState
  - CurrentTemperature
@@ -667,7 +667,7 @@ Debe cambiar el estado de la luz en el simulador de accesorios de HomeKit. Si el
 Este artículo ha tratado las características básicas necesarias para trabajar con accesorios de HomeKit en una aplicación de Xamarin.iOS. Sin embargo, hay varias características avanzadas de HomeKit que no se tratan en esta introducción:
 
 - **Salas** -accesorios de HomeKit habilitada opcionalmente pueden organizar en salones por el usuario final. Esto permite HomeKit accesorios presente de forma que sea fácil de entender y trabajar con el usuario. Para obtener más información sobre cómo crear y mantener las salas, consulte Apple [HMRoom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) documentación.
-- **Las zonas** -salas, opcionalmente, se pueden organizar en zonas por el usuario final. Una zona se refiere a una colección de salas de que el usuario puede tratar como una sola unidad. Por ejemplo: siesta, escaleras abajo o sótano. Nuevamente, esto permite a HomeKit presentar y trabajar con accesorios de manera que tenga sentido para el usuario final. Para obtener más información sobre cómo crear y mantener las zonas, consulte Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) documentación.
+- **Las zonas** -salas, opcionalmente, se pueden organizar en zonas por el usuario final. Una zona se refiere a una colección de salas de que el usuario puede tratar como una sola unidad. Por ejemplo: Siesta, escaleras abajo o sótano. Nuevamente, esto permite a HomeKit presentar y trabajar con accesorios de manera que tenga sentido para el usuario final. Para obtener más información sobre cómo crear y mantener las zonas, consulte Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) documentación.
 - **Conjuntos de acciones y acciones** -acciones modificar características de accesorios de servicio y se pueden agrupar en conjuntos. Conjuntos de acciones de actúan como secuencias de comandos para controlar un grupo de accesorios y coordinar sus acciones. Por ejemplo, una secuencia de comandos "Ver TV" podría cerrar las persianas, atenuar las luces y activar el televisor y el sonido del sistema. Para obtener más información sobre cómo crear y mantener las acciones y los conjuntos de acciones, vea Apple [HMAction](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMAction_Class/index.html#//apple_ref/occ/cl/HMAction) y [HMActionSet](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/cl/HMActionSet) documentación.
 - **Desencadenadores** : un desencadenador puede activar una o más acción establecida cuando un determinado conjunto de condiciones se cumplen. Por ejemplo, encienda la luz portch y bloquear todas las puertas externas cuando llega oscuro fuera. Para obtener más información sobre cómo crear y mantener los desencadenadores, vea Apple [HMTrigger](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMTrigger_Class/index.html#//apple_ref/occ/cl/HMTrigger) documentación.
 
@@ -691,14 +691,14 @@ Apple ha realizado los siguientes cambios e incorporaciones a HomeKit para iOS 9
 - **Los identificadores persistentes** -todas las clases pertinentes de HomeKit ahora incluyen una `UniqueIdentifier` habilitada la propiedad para identificar de forma única un elemento determinado a través de HomeKit aplicaciones (o instancias de la misma aplicación).
 - **Administración de usuarios** -agregar un controlador de vistas integradas para proporcionar administración de usuarios a través de los usuarios que tienen acceso a los dispositivos de HomeKit en la página principal del usuario principal.
 - **Funciones de usuario** : HomeKit a los usuarios ahora tienen un conjunto de privilegios que controlan qué funciones pueden usar en HomeKit y HomeKit habilitado accesorios. La aplicación solo debe mostrar la funcionalidad pertinente al usuario actual. Por ejemplo, sólo los administradores deben poder mantener otros usuarios.
-- **Predefinidos escenas** -predefinidos de segundo plano se han creado para cuatro eventos comunes que se producen para el usuario medio de HomeKit: ponerse en marcha, deje, devolver, vaya a la cama. No se puede eliminar estas escenas predefinidas de una casa.
+- **Predefinidos escenas** -predefinidos de segundo plano se han creado para cuatro eventos comunes que se producen para el usuario HomeKit medio: Ponerse en marcha, deje, devolver, vaya a la cama. No se puede eliminar estas escenas predefinidas de una casa.
 - **Segundo plano y Siri** -Siri tiene soporte técnico más profundo de segundo plano en iOS 9 y puede reconoce el nombre de cualquier escena definido en HomeKit. Un usuario puede ejecutar una escena simplemente por su nombre a Siri de habla.
 - **Categorías de accesorio** -se agregó a todos los accesorios y ayuda a identificar el tipo de accesorio que se agrega a un hogar o trabajando desde dentro de la aplicación un conjunto de categorías predefinidas. Estas nuevas categorías están disponibles durante la instalación del accesorio.
-- **Soporte técnico de Apple Watch** : HomeKit ahora está disponible para watchOS y el Apple Watch podrán HomeKit dispositivos habilitados sin un iPhone está cerca de la inspección del control. HomeKit para watchOS admite las siguientes funcionalidades: las casas de visualización, controlar Accesorios y ejecutar escenas.
+- **Soporte técnico de Apple Watch** : HomeKit ahora está disponible para watchOS y el Apple Watch podrán HomeKit dispositivos habilitados sin un iPhone está cerca de la inspección del control. HomeKit para watchOS admite las siguientes funcionalidades: Visualización de las casas, controlar Accesorios y ejecutar en segundo plano.
 - **Nuevo tipo de desencadenador de evento** : además de los desencadenadores de tipo temporizador compatible con iOS 8, iOS 9 ahora admite los desencadenadores de eventos basada en estado de accesorio (por ejemplo, los datos de sensor) o la ubicación geográfica. Usar desencadenadores de eventos `NSPredicates` para establecer condiciones para su ejecución.
 - **Acceso remoto** -con acceso remoto, el usuario ahora es capaz de controlar su HomeKit habilitado Home accesorios de automatización cuando se encuentran fuera de la casa en una ubicación remota. En iOS 8 esto solo se admite si el usuario tuviera una generación 3rd Apple TV en el hogar. En iOS 9, esta limitación se eleva y se permite el acceso remoto a través de iCloud y el protocolo de accesorios de HomeKit (GRACIA).
 - **Nuevas capacidades de Bluetooth Low Energy (BLE)** -HomeKit ahora admite más tipos de accesorios que pueden comunicarse a través del protocolo de Bluetooth Low Energy (BLE). Mediante túnel seguro de GRACIA, un accesorio de HomeKit pueden exponer otro accesorio Bluetooth a través de Wi-Fi (si está fuera del intervalo de Bluetooth). En iOS 9, BLE accesorios tienen compatibilidad completa para las notificaciones y metadatos.
-- **Nuevas categorías de accesorio** -Apple agregó las siguientes categorías de accesorio en iOS 9: cubiertas de las ventanas, las puertas de motor y Windows, sistemas de alarma, sensores y conmutadores programables.
+- **Nuevas categorías de accesorio** -Apple agregó las siguientes categorías de accesorio en iOS 9: Cubiertas de las ventanas, con motor puertas y Windows, sistemas de alarma, sensores y conmutadores programables.
 
 Para obtener más información sobre las nuevas características de HomeKit en iOS 9, consulte Apple [HomeKit índice](https://developer.apple.com/homekit/) y [What ' s New in HomeKit](https://developer.apple.com/videos/wwdc/2015/?id=210) vídeo.
 

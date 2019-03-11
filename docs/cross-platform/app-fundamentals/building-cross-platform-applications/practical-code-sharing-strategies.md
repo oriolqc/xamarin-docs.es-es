@@ -6,12 +6,12 @@ ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: b20760d3e8d7e168b0f0508222d8ae0b743a9368
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 9fbbe7d33428c1274d78ed882ced3985b8459072
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058917"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671486"
 ---
 # <a name="part-5---practical-code-sharing-strategies"></a>Parte 5: Estrategias prácticas de uso compartido de código
 
@@ -201,7 +201,7 @@ El almacenamiento aislado es una API común para guardar y cargar archivos a tra
 
 Es el mecanismo predeterminado para el acceso de archivo en Windows Phone (Silverlight) que se ha implementado en Xamarin.iOS y Xamarin.Android para permitir que el código de acceso a archivos comunes que se va a escribir. El `System.IO.IsolatedStorage` clase puede hacer referencia a las tres plataformas en una [proyecto compartido](~/cross-platform/app-fundamentals/shared-projects.md).
 
-Hacer referencia a la [las información general de almacenamiento aislado para Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) para obtener más información.
+Hacer referencia a la [las información general de almacenamiento aislado para Windows Phone](https://msdn.microsoft.com/library/windowsphone/develop/ff402541(v=vs.105).aspx) para obtener más información.
 
 Las API de almacenamiento aislado no están disponibles en [bibliotecas de clases portables](~/cross-platform/app-fundamentals/pcl.md). Una alternativa para PCL es la [PCLStorage NuGet](https://pclstorage.codeplex.com/)
 
@@ -295,7 +295,7 @@ Las acciones que una aplicación móvil puede tardar en estas situaciones son:
 -  Incluso si la red está disponible, es recomendable comprobar la conectividad con el servidor de destino antes de iniciar otras solicitudes. Esto impedirá que las operaciones de red de la aplicación en el tiempo de espera de forma repetida y también permiten un mensaje de error más informativo que se mostrará al usuario.
 
 
-Hay un [Xamarin.iOS ejemplo](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) disponibles (que se basa en Apple [código de ejemplo de accesibilidad](http://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) para ayudar a detectar la disponibilidad de la red.
+Hay un [Xamarin.iOS ejemplo](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) disponibles (que se basa en Apple [código de ejemplo de accesibilidad](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html) ) para ayudar a detectar la disponibilidad de la red.
 
 
 ## <a name="webservices"></a>Servicios Web
@@ -387,7 +387,7 @@ Para el código que no usa la biblioteca de tareas paralelas, cada plataforma ti
 
 IOS y Android sintaxis requiere una clase 'context' esté disponible, lo que significa que el código debe pasar este objeto a cualquier método que requiera una devolución de llamada en el subproceso de interfaz de usuario.
 
-Para realizar llamadas de subproceso de interfaz de usuario en código compartido, siga el [IDispatchOnUIThread ejemplo](http://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (cortesía de [ @follesoe ](http://jonas.follesoe.no/)). Declarar y un programa para un `IDispatchOnUIThread` interfaz en el código compartido y, a continuación, implementar las clases específicas de la plataforma, como se muestra aquí:
+Para realizar llamadas de subproceso de interfaz de usuario en código compartido, siga el [IDispatchOnUIThread ejemplo](https://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (cortesía de [ @follesoe ](http://jonas.follesoe.no/)). Declarar y un programa para un `IDispatchOnUIThread` interfaz en el código compartido y, a continuación, implementar las clases específicas de la plataforma, como se muestra aquí:
 
 ```csharp
 // program to the interface in shared code

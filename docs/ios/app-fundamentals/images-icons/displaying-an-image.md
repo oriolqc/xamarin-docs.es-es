@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/24/2018
-ms.openlocfilehash: 325f4e99e70f88ccf642253720f4229142a169ec
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 69952b0bac884fe8b14edcbb87aa8fad47594880
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526565"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670707"
 ---
 # <a name="displaying-an-image-in-xamarinios"></a>Mostrar una imagen en Xamarin.iOS
 
@@ -42,7 +42,7 @@ Para crear un nuevo conjunto de imágenes y agregar imágenes a él, realice lo 
 
     ![](displaying-an-image-images/imageset03.png "El editor de conjunto de imágenes")
 4. Desde aquí, arrastre imágenes para cada uno de los distintos dispositivos y las resoluciones necesarias. 
-5. Haga doble clic en el nuevo conjunto de imágenes **nombre** en el **lista Assets** para editarlo: ![](displaying-an-image-images/imageset04.png "nombre del conjunto de imágenes nueva edición")
+5. Haga doble clic en el nuevo conjunto de imágenes **nombre** en el **lista Assets** para editarlo: ![](displaying-an-image-images/imageset04.png "Nombre del conjunto de imágenes nueva edición")
 
 Cuando se usa un **Establecer imagen** en el Diseñador de iOS, simplemente seleccione el nombre del conjunto en la lista desplegable en el Editor de propiedades:
 
@@ -213,7 +213,7 @@ Para cualquier otro formato de imagen, incluya la extensión con el nombre. Por 
 TabBarItem.Image = UIImage.FromBundle ("MyImage.jpg");
 ```
 
-Para obtener más información acerca de los iconos e imágenes, consulte la documentación de Apple en [icono personalizado y directrices para la creación de imagen](http://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
+Para obtener más información acerca de los iconos e imágenes, consulte la documentación de Apple en [icono personalizado y directrices para la creación de imagen](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/IconsImages/IconsImages.html).
 
 ## <a name="displaying-an-image-in-a-storyboards"></a>Mostrar una imagen en un guiones gráficos
 

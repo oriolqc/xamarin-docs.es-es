@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: 0b320955cae23b18444732c826849002d6375fe4
-ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
+ms.openlocfilehash: faa52c80fdb776f2c6c7320874b0d08720b4e4ec
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56321147"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670459"
 ---
 # <a name="introduction-to-watchos"></a>Introducción a watchOS
 
@@ -136,7 +136,7 @@ Consulte la documentación de Apple:
 - [watchOS 3 catálogo (ejemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [watchOS 1 catálogo (ejemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
 - [Configuración e instalación](~/ios/watchos/get-started/installation.md)
-- [Primer vídeo de la aplicación del reloj](http://blog.xamarin.com/your-first-watch-kit-app/)
+- [Primer vídeo de la aplicación del reloj](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Del desarrollo de Apple para guía Kit de inspección](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
 - [Sugerencias de WatchKit de Apple](https://developer.apple.com/watchkit/tips/)
 - [Introducción a watchOS 3](~/ios/watchos/platform/introduction-to-watchos3/index.md)

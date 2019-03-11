@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: 634131025b322b64e89ece3b4c9d092e6b17a373
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.openlocfilehash: 1f3e6dcc81c75d12a1dbba8fefc62a85178c8c24
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579822"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670674"
 ---
 # <a name="android-localization"></a>Localización de Android
 
@@ -32,7 +32,7 @@ La configuración regional actual puede consultarse mediante el contexto actual 
 var lang = Resources.Configuration.Locale; // eg. "es_ES"
 ```
 
-Este valor será un identificador de configuración regional que contiene un código de idioma y un código de configuración regional, separados por un carácter de subrayado. Como referencia, este es un [lista de configuraciones regionales de Java](http://www.oracle.com/technetwork/java/javase/locales-137662.html) y [Android admite las configuraciones regionales a través de StackOverflow](http://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
+Este valor será un identificador de configuración regional que contiene un código de idioma y un código de configuración regional, separados por un carácter de subrayado. Como referencia, este es un [lista de configuraciones regionales de Java](https://www.oracle.com/technetwork/java/javase/locales-137662.html) y [Android admite las configuraciones regionales a través de StackOverflow](https://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android).
 
 Estos son algunos ejemplos comunes:
 
@@ -110,7 +110,7 @@ Deberá escape según las reglas normales de XML y el `name` debe ser un identif
 
 El directorio español **valores es-es** contiene un archivo con el mismo nombre (**Strings.xml**) que contiene las traducciones:
 
-**los valores de es/Strings.xml**
+**values-es/Strings.xml**
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -190,7 +190,7 @@ Válido `quantity` conmutadores son:
 * many
 * otras
 
-Se describe con más detalle en la [docs Android](http://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Si un idioma determinado no requiere el control "especiales", los `quantity` se pasará por alto las cadenas (por ejemplo, inglés solo usa `one` y `other`; al especificar un `zero` cadena no tiene ningún efecto, no se usará).
+Se describe con más detalle en la [docs Android](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals). Si un idioma determinado no requiere el control "especiales", los `quantity` se pasará por alto las cadenas (por ejemplo, inglés solo usa `one` y `other`; al especificar un `zero` cadena no tiene ningún efecto, no se usará).
 
 ### <a name="images"></a>Imágenes
 
@@ -209,7 +209,7 @@ También puede proporcionar otros tipos de alternativa, los recursos específico
 
 Android 4.2 introdujo la compatibilidad con [derecha para idiomas de izquierda (RTL)](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html) si establece la configuración de la aplicación `android:supportsRtl="true"`. El calificador de recursos `"ldrtl"` puede incluirse en un nombre de directorio que contiene los diseños personalizados que están diseñados para mostrar de derecha a izquierda.
 
-Para obtener más información sobre los nombres de directorio de recursos y de reserva, consulte la documentación de Android [proporcionar recursos alternativos](http://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
+Para obtener más información sobre los nombres de directorio de recursos y de reserva, consulte la documentación de Android [proporcionar recursos alternativos](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
 
 ### <a name="app-name"></a>Nombre de la aplicación
@@ -252,7 +252,7 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 ### <a name="device-testing"></a>Pruebas de dispositivos
 
 Para realizar pruebas en un dispositivo, cambiar el idioma en el **configuración** app.
-**Sugerencia:** tome nota de los iconos y ubicación de los elementos de menú para que se puede revertir el lenguaje a la configuración original.
+**Sugerencia:** Realizar una nota de los iconos y la ubicación de los elementos de menú para que se puede revertir el lenguaje a la configuración original.
 
 
 ## <a name="summary"></a>Resumen
@@ -264,7 +264,7 @@ En este artículo se trata los aspectos básicos de localización de aplicacione
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Tasky (localizada en el código) (ejemplo)](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
-- [Localización de recursos de Android](http://developer.android.com/guide/topics/resources/localization.html)
+- [Localización de recursos de Android](https://developer.android.com/guide/topics/resources/localization.html)
 - [Información general de localización de multiplataforma](~/cross-platform/app-fundamentals/localization.md)
 - [Localización de Xamarin.Forms](~/xamarin-forms/app-fundamentals/localization/index.md)
 - [Localización de iOS](~/ios/app-fundamentals/localization/index.md)

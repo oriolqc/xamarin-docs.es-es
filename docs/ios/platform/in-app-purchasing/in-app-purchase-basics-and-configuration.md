@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4d79988fc2900f1fe58774657344f19fab90f3e4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 267dac5b6aec263f1d8b69d81f34f732118c1802
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105095"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671993"
 ---
 # <a name="in-app-purchase-basics-and-configuration-in-xamarinios"></a>Conceptos básicos de la compra en la aplicación y la configuración de Xamarin.iOS
 
@@ -46,7 +46,7 @@ No se puede elegir cualquier precio del producto: solo se puede seleccionar un n
 
 ## <a name="configuration"></a>Configuración
 
-Antes de escribir ningún código de compra de la aplicación debe realizar algún trabajo de instalación en iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) y el Portal de aprovisionamiento de iOS ( [developer.apple.com/iOS](http://developer.apple.com/iOS)).
+Antes de escribir ningún código de compra de la aplicación debe realizar algún trabajo de instalación en iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) y el Portal de aprovisionamiento de iOS ( [developer.apple.com/iOS](https://developer.apple.com/iOS)).
 
 Estos tres pasos deben completas antes de escribir ningún código:
 
@@ -109,8 +109,8 @@ Haga clic en **compras de la aplicación** para crear o editar sus productos par
 
 El proceso para agregar nuevos productos consta de dos pasos:
 
-1.   Elija el tipo de producto: [![](in-app-purchase-basics-and-configuration-images/image8.png "elegir el tipo de producto")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2.   Escriba los atributos del producto, incluidos el identificador de producto, plan de tarifa y descripciones traducidas: [![](in-app-purchase-basics-and-configuration-images/image9.png "escribir los atributos de productos")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
+1.   Elija el tipo de producto: [![](in-app-purchase-basics-and-configuration-images/image8.png "Elija el tipo de producto")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
+2.   Escriba los atributos del producto, incluidos el identificador de producto, plan de tarifa y descripciones localizadas: [![](in-app-purchase-basics-and-configuration-images/image9.png "Escribir los atributos de productos")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 Los campos requeridos para cada producto de compra en la aplicación se describen a continuación:
 

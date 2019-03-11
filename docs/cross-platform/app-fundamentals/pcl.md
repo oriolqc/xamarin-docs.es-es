@@ -6,12 +6,12 @@ ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
 author: conceptdev
 ms.author: crdun
 ms.date: 07/18/2018
-ms.openlocfilehash: 83b1da5cd10a46b8480b0755eeb16bf7434a5906
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.openlocfilehash: a1e7152ca0f24d1ac660742e97907ea9300df9a7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270094"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666884"
 ---
 # <a name="portable-class-libraries-pcl"></a>Bibliotecas de clases portables (PCL)
 
@@ -54,7 +54,7 @@ Esto incluye los perfiles que son combinaciones de:
 - Windows Phone 8
 - Aplicaciones para UWP
 
-Puede leer más sobre las capacidades de los distintos perfiles en [sitio Web de Microsoft](http://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) y vea otro miembro de la Comunidad [resumen de perfiles PCL](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) que incluye información de framework y otras notas compatibles.
+Puede leer más sobre las capacidades de los distintos perfiles en [sitio Web de Microsoft](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx) y vea otro miembro de la Comunidad [resumen de perfiles PCL](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY) que incluye información de framework y otras notas compatibles.
 
 **Beneficios**
 

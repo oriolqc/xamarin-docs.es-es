@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: d40c932c560b3827cccacd4f9bafa155dcf26056
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 68375dfc5b7baa4726739d40eb77c1fcb7500fb4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113331"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668886"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Uso de iCloud con Xamarin.iOS
 
@@ -45,7 +45,7 @@ Las aplicaciones deben configurarse para usar iCloud en el [Portal de aprovision
 
 Para configurar correctamente una aplicación para tener acceso a iCloud:
 
--   **Encontrar su TeamID** -inicio de sesión a [developer.apple.com](http://developer.apple.com) y visite el **el centro de miembros > su cuenta > Resumen de la cuenta de desarrollador** para obtener el Id. de equipo (o identificador Individual para los desarrolladores ). Será una cadena de 10 caracteres ( **A93A5CM278** por ejemplo): Esto forma parte del "identificador de contenedor".
+-   **Encontrar su TeamID** -inicio de sesión a [developer.apple.com](https://developer.apple.com) y visite el **el centro de miembros > su cuenta > Resumen de la cuenta de desarrollador** para obtener el Id. de equipo (o identificador Individual para los desarrolladores ). Será una cadena de 10 caracteres ( **A93A5CM278** por ejemplo): Esto forma parte del "identificador de contenedor".
 
 -   **Crear un nuevo identificador de aplicación** - para crear un identificador de aplicación, siga los pasos descritos en la [aprovisionamiento para la sección de tecnologías de Store de la Guía de aprovisionamiento de dispositivos](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md)y no olvide consultar **iCloud** como un servicio permitidos:
 
@@ -417,7 +417,7 @@ Los usuarios también recibirá advertencias diferentes cuando intenta quitar un
 ## <a name="icloud-backup"></a>copia de seguridad de iCloud
 
 Aunque copias de seguridad de iCloud no es una característica que tiene acceso directamente a los desarrolladores, la forma de diseñar la aplicación puede afectar a la experiencia del usuario.
-Apple proporciona [directrices de almacenamiento de datos de iOS](http://developer.apple.com/icloud/documentation/data-storage/) para los desarrolladores deberán seguir en sus aplicaciones de iOS.
+Apple proporciona [directrices de almacenamiento de datos de iOS](https://developer.apple.com/icloud/documentation/data-storage/) para los desarrolladores deberán seguir en sus aplicaciones de iOS.
 
 La consideración más importante es que si la aplicación almacena archivos grandes que no son generados por el usuario (por ejemplo, una aplicación de lectores de la revista que almacene hundred-plus megabytes de contenido por cada problema). Apple prefiere no almacenar a este tipo de datos donde se se copia de seguridad en iCloud y rellenar innecesariamente la cuota de iCloud del usuario.
 
@@ -437,6 +437,6 @@ Por último incluye una breve explicación sobre cómo la adición de copia de s
 
 - [Introducción a iCloud (ejemplo)](https://developer.xamarin.com/samples/monotouch/IntroductionToiCloud)
 - [Código de ejemplo de seminarios de iCloud](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
-- [Seminario diapositivas de iCloud](http://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
+- [Seminario diapositivas de iCloud](https://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [iCloud NSUbiquitousKeyValueStore](https://developer.apple.com/library/prerelease/ios/)
-- [Almacenamiento de iCloud](http://support.apple.com/kb/HT4847)
+- [iCloud Storage](https://support.apple.com/kb/HT4847)
