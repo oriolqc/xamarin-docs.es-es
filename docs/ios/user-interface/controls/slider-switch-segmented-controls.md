@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: f3315563725da7c54febd852298c60003eb056a4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2ed14752cc5906b68d277b4f492875f7e281b053
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104900"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671460"
 ---
 # <a name="sliders-switches-and-segmented-controls-in-xamarinios"></a>Controles deslizantes, conmutadores y controles segmentados en Xamarin.iOS
 
@@ -50,7 +50,7 @@ El control deslizante personalizado tiene este aspecto:
  [![](slider-switch-segmented-controls-images/image27a.png "Control deslizante personalizado")](slider-switch-segmented-controls-images/image28a.png#lightbox)
 
 > [!IMPORTANT]
-> Actualmente no hay un [error](http://stackoverflow.com/a/19496179) causando la `ThumbTint` no se represente en tiempo de ejecución según lo previsto. Puede agregar la siguiente línea de código **antes** el código anterior para solucionar este problema. [[Origen](http://stackoverflow.com/a/21396794)]:
+> Actualmente no hay un [error](https://stackoverflow.com/a/19496179) causando la `ThumbTint` no se represente en tiempo de ejecución según lo previsto. Puede agregar la siguiente línea de código **antes** el código anterior para solucionar este problema. [[Origen](https://stackoverflow.com/a/21396794)]:
 >
 > `slider1.SetThumbImage(UIImage.FromBundle("thumb.png"),UIControlState.Normal);`
 > 
