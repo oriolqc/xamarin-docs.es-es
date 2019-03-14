@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 38568fa9258c7e3de2c3333cdca5dc7d5867319c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 56c5aa7f0f8db746fbc6d7f8b5409f7d6c0f5d0d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117107"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666897"
 ---
 # <a name="apk-expansion-files"></a>Archivos de expansión de APK
 
@@ -73,7 +73,7 @@ Cuando se instala una aplicación desde Google Play, los archivos de expansión 
 
 [![Diagrama de flujo de expansión del APK](apk-expansion-files-images/apkexpansion.png)](apk-expansion-files-images/apkexpansion.png#lightbox)
 
-Cuando se inicia una aplicación, debe comprobar si existen los archivos de expansión adecuados en el dispositivo actual. En caso contrario, la aplicación debe realizar una solicitud desde la [Administración de licencias de aplicaciones](http://developer.android.com/google/play/licensing/index.html) de Google Play. Esta comprobación se realiza mediante la *License Verification Library (LVL)* (Biblioteca de comprobación de licencias (BCL)) y debe efectuarse en el caso de las aplicaciones gratuitas y las que necesiten licencia. La BCL la utilizan principalmente aplicaciones de pago para aplicar restricciones de licencias. Sin embargo, Google ha ampliado la BCL de tal manera que pueda utilizarse también con las bibliotecas de expansión. Las aplicaciones gratuitas tienen que realizar la comprobación de la BCL, pero pueden ignorar las restricciones de licencias. La solicitud de la BCL se encarga de proporcionar la siguiente información sobre los archivos de expansión que necesita la aplicación: 
+Cuando se inicia una aplicación, debe comprobar si existen los archivos de expansión adecuados en el dispositivo actual. En caso contrario, la aplicación debe realizar una solicitud desde la [Administración de licencias de aplicaciones](https://developer.android.com/google/play/licensing/index.html) de Google Play. Esta comprobación se realiza mediante la *License Verification Library (LVL)* (Biblioteca de comprobación de licencias (BCL)) y debe efectuarse en el caso de las aplicaciones gratuitas y las que necesiten licencia. La BCL la utilizan principalmente aplicaciones de pago para aplicar restricciones de licencias. Sin embargo, Google ha ampliado la BCL de tal manera que pueda utilizarse también con las bibliotecas de expansión. Las aplicaciones gratuitas tienen que realizar la comprobación de la BCL, pero pueden ignorar las restricciones de licencias. La solicitud de la BCL se encarga de proporcionar la siguiente información sobre los archivos de expansión que necesita la aplicación: 
 
 -   **Tamaño del archivo**: los tamaños de archivo de los archivos de expansión se utilizan como parte de la comprobación que determina si ya se han descargado o no los archivos de expansión correctos.
 -   **Nombres de archivo**: nombre de archivo, en el dispositivo actual, en que deben guardarse los paquetes de expansión.

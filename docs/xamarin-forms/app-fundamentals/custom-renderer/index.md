@@ -1,19 +1,14 @@
 ---
 title: Representadores personalizados de Xamarin.Forms
-description: Los representadores personalizados permiten que los desarrolladores reemplacen la representación de los controles nativos en cada plataforma, para personalizar la apariencia y el comportamiento de los controles de Xamarin.Forms.
+description: 'Los representadores personalizados permiten que los desarrolladores reemplacen la representación de los controles nativos en cada plataforma, para personalizar la apariencia y el comportamiento de los controles de Xamarin.Forms.'
 ms.prod: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: c7ae25688b2f8635a9a89318e0b307e58add7a5a
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998752"
 ---
+
 # <a name="xamarinforms-custom-renderers"></a>Representadores personalizados de Xamarin.Forms
 
 _Las interfaces de usuario de Xamarin.Forms se representan mediante los controles nativos de la plataforma de destino, lo que permite que las aplicaciones de Xamarin.Forms conserven la apariencia adecuada para cada plataforma. Los representadores personalizados permiten que los desarrolladores reemplacen este proceso para personalizar la apariencia y el comportamiento de los controles de Xamarin.Forms en cada plataforma._
@@ -24,7 +19,7 @@ Los representadores personalizados proporcionan un método eficaz para personali
 
 ## <a name="renderer-base-classes-and-native-controlsrenderersmd"></a>[Clases base y controles nativos del representador](renderers.md)
 
-Todos los controles de Xamarin.Forms tienen un representador que lo acompaña para cada plataforma y que crea una instancia de un control nativo. En este artículo se enumeran las clases de control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms.
+Todos los controles de Xamarin.Forms tienen un representador que lo acompaña para cada plataforma y que crea una instancia de un control nativo. En este artículo se enumeran las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms.
 
 ## <a name="customizing-an-entryentrymd"></a>[Personalización de una entrada](entry.md)
 
@@ -63,4 +58,3 @@ En este artículo se muestra cómo escribir los representadores para implementar
 
 - [Efectos](~/xamarin-forms/app-fundamentals/effects/index.md)
 - [Representadores personalizados (vídeo de Xamarin University)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)
-- [Ejemplo de representadores personalizados (vídeo de Xamarin University)](http://bit.ly/xf-customrenderer)

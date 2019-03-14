@@ -483,11 +483,11 @@ _Enumerados por la ubicación principal, muchos socios proporcionan servicios a 
 |[AGILUX](https://agilux.lu)|Pommerloch, Luxemburgo|Agilux es una empresa de consultoría de equipo especializado en la integración de soluciones de TI para la administración comercial y contabilidad de PYME, desarrollo de aplicaciones móviles, comercio electrónico y sitios Web|
 
 
-## <a name="macedonia"></a>Macedonia
+## <a name="macedonia"></a>Macedonia del Norte
 
 | Socio | Ubicaciones | Descripción |
 | --- | --- | --- |
-|[Química de código](http://www.codechem.com)|Macedonia, Skopie|Química de código proporciona el desarrollo de software, administración de proyectos y consulting services. |
+|[Química de código](http://www.codechem.com)|Macedonia del Norte, Skopie|Química de código proporciona el desarrollo de software, administración de proyectos y consulting services. |
 
 
 ## <a name="mexico"></a>México

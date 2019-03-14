@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 52cd8a15f1b5b232deef62a8e87910b092aad94c
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: ff4c72eaaf856083ab8e2e240ac8ce3eff37470c
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831955"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669659"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configuración de una aplicación en iTunes Connect
 
@@ -360,7 +360,7 @@ En este artículo se describe cómo usar iTunes Connect para preparar una aplica
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Working with Images (Trabajo con imágenes)](~/ios/app-fundamentals/images-icons/index.md)
-- [Guía sobre los flujos de trabajo de desarrollo de aplicaciones iOS: distribución de aplicaciones](http://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
+- [Guía sobre los flujos de trabajo de desarrollo de aplicaciones iOS: distribución de aplicaciones](https://developer.apple.com/library/ios/#documentation/Xcode/Conceptual/ios_development_workflow/35-Distributing_Applications/distributing_applications.html)
 - [Sugerencias de envío al App Store](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [Directrices de revisión del App Store](https://developer.apple.com/appstore/resources/approval/guidelines.html)
 - [Guía para desarrolladores de iTunes Connect](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/About.html#//apple_ref/doc/uid/TP40011225-CH1-SW1)

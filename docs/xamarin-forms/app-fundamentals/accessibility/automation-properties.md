@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 284e10af41429d320ce08b8d45ccd5bbcec851d1
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: 142c22cd239d6b66e5139346b45994ef2f20bdc8
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831994"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672565"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Propiedades de automatización en Xamarin.Forms
 
@@ -36,7 +36,7 @@ Cada plataforma tiene un lector de pantalla diferente para leer los valores de a
 
 - iOS tiene VoiceOver. Para obtener más información, consulte [Test Accessibility on Your Device with VoiceOver](https://developer.apple.com/library/content/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html) (Probar la accesibilidad en un dispositivo con VoiceOver), en developer.apple.com.
 - Android tiene TalkBack. Para obtener más información, consulte [Testing Your App's Accessibility](https://developer.android.com/training/accessibility/testing.html#talkback) (Prueba de la accesibilidad de una aplicación), en developer.android.com.
-- Windows tiene el Narrador. Para obtener más información, consulte [Verify main app scenarios by using Narrator](/windows/uwp/accessibility/accessibility-testing#verify-main-app-scenarios-by-using-narrator/) (Comprobar escenarios de aplicaciones principales mediante el uso del Narrador).
+- Windows tiene el Narrador. Para obtener más información, consulte [Verify main app scenarios by using Narrator](/windows/uwp/accessibility/accessibility-testing#verify-main-app-scenarios-by-using-narrator) (Comprobar escenarios de aplicaciones principales mediante el uso del Narrador).
 
 Sin embargo, el comportamiento exacto de un lector de pantalla depende del software y de la configuración del usuario en él. Por ejemplo, la mayoría de los lectores de pantalla leen el texto asociado con un control cuando queda focalizado, permitiendo a los usuarios orientarse a medida que se mueven entre los controles en la página. Algunos lectores de pantalla leen también la interfaz de usuario de la aplicación completa cuando aparece una página, lo cual permite que el usuario reciba todo de contenido informativo disponible de la página antes de intentar navegar por ella.
 

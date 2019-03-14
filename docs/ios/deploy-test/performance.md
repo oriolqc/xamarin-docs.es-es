@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 01c743b4b0eff81bbf4c41e1c2f387e0dc40c067
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 1f7f2af19c6faad32f94d82dbc58f140f45dea5d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233762"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671123"
 ---
 # <a name="xamarinios-performance"></a>Rendimiento de Xamarin.iOS
 
-El mal rendimiento de una aplicación se manifiesta de muchas formas. Puede hacer que parezca que una aplicación deja de responder, puede ocasionar un desplazamiento lento y puede reducir la duración de la batería. La optimización del rendimiento conlleva mucho más que la mera implementación de código eficaz. También debe tenerse en cuenta la experiencia de rendimiento de la aplicación del usuario. Por ejemplo, asegurarse de que las operaciones se ejecuten sin evitar que el usuario realice otras actividades puede ayudar a mejorar su experiencia. 
+El mal rendimiento de una aplicación se manifiesta de muchas formas. Puede hacer que parezca que una aplicación deja de responder, puede ocasionar un desplazamiento lento y puede reducir la duración de la batería. La optimización del rendimiento conlleva mucho más que la mera implementación de código eficaz. También debe tenerse en cuenta la experiencia de rendimiento de la aplicación del usuario. Por ejemplo, asegurarse de que las operaciones se ejecuten sin evitar que el usuario realice otras actividades puede ayudar a mejorar su experiencia.
 
 Este documento describe las técnicas que pueden usarse para mejorar el rendimiento y el uso de memoria de las aplicaciones Xamarin.iOS.
 
@@ -140,7 +140,7 @@ public class MyFooDelegate : FooDelegate {
 A continuación hay otro ejemplo del uso de `[Weak]` en el contexto del modelo de [delegación](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Delegation.html):
 
 ```csharp
-public class MyViewController : UIViewController 
+public class MyViewController : UIViewController
 {
     WKWebView webView;
 
@@ -155,7 +155,7 @@ public class MyViewController : UIViewController
     }
 }
 
-public class UIDelegate : WKUIDelegate 
+public class UIDelegate : WKUIDelegate
 {
     [Weak] MyViewController controller;
 
@@ -196,7 +196,7 @@ class MyContainer : UIView
 Para un objeto secundario que mantiene una referencia fuerte a su elemento primario, borre la referencia al elemento primario en la implementación de `Dispose`:
 
 ```csharp
-class MyChild : UIView 
+class MyChild : UIView
 {
     MyContainer container;
     public MyChild (MyContainer container)
@@ -215,13 +215,13 @@ También hay una excelente explicación en esta entrada de blog: [Xamarin.iOS, t
 
 ### <a name="more-information"></a>Más información
 
-Para más información, vea [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) (Reglas para evitar ciclos de retención) en Cocoa With Love, [Is this a bug in MonoTouch GC](http://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) (¿Esto es un error en MonoTouch GC) en StackOverflow y [Why can't MonoTouch GC kill managed objects with refcount > 1?](http://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) (¿Por qué no puede MonoTouch GC eliminar objetos administrados con refcount > 1?) en StackOverflow.
+Para más información, vea [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) (Reglas para evitar ciclos de retención) en Cocoa With Love, [Is this a bug in MonoTouch GC](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) (¿Esto es un error en MonoTouch GC) en StackOverflow y [Why can't MonoTouch GC kill managed objects with refcount > 1?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) (¿Por qué no puede MonoTouch GC eliminar objetos administrados con refcount > 1?) en StackOverflow.
 
 ## <a name="optimize-table-views"></a>Optimizar las vistas de tabla
 
 Los usuarios esperan un desplazamiento sin problemas y unos tiempos de carga rápidos para las instancias de [`UITableView`](xref:UIKit.UITableView). Pero el rendimiento del desplazamiento puede verse afectado si las celdas contienen jerarquías de vista profundamente anidadas o si las celdas contienen diseños complejos. Pero hay técnicas que se pueden usar para evitar un mal rendimiento de `UITableView`:
 
-- Reutilizar las celdas. Para más información, vea [Reutilizar celdas](#reusecells).
+- Reutilizar las celdas. Para más información, vea [Reutilizar celdas](#reuse-cells).
 - Reducir el número de subvistas.
 - Almacenar en caché el contenido de celda recuperado de un servicio web.
 - Almacenar en caché el alto de todas las filas si no son idénticas.
