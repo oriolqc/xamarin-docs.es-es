@@ -255,8 +255,7 @@ Este fragmento de código es un ejemplo de cómo generar un "sin ofuscado" C# ti
     name="obfuscated">false</attr>
 ```
 
-### <a name="propertyname"></a>
-  propertyName
+### <a name="propertyname"></a>propertyName
 
 Este atributo se puede usar para cambiar el nombre de una propiedad administrada.
 
