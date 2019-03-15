@@ -6,13 +6,13 @@ ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/19/2018
-ms.openlocfilehash: 997b3e8a8f847ae08eea7e022e7b3424d0fddd8d
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.date: 03/07/2019
+ms.openlocfilehash: b88226dda14e2ae5cd21bb066e107fb4bcad78f6
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233944"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672526"
 ---
 # <a name="implementing-a-hybridwebview"></a>Implementación de HybridWebView
 
@@ -240,6 +240,8 @@ La página web permite que un usuario escriba su nombre en un elemento `input` y
 
 La función de JavaScript `invokeCSharpAction` no está definida en la página web, así que es cada representador personalizado el que la inserta en ella.
 
+En iOS, este archivo HTML se encuentra en la carpeta de contenido del proyecto de la plataforma e incluye una acción de compilación de **BundleResource**. En Android, este archivo HTML se encuentra en la carpeta de contenido o recursos del proyecto de la plataforma e incluye una acción de compilación de **AndroidAsset**.
+
 <a name="Invoking_C_from_JavaScript" />
 
 ### <a name="invoking-c-from-javascript"></a>Invocación de C# desde JavaScript
@@ -319,6 +321,16 @@ Esta funcionalidad se logra del siguiente modo:
 
 > [!NOTE]
 > La clase `WKWebView` solo se admite en iOS 8 y versiones posteriores.
+
+Además, **Info.plist** debe actualizarse para que incluya los siguientes valores:
+
+```
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
+```
 
 ### <a name="creating-the-custom-renderer-on-android"></a>Creación del representador personalizado en Android
 

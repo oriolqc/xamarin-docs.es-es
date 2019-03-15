@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: bd08e1f83f7b1752a2830bda1390ffae4f86b360
-ms.sourcegitcommit: b56b3f906d2c05a3f1be219ef41be8b79e519b8e
+ms.openlocfilehash: 7f03df796c338380a776f9af26563af2e60e59a1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39242412"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672656"
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
@@ -257,7 +257,7 @@ Para más información, vea [Información general sobre la compatibilidad con As
 
 Los lenguajes administrados como C# usan la recolección de elementos no utilizados para reclamar la memoria asignada a los objetos que ya no están en uso. Los dos recolectores de elementos no utilizados que emplea la plataforma Xamarin son:
 
-- [**SGen**](http://www.mono-project.com/docs/advanced/garbage-collector/sgen/): se trata de un recolector de elementos no utilizados generacional y es el predeterminado en la plataforma Xamarin.
+- [**SGen**](https://www.mono-project.com/docs/advanced/garbage-collector/sgen/): se trata de un recolector de elementos no utilizados generacional y es el predeterminado en la plataforma Xamarin.
 - [**Boehm**](http://www.hboehm.info/gc/): se trata de un recolector de elementos no utilizados no generacional conservador. Es el predeterminado para las aplicaciones de Xamarin.iOS que usan la API clásica.
 
 SGen usa uno de tres montones para asignar espacio para los objetos:
@@ -334,7 +334,7 @@ Los siguientes pasos pueden usarse para reducir aún más el tamaño del archivo
 - Reduzca el tamaño del código administrado de la aplicación. Esto se puede lograr si se habilita el enlazador en cada ensamblado (*Link All (Vincular todos)* para proyectos de iOS y *Link all assemblies (Vincular todos los ensamblados)* para proyectos de Android).
 
 Las aplicaciones de Android también se pueden dividir en un APK independiente para cada ABI ("arquitectura").
-Obtenga más información en esta entrada de blog: [How To Keep Your Android App Size Down (Cómo reducir el tamaño de una aplicación de Android)](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down).
+Obtenga más información en la entrada de blog: [How To Keep Your Android App Size Down](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down) (Cómo reducir el tamaño de una aplicación de Android).
 
 <a name="optimizeimages" />
 

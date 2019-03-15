@@ -1,18 +1,18 @@
 ---
 title: Documentación relacionada con Xamarin.Mac
-description: 'En este documento se proporcionan vínculos a documentación pertinente para desarrolladores de Xamarin.Mac: documentación de Xamarin.iOS, Mac Dev Center de Apple y diversas guías en las que se describe cómo compilar interfaces de usuario con Xamarin.Mac.'
+description: 'En este documento se proporcionan vínculos a la documentación relevante para los desarrolladores de Xamarin.Mac: documentación de Xamarin.iOS, Mac Dev Center de Apple y diversas guías en las que se describe cómo compilar interfaces de usuario con Xamarin.Mac.'
 ms.prod: xamarin
 ms.assetid: 0a282c58-1c37-4f73-8440-85de2daf454a
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 12/02/2016
-ms.openlocfilehash: 745328aeb884031863d8d85caca1e4a6563fc916
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 87987e79fce2bd5277f8092d09752fe715e2f2ce
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526954"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667662"
 ---
 # <a name="xamarinmac-related-documentation"></a>Documentación relacionada con Xamarin.Mac
 
@@ -22,7 +22,7 @@ Además de la sección de Mac de [developer.xamarin.com](~/mac/get-started/index
 
 - **[Mac Dev Center](https://developer.apple.com/devcenter/mac/) de Apple**: en muchos casos un ejemplo de qué API llamar en Objective-C se puede convertir a C# de una forma sencilla. Vea [Understanding Mac APIs](~/mac/app-fundamentals/mac-apis.md) (Descripción de las API de Mac) para más información sobre cómo hacerlo.
 
-- [**Stack Overflow**](http://stackoverflow.com/): un excelente recurso para preguntas sencillas como ["¿Cómo puedo expandir automáticamente todos los nodos de una NSOutlineView?"](http://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes). Estos ejemplos estarán a menudo en Objective C y deben convertirse a C#, pero hay un subconjunto de respuestas en C#.
+- [**Stack Overflow**](https://stackoverflow.com/): un excelente recurso para preguntas sencillas como ["¿Cómo puedo expandir automáticamente todos los nodos de una NSOutlineView?"](https://stackoverflow.com/questions/519751/nsoutlineview-auto-expand-all-nodes). Estos ejemplos estarán a menudo en Objective C y deben convertirse a C#, pero hay un subconjunto de respuestas en C#.
 
 ## <a name="user-interface"></a>Interfaz de usuario
 

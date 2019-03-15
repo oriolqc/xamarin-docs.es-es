@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/13/2018
-ms.openlocfilehash: 6e45f87b3c64abb9de22e09150935e3e5065fea4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5ce778d0e6c2d023362ca5c9c691d77548dd7383
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103418"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672604"
 ---
 # <a name="working-with-entitlements-in-xamarinios"></a>Trabajar con derechos en Xamarin.iOS
 
@@ -68,7 +68,7 @@ Para configurar los derechos en Visual Studio, haga lo siguiente:
 
     ![](entitlements-images/servicevs02.png "Edición de los derechos")
 
-    Como alternativa, haga doble clic en el archivo **Entitlements.plist** para abrir el editor de código fuente XML, con el que podrá establecer el valor de la propiedad y la clave del derecho como se detalla en la sección [Referencia sobre las claves de derechos](#keyreference).
+    Como alternativa, haga doble clic en el archivo **Entitlements.plist** para abrir el editor de código fuente XML, con el que podrá establecer el valor de la propiedad y la clave del derecho como se detalla en la sección [Referencia de la clave de derechos](#entitlement-key-reference).
 
 5. Seleccione y configure los derechos necesarios para la aplicación de Xamarin.iOS, de manera que coincidan con la configuración que se definió al crear el identificador de aplicación.
 6. Guarde los cambios en el archivo **Entitlements.plist**.
@@ -94,7 +94,7 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
 
 ### <a name="wallet"></a>Cartera
 
-*   **Descripción**: Formalmente llamado Passbook, Wallet es una aplicación que almacena y administra pases. Estos pases pueden ser tarjetas de crédito, tarjetas de fidelización, tarjetas de embarque o entradas.
+*   **Descripción**: formalmente llamada Passbook, Wallet es una aplicación que almacena y administra pases. Estos pases pueden ser tarjetas de crédito, tarjetas de fidelización, tarjetas de embarque o entradas.
 
     - **Identificador de tipo de pase**
         * **Claves**: com.apple.developer.pass-type-identifiers
@@ -109,7 +109,7 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
 
 ### <a name="icloud"></a>iCloud
 
-*   **Descripción**: iCloud proporciona a los usuarios de iOS una forma sencilla y cómoda para almacenar su contenido y compartirlo entre dispositivos. Los desarrolladores tienen cuatro maneras para usar iCloud para proporcionar un medio de almacenamiento para sus usuarios: el almacenamiento de pares clave-valor, el almacenamiento UIDocument, CoreData y el uso directo de CloudKit para proporcionar almacenamiento para archivos y directorios específicos. Para más información, consulte la guía Introduction to iCloud (Introducción a iCloud).
+*   **Descripción**: iCloud proporciona a los usuarios de iOS una forma sencilla y cómoda para almacenar su contenido y compartirlo entre dispositivos. Los desarrolladores disponen de cuatro formas de usar iCloud para proporcionar almacenamiento a sus usuarios: el almacenamiento de pares clave-valor, el almacenamiento de UIDocument, CoreData y el uso directo de CloudKit para proporcionar almacenamiento de archivos y directorios individuales. Para más información, consulte la guía Introduction to iCloud (Introducción a iCloud).
 
     - **Documentos de iCloud y CloudKit**
         - **Claves**: com.apple.developer.ubiquity-container-identifiers
@@ -137,7 +137,7 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
 
 ### <a name="apple-pay"></a>Apple Pay
 
-- **Descripción**: Con Apple Pay, los usuarios pueden pagar bienes físicos con su dispositivo iOS.
+- **Descripción**: con Apple Pay, los usuarios pueden pagar bienes físicos con su dispositivo iOS.
     - **Clave**: com.apple.developer.in-app-payments
     - **Cadena**: merchant.your.mechantid
 
@@ -148,7 +148,7 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
 
 ### <a name="siri"></a>Siri
 
-- **Descripción**: Con SiriKit, una aplicación iOS puede proporcionar servicios que pueden obtener acceso a Siri y a la aplicación Mapas de un dispositivo iOS mediante App Extensions y las nuevas plataformas Intents e Intents UI. Para más información, consulte la guía Introduction to SiriKit (Introducción a SiriKit).
+- **Descripción**: con SiriKit, una aplicación iOS es capaz de proporcionar servicios que pueden acceder a Siri y a la aplicación Mapas de un dispositivo iOS mediante App Extensions y las nuevas plataformas Intents e Intents UI. Para más información, consulte la guía Introduction to SiriKit (Introducción a SiriKit).
     - **Clave**: com.apple.developer.siri
 
 ### <a name="personal-vpn"></a>VPN personal
@@ -158,25 +158,25 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
 
 ### <a name="keychain-sharing"></a>Uso compartido de cadenas de claves
 
-- **Descripción**: El uso compartido de cadenas de claves permite a los desarrolladores de aplicaciones compartir las contraseñas almacenadas en la cadena de claves del dispositivo con otras aplicaciones desarrolladas por el mismo equipo. Se puede restringir el acceso pasando en la cadena un identificador de grupo de acceso de cadena de claves.
+- **Descripción**: el uso compartido de cadenas de claves permite a los desarrolladores de aplicaciones compartir las contraseñas almacenadas en la cadena de claves del dispositivo con otras aplicaciones desarrolladas por el mismo equipo. Se puede restringir el acceso pasando en la cadena un identificador de grupo de acceso de cadena de claves.
     - **Clave**: keychain-access-groups
     - **Cadena**: $(AppIdentifierPrefix) $(CFBundleIdentifier)
 
 ### <a name="inter-app-audio"></a>Inter-App Audio
 
-- **Descripción**: Con Inter-App Audio, los desarrolladores pueden transmitir audio entre aplicaciones.
+- **Descripción**: con Inter-App Audio, los desarrolladores pueden transmitir audio entre aplicaciones.
     - **Clave**: inter-app-audio
     - **Booleano**: SÍ
 
 ### <a name="associated-domains"></a>Dominios asociados
 
-- **Descripción**: Los dominios asociados que se deben controlar como vínculos universales se deben pasar con este derecho. Los vínculos universales se pueden implementar para permitir una vinculación en profundidad entre la aplicación y un sitio web. Debe proporcionar una entrada a cada dominio que la aplicación admita; además, cada entrada debe empezar por `applinks:`.
+- **Descripción**: los dominios asociados que se deben controlar como vínculos universales se deben pasar con este derecho. Los vínculos universales se pueden implementar para permitir una vinculación en profundidad entre la aplicación y un sitio web. Debe proporcionar una entrada a cada dominio que la aplicación admita; además, cada entrada debe empezar por `applinks:`.
     - **Clave**: com.apple.developer.associated-domains
     - **Cadena**: webcredentials:example.com
 
 ### <a name="data-protection"></a>Protección de datos
 
-- **Descripción**: La protección de datos usa el hardware de cifrado integrado para almacenar los datos confidenciales usados en la aplicación con un formato cifrado. De forma predeterminada, el nivel de protección se establece en una protección completa (solo se puede obtener acceso a los archivos cuando se desbloquea el dispositivo).
+- **Descripción**: la protección de datos usa el hardware de cifrado integrado para almacenar los datos confidenciales usados en la aplicación con un formato cifrado. De forma predeterminada, el nivel de protección se establece en una protección completa (solo se puede obtener acceso a los archivos cuando se desbloquea el dispositivo).
     - **Clave**: com.apple.developer.default-data-protection
     - **Cadena**: NSFileProtectionComplete
 
@@ -188,19 +188,19 @@ Las claves de derechos se pueden agregar a través del panel de código fuente d
 
 ### <a name="healthkit"></a>HealthKit
 
-- **Descripción**: HealthKit es un marco que se introdujo en iOS 8 que proporciona un almacén de datos centralizado, coordinado y seguro para obtener información relacionada con la salud. Para más información sobre cómo usar HealthKit, consulte la guía Introduction to HealthKit (Introducción a HealthKit).
+- **Descripción**: HealthKit es un marco introducido en iOS 8 que proporciona un almacén de datos centralizado, coordinado y seguro para obtener información relacionada con la salud. Para más información sobre cómo usar HealthKit, consulte la guía Introduction to HealthKit (Introducción a HealthKit).
     - **Clave**: com.apple.developer.healthkit
     - **Booleano**: SÍ
 
 ### <a name="wireless-accessory-configuration"></a>Configuración inalámbrica de accesorios
 
-- **Descripción**: La configuración inalámbrica de accesorios permite configurar accesorios Wi-Fi MFi en la aplicación.
+- **Descripción**: la configuración inalámbrica de accesorios permite configurar accesorios Wi-Fi MFi en la aplicación.
     - **Clave**: com.apple.external-accessory.wireless-configuration
     - **Booleano**: SÍ
 
 ### <a name="classkit"></a>ClassKit
 
-- **Descripción**: ClassKit permite a los profesores ver el progreso de los estudiantes en actividades asignadas en la aplicación.
+- **Descripción**: ClassKit permite a los profesores ver el progreso de los alumnos en actividades asignadas en la aplicación.
     - **Clave**: com.apple.developer.ClassKit-environment
     - **Cadena**: `development` o `production`
 

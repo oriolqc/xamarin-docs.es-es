@@ -6,12 +6,12 @@ ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: 8a95f89ad41ab793d8c26631f1a967180b4c1779
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.openlocfilehash: b8f36ef407c3acc9b3472539735816649e13b7db
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782338"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57672669"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introducción al ciclo de vida de desarrollo de software móvil
 
@@ -19,7 +19,7 @@ La creación de aplicaciones móviles puede ser tan fácil como abrir el IDE, ju
 
 En este documento, vamos a realizar un examen de introducción exhaustivo de la creación de aplicaciones móviles, incluidos:
 
-1.   **Proceso**: el proceso de desarrollo de software se denomina ciclo de vida de desarrollo de software (SDLC). Examinaremos todas las fases del SDLC con respecto al desarrollo de aplicaciones móviles, incluidas: inspiración, diseño, desarrollo, estabilización, implementación y mantenimiento.
+1.   **Proceso**: el proceso de desarrollo de software se denomina ciclo de vida de desarrollo de software (SDLC). Examinaremos todas las fases del SDLC con respecto al desarrollo de aplicaciones móviles, incluidas las siguientes: inspiración, diseño, desarrollo, estabilización, implementación y mantenimiento.
 1.   **Consideraciones**: hay una serie de consideraciones que se deben tener en cuenta al crear aplicaciones móviles, especialmente si se comparan con las aplicaciones de escritorio o web tradicionales. Examinaremos estas consideraciones y cómo afectan al desarrollo móvil.
 
 Este documento está pensado para responder a preguntas fundamentales sobre el desarrollo de aplicaciones móviles, para desarrolladores de aplicaciones nuevos y experimentados. Adopta un enfoque bastante completo para introducir la mayor parte de los conceptos que se ejecutarán durante todo el ciclo de vida de desarrollo de software (SDLC). En cambio, puede que este documento no sea para todos los usuarios. Si quiere empezar a crear aplicaciones, le recomendamos que pase a la guía [Introducción al desarrollo móvil](~/cross-platform/get-started/introduction-to-mobile-development.md) y vuelva a este documento más adelante.
@@ -58,9 +58,9 @@ Además, las aplicaciones deben evaluarse en el contexto del factor de forma mó
 -   **Valor**: ¿qué valor aporta esta aplicación a los usuarios? ¿Cómo la usarán?
 -   **Forma/movilidad**: ¿cómo funcionará esta aplicación en un factor de forma móvil? ¿Cómo puedo agregar valor mediante tecnologías móviles, como el reconocimiento de ubicación, la cámara, etc.?
 
-Para ayudarle a diseñar la funcionalidad de una aplicación, puede ser útil definir actores y [casos de uso](http://en.wikipedia.org/wiki/Use_case). Los actores son roles dentro de una aplicación y, a menudo, son usuarios. Los casos de uso son, normalmente, acciones o intentos.
+Para ayudarle a diseñar la funcionalidad de una aplicación, puede ser útil definir actores y [casos de uso](https://en.wikipedia.org/wiki/Use_case). Los actores son roles dentro de una aplicación y, a menudo, son usuarios. Los casos de uso son, normalmente, acciones o intentos.
 
-Por ejemplo, una aplicación de seguimiento de tareas puede tener dos actores: *usuario* y *amigo*. Un usuario podría *Crear una tarea* y *Compartir una tarea* con un amigo. En este caso, crear y compartir una tarea son dos casos de uso distintos que, junto con los actores, notificarán qué pantallas tiene que compilar, así como qué lógica y entidades empresariales se deben desarrollar.
+Por ejemplo, una aplicación de seguimiento de tareas puede tener dos actores: un *usuario* y un *amigo*. Un usuario podría *Crear una tarea* y *Compartir una tarea* con un amigo. En este caso, crear y compartir una tarea son dos casos de uso distintos que, junto con los actores, notificarán qué pantallas tiene que compilar, así como qué lógica y entidades empresariales se deben desarrollar.
 
 Una vez que se ha capturado una cantidad apropiada de casos de uso y actores, es mucho más fácil empezar a diseñar una aplicación. El desarrollo se puede centrar entonces en cómo crear la aplicación, en lugar de qué es la aplicación o qué debería hacer.
 
@@ -77,7 +77,7 @@ La experiencia del usuario se efectúa normalmente a través de tramas de alambr
 Al crear prototipos de experiencia del usuario, es importante tener en cuenta las instrucciones de la interfaz para las diferentes plataformas a las que se dirigirá la aplicación. La aplicación debería "sentirse cómoda" en todas las plataformas. Las instrucciones de diseño oficial para cada plataforma son:
 
 1.   **Apple**: [Directrices de interfaz humana](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
-1.   **Android**: [Instrucciones de diseño](http://developer.android.com/design/index.html)
+1.   **Android**: [Instrucciones de diseño](https://developer.android.com/design/index.html)
 1.   **UWP**: [Conceptos básicos de diseño UWP](https://docs.microsoft.com/windows/uwp/design/basics/)
 
 Por ejemplo, cada aplicación tiene una metáfora para cambiar de sección en una aplicación. iOS usa una barra de pestañas en la parte inferior de la pantalla, mientras que Android la usa en la superior. Por otro lado, UWP usa la vista [dinámica o de pestañas](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot).
@@ -108,7 +108,7 @@ En el resto de los tutoriales, nos centraremos principalmente en la fase de desa
 
 ### <a name="stabilization"></a>Estabilización
 
-La estabilización es el proceso de solucionar los errores de la aplicación. No solo desde un punto de vista funcional (por ejemplo: "Se bloquea al hacer clic en este botón"), sino también de facilidad de uso y rendimiento. Es mejor empezar la estabilización muy pronto en el proceso de desarrollo para que se puedan realizar correcciones antes de que sean costosas. Normalmente, las aplicaciones pasan por las fases *Prototipo*, *Alfa*, *Beta* y *Versión candidata para lanzamiento*. Hay personas que las definen de forma diferente, pero, generalmente, siguen el modelo siguiente:
+La estabilización es el proceso de solucionar los errores de la aplicación. No debe entenderse solo desde un punto de vista funcional (por ejemplo: "Se bloquea al hacer c lic en este botón"), sino también de facilidad de uso y rendimiento. Es mejor empezar la estabilización muy pronto en el proceso de desarrollo para que se puedan realizar correcciones antes de que sean costosas. Normalmente, las aplicaciones pasan por las fases *Prototipo*, *Alfa*, *Beta* y *Versión candidata para lanzamiento*. Hay personas que las definen de forma diferente, pero, generalmente, siguen el modelo siguiente:
 
 1.   **Prototipo**: la aplicación aún está en fase de prueba de concepto y solo funcionan la funcionalidad principal o determinadas partes de la aplicación. Hay errores principales.
 1.   **Alfa**: la funcionalidad principal tiene normalmente el código completado (compilado, pero no probado por completo). Aún hay errores principales, puede que no haya funcionalidades aisladas.
@@ -227,7 +227,7 @@ Debido a la fragmentación extrema de los dispositivos Android, la mayoría de l
 #### <a name="security-considerations"></a>Consideraciones de seguridad
 
 Todas las aplicaciones en el sistema operativo Android se ejecutan bajo una identidad distinta y aislada con permisos limitados. De manera predeterminada, las aplicaciones pueden hacer muy poco. Por ejemplo, sin permisos especiales, una aplicación no puede enviar un mensaje de texto, determinar el estado del teléfono, ni siquiera obtener acceso a Internet. Para tener acceso a estas características, las aplicaciones deben especificar en su archivo de manifiesto de la aplicación qué permisos quieren y cuándo se instalan. El sistema operativo lee los permisos, notifica al usuario que la aplicación pide esos permisos y, después, permite al usuario continuar o cancelar la instalación.
-Este es un paso esencial en el modelo de distribución de Android, debido al modelo de tienda de aplicaciones abierto, ya que las aplicaciones no se mantienen de la misma forma que en iOS, por ejemplo. Para obtener una lista de permisos de aplicaciones, consulte el artículo de referencia [Manifest Permissions](http://developer.android.com/reference/android/Manifest.permission.html) (Permisos de manifiesto) en la documentación de Android.
+Este es un paso esencial en el modelo de distribución de Android, debido al modelo de tienda de aplicaciones abierto, ya que las aplicaciones no se mantienen de la misma forma que en iOS, por ejemplo. Para obtener una lista de permisos de aplicaciones, consulte el artículo de referencia [Manifest Permissions](https://developer.android.com/reference/android/Manifest.permission.html) (Permisos de manifiesto) en la documentación de Android.
 
 ### <a name="windows-considerations"></a>Consideraciones de Windows
 
@@ -253,5 +253,5 @@ En esta guía, se le ha proporcionado una introducción al SDLC en lo referente 
 
 - [Introducción al desarrollo móvil](~/cross-platform/get-started/introduction-to-mobile-development.md)
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
-- [Hello, Android](http://developer.xamarin.com/get-started-droid/)
+- [Hello, Android](https://developer.xamarin.com/get-started-droid/)
 - [Principios de la aplicación](~/cross-platform/app-fundamentals/index.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Hello, Android: análisis detallado'
+title: 'Hello, Android: profundización'
 description: Esta guía en dos partes le ayudará a compilar su primera aplicación de Xamarin.Android y a comprender los aspectos básicos del desarrollo de aplicaciones de Android con Xamarin. A lo largo del proceso, le presentaremos las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.Android.
 zone_pivot_groups: platform
 ms.topic: quickstart
@@ -9,14 +9,14 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 10/05/2018
-ms.openlocfilehash: cdd0a792a76fa411fdc010c3d662a3d1acc2f373
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3d34ce3d5cb6e8e4931eafcc7cd82d141f5db8d7
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108821"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670186"
 ---
-# <a name="hello-android-deep-dive"></a>Hello, Android: análisis detallado
+# <a name="hello-android-deep-dive"></a>Hello, Android: profundización
 
 _Esta guía en dos partes le ayudará a compilar su primera aplicación de Xamarin.Android y a comprender los aspectos básicos del desarrollo de aplicaciones de Android con Xamarin. A lo largo del proceso, le presentaremos las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.Android._
 
@@ -113,7 +113,7 @@ El directorio **Recursos** contiene cuatro carpetas denominadas **drawable**, **
 
 Los elementos se resumen en la tabla siguiente:
 
-- **drawable**: El directorio drawable contiene [recursos que se pueden dibujar](http://developer.android.com/guide/topics/resources/drawable-resource.html), como imágenes y mapas de bits.
+- **drawable**: El directorio drawable contiene [recursos que se pueden dibujar](https://developer.android.com/guide/topics/resources/drawable-resource.html), como imágenes y mapas de bits.
 
 - **mipmap**: El directorio mipmap contiene archivos drawable para distintas densidades de los iconos de iniciadores. En la plantilla predeterminada, el directorio drawable contiene el archivo del icono de la aplicación, **Icon.png**.
 

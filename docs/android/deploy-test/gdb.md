@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
-ms.openlocfilehash: 84e99849e3b3d925747df59ffcde242c145dbe74
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: c64714974f6467bcd7e0e4705a1426c83aa691b5
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111387"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667599"
 ---
 # <a name="gdb"></a>GDB
 
@@ -155,7 +155,7 @@ Para habilitar la depuración de aplicaciones, se puede definir la propiedad de 
 
 Para proporcionar un elemento `gdbserver` accesible, siga la sección [Compilaciones de depuración sin implementación rápida](#Debug_Builds_without_Fast_Deployment).
 
-Un aspecto a tener en cuenta: el destino de MSBuild `_Gdb` terminará todas las instancias de aplicación que estaban previamente en ejecución. Esto no funciona en destinos de Android v4.0.
+Un aspecto a tener en cuenta: el destino de MSBuild `_Gdb` terminará todas las instancias de aplicación que estaban en ejecución. Esto no funciona en destinos de Android v4.0.
 
 <a name="Troubleshooting" />
 
@@ -163,7 +163,7 @@ Un aspecto a tener en cuenta: el destino de MSBuild `_Gdb` terminará todas las 
 
 ### <a name="monopmip-doesnt-work"></a>`mono_pmip` no funciona
 
-La función `mono_pmip` (útil para [obtener marcos de pila administrados](http://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)) se exporta desde `libmonosgen-2.0.so`, que actualmente el destino `_Gdb` no puede extraer. (Este problema se corregirá en futuras versiones).
+La función `mono_pmip` (útil para [obtener marcos de pila administrados](https://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)) se exporta desde `libmonosgen-2.0.so`, que actualmente el destino `_Gdb` no puede extraer. (Este problema se corregirá en futuras versiones).
 
 Para habilitar las funciones de llamada ubicadas en `libmonosgen-2.0.so`, cópielas del dispositivo de destino al directorio `gdb-symbols`:
 

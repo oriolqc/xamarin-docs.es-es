@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: ecd3fe7256eeaa51baf1bc2c367ff7560db51b0c
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 2e87142594da8f028323b5dc81afb0e9f8021028
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53055820"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667060"
 ---
 # <a name="xamarinforms-messagingcenter"></a>MessagingCenter de Xamarin.Forms
 
@@ -35,7 +35,6 @@ _Xamarin.Forms incluye un servicio de mensajería simple para enviar y recibir m
 -  **Subscribe**: escucha mensajes con una determinada firma y realiza alguna acción cuando se reciben. Varios suscriptores pueden estar escuchando el mismo mensaje.
 -  **Send**: publica un mensaje para que los agentes de escucha actúen en consecuencia. Si no hay ningún agente de escucha suscrito, se omite el mensaje.
 
-
 `MessagingService` es una clase estática con métodos `Subscribe` y `Send` que se usan en toda la solución.
 
 Los mensajes tienen un parámetro de cadena `message` que se usa como forma de *dirigir* mensajes. Los métodos `Subscribe` y `Send` usan parámetros genéricos para un mayor control sobre la entrega de los mensajes: dos mensajes con el mismo texto `message` pero argumentos de tipo genérico diferentes no se entregan al mismo suscriptor.
@@ -56,6 +55,8 @@ Estos métodos se explican a continuación.
 ## <a name="using-the-messagingcenter"></a>Uso de MessagingCenter
 
 Los mensajes se pueden enviar como resultado de la interacción del usuario (por ejemplo, un clic en un botón), un evento del sistema (por ejemplo, controles que cambian el estado) o algún otro incidente (como la finalización de una descarga asincrónica). Los suscriptores pueden escuchar para cambiar la apariencia de la interfaz de usuario, guardar datos o desencadenar alguna otra operación.
+
+Para obtener más información sobre el uso de la clase `MessagingCenter`, vea [Comunicación entre componentes débilmente acoplados](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md).
 
 ### <a name="simple-string-message"></a>Mensaje de cadena simple
 
@@ -114,3 +115,4 @@ MessagingCenter es una manera sencilla de reducir el acoplamiento, especialmente
 
 - [Ejemplo de MessagingCenter](https://developer.xamarin.com/samples/UsingMessagingCenter)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples) (Ejemplos de Xamarin.Forms)
+- [Comunicación entre componentes débilmente acoplados](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)
