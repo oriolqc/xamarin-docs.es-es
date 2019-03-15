@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/13/2018
-ms.openlocfilehash: 71962c5e7d2f4c360e14b2040779498d4be95282
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.openlocfilehash: 270191890e8747ecad7d250fb0fe18ce253d3823
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55831800"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972655"
 ---
 # <a name="customizing-listview-appearance"></a>Personalizar la apariencia de ListView
 
@@ -206,8 +206,8 @@ Para crear un encabezado personalizado y un pie de página, definir las vistas d
 [`ListView`](xref:Xamarin.Forms.ListView) tiene `HorizontalScrollBarVisibility` y `VerticalScrollBarVisibility` propiedades, que obtención o establece un [ `ScrollBarVisibility` ](xref:Xamarin.Forms.ScrollBarVisibility) valor que representa el momento de la barra de desplazamiento horizontal o vertical, está visible. Ambas propiedades se pueden establecer en los siguientes valores:
 
 - [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indica el comportamiento de barra de desplazamiento predeterminado para la plataforma, y es el valor predeterminado para el `HorizontalScrollBarVisibility` y `VerticalScrollBarVisibility` propiedades.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento serán visibles, incluso cuando el contenido no se ajusta en la vista.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento no será visibles, si el contenido no cabe en la vista de eventos.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento serán visibles, incluso cuando el contenido se ajusta en la vista.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indica que las barras de desplazamiento no serán visibles, incluso si el contenido no se ajusta en la vista.
 
 <a name="Row_Separators" />
 
