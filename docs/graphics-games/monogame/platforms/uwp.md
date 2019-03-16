@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: b8eafc3c9c85ba8067b5da7b568ed7c91c9e170c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 9f39580d282defed354f3b9e5cbe4eb1cdec4796
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666430"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070935"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Crear un proyecto MonoGame UWP
 
@@ -26,10 +26,10 @@ En este tutorial crea un proyecto vacío que muestra un *azul aciano* en segundo
 Desarrollo de aplicaciones MonoGame UWP requiere:
 
 - Sistema operativo Windows 10
-- Cualquier versión de Visual Studio 2015
+- Cualquier versión de Visual Studio 2017
 - Herramientas de desarrollo de Windows 10
 - Dispositivo de configuración al modo de programador
-- [MonoGame 3.5 para Visual Studio](http://www.monogame.net/2016/03/17/monogame-3-5/) o posterior
+- [MonoGame 3.7.1 para Visual Studio](http://community.monogame.net/t/monogame-3-7-1-release/11173) o posterior
 
 Para obtener más información, consulte este [página sobre la configuración para el desarrollo de Windows 10 UWP](https://msdn.microsoft.com/windows/uwp/get-started/get-set-up).
 

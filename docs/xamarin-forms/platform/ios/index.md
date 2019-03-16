@@ -1,5 +1,5 @@
 ---
-title: Características de la plataforma iOS
+title: características de la plataforma de iOS de Xamarin.Forms
 description: Agregar funcionalidad específica de iOS a las aplicaciones de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 02/22/2019
 ---
 
-# <a name="ios-platform-features"></a>Características de la plataforma iOS
+# <a name="ios-platform-features-in-xamarinforms"></a>características de la plataforma de iOS de Xamarin.Forms
 
 Desarrollo de aplicaciones de Xamarin.Forms para iOS requiere Visual Studio. El [página requisitos](~/get-started/requirements.md) contiene más información sobre los requisitos previos.
 

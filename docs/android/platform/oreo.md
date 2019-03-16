@@ -8,12 +8,12 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 07/06/2018
-ms.openlocfilehash: 765494b5d9a55aedd9c9b3f0ea29ea389346ae3c
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
+ms.openlocfilehash: c34d81feee48caca94989973a67ba783a0139a90
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267630"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071087"
 ---
 # <a name="oreo-features"></a>Características de oreo
 
@@ -65,8 +65,6 @@ Para agregar compatibilidad de Android Oreo en Visual Studio, haga lo siguiente:
     1. Actualización a Visual Studio 2017 versión 15.7 o posterior (consulte [actualizar Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/update-visual-studio)).
 
     2. Use la [SDK Manager](~/android/get-started/installation/android-sdk.md) para instalar el nivel de API 26.0 o versiones posterior.
-
--   Si utiliza Visual Studio 2015, se recomienda instalar versiones anteriores de SDK Tools a 25 y el uso de la GUI del Administrador de emulador de Google antiguo. Las herramientas del SDK 25 pueden usarse junto con la API 26, 27 y versiones más recientes y no afectan al desarrollo de nuevas plataformas. Esto le dará una interfaz para administrar el SDK de Android para versiones anteriores de VS.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

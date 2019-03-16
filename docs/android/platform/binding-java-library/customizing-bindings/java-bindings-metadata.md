@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/09/2018
-ms.openlocfilehash: ce9bf0293b846299cc7cd06773ce936f725715fa
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 06a7a3b00934b7a2f3eeb4fcfa6fc90071901ba0
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669900"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070909"
 ---
 # <a name="java-bindings-metadata"></a>Metadatos de enlaces Java
 
@@ -246,7 +246,10 @@ Cambia el tipo de valor devuelto de un método. Esto no cambia el atributo de va
 
 ### <a name="obfuscated"></a>obfuscated
 
-Las herramientas que ofuscar las bibliotecas de Java pueden interferir con el generador de enlace de Xamarin.Android y su capacidad para generar C# clases contenedoras. Características de ofuscación clases incluyen: * incluye el nombre de clase un **$**, es decir, **un .class $** * el nombre de clase completamente consta de caracteres en minúsculas, es decir,  **a.Class**
+Las herramientas que ofuscar las bibliotecas de Java pueden interferir con el generador de enlace de Xamarin.Android y su capacidad para generar C# clases contenedoras. Características de ofuscación clases incluyen: 
+
+* El nombre de clase incluye un **$**, es decir, **un .class $**
+* El nombre de clase completamente consta de caracteres en minúsculas, es decir, **a.class**
 
 Este fragmento de código es un ejemplo de cómo generar un "sin ofuscado" C# tipo:
 

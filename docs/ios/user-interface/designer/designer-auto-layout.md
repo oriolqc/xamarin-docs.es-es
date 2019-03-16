@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: cfb684df89bf800a0d32607b119d1bd3fc297c58
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 41a9ec90b4b734dde7a982ac3d4b2e7b2082321c
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123744"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070871"
 ---
 # <a name="auto-layout-with-the-xamarin-designer-for-ios"></a>Diseño automático con el Diseñador de Xamarin para iOS
 
@@ -22,7 +22,7 @@ En esta guía, se presentan las restricciones y cómo trabajar con ellos en el D
 
 ## <a name="requirements"></a>Requisitos
 
-El Diseñador de Xamarin para iOS está disponible en Visual Studio para Mac en Visual Studio 2015 y 2017 en Windows.
+El Diseñador de Xamarin para iOS está disponible en Visual Studio para Mac en Visual Studio 2017 y posterior en Windows.
 
 Esta guía supone un conocimiento de los componentes del diseñador desde el [Introducción a iOS Designer](~/ios/user-interface/designer/introduction.md) guía.
 
@@ -56,11 +56,11 @@ De forma predeterminada, no hay restricciones son creada o visible en la superfi
 
 La barra de herramientas de restricciones se ha actualizado y ahora consta de dos partes principales:
 
-- **Un control de alternancia del botón de modo de restricciones**: anteriormente, escribió el modo de restricciones haciendo clic de nuevo en una vista seleccionada en la superficie de diseño. Ahora debe usar este botón de alternancia en la barra de restricciones:
+- **Un control de alternancia del botón de modo de restricciones**: Anteriormente, se ha especificado el modo de restricciones haciendo clic de nuevo en una vista seleccionada en la superficie de diseño. Ahora debe usar este botón de alternancia en la barra de restricciones:
 
   ![Activar o desactivar los modos de restricciones](designer-auto-layout-images/constraints.png)
 
-- **Un botón de "Restricciones de actualización":** es importante tener en cuenta que los cambios, dependiendo de si está en modo de edición de restricciones.
+- **Un botón de "Restricciones de actualización":** Es importante tener en cuenta que los cambios, dependiendo de si está en modo de edición de restricciones.
   - Este botón ajusta las restricciones para que coincida con el marco del elemento en modo de edición de la restricción.
   - En modo de edición de marco este botón ajusta el marco de elemento para que coincida con la posición que se va a definir las restricciones.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 2b3ba0a0cf31ae2c2d631da8b595390c973957d6
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 28475df4baa225cc9a608607be6ed673ad0e6e8a
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670686"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981710"
 ---
 # <a name="creating-ios-user-interfaces-in-code-in-xamarinios"></a>Crear interfaces de usuario de iOS en código de Xamarin.iOS
 
@@ -85,19 +85,20 @@ Los pasos siguientes le guiarán en el proceso de quitar el guión gráfico de u
 
 1. Por último, agregue el código siguiente a su `FinishedLaunching` método en la clase AppDelegate:
 
-        public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-        {
-            // create a new window instance based on the screen size
-            window = new UIWindow(UIScreen.MainScreen.Bounds);
+    ```csharp
+    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+    {
+        // create a new window instance based on the screen size
+        window = new UIWindow(UIScreen.MainScreen.Bounds);
 
-            // make the window visible
-            window.MakeKeyAndVisible();
+        // make the window visible
+        window.MakeKeyAndVisible();
 
-            return true;
-        }
+        return true;
+    }
+    ```
 
 El código que se agregó a la `FinishedLaunching` método en el paso 5 anterior, es la cantidad mínima de código necesario para crear una ventana de la aplicación de iOS.
-
 
 -----
 

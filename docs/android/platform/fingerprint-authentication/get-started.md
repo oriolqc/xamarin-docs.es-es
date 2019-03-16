@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/17/2018
-ms.openlocfilehash: 731aeaf0ad89a44211072962bf9891851a44ffcc
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 3082dfcd6d0ffbc6404a89a10819e60b57b9c61c
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667729"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070714"
 ---
 # <a name="getting-started-with-fingerprint-authentication"></a>Introducción a la autenticación con huella digital
 
@@ -25,7 +25,7 @@ Para empezar, vamos a examinar primero cómo configurar un proyecto de Xamarin.A
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Una aplicación Android debe solicitar el `USE_FINGERPRINT` permiso en el manifiesto. Captura de pantalla siguiente muestra cómo agregar este permiso a la aplicación en Visual Studio 2015:
+Una aplicación Android debe solicitar el `USE_FINGERPRINT` permiso en el manifiesto. Captura de pantalla siguiente muestra cómo agregar este permiso a la aplicación en Visual Studio:
 
 [![Habilitar uso\_huellas digitales en la pantalla de manifiesto de Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 

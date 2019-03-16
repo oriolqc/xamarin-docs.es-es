@@ -7,22 +7,22 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/31/2018
-ms.openlocfilehash: 8622c40e41071d6c05b05abbe2d5d8a8a844ebde
-ms.sourcegitcommit: b60a37587aad8a0bfa8a522d88d22fa672002443
+ms.openlocfilehash: 2c6409410ecba7df8559c07c3231f5e493c98897
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51285591"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071091"
 ---
 # <a name="ios-designer-basics"></a>conceptos básicos del Diseñador de iOS
 
 _Esta guía presenta al diseñador de Xamarin para iOS. Muestra cómo usar el Diseñador de iOS para diseñar controles visualmente, cómo obtener acceso a esos controles en el código y cómo editar las propiedades._
 
-El Diseñador de Xamarin para iOS es un diseñador visual interfaz similar a Interface Builder de Xcode y el Diseñador de Android. Algunas de sus numerosas características incluyen la perfecta integración con Visual Studio para Mac y Visual Studio 2015 y 2017, edición de arrastrar y colocar, una interfaz para configurar los controladores de eventos y la capacidad de representar los controles personalizados.
+El Diseñador de Xamarin para iOS es un diseñador visual interfaz similar a Interface Builder de Xcode y el Diseñador de Android. Algunas de sus numerosas características incluyen la perfecta integración con Visual Studio para Windows y Mac, edición de arrastrar y colocar, una interfaz para configurar los controladores de eventos y la capacidad de representar los controles personalizados.
 
 ## <a name="requirements"></a>Requisitos
 
-IOS Designer está disponible en Visual Studio para Mac y en Visual Studio 2015 y 2017 en Windows. En Visual Studio 2015 o 2017, el Diseñador de iOS requiere una conexión a un host de compilación de Mac configurado correctamente, aunque no necesita ejecutar Xcode.
+IOS Designer está disponible en Visual Studio para Mac y Visual Studio 2017 y posterior en Windows. En Visual Studio para Windows, iOS Designer requiere una conexión a un host de compilación de Mac configurado correctamente, aunque no necesita ejecutar Xcode.
 
 Esta guía asume un conocimiento con el contenido que se tratan en el [guías de introducción a](~/ios/get-started/index.md).
 
@@ -151,7 +151,7 @@ Los proyectos de Xamarin.iOS creados con Visual Studio para Mac incluyen un gui�
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-La mayoría de los proyectos de Xamarin.iOS creada con Visual Studio 2015 o 2017 incluye un guión gráfico. Para ver el contenido de un guión gráfico, haga doble clic en el archivo .storyboard en el **el Explorador de soluciones**:
+La mayoría de los proyectos de Xamarin.iOS creados con Visual Studio incluyen un guión gráfico. Para ver el contenido de un guión gráfico, haga doble clic en el archivo .storyboard en el **el Explorador de soluciones**:
 
 [![Un guión gráfico abierto en el Diseñador de iOS](introduction-images/7-storyboardopen-vs.png "un guion gráfico abierto en el Diseñador de iOS")](introduction-images/7-storyboardopen-vs-large.png#lightbox)
 

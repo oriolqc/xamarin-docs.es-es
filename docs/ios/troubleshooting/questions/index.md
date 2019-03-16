@@ -1,5 +1,5 @@
 ---
-title: Preguntas más frecuentes
+title: Preguntas más frecuentes de Xamarin.iOS
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 65E04188-185D-493D-BA3C-A89711CB6CAF
@@ -7,14 +7,9 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: d2d0af5a69920f392eba1cd655f1d8ab74971be6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107513"
 ---
-# <a name="frequently-asked-questions"></a>Preguntas más frecuentes
+
+# <a name="ios-frequently-asked-questions"></a>Preguntas más frecuentes de iOS
 
 ## <a name="general-questions"></a>Preguntas generales
 
@@ -58,7 +53,7 @@ Sí, es posible, pero normalmente será necesario que vuelva a firmar el `.app` 
 ### <a name="is-it-possible-to-create-a-xcarchive-archive-from-visual-studiocreate-xcarchivemd"></a>[¿Es posible crear un archivo .xcarchive desde Visual Studio?](create-xcarchive.md)
 A partir de Xamarin 4, es posible crear un `.xcarchive` desde Windows estableciendo el `ArchiveOnBuild` propiedad `true`.
 
-### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[¿Por qué aparece el siguiente error al enviar mi aplicación: "Disallowed paths ( "iTunesMetadata.plist" ) found at ..." ?](itunesmetadata-disallowed-paths.md)
+### <a name="why-does-my-app-submission-fail-with-disallowed-paths--itunesmetadataplist--found-at--itunesmetadata-disallowed-pathsmd"></a>[¿Por qué se produce un error "Disallowed paths ( "iTunesMetadata.plist" ) found at ..." al enviar mi aplicación?](itunesmetadata-disallowed-paths.md)
 Este error es el resultado de un cambio en el proceso de comprobación de App Store de Apple. Este error específico es _no_ relacionado con una versión determinada de Xamarin ha instalado, degradando así le _no_ ayuda. Vínculos de esta guía para obtener más información sobre cómo solucionar el problema.
 
 
@@ -70,7 +65,7 @@ Errores con `RegisterServicePort` y mensajes de error similares al igual que ant
 ### <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychainno-codesigning-keysmd"></a>[¿Por qué aparece el siguiente error en mi compilación de iOS: no valid iPhone code signing keys found in keychain?](no-codesigning-keys.md)
 Este mensaje de error se produce cuando el proyecto en cuestión está buscando credenciales válidas de firma de código, pero no puede encontrarlos. Firma de código es necesaria para pruebas e implementaciones en dispositivos iOS físicos; como aplicación y Ad-hoc almacenan compilaciones.
 
-### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[¿Por qué se produce el siguiente error en mi aplicación iOS 9: System.Exception: Failed to marshal the Objective-C object?](exception-marshal-obj-c.md)
+### <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-objectexception-marshal-obj-cmd"></a>[¿Por qué se produce un error System.Exception: Failed to marshal the Objective-C object en mi aplicación para iOS 9?](exception-marshal-obj-c.md)
 Cambios en la API de iOS 9 requieran el uso de un constructor de devolución de llamada al llamar a código no administrado, como la API subyacente ahora espera.
 
 ### <a name="runtime-error-the-assembly-mscorlibdll-was-not-found-or-could-not-be-loadederror-mscorlib-not-foundmd"></a>[Error en tiempo de ejecución: The assembly mscorlib.dll was not found or could not be loaded](error-mscorlib-not-found.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/01/2017
-ms.openlocfilehash: 435ca560eee4f8f44443816c2a4ccec195ba5395
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b02ecc8a40f6ff8a1862d50202439d369003a53d
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103899"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981606"
 ---
 # <a name="using-arkit-with-urhosharp-in-xamarinios"></a>Uso de ARKit con UrhoSharp en Xamarin.iOS
 
@@ -118,7 +118,7 @@ La manera más sencilla de hacerlo consiste en Insertar un [ `RenderPathCommand`
 Sin embargo, nos estamos enfrentamos con dos problemas al combinar estos dos mundos de ellos:
 
 
-1. En iOS, las texturas de GPU debe tener una resolución que es una potencia de dos, pero los fotogramas que obtenemos de la cámara no tiene resolución que sean la potencia de dos, por ejemplo: 1280 x 720.
+1. En iOS, las texturas de GPU debe tener una resolución que es una potencia de dos, pero los fotogramas que obtenemos de la cámara no tiene resolución que sean la potencia de dos, por ejemplo: 1280x720.
 2. Los fotogramas se codifican en [YUV](https://en.wikipedia.org/wiki/YUV) formato, representado por dos imágenes: luminancia y la intensidad de color.
 
 Los marcos YUV vienen en dos diferentes resoluciones.  una imagen de 1280 x 720 que representa la luminancia (básicamente, una imagen en escala de grises) y mucho más pequeños 640 x 360 para el componente cromáticas:
@@ -207,11 +207,11 @@ void OnTouchEnd(TouchEndEventArgs e)
 
 Dependiendo de las condiciones de iluminación del mundo real, la escena virtual debe ser más claras u oscuras para que coincidan mejor con su entorno. ARFrame contiene una propiedad LightEstimate que podemos usar para ajustar la luz ambiente Urho, esto se hace así:
 
-
-    var ambientIntensity = (float) frame.LightEstimate.AmbientIntensity / 1000f;
-    var zone = Scene.GetComponent<Zone>();
-    zone.AmbientColor = Color.White * ambientIntensity;
-
+```csharp
+var ambientIntensity = (float) frame.LightEstimate.AmbientIntensity / 1000f;
+var zone = Scene.GetComponent<Zone>();
+zone.AmbientColor = Color.White * ambientIntensity;
+```
 
 ### <a name="beyond-ios---hololens"></a>Más allá de iOS: HoloLens
 

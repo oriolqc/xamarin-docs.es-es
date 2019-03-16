@@ -1,5 +1,5 @@
 ---
-title: Preguntas más frecuentes
+title: Preguntas más frecuentes de Xamarin.Android
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
@@ -7,14 +7,9 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
-ms.openlocfilehash: ad3fc32245880f6603c63d33aac49309fd61b753
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "36935469"
 ---
-# <a name="frequently-asked-questions"></a>Preguntas más frecuentes
+
+# <a name="android-frequently-asked-questions"></a>Preguntas más frecuentes de Android
 
 ## <a name="installation--setup"></a>Instalación y configuración
 

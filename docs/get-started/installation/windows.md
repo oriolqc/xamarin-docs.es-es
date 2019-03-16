@@ -6,12 +6,12 @@ ms.assetid: E20D4463-368E-4B60-A059-F50DB8C5552D
 author: conceptdev
 ms.author: crdun
 ms.date: 08/28/2018
-ms.openlocfilehash: d9f4717a4dd76e2fb3767c7baf9aaa868cfc21ff
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.openlocfilehash: 62a10ca57b867255766c02616ee41e57ac166af3
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57199821"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071052"
 ---
 # <a name="installing-xamarin-in-visual-studio-2017"></a>Instalación de Xamarin en Visual Studio 2017
 
@@ -29,7 +29,7 @@ En Visual Studio 2017, verifique que Xamarin está instalado; para ello, haga cl
 
 Puede hacer clic en **Ayuda > Acerca de Microsoft Visual Studio** y desplazarse por la lista de productos instalados para ver si Xamarin está instalado:
 
-![Pantalla de productos instalados de Visual Studio 2015](windows-images/13-xamarin-is-installed.png "Pantalla de productos instalados de Visual Studio 2015")
+![Pantalla de productos instalados de Visual Studio 2017](windows-images/13-xamarin-is-installed.png "pantalla de productos instalados de Visual Studio 2017")
 
 Para obtener más información sobre cómo encontrar la información de la versión, consulte [Where can I find my version information and logs?](~/cross-platform/troubleshooting/questions/version-logs.md) (¿Dónde puedo encontrar los registros y la información de la versión?).
 

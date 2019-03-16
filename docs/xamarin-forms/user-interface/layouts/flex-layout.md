@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
-ms.openlocfilehash: b37070ca627e535f9470916e9f84cdf55bb2aed3
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 7626c49b2267cbd087a16c310f1b85aea7139823
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056141"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57981736"
 ---
 # <a name="the-xamarinforms-flexlayout"></a>El Xamarin.Forms FlexLayout
 
@@ -393,7 +393,7 @@ Puede experimentar con las restantes propiedades enlazables con cinco el **exper
 
 Cuando el programa se inicia, cinco `Picker` vistas muestran los valores predeterminados de estos cinco `FlexLayout` propiedades. El `FlexLayout` hacia la parte inferior de la pantalla contiene tres elementos secundarios:
 
-[![La página del experimento: Valor predeterminado](flex-layout-images/ExperimentDefault.png "predeterminado de la página del experimento:")](flex-layout-images/ExperimentDefault-Large.png#lightbox)
+[![La página del experimento: Default](flex-layout-images/ExperimentDefault.png "predeterminado de la página del experimento:")](flex-layout-images/ExperimentDefault-Large.png#lightbox)
 
 Cada uno de los `Label` vistas tiene un fondo gris que muestra el espacio asignado a la que `Label` dentro de la `FlexLayout`. El fondo de la `FlexLayout` es blanco azulado. Ocupa el área de la parte inferior de la página, excepto un pequeño margen a la izquierda y derecha.
 
@@ -428,7 +428,7 @@ El [ `Wrap` ](xref:Xamarin.Forms.FlexLayout.Wrap) propiedad es de tipo [ `FlexWr
 
 De izquierda a derecha, se muestran estas pantallas el `NoWrap`, `Wrap` y `Reverse` opciones para elementos secundarios de 12:
 
-[![La página del experimento: Ajuste](flex-layout-images/ExperimentWrap.png "ajustar la página del experimento:")](flex-layout-images/ExperimentWrap-Large.png#lightbox)
+[![La página del experimento: Ajustar](flex-layout-images/ExperimentWrap.png "ajustar la página del experimento:")](flex-layout-images/ExperimentWrap-Large.png#lightbox)
 
 Cuando el `Wrap` propiedad está establecida en `NoWrap` está restringido el eje principal (como se muestra en este programa) y el eje principal no es amplia o lo suficientemente alto como para ajustarse a todos los elementos secundarios, el `FlexLayout` intenta realizar los elementos más pequeños, como la captura de pantalla de iOS se muestra. Puede controlar la shrinkness de los elementos de la [ `Shrink` ](#shrink) propiedad enlazable adjunta.
 
@@ -486,11 +486,11 @@ El [ `AlignContent` ](xref:Xamarin.Forms.FlexLayout.AlignContent) propiedad es d
 
 Al igual que `AlignItems`, el `AlignContent` propiedad también se alinea los elementos secundarios en el eje cruzado, pero afecta a todas las filas o columnas:
 
-[![La página del experimento: Alinear contenido](flex-layout-images/ExperimentAlignContent.png "la página del experimento: alinear el contenido")](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
+[![La página del experimento: Alinear el contenido](flex-layout-images/ExperimentAlignContent.png "la página del experimento: alinear el contenido")](flex-layout-images/ExperimentAlignContent-Large.png#lightbox)
 
 En la captura de pantalla de iOS, ambas filas están en la parte superior; en la captura de pantalla de Android que están en el centro; y en la captura de pantalla UWP que están en la parte inferior. También se pueden espaciadas las filas de varias maneras:
 
-[![La página del experimento: Alinear contenido 2](flex-layout-images/ExperimentAlignContent2.png "la página del experimento: alinear contenido 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
+[![La página del experimento:  Alinear contenido 2](flex-layout-images/ExperimentAlignContent2.png "la página del experimento: alinear contenido 2")](flex-layout-images/ExperimentAlignContent2-Large.png#lightbox)
 
 El `AlignContent` no tiene ningún efecto cuando hay solo una fila o columna.
 
@@ -517,13 +517,13 @@ Para cualquier elemento secundario individual de la `FlexLayout`, esta configura
 Para un `Label` elemento denominado `label` (o ejemplo), puede establecer el `AlignSelf` propiedad en el código similar al siguiente:
 
 ```csharp
-FlexAlign.SetAlignSelf(label, FlexAlignSelf.Center);
+FlexLayout.SetAlignSelf(label, FlexAlignSelf.Center);
 ```
 
 Tenga en cuenta que no hay ninguna referencia a la `FlexLayout` primario de la `Label`. En XAML, establezca la propiedad similar al siguiente:
 
 ```xaml
-<Label ... FlexAlign.AlignSelf="Center" ... />
+<Label ... FlexLayout.AlignSelf="Center" ... />
 ```
 
 ### <a name="the-order-property"></a>La propiedad Order
@@ -580,7 +580,7 @@ El **base experimentar** página de la **[FlexLayoutDemos](https://developer.xam
 
 [![La base de experimentar página](flex-layout-images/BasisExperiment.png "base experimentar página")](flex-layout-images/BasisExperiment-Large.png#lightbox)
 
-La captura de pantalla de iOS a la izquierda muestra los dos `Label` elementos determinados altos en unidades independientes del dispositivo. Muestra la pantalla Android determinado altos que suponen una fracción de la altura total del `FlexLayout`. Si el `Basis` se establece en 100%, entonces el elemento secundario es el alto de la `FlexLayout`y se ajustan a la columna siguiente y ocupar el alto de esa columna, como se muestra en la captura de pantalla UWP: parece como si los elementos cinco secundarios se organizan en una fila , pero en realidad están ordenados en cinco columnas.
+La captura de pantalla de iOS a la izquierda muestra los dos `Label` elementos determinados altos en unidades independientes del dispositivo. Muestra la pantalla Android determinado altos que suponen una fracción de la altura total del `FlexLayout`. Si el `Basis` se establece en 100%, entonces el elemento secundario es el alto de la `FlexLayout`y se ajustan a la columna siguiente y ocupar el alto de esa columna, como se muestra en la captura de pantalla UWP: Parece como si los elementos cinco secundarios se organizan en una fila, pero en realidad están ordenados en cinco columnas.
 
 ### <a name="the-grow-property"></a>La propiedad de crecimiento
 
