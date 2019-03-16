@@ -20,7 +20,7 @@ Un guión gráfico se puede crear, abrir y editar con el Diseñador de iOS de Xa
 
 ## <a name="requirements"></a>Requisitos
 
-Los guiones gráficos se pueden usar con iOS Designer en Visual Studio para Mac o Visual Studio 2015 y 2017 con las cargas de trabajo de Xamarin instalados.
+Los guiones gráficos se pueden usar con iOS Designer en Visual Studio para Mac o con Visual Studio 2017 con las cargas de trabajo de Xamarin instalados.
 
 ## <a name="what-is-a-storyboard"></a>¿Qué es un guión gráfico?
 
