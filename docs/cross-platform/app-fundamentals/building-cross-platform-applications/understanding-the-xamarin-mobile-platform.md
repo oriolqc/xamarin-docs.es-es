@@ -6,12 +6,12 @@ ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 2765ab0c697d977eb332e47cfbc413e3e0adafb7
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7ac8df634c4abe3aafa725992c251f9ef879dc00
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668821"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58070987"
 ---
 # <a name="part-1--understanding-the-xamarin-mobile-platform"></a>Parte 1: descripción de la plataforma móvil en Xamarin
 
@@ -105,7 +105,7 @@ Hacer referencia a la [Guía de instalación de Xamarin.iOS](~/ios/get-started/i
 Desarrollo de aplicaciones Android requiere Java y Android SDK se deben instalarse. Proporcionan el compilador, el emulador y otras herramientas necesarias para la creación, implementación y prueba. Herramientas de Java, SDK de Android y Xamarin de Google todos se pueden instalar y ejecutar en las siguientes configuraciones:
 
 -  Mac OS X El capitán y versiones posteriores (10.11 y versiones posteriores) con Visual Studio para Mac
--  Windows 7 & arriba con Visual Studio 2015 o 2017
+-  Windows 7 & arriba con Visual Studio 2017 o posterior
 
 
 Xamarin ofrece a un instalador unificado que configura el sistema con el requisito previo de Java, herramientas de Xamarin y Android (incluido un diseñador visual para los diseños de pantalla). Hacer referencia a la [Guía de instalación de Xamarin.Android](~/android/get-started/installation/index.md) para obtener instrucciones detalladas.

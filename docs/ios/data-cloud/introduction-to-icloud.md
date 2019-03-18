@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: 68375dfc5b7baa4726739d40eb77c1fcb7500fb4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 56456372b13dad5b5040c0c466f2efdf6ecdbc2a
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668886"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071026"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Uso de iCloud con Xamarin.iOS
 
@@ -37,7 +37,7 @@ Este documento describen los dos primeros tipos (pares clave-valor y UIDocument 
 
 - La última versión estable de Xamarin.iOS
 - Xcode 8 o posterior
-- Visual Studio para Mac o Visual Studio 2015 y versiones más reciente.
+- Visual Studio para Mac o Visual Studio 2017 y versiones más reciente.
 
 ## <a name="preparing-for-icloud-development"></a>Preparación para el desarrollo de iCloud
 
