@@ -5,12 +5,12 @@ ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: 0f44f179588c564ac9fa46d42ec18de6d303e239
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: bc08554f0060ca5de8d7ffc90ea5c65463b93f3b
+ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898984"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972603"
 ---
 # <a name="xamarinessentials-geocoding"></a>Xamarin.Essentials: Codificación geográfica
 
@@ -76,7 +76,9 @@ catch (Exception ex)
 
 La altitud no siempre está disponible. Si no lo está, es posible que la propiedad `Altitude` sea `null` o que el valor sea cero. Si lo está, el valor se expresa en metros sobre el nivel del mar.
 
-Obtención de [marcas de posición](xref:Xamarin.Essentials.Placemark) para un conjunto de coordenadas existente:
+## <a name="using-reverse-geocoding"></a>Uso la geocodificación inversa
+
+La geocodificación inversa es el proceso de obtener [marcas de posición](xref:Xamarin.Essentials.Placemark) para un conjunto de coordenadas existente:
 
 ```csharp
 try
@@ -116,7 +118,7 @@ catch (Exception ex)
 
 ## <a name="distance-between-two-locations"></a>Distancia entre dos ubicaciones
 
-Las clases [`Location`](xref:Xamarin.Essentials.Location) y [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) definen métodos para calcular la distancia entre dos ubicaciones. Vea el artículo [**Xamarin.Essentials: Geolocation**](geolocation.md#calculate-distance) para obtener un ejemplo.
+Las clases [`Location`](xref:Xamarin.Essentials.Location) y [`LocationExtensions`](xref:Xamarin.Essentials.LocationExtensions) definen métodos para calcular la distancia entre dos ubicaciones. Consulte el artículo [**Xamarin.Essentials: Geolocalización**](geolocation.md#calculate-distance) para ver un ejemplo.
 
 ## <a name="api"></a>API
 
