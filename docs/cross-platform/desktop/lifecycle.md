@@ -1,22 +1,22 @@
 ---
 ms.assetid: 7C132A7C-4973-4B2D-98DC-3661C08EA33F
-title: Frente a WPF Ciclo de vida de aplicación de Xamarin.Forms
+title: Frente a WPF Ciclo de vida de aplicaciones de Xamarin.Forms
 description: Este documento compara las similitudes y diferencias entre el ciclo de vida de aplicación para aplicaciones de Xamarin.Forms y WPF. Además, observa el árbol visual, gráficos, recursos y estilos.
 author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
-ms.openlocfilehash: 653e2f849a74948d3636f594eae91cdeabfae138
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 5f157f2bbf36076e542a5f96b912cb1788a99052
+ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526798"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58175231"
 ---
-# <a name="wpf-vs-xamarinforms-app-lifecycle"></a>Frente a WPF Ciclo de vida de aplicación de Xamarin.Forms
+# <a name="wpf-vs-xamarinforms-app-lifecycle"></a>Frente a WPF Ciclo de vida de aplicaciones de Xamarin.Forms
 
 Xamarin.Forms tiene muchas instrucciones de diseño de los marcos de XAML que se incluían antes, especialmente en WPF. Sin embargo, de otras maneras se desvían mucho que puede ser un punto rápido para intentar migrar a través de las personas. Este documento intenta identificar algunos de esos problemas y proporcionar orientación siempre que sea posible al puente de conocimiento WPF a Xamarin.Forms.
 
-## <a name="app-lifecycle"></a>Ciclo de vida de aplicación
+## <a name="app-lifecycle"></a>Ciclo de vida de la aplicación
 
 El ciclo de vida de la aplicación entre WPF y Xamarin.Forms es similar. Ambos iniciar en el código externo (plataforma) e inicie la interfaz de usuario a través de una llamada al método. La diferencia es que Xamarin.Forms siempre se inicia en un ensamblado específico de la plataforma que, a continuación, inicializa y crea la interfaz de usuario de la aplicación.
 
@@ -137,7 +137,7 @@ Ambas plataformas usan _propiedades adjuntas_ para ajustar los elementos secunda
 
 ### <a name="rendering"></a>Representación
 
-La mecánica de la representación de WPF y Xamarin.Forms es radicalmente distinto. En WPF, los controles que cree directamente representan el contenido a los píxeles en la pantalla. WPF mantiene dos gráficos de objetos (_árboles_) para representar esto - la _árbol lógico_ representa los controles, tal como se define en el código o XAML y el _árbol visual_ representa el representación real que se produce en la pantalla que realiza directamente mediante el elemento visual (a través de un método virtual draw), o a través de definida en XAML `ControlTemplate` que puede reemplazar o personalizar. Normalmente, el árbol visual es más complejo ya que esto incluye, como los bordes alrededor de los controles, las etiquetas de contenido implícita, etcetera. WPF incluye un conjunto de API (`LogicalTreeHelper` y `VisualTreeHelper`) para examinar estos dos gráficos de objetos.
+La mecánica de la representación de WPF y Xamarin.Forms es radicalmente distinto. En WPF, los controles que cree directamente representan el contenido a los píxeles en la pantalla. WPF mantiene dos gráficos de objetos (_árboles_) para representar esto - la _árbol lógico_ representa los controles, tal como se define en el código o XAML y el _árbol visual_ representa el representación real que se produce en la pantalla que realiza directamente mediante el elemento visual (a través de un método virtual draw), o a través de definida en XAML `ControlTemplate` que puede reemplazar o personalizar. Normalmente, el árbol visual es más complejo, ya que incluye cosas como bordes alrededor de los controles, las etiquetas de contenido implícita, etcetera. WPF incluye un conjunto de API (`LogicalTreeHelper` y `VisualTreeHelper`) para examinar estos dos gráficos de objetos.
 
 En Xamarin.Forms, los controles se define en un `Page` son objetos de datos muy simples. Son similares a la representación de árbol lógico, pero nunca representar el contenido por sí solos. En su lugar, son el _modelo de datos_ que influye en la representación de elementos. El procesamiento real se realiza mediante un [separar el conjunto de _representadores visuales_ que se asignan a cada tipo de control](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). Estos representadores se registran en cada uno de los proyectos específicos de la plataforma por los ensamblados específicos de la plataforma de Xamarin.Forms. Puede ver una lista [aquí](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md). Además de reemplazar o ampliar el representador, Xamarin.Forms también tiene compatibilidad para [efectos](~/xamarin-forms/app-fundamentals/effects/index.md) que se puede usar para influir en la representación en forma de acuerdo con la plataforma nativa.
 
