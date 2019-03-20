@@ -153,8 +153,8 @@ Este escenario requiere la [precompilado bibliotecas](https://github.com/xamarin
 
 11. Desde **el Explorador de soluciones**, haga doble clic en el **MathFuncs.Standard** proyecto.
 12. Vaya a **configuración principal del**, a continuación, actualice **Default Namespace** a **MathFuncs**.
-13. Navegue hasta la **salida** configuración, a continuación, actualice **nombre del ensamblado** a **MathFuncs** , a continuación, haga clic en **Aceptar**.
-14. Navegue hasta la **compilador** cambie la configuración, el **configuración** a **versión**, estableciendo **información de depuración** a  **Solo símbolos**.
+13. Navegue hasta la **salida** configuración, a continuación, actualice **nombre del ensamblado** a **MathFuncs**.
+14. Navegue hasta la **compilador** cambie la configuración, el **configuración** a **versión**, estableciendo **información de depuración** a  **Solo símbolos** , a continuación, haga clic en **Aceptar**.
 15. Eliminar **Class1.cs/Getting iniciado** desde el proyecto (si uno de ellos se ha incluido como parte de la plantilla).
 16. **CONTROL + clic** en el proyecto **dependencias/referencias** carpeta, a continuación, elija **editar referencias**.
 17. Seleccione **MathFuncs.Shared** desde el **proyectos** y, después, haga clic en **Aceptar**.
