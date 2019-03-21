@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 13/11/2018
-ms.openlocfilehash: f5e3c5dbadeeb3cc1c019707ce7aa106e4946e36
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.date: 11/13/2018
+ms.openlocfilehash: da7d63f43a431d2a31428d28e81e8b6abfed838e
+ms.sourcegitcommit: 4c97f5d73be7eb2da153a85183be4258b6b11ca6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292017"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58288594"
 ---
 # <a name="xamarinforms-views"></a>Vistas de Xamarin.Forms
 
@@ -183,7 +183,7 @@ Estas dos clases se derivan de la [ `InputView` ](xref:Xamarin.Forms.InputView) 
 
 |     |     |
 | --- | --- |
-| [`ListView`](xref:Xamarin.Forms.ListView) se deriva de [ `ItemsView[Cell]` ](xref:Xamarin.Forms.ItemsView`1) y muestra una lista desplazable de elementos de datos seleccionable. Establecer el [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propiedad a una colección de objetos y establezca el [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) propiedad a un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) objeto que describe cómo los elementos son para tener el formato. El [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) eventos indica que se ha realizado una selección, que está disponible como la [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) propiedad.<br /><br />[Documentación de API](xref:Xamarin.Forms.ListView) / [guía](~/xamarin-forms/user-interface/listview/index.md) / [ejemplo](https://developer.xamarin.com/samples/WorkingWithListview) | [![Ejemplo de ListView](views-images/ListView.png "ejemplo de ListView")](views-images/ListView-Large.png#lightbox "ejemplo de ListView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
+| [`ListView`](xref:Xamarin.Forms.ListView) se deriva de [ `ItemsView[Cell]` ](xref:Xamarin.Forms.ItemsView`1) y muestra una lista desplazable de elementos de datos seleccionable. Establecer el [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propiedad a una colección de objetos y establezca el [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) propiedad a un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) objeto que describe cómo los elementos son para tener el formato. El [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) eventos indica que se ha realizado una selección, que está disponible como la [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) propiedad.<br /><br />[Documentación de API](xref:Xamarin.Forms.ListView) / [guía](~/xamarin-forms/user-interface/listview/index.md) / [ejemplo](https://developer.xamarin.com/samples/WorkingWithListview) | [![ejemplo de ListView](views-images/ListView.png "Ejemplo de ListView")](views-images/ListView-Large.png#lightbox "ejemplo de ListView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
 |     |     |
 
 <a name="tableView" />
