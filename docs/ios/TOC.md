@@ -154,6 +154,7 @@
 ### [Extensiones de iOS](platform/extensions.md)
 ### [Plataformas admitidas](platform/embedded-frameworks.md)
 ### [Serialización de excepciones](platform/exception-marshaling.md)
+### [Compresión de archivos](platform/file-compression.md)
 ### [Gráficos y animación en iOS](platform/graphics-animation-ios/index.md)
 #### [CoreImage](platform/graphics-animation-ios/introduction-to-coreimage.md)
 #### [Gráficos básicos](platform/graphics-animation-ios/core-graphics.md)
