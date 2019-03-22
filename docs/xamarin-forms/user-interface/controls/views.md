@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/13/2018
-ms.openlocfilehash: da7d63f43a431d2a31428d28e81e8b6abfed838e
-ms.sourcegitcommit: 4c97f5d73be7eb2da153a85183be4258b6b11ca6
+ms.date: 03/21/2019
+ms.openlocfilehash: e165e6c713028517d69fee92916c94bbf0e46f33
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58288594"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329240"
 ---
 # <a name="xamarinforms-views"></a>Vistas de Xamarin.Forms
 
@@ -170,11 +170,11 @@ Estas dos clases se derivan de la [ `InputView` ](xref:Xamarin.Forms.InputView) 
 
 ## <a name="views-that-display-collections"></a>Vistas que muestran colecciones
 
-### <a name="picker"></a>Selector
+### <a name="collectionview"></a>CollectionView
 
 |     |     |
 | --- | --- |
-| [`Picker`](xref:Xamarin.Forms.Picker) muestra un elemento seleccionado de una lista de cadenas de texto y permite al seleccionar este elemento cuando se pulsa la vista. Establecer el [ `Items` ](xref:Xamarin.Forms.Picker.Items) propiedad a una lista de cadenas, o la [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) propiedad a una colección de objetos. El [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) evento se desencadena cuando se selecciona un elemento.<br /><br />La `Picker` muestra la lista de elementos solo cuando está seleccionado. Use un [ `ListView` ](#listView) o [ `TableView` ](#tableView) para obtener una lista desplazable que permanece en la página.<br /><br />[Documentación de API](xref:Xamarin.Forms.Picker) / [guía](~/xamarin-forms/user-interface/picker/index.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/) | [![Ejemplo de selector](views-images/Picker.png "ejemplo selector")](views-images/Picker-Large.png#lightbox "ejemplo selector")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PickerDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml.cs) |
+| `CollectionView` muestra una lista desplazable de elementos de datos seleccionable, utilizando las especificaciones de diseño diferente. Su objetivo es proporcionar una forma más flexible y una alternativa de alto rendimiento [ `ListView` ](xref:Xamarin.Forms.ListView). Establecer el `ItemsSource` propiedad a una colección de objetos y conjunto el `ItemTemplate` propiedad a un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) objeto que describe cómo los elementos son para dar formato. El `SelectionChanged` eventos indica que se ha realizado una selección, que está disponible como la `SelectedItem` propiedad.<br /><br />[Guía de](~/xamarin-forms/user-interface/collectionview/index.md) / [ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/) | [![Ejemplo de CollectionView](views-images/CollectionView.png "ejemplo CollectionView")](views-images/CollectionView-Large.png#lightbox "ejemplo CollectionView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/forms40/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
 |     |     |
 
 <a name="listView" />
@@ -184,6 +184,13 @@ Estas dos clases se derivan de la [ `InputView` ](xref:Xamarin.Forms.InputView) 
 |     |     |
 | --- | --- |
 | [`ListView`](xref:Xamarin.Forms.ListView) se deriva de [ `ItemsView[Cell]` ](xref:Xamarin.Forms.ItemsView`1) y muestra una lista desplazable de elementos de datos seleccionable. Establecer el [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView`1.ItemsSource) propiedad a una colección de objetos y establezca el [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) propiedad a un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) objeto que describe cómo los elementos son para tener el formato. El [ `ItemSelected` ](xref:Xamarin.Forms.ListView.ItemSelected) eventos indica que se ha realizado una selección, que está disponible como la [ `SelectedItem` ](xref:Xamarin.Forms.ListView.SelectedItem) propiedad.<br /><br />[Documentación de API](xref:Xamarin.Forms.ListView) / [guía](~/xamarin-forms/user-interface/listview/index.md) / [ejemplo](https://developer.xamarin.com/samples/WorkingWithListview) | [![ejemplo de ListView](views-images/ListView.png "Ejemplo de ListView")](views-images/ListView-Large.png#lightbox "ejemplo de ListView")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ListViewDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ListViewDemoPage.xaml) |
+|     |     |
+
+### <a name="picker"></a>Selector
+
+|     |     |
+| --- | --- |
+| [`Picker`](xref:Xamarin.Forms.Picker) muestra un elemento seleccionado de una lista de cadenas de texto y permite al seleccionar este elemento cuando se pulsa la vista. Establecer el [ `Items` ](xref:Xamarin.Forms.Picker.Items) propiedad a una lista de cadenas, o la [ `ItemsSource` ](xref:Xamarin.Forms.Picker.ItemsSource) propiedad a una colección de objetos. El [ `SelectedIndexChanged` ](xref:Xamarin.Forms.Picker.SelectedIndexChanged) evento se desencadena cuando se selecciona un elemento.<br /><br />La `Picker` muestra la lista de elementos solo cuando está seleccionado. Use un [ `ListView` ](#listView) o [ `TableView` ](#tableView) para obtener una lista desplazable que permanece en la página.<br /><br />[Documentación de API](xref:Xamarin.Forms.Picker) / [guía](~/xamarin-forms/user-interface/picker/index.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/) | [![Ejemplo de selector](views-images/Picker.png "ejemplo selector")](views-images/Picker-Large.png#lightbox "ejemplo selector")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PickerDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml) con [código subyacente](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml.cs) |
 |     |     |
 
 <a name="tableView" />
