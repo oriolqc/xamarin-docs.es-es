@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2017
-ms.openlocfilehash: 42889e3805391e9e586cda61d26103398ba16269
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: 9a40644df6abcbbcc327b1b0c2dcb26c2dbc4db5
+ms.sourcegitcommit: 247a6d00a95fd7f4cf918d923e5f357c8db56761
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898529"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58420215"
 ---
 # <a name="xamarinforms-fast-renderers"></a>Representadores rápidos de Xamarin.Forms
 
 ![Vista previa](~/media/shared/preview.png)
 
-_Este artículo presentan a los representadores rápidos, que reducen la inflación y los costos de representación de un control de Xamarin.Forms en Android mediante la reducción de la jerarquía de control nativo resultante._
+_Este artículo presentan a representadores rápidos (agregados en Xamarin.Forms 2.4), que reducen la inflación y los costos de representación de un control de Xamarin.Forms en Android mediante la reducción de la jerarquía de control nativo resultante._
 
 Tradicionalmente, la mayoría de los representadores de control original en Android se compone de dos vistas:
 
