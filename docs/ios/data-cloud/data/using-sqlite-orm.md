@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/18/2018
-ms.openlocfilehash: e78c224bae3a0e2c2dfcfded30a4bf2c4794e255
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 370867b52ec09d0c3ad0f801b6a75c356d806734
+ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112018"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477400"
 ---
 # <a name="using-sqlitenet-with-xamarinios"></a>Uso de SQLite.NET con Xamarin.iOS
 
@@ -28,7 +28,7 @@ Para incluir la biblioteca de SQLite.NET en una aplicación de Xamarin, agregue 
 - **Nombre del paquete:** sqlite-net-pcl
 - **Autor:** Frank A. Krueger
 - **Id.:** sqlite-net-pcl
-- **Dirección URL:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **Url:** [nuget.org/packages/sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 [![Paquete SQLite.NET NuGet](using-sqlite-orm-images/image1a-sml.png "paquete SQLite.NET NuGet")](using-sqlite-orm-images/image1a.png#lightbox)
 
@@ -196,11 +196,13 @@ Puede comprobar el `rowcount` para confirmar el número de filas afectado (elimi
 
 ## <a name="using-sqlitenet-with-multiple-threads"></a>Uso de SQLite.NET con varios subprocesos
 
-SQLite es compatible con tres modos diferentes de subprocesamiento: *único subproceso*, *multiproceso*, y *Serialized*. Si desea tener acceso a la base de datos desde varios subprocesos sin restricciones, puede configurar SQLite para usar el **Serialized** el modo de subprocesamiento. Es importante establecer este modo al principio de la aplicación (por ejemplo, al principio de la `OnCreate` método).
+SQLite es compatible con tres modos diferentes de subprocesos: *Subproceso único*, *multiproceso*, y *serializa*. Si desea tener acceso a la base de datos desde varios subprocesos sin restricciones, puede configurar SQLite para usar el **Serialized** el modo de subprocesamiento. Es importante establecer este modo al principio de la aplicación (por ejemplo, al principio de la `OnCreate` método).
 
-Para cambiar el modo de subprocesamiento, llame a `SqliteConnection.SetConfig`. Por ejemplo, esta línea de código configura SQLite para **Serialized** modo:
+Para cambiar el modo de subprocesamiento, llame a `SqliteConnection.SetConfig` que se encuentra en la `Mono.Data.Sqlite` espacio de nombres. Por ejemplo, esta línea de código configura SQLite para **Serialized** modo:
 
 ```csharp
+using Mono.Data.Sqlite;
+...
 SqliteConnection.SetConfig(SQLiteConfig.Serialized);
 ```
 
