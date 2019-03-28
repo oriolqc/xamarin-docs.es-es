@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/15/2019
-ms.openlocfilehash: 70b241944376782ec4c9446878ee2a19dcee2bbd
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 57012202d981b96dba42f3017a19f2e32e4982ec
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58330034"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507193"
 ---
 # <a name="populate-xamarinforms-collectionview-with-data"></a>Rellenar Xamarin.Forms CollectionView con datos
 
@@ -76,7 +76,7 @@ De forma predeterminada, `CollectionView` muestra elementos en una lista vertica
 
 [![Captura de pantalla de CollectionView que contiene los elementos de texto, en iOS y Android](populate-data-images/text.png "elementos de texto en una colección mediante CollectionView")](populate-data-images/text-large.png#lightbox "elementos de texto en una colección mediante CollectionView")
 
-Para obtener información sobre cómo cambiar la `CollectionView` diseño, vea [especificar un diseño](layout.md). Para obtener información sobre cómo definir la apariencia de cada elemento en el `CollectionView`, consulte [definen la apariencia del elemento de lista](#define-list-item-appearance).
+Para obtener información sobre cómo cambiar la `CollectionView` diseño, vea [especificar un diseño](layout.md). Para obtener información sobre cómo definir la apariencia de cada elemento en el `CollectionView`, consulte [definen la apariencia del elemento](#define-item-appearance).
 
 ### <a name="data-binding"></a>Enlace de datos
 

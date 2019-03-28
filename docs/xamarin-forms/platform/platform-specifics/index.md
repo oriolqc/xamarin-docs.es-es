@@ -1,19 +1,14 @@
 ---
 title: Funcionalidades específicas de plataforma
-description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo utilizar y crear funcionalidades específicas de plataforma.
+description: 'Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo utilizar y crear funcionalidades específicas de plataforma.'
 ms.prod: xamarin
 ms.assetid: 4729DB9C-8800-4E29-9D66-3BE13C5F8C94
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 44d0cf3a257c00b448a6c70064af2f8e3ba63f69
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207796"
 ---
+
 # <a name="platform-specifics"></a>Funcionalidades específicas de plataforma
 
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
@@ -43,10 +38,10 @@ Los fabricantes pueden crear sus propias funcionalidades específicas de platafo
 El proceso de creación de una plataforma específica es como sigue:
 
 1. Implementar la funcionalidad específica como un efecto. Para obtener más información, consulte [crea un efecto](~/xamarin-forms/app-fundamentals/effects/creating.md).
-1. Cree una clase específica de la plataforma que se va a exponer el efecto. Para obtener más información, consulte [creación de una clase específica de la plataforma](#creating).
-1. En la clase específica de la plataforma, implemente una propiedad adjunta para permitir el específico de la plataforma para consumirse a través de XAML. Para obtener más información, consulte [agregar una propiedad adjunta](#attached_property).
-1. En la clase específica de la plataforma, implemente los métodos de extensión para permitir el específico de la plataforma para consumirse a través de una API fluida de código. Para obtener más información, consulte [agregar métodos de extensión](#extension_methods).
-1. Modifique la implementación de efecto para que el efecto se aplica solo si se ha invocado el específico de la plataforma en la misma plataforma que el efecto. Para obtener más información, consulte [crea el efecto de](#creating_the_effect).
+1. Cree una clase específica de la plataforma que se va a exponer el efecto. Para obtener más información, consulte [creación de una clase específica de la plataforma](#creating-a-platform-specific-class).
+1. En la clase específica de la plataforma, implemente una propiedad adjunta para permitir el específico de la plataforma para consumirse a través de XAML. Para obtener más información, consulte [agregar una propiedad adjunta](#adding-an-attached-property).
+1. En la clase específica de la plataforma, implemente los métodos de extensión para permitir el específico de la plataforma para consumirse a través de una API fluida de código. Para obtener más información, consulte [agregar métodos de extensión](#adding-extension-methods).
+1. Modifique la implementación de efecto para que el efecto se aplica solo si se ha invocado el específico de la plataforma en la misma plataforma que el efecto. Para obtener más información, consulte [crea el efecto de](#creating-the-effect).
 
 El resultado de exponer un efecto como una plataforma específica es que el efecto se puede consumir más fácilmente a través de XAML y una API fluida de código.
 

@@ -1,18 +1,18 @@
 ---
 title: Crear a un representador Xamarin.Forms Visual
-description: Xamarin.Forms Visual permite que los representadores de forma selectiva se aplique a objetos VisualElement, sin tener que las vistas de Xamarin.Forms subclase.
+description: Crear objetos visuales de Xamarin.Forms para aplicarse de manera selectiva a los objetos VisualElement, sin tener que las vistas de Xamarin.Forms subclase.
 ms.prod: xamarin
 ms.assetid: 80BF9C72-AC28-4AAF-9DDD-B60CBDD1CD59
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: 1bd56d09932c97508dd0a05fbc0eb2bad3af3f0e
-ms.sourcegitcommit: 97dca3face7c4ad5555dfaca88f5b45a70ca556d
+ms.openlocfilehash: a11c2045fa6119d0689834c35794bc8913c80bd6
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972590"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58506972"
 ---
 # <a name="create-a-xamarinforms-visual-renderer"></a>Crear a un representador Xamarin.Forms Visual
 
@@ -25,7 +25,7 @@ Xamarin.Forms Visual permite crear y aplicar de forma selectiva a los representa
 
 El proceso para crear y consumir a un representador Xamarin.Forms Visual es:
 
-1. Cree a los representadores de plataforma para la vista necesaria. Para obtener más información, consulte [crear representadores](#create-platfomr-renderers).
+1. Cree a los representadores de plataforma para la vista necesaria. Para obtener más información, consulte [crear representadores](#create-platform-renderers).
 1. Crear un tipo que se deriva de `IVisual`. Para obtener más información, consulte [crear un tipo IVisual](#create-an-ivisual-type).
 1. Registrar el `IVisual` tipo como parte de la `ExportRendererAttribute` que decora los representadores. Para obtener más información, consulte [registrar el tipo IVisual](#register-the-ivisual-type).
 1. Usar el representador Visual estableciendo el [ `Visual` ](xref:Xamarin.Forms.VisualElement.Visual) propiedad en la vista para el `IVisual` nombre. Para obtener más información, consulte [consumir el representador Visual](#consume-the-visual-renderer).
