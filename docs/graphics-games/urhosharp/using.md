@@ -6,12 +6,12 @@ ms.assetid: D9BEAD83-1D9E-41C3-AD4B-3D87E13674A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 7d07733ebf62e6e12ccee05f9b72eaf1a74afad2
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.openlocfilehash: 5e5c4f1545d39befde6574338ec4c1ca4037ad8b
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "34784044"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58507167"
 ---
 # <a name="using-urhosharp-to-build-a-3d-game"></a>Uso de UrhoSharp para crear un juego 3D
 
@@ -23,7 +23,7 @@ Antes de escribir su primer juego, desea Familiarícese con los conceptos básic
 
 El modelo de la escena se puede describir como un gráfico de escena basadas en componentes. La escena consta de una jerarquía de nodos de la escena, comenzando desde el nodo raíz, que también representa toda la escena. Cada [ `Node` ](https://developer.xamarin.com/api/type/Urho.Node/) tiene una transformación 3D (posición, rotación y escala), un nombre, un identificador, además de un número arbitrario de componentes.  Los componentes que un nodo cobren vida, hacen, puede agregar una representación visual ([`StaticModel`](https://developer.xamarin.com/api/type/Urho.StaticModel)), pueden emitir sonido ([`SoundSource`](https://developer.xamarin.com/api/type/Urho.Audio.SoundSource)), pueden proporcionar un límite de colisiones y así sucesivamente.
 
-Puede crear escenas y nodos de programa de instalación mediante la [Urho Editor](#UrhoEditor), o puede hacer cosas desde el código de C#.  En este documento se analiza el proceso configuración mediante código, tal como muestran los elementos necesarios para obtener las cosas se muestre en la pantalla
+Puede crear escenas y nodos de programa de instalación mediante la [Urho Editor](#urhoeditor), o puede hacer cosas desde el código de C#.  En este documento se analiza el proceso configuración mediante código, tal como muestran los elementos necesarios para obtener las cosas se muestre en la pantalla
 
 Además de configurar la escena, tienes que configurar un [ `Camera` ](https://developer.xamarin.com/api/type/Urho.Camera/), esto es lo que determina qué obtener mostrará al usuario.
 
