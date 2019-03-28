@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: 32d0775baa75b70ebc118457945efc0f6c0acec2
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: c84995e210d61e735d12a089f40bf9afa720acb5
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057066"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329291"
 ---
 # <a name="xamarinforms-modal-pages"></a>Páginas modales de Xamarin.Forms
 
@@ -39,9 +39,9 @@ Para volver a la página anterior, la aplicación mostrará la página actual de
 
 ## <a name="performing-navigation"></a>Realizar la navegación
 
-Los métodos de navegación modal se exponen mediante la propiedad [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) en cualquier tipo [`Page`](xref:Xamarin.Forms.Page) derivado. Estos métodos proporcionan la capacidad de [insertar páginas modales](#Pushing_Pages_to_the_Modal_Stack) en la pila modal, y [sacar páginas modales](#Popping_Pages_from_the_Modal_Stack) de la pila modal.
+Los métodos de navegación modal se exponen mediante la propiedad [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) en cualquier tipo [`Page`](xref:Xamarin.Forms.Page) derivado. Estos métodos proporcionan la capacidad de [insertar páginas modales](#Pushing_Pages_to_the_Modal_Stack) en la pila modal, y [sacar páginas modales](#Popping_Pages_from_the_Modal_Stack) de la pila modal.
 
-La propiedad [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) también expone una propiedad [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) desde la que se pueden obtener las páginas modales de la pila modal. Pero no existe el concepto de realizar una manipulación de pila modal o extraer la página raíz de la navegación modal. Esto se debe a que estas operaciones no se admiten de forma universal en las plataformas subyacentes.
+La propiedad [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) también expone una propiedad [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) desde la que se pueden obtener las páginas modales de la pila modal. Pero no existe el concepto de realizar una manipulación de pila modal o extraer la página raíz de la navegación modal. Esto se debe a que estas operaciones no se admiten de forma universal en las plataformas subyacentes.
 
 > [!NOTE]
 > No es necesaria una instancia de [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) para realizar la navegación de páginas modal.
@@ -50,7 +50,7 @@ La propiedad [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) tambié
 
 ### <a name="pushing-pages-to-the-modal-stack"></a>Inserción de páginas en la pila modal
 
-Para navegar a `ModalPage`, es necesario invocar el método [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) en la propiedad [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) de la página actual, como se muestra en el ejemplo de código siguiente:
+Para navegar a `ModalPage`, es necesario invocar el método [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) en la propiedad [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) de la página actual, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
@@ -107,7 +107,7 @@ En Android, el usuario siempre puede volver a la página anterior presionando el
 
 ### <a name="animating-page-transitions"></a>Animación de transiciones de página
 
-La propiedad [`Navigation`](xref:Xamarin.Forms.VisualElement.Navigation) de cada página también proporciona métodos de inserción y extracción invalidados que incluyen un parámetro `boolean` que controla si se debe mostrar una animación de página durante la navegación, como se muestra en el ejemplo de código siguiente:
+La propiedad [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) de cada página también proporciona métodos de inserción y extracción invalidados que incluyen un parámetro `boolean` que controla si se debe mostrar una animación de página durante la navegación, como se muestra en el ejemplo de código siguiente:
 
 ```csharp
 async void OnNextPageButtonClicked (object sender, EventArgs e)

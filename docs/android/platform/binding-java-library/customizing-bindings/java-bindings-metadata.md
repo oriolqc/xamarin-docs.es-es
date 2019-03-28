@@ -276,8 +276,7 @@ Un caso de uso especializado `propertyName` implica la situación donde una clas
 
 Tenga en cuenta que los métodos establecedor y captador se seguirá creando el generador de enlaces.
 
-### <a name="sender"></a>
-  sender
+### <a name="sender"></a>sender
 
 Especifica que el parámetro de un método debe ser el `sender` parámetro cuando el método se asigna a un evento. El valor puede ser `true` o `false`. Por ejemplo:
 
