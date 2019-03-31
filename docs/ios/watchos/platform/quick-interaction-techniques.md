@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 6a8e74860efd606ae6dd565ea7e3f67884eefc11
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 5086724b565fb95274c4988ca1b6e4bb11064575
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103223"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677942"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interacción rápida para watchOS 3 en Xamarin
 
@@ -299,7 +299,7 @@ Además, se pueden mezclar SpriteKit y SceneKit con elementos estándar de Watch
 
 ## <a name="simple-navigation"></a>Navegación simple
 
-watchOS 3 presenta varias maneras de que un desarrollador puede simplificar la navegación en sus aplicaciones para watchOS, como el nuevo [paginación Vertical](#Vertical-Paging), [compatibilidad del reconocedor de gestos](#Gesture-Recognizer-Support) y [corona Digital Rotación](#Digital-Crown-Rotation) características presentan más arriba.
+watchOS 3 presenta varias maneras de que un desarrollador puede simplificar la navegación en sus aplicaciones para watchOS, como el nuevo [paginación Vertical](#vertical-paging), [compatibilidad del reconocedor de gestos](#gesture-recognizer-support) y [corona Digital Rotación](#digital-crown-rotation) características presentan más arriba.
 
 La corona Digital es única para el Apple Watch y se puede usar de muchas maneras diferentes para simplificar la navegación. Por ejemplo, una aplicación de temporizador puede utilizar la corona Digital para eliminar los datos a través de las longitudes de temporizador disponibles.
 

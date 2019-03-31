@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: d04ce6827f6695163c7d9a8d34acc3891d854c8d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6d5be72a9329675a65b0d6873d13894b314b50e7
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122678"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677851"
 ---
 # <a name="stack-views-in-xamarinios"></a>Vistas de la pila de Xamarin.iOS
 
@@ -233,7 +233,7 @@ Hay varias propiedades que controlan cómo organizará una vista de pila a su co
 - **Línea base relativa** : si `true`, el espaciado vertical de cada vista secundaria se deriva de su línea base.
 - **Diseño márgenes relativa** : coloca las subvistas respecto a los márgenes de diseño estándar.
 
-Normalmente, usará una vista de pila para organizar un pequeño número de subvistas. Interfaces de usuario más complejas se pueden crear mediante el anidamiento de una o varias vistas de pila dentro de otros (como hicimos en el [UIStackView Quickstart](#UIStackView-Quickstart) anteriormente).
+Normalmente, usará una vista de pila para organizar un pequeño número de subvistas. Interfaces de usuario más complejas se pueden crear mediante el anidamiento de una o varias vistas de pila dentro de otros (como hicimos en el [UIStackView Quickstart](#uistackview-quickstart) anteriormente).
 
 Puede ajustar aún más la apariencia de las interfaces de usuario agregando restricciones adicionales a las subvistas (por ejemplo, al control el alto o ancho). Sin embargo, debe tener cuidado para que no incluya restricciones en conflicto para los introducidos por la vista de pila propio.
 

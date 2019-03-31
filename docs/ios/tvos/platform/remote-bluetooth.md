@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 14c62051afd7489389f154c21b3a76b9aad3f32e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 79022f7a454ea423fa3112a4c4ade2bcd471fbb8
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115541"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677955"
 ---
 # <a name="siri-remote-and-bluetooth-controllers-for-tvos-in-xamarin"></a>Siri Remote y Bluetooth controladores para tvOS en Xamarin
 
@@ -32,13 +32,13 @@ La principal manera que interactúa con Apple TV y la aplicación Xamarin.tvOS, 
 
 El desafío como desarrollador de la aplicación de tvOS es la interfaz de usuario rápida, fácil de usar y visualmente atractivo que aprovecha la superficie de interacción de Siri Remote, acelerómetro, giroscopio y botones de crear.
 
-[![](remote-bluetooth-images/remote01.png "El control remoto de Siri")](remote-bluetooth-images/remote01.png#lightbox)
+[![](remote-bluetooth-images/remote01.png "The Siri Remote")](remote-bluetooth-images/remote01.png#lightbox)
 
 El control remoto de Siri tiene las siguientes características y usos previstos dentro de la aplicación tvOS:
 
 |Característica|Uso de la aplicación general|Uso de las aplicaciones de juegos|
 |---|---|---|
-|**Superficie de interacción**<br />Deslice el dedo para navegar, presione para seleccionar y se mantiene en los menús contextuales.|**Deslice el dedo o derivación**<br />Navegación de la interfaz de usuario entre los elementos de recibir el foco.<br /><br />**Haga clic en**<br />Activa el elemento (enfocado) seleccionado.|**Deslice el dedo o derivación**<br />Depende de diseño de juegos y puede usarse como un panel D pulsando en los bordes.<br /><br />**Haga clic en**<br />Ejecutar la función del botón primario.|
+|**Superficie de interacción**<br />Deslice el dedo para navegar, presione para seleccionar y se mantiene en los menús contextuales.|**Tap/Swipe**<br />Navegación de la interfaz de usuario entre los elementos de recibir el foco.<br /><br />**Haga clic en**<br />Activa el elemento (enfocado) seleccionado.|**Tap/Swipe**<br />Depende de diseño de juegos y puede usarse como un panel D pulsando en los bordes.<br /><br />**Haga clic en**<br />Ejecutar la función del botón primario.|
 |**Menu**<br />Presione para volver a la pantalla anterior o el menú.|Devuelve a la pantalla anterior y se cierra como Apple TV Home screen en la pantalla de la aplicación principal.|Pausar y reanudar el juego, vuelve a la pantalla anterior y se cierra como Apple TV Home screen en la pantalla de la aplicación principal.|
 |**Siri/Search**<br />En países con Siri, mantenga presionado para el control de voz, en todos los demás países, muestra la pantalla de búsqueda.|N/D|N/D|
 |**Reproducir/pausa**<br />Reproducir y pausar multimedia o proporciona una función secundaria en las aplicaciones.|Inicia la reproducción de medios y pausar y reanudar la reproducción.|Realiza la función del botón secundario o se omite el vídeo de introducción (si existe).|
@@ -51,7 +51,7 @@ El control remoto de Siri tiene las siguientes características y usos previstos
 
 Superficie de interacción de Siri Remote es capaz de detectar una variedad de movimientos con un solo dedo que se pueden responder en la aplicación Xamarin.tvOS:
 
-|Deslice el dedo|Clic|Pulse en|
+|Deslice el dedo|Haga clic|Pulse en|
 |---|---|---|
 |![](remote-bluetooth-images/Gesture01.png)|![](remote-bluetooth-images/Gesture02.png)|![](remote-bluetooth-images/Gesture03.png)|
 |Mueve la selección (foco) entre los elementos de interfaz de usuario en la pantalla (hacia arriba, abajo a la izquierda, derecha). Gesto de deslizar rápidamente puede utilizarse para desplazarse por las listas grandes de contenido rápidamente con la inercia.|Activa el elemento seleccionado de (enfocado) o actúa como el botón primario en un juego. Pueden activar haciendo clic en y que contiene los menús contextuales o las funciones secundarias.|A la ligera al puntear en la superficie de interacción de los bordes actúa como direccionales botones en un panel D, mover el foco hacia arriba, abajo, izquierda o derecha según el área pulsado. Dependiendo de la aplicación, puede utilizarse para mostrar los controles ocultos.|
@@ -282,7 +282,7 @@ Un dispositivo de juego tiene las siguientes características y usos previstos d
 
 |Característica|Uso de la aplicación general|Uso de las aplicaciones de juegos|
 |---|---|---|
-|**Panel D**|Se desplaza por elementos de interfaz de usuario (cambia el foco).|Depende de juego.|
+|**D-Pad**|Se desplaza por elementos de interfaz de usuario (cambia el foco).|Depende de juego.|
 |**A**|Activa el elemento (enfocado) seleccionado.|Realiza la función del botón primario y confirma las acciones del cuadro de diálogo.|
 |**B**|Vuelve a la pantalla anterior o sale a la pantalla de inicio si se encuentra en la pantalla principal de la aplicación.|Realiza la función del botón secundario o vuelve a la pantalla anterior.|
 |**X**|Inicia la reproducción multimedia o en pausa o reanuda la reproducción.|Depende de juego.|
@@ -310,7 +310,7 @@ Como se indicó anteriormente, además de la norma Siri Remote que se incluye co
 Si la aplicación requiere la entrada del controlador de bajo nivel, puede usa Apple [Game Controller Framework](https://developer.apple.com/library/prerelease/tvos/documentation/ServicesDiscovery/Conceptual/GameControllerPG/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013276) que tiene las siguientes modificaciones para tvOS:
 
 - El perfil de dispositivo de juego Micro (`GCMicroGamepad`) se ha agregado a Siri remoto de destino.
-- El nuevo `GCEventViewController` clase puede usarse para enrutar los eventos de dispositivo de juego a través de la aplicación. Consulte la [determinar Game Controller entrada](#Determining-Game-Controller-Input) sección para obtener más detalles.
+- El nuevo `GCEventViewController` clase puede usarse para enrutar los eventos de dispositivo de juego a través de la aplicación. Consulte la [determinar Game Controller entrada](#determining-game-controller-input) sección para obtener más detalles.
 
 <a name="Game-Controller-Support-Requirements" />
 

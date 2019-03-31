@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: b0571f826101576b402368923c2147e35aa9299e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 4472654064812142e3281374754ace0042b542bf
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116334"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677760"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Notificaciones de usuario avanzadas en Xamarin.iOS
 
@@ -375,7 +375,7 @@ Para eliminar este efecto, edite el `Info.plist` archivo para la extensión y es
 
 ### <a name="using-media-attachments-in-custom-ui"></a>Uso de los archivos adjuntos multimedia en la interfaz de usuario personalizada
 
-Dado que los archivos adjuntos multimedia (tal como se muestra en el [agregar datos adjuntos de multimedia](#Adding-Media-Attachments) sección anterior) forman parte de la carga de notificación, puede obtener acceso y que se muestra en la extensión de contenido de notificación, tal como lo estarían en el valor predeterminado Notificación de la interfaz de usuario.
+Dado que los archivos adjuntos multimedia (tal como se muestra en el [agregar datos adjuntos de multimedia](#adding-media-attachments) sección anterior) forman parte de la carga de notificación, puede obtener acceso y que se muestra en la extensión de contenido de notificación, tal como lo estarían en el valor predeterminado Notificación de la interfaz de usuario.
 
 Por ejemplo, si la interfaz de usuario personalizada anterior incluye un `UIImageView` que expuso a C# , el siguiente código código podría usarse para rellenarla con los datos adjuntos de multimedia:
 

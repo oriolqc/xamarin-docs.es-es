@@ -7,13 +7,8 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: f2a612eea39a3447cae03e2d7b675a46c47aad52
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233749"
 ---
+
 # <a name="introduction-to-ios-10"></a>Introducción a iOS 10
 
 _Este artículo presenta todas las características disponibles en iOS 10 y las API nuevas y modificadas para desarrolladores de Xamarin.iOS._
@@ -222,7 +217,7 @@ Además de los cambios en la plataforma principal y adiciones enumeradas anterio
 
 Para obtener más información, consulte nuestra [cambios adicionales de Framework](~/ios/platform/introduction-to-ios10/additional-framework-changes.md) guía.
 
-## <a name="deprecated-apis"></a>Interfaces API en desuso
+## <a name="deprecated-apis"></a>Interfaces API desusadas
 
 Las API siguientes han quedado obsoletas en iOS 10:
 
@@ -231,7 +226,7 @@ Las API siguientes han quedado obsoletas en iOS 10:
 - [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) símbolos relacionados con contenido ubicuo han quedado en desuso.
 - `ADBannerView`, `ADInterstitialAd` y relacionados con los símbolos en el [UIViewController](xref:UIKit.UIViewController) clase han quedado en desuso.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) símbolos relacionados con valores de punto flotante han quedado en desuso.
-- El `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` y `UIUserNotificationSettings` han quedado en desuso de las clases de UIKit. Use la [notificaciones de usuario](#User-Notifications) framework en su lugar.
+- El `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` y `UIUserNotificationSettings` han quedado en desuso de las clases de UIKit. Use la [notificaciones de usuario](#user-notifications) framework en su lugar.
 - El `HandleActionForLocalNotification`, `HandleActionForRemoteNotification`, `DidReceiveLocalNotification` y `DidReceiveRemoteNotification` WatchKit métodos han quedado en desuso. Use la `HandleActionForNotification` y `DidReceiveNotification` métodos en su lugar.
 - El `DidReceiveLocalNotification` y `DidReceiveRemoteNotification` métodos de la [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) han quedado en desuso. Cree una instancia de [UNUserNotificationCenterDelegate](https://developer.apple.com/reference/usernotifications/unusernotificationcenterdelegate) que implementa los métodos adecuados y asígnelo a la `Delegate` propiedad de la [UNUserNotificationCenter](https://developer.apple.com/reference/usernotifications/unusernotificationcenter) objeto.
 - El **Game Center aplicación** ha sido en desuso y quitados de iOS. Si la aplicación usa GameKit, lo _debe_ presentar su propia interfaz para mostrar las características de GameKit como marcadores, etcetera.

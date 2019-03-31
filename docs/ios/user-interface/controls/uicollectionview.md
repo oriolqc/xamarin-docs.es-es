@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 8e114f39a01c2243889c53c855acd7fa8061ed09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f57f2a2bc17690b7a1e0a72c583b0e94519ca4db
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114735"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677994"
 ---
 # <a name="collection-views-in-xamarinios"></a>Vistas de colección en Xamarin.iOS
 
@@ -443,7 +443,7 @@ En este artículo, le echamos un vistazo a la implementación de arrastrar para 
     - [Ejemplo sencillo de reordenación](#Simple-Reordering-Example)
     - [Uso de un reconocedor de gestos personalizados](#Using-a-Custom-Gesture-Recognizer)
     - [Los diseños personalizados y la reordenación de](#Custom-Layouts-and-Reording)
-- [Cambios de la vista de colección](#Collection-View-Changes)
+- [Cambios de la vista de colección](#collection-view-changes)
 
 <a name="Easy-Reordering-of-Items" />
 
@@ -472,11 +472,11 @@ Un ejemplo rápido, inicie un nuevo proyecto de Xamarin.iOS y editar la **Main.s
 
 Seleccione la vista de colección (puede ser más fácil de hacerlo desde el esquema del documento). En la pestaña diseño del panel de propiedades, establezca los siguientes tamaños, como se muestra en la captura de pantalla siguiente:
 
-- **Tamaño de la celda**: ancho: 60 | Alto: 60
-- **Tamaño del encabezado**: ancho: 0 | Alto: 0
-- **Tamaño del pie de página**: ancho: 0 | Alto: 0
-- **Espaciado mínimo**: para las celdas – 8 | Líneas: 8
-- **Sección de márgenes**: parte superior: 16 | Inferior: 16 | Izquierda: 16 | Derecha: 16
+- **Tamaño de la celda**: Ancho: 60 | Alto: 60
+- **Tamaño del encabezado**: Ancho: 0 | Alto: 0
+- **Tamaño del pie de página**: Ancho: 0 | Alto: 0
+- **Espaciado mínimo**: Para las celdas – 8 | Líneas: 8
+- **Sección de márgenes**: Parte superior: 16 | Inferior: 16 | Izquierda: 16 | Derecha: 16
 
 [![](uicollectionview-images/quick04.png "Establecer los tamaños de la vista de colección")](uicollectionview-images/quick04.png#lightbox)
 

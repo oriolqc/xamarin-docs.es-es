@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: fd677aa802adf32ac81396f81c67264d88639967
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.openlocfilehash: 02db7dce6ba38b6c1e943ff189ff69efb7cc1c08
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528785"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677838"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>las aplicaciones de entrenamiento de Xamarin de watchOS
 
@@ -636,7 +636,7 @@ Opcionalmente, la aplicación puede calcular y crear un subconjunto más pequeñ
 
 ## <a name="workouts-and-ios-10"></a>Entrenamientos y iOS 10
 
-Todas las aplicaciones de entrenamiento watchOS 3 tiene una aplicación de entrenamiento en función de iOS 10 primario y, lo que es nuevo en iOS 10, esta aplicación de iOS se puede usar para iniciar un entrenamiento que se coloque el Apple Watch en el modo de entrenamiento (sin intervención del usuario) y ejecutar la aplicación watchOS en el modo de ejecución de fondo (consulte [sobre fondo ejecutando](#About-Background-Running) anteriormente para obtener más detalles).
+Todas las aplicaciones de entrenamiento watchOS 3 tiene una aplicación de entrenamiento en función de iOS 10 primario y, lo que es nuevo en iOS 10, esta aplicación de iOS se puede usar para iniciar un entrenamiento que se coloque el Apple Watch en el modo de entrenamiento (sin intervención del usuario) y ejecutar la aplicación watchOS en el modo de ejecución de fondo (consulte [sobre fondo ejecutando](#about-background-running) anteriormente para obtener más detalles).
 
 Mientras se ejecuta la aplicación para watchOS, puede usar WatchConnectivity para mensajería y comunicación con la aplicación para iOS principal.
 
@@ -649,7 +649,7 @@ Eche un vistazo a cómo funciona este proceso:
 3. Con el pasado en la configuración de entrenamiento, la aplicación para watchOS 3 inicia una nueva sesión de entrenamiento (`HKWorkoutSession`).
 
 > [!IMPORTANT]
-> Para la aplicación de iPhone primaria iniciar un entrenamiento en el Apple Watch, la aplicación para watchOS 3 debe tener en segundo plano ejecuta habilitado. Consulte [lo que permite ejecutar en segundo plano](#Enabling-Background-Running) anteriormente para obtener más detalles.
+> Para la aplicación de iPhone primaria iniciar un entrenamiento en el Apple Watch, la aplicación para watchOS 3 debe tener en segundo plano ejecuta habilitado. Consulte [lo que permite ejecutar en segundo plano](#enabling-background-running) anteriormente para obtener más detalles.
 
 Este proceso es muy similar al proceso de iniciar una sesión de entrenamiento en la aplicación para watchOS 3 directamente. En el iPhone, use el código siguiente:
 

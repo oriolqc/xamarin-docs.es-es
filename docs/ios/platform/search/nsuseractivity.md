@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: acfff90b4b983f92718bb9af1f587a73ec0f8da7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b853bd3bc55a2d4cb613a9f0079aebae9f57027b
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104263"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677864"
 ---
 # <a name="search-with-nsuseractivity-in-xamarinios"></a>Búsqueda con NSUserActivity en Xamarin.iOS
 
@@ -29,7 +29,7 @@ Las siguientes propiedades de `NSUserActivity` se utilizan para admitir la búsq
 
  - `EligibleForHandoff` – If `true`, esta actividad se puede usar en una operación de entrega.
  - `EligibleForSearch` – If `true`, esta actividad se agregará al índice en el dispositivo y se presentan en los resultados de búsqueda.
- - `EligibleForPublicIndexing` – If `true`, esta actividad se agregan al índice basado en la nube de Apple y se presentan a los usuarios (a través de la búsqueda) que no ha instalado la aplicación en su dispositivo iOS. Consulte la [indización de búsqueda pública](#Public-Search-Indexing) sección para obtener más detalles.
+ - `EligibleForPublicIndexing` – If `true`, esta actividad se agregan al índice basado en la nube de Apple y se presentan a los usuarios (a través de la búsqueda) que no ha instalado la aplicación en su dispositivo iOS. Consulte la [indización de búsqueda pública](#public-search-indexing) sección para obtener más detalles.
  - `Title` : Proporciona un título para la actividad y se muestra en los resultados de búsqueda. Los usuarios también pueden buscar el texto del título de la propia.
  - `Keywords` : Es una matriz de cadenas que se usan para describir la actividad que se indizan y se podrán buscar por el usuario final.
  - `ContentAttributeSet` : Es un `CSSearchableItemAttributeSet` utilizado para describir su actividad en detalle y proporcionar contenido enriquecido en los resultados de búsqueda de más.
