@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 40d4a6cbd3bb8e3bd4c55c50c69f85f91d94feac
-ms.sourcegitcommit: 2f6a5c1abf90fbdb0475fd8a3ce6de3cd7c7d575
+ms.openlocfilehash: 6db9ff0085c17f07d07a7591f5d735793bfbc5f9
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52459933"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58678046"
 ---
 # <a name="callkit-in-xamarinios"></a>CallKit en Xamarin.iOS
 
@@ -278,7 +278,7 @@ namespace MonkeyCall
 }
 ```
 
-El `CallHandleFromURL` y `CallHandleFromActivity` clases se usan en el AppDelegate para obtener el identificador de contacto de la persona que se llama en una llamada saliente. Para obtener más información, consulte el [controlar llamadas salientes](#Handling-Outgoing-Calls) sección más adelante.
+El `CallHandleFromURL` y `CallHandleFromActivity` clases se usan en el AppDelegate para obtener el identificador de contacto de la persona que se llama en una llamada saliente. Para obtener más información, consulte el [controlar llamadas salientes](#handling-outgoing-calls) sección más adelante.
 
 ### <a name="the-activecallmanager-class"></a>La clase ActiveCallManager
 
@@ -392,7 +392,7 @@ namespace MonkeyCall
 }
 ```
 
-Nuevo, ya que se trata de una simulación solo, el `ActiveCallManager` solo mantiene una colección de `ActiveCall` objetos y tiene una rutina para buscar una llamada determinada por su `UUID` propiedad. También incluye métodos para iniciar, finalizar y cambiar el estado en espera de una llamada saliente. Para obtener más información, consulte el [controlar llamadas salientes](#Handling-Outgoing-Calls) sección más adelante.
+Nuevo, ya que se trata de una simulación solo, el `ActiveCallManager` solo mantiene una colección de `ActiveCall` objetos y tiene una rutina para buscar una llamada determinada por su `UUID` propiedad. También incluye métodos para iniciar, finalizar y cambiar el estado en espera de una llamada saliente. Para obtener más información, consulte el [controlar llamadas salientes](#handling-outgoing-calls) sección más adelante.
 
 ### <a name="the-providerdelegate-class"></a>La clase ProviderDelegate
 
@@ -728,7 +728,7 @@ namespace MonkeyCall
 }
 ```
 
-El `OpenUrl` y `ContinueUserActivity` invalidar los métodos se usan cuando la aplicación está procesando una llamada saliente. Para obtener más información, consulte el [controlar llamadas salientes](#Handling-Outgoing-Calls) sección más adelante.
+El `OpenUrl` y `ContinueUserActivity` invalidar los métodos se usan cuando la aplicación está procesando una llamada saliente. Para obtener más información, consulte el [controlar llamadas salientes](#handling-outgoing-calls) sección más adelante.
 
 ## <a name="handling-incoming-calls"></a>Controlar las llamadas entrantes
 
@@ -945,9 +945,9 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 }
 ```
 
-Aquí el `CallHandleFromActivity` método de la clase auxiliar `StartCallRequest` se utiliza para obtener el identificador a la persona que se llama (consulte [la clase StartCallRequest](#The-StartCallRequest-Class) anteriormente). 
+Aquí el `CallHandleFromActivity` método de la clase auxiliar `StartCallRequest` se utiliza para obtener el identificador a la persona que se llama (consulte [la clase StartCallRequest](#the-startcallrequest-class) anteriormente).
 
-El `PerformStartCallAction` método de la [ProviderDelegate clase](#The-ProviderDelegate-Class) se usa para iniciar la llamada saliente real, por último e informar al sistema de su ciclo de vida:
+El `PerformStartCallAction` método de la [ProviderDelegate clase](#the-providerdelegate-class) se usa para iniciar la llamada saliente real, por último e informar al sistema de su ciclo de vida:
 
 ```csharp
 public override void PerformStartCallAction (CXProvider provider, CXStartCallAction action)

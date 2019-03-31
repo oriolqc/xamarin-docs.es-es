@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 497ce4f0ecbd5e4d49d2ff88855ff68dd9a63e43
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 6d2aaf12bd6c45f6268cf87a77d2ee03a9d7a888
+ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123230"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58677734"
 ---
 # <a name="watchos-3-troubleshooting"></a>watchOS 3 solución de problemas
 
@@ -53,7 +53,7 @@ Infringir los recursos del sistema se producirá un bloqueo de aplicación para 
 
 Las complicaciones de aplicaciones de Apple Watch recién instaladas pueden aparecer en blanco. Reiniciar el equipo de Apple Watch para corregir este problema.
 
-## <a name="connectivity"></a>conectividad
+## <a name="connectivity"></a>Conectividad
 
 Problemas conocidos:
 
@@ -84,7 +84,7 @@ Cuando se trabaja con `https://` ambas direcciones URL `NSURLSession` y `NSURLCo
 - **[3:-9824]-1200** -error de carga de http.
 - **-1200**  -  `NSURLConnection` finalizado con errores.
 
-A partir de watchOS 3, seguridad de las conexiones SSL/TLS se está aplicando estrictamente por Apple. Las aplicaciones y servicios afectados deben actualizar los servidores web para usar las últimas versiones del protocolo TLS. Consulte [NSURLConnection](#NSURLConnection) anteriormente para obtener más información.
+A partir de watchOS 3, seguridad de las conexiones SSL/TLS se está aplicando estrictamente por Apple. Las aplicaciones y servicios afectados deben actualizar los servidores web para usar las últimas versiones del protocolo TLS. Consulte [NSURLConnection](#nsurlconnection) anteriormente para obtener más información.
 
 ## <a name="snapshots"></a>Instantáneas
 
