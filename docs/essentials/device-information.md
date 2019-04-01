@@ -5,12 +5,12 @@ ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: b78c04d30871552f9b1e18a42c871e24464c4802
-ms.sourcegitcommit: 01f93a34b466f8d4043cef68fab9b35cd8decee6
+ms.openlocfilehash: a7868277cd5e924d55ad688df1e8e07c81c5f074
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52898958"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329330"
 ---
 # <a name="xamarinessentials-device-information"></a>Xamarin.Essentials: Información del dispositivo
 
@@ -53,18 +53,18 @@ var idiom = DeviceInfo.Idiom;
 var deviceType = DeviceInfo.DeviceType;
 ```
 
-## <a name="platformsxrefxamarinessentialsdeviceinfoplatforms"></a>[Plataformas](xref:Xamarin.Essentials.DeviceInfo.Platforms)
+## <a name="platforms"></a>Plataformas
 
-`DeviceInfo.Platform` pone en correlación una cadena constante que se asigna al sistema operativo. Los valores se pueden comprobar con el struct `DevicePlatform`:
+[`DeviceInfo.Platform`](xref:Xamarin.Essentials.DeviceInfo.Platform) se correlaciona con una cadena de constante que se asigna al sistema operativo. Los valores se pueden comprobar con el struct `DevicePlatform`:
 
 - **DevicePlatform.iOS**: iOS
 - **DevicePlatform.Android**: Android
 - **DevicePlatform.UWP**: UWP
 - **DevicePlatform.Unknown**: desconocido
 
-## <a name="idiomsxrefxamarinessentialsdeviceinfoidioms"></a>[Expresiones](xref:Xamarin.Essentials.DeviceInfo.Idioms)
+## <a name="idioms"></a>Expresiones
 
-`DeviceInfo.Idiom` pone en correlación una cadena constante que se asigna al tipo de dispositivo en el que se ejecuta la aplicación. Los valores se pueden comprobar con el struct `DeviceIdiom`:
+[`DeviceInfo.Idiom`](xref:Xamarin.Essentials.DeviceInfo.Idiom) se correlaciona con una cadena de constante que se asigna al tipo de dispositivo en el que se ejecuta la aplicación. Los valores se pueden comprobar con el struct `DeviceIdiom`:
 
 - **DeviceIdiom.Phone**: teléfono
 - **DeviceIdiom.Tablet**: tableta
