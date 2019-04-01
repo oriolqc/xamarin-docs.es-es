@@ -17,7 +17,7 @@ Hacer referencia a la [codificaciones de internacionalización](encodings.md) pa
 
 ## <a name="ios-platform-features"></a>características de la plataforma de iOS
 
-Esta sección describen algunas de las características de localización en iOS. Vaya a la [siguiente sección](#Localization-basics-in-iOS) para ver ejemplos y código específico.
+Esta sección describen algunas de las características de localización en iOS. Vaya a la [siguiente sección](#localization-basics-in-ios) para ver ejemplos y código específico.
 
 ### <a name="language"></a>Lenguaje
 
