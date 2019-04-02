@@ -595,8 +595,6 @@ items:
         href: troubleshooting/questions/connect-android-emulator-mac-windows.md
       - name: ¿Cómo se automatiza un proyecto de prueba de NUnit de Android?
         href: troubleshooting/questions/automate-android-nunit-test.md
-      - name: ¿Cómo se habilita Intellisense en archivos .axml de Android?
-        href: troubleshooting/questions/enable-axml-intellisense.md
       - name: ¿Por qué no se puede conectar la compilación de versión de Android a Internet?
         href: troubleshooting/questions/android-internet.md
       - name: Paquetes NuGet más inteligentes de Xamarin Android Support v4/v13
@@ -658,9 +656,9 @@ items:
   - name: Muestras
     href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 7621bf3950c58cb4ffd6f33b73e9153409f93c9e
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: cf107832a9de0e26af34cda5da52907d6aab4a9c
+ms.sourcegitcommit: e8271d3ea1ecb92aefb44f6f2a1c5ed2b7bcb157
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58175387"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58796539"
