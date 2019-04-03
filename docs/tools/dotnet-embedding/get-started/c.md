@@ -1,17 +1,17 @@
 ---
 title: introducción a C
-description: Este documento describe cómo usar la inserción de .NET para incrustar código .NET en una aplicación C. Describe cómo usar la inserción de .NET en Visual Studio 2017 y Visual Studio para Mac.
+description: Este documento describe cómo usar la inserción de .NET para incrustar código .NET en una aplicación C. Describe cómo usar la inserción de .NET en 2019 de Visual Studio y Visual Studio para Mac.
 ms.prod: xamarin
 ms.assetid: 2A27BE0F-95FB-4C3A-8A43-72540179AA85
 author: lobrien
 ms.author: laobri
 ms.date: 04/19/2018
-ms.openlocfilehash: 66475b7629f01b4229539e1edc323491a7861dfe
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 342ba2a6b51483983df7bd04034a4cef62fd57ff
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668405"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854917"
 ---
 # <a name="getting-started-with-c"></a>introducción a C
 

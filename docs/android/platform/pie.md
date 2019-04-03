@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
-ms.openlocfilehash: fa41affc57714254a12623f79da3dc1396ecd009
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: e08324d5a905639e7ecd59bc4c7a5c0f02d0adfe
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670164"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854722"
 ---
 # <a name="android-pie-features"></a>Características de Android circular
 
@@ -30,19 +30,20 @@ Xamarin.Android 9.0 proporciona compatibilidad con Android circular. Para obtene
 
 En la lista siguiente es necesaria para usar las características de Android circular en las aplicaciones basadas en Xamarin:
 
--   **Visual Studio** &ndash; si usa Windows, actualice a Visual Studio 2017 versión 15,8 o posterior. Si usas un equipo Mac, actualice a Visual Studio 2017 para Mac versión 7.6 o posterior.
+- **Visual Studio** &ndash; se recomienda Visual Studio de 2019.
+    Si usa Visual Studio 2017, en la actualización de Windows a Visual Studio 2017 versión 15,8 o posterior. En macOS, actualice a Visual Studio 2017 para Mac versión 7.6 o posterior.
 
--   **Xamarin.Android** &ndash; Xamarin.Android 9.0.0.17 o posterior debe estar instalado con Visual Studio (Xamarin.Android se instala automáticamente como parte de la **desarrollo móvil con .NET** carga de trabajo).
+- **Xamarin.Android** &ndash; Xamarin.Android 9.0.0.17 o posterior debe estar instalado con Visual Studio (Xamarin.Android se instala automáticamente como parte de la **desarrollo móvil con .NET** carga de trabajo).
 
--   **Kit para desarrolladores de Java** &ndash; el desarrollo de Xamarin Android 9.0 requiere [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (o bien puede probar la versión preliminar de la distribución de Microsoft de la [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 se instala automáticamente como parte de la **desarrollo móvil con .NET** carga de trabajo.
+- **Kit para desarrolladores de Java** &ndash; el desarrollo de Xamarin Android 9.0 requiere [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) (o bien puede probar la versión preliminar de la distribución de Microsoft de la [OpenJDK](~/android/get-started/installation/openjdk.md)). JDK8 se instala automáticamente como parte de la **desarrollo móvil con .NET** carga de trabajo.
 
--   **SDK de Android** &ndash; API del SDK de Android 28 o posterior debe instalarse a través de Android SDK Manager.
+- **SDK de Android** &ndash; API del SDK de Android 28 o posterior debe instalarse a través de Android SDK Manager.
 
 ## <a name="getting-started"></a>Introducción
 
 Para empezar a desarrollar aplicaciones de Android circular con Xamarin.Android, debe descargar e instalar los paquetes SDK y herramientas más recientes antes de poder crear su primer proyecto de Android circular:
 
-1. Actualizar a [Visual Studio 2017 versión 15,8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o una versión posterior. Si utiliza Visual Studio para Mac, actualice a [Visual Studio 2017 para Mac versión 7.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o una versión posterior.
+1. Se recomienda Visual Studio de 2019. Si usa Visual Studio 2017, actualice a [Visual Studio 2017 versión 15,8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o una versión posterior. Si utiliza Visual Studio para Mac, actualice a [Visual Studio 2017 para Mac versión 7.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) o una versión posterior.
 
 2. Instalar **circular Android (API de 28)** herramientas mediante el Administrador de SDK y paquetes.
 
@@ -52,13 +53,11 @@ Para empezar a desarrollar aplicaciones de Android circular con Xamarin.Android,
 
 Cada uno de estos pasos se explica en las secciones siguientes:
 
-
 ### <a name="update-visual-studio"></a>Actualizar Visual Studio
 
-Para agregar compatibilidad con Android circular a Visual Studio, actualice a Visual Studio 2017 versión 15,8 o posterior (para obtener instrucciones, consulte [actualizar Visual Studio 2017 a la versión más reciente](https://docs.microsoft.com/visualstudio/install/update-visual-studio)).
+Se recomienda 2019 de Visual Studio para crear aplicaciones de Android circular con Xamarin.
 
-Para agregar compatibilidad de Android circular en Visual Studio para Mac, actualizar a Visual Studio 2017 para Mac 7.6 o posterior (para obtener instrucciones, consulte [configuración e instalación de Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)).
-
+Si usa Visual Studio 2017, actualizar a Visual Studio 2017 versión 15,8 o posterior (para obtener instrucciones, consulte [actualizar Visual Studio 2017 a la versión más reciente](https://docs.microsoft.com/visualstudio/install/update-visual-studio)). En macOS, actualizar a Visual Studio 2017 para Mac 7.6 o posterior (para obtener instrucciones, consulte [configuración e instalación de Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)).
 
 ### <a name="install-the-android-sdk"></a>Instalar el SDK de Android
 
@@ -68,15 +67,13 @@ Para crear un proyecto con Xamarin.Android 9.0, primero debe usar Android SDK Ma
 
 2. En la esquina inferior derecha, haga clic en el icono de engranaje y seleccione **repositorio > Google (no compatible)**:
 
-    [![Configurar el repositorio de Google](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
+    [![Sel repositorio de Google figuración](pie-images/vs/set-repo-sml.png)](pie-images/vs/set-repo.png#lightbox)
 
 3. Instalar el **circular Android** paquetes del SDK, que se enumeran como **28 de plataforma de Android SDK** en el **plataformas** ficha (para obtener más información sobre cómo usar SDK Manager, consulte [ Configuración de Android SDK](~/android/get-started/installation/android-sdk.md)):
 
-    [![Instalación de paquetes de Android circular](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
+    [![Ipaquetes de Android circular nstalar](pie-images/vs/sdk-manager-sml.png)](pie-images/vs/sdk-manager.png#lightbox)
 
 4. Si usa un emulador, crear un dispositivo virtual que admita **28 de nivel de API**. Para obtener más información acerca de cómo crear dispositivos virtuales, consulte [administración de dispositivos Virtual con el Administrador de dispositivos Android](~/android/get-started/installation/android-emulator/device-manager.md).
-
-
 
 ### <a name="start-a-xamarinandroid-project"></a>Iniciar un proyecto de Xamarin.Android
 
@@ -114,7 +111,7 @@ Las siguientes secciones resaltan estas características y proporcionan ejemplos
 Muchos dispositivos Android más reciente con pantallas de lado a lado tienen un *Mostrar recorte* (o "ranura") en la parte superior de la presentación de la cámara y altavoces.
 Captura de pantalla siguiente proporciona un ejemplo de emulador de recortes:
 
-[![Emulador de Android simulando un recorte](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
+[![Android emulador simula un recorte](pie-images/02-example-cutout-sml.png)](pie-images/02-example-cutout.png#lightbox)
 
 Para administrar cómo la ventana de la aplicación muestra su contenido en los dispositivos con un recorte de pantalla, ha agregado un nuevo gráfico circular Android [LayoutInDisplayCutoutMode](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#layoutInDisplayCutoutMode) atributo de diseño de ventana. Este atributo puede establecerse en uno de los siguientes valores:
 
@@ -133,7 +130,7 @@ Window.Attributes.LayoutInDisplayCutoutMode =
 
 Los ejemplos siguientes proporcionan ejemplos de estos modos de recorte. Es la primera captura de pantalla de la izquierda de la aplicación en modo no-pantalla completa. En la captura de pantalla del centro, la aplicación deja de pantalla completa con `LayoutInDisplayCutoutMode` establecido en `LayoutInDisplayCutoutModeShortEdges`. Tenga en cuenta que extiende el fondo blanco de la aplicación en el área de recorte de pantalla:
 
-[![Modos de recorte de visualización de ejemplo en el emulador](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
+[![Ejemplo muestran los modos de recorte en el emulador](pie-images/03-cutout-modes-sml.png)](pie-images/03-cutout-modes.png#lightbox)
 
 En la captura de pantalla final (por encima de la derecha), `LayoutInDisplayCutoutMode` está establecido en `LayoutInDisplayCutoutModeShortNever` antes de pasar a pantalla completa.
 Tenga en cuenta que el fondo blanco de la aplicación no se permite extender en el área de recorte de pantalla.
@@ -158,7 +155,7 @@ Android circular presenta las siguientes mejoras para mejorar la experiencia de 
 
 El ejemplo siguiente muestra cómo usar las nuevas API para generar una notificación que contiene una imagen. En las capturas de pantalla siguiente, una notificación de texto se registra y va seguida de una notificación con una imagen incrustada. Cuando se expanden las notificaciones (tal y como se muestra en la parte derecha), se muestra el texto de la primera notificación y la imagen incrustada en se amplía la segunda notificación:
 
-[![Notificación de ejemplo con la imagen](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
+[![Ejemplo notificación con imagen](pie-images/04-example-notifications-sml.png)](pie-images/04-example-notifications.png#lightbox)
 
 El ejemplo siguiente muestra cómo incluir una imagen en una notificación de Android circular y muestra el uso de la nueva `Person` clase:
 
@@ -214,7 +211,7 @@ Para obtener más información sobre la creación de notificaciones, consulte [n
 
 Circular Android proporciona compatibilidad con IEEE 802.11mc (también conocido como _Wi-Fi ida y vuelta tiempo_ o _WiFi RTT_), lo que hace posible para las aplicaciones detectar la distancia a uno o más acceso Wi-Fi señala. Con esta información, es posible que la aplicación para aprovechar las ventajas de *posicionamiento interiores* con una precisión de uno o dos medidores. En dispositivos Android que proporcionan compatibilidad de hardware para IEEE 801.11mc, la aplicación puede ofrecer características de navegación como control basado en ubicación de instrucciones de giro por a través de una tienda o electrodomésticos inteligentes:
 
-[![Ejemplo de navegación interior mediante WiFi RTT](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
+[![Eejemplo de navegación interior mediante WiFi RTT](pie-images/05-wifi-rtt-sml.png)](pie-images/05-wifi-rtt.png#lightbox)
 
 El nuevo [WifiRttManager](https://developer.android.com/reference/android/net/wifi/rtt/WifiRttManager) clase y varias clases de aplicación auxiliar que proporciona los medios para medir la distancia a los dispositivos de Wi-Fi. Para obtener más información acerca de las API de posicionamiento interiores introducidas en Android P, consulte [Android.Net.Wifi.Rtt](https://developer.android.com/reference/android/net/wifi/rtt/package-summary).
 
@@ -270,4 +267,4 @@ Incluyen vínculos a documentación de API y temas para desarrolladores de Andro
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Android circular 9](https://developer.android.com/about/versions/pie/)
+- [Android 9 Pie](https://developer.android.com/about/versions/pie/)

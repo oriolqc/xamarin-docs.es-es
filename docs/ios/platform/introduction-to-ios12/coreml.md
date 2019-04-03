@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/15/2018
-ms.openlocfilehash: 2d62e42e755a0d3088283adb863dfd684ddeae28
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.openlocfilehash: 50d59f0b6ff2133c5870d84a1d740547768116e0
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617584"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869733"
 ---
 # <a name="core-ml-2-in-xamarinios"></a>Core ML 2 en Xamarin.iOS
 
@@ -74,7 +74,7 @@ async void RunTest(int num)
 
 ## <a name="for-loop"></a>for (bucle)
 
-El `for` versión de bucle de la prueba otra vez recorre en iteración el número especificado de entradas, una llamada a [ `GetPrediction` ](https://developer.xamarin.com/api/member/CoreML.MLModel.GetPrediction/) para cada uno y descartar el resultado. Tiempo de espera del método cuánto tarda en realizar las predicciones:
+El `for` versión de bucle de la prueba otra vez recorre en iteración el número especificado de entradas, una llamada a [ `GetPrediction` ](xref:CoreML.MLModel.GetPrediction*) para cada uno y descartar el resultado. Tiempo de espera del método cuánto tarda en realizar las predicciones:
 
 ```csharp
 async Task FetchNonBatchResults(int num)
@@ -94,7 +94,7 @@ async Task FetchNonBatchResults(int num)
 
 ## <a name="getpredictions-new-batch-api"></a>GetPredictions (API de lote nuevo)
 
-Crea la versión de lote de la prueba una `MLArrayBatchProvider` objeto a partir de la matriz de entrada (como se trata de un parámetro de entrada necesario para el `GetPredictions` método), crea una [`MLPredictionOptions`](https://developer.xamarin.com/api/type/CoreML.MLPredictionOptions/)
+Crea la versión de lote de la prueba una `MLArrayBatchProvider` objeto a partir de la matriz de entrada (como se trata de un parámetro de entrada necesario para el `GetPredictions` método), crea una [`MLPredictionOptions`](xref:CoreML.MLPredictionOptions)
 objeto que impide que los cálculos de predicción estén restringidos a la CPU y usa el `GetPredictions` API para capturar las predicciones, vuelva a descartar el resultado:
 
 ```csharp

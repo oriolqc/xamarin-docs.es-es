@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
 ms.date: 11/25/2015
-ms.openlocfilehash: 4f08468d08e12ad77cacbac66b55ad8fc6ead433
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: d29239d986ebfe153381915dbe0f4bfbbe738007
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667969"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870344"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Información general de los enlaces de Objective-c.
 
@@ -88,7 +88,7 @@ namespace Example.Binding {
 }
 ```
 
-En tercer lugar, revise la documentación de Objective-C y crear [ObjCRuntime.Selector](https://developer.xamarin.com/api/type/ObjCRuntime.Selector/) instancias para cada selector que desee usar. Colocar esas opciones en el cuerpo de la clase:
+En tercer lugar, revise la documentación de Objective-C y crear [ObjCRuntime.Selector](xref:ObjCRuntime.Selector) instancias para cada selector que desee usar. Colocar esas opciones en el cuerpo de la clase:
 
 ```csharp
 static Selector selInit       = new Selector("init");
@@ -116,7 +116,7 @@ public NSEnumerator(IntPtr handle)
 }
 ```
 
-En quinto lugar, proporcionan métodos para cada uno de los selectores se declaran en el paso 3. Estos usarán `objc_msgSend()` para invocar el selector en el objeto nativo. Tenga en cuenta el uso de [Runtime.GetNSObject()](https://developer.xamarin.com/api/member/ObjCRuntime.Runtime.GetNSObject/(System.IntPtr)) para convertir un `IntPtr` en tipado adecuado `NSObject` (sub) tipo. Si desea que el método se pueda llamar desde código de Objective-C, el miembro *debe* ser **virtual**.
+En quinto lugar, proporcionan métodos para cada uno de los selectores se declaran en el paso 3. Estos usarán `objc_msgSend()` para invocar el selector en el objeto nativo. Tenga en cuenta el uso de [Runtime.GetNSObject()](xref:ObjCRuntime.Runtime.GetNSObject*) para convertir un `IntPtr` en tipado adecuado `NSObject` (sub) tipo. Si desea que el método se pueda llamar desde código de Objective-C, el miembro *debe* ser **virtual**.
 
 ```csharp
 [Export("nextObject")]
@@ -189,5 +189,5 @@ namespace Example.Binding {
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Curso de Xamarin University: Creación de una biblioteca de enlaces de Objective-c.](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Curso de Xamarin University: Generar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Xamarin University Course: Creación de una biblioteca de enlaces de Objective-c.](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
+- [Xamarin University Course: Generar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -1,19 +1,19 @@
 ---
-title: Administración de cuentas de Apple
-description: Este documento describe cómo usar las características de administración de la cuenta de Apple en Visual Studio para Mac y Visual Studio 2017.
+title: Administración de cuentas Apple
+description: Este documento describe cómo usar las características de administración de la cuenta de Apple en Visual Studio para Mac y Visual Studio de 2019.
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 1e353aceaf0e2c0525b82c0ccb7e7bcb73df3075
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 8617d6e0c0930f581c45dbb461dfcb5d85a2becc
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106070"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855060"
 ---
-# <a name="apple-account-management"></a>Administración de cuentas de Apple
+# <a name="apple-account-management"></a>Administración de cuentas Apple
 
 La interfaz de administración de la cuenta de Apple proporciona una manera de ver todos los equipos de desarrollo asociados con un identificador de Apple. También permite ver más detalles acerca de cada equipo, mostrando una lista de _identidades de firma_ y _perfiles de aprovisionamiento_ que están instalados en el equipo.
 
@@ -33,7 +33,7 @@ También puede usar las herramientas de aprovisionamiento automático de iOS par
 
 ## <a name="requirements"></a>Requisitos
 
-Administración de cuentas de Apple está disponible en Visual Studio para Mac y Visual Studio 2017 (versión 15.7 y versiones posterior)
+Administración de cuentas de Apple está disponible en Visual Studio para Mac, 2019 de Visual Studio y Visual Studio 2017 (versión 15.7 o superior).
 
 Debe tener una cuenta de desarrollador de Apple para usar esta característica. Obtener más información sobre las cuentas de desarrollador de Apple está disponible en el [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guía.
 
@@ -44,7 +44,7 @@ Debe tener una cuenta de desarrollador de Apple para usar esta característica. 
 
 ## <a name="adding-an-apple-developer-account"></a>Agregar una cuenta de desarrollador de Apple
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
 1. Para abrir el cuadro de diálogo de administración de cuenta, vaya a **Visual Studio > Preferencias > cuenta de desarrollador de Apple**:
 
@@ -68,9 +68,9 @@ Debe tener una cuenta de desarrollador de Apple para usar esta característica. 
 
     ![Vista Detalles de la pantalla que muestra las identidades de firma y perfiles en el equipo de aprovisionamiento](apple-account-management-images/image6.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
 
-1. Antes de empezar a agregar el ID de Apple para Visual Studio 2017, asegúrese de que es el entorno de desarrollo [emparejado con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Antes de empezar a agregar el ID de Apple para 2019 de Visual Studio, asegúrese de que es el entorno de desarrollo [emparejado con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Para abrir la ventana de administración de cuenta, vaya a **Herramientas > Opciones > Xamarin > cuentas de Apple**:
 
@@ -109,11 +109,11 @@ Para crear una nueva identidad de firma, seleccione el **Create Certificate** bo
 
 Si una opción en la lista desplegable está atenuada y no está seleccionada, significa que no tiene los permisos de equipo correcto para crear este tipo de certificado.
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
 ![crear opciones de certificado](apple-account-management-images/image8.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
 
 ![crear opciones de certificado](apple-account-management-images/prov3.png)
 
@@ -123,11 +123,11 @@ Si una opción en la lista desplegable está atenuada y no está seleccionada, s
 
 El cuadro de diálogo de detalles del equipo también muestra una lista de todos los perfiles de aprovisionamiento conectado a su cuenta de desarrollador. Puede descargar todos los perfiles de aprovisionamiento en el equipo local presionando el **descargar todos los perfiles** botón
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
 ![Descargue la sección perfiles de aprovisionamiento](apple-account-management-images/image9.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
 
 ![Descargue la sección perfiles de aprovisionamiento](apple-account-management-images/prov4.png)
 

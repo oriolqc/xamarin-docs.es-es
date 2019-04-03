@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 2f9cc72dcbe506d22c8a986bcf59ddaa6355f043
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: d0ad25a1ecff7262b9b4b41a5f9d73a5931bbd1c
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103262"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870201"
 ---
 # <a name="introduction-to-ios-9"></a>Introducción a iOS 9
 
@@ -38,7 +38,7 @@ Para obtener más información, consulte nuestra [Introducción a 3D Touch](~/io
 
 Nuevo a iOS 9, App Transport Security (ATS) aplica las conexiones seguras entre los recursos de internet (por ejemplo, el servidor back-end de la aplicación) y la aplicación. ATS garantiza que todas las comunicaciones de internet se ajustan para proteger la conexión de los procedimientos recomendados, impidiendo así la revelación accidental de información confidencial, ya sea directamente a través de la aplicación o una biblioteca que lo consume.
 
-Puesto que ATS está habilitada de forma predeterminada en las aplicaciones compiladas para iOS 9 y OS X 10.11 (El capitán), todas las conexiones mediante [NSUrlConnection](https://developer.xamarin.com/api/type/Foundation.NSUrlConnection/), [CFUrl](https://developer.xamarin.com/api/type/CoreFoundation.CFUrl/) o [NSUrlSession](https://developer.xamarin.com/api/type/Foundation.NSUrlSession/) estará sujeto a Requisitos de seguridad ATS. Si las conexiones no cumplen estos requisitos, se producirá un error con una excepción.
+Puesto que ATS está habilitada de forma predeterminada en las aplicaciones compiladas para iOS 9 y OS X 10.11 (El capitán), todas las conexiones mediante [NSUrlConnection](xref:Foundation.NSUrlConnection), [CFUrl](xref:CoreFoundation.CFUrl) o [NSUrlSession](xref:Foundation.NSUrlSession) estará sujeto a Requisitos de seguridad ATS. Si las conexiones no cumplen estos requisitos, se producirá un error con una excepción.
 
 Para obtener más información acerca de ATS, consulte nuestra [App Transport Security](~/ios/app-fundamentals/ats.md) guía.
 
@@ -58,7 +58,7 @@ Para obtener más información acerca de las nuevas capacidades de multitarea de
 
 ## <a name="new-contacts-and-contacts-ui-frameworks"></a>Nuevos contactos y los marcos de interfaz de usuario de contactos
 
-Con la introducción de iOS 9, Apple ha lanzado dos nuevos marcos de trabajo, [contactos](https://developer.xamarin.com/api/namespace/Contacts/) y [ContactsUI](https://developer.xamarin.com/api/namespace/ContactsUI/), que reemplace la libreta de direcciones existente y marcos de interfaz de usuario de libreta de direcciones usan por iOS 8 y versiones anteriores.
+Con la introducción de iOS 9, Apple ha lanzado dos nuevos marcos de trabajo, [contactos](xref:Contacts) y [ContactsUI](xref:ContactsUI), que reemplace la libreta de direcciones existente y marcos de interfaz de usuario de libreta de direcciones usan por iOS 8 y versiones anteriores.
 
 Estos marcos de trabajo nuevo, orientada a objetos proporcionan lo siguiente:
 
@@ -78,7 +78,7 @@ Para obtener más información, consulte nuestra [mejoras en la búsqueda](~/ios
 
 ## <a name="new-stack-view"></a>Nueva vista de pila
 
-El control de vista de pila ([UIStackView](https://developer.xamarin.com/api/type/UIKit.UIStackView/)) aprovecha la eficacia del diseño automático y las clases de tamaño para administrar una pila de subvistas (horizontal o verticalmente) que responde de forma dinámica al tamaño de pantalla y la orientación del dispositivo iOS.
+El control de vista de pila ([UIStackView](xref:UIKit.UIStackView) aprovecha la eficacia del diseño automático y las clases de tamaño para administrar una pila de subvistas (horizontal o verticalmente) que responde de forma dinámica al tamaño de pantalla y la orientación del dispositivo iOS.
 
 Mediante el control de vista de pila, la cantidad de trabajo necesarios para una interfaz de usuario se reduce en gran medida el diseño. El diseño de todas las subvistas asociada a una vista de pila se administran automáticamente en función de propiedades definido por el desarrollador como eje, distribución, alineación y espaciado.
 
@@ -87,7 +87,7 @@ Para obtener más información, consulte nuestra [Introducción a la vista de pi
 
 ## <a name="collection-view-changes"></a>Cambios de la vista de colección
 
-En iOS 9, la vista de colección ([UICollectionView](https://developer.xamarin.com/api/type/UIKit.UICollectionView/)) ahora admite arrastra la reordenación de elementos desde el principio mediante la adición de un reconocedor de movimiento predeterminado nuevo y varios métodos auxiliares de nuevo.
+En iOS 9, la vista de colección ([UICollectionView](xref:UIKit.UICollectionView) ahora admite arrastra la reordenación de elementos desde el principio mediante la adición de un reconocedor de movimiento predeterminado nuevo y varios métodos auxiliares de nuevo.
 
 Con estos nuevos métodos, puede implementar arrastrar para volver a ordenar en la vista de colección fácilmente y tiene la opción de personalizar la apariencia de los elementos durante cualquier fase del proceso de reordenación.
 
@@ -103,7 +103,7 @@ Para obtener más información, consulte nuestra [juego mejoras](~/ios/platform/
 
 ## <a name="homekit-framework-changes"></a>Cambios en la plataforma HomeKit
 
-El [HomeKit](https://developer.xamarin.com/api/namespace/HomeKit/) framework, que se introdujo en iOS 8, proporciona la capacidad de configurar y controlar diversas accesorios de HomeKit habilitado (por ejemplo, las luces automatizadas, cerraduras y puertas del garaje) desde una aplicación de Xamarin.iOS. Además de ser fácil de instalar y configurar, Accesorios de HomeKit pueden controlarse a través de comandos de voz Siri.
+El [HomeKit](xref:HomeKit) framework, que se introdujo en iOS 8, proporciona la capacidad de configurar y controlar diversas accesorios de HomeKit habilitado (por ejemplo, las luces automatizadas, cerraduras y puertas del garaje) desde una aplicación de Xamarin.iOS. Además de ser fácil de instalar y configurar, Accesorios de HomeKit pueden controlarse a través de comandos de voz Siri.
 
 En iOS 9, Apple ha facilitado el programa de instalación, expande los tipos de accesorios admite y proporciona más interacciones accesorios (por ejemplo, para controlar un accesorio de forma remota a través de iCloud).
 
@@ -150,9 +150,9 @@ Para obtener más información, consulte nuestra [Introducción a Touch ID](~/io
 
 En iOS 9, Apple ha hecho de presentar una interfaz de usuario volteado más fácil que nunca, ya que proporciona compatibilidad completa para los idiomas de derecha a izquierda. Entre estas estructuras se incluyen las siguientes:
 
-- Estándar [UIKit](https://developer.xamarin.com/api/namespace/UIKit/) controles va a invertir automáticamente según la configuración de idioma y de dispositivos iOS de derecha a izquierda.
-- El [UIView](https://developer.xamarin.com/api/type/UIKit.UIView/) clase proporciona atributos que le permiten definir cómo debe aparecer una vista determinada cuando voltean de derecha a izquierda.
-- La capacidad para voltear una imagen mediante programación utilizando la [FlipsForRightToLeftLayoutDirection](https://developer.xamarin.com/api/property/UIKit.UIImage.FlipsForRightToLeftLayoutDirection/) propiedad de la [UIImage](https://developer.xamarin.com/api/type/UIKit.UIImage/) clase.
+- Estándar [UIKit](xref:UIKit) controles va a invertir automáticamente según la configuración de idioma y de dispositivos iOS de derecha a izquierda.
+- El [UIView](xref:UIKit.UIView) clase proporciona atributos que le permiten definir cómo debe aparecer una vista determinada cuando voltean de derecha a izquierda.
+- La capacidad para voltear una imagen mediante programación utilizando la [FlipsForRightToLeftLayoutDirection](xref:UIKit.UIImage.FlipsForRightToLeftLayoutDirection) propiedad de la [UIImage](xref:UIKit.UIImage) clase.
 
 Para obtener más información, consulte Apple [idiomas de derecha a izquierda auxiliares](https://developer.apple.com/library/prerelease/ios/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17) documentación.
 
@@ -164,7 +164,7 @@ Además de los cambios más importantes que hemos tratado anteriormente, Apple h
 
 - Marco de AV Foundation
 - AVKit Framework
-- Marco de CloudKit
+- CloudKit Framework
 - Marco de Foundation
 - Marco de trabajo de entrega
 - Framework HealthKit
@@ -212,7 +212,7 @@ Consulte también las partes de iOS de estos ejemplos (complementaria Mac OS X v
 
 - [Ejemplos de iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
 - [Introducción a 3D Touch](~/ios/platform/3d-touch.md)
-- [Seguridad de transporte de aplicación](~/ios/app-fundamentals/ats.md)
+- [Seguridad de transporte de la aplicación](~/ios/app-fundamentals/ats.md)
 - [Multitarea para iPad](~/ios/platform/multitasking.md)
 - [Contactos y contactos de la interfaz de usuario](~/ios/platform/contacts.md)
 - [Nuevas API de búsqueda](~/ios/platform/search/index.md)
@@ -221,7 +221,7 @@ Consulte también las partes de iOS de estos ejemplos (complementaria Mac OS X v
 - [Mejoras de juegos](~/ios/platform/gaming/index.md)
 - [Introducción a HomeKit](~/ios/platform/homekit.md)
 - [Introducción a la entrega](~/ios/platform/handoff.md)
-- [Cambios adicionales en la plataforma iOS 9](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
+- [Cambios adicionales en iOS 9 Framework](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
 - [Solución de problemas](~/ios/platform/introduction-to-ios9/troubleshooting.md)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
 - [Novedades de iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

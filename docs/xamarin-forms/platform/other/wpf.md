@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
-ms.openlocfilehash: cdf115c4ea6d6613a1da2d0d2cfa14ed500086f8
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.openlocfilehash: 2bef13e7f465dd213649f88deb572eb661895250
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209190"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854813"
 ---
 # <a name="wpf-platform-setup"></a>Configuración de la plataforma WPF
 
@@ -21,7 +21,7 @@ ms.locfileid: "54209190"
 
 Xamarin.Forms tiene ahora la compatibilidad de versión preliminar de Windows Presentation Foundation (WPF). En este artículo se muestra cómo agregar un proyecto de WPF a una solución de Xamarin.Forms.
 
-Antes de empezar, cree una nueva solución de Xamarin.Forms en Visual Studio 2017 o usar una solución de Xamarin.Forms existente, por ejemplo, [ **BoxViewClock**](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/). Las aplicaciones de WPF solo se pueden agregar a una solución de Xamarin.Forms en Windows.
+Antes de empezar, cree una nueva solución de Xamarin.Forms en Visual Studio de 2019 o usar una solución de Xamarin.Forms existente, por ejemplo, [ **BoxViewClock**](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BoxViewClock/). Las aplicaciones de WPF solo se pueden agregar a una solución de Xamarin.Forms en Windows.
 
 ## <a name="add-a-wpf-project-to-a-xamarinforms-app-with-xamarinuniversity"></a>Agregar un proyecto de WPF a una aplicación de Xamarin.Forms con Xamarin.University
 
@@ -33,7 +33,7 @@ Antes de empezar, cree una nueva solución de Xamarin.Forms en Visual Studio 201
 
 Siga estas instrucciones para agregar una aplicación WPF que se ejecutará en los escritorios de Windows 7, 8 y 10:
 
-1. En Visual Studio 2017, haga doble clic en el nombre de la solución en el **el Explorador de soluciones** y elija **Agregar > Nuevo proyecto...** .
+1. En Visual Studio 2019, haga doble clic en el nombre de la solución en el **el Explorador de soluciones** y elija **Agregar > Nuevo proyecto...** .
 
 2. En el **nuevo proyecto** ventana a la izquierda, seleccione **Visual C#** y **escritorio clásico de Windows**. En la lista de tipos de proyecto, elija **aplicación de WPF (.NET Framework)**. 
 

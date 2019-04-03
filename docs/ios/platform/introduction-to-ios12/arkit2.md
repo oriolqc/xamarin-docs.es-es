@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/22/2018
-ms.openlocfilehash: 7f3c196eafd71e8571ea49a17784e5290e7ef44e
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 559ef9cc9a3e5ace7a4023e81363825c6861f6d4
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233614"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870318"
 ---
 # <a name="arkit-2-in-xamarinios"></a>ARKit 2 en Xamarin.iOS
 
@@ -394,7 +394,7 @@ En Xamarin, el tipo común para manipular matrices de transformación es `NVecto
 
 ![fila principal vs columna principal](images/arkit_row_vs_column.png)
 
-Sea coherente con la opción de interpretación de la matriz es vital para el comportamiento apropiado. Puesto que las matrices de transformación 3D son 4 x 4, los errores de coherencia no producirá ningún tipo de excepción de tiempo de compilación o incluso en tiempo de ejecución, es simplemente operaciones actuará inesperadamente. Si su SceneKit / ARKit objetos parecen bloquearse, volar ausente o vibración, una matriz de transformación incorrecta es una buena posibilidad. La solución es sencilla: [ `NMatrix4.Transpose` ](https://developer.xamarin.com/api/member/OpenTK.NMatrix4.Transpose) llevará a cabo una transposición en lugar de elementos.
+Sea coherente con la opción de interpretación de la matriz es vital para el comportamiento apropiado. Puesto que las matrices de transformación 3D son 4 x 4, los errores de coherencia no producirá ningún tipo de excepción de tiempo de compilación o incluso en tiempo de ejecución, es simplemente operaciones actuará inesperadamente. Si su SceneKit / ARKit objetos parecen bloquearse, volar ausente o vibración, una matriz de transformación incorrecta es una buena posibilidad. La solución es sencilla: [ `NMatrix4.Transpose` ](xref:OpenTK.NMatrix4.Transpose*) llevará a cabo una transposición en lugar de elementos.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

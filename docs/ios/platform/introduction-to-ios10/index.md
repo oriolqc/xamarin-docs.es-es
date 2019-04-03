@@ -7,8 +7,13 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
+ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870253"
 ---
-
 # <a name="introduction-to-ios-10"></a>Introducción a iOS 10
 
 _Este artículo presenta todas las características disponibles en iOS 10 y las API nuevas y modificadas para desarrolladores de Xamarin.iOS._
@@ -221,9 +226,9 @@ Para obtener más información, consulte nuestra [cambios adicionales de Framewo
 
 Las API siguientes han quedado obsoletas en iOS 10:
 
-- El `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` y `CKFetchRecordChangesOperation` clases han quedado obsoletas en directo de CloudKit para iOS 10. Use la [CKDiscoverAllUserIdentitiesOperation](https://developer.xamarin.com/api/type/CloudKit.CKDiscoverUserIdentitiesOperation/), [CKUserIdentity](https://developer.xamarin.com/api/type/CloudKit.CKUserIdentity/) y [CKFetchRecordZoneChangesOperation](https://developer.xamarin.com/api/type/CloudKit.CKFetchRecordZoneChangesOperation/) clases (que admiten el uso compartido de registro) en su lugar.
-- Varios [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) API (por ejemplo, suscripciones basadas en la zona y basados en consultas) han quedado en desuso. Use la [CKRecordZoneSubscription](https://developer.xamarin.com/api/type/CloudKit.CKRecordZoneSubscription/) y [CKQuerySubscription](https://developer.xamarin.com/api/type/CloudKit.CKQuerySubscription/) API en su lugar.
-- [NSPersistentStoreCoordnator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) símbolos relacionados con contenido ubicuo han quedado en desuso.
+- El `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` y `CKFetchRecordChangesOperation` clases han quedado obsoletas en directo de CloudKit para iOS 10. Use la [CKDiscoverAllUserIdentitiesOperation](xref:CloudKit.CKDiscoverUserIdentitiesOperation), [CKUserIdentity](xref:CloudKit.CKUserIdentity) y [CKFetchRecordZoneChangesOperation](xref:CloudKit.CKFetchRecordZoneChangesOperation) clases (que admiten el uso compartido de registro) en su lugar.
+- Varios [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) API (por ejemplo, suscripciones basadas en la zona y basados en consultas) han quedado en desuso. Use la [CKRecordZoneSubscription](xref:CloudKit.CKRecordZoneSubscription) y [CKQuerySubscription](xref:CloudKit.CKQuerySubscription) API en su lugar.
+- [NSPersistentStoreCoordnator](xref:CoreData.NSPersistentStoreCoordinator) símbolos relacionados con contenido ubicuo han quedado en desuso.
 - `ADBannerView`, `ADInterstitialAd` y relacionados con los símbolos en el [UIViewController](xref:UIKit.UIViewController) clase han quedado en desuso.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) símbolos relacionados con valores de punto flotante han quedado en desuso.
 - El `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` y `UIUserNotificationSettings` han quedado en desuso de las clases de UIKit. Use la [notificaciones de usuario](#user-notifications) framework en su lugar.

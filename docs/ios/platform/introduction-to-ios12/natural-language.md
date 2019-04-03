@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/20/2018
-ms.openlocfilehash: 0b3fb7d467ae64e2cbfdb61644b1537bc5ae1161
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 41f629739b06431a9b20548f61111bc31e911abb
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233073"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870045"
 ---
 # <a name="using-the-natural-language-framework-with-xamarinios"></a>Mediante el marco de lenguaje Natural con Xamarin.iOS
 
@@ -33,7 +33,7 @@ Esta aplicación de ejemplo muestra cómo usar el marco de lenguaje Natural:
 
 ## <a name="recognizing-languages"></a>Reconocimiento de idiomas
 
-El **reconocedor** pestaña de la aplicación de ejemplo muestra cómo usar un [`NLLanguageRecognizer`](https://developer.xamarin.com/api/type/NaturalLanguage.NLLanguageRecognizer/)
+El **reconocedor** pestaña de la aplicación de ejemplo muestra cómo usar un [`NLLanguageRecognizer`](xref:NaturalLanguage.NLLanguageRecognizer)
 para determinar el idioma de un bloque de texto.
 
 > [!NOTE]
@@ -43,8 +43,8 @@ para determinar el idioma de un bloque de texto.
 
 Pulse el **lenguaje** botón para identificar el idioma predominante en la entrada del usuario.
 
-El `HandleDetermineLanguageButtonTap` método de la `LanguageRecognizerViewController` usa la [`GetDominantLanguage`](https://developer.xamarin.com/api/member/NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage/)
-método de un `NLLanguageRecognizer` se debe recuperar el [`NLLanguage`](https://developer.xamarin.com/api/type/NaturalLanguage.NLLanguage/)
+El `HandleDetermineLanguageButtonTap` método de la `LanguageRecognizerViewController` usa la [`GetDominantLanguage`](xref:NaturalLanguage.NLLanguageRecognizer.GetDominantLanguage*)
+método de un `NLLanguageRecognizer` se debe recuperar el [`NLLanguage`](xref:NaturalLanguage.NLLanguage)
 para el idioma principal que se encuentra en el texto:
 
 ```csharp
@@ -63,8 +63,8 @@ partial void HandleDetermineLanguageButtonTap(UIButton sender)
 
 Pulse el **probabilidades de lenguaje** botón para recuperar una lista de las hipótesis de lenguaje para la entrada del usuario.
 
-El `HandleLanguageProbabilitiesButtonTap` método de la `LanguageRecognizerViewController` crea una instancia de la clase un `NLLanguageRecognizer` y le pide que [`Process`](https://developer.xamarin.com/api/member/NaturalLanguage.NLLanguageRecognizer.Process/)
-texto del usuario. A continuación, llama el reconocedor de lenguaje [`GetNativeLanguageHypotheses`](https://developer.xamarin.com/api/member/NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses)
+El `HandleLanguageProbabilitiesButtonTap` método de la `LanguageRecognizerViewController` crea una instancia de la clase un `NLLanguageRecognizer` y le pide que [`Process`](xref:NaturalLanguage.NLLanguageRecognizer.Process*)
+texto del usuario. A continuación, llama el reconocedor de lenguaje [`GetNativeLanguageHypotheses`](xref:NaturalLanguage.NLLanguageRecognizer.GetNativeLanguageHypotheses*)
 método, que captura un diccionario de idiomas y las probabilidades asociadas. La `LanguageRecognizerTableViewController` clase, a continuación, procesa estos lenguajes y las probabilidades.
 
 ```csharp
@@ -141,16 +141,16 @@ Posibles `NLLanguage` los valores incluyen:
 - `Urdu`
 - `Vietnamese`
 
-Una lista completa de los idiomas admitidos está disponible como parte de la [`NLLanguage`](https://developer.xamarin.com/api/type/NaturalLanguage.NLLanguage/)
+Una lista completa de los idiomas admitidos está disponible como parte de la [`NLLanguage`](xref:NaturalLanguage.NLLanguage)
 documentación de API de enumeración.
 
 ## <a name="tokenizing-text-into-words-sentences-and-paragraphs"></a>Dividir texto en tokens en palabras, frases y párrafos
 
-El **Tokenizer** pestaña de la aplicación de ejemplo muestra cómo separar un bloque de texto en palabras de sus componentes o frases con un [ `NLTokenizer` ](https://developer.xamarin.com/api/type/NaturalLanguage.NLTokenizer/).
+El **Tokenizer** pestaña de la aplicación de ejemplo muestra cómo separar un bloque de texto en palabras de sus componentes o frases con un [ `NLTokenizer` ](xref:NaturalLanguage.NLTokenizer).
 
 Pulse el **palabras** o **frases** botón para recuperar una lista de tokens. Cada token se asocia con una palabra o frase en el texto original.
 
-`ShowTokens` divide la entrada del usuario en tokens mediante una llamada a la [`GetTokens`](https://developer.xamarin.com/api/member/NaturalLanguage.NLTokenizer.GetTokens/)
+`ShowTokens` divide la entrada del usuario en tokens mediante una llamada a la [`GetTokens`](xref:NaturalLanguage.NLTokenizer.GetTokens*)
 método de un `NLTokenizer`. Este método devuelve una matriz de [`NSValue`](xref:Foundation.NSValue)
 objetos, cada ajuste una `NSRange` valor que corresponde a un token en el texto original.
 
@@ -182,7 +182,7 @@ public override UITableViewCell GetCell(UITableView tableView, NSIndexPath index
 
 ## <a name="tagging-named-entities-and-parts-of-speech"></a>Etiquetado de entidades con nombre y partes de la oración
 
-El **etiquetador** pestaña de la aplicación de ejemplo XamarinNL muestra cómo usar el [`NLTagger`](https://developer.xamarin.com/api/type/NaturalLanguage.NLTagger/)
+El **etiquetador** pestaña de la aplicación de ejemplo XamarinNL muestra cómo usar el [`NLTagger`](xref:NaturalLanguage.NLTagger)
 clase para asociar los tokens de una cadena de entrada en categorías.
 El marco de lenguaje Natural incluye compatibilidad integrada para reconocer personas, lugares, las organizaciones y partes de la oración.
 
@@ -192,11 +192,11 @@ El marco de lenguaje Natural incluye compatibilidad integrada para reconocer per
 Pulse el **entidades con nombre** o **partes de la oración** botón para capturar:
 
 - Una matriz de `NSValue` objetos, cada ajuste un `NSRange` para un token en el texto original.
-- Una matriz de [ `NLTag` ](https://developer.xamarin.com/api/type/NaturalLanguage.NLTag/) valores – categorías para el `NSValue` tokens en el mismo índice de matriz.
+- Una matriz de [ `NLTag` ](xref:NaturalLanguage.NLTag) valores – categorías para el `NSValue` tokens en el mismo índice de matriz.
 
-En `LanguageTaggerViewController`, `HandlePartsOfSpeechButtonTap` y `HandleNamedEntitiesButtonTap` cada llamada `ShowTags`, pasando a lo largo de un [ `NLTagScheme` ](https://developer.xamarin.com/api/type/NaturalLanguage.NLTagScheme/) : cualquier `NLTagScheme.LexicalClass` (para las partes de la oración) o `NLTagScheme.NameType` (para entidades con nombre).
+En `LanguageTaggerViewController`, `HandlePartsOfSpeechButtonTap` y `HandleNamedEntitiesButtonTap` cada llamada `ShowTags`, pasando a lo largo de un [ `NLTagScheme` ](xref:NaturalLanguage.NLTagScheme) : cualquier `NLTagScheme.LexicalClass` (para las partes de la oración) o `NLTagScheme.NameType` (para entidades con nombre).
 
-`ShowTags` crea un `NLTagger`, cree una instancia con una matriz de `NLTagScheme` tipos para que se va a consultar (en este caso, solo pasa del `NLTagScheme` valor). A continuación, usa la [`GetTags`](https://developer.xamarin.com/api/member/NaturalLanguage.NLTagger.GetTags/)
+`ShowTags` crea un `NLTagger`, cree una instancia con una matriz de `NLTagScheme` tipos para que se va a consultar (en este caso, solo pasa del `NLTagScheme` valor). A continuación, usa la [`GetTags`](xref:NaturalLanguage.NLTagger.GetTags*)
 método en el `NLTagger` para determinar las etiquetas pertinentes para el texto de la entrada del usuario.
 
 ```csharp
@@ -253,7 +253,7 @@ Posibles `NLTag` los valores incluyen:
 - `Word`
 - `WordJoiner`
 
-Una lista completa de etiquetas compatibles está disponible como parte de la [`NLTag`](https://developer.xamarin.com/api/type/NaturalLanguage.NLTag/)
+Una lista completa de etiquetas compatibles está disponible como parte de la [`NLTag`](xref:NaturalLanguage.NLTag)
 documentación de API de enumeración.
 
 ## <a name="related-links"></a>Vínculos relacionados

@@ -1,5 +1,5 @@
 ---
-title: ¿Cómo y cuándo debo presentar un informe de errores?
+title: ¿Cuándo y cómo se debería presentar un informe de errores?
 description: Este documento describe cuándo, dónde y cómo en el archivo de un informe de errores. También proporciona prácticas recomendadas que permiten a los ingenieros que mejor diagnosticar el problema de informe de errores.
 ms.topic: troubleshooting
 ms.prod: xamarin
@@ -7,19 +7,19 @@ ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
 author: conceptdev
 ms.author: crdun
 ms.date: 08/01/2018
-ms.openlocfilehash: f20740ff1e16187be3d3703b3da07329f6f52daf
-ms.sourcegitcommit: bf05041cc74fb05fd906746b8ca4d1403fc5cc7a
+ms.openlocfilehash: 1224d38a2230fa2f5c7ca08f6e33c5468886c206
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/04/2018
-ms.locfileid: "39514343"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855216"
 ---
-# <a name="when-and-how-should-i-file-a-bug-report"></a>¿Cómo y cuándo debo presentar un informe de errores?
+# <a name="when-and-how-should-i-file-a-bug-report"></a>¿Cuándo y cómo se debería presentar un informe de errores?
 
 > [!TIP]
 > Use la **notificar un problema** elemento de menú en Visual Studio &ndash; Esto enviará información de diagnóstico, junto con su informe de errores para ayudar a resolver el problema.
 >
-> Hay instrucciones detalladas para [Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017) y [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/report-a-problem).
+> Hay instrucciones detalladas para [2019 de Visual Studio o Visual Studio 2017](https://docs.microsoft.com/visualstudio/ide/how-to-report-a-problem-with-visual-studio) y [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/report-a-problem).
 >
 > Puede buscar los informes existentes en el [Comunidad de desarrolladores de Visual Studio](https://developercommunity.visualstudio.com/) sitio Web.
 
@@ -47,7 +47,7 @@ Puede describir cuidadosamente los síntomas visibles del problema, especialment
 
 ## <a name="additional-details"></a>Detalles adicionales
 
-1. <a name="note-1" />[*^*](#ref-1) Lo ideal es que debe incluir la descripción de los "Síntomas visibles" suficientes detalles para que otros clientes pueden confirmar si ven el mismo problema (mismos mensajes de error, la misma degradación del rendimiento, seguimiento de la misma pila de un bloqueo, _etcetera._ ). Para "precisas circunstancias", un buen ejemplo sería si puede aparecer algo como: "normalmente seleccionaré el problema 75% del tiempo, pero si se cambia esta una cosa, a continuación, puedo evitar el problema completamente". Otro ejemplo similar de "circunstancia precisa" es si el problema deja de degradar a una versión anterior de Xamarin.
+1. <a name="note-1" />[*^*](#ref-1) Lo ideal es que debe incluir la descripción de los "Síntomas visibles" suficientes detalles para que otros clientes pueden confirmar si ven el mismo problema (mismos mensajes de error, la misma degradación del rendimiento, seguimiento de la misma pila de un bloqueo, _etcetera._ ). Para "precisas circunstancias", un buen ejemplo sería si puede aparecer algo como: "Normalmente seleccionaré el problema 75% del tiempo, pero si se cambia esta una cosa, a continuación, puedo evitar el problema completamente". Otro ejemplo similar de "circunstancia precisa" es si el problema deja de degradar a una versión anterior de Xamarin.
 
 1. <a name="note-2" />[*^*](#ref-2) Como cabría esperar, fragmentos de texto de error (o cualquier otro texto descriptivo de forma exclusiva) son normalmente los mejores términos de búsqueda. Si el informe de errores existente está incompleto, son Asistente para agregar los detalles o archivo de un nuevo, mejor el informe de errores.
 

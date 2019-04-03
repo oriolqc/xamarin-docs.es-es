@@ -1,24 +1,24 @@
 ---
 title: Creación de una primera aplicación de Xamarin.Forms
 description: Guía de vídeo que muestra cómo crear una primera aplicación de Xamarin.Forms en Visual Studio.
-zone_pivot_groups: platform
+zone_pivot_groups: platform-dev16
 ms.prod: xamarin
 ms.assetid: 72B6AF82-4D98-47E5-AB54-0A35B3253468
 ms.technology: xamarin-forms
 ms.custom: video
 author: conceptdev
 ms.author: crdun
-ms.date: 02/02/2019
-ms.openlocfilehash: 8adf52d8e08dedeebae8362cf730e5dc3c7c93a9
-ms.sourcegitcommit: 9dcb7377dc92ad921285fbb857b0be13030bbea3
+ms.date: 04/02/2019
+ms.openlocfilehash: 0031cb7fb46cf5ad35872963fd3c3def0a2ae9a6
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55668568"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855307"
 ---
 # <a name="build-your-first-xamarinforms-app"></a>Creación de una primera aplicación de Xamarin.Forms
 
-_Vea este vídeo y siga el tutorial para crear una primera aplicación móvil con Xamarin.Forms._
+_Vea este vídeo y seguir el tutorial para crear su primera aplicación móvil con Xamarin.Forms._
 
 ::: zone pivot="windows"
 
@@ -26,17 +26,72 @@ _Vea este vídeo y siga el tutorial para crear una primera aplicación móvil co
 
 ## <a name="step-by-step-instructions-for-windows"></a>Instrucciones paso a paso para Windows
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![DEjemplo escargar](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+
+Siga estos pasos, junto con el vídeo anterior:
+
+1. Elija **archivo > Nuevo > proyecto...**  o presione la **crear nuevo proyecto...**  botón:
+
+    [![Ccrear un nuevo proyecto](images/win-2019/01-sml.png)](images/win-2019/01.png#lightbox)
+
+2. Busque "Xamarin" o elija **Mobile** desde el **tipo de proyecto** menú. Seleccione el **aplicación móvil (Xamarin.Forms)** tipo de proyecto:
+
+    [![Ffiltro para los proyectos de Xamarin](images/win-2019/02-sml.png)](images/win-2019/02.png#lightbox)
+
+3. Elija un nombre de proyecto &ndash; en el ejemplo se usa "AwesomeApp":
+
+    [![CElija un nombre de proyecto](images/win-2019/03-sml.png)](images/win-2019/03.png#lightbox)
+
+4. Haga clic en el **negro** tipo de proyecto y asegúrese de **Android** y **iOS** seleccionados:
+
+    [![Android e iOS, con .NET Standard](images/win-2019/04-sml.png)](images/win-2019/04.png#lightbox)
+
+5. Espere hasta que se restauren los paquetes de NuGet (aparecerá un mensaje de "Restauración completada" en la barra de estado).
+
+6. Inicie Android Emulator presionando el botón de depuración (o el elemento de menú **Depurar > Iniciar depuración**).
+
+7. Edite **MainPage.xaml**, agregando este XAML antes del final de `</StackLayout>`:
+
+    ```xaml
+    <Button Text="Click Me" Clicked="Button_Clicked" />
+    ```
+
+8. Edite **MainPage.xaml**, agregando este código al final de la clase:
+
+    ```csharp
+    int count = 0;
+    void Button_Clicked(object sender, System.EventArgs e)
+    {
+        count++;
+        ((Button)sender).Text = $"You clicked {count} times.";
+    }
+    ```
+
+9. Depurar la aplicación en Android:
+
+    ![Aplicación de Android](images/win/07-sml.png)
+
+    > [!TIP]
+    > Es posible crear y depurar la aplicación de iOS desde Visual Studio con un equipo Mac en red. Consulte las [instrucciones de configuración](~/ios/get-started/installation/windows/index.md) para obtener más información.
+
+::: zone-end
+::: zone pivot="win-vs2017"
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Building-Your-First-Android--iOS-App-in-Visual-Studio-2017/player]
+
+## <a name="step-by-step-instructions-for-windows"></a>Instrucciones paso a paso para Windows
+
+[![DEjemplo escargar](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 Siga estos pasos, junto con el vídeo anterior:
 
 1. Elija **Archivo > Nuevo > Proyecto...** o presione el botón **Crear proyecto nuevo...**  y, a continuación, seleccione **Visual C# > Multiplataforma > Aplicación móvil (Xamarin.Forms)**:
 
-    [![Aplicación móvil (Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
+    [![Mobile App (Xamarin.Forms)](images/win/01-sml.png)](images/win/01.png#lightbox)
 
 2. Asegúrese de que **Android** y **iOS** están seleccionados, con uso compartido del código **.NET Standard**:
 
-    [![Android y iOS, con .NET Standard](images/win/02-sml.png)](images/win/02.png#lightbox)
+    [![Android e iOS, con .NET Standard](images/win/02-sml.png)](images/win/02.png#lightbox)
 
 3. Espere hasta que se restauren los paquetes de NuGet (aparecerá un mensaje de "Restauración completada" en la barra de estado).
 
@@ -73,17 +128,17 @@ Siga estos pasos, junto con el vídeo anterior:
 
 ## <a name="step-by-step-instructions-for-mac"></a>Instrucciones paso a paso para Mac
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![DEjemplo escargar](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
 
 Siga estos pasos, junto con el vídeo anterior:
 
 1. Elija **Archivo > Nueva solución...** o presione el botón **Nuevo proyecto...** y, posteriormente, seleccione **Multiplataforma > Aplicación > Aplicación de Forms en blanco**:
 
-    [![Aplicación de Forms en blanco](images/01-sml.png)](images/01.png#lightbox)
+    [![BAplicación de formularios lank](images/01-sml.png)](images/01.png#lightbox)
 
 2. Asegúrese de que **Android** y **iOS** están seleccionados, con uso compartido del código **.NET Standard**:
 
-    [![Android y iOS, con .NET Standard](images/02-sml.png)](images/02.png#lightbox)
+    [![Android e iOS, con .NET Standard](images/02-sml.png)](images/02.png#lightbox)
 
 3. Restaurar paquetes de NuGet, haciendo clic en el botón derecho en la solución:
 
@@ -114,7 +169,7 @@ Siga estos pasos, junto con el vídeo anterior:
 
 8. Haga clic con el botón derecho para establecer iOS en el **Proyecto de inicio**:
 
-    [![Establecer el proyecto de inicio en iOS](images/08-sml.png)](images/08.png#lightbox)
+    [![Sel proyecto de inicio para iOS et](images/08-sml.png)](images/08.png#lightbox)
 
 9. Depurar la aplicación en iOS:
 

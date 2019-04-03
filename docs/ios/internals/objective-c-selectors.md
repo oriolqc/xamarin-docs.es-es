@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/12/2017
-ms.openlocfilehash: cf39d548dc83fae67e8703d42e9387b8f19504e6
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 15db59945f482728f760006095e294bc5628c8bd
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669758"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870183"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Selectores de Objective-C en Xamarin.iOS
 
@@ -137,15 +137,15 @@ Invocar un selector consta de tres pasos:
 
 ### <a name="selector-targets"></a>Destinos de selector
 
-Un destino de selector es una instancia de objeto o una clase de C de objetivo. Si el destino es una instancia y procede de un tipo de Xamarin.iOS enlazado, use el [ `ObjCRuntime.INativeObject.Handle` ](https://developer.xamarin.com/api/property/ObjCRuntime.INativeObject.Handle/) propiedad.
+Un destino de selector es una instancia de objeto o una clase de C de objetivo. Si el destino es una instancia y procede de un tipo de Xamarin.iOS enlazado, use el [ `ObjCRuntime.INativeObject.Handle` ](xref:ObjCRuntime.INativeObject.Handle) propiedad.
 
-Si el destino es una clase, use [ `ObjCRuntime.Class` ](https://developer.xamarin.com/api/type/ObjCRuntime.Class/) para obtener una referencia a la instancia de clase, a continuación, use el [ `Class.Handle` ](https://developer.xamarin.com/api/property/ObjCRuntime.Class.Handle/) propiedad.
+Si el destino es una clase, use [ `ObjCRuntime.Class` ](xref:ObjCRuntime.Class) para obtener una referencia a la instancia de clase, a continuación, use el [ `Class.Handle` ](xref:ObjCRuntime.Class.Handle) propiedad.
 
 ### <a name="selector-names"></a>Nombres de selector
 
 Nombres de los selectores se muestran en la documentación de Apple. Por ejemplo, [ `NSString` ](https://developer.apple.com/documentation/foundation/nsstring?language=objc) incluye [ `sizeWithFont:` ](https://developer.apple.com/documentation/foundation/nsstring/1619917-sizewithfont?language=objc) y [ `sizeWithFont:forWidth:lineBreakMode:` ](https://developer.apple.com/documentation/foundation/nsstring/1619914-sizewithfont?language=objc) selectores. Los dos puntos finales y embedded forman parte del nombre de selector y no se pueden omitir.
 
-Una vez que tenga un nombre de selector, puede crear un [ `ObjCRuntime.Selector` ](https://developer.xamarin.com/api/type/ObjCRuntime.Selector/) instancia para él.
+Una vez que tenga un nombre de selector, puede crear un [ `ObjCRuntime.Selector` ](xref:ObjCRuntime.Selector) instancia para él.
 
 ### <a name="calling-objcmsgsend"></a>Una llamada a objc_msgSend
 

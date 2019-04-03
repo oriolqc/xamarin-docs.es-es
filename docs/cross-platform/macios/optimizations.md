@@ -6,12 +6,12 @@ ms.assetid: 84B67E31-B217-443D-89E5-CFE1923CB14E
 author: conceptdev
 ms.author: crdun
 ms.date: 04/16/2018
-ms.openlocfilehash: 7d67b924253dfea66781f16b5f83007811de5909
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f1aa805b9b7a16ad1e8af573cf4170f885eb0197
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119038"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870357"
 ---
 # <a name="build-optimizations"></a>Optimizaciones de las compilaciones
 
@@ -46,7 +46,7 @@ De forma predeterminada que está habilitada para la versión se basa.
 
 El comportamiento predeterminado puede invalidarse pasando `--optimize=[+|-]remove-uithread-checks` a mmp/mtouch.
 
-[1]: https://developer.xamarin.com/api/member/UIKit.UIApplication.EnsureUIThread/
+[1]: https://docs.microsoft.com/dotnet/api/UIKit.UIApplication.EnsureUIThread
 
 ## <a name="inline-intptrsize"></a>IntPtr.Size en línea
 
@@ -80,7 +80,7 @@ Si el destino varias arquitecturas, esta optimización creará ensamblados difer
 
 El comportamiento predeterminado puede invalidarse pasando `--optimize=[+|-]inline-intptr-size` a mmp/mtouch.
 
-## <a name="inline-nsobjectisdirectbinding"></a>NSObject.IsDirectBinding en línea
+## <a name="inline-nsobjectisdirectbinding"></a>Inline NSObject.IsDirectBinding
 
 `NSObject.IsDirectBinding` es una propiedad de instancia que determina si una instancia determinada de un tipo contenedor o no (un tipo de contenedor es un tipo administrado que se asigna a un tipo nativo; para la instancia administrada `UIKit.UIView` tipo se asigna a nativo `UIView` tipo - de lo contrario es un tipo de usuario en este caso `class MyUIView : UIKit.UIView` sería un tipo de usuario).
 
@@ -200,7 +200,7 @@ if (true) {
 }
 ```
 
-en:
+into:
 
 ```csharp
 Console.WriteLine ("Doing this");
@@ -291,7 +291,7 @@ public static void RequestGuidedAccessSession (bool enable, Action<bool> complet
 }
 ```
 
-en:
+into:
 
 ```csharp
 public static void RequestGuidedAccessSession (bool enable, Action<bool> completionHandler)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: bb6b47f7936745b00e2b7e6095662a7e8273e1bd
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.openlocfilehash: 2ab0147f918b36dc47ef6eed7d9bf1b6295d9733
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677903"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870409"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introducción a las sugerencias proactivas en Xamarin.iOS
 
@@ -51,7 +51,7 @@ Por ejemplo, si el usuario escribe texto en un campo de texto marcado `UITextCon
 
 ## <a name="media-based-suggestions"></a>Sugerencias basadas en medios
 
-Si la aplicación reproduce medios mediante el [MPPlayableContentManager](https://developer.xamarin.com/api/type/MediaPlayer.MPPlayableContentManager/) API, iOS 10 permite a los usuarios ver las carátulas de álbum y reproducir archivos multimedia a través de la aplicación en la pantalla de bloqueo.
+Si la aplicación reproduce medios mediante el [MPPlayableContentManager](xref:MediaPlayer.MPPlayableContentManager) API, iOS 10 permite a los usuarios ver las carátulas de álbum y reproducir archivos multimedia a través de la aplicación en la pantalla de bloqueo.
 
 ## <a name="contextual-siri-reminders"></a>Avisos de Siri contextuales
 
@@ -63,12 +63,12 @@ Permite que la aplicación contactos (y póngase en contacto con información re
 
 ## <a name="ride-sharing-based-suggestions"></a>Sugerencias basadas en el manejo de uso compartido
 
-Si usa una aplicación de uso compartido de andar el [MKDirectionsRequest](https://developer.xamarin.com/api/type/MapKit.MKDirectionsRequest/) API, iOS 10 presentará como una opción en el selector de la aplicación a veces cuando el usuario es probable que se desee un viaje. La aplicación también debe estar registrada como una aplicación de uso compartido de andar especificando el `MKDirectionsModeRideShare` para el [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) clave en su `Info.plist` archivo.
+Si usa una aplicación de uso compartido de andar el [MKDirectionsRequest](xref:MapKit.MKDirectionsRequest) API, iOS 10 presentará como una opción en el selector de la aplicación a veces cuando el usuario es probable que se desee un viaje. La aplicación también debe estar registrada como una aplicación de uso compartido de andar especificando el `MKDirectionsModeRideShare` para el [MKDirectionsApplicationSupportedModes](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html) clave en su `Info.plist` archivo.
 
 Si la aplicación solo admite el uso compartido de andar, la sugerencia de sistema comenzaría con *"Obtener un viaje a..."*, si se admiten otros tipos de dirección de enrutamiento (por ejemplo, Walking o bicicleta), el sistema usará *"Obtener indicaciones de..."*
 
 > [!IMPORTANT]
-> El [MKMapItem](https://developer.xamarin.com/api/type/MapKit.MKMapItem/) objeto que recibe la aplicación no puede incluir información de longitud y latitud y requerirán la geocodificación.
+> El [MKMapItem](xref:MapKit.MKMapItem) objeto que recibe la aplicación no puede incluir información de longitud y latitud y requerirán la geocodificación.
 
 ## <a name="implementing-proactive-suggestions"></a>Implementación de sugerencias proactivas
 
@@ -189,7 +189,7 @@ El desarrollador tendrá que asegurarse de esto es el mismo identificador de tip
 
 Con la cantidad mínima de código anterior, la aplicación ahora es capaz de aprovechar las ventajas de las tres nuevas características de iOS 10:
 
-- **Handoff**
+- **HANDOFF**
 - **Búsqueda de Spotlight**
 - **Avisos de Siri contextuales**
 

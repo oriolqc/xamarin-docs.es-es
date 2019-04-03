@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
-ms.openlocfilehash: edaf9d90e019729f69f721c0a92826c0148db8df
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 5611d673ecc7af896fd3a9e566e184e408b6b367
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669652"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870097"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Botones de acción de notificación dinámico de Xamarin.iOS
 
@@ -131,15 +131,15 @@ propiedad para obtener acceso y modificar los botones de acción de la notificac
 En la aplicación de ejemplo, el controlador de vista de la extensión de contenido notificación modifica los botones de acción sólo al responder a una derivación de un botón de acción ya existente.
 
 > [!NOTE]
-> Una extensión de contenido puede responder a un toque el botón acción en su controlador de vista de notificación [ `DidReceiveNotificationResponse` ](https://developer.xamarin.com/api/member/UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse/) método, que se declara como parte de [IUNNotificationContentExtension](https://developer.xamarin.com/api/type/UserNotificationsUI.IUNNotificationContentExtension/).
+> Una extensión de contenido puede responder a un toque el botón acción en su controlador de vista de notificación [ `DidReceiveNotificationResponse` ](xref:UserNotificationsUI.UNNotificationContentExtension_Extensions.DidReceiveNotificationResponse*) método, que se declara como parte de [IUNNotificationContentExtension](xref:UserNotificationsUI.IUNNotificationContentExtension).
 >
 > Aunque comparte un nombre con el `DidReceiveNotificationResponse` método [se ha descrito anteriormente](#in-app-handling-of-notification-action-buttons), se trata de un método diferente.
 >
-> Después de una extensión de contenido de notificación termina de procesar solo pulsar un botón, puede elegir si desea indicar a la aplicación principal para controlar ese toque el botón mismo o no. Para ello, debe pasar un valor apropiado de [UNNotificationContentExtensionResponseOption](https://developer.xamarin.com/api/type/UserNotificationsUI.UNNotificationContentExtensionResponseOption/) a su controlador de finalización:
+> Después de una extensión de contenido de notificación termina de procesar solo pulsar un botón, puede elegir si desea indicar a la aplicación principal para controlar ese toque el botón mismo o no. Para ello, debe pasar un valor apropiado de [UNNotificationContentExtensionResponseOption](xref:UserNotificationsUI.UNNotificationContentExtensionResponseOption) a su controlador de finalización:
 >
-> - [`Dismiss`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.Dismiss/) indica que se debe descartar la interfaz de notificación, y que la aplicación principal no es necesario controlar el toque el botón.
-> - [`DismissAndForwardAction`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.DismissAndForwardAction/) indica que se debe descartar la interfaz de notificación y que la aplicación principal también debe controlar la derivación de botón.
-> - [`DoNotDismiss`](https://developer.xamarin.com/api/field/UserNotificationsUI.UNNotificationContentExtensionResponseOption.DoNotDismiss/) indica que no se debe descartar la interfaz de notificación, y que la aplicación principal no es necesario controlar el toque el botón.
+> - `Dismiss` indica que se debe descartar la interfaz de notificación, y que la aplicación principal no es necesario controlar el toque el botón.
+> - `DismissAndForwardAction` indica que se debe descartar la interfaz de notificación y que la aplicación principal también debe controlar la derivación de botón.
+> - `DoNotDismiss` indica que no se debe descartar la interfaz de notificación, y que la aplicación principal no es necesario controlar el toque el botón.
 
 La extensión de contenido `DidReceiveNotificationResponse` método determina qué botón de acción que se ha punteado, gira la imagen en la interfaz de la notificación y muestra u oculta una **restablecer** botón de acción:
 

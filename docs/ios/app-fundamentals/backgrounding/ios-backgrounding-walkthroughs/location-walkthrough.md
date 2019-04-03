@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: b857ee97951f0abfdf8e082ca9a826d5580d24ab
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: fa8a48e165764a449af4bc5414d2e66aecea8269
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669198"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870149"
 ---
 # <a name="walkthrough---background-location-in-xamarinios"></a>Tutorial: ubicación en segundo plano en Xamarin.iOS
 
@@ -72,7 +72,7 @@ En este tutorial se explica alguna clave procesamiento en segundo plano de los c
     }
     ```
 
-    El código anterior establece un número de propiedades y los permisos en el [CLLocationManager](https://developer.xamarin.com/api/type/CoreLocation.CLLocationManager/) clase:
+    El código anterior establece un número de propiedades y los permisos en el [CLLocationManager](xref:CoreLocation.CLLocationManager) clase:
 
     - `PausesLocationUpdatesAutomatically` : Es un valor booleano que se puede establecer dependiendo de si se permite el sistema para pausar las actualizaciones de ubicación. En algunos dispositivos el valor predeterminado es `true`, que puede hacer que el dispositivo seguir recibiendo actualizaciones de ubicación después de unos 15 minutos de fondo.
     - `RequestAlwaysAuthorization` -Se debe pasar este método para proporcionar al usuario de la aplicación la opción para permitir que la ubicación para tener acceso en segundo plano. `RequestWhenInUseAuthorization` También se puede pasar si desea dar al usuario la opción para permitir que la ubicación para tener acceso solo cuando la aplicación está en primer plano.
