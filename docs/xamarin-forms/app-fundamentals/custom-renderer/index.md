@@ -1,14 +1,19 @@
 ---
 title: Representadores personalizados de Xamarin.Forms
-description: 'Los representadores personalizados permiten que los desarrolladores reemplacen la representación de los controles nativos en cada plataforma, para personalizar la apariencia y el comportamiento de los controles de Xamarin.Forms.'
+description: Los representadores personalizados permiten que los desarrolladores reemplacen la representación de los controles nativos en cada plataforma, para personalizar la apariencia y el comportamiento de los controles de Xamarin.Forms.
 ms.prod: xamarin
 ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
+ms.openlocfilehash: 3a59cbb8385fe201d7eef086092c9b393a21cc71
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666386"
 ---
-
 # <a name="xamarinforms-custom-renderers"></a>Representadores personalizados de Xamarin.Forms
 
 _Las interfaces de usuario de Xamarin.Forms se representan mediante los controles nativos de la plataforma de destino, lo que permite que las aplicaciones de Xamarin.Forms conserven la apariencia adecuada para cada plataforma. Los representadores personalizados permiten que los desarrolladores reemplacen este proceso para personalizar la apariencia y el comportamiento de los controles de Xamarin.Forms en cada plataforma._
