@@ -1,14 +1,19 @@
 ---
 title: Aspectos básicos de la aplicación de Xamarin.Forms
-description: 'Exploramos los aspectos básicos del desarrollo de aplicaciones de Xamarin.Forms, incluidos todos los conceptos principales necesarios, a través de toques finales, como la localización y accesibilidad.'
+description: Exploramos los aspectos básicos del desarrollo de aplicaciones de Xamarin.Forms, incluidos todos los conceptos principales necesarios, a través de toques finales, como la localización y accesibilidad.
 ms.prod: xamarin
 ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/08/2018
+ms.openlocfilehash: 2178c9f4115c42396635e22cb0688695b590ec26
+ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55292160"
 ---
-
 # <a name="xamarinforms-application-fundamentals"></a>Aspectos básicos de la aplicación de Xamarin.Forms
 
 ## <a name="accessibilityaccessibilityindexmd"></a>[Accesibilidad](accessibility/index.md)

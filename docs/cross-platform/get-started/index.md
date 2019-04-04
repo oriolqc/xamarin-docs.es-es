@@ -1,14 +1,19 @@
 ---
 title: Introducción a Xamarin
-description: 'Este documento contiene vínculos a diversas guías en las que se describe cómo empezar el desarrollo de Xamarin. En el contenido vinculado se explica cómo compilar una primera aplicación, se proporciona una introducción general al desarrollo móvil y se echa un vistazo al aprendizaje con Xamarin University.'
+description: Este documento contiene vínculos a diversas guías en las que se describe cómo empezar el desarrollo de Xamarin. En el contenido vinculado se explica cómo compilar una primera aplicación, se proporciona una introducción general al desarrollo móvil y se echa un vistazo al aprendizaje con Xamarin University.
 ms.prod: xamarin
 ms.assetid: 13FCAE14-E73D-C1A4-1D22-A433AD827C07
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 04/10/2017
+ms.openlocfilehash: b9b48d83199f83c69a42785d4d0c4008a5c6a5e1
+ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57197399"
 ---
-
 # <a name="building-mobile-apps"></a>Creación de aplicaciones móviles
 
 Antes de comenzar, consulte los [requisitos del sistema](requirements.md) y las [instrucciones de instalación](~/get-started/installation/index.md) para asegurarse de que todo está listo.

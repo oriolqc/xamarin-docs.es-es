@@ -1,14 +1,19 @@
 ---
 title: Autenticación de huella digital
-description: 'Esta guía describe cómo agregar autenticación con huella digital, introducida en Android 6.0 a una aplicación de Xamarin.Android.'
+description: Esta guía describe cómo agregar autenticación con huella digital, introducida en Android 6.0 a una aplicación de Xamarin.Android.
 ms.prod: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
+ms.openlocfilehash: 70e12abdf61a6a0bfb36d281bcaa6214199e567d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57667339"
 ---
-
 # <a name="fingerprint-authentication"></a>Autenticación de huella digital
 
 _Esta guía describe cómo agregar autenticación con huella digital, introducida en Android 6.0 a una aplicación de Xamarin.Android._

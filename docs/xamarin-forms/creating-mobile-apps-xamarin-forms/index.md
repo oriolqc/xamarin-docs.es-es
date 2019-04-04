@@ -1,14 +1,19 @@
 ---
 title: Crear aplicaciones móviles con Xamarin.Forms libro
-description: 'Obtenga información sobre el desarrollo de aplicaciones de Xamarin.Forms con la versión de la creación de Mobile Apps con book de Xamarin.Forms, de Charles Petzold electrónica.'
+description: Obtenga información sobre el desarrollo de aplicaciones de Xamarin.Forms con la versión de la creación de Mobile Apps con book de Xamarin.Forms, de Charles Petzold electrónica.
 ms.prod: xamarin
 ms.assetid: CDE99818-689B-4376-9DC4-C4102AC0F931
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
+ms.openlocfilehash: c05bc88ef6d182f282decedff3e4fb03b4bb96b1
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671759"
 ---
-
 # <a name="creating-mobile-apps-with-xamarinforms-book"></a>Crear aplicaciones móviles con Xamarin.Forms libro
 
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples)

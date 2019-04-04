@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
+ms.openlocfilehash: 0f4ec3cfd7c154e43db9f8e123259317c0d17e21
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670537"
 ---
-
 # <a name="binding-a-java-library"></a>Enlace de una biblioteca Java
 
 _La Comunidad de Android tiene muchas bibliotecas de Java que puede usar en la aplicación; Esta guía explica cómo incorporar bibliotecas de Java en su aplicación de Xamarin.Android mediante la creación de una biblioteca de enlaces._

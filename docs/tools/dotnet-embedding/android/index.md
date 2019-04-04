@@ -5,8 +5,13 @@ ms.assetid: EB2F967A-6D95-4448-994B-6D5C7BFAC2C7
 author: lobrien
 ms.author: laobri
 ms.date: 06/15/2018
+ms.openlocfilehash: 6917267896cff796af4e5cff095720eaeccc7652
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57671188"
 ---
-
 # <a name="net-embedding-on-android"></a>.NET incrustación en Android
 
 En algunos casos, es posible que desea agregar una biblioteca de .NET Xamarin a un proyecto de Android nativo existente. Para ello, puede usar el [Embeddinator 4000](https://www.nuget.org/packages/Embeddinator-4000/) herramienta para convertir la biblioteca de .NET en una biblioteca nativa que se puede incorporar en una aplicación nativa de Android basadas en Java.

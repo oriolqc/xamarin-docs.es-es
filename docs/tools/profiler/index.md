@@ -1,13 +1,18 @@
 ---
 title: Generador de perfiles de Xamarin
-description: 'Esta guía explora las características clave de la Profiler de Xamarin. Aspecto que en los generadores de perfiles, generación de perfiles y cuándo debe usarse y en un flujo de trabajo estándar para generar perfiles de aplicaciones de Xamarin.'
+description: Esta guía explora las características clave de la Profiler de Xamarin. Aspecto que en los generadores de perfiles, generación de perfiles y cuándo debe usarse y en un flujo de trabajo estándar para generar perfiles de aplicaciones de Xamarin.
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
+ms.openlocfilehash: 15739ff191953e4730d44c6ad9f63dccb9a0017e
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668418"
 ---
-
 # <a name="xamarin-profiler"></a>Generador de perfiles de Xamarin
 
 _Esta guía explora las características clave de la Profiler de Xamarin. Aspecto que en los generadores de perfiles, generación de perfiles y cuándo debe usarse y en un flujo de trabajo estándar para generar perfiles de aplicaciones de Xamarin._

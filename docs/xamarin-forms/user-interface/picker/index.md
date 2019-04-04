@@ -1,14 +1,19 @@
 ---
 title: Selector de Xamarin.Forms
-description: 'El selector de Xamarin.Forms muestra una breve lista de elementos, desde el que el usuario puede seleccionar un elemento. En este artículo se explica cómo usar la clase del selector para seleccionar un elemento de texto de una lista de datos.'
+description: El selector de Xamarin.Forms muestra una breve lista de elementos, desde el que el usuario puede seleccionar un elemento. En este artículo se explica cómo usar la clase del selector para seleccionar un elemento de texto de una lista de datos.
 ms.prod: xamarin
 ms.assetid: D4815A4B-104B-4294-951B-BD8F2EC33C86
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
+ms.openlocfilehash: dc39fd9c129fb63fa4a3a73b15aea4204a38cdbd
+ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57557274"
 ---
-
 # <a name="xamarinforms-picker"></a>Selector de Xamarin.Forms
 
 _La vista de selector es un control para seleccionar un elemento de texto en una lista de datos._

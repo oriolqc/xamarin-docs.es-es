@@ -1,14 +1,19 @@
 ---
 title: Cómo usar Google Maps y la ubicación con Xamarin.Android
-description: 'En este artículo se explica cómo usar mapas y ubicación con Xamarin.Android. Abarca todo, desde el aprovechamiento de la aplicación como mapas integrados para usar la versión 2 asigna Android API de Google directamente.'
+description: En este artículo se explica cómo usar mapas y ubicación con Xamarin.Android. Abarca todo, desde el aprovechamiento de la aplicación como mapas integrados para usar la versión 2 asigna Android API de Google directamente.
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
+ms.openlocfilehash: 78908e1b1ad6d3f572ce45c8189d8f4ee48ad6ee
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666396"
 ---
-
 # <a name="how-to-use-google-maps-and-location-with-xamarinandroid"></a>Cómo usar Google Maps y la ubicación con Xamarin.Android
 
 _En este artículo se explica cómo usar mapas y ubicación con Xamarin.Android. Abarca todo, desde el aprovechamiento de la aplicación como mapas integrados para usar la versión 2 asigna Android API de Google directamente._

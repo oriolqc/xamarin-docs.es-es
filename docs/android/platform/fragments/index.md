@@ -1,14 +1,19 @@
 ---
 title: Fragmentos
-description: 'Android 3.0 presentó fragmentos, que muestra cómo admitir diseños más flexibles de los muchas diferentes tamaños de pantalla que se encuentra en teléfonos y tabletas. En este artículo tratará cómo usar fragmentos para desarrollar aplicaciones de Xamarin.Android y también cómo admitir fragmentos en Android dispositivos (API nivel 11) 3.0.'
+description: Android 3.0 presentó fragmentos, que muestra cómo admitir diseños más flexibles de los muchas diferentes tamaños de pantalla que se encuentra en teléfonos y tabletas. En este artículo tratará cómo usar fragmentos para desarrollar aplicaciones de Xamarin.Android y también cómo admitir fragmentos en Android dispositivos (API nivel 11) 3.0.
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
+ms.openlocfilehash: 4347ee40b0b72cc2d182ba1ef8f111212dd0ee47
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669731"
 ---
-
 # <a name="fragments"></a>Fragmentos
 
 _Android 3.0 presentó fragmentos, que muestra cómo admitir diseños más flexibles de los muchas diferentes tamaños de pantalla que se encuentra en teléfonos y tabletas. En este artículo tratará cómo usar fragmentos para desarrollar aplicaciones de Xamarin.Android y también cómo admitir fragmentos en Android dispositivos (API nivel 11) 3.0._

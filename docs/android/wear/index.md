@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/16/2018
+ms.openlocfilehash: ca8b554e03c4e8339922ca99619245a45bd08e1d
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57669094"
 ---
-
 # <a name="android-wear"></a>Android Wear
 
 Android Wear es una versión de Android que está diseñado para dispositivos portátiles, como relojes inteligentes. Esta sección incluye instrucciones sobre cómo instalar y configurar las herramientas necesarias para el desarrollo de desgaste, un tutorial paso a paso para crear el primer dispositivo Wear y una lista de ejemplos que se pueden consultar para crear su propia desgaste de las aplicaciones.

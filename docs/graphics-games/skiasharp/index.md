@@ -8,8 +8,13 @@ ms.assetid: A8A61421-4544-422A-A7E0-9355C67DF21E
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
+ms.openlocfilehash: 2aebc28f322bbd7b77a2dbee78e496ec628e5c74
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57666394"
 ---
-
 # <a name="2d-drawing-with-skiasharp"></a>Dibujo de SkiaSharp con 2D
 
 SkiaSharp proporciona una poderosa API de C#  para hacer gráficos en 2D. Funciona con [biblioteca Skia de Google ](http://skia.org), la misma biblioteca que se utiliza en las pilas de gráficos de Google Chrome, Firefox y de Android.

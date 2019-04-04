@@ -1,14 +1,19 @@
 ---
 title: Introducción a MonoTouch.Dialog para Xamarin.iOS
-description: 'Este documento describe MonoTouch.Dialog (destino maestro. (D), un marco para el desarrollo de la interfaz de usuario rápida y declarativa con Xamarin.iOS. Describe cómo usar las APIs MonoTouch.Dialog para crear una interfaz en código o JSON y usar características como la incorporación de cambios para actualizar, búsqueda, carga de la imagen de fondo y mucho más.'
+description: Este documento describe MonoTouch.Dialog (destino maestro. (D), un marco para el desarrollo de la interfaz de usuario rápida y declarativa con Xamarin.iOS. Describe cómo usar las APIs MonoTouch.Dialog para crear una interfaz en código o JSON y usar características como la incorporación de cambios para actualizar, búsqueda, carga de la imagen de fondo y mucho más.
 ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
+ms.openlocfilehash: d5dda3cc22d91248cc31cc526e898a5eabbbefd0
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670162"
 ---
-
 # <a name="introduction-to-monotouchdialog-for-xamarinios"></a>Introducción a MonoTouch.Dialog para Xamarin.iOS
 
 MonoTouch.Dialog, que se conoce como el destino maestro. D para abreviar, es un Kit de herramientas de desarrollo de la interfaz de usuario rápida que permite a los desarrolladores crear pantallas de la aplicación y la navegación mediante información en lugar de la tarea de creación de controladores de vistas, tablas, etcetera. Por lo tanto, proporciona una simplificación significativa de reducción de desarrollo y el código de interfaz de usuario. Por ejemplo, considere la siguiente captura de pantalla:
