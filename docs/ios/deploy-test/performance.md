@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 01/29/2016
-ms.openlocfilehash: 1f7f2af19c6faad32f94d82dbc58f140f45dea5d
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 2cacf429efb11c5dd19276d62b997acae767516e
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671123"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870396"
 ---
 # <a name="xamarinios-performance"></a>Rendimiento de Xamarin.iOS
 
@@ -101,11 +101,11 @@ container.AddSubview (new MyView (container));
 
 Aquí, el objeto contenido no mantiene activo el elemento primario. Pero el elemento primario mantiene activo el elemento secundario durante la llamada realizada a `container.AddSubView`.
 
-Esto también ocurre en las API de iOS que usan el modelo de delegado o de origen de datos, donde una clase del mismo nivel contiene la implementación; por ejemplo, al establecer la propiedad [`Delegate`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.Delegate/)
-o [`DataSource`](https://developer.xamarin.com/api/property/MonoTouch.UIKit.UITableView.DataSource/)
+Esto también ocurre en las API de iOS que usan el modelo de delegado o de origen de datos, donde una clase del mismo nivel contiene la implementación; por ejemplo, al establecer la propiedad [`Delegate`](xref:UIKit.UITableView.Delegate*)
+o [`DataSource`](xref:UIKit.UITableView.DataSource*)
 de la clase [`UITableView`](xref:UIKit.UITableView).
 
-En el caso de las clases que se crean exclusivamente para la implementación de un protocolo, por ejemplo, [`IUITableViewDataSource`](https://developer.xamarin.com/api/type/MonoTouch.UIKit.IUITableViewDataSource/), en lugar de crear una subclase, puede implementar la interfaz de la clase, invalidar el método y asignar la propiedad `DataSource` a `this`.
+En el caso de las clases que se crean exclusivamente para la implementación de un protocolo, por ejemplo, [`IUITableViewDataSource`](xref:UIKit.IUITableViewDataSource), en lugar de crear una subclase, puede implementar la interfaz de la clase, invalidar el método y asignar la propiedad `DataSource` a `this`.
 
 #### <a name="weak-attribute"></a>Atributo Weak
 
@@ -278,7 +278,7 @@ En concreto, el simulador no simula de ningún modo las restricciones de memoria
 
 Los juegos tienden a tener bucles estrechos para ejecutar la lógica del juego y actualizar la pantalla. Las velocidades de fotogramas típicas oscilan entre 30 y 60 fotogramas por segundo. Algunos desarrolladores creen que deben actualizar la pantalla tantas veces como sea posible por segundo, combinando la simulación del juego con las actualizaciones de la pantalla, y es posible que se vean tentados a superar los 60 fotogramas por segundo.
 
-Pero el servidor de pantalla realiza las actualizaciones de pantalla a un límite máximo de 60 veces por segundo. Por tanto, intentar actualizar la pantalla más rápidamente que este límite puede provocar que la pantalla se entrecorte y se produzcan micro-parpadeos. Es mejor estructurar el código para que las actualizaciones de pantalla se sincronicen con la actualización en pantalla. Esto puede lograrse mediante el uso de la clase [`CoreAnimation.CADisplayLink`](https://developer.xamarin.com/api/type/CoreAnimation.CADisplayLink/), que es un temporizador adecuado para la visualización y juegos que se ejecuta a 60 fotogramas por segundo.
+Pero el servidor de pantalla realiza las actualizaciones de pantalla a un límite máximo de 60 veces por segundo. Por tanto, intentar actualizar la pantalla más rápidamente que este límite puede provocar que la pantalla se entrecorte y se produzcan micro-parpadeos. Es mejor estructurar el código para que las actualizaciones de pantalla se sincronicen con la actualización en pantalla. Esto puede lograrse mediante el uso de la clase [`CoreAnimation.CADisplayLink`](xref:CoreAnimation.CADisplayLink), que es un temporizador adecuado para la visualización y juegos que se ejecuta a 60 fotogramas por segundo.
 
 ## <a name="avoid-core-animation-transparency"></a>Evitar la transparencia de la animación principal
 
