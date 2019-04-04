@@ -7,8 +7,13 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
+ms.openlocfilehash: 9425b26b5cc8fcd9b8a80df422d932c96d52889b
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870370"
 ---
-
 # <a name="xamarinios-api-design"></a>Diseño de API de Xamarin.iOS
 
 Además de la bibliotecas de clases Base que forman parte de Mono, core [Xamarin.iOS](http://www.xamarin.com/iOS) se suministra con enlaces para iOS varias API para permitir a los desarrolladores crear aplicaciones nativas de iOS con Mono.
@@ -80,7 +85,7 @@ Xamarin.iOS incluye una serie de ensamblados que conforman el *Xamarin.iOS perfi
 
 #### <a name="objcruntime"></a>ObjCRuntime
 
-El [ObjCRuntime](https://developer.xamarin.com/api/namespace/ObjCRuntime/) espacio de nombres permite a los desarrolladores mundos entre C# y Objective-C.
+El [ObjCRuntime](xref:ObjCRuntime) espacio de nombres permite a los desarrolladores mundos entre C# y Objective-C.
 Se trata de un nuevo enlace, diseñado específicamente para iOS, según la experiencia de cacao # y Gtk #.
 
 <a name="MonoTouch.Foundation" />
@@ -201,13 +206,13 @@ Delegados de C# se proporcionan para las operaciones comunes. Consulte la [deleg
 
 #### <a name="opengles"></a>OpenGL es
 
-Para OpenGLES, distribuimos un [versión modificada](https://developer.xamarin.com/api/namespace/OpenTK/) de la [OpenTK](http://www.opentk.com/) API, un enlace orientada a objetos con OpenGL que se ha modificado para utilizar CoreGraphics los tipos de datos y estructuras, así como exponer solo los funcionalidad que está disponible en iOS.
+Para OpenGLES, distribuimos un [versión modificada](xref:OpenTK) de la [OpenTK](http://www.opentk.com/) API, un enlace orientada a objetos con OpenGL que se ha modificado para utilizar CoreGraphics los tipos de datos y estructuras, así como exponer solo los funcionalidad que está disponible en iOS.
 
-Funcionalidad de OpenGL es 1.1 está disponible a través del tipo ES11.GL, documentado [aquí](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES11.GL/) tipo.
+Funcionalidad de OpenGL es 1.1 está disponible a través del tipo ES11.GL, documentado [aquí](xref:OpenTK.Graphics.ES11.GL) tipo.
 
-Funcionalidad de OpenGL es 2.0 está disponible a través del tipo ES20.GL, documentado [aquí](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES20.GL/) tipo.
+Funcionalidad de OpenGL es 2.0 está disponible a través del tipo ES20.GL, documentado [aquí](xref:OpenTK.Graphics.ES20.GL) tipo.
 
-Funcionalidad de OpenGL es 3.0 está disponible a través del tipo ES30.GL, documentado [aquí](https://developer.xamarin.com/api/type/OpenTK.Graphics.ES30.GL/) tipo.
+Funcionalidad de OpenGL es 3.0 está disponible a través del tipo ES30.GL, documentado [aquí](xref:OpenTK.Graphics.ES30.GL) tipo.
 
 
 ### <a name="binding-design"></a>Diseño de enlace

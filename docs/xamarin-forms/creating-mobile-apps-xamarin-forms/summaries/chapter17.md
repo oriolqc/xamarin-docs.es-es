@@ -1,22 +1,22 @@
 ---
 title: Resumen del capítulo 17. Dominar la cuadrícula
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del capítulo 17. Dominar la cuadrícula'
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 17. Dominar la cuadrícula'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 71EDEF9C-4220-4D2E-A235-43F1EC8746C1
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
-ms.openlocfilehash: dc9d57c0edf50f7fe5a7241e64cc727413004252
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050902"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58869993"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Resumen del capítulo 17. Dominar la cuadrícula
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
+[![DEjemplo escargar](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
 
 El [ `Grid` ](xref:Xamarin.Forms.Grid) es un mecanismo eficaz de diseño que organiza sus elementos secundarios en filas y columnas de celdas. Al contrario que el código HTML similar `table` elemento, el `Grid` es únicamente para fines de diseño en lugar de presentación.
 
@@ -68,11 +68,11 @@ El `RowDefinitions` y `ColumnDefinitions` colecciones no son estrictamente neces
 
 ### <a name="the-grid-in-code"></a>La cuadrícula en el código
 
-El [ **GridCodeDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) ejemplo muestra cómo crear y rellenar un `Grid` en el código. Puede establecer las propiedades adjuntas para cada elemento secundario directamente o indirectamente mediante una llamada adicional `Add` métodos como [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) definido por el [Grid.IGridList<T> ](https://developer.xamarin.com/api/type/Xamarin.Forms.Grid+IGridList%3CT%3E/) interfaz.
+El [ **GridCodeDemo** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridCodeDemo) ejemplo muestra cómo crear y rellenar un `Grid` en el código. Puede establecer las propiedades adjuntas para cada elemento secundario directamente o indirectamente mediante una llamada adicional `Add` métodos como [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) definido por el [Grid.IGridList<T> ](xref:Xamarin.Forms.Grid.IGridList`1) interfaz.
 
 ### <a name="the-grid-bar-chart"></a>El gráfico de barras de la cuadrícula
 
-El [ **GridBarChart** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridBarChart) ejemplo muestra cómo agregar varios `BoxView` elementos a un `Grid` con la mayor parte [ `AddHorizontal` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.AddHorizontal/p/System.Collections.Generic.IEnumerable%7BXamarin.Forms.View%7D/) método. De forma predeterminada, estos `BoxView` elementos tienen el mismo ancho. El alto de cada `BoxView` , a continuación, se puede controlar que se asemeje a un gráfico de barras.
+El [ **GridBarChart** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17/GridBarChart) ejemplo muestra cómo agregar varios `BoxView` elementos a un `Grid` con la mayor parte [ `AddHorizontal` ](xref:Xamarin.Forms.Grid.IGridList`1.AddHorizontal*) método. De forma predeterminada, estos `BoxView` elementos tienen el mismo ancho. El alto de cada `BoxView` , a continuación, se puede controlar que se asemeje a un gráfico de barras.
 
 El `Grid` en el **GridBarChart** recursos compartidos de ejemplo una `AbsoluteLayout` primario con un inicialmente invisible `Frame`. El programa también establece una `TapGestureRecognizer` en cada `BoxView` para usar el `Frame` para mostrar información acerca de la barra de derivados.
 
@@ -108,4 +108,4 @@ Inicializa el programa `Slider` elementos a un intervalo de 0 a 255 y utiliza lo
 
 - [Capítulo 17 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf)
 - [Ejemplos de capítulo 17](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
-- [Grid](~/xamarin-forms/user-interface/layouts/grid.md)
+- [Cuadrícula](~/xamarin-forms/user-interface/layouts/grid.md)

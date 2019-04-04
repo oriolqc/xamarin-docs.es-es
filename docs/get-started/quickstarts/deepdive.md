@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
-ms.openlocfilehash: 8674ef47867acf3bca4d05fd6628a58e2f9ad90e
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 67b189254cc08fac0323b7df5fcbab5abd994c05
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329369"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855021"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Análisis detallado de inicio rápido de Xamarin.Forms
 
@@ -80,6 +80,7 @@ El proyecto también consta de varios archivos:
 - **Models\Note.cs** : esta clase define un `Note` modelo cuyas instancias almacenan datos sobre todas las notas de la aplicación.
 - **App.xaml**: el marcado XAML para la clase `App`, que define un diccionario de recursos para la aplicación.
 - **App.xaml.cs**: el código subyacente para la clase `App`, que es el responsable de crear instancias de la primera página que se mostrarán mediante la aplicación en cada plataforma, y para controlar los eventos del ciclo de vida de la aplicación.
+- **AssemblyInfo.cs** : este archivo contiene un atributo de aplicación sobre el proyecto, que se aplica en el nivel de ensamblado.
 - **NotesPage.xaml** – marcado el XAML para el `NotesPage` (clase), que define la interfaz de usuario para la página que aparece cuando se inicia la aplicación.
 - **NotesPage.xaml.cs** : el código subyacente para el `NotesPage` (clase), que contiene la lógica de negocios que se ejecuta cuando el usuario interactúa con la página.
 - **NoteEntryPage.xaml** – marcado el XAML para el `NoteEntryPage` (clase), que define la interfaz de usuario para la página que aparece cuando el usuario escribe una nota.
@@ -106,9 +107,7 @@ Para maximizar la reutilización del código de inicio, las aplicaciones de Xama
 
 ```csharp
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
-[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Notes
 {
     public partial class App : Application
@@ -123,7 +122,17 @@ namespace Notes
 }
 ```
 
-Este código establece la `MainPage` propiedad de la `App` clase a un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) instancia cuyo contenido es un `NotesPage` instancia. Además, el atributo [`XamlCompilation`](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) se activa en el compilador XAML, de manera que XAML se compile directamente en lenguaje intermedio. Para obtener más información, consulte [Compilación XAML](~/xamarin-forms/xaml/xamlc.md).
+Este código establece la `MainPage` propiedad de la `App` clase a un [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) instancia cuyo contenido es un `NotesPage` instancia.
+
+Además, el **AssemblyInfo.cs** archivo contiene un atributo de aplicación único, que se aplica en el nivel de ensamblado:
+
+```csharp
+using Xamarin.Forms.Xaml;
+
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+```
+
+El [ `XamlCompilation` ](xref:Xamarin.Forms.Xaml.XamlCompilationAttribute) atributo activa en el compilador XAML, por lo que se compila XAML directamente en lenguaje intermedio. Para obtener más información, consulte [Compilación XAML](~/xamarin-forms/xaml/xamlc.md).
 
 ## <a name="launching-the-application-on-each-platform"></a>Iniciando la aplicación en cada plataforma
 
@@ -412,7 +421,7 @@ async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
 En el `OnNoteAddedClicked` método, que se ejecuta cuando se agrega una nota nueva a la aplicación, el [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) de `NoteEntryPage` se establece en un nuevo `Note` instancia. En el `OnListViewItemSelected` método, que se ejecuta cuando se selecciona una nota existente en el [ `ListView` ](xref:Xamarin.Forms.ListView), el `BindingContext` de la `NoteEntryPage` está establecido en seleccionado `Note` instancia, que se accede mediante el [ `e.SelectedItem` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) propiedad.
 
 > [!IMPORTANT]
-> Aunque la propiedad [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de cada objeto de *destino* se puede establecer de manera individual, no es necesario hacerlo. `BindingContext` es una propiedad especial que heredan todos sus elementos secundarios. Por lo tanto, cuando el `BindingContext` en el [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) está establecido en un `Note` instancia, todos los elementos secundarios de la `ContentPage` tienen el mismo `BindingContext`y se puede enlazar a propiedades públicas de la `Note`objeto.
+> Aunque la propiedad [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de cada objeto de *destino* se puede establecer de manera individual, no es necesario hacerlo. `BindingContext` es una propiedad especial que hereda todos sus elementos secundarios. Por lo tanto, cuando el `BindingContext` en el [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) está establecido en un `Note` instancia, todos los elementos secundarios de la `ContentPage` tienen el mismo `BindingContext`y se puede enlazar a propiedades públicas de la `Note`objeto.
 
 El [ `Editor` ](xref:Xamarin.Forms.Editor) en `NoteEntryPage` , a continuación, se enlaza a la `Text` propiedad de la `Note` objeto:
 
@@ -525,9 +534,9 @@ También es recomendable el libro de Charles Petzold titulado [_Creating Mobile 
 
 - [Lenguaje de marcado de aplicaciones eXtensible (XAML)](~/xamarin-forms/xaml/index.md)
 - [Enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Controls Reference](~/xamarin-forms/user-interface/controls/index.md) (Referencia de controles)
+- [Controls Reference (Referencia de controles)](~/xamarin-forms/user-interface/controls/index.md)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/) (Ejemplos de Xamarin.Forms)
-- [Getting Started Samples](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/) (Ejemplos de introducción)
-- [Referencia de la API de Xamarin.Forms](xref:Xamarin.Forms)
+- [Xamarin.Forms Samples (Ejemplos de Xamarin.Forms)](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Getting Started Samples (Ejemplos de introducción)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/)
+- [Referencia de API de Xamarin.Forms](xref:Xamarin.Forms)
 - [Aprendizaje autoguiado gratuito (vídeo)](https://university.xamarin.com/self-guided/)
