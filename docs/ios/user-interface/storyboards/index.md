@@ -1,14 +1,19 @@
 ---
 title: Introducción a guiones gráficos en Xamarin.iOS
-description: 'Este documento proporciona una introducción a guiones gráficos en Xamarin.iOS. Describe cómo un guión gráfico se usa para definir una interfaz de usuario, los objetos Segue y cómo usar el Diseñador de iOS para editar archivos de guión gráfico.'
+description: Este documento proporciona una introducción a guiones gráficos en Xamarin.iOS. Describe cómo un guión gráfico se usa para definir una interfaz de usuario, los objetos Segue y cómo usar el Diseñador de iOS para editar archivos de guión gráfico.
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
+ms.openlocfilehash: f24be635afcba181efcab85d81a984d93dae4bc8
+ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58071117"
 ---
-
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a guiones gráficos en Xamarin.iOS
 
 En esta guía se explica qué un guión gráfico es y examine algunos de los componentes claves: por ejemplo, los objetos Segue. Veremos cómo se pueden crear y usar, los guiones gráficos y qué ventajas tienen un desarrollador.

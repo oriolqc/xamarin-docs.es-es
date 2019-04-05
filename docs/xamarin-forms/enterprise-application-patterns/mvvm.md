@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: c947ec0c2fffbd9038ee58211c77bd947c445b6e
-ms.sourcegitcommit: 6e955f6851794d58334d41f7a550d93a47e834d2
+ms.openlocfilehash: 87448c556c66ea086db70699848227e1f671792b
+ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38998447"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59019391"
 ---
 # <a name="the-model-view-viewmodel-pattern"></a>El patrón Model-View-ViewModel
 
 La experiencia del desarrollador Xamarin.Forms normalmente implica la creación de una interfaz de usuario en XAML y, a continuación, agregar código subyacente que opera en la interfaz de usuario. Como las aplicaciones se modifican y aumentan de tamaño y ámbito, pueden surgir problemas de mantenimiento complejas. Estos problemas incluyen el estrecho acoplamiento entre los controles de interfaz de usuario y la lógica de negocios, lo que aumenta el costo de realizar las modificaciones de la interfaz de usuario y la dificultad de este tipo de código de pruebas unitarias.
 
-El patrón Model-View-ViewModel (MVVM) ayuda a separar la lógica de negocios y la presentación de una aplicación desde su interfaz de usuario (UI). Mantener una separación clara entre la interfaz de usuario y la lógica de aplicación ayuda a abordar numerosos problemas de desarrollo y hacer más fácil probar una aplicación, mantener y evolucionar. Se pueden mejorar enormemente las oportunidades de reutilización de código y permite a los desarrolladores y diseñadores de interfaz de usuario más colaboran fácilmente al desarrollar sus respectivos partes de una aplicación.
+El patrón Modelo-Vista-Modelo de vista (MVVM) ayuda a separar la lógica de negocios y presentación de una aplicación de su interfaz de usuario. Mantener una separación clara entre la lógica de aplicación y la interfaz de usuario ayuda a abordar numerosos problemas de desarrollo y puede hacer que probar una aplicación, mantenerla y desarrollarla sea más fácil. También puede mejorar enormemente las oportunidades de reutilización de código y permite a los desarrolladores y diseñadores de interfaz de usuario colaborar con mayor facilidad al desarrollar sus respectivos elementos de una aplicación.
 
 ## <a name="the-mvvm-pattern"></a>El patrón MVVM
 
@@ -26,9 +26,9 @@ Hay tres componentes principales en el patrón MVVM: el modelo, la vista y el mo
 
 ![](mvvm-images/mvvm.png "El patrón MVVM")
 
-**Figura 2-1**: el patrón MVVM
+**Figura 2-1**: El patrón MVVM
 
-Además de comprender las responsabilidades de cada componentes, también es importante entender cómo interactúan entre sí. En un nivel alto, la vista "conoce" el modelo de vista y el modelo de vista "conoce" el modelo, pero el modelo no es consciente de que el modelo de vista y el modelo de vista no es consciente de la vista. Por lo tanto, el modelo de vista aísla la vista del modelo y permite que el modelo evolucionar independientemente de la vista.
+Además de comprender las responsabilidades de cada componente, también es importante entender cómo interactúan entre sí. En un nivel alto, la vista "conoce" el modelo de vista y el modelo de vista "conoce" el modelo, pero el modelo no es consciente de que el modelo de vista y el modelo de vista no es consciente de la vista. Por lo tanto, el modelo de vista aísla la vista del modelo y permite que el modelo evolucionar independientemente de la vista.
 
 Las ventajas de usar el patrón MVVM son los siguientes:
 
@@ -92,11 +92,11 @@ Las secciones siguientes tratan los enfoques principales para conectar los model
 Es el enfoque más sencillo para que la vista crear instancias mediante declaración a su modelo de vista correspondiente en XAML. Cuando se crea la vista, también se construirá el objeto de modelo de vista correspondiente. Este método se muestra en el ejemplo de código siguiente:
 
 ```xaml
-<ContentPage ... xmlns:local="clr-namespace:eShop">  
-    <ContentPage.BindingContext>  
-        <local:LoginViewModel />  
-    </ContentPage.BindingContext>  
-    ...  
+<ContentPage ... xmlns:local="clr-namespace:eShop">  
+    <ContentPage.BindingContext>  
+        <local:LoginViewModel />  
+    </ContentPage.BindingContext>  
+    ...  
 </ContentPage>
 ```
 
@@ -109,10 +109,10 @@ Esta construcción declarativa y la asignación de la vista del modelo de vista 
 Una vista puede tener código en el archivo de código subyacente que da como resultado el modelo de vista que se asigna a su [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) propiedad. A menudo, esto se logra en el constructor de la vista, tal como se muestra en el ejemplo de código siguiente:
 
 ```csharp
-public LoginView()  
+public LoginView()  
 {  
-    InitializeComponent();  
-    BindingContext = new LoginViewModel(navigationService);  
+    InitializeComponent();  
+    BindingContext = new LoginViewModel(navigationService);  
 }
 ```
 
@@ -135,27 +135,27 @@ viewModelBase:ViewModelLocator.AutoWireViewModel="true"
 El `AutoWireViewModel` es una propiedad enlazable que se inicializa en false y, cuando se cambia su valor el `OnAutoWireViewModelChanged` se llama al controlador de eventos. Este método resuelve el modelo de vista para la vista. En el ejemplo de código siguiente se muestra la forma de conseguirlo:
 
 ```csharp
-private static void OnAutoWireViewModelChanged(BindableObject bindable, object oldValue, object newValue)  
+private static void OnAutoWireViewModelChanged(BindableObject bindable, object oldValue, object newValue)  
 {  
-    var view = bindable as Element;  
-    if (view == null)  
-    {  
-        return;  
-    }  
+    var view = bindable as Element;  
+    if (view == null)  
+    {  
+        return;  
+    }  
 
-    var viewType = view.GetType();  
-    var viewName = viewType.FullName.Replace(".Views.", ".ViewModels.");  
-    var viewAssemblyName = viewType.GetTypeInfo().Assembly.FullName;  
-    var viewModelName = string.Format(  
-        CultureInfo.InvariantCulture, "{0}Model, {1}", viewName, viewAssemblyName);  
+    var viewType = view.GetType();  
+    var viewName = viewType.FullName.Replace(".Views.", ".ViewModels.");  
+    var viewAssemblyName = viewType.GetTypeInfo().Assembly.FullName;  
+    var viewModelName = string.Format(  
+        CultureInfo.InvariantCulture, "{0}Model, {1}", viewName, viewAssemblyName);  
 
-    var viewModelType = Type.GetType(viewModelName);  
-    if (viewModelType == null)  
-    {  
-        return;  
-    }  
-    var viewModel = _container.Resolve(viewModelType);  
-    view.BindingContext = viewModel;  
+    var viewModelType = Type.GetType(viewModelName);  
+    if (viewModelType == null)  
+    {  
+        return;  
+    }  
+    var viewModel = _container.Resolve(viewModelType);  
+    view.BindingContext = viewModel;  
 }
 ```
 
@@ -189,18 +189,18 @@ Las aplicaciones deben llevar a cabo para el uso correcto de notificación de ca
 La aplicación móvil de eShopOnContainers utiliza la `ExtendedBindableObject` clase para proporcionar notificaciones de cambio, que se muestra en el ejemplo de código siguiente:
 
 ```csharp
-public abstract class ExtendedBindableObject : BindableObject  
+public abstract class ExtendedBindableObject : BindableObject  
 {  
-    public void RaisePropertyChanged<T>(Expression<Func<T>> property)  
-    {  
-        var name = GetMemberInfo(property).Name;  
-        OnPropertyChanged(name);  
-    }  
+    public void RaisePropertyChanged<T>(Expression<Func<T>> property)  
+    {  
+        var name = GetMemberInfo(property).Name;  
+        OnPropertyChanged(name);  
+    }  
 
-    private MemberInfo GetMemberInfo(Expression expression)  
-    {  
-        ...  
-    }  
+    private MemberInfo GetMemberInfo(Expression expression)  
+    {  
+        ...  
+    }  
 }
 ```
 
@@ -209,17 +209,17 @@ Del Xamarin.Form [ `BindableObject` ](xref:Xamarin.Forms.BindableObject) la clas
 Cada clase de modelo de vista en la aplicación móvil de eShopOnContainers se deriva de la `ViewModelBase` (clase), que a su vez se deriva de la `ExtendedBindableObject` clase. Por lo tanto, cada clase de modelo de vista usa la `RaisePropertyChanged` método en el `ExtendedBindableObject` clase para proporcionar una notificación de cambio de propiedad. En el ejemplo de código siguiente se muestra cómo la aplicación móvil de eShopOnContainers invoca la notificación de cambio de propiedad mediante el uso de una expresión lambda:
 
 ```csharp
-public bool IsLogin  
+public bool IsLogin  
 {  
-    get  
-    {  
-        return _isLogin;  
-    }  
-    set  
-    {  
-        _isLogin = value;  
-        RaisePropertyChanged(() => IsLogin);  
-    }  
+    get  
+    {  
+        return _isLogin;  
+    }  
+    set  
+    {  
+        _isLogin = value;  
+        RaisePropertyChanged(() => IsLogin);  
+    }  
 }
 ```
 
@@ -242,7 +242,7 @@ Dentro de un modelo de vista, debe ser un objeto de tipo [ `Command` ](xref:Xama
 El siguiente código muestra cómo un [ `Command` ](xref:Xamarin.Forms.Command) se construye la instancia, que representa un comando register, especificando un delegado para el `Register` ver el método de modelo:
 
 ```csharp
-public ICommand RegisterCommand => new Command(Register);
+public ICommand RegisterCommand => new Command(Register);
 ```
 
 El comando se expone a la vista a través de una propiedad que devuelve una referencia a un `ICommand`. Cuando el `Execute` se llama al método en el [ `Command` ](xref:Xamarin.Forms.Command) objeto, simplemente reenvía la llamada al método en el modelo de vista a través del delegado que se especificó en el `Command` constructor.
@@ -250,13 +250,13 @@ El comando se expone a la vista a través de una propiedad que devuelve una refe
 Un método asincrónico se puede invocar un comando mediante el uso de la `async` y `await` palabras clave al especificar el comando `Execute` delegar. Esto indica que la devolución de llamada es un `Task` y se debe esperar. Por ejemplo, el siguiente código muestra cómo un [ `Command` ](xref:Xamarin.Forms.Command) instancia, que representa un comando de inicio de sesión, se construye especificando un delegado para el `SignInAsync` ver el método de modelo:
 
 ```csharp
-public ICommand SignInCommand => new Command(async () => await SignInAsync());
+public ICommand SignInCommand => new Command(async () => await SignInAsync());
 ```
 
 Se pueden pasar parámetros a la `Execute` y `CanExecute` acciones mediante la [ `Command<T>` ](xref:Xamarin.Forms.Command) clase para crear instancias del comando. Por ejemplo, el siguiente código muestra cómo un `Command<T>` instancia se utiliza para indicar que el `NavigateAsync` método requerirá un argumento de tipo `string`:
 
 ```csharp
-public ICommand NavigateCommand => new Command<string>(NavigateAsync);
+public ICommand NavigateCommand => new Command<string>(NavigateAsync);
 ```
 
 Tanto en el [ `Command` ](xref:Xamarin.Forms.Command) y [ `Command<T>` ](xref:Xamarin.Forms.Command) clases, el delegado para el `CanExecute` método en cada constructor es opcional. Si no se especifica un delegado, el `Command` devolverá `true` para `CanExecute`. Sin embargo, el modelo de vista puede indicar un cambio en el comando `CanExecute` estado mediante una llamada a la `ChangeCanExecute` método en el `Command` objeto. Esto hace que el `CanExecuteChanged` evento. Los controles en la interfaz de usuario que están enlazados al comando, a continuación, actualizará su estado habilitado para reflejar la disponibilidad de los comandos enlazados a datos.
@@ -266,11 +266,11 @@ Tanto en el [ `Command` ](xref:Xamarin.Forms.Command) y [ `Command<T>` ](xref:Xa
 El siguiente ejemplo de código muestra cómo un [ `Grid` ](xref:Xamarin.Forms.Grid) en el `LoginView` enlaza a la `RegisterCommand` en el `LoginViewModel` clase mediante el uso de un [ `TapGestureRecognizer` ](xref:Xamarin.Forms.TapGestureRecognizer) instancia:
 
 ```xaml
-<Grid Grid.Column="1" HorizontalOptions="Center">  
-    <Label Text="REGISTER" TextColor="Gray"/>  
-    <Grid.GestureRecognizers>  
-        <TapGestureRecognizer Command="{Binding RegisterCommand}" NumberOfTapsRequired="1" />  
-    </Grid.GestureRecognizers>  
+<Grid Grid.Column="1" HorizontalOptions="Center">  
+    <Label Text="REGISTER" TextColor="Gray"/>  
+    <Grid.GestureRecognizers>  
+        <TapGestureRecognizer Command="{Binding RegisterCommand}" NumberOfTapsRequired="1" />  
+    </Grid.GestureRecognizers>  
 </Grid>
 ```
 
@@ -280,7 +280,7 @@ Un parámetro de comando también se puede, opcionalmente, definir mediante el [
 
 ### <a name="implementing-behaviors"></a>Implementación de comportamientos
 
-Comportamientos permiten la funcionalidad que se agregará a los controles de interfaz de usuario sin tener que subclase ellos. En su lugar, la funcionalidad se implementa en una clase de comportamiento y se adjunta al control como si fuera parte del propio control. Los comportamientos le permiten implementar el código que normalmente tendría que escribir como código subyacente, ya que interactúa directamente con la API de control, de tal manera que puede ser concisa adjunta al control y empaqueta para su reutilización en más de una vista o la aplicación. En el contexto de MVVM, los comportamientos son un enfoque útil para conectar los controles a los comandos.
+Comportamientos permiten la funcionalidad que se agregará a los controles de interfaz de usuario sin tener que subclase ellos. En su lugar, la función se implementa en una clase de comportamiento y se asocia al control como si fuera parte de este. Los comportamientos le permiten implementar el código que normalmente tendría que escribir como código subyacente, ya que interactúa directamente con la API de control, de tal manera que puede ser concisa adjunta al control y empaqueta para su reutilización en más de una vista o la aplicación. En el contexto de MVVM, los comportamientos son un enfoque útil para conectar los controles a los comandos.
 
 Un comportamiento que se adjunta a un control a través de las propiedades adjuntas se conoce como un *adjunta comportamiento*. El comportamiento, a continuación, puede usar la API expuesta del elemento al que se adjunta para agregar funcionalidad a ese control u otros controles, en el árbol visual de la vista. La aplicación móvil de eShopOnContainers contiene el `LineColorBehavior` (clase), que es un comportamiento asociado. Para obtener más información acerca de este comportamiento, consulte [mostrar errores de validación](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors).
 
@@ -288,49 +288,49 @@ Un comportamiento de Xamarin.Forms es una clase que deriva el [ `Behavior` ](xre
 
 En la aplicación móvil de eShopOnContainers, el `BindableBehavior<T>` clase se deriva de la [ `Behavior<T>` ](xref:Xamarin.Forms.Behavior`1) clase. El propósito de la `BindableBehavior<T>` clase es proporcionar una clase base para los comportamientos de Xamarin.Forms que requieren la [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) del comportamiento para establecerse en el control adjunto.
 
-El `BindableBehavior<T>` clase proporciona un reemplazable `OnAttachedTo` método que establece el [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) del comportamiento y un reemplazable `OnDetachingFrom` método que limpia la `BindingContext`. Además, la clase almacena una referencia al control adjunto en el `AssociatedObject` propiedad.
+El `BindableBehavior<T>` clase proporciona un reemplazable `OnAttachedTo` método que establece el [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) del comportamiento y un reemplazable `OnDetachingFrom` método que limpia la `BindingContext`. Además, la clase almacena una referencia al control adjunto en la propiedad `AssociatedObject`.
 
 La aplicación móvil de eShopOnContainers incluye un `EventToCommandBehavior` (clase), que se ejecuta un comando como respuesta a la que se produzca un evento. Esta clase se deriva de la `BindableBehavior<T>` clase para que el comportamiento se puede enlazar a y ejecutar un `ICommand` especificado por un `Command` propiedad cuando se consume el comportamiento. En el ejemplo de código siguiente se muestra la clase `EventToCommandBehavior`:
 
 ```csharp
-public class EventToCommandBehavior : BindableBehavior<View>  
+public class EventToCommandBehavior : BindableBehavior<View>  
 {  
-    ...  
-    protected override void OnAttachedTo(View visualElement)  
-    {  
-        base.OnAttachedTo(visualElement);  
+    ...  
+    protected override void OnAttachedTo(View visualElement)  
+    {  
+        base.OnAttachedTo(visualElement);  
 
-        var events = AssociatedObject.GetType().GetRuntimeEvents().ToArray();  
-        if (events.Any())  
-        {  
-            _eventInfo = events.FirstOrDefault(e => e.Name == EventName);  
-            if (_eventInfo == null)  
-                throw new ArgumentException(string.Format(  
-                        "EventToCommand: Can't find any event named '{0}' on attached type",   
-                        EventName));  
+        var events = AssociatedObject.GetType().GetRuntimeEvents().ToArray();  
+        if (events.Any())  
+        {  
+            _eventInfo = events.FirstOrDefault(e => e.Name == EventName);  
+            if (_eventInfo == null)  
+                throw new ArgumentException(string.Format(  
+                        "EventToCommand: Can't find any event named '{0}' on attached type",   
+                        EventName));  
 
-            AddEventHandler(_eventInfo, AssociatedObject, OnFired);  
-        }  
-    }  
+            AddEventHandler(_eventInfo, AssociatedObject, OnFired);  
+        }  
+    }  
 
-    protected override void OnDetachingFrom(View view)  
-    {  
-        if (_handler != null)  
-            _eventInfo.RemoveEventHandler(AssociatedObject, _handler);  
+    protected override void OnDetachingFrom(View view)  
+    {  
+        if (_handler != null)  
+            _eventInfo.RemoveEventHandler(AssociatedObject, _handler);  
 
-        base.OnDetachingFrom(view);  
-    }  
+        base.OnDetachingFrom(view);  
+    }  
 
-    private void AddEventHandler(  
-            EventInfo eventInfo, object item, Action<object, EventArgs> action)  
-    {  
-        ...  
-    }  
+    private void AddEventHandler(  
+            EventInfo eventInfo, object item, Action<object, EventArgs> action)  
+    {  
+        ...  
+    }  
 
-    private void OnFired(object sender, EventArgs eventArgs)  
-    {  
-        ...  
-    }  
+    private void OnFired(object sender, EventArgs eventArgs)  
+    {  
+        ...  
+    }  
 }
 ```
 
@@ -344,13 +344,13 @@ El `EventToCommandBehavior` es especialmente útil para asociar un comando a un 
 
 ```xaml
 <ListView>  
-    <ListView.Behaviors>  
-        <behaviors:EventToCommandBehavior             
-            EventName="ItemTapped"  
-            Command="{Binding OrderDetailCommand}"  
-            EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}" />  
-    </ListView.Behaviors>  
-    ...  
+    <ListView.Behaviors>  
+        <behaviors:EventToCommandBehavior             
+            EventName="ItemTapped"  
+            Command="{Binding OrderDetailCommand}"  
+            EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}" />  
+    </ListView.Behaviors>  
+    ...  
 </ListView>
 ```
 
@@ -360,7 +360,7 @@ Para obtener más información acerca de los comportamientos, consulte [comporta
 
 ## <a name="summary"></a>Resumen
 
-El patrón Model-View-ViewModel (MVVM) ayuda a separar la lógica de negocios y la presentación de una aplicación desde su interfaz de usuario (UI). Mantener una separación clara entre la interfaz de usuario y la lógica de aplicación ayuda a abordar numerosos problemas de desarrollo y hacer más fácil probar una aplicación, mantener y evolucionar. Se pueden mejorar enormemente las oportunidades de reutilización de código y permite a los desarrolladores y diseñadores de interfaz de usuario más colaboran fácilmente al desarrollar sus respectivos partes de una aplicación.
+El patrón Modelo-Vista-Modelo de vista (MVVM) ayuda a separar la lógica de negocios y presentación de una aplicación de su interfaz de usuario. Mantener una separación clara entre la lógica de aplicación y la interfaz de usuario ayuda a abordar numerosos problemas de desarrollo y puede hacer que probar una aplicación, mantenerla y desarrollarla sea más fácil. También puede mejorar enormemente las oportunidades de reutilización de código y permite a los desarrolladores y diseñadores de interfaz de usuario colaborar con mayor facilidad al desarrollar sus respectivos elementos de una aplicación.
 
 Mediante el MVVM de patrón, la interfaz de usuario de la aplicación y la lógica de presentación y empresarial subyacente se divide en tres clases distintas: la vista, que encapsula la interfaz de usuario y la interfaz de usuario lógica; el modelo de vista, que encapsula la lógica de presentación y el estado; y el modelo, que encapsula la lógica de negocios y datos de la aplicación.
 

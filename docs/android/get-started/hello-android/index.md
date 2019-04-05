@@ -1,6 +1,6 @@
 ---
-title: 'Hello, Android'
-description: 'Esta guía en dos partes le ayudará a compilar su primera aplicación de Xamarin.Android mediante Visual Studio para Mac o Visual Studio y a comprender los aspectos básicos del desarrollo de aplicaciones de Android con Xamarin. A lo largo del proceso, le presentaremos las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.Android.'
+title: Hello, Android
+description: Esta guía en dos partes le ayudará a compilar su primera aplicación de Xamarin.Android mediante Visual Studio para Mac o Visual Studio y a comprender los aspectos básicos del desarrollo de aplicaciones de Android con Xamarin. A lo largo del proceso, le presentaremos las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación de Xamarin.Android.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: C6474F70-3617-46AD-93E8-BE66878EEC17
@@ -8,8 +8,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/02/2016
+ms.openlocfilehash: fbe62f08a096a5a48fe96a3445e09eac9c0485fd
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668262"
 ---
-
 # <a name="hello-android"></a>Hello, Android
 
 _En esta guía de dos partes, compilará su primera aplicación Xamarin.Android mediante Visual Studio para Mac o Visual Studio y adquirirá una comprensión de los aspectos básicos del desarrollo de aplicaciones Android con Xamarin. A lo largo del proceso, se presentan las herramientas, los conceptos y los pasos necesarios para compilar e implementar una aplicación Xamarin.Android._

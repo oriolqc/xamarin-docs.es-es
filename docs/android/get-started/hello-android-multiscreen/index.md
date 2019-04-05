@@ -1,6 +1,6 @@
 ---
-title: 'Multipantalla de Hello, Android'
-description: 'En esta guía de dos partes, ampliaremos la aplicación Phoneword que ha creado en la guía Hello, Android a fin de controlar una segunda pantalla. A lo largo de esta guía se ofrecen los componentes básicos de la aplicación Android y se profundiza en la arquitectura Android a medida que conoce mejor la estructura y la funcionalidad de la aplicación Android.'
+title: Multipantalla de Hello, Android
+description: En esta guía de dos partes, ampliaremos la aplicación Phoneword que ha creado en la guía Hello, Android a fin de controlar una segunda pantalla. A lo largo de esta guía se ofrecen los componentes básicos de la aplicación Android y se profundiza en la arquitectura Android a medida que conoce mejor la estructura y la funcionalidad de la aplicación Android.
 ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D82EC193-2CB7-44C3-8688-0CEBDF60C3D6
@@ -8,8 +8,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/02/2016
+ms.openlocfilehash: c67d2be3d0bb1a159d234e815b16a988b93087d4
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57670900"
 ---
-
 # <a name="hello-android-multiscreen"></a>Multipantalla de Hello, Android
 
 _En esta guía de dos partes, ampliará la aplicación Phoneword que ha creado en la guía Hello, Android a fin de administrar una segunda pantalla. A lo largo de esta guía se ofrecen los componentes básicos de la aplicación Android y se profundiza en la arquitectura Android a medida que conoce mejor la estructura y la funcionalidad de la aplicación Android._

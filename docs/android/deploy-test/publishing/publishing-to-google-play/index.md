@@ -6,8 +6,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
+ms.openlocfilehash: 8ba0d14fff22d38d9e1a1d062fcce3f9ace88dea
+ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57668860"
 ---
-
 # <a name="publishing-to-google-play"></a>Publicación en Google Play
 
 Aunque hay muchos mercados de aplicaciones para distribuirlas, Google Play es posiblemente el mayor almacén y el más visitado del mundo para aplicaciones Android. Google Play proporciona una plataforma única para distribuir, publicitar, vender y analizar las ventas de una aplicación Android.

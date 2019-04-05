@@ -8,6 +8,12 @@ ms.author: crdun
 ms.date: 09/17/2018
 hide_comments: true
 hideEdit: true
+ms.openlocfilehash: ddf80fb650127b91bef89792fc622267ad1ed0d4
+ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329408"
 ---
 # <a name="certified-consulting-partners-to-deliver-mobile-solutions"></a>Certificados asociados de consultoría para entregar soluciones móviles
 

@@ -6,13 +6,13 @@ ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/28/2019
-ms.openlocfilehash: fa93cb86867cb8539fb7ce4db45ad4751bfe6e04
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.date: 04/03/2019
+ms.openlocfilehash: 1f6bdfb1aed87f8a2dabdc0efcea3a1b8bf2ecf2
+ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58854229"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "59019352"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>Lenguaje de marcado de aplicaciones eXtensible (XAML)
 
@@ -25,6 +25,10 @@ _XAML es un lenguaje de marcado declarativo que puede utilizarse para definir la
 > [!NOTE]
 > Pruebe el [versión preliminar de XAML estándar](standard/index.md)
 
+## [<a name="xaml-controls"></a>Controles XAML](xaml-controls.md)
+
+Todas las vistas que se definen en Xamarin.Forms pueden hacer referencia a partir de los archivos XAML.
+
 <a name="xaml" />
 
 ## [<a name="xaml-basics"></a>XAML Basics (Conceptos básicos de XAML)](xaml-basics/index.md)
@@ -35,7 +39,7 @@ XAML permite a los desarrolladores definir interfaces de usuario en aplicaciones
 
 XAML se puede compilar de forma opcional directamente en lenguaje intermedio (IL) con el compilador XAML (XAMLC). En este artículo se describe cómo utilizar XAMLC y sus ventajas.
 
-## [<a name="xaml-previewer"></a>Controlador de vista previa XAML](xaml-previewer/index.md)
+## [<a name="xaml-previewer"></a>Controlador de vista previa de XAML](xaml-previewer/index.md)
 
 El [controlador de vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) presenta una vista previa dinámica de una página side-by-side con el marcado XAML, lo que permite ver la interfaz de usuario representada a medida que escribe.
 
@@ -43,11 +47,11 @@ El [controlador de vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer/ind
 
 XAML usa la `xmlns` atributo XML para las declaraciones de espacio de nombres. Este artículo presenta la sintaxis del espacio de nombres XAML y muestra cómo declarar un espacio de nombres XAML para tener acceso a un tipo.
 
-## [<a name="xaml-custom-namespace-schemas"></a>Esquemas XAML Namespace personalizado](custom-namespace-schemas.md)
+## [<a name="xaml-custom-namespace-schemas"></a>Esquemas de espacio de nombres personalizado XAML](custom-namespace-schemas.md)
 
 Se puede definir un esquema del espacio de nombres personalizado XAML con la clase `XmlnsDefinitionAttribute`, que especifica una asignación entre una dirección URL personalizada y uno o varios espacios de nombres CLR. El esquema del espacio de nombres personalizado se puede usar en las declaraciones del espacio de nombres XAML.
 
-## [<a name="xaml-namespace-recommended-prefixes"></a>XAML Namespace recomienda prefijos](custom-prefix.md)
+## [<a name="xaml-namespace-recommended-prefixes"></a>Prefijos recomendados de espacio de nombres de XAML](custom-prefix.md)
 
 La `XmlnsPrefixAttribute` clase puede ser usada por los autores de controles para especificar un prefijo recomendado para asociar a un espacio de nombres XAML para el uso XAML.
 
@@ -75,6 +79,6 @@ Una propiedad adjunta es un tipo especial de propiedad enlazable, definido en un
 
 Recursos XAML son definiciones de objetos que se pueden usar más de una vez. Un [ `ResourceDictionary` ](xref:Xamarin.Forms.ResourceDictionary) permite que los recursos definidos en una sola ubicación y volver a utilizarse en toda una aplicación de Xamarin.Forms. En este artículo se muestra cómo crear y consumir un `ResourceDictionary`y cómo combinar una `ResourceDictionary` a otro.
 
-## [<a name="loading-xaml-at-runtime"></a>Cargar XAML en tiempo de ejecución](runtime-load.md)
+## [<a name="loading-xaml-at-runtime"></a>Carga de XAML en tiempo de ejecución](runtime-load.md)
 
 XAML se puede cargar y analizar en tiempo de ejecución con el [ `LoadFromXaml` ](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) métodos de extensión.

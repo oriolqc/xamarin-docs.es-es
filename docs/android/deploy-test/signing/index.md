@@ -7,8 +7,13 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/02/2018
+ms.openlocfilehash: 5bdd95409e71955b4f1549eece42b15cee38131a
+ms.sourcegitcommit: a7170494e1975f0f1be547a45444752fd8e57819
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58506998"
 ---
-
 # <a name="signing-the-android-application-package"></a>Firmar el paquete de aplicación de Android
 
 En [Preparar una aplicación para su lanzamiento](~/android/deploy-test/release-prep/index.md), ha usado **Archive Manager** para compilar la aplicación y colocarla en un archivo para su firma y publicación. En esta sección, obtendrá información sobre cómo crear una identidad de firma de Android, crear un nuevo certificado de firma para aplicaciones de Android y publicar la aplicación archivada *ad hoc* en disco. Se puede realizar una instalación de prueba del APK resultante en dispositivos Android sin pasar por una tienda de aplicaciones.
