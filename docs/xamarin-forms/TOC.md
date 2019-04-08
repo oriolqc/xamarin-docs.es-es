@@ -9,6 +9,7 @@
 ### [Inicio rápido para estilos](~/get-started/quickstarts/styling.md)
 ### [Profundización](~/get-started/quickstarts/deepdive.md)
 ## [XAML](xaml/index.md)
+### [Controles de XAML](xaml/xaml-controls.md)
 ### [XAML Basics (Conceptos básicos de XAML)](xaml/xaml-basics/index.md)
 #### [Parte 1. Introducción a XAML](xaml/xaml-basics/get-started-with-xaml.md)
 #### [Parte 2. Sintaxis XAML esencial](xaml/xaml-basics/essential-xaml-syntax.md)

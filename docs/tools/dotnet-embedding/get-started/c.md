@@ -17,7 +17,7 @@ ms.locfileid: "58854917"
 
 ## <a name="requirements"></a>Requisitos
 
-Para usar la inserción de .NET con c#, necesitará un equipo que ejecuta Mac o Windows:
+Para usar la inserción de .NET con C#, necesitará un equipo que ejecuta Mac o Windows:
 
 ### <a name="macos"></a>macOS
 
