@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
-ms.openlocfilehash: 680fe2f8980d66b6dc80ec9a98898f9925df25f4
-ms.sourcegitcommit: f3f28722198e172d81c16bdeab0cb0a581a08dd0
+ms.openlocfilehash: a3704552c8fc147588919ecdde2813e831237d89
+ms.sourcegitcommit: cc750b0d8086ed14f84cd8eb9a06f45c719b3cf4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59239906"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Pila HttpClient y Selector de implementación de SSL/TLS para Android
 
@@ -25,22 +25,22 @@ Deben hacer referencia a los proyectos de la **System.Net.Http** ensamblado.
 >
 > Para asegurarse de que las aplicaciones seguirán funcionando con estos servidores y servicios, **debe actualizar los proyectos de Xamarin con el `Android HttpClient` y `Native TLS 1.2` configuración que se muestra a continuación, a continuación, volver a compilar y volver a implementar sus aplicaciones** a su usuarios.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
 
 La configuración de Xamarin.Android HttpClient es en **opciones de proyecto > Opciones de Android**, a continuación, haga clic en el **opciones avanzadas** botón.
 
 Se trata de la configuración recomendada para la compatibilidad con TLS 1.2:
 
-[![Opciones de Android de Visual Studio](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
+[![VOpciones de Android Studio isual](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
 La configuración de Xamarin.Android HttpClient es en **opciones de proyecto > compilar > compilación de Android** configuración y haga clic en el **General** ficha.
 
 Se trata de la configuración recomendada para la compatibilidad con TLS 1.2:
 
-[![Visual Studio para Mac opciones de Android](http-stack-images/android-mac-sml.png)](http-stack-images/android-mac.png#lightbox)
+[![Visual Studio para Mac Android opciones](http-stack-images/android-mac-sml.png)](http-stack-images/android-mac.png#lightbox)
 
 -----
 
@@ -58,7 +58,7 @@ AndroidClientHandler es el controlador nuevo que delega en el código de Java/SO
 
 #### <a name="cons"></a>Desventajas
 
-- Requiere Android 5.0 o posterior.
+- Requiere Android 4.1 o posterior.
 - Algunas características de HttpClient/opciones no están disponibles.
 
 ### <a name="managed-httpclienthandler"></a>Administrado (HttpClientHandler)
@@ -82,11 +82,11 @@ Controlador administrado es el controlador de HttpClient totalmente administrado
 La elección entre `AndroidClientHandler` y `HttpClientHandler` depende de las necesidades de su aplicación. `AndroidClientHandler` se recomienda para la compatibilidad de seguridad más actualizada, por ejemplo.
 
 -   Necesita que admitir TLS 1.2 +.
--   La aplicación tiene como destino Android 5.0 (API 21) o una versión posterior.
+-   Destina la aplicación (API 16) de Android 4.1 o posterior.
 -   Necesita TLS 1.2 + soporte para `HttpClient`.
 -   No necesita compatibilidad con TLS 1.2 + `WebClient`.
 
-`HttpClientHandler` es una buena elección si necesita TLS 1.2 + admite, pero debe ser compatible con versiones de Android anteriores a Android 5.0. También es una buena elección si necesita TLS 1.2 + soporte para `WebClient`.
+`HttpClientHandler` es una buena elección si necesita TLS 1.2 + admite, pero debe ser compatible con versiones de Android anteriores a Android 4.1. También es una buena elección si necesita TLS 1.2 + soporte para `WebClient`.
 
 A partir de Xamarin.Android 8.3, `HttpClientHandler` Boring SSL tiene como valor predeterminado (`btls`) como el proveedor TLS subyacente. El proveedor de TLS de SSL aburridas ofrece las siguientes ventajas:
 
@@ -107,25 +107,25 @@ Las instancias de esta clase utilizarán nativo `java.net.URLConnection` impleme
 Este fragmento de código es un ejemplo de cómo explícitamente para una única instancia de la `HttpClient` clase:
 
 ```csharp
-// Android 5.0 or higher, Xamarin.Android 6.1 or higher
+// Android 4.1 or higher, Xamarin.Android 6.1 or higher
 HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler ());
 ```
 
 > [!NOTE]
-> El dispositivo Android subyacente debe admitir TLS 1.2 (es decir. Android 5.0 y versiones posterior)
+> El dispositivo Android subyacente debe admitir TLS 1.2 (es decir. Android 4.1 y versiones posterior)
 
 
 ## <a name="ssltls-implementation-build-option"></a>Opción de compilación de implementación de SSL/TLS
 
 Esta opción de proyecto controla qué biblioteca TLS subyacente se usará en todas las solicitudes web, ambos `HttpClient` y `WebRequest`. De forma predeterminada, se selecciona TLS 1.2:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
 
-[![Cuadro combinado de implementación de TLS/SSL en Visual Studio](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png#lightbox)
+[![TCuadro de cuadro combinado de implementación LS/SSL en Visual Studio](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png#lightbox)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
-[![Cuadro combinado de implementación de TLS/SSL en Visual Studio para Mac](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png#lightbox)
+[![TCuadro combinado de la implementación de LS/SSL en Visual Studio para Mac](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png#lightbox)
 
 -----
 
@@ -169,11 +169,11 @@ Hay dos variables de entorno que están relacionados con el uso de TLS en Xamari
 
 Esta variable de entorno se establece mediante la adición de un _archivo entorno_ al proyecto. Un archivo de entorno es un archivo de texto con formato Unix con una acción de compilación **AndroidEnvironment**:
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
 
 ![Captura de pantalla de la acción de compilación AndroidEnvironment en Visual Studio.](http-stack-images/tls03-vs.png)
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
 ![Captura de pantalla de la AndroidEnvironment generar la acción en Visual Studio para Mac.](http-stack-images/tls03-xs.png)
 
