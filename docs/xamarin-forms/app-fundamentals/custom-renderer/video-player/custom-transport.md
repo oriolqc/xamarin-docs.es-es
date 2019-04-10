@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: e687a724c8455d954969f83b8ee48c87ca9dbb09
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: c6aa4aed134667f25b3822c7604b85e27a404a3a
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669783"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870162"
 ---
 # <a name="custom-video-transport-controls"></a>Controles de transporte de vídeo personalizados
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![DDescargar ejemplo(~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 Los controles de transporte de un reproductor de vídeo son los botones que realizan las funciones **Reproducir**, **Pausa** y **Detener**. Estos botones suelen identificarse con iconos conocidos en lugar de texto, y las funciones **Reproducir** y **Pausa** suelen combinarse en un mismo botón.
 
@@ -360,7 +360,7 @@ namespace FormsVideoLibrary.iOS
 }
 ```
 
-Se debe acceder a dos propiedades de `AVPlayer`: la propiedad [`Status`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.Status/) de tipo `AVPlayerStatus` y la propiedad [`TimeControlStatus`](https://developer.xamarin.com/api/property/AVFoundation.AVPlayer.TimeControlStatus/) de tipo `AVPlayerTimeControlStatus`. Tenga en cuenta que la propiedad `Element` (que es el objeto `VideoPlayer`) tiene que transmitir a `IVideoPlayerController` para establecer la propiedad `Status`.
+Se debe acceder a dos propiedades de `AVPlayer`: la propiedad [`Status`](xref:AVFoundation.AVPlayer.Status*) de tipo `AVPlayerStatus` y la propiedad [`TimeControlStatus`](xref:AVFoundation.AVPlayer.TimeControlStatus*) de tipo `AVPlayerTimeControlStatus`. Tenga en cuenta que la propiedad `Element` (que es el objeto `VideoPlayer`) tiene que transmitir a `IVideoPlayerController` para establecer la propiedad `Status`.
 
 ### <a name="the-android-status-setting"></a>Ajuste de estado de Android
 
@@ -540,7 +540,7 @@ Esto se admite en todas las plataformas, pero se trata de un triángulo negro si
 
 Esto es lo que se usa en el marcado que se muestra a continuación. En iOS, proporciona al símbolo de **Reproducir** la misma apariencia 3D que los botones **Pausa** y **Detener**, pero la variante no funciona en Android ni en UWP.
 
-La página **Transporte personalizado** establece la propiedad **AreTransportControlsEnabled** en **false** e incluye un elemento `ActivityIndicator` mostrado cuando el vídeo está cargándose, además de dos botones. Los objetos `DataTrigger` se usan para habilitar y deshabilitar el elemento `ActivityIndicator` y los botones, así como para cambiar el primer botón entre **Reproducir** y **Pausa**:
+La página **Transporte personalizado** establece la propiedad **AreTransportControlsEnabled** en **false** e incluye un elemento `ActivityIndicator` mostrado cuando el vídeo está cargándose, además de dos botones. `DataTrigger` Los objetos se usan para habilitar y deshabilitar el elemento `ActivityIndicator` y los botones, así como para cambiar el primer botón entre **Reproducir** y **Pausa**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

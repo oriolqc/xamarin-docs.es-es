@@ -7,34 +7,35 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: 66b9e89080d88fa6f8192b42bc8ab0a97c92c20c
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: f4ff43ea51dc690daa716e69021f690511cdcc97
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58071013"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854059"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configuración del SDK de Android para Xamarin.Android
 
 _Visual Studio incluye Android SDK Manager, que puede usar para descargar herramientas de Android SDK, plataformas y otros componentes necesarios para desarrollar aplicaciones de Xamarin.Android._
-
 
 ## <a name="overview"></a>Información general
 
 En esta guía se explica cómo usar Android SDK Manager de Xamarin en Visual Studio y Visual Studio para Mac.
 
 > [!NOTE]
-> Esta guía solo se aplica a Visual Studio 2017 y Visual Studio para Mac.  
+> Esta guía se aplica a Visual Studio 2019, Visual Studio 2017 y Visual Studio para Mac.  
 
 Android SDK Manager de Xamarin (instalado como parte de la carga de trabajo **Desarrollo para dispositivos móviles con .NET**) ayuda a descargar los componentes de Android más recientes que se necesitan para desarrollar la aplicación de Xamarin.Android. Reemplaza el SDK Manager independiente de Google, que está en desuso.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
 
 ## <a name="requirements"></a>Requisitos
 
 Para usar Android SDK Manager de Xamarin, necesita lo siguiente:
 
-- Visual Studio 2017 (edición Community, Professional o Enterprise). Se necesita Visual Studio 2017 versión 15.7 o posterior.
+- Visual Studio 2019 Community, Professional o Enterprise.
+
+- O bien, Visual Studio 2017 (edición Community, Professional o Enterprise). Se necesita Visual Studio 2017 versión 15.7 o posterior.
 
 - Visual Studio Tools para Xamarin, versión 4.10.0 o posterior (instalada como parte de la carga de trabajo **Desarrollo para dispositivos móviles con .NET**). 
 
@@ -54,11 +55,11 @@ El Administrador de Android SDK de Xamarin también necesita disponer de Java De
 
 Para iniciar SDK Manager en Visual Studio, haga clic en **Herramientas > Android > Android SDK Manager**:
 
-[![Ubicación del elemento de menú Android SDK Manager](android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
+[![LUbicación del elemento de menú Android SDK Manager(android-sdk-images/win/02-sdk-manager-menu-item-sml.png)](android-sdk-images/win/02-sdk-manager-menu-item.png#lightbox)
 
 Android SDK Manager se abre en la pantalla **Herramientas y Android SDK**. Esta pantalla tiene dos pestañas: **Plataformas** y **Herramientas**:
 
-[![Captura de pantalla de Android SDK Manager abierto en la pestaña Plataformas](android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png#lightbox)
+[![SCaptura de pantalla de Android SDK Manager abierto en la pestaña Plataformas(android-sdk-images/win/03-sdk-manager-platforms-sml.png)](android-sdk-images/win/03-sdk-manager-platforms.png#lightbox)
 
 La pantalla **Herramientas y Android SDK** se describe con más detalle en las secciones siguientes.
 
@@ -86,7 +87,7 @@ Además, puede instalar Android Emulator, el depurador de bajo nivel (LLDB), el 
 
 Por ejemplo, para descargar el paquete de Android Emulator de Google, haga clic en la marca de verificación situada junto a **Android Emulator** y, después, haga clic en el botón **Aplicar cambios**:
 
-[![Instalación de Android Emulator desde la pestaña Herramientas](android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png#lightbox)
+[![IInstalación de Android Emulator desde la pestaña Herramientas(android-sdk-images/win/06-install-emulator-sml.png)](android-sdk-images/win/06-install-emulator.png#lightbox)
 
 Puede aparecer un diálogo con el mensaje _El paquete siguiente requiere que acepte sus términos de licencia antes de instalarlo_:
 
@@ -98,7 +99,7 @@ Haga clic en **Aceptar** si está de acuerdo con los términos y condiciones. En
 
 En la pestaña **Plataformas** se muestra una lista de versiones del SDK de la plataforma junto con otros recursos (por ejemplo, imágenes del sistema) para cada plataforma:
 
-[![Captura de pantalla del panel Plataformas](android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
+[![SCaptura de pantalla del panel Plataformas(android-sdk-images/win/08-platforms-pane-sml.png)](android-sdk-images/win/08-platforms-pane.png#lightbox)
 
 En esta pantalla se muestra la versión de Android (como **Android 8.0**), el nombre en código (**Oreo**), el nivel de API (por ejemplo, **26**) y el tamaño de los componentes de esa plataforma (como **1 GB**). Use la pestaña **Plataformas** para instalar los componentes correspondientes al nivel de API de Android al que quiera dirigirse. Para obtener más información sobre las versiones de Android y los niveles de API, vea [Descripción de los niveles de API de Android](~/android/app-fundamentals/android-api-levels.md).
 
@@ -107,11 +108,11 @@ Haga clic en **-** para contraer la lista de componentes de una plataforma.
 
 Para agregar otra plataforma al SDK, haga clic en el cuadro situado junto a la plataforma hasta que aparezca la marca de verificación para instalar todos sus componentes. Después, haga clic en **Aplicar cambios**:
 
-[![Ejemplo de cómo agregar componentes de Android 7.1 Nougat a Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
+[![EEjemplo de cómo agregar componentes de Android 7.1 Nougat a Android SDK(android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
 
 Para instalar solo componentes específicos, haga clic una vez en el cuadro situado junto a la plataforma. Después, puede seleccionar los componentes individuales que necesite:
 
-[![Ejemplo de cómo agregar algunos componentes de Android 7.1](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
+[![EEjemplo de cómo agregar algunos componentes de Android 7.1(android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
 
 Observe que el número de componentes que se van a instalar aparece junto al botón **Aplicar cambios**. Tras hacer clic en el botón **Aplicar cambios**, verá la pantalla **Aceptación de licencia**, tal como se muestra anteriormente.
 Haga clic en **Aceptar** si está de acuerdo con los términos y condiciones. Es posible que vea este cuadro de diálogo más de una vez si se van a instalar varios componentes. En la parte inferior de la ventana, una barra de progreso indica el progreso de la descarga y la instalación. Cuando se complete el proceso de descarga e instalación (puede tardar muchos minutos, en función de cuántos componentes deban descargarse), los componentes agregados se marcarán con una marca de verificación y a su lado se indicará **Instalado**.
@@ -120,14 +121,14 @@ Haga clic en **Aceptar** si está de acuerdo con los términos y condiciones. Es
 
 De forma predeterminada, Android SDK Manager descarga los componentes y las herramientas de la plataforma desde un repositorio administrado por Microsoft. Si necesita acceso a las plataformas y herramientas alfa/beta experimentales que todavía no están disponibles en el repositorio de Microsoft, puede cambiar SDK Manager para que use el repositorio de Google. Para realizar este cambio, haga clic en el icono de engranaje en la esquina inferior derecha y seleccione **Repositorio > Google (no compatible)**:
 
-[![Selección del repositorio de Google](android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
+[![SSelección del repositorio de Google(android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
 
 Al seleccionar el repositorio de Google, pueden aparecer paquetes adicionales en la pestaña **Plataformas** que no estaban disponibles anteriormente. (En la captura de pantalla anterior, **Android SDK Platform 28** se agregó al cambiar al repositorio de Google.) Tenga en cuenta que el uso del repositorio de Google no es dispone de soporte técnico y, por tanto, no se recomienda para el desarrollo habitual.
 
 Para volver al repositorio compatible de plataformas y herramientas, haga clic en **Microsoft (recomendado)**. Esto restaura la lista de paquetes y las herramientas a la selección predeterminada.
 
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
 ## <a name="requirements"></a>Requisitos
 
@@ -150,11 +151,11 @@ El Administrador de Android SDK de Xamarin también necesita disponer de Java De
 
 Para iniciar SDK Manager en Visual Studio para Mac, haga clic en **Herramientas > SDK Manager**:
  
-[![Ubicación del elemento de menú Android SDK Manager](android-sdk-images/mac/01-sdk-manager-menu-item-m75-sml.png)](android-sdk-images/mac/01-sdk-manager-menu-item-m75.png#lightbox)
+[![LUbicación del elemento de menú Android SDK Manager(android-sdk-images/mac/01-sdk-manager-menu-item-m75-sml.png)](android-sdk-images/mac/01-sdk-manager-menu-item-m75.png#lightbox)
 
 **Android SDK Manager** se abre en la **ventana Preferencias**, que contiene tres pestañas, denominadas **Plataformas**, **Herramientas**y **Ubicaciones**:
 
-[![Captura de pantalla de Android SDK Manager abierto en la pestaña Plataformas](android-sdk-images/mac/02-sdk-manager-platforms-m75-sml.png)](android-sdk-images/mac/02-sdk-manager-platforms-m75.png#lightbox)
+[![SCaptura de pantalla de Android SDK Manager abierto en la pestaña Plataformas(android-sdk-images/mac/02-sdk-manager-platforms-m75-sml.png)](android-sdk-images/mac/02-sdk-manager-platforms-m75.png#lightbox)
 
 Las pestañas de Android SDK Manager se describen en las secciones siguientes.
 
@@ -165,7 +166,7 @@ La pestaña **Ubicaciones** tiene tres opciones para configurar las ubicaciones 
 
 Cuando se inicia SDK Manager, determina automáticamente la ruta de acceso para cada paquete instalado e indica que se ha **Encontrado** y coloca un icono de marca de verificación verde junto a la ruta de acceso:
 
-[![Captura de pantalla de la pestaña Ubicaciones](android-sdk-images/mac/03-locations-tab-m75-sml.png)](android-sdk-images/mac/03-locations-tab-m75.png#lightbox)
+[![SCaptura de pantalla de la pestaña Ubicaciones(android-sdk-images/mac/03-locations-tab-m75-sml.png)](android-sdk-images/mac/03-locations-tab-m75.png#lightbox)
 
 Haga clic en el botón **Restablecer valores predeterminados** para que SDK Manager busque el SDK, el NDK y el JDK en sus ubicaciones predeterminadas. 
 
@@ -178,11 +179,11 @@ Además, puede instalar Android Emulator, el depurador de bajo nivel (LLDB), el 
 
 Por ejemplo, para descargar el paquete de Android Emulator de Google, haga clic en la marca de verificación situada junto a **Android Emulator** y, después, haga clic en el botón **Aplicar cambios**:
 
-[![Instalación de Android Emulator desde la pestaña Herramientas](android-sdk-images/mac/04-tools-tab-m75-sml.png)](android-sdk-images/mac/04-tools-tab-m75.png#lightbox)
+[![IInstalación de Android Emulator desde la pestaña Herramientas(android-sdk-images/mac/04-tools-tab-m75-sml.png)](android-sdk-images/mac/04-tools-tab-m75.png#lightbox)
 
 Puede aparecer un diálogo con el mensaje _El paquete siguiente requiere que acepte sus términos de licencia antes de instalarlo_:
 
-[![Pantalla de aceptación de licencia](android-sdk-images/mac/05-license-acceptance-m75-sml.png)](android-sdk-images/mac/05-license-acceptance-m75.png#lightbox)
+[![LPantalla de aceptación de licencia(android-sdk-images/mac/05-license-acceptance-m75-sml.png)](android-sdk-images/mac/05-license-acceptance-m75.png#lightbox)
 
 Haga clic en **Aceptar** si está de acuerdo con los términos y condiciones. En la parte inferior de la ventana, una barra de progreso indica el progreso de la descarga y la instalación. Una vez finalizada la instalación, en la pestaña **Herramientas** se mostrará que se han instalado las herramientas y los extras seleccionados.
 
@@ -191,7 +192,7 @@ Haga clic en **Aceptar** si está de acuerdo con los términos y condiciones. En
 
 En la pestaña **Plataformas** se muestra una lista de versiones del SDK de la plataforma junto con otros recursos (por ejemplo, imágenes del sistema) para cada plataforma:
 
-[![Captura de pantalla del panel Plataformas](android-sdk-images/mac/06-platforms-tab-m75-sml.png)](android-sdk-images/mac/06-platforms-tab-m75.png#lightbox)
+[![SCaptura de pantalla del panel Plataformas(android-sdk-images/mac/06-platforms-tab-m75-sml.png)](android-sdk-images/mac/06-platforms-tab-m75.png#lightbox)
 
 En esta pantalla se muestra la versión de Android (como **Android 8.1**), el nombre de código (**Oreo**), el nivel de API (por ejemplo, **27**) y el tamaño de los componentes de esa plataforma (como **1 GB**). Use la pestaña **Plataformas** para instalar los componentes correspondientes al nivel de API de Android al que quiera dirigirse. Para obtener más información sobre las versiones de Android y los niveles de API, vea [Descripción de los niveles de API de Android](~/android/app-fundamentals/android-api-levels.md).
 
@@ -200,11 +201,11 @@ Haga clic en la **flecha abajo** para contraer la lista de componentes de una pl
 
 Para agregar otra plataforma al SDK, haga clic en el cuadro situado junto a la plataforma hasta que aparezca la marca de verificación para instalar todos sus componentes. Después, haga clic en **Aplicar cambios**:
 
-[![Ejemplo de cómo agregar todos los componentes de una plataforma](android-sdk-images/mac/07-install-all-m75-sml.png)](android-sdk-images/mac/07-install-all-m75.png#lightbox)
+[![EEjemplo de cómo agregar todos los componentes de una plataforma(android-sdk-images/mac/07-install-all-m75-sml.png)](android-sdk-images/mac/07-install-all-m75.png#lightbox)
 
 Para instalar solo algunos componentes, haga clic una vez en el cuadro situado junto a la plataforma. Después, puede seleccionar los componentes individuales que necesite:
 
-[![Ejemplo de cómo agregar algunos componentes](android-sdk-images/mac/08-individual-components-m75-sml.png)](android-sdk-images/mac/08-individual-components-m75.png#lightbox)
+[![EEjemplo de cómo agregar algunos componentes(android-sdk-images/mac/08-individual-components-m75-sml.png)](android-sdk-images/mac/08-individual-components-m75.png#lightbox)
 
 Observe que el número de componentes que se van a instalar aparece junto al botón **Aplicar cambios**. Tras hacer clic en el botón **Aplicar cambios**, verá la pantalla **Aceptación de licencia**, tal como se muestra anteriormente.
 Haga clic en **Aceptar** si está de acuerdo con los términos y condiciones. Es posible que vea este cuadro de diálogo más de una vez si se van a instalar varios componentes. En la parte inferior de la ventana, una barra de progreso indica el progreso de la descarga y la instalación. Cuando se complete el proceso de descarga e instalación (puede tardar muchos minutos, en función de cuántos componentes deban descargarse), los componentes agregados se marcarán con una marca de verificación y a su lado se indicará **Instalado**.
@@ -213,7 +214,7 @@ Haga clic en **Aceptar** si está de acuerdo con los términos y condiciones. Es
 
 De forma predeterminada, Android SDK Manager descarga los componentes y las herramientas de la plataforma desde un repositorio administrado por Microsoft. Si necesita acceso a las plataformas y herramientas alfa/beta experimentales que todavía no están disponibles en el repositorio de Microsoft, puede cambiar SDK Manager para que use el repositorio de Google. Para realizar este cambio, haga clic en el icono de engranaje en la esquina inferior derecha y seleccione **Repositorio > Google (no compatible)**:
 
-[![Selección del repositorio de Google](android-sdk-images/mac/09-google-repo-m75-sml.png)](android-sdk-images/mac/09-google-repo-m75.png#lightbox)
+[![SSelección del repositorio de Google(android-sdk-images/mac/09-google-repo-m75-sml.png)](android-sdk-images/mac/09-google-repo-m75.png#lightbox)
 
 Al seleccionar el repositorio de Google, pueden aparecer paquetes adicionales en la pestaña **Plataformas** que no estaban disponibles anteriormente. (En la captura de pantalla anterior, **Android SDK Platform 28** se agregó al cambiar al repositorio de Google.) Tenga en cuenta que el uso del repositorio de Google no es dispone de soporte técnico y, por tanto, no se recomienda para el desarrollo habitual.
 

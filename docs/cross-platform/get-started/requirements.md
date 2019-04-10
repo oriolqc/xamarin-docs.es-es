@@ -6,12 +6,12 @@ ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
 ms.date: 07/24/2018
-ms.openlocfilehash: 486c5c57961e897eae59df66b216a9078d5df517
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: c03e9782fe80a88c70df6b7780c43778f673d10d
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57667996"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854566"
 ---
 # <a name="system-requirements"></a>Requisitos del sistema
 
@@ -45,20 +45,20 @@ El uso de un equipo Mac para el desarrollo de Xamarin requiere las siguientes ve
 [!include[](~/cross-platform/includes/macos-testing.md)]
 
 > [!WARNING]
-> La próxima versión de Xamarin.Mac 4.8 solo será compatible con macOS 10.9 o versiones posteriores.
+> Xamarin.Mac 4.8 solo es compatible con macOS 10.9 o versiones posteriores.
 > Las versiones anteriores de Xamarin.Mac son compatibles con macOS 10.7 o versiones posteriores, pero estas versiones anteriores de macOS carecen de infraestructura TLS suficiente para admitir TLS 1.2. Para macOS 10.7 o Mac OS 10.8 de destino, use Xamarin.Mac 4.6 o una versión anterior.
 
 ## <a name="windows-requirements"></a>Requisitos de Windows
 
 El uso de un equipo Windows para el desarrollo de Xamarin requiere las siguientes versiones de software o del SDK.
 Compruebe la versión del sistema operativo (y confirme que no está usando una versión *Express* de Visual Studio; si es así, considere la posibilidad de actualizar a una edición *Community*).
-El instalador de Visual Studio 2017 incluye una opción para instalar Xamarin automáticamente (**Desarrollo para dispositivos móviles con .NET**).
+El instalador de Visual Studio 2019 y Visual Studio 2017 incluye una opción para instalar Xamarin automáticamente (la carga de trabajo de **Desarrollo para dispositivos móviles con .NET**).
 
 [!include[](~/cross-platform/includes/windows-requirements.md)]
 
 > [!NOTE]
-> - Xamarin para Visual Studio admite cualquier edición de Visual Studio 2017 (Community, Professional y Enterprise).
-> - Para desarrollar aplicaciones de Xamarin.Forms para la plataforma universal de Windows (UWP) es necesario Windows 10 con Visual Studio 2017.
+> - Xamarin para Visual Studio admite cualquier edición de Visual Studio 2019 o Visual Studio 2017 (Community, Professional y Enterprise).
+> - Para desarrollar aplicaciones de Xamarin.Forms para la plataforma universal de Windows (UWP) es necesario Windows 10 con Visual Studio 2017. Se recomienda Visual Studio 2019.
 
 ### <a name="testing--debugging-on-windows"></a>Pruebas y depuración en Windows
 
@@ -68,7 +68,7 @@ Las aplicaciones móviles Xamarin se pueden implementar en dispositivos físicos
 
 ## <a name="installation-instructions"></a>Instrucciones de instalación
 
-Puede descargar la versión más reciente de Xamarin para Mac OS en [xamarin.com/download](http://xamarin.com/download). Para Windows, siga las instrucciones de instalación de [Visual Studio 2017](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
+Puede descargar con [Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation) la versión más reciente de Xamarin para macOS. Para Windows, siga las [instrucciones de instalación de Visual Studio](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
 
 Una lista completa de las versiones de producto actuales está disponible en la [página Versiones actuales](https://developer.xamarin.com/releases/current/). Esta página también describe las versiones de productos individuales (e incluye vínculos a las notas de la versión) para nuestros canales alfa y beta.
 
@@ -83,4 +83,6 @@ También hay información adicional sobre [las plataformas admitidas y los requi
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Descargar Xamarin](https://visualstudio.microsoft.com/xamarin/)
-- [Versiones actuales](https://developer.xamarin.com/releases/current/)
+- [Notas de la versión de Xamarin.Forms](/xamarin/xamarin-forms/release-notes/)
+- [Notas de la versión de Xamarin.Android](/xamarin/android/release-notes/)
+- [Notas de la versión de Xamarin.iOS](/xamarin/ios/release-notes/)

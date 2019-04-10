@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 336f1ec4e4406d2ab40c5e8aea247bd3be9ed765
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: ed59f32711bae56672d1d7f114fbb80a906d67ce
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672734"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855294"
 ---
 # <a name="hello-ios--quickstart"></a>Inicio rápido de Hello, iOS
 
@@ -42,7 +42,7 @@ La [guía de instalación de Mac para Xamarin.iOS](~/ios/get-started/installatio
 
 Xamarin.iOS funciona con la siguiente configuración:
 
-- La versión más reciente de Visual Studio 2017 Community, Professional o Enterprise en Windows 10, emparejada con un host de compilación de Mac que se ajuste a las especificaciones anteriores.
+- La versión más reciente de Visual Studio 2019 o Visual Studio 2017 Community, Professional o Enterprise en Windows 10, emparejada con un host de compilación de Mac que se ajuste a las especificaciones anteriores.
 
 Se puede consultar la [guía de instalación de Xamarin.iOS Windows](~/ios/get-started/installation/windows/index.md) para obtener instrucciones de instalación paso a paso.
 
@@ -495,6 +495,6 @@ Ahora es el momento de analizar minuciosamente las herramientas y los conocimien
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Iconos de aplicaciones e imágenes de inicio de Xamarin (ejemplo)](https://github.com/xamarin/ios-samples/blob/master/Hello_iOS/Resources/XamarinAppIconsandLaunchImages.zip?raw=true)
-- [Hola, iOS (ejemplo)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hello, iOS (ejemplo)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
 - [Directrices de la interfaz humana de iOS](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [Portal de aprovisionamiento de iOS](https://developer.apple.com/ios/manage/overview/index.action)

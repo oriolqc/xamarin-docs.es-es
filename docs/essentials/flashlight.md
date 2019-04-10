@@ -5,12 +5,12 @@ ms.assetid: 06A03553-D212-43A2-9E6E-C2D2D93EB136
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 11/04/2018
-ms.openlocfilehash: c2caf1583e3099903cb0b05628ed6b2984a954d9
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: b94ba73b334ac68b256ca840956f987a4ef670ce
+ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671421"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58870110"
 ---
 # <a name="xamarinessentials-flashlight"></a>Xamarin.Essentials: Linterna
 
@@ -22,7 +22,7 @@ La clase **Flashlight** tiene la capacidad de activar o desactivar el flash de l
 
 Para acceder a la funcionalidad de **Flashlight**, se requiere la siguiente configuración específica para la plataforma.
 
-# <a name="androidtabandroid"></a>[Android](#tab/android)
+# [<a name="android"></a>Android](#tab/android)
 
 Los permisos Flashlight y Camera son obligatorios y se deben configurar en el proyecto de Android. Se puede agregar de las siguientes maneras:
 
@@ -51,11 +51,11 @@ Mediante la adición de estos permisos [Google Play filtrará automáticamente l
 [assembly: UsesFeature("android.hardware.camera.autofocus", Required = false)]
 ```
 
-# <a name="iostabios"></a>[iOS](#tab/ios)
+# [<a name="ios"></a>iOS](#tab/ios)
 
 No se requiere configuración adicional.
 
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+# [<a name="uwp"></a>UWP](#tab/uwp)
 
 No se requiere configuración adicional.
 
@@ -96,7 +96,7 @@ catch (Exception ex)
 
 ## <a name="platform-implementation-specifics"></a>Detalles de implementación de la plataforma
 
-### <a name="androidtabandroid"></a>[Android](#tab/android)
+### [<a name="android"></a>Android](#tab/android)
 
 La clase Flashlight se ha optimizado en función del sistema operativo del dispositivo.
 
@@ -108,11 +108,11 @@ En los niveles de API más recientes, se usa el [Modo Linterna](https://develope
 
 Se crea una textura de la superficie de cámara para activar o desactivar el `FlashMode` de la unidad de la cámara. 
 
-### <a name="iostabios"></a>[iOS](#tab/ios)
+### [<a name="ios"></a>iOS](#tab/ios)
 
-Se usa [AVCaptureDevice](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureDevice/) para activar o desactivar el modo de linterna y flash del dispositivo.
+Se usa [AVCaptureDevice](xref:AVFoundation.AVCaptureDevice) para activar o desactivar el modo de linterna y flash del dispositivo.
 
-### <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+### [<a name="uwp"></a>UWP](#tab/uwp)
 
 Se usa [Lamp](https://docs.microsoft.com/uwp/api/windows.devices.lights.lamp) para detectar la primera luz en la parte posterior del dispositivo para activarla o desactivarla.
 

@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 12fcf6ff1b289c773e0dce03be4ac62105f6acd4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 7f40671cd37ba88834698dea8cdaba267c96600c
+ms.sourcegitcommit: c77d4257f8a35c8d931538b78a2ebc2aa48c0db9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669471"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58751263"
 ---
 # <a name="hello-ios--deep-dive"></a>Revisión en profundidad de Hello, iOS
 
@@ -310,7 +310,7 @@ Para obtener más información sobre cómo trabajar con controladores de vistas,
 
 El rol más importante del controlador de vistas es responder a la interacción del usuario, como son las pulsaciones de botones, la navegación y otros elementos. La forma más sencilla de controlar la interacción del usuario es conectar un control para escuchar la entrada del usuario y unir un controlador de eventos para responder a ella. Por ejemplo, una opción sería conectar un botón para responder a un evento de toque, como se muestra en la aplicación Phoneword.
 
-Ahora que comprende mejor las vistas y los controladores de vistas, veamos cómo funcionan.
+Veamos cómo funciona esto.
 En el proyecto `Phoneword_iOS`, se ha agregado un botón denominado `TranslateButton` a la jerarquía de vistas de contenido:
 
 [![](hello-ios-deepdive-images/image1.png "Agregado un botón llamado TranslateButton a la jerarquía de vistas de contenido")](hello-ios-deepdive-images/image1.png#lightbox)

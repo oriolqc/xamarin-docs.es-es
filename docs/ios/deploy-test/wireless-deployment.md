@@ -1,6 +1,6 @@
 ---
 title: Implementación inalámbrica para aplicaciones Xamarin.iOS y tvOS
-description: En este documento se describe cómo implementar de forma inalámbrica una aplicación Xamarin.iOS en un dispositivo iOS desde Visual Studio para Mac o Visual Studio 2017.
+description: En este documento se describe cómo implementar de forma inalámbrica una aplicación Xamarin.iOS en un dispositivo iOS desde Visual Studio para Mac o Visual Studio 2019.
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
@@ -8,12 +8,12 @@ author: lobrien
 ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 6d64acdcc84c16f33a1f543bf1c9506ae7c8e347
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: 82bdd2c160572b0d813fb87d81b09c00996cef18
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479698"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58854840"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Implementación inalámbrica para aplicaciones Xamarin.iOS y tvOS
 
@@ -27,14 +27,14 @@ La implementación inalámbrica está disponible como característica tanto en V
 
 Para usar la implementación inalámbrica, debe tener lo siguiente:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
 - macOS 10.12.4
 - La versión más reciente de Visual Studio para Mac
 - Xcode 9.0 o posterior
 - Un dispositivo con iOS 11.0 o tvOS 11.0 y versiones posteriores
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
 
 - La versión más reciente de Visual Studio
 - Un dispositivo con iOS 11.0 o tvOS 11.0 y versiones posteriores

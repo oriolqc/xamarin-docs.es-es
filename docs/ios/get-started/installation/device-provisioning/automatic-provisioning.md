@@ -8,12 +8,12 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 9f198336d3fc9cca3bc79c377749a1211ebbac55
-ms.sourcegitcommit: 2ee36611ef667affee7d417db947fbb614d75315
+ms.openlocfilehash: 4d4c9980dd4c7be4ed18f1b6ce015d73b3caf836
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54479685"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855177"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Aprovisionamiento automático para Xamarin.iOS
 
@@ -21,18 +21,19 @@ _Una vez que se ha instalado correctamente Xamarin.iOS, el paso siguiente en el 
 
 ## <a name="requirements"></a>Requisitos
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
 - Visual Studio para Mac 7.3 o posterior
 - Xcode 9 o posterior
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
 
-- Visual Studio 2017 versión 15.7 (o superior)
+- Visual Studio 2019
+- O bien, Visual Studio 2017 versión 15.7 (o superior)
 
 También debe estar emparejado a un host de compilación de Mac que tenga lo siguiente:
 
-- Xcode 9 o posterior
+- Xcode 10 o posterior
 
 -----
 
@@ -54,7 +55,7 @@ Antes de iniciar el proceso de firma automática, debe asegurarse de que se haya
 
 Para inscribir la aplicación automáticamente para su implementación en un dispositivo iOS, haga lo siguiente:
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
 1. Abra un proyecto de iOS en Visual Studio para Mac.
 
@@ -72,9 +73,9 @@ Para inscribir la aplicación automáticamente para su implementación en un dis
 
     Si se produce un error en la firma automática, el panel **Firma automática** muestra el motivo de ese error.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
 
-1. Empareje Visual Studio 2017 con un equipo Mac como se describe en la guía [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Empareje Visual Studio 2019 con un equipo Mac como se describe en la guía [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 2. En el **Explorador de soluciones**, haga clic con el botón derecho en el nombre del proyecto y seleccione **Propiedades**. Vaya a la pestaña **Firma del lote de iOS**.
 
@@ -131,10 +132,10 @@ Si la aplicación utiliza uno de estos derechos, Visual Studio para Mac intentar
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Aprovisionamiento gratis](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
-- [App Distribution](~/ios/deploy-test/app-distribution/index.md) (Distribución de aplicaciones)
+- [Aprovisionamiento gratuito](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
+- [App Distribution (Distribución de aplicaciones)](~/ios/deploy-test/app-distribution/index.md)
 - [Solución de problemas](~/ios/deploy-test/troubleshooting.md)
-- [Guía de distribución de aplicaciones de Apple](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
+- [Apple - App Distribution Guide (Guía de distribución de aplicaciones de Apple)](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
 
 ## <a name="related-video"></a>Vídeo relacionado
 

@@ -8,12 +8,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/02/2018
-ms.openlocfilehash: 02e0484a417b5d42129fa4e7a6ab9576c1817d74
-ms.sourcegitcommit: 8e8f83da636b63d14d1305c43a99736a00b9f590
+ms.openlocfilehash: 9175c60c436f2e808f3658bae717a747e0401c28
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55969598"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855320"
 ---
 # <a name="hello-mac-walkthrough"></a>Tutorial Hello, Mac
 
@@ -77,7 +77,7 @@ Visual Studio para Mac creará la nueva aplicación de Xamarin.Mac y mostrará l
 
 [![](hello-mac-images/project01-sml.png "Vista predeterminada de la nueva solución")](hello-mac-images/project01.png#lightbox)
 
-Visual Studio para Mac usa la misma estructura de **Solución** y **Proyecto** que Visual Studio 2017. Una solución es un contenedor que puede contener uno o varios proyectos; los proyectos pueden incluir aplicaciones, bibliotecas auxiliares, aplicaciones de prueba, etc. La plantilla **Archivo > Nuevo proyecto** crea una solución y un proyecto de aplicación automáticamente.
+Visual Studio para Mac usa la misma estructura de **Solución** y **Proyecto** que Visual Studio 2019. Una solución es un contenedor que puede contener uno o varios proyectos; los proyectos pueden incluir aplicaciones, bibliotecas auxiliares, aplicaciones de prueba, etc. La plantilla **Archivo > Nuevo proyecto** crea una solución y un proyecto de aplicación automáticamente.
 
 ## <a name="anatomy-of-a-xamarinmac-application"></a>Anatomía de una aplicación de Xamarin.Mac
 
@@ -591,5 +591,5 @@ En este artículo, se han tratado los conceptos básicos de una aplicación est�
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de Hello, Mac (ejemplo)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
+- [Hello, Mac (ejemplo)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
 - [Directrices de la interfaz humana de macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

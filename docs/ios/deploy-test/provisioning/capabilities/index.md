@@ -7,16 +7,16 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: f051becad7b6ef329d57417214eb976589386970
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 7049cc36f5f661152e027beb53180d793078beff
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120949"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855034"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabajar con capacidades en Xamarin.iOS
 
-_Agregar funcionalidades a una aplicación requiere con frecuencia una configuración de aprovisionamiento adicional. En esta guía se describe la configuración necesaria para todas las funcionalidades._
+_Agregar capacidades a una aplicación a menudo requiere una configuración de aprovisionamiento adicional. En esta guía se describe la configuración necesaria para todas las capacidades._
 
 Apple proporciona a los desarrolladores _capacidades_ (a veces denominadas _servicios de aplicaciones_) como método para extender la funcionalidad y ampliar el alcance de lo que pueden hacer las aplicaciones de iOS. Gracias a las capacidades, los desarrolladores pueden agregar a su aplicación una integración más profunda de las características de las plataformas, como por ejemplo la capacidad de iniciar transacciones monetarias desde la aplicación, servicios de dispositivo adicionales como Siri, etc.
 Estas capacidades se pueden usar con los proyectos de Xamarin.iOS. A continuación se muestra la lista completa de los servicios:
@@ -44,14 +44,13 @@ Estas capacidades se pueden usar con los proyectos de Xamarin.iOS. A continuaci�
 * Múltiples rutas
 * Lectura de etiquetas NFC
 
-
-Las capacidades se pueden habilitar a través de Visual Studio para Mac y Visual Studio 2017, o manualmente en el portal Apple Developer. Hay ciertas capacidades, como Wallet, Apple Pay y iCloud, que requieren una configuración adicional de los identificadores de aplicación.
+Las capacidades se pueden habilitar a través de Visual Studio para Mac y Visual Studio 2019, o manualmente en el portal para desarrolladores de Apple. Hay ciertas capacidades, como Wallet, Apple Pay y iCloud, que requieren una configuración adicional de los identificadores de aplicación.
 
 En esta guía se explica cómo habilitar App Services en la aplicación automáticamente en Visual Studio y manualmente a través de Developer Center, incluida cualquier configuración adicional que pueda ser necesaria. 
 
 ## <a name="adding-app-services"></a>Agregar servicios de aplicaciones
 
-Para usar las capacidades, la aplicación debe tener un perfil de aprovisionamiento válido que contenga un identificador de aplicación con el servicio correcto habilitado. Este perfil de aprovisionamiento se puede crear automáticamente en Visual Studio para Mac y Visual Studio 2017, o manualmente en Apple Developer Center.
+Para usar las capacidades, la aplicación debe tener un perfil de aprovisionamiento válido que contenga un identificador de aplicación con el servicio correcto habilitado. Este perfil de aprovisionamiento se puede crear automáticamente en Visual Studio para Mac y Visual Studio 2019, o manualmente en Apple Developer Center.
 
 En esta sección se explica cómo usar el aprovisionamiento automático de Visual Studio o Developer Center para habilitar la mayoría de las capacidades. Hay algunas capacidades, como Wallet, iCloud, Apple Pay y los grupos de aplicaciones, que requieren una configuración adicional. Se describen en detalle en las guías adyacentes.
 
@@ -73,7 +72,7 @@ En esta sección se explica cómo usar el aprovisionamiento automático de Visua
 
 ## <a name="using-the-ide"></a>Uso de el IDE
 
-# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
+# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
 
 Las capacidades se agregan a **Entitlements.plist** en Visual Studio para Mac. Para agregar capacidades, siga estos pasos:
 
@@ -93,11 +92,11 @@ Las capacidades se agregan a **Entitlements.plist** en Visual Studio para Mac. P
 
     ![Agregar capacidades al archivo entitlements.plist](images/image18.png)
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
 
-Las capacidades se agregan a **Entitlements.plist**. Para agregar capacidades en Visual Studio 2017, haga lo siguiente:
+Las capacidades se agregan a **Entitlements.plist**. Para agregar capacidades en Visual Studio 2019, haga lo siguiente:
 
-1. Empareje Visual Studio 2017 con un equipo Mac como se describe en la guía [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Empareje Visual Studio 2019 con un equipo Mac como se describe en la guía [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 2. Para abrir las opciones de aprovisionamiento, seleccione **Proyecto > Propiedades de aprovisionamiento...**
 
@@ -142,7 +141,7 @@ El uso del Centro para desarrolladores es un proceso de dos pasos en el que se d
     ![Página de selección de servicios de aplicaciones](images/image8.png)
 
 7.  Presione **Continue** (Continuar).
-8.  Confirme el identificador de aplicación. Cada servicio tendrá uno de los siguientes estados: **Enabled** (Habilitado), **Disabled** (Deshabilitado) o **Configurable**, como se muestra a continuación. Si tiene el estado **Enabled** (Habilitado), quiere decir que está listo para usarlo en un perfil de aprovisionamiento. Si tiene el estado **Configurable**, quiere decir que se debe efectuar una configuración adicional para esta capacidad. Estos pasos adicionales se describen con más detalle en secciones posteriores.
+8.  Confirme el identificador de aplicación. Cada servicio se encontrará en uno de los estados siguientes: **Habilitado**, **Deshabilitado** o **Configurable**, como se muestra a continuación. Si tiene el estado **Enabled** (Habilitado), quiere decir que está listo para usarlo en un perfil de aprovisionamiento. Si tiene el estado **Configurable**, quiere decir que se debe efectuar una configuración adicional para esta capacidad. Estos pasos adicionales se describen con más detalle en secciones posteriores.
 
     ![Confirmación del identificador de aplicación](images/image9.png)
 
