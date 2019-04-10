@@ -1,19 +1,19 @@
 ---
-title: Introducción al ciclo de vida de desarrollo de software móvil
+title: Introducción al ciclo de vida del desarrollo de software móvil
 description: En este documento se describe el ciclo de vida de desarrollo de software móvil, para lo que se echa un vistazo al diseño de la experiencia de usuario, el diseño de la interfaz de usuario, el desarrollo, la estabilización, la distribución y mucho más.
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
 author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
-ms.openlocfilehash: b8f36ef407c3acc9b3472539735816649e13b7db
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 74a9fc59b395d68db9b116106cc9fa63d3969c3b
+ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672669"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58855242"
 ---
-# <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introducción al ciclo de vida de desarrollo de software móvil
+# <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introducción al ciclo de vida del desarrollo de software móvil
 
 La creación de aplicaciones móviles puede ser tan fácil como abrir el IDE, juntar algunos elementos, realizar unas pruebas rápidas y enviar el resultado al App Store, todo ello en una misma tarde. O puede ser un proceso muy complicado que conlleva el diseño riguroso por adelantado, pruebas de facilidad de uso, pruebas de control de calidad en miles de dispositivos, un ciclo de vida completo de versión beta y la implementación de varias maneras diferentes.
 
@@ -64,7 +64,7 @@ Por ejemplo, una aplicación de seguimiento de tareas puede tener dos actores: u
 
 Una vez que se ha capturado una cantidad apropiada de casos de uso y actores, es mucho más fácil empezar a diseñar una aplicación. El desarrollo se puede centrar entonces en cómo crear la aplicación, en lugar de qué es la aplicación o qué debería hacer.
 
-### <a name="designing-mobile-applications"></a>Diseñar aplicaciones móviles
+### <a name="designing-mobile-applications"></a>Diseño de aplicaciones móviles
 
 Una vez que se hayan determinado las características y funcionalidades de la aplicación, el siguiente paso es intentar resolver la experiencia del usuario o UX.
 
@@ -72,7 +72,7 @@ Una vez que se hayan determinado las características y funcionalidades de la ap
 
 La experiencia del usuario se efectúa normalmente a través de tramas de alambres o prototipos con uno de los muchos [conjuntos de herramientas de diseño](https://docs.microsoft.com/windows/uwp/design/downloads/). Los prototipos de experiencia del usuario permiten diseñar esta experiencia sin tener que preocuparse por el diseño real de la interfaz de usuario:
 
- [![](introduction-to-mobile-sdlc-images/balsamiq.png "Experiencia del usuario efectuada normalmente a través de tramas de alambres o prototipos con herramientas como Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
+ [![](introduction-to-mobile-sdlc-images/balsamiq.png "Experiencia del usuario efectuada normalmente a través de estructuras de alambre o prototipos con herramientas como Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
 Al crear prototipos de experiencia del usuario, es importante tener en cuenta las instrucciones de la interfaz para las diferentes plataformas a las que se dirigirá la aplicación. La aplicación debería "sentirse cómoda" en todas las plataformas. Las instrucciones de diseño oficial para cada plataforma son:
 
@@ -88,7 +88,7 @@ Además, el propio hardware también impone decisiones de la experiencia del usu
 
 Asimismo, el factor de forma también influye en las decisiones de la experiencia del usuario. Una tableta tiene mucho más espacio y, por tanto, puede mostrar más información. A menudo, lo que necesita varias pantallas en un teléfono, se comprime en una para una tableta:
 
- [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "A menudo, lo que necesita varias pantallas en un teléfono, se comprime en una para una tableta")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
+ [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "A menudo, lo que necesita varias pantallas en un teléfono se comprime en una para una tableta")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
 
 Debido a la infinidad de factores de forma que existen, a menudo hay factores de forma medianos (entre un teléfono y una tableta) que puede que también quiera abordar.
 
@@ -147,11 +147,11 @@ En su lugar, cualquier usuario puede crear una tienda de aplicaciones y la mayor
 Esto facilita a los desarrolladores un canal de distribución posiblemente más grande y aún más complejo para sus aplicaciones. [Google Play](https://play.google.com/store?hl=en) es la tienda de aplicaciones oficial de Google, pero hay muchas otras. Algunas populares son:
 
 1.  [AppBrain](http://www.appbrain.com/)
-1.  [Tienda Apps de Amazon para Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
+1.  [Amazon Appstore para Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
 1.  [Handango](http://www.handango.com/)
 1.  [GetJar](http://www.getjar.com/)
 
-#### <a name="uwp"></a>UWP 
+#### <a name="uwp"></a>UWP
 
 Las aplicaciones UWP se distribuyen a los usuarios en Microsoft Store. Los desarrolladores envían sus aplicaciones para que las aprueben y después aparecen en la Tienda. Para obtener más información sobre la publicación de aplicaciones Windows, consulte la documentación relativa a la [publicación](https://docs.microsoft.com/windows/uwp/publish/) de UWP.
 
@@ -233,7 +233,7 @@ Este es un paso esencial en el modelo de distribución de Android, debido al mod
 
 #### <a name="multitasking"></a>Multitarea
 
-La multitarea en UWP también tiene dos partes: el ciclo de vida de páginas y aplicaciones, y los procesos en segundo plano. Cada pantalla de una aplicación es una instancia de una clase de página, que tiene eventos asociados que se ponen en estado activo o inactivo (con reglas especiales para controlar el estado inactivo o "con marcador de exclusión"). 
+La multitarea en UWP también tiene dos partes: el ciclo de vida de páginas y aplicaciones, y los procesos en segundo plano. Cada pantalla de una aplicación es una instancia de una clase de página, que tiene eventos asociados que se ponen en estado activo o inactivo (con reglas especiales para controlar el estado inactivo o "con marcador de exclusión").
 
 La segunda parte consiste en proporcionar agentes en segundo plano para tareas de procesamiento, incluso cuando la aplicación no se está ejecutando en primer plano. 
 
@@ -249,9 +249,8 @@ Para obtener más información sobre las consideraciones de seguridad importante
 
 En esta guía, se le ha proporcionado una introducción al SDLC en lo referente al desarrollo móvil. Se han introducido consideraciones generales para la creación de aplicaciones móviles y se ha examinado una serie de cuestiones específicas de la plataforma, incluidos el diseño, las prueba y la implementación.
 
-## <a name="related-links"></a>Vínculos relacionados
+## <a name="next-steps"></a>Pasos siguientes
 
 - [Introducción al desarrollo móvil](~/cross-platform/get-started/introduction-to-mobile-development.md)
-- [Hello, iOS](~/ios/get-started/hello-ios/index.md)
-- [Hello, Android](https://developer.xamarin.com/get-started-droid/)
-- [Principios de la aplicación](~/cross-platform/app-fundamentals/index.md)
+- [Introducción a Xamarin](~/get-started/index.yml)
+- [Compartir código entre plataformas](~/cross-platform/app-fundamentals/index.md)
