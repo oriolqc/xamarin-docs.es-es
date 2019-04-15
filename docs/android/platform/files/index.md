@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 07/23/2018
-ms.openlocfilehash: 476f1c50a2f1a4199dfaf1996fc9c16615b40598
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 2978f0b2bcbdd463876784a9addd7dec055b8af9
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116802"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574824"
 ---
 # <a name="file-storage-and-access-with-xamarinandroid"></a>Almacenamiento de archivos y acceso con Xamarin.Android
 
@@ -66,15 +66,14 @@ Para maximizar el uso compartido de código, deben usar las aplicaciones de Xama
 
 | System.Environment.SpecialFolder | Ruta de acceso  |
 |----------------------|---|
-| `ApplicationData` | **_INTERNO\_almacenamiento_/.config** |
-| `Desktop` | **_INTERNO\_almacenamiento_  /escritorio** |
-| `LocalApplicationData` | **_INTERNO\_almacenamiento_/.local/share** |
-| `MyComputer` | **_INTERNO\_almacenamiento_/.local/share** |
-| `MyDocuments` | **_INTERNO\_ALMACENAMIENTO_** |
-| `MyMusic` | **_INTERNO\_almacenamiento_/Music** |
-| `MyPictures` | **_INTERNO\_almacenamiento_/Music** |
-| `MyVideos` | **_INTERNO\_almacenamiento_/Videos** |
-| `Personal` | **_INTERNO\_ALMACENAMIENTO_** |
+| `ApplicationData` | **_INTERNAL\_STORAGE_/.config** |
+| `Desktop` | **_INTERNAL\_STORAGE_/Desktop** |
+| `LocalApplicationData` | **_INTERNAL\_STORAGE_/.local/share** |
+| `MyDocuments` | **_INTERNAL\_STORAGE_** |
+| `MyMusic` | **_INTERNAL\_STORAGE_/Music** |
+| `MyPictures` | **_INTERNAL\_STORAGE_/Pictures** |
+| `MyVideos` | **_INTERNAL\_STORAGE_/Videos** |
+| `Personal` | **_INTERNAL\_STORAGE_** |
 
 
 ### <a name="reading-or-writing-to-files-on-internal-storage"></a>Leer o escribir en archivos en almacenamiento interno

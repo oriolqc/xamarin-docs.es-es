@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
-ms.openlocfilehash: dfc0e1cb7239381ef2f495b0f9774d390b0dc82e
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.openlocfilehash: 4ae86ca5fa47169bb5d78eb9d1116e419c23ed6d
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527201"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59574811"
 ---
 # <a name="creating-android-services"></a>Creación de servicios de Android
 
@@ -22,7 +22,7 @@ _Esta guía trata los servicios de Xamarin.Android, que son componentes de Andro
 
 Aplicaciones móviles no son como las aplicaciones de escritorio. Equipos de escritorio tienen ingentes cantidades de recursos, como una fuente de alimentación conectado, espacio de almacenamiento, memoria y espacio en pantalla, dispositivos móviles no lo hace. Estas restricciones forzar las aplicaciones móviles para comportarse de manera diferente. Por ejemplo, la pequeña pantalla en un dispositivo móvil normalmente significa que solo una aplicación (es decir, la actividad) está visible en un momento. Otras actividades se mueven al fondo y se insertan en un estado suspendido, donde no se puede realizar cualquier trabajo. Sin embargo, sólo porque una aplicación Android está en segundo plano no significa que es imposible que la aplicación siga funcionando. 
 
-Las aplicaciones de Android se componen de al menos uno de los siguientes cuatro componentes principales: _actividades_, _receptores de difusión_, _proveedores de contenido_y _Servicios_. Las actividades son la piedra angular de muchas excelentes aplicaciones de Android, ya que proporcionan la interfaz de usuario que permite al usuario interactuar con la aplicación. Sin embargo, cuando se trata de realizar simultáneas o trabajo en segundo plano, las actividades no son siempre la mejor opción.
+Las aplicaciones de Android están formadas por al menos uno de los siguientes cuatro componentes principales: _Las actividades_, _receptores de difusión_, _proveedores de contenido_, y _servicios_. Las actividades son la piedra angular de muchas excelentes aplicaciones de Android, ya que proporcionan la interfaz de usuario que permite al usuario interactuar con la aplicación. Sin embargo, cuando se trata de realizar simultáneas o trabajo en segundo plano, las actividades no son siempre la mejor opción.
  
 El mecanismo principal para el trabajo en segundo plano en Android es el _servicio_. Un servicio de Android es un componente que está diseñado para realizar algún trabajo sin una interfaz de usuario. Un servicio podría descargar un archivo, reproducir música o aplicar un filtro a una imagen. También se pueden usar servicios para la comunicación entre procesos (_IPC_) entre las aplicaciones de Android. Por ejemplo, una aplicación de Android puede usar el servicio de Reproductor de música es desde otra aplicación o una aplicación podría exponer los datos (por ejemplo, información de contacto de una persona) a otras aplicaciones a través de un servicio. 
 
@@ -68,7 +68,7 @@ A partir de Android 8.0 (nivel de API 26), una aplicación Android ya no tiene l
 Existen algunas situaciones donde, aunque es una aplicación en segundo plano, Android reactivar la aplicación y relajar estas restricciones durante unos minutos, que permite a la aplicación realizar algún trabajo:
 * La aplicación recibe una mensaje en la nube de Firebase de prioridad alta.
 * La aplicación recibe una difusión. 
-* La aplicación recibe una ejecuta un `PendingIntent` en respuesta a una notificación.
+* La aplicación recibe y ejecuta un `PendingIntent` en respuesta a una notificación.
 
 Las aplicaciones existentes de Xamarin.Android que tenga que cambiar la forma de realizar tareas en segundo plano para evitar cualquier problema que pueda surgir en Android 8.0. Estas son algunas alternativas prácticas para un servicio de Android:
 
