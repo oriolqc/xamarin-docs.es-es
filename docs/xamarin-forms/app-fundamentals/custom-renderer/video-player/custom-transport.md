@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: c6aa4aed134667f25b3822c7604b85e27a404a3a
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/15/2019
 ms.locfileid: "58870162"
 ---
 # <a name="custom-video-transport-controls"></a>Controles de transporte de vídeo personalizados
 
-[![DDescargar ejemplo(~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 Los controles de transporte de un reproductor de vídeo son los botones que realizan las funciones **Reproducir**, **Pausa** y **Detener**. Estos botones suelen identificarse con iconos conocidos en lugar de texto, y las funciones **Reproducir** y **Pausa** suelen combinarse en un mismo botón.
 
@@ -540,7 +540,7 @@ Esto se admite en todas las plataformas, pero se trata de un triángulo negro si
 
 Esto es lo que se usa en el marcado que se muestra a continuación. En iOS, proporciona al símbolo de **Reproducir** la misma apariencia 3D que los botones **Pausa** y **Detener**, pero la variante no funciona en Android ni en UWP.
 
-La página **Transporte personalizado** establece la propiedad **AreTransportControlsEnabled** en **false** e incluye un elemento `ActivityIndicator` mostrado cuando el vídeo está cargándose, además de dos botones. `DataTrigger` Los objetos se usan para habilitar y deshabilitar el elemento `ActivityIndicator` y los botones, así como para cambiar el primer botón entre **Reproducir** y **Pausa**:
+La página **Transporte personalizado** establece la propiedad **AreTransportControlsEnabled** en **false** e incluye un elemento `ActivityIndicator` mostrado cuando el vídeo está cargándose, además de dos botones. Los objetos `DataTrigger` se usan para habilitar y deshabilitar el elemento `ActivityIndicator` y los botones, así como para cambiar el primer botón entre **Reproducir** y **Pausa**:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
