@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/23/2018
 ms.openlocfilehash: 66785fcd4b38f29ca0358e1e8885e6b7da59f5a7
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854747"
 ---
 # <a name="xamarinforms-requirements"></a>Requisitos de Xamarin.Forms
@@ -43,7 +43,7 @@ El estado de estas plataformas está disponible en el [GitHub de Xamarin.Forms](
 
 No se admiten estas plataformas cuando se usa Xamarin.Forms 3.0:
 
-- *Windows 8.1/Windows Phone 8.1 WinRT*
+- *Windows 8.1 / Windows Phone 8.1 WinRT*
 - *Windows Phone 8 Silverlight*
 
 ### <a name="android"></a>Android
@@ -52,19 +52,19 @@ Debe tener instalada la plataforma más reciente de Android SDK Tools y de la AP
 
 Además, la versión de compilación o de destino de los proyectos de Android **debe** establecerse en *Usar la última plataforma instalada*, aunque la versión mínima se puede establecer en API 19 para que pueda seguir admitiendo dispositivos que usen Android 4.4 y versiones más recientes. Estos valores se establecen en **Opciones del proyecto**:
 
-# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-**Opciones del proyecto > aplicación > Propiedades de la aplicación**
+**Opciones de proyecto > Aplicación > Propiedades de la aplicación**
 
 ![Opciones de compilación de Android en Visual Studio](requirements-images/options-android-vs-sml.png)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 **Compilar > General**
 
 ![Seleccione la última versión de framework de destino](requirements-images/options-general-sml.png)
 
-**Compilar > aplicación de Android**
+**Compilar > Aplicación de Android**
 
 ![Seleccione como mínimo y las versiones de Android para la aplicación de destino](requirements-images/options-android-sml.png)
 
@@ -95,6 +95,6 @@ El desarrollo de aplicaciones de Xamarin.Forms para UWP requiere lo siguiente:
 
 - Visual Studio de 2019 recomendado (Visual Studio 2017 versión 15,8 mínimo)
 
-- [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
+- [SDK de Windows 10](https://dev.windows.com/downloads/windows-10-sdk)
 
 Puede [agregar una aplicación de la Plataforma universal de Windows (UWP)](~/xamarin-forms/platform/windows/installation/index.md) a una solución existente de Xamarin.Forms en cualquier momento.

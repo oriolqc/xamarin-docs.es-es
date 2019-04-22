@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
 ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870253"
 ---
 # <a name="introduction-to-ios-10"></a>Introducción a iOS 10
@@ -61,7 +61,7 @@ Además, 3ª parte teclado aplicación extensiones tener las siguientes mejoras:
 
 Para obtener más información, consulte nuestra [Introducción a las extensiones](~/ios/platform/extensions.md), [integración de aplicaciones de mensaje](~/ios/platform/message-app-integration/index.md), [Introducción a sugerencias proactivas](~/ios/platform/search/proactive-suggestions.md), [ Introducción a SiriKit](~/ios/platform/sirikit/index.md), [Introducción a las notificaciones de usuario](~/ios/platform/user-notifications/index.md) y Apple [Guía de programación de la extensión de la aplicación](https://developer.apple.com/library/prerelease/content/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214).
 
-## <a name="app-search-enhancements"></a>Mejoras en la búsqueda de la aplicación
+## <a name="app-search-enhancements"></a>Mejoras en las búsquedas de aplicaciones
 
 Core Spotlight en iOS 10 proporciona varias mejoras para la búsqueda de la aplicación, como:
 
@@ -103,7 +103,7 @@ Además, la API de CallKit proporciona la capacidad para crear extensiones de ap
 
 Para obtener más información, consulte nuestra [Introducción a Callkit](~/ios/platform/callkit.md) guía.
 
-## <a name="message-app-integration"></a>Integración de aplicaciones de mensaje
+## <a name="message-app-integration"></a>Integración de aplicaciones de mensajes
 
 iOS 10 permite la inclusión de una extensión de aplicación de mensaje en la solución Xamarin.iOS que se integra con la **mensajes** funcionalidad nueva aplicación y presenta al usuario. La extensión puede enviar mensajes de texto, etiquetas, archivos multimedia e interactivos. Existen dos tipos de mensaje de extensión de la aplicación:
 
@@ -139,7 +139,7 @@ Una aplicación expone esta funcionalidad al sistema mediante un conjunto de tec
 
 Para obtener más información, consulte nuestra [Introducción a sugerencias proactivas](~/ios/platform/search/proactive-suggestions.md) guía.
 
-## <a name="request-app-review"></a>Solicitar revisión de aplicación
+## <a name="request-app-review"></a>Solicitud de revisión de aplicaciones
 
 Nuevo a iOS 10.3, el `RequestReview()` método permite que una aplicación de iOS pedir al usuario que calificar o lo revise. Aunque este método puede llamarse en cualquier punto donde tenga sentido en la experiencia del usuario, el proceso de revisión se rige y controlado por la directiva de App Store. Como resultado, este método puede o no puede mostrar una alerta y nunca debe llamarse en respuesta a una acción del usuario, como pulsar un botón.
 

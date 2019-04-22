@@ -8,17 +8,17 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: bb58866a0fc0ddb542c0a40eb7a0bd9b37562776
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869675"
 ---
 # <a name="playing-a-web-video"></a>Reproducción de un vídeo web
 
-[![DDescargar ejemplo(~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
-La clase `VideoPlayer` define una propiedad `Source` que se usa para especificar el origen del archivo de vídeo, así como una propiedad `AutoPlay`. `AutoPlay` Tiene un valor predeterminado de `true`, lo que significa que el vídeo debería comenzar a reproducirse de forma automática después de establecer `Source`:
+La clase `VideoPlayer` define una propiedad `Source` que se usa para especificar el origen del archivo de vídeo, así como una propiedad `AutoPlay`. El valor predeterminado de `AutoPlay` es `true`, lo que significa que el vídeo se debería comenzar a reproducir de forma automática después de establecer `Source`:
 
 ```csharp
 using System;

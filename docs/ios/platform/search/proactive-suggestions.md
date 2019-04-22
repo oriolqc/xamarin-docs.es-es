@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 2ab0147f918b36dc47ef6eed7d9bf1b6295d9733
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870409"
 ---
 # <a name="introduction-to-proactive-suggestions-in-xamarinios"></a>Introducción a las sugerencias proactivas en Xamarin.iOS
@@ -189,7 +189,7 @@ El desarrollador tendrá que asegurarse de esto es el mismo identificador de tip
 
 Con la cantidad mínima de código anterior, la aplicación ahora es capaz de aprovechar las ventajas de las tres nuevas características de iOS 10:
 
-- **HANDOFF**
+- **Handoff**
 - **Búsqueda de Spotlight**
 - **Avisos de Siri contextuales**
 

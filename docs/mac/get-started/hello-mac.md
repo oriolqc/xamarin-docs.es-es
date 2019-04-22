@@ -9,10 +9,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/02/2018
 ms.openlocfilehash: 9175c60c436f2e808f3658bae717a747e0401c28
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855320"
 ---
 # <a name="hello-mac-walkthrough"></a>Tutorial Hello, Mac
@@ -277,7 +277,7 @@ En la sección **Jerarquía de la interfaz**, el desarrollador puede tener acces
 
 ### <a name="interface-editor"></a>Editor de la interfaz
 
-En la sección **Editor de la interfaz** se proporciona la superficie en la que se establece la interfaz de usuario de forma gráfica. Arrastre elementos desde la sección **Biblioteca** de la sección **Properties & Utilities** (Propiedades y utilidades) para crear el diseño. Al agregar elementos de interfaz de usuario (vistas) a la superficie de diseño, se agregarán a la sección **Interface Hierarchy** (Jerarquía de la interfaz) en el orden en que aparecen en el **Interface Editor** (Editor de la interfaz).
+En la sección **Editor de la interfaz** se proporciona la superficie en la que se establece la interfaz de usuario de forma gráfica. Arrastre elementos desde la sección Biblioteca de la sección **Properties & Utilities** (Propiedades y utilidades) para crear el diseño. Al agregar elementos de interfaz de usuario (vistas) a la superficie de diseño, se agregarán a la sección **Interface Hierarchy** (Jerarquía de la interfaz) en el orden en que aparecen en el **Interface Editor** (Editor de la interfaz).
 
 ### <a name="properties--utilities"></a>Propiedades y utilidades
 
@@ -591,5 +591,5 @@ En este artículo, se han tratado los conceptos básicos de una aplicación est�
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Hello, Mac (ejemplo)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
+- [Ejemplo de Hello, Mac (ejemplo)](https://developer.xamarin.com/samples/mac/Hello_Mac/)
 - [Directrices de la interfaz humana de macOS](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

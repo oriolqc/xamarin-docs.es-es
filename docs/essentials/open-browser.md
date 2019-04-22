@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: 3f9e5a7a1e20b8e7d708ff80712e6262bae4baa7
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869592"
 ---
 # <a name="xamarinessentials-browser"></a>Xamarin.Essentials: Explorador
@@ -64,7 +64,7 @@ await Browser.OpenAsync(uri, new BrowserLaunchOptions
 
 ## <a name="platform-implementation-specifics"></a>Detalles de implementación de la plataforma
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 El modo de inicio determina cómo se inicia el explorador:
 
@@ -76,7 +76,7 @@ Se intentará usar las [pestañas personalizadas de Chrome](https://developer.ch
 
 Se usará `Intent` para solicitar que se abra el URI a través del explorador normal del sistema.
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 ## <a name="system-preferred"></a>Preferencia del sistema
 
@@ -86,7 +86,7 @@ Se usará `Intent` para solicitar que se abra el URI a través del explorador no
 
 El `OpenUrl` estándar de la aplicación principal se usa para iniciar el explorador predeterminado fuera de la aplicación.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 El explorador predeterminado del usuario se usará siempre, independientemente de `BrowserLaunchMode`.
 

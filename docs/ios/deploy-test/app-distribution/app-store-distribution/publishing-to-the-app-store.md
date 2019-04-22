@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
 ms.openlocfilehash: a00b157940cfde8021b92004fe27a4d52bac5e0c
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855164"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicación de aplicaciones Xamarin.iOS en el App Store
@@ -90,7 +90,7 @@ Para obtener instrucciones detalladas, vea [Creación de un perfil de distribuci
 
 Los nuevos proyectos Xamarin.iOS se establecen automáticamente en las _configuraciones de compilación_ de **depuración** y **versión**. Para configurar correctamente la compilación de **versión**, siga estos pasos:
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. Desde el **Panel de solución**, abra **Info.plist**. Seleccione **Aprovisionamiento manual**. Guarde y cierre el archivo.
 2. Haga clic con el botón derecho en el **nombre del proyecto** en el **Panel de solución**, seleccione **Opciones** y vaya a la pestaña **Compilación de iOS**.
@@ -120,7 +120,7 @@ Los nuevos proyectos Xamarin.iOS se establecen automáticamente en las _configur
 
 15. Haga clic en **Aceptar** para guardar los cambios en las propiedades del proyecto.
 
-# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Asegúrese de que Visual Studio 2019 o Visual Studio 2017 están [emparejados con un host de compilación de Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Haga clic con el botón derecho en el **nombre del proyecto** en el **Explorador de soluciones** y luego seleccione **Propiedades**.
@@ -172,7 +172,7 @@ Para obtener información sobre cómo hacerlo, lea la guía [Configuración de u
 
 Con la configuración de compilación establecida correctamente y iTunes Connect a la espera de su envío, ahora puede compilar la aplicación y enviarla a Apple.
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 1. En Visual Studio para Mac, seleccione la configuración de compilación de **versión** y un dispositivo (no un simulador) para el que se va a compilar.
 
@@ -231,7 +231,7 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
     >
     > Para encontrar una solución a este error, eche un vistazo a [esta publicación en los foros de Xamarin](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1).
 
-# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 > [!NOTE]
 > Visual Studio 2017 no admite actualmente el flujo de trabajo **Archive for Publishing** (Archivo para la publicación) que se encuentra en Visual Studio para Mac.

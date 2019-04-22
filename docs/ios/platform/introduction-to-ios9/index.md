@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: d0ad25a1ecff7262b9b4b41a5f9d73a5931bbd1c
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870201"
 ---
 # <a name="introduction-to-ios-9"></a>Introducción a iOS 9
@@ -22,7 +22,7 @@ _Este artículo presenta todas las características disponibles en iOS 9 y las A
 
 Apple ha agregado varias nuevas API y servicios en iOS 9, junto con muchas mejoras en las características existentes.
 
-## <a name="3d-touch"></a>3D Touch
+## <a name="3d-touch"></a>Entrada táctil 3D
 
 Nuevo a iOS 9 y el iPhone 6s y iPhone 6s Plus, 3D Touch agrega gestos confidenciales presión a las aplicaciones de iOS. Con 3D Touch, una aplicación de iPhone ahora es capaz de indicar no solo a la que el usuario toca la pantalla del dispositivo, puede también detectan cuánto presión está ejerciendo el usuario y responder a los niveles de presión diferentes.
 
@@ -34,7 +34,7 @@ Nuevo a iOS 9 y el iPhone 6s y iPhone 6s Plus, 3D Touch agrega gestos confidenci
 
 Para obtener más información, consulte nuestra [Introducción a 3D Touch](~/ios/platform/3d-touch.md) guía.
 
-## <a name="app-transport-security"></a>Seguridad de transporte de la aplicación
+## <a name="app-transport-security"></a>Seguridad de transporte de aplicación
 
 Nuevo a iOS 9, App Transport Security (ATS) aplica las conexiones seguras entre los recursos de internet (por ejemplo, el servidor back-end de la aplicación) y la aplicación. ATS garantiza que todas las comunicaciones de internet se ajustan para proteger la conexión de los procedimientos recomendados, impidiendo así la revelación accidental de información confidencial, ya sea directamente a través de la aplicación o una biblioteca que lo consume.
 
@@ -212,7 +212,7 @@ Consulte también las partes de iOS de estos ejemplos (complementaria Mac OS X v
 
 - [Ejemplos de iOS 9](https://developer.xamarin.com/samples/ios/iOS9/)
 - [Introducción a 3D Touch](~/ios/platform/3d-touch.md)
-- [Seguridad de transporte de la aplicación](~/ios/app-fundamentals/ats.md)
+- [Seguridad de transporte de aplicación](~/ios/app-fundamentals/ats.md)
 - [Multitarea para iPad](~/ios/platform/multitasking.md)
 - [Contactos y contactos de la interfaz de usuario](~/ios/platform/contacts.md)
 - [Nuevas API de búsqueda](~/ios/platform/search/index.md)
@@ -221,7 +221,7 @@ Consulte también las partes de iOS de estos ejemplos (complementaria Mac OS X v
 - [Mejoras de juegos](~/ios/platform/gaming/index.md)
 - [Introducción a HomeKit](~/ios/platform/homekit.md)
 - [Introducción a la entrega](~/ios/platform/handoff.md)
-- [Cambios adicionales en iOS 9 Framework](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
+- [Cambios adicionales en la plataforma iOS 9](~/ios/platform/introduction-to-ios9/additional-framework-changes.md)
 - [Solución de problemas](~/ios/platform/introduction-to-ios9/troubleshooting.md)
 - [iOS 9 para desarrolladores](https://developer.apple.com/ios/pre-release/)
 - [Novedades de iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

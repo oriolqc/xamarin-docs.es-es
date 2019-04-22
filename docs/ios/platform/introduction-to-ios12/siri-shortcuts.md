@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
 ms.openlocfilehash: e37fd88f0d5fcf02ece0ae2f5e3164a507067e29
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869829"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Métodos abreviados de Siri de Xamarin.iOS
@@ -227,8 +227,7 @@ Compilar el proyecto de Xcode que contiene esta definición personalizada de int
 Para ver este código generado:
 
 - Abra **AppDelegate.m**.
-- Agregue una importación al archivo de encabezado de la intención personalizado:
-`#import "OrderSoupIntent.h"`
+- Agregue una importación al archivo de encabezado de la intención personalizado: `#import "OrderSoupIntent.h"`
 - En cualquier método en la clase, agregue una referencia a `OrderSoupIntent`.
 - Haga doble clic en `OrderSoupIntent` y elija **ir a definición**.
 - Haga doble clic en el archivo abierta recientemente, **OrderSoupIntent.h**y seleccione **mostrar en Finder**.

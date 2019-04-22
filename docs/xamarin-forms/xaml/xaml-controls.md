@@ -1,5 +1,5 @@
 ---
-title: Controles XAML
+title: Controles de XAML
 description: Todas las vistas que se definen en Xamarin.Forms pueden hacer referencia a partir de los archivos XAML.
 ms.topic: article
 ms.prod: xamarin
@@ -9,15 +9,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/03/2019
 ms.openlocfilehash: a8a61ac505eab8c458c49bde9184d6e96583d37f
-ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59020267"
 ---
-# <a name="xaml-controls"></a>Controles XAML
+# <a name="xaml-controls"></a>Controles de XAML
 
-[![DEjemplo escargar](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/FormsGallery/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/FormsGallery/)
 
 Las vistas son objetos de interfaz de usuario, como etiquetas, botones y los controles deslizantes que se conocen normalmente como *controles* o *widgets* en otros entornos de programación de gráficos. Las vistas compatibles con Xamarin.Forms todos se derivan los [ `View` ](xref:Xamarin.Forms.View) clase.
 
@@ -40,7 +40,7 @@ Todas las vistas que se definen en Xamarin.Forms pueden hacer referencia a parti
 | --- | --- |
 | <h3>Botón</h3>Muestra el texto en un objeto rectangular.<p align="center">![Captura de pantalla de un botón](xaml-controls-images/Button.png "botón")</p>[API](xref:Xamarin.Forms.Button) / [guía](~/xamarin-forms/user-interface/button.md) | <p valign="center"><pre>&lt;Button Text="Click Me!"<br />        Font="Large"<br />        BorderWidth="1"<br />        HorizontalOptions="Center"<br />        VerticalOptions="CenterAndExpand"<br />        Clicked="OnButtonClicked" /&gt;</pre></p> |
 | <h3>ImageButton</h3>Muestra una imagen de un objeto rectangular.<p align="center">![Captura de pantalla de un control ImageButton](xaml-controls-images/ImageButton.png "ImageButton")</p>[API](xref:Xamarin.Forms.ImageButton) / [guía](~/xamarin-forms/user-interface/imagebutton.md) | <p valign="center"><pre>&lt;ImageButton Source="XamarinLogo.png"<br />             HorizontalOptions="Center"<br />             VerticalOptions="CenterAndExpand"<br />             Clicked="OnImageButtonClicked" /&gt;</pre></p> |
-| <h3>SearchBar</h3>Muestra una barra de búsqueda, para realizar una búsqueda.<p align="center">![Captura de pantalla de un SearchBar](xaml-controls-images/SearchBar.png "SearchBar")</p>[API](xref:Xamarin.Forms.SearchBar) | <p valign="center"><pre>&lt;SearchBar Placeholder="Xamarin.Forms Property"<br />           SearchButtonPressed="OnSearchBarButtonPressed" /&gt;</pre></p> |
+| <h3>Barra de búsqueda</h3>Muestra una barra de búsqueda, para realizar una búsqueda.<p align="center">![Captura de pantalla de un SearchBar](xaml-controls-images/SearchBar.png "SearchBar")</p>[API](xref:Xamarin.Forms.SearchBar) | <p valign="center"><pre>&lt;SearchBar Placeholder="Xamarin.Forms Property"<br />           SearchButtonPressed="OnSearchBarButtonPressed" /&gt;</pre></p> |
 |     |     |
 
 ## <a name="views-for-setting-values"></a>Para establecer valores de las vistas
@@ -83,5 +83,5 @@ Todas las vistas que se definen en Xamarin.Forms pueden hacer referencia a parti
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplo de Xamarin.Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
-- [Xamarin.Forms Samples (Ejemplos de Xamarin.Forms)](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Documentación de API de Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)
+- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/) (Ejemplos de Xamarin.Forms)
+- [Documentación de la API de Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

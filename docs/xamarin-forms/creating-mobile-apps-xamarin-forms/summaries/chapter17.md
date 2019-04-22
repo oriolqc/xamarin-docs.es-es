@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 3aaf8e9d1eb8e0d98ad32a6b5a1286f14c7bb906
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869993"
 ---
 # <a name="summary-of-chapter-17-mastering-the-grid"></a>Resumen del capítulo 17. Dominar la cuadrícula
 
-[![DEjemplo escargar](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
 
 El [ `Grid` ](xref:Xamarin.Forms.Grid) es un mecanismo eficaz de diseño que organiza sus elementos secundarios en filas y columnas de celdas. Al contrario que el código HTML similar `table` elemento, el `Grid` es únicamente para fines de diseño en lugar de presentación.
 
@@ -108,4 +108,4 @@ Inicializa el programa `Slider` elementos a un intervalo de 0 a 255 y utiliza lo
 
 - [Capítulo 17 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf)
 - [Ejemplos de capítulo 17](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter17)
-- [Cuadrícula](~/xamarin-forms/user-interface/layouts/grid.md)
+- [Grid](~/xamarin-forms/user-interface/layouts/grid.md)

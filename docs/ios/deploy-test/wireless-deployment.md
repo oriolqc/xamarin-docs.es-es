@@ -9,10 +9,10 @@ ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
 ms.openlocfilehash: 82bdd2c160572b0d813fb87d81b09c00996cef18
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854840"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Implementación inalámbrica para aplicaciones Xamarin.iOS y tvOS
@@ -27,14 +27,14 @@ La implementación inalámbrica está disponible como característica tanto en V
 
 Para usar la implementación inalámbrica, debe tener lo siguiente:
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 - macOS 10.12.4
 - La versión más reciente de Visual Studio para Mac
 - Xcode 9.0 o posterior
 - Un dispositivo con iOS 11.0 o tvOS 11.0 y versiones posteriores
 
-# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 - La versión más reciente de Visual Studio
 - Un dispositivo con iOS 11.0 o tvOS 11.0 y versiones posteriores

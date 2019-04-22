@@ -8,15 +8,15 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.openlocfilehash: 7049cc36f5f661152e027beb53180d793078beff
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855034"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabajar con capacidades en Xamarin.iOS
 
-_Agregar capacidades a una aplicación a menudo requiere una configuración de aprovisionamiento adicional. En esta guía se describe la configuración necesaria para todas las capacidades._
+_Agregar funcionalidades a una aplicación requiere con frecuencia una configuración de aprovisionamiento adicional. En esta guía se describe la configuración necesaria para todas las funcionalidades._
 
 Apple proporciona a los desarrolladores _capacidades_ (a veces denominadas _servicios de aplicaciones_) como método para extender la funcionalidad y ampliar el alcance de lo que pueden hacer las aplicaciones de iOS. Gracias a las capacidades, los desarrolladores pueden agregar a su aplicación una integración más profunda de las características de las plataformas, como por ejemplo la capacidad de iniciar transacciones monetarias desde la aplicación, servicios de dispositivo adicionales como Siri, etc.
 Estas capacidades se pueden usar con los proyectos de Xamarin.iOS. A continuación se muestra la lista completa de los servicios:
@@ -72,7 +72,7 @@ En esta sección se explica cómo usar el aprovisionamiento automático de Visua
 
 ## <a name="using-the-ide"></a>Uso de el IDE
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Las capacidades se agregan a **Entitlements.plist** en Visual Studio para Mac. Para agregar capacidades, siga estos pasos:
 
@@ -92,7 +92,7 @@ Las capacidades se agregan a **Entitlements.plist** en Visual Studio para Mac. P
 
     ![Agregar capacidades al archivo entitlements.plist](images/image18.png)
 
-# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Las capacidades se agregan a **Entitlements.plist**. Para agregar capacidades en Visual Studio 2019, haga lo siguiente:
 

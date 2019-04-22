@@ -9,10 +9,10 @@ author: maddyleger1
 ms.author: maleger
 ms.date: 02/04/2019
 ms.openlocfilehash: db243a9c8dcb25f51bc7926a7aa239531e9c24f6
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58859015"
 ---
 # <a name="xaml-previewer-for-xamarinforms"></a>Controlador de vista previa XAML para Xamarin.Forms
@@ -31,7 +31,7 @@ El controlador de vista previa de XAML muestra el aspecto de la página XAML de 
 
 Puede abrir a la vista previa de XAML, haga clic en las flechas en el panel de vista de división. Si desea cambiar el valor predeterminado divide el comportamiento de la vista, use el **Herramientas > Opciones > Xamarin > controlador de vista previa de formularios** cuadro de diálogo. En este cuadro de diálogo, puede seleccionar la vista de documento predeterminada y la orientación dividida.
 
-[![Xamarin. Opciones de vista previa se Forms en Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "opciones de controlador de vista previa de Xamarin.Forms en Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
+[![Opciones de controlador de vista previa de Xamarin.Forms en Visual Studio](xaml-previewer-images/xamlp-options-vs-sm.png "opciones de controlador de vista previa de Xamarin.Forms en Visual Studio")](xaml-previewer-images/xamlp-options-vs-lg.png#lightbox)
 
 Al abrir un archivo XAML, se abrirá el editor en tamaño completo o en siguiente para el controlador de vista previa, en función de la configuración seleccionada en el **Herramientas > Opciones > Xamarin > controlador de vista previa de formularios** cuadro de diálogo. Sin embargo, se puede cambiar la división para cada archivo en la ventana del editor.
 
@@ -39,11 +39,11 @@ Al abrir un archivo XAML, se abrirá el editor en tamaño completo o en siguient
 
 Elija si desea ver el código, el controlador de vista previa de XAML, o ambos mediante la selección de estos botones en la división ver panel. El botón central intercambia qué lado de la vista previa y el código están en:
 
-[![Xamarin. Forma de vista previa de los controles para cambiar entre diseño, el origen y la vista en dos paneles en Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "controla el controlador de vista previa de Xamarin.Forms para cambiar entre diseño, el origen y la vista en dos paneles en Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
+[![Controla el controlador de vista previa de Xamarin.Forms para cambiar entre diseño, el origen y la vista en dos paneles en Visual Studio](xaml-previewer-images/xamlp-controls-splitview-vs-sm.png "controla el controlador de vista previa de Xamarin.Forms para cambiar entre diseño, el origen y la vista en dos paneles en Visual Studio")](xaml-previewer-images/xamlp-controls-splitview-vs-lg.png#lightbox)
 
 Puede cambiar si la pantalla se divide verticalmente u horizontalmente, o contraer un panel completamente:
 
-[![Xamarin. Controles de orientación de panel de vista previa de Forms en Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "controles de orientación del panel de vista previa de Xamarin.Forms en Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
+[![Controles de orientación del panel de vista previa de Xamarin.Forms en Visual Studio](xaml-previewer-images/xamlp-controls-orientation-vs-sm.png "controles de orientación del panel de vista previa de Xamarin.Forms en Visual Studio")](xaml-previewer-images/xamlp-controls-orientation-vs-lg.png#lightbox)
 
 ::: zone-end
 ::: zone pivot="macos"
@@ -52,7 +52,7 @@ Puede cambiar si la pantalla se divide verticalmente u horizontalmente, o contra
 
 El **Preview** botón se muestra en el editor cuando se abre una página XAML. Mostrar u ocultar la vista previa presionando el **Preview** situado en la esquina superior derecha de cualquier ventana de documento XAML:
 
-[![Xamarin. Controlador de vista previa de formularios Forms en Visual Studio para Mac](xaml-previewer-images/xamlp-list-sml.png "controlador de vista previa de Xamarin.Forms en Visual Studio para Mac")](xaml-previewer-images/xamlp-list.png#lightbox)
+[![Controlador de vista previa de Xamarin.Forms en Visual Studio para Mac](xaml-previewer-images/xamlp-list-sml.png "controlador de vista previa de Xamarin.Forms en Visual Studio para Mac")](xaml-previewer-images/xamlp-list.png#lightbox)
 
 ::: zone-end
 

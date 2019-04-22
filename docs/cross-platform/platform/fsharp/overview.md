@@ -7,10 +7,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
 ms.openlocfilehash: 2f67983addd03a065383a2940d6e6dfc7076f2be
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854318"
 ---
 # <a name="getting-started-with-f35"></a>Introducción a F&#35;
@@ -50,8 +50,8 @@ Consulte la [lista de ejemplos de](~/cross-platform/platform/fsharp/samples.md) 
 
 Hay una gran cantidad de información en línea para ponerse al día con el F# lenguaje, que abarcan todos los proficiencies. A continuación aparecen algunas de nuestras recomendaciones:
 
--  [F#Software Foundation](http://fsharp.org)
--  [Portal de desarrollo de Visual F#](http://go.microsoft.com/fwlink/?LinkID=234174)
+-  [F# Software Foundation](http://fsharp.org)
+-  [Visual F# Portal de desarrollo](http://go.microsoft.com/fwlink/?LinkID=234174)
 -  [Visual F# Galería de código](http://go.microsoft.com/fwlink/?LinkID=124614)
 -  [Visual F# matemáticas o estadísticas de programación](http://go.microsoft.com/fwlink/?LinkId=235173)
 -  [Visual F# gráficos](http://go.microsoft.com/fwlink/?LinkId=235176)

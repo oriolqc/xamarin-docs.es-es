@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 974ef2a141ec7175c2306d4af63f534a5c77ecb2
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870123"
 ---
 # <a name="summary-of-chapter-15-the-interactive-interface"></a>Resumen del capítulo 15. La interfaz interactiva
 
-[![DEjemplo escargar](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15)
 
 Este capítulo analiza ocho `View` derivados que permiten la interacción con el usuario.
 

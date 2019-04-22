@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2018
 ms.openlocfilehash: e6f95713fdf3dbe8983c9f51554df7165637fc9a
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855138"
 ---
 # <a name="introduction-to-xamarinios-for-visual-studio"></a>Introducción a Xamarin.iOS para Visual Studio
@@ -38,7 +38,7 @@ Hay una serie de opciones de configuración disponibles para poder decidir cuál
 En cualquier caso, debe seguir estos pasos:
 
 - [Instalación de Visual Studio para Mac](https://docs.microsoft.com/visualstudio/mac/installation)
-- [Instalación de las herramientas de Xamarin en Windows](~/get-started/installation/windows.md)
+- [Instalar las herramientas de Xamarin en Windows](~/get-started/installation/windows.md)
 
 ## <a name="connecting-to-the-mac"></a>Conexión al equipo Mac
 
@@ -63,7 +63,7 @@ Los controles relevantes para el desarrollo de Xamarin iOS se han rodeado con un
 
 El aspecto de la barra de herramientas de iOS de Visual Studio es similar en todas las versiones de Visual Studio. Se muestra a continuación:
 
-[![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "Barra de herramientas de iOS")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png#lightbox)
+[![](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png "Barra de herramientas iOS")](introduction-to-xamarin-ios-for-visual-studio-images/iostoolbar.png#lightbox)
 
 Cada elemento se explica a continuación:
 
@@ -91,7 +91,7 @@ La captura de pantalla siguiente muestra las ventanas de salida disponibles, que
 
 Otros paneles de salida predeterminados de Visual Studio como Depurar y Compilar siguen estando disponibles en la vista de salida y se usan para la salida de depuración y la salida de MSBuild:
 
-- **Depuración**
+- **Depurar**
 
   [![](introduction-to-xamarin-ios-for-visual-studio-images/output2-sml.png "Salida de depuración")](introduction-to-xamarin-ios-for-visual-studio-images/output2-large.png#lightbox)
 

@@ -8,10 +8,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/10/2018
 ms.openlocfilehash: 7e9bfa841db9f0a76f762bab22050377830d85de
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854878"
 ---
 # <a name="gtk-platform-setup"></a>Configuración de la plataforma GTK #
@@ -29,7 +29,7 @@ Antes de empezar, cree una nueva solución de Xamarin.Forms o usar una solución
 
 GTK # para macOS y Linux se instalan como parte de [Mono](https://www.mono-project.com/download/stable/). GTK # para .NET puede instalarse en Windows con el [GTK # instalador](https://www.mono-project.com/download/stable/#download-win).
 
-# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Siga estas instrucciones para agregar una aplicación GTK # que se ejecutará en el escritorio de Windows:
 
@@ -110,7 +110,7 @@ Siga estas instrucciones para agregar una aplicación GTK # que se ejecutará en
 
     ![GTK # s Game of Life](gtk-images/win/gtk-gameoflife.png "GTK # s Game of Life")
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 Siga estas instrucciones para agregar una aplicación GTK # que se ejecutará en el escritorio de Mac:
 
@@ -175,7 +175,7 @@ Siga estas instrucciones para agregar una aplicación GTK # que se ejecutará en
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-### <a name="platform-specifics"></a>Características específicas de plataforma
+### <a name="platform-specifics"></a>Funcionalidad específica de plataforma
 
 Puede determinar qué plataforma se está ejecutando en la aplicación de Xamarin.Forms en XAML o código. Esto le permite cambiar las características del programa cuando se ejecuta en GTK #. En el código, compare el valor de `Device.RuntimePlatform` con el `Device.GTK` constante (que es igual a la cadena "GTK"). Si hay una coincidencia, la aplicación se ejecuta en GTK #.
 

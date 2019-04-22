@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: c0875534d88ea5b66b3072c35b9d38894fe98934
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870032"
 ---
 # <a name="xamarinessentials-map"></a>Xamarin.Essentials: Asignación
@@ -103,15 +103,15 @@ public class MapTest
 
 ## <a name="platform-differences"></a>Diferencias entre plataformas
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 - `NavigationMode` admite Bicycling (Bicicleta), Driving (Automóvil) y Walking (A pie).
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 - `NavigationMode` admite Driving (Automóvil), Transit (Transporte público) y Walking (A pie).
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 - `NavigationMode` admite Driving (Automóvil), Transit (Transporte público) y Walking (A pie).
 
@@ -119,15 +119,15 @@ public class MapTest
 
 ## <a name="platform-implementation-specifics"></a>Detalles de implementación de la plataforma
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
 Android usa el esquema `geo:` de URI para iniciar la aplicación de mapas en el dispositivo. Esto podría pedirle al usuario que seleccione de una aplicación existente que admite este esquema de URI.  Xamarin.Essentials se probó con Google Maps, que admite este esquema.
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
 Sin detalles de implementación específicos para la plataforma.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
 Sin detalles de implementación específicos para la plataforma.
 

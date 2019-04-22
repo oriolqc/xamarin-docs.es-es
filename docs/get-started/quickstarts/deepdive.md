@@ -10,10 +10,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/27/2018
 ms.openlocfilehash: 67b189254cc08fac0323b7df5fcbab5abd994c05
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855021"
 ---
 # <a name="xamarinforms-quickstart-deep-dive"></a>Análisis detallado de inicio rápido de Xamarin.Forms
@@ -421,7 +421,7 @@ async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs e)
 En el `OnNoteAddedClicked` método, que se ejecuta cuando se agrega una nota nueva a la aplicación, el [ `BindingContext` ](xref:Xamarin.Forms.BindableObject.BindingContext) de `NoteEntryPage` se establece en un nuevo `Note` instancia. En el `OnListViewItemSelected` método, que se ejecuta cuando se selecciona una nota existente en el [ `ListView` ](xref:Xamarin.Forms.ListView), el `BindingContext` de la `NoteEntryPage` está establecido en seleccionado `Note` instancia, que se accede mediante el [ `e.SelectedItem` ](xref:Xamarin.Forms.SelectedItemChangedEventArgs.SelectedItem) propiedad.
 
 > [!IMPORTANT]
-> Aunque la propiedad [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de cada objeto de *destino* se puede establecer de manera individual, no es necesario hacerlo. `BindingContext` es una propiedad especial que hereda todos sus elementos secundarios. Por lo tanto, cuando el `BindingContext` en el [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) está establecido en un `Note` instancia, todos los elementos secundarios de la `ContentPage` tienen el mismo `BindingContext`y se puede enlazar a propiedades públicas de la `Note`objeto.
+> Aunque la propiedad [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de cada objeto de *destino* se puede establecer de manera individual, no es necesario hacerlo. `BindingContext` es una propiedad especial que heredan todos sus elementos secundarios. Por lo tanto, cuando el `BindingContext` en el [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) está establecido en un `Note` instancia, todos los elementos secundarios de la `ContentPage` tienen el mismo `BindingContext`y se puede enlazar a propiedades públicas de la `Note`objeto.
 
 El [ `Editor` ](xref:Xamarin.Forms.Editor) en `NoteEntryPage` , a continuación, se enlaza a la `Text` propiedad de la `Note` objeto:
 
@@ -534,9 +534,9 @@ También es recomendable el libro de Charles Petzold titulado [_Creating Mobile 
 
 - [Lenguaje de marcado de aplicaciones eXtensible (XAML)](~/xamarin-forms/xaml/index.md)
 - [Enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Controls Reference (Referencia de controles)](~/xamarin-forms/user-interface/controls/index.md)
+- [Controls Reference](~/xamarin-forms/user-interface/controls/index.md) (Referencia de controles)
 - [Extensiones de marcado XAML](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Xamarin.Forms Samples (Ejemplos de Xamarin.Forms)](https://developer.xamarin.com/samples/xamarin-forms/all/)
-- [Getting Started Samples (Ejemplos de introducción)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/)
-- [Referencia de API de Xamarin.Forms](xref:Xamarin.Forms)
+- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/) (Ejemplos de Xamarin.Forms)
+- [Getting Started Samples](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/) (Ejemplos de introducción)
+- [Referencia de la API de Xamarin.Forms](xref:Xamarin.Forms)
 - [Aprendizaje autoguiado gratuito (vídeo)](https://university.xamarin.com/self-guided/)

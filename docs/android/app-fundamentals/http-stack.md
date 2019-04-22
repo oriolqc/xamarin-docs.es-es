@@ -8,10 +8,10 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/20/2018
 ms.openlocfilehash: a3704552c8fc147588919ecdde2813e831237d89
-ms.sourcegitcommit: cc750b0d8086ed14f84cd8eb9a06f45c719b3cf4
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59239906"
 ---
 # <a name="httpclient-stack-and-ssltls-implementation-selector-for-android"></a>Pila HttpClient y Selector de implementación de SSL/TLS para Android
@@ -25,22 +25,22 @@ Deben hacer referencia a los proyectos de la **System.Net.Http** ensamblado.
 >
 > Para asegurarse de que las aplicaciones seguirán funcionando con estos servidores y servicios, **debe actualizar los proyectos de Xamarin con el `Android HttpClient` y `Native TLS 1.2` configuración que se muestra a continuación, a continuación, volver a compilar y volver a implementar sus aplicaciones** a su usuarios.
 
-# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 La configuración de Xamarin.Android HttpClient es en **opciones de proyecto > Opciones de Android**, a continuación, haga clic en el **opciones avanzadas** botón.
 
 Se trata de la configuración recomendada para la compatibilidad con TLS 1.2:
 
-[![VOpciones de Android Studio isual](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
+[![Opciones de Android de Visual Studio](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
 
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 La configuración de Xamarin.Android HttpClient es en **opciones de proyecto > compilar > compilación de Android** configuración y haga clic en el **General** ficha.
 
 Se trata de la configuración recomendada para la compatibilidad con TLS 1.2:
 
-[![Visual Studio para Mac Android opciones](http-stack-images/android-mac-sml.png)](http-stack-images/android-mac.png#lightbox)
+[![Visual Studio para Mac opciones de Android](http-stack-images/android-mac-sml.png)](http-stack-images/android-mac.png#lightbox)
 
 -----
 
@@ -119,13 +119,13 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 
 Esta opción de proyecto controla qué biblioteca TLS subyacente se usará en todas las solicitudes web, ambos `HttpClient` y `WebRequest`. De forma predeterminada, se selecciona TLS 1.2:
 
-# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-[![TCuadro de cuadro combinado de implementación LS/SSL en Visual Studio](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png#lightbox)
+[![Cuadro combinado de implementación de TLS/SSL en Visual Studio](http-stack-images/tls06-vs.png)](http-stack-images/tls05-vs.png#lightbox)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-[![TCuadro combinado de la implementación de LS/SSL en Visual Studio para Mac](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png#lightbox)
+[![Cuadro combinado de implementación de TLS/SSL en Visual Studio para Mac](http-stack-images/tls06-xs.png)](http-stack-images/tls05-xs.png#lightbox)
 
 -----
 
@@ -169,11 +169,11 @@ Hay dos variables de entorno que están relacionados con el uso de TLS en Xamari
 
 Esta variable de entorno se establece mediante la adición de un _archivo entorno_ al proyecto. Un archivo de entorno es un archivo de texto con formato Unix con una acción de compilación **AndroidEnvironment**:
 
-# [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
+# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 ![Captura de pantalla de la acción de compilación AndroidEnvironment en Visual Studio.](http-stack-images/tls03-vs.png)
 
-# [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+# <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
 ![Captura de pantalla de la AndroidEnvironment generar la acción en Visual Studio para Mac.](http-stack-images/tls03-xs.png)
 

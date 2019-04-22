@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
 ms.openlocfilehash: 8c831dfa45c5028e4f1422467bf3be9210452335
-ms.sourcegitcommit: be51b459a0a148ae3adca31d7599f53f7b2c3a68
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59019378"
 ---
 # <a name="reusable-effectbehavior"></a>EffectBehavior reutilizable
 
-[![DDescargar ejemplo(~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/behaviors/effectbehavior/)
 
 _Los comportamientos son una manera útil de agregar un efecto a un control, quitando el código de control de efecto reutilizable de los archivos de código subyacente. En este artículo se explica cómo crear y consumir un comportamiento de Xamarin.Forms para agregar un efecto a un control._
 

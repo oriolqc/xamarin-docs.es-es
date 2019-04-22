@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/28/2019
 ms.openlocfilehash: 7106c0aed03800d3479471caab0974be3c09c1f8
-ms.sourcegitcommit: cc750b0d8086ed14f84cd8eb9a06f45c719b3cf4
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59239919"
 ---
 # <a name="consume-a-windows-communication-foundation-wcf-web-service"></a>Consumir un servicio Web de Windows Communication Foundation (WCF)
 
-[![DEjemplo escargar](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
 
 _WCF es el marco unificado de Microsoft para crear aplicaciones orientadas a servicios. Permite a los desarrolladores crear aplicaciones distribuidas seguras, confiables, transacciones e interoperables. En este artículo se muestra cómo consumir un servicio de Protocolo Simple de acceso de objetos (SOAP) de WCF desde una aplicación de Xamarin.Forms._
 
@@ -312,5 +312,5 @@ De forma predeterminada, IIS Express solo responderá a las solicitudes para `lo
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [TodoWCF (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
-- [Filtrar Crear a un cliente de Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
+- [Cómo: Crear a un cliente de Windows Communication Foundation](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
 - [ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)

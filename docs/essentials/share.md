@@ -7,10 +7,10 @@ ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
 ms.openlocfilehash: 1a9a7b008773255d9d7743a4fcb21f02feb3e116
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869382"
 ---
 # <a name="xamarinessentials-share"></a>Xamarin.Essentials: Compartir
@@ -61,19 +61,19 @@ Interfaz de usuario para compartir con una aplicación externa que aparece cuand
 
 ## <a name="platform-differences"></a>Diferencias entre plataformas
 
-# [<a name="android"></a>Android](#tab/android)
+# <a name="androidtabandroid"></a>[Android](#tab/android)
 
-* `Subject` La propiedad se usa para el asunto deseado de un mensaje.
+* La propiedad `Subject` se usa para el asunto deseado de un mensaje.
 
-# [<a name="ios"></a>iOS](#tab/ios)
+# <a name="iostabios"></a>[iOS](#tab/ios)
 
-* `Subject` No se usa.
-* `Title` No se usa.
+* `Subject` no se usa.
+* `Title` no se usa.
 
-# [<a name="uwp"></a>UWP](#tab/uwp)
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
-* `Title` El valor predeterminado será el nombre de la aplicación si no se establece.
-* `Subject` No se usa.
+* El valor predeterminado de `Title` será el nombre de la aplicación si no se establece.
+* `Subject` no se usa.
 
 -----
 

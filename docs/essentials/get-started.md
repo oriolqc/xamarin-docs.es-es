@@ -7,10 +7,10 @@ ms.author: jamont
 ms.custom: video
 ms.date: 11/04/2018
 ms.openlocfilehash: d8562cd74b661b5f72f373151b9aa0acc36f8477
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58869759"
 ---
 # <a name="get-started-with-xamarinessentials"></a>Introducción a Xamarin.Essentials
@@ -37,11 +37,11 @@ Xamarin.Essentials está disponible como paquete NuGet que se puede agregar a cu
 
 3. Agregue el paquete NuGet **Xamarin.Essentials** a cada proyecto:
 
-    # [<a name="visual-studio"></a>Programa para la mejora](#tab/windows)
+    # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
     En el panel del Explorador de soluciones, haga clic con el botón derecho en el nombre de la solución y seleccione **Administrar paquetes NuGet**. Busque **Xamarin.Essentials** e instale el paquete en **TODOS** los proyectos, incluidos Android, iOS, UWP y las bibliotecas de .NET Standard.
 
-    # [<a name="visual-studio-for-mac"></a>Visual Studio para Mac](#tab/macos)
+    # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
     En el panel del Explorador de soluciones, haga clic con el botón derecho en el nombre del proyecto y seleccione **Agregar > Agregar paquetes NuGet...**. Busque **Xamarin.Essentials** e instale el paquete en **TODOS** los proyectos, incluidos Android, iOS y las bibliotecas de .NET Standard.
 
@@ -55,7 +55,7 @@ Xamarin.Essentials está disponible como paquete NuGet que se puede agregar a cu
 
 5. Xamarin.Essentials requiere una configuración específica de plataforma:
 
-    # [<a name="android"></a>Android](#tab/android)
+    # <a name="androidtabandroid"></a>[Android](#tab/android)
 
     La versión mínima de Android compatible con Xamarin.Essentials es la 4.4, que corresponde a un nivel de API 19, pero la versión de destino de Android para compilar debe ser la 9.0, correspondiente al nivel de API 28. (En Visual Studio, estas dos versiones se establecen en el cuadro de diálogo Propiedades del proyecto correspondiente al proyecto de Android en la pestaña Manifiesto de Android). En Visual Studio para Mac, se establecen en el cuadro de diálogo Opciones del proyecto correspondiente al proyecto de Android, en la pestaña Aplicación de Android).
 
@@ -82,11 +82,11 @@ Xamarin.Essentials está disponible como paquete NuGet que se puede agregar a cu
     }
     ```
 
-    # [<a name="ios"></a>iOS](#tab/ios)
+    # <a name="iostabios"></a>[iOS](#tab/ios)
 
     No se requiere configuración adicional.
 
-    # [<a name="uwp"></a>UWP](#tab/uwp)
+    # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
 
     No se requiere configuración adicional.
 

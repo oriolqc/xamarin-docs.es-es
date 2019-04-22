@@ -9,10 +9,10 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2018
 ms.openlocfilehash: 2bef13e7f465dd213649f88deb572eb661895250
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854813"
 ---
 # <a name="wpf-platform-setup"></a>Configuración de la plataforma WPF
@@ -124,7 +124,7 @@ Siga estas instrucciones para agregar una aplicación WPF que se ejecutará en l
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-### <a name="platform-specifics"></a>Características específicas de plataforma
+### <a name="platform-specifics"></a>Funcionalidad específica de plataforma
 
 Puede determinar qué plataforma se está ejecutando en la aplicación de Xamarin.Forms mediante código o XAML. Esto le permite cambiar las características del programa cuando se ejecuta en WPF. En el código, compare el valor de `Device.RuntimePlatform` con el `Device.WPF` constante (que es igual a la cadena "WPF"). Si hay una coincidencia, la aplicación se ejecuta en WPF.
 

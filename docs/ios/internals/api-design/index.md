@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 9425b26b5cc8fcd9b8a80df422d932c96d52889b
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870370"
 ---
 # <a name="xamarinios-api-design"></a>Diseño de API de Xamarin.iOS

@@ -10,15 +10,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
 ms.openlocfilehash: 7b13ab5a4cc0d8e66e260329b5a53397778cb179
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855125"
 ---
 # <a name="create-a-single-page-xamarinforms-application"></a>Crear una aplicación de Xamarin.Forms de página única
 
-[![DEjemplo escargar](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
 
 En este tutorial, obtendrá información sobre cómo:
 
@@ -160,7 +160,7 @@ Para obtener más información sobre estos requisitos previos, consulte [instala
 
     ![](single-page-images/vs/android-start.png "Barra de herramientas de Android de Visual Studio")
 
-    [![](single-page-images/vs/notes-android.png "Notas en Android Emulator")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![](single-page-images/vs/notes-android.png "Notas en el emulador de Android")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Escriba una nota y pulse el botón **Guardar**.
 
@@ -310,7 +310,7 @@ Para obtener más información sobre estos requisitos previos, consulte [instala
 
     ![](single-page-images/vs/android-start.png "Barra de herramientas de Android de Visual Studio")
 
-    [![](single-page-images/vs/notes-android.png "Notas en Android Emulator")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![](single-page-images/vs/notes-android.png "Notas en el emulador de Android")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Escriba una nota y pulse el botón **Guardar**.
 
@@ -480,7 +480,7 @@ Para obtener más información sobre estos requisitos previos, consulte [instala
 
 5. En la barra de herramientas de Visual Studio para Mac, pulse el botón **Iniciar** (el botón triangular similar a un botón de reproducción) para iniciar la aplicación en la instancia elegida de Android Emulator:
 
-      [![](single-page-images/vsmac/notes-android.png "Notas en Android Emulator")](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
+      [![](single-page-images/vsmac/notes-android.png "Notas en el emulador de Android")](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Escriba una nota y pulse el botón **Guardar**.
 
@@ -503,5 +503,5 @@ Para activar esta aplicación de página única en una aplicación de varias pá
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Notas (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
+- [Notes (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
 - [Análisis detallado de inicio rápido de Xamarin.Forms](deepdive.md)

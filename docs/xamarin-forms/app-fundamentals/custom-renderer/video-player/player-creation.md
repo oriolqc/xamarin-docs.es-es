@@ -8,15 +8,15 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
 ms.openlocfilehash: 4bfbd065c9b17ce402c5a15289c7ff608eb58b23
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870019"
 ---
 # <a name="creating-the-platform-video-players"></a>Creación de reproductores de vídeo de plataforma
 
-[![DDescargar ejemplo(~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
 
 La solución [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) contiene todo el código necesario para implementar un reproductor de vídeo para Xamarin.Forms. También incluye una serie de páginas en las que se muestra cómo usar el reproductor de vídeo dentro de una aplicación. Todo el código `VideoPlayer` y sus representadores de plataforma residen en carpetas de proyecto denominadas `FormsVideoLibrary` que además usan el espacio de nombres `FormsVideoLibrary`. Esto debería facilitar la copia de los archivos en la propia aplicación y la referencia a las clases.
 

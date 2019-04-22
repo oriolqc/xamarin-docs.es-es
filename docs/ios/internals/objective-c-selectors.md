@@ -8,10 +8,10 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/12/2017
 ms.openlocfilehash: 15db59945f482728f760006095e294bc5628c8bd
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870183"
 ---
 # <a name="objective-c-selectors-in-xamarinios"></a>Selectores de Objective-C en Xamarin.iOS

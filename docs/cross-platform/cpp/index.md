@@ -6,10 +6,10 @@ author: mikeparker104
 ms.author: miparker
 ms.date: 12/17/2018
 ms.openlocfilehash: a235a24d544e938d4bf29e6569564aface2f6972
-ms.sourcegitcommit: 1c2565c372207bfa257cadac2a2d23d4f90b0cea
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58866389"
 ---
 # <a name="use-cc-libraries-with-xamarin"></a>Uso de bibliotecas de C o C++ con Xamarin
@@ -763,7 +763,7 @@ En este artículo se explica cómo crear una aplicación de Xamarin.Forms que us
 ### <a name="downloads"></a>Descargas
 
 - [Herramientas de línea de comandos (CLI de NuGet)](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference#macoslinux)
-- [Programa para la mejora](https://visualstudio.microsoft.com/vs)
+- [Visual Studio](https://visualstudio.microsoft.com/vs)
 
 ### <a name="examples"></a>Ejemplos
 

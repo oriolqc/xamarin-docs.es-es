@@ -8,19 +8,19 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 54509d0a1133d86727317366b0d229bc218cb263
-ms.sourcegitcommit: 495680e74c72e7c570e68cde95d3d3643b1fcc8a
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870305"
 ---
 # <a name="customizing-a-map-pin"></a>Personalización de un anclado de mapa
 
-[![DDescargar ejemplo(~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
 
 _En este artículo se explica cómo crear un representador personalizado para el control de mapa, que muestra un mapa nativo con una marca personalizada y una vista personalizada de los datos de marca en cada plataforma._
 
-Todas las vistas de Xamarin.Forms tienen un representador adjunto para cada plataforma que crea una instancia de un control nativo. Cuando una aplicación de Xamarin.Forms representa una [`Map`](xref:Xamarin.Forms.Maps.Map) en iOS se crea la instancia de la clase `MapRenderer`, que a su vez crea una instancia del control `MKMapView` nativo. En la plataforma Android, la clase `MapRenderer` crea una instancia del control `MapView` nativo. En la Plataforma Universal de Windows (UWP), la clase `MapRenderer` crea una instancia de `MapControl` nativa. Para obtener más información sobre las clases de control nativo que se asignan a los controles de Xamarin.Forms y el representador, vea [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) (Controles nativos y clases base del representador).
+Todos las vistas de Xamarin.Forms tienen un representador que lo acompaña para cada plataforma y que crea una instancia de un control nativo. Cuando una aplicación de Xamarin.Forms representa una [`Map`](xref:Xamarin.Forms.Maps.Map) en iOS se crea la instancia de la clase `MapRenderer`, que a su vez crea una instancia del control `MKMapView` nativo. En la plataforma Android, la clase `MapRenderer` crea una instancia del control `MapView` nativo. En la Plataforma Universal de Windows (UWP), la clase `MapRenderer` crea una instancia de `MapControl` nativa. Para obtener más información sobre las clases de control nativo que se asignan a los controles de Xamarin.Forms y el representador, vea [Renderer Base Classes and Native Controls](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) (Controles nativos y clases base del representador).
 
 El siguiente diagrama ilustra la relación entre la [`Map`](xref:Xamarin.Forms.Maps.Map) y los controles nativos correspondientes que la implementan:
 
@@ -236,8 +236,8 @@ El método `OnElementChanged` realiza la siguiente configuración de la instanci
 
 Se llama al método `GetViewForAnnotation` cuando la ubicación de la anotación se vuelve visible en el mapa y se usa para personalizar la anotación antes de mostrarla. Una anotación tiene dos partes:
 
-- `MkAnnotation` – Incluye el título, el subtítulo y la ubicación de la anotación.
-- `MkAnnotationView` – Contiene la imagen para representar la anotación y, opcionalmente, una llamada que se muestra cuando el usuario pulsa la anotación.
+- `MkAnnotation`: incluye el título, el subtítulo y la ubicación de la anotación.
+- `MkAnnotationView`: contiene la imagen para representar la anotación y, opcionalmente, una llamada que se muestra cuando el usuario pulsa la anotación.
 
 El método `GetViewForAnnotation` acepta un `IMKAnnotation` que contiene los datos de la anotación y devuelve un `MKAnnotationView` para su presentación en el mapa. Se muestra en el siguiente ejemplo de código:
 
@@ -403,8 +403,8 @@ Siempre que se adjunta el representador personalizado a un nuevo elemento de Xam
 
 La clase `CustomMapRenderer` implementa la interfaz `GoogleMap.IInfoWindowAdapter` para [personalizar la ventana de información](#Customizing_the_Info_Window). Esta interfaz especifica que se deben implementar los siguientes métodos:
 
-- `public Android.Views.View GetInfoWindow(Marker marker)` – Se llama a este método para devolver una ventana de información personalizada para un marcador. Si se devuelve `null`, se usará la representación de la ventana predeterminada. Si se devuelve un `View`, `View` se colocará dentro del marco de la ventana de información.
-- `public Android.Views.View GetInfoContents(Marker marker)` – Se llama a este método para devolver un elemento `View` que contiene el contenido de la ventana de información, y solo se llamará si el método `GetInfoWindow` devuelve `null`. Si devuelve `null`, se usará la representación predeterminada del contenido de la ventana de información.
+- `public Android.Views.View GetInfoWindow(Marker marker)`: se llama a este método para devolver una ventana de información personalizada para un marcador. Si se devuelve `null`, se usará la representación de la ventana predeterminada. Si se devuelve un `View`, `View` se colocará dentro del marco de la ventana de información.
+- `public Android.Views.View GetInfoContents(Marker marker)`: se llama a este método para devolver un `View` que contiene el contenido de la ventana de información, y solo se llamará si el método `GetInfoWindow` devuelve `null`. Si devuelve `null`, se usará la representación predeterminada del contenido de la ventana de información.
 
 En la aplicación de ejemplo, solo se personaliza el contenido de la ventana de información, de forma que el método `GetInfoWindow` devuelve `null` para habilitar esto.
 
@@ -660,7 +660,7 @@ En este artículo se muestra cómo crear un representador personalizado para el 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Control de Maps](~/xamarin-forms/user-interface/map.md)
-- [Maps en iOS](~/ios/user-interface/controls/ios-maps/index.md)
+- [Xamarin.Forms Map](~/xamarin-forms/user-interface/map.md) (Mapa de Xamarin.Forms)
+- [Maps in Xamarin.iOS](~/ios/user-interface/controls/ios-maps/index.md) (Mapas en Xamarin.iOS)
 - [API de Maps](~/android/platform/maps-and-location/maps/maps-api.md)
-- [Marca personalizada (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+- [Customized Pin (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/) (Marca personalizada [ejemplo])

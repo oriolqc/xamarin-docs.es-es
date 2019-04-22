@@ -9,10 +9,10 @@ ms.date: 02/12/2019
 featureFlags:
 - clicktale
 ms.openlocfilehash: ee92a3430fcce5bcd389d2bfa78762b71d1d5be9
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58854007"
 ---
 <div id="main" class="v2">
@@ -82,7 +82,7 @@ ms.locfileid: "58854007"
         <ul class="pivots">
             <li>
                 <li>
-                <a href="#get-started">Primeros pasos</a>
+                <a href="#get-started">Introducción</a>
                 <ul id="get-started">
                     <li>
                         <a href="#get-started1"></a>
@@ -230,7 +230,7 @@ Base de datos </a>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/web-service/index.yml">
                                                                         <img src="https://docs.microsoft.com/media/common/i_server.svg" alt="">
-servicios Web </a>
+Servicios web </a>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -743,24 +743,19 @@ Mac</a>
         <h2>Manténgase en contacto con nosotros</h2>
         <ul class="links">
            <li>
-                <a href="https://blog.xamarin.com/">
-Blog </a>
+                <a href="https://blog.xamarin.com/"> Blog </a>
             </li>
             <li>
-                <a href="https://forums.xamarin.com/">
-Foros </a>
+                <a href="https://forums.xamarin.com/"> Foros </a>
             </li>
             <li>
-                <a href="https://twitter.com/xamarinhq">
-Twitter </a>
+                <a href="https://twitter.com/xamarinhq"> Twitter </a>
             </li>
             <li>
-                <a href="https://stackoverflow.com/questions/tagged/xamarin">
-Desbordamiento de pila </a>
+                <a href="https://stackoverflow.com/questions/tagged/xamarin"> Stack Overflow </a>
             </li>
             <li>
-                <a href="https://dotnet.microsoft.com/platform/community">
-Comunidad de desarrolladores </a>
+                <a href="https://dotnet.microsoft.com/platform/community">Comunidad de desarrolladores</a>
             </li>
         </ul>
     </div>
