@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bd3f37082443e93f10f60d9466fe22aae8571b14
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373443"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. En **MainPage.xaml**, modifique la declaración [`Editor`](xref:Xamarin.Forms.Editor) para personalizar su comportamiento:

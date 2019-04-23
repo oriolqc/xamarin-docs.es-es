@@ -1,10 +1,4 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: 68a999cae8d3eb1113805a8876fc0e2928f0003e
-ms.sourcegitcommit: 2868c968f418cd7cc110f9664f3c3ffb6df1f9af
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53267318"
 documentType: LandingData
 title: Xamarin.Android
 metadata:
@@ -15,110 +9,110 @@ metadata:
   ms.topic: landing-page
   ms.technology: xamarin-android
 abstract:
-  description: Xamarin.Android expone el Android SDK completo para los desarrolladores de .NET. Cree aplicaciones Android, totalmente nativas, con C# o F# en Visual Studio.
+  description: 'Xamarin.Android expone el Android SDK completo para los desarrolladores de .NET. Cree aplicaciones Android, totalmente nativas, con C# o F# en Visual Studio.'
   menu:
     items:
-    - href: ~/android/samples/
-      text: Ejemplos de Android
-    - href: https://docs.microsoft.com/xamarin/android/release-notes/
-      text: Notas de la versión
-    - href: https://developers.google.com/
-      text: Documentación para desarrolladores de Google
-    - href: /visualstudio/
-      text: Programa para la mejora
+      - href: ~/android/samples/
+        text: Ejemplos de Android
+      - href: 'https://docs.microsoft.com/xamarin/android/release-notes/'
+        text: Notas de la versión
+      - href: 'https://developers.google.com/'
+        text: Documentación para desarrolladores de Google
+      - href: /visualstudio/
+        text: Programa para la mejora
 sections:
-- title: Primeros pasos
-  items:
-  - type: paragraph
-    text: Aprenda a crear su primera aplicación Android con Xamarin y C#.
-  - type: list
-    style: icon48
+  - title: Primeros pasos
     items:
-    - image:
-        src: https://docs.microsoft.com/media/common/i_setup.svg
-      text: Programa de instalación
-      href: ~/android/get-started/installation/index.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Hello, Android
-      href: ~/android/get-started/hello-android/hello-android-quickstart.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Aplicaciones de varias pantallas
-      href: ~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
-      text: Android Pie
-      href: ~/android/platform/pie.md
-- title: Guías
-  items:
-  - type: list
-    style: cards
-    className: cardsB
+      - type: paragraph
+        text: 'Aprenda a crear su primera aplicación Android con Xamarin y C#.'
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
+            text: Programa de instalación
+            href: ~/android/get-started/installation/index.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
+            text: 'Hello, Android'
+            href: ~/android/get-started/hello-android/hello-android-quickstart.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
+            text: Aplicaciones de varias pantallas
+            href: ~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
+            text: Android Pie
+            href: ~/android/platform/pie.md
+  - title: Guías
     items:
-    - href: ~/android/get-started/index.md
-      html: Tutoriales para ayudarle a ponerse manos a la obra con Xamarin.Android. Asegúrese de que todo se ha instalado correctamente y cree sus primeras aplicaciones Mac.
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/android/get-started/index.md
-      title: Introducción
-    - href: ~/android/app-fundamentals/
-      html: Todo lo que necesita saber para crear aplicaciones Android, por ejemplo, trabajar con archivos, imágenes, bases de datos y mucho más.
-      image:
-        src: ~/media/icons/i_app-build.svg
-        href: ~/android/app-fundamentals/
-      title: Principios de la aplicación
-    - href: ~/android/user-interface
-      html: Obtenga información sobre el conjunto completo de widgets de control de interfaz de usuario disponibles para Android.
-      image:
-        src: ~/media/icons/i_user-interface.svg
-        href: ~/android/user-interface/
-      title: Interfaz de usuario
-    - href: ~/android/platform/
-      html: Trabajo con características de la plataforma Android, como la autenticación mediante huellas digitales, y las características más recientes en Android 8.0 Oreo.
-      image:
-        src: ~/media/icons/i_platform.svg
-        href: ~/android/platform/
-      title: Características de la plataforma
-    - href: ~/essentials/index.md?context=xamarin/android
-      html: API multiplataforma para aplicaciones móviles.
-      image:
-        src: https://docs.microsoft.com/media/common/i_multi-connect.svg
-        href: ~/essentials/index.md?context=xamarin/android
-      title: Xamarin.Essentials
-    - href: ~/android/data-cloud/
-      html: Almacenamiento de datos locales y remotos, recuperación y otros servicios basados en la nube.
-      image:
-        src: ~/media/icons/i_data-cloud.svg
-        href: ~/android/data-cloud/
-      title: Datos y servicios en la nube
-    - href: ~/android/deploy-test/
-      html: Instrucciones para crear e implementar aplicaciones en Google Play, así como sugerencias para probarlas por adelantado.
-      image:
-        src: ~/media/icons/i_deploy-test.svg
-        href: ~/android/deploy-test/
-      title: Implementación y prueba
-    - href: ~/android/internals/
-      html: Información adicional sobre el funcionamiento interno de Xamarin.Android y ayuda con características como la localización y accesibilidad.
-      image:
-        src: https://docs.microsoft.com/media/common/i_advanced.svg
-        href: ~/android/internals/
-      title: Conceptos avanzados y funcionamiento interno
-    - href: ~/android/wear/
-      html: Creación de aplicaciones para Android Wear.
-      image:
-        src: ~/media/icons/i_android-wear.svg
-        href: ~/android/wear/
-      title: Android Wear
-- title: Referencia
-  items:
-  - type: list
-    style: cards
-    className: cardsD
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: ~/android/get-started/index.md
+            html: Tutoriales para ayudarle a ponerse manos a la obra con Xamarin.Android. Asegúrese de que todo se ha instalado correctamente y cree sus primeras aplicaciones Mac.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+              href: ~/android/get-started/index.md
+            title: Introducción
+          - href: ~/android/app-fundamentals/
+            html: 'Todo lo que necesita saber para crear aplicaciones Android, por ejemplo, trabajar con archivos, imágenes, bases de datos y mucho más.'
+            image:
+              src: ~/media/icons/i_app-build.svg
+              href: ~/android/app-fundamentals/
+            title: Principios de la aplicación
+          - href: ~/android/user-interface
+            html: Obtenga información sobre el conjunto completo de widgets de control de interfaz de usuario disponibles para Android.
+            image:
+              src: ~/media/icons/i_user-interface.svg
+              href: ~/android/user-interface/
+            title: Interfaz de usuario
+          - href: ~/android/platform/
+            html: 'Trabajo con características de la plataforma Android, como la autenticación mediante huellas digitales, y las características más recientes en Android 8.0 Oreo.'
+            image:
+              src: ~/media/icons/i_platform.svg
+              href: ~/android/platform/
+            title: Características de la plataforma
+          - href: ~/essentials/index.md?context=xamarin/android
+            html: API multiplataforma para aplicaciones móviles.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_multi-connect.svg'
+              href: ~/essentials/index.md?context=xamarin/android
+            title: Xamarin.Essentials
+          - href: ~/android/data-cloud/
+            html: 'Almacenamiento de datos locales y remotos, recuperación y otros servicios basados en la nube.'
+            image:
+              src: ~/media/icons/i_data-cloud.svg
+              href: ~/android/data-cloud/
+            title: Datos y servicios en la nube
+          - href: ~/android/deploy-test/
+            html: 'Instrucciones para crear e implementar aplicaciones en Google Play, así como sugerencias para probarlas por adelantado.'
+            image:
+              src: ~/media/icons/i_deploy-test.svg
+              href: ~/android/deploy-test/
+            title: Implementación y prueba
+          - href: ~/android/internals/
+            html: Información adicional sobre el funcionamiento interno de Xamarin.Android y ayuda con características como la localización y accesibilidad.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_advanced.svg'
+              href: ~/android/internals/
+            title: Conceptos avanzados y funcionamiento interno
+          - href: ~/android/wear/
+            html: Creación de aplicaciones para Android Wear.
+            image:
+              src: ~/media/icons/i_android-wear.svg
+              href: ~/android/wear/
+            title: Android Wear
+  - title: Referencia
     items:
-    - title: API
-      href: https://developer.xamarin.com/api/root/MonoAndroid-lib/
-      html: <p><a href="https://developer.xamarin.com/api/root/MonoAndroid-lib/">Documentos de la API de Android</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">Biblioteca de clases base</a></p>
-    - title: Muestras
-      href: https://developer.xamarin.com/samples/android/all/
-      html: <p><a href="https://developer.xamarin.com/samples/android/all/">Ejemplos de Android</a></p>
+      - type: list
+        style: cards
+        className: cardsD
+        items:
+          - title: API
+            href: 'https://developer.xamarin.com/api/root/MonoAndroid-lib/'
+            html: '<p><a href="https://developer.xamarin.com/api/root/MonoAndroid-lib/">Documentos de la API de Android</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">Biblioteca de clases base</a></p>'
+          - title: Muestras
+            href: 'https://developer.xamarin.com/samples/android/all/'
+            html: '<p><a href="https://developer.xamarin.com/samples/android/all/">Ejemplos de Android</a></p>'

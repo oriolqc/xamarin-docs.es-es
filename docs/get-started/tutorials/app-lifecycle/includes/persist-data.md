@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2c6c71f5ed46cc1cae66c5d1f412898825805cc6
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61187569"
+---
 La subclase [`Application`](xref:Xamarin.Forms.Application) tiene un diccionario [`Properties`](xref:Xamarin.Forms.Application.Properties) estático que se puede usar para almacenar datos a lo largo de los cambios de estado del ciclo de vida. Este diccionario usa una clave `string` y almacena un valor `object`. El diccionario se guarda automáticamente en el dispositivo y se vuelve a rellenar cuando se reinicia la aplicación.
 
 > [!IMPORTANT]

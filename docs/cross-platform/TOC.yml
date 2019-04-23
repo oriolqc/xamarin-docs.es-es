@@ -1,185 +1,178 @@
-items:
 - name: Multiplataforma
   href: index.yml
-  items:
-  - name: Creación de aplicaciones móviles
-    href: get-started/index.md
-    items:
-    - name: Requisitos
-      displayName: System requirements
-      href: get-started/requirements.md
-    - name: Introducción al desarrollo móvil
-      href: get-started/introduction-to-mobile-development.md
-    - name: Introducción al ciclo de vida de desarrollo de software para dispositivos móviles
-      href: get-started/introduction-to-mobile-sdlc.md
-    - name: Creación de aplicaciones multiplataforma
-      href: app-fundamentals/building-cross-platform-applications/index.md
-      items:
-      - name: Información general
-        href: app-fundamentals/building-cross-platform-applications/overview.md
-      - name: 'Parte 1: Descripción de la plataforma Xamarin para dispositivos móviles'
-        href: app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md
-      - name: 'Parte 2: Arquitectura'
-        href: app-fundamentals/building-cross-platform-applications/architecture.md
-      - name: 'Parte 3: Configuración de una solución multiplataforma de Xamarin'
-        href: app-fundamentals/building-cross-platform-applications/setting-up-a-xamarin-cross-platform-solution.md
-      - name: 'Parte 4: Trabajo con varias plataformas'
-        href: app-fundamentals/building-cross-platform-applications/platform-divergence-abstraction-divergent-implementation.md
-      - name: 'Parte 5: Estrategias prácticas de uso compartido de código'
-        href: app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md
-      - name: 'Parte 6: Pruebas y aprobaciones de App Store'
-        href: app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md
-      - name: 'Caso práctico: Tasky'
-        href: app-fundamentals/building-cross-platform-applications/case-study-tasky.md
-    expanded: true
-  - name: Uso compartido de código
-    href: app-fundamentals/index.md
-    items:
-    - name: Información general
-      href: app-fundamentals/code-sharing.md
-    - name: .NET Standard
-      href: app-fundamentals/net-standard.md
-    - name: Proyectos compartidos
-      href: app-fundamentals/shared-projects.md
-    - name: Bibliotecas de clases portables (PCL)
-      href: app-fundamentals/pcl.md
-    - name: Proyectos de biblioteca multiplataforma de NuGet
-      displayName: Nugetizer 3000
-      href: app-fundamentals/nuget-multiplatform-libraries/index.md
-      items:
-      - name: Proyectos de biblioteca existentes
-        href: app-fundamentals/nuget-multiplatform-libraries/existing-library.md
-      - name: Nueva biblioteca multiplataforma
-        href: app-fundamentals/nuget-multiplatform-libraries/single-codebase.md
-      - name: Nuevas bibliotecas específicas de plataforma
-        href: app-fundamentals/nuget-multiplatform-libraries/platform-specific.md
-      - name: Guía de metadatos
-        href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
-    - name: Paquetes NuGet (manual)
-      href: app-fundamentals/nuget-manual.md
-    - name: Utilizar bibliotecas de C o C++ en aplicaciones multiplataforma
-      href: cpp/index.md
-  - name: Compatibilidad con lenguajes
-    href: platform/index.md
-    items:
-    - name: C#
-      items:
-      - name: Información general sobre la compatibilidad con Async
-        href: platform/async.md
-      - name: Características del lenguaje C# 6
-        href: platform/csharp-six.md
-    - name: F#
-      href: platform/fsharp/index.md
-      items:
-      - name: Introducción
-        href: platform/fsharp/overview.md
-      - name: Muestras de F#
-        href: platform/fsharp/samples.md
-    - name: Visual Basic.NET
-      href: platform/visual-basic/index.md
-      items:
-      - name: Xamarin iOS y Android
-        href: platform/visual-basic/native-apps.md
-      - name: Xamarin.Forms
-        href: platform/visual-basic/xamarin-forms.md
-    - name: Plantillas de Razor HTML
-      href: platform/razor-html-templates/index.md
-  - name: Rendimiento y seguridad
-    href: deploy-test/performance.md
-    items:
-    - name: Rendimiento
-      href: deploy-test/memory-perf-best-practices.md
-      items:
-      - name: Rendimiento de Android
-        href: ~/android/deploy-test/performance.md?context=xamarin/cross-platform
-      - name: Rendimiento de iOS
-        href: ~/ios/deploy-test/performance.md?context=xamarin/cross-platform
-      - name: Rendimiento de Mac
-        href: ~/mac/deploy-test/performance.md?context=xamarin/cross-platform
-    - name: Seguridad de la capa de transporte (TLS)
-      href: app-fundamentals/transport-layer-security.md
-      items:
-      - name: Android
-        href: ~/android/app-fundamentals/http-stack.md?context=xamarin/cross-platform
-      - name: iOS y Mac
-        href: ~/cross-platform/macios/http-stack.md?context=xamarin/cross-platform
-  - name: Implementación y depuración
-    href: deploy-test/index.md
-    items:
-    - name: Conexión a servicios web locales
-      href: deploy-test/connect-to-local-web-services.md
-    - name: Configuración personalizada del enlazador
-      href: deploy-test/linker.md
-    - name: Instalación de NUnit 2.6.4 mediante NuGet
-      href: deploy-test/installing-nunit-using-nuget.md
-    - name: Depuración multiproceso
-      href: deploy-test/multi-process-debugging.md
-  - name: Desarrolladores de escritorio
-    displayName: Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP Developers
-    href: desktop/index.md
-    items:
-    - name: Comparación del ciclo de vida de las aplicaciones
-      href: desktop/lifecycle.md
-    - name: Comparación de los controles de interfaz de usuario
-      href: desktop/controls/index.md
-      items:
-      - name: WPF frente a Xamarin.Forms
-        href: desktop/controls/wpf.md
-    - name: Guía de migración
-      href: desktop/porting.md
-    - name: Muestras
-      href: desktop/samples.md
-  - name: Solución de problemas
-    href: troubleshooting/index.md
-    items:
-    - name: Preguntas más frecuentes
-      displayName: FAQ
-      href: troubleshooting/questions/index.md
-      items:
-      - name: ¿Cómo puedo ver qué bibliotecas se admiten en una PCL?
-        href: troubleshooting/questions/pcl-support-libraries.md
-      - name: Reflection API de PCL
-        href: troubleshooting/questions/pcl-reflection.md
-      - name: 'Caso práctico de PCL: ¿Cómo se pueden resolver problemas relacionados con System.Diagnostics.Tracing para el paquete NuGet de flujo de datos TPL de Microsoft?'
-        href: troubleshooting/questions/pcl-case-study.md
-      - name: ¿Cómo puedo actualizar NuGet?
-        href: troubleshooting/questions/nuget-update.md
-      - name: ¿Cómo se puede cambiar a una versión anterior un paquete NuGet?
-        href: troubleshooting/questions/nuget-package-downgrade.md
-      - name: Error de paquetes que faltan después de actualizar paquetes Nuget
-        href: troubleshooting/questions/nuget-packages-missing.md
-      - name: Unificación de componentes de Google Play Services y NuGet
-        href: troubleshooting/questions/gps-components-nuget.md
-      - name: ¿Dónde se almacenan los componentes en mi equipo?
-        href: troubleshooting/questions/component-storage.md
-      - name: ¿Dónde se puede encontrar mi información de versión y los registros?
-        href: troubleshooting/questions/version-logs.md
-      - name: ¿Cuándo y cómo se debería presentar un informe de errores?
-        href: troubleshooting/questions/howto-file-bug.md
-      - name: ¿Por qué Xamarin no admite Jenkins?
-        href: troubleshooting/questions/xamarin-jenkins.md
-      - name: ¿Qué configuración del proyecto es necesaria para el depurador?
-        href: troubleshooting/questions/debugger-settings.md
-    - name: Preguntas sobre Visual Studio
-      items:
-      - name: Implementar casillas deshabilitadas en el Administrador de configuración
-        href: troubleshooting/questions/deploy-checkboxes.md
-      - name: Faltan extensiones de Visual Studio después de la instalación
-        href: troubleshooting/questions/missing-vs-extensions.md
-      - name: ¿Cómo realizo una desinstalación exhaustiva de Xamarin para Visual Studio?
-        href: troubleshooting/questions/uninstall-xamarin-vs.md
-      - name: ¿Cómo se recopilan las pilas de llamadas actuales del proceso de Visual Studio?
-        href: troubleshooting/questions/vs-callstack.md
-      - name: ¿Por qué Visual Studio no incluye en mi compilación el proyecto de biblioteca al que se hace referencia?
-        href: troubleshooting/questions/vs-config-manager.md
-    - name: Actualización de referencias de componentes en NuGet
-      href: troubleshooting/component-nuget.md
-  - name: Muestras
-    href: samples/index.yml
   expanded: true
-ms.openlocfilehash: 52090f962b611d4b4f0ff1cef318b1edd3a0f7b1
-ms.sourcegitcommit: 086edd9c44dfc0e77412e1ed5eda7318bbd1ce7c
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477361"
+  items:
+    - name: Creación de aplicaciones móviles
+      href: get-started/index.md
+      expanded: true
+      items:
+        - name: Requisitos
+          displayName: System requirements
+          href: get-started/requirements.md
+        - name: Introducción al desarrollo móvil
+          href: get-started/introduction-to-mobile-development.md
+        - name: Introducción al ciclo de vida de desarrollo de software para dispositivos móviles
+          href: get-started/introduction-to-mobile-sdlc.md
+        - name: Creación de aplicaciones multiplataforma
+          href: app-fundamentals/building-cross-platform-applications/index.md
+          items:
+            - name: Información general
+              href: app-fundamentals/building-cross-platform-applications/overview.md
+            - name: 'Parte 1: Descripción de la plataforma Xamarin para dispositivos móviles'
+              href: app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md
+            - name: 'Parte 2: Arquitectura'
+              href: app-fundamentals/building-cross-platform-applications/architecture.md
+            - name: 'Parte 3: Configuración de una solución multiplataforma de Xamarin'
+              href: app-fundamentals/building-cross-platform-applications/setting-up-a-xamarin-cross-platform-solution.md
+            - name: 'Parte 4: Trabajo con varias plataformas'
+              href: app-fundamentals/building-cross-platform-applications/platform-divergence-abstraction-divergent-implementation.md
+            - name: 'Parte 5: Estrategias prácticas de uso compartido de código'
+              href: app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md
+            - name: 'Parte 6: Pruebas y aprobaciones de App Store'
+              href: app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md
+            - name: 'Caso práctico: Tasky'
+              href: app-fundamentals/building-cross-platform-applications/case-study-tasky.md
+    - name: Uso compartido de código
+      href: app-fundamentals/index.md
+      items:
+        - name: Información general
+          href: app-fundamentals/code-sharing.md
+        - name: .NET Standard
+          href: app-fundamentals/net-standard.md
+        - name: Proyectos compartidos
+          href: app-fundamentals/shared-projects.md
+        - name: Bibliotecas de clases portables (PCL)
+          href: app-fundamentals/pcl.md
+        - name: Proyectos de biblioteca multiplataforma de NuGet
+          displayName: Nugetizer 3000
+          href: app-fundamentals/nuget-multiplatform-libraries/index.md
+          items:
+            - name: Proyectos de biblioteca existentes
+              href: app-fundamentals/nuget-multiplatform-libraries/existing-library.md
+            - name: Nueva biblioteca multiplataforma
+              href: app-fundamentals/nuget-multiplatform-libraries/single-codebase.md
+            - name: Nuevas bibliotecas específicas de plataforma
+              href: app-fundamentals/nuget-multiplatform-libraries/platform-specific.md
+            - name: Guía de metadatos
+              href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
+        - name: Paquetes NuGet (manual)
+          href: app-fundamentals/nuget-manual.md
+        - name: Utilizar bibliotecas de C o C++ en aplicaciones multiplataforma
+          href: cpp/index.md
+    - name: Compatibilidad con lenguajes
+      href: platform/index.md
+      items:
+        - name: 'C#'
+          items:
+            - name: Información general sobre la compatibilidad con Async
+              href: platform/async.md
+            - name: 'Características del lenguaje C# 6'
+              href: platform/csharp-six.md
+        - name: 'F#'
+          href: platform/fsharp/index.md
+          items:
+            - name: Introducción
+              href: platform/fsharp/overview.md
+            - name: 'Muestras de F#'
+              href: platform/fsharp/samples.md
+        - name: Visual Basic.NET
+          href: platform/visual-basic/index.md
+          items:
+            - name: Xamarin iOS y Android
+              href: platform/visual-basic/native-apps.md
+            - name: Xamarin.Forms
+              href: platform/visual-basic/xamarin-forms.md
+        - name: Plantillas de Razor HTML
+          href: platform/razor-html-templates/index.md
+    - name: Rendimiento y seguridad
+      href: deploy-test/performance.md
+      items:
+        - name: Rendimiento
+          href: deploy-test/memory-perf-best-practices.md
+          items:
+            - name: Rendimiento de Android
+              href: ~/android/deploy-test/performance.md?context=xamarin/cross-platform
+            - name: Rendimiento de iOS
+              href: ~/ios/deploy-test/performance.md?context=xamarin/cross-platform
+            - name: Rendimiento de Mac
+              href: ~/mac/deploy-test/performance.md?context=xamarin/cross-platform
+        - name: Seguridad de la capa de transporte (TLS)
+          href: app-fundamentals/transport-layer-security.md
+          items:
+            - name: Android
+              href: ~/android/app-fundamentals/http-stack.md?context=xamarin/cross-platform
+            - name: iOS y Mac
+              href: ~/cross-platform/macios/http-stack.md?context=xamarin/cross-platform
+    - name: Implementación y depuración
+      href: deploy-test/index.md
+      items:
+        - name: Conexión a servicios web locales
+          href: deploy-test/connect-to-local-web-services.md
+        - name: Configuración personalizada del enlazador
+          href: deploy-test/linker.md
+        - name: Instalación de NUnit 2.6.4 mediante NuGet
+          href: deploy-test/installing-nunit-using-nuget.md
+        - name: Depuración multiproceso
+          href: deploy-test/multi-process-debugging.md
+    - name: Desarrolladores de escritorio
+      displayName: 'Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP Developers'
+      href: desktop/index.md
+      items:
+        - name: Comparación del ciclo de vida de las aplicaciones
+          href: desktop/lifecycle.md
+        - name: Comparación de los controles de interfaz de usuario
+          href: desktop/controls/index.md
+          items:
+            - name: WPF frente a Xamarin.Forms
+              href: desktop/controls/wpf.md
+        - name: Guía de migración
+          href: desktop/porting.md
+        - name: Muestras
+          href: desktop/samples.md
+    - name: Solución de problemas
+      href: troubleshooting/index.md
+      items:
+        - name: Preguntas más frecuentes
+          displayName: FAQ
+          href: troubleshooting/questions/index.md
+          items:
+            - name: ¿Cómo puedo ver qué bibliotecas se admiten en una PCL?
+              href: troubleshooting/questions/pcl-support-libraries.md
+            - name: Reflection API de PCL
+              href: troubleshooting/questions/pcl-reflection.md
+            - name: 'Caso práctico de PCL: ¿Cómo se pueden resolver problemas relacionados con System.Diagnostics.Tracing para el paquete NuGet de flujo de datos TPL de Microsoft?'
+              href: troubleshooting/questions/pcl-case-study.md
+            - name: ¿Cómo puedo actualizar NuGet?
+              href: troubleshooting/questions/nuget-update.md
+            - name: ¿Cómo se puede cambiar a una versión anterior un paquete NuGet?
+              href: troubleshooting/questions/nuget-package-downgrade.md
+            - name: Error de paquetes que faltan después de actualizar paquetes Nuget
+              href: troubleshooting/questions/nuget-packages-missing.md
+            - name: Unificación de componentes de Google Play Services y NuGet
+              href: troubleshooting/questions/gps-components-nuget.md
+            - name: ¿Dónde se almacenan los componentes en mi equipo?
+              href: troubleshooting/questions/component-storage.md
+            - name: ¿Dónde se puede encontrar mi información de versión y los registros?
+              href: troubleshooting/questions/version-logs.md
+            - name: ¿Cuándo y cómo se debería presentar un informe de errores?
+              href: troubleshooting/questions/howto-file-bug.md
+            - name: ¿Por qué Xamarin no admite Jenkins?
+              href: troubleshooting/questions/xamarin-jenkins.md
+            - name: ¿Qué configuración del proyecto es necesaria para el depurador?
+              href: troubleshooting/questions/debugger-settings.md
+        - name: Preguntas sobre Visual Studio
+          items:
+            - name: Implementar casillas deshabilitadas en el Administrador de configuración
+              href: troubleshooting/questions/deploy-checkboxes.md
+            - name: Faltan extensiones de Visual Studio después de la instalación
+              href: troubleshooting/questions/missing-vs-extensions.md
+            - name: ¿Cómo realizo una desinstalación exhaustiva de Xamarin para Visual Studio?
+              href: troubleshooting/questions/uninstall-xamarin-vs.md
+            - name: ¿Cómo se recopilan las pilas de llamadas actuales del proceso de Visual Studio?
+              href: troubleshooting/questions/vs-callstack.md
+            - name: ¿Por qué Visual Studio no incluye en mi compilación el proyecto de biblioteca al que se hace referencia?
+              href: troubleshooting/questions/vs-config-manager.md
+        - name: Actualización de referencias de componentes en NuGet
+          href: troubleshooting/component-nuget.md
+    - name: Muestras
+      href: samples/index.yml

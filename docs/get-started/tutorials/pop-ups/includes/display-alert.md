@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: cff466025306ee5d23b5245e625eba23c5448c15
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384732"
+---
 Xamarin.Forms tienen una ventana emergente modal, conocida como alerta, para mostrar alertas al usuario o realizar preguntas sencillas. En este ejercicio, usará el método [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), de la clase [`Page`](xref:Xamarin.Forms.Page), para mostrar una alerta al usuario y formular una pregunta sencilla.
 
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)

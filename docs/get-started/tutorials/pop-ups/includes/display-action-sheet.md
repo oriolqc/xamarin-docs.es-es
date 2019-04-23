@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: effebf02a7fb84ef955f4dcfda75d5273ef96b29
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384722"
+---
 
 Xamarin.Forms tiene un elemento emergente modal, conocido como una hoja de acciones, que se puede usar para guiar a los usuarios en la realización de una tarea. En este ejercicio, usará el método [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) de la clase [`Page`](xref:Xamarin.Forms.Page) para mostrar una hoja de acciones que guía a los usuarios en la realización de una tarea.
 

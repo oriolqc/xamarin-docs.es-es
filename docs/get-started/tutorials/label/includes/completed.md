@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 37c2ba1b03d4894d7d7528f4cf520ddb4e6e5aab
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60896718"
+---
 Ha completado el tutorial, donde ha aprendido a:
 
 > [!div class="checklist"]

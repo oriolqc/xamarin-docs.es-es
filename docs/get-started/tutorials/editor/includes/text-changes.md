@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 19afeed47f1c06c89c58dfd996d360698b19fc9c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61373410"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. En **MainPage.xaml**, modifique la declaración [`Editor`](xref:Xamarin.Forms.Editor) para que establezca un controlador para los eventos [`TextChanged`](xref:Xamarin.Forms.Editor.TextChanged) y [`Completed`](xref:Xamarin.Forms.Editor.Completed):

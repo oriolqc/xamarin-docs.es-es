@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 5929648b802c27916c0a21142907644781d59d0d
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61193339"
+---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
 1. Inicie Visual Studio y cree una aplicación de Xamarin.Forms en blanco llamada **LocalDatabaseTutorial**. Asegúrese de que la aplicación use .NET Standard como mecanismo de código compartido.

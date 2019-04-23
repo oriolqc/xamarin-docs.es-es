@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a13426f4213d7c306c0de6922d336d4bb7723d72
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61037644"
+---
 Un elemento [`ListView`](xref:Xamarin.Forms.ListView) se rellena con datos mediante la propiedad [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource), que es de tipo `IEnumerable`. El paso anterior rellenó `ListView` en XAML con una matriz de cadenas. Sin embargo, normalmente un elemento `ListView` se rellenará con datos de una colección, definida en código subyacente, que implementa `IEnumerable`.
 
 En este ejercicio, modificará el proyecto **ListViewTutorial** para rellenar el elemento [`ListView`](xref:Xamarin.Forms.ListView) con datos de una colección de objetos almacenados en un elemento `List`.

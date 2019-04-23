@@ -1,10 +1,4 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: c52714a36b204d8e92baa87f3aa7389c1b08260c
-ms.sourcegitcommit: d62732ce6f3f9d8dc929d72d4acac3e592cba073
-ms.translationtype: HT
-ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57197529"
 documentType: LandingData
 title: Guía multiplataforma
 metadata:
@@ -14,82 +8,82 @@ metadata:
   ms.date: 04/25/2018
   ms.topic: landing-page
 abstract:
-  description: Xamarin ofrece una solución para el desarrollo multiplataforma de aplicaciones para dispositivos móviles, tabletas y escritorio. En esta sección se abordan los detalles aplicables con independencia de las plataformas de destino.
+  description: 'Xamarin ofrece una solución para el desarrollo multiplataforma de aplicaciones para dispositivos móviles, tabletas y escritorio. En esta sección se abordan los detalles aplicables con independencia de las plataformas de destino.'
   menu:
     items:
-    - href: ~/cross-platform/samples/index.yml
-      text: Ejemplos de Xamarin
-    - href: /visualstudio/
-      text: Programa para la mejora
-    - href: /visualstudio/mac/
-      text: Visual Studio para Mac
+      - href: ~/cross-platform/samples/index.yml
+        text: Ejemplos de Xamarin
+      - href: /visualstudio/
+        text: Programa para la mejora
+      - href: /visualstudio/mac/
+        text: Visual Studio para Mac
 sections:
-- title: Primeros pasos
-  items:
-  - type: paragraph
-    text: Aprenda cómo crear sus primeras aplicaciones con Xamarin y C# para Android, iOS, Mac OS, UWP y mucho más.
-  - type: list
-    style: icon48
+  - title: Primeros pasos
     items:
-    - image:
-        src: https://docs.microsoft.com/media/common/i_setup.svg
-      text: Requisitos
-      href: ~/cross-platform/get-started/requirements.md
-    - image:
-        src: ~/media/icons/i_desktop-phone.svg
-      text: Xamarin.Forms
-      href: ~/get-started/quickstarts/index.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Android
-      href: ~/android/get-started/hello-android/hello-android-quickstart
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
-      text: iOS
-      href: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_xplat-code.svg
-      text: Mac
-      href: ~/mac/get-started/hello-mac.md
-- title: Guías
-  items:
-  - type: list
-    style: cards
-    className: cardsB
+      - type: paragraph
+        text: 'Aprenda cómo crear sus primeras aplicaciones con Xamarin y C# para Android, iOS, Mac OS, UWP y mucho más.'
+      - type: list
+        style: icon48
+        items:
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_setup.svg'
+            text: Requisitos
+            href: ~/cross-platform/get-started/requirements.md
+          - image:
+              src: ~/media/icons/i_desktop-phone.svg
+            text: Xamarin.Forms
+            href: ~/get-started/quickstarts/index.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_mobileapp.svg'
+            text: Android
+            href: ~/android/get-started/hello-android/hello-android-quickstart
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_mobile-app-developement.svg'
+            text: iOS
+            href: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
+          - image:
+              src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
+            text: Mac
+            href: ~/mac/get-started/hello-mac.md
+  - title: Guías
     items:
-    - href: ~/cross-platform/get-started/index.md
-      html: Introducción al desarrollo de aplicaciones móviles con Xamarin
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/cross-platform/get-started/index.md
-      title: Creación de aplicaciones móviles
-    - href: ~/cross-platform/platform
-      html: Xamarin es compatible con C#, F# y el motor de plantillas de Razor.
-      image:
-        src: ~/media/icons/i_app-build.svg
-        href: ~/cross-platform/platform
-      title: Compatibilidad con lenguajes
-    - href: ~/cross-platform/app-fundamentals/
-      html: Todo lo que necesita saber para crear aplicaciones.
-      image:
-        src: ~/media/icons/i_platform.svg
-        href: ~/cross-platform/app-fundamentals/
-      title: Uso compartido de código
-    - href: ~/cross-platform/deploy-test/performance.md
-      html: Directrices sobre la seguridad y el rendimiento de las aplicaciones.
-      image:
-        src: https://docs.microsoft.com/media/common/i_code-performance.svg
-        href: ~/cross-platform/deploy-test/performance.md
-      title: Rendimiento y seguridad
-    - href: ~/cross-platform/deploy-test/
-      html: Sugerencias de depuración e implementación.
-      image:
-        src: ~/media/icons/i_deploy-test.svg
-        href: ~/cross-platform/deploy-test/
-      title: Implementación y depuración
-    - href: ~/cross-platform/desktop/
-      html: Guía para desarrolladores de escritorio de .NET interesados en la compilación de aplicaciones móviles.
-      image:
-        src: https://docs.microsoft.com/media/common/i_xplat-code.svg
-        href: ~/cross-platform/desktop/
-      title: Desarrolladores de escritorio
+      - type: list
+        style: cards
+        className: cardsB
+        items:
+          - href: ~/cross-platform/get-started/index.md
+            html: Introducción al desarrollo de aplicaciones móviles con Xamarin
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_get-started.svg'
+              href: ~/cross-platform/get-started/index.md
+            title: Creación de aplicaciones móviles
+          - href: ~/cross-platform/platform
+            html: 'Xamarin es compatible con C#, F# y el motor de plantillas de Razor.'
+            image:
+              src: ~/media/icons/i_app-build.svg
+              href: ~/cross-platform/platform
+            title: Compatibilidad con lenguajes
+          - href: ~/cross-platform/app-fundamentals/
+            html: Todo lo que necesita saber para crear aplicaciones.
+            image:
+              src: ~/media/icons/i_platform.svg
+              href: ~/cross-platform/app-fundamentals/
+            title: Uso compartido de código
+          - href: ~/cross-platform/deploy-test/performance.md
+            html: Directrices sobre la seguridad y el rendimiento de las aplicaciones.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_code-performance.svg'
+              href: ~/cross-platform/deploy-test/performance.md
+            title: Rendimiento y seguridad
+          - href: ~/cross-platform/deploy-test/
+            html: Sugerencias de depuración e implementación.
+            image:
+              src: ~/media/icons/i_deploy-test.svg
+              href: ~/cross-platform/deploy-test/
+            title: Implementación y depuración
+          - href: ~/cross-platform/desktop/
+            html: Guía para desarrolladores de escritorio de .NET interesados en la compilación de aplicaciones móviles.
+            image:
+              src: 'https://docs.microsoft.com/media/common/i_xplat-code.svg'
+              href: ~/cross-platform/desktop/
+            title: Desarrolladores de escritorio
