@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2018
-ms.openlocfilehash: 20b09ab44eaaaa21535d50b947449e253652cc62
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: ddc9d18b57eac099331f0814b5963fb207840380
+ms.sourcegitcommit: 6f728aa0c1775224e16c0f3e583cf843d34270f9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672487"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59893249"
 ---
 # <a name="xamarinforms-map"></a>Mapa de Xamarin.Forms
 
@@ -128,6 +128,15 @@ Algunos de ellos se muestran en la captura de pantalla siguiente:
 ![Permisos necesarios para Android](map-images/android-map-permissions.png "permisos necesarios para Android")
 
 Los dos últimos son necesarios porque las aplicaciones requieren una conexión de red para descargar datos del mapa. Obtenga información sobre Android [permisos](https://developer.android.com/reference/android/Manifest.permission.html) para obtener más información.
+
+Además, 9 Android quitó la biblioteca de cliente Apache HTTP desde el bootclasspath, y por lo que no está disponible para las aplicaciones destinadas a API 28 o superior. Se debe agregar la siguiente línea a la `application` nodo de su **AndroidManifest.xml** archivo seguir usando el cliente HTTP de Apache en las aplicaciones destinadas a API 28 o superior:
+
+```xml
+<application ...>
+    ...
+    <uses-library android:name="org.apache.http.legacy" android:required="false" />    
+</application>
+```
 
 ### <a name="universal-windows-platform"></a>Plataforma universal de Windows
 
