@@ -5,7 +5,7 @@ metadata:
   description: 'Xamarin.Forms presenta un completo kit de herramientas de interfaz de usuario multiplataforma para que los desarrolladores de .NET puedan crear aplicaciones móviles, para tabletas y de escritorio.'
   author: conceptdev
   ms.author: crdun
-  ms.date: 07/27/2018
+  ms.date: 04/22/2019
   ms.topic: landing-page
   ms.technology: xamarin-forms
 abstract:
@@ -22,7 +22,7 @@ sections:
   - title: Primeros pasos
     items:
       - type: paragraph
-        text: 'Aprenda a compilar su primera aplicación Xamarin.Forms con Xamarin y C# para Android, iOS y Plataforma universal de Windows.'
+        text: 'Aprenda a crear su primera aplicación Xamarin.Forms con Xamarin y C#, para Android y iOS.'
       - type: list
         style: icon48
         items:
@@ -111,7 +111,7 @@ sections:
         className: cardsD
         items:
           - title: API
-            html: '<p><a href="https://docs.microsoft.com/en-us/dotnet/api/?view=xamarin-forms">Documentos de la API de Xamarin.Forms</a></p>'
+            html: '<p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-forms">Documentos de la API de Xamarin.Forms</a></p>'
           - title: Muestras
             html: '<p><a href="https://developer.xamarin.com/samples/xamarin-forms/all/">Xamarin.Forms Samples</a> (Ejemplos de Xamarin.Forms)</p>'
           - title: Libros

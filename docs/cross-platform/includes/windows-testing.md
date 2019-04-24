@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: eeccded35a1fc776b89e1c96da81d6904d0e11ac
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61303330"
+---
 ||Notas sobre pruebas|
 |---|---|
 |**Xamarin.iOS**|<ul><li>La forma más fácil de empezar a trabajar es usar los emuladores de iPhone, iPad, Apple Watch y Apple TV incluidos en Xcode. Se puede acceder a los emuladores en el equipo Mac conectado durante la depuración en Visual Studio.</li> <li>Para usar un dispositivo con el objetivo de realizar pruebas, siga <a href="~/ios/get-started/installation/device-provisioning/index.md">estas instrucciones</a> (la mayoría de los pasos requieren que el equipo Mac esté conectado).</li></ul>|

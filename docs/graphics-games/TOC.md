@@ -24,7 +24,7 @@
 ### [Control de varias resoluciones en CocosSharp](cocossharp/resolutions.md)
 ### [Canalización de contenido de CocosSharp](cocossharp/content-pipeline/index.md)
 #### [Introducción a las canalizaciones de contenido](cocossharp/content-pipeline/introduction.md)
-#### [Tutorial: uso de la canalización de contenido con CocosSharp](cocossharp/content-pipeline/walkthrough.md)
+#### [Tutorial: Uso de la canalización de contenido con CocosSharp](cocossharp/content-pipeline/walkthrough.md)
 ### [Mejora de Framerate con CCSpriteSheet](cocossharp/ccspritesheet.md)
 ### [Almacenamiento en caché de texturas](cocossharp/texture-cache.md)
 ### [Matemáticas 2D con CocosSharp](cocossharp/math.md)
