@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: b39fb6157c247416c85846d4d8e63e6e1b7c6028
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60957025"
+---
 |Propiedad.|Descripción|Opciones|
 |--- |--- |--- |
 |`abi.type`|**Tipo de ABI**&ndash; especifica el tipo de ABI (interfaz binaria de aplicaciones) del dispositivo emulado. La opción **x86** es para el conjunto de instrucciones que suele denominarse "x86" o "IA-32". La opción **x86_64** es para el conjunto de instrucciones x86 de 64 bits. La opción **armeabi-v7a** es para el conjunto de instrucciones de ARM con extensiones de ARM v7-a. La opción **arm64 v8a** es para el conjunto de instrucciones de ARM que admite AArch64.|x86, x86_64, armeabi-v7a, arm64-v8a|

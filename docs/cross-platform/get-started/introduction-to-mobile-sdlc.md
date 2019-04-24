@@ -7,10 +7,10 @@ author: asb3993
 ms.author: amburns
 ms.date: 11/22/2016
 ms.openlocfilehash: 74a9fc59b395d68db9b116106cc9fa63d3969c3b
-ms.sourcegitcommit: c4be32ef914465e808d89767c4d5ee72afe93cc6
+ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58855242"
 ---
 # <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introducción al ciclo de vida del desarrollo de software móvil
@@ -72,7 +72,7 @@ Una vez que se hayan determinado las características y funcionalidades de la ap
 
 La experiencia del usuario se efectúa normalmente a través de tramas de alambres o prototipos con uno de los muchos [conjuntos de herramientas de diseño](https://docs.microsoft.com/windows/uwp/design/downloads/). Los prototipos de experiencia del usuario permiten diseñar esta experiencia sin tener que preocuparse por el diseño real de la interfaz de usuario:
 
- [![](introduction-to-mobile-sdlc-images/balsamiq.png "Experiencia del usuario efectuada normalmente a través de estructuras de alambre o prototipos con herramientas como Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
+ [![](introduction-to-mobile-sdlc-images/balsamiq.png "Experiencia del usuario efectuada normalmente a través de tramas de alambres o prototipos con herramientas como Balsamiq")](introduction-to-mobile-sdlc-images/balsamiq.png#lightbox)
 
 Al crear prototipos de experiencia del usuario, es importante tener en cuenta las instrucciones de la interfaz para las diferentes plataformas a las que se dirigirá la aplicación. La aplicación debería "sentirse cómoda" en todas las plataformas. Las instrucciones de diseño oficial para cada plataforma son:
 
@@ -88,7 +88,7 @@ Además, el propio hardware también impone decisiones de la experiencia del usu
 
 Asimismo, el factor de forma también influye en las decisiones de la experiencia del usuario. Una tableta tiene mucho más espacio y, por tanto, puede mostrar más información. A menudo, lo que necesita varias pantallas en un teléfono, se comprime en una para una tableta:
 
- [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "A menudo, lo que necesita varias pantallas en un teléfono se comprime en una para una tableta")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
+ [![](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png "A menudo, lo que necesita varias pantallas en un teléfono, se comprime en una para una tableta")](introduction-to-mobile-sdlc-images/iphone-vs-ipad.png#lightbox)
 
 Debido a la infinidad de factores de forma que existen, a menudo hay factores de forma medianos (entre un teléfono y una tableta) que puede que también quiera abordar.
 
@@ -147,7 +147,7 @@ En su lugar, cualquier usuario puede crear una tienda de aplicaciones y la mayor
 Esto facilita a los desarrolladores un canal de distribución posiblemente más grande y aún más complejo para sus aplicaciones. [Google Play](https://play.google.com/store?hl=en) es la tienda de aplicaciones oficial de Google, pero hay muchas otras. Algunas populares son:
 
 1.  [AppBrain](http://www.appbrain.com/)
-1.  [Amazon Appstore para Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
+1.  [Tienda Apps de Amazon para Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
 1.  [Handango](http://www.handango.com/)
 1.  [GetJar](http://www.getjar.com/)
 
