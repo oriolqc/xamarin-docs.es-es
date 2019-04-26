@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 799d6dd532e530f5ee9c9a974b2d93b6a3be0efb
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b2968399279fe3e9d160471bbcae08ae091be93e
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075663"
 ---
 # <a name="search-apis-in-xamarinios"></a>API de búsqueda en Xamarin.iOS
 
@@ -59,7 +59,7 @@ Apple proporciona las siguientes sugerencias sobre qué contenido y las acciones
  - Puntos de navegación y las características dentro de la aplicación.
  - Cosas como los mensajes nuevos, contenido u otros tipos de elementos mostrados por la aplicación que recientemente se han descargado en el dispositivo.
 
-## <a name="app-search-enhancements"></a>Mejoras en la búsqueda de la aplicación
+## <a name="app-search-enhancements"></a>Mejoras en las búsquedas de aplicaciones
 
 Core Spotlight en iOS 10 proporciona varias mejoras para la búsqueda de la aplicación, como:
 
@@ -82,7 +82,7 @@ iOS 10 presenta nuevas formas de conducción engagement para una aplicación, ya
 - Interacciones de Siri
 - Sugerencias de QuickType 
 
-Una aplicación expone esta funcionalidad al sistema mediante un conjunto de tecnologías como [NSUserActivity](https://developer.xamarin.com/api/type/Foundation.NSUserActivity/), marcado web, Core Spotlight, MapKit, Media Player y UIKit.
+Una aplicación expone esta funcionalidad al sistema mediante un conjunto de tecnologías como [NSUserActivity](xref:Foundation.NSUserActivity), marcado web, Core Spotlight, MapKit, Media Player y UIKit.
 
 Para obtener más información, consulte nuestra [sugerencias proactivas](~/ios/platform/search/proactive-suggestions.md) guía.
 

@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 10/11/2017
 ms.openlocfilehash: 53fcbbc408ae147405a3285d9391457051d6e16e
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37854803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261206"
 ---
 # <a name="creating-bindings-with-objective-sharpie"></a>Creación de enlaces con Sharpie objetivo
 
@@ -44,10 +44,10 @@ Sin embargo, Sharpie objetivo es una herramienta muy avanzada que requiere conoc
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Descarga de Sharpie objetivo](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
-- [Tutorial: Enlazar a una biblioteca de Objective-C](~/ios/platform/binding-objective-c/walkthrough.md)
+- [Tutorial: Enlace de una biblioteca de Objective-c.](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Enlace de bibliotecas de Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Detalles de enlace](~/cross-platform/macios/binding/overview.md)
 - [Guía de referencia de tipos de enlace](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin para desarrolladores de Objective-C](~/ios/get-started/objective-c-developers/index.md)
 - [Curso de Xamarin University: Creación de una biblioteca de enlaces de Objective-c.](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Curso de Xamarin University: Compilar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Curso de Xamarin University: Generar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: 26aeaa3d230a5c104014edd899b8d9231ced31e9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61430506"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Guiones gráficos unificados en Xamarin.iOS
 
@@ -114,7 +114,7 @@ Esta sección explica los tipos típicos de las colecciones de rasgo que experim
 
 El siguiente es una colección de rasgo habitual que los desarrolladores pueden ver en un iPhone:
 
-|Property|Valor|
+|Propiedad|Valor|
 |--- |--- |
 |`HorizontalSizeClass`|Compacto|
 |`VerticalSizeClass`|Estándar|
@@ -125,7 +125,7 @@ El conjunto anterior representaría una colección de rasgo totalmente calificad
 
 También es posible tener una colección de rasgo que carece de algunas de sus valores (lo que Apple denomina *Unspecified*):
 
-|Property|Valor|
+|Propiedad|Valor|
 |--- |--- |
 |`HorizontalSizeClass`|Compacto|
 |`VerticalSizeClass`|Sin especificar|
@@ -625,7 +625,7 @@ Vea la sección de clase de tamaño de este artículo para obtener más informac
 
 ### <a name="adaptive-segue-types"></a>Tipos de Segue adaptable
 
-Si ha usado por el programador guiones gráficos antes, ya estarán familiarizados con los tipos existentes de segue de **Push**, **Modal** y **elemento flotante**. Cuando se habilitan las clases de tamaño en un archivo de guión gráfico unificado, adaptable Segue de los siguientes (que corresponden a la nueva API de controlador de vista se ha explicado anteriormente) se ponen a disposición: **mostrar** y **mostrar detalle** .
+Si ha usado por el programador guiones gráficos antes, ya estarán familiarizados con los tipos existentes de segue de **Push**, **Modal** y **elemento flotante**. Cuando se habilitan las clases de tamaño en un archivo de guión gráfico unificado, adaptable Segue de los siguientes (que corresponden a la nueva API de controlador de vista se ha explicado anteriormente) se ponen a disposición: **Mostrar** y **mostrar detalles**.
 
 > [!IMPORTANT]
 > Cuando se habilitan las clases de tamaño, cualquier existente, los objetos Segue will convertirse a los nuevos tipos.

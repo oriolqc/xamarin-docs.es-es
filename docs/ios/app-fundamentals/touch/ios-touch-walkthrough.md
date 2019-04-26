@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Usar toque en Xamarin.iOS'
+title: 'Tutorial: Uso de interacción en Xamarin.iOS'
 description: Este documento describe cómo controlar la entrada táctil en aplicaciones de Xamarin.iOS, tratar las interacciones táctiles de ejemplo, los reconocedores de gestos y los reconocedores de gestos personalizados.
 ms.prod: xamarin
 ms.assetid: 13F8289B-7A80-4959-AF3F-57874D866DCA
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: bff4d46ac9d5fe893cbb0a2dfa032e1b9f6daa0e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61407819"
 ---
-# <a name="walkthrough-using-touch-in-xamarinios"></a>Tutorial: Usar toque en Xamarin.iOS
+# <a name="walkthrough-using-touch-in-xamarinios"></a>Tutorial: Uso de interacción en Xamarin.iOS
 
 Este tutorial muestra cómo escribir código que responde a los distintos tipos de eventos de toque. Cada ejemplo se encuentra en otra pantalla:
 

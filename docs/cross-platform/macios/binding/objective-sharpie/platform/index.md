@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
 ms.openlocfilehash: 8eaff208632d907d8c630f696adbbc1856f4bc57
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261245"
 ---
 # <a name="objective-sharpie-features"></a>Características de Sharpie objetivo
 
@@ -26,12 +26,12 @@ Estos dos archivos se emiten por objetivo Sharpie, que se incluirán en el proye
 Algunas bibliotecas se distribuyen como marcos de trabajo en lugar de como origen.
 Objetivo Sharpie le permite usar estas bibliotecas con el `-framework` opción.
 
-## <a name="verifyverifymd"></a>[**Comprobar**](verify.md)
+## <a name="verifyverifymd"></a>[**Verify**](verify.md)
 
 Agregar objetivo Sharpie `Verify` atributos para indicar que necesita inspeccionar manualmente y actualizar el enlace generado. 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Curso de Xamarin University: Creación de una biblioteca de enlaces de Objective-c.](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Curso de Xamarin University: Compilar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Curso de Xamarin University: Generar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
 

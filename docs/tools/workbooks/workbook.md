@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
 ms.openlocfilehash: 71f46535ffd0a99ad78acb8f0e3bbc5870abf33e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61197961"
 ---
 # <a name="interactive-workbooks"></a>Libros interactivos
 
@@ -49,7 +49,7 @@ Si hace referencia el paquete Xamarin.Forms NuGet en su libro, la aplicación de
 
 La ficha Vista Inspector también tiene compatibilidad especial para mostrar la jerarquía de vistas de Xamarin.Forms que le ayudarán a comprender sus diseños.
 
-## <a name="rich-text-editing"></a>Edición de texto enriquecido
+## <a name="rich-text-editing"></a>Rich Text Editing
 
 Puede editar el texto en torno a su código mediante el editor de texto enriquecido que incluye, como se muestra a continuación:
 

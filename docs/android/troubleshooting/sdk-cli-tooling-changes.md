@@ -9,11 +9,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/21/2018
 ms.openlocfilehash: dbd3287e7c646be7fd969699eab685906a1c6c1a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61093940"
 ---
 # <a name="changes-to-the-android-sdk-tooling"></a>Cambios en las Herramientas de Android SDK
 
@@ -48,13 +48,13 @@ Como alternativa, puede usar herramientas de la CLI para administrar y actualiza
 
 #### <a name="sdkmanager"></a>sdkmanager
 
-**Se ha agregado en:** Android SDK Tools 25.2.3 (noviembre de 2016) y versiones posteriores.
+**Agregado en:** Android SDK Tools 25.2.3 (noviembre de 2016) y versiones posteriores.
 
 Hay un programa nuevo llamado **sdkmanager** en el **herramientas/bin** carpeta del SDK de Android. Esta herramienta se utiliza para mantener el SDK de Android en la línea de comandos. Para obtener más información sobre el uso de esta herramienta, consulte [sdkmanager](https://developer.android.com/studio/command-line/sdkmanager.html).
 
 #### <a name="avdmanager"></a>avdmanager
 
-**Se ha agregado en:** Android SDK Tools 25.3.0 (marzo de 2017) y versiones posteriores.
+**Agregado en:** Android SDK Tools 25.3.0 (marzo de 2017) y versiones posteriores.
 
 Hay un programa nuevo llamado **avdmanager** en el **herramientas/bin** carpeta del SDK de Android. Esta herramienta se utiliza para mantener el AVD para el emulador de Android. Para obtener más información sobre el uso de esta herramienta, consulte [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html).
 

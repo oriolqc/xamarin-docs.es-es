@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/11/2016
 ms.openlocfilehash: b251fa13c4b436a837f71b5362ae85dffd245092
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61408850"
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>Uso de UrhoSharp en Xamarin.Forms
 
@@ -43,7 +43,7 @@ El paquete UrhoSharp.Forms NuGet se agregarán al proyecto:
 
 Repita los pasos anteriores para los proyectos específicos de la plataforma (por ejemplo, iOS y Android).
 
-## <a name="walkthrough-adding-urhosharp-to-a-xamarinforms-app"></a>Tutorial: Agregar UrhoSharp a una aplicación de Xamarin.Forms
+## <a name="walkthrough-adding-urhosharp-to-a-xamarinforms-app"></a>Tutorial: Adición de UrhoSharp a una aplicación de Xamarin.Forms
 
 El código en el ejemplo de Xamarin.Forms UrhoSharp estos pasos:
 

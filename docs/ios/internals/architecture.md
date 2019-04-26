@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: d08f7e3a35cd82f4262ef1f145d4b4648f7baef8
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61036171"
 ---
 # <a name="ios-app-architecture"></a>Arquitectura de aplicación de iOS
 
@@ -22,7 +22,7 @@ El diagrama siguiente muestra una visión general básica de esta arquitectura:
 
 [ ![](architecture-images/ios-arch-small.png "Este diagrama muestra una introducción básica a la arquitectura de la compilación con antelación of Time (AOT)")](architecture-images/ios-arch.png#lightbox)
 
-## <a name="native-and-managed-code-an-explanation"></a>Nativo y código administrado: una explicación
+## <a name="native-and-managed-code-an-explanation"></a>Nativo y código administrado: Obtener una explicación
 
 Al desarrollar para Xamarin los términos *nativo y administrado* usan a menudo el código. [Código administrado](https://blogs.msdn.microsoft.com/brada/2004/01/09/what-is-managed-code/) es código que tiene su ejecución administrado por el [Common Language Runtime de .NET Framework](https://msdn.microsoft.com/library/8bs2ecf4(v=vs.110).aspx), o en caso de Xamarin: el tiempo de ejecución Mono. Esto es lo que llamamos un lenguaje intermedio.
 

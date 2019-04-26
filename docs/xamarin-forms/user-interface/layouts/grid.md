@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
 ms.openlocfilehash: 0d5df986caa01bba69b03d6502682889e78ecbc7
-ms.sourcegitcommit: ee464f165eee7b4485266c11f167be557a0bacb2
-ms.translationtype: MT
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61300838"
 ---
 # <a name="xamarinforms-grid"></a>Cuadrícula de Xamarin.Forms
 
@@ -54,7 +54,7 @@ Información de fila y columna se almacena en `Grid`del `RowDefinitions`  &  `Co
 - **Absoluta** &ndash; tamaños de las columnas y filas con valores específicos de alto y ancho fijos. Especificado como un valor y `GridUnitType.Absolute` en C# y como `#` en XAML, con `#` que el valor deseado.
 
 > [!NOTE]
-> Los valores de ancho para las columnas se establecen como `*` de forma predeterminada en Xamarin.Forms, lo que garantiza que la columna rellenará el espacio disponible. También se establecen los valores del alto para las filas como `*` de forma predeterminada. 
+> Los valores de ancho para las columnas se establecen como `*` de forma predeterminada en Xamarin.Forms, lo que garantiza que la columna rellenará el espacio disponible. También se establecen los valores del alto para las filas como `*` de forma predeterminada.
 
 Considere la posibilidad de una aplicación que necesita tres filas y dos columnas. La fila inferior debe ser exactamente 200px alto y la fila superior debe ser dos veces más alto que la fila central. La columna izquierda debe ser lo suficientemente ancho como para que quepa el contenido y la columna derecha debe rellenar el espacio restante.
 
@@ -164,8 +164,8 @@ El XAML siguiente especifica un `Grid` con dos columnas, una fila y 5 px de espa
 ```xaml
 <Grid ColumnSpacing="5">
   <Grid.ColumnDefinitions>
-    <ColumnDefinitions Width="*" />
-    <ColumnDefinitions Width="*" />
+    <ColumnDefinition Width="*" />
+    <ColumnDefinition Width="*" />
   </Grid.ColumnDefinitions>
 </Grid>
 ```

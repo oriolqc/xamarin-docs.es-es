@@ -1,5 +1,5 @@
 ---
-title: Uso de controles personalizados con iOS Designer
+title: uso de los controles personalizados con iOS Designer
 description: Este documento describe cómo crear un control personalizado y su uso con el Diseñador de Xamarin para iOS. Muestra cómo hacer que el control disponible en el cuadro de herramientas del Diseñador de iOS, implementar el control, por lo que se represente correctamente y diseñar tiempo y mucho más.
 ms.prod: xamarin
 ms.assetid: 9032B32E-97BD-4DA6-9955-811B84682578
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 98504c9d5f210d55a2be4c85c52d4bc1418fc223
-ms.sourcegitcommit: 650458de1d362cd7de174cacef7838f0e74426f3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58070831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61154482"
 ---
-# <a name="using-custom-controls-with-the-ios-designer"></a>Uso de controles personalizados con iOS Designer
+# <a name="using-custom-controls-with-the-ios-designer"></a>uso de los controles personalizados con iOS Designer
 
 ## <a name="requirements"></a>Requisitos
 

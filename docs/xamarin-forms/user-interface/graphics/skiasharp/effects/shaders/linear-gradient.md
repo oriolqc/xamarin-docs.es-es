@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: 9551a3b8e093dbb49a55a3761543602c40e81023
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61158562"
 ---
 # <a name="the-skiasharp-linear-gradient"></a>Degradado lineal de SkiaSharp
 
@@ -27,7 +27,7 @@ El tipo más básico de degradado es un _lineal_ degradado. La combinación de c
 Estos métodos devuelven un objeto de tipo [ `SKShader` ](xref:SkiaSharp.SKShader) que establecer para el [ `Shader` ](xref:SkiaSharp.SKPaint.Shader) propiedad de `SKPaint`. Si el `Shader` propiedad es no nulo, invalida el `Color` propiedad. Cualquier línea que se traza o cualquier área que se rellena mediante este `SKPaint` objeto se basa en el degradado en lugar de con el color sólido.
 
 > [!NOTE]
-> El `Shader` propiedad se omite cuando se incluye un `SKPaint` objeto en un `DrawBitmap` llamar. Puede usar el `Color` propiedad de `SKPaint` para establecer un nivel de transparencia para mostrar un mapa de bits (como se describe en el artículo [SkiaSharp mostrar mapas de bits](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), pero no se puede usar el `Shader` propiedad para mostrar un mapa de bits con una transparencia degradada. Existen otras técnicas para mostrar mapas de bits con las transparencias degradadas: se describen en los artículos [SkiaSharp circulares degradados](circular-gradients.md#radial-gradients-for-masking) y [los modos de composición y blend de SkiaSharp](../blend-modes/porter-duff.md#gradient-transparency-and-transitions).
+> El `Shader` propiedad se omite cuando se incluye un `SKPaint` objeto en un `DrawBitmap` llamar. Puede usar el `Color` propiedad de `SKPaint` para establecer un nivel de transparencia para mostrar un mapa de bits (como se describe en el artículo [SkiaSharp mostrar mapas de bits](../../bitmaps/displaying.md#displaying-in-pixel-dimensions)), pero no se puede usar el `Shader` propiedad para mostrar un mapa de bits con una transparencia degradada. Existen otras técnicas para mostrar mapas de bits con las transparencias degradadas: Estos métodos se describen en los artículos [SkiaSharp circulares degradados](circular-gradients.md#radial-gradients-for-masking) y [los modos de composición y blend de SkiaSharp](../blend-modes/porter-duff.md#gradient-transparency-and-transitions).
 
 ## <a name="corner-to-corner-gradients"></a>Esquina a esquina degradados
 
@@ -477,7 +477,7 @@ public class GradientAnimationPage : ContentPage
 
 El `OnTimerTick` método calcula un `angle` valor que se anima desde 0 hasta 2π cada 3 segundos. 
 
-Aquí es una manera de calcular los dos puntos de degradado. Un `SKPoint` valor denominado `vector` se calcula para ampliar desde el centro del lienzo a un punto en el radio del círculo. La dirección de este vector se basa en los valores de seno y coseno del ángulo. A continuación, se calculan los dos puntos de degradado opuestos: un punto se calcula restando dicho vector desde el punto central, y otro punto se calcula sumando el vector en el punto central:
+Aquí es una manera de calcular los dos puntos de degradado. Un `SKPoint` valor denominado `vector` se calcula para ampliar desde el centro del lienzo a un punto en el radio del círculo. La dirección de este vector se basa en los valores de seno y coseno del ángulo. A continuación, se calculan los dos puntos de degradado opuestos: Un punto se calcula restando dicho vector desde el punto central, y otro punto se calcula sumando el vector en el punto central:
 
 ```csharp
 public class GradientAnimationPage : ContentPage
@@ -617,7 +617,7 @@ public class RainbowGradientPage : ContentPage
 }
 ```
 
-Los dos puntos de degradado de la `CreateLinearGradient` método se basa en dos de los puntos que definen esta ruta de acceso: ambos puntos son cerca de la esquina superior izquierda. La primera consiste en el borde superior del lienzo y el segundo es en el borde izquierdo del lienzo. Este es el resultado:
+Los dos puntos de degradado de la `CreateLinearGradient` método se basa en dos de los puntos que definen esta ruta de acceso: Ambos puntos son cerca de la esquina superior izquierda. La primera consiste en el borde superior del lienzo y el segundo es en el borde izquierdo del lienzo. Este es el resultado:
 
 [![Degradado arco iris defectuoso](linear-gradient-images/RainbowGradientFaulty.png "degradado arco iris defectuoso")](linear-gradient-images/RainbowGradientFaulty-Large.png#lightbox)
 

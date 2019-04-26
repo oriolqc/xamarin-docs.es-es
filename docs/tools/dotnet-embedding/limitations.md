@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 7a162d632c98b4e412fa1b7b0c0c40ac945ff09f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60945793"
 ---
 # <a name="net-embedding-limitations"></a>Limitaciones de incrustación de .NET
 
@@ -23,7 +23,7 @@ Este documento explica las limitaciones de inserción de .NET y, siempre que sea
 
 No es posible tener dos tiempos de ejecución Mono coexistan dentro de la misma aplicación. Esto significa que no puede usar dos bibliotecas diferentes generados por inserción de .NET dentro de la misma aplicación.
 
-**Solución alternativa:** puede usar el generador para crear una biblioteca única que incluye varios ensamblados (de proyectos diferentes).
+**Solución:** Puede usar el generador para crear una biblioteca única que incluye varios ensamblados (de proyectos diferentes).
 
 ### <a name="subclassing"></a>Creación de subclases
 

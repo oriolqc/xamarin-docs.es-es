@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: ec907e71074a97bd5d1714e79dd504013f5c8a4b
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61240884"
 ---
 # <a name="windows-in-xamarinmac"></a>Windows en Xamarin.Mac
 
@@ -744,7 +744,7 @@ En el **Inspector de atributos**, tiene las siguientes opciones específicas de 
 
 [![](window-images/panel03.png "El Inspector de atributos")](window-images/panel03.png#lightbox)
 
-- **Estilo** -permiten ajustar el estilo del panel de: Panel Regular (parece una ventana estándar), Panel de utilidad (tiene una barra de título más pequeña), Panel HUD (es translúcido y la barra de título es parte del fondo).
+- **Estilo** -permiten ajustar el estilo del panel de: Panel regular (parece una ventana estándar), Panel de utilidad (tiene una barra de título más pequeña), Panel de HUD (es translúcido y la barra de título es parte del fondo).
 - **Activación no** -determina en el panel se convierte en la ventana de la clave.
 - **Documentar Modal** -si documento Modal, el panel solo estará por encima de windows de la aplicación, else flota por encima de todo.
 

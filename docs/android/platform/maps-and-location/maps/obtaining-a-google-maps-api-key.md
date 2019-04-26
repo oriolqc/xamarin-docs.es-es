@@ -1,5 +1,5 @@
 ---
-title: Obtener clave de API un Google Maps
+title: Obtención de una clave de la API de Google Maps
 description: Cómo obtener una clave de API de mapas de Google para agregar funcionalidad asigna a la aplicación.
 ms.prod: xamarin
 ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 06/25/2018
 ms.openlocfilehash: bfeb9d8fa2a0b5a9b18ab8266500586e2e3b6c68
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61155433"
 ---
-# <a name="obtaining-a-google-maps-api-key"></a>Obtener clave de API un Google Maps
+# <a name="obtaining-a-google-maps-api-key"></a>Obtención de una clave de la API de Google Maps
 
 Para usar la funcionalidad de Google Maps en Android, deberá registrarse para una clave de API de mapas de Google. Hasta entonces, solo verá una cuadrícula vacía en lugar de un mapa en sus aplicaciones. Debe obtener una clave de API de Android de Google Maps v2: las claves de la anterior v1 de clave de API de Android de Google Maps no funcionará.
 

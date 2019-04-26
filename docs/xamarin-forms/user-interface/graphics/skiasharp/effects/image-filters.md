@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
 ms.openlocfilehash: 517ebfb529dd26236ba157d40168fa7c75288d27
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61290220"
 ---
 # <a name="skiasharp-image-filters"></a>Filtros de imágenes de SkiaSharp
 
@@ -28,7 +28,7 @@ En este artículo también muestra cómo utilizar un filtro de imágenes para cr
 
 ## <a name="blurring-vector-graphics-and-bitmaps"></a>Gráficos vectoriales y mapas de bits de desenfoque
 
-El efecto de desenfoque creado por el [ `SKImageFilter.CreateBlur` ](xref:SkiaSharp.SKImageFilter.CreateBlur*) método estático tiene una ventaja considerable respecto a los métodos de desenfoque de la [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) clase: el filtro de imágenes puede desenfocar un mapa de bits completo. El método tiene la siguiente sintaxis:
+El efecto de desenfoque creado por el [ `SKImageFilter.CreateBlur` ](xref:SkiaSharp.SKImageFilter.CreateBlur*) método estático tiene una ventaja considerable respecto a los métodos de desenfoque de la [ `SKMaskFilter` ](xref:SkiaSharp.SKMaskFilter) clase: El filtro de imágenes puede desenfoque un mapa de bits completo. El método tiene la siguiente sintaxis:
 
 ```csharp
 public static SkiaSharp.SKImageFilter CreateBlur (float sigmaX, float sigmaY,
@@ -427,7 +427,7 @@ public partial class DistantLightExperimentPage : ContentPage
 }
 ```
 
-El primer argumento de `SKImageFilter.CreateDistantLitDiffuse` es la dirección de la luz. Positivo X e Y coordenadas indican que la luz se apunta a la derecha y hacia abajo. Punto de las coordenadas Z positivo en la pantalla. El archivo XAML le permite seleccionar los valores de Z negativos, pero es solo para que pueda ver lo que sucede: conceptualmente, coordenadas Z negativo hacer que la luz al punto de salir de la pantalla. Para cualquier elemento otros valores negativos, a continuación, pequeños, el efecto de iluminación deja de funcionar.
+El primer argumento de `SKImageFilter.CreateDistantLitDiffuse` es la dirección de la luz. Positivo X e Y coordenadas indican que la luz se apunta a la derecha y hacia abajo. Punto de las coordenadas Z positivo en la pantalla. El archivo XAML le permite seleccionar los valores de Z negativos, pero es solo para que pueda ver lo que sucede: Conceptualmente, coordenadas Z negativo hacer que la luz al punto de salir de la pantalla. Para cualquier elemento otros valores negativos, a continuación, pequeños, el efecto de iluminación deja de funcionar.
 
 El `surfaceScale` argumento puede oscilar entre -1 y 1. (Los valores superiores o inferiores no tengan ningún efecto adicional). Estos son los valores relativos en el eje Z que indican el desplazamiento del objeto gráfico (en este caso, la cadena de texto) de la superficie del lienzo. Use los valores negativos para generar la cadena de texto por encima de la superficie del lienzo y que los valores positivos se bajan al lienzo.
 
@@ -439,7 +439,7 @@ Se pueden equilibrar estos factores para obtener una en relieve efecto cuando `s
 
 La captura de pantalla de Android tiene un valor de Z de 0, lo que significa que la luz sólo apunta hacia abajo y a la derecha. No está iluminado el fondo y la superficie de la cadena de texto no está iluminada cualquiera. El borde del texto para un efecto muy sutil solamente afecta a la luz.
 
-Un enfoque alternativo a texto en relieve y grabado se mostró en el artículo [traducir la transformación](../transforms/translate.md): la cadena de texto se muestra dos veces con diferentes colores que se desplazan ligeramente entre sí.
+Un enfoque alternativo a texto en relieve y grabado se mostró en el artículo [traducir la transformación](../transforms/translate.md): La cadena de texto se muestra dos veces con diferentes colores que se desplazan ligeramente entre sí.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

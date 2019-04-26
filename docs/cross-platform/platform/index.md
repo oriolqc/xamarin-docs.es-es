@@ -1,39 +1,39 @@
 ---
-title: Compatibilidad con idiomas en Xamarin de programación
-description: 'Este documento describe varios lenguajes de programación compatibles con Xamarin. Se trata de C#, F #, Visual Basic.NET portátil y plantillas de Razor.'
+title: Programación de la compatibilidad con idiomas en Xamarin
+description: Este documento describe los diversos lenguajes de programación compatibles con Xamarin. Describe C#, F#, portable Visual Basic.NET y plantillas de Razor.
 ms.prod: xamarin
 ms.assetid: CEE8C464-67D7-45F4-9614-EAEF5217CACC
 author: asb3993
 ms.author: amburns
 ms.date: 02/18/2018
 ms.openlocfilehash: 715f63a0be54ba3342bd63c1c76d89656313359a
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34781681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61035918"
 ---
-# <a name="programming-language-support-in-xamarin"></a>Compatibilidad con idiomas en Xamarin de programación
+# <a name="programming-language-support-in-xamarin"></a>Programación de la compatibilidad con idiomas en Xamarin
 
 ## <a name="c"></a>C# 
 
 ###  <a name="async-support-overviewcross-platformplatformasyncmd"></a>[Información general sobre la compatibilidad con Async](~/cross-platform/platform/async.md)
 
-Versión 5 de C# introdujo dos nuevas palabras clave para expresar las operaciones asincrónicas: async y await. Estas palabras clave le permiten escribir código simple que utiliza la biblioteca TPL para ejecutar las operaciones de larga duración (por ejemplo, el acceso a la red) en otro subproceso y obtener acceso fácilmente a los resultados de la finalización. Las versiones más recientes de Xamarin.iOS y Xamarin.Android admiten async y await: este documento proporciona explicaciones y un ejemplo de cómo usar la nueva sintaxis con Xamarin.
+Versión 5 de C# introdujo dos nuevas palabras clave para expresar las operaciones asincrónicas: async y await. Estas palabras clave le permiten escribir código simple que usa la biblioteca TPL para ejecutar operaciones de larga ejecución (por ejemplo, el acceso a la red) en otro subproceso y acceder fácilmente a los resultados al finalizar. Las últimas versiones de Xamarin.iOS y Xamarin.Android, compatibilidad con async y await: este documento proporciona explicaciones y un ejemplo del uso de la nueva sintaxis con Xamarin.
 
 ### <a name="c-6-language-featurescross-platformplatformcsharp-sixmd"></a>[Características del lenguaje C# 6](~/cross-platform/platform/csharp-six.md)
 
-La versión más reciente del lenguaje C#, versión 6, continúa evolucionando el lenguaje para reducir la repetición de código, mejorar la claridad y aumentar la coherencia. La sintaxis de inicialización más limpia, la posibilidad de usar await en bloques de catch/finally y el operador condicional null ? son especialmente útiles.
+La versión más reciente de la C# , versión 6, idioma sigue evolucionando el lenguaje para tener menos repetitivo, ha mejorado la claridad y coherencia más. Sintaxis de inicialización más limpia, la capacidad de usar `await` en `catch/finally` bloques y el condicional de null `?` operador son especialmente útiles.
 
 ## <a name="ffsharpindexmd"></a>[F#](fsharp/index.md)
 
-Creación de aplicaciones móviles con F # y Xamarin.
+Crear aplicaciones móviles con F# y Xamarin.
 
-##  <a name="portable-visual-basicnetcross-platformplatformvisual-basicindexmd"></a>[Visual Basic.NET portátil](~/cross-platform/platform/visual-basic/index.md)
+##  <a name="portable-visual-basicnetcross-platformplatformvisual-basicindexmd"></a>[Portable Visual Basic.NET](~/cross-platform/platform/visual-basic/index.md)
 
-Visual Studio admite la creación de bibliotecas de clases Portable con Visual Basic.NET que, a continuación, se pueden incorporar en aplicaciones de Xamarin. Este artículo muestra cómo crear una nueva PCL de Visual Basic y, a continuación, utilizarlo en una aplicación de ejemplo Xamarin.iOS y Xamarin.Android, Windows Phone.
+Visual Studio admite la creación de bibliotecas de clases portables utilizando Visual Basic.NET que, a continuación, se puede incorporar en las aplicaciones de Xamarin. En este artículo se muestra cómo crear una nueva PCL de Visual Basic y, a continuación, utilizarlo en una aplicación de ejemplo de Xamarin.iOS, Xamarin.Android y Windows Phone.
 
-##  <a name="building-html-views-using-razor-templatescross-platformplatformrazor-html-templatesindexmd"></a>[Vistas de creación HTML mediante plantillas de Razor](~/cross-platform/platform/razor-html-templates/index.md)
+##  <a name="building-html-views-using-razor-templatescross-platformplatformrazor-html-templatesindexmd"></a>[Vistas HTML de creación mediante plantillas de Razor](~/cross-platform/platform/razor-html-templates/index.md)
 
-Xamarin permite a los desarrolladores aprovechar el motor de plantillas de Razor, apareció inicialmente con ASP.NET MVC, junto con C# para combinar fácilmente los datos con HTML, Javascript y CSS sin las complicaciones de la creación manual de las cadenas HTML en el código.
-Este artículo demuestra cómo usar plantillas de Razor con Xamarin para iOS y Android.
+Xamarin permite a los desarrolladores aprovechar el motor de plantillas de Razor, presentado originalmente con ASP.NET MVC, junto con C# se combinen fácilmente datos con HTML, Javascript y CSS sin la molestia de crear manualmente las cadenas HTML en el código.
+En este artículo se muestra cómo usar las plantillas de Razor con Xamarin para iOS y Android.

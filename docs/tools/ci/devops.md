@@ -8,11 +8,11 @@ ms.workload:
 - xamarin
 ms.date: 10/23/2018
 ms.openlocfilehash: de7cb0d3cce97f251fe6d9625fb1373e6aac7a67
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50132087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61293692"
 ---
 # <a name="devops-with-xamarin"></a>DevOps con Xamarin
 
@@ -26,7 +26,7 @@ En las siguientes tablas se identifican qué características de DevOps de Visua
 
 ## <a name="agile-tools"></a>Herramientas de Agile
 
-Vínculo de referencia: **[About Agile tools and Agile project management](/azure/devops/boards/backlogs/overview?view=vsts)** (Sobre herramientas y gestión de proyectos de Agile)
+Vínculo de referencia: **[Acerca de las herramientas de Agile y administración de proyectos ágiles](/azure/devops/boards/backlogs/overview?view=vsts)**
 
 Comentario general: todas las características de planeación y seguimiento son independientes del tipo de proyecto y de los lenguajes de codificación.
 
@@ -102,7 +102,7 @@ Vínculo de referencia: **[Mejorar la calidad del código](/visualstudio/test/im
 
 ## <a name="release-management"></a>Administración de versiones
 
-Vínculo de referencia: **[Compilación y versiones en Azure Pipelines y TFS](/azure/devops/pipelines/overview?view=vsts)**
+Vínculo de referencia: **[Compilación y versión en canalizaciones de Azure y TFS](/azure/devops/pipelines/overview?view=vsts)**
 
 |Característica|Compatible con Xamarin|Comentarios adicionales|
 |-------------|----------------------------|-------------------------|

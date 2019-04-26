@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/13/2017
 ms.openlocfilehash: 45886d787ecc40c9e11ce0c713ffa22819e29db2
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61227531"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>watchOS tareas en segundo plano en Xamarin
 
@@ -543,7 +543,7 @@ Aunque es una aplicación en segundo plano, el sistema impone varios límites en
 
 - Solo tiene unos pocos segundos para completar una tarea determinada. El sistema toma en consideración no sólo la cantidad de tiempo pasado sino también Cuánta energía de CPU que consume la aplicación para este límite se derivan.
 - Cualquier aplicación que supera los límites se terminan con los siguientes códigos de error:
-    - **CPU** -0xc51bad01
+    - **CPU** - 0xc51bad01
     - **Tiempo** -0xc51bad02
 - El sistema impondrá distintos límites según el tipo de tarea en segundo plano que solicitó la aplicación para realizar. Por ejemplo, `WKApplicationRefreshBackgroundTask` y `WKURLSessionRefreshBackgroundTask` tareas tienen tiempos de ejecución un poco más sobre otros tipos de tareas en segundo plano.
 

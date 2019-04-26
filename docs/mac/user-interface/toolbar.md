@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 6cb17ae0f60390564a8aa6bdb64ea612aae51b55
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61295565"
 ---
 # <a name="toolbars-in-xamarinmac"></a>Barras de herramientas de Xamarin.Mac
 
@@ -42,7 +42,7 @@ Las barras de herramientas pueden mostrar los elementos de tres maneras:
 
      ![Una barra de herramientas con iconos y texto](toolbar-images/info02.png "una barra de herramientas con iconos y texto")
 
-2. **Icono solo** 
+2. **Icon Only** 
 
      ![Una barra de herramientas solo icono](toolbar-images/info03.png "una barra de herramientas solo icono")
 

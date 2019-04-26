@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
 ms.openlocfilehash: 690d3c15d7ad2aad06be5b499bae1a94107414f4
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019595"
 ---
 # <a name="svg-path-data-in-skiasharp"></a>Datos de ruta de acceso SVG de SkiaSharp
 
@@ -361,7 +361,7 @@ public class PrettyAnalogClockPage : ContentPage
 }
 ```
 
-El [ **puntos y guiones** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) artículo describe cómo puede usar el [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) método para crear una línea discontinua. El primer argumento es un `float` matriz que generalmente tiene dos elementos: el primer elemento es la longitud de los guiones, y el segundo elemento es la separación entre los guiones. Cuando el `StrokeCap` propiedad está establecida en `SKStrokeCap.Round`, a continuación, los extremos del guión redondeados eficazmente alargar la longitud del guión por el ancho del trazo en ambos lados del guión. Por lo tanto, si el primer elemento de matriz se establece en 0, crea una línea de puntos.
+El [ **puntos y guiones** ](~/xamarin-forms/user-interface/graphics/skiasharp/paths/dots.md) artículo describe cómo puede usar el [ `SKPathEffect.CreateDash` ](xref:SkiaSharp.SKPathEffect.CreateDash*) método para crear una línea discontinua. El primer argumento es un `float` matriz que generalmente tiene dos elementos: El primer elemento es la longitud de los guiones, y el segundo elemento es la separación entre los guiones. Cuando el `StrokeCap` propiedad está establecida en `SKStrokeCap.Round`, a continuación, los extremos del guión redondeados eficazmente alargar la longitud del guión por el ancho del trazo en ambos lados del guión. Por lo tanto, si el primer elemento de matriz se establece en 0, crea una línea de puntos.
 
 La distancia entre estos puntos se rige por el segundo elemento de matriz. Como verá en breve, estos dos `SKPaint` objetos se utilizan para dibujar círculos con un radio de 90 unidades. Por lo tanto, la circunferencia de este círculo es 180π, lo que significa que las marcas de 60 minutos deben aparecer cada unidades 3π, que es el segundo valor en el `float` de matriz en `minuteMarkPaint`. Las marcas de hora 12 deben aparecer cada unidades 15π, que es el valor en el segundo `float` matriz.
 
