@@ -8,11 +8,11 @@ author: chamons
 ms.author: chhamo
 ms.date: 04/16/2019
 ms.openlocfilehash: 2a208d39454a33adc849bcccc66802361693e82e
-ms.sourcegitcommit: 34819671c7910d29f018bdb394ddd4a4b0cd3a31
-ms.translationtype: MT
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59675897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61419320"
 ---
 # <a name="can-i-use-an-older-version-of-xcode-or-xamarinios"></a>¿Puedo usar una versión anterior de Xcode o Xamarin.iOS?
 

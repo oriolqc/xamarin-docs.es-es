@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 33138b7858b8bc04a5be30f9fad1709e916f5575
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61364155"
 ---
 # <a name="net-embedding-best-practices-for-objective-c"></a>Prácticas recomendadas de inserción de .NET para Objective-C
 
@@ -29,7 +29,7 @@ Sería una buena idea para crear un ensamblado diferente y más pequeño, para e
 
 Hay un precio para realizar la transición de código nativo a administrado (y posterior). Por lo tanto, es mejor exponer _pesado en lugar de chatty_ API para los programadores de aplicaciones nativas, p. ej.
 
-**Más activas**
+**Chatty**
 
 ```csharp
 public class Person {
@@ -45,7 +45,7 @@ p.firstName = @"Sebastien";
 p.lastName = @"Pouliot";
 ```
 
-**Pesado**
+**Chunky**
 
 ```csharp
 public class Person {
@@ -118,7 +118,7 @@ public int Parse (string number)
 }
 ```
 
-frente a
+versus
 
 ```csharp
 public bool TryParse (string number, out int value)

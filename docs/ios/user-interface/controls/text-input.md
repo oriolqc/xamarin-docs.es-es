@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: b309cbdf37acaa71740a4d5d03e4824efd40f359
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61200987"
 ---
 # <a name="text-input-in-xamarinios"></a>Entrada de texto en Xamarin.iOS
 
@@ -20,7 +20,7 @@ Aceptar la entrada de texto del usuario se logra con la `UITextField` para entra
 
 Las capturas de pantalla siguiente muestran los iconos de estos controles, que se encuentra en el panel cuadro de herramientas en Visual Studio para Mac:
 
- [![](text-input-images/image11a.png "Interfaz de usuario")](text-input-images/image11a.png#lightbox)
+ [![](text-input-images/image11a.png "UITextField")](text-input-images/image11a.png#lightbox)
 
  [![](text-input-images/image13a.png "UITextView")](text-input-images/image13a.png#lightbox)
 
@@ -29,7 +29,7 @@ Una vez que haya asignado un nombre de la toma de corriente y guardar el archivo
  <a name="UITextField" />
 
 
-## <a name="uitextfield"></a>Interfaz de usuario
+## <a name="uitextfield"></a>UITextField
 
 El `UITextField` control más a menudo se usa para aceptar una sola línea de entrada de texto como un nombre de usuario o contraseña. Aquí se muestran algunas de las opciones disponibles para personalizar el control:
 

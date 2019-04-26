@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
 ms.openlocfilehash: b2a9e757e8a3407bbb19ae0580e5788eabe84cf0
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61188981"
 ---
 # <a name="understanding-sirikit-concepts"></a>Descripción de los conceptos de SiriKit
 
@@ -66,7 +66,7 @@ Hay muchas maneras de que el usuario podría iniciar una interacción con la apl
 Por ejemplo, si el usuario desea enviar un mensaje a su amigo Bobo, podría tener la conversación con Siri siguiente:
 
 _Usuario: Hola Siri, enviar un mensaje MonkeyChat._<br />
-_Siri: A quien?_<br />
+_Siri: ¿A quién?_<br />
 _Usuario: Bobo._<br />
 _Siri: ¿Qué desea decir al Bobo?_<br />
 _Usuario: Envíe Bananas más._<br />
@@ -80,18 +80,18 @@ _Usuario: Envíe bananas más._<br />
 Y otros usuarios puedan realizar una solicitud aun más corta:
 
 _Usuario: MonkeyChat Bobo envíe bananas más._<br />
-_Siri: Bueno, enviar mensaje envía bananas más a Bobo en Monkeychat._<br />
+_Siri: Bien, enviar mensaje envíe más bananas a Bobo en Monkeychat._<br />
 
 O incluso hacer que la misma solicitud en un idioma diferente:
 
 _Usuario: MonkeyChat Bobo ningún crédito si revisión plaît envoyer plus de bananes._<br />
-_Siri: Oui, revisión plaît envoyer de Envoi (envío) mensaje ningún crédito si más de bananes à Bobo Surname Monkeychat._<br />
+_Siri: OUI, revisión plaît envoyer de Envoi (envío) mensaje ningún crédito si más de bananes à Bobo Surname Monkeychat._<br />
 
 Aún otro usuario podría ser muy detallado en la conversación:
 
-_Usuario: Hola Siri, puede vuelva hágame un favor e iniciar la aplicación MonkeyChat para enviar un texto con el mensaje envíe bananas más._<br />
-_Siri: A quien?_<br />
-_Usuario: Mi mejor pal Bobo._<br />
+_Usuario: Hola Siri puede póngase hágame un favor e inicie la aplicación MonkeyChat para enviar un mensaje de texto con el mensaje envíe bananas más._<br />
+_Siri: ¿A quién?_<br />
+_Usuario: Mi mejor Bobo pal._<br />
 
 Además, hay muchas maneras de Siri podría responder a una solicitud, algunos en función de cómo se realizó la solicitud:
 
@@ -141,10 +141,10 @@ En el ejemplo anterior, el usuario ha respondido, *"Envíe más banana"*, que Si
 
 La intención estructurada contendrá la siguiente información:
 
-- **Dominio:** mensajes
+- **Dominio:** Mensajes
 - **Propósito:** sendMessage
 - **Destinatarios:** Bobo
-- **Contenido:** envíe más plátano
+- **Contenido:** Envíe más plátano
 
 Cada dominio tiene como conjunto de saber *acciones* que pueden realizarse dentro de ellos y basado en el dominio y la acción, cero a muchos parámetros podrían estar incluidos en la intención se envía a la aplicación.
 
@@ -290,7 +290,7 @@ El vocabulario específico de aplicación define las palabras y frases específi
 
 Hay varias partes a un vocabulario `AppIntentVocabulary.plist` archivo:
 
-- **Aplicación de ejemplo usa** -proporcionan un conjunto de casos de uso comunes para las solicitudes que el usuario puede hacer de la aplicación. Por ejemplo: *"Iniciar un entrenamiento con MonkeyFit".*
+- **Aplicación de ejemplo usa** -proporcionan un conjunto de casos de uso comunes para las solicitudes que el usuario puede hacer de la aplicación. Por ejemplo: *"Empezar con el ejercicio MonkeyFit."*
 - **Los parámetros** -proporcionan un conjunto de tipos de parámetros estándar que no son específicos de la aplicación. Por ejemplo, nombres de entrenamiento de la aplicación MonkeyFit. Se componen de:
     - **Frase** -permite que la aplicación definir términos únicos para la aplicación. Por ejemplo: el tipo de entrenamiento "Bananarific" de la aplicación MonkeyFit. 
     - **Pronunciación** -ofrece sugerencias de pronunciación a Siri como una simple ortografía fonética de una frase exacta. Por ejemplo, "ba nana ri FICA".

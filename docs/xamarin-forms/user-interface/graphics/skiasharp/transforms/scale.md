@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
 ms.openlocfilehash: 9bc320273df192f9daf2520f451601335731e7b0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61190598"
 ---
 # <a name="the-scale-transform"></a>Transformación de escala
 
@@ -102,7 +102,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 }
 ```
 
-Tal vez se pregunte: ¿cómo afecta los factores de escala el valor devuelto de la `MeasureText` método `SKPaint`? La respuesta es: no en absoluto. `Scale` es un método de `SKCanvas`. No afecta a todo lo que hacer con un `SKPaint` objeto hasta que ese objeto se usa para representar algo en el lienzo.
+Tal vez se pregunte: ¿Cómo afecta los factores de escala el valor devuelto de la `MeasureText` método `SKPaint`? La respuesta es: No, en absoluto. `Scale` es un método de `SKCanvas`. No afecta a todo lo que hacer con un `SKPaint` objeto hasta que ese objeto se usa para representar algo en el lienzo.
 
 Como puede ver, todo lo que se dibuja después el `Scale` llamar aumenta proporcionalmente:
 
@@ -251,7 +251,7 @@ El `pathBounds` rectángulo es obtenido en la parte superior de este código y, 
 
 [![](scale-images/anisotropicscaling-small.png "Captura de pantalla de la página escala anisotrópico triple")](scale-images/anisotropicscaling-large.png#lightbox "Triple captura de pantalla de la página escala anisotrópico")
 
-Otra manera, puede pensar en el `Scale` y `Translate` llamadas consiste en determinar el efecto en orden inverso: la `Translate` llamada cambia la ruta de acceso, por lo que pasa a ser totalmente visible pero orientada en la esquina superior izquierda del lienzo. El `Scale` método, a continuación, realiza ese estrella mayor con respecto a la esquina superior izquierda.
+Otra manera, puede pensar en el `Scale` y `Translate` llamadas consiste en determinar el efecto en orden inverso: El `Translate` llamada cambia la ruta de acceso, por lo que pasa a ser totalmente visible pero orientada en la esquina superior izquierda del lienzo. El `Scale` método, a continuación, realiza ese estrella mayor con respecto a la esquina superior izquierda.
 
 En realidad, parece que el asterisco es un poco mayor que el lienzo. El problema es el ancho del trazo. El `Bounds` propiedad de `SKPath` indica las dimensiones de las coordenadas se codifican en la ruta de acceso, y eso es lo que el programa usa para escalar. Cuando se representa la ruta de acceso con un ancho de trazo determinado, la ruta de acceso representada es mayor que el lienzo.
 

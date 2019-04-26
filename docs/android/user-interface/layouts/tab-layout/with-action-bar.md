@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
 ms.openlocfilehash: 6ce8099aa4230a11a12f4fe8aeffe850f9ef2ce9
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57671005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61304514"
 ---
 # <a name="tabbed-layouts-with-the-actionbar"></a>Diseños con pestañas con ActionBar
 

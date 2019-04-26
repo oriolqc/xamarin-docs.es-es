@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 835b8cd0f2e689c4d7d4cace1d846543863b7393
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61032695"
 ---
 # <a name="introduction-to-opentk-in-xamarinmac"></a>Introducción a OpenTK en Xamarin.Mac
 
@@ -325,7 +325,7 @@ En este artículo ha tomado un vistazo rápido a trabajar con OpenTK en una apli
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [MacOpenTK (ejemplo)](https://developer.xamarin.com/samples/mac/MacOpenTK/)
-- [MonoMacGameView (ejemplo)](https://developer.xamarin.com/samples/mac/MonoMacGameWindow/)
+- [MonoMacGameView (sample)](https://developer.xamarin.com/samples/mac/MonoMacGameWindow/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Trabajar con Windows](~/mac/user-interface/window.md)
 - [El Kit de herramientas abierto](http://www.opentk.com)

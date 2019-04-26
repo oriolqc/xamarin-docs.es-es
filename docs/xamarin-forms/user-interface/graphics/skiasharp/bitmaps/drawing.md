@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: 9e76558597928bafa25f6a217c6f0055657e4c22
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61401595"
 ---
 # <a name="creating-and-drawing-on-skiasharp-bitmaps"></a>Crear y dibujar en mapas de bits de SkiaSharp
 
@@ -121,7 +121,7 @@ La apariencia del fondo aguamarina revela que el mapa de bits es transparente, e
 
 La presentación de la **mapa de bits Hello** página se muestra que el mapa de bits el programa creado es transparente, excepto el texto de color negro. Por eso el color aguamarina de la superficie de pantalla se muestra a través.
 
-La documentación de la `Clear` métodos de `SKCanvas` describe ellos con la instrucción: "Reemplaza todos los píxeles en el clip lienzo del". El uso de la palabra "reemplaza" revela una característica importante de estos métodos: todos los métodos de dibujos de `SKCanvas` agregar algo a la superficie de visualización existentes. El `Clear` métodos _reemplazar_ lo que está allí.
+La documentación de la `Clear` métodos de `SKCanvas` describe ellos con la instrucción: "Reemplaza todos los píxeles en el clip lienzo del". El uso de la palabra "reemplaza" revela una característica importante de estos métodos: Todos los métodos de dibujos de `SKCanvas` agregar algo a la superficie de visualización existentes. El `Clear` métodos _reemplazar_ lo que está allí.
 
 `Clear` existe en dos versiones diferentes: 
 
@@ -131,7 +131,7 @@ La documentación de la `Clear` métodos de `SKCanvas` describe ellos con la ins
 
 Una llamada a `Clear` sin argumentos en un mapa de bits nuevo inicializa el mapa de bits completo para que sea totalmente transparente. Normalmente, nada dibujado posteriormente en el mapa de bits será opaco o parcialmente opaco.
 
-Aquí hay algo para intentar: en el **mapa de bits Hello** página, reemplace el `Clear` método aplicada la `bitmapCanvas` por este otro:
+Aquí es algo para probar: En el **mapa de bits Hello** página, reemplace el `Clear` método aplicada la `bitmapCanvas` por este otro:
 
 ```csharp
 bitmapCanvas.Clear(new SKColor(255, 0, 0, 128));

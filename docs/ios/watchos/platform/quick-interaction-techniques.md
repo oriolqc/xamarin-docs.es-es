@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 5086724b565fb95274c4988ca1b6e4bb11064575
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61082321"
 ---
 # <a name="quick-interaction-techniques-for-watchos-3-in-xamarin"></a>Técnicas de interacción rápida para watchOS 3 en Xamarin
 
@@ -96,7 +96,7 @@ Apple sugiere lo siguiente al trabajar con los reconocedores de gestos en watchO
 - Agregue los reconocedores de gestos para agrupar elementos en lugar de los controles individuales. Puesto que el Apple Watch tiene un tamaño más pequeño de la pantalla física, los elementos de grupo tienden a ser más grande y más fácil de destinos para el usuario presione. Además, los reconocedores de gestos pueden entrar en conflicto con gestos ya está en los controles de interfaz de usuario nativos integrados.
 - Establecer las relaciones de dependencia en el guión gráfico de la aplicación de inspección.
 - Algunos gestos tienen prioridad sobre otros tipos de gestos, como:
-    - El desplazamiento
+    - Desplazarse
     - Force Touch
  
 ### <a name="digital-crown-rotation"></a>Rotación de corona digital

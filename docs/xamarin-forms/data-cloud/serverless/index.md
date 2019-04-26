@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/08/2018
 ms.openlocfilehash: 31eff96bd4e6d7ac47f149710f1c16a2cd1b3ca9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50132093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61319563"
 ---
 # <a name="serverless-computing-with-xamarinforms"></a>Informática con Xamarin.Forms sin servidor
 

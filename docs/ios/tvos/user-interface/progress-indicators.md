@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/25/2018
 ms.openlocfilehash: cbd2b2de237a5bb22d1dc0242569b96b12bca070
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61180731"
 ---
 # <a name="working-with-tvos-progress-indicators-in-xamarin"></a>Trabajar con tvOS indicadores de progreso en Xamarin
 

@@ -1,5 +1,5 @@
 ---
-title: Inscripción de huella digital
+title: Inscripción de una huella digital
 description: Cómo establecer un bloqueo de pantalla de seguridad e inscribir una huella digital en un emulador o dispositivo Android.
 ms.prod: xamarin
 ms.assetid: 52092F63-00EE-4F8B-A49F-65C9CCBA7EF2
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 18903a7d8f6c4033dc3ac7c4c0187a247d023bc1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61027093"
 ---
-# <a name="enrolling-a-fingerprint"></a>Inscripción de huella digital
+# <a name="enrolling-a-fingerprint"></a>Inscripción de una huella digital
 
 ## <a name="enrolling-a-fingerprint-overview"></a>Una huella digital de información general sobre la inscripción
 

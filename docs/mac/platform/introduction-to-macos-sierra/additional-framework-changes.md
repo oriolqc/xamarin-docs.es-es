@@ -1,5 +1,5 @@
 ---
-title: Adicionales macOS Sierra cambios en la plataforma
+title: Cambios adicionales en el marco de macOS Sierra
 description: Este documento describe las mejoras y cambios menores para marcos existentes que se introdujo en macOS Sierra. Examina los cambios realizados en el marco de trabajo Acelere, AppKit, AVFoundation, Core Data, imagen básica, Foundation y mucho más.
 ms.prod: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 6ed827c018931e5b79887dc355f136e2a84623d6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50111056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61031632"
 ---
-# <a name="additional-macos-sierra-framework-changes"></a>Adicionales macOS Sierra cambios en la plataforma
+# <a name="additional-macos-sierra-framework-changes"></a>Cambios adicionales en el marco de macOS Sierra
 
 <a name="Accelerate-Framework-Enhancements" />
 

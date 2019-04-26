@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
 ms.openlocfilehash: 73fdccf1f6ccee4f6610c1078f5aab14c2be3d78
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61204876"
 ---
 # <a name="displaying-skiasharp-bitmaps"></a>Mostrar mapas de bits de SkiaSharp
 
@@ -73,7 +73,7 @@ catch
 
 Tenga en cuenta que el `Stream` objeto obtenida `GetStreamAsync` se copia en un `MemoryStream`. Android no permite la `Stream` desde `HttpClient` para ser procesados por el subproceso principal, excepto en los métodos asincrónicos. 
 
-El [ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) realiza mucho trabajo: la `Stream` objeto pasado a la hace referencia a un bloque de memoria que contiene un mapa de bits completo en uno de los comunes formatos de archivo de mapa de bits, generalmente JPEG, PNG o GIF. El `Decode` método debe determinar el formato y, a continuación, descodificar el archivo de mapa de bits en formato de mapa de bits interno de SkiaSharp.
+El [ `SKBitmap.Decode` ](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) realiza mucho trabajo: La `Stream` objeto pasado a la hace referencia a un bloque de memoria que contiene un mapa de bits completo en uno de los comunes formatos de archivo de mapa de bits, generalmente JPEG, PNG o GIF. El `Decode` método debe determinar el formato y, a continuación, descodificar el archivo de mapa de bits en formato de mapa de bits interno de SkiaSharp.
 
 Después de su código llama a `SKBitmap.Decode`, probablemente invalidará la `CanvasView` para que el `PaintSurface` controlador puede mostrar el mapa de bits recién cargado.
 

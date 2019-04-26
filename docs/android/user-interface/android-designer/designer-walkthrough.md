@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 1174fe5cb417d4977fd6519086e6c4942e74c10b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61208141"
 ---
 # <a name="using-the-xamarinandroid-designer"></a>Mediante el Diseñador de Xamarin.Android
 

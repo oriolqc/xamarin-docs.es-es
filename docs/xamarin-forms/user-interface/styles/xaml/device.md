@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 02/17/2016
 ms.openlocfilehash: fd5181040c1805d3fdabdae4803bbe32c6bb6652
-ms.sourcegitcommit: 817d26585093cd180a36b28179eb354b0eb900b3
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55292239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61345525"
 ---
 # <a name="device-styles-in-xamarinforms"></a>Estilos de dispositivo en Xamarin.Forms
 

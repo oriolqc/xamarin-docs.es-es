@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 1d3bd071eeffb77f94a1b5f35f1df59f2d8c7a8a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61022203"
 ---
 # <a name="xamarinandroid-application-fundamentals"></a>Principios de la aplicación de Xamarin.Android
 

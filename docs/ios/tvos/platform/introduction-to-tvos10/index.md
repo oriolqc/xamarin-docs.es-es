@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 260d01d6aa8344dd3cf107f1ffc34167c457a491
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61269333"
 ---
 # <a name="introduction-to-tvos-10"></a>Introducción a tvOS 10
 
@@ -80,7 +80,7 @@ Además de los cambios en la plataforma principal y adiciones enumeradas anterio
 
 Para obtener más información, consulte nuestra [cambios adicionales de Framework](~/ios/tvos/platform/introduction-to-tvos10/additional-framework-changes.md) guía.
 
-## <a name="deprecated-apis"></a>Interfaces API en desuso
+## <a name="deprecated-apis"></a>Interfaces API desusadas
 
 Ninguna API o marcos de trabajo han quedado en desuso por tvOS 10. Consulte Apple [tvOS 10 diferencias en las API](https://developer.apple.com/library/prerelease/content/releasenotes/General/tvOS10APIDiffs/index.html) documentación para obtener una lista completa de las modificaciones de la API.
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 329984d44318b2204f2f5ee253402eb158c85b9f
-ms.sourcegitcommit: d09391c315336d36496880ef465a72b8974f2ac7
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51579861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61283459"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Cuadros de diálogo en Xamarin.Mac
 
@@ -87,7 +87,7 @@ O bien, se puede mostrar como una hoja de cálculo:
 
 ### <a name="save-dialogs"></a>Guardar los cuadros de diálogo
 
-El cuadro de diálogo Guardar ofrece a los usuarios una manera coherente para guardar un elemento en una aplicación. El cuadro de diálogo Guardar tiene dos estados: **mínimo** (también conocido como contraído):
+El cuadro de diálogo Guardar ofrece a los usuarios una manera coherente para guardar un elemento en una aplicación. El cuadro de diálogo Guardar tiene dos estados: **Mínimo** (también conocido como contraído):
 
 [![](dialog-images/save01.png "Un cuadro de diálogo Guardar")](dialog-images/save01.png#lightbox)
 
@@ -754,7 +754,7 @@ namespace SourceWriter
 }
 ```
 
-Tenga en cuenta que esta clase ha hecho dos cosas aquí: en primer lugar, hay una aplicación auxiliar `App` propiedad para facilitar el acceso a la **AppDelegate** más fácil. Segundo, el `Preferences` propiedad expone la información global **AppPreferences** para enlace de datos con los controles de interfaz de usuario se coloca en esta vista de clases.
+Tenga en cuenta que esta clase ha hecho dos cosas aquí: En primer lugar, hay una aplicación auxiliar `App` propiedad para facilitar el acceso a la **AppDelegate** más fácil. Segundo, el `Preferences` propiedad expone la información global **AppPreferences** para enlace de datos con los controles de interfaz de usuario se coloca en esta vista de clases.
 
 A continuación, haga doble clic en el archivo de guión gráfico para volver a abrirlo en el generador de interfaz (y ver los cambios realizados anteriormente). Arrastre los controles de interfaz de usuario necesarios para compilar la interfaz de preferencias en la vista. Para cada control, cambie a la **enlace Inspector** y enlazar a las propiedades individuales de la **AppPreference** clase:
 

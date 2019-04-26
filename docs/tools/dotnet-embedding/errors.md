@@ -7,15 +7,15 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/11/2018
 ms.openlocfilehash: 5c3dd406f1132f51a86ddf574ab7ad0b279bc9ec
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61215346"
 ---
 # <a name="net-embedding-errors"></a>Errores de inserción de .NET
 
-## <a name="em0xxx-binding-error-messages"></a>EM0xxx: Los mensajes de error de enlace
+## <a name="em0xxx-binding-error-messages"></a>EM0xxx: Mensajes de error de enlace
 
 P. ej., los parámetros, el entorno
 
@@ -23,7 +23,7 @@ P. ej., los parámetros, el entorno
 
 <a name="EM0000" />
 
-### <a name="em0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcommonoembeddinator-4000issues"></a>EM0000: Error inesperado - complete en un informe de errores https://github.com/mono/Embeddinator-4000/issues
+### <a name="em0000-unexpected-error---please-fill-a-bug-report-at-httpsgithubcommonoembeddinator-4000issues"></a>EM0000: Error inesperado: rellene un informe de errores en https://github.com/mono/Embeddinator-4000/issues
 
 Se ha producido una condición de error inesperado. Por favor, [registre un problema](https://github.com/mono/Embeddinator-4000/issues) con tanta información como sea posible, incluidos:
 
@@ -141,7 +141,7 @@ La sintaxis para la opción de línea de comandos `A` no se pudo analizar la her
 
 <a name="EM0099" />
 
-### <a name="em0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsgithubcommonoembeddinator-4000issues"></a>EM0099: Error interno *. Envíe un informe de errores con un caso de prueba (https://github.com/mono/Embeddinator-4000/issues).
+### <a name="em0099-internal-error--please-file-a-bug-report-with-a-test-case-httpsgithubcommonoembeddinator-4000issues"></a>EM0099: Error interno de *. Envíe un informe de errores con un caso de prueba (https://github.com/mono/Embeddinator-4000/issues).
 
 Este mensaje de error se notifica cuando se produce un error en una comprobación de coherencia interna en la inserción de. NET.
 
@@ -153,15 +153,15 @@ Esto indica un error en la inserción de. NET; envíe un informe de errores en [
 
 <a name="EM1010" />
 
-### <a name="em1010-type-t-is-not-generated-because-x-are-not-supported"></a>EM1010: Escriba `T` no se genera porque `X` no se admiten.
+### <a name="em1010-type-t-is-not-generated-because-x-are-not-supported"></a>EM1010: Tipo `T` no se genera porque `X` no se admiten.
 
 Se trata de un **advertencia** que el tipo `T` se pasará por alto (es decir, nada se generarán) porque usa `X`, una característica que no se admite.
 
-Nota: Las características admitidas evolucionará con las nuevas versiones de la herramienta.
+Nota: Características admitidas evolucionará con las nuevas versiones de la herramienta.
 
 <a name="EM1011" />
 
-### <a name="em1011-type-t-is-not-generated-because-it-lacks-marshaling-code-with-a-native-counterpart"></a>EM1011: Escriba `T` no se genera porque carece de código de serialización con un equivalente nativo.
+### <a name="em1011-type-t-is-not-generated-because-it-lacks-marshaling-code-with-a-native-counterpart"></a>EM1011: Tipo `T` no se genera porque carece de código de serialización con un equivalente nativo.
 
 Se trata de un **advertencia** que el tipo `T` se pasará por alto (es decir, nada se generarán) porque expone algo de .NET framework que requiere el cálculo de referencias adicionales.
 
@@ -175,7 +175,7 @@ Se trata de un **advertencia** que el constructor `C` se pasará por alto (es de
 
 Debe haber una advertencia anterior, ¿por qué lo que proporciona más información escriba `T` no se admite.
 
-Nota: Las características admitidas evolucionará con las nuevas versiones de la herramienta.
+Nota: Características admitidas evolucionará con las nuevas versiones de la herramienta.
 
 <a name="EM1021" />
 
@@ -200,7 +200,7 @@ Se trata de un **advertencia** que el método `M` se pasará por alto (es decir,
 
 Debe haber una advertencia anterior, ¿por qué lo que proporciona más información escriba `T` no se admite.
 
-Nota: Las características admitidas evolucionará con las nuevas versiones de la herramienta.
+Nota: Características admitidas evolucionará con las nuevas versiones de la herramienta.
 
 <a name="EM1031" />
 
@@ -210,7 +210,7 @@ Se trata de un **advertencia** que el método `M` se pasará por alto (es decir,
 
 Debe haber una advertencia anterior, ¿por qué lo que proporciona más información escriba `T` no se admite.
 
-Nota: Las características admitidas evolucionará con las nuevas versiones de la herramienta.
+Nota: Características admitidas evolucionará con las nuevas versiones de la herramienta.
 
 <a name="EM1032" />
 
@@ -247,7 +247,7 @@ Se trata de un **advertencia** que la propiedad `P` se pasará por alto (es deci
 
 Debe haber una advertencia anterior, ¿por qué lo que proporciona más información escriba `T` no se admite.
 
-Nota: Las características admitidas evolucionará con las nuevas versiones de la herramienta.
+Nota: Características admitidas evolucionará con las nuevas versiones de la herramienta.
 
 <a name="EM1041" />
 
@@ -263,7 +263,7 @@ Se trata de un **advertencia** que el campo `F` se pasará por alto (es decir, n
 
 Debe haber una advertencia anterior, ¿por qué lo que proporciona más información escriba `T` no se admite.
 
-Nota: Las características admitidas evolucionará con las nuevas versiones de la herramienta.
+Nota: Características admitidas evolucionará con las nuevas versiones de la herramienta.
 
 <a name="EM1051" />
 

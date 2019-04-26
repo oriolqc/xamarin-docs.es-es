@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
 ms.openlocfilehash: 13fd84d8e23c18606696532b1c6e8db301b52f3c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61218488"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Instalación y uso de watchOS en Xamarin
 

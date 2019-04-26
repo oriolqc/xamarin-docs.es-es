@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/17/2018
 ms.openlocfilehash: a224d82ed7bb993f51be6cca6ccf09b5331cfac0
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61250622"
 ---
 # <a name="xamarinforms-stepper"></a>Motor Xamarin.Forms paso a paso
 
@@ -182,7 +182,7 @@ El **enlaces básicos de motor paso a paso** página muestra cómo escribir una 
 </ContentPage>
 ```
 
-El [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) propiedad de la primera [ `Label` ](xref:Xamarin.Forms.Label) está enlazado a la [ `Value` ](xref:Xamarin.Forms.Stepper.Value) propiedad de la [ `Stepper` ](xref:Xamarin.Forms.Stepper), ya que es el [ `Text` ](xref:Xamarin.Forms.Label.Text) propiedad del segundo `Label` con un `StringFormat` especificación. El **enlaces básicos de motor paso a paso** página funciones un poco diferente de las dos páginas anteriores: cuando la página aparece por primera vez, el segundo `Label` muestra la cadena de texto con el valor. Esta es una ventaja del uso de enlace de datos. Para mostrar texto sin el enlace de datos, deberá inicializar específicamente el `Text` propiedad de la `Label` o simular una activación de la [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) eventos llamando al controlador de eventos desde el constructor de clase .
+El [ `Rotation` ](xref:Xamarin.Forms.VisualElement.Rotation) propiedad de la primera [ `Label` ](xref:Xamarin.Forms.Label) está enlazado a la [ `Value` ](xref:Xamarin.Forms.Stepper.Value) propiedad de la [ `Stepper` ](xref:Xamarin.Forms.Stepper), ya que es el [ `Text` ](xref:Xamarin.Forms.Label.Text) propiedad del segundo `Label` con un `StringFormat` especificación. El **enlaces básicos de motor paso a paso** página funciones un poco diferente de las dos páginas anteriores: Cuando aparece la página por primera vez, el segundo `Label` muestra la cadena de texto con el valor. Esta es una ventaja del uso de enlace de datos. Para mostrar texto sin el enlace de datos, deberá inicializar específicamente el `Text` propiedad de la `Label` o simular una activación de la [ `ValueChanged` ](xref:Xamarin.Forms.Stepper.ValueChanged) eventos llamando al controlador de eventos desde el constructor de clase .
 
 ## <a name="precautions"></a>Precauciones
 

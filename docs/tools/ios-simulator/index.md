@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/02/2019
 ms.openlocfilehash: b962390d5a5a365ada93d1778e3efb65839f41c5
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61188860"
 ---
 # <a name="remoted-ios-simulator-for-windows"></a>Simulador de iOS remoto para Windows
 

@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
 ms.openlocfilehash: 87af9f824117b20250c02a3e070652607626de44
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61341055"
 ---
 # <a name="xamarin-workbooks-editor-keyboard-shortcuts"></a>Métodos abreviados de teclado del Editor de libros de Xamarin
 
@@ -19,7 +19,7 @@ ms.locfileid: "51526148"
 
 La tabla siguiente describe los distintos enlaces de teclado para ejecutar el código y la creación de markdown. Hemos tomado mucho cuidado para elegir los enlaces de teclado coherentes y razonables que están familiarizados y fluida.
 
-|Enlace de teclado|Celda de código|Celda de markdown|
+|Enlace de teclado|Celda de código|Markdown Cell|
 |--- |--- |--- |
 |<kbd>Return</kbd>|<p>Si el símbolo de intercalación está al final del búfer de celda y se puede analizar correctamente la celda, se ejecutará y los resultados se mostrarán a continuación el búfer y una nueva celda de código se insertará y centra la celda después de la celda ejecutada.</p><p>Si el análisis no es correcta, se insertará una nueva línea en el búfer. Diagnósticos de compilador no se producirá si el análisis no es correcta.</p>|<p><kbd>Devolver</kbd> exhibe un comportamiento diferente según el contexto de Markdown en el símbolo de intercalación.</p><ul><li>Si el símbolo de intercalación está en un bloque de código de Markdown, se inserta una nueva línea literal.</li><li>Si el símbolo de intercalación está en un bloque de la lista de Markdown, crear un nuevo elemento de lista o dividir el elemento de lista actual.</li><li>Si el símbolo de intercalación está en cualquier otro tipo de bloque de Markdown, crear un nuevo bloque de párrafo o divida el bloque actual.</li></ul>|
 |<dl><dt>Mac</dt><dd><kbd>Command‑return</kbd></dd><dt>Win</dt><dd><kbd>Control‑Return</kbd></dd></dl>|<p>Siempre intenta analizar y ejecutar el contenido de la celda. Si la compilación es correcta, se mostrará a continuación el búfer de resultados (incluidas las excepciones de ejecución), y si no hay ninguna celda posteriores, se creará uno nuevo y se centra.</p><p>Si hay errores de compilación, se mostrará el diagnóstico y seguiremos enfocado el búfer con la posición del símbolo de intercalación sin cambios.</p>|Inserta y se centra una nueva celda de código después de la celda actual de markdown.|

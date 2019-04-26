@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
 ms.openlocfilehash: 1d159d280bd3b8855c32e3e437dfdefcbe0463cb
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61261134"
 ---
 # <a name="unified-api-overview"></a>Introducción a la API unificada
 
@@ -40,8 +40,8 @@ Independientemente de las aplicaciones que va a migrar, consulte [estas sugerenc
 
 Desde este punto, se producirá nuestras API de dos maneras:
 
--  **API clásica:** limitado a 32 bits (solamente) y expuesta en los ensamblados `monotouch.dll` y `XamMac.dll` .
--  **API unificada:** admiten el desarrollo de bits de 32 y 64 con una única API disponible en los ensamblados `Xamarin.iOS.dll` y `Xamarin.Mac.dll`.
+-  **API clásica:** Limitado a 32 bits (solo) y expone en el `monotouch.dll` y `XamMac.dll` ensamblados.
+-  **API unificada:** Admiten el desarrollo de bits de 32 y 64 con una única API disponible en el `Xamarin.iOS.dll` y `Xamarin.Mac.dll` ensamblados.
 
 Esto significa que para la empresa a los desarrolladores (no orientados a la App Store), puede seguir usando las clásicas APIs  existentes, tal y como las estaremos manteniendo siempre, o también pueden actualizar a las nuevas API.
 
@@ -55,8 +55,8 @@ Nos estamos quitando el prefijo "MonoTouch" de nuestros productos de iOS y "Mono
 
 Esto hace más fácil compartir código entre las plataformas iOS y Mac sin tener que recurrir a la compilación condicional y esto también reducirá el ruido en la parte superior de los archivos de código fuente.
 
--  **API clásica:** usar espacios de nombres `MonoTouch.` o `MonoMac.` prefijo.
--  **API unificada:** No usa ningún prefijo de espacio de nombres
+-  **API clásica:** Usar espacios de nombres `MonoTouch.` o `MonoMac.` prefijo.
+-  **API unificada:** Ningún prefijo de espacio de nombres
 
 ## <a name="runtime-defaults"></a>Valores predeterminados de tiempo de ejecución
 
@@ -179,7 +179,7 @@ public static NSDate DateTimeToNSDate(this DateTime date)
 
 Dentro del API clásico de Xamarin.iOS  (monotouch.dll) el atributo `[Obsolete]` se utiliza de dos maneras diferentes:
 
--  **API de iOS en desuso:** esto es cuando quiera dejar de usar una API porque se sustituye por una versión más reciente de sugerencias de Apple. La API clásica es ningún problema y a menudo es necesario (si se admite la versión anterior de iOS).
+-  **API de iOS en desuso:** Esto es cuando quiera dejar de usar una API porque se sustituye por una versión más reciente de sugerencias de Apple. La API clásica es ningún problema y a menudo es necesario (si se admite la versión anterior de iOS).
  API de este tipo (y el `[Obsolete]` atributo) se incluyen en los nuevos ensamblados de Xamarin.iOS.
 -  **API incorrecto** algunas API tuviera errores tipográficos en sus nombres.
 
@@ -187,7 +187,7 @@ Para los ensamblados originales (monotouch.dll y XamMac.dll) se mantiene el cód
 
 <a name="NSObject_ctor" />
 
-### <a name="nsobject-subclasses-ctorintptr"></a>.Ctor(IntPtr) subclases de NSObject
+### <a name="nsobject-subclasses-ctorintptr"></a>NSObject subclasses .ctor(IntPtr)
 
 Cada `NSObject` subclase tiene un constructor que acepta un `IntPtr`. Se trata cómo nos podemos crear una instancia de una nueva instancia administrada desde un identificador de ObjC nativo.
 
@@ -244,7 +244,7 @@ En algunos casos se debían cambiarse de algunas constantes `string` a `NSString
 
     public virtual string ReuseIdentifier { get; }
 
-**Unificada**
+**Unified**
 
     public virtual NSString ReuseIdentifier { get; }
 
@@ -262,7 +262,7 @@ Estas limitaciones se han quitado y limpiado en las API unificada. La mayoría d
 
     public virtual AVAssetResourceLoaderDelegate Delegate { get; }
 
-**Unificada**
+**Unified**
 
     public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
 
@@ -274,7 +274,7 @@ También permite alguna API sea más precisa y fácil de usar, por ejemplo:
 
     public virtual void SelectionDidChange (NSObject uiTextInput);
 
-**Unificada**
+**Unified**
 
     public virtual void SelectionDidChange (IUITextInput uiTextInput);
 

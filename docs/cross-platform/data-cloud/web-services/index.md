@@ -1,5 +1,5 @@
 ---
-title: Introducción a servicios Web
+title: Introducción a los servicios web
 description: Esta guía muestra cómo consumir las tecnologías de servicios web diferente. Los temas tratados incluyen la comunicación con los servicios REST, los servicios SOAP y servicios de Windows Communication Foundation.
 ms.prod: xamarin
 ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
@@ -7,13 +7,13 @@ author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
 ms.openlocfilehash: afebe7f491855844e18bf054d665cf8d54e8f353
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61183891"
 ---
-# <a name="introduction-to-web-services"></a>Introducción a servicios Web
+# <a name="introduction-to-web-services"></a>Introducción a los servicios web
 
 _Esta guía muestra cómo consumir las tecnologías de servicios web diferente. Los temas tratados incluyen la comunicación con los servicios REST, los servicios SOAP y servicios de Windows Communication Foundation._
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/07/2017
 ms.openlocfilehash: 0428a0df157e359ab34a6a71dbba31bdeb6962fa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61224067"
 ---
 # <a name="introduction-to-watchos-3"></a>Introducción a watchOS 3
 
@@ -151,7 +151,7 @@ watchOS 3 incluye varias mejoras en el marco de WatchKit, incluidas las siguient
 - La aplicación puede obtener el estado de la corona Digital con el nuevo [WKCrownSequencer](https://developer.apple.com/reference/watchkit/wkcrownsequencer) clase y recibir actualizaciones cuando el usuario gira la corona utilizando el [WKCrownDelegate](https://developer.apple.com/reference/watchkit/wkcrowndelegate) clase.
 - El [WKExtension](https://developer.apple.com/reference/watchkit/wkextension) clase ahora incluye la `ApplicationState` método y [WKApplicationState](https://developer.apple.com/reference/watchkit/wkapplicationstate) constante que la aplicación puede usar para realizar un seguimiento del estado en tiempo de ejecución de la aplicación. `WKExtension` También proporciona dos nuevos métodos que pueden usarse para programar tareas en segundo plano.
 - El [WKExtensionDelegate](https://developer.apple.com/reference/watchkit/wkextensiondelegate) ahora incluye el nuevo `ApplicationWillEnterForeground`, `ApplicationDidEnterBackground` y `HandleBackgroundTasks` métodos para supervisar los cambios de estado de la aplicación y controlar las actualizaciones de tareas en segundo plano.
-- Un nuevo [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) ha agregado la clase para proporcionar los siguientes tipos de reconocimiento de gestos para las aplicaciones de inspección: [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer ](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) y [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer).
+- Un nuevo [WKGestureRecognizer](https://developer.apple.com/reference/watchkit/wkgesturerecognizer) ha agregado la clase para proporcionar los siguientes tipos de reconocimiento de gestos para las aplicaciones de watch: [WKLongPressGestureRecognizer](https://developer.apple.com/reference/watchkit/wklongpressgesturerecognizer), [WKPanGestureRecognizer](https://developer.apple.com/reference/watchkit/wkpangesturerecognizer), [WKSwipeGestureRecognizer](https://developer.apple.com/reference/watchkit/wkswipegesturerecognizer) y [WKTapGestureRecognizer](https://developer.apple.com/reference/watchkit/wktapgesturerecognizer).
 - El nuevo [WKinterfaceHMCamera](https://developer.apple.com/reference/watchkit/wkinterfacehmcamera) clase proporciona una interfaz para cualquier HomeKit adjunta cámara IP.
 - El nuevo [WKInterfaceInlineMovie](https://developer.apple.com/reference/watchkit/wkinterfaceinlinemovie) clase permite que la aplicación mostrar una película "este póster" que se reemplaza por la película de ejecución cuando el usuario lo pulsa.
 - El nuevo [WKInterfacePaymentButton](https://developer.apple.com/reference/watchkit/wkinterfacepaymentbutton) clase permite que la aplicación presentar un botón de Apple Pay en su interfaz de usuario que inicie una solicitud de pago al tocarlo.
@@ -162,7 +162,7 @@ Para obtener más información, consulte nuestra [técnicas de interacción ráp
 
 <a name="Workout-App-Enhancements" />
 
-## <a name="workout-app-enhancements"></a>Mejoras de la aplicación de entrenamiento
+## <a name="workout-app-enhancements"></a>Mejoras de la aplicación Workout
 
 Nuevo para watchOS 3, entrenamiento relacionados con las aplicaciones tienen la capacidad de ejecutar en segundo plano en el Apple Watch. Para habilitar esta característica (y obtener acceso a datos HealthKit), la aplicación debe incluir el `WKBackgroundModes` clave en el `Info.plist` archivo con el valor `workout-processing`.
 
@@ -180,7 +180,7 @@ Para obtener más información, consulte nuestra [cambios adicionales de Framewo
 
 <a name="Deprecated-APIs" />
 
-## <a name="deprecated-apis"></a>Interfaces API en desuso
+## <a name="deprecated-apis"></a>Interfaces API desusadas
 
 Las API siguientes han quedado obsoletas en watchOS 3:
 

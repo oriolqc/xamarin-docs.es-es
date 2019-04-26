@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 05f1017f8c4b306996d3e8e165511ff9062a1026
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61047864"
+---
 
 La siguiente línea de comandos para especificar una versión de lanzamiento de la solución **SOLUTION_FILE.sln** para iPhone. Se puede establecer la ubicación del IPA especificando el `IpaPackageDir` propiedad en la línea de comandos:
 

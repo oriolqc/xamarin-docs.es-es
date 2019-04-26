@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/27/2018
 ms.openlocfilehash: d68153cdaad67b407def3ed5bfaddf928ef98bb4
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61289142"
 ---
 # <a name="skiasharp-mask-filters"></a>Filtros de máscara de SkiaSharp
 
@@ -180,9 +180,9 @@ Todas las capturas de pantalla hasta ahora han demostrado desenfoque creado con 
 
 [![Enmascarar desenfoque experimento](mask-filters-images/MaskBlurExperiment.png "enmascarar el experimento de desenfoque")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
-La captura de pantalla de iOS muestra el `Solid` estilo: los caracteres del texto siguen presentes como trazos negros sólidos, y se agrega el efecto de desenfoque a fuera de estos caracteres de texto. 
+La captura de pantalla de iOS muestra el `Solid` estilo: Los caracteres del texto siguen presentes como trazos negros sólidos, y se agrega el efecto de desenfoque a fuera de estos caracteres de texto. 
 
-La captura de pantalla de Android en el central muestra la `Outer` estilo: se eliminan los trazos de carácter a sí mismos (como es el mapa de bits) y el efecto de desenfoque rodea el espacio vacío donde aparecieron una vez que los caracteres de texto. 
+La captura de pantalla de Android en el central muestra la `Outer` estilo: Se eliminan los trazos de carácter a sí mismos (como es el mapa de bits) y el efecto de desenfoque rodea el espacio vacío donde aparecieron una vez que los caracteres de texto. 
 
 La captura de pantalla UWP de la derecha se muestra el `Inner` estilo. El efecto de desenfoque está restringido para el área ocupada normalmente por los caracteres de texto.
 

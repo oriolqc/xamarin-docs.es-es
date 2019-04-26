@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
 ms.openlocfilehash: 32dc98143bc45482dc863d412d678d452b634890
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61153355"
 ---
 # <a name="cocossharp-content-pipeline"></a>Canalización de contenido de CocosSharp
 
@@ -21,6 +21,6 @@ Las canalizaciones de contenido a menudo se usan en el desarrollo de juegos para
 
 En este artículo se proporciona una explicación de los conceptos de las canalizaciones de contenido, centrándose principalmente en la canalización de contenido MonoGame, que es una implementación de canalización de contenido que se usa con CocosSharp y MonoGame.
 
-##  <a name="walkthrough--using-the-content-pipeline-with-cocossharpgraphics-gamescocossharpcontent-pipelinewalkthroughmd"></a>[Tutorial: uso de la canalización de contenido con CocosSharp](~/graphics-games/cocossharp/content-pipeline/walkthrough.md)
+##  <a name="walkthrough--using-the-content-pipeline-with-cocossharpgraphics-gamescocossharpcontent-pipelinewalkthroughmd"></a>[Tutorial: Uso de la canalización de contenido con CocosSharp](~/graphics-games/cocossharp/content-pipeline/walkthrough.md)
 
 En este tutorial le useuses un proyecto CocosSharp para demostrar cómo se pueden cargar y usar en una aplicación .xnb archivos.  Los usuarios de MonoGame también podrá hacer referencia a este tutorial como CocosSharp y MonoGame usan los mismos archivos de contenido de .xnb.  

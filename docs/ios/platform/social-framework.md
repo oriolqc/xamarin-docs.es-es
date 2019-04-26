@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: 08ccd5b5ac78e82bf745764d70e59d2db9ec6776
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61185068"
 ---
 # <a name="social-framework-in-xamarinios"></a>Redes sociales en Xamarin.iOS
 
@@ -476,5 +476,5 @@ En este artículo se ha explicado cómo usar el marco de redes sociales para int
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SocialFrameworkDemo (ejemplo)](https://developer.xamarin.com/samples/SocialFrameworkDemo/)
+- [SocialFrameworkDemo (sample)](https://developer.xamarin.com/samples/SocialFrameworkDemo/)
 - [Introducción a los servicios web](~/cross-platform/data-cloud/web-services/index.md)

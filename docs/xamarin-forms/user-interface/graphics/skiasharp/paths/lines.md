@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
 ms.openlocfilehash: 85d863b19c3bf0302464e371738a2926cc80e8ce
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61290780"
 ---
 # <a name="lines-and-stroke-caps"></a>Líneas y extremos de trazo
 
@@ -30,7 +30,7 @@ Para dibujar líneas individuales, `SKCanvas` define una sencilla [ `DrawLine` ]
 canvas.DrawLine (x0, y0, x1, y1, paint);
 ```
 
-De forma predeterminada, el [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) propiedad de una instancia recién creada `SKPaint` objeto es 0, que tiene el mismo efecto que un valor de 1 en la representación de una línea de un píxel en el grosor. Esto parece muy fino en alta resolución dispositivos como teléfonos, por lo que probablemente desee establecer el `StrokeWidth` en un valor mayor. ¿Pero cuando empiece a dibujar las líneas de un grosor de tamaño ajustable, que provoca otro problema: cómo empieza y finaliza de estas líneas gruesas la se debe representar?
+De forma predeterminada, el [ `StrokeWidth` ](xref:SkiaSharp.SKPaint.StrokeWidth) propiedad de una instancia recién creada `SKPaint` objeto es 0, que tiene el mismo efecto que un valor de 1 en la representación de una línea de un píxel en el grosor. Esto parece muy fino en alta resolución dispositivos como teléfonos, por lo que probablemente desee establecer el `StrokeWidth` en un valor mayor. Pero una vez que comience el dibujo de líneas de un grosor de tamaño ajustable, que provoca otro problema: ¿Cómo el comienza y termina de estas líneas gruesas se debe representar?
 
 Se llama a la apariencia del final de las líneas y se inicia un *extremo de línea* o, en Skia, un *extremo trazo*. La palabra "cap" en este contexto hace referencia a un tipo de hat &mdash; algo que se encuentra en el extremo de la línea. Establece el [ `StrokeCap` ](xref:SkiaSharp.SKPaint.StrokeCap) propiedad de la `SKPaint` objeto en uno de los siguientes miembros de la [ `SKStrokeCap` ](xref:SkiaSharp.SKStrokeCap) enumeración:
 

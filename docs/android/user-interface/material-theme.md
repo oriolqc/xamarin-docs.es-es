@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: ff94211086956e36da377445d90359789b62fc60
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 512775864f5ad55ddfedd53b83dd02d7b0e1d1f8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61309136"
 ---
 # <a name="material-theme"></a>Tema de materiales
 
@@ -52,7 +52,7 @@ Para obtener información sobre cómo configurar un proyecto de aplicación de A
 
 ## <a name="using-the-built-in-themes"></a>Uso de los temas integrados
 
-Es la manera más fácil de usar Material de tema configurar la aplicación para usar un tema integrado sin personalización. Si no desea configurar explícitamente un tema, la aplicación predeterminada será `Theme.Material` (el tema oscuro). Si la aplicación tiene sólo una actividad, puede configurar un tema en el nivel de aplicación. Si la aplicación tiene varias actividades, puede configurar un tema en el nivel de aplicación para que usa el mismo tema en todas las actividades, o puede asignar diferentes temas para actividades diferentes. Las secciones siguientes explican cómo configurar los temas en el nivel de aplicación y en el nivel de actividad.
+Es la manera más fácil de usar Material de tema configurar la aplicación para usar un tema integrado sin personalización. Si no desea configurar explícitamente un tema, la aplicación predeterminada será `Theme.Material` (el tema oscuro). Si la aplicación tiene sólo una actividad, puede configurar un tema en el nivel de actividad. Si la aplicación tiene varias actividades, puede configurar un tema en el nivel de aplicación para que usa el mismo tema en todas las actividades, o puede asignar diferentes temas para actividades diferentes. Las secciones siguientes explican cómo configurar los temas en el nivel de aplicación y en el nivel de actividad.
 
 
 ### <a name="theming-an-application"></a>Una aplicación de creación de temas

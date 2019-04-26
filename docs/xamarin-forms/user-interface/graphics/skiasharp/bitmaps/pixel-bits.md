@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
 ms.openlocfilehash: cd7c8484827a038bbcf11180296547ea6fedf929
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61411738"
 ---
 # <a name="accessing-skiasharp-bitmap-pixel-bits"></a>Acceso a los bits de píxeles del mapa de bits de SkiaSharp
 
@@ -20,7 +20,7 @@ ms.locfileid: "53059209"
 
 Como se vio en el artículo [ **SkiaSharp guardar mapas de bits archivos**](saving.md), mapas de bits se almacenan normalmente en archivos en un formato comprimido, como JPEG o PNG. Al contrario, no se comprime un mapa de bits de SkiaSharp almacenada en memoria. Se almacena como una serie secuencial de píxeles. Este formato no comprimido facilita a la transferencia de los mapas de bits a una superficie de pantalla.
 
-El bloque de memoria ocupado por un mapa de bits de SkiaSharp está organizado de manera muy sencilla: comienza con la primera fila de píxeles, de izquierda a derecha y, a continuación, continúa con la segunda fila. Para los mapas de bits de color completo, cada píxel consta de cuatro bytes, lo que significa que el espacio de memoria total requerido por el mapa de bits es cuatro veces el producto de su ancho y alto.
+El bloque de memoria ocupado por un mapa de bits de SkiaSharp está organizado de manera muy sencilla: Comienza con la primera fila de píxeles, de izquierda a derecha y, a continuación, continúa con la segunda fila. Para los mapas de bits de color completo, cada píxel consta de cuatro bytes, lo que significa que el espacio de memoria total requerido por el mapa de bits es cuatro veces el producto de su ancho y alto.
 
 Este artículo describe cómo una aplicación puede obtener acceso a los píxeles, ya sea directamente mediante el acceso a bloque de memoria de píxel del mapa de bits, directa o indirectamente. En algunos casos, es posible que un programa desea analizar los píxeles de una imagen y generar un histograma de algún tipo. Más comúnmente, las aplicaciones pueden crear imágenes únicas mediante la creación de forma algorítmica los píxeles que componen el mapa de bits:
 
@@ -280,7 +280,7 @@ SKBitmap FillBitmapUintPtrColor(out string description, out int milliseconds)
 }
 ```
 
-¿La única pregunta es: es el formato de entero de la `SKColor` valor en el orden de la `SKColorType.Rgba8888` tipo, de color o el `SKColorType.Bgra8888` tipo de color, o se trata de algo completamente? La respuesta a esa pregunta deberá mostrarse en breve.
+La única pregunta es: ¿Es el formato de entero de la `SKColor` valor en el orden de los `SKColorType.Rgba8888` tipo, de color o el `SKColorType.Bgra8888` tipo de color, o se trata de algo completamente? La respuesta a esa pregunta deberá mostrarse en breve.
 
 ### <a name="the-setpixels-method"></a>El método SetPixels
 
@@ -294,7 +294,7 @@ Recuerde que `GetPixels` Obtiene un `IntPtr` que hacen referencia a un bloque de
 
 En primer lugar, parece como si `SetPixels` le nada más potencia y rendimiento que `GetPixels` al tiempo que es poco práctica. Con `GetPixels` obtener el bloque de memoria de mapa de bits y tener acceso a él. Con `SetPixels` asignar y obtener acceso a parte de la memoria y, a continuación, configúrelo como el bloque de memoria de mapa de bits.
 
-Pero al usar `SetPixels` ofrece una clara ventaja sintáctica: podrá tener acceso a los bits de píxeles del mapa de bits mediante una matriz. Este es el método `GradientBitmapPage` que muestra esta técnica. En primer lugar, el método define una matriz de bytes multidimensional correspondientes a los bytes de los píxeles del mapa de bits. La primera dimensión es la fila, la segunda dimensión es la columna y la tercera dimensión corresponde a los cuatro componentes de cada píxel:
+Pero al usar `SetPixels` ofrece una clara ventaja sintáctica: Permite obtener acceso a los bits de píxeles del mapa de bits mediante una matriz. Este es el método `GradientBitmapPage` que muestra esta técnica. En primer lugar, el método define una matriz de bytes multidimensional correspondientes a los bytes de los píxeles del mapa de bits. La primera dimensión es la fila, la segunda dimensión es la columna y la tercera dimensión corresponde a los cuatro componentes de cada píxel:
 
 ```csharp
 SKBitmap FillBitmapByteBuffer(out string description, out int milliseconds)
@@ -499,7 +499,7 @@ Esta es una tabla que consolida los tiempos de ejecución en milisegundos:
 
 Según lo previsto, una llamada a `SetPixel` 65.536 veces es la forma de effeicient mínimos para establecer los píxeles del mapa de bits. Rellenar un `SKColor` matriz y la configuración de la `Pixels` propiedad es mucho mejor e incluso compara favorablemente con algunos de los `GetPixels` y `SetPixels` técnicas. Trabajar con `uint` valores de píxel es generalmente más rápidos que la configuración independiente `byte` componentes y convertir la `SKColor` valor entero sin signo que agrega una sobrecarga al proceso.
 
-También es interesante comparar los degradados distintos: las primeras filas de cada plataforma son los mismos y mostrar el degradado y como estaba previsto. Esto significa que el `SetPixel` método y el `Pixels` propiedad crear correctamente los píxeles de colores independientemente del formato de píxel subyacente.
+También es interesante comparar los degradados distintos: Las primeras filas de cada plataforma son los mismos y mostrar el degradado y como estaba previsto. Esto significa que el `SetPixel` método y el `Pixels` propiedad crear correctamente los píxeles de colores independientemente del formato de píxel subyacente.
 
 Las dos filas siguientes de iOS y Android capturas de pantalla también son las mismas, que confirma que el pequeño `MakePixel` método esté definido correctamente para el valor predeterminado `Rgba8888` formato de píxel para estas plataformas.
 

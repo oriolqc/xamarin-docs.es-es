@@ -6,11 +6,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 04/26/2017
 ms.openlocfilehash: 5f157f2bbf36076e542a5f96b912cb1788a99052
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61269346"
 ---
 # <a name="wpf-vs-xamarinforms-app-lifecycle"></a>Frente a WPF Ciclo de vida de aplicaciones de Xamarin.Forms
 
@@ -79,7 +79,7 @@ BindableObject - base class for all bindable things
 
 Xamarin.Forms se centra principalmente en escenarios móviles. Por lo tanto, las aplicaciones son _activado_, _suspendido_, y _reactivado_ cuando el usuario interactúa con ellos. Esto es similar a hacer clic fuera de la `Window` en una aplicación WPF y hay un conjunto de métodos y eventos correspondientes, puede invalidar o engancharse para supervisar este comportamiento.
 
-| Propósito | Método WPF | Método de Xamarin.Forms |
+| Finalidad | Método WPF | Método de Xamarin.Forms |
 |--- |--- |--- |
 |Activación inicial|ctor + Window.OnLoaded|ctor + Page.OnStart|
 |Se muestra|Window.IsVisibleChanged|Page.Appearing|
@@ -95,7 +95,7 @@ Ambos soporte ocultar o mostrar también los controles secundarios, en WPF es un
 
 Diseño de página se produce en la misma 2-fase (medida y organizar) que se produce en WPF. Puede colocar en el diseño de página invalidando los métodos siguientes en Xamarin.Forms `Page` clase:
 
-| Método | Propósito |
+| Método | Finalidad |
 |--- |--- |
 |OnChildMeasureInvalidated|Ha cambiado el tamaño preferido de un elemento secundario.|
 |OnSizeAllocated|Página se ha asignado un ancho y alto.|
@@ -109,7 +109,7 @@ WPF y Xamarin.Forms admiten `Margin` control espaciado alrededor de un elemento,
 
 Además, la mayoría de los elementos tiene propiedades para influir en cómo se coloca en el contenedor primario:
 
-| WPF | Xamarin.Forms | Propósito |
+| WPF | Xamarin.Forms | Finalidad |
 |--- |--- |--- |
 |HorizontalAlignment|HorizontalOptions|Opciones de la izquierda/centro o derecha/Stretch|
 |VerticalAlignment|VerticalOptions|Opciones de Stretch/Top/centro/inferior|

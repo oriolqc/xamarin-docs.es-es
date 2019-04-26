@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: 11b0a9c5b165df2b0d02bb09fb282cc18290e6ca
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334664"
 ---
 # <a name="summary-of-chapter-3-deeper-into-text"></a>Resumen del capítulo 3. Más profunda en texto
 
@@ -28,7 +28,7 @@ Cuando el [ `HorizontalOptions` ](xref:Xamarin.Forms.View.HorizontalOptions) y [
 
 Cuando el `HorizontalOptions` y `VerticalOptions` propiedades se establecen en valores distintos de `LayoutOptions.Fill`, el tamaño de la `Label` se rige por el espacio necesario para representar el texto, hasta el tamaño de su contenedor hace que estén disponible para el `Label`. El `Label` se dice que *sin restricciones* y determina su propio tamaño.
 
-(Tenga en cuenta: Los términos *restringida* y *sin restricciones* podría no ser intuitivo, como una vista sin restricciones es generalmente más pequeña que una vista restringida. Además, estos términos no se usan sistemáticamente en los primeros capítulos del libro.)
+(Nota: Los términos *restringida* y *sin restricciones* podría no ser intuitivo, como una vista sin restricciones es generalmente más pequeña que una vista restringida. Además, estos términos no se usan sistemáticamente en los primeros capítulos del libro.)
 
 Una vista, como un `Label` puede restringir en una dimensión y sin restricciones en el otro. Un `Label` sólo ajustar texto en varias líneas si está restringido horizontalmente.
 

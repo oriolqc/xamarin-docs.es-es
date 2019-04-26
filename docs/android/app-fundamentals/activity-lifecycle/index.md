@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
 ms.openlocfilehash: 3592a3027469cb9997d973db53d636ddea9e679d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61024310"
 ---
 # <a name="activity-lifecycle"></a>Ciclo de vida de la actividad
 
@@ -187,7 +187,7 @@ Hay dos métodos posibles del ciclo de vida que se llamará después `OnPause`:
 
 `OnStop` no siempre se puede llamar en situaciones de escasez de memoria, como cuando tiene escasez de recursos y no en segundo plano correctamente de la actividad de Android. Por este motivo, es mejor no dependen de `OnStop` obtener llama al preparar una actividad para la destrucción. Los métodos del ciclo de vida siguientes que se pueden llamar después de que ésta será `OnDestroy` si la actividad está en desuso, o `OnRestart` si la actividad se vuelve a interactuar con el usuario.
 
-#### <a name="ondestroy"></a>onDestroy
+#### <a name="ondestroy"></a>OnDestroy
 
 [OnDestroy](https://developer.xamarin.com/api/member/Android.App.Activity.OnDestroy/) es el método final que se llama en una instancia de actividad antes de que se destruye y se quita completamente de la memoria. En situaciones extremas Android podría terminar el proceso de aplicación que hospeda la actividad, lo que dará lugar `OnDestroy` no que se va a invocar. La mayoría de las actividades no implementa este método porque la mayoría limpia y apagado se ha realizado el `OnPause` y `OnStop` métodos. El `OnDestroy` normalmente se invalida el método para limpiar prolongada ejecuta los recursos que podría perder recursos. Un ejemplo de esto podría ser subprocesos en segundo plano que se iniciaron en `OnCreate`.
 

@@ -6,11 +6,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: c6eaf4dd90b172053b4b87e3427cfe35213c6727
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61215883"
 ---
 # <a name="callbacks-on-android"></a>Devoluciones de llamada en Android
 
@@ -157,7 +157,7 @@ Para obtener más información sobre la interoperabilidad de Java, vea el tipo d
 
 ## <a name="interfaces"></a>Interfaces
 
-Las interfaces son prácticamente los mismos como clases abstractas, excepto un detalle: Xamarin.Android no genera Java para ellos. Esto es porque antes de incrustación de. NET, no hay muchos escenarios donde Java implementaría una C# interfaz.
+Las interfaces son igual que las clases abstractas, excepto un detalle: Xamarin.Android no genera Java para ellos. Esto es porque antes de incrustación de. NET, no hay muchos escenarios donde Java implementaría una C# interfaz.
 
 Supongamos que tenemos la siguiente C# interfaz:
 

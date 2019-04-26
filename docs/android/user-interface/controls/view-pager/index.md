@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: bb9795eb1e77a48b01556c553ae19613d6ab6de6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61267631"
 ---
 # <a name="viewpager"></a>ViewPager
 
@@ -39,7 +39,7 @@ Esta guía muestra ambos enfoques:
 
 ## <a name="requirements"></a>Requisitos
 
-Para usar `ViewPager` en el proyecto de aplicación, debe instalar la [biblioteca de compatibilidad de Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) paquete. Para obtener más información acerca de cómo instalar paquetes de NuGet, consulte [Tutorial: incluidos unos NuGet en el proyecto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
+Para usar `ViewPager` en el proyecto de aplicación, debe instalar la [biblioteca de compatibilidad de Android v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/) paquete. Para obtener más información acerca de cómo instalar paquetes de NuGet, consulte [Tutorial: Incluir NuGet en el proyecto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
  
 ## <a name="architecture"></a>Arquitectura

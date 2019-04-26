@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 015c1e315b6070777542a8f8c5871c00cf336b5c
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51527071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61236189"
 ---
 # <a name="creating-custom-controls-in-xamarinmac"></a>Creación de controles personalizados en Xamarin.Mac
 
@@ -212,7 +212,7 @@ Se deberá ser el ajuste de la representación visual del control cuando cambia 
 
 ### <a name="responding-to-user-input"></a>Responder a la entrada de usuario
 
-Hay dos formas básicas que podemos agregar entrada de usuario para nuestro control personalizado: **invalidar rutinas de control de Mouse** o **los reconocedores de gestos**. El método que use, se basará en la funcionalidad requerida por nuestro control.
+Hay dos formas básicas que podemos agregar entrada de usuario para nuestro control personalizado: **Invalidar las rutinas de control de Mouse** o **los reconocedores de gestos**. El método que use, se basará en la funcionalidad requerida por nuestro control.
 
 > [!IMPORTANT]
 > Para cualquier control personalizado que cree, debe usar **invalidar métodos** _o_ **los reconocedores de gestos**, pero no ambos al mismo tiempo que pueden entrar en conflicto entre sí.

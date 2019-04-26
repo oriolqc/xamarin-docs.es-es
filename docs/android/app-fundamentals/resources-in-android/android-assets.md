@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
 ms.openlocfilehash: 1e9a71de7725c8382e133d85977407bcc859fc58
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61013726"
 ---
 # <a name="using-android-assets"></a>Uso de recursos de Android
 
@@ -80,4 +80,4 @@ Ejecute la aplicación y verá lo siguiente:
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [AssetManager](https://developer.xamarin.com/api/type/Android.Content.Res.AssetManager/)
-- [Contexto](https://developer.xamarin.com/api/type/Android.Content.Context/)
+- [Context](https://developer.xamarin.com/api/type/Android.Content.Context/)

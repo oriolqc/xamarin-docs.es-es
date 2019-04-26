@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
 ms.openlocfilehash: 5df751f683c530ee9f7ec58d9d6393d9f089314d
-ms.sourcegitcommit: 2713f2c1d74e3582704c3d0ca65b6651119ed489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56321121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61222863"
 ---
 # <a name="introduction-to-watchos-5"></a>Introducción a watchOS 5
 

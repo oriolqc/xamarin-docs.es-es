@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
 ms.openlocfilehash: d7aeac2f433e8fdf231f5887f1537f15e2bd1976
-ms.sourcegitcommit: ea1dc12a3c2d7322f234997daacbfdb6ad542507
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2018
-ms.locfileid: "34782227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61341313"
 ---
 # <a name="why-doesnt-visual-studio-include-my-referenced-library-project-in-my-build"></a>¿Por qué Visual Studio no incluye en mi compilación el proyecto de biblioteca al que se hace referencia?
 
@@ -26,6 +26,6 @@ Algunas de las plantillas que se generan con un proyecto de biblioteca al que se
 3. Active las casillas de verificación de los proyectos que quiere incluir.
 
 > [!NOTE]
-> Atenuados cuadros se administran automáticamente y no debe necesario realizar ningún cambio.
+> Atenuados cuadros se controlan automáticamente y no necesitan ningún cambio.
 
 Presentación en pantalla de estos pasos: [http://screencast.com/t/zLoQOpEn](http://screencast.com/t/zLoQOpEn)

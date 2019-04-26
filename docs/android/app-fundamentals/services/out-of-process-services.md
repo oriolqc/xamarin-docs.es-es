@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: db312c4c102feb98791109af19185762bb25856e
-ms.sourcegitcommit: 849bf6d1c67df943482ebf3c80c456a48eda1e21
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51528850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61013101"
 ---
 # <a name="running-android-services-in-remote-processes"></a>Android ejecutar servicios en procesos remotos
 
@@ -488,4 +488,4 @@ Esta guía fue una discusión avanzada acerca de cómo ejecutar un servicio de A
 - [Los procesos y subprocesos](https://developer.android.com/guide/components/processes-and-threads.html)
 - [Manifiesto de Android - permisos](https://developer.android.com/guide/topics/manifest/manifest-intro.html#perms)
 - [Sugerencias de seguridad](https://developer.android.com/training/articles/security-tips.html)
-- [MessengerServiceDemo (ejemplo)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/MessengerServiceDemo/)
+- [MessengerServiceDemo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/MessengerServiceDemo/)

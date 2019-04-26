@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
 ms.openlocfilehash: 9299322eb20561444262c2b2ba87191d2bddcde4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61317636"
 ---
 # <a name="introduction-to-ios-8"></a>Introducción a iOS 8
 
@@ -83,7 +83,7 @@ El cuadro de diálogo nuevo proyecto proporciona siete nuevas plantillas de proy
 
 Para obtener más información sobre el uso de extensiones de aplicación de Xamarin, consulte el [Introducción a las extensiones de aplicación](~/ios/platform/extensions.md) guía.
 
-### <a name="touch-id"></a>Id. de toque
+### <a name="touch-id"></a>Touch ID
 
 Id. de toque se introdujo en iOS 7 como un medio para autenticar al usuario, similar a un código de acceso. Sin embargo, se limitaba a desbloquear el dispositivo, utilizando el Store de la aplicación, mediante iTunes y autenticar sólo la cadena de claves de iCloud 
 
@@ -101,7 +101,7 @@ Funciona de selector de documentos con una unidad de iCloud a los usuarios para 
 
 Para obtener información sobre el selector de documentos con más detalle y para obtener información sobre cómo integrarla en una aplicación de Xamarin.iOS, consulte el [Introducción para el selector de documentos](~/ios/platform/document-picker.md) guía.
 
-### <a name="handoff"></a>HANDOFF
+### <a name="handoff"></a>Handoff
 
 Entrega, que forma parte de la característica de continuidad de mayor tamaño, da un paso más hacia la integración de iOS y OS X. Esto incluye AirDrop multiplataforma, la capacidad de realizar llamadas de iPhone, SMS en el iPad y Mac y mejoras en tethering desde su iPhone.
 

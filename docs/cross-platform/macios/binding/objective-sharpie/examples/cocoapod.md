@@ -1,17 +1,17 @@
 ---
 title: Ejemplo del mundo real mediante CocoaPods
-description: Este documento muestra cómo usar Sharpie objetivo para generar automáticamente las definiciones de enlace de C# desde un CocoaPod.
+description: Este documento muestra cómo usar Sharpie objetivo para generar automáticamente el C# definiciones desde un CocoaPod de enlaces.
 ms.prod: xamarin
 ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
 author: asb3993
 ms.author: amburns
 ms.date: 03/28/2018
 ms.openlocfilehash: bac34f662e24c6b08a67cd8da1f41b37b43b3faf
-ms.sourcegitcommit: ec50c626613f2f9af51a9f4a52781129bcbf3fcb
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2018
-ms.locfileid: "37855213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61200320"
 ---
 # <a name="real-world-example-using-cocoapods"></a>Ejemplo del mundo real mediante CocoaPods
 
@@ -93,6 +93,6 @@ Después de generar el **ApiDefinitions.cs** y **StructsAndEnums.cs** archivos, 
 
 - [Introducción al enlace de Objective-c.](~/cross-platform/macios/binding/overview.md)
 - [Enlace de bibliotecas de Objective-c.](~/cross-platform/macios/binding/objective-c-libraries.md)
-- [Tutorial: Enlazar a una biblioteca de Objective-C de iOS](~/ios/platform/binding-objective-c/walkthrough.md)
+- [Tutorial: Enlace de una biblioteca de Objective-C de iOS](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Curso de Xamarin University: Creación de una biblioteca de enlaces de Objective-c.](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Curso de Xamarin University: Compilar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
+- [Curso de Xamarin University: Generar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

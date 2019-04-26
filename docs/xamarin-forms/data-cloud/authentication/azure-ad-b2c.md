@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 7c12136a0dad0165c46f1559e7a2d61abaf7af1e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
-ms.translationtype: MT
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61331504"
 ---
 # <a name="authenticating-users-with-azure-active-directory-b2c"></a>Autenticar a los usuarios con Azure Active Directory B2C
 
@@ -35,8 +35,8 @@ Azure B2C de Active Directory es un servicio de administración de identidad par
 El proceso para integrar el servicio de administración de identidades de Azure Active Directory B2C en una aplicación móvil es como sigue:
 
 1. Crear a un inquilino de Azure Active Directory B2C. Para obtener más información, consulte [crear un inquilino de Azure Active Directory B2C en Azure portal](/azure/active-directory-b2c/active-directory-b2c-get-started/).
-1. Registrar la aplicación móvil con el inquilino de Azure Active Directory B2C. El proceso de registro, se asigna un **Id. de aplicación** que identifica la aplicación y un **dirección URL de redireccionamiento** que puede utilizarse para dirigir las respuestas de nuevo a la aplicación. Para obtener más información, consulte [Azure Active Directory B2C: registro de la aplicación](/azure/active-directory-b2c/active-directory-b2c-app-registration/).
-1. Crear una directiva de registro e inicio de sesión. Esta directiva definirá las experiencias que tendrán los consumidores durante el registro e inicio de sesión y también especifica el contenido de los tokens que recibirá la aplicación en correcta registro o inicio de sesión. Para obtener más información, consulte [Azure Active Directory B2C: directivas integradas](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
+1. Registrar la aplicación móvil con el inquilino de Azure Active Directory B2C. El proceso de registro, se asigna un **Id. de aplicación** que identifica la aplicación y un **dirección URL de redireccionamiento** que puede utilizarse para dirigir las respuestas de nuevo a la aplicación. Para obtener más información, consulte [Azure Active Directory B2C: Registrar la aplicación](/azure/active-directory-b2c/active-directory-b2c-app-registration/).
+1. Crear una directiva de registro e inicio de sesión. Esta directiva definirá las experiencias que tendrán los consumidores durante el registro e inicio de sesión y también especifica el contenido de los tokens que recibirá la aplicación en correcta registro o inicio de sesión. Para obtener más información, consulte [Azure Active Directory B2C: Las directivas integradas](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
 1. Use la [biblioteca de autenticación de Microsoft](https://www.nuget.org/packages/Microsoft.Identity.Client) (MSAL) en la aplicación móvil para iniciar un flujo de trabajo de autenticación con el inquilino de Azure Active Directory B2C.
 
 > [!NOTE]
@@ -55,7 +55,7 @@ Cada solicitud que se envía a un inquilino de Azure Active Directory B2C se esp
 - Contenido de la página de registro.
 - Notificaciones de tokens que recibe la aplicación móvil cuando la directiva se ha ejecutado.
 
-Un inquilino de Azure Active Directory puede contener varias directivas de diferentes tipos, que, a continuación, se pueden usar en la aplicación según sea necesario. Además, las directivas se pueden reutilizar en las aplicaciones, lo que le permite definir y modificar experiencias de identidad de consumidor sin cambiar el código. Para obtener más información acerca de las directivas, consulte [Azure Active Directory B2C: directivas integradas](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
+Un inquilino de Azure Active Directory puede contener varias directivas de diferentes tipos, que, a continuación, se pueden usar en la aplicación según sea necesario. Además, las directivas se pueden reutilizar en las aplicaciones, lo que le permite definir y modificar experiencias de identidad de consumidor sin cambiar el código. Para obtener más información acerca de las directivas, consulte [Azure Active Directory B2C: Las directivas integradas](/azure/active-directory-b2c/active-directory-b2c-reference-policies/).
 
 ## <a name="setup"></a>Programa de instalación
 

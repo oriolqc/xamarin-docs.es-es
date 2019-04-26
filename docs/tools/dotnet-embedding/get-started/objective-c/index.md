@@ -7,11 +7,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 92b11db2ee566bcd9f3f8a3ee3771e163a47589b
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61040900"
 ---
 # <a name="getting-started-with-objective-c"></a>Introducción a Objective-c.
 

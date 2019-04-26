@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: guardar el estado de actividad'
+title: 'Tutorial: guardado del estado de actividad'
 description: Hemos tratado la teoría detrás de guardar el estado en la Guía de ciclo de vida de actividad; Ahora, veamos un ejemplo.
 ms.prod: xamarin
 ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
 ms.openlocfilehash: c8f92e55648dff469227cc3bad981ad5f6e6d0ac
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019175"
 ---
-# <a name="walkthrough---saving-the-activity-state"></a>Tutorial: guardar el estado de actividad
+# <a name="walkthrough---saving-the-activity-state"></a>Tutorial: guardado del estado de actividad
 
 _Hemos tratado la teoría detrás de guardar el estado en la Guía de ciclo de vida de actividad; Ahora, veamos un ejemplo._
 

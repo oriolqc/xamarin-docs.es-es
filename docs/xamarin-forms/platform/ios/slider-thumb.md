@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: 43cc87f9d319295ce65d55488e1be032ae00a697
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54208770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61082202"
 ---
 # <a name="slider-thumb-tap-on-ios"></a>Control deslizante Thumb pulsar en iOS
 
