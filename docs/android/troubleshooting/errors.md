@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/13/2018
 ms.openlocfilehash: f3721ad661f4b817375b0d625c9b5cc293e6d44c
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50235082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60945310"
 ---
 # <a name="xamarinandroid-errors-matrix"></a>Matriz de errores de Xamarin.Android
 
@@ -36,7 +36,7 @@ Este documento proporciona cierta información sobre los distintos códigos de e
 
 ## <a name="error-codes"></a>Códigos de error
 
-### <a name="xa0xxx-errors"></a>Errores de XA0xxx
+### <a name="xa0xxx-errors"></a>XA0xxx Errors
 
 |Código de error|Descripción|
 |--- |--- |
@@ -58,7 +58,7 @@ Este documento proporciona cierta información sobre los distintos códigos de e
 |XA0020|No se pudo determinar la ruta de acceso de mandroid.|
 |XA0100|EmbeddedNativeLibrary '{0}' no es válido en el proyecto de aplicación de Android. Use AndroidNativeLibrary en su lugar.|
 
-### <a name="xa1xxx-errors"></a>Errores de XA1xxx
+### <a name="xa1xxx-errors"></a>XA1xxx Errors
 
 |Código de error|Descripción|
 |--- |--- |
@@ -78,12 +78,12 @@ Este documento proporciona cierta información sobre los distintos códigos de e
 |XA1103|No se pudo desasociar.|
 |XA1104|No se pudo enviar el paquete: {0}.|
 |XA1105|Tipo de respuesta inesperado.|
-|XA1106|No se pudo obtener la lista de aplicaciones en el dispositivo: solicitud agotó el tiempo de espera.|
+|XA1106|No se pudo obtener la lista de aplicaciones en el dispositivo: Tiempo de espera agotado para esta solicitud.|
 |XA1107|No se pudo iniciar la aplicación.|
 |XA1201|No se pudo cargar el simulador: {0}.|
 |XA1301|Biblioteca nativa '{0}' ({1}) se omite porque no coincide con la actual architecture(s) de compilación ({2}).|
 
-### <a name="xa2xxx-errors"></a>Errores de XA2xxx
+### <a name="xa2xxx-errors"></a>XA2xxx Errors
 
 |Código de error|Descripción|
 |--- |--- |
@@ -94,18 +94,18 @@ Este documento proporciona cierta información sobre los distintos códigos de e
 |XA2005|Las definiciones de '{0}' no se pudo analizar.|
 |XA2006|Referencia al elemento de metadatos '{0}' (definido en '{1}') de '{2}' no se pudo resolver.|
 
-### <a name="xa3xxx-errors"></a>Errores de XA3xxx
+### <a name="xa3xxx-errors"></a>XA3xxx Errors
 
 Estos son errores AOT.
 
 |Código de error|Descripción|
 |--- |--- |
 |XA3001|Podría no AOT el ensamblado '{0}'.|
-|XA3002|Restricción de AOT: método '{0}' debe ser estático, ya que está decorado con [MonoPInvokeCallback].|
+|XA3002|Restricción de AOT: Método '{0}' debe ser estático, ya que está decorado con [MonoPInvokeCallback].|
 |XA3003|En conflicto: opciones de depuración y--llvm. Depurar con Soft está deshabilitada.|
 
 
-### <a name="xa4xxx-errors"></a>Errores de XA4xxx
+### <a name="xa4xxx-errors"></a>XA4xxx Errors
 
 Estos son errores de generación de código.
 
@@ -114,7 +114,7 @@ Estos son errores de generación de código.
 |XA4001|No se pudo expansed a la plantilla principal '{0}'.|
 |XA4101|El registrador no puede generar una firma para el tipo '{0}'.|
 |XA4102|El registrador encuentra un tipo no válido '{0}'en la firma de método'{2}'. Use '{1}' en su lugar.|
-|XA4103|El registrador encuentra un tipo no válido '{0}'en la firma de método'{2}': el tipo implementa INativeObject, pero no tiene un constructor que toma dos (IntPtr, bool) argumentos.|
+|XA4103|El registrador encuentra un tipo no válido '{0}'en la firma de método'{2}': El tipo implementa INativeObject, pero no tiene un constructor que toma dos (IntPtr, bool) argumentos.|
 |XA4104|El registrador no puede serializar el valor devuelto de tipo '{0}'en la firma de método'{1}'.|
 |XA4105|El registrador no puede serializar el parámetro de tipo '{0}'en la firma de método'{1}'.|
 |XA4106|El registrador no puede serializar el valor devuelto para la estructura '{0}'en la firma de método'{1}'.|
@@ -136,7 +136,7 @@ Estos son errores de generación de código.
 |XA4211|AndroidManifest.xml //uses-sdk/@android:targetSdkVersion '{0}'es menor que $(TargetFrameworkVersion)'{1}'. El uso de API -{1} para la compilación ACW.|
 
 
-### <a name="xa5xxx-errors"></a>Errores de XA5xxx
+### <a name="xa5xxx-errors"></a>XA5xxx Errors
 
 |Código de error|Descripción|
 |--- |--- |
@@ -158,7 +158,7 @@ Estos son errores de generación de código.
 |XA5209|No se pudo descomprimir. Descargue {0} y extráigalo a la {1} directory.|
 |XA5210|{0}. Archivo de biblioteca nativa {1} no existe.|
 
-### <a name="xa6xxx-errors"></a>Errores de XA6xxx
+### <a name="xa6xxx-errors"></a>XA6xxx Errors
 
 |Código de error|Descripción|
 |--- |--- |
@@ -166,31 +166,31 @@ Estos son errores de generación de código.
 |XA6002|No se pudo quitar el ensamblado '{0}'.|
 |XA6003|UnauthorizedAccessException mensaje.|
 
-### <a name="xa9xxx-errors"></a>Errores de XA9xxx
+### <a name="xa9xxx-errors"></a>XA9xxx Errors
 
 Estos códigos de error son errores de activación y licencias.
 
 
 #### <a name="xa9000"></a>XA9000
 
- **Causa:** licencia ha expirado
+ **Causa:** Licencia ha expirado
 
- **Se comprueban durante:** de compilación
+ **Se comprueban durante:** Compilar
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
-|ADVERTENCIA|ADVERTENCIA|ADVERTENCIA|ADVERTENCIA|ADVERTENCIA|
+|WARNING|WARNING|WARNING|WARNING|WARNING|
 
 
 #### <a name="xa9001"></a>XA9001
 
- **Causa:** prueba expirado
+ **Causa:** Versión de evaluación ha expirado
 
- **Se comprueban durante:** de compilación
+ **Se comprueban durante:** Compilar
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
-|ADVERTENCIA|ADVERTENCIA|ADVERTENCIA|ADVERTENCIA|ADVERTENCIA|
+|WARNING|WARNING|WARNING|WARNING|WARNING|
 
 
 
@@ -198,7 +198,7 @@ Estos códigos de error son errores de activación y licencias.
 
  **Causa:** AndroidJavaSource
 
- **Se comprueban durante:** de compilación
+ **Se comprueban durante:** Compilar
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -206,7 +206,7 @@ Estos códigos de error son errores de activación y licencias.
 
  **Causa:** AndroidJavaLibrary
 
- **Se comprueban durante:** de compilación
+ **Se comprueban durante:** Compilar
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -216,7 +216,7 @@ Estos códigos de error son errores de activación y licencias.
 
  **Causa:** AndroidNativeLibrary
 
- **Se comprueban durante:** de compilación
+ **Se comprueban durante:** Compilar
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -227,7 +227,7 @@ Estos códigos de error son errores de activación y licencias.
 
  **Causa:** System.Runtime.Serialization
 
- **Se comprueban durante:** paquete
+ **Se comprueban durante:** Paquete
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -235,7 +235,7 @@ Estos códigos de error son errores de activación y licencias.
 
  **Causa:** System.ServiceModel.Web
 
- **Se comprueban durante:** paquete
+ **Se comprueban durante:** Paquete
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -243,7 +243,7 @@ Estos códigos de error son errores de activación y licencias.
 
  **Causa:** Mono.Data.Tds
 
- **Se comprueban durante:** de compilación
+ **Se comprueban durante:** Compilar
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -253,7 +253,7 @@ Estos códigos de error son errores de activación y licencias.
 
  **Causa:** Mono.Android.Export
 
- **Se comprueban durante:** de compilación
+ **Se comprueban durante:** Compilar
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -265,7 +265,7 @@ Estos códigos de error son errores de activación y licencias.
 
  **Causa:** : generación de perfiles
 
- **Se comprueban durante:** paquete
+ **Se comprueban durante:** Paquete
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -275,9 +275,9 @@ Estos códigos de error son errores de activación y licencias.
 
 #### <a name="xa9005"></a>XA9005
 
- **Causa:** límite de tamaño (32 kb).
+ **Causa:** Límite de tamaño (32kb).
 
- **Se comprueban durante:** paquete
+ **Se comprueban durante:** Paquete
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -287,9 +287,9 @@ Estos códigos de error son errores de activación y licencias.
 
 #### <a name="xa9006"></a>XA9006
 
- **Causa:** espacio de nombres System.Data.SqlClient.
+ **Causa:** Espacio de nombres System.Data.SqlClient.
 
- **Se comprueban durante:** paquete
+ **Se comprueban durante:** Paquete
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -298,9 +298,9 @@ Estos códigos de error son errores de activación y licencias.
 
 #### <a name="xa9008"></a>XA9008
 
- **Causa:** compilar desde la línea de comandos.
+ **Causa:** Compilación desde la línea de comandos.
 
- **Se comprueban durante:** de compilación
+ **Se comprueban durante:** Compilar
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -309,9 +309,9 @@ Estos códigos de error son errores de activación y licencias.
 
 #### <a name="xa9009"></a>XA9009
 
- **Causa:** número de serie que faltan.
+ **Causa:** Número de serie que faltan.
 
- **Se comprueban durante:** un-testable
+ **Se comprueban durante:** Un-testable
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -322,7 +322,7 @@ Estos códigos de error son errores de activación y licencias.
 
  **Causa:** ProductId no válido.
 
- **Se comprueban durante:** de compilación
+ **Se comprueban durante:** Compilar
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -334,9 +334,9 @@ Equivalente a XA9018.
 
 #### <a name="xa9011"></a>XA9011
 
- **Causa:** no se pudo actualizar el archivo de licencia (para el nuevo formato de archivo).
+ **Causa:** No se pudo actualizar el archivo de licencia (para el nuevo formato de archivo).
 
- **Se comprueban durante:** activación
+ **Se comprueban durante:** Activación
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -344,9 +344,9 @@ Equivalente a XA9018.
 
 #### <a name="xa9012"></a>XA9012
 
- **Causa:** sin internet
+ **Causa:** Sin internet
 
- **Se comprueban durante:** activación
+ **Se comprueban durante:** Activación
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -357,7 +357,7 @@ Equivalente a XA9018.
 
  **Causa:** Error desconocido
 
- **Se comprueban durante:** activación
+ **Se comprueban durante:** Activación
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -366,9 +366,9 @@ Equivalente a XA9018.
 
 #### <a name="xa9014"></a>XA9014
 
- **Causa:** código de activación no válido
+ **Causa:** Código de activación no válido
 
- **Se comprueban durante:** activación
+ **Se comprueban durante:** Activación
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -377,9 +377,9 @@ Equivalente a XA9018.
 
 #### <a name="xa9017"></a>XA9017
 
- **Causa:** servidor de activación no devuelve una licencia válida.
+ **Causa:** Servidor de activación no devuelve una licencia válida.
 
- **Se comprueban durante:** activación
+ **Se comprueban durante:** Activación
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |
@@ -388,9 +388,9 @@ Equivalente a XA9018.
 
 #### <a name="xa9018"></a>XA9018
 
-**Causa:** licencia no válida
+**Causa:** Licencia no válida
 
-**Se comprueban durante:** de compilación
+**Se comprueban durante:** Compilar
 
 |Starter|Indie|Business(Trial)|Trabajo|Empresa|
 |--- |--- |--- |--- |--- |

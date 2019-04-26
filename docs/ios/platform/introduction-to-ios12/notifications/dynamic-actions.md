@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/04/2018
 ms.openlocfilehash: 5611d673ecc7af896fd3a9e566e184e408b6b367
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60876063"
 ---
 # <a name="dynamic-notification-action-buttons-in-xamarinios"></a>Botones de acción de notificación dinámico de Xamarin.iOS
 

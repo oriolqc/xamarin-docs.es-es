@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: 82b1408cafedf98a8619e8e039ba00b332f74516
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "33921994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61381860"
 ---
 # <a name="part-1--creating-a-cross-platform-monogame"></a>Parte 1: crear un MonoGame multiplataforma
 
@@ -30,7 +30,7 @@ MonoGame puede agregarse como un complemento para Visual Studio para Mac. En Mac
 ![Visual Studio para la Galería de extensiones de Mac seleccionando MonoGame](part1-images/image2.png)
 
 > [!IMPORTANT]
-> **Tenga en cuenta**: si el **desarrollo de juegos** sección no aparece en el Administrador de complementos, puede descargar manualmente e instalar la versión más reciente desde aquí: http://www.monogame.net/downloads/. Es posible que deba reiniciar Visual Studio para Mac para las plantillas que aparecen.
+> **Nota**: Si el **desarrollo de juegos** sección no aparece en el Administrador de complementos, puede descargar manualmente e instalar la versión más reciente desde aquí: http://www.monogame.net/downloads/. Es posible que deba reiniciar Visual Studio para Mac para las plantillas que aparecen.
 
 Una vez instalado, MonoGame aparezcan en Visual Studio para Mac, como veremos en la sección siguiente.
 

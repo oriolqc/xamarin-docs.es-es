@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 09/05/2018
 ms.openlocfilehash: fe909d72f3c6d6733318b5dcbd1858a1a9e28b37
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61165695"
 ---
 # <a name="xamarinandroid-designer-basics"></a>Conceptos básicos de Xamarin.Android Designer
 
@@ -45,7 +45,7 @@ Cuando se edita un diseño en el diseñador, utilice las siguientes característ
 
 -   **Panel de origen** &ndash; proporciona una vista del origen de XML subyacente que se corresponde con el diseño que se presentan en el **superficie de diseño**.
 
--   **Barra de herramientas del diseñador** &ndash; muestra una lista de selectores: **dispositivo**, **versión**, **tema**, diseño y configuración de la barra de acciones. El **barra de herramientas del diseñador** también incluye iconos para iniciar el Editor de temas y para habilitar la cuadrícula de diseño de materiales.
+-   **Barra de herramientas del diseñador** &ndash; muestra una lista de selectores: **Dispositivo**, **versión**, **tema**, diseño y configuración de la barra de acciones. El **barra de herramientas del diseñador** también incluye iconos para iniciar el Editor de temas y para habilitar la cuadrícula de diseño de materiales.
 
 -   **Cuadro de herramientas** &ndash; proporciona una lista de widgets y los diseños que puede arrastrar y colocar en el **superficie de diseño**.
 
@@ -237,7 +237,7 @@ Este cambio se almacena en el widget `text` propiedad; no modifica el valor asig
 Cuando la clave en una nueva cadena de texto, puede presionar <kbd>MAYÚS</kbd> +
 <kbd>ENTRAR</kbd> para el texto escrito se vinculan automáticamente a un nuevo recurso.
 
-### <a name="margin"></a>Margin
+### <a name="margin"></a>Margen
 
 Cuando se selecciona un widget, el diseñador muestra los identificadores que le permiten cambiar el tamaño o el margen del widget de forma interactiva. Al hacer clic en el widget cuando se selecciona éste alterna entre el modo de edición de margen y el modo de edición de tamaño.
 
@@ -310,7 +310,7 @@ Cuando se edita un diseño en el diseñador, utilice las siguientes característ
 
 -   **Superficie de diseño** &ndash; facilita la construcción visual de la interfaz de usuario, lo que le ofrece una representación editable de cómo aparecerá el diseño en el dispositivo.
 
--   **Barra de herramientas** &ndash; muestra una lista de selectores: **dispositivo**, **versión**, **tema**, diseño y configuración de la barra de acciones. La barra de herramientas también incluye iconos para iniciar el Editor de temas y para habilitar la cuadrícula de diseño de materiales.
+-   **Barra de herramientas** &ndash; muestra una lista de selectores: **Dispositivo**, **versión**, **tema**, diseño y configuración de la barra de acciones. La barra de herramientas también incluye iconos para iniciar el Editor de temas y para habilitar la cuadrícula de diseño de materiales.
 
 -   **Cuadro de herramientas** &ndash; proporciona una lista de widgets y los diseños que puede arrastrar y colocar en la superficie de diseño.
 
@@ -461,7 +461,7 @@ Este cambio se almacena en el widget `text` propiedad; no modifica el valor asig
 Cuando la clave en una nueva cadena de texto, puede presionar <kbd>MAYÚS</kbd> +
 <kbd>ENTRAR</kbd> para el texto escrito se vinculan automáticamente a un nuevo recurso.
 
-### <a name="margin"></a>Margin
+### <a name="margin"></a>Margen
 
 Cuando se selecciona un widget, el diseñador muestra los identificadores que le permiten cambiar el tamaño o el margen del widget de forma interactiva. Al hacer clic en el widget cuando se selecciona éste alterna entre el modo de edición de margen y el modo de edición de tamaño.
 

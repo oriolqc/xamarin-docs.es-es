@@ -1,14 +1,19 @@
 ---
 title: Características de la plataforma de Xamarin.Android
-description: 'Documentos de esta sección tratan características específicas de Android. Aquí encontrará temas como usa fragmentos, trabajar con mapas y encapsular datos con los proveedores de contenido.'
+description: Documentos de esta sección tratan características específicas de Android. Aquí encontrará temas como usa fragmentos, trabajar con mapas y encapsular datos con los proveedores de contenido.
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2018
+ms.openlocfilehash: 8ce50ab9a1bcd029a0db97e6dd66518d646d82ef
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61085024"
 ---
-
 # <a name="platform-features"></a>Características de la plataforma
 
 _Los documentos de esta sección tratan características específicas de Android. Aquí encontrará temas sobre fragmentos, trabajo con mapas y encapsulamiento de datos con los proveedores de contenido._
@@ -17,7 +22,7 @@ _Los documentos de esta sección tratan características específicas de Android
 
 Haz de Android es una nueva tecnología de cerca de campo Communication (NFC) en Android 4 que permite compartir información a través de NFC en cerca de las aplicaciones.
 
-## <a name="working-with-filesandroidplatformfilesindexmd"></a>[Working with Files (Trabajo con archivos)](~/android/platform/files/index.md)
+## <a name="working-with-filesandroidplatformfilesindexmd"></a>[Trabajar con archivos](~/android/platform/files/index.md)
 
 En esta sección se describe cómo tener acceso a archivos en Xamarin.Android.
 
@@ -36,7 +41,7 @@ Android 3.0 presentó fragmentos, que muestra cómo admitir diseños más flexib
 
 
 
-## <a name="app-linkingandroidplatformapp-linkingmd"></a>[Vinculación de aplicación](~/android/platform/app-linking.md)
+## <a name="app-linkingandroidplatformapp-linkingmd"></a>[App-Linking](~/android/platform/app-linking.md)
 
 Esta guía describirá cómo es compatible con Android 6.0 _aplicación vinculación_, una técnica que permite que las aplicaciones móviles responder a las direcciones URL en los sitios Web. Trataremos cómo implementar la vinculación a la aplicación en una aplicación de Android 6.0 y cómo configurar un sitio Web para conceder permisos a la aplicación móvil para administrar vínculos de la aplicación para el dominio.
 

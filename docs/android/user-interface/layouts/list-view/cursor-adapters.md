@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 10/25/2017
 ms.openlocfilehash: fbdd0f2ea000f0cf46178c615e7526bf7f210a41
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61187181"
 ---
 # <a name="using-cursoradapters"></a>Uso de CursorAdapters
 
@@ -176,5 +176,5 @@ El `OnDestroy` método contiene el `StopManagingCursor` llamada al método se ha
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [SimpleCursorTableAdapter (ejemplo)](https://developer.xamarin.com/samples/SimpleCursorTableAdapter/)
+- [SimpleCursorTableAdapter (sample)](https://developer.xamarin.com/samples/SimpleCursorTableAdapter/)
 - [CursorTableAdapter (ejemplo)](https://developer.xamarin.com/samples/CursorTableAdapter/)

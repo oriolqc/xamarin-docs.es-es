@@ -1,6 +1,6 @@
 ---
 title: Resumen del capítulo 4. Desplazamiento de la pila
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del capítulo 4. Desplazamiento de la pila'
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 4. Desplazamiento de la pila'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 7A39FD4F-15AD-4F94-960E-9FEEB63FFD44
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: 87846eba71278295ae6f266f6e786c0992aebd34
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334607"
 ---
 # <a name="summary-of-chapter-4-scrolling-the-stack"></a>Resumen del capítulo 4. Desplazamiento de la pila
 

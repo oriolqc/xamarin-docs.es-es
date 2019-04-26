@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
 ms.openlocfilehash: 0a14e3e3eb58b264d1909b6576bbbc4f7e8f4068
-ms.sourcegitcommit: 650fd5813e243d67eea13c4bc76683c0f8134123
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50737211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61167018"
 ---
 # <a name="menus-in-xamarinmac"></a>Menús de Xamarin.Mac
 
@@ -1011,7 +1011,7 @@ Vamos a crear un menú personalizado de acoplamiento para nuestra aplicación ha
 1. En Visual Studio para Mac, haga doble clic en de la aplicación proyecto y seleccione **agregar** > **nuevo archivo...** En el cuadro de diálogo nuevo archivo, seleccione **Xamarin.Mac** > **definición de interfaz vacía**, use "DockMenu" para el **nombre** y haga clic en el **nuevo**  botón para crear el nuevo **DockMenu.xib** archivo:
 
     ![Agregar una definición de interfaz vacía](menu-images/dock02.png "agregar una definición de interfaz vacía")
-2. En el **panel de solución**, haga doble clic en el **DockMenu.xib** archivo para abrirlo y editarlo en Xcode. Cree un nuevo **menú** con los siguientes elementos: **dirección**, **fecha**, **saludo**, y **firma** 
+2. En el **panel de solución**, haga doble clic en el **DockMenu.xib** archivo para abrirlo y editarlo en Xcode. Cree un nuevo **menú** con los siguientes elementos: **Dirección**, **fecha**, **saludo**, y **firma** 
 
     [![Diseñar la interfaz de usuario](menu-images/dock03.png "diseñar la interfaz de usuario")](menu-images/dock03-large.png#lightbox)
 3. A continuación, nos Conectaremos nuestros nuevos elementos de menú a nuestras acciones existentes que creamos para nuestro menú personalizado en el [agregar, modificar y eliminar menús](#Adding,_Editing_and_Deleting_Menus) sección anterior. Cambie a la **conexión Inspector** y seleccione el **Respondedor primera** en el **jerarquía de la interfaz**. Desplácese hacia abajo y busque el `phraseAddress:` acción. Arrastre una línea desde el círculo en esa acción a la **dirección** elemento de menú:
@@ -1051,7 +1051,7 @@ Vamos a crear un botón emergente personalizado para nuestra aplicación haciend
 1. Editar el **Main.storyboard** archivo en Xcode y arrastre un **botón emergente** desde el **Inspector de biblioteca** hasta la **Panel** ventana hemos creado en el [menús contextuales](#Contextual_Menus) sección: 
 
     [![Agregar un botón emergente](menu-images/popup01.png "agregar un botón emergente")](menu-images/popup01-large.png#lightbox)
-2. Agregue un nuevo elemento de menú y establezca los títulos de los elementos en el menú emergente a: **dirección**, **fecha**, **saludo**, y **firma** 
+2. Agregar un nuevo elemento de menú y establezca los títulos de los elementos en el menú emergente: **Dirección**, **fecha**, **saludo**, y **firma** 
 
     [![Configuración de los elementos de menú](menu-images/popup02.png "configurar los elementos de menú")](menu-images/popup02-large.png#lightbox)
 3. A continuación, vamos a conectar nuestros nuevos elementos de menú con las acciones existentes que creamos para nuestro menú personalizado en el [agregar, modificar y eliminar menús](#Adding,_Editing_and_Deleting_Menus) sección anterior. Cambie a la **conexión Inspector** y seleccione el **Respondedor primera** en el **jerarquía de la interfaz**. Desplácese hacia abajo y busque el `phraseAddress:` acción. Arrastre una línea desde el círculo en esa acción a la **dirección** elemento de menú: 

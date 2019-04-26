@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2018
 ms.openlocfilehash: 04a07d5b7f37222515136e5592f31a4583b02fe3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157369"
 ---
 # <a name="which-android-sdk-packages-should-i-install"></a>¿Qué paquetes de Android SDK debo instalar?
 

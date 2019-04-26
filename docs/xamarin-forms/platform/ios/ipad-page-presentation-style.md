@@ -1,5 +1,5 @@
 ---
-title: Estilo de presentación de página Modal de iPad
+title: Estilo de presentación de la página modal de iPad
 description: Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos. En este artículo se explica cómo consumir el estilo de presentación de una página modal en un iPad de los conjuntos específicos de la plataforma de iOS.
 ms.prod: xamarin
 ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
@@ -8,13 +8,13 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
 ms.openlocfilehash: b99898301ed6469b6e0d62ae0077b96aa9c4f3eb
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54209090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60896925"
 ---
-# <a name="ipad-modal-page-presentation-style"></a>Estilo de presentación de página Modal de iPad
+# <a name="ipad-modal-page-presentation-style"></a>Estilo de presentación de la página modal de iPad
 
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
 

@@ -9,11 +9,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
 ms.openlocfilehash: 640d1adc048bec167508d8c288b62d498f061b0d
-ms.sourcegitcommit: 4859da8772dbe920fdd653180450e5ddfb436718
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/30/2018
-ms.locfileid: "50234978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61233207"
 ---
 # <a name="xamarinmac-error-messages-mmp"></a>Mensajes de error de Xamarin.Mac (mmp)
 
@@ -146,7 +146,7 @@ Una solución de último paja sería usar una versión anterior de Xamarin.Mac, 
 
 <a name="MM0098" />
 
-#### <a name="mm0098-aot-compilation-is-only-available-on-unified"></a>MM0098: Compilación de AOT solo está disponible en unificados
+#### <a name="mm0098-aot-compilation-is-only-available-on-unified"></a>MM0098: Compilación AOT solo está disponible en unificados
 
 <a name="MM0099" />
 
@@ -154,7 +154,7 @@ Una solución de último paja sería usar una versión anterior de Xamarin.Mac, 
 
 <a name="MM0114" />
 
-#### <a name="mm0114-hybrid-aot-compilation-requires-all-assemblies-to-be-aot-compiled"></a>MM0114: Compilación AOT híbrida compilación requiere que todos los ensamblados se puede aplicar la compilación AOT.
+#### <a name="mm0114-hybrid-aot-compilation-requires-all-assemblies-to-be-aot-compiled"></a>MM0114: Compilación de AOT híbrida requiere que todos los ensamblados se puede aplicar la compilación AOT.
 
 ## <a name="mm1xxx-file-copy--symlinks-project-related"></a>MM1xxx: copiar el archivo o los vínculos simbólicos (relacionadas con el proyecto)
 
@@ -162,11 +162,11 @@ Una solución de último paja sería usar una versión anterior de Xamarin.Mac, 
 
 #### <a name="mm1034-could-not-create-symlink-file---target-error-number"></a>MM1034: No se pudo crear el vínculo simbólico "{archivos}" -> '{target}': error de {number}
 
-### <a name="mm14xx-product-assemblies"></a>MM14xx: Los ensamblados de producto
+### <a name="mm14xx-product-assemblies"></a>MM14xx: Ensamblados de producto
 
 <a name="MM1401" />
 
-#### <a name="mm1401-the-required-0-assembly-is-missing-from-the-references"></a>MM1401: Obligatoria '{0}' no está presente en las referencias de ensamblado
+#### <a name="mm1401-the-required-0-assembly-is-missing-from-the-references"></a>MM1401: Necesario '{0}' no está presente en las referencias de ensamblado
 
 <a name="MM1402" />
 
@@ -190,9 +190,9 @@ Una solución de último paja sería usar una versión anterior de Xamarin.Mac, 
 
 <a name="MM1407" />
 
-#### <a name="mm1407-mismatch-between-xamarinmac-reference-0-and-target-framework-selected-1"></a>MM1407: Error de coincidencia entre la referencia de Xamarin.Mac '{0}'y la plataforma de destino seleccionado'{1}'.
+#### <a name="mm1407-mismatch-between-xamarinmac-reference-0-and-target-framework-selected-1"></a>MM1407: Referencia de Xamarin.Mac no coinciden '{0}'y la plataforma de destino seleccionado'{1}'.
 
-### <a name="mm15xx-assembly-gathering-not-requiring-linker-errors"></a>MM15xx: Errores ensamblado recopilando (que no requieren del vinculador)
+### <a name="mm15xx-assembly-gathering-not-requiring-linker-errors"></a>MM15xx: Errores de ensamblado recopilando (que no requieren del vinculador)
 
 <a name="MM1501" />
 
@@ -202,15 +202,15 @@ Una solución de último paja sería usar una versión anterior de Xamarin.Mac, 
 
 <a name="MM1600" />
 
-#### <a name="mm1600-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1600: No una Mach O biblioteca dinámica (encabezado desconocido ' 0 x{0}'): {1}.
+#### <a name="mm1600-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1600: No una biblioteca dinámica Mach O (encabezado desconocido ' 0 x{0}'): {1}.
 
 <a name="MM1601" />
 
-#### <a name="mm1601-not-a-static-library-unknown-header-0-1"></a>MM1601: No una biblioteca estática (encabezado desconocido '{0}'): {1}.
+#### <a name="mm1601-not-a-static-library-unknown-header-0-1"></a>MM1601: No es una biblioteca estática (encabezado desconocido '{0}'): {1}.
 
 <a name="MM1602" />
 
-#### <a name="mm1602-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1602: No una Mach O biblioteca dinámica (encabezado desconocido ' 0 x{0}'): {1}.
+#### <a name="mm1602-not-a-mach-o-dynamic-library-unknown-header-0x0-1"></a>MM1602: No una biblioteca dinámica Mach O (encabezado desconocido ' 0 x{0}'): {1}.
 
 <a name="MM1603" />
 
@@ -220,7 +220,7 @@ Una solución de último paja sería usar una versión anterior de Xamarin.Mac, 
 
 #### <a name="mm1604-file-of-type-0-is-not-a-macho-file-1"></a>MM1604: Archivo de tipo {0} no es un archivo MachO ({1}).
 
-## <a name="mm2xxx-linker"></a>MM2xxx: vinculador
+## <a name="mm2xxx-linker"></a>MM2xxx: Enlazador
 
 ### <a name="mm20xx-linker-general-errors"></a>MM20xx: Errores del vinculador (general)
 
@@ -238,7 +238,7 @@ Una solución de último paja sería usar una versión anterior de Xamarin.Mac, 
 
 <a name="MM2004" />
 
-#### <a name="mm2004-extra-linker-definitions-file-0-could-not-be-located"></a>MM2004: Archivo de definiciones adicional del vinculador '{0}' no se pudo encontrar.
+#### <a name="mm2004-extra-linker-definitions-file-0-could-not-be-located"></a>MM2004: Archivo de definiciones de enlazador adicionales '{0}' no se pudo encontrar.
 
 <a name="MM2005" />
 
@@ -254,7 +254,7 @@ Una solución de último paja sería usar una versión anterior de Xamarin.Mac, 
 
 <a name="MM2009" />
 
-#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009: Hace referencia {0}.{1}     ** Este mensaje está relacionado con MM2006 **
+#### <a name="mm2009-referenced-by-01------this-message-is-related-to-mm2006-"></a>MM2009: Hace referencia a él {0}.{1}     ** Este mensaje está relacionado con MM2006 **
 
 <a name="MM2010" />
 
@@ -266,7 +266,7 @@ Una solución de último paja sería usar una versión anterior de Xamarin.Mac, 
 
 <a name="MM2012" />
 
-#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: Primer de única {0} de {1} "Hace referencia a" advertencias que se muestran. ** Este mensaje relacionado con 2009 \*\*
+#### <a name="mm2012-only-first-0-of-1-referenced-by-warnings-shown--this-message-related-to-2009-"></a>MM2012: Solo los primeros {0} de {1} "Hace referencia a" advertencias que se muestran. ** Este mensaje relacionado con 2009 \*\*
 
 <a name="MM2013" />
 
@@ -274,7 +274,7 @@ Una solución de último paja sería usar una versión anterior de Xamarin.Mac, 
 
 <a name="MM2014" />
 
-#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Extensiones de Xamarin.Mac no admite la vinculación. La solicitud se omitirá la vinculación. ** Este mensaje es obsoleta en XM 3.6 + \*\*
+#### <a name="mm2014-xamarinmac-extensions-do-not-support-linking-request-for-linking-will-be-ignored--this-message-is-obsolete-in-xm-36-"></a>MM2014: Las extensiones de Xamarin.Mac no admite la vinculación. La solicitud se omitirá la vinculación. ** Este mensaje es obsoleta en XM 3.6 + \*\*
 
 <!-- 2015 used by mtouch -->
 
@@ -288,7 +288,7 @@ Una solución de último paja sería usar una versión anterior de Xamarin.Mac, 
 
 <a name="MM202x" />
 
-#### <a name="mm202x-binding-optimizer-failed-processing-"></a>MM202x: Un error de enlace optimizador procesamiento `...`.
+#### <a name="mm202x-binding-optimizer-failed-processing-"></a>MM202x: Enlace el optimizador no pudieron procesarse `...`.
 
 <a name="MM2100" />
 
@@ -340,15 +340,15 @@ Consulte https://msdn.microsoft.com/library/x0w2664k.aspx para obtener más info
 
 <a name="MM4001" />
 
-#### <a name="mm4001-the-main-template-could-not-be-expanded-to-0"></a>MM4001: No se pudo expandir la plantilla principal a `{0}`.
+#### <a name="mm4001-the-main-template-could-not-be-expanded-to-0"></a>MM4001: La plantilla principal no se puede expandir a `{0}`.
 
-### <a name="mm41xx-registrar"></a>MM41xx: registrador
+### <a name="mm41xx-registrar"></a>MM41xx: registrar
 
 <a name="MM4134" />
 
 #### <a name="mm4134-your-application-is-using-the-0-framework-which-isnt-included-in-the-macos-sdk-youre-using-to-build-your-app-this-framework-was-introduced-in-osx-2-while-youre-building-with-the-macos-1-sdk-this-configuration-is-not-supported-with-the-static-registrar-pass---registrardynamic-as-an-additional-mmp-argument-in-your-projects-mac-build-option-to-select-alternatively-select-a-newer-sdk-in-your-apps-mac-build-options"></a>MM4134: La aplicación utiliza el '{0}' framework, que no se incluye en el SDK de MacOS usa para compilar la aplicación (este marco se introdujo en OSX {2}, mientras que va a compilar con MacOS {1} SDK.) Esta configuración no es compatible con el registrador estático (pass--registrador: dinámica como un argumento de mmp adicionales en la opción de compilación de Mac de su proyecto para seleccionar). Como alternativa, seleccione un SDK más reciente en las opciones de compilación de Mac de la aplicación.
 
-## <a name="mm5xxx-gcc-and-toolchain"></a>MM5xxx: GCC y la cadena de herramientas
+## <a name="mm5xxx-gcc-and-toolchain"></a>MM5xxx: GCC y cadena de herramientas
 
 ### <a name="mm51xx-compilation"></a>MM51xx: compilación
 
@@ -368,7 +368,7 @@ Consulte https://msdn.microsoft.com/library/x0w2664k.aspx para obtener más info
 
 <a name="MM5202" />
 
-#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202: Mono.framework MDK falta. Instale el MDK para su versión Mono.framework desde http://mono-project.com/Downloads
+#### <a name="mm5202-monoframework-mdk-is-missing-please-install-the-mdk-for-your-monoframework-version-from-httpmono-projectcomdownloads"></a>MM5202: Falta mono.Framework MDK. Instale el MDK para su versión Mono.framework desde http://mono-project.com/Downloads
 
 <a name="MM5203" />
 
@@ -417,15 +417,15 @@ Consulte la [mtouch equivalente advertencia](~/ios/troubleshooting/mtouch-errors
 
 <a name="MM5306" />
 
-#### <a name="mm5306-missing-dependencies-please-install-xcode-command-line-tools-component"></a>MM5306: Faltan dependencias. Instale el componente "Herramientas de línea de comandos" Xcode
+#### <a name="mm5306-missing-dependencies-please-install-xcode-command-line-tools-component"></a>MM5306: Dependencias que faltan. Instale el componente "Herramientas de línea de comandos" Xcode
 
 <a name="MM5308" />
 
-#### <a name="mm5308-xcode-license-agreement-may-not-have-been-accepted--please-launch-xcode"></a>MM5308: Contrato de licencia de Xcode es posible que no se han aceptado.  Inicie Xcode.
+#### <a name="mm5308-xcode-license-agreement-may-not-have-been-accepted--please-launch-xcode"></a>MM5308: Puede que no ha aceptado el contrato de licencia de Xcode.  Inicie Xcode.
 
 <a name="MM5309" />
 
-#### <a name="mm5309-native-linking-failed-with-error-code-1--check-build-log-for-details"></a>MM5309: Vinculación nativo error con código de error 1.  Compruebe el registro de compilación para obtener más información.
+#### <a name="mm5309-native-linking-failed-with-error-code-1--check-build-log-for-details"></a>MM5309: No se pudo vincular nativo con código de error 1.  Compruebe el registro de compilación para obtener más información.
 
 <a name="MM5310" />
 
@@ -434,9 +434,9 @@ Consulte la [mtouch equivalente advertencia](~/ios/troubleshooting/mtouch-errors
 <!-- MM6xxx: mmp internal tools -->
 <!-- MM7xxx: reserved -->
 
-## <a name="mm8xxx-runtime"></a>MM8xxx: tiempo de ejecución
+## <a name="mm8xxx-runtime"></a>MM8xxx: runtime
 
-### <a name="mm800x-misc"></a>MM800x: Misc.
+### <a name="mm800x-misc"></a>MM800x: misc
 
 <!-- 8000 used by mtouch -->
 <!-- 8001 used by mtouch -->

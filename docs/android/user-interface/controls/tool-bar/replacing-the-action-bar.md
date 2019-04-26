@@ -1,5 +1,5 @@
 ---
-title: Reemplazar la barra de acciones
+title: Reemplazo de la barra de acciones
 ms.prod: xamarin
 ms.assetid: 5341D28E-B203-478D-8464-6FAFDC3A4110
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2018
 ms.openlocfilehash: 9e9fa1e2651661670f89baac7fcd438b3d14bfb3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61201006"
 ---
-# <a name="replacing-the-action-bar"></a>Reemplazar la barra de acciones
+# <a name="replacing-the-action-bar"></a>Reemplazo de la barra de acciones
 
 ## <a name="overview"></a>Información general
 
@@ -283,7 +283,7 @@ Si la aplicación no está correctamente configurada para usar un tema personali
 
 ![Error que se puede producir cuando no se usa el tema personalizado](replacing-the-action-bar-images/03-theme-not-defined.png)
 
-Además, un mensaje de error, como es posible que se produce lo siguiente: _Java.Lang.IllegalStateException: esta actividad ya tiene una barra de acciones proporcionada por la decoración de ventana._ 
+Además, se puede generar un mensaje de error como el siguiente: _Java.Lang.IllegalStateException: Esta actividad ya tiene una barra de acciones proporcionada por la decoración de ventana._ 
 
 Para corregir este error, compruebe que la `android:theme` atributo para el tema personalizado se agrega a `<application>` (en **Properties/Androidmanifest.XML**) como se describió anteriormente en [aplicar el tema personalizado](#apply-the-custom-theme). Además, este error puede producirse si el `Toolbar` diseño o en un tema personalizado no está configurado correctamente.
 

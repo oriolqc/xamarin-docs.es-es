@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 08/30/2017
 ms.openlocfilehash: 3a00a7256cace9cbcff3478d866646d48cfdc50b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61385076"
 ---
 # <a name="introduction-to-coreml-in-xamarinios"></a>Introducción a CoreML en Xamarin.iOS
 
@@ -37,7 +37,7 @@ Agregar un modelo de CoreML (un archivo con el **.mlmodel** extensión) a la **r
 
 En las propiedades del archivo de modelo, su **acción de compilación** está establecido en **CoreMLModel**. Esto significa que se compilarán en un **.mlmodelc** archivo cuando se compila la aplicación.
 
-### <a name="2-load-the-model"></a>2. El modelo de carga
+### <a name="2-load-the-model"></a>2. Cargue el modelo
 
 Cargar el modelo mediante el `MLModel.Create` método estático:
 

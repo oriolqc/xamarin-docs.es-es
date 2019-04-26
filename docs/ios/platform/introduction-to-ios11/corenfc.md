@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 09/25/2017
 ms.openlocfilehash: 6888f7147796d3c00752d10387c19d0d9f269cad
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170854"
 ---
 # <a name="core-nfc-in-xamarinios"></a>Core NFC en Xamarin.iOS
 
@@ -163,5 +163,5 @@ CoreNFC permite a la aplicación leer datos de etiquetas NFC. Admite la lectura 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [NFCTagReader (ejemplo)](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)
+- [NFCTagReader (sample)](https://developer.xamarin.com/samples/monotouch/ios11/NFCTagReader/)
 - [Introducción a Core NFC (sesión WWDC) (vídeo)](https://developer.apple.com/videos/play/wwdc2017/718/)

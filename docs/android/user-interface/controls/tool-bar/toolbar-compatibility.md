@@ -1,5 +1,5 @@
 ---
-title: Compatibilidad de la barra de herramientas
+title: Compatibilidad de barra de herramientas
 ms.prod: xamarin
 ms.assetid: A0798CA1-2C7D-43B6-9E91-4435CC7B6683
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
 ms.openlocfilehash: 12c19cf1024b78e8be30b7c9f2652019e9854375
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50110334"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61300362"
 ---
-# <a name="toolbar-compatibility"></a>Compatibilidad de la barra de herramientas
+# <a name="toolbar-compatibility"></a>Compatibilidad de barra de herramientas
 
 
 ## <a name="overview"></a>Información general
@@ -49,7 +49,7 @@ A continuación, agregue el [biblioteca de compatibilidad de Android v7 AppCompa
 
 [![Paquete de la captura de pantalla de V7 Appcompat seleccionado en Administrar paquetes NuGet](toolbar-compatibility-images/01-appcompat-nuget-sml.png)](toolbar-compatibility-images/01-appcompat-nuget.png#lightbox)
 
-Cuando se instala este NuGet, otros paquetes de NuGet también se instalan si no está presente (como **Xamarin.Android.Support.Animated.Vector.Drawable**, **Xamarin.Android.Support.v4**, y **Xamarin.Android.Support.Vector.Drawable**). Para obtener más información acerca de cómo instalar paquetes de NuGet, consulte [Tutorial: incluidos unos NuGet en el proyecto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
+Cuando se instala este NuGet, otros paquetes de NuGet también se instalan si no está presente (como **Xamarin.Android.Support.Animated.Vector.Drawable**, **Xamarin.Android.Support.v4**, y **Xamarin.Android.Support.Vector.Drawable**). Para obtener más información acerca de cómo instalar paquetes de NuGet, consulte [Tutorial: Incluir NuGet en el proyecto](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
 
 ## <a name="use-an-appcompat-theme-and-toolbar"></a>Utilizar un tema de AppCompat y la barra de herramientas

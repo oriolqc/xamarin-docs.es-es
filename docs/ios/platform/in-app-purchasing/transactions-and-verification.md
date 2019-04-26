@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 83f5fd233c004271169a4d00d0a65e70aa925b95
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61369113"
 ---
 # <a name="transactions-and-verification-in-xamarinios"></a>Las transacciones y comprobación de Xamarin.iOS
 
@@ -111,7 +111,7 @@ Los dos ejemplos de este documento usan `NSUserDefaults` para realizar el seguim
 
 Uso de `NSUserDefaults` mantiene el código de ejemplo simple, pero no ofrece una solución muy segura ya que es posible que los usuarios preocupados por técnicamente actualizar la configuración (omitiendo el mecanismo de pago).   
    
-Nota: Las aplicaciones del mundo Real deben adoptar un mecanismo seguro para almacenar adquirido contenido que no está sujeto a alteración de usuarios. Esto puede implicar el cifrado y otras técnicas, incluida la autenticación de servidor remoto.   
+Nota: Aplicaciones del mundo real deben adoptar un mecanismo seguro para almacenar adquirido contenido que no está sujeto a alteración de usuarios. Esto puede implicar el cifrado y otras técnicas, incluida la autenticación de servidor remoto.   
    
  El mecanismo también debe estar diseñado para aprovechar las características de copia de seguridad y recuperación integradas de iOS, iTunes y iCloud. Así se asegurará de que después de que un usuario restaura una copia de seguridad de sus compras anteriores estará disponibles inmediatamente.   
    

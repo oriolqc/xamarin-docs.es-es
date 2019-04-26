@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/28/2017
 ms.openlocfilehash: db24c8677b0a3099193132575e92bc43a4c31dea
-ms.sourcegitcommit: 729035af392dc60edb9d99d3dc13d1ef69d5e46c
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50675567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61251038"
 ---
 # <a name="internationalization-encodings-in-xamarinios"></a>Codificaciones de internacionalización de Xamarin.iOS
 
@@ -29,17 +29,17 @@ Esto se realiza seleccionando las codificaciones adicionales desde el panel de c
 Puede seleccionar uno de los siguientes:
 
 -  CJK: para Chineese, japonés y coreano
--  Oriente: árabe, hebreo, turco y Latin5.
--  otros: cirílico, Báltico, vietnamita, tailandés y ucraniano
--  poco frecuentes: EBCDIC codificaciones y otras páginas de códigos raros
--  Oeste: idiomas occidentales, Pascua y Europa occidental
+-  Oriente: Árabe, hebreo, turco y Latin5.
+-  Otro: Cirílico, Báltico, vietnamita, tailandés y ucraniano
+-  poco frecuentes: Codificaciones de EBCDIC y otras páginas de códigos raros
+-  oeste de: Idiomas occidentales, Pascua y Europa occidental
 -  todo
 
 
  <a name="cjk" />
 
 
-## <a name="cjk"></a>CJK
+## <a name="cjk"></a>cjk
 
 -  CP51932
 -  CP932

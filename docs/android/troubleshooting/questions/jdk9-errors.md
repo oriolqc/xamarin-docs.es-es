@@ -9,11 +9,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
 ms.openlocfilehash: d8c64ff79367d93e282edd9534ffb98f5bb90c93
-ms.sourcegitcommit: 7f6127c2f425fadc675b77d14de7a36103cff675
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "36269678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61153341"
 ---
 # <a name="xamarinandroid-and-java-development-kit-9-or-later"></a>Kit de desarrollo de Java 9 o posterior y Xamarin.Android
 

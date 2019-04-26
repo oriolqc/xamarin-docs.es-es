@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 01/05/2018
 ms.openlocfilehash: cfdd639672f7fa624c7c8e30f17fbfc9dad403af
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53060166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075486"
 ---
 # <a name="xaml-markup-extensions"></a>Extensiones de marcado XAML
 
@@ -36,7 +36,7 @@ En cualquier caso, la cadena de texto se establece en el `Color` atributo se con
 
 Es posible que prefiera en su lugar, establezca el `Color` desde un valor almacenado en un diccionario de recursos, o desde el valor de una propiedad estática de una clase que ha creado o una propiedad de tipo de atributo `Color` de otro elemento en la página, o construido desde Separe los valores de matiz, saturación y luminosidad.
 
-Todas estas opciones son posibles mediante las extensiones de marcado XAML. Pero no permita que la frase "extensiones de marcado" intimidar: extensiones de marcado XAML son *no* extensiones a XML. Incluso con las extensiones de marcado XAML, XAML es siempre XML legal.
+Todas estas opciones son posibles mediante las extensiones de marcado XAML. Pero no permita que la frase "extensiones de marcado" lo abrume: Extensiones de marcado XAML son *no* extensiones a XML. Incluso con las extensiones de marcado XAML, XAML es siempre XML legal.
 
 Una extensión de marcado es simplemente una manera diferente para expresar un atributo de un elemento. Las extensiones de marcado XAML son normalmente identificables mediante una configuración de atributo que se encierra entre llaves:
 

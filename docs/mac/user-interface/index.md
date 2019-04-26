@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/27/2018
 ms.openlocfilehash: a12553cf0b7b9584bb8ff7bc04ed326ad4a7ad2a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61281602"
 ---
 # <a name="macos-user-interface-controls-in-xamarinmac"></a>controles de interfaz de usuario de macOS en Xamarin.Mac
 
@@ -74,4 +74,4 @@ También se recomienda echar un vistazo a la [Galería de ejemplos de Mac](https
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Directrices de interfaz humana de macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)
+- [Directrices de la interfaz humana de macOS](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

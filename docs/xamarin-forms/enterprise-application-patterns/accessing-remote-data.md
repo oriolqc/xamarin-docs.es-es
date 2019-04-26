@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
 ms.openlocfilehash: 3a46b939fa87cd6535c9f86c46981c098542e7c9
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61277971"
 ---
 # <a name="accessing-remote-data"></a>Acceso a datos remotos
 
@@ -55,7 +55,7 @@ Figura 10-1 se muestra la interacción de las clases que leen datos del catálog
 
 [![](accessing-remote-data-images/catalogdata.png "Recuperación de datos desde el microservicio de catálogo")](accessing-remote-data-images/catalogdata-large.png#lightbox "recuperar datos desde el microservicio de catálogo")
 
-**Figura 10-1**: recuperación de datos desde el microservicio de catálogo
+**Figura 10-1**: Recuperación de datos desde el microservicio de catálogo
 
 Cuando el `CatalogView` se navega a, el `OnInitialize` método en el `CatalogViewModel` se llama a la clase. Este método recupera datos del catálogo de microservicio de catálogo, como se muestra en el ejemplo de código siguiente:
 
@@ -160,7 +160,7 @@ Figura 10-2 se muestra la interacción de las clases que envían los datos de la
 
 [![](accessing-remote-data-images/basketdata.png "Envío de datos para el microservicio de cesta")](accessing-remote-data-images/basketdata-large.png#lightbox "envío de datos para el microservicio de cesta")
 
-**Figura 10-2**: envío de datos para el microservicio de cesta
+**Figura 10-2**: Envío de datos para el microservicio de cesta
 
 Cuando se agrega un elemento a la cesta de compra, el `ReCalculateTotalAsync` método en el `BasketViewModel` se llama a la clase. Este método actualiza el valor total de elementos de la cesta y envía los datos de la cesta de compras para el microservicio de cesta, como se muestra en el siguiente ejemplo de código:
 
@@ -233,7 +233,7 @@ Figura 10-3 se muestran las interacciones de clases que eliminarán datos de la 
 
 ![](accessing-remote-data-images/checkoutdata.png "Datos eliminando el desde el microservicio de cesta")
 
-**Figura 10-3**: eliminar datos en el microservicio de cesta
+**Figura 10-3**: Eliminar datos en el microservicio de cesta
 
 Cuando se invoca el proceso de formalización, la `CheckoutAsync` método en el `CheckoutViewModel` se llama a la clase. Este método crea un nuevo pedido, antes de borrar la cesta de compra, como se muestra en el ejemplo de código siguiente:
 
@@ -298,7 +298,7 @@ Las aplicaciones distribuidas, como eShopOnContainers hacen referencia a la apli
 -   Una memoria caché compartida, que se puede acceder mediante varios procesos o equipos.
 -   Una caché privada, donde los datos se guardan localmente en el dispositivo que ejecuta la aplicación.
 
-La aplicación móvil de eShopOnContainers utiliza una caché privada, donde los datos se guardan localmente en el dispositivo que se está ejecutando una instancia de la aplicación. Para obtener información acerca de la memoria caché utilizada por la aplicación de referencia eShopOnContainers, consulte [Microservicios de. NET: arquitectura para aplicaciones .NET en contenedor](https://aka.ms/microservicesebook).
+La aplicación móvil de eShopOnContainers utiliza una caché privada, donde los datos se guardan localmente en el dispositivo que se está ejecutando una instancia de la aplicación. Para obtener información acerca de la memoria caché utilizada por la aplicación de referencia eShopOnContainers, consulte [Microservicios de. NET: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor).
 
 > [!TIP]
 > Piense en la memoria caché como un almacén de datos transitorios que podría desaparecer en cualquier momento. Asegúrese de que los datos se mantienen en el almacén de datos original, así como la memoria caché. A continuación, se minimiza el riesgo de perder datos si la caché deja de estar disponible.
@@ -380,7 +380,7 @@ Si una solicitud sigue sin funcionar después de un número de reintentos, es me
 
 La aplicación móvil de eShopOnContainers implementa actualmente el patrón de reintento al realizar solicitudes web RESTful. Sin embargo, el `CachedImage` control, que proporciona el [FFImageLoading](https://www.nuget.org/packages/Xamarin.FFImageLoading.Forms/) biblioteca admite el control de errores transitorios Reintentando la carga de la imagen. Si se produce un error en la carga de imágenes, se realizarán más intentos. El número de intentos especificado por el `RetryCount` propiedad y reintentos, se producirán después de un retraso especificado por el `RetryDelay` propiedad. Si estos valores de propiedad no se establecen explícitamente, su valor predeterminado es se aplican los valores: 3 para el `RetryCount` propiedad y 250 ms para el `RetryDelay` propiedad. Para obtener más información sobre la `CachedImage` control, vea [almacenamiento en caché de imágenes](#caching_images).
 
-La aplicación de referencia eShopOnContainers implementa el patrón de reintento. Para obtener más información, incluida una discusión acerca de cómo combinar el patrón de reintento con el `HttpClient` de clases, vea [Microservicios de. NET: arquitectura para aplicaciones .NET en contenedor](https://aka.ms/microservicesebook).
+La aplicación de referencia eShopOnContainers implementa el patrón de reintento. Para obtener más información, incluida una discusión acerca de cómo combinar el patrón de reintento con el `HttpClient` de clases, vea [Microservicios de. NET: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor).
 
 Para obtener más información sobre el patrón de reintento, consulte el [vuelva a intentar](/azure/architecture/patterns/retry/) patrón.
 
@@ -397,7 +397,7 @@ El patrón circuit breaker puede impedir que una aplicación intente repetidamen
 
 Un disyuntor actúa como un proxy para las operaciones que puede producir un error. El proxy debe supervisar el número de errores recientes que se han producido y utilizar esta información para decidir si se permite la operación para continuar, o para devolver una excepción inmediatamente.
 
-La aplicación móvil de eShopOnContainers no implementa el patrón circuit breaker actualmente. Sin embargo, no el de eShopOnContainers. Para obtener más información, consulte [Microservicios de. NET: arquitectura para aplicaciones .NET en contenedor](https://aka.ms/microservicesebook).
+La aplicación móvil de eShopOnContainers no implementa el patrón circuit breaker actualmente. Sin embargo, no el de eShopOnContainers. Para obtener más información, consulte [Microservicios de. NET: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook) (Microservicios de .NET: Arquitectura para aplicaciones .NET en contenedor).
 
 > [!TIP]
 > Combinar los patrones de interruptor y reinténtelo. Una aplicación puede combinar los patrones de reintento y el interruptor de circuito mediante el patrón de reintento para invocar una operación a través de un disyuntor. Sin embargo, la lógica de reintento debe ser sensible a las excepciones devueltas por el disyuntor y dejar de reintentar si el interruptor indica que un error no es transitorio.

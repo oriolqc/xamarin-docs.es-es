@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 74e2f2219dcb0908edce7f109844932639038b25
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50113045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61421128"
 ---
 # <a name="how-can-i-copy-ipa-output-files-to-the-tfs-drop-folder"></a>¿Cómo se puede copiar los archivos de salida IPA en la carpeta de entrega TFS?
 
@@ -47,8 +47,8 @@ Abra el `.csproj` de archivos para el proyecto de aplicación de iOS en un edito
 ## <a name="additional-references"></a>Referencias adicionales
 
 - [Documentación sobre la instalación de TFS para su uso con Xamarin](https://docs.microsoft.com/azure/devops/repos/tfvc/overview)
-- [Tarea de compilación de Azure DevOps: Xamarin.Android](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-android)
-- [Tarea de compilación de Azure DevOps: Xamarin.iOS](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-ios)
+- [Tarea de compilación de DevOps de Azure: Xamarin.Android](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-android)
+- [Tarea de compilación de DevOps de Azure: Xamarin.iOS](https://docs.microsoft.com/azure/devops/pipelines/tasks/build/xamarin-ios)
 
 ### <a name="next-steps"></a>Pasos siguientes
 

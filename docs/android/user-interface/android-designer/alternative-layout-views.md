@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 03b80d3fb1ed7c8db108f86b3b3923c20e1d908f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50109983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61089992"
 ---
 # <a name="alternative-layout-views"></a>Vistas de diseños alternativos
 
@@ -79,7 +79,7 @@ Al hacer clic en el **predeterminado** diseño para verlo, el `TextView` todaví
 
 ## <a name="handling-conflicts"></a>Control de conflictos 
 
-Si decide cambiar el color del texto en el **predeterminado** diseño a verde, aparecerá un icono de advertencia en el diseño vinculado. Al hacer que el diseño, abre el diseño para mostrar el conflicto. Se resalta el widget que provocó el conflicto con un marco rojo y se muestra el siguiente mensaje: *cambios recientes han generado conflictos en este diseño alternativo*. 
+Si decide cambiar el color del texto en el **predeterminado** diseño a verde, aparecerá un icono de advertencia en el diseño vinculado. Al hacer que el diseño, abre el diseño para mostrar el conflicto. Se resalta el widget que provocó el conflicto con un marco rojo y se muestra el mensaje siguiente: *Los cambios recientes han generado conflictos en este diseño alternativo*. 
 
 [![Cambio en conflicto](alternative-layout-views-images/vs/11-conflicting-change-sml.png "cambio en conflicto")](alternative-layout-views-images/vs/11-conflicting-change.png#lightbox)
  
@@ -101,7 +101,7 @@ Si un `CheckBox` se agrega a la **predeterminado** diseño, se genera otro confl
 
 [![Conflicto de casilla de verificación](alternative-layout-views-images/vs/13-checkbox-conflict-sml.png "conflicto de casilla de verificación")](alternative-layout-views-images/vs/13-checkbox-conflict.png#lightbox)
  
-Al hacer clic en el **grandes land** diseño revela el conflicto. Muestra el siguiente mensaje: *cambios recientes han generado conflictos en este diseño alternativo*: 
+Al hacer clic en el **grandes land** diseño revela el conflicto. Se mostrará el mensaje siguiente: *Los cambios recientes han generado conflictos en este diseño alternativo*: 
 
 [![Conflictos de diseño ALT](alternative-layout-views-images/vs/14-alt-layout-conflict-sml.png "conflictos de diseño Alt")](alternative-layout-views-images/vs/14-alt-layout-conflict.png#lightbox)
 
@@ -179,7 +179,7 @@ Al hacer clic en el **predeterminado** diseño para verlo, el `TextView` todaví
 
 ## <a name="handling-conflicts"></a>Control de conflictos 
 
-Si decide cambiar el color del texto en el **predeterminado** diseño a verde, aparecerá un icono de advertencia en el diseño vinculado. Al hacer que el diseño, abre el diseño para mostrar el conflicto. Se resalta el widget que provocó el conflicto con un marco rojo y se muestra el siguiente mensaje: *cambios recientes han generado conflictos en este diseño alternativo*. 
+Si decide cambiar el color del texto en el **predeterminado** diseño a verde, aparecerá un icono de advertencia en el diseño vinculado. Al hacer que el diseño, abre el diseño para mostrar el conflicto. Se resalta el widget que provocó el conflicto con un marco rojo y se muestra el mensaje siguiente: *Los cambios recientes han generado conflictos en este diseño alternativo*. 
 
 [![Cambio conflictivo](alternative-layout-views-images/xs/10-conflict-sml.png)](alternative-layout-views-images/xs/10-conflict.png#lightbox)
 
@@ -201,7 +201,7 @@ Si un `CheckBox` se agrega a la **predeterminado** diseño, se genera otro confl
 
 [![Conflicto de casilla de verificación](alternative-layout-views-images/xs/13-checkbox-conflict-sml.png)](alternative-layout-views-images/xs/13-checkbox-conflict.png#lightbox)
  
-Al hacer clic en el **grandes land** diseño revela el conflicto. Muestra el siguiente mensaje: *cambios recientes han generado conflictos en este diseño alternativo*. 
+Al hacer clic en el **grandes land** diseño revela el conflicto. Se mostrará el mensaje siguiente: *Los cambios recientes han generado conflictos en este diseño alternativo*. 
 
 [![Conflictos de diseño ALT](alternative-layout-views-images/xs/14-alt-layout-conflict-sml.png)](alternative-layout-views-images/xs/14-alt-layout-conflict.png#lightbox)
  

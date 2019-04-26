@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/05/2018
 ms.openlocfilehash: 5e354f8271257ab21a855bdf5d576ce3062fadc7
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60957399"
 ---
 # <a name="working-with-the-android-manifest"></a>Trabajar con el manifiesto de Android
 
@@ -181,7 +181,7 @@ En el lanzamiento de versión del manifiesto de compilación (en **obj/Debug/and
 El manifiesto de Android proporciona una manera de describir las capacidades de la actividad. Esto se realiza mediante [intenciones](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) y el [`[IntentFilter]`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 
 atributo personalizado. Puede especificar qué acciones son apropiadas para su actividad con el [`IntentFilter`](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) 
 constructor y qué categorías son adecuadas con el [`Categories`](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) 
-Propiedad. Debe proporcionarse al menos una actividad (razón por la cual las actividades se proporcionan en el constructor). `[IntentFilter]` se puede proporcionar varias veces, y cada uso da lugar a otro `<intent-filter/>` elemento dentro de la `<activity/>`. Por ejemplo:
+propiedad. Debe proporcionarse al menos una actividad (razón por la cual las actividades se proporcionan en el constructor). `[IntentFilter]` se puede proporcionar varias veces, y cada uso da lugar a otro `<intent-filter/>` elemento dentro de la `<activity/>`. Por ejemplo:
 
 ```csharp
 [Activity (Label="Awesome Demo App", MainLauncher=true, Icon="@drawable/myicon")] 

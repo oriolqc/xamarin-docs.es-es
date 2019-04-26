@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 1301f34ad1f7a0069c542ba81bf237a673fd239d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61013144"
 ---
 # <a name="intent-services-in-xamarinandroid"></a>Servicios de intención en Xamarin.Android
 
@@ -77,5 +77,5 @@ protected override void OnHandleIntent (Android.Content.Intent intent)
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Clase IntentService](https://developer.xamarin.com/api/type/Android.App.IntentService/)
+- [IntentService](https://developer.xamarin.com/api/type/Android.App.IntentService/)
 - [StartService](https://developer.xamarin.com/api/member/Android.Content.Context.StartService/p/Android.Content.Intent/)

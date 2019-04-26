@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
 ms.openlocfilehash: b0e2d5e3c7923e5c3cf2adcc1dd104a97b78e727
-ms.sourcegitcommit: 93c9fe61eb2cdfa530960b4253eb85161894c882
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61321578"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Diseños enlazables en Xamarin.Forms
 
@@ -85,7 +85,7 @@ En este ejemplo, una vista `CircleImage` definida en la  [`DataTemplate`](xref:X
 
 ![El diseño se puede enlazar con un DataTemplate](bindable-layouts-images/top-followers.png "enlazable diseño con una plantilla de datos")
 
-Para obtener más información acerca de las plantillas de datos, vea [plantillas de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+Para obtener más información sobre las plantillas de datos, consulte [Plantillas de datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## <a name="choosing-item-appearance-at-runtime"></a>Elegir la apariencia del elemento en tiempo de ejecución
 

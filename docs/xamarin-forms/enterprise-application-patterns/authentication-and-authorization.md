@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/08/2017
 ms.openlocfilehash: 9db9902dfbf602ba21b353f3a17920dc37b03ee5
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55234009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382328"
 ---
 # <a name="authentication-and-authorization"></a>Autenticación y autorización
 
@@ -347,7 +347,7 @@ private void Logout()
 }
 ```
 
-Este método invoca el `CreateLogoutRequest` método en el `IdentityService` clase, pasa el token de identidad se recupera de la configuración de la aplicación como un parámetro. Para obtener más información acerca de la configuración de la aplicación, consulte [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md). El siguiente ejemplo de código muestra el método `CreateLogoutRequest`:
+Este método invoca el `CreateLogoutRequest` método en el `IdentityService` clase, pasa el token de identidad se recupera de la configuración de la aplicación como un parámetro. Para obtener más información acerca de la configuración de la aplicación, consulte [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md). El siguiente ejemplo de código muestra la `CreateLogoutRequest` método:
 
 ```csharp
 public string CreateLogoutRequest(string token)  

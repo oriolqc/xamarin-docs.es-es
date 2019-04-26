@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/26/2018
 ms.openlocfilehash: 85edbf657382b7c85ab2c5af543431fb51fb0d4e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61019640"
 ---
 # <a name="xamarinforms-boxview"></a>Xamarin.Forms BoxView
 
@@ -52,7 +52,7 @@ El `WidthRequest` y `HeightRequest` propiedades reproducen solo una función de 
 
 El `WidthRequest` y `HeightRequest` se omiten las propiedades si la `BoxView` es *restringida* en el diseño, en el que el caso del contenedor de diseño impone su propio tamaño en el `BoxView`.
 
-Un `BoxView` puede restringir en una dimensión y sin restricciones en el otro. Por ejemplo, si la `BoxView` es un elemento secundario de un vertical `StackLayout`, la dimensión vertical de la `BoxView` es sin restricciones y generalmente se limita su dimensión horizontal. Pero hay excepciones para esa dimensión horizontal: si el `BoxView` tiene su `HorizontalOptions` propiedad establecida en algo distinto `LayoutOptions.Fill`, entonces la dimensión horizontal también es sin restricciones. También es posible que el `StackLayout` para tener una dimensión horizontal sin restricciones, en cuyo caso el `BoxView` también será horizontalmente sin restricciones.
+Un `BoxView` puede restringir en una dimensión y sin restricciones en el otro. Por ejemplo, si la `BoxView` es un elemento secundario de un vertical `StackLayout`, la dimensión vertical de la `BoxView` es sin restricciones y generalmente se limita su dimensión horizontal. Sin embargo, hay excepciones para que la dimensión horizontal: Si el `BoxView` tiene su `HorizontalOptions` propiedad establecida en algo distinto `LayoutOptions.Fill`, entonces la dimensión horizontal también es sin restricciones. También es posible que el `StackLayout` para tener una dimensión horizontal sin restricciones, en cuyo caso el `BoxView` también será horizontalmente sin restricciones.
 
 El [ **BasicBoxView** ](https://developer.xamarin.com/samples/xamarin-forms/BoxView/BasicBoxView) ejemplo muestra un cuadrado de pulgada de uno sin restricciones `BoxView` en el centro de su página:
 
@@ -776,7 +776,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-El segundero se trata de un poco diferente: se aplica una animación en función de aceleración para que parezca que el movimiento tiene mecánica en lugar de smooth. En cada paso, el segundero extrae volver un poco y, a continuación, se insertan su destino. Este pequeño fragmento de código agrega mucho el realismo del movimiento.
+El segundero se trata de un poco diferente: Se aplica una animación en función de aceleración para que parezca que el movimiento tiene mecánica en lugar de smooth. En cada paso, el segundero extrae volver un poco y, a continuación, se insertan su destino. Este pequeño fragmento de código agrega mucho el realismo del movimiento.
 
 ## <a name="conclusion"></a>Conclusión
 

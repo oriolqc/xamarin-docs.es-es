@@ -1,5 +1,5 @@
 ---
-title: '¿Por qué tiene errores mi aplicación de iOS 9 con: System.Exception: no se pudo serializar el objeto de Objective-C?'
+title: '¿Por qué se produce un error System.Exception: Failed to marshal the Objective-C object en mi aplicación para iOS 9?'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8805ABEC-48D4-4CCB-A226-3A5B2ECE4BF0
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: dfe1918d271946eb96d1f57d32c533a075f6d0bd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61421962"
 ---
-# <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-object"></a>¿Por qué tiene errores mi aplicación de iOS 9 con: System.Exception: no se pudo serializar el objeto de Objective-C?
+# <a name="why-does-my-ios-9-app-fail-with-systemexception-failed-to-marshal-the-objective-c-object"></a>¿Por qué se produce un error System.Exception: Failed to marshal the Objective-C object en mi aplicación para iOS 9?
 
 Es posible que vea un error de esta forma:
 

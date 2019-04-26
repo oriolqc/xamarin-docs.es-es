@@ -1,5 +1,5 @@
 ---
-title: Unificación de Google Play Services componentes y NuGet
+title: Unificación de componentes de Google Play Services y NuGet
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5D962EB4-2CB3-4B7D-9D77-889DEACDAE02
@@ -7,13 +7,13 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
 ms.openlocfilehash: 3f5c5f75ae1c7a44537afa59ff4a15d54b1df50b
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39351488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61357441"
 ---
-# <a name="unifying-google-play-services-components-and-nuget"></a>Unificación de Google Play Services componentes y NuGet
+# <a name="unifying-google-play-services-components-and-nuget"></a>Unificación de componentes de Google Play Services y NuGet
 
 ## <a name="history"></a>Historial
 
@@ -22,7 +22,7 @@ Solía ser varios componentes de Google Play Services y paquetes de NuGet:
 -   Servicios de Google Play (Froyo)
 -   Servicios de Google Play (monigote)
 -   Google Play Services (ICS)
--   Servicios de Google Play (JellyBean)
+-   Google Play Services (JellyBean)
 -   Servicios de Google Play (KitKat)
 
 .Jar de Google realmente sólo incluye dos archivos de Google Play Services:
@@ -56,7 +56,7 @@ Monigote no tiene fragmento admiten de forma predeterminada y, por este motivo, 
 Puesto que ya no son necesarias, tenemos deshabilitado/Delisted los siguientes componentes y paquetes de NuGet:
 
 -   Servicios de Google Play (monigote)
--   Servicios de Google Play (JellyBean)
+-   Google Play Services (JellyBean)
 -   Servicios de Google Play (KitKat)
 
 Existente _Google Play Services (ICS)_ componente/Nuget ha cambiado a _Google Play Services_ y se mantendrá al día a partir de ahora. Todos los proyectos que hacen referencia a uno de los paquetes deshabilitado/Delisted deben actualizarse para utilizar este.

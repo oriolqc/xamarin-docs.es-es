@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/09/2018
 ms.openlocfilehash: 0b8f3aa736cba6e70fbf346766499c23a9bbe270
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61418228"
 ---
 # <a name="where-can-i-find-the-dsym-file-to-symbolicate-ios-crash-logs"></a>¿Dónde puedo encontrar el archivo .dSYM para resolver símbolos de registros de bloqueo de iOS?
 
@@ -32,7 +32,7 @@ Al compilar una aplicación de iOS con Visual Studio para Mac o Visual Studio 20
 
     Por ejemplo:
 
-    **TestApp/bin/iPhone/Release /**
+    **TestApp/bin/iPhone/Release/**
 
 > [!NOTE]
 > Como parte del proceso de compilación, Visual Studio 2017 copia el archivo .dSYM desde el host de compilación de Mac para Windows. Si no ve un archivo .dSYM en Windows, asegúrese de que ha configurado las opciones de compilación de la aplicación a [crear un archivo .ipa](~/ios/deploy-test/app-distribution/ipa-support.md).

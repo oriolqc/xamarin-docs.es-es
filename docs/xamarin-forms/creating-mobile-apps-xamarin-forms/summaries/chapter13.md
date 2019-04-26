@@ -1,6 +1,6 @@
 ---
 title: Resumen del capítulo 13. Mapas de bits
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del capítulo 13. Mapas de bits'
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 13. Mapas de bits'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 5D153857-B6B7-4A14-8FB9-067DE198C2C7
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
 ms.openlocfilehash: 737e242e14778f38405845541b2ca30d27c3cf5a
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334645"
 ---
 # <a name="summary-of-chapter-13-bitmaps"></a>Resumen del capítulo 13. Mapas de bits
 
@@ -175,7 +175,7 @@ Al agregar mapas de bits a los proyectos de plataforma, el **acción de compilac
 
 - iOS: **BundleResource**
 - Android: **AndroidResource**
-- UWP: **contenido**
+- UWP: **Contenido**
 
 El [ **ImageTap** ](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter13/ImageTap) ejemplo crea dos objetos con apariencia de botón que consta de `Image` elementos con un `TapGestureRecognizer` instalado. Se pretende que los objetos de ser una pulgada cuadrada. El `Source` propiedad de `Image` se establece mediante `OnPlatform` y `On` objetos que se va a hacer referencia a nombres de archivo potencialmente diferentes en las plataformas. Las imágenes de mapa de bits incluyen números que indica su tamaño en píxeles, para que pueda ver el mapa de bits de tamaño se recupera y procesa.
 

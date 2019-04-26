@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
 ms.openlocfilehash: a57e50f098c92dbfcdcaa3139565d2ba0e291e3d
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61347770"
 ---
 # <a name="skiasharp-transforms"></a>Transformaciones de SkiaSharp
 
@@ -49,7 +49,7 @@ La primera diferencia es que las transformaciones de SkiaSharp se aplican a toda
 
 Las transformaciones de SkiaSharp son relativas a la esquina superior izquierda de la `SKCanvas` mientras Xamarin.Forms transformaciones son relativas a la esquina superior izquierda de la `VisualElement` al que se aplican. Esta diferencia es importante al aplicar la escala y giro transforma porque estas transformaciones son siempre con respecto a un momento determinado.
 
-La realidad la gran diferencia es que son transformaciones de SKiaSharp *métodos* mientras que las transformaciones de Xamarin.Forms son *propiedades*. Se trata de una diferencia semántica más allá de la diferencia sintáctica: transformaciones de SkiaSharp realizan una operación, mientras que las transformaciones de Xamarin.Forms establecen un estado. Transformaciones de SkiaSharp se aplican a objetos gráficos dibujados a continuación, pero no a los objetos de gráficos que se dibujan antes de aplicar la transformación. En cambio, una transformación de Xamarin.Forms se aplica a un elemento previamente representado tan pronto como se establece la propiedad. Transformaciones de SkiaSharp son acumulativas, como los métodos se llaman; Transformaciones de Xamarin.Forms se sustituyen cuando se establece la propiedad con otro valor.
+La realidad la gran diferencia es que son transformaciones de SKiaSharp *métodos* mientras que las transformaciones de Xamarin.Forms son *propiedades*. Se trata de una diferencia semántica más allá de la diferencia sintáctica: Transformaciones de SkiaSharp realizan una operación mientras Xamarin.Forms transforma conjunto un estado. Transformaciones de SkiaSharp se aplican a objetos gráficos dibujados a continuación, pero no a los objetos de gráficos que se dibujan antes de aplicar la transformación. En cambio, una transformación de Xamarin.Forms se aplica a un elemento previamente representado tan pronto como se establece la propiedad. Transformaciones de SkiaSharp son acumulativas, como los métodos se llaman; Transformaciones de Xamarin.Forms se sustituyen cuando se establece la propiedad con otro valor.
 
 Todos los programas de ejemplo en esta sección aparecen en el **transformaciones de SkiaSharp** sección de la [ **SkiaSharpFormsDemos** ](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) programa. Código fuente puede encontrarse en el [ **transforma** ](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms) carpeta de la solución.
 

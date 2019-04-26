@@ -1,6 +1,6 @@
 ---
-title: Modificadores de campo XAML de Xamarin.Forms
-description: 'El atributo de espacio de nombres de x: FieldModifier especifica el nivel de acceso para los campos generados para los elementos XAML con nombre.'
+title: Modificadores de campo XAML en Xamarin.Forms
+description: 'El atributo de espacio de nombres x: FieldModifier especifica el nivel de acceso para los campos generados para los elementos XAML con nombre.'
 ms.prod: xamarin
 ms.assetid: 12357CE0-3C11-4B62-947F-72DB6DFC23A2
 ms.technology: xamarin-forms
@@ -8,31 +8,31 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 06/18/2018
 ms.openlocfilehash: 8be56524ec1c5331f30418fcc29a4bd2c26ccde1
-ms.sourcegitcommit: 7a89735aed9ddf89c855fd33928915d72da40c2d
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36209514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61075303"
 ---
-# <a name="xaml-field-modifiers-in-xamarinforms"></a>Modificadores de campo XAML de Xamarin.Forms
+# <a name="xaml-field-modifiers-in-xamarinforms"></a>Modificadores de campo XAML en Xamarin.Forms
 
-_El `x:FieldModifier` atributo de espacio de nombres especifica el nivel de acceso para los campos generados para los elementos XAML con nombre._
+_El `x:FieldModifier` namespace (atributo) especifica el nivel de acceso para los campos generados para los elementos XAML con nombre._
 
 ## <a name="overview"></a>Información general
 
 Los valores válidos del atributo son:
 
 - `Public` : Especifica que el campo generado para el elemento XAML es `public`.
-- `NotPublic` : Especifica que el campo generado para el elemento XAML está `internal` al ensamblado.
+- `NotPublic` : Especifica que el campo generado para el elemento XAML es `internal` al ensamblado.
 
-Si el valor del atributo no está configurado, el campo generado para el elemento estará `private`.
+Si no se establece el valor del atributo, el campo generado para el elemento será `private`.
 
-Las siguientes condiciones deben cumplirse para un `x:FieldModifier` atributo para ser procesados:
+Las siguientes condiciones deben cumplirse para una `x:FieldModifier` atributo procesarse:
 
-- El elemento de nivel superior XAML debe ser válido `x:Class`.
-- El elemento XAML actual tiene un `x:Name` especificado.
+- El elemento XAML debe ser válido `x:Class`.
+- El elemento actual de XAML tiene un `x:Name` especificado.
 
-El código XAML siguiente muestra ejemplos de establecer el atributo:
+El XAML siguiente muestra ejemplos de establecer el atributo:
 
 ```xaml
 <Label x:Name="privateLabel" />

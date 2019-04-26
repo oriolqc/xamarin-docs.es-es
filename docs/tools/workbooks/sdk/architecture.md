@@ -7,15 +7,15 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
 ms.openlocfilehash: 352e8d0191512184ffd7d82fa0dfa0bc79fa24ca
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61257430"
 ---
 # <a name="architecture-overview"></a>Información general sobre la arquitectura
 
-Xamarin Workbooks incluye dos componentes principales que deben funcionar conjuntamente entre sí: _agente_ y _cliente_.
+Xamarin Workbooks incluye dos componentes principales que deben funcionar conjuntamente entre sí: _Agente_ y _cliente_.
 
 ## <a name="interactive-agent"></a>Agente interactivo
 

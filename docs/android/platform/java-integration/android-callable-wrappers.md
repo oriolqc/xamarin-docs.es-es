@@ -1,5 +1,5 @@
 ---
-title: Android contenedores RCW
+title: Contenedores que se pueden llamar de Android
 ms.prod: xamarin
 ms.assetid: C33E15FA-1E2B-819A-C656-CA588D611492
 ms.technology: xamarin-android
@@ -7,13 +7,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
 ms.openlocfilehash: 7edbdaa5a690a641523cb5baad7909ed01992aa5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61090909"
 ---
-# <a name="android-callable-wrappers"></a>Android contenedores RCW
+# <a name="android-callable-wrappers"></a>Contenedores que se pueden llamar de Android
 
 Android contenedores RCW (ACWs) son necesarios siempre que el tiempo de ejecución Android invoca a código administrado. Estos contenedores son necesarios porque no hay ninguna manera de registrar las clases con arte (el tiempo de ejecución de Android) en tiempo de ejecución. (En concreto, el [DefineClass() JNI función](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) no es compatible con el tiempo de ejecución de Android.} Contenedores RCW Android, por tanto, compensar la falta de compatibilidad de registro de tipo en tiempo de ejecución. 
 

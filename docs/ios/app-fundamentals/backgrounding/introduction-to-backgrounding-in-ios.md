@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 07/24/2018
 ms.openlocfilehash: c533dd54e3b6b11465cfd7daf5b9a93265dbe7b7
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61169767"
 ---
 # <a name="introduction-to-backgrounding-in-ios"></a>Introducción al procesamiento en segundo plano en iOS
 

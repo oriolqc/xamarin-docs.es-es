@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
 ms.openlocfilehash: a30256722647bbea482970d0c4a751954810d99e
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170812"
 ---
 # <a name="listview"></a>ListView
 
@@ -228,13 +228,13 @@ Este conjunto de temas presentados `ListView` y proporciona algunos ejemplos de 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [AccessoryViews (ejemplo)](https://developer.xamarin.com/samples/AccessoryViews/)
-- [BasicTableAndroid (ejemplo)](https://developer.xamarin.com/samples/BasicTableAndroid/)
-- [BasicTableAdapter (ejemplo)](https://developer.xamarin.com/samples/BasicTableAdapter/)
-- [BuiltInViews (ejemplo)](https://developer.xamarin.com/samples/BuiltInViews/)
-- [CustomRowView (ejemplo)](https://developer.xamarin.com/samples/CustomRowView/)
+- [BasicTableAndroid (sample)](https://developer.xamarin.com/samples/BasicTableAndroid/)
+- [BasicTableAdapter (sample)](https://developer.xamarin.com/samples/BasicTableAdapter/)
+- [BuiltInViews (sample)](https://developer.xamarin.com/samples/BuiltInViews/)
+- [CustomRowView (sample)](https://developer.xamarin.com/samples/CustomRowView/)
 - [FastScroll (ejemplo)](https://developer.xamarin.com/samples/FastScroll/)
 - [SectionIndex (ejemplo)](https://developer.xamarin.com/samples/SectionIndex/)
-- [SimpleCursorTableAdapter (ejemplo)](https://developer.xamarin.com/samples/SimpleCursorTableAdapter/)
+- [SimpleCursorTableAdapter (sample)](https://developer.xamarin.com/samples/SimpleCursorTableAdapter/)
 - [CursorTableAdapter (ejemplo)](https://developer.xamarin.com/samples/CursorTableAdapter/)
 - [Tutorial del ciclo de vida de actividad](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Trabajar con tablas y a las celdas (Xamarin.iOS)](~/ios/user-interface/controls/tables/index.md)

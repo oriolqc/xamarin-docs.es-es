@@ -1,5 +1,5 @@
 ---
-title: '¿Por qué tiene errores mi compilación de iOS con: ningún código válido iPhone claves de firma se encuentra en la cadena de claves?'
+title: '¿Por qué aparece el siguiente error en mi compilación de iOS: no valid iPhone code signing keys found in keychain?'
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9DF24C46-D521-4112-9B21-52EA4E8D90D0
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: fe267db1f83695b3d0e8f3d828f91e01b56ba8ee
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61419670"
 ---
-# <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>¿Por qué tiene errores mi compilación de iOS con: ningún código válido iPhone claves de firma se encuentra en la cadena de claves?
+# <a name="why-does-my-ios-build-fail-with-no-valid-iphone-code-signing-keys-found-in-keychain"></a>¿Por qué aparece el siguiente error en mi compilación de iOS: no valid iPhone code signing keys found in keychain?
 
 ## <a name="cause-of-the-error"></a>Causa del error
 Este mensaje de error se produce cuando el proyecto en cuestión está buscando credenciales válidas de firma de código, pero no puede encontrarlos. Firma de código es necesaria para pruebas e implementaciones en dispositivos iOS físicos; como aplicación y Ad-hoc almacenan compilaciones. 
@@ -35,7 +35,7 @@ Se produjo un error en Xamarin.Visual Studio 3.11 que provocó el proyecto de iO
 ### <a name="how-to-fix"></a>Cómo corregir
 Puede solucionar el problema quitando el `<CodesignEntitlements>` marca en la depuración se basa en el archivo .csproj. Puede hacerlo de la siguiente manera:
 
-*Advertencia: Error en los archivos .csproj puede interrumpir el proyecto, por lo que es una buena idea de los archivos de copia de seguridad antes de intentar esto.*
+*Advertencia: Errores en los archivos .csproj pueden interrumpir el proyecto, por lo que es una buena idea de los archivos de copia de seguridad antes de intentar esto.*
 
 1. Haga clic en el proyecto de iOS en el panel de solución y seleccione **descargar el proyecto**
 2. Haga clic de nuevo el proyecto y seleccione **editar .csproj [ProjectName]**

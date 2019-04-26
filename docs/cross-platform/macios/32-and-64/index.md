@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ms.openlocfilehash: 31eb0bfae58ecdca40548e46d1d9d95828be67b4
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61347869"
 ---
 # <a name="3264-bit-platform-considerations"></a>Consideraciones de la plataforma de 32 o 64 bits
 
@@ -79,7 +79,7 @@ Durante la transición de Apple de iOS de 32 bits a 64 bits, aplicaciones tendr�
 Como destino arquitecturas de 32 bits y 64 bits aumentará significativamente el tamaño de una aplicación. Sin embargo, si lo hace, permitirá que los dispositivos más recientes ejecutar código optimizado mientras se continúa admitiendo los dispositivos más antiguos.
 
 > [!IMPORTANT]
-> Si recibe el siguiente mensaje de error al enviar una aplicación de iOS a iTunes App Store, _"Advertencia ITMS-9000: falta la compatibilidad con 64 bits. A partir de iOS nuevo el 1 de febrero de 2015, las aplicaciones que se cargan en el Store de la aplicación deben incluir compatibilidad con 64 bits y compilarse con iOS 8 SDK, incluido en Xcode 6 o posterior. Para habilitar 64 bits en el proyecto, se recomienda usar el valor predeterminado la configuración de "Estándares architectures" de la compilación de Xcode para compilar un solo archivo binario con el código de 32 bits y 64 bits. "_ Debe cambiar las arquitecturas admitidas en uno de los disponibles **ARM64** combinación (como se muestra arriba), recompile y vuelva a intentarlo.
+> Si recibe el siguiente mensaje de error al enviar una aplicación de iOS a iTunes App Store, _"Advertencia ITMS-9000: Falta de compatibilidad con 64 bits. A partir de iOS nuevo el 1 de febrero de 2015, las aplicaciones que se cargan en el Store de la aplicación deben incluir compatibilidad con 64 bits y compilarse con iOS 8 SDK, incluido en Xcode 6 o posterior. Para habilitar 64 bits en el proyecto, se recomienda usar el valor predeterminado la configuración de "Estándares architectures" de la compilación de Xcode para compilar un solo archivo binario con el código de 32 bits y 64 bits. "_ Debe cambiar las arquitecturas admitidas en uno de los disponibles **ARM64** combinación (como se muestra arriba), recompile y vuelva a intentarlo.
 
 ## <a name="mac"></a>Mac
 

@@ -1,5 +1,5 @@
 ---
-title: Publicación en el Store de Apple TV App
+title: Publicación en Apple TV App Store
 description: Este documento describe cómo publicar una aplicación en el Store de Apple TV App. Describe cómo configurar, aprovisionar, compilar y enviar una aplicación de tvOS con Xamarin.
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: b941bcc8588e7fb0377430cca2829ad72ecbc8c6
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50122405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61416704"
 ---
-# <a name="publishing-to-the-apple-tv-app-store"></a>Publicación en el Store de Apple TV App
+# <a name="publishing-to-the-apple-tv-app-store"></a>Publicación en Apple TV App Store
 
 Distribuir aplicaciones a todos los dispositivos de Apple TV, Apple requiere que las aplicaciones se publiquen a través del *App Store de Apple TV*, que hace el Store de la aplicación en la ubicación de la compra integral para aplicaciones de tvOS. Los desarrolladores de muchos tipos de aplicaciones puede han aprovechado del éxito masivo de este único punto de distribución. El Store de Apple TV App es una solución llave en mano, ofrece a los desarrolladores de aplicaciones sistemas de pago y de distribución.
 

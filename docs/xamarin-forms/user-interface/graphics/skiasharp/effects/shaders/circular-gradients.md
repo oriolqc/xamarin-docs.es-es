@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: a17ddf438856600870c9bb3da60a5f4667128d57
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53056050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61218235"
 ---
 # <a name="the-skiasharp-circular-gradients"></a>Los degradados circulares de SkiaSharp
 
@@ -140,7 +140,7 @@ Este código crea un degradado con negro en el centro de difuminación gradualme
 
 [![Degradado radial](circular-gradients-images/RadialGradient.png "degradado Radial")](circular-gradients-images/RadialGradient-Large.png#lightbox)
 
-En los tres casos, el degradado rellena el lienzo. En la pantalla de iOS a la izquierda, el degradado fuera del radio continúa con el último color, que es el blanco. Que es el resultado de `SKShaderTileMode.Clamp`. La pantalla Android muestra el efecto de `SKShaderTileMode.Repeat`: en 100 píxeles desde el centro, el degradado comienza de nuevo con el primer color, que es el negro. El degradado repite cada 100 píxeles de radius. 
+En los tres casos, el degradado rellena el lienzo. En la pantalla de iOS a la izquierda, el degradado fuera del radio continúa con el último color, que es el blanco. Que es el resultado de `SKShaderTileMode.Clamp`. La pantalla Android muestra el efecto de `SKShaderTileMode.Repeat`: De 100 píxeles desde el centro, el degradado comienza de nuevo con el primer color, que es el negro. El degradado repite cada 100 píxeles de radius. 
 
 La pantalla de la plataforma Universal de Windows en el derecho se muestra cómo `SKShaderTileMode.Mirror` hace que los gradientes para las direcciones alternativas. El primer degradado es del negro en el centro en blanco en un radio de 100 píxeles. La siguiente es blanca desde el radio de 100 píxeles en negro en un radio de 200 píxeles y se invierte el degradado siguiente de nuevo.
 

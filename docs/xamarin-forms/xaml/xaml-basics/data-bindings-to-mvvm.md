@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: c7bf7ca28200004e2383631c68cdaa4299348ecb
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61174597"
 ---
 # <a name="part-5-from-data-bindings-to-mvvm"></a>Parte 5. Enlaces de datos a MVVM
 
@@ -35,7 +35,7 @@ Puede usar el programa `x:Static` para obtener la fecha y hora actuales de está
 <StackLayout BindingContext="{x:Static sys:DateTime.Now}" …>
 ```
 
-`BindingContext` es una propiedad muy especial: al establecer el `BindingContext` en un elemento, que es heredada por todos los elementos secundarios de ese elemento. Esto significa que todos los elementos secundarios de la `StackLayout` tienen este mismo `BindingContext`, y pueden contener enlaces simples a las propiedades de ese objeto.
+`BindingContext` es una propiedad muy especial: Al establecer el `BindingContext` en un elemento, que es heredada por todos los elementos secundarios de ese elemento. Esto significa que todos los elementos secundarios de la `StackLayout` tienen este mismo `BindingContext`, y pueden contener enlaces simples a las propiedades de ese objeto.
 
 En el **One-Shot DateTime** programa, dos de los elementos secundarios contiene enlaces a las propiedades de ese `DateTime` valor, pero otras dos hijos contienen los enlaces que parecen faltar una ruta de acceso de enlace. Esto significa que el `DateTime` propio valor se usa para el `StringFormat`:
 
@@ -298,7 +298,7 @@ El enlace en cada `Label` es el valor predeterminado `OneWay`. Solo se necesita 
 
 ## <a name="commanding-with-viewmodels"></a>Comandos con modelos de vista
 
-En muchos casos, el patrón MVVM está restringido a la manipulación de los elementos de datos: los objetos de interfaz de usuario en la vista de objetos de datos en el modelo de vista en paralelo.
+En muchos casos, el patrón MVVM está restringido a la manipulación de los elementos de datos: Objetos de interfaz de usuario en la vista de objetos de datos en el modelo de vista en paralelo.
 
 Sin embargo, en ocasiones, la vista debe contener botones que desencadenan varias acciones en el modelo de vista. Pero no debe contener el ViewModel `Clicked` controladores para los botones ya que podría enlazar el ViewModel a un paradigma de interfaz de usuario concreta.
 

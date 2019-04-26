@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 835dccaea79467582f56fd4b8b6b3b8f42acd632
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61392351"
 ---
 # <a name="updating-a-xamarinios-app-in-the-background"></a>Actualizar una aplicación de Xamarin.iOS en segundo plano
 
@@ -162,4 +162,4 @@ Sin embargo, Apple Push Notification Service permitirá notificaciones silencios
 
 En esta sección, nos hemos tratado las diversas opciones para actualizar el contenido en segundo plano para ejecutar las tareas que no se ajustan a una categoría en segundo plano necesarias. Ahora, veamos algunas de estas API en acción.
 
- [A continuación: Parte 4: tutoriales de procesamiento en segundo plano de iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+ [Siguiente: Parte 4: tutoriales de procesamiento en segundo plano de iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)

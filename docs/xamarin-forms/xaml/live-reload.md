@@ -9,11 +9,11 @@ ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
 ms.openlocfilehash: 21ff09f2af93ee46578b959111bf744ba05a74d7
-ms.sourcegitcommit: 6be6374664cd96a7d924c2e0c37aeec4adf8be13
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51617662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61384938"
 ---
 # <a name="xamarin-live-reload-preview"></a>Recarga en vivo de Xamarin (versión preliminar)
 
@@ -119,25 +119,25 @@ No. De hecho, incluso puede iniciar sus destinos aplicaciones compatibles (Andro
 * Volver a cargar recursos de toda la aplicación (es decir, **App.xaml** o compartir los diccionarios de recursos), se restablece la navegación de la aplicación. 
 * Recarga de ContentView actualmente requiere volver a cargar la página contenedora.
 * Elementos que contienen AutomationId pueden producir un error de volver a cargar.
-* Editar XAML mientras la depuración de UWP puede provocar un bloqueo en tiempo de ejecución. Solución alternativa: Use **iniciar sin depurar (CTRL+F5)** en lugar de **Iniciar depuración (F5)**.
+* Editar XAML mientras la depuración de UWP puede provocar un bloqueo en tiempo de ejecución. Solución: Use **iniciar sin depurar (CTRL+F5)** en lugar de **Iniciar depuración (F5)**.
 
 ## <a name="troubleshooting"></a>Solución de problemas
 
 ### <a name="error-codes"></a>Códigos de error
 
-* **XLR001**: *el proyecto actual hace referencia a la versión del paquete NuGet 'Xamarin.LiveReload' [versión] pero la extensión de Xamarin Live Reload requiere la versión [versión].*
+* **XLR001**: *El proyecto actual hace referencia a la versión del paquete NuGet 'Xamarin.LiveReload' [versión] pero la extensión de Xamarin Live Reload requiere la versión [versión].*
 
   Con el fin de permitir la iteración rápida y evolución de la característica Live Reload, el paquete nuget y la extensión de Visual Studio deben coincidir exactamente. Actualice el paquete nuget a la misma versión de la extensión que ha instalado.
 
-* **XLR002**: *recarga en vivo requiere al menos la propiedad 'MqttHostname' al compilar desde la línea de comandos. Como alternativa, puede establecer 'EnableLiveReload' en 'false' para deshabilitar la característica.*
+* **XLR002**: *La recarga en vivo requiere al menos la propiedad 'MqttHostname' al compilar desde la línea de comandos. Como alternativa, puede establecer 'EnableLiveReload' en 'false' para deshabilitar la característica.*
 
   Las propiedades requeridas por la recarga en vivo no están disponibles al compilar desde la línea de comandos (o en la integración continua) y, por lo tanto, se debe proporcionar explícitamente. 
 
-* **XLR003**: *paquete nuget de recarga en vivo requiere instalar la extensión de Xamarin Live volver a cargar Visual Studio.*
+* **XLR003**: *Paquete de nuget recarga en vivo requiere la instalación de la extensión de Xamarin Live volver a cargar Visual Studio.*
 
   Ha intentado compilar un proyecto que hace referencia al paquete de nuget recarga en vivo, pero no está instalada la extensión Visual.  
 
-* *Excepción al cargar los ensamblados: System.IO.FileNotFoundException: no se pudo cargar el ensamblado ' Xamarin.Live.Reload, Version = 0.3.27.0, Culture = neutral, PublicKeyToken ='.*
+* *Excepción al cargar los ensamblados: System.IO.FileNotFoundException: No se pudo cargar el ensamblado ' Xamarin.Live.Reload, Version = 0.3.27.0, Culture = neutral, PublicKeyToken ='.*
 
   Debe usar el proyecto host `PackageReference` en lugar de `packages.config`
 

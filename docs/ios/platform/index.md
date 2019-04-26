@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
 ms.openlocfilehash: fff6620732ffcaccd13dde7ae31ab03a5106da16
-ms.sourcegitcommit: 79313604ed68829435cfdbb530db36794d50858f
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "37066434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61364429"
 ---
 # <a name="ios-platform-features"></a>características de la plataforma de iOS
 
@@ -102,7 +102,7 @@ Nuevo en iOS 10, una extensión de mensaje de la aplicación se integra con la *
 
 ## <a name="multitasking-for-ipadiosplatformmultitaskingmd"></a>[Multitarea para iPad](~/ios/platform/multitasking.md)
 
-iOS 9 agrega compatibilidad con multitarea ejecuta dos aplicaciones al mismo tiempo en un hardware específico iPad. Multitarea para iPad es compatible a través de las siguientes características: desliza sobre, vista dividida & imagen en imagen.
+iOS 9 agrega compatibilidad con multitarea ejecuta dos aplicaciones al mismo tiempo en un hardware específico iPad. Multitarea para iPad es compatible a través de las siguientes características: Diapositiva a través, la vista en dos paneles & imagen en imagen.
 
 ## <a name="passkitiosplatformpasskitmd"></a>[PassKit](~/ios/platform/passkit.md)
 

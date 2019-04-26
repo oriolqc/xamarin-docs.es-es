@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 12/02/2016
 ms.openlocfilehash: 99fde9330498ee62d3cf6b5910c2cbfae39cfdeb
-ms.sourcegitcommit: 0a72c7dea020b965378b6314f558bf5360dbd066
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2018
-ms.locfileid: "33917673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61159628"
 ---
 # <a name="how-do-i-perform-a-thorough-uninstall-for-xamarin-for-visual-studio"></a>¿Cómo realizo una desinstalación exhaustiva de Xamarin para Visual Studio?
 
@@ -77,7 +77,7 @@ ms.locfileid: "33917673"
 
 11. Reinicie el equipo.
 
-12. Vuelva a instalar la versión estable del uso de Xamarin desde [visualstudio.com](https://visualstudio.com/xamarin/).
+12. Vuelva a instalar la versión estable actual del uso de Xamarin desde [visualstudio.com](https://visualstudio.com/xamarin/).
 
 ## <a name="additional-troubleshooting-steps-for-package-did-not-load-correctly"></a>Pasos adicionales para la solución de problemas para "El paquete no se cargó correctamente"
 

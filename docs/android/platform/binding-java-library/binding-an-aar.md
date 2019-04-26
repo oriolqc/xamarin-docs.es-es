@@ -1,5 +1,5 @@
 ---
-title: Enlace un. AAR
+title: Enlace de un .AAR
 description: Este tutorial proporciona instrucciones paso a paso para crear una biblioteca de enlaces de Java de Xamarin.Android de Android. Archivo AAR.
 ms.prod: xamarin
 ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/11/2018
 ms.openlocfilehash: 7f71ccf4ff61c176e73be6d3855136697a5c2130
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60958177"
 ---
-# <a name="binding-an-aar"></a>Enlace un. AAR
+# <a name="binding-an-aar"></a>Enlace de un .AAR
 
 _Este tutorial proporciona instrucciones paso a paso para crear una biblioteca de enlaces de Java de Xamarin.Android de Android. Archivo AAR._
 

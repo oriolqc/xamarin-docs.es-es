@@ -1,6 +1,6 @@
 ---
 title: Resumen del capítulo 11. La infraestructura enlazable
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del capítulo 11. La infraestructura enlazable'
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 11. La infraestructura enlazable'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 34671C48-0ED4-4B76-A33D-D6505390DC5B
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
 ms.openlocfilehash: f9e3326c0f55469cfa84a019a674679d82dfc007
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53054241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61334372"
 ---
 # <a name="summary-of-chapter-11-the-bindable-infrastructure"></a>Resumen del capítulo 11. La infraestructura enlazable
 
@@ -20,7 +20,7 @@ ms.locfileid: "53054241"
 
 Cada programador de C# está familiarizado con C# *propiedades*. Las propiedades contienen un *establecer* descriptor de acceso o un *obtener* descriptor de acceso. A menudo se denominan *propiedades CLR* para Common Language Runtime.
 
-Xamarin.Forms define una definición de propiedad mejorada denominada una *propiedad enlazable* encapsulado por el [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) clase y compatible con la [ `BindableObject` ](xref:Xamarin.Forms.BindableObject)clase. Estas clases son bastante diferentes pero relacionados: la `BindableProperty` se utiliza para definir la propiedad en Sí; `BindableObject` es similar a `object` que se trata de una clase base para las clases que definen las propiedades enlazables.
+Xamarin.Forms define una definición de propiedad mejorada denominada una *propiedad enlazable* encapsulado por el [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) clase y compatible con la [ `BindableObject` ](xref:Xamarin.Forms.BindableObject)clase. Estas clases son bastante diferentes pero relacionados: El `BindableProperty` se utiliza para definir la propiedad en Sí; `BindableObject` es similar a `object` que se trata de una clase base para las clases que definen las propiedades enlazables.
 
 ## <a name="the-xamarinforms-class-hierarchy"></a>La jerarquía de clases de Xamarin.Forms
 

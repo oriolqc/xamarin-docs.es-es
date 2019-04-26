@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/11/2016
 ms.openlocfilehash: daea27472ac7c0578c1cfd79ebd96428212fafb3
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61165732"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit en Xamarin.iOS
 
@@ -151,7 +151,7 @@ Estas son las diferencias entre los tipos de base de datos:
 ||Base de datos público|Base de datos privado|
 |---|--- |--- |
 |**Tipo de datos**|Datos compartidos|Datos del usuario actual|
-|**Cuota**|Tiene en cuenta en la cuota del desarrollador|Tiene en cuenta en la cuota del usuario|
+|**Quota**|Tiene en cuenta en la cuota del desarrollador|Tiene en cuenta en la cuota del usuario|
 |**Permisos predeterminados**|Puede leer del mundo|Usuario legible|
 |**Permisos de edición**|iCloud panel Roles a través de un nivel de clase de registro|N/D|
 
@@ -883,6 +883,6 @@ Este artículo trata una introducción rápida a la API de CloudKit. Ha mostrado
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [CloudKitAtlas (ejemplo)](https://developer.xamarin.com/samples/monotouch/ios8/CloudKitAtlas/)
+- [CloudKitAtlas (sample)](https://developer.xamarin.com/samples/monotouch/ios8/CloudKitAtlas/)
 - [Introducción a iOS 8](~/ios/platform/introduction-to-ios8.md)
 - [Crear un perfil de aprovisionamiento](~/ios/get-started/installation/device-provisioning/index.md)

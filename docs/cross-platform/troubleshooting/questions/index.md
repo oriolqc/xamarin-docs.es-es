@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/08/2018
 ms.openlocfilehash: 06aa6569301d1bfdbf9f6fd1e7397a38a9beb6f6
-ms.sourcegitcommit: aa9b9b203ab4cd6a6b4fd51e27d865e2abf582c1
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/30/2018
-ms.locfileid: "39350825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61157198"
 ---
 # <a name="general-frequently-asked-questions"></a>Preguntas más frecuentes de general
 
@@ -23,7 +23,7 @@ Esta guía enumera los recursos y métodos para determinar si la biblioteca exis
 ### <a name="pcl-reflection-apipcl-reflectionmd"></a>[Reflection API de PCL](pcl-reflection.md)
 Microsoft ha desarrollado una nueva API de reflexión para su uso en bibliotecas de clases portables. Si tiene algún código de reflexión existente que desea mover a una PCL, es posible que no funcione.
 
-### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Caso práctico de PCL: ¿Cómo se pueden resolver problemas relacionados con System.Diagnostics.Tracing para el paquete NuGet de flujo de datos TPL de Microsoft?](pcl-case-study.md)
+### <a name="pcl-case-study-how-can-i-resolve-problems-related-to-systemdiagnosticstracing-for-the-microsoft-tpl-dataflow-nuget-packagepcl-case-studymd"></a>[Caso práctico de PCL: ¿Cómo puedo resolver problemas relacionados con System.Diagnostics.Tracing para el paquete NuGet de flujo de datos TPL de Microsoft?](pcl-case-study.md)
 Xamarin.iOS y Xamarin.Android no implementan el 100% de todos los perfiles PCL que permiten como referencias. Para mayor comodidad práctico en Visual Studio para Mac, Visual Studio y el Administrador de paquetes de NuGet, proyectos de Xamarin permiten el uso de varios perfiles que solo tienen implementaciones incompletas. Por ejemplo, Xamarin.iOS ni Xamarin.Android actualmente incluye una implementación completa de los tipos en el `System.Diagnostics.Tracing` espacio de nombres PCL. Puede solucionar esto al cambiar el proyecto de aplicación para hacer referencia a la portable-net45 + win8 + wp8 + wpa81 versión de la biblioteca TPL Dataflow.
 
 ## <a name="nuget-packages--xamarin-components"></a>Paquetes de NuGet y componentes de Xamarin

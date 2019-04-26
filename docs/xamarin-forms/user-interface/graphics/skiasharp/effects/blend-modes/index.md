@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
 ms.openlocfilehash: 3ea05563ecbca95d26d692d5424c30e961229ac5
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61021217"
 ---
 # <a name="skiasharp-blend-modes"></a>Modos de fusión de SkiaSharp
 
@@ -46,7 +46,7 @@ Los miembros de 29 el `SKBlendMode` enumeración puede dividirse en tres categor
 
 Los nombres de estas tres categorías tardará más significado en las discusiones que siguen. El orden que se enumeran los miembros aquí es igual que en la definición de la `SKBlendMode` enumeración. Los miembros de enumeración de 13 en la primera columna tienen los valores enteros del 0 al 12. La segunda columna son miembros de enumeración que se corresponden con números enteros de 13 a 24, y los miembros de la tercera columna tienen valores de 25 a 28.
 
-Estos blend se describen los modos en _aproximadamente_ el mismo orden en el W3C **la composición y mezcla de nivel 1** documento, pero hay algunas diferencias: el `Src` modo se denomina _Copia_ en el documento del W3C, y `Plus` se denomina _más claro_. El documento del W3C define un _Normal_ modo blend que no se incluye en `SKBlendModes` porque se quedaría igual `SrcOver`. El `Modulate` modo blend (en la parte superior de la primera columna) no se incluye en el documento del W3C y explicación de la `Multiply` precede modo `Screen`.
+Estos blend se describen los modos en _aproximadamente_ el mismo orden en el W3C **la composición y mezcla de nivel 1** documento, pero hay algunas diferencias: El `Src` se denomina modo _copia_ en el documento del W3C, y `Plus` se denomina _más claro_. El documento del W3C define un _Normal_ modo blend que no se incluye en `SKBlendModes` porque se quedaría igual `SrcOver`. El `Modulate` modo blend (en la parte superior de la primera columna) no se incluye en el documento del W3C y explicación de la `Multiply` precede modo `Screen`.
 
 Dado que el `Modulate` modo blend es único en Skia, se tratará como un modo Porter Duff adicional, como un modo separable.
 

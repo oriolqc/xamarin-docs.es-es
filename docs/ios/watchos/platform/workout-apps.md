@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
 ms.openlocfilehash: 02db7dce6ba38b6c1e943ff189ff69efb7cc1c08
-ms.sourcegitcommit: 946ce514fd6575aa6b93ff24181e02a60b24b106
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61084037"
 ---
 # <a name="watchos-workout-apps-in-xamarin"></a>las aplicaciones de entrenamiento de Xamarin de watchOS
 

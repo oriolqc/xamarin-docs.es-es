@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 12/17/2015
 ms.openlocfilehash: 376286b73c92cba40de183043b86cb4ffb5e699d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61085310"
 ---
 # <a name="xamarinmac-application-fundamentals"></a>Principios de la aplicación de Xamarin.Mac
 

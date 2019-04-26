@@ -1,5 +1,5 @@
 ---
-title: ¿Cómo instalar manualmente las bibliotecas de compatibilidad con Android requeridas por los paquetes de Xamarin.Android.Support?
+title: ¿Cómo instalar manualmente las bibliotecas de compatibilidad de Android que requieren los paquetes de Xamarin.Android.Support?
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A9CB8CA8-8A6D-405E-B84C-A16CE452C0F7
@@ -8,13 +8,13 @@ author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
 ms.openlocfilehash: 84ee33fe174c01656144e55bc3cbba7c773950fd
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61153452"
 ---
-# <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>¿Cómo instalar manualmente las bibliotecas de compatibilidad con Android requeridas por los paquetes de Xamarin.Android.Support?
+# <a name="how-can-i-manually-install-the-android-support-libraries-required-by-the-xamarinandroidsupport-packages"></a>¿Cómo instalar manualmente las bibliotecas de compatibilidad de Android que requieren los paquetes de Xamarin.Android.Support?
 
 ## <a name="example-steps-for-xamarinandroidsupportv4"></a>Pasos de ejemplo para Xamarin.Android.Support.v4 
 
@@ -55,7 +55,7 @@ F16A3455987DBAE5783F058F19F7FCDF
 
 Copia **android\_m2repository.zip** en el **% LOCALAPPDATA %\\Xamarin\\zips\\**  carpeta. Cambie el nombre del archivo para utilizar el hash MD5 del hash MD5 anterior paso de cálculo. Por ejemplo:
 
-**% LOCALAPPDATA %\\Xamarin\\zips\\F16A3455987DBAE5783F058F19F7FCDF.zip**
+**%LOCALAPPDATA%\\Xamarin\\zips\\F16A3455987DBAE5783F058F19F7FCDF.zip**
 
 (Opcional) Descomprima el archivo en **% LOCALAPPDATA %\\Xamarin\\Xamarin.Android.Support.v4\\23.4.0.0\\contenido\\**  (creación de un **contenido\\m2repository** subdirectorio). Si omite este paso, la primera compilación que usa la biblioteca se tardará un poco más tiempo porque necesitará completar este paso.
 El número de versión del subdirectorio (**23.4.0.0** en este ejemplo) no es exactamente lo mismo que la versión del paquete NuGet. Puede usar `ildasm` para buscar el número de versión correcto:

@@ -1,6 +1,6 @@
 ---
 title: Resumen del capítulo 26. Diseños personalizados
-description: 'Creación de aplicaciones móviles con Xamarin.Forms: resumen del capítulo 26. Diseños personalizados'
+description: 'Creación de aplicaciones móviles con Xamarin.Forms: Resumen del capítulo 26. Diseños personalizados'
 ms.prod: xamarin
 ms.technology: xamarin-forms
 ms.assetid: 2B7F4346-414E-49FF-97FB-B85E92D98A21
@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/07/2017
 ms.openlocfilehash: 9fa9802f94e10612c4b0fe02c84ddcabc89820a8
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53053135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61331577"
 ---
 # <a name="summary-of-chapter-26-custom-layouts"></a>Resumen del capítulo 26. Diseños personalizados
 

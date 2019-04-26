@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
 ms.openlocfilehash: 6803dc2668b89ee2d037da8b34e202191dd5465d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61307819"
 ---
 # <a name="handling-multiple-resolutions-in-cocossharp"></a>Control de varias resoluciones en CocosSharp
 
@@ -25,8 +25,8 @@ El comportamiento de resolución predeterminado de CocosSharp es para que coinci
 | **Device** | **Resolución de pantalla** | **Captura de pantalla de ejemplo** |
 |--- | --- |--- |
 |Presentación deseado|368 x 240 píxeles (con barras negras para la relación de aspecto)| ![368 x 240 píxeles (con barras negras para la relación de aspecto)](resolutions-images/image1.png) |
-|iPhone 4s|960x640| ![iPhone 4s 960 x 640.](resolutions-images/image2.png) |
-|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920 x 1080](resolutions-images/image3.png) |
+|iPhone 4s|960x640| ![iPhone 4s 960x640](resolutions-images/image2.png) |
+|iPhone 6 Plus|1920x1080| ![iPhone 6 Plus 1920x1080](resolutions-images/image3.png) |
 
 Este documento describe cómo usar CocosSharp para corregir el problema que se muestra en la tabla anterior. Es decir, hablaremos sobre cómo hacer que cualquier dispositivo representar como se muestra en la primera fila, independientemente de la resolución de pantalla.
 
