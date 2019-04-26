@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: a8b31d9f2e9c8921420b1fd50c4092273962f54b
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 3e7fc3d627b5d7a1dc73caa395a9181efb0b5f08
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61356140"
 ---
 # <a name="working-with-tvos-table-views-in-xamarin"></a>Trabajar con vistas de tabla en Xamarin de tvOS
 
@@ -101,7 +101,7 @@ Para comenzar, haga lo siguiente:
 1. Para cada **prototipo celda**, selecciónelo y asignar un único **identificador** en el **Widget** pestaña de la **Explorador de propiedades**. Este paso es _muy importante_ porque lo necesitará más adelante este identificador al rellenar la tabla. Por ejemplo `AttrCell`: 
 
     [![](table-views-images/table12.png "La pestaña de Widget")](table-views-images/table12.png#lightbox)
-1. También puede seleccionar para presentar la celda como uno de los [tipos de celda de vista de tabla predeterminado](#Table-View-Cell-Types) a través de la **estilo** lista desplegable o establézcalo en **personalizado** y usar la superficie de diseño al diseño de la celda arrastrando en otros widgets de interfaz de usuario desde el **cuadro de herramientas**: 
+1. También puede seleccionar para presentar la celda como uno de los [tipos de celda de vista de tabla predeterminado](#table-view-cell-types) a través de la **estilo** lista desplegable o establézcalo en **personalizado** y usar la superficie de diseño al diseño de la celda arrastrando en otros widgets de interfaz de usuario desde el **cuadro de herramientas**: 
 
     [![](table-views-images/table13.png "El diseño de celda")](table-views-images/table13.png#lightbox)
 1. Asignar un único **nombre** a cada elemento de interfaz de usuario en el diseño de la celda de prototipo en el **Widget** pestaña de la **Explorador de propiedades** para que pueda acceder a ellos más adelante en C# código: 
@@ -142,7 +142,7 @@ Para comenzar, haga lo siguiente:
 1. Para cada **prototipo celda**, selecciónelo y asignar un único **identificador** en el **Widget** pestaña de la **Explorador de propiedades**. Este paso es _muy importante_ porque lo necesitará más adelante este identificador al rellenar la tabla. Por ejemplo `AttrCell`: 
 
     [![](table-views-images/table12-vs.png "Asignar un identificador")](table-views-images/table12-vs.png#lightbox)
-1. También puede seleccionar para presentar la celda como uno de los [tipos de celda de vista de tabla predeterminado](#Table-View-Cell-Types) a través de la **estilo** lista desplegable o establézcalo en **personalizado** y usar la superficie de diseño al diseño de la celda arrastrando en otros widgets de interfaz de usuario desde el **cuadro de herramientas**: 
+1. También puede seleccionar para presentar la celda como uno de los [tipos de celda de vista de tabla predeterminado](#table-view-cell-types) a través de la **estilo** lista desplegable o establézcalo en **personalizado** y usar la superficie de diseño al diseño de la celda arrastrando en otros widgets de interfaz de usuario desde el **cuadro de herramientas**: 
 
     [![](table-views-images/table13-vs.png "El menú desplegable de estilos")](table-views-images/table13-vs.png#lightbox)
 1. Asignar un único **nombre** a cada elemento de interfaz de usuario en el diseño de la celda de prototipo en el **Widget** pestaña de la **Explorador de propiedades** para que pueda acceder a ellos más adelante en C# código: 

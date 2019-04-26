@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: 0dcda2e4fd1ca7773668a0a6fdf46e01f2f0841d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50118531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61367016"
 ---
 # <a name="storekit-overview-and-retrieving-product-info-in-xamarinios"></a>Información general de StoreKit y recuperar información del producto en Xamarin.iOS
 
@@ -56,7 +56,7 @@ Nota: StoreKit no funciona en el simulador de iOS. Al ejecutar la aplicación en
    
    
    
- Importante: No iniciar sesión con su cuenta de prueba en la aplicación configuración. Puede usar la aplicación de configuración de inicio de sesión de cualquier cuenta de Id. de Apple existente y, después, debe esperar hasta que se le pida *dentro de la secuencia de compra en la aplicación* para iniciar sesión con una prueba de ID de Apple.   
+ Importante: No se inicie la sesión con su cuenta de prueba en la aplicación configuración. Puede usar la aplicación de configuración de inicio de sesión de cualquier cuenta de Id. de Apple existente y, después, debe esperar hasta que se le pida *dentro de la secuencia de compra en la aplicación* para iniciar sesión con una prueba de ID de Apple.   
    
    
    

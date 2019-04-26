@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 9adf514e4fc510617e3f4d801569935ee4a03f25
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61093798"
 ---
 # <a name="web-views-in-xamarinios"></a>Vistas Web en Xamarin.iOS
 
@@ -119,7 +119,7 @@ Navegar por los usuarios fuera de su aplicación a Safari generalmente siempre s
 
 mejoras de iOS 9 permiten al usuario volver fácilmente a su aplicación a través de un botón Atrás en el que se proporciona en la esquina superior izquierda de la página de Safari.
 
-## <a name="app-transport-security"></a>Seguridad de transporte de la aplicación
+## <a name="app-transport-security"></a>Seguridad de transporte de aplicación
 
 Seguridad de transporte de la aplicación, o *ATS* introducida por Apple iOS 9 para asegurarse de que se ajustan todas las comunicaciones de internet para proteger los procedimientos recomendados de conexión.
 

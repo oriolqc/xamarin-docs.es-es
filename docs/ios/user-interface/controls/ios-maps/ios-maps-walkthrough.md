@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
 ms.openlocfilehash: 445661513b0cf79df99d54ed0bb4b0261dd75c2a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61381505"
 ---
 # <a name="annotations-and-overlays-in-xamarinios"></a>Anotaciones y superposiciones en Xamarin.iOS
 
@@ -290,4 +290,4 @@ En este artículo explicamos cómo agregar una anotación a una asignación, as�
 
 - [Ejemplo de tutorial de mapas](https://developer.xamarin.com/samples/monotouch/MapsWalkthrough/)
 - [Ejemplo de asignación de demostración](https://developer.xamarin.com/samples/monotouch/MapDemo/)
-- [Mapas de iOS](~/ios/user-interface/controls/ios-maps/index.md)
+- [Maps in Xamarin.iOS](~/ios/user-interface/controls/ios-maps/index.md) (Mapas en Xamarin.iOS)

@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 11/15/2017
 ms.openlocfilehash: b9bf0e1ba14f4e8584bfd8492776ac7c8668df87
-ms.sourcegitcommit: 03dfb4a2c20ad68515875b415e7d84ee9b0a8cb8
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51563327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61175183"
 ---
 # <a name="xaml-standard-preview-controls"></a>Controles XAML estándar (versión preliminar)
 
@@ -45,8 +45,8 @@ También hay una lista de los controles que tienen los nuevos nombres de propied
 |Selector de botón|BorderColor, OutlineColor|BorderBrush|
 |Botón|BorderWidth|BorderThickness|
 |ProgressBar|Progreso|Valor|
-|Botón, entrada, etiqueta, Editor, SearchBar, intervalo, fuente|FontAttributesBold, cursiva, ninguno|FontStyleItalic, Normal|
-|Botón, entrada, etiqueta, Editor, SearchBar, intervalo, fuente|Atributos de fuente|FontWeights * Normal, en negrita|
+|Botón, entrada, etiqueta, Editor, SearchBar, intervalo, fuente|FontAttributesBold, Italic, None|FontStyleItalic, Normal|
+|Botón, entrada, etiqueta, Editor, SearchBar, intervalo, fuente|FontAttributes|FontWeights * Normal, en negrita|
 |InputView|KeyboardDefault, dirección Url, número, telefónica, texto, Chat, enviar por correo electrónico|InputScopeNameValue * predeterminado, dirección Url, número, TelephoneNumber, texto, Chat, EmailNameOrAddress|
 |StackPanel|StackOrientation|Orientación *|
 

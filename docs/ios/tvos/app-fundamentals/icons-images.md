@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: 96af7fab366c3fd3493cf5adbf183d80b7c1ee26
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61418256"
 ---
 # <a name="working-with-tvos-icons-and-images-in-xamarin"></a>Trabajar con iconos e imágenes en Xamarin de tvOS
 
@@ -118,7 +118,7 @@ tvOS funciona con imágenes en capas en los siguientes formatos:
 
 Apple que se creó el [controlador de vista previa de Parallax](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) para vista previa y las imágenes creadas por capas necesarias para iconos de aplicación y los elementos opcionales de recibir el foco. El controlador de vista previa muestra todas las capas que constituye la imagen completada de capas:
 
-[![](icons-images-images/layered03.png "El controlador de vista previa de paralaje")](icons-images-images/layered03.png#lightbox)
+[![](icons-images-images/layered03.png "The Parallax Previewer")](icons-images-images/layered03.png#lightbox)
 
 Durante la vista previa de una imagen en capas, puede usar el mouse para girar la imagen y obtener una vista previa del efecto de paralaje. Use la **+** (más) y **-** (botones para agregar y quitar capas menos).
 

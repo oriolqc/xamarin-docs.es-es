@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
 ms.openlocfilehash: 95227689303a8367785202956a6aaef921c1c593
-ms.sourcegitcommit: 7eed80186e23e6aff3ddbbf7ce5cd1fa20af1365
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/11/2018
-ms.locfileid: "51526447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61085263"
 ---
 # <a name="performance-and-visual-effects-with-ccrendertexture"></a>Rendimiento y efectos visuales con CCRenderTexture
 
@@ -67,7 +67,7 @@ El ejemplo se codifica para exponer dos problemas que pueden producirse cuando c
 
 ### <a name="card-draw-calls"></a>Llamadas de dibujo de tarjeta
 
-El código es una simplificación de lo que podría encontrarse en un completo *juego de cartas que se pueden recopilar* (CCG) como "Magia: la recopilación" o "Hearthstone". Nuestro juego sólo muestra tres cartas a la vez y tiene un número pequeño de posibles unidades (azul, verde y naranja). Por el contrario, un juego completo puede tener más de veinte tarjetas en pantalla en un momento dado y reproductores pueden tener cientos de tarjetas para elegir al crear sus cubiertas. Aunque nuestro juego no actualmente sufren problemas de rendimiento, es posible que un juego completo con una implementación similar.
+El código es una simplificación de lo que podría encontrarse en un completo *juego de cartas que se pueden recopilar* (CCG), como "magia: La recopilación"o"Hearthstone". Nuestro juego sólo muestra tres cartas a la vez y tiene un número pequeño de posibles unidades (azul, verde y naranja). Por el contrario, un juego completo puede tener más de veinte tarjetas en pantalla en un momento dado y reproductores pueden tener cientos de tarjetas para elegir al crear sus cubiertas. Aunque nuestro juego no actualmente sufren problemas de rendimiento, es posible que un juego completo con una implementación similar.
 
 CocosSharp proporciona una idea de rendimiento de la representación mediante la exposición de las llamadas a draw realizadas por fotograma. Nuestro `GameLayer.AddedToScene` método establece el `GameView.Stats.Enabled` a `true`, con lo que se muestra en la parte inferior izquierda de la pantalla de información de rendimiento:
 

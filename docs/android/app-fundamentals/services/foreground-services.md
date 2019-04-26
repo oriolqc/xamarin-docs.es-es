@@ -7,11 +7,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/19/2018
 ms.openlocfilehash: df917896f901060a5518076afa859d34a03f4d6d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61012391"
 ---
 # <a name="foreground-services"></a>Servicios de primer plano
 
@@ -105,4 +105,4 @@ Si se detiene el servicio con una llamada a `StopSelf` o `StopService`, se quita
 - [Android.App.Service](https://developer.xamarin.com/api/type/Android.App.Service/)
 - [Android.App.Service.StartForeground](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/)
 - [Notificaciones locales](~/android/app-fundamentals/notifications/local-notifications.md)
-- [ForegroundServiceDemo (ejemplo)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/ForegroundServiceDemo/)
+- [ForegroundServiceDemo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/ForegroundServiceDemo/)

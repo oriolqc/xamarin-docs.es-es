@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
 ms.openlocfilehash: d525725b58a961afb9c4c5d80962d05f8d08b83e
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53061273"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60876869"
 ---
 # <a name="touch-manipulations"></a>Manipulaciones táctiles
 
@@ -273,7 +273,7 @@ El **girar el mapa de bits** página permite utilizar dos dedos para isótropo e
 
 La primera gran diferencia en este programa es la lógica de la prueba de posicionamiento. Los programas anteriores usan el `Contains` método `SKRect` para determinar si el punto de toque está dentro del rectángulo transformado que se corresponde con el mapa de bits. Pero si el usuario manipula el mapa de bits, podría ser el mapa de bits girado y `SKRect` no puede representar correctamente un rectángulo girado. Es posible que temen que debe implementar bastante compleja geometría analítica en ese caso la lógica de la prueba de posicionamiento.
 
-Sin embargo, hay disponible un acceso directo: determinar si un punto se encuentra dentro de los límites de un rectángulo transformado es igual a determinar si un punto transformado inverso se encuentra dentro de los límites del rectángulo sin transformar. Eso es mucho más fácil de cálculo y la lógica puede seguir usando la cómoda `Contains` método:
+Sin embargo, un acceso directo está disponible: Determinar si un punto se encuentra dentro de los límites de un rectángulo transformado es igual a determinar si un punto transformado inverso se encuentra dentro de los límites del rectángulo sin transformar. Eso es mucho más fácil de cálculo y la lógica puede seguir usando la cómoda `Contains` método:
 
 ```csharp
 public partial class BitmapRotationPage : ContentPage
@@ -703,7 +703,7 @@ class TouchManipulationBitmap
 
 En el `Moved` y `Released` eventos, las llamadas al método `Manipulate`. En estos momentos, el `touchDictionary` contiene uno o varios `TouchManipulationInfo` objetos. Si el `touchDictionary` contiene un elemento, es probable que el `PreviousPoint` y `NewPoint` valores no son iguales y representan el movimiento de un dedo. Si varios dedos tocan el mapa de bits, el diccionario contiene más de un elemento, pero solo uno de estos elementos tiene distintos `PreviousPoint` y `NewPoint` valores. El resto tienen las mismas `PreviousPoint` y `NewPoint` valores.
 
-Esto es importante: el `Manipulate` método puede dar por hecho que está procesando el movimiento de un solo dedo. En el momento de esta llamada Mover ninguno de los otros dedos y si realmente está moviendo (ya que es probable), se procesarán los movimientos en las futuras llamadas a `Manipulate`.
+Esto es importante: El `Manipulate` método puede dar por hecho que está procesando el movimiento de un solo dedo. En el momento de esta llamada Mover ninguno de los otros dedos y si realmente está moviendo (ya que es probable), se procesarán los movimientos en las futuras llamadas a `Manipulate`.
 
 El `Manipulate` método copia primero el diccionario en una matriz para su comodidad. Omite cualquier cosa que no sean las dos primeras entradas. Si más de dos dedos están intentando manipular el mapa de bits, se omiten los demás. `Manipulate` es el último miembro de `TouchManipulationBitmap`:
 

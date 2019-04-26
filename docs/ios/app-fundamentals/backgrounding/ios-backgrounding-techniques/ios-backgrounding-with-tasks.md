@@ -1,5 +1,5 @@
 ---
-title: iOS procesamiento en segundo plano con tareas
+title: Procesamiento en segundo plano de iOS con tareas
 description: Este documento describe cómo usar tareas en segundo plano para realizar tareas de larga ejecución después de una aplicación se coloca en segundo plano.
 ms.prod: xamarin
 ms.assetid: 205D230E-C618-4D69-96EE-4B91D7819121
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
 ms.openlocfilehash: c8d1abebf6dec2b7b5fe76d57ff851fad457f2a8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61170696"
 ---
-# <a name="ios-backgrounding-with-tasks"></a>iOS procesamiento en segundo plano con tareas
+# <a name="ios-backgrounding-with-tasks"></a>Procesamiento en segundo plano de iOS con tareas
 
 La manera más sencilla para realizar el procesamiento en segundo plano en iOS es dividir los requisitos de backgrounding en tareas y ejecutar las tareas en segundo plano. Las tareas están en un estricto límite de tiempo y suelen obtención unos 600 segundos (10 minutos) de tiempo de procesamiento después de una aplicación se movió a segundo plano en iOS 6 y menos de 10 minutos en iOS 7 o posterior.
 

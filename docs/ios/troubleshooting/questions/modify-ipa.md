@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
 ms.openlocfilehash: bf135755f64e4d17db2c187d58572c525dfee559
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50117413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61420897"
 ---
 # <a name="can-i-add-files-to-or-remove-files-from-an-ipa-file-after-building-it-in-visual-studio"></a>¿Puedo agregar archivos a o quitar archivos de un archivo IPA después de crearlo en Visual Studio?
 
@@ -46,7 +46,7 @@ Este ejemplo se supone que es el nombre del proyecto de Xamarin.iOS `iPhoneApp1`
 
 9.  Elimine los archivos deseados de la `.ipa`. Puede moverlos a la Papelera con Finder o eliminarlos de la línea de comandos usando `Terminal.app`. Para ver el contenido de la `Payload/iPhone` archivo en el Finder, Control y haga clic en el archivo y seleccione **mostrar contenido del paquete**.
 
-10.  Con el mismo enfoque general como en el paso 3, busque el archivo de registro en `~/Library/Logs/Xamarin/MonoTouchVS/` que tiene el nombre de proyecto y el `generated session id` en el nombre: ![](modify-ipa-images/build-log.png "localizar el registro de compilación del proyecto en el Finder")
+10.  Con el mismo enfoque general como en el paso 3, busque el archivo de registro en `~/Library/Logs/Xamarin/MonoTouchVS/` que tiene el nombre de proyecto y el `generated session id` en el nombre: ![](modify-ipa-images/build-log.png "Busque el registro de compilación del proyecto en el Finder")
 
 11.  Abra el registro de compilación del paso 10, por ejemplo, haciendo doble clic en él.
 
@@ -88,4 +88,4 @@ file missing: /Users/macuser/Library/Caches/Xamarin/mtbs/builds/iPhoneApp1/cc530
 
 Y el proceso de comprobación de App Store informará de un mensaje de error similar:
 
-> ERROR ITMS-90035: "firma no válida. Un recurso sealed es falta o no es válido. El archivo binario en la ruta de acceso [iPhoneApp1.app/iPhoneApp1] contiene una firma no válida. Asegúrese de que haya iniciado la aplicación con un certificado de distribución, no un certificado de ad hoc o un certificado de desarrollo. Compruebe que la configuración de firma de código en Xcode es correcta en el nivel de destino (que invalidan los valores en el nivel de proyecto). Además, asegúrese de que la agrupación que se va a cargar se creó mediante un destino de la versión de Xcode, no un destino del simulador. Si está seguro de que la configuración de firma de código es correcta, elija "Limpiar todo" en Xcode, elimine el directorio "compilación" en el Finder y volver a generar la versión de destino. Para obtener más información, consulte [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"
+> ERROR ITMS-90035: "Firma no válida. Un recurso sealed es falta o no es válido. El archivo binario en la ruta de acceso [iPhoneApp1.app/iPhoneApp1] contiene una firma no válida. Asegúrese de que haya iniciado la aplicación con un certificado de distribución, no un certificado de ad hoc o un certificado de desarrollo. Compruebe que la configuración de firma de código en Xcode es correcta en el nivel de destino (que invalidan los valores en el nivel de proyecto). Además, asegúrese de que la agrupación que se va a cargar se creó mediante un destino de la versión de Xcode, no un destino del simulador. Si está seguro de que la configuración de firma de código es correcta, elija "Limpiar todo" en Xcode, elimine el directorio "compilación" en el Finder y volver a generar la versión de destino. Para obtener más información, consulte [ https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html ](https://developer.apple.com/library/ios/documentation/Security/Conceptual/CodeSigningGuide/Introduction/Introduction.html)"

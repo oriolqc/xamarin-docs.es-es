@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 05/21/2018
 ms.openlocfilehash: 5b1c9ff709022d6bcae51597a03fe2a71097cd2d
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53052561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61076683"
 ---
 # <a name="resource-dictionaries"></a>Diccionarios de recursos
 
@@ -149,7 +149,7 @@ La versión original `PageBackgroundColor` y `NormalTextColor` instancias, defin
 
 Sin embargo, tenga en cuenta que la barra de fondo de la [ `NavigationPage` ](xref:Xamarin.Forms.NavigationPage) está de color amarillo todavía, porque el [ `BarBackgroundColor` ](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) propiedad está establecida en el valor de la `PageBackgroundColor` recursos definidos en la aplicación nivel `ResourceDictionary`.
 
-Ésta es otra manera de pensar en `ResourceDictionary` prioridad: cuando XAML el analizador encuentra un `StaticResource`, busca una clave coincidente recorriendo la seguridad a través del árbol visual, con la primera coincidencia que encuentre. Si esta búsqueda finaliza en la página y la clave aún no se ha encontrado, el analizador XAML busca el `ResourceDictionary` conectados a la `App` objeto. Si todavía no se encuentra la clave, se produce una excepción.
+Ésta es otra manera de pensar en `ResourceDictionary` prioridad: Cuando el analizador XAML encuentra un `StaticResource`, busca una clave coincidente recorriendo la seguridad a través del árbol visual, con la primera coincidencia que encuentre. Si esta búsqueda finaliza en la página y la clave aún no se ha encontrado, el analizador XAML busca el `ResourceDictionary` conectados a la `App` objeto. Si todavía no se encuentra la clave, se produce una excepción.
 
 ## <a name="stand-alone-resource-dictionaries"></a>Diccionarios de recursos independiente
 
@@ -195,7 +195,7 @@ Puede crear una instancia `MyResourceDictionary` colocándola entre un par de `R
 
 Una instancia de `MyResourceDictionary` está establecido en el `Resources` propiedad de la `ContentPage` objeto.
 
-Sin embargo, este enfoque tiene algunas limitaciones: el `Resources` propiedad de la `ContentPage` hace referencia a este ejemplar `ResourceDictionary`. En la mayoría de los casos, desea que la opción de incluir otros `ResourceDictionary` instancias y quizás también otros recursos.
+Sin embargo, este enfoque tiene algunas limitaciones: El `Resources` propiedad de la `ContentPage` hace referencia a este ejemplar `ResourceDictionary`. En la mayoría de los casos, desea que la opción de incluir otros `ResourceDictionary` instancias y quizás también otros recursos.
 
 Esta tarea requiere diccionarios de recursos combinados.
 

@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
 ms.openlocfilehash: baceb59116dd907918b34eca4f44293051190954
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50120533"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61155650"
 ---
 # <a name="advanced-message-app-extensions-in-xamarinios"></a>Extensiones de aplicaciones avanzadas de mensajes en Xamarin.iOS
 
@@ -171,7 +171,7 @@ Llame a la `InsertMessage` de la `MSConversation` para incluir el mensaje en la 
 
 Además, la extensión puede enviar distintos tipos de datos a la conversación, como:
 
-- **Texto** - `ActiveConversation.InsertText ("Message", (error) => {...});`
+- **Text** - `ActiveConversation.InsertText ("Message", (error) => {...});`
 - **Datos adjuntos** - `ActiveConversation.InsertAttachment (new NSUrl ("path"), "filename", (error) => {...});`
 - **Adhesivos**  -  `ActiveConversation.InsertSticker (sticker, (obj) => {...});` donde `sticker` es un `MSSticker`.
 
@@ -181,7 +181,7 @@ Una vez que el nuevo contenido en el campo de entrada, el usuario es capaz de en
 
 Una extensión de aplicación de mensaje puede mostrarse en uno de dos modos de vista diferentes:
 
-[![](advanced-message-app-extensions-images/interactive08.png "Una extensión de aplicación de mensaje que aparece en dos modos de vista diferentes: compacto y expandido")](advanced-message-app-extensions-images/interactive08.png#lightbox)
+[![](advanced-message-app-extensions-images/interactive08.png "Una extensión de aplicación de mensaje que aparece en dos modos de vista diferentes: Compacto y expandido")](advanced-message-app-extensions-images/interactive08.png#lightbox)
 
 - **Compact** -éste es el modo predeterminado donde la extensión de aplicación de mensajes ocupa el parte inferior del 25% de la vista de mensaje. En el modo compacto, la aplicación no tiene acceso al teclado, desplazamiento horizontal o los reconocedores de gestos de pasar el dedo. La aplicación tiene acceso al campo de entrada y las llamadas a `InsertMessage` al instante se mostrará al usuario no existe.
 - **Expande** : la extensión de mensaje de la aplicación rellena toda la vista de mensaje. No tiene acceso al campo de entrada, pero tiene acceso al teclado, desplazamiento horizontal y los reconocedores de gestos de pasar el dedo.

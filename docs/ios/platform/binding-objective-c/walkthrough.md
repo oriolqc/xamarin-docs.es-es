@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Enlace de una biblioteca de Objective-C de iOS'
+title: 'Tutorial: enlace de una biblioteca de Objective-C a iOS'
 description: En este artículo se proporciona un tutorial práctico de creación de un enlace de Xamarin.iOS para una biblioteca existente de Objective-C, InfColorPicker. Trata temas como compilar una biblioteca estática de Objective-C, enlace y utilizar el enlace en una aplicación de Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
 ms.openlocfilehash: fcf4e6d9b281eaac4be888c499e537f7397528a0
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61392197"
 ---
-# <a name="walkthrough-binding-an-ios-objective-c-library"></a>Tutorial: Enlace de una biblioteca de Objective-C de iOS
+# <a name="walkthrough-binding-an-ios-objective-c-library"></a>Tutorial: enlace de una biblioteca de Objective-C a iOS
 
 _En este artículo se proporciona un tutorial práctico de creación de un enlace de Xamarin.iOS para una biblioteca existente de Objective-C, InfColorPicker. Trata temas como compilar una biblioteca estática de Objective-C, enlace y utilizar el enlace en una aplicación de Xamarin.iOS._
 

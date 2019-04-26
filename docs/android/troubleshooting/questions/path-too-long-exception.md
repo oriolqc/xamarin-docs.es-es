@@ -9,11 +9,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 05/29/2018
 ms.openlocfilehash: 4cb3e13ebbe3d9e8aed153528a35ab16c92e2145
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61153336"
 ---
 # <a name="how-do-i-resolve-a-pathtoolongexception-error"></a>¿Cómo se puede resolver un error de PathTooLongException?
 
@@ -26,7 +26,7 @@ Por ejemplo, durante una compilación se pudo generar una ruta de acceso similar
 
 En Windows (donde es la longitud máxima de una ruta de acceso [260 caracteres](https://msdn.microsoft.com/library/windows/desktop/aa365247.aspx)), un **PathTooLongException** podría generarse durante la compilación del proyecto si una ruta de acceso generado supera la longitud máxima. 
 
-## <a name="fix"></a>Corregir
+## <a name="fix"></a>Solución
 
 A partir de Xamarin.Android 8.0, la `UseShortFileNames` se puede establecer la propiedad de MSBuild para evitar este error. Cuando esta propiedad se establece en `True` (el valor predeterminado es `False`), el proceso de compilación usa nombres de ruta de acceso más cortos para reducir la probabilidad de generar un **PathTooLongException**.
 Por ejemplo, cuando `UseShortFileNames` está establecido en `True`, la ruta de acceso anterior se ha reducido a la ruta de acceso que es similar al siguiente:

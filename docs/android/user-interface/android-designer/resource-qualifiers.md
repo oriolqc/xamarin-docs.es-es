@@ -1,5 +1,5 @@
 ---
-title: Calificadores de recursos y las opciones de visualización
+title: Calificadores de recursos y opciones de visualización
 description: En este tema se explica cómo definir los recursos que se usará solo cuando se comparan algunos valores de calificador. Un ejemplo sencillo es un recurso de cadena completo del idioma. Un recurso de cadena puede definirse de forma predeterminada, con otros recursos alternativos definidos que se usará para idiomas adicionales. Pueden calificar todos los tipos de recursos, incluido el diseño propio.
 ms.prod: xamarin
 ms.assetid: 2111C18A-3EDA-3787-25E1-3869FF4BE441
@@ -8,11 +8,11 @@ author: conceptdev
 ms.author: crdun
 ms.date: 07/25/2018
 ms.openlocfilehash: 9d99e6a59b57b59d585b32befdadc0890d41448c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60951064"
 ---
 # <a name="resource-qualifiers-and-visualization-options"></a>Calificadores de recursos y las opciones de visualización
 

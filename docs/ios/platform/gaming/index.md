@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: d8a531e495a19be7437d4a600e758028594248ab
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "60953336"
 ---
 # <a name="ios-gaming-apis-in-xamarinios"></a>API de juegos en Xamarin.iOS de iOS
 
@@ -375,7 +375,7 @@ Además de los ejemplos presentados anteriormente, Apple ha proporcionado las si
 
 - [FourInARow: Utilizando al estratega GameplayKit Minmax para AI oponente](https://developer.apple.com/library/prerelease/ios/samplecode/FourInARow/Introduction/Intro.html#//apple_ref/doc/uid/TP40016142)
 - [AgentsCatalog: Usa el sistema de agentes de GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/AgentsCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40016141)
-- [DemoBots: Compilar un juego multiplataforma con SpriteKit y GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
+- [DemoBots: Crear un juego multiplataforma con SpriteKit y GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179)
 
 ## <a name="metal"></a>Metal
 
@@ -429,7 +429,7 @@ Para obtener más información sobre el modelo de E/S, vea Apple [referencia del
 
 El marco de Apple nuevo ReplayKit le permite agregar grabación de juego a su juego de iOS con facilidad y permitir al usuario editar y compartir este vídeo desde dentro de la aplicación rápida y fácilmente.
 
-Para obtener más información, consulte Apple [va Social con vídeo ReplayKit y Game Center](https://developer.apple.com/videos/wwdc/2015/?id=605) y sus [DemoBots: crear un juego de plataforma cruzada con SpriteKit y GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) aplicación de ejemplo.
+Para obtener más información, consulte Apple [va Social con vídeo ReplayKit y Game Center](https://developer.apple.com/videos/wwdc/2015/?id=605) y sus [DemoBots: Crear un juego de plataforma cruzada con SpriteKit y GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) aplicación de ejemplo.
 
 ## <a name="scenekit"></a>SceneKit
 
@@ -445,7 +445,7 @@ Apple ha agregado las siguientes características nuevas para SceneKit para iOS 
 - El `SCNView` y `SCNSceneRenderer` clases se pueden usar para habilitar la representación completa (en dispositivos iOS compatibles).
 - El `SCNAudioPlayer` y `SCNNode` clases se pueden usar para agregar efectos de audio espaciales que automáticamente el seguimiento de una posición del jugador a una aplicación iOS.
 
-Para obtener más información, consulte nuestra [SceneKit documentación](~/ios/platform/introduction-to-ios8.md#scenekit) y Apple [SceneKit Framework referencia](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) y [Fox: crear un juego de SceneKit con el Editor de escena Xcode](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154)proyecto de ejemplo.
+Para obtener más información, consulte nuestra [SceneKit documentación](~/ios/platform/introduction-to-ios8.md#scenekit) y Apple [SceneKit Framework referencia](https://developer.apple.com/library/prerelease/ios/documentation/SceneKit/Reference/SceneKit_Framework/index.html#//apple_ref/doc/uid/TP40012283) y [Fox: Crear un juego de SceneKit con el Editor de Xcode escena](https://developer.apple.com/library/prerelease/ios/samplecode/Fox/Introduction/Intro.html#//apple_ref/doc/uid/TP40016154) proyecto de ejemplo.
 
 ## <a name="spritekit"></a>SpriteKit
 
@@ -462,7 +462,7 @@ Apple ha agregado las siguientes características nuevas para SpriteKit de iOS 9
 - Compatibilidad con juegos con nuevos nodos de cámara de desplazamiento fácil (`SKCameraNode`) objetos.
 - En dispositivos iOS que admiten el sistema operativo, SpriteKit automáticamente usará para la representación, incluso si ya estaba usando a los sombreadores de OpenGL ES personalizados.
 
-Para obtener más información, consulte nuestra [SpriteKit documentación](~/ios/platform/introduction-to-ios8.md#spritekit) Apple [SpriteKit Framework referencia](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) y sus [DemoBots: crear un juego de plataforma cruzada con SpriteKit y GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) aplicación de ejemplo.
+Para obtener más información, consulte nuestra [SpriteKit documentación](~/ios/platform/introduction-to-ios8.md#spritekit) Apple [SpriteKit Framework referencia](https://developer.apple.com/library/prerelease/ios/documentation/SpriteKit/Reference/SpriteKitFramework_Ref/index.html#//apple_ref/doc/uid/TP40013041) y sus [DemoBots: Crear un juego de plataforma cruzada con SpriteKit y GameplayKit](https://developer.apple.com/library/prerelease/ios/samplecode/DemoBots/Introduction/Intro.html#//apple_ref/doc/uid/TP40015179) aplicación de ejemplo.
 
 ## <a name="summary"></a>Resumen
 

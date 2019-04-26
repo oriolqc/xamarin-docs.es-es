@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
 ms.openlocfilehash: 2d67bc71361e335515cfba8b5a20e157ed6b6b05
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50114345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61087889"
 ---
 # <a name="touch-id-in-xamarinios"></a>Id. de toque en Xamarin.iOS
 
@@ -31,7 +31,7 @@ Cada elemento de la cadena de claves está protegido por el código de acceso a 
 
 [![](touchid-images/image1.png "Este diagrama ilustra cómo interactúa una aplicación con la cadena de claves")](touchid-images/image1.png#lightbox)
 
-### <a name="secure-enclave"></a>Enclave seguro
+### <a name="secure-enclave"></a>Secure Enclave
 
 La cadena de claves no puede descifrar el elemento de la cadena de claves por sí mismo; en su lugar, se realiza en el *Enclave seguro*. El enclave seguro es un procesador conjunta en el chip de A7 es responsable de determinar a una coincidencia correcta de datos de huellas digitales del sensor de Touch ID con un proceso de impresión registrado. A continuación, se descifrar el elemento de la cadena de claves y devolver el secreto descifrado a la cadena de claves.
 
@@ -63,7 +63,7 @@ Un nuevo marco en iOS 8, llamado _autenticación Local_, es compatible con este 
 
 Que se haya establecido en la sección anterior, las aplicaciones pueden usar la autenticación Local para autenticar al usuario en cumplimiento con la directiva de seguridad que se ha establecido en el dispositivo.
 
-Actualmente, la API proporciona solo dos funciones: en primer lugar, que ayuda a los servicios existentes de la cadena de claves mediante el uso de nuevos Keychain Access Control Lists (ACL). Datos de cadena de claves se pueden desbloqueadas con la autenticación correcta de una huella digital de los usuarios.
+Actualmente, la API proporciona solo dos funciones: En primer lugar, ayuda a los servicios existentes de la cadena de claves mediante el uso de nuevos Keychain Access Control Lists (ACL). Datos de cadena de claves se pueden desbloqueadas con la autenticación correcta de una huella digital de los usuarios.
 
 En segundo lugar, LocalAuthentication proporciona dos métodos para autenticar su aplicación localmente. Los desarrolladores deben usar `CanEvaluatePolicy` para determinar si el dispositivo es capaz de Aceptar Touch ID y, a continuación, `EvaluatePolicy` para iniciar la operación de autenticación.
 

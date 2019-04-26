@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2017
 ms.openlocfilehash: 98212483481b2ce60c73a40c014816ee3c3f110c
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61386646"
 ---
 # <a name="listview-performance"></a>Rendimiento de ListView
 
@@ -133,7 +133,7 @@ Esto tiene el mismo efecto que establecer el argumento de estrategia de almacena
 
 #### <a name="setting-the-caching-strategy-in-a-subclassed-listview"></a>Establecimiento de la estrategia de almacenamiento en caché en un ListView crean Subclase
 
-Establecer el `CachingStrategy` atributo de XAML en una subclase [ `ListView` ](xref:Xamarin.Forms.ListView) no producirá el comportamiento deseado, porque no hay ningún `CachingStrategy` propiedad `ListView`. Además, si [XAMLC](~/xamarin-forms/xaml/xamlc.md) está habilitado, se producirá el siguiente mensaje de error: **ninguna propiedad, propiedad enlazable o evento encontrado para 'CachingStrategy'**
+Establecer el `CachingStrategy` atributo de XAML en una subclase [ `ListView` ](xref:Xamarin.Forms.ListView) no producirá el comportamiento deseado, porque no hay ningún `CachingStrategy` propiedad `ListView`. Además, si [XAMLC](~/xamarin-forms/xaml/xamlc.md) está habilitado, se producirá el siguiente mensaje de error: **Ninguna propiedad, propiedad enlazable o evento encontrado para 'CachingStrategy'**
 
 La solución a este problema consiste en especificar un constructor de subclases [ `ListView` ](xref:Xamarin.Forms.ListView) que acepta un [ `ListViewCachingStrategy` ](xref:Xamarin.Forms.ListViewCachingStrategy) parámetro y lo pasa a la clase base:
 

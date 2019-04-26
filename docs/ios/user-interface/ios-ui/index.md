@@ -1,5 +1,5 @@
 ---
-title: Interfaces de usuario de iOS
+title: Interfaces de usuario en iOS
 description: Este documento incluye vínculos a guías que describen cómo crear interfaces de usuario de la aplicación de Xamarin.iOS. Las guías vinculadas abarcan la API de apariencia, creación de objetos de la interfaz de usuario, las opciones de diseño y mucho más.
 ms.prod: xamarin
 ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
 ms.openlocfilehash: efb88ada8a4b4c36dd49de137eb64acd63552968
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50115684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61382341"
 ---
-# <a name="user-interfaces-in-ios"></a>Interfaces de usuario de iOS
+# <a name="user-interfaces-in-ios"></a>Interfaces de usuario en iOS
 
 ## <a name="appearance-apiintroduction-to-the-appearance-apimd"></a>[Appearance API](introduction-to-the-appearance-api.md)
 
@@ -26,7 +26,7 @@ Grupos de Apple relacionados con partes de funcionalidad en "marcos", que equiva
 
 ## <a name="layout-optionsiosuser-interfaceios-uilayout-optionsmd"></a>[Opciones de diseño](~/ios/user-interface/ios-ui/layout-options.md)
 
-Hay dos mecanismos diferentes para controlar el diseño cuando se cambia el tamaño o girar una vista: cambiar automáticamente el tamaño y el diseño automático.
+Hay dos mecanismos diferentes para controlar el diseño cuando se cambia el tamaño o girar una vista: Cambiar automáticamente el tamaño y el diseño automático.
 
 ## <a name="providing-haptic-feedbackiosuser-interfaceios-uihaptic-feedbackmd"></a>[Provisión de comentarios hápticos](~/ios/user-interface/ios-ui/haptic-feedback.md)
 

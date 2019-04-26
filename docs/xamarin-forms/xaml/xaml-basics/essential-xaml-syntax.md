@@ -8,11 +8,11 @@ author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
 ms.openlocfilehash: 75d3c628a513b81af9dea7308ca49c2b490c4aff
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53059748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61407659"
 ---
 # <a name="part-2-essential-xaml-syntax"></a>Parte 2. Sintaxis XAML esencial
 
@@ -143,7 +143,7 @@ Sin embargo, la sintaxis de elemento de propiedad es de importancia fundamental 
 </Label>
 ```
 
-Otro ejemplo: el `Grid` tiene dos propiedades denominadas `RowDefinitions` y `ColumnDefinitions`. Estas dos propiedades son de tipo `RowDefinitionCollection` y `ColumnDefinitionCollection`, que son colecciones de `RowDefinition` y `ColumnDefinition` objetos. Deberá utilizar la sintaxis de elemento de propiedad para establecer estas colecciones.
+Otro ejemplo: El `Grid` tiene dos propiedades denominadas `RowDefinitions` y `ColumnDefinitions`. Estas dos propiedades son de tipo `RowDefinitionCollection` y `ColumnDefinitionCollection`, que son colecciones de `RowDefinition` y `ColumnDefinition` objetos. Deberá utilizar la sintaxis de elemento de propiedad para establecer estas colecciones.
 
 Este es el comienzo del archivo XAML para un `GridDemoPage` (clase), que muestra las etiquetas de elemento de propiedad para el `RowDefinitions` y `ColumnDefinitions` colecciones:
 
@@ -351,7 +351,7 @@ Sin duda puede incluir el `Content` y `Children` propiedades como elementos de p
 </ContentPage>
 ```
 
-La verdadera pregunta es: ¿por qué estos elementos de propiedad *no* necesarios en el archivo XAML?
+La verdadera pregunta es: ¿Por qué estos elementos de propiedad *no* necesarios en el archivo XAML?
 
 Los elementos definidos en Xamarin.Forms para su uso en XAML pueden tener una propiedad de marca en el `ContentProperty` atributo de la clase. Si busca la `ContentPage` clase en la documentación de Xamarin.Forms en línea, verá que este atributo:
 

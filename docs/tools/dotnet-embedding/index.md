@@ -1,23 +1,23 @@
 ---
 title: Inserción de .NET
-description: 'Inserción de .NET permite que el código existente de .NET (C#, F # etc.) que será consumido por el código escrito en otros lenguajes de programación.'
+description: Inserción de .NET permite que el código existente de .NET (C#, F#etc.) que será consumido por el código escrito en otros lenguajes de programación.
 ms.prod: xamarin
 ms.assetid: 617C38CA-B921-4A76-8DFC-B0A3DF90E48A
 author: lobrien
 ms.author: laobri
 ms.date: 11/14/2017
 ms.openlocfilehash: 23233ea8b06e0db580ba99edf2705e3dae5b931f
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50107149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61363560"
 ---
 # <a name="net-embedding"></a>Inserción de .NET
 
 ![Vista previa](~/media/shared/preview.png)
 
-Inserción de .NET permite que el código existente de .NET (C#, F # etc.) para utilizarse en otros lenguajes de programación y en diversos entornos diferentes.
+Inserción de .NET permite que el código existente de .NET (C#, F#etc.) a ser consumidos desde otros lenguajes de programación y en diversos entornos diferentes.
 
 Esto significa que si tiene una biblioteca de .NET que desea utilizar desde su aplicación iOS existente, puede hacerlo.   O bien, si desea vincularla con una biblioteca nativa de C++, también puede hacerlo.   O usar código de .NET desde Java.
 
