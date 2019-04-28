@@ -1,19 +1,14 @@
 ---
 title: Introducción a iOS 6
-description: Este documento incluye vínculos a guías que describen las características introducidas en iOS 6. Las vistas de colección, PassKit, el marco de redes sociales, y los cambios en StoreKit se tratan.
+description: 'Este documento incluye vínculos a guías que describen las características introducidas en iOS 6. Las vistas de colección, PassKit, el marco de redes sociales, y los cambios en StoreKit se tratan.'
 ms.prod: xamarin
 ms.assetid: 242DA7E3-8FD8-5F20-285D-603259CA622D
 ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 25926d82e060b91b007da9c2295b328cb049e8df
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
-ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61302278"
 ---
+
 # <a name="introduction-to-ios-6"></a>Introducción a iOS 6
 
 _iOS 6 incluye una serie de nuevas tecnologías para desarrollar aplicaciones de Xamarin.iOS 6 aporta a C# a los desarrolladores._

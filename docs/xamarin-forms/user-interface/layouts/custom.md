@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/29/2017
-ms.openlocfilehash: a1027b1fd738c80cf5917effc66957f77a337ecf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 56f7a5308d15425bdedd7d9098882a072d90d1f7
+ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61304851"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64347055"
 ---
 # <a name="creating-a-custom-layout"></a>Crear un diseño personalizado
 
@@ -380,27 +380,36 @@ Los elementos secundarios, a continuación, se pueden agregar a la `WrapLayout` 
 ```csharp
 protected override async void OnAppearing()
 {
-  base.OnAppearing();
+    base.OnAppearing();
 
-  var images = await GetImageListAsync();
-  foreach (var photo in images.Photos)
-  {
-    var image = new Image
+    var images = await GetImageListAsync();
+    if (images != null)
     {
-      Source = ImageSource.FromUri(new Uri(photo + string.Format("?width={0}&height={0}&mode=max", Device.RuntimePlatform == Device.UWP ? 120 : 240)))
-    };
-    wrapLayout.Children.Add(image);
-  }
+        foreach (var photo in images.Photos)
+        {
+            var image = new Image
+            {
+                Source = ImageSource.FromUri(new Uri(photo))
+            };
+            wrapLayout.Children.Add(image);
+        }
+    }
 }
 
 async Task<ImageList> GetImageListAsync()
 {
-  var requestUri = "https://docs.xamarin.com/demo/stock.json";
-  using (var client = new HttpClient())
-  {
-    var result = await client.GetStringAsync(requestUri);
-    return JsonConvert.DeserializeObject<ImageList>(result);
-  }
+    try
+    {
+        string requestUri = "https://raw.githubusercontent.com/xamarin/docs-archive/master/Images/stock/small/stock.json";
+        string result = await _client.GetStringAsync(requestUri);
+        return JsonConvert.DeserializeObject<ImageList>(result);
+    }
+    catch (Exception ex)
+    {
+        Debug.WriteLine($"\tERROR: {ex.Message}");
+    }
+
+    return null;
 }
 ```
 
@@ -415,11 +424,6 @@ Capturas de pantalla siguientes se muestra el `WrapLayout` después de se ha gir
 ![](custom-images/landscape-uwp.png " Captura de pantalla de ejemplo UWP aplicación panorama")
 
 El número de columnas en cada fila depende del tamaño de fotografía, el ancho de pantalla y el número de píxeles independientes del dispositivo unitario. El [ `Image` ](xref:Xamarin.Forms.Image) elementos cargar las fotos, de forma asincrónica y, por tanto, el `WrapLayout` clase recibirán llamadas frecuentes a su [ `LayoutChildren` ](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) método cada `Image` elemento recibe un nuevo tamaño en función de la fotografía cargada.
-
-## <a name="summary"></a>Resumen
-
-En este artículo se explica cómo escribir una clase de diseño personalizado y se muestra una orientación distinción `WrapLayout` clase que sus elementos secundarios se organiza horizontalmente en la página y, a continuación, ajusta la presentación de los elementos secundarios subsiguientes a las filas adicionales.
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 
