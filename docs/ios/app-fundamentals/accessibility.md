@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 05/18/2016
 ms.openlocfilehash: aa3e15797ae1dac621ea8a78345044be1387ebaa
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61179615"
 ---
 # <a name="accessibility-on-ios"></a>Accesibilidad en iOS
 
@@ -91,7 +91,7 @@ Si la interfaz de usuario está colocada en un guión gráfico, puede proporcion
 
 Este archivo se colocarían en la **es.lproj** directorio de contenido en español.
 
-**Localizable.Strings**
+**Localizable.strings**
 
 Como alternativa, las traducciones se pueden agregar a la **Localizable.strings** archivo en el directorio contenido localizado (p ej. **es.lproj** para español):
 
@@ -140,6 +140,6 @@ Mientras el inspector está visible, utilice el icono "X" en la parte superior i
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Accesibilidad de multiplataforma](~/cross-platform/app-fundamentals/accessibility.md)
+- [Accesibilidad multiplataforma](~/cross-platform/app-fundamentals/accessibility.md)
 - [Accesibilidad (Apple) de iOS](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
 - [iOS VoiceOver](http://www.apple.com/accessibility/ios/voiceover/)

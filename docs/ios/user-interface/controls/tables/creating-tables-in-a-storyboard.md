@@ -1,5 +1,5 @@
 ---
-title: Trabajar con tablas en el Diseñador de iOS
+title: Trabajo con tablas en iOS Designer
 description: En las secciones anteriores, analizamos el desarrollo mediante las tablas. En este caso, la quinta y última sección, se le agregar lo que hemos aprendido hasta ahora y cree una aplicación de lista de tareas básica mediante un guión gráfico.
 ms.prod: xamarin
 ms.assetid: D8416E10-481A-0B6E-4081-B146E6358004
@@ -8,17 +8,17 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
 ms.openlocfilehash: 303c96ae6cdbc9f5b327c971f962d6eac75a6fa1
-ms.sourcegitcommit: f541a92b4f896474f6a5467ccff2028dafa6fee7
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50983619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61227618"
 ---
-# <a name="working-with-tables-in-the-ios-designer"></a>Trabajar con tablas en el Diseñador de iOS
+# <a name="working-with-tables-in-the-ios-designer"></a>Trabajo con tablas en iOS Designer
 
 Los guiones gráficos son una forma WYSIWYG para crear aplicaciones de iOS y se admiten dentro de Visual Studio en Mac y Windows. Para obtener más información sobre los guiones gráficos, consulte el [Introducción a guiones gráficos](~/ios/user-interface/storyboards/index.md) documento. Guiones gráficos también le permiten modificar los diseños de celda *en* la tabla, que simplifica el desarrollo con tablas y vistas
 
-Al configurar las propiedades de una vista de tabla en el Diseñador de iOS, hay dos tipos de contenido de la celda puede elegir entre: **dinámica** o **estático** contenido del prototipo.
+Al configurar las propiedades de una vista de tabla en el Diseñador de iOS, hay dos tipos de contenido de la celda que puede elegir entre: **Dinámica** o **estático** contenido del prototipo.
 
 <a name="Prototype_Content" />
 
@@ -79,11 +79,11 @@ El primer cambio en el guión gráfico es eliminar la vista de detalle existente
 
 5. A continuación, configure las dos vistas de tabla seleccionándolos y usando el panel de propiedades. Asegúrese de seleccionar la vista y el controlador de vista no: se puede usar el esquema del documento para ayudar con la selección.
 
-6.  Cambiar el controlador de vista raíz para que sea **contenido: prototipos dinámica** (la vista en la superficie de diseño se etiquetarse **prototipo contenido** ):
+6.  Cambiar el controlador de vista raíz para que sea **contenido: Prototipos dinámicos** (la vista en la superficie de diseño se etiquetarse **prototipo contenido** ):
 
     [![Establecer la propiedad de contenido en prototipos dinámicos](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
-7.  Cambiar el nuevo **UITableViewController** sea **contenido: estático celdas**. 
+7.  Cambiar el nuevo **UITableViewController** sea **contenido: Las celdas estáticas**. 
 
 
 8. El nuevo UITableViewController debe tener su nombre de clase y el identificador de conjunto. Seleccione el tipo y el controlador de vista _TaskDetailViewController_ para el **clase** en el **panel de propiedades** : Esto creará un nuevo `TaskDetailViewController.cs` archivo de la solución Panel. Escriba el **StoryboardID** como _detalle_, como se muestra en el ejemplo siguiente. Esto se usará más adelante para cargar esta vista en C# código:  
@@ -115,7 +115,7 @@ A continuación, deberá crear un botón que agregará nuevas tareas, como se mu
 Haga lo siguiente: 
 
 -  Arrastre un **elemento de botón de barra** desde el cuadro de herramientas hasta la _lado derecho de la barra de navegación_.
--  En el **panel de propiedades**, en **elemento de botón de barra** seleccione **identificador: agregar** (para que sea un *+* además de botón). 
+-  En el **panel de propiedades**, en **elemento de botón de barra** seleccione **identificador: Agregar** (para que sea un *+* además de botón). 
 -  Asígnele un nombre para que puede identificarse en el código en una etapa posterior. Tenga en cuenta que deberá proporcionar el controlador de vista raíz de un nombre de clase (por ejemplo **ItemViewController**) para que pueda establecer el nombre del elemento de botón de barra.
 
 
@@ -130,9 +130,9 @@ Los pasos para crear el diseño completo son:
 Seleccione la vista de tabla y abra el **panel propiedad**. Actualizar las propiedades siguientes:
 
 -  **Las secciones**: _2_ 
--  **Estilo**: _agrupados_
--  **Separador**: _ninguno_
--  **Selección**: _ninguna selección_
+-  **Estilo**: _Agrupados_
+-  **Separador**: _Ninguno_
+-  **Selección**: _No hay nada seleccionado_
 
 Seleccione la sección superior y, en **Propiedades > sección de vista de tabla** cambiar **filas** a _3_, tal y como se muestra a continuación:
 
@@ -141,15 +141,15 @@ Seleccione la sección superior y, en **Propiedades > sección de vista de tabla
 
 Para cada celda abierto el **panel de propiedades** y establezca:
 
--  **Estilo**: _personalizado_
--  **Identificador**: elija un identificador único para cada celda (p ej. "_título_","_notas_","_realiza_").
+-  **Estilo**:  _Custom_
+-  **Identificador**: Elija un identificador único para cada celda (p ej. "_título_","_notas_","_realiza_").
 -  Arrastre los controles necesarios para generar el diseño se muestra en la captura de pantalla (colocar **UILabel**, **interfaz de usuario** y **UISwitch** en las celdas correctas y establezca las etiquetas de forma adecuada, Internet Explorer. Título, notas y listo).
 
 
 En la segunda sección, establezca **filas** a _1_ y agarre el controlador de cambio de tamaño inferior de la celda para hacerla más alta.
 
 -  **Establecer el identificador de**: a un valor único (p ej. "Guardar"). 
--  **Establecer el fondo**: _borrar el Color_ .
+-  **Establecer el fondo**:  _Borrar el Color_ .
 -  Arrastre dos botones a la celda y establezca sus títulos correctamente (es decir, _guardar_ y _eliminar_), tal y como se muestra a continuación:
 
    [![dos botones de opción en la sección inferior](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)

@@ -1,5 +1,5 @@
 ---
-title: iOS 9 compatibilidad
+title: Compatibilidad con iOS 9
 description: Incluso si no va a agregar las características de iOS 9 a la aplicación inmediatamente, debe volver a generar sus aplicaciones con la versión más reciente de Xamarin.
 ms.prod: xamarin
 ms.assetid: 69A05B0E-8A0A-489F-8165-B10AC46FAF3C
@@ -8,13 +8,13 @@ author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
 ms.openlocfilehash: 6ade1c05c8e1cc64a4d24df1284d86175083ab80
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50119896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61293657"
 ---
-# <a name="ios-9-compatibility"></a>iOS 9 compatibilidad
+# <a name="ios-9-compatibility"></a>Compatibilidad con iOS 9
 
 _Incluso si no va a agregar las características de iOS 9 a la aplicación inmediatamente, debe volver a generar sus aplicaciones con la versión más reciente de Xamarin._
 
@@ -60,9 +60,9 @@ Hay algunos casos de código que patrones *usa* para trabajar en versiones anter
 
 ### <a name="uicollectionviewcellcontentview-is-null-in-constructors"></a>UICollectionViewCell.ContentView es nulo en constructores
 
-**Motivo:** en iOS 9 el `initWithFrame:` constructor ahora es necesario debido a cambios de comportamiento en iOS 9 como el [UICollectionView Estados de documentación](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Si ha registrado una clase para el identificador especificado y se debe crear una nueva celda, la celda se ha inicializado mediante una llamada a su `initWithFrame:` método.
+**Motivo:** En iOS 9 el `initWithFrame:` constructor ahora es necesario debido a cambios de comportamiento en iOS 9 como el [UICollectionView Estados de documentación](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UICollectionView_class/#//apple_ref/occ/instm/UICollectionView/dequeueReusableCellWithReuseIdentifier:forIndexPath). Si ha registrado una clase para el identificador especificado y se debe crear una nueva celda, la celda se ha inicializado mediante una llamada a su `initWithFrame:` método.
 
-**Corrección:** agregar el `initWithFrame:` constructor como este:
+**Fix:** Agregar el `initWithFrame:` constructor como este:
 
 ```csharp
 [Export ("initWithFrame:")]
@@ -72,15 +72,15 @@ public YourCellClassName (CGRect frame) : base (frame)
 }
 ```
 
-Relacionadas con ejemplos: [MotionGraph](https://github.com/xamarin/monotouch-samples/commit/3c1b7a4170c001e7290db9babb2b7a6dddeb8bcb), [TextKitDemo](https://github.com/xamarin/monotouch-samples/commit/23ea01b37326963b5ebf68bbcc1edd51c66a28d6)
+Muestras relacionadas: [MotionGraph](https://github.com/xamarin/monotouch-samples/commit/3c1b7a4170c001e7290db9babb2b7a6dddeb8bcb), [TextKitDemo](https://github.com/xamarin/monotouch-samples/commit/23ea01b37326963b5ebf68bbcc1edd51c66a28d6)
 
 
 
 ### <a name="uiview-fails-to-init-with-coder-when-loading-a-view-from-a-xibnib"></a>UIView produce un error init con el codificador al cargar una vista desde un Xib/Nib
 
-**Motivo:** el `initWithCoder:` constructor es lo que se llama cuando la carga de una vista desde un archivo Xib de generador de interfaz. Si este constructor no se exporta a código no administrado no puede llamar a nuestra versión administrada del mismo. Anteriormente (p ej. en iOS 8) el `IntPtr` se invoca el constructor para inicializar la vista.
+**Motivo:** El `initWithCoder:` constructor es lo que se llama cuando la carga de una vista desde un archivo Xib de generador de interfaz. Si este constructor no se exporta a código no administrado no puede llamar a nuestra versión administrada del mismo. Anteriormente (p ej. en iOS 8) el `IntPtr` se invoca el constructor para inicializar la vista.
 
-**Corrección:** crear y exportar el `initWithCoder:` constructor como este:
+**Fix:** Crear y exportar el `initWithCoder:` constructor como este:
 
 ```csharp
 [Export ("initWithCoder:")]
@@ -102,9 +102,9 @@ Dyld Error Message:
 Dyld Message: no cache image with name (/System/Library/PrivateFrameworks/JavaScriptCore.framework/JavaScriptCore)
 ```
 
-**Motivo:** se trata de un error en el enlazador nativo de Apple, lo que sucede cuando los gobiernos realizan un marco de trabajo privada a pública (JavaScriptCore se hizo público en iOS 7, antes que era un marco de trabajo privado), y es el destino de implementación de la aplicación para una versión de iOS cuando el marco de trabajo era privado. En este caso se vinculará el vinculador de Apple con la versión de framework en lugar de la versión pública privada.
+**Motivo:** Se trata de un error en el enlazador nativo de Apple, lo que sucede cuando los gobiernos realizan un marco de trabajo privada a pública (JavaScriptCore se hizo público en iOS 7, antes que era un marco de trabajo privado), y el destino de implementación de la aplicación es para una versión de iOS cuando el marco de trabajo era privado. En este caso se vinculará el vinculador de Apple con la versión de framework en lugar de la versión pública privada.
 
-**Corrección:** Esto se solucionará para iOS 9, pero no hay una solución sencilla que se puede aplicar a usted mismo mientras tanto: simplemente tener como destino una versión posterior de iOS en el proyecto (puede intentar iOS 7 en este caso). Otros marcos de trabajo pueden presentar problemas similares, por ejemplo el marco de trabajo de WebKit se hizo público en iOS 8 (y por lo que como destino iOS 7 se producirá este error; se debe tener como destino iOS 8 para usar WebKit en la aplicación).
+**Fix:** Esto se solucionará para iOS 9, pero no hay una solución sencilla que se puede aplicar a usted mismo mientras tanto: simplemente tener como destino una versión posterior de iOS en el proyecto (puede intentar iOS 7 en este caso). Otros marcos de trabajo pueden presentar problemas similares, por ejemplo el marco de trabajo de WebKit se hizo público en iOS 8 (y por lo que como destino iOS 7 se producirá este error; se debe tener como destino iOS 8 para usar WebKit en la aplicación).
 
 
 

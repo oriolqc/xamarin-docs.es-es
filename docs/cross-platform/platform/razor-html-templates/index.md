@@ -7,11 +7,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 07/24/2018
 ms.openlocfilehash: 7e569aaddef912d9534e98f2f987ad5dfca8a5a6
-ms.sourcegitcommit: 46bb04016d3c35d91ff434b38474e0cb8197961b
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2018
-ms.locfileid: "39270137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61168079"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Vistas HTML de creación mediante plantillas de Razor
 
@@ -523,6 +523,6 @@ Por último presentó los ejemplos de RazorTodo que demuestran cómo combinar la
 
 ### <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
+- [RazorTodo Sample](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
 - [MVC 3: motor de vistas Razor (Microsoft)](http://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
 - [Introducción a la programación Web de ASP.NET mediante la sintaxis Razor (Microsoft)](http://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)

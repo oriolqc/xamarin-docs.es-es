@@ -8,11 +8,11 @@ ms.author: crdun
 ms.custom: video
 ms.date: 07/18/2018
 ms.openlocfilehash: d07b248b36feee909db9c863eb17f1a900f58e60
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61191365"
 ---
 # <a name="net-standard-library-code-sharing"></a>Uso compartido de código de biblioteca estándar de .NET
 
@@ -52,7 +52,7 @@ La configuración de la biblioteca estándar de .NET se puede ver y cambiar con 
 
 Puede cambiar en la versión de `netstandard` cambiando el `Target Framework` valor de la lista desplegable.
 
-**Además:** puede editar el `.csproj` directamente para cambiar este valor.
+**Además:** Puede editar el `.csproj` directamente para cambiar este valor.
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
@@ -78,7 +78,7 @@ La configuración de la biblioteca estándar de .NET se puede ver y cambiar con 
 
 ![Editar plataformas de destino estándar de .NET en las propiedades del proyecto](net-standard-images/vs03-w157.png "hacen referencia a una biblioteca .NET Standard del mismo modo que otros proyectos")
 
-**Además:** puede editar el `.csproj` directamente para editar el `TargetFramework` elemento y cuál es el cambio de destino (p ej. `<TargetFramework>netstandard2.0</TargetFramework>`).
+**Además:** Puede editar el `.csproj` directamente para editar el `TargetFramework` elemento y cuál es el cambio de destino (p ej. `<TargetFramework>netstandard2.0</TargetFramework>`).
 
 ### <a name="using-a-net-standard-library-project"></a>Uso de un proyecto de biblioteca estándar de .NET
 

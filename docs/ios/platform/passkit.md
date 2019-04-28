@@ -8,11 +8,11 @@ author: lobrien
 ms.author: laobri
 ms.date: 06/13/2018
 ms.openlocfilehash: d1c640bef41e875b3bb427d657c9c239e4c3e16d
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61192675"
 ---
 # <a name="passkit-in-xamarinios"></a>PassKit en Xamarin.iOS
 
@@ -96,7 +96,7 @@ A continuación se muestra la estructura de directorios de un archivo de tarjeta
 
  [![](passkit-images/image4.png "Estructura de directorios de un archivo de paso se muestra aquí")](passkit-images/image4.png#lightbox)
 
-### <a name="passjson"></a>PASS.JSON
+### <a name="passjson"></a>pass.json
 
 JSON es el formato porque pasa normalmente se crea en un servidor, significa que el código de generación es independiente de la plataforma en el servidor. Son tres piezas clave de la información en cada paso:
 
@@ -169,7 +169,7 @@ Hay muchas otras claves JSON en cada tarjeta; se muestra un ejemplo de ellas a c
 
 ### <a name="barcodes"></a>Códigos de barras
 
-Se admiten formatos sólo 2D: PDF417, Aztec, QR. Las notificaciones de Apple que los códigos de barras 1D son adecuados para la detección en una pantalla de teléfono con retroiluminación.
+Solo se admiten formatos 2D: PDF417, Aztec, QR. Las notificaciones de Apple que los códigos de barras 1D son adecuados para la detección en una pantalla de teléfono con retroiluminación.
 
 Texto alternativo que se muestra a continuación el código de barras es opcional: algunos comerciantes desean ser capaz de lectura/tipo manualmente.
 
@@ -225,9 +225,9 @@ Para crear un Pass Type ID (identificador del tipo de tarjeta), realice lo sigui
 
 El primer paso es configurar un Pass Type ID (identificador del tipo de tarjeta) para que se admitan todos los _tipos_ diferentes de tarjeta. El Pass ID (identificador de tarjeta) o el Pass Type identifier (identificador del tipo de tarjeta) crea un identificador único de la tarjeta. Usaremos este identificador para vincular la tarjeta con su cuenta de desarrollador mediante un certificado.
 
-1. En la sección [Certificates, Identifiers, and Profiles (Certificados, identificadores y perfiles) del Portal de aprovisionamiento de iOS](https://developer.apple.com/account/overview.action), vaya a **Identifiers** (Identificadores) y seleccione **Pass Type IDs** (Identificadores del tipo de tarjeta). Después, seleccione el botón **+** para crear un tipo de tarjeta: [ ![](passkit-images/passid.png "crear un tipo de tarjeta")](passkit-images/passid.png#lightbox)
+1. En la sección [Certificates, Identifiers, and Profiles (Certificados, identificadores y perfiles) del Portal de aprovisionamiento de iOS](https://developer.apple.com/account/overview.action), vaya a **Identifiers** (Identificadores) y seleccione **Pass Type IDs** (Identificadores del tipo de tarjeta). A continuación, seleccione el **+** botón para crear un nuevo tipo de pase: [![](passkit-images/passid.png "Crear un nuevo tipo de paso")](passkit-images/passid.png#lightbox)
 
-2.   Proporcione una **Descripción** (nombre) y un **Identificador** (cadena única) para la tarjeta. Tenga en cuenta que todos los Pass Type IDs (identificadores del tipo de tarjeta) deben comenzar con la cadena `pass.` En este ejemplo, usamos `pass.com.xamarin.coupon.banana`: [ ![](passkit-images/register.png "proporcionar una descripción y un identificador")](passkit-images/register.png#lightbox)
+2.   Proporcione una **Descripción** (nombre) y un **Identificador** (cadena única) para la tarjeta. Tenga en cuenta que todos los identificadores de tipo pasar debe comenzar con la cadena `pass.` en este ejemplo usamos `pass.com.xamarin.coupon.banana` : [![](passkit-images/register.png "Proporcionar una descripción y un identificador")](passkit-images/register.png#lightbox)
 
 
 3.   Confirme el identificador de pase presionando el **registrar** botón.
@@ -236,7 +236,7 @@ El primer paso es configurar un Pass Type ID (identificador del tipo de tarjeta)
 
 Para crear un nuevo certificado para este identificador de tipo pase, realice lo siguiente:
 
-1.  Seleccione el identificador de pase recién creado en la lista y haga clic en **editar** : [ ![](passkit-images/pass-done.png "seleccione el nuevo identificador de pasar de la lista")](passkit-images/pass-done.png#lightbox)
+1.  Seleccione el identificador de pase recién creado en la lista y haga clic en **editar** : [![](passkit-images/pass-done.png "Seleccione el nuevo identificador de pasar de la lista")](passkit-images/pass-done.png#lightbox)
 
     A continuación, seleccione **Create Certificate...** :
 
