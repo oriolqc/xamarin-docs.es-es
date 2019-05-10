@@ -1,27 +1,24 @@
 ---
-title: Desplazar un elemento en la vista
+title: Desplazamiento de Xamarin.Forms CollectionView
 description: Cuando un Deslizamientos de usuario para iniciar un desplazamiento, se puede controlar la posición final del desplazamiento para que se muestran por completo los elementos. Además, CollectionView define dos métodos ScrollTo, que se desplace mediante programación los elementos en la vista.
 ms.prod: xamarin
 ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/19/2019
-ms.openlocfilehash: da7f379076b8e193deddc99e9004f051ba006cbb
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 888b4f369f67a7d8566640927ba2ae3a395d68d8
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367732"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048163"
 ---
-# <a name="scroll-an-item-into-view"></a>Desplazar un elemento en la vista
+# <a name="xamarinforms-collectionview-scrolling"></a>Desplazamiento de Xamarin.Forms CollectionView
 
-![Vista previa](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Esta API es actualmente una versión preliminar")
 
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> El `CollectionView` es actualmente una versión preliminar y carece de algunas de sus funciones previstas. Además, la API puede cambiar cuando se completa la implementación.
 
 `CollectionView` define dos `ScrollTo` métodos, que desplazar los elementos en la vista. Una de las sobrecargas desplaza el elemento en el índice especificado en la vista, mientras que el otro desplaza el elemento especificado en la vista. Ambas sobrecargas tienen argumentos adicionales que pueden especificarse para indicar la posición exacta del elemento después de que el desplazamiento se ha completado y si se va a animar el desplazamiento.
 

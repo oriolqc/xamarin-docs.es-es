@@ -6,13 +6,13 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/01/2018
-ms.openlocfilehash: 965f56f7996cc7cf8a06e4201cc4bcf2ea35fb71
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 04/10/2019
+ms.openlocfilehash: fd67072953f0fc4e448fee7edeec84760ebbda9a
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61343314"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048324"
 ---
 # <a name="consuming-xaml-markup-extensions"></a>Consumo de las extensiones de marcado XAML
 
@@ -27,6 +27,7 @@ Las extensiones de marcado XAML que ayudan a mejorar la eficacia y flexibilidad 
 - [`x:Null`](#null) : establezca un atributo en un `null` valor.
 - [`OnPlatform`](#onplatform) : personalizar la apariencia de la interfaz de usuario en forma de acuerdo con la plataforma.
 - [`OnIdiom`](#onidiom) : personalizar la apariencia de la interfaz de usuario en función de la expresión del dispositivo se está ejecutando la aplicación en.
+- [`DataTemplate`](#datatemplate-markup-extension) : convierte un tipo en un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate).
 
 Las extensiones de marcado XAML adicionales históricamente han sido compatible con otras implementaciones de XAML y también son compatibles con Xamarin.Forms. Estos se describen con más detalle en otros artículos:
 
@@ -503,7 +504,7 @@ Este es el programa que se ejecuta:
 
 ## <a name="onidiom-markup-extension"></a>Extensión de marcado OnIdiom
 
-El `OnIdiom` permite personalizar la apariencia de la interfaz de usuario en función de la expresión del dispositivo se está ejecutando la aplicación en las extensiones de marcado. Es compatible con la [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) (clase), que define las siguientes propiedades:
+El `OnIdiom` permite personalizar la apariencia de la interfaz de usuario en función de la expresión de la aplicación se está ejecutando en el dispositivo de extensión de marcado. Es compatible con la [ `OnIdiomExtension` ](xref:Xamarin.Forms.Xaml.OnIdiomExtension) (clase), que define las siguientes propiedades:
 
 - `Default` de tipo `object`, establecido en un valor predeterminado que se aplicará a las propiedades que representan las expresiones de dispositivo.
 - `Phone` de tipo `object`, que se establece en un valor que se aplicará de teléfonos.
@@ -537,6 +538,25 @@ Este es el programa que se ejecuta:
 
 [![Demostración de OnIdiom](consuming-images/onidiomdemo-small.png "OnIdiom demostración")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom demostración")
 
+## <a name="datatemplate-markup-extension"></a>Extensión de marcado de DataTemplate
+
+El `DataTemplate` extensión de marcado permite convertir un tipo en un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate). Es compatible con la `DataTemplateExtension` (clase), que define un `TypeName` propiedad de tipo `string`, es decir se establece en el nombre del tipo para convertirse en un `DataTemplate`. El `TypeName` propiedad es la propiedad content de `DataTemplateExtension`. Por lo tanto, para las expresiones de marcado XAML expresadas con llaves, puede eliminar el `TypeName=` forma parte de la expresión.
+
+> [!NOTE]
+> El analizador XAML permite la `DataTemplateExtension` clase va a abreviar como `DataTemplate`.
+
+Un uso típico de esta extensión de marcado está en una aplicación de Shell, como se muestra en el ejemplo siguiente:
+
+```xaml
+<ShellContent Title="Monkeys"
+              Icon="monkey.png"
+              ContentTemplate="{DataTemplate views:MonkeysPage}" />
+```
+
+En este ejemplo, `MonkeysPage` se convierte de un [ `ContentPage` ](xref:Xamarin.Forms.ContentPage) a un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), que se establece como el valor de la `ShellContent.ContentTemplate` propiedad. Esto garantiza que `MonkeysPage` es sólo cuando tenga lugar la navegación a la página se han creado, en lugar de al iniciarse la aplicación.
+
+Para obtener más información acerca de las aplicaciones de Shell, consulte [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
+
 ## <a name="define-your-own-markup-extensions"></a>Definir sus propias extensiones de marcado
 
 Si se ha encontrado una necesidad de una extensión de marcado XAML que no está disponible en Xamarin.Forms, puede [crear las suyas propias](creating.md).
@@ -548,3 +568,4 @@ Si se ha encontrado una necesidad de una extensión de marcado XAML que no está
 - [Diccionarios de recursos](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Estilos dinámicos](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Enlace de datos](~/xamarin-forms/app-fundamentals/data-binding/index.md)
+- [Shell de Xamarin.Forms](~/xamarin-forms/app-fundamentals/shell/index.md).

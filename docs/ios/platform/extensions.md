@@ -8,18 +8,18 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 25b27765a35310c5cdbaf5ae19902b1d19eff6ea
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 971effc34716596ec6be3708ac9da4e68d7bdfee
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61322144"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978590"
 ---
 # <a name="ios-extensions-in-xamarinios"></a>extensiones de iOS de Xamarin.iOS
 
 > [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
 
-**Creación de extensiones en iOS, por [Xamarin University](https://university.xamarin.com/)**
+**Creación de extensiones de vídeo en iOS**
 
 Las extensiones, como se mencionó en iOS 8, están especializadas en `UIViewControllers` que se presentan por iOS en contextos estándares tal como en el **centro de notificaciones**, como tipos de teclado personalizado solicitados por el usuario para realizar especializados entrada o en otros contextos, como modificar una foto donde la extensión puede proporcionar filtros de efectos especiales.
 

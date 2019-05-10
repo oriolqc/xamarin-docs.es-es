@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/02/2017
-ms.openlocfilehash: 92c068ceb3d382ed4612318dc987d950ec7e7ef2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2cfb15222c33309101366273d5bc9c42db68b436
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61327474"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978121"
 ---
 # <a name="sending-push-notifications-from-azure-mobile-apps"></a>Envío de notificaciones Push desde aplicaciones móviles de Azure
 
@@ -23,7 +23,7 @@ _Azure Notification Hubs proporciona una infraestructura de inserción escalable
 
 > [!VIDEO https://youtube.com/embed/le2lDY22xwM]
 
-**Azure inserta Xamarin.Forms y el centro de notificaciones por [Xamarin University](https://university.xamarin.com/)**
+**Vídeo de Azure, centro de notificaciones de inserción y Xamarin.Forms**
 
 Una notificación de inserción se utiliza para proporcionar información como, por ejemplo, un mensaje, desde un sistema back-end a una aplicación en un dispositivo móvil para aumentar el uso y la interacción de la aplicación. La notificación puede enviar en cualquier momento, incluso cuando el usuario no esté usando activamente la aplicación de destino.
 

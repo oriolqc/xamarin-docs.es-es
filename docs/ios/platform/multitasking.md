@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 68c2ae6eace2669d2ea6c77d72f4476d767c0a7d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6a9c66720aeb97c5b894cbea42c6cc0c5285c67d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61426339"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978628"
 ---
 # <a name="multitasking-for-ipad-in-xamarinios"></a>Multitarea para iPad en Xamarin.iOS
 
@@ -39,7 +39,7 @@ En este artículo se describen los pasos necesarios para asegurarse de que la ap
 
 > [!VIDEO https://youtube.com/embed/GctYAozoLr8]
 
-**Multitarea para iPad, por [Xamarin University](https://university.xamarin.com)**
+**Multitarea para iPad de vídeo**
 
 
 <a name="Multitasking-QuickStart" />

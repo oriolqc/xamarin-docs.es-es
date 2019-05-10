@@ -6,12 +6,12 @@ ms.assetid: 044FF669-0B81-4186-97A5-148C8B56EE9C
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: c4f7f1e9702fb2ee0f5525343a52e3aacd85d68c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e820a0c208907a95dda4a50427bb4dac27b88964
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61200290"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977902"
 ---
 # <a name="advanced-manual-real-world-example"></a>Avanzado (manual) ejemplo del mundo Real
 
@@ -137,8 +137,3 @@ Estas son las primera pasada básica del objetivo Sharpie del enlace y, en algun
 Una vez que finalizan las actualizaciones, estos dos archivos ahora se pueden agregar a un proyecto de enlace en Visual Studio para Mac o se pasa directamente a la `btouch` o `bmac` herramientas para producir el enlace final.
 
 Para obtener una descripción detallada del proceso de enlace, consulte nuestra [instrucciones de tutorial completo](~/ios/platform/binding-objective-c/walkthrough.md).
-
-## <a name="related-links"></a>Vínculos relacionados
-
-- [Curso de Xamarin University: Creación de una biblioteca de enlaces de Objective-c.](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Curso de Xamarin University: Generar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

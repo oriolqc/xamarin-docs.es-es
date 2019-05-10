@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: ada563fee78e579906e7f765a0120d8bfff67402
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: acbf000d0700e29fcd6155a35c26fee08f12b7e5
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61395422"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978012"
 ---
 # <a name="introduction-to-tvos-in-xamarin"></a>Introducción a tvOS en Xamarin
 
@@ -27,7 +27,7 @@ Para obtener más información sobre tvOS, consulte el [Introducción](~/ios/tvo
 
 > [!VIDEO https://youtube.com/embed/Q04oIYymfGM]
 
-**tvOS con Xamarin, por [Xamarin University](https://university.xamarin.com/)**
+**tvOS con Xamarin vídeo**
 
 ## <a name="documentation"></a>Documentación
 

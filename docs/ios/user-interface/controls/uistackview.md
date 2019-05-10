@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 6d5be72a9329675a65b0d6873d13894b314b50e7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e9c18920386cb58f152d7631c52240b4b5b72ff9
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61088143"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977842"
 ---
 # <a name="stack-views-in-xamarinios"></a>Vistas de la pila de Xamarin.iOS
 
@@ -34,7 +34,7 @@ Este documento se compone de dos partes: un inicio rápido para ayudarle a imple
 
 > [!VIDEO https://youtube.com/embed/p3po6507Ip8]
 
-**UIStackView, de manera [Xamarin University](https://university.xamarin.com/)**
+**Vídeo UIStackView**
 
 ## <a name="uistackview-quickstart"></a>Guía de inicio rápido de UIStackView
 

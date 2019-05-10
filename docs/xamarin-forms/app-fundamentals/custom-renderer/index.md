@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: 3a59cbb8385fe201d7eef086092c9b393a21cc71
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: cc188abaece54a4df139918582e57d4116f894d0
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57666386"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978135"
 ---
 # <a name="xamarinforms-custom-renderers"></a>Representadores personalizados de Xamarin.Forms
 
@@ -58,8 +58,6 @@ En este artículo se muestra cómo crear un representador personalizado para un 
 
 En este artículo se muestra cómo escribir los representadores para implementar un control personalizado `VideoPlayer` que puede reproducir vídeos de la web, vídeos insertados como recursos de la aplicación o vídeos almacenados en la biblioteca de vídeos en el dispositivo del usuario. Se muestran varias técnicas, incluida la implementación de métodos y propiedades enlazables de solo lectura.
 
-
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Efectos](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Representadores personalizados (vídeo de Xamarin University)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)

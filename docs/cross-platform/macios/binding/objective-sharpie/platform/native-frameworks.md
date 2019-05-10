@@ -6,12 +6,12 @@ ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
 author: asb3993
 ms.author: amburns
 ms.date: 01/15/2016
-ms.openlocfilehash: ca103ee027597813be51e126aaa05f9aa969af35
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0da40918c8ae36c4ab3d4c41128429b49706d653
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61199133"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977652"
 ---
 # <a name="binding-native-frameworks"></a>Enlace de plataformas nativas
 
@@ -35,9 +35,3 @@ De especial importancia es la `-F .` ruta de búsqueda de marco de trabajo propo
     AdobeCreativeSDKFoundation.framework/Headers/AdobeCreativeSDKFoundation.h \
     -scope AdobeCreativeSDKFoundation.framework/Headers \
     -c -F .</b></pre>
-
-## <a name="related-links"></a>Vínculos relacionados
-
-- [Curso de Xamarin University: Creación de una biblioteca de enlaces de Objective-c.](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Curso de Xamarin University: Generar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
-

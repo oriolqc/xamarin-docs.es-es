@@ -1,27 +1,24 @@
 ---
-title: Especificar el diseño de Xamarin.Forms CollectionView
+title: Diseño de Xamarin.Forms CollectionView
 description: De forma predeterminada, una colección mediante CollectionView mostrará sus elementos en una lista vertical. Sin embargo, se pueden especificar las cuadrículas y listas horizontales y verticales.
 ms.prod: xamarin
 ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/15/2019
-ms.openlocfilehash: 8ed365ed41ac31c66d41f1a32a7a16929cdc6770
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 05/06/2019
+ms.openlocfilehash: 5543bcc93f3c38b56a4a6caa0ea23b8ccf434e1c
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61367689"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048241"
 ---
-# <a name="specify-xamarinforms-collectionview-layout"></a>Especificar el diseño de Xamarin.Forms CollectionView
+# <a name="xamarinforms-collectionview-layout"></a>Diseño de Xamarin.Forms CollectionView
 
-![Vista previa](~/media/shared/preview.png)
+![](~/media/shared/preview.png "Esta API es actualmente una versión preliminar")
 
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
-
-> [!IMPORTANT]
-> El `CollectionView` es actualmente una versión preliminar y carece de algunas de sus funciones previstas. Además, la API puede cambiar cuando se completa la implementación.
 
 `CollectionView` define las siguientes propiedades que controlan el diseño:
 
@@ -43,7 +40,7 @@ Estos diseños se pueden especificar estableciendo el `ItemsLayout` propiedad a 
 - `SnapPointsAlignment`, del tipo `SnapPointsAlignment`, especifica cómo se alinean los puntos de acoplamiento con elementos.
 - `SnapPointsType`, del tipo `SnapPointsType`, especifica el comportamiento de puntos de acoplamiento al desplazarse.
 
-Estas propiedades están respaldadas por [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que las propiedades pueden ser destinos de enlaces de datos. Para obtener más información acerca de los puntos de ajuste, vea [ajustar puntos](scrolling.md#snap-points) en el [desplazar un elemento en la vista](scrolling.md) guía.
+Estas propiedades están respaldadas por [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que las propiedades pueden ser destinos de enlaces de datos. Para obtener más información acerca de los puntos de ajuste, vea [ajustar puntos](scrolling.md#snap-points) en el [Xamarin.Forms CollectionView desplazamiento](scrolling.md) guía.
 
 El `ItemsLayoutOrientation` enumeración define los miembros siguientes:
 
@@ -344,7 +341,7 @@ De forma predeterminada, cada elemento en un `CollectionView` es individualmente
 - `MeasureFirstItem` : se mide solo el primer elemento, con todos los elementos subsiguientes del mismo tamaño que el primer elemento determinados.
 
 > [!IMPORTANT]
-> El `MeasureFirstItem` estrategia de ajuste de tamaño que debe usarse en situaciones donde el tamaño del elemento está pensado para ser uniforme en todos los elementos y dará como resultado un aumento del rendimiento.
+> El `MeasureFirstItem` estrategia de ajuste de tamaño dará como resultado un aumento del rendimiento cuando se utiliza en situaciones donde el tamaño del elemento debe ser uniforme en todos los elementos.
 
 En el ejemplo de código siguiente se muestra cómo establecer el `ItemSizingStrategy` propiedad:
 
@@ -365,8 +362,11 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
+> [!NOTE]
+> La estrategia de ajuste de tamaño de elemento está actualmente sólo implementada en iOS.
+
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [CollectionView (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 - [Localización de derecha a izquierda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
-- [Desplazar un elemento en la vista](scrolling.md)
+- [Desplazamiento de Xamarin.Forms CollectionView](scrolling.md)

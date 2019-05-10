@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/03/2019
-ms.openlocfilehash: 1f6bdfb1aed87f8a2dabdc0efcea3a1b8bf2ecf2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 073bfc27b45a802fd5d6062d4750cc3e20a065e6
+ms.sourcegitcommit: 0d2f708f6d581e94302f26d4670458837dfaa31c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075273"
+ms.lasthandoff: 05/02/2019
+ms.locfileid: "64992349"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>Lenguaje de marcado de aplicaciones eXtensible (XAML)
 
@@ -21,9 +21,6 @@ _XAML es un lenguaje de marcado declarativo que puede utilizarse para definir la
 > [!VIDEO https://youtube.com/embed/H6UOrSyhTEE]
 
 **Evolve 2016: Convertirse en un patrón de XAML**
-
-> [!NOTE]
-> Pruebe el [versión preliminar de XAML estándar](standard/index.md)
 
 ## <a name="xaml-controlsxaml-controlsmd"></a>[Controles de XAML](xaml-controls.md)
 

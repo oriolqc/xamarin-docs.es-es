@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: bc50f3567135d5b1dc805fa691cdd95acadf34f1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b1453164533e2905e78407f33d79a178c7f1ae8
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61327928"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978268"
 ---
 # <a name="consuming-an-azure-cosmos-db-document-database"></a>Consumo de una base de datos de documentos de Azure Cosmos DB
 
@@ -23,7 +23,7 @@ _Una base de datos de documentos de Azure Cosmos DB es una base de datos NoSQL q
 
 > [!VIDEO https://youtube.com/embed/BoVH12igmbg]
 
-**Microsoft Azure Cosmos DB, de manera [Xamarin University](https://university.xamarin.com/)**
+**Vídeo de Microsoft Azure Cosmos DB**
 
 Una cuenta de base de datos de documento de Azure Cosmos DB se puede aprovisionar mediante una suscripción de Azure. Cada cuenta de base de datos puede tener cero o más bases de datos. Una base de datos de documentos en Azure Cosmos DB es un contenedor lógico para las colecciones de documentos y los usuarios.
 

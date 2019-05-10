@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: e599d4f99877e24e06de2c26ed2cafe48526f6f5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8c4dcbe0baf74479e94f8663280e7654b4d58a9d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61346946"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978154"
 ---
 # <a name="binding-ios-libraries"></a>Enlace de bibliotecas de iOS
 
@@ -38,15 +38,13 @@ Funciona mediante el análisis de los archivos de encabezado de una biblioteca n
 Esta página proporciona un tutorial paso a paso de creación de un proyecto de enlace de iOS con el código abierto [ **InfColorPicker** ](https://github.com/InfinitApps/InfColorPicker) proyecto Objective-C como ejemplo. El **InfColorPicker** biblioteca proporciona un controlador de vista reutilizables que permiten al usuario seleccionar un color basado en su representación HSB, lo más fácil de usar la selección de color.
 Objetivo Sharpie se usará para ayudar en el proceso de enlace.
 
-## <a name="xamarin-university-lightning-lecture"></a>Xamarin University Lightning charla
+## <a name="video"></a>Vídeo
 
 > [!VIDEO https://youtube.com/embed/ZUoPLcmnf1o]
 
-**iOS enlaces en C/C ++, por [Xamarin University](https://university.xamarin.com/)**
+**iOS enlaces en C /C++ vídeo**
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Enlace de Objective-C](~/cross-platform/macios/binding/index.md)
 - [Enlace de Mac](~/mac/platform/binding.md)
-- [Curso de Xamarin University: Creación de una biblioteca de enlaces de Objective-c.](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Curso de Xamarin University: Generar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

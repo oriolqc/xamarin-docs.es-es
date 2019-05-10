@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 5bd232293c979566faed2856de7287903da94054
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 661f27b90882234ddc629ac280690d534aca499d
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61300405"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977794"
 ---
 # <a name="layouts-in-xamarinforms"></a>Diseños de Xamarin.Forms
 
@@ -23,7 +23,7 @@ Xamarin.Forms tiene varios diseños y características para organizar el conteni
 
 > [!VIDEO https://youtube.com/embed/4HlLjTZQzjM]
 
-**Los diseños de Xamarin.Forms, por [Xamarin University](https://university.xamarin.com/)**
+**Vídeo de diseños de Xamarin.Forms**
 
 A continuación, se describe cada control de diseño, así como detalles sobre cómo controlar los cambios de orientación de pantalla:
 

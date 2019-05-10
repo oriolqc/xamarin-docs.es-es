@@ -6,12 +6,12 @@ ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
 author: asb3993
 ms.author: amburns
 ms.date: 10/05/2015
-ms.openlocfilehash: 718b5104ddc4593d080b88b062c42d371d9e8e2e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 51a0b81204b743824e24cfed83bd73308fa8d506
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61261173"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977664"
 ---
 # <a name="objective-sharpie-tools--commands"></a>Comandos de & herramientas Sharpie objetivo
 
@@ -85,8 +85,3 @@ Antes de que podemos empezar el proceso de enlace, es necesario obtener informac
 <span class="terminal-blue">sdk:</span> watchos2.0      <span class="terminal-green">arch:</span> armv7</pre>
 
 De lo anterior, podemos ver que tenemos la `iphoneos9.1` SDK instalado en la máquina y tiene `arm64` compatibilidad con la arquitectura. Vamos a usar este valor para todos los ejemplos de esta sección. Con esta información en su lugar, estamos preparados analizar un archivos de encabezado de la biblioteca de Objective-C en inicial `ApiDefinition.cs` y `StructsAndEnums.cs` para el proyecto de enlace.
-
-## <a name="related-links"></a>Vínculos relacionados
-
-- [Curso de Xamarin University: Creación de una biblioteca de enlaces de Objective-c.](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Curso de Xamarin University: Generar una biblioteca de enlaces de Objective-C con Sharpie objetivo](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)
