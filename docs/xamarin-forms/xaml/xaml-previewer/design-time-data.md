@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
-ms.openlocfilehash: 0ff9f8b5ee6f9468650b6535745706bee8f96536
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: HT
+ms.openlocfilehash: 60074c3c1b69a57d313ad0243246ba6db93dde3d
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60876360"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557436"
 ---
 # <a name="use-design-time-data-with-the-xaml-previewer"></a>Usar datos en tiempo de diseño con el controlador de vista previa XAML
 
@@ -22,7 +22,7 @@ _Algunos diseños son difíciles de visualizar sin datos. Utilice estos consejos
 
 Datos en tiempo de diseño están datos falsos que se establece para facilitar los controles visualizar en la vista previa de XAML. Para empezar, agregue las siguientes líneas de código para el encabezado de la página XAML:
 
-```csharp
+```xaml
 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 mc:Ignorable="d"
@@ -32,17 +32,17 @@ Después de agregar los espacios de nombres, puede colocar `d:` delante de cualq
 
 Por ejemplo, puede agregar texto a una etiqueta que normalmente tiene datos enlazados a él.
 
-```csharp
-<Label Text={Binding Name} d:Text="Name" />
+```xaml
+<Label Text="{Binding Name}" d:Text="Name!" />
 ```
 
 [![Con texto en una etiqueta de datos en tiempo de diseño](xaml-previewer-images/designtimedata-label-sm.png "tiempo de diseño de datos con el texto de una etiqueta")](xaml-previewer-images/designtimedata-label-lg.png#lightbox)
 
- En este ejemplo, sin `d:Text`, el controlador de vista previa de XAML mostraría nada para la etiqueta. En su lugar, muestra "Name" en la etiqueta tendrá datos reales en tiempo de ejecución.
+En este ejemplo, sin `d:Text`, el controlador de vista previa de XAML mostraría nada para la etiqueta. En su lugar, muestra "Name". donde la etiqueta tendrá datos reales en tiempo de ejecución.
 
 Puede usar `d:` con cualquier atributo para un control de Xamarin.Forms, como colores, tamaños de fuente y espaciado. Incluso puede agregarlo al propio control:
 
-```csharp
+```xaml
 <d:Button Text="Design Time Button" />
 ```
 
@@ -54,7 +54,7 @@ En este ejemplo, el botón aparece sólo en tiempo de diseño. Use este método 
 
 Puede establecer un origen de tiempo de diseño para las imágenes que se enlaza a la página o se carga dinámicamente en. En el proyecto Android, agregue la imagen que desea mostrar en la vista previa de XAML para el **recursos > Drawable** carpeta. En el proyecto de iOS, agregue la imagen a la **recursos** carpeta. A continuación, puede mostrar esa imagen en la vista previa de XAML en tiempo de diseño:
 
-```csharp
+```xaml
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
 [![Datos con imágenes en tiempo de diseño](xaml-previewer-images/designtimedata-image-sm.png "con iamges datos en tiempo de diseño")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
@@ -63,7 +63,7 @@ Puede establecer un origen de tiempo de diseño para las imágenes que se enlaza
 
 ListView es una forma popular para mostrar datos en una aplicación móvil. Sin embargo, son difíciles de visualizar sin datos reales. Para utilizar datos en tiempo de diseño con ellos, tendrá que crear una matriz de tiempo de diseño que se usará como ItemsSource. El controlador de vista previa de XAML muestra lo que está en esa matriz en la ListView en tiempo de diseño.
 
-```csharp
+```xaml
 <StackLayout>
     <ListView ItemsSource="{Binding Items}">
         <d:ListView.ItemsSource>
@@ -87,8 +87,7 @@ ListView es una forma popular para mostrar datos en una aplicación móvil. Sin 
 
 Este ejemplo muestra un ListView de tres TextCells en la vista previa de XAML. Puede cambiar `x:String` a un modelo de datos existente en el proyecto.
 
-Consulte [app de Hanselman.Forms de James Montemagno](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L36-L57) para obtener un ejemplo más complejo.
-
+Consulte [app de Hanselman.Forms de James Montemagno](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) para obtener un ejemplo más complejo.
 
 ## <a name="alternative-hardcode-a-static-viewmodel"></a>Alternativa: Codificar un ViewModel estático
 

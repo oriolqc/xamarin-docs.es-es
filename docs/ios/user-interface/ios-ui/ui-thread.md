@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 6dd55f5c4316ed8f1d4f16d9e282cc2647350518
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9bde539286b69569b4928bc28b20faecee0f5209
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61245398"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557383"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Trabajar con el subproceso de interfaz de usuario en Xamarin.iOS
 
@@ -61,7 +61,7 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 })).Start();
 ```
 
-Lo que no debe hacer uso para el resto de los ejemplos de este documento, pero se trata de un concepto importante a recordar cuando la aplicación realiza las solicitudes de red, utiliza el centro de notificaciones u otros métodos que requieren un controlador de finalización que se ejecutará en el otro subproceso.
+No tendrá que usar esto para el resto de los ejemplos de este documento, pero es un importante concepto que hay que recordar cuando la aplicación realiza las solicitudes de red, usa el centro de notificaciones u otros métodos que requieren un controlador de finalización que se ejecutará en el otro subproceso.
 
  <a name="Async_Await_Example" />
 
