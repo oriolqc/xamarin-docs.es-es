@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 63ddc7d34d0bcca4e86cb03b08a6040d20f8f037
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f0e2c93c4a6be0e83c9c4f1607b125b8d240ccc1
+ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60857640"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557215"
 ---
 # <a name="contributing"></a>Contribución
 
@@ -24,7 +24,7 @@ Para realizar correcciones y actualizaciones menores, puede hacer clic en el bot
 
 2. Cree una `branch` para los cambios.
 
-3. Escriba el contenido. Consulte la [plantilla](../contributing-guidelines/template.md) y la [guía de estilo](../contributing-guidelines/voice-tone.md).
+3. Escriba el contenido. Consulte la [plantilla](contributing-guidelines/template.md) y la [guía de estilo](contributing-guidelines/voice-tone.md).
 
 4. Envíe una solicitud de incorporación de cambios (PR) desde su rama a `MicrosoftDocs/xamarin-docs/live`.
 
