@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: a4cf63b84d0686bc28b02b18a6266908251bdf6f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c24b2c2f0742ee2c6814d9821f3c0603c6e48a96
+ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61154074"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65804929"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Creación de objetos de la interfaz de usuario en Xamarin.iOS
 
@@ -80,7 +80,7 @@ Al diseñar la interfaz de usuario con Interface Builder, debe crear un **toma**
 
  [![](creating-ui-objects-images/image6a.png "Botón Editor del Asistente")](creating-ui-objects-images/image6a.png#lightbox)
 
-Haga clic en un objeto de interfaz de usuario; a continuación, **Control arrastrar** en el archivo. h. En ** Control arrastre **, mantenga presionada la tecla control, a continuación, haga clic y mantenga sobre el objeto de interfaz de usuario que va a crear para la toma de corriente (o acción). Mantenga presionada la tecla Control mientras arrastra al archivo de encabezado. Finalizar arrastrando a continuación el `@interface` definición. Debe aparecer una línea azul con un título toma insertar o una colección de salida, como se muestra en la captura de pantalla siguiente.
+Haga clic en un objeto de interfaz de usuario; a continuación, **Control arrastrar** en el archivo. h. Para **Control arrastrar**, mantenga presionada la tecla control, a continuación, haga clic y mantenga sobre el objeto de interfaz de usuario que va a crear para la toma de corriente (o acción). Mantenga presionada la tecla Control mientras arrastra al archivo de encabezado. Finalizar arrastrando a continuación el `@interface` definición. Debe aparecer una línea azul con un título toma insertar o una colección de salida, como se muestra en la captura de pantalla siguiente.
 
 Al soltar el clic se le pedirá que proporcione un nombre para la toma de corriente, que se usará para crear un C# propiedad que se puede hacer referencia en el código:
 
