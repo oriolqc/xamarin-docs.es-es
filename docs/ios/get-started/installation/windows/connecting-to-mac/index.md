@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/29/2018
-ms.openlocfilehash: 9456686157f10d81e36b908cb0a2441e64d47663
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: e77a5d7863428d743c536b5aa7b2bb88d12cffc0
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855151"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978324"
 ---
 # <a name="pair-to-mac-for-xamarinios-development"></a>Emparejar con Mac para el desarrollo de Xamarin.iOS
 
@@ -247,7 +247,7 @@ En este artículo se describe cómo usar Emparejar con Mac para conectar Visual 
 ## <a name="next-steps"></a>Pasos siguientes
 
 - [Solución de problemas de conexión](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.md)
-- [Xamarin Mac Build Agent - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ) (Agente de compilación de Mac de Xamarin: clase rápida de Xamarin University)
+- [Vídeo del agente de compilación de Mac de Xamarin](https://www.youtube.com/watch?v=MBAPBtxkjFQ)
 - [Introducción a Xamarin.iOS para Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 - [Simulador de iOS remoto para Windows](~/tools/ios-simulator/index.md)
 - [Implementación inalámbrica](~/ios/deploy-test/wireless-deployment.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/14/2018
-ms.openlocfilehash: c5eeb00d4dc5992666a7ba5f9fef2685d5056447
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 01bb3d19b5e79a6ce9942447b5ddd4afb04574cc
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329278"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978616"
 ---
 # <a name="hierarchical-navigation"></a>Navegación jerárquica
 
@@ -366,6 +366,5 @@ Al mostrar una [`View`](xref:Xamarin.Forms.View) en la barra de navegación de u
 - [PassingData (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
 - [LoginFlow (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/LoginFlow/)
 - [TitleView (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TitleView/)
-- [Cómo crear un flujo de pantalla de inicio de sesión en el ejemplo de Xamarin.Forms (vídeo de Xamarin University)](http://xamarinuniversity.blob.core.windows.net/lightninglectures/CreateASignIn.zip)
-- [Cómo crear un flujo de pantalla de inicio de sesión en Xamarin.Forms (vídeo de Xamarin University)](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
+- [Vídeo sobre cómo crear un flujo de pantalla de inicio de sesión en Xamarin.Forms](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

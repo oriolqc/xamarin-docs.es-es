@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: cdca5294ea12bf8907ea5f6242efea00f384e77e
-ms.sourcegitcommit: 5d4e6677224971e2bc0268f405d192d0358c74b8
+ms.openlocfilehash: 7eeb1aebd0a95ae9ecbcc39e70a3931ee76fb0ce
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329343"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65048296"
 ---
 # <a name="renderer-base-classes-and-native-controls"></a>Clases base y controles nativos del representador
 
@@ -30,6 +30,9 @@ La clase `MapRenderer` se puede encontrar en los espacios de nombres siguientes:
 - **iOS**: Xamarin.Forms.Maps.iOS
 - **Android**: Xamarin.Forms.Maps.Android
 - **Plataforma universal de Windows (UWP)**: Xamarin.Forms.Maps.UWP
+
+> [!NOTE]
+> Para información sobre cómo crear representadores personalizados para aplicaciones de Shell, consulte [Representadores personalizados de Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/customrenderers.md).
 
 ## <a name="pages"></a>Páginas
 
@@ -103,8 +106,4 @@ En la tabla siguiente se enumeran las clases de representador y control nativo q
 
 ## <a name="summary"></a>Resumen
 
-En este artículo se han enumerado las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms. Todos los controles de Xamarin.Forms tienen un representador que los acompaña para cada plataforma y que crea una instancia de un control nativo.
-
-## <a name="related-links"></a>Vínculos relacionados
-
-- [Representadores personalizados (vídeo de Xamarin University)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)
+En este artículo se han enumerado las clases de representador y control nativo que implementan cada página, diseño, vista y celda de Xamarin.Forms. Todos los controles de Xamarin.Forms tienen un representador que lo acompaña para cada plataforma y que crea una instancia de un control nativo.

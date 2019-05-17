@@ -1,0 +1,299 @@
+---
+title: Diseño de Xamarin.Forms Shell
+description: Después de un control flotante, el siguiente nivel de navegación en una aplicación de Shell es la barra de pestañas de la parte inferior. Cuando una pestaña contiene más de una página, las páginas son navegables mediante las pestañas principales.
+ms.prod: xamarin
+ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 05/06/2019
+ms.openlocfilehash: bc1ca01f4bf5cb8f7ef51c705319fb2cc1a0bd99
+ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.translationtype: HT
+ms.contentlocale: es-ES
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65054315"
+---
+# <a name="xamarinforms-shell-tabs"></a>Pestañas de Xamarin.Forms Shell
+
+![](~/media/shared/preview.png "Esta API se encuentra actualmente en versión preliminar")
+
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+
+Después de un control flotante, el siguiente nivel de navegación en una aplicación de Shell es la barra de pestañas de la parte inferior. Como alternativa, cuando se cierra el control flotante, la barra de pestañas inferior se considera el nivel superior de navegación.
+
+Cada objeto `FlyoutItem` puede contener uno o varios objetos `Tab`, donde cada objeto `Tab` representa una pestaña en la barra de pestañas inferior. Cada objeto `Tab` puede contener uno o varios objetos `ShellContent`, y cada objeto `ShellContent` mostrará un único objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage). Cuando hay más de un objeto `ShellContent` en un objeto `Tab`, los objetos `ContentPage` serán navegables mediante las pestañas superiores.
+
+Dentro de cada objeto `ContentPage`, se puede navegar a objetos `ContentPage` adicionales. Para más información sobre la navegación, consulte [Navegación en Xamarin.Forms Shell](navigation.md).
+
+## <a name="single-page-application"></a>Aplicación de página única
+
+La aplicación más sencilla de Shell es una aplicación de página única, que se puede crear mediante la adición de un único objeto `Tab` a un objeto `FlyoutItem`. Dentro del objeto `Tab`, un objeto `ShellContent` se debe establecer en un objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+
+```xaml
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Xaminals.Views"
+       x:Class="Xaminals.AppShell"
+       FlyoutBehavior="Disabled">
+    <FlyoutItem>
+        <Tab>
+            <ShellContent>
+                <views:CatsPage />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+</Shell>
+```
+
+Este ejemplo de código tiene como resultado la siguiente aplicación de página única:
+
+[![Captura de pantalla de una aplicación de página única de Shell en iOS y Android](tabs-images/single-page-app.png "Aplicación de página única de Shell")](tabs-images/single-page-app-large.png#lightbox "Shell single page app")
+
+Un control flotante no es necesario en una aplicación de página única y, por lo tanto, la propiedad `Shell.FlyoutBehavior` está establecida en `Disabled`.
+
+> [!NOTE]
+> Si es necesario, la barra de navegación se puede ocultar mediante el establecimiento de la propiedad adjunta `Shell.NavBarIsVisible` en `false` en el objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage).
+
+Shell tiene operadores de conversión implícita que permiten simplificar la jerarquía visual de Shell, sin introducir vistas adicionales en el árbol visual. Esto es posible porque un objeto `Shell` en subclase solo puede contener objetos `FlyoutItem`, que solo pueden contener objetos `Tab`, que solo pueden contener objetos `ShellContent`. Estos operadores de conversión implícita pueden usarse para quitar los objetos `FlyoutItem`, `Tab` y `ShellContent` del ejemplo anterior:
+
+```xaml
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Xaminals.Views"
+       x:Class="Xaminals.AppShell"
+       FlyoutBehavior="Disabled">
+    <views:CatsPage />
+</Shell>
+```
+
+Esta conversión implícita encapsula automáticamente el objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) en un objeto `ShellContent`, que se encapsula en un objeto `Tab`, que se encapsula en un objeto `FlyoutItem`.
+
+> [!IMPORTANT]
+> En una aplicación de Shell, cada [ `ContentPage`](xref:Xamarin.Forms.ContentPage) que es un elemento secundario de un objeto `ShellContent` se crea durante el inicio de la aplicación. Agregar objetos `ShellContent` adicionales mediante esta estrategia dará lugar a la creación de páginas adicionales durante el inicio de la aplicación, lo que puede conducir a una experiencia de inicio deficiente. Sin embargo, Shell también es capaz de crear páginas a petición, en respuesta a la navegación. Para más información, consulte [Carga eficiente de páginas](tabs.md#efficient-page-loading).
+
+## <a name="bottom-tabs"></a>Pestañas inferiores
+
+Los objetos `Tab` se representan como pestañas inferiores, siempre y cuando haya varios objetos `Tab` en un único objeto `FlyoutItem`:
+
+```xaml
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Xaminals.Views"
+       x:Class="Xaminals.AppShell"
+       FlyoutBehavior="Disabled">
+    <FlyoutItem>
+        <Tab Title="Cats"
+             Icon="cat.png">
+            <ShellContent>
+                <views:CatsPage />
+            </ShellContent>
+        </Tab>
+        <Tab Title="Dogs"
+             Icon="dog.png">
+            <ShellContent>
+                <views:DogsPage />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+</Shell>
+```
+
+Los títulos e iconos de pestaña se establecen en cada objeto `Tab`, y se muestran en las pestañas inferiores:
+
+[![Captura de pantalla de una aplicación de Shell de dos páginas con pestañas inferiores en iOS y Android](tabs-images/two-page-app-bottom-tabs.png "Aplicación del shell de dos páginas con pestañas inferiores")](tabs-images/two-page-app-bottom-tabs-large.png#lightbox "Shell two page app with bottom tabs")
+
+Como alternativa, se pueden usar operadores de conversión implícita de Shell para quitar los objetos `ShellContent` y `Tab` del ejemplo anterior:
+
+```xaml
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Xaminals.Views"
+       x:Class="Xaminals.AppShell"
+       FlyoutBehavior="Disabled">
+    <FlyoutItem>
+        <views:CatsPage Icon="cat.png" />
+        <views:DogsPage Icon="dog.png" />
+    </FlyoutItem>
+</Shell>
+```
+
+Esta conversión implícita encapsula automáticamente cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) en un objeto `ShellContent`, ambos de los cuales se encapsulan en un objeto `Tab`.
+
+> [!IMPORTANT]
+> En una aplicación de Shell, cada [ `ContentPage`](xref:Xamarin.Forms.ContentPage) que es un elemento secundario de un objeto `ShellContent` se crea durante el inicio de la aplicación. Agregar objetos `ShellContent` adicionales mediante esta estrategia dará lugar a la creación de páginas adicionales durante el inicio de la aplicación, lo que puede conducir a una experiencia de inicio deficiente. Sin embargo, Shell también es capaz de crear páginas a petición, en respuesta a la navegación. Para más información, consulte [Carga eficiente de páginas](tabs.md#efficient-page-loading).
+
+### <a name="tab-class"></a>Clase Tab
+
+La clase `Tab` incluye las siguientes propiedades que controlan la apariencia y el comportamiento de las pestañas:
+
+- `CurrentItem`, de tipo `ShellContent`, el elemento seleccionado.
+- `FlyoutDisplayOptions`, de tipo `FlyoutDisplayOptions`, define cómo se muestran el elemento y sus elementos secundarios en el control flotante. El valor predeterminado es `AsSingleItem`.
+- `FlyoutIcon`, de tipo `ImageSource`, define el icono que se mostrará en el control flotante.
+- `Icon`, de tipo `ImageSource`, define el icono que se mostrará en partes del cromo que no son la ventana flotante.
+- `IsChecked`, de tipo `boolean`, define si el elemento está actualmente resaltado en la ventana flotante.
+- `IsEnabled`, de tipo `boolean`, define si el elemento es seleccionable en el cromo.
+- `Items`, de tipo `ShellContentCollection`, define todo el contenido dentro de un objeto `Tab`.
+- `Title`, de tipo `string`, el título que se mostrará en la pestaña en la interfaz de usuario.
+
+## <a name="shell-content"></a>Contenido de Shell
+
+El elemento secundario de cada objeto `Tab` es un objeto `ShellContent` cuya propiedad `Content` está establecida en [ `ContentPage`](xref:Xamarin.Forms.ContentPage):
+
+```xaml
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Xaminals.Views"
+       x:Class="Xaminals.AppShell"
+       FlyoutBehavior="Disabled">
+    <FlyoutItem>
+        <Tab Title="Cats"
+             Icon="cat.png">
+            <ShellContent>
+                <views:CatsPage />
+            </ShellContent>
+        </Tab>
+        <Tab Title="Dogs"
+             Icon="dog.png">
+            <ShellContent>
+                <views:DogsPage />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+</Shell>
+```
+
+Dentro de cada objeto `ContentPage`, se puede navegar a objetos `ContentPage` adicionales. Para más información sobre la navegación, consulte [Navegación en Xamarin.Forms Shell](navigation.md).
+
+### <a name="shellcontent-class"></a>Clase ShellContent
+
+La clase `ShellContent` incluye las siguientes propiedades que controlan la apariencia del contenido de las pestañas y su comportamiento:
+
+- `Content`, de tipo `object`, el contenido de `ShellContent`.
+- `ContentTemplate`, de tipo `DataTemplate`, la plantilla usada para aumentar dinámicamente el contenido de `ShellContent`.
+- `FlyoutIcon`, de tipo `ImageSource`, define el icono que se mostrará en el control flotante.
+- `Icon`, de tipo `ImageSource`, define el icono que se mostrará en partes del cromo que no son la ventana flotante.
+- `IsChecked`, de tipo `boolean`, define si el elemento está actualmente resaltado en la ventana flotante.
+- `IsEnabled`, de tipo `boolean`, define si el elemento es seleccionable en el cromo.
+- `MenuItems`, de tipo `MenuItemCollection`, los elementos de menú para mostrar en el control flotante cuando `ShellContent` es la página presentada.
+- `Title`, de tipo `string`, el título que se mostrará en la interfaz de usuario.
+
+Todas estas propiedades están respaldados por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que las propiedades pueden ser destinos de los enlaces de datos.
+
+## <a name="bottom-and-top-tabs"></a>Pestañas inferiores y superiores
+
+Cuando hay más de un objeto `ShellContent` en un objeto `Tab`, se agrega una barra de pestañas principales a la pestaña inferior, mediante las cuales se puede navegar por los objetos `ContentPage`:
+
+```xaml
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Xaminals.Views"
+       x:Class="Xaminals.AppShell"
+       FlyoutBehavior="Disabled">
+    <FlyoutItem>
+        <Tab Title="Domestic"
+             Icon="domestic.png">
+            <ShellContent>
+                <views:CatsPage />
+            </ShellContent>
+            <ShellContent>
+                <views:DogsPage />
+            </ShellContent>
+        </Tab>
+        <Tab Title="Monkeys"
+             Icon="monkey.png">
+            <ShellContent>
+                <views:MonkeysPage />
+            </ShellContent>
+        </Tab>
+    </FlyoutItem>
+</Shell>
+```
+
+El resultado es el diseño que se muestra en las capturas de pantalla siguientes:
+
+[![Captura de pantalla de una aplicación de Shell dos páginas con pestañas superiores e inferiores en iOS y Android](tabs-images/two-page-app-top-tabs.png "Aplicación de Shell de dos páginas con pestañas superiores e inferiores")](tabs-images/two-page-app-top-tabs-large.png#lightbox "Shell two page app with top and bottom tabs")
+
+Como alternativa, se pueden usar operadores de conversión implícita de Shell para quitar los objetos `ShellContent` y el segundo objeto `Tab` del ejemplo anterior:
+
+```xaml
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Xaminals.Views"
+       x:Class="Xaminals.AppShell"
+       FlyoutBehavior="Disabled">
+    <FlyoutItem>
+        <Tab Title="Domestic"
+             Icon="domestic.png">
+            <views:CatsPage />
+            <views:DogsPage />
+        </Tab>
+        <views:MonkeysPage Icon="monkey.png" />
+    </FlyoutItem>
+</Shell>
+```
+
+Esta conversión implícita encapsula automáticamente `MonkeysPage` en un objeto `ShellContent`, el cual se encapsula en un objeto `Tab`. Además, `CatsPage` y `DogsPage` se encapsulan implícitamente en objetos `ShellContent`.
+
+## <a name="efficient-page-loading"></a>Carga eficiente de páginas
+
+En una aplicación de Shell, cada objeto [`ContentPage`](xref:Xamarin.Forms.ContentPage) de un objeto `ShellContent` se crea durante el inicio de la aplicación, lo que puede conducir a una experiencia de inicio deficiente. Sin embargo, Shell también permite que las páginas se creen a petición, en respuesta a la navegación. Para ello, se puede usar la extensión de marcado `DataTemplate` para convertir cada objeto `ContentPage` en un objeto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) y, luego, establecer el resultado como el valor de la propiedad `ShellContent.ContentTemplate`:
+
+```xaml
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Xaminals.Views"
+       x:Class="Xaminals.AppShell">    
+    <FlyoutItem Title="Animals"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Domestic"
+             Icon="paw.png">
+            <ShellContent Title="Cats"
+                          Icon="cat.png"
+                          ContentTemplate="{DataTemplate views:CatsPage}" />
+            <ShellContent Title="Dogs"
+                          Icon="dog.png"
+                          ContentTemplate="{DataTemplate views:DogsPage}" />
+        </Tab>
+        <ShellContent Title="Monkeys"
+                      Icon="monkey.png"
+                      ContentTemplate="{DataTemplate views:MonkeysPage}" />
+    </FlyoutItem>    
+</Shell>
+```
+
+Este XAML crea y muestra `CatsPage`, porque es el primer elemento del contenido declarado en el objeto `Shell` en subclase. Se puede navegar por las páginas `CatsPage` y `MonkeysPage` mediante pestañas inferiores, y estas páginas solo se crean cuando el usuario se desplaza hasta ellas. La ventaja de este enfoque es que se evita la experiencia de inicio deficiente, ya que las páginas se crean a petición en respuesta a la navegación, y no cuando se inicia la aplicación.
+
+## <a name="tab-appearance"></a>Apariencia de las pestañas
+
+La clase `Shell` define las siguientes propiedades que controlan la apariencia de las pestañas:
+
+- `ShellTabBarBackgroundColor`, de tipo `Color`, una propiedad adjunta que define el color de fondo de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `ShellBackgroundColor`.
+- `ShellTabBarDisabledColor`, de tipo `Color`, una propiedad adjunta que define el color de deshabilitada de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `ShellDisabledColor`.
+- `ShellTabBarForegroundColor`, de tipo `Color`, una propiedad adjunta que define el color de primer plano de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `ShellForegroundColor`.
+- `ShellTabBarTitleColor`, de tipo `Color`, una propiedad adjunta que define el color del título de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `ShellTitleColor`.
+- `ShellTabBarUnselectedColor`, de tipo `Color`, una propiedad adjunta que define el color no seleccionado de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `ShellUnselectedColor`.
+
+Todas estas propiedades están respaldados por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que las propiedades pueden ser destinos de los enlaces de datos.
+
+Por lo tanto, se puede aplicar estilo a las pestañas mediante estilos XAML. En el ejemplo siguiente se muestra un estilo XAML que establece diferentes propiedades de color de las pestañas:
+
+```xaml
+<Style x:Key="BaseStyle"
+       TargetType="Element">
+    <Setter Property="Shell.ShellTabBarBackgroundColor"
+            Value="#3498DB" />
+    <Setter Property="Shell.ShellTabBarTitleColor"
+            Value="White" />
+    <Setter Property="Shell.ShellTabBarUnselectedColor"
+            Value="#B4FFFFFF" />
+</Style>
+```
+
+Además, también se puede aplicar estilo a las pestañas mediante Hojas de estilos CSS. Para más información, consulte [Propiedades específicas de Xamarin.Forms Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
+
+## <a name="related-links"></a>Vínculos relacionados
+
+- [Xaminals (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Navegación en Xamarin.Forms Shell](navigation.md)
+- [Propiedades específicas de Xamarin.Forms Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

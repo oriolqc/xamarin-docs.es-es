@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: cfc4ecc5bf7ebc5e4c4dae8094fe3eb4ece34068
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: f56f2c58195e51e9294948dad85a475e181f99b2
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112510"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64978538"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solucionar problemas de conexión del host de compilación de Xamarin.iOS
 
@@ -124,7 +124,7 @@ El host de compilación de Xamarin de versiones anteriores de Xamarin.iOS ya no 
 
 Causas conocidas:
 
-- **Limitación**: este error puede aparecer al intentar iniciar sesión en el host de compilación con el _nombre completo_ de la cuenta si dicho nombre incluye un carácter acentuado. Se trata de una limitación de la [biblioteca SSH.NET](https://sshnet.codeplex.com/) que Xamarin usa para la conexión SSH. **Solución alternativa**: consulte el paso 5 anterior.
+- **Limitación**: este error puede aparecer al intentar iniciar sesión en el host de compilación con el _nombre completo_ de la cuenta si dicho nombre incluye un carácter acentuado. Se trata de una limitación de la [biblioteca SSH.NET](https://sshnet.codeplex.com/) que Xamarin usa para la conexión SSH. **Solución alternativa**: Consulte el paso 5 anterior.
 
 #### <a name="unable-to-authenticate-with-ssh-keys-please-try-to-log-in-with-credentials-first"></a>"Unable to authenticate with SSH keys. Please try to log in with credentials first" (No se pudo autenticar con claves SSH. Intente primero iniciar sesión con las credenciales.)
 
@@ -134,7 +134,7 @@ Causa conocida:
 
 #### <a name="trying-to-connect-never-completes"></a>"Intentando conectar..." nunca finaliza
 
-- **Error [52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: este problema puede darse en Xamarin 4.1 si **Shell de inicio de sesión**, en el menú contextual **Opciones avanzadas** del usuario de Mac, en **Preferencias del sistema&gt; Usuarios &amp; Grupos** , está establecido en otro valor que no sea **/bin/bash**. A partir de Xamarin 4.2, este caso corresponde al mensaje de error "No se pudo conectar". **Solución alternativa**: revierta el valor de **Shell de inicio de sesión** al original predeterminado, que es **/bin/bash**.
+- **Error [52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: este problema puede darse en Xamarin 4.1 si **Shell de inicio de sesión**, en el menú contextual **Opciones avanzadas** del usuario de Mac, en **Preferencias del sistema&gt; Usuarios &amp; Grupos** , está establecido en otro valor que no sea **/bin/bash**. A partir de Xamarin 4.2, este caso corresponde al mensaje de error "No se pudo conectar". **Solución alternativa**: revierta el valor del **shell de inicio de sesión** al original predeterminado de **/bin/bash**.
 
 <a name="tryagain" />
 
@@ -142,15 +142,15 @@ Causa conocida:
 
 Causas notificadas:
 
-- **Error**: algunos usuarios han visto el mensaje de error "An unexpected error occurred while configuring SSH for the user… Session operation has timed out" (Se produjo un error inesperado durante la configuración de SSH para el usuario… Se agotó el tiempo de operación de sesión.) junto con un error más detallado en los archivos de registro al intentar iniciar sesión en el host de compilación mediante Active Directory u otra cuenta de usuario de dominio de servicio de directorios. **Solución alternativa:** inicie sesión en el host de compilación con una cuenta de usuario local.
+- **Error**: algunos usuarios han visto el mensaje de error "An unexpected error occurred while configuring SSH for the user… Session operation has timed out" (Se produjo un error inesperado durante la configuración de SSH para el usuario… Se agotó el tiempo de operación de sesión.) junto con un error más detallado en los archivos de registro al intentar iniciar sesión en el host de compilación mediante Active Directory u otra cuenta de usuario de dominio de servicio de directorios. **Solución:** inicie sesión en el host de compilación con una cuenta de usuario local.
 
-- **Error**: algunos usuarios han visto este error al hacer doble clic en el nombre del equipo Mac en el cuadro de diálogo de conexión para intentar conectarse con el host de compilación. **Posible solución alternativa**: use la dirección IP para [agregar manualmente el equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac).
+- **Error**: algunos usuarios han visto este error al hacer doble clic en el nombre del equipo Mac en el cuadro de diálogo de conexión para intentar conectarse con el host de compilación. **Posible solución alternativa**: [agregue manualmente el equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac) mediante la dirección IP.
 
 - **Error [35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)**: algunos usuarios se han encontrado con este error al usar una conexión de red inalámbrica entre el host de compilación de Mac y Windows. **Posible solución alternativa**: mueva ambos equipos a una conexión de red con cable.
 
-- **Error [36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)**: en Xamarin 4.0, este mensaje aparecerá cada vez que el archivo **$HOME/.bashrc** del equipo Mac contenga un error. (A partir de Xamarin 4.1, los errores del archivo **.bashrc** no afectarán al proceso de conexión). **Solución alternativa**: mueva el archivo **.bashrc** a una ubicación de copia de seguridad (o elimínelo si sabe que no lo necesitará).
+- **Error [36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)**: en Xamarin 4.0, este mensaje aparecerá cada vez que el archivo **$HOME/.bashrc** del equipo Mac contenga un error. (A partir de Xamarin 4.1, los errores del archivo **.bashrc** no afectarán al proceso de conexión). **Solución alternativa**: mueva el archivo **.bashrc** a una ubicación de copia de seguridad (o elimínelo si sabe que no lo necesita).
 
-- **Error [52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: este error puede darse si **Shell de inicio de sesión**, en el menú contextual **Opciones avanzadas** del usuario de Mac en **Preferencias del sistema > Usuarios y Grupos** , está establecido en otro valor que no sea **/bin/bash**. **Solución alternativa**: revierta el valor de **Shell de inicio de sesión** al original predeterminado, que es **/bin/bash**.
+- **Error [52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: este error puede darse si **Shell de inicio de sesión**, en el menú contextual **Opciones avanzadas** del usuario de Mac en **Preferencias del sistema > Usuarios y Grupos** , está establecido en otro valor que no sea **/bin/bash**. **Solución alternativa**: revierta el valor del **shell de inicio de sesión** al original predeterminado de **/bin/bash**.
 
 - **Limitación**: este error puede aparecer si el host de compilación de Mac está conectado a un enrutador que no tiene acceso a Internet (o si el equipo Mac usa un servidor DNS que agota el tiempo de espera cuando se pide la búsqueda de DNS inversa del equipo de Windows). Visual Studio tardará cerca de 30 segundos en recuperar la huella digital de SSH y finalmente producirá un error de conexión.
 
@@ -210,7 +210,7 @@ En esta sección se describen algunos de los mensajes que pueden aparecer en las
 
 Siempre y cuando haya confirmado que el equipo Mac y el equipo Windows están actualizados con el mismo canal de distribución de Xamarin, puede pasar por alto esta advertencia.
 
-#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>"Failed to execute 'ls /usr/bin/mono': ExitStatus=1" (Error al ejecutar 'ls /usr/bin/mono': ExitStatus=1)
+#### <a name="failed-to-execute-ls-usrbinmono-exitstatus1"></a>"Failed to execute 'ls /usr/bin/mono': ExitStatus = 1" (No se pudo ejecutar "ls /usr/bin/mono": ExitStatus = 1)
 
 Este mensaje se puede pasar por alto siempre y cuando el equipo Mac ejecute OS X 10.11 (El Capitan) o una versión posterior. Este mensaje no es un problema en OS X 10.11, ya que Xamarin también comprueba **/usr/local/bin/mono**, que es la ubicación correcta que se espera para `mono` en OS X 10.11.
 
@@ -377,4 +377,4 @@ Si está solucionando un problema de compilación y quiere asegurarse de que el 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Emparejar con Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
-- [Xamarin Mac Build Agent - Xamarin University Lightning Lecture](https://www.youtube.com/watch?v=MBAPBtxkjFQ) (Agente de compilación de Mac de Xamarin: clase rápida de Xamarin University)
+- [Vídeo del agente de compilación de Mac de Xamarin](https://www.youtube.com/watch?v=MBAPBtxkjFQ)

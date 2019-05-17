@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/01/2018
-ms.openlocfilehash: 1a8611e5dd0be77eeef065d546f6a0642f384b00
-ms.sourcegitcommit: 00744f754527e5b55154365f89691caaf1c9d929
+ms.openlocfilehash: 4583b703d6c6b15105d60a98e7a1064e6a2e9263
+ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57557287"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64977786"
 ---
 # <a name="xamarinforms-binding-mode"></a>Modo de enlace de Xamarin.Forms
 
@@ -109,7 +109,7 @@ Las propiedades de destino con un modo de enlace de `OneTime` solo se actualizan
 
 En la página **Selector de colores simple** se muestra el uso de un modelo de vista simple. Los enlaces de datos permiten al usuario seleccionar un color mediante tres elementos `Slider` para el matiz, la saturación y la luminosidad.
 
-El modelo de vista es el origen del enlace de datos. El modelo de vista *no* define propiedades enlazables, pero implementa un mecanismo de notificación que permite que la infraestructura de enlace reciba una notificación cuando cambia el valor de una propiedad. Este mecanismo de notificación es la interfaz [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged), que define una única propiedad denominada [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). Una clase que implemente esta interfaz normalmente desencadena el evento cuando cambia el valor de una de sus propiedades públicas. No es necesario desencadenar el evento si la propiedad no cambia nunca. (La interfaz `INotifyPropertyChanged` también se implementa mediante `BindableObject` y se desencadena un evento `PropertyChanged` cada vez que una propiedad enlazable cambia de valor).
+El modelo de vista es el origen del enlace de datos. El modelo de vista *no* define propiedades enlazables, pero implementa un mecanismo de notificación que permite que la infraestructura de enlace reciba una notificación cuando cambia el valor de una propiedad. Este mecanismo de notificación es la interfaz de [`INotifyPropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged), que define un único evento denominado [`PropertyChanged`](xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged). Una clase que implemente esta interfaz normalmente desencadena el evento cuando cambia el valor de una de sus propiedades públicas. No es necesario desencadenar el evento si la propiedad no cambia nunca. (La interfaz `INotifyPropertyChanged` también se implementa mediante `BindableObject` y se desencadena un evento `PropertyChanged` cada vez que una propiedad enlazable cambia de valor).
 
 La `HslColorViewModel` clase define cinco propiedades: las propiedades `Hue`, `Saturation`, `Luminosity` y `Color` están interrelacionadas. Cuando cambia el valor de cualquiera de los tres componentes de color, se vuelve a calcular la propiedad `Color` y se desencadenan eventos `PropertyChanged` para las cuatro propiedades:
 
@@ -677,7 +677,7 @@ En la captura de pantalla de iOS de la izquierda se muestra el programa al ejecu
 
 [![Configuración de ejemplo](binding-mode-images/samplesettings-small.png "Sample Settings")](binding-mode-images/samplesettings-large.png#lightbox "Sample Settings")
 
-En las otras dos capturas de pantalla se muestra la configuración modificada. Al experimentar con esta página, recuerde colocar el programa en modo de suspensión o finalícelo en el dispositivo o emulador que se está ejecutando. La finalización del programa desde el depurador de Visual Studio no provocará que se llame a la invalidación de `OnSleep` en la clase `App`.
+La otra captura de pantalla muestra la configuración modificada. Al experimentar con esta página, recuerde colocar el programa en modo de suspensión o finalícelo en el dispositivo o emulador que se está ejecutando. La finalización del programa desde el depurador de Visual Studio no provocará que se llame a la invalidación de `OnSleep` en la clase `App`.
 
 En el artículo siguiente verá cómo especificar los [**formatos de cadena**](string-formatting.md) de los enlaces de datos que se establecen en la propiedad `Text` de `Label`.
 
