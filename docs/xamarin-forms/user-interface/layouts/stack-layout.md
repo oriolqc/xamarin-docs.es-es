@@ -7,18 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/25/2015
-ms.openlocfilehash: bdc03721569682cd5b4f72908fcab1e4a567b83c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4e462346c2c0130c972d098aa2c988bdd61fc360
+ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61370656"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65804895"
 ---
 # <a name="xamarinforms-stacklayout"></a>Xamarin.Forms StackLayout
 
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
 
-`StackLayout` Organiza las vistas en una línea unidimensional ("pila"), ya sea horizontal o verticalmente. Las vistas en un `StackLayout` puede ajustarse según el espacio en el diseño mediante las opciones de diseño. Posición viene determinada por el orden en que se agregaron las vistas en el diseño y las opciones de diseño de las vistas.
+[StackLayout](xref:Xamarin.Forms.StackLayout) organiza las vistas en una línea unidimensional ("pila"), ya sea horizontal o verticalmente. Las vistas en un `StackLayout` puede ajustarse según el espacio en el diseño mediante las opciones de diseño. Posición viene determinada por el orden en que se agregaron las vistas en el diseño y las opciones de diseño de las vistas.
 
 [![](stack-layout-images/layouts-sml.png "Los diseños de Xamarin.Forms")](stack-layout-images/layouts.png#lightbox "los diseños de Xamarin.Forms")
 
