@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: e0121a9f40135e24663b93bb1db6b6456f2abb3a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b314a7864ba4c99b980f4b536a0c2103389b666
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60855016"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65924709"
 ---
 # <a name="page-toolbar-placement-on-windows"></a>Colocación de la barra de herramientas de página en Windows
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Esta plataforma Universal de Windows específicos de la plataforma se usan para cambiar la ubicación de una barra de herramientas en un [ `Page` ](xref:Xamarin.Forms.Page)y se consume en XAML estableciendo el [ `Page.ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.Page.ToolbarPlacementProperty) propiedad adjunta un valor de la [ `ToolbarPlacement` ](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.ToolbarPlacement) enumeración:
 
@@ -46,6 +46,6 @@ El resultado es que la selección de ubicación de la barra de herramientas espe
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)
