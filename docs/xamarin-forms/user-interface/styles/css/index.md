@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/11/2019
-ms.openlocfilehash: 7dc9a0c0d7330588dc4a6d3f3dedd4b72211f019
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: bb13113a947fe6ff25f5e96e299828d1d93e20ac
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048019"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65927037"
 ---
 # <a name="styling-xamarinforms-apps-using-cascading-style-sheets-css"></a>Aplicar estilos a las aplicaciones de Xamarin.Forms con hojas de estilos en cascada (CSS)
 
@@ -246,7 +246,7 @@ Se pueden seleccionar elementos con un atributo de clase específica con las may
 }
 ```
 
-Una clase CSS que puede asignarse a un elemento XAML estableciendo el [ `StyleClass` ](xref:Xamarin.Forms.VisualElement.StyleClass) propiedad del elemento en el nombre de clase CSS. Por lo tanto, en el siguiente ejemplo XAML, los estilos definidos por el `.detailPageTitle` clase se asignan a la primera [ `Label` ](xref:Xamarin.Forms.Label), mientras que los estilos definidos por el `.detailPageSubtitle` clase se asignan a la segunda `Label`.
+Una clase CSS que puede asignarse a un elemento XAML estableciendo el [ `StyleClass` ](xref:Xamarin.Forms.NavigableElement.StyleClass) propiedad del elemento en el nombre de clase CSS. Por lo tanto, en el siguiente ejemplo XAML, los estilos definidos por el `.detailPageTitle` clase se asignan a la primera [ `Label` ](xref:Xamarin.Forms.Label), mientras que los estilos definidos por el `.detailPageSubtitle` clase se asignan a la segunda `Label`.
 
 ```xaml
 <ContentPage ...>

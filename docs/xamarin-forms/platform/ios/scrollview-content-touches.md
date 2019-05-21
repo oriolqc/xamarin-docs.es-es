@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 7f6ec13b1b21a1526bb53f260c4d80e881e7feba
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 19a683fbd4aeb7060d97406a89c1e9308fb56b03
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60952239"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926003"
 ---
 # <a name="scrollview-content-touches-on-ios"></a>ScrollView toques contenido en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Se desencadena un temporizador implícito cuando se inicia un movimiento táctil en un [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) en iOS y el `ScrollView` decide, en función de la acción del usuario dentro del intervalo del temporizador, independientemente de que se debe controlar el gesto o pasarlo a su contenido. De forma predeterminada, el archivo iOS `ScrollView` toques contenido retrasos, pero esto puede causar problemas en algunas circunstancias con el `ScrollView` contenido no ganando el gesto cuando debería. Por lo tanto, este controles específicos de la plataforma si un `ScrollView` controla un movimiento táctil o pasa a su contenido. Se consume en XAML estableciendo el `ScrollView.ShouldDelayContentTouches` propiedad adjunta un `boolean` valor:
 
@@ -61,6 +61,6 @@ El resultado es que un [ `ScrollView` ](xref:Xamarin.Forms.ScrollView) puede des
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

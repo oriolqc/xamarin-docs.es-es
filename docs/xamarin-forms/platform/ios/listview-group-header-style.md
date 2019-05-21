@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 58b3787b71cff9b78f1c6b577be6c320367f1cee
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e2f6a402d1df8b842e147ab145474688c203aaa6
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60952157"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925868"
 ---
 # <a name="listview-group-header-style-on-ios"></a>Estilo de encabezado de grupo de ListView en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Este controles específicos de la plataforma de iOS si [ `ListView` ](xref:Xamarin.Forms.ListView) las celdas de encabezado float durante el desplazamiento. Se consume en XAML estableciendo el `ListView.GroupHeaderStyle` propiedad enlazable en un valor de la `GroupHeaderStyle` enumeración:
 
@@ -54,6 +54,6 @@ El resultado es que un determinado `GroupHeaderStyle` valor se aplica a la [ `Li
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

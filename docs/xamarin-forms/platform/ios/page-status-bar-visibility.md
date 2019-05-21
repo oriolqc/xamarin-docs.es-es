@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 98eba6dea1fb528aa15a1fb242b0fb0eb7dada56
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 66bd6c1ca2ccc3e5335a790950cbf1a792a7df82
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61258615"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925398"
 ---
 # <a name="page-status-bar-visibility-on-ios"></a>Visibilidad de barra de estado de página en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Este específicos de plataforma de iOS se usan para establecer la visibilidad de la barra de estado en un [ `Page` ](xref:Xamarin.Forms.Page), e incluye la capacidad para controlar cómo la barra de estado entra o sale de la `Page`. Se consume en XAML estableciendo el `Page.PrefersStatusBarHidden` propiedad adjunta a un valor de la `StatusBarHiddenMode` enumeración y, opcionalmente, el `Page.PreferredStatusBarUpdateAnimation` propiedad adjunta a un valor de la `UIStatusBarAnimation` enumeración:
 
@@ -53,6 +53,6 @@ El `Page.SetPreferredStatusBarUpdateAnimation` método se usa para establecer c�
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 1019ecb6f5311d34a38cb0d330b25fc1e25b5c41
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9c576be30eb4b456e2eabcb5a041c57e58bdc747
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61085874"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925631"
 ---
 # <a name="visualelement-drop-shadows-on-ios"></a>VisualElement Drop sombras en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Este específicos de plataforma de iOS se utilizan para habilitar una sombra paralela en un [ `VisualElement` ](xref:Xamarin.Forms.VisualElement). Se consume en XAML estableciendo el [ `VisualElement.IsShadowEnabled` ](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.VisualElement.IsShadowEnabledProperty) propiedad adjunta `true`, junto con un número de adicional opcional adjunta propiedades que controlan el efecto de sombra:
 
@@ -75,6 +75,6 @@ El resultado es que se puede habilitar una sombra paralela en un [ `VisualElemen
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)

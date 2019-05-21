@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/10/2018
-ms.openlocfilehash: b3dd300d28e0cf27cc1b5ebea59a68d57145fd61
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c7cc6b560ea91dca89c468271b89d1dcedfcda53
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61359926"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65927026"
 ---
 # <a name="visualelement-elevation-on-android"></a>Elevación VisualElement en Android
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Este Android específicos de plataforma se usa para controlar la elevación o el orden Z de los elementos visuales en aplicaciones que tienen como destino API 21 o mayor. La elevación de un elemento visual determina su orden de dibujo, con elementos visuales con los valores más altos de Z occluding elementos visuales con los valores más bajos de Z. Se consume en XAML estableciendo el `VisualElement.Elevation` propiedad adjunta un `boolean` valor:
 
@@ -87,7 +87,7 @@ El resultado es que se puede controlar la elevación de los elementos visuales p
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [AndroidSpecific API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific)
 - [AndroidSpecific.AppCompat API](xref:Xamarin.Forms.PlatformConfiguration.AndroidSpecific.AppCompat)

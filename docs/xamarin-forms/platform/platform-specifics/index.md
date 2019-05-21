@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/01/2018
-ms.openlocfilehash: 69c730462d6b277f8ec5a4eb7390aaeb50575a39
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 04cbdaac50b0ea77659d7c495dcd1a9e6d43335c
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60857561"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926991"
 ---
 # <a name="platform-specifics"></a>Funcionalidades específicas de plataforma
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 _Funcionalidades específicas de plataforma permiten utilizar la funcionalidad que solo está disponible en una plataforma concreta, sin necesidad de implementar los representadores personalizados o los efectos._
 
@@ -277,7 +277,7 @@ shadowLabel.On<iOS>().SetIsShadowed(true);
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [ShadowPlatformSpecific (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/shadowplatformspecific/)
 - [funcionalidades específicas de plataforma de iOS](~/xamarin-forms/platform/ios/index.md)
 - [Funcionalidades específicas de plataforma Android](~/xamarin-forms/platform/android/index.md)

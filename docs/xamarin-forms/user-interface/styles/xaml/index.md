@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
-ms.openlocfilehash: ec41955ac15ab23579a5e63b9e17eed61a74e86f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: adafcb85f4e3d3bd93f7b2afe69c0ca0bb37f3d0
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61393732"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926606"
 ---
 # <a name="styling-xamarinforms-apps-using-xaml-styles"></a>Aplicación de estilos para aplicaciones Xamarin.Forms con estilos XAML
 
@@ -22,7 +22,7 @@ A menudo, las aplicaciones de Xamarin.Forms contienen varios controles que tiene
 
 ## <a name="explicit-stylesexplicitmd"></a>[Estilos explícitos](explicit.md)
 
-Un *explícita* estilo es aquel que se aplica de manera selectiva a los controles estableciendo sus [ `Style` ](xref:Xamarin.Forms.VisualElement.Style) propiedades.
+Un *explícita* estilo es aquel que se aplica de manera selectiva a los controles estableciendo sus [ `Style` ](xref:Xamarin.Forms.NavigableElement.Style) propiedades.
 
 ## <a name="implicit-stylesimplicitmd"></a>[Estilos implícitos](implicit.md)
 

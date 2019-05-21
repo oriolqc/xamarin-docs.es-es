@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/02/2016
-ms.openlocfilehash: 0251d06ff68185990ed8b7acb46389c59c71a99a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d3e1c8a2b17ba41e3c9d212948f42023c15205ac
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075226"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926235"
 ---
 # <a name="bindable-properties"></a>Propiedades enlazables
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 
 _En Xamarin.Forms, la funcionalidad de las propiedades de common language runtime (CLR) se extiende por las propiedades enlazables. Una propiedad enlazable es un tipo especial de propiedad, donde el valor de propiedad se realiza el seguimiento por el sistema de propiedades de Xamarin.Forms. Este artículo proporciona una introducción a las propiedades enlazables y muestra cómo crear y consumirlos._
 
@@ -226,7 +226,7 @@ En este artículo proporciona una introducción a las propiedades enlazables y s
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Espacios de nombres XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Evento para el comportamiento de comandos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/behaviors/eventtocommandbehavior/)
+- [Evento para el comportamiento de comandos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EventToCommandBehavior/)
 - [Devolución de llamada de validación (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/xaml/validationcallback/)
 - [Convertir el valor de devolución de llamada (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/xaml/coercevaluecallback/)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)

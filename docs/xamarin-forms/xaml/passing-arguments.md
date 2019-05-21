@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2016
-ms.openlocfilehash: 1baad2e2edfb661fff9f3ef0ccf52c9922e9f351
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b00452d348072060ab0e31a64fdb8cd4eb177471
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61178168"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926979"
 ---
 # <a name="passing-arguments-in-xaml"></a>Pasar argumentos en XAML
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/xaml/passingconstructorarguments/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/XAML/PassingConstructorArguments/)
 
 _En este artículo muestra cómo utilizar los atributos XAML que pueden utilizarse para pasar argumentos a los constructores no predeterminados, para llamar a métodos de fábrica y para especificar el tipo de argumento genérico._
 
@@ -173,5 +173,5 @@ En este artículo se muestra usando los atributos XAML que pueden utilizarse par
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Espacios de nombres XAML](~/xamarin-forms/xaml/namespaces.md)
-- [Pasar argumentos de Constructor (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/xaml/passingconstructorarguments/)
+- [Pasar argumentos de Constructor (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/XAML/PassingConstructorArguments/)
 - [Llamar a métodos de fábrica (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/xaml/callingfactorymethods/)

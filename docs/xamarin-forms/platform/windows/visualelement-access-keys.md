@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: f14014b257ee5061b6dd074719c3ca27577c6013
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c480f398c37ce43b634e0ec1c955b965466757f1
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60854951"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926841"
 ---
 # <a name="visualelement-access-keys-on-windows"></a>Claves de acceso de VisualElement en Windows
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Teclas de acceso son métodos abreviados de teclado que mejoran la facilidad de uso y accesibilidad de las aplicaciones en la plataforma Universal de Windows (UWP) al proporcionar una manera intuitiva para los usuarios a navegar rápidamente e interactuar con de interfaz de usuario visible la aplicación a través de un teclado en lugar de a través de la interacción o un mouse. Son combinaciones de la tecla Alt y uno o más teclas alfanuméricas, normalmente presionadas de manera secuencial. Métodos abreviados de teclado automáticamente son compatibles con las claves de acceso que utilizan un carácter alfanumérico individual.
 
@@ -104,6 +104,6 @@ Para obtener más información acerca de las claves de acceso, consulte [claves 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

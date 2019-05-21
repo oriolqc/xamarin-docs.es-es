@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 21c4c289a3fd30db890be6811875412ce4913cf5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: aeefa22c8a17611579c56b3105be860c12a8711c
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250638"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925381"
 ---
 # <a name="picker-item-selection-on-ios"></a>Selector de selección de elementos en iOS
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 
 Este iOS específicos de la plataforma controla cuándo se produce la selección de elementos en un [ `Picker` ](xref:Xamarin.Forms.Picker), lo que permite al usuario especificar que la selección de elementos se produce al examinar los elementos del control, o solo una vez que la **realiza** botón está presionado. Se consume en XAML estableciendo el `Picker.UpdateMode` propiedad adjunta a un valor de la `UpdateMode` enumeración:
 
@@ -67,6 +67,6 @@ El resultado es que un determinado `UpdateMode` se aplica a la [ `Picker` ](xref
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PlatformSpecifics/)
 - [Creación funcionalidades específicas de plataforma](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [iOSSpecific API](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific)
