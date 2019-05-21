@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/01/2017
-ms.openlocfilehash: 0f4ec3cfd7c154e43db9f8e123259317c0d17e21
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 016ac7269f334f6df7fba9635897b9608f459284
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60957450"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970218"
 ---
 # <a name="binding-a-java-library"></a>Enlace de una biblioteca Java
 
@@ -70,7 +70,7 @@ Al enlazar una biblioteca de Android existente, es necesario que tenga en cuenta
 
 * **¿Existen dependencias externas para la biblioteca?** &ndash; Las dependencias de Java necesarias en la biblioteca de Android deben incluirse en el proyecto Xamarin.Android como una **ReferenceJar** o como un **EmbeddedReferenceJar**. Los ensamblados nativos deben agregarse al proyecto de enlace como un **EmbeddedNativeLibrary**.  
 
-* **¿Qué versión de la API de Android es hace que el destino de la biblioteca de Android?** &ndash; No es posible "cambiar" el nivel de API de Android; Asegúrese de que el proyecto Xamarin.Android de enlace está destinado a la API de misma nivel (o posterior) como la biblioteca de Android.
+* **¿Qué versión de la API de Android no Android destino de la biblioteca?** &ndash; No es posible "cambiar" el nivel de API de Android; Asegúrese de que el proyecto Xamarin.Android de enlace está destinado a la API de misma nivel (o posterior) como la biblioteca de Android.
 
 * **¿Qué versión de JDK se usó para compilar la biblioteca?** &ndash; Errores de enlace pueden producirse si la biblioteca de Android se compiló con una versión diferente de JDK que usa xamarin.Android. Si es posible, vuelva a compilar la biblioteca de Android con la misma versión de JDK que se usa por la instalación de Xamarin.Android.
 

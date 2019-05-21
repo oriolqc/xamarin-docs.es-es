@@ -7,29 +7,27 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 1350d5a5a0845029b7ef6a06647ad4c56f0f8135
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 68e28fcbe6a64834d3b594f7f639a1cdd990370d
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65048271"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970580"
 ---
 # <a name="xamarinforms-collectionview-data"></a>Xamarin.Forms CollectionView datos
 
-![](~/media/shared/preview.png "Esta API es actualmente una versión preliminar")
-
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
 
-`CollectionView` define las siguientes propiedades que definen los datos que se mostrarán y su apariencia:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) define las siguientes propiedades que definen los datos que se mostrarán y su apariencia:
 
-- `ItemsSource`, del tipo `IEnumerable`, especifica la colección de elementos que se mostrarán, y tiene un valor predeterminado de `null`.
-- `ItemTemplate`, del tipo [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), especifica la plantilla para aplicar a cada elemento de la colección de elementos que se mostrará.
+- [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource), del tipo `IEnumerable`, especifica la colección de elementos que se mostrarán, y tiene un valor predeterminado de `null`.
+- [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate), del tipo [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate), especifica la plantilla para aplicar a cada elemento de la colección de elementos que se mostrará.
 
 Estas propiedades están respaldadas por [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) objetos, lo que significa que las propiedades pueden ser destinos de enlaces de datos.
 
 ## <a name="populate-a-collectionview-with-data"></a>Rellenar una colección mediante CollectionView con datos
 
-Un `CollectionView` se rellena con datos estableciendo sus `ItemsSource` propiedad a cualquier colección que implementa `IEnumerable`. Se pueden agregar elementos en XAML, inicialice el `ItemsSource` propiedad desde una matriz de cadenas:
+Un [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) se rellena con datos estableciendo sus [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) propiedad a cualquier colección que implementa `IEnumerable`. Se pueden agregar elementos en XAML, inicialice el `ItemsSource` propiedad desde una matriz de cadenas:
 
 ```xaml
 <CollectionView>
@@ -67,17 +65,17 @@ collectionView.ItemsSource = new string[]
 ```
 
 > [!IMPORTANT]
-> Si el `CollectionView` es necesario actualizar como elementos se agregan, quitados o cambiados en la colección subyacente, la colección subyacente debe ser un `IEnumerable` que envía la propiedad de colección de notificaciones de cambios, como `ObservableCollection`.
+> Si el [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) es necesario actualizar como elementos se agregan, quitados o cambiados en la colección subyacente, la colección subyacente debe ser un `IEnumerable` que envía la propiedad de colección de notificaciones de cambios, como `ObservableCollection`.
 
-De forma predeterminada, `CollectionView` muestra elementos en una lista vertical, como se muestra en las capturas de pantalla siguiente:
+De forma predeterminada, [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) muestra elementos en una lista vertical, como se muestra en las capturas de pantalla siguiente:
 
 [![Captura de pantalla de CollectionView que contiene los elementos de texto, en iOS y Android](populate-data-images/text.png "elementos de texto en una colección mediante CollectionView")](populate-data-images/text-large.png#lightbox "elementos de texto en una colección mediante CollectionView")
 
-Para obtener información sobre cómo cambiar la `CollectionView` diseño, vea [especificar un diseño](layout.md). Para obtener información sobre cómo definir la apariencia de cada elemento en el `CollectionView`, consulte [definen la apariencia del elemento](#define-item-appearance).
+Para obtener información sobre cómo cambiar la [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) diseño, vea [especificar un diseño](layout.md). Para obtener información sobre cómo definir la apariencia de cada elemento en el `CollectionView`, consulte [definen la apariencia del elemento](#define-item-appearance).
 
 ### <a name="data-binding"></a>Enlace de datos
 
-`CollectionView` se pueden rellenar con datos mediante el uso de enlace de datos para enlazar su `ItemsSource` propiedad a un `IEnumerable` colección. En XAML, esto se logra con la `Binding` extensión de marcado:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) se pueden rellenar con datos mediante el uso de enlace de datos para enlazar su [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) propiedad a un `IEnumerable` colección. En XAML, esto se logra con la `Binding` extensión de marcado:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}" />
@@ -90,7 +88,7 @@ CollectionView collectionView = new CollectionView();
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-En este ejemplo, el `ItemsSource` datos de la propiedad se enlaza a la `Monkeys` propiedad del modelo de vista conectada.
+En este ejemplo, el [ `ItemsSource` ](xref:Xamarin.Forms.ItemsView.ItemsSource) datos de la propiedad se enlaza a la `Monkeys` propiedad del modelo de vista conectada.
 
 > [!NOTE]
 > Enlaces compilados se pueden habilitar para mejorar el rendimiento de enlace de datos en las aplicaciones de Xamarin.Forms. Para obtener más información, consulte [compilado enlaces](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
@@ -99,7 +97,7 @@ Para obtener más información sobre el enlace de datos, vea [Enlace de datos de
 
 ## <a name="define-item-appearance"></a>Definir la apariencia del elemento
 
-La apariencia de cada elemento de la `CollectionView` puede definirse estableciendo el `CollectionView.ItemTemplate` propiedad a un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate):
+La apariencia de cada elemento de la [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) puede definirse estableciendo el [ `CollectionView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView.ItemTemplate) propiedad a un [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
@@ -187,7 +185,7 @@ Para obtener más información sobre las plantillas de datos, consulte [Plantill
 
 ## <a name="choose-item-appearance-at-runtime"></a>Elija la apariencia del elemento en tiempo de ejecución
 
-La apariencia de cada elemento en el `CollectionView` se puede elegir en tiempo de ejecución, según el valor del elemento, estableciendo el `CollectionView.ItemTemplate` propiedad a un [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector) objeto:
+La apariencia de cada elemento en el [ `CollectionView` ](xref:Xamarin.Forms.CollectionView) se puede elegir en tiempo de ejecución, según el valor del elemento, estableciendo el [ `CollectionView.ItemTemplate` ](xref:Xamarin.Forms.ItemsView.ItemTemplate) propiedad a un [ `DataTemplateSelector` ](xref:Xamarin.Forms.DataTemplateSelector)objeto:
 
 ```xaml
 <ContentPage ...
@@ -221,7 +219,7 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-El `ItemTemplate` propiedad está establecida en un `MonkeyDataTemplateSelector` objeto. El ejemplo siguiente se muestra la `MonkeyDataTemplateSelector` clase:
+El [ `ItemTemplate` ](xref:Xamarin.Forms.ItemsView.ItemTemplate) propiedad está establecida en un `MonkeyDataTemplateSelector` objeto. El ejemplo siguiente se muestra la `MonkeyDataTemplateSelector` clase:
 
 ```csharp
 public class MonkeyDataTemplateSelector : DataTemplateSelector

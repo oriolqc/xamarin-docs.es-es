@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: b0e2d5e3c7923e5c3cf2adcc1dd104a97b78e727
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 28846e6e9590d2adf56114fce8bc6056c0112ac1
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61321578"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970971"
 ---
 # <a name="bindable-layouts-in-xamarinforms"></a>Diseños enlazables en Xamarin.Forms
 
@@ -31,8 +31,10 @@ Estas propiedades se pueden conectar a las clases [`AbsoluteLayout`](xref:Xamari
 
 La clase `Layout<T>` expone una colección [ `Children` ](xref:Xamarin.Forms.Layout`1.Children), a la que se agregan los elementos secundarios de un diseño. Cuando se establece la propiedad `BinableLayout.ItemsSource` en una colección de elementos y se adjunta a una clase derivada de [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1), cada elemento de la colección se agrega a la colección `Layout<T>.Children` para que el diseño lo muestre. Después, la clase derivada de `Layout<T>` actualizará sus vistas secundarias cuando cambie la colección subyacente. Para obtener más información sobre el ciclo de diseño de Xamarin.Forms, consulte [Crear un diseño personalizado](~/xamarin-forms/user-interface/layouts/custom.md).
 
+Los diseños enlazables solo deben usarse cuando la colección de elementos que se mostrará es pequeña y no se necesiten el desplazamiento ni la selección. Aunque el desplazamiento puede proporcionarse al encapsular un diseño enlazable en un [ `ScrollView`](xref:Xamarin.Forms.ScrollView), no se recomienda, ya que los diseños enlazables carecen de virtualización de interfaz de usuario. Cuando se requiere desplazamiento, una vista desplazable que incluye virtualización de interfaz de usuario, como [ `ListView` ](xref:Xamarin.Forms.ListView) o [ `CollectionView` ](xref:Xamarin.Forms.CollectionView), se debe usar. Ignorar esta recomendación puede provocar problemas de rendimiento.
+
 > [!IMPORTANT]
-> Los diseños enlazables solo deben usarse cuando la colección de elementos que se mostrará es pequeña y no se necesiten el desplazamiento ni la selección. Aunque el desplazamiento puede proporcionarse al encapsular un diseño enlazable en un [ `ScrollView`](xref:Xamarin.Forms.ScrollView), no se recomienda, ya que los diseños enlazables carecen de virtualización de interfaz de usuario. Cuando se requiera el desplazamiento, se debe usar una vista desplazable que incluya virtualización de interfaz de usuario, como [ `ListView` ](xref:Xamarin.Forms.ListView) o `CollectionView`. Ignorar esta recomendación puede provocar problemas de rendimiento.
+>Aunque es técnicamente posible adjuntar un diseño se puede enlazar a cualquier clase de diseño que se deriva de la [ `Layout<T>` ](xref:Xamarin.Forms.Layout`1) (clase), no siempre resulta práctico volver a hacerlo, especialmente para la [ `AbsoluteLayout` ](xref:Xamarin.Forms.AbsoluteLayout) , [ `Grid` ](xref:Xamarin.Forms.Grid), y [ `RelativeLayout` ](xref:Xamarin.Forms.RelativeLayout) clases. Por ejemplo, considere el escenario de que se desean mostrar una colección de datos en un [ `Grid` ](xref:Xamarin.Forms.Grid) mediante un diseño enlazable, donde cada elemento de la colección es un objeto que contiene varias propiedades. Cada fila de la `Grid` debe mostrar un objeto de la colección, con cada columna de la `Grid` mostrar una de las propiedades del objeto. Dado que el [ `DataTemplate` ](xref:Xamarin.Forms.DataTemplate) para el diseño enlazable solo puede contener un único objeto, es necesario para ese objeto sea una clase de diseño que contiene varias vistas que muestran una de las propiedades del objeto en un determinado `Grid` columna. Aunque este escenario puede evaluarse con diseños enlazables, resulta en un elemento primario `Grid` que contiene un elemento secundario `Grid` para cada elemento de la colección enlazada, que es un uso muy ineficaz y problemático de la `Grid` diseño.
 
 ## <a name="populating-a-bindable-layout-with-data"></a>Rellenar un diseño enlazable con datos
 
