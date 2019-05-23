@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: b2f32f6695fffa27068fce9d8c12f4ecd9157bc2
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: bd328c307ef5ad243569c294a7256ae9bdb3806a
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970538"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005266"
 ---
 # <a name="xamarinforms-collectionview-scrolling"></a>Desplazamiento de Xamarin.Forms CollectionView
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+![](~/media/shared/preview.png "Esta API se encuentra actualmente en versión preliminar")
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) define dos [ `ScrollTo` ](xref:Xamarin.Forms.ItemsView.ScrollTo*) métodos, que desplazar los elementos en la vista. Una de las sobrecargas desplaza el elemento en el índice especificado en la vista, mientras que el otro desplaza el elemento especificado en la vista. Ambas sobrecargas tienen argumentos adicionales que pueden especificarse para indicar la posición exacta del elemento después de que el desplazamiento se ha completado y si se va a animar el desplazamiento.
 
@@ -272,4 +274,4 @@ Cuando un Deslizamientos de usuario para iniciar un desplazamiento, el elemento 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [CollectionView (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+- [CollectionView (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)

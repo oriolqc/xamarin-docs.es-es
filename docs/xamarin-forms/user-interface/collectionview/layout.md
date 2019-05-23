@@ -7,16 +7,18 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 74cfade0cd872ae107f74ca86d6bc5fffa22e1f6
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: a64a54d763edc4f02383af686fc8e9386daad572
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971279"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005247"
 ---
 # <a name="xamarinforms-collectionview-layout"></a>Diseño de Xamarin.Forms CollectionView
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+![](~/media/shared/preview.png "Esta API se encuentra actualmente en versión preliminar")
+
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) define las siguientes propiedades que controlan el diseño:
 
@@ -381,6 +383,6 @@ Para obtener más información acerca de la dirección del flujo, consulte [loca
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [CollectionView (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/CollectionViewDemos/)
+- [CollectionView (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
 - [Localización de derecha a izquierda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
 - [Desplazamiento de Xamarin.Forms CollectionView](scrolling.md)
