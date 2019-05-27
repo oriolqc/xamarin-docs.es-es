@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/11/2017
-ms.openlocfilehash: 8d39015b77396a87eb2f8c993a0e0ec42c563658
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: ab48d6d3a463a287af8de7d3926287b799ae43a6
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057481"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926256"
 ---
 # <a name="xamarinforms-data-templates"></a>Plantillas de datos de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)
 
 _Las plantillas de datos se usan para especificar el aspecto de los datos en los controles admitidos y normalmente se enlaza a los datos que se van a mostrar._
 
@@ -35,4 +35,4 @@ Un [`DataTemplateSelector`](xref:Xamarin.Forms.DataTemplateSelector) se puede us
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Plantillas de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/templates/datatemplates/)
+- [Plantillas de datos (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Templates/DataTemplates/)

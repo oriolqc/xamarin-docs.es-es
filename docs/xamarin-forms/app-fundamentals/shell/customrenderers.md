@@ -7,16 +7,14 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: c1418e581e2896a77d0b83a46ecc8d3a0ce8c510
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 59dba2fed0422db72b0617d9a831e3a9364320bd
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054215"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65970785"
 ---
 # <a name="xamarinforms-shell-custom-renderers"></a>Representadores personalizados de Xamarin.Forms Shell
-
-![](~/media/shared/preview.png "Esta API se encuentra actualmente en versión preliminar")
 
 Una de las ventajas de las aplicaciones de Xamarin.Forms Shell es que su apariencia y comportamiento es muy personalizable mediante las propiedades y los métodos que exponen las distintas clases de Shell. Sin embargo, también es posible crear a un representador personalizado de Shell cuando se requieren personalizaciones más sofisticadas específicas de la plataforma. Al igual que con otros representadores personalizados, se puede agregar un representador personalizado de Shell a solo un proyecto de plataforma para personalizar la apariencia y el comportamiento, mientras se permite el comportamiento predeterminado en la otra plataforma; o se puede agregar un representador personalizado de Shell diferente a cada proyecto de plataforma para personalizar la apariencia y el comportamiento en iOS y Android.
 

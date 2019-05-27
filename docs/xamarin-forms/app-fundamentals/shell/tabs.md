@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: bc1ca01f4bf5cb8f7ef51c705319fb2cc1a0bd99
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: a8da1e96bbdf51899b1780265933402da791a03e
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054315"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005153"
 ---
 # <a name="xamarinforms-shell-tabs"></a>Pestañas de Xamarin.Forms Shell
 
-![](~/media/shared/preview.png "Esta API se encuentra actualmente en versión preliminar")
-
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Después de un control flotante, el siguiente nivel de navegación en una aplicación de Shell es la barra de pestañas de la parte inferior. Como alternativa, cuando se cierra el control flotante, la barra de pestañas inferior se considera el nivel superior de navegación.
 
@@ -112,8 +110,8 @@ Como alternativa, se pueden usar operadores de conversión implícita de Shell p
        x:Class="Xaminals.AppShell"
        FlyoutBehavior="Disabled">
     <FlyoutItem>
-        <views:CatsPage Icon="cat.png" />
-        <views:DogsPage Icon="dog.png" />
+        <views:CatsPage IconImageSource="cat.png" />
+        <views:DogsPage IconImageSource="dog.png" />
     </FlyoutItem>
 </Shell>
 ```
@@ -228,7 +226,7 @@ Como alternativa, se pueden usar operadores de conversión implícita de Shell p
             <views:CatsPage />
             <views:DogsPage />
         </Tab>
-        <views:MonkeysPage Icon="monkey.png" />
+        <views:MonkeysPage IconImageSource="monkey.png" />
     </FlyoutItem>
 </Shell>
 ```
@@ -268,11 +266,11 @@ Este XAML crea y muestra `CatsPage`, porque es el primer elemento del contenido 
 
 La clase `Shell` define las siguientes propiedades que controlan la apariencia de las pestañas:
 
-- `ShellTabBarBackgroundColor`, de tipo `Color`, una propiedad adjunta que define el color de fondo de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `ShellBackgroundColor`.
-- `ShellTabBarDisabledColor`, de tipo `Color`, una propiedad adjunta que define el color de deshabilitada de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `ShellDisabledColor`.
-- `ShellTabBarForegroundColor`, de tipo `Color`, una propiedad adjunta que define el color de primer plano de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `ShellForegroundColor`.
-- `ShellTabBarTitleColor`, de tipo `Color`, una propiedad adjunta que define el color del título de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `ShellTitleColor`.
-- `ShellTabBarUnselectedColor`, de tipo `Color`, una propiedad adjunta que define el color no seleccionado de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `ShellUnselectedColor`.
+- `TabBarBackgroundColor`, de tipo `Color`, una propiedad adjunta que define el color de fondo de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `BackgroundColor`.
+- `TabBarDisabledColor`, de tipo `Color`, una propiedad adjunta que define el color de deshabilitada de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `DisabledColor`.
+- `TabBarForegroundColor`, de tipo `Color`, una propiedad adjunta que define el color de primer plano de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `ForegroundColor`.
+- `TabBarTitleColor`, de tipo `Color`, una propiedad adjunta que define el color del título de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `TitleColor`.
+- `TabBarUnselectedColor`, de tipo `Color`, una propiedad adjunta que define el color no seleccionado de la barra de pestañas. Si la propiedad no está establecida, se usa el valor de la propiedad `UnselectedColor`.
 
 Todas estas propiedades están respaldados por objetos [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), lo que significa que las propiedades pueden ser destinos de los enlaces de datos.
 
@@ -281,11 +279,11 @@ Por lo tanto, se puede aplicar estilo a las pestañas mediante estilos XAML. En 
 ```xaml
 <Style x:Key="BaseStyle"
        TargetType="Element">
-    <Setter Property="Shell.ShellTabBarBackgroundColor"
+    <Setter Property="Shell.TabBarBackgroundColor"
             Value="#3498DB" />
-    <Setter Property="Shell.ShellTabBarTitleColor"
+    <Setter Property="Shell.TabBarTitleColor"
             Value="White" />
-    <Setter Property="Shell.ShellTabBarUnselectedColor"
+    <Setter Property="Shell.TabBarUnselectedColor"
             Value="#B4FFFFFF" />
 </Style>
 ```
@@ -294,6 +292,6 @@ Además, también se puede aplicar estilo a las pestañas mediante Hojas de esti
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Xaminals (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Navegación en Xamarin.Forms Shell](navigation.md)
 - [Propiedades específicas de Xamarin.Forms Shell](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

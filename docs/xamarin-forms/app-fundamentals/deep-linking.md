@@ -8,16 +8,16 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
-ms.openlocfilehash: e8bfb01c6f5aa22332d226b8b2768f56a2904a7d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: ca9c71d5bdac1900c4f0e5d07898e65b06cdcf90
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978509"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925574"
 ---
 # <a name="application-indexing-and-deep-linking"></a>Indexación de la aplicación y vinculación en profundidad
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DeepLinking/)
 
 _La indexación de la aplicación permite a aplicaciones que de lo contrario se olvidarían tras unos pocos usos mantener su pertinencia al aparecer en los resultados de la búsqueda. La vinculación en profundidad permite a las aplicaciones responder a un resultado de la búsqueda que contiene datos de aplicación, normalmente al navegar a una página a la que se hace referencia a partir de un vínculo profundo. En este artículo se explica cómo usar la indexación de la aplicación y la vinculación en profundidad para que el contenido de las aplicaciones Xamarin.Forms permita efectuar búsquedas en dispositivos iOS y Android._
 
@@ -248,7 +248,7 @@ En este artículo se ha explicado cómo usar la indexación de la aplicación y 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Muestra de vinculación en profundidad](https://developer.xamarin.com/samples/xamarin-forms/deeplinking/)
+- [Muestra de vinculación en profundidad](https://developer.xamarin.com/samples/xamarin-forms/DeepLinking/)
 - [API de búsqueda iOS](~/ios/platform/search/index.md)
 - [Vinculación de aplicaciones en Android 6.0](~/android/platform/app-linking.md)
 - [AppLinkEntry](xref:Xamarin.Forms.AppLinkEntry)

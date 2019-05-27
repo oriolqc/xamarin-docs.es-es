@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/05/2016
-ms.openlocfilehash: 642a4a63ca2c451c6a085f0e99cebd93babe078d
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: fbc5ccda4e798b818b4c21dd459bab6b467cba31
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53058761"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925443"
 ---
 # <a name="passing-effect-parameters-as-attached-properties"></a>Pasar parámetros de efecto como propiedades adjuntas
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffectruntimechange/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffectRuntimeChange/)
 
 _Las propiedades adjuntas se pueden usar para definir los parámetros de efecto que responden a los cambios de propiedades en tiempo de ejecución. En este artículo se muestra cómo usar las propiedades adjuntas para pasar parámetros a un efecto y cambiar un parámetro en tiempo de ejecución._
 
@@ -174,7 +174,7 @@ Los efectos que se pueden consumir mediante la adición de propiedades adjuntas 
 </Style>
 ```
 
-[`Style`](xref:Xamarin.Forms.Style) se puede aplicar a un control [`Label`](xref:Xamarin.Forms.Label) si se establece su propiedad [`Style`](xref:Xamarin.Forms.VisualElement.Style) en la instancia de `Style` mediante la extensión de marcado `StaticResource`, como se muestra en el ejemplo de código siguiente:
+[`Style`](xref:Xamarin.Forms.Style) se puede aplicar a un control [`Label`](xref:Xamarin.Forms.Label) si se establece su propiedad [`Style`](xref:Xamarin.Forms.NavigableElement.Style) en la instancia de `Style` mediante la extensión de marcado `StaticResource`, como se muestra en el ejemplo de código siguiente:
 
 ```xaml
 <Label Text="Label Shadow Effect" ... Style="{StaticResource ShadowEffectStyle}" />
@@ -440,4 +440,4 @@ En este artículo se ha mostrado cómo usar propiedades adjuntas para pasar par�
 - [Efecto](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [RoutingEffect](xref:Xamarin.Forms.RoutingEffect)
-- [Efecto de sombra (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/effects/shadoweffectruntimechange/)
+- [Efecto de sombra (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffectRuntimeChange/)

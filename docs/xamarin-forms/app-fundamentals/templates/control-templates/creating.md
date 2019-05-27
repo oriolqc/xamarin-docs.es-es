@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: dc26084b94956ea9bc87384e5fdb79695bc8c2b5
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 86e10f068af14e65b55885488252af756a90652e
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051787"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926964"
 ---
 # <a name="creating-a-controltemplate"></a>Creación de una plantilla de control
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simpletheme/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/)
 
 _Las plantillas de control se pueden definir en el nivel de aplicación o en el de página. En este artículo se explica cómo crear y consumir plantillas de control._
 
@@ -216,7 +216,7 @@ En este artículo se ha explicado cómo crear y consumir plantillas de control. 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Estilos](~/xamarin-forms/user-interface/styles/index.md)
-- [Tema sencillo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/templates/controltemplates/simpletheme/)
+- [Tema sencillo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/)
 - [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentPresenter](xref:Xamarin.Forms.ContentPresenter)
 - [ContentView](xref:Xamarin.Forms.ContentView)

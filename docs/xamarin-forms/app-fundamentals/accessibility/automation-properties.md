@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
-ms.openlocfilehash: 142c22cd239d6b66e5139346b45994ef2f20bdc8
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 634ba351d419b1d18dcc5d5bdbf5e248f510329d
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672565"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971258"
 ---
 # <a name="automation-properties-in-xamarinforms"></a>Propiedades de automatización en Xamarin.Forms
 
@@ -149,7 +149,7 @@ En Android, para establecer el texto que el lector de pantalla leerá para la fl
 
 ### <a name="masterdetailpage"></a>MasterDetailPage
 
-En iOS y la Plataforma Universal de Windows (UWP), para establecer el texto que el lector de pantalla leerá para el botón de alternancia en [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), defina las propiedades `AutomationProperties.Name` y `AutomationProperties.HelpText` en `MasterDetailPage`, o bien en la propiedad `Icon` de la página `Master`.
+En iOS y la Plataforma Universal de Windows (UWP), para establecer el texto que el lector de pantalla leerá para el botón de alternancia en [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), defina las propiedades `AutomationProperties.Name` y `AutomationProperties.HelpText` en `MasterDetailPage`, o bien en la propiedad `IconImageSource` de la página `Master`.
 
 En Android, para establecer el texto que el lector de pantalla leerá para el botón de alternancia en [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), agregue los recursos de cadena al proyecto de Android:
 
@@ -161,11 +161,11 @@ En Android, para establecer el texto que el lector de pantalla leerá para el bo
 </resources>
 ```
 
-A continuación, defina la `AutomationId` propiedad de la propiedad `Icon` de la página `Master` en la cadena que corresponda:
+A continuación, defina la `AutomationId` propiedad de la propiedad `IconImageSource` de la página `Master` en la cadena que corresponda:
 
 ```csharp
 var master = new ContentPage { ... };
-master.Icon.AutomationId = "btnMDPAutomationID";
+master.IconImageSource.AutomationId = "btnMDPAutomationID";
 ```
 
 ### <a name="toolbaritem"></a>ToolbarItem

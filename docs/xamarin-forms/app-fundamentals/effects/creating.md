@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2016
-ms.openlocfilehash: 0d9f3c9e0608e87258b7f53af3c567155da824d1
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: d0b109e03938fde3225c893bc8309448e543944b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58782492"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925547"
 ---
 # <a name="creating-an-effect"></a>Creación de un efecto
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/Effects/FocusEffect/)
 
 _Los efectos simplifican la personalización de un control. En este artículo se muestra cómo crear un efecto que cambia el color de fondo del control Entry cuando recibe el foco._
 
@@ -262,4 +262,4 @@ En este artículo se ha mostrado cómo crear un efecto que cambia el color de fo
 - [Efecto](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
 - [Efecto de color de fondo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/effects/backgroundcoloreffect/)
-- [Efecto de enfoque (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/effects/focuseffect/)
+- [Efecto de enfoque (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/Effects/FocusEffect/)

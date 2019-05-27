@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 7bd4a87843852e940da96f688371ddbecbf7e0b4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cdeaae6cb83062f0d84a3605582b9779c9f36145
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153979"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178049"
 ---
 # <a name="message-app-extension-basics-in-xamarinios"></a>Conceptos básicos del mensaje extensión de la aplicación de Xamarin.iOS
 
@@ -133,7 +133,7 @@ Para crear una experiencia de la etiqueta personalizada, realice lo siguiente:
 
 1. Inicie Visual Studio.
 2. Abra la solución para agregar una extensión de aplicación de mensaje.
-3. Seleccione ** extensiones de iOS > (iOS) de la extensión de iMessage ** y haga clic en el **siguiente** botón:
+3. Seleccione **extensiones de iOS > (iOS) de la extensión de iMessage** y haga clic en el **siguiente** botón:
 
     [![Seleccione (iOS) de la extensión de iMessage](intro-to-message-app-extensions-images/message01.w157-sml.png)](intro-to-message-app-extensions-images/message01.w157.png#lightbox)
 

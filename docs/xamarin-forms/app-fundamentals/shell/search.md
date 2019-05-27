@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: acaa847b61443eff480e2b39e388f5df9de06e42
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: e97dbb993cb108245636ae459a572e18b13d6817
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054425"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005197"
 ---
 # <a name="xamarinforms-shell"></a>Xamarin.Forms Shell
 
-![](~/media/shared/preview.png "Esta API se encuentra actualmente en versión preliminar")
-
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Xamarin.Forms Shell incluye la funcionalidad de búsqueda integrada que proporciona la clase `SearchHandler`. La funcionalidad de búsqueda se puede agregar a una página mediante el establecimiento de la propiedad adjunta `Shell.SearchHandler` en un objeto `SearchHandler` en subclase. El resultado es un cuadro de búsqueda que se agrega en la parte superior de la página:
 
@@ -240,5 +238,5 @@ En el ejemplo siguiente se muestra cómo ocultar el cuadro de búsqueda:
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Xaminals (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 - [Navegación en Xamarin.Forms Shell](navigation.md)

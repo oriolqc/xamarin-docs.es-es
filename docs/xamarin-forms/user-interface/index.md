@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/14/2018
-ms.openlocfilehash: b54dce66e234807a3f03251461f8f8c868ce95e9
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 7c3a26854c65de260aa9b3c8ed00966749eb4d9c
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970959"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178071"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Vistas de interfaz de usuario de Xamarin.Forms
 
@@ -51,6 +51,10 @@ DataSourceControl proporciona una API para enlazar de forma rápida y sencilla u
 ## <a name="datepickerdatepickermd"></a>[DatePicker](datepicker.md)
 
 El `DatePicker` permite al usuario seleccionar una fecha dentro de un intervalo especificado. Se implementa mediante el selector de fecha admitido por la plataforma concreta donde se ejecuta la aplicación.
+
+## <a name="display-pop-upspop-upsmd"></a>[Mostrar elementos emergentes](pop-ups.md)
+
+Xamarin.Forms proporciona dos elementos de la interfaz de usuario similares a elementos emergentes: una alerta y una hoja de acción. Estos elementos de interfaz pueden usarse para mostrar cuadros de diálogo que formular preguntas sencillas de los usuarios y guiar a los usuarios a través de tareas.
 
 ## <a name="graphics-with-skiasharpgraphicsskiasharpindexmd"></a>[Gráficos con SkiaSharp](graphics/skiasharp/index.md)
 

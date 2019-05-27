@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
-ms.openlocfilehash: 54509d0a1133d86727317366b0d229bc218cb263
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 0ed4d86054ada0918feccb123ac3a0de8ccf899b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870305"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926719"
 ---
 # <a name="customizing-a-map-pin"></a>Personalización de un anclado de mapa
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/)
 
 _En este artículo se explica cómo crear un representador personalizado para el control de mapa, que muestra un mapa nativo con una marca personalizada y una vista personalizada de los datos de marca en cada plataforma._
 
@@ -663,4 +663,4 @@ En este artículo se muestra cómo crear un representador personalizado para el 
 - [Xamarin.Forms Map](~/xamarin-forms/user-interface/map.md) (Mapa de Xamarin.Forms)
 - [Maps in Xamarin.iOS](~/ios/user-interface/controls/ios-maps/index.md) (Mapas en Xamarin.iOS)
 - [API de Maps](~/android/platform/maps-and-location/maps/maps-api.md)
-- [Customized Pin (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/pin/) (Marca personalizada [ejemplo])
+- [Customized Pin (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Pin/) (Marca personalizada [ejemplo])

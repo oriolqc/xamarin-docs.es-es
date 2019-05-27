@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/29/2017
-ms.openlocfilehash: ed671063aad55cb6c4730494f024a2ec2a016de1
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: f5a7dd9cca006157589f6fc43b41764129d90c86
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53051936"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926657"
 ---
 # <a name="highlighting-a-circular-area-on-a-map"></a>Resaltado de un área circular en un mapa
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Circle/)
 
 _En este artículo se explica cómo agregar una superposición circular a un mapa, para resaltar un área circular del mapa._
 
@@ -335,6 +335,6 @@ En este artículo se explica cómo agregar una superposición circular a un mapa
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Superposición de mapa circular (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/circle/)
+- [Superposición de mapa circular (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Circle/)
 - [Personalización de un anclado de mapa](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

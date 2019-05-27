@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
-ms.openlocfilehash: c6aa4aed134667f25b3822c7604b85e27a404a3a
-ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
+ms.openlocfilehash: 3e5db00a73047aaadb1162fa1cc8a21f6e77b3a0
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "58870162"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926196"
 ---
 # <a name="custom-video-transport-controls"></a>Controles de transporte de vídeo personalizados
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
 
 Los controles de transporte de un reproductor de vídeo son los botones que realizan las funciones **Reproducir**, **Pausa** y **Detener**. Estos botones suelen identificarse con iconos conocidos en lugar de texto, y las funciones **Reproducir** y **Pausa** suelen combinarse en un mismo botón.
 
@@ -660,4 +660,4 @@ En una aplicación de producción, es probable que quiera usar sus propias imág
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Demostraciones de reproductor de vídeo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Demostraciones de reproductor de vídeo (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/VideoPlayerDemos/)
