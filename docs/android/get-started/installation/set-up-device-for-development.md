@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/22/2018
-ms.openlocfilehash: d1e43d211f639c422bbed3a6afad9f2136551071
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: a2b69152ab616e74761d9acf6a74d30144fe43b3
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59690295"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925058"
 ---
 # <a name="set-up-device-for-development"></a>Configurar el dispositivo para el desarrollo
 
@@ -135,7 +135,7 @@ El paso final consiste en conectar el dispositivo al equipo. Hay dos maneras de 
 
 ### <a name="connecting-over-wifi"></a>Conectar a través de Wi-Fi
 
-De forma predeterminada, [Android Debug Bridge](https://developer.android.com/tools/help/adb.html) (*ADB*) está configurado para comunicarse con un dispositivo Android a través de USB. Es posible volver a configurarlo para que use TCP/IP en lugar de USB. Para ello, tanto el dispositivo como el equipo deben estar en la misma red Wi-Fi. Para configurar el entorno para depurar a través de Wi-Fi, siga estos pasos desde la línea de comandos:
+De forma predeterminada, [Android Debug Bridge](https://developer.android.com/tools/help/adb.html) (*ADB*) está configurado para comunicarse con un dispositivo Android a través de USB. Es posible volver a configurarlo para que use TCP/IP en lugar de USB. Para ello, tanto el dispositivo como el equipo deben estar en la misma red Wi-Fi. Para configurar el entorno para depurar mediante Wi-Fi, siga estos pasos desde la línea de comandos:
 
 1. Determine la dirección IP del dispositivo Android. Una manera de averiguar la dirección IP es mirar en **Ajustes > Wi-Fi** y, después, pulsar la red Wi-Fi a la que está conectado el dispositivo. Se abrirá una pantalla de configuración con información sobre la conexión de red, parecida a la que se muestra en la siguiente captura de pantalla:
 

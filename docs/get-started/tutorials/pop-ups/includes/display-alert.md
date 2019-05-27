@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: cff466025306ee5d23b5245e625eba23c5448c15
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1e7b4b2ce4b7592c2350af20cf516436e244d95f
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384732"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66193799"
 ---
 Xamarin.Forms tienen una ventana emergente modal, conocida como alerta, para mostrar alertas al usuario o realizar preguntas sencillas. En este ejercicio, usará el método [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert*), de la clase [`Page`](xref:Xamarin.Forms.Page), para mostrar una alerta al usuario y formular una pregunta sencilla.
 
@@ -67,7 +67,7 @@ Xamarin.Forms tienen una ventana emergente modal, conocida como alerta, para mos
 
     Observe que, después de seleccionar una respuesta a la pregunta, la respuesta se muestra en la ventana **Salida** de Visual Studio.
 
-    Para obtener más información sobre cómo mostrar las alertas, vea [Mostrar una alerta](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert) en la guía [Mostrar elementos emergentes](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Para más información sobre cómo mostrar alertas, consulte [Visualización de una alerta](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) en la guía [Mostrar elementos emergentes](~/xamarin-forms/user-interface/pop-ups.md).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -128,4 +128,4 @@ Xamarin.Forms tienen una ventana emergente modal, conocida como alerta, para mos
 
     Observe que, después de seleccionar una respuesta a la pregunta, la respuesta se muestra en la ventana **Salida** de Visual Studio para Mac.
 
-    Para obtener más información sobre cómo mostrar las alertas, vea [Mostrar una alerta](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#displaying-an-alert) en la guía [Mostrar elementos emergentes](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Para más información sobre cómo mostrar alertas, consulte [Visualización de una alerta](~/xamarin-forms/user-interface/pop-ups.md#display-an-alert) en la guía [Mostrar elementos emergentes](~/xamarin-forms/user-interface/pop-ups.md).

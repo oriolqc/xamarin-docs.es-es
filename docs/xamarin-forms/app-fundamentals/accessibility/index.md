@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/15/2018
-ms.openlocfilehash: ac0ffbdce6b0c55e8ad9d774d80e3d9b8bf84089
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 20ea72e588e2e3b1d575bd593446bf6724d73d8c
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50116451"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971063"
 ---
 # <a name="xamarinforms-accessibility"></a>Accesibilidad de Xamarin.Forms
 
@@ -24,7 +24,7 @@ Las guías [Accesibilidad para Android](~/android/app-fundamentals/accessibility
 
 Actualmente, Xamarin.Forms no tiene compatibilidad *integrada* con todas las API de accesibilidad que hay disponibles en cada una de las plataformas subyacentes. Pero sí admite configurar las propiedades de automatización en los elementos de la interfaz de usuario para admitir las herramientas de ayuda a la navegación y el lector de pantalla, que es uno de los aspectos más importantes al crear aplicaciones accesibles. Para más información, vea [Propiedades de automatización](~/xamarin-forms/app-fundamentals/accessibility/automation-properties.md).
 
-Las aplicaciones de Xamarin.Forms también pueden tener el orden de tabulación de los controles especificados. Para más información, vea [Navegación con el teclado](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md).
+En las aplicaciones de Xamarin.Forms también se puede especificar el orden de tabulación de los controles, con el fin de mejorar la facilidad de uso y la accesibilidad. Para más información, consulte [Accesibilidad del teclado](~/xamarin-forms/app-fundamentals/accessibility/keyboard.md).
 
 Otras API de accesibilidad (como [PostNotification en iOS](~/ios/app-fundamentals/accessibility.md)) pueden ser más adecuadas para una implementación de [`DependencyService`](~/xamarin-forms/app-fundamentals/dependency-service/index.md) o [Representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/index.md). No se tratarán en esta guía.
 

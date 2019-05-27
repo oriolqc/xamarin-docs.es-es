@@ -7,18 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: b1709330678a201521fd226d473cd334bcd86f94
-ms.sourcegitcommit: 9d90a26cbe13ebd106f55ba4a5445f28d9c18a1a
+ms.openlocfilehash: 747fabd68187dbe48b5e68b40916cef45269c4ae
+ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65054275"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66005164"
 ---
 # <a name="xamarinforms-shell-navigation"></a>Navegación en Xamarin.Forms Shell
 
-![](~/media/shared/preview.png "Esta API se encuentra actualmente en versión preliminar")
-
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
 
 Xamarin.Forms Shell incluye una experiencia de navegación basada en el URI que emplea rutas para navegar a cualquier página de la aplicación, sin tener que seguir una jerarquía de navegación establecida. También ofrece la posibilidad de navegar hacia atrás sin tener que visitar todas las páginas de la pila de navegación.
 
@@ -274,7 +272,7 @@ async void OnCollectionViewSelectionChanged(object sender, SelectionChangedEvent
 }
 ```
 
-En este ejemplo de código se recupera el elefante actualmente seleccionado en `CollectionView` y se realiza el desplazamiento a la ruta `elephantdetails`; además, se pasa `elephantName` como parámetro de consulta. Tenga en cuenta que los parámetros de consulta van a ser codificados con URL para la navegación, por lo que "Indian Elephant" se convertirá en "Indian%20Elephant".
+En este ejemplo de código se recupera el elefante actualmente seleccionado en [`CollectionView`](xref:Xamarin.Forms.CollectionView) y se navega a la ruta `elephantdetails`; además, se pasa `elephantName` como parámetro de consulta. Tenga en cuenta que los parámetros de consulta van a ser codificados con URL para la navegación, por lo que "Indian Elephant" se convertirá en "Indian%20Elephant".
 
 Para recibir datos, la clase que representa la página a la que se navega, o la clase de [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de la página, se debe decorar con un elemento `QueryPropertyAttribute` para cada parámetro de consulta:
 
@@ -341,4 +339,4 @@ La propiedad `Command` se establece en `ICommand` para ejecutarse cuando se pres
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Xaminals (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/forms40/UserInterface/Xaminals/)
+- [Xaminals (ejemplo)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)

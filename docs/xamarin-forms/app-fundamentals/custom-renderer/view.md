@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 22392603e337205dcdd4909dc61b6c22ca2f00b9
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 88be56cae52e881792ec7a187ef7e158790e8a1b
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53057975"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65926599"
 ---
 # <a name="implementing-a-view"></a>Implementación de una vista
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/)
 
 _Los controles de interfaz de usuario personalizados de Xamarin.Forms deben derivar de la clase View, que se usa para colocar diseños y controles en la pantalla. En este artículo se muestra cómo crear un representador personalizado para un control personalizado de Xamarin.Forms que se usa para mostrar una secuencia de vídeo de vista previa de la cámara del dispositivo._
 
@@ -56,13 +56,13 @@ public class CameraPreview : View
 }
 ```
 
-El control `CameraPreview` personalizado se crea en el proyecto de biblioteca de clases portátil (PCL) de .NET Standard y define la siguiente API para el control. El control personalizado expone una propiedad `Camera` que se usa para controlar si se debe mostrar la secuencia de vídeo desde la cámara delantera o trasera del dispositivo. Si no se especifica un valor para la propiedad `Camera` cuando se crea el control, el valor predeterminado es especificar la cámara trasera.
+El control personalizado `CameraPreview` se crea en el proyecto de biblioteca de .NET Standard y define la API del control. El control personalizado expone una propiedad `Camera` que se usa para controlar si se debe mostrar la secuencia de vídeo desde la cámara delantera o trasera del dispositivo. Si no se especifica un valor para la propiedad `Camera` cuando se crea el control, el valor predeterminado es especificar la cámara trasera.
 
 <a name="Consuming_the_Custom_Control" />
 
 ## <a name="consuming-the-custom-control"></a>Uso del control personalizado
 
-En XAML, se puede hacer referencia al control personalizado `CameraPreview` en el proyecto de PCL al declarar un espacio de nombres para su ubicación y usar el prefijo del espacio de nombres en el elemento de control personalizado. El siguiente ejemplo de código muestra cómo se puede usar el control personalizado `CameraPreview` en una página XAML:
+En XAML, se puede hacer referencia al control personalizado `CameraPreview` en el proyecto de biblioteca de .NET Standard mediante la declaración de un espacio de nombres para su ubicación y el uso del prefijo del espacio de nombres en el elemento de control personalizado. El siguiente ejemplo de código muestra cómo se puede usar el control personalizado `CameraPreview` en una página XAML:
 
 ```xaml
 <ContentPage ...
@@ -334,4 +334,4 @@ En este artículo se mostró cómo crear un representador personalizado para un 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [CustomRendererView (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/view/) (CustomRendererView [ejemplo])
+- [CustomRendererView (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/View/) (CustomRendererView [ejemplo])

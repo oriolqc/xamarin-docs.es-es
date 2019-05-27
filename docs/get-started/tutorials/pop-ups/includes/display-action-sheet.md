@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: effebf02a7fb84ef955f4dcfda75d5273ef96b29
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 87eb021e6cc571a9a5522697cde2aa11ee991308
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384722"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66193785"
 ---
 
 Xamarin.Forms tiene un elemento emergente modal, conocido como una hoja de acciones, que se puede usar para guiar a los usuarios en la realización de una tarea. En este ejercicio, usará el método [`DisplayActionSheet`](xref:Xamarin.Forms.Page.DisplayActionSheet*) de la clase [`Page`](xref:Xamarin.Forms.Page) para mostrar una hoja de acciones que guía a los usuarios en la realización de una tarea.
@@ -41,7 +41,7 @@ Xamarin.Forms tiene un elemento emergente modal, conocido como una hoja de accio
 
     Tenga en cuenta que, tras seleccionar una alternativa en el cuadro de diálogo de la hoja de acciones, la selección aparece en la ventana **Salida** de Visual Studio.
 
-    Para obtener más información sobre cómo mostrar hojas de acciones, consulte [Guiar a los usuarios en la realización de tareas](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#guiding-users-through-tasks) en la guía [Mostrar elementos emergentes](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Para más información sobre cómo mostrar hojas de acciones, consulte [Guiar a los usuarios a través de tareas](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) en la guía [Mostrar elementos emergentes](~/xamarin-forms/user-interface/pop-ups.md).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -75,4 +75,4 @@ Xamarin.Forms tiene un elemento emergente modal, conocido como una hoja de accio
 
     Tenga en cuenta que, tras seleccionar una alternativa en el cuadro de diálogo de la hoja de acciones, la selección aparece en la ventana **Salida de la aplicación** de Visual Studio para Mac.
 
-    Para obtener más información sobre cómo mostrar hojas de acciones, consulte [Guiar a los usuarios en la realización de tareas](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md#guiding-users-through-tasks) en la guía [Mostrar elementos emergentes](~/xamarin-forms/app-fundamentals/navigation/pop-ups.md).
+    Para más información sobre cómo mostrar hojas de acciones, consulte [Guiar a los usuarios a través de tareas](~/xamarin-forms/user-interface/pop-ups.md#guide-users-through-tasks) en la guía [Mostrar elementos emergentes](~/xamarin-forms/user-interface/pop-ups.md).

@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
-ms.openlocfilehash: b9838ddb9771cb6ce757a4080520a5edd720531a
-ms.sourcegitcommit: 91a4fcb715506e18e8070bc89bf2cb14d079ad32
+ms.openlocfilehash: e0bc4b988905f03edbc66a252cc47a05c441f2c9
+ms.sourcegitcommit: b23a107b0fe3d2f814ae35b52a5855b6ce2a3513
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59574746"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65925838"
 ---
 # <a name="xamarinessentials-secure-storage"></a>Xamarin.Essentials: Almacenamiento seguro
 
@@ -51,7 +51,7 @@ Es posible configurar Copia de seguridad automática para deshabilitar la copia 
     </application>
     ```
 
-2. Cree un nuevo archivo XML llamado **auto_backup_rules.xml** en el directorio **Resources/xml**. Luego, establezca este contenido que incluye todas las preferencias compartidas, excepto `SecureStorage`:
+2. Cree un archivo XML denominado **auto_backup_rules.xml** en el directorio **Resources/xml** con la acción de compilación **AndroidResource**. Luego, establezca este contenido que incluye todas las preferencias compartidas, excepto `SecureStorage`:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -132,7 +132,7 @@ SecureStorage.RemoveAll();
 
 # <a name="androidtabandroid"></a>[Android](#tab/android)
 
-[Android KeyStore](https://developer.android.com/training/articles/keystore.html) se usa para almacenar la clave de cifrado con la que se cifra el valor antes de guardarlo en [Preferencias compartidas](https://developer.android.com/training/data-storage/shared-preferences.html) con un nombre de archivo **[ID-PAQUETE-APLICACIÓN].xamarinessentials**.  La clave que se usa en el archivo de preferencias compartidas es un _algoritmo hash MD5_ de la clave que se pasó a las API `SecureStorage`.
+[Android KeyStore](https://developer.android.com/training/articles/keystore.html) se usa para almacenar la clave de cifrado con la que se cifra el valor antes de guardarlo en [Preferencias compartidas](https://developer.android.com/training/data-storage/shared-preferences.html) con un nombre de archivo **[ID-PAQUETE-APLICACIÓN].xamarinessentials**.  La clave (no una clave criptográfica, la _clave_ para el _valor_) usada en el archivo de preferencias compartido es un _hash MD5_ de la clave pasada a las API `SecureStorage`.
 
 ## <a name="api-level-23-and-higher"></a>Nivel de API 23 y superior
 

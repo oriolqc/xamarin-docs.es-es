@@ -1,26 +1,26 @@
 ---
-title: Navegación mediante teclado
-description: En lugar de usar la secuencia de tabulación predeterminada, a veces es necesario ajustar la interfaz de usuario mediante la especificación de la secuencia de tabulación con una combinación de las propiedades IsTapStop y TabIndex.
+title: Accesibilidad del teclado
+description: En lugar de usar la secuencia de tabulación predeterminada, a veces es necesario ajustar la accesibilidad de la interfaz de usuario mediante la especificación de la secuencia de tabulación con una combinación de las propiedades IsTapStop y TabIndex.
 ms.prod: xamarin
 ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/15/2018
-ms.openlocfilehash: 3e3331489c3b437366f4bdcc6990fe282d213a6a
-ms.sourcegitcommit: 395774577f7524b57035c5cca3c9034a4b636489
+ms.date: 05/09/2019
+ms.openlocfilehash: 66cd9f9de712583ea4e8fb9304a9f1642e7e3ee1
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54207887"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971261"
 ---
-# <a name="keyboard-navigation-in-xamarinforms"></a>Navegación mediante teclado en Xamarin.Forms
+# <a name="keyboard-accessibility-in-xamarinforms"></a>Accesibilidad del teclado en Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
 
-Algunos usuarios pueden tener dificultades para usar las aplicaciones que no proporcionan el acceso mediante teclado adecuado. La especificación de un orden de tabulación para controles permite la navegación mediante teclado y prepara las páginas de la aplicación para recibir entradas en un orden concreto.
+Los usuarios que emplean lectores de pantalla, o que tienen problemas de movilidad, pueden tener dificultades para usar aplicaciones que no proporcionan acceso adecuado con el teclado. En las aplicaciones de Xamarin.Forms se puede especificar un orden de tabulación esperado para mejorar su facilidad de uso y accesibilidad. La especificación de un orden de tabulación para los controles permite la navegación con el teclado, prepara las páginas de la aplicación para recibir la entrada en un orden concreto y permite que los lectores de pantalla lean elementos activables para el usuario.
 
-De forma predeterminada, el orden de tabulación de los controles es el mismo orden en que se están indicados en XAML o agregados mediante programación a una colección secundaria. Este es el orden en que se navegará por los controles con un teclado; a menudo, este orden predeterminado es el mejor orden posible. Sin embargo, el orden predeterminado no es siempre el mismo que el orden previsto, como se muestra en el ejemplo de código XAML siguiente:
+De forma predeterminada, el orden de tabulación de los controles es el mismo orden en que se están indicados en XAML o agregados mediante programación a una colección secundaria. Este es el orden en que se navegará por los controles con un teclado y en que se leerán con un lector de pantalla; a menudo, este orden predeterminado es el mejor orden posible. Sin embargo, el orden predeterminado no es siempre el mismo que el orden previsto, como se muestra en el ejemplo de código XAML siguiente:
 
 ```xaml
 <Grid>
@@ -113,6 +113,9 @@ La captura de pantalla siguiente muestra el orden de tabulación para este ejemp
 ![](keyboard-images/correct-tab-order.png "Orden de tabulación basado en columnas")
 
 Aquí, el orden de tabulación está basado en columnas. Por lo tanto, al presionar la tecla TAB se navega por pares [`Entry`](xref:Xamarin.Forms.Entry) de nombre y apellido.
+
+> [!IMPORTANT]
+> Los lectores de pantalla de iOS y Android respetarán la propiedad `TabIndex` de un objeto [`VisualElement`](xref:Xamarin.Forms.VisualElement) al leer los elementos accesible en la pantalla.
 
 ## <a name="excluding-controls-from-the-tab-order"></a>Exclusión de controles del orden de tabulación
 

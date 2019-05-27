@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
-ms.openlocfilehash: dbee8d3f55edee9c862b4c883b63b55f98972b48
-ms.sourcegitcommit: 0c2745c1593eee3ecb40ab882e854a13ca72bc86
+ms.openlocfilehash: 85e420933cfeffd00f686b0eea537cd0ad2f4ca5
+ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56078425"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65971216"
 ---
 # <a name="xamarinforms-app-class"></a>Clase App de Xamarin.Forms
 
@@ -32,7 +32,9 @@ Según la plantilla que se elija, la clase `App` puede definirse de alguna de es
 Para crear una clase **App** mediante XAML, se debe reemplazar la clase **App** predeterminada por una clase **App** de XAML y el código subyacente asociado, como se muestra en el ejemplo de código siguiente:
 
 ```xaml
-<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Photos.App">
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Photos.App">
 
 </Application>
 ```
@@ -73,7 +75,7 @@ public class App : Xamarin.Forms.Application
 
 <a name="Properties_Dictionary" />
 
-## <a name="properties-dictionary"></a>Diccionario Properties
+## <a name="properties-dictionary"></a>Diccionario de propiedades
 
 La subclase `Application` tiene un diccionario estático `Properties` que se puede usar para almacenar datos, en particular para su uso en los métodos `OnStart`, `OnSleep` y `OnResume`. Se puede acceder a él desde cualquier lugar del código de Xamarin.Forms con `Application.Current.Properties`.
 
@@ -111,8 +113,6 @@ Xamarin.Forms 1.4 ha incorporado un método adicional a la clase `Application` (
 
 Puede encontrar referencias al uso del diccionario `Properties` en los capítulos [6](https://developer.xamarin.com/r/xamarin-forms/book/chapter06.pdf), [15](https://developer.xamarin.com/r/xamarin-forms/book/chapter15.pdf) y [20](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) del libro **Creating Mobile Apps with Xamarin.Forms** (Creación de aplicaciones móviles con Xamarin.Forms) y en los [ejemplos](https://github.com/xamarin/xamarin-forms-book-preview-2) asociados.
 
-
-
 ## <a name="the-application-class"></a>La clase Application
 
 A continuación se muestra una completa implementación de la clase `Application` como referencia:
@@ -143,7 +143,6 @@ public class App : Xamarin.Forms.Application
         Debug.WriteLine ("OnResume");
     }
 }
-
 ```
 
 Luego se crean instancias de esta clase en cada proyecto específico de plataforma y se pasa al método `LoadApplication`, que es donde se carga `MainPage` y se muestra al usuario.
@@ -193,7 +192,7 @@ public class MainActivity : FormsAppCompatActivity
 }
 ```
 
-### <a name="universal-windows-project-uwp-for-windows-10"></a>Proyecto universal de Windows (UWP) para Windows 10
+### <a name="universal-windows-project-uwp-for-windows-10"></a>Proyecto universal de Windows (UWP) para Windows 10
 
 La página principal del proyecto de UWP debe heredar de `WindowsPage`:
 
