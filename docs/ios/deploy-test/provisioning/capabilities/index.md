@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 7049cc36f5f661152e027beb53180d793078beff
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 2536e123cb4bdfd194c573802a91cba7a8c1208d
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855034"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178125"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabajar con capacidades en Xamarin.iOS
 
@@ -205,12 +205,12 @@ Una vez que se ha habilitado una funcionalidad en el servidor, se deben seguir u
 
 En la siguiente lista se detallan algunos de los problemas más comunes que pueden crear obstáculos a la hora de desarrollar una aplicación con un servicio de aplicación habilitado.
 
--   Asegúrese de que el identificador se ha creado y registrado correctamente en la sección  **Certificates, IDs & Profiles** (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
--   Asegúrese de que el servicio se haya agregado al identificador de la aplicación (o de la extensión) y de que el servicio esté configurado para usar el grupo de aplicaciones, el identificador de comerciante o el contenedor creado anteriormente en la sección  **Certificates, IDs & Profiles**  (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
--   Asegúrese de que se hayan instalado los perfiles de aprovisionamiento y los identificadores de aplicación, y que el archivo  **Info.plist**  de la aplicación (en el proyecto de Xamarin) use uno de los identificadores de aplicación configurados anteriormente.
--   Asegúrese de que el archivo  **Entitlements.plist**  de la aplicación (en el proyecto de Xamarin) tiene habilitado el servicio correcto.
+-   Asegúrese de que el identificador se creó y registró correctamente en la sección **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
+-   Asegúrese de que el servicio se haya agregado al identificador de la aplicación (o de la extensión) y de que el servicio esté configurado para usar el grupo de aplicaciones/identificador de comerciante/contenedor creado anteriormente en la sección **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
+-   Asegúrese de que se hayan instalado los perfiles de aprovisionamiento y los identificadores de aplicación y que el archivo **Info.plist** de la aplicación (en el proyecto de Xamarin) use uno de los identificadores de aplicación configurados anteriormente.
+-   Asegúrese de que el archivo **Entitlements.plist** de la aplicación (del proyecto de Xamarin) tiene habilitado el servicio correcto.
 -   Asegúrese de que en el archivo info.plist estén establecidas las claves de privacidad correspondientes.
--   En la opción  **Firma de lote de iOS** de la aplicación, asegúrese de que  **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta  _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
+-   En la opción **Firma de lote de iOS** de la aplicación, asegúrese de que **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
 
 <a name="summary" />
 

@@ -1,25 +1,25 @@
 ---
-title: 'Parte 3: Configuración de una solución multiplataforma de Xamarin'
-description: Este documento describe cómo configurar una solución multiplataforma en Xamarin. Se analiza código diversas estrategias de uso compartido, como comparte proyectos y .NET Standard.
+title: 'Parte 3: configuración de una solución multiplataforma de Xamarin'
+description: Este documento describe cómo configurar una solución multiplataforma en Xamarin. Describe el código de diversas estrategias como los proyectos compartidos y .NET Standard de uso compartido.
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
 author: asb3993
 ms.author: amburns
 ms.date: 03/27/2017
-ms.openlocfilehash: f802e31d851915d33cb6dbf5866f8cba3ab90303
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d20275bab4e4ce90f902a5e72321701d94b1d416
+ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61276688"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354068"
 ---
-# <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3: Configuración de una solución multiplataforma de Xamarin
+# <a name="part-3---setting-up-a-xamarin-cross-platform-solution"></a>Parte 3: configuración de una solución multiplataforma de Xamarin
 
 Independientemente de qué plataformas se utilizan, todos los proyectos de Xamarin usan el mismo formato de archivo de solución (Visual Studio **.sln** formato de archivo). Las soluciones se pueden compartir entre entornos de desarrollo, incluso cuando no se puede cargar proyectos individuales (por ejemplo, un proyecto de Windows en Visual Studio para Mac).
 
 
 
-Al crear una nueva entre la aplicación de la plataforma, el primer paso es crear una solución en blanco. Lo que sucede después de esta sección: configuración de los proyectos para compilar aplicaciones móviles multiplataforma.
+Al crear una nueva aplicación multiplataforma, el primer paso es crear una solución en blanco. Esta sección explica lo que sucede después: cómo configurar los proyectos para compilar aplicaciones móviles multiplataforma.
 
  <a name="Sharing_Code" />
 
@@ -33,7 +33,7 @@ Hacer referencia a la [opciones de uso compartido de código](~/cross-platform/a
 
 ### <a name="shared-projects"></a>Proyectos compartidos
 
-El enfoque más sencillo para uso compartido de archivos de código es usar un [proyecto compartido](~/cross-platform/app-fundamentals/shared-projects.md).
+El enfoque más simple para uso compartido de archivos de código es usar un [proyecto compartido](~/cross-platform/app-fundamentals/shared-projects.md).
 
 Este método permite compartir el mismo código en proyectos de plataforma diferente y usar directivas de compilador para incluir las rutas de código diferentes, específicas de la plataforma.
 

@@ -115,6 +115,7 @@
 #### [Creación de una aplicación Shell](app-fundamentals/shell/create.md)
 #### [Control flotante](app-fundamentals/shell/flyout.md)
 #### [Pestañas](app-fundamentals/shell/tabs.md)
+#### [Configuración de la página](app-fundamentals/shell/configuration.md)
 #### [Navegación](app-fundamentals/shell/navigation.md)
 #### [Búsqueda](app-fundamentals/shell/search.md)
 #### [Representadores personalizados](app-fundamentals/shell/customrenderers.md)
