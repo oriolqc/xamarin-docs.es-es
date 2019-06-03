@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/06/2019
-ms.openlocfilehash: 59dba2fed0422db72b0617d9a831e3a9364320bd
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: ecb68d662c64b65346ffd04f0d3d3cd525533151
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970785"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178040"
 ---
 # <a name="xamarinforms-shell-custom-renderers"></a>Representadores personalizados de Xamarin.Forms Shell
 
@@ -42,6 +42,8 @@ La clase `ShellRenderer` expone los siguientes métodos reemplazables:
 | iOS | Android |
 | --- | --- |
 | `SetElementSize`<br />`CreateFlyoutRenderer`<br />`CreateNavBarAppearanceTracker`<br />`CreatePageRendererTracker`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellItemTransition`<br />`CreateShellSearchResultsRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTabBarAppearanceTracker`<br />`Dispose`<br />`OnCurrentItemChanged`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`UpdateBackgroundColor` | `CreateFragmentForPage`<br />`CreateShellFlyoutContentRenderer`<br />`CreateShellFlyoutRenderer`<br />`CreateShellItemRenderer`<br />`CreateShellSectionRenderer`<br />`CreateTrackerForToolbar`<br />`CreateToolbarAppearanceTracker`<br />`CreateTabLayoutAppearanceTracker`<br />`CreateBottomNavViewAppearanceTracker`<br />`OnElementPropertyChanged`<br />`OnElementSet`<br />`SwitchFragment`<br />`Dispose` |
+
+Las clases `FlyoutItem` y `TabBar` son alias de la clase `ShellItem`, y la clase `Tab` es un alias de la clase `ShellSection`. Por lo tanto, el método `CreateShellItemRenderer` se debe invalidar al crear un representador personalizado para objetos `FlyoutItem`, y el método `CreateShellSectionRenderer` se debe invalidar al crear un representador personalizado para objetos `Tab`.
 
 > [!IMPORTANT]
 > Hay clases de representador adicionales de Shell, como `ShellSectionRenderer` y `ShellItemRenderer`, en iOS y Android. Sin embargo, estas clases de representador adicionales se crean mediante invalidaciones en la clase `ShellRenderer`. Por lo tanto, para personalizar el comportamiento de estas clases de representador adicionales, puede crear una subclase de ellas y una instancia de la subclase en la invalidación adecuada de la clase `ShellRenderer` en subclase.

@@ -6,13 +6,13 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
-ms.openlocfilehash: a64e96e1ee3804cd7aefd9834486613ba8d09d5f
-ms.sourcegitcommit: 0596004d4a0e599c1da1ddd75a6ac928f21191c2
+ms.date: 05/23/2019
+ms.openlocfilehash: 51d8764854db2fb62a412fab6e1e48c8beabbf1f
+ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66005226"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66178059"
 ---
 # <a name="xamarinforms-shell-flyout"></a>Control flotante de Xamarin.Forms Shell
 
@@ -133,7 +133,9 @@ En el ejemplo siguiente se muestra cómo contraer el encabezado de control flota
 
 ## <a name="flyout-items"></a>Elementos del control flotante
 
-Cada objeto `Shell` en subclase debe contener uno o varios objetos `FlyoutItem`, donde cada objeto `FlyoutItem` representa un elemento del control flotante. En el ejemplo siguiente se crea un control flotante que contiene un encabezado y dos elementos:
+Cuando el modelo de navegación de una aplicación incluye un control flotante, el objeto `Shell` con subclases debe contener uno o varios objetos `FlyoutItem`, donde cada objeto `FlyoutItem` representa un elemento del control flotante. Cada objeto `FlyoutItem` debe ser un elemento secundario del objeto `Shell`.
+
+En el ejemplo siguiente se crea un control flotante que contiene un encabezado y dos elementos:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -170,7 +172,7 @@ En este ejemplo, solo se puede acceder a cada objeto [`ContentPage`](xref:Xamari
 > [!NOTE]
 > Cuando no existe un encabezado de control flotante, aparecen elementos de control flotante en la parte superior del control flotante. En caso contrario, aparecen debajo del encabezado de control flotante.
 
-Shell tiene operadores de conversión implícita que permiten simplificar la jerarquía visual de Shell, sin introducir vistas adicionales en el árbol visual. Esto es posible porque un objeto `Shell` en subclase solo puede contener objetos `FlyoutItem`, que solo pueden contener objetos `Tab`, que solo pueden contener objetos `ShellContent`. Estos operadores de conversión implícita pueden usarse para quitar los objetos `FlyoutItem`, `Tab` y `ShellContent` del ejemplo anterior:
+Shell tiene operadores de conversión implícita que permiten simplificar la jerarquía visual de Shell, sin introducir vistas adicionales en el árbol visual. Esto es posible porque un objeto `Shell` con subclases solo puede contener objetos `FlyoutItem` o un objeto `TabBar`, que solo pueden contener objetos `Tab`, que solo pueden contener objetos `ShellContent`. Estos operadores de conversión implícita pueden usarse para quitar los objetos `FlyoutItem`, `Tab` y `ShellContent` del ejemplo anterior:
 
 ```xaml
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
@@ -193,11 +195,11 @@ Esta conversión implícita encapsula automáticamente cada objeto [`ContentPage
 
 ### <a name="flyoutitem-class"></a>Clase FlyoutItem
 
-La clase `FlyoutItem` incluye las siguientes propiedades que controlan su apariencia y comportamiento:
+La clase `FlyoutItem` incluye las siguientes propiedades que controlan la apariencia y comportamiento del elemento del control flotante:
 
 - `FlyoutDisplayOptions`, de tipo `FlyoutDisplayOptions`, define cómo se muestran el elemento y sus elementos secundarios en el control flotante. El valor predeterminado es `AsSingleItem`.
 - `CurrentItem`, de tipo `Tab`, el elemento seleccionado.
-- `Items`, de tipo `ShellSectionCollection`, define todas las pestañas dentro de `FlyoutItem`.
+- `Items`, de tipo `IList<Tab>`, define todas las pestañas dentro de `FlyoutItem`.
 - `FlyoutIcon`, de tipo `ImageSource`, el icono que se usará para el elemento. Si esta propiedad no está establecida, se volverá a usar el valor de la propiedad `Icon`.
 - `Icon`, de tipo `ImageSource`, define el icono que se mostrará en las partes del cromo que no son el control flotante.
 - `IsChecked`, de tipo `boolean`, define si el elemento está actualmente resaltado en la ventana flotante.
@@ -268,7 +270,7 @@ Al establecer la propiedad `FlyoutItem.FlyoutDisplayOptions` en `AsMultipleItems
 </Shell>
 ```
 
-En este ejemplo, se crean elementos de control flotante para el objeto `Tab`, que es secundario del objeto `FlyoutItem`, y el objeto `Shellontent`, que son elementos secundarios del objeto `FlyoutItem`. Esto ocurre porque cada objeto `ShellContent` que es secundario del objeto `FlyoutItem` se encapsula automáticamente en un objeto `Tab`. Además, se crea un elemento de control flotante para el objeto `ShellContent` final, que se encapsula en un objeto `Tab` y, luego, en un objeto `FlyoutItem`.
+En este ejemplo, se crean elementos de control flotante para el objeto `Tab`, que es secundario del objeto `FlyoutItem`, y el objeto `ShellContent`, que son elementos secundarios del objeto `FlyoutItem`. Esto ocurre porque cada objeto `ShellContent` que es secundario del objeto `FlyoutItem` se encapsula automáticamente en un objeto `Tab`. Además, se crea un elemento de control flotante para el objeto `ShellContent` final, que se encapsula en un objeto `Tab` y, luego, en un objeto `FlyoutItem`.
 
 El resultado son los siguientes elementos de control flotante:
 
@@ -276,7 +278,7 @@ El resultado son los siguientes elementos de control flotante:
 
 ## <a name="define-flyoutitem-appearance"></a>Definición de la apariencia de FlyoutItem
 
-Se puede personalizar la apariencia de cada `FlyoutItem` mediante el establecimiento de la propiedad `Shell.ItemTemplate` en un objeto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
+Se puede personalizar la apariencia de cada `FlyoutItem` mediante el establecimiento de la propiedad adjunta `Shell.ItemTemplate` en un objeto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
 <Shell ...>
@@ -288,7 +290,7 @@ Se puede personalizar la apariencia de cada `FlyoutItem` mediante el establecimi
                     <ColumnDefinition Width="0.2*" />
                     <ColumnDefinition Width="0.8*" />
                 </Grid.ColumnDefinitions>
-                <Image Source="{Binding Icon}"
+                <Image Source="{Binding FlyoutIcon}"
                        Margin="5"
                        HeightRequest="45" />
                 <Label Grid.Column="1"
@@ -306,7 +308,7 @@ En este ejemplo se muestra el título de cada objeto `FlyoutItem` en cursiva:
 [![Captura de pantalla de objetos FlyoutItem con plantilla en iOS y Android](flyout-images/flyoutitem-templated.png "Objetos FlyoutItem con plantilla de Shell")](flyout-images/flyoutitem-templated-large.png#lightbox "Shell templated FlyoutItem objects")
 
 > [!NOTE]
-> Shell proporciona las propiedades `Title` y `Icon` para el objeto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de `ItemTemplate`.
+> Shell proporciona las propiedades `Title` y `FlyoutIcon` para el objeto [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) de `ItemTemplate`.
 
 ## <a name="flyoutitem-tab-order"></a>Orden de tabulación de FlyoutItem
 
@@ -353,7 +355,7 @@ Shell.Current.CurrentItem = aboutItem;
 
 ## <a name="menu-items"></a>Elementos de menú
 
-Opcionalmente, los elementos de menú aparecen en el control flotante, debajo de los elementos de control flotante. Cada elemento de menú se representa mediante un objeto [`MenuItem`](xref:Xamarin.Forms.MenuItem).
+Los elementos del menú se pueden agregar opcionalmente a la ventana flotante, y cada elemento de menú se representa mediante un objeto [`MenuItem`](xref:Xamarin.Forms.MenuItem). La posición de los objetos `MenuItem` en el control flotante depende de su orden de declaración en la jerarquía visual del Shell. Por lo tanto, cualquier objeto `MenuItem` declarado antes de los objetos `FlyoutItem` aparecerá en la parte superior del control flotante, y cualquier objeto `MenuItem` declarado después de los objetos `FlyoutItem` aparecerá en la parte inferior del control flotante.
 
 > [!NOTE]
 > La clase `MenuItem` tiene un evento [`Clicked`](xref:Xamarin.Forms.MenuItem.Clicked) y una propiedad [`Command`](xref:Xamarin.Forms.MenuItem.Command). Por lo tanto, los objetos `MenuItem` permiten escenarios que ejecutan una acción en respuesta al elemento `MenuItem` que se pulsa. Estos escenarios incluyen realizar la navegación y abrir un explorador web en una página web específica.
@@ -373,7 +375,7 @@ Se pueden agregar objetos [`MenuItem`](xref:Xamarin.Forms.MenuItem) al control f
 </Shell>
 ```
 
-Este código agrega dos objetos [`MenuItem`](xref:Xamarin.Forms.MenuItem) al control flotante:
+Este código agrega dos objetos [`MenuItem`](xref:Xamarin.Forms.MenuItem) al control flotante, debajo de todos los elementos del control flotante:
 
 [![Captura de pantalla de ventana flotante que contiene objetos MenuItem en iOS y Android](flyout-images/flyout.png "Control flotante de Shell que contiene objetos MenuItem")](flyout-images/flyout-large.png#lightbox "Shell flyout containing MenuItem objects")
 
@@ -384,34 +386,84 @@ El primer objeto [`MenuItem`](xref:Xamarin.Forms.MenuItem) ejecuta un elemento `
 
 ## <a name="define-menuitem-appearance"></a>Definición de la apariencia de MenuItem
 
-Se puede personalizar la apariencia de cada `MenuItem` mediante el establecimiento de la propiedad `Shell.MenuItemTemplate` en un objeto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
+Se puede personalizar la apariencia de cada `MenuItem` mediante el establecimiento de la propiedad adjunta `Shell.MenuItemTemplate` en un objeto [`DataTemplate`](xref:Xamarin.Forms.DataTemplate):
 
 ```xaml
-<Shell.MenuItemTemplate>
-    <DataTemplate>
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="0.2*" />
-                <ColumnDefinition Width="0.8*" />
-            </Grid.ColumnDefinitions>
-            <Image Source="{Binding Icon}"
-                   Margin="5"
-                   HeightRequest="45" />
-            <Label Grid.Column="1"
-                   Text="{Binding Text}"
-                   FontAttributes="Italic"
-                   VerticalTextAlignment="Center" />
-        </Grid>
-    </DataTemplate>
-</Shell.MenuItemTemplate>
+<Shell ...>
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="45" />
+                <Label Grid.Column="1"
+                       Text="{Binding Text}"
+                       FontAttributes="Italic"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+    ...
+    <MenuItem Text="Random"
+              IconImageSource="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              IconImageSource="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />  
+</Shell>
 ```
 
-En este ejemplo se muestra el título de cada objeto `MenuItem` en cursiva:
+Este ejemplo adjunta el nivel de Shell `MenuItemTemplate` a cada objeto `MenuItem`, mostrando el título de cada objeto `MenuItem` en cursiva:
 
 [![Captura de pantalla de los objetos MenuItem con plantilla en iOS y Android](flyout-images/menuitem-templated.png "Objetos MenuItem con plantilla de Shell")](flyout-images/menuitem-templated-large.png#lightbox "Shell templated MenuItem objects")
 
 > [!NOTE]
 > Shell proporciona las propiedades [`Text`](xref:Xamarin.Forms.MenuItem.Text) y [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) para el elemento [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) del objeto `MenuItemTemplate`.`
+
+Dado que `Shell.MenuItemTemplate` es una propiedad adjunta, se pueden asociar diferentes plantillas a objetos `MenuItem` específicos:
+
+```xaml
+<Shell ...>
+    <Shell.MenuItemTemplate>
+        <DataTemplate>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.2*" />
+                    <ColumnDefinition Width="0.8*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="{Binding Icon}"
+                       Margin="5"
+                       HeightRequest="45" />
+                <Label Grid.Column="1"
+                       Text="{Binding Text}"
+                       FontAttributes="Italic"
+                       VerticalTextAlignment="Center" />
+            </Grid>
+        </DataTemplate>
+    </Shell.MenuItemTemplate>
+    ...
+    <MenuItem Text="Random"
+              IconImageSource="random.png"
+              Command="{Binding RandomPageCommand}" />
+    <MenuItem Text="Help"
+              Icon="help.png"
+              Command="{Binding HelpCommand}"
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell">
+        <Shell.MenuItemTemplate>
+            <DataTemplate>
+                ...
+            </DataTemplate>
+        </Shell.MenuItemTemplate>
+    </MenuItem>
+</Shell>
+```
+
+Este ejemplo adjunta el `MenuItemTemplate` de nivel de Shell al primer objeto `MenuItem` y adjunta el `MenuItemTemplate` alineado al segundo `MenuItem`.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
