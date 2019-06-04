@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/15/2017
-ms.openlocfilehash: 43854929cfc232b24cad18e276b3ba51d1e5dece
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b07bfd9f9ecbde66dbac3854bdbb611ad89e0ee2
+ms.sourcegitcommit: 4f8dc5298a95d591a59e97cdd347fd82858a1019
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153536"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469528"
 ---
 # <a name="colors-in-xamarinforms"></a>Colores de Xamarin.Forms
 
@@ -25,7 +25,7 @@ Este artículo presentan las distintas formas la `Color` clase puede usarse en X
 La `Color` clase proporciona una serie de métodos para crear una instancia de color
 
 -  **Colores con nombre** -una colección de comunes colores con nombre, incluidos `Red`, `Green`, y `Blue`.
--  **FromHex** -valor similar a la sintaxis utilizada en HTML, por ejemplo, "00FF00" de cadena. Alfa es opcionalmente se puede especificar como el primer par de caracteres ("CC00FF00").
+-  **FromHex** -valor similar a la sintaxis utilizada en HTML, por ejemplo "00FF00" de cadena. Alfa, opcionalmente, puede especificarse como el primer par de caracteres ("CC00FF00").
 -  **FromHsla** -matiz, saturación y luminosidad `double` valores, con el valor alfa opcional (0.0-1.0).
 -  **FromRgb** -rojo, verde y azul `int` valores (0-255).
 -  **FromRgba** -rojo, verde, azul y alfa `int` valores (0-255).
