@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/19/2018
-ms.openlocfilehash: bab38ebbef7083fa55e9942ad6826566e3ea5fdb
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: d32ef0176f0eff5981720d9e83568a7a40d0a396
+ms.sourcegitcommit: b4a12607ca944de10fd166139765241a4501831c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971080"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66687143"
 ---
 # <a name="xamarinforms-button"></a>Botón de Xamarin.Forms
 
@@ -817,7 +817,7 @@ La primera `Button` en el **imagen Button Demo** página establece el `Image` pr
 ```xaml
 <Button>
     <Button.ImageSource>
-        <OnPlatform x:TypeArguments="FileImageSource">
+        <OnPlatform x:TypeArguments="ImageSource">
             <On Platform="iOS, Android" Value="MonkeyFace.png" />
             <On Platform="UWP" Value="Assets/MonkeyFace.png" />
         </OnPlatform>
@@ -845,7 +845,7 @@ Para evitar mucha marcado redundante en la **ImageButtonDemo.xaml** archivo impl
         <FlexLayout.Resources>
             <Style TargetType="Button">
                 <Setter Property="ImageSource">
-                    <OnPlatform x:TypeArguments="FileImageSource">
+                    <OnPlatform x:TypeArguments="ImageSource">
                         <On Platform="iOS, Android" Value="MonkeyFace.png" />
                         <On Platform="UWP" Value="Assets/MonkeyFace.png" />
                     </OnPlatform>
@@ -855,7 +855,7 @@ Para evitar mucha marcado redundante en la **ImageButtonDemo.xaml** archivo impl
 
         <Button>
             <Button.ImageSource>
-                <OnPlatform x:TypeArguments="FileImageSource">
+                <OnPlatform x:TypeArguments="ImageSource">
                     <On Platform="iOS, Android" Value="MonkeyFace.png" />
                     <On Platform="UWP" Value="Assets/MonkeyFace.png" />
                 </OnPlatform>
