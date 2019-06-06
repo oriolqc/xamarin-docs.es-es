@@ -8,16 +8,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/03/2019
-ms.openlocfilehash: a8a61ac505eab8c458c49bde9184d6e96583d37f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8217c6436cc8cfe8f4b9c6cc3445157319e8c0bf
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61222597"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741115"
 ---
 # <a name="xaml-controls"></a>Controles de XAML
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/FormsGallery/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 
 Las vistas son objetos de interfaz de usuario, como etiquetas, botones y los controles deslizantes que se conocen normalmente como *controles* o *widgets* en otros entornos de programación de gráficos. Las vistas compatibles con Xamarin.Forms todos se derivan los [ `View` ](xref:Xamarin.Forms.View) clase.
 
@@ -82,6 +82,6 @@ Todas las vistas que se definen en Xamarin.Forms pueden hacer referencia a parti
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de Xamarin.Forms FormsGallery](https://developer.xamarin.com/samples/FormsGallery/)
+- [Ejemplo de Xamarin.Forms FormsGallery](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
 - [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/) (Ejemplos de Xamarin.Forms)
 - [Documentación de la API de Xamarin.Forms](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

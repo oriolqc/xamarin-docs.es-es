@@ -7,23 +7,23 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/27/2018
-ms.openlocfilehash: ddc9d18b57eac099331f0814b5963fb207840380
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 166927f2168015cb4786502d841e01b2faeb0c51
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61169596"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741013"
 ---
 # <a name="xamarinforms-map"></a>Mapa de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/WorkingWithMaps/)
+[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
 
 _Xamarin.Forms utiliza la asignación nativa API en cada plataforma._
 
 Xamarin.Forms.Maps para utiliza la asignación nativa API en cada plataforma. Esto proporciona una experiencia rápida, familiar mapas para los usuarios, pero significa que algunos pasos de configuración son necesarias para cumplir con requisitos de cada API de plataformas.
 Una vez configurado, el `Map` funciona igual que cualquier otro elemento de Xamarin.Forms en el código común de control.
 
-Se ha utilizado el control de mapa en el [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/) ejemplo, que se muestra a continuación.
+Se ha utilizado el control de mapa en el [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/) ejemplo, que se muestra a continuación.
 
  [![Se asigna en el ejemplo MobileCRM](map-images/maps-zoom-sml.png "ejemplo de Control de mapa")](map-images/maps-zoom.png#lightbox "ejemplo de Control de mapa")
 
@@ -298,6 +298,6 @@ El siguientes capturas de pantalla se muestra un [ `Map` ](xref:Xamarin.Forms.Ma
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [MapsSample](https://developer.xamarin.com/samples/WorkingWithMaps/)
+- [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
 - [Asignar a un representador personalizado](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
 - [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/) (Ejemplos de Xamarin.Forms)

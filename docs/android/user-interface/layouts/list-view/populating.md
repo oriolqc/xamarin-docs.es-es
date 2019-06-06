@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: 57c69223a01074ed15714026b7e9ec4e995808e0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f3162c4da092048cd409f7b32438bc85dcedff19
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61171323"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740809"
 ---
 # <a name="populating-a-listview-with-data"></a>Relleno de ListView con datos
 
@@ -222,6 +222,6 @@ Los títulos de sección índice no es necesario asignar 1:1 para sus secciones 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [BasicTableAndroid (sample)](https://developer.xamarin.com/samples/BasicTableAndroid/)
-- [BasicTableAdapter (sample)](https://developer.xamarin.com/samples/BasicTableAdapter/)
-- [FastScroll (ejemplo)](https://developer.xamarin.com/samples/FastScroll/)
+- [BasicTableAndroid (sample)](https://developer.xamarin.com/samples/monodroid/BasicTableAndroid/)
+- [BasicTableAdapter (sample)](https://developer.xamarin.com/samples/monodroid/BasicTableAdapter/)
+- [FastScroll (ejemplo)](https://developer.xamarin.com/samples/monodroid/FastScroll/)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 74b9243b1b985cba6d815a673d1abed054eda234
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b3a6f45d78c0febb2aacf4f7693bc6e328c3ec0
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61409870"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740958"
 ---
 # <a name="working-with-the-watchos-parent-application-in-xamarin"></a>Trabajar con la aplicación principal en Xamarin de watchOS
 
@@ -35,7 +35,7 @@ La aplicación primaria también en ocasiones se conoce como la aplicación de c
 
 ## <a name="run-code"></a>Ejecutar código
 
-Comunicación entre una extensión de inspección y la aplicación de iPhone primario se muestra en el [GpsWatch ejemplo](https://developer.xamarin.com/samples/GpsWatch).
+Comunicación entre una extensión de inspección y la aplicación de iPhone primario se muestra en el [GpsWatch ejemplo](https://developer.xamarin.com/samples/monotouch/WatchKit/GpsWatch/).
 La extensión de inspección puede solicitar la aplicación para iOS principal para realizar algún procesamiento en su nombre utilizando el `OpenParentApplication` método.
 
 Esto es especialmente útil para tareas en ejecución largas (incluidas las solicitudes de red): solo el elemento principal aplicación de iOS pueden aprovechar las ventajas del procesamiento en segundo plano para completar estas tareas y guardar los datos recuperados en una ubicación accesible para la extensión de inspección.

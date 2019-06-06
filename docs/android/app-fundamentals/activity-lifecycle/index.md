@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/28/2018
-ms.openlocfilehash: 3592a3027469cb9997d973db53d636ddea9e679d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 48ff30397b2592dd2c4dbd445987392d78ced6f3
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61024310"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740778"
 ---
 # <a name="activity-lifecycle"></a>Ciclo de vida de la actividad
 
@@ -117,7 +117,7 @@ Una vez `OnCreate` ha finalizado, llamará a Android `OnStart`.
 Las llamadas al sistema [OnResume](https://developer.xamarin.com/api/member/Android.App.Activity.OnResume/) cuando la actividad está lista para empezar a interactuar con el usuario.
 Las actividades deben invalidar este método para realizar tareas como:
 
--  Refuerza las velocidades de fotogramas (una tarea común de creación de juegos)
+-  Refuerza las velocidades de fotogramas (una tarea común de desarrollo de juegos)
 -  A partir de las animaciones
 -  Escucha de las actualizaciones GPS
 -  Mostrar alertas pertinentes y los cuadros de diálogo
