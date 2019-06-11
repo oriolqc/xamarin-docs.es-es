@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: b35149028763691c17fe526673d023cc9b707c28
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 1bcced2f43328bf5e7d1ebb171b3c92c9ec22493
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61246096"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827754"
 ---
 # <a name="layout-options-in-xamarinios"></a>Opciones de diseño de Xamarin.iOS
 
@@ -70,4 +70,4 @@ Tenga en cuenta que la vista de texto y el campo de texto se ajustan para manten
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Controles (ejemplo)](https://developer.xamarin.com/samples/Controls/)
+- [Controles (ejemplo)](https://developer.xamarin.com/samples/monotouch/Controls/)

@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 3b81ba51a0fbdf4c684ca602cb083f8da08c7d6a
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 306cce581eb1506e770222ea10e160c4fdbe1b29
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977985"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827490"
 ---
 # <a name="binding-objective-c-libraries"></a>Enlace de bibliotecas de Objective-c.
 
@@ -44,7 +44,7 @@ Puede hacerlo desde Visual Studio para Mac al seleccionar el tipo de proyecto **
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 Para crear un enlace sencillo es crear un proyecto de enlace de Xamarin.iOS.
-Puede hacerlo desde Visual Studio en Windows, seleccione el tipo de proyecto, **Visual C# > iOS > biblioteca de enlaces (iOS)**:
+Puede hacerlo desde Visual Studio en Windows, seleccione el tipo de proyecto, **Visual C# > iOS > biblioteca de enlaces (iOS)** :
 
 [![](objective-c-libraries-images/00vs-sml.png "Biblioteca de enlaces de iOS de iOS")](objective-c-libraries-images/00vs.png#lightbox)
 
@@ -1403,4 +1403,4 @@ Históricamente hemos necesitado copiando el protocolo en cada implementación, 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de enlace](https://developer.xamarin.com/samples/BindingSample/)
+- [Ejemplo de enlace](https://developer.xamarin.com/samples/monotouch/BindingSample/)

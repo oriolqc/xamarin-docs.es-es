@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/03/2019
-ms.openlocfilehash: 073bfc27b45a802fd5d6062d4750cc3e20a065e6
-ms.sourcegitcommit: 0d2f708f6d581e94302f26d4670458837dfaa31c
+ms.openlocfilehash: b032785bd18e785831122edf17bede6648e985d2
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/02/2019
-ms.locfileid: "64992349"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827861"
 ---
 # <a name="extensible-application-markup-language-xaml"></a>Lenguaje de marcado de aplicaciones eXtensible (XAML)
 
@@ -34,7 +34,7 @@ XAML permite a los desarrolladores definir interfaces de usuario en aplicaciones
 
 ## <a name="xaml-compilationxamlcmd"></a>[Compilación de XAML](xamlc.md)
 
-XAML se puede compilar de forma opcional directamente en lenguaje intermedio (IL) con el compilador XAML (XAMLC). En este artículo se describe cómo utilizar XAMLC y sus ventajas.
+XAML se puede compilar de forma opcional directamente en lenguaje intermedio (IL) con el compilador XAML (XAMLC). Este artículo describe cómo usar XAMLC y sus ventajas.
 
 ## <a name="xaml-previewerxaml-previewerindexmd"></a>[Controlador de vista previa de XAML](xaml-previewer/index.md)
 

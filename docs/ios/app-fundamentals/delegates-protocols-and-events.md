@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 09/17/2017
-ms.openlocfilehash: 5ccefdb5e527e67338714896905734c74278d00a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a82d96cf3f290dd28d163dd6f147a9dc28dfaa81
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61392536"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827603"
 ---
 # <a name="events-protocols-and-delegates-in-xamarinios"></a>Eventos, protocolos y delegados de Xamarin.iOS
 
@@ -385,7 +385,7 @@ A continuación, hemos aprendido acerca de los protocolos de Objective-C, inclui
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Protocolos, delegados y eventos (ejemplo)](https://developer.xamarin.com/samples/Protocols_Delegates_Events/)
+- [Protocolos, delegados y eventos (ejemplo)](https://developer.xamarin.com/samples/monotouch/Protocols_Delegates_Events/)
 - [Hello, iOS](~/ios/get-started/hello-ios/index.md)
 - [Tipos de enlace de Objective-c.](~/ios/platform/binding-objective-c/index.md)
 - [El lenguaje de programación Objective-c.](https://developer.apple.com/library/ios/#documentation/Cocoa/Conceptual/ObjectiveC/Introduction/introObjectiveC.html)

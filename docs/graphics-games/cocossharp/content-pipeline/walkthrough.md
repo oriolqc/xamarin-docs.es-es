@@ -6,12 +6,12 @@ ms.assetid: CACFBF5F-BBD4-4D46-8DDA-1F46466725FD
 author: conceptdev
 ms.author: crdun
 ms.date: 03/27/2017
-ms.openlocfilehash: 84f825c19aa1ac08fbcf3e732077304218768bcc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2227e2f56071b92c209c5d9fda994faa5a97a03d
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61371322"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827773"
 ---
 # <a name="using-the-monogame-pipeline-tool"></a>Mediante la herramienta de canalización MonoGame
 
@@ -69,7 +69,7 @@ Una vez creado el proyecto, se ejecutará para comprobar que se crea y que tenem
 
 ## <a name="creating-a-content-project"></a>Crear un proyecto de contenido
 
-Ahora que tenemos un proyecto de juego, podemos crear un proyecto de canalización MonoGame. Para ello, en la instrucción select de la herramienta de canalización MonoGame **archivo > nuevo...**  y navegue hasta la carpeta de contenido del proyecto. Para Android, se encuentra en la carpeta **[proyecto root]\BouncingGame.Android\Assets\Content\\**. Para iOS, se encuentra en la carpeta **[proyecto root]\BouncingGame.iOS\Content\\**.
+Ahora que tenemos un proyecto de juego, podemos crear un proyecto de canalización MonoGame. Para ello, en la instrucción select de la herramienta de canalización MonoGame **archivo > nuevo...**  y navegue hasta la carpeta de contenido del proyecto. Para Android, se encuentra en la carpeta **[proyecto root]\BouncingGame.Android\Assets\Content\\** . Para iOS, se encuentra en la carpeta **[proyecto root]\BouncingGame.iOS\Content\\** .
 
 Cambiar el **nombre de archivo** a **ContentProject** y haga clic en el **guardar** botón:
 
@@ -243,5 +243,5 @@ Este tutorial ha mostrado cómo usar la herramienta de canalización MonoGame pa
 
 - [Descargas de MonoGame](http://www.monogame.net/downloads/)
 - [Documentación de la canalización de MonoGame](http://www.monogame.net/documentation/?page=Pipeline)
-- [Iniciar proyecto BouncingGame para Android (ejemplo)](https://developer.xamarin.com/samples/BouncingGameCompleteAndroid/)
+- [Iniciar proyecto BouncingGame para Android (ejemplo)](https://developer.xamarin.com/samples/monodroid/BouncingGameCompleteAndroid/)
 - [ball.png gráfico (ejemplo)](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/ball.png?raw=true)

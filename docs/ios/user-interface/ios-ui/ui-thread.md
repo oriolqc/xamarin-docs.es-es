@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 9bde539286b69569b4928bc28b20faecee0f5209
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: e4485c485b708bdec06f7f1dc22f0bf33e07e982
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557383"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827748"
 ---
 # <a name="working-with-the-ui-thread-in-xamarinios"></a>Trabajar con el subproceso de interfaz de usuario en Xamarin.iOS
 
@@ -96,5 +96,5 @@ Si un método asincrónico se llama desde un subproceso en segundo plano (no el 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Controles (ejemplo)](https://developer.xamarin.com/samples/Controls/)
+- [Controles (ejemplo)](https://developer.xamarin.com/samples/monotouch/Controls/)
 - [Subprocesamiento](~/ios/app-fundamentals/threading.md)

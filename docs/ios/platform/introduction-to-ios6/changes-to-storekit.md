@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 5d1bb5ab636cd7527a560332a9890e9907fac454
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 35bac91e54181753bd1f3fd8b4cf0b851bfa1882
+ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61295895"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66827496"
 ---
 # <a name="changes-to-storekit-in-ios-6"></a>Cambios en StoreKit en iOS 6
 
@@ -522,7 +522,7 @@ En este artículo presenta dos nuevas características de Store Kit en iOS6: adq
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [StoreKit (ejemplo)](https://developer.xamarin.com/samples/StoreKit/)
+- [StoreKit (ejemplo)](https://developer.xamarin.com/samples/monotouch/StoreKit/)
 - [Compras desde la aplicación](~/ios/platform/in-app-purchasing/index.md)
 - [Referencia de Framework StoreKit](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [Referencia de clase SKStoreProductViewController](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)
