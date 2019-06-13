@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 9331c7e6920f94d2ff0dddc50eb8f1ff9817d982
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 1b4263e37e6d95c03e88905319cfe0ee167cb30b
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827855"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039694"
 ---
 # <a name="creating-a-xamarinios-application-using-the-elements-api"></a>Creación de una aplicación Xamarin.iOS mediante la API de elementos
 
@@ -47,21 +47,20 @@ Para crear una aplicación de varias pantalla con MonoTouch.Dialog, es necesario
 Para crear una aplicación de estilo de navegación, debemos crear un `UINavigationController`y, a continuación, agréguelo como el `RootViewController` en el `FinishedLaunching` método de la `AppDelegate`. Para realizar la `UINavigationController` trabajar con MonoTouch.Dialog, agregamos un `DialogViewController` a la `UINavigationController` tal como se muestra a continuación:
 
 ```csharp
-public override bool FinishedLaunching (UIApplication app, 
-        NSDictionary options)
+public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 {
-        _window = new UIWindow (UIScreen.MainScreen.Bounds);
+    _window = new UIWindow (UIScreen.MainScreen.Bounds);
             
-        _rootElement = new RootElement ("To Do List"){new Section ()};
+    _rootElement = new RootElement ("To Do List"){new Section ()};
 
-        // code to create screens with MT.D will go here …
+    // code to create screens with MT.D will go here …
 
-        _rootVC = new DialogViewController (_rootElement);
-        _nav = new UINavigationController (_rootVC);
-        _window.RootViewController = _nav;
-        _window.MakeKeyAndVisible ();
+    _rootVC = new DialogViewController (_rootElement);
+    _nav = new UINavigationController (_rootVC);
+    _window.RootViewController = _nav;
+    _window.MakeKeyAndVisible ();
             
-        return true;
+    return true;
 }
 ```
 
@@ -88,22 +87,20 @@ _rootVC.NavigationItem.RightBarButtonItem = _addButton;
 Cuando se crea el `RootElement` anteriormente, se lo ha pasado una sola `Section` instancia para que podamos agregar elementos como el <span class="ui"> + </span> se pulsa el botón por el usuario. Podemos usar el código siguiente para realizar este en el evento controlador del botón:
 
 ```csharp
-_addButton.Clicked += (sender, e) => {
+_addButton.Clicked += (sender, e) => {                
+    ++n;
                 
-        ++n;
+    var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
                 
-        var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
-                
-        var taskElement = new RootElement (task.Name){
-                new Section () {
-                        new EntryElement (task.Name, 
-                                "Enter task description", task.Description)
-                },
-                new Section () {
-                        new DateElement ("Due Date", task.DueDate)
-                }
-        };
-        _rootElement [0].Add (taskElement);
+    var taskElement = new RootElement (task.Name) {
+        new Section () {
+            new EntryElement (task.Name, "Enter task description", task.Description)
+        },
+        new Section () {
+            new DateElement ("Due Date", task.DueDate)
+        }
+    };
+    _rootElement [0].Add (taskElement);
 };
 ```
 
@@ -112,15 +109,15 @@ Este código crea un nuevo `Task` objeto cada vez que se pulsa el botón. La sig
 ```csharp
 public class Task
 {   
-        public Task ()
-        {
-        }
+    public Task ()
+    {
+    }
+      
+    public string Name { get; set; }
         
-        public string Name { get; set; }
-        
-        public string Description { get; set; }
+    public string Description { get; set; }
 
-        public DateTime DueDate { get; set; }
+    public DateTime DueDate { get; set; }
 }
 ```
 

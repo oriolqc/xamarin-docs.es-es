@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 ms.date: 11/25/2015
 author: lobrien
 ms.author: laobri
-ms.openlocfilehash: 2bd45c5482a8f0367bffa21f301bb631c3429a21
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bc6842871a2f59c9851e90adbc6609707a7ecd1f
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61395161"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039657"
 ---
 # <a name="monotouchdialog-json-markup"></a>Marcado JSON de MonoTouch.Dialog
 
@@ -20,58 +20,58 @@ Esta página describe el marcado Json MonoTouch.Dialog aceptado [JsonElement](xr
 
 Empecemos con un ejemplo. El siguiente es un archivo Json completo que se puede pasar a JsonElement.
 
-```csharp
+```json
 {     
-  "title": "Json Sample",
-  "sections": [ 
-      {
-          "header": "Booleans",
-          "footer": "Slider or image-based",
-          "id": "first-section",
-          "elements": [
-              { 
-                  "type" : "boolean",
-                  "caption" : "Demo of a Boolean",
-                  "value"   : true
-              }, {
-                  "type": "boolean",
-                  "caption" : "Boolean using images",
-                  "value"   : false,
-                  "on"      : "favorite.png",
-                  "off"     : "~/favorited.png"
-              }, {
-                      "type": "root",
-                      "title": "Tap for nested controller",
-                      "sections": [ {
-                         "header": "Nested view!",
-                         "elements": [
-                           {
-                             "type": "boolean",
-                             "caption": "Just a boolean",
-                             "id": "the-boolean",
-                             "value": false
-                           },
-                           {
-                             "type": "string",
-                             "caption": "Welcome to the nested controller"
-                           }
-                         ]
-                       }
-                     ]
-                   }
-          ]
-      }, {
-          "header": "Entries",
-          "elements" : [
-              {
-                  "type": "entry",
-                  "caption": "Username",
-                  "value": "",
-                  "placeholder": "Your account username"
-              }
-          ]
-      }
-  ]
+    "title": "Json Sample",
+    "sections": [ 
+        {
+            "header": "Booleans",
+            "footer": "Slider or image-based",
+            "id": "first-section",
+            "elements": [
+                { 
+                    "type": "boolean",
+                    "caption": "Demo of a Boolean",
+                    "value": true
+                }, {
+                    "type": "boolean",
+                    "caption": "Boolean using images",
+                    "value": false,
+                    "on": "favorite.png",
+                    "off": "~/favorited.png"
+                }, {
+                    "type": "root",
+                    "title": "Tap for nested controller",
+                    "sections": [
+                        {
+                            "header": "Nested view!",
+                            "elements": [
+                                {
+                                    "type": "boolean",
+                                    "caption": "Just a boolean",
+                                    "id": "the-boolean",
+                                    "value": false
+                                }, {
+                                    "type": "string",
+                                    "caption": "Welcome to the nested controller"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }, {
+            "header": "Entries",
+            "elements" : [
+                {
+                    "type": "entry",
+                    "caption": "Username",
+                    "value": "",
+                    "placeholder": "Your account username"
+                }
+            ]
+        }
+    ]
 }
 ```
 
@@ -86,7 +86,7 @@ var jsonElement = JsonElement.FromFile ("demo.json");
 
 var firstSection = jsonElement ["first-section"] as Section;
 
-var theBoolean = jsonElement ["the-boolean"] as BooleanElement
+var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 ```
 
  <a name="Root_Element_Syntax" />
@@ -192,38 +192,38 @@ Elementos de cadena se pueden utilizar como botones, ya que proporciona un méto
 
 La representación de elementos se basa en el C# StringElement y StyledStringElement y se puede representar la información de varias maneras y es posible representarlos en diversas formas. Se pueden crear los elementos más simple similar al siguiente:
 
-```csharp
+```json
 {
-        "type": "string",
-        "caption": "Json Serializer",
+    "type": "string",
+    "caption": "Json Serializer"
 }
 ```
 
 Esto mostrará una cadena simple con todos los valores predeterminados: fuente, fondo, color del texto y adornos. Es posible enlazar las acciones a estos elementos y hacen que se comporten como botones estableciendo el `"ontap"` propiedad o el `"onaccessorytap"` propiedades:
 
-```csharp
+```json
 {
-    "type":    "string",
-        "caption": "View Photos",
-        "ontap:    "Acme.PhotoLibrary.ShowPhotos"
+    "type": "string",
+    "caption": "View Photos",
+    "ontap": "Acme.PhotoLibrary.ShowPhotos"
 }
 ```
 
 Los pasos anteriores invocará al método "ShowPhotos" en la clase "Acme.PhotoLibrary". El `"onaccessorytap"` es similar, pero solo se invocará si el usuario pulsa el accesorio en lugar de puntear en la celda. Para habilitar esta opción, también debe establecer el accesorio:
 
-```csharp
+```json
 {
-    "type":     "string",
-        "caption":  "View Photos",
-        "ontap:     "Acme.PhotoLibrary.ShowPhotos",
-        "accessory: "detail-disclosure",
-        "onaccessorytap": "Acme.PhotoLibrary.ShowStats"
+    "type": "string",
+    "caption": "View Photos",
+    "ontap": "Acme.PhotoLibrary.ShowPhotos",
+    "accessory": "detail-disclosure",
+    "onaccessorytap": "Acme.PhotoLibrary.ShowStats"
 }
 ```
 
 Representación de elementos puede mostrar dos cadenas a la vez, uno es el título y otro es el valor. Cómo se procesan estas cadenas dependen el estilo, se puede establecer utilizando la `"style"` propiedad. El valor predeterminado mostrará el título a la izquierda y el valor de la derecha. Consulte la sección sobre el estilo para obtener más detalles. Los colores se codifican utilizando el símbolo "#" seguido de números hexadecimales que representan los valores para los valores de rojos, verdes, azules y alfa quizás. El contenido se puede codificar de forma abreviada (3 o 4 dígitos hexadecimales) que representa los valores RGB o RGBA. O el formato largo (6 u 8 dígitos) que representan los valores RGB o RGBA. La versión corta es una forma abreviada para escribir dos veces el mismo dígito hexadecimal. Por lo que la constante "#1bc" es interpretará como rojo = 0 x 11, verde = 0xbb y azul = 0xcc. Si el valor alfa no está presente, el color es opaco. Algunos ejemplos:
 
-```csharp
+```json
 "background": "#f00"
 "background": "#fa08f880"
 ```
@@ -364,19 +364,19 @@ El valor secundario que se mostrará en el elemento de representación. El dise�
 
 Los elementos booleanos deben establecer el tipo en `"bool"`, puede contener un `"caption"` para mostrar y el `"value"` se establece en true o false. Si el `"on"` y `"off"` se establecen las propiedades, se supone que las imágenes. Las imágenes se resuelven en relación con el directorio de trabajo actual en la aplicación. Si desea hacer referencia a los archivos relacionados con el paquete, puede usar el `"~"` como un acceso directo para representar el directorio del paquete de aplicación. Por ejemplo `"~/favorite.png"` será el favorite.png contenidas en el archivo del paquete. Por ejemplo:
 
-```csharp
+```json
 { 
-    "type" : "boolean",
-    "caption" : "Demo of a Boolean",
-    "value"   : true
+    "type": "boolean",
+    "caption": "Demo of a Boolean",
+    "value": true
 },
 
 {
     "type": "boolean",
-    "caption" : "Boolean using images",
-    "value"   : false,
-    "on"      : "favorite.png",
-    "off"     : "~/favorited.png"
+    "caption": "Boolean using images",
+    "value": false,
+    "on": "favorite.png",
+    "off": "~/favorited.png"
 }
 ```
 
@@ -394,30 +394,30 @@ Tipo puede establecerse en `"boolean"` o `"checkbox"`. Si establece en un valor 
 
 Utilice los elementos de entrada para permitir que el usuario escriba datos. El tipo de los elementos de entrada es `"entry"` o `"password"`. El `"caption"` propiedad se establece en el texto para mostrar de la derecha y el `"value"` se establece en el valor inicial para la entrada. El `"placeholder"` se usa para mostrar una sugerencia al usuario las entradas vacías (se muestra atenuado). A continuación se muestran algunos ejemplos:
 
-```csharp
+```json
 {
-        "type": "entry",
-        "caption": "Username",
-        "value": "",
-        "placeholder": "Your account username"
+    "type": "entry",
+    "caption": "Username",
+    "value": "",
+    "placeholder": "Your account username"
 }, {
-        "type": "password",
-        "caption": "Password",
-        "value": "",
-        "placeholder": "You password"
+    "type": "password",
+    "caption": "Password",
+    "value": "",
+    "placeholder": "You password"
 }, {
-        "type": "entry",
-        "caption": "Zip Code",
-        "value": "01010",
-        "placeholder": "your zip code",
-        "keyboard": "numbers"
+    "type": "entry",
+    "caption": "Zip Code",
+    "value": "01010",
+    "placeholder": "your zip code",
+    "keyboard": "numbers"
 }, {
-        "type": "entry",
-        "return-key": "route",
-        "caption": "Entry with 'route'",
-        "placeholder": "captialization all + no corrections",
-        "capitalization": "all",
-        "autocorrect": "no"
+    "type": "entry",
+    "return-key": "route",
+    "caption": "Entry with 'route'",
+    "placeholder": "captialization all + no corrections",
+    "capitalization": "all",
+    "autocorrect": "no"
 }
 ```
 
@@ -515,22 +515,22 @@ Además, si se establece un valor para el `"group"` propiedad, este botón de ra
 
 Los tipos de elemento `"datetime"`, `"date"` y `"time"` se utilizan para representar las fechas con las horas, fechas u horas. Estos elementos toman como parámetros de un título y un valor. El valor puede escribirse en cualquier formato admitido por la función DateTime.Parse. NET. Ejemplo:
 
-```csharp
+```json
 "header": "Dates and Times",
 "elements": [
-        {
-                "type": "datetime",
-                "caption": "Date and Time",
-                "value": "Sat, 01 Nov 2008 19:35:00 GMT"
-        }, {
-                "type": "date",
-                "caption": "Date",
-                "value": "10/10"
-        }, {
-                "type": "time",
-                "caption": "Time",
-                "value": "11:23"
-                }                       
+    {
+        "type": "datetime",
+        "caption": "Date and Time",
+        "value": "Sat, 01 Nov 2008 19:35:00 GMT"
+    }, {
+        "type": "date",
+        "caption": "Date",
+        "value": "10/10"
+    }, {
+        "type": "time",
+        "caption": "Time",
+        "value": "11:23"
+    }                       
 ]
 ```
 
@@ -541,10 +541,10 @@ Los tipos de elemento `"datetime"`, `"date"` y `"time"` se utilizan para represe
 
 Puede crear una celda que cuando se puntea insertará un UIWebView que representa el contenido de una dirección URL especificada, ya sea local o remoto mediante el `"html"` tipo. Son las dos únicas propiedades para este elemento `"caption"` y `"url"`:
 
-```csharp
+```json
 {
-        "type": "html",
-        "caption": "Miguel's blog",
-        "url": "https://tirania.org/blog" 
+    "type": "html",
+    "caption": "Miguel's blog",
+    "url": "https://tirania.org/blog" 
 }
 ```
