@@ -7,26 +7,26 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/09/2016
-ms.openlocfilehash: 08278c2bc380892706320dbd0e69642257b73005
-ms.sourcegitcommit: a1a58afea68912c79d16a3f64de9a0c1feb2aeb4
+ms.openlocfilehash: 2c9fae211e6a88944c94ca265409865b3252a10a
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55233788"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66740930"
 ---
 # <a name="checking-battery-status"></a>Comprobar el estado de la batería
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/DependencyService)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
 
 En este artículo, se explica cómo crear una aplicación que comprueba el estado de la batería. Este artículo se basa en la aplicación Battery Plugin desarrollada por James Montemagno. Para obtener más información, vea el [repositorio de GitHub](https://github.com/jamesmontemagno/Xamarin.Plugins/tree/master/Battery).
 
 Como en Xamarin.Forms no se incluyen funciones para comprobar el estado actual de la batería, esta aplicación tendrá que usar [`DependencyService`](xref:Xamarin.Forms.DependencyService) para aprovechar las API nativas.  En este artículo, se explican los pasos siguientes con el fin de usar `DependencyService`:
 
-- **[Crear la interfaz](#Creating_the_Interface)**: obtenga información sobre cómo se crea la interfaz en código compartido.
-- **[Implementación de iOS](#iOS_Implementation)**: obtenga información sobre cómo implementar la interfaz en código nativo para iOS.
-- **[Implementación de Android](#Android_Implementation)**: obtenga información sobre cómo implementar la interfaz en código nativo para Android.
-- **[Implementación de UWP](#UWPImplementation)**: obtenga información sobre cómo implementar la interfaz en código nativo para la Plataforma universal de Windows (UWP).
-- **[Implementación en código compartido](#Implementing_in_Shared_Code)**: obtenga información sobre cómo usar `DependencyService` para llamar a la implementación nativa desde código compartido.
+- **[Crear la interfaz](#Creating_the_Interface)** : obtenga información sobre cómo se crea la interfaz en código compartido.
+- **[Implementación de iOS](#iOS_Implementation)** : obtenga información sobre cómo implementar la interfaz en código nativo para iOS.
+- **[Implementación de Android](#Android_Implementation)** : obtenga información sobre cómo implementar la interfaz en código nativo para Android.
+- **[Implementación de UWP](#UWPImplementation)** : obtenga información sobre cómo implementar la interfaz en código nativo para la Plataforma universal de Windows (UWP).
+- **[Implementación en código compartido](#Implementing_in_Shared_Code)** : obtenga información sobre cómo usar `DependencyService` para llamar a la implementación nativa desde código compartido.
 
 Una vez completada, la aplicación `DependencyService` que use tendrá la estructura siguiente:
 
@@ -478,6 +478,6 @@ Al ejecutar esta aplicación en iOS, Android o UWP y pulsar el botón, se actual
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [DependencyService (ejemplo)](https://developer.xamarin.com/samples/DependencyService)
-- [Uso de DependencyService (ejemplo)](https://developer.xamarin.com/samples/UsingDependencyService/)
+- [DependencyService (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/DependencyService/)
+- [Uso de DependencyService (ejemplo)](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples) (Ejemplos de Xamarin.Forms)

@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/01/2016
-ms.openlocfilehash: 7a273d43ce43ca2946e1ff3177fc4575cd92a534
-ms.sourcegitcommit: be6f6a8f77679bb9675077ed25b5d2c753580b74
+ms.openlocfilehash: 901bf683f59574d71c035b9635abaa3441152252
+ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53050613"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741056"
 ---
 # <a name="xamarinforms-triggers"></a>Desencadenadores de Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/WorkingWithTriggers)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
 
 Los desencadenadores permiten expresar acciones de forma declarativa en XAML que cambian la apariencia de controles en función de eventos o cambios en propiedades.
 
@@ -333,5 +333,5 @@ Nota: `EnterActions` y `ExitActions` se omiten en **desencadenadores de eventos*
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplo de desencadenadores](https://developer.xamarin.com/samples/WorkingWithTriggers)
+- [Ejemplo de desencadenadores](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
 - [Documentación de la API de Xamarin.Forms](xref:Xamarin.Forms.TriggerAction`1)
