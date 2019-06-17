@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 0b063619387d9984e24f6987234605b626289e2d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 5fbe711cb8ad4902da047a2027fc05e9956de863
+ms.sourcegitcommit: 85c45dc28ab3625321c271804768d8e4fce62faf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978298"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67039722"
 ---
 # <a name="hello-ios--quickstart"></a>Inicio rápido de Hello, iOS
 
@@ -125,7 +125,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     Para guardar los cambios, vaya a **Archivo > Guardar** o presione **⌘ + s**.
 
-17. Debe agregarse lógica a la aplicación para convertir números de teléfono de formato alfanumérico a numérico. Agregue un nuevo archivo al proyecto. Para ello, haga clic con el botón derecho en el proyecto **Phoneword_iOS** en el **Panel de solución** y seleccione **Agregar > Nuevo archivo…**, o presione **⌘ + n**:
+17. Debe agregarse lógica a la aplicación para convertir números de teléfono de formato alfanumérico a numérico. Agregue un nuevo archivo al proyecto. Para ello, haga clic con el botón derecho en el proyecto **Phoneword_iOS** en el **Panel de solución** y seleccione **Agregar > Nuevo archivo…** , o presione **⌘ + n**:
 
     ![](hello-ios-quickstart-images/image18.png "Agregue un nuevo archivo al proyecto")
 
@@ -283,7 +283,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     ![](hello-ios-quickstart-images/image001-.png "Pantalla de inicio")
 
-    Cree una nueva solución de Xamarin.iOS al seleccionar **Archivo > Nuevo > Proyecto... > Visual C# > iPhone y iPad > Aplicación de iOS (Xamarin)**:
+    Cree una nueva solución de Xamarin.iOS al seleccionar **Archivo > Nuevo > Proyecto... > Visual C# > iPhone y iPad > Aplicación de iOS (Xamarin)** :
 
     ![Selección del tipo de proyecto Aplicación de iOS (Xamarin)](hello-ios-quickstart-images/image002.w157.png "Selección del tipo de proyecto Aplicación de iOS (Xamarin)")
 
@@ -343,7 +343,7 @@ En este tutorial se muestra cómo crear una aplicación llamada Phoneword que co
 
     Guarde los cambios, seleccionando **Archivo > Guardar todo** o presionando **Ctrl + s**.
 
-15. Agregue código para convertir números de teléfono de formato alfanumérico a numérico. Para hacerlo, agregue un nuevo archivo al proyecto haciendo clic con el botón derecho en el proyecto **Phoneword** en el **Explorador de soluciones** y seleccionando **Agregar > Nuevo elemento...**, o presionando **Ctrl + Mayús + A**:
+15. Agregue código para convertir números de teléfono de formato alfanumérico a numérico. Para hacerlo, agregue un nuevo archivo al proyecto haciendo clic con el botón derecho en el proyecto **Phoneword** en el **Explorador de soluciones** y seleccionando **Agregar > Nuevo elemento...** , o presionando **Ctrl + Mayús + A**:
 
     ![](hello-ios-quickstart-images/vs-image18.png "Agregue código para convertir números de teléfono de formato alfanumérico a numérico")
 
