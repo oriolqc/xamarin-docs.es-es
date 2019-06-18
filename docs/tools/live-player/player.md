@@ -5,22 +5,23 @@ ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
 author: lobrien
 ms.author: laobri
-ms.date: 08/08/2017
-ms.openlocfilehash: 89795e5df00b426c0f11c04a0844993071df1e25
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/13/2019
+ms.openlocfilehash: fce0eeae4ef5776842ea1b45c36163118042dc49
+ms.sourcegitcommit: 93b1e2255d59c8ca6674485938f26bd425740dd1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61279518"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67157730"
 ---
 # <a name="xamarin-live-player-app"></a>Aplicación Xamarin Live Player
 
 ![Características en versión preliminar](~/media/shared/preview.png)
 
-> [!NOTE]
-> La vista previa activa el Reproductor sólo está disponible en Visual Studio 2017.
+> [!WARNING]
+> La versión Xamarin Live Player preliminar finalizó. La aplicación ya no está disponible. Las instrucciones siguientes se proporcionan para los clientes siguen usando la versión preliminar con Visual Studio 2017.
 
-Una vez que haya instalado la aplicación en su teléfono, siga el [instrucciones de instalación](~/tools/live-player/install.md) para conectarse a su equipo. Pruebe uno de los [aplicaciones de ejemplo](~/tools/live-player/samples.md) para que funcione.
+> [!TIP]
+> Puede usar el [controlador de vista previa de XAML](~/xamarin-forms/xaml/xaml-previewer/index.md) de 2019 de Visual Studio o Visual Studio para Mac para ver los diseños de pantalla al editarlas.
 
 En el inicio, la aplicación Xamarin Live Player tiene este aspecto:
 
@@ -56,7 +57,7 @@ Visualización de registros para diagnosticar problemas.
 
 Para conectar un dispositivo por primera vez, siga las instrucciones de [requisitos & programa de instalación](~/tools/live-player/install.md). Puede emparejar varios dispositivos y administrarlos a través del IDE.
 
-# <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
+# <a name="visual-studio-2017tabwindows"></a>[Visual Studio 2017](#tab/windows)
 
 En Visual Studio, elija **Herramientas > Xamarin Live Player > Administrar dispositivos...**
 
@@ -95,4 +96,4 @@ Si experimenta algún problema, vea [limitaciones y solución de problemas](~/to
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Solución de problemas](~/tools/live-player/troubleshooting.md)
-- [Ejemplos de uso con Live Player](https://developer.xamarin.com/samples/xamarin-live-player/all/)
+
