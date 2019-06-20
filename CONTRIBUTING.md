@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f0e2c93c4a6be0e83c9c4f1607b125b8d240ccc1
-ms.sourcegitcommit: 0cb62b02a7efb5426f2356d7dbdfd9afd85f2f4a
+ms.openlocfilehash: db5fd78a7907826bcb60ce1c2635491e01f0c02b
+ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557215"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194938"
 ---
 # <a name="contributing"></a>Contribución
 
@@ -70,13 +70,13 @@ Las confirmaciones de la rama principal se insertan en el sitio activo con un ri
 En la lista siguiente se incluye una serie de reglas orientativas que se deben tener en cuenta a la hora de colaborar en la documentación de .NET.
 
 - **NO** solicite la incorporación de grandes cambios. En su lugar, registre un asunto e inicie una discusión para que podamos definir un rumbo antes de dedicar una gran cantidad de tiempo.
-- **LEA** la [guía de estilo](../contributing-guidelines/template.md) y las instrucciones de [voz y tono](../contributing-guidelines/voice-tone.md).
-- **USE** el archivo de [plantilla](../contributing-guidelines/template.md) como punto de partida del trabajo.
+- **LEA** la [guía de estilo](contributing-guidelines/template.md) y las instrucciones de [voz y tono](contributing-guidelines/voice-tone.md).
+- **USE** el archivo de [plantilla](contributing-guidelines/template.md) como punto de partida del trabajo.
 - **CREE** una rama independiente en la bifurcación antes de trabajar en los artículos.
 - **SIGA** el [flujo de trabajo de GitHub](https://guides.github.com/introduction/flow/).
 - **HABLE** de sus contribuciones con frecuencia en blogs o Twitter (o cualquier otra red social).
 
 > [!NOTE]
-> Es posible que observe que algunos de los temas no siguen actualmente todas las instrucciones que se especifican aquí y en la [guía de estilo](./contributing-guidelines/template.md), pero estamos trabajando para dar coherencia a todo el sitio. 
+> Es posible que observe que algunos de los temas no siguen actualmente todas las instrucciones que se especifican aquí y en la [guía de estilo](contributing-guidelines/template.md), pero estamos trabajando para dar coherencia a todo el sitio. 
 
 

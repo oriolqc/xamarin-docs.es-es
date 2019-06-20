@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 6141b84af56d7680e2b294317ba97fb6943e17c5
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 1bd61474daedd8bd330c0370948d6dee6f8ea50e
+ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50106057"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67194954"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Introducción a la distribución de aplicaciones Xamarin.iOS
 
@@ -37,7 +37,8 @@ Todos estos escenarios requieren que las aplicaciones se aprovisionen mediante e
 ## <a name="app-store-distribution"></a>Distribución a través del App Store
 
 > [!IMPORTANT]
-> Apple [ha indicado](https://developer.apple.com/news/?id=05072018a) que a partir de julio de 2018 todas las aplicaciones y actualizaciones que se envían al App Store deben haberse compilado con el SDK de iOS 11y [ser compatibles con la pantalla del iPhone X](~/ios/platform/introduction-to-ios11/updating-your-app/visual-design.md).
+> Apple [ha comunicado](https://developer.apple.com/ios/submit/) que, a partir de marzo de 2019, las aplicaciones y actualizaciones que se envíen al App Store deberán haberse compilado con el SDK de iOS 12.1 o posterior, incluido en Xcode 10.1 y versiones posteriores.
+> Las aplicaciones también deberán admitir los tamaños de pantalla del iPhone XS y el iPad Pro de 12.9".
 
 Se trata de la forma principal mediante la que se distribuyen las aplicaciones de iOS a los consumidores en dispositivos iOS. Todas las aplicaciones que se envían a la App Store requieren la aprobación de Apple.
 
