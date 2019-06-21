@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/21/2017
-ms.openlocfilehash: a40227454b597578ff1c1c247b326e523c23493b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 120bbfe0d5fa91e632fc56ee05431f5555653360
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61248522"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268597"
 ---
 # <a name="xamarinios-application-fundamentals"></a>Principios de la aplicación de Xamarin.iOS
 
@@ -33,6 +33,10 @@ En segundo plano de procesamiento o de procesamiento en segundo plano es el proc
 ## <a name="creating-ios-applications-in-codeiosapp-fundamentalsios-code-onlymd"></a>[Creación de aplicaciones de iOS en código](~/ios/app-fundamentals/ios-code-only.md)
 
 En este artículo se explica cómo crear aplicaciones de iOS completamente en código con Visual Studio y Visual Studio para Mac. Se muestra cómo empezar a partir de una plantilla de proyecto vacía para crear una pantalla de aplicación en un controlador mediante la creación de una jerarquía de vistas de UIKit. Luego se explica cómo crear vistas personalizadas que se pueden cargar en un controlador.
+
+## <a name="exception-marshalingiosplatformexception-marshalingmd"></a>[Serialización de excepciones](~/ios/platform/exception-marshaling.md)
+
+Describe cómo se serializan Objective-C y las excepciones administradas entre marcos nativos y administrados.
 
 ## <a name="events-protocols-and-delegatesiosapp-fundamentalsdelegates-protocols-and-eventsmd"></a>[Eventos, protocolos y delegados](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 

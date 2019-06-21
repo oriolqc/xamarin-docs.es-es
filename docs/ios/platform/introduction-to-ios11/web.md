@@ -1,5 +1,5 @@
 ---
-title: Cambios de web en iOS 11
+title: Cambios de WebKit y Safari en iOS 11
 description: Este documento describen los cambios realizados en WebKit y la plataforma de servicios de Safari en iOS 11. Describe cómo trabajar con un estilo de las actualizaciones en SFSafariViewController y las nuevas características de WKWebView.
 ms.prod: xamarin
 ms.assetid: C74B2E94-177C-43D4-8D6C-9B528773C120
@@ -7,14 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/12/2017
-ms.openlocfilehash: ba691a6605dcf7e86a76ed13d4c8ef5f0984ff6e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5ced73b1f3f5b8207ae1258dcb01a78c94df217d
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61399730"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268916"
 ---
-# <a name="web-changes-in-ios-11"></a>Cambios de web en iOS 11
+# <a name="webkit-and-safari-changes-in-ios-11"></a>Cambios de WebKit y Safari en iOS 11
 
 iOS 11 introduce una nueva versión del explorador de web de Safari: Safari 11.0: que incluye los cambios de WebKit y SafariServices. Esta guía analiza estos cambios.
 

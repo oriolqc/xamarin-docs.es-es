@@ -7,18 +7,14 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: b018fe343a7d46f1323119b03a22cc3831a02d9f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e84f5acdd1660633521d1a99325155b614b87e1b
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61402408"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268909"
 ---
 # <a name="introduction-to-ios-10"></a>Introducción a iOS 10
-
-_Este artículo presenta todas las características disponibles en iOS 10 y las API nuevas y modificadas para desarrolladores de Xamarin.iOS._
-
-## <a name="introducing-ios-10"></a>Introducción a iOS 10
 
 Con la nueva iOS 10 SDK, Apple ha incluido nuevas API y servicios que permiten a los desarrolladores crear nuevas categorías de aplicaciones y características. Una aplicación de iOS ahora puede ampliar las aplicaciones de mensajes, Siri, teléfono y mapas para proporcionar funcionalidades completas para el usuario final que no estaba disponible anteriormente.
 
@@ -27,7 +23,6 @@ Para obtener más información en iOS 10, consulte Apple [iOS + aplicaciones](ht
 ## <a name="whats-new-in-ios-10"></a>Novedades en iOS 10
 
 Apple ha agregado varias nuevas API y servicios en iOS 10 junto con muchas mejoras en las características existentes, incluyendo:
-
 
 ## <a name="adapting-to-the-true-tone-display"></a>Para adaptarse a la presentación de tono True
 
@@ -40,8 +35,6 @@ Están disponibles los siguientes valores:
 - `UIWhitePointAdaptivityStyleGame` : Se usa para las aplicaciones centradas en juego.
 - `UIWhitePointAdaptivityStyleVideo` : Se usa para las aplicaciones centradas en el vídeo.
 - `UIWhitePointAdaptivityStylePhoto` : Se usa para las aplicaciones centradas en fotografía donde es más importante que los ajustes del entorno de punto blanco fidelidad del color.
-
-<a name="app-extensions" />
 
 ## <a name="app-extensions"></a>Extensiones de aplicación
 
@@ -87,13 +80,12 @@ Para obtener más información, consulte nuestra [Apple pagar mejoras](~/ios/pla
 
 Apple ha agregado varias mejoras a iOS 10.3 que permitan a una aplicación administrar su icono:
 
- - `ApplicationIconBadgeNumber` : Obtiene o establece el distintivo de icono de la aplicación en el Springboard.
- - `SupportsAlternateIcons` -If `true` la aplicación tiene un conjunto alternativo de iconos.
- - `AlternateIconName` -Devuelve el nombre del icono alternativo seleccionado actualmente o `null` si mediante el icono principal.
- - `SetAlternameIconName` : Use este método para cambiar el icono de la aplicación en el icono alternativo especificado.
+- `ApplicationIconBadgeNumber` : Obtiene o establece el distintivo de icono de la aplicación en el Springboard.
+- `SupportsAlternateIcons` -If `true` la aplicación tiene un conjunto alternativo de iconos.
+- `AlternateIconName` -Devuelve el nombre del icono alternativo seleccionado actualmente o `null` si mediante el icono principal.
+- `SetAlternameIconName` : Use este método para cambiar el icono de la aplicación en el icono alternativo especificado.
 
 Para obtener más información, consulte nuestra [iconos de aplicación alternativo](~/ios/app-fundamentals/images-icons/alternate-app-icons.md) guía.
-
 
 ## <a name="introduction-to-callkit"></a>Introducción a CallKit
 
@@ -133,7 +125,7 @@ iOS 10 presenta nuevas formas de conducción engagement para una aplicación, ya
 - CarPlay
 - Asignaciones
 - Interacciones de Siri
-- Sugerencias de QuickType 
+- Sugerencias de QuickType
 
 Una aplicación expone esta funcionalidad al sistema mediante un conjunto de tecnologías como [NSUserActivity](xref:Foundation.NSUserActivity), marcado web, Core Spotlight, MapKit, Media Player y UIKit.
 
@@ -228,7 +220,7 @@ Las API siguientes han quedado obsoletas en iOS 10:
 
 - El `CKDiscoverAllContactsOperation`, `CKDiscoveredUserInfo`, `CKDiscoverUserInfosOperation` y `CKFetchRecordChangesOperation` clases han quedado obsoletas en directo de CloudKit para iOS 10. Use la [CKDiscoverAllUserIdentitiesOperation](xref:CloudKit.CKDiscoverUserIdentitiesOperation), [CKUserIdentity](xref:CloudKit.CKUserIdentity) y [CKFetchRecordZoneChangesOperation](xref:CloudKit.CKFetchRecordZoneChangesOperation) clases (que admiten el uso compartido de registro) en su lugar.
 - Varios [CKSubscription](https://developer.apple.com/reference/cloudkit/cksubscription) API (por ejemplo, suscripciones basadas en la zona y basados en consultas) han quedado en desuso. Use la [CKRecordZoneSubscription](xref:CloudKit.CKRecordZoneSubscription) y [CKQuerySubscription](xref:CloudKit.CKQuerySubscription) API en su lugar.
-- [NSPersistentStoreCoordnator](xref:CoreData.NSPersistentStoreCoordinator) símbolos relacionados con contenido ubicuo han quedado en desuso.
+- [NSPersistentStoreCoordinator](xref:CoreData.NSPersistentStoreCoordinator) símbolos relacionados con contenido ubicuo han quedado en desuso.
 - `ADBannerView`, `ADInterstitialAd` y relacionados con los símbolos en el [UIViewController](xref:UIKit.UIViewController) clase han quedado en desuso.
 - [SKUniform](https://developer.apple.com/reference/spritekit/skuniform) símbolos relacionados con valores de punto flotante han quedado en desuso.
 - El `UILocalNotification`, `UIMutableUserNotificationAction`, `UIMutableUserNotificationCategory`, `UIUserNotificationAction`, `UIUserNotificationCategory` y `UIUserNotificationSettings` han quedado en desuso de las clases de UIKit. Use la [notificaciones de usuario](#user-notifications) framework en su lugar.
@@ -238,9 +230,6 @@ Las API siguientes han quedado obsoletas en iOS 10:
 
 Consulte Apple [iOS 9.3 a las diferencias de API de iOS 10.0](https://developer.apple.com/library/prerelease/content/releasenotes/General/iOS10APIDiffs/index.html) documentación para obtener una lista completa de elementos obsoletos.
 
-
-
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplos de iOS 10](https://developer.xamarin.com/samples/ios/iOS10/)
-- [Novedades de iOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewIniOS/Articles/iOS10.html#//apple_ref/doc/uid/TP40017084-SW1)
