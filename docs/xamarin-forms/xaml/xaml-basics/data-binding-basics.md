@@ -7,12 +7,12 @@ ms.assetid: 342288C3-BB4C-4924-B178-72E112D777BA
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
-ms.openlocfilehash: 4a24c8dbb9ab4e23afa03de4ae2dbc55ddfb5fa4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6d8ed5e2ec4707af2b61e299ee8274402f3a88a4
+ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61171848"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67309520"
 ---
 # <a name="part-4-data-binding-basics"></a>Parte 4. Conceptos básicos del enlace de datos
 
@@ -253,6 +253,9 @@ Para definir una plantilla para los elementos, desea dividir el `ItemTemplate` p
     </ListView.ItemTemplate>
 </ListView>
 ```
+
+> [!NOTE]
+> El origen de enlace de celdas y elementos secundarios de las celdas, es el `ListView.ItemsSource` colección.
 
 El `Label` elemento está establecido en el `View` propiedad de la `ViewCell`. (El `ViewCell.View` etiquetas no son necesarios porque el `View` propiedad es la propiedad content de `ViewCell`.) Este marcado se muestra el `FriendlyName` propiedad de cada uno `NamedColor` objeto:
 

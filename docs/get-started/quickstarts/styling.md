@@ -9,12 +9,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/02/2019
-ms.openlocfilehash: 56f8632c9cc7d170b4c6594fd51e6aa3e92ad02b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 53d2a0aae3398ea31676fbc3dab95d500dfe2104
+ms.sourcegitcommit: e45f0cd6d7d4a77dba5ecaad4d7894025005a2dc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61191249"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67309502"
 ---
 # <a name="style-a-cross-platform-xamarinforms-application"></a>Aplicar estilo a una aplicación de Xamarin.Forms multiplataforma
 
@@ -120,7 +120,7 @@ Debe completar correctamente el [inicio rápido anterior](database.md) antes de 
 
     Guarde los cambios en **NotesPage.xaml** presionando **CTRL+S**y cierre el archivo.
 
-5. En el **panel de solución**, en el **notas** del proyecto, haga doble clic en **NoteEntryPage.xaml** para abrirlo. A continuación, reemplace el código existente por el código siguiente:
+5. En **el Explorador de soluciones**, en el **notas** del proyecto, haga doble clic en **NoteEntryPage.xaml** para abrirlo. A continuación, reemplace el código existente por el código siguiente:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -222,7 +222,7 @@ Debe completar correctamente el [inicio rápido anterior](database.md) antes de 
 
     Guarde los cambios en **App.xaml** eligiendo **archivo > Guardar** (o presionando  **&#8984; + S**) y cierre el archivo.
 
-3. En **el Explorador de soluciones**, en el **notas** del proyecto, haga doble clic en **NotesPage.xaml** para abrirlo. A continuación, reemplace el código existente por el código siguiente:
+3. En el **panel de solución**, en el **notas** del proyecto, haga doble clic en **NotesPage.xaml** para abrirlo. A continuación, reemplace el código existente por el código siguiente:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -261,7 +261,7 @@ Debe completar correctamente el [inicio rápido anterior](database.md) antes de 
 
     Guarde los cambios en **NotesPage.xaml** eligiendo **archivo > Guardar** (o presionando  **&#8984; + S**) y cierre el archivo.
 
-5. En **el Explorador de soluciones**, en el **notas** del proyecto, haga doble clic en **NoteEntryPage.xaml** para abrirlo. A continuación, reemplace el código existente por el código siguiente:
+5. En el **panel de solución**, en el **notas** del proyecto, haga doble clic en **NoteEntryPage.xaml** para abrirlo. A continuación, reemplace el código existente por el código siguiente:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
