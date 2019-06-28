@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/17/2019
-ms.openlocfilehash: db44e09e9caa5c35a5e107cfed80d1d30fd7eb7d
-ms.sourcegitcommit: 864f47c4f79fa588b65ff7f721367311ff2e8f8e
+ms.openlocfilehash: 06f5716c8decb21de39fd46abe734b5fdcd6bd43
+ms.sourcegitcommit: 0f78ec17210b915b43ddab75937de8063e472c70
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64347133"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67417942"
 ---
 # <a name="authenticate-users-with-azure-active-directory-b2c"></a>Autenticar a los usuarios con Azure Active Directory B2C
 
@@ -103,19 +103,26 @@ public static class Constants
 
 ## <a name="use-the-microsoft-authentication-library-msal-for-authentication"></a>Usar la biblioteca de autenticación de Microsoft (MSAL) para la autenticación
 
-El paquete NuGet de biblioteca de autenticación de Microsoft (MSAL) debe agregarse el recurso compartido, un proyecto .NET Standard y los proyectos de plataforma en una solución de Xamarin.Forms. MSAL proporciona un `PublicClientApplication` para simplificar el proceso de autenticación con Azure Active Directory B2C. En el proyecto de ejemplo, el código subyacente para **App.xaml** define las propiedades estáticas para un `AuthenticationClient` y un `UiParent` y crea una instancia de la `AuthenticationClient` en el constructor. El segundo parámetro proporcionado a la `PublicClientApplication` es el valor predeterminado **autoridad**, o la directiva, que se usará para autenticar a los usuarios. En el ejemplo siguiente se muestra cómo crear una instancia de la `PublicClientApplication`:
+El paquete NuGet de biblioteca de autenticación de Microsoft (MSAL) debe agregarse el recurso compartido, un proyecto .NET Standard y los proyectos de plataforma en una solución de Xamarin.Forms. MSAL incluye un `PublicClientApplicationBuilder` clase que crea un objeto que cumple con la `IPublicClientApplication` interfaz. MSAL utiliza `With` cláusulas para proporcionar parámetros adicionales a los métodos de autenticación y el constructor.
+
+En el proyecto de ejemplo, el código subyacente para **App.xaml** define las propiedades estáticas denominadas `AuthenticationClient` y `UIParent`y crea una instancia de la `AuthenticationClient` objeto en el constructor. El `WithIosKeychainSecurityGroup` cláusula proporciona un nombre de grupo de seguridad para las aplicaciones de iOS. El `WithB2CAuthority` cláusula proporciona el valor predeterminado **autoridad**, o la directiva, que se usará para autenticar a los usuarios. En el ejemplo siguiente se muestra cómo crear una instancia de la `PublicClientApplication`:
 
 ```csharp
 public partial class App : Application
 {
-    public static PublicClientApplication AuthenticationClient { get; private set; }
+    public static IPublicClientApplication AuthenticationClient { get; private set; }
 
-    public static UIParent UiParent { get; set; } = null;
+    public static object UIParent { get; set; } = null;
 
     public App()
     {
         InitializeComponent();
-        AuthenticationClient = new PublicClientApplication(Constants.ClientId, Constants.AuthoritySignin);
+
+        AuthenticationClient = PublicClientApplicationBuilder.Create(Constants.ClientId)
+            .WithIosKeychainSecurityGroup(Constants.IosKeychainSecurityGroups)
+            .WithB2CAuthority(Constants.AuthoritySignin)
+            .Build();
+
         MainPage = new NavigationPage(new LoginPage());
     }
 
@@ -133,11 +140,13 @@ public partial class LoginPage : ContentPage
     {
         try
         {
+            // Look for existing account
             IEnumerable<IAccount> accounts = await App.AuthenticationClient.GetAccountsAsync();
 
-            AuthenticationResult result = await App.AuthenticationClient.AcquireTokenSilentAsync(
-                Constants.Scopes,
-                accounts.FirstOrDefault());
+            AuthenticationResult result = await App.AuthenticationClient
+                .AcquireTokenSilent(Constants.Scopes, accounts.FirstOrDefault())
+                .ExecuteAsync();
+
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch
@@ -163,12 +172,12 @@ public partial class LoginPage : ContentPage
         AuthenticationResult result;
         try
         {
-            result = await App.AuthenticationClient.AcquireTokenAsync(
-                Constants.Scopes,
-                string.Empty,
-                UIBehavior.SelectAccount,
-                string.Empty,
-                App.UiParent);
+            result = await App.AuthenticationClient
+                .AcquireTokenInteractive(Constants.Scopes)
+                .WithPrompt(Prompt.SelectAccount)
+                .WithParentActivityOrWindow(App.UIParent)
+                .ExecuteAsync();
+    
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch (MsalException ex)
@@ -199,15 +208,12 @@ public partial class LoginPage : ContentPage
     {
         try
         {
-            return await App.AuthenticationClient.AcquireTokenAsync(
-                Constants.Scopes,
-                string.Empty,
-                UIBehavior.SelectAccount,
-                string.Empty,
-                null,
-                Constants.AuthorityPasswordReset,
-                App.UiParent
-                );
+            return await App.AuthenticationClient
+                .AcquireTokenInteractive(Constants.Scopes)
+                .WithPrompt(Prompt.SelectAccount)
+                .WithParentActivityOrWindow(App.UIParent)
+                .WithB2CAuthority(Constants.AuthorityPasswordReset)
+                .ExecuteAsync();
         }
         catch (MsalException)
         {
@@ -290,7 +296,7 @@ En Android, el esquema de dirección URL personalizado que se registró con Azur
 </manifest>
 ```
 
-El `MainActivity` clase debe modificarse para proporcionar la `UiParent` a la aplicación durante la `OnCreate` llamar. Cuando Azure Active Directory B2C se completa la solicitud de autorización, se redirige a la combinación de dirección URL registrada desde el **AndroidManifest.xml**. Da como resultado el esquema URI registrado que realiza la llamada Android `OnActivityResult` con la dirección URL como un parámetro de inicio, donde se procesó la `SetAuthenticationContinuationEventArgs`.
+El `MainActivity` clase debe modificarse para proporcionar la `UIParent` objeto a la aplicación durante la `OnCreate` llamar. Cuando Azure Active Directory B2C se completa la solicitud de autorización, se redirige a la combinación de dirección URL registrada desde el **AndroidManifest.xml**. Da como resultado el esquema URI registrado en Android que llama a la `OnActivityResult` método con la dirección URL como un parámetro de inicio, donde se procesó la `SetAuthenticationContinuationEventArgs` método.
 
 ```csharp
 public class MainActivity : FormsAppCompatActivity
@@ -304,7 +310,7 @@ public class MainActivity : FormsAppCompatActivity
 
         Forms.Init(this, bundle);
         LoadApplication(new App());
-        App.UiParent = new UIParent(this);
+        App.UIParent = this;
     }
 
     protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
