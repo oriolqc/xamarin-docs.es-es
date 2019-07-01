@@ -66,4 +66,4 @@ Para deshabilitar el simulador remoto de iOS para Windows, vaya a **Herramientas
 
 [![Casilla de verificación para usar el simulador](images/options-sml.png "Casilla de verificación para usar el simulador")](images/options.png#lightbox)
 
-Con esta opción deshabilitada el simulador remoto y la depuración se abre el simulador iOS en el equipo de compilación Mac.
+Con esta opción deshabilitada el simulador remoto y la depuración se abre en el simulador iOS en el equipo de compilación Mac.
