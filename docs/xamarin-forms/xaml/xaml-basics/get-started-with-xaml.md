@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2018
-ms.openlocfilehash: 086ed765781d9297f07574519d2cbc9cf93ac4dd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 855bbc61fb5e4e653dbd39ddf05fac3e2fb42d8c
+ms.sourcegitcommit: 00deecefc17a98210bed12b4ef99ecca710275f1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61344868"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67493357"
 ---
 # <a name="part-1-getting-started-with-xaml"></a>Parte 1. Introducción a XAML
 
@@ -102,7 +102,7 @@ El **MainPage.xaml** archivo tiene este aspecto (aunque el formato puede ser un 
 </ContentPage>
 ```
 
-El espacio de nombres XML dos ( `xmlns`) declaraciones hagan referencia a los URI, la primera aparentemente en el sitio web de Xamarin y la segunda en Microsoft. No se moleste en comprobar qué esos URI que quiera. No hay nada. Son simplemente los URI que pertenecen a Xamarin y Microsoft, y básicamente funcionan como identificadores de versión.
+El espacio de nombres XML dos (`xmlns`) declaraciones hagan referencia a los URI, la primera aparentemente en el sitio web de Xamarin y la segunda en Microsoft. No se moleste en comprobar qué esos URI que quiera. No hay nada. Son simplemente los URI que pertenecen a Xamarin y Microsoft, y básicamente funcionan como identificadores de versión.
 
 La primera declaración de espacio de nombres XML significa que las etiquetas definidas en el archivo XAML con ningún prefijo hacen referencia a las clases de Xamarin.Forms, por ejemplo `ContentPage`. La segunda declaración de espacio de nombres define un prefijo de `x`. Esto sirve para varios elementos y atributos que son intrínsecos de XAML propio y que son compatibles con otras implementaciones de XAML. Sin embargo, estos elementos y atributos son ligeramente diferentes según el año incrustado en el URI. Xamarin.Forms es compatible con la especificación de XAML 2009, pero no todos del mismo.
 
@@ -149,7 +149,7 @@ Para los objetos visuales más interesantes, todo lo que necesita es más intere
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Para agregar otros basada en XAML `ContentPage` clases al proyecto, seleccione el **XamlSamples** biblioteca estándar de .NET del proyecto e invocar el **proyecto > Agregar nuevo elemento** elemento de menú. En la izquierda de la **Agregar nuevo elemento** cuadro de diálogo, seleccione **Visual C#**  y **Xamarin.Forms**. En la lista seleccione **página de contenido** (no **página de contenido (C#)**, que crea una página de sólo código, o **vista contenido**, que no es una página). Asigne un nombre, por ejemplo, de la página **HelloXamlPage.xaml**:
+Para agregar otros basada en XAML `ContentPage` clases al proyecto, seleccione el **XamlSamples** biblioteca estándar de .NET del proyecto e invocar el **proyecto > Agregar nuevo elemento** elemento de menú. En la izquierda de la **Agregar nuevo elemento** cuadro de diálogo, seleccione **Visual C#**  y **Xamarin.Forms**. En la lista seleccione **página de contenido** (no **página de contenido (C#)** , que crea una página de sólo código, o **vista contenido**, que no es una página). Asigne un nombre, por ejemplo, de la página **HelloXamlPage.xaml**:
 
 ![](get-started-with-xaml-images/win/addnewitemdialog.w157.png "Agregar nuevo elemento de cuadro de diálogo")
 
