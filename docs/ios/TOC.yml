@@ -1,0 +1,1009 @@
+- name: Xamarin.iOS
+  href: index.yml
+  expanded: true
+  items:
+    - name: Introducción
+      items:
+        - name: Introducción a Xamarin.iOS
+          href: get-started/index.md
+        - name: Configuración e instalación
+          items:
+            - name: Instalación de Xamarin.iOS
+              href: get-started/installation/index.md
+            - name: Mac
+              href: get-started/installation/mac.md
+            - name: Windows
+              items:
+                - name: Instalación de Xamarin.iOS en Windows
+                  href: get-started/installation/windows/index.md
+                - name: Emparejar con Mac
+                  items:
+                    - name: Emparejar con Mac para el desarrollo de Xamarin.iOS
+                      href: get-started/installation/windows/connecting-to-mac/index.md
+                    - name: Solución de problemas de conexión
+                      href: get-started/installation/windows/connecting-to-mac/troubleshooting.md
+                - name: Introducción a Xamarin.iOS para Visual Studio
+                  href: get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md
+                - name: Configuración de Visual Studio
+                  href: get-started/installation/windows/config-options.md
+            - name: Configurar el dispositivo para el desarrollo
+              items:
+                - name: Aprovisionamiento de dispositivos para Xamarin.iOS
+                  href: get-started/installation/device-provisioning/index.md
+                - name: Aprovisionamiento automático
+                  href: get-started/installation/device-provisioning/automatic-provisioning.md
+                - name: Aprovisionamiento manual
+                  href: get-started/installation/device-provisioning/manual-provisioning.md
+                - name: Aprovisionamiento gratuito
+                  href: get-started/installation/device-provisioning/free-provisioning.md
+        - name: Compilación de la primera aplicación
+          items:
+            - name: 'Hello, iOS'
+              href: get-started/hello-ios/index.md
+            - name: 'Parte 1: Inicio rápido'
+              href: get-started/hello-ios/hello-ios-quickstart.md
+            - name: 'Parte 2: Análisis detallado'
+              href: get-started/hello-ios/hello-ios-deepdive.md
+        - name: Ampliación de la primera aplicación
+          items:
+            - name: 'Hello, iOS Multiscreen'
+              href: get-started/hello-ios-multiscreen/index.md
+            - name: 'Parte 1: Inicio rápido'
+              href: get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md
+            - name: 'Parte 2: Análisis detallado'
+              href: get-started/hello-ios-multiscreen/hello-ios-multiscreen-deepdive.md
+        - name: Desarrolladores de Objective-C
+          items:
+            - name: Xamarin para desarrolladores de Objective-C
+              href: get-started/objective-c-developers/index.md
+            - name: 'Manual de C# para desarrolladores de Objective-C'
+              href: get-started/objective-c-developers/primer.md
+    - name: Aspectos básicos de la aplicación
+      items:
+        - name: Información general
+          href: app-fundamentals/index.md
+        - name: Accesibilidad
+          href: app-fundamentals/accessibility.md
+        - name: Seguridad de transporte de aplicación
+          href: app-fundamentals/ats.md
+        - name: Procesamiento en segundo plano
+          href: app-fundamentals/backgrounding/index.md
+          items:
+            - name: Introducción al procesamiento en segundo plano en iOS
+              href: app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md
+            - name: Demostración del ciclo de vida de la aplicación
+              href: app-fundamentals/backgrounding/application-lifecycle-demo.md
+            - name: Técnicas de procesamiento en segundo plano de iOS
+              href: app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md
+              items:
+                - name: Procesamiento en segundo plano de iOS con tareas
+                  href: app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md
+                - name: Registro de aplicaciones se ejecuten en segundo plano
+                  href: app-fundamentals/backgrounding/ios-backgrounding-techniques/registering-applications-to-run-in-background.md
+                - name: Actualización de una aplicación en segundo plano
+                  href: app-fundamentals/backgrounding/ios-backgrounding-techniques/updating-an-application-in-the-background.md
+            - name: 'Tutoriales: Procesamiento en segundo plano en iOS'
+              href: app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md
+              items:
+                - name: 'Tutorial: Ubicación en segundo plano'
+                  href: app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md
+                - name: 'Tutorial: Transferencia en segundo plano y NSURLSession'
+                  href: app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md
+            - name: Guía del procesamiento en segundo plano de iOS
+              href: app-fundamentals/backgrounding/ios-backgrounding-guidance.md
+        - name: Creación de una interfaz de usuario de iOS en código
+          href: app-fundamentals/ios-code-only.md
+        - name: Serialización de excepciones
+          href: platform/exception-marshaling.md
+        - name: 'Eventos, protocolos y delegados'
+          href: app-fundamentals/delegates-protocols-and-events.md
+        - name: Sistema de archivos
+          href: app-fundamentals/file-system.md
+        - name: Imágenes e iconos
+          href: app-fundamentals/images-icons/index.md
+          items:
+            - name: Visualización de una imagen
+              href: app-fundamentals/images-icons/displaying-an-image.md
+            - name: Iconos de aplicación
+              href: app-fundamentals/images-icons/app-icons.md
+            - name: Icono de App Store
+              href: app-fundamentals/images-icons/app-store-icon.md
+            - name: Iconos de aplicación alternativos
+              href: app-fundamentals/images-icons/alternate-app-icons.md
+            - name: Pantallas de inicio
+              href: app-fundamentals/images-icons/launch-screens.md
+            - name: Tipos de documentos personalizados
+              href: app-fundamentals/images-icons/custom-document-types.md
+        - name: Localización
+          href: app-fundamentals/localization/index.md
+          items:
+            - name: Codificaciones de internacionalización
+              href: app-fundamentals/localization/encodings.md
+        - name: Listas de propiedades
+          href: app-fundamentals/property-lists.md
+        - name: Características de seguridad y privacidad
+          href: app-fundamentals/security-privacy.md
+        - name: Subprocesos
+          href: app-fundamentals/threading.md
+        - name: Entrada táctil
+          href: app-fundamentals/touch/index.md
+          items:
+            - name: Entrada táctil en iOS
+              href: app-fundamentals/touch/touch-in-ios.md
+            - name: 'Tutorial: Uso de la entrada táctil en iOS'
+              href: app-fundamentals/touch/ios-touch-walkthrough.md
+            - name: Seguimiento multitáctil
+              href: app-fundamentals/touch/touch-tracking.md
+        - name: Valores predeterminados de usuario
+          href: app-fundamentals/user-defaults.md
+    - name: Interfaz de usuario
+      items:
+        - name: Información general
+          href: user-interface/index.md
+        - name: Diseñador de iOS
+          href: user-interface/designer/index.md
+          items:
+            - name: Conceptos básicos de iOS Designer
+              href: user-interface/designer/introduction.md
+            - name: Controles personalizados en iOS Designer
+              href: user-interface/designer/ios-designable-controls-overview.md
+            - name: 'Tutorial: Uso de los controles personalizados con iOS Designer'
+              href: user-interface/designer/ios-designable-controls-walkthrough.md
+            - name: Diseño automático con iOS Designer
+              href: user-interface/designer/designer-auto-layout.md
+        - name: Guiones gráficos
+          href: user-interface/storyboards/index.md
+          items:
+            - name: Guiones gráficos unificados
+              href: user-interface/storyboards/unified-storyboards.md
+        - name: Interfaces de usuario en iOS
+          href: user-interface/ios-ui/index.md
+          items:
+            - name: Appearance API
+              href: user-interface/ios-ui/introduction-to-the-appearance-api.md
+            - name: Creación de objetos de la interfaz de usuario
+              href: user-interface/ios-ui/creating-ui-objects.md
+            - name: Opciones de diseño
+              href: user-interface/ios-ui/layout-options.md
+            - name: Provisión de comentarios hápticos
+              href: user-interface/ios-ui/haptic-feedback.md
+            - name: Trabajo con el subproceso de la interfaz de usuario
+              href: user-interface/ios-ui/ui-thread.md
+            - name: Introducción a los controladores de vistas
+              href: user-interface/ios-ui/view-controllers/index.md
+              items:
+                - name: Transiciones de controladores de vistas
+                  href: user-interface/ios-ui/view-controllers/transitions.md
+        - name: Controles
+          href: user-interface/controls/index.md
+          items:
+            - name: Alertas
+              href: user-interface/controls/alerts.md
+            - name: Botones
+              href: user-interface/controls/buttons.md
+            - name: Vista de colección
+              href: user-interface/controls/uicollectionview.md
+            - name: Imágenes
+              href: user-interface/controls/image.md
+            - name: Controles manuales de la cámara
+              href: user-interface/controls/intro-to-manual-camera-controls.md
+            - name: Mapas
+              href: user-interface/controls/ios-maps/index.md
+              items:
+                - name: Anotaciones y superposiciones
+                  href: user-interface/controls/ios-maps/ios-maps-walkthrough.md
+            - name: Etiquetas
+              href: user-interface/controls/labels.md
+            - name: Selector
+              href: user-interface/controls/picker.md
+            - name: Indicadores de progreso y actividad
+              href: user-interface/controls/progress-activity-indicator.md
+            - name: Barra de búsqueda
+              href: user-interface/controls/searchbar.md
+            - name: 'Controles deslizantes, conmutadores y controles segmentados'
+              href: user-interface/controls/slider-switch-segmented-controls.md
+            - name: Vista de pila
+              href: user-interface/controls/uistackview.md
+            - name: Tablas y vistas
+              href: user-interface/controls/tables/index.md
+              items:
+                - name: Funcionalidad y elementos de la tabla
+                  href: user-interface/controls/tables/table-parts-and-functionality.md
+                - name: Relleno de una tabla con datos
+                  href: user-interface/controls/tables/populating-a-table-with-data.md
+                - name: Personalización de la apariencia de una tabla
+                  href: user-interface/controls/tables/customizing-table-appearance.md
+                - name: Editar
+                  href: user-interface/controls/tables/editing.md
+                - name: Trabajo con acciones de fila
+                  href: user-interface/controls/tables/row-action.md
+                - name: Trabajo con tablas en iOS Designer
+                  href: user-interface/controls/tables/creating-tables-in-a-storyboard.md
+                - name: Ajuste del tamaño automático de la altura de la fila
+                  href: user-interface/controls/tables/autosizing-row-height.md
+            - name: Barras de pestañas y controladores de la barra de pestañas
+              href: user-interface/controls/creating-tabbed-applications.md
+            - name: Entrada de texto
+              href: user-interface/controls/text-input.md
+            - name: Vistas web
+              href: user-interface/controls/uiwebview.md
+        - name: Restricciones de diseño mediante programación
+          href: user-interface/programmatic-layout-constraints.md
+        - name: MonoTouch.Dialog
+          href: user-interface/monotouch.dialog/index.md
+          items:
+            - name: 'Tutorial: Creación de una aplicación con Elements API'
+              href: user-interface/monotouch.dialog/elements-api-walkthrough.md
+            - name: 'Tutorial: Uso de JSON para crear una interfaz de usuario'
+              href: user-interface/monotouch.dialog/json-element-walkthrough.md
+            - name: Marcado JSON de MonoTouch.Dialog
+              href: user-interface/monotouch.dialog/monotouch.dialog-json-markup.md
+            - name: 'Tutorial: Creación de una aplicación con Reflection API'
+              href: user-interface/monotouch.dialog/reflection-api-walkthrough.md
+    - name: Características de la plataforma
+      items:
+        - name: Información general
+          href: platform/index.md
+        - name: iOS 12
+          items:
+            - name: Introducción a iOS 12
+              href: platform/introduction-to-ios12/index.md
+            - name: Introducción
+              href: platform/introduction-to-ios12/get-started.md
+            - name: solución de problemas
+              href: platform/introduction-to-ios12/troubleshooting.md
+        - name: iOS 11
+          items:
+            - name: Introducción a iOS 11
+              href: platform/introduction-to-ios11/index.md
+            - name: Actualización de la aplicación a iOS 11
+              href: platform/introduction-to-ios11/updating-your-app/index.md
+              items:
+                - name: Cambios de arquitectura
+                  href: platform/introduction-to-ios11/updating-your-app/architecture-changes.md
+                - name: Actualizaciones de diseño Visual
+                  href: platform/introduction-to-ios11/updating-your-app/visual-design.md
+                - name: Cambios en App Store
+                  href: platform/introduction-to-ios11/updating-your-app/app-store-changes.md
+            - name: solución de problemas
+              href: platform/introduction-to-ios11/troubleshooting.md
+        - name: iOS 10
+          items:
+            - name: Introducción a iOS 10
+              href: platform/introduction-to-ios10/index.md
+            - name: Cambios adicionales en la plataforma iOS 10
+              href: platform/introduction-to-ios10/additional-framework-changes.md
+        - name: iOS 9
+          items:
+            - name: Introducción a iOS 9
+              href: platform/introduction-to-ios9/index.md
+            - name: Compatibilidad con iOS 9
+              href: platform/introduction-to-ios9/ios9.md
+            - name: Cambios adicionales en la plataforma iOS 9
+              href: platform/introduction-to-ios9/additional-framework-changes.md
+            - name: solución de problemas
+              href: platform/introduction-to-ios9/troubleshooting.md
+        - name: iOS 8
+          href: platform/introduction-to-ios8.md
+        - name: iOS 7
+          items:
+            - name: Introducción a iOS 7
+              href: platform/introduction-to-ios7/index.md
+            - name: Introducción a la interfaz de usuario de iOS 7
+              href: platform/introduction-to-ios7/ios7-ui.md
+        - name: iOS 6
+          href: platform/introduction-to-ios6/index.md
+        - name: Apple Pay
+          href: platform/apple-pay.md
+        - name: ARKit
+          items:
+            - name: ARKit en iOS 11
+              href: platform/introduction-to-ios11/arkit/index.md
+            - name: ARKit 2
+              href: platform/introduction-to-ios12/arkit2.md
+            - name: ARKit y UrhoSharp
+              href: platform/introduction-to-ios11/arkit/urhosharp.md
+        - name: Enlace de Objective-C
+          href: platform/binding-objective-c/index.md
+          items:
+            - name: 'Tutorial: Enlace de una biblioteca de Objective-C a iOS'
+              href: platform/binding-objective-c/walkthrough.md
+        - name: CallKit
+          href: platform/callkit.md
+        - name: Contacts y ContactsUI
+          href: platform/contacts.md
+        - name: CoreML
+          items:
+            - name: CoreML en iOS 11
+              href: platform/introduction-to-ios11/coreml.md
+            - name: Core ML 2
+              href: platform/introduction-to-ios12/coreml.md
+        - name: CoreNFC
+          href: platform/introduction-to-ios11/corenfc.md
+        - name: Selector de documentos
+          href: platform/document-picker.md
+        - name: Arrastrar y colocar
+          href: platform/introduction-to-ios11/drag-and-drop.md
+        - name: EventKit
+          href: platform/eventkit.md
+        - name: Extensiones de iOS
+          href: platform/extensions.md
+        - name: Plataformas admitidas
+          href: platform/embedded-frameworks.md
+        - name: Compresión de archivos
+          href: platform/file-compression.md
+        - name: Gráficos y animación en iOS
+          items:
+            - name: Información general
+              displayName: Graphics and animation in iOS overview
+              href: platform/graphics-animation-ios/index.md
+            - name: CoreImage
+              href: platform/graphics-animation-ios/introduction-to-coreimage.md
+            - name: Gráficos básicos
+              href: platform/graphics-animation-ios/core-graphics.md
+            - name: Animación básica
+              href: platform/graphics-animation-ios/core-animation.md
+            - name: Visión
+              href: platform/introduction-to-ios11/vision.md
+            - name: 'Tutorial: Gráficos y animación'
+              href: platform/graphics-animation-ios/graphics-animation-walkthrough.md
+        - name: Handoff
+          href: platform/handoff.md
+        - name: HealthKit
+          href: platform/healthkit.md
+        - name: HomeKit
+          href: platform/homekit.md
+        - name: API de juego de iOS
+          items:
+            - name: Información general
+              displayName: iOS Gaming API overview
+              href: platform/gaming/index.md
+            - name: SceneKit
+              href: platform/gaming/scenekit.md
+            - name: SpriteKit
+              href: platform/gaming/spritekit.md
+        - name: MapKit
+          href: platform/introduction-to-ios11/mapkit.md
+        - name: Integración de aplicaciones de mensajes
+          items:
+            - name: Información general
+              href: platform/message-app-integration/index.md
+            - name: Conceptos básicos de la extensión de aplicaciones de mensajes
+              href: platform/message-app-integration/intro-to-message-app-extensions.md
+            - name: Extensiones avanzadas de aplicaciones de mensajes
+              href: platform/message-app-integration/advanced-message-app-extensions.md
+        - name: Multitarea para iPad
+          href: platform/multitasking.md
+        - name: Lenguaje natural
+          href: platform/introduction-to-ios12/natural-language.md
+        - name: PassKit
+          href: platform/passkit.md
+        - name: PhotoKit
+          href: platform/photokit.md
+        - name: Bibliotecas nativas de referencia
+          href: platform/native-interop.md
+        - name: API de búsqueda
+          items:
+            - name: Información general
+              href: platform/search/index.md
+            - name: NSUserActivity
+              href: platform/search/nsuseractivity.md
+            - name: Core Spotlight
+              href: platform/search/corespotlight.md
+            - name: Marcado web
+              href: platform/search/web-markup.md
+            - name: Mejoras en las búsquedas de aplicaciones
+              href: platform/search/app-search-enhancements.md
+            - name: Sugerencias proactivas
+              href: platform/search/proactive-suggestions.md
+            - name: Búsqueda y mejoras el widget de pantalla principal
+              href: platform/search/widgets.md
+        - name: SiriKit
+          items:
+            - name: Información general
+              href: platform/sirikit/index.md
+            - name: Descripción de los conceptos de SiriKit
+              href: platform/sirikit/understanding-sirikit.md
+            - name: Implementación de SiriKit
+              href: platform/sirikit/implementing-sirikit.md
+            - name: Actualizaciones de SiriKit en iOS 11
+              href: platform/introduction-to-ios11/sirikit.md
+            - name: Accesos directos de Siri en iOS 12
+              href: platform/introduction-to-ios12/siri-shortcuts.md
+        - name: Plataformas de redes sociales
+          href: platform/social-framework.md
+        - name: Reconocimiento de voz
+          href: platform/speech.md
+        - name: StoreKit y compras desde la aplicación
+          items:
+            - name: Información general
+              displayName: In-App Purchasing overview
+              href: platform/in-app-purchasing/index.md
+            - name: Configuración y conceptos básicos de las compras desde la aplicación
+              href: platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md
+            - name: Introducción a Store Kit y recuperación de la información del producto
+              href: platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md
+            - name: Compra de productos consumibles
+              href: platform/in-app-purchasing/purchasing-consumable-products.md
+            - name: Compra de productos no consumibles
+              href: platform/in-app-purchasing/purchasing-non-consumable-products.md
+            - name: Transacciones y comprobación
+              href: platform/in-app-purchasing/transactions-and-verification.md
+            - name: Solicitud de revisión de aplicaciones
+              href: platform/request-app-review.md
+            - name: Suscripciones e informes
+              href: platform/in-app-purchasing/subscriptions-and-reporting.md
+            - name: "Cambios en StoreKit en iOS\_6"
+              href: platform/introduction-to-ios6/changes-to-storekit.md
+        - name: TextKit
+          href: platform/textkit.md
+        - name: Entrada táctil 3D
+          href: platform/3d-touch.md
+        - name: Touch ID
+          href: platform/touchid.md
+        - name: Plataforma de notificaciones de usuario
+          items:
+            - name: Información general
+              href: platform/user-notifications/index.md
+            - name: Notificaciones de usuario mejoradas
+              href: platform/user-notifications/enhanced-user-notifications.md
+            - name: Notificaciones de usuario avanzadas
+              href: platform/user-notifications/advanced-user-notifications.md
+            - name: Actualizaciones de las notificaciones en iOS 12
+              href: platform/introduction-to-ios12/notifications/index.md
+              items:
+                - name: Alertas críticas
+                  href: platform/introduction-to-ios12/notifications/critical-alerts.md
+                - name: Botones de acción de notificaciones dinámicas
+                  href: platform/introduction-to-ios12/notifications/dynamic-actions.md
+                - name: Notificaciones agrupadas
+                  href: platform/introduction-to-ios12/notifications/grouped.md
+                - name: Notificaciones interactivas
+                  href: platform/introduction-to-ios12/notifications/interactive.md
+                - name: Administración de notificaciones
+                  href: platform/introduction-to-ios12/notifications/management.md
+                - name: Notificaciones provisionales
+                  href: platform/introduction-to-ios12/notifications/provisional.md
+            - name: Tecnologías de notificación en desuso
+              href: platform/user-notifications/deprecated/index.md
+              items:
+                - name: Notificaciones locales
+                  href: platform/user-notifications/deprecated/local-notifications-in-ios.md
+                - name: 'Tutorial: Uso de notificaciones locales en Xamarin.iOS'
+                  href: platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md
+                - name: Notificaciones remotas
+                  href: platform/user-notifications/deprecated/remote-notifications-in-ios.md
+        - name: WebKit y Safari
+          href: platform/introduction-to-ios11/web.md
+        - name: Color amplio
+          href: platform/wide-color.md
+    - name: Xamarin.Essentials
+      items:
+        - name: Acerca de Xamarin.Essentials
+          href: ~/essentials/index.md?context=xamarin/ios
+        - name: Introducción
+          href: ~/essentials/get-started.md?context=xamarin/ios
+        - name: Acelerómetro
+          href: ~/essentials/accelerometer.md?context=xamarin/ios
+        - name: 'Información de la aplicación:'
+          href: ~/essentials/app-information.md?context=xamarin/ios
+        - name: Barómetro
+          href: ~/essentials/barometer.md?context=xamarin/ios
+        - name: Batería
+          href: ~/essentials/battery.md?context=xamarin/ios
+        - name: Portapapeles
+          href: ~/essentials/clipboard.md?context=xamarin/ios
+        - name: Convertidores de colores
+          href: ~/essentials/color-converters.md?context=xamarin/ios
+        - name: Brújula
+          href: ~/essentials/compass.md?context=xamarin/ios
+        - name: Conectividad
+          href: ~/essentials/connectivity.md?context=xamarin/ios
+        - name: Detección de vibraciones
+          href: ~/essentials/detect-shake.md?context=xamarin/ios
+        - name: Información de pantalla del dispositivo
+          href: ~/essentials/device-display.md?context=xamarin/ios
+        - name: Información del dispositivo
+          href: ~/essentials/device-information.md?context=xamarin/ios
+        - name: Email
+          href: ~/essentials/email.md?context=xamarin/ios
+        - name: Asistentes del sistema de archivos
+          href: ~/essentials/file-system-helpers.md?context=xamarin/ios
+        - name: Linterna
+          href: ~/essentials/flashlight.md?context=xamarin/ios
+        - name: Codificación geográfica
+          href: ~/essentials/geocoding.md?context=xamarin/ios
+        - name: Geolocalización
+          href: ~/essentials/geolocation.md?context=xamarin/ios
+        - name: Giroscopio
+          href: ~/essentials/gyroscope.md?context=xamarin/ios
+        - name: Selector
+          href: ~/essentials/launcher.md?context=xamarin/ios
+        - name: Magnetómetro
+          href: ~/essentials/magnetometer.md?context=xamarin/ios
+        - name: Subproceso principal
+          href: ~/essentials/main-thread.md?context=xamarin/ios
+        - name: Mapas
+          href: ~/essentials/maps.md?context=xamarin/ios
+        - name: Apertura del explorador
+          href: ~/essentials/open-browser.md?context=xamarin/ios
+        - name: Sensor de orientación
+          href: ~/essentials/orientation-sensor.md?context=xamarin/ios
+        - name: Marcador telefónico
+          href: ~/essentials/phone-dialer.md?context=xamarin/ios
+        - name: 'Extensiones de plataforma (Size, Rect, Point)'
+          href: ~/essentials/platform-extensions.md?context=xamarin/ios
+        - name: Preferencias
+          href: ~/essentials/preferences.md?context=xamarin/ios
+        - name: Almacenamiento seguro
+          href: ~/essentials/secure-storage.md?context=xamarin/ios
+        - name: Compartir
+          href: ~/essentials/share.md?context=xamarin/ios
+        - name: sms
+          href: ~/essentials/sms.md?context=xamarin/ios
+        - name: Text-to-Speech
+          href: ~/essentials/text-to-speech.md?context=xamarin/ios
+        - name: Convertidores de unidades
+          href: ~/essentials/unit-converters.md?context=xamarin/ios
+        - name: Seguimiento de versiones
+          href: ~/essentials/version-tracking.md?context=xamarin/ios
+        - name: Vibración
+          href: ~/essentials/vibrate.md?context=xamarin/ios
+        - name: solución de problemas
+          href: ~/essentials/troubleshooting.md?context=xamarin/ios
+    - name: Datos y servicios en la nube
+      items:
+        - name: Información general
+          href: data-cloud/index.md
+        - name: Azure Active Directory
+          href: ~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/ios
+          items:
+            - name: Introducción
+              href: ~/cross-platform/data-cloud/active-directory/get-started/index.md?context=xamarin/ios
+              items:
+                - name: Paso 1. Register
+                  href: ~/cross-platform/data-cloud/active-directory/get-started/register.md?context=xamarin/ios
+                - name: "Paso\_2. Configuración"
+                  href: ~/cross-platform/data-cloud/active-directory/get-started/configure.md?context=xamarin/ios
+            - name: Acceso a Graph API
+              href: ~/cross-platform/data-cloud/active-directory/graph.md?context=xamarin/ios
+        - name: Azure Mobile Apps
+          href: ~/cross-platform/data-cloud/mobile-apps.md
+        - name: Acceso a datos en ASP.NET (Visual Studio)
+          href: data-cloud/data/index.md
+          items:
+            - name: Introducción
+              href: data-cloud/data/introduction.md
+            - name: Configuración
+              href: data-cloud/data/configuration.md
+            - name: Uso de SQLite.NET ORM
+              href: data-cloud/data/using-sqlite-orm.md
+            - name: Uso de ADO.NET
+              href: data-cloud/data/using-adonet.md
+            - name: Uso de datos en una aplicación
+              href: data-cloud/data/using-data-in-an-app.md
+        - name: System.Data
+          href: data-cloud/system.data.md
+        - name: iCloud
+          href: data-cloud/introduction-to-icloud.md
+        - name: CloudKit
+          href: data-cloud/intro-to-cloudkit.md
+        - name: Introducción a los servicios web
+          href: ~/cross-platform/data-cloud/web-services/index.md?context=xamarin/ios
+    - name: Implementación y prueba
+      items:
+        - name: Información general
+          href: deploy-test/index.md
+        - name: App Distribution (Distribución de aplicaciones)
+          href: deploy-test/app-distribution/index.md
+          items:
+            - name: Distribución a través del App Store
+              href: deploy-test/app-distribution/app-store-distribution/index.md
+              items:
+                - name: Configurar la aplicación en iTunes Connect
+                  href: deploy-test/app-distribution/app-store-distribution/itunesconnect.md
+                - name: Publicación en el App Store
+                  href: deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md
+            - name: Distribución interna (Enterprise)
+              href: deploy-test/app-distribution/in-house-distribution.md
+            - name: Distribución ad hoc
+              href: deploy-test/app-distribution/ad-hoc-distribution.md
+            - name: Archivo iTunesMetadata.plist
+              href: deploy-test/app-distribution/itunesmetadata.md
+            - name: Compatibilidad con IPA
+              href: deploy-test/app-distribution/ipa-support.md
+        - name: Aprovisionamiento y firma de código
+          href: deploy-test/provisioning/index.md
+          items:
+            - name: Trabajar con capacidades
+              href: deploy-test/provisioning/capabilities/index.md
+              items:
+                - name: Capacidades de Wallet
+                  href: deploy-test/provisioning/capabilities/wallet-capabilities.md
+                - name: Capacidades de iCloud
+                  href: deploy-test/provisioning/capabilities/icloud-capabilities.md
+                - name: Capacidades de Apple Pay
+                  href: deploy-test/provisioning/capabilities/apple-pay-capabilities.md
+                - name: Capacidades de los grupos de aplicaciones
+                  href: deploy-test/provisioning/capabilities/app-groups-capabilities.md
+            - name: Trabajar con derechos
+              href: deploy-test/provisioning/entitlements.md
+            - name: Referencia de clave/valor de Info.plist
+              href: deploy-test/provisioning/infoplist-reference.md
+            - name: Fastlane
+              href: deploy-test/provisioning/fastlane/index.md
+              items:
+                - name: Cert
+                  href: deploy-test/provisioning/fastlane/cert.md
+                - name: Sigh
+                  href: deploy-test/provisioning/fastlane/sigh.md
+                - name: Match
+                  href: deploy-test/provisioning/fastlane/match.md
+        - name: Compilación en varios dispositivos
+          href: deploy-test/compiling-for-different-devices.md
+        - name: Entorno
+          href: deploy-test/environment.md
+        - name: Mecanismos de compilación de iOS
+          href: deploy-test/ios-build-mechanics.md
+        - name: mtouch
+          href: deploy-test/mtouch.md
+        - name: Enlazador
+          href: deploy-test/linker.md
+        - name: Implementación inalámbrica
+          href: deploy-test/wireless-deployment.md
+        - name: TestFlight
+          href: deploy-test/testflight.md
+        - name: Depuración
+          href: deploy-test/debugging-in-xamarin-ios.md
+        - name: Pruebas unitarias
+          href: deploy-test/touch.unit.md
+        - name: Generar perfiles de aplicaciones de Xamarin.iOS con Instruments
+          href: deploy-test/using-instruments-to-detect-native-leaks-using-markheap.md
+        - name: 'Tutorial: Uso de la herramienta Instruments de Apple'
+          href: deploy-test/walkthrough-apples-instrument.md
+        - name: Rendimiento
+          href: deploy-test/performance.md
+        - name: solución de problemas
+          href: deploy-test/troubleshooting.md
+    - name: Plataforma de Apple
+      items:
+        - name: Introducción a iOS y macOS
+          href: ~/cross-platform/macios/index.md?context=xamarin/ios
+        - name: Administración de cuentas Apple
+          href: ~/cross-platform/macios/apple-account-management.md?context=xamarin/ios
+        - name: Unified API
+          href: ~/cross-platform/macios/unified/index.md?context=xamarin/ios
+          items:
+            - name: Información general
+              href: ~/cross-platform/macios/unified/overview.md?context=xamarin/ios
+            - name: Actualización de aplicaciones existentes
+              href: ~/cross-platform/macios/unified/updating-apps.md?context=xamarin/ios
+            - name: Actualización de aplicaciones iOS existentes
+              href: ~/cross-platform/macios/unified/updating-ios-apps.md?context=xamarin/ios
+            - name: Actualización de aplicaciones Mac existentes
+              href: ~/cross-platform/macios/unified/updating-mac-apps.md?context=xamarin/ios
+            - name: Actualización de aplicaciones Xamarin.Forms existentes
+              href: ~/cross-platform/macios/unified/updating-xamarin-forms-apps.md?context=xamarin/ios
+            - name: Migración de un enlace a Unified API
+              href: ~/cross-platform/macios/unified/update-binding.md?context=xamarin/ios
+            - name: Sugerencias para actualizar el código a Unified API
+              href: ~/cross-platform/macios/unified/updating-tips.md?context=xamarin/ios
+        - name: Enlace de Objective-C
+          href: ~/cross-platform/macios/binding/index.md?context=xamarin/ios
+          items:
+            - name: Información general
+              href: ~/cross-platform/macios/binding/overview.md?context=xamarin/ios
+            - name: Enlace de bibliotecas de Objective-C
+              href: ~/cross-platform/macios/binding/objective-c-libraries.md?context=xamarin/ios
+            - name: Referencia de tipos de enlace
+              href: ~/cross-platform/macios/binding/binding-types-reference.md?context=xamarin/ios
+            - name: Objective Sharpie
+              href: ~/cross-platform/macios/binding/objective-sharpie/index.md?context=xamarin/ios
+              items:
+                - name: Introducción
+                  href: ~/cross-platform/macios/binding/objective-sharpie/get-started.md?context=xamarin/ios
+                - name: Herramientas y comandos
+                  href: ~/cross-platform/macios/binding/objective-sharpie/tools.md?context=xamarin/ios
+                - name: Características
+                  href: ~/cross-platform/macios/binding/objective-sharpie/platform/index.md?context=xamarin/ios
+                  items:
+                    - name: ApiDefinitions y StructsAndEnums
+                      href: ~/cross-platform/macios/binding/objective-sharpie/platform/apidefinitions-structsandenums.md?context=xamarin/ios
+                    - name: Enlace de plataformas nativas
+                      href: ~/cross-platform/macios/binding/objective-sharpie/platform/native-frameworks.md?context=xamarin/ios
+                    - name: Atributos de comprobación
+                      href: ~/cross-platform/macios/binding/objective-sharpie/platform/verify.md?context=xamarin/ios
+                - name: Ejemplos
+                  href: ~/cross-platform/macios/binding/objective-sharpie/examples/index.md?context=xamarin/ios
+                  items:
+                    - name: Xcode
+                      href: ~/cross-platform/macios/binding/objective-sharpie/examples/xcode.md?context=xamarin/ios
+                    - name: CocoaPod
+                      href: ~/cross-platform/macios/binding/objective-sharpie/examples/cocoapod.md?context=xamarin/ios
+                    - name: Avanzado (manual)
+                      href: ~/cross-platform/macios/binding/objective-sharpie/examples/advanced.md?context=xamarin/ios
+                - name: Historial de versiones
+                  href: ~/cross-platform/macios/binding/objective-sharpie/releases.md?context=xamarin/ios
+            - name: solución de problemas
+              href: ~/cross-platform/macios/binding/troubleshooting.md?context=xamarin/ios
+        - name: Referencias nativas
+          href: ~/cross-platform/macios/native-references.md?context=xamarin/ios
+        - name: Tipos nativos
+          href: ~/cross-platform/macios/nativetypes.md?context=xamarin/ios
+        - name: Consideraciones de plataforma de 32 y 64 bits
+          href: ~/cross-platform/macios/32-and-64/index.md?context=xamarin/ios
+          items:
+            - name: Actualización de aplicaciones unificadas de Xamarin.Mac a 64 bits
+              href: ~/cross-platform/macios/32-and-64/mac-64-bit.md?context=xamarin/ios
+        - name: Trabajo con tipos nativos en aplicaciones multiplataforma
+          href: ~/cross-platform/macios/native-types-cross-platform.md?context=xamarin/ios
+        - name: HttpClient y selector de implementación de SSL/TLS
+          href: ~/cross-platform/macios/http-stack.md?context=xamarin/ios
+        - name: Optimizaciones de las compilaciones
+          href: ~/cross-platform/macios/optimizations.md?context=xamarin/ios
+    - name: Conceptos avanzados y funcionamiento interno
+      items:
+        - name: Información general
+          href: internals/index.md
+        - name: API
+          href: internals/api.md
+        - name: Diseño de API
+          href: internals/api-design/index.md
+          items:
+            - name: NSString
+              href: internals/api-design/nsstring.md
+            - name: Subclases genéricas de NSObject
+              href: internals/api-design/nsobject-generics.md
+        - name: Ensamblados disponibles
+          href: ~/cross-platform/internals/available-assemblies.md?context=xamarin/ios
+        - name: Punto flotante
+          href: internals/floating-point.md
+        - name: Generación de código XIB
+          href: internals/xib-code-generation.md
+        - name: Arquitectura de iOS
+          href: internals/architecture.md
+        - name: Limitaciones
+          href: internals/limitations.md
+        - name: Nuevo refcount
+          href: internals/newrefcount.md
+        - name: Selectores de Objective-C
+          href: internals/objective-c-selectors.md
+        - name: registrador
+          href: internals/registrar.md
+    - name: solución de problemas
+      items:
+        - name: Información general
+          href: troubleshooting/index.md
+        - name: Sugerencias para la solución de problemas
+          href: troubleshooting/troubleshooting.md
+        - name: "Versión preliminar de Xcode\_11"
+          href: ~/ios/platform/ios13/troubleshooting/index.md
+        - name: Reglas de análisis de Xamarin.iOS
+          href: troubleshooting/xamarin-ios-analysis.md
+        - name: Mensajes de error (mtouch)
+          href: troubleshooting/mtouch-errors.md
+        - name: Preguntas frecuentes
+          href: troubleshooting/questions/index.md
+          items:
+            - name: ¿Puedo usar una versión anterior de Xcode?
+              href: troubleshooting/questions/old-version-xcode.md
+            - name: Depuración con Xcode
+              href: troubleshooting/questions/debugging-with-xcode.md
+            - name: ¿Puedo usar una máquina virtual Mac con Xamarin?
+              href: troubleshooting/questions/mac-vm.md
+            - name: Descargar una versión anterior de Xcode
+              href: troubleshooting/questions/previous-xcode.md
+            - name: ¿Dónde puedo configurar mi ubicaciones de SDK de iOS?
+              href: troubleshooting/questions/ios-sdk.md
+            - name: Nueva habilitación de opciones del desarrollador después de actualizar iOS
+              href: troubleshooting/questions/update-developer-options.md
+            - name: La ubicación de usuario no funciona en iOS 8
+              href: troubleshooting/questions/ios8-user-location.md
+            - name: ¿Dónde puedo encontrar el archivo .dSYM para resolver símbolos de registros de bloqueo de iOS?
+              href: troubleshooting/questions/symbolicate-ios-crash.md
+            - name: 'Agrupación no válida: se han detectado opciones no permitidas para insertar en código de bits en el envío'
+              href: troubleshooting/questions/invalid-bundle-bitcode.md
+            - name: Cambio de la ruta de acceso de salida del archivo IPA
+              href: troubleshooting/questions/ipa-output-path.md
+            - name: Copia de los archivos de salida de IPA a la carpeta de entrega TFS
+              href: troubleshooting/questions/ipa-tfs.md
+            - name: Adición o eliminación de archivos de un archivo IPA después de crearlo en Visual Studio
+              href: troubleshooting/questions/modify-ipa.md
+            - name: Creación de un archivo .xcarchive desde Visual Studio
+              href: troubleshooting/questions/create-xcarchive.md
+            - name: '¿Por qué aparece el siguiente error al enviar mi aplicación: "Disallowed paths ( "iTunesMetadata.plist" ) found at ..."?'
+              href: troubleshooting/questions/itunesmetadata-disallowed-paths.md
+            - name: Error de iOS Designer con RegisterServicePort
+              href: troubleshooting/questions/error-registerserviceport.md
+            - name: '¿Por qué aparece el siguiente error en mi compilación de iOS: no valid iPhone code signing keys found in keychain (no se han encontrado claves válidas de firma de código de iPhone en el llavero)?'
+              href: troubleshooting/questions/no-codesigning-keys.md
+            - name: '¿Por qué se produce el siguiente error en mi aplicación iOS 9: System.Exception: Failed to marshal the Objective-C object?'
+              href: troubleshooting/questions/exception-marshal-obj-c.md
+            - name: 'Error en tiempo de ejecución: The assembly mscorlib.dll was not found or could not be loaded'
+              href: troubleshooting/questions/error-mscorlib-not-found.md
+            - name: El archivo IPA es de 0 bytes
+              href: troubleshooting/questions/ipa-zero-bytes.md
+            - name: 'Error de IBTool: The operation couldn’t be completed'
+              href: troubleshooting/questions/error-ibtool.md
+            - name: 'Error MT1009: Could not copy the assembly'
+              href: troubleshooting/questions/error-mt1009.md
+            - name: System.Exception AMDeviceNotificationSubscribe returned ...
+              href: troubleshooting/questions/exception-amddevicenotificationsubscribe.md
+            - name: MDocArchiveToMsxDocConverter.exe no encontró rver.BaseCommand.OnRequest
+              href: troubleshooting/questions/mdocarchivetomsxdocconverter-not-found.md
+            - name: ¿Cómo se pueden establecer variables en tiempo de ejecución de Mono para los proyectos de iOS en Xamarin Studio?
+              href: troubleshooting/questions/xs-mono-runtime.md
+    - name: watchOS
+      items:
+        - name: Información general
+          href: watchos/index.md
+        - name: Introducción
+          href: watchos/get-started/index.md
+          items:
+            - name: Introducción a watchOS
+              href: watchos/get-started/intro-to-watchos.md
+            - name: Configuración e instalación
+              href: watchos/get-started/installation.md
+            - name: 'Hola, watchOS'
+              href: watchos/get-started/hello-watch.md
+            - name: Referencias de proyectos
+              href: watchos/get-started/project-references.md
+        - name: Principios de la aplicación
+          href: watchos/app-fundamentals/index.md
+          items:
+            - name: Aplicación principal
+              href: watchos/app-fundamentals/parent-app.md
+            - name: Grupos de aplicaciones
+              href: watchos/app-fundamentals/app-groups.md
+            - name: Iconos
+              href: watchos/app-fundamentals/icons.md
+            - name: Diseño
+              href: watchos/app-fundamentals/layout.md
+            - name: Localización
+              href: watchos/app-fundamentals/localization.md
+            - name: Navegación
+              href: watchos/app-fundamentals/navigation.md
+            - name: Tamaños de pantalla
+              href: watchos/app-fundamentals/screen-sizes.md
+            - name: Configuración
+              href: watchos/app-fundamentals/settings.md
+        - name: Interfaz de usuario
+          href: watchos/user-interface/index.md
+          items:
+            - name: Imagen
+              href: watchos/user-interface/image.md
+            - name: Tabla
+              href: watchos/user-interface/table.md
+            - name: Menú (Force Touch)
+              href: watchos/user-interface/menu.md
+            - name: Entrada de texto
+              href: watchos/user-interface/text-input.md
+        - name: Características de la plataforma
+          href: watchos/platform/index.md
+          items:
+            - name: Introducción a watchOS 5
+              href: watchos/platform/introduction-to-watchos5/index.md
+            - name: Introducción a watchOS 4
+              href: watchos/platform/introduction-to-watchos4.md
+            - name: Introducción a watchOS 3
+              href: watchos/platform/introduction-to-watchos3/index.md
+              items:
+                - name: Cambios adicionales en la plataforma watchOS 3
+                  href: watchos/platform/introduction-to-watchos3/additional-framework-changes.md
+                - name: solución de problemas
+                  href: watchos/platform/introduction-to-watchos3/troubleshooting.md
+            - name: Apple Pay
+              href: watchos/platform/apple-pay.md
+            - name: Tareas en segundo plano
+              href: watchos/platform/background-tasks.md
+            - name: Notificaciones
+              href: watchos/platform/notifications.md
+            - name: Complicaciones
+              href: watchos/platform/complications.md
+            - name: Sugerencias proactivas
+              href: watchos/platform/proactive-suggestions.md
+            - name: Técnicas de interacción rápida
+              href: watchos/platform/quick-interaction-techniques.md
+            - name: Mejoras de la aplicación Workout
+              href: watchos/platform/workout-apps.md
+        - name: Implementación y pruebas
+          href: watchos/deploy-test/index.md
+          items:
+            - name: Apple Watch
+              href: watchos/deploy-test/device.md
+            - name: App Store
+              href: watchos/deploy-test/appstore.md
+        - name: solución de problemas
+          href: watchos/troubleshooting.md
+    - name: tvOS
+      items:
+        - name: Información general
+          href: tvos/index.md
+        - name: Introducción
+          href: tvos/get-started/index.md
+          items:
+            - name: Instalación de compatibilidad con tvOS
+              href: tvos/get-started/installation.md
+            - name: 'Hola, guía de inicio rápido de tvOS'
+              href: tvos/get-started/hello-tvos.md
+        - name: Principios de la aplicación
+          href: tvos/app-fundamentals/index.md
+          items:
+            - name: Trabajo con iconos e imágenes
+              href: tvos/app-fundamentals/icons-images.md
+            - name: Trabajo con navegación y foco
+              href: tvos/app-fundamentals/navigation-focus.md
+            - name: Recursos y almacenamiento de datos
+              href: tvos/app-fundamentals/resources-data-storage.md
+            - name: Reproducción de sonidos con AVAudioPlayer
+              href: tvos/app-fundamentals/sounds.md
+        - name: Características de la plataforma
+          href: tvos/platform/index.md
+          items:
+            - name: Introducción a tvOS 12
+              href: tvos/platform/introduction-to-tvos12/index.md
+            - name: Introducción a tvOS 11
+              href: tvos/platform/introduction-to-tvos11.md
+            - name: Introducción a tvOS 10
+              href: tvos/platform/introduction-to-tvos10/index.md
+              items:
+                - name: Cambios adicionales en la plataforma iOS 10
+                  href: tvos/platform/introduction-to-tvos10/additional-framework-changes.md
+                - name: solución de problemas
+                  href: tvos/platform/introduction-to-tvos10/troubleshooting.md
+            - name: Introducción a tvOS 9
+              href: tvos/platform/tvos9.md
+            - name: Controladores de Siri Remote y Bluetooth
+              href: tvos/platform/remote-bluetooth.md
+            - name: Estilos de la interfaz de usuario
+              href: tvos/platform/user-interface-styles.md
+        - name: Interfaz de usuario
+          href: tvos/user-interface/index.md
+          items:
+            - name: Alertas
+              href: tvos/user-interface/alerts.md
+            - name: Botones
+              href: tvos/user-interface/buttons.md
+            - name: Vistas de colección
+              href: tvos/user-interface/collection-views.md
+            - name: Barras de navegación
+              href: tvos/user-interface/navigation-bars.md
+            - name: Controles de página
+              href: tvos/user-interface/page-controls.md
+            - name: Indicadores de progreso
+              href: tvos/user-interface/progress-indicators.md
+            - name: Controles segmentados
+              href: tvos/user-interface/segmented-controls.md
+            - name: Vistas en dos paneles
+              href: tvos/user-interface/split-views.md
+            - name: Vista de pila
+              href: tvos/user-interface/stacked-views.md
+            - name: Barras de pestañas
+              href: tvos/user-interface/tab-bars.md
+            - name: Vistas de tabla
+              href: tvos/user-interface/table-views.md
+            - name: Campos de texto y de búsqueda
+              href: tvos/user-interface/text-fields-and-search.md
+        - name: Implementación y prueba
+          href: tvos/deploy-test/index.md
+          items:
+            - name: App Distribution (Distribución de aplicaciones)
+              href: tvos/deploy-test/app-distribution/index.md
+              items:
+                - name: Configuración de la aplicación tvOS en iTunes Connect
+                  href: tvos/deploy-test/app-distribution/itunes-connect.md
+                - name: Publicación en Apple TV App Store
+                  href: tvos/deploy-test/app-distribution/app-store-publishing.md
+        - name: solución de problemas
+          href: tvos/troubleshooting.md
+        - name: Aspectos internos
+          href: tvos/internals/index.md
+          items:
+            - name: Ensamblados
+              href: tvos/internals/assemblies.md
+            - name: Marcos de trabajo
+              href: tvos/internals/frameworks.md
+    - name: Notas de la versión
+      href: 'https://docs.microsoft.com/xamarin/ios/release-notes/'
+    - name: Ejemplos
+      href: samples/index.yml
