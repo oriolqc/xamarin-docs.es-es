@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: ce3e0f18d299d2bdf8d9bd81c467d45924d0d2bc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7471d6bc66463091fafea855b12da06292055be6
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61373431"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277452"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Para completar este tutorial debe tener Visual Studio 2019 (versión más reciente), con la carga de trabajo **Desarrollo para dispositivos móviles con .NET** instalada. Además, necesita un equipo Mac emparejado para compilar la aplicación del tutorial en iOS. Para obtener información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md). Para obtener información sobre cómo conectar Visual Studio 2019 a un host de compilación de Mac, consulte [Emparejar con Mac para el desarrollo de Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Inicie Visual Studio y cree una aplicación de Xamarin.Forms en blanco llamada **EditorTutorial**. Asegúrese de que la aplicación use .NET Standard como mecanismo de código compartido.
 
@@ -39,6 +41,8 @@ ms.locfileid: "61373431"
     > Mientras que Android indica el alto del objeto [`Editor`](xref:Xamarin.Forms.Editor), iOS no lo hace.
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+
+Para completar este tutorial debe tener instalado Visual Studio para Mac (versión más reciente) con compatibilidad con la plataforma de iOS y Android. Además, también necesitará Xcode (versión más reciente). Para obtener más información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md).
 
 1. Inicie Visual Studio para Mac y cree una aplicación de Xamarin.Forms en blanco llamada **EditorTutorial**. Asegúrese de que la aplicación use .NET Standard como mecanismo de código compartido.
 

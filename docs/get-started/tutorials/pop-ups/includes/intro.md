@@ -1,37 +1,23 @@
 ---
-ms.openlocfilehash: bc9b8d94025f7cf452d34c315052f7a125ee7048
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 98eb75948ec2b53919b8de7cdc80d39d7c3ebf4c
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384739"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277457"
 ---
+Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
+
+- Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
+- Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
+- Tutorial sobre los [botones](~/get-started/tutorials/button/index.yml) (Button).
+
 En este tutorial aprenderá a:
 
 > [!div class="checklist"]
 > - Mostrar una alerta para solicitar al usuario que realice una selección.
 > - Mostrar una hoja de acción para guiar al usuario a través de una tarea.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Va a usar Visual Studio 2019, o Visual Studio para Mac, para crear una aplicación sencilla que demuestre cómo mostrar elementos emergentes en Xamarin.Forms. En las capturas de pantalla siguientes se muestra la aplicación final:
 
-### <a name="prerequisites"></a>Requisitos previos
-
-Para completar este tutorial debe tener Visual Studio 2017 (versión más reciente), con la carga de trabajo **Desarrollo para dispositivos móviles con .NET** instalada. Además, necesita un equipo Mac emparejado para compilar la aplicación del tutorial en iOS. Para obtener información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md). Para obtener información sobre cómo conectar Visual Studio 2017 a un host de compilación de Mac, consulte [Emparejar con Mac para el desarrollo de Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
-
-- Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
-- Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
-- Tutorial sobre los [botones](~/get-started/tutorials/button/index.yml) (Button).
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-### <a name="prerequisites"></a>Requisitos previos
-
-Para completar este tutorial debe tener instalado Visual Studio para Mac (versión más reciente) con compatibilidad con la plataforma de iOS y Android. Además, también necesitará Xcode (versión más reciente). Para obtener más información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md).
-
-Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
-
-- Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
-- Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
-- Tutorial sobre los [botones](~/get-started/tutorials/button/index.yml) (Button).
+[![Captura de pantalla de una hoja de acciones, en iOS y Android](../images/actionsheet-reduced.png "Hoja de acciones que guía a los usuarios en la realización de una tarea")](../images/actionsheet-large.png#lightbox "Hoja de acciones que guía a los usuarios en la realización de una tarea")

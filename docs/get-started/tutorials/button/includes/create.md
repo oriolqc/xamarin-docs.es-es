@@ -1,12 +1,14 @@
 ---
-ms.openlocfilehash: a7a5d51b8931aa9dffd2c16b4ead51371390f033
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 854212951844d2443c5d1b332d94b533673640c4
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61372991"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277451"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+
+Para completar este tutorial debe tener Visual Studio 2019 (versión más reciente), con la carga de trabajo **Desarrollo para dispositivos móviles con .NET** instalada. Además, necesita un equipo Mac emparejado para compilar la aplicación del tutorial en iOS. Para obtener información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md). Para obtener información sobre cómo conectar Visual Studio 2019 a un host de compilación de Mac, consulte [Emparejar con Mac para el desarrollo de Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 
 1. Inicie Visual Studio y cree una aplicación de Xamarin.Forms en blanco llamada **ButtonTutorial**. Asegúrese de que la aplicación use .NET Standard como mecanismo de código compartido.
 
@@ -37,6 +39,8 @@ ms.locfileid: "61372991"
     Tenga en cuenta que, de forma predeterminada un objeto [`Button`](xref:Xamarin.Forms.Button) tiende a ocupar todo el espacio del que dispone; en este caso, el ancho completo de su elemento primario (el objeto [`StackLayout`](xref:Xamarin.Forms.StackLayout)).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
+
+Para completar este tutorial debe tener instalado Visual Studio para Mac (versión más reciente) con compatibilidad con la plataforma de iOS y Android. Además, también necesitará Xcode (versión más reciente). Para obtener más información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md).
 
 1. Inicie Visual Studio para Mac y cree una aplicación de Xamarin.Forms en blanco llamada **ButtonTutorial**. Asegúrese de que la aplicación use .NET Standard como mecanismo de código compartido.
 

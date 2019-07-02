@@ -1,11 +1,19 @@
 ---
-ms.openlocfilehash: dd8888652fca616b466a4a104eedc956b0e31498
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 004d7df72103ef332f802bd0019d2a99c6cc11a2
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61193315"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277453"
 ---
+Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
+
+- Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
+- Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
+- Tutorial sobre los [botones](~/get-started/tutorials/button/index.yml) (Button).
+- Tutorial sobre las [entradas](~/get-started/tutorials/entry/index.yml) (Entry).
+- Tutorial sobre las [vistas de lista](~/get-started/tutorials/listview/index.yml) (ListView).
+
 En este tutorial aprenderá a:
 
 > [!div class="checklist"]
@@ -13,30 +21,6 @@ En este tutorial aprenderá a:
 > - Crear las clases de acceso a datos.
 > - Consumir las clases de acceso a datos.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Va a usar Visual Studio 2019, o Visual Studio para Mac, para crear una aplicación sencilla que demuestre cómo almacenar datos en una base de datos SQLite.NET local. En las capturas de pantalla siguientes se muestra la aplicación final:
 
-### <a name="prerequisites"></a>Requisitos previos
-
-Para completar este tutorial debe tener Visual Studio 2017 (versión más reciente), con la carga de trabajo **Desarrollo para dispositivos móviles con .NET** instalada. Además, necesita un equipo Mac emparejado para compilar la aplicación del tutorial en iOS. Para obtener información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md). Para obtener información sobre cómo conectar Visual Studio 2017 a un host de compilación de Mac, consulte [Emparejar con Mac para el desarrollo de Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
-
-- Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
-- Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
-- Tutorial sobre los [botones](~/get-started/tutorials/button/index.yml) (Button).
-- Tutorial sobre las [entradas](~/get-started/tutorials/entry/index.yml) (Entry).
-- Tutorial sobre las [vistas de lista](~/get-started/tutorials/listview/index.yml) (ListView).
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-### <a name="prerequisites"></a>Requisitos previos
-
-Para completar este tutorial debe tener instalado Visual Studio para Mac (versión más reciente) con compatibilidad con la plataforma de iOS y Android. Además, también necesitará Xcode (versión más reciente). Para obtener más información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md).
-
-Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
-
-- Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
-- Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
-- Tutorial sobre los [botones](~/get-started/tutorials/button/index.yml) (Button).
-- Tutorial sobre las [entradas](~/get-started/tutorials/entry/index.yml) (Entry).
-- Tutorial sobre las [vistas de lista](~/get-started/tutorials/listview/index.yml) (ListView).
+[![Captura de pantalla de la persistencia de datos de la base de datos local SQLite.NET, en iOS y Android](../images/consume-data-access-classes-reduced.png "Persistencia de datos de la base de datos local")](../images/consume-data-access-classes-large.png#lightbox "Persistencia de datos de la base de datos local")

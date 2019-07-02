@@ -1,37 +1,23 @@
 ---
-ms.openlocfilehash: 244dfa31045bf71e36577d2ac9e1782a2d506697
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9143b65b2e7cb9b85195e3c20695e3034295b2d2
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61187545"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277444"
 ---
+Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
+
+- Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
+- Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
+- Tutorial sobre las [entradas](~/get-started/tutorials/entry/index.yml) (Entry).
+
 En este tutorial aprenderá a:
 
 > [!div class="checklist"]
 > - Responder a una aplicación que se inicia, está en modo de suspensión o se reanuda.
 > - Conservar datos entre los cambios de estado del ciclo de vida.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Va a usar Visual Studio 2019, o Visual Studio para Mac, para crear una aplicación sencilla que demuestre cómo conservar los datos entre los cambios de estado del ciclo de vida. En las capturas de pantalla siguientes se muestra la aplicación final:
 
-### <a name="prerequisites"></a>Requisitos previos
-
-Para completar este tutorial debe tener Visual Studio 2017 (versión más reciente), con la carga de trabajo **Desarrollo para dispositivos móviles con .NET** instalada. Además, necesita un equipo Mac emparejado para compilar la aplicación del tutorial en iOS. Para obtener información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md). Para obtener información sobre cómo conectar Visual Studio 2017 a un host de compilación de Mac, consulte [Emparejar con Mac para el desarrollo de Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
-
-- Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
-- Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
-- Tutorial sobre las [entradas](~/get-started/tutorials/entry/index.yml) (Entry).
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-### <a name="prerequisites"></a>Requisitos previos
-
-Para completar este tutorial debe tener instalado Visual Studio para Mac (versión más reciente) con compatibilidad con la plataforma de iOS y Android. Además, también necesitará Xcode (versión más reciente). Para obtener más información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md).
-
-Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
-
-- Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
-- Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
-- Tutorial sobre las [entradas](~/get-started/tutorials/entry/index.yml) (Entry).
+[![Captura de pantalla de un objeto Entry cuya propiedad Text se conserva a lo largo de los cambios de estado del ciclo de vida, en iOS y Android](../images/persist-data.png "Objeto Entry cuya propiedad Text se conserva a lo largo de los cambios de estado del ciclo de vida")](../images/persist-data-large.png#lightbox "Objeto Entry cuya propiedad Text se conserva a lo largo de los cambios de estado del ciclo de vida")

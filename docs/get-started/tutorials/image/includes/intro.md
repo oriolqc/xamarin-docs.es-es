@@ -1,11 +1,16 @@
 ---
-ms.openlocfilehash: 69e1a1f9c54c032e25a69df17789ed376a059f00
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9bda76a477973bb06eb018abbf4ad53dc3e8c1e7
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61384569"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67277439"
 ---
+Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
+
+- Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
+- Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
+
 En este tutorial aprenderá a:
 
 > [!div class="checklist"]
@@ -13,24 +18,6 @@ En este tutorial aprenderá a:
 > - Personalizar la apariencia de `Image`.
 > - Mostrar un archivo de imagen local de cada proyecto de plataforma.
 
-# <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
+Va a usar Visual Studio 2019, o Visual Studio para Mac, para crear una aplicación sencilla que demuestre cómo mostrar una imagen y personalizar su aspecto. En las capturas de pantalla siguientes se muestra la aplicación final:
 
-### <a name="prerequisites"></a>Requisitos previos
-
-Para completar este tutorial debe tener Visual Studio 2017 (versión más reciente), con la carga de trabajo **Desarrollo para dispositivos móviles con .NET** instalada. Además, necesita un equipo Mac emparejado para compilar la aplicación del tutorial en iOS. Para obtener información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md). Para obtener información sobre cómo conectar Visual Studio 2017 a un host de compilación de Mac, consulte [Emparejar con Mac para el desarrollo de Xamarin.iOS](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
-
-Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
-
-- Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
-- Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
-
-# <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
-
-### <a name="prerequisites"></a>Requisitos previos
-
-Para completar este tutorial debe tener instalado Visual Studio para Mac (versión más reciente) con compatibilidad con la plataforma de iOS y Android. Además, también necesitará Xcode (versión más reciente). Para obtener más información sobre la instalación de la plataforma de Xamarin, consulte [Instalación de Xamarin](~/get-started/installation/index.md).
-
-Antes de intentar este tutorial, debe haber completado correctamente lo siguiente:
-
-- Inicio rápido [Creación de una primera aplicación de Xamarin.Forms](~/get-started/first-app/index.md).
-- Tutorial sobre el [diseño de pila](~/get-started/tutorials/stacklayout/index.yml) (StackLayout).
+[![Captura de pantalla de una vista de imagen en la que se muestra una imagen local, en iOS y Android](../images/local-file.png "Vista de imagen en la que se muestra una imagen local")](../images/local-file-large.png#lightbox "Vista de imagen en la que se muestra una imagen local")
