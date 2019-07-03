@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 02/12/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 333e35a4d015586ed33045c3f91e21fdced496b0
-ms.sourcegitcommit: b4a12607ca944de10fd166139765241a4501831c
+ms.openlocfilehash: 5a2df045ae0d7cb433060cee27d2546ad5b6e86e
+ms.sourcegitcommit: 00deecefc17a98210bed12b4ef99ecca710275f1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66687039"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67493386"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -95,10 +95,11 @@ ms.locfileid: "66687039"
                                                 <h3>Más información sobre Xamarin</h3>
                                                 <h4>Cree una aplicación multiplataforma de iOS y Android con Xamarin.Forms mediante C# y .NET en Visual Studio en Windows y macOS.</h4>
                                                 <ul class="noBullet">
-                                                    <li><a class="barLink" href="~/cross-platform/get-started/introduction-to-mobile-development.md"><img  src="https://docs.microsoft.com/media/logos/logo_xamarin.svg" alt="" />Las aplicaciones de Xamarin son nativas</a></li>
-                                                    <li><a class="barLink" href="~/cross-platform/desktop/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_NET.svg" alt="" />Xamarin para desarrolladores de escritorio de .NET</a></li>
-                                                    <li><a class="barLink" href="~/android/get-started/java-developers.md"><img  src="https://docs.microsoft.com/media/logos/logo_java.svg" alt="" />Xamarin para desarrolladores de Java</a></li>
-                                                    <li><a class="barLink" href="~/ios/get-started/objective-c-developers/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_xcode.svg" alt=" icon" />Xamarin para desarrolladores de Objective-C</a></li>
+                                                    <li><a class="barLink" href="~/cross-platform/get-started/introduction-to-mobile-development.md"><img  src="https://docs.microsoft.com/media/logos/logo_xamarin.svg" alt="" />¿Qué es Xamarin?</a></li>
+                                                    <li><a class="barLink" href="~/xamarin-forms/index.yml"><img  src="https://docs.microsoft.com/media/logos/logo_xamarin.svg" alt="" />Xamarin.Forms</a></li>
+                                                    <li><a class="barLink" href="~/android/index.yml"><img  src="https://docs.microsoft.com/media/logos/logo_android.svg" alt="" />Xamarin.Android</a></li>
+                                                    <li><a class="barLink" href="~/ios/index.yml"><img  src="https://docs.microsoft.com/media/common/i_web-apps.svg" alt=" icon" />Xamarin.iOS</a></li>
+                                                    <li><a class="barLink" href="~/mac/index.yml"><img  src="https://docs.microsoft.com/media/common/i_xplat-code.svg" alt=" icon" />Xamarin.Mac</a></li>
                                                     <li><a class="barLink" href="~/xamarin-forms/data-cloud/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_azure.svg" alt="" />Azure con Xamarin</a></li>
                                                 </ul>
                                             </div>
@@ -216,7 +217,7 @@ Listas </a>
                                                                     <a class="barLink" href="~/get-started/tutorials/pop-ups/index.yml">
                                                                         <img src="https://docs.microsoft.com/media/common/i_alert.svg" alt="">
 Elementos emergentes </a>
-                                                                </li>                                                                
+                                                                </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/app-lifecycle/index.yml">
                                                                         <img src="https://docs.microsoft.com/media/common/i_agile.svg" alt="">
@@ -249,26 +250,26 @@ Servicios web </a>
                                     <div class="cardPadding">
                                         <div class="card">
                                             <div class="cardText">
-                                                <h3>Compilación de aplicaciones de Xamarin de plataforma única</h3>
-                                                <h4>Todas las aplicaciones de Xamarin pueden compartir código entre sí y con otras plataformas de. NET, así como incorporar funcionalidad de Xamarin.Forms.</h4>
+                                                <h3>Aproveche sus conocimientos</h3>
+                                                <h4>Los proyectos de Xamarin le permiten aplicar sus conocimientos actuales para crear aplicaciones de iOS y Android. Elija su plataforma favorita para obtener más detalles:</h4>
                                                  <table cellpadding="0" cellspacing="0" border="0"><tr><td style="border-top-color:transparent!important;padding-left:0;">
                                                 <ul class="noBullet">
                                                     <li>
-                                                        <a class="barLink" href="~/android/index.yml">
-                                                            <img src="https://docs.microsoft.com/media/logos/logo_android.svg" alt="Android logo">
-Android</a>
+                                                        <a class="barLink" href="~/cross-platform/desktop/index.md">
+                                                            <img src="https://docs.microsoft.com/media/logos/logo_NET.svg" alt="">
+Escritorio de .NET (UWP, WPF, WinForms)</a>
                                                     </li>
                                                     </ul></td><td style="border-top-color:transparent!important;padding-left:0;"><ul class="noBullet">
                                                     <li>
-                                                        <a class="barLink" href="~/ios/index.yml">
-                                                            <img src="https://docs.microsoft.com/media/common/i_web-apps.svg" alt="iOS logo">
-iOS</a>
+                                                        <a class="barLink" href="~/android/get-started/java-developers.md">
+                                                            <img src="https://docs.microsoft.com/media/logos/logo_java.svg" alt="">
+Android y Java</a>
                                                     </li>
                                                     </ul></td><td style="border-top-color:transparent!important;padding-left:0;"><ul class="noBullet">
                                                     <li>
-                                                        <a class="barLink" href="~/mac/index.yml">
-                                                            <img src="https://docs.microsoft.com/media/common/i_xplat-code.svg" alt="Mac">
-Mac</a>
+                                                        <a class="barLink" href="~/ios/get-started/objective-c-developers/index.md">
+                                                            <img src="https://docs.microsoft.com/media/logos/logo_xcode.svg" alt="">
+iOS y Objective-C</a>
                                                     </li>
                                                 </ul></td></tr></table>
                                             </div>
@@ -286,7 +287,14 @@ Mac</a>
                     <li>
                         <a href="#XamarinForms"> </a>
                         <ul id="XamarinForms" class="cardsC">
-                            <!--li>
+                            <li>
+                                <div class="container intro">
+                                    <p>
+Xamarin.Forms es un kit de herramientas multiplataforma para Android, iOS, Mac y Windows con C# y .NET. Comparta código de interfaz de usuario y código de lógica de aplicación en todas las plataformas.
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
                                 <a href="~/xamarin-forms/get-started/index.md">
                                     <div class="cardSize">
                                         <div class="cardPadding">
@@ -297,14 +305,14 @@ Mac</a>
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Getting Started</h3>
-                                                    <p>Tutorials to get you up and running with Xamarin.Forms. Make sure everything is installed correctly, and build your first app.</p>
+                                                    <h3>¿Qué es Xamarin.Forms?</h3>
+                                                    <p>Explica qué es Xamarin.Forms y cómo puede ayudarle a crear e implementar aplicaciones de iOS y Android.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </a>
-                            </li-->
+                            </li>
                             <li>
                                 <a href="~/xamarin-forms/app-fundamentals/index.md">
                                     <div class="cardSize">
@@ -743,7 +751,7 @@ Mac</a>
         <h2>Manténgase en contacto con nosotros</h2>
         <ul class="links">
            <li>
-                <a href="https://blog.xamarin.com/"> Blog </a>
+                <a href="https://devblogs.microsoft.com/xamarin/"> Blog </a>
             </li>
             <li>
                 <a href="https://forums.xamarin.com/"> Foros </a>
