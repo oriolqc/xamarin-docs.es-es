@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: ddc33d28aad4e00c9259893c0f8e7a1ab40ee429
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9848d2b832990032bc7eb7f2e3a93c896457134c
+ms.sourcegitcommit: e95296f9e516975f5f32d822c323a71fd84007b9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61381886"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67538698"
 ---
 # <a name="communicating-between-loosely-coupled-components"></a>Comunicación entre componentes débilmente acoplados
 
@@ -43,7 +43,7 @@ La aplicación móvil de eShopOnContainers utiliza la [ `MessagingCenter` ](xref
 > [!NOTE]
 > Mientras el [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) clase permite la comunicación entre las clases de acoplamiento flexible, no ofrece la solución de arquitectura solo a este problema. Por ejemplo, la comunicación entre un modelo de vista y una vista también puede lograrse mediante el motor de enlace y a través de las notificaciones de cambio de propiedad. Además, también puede lograrse la comunicación entre los dos modelos de vista pasando los datos durante la navegación.
 
-En la aplicación móvil de eShopOnContainers,[ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) se usa para actualizar en la interfaz de usuario en respuesta a una acción que se producen en otra clase. Por lo tanto, los mensajes se publican en el subproceso de interfaz de usuario, con los suscriptores que reciben el mensaje en el mismo subproceso.
+En la aplicación móvil de eShopOnContainers, [ `MessagingCenter` ](xref:Xamarin.Forms.MessagingCenter) se usa para actualizar en la interfaz de usuario en respuesta a una acción que se producen en otra clase. Por lo tanto, los mensajes se publican en el subproceso de interfaz de usuario, con los suscriptores que reciben el mensaje en el mismo subproceso.
 
 > [!TIP]
 > Calcular las referencias al subproceso de interfaz de usuario cuando la interfaz de usuario de realizar actualizaciones. Si es necesario actualizar la interfaz de usuario un mensaje que se envía desde un subproceso en segundo plano, procesar el mensaje en el subproceso de interfaz de usuario en el suscriptor mediante la invocación del [ `Device.BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) método.
