@@ -5,12 +5,12 @@ ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 03/13/2019
-ms.openlocfilehash: 93abf62e5d0b1df48606e4515fca6747146c7777
-ms.sourcegitcommit: 64d6da88bb6ba222ab2decd2fdc8e95d377438a6
+ms.openlocfilehash: 4ac6344165730bc8c348c16fe8f3a932d4ac3548
+ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58175361"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268623"
 ---
 # <a name="xamarinessentials-geolocation"></a>Xamarin.Essentials: Geolocalización
 
@@ -56,11 +56,11 @@ El archivo **Info.plist** de la aplicación debe contener la clave `NSLocationWh
 
 Abra el editor de plist, agregue la propiedad **Privacidad: Ubicación cuando está en uso Descripción** y, después, complete un valor para mostrar al usuario.
 
-También puede editar el archivo de forma manual y agregar lo siguiente:
+También puede editar el archivo, agregar lo siguiente y actualizar el razonamiento:
 
 ```xml
 <key>NSLocationWhenInUseUsageDescription</key>
-<string>This app needs access location when open.</string>
+<string>Fill in a reason why your app needs access to location.</string>
 ```
 
 # <a name="uwptabuwp"></a>[UWP](#tab/uwp)
