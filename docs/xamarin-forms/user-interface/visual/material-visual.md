@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
-ms.openlocfilehash: cf6ab8266b0798ccbf29078313bbc7454125a1af
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a626532ac507185b6c01abb5327efa7015c787f5
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61026812"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512895"
 ---
 # <a name="xamarinforms-material-visual"></a>Material de Xamarin.Forms Visual
 
@@ -35,6 +35,7 @@ Es el proceso para habilitar Visual del Material de Xamarin.Forms en la aplicaci
 Actualmente se incluyen los representadores de material en el [Xamarin.Forms.Visual.Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) paquete NuGet para las vistas siguientes:
 
 - [`Button`](xref:Xamarin.Forms.Button)
+- `CheckBox`
 - [`Entry`](xref:Xamarin.Forms.Entry)
 - [`Frame`](xref:Xamarin.Forms.Frame)
 - [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)
@@ -111,6 +112,7 @@ Las principales diferencias visibles entre los representadores de material, se m
 Los representadores de material, opcionalmente, se pueden personalizar, al igual que los representadores de forma predeterminada, a través de las siguientes clases base:
 
 - `MaterialButtonRenderer`
+- `MaterialCheckBoxRenderer`
 - `MaterialEntryRenderer`
 - `MaterialFrameRenderer`
 - `MaterialProgressBarRenderer`

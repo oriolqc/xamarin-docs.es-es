@@ -6,13 +6,13 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/21/2019
-ms.openlocfilehash: 258468b836a4c1243b9123022ebbf1d55430321e
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.date: 06/11/2019
+ms.openlocfilehash: 6fbe1104d238929d0c6c6978a9145cd51d52cb6c
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740965"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67513098"
 ---
 # <a name="xamarinforms-views"></a>Vistas de Xamarin.Forms
 
@@ -90,6 +90,13 @@ Las vistas son objetos de interfaz de usuario, como etiquetas, botones y los con
 |     |     |
 
 ## <a name="views-for-setting-values"></a>Para establecer valores de las vistas
+
+### <a name="checkbox"></a>CheckBox
+
+|     |     |
+| --- | --- |
+| `CheckBox` permite al usuario seleccionar un valor booleano mediante un tipo de botón que o bien se puede comprobar o está vacío. El `IsChecked` propiedad es el estado de la `CheckBox`y el `CheckedChanged` evento se desencadena cuando cambia el estado.<br /><br />Documentación de API / [guía](~/xamarin-forms/user-interface/checkbox.md) / [ejemplo](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/CheckBoxDemos) | [![Ejemplo de casilla de verificación](views-images/CheckBox.png "ejemplo de casilla de verificación")](views-images/CheckBox-Large.png#lightbox "ejemplo de casilla de verificación")<br />[Código C# para esta página](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CheckBoxDemoPage.cs) / [página XAML](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CheckBoxDemoPage.xaml) |
+|     |     |
 
 ### <a name="slider"></a>Slider
 

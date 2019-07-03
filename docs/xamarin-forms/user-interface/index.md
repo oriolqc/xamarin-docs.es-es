@@ -6,13 +6,13 @@ ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/14/2018
-ms.openlocfilehash: 7c3a26854c65de260aa9b3c8ed00966749eb4d9c
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.date: 06/11/2019
+ms.openlocfilehash: c98e1cd9f4095e8310150ceeebd994af2c9b7f87
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66178071"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512926"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Vistas de interfaz de usuario de Xamarin.Forms
 
@@ -31,6 +31,10 @@ El `BoxView` es un simple rectángulo de color, pero puede utilizarse para eleme
 ## <a name="buttonbuttonmd"></a>[Button](button.md)
 
 El `Button` responde a un pulse o haga clic en que se dirige a una aplicación para llevar a cabo una tarea determinada.
+
+## <a name="checkboxcheckboxmd"></a>[CheckBox](checkbox.md)
+
+El `CheckBox` es un tipo de botón que puede ser activado ni estar vacío. Cuando se activa una casilla de verificación, se considera en. Cuando una casilla de verificación está vacía, se considera estar apagado.
 
 ## <a name="collectionviewcollectionviewindexmd"></a>[CollectionView](collectionview/index.md)
 

@@ -6,13 +6,13 @@ ms.assetid: 2F304AEC-8612-4833-81E5-B2F3F469B2DF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/01/2018
-ms.openlocfilehash: 4ba4bd7528b635d099868f093268d2d83e44dae0
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.date: 06/12/2019
+ms.openlocfilehash: 671abb0f61a5582a99165aa16c6b99db2ee8b1ee
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61359887"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512878"
 ---
 # <a name="xamarinforms-device-class"></a>Clase Device de Xamarin.Forms
 
@@ -20,11 +20,9 @@ ms.locfileid: "61359887"
 
 La clase [ `Device` ](xref:Xamarin.Forms.Device) contiene un número de propiedades y métodos para ayudar a los desarrolladores personalizar diseño y funcionalidad de acuerdo con cada plataforma.
 
-Además de métodos y propiedades para asignar como destino código en tipos y tamaños específicos de harwdware, la clase `Device` incluye el método [BeginInvokeOnMainThread](#Device_BeginInvokeOnMainThread) que se debe usar al interactuar con controles de la interfaz de usuario desde subprocesos en segundo plano.
+Además de métodos y propiedades para el código de destino en los tipos de hardware específico y tamaños, el `Device` clase incluye métodos que se pueden usar para interactuar con los controles de interfaz de usuario de subprocesos en segundo plano. Para obtener más información, consulte [interactúe con la interfaz de usuario de subprocesos en segundo plano](#interact-with-the-ui-from-background-threads).
 
-<a name="providing-platform-values" />
-
-## <a name="providing-platform-specific-values"></a>Proporcionando valores específicos de plataforma
+## <a name="providing-platform-specific-values"></a>Proporcionar valores específicos de la plataforma
 
 Antes de Xamarin.Forms 2.3.4, se pudo obtener la plataforma de la aplicación se ejecuta en examinando el [ `Device.OS` ](xref:Xamarin.Forms.Device.OS) propiedad y compararla con la [ `TargetPlatform.iOS` ](xref:Xamarin.Forms.TargetPlatform.iOS), [ `TargetPlatform.Android` ](xref:Xamarin.Forms.TargetPlatform.Android), [ `TargetPlatform.WinPhone` ](xref:Xamarin.Forms.TargetPlatform.WinPhone), y [ `TargetPlatform.Windows` ](xref:Xamarin.Forms.TargetPlatform.Windows) valores de enumeración. De forma similar, uno de los [ `Device.OnPlatform` ](xref:Xamarin.Forms.Device.OnPlatform(System.Action,System.Action,System.Action,System.Action)) sobrecargas podrían usarse para proporcionar los valores específicos de la plataforma a un control.
 
@@ -68,8 +66,6 @@ El [ `OnPlatform` ](xref:Xamarin.Forms.OnPlatform`1) clase es una clase genéric
 > Proporcionar un valor incorrecto en el atributo `Platform` de la clase `On` no producirá un error. En su lugar, el código se ejecutará sin el valor específico de la plataforma que se va a aplicar.
 
 Como alternativa, el `OnPlatform` se puede usar extensión de marcado en XAML para personalizar la apariencia de la interfaz de usuario en forma de acuerdo con la plataforma. Para obtener más información, consulte [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
-
-<a name="Device_Idiom" />
 
 ## <a name="deviceidiom"></a>Device.Idiom
 
@@ -135,8 +131,6 @@ this.FlowDirection = Device.FlowDirection;
 
 Para obtener más información acerca de la dirección del flujo, consulte [localización de derecha a izquierda](~/xamarin-forms/app-fundamentals/localization/right-to-left.md).
 
-<a name="Device_Styles" />
-
 ## <a name="devicestyles"></a>Device.Styles
 
 La [propiedad `Styles`](~/xamarin-forms/user-interface/styles/index.md) contiene las definiciones de estilo integradas que pueden aplicarse a algunos de los controles (como `Label`) la propiedad `Style`. Los estilos disponibles son:
@@ -147,8 +141,6 @@ La [propiedad `Styles`](~/xamarin-forms/user-interface/styles/index.md) contiene
 * ListItemTextStyle
 * SubtitleStyle
 * TitleStyle
-
-<a name="Device_GetNamedSize" />
 
 ## <a name="devicegetnamedsize"></a>Device.GetNamedSize
 
@@ -163,8 +155,6 @@ someLabel.FontSize = Device.OnPlatform (
 );
 ```
 
-<a name="Device_OpenUri" />
-
 ## <a name="deviceopenuri"></a>Device.OpenUri
 
 El metodo `OpenUri` puede usarse para desencadenar operaciones en la plataforma nativa, como abrir una dirección URL en el explorador web nativo (**Safari** en iOS o **Internet** en Android).
@@ -176,8 +166,6 @@ Device.OpenUri(new Uri("https://evolve.xamarin.com/"));
 El [ejemplo WebView](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithWebview/WorkingWithWebview/WebAppPage.cs) incluye un ejemplo que usa `OpenUri` para abrir las direcciones URL y desencadenar también llamadas telefónicas.
 
 El [ejemplo mapas](https://github.com/xamarin/xamarin-forms-samples/blob/master/WorkingWithMaps/WorkingWithMaps/MapAppPage.cs) también usa `Device.OpenUri` para mostrar mapas y las direcciones mediante la aplicacion de **Mapas** nativa en iOS y Android.
-
-<a name="Device_StartTimer" />
 
 ## <a name="devicestarttimer"></a>Device.StartTimer
 
@@ -192,26 +180,31 @@ Device.StartTimer (new TimeSpan (0, 0, 60), () => {
 
 Si el código del temporizador interactúa con la interfaz de usuario (como establecer el texto de un `Label` o mostrar una alerta) debe realizarse dentro de una expresión `BeginInvokeOnMainThread` (ver abajo).
 
-<a name="Device_BeginInvokeOnMainThread" />
+## <a name="interact-with-the-ui-from-background-threads"></a>Interactuar con la interfaz de usuario de subprocesos en segundo plano
 
-## <a name="devicebegininvokeonmainthread"></a>Device.BeginInvokeOnMainThread
+Mayoría de los sistemas operativos, incluidos iOS, Android y la plataforma Universal de Windows, utilice un modelo de subprocesamiento único para el código que implican la interfaz de usuario. Este subproceso se suele denominar el *subproceso principal* o *el subproceso de interfaz de usuario*. Una consecuencia de este modelo es que todo el código que tiene acceso a elementos de la interfaz de usuario debe ejecutar en el subproceso principal de la aplicación.
 
-Nunca se deben tener acceso a los elementos de la interfaz de usuario por los subprocesos en segundo plano, por ejemplo, el código que se ejecuta en un temporizador o un controlador de finalización para las operaciones asincrónicas, como las solicitudes web. Cualquier código en segundo plano que se deba actualizar la interfaz de usuario se debe incluir en [ `BeginInvokeOnMainThread` ](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)). Este es el equivalente de `InvokeOnMainThread` en iOS, `RunOnUiThread` en Android, y `Dispatcher.RunAsync` en la plataforma Universal de Windows.
+A veces, las aplicaciones usar subprocesos en segundo plano para realizar operaciones potencialmente larga, como la recuperación de datos de un servicio web. Si necesita código que se ejecuta en un subproceso en segundo plano tener acceso a elementos de la interfaz de usuario, se debe ejecutar ese código en el subproceso principal.
 
-El código de Xamarin.Forms es:
+El `Device` clase incluye lo siguiente `static` elementos desde subprocesos de fondos de la interfaz de métodos que se pueden usar para interactuar con el usuario:
+
+| Método | Argumentos | Valores devueltos | Finalidad |
+|---|---|---|---|
+| `BeginInvokeOnMainThread` | `Action` | `void` | Invoca un `Action` en el subproceso principal y no espera a que finalice. |
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Invoca un `Func<T>` en el subproceso principal y espera a que finalice. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | Invoca un `Action` en el subproceso principal y espera a que finalice. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Invoca un `Func<Task<T>>` en el subproceso principal y espera a que finalice. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Invoca un `Func<Task>` en el subproceso principal y espera a que finalice. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Devuelve el `SynchronizationContext` del subproceso principal. |
+
+El código siguiente muestra un ejemplo del uso de la `BeginInvokeOnMainThread` método:
 
 ```csharp
-Device.BeginInvokeOnMainThread ( () => {
-  // interact with UI elements
+Device.BeginInvokeOnMainThread (() =>
+{
+    // interact with UI elements
 });
 ```
-
-Tenga en cuenta que los métodos mediante `async/await` no es necesario usar `BeginInvokeOnMainThread` si se están ejecutando en el subproceso de interfaz de usuario principal.
-
-## <a name="summary"></a>Resumen
-
-La clase `Device` de Xamarin.Forms permite un mayor control sobre la funcionalidad y los diseños por plataforma: incluso en código comun (proyectos de biblioteca de .NET Standard o proyectos compartidos).
-
 
 ## <a name="related-links"></a>Vínculos relacionados
 
