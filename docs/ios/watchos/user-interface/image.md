@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 6a2b8c99156963ae167aecd29a618d0feeffbdc7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 30bb8f096384dd9f76e208fbd3dbef73cf53bb33
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61229037"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67558703"
 ---
 # <a name="watchos-image-controls-in-xamarin"></a>Controles de imagen en Xamarin de watchOS
 
@@ -132,4 +132,4 @@ La memoria caché unos 20 MB de tamaño. Se mantiene entre reinicios de aplicaci
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [WatchKitCatalog (ejemplo)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [Documento de imagen de Apple](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/Images.html)
+- [Documento de imagen de Apple](https://developer.apple.com/documentation/watchkit/wkinterfaceimage)

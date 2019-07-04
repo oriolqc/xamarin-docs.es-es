@@ -1,18 +1,18 @@
 ---
 title: Empezar a trabajar con iOS 13, iPadOS 13, 13 de tvOS y watchOS 6
-description: Este documento describe cómo configurar hasta las compilación iOS 13, iPadOS 13, 13 de tvOS y watchOS 6 aplicaciones con Xamarin. Describe cómo descargar Xcode 11 y actualizar Visual Studio para Mac y Visual Studio de 2019.
+description: Este documento describe cómo configurar hasta las compilación iOS 13, iPadOS 13, 13 de tvOS y watchOS 6 aplicaciones con Xamarin. Describe cómo descargar Xcode 11 y actualizar Visual Studio para Mac.
 ms.prod: xamarin
 ms.assetid: 97414545-85D2-433C-9246-63B6763F488A
 ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
 ms.date: 07/01/2019
-ms.openlocfilehash: d2bb69394d8e9bfeb949a734291179a3e6f5a495
-ms.sourcegitcommit: a6ba6ed086bcde4f52fb05f83c59c68e8aa5e436
+ms.openlocfilehash: 554cddf5717401f912cab38c78a6af17659a0cf7
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: MT
 ms.contentlocale: es-ES
 ms.lasthandoff: 07/03/2019
-ms.locfileid: "67540441"
+ms.locfileid: "67558682"
 ---
 # <a name="get-started-with-ios-13"></a>Introducción a iOS 13
 
@@ -44,3 +44,4 @@ Este documento describe cómo empezar a crear aplicaciones de Xamarin que requie
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Descargar Xcode](https://developer.apple.com/download/)
+- [Notas de la versión preliminar de Xamarin.iOS](/xamarin/ios/release-notes/12/12.99)
