@@ -8,7 +8,7 @@ ms.author: laobri
 ms.date: 04/02/2019
 ms.openlocfilehash: b962390d5a5a365ada93d1778e3efb65839f41c5
 ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61188860"
@@ -34,7 +34,7 @@ La barra de herramientas en la parte superior de la ventana del simulador contie
 
 - **Inicio** : simula el botón Inicio de un dispositivo iOS.
 - **Bloqueo** : bloquea el simulador (pasar el dedo para desbloquear).
-- **Captura de pantalla** : guarda una captura de pantalla del simulador (se almacena en **Pictures\Xamarin\Simulador de iOS\\**).
+- **Captura de pantalla** – guarda una captura de pantalla del simulador (almacenados en **Pictures\Xamarin\iOS simulador\\** ).
 - [**Configuración** ](#settings) : muestra el teclado, ubicación y otras opciones.
 - [**Otras opciones** ](#other-options) : abrirá varias opciones del simulador, como rotación, gestos de agitar y Touch Id.
 
@@ -44,7 +44,7 @@ La barra de herramientas en la parte superior de la ventana del simulador contie
 
 Al hacer clic en el icono de engranaje de la barra de herramientas, se abre la ventana de **configuración**:
 
-[![Ventana de configuración del simulador de iOS](images/settings-sml.png "Ventana de configuración del simulador de iOS")](images/settings.png#lightbox)
+[![Configuración del simulador de iOS](images/settings-sml.png "Configuración del simulador de iOS")](images/settings.png#lightbox)
 
 Estas opciones permiten habilitar el teclado de hardware, elegir una ubicación que el dispositivo debe notificar (se admiten ubicaciones estáticas y móviles), habilitar Touch ID y restablecer el contenido y la configuración del simulador.
 
@@ -52,7 +52,7 @@ Estas opciones permiten habilitar el teclado de hardware, elegir una ubicación 
 
 El botón de puntos suspensivos de la barra de herramientas muestra otras opciones, como la rotación, gestos de agitar y el reinicio del sistema. Estas mismas opciones pueden verse como una lista haciendo clic con el botón derecho en cualquier lugar de la ventana del simulador:
 
-[![Configuración del simulador de iOS](images/settings-sml.png "Configuración del simulador de iOS")](images/settings.png#lightbox)
+[![Configuración adicional del simulador de iOS](images/more-sml.png "Configuración adicional del simulador de iOS")](images/more.png#lightbox)
 
 ## <a name="touchscreen-support"></a>Compatibilidad con pantalla táctil
 
