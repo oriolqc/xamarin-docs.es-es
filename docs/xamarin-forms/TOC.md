@@ -231,6 +231,7 @@
 #### [Zoom de WebView](platform/android/webview-zoom-controls.md)
 ### [Clase de dispositivo](platform/device.md)
 ### [iOS](platform/ios/index.md)
+#### [Accessibility Scaling for Named Font Sizes](platform/ios/named-font-size-scaling.md) (Escalado de accesibilidad para tamaños de fuente con nombre)
 #### [Color de fondo de celda](platform/ios/cell-background-color.md)
 #### [Color del cursor de entrada](platform/ios/entry-cursor-color.md)
 #### [Tamaño de la fuente de entrada](platform/ios/entry-font-size.md)

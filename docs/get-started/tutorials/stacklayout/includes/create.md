@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8957a75ac693874bfbea738d17fbdd7e013c3199
-ms.sourcegitcommit: a153623a69b5cb125f672df8007838afa32e9edf
+ms.openlocfilehash: 4ea10a3cc4eca0708d1de1aee68bed74c960cbc2
+ms.sourcegitcommit: 8ecfa339d0f3e7687977bfe4fc96448942690183
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67277458"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67560022"
 ---
 # <a name="visual-studiotabvswin"></a>[Visual Studio](#tab/vswin)
 
@@ -79,3 +79,8 @@ Para completar este tutorial debe tener instalado Visual Studio para Mac (versi�
     [![Captura de pantalla de vistas secundarias en un elemento StackLayout en iOS y Android](../images/create-stacklayout.png "Elemento StackLayout que contiene instancias de etiquetas")](../images/create-stacklayout-large.png#lightbox "Elemento StackLayout que contiene instancias de etiquetas")
 
     Para obtener más información sobre [`StackLayout`](xref:Xamarin.Forms.StackLayout), vea [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md).
+
+-----
+
+> [!div class="nextstepaction"]
+> [Encontré un problema](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+1+Feedback&template=tutorial_template.md)
