@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
-ms.openlocfilehash: a667f952eead5bed8305f4c9f4201fd6235b883a
-ms.sourcegitcommit: 66682dd8e93c0e4f5dee69f32b5fc5a96443e307
+ms.openlocfilehash: ee8d6966b9eac2dad6a36c215bf7aa5bdf79a867
+ms.sourcegitcommit: 0fd04ea3af7d6a6d6086525306523a5296eec0df
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/08/2018
-ms.locfileid: "35239976"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67512996"
 ---
 # <a name="xamarinforms-control-templates"></a>Plantillas de control de Xamarin.Forms
 
@@ -22,7 +22,7 @@ _Las plantillas de control proporcionan una separación clara entre el aspecto d
 
 Las plantillas de control de Xamarin.Forms permiten crear y cambiar fácilmente el tema de las páginas de la aplicación en tiempo de ejecución. En este artículo se proporciona una introducción a las plantillas de control.
 
-## <a name="creating-a-controltemplatecreatingmd"></a>[Crear una plantilla de control](creating.md)
+## <a name="create-a-controltemplatecreatingmd"></a>[Creación de una clase ControlTemplate](creating.md)
 
 Las plantillas de control pueden definirse en el nivel de aplicación o en el nivel de página. En este artículo se explica cómo crear y consumir plantillas de control.
 
