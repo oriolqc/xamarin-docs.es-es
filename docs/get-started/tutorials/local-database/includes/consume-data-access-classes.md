@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7fbd2a81c30726bc6c38586186e9334ddd4ea282
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 27a3393e6eda9f26ea15003edc5022246ff4deff
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61193342"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67659905"
 ---
 En este ejercicio, creará una interfaz de usuario para consumir las clases de acceso a datos creadas anteriormente.
 
@@ -76,7 +76,7 @@ En este ejercicio, creará una interfaz de usuario para consumir las clases de a
 
     [![Captura de pantalla de la persistencia de datos de la base de datos local SQLite.NET, en iOS y Android](../images/consume-data-access-classes.png "Persistencia de datos de la base de datos local")](../images/consume-data-access-classes-large.png#lightbox "Persistencia de datos de la base de datos local")
 
-    Para obtener más información sobre las bases de datos locales en Xamarin.Forms, consulte la guía [Bases de datos locales de Xamarin.Forms](~/xamarin-forms/app-fundamentals/databases.md).
+    Para obtener más información sobre las bases de datos locales en Xamarin.Forms, consulte la guía [Bases de datos locales de Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md).
 
 # <a name="visual-studio-for-mactabvsmac"></a>[Visual Studio para Mac](#tab/vsmac)
 
@@ -146,4 +146,4 @@ En este ejercicio, creará una interfaz de usuario para consumir las clases de a
 
     [![Captura de pantalla de la persistencia de datos de la base de datos local SQLite.NET, en iOS y Android](../images/consume-data-access-classes.png "Persistencia de datos de la base de datos local")](../images/consume-data-access-classes-large.png#lightbox "Persistencia de datos de la base de datos local")
 
-    Para obtener más información sobre las bases de datos locales en Xamarin.Forms, consulte la guía [Bases de datos locales de Xamarin.Forms](~/xamarin-forms/app-fundamentals/databases.md).
+    Para obtener más información sobre las bases de datos locales en Xamarin.Forms, consulte la guía [Bases de datos locales de Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md).
