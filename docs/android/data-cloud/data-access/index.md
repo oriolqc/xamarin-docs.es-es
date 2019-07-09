@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 08720734de73af12d8a7383fa7d523dc350c4462
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6858e290d93007d6054ba0ef63dce86e6e2e53e3
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61011360"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649618"
 ---
 # <a name="xamarinandroid-data-access"></a>Acceso a datos de Xamarin.Android
 
@@ -35,7 +35,7 @@ La mayoría del código en esta sección es completamente multiplataforma y se e
 
 Ambas soluciones de ejemplo contienen proyectos de aplicación de ejemplo de Android y iOS.
 
-Para las aplicaciones de Xamarin.Forms, lea [trabajar con bases de datos](~/xamarin-forms/app-fundamentals/databases.md) que explica cómo trabajar con SQLite en una biblioteca PCL con Xamarin.Forms.
+Para las aplicaciones de Xamarin.Forms, lea [trabajar con bases de datos](~/xamarin-forms/data-cloud/data/databases.md) que explica cómo trabajar con SQLite en una biblioteca PCL con Xamarin.Forms.
 
 Los temas de esta sección describen el acceso a datos en Xamarin.Android usa SQLite como el motor de base de datos. Se puede tener acceso a la base de datos "directamente" mediante la sintaxis ADO.NET o puede incluir el SQLite.NET ORM y realizar operaciones de datos en C#.
 
@@ -49,4 +49,4 @@ Para obtener ejemplos adicionales de acceso a datos multiplataforma, consulte nu
 - [DataAccess Basic (ejemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avanzada (ejemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Recetas de datos de Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Acceso a datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/databases.md)
+- [Acceso a datos de Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)

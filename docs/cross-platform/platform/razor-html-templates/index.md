@@ -1,27 +1,27 @@
 ---
 title: Vistas HTML de creación mediante plantillas de Razor
-description: " Uso de una página Web de pantalla completa para representar HTML puede ser una manera sencilla y eficaz para representar formatos complejos de forma multiplataforma, especialmente si ya tiene el HTML, Javascript y CSS de un proyecto de sitio Web."
+description: " Uso de una página Web de pantalla completa para representar HTML puede ser una manera sencilla y eficaz para representar formatos complejos de forma multiplataforma, especialmente si ya tiene el HTML, JavaScript y CSS de un proyecto de sitio Web."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
 author: asb3993
 ms.author: amburns
 ms.date: 07/24/2018
-ms.openlocfilehash: 7e569aaddef912d9534e98f2f987ad5dfca8a5a6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 539f59b9835cab6281327bcd1a37482ef82b62cc
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61168079"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650175"
 ---
 # <a name="building-html-views-using-razor-templates"></a>Vistas HTML de creación mediante plantillas de Razor
 
 En el mundo del desarrollo móvil el término "aplicación híbrida" suele hacer referencia a una aplicación que presenta algunas (o todas) de sus pantallas como páginas HTML dentro de un control de visor web hospedadas.
 
-Hay algunos entornos de desarrollo que permiten compilar su aplicación móvil completamente en HTML y Javascript, sin embargo, esas aplicaciones pueden sufrir problemas de rendimiento cuando se intenta llevar a cabo un procesamiento complejo o los efectos de la interfaz de usuario y están también limitados en la plataforma puede tener acceso a las características.
+Hay algunos entornos de desarrollo que permiten compilar su aplicación móvil completamente en HTML y JavaScript, sin embargo, esas aplicaciones pueden sufrir problemas de rendimiento cuando se intenta llevar a cabo un procesamiento complejo o los efectos de la interfaz de usuario y están también limitados en la plataforma puede tener acceso a las características.
 
-Xamarin ofrece lo mejor de ambos mundos, especialmente si se usa el motor de plantillas HTML de Razor. Tiene la flexibilidad necesaria para generar vistas HTML con plantilla entre plataformas que usan Javascript y CSS, pero también tienen acceso completo a la API de plataforma subyacente y procesamiento rápido con C# con Xamarin.
+Xamarin ofrece lo mejor de ambos mundos, especialmente si se usa el motor de plantillas HTML de Razor. Con Xamarin tiene la flexibilidad necesaria para generar vistas HTML con plantilla entre plataformas que usan JavaScript y CSS, pero también tienen acceso completo a las API de plataforma subyacente y rápida de procesamiento mediante C#.
 
-Este documento explica cómo usar el vistas HTML + Javascript + CSS que se pueden usar en las plataformas móviles con Xamarin de compilación del motor de plantillas de Razor.
+Este documento explica cómo usar el motor de plantillas de Razor para generar vistas HTML + JavaScript + CSS que se pueden usar en las plataformas móviles con Xamarin.
 
 ## <a name="using-web-views-programmatically"></a>Con vistas Web mediante programación
 
@@ -51,7 +51,7 @@ Mostrar HTML en un control WebView con Xamarin.Android se realiza en unas pocas 
 // webView is declared in an AXML layout file
 var webView = FindViewById<WebView> (Resource.Id.webView);
 
-// enable Javascript execution in your html view so you can provide "alerts" and other js
+// enable JavaScript execution in your html view so you can provide "alerts" and other js
 webView.SetWebChromeClient(new WebChromeClient());
 
 var html = "<html><h1>Hello</h1><p>World</p></html>";
@@ -104,7 +104,7 @@ Debe ser la acción de compilación para todos los archivos de contenido estáti
 
  ![Acción de compilación del proyecto de Android: AndroidAsset](images/image4_250x71.png)
 
-### <a name="calling-c-from-html-and-javascript"></a>Llamar a C# desde HTML y Javascript
+### <a name="calling-c-from-html-and-javascript"></a>Una llamada a C# de HTML y JavaScript
 
 Cuando se carga una página html en una vista web, trata los formularios y los vínculos como si se cargó la página desde un servidor. Esto significa que si el usuario hace clic en un vínculo o envía un formulario de la vista web intentará navegue hasta el destino especificado.
 
@@ -127,7 +127,7 @@ Las acciones del formulario siguen la misma regla.
 <form method="get" action="somepage.html"></form>
 ```
 
-No va a hospedar un servidor web en el cliente; Sin embargo, puede usar las mismas técnicas de comunicación de servidor empleadas en patrones de diseño dinámico de hoy en día para llamar a los servicios a través de HTTP GET y administrar las respuestas de forma asincrónica mediante la emisión de Javascript (o Javascript que realiza la llamada ya hospedado en la vista web). Esto le permite pasar fácilmente los datos desde el código HTML en código C# para el procesamiento, a continuación, para mostrar de nuevo los resultados en la página HTML.
+No va a hospedar un servidor web en el cliente; Sin embargo, puede usar las mismas técnicas de comunicación de servidor empleadas en patrones de diseño dinámico de hoy en día para llamar a los servicios a través de HTTP GET y administrar las respuestas de forma asincrónica mediante la emisión de JavaScript (o JavaScript que realiza la llamada ya hospedado en la vista web). Esto le permite pasar fácilmente los datos desde el código HTML en código C# para el procesamiento, a continuación, para mostrar de nuevo los resultados en la página HTML.
 
 IOS y Android proporcionan un mecanismo para el código de aplicación interceptar estos eventos de navegación para que el código de la aplicación puede responder (si es necesario). Esta característica es fundamental para crear aplicaciones híbridas, ya que permite código nativo interactuar con la vista web.
 
@@ -167,13 +167,13 @@ y, a continuación, establezca al cliente en la vista web:
 webView.SetWebViewClient (new HybridWebViewClient ());
 ```
 
-### <a name="calling-javascript-from-c"></a>Llamar a Javascript desde C#
+### <a name="calling-javascript-from-c"></a>Una llamada a JavaScript desdeC#
 
-Además de indicar a una vista web para cargar una nueva página HTML, código de C# también puede ejecutar Javascript dentro de la página mostrada actualmente. Bloques de código completos de Javascript se pueden crear mediante cadenas de C# y ejecuta, o puede elaborar llamadas de método a ya está disponible en la página a través de Javascript `script` etiquetas.
+Además de indicando una vista web para cargar una nueva página HTML, C# código también puede ejecutar JavaScript dentro de la página mostrada actualmente. Bloques de código completos de JavaScript se pueden crear mediante C# cadenas y se ejecuta, o puede crear llamadas de método a ya está disponible en la página a través de JavaScript `script` etiquetas.
 
 #### <a name="android"></a>Android
 
-Crear el código Javascript para ejecutarse y, a continuación, un prefijo con "javascript:" y dar instrucciones a la vista web para cargar esa cadena:
+Crear el código JavaScript para ejecutarse y, a continuación, un prefijo con "javascript:" y dar instrucciones a la vista web para cargar esa cadena:
 
 ```csharp
 var js = "alert('test');";
@@ -182,7 +182,7 @@ webView.LoadUrl ("javascript:" + js);
 
 #### <a name="ios"></a>iOS
 
-vistas de iOS web proporcionan un método específicamente para llamar a Javascript:
+vistas de iOS web proporcionan un método específicamente para llamar a JavaScript:
 
 ```csharp
 var js = "alert('test');";
@@ -194,9 +194,9 @@ webView.EvaluateJavascript (js);
 Esta sección presenta las características de los controles de vista web en Android y iOS que nos permiten crear aplicaciones híbridas con Xamarin, incluyendo:
 
 -  La capacidad para cargar el HTML de cadenas que se genera en el código,
--  La capacidad de hacer referencia a archivos locales (CSS, Javascript, imágenes u otros archivos HTML)
+-  La capacidad de hacer referencia a archivos locales (CSS, JavaScript, imágenes u otros archivos HTML)
 -  La capacidad de interceptar las solicitudes de navegación en el código de C#
--  La capacidad de llamar a Javascript desde el código de C#.
+-  La posibilidad de llamar a JavaScript desde C# código.
 
 
 La siguiente sección presenta Razor, que facilita la tarea crear el código HTML para usar en aplicaciones híbridas.
@@ -205,7 +205,7 @@ La siguiente sección presenta Razor, que facilita la tarea crear el código HTM
 
 Razor es un motor de plantillas que se introdujo con ASP.NET MVC, originalmente para ejecutarse en el servidor y generar HTML para proporcionarse a los exploradores web.
 
-El motor de plantillas Razor amplía la sintaxis HTML estándar con C# para que puede expresar la distribución e incorporar fácilmente de las hojas de estilo CSS y Javascript. La plantilla puede hacer referencia a una clase de modelo, que puede ser cualquier tipo personalizado y cuyas propiedades se pueden acceder directamente desde la plantilla. Una de sus principales ventajas es la capacidad de mezclar la sintaxis HTML y C# con facilidad.
+El motor de plantillas Razor amplía la sintaxis HTML estándar con C# para que pueda expresar la distribución e incorporar fácilmente de las hojas de estilo CSS y JavaScript. La plantilla puede hacer referencia a una clase de modelo, que puede ser cualquier tipo personalizado y cuyas propiedades se pueden acceder directamente desde la plantilla. Una de sus principales ventajas es la capacidad de mezclar la sintaxis HTML y C# con facilidad.
 
 Plantillas de Razor no se limitan a uso del lado servidor, también pueden incluirse en las aplicaciones de Xamarin. Uso de plantillas de Razor junto con la capacidad para trabajar con vistas web mediante programación permite a las aplicaciones híbridas multiplataforma sofisticada compilarse con Xamarin.
 
@@ -369,7 +369,7 @@ La salida de la plantilla anterior se muestra en ejecución en el emulador de An
 
  ![Rupert X Monkey](images/image9_520x277.png)
 
-En esta sección se ha descrito los aspectos básicos del uso de plantillas de Razor para representar vistas simples de solo lectura. La siguiente sección explica cómo crear aplicaciones más completas con Razor que pueden aceptar la entrada de usuario e interoperar entre Javascript en la vista HTML y C#.
+En esta sección se ha descrito los aspectos básicos del uso de plantillas de Razor para representar vistas simples de solo lectura. La siguiente sección explica cómo crear aplicaciones más completas con Razor que pueden aceptar la entrada de usuario e interoperar entre JavaScript en la vista HTML y C#.
 
 ## <a name="using-razor-templates-with-xamarin"></a>Uso de plantillas de Razor con Xamarin
 
@@ -391,7 +391,7 @@ El contenido de solución de plantilla predeterminado para iPhone y Android proy
 
  ![iPhone y Android plantillas](images/image10_428x310.png)
 
-Las plantillas proporcionan infraestructura de aplicación de lista para usar para cargar una plantilla de Razor con un objeto de modelo de datos, procesar la entrada de usuario y comunicarse con el usuario a través de Javascript.
+Las plantillas proporcionan infraestructura de aplicación de lista para usar para cargar una plantilla de Razor con un objeto de modelo de datos, procesar la entrada de usuario y comunicarse con el usuario a través de JavaScript.
 
 Las partes importantes de la solución son:
 
@@ -405,7 +405,7 @@ La siguiente sección explica cómo funcionan los proyectos.
 
 ### <a name="static-content"></a>Contenido estático
 
-El contenido estático incluye las hojas de estilo CSS, imágenes, archivos Javascript u otro contenido que se puede vincular desde o al que hace referencia un archivo HTML que se muestran en una vista web.
+El contenido estático incluye las hojas de estilo CSS, imágenes, archivos JavaScript u otro contenido que se puede vincular desde o al que hace referencia un archivo HTML que se muestran en una vista web.
 
 Los proyectos de plantilla incluyen una hoja de estilos mínima para demostrar cómo incluir contenido estático en la aplicación híbrida. Se hace referencia a la hoja de estilos CSS en la plantilla como esta:
 
@@ -413,11 +413,11 @@ Los proyectos de plantilla incluyen una hoja de estilos mínima para demostrar c
 <link rel="stylesheet" href="style.css" />
 ```
 
-Puede agregar cualquier hoja de estilos y archivos de Javascript que necesita, incluidos los marcos, como JQuery.
+Puede agregar cualquier hoja de estilos y archivos de JavaScript que necesita, incluidos los marcos, como JQuery.
 
 ### <a name="razor-cshtml-templates"></a>Razor cshtml plantillas
 
-La plantilla incluye un Razor **.cshtml** archivo que previamente se ha escrito el código para facilitar la comunicación de datos entre el HTML/Javascript y C#. Esto le permitirá realizar una copia de aplicaciones híbridas sofisticados que no sólo mostrar datos de solo lectura desde el modelo, pero también acepta la entrada del usuario en el código HTML y pasarlo al código de C# para su procesamiento o almacenamiento de compilación.
+La plantilla incluye un Razor **.cshtml** archivo que previamente se ha escrito el código para facilitar la comunicación de datos entre el HTML/JavaScript y C#. Esto le permitirá realizar una copia de aplicaciones híbridas sofisticados que no sólo mostrar datos de solo lectura desde el modelo, pero también acepta la entrada del usuario en el código HTML y pasarlo al código de C# para su procesamiento o almacenamiento de compilación.
 
 #### <a name="rendering-the-template"></a>La plantilla de representación
 
@@ -435,7 +435,7 @@ Puede verse un ejemplo de cómo se controla el botón de RazorView. El botón ti
 <input type="button" name="UpdateLabel" value="Click" onclick="InvokeCSharpWithFormValues(this)" />
 ```
 
-El `InvokeCSharpWithFormValues` función Javascript lee todos los valores desde el formulario HTML y establece el `location.href` para la vista web:
+El `InvokeCSharpWithFormValues` función JavaScript lee todos los valores desde el formulario HTML y establece el `location.href` para la vista web:
 
 ```javascript
 location.href = "hybrid:" + elm.name + "?" + qs;
@@ -467,13 +467,13 @@ Después de controlar la dirección URL, el método anula el panel de navegació
 
 #### <a name="manipulating-the-template-from-c"></a>Manipulación de la plantilla de C#
 
-Comunicación con una vista web HTML procesada desde C# se realiza mediante una llamada a Javascript en la vista web. En iOS, esto se realiza mediante una llamada a `EvaluateJavascript` en el UIWebView:
+Comunicación con una vista web HTML representada de C# se realiza mediante una llamada a JavaScript en la vista web. En iOS, esto se realiza mediante una llamada a `EvaluateJavascript` en el UIWebView:
 
 ```csharp
 webView.EvaluateJavascript (js);
 ```
 
-En Android, Javascript se puede invocar en la vista web al cargar el código de Javascript como una dirección URL mediante el `"javascript:"` esquema de dirección URL:
+En Android, JavaScript se puede invocar en la vista web al cargar el código de JavaScript como una dirección URL mediante el `"javascript:"` esquema de dirección URL:
 
 ```csharp
 webView.LoadUrl ("javascript:" + js);
@@ -483,7 +483,7 @@ webView.LoadUrl ("javascript:" + js);
 
 Estas plantillas no hace uso de controles nativos en cada plataforma, toda la pantalla se rellena con una vista web única.
 
-HTML puede ser muy útil para la creación de prototipos y mostrar los tipos de elementos web es mejor como texto enriquecido y el diseño dinámico. Sin embargo, no todas las tareas se ajustan a HTML y Javascript, desplazarse a través de las listas largas de datos, por ejemplo, realiza mejor mediante los controles de interfaz de usuario nativos como (UITableView de iOS) o ListView en Android.
+HTML puede ser muy útil para la creación de prototipos y mostrar los tipos de elementos web es mejor como texto enriquecido y el diseño dinámico. Sin embargo, no todas las tareas se ajustan a HTML y JavaScript, desplazarse a través de las listas largas de datos, por ejemplo, realiza mejor mediante los controles de interfaz de usuario nativos como (UITableView de iOS) o ListView en Android.
 
 Las vistas web en la plantilla pueden ampliarse fácilmente con controles específicos de la plataforma: basta con Editar la **MainStoryboard.storyboard** en el Diseñador de iOS o la **Resources/layout/Main.axml** en Android.
 

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/08/2018
-ms.openlocfilehash: 7ecf7244fb2ccbe0e4163c89941f9de5138ba713
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 10b5a1696b0416bfda115627f7c7b8c2fbd20fcb
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61018540"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67649583"
 ---
 # <a name="using-adonet-with-android"></a>Uso de ADO.NET con Android
 
@@ -61,7 +61,7 @@ using (var command = connection.CreateCommand ()) {
 }
 ```
 
-Cuando se ejecuta SQL directamente en la base de datos debe tomar las precauciones normales no deben realizar las solicitudes no válidas, por ejemplo, si se intenta crear una tabla que ya existe. Realizar un seguimiento de la estructura de la base de datos para que no provocan una `SqliteException` como **ya existe la tabla de errores de SQLite [elementos]**.
+Cuando se ejecuta SQL directamente en la base de datos debe tomar las precauciones normales no deben realizar las solicitudes no válidas, por ejemplo, si se intenta crear una tabla que ya existe. Realizar un seguimiento de la estructura de la base de datos para que no provocan una `SqliteException` como **ya existe la tabla de errores de SQLite [elementos]** .
 
 ## <a name="basic-data-access"></a>Acceso a datos básicos
 
@@ -220,4 +220,4 @@ El `ExecuteScalar` es de tipo de valor devuelto del método `object` &ndash; deb
 - [DataAccess Basic (ejemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess avanzada (ejemplo)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [Recetas de datos de Android](https://github.com/xamarin/recipes/tree/master/Recipes/android/data)
-- [Acceso a datos de Xamarin.Forms](~/xamarin-forms/app-fundamentals/databases.md)
+- [Acceso a datos de Xamarin.Forms](~/xamarin-forms/data-cloud/data/databases.md)

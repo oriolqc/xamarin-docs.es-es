@@ -6,12 +6,12 @@ ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: afebe7f491855844e18bf054d665cf8d54e8f353
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b8edc0141807ead60170ec78b3f6348723ab8e18
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61183891"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650137"
 ---
 # <a name="introduction-to-web-services"></a>Introducción a los servicios web
 
@@ -19,7 +19,7 @@ _Esta guía muestra cómo consumir las tecnologías de servicios web diferente. 
 
 Para que funcione correctamente, muchas aplicaciones móviles son dependientes de la nube y, por lo que la integración de servicios web en aplicaciones móviles es un escenario común. La plataforma Xamarin admite el consumo de las tecnologías de servicios web diferente e incluye compatibilidad integrada y de terceros para consumir servicios RESTful, ASMX y Windows Communication Foundation (WCF).
 
-Para los clientes que usan Xamarin.Forms, hay ejemplos completos con cada una de estas tecnologías en la [servicios Web de Xamarin.Forms](~/xamarin-forms/data-cloud/index.md) documentación.
+Para los clientes que usan Xamarin.Forms, hay ejemplos completos con cada una de estas tecnologías en la [servicios Web de Xamarin.Forms](~/xamarin-forms/data-cloud/index.yml) documentación.
 
 > [!IMPORTANT]
 > En iOS 9, App Transport Security (ATS) exige que las conexiones seguras entre los recursos de internet (por ejemplo, el servidor back-end de la aplicación) y la aplicación, lo que impide la divulgación accidental de información confidencial.
@@ -47,7 +47,7 @@ La simplicidad de REST ha ayudado a hacer el método principal para tener acceso
 
 ## <a name="consuming-rest-services"></a>Consumo de servicios REST
 
-Hay una serie de bibliotecas y las clases que se pueden usar para consumir servicios REST y analizarlas en las subsecciones siguientes. Para obtener más información sobre cómo usar un servicio REST, consulte [consumir un servicio Web RESTful](~/xamarin-forms/data-cloud/consuming/rest.md).
+Hay una serie de bibliotecas y las clases que se pueden usar para consumir servicios REST y analizarlas en las subsecciones siguientes. Para obtener más información sobre cómo usar un servicio REST, consulte [consumir un servicio Web RESTful](~/xamarin-forms/data-cloud/web-services/rest.md).
 
 ### <a name="httpclient"></a>HttpClient
 
@@ -55,7 +55,7 @@ El [Microsoft HTTP Client Libraries](https://www.nuget.org/packages/Microsoft.Ne
 
 La `HttpResponseMessage` clase representa un mensaje de respuesta HTTP recibido del servicio web después de realizar una solicitud HTTP. Contiene información acerca de la respuesta, incluido el código de estado, los encabezados y cuerpo. El `HttpContent` clase representa el cuerpo HTTP y encabezados de contenido, como `Content-Type` y `Content-Encoding`. El contenido se puede leer utilizando cualquiera de los `ReadAs` métodos, como `ReadAsStringAsync` y `ReadAsByteArrayAsync`, dependiendo del formato de los datos.
 
-Para obtener más información sobre la `HttpClient` de clases, vea [crear el objeto HTTPClient](~/xamarin-forms/data-cloud/consuming/rest.md).
+Para obtener más información sobre la `HttpClient` de clases, vea [crear el objeto HTTPClient](~/xamarin-forms/data-cloud/web-services/rest.md).
 
 <a name="Using_HTTPWebRequest" />
 
@@ -329,7 +329,7 @@ Task Parallel Library (TPL) puede simplificar el proceso de consumo de un par de
 
 Para obtener más información acerca de APM, vea [modelo de programación asincrónica](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) y [TPL y la programación tradicional de .NET Framework asincrónicas](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) en MSDN.
 
-Para obtener más información sobre cómo usar un servicio de ASMX, consulte [consumir un servicio Web de ASP.NET (ASMX)](~/xamarin-forms/data-cloud/consuming/asmx.md).
+Para obtener más información sobre cómo usar un servicio de ASMX, consulte [consumir un servicio Web de ASP.NET (ASMX)](~/xamarin-forms/data-cloud/web-services/asmx.md).
 
 <a name="wcf" />
 
@@ -407,7 +407,7 @@ Task Parallel Library (TPL) puede simplificar el proceso de consumo de un par de
 
 Para obtener más información acerca de APM, vea [modelo de programación asincrónica](https://msdn.microsoft.com/library/ms228963(v=vs.110).aspx) y [TPL y la programación tradicional de .NET Framework asincrónicas](https://msdn.microsoft.com/library/dd997423(v=vs.110).aspx) en MSDN.
 
-Para obtener más información sobre cómo usar un servicio WCF, vea [consumir un servicio Web de Windows Communication Foundation (WCF)](~/xamarin-forms/data-cloud/consuming/wcf.md).
+Para obtener más información sobre cómo usar un servicio WCF, vea [consumir un servicio Web de Windows Communication Foundation (WCF)](~/xamarin-forms/data-cloud/web-services/wcf.md).
 
 <a name="Calling_a_WCF_Service_with_Transport_Security" />
 
@@ -445,6 +445,6 @@ Para obtener más información acerca de la autenticación básica HTTP, aunque 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Servicios Web en Xamarin.Forms](~/xamarin-forms/data-cloud/index.md)
+- [Servicios Web en Xamarin.Forms](~/xamarin-forms/data-cloud/index.yml)
 - [ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)
 - [BasicHttpBinding](https://msdn.microsoft.com/library/system.servicemodel.basichttpbinding.aspx)

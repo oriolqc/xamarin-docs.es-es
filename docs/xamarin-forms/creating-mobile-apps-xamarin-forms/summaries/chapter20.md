@@ -7,12 +7,12 @@ ms.assetid: D595862D-64FD-4C0D-B0AD-C1F440564247
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
-ms.openlocfilehash: 7d9630840983b36204214927136e0c9efe07d840
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cf870cebfdd29e679b767728d1bea723f9310b17
+ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61333725"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67650465"
 ---
 # <a name="summary-of-chapter-20-async-and-file-io"></a>Resumen del capítulo 20. E/S de archivo y Async
 
@@ -83,7 +83,7 @@ Sin embargo, si busca estos `System.IO` clases en una PCL de Xamarin.Forms, no e
 Esto significa que deberá usar el [ `DependencyService` ](xref:Xamarin.Forms.DependencyService) (primero se describe en [ **capítulo 9. Llamadas a API específicas de la plataforma** ](chapter09.md) para implementar la E/S de archivos.
 
 > [!NOTE]
-> Bibliotecas de clases portables se han reemplazado con las bibliotecas .NET Standard 2.0 y .NET Standard 2.0 es compatible con [ `System.IO` ](xref:System.IO) tipos para todas las plataformas de Xamarin.Forms. Ya no es necesario usar un `DependencyService` para la mayoría de las tareas de E/S de archivos. Consulte [manejo de archivos en Xamarin.Forms](~/xamarin-forms/app-fundamentals/files.md) un enfoque más moderno para E/S de archivos.
+> Bibliotecas de clases portables se han reemplazado con las bibliotecas .NET Standard 2.0 y .NET Standard 2.0 es compatible con [ `System.IO` ](xref:System.IO) tipos para todas las plataformas de Xamarin.Forms. Ya no es necesario usar un `DependencyService` para la mayoría de las tareas de E/S de archivos. Consulte [manejo de archivos en Xamarin.Forms](~/xamarin-forms/data-cloud/data/files.md) un enfoque más moderno para E/S de archivos.
 
 ### <a name="a-first-shot-at-cross-platform-file-io"></a>Un primer intento en E/S de archivos entre plataformas
 
@@ -173,4 +173,4 @@ El [ `WebRequest` ](xref:System.Net.WebRequest) clase usada en algunos ejemplos 
 
 - [Capítulo 20 de texto completo (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf)
 - [Capítulo 20 muestras](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
-- [Trabajar con archivos](~/xamarin-forms/app-fundamentals/files.md)
+- [Trabajar con archivos](~/xamarin-forms/data-cloud/data/files.md)
