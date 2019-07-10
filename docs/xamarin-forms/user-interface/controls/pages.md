@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/12/2016
-ms.openlocfilehash: 42cbc6f50da34cbbc594dfef1dec49619202c191
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: 7b99e876c666160bdfd4392915901ea6535e68e1
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741069"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674824"
 ---
 # <a name="xamarinforms-pages"></a>Páginas de Xamarin.Forms
 
@@ -22,7 +22,7 @@ _Las páginas de Xamarin.Forms representan pantallas de aplicaciones móviles mu
 
 Todos los tipos de página que se describen a continuación se derivan de Xamarin.Forms [ `Page` ](xref:Xamarin.Forms.Page) clase. Estos elementos visuales ocupan todos o la mayoría de la pantalla. Un `Page` objeto representa un `ViewController` en iOS y un `Page` en la plataforma Universal de Windows. En Android, cada página ocupa la pantalla como una `Activity`, pero las páginas de Xamarin.Forms son *no* `Activity` objetos.
 
-[ ![](pages-images/pages-sml.png "Los tipos de página de Xamarin.Forms")](pages-images/pages.png#lightbox "los tipos de página de Xamarin.Forms")
+[![](pages-images/pages-sml.png "Los tipos de página de Xamarin.Forms")](pages-images/pages.png#lightbox "los tipos de página de Xamarin.Forms")
 
 ## <a name="pages"></a>Páginas
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/09/2016
-ms.openlocfilehash: 009e061726f655999c08192b5839a5c962d35e24
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c30b5d0b3a02223a8808e57f5d0cdc5e7000e156
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61091490"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674883"
 ---
 # <a name="using-icloud-with-xamarinios"></a>Uso de iCloud con Xamarin.iOS
 
@@ -55,7 +55,7 @@ Para configurar correctamente una aplicación para tener acceso a iCloud:
 
 - **Agregue el identificador del contenedor a Entitlements.plist** -el formato de identificador del contenedor es `TeamID.BundleID`. Para obtener más información, consulte el [trabajar con derechos](~/ios/deploy-test/provisioning/entitlements.md) guía.
 
-- **Configurar las propiedades del proyecto** - en Info.plist archivo garantizar el **identificador de paquete** coincide con el **Id. de agrupación** conjunto cuando [creación de un identificador de aplicación ](~/ios/deploy-test/provisioning/capabilities/index.md); Firma de lote usa iOS un **perfil de aprovisionamiento** que contienen un identificador de aplicación con App Service, iCloud y **derechos personalizados** archivo seleccionado. Esto puede realizarse en Visual Studio en el panel de propiedades del proyecto.
+- **Configurar las propiedades del proyecto** - en Info.plist archivo garantizar el **identificador de paquete** coincide con el **Id. de agrupación** conjunto cuando [creación de un identificador de aplicación](~/ios/deploy-test/provisioning/capabilities/index.md); Firma de lote usa iOS un **perfil de aprovisionamiento** que contienen un identificador de aplicación con App Service, iCloud y **derechos personalizados** archivo seleccionado. Esto puede realizarse en Visual Studio en el panel de propiedades del proyecto.
 
 - **Habilitar iCloud en el dispositivo** : vaya a **configuración > iCloud** y asegúrese de que el dispositivo se ha iniciado sesión.
 Seleccionar y activar el **documentos y datos** opción.

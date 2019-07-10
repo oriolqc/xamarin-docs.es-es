@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: a35cb82f4f6d20e91f45a782c73d3ef811947c3a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 57a521df5fdede2bd92a6b1432f698c822a2b06f
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61284249"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674574"
 ---
 # <a name="introduction-to-android-wear"></a>Introducción a Android Wear
 
@@ -59,7 +59,7 @@ El modelo de navegación principal de desgaste es una serie de las tarjetas que 
 
 Wear también hace uso de botones de acción que se componen de una gran coloreados círculo con texto pequeño descripción debajo de ella (como se muestra anteriormente).  El [FilterUserControl](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/) ejemplo muestra cómo usar `GridViewPager` y `GridPagerAdapter` en una aplicación de desgaste.
 
-2.0 de Android Wear agrega un cajón de navegación, un cajón de acción y botones de acción en línea a la interfaz de usuario de desgaste. Para obtener más información sobre los elementos de interfaz de usuario de 2.0 de Android Wear, vea el Android [Anatomía](https://www.google.com/design/spec-wear/system-overview/anatomy.html) tema. 
+2\.0 de Android Wear agrega un cajón de navegación, un cajón de acción y botones de acción en línea a la interfaz de usuario de desgaste. Para obtener más información sobre los elementos de interfaz de usuario de 2.0 de Android Wear, vea el Android [Anatomía](https://www.google.com/design/spec-wear/system-overview/anatomy.html) tema. 
 
 
 
@@ -107,7 +107,7 @@ Después de haber creado su primera aplicación Wear, desea intentar compilar un
 
 ## <a name="android-wear-20"></a>Android Wear 2.0
 
-2.0 de Android Wear presenta una variedad de nuevas características y funcionalidades, tales como *complicaciones*, curvados diseños, cajones de navegación y la acción y las notificaciones expandidas. Además, Wear 2.0 hace posible para crear aplicaciones independientes que funcionan independientemente de las aplicaciones de dispositivo de mano. El nuevo *gestos muñeca* funcionalidad permite una sola mano interacciones con la aplicación. Las siguientes secciones resaltan estas características y proporcionan vínculos para ayudarle a empezar a trabajar con ellos en la aplicación.
+2\.0 de Android Wear presenta una variedad de nuevas características y funcionalidades, tales como *complicaciones*, curvados diseños, cajones de navegación y la acción y las notificaciones expandidas. Además, Wear 2.0 hace posible para crear aplicaciones independientes que funcionan independientemente de las aplicaciones de dispositivo de mano. El nuevo *gestos muñeca* funcionalidad permite una sola mano interacciones con la aplicación. Las siguientes secciones resaltan estas características y proporcionan vínculos para ayudarle a empezar a trabajar con ellos en la aplicación.
 
 
 
@@ -126,7 +126,7 @@ Además **Xamarin.Android.Wear**, le recomendamos que instale el **Xamarin.Googl
 
 ### <a name="key-features-of-wear-20"></a>Características clave de desgaste 2.0
 
-2.0 de Android Wear es la mayor actualización para Android Wear desde su lanzamiento inicial en 2014. Las secciones siguientes resaltan las características clave de 2.0 de Android Wear, y se proporcionan vínculos para ayudar a empezar a usar estas nuevas características en la aplicación. 
+2\.0 de Android Wear es la mayor actualización para Android Wear desde su lanzamiento inicial en 2014. Las secciones siguientes resaltan las características clave de 2.0 de Android Wear, y se proporcionan vínculos para ayudar a empezar a usar estas nuevas características en la aplicación. 
 
 
 #### <a name="complications"></a>Complicaciones
@@ -198,7 +198,7 @@ Revise la documentación de Google Android Wear:
 
 * [Acerca de Android Wear](http://www.android.com/wear/)
 * [Diseño de aplicaciones para Android Wear](https://developer.android.com/design/wear/index.html)
-* [biblioteca Android.support.wearable ](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
+* [biblioteca Android.support.wearable](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
 * [Android Wear 2.0](https://developer.android.com/wear/preview/index.html)
 
 

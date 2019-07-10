@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/11/2016
-ms.openlocfilehash: b251fa13c4b436a837f71b5362ae85dffd245092
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: fc316a9e6ab4261eaa956a987b47aeaf546344a2
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61408850"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675271"
 ---
 # <a name="using-urhosharp-in-xamarinforms"></a>Uso de UrhoSharp en Xamarin.Forms
 
@@ -218,7 +218,7 @@ selectedBarSlider = new Slider(0, 5, 2.5);
 selectedBarSlider.ValueChanged += OnValuesSliderValueChanged;
 ```
 
-Las animaciones en el [superior de la página](#) mostrar la ejecución del ejemplo.
+Las animaciones en el [superior de la página](#what-is-urhosharp) mostrar la ejecución del ejemplo.
 
 ## <a name="summary"></a>Resumen
 

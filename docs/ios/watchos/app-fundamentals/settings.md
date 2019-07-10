@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 36164e1e9f92b5a5520d10f769f3953cfa2ceb85
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a8fe2c2765676db52c23fd7c475f218f14697caf
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61413070"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675228"
 ---
 # <a name="working-with-watchos-settings-in-xamarin"></a>Trabajar con la configuración de Xamarin de watchOS
 
@@ -36,7 +36,7 @@ En el **aplicación de iPhone** en la solución (*no* la aplicación del reloj o
 
 3. Agregue una nueva clave `ApplicationGroupContainerIdentifier` a la **Root.plist** con el valor establecido para el grupo de aplicaciones que se haya configurado, (p ej. `group.com.xamarin.WatchSettings` en el ejemplo):
 
-   [ ![](settings-images/settings-appgroup-sml.png "Agregar una clave de ApplicationGroupContainerIdentifier a la Root.plist")](settings-images/settings-appgroup.png#lightbox)
+   [![](settings-images/settings-appgroup-sml.png "Agregar una clave de ApplicationGroupContainerIdentifier a la Root.plist")](settings-images/settings-appgroup.png#lightbox)
 
 4. Editar el **Settings-Watch.bundle/Root.plist** para contener las opciones que desee usar: el archivo de plantilla contiene un grupo.
   TextField, modificador para alternar y control deslizante de forma predeterminada (que puede eliminar y reemplazar con su propia configuración):

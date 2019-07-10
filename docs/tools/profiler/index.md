@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 15739ff191953e4730d44c6ad9f63dccb9a0017e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 327070f723aabf8d5d07f4f86580b69ffb5917a7
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61377172"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675282"
 ---
 # <a name="xamarin-profiler"></a>Generador de perfiles de Xamarin
 
@@ -176,7 +176,7 @@ Una vez se ha instalado la aplicación Xamarin Profiler puede encontrarse en el 
 
 Puede cargar *.mlpd* archivos en el Profiler, abra la aplicación independiente, seleccione **elegir destino** y cargar el archivo.
 
-Para obtener más información, consulte [generar archivos .mlpd ](~/tools/profiler/troubleshooting.md#gen_mlpd).
+Para obtener más información, consulte [generar archivos .mlpd](~/tools/profiler/troubleshooting.md#gen_mlpd).
 
 ## <a name="profiler-features"></a>Características de Profiler
 

@@ -7,16 +7,16 @@ ms.assetid: 1D90E0B3-A3A8-4286-BC54-9D67188A1C6C
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/03/2018
-ms.openlocfilehash: 5d6cf6b36d4f454d3124a33ab9cb289e40e0e1ed
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ed80a423506f96972ddf80075379ed6e6dccd0a1
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61160620"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675130"
 ---
 # <a name="skiasharp-platform-specific-notes"></a>Notas específicas de la plataforma de SkiaSharp
 
-Los ejemplos siguientes asignación búferes de la imagen manualmente, esto se hace para ilustrar un patrón común de plataforma que se usa para dibujar en un búfer RBGA existente proporcionado por la plataforma.
+Los ejemplos siguientes asignación búferes de la imagen manualmente, esto se hace para ilustrar un patrón común de plataforma que se usa para dibujar en un búfer RGBA existente proporcionado por la plataforma.
 
 No es necesario usar esta expresión si no desea.  Hay una sobrecarga que se crean y administran el almacenamiento de respaldo para la imagen para usted.
 

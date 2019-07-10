@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: f957bd5b361d7287353542186916c7f934ee0490
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 9572a08a2403bf13d74fc5fda7c62ec1fb2d1537
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827784"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674704"
 ---
 # <a name="kitkat-features"></a>Características KitKat
 
@@ -689,7 +689,7 @@ Además de los cambios que se ha descrito anteriormente, KitKat le permite:
 -  *Pausar las animaciones* -pausar y reanudar animaciones creadas con el [`Animator`](https://developer.xamarin.com/api/type/Android.Animation.Animator/)
    clase.
 
--  *Leer dinámicamente cambiar texto* -denotan las partes de la interfaz de usuario que actualicen dinámicamente con nuevo texto como "las regiones activas" con la nueva [ `accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+-  *Leer dinámicamente cambiar texto* -denotan las partes de la interfaz de usuario que actualicen dinámicamente con nuevo texto como "las regiones activas" con la nueva [`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
    atributo para que el nuevo texto leerá automáticamente en modo de accesibilidad.
 
 -  *Mejorar la experiencia de Audio* -Make realiza un seguimiento más alto con la [`LoudnessEnhancer`](https://developer.xamarin.com/api/type/Android.Media.Audiofx.LoudnessEnhancer/)

@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/15/2018
-ms.openlocfilehash: c5a4247b2e10706014c9f92a487803e4a718c1a6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 09466cc9eed4899ef0aa1198ff0aee5cd420e110
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60953757"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674632"
 ---
 # <a name="garbage-collection"></a>recolección de elementos no utilizados
 
@@ -151,7 +151,7 @@ Para minimizar la posibilidad de daños en la memoria, observe las siguientes di
 
 #### <a name="sharing-between-multiple-threads"></a>Uso compartido entre varios subprocesos
 
-Si el *Java o administrados* instancia puede compartirse entre varios subprocesos, *no debe ser `Dispose()`d.*, **nunca**. Por ejemplo, [`Typeface.Create()`](https://developer.xamarin.com/api/member/Android.Graphics.Typeface.Create/(System.String%2cAndroid.Graphics.TypefaceStyle)) 
+Si el *Java o administrados* instancia puede compartirse entre varios subprocesos, *no debe ser `Dispose()`d.* , **nunca**. Por ejemplo, [`Typeface.Create()`](https://developer.xamarin.com/api/member/Android.Graphics.Typeface.Create/(System.String%2cAndroid.Graphics.TypefaceStyle)) 
 puede devolver un *instancia almacenada en caché*. Si varios subprocesos proporcionan los mismos argumentos, obtendrá la *mismo* instancia. Por lo tanto, `Dispose()`ing de la `Typeface` instancia desde un subproceso puede invalidar otros subprocesos, lo que pueden dar lugar a `ArgumentException`desde `JNIEnv.CallVoidMethod()` (entre otros) porque se ha eliminado la instancia desde otro subproceso. 
 
 

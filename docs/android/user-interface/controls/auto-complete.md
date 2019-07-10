@@ -6,12 +6,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/31/2018
-ms.openlocfilehash: cf2221380e5ddbd8278cc2d387c6eb185d990c1a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bcbab6deddf5e1a4782cd382623f22281a0823e6
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61036556"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674849"
 ---
 # <a name="auto-complete"></a>Autocompletar
 
@@ -203,7 +203,7 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 -   [`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)
 -   [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
 
-*Las partes de esta página son modificaciones en función de trabajo creado y compartido por el Android Open Source Project y usarse de acuerdo con los términos descritos en el* 
- [ *licencia de atribución 2.5 de Creative Commons* ](http://creativecommons.org/licenses/by/2.5/) *. En este tutorial se basa en el* 
- [ *tutorial Android autocompletado*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
+*Las partes de esta página son modificaciones en función de trabajo creado y compartido por el Android Open Source Project y usarse de acuerdo con los términos descritos en el*
+[*licencia de atribución 2.5 de Creative Commons* ](http://creativecommons.org/licenses/by/2.5/) *. En este tutorial se basa en el*
+[*tutorial Android autocompletado*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
  *.*

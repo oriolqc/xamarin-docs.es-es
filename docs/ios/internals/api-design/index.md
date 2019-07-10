@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 9425b26b5cc8fcd9b8a80df422d932c96d52889b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5417050daa84197dd7dc2a270ae054a3a73fd3bc
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037491"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675078"
 ---
 # <a name="xamarinios-api-design"></a>Diseño de API de Xamarin.iOS
 
@@ -113,7 +113,7 @@ Para cada tipo que refleja un tipo no administrado, es posible obtener el objeto
 
 Mientras Mono proporcionará la recolección de elementos de todos los objetos, el `Foundation.NSObject` implementa el [System.IDisposable](xref:System.IDisposable) interfaz. Esto significa que puede liberar explícitamente los recursos de cualquier NSObject determinado sin tener que esperar a que el recolector de elementos no utilizados de puesta en marcha. Esto es importante cuando se usa NSObjects pesadas, por ejemplo, UIImages que podría almacenar punteros a bloques grandes de datos.
 
-Si el tipo se necesita realizar la finalización determinista, reemplace el [NSObject.Dispose(bool) método](xref:Foundation.NSObject.Dispose(System.Boolean)) el parámetro a Dispose es "bool disposing", y si establece en true, significa que se llama su método Dispose porque el usuario llamados explícitamente () de Dispose en el objeto. Si el valor es false, esto significa que el método Dispose (bool disposing) es que se llama desde el finalizador en el subproceso del finalizador. []()
+Si el tipo se necesita realizar la finalización determinista, reemplace el [NSObject.Dispose(bool) método](xref:Foundation.NSObject.Dispose(System.Boolean)) el parámetro a Dispose es "bool disposing", y si establece en true, significa que se llama su método Dispose porque el usuario llamados explícitamente () de Dispose en el objeto. Si el valor es false, esto significa que el método Dispose (bool disposing) es que se llama desde el finalizador en el subproceso del finalizador.
 
 
 ##### <a name="categories"></a>Categorías

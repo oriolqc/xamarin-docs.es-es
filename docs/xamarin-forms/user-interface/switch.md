@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 07/03/2019
-ms.openlocfilehash: ed2d41ea2d9add658d9f07469568a298cdf8de59
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 22a17f9a916d94a3a0f44a451512de43c943e95a
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649698"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675041"
 ---
 # <a name="xamarinforms-switch"></a>Conmutador de Xamarin.Forms
 
@@ -27,7 +27,7 @@ La siguiente captura de pantalla muestra un `Switch` en controlar su **en** y **
 El `Switch` control define dos propiedades:
 
 * [`OnColor`](xref:Xamarin.Forms.Switch.OnColor) es un `Color` que afecta a cómo el `Switch` está representado en el estado de alternancia, o **en**, estado.
-* [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) es un `boolean` valor que indica si la el `Switch` es **en**.
+* [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) es un `boolean` valor que indica si el `Switch` es **en**.
 
 Estas propiedades están respaldadas por un [ `BindableProperty` ](xref:Xamarin.Forms.BindableProperty) objeto, lo que significa el `Switch` puede cambiar el estilo y ser el destino de los enlaces de datos.
 
@@ -41,7 +41,7 @@ Un `Switch` se pueden crear instancias en XAML. Su `IsToggled` propiedad puede e
 <Switch IsToggled="true"/>
 ```
 
-Un "interruptor también puede crearse en el código:
+Un `Switch` también se pueden crear en el código:
 
 ```csharp
 Switch switch = new Switch { IsToggled = true };
