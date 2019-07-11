@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: c7a2d347970d4edfe713edab264647fb644ff74a
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: b9a5b70b46447ab6eb7143322dd0d2e5dc55200d
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112358"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675140"
 ---
 # <a name="apple-pay-capabilities-in-xamarinios"></a>Capacidades de Apple Pay en Xamarin.iOS
 
@@ -62,7 +62,7 @@ Gracias a los identificadores de comerciante, Apple Pay sabe que puede aceptar p
 
 3.  Escriba un nombre para el identificador de aplicación y asígnele un identificador de aplicación explícito:    
    
-    ![Pantalla de detalles del identificador de aplicación ](apple-pay-capabilities-images/image35.png)
+    ![Pantalla de detalles del identificador de aplicación](apple-pay-capabilities-images/image35.png)
 
 4.  En App Services (Servicios de aplicaciones), seleccione Apple Pay:    
   

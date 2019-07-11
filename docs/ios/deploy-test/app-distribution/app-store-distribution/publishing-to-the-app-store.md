@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/25/2018
-ms.openlocfilehash: a00b157940cfde8021b92004fe27a4d52bac5e0c
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: c81c84b8b32bdde6949918f3a31f171983007f39
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855164"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675224"
 ---
 # <a name="publishing-xamarinios-apps-to-the-app-store"></a>Publicación de aplicaciones Xamarin.iOS en el App Store
 
@@ -78,7 +78,7 @@ Para crear e instalar un perfil de aprovisionamiento del App Store, siga estos p
 
 1. Inicie sesión en el [Portal para desarrolladores de Apple](https://developer.apple.com/account/).
 2. En **Certificados, identificadores y perfiles**, seleccione **Perfiles de aprovisionamiento > Distribución**.
-3. Haga clic en el botón **+**, seleccione **App Store** y haga clic en **Continuar**.
+3. Haga clic en el botón **+** , seleccione **App Store** y haga clic en **Continuar**.
 4. Seleccione el **Identificador de aplicación** en la lista y haga clic en **Continuar**.
 5. Seleccione un certificado de firma y haga clic en **Continuar**.
 6. Escriba un **Nombre de perfil** y haga clic en **Continuar** para generar el perfil.
@@ -111,7 +111,7 @@ Los nuevos proyectos Xamarin.iOS se establecen automáticamente en las _configur
 
 11. Vaya a la pestaña **Firma del lote de iOS**. Si estas opciones no son editables, asegúrese de que esté seleccionado **Aprovisionamiento manual** en el archivo **Info.plist**.
 12. Asegúrese de que **Configuración** esté establecido en **Versión** y **Plataforma** en **iPhone**.
-13. Establezca **Identidad de firma** en **Distribución (automática)**.
+13. Establezca **Identidad de firma** en **Distribución (automática)** .
 14. Para **Perfil de aprovisionamiento**, seleccione el perfil de aprovisionamiento del App Store [creado anteriormente](#create-and-install-an-app-store-provisioning-profile).
 
     Las opciones de firma del lote del proyecto deberían parecerse a lo siguiente:
@@ -140,7 +140,7 @@ Los nuevos proyectos Xamarin.iOS se establecen automáticamente en las _configur
     Consulte también la guía [Mecanismos de compilación de iOS](~/ios/deploy-test/ios-build-mechanics.md), en la que se describe con más detalle la configuración de compilación.
 
 11. Vaya a la pestaña **Firma del lote de iOS**. Asegúrese de que **Configuración** esté establecido en **Versión** y **Plataforma** en **iPhone** y de que la opción **Aprovisionamiento manual** está seleccionada.
-12. Establezca **Identidad de firma** en **Distribución (automática)**.
+12. Establezca **Identidad de firma** en **Distribución (automática)** .
 13. Para **Perfil de aprovisionamiento**, seleccione el perfil de aprovisionamiento del App Store [creado anteriormente](#create-and-install-an-app-store-provisioning-profile).
 
     Las opciones de firma del lote del proyecto deberían parecerse a lo siguiente:
@@ -149,7 +149,7 @@ Los nuevos proyectos Xamarin.iOS se establecen automáticamente en las _configur
 
 14. Vaya a la pestaña **Opciones de IPA de iOS**.
 15. Asegúrese de que **Configuración** esté establecido en **Versión** y **Plataforma** en **iPhone**.
-16. Active la casilla **Compilar archivo de paquete de iTunes (IPA)**. Esta configuración hará que cada compilación de **versión** (ya que es la configuración seleccionada) genere un archivo .ipa. Este archivo se puede enviar a Apple para la publicación en el App Store.
+16. Active la casilla **Compilar archivo de paquete de iTunes (IPA)** . Esta configuración hará que cada compilación de **versión** (ya que es la configuración seleccionada) genere un archivo .ipa. Este archivo se puede enviar a Apple para la publicación en el App Store.
 
     > [!NOTE]
     > No hacen falta **metadatos de iTunes** ni **ilustraciones de iTunes** para las versiones del App Store. Para obtener más información, vea [Archivo iTunesMetadata.plist en aplicaciones Xamarin.iOS](~/ios/deploy-test/app-distribution/itunesmetadata.md) e [Ilustraciones de iTunes](~/ios/app-fundamentals/images-icons/app-icons.md#itunes-artwork).
@@ -179,7 +179,7 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
     ![Selección de configuración de compilación y plataforma](publishing-to-the-app-store-images/chooseConfig-m157.png "Selección de configuración de compilación y plataforma")
 
 2. En el menú **Compilación**, seleccione **Archive for Publishing** (Archivo para publicar).
-3. Una vez creado el archivo, se mostrará la vista **Archives (Archivos)**:
+3. Una vez creado el archivo, se mostrará la vista **Archives (Archivos)** :
 
     ![Vista de archivos](publishing-to-the-app-store-images/archives-m157.png "Vista de archivos")
 
@@ -248,7 +248,7 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
 
 4. Para buscar el archivo .ipa en el equipo Windows, haga clic con el botón derecho en el nombre del proyecto de Xamarin.iOS en el **Explorador de soluciones** de Visual Studio 2019 o Visual Studio 2017 y seleccione **Abrir la carpeta en el Explorador de archivos**. Después, en el **Explorador de archivos** de Windows que se acaba de abrir, vaya al subdirectorio **bin/iPhone/Release**. A menos que haya [personalizado la ubicación de salida del archivo .ipa](#customize-the-ipa-location), debería estar en este directorio.
 5. Para ver el archivo .ipa en el host de compilación de Mac, haga clic con el botón derecho en el nombre del proyecto de Xamarin.iOS en el **Explorador de soluciones** de Visual Studio 2019 o Visual Studio 2017 (en Windows) y seleccione **Mostrar archivo IPA en servidor de compilación**. Se abrirá una ventana del **Finder** en el host de compilación de Mac con el archivo .ipa seleccionado.
-6. En el host de compilación de Mac, abra el **cargador de aplicaciones**. En Xcode, seleccione **Xcode > Open Developer Tool (Abrir la herramienta para desarrolladores) > Application Loader (Cargador de aplicaciones)**.
+6. En el host de compilación de Mac, abra el **cargador de aplicaciones**. En Xcode, seleccione **Xcode > Open Developer Tool (Abrir la herramienta para desarrolladores) > Application Loader (Cargador de aplicaciones)** .
 
     > [!NOTE]
     > Para obtener más información sobre la herramienta, consulte la [documentación de Apple sobre Application Loader](https://help.apple.com/itc/apploader/#/apdS673accdb).
@@ -256,7 +256,7 @@ Con la configuración de compilación establecida correctamente y iTunes Connect
 7. Inicie sesión en el cargador de aplicaciones (tenga en cuenta que debe [crear una contraseña específica de la aplicación](https://support.apple.com/ht204397) para el identificador de Apple).
 8. Seleccione **Deliver Your App** (Entregar la aplicación) y haga clic en el botón **Elegir**:
 
-    ![Selección de Deliver Your App (Entregar la aplicación)](publishing-to-the-app-store-images/publishvs01.png "Selección de Deliver Your App (Entregar la aplicación)")
+    ![Seleccione Deliver Your App (Entregar la aplicación)](publishing-to-the-app-store-images/publishvs01.png "Seleccione Deliver Your App (Entregar la aplicación)")
 
 9. Seleccione el archivo .ipa que ha creado anteriormente y haga clic en **Aceptar**.
 10. Application Loader validará el archivo:
