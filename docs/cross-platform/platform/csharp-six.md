@@ -1,22 +1,25 @@
 ---
 title: C#Información general sobre características nuevas que 6
-description: La versión más reciente de la C# , versión 6, idioma sigue evolucionando el lenguaje para tener menos repetitivo, ha mejorado la claridad y coherencia más. ¿Sintaxis de inicialización más limpia, la capacidad de usar await en bloques catch/finally y el condicional de null? operador son especialmente útiles.
+description: La versión 6 de la C# idioma sigue evolucionando el lenguaje para tener menos código reutilizable, ha mejorado la claridad y coherencia más. ¿Sintaxis de inicialización más limpia, la capacidad de usar await en bloques catch/finally y el condicional de null? operador son especialmente útiles.
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.custom: xamu-video
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 1a261c009f105994ac0b9c84f3d0ac037c4a3517
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 0fd7f4e9972f7bf762a44c9edf30fa13f9d989bc
+ms.sourcegitcommit: 0845ed2daa65468b6fe12ac4e9386f3315d72f4d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978498"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67850949"
 ---
 # <a name="c-6-new-features-overview"></a>C#Información general sobre características nuevas que 6
 
-_La versión más reciente de la C# , versión 6, idioma sigue evolucionando el lenguaje para tener menos repetitivo, ha mejorado la claridad y coherencia más. ¿Sintaxis de inicialización más limpia, la capacidad de usar await en bloques catch/finally y el condicional de null? operador son especialmente útiles._
+_La versión 6 de la C# idioma sigue evolucionando el lenguaje para tener menos código reutilizable, ha mejorado la claridad y coherencia más. ¿Sintaxis de inicialización más limpia, la capacidad de usar await en bloques catch/finally y el condicional de null? operador son especialmente útiles._
+
+> [!NOTE]
+> Para obtener información acerca de la versión más reciente de la C# idioma, versión 7, consulte el artículo [novedades C# 7.0](/dotnet/csharp/whats-new/csharp-7)
 
 Este documento presenta las nuevas características de C# 6. Es totalmente compatible con el compilador mono y los desarrolladores empezar a usar las nuevas características en todas las plataformas de destino de Xamarin.
 
