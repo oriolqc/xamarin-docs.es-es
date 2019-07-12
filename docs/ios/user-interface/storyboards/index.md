@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: f24be635afcba181efcab85d81a984d93dae4bc8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 5c3c9714cb4d6cd077f898778f4388d63018fa00
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61429254"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831697"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a guiones gráficos en Xamarin.iOS
 
@@ -68,7 +68,7 @@ Hay diferentes tipos de transiciones, cada control lo sobre cómo se presenta un
 
 -  **Mostrar / Push** : una inserción segue agrega el controlador de vista a la pila de navegación. Se supone que el controlador de vista que se origina la inserción es parte del mismo controlador de navegación como el controlador de vista que se va a agregar a la pila. Esto hace lo mismo que `pushViewController` y se utiliza generalmente cuando hay alguna relación entre los datos en las pantallas. Mediante la inserción de segue le ofrece el lujo de tener una barra de navegación con un botón Atrás y título agregado a cada vista en la pila, lo que permite explorar en profundidad la navegación a través de la jerarquía de vistas.
 -  **Modal** : un segue modal crea una relación entre los controladores de vista de dos en el proyecto, con la opción de una transición animada que se muestran. El controlador de vista secundarios ocultará completamente el controlador de vista principal cuando se incluyen en la vista. A diferencia de una inserción de segue, que agrega un botón Atrás para nosotros; Cuando uso modal segue `DismissViewController` debe usarse con el fin de volver a la anterior controlador de vista.
--  **Personalizado** : cualquier custom segue puede crearse como una subclase de ` UIStoryboardSegue`.
+-  **Personalizado** : cualquier custom segue puede crearse como una subclase de `UIStoryboardSegue`.
 -  **Desenredo** : un desenredo segue puede usarse para navegar hacia atrás por una inserción o modal segue: por ejemplo, descartando el controlador de vista presenta de forma modal. Además, puede desenredar a través de no solo uno, pero una serie de inserción y modal objetos Segue y volver atrás varios pasos en la jerarquía de navegación con una sola acción de desenredo. Para aprender a usar una operación de desenredo segue en iOS, lea el [crear desenredo objetos Segue](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) receta.
 -  **Sourceless** : un sourceless segue indica la escena que contiene el controlador de vista inicial y, por tanto, la vista donde el usuario verán en primer lugar. Se representa mediante el objeto segue que se muestra a continuación:  
 
@@ -82,7 +82,7 @@ Cualquier aplicación que use las clases de tamaño también van a usar el nuevo
 
 [![](images/adaptivesegue.png "La lista desplegable de objetos Segue adaptable")](images/adaptivesegue.png#lightbox)
 
-|Segue|Descripción|
+|Segue|DESCRIPCIÓN|
 |--- |--- |
 |Mostrar|Esto es muy similar a una inserción de segue, pero tiene en cuenta el contenido de la pantalla.|
 |Mostrar detalles|Si la aplicación muestra una vista de maestro y detalles (por ejemplo, en un controlador de vista dividida en un iPad), el contenido reemplazará a la vista de detalle. Si la aplicación muestra el patrón o el detalle, el contenido reemplazará a la parte superior de la pila de controlador de vista.|
