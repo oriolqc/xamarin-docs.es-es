@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 232fcd1d369eba1daad170986f2e2c4c913a3649
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 816ec5c861b5889e1735eab6293ed10318c53644
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61307868"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831879"
 ---
 # <a name="debug-on-a-wear-device"></a>Depuración en un dispositivo Wear
 
@@ -77,7 +77,8 @@ Siga estos pasos para conectar el dispositivo de desgaste a su teléfono:
 
     Si el puerto 4444 no está disponible, puede usar cualquier puerto disponible al que se tiene acceso. 
 
-    **Nota**: Si reinicia Visual Studio o Visual Studio para Mac, debe ejecutar estos comandos para configurar una conexión al dispositivo Wear.
+    > [!NOTE]
+    > Si reinicia Visual Studio o Visual Studio para Mac, debe ejecutar estos comandos para configurar una conexión al dispositivo Wear.
 
 5.  Cuando el dispositivo Wear le solicite, confirme que permitan **ADB depuración**. En la aplicación Android Wear, debería ver el estado cambie a:
 

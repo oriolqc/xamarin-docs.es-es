@@ -1,19 +1,19 @@
 ---
-title: Una introducción a UrhoSharp
+title: Introducción a UrhoSharp
 description: Este documento describe la estructura básica de una aplicación de UrhoSharp y vínculos a diversas guías y aplicaciones de ejemplo que muestran el uso de UrhoSharp.
 ms.prod: xamarin
 ms.assetid: 18041443-5093-4AF7-8B20-03E00478EF35
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: a3e14ebca961e828fc578035adaca5ba2a809438
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 441a3cc19b4246fb2bdea54508142a894af5c051
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61288526"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832540"
 ---
-# <a name="an-introduction-to-urhosharp"></a>Una introducción a UrhoSharp
+# <a name="introduction-to-urhosharp"></a>Introducción a UrhoSharp
 
 ![Logotipo de UrhoSharp](introduction-images/urhosharp-icon.png)
 
@@ -24,19 +24,19 @@ Es un enlace de .NET para la [Urho3D](http://urho3d.github.io/) del motor y perm
 UrhoSharp es un motor de juego con una gran cantidad de funcionalidad de fábrica:
 
 - Representación de gráficos 3D eficaces
-- [Simulación de física](https://developer.xamarin.com/api/namespace/Urho.Physics/) (mediante la biblioteca de viñetas)
-- [Control de la escena](https://developer.xamarin.com/api/type/Urho.Scene/)
+- Simulación de física (con la biblioteca de viñetas)
+- Control de la escena
 - Compatibilidad con Async y await
-- [Acciones descriptivas API](https://developer.xamarin.com/api/namespace/Urho.Actions/)
-- [Integración 2D en escenas 3D](https://developer.xamarin.com/api/namespace/Urho.Urho2D/)
-- [Representación de fuentes con FreeType](https://developer.xamarin.com/api/type/Urho.Gui.FontFaceFreeType/)
-- [Funcionalidades de red de servidor y cliente](https://developer.xamarin.com/api/namespace/Urho.Network/)
-- [Importar una amplia gama de activos](https://developer.xamarin.com/api/namespace/Urho.Resources/) (con la biblioteca de activos abiertos)
-- [Malla de navegación y pathfinding](https://developer.xamarin.com/api/namespace/Urho.Navigation/) (mediante refundición/desvío)
-- [Generación de la forma convexa para detección de colisiones](https://developer.xamarin.com/api/type/Urho.Physics.CollisionShape/) (mediante StanHull)
-- [Reproducción de audio](https://developer.xamarin.com/api/namespace/Urho.Audio/) (con **libvorbis**)
+- Acciones descriptivas API
+- Integración 2D en escenas 3D
+- Representación de fuentes con FreeType
+- Funcionalidades de red de servidor y cliente
+- Importar una amplia gama de recursos (con abrir la biblioteca de activos)
+- Malla de navegación y pathfinding (mediante refundición/desvío)
+- Generación de la forma convexa para la detección de colisión (mediante StanHull)
+- Reproducción de audio (con **libvorbis**)
 
-## <a name="getting-started"></a>Introducción
+## <a name="get-started"></a>Introducción
 
 UrhoSharp cómodamente se distribuye como un [paquete NuGet](https://www.nuget.org/) y se puede agregar a su C# o F# proyectos cuyo destino es Windows, Mac, Android o iOS.  El paquete NuGet incluye las bibliotecas necesarias para ejecutar el programa, así como los recursos básicos (CoreData) utilizados por el motor.
 
@@ -44,7 +44,7 @@ UrhoSharp cómodamente se distribuye como un [paquete NuGet](https://www.nuget.o
 
 El paquete Urho puede utilizarse desde un proyecto específico de plataforma, o desde un proyecto de biblioteca de clases Portable, lo que permite reutilizar todo el código en todas las plataformas.  Esto significa que todo lo que tendría que hacer en cada plataforma es escribir el punto de entrada específicos de plataforma y, a continuación, transfiere el control al código compartido juegos.
 
-### <a name="samples"></a>Muestras
+### <a name="samples"></a>Ejemplos
 
 Puede obtener una idea de las capacidades de Urho abriendo en Visual Studio para Mac o Visual Studio desde la solución de ejemplo:
 
@@ -68,8 +68,7 @@ Mientras que los otros ejemplos muestran las propiedades individuales de cada ej
 
 ## <a name="basic-structure"></a>Estructura básica
 
-El juego debe subclase el [`Application`](https://developer.xamarin.com/api/type/Urho.Application/)
-clase, esto es donde configurará su juego (en el [ `Setup` ](https://developer.xamarin.com/api/member/Urho.Application.Setup/) método) e iniciar el juego (en el [ `Start` ](https://developer.xamarin.com/api/member/Urho.Application.Start) método).  A continuación, construir la interfaz de usuario principal.  Vamos a recorrer una pequeña muestra que muestra las API de configuración de una escena 3D, algunos elementos de interfaz de usuario y adjuntar un comportamiento simple a él.
+El juego debe subclase la `Application` (clase), esto es donde configurará su juego (en el `Setup` método) e iniciar el juego (en el `Start` método).  A continuación, construir la interfaz de usuario principal.  Vamos a recorrer una pequeña muestra que muestra las API de configuración de una escena 3D, algunos elementos de interfaz de usuario y adjuntar un comportamiento simple a él.
 
 ```csharp
 class MySample : Application {
@@ -157,11 +156,11 @@ helloText.SetFont(
 UI.Root.AddChild(helloText);
 ```
 
-El marco de interfaz de usuario está ahí para proporcionar una interfaz de usuario en el juego muy sencillo y funciona mediante la adición de nuevos nodos a la [ `UI.Root` ](https://developer.xamarin.com/api/property/Urho.Gui.UI.Root/) nodo.
+El marco de interfaz de usuario está ahí para proporcionar una interfaz de usuario en el juego muy sencillo y funciona mediante la adición de nuevos nodos a la `UI.Root` nodo.
 
 La segunda parte de nuestro configuraciones de ejemplo de la escena principal.  Esto implica a una serie de pasos, la creación de una escena 3D, crear un cuadro de 3D en la pantalla, agregar una luz, una cámara y un área de visualización.  Estos se describen con más detalle en la sección [escena, nodos, componentes y las cámaras](~/graphics-games/urhosharp/using.md#scenenodescomponentsandcameras).
 
-La tercera parte de nuestro ejemplo desencadena un par de acciones.  Las acciones son recetas que describen un efecto en particular y, una vez crean pueden ser ejecutadas por un nodo bajo demanda mediante una llamada a la [ `RunActionAsync` ](https://developer.xamarin.com/api/member/Urho.Node.RunActionsAsync) método en un `Node`.
+La tercera parte de nuestro ejemplo desencadena un par de acciones.  Las acciones son recetas que describen un efecto en particular y, una vez crean pueden ser ejecutadas por un nodo bajo demanda mediante una llamada a la `RunActionAsync` método en un `Node`.
 
 El cuadro con un efecto de rebote de escala de la primera acción y la segunda gira el cuadro para siempre:
 
@@ -170,7 +169,7 @@ await boxNode.RunActionsAsync(
     new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
 ```
 
-Lo anterior muestra cómo es la primera acción que creamos un [ `ScaleTo` ](https://developer.xamarin.com/api/type/Urho.Actions.ScaleTo/) acción, esto es simplemente una receta que indica que desea escalar un segundo hacia el valor de la propiedad de escala de un nodo.  Esta acción se ajusta a su vez en torno a una acción de entradas y salidas lenta, el [ `EaseBounceOut` ](https://developer.xamarin.com/api/type/Urho.Actions.EaseBounceInOut/) acción.  Las acciones de entradas y salidas lentas distorsionen la ejecución lineal de una acción y aplican un efecto, en este caso proporciona el efecto de rebote.
+Lo anterior muestra cómo es la primera acción que creamos un `ScaleTo` acción, esto es simplemente una receta que indica que desea escalar un segundo hacia el valor de la propiedad de escala de un nodo.  Esta acción se ajusta a su vez en torno a una acción de entradas y salidas lenta, el `EaseBounceOut` acción.  Las acciones de entradas y salidas lentas distorsionen la ejecución lineal de una acción y aplican un efecto, en este caso proporciona el efecto de rebote.
 Por lo tanto, nuestra receta podría escribirse como:
 
 ```csharp
@@ -190,4 +189,3 @@ El [uso de UrhoSharp](~/graphics-games/urhosharp/using.md) documento analizan lo
 ## <a name="copyrights"></a>Derechos de autor
 
 Esta documentación contiene contenido original de Xamarin Inc., pero buena ampliamente en la documentación de código abierto para el proyecto Urho3D y contiene las capturas de pantalla del proyecto Cocos2D.
-

@@ -6,12 +6,12 @@ ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 15b4154ad6e95aabb5e88784660a93bb53c0b252
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 7bea80c22f6931858d0629382f6882203dfd374f
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650204"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829944"
 ---
 # <a name="cross-platform-app-case-study-tasky"></a>Caso práctico de aplicación multiplataforma: Tasky
 
@@ -29,9 +29,9 @@ Es aconsejable crear un mapa de carreteras-lo que se desea lograr antes de comen
 
 Es el primer paso para diseñar una aplicación identificar las características deseadas. Puede tratarse de objetivos de alto nivel o detallada de casos de uso. Tasky tiene requisitos funcionales sencillo:
 
- -  Ver una lista de tareas
- -  Agregar, editar y eliminar tareas
- -  Establecer el estado de una tarea a 'done'
+-  Ver una lista de tareas
+-  Agregar, editar y eliminar tareas
+-  Establecer el estado de una tarea a 'done'
 
 Debe considerar el uso de características específicas de plataforma.  ¿Puede Tasky aprovechar el perímetro de iOS o Windows Phone Live Tiles? Incluso si no usa características específicas de plataforma en la primera versión, debe planear con antelación para asegurarse de que su negocio y capas de datos pueden adaptarse a ellos.
 
@@ -52,9 +52,9 @@ Saber qué datos necesitan almacenarse le ayudará a determinar qué mecanismo d
 
 Tasky necesita almacenar tres propiedades para cada 'TaskItem':
 
- -  **Nombre** : cadena
- -  **Notas de la** : cadena
- -  **Realiza** : booleano
+- **Nombre** : cadena
+- **Notas de la** : cadena
+- **Realiza** : booleano
 
  <a name="Core_Functionality" />
 
@@ -62,11 +62,11 @@ Tasky necesita almacenar tres propiedades para cada 'TaskItem':
 
 Considere la posibilidad de la API de la interfaz de usuario deberá consumir para cumplir los requisitos. Una lista de tareas pendientes requiere las siguientes funciones:
 
- -   **Muestra todas las tareas** : para mostrar la lista de la pantalla principal de todas las tareas disponibles
- -  **Obtener una tarea** : cuando se toca una fila de la tarea
- -  **Guardar una tarea** : cuando se edita una tarea
- -  **Eliminar una tarea** : cuando se elimina una tarea
- -  **Crear tarea vacía** : cuando se crea una nueva tarea
+- **Muestra todas las tareas** : para mostrar la lista de la pantalla principal de todas las tareas disponibles
+- **Obtener una tarea** : cuando se toca una fila de la tarea
+- **Guardar una tarea** : cuando se edita una tarea
+- **Eliminar una tarea** : cuando se elimina una tarea
+- **Crear tarea vacía** : cuando se crea una nueva tarea
 
 Para lograr la reutilización de código, se debe implementar esta API una vez en el *biblioteca de clases Portable*.
 
@@ -76,10 +76,10 @@ Para lograr la reutilización de código, se debe implementar esta API una vez e
 
 Una vez que haya acordado el diseño de la aplicación, tenga en cuenta cómo se podría implementar como una aplicación multiplataforma. Esto se convertirá en la arquitectura de la aplicación. Siguiendo las instrucciones de la [Building Cross-Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) documento, el código de aplicación debe ser interrumpido profundidad de las siguientes partes:
 
- -   **El código común** : un proyecto común que contiene código puedan volver a utilizar para almacenar los datos de la tarea; expone una clase de modelo y una API para administrar el almacenamiento y carga de datos.
- -   **Código específico de plataforma** – proyectos específicos de plataforma que implementan una interfaz de usuario nativa para cada sistema operativo, utilizando el código común como 'back-end'.
+- **El código común** : un proyecto común que contiene código puedan volver a utilizar para almacenar los datos de la tarea; expone una clase de modelo y una API para administrar el almacenamiento y carga de datos.
+- **Código específico de plataforma** – proyectos específicos de plataforma que implementan una interfaz de usuario nativa para cada sistema operativo, utilizando el código común como 'back-end'.
 
- [![](case-study-tasky-images/taskypro-architecture.png "Proyectos específicos de la plataforma de implementan una interfaz de usuario nativa para cada sistema operativo, utilizando el código común como el back-end")](case-study-tasky-images/taskypro-architecture.png#lightbox)
+[![](case-study-tasky-images/taskypro-architecture.png "Proyectos específicos de la plataforma de implementan una interfaz de usuario nativa para cada sistema operativo, utilizando el código común como el back-end")](case-study-tasky-images/taskypro-architecture.png#lightbox)
 
 Estas dos partes se describen en las secciones siguientes.
 
@@ -280,8 +280,8 @@ La capa de aplicación y capa de interfaz de usuario se implementan en este proy
 
 La capa de aplicación contiene clases específicas de la plataforma necesarias para los objetos expuestos por la PCL para la interfaz de usuario "enlazar". La aplicación específica de iOS tiene dos clases para ayudar a mostrar tareas:
 
- -   **EditingSource** : esta clase se utiliza para enlazar las listas de tareas a la interfaz de usuario. Dado que `MonoTouch.Dialog` se usó para la lista de tareas, es preciso implementar esta aplicación auxiliar para habilitar la funcionalidad de pasar el dedo para eliminar en el `UITableView` . Deslice el dedo para eliminar es habitual en iOS, pero no en Android o Windows Phone, por lo que el proyecto específico de iOS es el único que lo implementa.
- -   **TaskDialog** : esta clase se utiliza para enlazar una única tarea a la interfaz de usuario. Usa el `MonoTouch.Dialog` API de reflexión para "encapsular" la `TaskItem` objeto con una clase que contiene los atributos correctos para permitir que la pantalla de entrada se tiene el formato correcto.
+- **EditingSource** : esta clase se utiliza para enlazar las listas de tareas a la interfaz de usuario. Dado que `MonoTouch.Dialog` se usó para la lista de tareas, es preciso implementar esta aplicación auxiliar para habilitar la funcionalidad de pasar el dedo para eliminar en el `UITableView` . Deslice el dedo para eliminar es habitual en iOS, pero no en Android o Windows Phone, por lo que el proyecto específico de iOS es el único que lo implementa.
+- **TaskDialog** : esta clase se utiliza para enlazar una única tarea a la interfaz de usuario. Usa el `MonoTouch.Dialog` API de reflexión para "encapsular" la `TaskItem` objeto con una clase que contiene los atributos correctos para permitir que la pantalla de entrada se tiene el formato correcto.
 
 El `TaskDialog` clase utiliza `MonoTouch.Dialog` atributos para crear una pantalla basan en Propiedades de la clase. La clase tiene este aspecto:
 
@@ -389,9 +389,9 @@ Similar a la versión de iOS que vimos anteriormente, la capa de aplicación en 
 
 Capa de interfaz de usuario de la aplicación Android es una combinación de código y marcado XML.
 
- -   **Recursos y diseño** – diseños de pantalla y la fila de diseño que se implementan como archivos AXML de celda. Puede ser el AXML escrito a mano o dispuesto visualmente mediante el Diseñador de la interfaz de usuario de Xamarin para Android.
- -   **Los recursos/Drawable** : imágenes (iconos) y botón personalizado.
- -   **Las pantallas** : las subclases de la actividad que definen cada pantalla y su comportamiento. Une la interfaz de usuario con las clases de nivel de aplicación y la API comunes (`TaskItemManager`).
+- **Recursos y diseño** – diseños de pantalla y la fila de diseño que se implementan como archivos AXML de celda. Puede ser el AXML escrito a mano o dispuesto visualmente mediante el Diseñador de la interfaz de usuario de Xamarin para Android.
+- **Los recursos/Drawable** : imágenes (iconos) y botón personalizado.
+- **Las pantallas** : las subclases de la actividad que definen cada pantalla y su comportamiento. Une la interfaz de usuario con las clases de nivel de aplicación y la API comunes (`TaskItemManager`).
 
  <a name="Home_Screen" />
 

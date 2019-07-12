@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/08/2018
-ms.openlocfilehash: e37fd88f0d5fcf02ece0ae2f5e3164a507067e29
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 62b577393a498587ee2e2e899d20bfeec7988c4e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61034790"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832369"
 ---
 # <a name="siri-shortcuts-in-xamarinios"></a>Métodos abreviados de Siri de Xamarin.iOS
 
@@ -218,7 +218,7 @@ En el **OrderSoup** definición de la respuesta de la intención, tenga en cuent
 - Una respuesta **propiedades** puede usarse para personalizar el mensaje comunicado al usuario. El **OrderSoup** tiene intención respuesta **sopa** y **waitTime** propiedades.
 - El **plantillas de respuesta** especificar los distintos mensajes de aciertos y errores que se pueden usar para indicar el estado una vez completada la tarea de una intención.
 - El **éxito** debe activarse la casilla de verificación para las respuestas que indican el éxito.
- - El **OrderSoupIntent** respuesta correcta se usa el **sopa** y **waitTime** propiedades para proporcionar un mensaje descriptivo y útil que describe el orden de sopa cuándo estará listo.
+- El **OrderSoupIntent** respuesta correcta se usa el **sopa** y **waitTime** propiedades para proporcionar un mensaje descriptivo y útil que describe el orden de sopa cuándo estará listo.
 
 ### <a name="generating-code-for-the-custom-intent"></a>Generar el código de la intención personalizada
 

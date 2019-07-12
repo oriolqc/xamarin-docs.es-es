@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 03/01/2018
-ms.openlocfilehash: cdb75207bff3f15a54d0cdd90fa0833da9c145e6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d145a8a3cd8bc321f0fce76a8831fca681ad29a0
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61077974"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830575"
 ---
 # <a name="cardview"></a>CardView
 
@@ -174,8 +174,8 @@ Tenga en cuenta que estos atributos (excepto para el color de fondo) aceptan un 
 
 
 #### <a name="padding"></a>Relleno
-`
-CardView` ofrece cinco atributos de relleno para colocar el contenido dentro de la tarjeta. Puede establecerlas en su diseño XML o puede llamar a métodos análogos en el código:
+
+`CardView` ofrece cinco atributos de relleno para colocar el contenido dentro de la tarjeta. Puede establecerlas en su diseño XML o puede llamar a métodos análogos en el código:
 
 [![Diagrama de CardView atributos de relleno](card-view-images/05-padding-sml.png)](card-view-images/05-padding.png#lightbox)
 

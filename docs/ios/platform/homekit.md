@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 6793190fa3278455a00d7ea08ab52a643c369a35
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a5402bb3b10387644282301075f63644149fcdc6
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61371624"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831544"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit en Xamarin.iOS
 
@@ -384,77 +384,77 @@ Cada `HMService` objeto puede contener una colección de `HMCharacteristic` obje
 
 El `HMCharacteristicType` enum proporciona un conjunto de valores de metadatos de la característica que se puede definir o modificar como sigue:
 
- - AdminOnlyAccess
- - AirParticulateDensity
- - AirParticulateSize
- - AirQuality
- - AudioFeedback
- - BatteryLevel
- - Luminosidad
- - CarbonDioxideDetected
- - CarbonDioxideLevel
- - CarbonDioxidePeakLevel
- - CarbonMonoxideDetected
- - CarbonMonoxideLevel
- - CarbonMonoxidePeakLevel
- - ChargingState
- - ContactState
- - CoolingThreshold
- - CurrentDoorState
- - CurrentHeatingCooling
- - CurrentHorizontalTilt
- - CurrentLightLevel
- - CurrentLockMechanismState
- - CurrentPosition
- - CurrentRelativeHumidity
- - CurrentSecuritySystemState
- - CurrentTemperature
- - CurrentVerticalTilt
- - FirmwareVersion
- - HardwareVersion
- - HeatingCoolingStatus
- - HeatingThreshold
- - HoldPosition
- - Matiz
- - Identificar
- - InputEvent
- - LeakDetected
- - LockManagementAutoSecureTimeout
- - LockManagementControlPoint
- - LockMechanismLastKnownAction
- - Registros
- - Fabricante
- - Modelo
- - MotionDetected
- - Name
- - ObstructionDetected
- - OccupancyDetected
- - OutletInUse
- - OutputState
- - PositionState
- - PowerState
- - RotationDirection
- - RotationSpeed
- - Saturación
- - SerialNumber
- - SmokeDetected
- - SoftwareVersion
- - StatusActive
- - StatusFault
- - StatusJammed
- - StatusLowBattery
- - StatusTampered
- - TargetDoorState
- - TargetHeatingCooling
- - TargetHorizontalTilt
- - TargetLockMechanismState
- - TargetPosition
- - TargetRelativeHumidity
- - TargetSecuritySystemState
- - TargetTemperature
- - TargetVerticalTilt
- - TemperatureUnits
- - Versión
+- AdminOnlyAccess
+- AirParticulateDensity
+- AirParticulateSize
+- AirQuality
+- AudioFeedback
+- BatteryLevel
+- Luminosidad
+- CarbonDioxideDetected
+- CarbonDioxideLevel
+- CarbonDioxidePeakLevel
+- CarbonMonoxideDetected
+- CarbonMonoxideLevel
+- CarbonMonoxidePeakLevel
+- ChargingState
+- ContactState
+- CoolingThreshold
+- CurrentDoorState
+- CurrentHeatingCooling
+- CurrentHorizontalTilt
+- CurrentLightLevel
+- CurrentLockMechanismState
+- CurrentPosition
+- CurrentRelativeHumidity
+- CurrentSecuritySystemState
+- CurrentTemperature
+- CurrentVerticalTilt
+- FirmwareVersion
+- HardwareVersion
+- HeatingCoolingStatus
+- HeatingThreshold
+- HoldPosition
+- Matiz
+- Identificar
+- InputEvent
+- LeakDetected
+- LockManagementAutoSecureTimeout
+- LockManagementControlPoint
+- LockMechanismLastKnownAction
+- Registros
+- Fabricante
+- Modelo
+- MotionDetected
+- NOMBRE
+- ObstructionDetected
+- OccupancyDetected
+- OutletInUse
+- OutputState
+- PositionState
+- PowerState
+- RotationDirection
+- RotationSpeed
+- Saturación
+- SerialNumber
+- SmokeDetected
+- SoftwareVersion
+- StatusActive
+- StatusFault
+- StatusJammed
+- StatusLowBattery
+- StatusTampered
+- TargetDoorState
+- TargetHeatingCooling
+- TargetHorizontalTilt
+- TargetLockMechanismState
+- TargetPosition
+- TargetRelativeHumidity
+- TargetSecuritySystemState
+- TargetTemperature
+- TargetVerticalTilt
+- TemperatureUnits
+- `Version`
 
 ### <a name="working-with-a-characteristics-value"></a>Trabajar con valor de una característica
 
@@ -667,7 +667,7 @@ Debe cambiar el estado de la luz en el simulador de accesorios de HomeKit. Si el
 Este artículo ha tratado las características básicas necesarias para trabajar con accesorios de HomeKit en una aplicación de Xamarin.iOS. Sin embargo, hay varias características avanzadas de HomeKit que no se tratan en esta introducción:
 
 - **Salas** -accesorios de HomeKit habilitada opcionalmente pueden organizar en salones por el usuario final. Esto permite HomeKit accesorios presente de forma que sea fácil de entender y trabajar con el usuario. Para obtener más información sobre cómo crear y mantener las salas, consulte Apple [HMRoom](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMRoom_Class/index.html#//apple_ref/occ/cl/HMRoom) documentación.
-- **Las zonas** -salas, opcionalmente, se pueden organizar en zonas por el usuario final. Una zona se refiere a una colección de salas de que el usuario puede tratar como una sola unidad. Por ejemplo: Siesta, escaleras abajo o sótano. Nuevamente, esto permite a HomeKit presentar y trabajar con accesorios de manera que tenga sentido para el usuario final. Para obtener más información sobre cómo crear y mantener las zonas, consulte Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) documentación.
+- **Las zonas** -salas, opcionalmente, se pueden organizar en zonas por el usuario final. Una zona se refiere a una colección de salas de que el usuario puede tratar como una sola unidad. Por ejemplo:  Siesta, escaleras abajo o sótano. Nuevamente, esto permite a HomeKit presentar y trabajar con accesorios de manera que tenga sentido para el usuario final. Para obtener más información sobre cómo crear y mantener las zonas, consulte Apple [HMZone](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMZone_Class/index.html#//apple_ref/occ/cl/HMZone) documentación.
 - **Conjuntos de acciones y acciones** -acciones modificar características de accesorios de servicio y se pueden agrupar en conjuntos. Conjuntos de acciones de actúan como secuencias de comandos para controlar un grupo de accesorios y coordinar sus acciones. Por ejemplo, una secuencia de comandos "Ver TV" podría cerrar las persianas, atenuar las luces y activar el televisor y el sonido del sistema. Para obtener más información sobre cómo crear y mantener las acciones y los conjuntos de acciones, vea Apple [HMAction](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMAction_Class/index.html#//apple_ref/occ/cl/HMAction) y [HMActionSet](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMActionSet_Class/index.html#//apple_ref/occ/cl/HMActionSet) documentación.
 - **Desencadenadores** : un desencadenador puede activar una o más acción establecida cuando un determinado conjunto de condiciones se cumplen. Por ejemplo, encienda la luz portch y bloquear todas las puertas externas cuando llega oscuro fuera. Para obtener más información sobre cómo crear y mantener los desencadenadores, vea Apple [HMTrigger](https://developer.apple.com/library/prerelease/ios/documentation/HomeKit/Reference/HMTrigger_Class/index.html#//apple_ref/occ/cl/HMTrigger) documentación.
 
@@ -677,9 +677,9 @@ Dado que estas características usan las mismas técnicas presentadas más arrib
 
 Antes de enviar un HomeKit habilitar aplicación de Xamarin.iOS en iTunes Connect para el lanzamiento en iTunes App Store, asegúrese de seguir las directrices de Apple para aplicaciones de HomeKit habilitado:
 
- - Propósito principal de la aplicación _debe_ ser domótica si usa el marco de trabajo de HomeKit.
- - Texto de marketing de la aplicación debe notificar a los usuarios que se está usando HomeKit y deben proporcionar una directiva de privacidad.
- - Recopilación de información de usuario o usar HomeKit con fines publicitarios está prohibido.
+- Propósito principal de la aplicación _debe_ ser domótica si usa el marco de trabajo de HomeKit.
+- Texto de marketing de la aplicación debe notificar a los usuarios que se está usando HomeKit y deben proporcionar una directiva de privacidad.
+- Recopilación de información de usuario o usar HomeKit con fines publicitarios está prohibido.
 
 Para la versión completa, revise las directrices, consulte Apple [directrices de revisión del App Store](https://developer.apple.com/app-store/review/guidelines/).
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 2d67bc71361e335515cfba8b5a20e157ed6b6b05
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 25ace6d7febe495164378b3633f06371806e2f82
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61087889"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832302"
 ---
 # <a name="touch-id-in-xamarinios"></a>Id. de toque en Xamarin.iOS
 
@@ -52,8 +52,8 @@ A partir de iOS 8, ahora hay una nueva directiva de presencia del usuario, `SecA
 
 |Configuración del dispositivo|Evaluación de directivas|Mecanismo de copia de seguridad|
 |--- |--- |--- |
-|Dispositivo sin código de acceso|Sin acceso|Ninguna|
-|Dispositivo con el código de acceso|Requiere el código de acceso|Ninguna|
+|Dispositivo sin código de acceso|Sin acceso|None|
+|Dispositivo con el código de acceso|Requiere el código de acceso|None|
 |Dispositivo con Touch ID|Prefiere Touch ID|Permite el código de acceso|
 
 Pueden confiar en todas las operaciones dentro el Enclave seguro entre sí. Esto significa que podemos utilizar el resultado de la autenticación de Touch ID para autorizar el descifrado de elemento de la cadena de claves. El Enclave seguro también mantiene un contador de coincidencias de Touch ID con errores, en el que caso de un usuario tendrá que volver a usar el código de acceso.
@@ -81,10 +81,10 @@ Para usar ACL deberíamos utilizar la `SecAccessControl` directiva y, a continua
 
 Hay muchas cosas que nos debemos tener en cuenta al usar ACL con la cadena de claves y, a continuación se enumeran algunos de estos:
 
--   Use solo con la aplicación en primer plano: si se llama a cualquier operación de cadena de claves en un subproceso en segundo plano, que se producirá un error en la llamada.
--   Agregar y actualizar elementos de la cadena de claves pueden requerir la autenticación.
--   Si una solicitud devuelve varios elementos coincidentes en la cadena de claves, puede requerirse autenticación.
--   Elementos protegidos de ACL son solo dispositivo y, por tanto, no sincronizado o copia de seguridad.
+- Use solo con la aplicación en primer plano: si se llama a cualquier operación de cadena de claves en un subproceso en segundo plano, que se producirá un error en la llamada.
+- Agregar y actualizar elementos de la cadena de claves pueden requerir la autenticación.
+- Si una solicitud devuelve varios elementos coincidentes en la cadena de claves, puede requerirse autenticación.
+- Elementos protegidos de ACL son solo dispositivo y, por tanto, no sincronizado o copia de seguridad.
 
 ### <a name="using-local-authentication-without-keychain-services"></a>Mediante la autenticación Local sin servicios de la cadena de claves
 

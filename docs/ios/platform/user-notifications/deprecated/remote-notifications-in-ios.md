@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 8ad742607e506df436a5526d31621ac7636ac29b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 22ac6a3776e5fa5de2fc238efe90c435190e8005
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61087091"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832068"
 ---
 # <a name="push-notifications-in-ios"></a>Notificaciones Push en iOS
 
@@ -21,7 +21,7 @@ ms.locfileid: "61087091"
 
 Notificaciones de inserción deben mantenerse breves y solo contienen suficientes datos para notificar a la aplicación móvil que debe ponerse en contacto con la aplicación de servidor para una actualización. Por ejemplo, cuando llega correo electrónico nuevo, la aplicación de servidor sólo notificará la aplicación móvil que ha llegado correo electrónico nuevo. La notificación no contendría el nuevo correo electrónico propio. La aplicación móvil, a continuación, recuperaría los correos electrónicos nuevos desde el servidor cuando fue apropiado
 
-En el centro de inserción de notificaciones de iOS es el *servicio de puerta de enlace de Apple Push Notification (APNS)*. Se trata de un servicio proporcionado por Apple que se encarga de enrutamientos notificaciones desde un servidor de aplicaciones para dispositivos iOS.
+En el centro de inserción de notificaciones de iOS es el *servicio de puerta de enlace de Apple Push Notification (APNS)* . Se trata de un servicio proporcionado por Apple que se encarga de enrutamientos notificaciones desde un servidor de aplicaciones para dispositivos iOS.
 La siguiente imagen ilustra la topología de notificación de inserción de iOS: ![](remote-notifications-in-ios-images/image4.png "Esta imagen ilustra la topología de notificación de inserción de iOS")
 
 Notificaciones remotas a sí mismos son cadenas que se ajustan al formato en formato JSON y especifican los protocolos en [la carga de la notificación](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/CreatingtheNotificationPayload.html#//apple_ref/doc/uid/TP40008194-CH10-SW1) sección de la [Local y Push Notification Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)en el [documentación para desarrolladores de iOS](https://developer.apple.com/devcenter/ios/index.action).
@@ -67,7 +67,7 @@ Cada uno de los entornos que se mencionan en la sección anterior requiere su pr
 
     [![](remote-notifications-in-ios-images/image10new.png "Crear el certificado para el identificador de aplicación")](remote-notifications-in-ios-images/image8.png#lightbox)
 
-4.  Seleccione si desea usar un certificado de desarrollo o producción:
+4. Seleccione si desea usar un certificado de desarrollo o producción:
 
     [![](remote-notifications-in-ios-images/image11new.png "Seleccione un certificado de desarrollo o producción")](remote-notifications-in-ios-images/image11new.png#lightbox)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/03/2018
-ms.openlocfilehash: c2f727b55b21dc3bd976f0b41c71b794841cfca4
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b894c245a4391064746a08816dfa63a1148d436d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61422001"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831253"
 ---
 # <a name="ibtool-error-the-operation-couldnt-be-completed"></a>Error de IBTool: The operation couldn’t be completed.
 
@@ -48,7 +48,7 @@ Por ejemplo, el original `.csproj` archivo contiene la entrada siguiente:
 
 `<BundleResource Include="Resources\Images\image.png" />`
 
-Puede cambiar este elemento y agregar un `LogicalName` para que la imagen en su lugar, se copiará en el nivel superior de la `.app `agrupación:
+Puede cambiar este elemento y agregar un `LogicalName` para que la imagen en su lugar, se copiará en el nivel superior de la `.app` agrupación:
 
 ```xml
 <BundleResource Include="Resources\Images\image.png">

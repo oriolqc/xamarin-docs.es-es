@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 4ee07e4b47ed9e1bdca0efc814ad44e513f68e80
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a9cf3dab9c112bf7ff99cbc0dd9541c3c1e35142
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61076620"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830134"
 ---
 # <a name="search-with-web-markup-in-xamarinios"></a>Búsqueda con marcado Web en Xamarin.iOS
 
@@ -158,14 +158,14 @@ La siguiente muestra un ejemplo de metadatos desde su sitio Web que proporciona 
 
 Apple actualmente admite los siguientes tipos de esquema de schema.org:
 
- - AggregateRating
- - ImageObject
- - InteractionCount
- - Ofertas
- - Organización
- - PriceRange
- - Receta
- - SearchAction
+- AggregateRating
+- ImageObject
+- InteractionCount
+- Ofertas
+- Organización
+- PriceRange
+- Receta
+- SearchAction
 
 Para obtener más información sobre estos tipos de esquema, vea [schema.org](http://schema.org).
 
@@ -173,9 +173,9 @@ Para obtener más información sobre estos tipos de esquema, vea [schema.org](ht
 
 Determinados tipos de datos estructurados permitirá un resultado de búsqueda poder por el usuario final. Actualmente se admiten las siguientes acciones:
 
- - Marcar un número de teléfono.
- - Obteniendo dirección de asignación a una dirección determinada.
- - Reproducir un archivo de audio o vídeo.
+- Marcar un número de teléfono.
+- Obteniendo dirección de asignación a una dirección determinada.
+- Reproducir un archivo de audio o vídeo.
 
 Por ejemplo, definir una acción para marcar un número de teléfono podría ser similar al siguiente:
 

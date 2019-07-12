@@ -6,12 +6,12 @@ ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
 author: asb3993
 ms.author: amburns
 ms.date: 11/25/2015
-ms.openlocfilehash: ec173c0ed7881439ecbe2b5cf83c8f5484c7e5aa
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 93f90d2dad140f021c7e575afed44da1c5351eda
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977627"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830515"
 ---
 # <a name="overview-of-objective-c-bindings"></a>Información general de los enlaces de Objective-c.
 
@@ -24,9 +24,10 @@ Enlace de una biblioteca de Objective-C para su uso con Xamarin toma de tres pas
 2. Una vez que ha escrito la definición de"API" C#, compílelo para generar un ensamblado de "enlace". Esto puede hacerse en el [ **línea de comandos** ](#commandline) o mediante un [ **proyecto enlace** ](#bindingproject) en Visual Studio para Mac o Visual Studio.
 
 3. Dicho ensamblado "enlace", a continuación, se agrega al proyecto de aplicación de Xamarin, por lo que puede tener acceso a la funcionalidad nativa mediante la API que se ha definido.
-  El proyecto de enlace es completamente independiente de los proyectos de aplicación.
+   El proyecto de enlace es completamente independiente de los proyectos de aplicación.
 
-**NOTA:** Paso 1 se puede automatizar con la Ayuda de [ **objetivo Sharpie**](#objectivesharpie). Examina la API de Objective-C y genera una propuesta C# "Definición de API". Puede personalizar los archivos creados por objetivo Sharpie y usarlos en un proyecto de enlace (o en la línea de comandos) para crear el ensamblado de enlace. Sharpie objetivo no crear enlaces por sí mismo, es simplemente una parte opcional del proceso mayor.
+   > [!NOTE]
+   > Paso 1 se puede automatizar con la Ayuda de [ **objetivo Sharpie**](#objectivesharpie). Examina la API de Objective-C y genera una propuesta C# "Definición de API". Puede personalizar los archivos creados por objetivo Sharpie y usarlos en un proyecto de enlace (o en la línea de comandos) para crear el ensamblado de enlace. Sharpie objetivo no crear enlaces por sí mismo, es simplemente una parte opcional del proceso mayor.
 
 También puede leer detalles más técnicos de [cómo funciona](#howitworks), que le ayudarán a escribir sus enlaces.
 

@@ -6,12 +6,12 @@ ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
 author: lobrien
 ms.author: laobri
 ms.date: 06/03/2018
-ms.openlocfilehash: 327070f723aabf8d5d07f4f86580b69ffb5917a7
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: d80363cd339d5d3177ae063df2a20d7938f59169
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67675282"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832400"
 ---
 # <a name="xamarin-profiler"></a>Generador de perfiles de Xamarin
 
@@ -67,7 +67,7 @@ Actualmente, el Profiler de Xamarin puede usarse para probar aplicaciones de Xam
 
 Compatibilidad con el Profiler Xamarin está disponible en las siguientes plataformas:
 
- - Visual Studio para Mac (Mac OS, con licencia de Enterprise)
+- Visual Studio para Mac (Mac OS, con licencia de Enterprise)
     - Android
         - Dispositivo y el emulador
     - iOS
@@ -76,7 +76,7 @@ Compatibilidad con el Profiler Xamarin está disponible en las siguientes plataf
         - Simulador y dispositivo
     - Mac
 
- - Visual Studio (solo **Enterprise** versión)
+- Visual Studio (solo **Enterprise** versión)
     - Android
         - Dispositivo y el emulador
     - iOS [Experimental]
@@ -94,7 +94,7 @@ Esta sección presenta las partes de la Profiler Xamarin y tours sus caracterís
 
 Antes de correctamente puede generar perfiles de la aplicación, deberá permitir la generación de perfiles en las opciones de proyecto de la aplicación.
 
- - iOS:
+- iOS:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -110,7 +110,7 @@ Antes de correctamente puede generar perfiles de la aplicación, deberá permiti
 
 -----
 
- - Android:
+- Android:
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -216,7 +216,7 @@ En la parte superior del generador de perfiles es el gráfico de las asignacione
 
 Hay diferentes vistas de datos en el acto de asignaciones, que permiten a los desarrolladores analizar cómo su aplicación está utilizando y liberar memoria. Estas vistas se describen a continuación:
 
- -   **Las asignaciones de** : se muestra una lista de todas las asignaciones y las agrupa por nombre de clase. Esto proporciona una excelente introducción de clases y métodos que se va a usar, con qué frecuencia se utilizan y el tamaño de las clases utilizadas colectivo. Hacer doble clic en una clase, se mostrará la memoria asignada: 
+- **Las asignaciones de** : se muestra una lista de todas las asignaciones y las agrupa por nombre de clase. Esto proporciona una excelente introducción de clases y métodos que se va a usar, con qué frecuencia se utilizan y el tamaño de las clases utilizadas colectivo. Hacer doble clic en una clase, se mostrará la memoria asignada: 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
@@ -230,7 +230,7 @@ Hay diferentes vistas de datos en el acto de asignaciones, que permiten a los de
 
 Para las asignaciones de la vista del Inspector proporciona opciones de filtrado y agrupación de objetos, lo que proporciona las estadísticas en la memoria asignada y las asignaciones principales, así como las vistas de seguimiento de pila y la ruta de acceso a raíz.
 
- -   **Árbol de llamadas** : Esto muestra el árbol de llamadas completa de todos los subprocesos en la aplicación e incluye información acerca de la memoria asignada en cada nodo. Cuando se selecciona un elemento en la lista, aparecerán todos los nodos del mismo nivel gris. Puede expandir el árbol o haga doble clic en el elemento que se va a profundizar en él. Cuando se muestra esta vista de datos, la vista de inspector de configuración de información puede utilizarse para cambiar la forma en que se presenta. Actualmente hay dos opciones:
+- **Árbol de llamadas** : Esto muestra el árbol de llamadas completa de todos los subprocesos en la aplicación e incluye información acerca de la memoria asignada en cada nodo. Cuando se selecciona un elemento en la lista, aparecerán todos los nodos del mismo nivel gris. Puede expandir el árbol o haga doble clic en el elemento que se va a profundizar en él. Cuando se muestra esta vista de datos, la vista de inspector de configuración de información puede utilizarse para cambiar la forma en que se presenta. Actualmente hay dos opciones:
     1.  **Invierte el árbol de llamadas** : se considera que el seguimiento de pila de arriba a abajo. Esto es una opción de vista práctico ya que indica los métodos más profundo donde dedica a la CPU el tiempo.
     2.  **Separado por subproceso** : esta opción organiza el árbol de llamadas por subproceso.
 
@@ -244,7 +244,7 @@ Para las asignaciones de la vista del Inspector proporciona opciones de filtrado
 
 -----
 
- -   **Las instantáneas** : este panel muestra información acerca de las instantáneas de memoria. Para generar estos durante la generación de perfiles de una aplicación en directo, haga clic en el _cámara_ botón en la barra de herramientas en cada momento en que gustaría ver qué memoria se conservan y se suelta. A continuación, puede hacer clic en cada instantánea para explorar lo que sucede en segundo plano. Tenga en cuenta que las instantáneas se pueden realizar cuando se activa una aplicación de generación de perfiles. 
+- **Las instantáneas** : este panel muestra información acerca de las instantáneas de memoria. Para generar estos durante la generación de perfiles de una aplicación en directo, haga clic en el _cámara_ botón en la barra de herramientas en cada momento en que gustaría ver qué memoria se conservan y se suelta. A continuación, puede hacer clic en cada instantánea para explorar lo que sucede en segundo plano. Tenga en cuenta que las instantáneas se pueden realizar cuando se activa una aplicación de generación de perfiles. 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

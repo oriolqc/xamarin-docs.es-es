@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 09/13/2016
-ms.openlocfilehash: c900ab714fed2bb1e02367ba39ad3c5a0a76121e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 60eaad98e2d5469e9c43e6b4ad889080e1aa63ba
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61408378"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832061"
 ---
 # <a name="watchos-project-references-in-xamarin"></a>las referencias de proyecto de Xamarin de watchOS
 
@@ -26,16 +26,16 @@ Ver las referencias, haga doble clic en los nodos de referencias para cada proye
 
 - **aplicación de iPhone** referencias **aplicación Watch**
 
-![](project-references-images/catalog-reference1.png "aplicación de iPhone hace referencia a la aplicación del reloj")
+  ![](project-references-images/catalog-reference1.png "aplicación de iPhone hace referencia a la aplicación del reloj")
 
 - **Ver aplicación** referencias **extensión de la aplicación de inspección**
 
-![](project-references-images/catalog-reference2.png "aplicación de iPhone hace referencia a la aplicación del reloj")
+  ![](project-references-images/catalog-reference2.png "aplicación de iPhone hace referencia a la aplicación del reloj")
 
 
- - El **extensión de la aplicación de inspección** no hace referencia a cualquiera de los otros proyectos
+- El **extensión de la aplicación de inspección** no hace referencia a cualquiera de los otros proyectos
 
-![](project-references-images/catalog-reference3.png "Ver la que extensión de la aplicación no hace referencia a los otros proyectos")
+  ![](project-references-images/catalog-reference3.png "Ver la que extensión de la aplicación no hace referencia a los otros proyectos")
 
 
 
@@ -44,17 +44,17 @@ Ver las referencias, haga doble clic en los nodos de referencias para cada proye
 También deberá asegurarse de que su **identificadores de lote** son correctos.
 Deben tener los tres proyectos el *mismo* prefijo de identificador, con los proyectos de dos inspección predefinidos de extensiones de `watchkitextension` y `watchkitapp`, como sigue (para el **WatchKitCatalog** ejemplo):
 
- - Proyecto unificado de Xamarin.iOS: `com.xamarin.WatchKitCatalog`
+- Proyecto unificado de Xamarin.iOS: `com.xamarin.WatchKitCatalog`
 
- - Proyecto de extensión de WatchKit: `com.xamarin.WatchKitCatalog.watchkitextension`
+- Proyecto de extensión de WatchKit: `com.xamarin.WatchKitCatalog.watchkitextension`
 
- - Proyecto de aplicación de inspección: `com.xamarin.WatchKitCatalog.watchkitapp`
+- Proyecto de aplicación de inspección: `com.xamarin.WatchKitCatalog.watchkitapp`
 
 Además, asegúrese de que estos **Info.plist** configuración es correcta:
 
- - El proyecto de aplicación del reloj `WKCompanionAppBundleIdentifier` coincide con el identificador de paquete de la aplicación o el contenedor primario (es decir. lo que se ejecuta en el iPhone);
+- El proyecto de aplicación del reloj `WKCompanionAppBundleIdentifier` coincide con el identificador de paquete de la aplicación o el contenedor primario (es decir. lo que se ejecuta en el iPhone);
 
- - El proyecto de extensión de inspección Kit **Id. del lote de WKApp** coincide con el identificador de paquete. del proyecto de aplicación del reloj
+- El proyecto de extensión de inspección Kit **Id. del lote de WKApp** coincide con el identificador de paquete. del proyecto de aplicación del reloj
 
 Puede editar los identificadores haciendo doble clic en el **Info.plist** archivo en cada proyecto.
 

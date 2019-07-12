@@ -6,12 +6,12 @@ ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 4799d6aaa095127e242c5e0750db686519d0c21d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a1218d836aad827390d9f5e70de189a869b7c6b8
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61226532"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830998"
 ---
 # <a name="localization"></a>Localización
 
@@ -36,12 +36,12 @@ Internacionalización que se suele abreviar como i18n: forma abreviada de 18 let
 Este documento presenta los conceptos asociados con la internacionalización y localización, y cómo se aplican al desarrollo de aplicaciones móviles en general.
 Al diseñar y crear una aplicación, lo que podría tener previamente codificado de forma rígida pero que debe parametrizar para localización incluyen:
 
--   Diseños de pantalla y el texto,
--   Iconos y colores, y gráficos
--   Archivos de vídeo y sonidos,
--   Texto dinámico y el formato de texto (por ejemplo, números, divisa y fechas)
- - Los cambios de diseño para los idiomas de derecha a izquierda (RTL), y
--   Ordenación de datos.
+- Diseños de pantalla y el texto,
+- Iconos y colores, y gráficos
+- Archivos de vídeo y sonidos,
+- Texto dinámico y el formato de texto (por ejemplo, números, divisa y fechas)
+- Los cambios de diseño para los idiomas de derecha a izquierda (RTL), y
+- Ordenación de datos.
 
 Con independencia de qué plataformas móviles, la aplicación tiene como destino estas sugerencias le ayudará a compilar una aplicación localizada de alta calidad.
 
@@ -81,9 +81,9 @@ Escribir las reglas de validación con la internacionalización en mente, elija 
 No todas las imágenes se deben cambiar en función de la opción de idioma del usuario. Muchos de los iconos o las fotos se adecuado para todos los usuarios, no importa en qué lenguaje hablan.
 Algunos recursos que tenga sentido para localizar sin embargo, como:
 
- - Las imágenes que representan personas o ubicaciones específicas: la aplicación puede resultar más relevante para los usuarios si se muestran en las personas y ubicaciones locales.
- - Iconos: algunos iconografía puede ser específicas de referencias culturales y puede hacer que la aplicación más fácil de usar mediante la localización de las imágenes para reflejar el conocimiento local.
- - Colores: algunas referencias culturales comprender los colores de manera diferente: rojo puede significar advertencia en una región, pero la buena suerte en otro. Póngase en contacto con hablantes nativos al diseñar la aplicación para determinar si debe crear un mecanismo para localizar los colores.
+- Las imágenes que representan personas o ubicaciones específicas: la aplicación puede resultar más relevante para los usuarios si se muestran en las personas y ubicaciones locales.
+- Iconos: algunos iconografía puede ser específicas de referencias culturales y puede hacer que la aplicación más fácil de usar mediante la localización de las imágenes para reflejar el conocimiento local.
+- Colores: algunas referencias culturales comprender los colores de manera diferente: rojo puede significar advertencia en una región, pero la buena suerte en otro. Póngase en contacto con hablantes nativos al diseñar la aplicación para determinar si debe crear un mecanismo para localizar los colores.
 
 
 ### <a name="videos-and-sound"></a>Vídeos y sonido
@@ -120,10 +120,10 @@ Consulte la [analizar cadenas numéricas](https://msdn.microsoft.com/library/xbt
 Algunos lenguajes, como el árabe, hebreo y urdú (por ejemplo), se leen de derecha a izquierda.
 Las aplicaciones que admiten estos idiomas deben usar diseños de pantalla que se adapten para los lectores de derecha a izquierda, por ejemplo:
 
- - Debe ser texto alineado a la derecha.
- - Las etiquetas deben aparecer a la derecha de los campos de entrada.
- - Por lo general se invierte la colocación del botón predeterminado.
- - Navegación jerárquica Deslizar y animación (y otras metáforas relacionadas con la navegación y las animaciones) que usar la dirección de contexto también se debe invertir.
+- Debe ser texto alineado a la derecha.
+- Las etiquetas deben aparecer a la derecha de los campos de entrada.
+- Por lo general se invierte la colocación del botón predeterminado.
+- Navegación jerárquica Deslizar y animación (y otras metáforas relacionadas con la navegación y las animaciones) que usar la dirección de contexto también se debe invertir.
 
 IOS y Android admiten diseños de derecha a izquierda y la representación de fuente, con características integradas que ayudan a realizar los ajustes anteriores. Xamarin.Forms no admite actualmente automáticamente el procesamiento de derecha a izquierda.
 
@@ -139,10 +139,10 @@ No es probable que las capacidades de base de datos integradas en las plataforma
 
 Asegúrese de escribir y probar su algoritmo de búsqueda con varios idiomas en mente. Aspectos a tener en cuenta son:
 
- - Autocompletar – si ha creado una función de Autocompletar Asegúrese de que los orígenes de sugerencias relevantes para el idioma del usuario.
- - ¿Consulta correspondiente a los datos: buscará consultas escritas en un determinado idioma se ejecuta con sólo contenido escrito en dicho lenguaje o de todo el contenido de la aplicación?
- - ¿Lematización: si la búsqueda se ha creado para buscar palabras similares, las raíces de word y otras optimizaciones de búsqueda es esas optimizaciones creadas para todos los idiomas que admite?
- - Ordenación: asegúrese de que los resultados se ordenan correctamente (consulte más arriba).
+- Autocompletar – si ha creado una función de Autocompletar Asegúrese de que los orígenes de sugerencias relevantes para el idioma del usuario.
+- ¿Consulta correspondiente a los datos: buscará consultas escritas en un determinado idioma se ejecuta con sólo contenido escrito en dicho lenguaje o de todo el contenido de la aplicación?
+- ¿Lematización: si la búsqueda se ha creado para buscar palabras similares, las raíces de word y otras optimizaciones de búsqueda es esas optimizaciones creadas para todos los idiomas que admite?
+- Ordenación: asegúrese de que los resultados se ordenan correctamente (consulte más arriba).
 
 
 ### <a name="data-from-external-sources"></a>Datos de orígenes externos
@@ -151,9 +151,9 @@ Muchas aplicaciones descargan datos desde orígenes externos, desde Twitter y fu
 
 Hay algunas estrategias que puede usar para probar y asegúrese de que la aplicación muestra los datos relevantes para el usuario:
 
- - Orígenes diferentes: la aplicación podría descargar los datos de un origen diferente según el idioma o la configuración regional del usuario. Los precios de noticias, clima y acciones de configuración regional es posible que más sentido que algo descargado desde una fuente de América del Norte.
- - Para mostrar localizado: si va a mostrar un Twitter o una foto de fuente, debe mostrar los metadatos (por ejemplo, el tiempo necesario) en su propio lenguaje, incluso si el propio contenido permanece en el idioma original.
- - Traducción: puede crear una opción de traducción en su aplicación para realizar una traducción automática de los datos entrantes. Esto podría ser automática o a discreción del usuario: asegúrese de notificar al usuario si éste está teniendo lugar, puesto que las traducciones de la máquina nunca son perfectas.
+- Orígenes diferentes: la aplicación podría descargar los datos de un origen diferente según el idioma o la configuración regional del usuario. Los precios de noticias, clima y acciones de configuración regional es posible que más sentido que algo descargado desde una fuente de América del Norte.
+- Para mostrar localizado: si va a mostrar un Twitter o una foto de fuente, debe mostrar los metadatos (por ejemplo, el tiempo necesario) en su propio lenguaje, incluso si el propio contenido permanece en el idioma original.
+- Traducción: puede crear una opción de traducción en su aplicación para realizar una traducción automática de los datos entrantes. Esto podría ser automática o a discreción del usuario: asegúrese de notificar al usuario si éste está teniendo lugar, puesto que las traducciones de la máquina nunca son perfectas.
 
 Esto también podría afectar a los vínculos externos a las pistas de audio o vídeos: al diseñar la aplicación Asegúrese de planear por adelantado abastecimiento contenido traducen o lo que garantiza que los usuarios son informados adecuadamente mediante la interfaz de usuario cuando el contenido no aparecerá en su lenguaje.
 
@@ -162,10 +162,10 @@ Esto también podría afectar a los vínculos externos a las pistas de audio o v
 
 Algunas cadenas de la aplicación no debe traducir, o al menos necesitan una atención especial el traductor. Algunos ejemplos podrían incluir:
 
- - Las direcciones URL: si escribes una dirección URL, puede o no deberá ser ajustado por idioma. Por ejemplo, facebook.com no requiere traducción detecta automáticamente el idioma en el sitio principal. Otros sitios tienen contenido específico de la configuración regional y desea ofrecer una dirección URL diferente, por ejemplo, yahoo.com frente a yahoo.fr o yahoo.it.
- - Números de teléfono, especialmente aquellas con diferentes códigos de país o números para los llamadores que hablan un lenguaje determinado.
- - Detalles de contacto: direcciones y otra información pueden variar por idioma o configuración regional.
- - Marcas comerciales y los nombres de producto: algunas cadenas no es necesario traducir ya que siempre se escriben en el mismo idioma.
+- Las direcciones URL: si escribes una dirección URL, puede o no deberá ser ajustado por idioma. Por ejemplo, facebook.com no requiere traducción detecta automáticamente el idioma en el sitio principal. Otros sitios tienen contenido específico de la configuración regional y desea ofrecer una dirección URL diferente, por ejemplo, yahoo.com frente a yahoo.fr o yahoo.it.
+- Números de teléfono, especialmente aquellas con diferentes códigos de país o números para los llamadores que hablan un lenguaje determinado.
+- Detalles de contacto: direcciones y otra información pueden variar por idioma o configuración regional.
+- Marcas comerciales y los nombres de producto: algunas cadenas no es necesario traducir ya que siempre se escriben en el mismo idioma.
 
 Por último, asegúrese de incluir instrucciones detalladas para el traductor si determinadas cadenas requieren un tratamiento especial.
 
@@ -264,16 +264,16 @@ O más concretamente, no reutilice cadenas simplemente porque son similares de l
 
 Por ejemplo: imagine que tiene un modificador on/off de la aplicación y el control de cambio es el texto de 'on' y 'off' necesario traducir. También mostrar el valor de esa configuración en otro lugar en la aplicación en una etiqueta de texto. Debe utilizar cadenas diferentes para la presentación del conmutador en comparación con el estado del conmutador (incluso si son la misma cadena en el idioma predeterminado): por ejemplo:
 
--   "Activado": se muestra en el propio conmutador
--   "Off": se muestra en el propio conmutador
--   "Activado": se muestra en una etiqueta
--   "Off": se muestra en una etiqueta
+- "Activado": se muestra en el propio conmutador
+- "Off": se muestra en el propio conmutador
+- "Activado": se muestra en una etiqueta
+- "Off": se muestra en una etiqueta
 
 Esto proporciona la máxima flexibilidad para el traductor:
 
--   Por motivos de diseño, quizás el propio conmutador utiliza minúscula "on" y "off" pero la etiqueta para mostrar utiliza mayúsculas "On" y "Off".
--   Algunos lenguajes necesitar el valor del modificador se abrevia para ajustarse en el control de interfaz de usuario, mientras que la palabra completa (traducida) puede aparecer en la etiqueta.
--   Como alternativa, para algunos idiomas, la representación del conmutador podría ser usar "I" y "O" cultural familiar, pero es posible que aún desea que la etiqueta para leer "On" o "Desactivar".
+- Por motivos de diseño, quizás el propio conmutador utiliza minúscula "on" y "off" pero la etiqueta para mostrar utiliza mayúsculas "On" y "Off".
+- Algunos lenguajes necesitar el valor del modificador se abrevia para ajustarse en el control de interfaz de usuario, mientras que la palabra completa (traducida) puede aparecer en la etiqueta.
+- Como alternativa, para algunos idiomas, la representación del conmutador podría ser usar "I" y "O" cultural familiar, pero es posible que aún desea que la etiqueta para leer "On" o "Desactivar".
 
 ### <a name="translation-services"></a>Servicios de traducción
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/13/2017
-ms.openlocfilehash: 45886d787ecc40c9e11ce0c713ffa22819e29db2
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e28ba19fdc972b962f0dcd2757f1ba9087ac5c27
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61227531"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831776"
 ---
 # <a name="watchos-background-tasks-in-xamarin"></a>watchOS tareas en segundo plano en Xamarin
 
@@ -141,7 +141,7 @@ De nuevo, el sistema emitirá un `WKSnapshotRefreshBackgroundTask` para que se p
 Cuando se marca la aplicación la `WKSnapshotRefreshBackgroundTask` completado, el sistema automáticamente tardará una instantánea de la interfaz de usuario de la aplicación.
 
 > [!IMPORTANT]
-> Es importante siempre se programan una ` WKSnapshotRefreshBackgroundTask` después de la aplicación ha recibido datos nuevos y actualizar su interfaz de usuario o el usuario no verá la información modificada.
+> Es importante siempre se programan una `WKSnapshotRefreshBackgroundTask` después de la aplicación ha recibido datos nuevos y actualizar su interfaz de usuario o el usuario no verá la información modificada.
 
 
 

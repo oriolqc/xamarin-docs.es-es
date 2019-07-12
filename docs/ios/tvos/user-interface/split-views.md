@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 9f1bd48378faa9ae6a4853083c93377268c38f01
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 775fe01122440378f68973549d46e3010400614e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61374614"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830847"
 ---
 # <a name="working-with-tvos-split-view-controllers-in-xamarin"></a>Trabajar con controladores de vista dividida en Xamarin de tvOS
 
@@ -100,7 +100,7 @@ Como se indicó anteriormente, un controlador de vista de división se utiliza a
 
 ### <a name="accessing-master-and-detail"></a>Acceso a maestro y detalles
 
-Si necesita tener acceso mediante programación el patrón y los controladores de vista de detalle, utilice el `ViewControllers ` propiedad del controlador de vista de división. Por ejemplo:
+Si necesita tener acceso mediante programación el patrón y los controladores de vista de detalle, utilice el `ViewControllers` propiedad del controlador de vista de división. Por ejemplo:
 
 ```csharp
 // Gain access to master and detail view controllers

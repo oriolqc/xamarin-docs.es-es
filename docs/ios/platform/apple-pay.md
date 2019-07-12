@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/05/2017
-ms.openlocfilehash: b971029ff3b2b1e8f5e63233d1d754c44b0e3309
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7f1851b6a7dec10580c9feea590cf25be30b4aa1
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61346980"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832086"
 ---
 # <a name="apple-pay-in-xamarinios"></a>Apple Pay en Xamarin.iOS
 
@@ -26,10 +26,10 @@ Apple Pay solo está disponible en iOS 8 y versiones posteriores y por lo tanto,
 
 Los siguientes elementos también son necesarios para integrar Apple Pay en su aplicación:
 
- - Plataforma de procesador de pago
- - Identificador de comerciante
- - Un certificado de Apple Pay
- - Derecho de Apple Pay
+- Plataforma de procesador de pago
+- Identificador de comerciante
+- Un certificado de Apple Pay
+- Derecho de Apple Pay
 
 Este documento veremos estos elementos con más detalle.
 

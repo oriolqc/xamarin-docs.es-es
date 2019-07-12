@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 3a46b939fa87cd6535c9f86c46981c098542e7c9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a4c58139b0ddbaaedf5769eeac6585bac4c013e4
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61277971"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832110"
 ---
 # <a name="accessing-remote-data"></a>Acceso a datos remotos
 
@@ -154,7 +154,7 @@ Este método recupera los datos del catálogo de SQL database mediante Entity Fr
 
 #### <a name="making-a-post-request"></a>Realizar una solicitud POST
 
-La `BasketService` clase se utiliza para administrar la recuperación de datos y el proceso de actualización con el microservicio de cesta. En el `RegisterDependencies` método en el `ViewModelLocator` (clase), el `BasketService` clase se registra como una asignación de tipo con el `IBasketService` tipo con el contenedor de inserción de dependencia de Autofac. A continuación, cuando una instancia de la `BasketViewModel` se crea una clase, su constructor acepta un `IBasketService` escribe, que se resuelve como Autofac, devolver una instancia de la `BasketService `clase. Para obtener más información acerca de la inserción de dependencias, consulte [Introducción a la inserción de dependencias](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
+La `BasketService` clase se utiliza para administrar la recuperación de datos y el proceso de actualización con el microservicio de cesta. En el `RegisterDependencies` método en el `ViewModelLocator` (clase), el `BasketService` clase se registra como una asignación de tipo con el `IBasketService` tipo con el contenedor de inserción de dependencia de Autofac. A continuación, cuando una instancia de la `BasketViewModel` se crea una clase, su constructor acepta un `IBasketService` escribe, que se resuelve como Autofac, devolver una instancia de la `BasketService` clase. Para obtener más información acerca de la inserción de dependencias, consulte [Introducción a la inserción de dependencias](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
 
 Figura 10-2 se muestra la interacción de las clases que envían los datos de la cesta de compras mostrados por la `BasketView`, el microservicio de cesta de la compra.
 

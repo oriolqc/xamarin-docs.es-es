@@ -8,12 +8,12 @@ ms.custom: xamu-video
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: e9c18920386cb58f152d7631c52240b4b5b72ff9
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 88496452595f308c97d26d0f27fae305baef894f
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64977842"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830823"
 ---
 # <a name="stack-views-in-xamarinios"></a>Vistas de la pila de Xamarin.iOS
 
@@ -197,16 +197,16 @@ Mientras que la vista de la pila tiene control total sobre el diseño de cualqui
 
 Por lo general, esto significa que al menos dos bordes de la vista de pila para expandir y contraer, definiendo así su posición de anclaje. Sin restricciones adicionales, la vista de pila se ajustará automáticamente para ajustarse a todos sus subvistas como sigue:
 
- - El tamaño a lo largo de su `Axis` será la suma de todos los tamaños de la vista secundaria más cualquier espacio que se ha definido entre cada vista secundaria.
- - Si el `LayoutMarginsRelativeArrangement` propiedad es `true`, el tamaño de las vistas de la pila también incluirá espacio para los márgenes.
- - El tamaño perpendicular a la `Axis` se establecerá en la vista secundaria más grande en la colección.
+- El tamaño a lo largo de su `Axis` será la suma de todos los tamaños de la vista secundaria más cualquier espacio que se ha definido entre cada vista secundaria.
+- Si el `LayoutMarginsRelativeArrangement` propiedad es `true`, el tamaño de las vistas de la pila también incluirá espacio para los márgenes.
+- El tamaño perpendicular a la `Axis` se establecerá en la vista secundaria más grande en la colección.
 
 Además, puede especificar restricciones para la vista de pila **alto** y **ancho**. En este caso, las subvistas se debe disponer (tamaño) para rellenar el espacio especificado por la vista de pila según lo determinado por la `Distribution` y `Alignment` propiedades.
 
 Si el `BaselineRelativeArrangement` propiedad es `true`, las subvistas se dispondrán en función de la línea de base de la primera o última vista secundaria, en lugar de usar el **superior**, **inferior** o **Center** -  **Y** posición. Estos se calculan en el contenido de la vista de pila como sigue:
 
- - Una vista de pila Vertical devolverá la primera vista de secundaria para la primera línea de base y la última durante los últimos. Si cualquiera de estos subvistas son vistas de pila, se usará su línea base primero o último.
- - Una vista de pila Horizontal usará su vista secundaria más alto para la línea de base primero y último. Si la vista más alta también es una pila, usará vista secundaria más alto el es como la línea base.
+- Una vista de pila Vertical devolverá la primera vista de secundaria para la primera línea de base y la última durante los últimos. Si cualquiera de estos subvistas son vistas de pila, se usará su línea base primero o último.
+- Una vista de pila Horizontal usará su vista secundaria más alto para la línea de base primero y último. Si la vista más alta también es una pila, usará vista secundaria más alto el es como la línea base.
 
 > [!IMPORTANT]
 > Alineación de línea base no funciona en los tamaños de la vista secundaria ajustada o comprimidos se calculará la línea base para una posición incorrecta. Para la alineación de línea base, asegúrese de que la vista de secundaria **alto** coincide con la vista de contenido intrínseco **alto**.
@@ -216,9 +216,9 @@ Si el `BaselineRelativeArrangement` propiedad es `true`, las subvistas se dispon
 Hay varios tipos de diseño que funcionan bien con los controles de vista de pila. Función de Apple, estos son algunos de los usos más comunes:
 
 - **Definir el tamaño a lo largo del eje** : Anclando los dos bordes a lo largo de la vista de pila `Axis` y uno de los bordes adyacentes para establecer la posición, la pila de vista crecerá a lo largo del eje para ajustarse al espacio definido por sus subvistas.
- -  **Definir la posición de la vista secundaria** – Anclando con bordes adyacentes de la vista de pila para su vista primaria, la vista de pila crecerá en ambas dimensiones para ajustarse a su contenedor subvistas.
+- **Definir la posición de la vista secundaria** – Anclando con bordes adyacentes de la vista de pila para su vista primaria, la vista de pila crecerá en ambas dimensiones para ajustarse a su contenedor subvistas.
 - **Definir el tamaño y posición de la pila** – Anclando los cuatro bordes de la vista de pila para la vista primaria, la vista de pila organiza las subvistas según el espacio definido dentro de la vista de pila.
- -  **Definir el tamaño Perpendicular al eje** : Anclando ambos perpendicular bordes a la vista de pila `Axis` y uno de los bordes del eje para establecer la posición, la pila de vista crecerá perpendicular al eje para ajustarse al espacio definido por su subvistas.
+- **Definir el tamaño Perpendicular al eje** : Anclando ambos perpendicular bordes a la vista de pila `Axis` y uno de los bordes del eje para establecer la posición, la pila de vista crecerá perpendicular al eje para ajustarse al espacio definido por su subvistas.
 
 ### <a name="managing-the-appearance"></a>Administración de la apariencia
 
@@ -241,14 +241,14 @@ Puede ajustar aún más la apariencia de las interfaces de usuario agregando res
 
 La vista de pila se asegurará de que su `ArrangedSubviews` propiedad siempre es un subconjunto de sus `Subviews` propiedad utilizando las reglas siguientes:
 
- - Si se agrega una vista secundaria a la `ArrangedSubviews` colección, automáticamente se agregará a la `Subviews` colección (a menos que ya forme parte de esa colección).
- - Si se quita una vista secundaria de la `Subviews` colección (quitado de pantalla), también se quitará el `ArrangedSubviews` colección.
- - Quitar una vista secundaria desde la `ArrangedSubviews` colección no quita de la `Subviews` colección. Por lo que ya no se distribuyen por la vista de pila, pero seguirán estando visible en pantalla.
+- Si se agrega una vista secundaria a la `ArrangedSubviews` colección, automáticamente se agregará a la `Subviews` colección (a menos que ya forme parte de esa colección).
+- Si se quita una vista secundaria de la `Subviews` colección (quitado de pantalla), también se quitará el `ArrangedSubviews` colección.
+- Quitar una vista secundaria desde la `ArrangedSubviews` colección no quita de la `Subviews` colección. Por lo que ya no se distribuyen por la vista de pila, pero seguirán estando visible en pantalla.
 
 El `ArrangedSubviews` colección siempre es un subconjunto de los `Subview` colección, pero el orden de las subvistas individuales dentro de cada colección es independiente y controlada por el texto siguiente:
 
- - El orden de las subvistas dentro de la `ArrangedSubviews` colección determinar su orden de visualización dentro de la pila.
- - El orden de las subvistas dentro de la `Subview` colección determina el orden Z (o en capas) dentro de la vista atrás hacia delante.
+- El orden de las subvistas dentro de la `ArrangedSubviews` colección determinar su orden de visualización dentro de la pila.
+- El orden de las subvistas dentro de la `Subview` colección determina el orden Z (o en capas) dentro de la vista atrás hacia delante.
 
 ### <a name="dynamically-changing-content"></a>Cambiar dinámicamente el contenido
 

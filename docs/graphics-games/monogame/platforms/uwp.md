@@ -6,12 +6,12 @@ ms.assetid: C6B99E44-00C1-4139-A1B7-FCFBE8749AB1
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: 9f39580d282defed354f3b9e5cbe4eb1cdec4796
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7db73759cb4a1b1a8d7fe40426b03a163c3ebdc4
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61161251"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831060"
 ---
 # <a name="creating-a-monogame-uwp-project"></a>Crear un proyecto MonoGame UWP
 
@@ -90,9 +90,9 @@ La plantilla de MonoGame para Xbox One tiene en cuenta la zona segura y lo repre
 
 ## <a name="referencing-content-in-uwp-projects"></a>Hacer referencia a contenido en los proyectos de UWP
 
-Puede hacer referencia a contenido en los proyectos de MonoGame directamente desde el archivo o a través del [canalización de contenido de MonoGame](~/graphics-games/cocossharp/content-pipeline/index.md). Proyectos pequeños de juegos pueden beneficiarse de la simplicidad de la carga del archivo. Proyectos más grandes se beneficiarán del uso de la canalización de contenido para optimizar el contenido para reducir el tamaño y tiempos de carga. A diferencia de XNA en la consola Xbox 360, el `System.IO.File` está disponible en las aplicaciones para UWP de Xbox una clase.
+Puede hacer referencia a contenido en los proyectos de MonoGame directamente desde el archivo o a través del [canalización de contenido de MonoGame](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md). Proyectos pequeños de juegos pueden beneficiarse de la simplicidad de la carga del archivo. Proyectos más grandes se beneficiarán del uso de la canalización de contenido para optimizar el contenido para reducir el tamaño y tiempos de carga. A diferencia de XNA en la consola Xbox 360, el `System.IO.File` está disponible en las aplicaciones para UWP de Xbox una clase.
 
-Para obtener más información sobre la carga de contenido mediante la canalización de contenido, consulte el [Guía de la canalización de contenido](~/graphics-games/cocossharp/content-pipeline/index.md).
+Para obtener más información sobre la carga de contenido mediante la canalización de contenido, consulte el [Guía de la canalización de contenido](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 
 ### <a name="loading-content-from-file"></a>Cargando el contenido del archivo
 

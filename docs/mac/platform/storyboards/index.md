@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 166a50021c22aa09be3eecdb8b745a70e75c3d51
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8a5a2f87c16a5dd040cefb2fbc615b01431ebcf5
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031489"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832301"
 ---
 # <a name="introduction-to-storyboards-in-xamarinmac"></a>Introducción a guiones gráficos en Xamarin.Mac
 
@@ -56,9 +56,9 @@ De este modo, cada controlador de vista es un emparejamiento independiente y reu
 
 Dentro de la escena, puede hacer todo lo que normalmente habría sido controlados por individuo `.xib` archivos: 
 
- - Lugar subviews y controles (como botones y cuadros de texto).
- - Definir las posiciones de los elementos y las restricciones de diseño automático.
- - Transmisión las acciones y salidas para exponer elementos de interfaz de usuario al código.
+- Lugar subviews y controles (como botones y cuadros de texto).
+- Definir las posiciones de los elementos y las restricciones de diseño automático.
+- Transmisión las acciones y salidas para exponer elementos de interfaz de usuario al código.
 
 <a name="Working-with-Segues" />
 

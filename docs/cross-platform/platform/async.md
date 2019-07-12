@@ -6,12 +6,12 @@ ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
 author: asb3993
 ms.author: amburns
 ms.date: 03/22/2017
-ms.openlocfilehash: 0a72dead1b6c001f1514f1a089df9b407eb90644
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cca147f0c5dd1a217f464ffbed2a1ad2618c9b80
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61037373"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830192"
 ---
 # <a name="async-support-overview"></a>Información general sobre la compatibilidad con Async
 
@@ -23,7 +23,7 @@ Soporte para asincronía de Xamarin se basa en la base de Mono 3.0 y actualiza e
 
 Este documento presenta el nuevas async y await palabras clave, le guía a través de algunos ejemplos sencillos de implementar los métodos asincrónicos en Xamarin.iOS y Xamarin.Android.
 
-Para obtener una explicación más completa de las nuevas características asincrónicas de C# 5 (incluido muchos ejemplos y escenarios de uso diferentes), consulte la documentación de MSDN [programación asincrónica con Async y Await](https://msdn.microsoft.com/library/vstudio/hh191443.aspx).
+Para obtener una explicación más completa de las nuevas características asincrónicas de C# 5 (incluido muchos ejemplos y escenarios de uso diferentes), consulte el artículo [programación asincrónica](https://docs.microsoft.com/dotnet/csharp/async).
 
 La aplicación de ejemplo realiza una solicitud web asincrónica simple (sin bloquear el subproceso principal), a continuación, actualiza la interfaz de usuario con el html descargado y el recuento de caracteres.
 
@@ -69,7 +69,7 @@ Uso de await no bloquea el subproceso del llamador: en su lugar el control se de
 
 Cuando se complete la tarea, el método reanuda la ejecución en el mismo punto en el código. Esto incluye devolver al ámbito vuelva de un bloque try-catch-finally (si hay alguno). await no se puede usar en un bloque catch o finally.
 
-Obtenga más información sobre [await en MSDN](https://msdn.microsoft.com/library/vstudio/hh156528.aspx).
+Obtenga más información sobre [await](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) en Microsoft Docs.
 
 ## <a name="exception-handling"></a>Control de excepciones
 
@@ -85,7 +85,7 @@ Los métodos asincrónicos que toman mucho tiempo en completarse deben admitir l
 
 La tarea, a continuación, se cancela y confirma la cancelación.
 
-Para obtener más información sobre la cancelación, vea [cómo cancelar una tarea asincrónica](https://msdn.microsoft.com/library/vstudio/jj155761.aspx) en MSDN.
+Para más información sobre la cancelación, vea [Fine-Tuning Your Async Application (C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application) (Ajustar la aplicación asincrónica [C#]).
 
 ## <a name="example"></a>Ejemplo
 
@@ -201,10 +201,9 @@ Este documento ha proporcionado una visión general de las nuevas palabras clave
 - [Datos (iOS) (ejemplo)](https://developer.xamarin.com/samples/monotouch/Data/)
 - [HttpClient (iOS) (ejemplo)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
 - [MapKitSearch (iOS) (ejemplo)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
-- [Webinar: C#Async en iOS y Android (vídeo)](http://xamarin.wistia.com/medias/k27mc627xz)
-- [Programación asincrónica con Async y Await (MSDN)](https://msdn.microsoft.com/library/vstudio/hh191443.aspx)
-- [Ajustar la aplicación de Async (MSDN)](https://msdn.microsoft.com/library/vstudio/jj155761.aspx)
-- [Await y la interfaz de usuario y los interbloqueos. ¡Dios mío! (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2011/01/13/10115163.aspx)
-- [Tareas de procesamiento a medida que se completa (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2012/08/02/processing-tasks-as-they-complete.aspx)
+- [Programación asincrónica](https://docs.microsoft.com/dotnet/csharp/async)
+- [Fine-Tuning Your Async Application (C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application) (Ajuste de la aplicación asincrónica [C#])
+- [Await y la interfaz de usuario y los interbloqueos. ¡Dios mío!](https://devblogs.microsoft.com/pfxteam/await-and-ui-and-deadlocks-oh-my/)
+- [Tareas de procesamiento medida que se completan)](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)
 - [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/library/hh873175.aspx) (Modelo asincrónico basado en tareas [TAP])
 - [La asincronía en C# 5 (blog de Eric Lippert) – sobre la introducción de las palabras clave](http://blogs.msdn.com/b/ericlippert/archive/2010/11/11/whither-async.aspx)

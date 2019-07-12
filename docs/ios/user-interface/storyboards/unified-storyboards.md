@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: 26aeaa3d230a5c104014edd899b8d9231ced31e9
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c9d98d9d3052f52dc7860ba513756e3a33d1dc58
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61430506"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831924"
 ---
 # <a name="unified-storyboards-in-xamarinios"></a>Guiones gráficos unificados en Xamarin.iOS
 
@@ -216,9 +216,9 @@ En primer lugar, iOS 8 hace algún programa de instalación para prepararse para
 
 iOS 8 proporciona varias devoluciones de llamada que el programador puede utilizar para participar en el cambio de rasgo tal como se muestra en la tabla siguiente:
 
-|Phase|Callback|Descripción|
+|Phase|Callback|DESCRIPCIÓN|
 |--- |--- |--- |
-|Programa de instalación|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Este método obtiene llama al principio de un cambio de rasgo antes de que se establece una colección de rasgo para su nuevo valor.</li><li>El método se llama cuando ha cambiado el valor de la colección de rasgo pero antes de cualquier animación.</li></ul>|
+|Configuración|<ul><li>`WillTransitionToTraitCollection`</li><li>`TraitCollectionDidChange`</li></ul>|<ul><li>Este método obtiene llama al principio de un cambio de rasgo antes de que se establece una colección de rasgo para su nuevo valor.</li><li>El método se llama cuando ha cambiado el valor de la colección de rasgo pero antes de cualquier animación.</li></ul>|
 |Animación|`WillTransitionToTraitCollection`|El Coordinador de transición que se pasa a este método tiene un `AnimateAlongside` propiedad que permite al desarrollador agregar animaciones que se va a ejecutar junto con las animaciones de forma predeterminada.|
 |Limpieza|`WillTransitionToTraitCollection`|Proporciona un método para que los desarrolladores incluyen su propio código de limpieza después de la transición.|
 
@@ -693,12 +693,12 @@ Nuevo IOS 8, el desarrollador puede crear un único, de forma atómico `.xib` ar
 
 Pantallas de inicio dinámica tiene las siguientes limitaciones y consideraciones:
 
- - Use solo `UIKit` clases.
- - Utilizar una vista de raíz única que es un `UIView` o `UIViewController` objeto.
- - No realice ninguna conexión a código de la aplicación (no agregue **acciones** o **salidas**).
- - No agregue `UIWebView` objetos.
- - No use las clases personalizadas.
- - No utilice los atributos en tiempo de ejecución.
+- Use solo `UIKit` clases.
+- Utilizar una vista de raíz única que es un `UIView` o `UIViewController` objeto.
+- No realice ninguna conexión a código de la aplicación (no agregue **acciones** o **salidas**).
+- No agregue `UIWebView` objetos.
+- No use las clases personalizadas.
+- No utilice los atributos en tiempo de ejecución.
 
 Con las instrucciones anteriores en mente, echemos un vistazo a la adición de una pantalla de inicio de dinámica a un proyecto de iOS 8 Xamarin existente.
 

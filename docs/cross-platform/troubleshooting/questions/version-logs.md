@@ -7,12 +7,12 @@ ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: ee4b39aed64d7339bd561cccc49a2959a6daba5c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e389bc33538ec3c3d36eb749c746f5a4723aab3c
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61341326"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830355"
 ---
 # <a name="where-can-i-find-my-version-information-and-logs"></a>¿Dónde se puede encontrar mi información de versión y los registros?
 
@@ -50,7 +50,7 @@ Normalmente, es mejor enviar hacer una copia de toda la información de la **cop
 
 **Ayuda > acerca de > Mostrar detalles > Copiar información [button]**
 
-#### <a name="visual-studio"></a>Programa para la mejora
+#### <a name="visual-studio"></a>Visual Studio
 
 **Ayuda > acerca de Microsoft Visual Studio > Copiar información [button]**
 
@@ -68,7 +68,7 @@ Abrir Android SDK Manager y tomar una captura de pantalla de la parte superior *
 
 **Herramientas > Abrir Android SDK Manager**
 
-#### <a name="visual-studio"></a>Programa para la mejora
+#### <a name="visual-studio"></a>Visual Studio
 
 **Herramientas > Android > Abrir Android SDK Manager...**
 
@@ -156,7 +156,7 @@ Estos son los registros desde el `XamarinInstaller.dmg` instalador.
 
 (Tenga en cuenta que este elemento de menú sólo aparecerán después de que se ha iniciado la aplicación.)
 
-### <a name="visual-studio"></a>Programa para la mejora
+### <a name="visual-studio"></a>Visual Studio
 
 **Ver > salida > Mostrar resultados desde: Depurar**
 
@@ -166,7 +166,7 @@ Después de ejecutar el `adb` comando, adjunte back el **android_logcat.txt** ar
 
 Vea también el [registro de depuración de Android](~/android/deploy-test/debugging/android-debug-log.md) página.
 
-#### <a name="visual-studio"></a>Programa para la mejora
+#### <a name="visual-studio"></a>Visual Studio
 
 1. **Herramientas > Android > Inicie el símbolo del sistema Adb de Android**
 2. Limpiar el registro: `adb logcat -c`

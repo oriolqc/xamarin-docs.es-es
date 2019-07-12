@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 329984d44318b2204f2f5ee253402eb158c85b9f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a3bb6674baed293f95eb50fbca5792b288aa9239
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61283459"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832514"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Cuadros de diálogo en Xamarin.Mac
 
@@ -413,7 +413,7 @@ Si se ejecuta nuestra aplicación y abrir la hoja, se adjuntará a la ventana:
 
 ## <a name="creating-a-preferences-dialog"></a>Creación de un cuadro de diálogo de preferencias
 
-Antes de diseñar la vista de preferencia en Interface Builder, necesitamos agregar un tipo de segue personalizado para controlar el cambio de las preferencias. Agregue una nueva clase al proyecto y llámelo `ReplaceViewSeque `. Modifique la clase y dele un aspecto similar al siguiente:
+Antes de diseñar la vista de preferencia en Interface Builder, necesitamos agregar un tipo de segue personalizado para controlar el cambio de las preferencias. Agregue una nueva clase al proyecto y llámelo `ReplaceViewSeque`. Modifique la clase y dele un aspecto similar al siguiente:
 
 ```csharp
 using System;

@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/22/2016
-ms.openlocfilehash: 1b379bef98e498df4c58ba7209aa46b0b2542fe1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 322acff3279d0513266c7d9883726cac726334f7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031426"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830555"
 ---
 # <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin.Mac - macOS Sierra solución de problemas
 
@@ -52,7 +52,7 @@ Si se introduce una expiración incorrectos fecha o seguridad de código (CW) al
 Problemas conocidos:
 
 - Una llamada a `NSObject.ValueForKey` le un `null` clave producirá una excepción.
-- Ambos `NSURLSession` y la NSURLConnection` no longer RC4 cipher suites during the TLS handshake for `http://' las direcciones URL.
+- Ambos `NSURLSession` y `NSURLConnection` RC4 ya no los conjuntos de cifrado de durante el protocolo de enlace TLS para `http://` direcciones URL.
 - Las aplicaciones pueden dejar de responder si se modifica la geometría de la supervista en uno el `ViewWillLayoutSubviews` o `LayoutSubviews` métodos.
 - Para todas las conexiones SSL/TLS, el cifrado simétrico de RC4 ahora está deshabilitado de forma predeterminada. Además, la API de transporte seguro ya no admite SSLv3 y se recomienda que la aplicación dejen de usar SHA-1 y 3DES criptografía tan pronto como sea posible.
 

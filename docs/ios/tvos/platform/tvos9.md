@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/07/2016
-ms.openlocfilehash: dda197f71b2a2ab3e0d61a838ab85d79b7a078c7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c4aea5a35fd5db46c9e7ca245b852c988e82f53e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61270349"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830506"
 ---
 # <a name="introduction-to-tvos-9"></a>Introducción a tvOS 9
 
@@ -32,28 +32,28 @@ Esta guía le proporcionará una introducción a todas las características disp
 
 aplicaciones de tvOS que se ejecutan en Apple TV ha admite lo siguiente y características y capacidades:
 
- - Grupos de aplicaciones
- - Modos en segundo plano
- - Protección de datos
- - Game Center
- - Dispositivos de juego
- - iCloud
- - Adquisición de la aplicación
- - Uso compartido de cadenas de claves
+- Grupos de aplicaciones
+- Modos en segundo plano
+- Protección de datos
+- Game Center
+- Dispositivos de juego
+- iCloud
+- Adquisición de la aplicación
+- Uso compartido de cadenas de claves
 
 No se admiten las siguientes características y capacidades:
 
- - Apple Pay
- - Espacio aislado de la aplicación
- - Dominios asociados
- - HealthKit
- - HomeKit
- - Inter-App Audio
- - Asignaciones
- - VPN personal
- - Notificaciones push
- - Cartera
- - Configuración inalámbrica de accesorios
+- Apple Pay
+- Espacio aislado de la aplicación
+- Dominios asociados
+- HealthKit
+- HomeKit
+- Inter-App Audio
+- Asignaciones
+- VPN personal
+- Notificaciones push
+- Cartera
+- Configuración inalámbrica de accesorios
 
 Consulte nuestra [admite ensamblados](~/ios/tvos/internals/assemblies.md) y [admite marcos](~/ios/tvos/internals/frameworks.md) documentación para obtener más información.
 
@@ -63,15 +63,15 @@ Consulte nuestra [admite ensamblados](~/ios/tvos/internals/assemblies.md) y [adm
 
 El nuevo Televisor Apple tiene las siguientes especificaciones de hardware:
 
- - procesador de 64 bits A8
- - GB de 32 o 64GB de almacenamiento
- - 2GB de RAM
- - 10/100 Mbps Ethernet
- - WiFi 802.11a/b/g/n/ac
- - resolución de 1.080 p
- - HDMI
- - Puerto C de USB (para los desarrolladores y solo use diagnóstico)
- - Nuevo Siri Remote o Apple TV remoto (según la región)
+- procesador de 64 bits A8
+- GB de 32 o 64GB de almacenamiento
+- 2GB de RAM
+- 10/100 Mbps Ethernet
+- WiFi 802.11a/b/g/n/ac
+- resolución de 1.080 p
+- HDMI
+- Puerto C de USB (para los desarrolladores y solo use diagnóstico)
+- Nuevo Siri Remote o Apple TV remoto (según la región)
 
 ### <a name="siri-remote"></a>Siri remoto
 
@@ -79,14 +79,14 @@ Según la región, la TV Apple proporcionado remoto se incluirá en cualquier un
 
 Siri remoto está actualmente disponible en los siguientes países:
 
- - Australia
- - Canadá
- - Francia
- - Alemania
- - Japón
- - España
- - Reino Unido
- - Estados Unidos
+- Australia
+- Canadá
+- Francia
+- Alemania
+- Japón
+- España
+- Reino Unido
+- Estados Unidos
 
 Todos los demás países recibirán Apple TV remota que reemplaza el botón de Siri con un botón de búsqueda, se abrirá la pantalla de búsqueda de forma predeterminada con la entrada de texto para la búsqueda:
 

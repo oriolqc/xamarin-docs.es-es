@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: b2968399279fe3e9d160471bbcae08ae091be93e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 87f7689a082c891bc199f4221e68ed7ab19adf85
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075663"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832708"
 ---
 # <a name="search-apis-in-xamarinios"></a>API de búsqueda en Xamarin.iOS
 
@@ -55,9 +55,9 @@ Al proporcionar elementos enriquecidos, informativos, puede asegurarse de que un
 
 Apple proporciona las siguientes sugerencias sobre qué contenido y las acciones para proporcionar los índices de búsqueda para en la aplicación:
 
- - Cualquier contenido ve, crea o seleccionada por el usuario desde dentro de la aplicación.
- - Puntos de navegación y las características dentro de la aplicación.
- - Cosas como los mensajes nuevos, contenido u otros tipos de elementos mostrados por la aplicación que recientemente se han descargado en el dispositivo.
+- Cualquier contenido ve, crea o seleccionada por el usuario desde dentro de la aplicación.
+- Puntos de navegación y las características dentro de la aplicación.
+- Cosas como los mensajes nuevos, contenido u otros tipos de elementos mostrados por la aplicación que recientemente se han descargado en el dispositivo.
 
 ## <a name="app-search-enhancements"></a>Mejoras en las búsquedas de aplicaciones
 

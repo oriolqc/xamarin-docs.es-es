@@ -6,12 +6,12 @@ ms.assetid: F976AB09-0697-4408-999A-633977FEFF64
 author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
-ms.openlocfilehash: 99e8f8bf04465d0d61086139ba9889eae141207e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6269a7f2fa097136f492657d0ba7c6a1f056c38c
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61160613"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832317"
 ---
 # <a name="programming-urhosharp-with-f"></a>Programación de UrhoSharp conF#
 
@@ -97,20 +97,13 @@ type AppDelegate () =
         true
 ```
 
-El `ApplicationOptions.Default` proporciona las opciones predeterminadas para una aplicación en modo horizontal. Pasar estos `ApplicationOptions` al constructor predeterminado para su `Application` subclase (tenga en cuenta que al definir el `HelloWorld` clase, la línea `inherit Application(o)` llama al constructor de clase base). 
+El `ApplicationOptions.Default` proporciona las opciones predeterminadas para una aplicación en modo horizontal. Pasar estos `ApplicationOptions` al constructor predeterminado para su `Application` subclase (tenga en cuenta que al definir el `HelloWorld` clase, la línea `inherit Application(o)` llama al constructor de clase base).
 
-El `Run` método de su `Application` inicia el programa. Se define como devolver un `int`, que se puede canalizar a `ignore`. 
+El `Run` método de su `Application` inicia el programa. Se define como devolver un `int`, que se puede canalizar a `ignore`.
 
-El programa resultante debe ser similar:
+El programa resultante debe parecerse a esta captura de pantalla:
 
-![](fsharp-images/helloworldfsharp.png "El programa resultante debería ser similar a")
-
-
-
-
-
-
-
+![Captura de pantalla del programa resultante](fsharp-images/helloworldfsharp.png)
 
 ## <a name="related-links"></a>Vínculos relacionados
 

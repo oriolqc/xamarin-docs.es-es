@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: 8c8bf3f86091f49633913b37ef5108ddbae6d276
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6b404d7c27fba38c53ff07207003849445d51118
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60951774"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832480"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hola, Guía de inicio rápido de tvOS
 
@@ -415,7 +415,7 @@ public override void ViewDidLoad ()
 }
 ```
 
-Debemos usar `ViewDidLoad `, en lugar de otro método como `Initialize`, ya que `ViewDidLoad ` se denomina *después* haya cargado el sistema operativo y se crea una instancia de la interfaz de usuario desde el `.storyboard` archivo. Si se ha intentado obtener acceso al control de etiqueta antes de la `.storyboard` archivo ha sido totalmente cargado y crea una instancia, obtendríamos un `NullReferenceException` error porque todavía no se crearía el control de etiqueta.
+Debemos usar `ViewDidLoad`, en lugar de otro método como `Initialize`, ya que `ViewDidLoad` se denomina *después* haya cargado el sistema operativo y se crea una instancia de la interfaz de usuario desde el `.storyboard` archivo. Si se ha intentado obtener acceso al control de etiqueta antes de la `.storyboard` archivo ha sido totalmente cargado y crea una instancia, obtendríamos un `NullReferenceException` error porque todavía no se crearía el control de etiqueta.
 
 A continuación, necesitamos agregar el código para responder al usuario hacer clic en el botón. Agregue lo siguiente al parcial de clase para que se ha creado:
 
@@ -468,7 +468,7 @@ Uso remoto del simulador, si hace clic en el botón varias veces en la etiqueta 
 
 [![](hello-tvos-images/run05.png "La etiqueta con un recuento actualizado")](hello-tvos-images/run05.png#lightbox)
 
-¡Enhorabuena! Hemos abarcado mucha información en este tema, pero si ha seguido este tutorial de principio a fin, ahora debería tener un conocimiento sólido de los componentes de una aplicación de Xamarin.tvOS, así como las herramientas utilizadas para crearlos.
+Felicidades. Hemos abarcado mucha información en este tema, pero si ha seguido este tutorial de principio a fin, ahora debería tener un conocimiento sólido de los componentes de una aplicación de Xamarin.tvOS, así como las herramientas utilizadas para crearlos.
 
 ## <a name="where-to-next"></a>¿Qué hacer después?
 

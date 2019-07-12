@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 12/05/2017
-ms.openlocfilehash: 13fd84d8e23c18606696532b1c6e8db301b52f3c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cb8aabb3649da3818c1b020508b78a03f513963b
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218488"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830683"
 ---
 # <a name="installing-and-using-watchos-in-xamarin"></a>Instalación y uso de watchOS en Xamarin
 
@@ -144,7 +144,7 @@ Puede iniciar las aplicaciones de watch en el simulador mediante Visual Studio p
 
 Existen dos modos para iniciar una aplicación:
 
- - modo de aplicación normal (predeterminado), y
+- modo de aplicación normal (predeterminado), y
 - [Las notificaciones](~/ios/watchos/platform/notifications.md) (lo que requiere una carga de notificación de prueba en formato JSON).
 
 ### <a name="xcode-8-support"></a>Compatibilidad con Xcode 8
@@ -178,8 +178,9 @@ De forma predeterminada se inicia una aplicación de inspección en normal **apl
 
 Al usar Xcode 6, solo el iPhone 5, iPhone 5S, iPhone 6 y iPhone 6 Plus puede activar la pantalla externa cualquiera **Apple Watch - 38mm** o **Apple Watch - 42mm** donde las aplicaciones de watch será muestra.
 
-**Nota:** Recuerde que la pantalla de inspección no aparecen automáticamente en el simulador de iOS al usar Xcode 6.
-Use la **Hardware > pantallas externas** menú para mostrar la pantalla de inspección.
+> [!NOTE]
+> Recuerde que la pantalla de inspección no aparecen automáticamente en el simulador de iOS al usar Xcode 6.
+> Use la **Hardware > pantallas externas** menú para mostrar la pantalla de inspección.
 
 <a name="custommodes" />
 
@@ -212,8 +213,8 @@ Recuerde que debe proporcionar un archivo JSON de notificación cuando se depura
 
 ![](installation-images/debug-sml.png "Esta captura de pantalla muestra un punto de interrupción de depuración que se vea afectado en una aplicación de inspección")
 
-Después de seguir las instrucciones de inicio terminará con la aplicación del reloj que se ejecutan en el **iOS Simulator (Watch)**.
-Para el modo de notificación se puede seleccionar **Depurar > Abrir registro sistema** (**CMD + /**) y usar `Console.WriteLine` en el código.
+Después de seguir las instrucciones de inicio terminará con la aplicación del reloj que se ejecutan en el **iOS Simulator (Watch)** .
+Para el modo de notificación se puede seleccionar **Depurar > Abrir registro sistema** (**CMD + /** ) y usar `Console.WriteLine` en el código.
 
 ### <a name="debugging-lifecycle-event-handlers"></a>Depuración de controladores de eventos de ciclo de vida
 

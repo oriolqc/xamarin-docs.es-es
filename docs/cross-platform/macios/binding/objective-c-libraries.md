@@ -6,12 +6,12 @@ ms.assetid: 8A832A76-A770-1A7C-24BA-B3E6F57617A0
 author: conceptdev
 ms.author: crdun
 ms.date: 03/06/2018
-ms.openlocfilehash: 306cce581eb1506e770222ea10e160c4fdbe1b29
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 206379b162c7778663ee2baf64dfeb1d33666ab4
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827490"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831464"
 ---
 # <a name="binding-objective-c-libraries"></a>Enlace de bibliotecas de Objective-c.
 
@@ -267,7 +267,7 @@ string Text { get; [NullAllowed] set; }
 Al configurar el enlace para un control personalizado, se deben considerar las siguientes observaciones:
 
 1. **Propiedades de enlace deben ser estáticas** : al definir el enlace de propiedades, el [ `[Static]` ](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute) se debe usar el atributo.
- 2. **Los nombres de propiedad deben coincidir exactamente con** -el nombre usado para enlazar la propiedad debe coincidir exactamente con el nombre de la propiedad en el control personalizado.
+2. **Los nombres de propiedad deben coincidir exactamente con** -el nombre usado para enlazar la propiedad debe coincidir exactamente con el nombre de la propiedad en el control personalizado.
 3. **Tipos de propiedad deben coincidir exactamente** -el tipo de variable que se usa para enlazar la propiedad debe coincidir exactamente con el tipo de la propiedad en el control personalizado.
 4. **Puntos de interrupción y el captador o establecedor** : puntos de interrupción se colocan en el captador o nunca se alcanzarán los métodos de establecedor de la propiedad.
 5. **Observe las devoluciones de llamada** -deberá utilizar las devoluciones de llamada de observación para recibir notificaciones de cambios en los valores de propiedad de controles personalizados.

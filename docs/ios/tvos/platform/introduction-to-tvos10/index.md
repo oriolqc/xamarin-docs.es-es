@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 260d01d6aa8344dd3cf107f1ffc34167c457a491
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6bad05f62fa9168818aa9a2e73cc1e2830af03b3
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61269333"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830035"
 ---
 # <a name="introduction-to-tvos-10"></a>Introducción a tvOS 10
 
@@ -56,10 +56,10 @@ Además, `UIKit` se ha modificado para que funcione en el nuevo extendidos **sRG
 
 Apple ofrece las siguientes prácticas recomendadas al trabajar con colores amplios:
 
- - `UIColor` Ahora se utiliza espacio de color sRGB y se dejará de fijar los valores para el `0.0` a `1.0` intervalo. Si la aplicación se basa en el comportamiento de bloqueo anterior, deberá modificarse para tvOS 10.
- - Si la aplicación realiza una representación personalizada de `UIImages`, use la nueva [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) clase para especificar el uso de los formatos de intervalo extendido o intervalo estándar.
- - Cuando se usa una API de bajo nivel como gráficos básicos o sistema operativo para proporcionar procesamiento de imágenes, la aplicación debe usar un rango extendido píxeles y el espacio de formato de color que es compatible con los valores de punto flotante de 16 bits. En caso necesario, la aplicación deberá fijar manualmente los valores de componentes de color.
- - Gráficos básicos, imagen Core y los sombreadores de rendimiento de sistema operativo proporcionan nuevos métodos para la conversión entre los espacios de dos colores.
+- `UIColor` Ahora se utiliza espacio de color sRGB y se dejará de fijar los valores para el `0.0` a `1.0` intervalo. Si la aplicación se basa en el comportamiento de bloqueo anterior, deberá modificarse para tvOS 10.
+- Si la aplicación realiza una representación personalizada de `UIImages`, use la nueva [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) clase para especificar el uso de los formatos de intervalo extendido o intervalo estándar.
+- Cuando se usa una API de bajo nivel como gráficos básicos o sistema operativo para proporcionar procesamiento de imágenes, la aplicación debe usar un rango extendido píxeles y el espacio de formato de color que es compatible con los valores de punto flotante de 16 bits. En caso necesario, la aplicación deberá fijar manualmente los valores de componentes de color.
+- Gráficos básicos, imagen Core y los sombreadores de rendimiento de sistema operativo proporcionan nuevos métodos para la conversión entre los espacios de dos colores.
 
 Para obtener más información, consulte nuestra [Introducción a Color amplia](~/ios/platform/wide-color.md) guía.
 
@@ -67,12 +67,12 @@ Para obtener más información, consulte nuestra [Introducción a Color amplia](
 
 Varios marcos que no estaban disponibles en iOS (y tvOS no), están disponibles para tvOS 10, como:
 
- - ExternalAccessory
- - HomeKit
- - MultipeerConnectivity
- - Fotos
- - ReplayKit
- - UserNotification
+- ExternalAccessory
+- HomeKit
+- MultipeerConnectivity
+- Fotos
+- ReplayKit
+- UserNotification
 
 ## <a name="additional-framework-changes"></a>Cambios de marco de trabajo adicionales
 

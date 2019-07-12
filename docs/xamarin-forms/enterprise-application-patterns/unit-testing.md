@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/07/2017
-ms.openlocfilehash: 02aeedd5498c47950e2fbc0d218de05bc0bb3204
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d83cdce7076eac5a022863b583ecb01346ae440a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61298992"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831080"
 ---
 # <a name="unit-testing-enterprise-apps"></a>Pruebas unitarias de aplicaciones de Enterprise
 
@@ -170,7 +170,8 @@ public void InvalidEventNameShouldThrowArgumentExceptionText()
 
 Esta prueba unitaria iniciará una excepción, porque el [ `ListView` ](xref:Xamarin.Forms.ListView) control no tiene un evento denominado `OnItemTapped`. El `Assert.Throws<T>` método es un método genérico donde `T` es el tipo de la excepción esperada. El argumento pasado a la `Assert.Throws<T>` método es una expresión lambda que producirá la excepción. Por lo tanto, pasará la prueba unitaria siempre que la expresión lambda produce una `ArgumentException`.
 
->💡 **Sugerencia**: Evite escribir pruebas unitarias que examine las cadenas de mensaje de excepción. Las cadenas de mensaje de excepción pueden cambiar con el tiempo y, por lo que se consideran las pruebas unitarias que se basan en su presencia frágiles.
+> [!TIP]
+> Evite escribir pruebas unitarias que examine las cadenas de mensaje de excepción. Las cadenas de mensaje de excepción pueden cambiar con el tiempo y, por lo que se consideran las pruebas unitarias que se basan en su presencia frágiles.
 
 ### <a name="testing-validation"></a>Las pruebas de validación
 

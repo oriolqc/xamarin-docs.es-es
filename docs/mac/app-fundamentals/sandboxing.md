@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 6bf2f63e944e178d80f76fe363ef24410ff052ce
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c51960a24e1277b3faec0905da3b9a5986359681
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61237108"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830671"
 ---
 # <a name="sandboxing-a-xamarinmac-app"></a>Espacio aislado de una aplicación de Xamarin.Mac
 
@@ -226,7 +226,7 @@ Aparte del comportamiento de bloqueo de recurso, hay tres maneras principales pa
 
 ### <a name="debugging-a-sandboxed-app"></a>Depurar una aplicación en espacio aislado
 
-El depurador se conecta a las aplicaciones de Xamarin.Mac a través de TCP, lo que significa que de forma predeterminada cuando se habilita el espacio aislado, no se puede conectar a la aplicación, por lo que si se intenta ejecutar la aplicación sin los permisos adecuados habilitados, se produce un error *"no se puede conectar a el depurador"*. 
+El depurador se conecta a las aplicaciones de Xamarin.Mac a través de TCP, lo que significa que de forma predeterminada cuando se habilita el espacio aislado, no se puede conectar a la aplicación, por lo que si se intenta ejecutar la aplicación sin los permisos adecuados habilitados, se produce un error *"no se puede conectar a el depurador"* . 
 
 [![Establecer las opciones necesarias](sandboxing-images/debug01.png "establecer las opciones necesarias")](sandboxing-images/debug01-large.png#lightbox)
 
@@ -460,7 +460,7 @@ Para permitir que la versión firmada de Apple de la aplicación de Xamarin.Mac 
 
 1. Abra la aplicación Terminal (en `/Applications/Utilities`).
 2. Abra una ventana de Finder para la versión firmada de Apple de la aplicación de Xamarin.Mac.
-3. Tipo `asctl container acl add -file ` en la ventana de Terminal.
+3. Tipo `asctl container acl add -file` en la ventana de Terminal.
 4. Arrastre el icono de la aplicación de Xamarin.Mac desde la ventana de Finder y colóquela en la ventana de Terminal.
 5. La ruta de acceso completa al archivo se agregará al comando en Terminal.
 6. Presione **ENTRAR** para ejecutar el comando.

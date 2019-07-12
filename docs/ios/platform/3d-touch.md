@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 6a12d157b3de7c3841f5d69d209c01fbc612f79b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: abd9fe85be412539fd51d0e6164c79ce346377a7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61279254"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832104"
 ---
 # <a name="introduction-to-3d-touch-in-xamarinios"></a>Introducción a 3D Touch en Xamarin.iOS
 
@@ -105,7 +105,7 @@ Este método se puede llamar antes *o después* `ViewDidLoad()`.
 
 ### <a name="handling-peek-and-pop"></a>POP e inspección de control
 
-En un dispositivo iOS que puede controlar 3D Touch, podemos usar una instancia de la `UIViewControllerPreviewingDelegate` clase para controlar la presentación de **Peek** y **Pop** detalles de elemento. Por ejemplo, si tuviéramos un controlador de vista de tabla denominada `MasterViewController ` podríamos usar el siguiente código para admitir **Peek** y **Pop**:
+En un dispositivo iOS que puede controlar 3D Touch, podemos usar una instancia de la `UIViewControllerPreviewingDelegate` clase para controlar la presentación de **Peek** y **Pop** detalles de elemento. Por ejemplo, si tuviéramos un controlador de vista de tabla denominada `MasterViewController` podríamos usar el siguiente código para admitir **Peek** y **Pop**:
 
 ```csharp
 using System;

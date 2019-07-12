@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 06/14/2017
-ms.openlocfilehash: d59cac9403a244ce553d84e0590b8a9c3d4d2f30
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 78646a0a420820218a8c61ea34ecc5db4438a91d
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61365870"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832738"
 ---
 # <a name="photokit-in-xamarinios"></a>PhotoKit en Xamarin.iOS
 
@@ -71,9 +71,9 @@ Es cómo realizar consultas y leer los datos. También puede escribir los cambio
     
 Para escribir realmente los cambios a atrás desde la aplicación, cree una solicitud de cambio. Cada una de las clases del modelo tiene una clase de solicitud de cambio asociada. Por ejemplo, para cambiar un PHAsset, cree un PHAssetChangeRequest. Los pasos para realizar los cambios que se reescriben a la biblioteca de fotos y se envían a los observadores como la anterior son:
 
--   Realizar la operación de edición.
--   Guardar los datos de imagen filtrada en una instancia de PHContentEditingOutput.
--   Realice una solicitud de cambio para publicar el formulario de los cambios en la salida de la edición.
+- Realizar la operación de edición.
+- Guardar los datos de imagen filtrada en una instancia de PHContentEditingOutput.
+- Realice una solicitud de cambio para publicar el formulario de los cambios en la salida de la edición.
 
 Este es un ejemplo que escriba un cambio en una imagen que se aplica un filtro de imagen Core negras:
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/04/2018
-ms.openlocfilehash: c0adee0dae1135bdfd076082e85a471db1cd1ecf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 490331663d94a1e3130fc794a11a52acdacca014
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013391"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829743"
 ---
 # <a name="bound-services-in-xamarinandroid"></a>Servicios enlazados en Xamarin.Android
 
@@ -230,7 +230,7 @@ El `OnServiceDisconnected` método solo se invoca cuando la conexión entre un c
 
 ## <a name="starting-and-binding-to-a-service-with-an-explicit-intent"></a>Iniciar y enlazar a un servicio con una intención explícita
 
-Para utilizar un servicio dependiente, un cliente (por ejemplo, una actividad) debe crear una instancia de un objeto que implementa `Android.Content.IServiceConnection` e invocar el `BindService` método.` BindService` devolverá `true` si el servicio está enlazado, `false` si no lo está. El método `BindService` toma tres parámetros:
+Para utilizar un servicio dependiente, un cliente (por ejemplo, una actividad) debe crear una instancia de un objeto que implementa `Android.Content.IServiceConnection` e invocar el `BindService` método. `BindService` devolverá `true` si el servicio está enlazado, `false` si no lo está. El método `BindService` toma tres parámetros:
 
 * **Un `Intent`**  &ndash; la intención explícitamente debe identificar qué servicio se conecte a.
 * **Un `IServiceConnection` objeto** &ndash; este objeto es un intermediario que proporciona los métodos de devolución de llamada para notificar al cliente cuando se inicia y detiene el servicio dependiente.

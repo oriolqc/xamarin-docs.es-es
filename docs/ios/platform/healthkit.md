@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: df0b0e8dd57129917f2d8dab07115551ca675acf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8dcb478b303c4c73f7e73dc018ad56b1301389c8
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61163447"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830049"
 ---
 # <a name="healthkit-in-xamarinios"></a>HealthKit en Xamarin.iOS
 
@@ -142,7 +142,7 @@ La aplicación de ejemplo proporcionada con este artículo incluye un preconfigu
 
 El almacén de datos de estado Kit es un almacén de datos privado, específicos del usuario que se comparte entre las aplicaciones. Porque la información de estado se distingue por lo tanto, el usuario debe tomar pasos positivos para permitir el acceso a datos. Este acceso puede ser parcial (escritura pero no de lectura, acceso para algunos tipos de datos, pero no otros, etc.) y se pueden revocar en cualquier momento. Las aplicaciones del Kit de mantenimiento deben escribirse de forma defensiva, teniendo en cuenta que muchos usuarios será dudas sobre cómo almacenar su información de estado.
 
-Datos del Kit de mantenimiento se limita a Apple tipos especificados. Estos tipos se definen estrictamente: algunas, como el tipo de sangre, están limitados a los valores de una enumeración de Apple proporcionada determinados mientras otros que combinan una magnitud con una unidad de medida (por ejemplo, gramos, calorías y litros). Incluso los datos que comparten una unidad de medida compatible se distinguen por sus `HKObjectType`; por ejemplo, el sistema de tipos detectará un intento de errónea para almacenar un `HKQuantityTypeIdentifier.NumberOfTimesFallen` valor a un campo que se espera un `HKQuantityTypeIdentifier.FlightsClimbed` , aunque ambos usan la` HKUnit.Count` unidad de medida.
+Datos del Kit de mantenimiento se limita a Apple tipos especificados. Estos tipos se definen estrictamente: algunas, como el tipo de sangre, están limitados a los valores de una enumeración de Apple proporcionada determinados mientras otros que combinan una magnitud con una unidad de medida (por ejemplo, gramos, calorías y litros). Incluso los datos que comparten una unidad de medida compatible se distinguen por sus `HKObjectType`; por ejemplo, el sistema de tipos detectará un intento de errónea para almacenar un `HKQuantityTypeIdentifier.NumberOfTimesFallen` valor a un campo que se espera un `HKQuantityTypeIdentifier.FlightsClimbed` , aunque ambos usan la `HKUnit.Count` unidad de medida.
 
 Los tipos que se pueda almacenables en el almacén de datos del Kit de mantenimiento son todas las subclases de `HKObjectType`. `HKCharacteristicType` los objetos almacenan biológicos sexo, tipo de sangre y fecha de nacimiento. Sin embargo, son más comunes `HKSampleType` objetos que representan los datos que se muestrean en un momento determinado o durante un período de tiempo. 
 

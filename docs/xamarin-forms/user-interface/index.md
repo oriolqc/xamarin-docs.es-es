@@ -7,18 +7,22 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/11/2019
-ms.openlocfilehash: fa53d7253862e696d23289fe3c57f215b29da6c5
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 0fff9b7ce4b78e29409d1cc7a55e7f447baf722c
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649567"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831099"
 ---
 # <a name="xamarinforms-user-interface-views"></a>Vistas de interfaz de usuario de Xamarin.Forms
 
 [![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/FormsGallery/)
 
 _Cómo usar las vistas de Xamarin.Forms_
+
+## <a name="activityindicatoractivityindicatormd"></a>[ActivityIndicator](activityindicator.md)
+
+El `ActivityIndicator` es un control animado que se indica a los usuarios que la aplicación esté implicada en una actividad larga, sin dar ninguna indicación del progreso.
 
 ## <a name="animationanimationindexmd"></a>[Animación](animation/index.md)
 
@@ -86,7 +90,11 @@ Agregar mapas requiere una descarga del paquete NuGet adicional y alguna configu
 
 ## <a name="pickerpickerindexmd"></a>[Selector](picker/index.md)
 
-El [ `Picker` ](xref:Xamarin.Forms.Picker) vista es un control para seleccionar un elemento de texto en una lista de datos.
+El [`Picker`](xref:Xamarin.Forms.Picker) vista es un control para seleccionar un elemento de texto en una lista de datos.
+
+## <a name="progressbarprogressbarmd"></a>[Barra de progreso](progressbar.md)
+
+El [ `ProgressBar` ](xref:Xamarin.Forms.ProgressBar) es un control que se representa visualmente el progreso como una barra horizontal que se rellena en función de una propiedad de tipo float.
 
 ## <a name="sliderslidermd"></a>[Slider](slider.md)
 

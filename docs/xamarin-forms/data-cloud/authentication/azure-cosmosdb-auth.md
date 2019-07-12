@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
-ms.openlocfilehash: 52f4e33e051c99b7002120c055c79036828d60dd
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 6e55b3b9b0f204992de684ba09f3d9ff2552ce00
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67658872"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832359"
 ---
 # <a name="authenticate-users-with-an-azure-cosmos-db-document-database-and-xamarinforms"></a>Autenticar a los usuarios con una base de datos de documentos de Azure Cosmos DB y Xamarin.Forms
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
 
 _Azure bases de datos de documento de Cosmos DB admiten colecciones con particiones, que pueden abarcar varios servidores y particiones, al tiempo que admite almacenamiento ilimitado y rendimiento. En este artículo se explica cómo combinar el control de acceso con las colecciones con particiones, para que un usuario sólo puede tener acceso a sus propios documentos en una aplicación de Xamarin.Forms._
 
@@ -96,9 +96,9 @@ El proceso de creación de una aplicación de Facebook para realizar la autentic
 1. Creación de una aplicación de Facebook. Para obtener más información, consulte [registrar y configurar una aplicación](https://developers.facebook.com/docs/apps/register) en el Centro para desarrolladores de Facebook.
 1. Agregar el producto de inicio de sesión de Facebook a la aplicación. Para obtener más información, consulte [agregar inicio de sesión de Facebook a la aplicación o sitio Web](https://developers.facebook.com/docs/facebook-login) en el Centro para desarrolladores de Facebook.
 1. Configurar el inicio de sesión de Facebook como sigue:
-  - Habilitar el inicio de sesión de cliente OAuth.
-  - Habilitar el inicio de sesión de OAuth de Web.
-  - Establece el URI para el URI de la aplicación web de App Service, de redirección de OAuth válido con `/.auth/login/facebook/callback` anexado.
+   - Habilitar el inicio de sesión de cliente OAuth.
+   - Habilitar el inicio de sesión de OAuth de Web.
+   - Establece el URI para el URI de la aplicación web de App Service, de redirección de OAuth válido con `/.auth/login/facebook/callback` anexado.
 
   Captura de pantalla siguiente muestra esta configuración:
 
@@ -114,12 +114,12 @@ El proceso de configuración de autenticación fácil de App Service es como sig
 
 1. En el Portal de Azure, vaya a la aplicación web de App Service.
 1. En el Portal de Azure, abra la autenticación / hoja de autorización y realizar la configuración siguiente:
-  - Autenticación de App Service debe estar activada.
-  - La acción que se realizará cuando una solicitud no está autenticada debe establecerse en **inicio de sesión con Facebook**.
+    - Autenticación de App Service debe estar activada.
+    - La acción que se realizará cuando una solicitud no está autenticada debe establecerse en **inicio de sesión con Facebook**.
 
-  Captura de pantalla siguiente muestra esta configuración:
+    Captura de pantalla siguiente muestra esta configuración:
 
-  [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "Configuración de autenticación de App Service Web App")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "configuración de autenticación de App Service Web App")
+    [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "Configuración de autenticación de App Service Web App")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "configuración de autenticación de App Service Web App")
 
 La aplicación web de App Service también debe configurarse para comunicarse con la aplicación de Facebook para habilitar el flujo de autenticación. Esto puede realizarse seleccionando el proveedor de identidades de Facebook, y especificando el **Id. de aplicación** y **secreto de la aplicación** los valores de la configuración de la aplicación de Facebook en el Centro para desarrolladores de Facebook. Para obtener más información, consulte [Facebook agregar información a la aplicación](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application).
 
@@ -131,10 +131,10 @@ El proceso para configurar la aplicación de ejemplo de Xamarin.Forms es como si
 
 1. Abra la solución Xamarin.Forms.
 1. Abra `Constants.cs` y actualice los valores de las siguientes constantes:
-  - `EndpointUri` : el valor debe ser la dirección URL de cuenta de Cosmos DB en la hoja de claves de la cuenta de Cosmos DB.
-  - `DatabaseName` : el valor debe ser el nombre de la base de datos del documento.
-  - `CollectionName` : el valor debe ser el nombre de la colección de base de datos de documentos (en este caso, `UserItems`).
-  - `ResourceTokenBrokerUrl` : el valor debe ser la dirección URL de la aplicación de web resource token broker en la hoja de información general de la cuenta de servicio de aplicación.
+    - `EndpointUri` : el valor debe ser la dirección URL de cuenta de Cosmos DB en la hoja de claves de la cuenta de Cosmos DB.
+    - `DatabaseName` : el valor debe ser el nombre de la base de datos del documento.
+    - `CollectionName` : el valor debe ser el nombre de la colección de base de datos de documentos (en este caso, `UserItems`).
+    - `ResourceTokenBrokerUrl` : el valor debe ser la dirección URL de la aplicación de web resource token broker en la hoja de información general de la cuenta de servicio de aplicación.
 
 ## <a name="initiating-login"></a>Iniciando el inicio de sesión
 

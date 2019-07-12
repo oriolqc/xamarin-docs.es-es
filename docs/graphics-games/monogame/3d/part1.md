@@ -6,12 +6,12 @@ ms.assetid: AD0A7971-51B1-4E38-B412-7907CE43CDDF
 author: conceptdev
 ms.author: crdun
 ms.date: 03/28/2017
-ms.openlocfilehash: d9c73dfcee6321ecb314ca229db407c6d0438977
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4a72effc85657b4722b17eae486e81db5992a1da
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61342590"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832254"
 ---
 # <a name="using-the-model-class"></a>Uso de la clase de modelo
 
@@ -44,7 +44,7 @@ Antes de continuar debemos comprobar que el proyecto se abre y se implementa cor
 
 El formato de archivo .xnb es una extensión estándar para el contenido compilado (contenido que ha creado el [MonoGame canalización herramienta](http://www.monogame.net/documentation/?page=Pipeline)). Todo el contenido generado tiene un archivo de origen (que es un archivo .fbx en el caso de nuestro modelo) y un archivo de destino (un archivo .xnb). El formato .fbx es un formato común de modelo 3D que se puede crear aplicaciones como [Maya](http://www.autodesk.com/products/maya/overview) y [Blender](http://www.blender.org/). 
 
-La `Model` clase puede crearse mediante la carga de un archivo .xnb desde un disco que contiene datos de geometría 3D.   Este archivo .xnb se crea a través de un proyecto de contenido. Plantillas de Monogame incluyen automáticamente un proyecto de contenido (con la extensión .mgcp) en nuestra carpeta de contenido. Para obtener una explicación detallada sobre la herramienta de canalización MonoGame, consulte el [Guía de la canalización de contenido](~/graphics-games/cocossharp/content-pipeline/index.md).
+La `Model` clase puede crearse mediante la carga de un archivo .xnb desde un disco que contiene datos de geometría 3D.   Este archivo .xnb se crea a través de un proyecto de contenido. Plantillas de Monogame incluyen automáticamente un proyecto de contenido (con la extensión .mgcp) en nuestra carpeta de contenido. Para obtener una explicación detallada sobre la herramienta de canalización MonoGame, consulte el [Guía de la canalización de contenido](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 
 En esta guía a través de la canalización MonoGame omitiremos herramienta y usará el. Archivos XNB incluidos aquí. Tenga en cuenta que el. Archivos XNB difieren por plataforma, así que asegúrese de usar el conjunto correcto de los archivos XNB para cualquier plataforma que está trabajando.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: a0efc30fd9814e4da858c4e3e4e99990eccf102e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7ac4d0effc1067b065bad114160dc8648e998dad
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61164338"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830791"
 ---
 # <a name="working-with-tvos-tab-bar-controllers-in-xamarin"></a>Trabajar con controladores de la barra de ficha en Xamarin de tvOS
 
@@ -111,7 +111,7 @@ Es la manera más fácil trabajar con barras de pestañas en una aplicación Xam
 -----
 
 > [!IMPORTANT]
-> Aunque es posible asignar como eventos `TouchUpInside` a un elemento de interfaz de usuario (como un `UIButton`) en el Diseñador de iOS, nunca se llamará porque Apple TV no tiene una entrada táctil de pantalla o admitir eventos de toque. Siempre debe usar el `Primary Action ` evento al crear controladores de eventos para tvOS elementos de la interfaz de usuario.
+> Aunque es posible asignar como eventos `TouchUpInside` a un elemento de interfaz de usuario (como un `UIButton`) en el Diseñador de iOS, nunca se llamará porque Apple TV no tiene una entrada táctil de pantalla o admitir eventos de toque. Siempre debe usar el `Primary Action` evento al crear controladores de eventos para tvOS elementos de la interfaz de usuario.
 
 Para obtener más información sobre cómo trabajar con guiones gráficos, vea nuestra [Hola, Guía de inicio rápido de tvOS](~/ios/tvos/get-started/hello-tvos.md). 
 

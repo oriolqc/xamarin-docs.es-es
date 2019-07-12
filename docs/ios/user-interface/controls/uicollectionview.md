@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/20/2017
-ms.openlocfilehash: a93de9d60a515b6089b35a64eb8832c456c96557
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 890c11908b11b18d6ca626820f1a835d817870da
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827345"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829859"
 ---
 # <a name="collection-views-in-xamarinios"></a>Vistas de colección en Xamarin.iOS
 
@@ -739,10 +739,10 @@ public override void ViewDidLoad ()
 
 Aquí vamos a usar varios métodos nuevos que se agregan a la vista de colección para implementar y controlar la operación de arrastre:
 
- - `BeginInteractiveMovementForItem` -Marca el inicio de una operación de movimiento.
- - `UpdateInteractiveMovementTargetPosition` -Se envía cuando se actualiza la ubicación del elemento.
- - `EndInteractiveMovement` -Marca el final de un elemento se mueva.
- - `CancelInteractiveMovement` : Marca el usuario canceló la operación de traslado.
+- `BeginInteractiveMovementForItem` -Marca el inicio de una operación de movimiento.
+- `UpdateInteractiveMovementTargetPosition` -Se envía cuando se actualiza la ubicación del elemento.
+- `EndInteractiveMovement` -Marca el final de un elemento se mueva.
+- `CancelInteractiveMovement` : Marca el usuario canceló la operación de traslado.
 
 Cuando se ejecuta la aplicación, la operación de arrastre funcionará exactamente igual que el valor predeterminado arrastre reconocedor de gestos que se incluye con la vista de colección.
 
@@ -1217,78 +1217,78 @@ En las secciones siguientes, echaremos una visión detallada de los cambios real
 
 Se realizaron los siguientes cambios o adiciones en el `UICollectionView` clase IOS 9:
 
- - `BeginInteractiveMovementForItem` : Marca el inicio de una operación de arrastre.
- - `CancelInteractiveMovement` – Informa a la colección de vista que el usuario ha cancelado una operación de arrastre.
- - `EndInteractiveMovement` – Informa a la colección de vista que el usuario ha terminado una operación de arrastre.
- - `GetIndexPathsForVisibleSupplementaryElements` : Devuelve el `indexPath` de un encabezado o pie de página en una sección de vista de colección.
- - `GetSupplementaryView` : Devuelve el encabezado especificado o el pie de página.
- - `GetVisibleSupplementaryViews` : Devuelve una lista de todos los encabezado visible y pies de página.
- - `UpdateInteractiveMovementTargetPosition` – Informa a la colección de vista que el usuario se ha movido o mueve un elemento durante una operación de arrastre.
+- `BeginInteractiveMovementForItem` : Marca el inicio de una operación de arrastre.
+- `CancelInteractiveMovement` – Informa a la colección de vista que el usuario ha cancelado una operación de arrastre.
+- `EndInteractiveMovement` – Informa a la colección de vista que el usuario ha terminado una operación de arrastre.
+- `GetIndexPathsForVisibleSupplementaryElements` : Devuelve el `indexPath` de un encabezado o pie de página en una sección de vista de colección.
+- `GetSupplementaryView` : Devuelve el encabezado especificado o el pie de página.
+- `GetVisibleSupplementaryViews` : Devuelve una lista de todos los encabezado visible y pies de página.
+- `UpdateInteractiveMovementTargetPosition` – Informa a la colección de vista que el usuario se ha movido o mueve un elemento durante una operación de arrastre.
 
 ### <a name="uicollectionviewcontroller"></a>UICollectionViewController
 
 Se realizaron los siguientes cambios o adiciones en el `UICollectionViewController` clase en iOS 9:
 
- - `InstallsStandardGestureForInteractiveMovement` – If `true` se usará el nuevo reconocedor de gestos que admite automáticamente arrastrar para volver a ordenar.
- - `CanMoveItem` – Informa a la vista de colección si se puede arrastrar reordenado un elemento determinado.
- - `GetTargetContentOffset` : Se usa para obtener el desplazamiento de un elemento de vista de colección dada.
- - `GetTargetIndexPathForMove` : Obtiene el `indexPath` de un elemento determinado para una operación de arrastre.
- - `MoveItem` : Mueve el orden de un elemento determinado en la lista.
+- `InstallsStandardGestureForInteractiveMovement` – If `true` se usará el nuevo reconocedor de gestos que admite automáticamente arrastrar para volver a ordenar.
+- `CanMoveItem` – Informa a la vista de colección si se puede arrastrar reordenado un elemento determinado.
+- `GetTargetContentOffset` : Se usa para obtener el desplazamiento de un elemento de vista de colección dada.
+- `GetTargetIndexPathForMove` : Obtiene el `indexPath` de un elemento determinado para una operación de arrastre.
+- `MoveItem` : Mueve el orden de un elemento determinado en la lista.
 
 
 ### <a name="uicollectionviewdatasource"></a>UICollectionViewDataSource
 
 Se realizaron los siguientes cambios o adiciones en el `UICollectionViewDataSource` clase en iOS 9:
 
- - `CanMoveItem` – Informa a la vista de colección si se puede arrastrar reordenado un elemento determinado.
- - `MoveItem` : Mueve el orden de un elemento determinado en la lista.
+- `CanMoveItem` – Informa a la vista de colección si se puede arrastrar reordenado un elemento determinado.
+- `MoveItem` : Mueve el orden de un elemento determinado en la lista.
 
 ### <a name="uicollectionviewdelegate"></a>UICollectionViewDelegate
 
 Se realizaron los siguientes cambios o adiciones en el `UICollectionViewDelegate` clase en iOS 9:
 
- - `GetTargetContentOffset` : Se usa para obtener el desplazamiento de un elemento de vista de colección dada.
- - `GetTargetIndexPathForMove` : Obtiene el `indexPath` de un elemento determinado para una operación de arrastre.
+- `GetTargetContentOffset` : Se usa para obtener el desplazamiento de un elemento de vista de colección dada.
+- `GetTargetIndexPathForMove` : Obtiene el `indexPath` de un elemento determinado para una operación de arrastre.
 
 ### <a name="uicollectionviewflowlayout"></a>UICollectionViewFlowLayout
 
 Se realizaron los siguientes cambios o adiciones en el `UICollectionViewFlowLayout` clase en iOS 9:
 
- - `SectionFootersPinToVisibleBounds` : Los pies de página de la sección a los límites de la vista de colección visible se queda bloqueado.
- - `SectionHeadersPinToVisibleBounds` – Destacable a los límites de la vista de colección visibles los encabezados de sección.
+- `SectionFootersPinToVisibleBounds` : Los pies de página de la sección a los límites de la vista de colección visible se queda bloqueado.
+- `SectionHeadersPinToVisibleBounds` – Destacable a los límites de la vista de colección visibles los encabezados de sección.
 
 ### <a name="uicollectionviewlayout"></a>UICollectionViewLayout
 
 Se realizaron los siguientes cambios o adiciones en el `UICollectionViewLayout` clase en iOS 9:
 
- - `GetInvalidationContextForEndingInteractiveMovementOfItems` : Devuelve el contexto de invalidación al final de una operación de arrastre cuando el usuario finaliza la operación de arrastrar o cancela.
- - `GetInvalidationContextForInteractivelyMovingItems` : Devuelve el contexto de invalidación del principio de una operación de arrastre.
- - `GetLayoutAttributesForInteractivelyMovingItem` : Obtiene los atributos de diseño para un elemento dado mientras se arrastra un elemento.
- - `GetTargetIndexPathForInteractivelyMovingItem` : Devuelve el `indexPath` del elemento que está en el momento dado al arrastrar un elemento.
+- `GetInvalidationContextForEndingInteractiveMovementOfItems` : Devuelve el contexto de invalidación al final de una operación de arrastre cuando el usuario finaliza la operación de arrastrar o cancela.
+- `GetInvalidationContextForInteractivelyMovingItems` : Devuelve el contexto de invalidación del principio de una operación de arrastre.
+- `GetLayoutAttributesForInteractivelyMovingItem` : Obtiene los atributos de diseño para un elemento dado mientras se arrastra un elemento.
+- `GetTargetIndexPathForInteractivelyMovingItem` : Devuelve el `indexPath` del elemento que está en el momento dado al arrastrar un elemento.
 
 ### <a name="uicollectionviewlayoutattributes"></a>UICollectionViewLayoutAttributes
 
 Se realizaron los siguientes cambios o adiciones en el `UICollectionViewLayoutAttributes` clase en iOS 9:
 
- - `CollisionBoundingPath` : Devuelve la ruta de acceso de colisión de dos elementos durante una operación de arrastre.
- - `CollisionBoundsType` : Devuelve el tipo de colisión (como un `UIDynamicItemCollisionBoundsType`) que se produjo durante una operación de arrastre.
+- `CollisionBoundingPath` : Devuelve la ruta de acceso de colisión de dos elementos durante una operación de arrastre.
+- `CollisionBoundsType` : Devuelve el tipo de colisión (como un `UIDynamicItemCollisionBoundsType`) que se produjo durante una operación de arrastre.
 
 ### <a name="uicollectionviewlayoutinvalidationcontext"></a>UICollectionViewLayoutInvalidationContext
 
 Se realizaron los siguientes cambios o adiciones en el `UICollectionViewLayoutInvalidationContext` clase en iOS 9:
 
- - `InteractiveMovementTarget` : Devuelve el elemento de destino de una operación de arrastre.
- - `PreviousIndexPathsForInteractivelyMovingItems` : Devuelve el `indexPaths` de otros elementos implicados en un arrastre para reordenar la operación.
- - `TargetIndexPathsForInteractivelyMovingItems` : Devuelve el `indexPaths` de elementos que se reordenarán como resultado de una operación de arrastre para volver a ordenar.
+- `InteractiveMovementTarget` : Devuelve el elemento de destino de una operación de arrastre.
+- `PreviousIndexPathsForInteractivelyMovingItems` : Devuelve el `indexPaths` de otros elementos implicados en un arrastre para reordenar la operación.
+- `TargetIndexPathsForInteractivelyMovingItems` : Devuelve el `indexPaths` de elementos que se reordenarán como resultado de una operación de arrastre para volver a ordenar.
 
 ### <a name="uicollectionviewsource"></a>UICollectionViewSource
 
 Se realizaron los siguientes cambios o adiciones en el `UICollectionViewSource` clase en iOS 9:
 
- - `CanMoveItem` – Informa a la vista de colección si se puede arrastrar reordenado un elemento determinado.
- - `GetTargetContentOffset` : Devuelve los desplazamientos de los elementos que se va a mover a través de una operación de arrastre para volver a ordenar.
- - `GetTargetIndexPathForMove` : Devuelve el `indexPath` de un elemento que se moverán durante una operación de arrastre para volver a ordenar.
- - `MoveItem` : Mueve el orden de un elemento determinado en la lista.
+- `CanMoveItem` – Informa a la vista de colección si se puede arrastrar reordenado un elemento determinado.
+- `GetTargetContentOffset` : Devuelve los desplazamientos de los elementos que se va a mover a través de una operación de arrastre para volver a ordenar.
+- `GetTargetIndexPathForMove` : Devuelve el `indexPath` de un elemento que se moverán durante una operación de arrastre para volver a ordenar.
+- `MoveItem` : Mueve el orden de un elemento determinado en la lista.
 
 ## <a name="summary"></a>Resumen
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 3d8e69af7f790415343abf464ea2bb22e879e025
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 089ada051b6780a15acfcdd7f9e32ddda1384d05
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61170770"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832047"
 ---
 # <a name="programmatic-layout-constraints-in-xamarinios"></a>Restricciones de diseño mediante programación en Xamarin.iOS
 
@@ -119,10 +119,10 @@ A diferencia de con la API de anclaje de diseño, el `NSLayoutConstraint` métod
 El idioma de formato Visual permite definir restricciones de uso de arte ASCII como cadenas que proporcionan una representación visual de la restricción que se va a crear. Esto tiene las siguientes ventajas y desventajas:
 
 - El idioma de formato Visual exige la creación de restricciones válidas solo.
- - Diseño automático da como resultado las restricciones en la consola mediante el lenguaje de formato Visual para los mensajes de depuración se parecerá al código usado para crear la restricción.
- - El idioma de formato Visual permite crear varias restricciones al mismo tiempo con una expresión muy compacta.
- - Puesto que no hay ninguna validación del lado de compilación de las cadenas de idioma de formato Visual, solo se pueden detectar problemas en tiempo de ejecución.
- - Puesto que el idioma de formato Visual enfatiza la visualización a través de la integridad de que algunos tipos de restricción no se puede crear con él (por ejemplo, relaciones).
+- Diseño automático da como resultado las restricciones en la consola mediante el lenguaje de formato Visual para los mensajes de depuración se parecerá al código usado para crear la restricción.
+- El idioma de formato Visual permite crear varias restricciones al mismo tiempo con una expresión muy compacta.
+- Puesto que no hay ninguna validación del lado de compilación de las cadenas de idioma de formato Visual, solo se pueden detectar problemas en tiempo de ejecución.
+- Puesto que el idioma de formato Visual enfatiza la visualización a través de la integridad de que algunos tipos de restricción no se puede crear con él (por ejemplo, relaciones).
 
 Realice los pasos siguientes cuando se usa el idioma de formato Visual para crear una restricción:
 

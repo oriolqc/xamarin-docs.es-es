@@ -6,12 +6,12 @@ ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: 2bd68def0a29d4bb94f8cc66c8cbfa00add1700d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 2def0a01bdd28af5eefb76afc19a0e49fd1df355
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60948167"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831550"
 ---
 # <a name="inspecting-live-applications"></a>Inspección de aplicaciones activas
 
@@ -46,8 +46,8 @@ El árbol visual también es muy útil. Representa la instantánea actual de la 
 
 ## <a name="known-limitations"></a>Limitaciones conocidas
 
- - Solo se admite la selección de la vista en la pantalla principal.
- - Edición de la cuadrícula de propiedades no está disponible para Mac y en Windows se limita a algunos tipos de datos. Utilice la replicación para una edición más eficaz.
- - Mientras el complemento/extensión de Inspector está instalada y habilitada en el IDE, vamos a insertar código en la aplicación cada vez que se inicia en modo de depuración. Si observa cualquier comportamiento extraño en su aplicación, vuelva a intentar deshabilitar o desinstalar el complemento/extensión de Inspector, reiniciar el IDE y nueva comprobación. Y, por favor, [archivar errores](~/tools/inspector/install.md#reporting-bugs) para hacernos saber!
- - Inspeccionar un elemento de interfaz de usuario hace que ésta cambie en cualquier caso, por favor, [háganoslo saber](~/tools/inspector/install.md#reporting-bugs), ya que esto puede indicar un error.
+- Solo se admite la selección de la vista en la pantalla principal.
+- Edición de la cuadrícula de propiedades no está disponible para Mac y en Windows se limita a algunos tipos de datos. Utilice la replicación para una edición más eficaz.
+- Mientras el complemento/extensión de Inspector está instalada y habilitada en el IDE, vamos a insertar código en la aplicación cada vez que se inicia en modo de depuración. Si observa cualquier comportamiento extraño en su aplicación, vuelva a intentar deshabilitar o desinstalar el complemento/extensión de Inspector, reiniciar el IDE y nueva comprobación. Y, por favor, [archivar errores](~/tools/inspector/install.md#reporting-bugs) para hacernos saber!
+- Inspeccionar un elemento de interfaz de usuario hace que ésta cambie en cualquier caso, por favor, [háganoslo saber](~/tools/inspector/install.md#reporting-bugs), ya que esto puede indicar un error.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/11/2016
-ms.openlocfilehash: daea27472ac7c0578c1cfd79ebd96428212fafb3
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 8ef12c8b0822f3d0486f584878f572a266b0d44e
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61165732"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831861"
 ---
 # <a name="cloudkit-in-xamarinios"></a>CloudKit en Xamarin.iOS
 
@@ -501,7 +501,7 @@ CloudKit admite los siguientes tipos de `NSPredicates` al trabajar con consultas
     NSPredicate.FromFormat(string.Format("ALL tokenize({0}, 'Cdl') IN allTokens", "after session"))
     ```
     
- 6. Admite CloudKit compuesta predicados combinados mediante el `AND` operador.
+6. Admite CloudKit compuesta predicados combinados mediante el `AND` operador.
     
     ```
     NSPredicate.FromFormat(string.Format("start > {0} AND name = '{1}'", (NSDate)date, recordName))
@@ -650,7 +650,7 @@ En esta sección se muestra cómo responder a los datos de gran tamaño, el prob
 
 Como se indicó al principio de este artículo, CloudKit se basa en la infraestructura existente de iCloud. La siguiente sección tratará, en detalle, cómo se exponen las cuentas a un desarrollador que utiliza la API de CloudKit.
 
-### <a name="authentication"></a>Autenticación
+### <a name="authentication"></a>Authentication
 
 Cuando se trabaja con las cuentas de usuario, la primera consideración es la autenticación. CloudKit admite la autenticación mediante el usuario ha iniciado sesión actualmente iCloud en el dispositivo. La autenticación realiza en segundo plano y se controla con iOS. De este modo, los desarrolladores nunca tienen que preocuparse por los detalles de implementación de la autenticación. Solo probar para ver si un usuario ha iniciado sesión.
 
@@ -737,7 +737,7 @@ CloudKit fue el diseño, de forma predeterminada, para proteger la privacidad de
 
 En estos casos, la aplicación puede solicitar que el usuario revelar esta información. Aparecerá un cuadro de diálogo al usuario que se les solicita a participar en la exposición de información de su cuenta.
 
-#### <a name="discovery"></a>de esquema JSON
+#### <a name="discovery"></a>Detección
 
 Suponiendo que el usuario como suscritas en permitir que la aplicación acceso limitado a su información de cuenta de usuario, pueden ser reconocibles para otros usuarios de la aplicación:
 

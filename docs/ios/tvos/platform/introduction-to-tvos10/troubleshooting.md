@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 3815790cfb73f93f399c14d3da44aa3210725388
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 97cfe7220f8b351ec30a9f2c7a7347d318378fbc
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60932446"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830486"
 ---
 # <a name="troubleshooting-tvos-10-apps-built-with-xamarin"></a>Solución de problemas de tvOS 10 aplicaciones crean con Xamarin
 
@@ -32,8 +32,8 @@ Las siguientes secciones enumeran algunos problemas conocidos que pueden produci
 
 Problemas conocidos:
 
- - Al probar las compras de la aplicación en el entorno de recinto de seguridad, el cuadro de diálogo de autenticación puede aparecer dos veces.
- - Al probar las compras de la aplicación con contenido hospedado en el entorno de recinto de seguridad, aparecerá el cuadro de diálogo de contraseña cada vez que la aplicación se pone en primer plano hasta que se complete la descarga de contenido.
+- Al probar las compras de la aplicación en el entorno de recinto de seguridad, el cuadro de diálogo de autenticación puede aparecer dos veces.
+- Al probar las compras de la aplicación con contenido hospedado en el entorno de recinto de seguridad, aparecerá el cuadro de diálogo de contraseña cada vez que la aplicación se pone en primer plano hasta que se complete la descarga de contenido.
 
 <a name="Binary-Compatibility" />
 
@@ -41,11 +41,11 @@ Problemas conocidos:
 
 Problemas conocidos:
 
- - Una llamada a `NSObject.ValueForKey` le un `null` clave producirá una excepción.
- - Referencia a una fuente por nombre cuando se llama a `UIFont.WithName` provocará un bloqueo.
- - Ambos `NSURLSession` y la NSURLConnection` no longer RC4 cipher suites during the TLS handshake for `http://' las direcciones URL.
- - Las aplicaciones pueden dejar de responder si se modifica la geometría de la supervista en uno el `ViewWillLayoutSubviews` o `LayoutSubviews` métodos.
- - Para todas las conexiones SSL/TLS, el cifrado simétrico de RC4 ahora está deshabilitado de forma predeterminada. Además, la API de transporte seguro ya no admite SSLv3 y se recomienda que la aplicación dejen de usar SHA-1 y 3DES criptografía tan pronto como sea posible.
+- Una llamada a `NSObject.ValueForKey` le un `null` clave producirá una excepción.
+- Referencia a una fuente por nombre cuando se llama a `UIFont.WithName` provocará un bloqueo.
+- Ambos `NSURLSession` y `NSURLConnection` RC4 ya no los conjuntos de cifrado de durante el protocolo de enlace TLS para `http://` direcciones URL.
+- Las aplicaciones pueden dejar de responder si se modifica la geometría de la supervista en uno el `ViewWillLayoutSubviews` o `LayoutSubviews` métodos.
+- Para todas las conexiones SSL/TLS, el cifrado simétrico de RC4 ahora está deshabilitado de forma predeterminada. Además, la API de transporte seguro ya no admite SSLv3 y se recomienda que la aplicación dejen de usar SHA-1 y 3DES criptografía tan pronto como sea posible.
 
 <a name="CFNetwork-HTTP-Protocol" />
 
@@ -77,12 +77,12 @@ Después de una operación de entrega, el `UserInfo` propiedad de un `NSUserActi
 
 Problemas conocidos:
 
- - Cambia a la apariencia del fondo `UINavigationBar`, `UITabBar` o `UIToolBar` puede dar lugar a una fase de diseño para resolver el nuevo aspecto. Al intentar modificar estos aspectos visuales dentro de un `LayoutSubviews`, `UpdateConstraints`, `WillLayoutSubviews` o `DidUpdateSubviews` pueden dar lugar a eventos en un bucle infinito de diseño.
- - En tvOS 10, una llamada a la `RemoveGestureRecognizer` método de un `UIView` objeto cancela explícitamente ningún reconocedor de gestos en curso.
- - Controladores de vista presenta ahora pueden afectar a la apariencia de la barra de estado.
- - tvOS 10 requiere que el desarrollador llamar a `base.AwakeFromNib` cuando se crean subclases `UIViewController` e invalidar la `AwakeFromNib` método.
- - Las aplicaciones con custom `UIView` subclases que reemplazan `LayoutSubviews` y de integridad en el diseño antes de llamar a `base.LayoutSubviews` puede desencadenar un bucle infinito de diseño en tvOS 10.
- - Recursos de imágenes específicas de dirección o flippable son ni volteo cuando se asigna a `UIButton` objetos.
+- Cambia a la apariencia del fondo `UINavigationBar`, `UITabBar` o `UIToolBar` puede dar lugar a una fase de diseño para resolver el nuevo aspecto. Al intentar modificar estos aspectos visuales dentro de un `LayoutSubviews`, `UpdateConstraints`, `WillLayoutSubviews` o `DidUpdateSubviews` pueden dar lugar a eventos en un bucle infinito de diseño.
+- En tvOS 10, una llamada a la `RemoveGestureRecognizer` método de un `UIView` objeto cancela explícitamente ningún reconocedor de gestos en curso.
+- Controladores de vista presenta ahora pueden afectar a la apariencia de la barra de estado.
+- tvOS 10 requiere que el desarrollador llamar a `base.AwakeFromNib` cuando se crean subclases `UIViewController` e invalidar la `AwakeFromNib` método.
+- Las aplicaciones con custom `UIView` subclases que reemplazan `LayoutSubviews` y de integridad en el diseño antes de llamar a `base.LayoutSubviews` puede desencadenar un bucle infinito de diseño en tvOS 10.
+- Recursos de imágenes específicas de dirección o flippable son ni volteo cuando se asigna a `UIButton` objetos.
 
 ## <a name="related-links"></a>Vínculos relacionados
 

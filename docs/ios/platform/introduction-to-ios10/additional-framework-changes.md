@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/29/2017
-ms.openlocfilehash: a7b029aad69e65192d48d969dba2b9bb9a0d7a50
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: ac255baf44951518b29112d2903950039a80ee53
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61364340"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831219"
 ---
 # <a name="additional-ios-10-frameworks-changes"></a>Cambios adicionales en iOS 10 marcos de trabajo
 
@@ -132,10 +132,10 @@ Para obtener más información, consulte Apple [Guía de programación de Metal]
 
 Se han realizado las siguientes mejoras para el marco de trabajo ModelIO en iOS 10:
 
- - Ahora se admite el formato de archivo USD.
- - Firmado se ha agregado compatibilidad para el campo de distancia del [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) clase.
- - Use la nueva `MDLLightProbeIrradianceDataSource` clase para ayudar en la selección de ubicación de sondeo de luz.
- - Use la nueva `MDLMaterialPropertyGraph` clase para admitir fácilmente en tiempo de ejecución cambia a los modelos.
+- Ahora se admite el formato de archivo USD.
+- Firmado se ha agregado compatibilidad para el campo de distancia del [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) clase.
+- Use la nueva `MDLLightProbeIrradianceDataSource` clase para ayudar en la selección de ubicación de sondeo de luz.
+- Use la nueva `MDLMaterialPropertyGraph` clase para admitir fácilmente en tiempo de ejecución cambia a los modelos.
 
 ## <a name="photos-enhancements"></a>Mejoras de fotos
 

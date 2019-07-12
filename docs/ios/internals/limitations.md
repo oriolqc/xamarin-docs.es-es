@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 04/09/2018
-ms.openlocfilehash: b79d3683c8e4979cbbd13550f3df86c39622ad2b
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 86f41bf227b97ef24651f482ff133a065226ee14
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61035885"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830403"
 ---
 # <a name="limitations-of-xamarinios"></a>Limitaciones de Xamarin.iOS
 
@@ -53,7 +53,7 @@ class Foo<T> : UIView {
 
 ## <a name="no-dynamic-code-generation"></a>Sin generación de código dinámico
 
-Puesto que el kernel de iOS impide que una aplicación de generación de código dinámicamente, Xamarin.iOS no admite ninguna forma de generación de código dinámico. Se incluyen los siguientes:
+Puesto que el kernel de iOS impide que una aplicación de generación de código dinámicamente, Xamarin.iOS no admite ninguna forma de generación de código dinámico. Entre ellas se incluyen las siguientes:
 
 -  Espacio de nombres System.Reflection.Emit no está disponible.
 -  System.Runtime.Remoting no son compatibles.
@@ -74,7 +74,8 @@ La falta de System.Reflection. **Emitir** significa que no funcionará ningún c
 -  Remoting TransparentProxy o cualquier otra cosa que harían que el tiempo de ejecución generar código de forma dinámica. 
 
 
- **Importante:** No confunda **Reflection.Emit** con **reflexión**. Reflection.Emit consiste en generar código de forma dinámica y tiene ese código JIT y el código compilado en código nativo. Esto no se admite debido a las limitaciones en iOS (ninguna compilación JIT).
+  > [!IMPORTANT]
+  > No confunda **Reflection.Emit** con **reflexión**. Reflection.Emit consiste en generar código de forma dinámica y tiene ese código JIT y el código compilado en código nativo. Esto no se admite debido a las limitaciones en iOS (ninguna compilación JIT).
 
 Pero toda la API de reflexión, incluidos Type.GetType ("someClass"), lista de métodos, lista de propiedades, la obtención de atributos y valores funciona perfectamente.
 

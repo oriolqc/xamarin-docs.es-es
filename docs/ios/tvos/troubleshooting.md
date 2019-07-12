@@ -8,12 +8,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 60b54ffdce5f6bda2324c08bd3159eefeb5bc7f8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6830df267aa0b9c4f12fbd53520206ea94fc8a38
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61270255"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831892"
 ---
 # <a name="troubleshooting-tvos-apps-built-with-xamarin"></a>Solucionar problemas de aplicaciones de tvOS con Xamarin
 
@@ -34,13 +34,13 @@ La versión actual de la compatibilidad con tvOS de Xamarin tiene los siguientes
 
 Informe de cualquiera de los errores encontrará en [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>solución de problemas
 
 Las siguientes secciones enumeran algunos problemas conocidos que pueden producirse al usar tvOS 9 con Xamarin.tvOS y la solución a estos problemas:
 
 ### <a name="invalid-executable---the-executable-does-not-contain-bitcode"></a>Ejecutable no válido: el archivo ejecutable no contienen bitcode
 
-Al intentar enviar una aplicación Xamarin.tvOS al Store de Apple TV App, puede aparecer un mensaje de error en el formulario _"Ejecutable no válido: el archivo ejecutable no contienen bitcode"_.
+Al intentar enviar una aplicación Xamarin.tvOS al Store de Apple TV App, puede aparecer un mensaje de error en el formulario _"Ejecutable no válido: el archivo ejecutable no contienen bitcode"_ .
 
 Para solucionar este problema, realice lo siguiente:
 
@@ -184,7 +184,7 @@ Cuando se intenta incluir una biblioteca de clases Portable (PCL) en un proyecto
 
 _Plataforma de destino incompatible:. NetPortable, Version = v4.5, perfil = Profile78_
 
-Para solucionar este problema, agregue un archivo XML llamado ` Xamarin.TVOS.xml` con el siguiente contenido:
+Para solucionar este problema, agregue un archivo XML llamado `Xamarin.TVOS.xml` con el siguiente contenido:
 
 ```xml
 <Framework Identifier="Xamarin.TVOS" MinimumVersion="1.0" Profile="*" DisplayName="Xamarin.TVOS"/>

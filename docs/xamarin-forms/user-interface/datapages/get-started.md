@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/01/2017
-ms.openlocfilehash: e3256787c0bc0852275f663772b8a91a6825a0dd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a77ebd8a6c64d2ee44011e8d51977adf88b52be9
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61250714"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832436"
 ---
 # <a name="getting-started-with-datapages"></a>Introducción a DataSourceControl
 
@@ -51,7 +51,8 @@ En el **App.xaml** , agregue un personalizado `xmlns:mytheme` para el tema y ase
 </Application>
 ```
 
-**IMPORTANTE:** También debe seguir los pasos necesarios para [cargar ensamblados de tema (abajo)](#loadtheme) agregando código estereotipado a iOS `AppDelegate` y Android `MainActivity`. Se mejorará en versión preliminar futura.
+> [!IMPORTANT]
+> También debe seguir los pasos necesarios para [cargar ensamblados de tema (abajo)](#loadtheme) agregando código estereotipado a iOS `AppDelegate` y Android `MainActivity`. Se mejorará en versión preliminar futura.
 
 
 ## <a name="3-add-a-xaml-page"></a>3. Agregue una página XAML
@@ -98,7 +99,8 @@ MainPage = new NavigationPage (new SessionDataPage ());
 
 Eliminar el `Content` elemento y reemplazarlo con un `p:ListDataPage.DataSource` para rellenar la página con datos. En el ejemplo siguiente Json remoto se está cargando el archivo de datos desde una dirección URL.
 
-**Nota:** la versión preliminar *requiere* un `StyleClass` atributo para proporcionar sugerencias de representación para el origen de datos. El `StyleClass="Events"` hace referencia a un diseño que está predefinido en la vista previa y contiene los estilos *codificado de forma rígida* para que coincida con el origen de datos JSON que se va a usar.
+> [!NOTE]
+> La versión preliminar *requiere* un `StyleClass` atributo para proporcionar sugerencias de representación para el origen de datos. El `StyleClass="Events"` hace referencia a un diseño que está predefinido en la vista previa y contiene los estilos *codificado de forma rígida* para que coincida con el origen de datos JSON que se va a usar.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>

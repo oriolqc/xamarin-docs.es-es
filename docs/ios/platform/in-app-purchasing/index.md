@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 4b301c18ea0e69c818cf65b3b7df1cc8351350f5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: b4165f9e6c3088a41d6bd746b1912a64570c553a
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61402460"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832553"
 ---
 # <a name="in-app-purchasing-in-xamarinios"></a>En la aplicación de compras en Xamarin.iOS
 
@@ -34,17 +34,17 @@ Para admitir la compra de la aplicación debe usar Xamarin.iOS 5.0 o posterior c
 
 ## <a name="contents"></a>Contenido
 
- * [Configuración y conceptos básicos de las compras desde la aplicación](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
+* [Configuración y conceptos básicos de las compras desde la aplicación](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
- * [Información general de StoreKit y al recuperar la información de producto](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+* [Información general de StoreKit y al recuperar la información de producto](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
- * [Compra de productos consumibles](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
+* [Compra de productos consumibles](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
- * [Compra de productos no consumibles](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
+* [Compra de productos no consumibles](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
 
- * [Transacciones y comprobación](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
+* [Transacciones y comprobación](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 
- * [Suscripciones e informes](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
+* [Suscripciones e informes](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
 
 ## <a name="summary"></a>Resumen
 
