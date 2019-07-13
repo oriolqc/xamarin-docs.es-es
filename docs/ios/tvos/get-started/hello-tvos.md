@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 02/02/2018
-ms.openlocfilehash: 6b404d7c27fba38c53ff07207003849445d51118
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 859bbd22640ba3d09324fcd3853cda26e563a1cd
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832480"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865275"
 ---
 # <a name="hello-tvos-quick-start-guide"></a>Hola, Guía de inicio rápido de tvOS
 
@@ -298,20 +298,20 @@ Haga lo siguiente:
 9. Cuando haya completado, un aspecto similares a los de la pestaña diseño del panel de propiedades de las restricciones:
 
     [![](hello-tvos-images/designer11.png "Restricciones de ejemplo")](hello-tvos-images/designer11.png#lightbox)
-8. Arrastre un **botón** desde el **cuadro de herramientas** y colóquelo debajo de la etiqueta.
-9. Haga clic en el **título** propiedad en el **panel propiedad** y cambie el título del botón a `Click Me`:
+10. Arrastre un **botón** desde el **cuadro de herramientas** y colóquelo debajo de la etiqueta.
+11. Haga clic en el **título** propiedad en el **panel propiedad** y cambie el título del botón a `Click Me`:
 
     [![](hello-tvos-images/designer12.png "Cambie el título de botones, haga clic en Me")](hello-tvos-images/designer12.png#lightbox)
-10. Repita los pasos 5 a 8 anteriores para restringir el botón en la ventana de tvOS. Sin embargo, en lugar de arrastrar el controlador de T a la parte superior de la ventana (como en el paso #7), arrástrelo hasta la parte inferior de la etiqueta:
+12. Repita los pasos 5 a 8 anteriores para restringir el botón en la ventana de tvOS. Sin embargo, en lugar de arrastrar el controlador de T a la parte superior de la ventana (como en el paso #7), arrástrelo hasta la parte inferior de la etiqueta:
 
     [![](hello-tvos-images/designer14.png "Restringir el botón")](hello-tvos-images/designer14.png#lightbox)
-11. Arrastre otra etiqueta en el botón, el tamaño para que sea el mismo ancho que la primera etiqueta y establezca su **alineación** a **Center**:
+13. Arrastre otra etiqueta en el botón, el tamaño para que sea el mismo ancho que la primera etiqueta y establezca su **alineación** a **Center**:
 
     [![](hello-tvos-images/designer15.png "Arrastre otra etiqueta debajo del botón, de tamaño para ser el mismo ancho que la primera etiqueta y establezca su alineación al centro")](hello-tvos-images/designer15.png#lightbox)
-12. Al igual que la primera etiqueta y el botón, establezca esta etiqueta para centrar y anclarlo a la ubicación y el tamaño:
+14. Al igual que la primera etiqueta y el botón, establezca esta etiqueta para centrar y anclarlo a la ubicación y el tamaño:
 
     [![](hello-tvos-images/designer16.png "Anclar la etiqueta a la ubicación y tamaño")](hello-tvos-images/designer16.png#lightbox)
-13. Guardar los cambios en la interfaz de usuario.
+15. Guardar los cambios en la interfaz de usuario.
 
 Tal como eran el cambio de tamaño y mover controles, se debe que haya observado que el diseñador le ofrece sugerencias de ajuste útiles basadas en [directrices de interfaz humana de Apple TV](https://developer.apple.com/tvos/human-interface-guidelines/). Estas instrucciones le ayudará a crear aplicaciones de alta calidad que tendrán una apariencia familiar para los usuarios de Apple TV.
 

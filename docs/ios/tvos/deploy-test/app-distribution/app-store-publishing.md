@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: b941bcc8588e7fb0377430cca2829ad72ecbc8c6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 73ee7fc3c28fc7a8476010e8bf7567b3e5ef590d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61416704"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865090"
 ---
 # <a name="publishing-to-the-apple-tv-app-store"></a>Publicación en Apple TV App Store
 
@@ -153,13 +153,13 @@ Con la aplicación Xamarin.tvOS configurada correctamente, ahora está listo par
 2. En el menú **Compilación**, seleccione **Archivo para publicar**:
 
     [![](app-store-publishing-images/buildxs02new.png "Selección de Archivo para publicar")](app-store-publishing-images/buildxs02new.png#lightbox)
-3. Una vez creado el archivo, se mostrará la vista **Archives (Archivos)**:
+3. Una vez creado el archivo, se mostrará la vista **Archives (Archivos)** :
 
     [![](app-store-publishing-images/buildxs03new.png "La vista archivos")](app-store-publishing-images/buildxs03new.png#lightbox)
 
 ### <a name="sign-and-distribute-your-app"></a>Firmar y distribuir la aplicación
 
-Cada vez que compile la aplicación para el archivo, se abrirá automáticamente la *Archives View (Vista de archivos)*, que muestra todos los proyectos archivados; agrupados por solución. De manera predeterminada, esta vista solo muestra la solución abierta actual. Para ver todas las soluciones que tienen archivos, haga clic en la opción **Show all archives (Mostrar todos los archivos)**.
+Cada vez que compile la aplicación para el archivo, se abrirá automáticamente la *Archives View (Vista de archivos)* , que muestra todos los proyectos archivados; agrupados por solución. De manera predeterminada, esta vista solo muestra la solución abierta actual. Para ver todas las soluciones que tienen archivos, haga clic en la opción **Show all archives (Mostrar todos los archivos)** .
 
 Se recomienda que se mantengan los archivos que se implementan en los clientes (implementaciones App Store o Enterprise), por lo que cualquier información de depuración generada puede considerarse con una fecha posterior.
 
@@ -192,19 +192,19 @@ Una vez que se ha completado la compilación de distribución, está listo para 
 
 El flujo de trabajo de archivo en Visual Studio para Mac abrirá Application Loader automáticamente, una vez que haya guardado el `.ipa`:
 
-2. Seleccione *Deliver Your App* (Entregar la aplicación) y haga clic en el botón *Elegir*:
+1. Seleccione *Deliver Your App* (Entregar la aplicación) y haga clic en el botón *Elegir*:
 
     [![](app-store-publishing-images/publishvs01.png "Selección de Deliver Your App (Entregar la aplicación)")](app-store-publishing-images/publishvs01.png#lightbox)
 
-3. Seleccione el archivo IPA o ZIP que ha creado anteriormente y haga clic en el botón **Aceptar**.
-4. Application Loader validará el archivo:
+2. Seleccione el archivo IPA o ZIP que ha creado anteriormente y haga clic en el botón **Aceptar**.
+3. Application Loader validará el archivo:
 
     [![](app-store-publishing-images/publishvs02.png "La pantalla de validación del cargador de aplicaciones")](app-store-publishing-images/publishvs02.png#lightbox)
-5. Haga clic en el botón *Siguiente* y la aplicación se validará en el App Store:
+4. Haga clic en el botón *Siguiente* y la aplicación se validará en el App Store:
 
     [![](app-store-publishing-images/publishvs03.png "La aplicación que se va a validar el Store de la aplicación")](app-store-publishing-images/publishvs03.png#lightbox)
-6. Haga clic en el botón **Enviar** para enviar la aplicación a Apple para su revisión.
-7. Application Loader le informará cuando el archivo se haya cargado correctamente.
+5. Haga clic en el botón **Enviar** para enviar la aplicación a Apple para su revisión.
+6. Application Loader le informará cuando el archivo se haya cargado correctamente.
 
 <a name="iTunes_Connect_Status" />
 
@@ -216,7 +216,7 @@ Si vuelve a registrarse en iTunes Connect y seleccione la aplicación en la list
 
 <a name="Troubleshooting" />
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>solución de problemas
 
 Si tiene problemas para enviar su aplicación Xamarin.tvOS al Store de Apple TV App, consulte nuestra [Troubleshooting](~/ios/tvos/troubleshooting.md) guía. Contiene varios problemas conocidos que pueden surgir y cómo resolverlos en el Xamarin.tvOS.
 

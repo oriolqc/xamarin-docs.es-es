@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/16/2017
-ms.openlocfilehash: 0a40d50d02008439e81d5db19bcda0647203e2da
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: d2f4031eeddbaa206f38b7b1c2bb49d21482c175
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61414437"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864945"
 ---
 # <a name="tvos-app-distribution-overview"></a>información general sobre la distribución de aplicaciones de tvOS
 
@@ -28,8 +28,8 @@ Una vez que se ha desarrollado la aplicación Xamarin.tvOS, el siguiente paso de
 Apple proporciona los siguientes métodos para distribuir una aplicación de tvOS, que son compatibles con Xamarin.tvOS:
 
 1. [**La App Store**](#Apple-TV-App-Store-Distribution)
-2. [**Interna (Enterprise)**](#In-House-Distribution) 
-2. [**Ad Hoc**](#Ad_Hoc_Distribution) 
+2. [**Interna (Enterprise)** ](#In-House-Distribution) 
+3. [**Ad Hoc**](#Ad_Hoc_Distribution) 
 
 Todos estos escenarios requieren que las aplicaciones se aprovisionen mediante el correspondiente *perfil de aprovisionamiento*. Los perfiles de aprovisionamiento son archivos que contienen información de firma de código, así como la identidad de la aplicación y el mecanismo de distribución previsto. También contienen información sobre en qué dispositivos se puede implementar la aplicación para la distribución que no se realice a través del App Store.
 

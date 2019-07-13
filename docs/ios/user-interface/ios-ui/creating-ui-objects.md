@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/21/2017
-ms.openlocfilehash: 65ebbddfa1a315a478ceb43162b3c80eba2d8cc1
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: a80bf876e239e1788a371a1f09d36d73247d4611
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827805"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865012"
 ---
 # <a name="creating-user-interface-objects-in-xamarinios"></a>Creación de objetos de la interfaz de usuario en Xamarin.iOS
 
@@ -88,7 +88,7 @@ Al soltar el clic se le pedirá que proporcione un nombre para la toma de corrie
 
 Para obtener más información sobre cómo Interface Builder de Xcode se integra con Visual Studio para Mac, consulte el [generación de código Xib](~/ios/internals/xib-code-generation.md#generated) documento.
 
-##  <a name="using-c"></a>Uso deC#
+## <a name="using-c"></a>Uso deC#
 
 Si decide crear mediante programación un objeto de interfaz de usuario mediante C# (en una vista o controlador de vista, por ejemplo), siga estos pasos:
 

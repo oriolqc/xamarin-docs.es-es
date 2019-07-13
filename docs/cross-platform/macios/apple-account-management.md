@@ -6,12 +6,12 @@ ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 8617d6e0c0930f581c45dbb461dfcb5d85a2becc
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 28a7d299e78a7fa6837ba9285795d380760f13b7
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61206370"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864646"
 ---
 # <a name="apple-account-management"></a>Administración de cuentas Apple
 
@@ -54,17 +54,17 @@ Debe tener una cuenta de desarrollador de Apple para usar esta característica. 
 
     ![cuadro de diálogo de FastLane.](apple-account-management-images/image2.png)
 
-4. Escriba su Id. de Apple y la contraseña y haga clic en el **sesión** botón. Esto guardará sus credenciales en la cadena de claves seguro en este equipo. [FastLane](~/ios/deploy-test/provisioning/fastlane/index.md) se usa para administrar las credenciales de forma segura y pasarlas al portal para desarrolladores de Apple.
+3. Escriba su Id. de Apple y la contraseña y haga clic en el **sesión** botón. Esto guardará sus credenciales en la cadena de claves seguro en este equipo. [FastLane](~/ios/deploy-test/provisioning/fastlane/index.md) se usa para administrar las credenciales de forma segura y pasarlas al portal para desarrolladores de Apple.
  
-5. Seleccione **permitir siempre** en el cuadro de diálogo de alerta para permitir que Visual Studio usar las credenciales:
+4. Seleccione **permitir siempre** en el cuadro de diálogo de alerta para permitir que Visual Studio usar las credenciales:
 
     ![Permitir siempre el cuadro de diálogo de alerta](apple-account-management-images/image4.png)
 
-6. Una vez que su cuenta se ha agregado correctamente, verá el identificador de Apple y los equipos que forman parte de su identificador de Apple.
+5. Una vez que su cuenta se ha agregado correctamente, verá el identificador de Apple y los equipos que forman parte de su identificador de Apple.
 
     ![Cuadro de diálogo de cuenta de Apple developer con las cuentas agregadas](apple-account-management-images/image5.png)
 
-7. Seleccione cualquier equipo y presione la **ver detalles...** . Esto mostrará una lista de todas las identidades de firma y perfiles de aprovisionamiento que están instalados en el equipo:
+6. Seleccione cualquier equipo y presione la **ver detalles...** . Esto mostrará una lista de todas las identidades de firma y perfiles de aprovisionamiento que están instalados en el equipo:
 
     ![Vista Detalles de la pantalla que muestra las identidades de firma y perfiles en el equipo de aprovisionamiento](apple-account-management-images/image6.png)
 
@@ -137,7 +137,7 @@ El cuadro de diálogo de detalles del equipo también muestra una lista de todos
 
 Para obtener información sobre la implementación de la aplicación en un dispositivo, consulte el [aprovisionamiento de dispositivos](~/ios/get-started/installation/device-provisioning/index.md) guía.
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>solución de problemas
 
 ### <a name="view-details-dialog-is-empty"></a>Cuadro de diálogo de detalles de la vista está vacía
 

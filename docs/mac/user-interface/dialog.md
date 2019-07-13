@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: a3bb6674baed293f95eb50fbca5792b288aa9239
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: f53c1afd7c3f835bff2aae507b9937067bde4bec
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832514"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865731"
 ---
 # <a name="dialogs-in-xamarinmac"></a>Cuadros de diálogo en Xamarin.Mac
 
@@ -127,10 +127,10 @@ Para agregar una nueva ventana, haga lo siguiente:
 6. Crear un **Segue Modal** desde la ventana principal de la aplicación en el nuevo controlador de vista mediante el arrastre de controles del elemento de interfaz de usuario que se abrirá el cuadro de diálogo para la ventana del cuadro de diálogo. Asignar el **identificador** `ModalSegue`: 
 
     [![](dialog-images/new06.png "Un segue modal")](dialog-images/new06.png#lightbox)
-6. Cable telefónico cualquiera **acciones** y **salidas**: 
+7. Cable telefónico cualquiera **acciones** y **salidas**: 
 
     [![](dialog-images/new04.png "Configurar una acción")](dialog-images/new04.png#lightbox)
-6. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar con Xcode.
+8. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar con Xcode.
 
 Realizar el `CustomDialogController.cs` archivo aspecto parecido al siguiente:
 
@@ -265,19 +265,19 @@ Para crear una hoja de cálculo personalizada en Xamarin.Mac, vamos a hacer lo s
 2. Arrastre una nueva **View Controller** en la superficie de diseño:
 
     [![](dialog-images/new01.png "Seleccionar un controlador de vista de la biblioteca")](dialog-images/new01.png#lightbox)
-2. Diseñar la interfaz de usuario:
+3. Diseñar la interfaz de usuario:
 
     [![](dialog-images/sheet01.png "El diseño de interfaz de usuario")](dialog-images/sheet01.png#lightbox)
-3. Crear un **hoja Segue** desde la ventana principal en el nuevo controlador de vista: 
+4. Crear un **hoja Segue** desde la ventana principal en el nuevo controlador de vista: 
 
     [![](dialog-images/sheet02.png "Seleccionar el tipo de segue de hoja")](dialog-images/sheet02.png#lightbox)
-4. En el **Inspector de identidad**, asigne el controlador de vista **clase** `SheetViewController`: 
+5. En el **Inspector de identidad**, asigne el controlador de vista **clase** `SheetViewController`: 
 
     [![](dialog-images/sheet03.png "Establecer el nombre de clase")](dialog-images/sheet03.png#lightbox)
-5. Cualquiera que sea necesario definir **salidas** y **acciones**: 
+6. Cualquiera que sea necesario definir **salidas** y **acciones**: 
 
     [![](dialog-images/sheet04.png "Definir las salidas y las acciones necesarias")](dialog-images/sheet04.png#lightbox)
-6. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar.
+7. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar.
 
 A continuación, edite el `SheetViewController.cs` de archivo y dele un aspecto similar al siguiente:
 

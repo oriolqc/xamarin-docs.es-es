@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 26ab7880b3c4b6176c806783fec7a499d68511c3
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 696432fb51060a236780eedee0b60661e3a86712
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831910"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865191"
 ---
 # <a name="standard-controls-in-xamarinmac"></a>Controles estándar de Xamarin.Mac
 
@@ -603,16 +603,16 @@ Para crear un elemento flotante, realice lo siguiente:
 2. Arrastre un **ver controlador** desde el **Inspector de biblioteca** hasta la **Editor de la interfaz**: 
 
     [![](standard-controls-images/content02.png "Seleccionar un controlador de vista de la biblioteca")](standard-controls-images/content02.png#lightbox)
-4. Definir el tamaño y el diseño de la **vista personalizada**: 
+3. Definir el tamaño y el diseño de la **vista personalizada**: 
 
     [![](standard-controls-images/content04.png "Editar el diseño")](standard-controls-images/content04.png#lightbox)
-5. Control y haga clic y arrastre desde el origen de la ventana emergente en la **View Controller**: 
+4. Control y haga clic y arrastre desde el origen de la ventana emergente en la **View Controller**: 
 
     [![](standard-controls-images/content05.png "Arrastrar para crear un segue")](standard-controls-images/content05.png#lightbox)
-6. Seleccione **elemento flotante** en el menú emergente: 
+5. Seleccione **elemento flotante** en el menú emergente: 
 
     [![](standard-controls-images/content06.png "Establecer el tipo de segue")](standard-controls-images/content06.png#lightbox)
-7. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar con Xcode.
+6. Guarde los cambios y vuelva a Visual Studio para Mac sincronizar con Xcode.
 
 <a name="Tab_Views" />
 

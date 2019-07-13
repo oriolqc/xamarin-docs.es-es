@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: bff4d46ac9d5fe893cbb0a2dfa032e1b9f6daa0e
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: abcd89a6c4547680df0b96d235531312d3b21c52
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61407819"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864334"
 ---
 # <a name="walkthrough-using-touch-in-xamarinios"></a>Tutorial: Uso de interacción en Xamarin.iOS
 
@@ -176,7 +176,7 @@ En este ejemplo, se muestran algunas de las API táctiles. Siga estos pasos para
 
 <a name="Gesture_Recognizer_Samples" />
 
-##  <a name="gesture-recognizer-samples"></a>Ejemplos del reconocedor de gestos
+## <a name="gesture-recognizer-samples"></a>Ejemplos del reconocedor de gestos
 
 El [sección anterior](#Touch_Samples) se ha mostrado cómo arrastrar un objeto alrededor de la pantalla mediante el uso de eventos de toque.
 En esta sección, se permitirán deshacerme de los eventos de toque y muestran cómo utilizar los reconocedores de gestos siguientes:

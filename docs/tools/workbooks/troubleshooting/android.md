@@ -6,12 +6,12 @@ ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: a93288829ff99027a4b33e7720a7f849df37e9b1
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 08fa7f57f3fe44721bc00f0d59ed5df93300cf1e
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61423817"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864033"
 ---
 # <a name="troubleshooting-xamarin-workbooks-on-android"></a>Solución de problemas de los libros de Xamarin en Android
 
@@ -24,7 +24,7 @@ Si debe tener habilitado en el sistema de Hyper-V, vaya con el emulador de Andro
 
 Debe tener un emulador que se ejecuta Android 5.0 o posterior. No se admiten los emuladores ARM. Use `x86` o `x86_64` solo a los dispositivos.
 
-Lea [nuestra documentación sobre cómo configurar los emuladores de Android] [ android-emu] si no está familiarizado con el proceso.
+Lea [nuestra documentación sobre cómo configurar los emuladores de Android][android-emu] si no está familiarizado con el proceso.
 
 > [!NOTE]
 > Libros 1.1 y versiones anteriores se intente (y producirá un error) para usar los emuladores ARM si están disponibles. Para solucionar esto, emulador inicio el x86 que prefiera antes de abrir o crear un libro de Android. Libros siempre preferirá para conectarse a un emulador en ejecución, siempre que sea compatible.
@@ -39,14 +39,14 @@ En primer lugar, compruebe que el emulador tiene acceso a la red totalmente oper
 
 Si el emulador no tiene acceso a la red, deberá seguir estos pasos para corregir el conmutador de red de Hyper-V. Si cambia entre las redes Wi-Fi con frecuencia necesitará periódicamente Repita este paso:
 
-0. **Asegúrese de que las operaciones de red críticos están completas, como esto puede desconectarse temporalmente Windows desde internet.**
+1. **Asegúrese de que las operaciones de red críticos están completas, como esto puede desconectarse temporalmente Windows desde internet.**
 1. Cierre los emuladores.
-2. Abra `Hyper-V Manager`.
-3. En `Actions`, abra `Virtual Switch Manager...`.
-4. Eliminar todos los conmutadores virtuales.
-5. Haga clic en `OK`.
-6. Iniciar el emulador de Android de VS. Probablemente se le indicará que volver a crear el conmutador de red virtual.
-7. Compruebe que el explorador del emulador de VS Android puede acceder a internet.
+1. Abra `Hyper-V Manager`.
+1. En `Actions`, abra `Virtual Switch Manager...`.
+1. Eliminar todos los conmutadores virtuales.
+1. Haga clic en `OK`.
+1. Iniciar el emulador de Android de VS. Probablemente se le indicará que volver a crear el conmutador de red virtual.
+1. Compruebe que el explorador del emulador de VS Android puede acceder a internet.
 
 [android-emu]: https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debug-on-emulator/
 

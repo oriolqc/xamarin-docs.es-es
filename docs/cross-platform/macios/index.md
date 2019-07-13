@@ -6,12 +6,12 @@ ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
 author: asb3993
 ms.author: amburns
 ms.date: 03/29/2017
-ms.openlocfilehash: b40758fa562e57415cd3c0818763ef0a7ce5dcca
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c30d70d8a36c0e5a9b9ff6ddc74710dec4fb86a4
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61199772"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864399"
 ---
 # <a name="apple-platform-ios-and-mac"></a>Plataforma de Apple (iOS y Mac)
 
@@ -21,7 +21,7 @@ Para los elementos del código que no tengan ningún elemento de interfaz de usu
 
 Para el código que tiene que realizar algún trabajo de la interfaz de usuario y sin embargo, desea compartir, debe usar [proyectos compartidos](~/cross-platform/app-fundamentals/shared-projects.md) que le permiten colocar código para compartir en un solo proyecto y que se compila con Mac y iOS cuando se hace referencia.
 
-##  <a name="unified-apiunifiedindexmd"></a>[Unified API](unified/index.md)
+## <a name="unified-apiunifiedindexmd"></a>[Unified API](unified/index.md)
 
 La API unificada para proyectos de iOS y Mac usa los mismos espacios de nombres para marcos de trabajo para que se puede usar el mismo archivo de código en ambas plataformas, para compartir sin problemas de código. También permite que las compilaciones de bits de 32 y 64. Unified API ha sido el valor predeterminado de la plantilla desde principios de 2015 y se recomienda para todos los nuevos proyectos - *sólo* proyectos Unified API se pueden enviar a la aplicación de Store.
 
@@ -47,11 +47,11 @@ Xamarin le permite incorporar bibliotecas nativas a las aplicaciones con los enl
 
 ## <a name="native-referencesnative-referencesmd"></a>[Referencias nativas](native-references.md)
 
-##  <a name="macios-native-typesnativetypesmd"></a>[Tipos nativos de iOS y Mac](nativetypes.md)
+## <a name="macios-native-typesnativetypesmd"></a>[Tipos nativos de iOS y Mac](nativetypes.md)
 
 Para admitir 32 y 64 bits código transparente C# y F#, estamos presentando nuevos tipos de datos.   Obtenga información sobre ellas aquí.
 
-##  <a name="building-32-and-64-bit-apps32-and-64indexmd"></a>[Creación de las aplicaciones de 32 y 64 bits](32-and-64/index.md)
+## <a name="building-32-and-64-bit-apps32-and-64indexmd"></a>[Creación de las aplicaciones de 32 y 64 bits](32-and-64/index.md)
 
 Lo que necesita saber para admitir las aplicaciones de 32 y 64 bits.
 

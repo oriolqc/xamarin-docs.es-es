@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 11/10/2017
-ms.openlocfilehash: 15c93126f80917df45a5b80fb84397dc6ef0d5fd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e9e20b4966e9e6cb8a4ce3ad6724cf0ba2565c33
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61075641"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865862"
 ---
 # <a name="target-framework-for-xamarinmac"></a>.NET Framework de destino para Xamarin.Mac
 
@@ -44,7 +44,7 @@ Para cambiar el tipo de .NET Framework de destino para un proyecto de Xamarin.Ma
 2. En el **Explorador de soluciones**, haga doble clic en el archivo de proyecto para abrir el cuadro de diálogo **Opciones de proyecto**.
 3. Desde el **General** pestaña, seleccione el tipo de **.NET Framework de destino** que se adapte a las necesidades de su aplicación:
 
-  [![Uso de la ventana de opciones de proyecto para elegir una plataforma de destino](target-framework-images/select-target-full.png "utilizando la ventana de opciones de proyecto para elegir una plataforma de destino")](target-framework-images/select-target-full-large.png#lightbox)
+    [![Uso de la ventana de opciones de proyecto para elegir una plataforma de destino](target-framework-images/select-target-full.png "utilizando la ventana de opciones de proyecto para elegir una plataforma de destino")](target-framework-images/select-target-full-large.png#lightbox)
 
 4. Haga clic en el botón **Aceptar** para guardar los cambios.
 

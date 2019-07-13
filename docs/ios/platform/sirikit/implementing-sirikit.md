@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 2c3bddc89348b46c9bba277580071cb8ac3d6943
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 7fc675b69132ac41ffa9d87f4b3264de431b11bd
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61435176"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865675"
 ---
 # <a name="implementing-sirikit-in-xamarinios"></a>Implementación de SiriKit en Xamarin.iOS
 
@@ -43,7 +43,7 @@ Como se muestra en el [descripción de conceptos de SiriKit](~/ios/platform/siri
 
 [![](implementing-sirikit-images/elements01.png "Extender la aplicación con el diagrama de SiriKit")](implementing-sirikit-images/elements01.png#lightbox)
 
-Se incluyen los siguientes:
+Entre ellas se incluyen las siguientes:
 
 1. **Extensión de intents** -comprueba las respuestas de los usuarios, confirma que la aplicación puede atender la solicitud y realiza realmente la tarea para satisfacer la solicitud del usuario.
 2. **Extensión de interfaz de usuario de intents** - *opcional*, proporciona una interfaz de usuario personalizada para las respuestas en el entorno de Siri y puede poner las aplicaciones de interfaz de usuario y personalización de marca en Siri para enriquecer la experiencia del usuario.
@@ -181,12 +181,12 @@ Haga lo siguiente:
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Haga doble clic en el `Entitlements.plist` de archivos en el **el Explorador de soluciones** para abrirlo y editarlo.
-3. Agregar el `com.apple.developer.siri` **propiedad**, establezca el **tipo** a `Boolean` y **valor** a `Yes`: 
+2. Agregar el `com.apple.developer.siri` **propiedad**, establezca el **tipo** a `Boolean` y **valor** a `Yes`: 
 
     [![](implementing-sirikit-images/setup01w.png "Agregue la propiedad com.apple.developer.siri")](implementing-sirikit-images/setup01w.png#lightbox)
-4. Guarde los cambios en el archivo.
-5. Haga doble clic en el **archivo de proyecto** en el **el Explorador de soluciones** para abrirlo y editarlo.
-6. Seleccione **firma de lote de iOS** y asegúrese de que el `Entitlements.plist` archivo seleccionado en el **derechos personalizados** campo.
+3. Guarde los cambios en el archivo.
+4. Haga doble clic en el **archivo de proyecto** en el **el Explorador de soluciones** para abrirlo y editarlo.
+5. Seleccione **firma de lote de iOS** y asegúrese de que el `Entitlements.plist` archivo seleccionado en el **derechos personalizados** campo.
 
 -----
 
@@ -233,15 +233,15 @@ Haga lo siguiente en el equipo Mac:
 16. Asegúrese de que el **perfil de aprovisionamiento** creados anteriormente se ha instalado en Xcode.
 17. Abra el proyecto para agregar compatibilidad con SiriKit a en Visual Studio para Mac.
 18. Haga doble clic en el `Info.plist` de archivos en el **el Explorador de soluciones**.
-18. Asegúrese de que el **identificador de paquete** coincida con el que creó en el Portal para desarrolladores de Apple anterior: 
+19. Asegúrese de que el **identificador de paquete** coincida con el que creó en el Portal para desarrolladores de Apple anterior: 
 
     [![](implementing-sirikit-images/setup06.png "El identificador de paquete")](implementing-sirikit-images/setup06.png#lightbox)
-18. En el **el Explorador de soluciones**, seleccione el **proyecto**.
-19. Haga clic en el proyecto y seleccione **opciones**.
-21. Seleccione **firma de lote de iOS**, seleccione el **identidad de firma** y **perfil de aprovisionamiento** creado anteriormente: 
+20. En el **el Explorador de soluciones**, seleccione el **proyecto**.
+21. Haga clic en el proyecto y seleccione **opciones**.
+22. Seleccione **firma de lote de iOS**, seleccione el **identidad de firma** y **perfil de aprovisionamiento** creado anteriormente: 
 
     [![](implementing-sirikit-images/setup07.png "Seleccione la identidad de firma y perfil de aprovisionamiento")](implementing-sirikit-images/setup07.png#lightbox)
-22. Haga clic en el botón **Aceptar** para guardar los cambios.
+23. Haga clic en el botón **Aceptar** para guardar los cambios.
 
 > [!IMPORTANT]
 > Pruebas SiriKit solo funciona en un real iOS 10 dispositivos de Hardware y no en el 10 de iOS Simulator. Si tiene problemas para instalar un SiriKit habilitado la aplicación de Xamarin.iOS en hardware real, asegúrese de que los derechos necesarios, Id. de aplicación, identificador de firma y perfil de aprovisionamiento se ha configurado correctamente en Apple Developer Portal y Visual Studio para Mac.
@@ -629,7 +629,7 @@ Para agregar una extensión Intents a la solución, haga lo siguiente:
 
     [![](implementing-sirikit-images/intents05.w157-sml.png "Seleccione la extensión de intención")](implementing-sirikit-images/intents05.w157.png#lightbox)
 3. A continuación, escriba un **nombre** la intención de extensión y haga clic en el **Aceptar** botón.
-1. En el **el Explorador de soluciones**, haga doble clic en el **referencias** carpeta de la extensión de Intents recién creado y elija **Agregar > referencia**. Compruebe el nombre del proyecto de biblioteca de código compartido común (que la aplicación creada anteriormente) y haga clic en el **Aceptar** botón:
+4. En el **el Explorador de soluciones**, haga doble clic en el **referencias** carpeta de la extensión de Intents recién creado y elija **Agregar > referencia**. Compruebe el nombre del proyecto de biblioteca de código compartido común (que la aplicación creada anteriormente) y haga clic en el **Aceptar** botón:
 
     [![](implementing-sirikit-images/intents08w.png "Seleccione el nombre del proyecto de biblioteca común de código compartido")](implementing-sirikit-images/intents08w.png#lightbox)
     
@@ -891,7 +891,7 @@ Para agregar una extensión de interfaz de usuario de Intents a la solución, ha
 1. Haga doble clic en el **nombre de la solución** en el **el Explorador de soluciones** y seleccione **agregar** > **Agregar nuevo proyecto...**
 2. En el cuadro de diálogo seleccione **iOS** > **extensiones** > **extensión de interfaz de usuario de intención** y haga clic en el **siguiente** botón.
 3. A continuación, escriba un **nombre** la intención de extensión y haga clic en el **Aceptar** botón.
-5. En el **el Explorador de soluciones**, haga doble clic en el **referencias** carpeta de la extensión de intención recién creado. Compruebe el nombre del proyecto de biblioteca de código compartido común (que la aplicación creada anteriormente) y haga clic en el **Aceptar** botón.
+4. En el **el Explorador de soluciones**, haga doble clic en el **referencias** carpeta de la extensión de intención recién creado. Compruebe el nombre del proyecto de biblioteca de código compartido común (que la aplicación creada anteriormente) y haga clic en el **Aceptar** botón.
     
 -----
 

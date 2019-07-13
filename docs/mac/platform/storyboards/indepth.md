@@ -7,12 +7,12 @@ ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 61d598f90747cf47b613012328f77b4bd8953a41
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: e24b448bedc60a537bfcd4a5bfbdbe9562163818
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61033115"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865928"
 ---
 # <a name="working-with-storyboards-in-xamarinmac"></a>Trabajo con guiones gráficos en Xamarin.Mac
 
@@ -273,17 +273,17 @@ Para agregar una referencia a un guión gráfico externo, haga lo siguiente:
 
     [![](indepth-images/ref01.png "Agregar un nuevo guion gráfico")](indepth-images/ref01.png#lightbox)
 2. En el **el Explorador de soluciones**, haga doble clic en el nuevo nombre del guión gráfico para abrirlo y editarlo en Interface Builder de Xcode.
-2. Definir el diseño de escenas del guión gráfico nuevo como se haría normalmente y guardar los cambios: 
+3. Definir el diseño de escenas del guión gráfico nuevo como se haría normalmente y guardar los cambios: 
 
     [![](indepth-images/ref02.png "Diseñar la interfaz")](indepth-images/ref02.png#lightbox)
-3. Cambie al guión gráfico que se va a agregar la referencia a en el generador de interfaz.
-4. Arrastre un **crear guiones gráficos de referencia** desde el **objeto biblioteca** a la superficie de diseño: 
+4. Cambie al guión gráfico que se va a agregar la referencia a en el generador de interfaz.
+5. Arrastre un **crear guiones gráficos de referencia** desde el **objeto biblioteca** a la superficie de diseño: 
 
     [![](indepth-images/ref03.png "Seleccionar una referencia de guión gráfico en la biblioteca")](indepth-images/ref03.png#lightbox)
-5. En el **Inspector de atributos**, seleccione el nombre de la **guión gráfico** que creó anteriormente: 
+6. En el **Inspector de atributos**, seleccione el nombre de la **guión gráfico** que creó anteriormente: 
 
     [![](indepth-images/ref04.png "Configuración de la referencia")](indepth-images/ref04.png#lightbox)
-6. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un Segue nuevo a la **guión gráfico referencia** que acaba de crear.  En el menú emergente, seleccione **mostrar** para completar el Segue: 
+7. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un Segue nuevo a la **guión gráfico referencia** que acaba de crear.  En el menú emergente, seleccione **mostrar** para completar el Segue: 
 
     [![](indepth-images/ref06.png "Establecer el tipo de Segue")](indepth-images/ref06.png#lightbox) 
 8. Guarde los cambios en el guión gráfico.
@@ -304,14 +304,14 @@ Para agregar una referencia a una escena específica un guión gráfico externo 
 3. En el **Inspector de identidad**, escriba un **identificador de guión gráfico** para el controlador de ventana de la escena nueva: 
 
     [![](indepth-images/ref08.png "Establecer el identificador de guión gráfico")](indepth-images/ref08.png#lightbox)
-3. Abra el guión gráfico que se va a agregar la referencia en Interface Builder.
-4. Arrastre un **crear guiones gráficos de referencia** desde el **objeto biblioteca** a la superficie de diseño: 
+4. Abra el guión gráfico que se va a agregar la referencia en Interface Builder.
+5. Arrastre un **crear guiones gráficos de referencia** desde el **objeto biblioteca** a la superficie de diseño: 
 
     [![](indepth-images/ref03.png "Seleccionar una referencia de guión gráfico de la biblioteca")](indepth-images/ref03.png#lightbox)
-5. En el **Inspector de identidad**, seleccione el nombre de la **guión gráfico** y **Id. de referencia** (identificador de guión gráfico) de la escena que creó anteriormente: 
+6. En el **Inspector de identidad**, seleccione el nombre de la **guión gráfico** y **Id. de referencia** (identificador de guión gráfico) de la escena que creó anteriormente: 
 
     [![](indepth-images/ref09.png "Establecer el identificador de referencia")](indepth-images/ref09.png#lightbox)
-6. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un Segue nuevo a la **guión gráfico referencia** que acaba de crear. En el menú emergente, seleccione **mostrar** para completar el Segue: 
+7. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un Segue nuevo a la **guión gráfico referencia** que acaba de crear. En el menú emergente, seleccione **mostrar** para completar el Segue: 
 
     [![](indepth-images/ref06.png "Establecer el tipo de Segue")](indepth-images/ref06.png#lightbox) 
 8. Guarde los cambios en el guión gráfico.
@@ -332,7 +332,7 @@ Para agregar una referencia a una escena concreta el mismo guión gráfico, haga
 3. En el **Inspector de identidad**, escriba un **identificador de guión gráfico** para el controlador de ventana de la escena nueva: 
 
     [![](indepth-images/ref12.png "Establecer el identificador de guión gráfico")](indepth-images/ref12.png#lightbox)
-3. Arrastre un **crear guiones gráficos de referencia** desde el **cuadro de herramientas** a la superficie de diseño: 
+4. Arrastre un **crear guiones gráficos de referencia** desde el **cuadro de herramientas** a la superficie de diseño: 
 
     [![](indepth-images/ref03.png "Seleccionar una referencia de guión gráfico de la biblioteca")](indepth-images/ref03.png#lightbox)
 5. En **Inspector de atributos**, seleccione **Id. de referencia** (identificador de guión gráfico) de la escena que creó anteriormente: 
@@ -341,8 +341,8 @@ Para agregar una referencia a una escena concreta el mismo guión gráfico, haga
 6. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un Segue nuevo a la **guión gráfico referencia** que acaba de crear. En el menú emergente, seleccione **mostrar** para completar el Segue: 
 
     [![](indepth-images/ref06.png "Seleccionar el tipo de Segue")](indepth-images/ref06.png#lightbox) 
-8. Guarde los cambios en el guión gráfico.
-9. Vuelva a Visual Studio para Mac sincronizar los cambios.
+7. Guarde los cambios en el guión gráfico.
+8. Vuelva a Visual Studio para Mac sincronizar los cambios.
 
 Cuando la aplicación es la ejecución y el usuario hace clic en el elemento de interfaz de usuario que ha creado el objeto Segue de la escena con la determinada **identificador de guión gráfico** en el mismo guión gráfico especificado en la referencia de guión gráfico se mostrará.
 

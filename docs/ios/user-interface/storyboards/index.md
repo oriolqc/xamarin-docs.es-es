@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: 5c3c9714cb4d6cd077f898778f4388d63018fa00
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 79c1d7852cdde9b557965931706fcd24e43954f7
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831697"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865216"
 ---
 # <a name="introduction-to-storyboards-in-xamarinios"></a>Introducción a guiones gráficos en Xamarin.iOS
 
@@ -327,7 +327,7 @@ Antes de comenzar, siga los pasos 1 a 8 anteriores. En estos pasos se crea el gu
         - Color: Rojo
         - Alineación: Centrar
         - Líneas: 2
-        - Casilla 'Hidden' activada 
+        - Casilla 'Hidden' activada    
         
     [![](images/passwordvc.png "Líneas de referencia")](images/passwordvc.png#lightbox)
     
@@ -424,25 +424,25 @@ Para agregar una referencia a una escena específica un guión gráfico externo 
 
     [![](images/ref08.png "Escriba un identificador de guión gráfico para el nuevo controlador de vista de segundo plano")](images/ref08.png#lightbox)
     
-3. Abra el guión gráfico que se va a agregar la referencia a en el Diseñador de iOS.
+4. Abra el guión gráfico que se va a agregar la referencia a en el Diseñador de iOS.
 
-4. Arrastre un **crear guiones gráficos de referencia** desde el **cuadro de herramientas** a la superficie de diseño: 
+5. Arrastre un **crear guiones gráficos de referencia** desde el **cuadro de herramientas** a la superficie de diseño: 
 
     [![](images/ref03.png "Una referencia de guión gráfico")](images/ref03.png#lightbox)
     
-5. En el **Widget** pestaña de la **Explorador de propiedades**, seleccione el nombre de la **guión gráfico** y el **Id. de referencia** (identificador de guión gráfico) de la Escena que creó anteriormente: 
+6. En el **Widget** pestaña de la **Explorador de propiedades**, seleccione el nombre de la **guión gráfico** y el **Id. de referencia** (identificador de guión gráfico) de la Escena que creó anteriormente: 
 
     [![](images/ref09.png "La pestaña de Widget ")](images/ref09.png#lightbox)
     
-6. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un Segue nuevo a la **guión gráfico referencia** que acaba de crear: 
+7. Control y haga clic en un Widget de interfaz de usuario (por ejemplo, un botón) en una escena existente y crear un Segue nuevo a la **guión gráfico referencia** que acaba de crear: 
 
     [![](images/ref10.png "Creación de un segue")](images/ref10.png#lightbox) 
     
-7. En el menú emergente, seleccione **mostrar** para completar el Segue: 
+8. En el menú emergente, seleccione **mostrar** para completar el Segue: 
 
     [![](images/ref06.png "Seleccione Mostrar para completar el Segue")](images/ref06.png#lightbox) 
     
-8. Guarde los cambios en el guión gráfico.
+9. Guarde los cambios en el guión gráfico.
 
 Cuando la aplicación es la ejecución y el usuario hace clic en el elemento de interfaz de usuario que ha creado el objeto Segue de la escena con la determinada **identificador de guión gráfico** desde el guión gráfico externo especificado en la referencia de guión gráfico se mostrará.
 
@@ -462,9 +462,9 @@ Para agregar una referencia a una escena concreta el mismo guión gráfico, haga
 
     [![](images/ref12.png "La pestaña de Widget")](images/ref12.png#lightbox)
     
-3. Arrastre un **crear guiones gráficos de referencia** desde el **cuadro de herramientas** a la superficie de diseño: 
+4. Arrastre un **crear guiones gráficos de referencia** desde el **cuadro de herramientas** a la superficie de diseño: 
 
-    [![](images/ref03.png "Una referencia de guión gráfico")](images/ref03.png#lightbox)
+   [![](images/ref03.png "Una referencia de guión gráfico")](images/ref03.png#lightbox)
     
 5. En el **Widget** pestaña de la **Explorador de propiedades**, seleccione **Id. de referencia** (identificador de guión gráfico) de la escena que creó anteriormente: 
 

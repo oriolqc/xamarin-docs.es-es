@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 1a5cc9f06fdca5944a9a3201ac15d63ca7f15453
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 084b9924af467459a017413a958ec2e46ff219fc
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61385589"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865307"
 ---
 # <a name="handoff-in-xamarinios"></a>Entrega en Xamarin.iOS
 
@@ -117,20 +117,20 @@ Haga lo siguiente:
 
     [![](handoff-images/provision01.png "Habilitar el servicio de iCloud para el identificador especificado")](handoff-images/provision01.png#lightbox)
 5. Guarde los cambios.
-4. Haga clic en **perfiles de aprovisionamiento** > **desarrollo** y creación de aplicación de un desarrollo nuevo perfil de aprovisionamiento para usted:
+6. Haga clic en **perfiles de aprovisionamiento** > **desarrollo** y creación de aplicación de un desarrollo nuevo perfil de aprovisionamiento para usted:
 
     [![](handoff-images/provision02.png "Crear un nuevo perfil para la aplicación de aprovisionamiento de desarrollo")](handoff-images/provision02.png#lightbox)
-5. Ya sea descargar e instalar el nuevo perfil de aprovisionamiento o usar Xcode para descargar e instalar el perfil.
-6. Editar las opciones del proyecto de Xamarin.iOS y asegúrese de que está usando el perfil de aprovisionamiento que acaba de crear:
+7. Ya sea descargar e instalar el nuevo perfil de aprovisionamiento o usar Xcode para descargar e instalar el perfil.
+8. Editar las opciones del proyecto de Xamarin.iOS y asegúrese de que está usando el perfil de aprovisionamiento que acaba de crear:
 
     [![](handoff-images/provision03.png "Seleccione el perfil de aprovisionamiento que acaba de crear")](handoff-images/provision03.png#lightbox)
-7. A continuación, edite su **Info.plist** de archivos y asegúrese de que está usando el identificador de aplicación que se usó para crear el perfil de aprovisionamiento:
+9. A continuación, edite su **Info.plist** de archivos y asegúrese de que está usando el identificador de aplicación que se usó para crear el perfil de aprovisionamiento:
 
     [![](handoff-images/provision04.png "Establecer Id. de aplicación")](handoff-images/provision04.png#lightbox)
-8. Desplácese hasta la **modos en segundo plano** sección y compruebe los siguientes elementos:
+10. Desplácese hasta la **modos en segundo plano** sección y compruebe los siguientes elementos:
 
     [![](handoff-images/provision05.png "Habilitar los modos de fondo que requiere")](handoff-images/provision05.png#lightbox)
-9. Guarde los cambios a todos los archivos.
+11. Guarde los cambios a todos los archivos.
 
 Con esta configuración en su lugar, la aplicación ahora está lista para tener acceso a las API de marco de trabajo de entrega. Para obtener información detallada sobre el aprovisionamiento, consulte nuestra [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) y [aprovisionamiento de la aplicación](~/ios/get-started/installation/device-provisioning/index.md) guías.
 

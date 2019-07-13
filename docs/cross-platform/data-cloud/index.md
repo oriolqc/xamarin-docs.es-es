@@ -6,12 +6,12 @@ ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
 author: asb3993
 ms.author: amburns
 ms.date: 10/09/2017
-ms.openlocfilehash: dd211fecad0bff58cb9ff6c6a99ae6a15c60eb7b
-ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
+ms.openlocfilehash: 723970a4ad7e2ced85147dbcc6c22f9a45519121
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67674985"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864603"
 ---
 # <a name="microsoft-azure-and-xamarin"></a>Microsoft Azure y Xamarin
 
@@ -41,11 +41,11 @@ API de Web de Microsoft expone una interfaz similar a REST que puede utilizarse 
 Puede fácilmente número vertical un [sitio Web de Azure](https://trywebsites.azurewebsites.net/) y compile una aplicación basada en WebAPI para conectarse a las aplicaciones de Xamarin.
 
 
-###  <a name="introduction-to-web-servicescross-platformdata-cloudweb-servicesindexmd"></a>[Introducción a servicios Web](~/cross-platform/data-cloud/web-services/index.md)
+### <a name="introduction-to-web-servicescross-platformdata-cloudweb-servicesindexmd"></a>[Introducción a servicios Web](~/cross-platform/data-cloud/web-services/index.md)
 
 En este tutorial se explica cómo integrar REST, las tecnologías de servicios con aplicaciones móviles de Xamarin de web de WCF y SOAP. Examina las diversas implementaciones de servicio, se evalúa como las herramientas disponibles y las bibliotecas para integrarlos y proporciona modelos de ejemplo para consumir datos de servicio. Por último, proporciona una introducción básica a la creación de un servicio web RESTful para su uso con aplicaciones móviles de Xamarin.
 
-## <a name="samples"></a>Muestras
+## <a name="samples"></a>Ejemplos
 
 Además el [ejemplos de documentación](https://github.com/xamarin/mobile-samples/tree/master/Azure), las aplicaciones completas siguientes muestran diversas características de Azure incorporadas en las aplicaciones de Xamarin:
 
@@ -61,5 +61,5 @@ Además el [ejemplos de documentación](https://github.com/xamarin/mobile-sample
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplo de PCL de Azure (por @paulbatum) (ejemplo)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
-- [Portal de Azure](https://azure.microsoft.com/)
+- [Azure Portal](https://azure.microsoft.com/)
 - [Cliente móvil de Xamarin (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

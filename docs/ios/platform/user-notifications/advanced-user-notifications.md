@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/03/2018
-ms.openlocfilehash: 4472654064812142e3281374754ace0042b542bf
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 255603eefb4d7cfd3b906e1744aa19da6a77259a
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61089324"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865296"
 ---
 # <a name="advanced-user-notifications-in-xamarinios"></a>Notificaciones de usuario avanzadas en Xamarin.iOS
 
@@ -258,11 +258,11 @@ El sistema necesita para mantenerse informado sobre cómo encontrar la extensió
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Haga doble clic en la extensión `Info.plist` de archivos en el **el Explorador de soluciones** para abrirlo y editarlo.
-3. Expanda el `NSExtension` clave.
-4. Agregar el `UNNotificationExtensionCategory` clave como tipo **cadena** con el valor de la categoría a la que pertenece la extensión (en este ejemplo ' invitación a un evento): 
+2. Expanda el `NSExtension` clave.
+3. Agregar el `UNNotificationExtensionCategory` clave como tipo **cadena** con el valor de la categoría a la que pertenece la extensión (en este ejemplo ' invitación a un evento): 
 
     [![](advanced-user-notifications-images/customui02w.png "Agregue la clave UNNotificationExtensionCategory")](advanced-user-notifications-images/customui02w.png#lightbox)
-5. Guarde los cambios.
+4. Guarde los cambios.
 
 -----
 

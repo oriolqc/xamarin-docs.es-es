@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 05/02/2017
-ms.openlocfilehash: 0f77f9014cf7bfad510927f0f12a3e70b387036f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: afa20a264e2509a5658cd0d8f90da3148315e803
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61424385"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865722"
 ---
 # <a name="enhanced-user-notifications-in-xamarinios"></a>Notificaciones de usuario mejorada en Xamarin.iOS
 
@@ -150,7 +150,7 @@ Además, un usuario puede cambiar siempre los privilegios de notificación para 
 // Get current notification settings
 UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
     var alertsAllowed = (settings.AlertSetting == UNNotificationSetting.Enabled);
-}); 
+});    
 ``` 
 
 ### <a name="configuring-the-remote-notifications-environment"></a>Configurar el entorno de notificaciones remotas
@@ -176,11 +176,11 @@ Para proporcionar los derechos necesarios, realice lo siguiente:
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
 1. Haga doble clic en el `Entitlements.plist` de archivos en el **el Explorador de soluciones** para abrirlo y editarlo.
-3. Haga clic en el **+** para agregar una nueva clave.
-4. Escriba `aps-environment` para el **propiedad**, deje el **tipo** como `String` y escriba `development` o `production` para el **valor**: 
+2. Haga clic en el **+** para agregar una nueva clave.
+3. Escriba `aps-environment` para el **propiedad**, deje el **tipo** como `String` y escriba `development` o `production` para el **valor**: 
 
     [![](enhanced-user-notifications-images/setup02w.png "La propiedad de entorno de aps")](enhanced-user-notifications-images/setup02.png#lightbox)
-5. Guarde los cambios en el archivo.
+4. Guarde los cambios en el archivo.
 
 -----
 
@@ -242,7 +242,7 @@ Las notificaciones remotas, el proceso es similar:
 Con el contenido de la notificación creado, la aplicación necesita programar cuándo se le presentará la notificación al usuario estableciendo un *desencadenador*. iOS 10 proporciona cuatro tipos diferentes de desencadenadores:
 
 - **Notificación de inserción** : se usa exclusivamente con las notificaciones remotas y se desencadena cuando el paquete de Apple Push Notification Service envía una notificación a la aplicación que se ejecuta en el dispositivo.
-- **Intervalo de tiempo** -permite que una notificación Local deben programarse de un tiempo de intervalo se inicia con ahora y el final de una en algún momento futuro. Por ejemplo, `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);`.
+- **Intervalo de tiempo** -permite que una notificación Local deben programarse de un tiempo de intervalo se inicia con ahora y el final de una en algún momento futuro. Por ejemplo, `var trigger =  UNTimeIntervalNotificationTrigger.CreateTrigger (5, false);`
 - **Fecha del calendario** -permite notificaciones locales para programar una fecha y hora específicas.
 - **Basado en ubicación** -notificaciones locales permite programar cuando el dispositivo iOS entra o salir de una ubicación geográfica específica o está en una determinada proximidad a cualquier balizas Bluetooth.
 

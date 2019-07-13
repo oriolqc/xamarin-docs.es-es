@@ -6,12 +6,12 @@ ms.assetid: 64c24b09-2c4a-43ad-b94d-6cd05a1aee44
 author: asb3993
 ms.author: amburns
 ms.date: 03/30/2017
-ms.openlocfilehash: e81c28f0610a0df2e4fe06349685ef5e0744071a
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6d9cabdb22425bdc057f6d52de5aa943537dd1ca
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61159167"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864477"
 ---
 # <a name="how-do-i-collect-the-current-call-stacks-of-the-visual-studio-process"></a>¿Cómo se recopilan las pilas de llamadas actuales del proceso de Visual Studio?
 
@@ -23,20 +23,20 @@ Cuando la interfaz gráfica de usuario se bloquea (se bloquea, se inmoviliza) en
 
 3. Seleccione **Depurar > Asociar al proceso**.
 
-  ![](vs-callstack-images/image1.png "Seleccione Depurar > asociar al proceso")
+   ![](vs-callstack-images/image1.png "Seleccione Depurar > asociar al proceso")
 
 4. Seleccione la instancia bloqueada original de `devenv.exe` de la lista de **Procesos disponibles**.
 
 5. Seleccione **Depurar > Interrumpir todo**.
 
-  ![](vs-callstack-images/image2.png "Seleccione Depurar > interrumpir todo")
+   ![](vs-callstack-images/image2.png "Seleccione Depurar > interrumpir todo")
 
 6. Seleccione **Depurar > Guardar volcado como**.
 
-  ![](vs-callstack-images/image3.png "Seleccione Depurar > Guardar volcado como")
+   ![](vs-callstack-images/image3.png "Seleccione Depurar > Guardar volcado como")
 
-7. Cambio **Guardar como tipo** a **minivolcado (\*.dmp)**. Esto creará un archivo mucho más pequeño que **minivolcado con montón**, y el montón no suele ser relevante para el diagnóstico se inmoviliza.
+7. Cambio **Guardar como tipo** a **minivolcado (\*.dmp)** . Esto creará un archivo mucho más pequeño que **minivolcado con montón**, y el montón no suele ser relevante para el diagnóstico se inmoviliza.
 
-  ![](vs-callstack-images/image4.png "Esto generará un archivo de minivolcado con montón mucho más pequeño, y el montón no suele ser relevante para el diagnóstico se inmoviliza")
+   ![](vs-callstack-images/image4.png "Esto generará un archivo de minivolcado con montón mucho más pequeño, y el montón no suele ser relevante para el diagnóstico se inmoviliza")
 
 8. Guarde el archivo de volcado de memoria. Si enviar el archivo en línea, puede comprimir para reducir el tamaño.

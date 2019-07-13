@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/19/2017
-ms.openlocfilehash: ba3c2b07e7f35bf9fd84d10b74d034a02ca6a73d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 65f7c6d8a573501ffec4aa1b8eaf28ff1e6479e8
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61153293"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864219"
 ---
 # <a name="my-android-resourcedesignercs-file-will-not-update"></a>Mi archivo Resource.designer.cs de Android no se actualizará
 
@@ -24,13 +24,13 @@ Un error en la versión 5.1 Xamarin.Studio había dañado previamente archivos .
 
 ## <a name="two-possible-approaches-to-fixing-up-the-project-file"></a>Dos posibles enfoques para corregir el archivo de proyecto
 
-### <a name="either"></a>Ya sea:
+**Ya sea:**
 
-1) Crear un nuevo proyecto de aplicación de Xamarin.Android, establecer todas las propiedades del proyecto para que coincida con el proyecto antiguo y agregar todos los recursos, archivos de código fuente, etc., de nuevo en el proyecto.
+1. Crear un nuevo proyecto de aplicación de Xamarin.Android, establecer todas las propiedades del proyecto para que coincida con el proyecto antiguo y agregar todos los recursos, archivos de código fuente, etc., de nuevo en el proyecto.
 
-### <a name="or"></a>O
+   **O**
 
-2) Realizar una copia de seguridad del archivo de .csproj del proyecto original, ábralo en un editor de texto y vuelven a agregar los elementos que faltan de un archivo .csproj generado correctamente.
+2. Realizar una copia de seguridad del archivo de .csproj del proyecto original, ábralo en un editor de texto y vuelven a agregar los elementos que faltan de un archivo .csproj generado correctamente.
 
 ### <a name="if-this-does-not-solve-the-problem"></a>Si esto no soluciona el problema
 

@@ -6,12 +6,12 @@ ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
 author: asb3993
 ms.author: amburns
 ms.date: 03/23/2017
-ms.openlocfilehash: 6d695df9c59a5f95441092d6d7b44d5feda941bd
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6371c2af15eab9c5124212eefd9cf70d07b945d4
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61267770"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864718"
 ---
 # <a name="creating-a-new-multiplatform-library-for-nuget"></a>Crear una nueva biblioteca multiplataforma para NuGet
 
@@ -30,25 +30,25 @@ Si posteriormente necesita la funcionalidad específica de la plataforma, [proye
 
 2. Elija **biblioteca multiplataforma** desde el **Multiplatform > biblioteca** sección:
 
-  [![](single-codebase-images/mulitplatform-library-sml.png "Configurar biblioteca multiplataforma para un único código base")](single-codebase-images/mulitplatform-library.png#lightbox)
+   [![](single-codebase-images/mulitplatform-library-sml.png "Configurar biblioteca multiplataforma para un único código base")](single-codebase-images/mulitplatform-library.png#lightbox)
 
 3. Escriba un **nombre** y **descripción**y elija **único para todas las plataformas**:
 
-  [![](single-codebase-images/single-configure-sml.png "Configurar biblioteca multiplataforma para un único código base")](single-codebase-images/single-configure.png#lightbox)
+   [![](single-codebase-images/single-configure-sml.png "Configurar biblioteca multiplataforma para un único código base")](single-codebase-images/single-configure.png#lightbox)
 
 4. Complete el asistente. Se crea un proyecto de biblioteca único en la solución.
 
 5. Haga doble clic en el nuevo proyecto de biblioteca y, a continuación, seleccione **opciones**. El **compilar > General** sección permite el **.NET Framework de destino** debe establecerse: elija un perfil de PCL de .NET portátil o una versión de .NET Standard:
 
-  [![](single-codebase-images/single-choose-type-sml.png "Elija PCL o .NET Standard para el tipo de biblioteca")](single-codebase-images/single-choose-type.png#lightbox)
+   [![](single-codebase-images/single-choose-type-sml.png "Elija PCL o .NET Standard para el tipo de biblioteca")](single-codebase-images/single-choose-type.png#lightbox)
 
 6. También en el **opciones de proyecto** ventana, abra el **paquete NuGet > metadatos** sección y escriba el [metadatos necesarios](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) (así como los metadatos opcionales):
 
-  [![](single-codebase-images/single-metadata-sml.png "Escriba los metadatos necesarios")](single-codebase-images/single-metadata.png#lightbox)
+   [![](single-codebase-images/single-metadata-sml.png "Escriba los metadatos necesarios")](single-codebase-images/single-metadata.png#lightbox)
 
 7. Haga doble clic en el proyecto de biblioteca y elija **crear paquetes de NuGet** (o compilar o implementar la solución) y el **.nupkg** se guardará el archivo de paquete de NuGet en el **/bin /** carpeta (Debug o Release, según la configuración):
 
-  ![](single-codebase-images/create-nuget-package.png "El archivo de paquete de NuGet se guardará en la carpeta bin Debug o Release, según la configuración")
+   ![](single-codebase-images/create-nuget-package.png "El archivo de paquete de NuGet se guardará en la carpeta bin Debug o Release, según la configuración")
 
 
 ## <a name="verifying-the-output"></a>Comprobar la salida

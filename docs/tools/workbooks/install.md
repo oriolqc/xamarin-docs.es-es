@@ -6,12 +6,12 @@ ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
 author: lobrien
 ms.author: laobri
 ms.date: 06/19/2018
-ms.openlocfilehash: a1001163d89a9a9cda16a7ee5e644307fcc9875c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: cb79323c416c107c35c465bc2a8815ab267cc451
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61218596"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865940"
 ---
 # <a name="workbooks-installation-and-requirements"></a>Los requisitos e instalación de los libros
 
@@ -87,12 +87,12 @@ Visual Studio para Mac
 - **Visual Studio > acerca de Visual Studio > Mostrar detalles > Copiar información**
 - Pegue en el informe de errores
 
-Programa para la mejora
+Visual Studio
 
 - **Ayuda > acerca de Visual Studio > Copiar información**
 - Háganos saber la versión del sistema operativo y si se están ejecutando Windows de 32 bits o 64 bits.
 
-### <a name="samples"></a>Muestras
+### <a name="samples"></a>Ejemplos
 
 Si se puede adjuntar o vincular a la **.workbooks** archivos tiene problemas, que pueden ayudar a resolver los errores más rápidamente.
 
@@ -149,8 +149,8 @@ En el caso de versiones anteriores, debe quitar manualmente lo siguiente:
 
 1. Eliminar la aplicación Workbooks de `"/Applications/Xamarin Workbooks.app"`
 2. Eliminar la aplicación Inspector de `"Applications/Xamarin Inspector.app"`
-2. Eliminar los complementos: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` y `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
-3. Eliminar Inspector y los archivos auxiliares aquí: `/Library/Frameworks/Xamarin.Interactive.framework` y `/Library/Frameworks/Xamarin.Inspector.framework`
+3. Eliminar los complementos: `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` y `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"`
+4. Eliminar Inspector y los archivos auxiliares aquí: `/Library/Frameworks/Xamarin.Interactive.framework` y `/Library/Frameworks/Xamarin.Inspector.framework`
 
 ## <a name="downgrading"></a>Degradar
 

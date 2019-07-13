@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 979b103db478e3888d3a3c20df6afbd91d0c37d8
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 0c0bf6058b2ec7a8e3ef606bef9f725a476abffe
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61386544"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865912"
 ---
 # <a name="watchos-proactive-suggestions-in-xamarin"></a>Sugerencias proactivas en Xamarin de watchOS
 
@@ -169,9 +169,9 @@ La siguiente sección tardará un vistazo a habilitar dos otras nuevas caracter�
 Tome como ejemplo la aplicación de búsqueda de restaurante anterior. Si ha implementado `NSUserActivity` y rellenado correctamente todos los metadatos y los atributos, el usuario podría hacer lo siguiente:
 
 1. Buscar un restaurante en la aplicación que les gustaría para cumplir con un amigo en.
-4. Si el usuario cambia a la aplicación de mapas, dirección del restaurante se sugiere automáticamente como un destino.
-5. Esto funciona incluso para las aplicaciones de terceros 3rd (que admiten `NSUserActivity`), por lo que el usuario puede cambiar a una aplicación de uso compartido de andar y dirección del restaurante se sugiere automáticamente como un destino allí también.
-6. También proporciona contexto a Siri, por lo que el usuario puede invocar Siri dentro de la aplicación del restaurante y solicitar *"Obtener direcciones..."* y Siri le proporcionará instrucciones para el restaurante el usuario está viendo.
+2. Si el usuario cambia a la aplicación de mapas, dirección del restaurante se sugiere automáticamente como un destino.
+3. Esto funciona incluso para las aplicaciones de terceros 3rd (que admiten `NSUserActivity`), por lo que el usuario puede cambiar a una aplicación de uso compartido de andar y dirección del restaurante se sugiere automáticamente como un destino allí también.
+4. También proporciona contexto a Siri, por lo que el usuario puede invocar Siri dentro de la aplicación del restaurante y solicitar *"Obtener direcciones..."* y Siri le proporcionará instrucciones para el restaurante el usuario está viendo.
 
 Toda la funcionalidad anterior tiene una cosa en común, todos ellos indican donde procede originalmente la sugerencia de. En el caso del ejemplo anterior, es la aplicación de revisión de restaurantes ficticia.
 

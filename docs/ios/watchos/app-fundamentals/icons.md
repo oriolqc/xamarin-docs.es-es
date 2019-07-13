@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 07/26/2018
-ms.openlocfilehash: 435af10484827826d53b767c2738e3945e0bae42
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 75b5d1f941921a84d96579a4b0d0666ae0c2522d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61345260"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864983"
 ---
 # <a name="working-with-watchos-icons-in-xamarin"></a>Trabajar con iconos en Xamarin de watchOS
 
@@ -55,28 +55,28 @@ Una vez su [aplicación primaria](~/ios/watchos/app-fundamentals/parent-app.md) 
 
 1. Haga doble clic en el proyecto de aplicación de inspección y seleccione **archivo > Agregar > nuevo archivo... > iOS > catálogo de activos** para agregar un catálogo de recursos al proyecto.
 
- ![](icons-images/newasset.png "Agregar un catálogo de recursos al proyecto")
+    ![](icons-images/newasset.png "Agregar un catálogo de recursos al proyecto")
 
 2. Haga doble clic en el **AppIcon.appiconset/Contents.json** archivo
 
-  ![](icons-images/xcassets-iconset-sml.png "El contenido de AppIcon")
+    ![](icons-images/xcassets-iconset-sml.png "El contenido de AppIcon")
 
 3. Agregue todas las imágenes de watchOS, como se muestra en esta captura de pantalla:
 
-  [![](icons-images/appicons-sml.png "Agregue todas las imágenes de watchOS, como se muestra en esta captura de pantalla")](icons-images/appicons.png#lightbox)
+    [![](icons-images/appicons-sml.png "Agregue todas las imágenes de watchOS, como se muestra en esta captura de pantalla")](icons-images/appicons.png#lightbox)
 
-  Consulte [directrices del icono de Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) para los tamaños necesarios (las dimensiones también se muestran en la pantalla). Recuerde que estos iconos se recortarán automáticamente para representar en un círculo.
+    Consulte [directrices del icono de Apple](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) para los tamaños necesarios (las dimensiones también se muestran en la pantalla). Recuerde que estos iconos se recortarán automáticamente para representar en un círculo.
 
-  La lista de icono debe tener un aspecto similar al siguiente:
+    La lista de icono debe tener un aspecto similar al siguiente:
 
-  ![](icons-images/xcassets-complete-sml.png "La lista de iconos en el Explorador de soluciones")
+    ![](icons-images/xcassets-complete-sml.png "La lista de iconos en el Explorador de soluciones")
 
 4. Para asegurarse de que el catálogo de activos se incluirán en la aplicación, agregue la siguiente clave y el valor para el **Info.plist de la aplicación de inspección**:
 
-```xml
-<key>XSAppIconAssets</key>
-<string>Images.xcassets/AppIcon.appiconset</string>
-```
+    ```xml
+    <key>XSAppIconAssets</key>
+    <string>Images.xcassets/AppIcon.appiconset</string>
+    ```
 
 Puede comprobar los iconos se configuran correcto comprobando la [Apple Watch configuración de la aplicación](~/ios/watchos/app-fundamentals/settings.md) en el simulador, iPhone o generar un [notificación](~/ios/watchos/platform/notifications.md) y confirmar el icono aparece en la notificación pantalla.
 

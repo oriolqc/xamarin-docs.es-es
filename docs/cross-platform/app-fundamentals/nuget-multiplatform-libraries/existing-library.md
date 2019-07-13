@@ -6,12 +6,12 @@ ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
 author: asb3993
 ms.author: amburns
 ms.date: 04/20/2017
-ms.openlocfilehash: 7f407b22d1793d585ae40aeae8c2d9b7616784e6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 6e043334d3ca45a573423ebdfdf1ec9149167b55
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61267833"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864695"
 ---
 # <a name="creating-a-nuget-from-existing-library-projects"></a>Creación de NuGet de proyectos de biblioteca existentes
 
@@ -21,13 +21,13 @@ Las bibliotecas PCL existente o .NET Standard se pueden convertir en paquetes de
 
 2. Vaya a la **paquete NuGet > metadatos** sección y especifique toda la [información requerida](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) en el **General** pestaña:
 
-  [![](existing-library-images/existing-metadata-sml.png "Escriba los metadatos necesarios")](existing-library-images/existing-metadata.png#lightbox)
+   [![](existing-library-images/existing-metadata-sml.png "Escriba los metadatos necesarios")](existing-library-images/existing-metadata.png#lightbox)
 
 3. Si lo desea, [agregar metadatos adicionales](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) en el **detalles** ficha.
 
 4. Después de configurar los metadatos, puede hacer doble clic en el proyecto y elija **crear paquetes de NuGet** y **.nupkg** se guardará el archivo de paquete de NuGet en el **/bin /** carpeta (Debug o Release, según la configuración).
 
-  ![](existing-library-images/create-nuget-package.png "Elija crear paquetes de NuGet en el menú contextual")
+   ![](existing-library-images/create-nuget-package.png "Elija crear paquetes de NuGet en el menú contextual")
 
 5. Para crear el paquete de NuGet en _cada_ de compilación o implementación, vaya a la **paquete NuGet > compilar** sección y graduación **crear un paquete NuGet al compilar el proyecto**:
 

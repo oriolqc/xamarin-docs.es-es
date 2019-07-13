@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: db3f9b1c8eaed89046dd10621d5c942b21fae159
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 07dbd86e420c6e643ff80dfbbbc0d5b3f0154fe1
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61276360"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864859"
 ---
 # <a name="deployment-and-testing"></a>Implementación y prueba
 
@@ -27,7 +27,7 @@ Cómo depurar una aplicación de Xamarin.Android desgaste en el emulador de Andr
 
 Cómo configurar un dispositivo Android para que se pueden implementar aplicaciones de Xamarin.Android desgaste en él directamente desde Visual Studio o Visual Studio para Mac.
 
-##  <a name="packaging-wear-appsandroidweardeploy-testpackagingmd"></a>[Desgaste de empaquetado de aplicaciones](~/android/wear/deploy-test/packaging.md)
+## <a name="packaging-wear-appsandroidweardeploy-testpackagingmd"></a>[Desgaste de empaquetado de aplicaciones](~/android/wear/deploy-test/packaging.md)
 
 Describe cómo empaquetar aplicaciones de desgaste de Xamarin.Android para su distribución en Google Play.
 

@@ -6,27 +6,27 @@ ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
 author: asb3993
 ms.author: amburns
 ms.date: 01/25/2016
-ms.openlocfilehash: bdf284d66539da3eca35e79d761712012674de0d
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 923ec41443feff67d851a0c2f3cba1b948aed580
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978457"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864407"
 ---
 # <a name="binding-objective-c"></a>Enlace de Objective-C
 
 Esta sección incluye una serie de documentos que tratan la creación de enlaces a las bibliotecas de Objective-C, por lo que se puede llamar desde C# aplicaciones creadas con Xamarin.iOS o Xamarin.Mac.
 
-##  <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Información general](~/cross-platform/macios/binding/overview.md)
+## <a name="overviewcross-platformmaciosbindingoverviewmd"></a>[Información general](~/cross-platform/macios/binding/overview.md)
 
 Este documento contiene algunos de los aspectos internos de cómo realiza un enlace. Es un documento con algo de información técnica avanzado.
 
-##  <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Enlace de bibliotecas de Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
+## <a name="binding-objective-c-librariescross-platformmaciosbindingobjective-c-librariesmd"></a>[Enlace de bibliotecas de Objective-C](~/cross-platform/macios/binding/objective-c-libraries.md)
 
 Este documento describe el proceso usado para crear C# enlaces de Objective-C API y cómo se asignan las expresiones en Objective-C para las expresiones que se usan en. NET.
 Si va a enlazar sólo las API de C, debe usar el mecanismo estándar de .NET para esto, el marco de trabajo de P/Invoke.
 
-##  <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Guía de referencia de definición de enlace](~/cross-platform/macios/binding/binding-types-reference.md)
+## <a name="binding-definition-reference-guidecross-platformmaciosbindingbinding-types-referencemd"></a>[Guía de referencia de definición de enlace](~/cross-platform/macios/binding/binding-types-reference.md)
 
 Esta es la Guía de referencia que describe todos los atributos disponibles para los autores de enlace para controlar el proceso de generación de enlace.
 

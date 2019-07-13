@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/22/2017
-ms.openlocfilehash: a5402bb3b10387644282301075f63644149fcdc6
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 9daedbe9bba5a2923a247104c4e69ae2e1b635aa
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67831544"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865769"
 ---
 # <a name="homekit-in-xamarinios"></a>HomeKit en Xamarin.iOS
 
@@ -59,20 +59,20 @@ Haga lo siguiente:
 
     [![](homekit-images/provision01.png "Habilitar el servicio de HomeKit para el identificador especificado")](homekit-images/provision01.png#lightbox)
 5. Guarde los cambios.
-4. Haga clic en **perfiles de aprovisionamiento** > **desarrollo** y cree un nuevo perfil para la aplicación de aprovisionamiento de desarrollo: 
+6. Haga clic en **perfiles de aprovisionamiento** > **desarrollo** y cree un nuevo perfil para la aplicación de aprovisionamiento de desarrollo: 
 
     [![](homekit-images/provision02.png "Crear un nuevo perfil para la aplicación de aprovisionamiento de desarrollo")](homekit-images/provision02.png#lightbox)
-5. Ya sea descargar e instalar el nuevo perfil de aprovisionamiento o usar Xcode para descargar e instalar el perfil.
-6. Editar las opciones del proyecto de Xamarin.iOS y asegúrese de que está usando el perfil de aprovisionamiento que acaba de crear: 
+7. Ya sea descargar e instalar el nuevo perfil de aprovisionamiento o usar Xcode para descargar e instalar el perfil.
+8. Editar las opciones del proyecto de Xamarin.iOS y asegúrese de que está usando el perfil de aprovisionamiento que acaba de crear: 
 
     [![](homekit-images/provision03.png "Seleccione el perfil de aprovisionamiento que acaba de crear")](homekit-images/provision03.png#lightbox)
-7. A continuación, edite su **Info.plist** de archivos y asegúrese de que está usando el identificador de aplicación que se usó para crear el perfil de aprovisionamiento: 
+9. A continuación, edite su **Info.plist** de archivos y asegúrese de que está usando el identificador de aplicación que se usó para crear el perfil de aprovisionamiento: 
 
     [![](homekit-images/provision04.png "Establece el identificador de aplicación ")](homekit-images/provision04.png#lightbox)
-8. Por último, edite su **Entitlements.plist** de archivos y asegúrese de que el **HomeKit** derecho se ha seleccionado: 
+10. Por último, edite su **Entitlements.plist** de archivos y asegúrese de que el **HomeKit** derecho se ha seleccionado: 
 
     [![](homekit-images/provision05.png "Habilitar los derechos de HomeKit")](homekit-images/provision05.png#lightbox)
-9. Guarde los cambios a todos los archivos.
+11. Guarde los cambios a todos los archivos.
 
 Con esta configuración en su lugar, la aplicación ahora está lista para tener acceso a las API de marco de trabajo de HomeKit. Para obtener información detallada sobre el aprovisionamiento, consulte nuestra [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) y [aprovisionamiento de la aplicación](~/ios/get-started/installation/device-provisioning/index.md) guías.
 

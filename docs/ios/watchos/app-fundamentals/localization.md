@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/17/2017
-ms.openlocfilehash: 1362767bf9a80af1eac37d316bd99a6ab364063f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: bed8180c513eefd5765be767a5dca7cecefa6101
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61414039"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865963"
 ---
 # <a name="working-with-watchos-localization-in-xamarin"></a>Trabajar con watchOS localización en Xamarin
 
@@ -127,19 +127,19 @@ Las imágenes que se rellenan con el código se pueden establecer de dos maneras
 
 1. Puede cambiar un `Image` control estableciendo su valor en el nombre de cadena de una imagen que ya existe en la aplicación del reloj, p. ej.
 
-  ```csharp
-  displayImage.SetImage("gradient"); // image in Watch App (as shown above)
-  ```
+    ```csharp
+    displayImage.SetImage("gradient"); // image in Watch App (as shown above)
+    ```
 
 2. Puede mover una imagen de la extensión a la inspección mediante `FromBundle` y la aplicación elegirá automáticamente la imagen correcta para la selección del idioma del usuario. En la solución de ejemplo hay una imagen **language@2x.png** en cada idioma, carpeta y se muestra en `DetailController` con el código siguiente:
 
-  ```csharp
-  using (var image = UIImage.FromBundle ("language")) {
-    displayImage.SetImage (image);
-  }
-  ```
+    ```csharp
+    using (var image = UIImage.FromBundle ("language")) {
+        displayImage.SetImage (image);
+    }
+    ```
 
-  Tenga en cuenta que no es necesario especificar el **@2x** cuando se hace referencia al nombre de archivo de la imagen.
+    Tenga en cuenta que no es necesario especificar el **@2x** cuando se hace referencia al nombre de archivo de la imagen.
 
 El segundo método también es aplicable si descarga una imagen desde un servidor remoto que se representará en el reloj; Sin embargo en este caso debe asegurarse de que la imagen que descarga correctamente se localiza según las preferencias del usuario.
 
