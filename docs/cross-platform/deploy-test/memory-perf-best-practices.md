@@ -6,12 +6,12 @@ ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
 author: asb3993
 ms.author: amburns
 ms.date: 03/24/2017
-ms.openlocfilehash: 7f03df796c338380a776f9af26563af2e60e59a1
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 9377dcca1cd72b68a0e5b6a5ac5ac4d12d25d50c
+ms.sourcegitcommit: 41b44f2e9bde3b174e7c08605bff65aff594dcd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672656"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690919"
 ---
 # <a name="cross-platform-performance"></a>Rendimiento multiplataforma
 
@@ -275,7 +275,7 @@ Cuando SGen inicia una recolección de elementos no utilizados, detiene los subp
 1. **Frecuencia**: frecuencia con la que se produce la recolección de elementos no utilizados. La frecuencia de las recolecciones de elementos no utilizados aumenta a medida que se asigna más memoria entre recolecciones.
 1. **Duración**: tiempo que dura cada recolección de elementos no utilizados. Es aproximadamente proporcional al número de objetos activos que se recopila.
 
-Colectivamente, esto significa que si se asignan muchos objetos pero no se mantienen activos, habrá muchas recolecciones de elementos no utilizados breves. Por el contrario, si se asignan nuevos objetos lentamente y se mantienen activos, habrá menos recolecciones pero serán más largas.
+En general, esto significa que, si se asignan muchos objetos, pero no se mantienen activos, habrá muchas recolecciones breves de elementos no utilizados. Por el contrario, si se asignan nuevos objetos lentamente y se mantienen activos, habrá menos recolecciones pero serán más largas.
 
 Para reducir la presión sobre el recolector de elementos no utilizados, siga estas directrices:
 
@@ -307,9 +307,9 @@ En la siguiente captura de pantalla se muestran las opciones del enlazador en Vi
 
 El enlazador proporciona tres opciones distintas para controlar su comportamiento:
 
--  **Don’t Link (No vincular)**: no se quita ningún tipo ni método no usado por el enlazador. Por motivos de rendimiento, esta es la opción predeterminada para las compilaciones de depuración.
--  **Link Framework SDKs/SDK Assemblies Only (Vincular solo ensamblados de SDK o SDK de Framework)**: esta opción solo reduce el tamaño de los ensamblados enviados por Xamarin. El código de usuario no se verá afectado.
--  **Link All Assemblies (Vincular todos los ensamblados)**: se trata de una optimización más agresiva que se dirige a los ensamblados de SDK y al código de usuario. En el caso de los enlaces, quita los campos de respaldo no usados y aligera cada instancia (u objetos enlazados), consumiendo menos memoria.
+-  **Don’t Link (No vincular)** : no se quita ningún tipo ni método no usado por el enlazador. Por motivos de rendimiento, esta es la opción predeterminada para las compilaciones de depuración.
+-  **Link Framework SDKs/SDK Assemblies Only (Vincular solo ensamblados de SDK o SDK de Framework)** : esta opción solo reduce el tamaño de los ensamblados enviados por Xamarin. El código de usuario no se verá afectado.
+-  **Link All Assemblies (Vincular todos los ensamblados)** : se trata de una optimización más agresiva que se dirige a los ensamblados de SDK y al código de usuario. En el caso de los enlaces, quita los campos de respaldo no usados y aligera cada instancia (u objetos enlazados), consumiendo menos memoria.
 
 *Link All Assemblies (Vincular todos los ensamblados)* debe usarse con precaución, ya que puede interrumpir la aplicación de formas inesperadas. El análisis estático que realiza el enlazador puede identificar incorrectamente todo el código necesario, lo que daría lugar a que se quitara demasiado código de la aplicación compilada. Esta situación solo se manifiesta en runtime cuando se bloquea la aplicación. Por ello es importante probar exhaustivamente una aplicación después de cambiar el comportamiento del enlazador.
 

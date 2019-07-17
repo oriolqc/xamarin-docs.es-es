@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: b34ac82cf240b892e60707d76c82da64ff232a20
-ms.sourcegitcommit: 2eb8961dd7e2a3e06183923adab6e73ecb38a17f
+ms.openlocfilehash: 8c79075c9e01ef5da73255b152b4cbbd676b4f4e
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66827427"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67674742"
 ---
 # <a name="building-abi-specific-apks"></a>Compilar APK específicos de ABI
 
@@ -139,7 +139,7 @@ zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 
 ## <a name="automating-apk-creation-with-rake"></a>Automatizar la creación de APK con Rake
 
-El proyecto de ejemplo [OneABIPerAPK](https://github.com/xamarin/monodroid-samples/tree/master/OneABIPerAPK) es un sencillo proyecto de Android que demostrará cómo calcular un número de versión específico de la ABI y compilar tres APK diferentes para cada una de las siguientes ABI:
+El proyecto de ejemplo [OneABIPerAPK](https://github.com/xamarin/monodroid-samples/tree/master/OneABIPerAPK) es un sencillo proyecto de Android que demuestra cómo calcular un número de versión específico de la ABI y compilar tres APK diferentes para cada una de las siguientes ABI:
 
 -  armeabi
 -  armeabi-v7a
@@ -154,7 +154,7 @@ El archivo [rakefile](https://github.com/xamarin/monodroid-samples/blob/master/O
 
 1. [Compila una compilación de versión](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L63) del proyecto de Xamarin.Android que tendrá como destino particularmente la ABI y con el archivo **AndroidManifest.XML** que se creó en el paso anterior.
 
-1. [Firma el APK ](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66) con un almacén de claves de producción.
+1. [Firma el APK](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L66) con un almacén de claves de producción.
 
 1. Usa [Zipalign](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L67) con el APK.
 
@@ -174,7 +174,7 @@ Una vez finalizada la tarea de Rake, habrá tres carpetas `bin` con el archivo `
 
 
 > [!NOTE]
-> El proceso de compilación que se describe en esta guía se puede implementar en uno de muchos sistemas de compilación diferentes. Aunque no tenemos un ejemplo ya escrito, también debería ser posible con [Powershell](http://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) o [Fake](http://fsharp.github.io/FAKE/).
+> El proceso de compilación que se describe en esta guía se puede implementar en uno de muchos sistemas de compilación diferentes. Aunque no tenemos un ejemplo ya escrito, también debería ser posible con [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) o [Fake](http://fsharp.github.io/FAKE/).
 
 
 ## <a name="summary"></a>Resumen

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: 239f20515e734a6c0b517e07bc2d1e4289cabe65
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: e57254ce724c5660e53dcd9deaa0f4a27bf91400
+ms.sourcegitcommit: 58d8bbc19ead3eb535fb8248710d93ba0892e05d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104796"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67675197"
 ---
 # <a name="xamarinios-testing-and-deployment---troubleshooting"></a>Solución de problemas de pruebas e implementación de Xamarin.iOS
 
