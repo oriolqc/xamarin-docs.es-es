@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
-ms.openlocfilehash: 2536e123cb4bdfd194c573802a91cba7a8c1208d
-ms.sourcegitcommit: 6ad272c2c7b0c3c30e375ad17ce6296ac1ce72b2
+ms.openlocfilehash: 7249b699a5f692269d124550a9e7d291f4315903
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66178125"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832178"
 ---
 # <a name="working-with-capabilities-in-xamarinios"></a>Trabajar con capacidades en Xamarin.iOS
 
@@ -122,30 +122,30 @@ El uso del Centro para desarrolladores es un proceso de dos pasos en el que se d
 
 ### <a name="creating-an-app-id-with-an-app-service"></a>Crear un identificador de aplicación con un servicio de aplicaciones
 
-1.  Vaya al [Centro para desarrolladores de Apple](https://developer.apple.com/account) en un equipo Mac (el equipo Mac que hospeda la compilación en el caso de que use un equipo con Windows) e inicie sesión.
-2.  Seleccione **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles):
+1. Vaya al [Centro para desarrolladores de Apple](https://developer.apple.com/account) en un equipo Mac (el equipo Mac que hospeda la compilación en el caso de que use un equipo con Windows) e inicie sesión.
+2. Seleccione **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles):
 
     ![Centro para desarrolladores de Apple](images/image5.png)
 
-3.  En **Identifiers** (Identificadores), seleccione **App IDs** (Identificadores de aplicación):
+3. En **Identifiers** (Identificadores), seleccione **App IDs** (Identificadores de aplicación):
 
     ![Selección del identificador de aplicación en el Centro para desarrolladores](images/image6.png)
 
-4.  Presione el botón **+** situado en la esquina superior derecha para crear un identificador de aplicación.
-5.  Escriba una descripción para el identificador de aplicación, seleccione la opción Explicit App ID (Identificador de aplicación explícito) y especifique un identificador de paquete con el formato `com.domain.appname`. Este identificador de paquete debe coincidir con el identificador de paquete del proyecto:
+4. Presione el botón **+** situado en la esquina superior derecha para crear un identificador de aplicación.
+5. Escriba una descripción para el identificador de aplicación, seleccione la opción Explicit App ID (Identificador de aplicación explícito) y especifique un identificador de paquete con el formato `com.domain.appname`. Este identificador de paquete debe coincidir con el identificador de paquete del proyecto:
 
     ![Agregar detalles del identificador de aplicación](images/image7.png)
 
-6.  En **App Services** (Servicios de aplicaciones), seleccione los servicios necesarios en la aplicación:
+6. En **App Services** (Servicios de aplicaciones), seleccione los servicios necesarios en la aplicación:
 
     ![Página de selección de servicios de aplicaciones](images/image8.png)
 
-7.  Presione **Continue** (Continuar).
-8.  Confirme el identificador de aplicación. Cada servicio se encontrará en uno de los estados siguientes: **Habilitado**, **Deshabilitado** o **Configurable**, como se muestra a continuación. Si tiene el estado **Enabled** (Habilitado), quiere decir que está listo para usarlo en un perfil de aprovisionamiento. Si tiene el estado **Configurable**, quiere decir que se debe efectuar una configuración adicional para esta capacidad. Estos pasos adicionales se describen con más detalle en secciones posteriores.
+7. Presione **Continue** (Continuar).
+8. Confirme el identificador de aplicación. Cada servicio se encontrará en uno de los estados siguientes: **Habilitado**, **Deshabilitado** o **Configurable**, como se muestra a continuación. Si tiene el estado **Enabled** (Habilitado), quiere decir que está listo para usarlo en un perfil de aprovisionamiento. Si tiene el estado **Configurable**, quiere decir que se debe efectuar una configuración adicional para esta capacidad. Estos pasos adicionales se describen con más detalle en secciones posteriores.
 
     ![Confirmación del identificador de aplicación](images/image9.png)
 
-9.  Haga clic en **Register** (Registrar) y en **Done** (Listo). El identificador de aplicación que acaba de crear debe aparecer en la lista de identificadores de aplicación de iOS.
+9. Haga clic en **Register** (Registrar) y en **Done** (Listo). El identificador de aplicación que acaba de crear debe aparecer en la lista de identificadores de aplicación de iOS.
 
 
 <a name="provisioningprofile" />
@@ -154,32 +154,32 @@ El uso del Centro para desarrolladores es un proceso de dos pasos en el que se d
 
 Ahora cree un perfil de aprovisionamiento que contenga este identificador de aplicación. Siga los pasos que se describen a continuación:
 
-1.  En el Centro para desarrolladores de Apple, vaya a **Provisioning Profiles > All** (Perfiles de aprovisionamiento > Todos):
+1. En el Centro para desarrolladores de Apple, vaya a **Provisioning Profiles > All** (Perfiles de aprovisionamiento > Todos):
 
     ![Sección de los perfiles de aprovisionamiento](images/image10.png)
 
-2.  Presione el botón **+** situado en la esquina superior derecha para crear otro perfil de aprovisionamiento.
-3.  Seleccione el tipo de perfil de aprovisionamiento que necesita y haga clic en **Continue** (Continuar):
+2. Presione el botón **+** situado en la esquina superior derecha para crear otro perfil de aprovisionamiento.
+3. Seleccione el tipo de perfil de aprovisionamiento que necesita y haga clic en **Continue** (Continuar):
 
     ![Selección de un perfil de aprovisionamiento](images/image11.png)
 
-4.  En la lista desplegable, seleccione el identificador de aplicación que creó en los pasos anteriores y presione **Continue** (Continuar):
+4. En la lista desplegable, seleccione el identificador de aplicación que creó en los pasos anteriores y presione **Continue** (Continuar):
 
     ![Selección del identificador de aplicación](images/image12.png)
 
-5.  Seleccione los certificados usados para firmar la aplicación y presione **Continue** (Continuar):
+5. Seleccione los certificados usados para firmar la aplicación y presione **Continue** (Continuar):
 
     ![Selección de los certificados](images/image13.png)
 
-6.  Seleccione los dispositivos que quiere incluir en este perfil y presione **Continue** (Continuar):
+6. Seleccione los dispositivos que quiere incluir en este perfil y presione **Continue** (Continuar):
 
     ![Selección de los dispositivos para el perfil de aprovisionamiento](images/image14.png)
 
-7.  Asigne un nombre al perfil para que se pueda identificar y presione **Continue** (Continuar) para generar el perfil:
+7. Asigne un nombre al perfil para que se pueda identificar y presione **Continue** (Continuar) para generar el perfil:
 
     ![Asignación de un nombre al perfil de aprovisionamiento](images/image15.png)
 
-8.  Presione el botón **Download** (Descargar) para descargarlo y haga doble clic en el archivo que encontrará en Finder para instalar el perfil de aprovisionamiento.
+8. Presione el botón **Download** (Descargar) para descargarlo y haga doble clic en el archivo que encontrará en Finder para instalar el perfil de aprovisionamiento.
 
 9. Si usa Visual Studio, asegúrese de que la opción **Aprovisionamiento manual** esté seleccionada.
 
@@ -205,12 +205,12 @@ Una vez que se ha habilitado una funcionalidad en el servidor, se deben seguir u
 
 En la siguiente lista se detallan algunos de los problemas más comunes que pueden crear obstáculos a la hora de desarrollar una aplicación con un servicio de aplicación habilitado.
 
--   Asegúrese de que el identificador se creó y registró correctamente en la sección **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
--   Asegúrese de que el servicio se haya agregado al identificador de la aplicación (o de la extensión) y de que el servicio esté configurado para usar el grupo de aplicaciones/identificador de comerciante/contenedor creado anteriormente en la sección **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
--   Asegúrese de que se hayan instalado los perfiles de aprovisionamiento y los identificadores de aplicación y que el archivo **Info.plist** de la aplicación (en el proyecto de Xamarin) use uno de los identificadores de aplicación configurados anteriormente.
--   Asegúrese de que el archivo **Entitlements.plist** de la aplicación (del proyecto de Xamarin) tiene habilitado el servicio correcto.
--   Asegúrese de que en el archivo info.plist estén establecidas las claves de privacidad correspondientes.
--   En la opción **Firma de lote de iOS** de la aplicación, asegúrese de que **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
+- Asegúrese de que el identificador se creó y registró correctamente en la sección **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
+- Asegúrese de que el servicio se haya agregado al identificador de la aplicación (o de la extensión) y de que el servicio esté configurado para usar el grupo de aplicaciones/identificador de comerciante/contenedor creado anteriormente en la sección **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
+- Asegúrese de que se hayan instalado los perfiles de aprovisionamiento y los identificadores de aplicación y que el archivo **Info.plist** de la aplicación (en el proyecto de Xamarin) use uno de los identificadores de aplicación configurados anteriormente.
+- Asegúrese de que el archivo **Entitlements.plist** de la aplicación (del proyecto de Xamarin) tiene habilitado el servicio correcto.
+- Asegúrese de que en el archivo info.plist estén establecidas las claves de privacidad correspondientes.
+- En la opción **Firma de lote de iOS** de la aplicación, asegúrese de que **Derechos personalizados** esté establecido en **Entitlements.plist**. Esta _no_ es la configuración predeterminada para las compilaciones de depuración y del simulador de iOS.
 
 <a name="summary" />
 

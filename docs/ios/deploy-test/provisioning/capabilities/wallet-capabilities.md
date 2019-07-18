@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 3dc68d0879d3ce4d5dd9b658a3bce7a00c348c09
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 0ae5dd86341912354938a8509668c843d412367b
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50121248"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832576"
 ---
 # <a name="wallet-capabilities-in-xamarinios"></a>Capacidades de Wallet en Xamarin.iOS
 
@@ -32,21 +32,21 @@ Los desarrolladores pueden trabajar con Wallet de varias maneras:
 
 Para crear un perfil de aprovisionamiento para usarlo con Wallet, haga lo siguiente:
 
-1.  Vaya a la sección [Certificates, Identifiers & Profiles](https://developer.apple.com/account/ios/certificate/) (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
-2.  En **Identifiers** (Identificadores), vaya a **App IDs** (Identificadores de aplicación): 
+1. Vaya a la sección [Certificates, Identifiers & Profiles](https://developer.apple.com/account/ios/certificate/) (Certificados, identificadores y perfiles) del Portal para desarrolladores de Apple.
+2. En **Identifiers** (Identificadores), vaya a **App IDs** (Identificadores de aplicación): 
     
     ![Selección del identificador de aplicación](wallet-capabilities-images/image17.png)
 
-3.  Haga clic en el icono **+** situado en la esquina superior derecha de la página.
-4.  Registre un nuevo identificador de aplicación asignándole un **nombre** y un identificador de paquete (tenga en cuenta que este identificador de paquete debe coincidir con el identificador de paquete del proyecto):
+3. Haga clic en el icono **+** situado en la esquina superior derecha de la página.
+4. Registre un nuevo identificador de aplicación asignándole un **nombre** y un identificador de paquete (tenga en cuenta que este identificador de paquete debe coincidir con el identificador de paquete del proyecto):
    
     ![Agregar detalles del identificador de aplicación](wallet-capabilities-images/image18.png)
 
-5.  Seleccione el servicio de aplicaciones **Wallet** de la lista de servicios:
+5. Seleccione el servicio de aplicaciones **Wallet** de la lista de servicios:
     
     ![Pantalla de selección de servicios](wallet-capabilities-images/image19.png)
 
-6.  Presione **Continue** (Continuar) y **Register** (Registrar) para crear el identificador de aplicación.
+6. Presione **Continue** (Continuar) y **Register** (Registrar) para crear el identificador de aplicación.
 
 Si es necesario, los identificadores de aplicación existentes se pueden editar para agregar la capacidad de Wallet.
 

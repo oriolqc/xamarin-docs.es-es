@@ -6,12 +6,12 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 05/28/2019
 ms.custom: video
-ms.openlocfilehash: 8aa1062c7948a57a21d59a785d6359056351245d
-ms.sourcegitcommit: 4a1520dee7759f8355ea65c8bb3d1bac8ba58122
+ms.openlocfilehash: d2aef2c32b3fe2815f1176779a8c28ae8d421ed1
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66354059"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832598"
 ---
 # <a name="xamarinessentials-detect-shake"></a>Xamarin.Essentials: detección de agitaciones
 
@@ -29,7 +29,7 @@ Agregue una referencia a Xamarin.Essentials en su clase:
 using Xamarin.Essentials;
 ```
 
-Para detectar la agitación del dispositivo, debe usar la funcionalidad Accelerometer mediante una llamada a los métodos `Start` y `Stop` para realizar cambios en la aceleración y para detectar movimientos de agitación. Siempre que se detecte agitación, se desencadenará un evento `ShakeDetected `. Se recomienda usar `Game` o faster para `SensorSpeed`. A continuación le mostramos un ejemplo de uso:
+Para detectar la agitación del dispositivo, debe usar la funcionalidad Accelerometer mediante una llamada a los métodos `Start` y `Stop` para realizar cambios en la aceleración y para detectar movimientos de agitación. Siempre que se detecte agitación, se desencadenará un evento `ShakeDetected`. Se recomienda usar `Game` o faster para `SensorSpeed`. A continuación le mostramos un ejemplo de uso:
 
 ```csharp
 

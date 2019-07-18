@@ -9,12 +9,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: 2c05e46309fb2a38b6b3c1542051e7115a58d13c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 849c60507fe0ff7b8bf1743be5bbf89ca94b9d6f
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57668843"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865564"
 ---
 # <a name="hello-ios-multiscreen--quickstart"></a>Inicio rápido de Hello, iOS Multiscreen
 
@@ -79,7 +79,7 @@ A continuación, mueva la escena de **Phoneword** junto al **controlador de nave
 
 11. Cree la pantalla **Historial de llamadas**. Desde el **Cuadro de herramientas**, arrastre un **controlador de vista de tabla** a la superficie de diseño:
 
-   ![](hello-ios-multiscreen-quickstart-images/12new.png "Arrastre un controlador de vista de tabla a la superficie de diseño")
+    ![](hello-ios-multiscreen-quickstart-images/12new.png "Arrastre un controlador de vista de tabla a la superficie de diseño")
 
 12. A continuación, haga clic en la barra negra situada en la parte inferior de la escena para seleccionar el **controlador de vista de tabla**. En el **Panel de propiedades**, cambie la clase del **controlador de vista de tabla** por `CallHistoryController` y pulse **Entrar**:
 
@@ -262,7 +262,7 @@ A continuación, mueva la escena de **Phoneword** junto al **controlador de nave
 
     Guarde y compile la aplicación para asegurarse de que no existen errores.
 
-20. Pulse el botón **Iniciar** para iniciar la aplicación dentro del **Simulador de iOS**:
+18. Pulse el botón **Iniciar** para iniciar la aplicación dentro del **Simulador de iOS**:
 
     ![](hello-ios-multiscreen-quickstart-images/19.png "Pulse el botón Iniciar para iniciar la aplicación dentro del Simulador de iOS")
 
@@ -505,7 +505,7 @@ En este tutorial se agregará una pantalla Historial de llamadas a nuestra aplic
 
     Guarde y compile la aplicación para asegurarse de que no existen errores.
 
-20. Pulse el botón **Iniciar** para iniciar nuestra aplicación dentro del **Simulador de iOS**:
+18. Pulse el botón **Iniciar** para iniciar nuestra aplicación dentro del **Simulador de iOS**:
 
     ![](hello-ios-multiscreen-quickstart-images/19.png "Primera pantalla de la aplicación de ejemplo")
 

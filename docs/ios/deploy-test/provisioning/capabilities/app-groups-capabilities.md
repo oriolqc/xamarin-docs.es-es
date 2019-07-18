@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: f75c4777ce7a47e983683bf3d92ac20ab1b15c1c
-ms.sourcegitcommit: 190808013249005ceffbc798f9f4570e8cdc943a
+ms.openlocfilehash: 0dcc0c9499a1f4085e489fe6d8dcfa3fbf2fa3e0
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54841359"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832415"
 ---
 # <a name="app-group-capabilities-in-xamarinios"></a>Capacidades de los grupos de aplicaciones en Xamarin.iOS
 
@@ -32,14 +32,14 @@ El grupo de aplicaciones tendrá un identificador, que suele ser el identificado
 
 Para crear un grupo de aplicaciones, haga lo siguiente:
 
-1.  Vaya al  [Centro para desarrolladores de iOS](https://developer.apple.com/account/) de Apple, abra su **cuenta** e inicie sesión.
-2.  Seleccione **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles).
-3.  En **Identifiers** (Identificadores), seleccione **App Groups** (Grupos de aplicaciones) y haga clic en el botón **+** para crear un grupo.
-4.  Escriba un **nombre** y un **identificador** para el nuevo grupo y haga clic en el botón **Continue** (Continuar): 
+1. Vaya al  [Centro para desarrolladores de iOS](https://developer.apple.com/account/) de Apple, abra su **cuenta** e inicie sesión.
+2. Seleccione **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles).
+3. En **Identifiers** (Identificadores), seleccione **App Groups** (Grupos de aplicaciones) y haga clic en el botón **+** para crear un grupo.
+4. Escriba un **nombre** y un **identificador** para el nuevo grupo y haga clic en el botón **Continue** (Continuar): 
    
     ![Agregar detalles del grupo de aplicaciones](app-groups-capabilities-images/image52.png)
 
-5.  Haga clic en el botón **Registrar** para crear el grupo y en el botón **Listo** para volver a la lista de grupos de aplicaciones registrados.
+5. Haga clic en el botón **Registrar** para crear el grupo y en el botón **Listo** para volver a la lista de grupos de aplicaciones registrados.
 
 ## <a name="configure-an-app-to-use-app-groups"></a>Configurar una aplicación para que use grupos de aplicaciones
 
@@ -47,21 +47,21 @@ Una vez creado el grupo de aplicaciones, configure los identificadores de aplica
 
 Haga lo siguiente:
 
-1.  Vaya al  [Centro para desarrolladores de iOS](https://developer.apple.com/account/) de Apple e inicie sesión con una cuenta de desarrollador de Apple.
-2.  En el menú **Program Resources** (Recursos del programa), seleccione **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles).
-3.  En **Identificadores**, seleccione **App IDs** (Identificadores de aplicaciones) y haga clic en el botón **+** para crear un identificador.
-4.  Escriba un nombre para el identificador de aplicación y asígnele un identificador de aplicación explícito.
-5.  En **App Services**, habilite **Grupos de aplicaciones** y haga clic en el botón Continuar:
+1. Vaya al  [Centro para desarrolladores de iOS](https://developer.apple.com/account/) de Apple e inicie sesión con una cuenta de desarrollador de Apple.
+2. En el menú **Program Resources** (Recursos del programa), seleccione **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles).
+3. En **Identificadores**, seleccione **App IDs** (Identificadores de aplicaciones) y haga clic en el botón **+** para crear un identificador.
+4. Escriba un nombre para el identificador de aplicación y asígnele un identificador de aplicación explícito.
+5. En **App Services**, habilite **Grupos de aplicaciones** y haga clic en el botón Continuar:
 
     ![Agregar servicios de aplicaciones en el grupo de aplicaciones](app-groups-capabilities-images/image53.png)
 
-6.  Compruebe la configuración y haga clic en el botón **Register** (Registrar) para crear el identificador de aplicación.
-7.  Haga clic en el botón **Listo** para volver a la lista de identificadores de aplicación registrados.
-8.  Seleccione el identificador de aplicación recién creado en la lista y haga clic en el botón **Editar**:
+6. Compruebe la configuración y haga clic en el botón **Register** (Registrar) para crear el identificador de aplicación.
+7. Haga clic en el botón **Listo** para volver a la lista de identificadores de aplicación registrados.
+8. Seleccione el identificador de aplicación recién creado en la lista y haga clic en el botón **Editar**:
 
     ![Selección del identificador de aplicación en la lista](app-groups-capabilities-images/image54.png)
 
-9.  Debajo de Servicio, en **App Group** (Grupo de aplicaciones), haga clic en el botón **Editar**:
+9. Debajo de Servicio, en **App Group** (Grupo de aplicaciones), haga clic en el botón **Editar**:
 
     ![Selección del identificador de aplicación en la lista](app-groups-capabilities-images/image55.png)
 

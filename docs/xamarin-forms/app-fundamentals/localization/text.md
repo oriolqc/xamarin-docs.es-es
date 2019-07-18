@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/06/2016
-ms.openlocfilehash: 31992c7d9219289847ebc3e9c8af755d54dc18ab
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 39e641d5e911b179ca8da9fc6c1b7685a9644364
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57672721"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831494"
 ---
 # <a name="localization"></a>Localización
 
@@ -561,8 +561,8 @@ namespace UsingResxLocalization.Android
 
 Una vez que este código se haya agregado al proyecto de aplicación de Android, podrá mostrar automáticamente las cadenas traducidas.
 
-> [!NOTE]
->**ADVERTENCIA:** Si las cadenas traducidas funcionan en las compilaciones de Android PUBLICADAS pero no durante la depuración, haga clic con el botón derecho en **Android Project** (Proyecto de Android), seleccione **Options > Build > Android Build** (Opciones > Compilar > Compilación de Android ) y asegúrese de que la opción **Fast assembly deployment** (Implementación de ensamblado rápido) NO esté activada. Esta opción provoca problemas con la carga de recursos y no debe usarse si se están probando aplicaciones localizadas.
+> [!WARNING]
+> Si las cadenas traducidas funcionan en las compilaciones de Android PUBLICADAS pero no durante la depuración, haga clic con el botón derecho en **Android Project** (Proyecto de Android), seleccione **Options > Build > Android Build** (Opciones > Compilar > Compilación de Android ) y asegúrese de que la opción **Fast assembly deployment** (Implementación de ensamblado rápido) NO esté activada. Esta opción provoca problemas con la carga de recursos y no debe usarse si se están probando aplicaciones localizadas.
 
 Para obtener más información sobre la localización de Android, consulte [Localización de Android](~/android/app-fundamentals/localization.md).
 

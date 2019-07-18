@@ -7,27 +7,27 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 4c9ab8c14db131427329cef51e7b74e982a1c7b8
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 86447c2338b8dd43e37170fa547883e47cbf6b4c
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103691"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864212"
 ---
 # <a name="deployment-and-testing"></a>Implementación y prueba
 
 En esta sección se incluyen guías en las que se explica cómo probar una aplicación, optimizar su rendimiento, prepararla para el lanzamiento, firmarla con un certificado y publicarla en una tienda de aplicaciones.
 
 
-##  <a name="application-package-sizesapp-package-sizemd"></a>[Tamaños de paquete de aplicación](app-package-size.md)
+## <a name="application-package-sizesapp-package-sizemd"></a>[Tamaños de paquete de aplicación](app-package-size.md)
 
 En este artículo se examinan los elementos que componen un paquete de aplicación Xamarin.Android y las estrategias asociadas que se pueden utilizar para la implementación eficaz del paquete durante las etapas de depuración y lanzamiento del desarrollo.
 
-##  <a name="building-appsbuilding-appsindexmd"></a>[Compilar aplicaciones](building-apps/index.md)
+## <a name="building-appsbuilding-appsindexmd"></a>[Compilar aplicaciones](building-apps/index.md)
 
 En esta sección se describe cómo funciona el proceso de compilación y se explica cómo compilar paquetes de aplicaciones Android (APK) específicos de ABI.
 
-##  <a name="command-line-emulatorcommand-line-emulatormd"></a>[Emulador de la línea de comandos](command-line-emulator.md)
+## <a name="command-line-emulatorcommand-line-emulatormd"></a>[Emulador de la línea de comandos](command-line-emulator.md)
 
 En este artículo se trata brevemente el inicio del emulador mediante la línea de comandos.
 
@@ -35,23 +35,23 @@ En este artículo se trata brevemente el inicio del emulador mediante la línea 
 
 Las guías de la sección ayudan a depurar la aplicación mediante emuladores de Android, dispositivos Android reales y el registro de depuración.
 
-##  <a name="setting-the-debuggable-attributeandroiddeploy-testdebuggable-attributemd"></a>[Establecer el atributo Debuggable](~/android/deploy-test/debuggable-attribute.md)
+## <a name="setting-the-debuggable-attributeandroiddeploy-testdebuggable-attributemd"></a>[Establecer el atributo Debuggable](~/android/deploy-test/debuggable-attribute.md)
 
 En este artículo se explica cómo establecer el atributo debuggable para que herramientas como `adb` puedan comunicarse con la JVM.
 
-##  <a name="environmentenvironmentmd"></a>[Entorno](environment.md)
+## <a name="environmentenvironmentmd"></a>[Entorno](environment.md)
 
 En este artículo se describe el entorno de ejecución de Xamarin.Android y las propiedades del sistema Android que influyen en la ejecución del programa.
 
-##  <a name="gdbgdbmd"></a>[GDB](gdb.md)
+## <a name="gdbgdbmd"></a>[GDB](gdb.md)
 
 En este artículo se explica cómo usar `gdb` para depurar una aplicación Xamarin.Android.
 
-##  <a name="installing-a-system-appinstall-system-appmd"></a>[Instalar una aplicación del sistema](install-system-app.md)
+## <a name="installing-a-system-appinstall-system-appmd"></a>[Instalar una aplicación del sistema](install-system-app.md)
 
 En esta guía se explica cómo instalar una aplicación Xamarin.Android como una aplicación del sistema en un dispositivo Android o como parte de una ROM personalizada.
 
-##  <a name="linking-on-androidlinkermd"></a>[Vincular en Android](linker.md)
+## <a name="linking-on-androidlinkermd"></a>[Vincular en Android](linker.md)
 
 En este artículo se describe el proceso de vinculación que se usa en Xamarin.Android para reducir el tamaño final de una aplicación. Se describen los diferentes niveles de vinculación que se pueden ejecutar y se proporcionan algunas orientaciones y consejos de solución de problemas para mitigar los errores que podrían deberse al uso del vinculador.
 

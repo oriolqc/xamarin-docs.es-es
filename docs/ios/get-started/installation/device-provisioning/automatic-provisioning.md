@@ -8,12 +8,12 @@ author: asb3993
 ms.author: amburns
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 4d4c9980dd4c7be4ed18f1b6ce015d73b3caf836
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: d4bb117273e669cc3c520c42451296e16b6023eb
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855177"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865319"
 ---
 # <a name="automatic-provisioning-for-xamarinios"></a>Aprovisionamiento automático para Xamarin.iOS
 
@@ -67,7 +67,7 @@ Para inscribir la aplicación automáticamente para su implementación en un dis
 
 4. En la lista desplegable **Equipo**, seleccione su equipo.
 
-6. Después de unos segundos se crean un certificado de firma y un perfil de aprovisionamiento:
+5. Después de unos segundos se crean un certificado de firma y un perfil de aprovisionamiento:
 
     ![Certificado y perfil creados correctamente](automatic-provisioning-images/image5.png)
 
@@ -87,7 +87,7 @@ Para inscribir la aplicación automáticamente para su implementación en un dis
 
     ![Selección del equipo](automatic-provisioning-images/prov3.png)
 
-4. Esto inicia el proceso de firma automática. Luego Visual Studio intenta generar un Id. de aplicación, un perfil de aprovisionamiento y una identidad de firma para usar estos artefactos para la firma. Puede ver el proceso de generación en la salida de la compilación:
+5. Esto inicia el proceso de firma automática. Luego Visual Studio intenta generar un Id. de aplicación, un perfil de aprovisionamiento y una identidad de firma para usar estos artefactos para la firma. Puede ver el proceso de generación en la salida de la compilación:
 
     ![Salida de la compilación que muestra la generación de artefactos](automatic-provisioning-images/prov5.png)
 

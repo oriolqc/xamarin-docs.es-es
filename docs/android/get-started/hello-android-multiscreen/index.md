@@ -8,22 +8,22 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 12/02/2016
-ms.openlocfilehash: c67d2be3d0bb1a159d234e815b16a988b93087d4
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 170bd30d65b9f5947bdb9d23d3100a8048f73ac7
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57670900"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67864056"
 ---
 # <a name="hello-android-multiscreen"></a>Multipantalla de Hello, Android
 
 _En esta guía de dos partes, ampliará la aplicación Phoneword que ha creado en la guía Hello, Android a fin de administrar una segunda pantalla. A lo largo de esta guía se ofrecen los componentes básicos de la aplicación Android y se profundiza en la arquitectura Android a medida que conoce mejor la estructura y la funcionalidad de la aplicación Android._
 
-##  <a name="part-1-quickstartandroidget-startedhello-android-multiscreenhello-android-multiscreen-quickstartmd"></a>[Parte 1: inicio rápido](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md)
+## <a name="part-1-quickstartandroidget-startedhello-android-multiscreenhello-android-multiscreen-quickstartmd"></a>[Parte 1: inicio rápido](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md)
 
 En la primera parte de esta guía, agregará una segunda pantalla a la aplicación Phoneword para realizar un seguimiento del historial de los números a los que se ha llamado mediante la aplicación. La aplicación final mostrará una segunda pantalla en que se enumera el historial de llamadas.
 
-##  <a name="part-2-deep-diveandroidget-startedhello-android-multiscreenhello-android-multiscreen-deepdivemd"></a>[Parte 2: profundización](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)
+## <a name="part-2-deep-diveandroidget-startedhello-android-multiscreenhello-android-multiscreen-deepdivemd"></a>[Parte 2: profundización](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md)
 
 En la segunda parte de este documento, revisaremos lo que ha creado y explicaremos la arquitectura, la navegación y otros conceptos nuevos de Android que surjan durante el proceso.
 

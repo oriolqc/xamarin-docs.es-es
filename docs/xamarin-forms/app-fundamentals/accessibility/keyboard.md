@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
-ms.openlocfilehash: 66cd9f9de712583ea4e8fb9304a9f1642e7e3ee1
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 7f469dab92793eeaa38bd2b73e9d94b138495379
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65971261"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67830344"
 ---
 # <a name="keyboard-accessibility-in-xamarinforms"></a>Accesibilidad del teclado en Xamarin.Forms
 
@@ -66,10 +66,10 @@ La propiedad `VisualElement.TabIndex` se utiliza para indicar el orden en que la
 
 Las reglas siguientes aplican cuando se usa el orden de tabulación predeterminado, o cuando se establece la propiedad `TabIndex`:
 
- - Las instancias de [`VisualElement`](xref:Xamarin.Forms.VisualElement) con `TabIndex` igual a 0 se agregan al orden de tabulación en función de su orden de declaración en colecciones secundarias o XAML.
- - Las instancias de [`VisualElement`](xref:Xamarin.Forms.VisualElement) con `TabIndex` mayor que 0 se agregan al orden de tabulación en función de su valor `TabIndex`.
- - Las instancias de [`VisualElement`](xref:Xamarin.Forms.VisualElement) con `TabIndex` menor que 0 se agregan al orden de tabulación y aparecen antes que cualquier valor 0.
- - Los conflictos relacionados con `TabIndex` se resuelven por orden de declaración.
+- Las instancias de [`VisualElement`](xref:Xamarin.Forms.VisualElement) con `TabIndex` igual a 0 se agregan al orden de tabulación en función de su orden de declaración en colecciones secundarias o XAML.
+- Las instancias de [`VisualElement`](xref:Xamarin.Forms.VisualElement) con `TabIndex` mayor que 0 se agregan al orden de tabulación en función de su valor `TabIndex`.
+- Las instancias de [`VisualElement`](xref:Xamarin.Forms.VisualElement) con `TabIndex` menor que 0 se agregan al orden de tabulación y aparecen antes que cualquier valor 0.
+- Los conflictos relacionados con `TabIndex` se resuelven por orden de declaración.
 
 Tras definirse un orden de tabulación, al presionar la tecla TAB se recorrerá cíclicamente el foco a través de controles en orden de `TabIndex` ascendente, con un ajuste alrededor del principio una vez alcanzado el control final.
 

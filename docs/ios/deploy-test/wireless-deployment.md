@@ -8,12 +8,12 @@ author: lobrien
 ms.author: laobri
 ms.custom: video
 ms.date: 01/22/2019
-ms.openlocfilehash: 82bdd2c160572b0d813fb87d81b09c00996cef18
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 0e7516f030955c9b0f89db6db11b93afd9b358de
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854840"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865503"
 ---
 # <a name="wireless-deployment-for-xamarinios-and-tvos-apps"></a>Implementación inalámbrica para aplicaciones Xamarin.iOS y tvOS
 
@@ -85,7 +85,7 @@ Para implementar en un dispositivo iOS o tvOS, siga estos pasos:
 
 2. Seleccione el dispositivo de la lista de dispositivos de destino y ejecute la aplicación.
 
-2. Si el dispositivo está bloqueado, se le pedirá que lo desbloquee. Cuando el dispositivo esté desbloqueado, la aplicación se implementa en él.
+3. Si el dispositivo está bloqueado, se le pedirá que lo desbloquee. Cuando el dispositivo esté desbloqueado, la aplicación se implementa en él.
 
 La depuración inalámbrica se habilita automáticamente tras la implementación inalámbrica, por lo que puede usar puntos de interrupción establecidos previamente y continuar el flujo de trabajo de depuración, tal y como lo ha hecho siempre.
 
