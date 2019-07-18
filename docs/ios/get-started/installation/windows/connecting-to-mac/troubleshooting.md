@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: f56f2c58195e51e9294948dad85a475e181f99b2
-ms.sourcegitcommit: bf18425f97b48661ab6b775195eac76b356eeba0
+ms.openlocfilehash: 864c801597f251940e55232e8c59d3a6ea19c392
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64978538"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865799"
 ---
 # <a name="connection-troubleshooting-for-a-xamarinios-build-host"></a>Solucionar problemas de conexión del host de compilación de Xamarin.iOS
 
@@ -35,8 +35,8 @@ El host de compilación de Xamarin de versiones anteriores de Xamarin.iOS ya no 
 
 > [!IMPORTANT]
 > Estos pasos están pensados principalmente para solucionar los problemas que se producen durante la instalación inicial en un sistema nuevo.  Si ha estado utilizando anteriormente la conexión sin problemas en un entorno concreto y la conexión dejó de funcionar de repente o de vez en cuando, puede (en la mayoría de los casos) pasar directamente a comprobar si ayuda algo de lo siguiente: 
->   * Elimine los procesos sobrantes tal y como se describe a continuación en [Errores debidos a los procesos de host de compilación existentes en el equipo Mac](#errors). 
->   * Desactive los agentes tal y como se describe en [Desactivar los agentes de Broker, IDB, compilación y diseñador en el equipo Mac](#clearing) y, a continuación, use una conexión a Internet por cable y conéctese directamente a través de la dirección IP, tal y como se describe en [Couldn't connect to MacBuildHost.local. Please try again.](#tryagain) (No se pudo conectar a MacBuildHost.local. Inténtelo de nuevo).  
+> * Elimine los procesos sobrantes tal y como se describe a continuación en [Errores debidos a los procesos de host de compilación existentes en el equipo Mac](#errors). 
+> * Desactive los agentes tal y como se describe en [Desactivar los agentes de Broker, IDB, compilación y diseñador en el equipo Mac](#clearing) y, a continuación, use una conexión a Internet por cable y conéctese directamente a través de la dirección IP, tal y como se describe en [Couldn't connect to MacBuildHost.local. Please try again.](#tryagain) (No se pudo conectar a MacBuildHost.local. Inténtelo de nuevo).  
 > Si ninguno de estos pasos soluciona el problema, siga las instrucciones incluidas en el [paso 9](#stepnine) para registrar un nuevo informe de errores.
 
 1. Compruebe que tiene instaladas versiones de Xamarin.iOS compatibles en el equipo Mac. Para hacer esto con Visual Studio 2017, asegúrese de que se encuentra en el canal de distribución **estable** en Visual Studio para Mac. En Visual Studio 2015 y anterior, asegúrese de que se encuentra en el mismo canal de distribución en ambos IDE.
@@ -103,7 +103,7 @@ El host de compilación de Xamarin de versiones anteriores de Xamarin.iOS ya no 
 
     - La configuración del firewall de OS X no permite la conexión. Asegúrese de comprobar de nuevo el paso 3.
 
-        En ocasiones, la configuración por aplicación del firewall de OS X también puede derivar en un estado no válido, en el que la configuración que se muestra en las preferencias del sistema no refleja el comportamiento real. Si elimina el archivo de configuración (**/Library/Preferences/com.apple.alf.plist**) y reinicia el equipo, puede ayudar a restaurar el comportamiento predeterminado. Una manera de eliminar el archivo consiste en escribir **/Library/Preferences** en **Ir &gt; Ir a la carpeta** en el Finder y, después, mover el archivo **com.apple.alf.plist** a la papelera.
+        En ocasiones, la configuración por aplicación del firewall de OS X también puede derivar en un estado no válido, en el que la configuración que se muestra en las preferencias del sistema no refleja el comportamiento real. Si elimina el archivo de configuración ( **/Library/Preferences/com.apple.alf.plist**) y reinicia el equipo, puede ayudar a restaurar el comportamiento predeterminado. Una manera de eliminar el archivo consiste en escribir **/Library/Preferences** en **Ir &gt; Ir a la carpeta** en el Finder y, después, mover el archivo **com.apple.alf.plist** a la papelera.
 
     - La configuración del firewall de uno de los enrutadores entre el equipo Mac y el equipo Windows está bloqueando la conexión.
 
@@ -134,7 +134,7 @@ Causa conocida:
 
 #### <a name="trying-to-connect-never-completes"></a>"Intentando conectar..." nunca finaliza
 
-- **Error [52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: este problema puede darse en Xamarin 4.1 si **Shell de inicio de sesión**, en el menú contextual **Opciones avanzadas** del usuario de Mac, en **Preferencias del sistema&gt; Usuarios &amp; Grupos** , está establecido en otro valor que no sea **/bin/bash**. A partir de Xamarin 4.2, este caso corresponde al mensaje de error "No se pudo conectar". **Solución alternativa**: revierta el valor del **shell de inicio de sesión** al original predeterminado de **/bin/bash**.
+- **Error [52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** : este problema puede darse en Xamarin 4.1 si **Shell de inicio de sesión**, en el menú contextual **Opciones avanzadas** del usuario de Mac, en **Preferencias del sistema&gt; Usuarios &amp; Grupos** , está establecido en otro valor que no sea **/bin/bash**. A partir de Xamarin 4.2, este caso corresponde al mensaje de error "No se pudo conectar". **Solución alternativa**: revierta el valor del **shell de inicio de sesión** al original predeterminado de **/bin/bash**.
 
 <a name="tryagain" />
 
@@ -146,11 +146,11 @@ Causas notificadas:
 
 - **Error**: algunos usuarios han visto este error al hacer doble clic en el nombre del equipo Mac en el cuadro de diálogo de conexión para intentar conectarse con el host de compilación. **Posible solución alternativa**: [agregue manualmente el equipo Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md#manually-add-a-mac) mediante la dirección IP.
 
-- **Error [35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)**: algunos usuarios se han encontrado con este error al usar una conexión de red inalámbrica entre el host de compilación de Mac y Windows. **Posible solución alternativa**: mueva ambos equipos a una conexión de red con cable.
+- **Error [35971](https://bugzilla.xamarin.com/show_bug.cgi?id=35971)** : algunos usuarios se han encontrado con este error al usar una conexión de red inalámbrica entre el host de compilación de Mac y Windows. **Posible solución alternativa**: mueva ambos equipos a una conexión de red con cable.
 
-- **Error [36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)**: en Xamarin 4.0, este mensaje aparecerá cada vez que el archivo **$HOME/.bashrc** del equipo Mac contenga un error. (A partir de Xamarin 4.1, los errores del archivo **.bashrc** no afectarán al proceso de conexión). **Solución alternativa**: mueva el archivo **.bashrc** a una ubicación de copia de seguridad (o elimínelo si sabe que no lo necesita).
+- **Error [36642](https://bugzilla.xamarin.com/show_bug.cgi?id=36642)** : en Xamarin 4.0, este mensaje aparecerá cada vez que el archivo **$HOME/.bashrc** del equipo Mac contenga un error. (A partir de Xamarin 4.1, los errores del archivo **.bashrc** no afectarán al proceso de conexión). **Solución alternativa**: mueva el archivo **.bashrc** a una ubicación de copia de seguridad (o elimínelo si sabe que no lo necesita).
 
-- **Error [52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)**: este error puede darse si **Shell de inicio de sesión**, en el menú contextual **Opciones avanzadas** del usuario de Mac en **Preferencias del sistema > Usuarios y Grupos** , está establecido en otro valor que no sea **/bin/bash**. **Solución alternativa**: revierta el valor del **shell de inicio de sesión** al original predeterminado de **/bin/bash**.
+- **Error [52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** : este error puede darse si **Shell de inicio de sesión**, en el menú contextual **Opciones avanzadas** del usuario de Mac en **Preferencias del sistema > Usuarios y Grupos** , está establecido en otro valor que no sea **/bin/bash**. **Solución alternativa**: revierta el valor del **shell de inicio de sesión** al original predeterminado de **/bin/bash**.
 
 - **Limitación**: este error puede aparecer si el host de compilación de Mac está conectado a un enrutador que no tiene acceso a Internet (o si el equipo Mac usa un servidor DNS que agota el tiempo de espera cuando se pide la búsqueda de DNS inversa del equipo de Windows). Visual Studio tardará cerca de 30 segundos en recuperar la huella digital de SSH y finalmente producirá un error de conexión.
 
@@ -162,23 +162,23 @@ Causas notificadas:
 
         [![](troubleshooting-images/troubleshooting-image18.png "Ejecución de `ls /etc/ssh/sshd_config` e `ls /etc/sshd_config` en Terminal")](troubleshooting-images/troubleshooting-image18.png#lightbox)
 
-    3. Ejecute `cp /etc/ssh/sshd_config "$HOME/Desktop/"` en Terminal para copiar el archivo en el escritorio.
+    2. Ejecute `cp /etc/ssh/sshd_config "$HOME/Desktop/"` en Terminal para copiar el archivo en el escritorio.
 
-    4. Abra el archivo desde el escritorio en un editor de texto. Por ejemplo, puede ejecutar `open -a TextEdit "$HOME/Desktop/sshd_config"` en Terminal.
+    3. Abra el archivo desde el escritorio en un editor de texto. Por ejemplo, puede ejecutar `open -a TextEdit "$HOME/Desktop/sshd_config"` en Terminal.
 
-    5. Agregue la línea siguiente en la parte inferior del archivo:
+    4. Agregue la línea siguiente en la parte inferior del archivo:
 
         ```
         UseDNS no
         ```
-        
-    6. Quite las líneas que contengan `UseDNS yes` para asegurarse de que la nueva configuración surta efecto.
 
-    7. Guarde el archivo.
+    5. Quite las líneas que contengan `UseDNS yes` para asegurarse de que la nueva configuración surta efecto.
 
-    8. Ejecute `sudo cp "$HOME/Desktop/sshd_config" /etc/ssh/sshd_config` en Terminal para copiar el archivo editado de nuevo en su lugar. Si se le solicita, escriba su contraseña.
+    6. Guarde el archivo.
 
-    9. Deshabilite y vuelva a habilitar el **inicio de sesión remoto** en **Preferencias del sistema &gt; Compartir &gt; Inicio de sesión remoto** para reiniciar el servidor SSH.
+    7. Ejecute `sudo cp "$HOME/Desktop/sshd_config" /etc/ssh/sshd_config` en Terminal para copiar el archivo editado de nuevo en su lugar. Si se le solicita, escriba su contraseña.
+
+    8. Deshabilite y vuelva a habilitar el **inicio de sesión remoto** en **Preferencias del sistema &gt; Compartir &gt; Inicio de sesión remoto** para reiniciar el servidor SSH.
 
 <a name="clearing" />
 
@@ -331,7 +331,7 @@ Inicie Xcode en el equipo Mac y asegúrese de que ha iniciado sesión con su cue
 
 Causas notificadas:
 
-- **Mejora [36118](https://bugzilla.xamarin.com/show_bug.cgi?id=36118)**: este error puede impedir que las compilaciones se lleven a cabo correctamente cuando Visual Studio usa una dirección IPv6 para conectarse con el host de compilación. (La conexión del host de compilación todavía no admite direcciones IPv6).
+- **Mejora [36118](https://bugzilla.xamarin.com/show_bug.cgi?id=36118)** : este error puede impedir que las compilaciones se lleven a cabo correctamente cuando Visual Studio usa una dirección IPv6 para conectarse con el host de compilación. (La conexión del host de compilación todavía no admite direcciones IPv6).
 
 ### <a name="xamarinios-visual-studio-plugin-fails-to-load-after-reinstallation-of-betaalpha-channel"></a>El complemento de Visual Studio de Xamarin.iOS no se puede cargar después de la reinstalación del canal beta/alfa
 

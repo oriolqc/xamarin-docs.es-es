@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 1bd61474daedd8bd330c0370948d6dee6f8ea50e
-ms.sourcegitcommit: 215b507b2e5a44bb023abc2c804c824b1a6190d8
+ms.openlocfilehash: d533996a9c4e86efa360bf2ed71165571c7ca260
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194954"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865831"
 ---
 # <a name="xamarinios-app-distribution-overview"></a>Introducción a la distribución de aplicaciones Xamarin.iOS
 
@@ -27,8 +27,8 @@ Una vez que se ha desarrollado una aplicación de Xamarin.iOS, el siguiente paso
 Apple proporciona los siguientes métodos para distribuir una aplicación de iOS, que son compatibles con Xamarin.iOS:
 
 1. [**La App Store**](#App_Store_Distribution)
-2. [**Interna (Enterprise)**](#In-House_Distribution)
-2. [**Ad Hoc**](#Ad_Hoc_Distribution)
+2. [**Interna (Enterprise)** ](#In-House_Distribution)
+3. [**Ad Hoc**](#Ad_Hoc_Distribution)
 
 Todos estos escenarios requieren que las aplicaciones se aprovisionen mediante el correspondiente *perfil de aprovisionamiento*. Los perfiles de aprovisionamiento son archivos que contienen información de firma de código, así como la identidad de la aplicación y el mecanismo de distribución previsto. También contienen información sobre en qué dispositivos se puede implementar la aplicación para la distribución que no se realice a través del App Store.
 

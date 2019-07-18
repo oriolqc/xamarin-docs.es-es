@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: ff4c72eaaf856083ab8e2e240ac8ce3eff37470c
-ms.sourcegitcommit: 57e8a0a10246ff9a4bd37f01d67ddc635f81e723
+ms.openlocfilehash: 24cf255d5cf9269a7d0d485ad8a88abe6842b07a
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57669659"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865605"
 ---
 # <a name="configuring-an-app-in-itunes-connect"></a>Configuración de una aplicación en iTunes Connect
 
@@ -136,7 +136,7 @@ Apple sugiere las siguientes directrices al elegir el nombre de la aplicación:
 - Hágalo coincidir con la funcionalidad de la aplicación.
 - Proporcione nombres localizados para mercados externos cuando proceda.
 
-### <a name="description"></a>Descripción
+### <a name="description"></a>DESCRIPCIÓN
 
 Escriba una descripción clara, concisa e informativa de la aplicación y sus características. Las primeras líneas son las más importantes y le dan una oportunidad para causar una primera impresión excelente y para atraer al usuario. Describa lo que hace que su aplicación sea especial y la diferencie de otras similares.
 
@@ -254,7 +254,7 @@ Siga estos pasos en [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 6. Haga clic en el botón **Editar** en **Clasificación** para establecer la información de clasificación:
 
     [![](itunesconnect-images/general02.png "Edición de la clasificación")](itunesconnect-images/general02.png#lightbox)
-6. Haga clic en el botón **Guardar** situado en la parte superior de la pantalla para guardar los cambios.
+7. Haga clic en el botón **Guardar** situado en la parte superior de la pantalla para guardar los cambios.
 
 > [!NOTE]
 > Nota: Apple rechazará su envío si las categorías o las clasificaciones no coinciden con la funcionalidad actual de la aplicación.
@@ -274,10 +274,10 @@ Siga estos pasos en [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 3. Seleccione la pestaña **Versiones**.
 4. Desplácese hasta la sección **Game Center**.
 5. Cambie el botón en la sección **Game Center** a **Activado**.
-5. Rellene toda la información necesaria:
+6. Rellene toda la información necesaria:
 
     [![](itunesconnect-images/gamecenter01.png "Edición de información de Game Center en iTunes Connect")](itunesconnect-images/gamecenter01.png#lightbox)
-6. Haga clic en el botón **Guardar** situado en la parte superior de la pantalla para guardar los cambios.
+7. Haga clic en el botón **Guardar** situado en la parte superior de la pantalla para guardar los cambios.
 
 Utilice la pestaña **Game Center** para activar el Game Center y mantener las **tablas de puntuación** o los **logros** disponibles para esta aplicación:
 
@@ -303,7 +303,7 @@ Siga estos pasos en [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 6. Seleccione cómo quiere que se publique la aplicación en la App Store después de que se haya revisado correctamente:
 
     [![](itunesconnect-images/review02.png "Edición de la información de versiones en iTunes Connect")](itunesconnect-images/review02.png#lightbox)
-6. Haga clic en el botón **Guardar** situado en la parte superior de la pantalla para guardar los cambios.
+7. Haga clic en el botón **Guardar** situado en la parte superior de la pantalla para guardar los cambios.
 
 
 ## <a name="maintaining-pricing-information"></a>Mantener la información de precio
@@ -333,9 +333,9 @@ Siga estos pasos en [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
     [![](itunesconnect-images/price02.png "Edición de la información de precio en iTunes Connect")](itunesconnect-images/price02.png#lightbox)
 4. Seleccione un **fecha de disponibilidad**.
 5. Seleccione el precio deseado desde la lista desplegable **Nivel de precio**.
-5. Opcionalmente, puede habilitar **Descuentos educativos**.
-6. También puede definir como una **Aplicación de negocio a negocio personalizada**.
-6. Haga clic en el botón **Guardar** para guardar los cambios.
+6. Opcionalmente, puede habilitar **Descuentos educativos**.
+7. También puede definir como una **Aplicación de negocio a negocio personalizada**.
+8. Haga clic en el botón **Guardar** para guardar los cambios.
 
 <a name="iap" />
 
