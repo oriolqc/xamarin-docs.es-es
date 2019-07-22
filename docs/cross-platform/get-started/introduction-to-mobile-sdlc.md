@@ -1,30 +1,30 @@
 ---
-title: Introducción al ciclo de vida del desarrollo de software móvil
+title: Ciclo de vida de desarrollo de software móvil
 description: En este documento se describe el ciclo de vida de desarrollo de software móvil, para lo que se echa un vistazo al diseño de la experiencia de usuario, el diseño de la interfaz de usuario, el desarrollo, la estabilización, la distribución y mucho más.
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 11/22/2016
-ms.openlocfilehash: 74a9fc59b395d68db9b116106cc9fa63d3969c3b
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 99be69abb11640418917d4d2cb9738a0a843d6d0
+ms.sourcegitcommit: 32c7cf8b0d00464779e4b0ea43e2fd996632ebe0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58855242"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290149"
 ---
-# <a name="introduction-to-the-mobile-software-development-lifecycle"></a>Introducción al ciclo de vida del desarrollo de software móvil
+# <a name="mobile-software-development-lifecycle"></a>Ciclo de vida de desarrollo de software móvil
 
-La creación de aplicaciones móviles puede ser tan fácil como abrir el IDE, juntar algunos elementos, realizar unas pruebas rápidas y enviar el resultado al App Store, todo ello en una misma tarde. O puede ser un proceso muy complicado que conlleva el diseño riguroso por adelantado, pruebas de facilidad de uso, pruebas de control de calidad en miles de dispositivos, un ciclo de vida completo de versión beta y la implementación de varias maneras diferentes.
+La creación de aplicaciones móviles puede ser tan fácil como abrir Visual Studio, juntar algunos elementos, realizar unas pruebas rápidas y enviar el resultado al App Store, todo ello en una misma tarde. O puede ser un proceso muy complicado que conlleva el diseño riguroso por adelantado, pruebas de facilidad de uso, pruebas de control de calidad en miles de dispositivos, un ciclo de vida completo de versión beta y la implementación de varias maneras diferentes.
 
 En este documento, vamos a realizar un examen de introducción exhaustivo de la creación de aplicaciones móviles, incluidos:
 
-1.   **Proceso**: el proceso de desarrollo de software se denomina ciclo de vida de desarrollo de software (SDLC). Examinaremos todas las fases del SDLC con respecto al desarrollo de aplicaciones móviles, incluidas las siguientes: inspiración, diseño, desarrollo, estabilización, implementación y mantenimiento.
+1.   **Proceso**: el proceso de desarrollo de software se denomina ciclo de vida de desarrollo de software (SDLC). Examinaremos todas las fases del SDLC con respecto al desarrollo de aplicaciones móviles, incluidas las siguientes: origen, diseño, desarrollo, estabilización, implementación y mantenimiento.
 1.   **Consideraciones**: hay una serie de consideraciones que se deben tener en cuenta al crear aplicaciones móviles, especialmente si se comparan con las aplicaciones de escritorio o web tradicionales. Examinaremos estas consideraciones y cómo afectan al desarrollo móvil.
 
 Este documento está pensado para responder a preguntas fundamentales sobre el desarrollo de aplicaciones móviles, para desarrolladores de aplicaciones nuevos y experimentados. Adopta un enfoque bastante completo para introducir la mayor parte de los conceptos que se ejecutarán durante todo el ciclo de vida de desarrollo de software (SDLC). En cambio, puede que este documento no sea para todos los usuarios. Si quiere empezar a crear aplicaciones, le recomendamos que pase a la guía [Introducción al desarrollo móvil](~/cross-platform/get-started/introduction-to-mobile-development.md) y vuelva a este documento más adelante.
 
-## <a name="mobile-development-sdlc"></a>SDLC de desarrollo móvil
+## <a name="mobile-development-software-lifecycle"></a>Ciclo de vida de desarrollo de software móvil
 
 El ciclo de vida de desarrollo móvil es, en gran medida, parecido al SDLC para aplicaciones web o de escritorio. Al igual que con estos, normalmente hay 5 partes importantes del proceso:
 
@@ -172,7 +172,7 @@ Cada plataforma trata la multitarea de forma diferente, lo que exploraremos en b
 Normalmente, los dispositivos móviles se dividen en dos categorías (teléfonos y tabletas) con unos cuantos dispositivos intermedios. El desarrollo para estos factores de forma es generalmente muy similar, en cambio, el diseño de aplicaciones para ellos puede ser muy diferente.
 Los teléfonos tienen un espacio de pantalla muy limitado y las tabletas, aunque son más grandes, siguen siendo dispositivos móviles con menos espacio de pantalla que la mayoría de los portátiles. Por este motivo, los controles de interfaz de usuario de la plataforma móvil se han diseñado específicamente para ser efectivos en factores de forma más pequeños.
 
-#### <a name="device-and-os-fragmentation"></a>Fragmentación de sistema operativo y dispositivo
+#### <a name="device-and-operating-system-fragmentation"></a>Fragmentación del sistema operativo y del dispositivo
 
 Es importante tener en cuenta distintos dispositivos en todo el ciclo de vida de desarrollo de software:
 
@@ -235,7 +235,7 @@ Este es un paso esencial en el modelo de distribución de Android, debido al mod
 
 La multitarea en UWP también tiene dos partes: el ciclo de vida de páginas y aplicaciones, y los procesos en segundo plano. Cada pantalla de una aplicación es una instancia de una clase de página, que tiene eventos asociados que se ponen en estado activo o inactivo (con reglas especiales para controlar el estado inactivo o "con marcador de exclusión").
 
-La segunda parte consiste en proporcionar agentes en segundo plano para tareas de procesamiento, incluso cuando la aplicación no se está ejecutando en primer plano. 
+La segunda parte consiste en proporcionar agentes en segundo plano para tareas de procesamiento, incluso cuando la aplicación no se está ejecutando en primer plano.
 
 #### <a name="device-capabilities"></a>Capacidades del dispositivo
 
@@ -251,6 +251,6 @@ En esta guía, se le ha proporcionado una introducción al SDLC en lo referente 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-- [Introducción al desarrollo móvil](~/cross-platform/get-started/introduction-to-mobile-development.md)
+- [¿Qué es Xamarin?](~/cross-platform/get-started/introduction-to-mobile-development.md)
 - [Introducción a Xamarin](~/get-started/index.yml)
 - [Compartir código entre plataformas](~/cross-platform/app-fundamentals/index.md)

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: 5950143532b2d1d026f73bb254507d7d3022cbf1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: efa3c8cf4d2e64c6d8bccdfe6e6fec9602d17c73
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50112304"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865853"
 ---
 # <a name="ad-hoc-distribution-for-xamarinios-apps"></a>Distribución ad hoc para aplicaciones Xamarin.iOS
 
@@ -51,15 +51,15 @@ En la sección siguiente se describe cómo realizar la configuración con un cer
 3. Haga clic en el botón **+** para crear un nuevo certificado.
 4. En el título *Production* (Producción), seleccione **In-House and Ad Hoc** (Interna y ad hoc) o **App Store and Ad Hoc** (App Store y ad hoc), en función de su pertenencia al programa:
 
-  [![](ad-hoc-distribution-images/cert-first-small.png "Selección de Interna y ad hoc o App Store y ad hoc")](ad-hoc-distribution-images/cert-first-large.png#lightbox)
+   [![](ad-hoc-distribution-images/cert-first-small.png "Selección de Interna y ad hoc o App Store y ad hoc")](ad-hoc-distribution-images/cert-first-large.png#lightbox)
 
 5. Haga clic en Continuar y siga las instrucciones para crear una solicitud de firma de certificado a través del acceso a cadena de claves:
 
-  [![](ad-hoc-distribution-images/createcertmanually02.png "Creación de una solicitud de firma de certificado a través de Acceso a llaves")](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
+   [![](ad-hoc-distribution-images/createcertmanually02.png "Creación de una solicitud de firma de certificado a través de Acceso a llaves")](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
 
 6. Una vez que haya creado la CSR tal como se indica, haga clic en Continuar y cárguela en el Centro de usuarios registrados:
 
-  [![](ad-hoc-distribution-images/createcertmanually03.png "Carga de la CSR en el Centro de usuarios registrados")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
+   [![](ad-hoc-distribution-images/createcertmanually03.png "Carga de la CSR en el Centro de usuarios registrados")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
 
 7. Haga clic en Generar para crear el certificado.
 8. Por último, descargue el certificado completado y haga doble clic en el archivo para instalarlo.
@@ -67,9 +67,9 @@ En la sección siguiente se describe cómo realizar la configuración con un cer
 
 Como alternativa, se puede solicitar un certificado mediante el cuadro de diálogo Preferencias de Xcode. Para ello, siga estos pasos:
 
-1.   Seleccione el equipo y haga clic en **Administrar certificados…**: [![](ad-hoc-distribution-images/selectteam.png "Seleccionar el equipo")](ad-hoc-distribution-images/selectteam.png#lightbox).
+1. Seleccione el equipo y haga clic en **Manage Certificates…** (Administrar certificados…):  [![](ad-hoc-distribution-images/selectteam.png "Selección del equipo")](ad-hoc-distribution-images/selectteam.png#lightbox)
 
-2.   Después, haga clic en el botón **más (+)** y seleccione **iOS App Store**: [![](ad-hoc-distribution-images/selectcert.png "Seleccionar App Store de iOS")](ad-hoc-distribution-images/selectcert.png#lightbox).
+2. Después, haga clic en el botón **más (+)** y seleccione **iOS App Store** (App Store de iOS):  [![](ad-hoc-distribution-images/selectcert.png "Selección de App Store de iOS")](ad-hoc-distribution-images/selectcert.png#lightbox)
 
 <a name="createprofile" />
 
@@ -91,7 +91,7 @@ Al igual que con cualquier otro perfil de aprovisionamiento que cree, se necesit
 
 Una vez que tenga los componentes necesarios para crear un perfil de distribución, siga estos pasos para crearlo:
 
-1. Vuelva al portal de aprovisionamiento de Apple y seleccione **Aprovisionamiento > Distribución**: [![](ad-hoc-distribution-images/distribute01.png "Seleccionar Aprovisionamiento > Distribución")](ad-hoc-distribution-images/distribute01.png#lightbox).
+1. Vuelva al portal de aprovisionamiento de Apple y seleccione **Aprovisionamiento > Distribución**:  [![](ad-hoc-distribution-images/distribute01.png "Selección de Aprovisionamiento > Distribución")](ad-hoc-distribution-images/distribute01.png#lightbox)
 
 2. Haga clic en el botón **+** y seleccione el tipo de perfil de distribución que quiere crear como **Ad hoc**:
 
@@ -105,11 +105,11 @@ Una vez que tenga los componentes necesarios para crear un perfil de distribuci�
 
     [![](ad-hoc-distribution-images/distribute04.png "Seleccione el certificado de distribución necesario para firmar la aplicación")](ad-hoc-distribution-images/distribute04.png#lightbox)
 
-6. Haga clic en el botón **Continuar** y escriba un **Nombre** para el nuevo perfil de distribución:
+5. Haga clic en el botón **Continuar** y escriba un **Nombre** para el nuevo perfil de distribución:
 
     [![](ad-hoc-distribution-images/distribute06.png "Escribir un nombre para el nuevo perfil de distribución")](ad-hoc-distribution-images/distribute06.png#lightbox)
 
-7. Haga clic en el botón **Generar** para crear el nuevo perfil y finalizar el proceso.
+6. Haga clic en el botón **Generar** para crear el nuevo perfil y finalizar el proceso.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
