@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: asb3993
 ms.author: amburns
 ms.date: 07/15/2017
-ms.openlocfilehash: 3f74144f85cc045b4ea9807d3d818677e33539f2
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: ce48296ab6e979241630fe8d039ba6b284eed5dc
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50123471"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865896"
 ---
 # <a name="manual-provisioning-for-xamarinios"></a>Aprovisionamiento manual de Xamarin.iOS
 
@@ -100,36 +100,36 @@ Al crear un perfil de aprovisionamiento para el desarrollo, hay que indicar qué
 
 1. Inicie Xcode.
 2. Conecte el dispositivo que se va a aprovisionar al equipo Mac con el cable USB suministrado.
-2. En el menú **Ventana**, seleccione **Dispositivos**:
+3. En el menú **Ventana**, seleccione **Dispositivos**:
 
-  [![](manual-provisioning-images/add01.png "Selección de Dispositivos en el menú Ventana")](manual-provisioning-images/add01.png#lightbox)
+   [![](manual-provisioning-images/add01.png "Selección de Dispositivos en el menú Ventana")](manual-provisioning-images/add01.png#lightbox)
 
-3. Seleccione el dispositivo iOS deseado en la lista **DISPOSITIVOS** que aparece en el lado izquierdo de la ventana Dispositivos.
-4. Resalte la cadena **Identificador** y cópiela en el Portapapeles:
+4. Seleccione el dispositivo iOS deseado en la lista **DISPOSITIVOS** que aparece en el lado izquierdo de la ventana Dispositivos.
+5. Resalte la cadena **Identificador** y cópiela en el Portapapeles:
 
-  [![](manual-provisioning-images/add02.png "Resaltado de la cadena Identificador")](manual-provisioning-images/add02.png#lightbox)
+   [![](manual-provisioning-images/add02.png "Resaltado de la cadena Identificador")](manual-provisioning-images/add02.png#lightbox)
 
-5. En Safari, vaya al [Centro para desarrolladores de Apple](https://developer.apple.com/membercenter/index.action) e inicie sesión.
-6. Haga clic en el vínculo **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles):
+6. En Safari, vaya al [Centro para desarrolladores de Apple](https://developer.apple.com/membercenter/index.action) e inicie sesión.
+7. Haga clic en el vínculo **Certificates, Identifiers & Profiles** (Certificados, identificadores y perfiles):
 
-  [![](manual-provisioning-images/add03.png "Clic en el vínculo Certificados, identificadores y perfiles")](manual-provisioning-images/add03.png#lightbox)
+   [![](manual-provisioning-images/add03.png "Clic en el vínculo Certificados, identificadores y perfiles")](manual-provisioning-images/add03.png#lightbox)
 
-7. Haga clic en el vínculo **Dispositivos**:
+8. Haga clic en el vínculo **Dispositivos**:
 
-  [![](manual-provisioning-images/add04.png "Clic en el vínculo Dispositivos")](manual-provisioning-images/add04.png#lightbox)
+   [![](manual-provisioning-images/add04.png "Clic en el vínculo Dispositivos")](manual-provisioning-images/add04.png#lightbox)
 
-8. Haga clic en el botón **+**:
+9. Haga clic en el botón **+** :
 
-  [![](manual-provisioning-images/add05.png "Clic en el botón +")](manual-provisioning-images/add05.png#lightbox)
+   [![](manual-provisioning-images/add05.png "Clic en el botón +")](manual-provisioning-images/add05.png#lightbox)
 
-9. Proporcione un nombre para el nuevo dispositivo y pegue el **identificador** de dispositivo que copió anteriormente en el campo **UUID**:
+10. Proporcione un nombre para el nuevo dispositivo y pegue el **identificador** de dispositivo que copió anteriormente en el campo **UUID**:
 
-  [![](manual-provisioning-images/add06.png "Nombre para el nuevo dispositivo e identificador de dispositivo")](manual-provisioning-images/add06.png#lightbox)
+    [![](manual-provisioning-images/add06.png "Nombre para el nuevo dispositivo e identificador de dispositivo")](manual-provisioning-images/add06.png#lightbox)
 
-10. Haga clic en el botón **Continuar**.
-11. Por último, revise la información y haga clic en el botón **Registrar**:
+11. Haga clic en el botón **Continuar**.
+12. Por último, revise la información y haga clic en el botón **Registrar**:
 
-  [![](manual-provisioning-images/add07.png "Revisión de la información")](manual-provisioning-images/add07.png#lightbox)
+    [![](manual-provisioning-images/add07.png "Revisión de la información")](manual-provisioning-images/add07.png#lightbox)
 
 Repita los pasos anteriores para todos los dispositivos iOS que se vayan a usar para probar o depurar una aplicación de Xamarin.iOS.
 
@@ -151,9 +151,9 @@ Antes de crear un perfil de aprovisionamiento, se debe crear un *Id. de aplicaci
     [![](manual-provisioning-images/appid05a.png "Proporcionar un nombre")](manual-provisioning-images/appid05a.png#lightbox)
 3. El prefijo de la aplicación debería estar preestablecido. Seleccione **Wildcard App ID** (Identificador de aplicación comodín) para el sufijo de la aplicación. Escriba un identificador de paquete en el formato `com.[DomainName].*`:
 
-  [![](manual-provisioning-images/appid05b.png "Escribir un identificador de lote")](manual-provisioning-images/appid05b.png#lightbox)
+   [![](manual-provisioning-images/appid05b.png "Escribir un identificador de lote")](manual-provisioning-images/appid05b.png#lightbox)
 
-3. Haga clic en el botón **Continuar** y siga las instrucciones en pantalla para crear el identificador de aplicación.
+4. Haga clic en el botón **Continuar** y siga las instrucciones en pantalla para crear el identificador de aplicación.
 
 ### <a name="provisioning-profile"></a>Perfil de aprovisionamiento
 
@@ -181,7 +181,7 @@ Para crear manualmente un perfil de aprovisionamiento para el desarrollo, haga l
 8. Presione **Descargar** para descargar el perfil de aprovisionamiento en un equipo Mac:
 
     [![](manual-provisioning-images/provisioning-profile06.png "Descarga del perfil de aprovisionamiento")](manual-provisioning-images/provisioning-profile06.png#lightbox)
-9. Haga doble clic en el archivo para instalar el perfil de aprovisionamiento en Xcode. Tenga en cuenta que Xcode podría no mostrar ninguna indicación visual de que ha instalado el perfil, excepto para abrirlo. Para comprobarlo, vaya a **Xcode > Preferencias > Cuentas**. Seleccione su identificador de Apple y haga clic en **Ver detalles…**. El nuevo perfil de aprovisionamiento debería aparecer en la lista, como se muestra a continuación:
+9. Haga doble clic en el archivo para instalar el perfil de aprovisionamiento en Xcode. Tenga en cuenta que Xcode podría no mostrar ninguna indicación visual de que ha instalado el perfil, excepto para abrirlo. Para comprobarlo, vaya a **Xcode > Preferencias > Cuentas**. Seleccione su identificador de Apple y haga clic en **Ver detalles…** . El nuevo perfil de aprovisionamiento debería aparecer en la lista, como se muestra a continuación:
 
       [![](manual-provisioning-images/provisioning-profile07.png "Visualización del perfil en Xcode")](manual-provisioning-images/provisioning-profile07.png#lightbox)
 
@@ -195,9 +195,9 @@ Los certificados y los perfiles de aprovisionamiento que se han creado en el por
 
 1.   Salga de Visual Studio para Mac o Visual Studio.
 2.   Inicie Xcode.
-3.   Seleccione el **menú de Xcode > Preferencias…**.
+3.   Seleccione el **menú de Xcode > Preferencias…** .
 4.   Haga clic en la pestaña **Cuentas**.
-5.   Selección de un equipo y clic en el botón **Download Manual Profiles** (Descargar perfiles manuales): [![](manual-provisioning-images/selectteam1.png "Descarga de perfiles manuales")](manual-provisioning-images/selectteam1.png#lightbox)
+5.   Seleccione un equipo y haga clic en el botón **Download Manual Profiles** (Descargar perfiles manuales): [![](manual-provisioning-images/selectteam1.png "Descarga de perfiles manuales")](manual-provisioning-images/selectteam1.png#lightbox)
 
 6.   Salga de Xcode.
 7.  Inicie Visual Studio para Mac o Visual Studio.
@@ -238,13 +238,13 @@ En este momento, el aprovisionamiento se ha completado y la aplicación está li
 1. Conecte el dispositivo a un equipo Mac.
 2. En el archivo **Info.plist** del proyecto, asegúrese de que el identificador de paquete coincide con el identificador de aplicación (a menos que este sea un carácter comodín):
 
-  ![](manual-provisioning-images/deploydevice01xs.png "Especificación de un identificador")
+   ![](manual-provisioning-images/deploydevice01xs.png "Especificación de un identificador")
 
 3. Haga clic con el botón derecho en el proyecto para ver el cuadro de diálogo de opciones de proyecto y vaya a **Compilar > agrupación de trabajos iOS** (Firma de paquete de iOS). En la lista desplegable situada junto a **Identidad de firma** y **Perfil de aprovisionamiento**, compruebe que Visual Studio para Mac puede ver los perfiles correctos y seleccione una identidad y un perfil específicos:
 
-  ![](manual-provisioning-images/deploydevice02xs.png "Seleccione una identidad y un perfil concretos")
+   ![](manual-provisioning-images/deploydevice02xs.png "Seleccione una identidad y un perfil concretos")
 
-Si está establecido en **Automático**, Visual Studio para Mac seleccionará la identidad y el perfil en función del identificador de paquete que se estableció en el paso 2.
+   Si está establecido en **Automático**, Visual Studio para Mac seleccionará la identidad y el perfil en función del identificador de paquete que se estableció en el paso 2.
 
 4. Asegúrese de establecer la configuración de compilación en **iPhone** / **iPad**, en lugar de en simulador.
 5. Haga clic en **Ejecutar** en Visual Studio para Mac y compruebe que la aplicación se ejecuta en el dispositivo.
@@ -257,7 +257,7 @@ Si está establecido en **Automático**, Visual Studio para Mac seleccionará la
 1. Conecte el dispositivo al host de compilación de Mac.
 2. En el archivo **Info.plist** del proyecto, asegúrese de que el identificador de paquete coincide con el identificador de aplicación:
 
-  ![](manual-provisioning-images/servicevs01.png "Especificación de un identificador")
+   ![](manual-provisioning-images/servicevs01.png "Especificación de un identificador")
 
 3. Haga clic con el botón derecho en el proyecto para ver el cuadro de diálogo de opciones de proyecto y vaya a **Compilar > agrupación de trabajos iOS** (Firma de paquete de iOS). En la lista desplegable situada junto a **Identidad de firma** y **Perfil de aprovisionamiento**, compruebe que Visual Studio puede ver los perfiles correctos y seleccione una identidad y un perfil específicos.
 

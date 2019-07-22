@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: c1e1b2d7bfb43c256c71abb62e7d85a05b096419
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: a2dc974fba7beb70f1caecf8198181193d32e4c2
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50103587"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865527"
 ---
 # <a name="in-house-distribution-for-xamarinios-apps"></a>Distribución interna para aplicaciones Xamarin.iOS
 
@@ -74,13 +74,13 @@ Como alternativa, se puede solicitar un certificado mediante el cuadro de diálo
 
 1. Seleccione el equipo y haga clic en *Ver detalles*:
 
-    [![](in-house-distribution-images/selectteam.png "Selección del equipo")](in-house-distribution-images/selectteam.png#lightbox)
+   [![](in-house-distribution-images/selectteam.png "Selección del equipo")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Luego, haga clic en el botón **Crear** situado junto a **iOS Distribution Certificate** (Certificado de distribución de iOS):
 
    [![](in-house-distribution-images/selectcert.png "Creación del certificado de distribución de iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
-2.   Después, haga clic en el botón **más (+)** y seleccione **iOS App Store** (App Store de iOS):
+3. Después, haga clic en el botón **más (+)** y seleccione **iOS App Store** (App Store de iOS):
 
    [![](in-house-distribution-images/selectcert.png "Selección de App Store de iOS")](in-house-distribution-images/selectcert.png#lightbox)
 
@@ -97,7 +97,7 @@ Al igual que con cualquier otro perfil de aprovisionamiento que cree, se necesit
 
 1. En el [Centro de usuarios registrados de Apple Developer](https://developer.apple.com/account/overview.action), vaya a la sección *Certificate, Identifiers and Profiles* (Certificado, identificadores y perfiles). Seleccione **App IDs** (Identificadores de aplicación) en **Identifiers** (Identificadores).
 2. Haga clic en el botón **+** y proporcione un **Nombre** que la identifique en el portal.
-3. El prefijo de la aplicación ya debería estar establecido como el identificador del equipo y no se puede cambiar. Seleccione un identificador de aplicación explícito o comodín y especifique un identificador de paquete en un formato DNS inverso como el siguiente: **Explícito**: com.[NombreDominio].[NombreAplicación] **Comodín**: com.[NombreDominio].*
+3. El prefijo de la aplicación ya debería estar establecido como el identificador del equipo y no se puede cambiar. Seleccione un identificador de aplicación explícito o comodín y especifique un identificador de paquete en un formato DNS inverso como: **Explícito**: com.[nombreDeDominio].[ NombreDeAplicación] **CarácterComodín**:com.[nombreDeDominio].*
 4. Seleccione los [App Services](~/ios/get-started/installation/device-provisioning/index.md#provisioning-for-application-services) que la aplicación necesite.
 5. Haga clic en el botón **Continuar** y siga las instrucciones en pantalla para crear el identificador de aplicación.
 
@@ -119,11 +119,11 @@ Una vez que tenga los componentes necesarios para crear un perfil de distribuci�
 
    [![](in-house-distribution-images/distribute04.png "Seleccione el certificado de distribución necesario para firmar la aplicación")](in-house-distribution-images/distribute04.png#lightbox)
 
-6. Haga clic en el botón **Continuar** y escriba un **Nombre** para el nuevo perfil de distribución:
+5. Haga clic en el botón **Continuar** y escriba un **Nombre** para el nuevo perfil de distribución:
 
    [![](in-house-distribution-images/distribute06.png "Escribir un nombre para el nuevo perfil de distribución")](in-house-distribution-images/distribute06.png#lightbox)
 
-7. Haga clic en el botón **Generar** para crear el nuevo perfil y finalizar el proceso.
+6. Haga clic en el botón **Generar** para crear el nuevo perfil y finalizar el proceso.
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/19/2017
-ms.openlocfilehash: e89b8585371ab2560ae510fdb49f284e358818c1
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 23bf62688da4e2e82cb3e0fadc9a3b7c13ab1a7d
+ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50108917"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67865510"
 ---
 # <a name="introduction-to-fastlane-for-ios"></a>Introducción a fastlane para iOS
 
@@ -50,35 +50,35 @@ El contenido proporcionado se puede usar como punto de partida para la distribuc
 3. Para instalar Fastlane, descomprima el archivo y haga doble clic en el ejecutable `install`. Si recibe un error que le advierte de que el archivo “no se puede abrir porque pertenece a un desarrollador sin identificar”, pulse Aceptar y haga lo siguiente:
     - Mientras mantiene presionado Ctrl, haga clic en el ejecutable `install`. Esto hará que se muestre este cuadro de diálogo:
 
-      ![](images/fastlane-image12.png "Cuadro de diálogo de instalación")
-    
+     ![](images/fastlane-image12.png "Cuadro de diálogo de instalación")
+
     - Haga clic en Aceptar para iniciar la instalación de las herramientas de Fastlane.
 
 4. Aparecerá el diálogo que se muestra a continuación en la terminal. Presione `y`:
 
-  ![](images/fastlane-image13.png "Símbolo del sistema de Terminal")
- 
-4. Ejecute `which fastlane` antes de usar Fastlane por primera vez. La ruta de acceso debe tener este aspecto: 
+   ![](images/fastlane-image13.png "Símbolo del sistema de Terminal")
+
+5. Ejecute `which fastlane` antes de usar Fastlane por primera vez. La ruta de acceso debe tener este aspecto: 
 
     ```bash
     /Users/[user]/.fastlane/bin
     ```
 
-5. Si la ruta de acceso coincide con la anterior, ya puede empezar.
+6. Si la ruta de acceso coincide con la anterior, ya puede empezar.
 
-     En caso contrario, haga lo siguiente: en macOS, abra `.bash_profile`, que es un archivo oculto de texto no cifrado del directorio principal, con el siguiente comando:
+     De lo contrario, haga lo siguiente:  En macOS, abra `.bash_profile`, que es un archivo oculto de texto no cifrado del directorio principal, con el siguiente comando:
 
     ```bash
     open ~/.bash_profile
     ```
 
-6. Agregue la siguiente variable de entornoPATH y guárdelo: 
+7. Agregue la siguiente variable de entornoPATH y guárdelo: 
 
     ```bash
     export PATH="$HOME/.fastlane/bin:$PATH"
     ```
 
-7.  Ejecute `which fastlane` de nuevo para confirmar la ruta de acceso es similar a `/Users/[user]/.fastlane/bin`.
+8.  Ejecute `which fastlane` de nuevo para confirmar la ruta de acceso es similar a `/Users/[user]/.fastlane/bin`.
 
 
 ## <a name="updating-fastlane"></a>Actualización de fastlane

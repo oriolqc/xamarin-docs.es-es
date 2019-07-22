@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 08/23/2017
-ms.openlocfilehash: 14cf2910767e9c205e5ddc8f580020505f54ef46
-ms.sourcegitcommit: e7f27ba75cae5099ef053b819b84132a77d4f9e7
+ms.openlocfilehash: 8b3782554615c5ce3350294fc3300e3c369f8af7
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "55832033"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831519"
 ---
 # <a name="app-store-distribution"></a>Distribución a través del App Store
 
@@ -25,7 +25,7 @@ Una vez que se ha desarrollado una aplicación de Xamarin.iOS, el siguiente paso
 Distribución de una aplicación: al igual que al desarrollar una aplicación, exige que se aprovisionen las aplicaciones mediante el *perfil de aprovisionamiento* adecuado. Los perfiles de aprovisionamiento son archivos que contienen información de firma de código, así como la identidad de la aplicación y el mecanismo de distribución previsto. También contienen información sobre en qué dispositivos se puede implementar la aplicación para la distribución que no se realice a través del App Store.
 
 > [!IMPORTANT]
-> Es **importante** tener en cuenta que para usar iTunes Connect y, por lo tanto, publicar una aplicación en App Store, **debe** formar parte de un programa para desarrolladores individual o empresarial de Apple. Si es miembro de un programa para desarrolladores **empresariales** de Apple no podrá seguir los pasos de esta página.
+> Para usar iTunes Connect y, por lo tanto, publicar una aplicación en App Store, **debe** formar parte de un programa para desarrolladores individual o empresarial de Apple. Si es miembro de un programa para desarrolladores **empresariales** de Apple no podrá seguir los pasos de esta página.
 
 <a name="provisioning" />
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2019
-ms.openlocfilehash: bb1b615bc922b19c50435218dfee51f9e19d1259
-ms.sourcegitcommit: dd73477b1bccbd7ca45c1fb4e794da6b36ca163d
+ms.openlocfilehash: 49370813f50e3b5f1a9193c542b9f5f13d65a8e1
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66394724"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67829959"
 ---
 # <a name="multi-core-devices--xamarinandroid"></a>Dispositivos de varios núcleos y Xamarin.Android
 
@@ -53,13 +53,15 @@ Cada ABI compatible con Android se identifica mediante un nombre único.
 
 Este es el nombre de una EABI para CPU basadas en ARM que admiten al menos el conjunto de instrucciones ARMv5TE. Android sigue la ABI GNU/Linux de ARM little endian. Esta ABI no es compatible con cálculos de punto flotante asistidos por hardware. Todas las operaciones de FP se realizan mediante funciones del asistente de software que proceden de la biblioteca estática `libgcc.a` del compilador. Los dispositivos SMP no admiten `armeabi`.
 
-**Nota**: El código `armeabi` de Xamarin.Android no es seguro para subprocesos y no se debe usar en dispositivos `armeabi-v7a` de varios núcleos (se describen a continuación). El uso de código `armeabi` en un dispositivo `armeabi-v7a` de un único núcleo es seguro.
+> [!IMPORTANT]
+> El código `armeabi` de Xamarin.Android no es seguro para subprocesos y no se debe usar en dispositivos `armeabi-v7a` de varios núcleos (se describen a continuación). El uso de código `armeabi` en un dispositivo `armeabi-v7a` de un único núcleo es seguro.
 
 #### <a name="armeabi-v7a"></a>armeabi-v7a
 
 Se trata de otro conjunto de instrucciones de CPU basado en ARM que amplía la EABI `armeabi` descrita anteriormente. La EABI `armeabi-v7a` presenta compatibilidad con operaciones de punto flotante de hardware y varios dispositivos de CPU (SMP). Las aplicaciones que usan la EABI `armeabi-v7a` pueden esperar considerables mejoras en el rendimiento por encima de las aplicaciones que usan `armeabi`.
 
-**Nota: El código máquina** `armeabi-v7a` no se ejecuta en dispositivos de ARMv5.
+> [!NOTE]
+> El código máquina `armeabi-v7a` no se ejecuta en dispositivos ARMv5.
 
 #### <a name="arm64-v8a"></a>arm64-v8a
 
@@ -74,7 +76,8 @@ Este es el nombre de una ABI para CPU que admiten el conjunto de instrucciones c
 - La extensión SSE3 complementaria (SSSE3).
 - Cualquier variante de SSE4.
 
-**Nota:** Aunque se ejecuta en x86, Google TV no es compatible con el NDK de Android.
+> [!NOTE]
+> Aunque se ejecuta en x86, Google TV no es compatible con el NDK de Android.
 
 #### <a name="x8664"></a>x86_64
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/18/2017
-ms.openlocfilehash: 602a530e1c185ffeda2c6ac80a96f7795cec4cae
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: dbf8f85192f9052041fc65367eb2f6c57603b440
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50104848"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831422"
 ---
 # <a name="ios-build-mechanics"></a>Mecanismos de compilación de iOS
 
@@ -33,7 +33,7 @@ Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio para Mac
 
 1. Haga clic en **Visual Studio para Mac > Preferencias...**
 2. En la vista de árbol de la izquierda, seleccione **Proyectos > Compilar**
-3. En el panel derecho, establezca el menú desplegable del contenido de registro en **Diagnóstico**: [![](ios-build-mechanics-images/image2.png "Configuración del contenido de registro")](ios-build-mechanics-images/image2.png#lightbox).
+3. En el panel derecho, establezca el menú desplegable del contenido de registro en **Diagnóstico**:  [![](ios-build-mechanics-images/image2.png "Establecer el nivel de detalle del registro")](ios-build-mechanics-images/image2.png#lightbox)
 4. Haga clic en **Aceptar**.
 5. Reinicie Visual Studio para Mac.
 6. Limpie y recompile el paquete.
@@ -46,7 +46,7 @@ Para habilitar el resultado de diagnóstico de MSBuild en Visual Studio:
 
 1. Haga clic en **Herramientas > Opciones...**
 2. En la vista de árbol de la izquierda, seleccione **Proyectos y soluciones > Compilación y ejecución**.
-3. En el panel de la derecha, establezca *Detalles de la salida de la compilación del proyecto de MSBuild* en **Diagnóstico**: [![](ios-build-mechanics-images/image2-vs.png "Establecer los detalles de la salida de la compilación del proyecto de MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox).
+3. En el panel de la derecha, establezca *Detalles de la salida de la compilación de MSBuild* en **Diagnóstico**:  [![](ios-build-mechanics-images/image2-vs.png "Establecer los detalles de la salida de la compilación de MSBuild")](ios-build-mechanics-images/image2-vs.png#lightbox)
 4. Haga clic en **Aceptar**.
 5. Limpie y recompile el paquete.
 6. El resultado de diagnóstico se muestra en el panel de resultados.
@@ -111,9 +111,9 @@ La implementación en el dispositivo es similar a la implementación en el simul
 
 Se proporciona una serie de configuraciones de compilación para implementar aplicaciones iOS. Es importante tener un buen conocimiento de cada configuración, para saber cuándo y por qué debe optimizarse.
 
- - Depuración
+- Depuración
   - Esta es la configuración principal que debe usarse mientras una aplicación está en fase de desarrollo y, por tanto, debe realizarse lo más rápido posible.
- - Versión
+- Release
   - Las compilaciones de versiones son las que se proporcionan a los usuarios, y es fundamental centrar la atención en el rendimiento. Cuando se usa la configuración de versiones, puede usar el compilador de optimización LLVM y optimizar los archivos PNG.
 
  
@@ -127,7 +127,7 @@ Minimizar el tamaño de la aplicación también puede reducir el tiempo de compi
 
 ### <a name="tips"></a>Sugerencias
 
-- Compilación: 
+- Compilar: 
   - La compilación de una única arquitectura (por ejemplo, ARM64) es más rápida que un archivo binario FAT (por ejemplo, ARMv7 + ARM64).
   - Evite optimizar los archivos PNG al depurar.
   - Considere la posibilidad de vincular todos los ensamblados. Optimice cada ensamblado. 

@@ -7,18 +7,18 @@ ms.technology: xamarin-ios
 author: lobrien
 ms.author: laobri
 ms.date: 03/15/2017
-ms.openlocfilehash: 13d0e7a70c91c6e3e422f2e91cefc403627a340c
-ms.sourcegitcommit: e268fd44422d0bbc7c944a678e2cc633a0493122
+ms.openlocfilehash: 86b077c95bfe1cb32731c92c0c1cfec451295c12
+ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50105524"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67831343"
 ---
 # <a name="icloud-capabilities-in-xamarinios"></a>Capacidades de iCloud en Xamarin.iOS
 
 _Agregar funcionalidades a una aplicación requiere con frecuencia una configuración de aprovisionamiento adicional. En esta guía se describe la configuración necesaria para las funcionalidades de iCloud._
 
-iCloud proporciona a los usuarios de iOS una forma sencilla y cómoda para almacenar su contenido y compartirlo entre dispositivos. Los desarrolladores tienen cuatro maneras para usar iCloud para proporcionar un medio de almacenamiento para sus usuarios: el almacenamiento de pares clave-valor, el almacenamiento UIDocument, CoreData y el uso directo de CloudKit para proporcionar almacenamiento para archivos y directorios específicos. Para más información, consulte la guía [Introduction to iCloud](~/ios/data-cloud/introduction-to-icloud.md) (Introducción a iCloud).
+iCloud proporciona a los usuarios de iOS una forma sencilla y cómoda para almacenar su contenido y compartirlo entre dispositivos. Los desarrolladores disponen de cuatro formas de usar iCloud para proporcionar almacenamiento a sus usuarios: el almacenamiento de pares clave-valor, el almacenamiento de UIDocument, CoreData y el uso directo de CloudKit para proporcionar almacenamiento de archivos y directorios individuales. Para más información, consulte la guía [Introduction to iCloud](~/ios/data-cloud/introduction-to-icloud.md) (Introducción a iCloud).
 
 Agregar la capacidad de iCloud a una aplicación es un poco más difícil que otros servicios de aplicación debido a los _contenedores_. Los contenedores se usan en iCloud para almacenar la información de una aplicación y permiten que toda la información incluida en una cuenta de iCloud se pueda segregar (al igual que el espacio aislado en un dispositivo iOS de un usuario). Para más información sobre los contenedores, consulte la guía [Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) (Introducción a CloudKit).
 
@@ -31,63 +31,63 @@ Agregar la capacidad de iCloud a una aplicación es un poco más difícil que ot
 
 Al aprovisionar una nueva aplicación mediante el Centro para desarrolladores, hay dos pasos que debe seguir:
 
-1.  Cree un contenedor.
-2.  Cree un identificador de aplicación con la capacidad de iCloud y agregue el contenedor a este.
+1. Cree un contenedor.
+2. Cree un identificador de aplicación con la capacidad de iCloud y agregue el contenedor a este.
 3. Cree un perfil de aprovisionamiento que incluya este identificador de aplicación.
 
 En los siguientes pasos se le guiará a través de este procedimiento:
 
-1.  Vaya al [Centro para desarrolladores de Apple](https://developer.apple.com/account/) y, luego, vaya a la sección Certificates, Identifiers & Profiles (Certificados, identificadores y perfiles): 
+1. Vaya al [Centro para desarrolladores de Apple](https://developer.apple.com/account/) y, luego, vaya a la sección Certificates, Identifiers & Profiles (Certificados, identificadores y perfiles): 
     
      ![Página principal del Centro para desarrolladores de Apple](icloud-capabilities-images/image22.png)
 
-2.  En **Identifiers** (Identificadores), seleccione **iCloud Containers** (Contenedores de iCloud) y, luego, seleccione **+** para crear un contenedor:  
+2. En **Identifiers** (Identificadores), seleccione **iCloud Containers** (Contenedores de iCloud) y, luego, seleccione **+** para crear un contenedor:  
     
     ![Pantalla de contenedores de iCloud](icloud-capabilities-images/image23.png)
 
-3.  Escriba una **descripción** y un **identificador** único para el contenedor de iCloud: 
+3. Escriba una **descripción** y un **identificador** único para el contenedor de iCloud: 
     
     ![Pantalla de registro del contenedor de iCloud](icloud-capabilities-images/image24.png)
 
-4.  Presione **Continue** (Continuar), asegúrese de que la información es correcta y presione **Register** (Registrar) para crear el contenedor de iCloud:  
+4. Presione **Continue** (Continuar), asegúrese de que la información es correcta y presione **Register** (Registrar) para crear el contenedor de iCloud:  
     
     ![Pantalla de registro del contenedor de iCloud](icloud-capabilities-images/image25.png)
 
 Para crear un nuevo identificador de aplicación y agregar un contenedor a este, haga lo siguiente:
 
-1.  En el [Centro para desarrolladores](https://developer.apple.com/account/), haga clic en **App IDs** (Identificadores de aplicación), que se encuentra en **Identifiers** (Identificadores): 
+1. En el [Centro para desarrolladores](https://developer.apple.com/account/), haga clic en **App IDs** (Identificadores de aplicación), que se encuentra en **Identifiers** (Identificadores): 
     
     ![Sección de identificadores del Centro para desarrolladores](icloud-capabilities-images/image26.png)
 
-2.  Haga clic en el botón **+** para agregar un nuevo identificador de aplicación: 
+2. Haga clic en el botón **+** para agregar un nuevo identificador de aplicación: 
     
     ![Botón para agregar un nuevo identificador de aplicación](icloud-capabilities-images/image27.png)
 
-3.  Escriba un **nombre** para el identificador de aplicación y asígnele un **identificador de aplicación explícito**:
+3. Escriba un **nombre** para el identificador de aplicación y asígnele un **identificador de aplicación explícito**:
     
     ![Especificación de la información del nuevo identificador de aplicación](icloud-capabilities-images/image28.png)
 
-4.  En **App Services** (Servicios de aplicaciones), seleccione **iCloud** y, luego, seleccione **Include CloudKit support** (Incluir soporte de CloudKit):
+4. En **App Services** (Servicios de aplicaciones), seleccione **iCloud** y, luego, seleccione **Include CloudKit support** (Incluir soporte de CloudKit):
     
     ![Selección de los servicios de aplicaciones de iCloud](icloud-capabilities-images/image29.png)
 
-5.  Seleccione **Continue** (Continuar) y **Register** (Registrar). Tenga en cuenta que, en la pantalla de confirmación, iCloud aparecerá con la opción Configurable seleccionada con un símbolo amarillo:   
+5. Seleccione **Continue** (Continuar) y **Register** (Registrar). Tenga en cuenta que, en la pantalla de confirmación, iCloud aparecerá con la opción Configurable seleccionada con un símbolo amarillo:   
     
     ![Pantalla de confirmación](icloud-capabilities-images/image30.png)
 
-6.  Vuelva a la lista de identificadores de aplicación y seleccione el que acaba de crear: 
+6. Vuelva a la lista de identificadores de aplicación y seleccione el que acaba de crear: 
     
     ![Pantalla para seleccionar el identificador de aplicación](icloud-capabilities-images/image31.png)
 
-7.  Desplácese hasta el final de esta sección expandida y haga clic en **Edit** (Editar):
+7. Desplácese hasta el final de esta sección expandida y haga clic en **Edit** (Editar):
     
     ![Edición del identificador de aplicación](icloud-capabilities-images/image32.png)
 
-8.  Desplácese hacia abajo por la lista hasta llegar a iCloud y haga clic en el botón **Edit** (Editar):  
+8. Desplácese hacia abajo por la lista hasta llegar a iCloud y haga clic en el botón **Edit** (Editar):  
     
     ![Edición del identificador de aplicación de iCloud](icloud-capabilities-images/image33.png)
 
-9.  Seleccione el contenedor que usará con este identificador de aplicación:  
+9. Seleccione el contenedor que usará con este identificador de aplicación:  
     
     ![Pantalla para seleccionar el contenedor](icloud-capabilities-images/image34.png)
 
