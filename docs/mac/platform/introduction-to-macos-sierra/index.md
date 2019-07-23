@@ -1,157 +1,157 @@
 ---
 title: Introducción a macOS Sierra
-description: Este artículo presenta todas las características disponibles en macOS Sierra y las API nuevas y modificadas para desarrolladores de Xamarin.Mac.
+description: En este artículo se presentan todas las API y características nuevas y modificadas disponibles en macOS Sierra para desarrolladores de Xamarin. Mac.
 ms.prod: xamarin
 ms.assetid: 71A8A737-F310-4320-BD23-743AA1E9033C
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 03/14/2017
-ms.openlocfilehash: 5a944fd8f7dcfdcbb3f025c92b4afac35673416f
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 43497797fe1e740787e531997a62a0ee11deceec
+ms.sourcegitcommit: 8fe8d163cb9927917f6a83204b4c387fc50181c2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61031514"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388483"
 ---
 # <a name="introduction-to-macos-sierra"></a>Introducción a macOS Sierra
 
-Con el nuevo macOS Sierra, el desarrollador puede aprovechar las ventajas de las nuevas API que permiten al usuario final interactúe con sus aplicaciones y sitios Web no estaban disponibles. Por ejemplo, Apple ahora permite que sitios Web ofrecer a los clientes la opción de pagar forma segura a través de Apple Pay y mejoras para aumentar el marco metálico gráficos de una aplicación y calcular posibles. 
+Con el nuevo macOS Sierra, el desarrollador puede aprovechar las nuevas API que permiten que el usuario final interactúe con sus aplicaciones y sitios web de maneras no disponibles anteriormente. Por ejemplo, Apple ahora permite que los sitios web ofrezcan a los clientes la opción de pagar de forma segura a través de Apple Pay y las mejoras realizadas en el marco de metal aumentan el potencial de gráficos y informática de una aplicación. 
 
-Para obtener más información en macOS Sierra, consulte Apple [macOS + aplicaciones](https://developer.apple.com/macos/) documentación.
+Para obtener más información sobre macOS Sierra, consulte la documentación de [MacOS + aplicaciones](https://developer.apple.com/macos/) de Apple.
 
 <a name="Whats-New-in-macOS-Sierra" />
 
-## <a name="whats-new-in-macos-sierra"></a>Novedades en macOS Sierra
+## <a name="whats-new-in-macos-sierra"></a>Novedades de macOS Sierra
 
-Apple ha agregado varias nuevas API y servicios en macOS Sierra, junto con muchas mejoras en las características existentes, incluyendo:
+Apple ha agregado varias API y servicios nuevos en macOS Sierra junto con muchas mejoras en las características existentes, entre las que se incluyen:
 
 <a name="Apple-File-System" />
 
-### <a name="apple-file-system"></a>Sistema de archivos de Apple
+### <a name="apple-file-system"></a>Apple File System
 
-Con macOS Sierra, Apple ha lanzado el nuevo sistema de archivos de Apple como un sistema de archivos modernos para iOS, macOS, tvOS y watchOS. El sistema de archivos de Apple se ha optimizado para el almacenamiento SSD y de Flash y proporciona las siguientes características: cifrado de alta seguridad, los metadatos de copia en escritura, espacio compartido, la clonación para archivos y directorios, las instantáneas, ajuste de tamaño de directorio rápida y atomic primitivas seguro para guardar.
+Con macOS Sierra, Apple ha lanzado el nuevo sistema de archivos de Apple como sistema de archivos moderno para iOS, macOS, tvOS y watchos. El sistema de archivos de Apple se optimizó para el almacenamiento de Flash y SSD y proporciona las siguientes características: cifrado seguro, metadatos de copia en escritura, uso compartido de espacio, clonación de archivos y directorios, instantáneas, cambio rápido de tamaño de directorios y primitivas de almacenamiento de seguridad atómica.
 
-Para obtener más información, consulte Apple [Guía de Apple File System](https://developer.apple.com/library/prerelease/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999).
+Para obtener más información, consulte la [Guía del sistema de archivos Apple](https://developer.apple.com/library/prerelease/content/documentation/FileManagement/Conceptual/APFS_Guide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40016999)de Apple.
 
 <a name="Apple-Pay-Enhancements" />
 
-### <a name="apple-pay-enhancements"></a>Mejoras de Apple Pay
+### <a name="apple-pay-enhancements"></a>Apple Pay mejoras
 
 Apple ha realizado varias mejoras en Apple Pay en macOS Sierra que permiten al usuario realizar pagos seguros desde sitios Web.
 
-Con macOS Sierra, varias API nuevas se han agregado que funcionan con macOS Sierra, iOS y watchOS para admitir redes de pago dinámico y un nuevo entorno de prueba de espacio aislado.
+Con macOS Sierra, se han agregado varias API nuevas que funcionan con macOS Sierra, iOS y watchos para admitir redes de pago dinámico y un nuevo entorno de prueba de espacio aislado.
 
-macOS Sierra incluye el nuevo marco ApplePay Javascript que permite al desarrollador a incorporar Apple Pay directamente en iOS y macOS sitios Web basados en Safari. Para los sitios Web que admiten Apple Pay, el usuario puede autorizar el pago con su iPhone o Apple Watch.
+macOS Sierra incluye el nuevo marco de JavaScript de ApplePay que permite al desarrollador incorporar Apple Pay directamente en sitios web basados en iOS y macOS Safari. En el caso de los sitios web que admiten Apple Pay, el usuario puede autorizar el pago mediante su iPhone o Apple Watch.
 
-Para obtener más información, consulte Apple [ApplePay JS Framework](https://developer.apple.com/reference/applepayjs) referencia.
+Para obtener más información, consulte la referencia de [.NET Framework de APPLEPAY JS](https://developer.apple.com/reference/applepayjs) .
 
 <a name="Building-Modern-macOS-Apps" />
 
 ### <a name="building-modern-macos-apps"></a>Creación de aplicaciones modernas de macOS
 
-Aplicaciones modernas de macOS como el explorador web Safari de Apple, páginas procesador de textos y números hoja uso abran numerosas tecnologías nuevas para presentar una interfaz de usuario unificada, sensible al contexto que soluciona con elementos de interfaz de usuario tradicionales, como paneles flotantes y varios en Windows.
+Aplicaciones modernas de macOS como el explorador Web de Safari de Apple, páginas procesador de textos de páginas y números de la hoja de distribución usan muchas nuevas tecnologías para presentar una interfaz de usuario unificada y contextual que se encuentra fuera de los elementos de interfaz de usuario tradicionales, como los paneles flotantes y varios abiertos. Windows.
 
-[![Un ejemplo de una ventana con pestañas de Mac](images/content08.png)](images/content08.png#lightbox)
+[![Ejemplo de una ventana de Mac con pestañas](images/content08.png)](images/content08.png#lightbox)
 
-Nuestro [aplicaciones modernas de creación de macOS](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md) guía cubre varias sugerencias, características y técnicas de un desarrollador puede usar para crear una aplicación moderna de macOS en Xamarin.Mac.
+En la guía de [creación de aplicaciones MacOS modernas](~/mac/platform/introduction-to-macos-sierra/modern-cocoa-apps.md) se describen varias sugerencias, características y técnicas que un desarrollador puede usar para compilar una aplicación moderna de MacOS en Xamarin. Mac.
 
 <a name="CloudKit-Data-Sharing" />
 
-### <a name="cloudkit-data-sharing"></a>Uso compartido de datos de CloudKit
+### <a name="cloudkit-data-sharing"></a>Uso compartido de datos CloudKit
 
-Se ha ampliado el marco de trabajo de CloudKit en macOS Sierra para permitir que el usuario rápida y fácilmente compartir registros o conjuntos de registros desde sus bases de datos de iCloud privada.
+El marco de trabajo de CloudKit se ha ampliado en macOS Sierra para permitir que el usuario comparta de forma rápida y sencilla registros o conjuntos de registros de sus bases de datos de iCloud privadas.
 
-CloudKit proporciona una completa interfaz de usuario para enviar y aceptar invitaciones de registro compartidas y el usuario tiene control completo de lectura/escritura a través de las personas que tienen acceso a los registros.
+CloudKit proporciona una interfaz de usuario completa para enviar y aceptar invitaciones de registros compartidos, y el usuario tiene un control completo de lectura y escritura sobre las personas que tienen acceso a los registros.
 
-Para obtener más información, consulte Apple [CloudKit Framework referencia](https://developer.apple.com/reference/clockkit) y [CloudKit JS Framework referencia](https://developer.apple.com/reference/cloudkitjs).
+Para obtener más información, consulte referencia de [CloudKit Framework](https://developer.apple.com/reference/clockkit) de Apple y [referencia de Framework de CloudKit JS](https://developer.apple.com/reference/cloudkitjs).
 
 > [!IMPORTANT]
 > Apple [proporciona herramientas](https://developer.apple.com/support/allowing-users-to-manage-data/) para ayudar a los desarrolladores a tratar correctamente el Reglamento general de protección de datos (RGPD) de la Unión Europea.
 
 <a name="Safari-App-Extensions-Support" />
 
-### <a name="safari-app-extensions-support"></a>Compatibilidad con las extensiones de aplicación de Safari
+### <a name="safari-app-extensions-support"></a>Compatibilidad con las extensiones de aplicación Safari
 
-Extensiones de aplicación de Safari que la aplicación pueda extender el comportamiento del explorador web Safari mientras se integra estrechamente con macOS Sierra. Puesto que las extensiones de aplicación de Safari de macOS funcionan de manera similar a las extensiones de aplicación de Safari de iOS, son fáciles de puerto de un sistema a otro.
+Las extensiones de aplicación Safari permiten a la aplicación ampliar el comportamiento del explorador Web Safari mientras están estrechamente integrados con macOS Sierra. Dado que las extensiones de aplicación de la Safari de macOS funcionan de manera similar a las extensiones de aplicación Safari de iOS, son fáciles de migrar de un sistema a otro.
 
-Para obtener más información, consulte Apple [Guía de programación de extensión de aplicación de Safari](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternetWeb/Conceptual/SafariAppExtension_PG/index.html#//apple_ref/doc/uid/TP40017319).
+Para obtener más información, consulte la guía de programación de la [extensión de aplicación Safari](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternetWeb/Conceptual/SafariAppExtension_PG/index.html#//apple_ref/doc/uid/TP40017319)de Apple.
 
 <a name="Security-and-Privacy-Enhancements" />
 
-### <a name="security-and-privacy-enhancements"></a>Mejoras de seguridad y privacidad
+### <a name="security-and-privacy-enhancements"></a>Mejoras en la seguridad y la privacidad
 
-Apple ha realizado varias mejoras en seguridad y privacidad en macOS Sierra que le ayudarán a la aplicación a mejorar la seguridad de la aplicación y garantizar la privacidad del usuario final incluido lo siguiente:
+Apple ha realizado varias mejoras en la seguridad y la privacidad en macOS Sierra que ayudarán a la aplicación a mejorar la seguridad de la aplicación y a garantizar la privacidad del usuario final, que incluye lo siguiente:
 
-- El nuevo `NSAllowsArbitraryLoadsInWebContent` clave se puede agregar a la aplicación `Info.plist` de archivo y permitirá que las páginas web cargar correctamente mientras la protección de seguridad de transporte de Apple (ATS) todavía está habilitada para el resto de la aplicación.
-- Common Data Security arquitectura (CDSA) API ha quedado desusado y se debe reemplazar con la API SecKey para generar las claves asimétricas.
-- Para todas las conexiones SSL/TLS, el cifrado simétrico de RC4 ahora está deshabilitado de forma predeterminada. Además, la API de transporte seguro ya no admite SSLv3 y se recomienda que la aplicación dejen de usar SHA-1 y 3DES criptografía tan pronto como sea posible.
-- Dado que el Portapapeles nuevo en iOS 10 y macOS Sierra permite al usuario copiar y pegar entre dispositivos, la API se ha ampliado para permitir un Portapapeles se limita a un dispositivo específico y con marca de tiempo se borra automáticamente en un momento dado. Además, mesas de trabajo con nombre ya no se guardan y se deben reemplazar con los contenedores de la mesa de trabajo compartidos.
-- Si la aplicación tiene acceso a datos protegidos (por ejemplo, el calendario del usuario), lo _debe_ declarar dicha intención con la clave del valor de cadena propósito adecuado en su `Info.plist` archivo (`NSCalendarUsageDescription` en el caso del calendario).
-- Signed desarrollador de aplicaciones que no se entrega a través el Store de la aplicación de Mac ahora puede aprovechar las ventajas de CloudKit, iCloud llaves, iCloud Drive, las notificaciones de inserción remota, los derechos MapKit y VPN.
-- macOS Sierra ya no admite la entrega de datos junto con la aplicación de firmante de código en su archivo zip o imagen de disco sin signo o el código externo como no se conoce la ruta de acceso en tiempo de ejecución antes de tiempo de ejecución.
+- La nueva `NSAllowsArbitraryLoadsInWebContent` clave se puede Agregar al archivo de `Info.plist` la aplicación y permitirá que las páginas web se carguen correctamente, mientras que la protección de seguridad de transporte de Apple (ATS) todavía está habilitada para el resto de la aplicación.
+- La API de Common Data Security Architecture (CDSA) ha quedado en desuso y debe reemplazarse por la API de SecKey para generar claves asimétricas.
+- Para todas las conexiones SSL/TLS, el cifrado simétrico RC4 ahora está deshabilitado de forma predeterminada. Además, la API de transporte seguro ya no admite SSLv3 y se recomienda que la aplicación deje de usar la criptografía SHA-1 y 3DES lo antes posible.
+- Dado que el nuevo portapapeles en iOS 10 y macOS Sierra permite al usuario copiar y pegar entre dispositivos, la API se ha expandido para permitir que un portapapeles se limite a un dispositivo específico y que tenga la marca de tiempo para que se borre automáticamente en un momento dado. Además, los portapapeles con nombre ya no se conservan y deben reemplazarse por los contenedores de la mesa de pegada.
+- Si la aplicación tiene acceso a datos protegidos (como el calendario del usuario), _debe_ declarar ese intento con la clave de valor de cadena de propósito correcto `Info.plist` en su`NSCalendarUsageDescription` archivo (en el caso del calendario).
+- Las aplicaciones firmadas para desarrolladores que no se entregan a través de Mac App Store ahora pueden aprovechar las ventajas de CloudKit, la cadena de claves de iCloud, la unidad iCloud, las notificaciones de entrega remotas, los derechos de MapKit y VPN.
+- macOS Sierra ya no admite la entrega de código externo o datos junto con la aplicación de firma de código en su imagen de archivo zip o de disco sin signo, ya que la ruta de acceso en tiempo de ejecución no se conoce antes del tiempo de ejecución.
 
-Además, las aplicaciones que se ejecuta en macOS Sierra (o posterior) debe declarar estáticamente su intención de obtener acceso a características específicas o información de usuario mediante la especificación de uno o más claves específicas de privacidad de sus `Info.plist` archivos que explican al usuario por qué la aplicación quiere obtener acceso.
+Además, las aplicaciones que se ejecutan en MacOS Sierra (o posterior) deben declarar estáticamente su intención de acceder a características específicas o información de usuario especificando una o `Info.plist` más claves específicas de la privacidad en sus archivos que expliquen al usuario por qué la aplicación quiere obtener acceso.
 
-Dado que macOS Sierra comparte estos cambios con iOS 10, consulte nuestra iOS 10 [mejoras de seguridad y privacidad](~/ios/app-fundamentals/security-privacy.md) guía para obtener más información.
+Como macOS Sierra comparte estos cambios con iOS 10, consulte nuestra guía de [mejoras de seguridad y privacidad](~/ios/app-fundamentals/security-privacy.md) de iOS 10 para obtener más información.
 
 <a name="Smart-Card-Driver-Extension-Support" />
 
-### <a name="smart-card-driver-extension-support"></a>Compatibilidad con extensión de controladores de tarjeta inteligente
+### <a name="smart-card-driver-extension-support"></a>Compatibilidad con la extensión de controlador de tarjeta inteligente
 
-Con macOS Sierra, puede crear la aplicación `NSExtension` en función de los controladores de tarjeta inteligente que permite el acceso de solo lectura al contenido de ciertos tipos de tarjetas inteligentes. Esta información se presenta a continuación, dentro de la cadena de claves del sistema (reemplazando el método de la arquitectura de seguridad de datos común en desuso).
+Con MacOS Sierra, la aplicación puede crear `NSExtension` controladores de tarjetas inteligentes basados en que permitan el acceso de solo lectura al contenido de determinados tipos de tarjetas inteligentes. Esta información se presenta en la cadena de claves del sistema (reemplazando el método de arquitectura de seguridad de datos común en desuso).
 
-Para obtener más información, del Declinatoria vea Apple [CryptoTokenKit Framework referencia](https://developer.apple.com/reference/cryptotokenkit).
+para más información, vea la referencia de [CryptoTokenKit Framework](https://developer.apple.com/reference/cryptotokenkit)de Apple.
 
 <a name="Unified-Logging" />
 
-### <a name="unified-logging"></a>Registro unificado
+### <a name="unified-logging"></a>Registro Unificado
 
-Registro unificado proporciona la aplicación con una sola API de mensajería eficaz en todos los niveles del sistema. Con registro unificado de la aplicación tiene un mayor control sobre varios niveles de registro que incluyen controles de privacidad y la actividad de seguimiento para una depuración más sencilla. 
+El Registro Unificado proporciona a la aplicación una única API para la mensajería eficaz en todos los niveles del sistema. Con el Registro Unificado, la aplicación tiene un control exhaustivo de varios niveles de registro que incluyen controles de privacidad y seguimiento de actividades para una depuración más sencilla. 
 
-El registro proporciona correlación automática de los mensajes al seguimiento y registro de actividad se usa juntos.
+El registro proporciona la correlación automática de mensajes cuando se usan conjuntamente el seguimiento y el registro de la actividad.
 
-macOS Sierra incluye una nueva aplicación de consola (en aplicaciones/utilidades) que es capaz de mostrar los datos de registro de varios orígenes, incluidos los dispositivos conectados. También es compatible con las búsquedas guardadas y con tokens y muestra las conexiones entre los mensajes relacionados en varios procesos.
+macOS Sierra incluye una nueva aplicación de consola (en aplicaciones y utilidades) que puede mostrar datos de registro de varios orígenes, incluidos los dispositivos conectados. También admite búsquedas con tokens y guardadas y muestra las conexiones entre los mensajes relacionados entre varios procesos.
 
-Además, los mensajes de registro se pueden ver y mantienen mediante herramientas de línea de comandos.
+Además, los mensajes de registro se pueden ver y mantener mediante herramientas de línea de comandos.
 
-Para obtener más información, consulte Apple [referencia registro](https://developer.apple.com/reference/os/1891852-logging).
+Para obtener más información, consulte la [referencia de registro](https://developer.apple.com/documentation/os/logging)de Apple.
 
 <a name="Wide-Color" />
 
 ### <a name="wide-color"></a>Color amplio
 
-macOS Sierra amplía la compatibilidad con formatos de píxel de rango ampliado y espacios de la amplia gama de colores en todo el sistema incluidos marcos como gráficos de Core, imagen básica, sistema operativo y AVFoundation. Compatibilidad con dispositivos con pantallas a color amplia es aún más disminuido proporcionando este comportamiento a lo largo de la pila de gráficos completa.
+macOS Sierra amplía la compatibilidad con los formatos de píxeles de rango extendido y los espacios de colores de amplia gama en todo el sistema, incluidos los marcos como los gráficos principales, la imagen principal, el metal y el AVFoundation. La compatibilidad con dispositivos con pantallas de color ancho se facilita aún más proporcionando este comportamiento en toda la pila de gráficos.
 
-Además, `AppKit` se ha modificado para que funcione en el nuevo extendidos **sRGB** espacio de color, lo que facilita la combinación de colores en gamas de color amplia sin pérdida de rendimiento significativas.
+Además, `AppKit` se ha modificado para que funcione en el nuevo **sRGB** ColorSpace ampliado, lo que facilita la combinación de colores en gamas de colores anchos sin pérdida significativa de rendimiento.
 
-Apple ofrece las siguientes prácticas recomendadas al trabajar con colores amplios:
+Apple ofrece las siguientes prácticas recomendadas al trabajar con colores anchos:
 
-- `NSColor` Ahora se utiliza espacio de color sRGB y se dejará de fijar los valores para el `0.0` a `1.0` intervalo. Si la aplicación se basa en el comportamiento de bloqueo anterior, deberá modificarse para macOS Sierra.
-- Cuando se usa una API de bajo nivel como gráficos básicos o sistema operativo para proporcionar procesamiento de imágenes, la aplicación debe usar un rango extendido píxeles y el espacio de formato de color que es compatible con los valores de punto flotante de 16 bits. En caso necesario, la aplicación deberá fijar manualmente los valores de componentes de color.
-- Gráficos básicos, imagen Core y los sombreadores de rendimiento de sistema operativo proporcionan nuevos métodos para la conversión entre los espacios de dos colores.
+- `NSColor`ahora usa el espacio de color sRGB y dejará de fijar valores en `0.0` el `1.0` intervalo para. Si la aplicación se basa en el comportamiento de la abrazadera anterior, deberá modificarla para macOS Sierra.
+- Cuando se usa una API de bajo nivel como gráficos principales o metal para proporcionar el procesamiento de imágenes, la aplicación debe usar un espacio de colores extendido y un formato de píxel que admita valores de punto flotante de 16 bits. Cuando sea necesario, la aplicación tendrá que fijar manualmente los valores de componente de color.
+- Los gráficos principales, los sombreadores de imagen principal y de rendimiento de metal proporcionan nuevos métodos para la conversión entre los dos espacios de color.
 
-Para obtener más información, consulte nuestra [Introducción a Color amplia](~/ios/platform/wide-color.md) guía.
+Para obtener más información, consulte la guía [de introducción a la amplia gama de colores](~/ios/platform/wide-color.md) .
 
 <a name="Additional-Framework-Changes" />
 
-## <a name="additional-framework-changes"></a>Cambios de marco de trabajo adicionales
+## <a name="additional-framework-changes"></a>Cambios adicionales en el marco de trabajo
 
-Además de los cambios en la plataforma principal y adiciones enumeradas anteriormente, Apple ha realizado muchos cambios de marco secundarias adicionales en macOS Sierra.
+Además de los principales cambios en el marco de trabajo y las adiciones enumeradas anteriormente, Apple ha realizado muchos cambios en el marco de trabajo más pequeños en macOS Sierra.
 
-Para obtener más información, consulte nuestra [cambios adicionales de Framework](~/mac/platform/introduction-to-macos-sierra/additional-framework-changes.md) guía.
+Para obtener más información, consulte nuestra guía [adicional de cambios](~/mac/platform/introduction-to-macos-sierra/additional-framework-changes.md) en el marco de trabajo.
 
 <a name="Deprecated-APIs" />
 
 ## <a name="deprecated-apis"></a>Interfaces API desusadas
 
-Las API siguientes han quedado obsoletas en macOS Sierra:
+Las siguientes API están desusadas en macOS Sierra:
 
-- El sistema de archivos estándar HFS ya no se admite.
+- Ya no se admite el sistema de archivos HFS estándar.
 
-Consulte Apple [v10.12 OS X de diferencias de API](https://developer.apple.com/library/prerelease/content/releasenotes/Miscellaneous/APIDiffsMacOS10_12/index.html) documentación para obtener una lista completa de cambios y elementos obsoletos.
+Consulte la documentación sobre diferencias de la [API de MacOS v 10.12](https://developer.apple.com/library/archive/releasenotes/General/APIDiffsMacOS10_12/index.html) de Apple para obtener una lista completa de los cambios y las desuso.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplos de Mac](https://developer.xamarin.com/samples/mac/)
-- [Novedades en OS X 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)
+- [Novedades de macOS 10,12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)
