@@ -90,7 +90,7 @@ El `FinishedLaunching` método realiza las siguientes tareas:
 
 Una vez el `FinishedLaunching` ha ejecutado el método, definido por la interfaz de usuario en Xamarin.Forms `NotesPage` clase se mostrará como se muestra en la captura de pantalla siguiente:
 
-[ ![Captura de pantalla de una aplicación de Xamarin. iOS que usa una interfaz de usuario definida en]la(native-forms-images/ios-notespage.png "aplicación de XAMARIN. iOS de XAML con una interfaz de usuario XAML") ] (native-forms-images/ios-notespage-large.png#lightbox "Aplicación Xamarin. iOS con una interfaz de usuario XAML")
+[ ![Captura de pantalla de una aplicación de Xamarin. iOS que usa una interfaz de usuario definida en](native-forms-images/ios-notespage.png " la aplicación de XAMARIN. iOS de XAML con una interfaz de usuario XAML")](native-forms-images/ios-notespage-large.png#lightbox " Aplicación Xamarin. iOS con una interfaz de usuario XAML")
 
 La interacción con la interfaz de usuario, por ejemplo, al **+** puntear en [`Button`](xref:Xamarin.Forms.Button), dará como resultado el siguiente controlador `NotesPage` de eventos en la ejecución del código subyacente:
 
@@ -117,7 +117,7 @@ public void NavigateToNoteEntryPage(Note note)
 
 El `NavigateToNoteEntryPage` método convierte Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-derivados de la página para un `UIViewController` con el `CreateViewController` método de extensión y los conjuntos de la `Title` propiedad de la `UIViewController`. El `UIViewController` , a continuación, se inserta en `UINavigationController` por el `PushViewController` método. Por lo tanto, se define la interfaz de usuario en Xamarin.Forms `NoteEntryPage` clase se mostrará como se muestra en la captura de pantalla siguiente:
 
-[ ![Captura de pantalla de una aplicación de Xamarin. iOS que usa una interfaz de usuario definida en]la(native-forms-images/ios-noteentrypage.png "aplicación de XAMARIN. iOS de XAML con una interfaz de usuario XAML") ] (native-forms-images/ios-noteentrypage-large.png#lightbox "Aplicación Xamarin. iOS con una interfaz de usuario XAML")
+[![Captura de pantalla de una aplicación de Xamarin. iOS que usa una interfaz de usuario definida en](native-forms-images/ios-noteentrypage.png " la aplicación de XAMARIN. iOS de XAML con una interfaz de usuario XAML")](native-forms-images/ios-noteentrypage-large.png#lightbox "Aplicación Xamarin. iOS con una interfaz de usuario XAML")
 
 Cuando el `NoteEntryPage` se muestra, puntee en la parte posterior flecha se mostrará el mensaje el `UIViewController` para el `NoteEntryPage` clase desde el `UINavigationController`, devolver al usuario la `UIViewController` para el `NotesPage` clase.
 
@@ -173,7 +173,7 @@ Para obtener más información sobre los fragmentos, vea [fragmentos](~/android/
 
 Una vez el `OnCreate` ha ejecutado el método, definido por la interfaz de usuario en Xamarin.Forms `NotesPage` clase se mostrará como se muestra en la captura de pantalla siguiente:
 
-[ ![Captura de pantalla de una aplicación de Xamarin. Android que usa una interfaz de usuario definida en]la(native-forms-images/android-notespage.png "aplicación de XAMARIN. Android de XAML con una interfaz de usuario XAML") ] (native-forms-images/android-notespage-large.png#lightbox "Aplicación Xamarin. Android con una interfaz de usuario XAML")
+[![Captura de pantalla de una aplicación de Xamarin. Android que usa una interfaz de usuario definida en](native-forms-images/android-notespage.png "la aplicación de XAMARIN. Android de XAML con una interfaz de usuario XAML")](native-forms-images/android-notespage-large.png#lightbox "Aplicación Xamarin. Android con una interfaz de usuario XAML")
 
 La interacción con la interfaz de usuario, por ejemplo, al **+** puntear en [`Button`](xref:Xamarin.Forms.Button), dará como resultado el siguiente controlador `NotesPage` de eventos en la ejecución del código subyacente:
 
@@ -203,7 +203,7 @@ public void NavigateToNoteEntryPage(Note note)
 
 El `NavigateToNoteEntryPage` método convierte Xamarin.Forms [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-derivados de la página a un `Fragment` con el `CreateSupportFragment` método de extensión y agrega el `Fragment` al fragmento de la pila de retroceso. Por lo tanto, se define la interfaz de usuario en Xamarin.Forms `NoteEntryPage` se mostrará como se muestra en la captura de pantalla siguiente:
 
-[ ![Captura de pantalla de una aplicación de Xamarin. Android que usa una interfaz de usuario definida en]la(native-forms-images/android-noteentrypage.png "aplicación de XAMARIN. Android de XAML con una interfaz de usuario XAML") ] (native-forms-images/android-noteentrypage-large.png#lightbox "Aplicación Xamarin. Android con una interfaz de usuario XAML")
+[![Captura de pantalla de una aplicación de Xamarin. Android que usa una interfaz de usuario definida en](native-forms-images/android-noteentrypage.png "la aplicación de XAMARIN. Android de XAML con una interfaz de usuario XAML")](native-forms-images/android-noteentrypage-large.png#lightbox "Aplicación Xamarin. Android con una interfaz de usuario XAML")
 
 Cuando el `NoteEntryPage` se muestra, puntee en la parte posterior flecha se mostrará el mensaje el `Fragment` para el `NoteEntryPage` desde la pila de retroceso del fragmento, devolver al usuario la `Fragment` para el `NotesPage` clase.
 
@@ -290,7 +290,7 @@ El `MainPage` constructor realiza las siguientes tareas:
 
 Una vez el `MainPage` ha ejecutado el constructor, definido por la interfaz de usuario en Xamarin.Forms `NotesPage` clase se mostrará como se muestra en la captura de pantalla siguiente:
 
-[ ![Captura de pantalla de una aplicación de UWP que usa una interfaz de usuario definida con la aplicación de UWP de Xamarin. Forms XAML](native-forms-images/uwp-notespage.png "con una interfaz de usuario XAML de Xamarin. Forms") ] (native-forms-images/uwp-notespage-large.png#lightbox "Aplicación para UWP con una interfaz de usuario XAML de Xamarin. Forms")
+[![Captura de pantalla de una aplicación de UWP que usa una interfaz de usuario definida con la aplicación de UWP de Xamarin. Forms XAML](native-forms-images/uwp-notespage.png "con una interfaz de usuario XAML de Xamarin. Forms")](native-forms-images/uwp-notespage-large.png#lightbox "Aplicación para UWP con una interfaz de usuario XAML de Xamarin. Forms")
 
 La interacción con la interfaz de usuario, por ejemplo, al **+** puntear en [`Button`](xref:Xamarin.Forms.Button), dará como resultado el siguiente controlador `NotesPage` de eventos en la ejecución del código subyacente:
 
@@ -315,7 +315,7 @@ public void NavigateToNoteEntryPage(Note note)
 
 Navegación en UWP se suele realizar con la `Frame.Navigate` método, que toma un `Page` argumento. Xamarin.Forms define una `Frame.Navigate` método de extensión que toma un [ `ContentPage` ](xref:Xamarin.Forms.ContentPage)-derivados de la instancia de la página. Por lo tanto, cuando el `NavigateToNoteEntryPage` método se ejecuta, la interfaz de usuario definido en Xamarin.Forms `NoteEntryPage` se mostrará como se muestra en la captura de pantalla siguiente:
 
-[ ![Captura de pantalla de una aplicación de UWP que usa una interfaz de usuario definida con la aplicación de UWP de Xamarin. Forms XAML](native-forms-images/uwp-noteentrypage.png "con una interfaz de usuario XAML de Xamarin. Forms") ] (native-forms-images/uwp-noteentrypage-large.png#lightbox "Aplicación para UWP con una interfaz de usuario XAML de Xamarin. Forms")
+[![Captura de pantalla de una aplicación de UWP que usa una interfaz de usuario definida con la aplicación de UWP de Xamarin. Forms XAML](native-forms-images/uwp-noteentrypage.png "con una interfaz de usuario XAML de Xamarin. Forms")](native-forms-images/uwp-noteentrypage-large.png#lightbox "Aplicación para UWP con una interfaz de usuario XAML de Xamarin. Forms")
 
 Cuando el `NoteEntryPage` se muestra, puntee en la parte posterior flecha se mostrará el mensaje el `FrameworkElement` para el `NoteEntryPage` desde la pila de retroceso de la aplicación, se devuelve al usuario la `FrameworkElement` para el `NotesPage` clase.
 
