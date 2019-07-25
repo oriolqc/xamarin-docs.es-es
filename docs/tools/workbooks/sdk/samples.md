@@ -24,7 +24,7 @@ El ejemplo de receptor de cocina muestra ambos conjuntos de conceptos:
 * Los fragmentos de representación muestran cómo usar `RepresentationManager` para mejorar la representación mediante el uso de las representaciones integradas.
 * El `Person` objeto y su representador JavaScript asociado se muestra cómo usar `ISerializableObject` sin pasar por un proveedor de representación.
 
-Consulte también [SkiaSharp] [ skiasharp] para un ejemplo del mundo real de una integración que usa existente [representaciones](~/tools/workbooks/sdk/representations.md) proporcionados por Xamarin Workbooks para representar sus tipos.
+Consulte también [SkiaSharp][skiasharp] para un ejemplo del mundo real de una integración que usa existente [representaciones](~/tools/workbooks/sdk/representations.md) proporcionados por Xamarin Workbooks para representar sus tipos.
 
 [KitchenSink]: https://github.com/xamarin/Workbooks/tree/master/SDK/Samples/KitchenSink
 [skiasharp]: https://github.com/mono/SkiaSharp/tree/master/source/SkiaSharp.Workbooks
