@@ -1,31 +1,31 @@
 ---
-title: Xamarin.Mac - macOS Sierra solución de problemas
-description: Este documento proporciona varias sugerencias de solución de problemas para trabajar con macOS Sierra en aplicaciones de Xamarin.Mac. Sugerencias relacionadas con el Store de la aplicación de Mac, Apple Pay, compatibilidad binaria, CFNetwork, CloudKit y mucho más.
+title: 'Xamarin. Mac: solución de problemas de macOS Sierra'
+description: En este documento se proporcionan varias sugerencias para la solución de problemas para trabajar con macOS Sierra en aplicaciones de Xamarin. Mac. Las sugerencias se relacionan con Mac App Store, Apple Pay, compatibilidad binaria, CFNetwork, CloudKit, etc.
 ms.prod: xamarin
 ms.assetid: 323DD5EE-87CE-48E4-B234-1CF61B45A019
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 09/22/2016
-ms.openlocfilehash: 322acff3279d0513266c7d9883726cac726334f7
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 3bb2acd5ef560afa787c2746133c05066a15cf9e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830555"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511796"
 ---
-# <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin.Mac - macOS Sierra solución de problemas
+# <a name="xamarinmac---macos-sierra-troubleshooting"></a>Xamarin. Mac: solución de problemas de macOS Sierra
 
-_En este artículo proporciona varias sugerencias de solución de problemas para trabajar con macOS Sierra en aplicaciones de Xamarin.Mac._
+_En este artículo se proporcionan varias sugerencias para la solución de problemas para trabajar con macOS Sierra en aplicaciones de Xamarin. Mac._
 
-Las siguientes secciones enumeran algunos problemas conocidos que pueden producirse al usar macOS Sierra con Xamarin.mac y la solución a estos problemas:
+En las secciones siguientes se enumeran algunos problemas conocidos que pueden producirse al usar macOS Sierra con Xamarin. Mac y la solución para estos problemas:
 
 - [App Store](#App-Store)
 - [Apple Pay](#Apple-Pay)
 - [Compatibilidad binaria](#Binary-Compatibility)
-- [Protocolo HTTP de CFNetwork](#CFNetwork-HTTP-Protocol)
+- [Protocolo HTTP CFNetwork](#CFNetwork-HTTP-Protocol)
 - [CloudKit](#CloudKit)
-- [Imagen de Core](#CoreImage)
+- [Imagen principal](#CoreImage)
 - [Notificaciones](#Notifications)
 - [NSUserActivity](#NSUserActivity)
 - [Safari](#Safari)
@@ -36,14 +36,14 @@ Las siguientes secciones enumeran algunos problemas conocidos que pueden produci
 
 Problemas conocidos:
 
-- Al probar las compras de la aplicación en el entorno de recinto de seguridad, el cuadro de diálogo de autenticación puede aparecer dos veces.
-- Al probar las compras de la aplicación con contenido hospedado en el entorno de recinto de seguridad, aparecerá el cuadro de diálogo de contraseña cada vez que la aplicación se pone en primer plano hasta que se complete la descarga de contenido.
+- Al probar las compras desde la aplicación en el entorno de espacio aislado, el cuadro de diálogo de autenticación puede aparecer dos veces.
+- Al probar compras desde la aplicación con contenido hospedado en el entorno de espacio aislado, el cuadro de diálogo de contraseña aparecerá cada vez que la aplicación se ponga en primer plano hasta que se complete la descarga de contenido.
 
 <a name="Apple-Pay" />
 
 ## <a name="apple-pay"></a>Apple Pay
 
-Si se introduce una expiración incorrectos fecha o seguridad de código (CW) al agregar una nueva tarjeta de pago a Apple Pay, se terminará el proceso de aprovisionamiento de tarjeta.
+Si se especifica una fecha de expiración o un código de seguridad (CW) incorrectos al agregar una nueva tarjeta de pago a Apple Pay, se terminará el proceso de aprovisionamiento de tarjeta.
 
 <a name="Binary-Compatibility" />
 
@@ -51,54 +51,48 @@ Si se introduce una expiración incorrectos fecha o seguridad de código (CW) al
 
 Problemas conocidos:
 
-- Una llamada a `NSObject.ValueForKey` le un `null` clave producirá una excepción.
-- Ambos `NSURLSession` y `NSURLConnection` RC4 ya no los conjuntos de cifrado de durante el protocolo de enlace TLS para `http://` direcciones URL.
-- Las aplicaciones pueden dejar de responder si se modifica la geometría de la supervista en uno el `ViewWillLayoutSubviews` o `LayoutSubviews` métodos.
-- Para todas las conexiones SSL/TLS, el cifrado simétrico de RC4 ahora está deshabilitado de forma predeterminada. Además, la API de transporte seguro ya no admite SSLv3 y se recomienda que la aplicación dejen de usar SHA-1 y 3DES criptografía tan pronto como sea posible.
+- Si `NSObject.ValueForKey` se llama `null` a, se producirá una excepción en una clave.
+- Y ya no son conjuntos de cifrado RC4 durante el protocolo de `http://` enlace TLS para direcciones URL. `NSURLConnection` `NSURLSession`
+- Las aplicaciones pueden bloquearse si modifican la geometría de una supervista `ViewWillLayoutSubviews` en `LayoutSubviews` los métodos o.
+- Para todas las conexiones SSL/TLS, el cifrado simétrico RC4 ahora está deshabilitado de forma predeterminada. Además, la API de transporte seguro ya no admite SSLv3 y se recomienda que la aplicación deje de usar la criptografía SHA-1 y 3DES lo antes posible.
 
 <a name="CFNetwork-HTTP-Protocol" />
 
-## <a name="cfnetwork-http-protocol"></a>Protocolo HTTP de CFNetwork
+## <a name="cfnetwork-http-protocol"></a>Protocolo HTTP CFNetwork
 
-El `HTTPBodyStream` propiedad de la `NSMutableURLRequest` clase debe establecerse en un flujo sin abrir desde `NSURLConnection` y `NSURLSession` ahora estrictamente aplicar este requisito.
+La `HTTPBodyStream` propiedad de la `NSMutableURLRequest` clase se debe establecer en un flujo no abierto ya que `NSURLConnection` y `NSURLSession` ahora exigen estrictamente este requisito.
 
 <a name="CloudKit" />
 
 ## <a name="cloudkit"></a>CloudKit
 
-Las operaciones de larga ejecución devolverá una _"No tiene permiso para guardar el archivo"._ Error.
+Las operaciones de ejecución prolongada devolverán un _"no tiene permiso para guardar el archivo"._ error.
 
 <a name="CoreImage" />
 
-## <a name="core-image"></a>Imagen de Core
+## <a name="core-image"></a>Imagen principal
 
-El `CIImageProcessor` API ahora admite un número arbitrario de imagen de entrada. `CIImageProcessor` Se quitarán las API que se incluyó en la versión beta 1 de Sierra de macOS.
+La `CIImageProcessor` API ahora es compatible con un recuento de imágenes de entrada arbitrarias. `CIImageProcessor`Se quitará la API que se incluyó en macOS Sierra beta 1.
 
 <a name="Notifications" />
 
 ## <a name="notifications"></a>Notificaciones
 
-Cuando se trabaja con las extensiones de contenido de notificación, los controladores de vista no se libera correctamente y puede dar lugar a un bloqueo cuando se alcanzan los límites de memoria de extensión.
+Cuando se trabaja con extensiones de contenido de notificación, los controladores de vista no se liberan correctamente y pueden provocar un bloqueo cuando se alcanzan los límites de memoria de la extensión.
 
 <a name="NSUserActivity" />
 
 ## <a name="nsuseractivity"></a>NSUserActivity
 
-Después de una operación de entrega, el `UserInfo` propiedad de un `NSUserActivity` el objeto puede estar vacío. Llamar explícitamente a `BecomeCurrent` `NSUserActivity` objeto como solución alternativa actual.
+Después de una operación de entrega `UserInfo` , la propiedad `NSUserActivity` de un objeto puede estar vacía. Llame explícitamente al `BecomeCurrent` `NSUserActivity` objeto como solución alternativa actual.
 
 <a name="Safari" />
 
 ## <a name="safari"></a>Safari
 
-Requiere un seguro WebGeolocation (`https://`) dirección URL para que funcione en iOS 10 y macOS Sierra para evitar el uso malintencionado de los datos de ubicación.
-
-
-
-
-
-
+WebGeolocation requiere una dirección URL`https://`segura () para trabajar tanto en iOS 10 como en MacOS Sierra para evitar el uso malintencionado de datos de ubicación.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Ejemplos de Mac](https://developer.xamarin.com/samples/mac/)
-- [Novedades en OS X 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)
+- [Novedades de macOS 10,12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

@@ -7,12 +7,12 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
-ms.openlocfilehash: cfa96273b6c23d755925b08c9daec22c94627be7
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c93441bff02322fb938a67806ba7f5163c8c969e
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61088927"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511904"
 ---
 # <a name="three-ways-to-draw-an-arc"></a>Tres maneras de dibujar un arco
 
@@ -38,7 +38,7 @@ public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
 public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean forceMoveTo)
 ```
 
-Estos métodos son idénticos a la de Android [ `AddArc` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) y [ `ArcTo` ](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) métodos. IOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) método es similar pero está restringido a arcos de la circunferencia de un círculo en lugar de generalizarse para una elipse.
+Estos métodos son idénticos a los [`AddArc`](xref:Android.Graphics.Path.AddArc*) métodos Android`ArcTo`y [] XREF: Android. Graphics. Path. ArcTo *). IOS [ `AddArc` ](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) método es similar pero está restringido a arcos de la circunferencia de un círculo en lugar de generalizarse para una elipse.
 
 Ambos métodos comienzan por un `SKRect` valor que define la ubicación y el tamaño de una elipse:
 
@@ -58,7 +58,7 @@ La curva que se agrega a la ruta de acceso con el `AddArc` o `ArcTo` método es 
 
 ![](arcs-images/anglearc.png "El arco ángulo por sí mismo")
 
-El `startAngle` o `sweepAngle` los argumentos pueden ser negativos: El arco es hacia la derecha para los valores positivos de `sweepAngle` y hacia la izquierda para los valores negativos.
+Los `startAngle` argumentos `sweepAngle` o pueden ser negativos: El arco está en el sentido de las `sweepAngle` agujas del reloj para los valores positivos y en el sentido contrario a las agujas del reloj.
 
 Sin embargo, `AddArc` does *no* definir un contorno cerrado. Si se llama a `LineTo` después `AddArc`, se dibuja una línea desde el final del arco hasta el punto en el `LineTo` método y el mismo puede decirse `ArcTo`.
 
@@ -521,7 +521,7 @@ Si, a continuación, se coloca esta elipse superpuesta para que toca los dos pun
 
 ![](arcs-images/ellipticalarcellipse1.png "El primer conjunto de arcos elípticos")
 
-Estos dos arcos se pueden distinguir de dos maneras: El arco superior es mayor que el arco de la parte inferior y, como se dibuja el arco de izquierda a derecha, superior se dibuja en sentido mientras la parte inferior se dibuja en una dirección hacia la izquierda.
+Estos dos arcos se pueden distinguir de dos maneras: El arco superior es mayor que el arco inferior y, a medida que el arco se dibuja de izquierda a derecha, el arco superior se dibuja en sentido de las agujas del reloj mientras el arco inferior se dibuja en una dirección en sentido contrario a las agujas del reloj.
 
 También es posible ajustar la elipse entre los dos puntos de otro modo:
 
@@ -535,10 +535,10 @@ Estos dos puntos, por tanto, se pueden conectar mediante un arco definido por la
 
 Estos cuatro arcos se distinguen por las cuatro combinaciones de la [ `SKPathArcSize` ](xref:SkiaSharp.SKPathArcSize) y [ `SKPathDirection` ](xref:SkiaSharp.SKPathDirection) argumentos de tipo de enumeración para el `ArcTo` método:
 
-- rojo: SKPathArcSize.Large y SKPathDirection.Clockwise
-- verde: SKPathArcSize.Small y SKPathDirection.Clockwise
-- azul: SKPathArcSize.Small y SKPathDirection.CounterClockwise
-- magenta: SKPathArcSize.Large y SKPathDirection.CounterClockwise
+- alerta SKPathArcSize. Large y SKPathDirection. en el sentido de las agujas del reloj
+- verde SKPathArcSize. Small y SKPathDirection. en el sentido de las agujas del reloj
+- azul SKPathArcSize. Small y SKPathDirection. en sentido contrario a las agujas del reloj
+- magenta: SKPathArcSize. Large y SKPathDirection. en sentido contrario a las agujas del reloj
 
 Si la elipse superpuesta no es suficientemente grande como para ajustarla entre los dos puntos, se escala uniformemente hasta que sea lo suficientemente grande. Solo dos arcos únicos conectan los dos puntos en ese caso. Estos se pueden distinguir con el `SKPathDirection` parámetro.
 

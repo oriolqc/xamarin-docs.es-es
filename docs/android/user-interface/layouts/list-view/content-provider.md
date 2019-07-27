@@ -6,19 +6,19 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: d1ec628de3481820f320a5a8e6ef88fcbaab75a6
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 142541dcc35b55e43b54eeb729c486ac9fc88b54
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61189742"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510073"
 ---
-# <a name="using-a-contentprovider"></a>Uso de ContentProvider
+# <a name="using-a-contentprovider-with-xamarinandroid"></a>Uso de un ContentProvider con Xamarin. Android
 
-CursorAdapters también puede utilizarse para mostrar los datos de un ContentProvider.
-ContentProviders permiten tener acceso a los datos expuestos por otras aplicaciones (incluidos los datos del sistema de Android como contactos, información de calendario y multimedia).
+CursorAdapters también se puede usar para mostrar los datos de un ContentProvider.
+ContentProviders le permiten tener acceso a los datos expuestos por otras aplicaciones (incluidos los datos del sistema Android como contactos, información multimedia y calendario).
 
-Es la mejor manera de obtener acceso a un ContentProvider con un CursorLoader mediante el LoaderManager. LoaderManager se introdujo en Android 3.0 (API nivel 11, Honeycomb) para mover las tareas bloqueos desactivado el subproceso principal, y utilizando un CursorLoader permite que los datos se cargue en un subproceso antes de que se enlaza a un ListView para mostrar.
+La mejor manera de tener acceso a un ContentProvider es con un CursorLoader mediante LoaderManager. LoaderManager se presentó en Android 3,0 (nivel de API 11, Honeycomb) para quitar las tareas de bloqueo del subproceso principal y el uso de CursorLoader permite cargar los datos en un subproceso antes de enlazarlos a un control ListView para su presentación.
 
 Consulte [Introducción a ContentProviders](~/android/platform/content-providers/index.md) para obtener más información.
 

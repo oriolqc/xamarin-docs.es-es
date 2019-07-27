@@ -1,36 +1,36 @@
 ---
-title: Servicios de intención en Xamarin.Android
+title: Servicios de intención en Xamarin. Android
 ms.prod: xamarin
 ms.assetid: A5B86FE4-C8E2-4B0A-84CA-EF8F5119E31B
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/16/2018
-ms.openlocfilehash: 1301f34ad1f7a0069c542ba81bf237a673fd239d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4c868623ae08ac1366c1c9ea55c8d635f0a6a061
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61013144"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509135"
 ---
-# <a name="intent-services-in-xamarinandroid"></a>Servicios de intención en Xamarin.Android
+# <a name="intent-services-in-xamarinandroid"></a>Servicios de intención en Xamarin. Android
 
-## <a name="intent-services-overview"></a>Información general de servicios de intención
+## <a name="intent-services-overview"></a>Información general sobre servicios de intención
 
-Ambos había iniciado y enlaza los servicios se ejecuten en el subproceso principal, lo que significa que para mantener el rendimiento sin problemas, un servicio necesita para realizar el trabajo de forma asincrónica. Una de las maneras más sencillas para solucionar este problema es con un _patrón del procesador de cola de trabajo_, donde se coloca el trabajo se realice en una cola que atiende un único subproceso. 
+Tanto los servicios iniciados como los enlazados se ejecutan en el subproceso principal, lo que significa que para mantener el rendimiento sin problemas, un servicio necesita realizar el trabajo de forma asincrónica. Una de las formas más sencillas de solucionar este problema es con un _patrón de procesador de cola de trabajo_, en el que el trabajo que se va a hacer se coloca en una cola a la que presta servicio un solo subproceso.
 
-El [ `IntentService` ](https://developer.xamarin.com/api/type/Android.App.IntentService/) es una subclase de la `Service` clase que proporciona una implementación específica de Android de este patrón. Que va a administrar el trabajo de puesta en cola, inicia un subproceso de trabajo para atender la cola, y las solicitudes de extracción desactivada la cola para ejecutarse en el subproceso de trabajo. Un `IntentService` silenciosamente dejarán de sí mismo y quitar el subproceso de trabajo cuando no hay ningún trabajo más en la cola.
- 
-Se envía un trabajo a la cola mediante la creación de un `Intent` y, a continuación, pasando que `Intent` a la `StartService` método.
+Es una subclase de la `Service` clase que proporciona una implementación específica de Android de este patrón. [`IntentService`](xref:Android.App.IntentService) Administrará el trabajo de puesta en cola, iniciará un subproceso de trabajo para atender la cola y eliminará las solicitudes de la cola que se va a ejecutar en el subproceso de trabajo. Un `IntentService` se detendrá de forma silenciosa y quitará el subproceso de trabajo cuando no haya más trabajo en la cola.
 
-No es posible detener o interrumpir la `OnHandleIntent` método `IntentService` mientras está en funcionamiento. Debido a este diseño, un `IntentService` deben mantenerse sin estado &ndash; no debe confiar en una conexión activa o la comunicación desde el resto de la aplicación. Un `IntentService` está pensado para statelessly procesar las solicitudes de trabajo.
+Para enviar el trabajo a la cola, se `Intent` crea y, a `Intent` continuación, `StartService` se pasa al método.
 
-Hay dos requisitos para la creación de subclases `IntentService`:
+No es posible detener o interrumpir el `OnHandleIntent` método `IntentService` mientras está funcionando. Debido a este diseño, `IntentService` debe mantenerse &ndash; sin estado y no debe basarse en una conexión activa o en una comunicación desde el resto de la aplicación. Una `IntentService` está pensada para statelessly procesar las solicitudes de trabajo.
 
-1. El nuevo tipo (creado por la creación de subclases `IntentService`) solo invalida la `OnHandleIntent` método.
-2. El constructor para el nuevo tipo requiere una cadena que se usa para denominar el subproceso de trabajo que va a controlar las solicitudes. El nombre de este subproceso de trabajo se utiliza principalmente al depurar la aplicación.
+Existen dos requisitos para la subclase `IntentService`:
 
-El código siguiente muestra un `IntentService` implementación con invalidado `OnHandleIntent` método:
+1. El nuevo tipo (creado por la creación de `IntentService`subclases) solo invalida `OnHandleIntent` el método.
+2. El constructor del nuevo tipo requiere una cadena que se usa para asignar un nombre al subproceso de trabajo que controlará las solicitudes. El nombre de este subproceso de trabajo se usa principalmente al depurar la aplicación.
+
+En el código siguiente se `IntentService` muestra una implementación con el `OnHandleIntent` método invalidado:
 
 ```csharp
 [Service]
@@ -39,7 +39,7 @@ public class DemoIntentService: IntentService
     public DemoIntentService () : base("DemoIntentService")
     {
     }
-    
+
     protected override void OnHandleIntent (Android.Content.Intent intent)
     {
         Console.WriteLine ("perform some long running work");
@@ -49,7 +49,7 @@ public class DemoIntentService: IntentService
 }
 ```
 
-Trabajo se envía a un `IntentService` creando un `Intent` y, a continuación, llamar a la [ `StartService` ](https://developer.xamarin.com/api/member/Android.Content.Context.StartService/p/Android.Content.Intent/) método con dicha intención como un parámetro. La intención se pasarán al servicio como un parámetro en el `OnHandleIntent` método. Este fragmento de código es un ejemplo de enviar una solicitud de trabajo a una intención: 
+El trabajo se envía a `IntentService` una instancia `Intent` de y, a continuación, [`StartService`](xref:Android.Content.Context.StartService*) llama al método con esa intención como parámetro. La intención se pasará al servicio como un parámetro en el `OnHandleIntent` método. Este fragmento de código es un ejemplo de envío de una solicitud de trabajo a un intento: 
 
 ```csharp
 // This code might be called from within an Activity, for example in an event
@@ -63,19 +63,18 @@ downloadIntent.Put
 StartService(downloadIntent);
 ```
 
-El `IntentService` puede extraer los valores de la intención, como se muestra en este fragmento de código:  
+`IntentService` Puede extraer los valores de la intención, tal como se muestra en este fragmento de código:  
 
 ```csharp
 protected override void OnHandleIntent (Android.Content.Intent intent)
 {
     string fileToDownload = intent.GetStringExtra("file_to_download");
-    
+
     Log.Debug("DemoIntentService", $"File to download: {fileToDownload}.");
 }
 ```
 
-
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [IntentService](https://developer.xamarin.com/api/type/Android.App.IntentService/)
-- [StartService](https://developer.xamarin.com/api/member/Android.Content.Context.StartService/p/Android.Content.Intent/)
+- [IntentService](xref:Android.App.IntentService)
+- [StartService](xref:Android.Content.Context.StartService*)

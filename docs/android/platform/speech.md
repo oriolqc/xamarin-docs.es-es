@@ -1,57 +1,57 @@
 ---
 title: Voz de Android
-description: En este artículo se trata los aspectos básicos del uso del espacio de nombres de Android.Speech muy eficaz. Desde sus inicios, Android ha sido capaz de reconocer la voz y pasar los resultados como texto. Es un proceso relativamente sencillo. Para texto a voz, sin embargo, el proceso es más complicado, ya no solo el motor de voz tiene que tener en cuenta, pero también los idiomas disponibles e instalados en el sistema de texto a voz (TTS).
+description: En este artículo se tratan los aspectos básicos del uso del espacio de nombres de Android. Speech muy eficaz. Desde su inicio, Android ha podido reconocer la voz y enviarla como texto. Es un proceso relativamente sencillo. En el caso de texto a voz, sin embargo, el proceso es más complicado, ya que no solo es necesario tener en cuenta el motor de voz, sino también los idiomas disponibles e instalados desde el sistema de texto a voz (TTS).
 ms.prod: xamarin
 ms.assetid: FA3B8EC4-34D2-47E3-ACEA-BD34B28115B9
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/02/2018
-ms.openlocfilehash: 3d4c29a7d206b826046fd1f79e0513e85ea57898
-ms.sourcegitcommit: d3f48bfe72bfe03aca247d47bc64bfbfad1d8071
+ms.openlocfilehash: 693bca77fc22ac68c4a0480315363b241c3cf98b
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66740673"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511209"
 ---
 # <a name="android-speech"></a>Voz de Android
 
-_En este artículo se trata los aspectos básicos del uso del espacio de nombres de Android.Speech muy eficaz. Desde sus inicios, Android ha sido capaz de reconocer la voz y pasar los resultados como texto. Es un proceso relativamente sencillo. Para texto a voz, sin embargo, el proceso es más complicado, ya no solo el motor de voz tiene que tener en cuenta, pero también los idiomas disponibles e instalados en el sistema de texto a voz (TTS)._
+_En este artículo se tratan los aspectos básicos del uso del espacio de nombres de Android. Speech muy eficaz. Desde su inicio, Android ha podido reconocer la voz y enviarla como texto. Es un proceso relativamente sencillo. En el caso de texto a voz, sin embargo, el proceso es más complicado, ya que no solo es necesario tener en cuenta el motor de voz, sino también los idiomas disponibles e instalados desde el sistema de texto a voz (TTS)._
 
-## <a name="speech-overview"></a>Información general de voz
+## <a name="speech-overview"></a>Información general sobre voz
 
-Tener un sistema que "comprende" voz humana y enunciates lo que se escribe, conversión de voz en texto y texto a voz, es un área siempre creciente de desarrollo para dispositivos móviles como aumenta la demanda de comunicación naturales con nuestros dispositivos. Existen muchas instancias donde tiene una característica que convierte el texto en voz, o viceversa, es una herramienta muy útil para incorporar a su aplicación android.
+El hecho de tener un sistema, que "comprenda" la voz humana y la enunciates, lo que se va a escribir (voz a texto y Text to Speech) es un área en constante crecimiento en el desarrollo móvil a medida que aumenta la demanda de comunicación natural con nuestros dispositivos. Hay muchos casos en los que tener una característica que convierte texto en voz, o viceversa, es una herramienta muy útil para incorporar a la aplicación Android.
 
-Por ejemplo, con abrazadera hacia abajo en el uso de teléfono móvil mientras conducen, los usuarios desean una forma de manos libres de funcionamiento de sus dispositivos. La gran cantidad de factores de forma diferente de Android, como Android Wear, y la inclusión nunca de ampliación de los que puede usar dispositivos Android (como tabletas y blocs de notas), ha creado un mayor foco en excelentes aplicaciones TTS.
+Por ejemplo, con la abrazadera en el uso del teléfono móvil durante la conducción, los usuarios quieren una forma gratuita de trabajar con sus dispositivos. La gran cantidad de factores de forma de Android diferentes, como el desgaste de Android, y la inclusión en constante ampliación de aquellos que pueden usar dispositivos Android (como tabletas y paneles de notas), ha creado un enfoque más grande en aplicaciones TTS excelentes.
 
-Google Proporciona al desarrollador un amplio conjunto de API en el espacio de nombres Android.Speech para cubrir la mayoría de las instancias de hacer que un dispositivo "compatibles con voz" (por ejemplo, un software diseñado for the blind).  El espacio de nombres incluye la capacidad para permitir que se traduzca voz a través de texto `Android.Speech.Tts`, control sobre el motor usado para realizar la traducción, así como un número de `RecognizerIntent`s, que permiten que se puede convertir en texto de voz.
+Google proporciona al desarrollador un amplio conjunto de API en el espacio de nombres de Android. Speech para abarcar la mayoría de las instancias de hacer que el dispositivo "tenga en cuenta la voz" (por ejemplo, el software diseñado para la persiana).  El espacio de nombres incluye la utilidad para permitir que el texto se traduzca `Android.Speech.Tts`en voz a través, control sobre el motor usado para realizar la traducción, así como `RecognizerIntent`un número de s que permiten convertir la voz en texto.
 
-Aunque existen las funciones de voz a entender, hay limitaciones sobre el hardware utilizado. No es probable que el dispositivo interpretar correctamente todo el contenido se habla de todos los idiomas disponibles.
+Aunque las instalaciones están allí para que se entienda la voz, existen limitaciones basadas en el hardware usado. Es poco probable que el dispositivo interprete correctamente todo lo que se le diga en cada idioma disponible.
 
 ## <a name="requirements"></a>Requisitos
 
-No hay ningún requisito especial para esta guía, que no sean el dispositivo que tiene un micrófono y altavoces.
+No hay ningún requisito especial para esta guía, aparte del dispositivo que tiene un micrófono y un altavoz.
 
-El núcleo de un dispositivo Android interpretación de voz es el uso de un `Intent` con su correspondiente `OnActivityResult`.
-Sin embargo, es importante reconocer que no se entiende la voz, pero interpretadas al texto. La diferencia es importante.
+El núcleo de un dispositivo Android que interpreta la voz es el uso de `Intent` un con un `OnActivityResult`correspondiente.
+Sin embargo, es importante reconocer que la voz no se entiende, pero se interpreta como texto. La diferencia es importante.
 
-### <a name="the-difference-between-understanding-and-interpreting"></a>La diferencia entre comprender e interpretar
+### <a name="the-difference-between-understanding-and-interpreting"></a>La diferencia entre entender e interpretar
 
-Una definición simple de conocimiento es que es capaz de determinar el verdadero significado de lo que se dice tono y contexto. Para interpretar simplemente significa tomar las palabras y en otro formato de salida de ellos.
+Una definición simple de entender es que puede determinar por tono y contexto el significado real de lo que se está diciendo. Para interpretar solo significa que se tomen las palabras y se generen en otro formato.
 
-Considere el siguiente ejemplo simple que se utiliza en todos los días conversación:
+Considere el siguiente ejemplo sencillo que se usa en la conversación diaria:
 
 <kbd>¿Hola cómo estás?</kbd>
 
-Sin inflexión (énfasis en palabras específicas o partes de palabras), es una pregunta sencilla. Sin embargo, si se aplica un ritmo lento a la línea, la persona a la escucha detectará que la persona que preguntó no es demasiado feliz y quizás necesita cheering o que la persona que preguntó es encontrarse mal. Si se coloca el énfasis en "son", la persona que le pregunta es normalmente más interesada en la respuesta.
+Sin inflexión (énfasis en determinadas palabras o partes de palabras), se trata de una pregunta sencilla. Sin embargo, si se aplica un ritmo lento a la línea, la persona que realiza escuchas detectará que el autor de la pregunta no está demasiado satisfecho y quizás sea necesario que se ponga en contacto con él. Si el énfasis se coloca en "es", la persona que solicita está normalmente más interesada en la respuesta.
 
-Sin audio bastante eficaces que hacen uso de la inflexión y un grado de inteligencia artificial (IA) para entender el contexto, el software incluso no puede empezar a entender lo que decía: lo mejor que puede hacer una sencilla de teléfono se convierta la voz en texto.
+Sin un procesamiento de audio bastante eficaz para hacer uso de la inflexión y un grado de inteligencia artificial (AI) para comprender el contexto, el software no puede incluso empezar a comprender lo que se dijo; lo más sencillo es convertir la voz en texto.
 
 ## <a name="setting-up"></a>Configuración
 
-Antes de usar el sistema de voz, siempre es conveniente comprobar para asegurarse de que el dispositivo tiene un micrófono. Sería mucho sentido intentar ejecutar la aplicación en un bloc de notas Kindle o Google sin un micrófono instalado.
+Antes de usar el sistema de voz, siempre es aconsejable comprobar para asegurarse de que el dispositivo tiene un micrófono. En un panel de notas de Kindle o Google, no hay ningún micrófono instalado.
 
-El ejemplo de código siguiente muestra la consulta si hay un micrófono disponible y si no, para crear una alerta. Si ningún micrófono está disponible en este momento se podría salir de la actividad o deshabilitar la capacidad de grabar la voz.
+En el ejemplo de código siguiente se muestra cómo consultar si un micrófono está disponible y, si no, para crear una alerta. Si no hay micrófono disponible en este momento, se cerrará la actividad o se deshabilitará la capacidad de grabar la voz.
 
 ```csharp
 string rec = Android.Content.PM.PackageManager.FeatureMicrophone;
@@ -67,9 +67,9 @@ if (rec != "android.hardware.microphone")
 }
 ```
 
-### <a name="creating-the-intent"></a>Creación de la intención
+### <a name="creating-the-intent"></a>Crear el intento
 
-La intención de que el sistema de voz usa un tipo determinado de intención llama el `RecognizerIntent`. Esta intención controla un gran número de parámetros, incluidos ¿durante cuánto tiempo debe para esperar en silencio hasta que se considera la grabación, sobre los idiomas adicionales para reconocer y de salida y cualquier texto que se incluyen en el `Intent`del cuadro de diálogo modal como medio de la instrucción. En este fragmento de código, `VOICE` es un `readonly int` usado para reconocimiento en `OnActivityResult`.
+La intención del sistema de voz utiliza un tipo determinado de intento denominado `RecognizerIntent`. Esta intención controla un gran número de parámetros, incluido el tiempo que se debe esperar con el silencio hasta que la grabación se considere, cualquier lenguaje adicional que se reconozca y se genere, y `Intent`cualquier texto que se incluya en el cuadro de diálogo modal de la instrucción. En este fragmento de `VOICE` código, `readonly int` se usa para el `OnActivityResult`reconocimiento en.
 
 ```csharp
 var voiceIntent = new Intent(RecognizerIntent.ActionRecognizeSpeech);
@@ -83,13 +83,13 @@ voiceIntent.PutExtra(RecognizerIntent.ExtraLanguage, Java.Util.Locale.Default);
 StartActivityForResult(voiceIntent, VOICE);
 ```
 
-### <a name="conversion-of-the-speech"></a>Conversión de voz
+### <a name="conversion-of-the-speech"></a>Conversión de la voz
 
-El texto que se interpreta de la voz se entregará en la `Intent`, que se devuelve cuando la actividad se ha completado y se accede a través de `GetStringArrayListExtra(RecognizerIntent.ExtraResults)`. Esto devolverá un `IList<string>`, de que el índice puede usarse y muestra según el número de idiomas solicitados en la intención del autor de llamada (y se especifica en el `RecognizerIntent.ExtraMaxResults`). Como con cualquier lista no obstante, merece la pena comprobaciones para asegurarse de que no hay datos que se mostrarán.
+El texto que se interpreta de la voz se entregará `Intent`en, que se devuelve cuando se ha completado la actividad y se tiene acceso `GetStringArrayListExtra(RecognizerIntent.ExtraResults)`a ella a través de. Esto devolverá `IList<string>`una, de la que se puede usar y mostrar el índice, en función del número de idiomas solicitados en el intento del autor de la llamada `RecognizerIntent.ExtraMaxResults`(y especificados en). A pesar de cualquier lista, merece la pena comprobar para asegurarse de que hay datos que se van a mostrar.
 
-Cuando la escucha para el valor devuelto de un `StartActivityForResult`, el `OnActivityResult` método tiene que proporcionarse.
+Al escuchar el valor devuelto de `StartActivityForResult`, se debe proporcionar el `OnActivityResult` método.
 
-En el ejemplo siguiente, `textBox` es un `TextBox` utiliza para obtener lo que ha sido dictado. Se podría usar igualmente para pasar el texto a alguna forma de intérprete y desde allí, la aplicación puede comparar el texto y la rama a otra parte de la aplicación.
+En el ejemplo siguiente, `textBox` es un `TextBox` que se usa para la salida de lo que se ha dictado. Se podría usar igualmente para pasar el texto a algún tipo de intérprete y, desde allí, la aplicación puede comparar el texto y la bifurcación con otra parte de la aplicación.
 
 ```csharp
 protected override void OnActivityResult(int requestCode, Result resultVal, Intent data)
@@ -123,21 +123,21 @@ protected override void OnActivityResult(int requestCode, Result resultVal, Inte
 }
 ```
 
-## <a name="text-to-speech"></a>Texto a voz
+## <a name="text-to-speech"></a>Text to Speech
 
-Texto a voz no es bastante el inverso de voz a texto y se basa en dos componentes clave; que se instala un motor de texto a voz en el dispositivo y un idioma que se va a instalar.
+El texto a voz no es bastante inverso a la voz del texto y se basa en dos componentes clave: un motor de texto a voz instalado en el dispositivo y un idioma que se está instalando.
 
-En gran medida, los dispositivos Android incluyen el valor predeterminado instalado el servicio de Google TTS y al menos un idioma. Esto se establece cuando el dispositivo está configurado en primer lugar y se basará en donde el dispositivo está en el momento (por ejemplo, un teléfono configurado en Alemania instalará el idioma alemán, mientras que uno en Estados Unidos tendrán inglés de Estados Unidos).
+En gran medida, los dispositivos Android tienen instalado el servicio de TTS predeterminado de Google y al menos un idioma. Esto se establece cuando el dispositivo se configura por primera vez y se basará en el lugar en el que se encuentra el dispositivo (por ejemplo, un teléfono configurado en Alemania instalará el idioma alemán, mientras que uno en America tendrá inglés americano).
 
-### <a name="step-1---instantiating-texttospeech"></a>Paso 1: crear instancias de TextToSpeech
+### <a name="step-1---instantiating-texttospeech"></a>Paso 1: crear una instancia de TextToSpeech
 
-`TextToSpeech` puede tardar hasta 3 parámetros, los dos primeros son necesarios con el tercero que es opcional (`AppContext`, `IOnInitListener`, `engine`). El agente de escucha se utiliza para enlazar con el servicio y la prueba de error con el motor que se va a cualquier número de motores de texto a voz Android disponibles. Como mínimo, el dispositivo tendrá el motor de Google.
+`TextToSpeech`puede tardar hasta 3 parámetros, los dos primeros son obligatorios, y el tercero es`AppContext`opcional `IOnInitListener`( `engine`,,). El agente de escucha se usa para enlazar con el servicio y probar si hay errores con el motor como cualquier número de texto Android disponible para los motores de voz. Como mínimo, el dispositivo tendrá el propio motor de Google.
 
-### <a name="step-2---finding-the-languages-available"></a>Paso 2: buscar los idiomas disponibles
+### <a name="step-2---finding-the-languages-available"></a>Paso 2: búsqueda de los idiomas disponibles
 
-El `Java.Util.Locale` clase contiene un método útil llamado `GetAvailableLocales()`. A continuación, puede probar esta lista de idiomas admitidos por el motor de voz en los idiomas instalados.
+La `Java.Util.Locale` clase contiene un método útil denominado `GetAvailableLocales()`. Esta lista de idiomas admitidos por el motor de voz se puede probar con los idiomas instalados.
 
-Es un asunto trivial para generar la lista de idiomas "entiende". Siempre habrá un idioma predeterminado (el idioma al usuario establece al primero configurar su dispositivo), por tanto, en este ejemplo el `List<string>` tiene "Default" como primer parámetro, el resto de la lista se rellena según el resultado de la `textToSpeech.IsLanguageAvailable(locale)`.
+Es una cuestión trivial generar la lista de idiomas "entendidos". Siempre habrá un idioma predeterminado (el idioma que el usuario estableció al configurar el dispositivo por primera vez), por lo que en este ejemplo `List<string>` el tiene el valor "default" como primer parámetro, el resto de la lista se rellenará en función del resultado `textToSpeech.IsLanguageAvailable(locale)`de.
 
 ```csharp
 var langAvailable = new List<string>{ "Default" };
@@ -161,22 +161,22 @@ foreach (var locale in localesAvailable)
 langAvailable = langAvailable.OrderBy(t => t).Distinct().ToList();
 ```
 
-Este código llama a [TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/) para probar si el paquete de idioma para una configuración regional especificada ya está presente en el dispositivo.
-Este método devuelve un [LanguageAvailableResult](https://developer.xamarin.com/api/type/Android.Speech.Tts.LanguageAvailableResult/), lo que indica si está disponible el idioma de la configuración regional pasada. Si `LanguageAvailableResult` indica que el idioma es `NotSupported`, entonces no hay ningún paquete de voz disponibles (incluso para descarga) para dicho idioma. Si `LanguageAvailableResult` está establecido en `MissingData`, es posible descargar un nuevo paquete de idioma, tal como se explica más adelante en el paso 4.
+Este código llama a [TextToSpeech. IsLanguageAvailable](xref:Android.Speech.Tts.TextToSpeech.IsLanguageAvailable*) para comprobar si el paquete de idioma de una configuración regional determinada ya está presente en el dispositivo.
+Este método devuelve un [LanguageAvailableResult](xref:Android.Speech.Tts.LanguageAvailableResult), que indica si el idioma de la configuración regional que se pasa está disponible. Si `LanguageAvailableResult` indica que el idioma es `NotSupported`, no hay ningún paquete de voz disponible (incluso para su descarga) para ese idioma. Si `LanguageAvailableResult` está establecido en `MissingData`, es posible descargar un nuevo paquete de idioma, tal y como se explica más adelante en el paso 4.
 
-### <a name="step-3---setting-the-speed-and-pitch"></a>Paso 3: establecer la velocidad y el tono
+### <a name="step-3---setting-the-speed-and-pitch"></a>Paso 3: establecimiento de la velocidad y el paso
 
-Android permite al usuario modificar el sonido de la voz modificando el `SpeechRate` y `Pitch` (la velocidad de la velocidad y el tono de voz). Esto va de 0 a 1, con la voz "normal" que se va a 1 para ambos.
+Android permite al usuario modificar el sonido de la voz mediante la `SpeechRate` modificación de y `Pitch` (la velocidad de velocidad y el tono de la voz). Esto va de 0 a 1, con la voz "normal" en 1 para ambos.
 
 ### <a name="step-4---testing-and-loading-new-languages"></a>Paso 4: probar y cargar nuevos idiomas
 
-Descargar un nuevo lenguaje se realiza mediante un `Intent`. Hace que el resultado de esta intención el [OnActivityResult](https://developer.xamarin.com/api/member/Android.App.Activity.OnActivityResult/) invocar método. A diferencia del ejemplo de texto a voz (que usa el [RecognizerIntent](https://developer.xamarin.com/api/type/Android.Speech.RecognizerIntent/) como un `PutExtra` parámetro para el `Intent`), las pruebas y la carga `Intent`son `Action`-según:
+La descarga de un nuevo lenguaje se realiza mediante `Intent`un. El resultado de este intento hace que se invoque el método [OnActivityResult](xref:Android.App.Activity.OnActivityResult*) . A diferencia del ejemplo de conversión de voz a texto (que usaba [RecognizerIntent](xref:Android.Speech.RecognizerIntent) como `PutExtra` parámetro de `Intent`), las pruebas y las cargas `Intent`se `Action`basan en:
 
--   [TextToSpeech.Engine.ActionCheckTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionCheckTtsData/) &ndash; inicia una actividad desde la plataforma `TextToSpeech` motor para comprobar la correcta instalación y la disponibilidad de recursos de idioma en el dispositivo.
+- [TextToSpeech. Engine. ActionCheckTtsData](xref:Android.Speech.Tts.TextToSpeech.Engine.ActionCheckTtsData) &ndash; inicia una actividad del motor de `TextToSpeech` plataforma para comprobar la correcta instalación y disponibilidad de los recursos de idioma en el dispositivo.
 
--   [TextToSpeech.Engine.ActionInstallTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionInstallTtsData/) &ndash; inicia una actividad que solicita al usuario que descargue los idiomas necesarios.
+- [TextToSpeech. Engine. ActionInstallTtsData](xref:Android.Speech.Tts.TextToSpeech.Engine.ActionInstallTtsData) &ndash; inicia una actividad que pide al usuario que descargue los idiomas necesarios.
 
-En el ejemplo de código siguiente se muestra cómo usar estas acciones para comprobar si hay recursos de idioma y descargue un nuevo lenguaje de:
+En el ejemplo de código siguiente se muestra cómo usar estas acciones para probar los recursos de idioma y descargar un nuevo idioma:
 
 ```csharp
 var checkTTSIntent = new Intent();
@@ -194,25 +194,25 @@ protected override void OnActivityResult(int req, Result res, Intent data)
 }
 ```
 
-`TextToSpeech.Engine.ActionCheckTtsData` comprueba la disponibilidad de recursos de idioma. `OnActivityResult` se invoca cuando se complete esta prueba. Si necesitan recursos de idioma para descargarse, `OnActivityResult` desactiva el `TextToSpeech.Engine.ActionInstallTtsData` para iniciar una actividad que permite al usuario que descargue los idiomas necesarios. Tenga en cuenta que este `OnActivityResult` implementación no comprueba la `Result` código, ya que, en este ejemplo simplificado, la determinación ya está decidida que es necesario descargar el paquete de idioma.
+`TextToSpeech.Engine.ActionCheckTtsData`comprueba la disponibilidad de los recursos de idioma. `OnActivityResult`se invoca cuando se completa esta prueba. Si es necesario descargar recursos de idioma, `OnActivityResult` se desencadena la `TextToSpeech.Engine.ActionInstallTtsData` acción de iniciar una actividad que permite al usuario descargar los idiomas necesarios. Tenga en cuenta `OnActivityResult` que esta implementación no comprueba `Result` el código porque, en este ejemplo simplificado, ya se ha realizado la determinación de que es necesario descargar el paquete de idioma.
 
-El `TextToSpeech.Engine.ActionInstallTtsData` hace que la acción la **datos de voz de Google TTS** actividad que se presentará al usuario para la elección de idiomas para descargar:
+La `TextToSpeech.Engine.ActionInstallTtsData` acción hace que la actividad de **datos de voz de Google TTS** se presente al usuario para elegir los idiomas que se van a descargar:
 
-![Actividad de datos de voz TTS de Google](speech-images/01-google-tts-voice-data.png)
+![Actividad de datos de voz de Google TTS](speech-images/01-google-tts-voice-data.png)
 
-Por ejemplo, el usuario podría elegir a francés y haga clic en el icono de descarga para descargar los datos de voz francés:
+Por ejemplo, el usuario podría elegir francés y hacer clic en el icono de descarga para descargar datos de voz en francés:
 
-![Ejemplo de descarga de idioma francés](speech-images/02-selecting-french.png)
+![Ejemplo de descarga del idioma francés](speech-images/02-selecting-french.png)
 
-Instalación de estos datos se realiza automáticamente una vez finalizada la descarga.
+La instalación de estos datos se produce automáticamente una vez completada la descarga.
 
 
-### <a name="step-5---the-ioninitlistener"></a>Paso 5: el IOnInitListener
+### <a name="step-5---the-ioninitlistener"></a>Paso 5: IOnInitListener
 
-Para una actividad para que pueda convertir texto a voz, el método de interfaz `OnInit` debe estar implementada (este es el segundo parámetro especificado para la creación de instancias de la `TextToSpeech` clase). Esto inicializa el agente de escucha y comprueba el resultado.
+Para que una actividad pueda convertir el texto en voz, se debe implementar el método `OnInit` de interfaz (es decir, el segundo parámetro especificado para la creación de instancias de la `TextToSpeech` clase). Esto inicializa el agente de escucha y prueba el resultado.
 
-Debe probar el agente de escucha para ambos `OperationResult.Success` y `OperationResult.Failure` como mínimo.
-En el ejemplo siguiente se muestra exactamente eso:
+El agente de `OperationResult.Success` escucha debe probar y `OperationResult.Failure` como mínimo.
+En el ejemplo siguiente se muestra solo eso:
 
 ```csharp
 void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
@@ -228,14 +228,14 @@ void TextToSpeech.IOnInitListener.OnInit(OperationResult status)
 
 ## <a name="summary"></a>Resumen
 
-En esta guía hemos examinado los aspectos básicos de la conversión de texto a voz y voz a texto y los métodos posibles incluirlos en sus propias aplicaciones. Mientras no cubren cada caso particular, ahora debería tener un conocimiento básico de cómo se interpreta la voz, cómo instalar nuevos idiomas y cómo aumentar la inclusivity de sus aplicaciones.
+En esta guía hemos analizado los aspectos básicos de la conversión de texto a voz y voz a texto y métodos posibles de cómo incluirlos en sus propias aplicaciones. Aunque no cubren cada caso determinado, ahora debe tener un conocimiento básico de cómo se interpreta la voz, cómo instalar nuevos idiomas y cómo aumentar el inclusivity de las aplicaciones.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Xamarin.Forms DependencyService](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
-- [Texto a voz (ejemplo)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TextToSpeech)
+- [DependencyService de Xamarin. Forms](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
+- [Text to Speech (ejemplo)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TextToSpeech)
 - [Voz a texto (ejemplo)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SpeechToText)
-- [Espacio de nombres de Android.Speech](https://developer.xamarin.com/api/namespace/Android.Speech/)
-- [Espacio de nombres Android.Speech.Tts](https://developer.xamarin.com/api/namespace/Android.Speech.Tts/)
+- [Espacio de nombres Android. Speech](xref:Android.Speech)
+- [Espacio de nombres Android. Speech. TTS](xref:Android.Speech.Tts)

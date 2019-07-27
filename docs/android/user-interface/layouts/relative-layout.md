@@ -1,31 +1,31 @@
 ---
-title: Uso de RelativeLayout en Xamarin.Android
-description: Cómo usar RelativeLayout en una aplicación de Xamarin.Android
+title: Uso de RelativeLayout en Xamarin. Android
+description: Cómo usar RelativeLayout en una aplicación de Xamarin. Android
 ms.prod: xamarin
 ms.assetid: AFD9C849-02C3-E728-BC78-77A563612BC5
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 06/29/2018
-ms.openlocfilehash: af2972ecc92435836a75013e6203ba47c2c04627
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a53baed9d5f291628d7d1a8da05739e43412d473
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61303634"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68509723"
 ---
-# <a name="relativelayout"></a>RelativeLayout
+# <a name="xamarinandroid-relativelayout"></a>RelativeLayout de Xamarin. Android
 
-[`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) es un [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/) que muestra el elemento secundario [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
-elementos en posiciones relativas. La posición de un [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) puede especificarse en relación con los elementos del mismo nivel (por ejemplo, con respecto a la izquierda de o por debajo de un elemento determinado) o en posiciones relativas a la [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
-área (por ejemplo, alineado a la parte inferior, izquierda del centro).
+[`RelativeLayout`](xref:Android.Widget.RelativeLayout)es un [`ViewGroup`](xref:Android.Views.ViewGroup) que muestra secundario[`View`](xref:Android.Views.View)
+elementos en posiciones relativas. La posición de se [`View`](xref:Android.Views.View) puede especificar en relación con los elementos del mismo nivel (por ejemplo, a la izquierda o por debajo de un elemento determinado) o en posiciones relativas al[`RelativeLayout`](xref:Android.Widget.RelativeLayout)
+área (como alineada en la parte inferior izquierda del centro).
 
-Un [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/) es una utilidad muy eficaz para diseñar una interfaz de usuario porque puede eliminar anidados [ `ViewGroup` ](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)s. Si se descubre mediante varios anidados [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)
-grupos, es posible que pueda reemplazarlos por una sola [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/).
+Una [`RelativeLayout`](xref:Android.Widget.RelativeLayout) es una utilidad muy eficaz para diseñar una interfaz de usuario, ya que puede eliminar [`ViewGroup`](xref:Android.Views.ViewGroup)anidadas. Si se encuentra con varios[`LinearLayout`](xref:Android.Widget.LinearLayout)
+los grupos, es posible que pueda reemplazarlos por un único [`RelativeLayout`](xref:Android.Widget.RelativeLayout).
 
 Inicie un nuevo proyecto denominado **HelloRelativeLayout**.
 
-Abra el **Resources/Layout/Main.axml** archivo e inserte lo siguiente:
+Abra el archivo Resources **/layout/main. axml** e inserte lo siguiente:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -60,13 +60,13 @@ Abra el **Resources/Layout/Main.axml** archivo e inserte lo siguiente:
 </RelativeLayout>
 ```
 
-Tenga en cuenta cada uno de los `android:layout_*` atributos, como `layout_below`, `layout_alignParentRight`, y `layout_toLeftOf`.
-Cuando se usa un [ `RelativeLayout` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/), puede usar estos atributos para describir cómo desea colocar cada [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/). Cada uno de estos atributos definen un tipo diferente de la posición relativa. Algunos atributos utilizan el identificador de recurso de un elemento relacionado [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) para definir su posición relativa. Por ejemplo, la última [ `Button` ](https://developer.xamarin.com/api/type/Android.Widget.Button/) se define para que se encuentran a la izquierda de y alineado con-the-top-de la [ `View` ](https://developer.xamarin.com/api/type/Android.Views.View/) identificado por el identificador `ok` (que es el anterior [`Button`](https://developer.xamarin.com/api/type/Android.Widget.Button/)).
+Observe cada uno de `android:layout_*` los atributos, `layout_below`como, `layout_alignParentRight`y `layout_toLeftOf`.
+Al usar [`RelativeLayout`](xref:Android.Widget.RelativeLayout), puede utilizar estos atributos para describir cómo desea colocar cada uno [`View`](xref:Android.Views.View)de ellos. Cada uno de estos atributos define un tipo diferente de posición relativa. Algunos atributos usan el identificador de recurso de un [`View`](xref:Android.Views.View) elemento del mismo nivel para definir su propia posición relativa. Por ejemplo, la última [`Button`](xref:Android.Widget.Button) se define para que se encuentre a la izquierda y alineada con la parte superior de la [`View`](xref:Android.Views.View) identificada por el identificador `ok` (que es el anterior [`Button`](xref:Android.Widget.Button)).
 
-Todos los atributos de diseño disponibles se definen en [ `RelativeLayout.LayoutParams` ](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout+LayoutParams/).
+Todos los atributos de diseño disponibles se definen en [`RelativeLayout.LayoutParams`](xref:Android.Widget.RelativeLayout.LayoutParams).
 
-Asegúrese de cargar este diseño en el [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
-método:
+Asegúrese de cargar este diseño en el[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+forma
 
 ```csharp
 protected override void OnCreate (Bundle savedInstanceState)
@@ -76,21 +76,19 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-El [ `SetContentView(int)` ](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/p/System.Int32/) método carga el archivo de diseño para el [ `Activity` ](https://developer.xamarin.com/api/type/Android.App.Activity/), especificado por el identificador de recurso &mdash; `Resource.Layout.Main` hace referencia a la **y diseño de recursos / Main.axml** archivo de diseño.
+El [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*) método carga el archivo de diseño para [`Activity`](xref:Android.App.Activity)el, especificado por el identificador &mdash; `Resource.Layout.Main` de recurso hace referencia al archivo de diseño Resources **/layout/main. axml** .
 
 Ejecute la aplicación. Debería ver el siguiente diseño:
 
-[![Captura de pantalla de un diseño con un objeto TextView EditText y dos botones relativo](relative-layout-images/helloviews2.png)](relative-layout-images/helloviews2.png#lightbox)
-
+[![Captura de pantalla de un diseño relativo con los botones TextView, EditText y dos](relative-layout-images/helloviews2.png)](relative-layout-images/helloviews2.png#lightbox)
 
 ## <a name="resources"></a>Recursos
 
--   [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
--   [`RelativeLayout.LayoutParams`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout+LayoutParams/)
--   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
--   [`EditText`](https://developer.xamarin.com/api/type/Android.Widget.EditText/)
--   [`Button`](https://developer.xamarin.com/api/type/Android.Widget.Button/)
+- [`RelativeLayout`](xref:Android.Widget.RelativeLayout)
+- [`RelativeLayout.LayoutParams`](xref:Android.Widget.RelativeLayout.LayoutParams)
+- [`TextView`](xref:Android.Widget.TextView)
+- [`EditText`](xref:Android.Widget.EditText)
+- [`Button`](xref:Android.Widget.Button)
 
-
-*Las partes de esta página son modificaciones en función de trabajo creado y compartido por el Android Open Source Project y usarse de acuerdo con los términos descritos en el*
-[*licencia de atribución 2.5 de Creative Commons* ](http://creativecommons.org/licenses/by/2.5/).
+*Algunas partes de esta página son modificaciones basadas en el trabajo creado y compartido por el proyecto de código abierto de Android y que se usan según los términos descritos en la*
+licencia de atribución de[*Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/).

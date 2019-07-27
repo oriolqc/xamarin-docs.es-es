@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/09/2015
-ms.openlocfilehash: a38249236e758728452ff25fd0c486c3d03ce8fc
-ms.sourcegitcommit: 482aef652bdaa440561252b6a1a1c0a40583cd32
+ms.openlocfilehash: 2c218b030739dee8d3e49fab4e5c2a70ff5e71e0
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65970999"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511825"
 ---
 # <a name="device-orientation"></a>Orientación del dispositivo
 
@@ -71,7 +71,7 @@ Xamarin.Android admite varias opciones para especificar la orientación:
 - **Panorama** &ndash; fuerza la orientación de la aplicación a horizontal, independientemente de los datos del sensor.
 - **Vertical** &ndash; fuerza la orientación de la aplicación sea vertical, independientemente de los datos del sensor.
 - **Usuario** &ndash; hace que la aplicación que se presentará con orientación preferida del usuario.
-- **Detrás de** &ndash; hace que la orientación de la aplicación a la misma que la orientación de la [actividad](https://developer.xamarin.com/api/type/Android.App.Activity/) detrás de él.
+- **Detrás de** &ndash; hace que la orientación de la aplicación a la misma que la orientación de la [actividad](xref:Android.App.Activity) detrás de él.
 - **Sensor** &ndash; hace que la orientación de la aplicación se puede determinar el sensor, incluso si el usuario ha deshabilitado la rotación automática.
 - **SensorLandscape** &ndash; hace que la aplicación utiliza orientación horizontal al uso de datos del sensor para cambiar la dirección de la pantalla está orientado a (de modo que no se muestra la pantalla como boca abajo).
 - **SensorPortrait** &ndash; hace que la aplicación utiliza orientación vertical al uso de datos del sensor para cambiar la dirección de la pantalla está orientado a (de modo que no se muestra la pantalla como boca abajo).

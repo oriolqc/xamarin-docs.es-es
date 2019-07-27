@@ -6,21 +6,21 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: ea8af3c84bb53434489d230d159a27b6b9d500d8
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 2279282b08c9d97b239de424cf38aa6f1463dc4d
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830256"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510354"
 ---
 # <a name="radiobutton"></a>RadioButton
 
-En esta sección, creará dos botones de radio se excluyen mutuamente (habilitar uno deshabilita la otra), con el [`RadioGroup`](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/)
-Y [`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)
-widgets. Cuando se presiona cualquier botón de radio, se mostrará un mensaje de notificación del sistema.
+En esta sección, creará dos botones de radio mutuamente excluyentes (habilitando uno, se deshabilitará el otro) mediante el[`RadioGroup`](xref:Android.Widget.RadioGroup)
+etc[`RadioButton`](xref:Android.Widget.RadioButton)
+widgets. Cuando se presiona cualquiera de los botones de radio, se mostrará un mensaje de notificación.
 
 
-Abra el **Resources/layout/Main.axml** archivo y agregue dos [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s, anidado en un [ `RadioGroup` ](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/) (dentro de la [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)):
+Abra el archivo Resources **/layout/main. axml** y [`RadioButton`](xref:Android.Widget.RadioButton)agregue dos objetos anidados en [`RadioGroup`](xref:Android.Widget.RadioGroup) un (dentro [`LinearLayout`](xref:Android.Widget.LinearLayout)de):
 
 ```xml
 <RadioGroup
@@ -38,10 +38,10 @@ Abra el **Resources/layout/Main.axml** archivo y agregue dos [ `RadioButton` ](h
 </RadioGroup>
 ```
 
-Es importante que la [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s se agrupan por la [ `RadioGroup` ](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/) elemento para que se puede seleccionar no más de uno a la vez. Esta lógica se controla automáticamente el sistema Android. Cuando uno [`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)
-dentro de un grupo seleccionado, todos los demás son automáticamente y no está seleccionados.
+Es importante que [`RadioButton`](xref:Android.Widget.RadioButton)los elementos estén agrupados por el [`RadioGroup`](xref:Android.Widget.RadioGroup) elemento para que no se pueda seleccionar más de uno a la vez. Esta lógica la controla automáticamente el sistema Android. Cuando uno[`RadioButton`](xref:Android.Widget.RadioButton)
+dentro de un grupo seleccionado, todos los demás se anulan automáticamente.
 
-Para hacer algo cuando cada [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/) está seleccionada, debemos escribir un controlador de eventos:
+Para hacer algo cuando se [`RadioButton`](xref:Android.Widget.RadioButton) selecciona cada uno, es necesario escribir un controlador de eventos:
 
 ```csharp
 private void RadioButtonClick (object sender, EventArgs e)
@@ -51,12 +51,12 @@ private void RadioButtonClick (object sender, EventArgs e)
 }
 ```
 
-En primer lugar, el remitente que se pasa se convierte en un botón de opción.
-A continuación, un [`Toast`](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
+En primer lugar, el remitente que se pasa se convierte en un RadioButton.
+Después, un[`Toast`](xref:Android.Widget.Toast)
 mensaje muestra el texto del botón de radio seleccionado.
 
-Ahora, en la parte inferior de la [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle)
-método, agregue lo siguiente:
+Ahora, en la parte inferior del[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+Agregue lo siguiente:
 
 ```csharp
 RadioButton radio_red = FindViewById<RadioButton>(Resource.Id.radio_red);
@@ -66,14 +66,14 @@ radio_red.Click += RadioButtonClick;
 radio_blue.Click += RadioButtonClick;
 ```
 
-Esta forma capturan cada uno de los [ `RadioButton` ](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s desde el diseño y agrega el handlerto eventos recién creado.
+Esto captura cada [`RadioButton`](xref:Android.Widget.RadioButton)s del diseño y agrega el controlador de eventos recién creado a cada uno de ellos.
 
 Ejecute la aplicación.
 
 > [!TIP]
-> Si tiene que cambiar manualmente el estado (por ejemplo, cuando carga guardado [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), use el [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
-> establecedor de propiedades o [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
+> Si necesita cambiar el estado (por ejemplo, al cargar un guardado [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference)), use el[`Checked`](xref:Android.Widget.CompoundButton.Checked)
+> establecedor de propiedad o[`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
 > .
 
-*Las partes de esta página son modificaciones en función de trabajo creado y compartido por el Android Open Source Project y usarse de acuerdo con los términos descritos en el*
-[*licencia de atribución 2.5 de Creative Commons* ](http://creativecommons.org/licenses/by/2.5/). 
+*Algunas partes de esta página son modificaciones basadas en el trabajo creado y compartido por el proyecto de código abierto de Android y que se usan según los términos descritos en la*
+licencia de atribución de[*Creative Commons 2,5*](http://creativecommons.org/licenses/by/2.5/). 

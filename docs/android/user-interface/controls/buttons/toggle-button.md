@@ -6,27 +6,27 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/06/2018
-ms.openlocfilehash: a22d274feb5539164663ac0c48e5a84bdf5d2c66
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: 91003f9a23c667b38028a9852b28dba656ba13db
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830228"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510335"
 ---
 # <a name="togglebutton"></a>ToggleButton
 
-En esta sección, creará un botón que se utiliza específicamente para alternar entre dos Estados, con el [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) widget. Este widget es una alternativa excelente a botones de opción si tiene dos estados simple que son mutuamente excluyentes ("on" y "off", por ejemplo). Android 4.0 (API nivel 14) introdujo una alternativa para el botón de alternancia que se conoce como un [ `Switch` ](https://developer.xamarin.com/api/type/Android.Widget.Switch/).
+En esta sección, creará un botón que se usa específicamente para alternar entre dos Estados, mediante [`ToggleButton`](xref:Android.Widget.ToggleButton) el widget. Este widget es una alternativa excelente a los botones de radio si tiene dos Estados simples que se excluyen mutuamente ("ON" y "OFF", por ejemplo). Android 4,0 (nivel de [`Switch`](xref:Android.Widget.Switch)API 14) presentó una alternativa al botón de alternancia conocido como.
 
-Un ejemplo de un **ToggleButton** pueden verse en el par de la parte izquierda de imágenes, mientras que el par de mano derecha de las imágenes presenta un ejemplo de un **conmutador**:
+Un ejemplo de un control **ToggleButton** puede verse en el par izquierdo de imágenes, mientras que el par derecho de imágenes presenta un ejemplo de un **modificador**:
 
-![Ejemplos de conmutadores y ToggleButtons en ambos y desactivar los Estados](toggle-button-images/togglebutton-switch.png)  
+![Ejemplos de conmutadores y ToggleButtons en los Estados activado y desactivado](toggle-button-images/togglebutton-switch.png)  
 
-Control que usa una aplicación es una cuestión de estilo. Los widgets son funcionalmente equivalentes.
+El control que usa una aplicación es una cuestión de estilo. Ambos widgets son funcionalmente equivalentes.
 
-Abra el **Resources/layout/Main.axml** y agréguele el [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) elemento (dentro de la [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)):
+Abra el archivo Resources **/layout/main. axml** y [`ToggleButton`](xref:Android.Widget.ToggleButton) agregue el elemento ( [`LinearLayout`](xref:Android.Widget.LinearLayout)dentro del):
 
-Para hacer algo cuando se cambia el estado, agregue el código siguiente al final de la [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle)
-método:
+Para hacer algo cuando se cambia el estado, agregue el código siguiente al final de la[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+forma
 
 ```csharp
 ToggleButton togglebutton = FindViewById<ToggleButton>(Resource.Id.togglebutton);
@@ -40,16 +40,16 @@ togglebutton.Click += (o, e) => {
 };
 ```
 
-Esta forma se capturan el [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) elemento desde el diseño y controla el evento Click, que define la acción que se realizará cuando se hace clic en el botón. En este ejemplo, el método comprueba el estado del botón nuevo, a continuación, se muestra un [ `Toast` ](https://developer.xamarin.com/api/type/Android.Widget.Toast/) mensaje que indica el estado actual.
+Esto captura el [`ToggleButton`](xref:Android.Widget.ToggleButton) elemento del diseño y controla el evento de clic, que define la acción que se realizará cuando se haga clic en el botón. En este ejemplo, el método comprueba el nuevo estado del botón y, a continuación, [`Toast`](xref:Android.Widget.Toast) muestra un mensaje que indica el estado actual.
 
-Tenga en cuenta que el [ `ToggleButton` ](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) identificadores cambiar su propio estado entre activado y desactivado, por lo que basta con preguntar a cuál es.
+Tenga en cuenta [`ToggleButton`](xref:Android.Widget.ToggleButton) que el controla su propio cambio de estado entre Checked y unchecked, por lo que solo tiene que preguntar qué es.
 
 Ejecute la aplicación.
 
 
 > [!TIP]
-> Si tiene que cambiar manualmente el estado (por ejemplo, cuando carga guardado [ `CheckBoxPreference` ](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)), use el [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
-> establecedor de propiedades o [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
+> Si necesita cambiar el estado (por ejemplo, al cargar un guardado [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference)), use el[`Checked`](xref:Android.Widget.CompoundButton.Checked)
+> establecedor de propiedad o[`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
 > .
 
 

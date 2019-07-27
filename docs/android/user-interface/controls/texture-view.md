@@ -1,28 +1,28 @@
 ---
-title: TextureView
+title: TextureView de Xamarin. Android
 ms.prod: xamarin
 ms.assetid: DD1F3D68-5DD8-4644-8A13-08AE7719DE30
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 05/30/2017
-ms.openlocfilehash: 8f20666ddf5f74ff9451a22e289790eb14071f90
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 589cf1787f5dc3090cbfb1165e91d8ef58df37a6
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61076148"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510163"
 ---
-# <a name="textureview"></a>TextureView
+# <a name="xamarinandroid-textureview"></a>TextureView de Xamarin. Android
 
-La `TextureView` clase es una vista que usa la representación 2D y acelerados por hardware para habilitar un vídeo o una secuencia de contenido de OpenGL para mostrarse. Por ejemplo, la captura de pantalla siguiente muestra el `TextureView` mostrar una fuente directa desde la cámara del dispositivo:
+La `TextureView` clase es una vista que usa la representación 2D con aceleración de hardware para permitir que se muestre un flujo de contenido de vídeo o OpenGL. Por ejemplo, en la siguiente captura de `TextureView` pantalla se muestra la presentación de una fuente en directo desde la cámara del dispositivo:
 
-[![Captura de pantalla de ejemplo de una imagen en directo desde la cámara del dispositivo](texture-view-images/22-textureviewcamera.png)](texture-view-images/22-textureviewcamera.png#lightbox)
+[![Captura de pantalla de ejemplo de una imagen dinámica de la cámara del dispositivo](texture-view-images/22-textureviewcamera.png)](texture-view-images/22-textureviewcamera.png#lightbox)
 
-A diferencia de la `SurfaceView` (clase), que también se puede utilizar para mostrar el contenido de vídeo o de OpenGL, no se procesa el TextureView en una ventana independiente.
-Por lo tanto, `TextureView` es capaz de admitir las transformaciones de vista como cualquier otra vista. Por ejemplo, girar un `TextureView` puede realizarse estableciendo simplemente su `Rotation` propiedad, su transparencia estableciendo su `Alpha` propiedad y así sucesivamente.
+A diferencia de `SurfaceView` la clase, que también se puede usar para mostrar contenido de OpenGL o vídeo, TextureView no se representa en una ventana independiente.
+Por lo `TextureView` tanto, es capaz de admitir transformaciones de vista como cualquier otra vista. Por ejemplo, la rotación `TextureView` de un se puede realizar simplemente estableciendo `Rotation` su propiedad, su transparencia estableciendo su `Alpha` propiedad, etc.
 
-Por lo tanto, con el `TextureView` ahora podemos hacer cosas como mostrar una secuencia en directo de la cámara y transformarlos, tal como se muestra en el código siguiente:
+Por lo tanto, `TextureView` con, ahora podemos hacer cosas como mostrar una secuencia en directo desde la cámara y transformarla, tal como se muestra en el código siguiente:
 
 ```csharp
 public class TextureViewActivity : Activity,
@@ -65,16 +65,16 @@ public class TextureViewActivity : Activity,
 }
 ```
 
-El código anterior crea un `TextureView` instancia de la actividad `OnCreate` método y establece la actividad como la `TextureView`del `SurfaceTextureListener`. Sea el `SurfaceTextureListener`, la actividad se implementa el `TextureView.ISurfaceTextureListener` interfaz. Se llamará el sistema la `OnSurfaceTextAvailable` método cuando el `SurfaceTexture` está listo para su uso. En este método, tomamos el `SurfaceTexture` que se pasa y establézcalo como textura de vista previa de la cámara. A continuación, se libre para realizar operaciones basadas en vistas normales, como establecer el `Rotation` y `Alpha`, como en el ejemplo anterior. La aplicación resultante, que se ejecuta en un dispositivo, se muestra a continuación:
+En el código anterior se `TextureView` crea una instancia en el `OnCreate` método de la actividad y se `TextureView`establece `SurfaceTextureListener`la actividad como. Para ser `SurfaceTextureListener`, la actividad implementa la `TextureView.ISurfaceTextureListener` interfaz. El sistema llamará `OnSurfaceTextAvailable` al método cuando el `SurfaceTexture` está listo para su uso. En este método, se toma el `SurfaceTexture` que se pasa y se establece en la textura de vista previa de la cámara. A continuación, podemos realizar operaciones normales basadas en vistas, como establecer `Rotation` y `Alpha`, como en el ejemplo anterior. La aplicación resultante, que se ejecuta en un dispositivo, se muestra a continuación:
 
-[![Ejemplo de la aplicación se ejecuta en un dispositivo, mostrar una imagen](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
+[![Ejemplo de la aplicación que se ejecuta en un dispositivo y que muestra una imagen](texture-view-images/17-textureviewdemo.png)](texture-view-images/17-textureviewdemo.png#lightbox)
 
-Para usar el `TextureView`, aceleración de hardware debe estar habilitada, que será de forma predeterminada a partir del 14 de nivel de API. También, ya que este ejemplo utiliza la cámara, tanto el `android.permission.CAMERA` permiso y el `android.hardware.camera` característica debe establecerse el **AndroidManifest.xml**.
+Para usar, `TextureView`la aceleración de hardware debe estar habilitada, que será de forma predeterminada a partir del nivel de API 14. Además, dado que en este ejemplo se usa la cámara `android.permission.CAMERA` , el permiso `android.hardware.camera` y la característica deben establecerse en **archivo AndroidManifest. XML**.
 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [TextureViewDemo (sample)](https://developer.xamarin.com/samples/monodroid/TextureViewDemo/)
-- [Introducción a Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Plataforma Android de 4.0](https://developer.android.com/sdk/android-4.0.html)
+- [Presentación del bocadillo de helado](http://www.android.com/about/ice-cream-sandwich/)
+- [Plataforma Android 4,0](https://developer.android.com/sdk/android-4.0.html)

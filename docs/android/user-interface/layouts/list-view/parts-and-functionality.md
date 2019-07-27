@@ -6,72 +6,69 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/21/2017
-ms.openlocfilehash: 248baa5daceff6db01098a155600ea204547e845
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 3ab7a923dabd6b98c509870abaa51b12fb63c8d2
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61319749"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510121"
 ---
-# <a name="listview-parts-and-functionality"></a>Elementos y funcionalidad de ListView
-
-
-## <a name="overview"></a>Información general
+# <a name="xamarinandroid-listview-parts-and-functionality"></a>Componentes y funcionalidad de ListView de Xamarin. Android
 
 Un `ListView` consta de las siguientes partes:
 
-- **Filas** &ndash; la representación visible de los datos en la lista.
+- **Filas** de &ndash; Representación visible de los datos de la lista.
 
-- **Adaptador** &ndash; una clase no visual que se enlaza el origen de datos a la vista de lista.
+- **Adaptador** de &ndash; Una clase no visual que enlaza el origen de datos a la vista de lista.
 
-- **Desplazamiento rápido** &ndash; un identificador que permite al usuario desplazarse a la longitud de la lista.
+- **Desplazamiento rápido** &ndash; Identificador que permite al usuario desplazarse por la longitud de la lista.
 
-- **Índice de sección** &ndash; filas de un elemento de interfaz de usuario que flota sobre el desplazamiento para indicar dónde se encuentran las filas actuales en la lista.
+- **Índice de sección** &ndash; Un elemento de la interfaz de usuario que flota sobre las filas de desplazamiento para indicar en qué lugar de la lista se encuentran las filas actuales.
 
-Estas capturas de pantalla usan básico `ListView` control para mostrar cómo se representan el desplazamiento rápido y el índice de sección:
+Estas capturas de pantallas `ListView` usan un control básico para mostrar cómo se representan el desplazamiento rápido y el índice de sección:
 
-[![Capturas de pantalla de aplicaciones con las filas antiguas sin formato, rápida de desplazamiento y el índice de sección](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png#lightbox)
+[![Capturas de pantallas de aplicaciones que usan filas antiguas sin formato, desplazamiento rápido e índice de sección](parts-and-functionality-images/listviewparts.png)](parts-and-functionality-images/listviewparts.png#lightbox)
 
-Los elementos que componen un `ListView` se describen más detalladamente a continuación:
+Los elementos que componen `ListView` un se describen con más detalle a continuación:
 
 
 ## <a name="rows"></a>Filas
 
-Cada fila tiene su propio `View`. La vista puede ser cualquiera de las vistas integradas definidas en `Android.Resources`, o una vista personalizada. Cada fila puede usar el mismo diseño de vista o pueden ser diferentes. Hay ejemplos de este documento del uso de los diseños integrados y otros que se explica cómo definir los diseños personalizados.
+Cada fila tiene su propia `View`. La vista puede ser una de las vistas integradas definidas en `Android.Resources`o una vista personalizada. Cada fila puede usar el mismo diseño de vista o puede ser diferente. Hay ejemplos en este documento sobre el uso de diseños integrados y otros que explican cómo definir diseños personalizados.
 
 
 ## <a name="adapter"></a>Adaptador
 
-El `ListView` control requiere una `Adapter` para proporcionar el formato `View` para cada fila. Android tiene integrada adaptadores y las vistas que se pueden usar o se pueden crear clases personalizadas.
+El `ListView` control `View` requiere que proporcione el formato para cada fila. `Adapter` Android tiene adaptadores y vistas integrados que se pueden usar, o bien se pueden crear clases personalizadas.
 
 
 ## <a name="fast-scrolling"></a>Desplazamiento rápido
 
-Cuando un `ListView` contiene muchas filas de datos de desplazamiento rápido puede habilitarse para ayudar al usuario navegar a cualquier parte de la lista. El rápido desplazamiento 'barra de desplazamiento' puede ser opcionalmente habilitada (y personalizados en el nivel de API 11 y versiones posteriores).
+Cuando un `ListView` contiene muchas filas de datos, se puede habilitar el desplazamiento rápido para ayudar al usuario a desplazarse a cualquier parte de la lista. La barra de desplazamiento de desplazamiento rápido se puede habilitar opcionalmente (y personalizarse en el nivel de API 11 y versiones posteriores).
 
 
 ## <a name="section-index"></a>Índice de sección
 
-Al desplazarse a través de las listas largas, el índice de la sección opcional proporciona al usuario con comentarios en qué parte de la lista que se está viendo actualmente. Solo es adecuado en las listas largas, normalmente en combinación con desplazamiento rápido.
+Al desplazarse por las listas largas, el índice de sección opcional proporciona al usuario información sobre la parte de la lista que está viendo actualmente. Solo es adecuado en listas largas, normalmente junto con desplazamiento rápido.
 
 
-## <a name="classes-overview"></a>Información general de clases
+## <a name="classes-overview"></a>Información general sobre clases
 
-Las clases primarias utilizadas para mostrar `ListViews` se muestra aquí:
+A continuación se muestran las clases `ListViews` principales que se usan para mostrar:
 
-[![Diagrama UML que muestra las relaciones entre ListView y las clases asociadas](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png#lightbox)
+[![Diagrama UML que ilustra las relaciones entre ListView y las clases asociadas](parts-and-functionality-images/image2.png)](parts-and-functionality-images/image2.png#lightbox)
 
-El propósito de cada clase se describe a continuación:
+A continuación se describe el propósito de cada clase:
 
-- **ListView** &ndash; elemento de la interfaz de usuario que se muestra una colección desplazable de filas. En teléfonos normalmente utiliza seguridad de toda la pantalla (en cuyo caso el `ListActivity` clase puede utilizarse) o podría ser parte de un diseño más grande en teléfonos o dispositivos de tableta gráfica.
+- **Vista** de &ndash; elemento de la interfaz de usuario que muestra una colección desplazable de filas. En los teléfonos, normalmente usa toda la pantalla (en cuyo caso se puede `ListActivity` usar la clase) o podría formar parte de un diseño mayor en teléfonos o dispositivos de tableta.
 
-- **Vista** &ndash; una vista en Android puede ser cualquier elemento de interfaz de usuario, pero en el contexto de un `ListView` requiere un `View` va a proporcionar para cada fila.
+- **Vista** de una vista en Android puede ser cualquier elemento de la interfaz de usuario, pero en el `ListView` contexto de, `View` requiere que se proporcione un para cada fila. &ndash;
 
-- **BaseAdapter** &ndash; clase Base para implementaciones del adaptador enlazar un `ListView` a un origen de datos.
+- **BaseAdapter** Clase base para las implementaciones de adaptador para `ListView` enlazar un a un origen de datos. &ndash;
 
-- **ArrayAdapter** &ndash; clase de adaptadores integrados que se enlaza a una matriz de cadenas para un `ListView` para su presentación. La interfaz genérica `ArrayAdapter<T>` hace lo mismo para otros tipos.
+- **ArrayAdapter** Clase de adaptador integrado que enlaza una matriz de cadenas a un `ListView` para su presentación. &ndash; El genérico `ArrayAdapter<T>` hace lo mismo para otros tipos.
 
-- **CursorAdapter** &ndash; Use `CursorAdapter` o `SimpleCursorAdapter` para mostrar datos en función de una consulta de SQLite.
+- **CursorAdapter** &ndash; Use opara`SimpleCursorAdapter` Mostrar datos basados en una consulta de SQLite. `CursorAdapter`
 
-Este documento contiene ejemplos sencillos que usan un `ArrayAdapter` , así como ejemplos más complejos que requieren las implementaciones personalizadas de `BaseAdapter` o `CursorAdapter`.
+Este documento contiene ejemplos sencillos que usan `ArrayAdapter` , así como ejemplos más complejos que requieren implementaciones personalizadas de `BaseAdapter` o `CursorAdapter`.
 

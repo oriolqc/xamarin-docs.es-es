@@ -1,46 +1,46 @@
 ---
-title: Contenedores que se pueden llamar de Android
+title: Contenedores de Android Callable para Xamarin. Android
 ms.prod: xamarin
 ms.assetid: C33E15FA-1E2B-819A-C656-CA588D611492
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 02/15/2018
-ms.openlocfilehash: 7edbdaa5a690a641523cb5baad7909ed01992aa5
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: a8bd3f11698260b944bd29fcd9551825cb76e506
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61090909"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511191"
 ---
-# <a name="android-callable-wrappers"></a>Contenedores que se pueden llamar de Android
+# <a name="android-callable-wrappers-for-xamarinandroid"></a>Contenedores de Android Callable para Xamarin. Android
 
-Android contenedores RCW (ACWs) son necesarios siempre que el tiempo de ejecución Android invoca a código administrado. Estos contenedores son necesarios porque no hay ninguna manera de registrar las clases con arte (el tiempo de ejecución de Android) en tiempo de ejecución. (En concreto, el [DefineClass() JNI función](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) no es compatible con el tiempo de ejecución de Android.} Contenedores RCW Android, por tanto, compensar la falta de compatibilidad de registro de tipo en tiempo de ejecución. 
+Los contenedores a los que se puede llamar de Android (ACWs) son necesarios siempre que el tiempo de ejecución de Android invoca código administrado. Estos contenedores son necesarios porque no hay ninguna manera de registrar clases con arte (el tiempo de ejecución de Android) en tiempo de ejecución. (Concretamente, la [función DefineClass () de JNI](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) no es compatible con el tiempo de ejecución de Android.} Los contenedores a los que se puede llamar de Android componen la falta de compatibilidad con el registro de tipo en tiempo de ejecución. 
 
-*Cada vez que* código Android es necesario ejecutar una `virtual` o método que es la interfaz `overridden` o se implementa en código administrado, Xamarin.Android debe proporcionar un proxy de Java para que este método se envía al tipo administrado adecuado. Estos tipos de proxy Java son código de Java que tiene el "mismo" clase base y la lista de interfaces de Java como el tipo administrado, la implementación de los constructores mismos y declarar cualquier clase base invalidado y los métodos de interfaz. 
+*Cada vez* El código de Android necesita ejecutar `virtual` un método de interfaz o `overridden` que se implementa en código administrado, Xamarin. Android debe proporcionar un proxy de Java para que este método se envíe al tipo administrado adecuado. Estos tipos de proxy Java son código Java que tiene la misma clase base y la misma lista de interfaces de Java que el tipo administrado, implementando los mismos constructores y declarando cualquier método de interfaz y clase base invalidado. 
 
-Android contenedores RCW generados por el **monodroid.exe** de programa durante la [proceso de compilación](~/android/deploy-test/building-apps/build-process.md): se generan para todos los tipos que heredan (directa o indirectamente) [ Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/). 
+Los contenedores a los que se puede llamar de Android se generan mediante el programa **monodroid. exe** durante el [proceso de compilación](~/android/deploy-test/building-apps/build-process.md): se generan para todos los tipos que heredan (directa o indirectamente) [java. lang. Object](xref:Java.Lang.Object). 
 
 
 
-## <a name="android-callable-wrapper-naming"></a>Nomenclatura de contenedor CCW Android
+## <a name="android-callable-wrapper-naming"></a>Nombres de contenedor de Android Callable
 
-Los nombres de paquete para contenedores RCW Android se basan en el MD5SUM del nombre completo de ensamblado del tipo que se va a exportar. Esta técnica nomenclatura hace posible para el mismo nombre de tipo completo para que estén disponibles mediante distintos ensamblados sin introducir un error de empaquetado. 
+Los nombres de paquete de los contenedores a los que se puede llamar de Android se basan en el MD5SUM del nombre calificado con el ensamblado del tipo que se va a exportar. Esta técnica de nomenclatura permite que el mismo nombre de tipo completo esté disponible en ensamblados diferentes sin introducir un error de empaquetado. 
 
-Debido a este esquema de nomenclatura MD5SUM, no puede tener acceso directamente a sus tipos por su nombre. Por ejemplo, la siguiente `adb` comando no funcionará porque el nombre de tipo `my.ActivityType` no se genera de forma predeterminada: 
+Debido a este esquema de nomenclatura de MD5SUM, no puede acceder directamente a los tipos por nombre. Por ejemplo, el siguiente `adb` comando no funcionará porque el nombre `my.ActivityType` de tipo no se genera de forma predeterminada: 
 
 ```shell
 adb shell am start -n My.Package.Name/my.ActivityType
 ```
 
-Además, pueden aparecer errores similar al siguiente si intenta hacer referencia a un tipo por nombre:
+Además, es posible que vea errores como los siguientes si intenta hacer referencia a un tipo por nombre:
 
 ```shell
 java.lang.ClassNotFoundException: Didn't find class "com.company.app.MainActivity"
 on path: DexPathList[[zip file "/data/app/com.company.App-1.apk"] ...
 ```
 
-Si se *hacer* requieren acceso a los tipos por su nombre, puede declarar un nombre para ese tipo en una declaración de atributo. Por ejemplo, este es el código que declara una actividad con el nombre completo `My.ActivityType`:
+Si requiere *acceso* a los tipos por nombre, puede declarar un nombre para ese tipo en una declaración de atributo. Por ejemplo, este es el código que declara una actividad con el nombre `My.ActivityType`completo:
 
 ```csharp
 namespace My {
@@ -51,7 +51,7 @@ namespace My {
 }
 ```
 
-El `ActivityAttribute.Name` propiedad puede establecerse para declarar explícitamente el nombre de esta actividad: 
+La `ActivityAttribute.Name` propiedad se puede establecer para declarar explícitamente el nombre de esta actividad: 
 
 ```csharp
 namespace My {
@@ -62,23 +62,23 @@ namespace My {
 }
 ```
 
-Después de agrega el valor de esta propiedad, `my.ActivityType` puede tener acceso por nombre de código externo y de `adb` secuencias de comandos. El `Name` atributo puede establecerse para muchos tipos diferentes incluidos `Activity`, `Application`, `Service`, `BroadcastReceiver`, y `ContentProvider`: 
+Una vez agregada la configuración de `my.ActivityType` esta propiedad, se puede tener acceso a ella por su `adb` nombre desde el código externo y desde los scripts. El `Name` atributo se puede establecer para muchos tipos diferentes, `Activity`entre los que `BroadcastReceiver`se incluyen `ContentProvider`, `Application`, `Service`, y: 
 
--   [ActivityAttribute.Name](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Name/)
--   [ApplicationAttribute.Name](https://developer.xamarin.com/api/property/Android.App.ApplicationAttribute.Name/)
--   [ServiceAttribute.Name](https://developer.xamarin.com/api/property/Android.App.ServiceAttribute.Name/)
--   [BroadcastReceiverAttribute.Name](https://developer.xamarin.com/api/property/Android.Content.BroadcastReceiverAttribute.Name/)
--   [ContentProviderAttribute.Name](https://developer.xamarin.com/api/property/Android.Content.ContentProviderAttribute.Name/)
+-   [ActivityAttribute.Name](xref:Android.App.ActivityAttribute.Name)
+-   [ApplicationAttribute.Name](xref:Android.App.ApplicationAttribute.Name)
+-   [ServiceAttribute.Name](xref:Android.App.ServiceAttribute.Name)
+-   [BroadcastReceiverAttribute.Name](xref:Android.Content.BroadcastReceiverAttribute.Name)
+-   [ContentProviderAttribute.Name](xref:Android.Content.ContentProviderAttribute.Name)
 
-Denominación de ACW basada en MD5SUM se introdujo en Xamarin.Android 5.0. Para obtener más información sobre la nomenclatura de atributo, vea [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/). 
+Los nombres de ACW basados en MD5SUM se introdujeron en Xamarin. Android 5,0. Para obtener más información sobre la nomenclatura de atributos, vea [RegisterAttribute](xref:Android.Runtime.RegisterAttribute). 
 
 
 
 ## <a name="implementing-interfaces"></a>Implementar interfaces
 
-Hay veces cuando es posible que necesite para implementar una interfaz de Android, como [Android.Content.IComponentCallbacks](https://developer.xamarin.com/api/type/Android.Content.IComponentCallbacks/). Puesto que todas las clases de Android e interfaz amplía el [Android.Runtime.IJavaObject](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) interfaz, la pregunta que surge es: ¿cómo se implementa `IJavaObject`? 
+Hay ocasiones en las que puede que necesite implementar una interfaz de Android, como [Android. Content. IComponentCallbacks](xref:Android.Content.IComponentCallbacks). Dado que todas las clases e interfaces de Android amplían la interfaz de [Android. Runtime. IJavaObject](xref:Android.Runtime.IJavaObject) , surge la pregunta: `IJavaObject`¿cómo se implementa? 
 
-Se respondió la pregunta anterior: la razón por la que todos los tipos de Android deben implementar `IJavaObject` es para que Xamarin.Android tiene un contenedor CCW Android para proporcionar a Android, es decir, un proxy de Java para el tipo especificado. Puesto que **monodroid.exe** solo busca `Java.Lang.Object` subclases y `Java.Lang.Object` implementa `IJavaObject,` la respuesta es obvia: subclase `Java.Lang.Object`: 
+La pregunta se respondió anteriormente: el motivo por el que todos los tipos `IJavaObject` de Android deben implementarse es para que Xamarin. Android tenga un contenedor de Android al que se puede llamar para proporcionar a Android, es decir, un proxy de Java para el tipo especificado. Dado que **monodroid. exe** solo busca `Java.Lang.Object` subclases e `Java.Lang.Object` implementa `IJavaObject,` la respuesta es obvia: subclase `Java.Lang.Object`: 
 
 ```csharp
 class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbacks {
@@ -98,9 +98,9 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 
 ## <a name="implementation-details"></a>Detalles de implementación
 
-*El resto de esta página proporciona los detalles de implementación sujeta a cambios sin previo aviso* (y se presenta aquí solo porque los desarrolladores estarán curiosidad sobre lo que está ocurriendo). 
+*El resto de esta página proporciona detalles de implementación sujetos a cambios sin previo aviso* (y se presenta aquí solo porque los desarrolladores tendrán curiosidad sobre lo que está ocurriendo). 
 
-Por ejemplo, dada la siguiente C# origen:
+Por ejemplo, dado el siguiente C# origen:
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ namespace Mono.Samples.HelloWorld
 }
 ```
 
-El **mandroid.exe** programa generará el siguiente contenedor invocable Android: 
+El programa **mandroid. exe** generará el siguiente contenedor de Android al que se puede llamar: 
 
 ```java
 package mono.samples.helloWorld;
@@ -155,4 +155,4 @@ public class HelloAndroid
 }
 ```
 
-Tenga en cuenta que se conserva la clase base, y `native` se proporcionan declaraciones de método para cada método que se invalide en código administrado. 
+Observe que se conserva la clase base y `native` que se proporcionan declaraciones de método para cada método invalidado en el código administrado. 

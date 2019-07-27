@@ -1,55 +1,54 @@
 ---
-title: Información general sobre la integración de Java
-description: El ecosistema de Java incluye una diversidad y gran colección de componentes. Muchos de estos componentes pueden usarse para reducir el tiempo necesario para desarrollar una aplicación Android. Este documento se presentan y proporcionar una descripción general de algunas de las formas en que los desarrolladores pueden usar estos componentes de Java existentes para mejorar su experiencia de desarrollo de aplicaciones de Xamarin.Android.
+title: Integración de Java con Xamarin. Android
+description: El ecosistema de Java incluye una colección de componentes diversa y inmensa. Muchos de estos componentes se pueden usar para reducir el tiempo necesario para desarrollar una aplicación de Android. En este documento se proporciona información general de alto nivel de algunas de las formas en que los desarrolladores pueden usar estos componentes de Java existentes para mejorar la experiencia de desarrollo de aplicaciones de Xamarin. Android.
 ms.prod: xamarin
 ms.assetid: 7B5B8695-1C49-19BF-AE99-948CDCBD2A20
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 01/18/2017
-ms.openlocfilehash: 3ab31fb7cac97fbae3315f51daf3dd4b1edbcc1d
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: f577af88140c5797182617a22efbb2e7991a8abc
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61085297"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510565"
 ---
-# <a name="java-integration-overview"></a>Información general sobre la integración de Java
+# <a name="java-integration-with-xamarinandroid"></a>Integración de Java con Xamarin. Android
 
-_El ecosistema de Java incluye una diversidad y gran colección de componentes. Muchos de estos componentes pueden usarse para reducir el tiempo necesario para desarrollar una aplicación Android. Este documento se presentan y proporcionar una descripción general de algunas de las formas en que los desarrolladores pueden usar estos componentes de Java existentes para mejorar su experiencia de desarrollo de aplicaciones de Xamarin.Android._
-
+_El ecosistema de Java incluye una colección de componentes diversa y inmensa. Muchos de estos componentes se pueden usar para reducir el tiempo necesario para desarrollar una aplicación de Android. En este documento se proporciona información general de alto nivel de algunas de las formas en que los desarrolladores pueden usar estos componentes de Java existentes para mejorar la experiencia de desarrollo de aplicaciones de Xamarin. Android._
 
 ## <a name="overview"></a>Información general
 
-Debido al alcance del ecosistema de Java, es muy probable que cualquier determinada funcionalidad necesaria para una aplicación de Xamarin.Android ya se ha codificado en Java. Por este motivo, es atractiva para probar y volver a usar estas bibliotecas existentes al crear una aplicación de Xamarin.Android. 
+Dada la extensión del ecosistema Java, es muy probable que cualquier funcionalidad determinada necesaria para una aplicación de Xamarin. Android ya se haya codificado en Java. Por este motivo, es atractivo probar y volver a usar estas bibliotecas existentes al crear una aplicación de Xamarin. Android.
 
-Hay tres maneras posibles para volver a usar las bibliotecas de Java en una aplicación de Xamarin.Android: 
+Hay tres formas posibles de volver a usar las bibliotecas de Java en una aplicación de Xamarin. Android: 
 
--   **Crear una biblioteca de enlaces Java** &ndash; con esta técnica, se usa un proyecto de Xamarin.Android para crear C# contenedores en torno a los tipos de Java. A continuación, puede hacer referencia a una aplicación de Xamarin.Android el C# contenedores creados por este proyecto y, a continuación, utilice el `.jar` archivo. 
+-   **Creación de una biblioteca de enlaces de Java** Con esta técnica, se usa un proyecto de Xamarin. Android para C# crear contenedores alrededor de los tipos de Java. &ndash; Una aplicación de Xamarin. Android puede hacer referencia C# a los contenedores creados por este proyecto y, a continuación `.jar` , usar el archivo. 
 
--   **Java Native Interface** &ndash; el *Java nativo* *interfaz* (JNI) es un marco que permite que el código no son de Java (como C++ o C#) para llamar a o llamar a código de Java que se ejecuta dentro de una JVM. 
+-   **Interfaz nativa de Java** C++ C#   Java Native Interface (JNI) es un marco de trabajo que permite que el código que no es Java (como o) llame a o sea llamado por el código de Java que se ejecuta dentro de una JVM. &ndash; 
 
--   **El código de puerto** &ndash; este método implica tomar el código fuente Java y, a continuación, convertirlo en C#. Esto puede realizarse manualmente o mediante una herramienta automatizada como dar nitidez. 
+-   **Portar el código** Este método implica tomar el código fuente Java y, a continuación, convertirlo en C# &ndash; Esto se puede hacer manualmente o mediante una herramienta automatizada como el enfoque. 
 
-En el núcleo de las primeras dos técnicas es el *Java Native Interface* (JNI). JNI es un marco que permite a las aplicaciones que no se escriben en Java interactuar con código de Java que se ejecuta en una máquina Virtual de Java. Xamarin.Android usa JNI crear *enlaces* para C# código. 
+En el núcleo de las dos primeras técnicas se encuentra *Java Native Interface* (JNI). JNI es un marco que permite a las aplicaciones no escritas en Java interactuar con el código Java que se ejecuta en un Máquina virtual Java. Xamarin. Android usa JNI para crear *enlaces* para C# el código. 
 
-La primera técnica es un enfoque declarativo más automatizado para el enlace de bibliotecas de Java. Implica el uso de Visual Studio para Mac o un tipo de proyecto de Visual Studio que Xamarin.Android proporciona &ndash; la biblioteca de enlaces de Java. Para crear correctamente estos enlaces, una biblioteca de enlaces Java todavía pueden requerir que algunas modificaciones manuales, pero no tantas como haría un enfoque puro de JNI. Consulte [enlace a una biblioteca de Java](~/android/platform/binding-java-library/index.md) para obtener más información acerca de las bibliotecas de Java de enlace. 
+La primera técnica es un enfoque más automatizado y declarativo para enlazar bibliotecas de Java. Implica el uso de Visual Studio para Mac o de un tipo de proyecto de Visual Studio proporcionado por Xamarin. &ndash; Android en la biblioteca de enlaces de Java. Para crear correctamente estos enlaces, es posible que una biblioteca de enlaces de Java siga requiriendo algunas modificaciones manuales, pero no tantas como sea un enfoque de JNI puro. Vea [enlazar una biblioteca de Java](~/android/platform/binding-java-library/index.md) para obtener más información sobre las bibliotecas de enlace de Java. 
 
-La segunda técnica con JNI, funciona en un nivel inferior mucho, pero puede proporcionar para un control más preciso y tener acceso a los métodos de Java que no suelen estar accesibles a través de una biblioteca de enlaces de Java. 
+La segunda técnica, con JNI, funciona en un nivel mucho menor, pero puede proporcionar un mayor control y acceso a los métodos de Java que normalmente no serían accesibles a través de una biblioteca de enlace de Java. 
 
-La tercera técnica es totalmente diferente de los dos anteriores: trasladar el código de Java a C#. Portar el código de un idioma a otro puede ser un proceso muy laborioso, pero es posible reducir que esfuerzo con la Ayuda de una herramienta denominada *enfocar*. Enfocar es una herramienta de código abierto que es un Java-a-C# convertidor. 
+La tercera técnica es radicalmente diferente de las dos anteriores: trasladar el código de Java a C#. Trasladar código de un idioma a otro puede ser un proceso muy laborioso, pero es posible reducir ese esfuerzo con la ayuda de una herramienta denominada *nitidez*. Sharp es una herramienta de código abierto que es una herramienta de JavaC# a convertidor. 
 
 
 
 ## <a name="summary"></a>Resumen
 
-Este documento proporciona una descripción general de algunas de las distintas formas en que se pueden reutilizar las bibliotecas de Java en una aplicación de Xamarin.Android. Introdujo los conceptos de enlaces y contenedores RCW administrados y describen las opciones para migrar código de Java a C#. 
+En este documento se proporciona información general de alto nivel sobre algunas de las distintas formas en que las bibliotecas de Java se pueden volver a usar en una aplicación de Xamarin. Android. Se introdujeron los conceptos de los enlaces y los contenedores a los que se puede llamar administrados, y se explican las opciones para migrar código Java a C#. 
 
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Arquitectura](~/android/internals/architecture.md)
 - [Enlace de una biblioteca Java](~/android/platform/binding-java-library/index.md)
-- [Trabajo con JNI](~/android/platform/java-integration/working-with-jni.md)
+- [Trabajar con JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Dar nitidez](https://github.com/slluis/sharpen)
-- [Java Native Interface](http://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)
+- [Interfaz nativa de Java](http://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)

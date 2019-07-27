@@ -7,16 +7,16 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/19/2017
-ms.openlocfilehash: 006e403b50a452265a40a0e95d17769fa0446a1a
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 294483e8b831aa085fc338eb05147ced1098c1c5
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67650414"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68508248"
 ---
-# <a name="authenticate-users-with-an-identity-provider"></a>Autenticar a los usuarios con un proveedor de identidades
+# <a name="authenticate-users-with-an-identity-provider"></a>Autenticación de usuarios con un proveedor de identidades
 
-[![Descargar ejemplo](~/media/shared/download.png) descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+[![Descargar ejemplo](~/media/shared/download.png) Descargar el ejemplo](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
 
 _Xamarin.Auth es un SDK multiplataforma para autenticar a los usuarios y sus cuentas de almacenamiento. Incluye los autenticadores de OAuth que proporcionan compatibilidad para consumir los proveedores de identidades como Microsoft, Google, Facebook y Twitter. Este artículo explica cómo usar Xamarin.Auth para administrar el proceso de autenticación en una aplicación de Xamarin.Forms._
 
@@ -171,7 +171,7 @@ El `OpenUrl` método convierte la dirección URL recibida desde un `NSUrl` a .NE
 
 #### <a name="android"></a>Android
 
-En Android, se registra un esquema de dirección URL personalizado mediante la especificación de un [ `IntentFilter` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) atributo el `Activity` que va a controlar el esquema. Cuando el proveedor de identidades completa la solicitud de autorización, redirige a la dirección URL de redireccionamiento de la aplicación. Como la dirección URL utiliza un esquema personalizado, da como resultado de iniciar la aplicación de Android, pasando la dirección URL como un parámetro de inicio, donde se procesó la `OnCreate` método de la `Activity` registrado para controlar el esquema de dirección URL personalizado. El ejemplo de código siguiente muestra la clase de la aplicación de ejemplo que controla el esquema de dirección URL personalizado:
+En Android, se registra un esquema de dirección URL personalizado mediante la especificación de un [ `IntentFilter` ](xref:Android.App.IntentFilterAttribute) atributo el `Activity` que va a controlar el esquema. Cuando el proveedor de identidades completa la solicitud de autorización, redirige a la dirección URL de redireccionamiento de la aplicación. Como la dirección URL utiliza un esquema personalizado, da como resultado de iniciar la aplicación de Android, pasando la dirección URL como un parámetro de inicio, donde se procesó la `OnCreate` método de la `Activity` registrado para controlar el esquema de dirección URL personalizado. El ejemplo de código siguiente muestra la clase de la aplicación de ejemplo que controla el esquema de dirección URL personalizado:
 
 ```csharp
 [Activity(Label = "CustomUrlSchemeInterceptorActivity", NoHistory = true, LaunchMode = LaunchMode.SingleTop )]
@@ -197,7 +197,7 @@ public class CustomUrlSchemeInterceptorActivity : Activity
 }
 ```
 
-El `DataSchemes` propiedad de la [ `IntentFilter` ](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) debe establecerse en el identificador de cliente invertido que se obtiene del identificador de cliente Android para el proyecto en [consola de API de Google](http://console.developers.google.com).
+El `DataSchemes` propiedad de la [ `IntentFilter` ](xref:Android.App.IntentFilterAttribute) debe establecerse en el identificador de cliente invertido que se obtiene del identificador de cliente Android para el proyecto en [consola de API de Google](http://console.developers.google.com).
 
 El `OnCreate` método convierte la dirección URL recibida desde un `Android.Net.Url` a .NET `Uri`, antes de procesar la dirección URL de redireccionamiento con el `OnPageLoading` método para un público `OAuth2Authenticator` objeto. Esto hace que Xamarin.Auth cerrar la pestaña del explorador web y analizar los datos recibidos de OAuth.
 

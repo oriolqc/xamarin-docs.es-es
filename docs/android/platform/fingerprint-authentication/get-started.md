@@ -1,45 +1,45 @@
 ---
-title: Introducción a la autenticación con huella digital
+title: Introducción con autenticación mediante huellas digitales
 ms.prod: xamarin
 ms.assetid: 7BACCB36-8E3E-4E5D-B8EF-56A639839FD2
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/17/2018
-ms.openlocfilehash: 3082dfcd6d0ffbc6404a89a10819e60b57b9c61c
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: c433d4d7920b024795e2e8344b452e25d8f58cf4
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61023838"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510646"
 ---
-# <a name="getting-started-with-fingerprint-authentication"></a>Introducción a la autenticación con huella digital
+# <a name="getting-started-with-fingerprint-authentication"></a>Introducción con autenticación mediante huellas digitales
 
-Para empezar, vamos a examinar primero cómo configurar un proyecto de Xamarin.Android para que la aplicación pueda usar la autenticación con huella digital:
+Para empezar, vamos a explicar primero cómo configurar un proyecto de Xamarin. Android para que la aplicación pueda usar la autenticación mediante huella digital:
 
-1. Actualización **AndroidManifest.xml** para declarar los permisos que requieren las API de huellas digitales.
-2. Obtener una referencia a la `FingerprintManager`.
-3. Compruebe que el dispositivo es capaz de analizar la huella digital.
+1. Actualice **archivo AndroidManifest. XML** para declarar los permisos que requieren las API de huellas digitales.
+2. Obtenga una referencia a `FingerprintManager`.
+3. Compruebe que el dispositivo es capaz de detectar huellas digitales.
 
-## <a name="requesting-permissions-in-the-application-manifest"></a>Manifiesto de la solicitud de permisos en la aplicación
+## <a name="requesting-permissions-in-the-application-manifest"></a>Solicitar permisos en el manifiesto de aplicación
 
 # <a name="visual-studiotabwindows"></a>[Visual Studio](#tab/windows)
 
-Una aplicación Android debe solicitar el `USE_FINGERPRINT` permiso en el manifiesto. Captura de pantalla siguiente muestra cómo agregar este permiso a la aplicación en Visual Studio:
+Una aplicación de Android debe solicitar `USE_FINGERPRINT` el permiso en el manifiesto. En la captura de pantalla siguiente se muestra cómo agregar este permiso a la aplicación en Visual Studio:
 
-[![Habilitar uso\_huellas digitales en la pantalla de manifiesto de Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
+[![Habilitar usar\_huella digital en la pantalla del manifiesto de Android](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
 
-Una aplicación Android debe solicitar el `USE_FINGERPRINT` permiso en el manifiesto. Captura de pantalla siguiente muestra cómo agregar este permiso a la aplicación en Visual Studio para Mac:
+Una aplicación de Android debe solicitar `USE_FINGERPRINT` el permiso en el manifiesto. En la captura de pantalla siguiente se muestra cómo agregar este permiso a la aplicación en Visual Studio para Mac:
 
-[![Habilitar UseFingerprint en la pantalla de la aplicación de Android](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox) 
+[![Habilitación de UseFingerprint en la pantalla de la aplicación Android](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox) 
 
 -----
 
-## <a name="getting-an-instance-of-the-fingerprintmanager"></a>Obtener una instancia de la FingerprintManager
+## <a name="getting-an-instance-of-the-fingerprintmanager"></a>Obtener una instancia de FingerprintManager
 
-A continuación, la aplicación debe obtener una instancia de la `FingerprintManager` o `FingerprintManagerCompat` clase. Para ser compatible con versiones anteriores de Android, una aplicación Android debe utilizar la API de compatibilidad se han encontrado en el paquete de NuGet de compatibilidad de Android v4. El fragmento de código siguiente muestra cómo obtener el objeto adecuado desde el sistema operativo: 
+A continuación, la aplicación debe obtener una instancia de `FingerprintManager` la `FingerprintManagerCompat` clase o. Para ser compatible con versiones anteriores de Android, una aplicación de Android debe usar la API de compatibilidad que se encuentra en el paquete NuGet de compatibilidad de Android V4. En el siguiente fragmento de código se muestra cómo obtener el objeto adecuado del sistema operativo: 
 
 ```csharp
 // Using the Android Support Library v4
@@ -49,15 +49,15 @@ FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(cont
 FingerprintManager fingerprintManager = context.GetSystemService(Context.FingerprintService) as FingerprintManager;
 ```  
 
-En el fragmento de código anterior, el `context` es cualquier Android `Android.Content.Context`. Normalmente se trata de la actividad que está realizando la autenticación.
+En el fragmento de código anterior `context` , es cualquier `Android.Content.Context`Android. Normalmente, se trata de la actividad que realiza la autenticación.
 
-## <a name="checking-for-eligibility"></a>Comprobar elegibilidad
+## <a name="checking-for-eligibility"></a>Comprobando elegibilidad
 
-Una aplicación debe realizar varias comprobaciones para asegurarse de que es posible usar la autenticación con huella digital. En total, hay cinco condiciones que utiliza la aplicación para comprobar la idoneidad:  
+Una aplicación debe realizar varias comprobaciones para asegurarse de que es posible usar la autenticación con huellas digitales. En total, hay cinco condiciones que la aplicación usa para comprobar la idoneidad:  
 
-**Nivel de API 23** &ndash; las huellas digitales API requieren el nivel de API 23 o superior. La `FingerprintManagerCompat` clase ajustará la comprobación de nivel de API para usted. Por este motivo es recomendable usar el **biblioteca de compatibilidad de Android v4** y `FingerprintManagerCompat`; Esto se encargará de uno de estas comprobaciones.
+**Nivel de API 23** &ndash; Las API de huellas digitales requieren el nivel de API 23 o superior. La `FingerprintManagerCompat` clase ajustará la comprobación de nivel de API. Por esta razón, se recomienda usar la **biblioteca de compatibilidad de Android V4** y `FingerprintManagerCompat`; esto tendrá en cuenta la de estas comprobaciones.
 
-**Hardware** &ndash; cuando la aplicación se inicia por primera vez, debe comprobar la presencia de un escáner de huella digital:
+**Hardware** de &ndash; Cuando la aplicación se inicia por primera vez, debe comprobar la presencia de un escáner de huellas digitales:
 
 ```csharp
 FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(context);
@@ -67,7 +67,7 @@ if (!fingerprintManager.IsHardwareDetected)
 }
 ```
 
-**Dispositivo esté protegido** &ndash; el usuario debe tener el dispositivo protegido con un bloqueo de pantalla. Si el usuario no ha protegido el dispositivo con un bloqueo de pantalla y la seguridad es importante para la aplicación, a continuación, el usuario se debe notificar que se debe configurar un bloqueo de pantalla. El fragmento de código siguiente muestra cómo comprobar este requisito previo:
+El **dispositivo está protegido** &ndash; El usuario debe tener el dispositivo protegido con un bloqueo de pantalla. Si el usuario no ha protegido el dispositivo con un bloqueo de pantalla y la seguridad es importante para la aplicación, se debe notificar al usuario que debe configurarse un bloqueo de pantalla. En el fragmento de código siguiente se muestra cómo comprobar este requiste:
 
 ```csharp
 KeyguardManager keyguardManager = (KeyguardManager) GetSystemService(KeyguardService);
@@ -76,7 +76,7 @@ if (!keyguardManager.IsKeyguardSecure)
 }
 ```
 
-**Las huellas digitales de inscrito** &ndash; el usuario debe tener al menos una huella digital registrado con el sistema operativo. Esta comprobación de permiso debe producirse antes de cada intento de autenticación:
+**Huellas digitales** inscritos &ndash; El usuario debe tener al menos una huella digital registrada en el sistema operativo. Esta comprobación de permisos debe realizarse antes de cada intento de autenticación:
 
 ```csharp
 FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(context);
@@ -87,7 +87,7 @@ if (!fingerprintManager.HasEnrolledFingerprints)
 }
 ```
 
-**Permisos** &ndash; la aplicación debe solicitar permiso al usuario antes de usar la aplicación. Para Android 5.0 e inferior, el usuario concede el permiso como una condición de la instalación de la aplicación. Android 6.0 introdujo un nuevo modelo de permiso que comprueba los permisos en tiempo de ejecución. Este fragmento de código es un ejemplo de cómo comprobar los permisos en Android 6.0:
+**Permisos** de &ndash; La aplicación debe solicitar permiso al usuario antes de usar la aplicación. Para Android 5,0 y versiones anteriores, el usuario concede el permiso como una condición de instalación de la aplicación. Android 6,0 presentó un nuevo modelo de permiso que comprueba los permisos en tiempo de ejecución. Este fragmento de código es un ejemplo de cómo comprobar los permisos en Android 6,0:
 
 ```csharp
 // The context is typically a reference to the current activity.
@@ -103,15 +103,15 @@ else
 }
 ```
 
-Comprobación de todas estas condiciones cada vez que la aplicación ofrece opciones de autenticación garantizará que el usuario obtiene la mejor experiencia de usuario. Los cambios o actualizaciones a su dispositivo o sistema operativo pueden afectar a la disponibilidad de la autenticación con huella digital. Si decide almacenar en caché los resultados de cualquiera de estas comprobaciones, asegúrese de cumplir los requisitos de escenarios de actualización.
+La comprobación de todas estas condiciones cada vez que la aplicación ofrece opciones de autenticación garantizará que el usuario obtiene la mejor experiencia de usuario. Los cambios o las actualizaciones de su dispositivo o sistema operativo pueden afectar a la disponibilidad de la autenticación mediante huella digital. Si decide almacenar en caché los resultados de cualquiera de estas comprobaciones, asegúrese de cumplir los escenarios de actualización.
 
-Para obtener más información sobre cómo solicitar permisos en Android 6.0, consulte la Guía de Android [solicitar permisos en tiempo de ejecución](https://developer.android.com/training/permissions/requesting.html).
+Para obtener más información sobre cómo solicitar permisos en Android 6,0, consulte la guía de Android que [solicita permisos en tiempo de ejecución](https://developer.android.com/training/permissions/requesting.html).
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
-- [ContextCompat](https://developer.xamarin.com/api/type/Android.Support.V4.Content.ContextCompat/)
-- [KeyguardManager](https://developer.xamarin.com/api/type/Android.App.KeyguardManager/)
+- [Contexto](xref:Android.Content.Context)
+- [KeyguardManager](xref:Android.App.KeyguardManager)
+- [ContextCompat](https://developer.android.com/reference/android/support/v4/content/ContextCompat)
 - [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html)
 - [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)
 - [Solicitar permisos en tiempo de ejecución](https://developer.android.com/training/permissions/requesting.html)

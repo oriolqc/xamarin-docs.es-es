@@ -1,56 +1,55 @@
 ---
-title: Solución de problemas de los libros de Xamarin en Android
-description: Este documento ofrece sugerencias para solucionar problemas para trabajar con libros de Xamarin en Android. Describe la compatibilidad con el emulador, que no se pudo cargar los libros y otros temas.
+title: Solución de problemas de Xamarin Workbooks en Android
+description: En este documento se proporcionan sugerencias para la solución de problemas para trabajar con Xamarin Workbooks en Android. Describe la compatibilidad con el emulador, los libros que no se cargan y otros temas.
 ms.prod: xamarin
 ms.assetid: F1BD293B-4EB7-4C18-A699-718AB2844DFB
 author: lobrien
 ms.author: laobri
 ms.date: 03/30/2017
-ms.openlocfilehash: 08fa7f57f3fe44721bc00f0d59ed5df93300cf1e
-ms.sourcegitcommit: 7ccc7a9223cd1d3c42cd03ddfc28050a8ea776c2
+ms.openlocfilehash: 0d04b42a8d9f230c48bb09059296eb3740336dc6
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67864033"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511844"
 ---
-# <a name="troubleshooting-xamarin-workbooks-on-android"></a>Solución de problemas de los libros de Xamarin en Android
+# <a name="troubleshooting-xamarin-workbooks-on-android"></a>Solución de problemas de Xamarin Workbooks en Android
 
 ## <a name="emulator-support"></a>Compatibilidad con el emulador
 
-Para ejecutar un libro de Android, un emulador de Android debe estar disponible para su uso. No se admiten los dispositivos Android físicos.
+Para ejecutar un libro de Android, debe haber un emulador de Android disponible para su uso. No se admiten dispositivos Android físicos.
 
-Se recomienda el emulador de Google con HAXM si su equipo lo admite.
-Si debe tener habilitado en el sistema de Hyper-V, vaya con el emulador de Android de Visual Studio en su lugar.
+Se recomienda el emulador de Google junto con HAXM si el equipo lo admite.
+Si debe tener Hyper-V habilitado en el sistema, vaya a la Android Emulator de Visual Studio en su lugar.
 
-Debe tener un emulador que se ejecuta Android 5.0 o posterior. No se admiten los emuladores ARM. Use `x86` o `x86_64` solo a los dispositivos.
+Debe tener un emulador que ejecute Android 5,0 o posterior. No se admiten los emuladores de ARM. Usar `x86` solo `x86_64` dispositivos de o.
 
-Lea [nuestra documentación sobre cómo configurar los emuladores de Android][android-emu] si no está familiarizado con el proceso.
+Lea [nuestra documentación sobre la configuración de los emuladores de Android][android-emu] si no está familiarizado con el proceso.
 
 > [!NOTE]
-> Libros 1.1 y versiones anteriores se intente (y producirá un error) para usar los emuladores ARM si están disponibles. Para solucionar esto, emulador inicio el x86 que prefiera antes de abrir o crear un libro de Android. Libros siempre preferirá para conectarse a un emulador en ejecución, siempre que sea compatible.
+> Los libros 1,1 y anteriores intentarán (y se producirá un error) para usar los emuladores ARM si están disponibles. Para solucionar este error, inicie el emulador x86 que prefiera antes de abrir o crear un libro Android. Los libros siempre preferirán conectarse a un emulador en ejecución, siempre y cuando sea compatible.
 
-## <a name="workbooks-wont-load"></a>No se pudo cargar los libros
+## <a name="workbooks-wont-load"></a>Los libros no se cargan
 
-### <a name="workbook-window-spins-forever-never-loads-windows"></a>Ventana del libro para siempre, nunca gira cargas (Windows)
+### <a name="workbook-window-spins-forever-never-loads-windows"></a>La ventana del libro se gira siempre, nunca se carga (Windows)
 
-En primer lugar, compruebe que el emulador tiene acceso a la red totalmente operativa mediante la comprobación de cualquier sitio Web en el Explorador de web del emulador.
+En primer lugar, compruebe que el emulador tiene acceso de red totalmente operativo; para ello, pruebe cualquier sitio web en el explorador Web del emulador.
 
-### <a name="visual-studio-android-emulator-cannot-connect-to-the-internet"></a>Emulador de Android de Visual Studio no se puede conectar a internet
+### <a name="visual-studio-android-emulator-cannot-connect-to-the-internet"></a>Android Emulator de Visual Studio no se puede conectar a Internet
 
-Si el emulador no tiene acceso a la red, deberá seguir estos pasos para corregir el conmutador de red de Hyper-V. Si cambia entre las redes Wi-Fi con frecuencia necesitará periódicamente Repita este paso:
+Si el emulador no tiene acceso de red, puede que tenga que seguir estos pasos para corregir el conmutador de red de Hyper-V. Si cambia entre redes Wi-Fi con frecuencia, es posible que tenga que repetir esta operación periódicamente:
 
-1. **Asegúrese de que las operaciones de red críticos están completas, como esto puede desconectarse temporalmente Windows desde internet.**
+1. **Asegúrese de que se completen las operaciones de red críticas, ya que esto puede desconectar temporalmente Windows de Internet.**
 1. Cierre los emuladores.
 1. Abra `Hyper-V Manager`.
-1. En `Actions`, abra `Virtual Switch Manager...`.
-1. Eliminar todos los conmutadores virtuales.
+1. En `Actions`, Abra `Virtual Switch Manager...`.
+1. Elimine todos los conmutadores virtuales.
 1. Haga clic en `OK`.
-1. Iniciar el emulador de Android de VS. Probablemente se le indicará que volver a crear el conmutador de red virtual.
-1. Compruebe que el explorador del emulador de VS Android puede acceder a internet.
+1. Inicie VS Android Emulator. Probablemente se le pedirá que vuelva a crear el conmutador de red virtual.
+1. Pruebe que el explorador de VS Android Emulator puede tener acceso a Internet.
 
-[android-emu]: https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debug-on-emulator/
-
+[android-emu]: ~/android/deploy-test/debugging/debug-on-emulator.md
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Informar de errores](~/tools/workbooks/install.md#reporting-bugs)
+- [Informes de errores](~/tools/workbooks/install.md#reporting-bugs)

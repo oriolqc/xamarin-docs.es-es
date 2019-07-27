@@ -1,30 +1,30 @@
 ---
-title: RatingBar
-description: Cómo agregar un widget RatingBar a una actividad de Android.
+title: RatingBar de Xamarin. Android
+description: Cómo agregar un widget de RatingBar a una actividad de Android.
 ms.prod: xamarin
 ms.assetid: d7a1f9bb-926d-4f93-9e8e-0fa933e330e7
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
-ms.openlocfilehash: 97d2a126be70e210d2e8f4ebf4d7a25ff8777a02
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 4e98dd824d5044367b975ae66c77327f10e826f1
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60945450"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510194"
 ---
-# <a name="ratingbar"></a>RatingBar
+# <a name="xamarinandroid-ratingbar"></a>RatingBar de Xamarin. Android
 
-Un RatingBar es un widget de interfaz de usuario que muestra una clasificación de uno a cinco estrellas. El usuario puede seleccionar una clasificación punteando en una estrella en esta sección, creará un widget que permite al usuario proporcionar una clasificación, con el [ `RatingBar` ](https://developer.xamarin.com/api/type/Android.Widget.RatingBar/) widget.
+Un RatingBar es un widget de interfaz de usuario que muestra una clasificación de una a cinco estrellas. El usuario puede seleccionar una clasificación por punteando en una estrella en esta sección, creará un widget que permite al usuario proporcionar una clasificación con el [`RatingBar`](xref:Android.Widget.RatingBar) widget.
 
-![Ejemplo de un RatingBar](ratingbar-images/01-ratingbar.png)
+![Ejemplo de RatingBar](ratingbar-images/01-ratingbar.png)
 
 
 ## <a name="creating-a-ratingbar"></a>Creación de un RatingBar
 
-1. Abra el **Resource/layout/Main.axml** y agréguele el [`RatingBar`](https://developer.xamarin.com/api/type/Android.Widget.RatingBar/)
-   elemento (dentro de la [ `LinearLayout` ](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)):
+1. Abra el archivo **Resource/layout/main. axml** y agregue el[`RatingBar`](xref:Android.Widget.RatingBar)
+   elemento (dentro del [`LinearLayout`](xref:Android.Widget.LinearLayout)):
 
     ```xml
     <RatingBar android:id="@+id/ratingbar"
@@ -33,10 +33,10 @@ Un RatingBar es un widget de interfaz de usuario que muestra una clasificación 
             android:numStars="5"
             android:stepSize="1.0"/>
     ```
-   El `android:numStars` atributo define cuántas estrellas para mostrar de la barra de clasificación. El `android:stepSize` atributo define la granularidad de cada estrella (por ejemplo, un valor de `0.5` permitirían clasificación por estrellas de la mitad).
+   El `android:numStars` atributo define el número de estrellas que se van a mostrar para la barra de clasificación. El `android:stepSize` atributo define la granularidad de cada estrella (por ejemplo, un valor de `0.5` permitiría clasificaciones de mitad de estrella).
 
-2. Para hacer algo cuando se ha establecido un nuevo objeto rating, agregue el código siguiente al final de la [`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle)
-   método:
+2. Para hacer algo cuando se ha establecido una nueva clasificación, agregue el código siguiente al final de la[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
+   forma
 
     ```csharp
     RatingBar ratingbar = FindViewById<RatingBar>(Resource.Id.ratingbar);
@@ -46,7 +46,7 @@ Un RatingBar es un widget de interfaz de usuario que muestra una clasificación 
     };
     ```
 
-    Esta forma se capturan el [ `RatingBar` ](https://developer.xamarin.com/api/type/Android.Widget.RatingBar/) widget del diseño con [ `FindViewById` ](https://developer.xamarin.com/api/member/Android.App.Activity.FindViewById/) y, a continuación, establece un método de evento, después, define la acción que se realizará cuando el usuario establece una clasificación. En este caso, un simple [ `Toast` ](https://developer.xamarin.com/api/type/Android.Widget.Toast/) mensaje muestra el nuevo objeto rating.
+    Esto captura el [`RatingBar`](xref:Android.Widget.RatingBar) widget del diseño con [`FindViewById`](xref:Android.App.Activity.FindViewById*) y, a continuación, establece un método de evento y, a continuación, define la acción que se realizará cuando el usuario establezca una clasificación. En este caso, un mensaje [`Toast`](xref:Android.Widget.Toast) simple muestra la nueva clasificación.
 
 3.  Ejecute la aplicación.
 

@@ -7,12 +7,12 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2017
-ms.openlocfilehash: 1d445e3ef8869c74f052eb1153774dfab51ffd45
-ms.sourcegitcommit: c1d85b2c62ad84c22bdee37874ad30128581bca6
+ms.openlocfilehash: 78a84fd8d4f380739a9f080a1a5aad7c5942d0c9
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67649594"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511882"
 ---
 # <a name="xamarinforms-grid"></a>Cuadrícula de Xamarin.Forms
 
@@ -54,7 +54,7 @@ Información de fila y columna se almacena en `Grid`del `RowDefinitions`  &  `Co
 - **Absoluta** &ndash; tamaños de las columnas y filas con valores específicos de alto y ancho fijos. Especificado como un valor y `GridUnitType.Absolute` en C# y como `#` en XAML, con `#` que el valor deseado.
 
 > [!NOTE]
-> Los valores de ancho para las columnas se establecen como `*` de forma predeterminada en Xamarin.Forms, lo que garantiza que la columna rellenará el espacio disponible. También se establecen los valores del alto para las filas como `*` de forma predeterminada.
+> Los valores de ancho de las columnas se `*` establecen de forma predeterminada en Xamarin. Forms, lo que garantiza que la columna rellenará el espacio disponible. Los valores de alto de las filas también se `*` establecen de forma predeterminada.
 
 Considere la posibilidad de una aplicación que necesita tres filas y dos columnas. La fila inferior debe ser exactamente 200px alto y la fila superior debe ser dos veces más alto que la fila central. La columna izquierda debe ser lo suficientemente ancho como para que quepa el contenido y la columna derecha debe rellenar el espacio restante.
 
@@ -137,7 +137,7 @@ grid.Children.Add(bottomRight, 1, 1);
 
 El código anterior crea la cuadrícula con cuatro etiquetas, dos columnas y dos filas. Tenga en cuenta que cada etiqueta tendrá el mismo tamaño y que las filas se expandirán para usar todo el espacio disponible.
 
-En el ejemplo anterior, las vistas se agregan a la [ `Grid.Children` ](xref:Xamarin.Forms.Grid.Children) colección utilizando el [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/) sobrecarga que especifique los argumentos izquierdo y superiores. Cuando se usa el [ `Add` ](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) sobrecarga que especifique a la izquierda, derecha, superior y argumentos de la parte inferior, mientras la izquierda y argumentos superiores siempre hará referencia a las celdas de la [ `Grid` ](xref:Xamarin.Forms.Grid), la derecha y argumentos de la parte inferior pueden parecer que hacen referencia a las celdas que están fuera de la `Grid`. Esto es porque el argumento derecho siempre debe ser mayor que el argumento izquierdo y el argumento final siempre debe ser mayor que el argumento superior. En el ejemplo siguiente se muestra código equivalente que utiliza ambos `Add` sobrecargas:
+En el ejemplo anterior, las vistas se agregan a la [ `Grid.Children` ](xref:Xamarin.Forms.Grid.Children) colección utilizando el [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) sobrecarga que especifique los argumentos izquierdo y superiores. Cuando se usa el [ `Add` ](xref:Xamarin.Forms.Grid.IGridList`1.Add*) sobrecarga que especifique a la izquierda, derecha, superior y argumentos de la parte inferior, mientras la izquierda y argumentos superiores siempre hará referencia a las celdas de la [ `Grid` ](xref:Xamarin.Forms.Grid), la derecha y argumentos de la parte inferior pueden parecer que hacen referencia a las celdas que están fuera de la `Grid`. Esto es porque el argumento derecho siempre debe ser mayor que el argumento izquierdo y el argumento final siempre debe ser mayor que el argumento superior. En el ejemplo siguiente se muestra código equivalente que utiliza ambos `Add` sobrecargas:
 
 ```csharp
 // left, top

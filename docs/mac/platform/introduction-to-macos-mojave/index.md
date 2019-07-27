@@ -1,51 +1,51 @@
 ---
 title: Introducción a macOS Mojave
-description: Este documento proporciona un alto nivel de información general de las características nuevas y actualizadas en macOS Mojave.
+description: En este documento se proporciona información general de alto nivel de las características nuevas y actualizadas de macOS Mojave.
 ms.prod: xamarin
 ms.assetid: 4A41CD85-C807-44C9-85AB-B5441B145A73
 ms.technology: xamarin-mac
 author: lobrien
 ms.author: laobri
 ms.date: 10/05/2018
-ms.openlocfilehash: a9975eeec445ac59dc71a44a1156804835795982
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 9c88d0a90cf5f1cae0e27a05aeaa71f726ddb4de
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61032116"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68511689"
 ---
 # <a name="introduction-to-macos-mojave"></a>Introducción a macOS Mojave
 
-Este documento proporciona un alto nivel de información general de las características nuevas y actualizadas en macOS Mojave.
+En este documento se proporciona información general de alto nivel de las características nuevas y actualizadas de macOS Mojave.
 
-Para empezar a crear aplicaciones de Mojave con Xamarin de macOS, eche un vistazo a la [Guía de introducción](~/mac/platform/introduction-to-macos-mojave/get-started.md) para [Xamarin.Mac 5.0](https://developer.xamarin.com/releases/mac/xamarin.mac_5/xamarin.mac_5.0/).
+Para empezar a compilar aplicaciones de macOS Mojave con Xamarin, eche un vistazo a la [Guía de introducción](~/mac/platform/introduction-to-macos-mojave/get-started.md) para [xamarin. Mac 5,0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/mac/xamarin.mac_5/xamarin.mac_5.0.md).
 
 ## <a name="dark-mode"></a>Modo oscuro
 
-Modo oscuro es un tema oscuro de todo el sistema en macOS Mojave que usa un esquema de color gris oscuro y dinámica para mostrar los elementos de interfaz de usuario. También introduce nuevos colores de énfasis, efectos de color y los colores de tono de contenido para ayudar a las aplicaciones de terceros apariencia con independencia de la configuración de color del usuario.
+El modo oscuro es un tema oscuro en todo el sistema en macOS Mojave que usa una combinación de colores gris oscuro y dinámico para mostrar los elementos de la interfaz de usuario. También presenta nuevos colores de énfasis, efectos de color y colores de matiz de contenido para ayudar a las aplicaciones de terceros a tener un aspecto correcto independientemente de la configuración de color del usuario.
 
-## <a name="user-notifications-framework"></a>Plataforma de notificaciones de usuario
+## <a name="user-notifications-framework"></a>Marco de notificaciones de usuario
 
-El marco de trabajo de las notificaciones de usuario se incluye en macOS Mojave, cambiar las API que usan aplicaciones de Mac para trabajar con las notificaciones de usuario.
+El marco de trabajo de notificaciones de usuario se incluye en macOS Mojave y cambia las API que usan las aplicaciones Mac para trabajar con las notificaciones de usuario.
 
 ## <a name="natural-language-framework"></a>Marco de lenguaje natural
 
-El marco de lenguaje Natural permite que las aplicaciones realizar varios tipos de análisis de lenguaje. Por ejemplo, puede usarse para identificar las partes de la oración y determinar el idioma que se representa mediante un bloque de texto.
+El marco de lenguaje natural permite a las aplicaciones realizar varios tipos de análisis de lenguaje. Por ejemplo, se puede usar para identificar partes de la voz y determinar el idioma representado por un bloque de texto.
 
-## <a name="vision-framework"></a>Marco de trabajo de visión
+## <a name="vision-framework"></a>Vision Framework
 
-El marco de trabajo de visión incluye un detector de caras mejorada que puede detectar caras en las distintas orientaciones. Además, las revisiones de la solicitud ahora pueden utilizarse para seleccionar una revisión concreta de algoritmo de marco de trabajo de visión.
+Vision Framework incluye un detector de rostros mejorado que puede detectar rostros en diversas orientaciones. Además, ahora se pueden usar las revisiones de solicitud para seleccionar una revisión específica del algoritmo de Vision Framework.
 
-## <a name="network-framework"></a>Marco de redes
+## <a name="network-framework"></a>Marco de red
 
-Marco de redes, la red de la pila subyacente el `URLSession` API suele utilizarse en aplicaciones de iOS, ahora está disponible como un marco de trabajo independiente, lo que sea más fácil trabajar con TCP, UDP, TLS, IPv4 e IPv6 y mucho más.
+El marco de red, la pila de `URLSession` red que subyace a las API que se usan habitualmente en las aplicaciones de iOS, ahora está disponible como un marco independiente, lo que facilita el trabajo con TCP, UDP, TLS, IPv4/IPv6, etc.
 
 ## <a name="deprecations"></a>Elementos obsoletos
 
-Con macOS Mojave, Apple ha dejado de OpenGL ES y OpenCL, [alientan a los desarrolladores](https://developer.apple.com/macos/whats-new/) adoptar el sistema operativo y los sombreadores de rendimiento de sistema operativo.
+Con macOS Mojave, Apple ha dejado de usar OpenGL ES y OpenCL, lo que [anima a los desarrolladores](https://developer.apple.com/macos/whats-new/) a adoptar sombreadores de rendimiento de metal y metal.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
-- [Ejemplos de Xamarin.Mac](https://developer.xamarin.com/samples/mac/)
-- [macOS: desarrollador de Apple](https://developer.apple.com/macos/)
-- [Notas de la versión 5.0 de Xamarin.Mac](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)
+- [Ejemplos de Xamarin. Mac](https://developer.xamarin.com/samples/mac/)
+- [macOS – desarrollador de Apple](https://developer.apple.com/macos/)
+- [Notas de la versión de Xamarin. Mac 5,0](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)

@@ -1,42 +1,40 @@
 ---
-title: 'Xamarin.Android vs. Escritorio: las diferencias en el tiempo de ejecución Mono'
+title: Xamarin. Android frente a Diferencias de escritorio en el tiempo de ejecución de mono
 ms.prod: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 04/25/2018
-ms.openlocfilehash: 115d715214d7af3174c41d9d82e894ce429dab42
-ms.sourcegitcommit: 4b402d1c508fa84e4fc3171a6e43b811323948fc
+ms.openlocfilehash: 18e6e82011460a51a96df4694f15b36c5ec94ab5
+ms.sourcegitcommit: b07e0259d7b30413673a793ebf4aec2b75bb9285
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "60953349"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68510714"
 ---
 # <a name="limitations"></a>Limitaciones
 
-Puesto que las aplicaciones en Android requieren generar tipos de proxy Java durante el proceso de compilación, no es posible generar todo el código en tiempo de ejecución.
+Dado que las aplicaciones de Android requieren la generación de tipos de proxy de Java durante el proceso de compilación, no es posible generar todo el código en tiempo de ejecución.
 
-Éstas son las limitaciones de Xamarin.Android en comparación con Mono de escritorio:
+Estas son las limitaciones de Xamarin. Android en comparación con el escritorio mono:
 
+## <a name="limited-dynamic-language-support"></a>Compatibilidad limitada con los lenguajes dinámicos
 
-## <a name="limited-dynamic-language-support"></a>Compatibilidad con lenguajes dinámicos limitado
+ Los contenedores a los que se [puede llamar de Android](~/android/platform/java-integration/android-callable-wrappers.md) son necesarios cada vez que el tiempo de ejecución de Android necesita invocar código administrado. Los contenedores a los que se puede llamar de Android se generan en tiempo de compilación, en función del análisis estático de IL. El resultado neto de esto: *no puede* usar lenguajes dinámicos (IronPython, IronRuby, etc.) en cualquier escenario en el que se requiera la subclase de tipos de Java (incluida la subclase indirecta), ya que no hay forma de extraer estos tipos dinámicos en tiempo de compilación a genere los contenedores de Android a los que se puede llamar necesarios.
 
- [Contenedores invocables Android](~/android/platform/java-integration/android-callable-wrappers.md) son necesarias siempre que el tiempo de ejecución de Android necesita invocar código administrado. Contenedores invocables Android se generan en tiempo de compilación, según el análisis estático de IL. El resultado de esto: se *no* Utilice lenguajes dinámicos (IronPython, IronRuby, etc.) en cualquier escenario en subclases de tipos de Java se requiere (incluido subclases indirecto), ya que no hay ninguna manera de extraer estos tipos dinámicos en tiempo de compilación para generar los contenedores RCW Android es necesarios.
+## <a name="limited-java-generation-support"></a>Compatibilidad con la generación limitada de Java
 
-
-## <a name="limited-java-generation-support"></a>Compatibilidad de generación de Java limitado
-
-[Contenedores invocables Android](~/android/platform/java-integration/android-callable-wrappers.md) debe generarse para código de Java llamar a código administrado. *De forma predeterminada*, contenedores RCW Android solo contendrá (ciertas) tienen constructores declarados y métodos que invalida un método virtual de Java (es decir, tiene [ `RegisterAttribute` ](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/)) o implementar un método de interfaz de Java () interfaz del mismo modo tiene `Attribute`).
+Los contenedores a los que se puede llamar de [Android](~/android/platform/java-integration/android-callable-wrappers.md) deben generarse para que el código Java llame a código administrado. *De forma predeterminada*, los contenedores a los que se puede llamar de Android solo contendrán (ciertos) métodos y constructores declarados que [`RegisterAttribute`](xref:Android.Runtime.RegisterAttribute)invalidan un método Java Virtual (es decir, `Attribute`tiene) o implementan un método de interfaz Java (la interfaz también tiene).
   
-Antes de la versión 4.1, no se podrían declarar métodos adicionales. Con la versión 4.1, [el `Export` y `ExportField` atributos personalizados se pueden usar para declarar métodos de Java y los campos dentro del contenedor RCW Android](~/android/platform/java-integration/working-with-jni.md).
+Antes de la versión 4,1, no se podía declarar ningún método adicional. Con la versión 4,1, [se `Export` pueden `ExportField` usar los atributos personalizados y para declarar métodos y campos de Java en el contenedor de Android al que se puede llamar](~/android/platform/java-integration/working-with-jni.md).
 
-### <a name="missing-constructors"></a>Constructores que faltan
+### <a name="missing-constructors"></a>Faltan constructores
 
-Constructores permanecen complicados, a menos que [ `ExportAttribute` ](https://developer.xamarin.com/api/type/Java.Interop.ExportAttribute) se utiliza. El algoritmo para generar constructores Android contenedor CCW es que se va a emitir un constructor de Java si:
+Los constructores siguen siendo complicados [`ExportAttribute`](xref:Java.Interop.ExportAttribute) , a menos que se use. El algoritmo para generar constructores de contenedor a los que se puede llamar de Android es que se emitirá un constructor de Java si:
 
 1. Hay una asignación de Java para todos los tipos de parámetro
-2. La clase base declara el mismo constructor &ndash; esto es necesario porque el contenedor RCW Android *debe* invocar el constructor de clase base correspondiente; no pueden utilizarse argumentos predeterminados (porque no hay ninguna manera fácil determinar qué valores se deben usar dentro de Java).
+2. La clase base declara el mismo constructor &ndash; esto es necesario porque el contenedor de Android al que se puede llamar *debe* invocar el constructor de clase base correspondiente; no se pueden usar argumentos predeterminados (ya que no hay ninguna manera fácil de determinar qué valores debe usarse en Java).
 
 Por ejemplo, considere la siguiente clase:
 
@@ -49,7 +47,7 @@ class MyIntentService : IntentService {
 }
 ```
 
-Mientras que este parece perfectamente lógico, el contenedor RCW Android resultante *en versiones de lanzamiento* no contendrá un constructor predeterminado. Por lo tanto, si intenta iniciar este servicio (por ejemplo, [ `Context.StartService` ](https://developer.xamarin.com/api/member/Android.Content.Context.StartService/p/Android.Content.Intent/)), se producirá un error:
+Aunque parece perfectamente lógico, el contenedor de Android al que se puede llamar resultante en las compilaciones *de versión* no contendrá un constructor predeterminado. Por lo tanto, si intenta iniciar este servicio (por ejemplo [`Context.StartService`](xref:Android.Content.Context.StartService*), se producirá un error:
 
 ```shell
 E/AndroidRuntime(31766): FATAL EXCEPTION: main
@@ -72,7 +70,7 @@ E/AndroidRuntime(31766):        at android.app.ActivityThread.handleCreateServic
 E/AndroidRuntime(31766):        ... 10 more
 ```
 
-La solución consiste en declarar un constructor predeterminado, con adornar el `ExportAttribute`y establezca el [ `ExportAttribute.SuperStringArgument` ](https://developer.xamarin.com/api/property/Java.Interop.ExportAttribute.SuperArgumentsString/): 
+La solución consiste en declarar un constructor predeterminado, adornarlo con `ExportAttribute`y [`ExportAttribute.SuperStringArgument`](xref:Java.Interop.ExportAttribute.SuperArgumentsString)establecer: 
 
 ```csharp
 [Service]
@@ -87,12 +85,12 @@ class MyIntentService : IntentService {
 ```
 
 
-### <a name="generic-c-classes"></a>Genérico C# clases
+### <a name="generic-c-classes"></a>Clases C# genéricas
 
-Genérico C# clases solo se admiten parcialmente. Existen las siguientes limitaciones:
+Las C# clases genéricas solo se admiten parcialmente. Existen las siguientes limitaciones:
 
 
--   No se pueden usar tipos genéricos `[Export]` o `[ExportField`]. Intenta hacer esto, se generará una `XA4207` error.
+-   Los tipos genéricos no `[Export]` pueden `[ExportField`usar o]. Si intenta hacerlo, se generará un `XA4207` error.
 
     ```csharp
     public abstract class Parcelable<T> : Java.Lang.Object, IParcelable
@@ -105,7 +103,7 @@ Genérico C# clases solo se admiten parcialmente. Existen las siguientes limitac
     }
     ```
 
--   Los métodos genéricos no pueden usar `[Export]` o `[ExportField]`:
+-   Los métodos genéricos no `[Export]` pueden `[ExportField]`usar ni:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -120,7 +118,7 @@ Genérico C# clases solo se admiten parcialmente. Existen las siguientes limitac
     }
     ```
 
--   `[ExportField]` no puede usarse en métodos que devuelven `void`:
+-   `[ExportField]`no se puede usar en métodos que devuelven `void`:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -133,8 +131,8 @@ Genérico C# clases solo se admiten parcialmente. Existen las siguientes limitac
     }
     ```
 
--   Las instancias de tipos genéricos _no debe_ crearse desde el código de Java.
-    Se pueden crear solo de forma segura desde el código administrado:
+-   _No se deben_ crear instancias de tipos genéricos a partir del código de Java.
+    Solo se pueden crear de forma segura a partir de código administrado:
 
     ```csharp
     [Activity (Label="Die!", MainLauncher=true)]
@@ -147,17 +145,15 @@ Genérico C# clases solo se admiten parcialmente. Existen las siguientes limitac
     }
     ```
 
+## <a name="partial-java-generics-support"></a>Compatibilidad parcial con Java genéricos
 
-## <a name="partial-java-generics-support"></a>La compatibilidad con genéricos parciales de Java
-
-La compatibilidad con elementos genéricos de enlace de Java es limitado. Especialmente, los miembros de una clase de instancia genérico que se deriva de otra clase genérica (no crea una instancia) quedan expuestos como Java.Lang.Object. Por ejemplo, [Android.Content.Intent.GetParcelableExtra](https://developer.xamarin.com/api/member/Android.Content.Intent.GetParcelableExtra/p/System.String/) método devuelve Java.Lang.Object. Esto es debido a los genéricos borrados de Java.
-Tenemos algunas clases que no son aplicables a esta limitación, pero se ajustan manualmente.
-
+La compatibilidad con enlaces de genéricos de Java es limitada. En particular, los miembros de una clase de instancia genérica que se deriva de otra clase genérica (sin instancias) se dejan expuestos como Java. lang. Object. Por ejemplo, el método [Android. Content. Intent. GetParcelableExtra](xref:Android.Content.Intent.GetParcelableExtra*) devuelve Java. lang. Object. Esto se debe a que se han borrado los genéricos de Java.
+Tenemos algunas clases que no aplican esta limitación, pero se ajustan de forma manual.
 
 ## <a name="related-links"></a>Vínculos relacionados
 
 - [Contenedores que se pueden llamar de Android](~/android/platform/java-integration/android-callable-wrappers.md)
-- [Trabajo con JNI](~/android/platform/java-integration/working-with-jni.md)
-- [ExportAttribute](https://developer.xamarin.com/api/type/Java.Interop.ExportAttribute/)
-- [SuperString](https://developer.xamarin.com/api/property/Java.Interop.ExportAttribute.SuperArgumentsString/)
-- [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/)
+- [Trabajar con JNI](~/android/platform/java-integration/working-with-jni.md)
+- [ExportAttribute](xref:Java.Interop.ExportAttribute)
+- [SuperString](xref:Java.Interop.ExportAttribute.SuperArgumentsString)
+- [RegisterAttribute](xref:Android.Runtime.RegisterAttribute)
