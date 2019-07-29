@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 02/12/2019
 featureFlags:
 - clicktale
-ms.openlocfilehash: 4613eec9db017f27f6ab890522867ab4d68b4684
-ms.sourcegitcommit: 654df48758cea602946644d2175fbdfba59a64f3
+ms.openlocfilehash: ad1c033b35da548921ec47d8cc2f3a8ef87d2fa8
+ms.sourcegitcommit: c75c1d2132a4f46a7b38e454d5f24705165026bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67830842"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68486071"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -82,7 +82,7 @@ ms.locfileid: "67830842"
         <ul class="pivots">
             <li>
                 <li>
-                <a href="#get-started">Introducción</a>
+                <a href="#get-started">Primeros pasos</a>
                 <ul id="get-started">
                     <li>
                         <a href="#get-started1"></a>
@@ -120,23 +120,19 @@ ms.locfileid: "67830842"
                                                             <ul class="noBullet">
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/quickstarts/single-page.md">
-                                                                        <img src="~/media/icons/i_xaml-forms.svg" alt="">
-Archivo > Nueva aplicación móvil </a>
+                                                                        <img src="~/media/icons/i_xaml-forms.svg" alt=""> Archivo > Nueva aplicación móvil </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/quickstarts/multi-page.md">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_class.svg" alt="">
-Agregar navegación </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_class.svg" alt=""> Agregar navegación </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/quickstarts/database.md">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_generic-database.svg" alt="">
-Agregar una base de datos </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_generic-database.svg" alt=""> Agregar una base de datos </a>
                                                                 </li>
                                                                  <li>
                                                                     <a class="barLink" href="~/get-started/quickstarts/styling.md">
-                                                                        <img src="https://docs.microsoft.com/xamarin/media/icons/i_user-interface.svg" alt="">
-Aplicación de estilo de la aplicación </a>
+                                                                        <img src="https://docs.microsoft.com/xamarin/media/icons/i_user-interface.svg" alt=""> Aplicación de estilo de la aplicación </a>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -146,8 +142,7 @@ Aplicación de estilo de la aplicación </a>
                                                             <ul class="noBullet">
                                                                 <li>
                                                                     <a class="barLink" href="~/cross-platform/index.yml">
-                                                                    <img src="https://docs.microsoft.com/media/common/i_guidelines.svg" alt="">
-Guía de desarrollo de Xamarin</a>
+                                                                    <img src="https://docs.microsoft.com/media/common/i_guidelines.svg" alt=""> Guía de desarrollo de Xamarin </a>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -171,33 +166,27 @@ Guía de desarrollo de Xamarin</a>
                                                             <ul class="noBullet">
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/stacklayout/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_dashboard.svg" alt="">
-Diseño de pila </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_dashboard.svg" alt=""> Diseño de pila </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/label/index.yml">
-                                                                        <img src="~/media/icons/i_form-label.svg" alt="">
-Etiqueta </a>
+                                                                        <img src="~/media/icons/i_form-label.svg" alt=""> Etiqueta </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/button/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_button.svg" alt="">
-Botones </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_button.svg" alt=""> Botones </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/entry/index.yml">
-                                                                        <img src="~/media/icons/i_form-entry.svg" alt="">
-Entrada de texto </a>
+                                                                        <img src="~/media/icons/i_form-entry.svg" alt=""> Entrada de texto </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/editor/index.yml">
-                                                                        <img src="~/media/icons/i_form-editor.svg" alt="">
-Editor de texto </a>
+                                                                        <img src="~/media/icons/i_form-editor.svg" alt=""> Editor de texto </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/image/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_account-management.svg" alt="">
-Imágenes </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_account-management.svg" alt=""> Imágenes </a>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -205,33 +194,27 @@ Imágenes </a>
                                                             <ul class="noBullet">
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/grid/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_table.svg" alt="">
-Diseño de cuadrícula </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_table.svg" alt=""> Diseño de cuadrícula </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/listview/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_sharepoint-list.svg" alt="">
-Listas </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_sharepoint-list.svg" alt=""> Listas </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/pop-ups/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_alert.svg" alt="">
-Elementos emergentes </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_alert.svg" alt=""> Elementos emergentes </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/app-lifecycle/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_agile.svg" alt="">
-Ciclo de vida de la aplicación </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_agile.svg" alt=""> Ciclo de vida de la aplicación </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/local-database/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_generic-database.svg" alt="">
-Base de datos </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_generic-database.svg" alt=""> Base de datos </a>
                                                                 </li>
                                                                 <li>
                                                                     <a class="barLink" href="~/get-started/tutorials/web-service/index.yml">
-                                                                        <img src="https://docs.microsoft.com/media/common/i_server.svg" alt="">
-Servicios web </a>
+                                                                        <img src="https://docs.microsoft.com/media/common/i_server.svg" alt=""> Servicios web </a>
                                                                 </li>
                                                             </ul>
                                                         </td>
@@ -256,20 +239,17 @@ Servicios web </a>
                                                 <ul class="noBullet">
                                                     <li>
                                                         <a class="barLink" href="~/cross-platform/desktop/index.md">
-                                                            <img src="https://docs.microsoft.com/media/logos/logo_NET.svg" alt="">
-Escritorio de .NET (UWP, WPF, WinForms)</a>
+                                                            <img src="https://docs.microsoft.com/media/logos/logo_NET.svg" alt=""> Escritorio de .NET (UWP, WPF, WinForms) </a>
                                                     </li>
                                                     </ul></td><td style="border-top-color:transparent!important;padding-left:0;"><ul class="noBullet">
                                                     <li>
                                                         <a class="barLink" href="~/android/get-started/java-developers.md">
-                                                            <img src="https://docs.microsoft.com/media/logos/logo_java.svg" alt="">
-Android y Java</a>
+                                                            <img src="https://docs.microsoft.com/media/logos/logo_java.svg" alt=""> Android y Java</a>
                                                     </li>
                                                     </ul></td><td style="border-top-color:transparent!important;padding-left:0;"><ul class="noBullet">
                                                     <li>
                                                         <a class="barLink" href="~/ios/get-started/objective-c-developers/index.md">
-                                                            <img src="https://docs.microsoft.com/media/logos/logo_xcode.svg" alt="">
-iOS y Objective-C</a>
+                                                            <img src="https://docs.microsoft.com/media/logos/logo_xcode.svg" alt=""> iOS y Objective-C</a>
                                                     </li>
                                                 </ul></td></tr></table>
                                             </div>
@@ -371,7 +351,7 @@ Xamarin.Forms es un kit de herramientas multiplataforma para Android, iOS, Mac y
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/platform/index.md">
+                                <a href="~/xamarin-forms/platform/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -428,7 +408,7 @@ Xamarin.Forms es un kit de herramientas multiplataforma para Android, iOS, Mac y
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/deploy-test/index.md">
+                                <a href="~/xamarin-forms/deploy-test/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -447,7 +427,7 @@ Xamarin.Forms es un kit de herramientas multiplataforma para Android, iOS, Mac y
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/internals/index.md">
+                                <a href="~/xamarin-forms/internals/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
