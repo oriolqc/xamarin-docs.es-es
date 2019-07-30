@@ -5,12 +5,12 @@ ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
-ms.openlocfilehash: 5ddbb6f3d1c1ebf16ca5534b7effd1993c3d8b26
-ms.sourcegitcommit: 0c823f5439f4279a35af23dd466e7a0483e65d50
+ms.openlocfilehash: 73c398a7dbc2b8b7b22b9b8e38177efe2ff48735
+ms.sourcegitcommit: 8fe8d163cb9927917f6a83204b4c387fc50181c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65804910"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388499"
 ---
 # <a name="xamarinessentials-email"></a>Xamarin.Essentials: Correo electrónico
 
@@ -63,22 +63,6 @@ public class EmailTest
 ```
 
 
-## <a name="platform-differences"></a>Diferencias entre plataformas
-
-# <a name="androidtabandroid"></a>[Android](#tab/android)
-
-No todos los clientes de correo electrónico para Android admiten `Html`. Puesto que no hay ninguna manera de detectar este problema, recomendamos usar `PlainText` para enviar correos electrónicos.
-
-# <a name="iostabios"></a>[iOS](#tab/ios)
-
-No hay diferencias entre las plataformas.
-
-# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
-
-Solo admite `PlainText`, ya que el formato `BodyFormat` que intenta enviar `Html` producirá una excepción `FeatureNotSupportedException`.
-
------
-
 ## <a name="file-attachments"></a>Datos adjuntos
 
 ![Características en versión preliminar](~/media/shared/preview.png)
@@ -108,6 +92,24 @@ message.Attachments.Add(new EmailAttachment(file));
 
 await Email.ComposeAsync(message);
 ```
+
+## <a name="platform-differences"></a>Diferencias entre plataformas
+
+# <a name="androidtabandroid"></a>[Android](#tab/android)
+
+No todos los clientes de correo electrónico para Android admiten `Html`. Puesto que no hay ninguna manera de detectar este problema, recomendamos usar `PlainText` para enviar correos electrónicos.
+
+# <a name="iostabios"></a>[iOS](#tab/ios)
+
+No hay diferencias entre las plataformas.
+
+# <a name="uwptabuwp"></a>[UWP](#tab/uwp)
+
+Solo admite `PlainText`, ya que el formato `BodyFormat` que intenta enviar `Html` producirá una excepción `FeatureNotSupportedException`.
+
+No todos los clientes de correo electrónico admiten el envío de datos adjuntos. Consulte la [documentación](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email) para más información.
+
+-----
 
 ## <a name="api"></a>API
 

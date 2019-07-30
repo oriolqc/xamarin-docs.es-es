@@ -7,12 +7,12 @@ ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
 ms.date: 08/09/2018
-ms.openlocfilehash: f4ff43ea51dc690daa716e69021f690511cdcc97
-ms.sourcegitcommit: 3489c281c9eb5ada2cddf32d73370943342a1082
+ms.openlocfilehash: 3be28815441b65df101ac9722a665e01503e1b5c
+ms.sourcegitcommit: 4b6e832d1db5616b657dc8540da67c509b28dc1d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58854059"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68386211"
 ---
 # <a name="setting-up-the-android-sdk-for-xamarinandroid"></a>Configuración del SDK de Android para Xamarin.Android
 
@@ -117,15 +117,15 @@ Para instalar solo componentes específicos, haga clic una vez en el cuadro situ
 Observe que el número de componentes que se van a instalar aparece junto al botón **Aplicar cambios**. Tras hacer clic en el botón **Aplicar cambios**, verá la pantalla **Aceptación de licencia**, tal como se muestra anteriormente.
 Haga clic en **Aceptar** si está de acuerdo con los términos y condiciones. Es posible que vea este cuadro de diálogo más de una vez si se van a instalar varios componentes. En la parte inferior de la ventana, una barra de progreso indica el progreso de la descarga y la instalación. Cuando se complete el proceso de descarga e instalación (puede tardar muchos minutos, en función de cuántos componentes deban descargarse), los componentes agregados se marcarán con una marca de verificación y a su lado se indicará **Instalado**.
 
-### <a name="respository-selection"></a>Selección del repositorio
+### <a name="repository-selection"></a>Selección del repositorio
 
-De forma predeterminada, Android SDK Manager descarga los componentes y las herramientas de la plataforma desde un repositorio administrado por Microsoft. Si necesita acceso a las plataformas y herramientas alfa/beta experimentales que todavía no están disponibles en el repositorio de Microsoft, puede cambiar SDK Manager para que use el repositorio de Google. Para realizar este cambio, haga clic en el icono de engranaje en la esquina inferior derecha y seleccione **Repositorio > Google (no compatible)**:
+De forma predeterminada, Android SDK Manager descarga los componentes y las herramientas de la plataforma desde un repositorio administrado por Microsoft. Si necesita acceso a las plataformas y herramientas alfa/beta experimentales que todavía no están disponibles en el repositorio de Microsoft, puede cambiar SDK Manager para que use el repositorio de Google. Para realizar este cambio, haga clic en el icono de engranaje en la esquina inferior derecha y seleccione **Repositorio > Google (no compatible)** :
 
 [![Selección del repositorio de Google](android-sdk-images/win/11-google-repo-w157-sml.png)](android-sdk-images/win/11-google-repo-w157.png#lightbox)
 
 Al seleccionar el repositorio de Google, pueden aparecer paquetes adicionales en la pestaña **Plataformas** que no estaban disponibles anteriormente. (En la captura de pantalla anterior, **Android SDK Platform 28** se agregó al cambiar al repositorio de Google.) Tenga en cuenta que el uso del repositorio de Google no es dispone de soporte técnico y, por tanto, no se recomienda para el desarrollo habitual.
 
-Para volver al repositorio compatible de plataformas y herramientas, haga clic en **Microsoft (recomendado)**. Esto restaura la lista de paquetes y las herramientas a la selección predeterminada.
+Para volver al repositorio compatible de plataformas y herramientas, haga clic en **Microsoft (recomendado)** . Esto restaura la lista de paquetes y las herramientas a la selección predeterminada.
 
 
 # <a name="visual-studio-for-mactabmacos"></a>[Visual Studio para Mac](#tab/macos)
@@ -210,15 +210,15 @@ Para instalar solo algunos componentes, haga clic una vez en el cuadro situado j
 Observe que el número de componentes que se van a instalar aparece junto al botón **Aplicar cambios**. Tras hacer clic en el botón **Aplicar cambios**, verá la pantalla **Aceptación de licencia**, tal como se muestra anteriormente.
 Haga clic en **Aceptar** si está de acuerdo con los términos y condiciones. Es posible que vea este cuadro de diálogo más de una vez si se van a instalar varios componentes. En la parte inferior de la ventana, una barra de progreso indica el progreso de la descarga y la instalación. Cuando se complete el proceso de descarga e instalación (puede tardar muchos minutos, en función de cuántos componentes deban descargarse), los componentes agregados se marcarán con una marca de verificación y a su lado se indicará **Instalado**.
 
-### <a name="respository-selection"></a>Selección del repositorio
+### <a name="repository-selection"></a>Selección del repositorio
 
-De forma predeterminada, Android SDK Manager descarga los componentes y las herramientas de la plataforma desde un repositorio administrado por Microsoft. Si necesita acceso a las plataformas y herramientas alfa/beta experimentales que todavía no están disponibles en el repositorio de Microsoft, puede cambiar SDK Manager para que use el repositorio de Google. Para realizar este cambio, haga clic en el icono de engranaje en la esquina inferior derecha y seleccione **Repositorio > Google (no compatible)**:
+De forma predeterminada, Android SDK Manager descarga los componentes y las herramientas de la plataforma desde un repositorio administrado por Microsoft. Si necesita acceso a las plataformas y herramientas alfa/beta experimentales que todavía no están disponibles en el repositorio de Microsoft, puede cambiar SDK Manager para que use el repositorio de Google. Para realizar este cambio, haga clic en el icono de engranaje en la esquina inferior derecha y seleccione **Repositorio > Google (no compatible)** :
 
 [![Selección del repositorio de Google](android-sdk-images/mac/09-google-repo-m75-sml.png)](android-sdk-images/mac/09-google-repo-m75.png#lightbox)
 
 Al seleccionar el repositorio de Google, pueden aparecer paquetes adicionales en la pestaña **Plataformas** que no estaban disponibles anteriormente. (En la captura de pantalla anterior, **Android SDK Platform 28** se agregó al cambiar al repositorio de Google.) Tenga en cuenta que el uso del repositorio de Google no es dispone de soporte técnico y, por tanto, no se recomienda para el desarrollo habitual.
 
-Para volver al repositorio compatible de plataformas y herramientas, haga clic en **Microsoft (recomendado)**. Esto restaura la lista de paquetes y las herramientas a la selección predeterminada.
+Para volver al repositorio compatible de plataformas y herramientas, haga clic en **Microsoft (recomendado)** . Esto restaura la lista de paquetes y las herramientas a la selección predeterminada.
 
 -----
 
